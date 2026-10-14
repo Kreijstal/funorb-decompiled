@@ -750,7 +750,7 @@ final class MidiSynthesizer extends AudioStream {
             var9 = (int)var8.key;
             var12 = (MusicPatch) (this.patches.get(-70, (long)var9));
             if (var12 == null) {
-              var13 = mi.a(patchArchive, var9, 8);
+              var13 = ContentTransitionPhase.a(patchArchive, var9, 8);
               if (var13 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;

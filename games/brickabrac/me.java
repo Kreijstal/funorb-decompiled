@@ -102,7 +102,7 @@ final class me {
     }
 
     final static void a(String param0, int param1) {
-        System.out.println("Error: " + UsernameAvailabilityResult.a((byte) 13, "\n", param0, "%0a"));
+        System.out.println("Error: " + AccountResponse.a((byte) 13, "\n", param0, "%0a"));
         if (param1 > -73) {
           field_f = (boolean[]) null;
         }

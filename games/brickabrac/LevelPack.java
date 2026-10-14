@@ -58,7 +58,7 @@ final class LevelPack {
           return;
         }
         t.a(false, ua.field_d);
-        ua.field_d.a(lp.field_ub, 121);
+        ua.field_d.a(AccountMessageDialog.field_ub, 121);
         ua.field_d = null;
         if (param0 <= 49) {
           field_f = (String) null;

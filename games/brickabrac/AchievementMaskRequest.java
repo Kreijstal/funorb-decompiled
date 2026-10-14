@@ -21,7 +21,7 @@ final class AchievementMaskRequest extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var7 = 99 % ((param4 - 70) / 44);
-        ec.a(4227327, param5, param6, (byte) 99, param0, param3, param2, param1);
+        DialogMessagePanel.a(4227327, param5, param6, (byte) 99, param0, param3, param2, param1);
     }
 
     final static void a(int param0, int param1) {

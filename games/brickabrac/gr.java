@@ -74,7 +74,7 @@ final class gr {
         if (MusicCrossfadeStream.field_C != 1) {
           ArchiveNetworkClient.field_s = ln.field_j;
           WidgetLayer.field_J = UiComponent.field_ib;
-          tf.field_c = kp.field_e;
+          FullscreenFailureKind.field_c = kp.field_e;
           field_c = PlayerInputBatch.field_i;
           Ball.field_w = RankingsRequest.field_o;
           we.field_b = ch.field_k;
@@ -85,7 +85,7 @@ final class gr {
         } else {
           bq.field_e = JungleBackground.field_v;
           ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
-          tf.field_c = dg.field_b;
+          FullscreenFailureKind.field_c = dg.field_b;
           Ball.field_w = dg.field_e;
           WidgetLayer.field_J = Ball.field_D;
           TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;

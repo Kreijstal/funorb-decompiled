@@ -165,7 +165,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
           if (callbackGuard != -20618) {
             field_a = (String) null;
           }
-          ig.b(widget.height, var6_int, widget.width, var7, -17634);
+          Under13RegistrationNoticePanel.b(widget.height, var6_int, widget.width, var7, -17634);
           var8 = df.field_a[1];
           if (widget instanceof FocusableWidget &&
             ((FocusableWidget) (widget)).active) {

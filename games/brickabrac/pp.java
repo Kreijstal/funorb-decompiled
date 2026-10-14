@@ -240,7 +240,7 @@ final class pp {
           }
           if (password != null &&
             password.length() >= pa.field_n &&
-            password.length() <= ek.field_bb) {
+            password.length() <= FullscreenFailureDialog.field_bb) {
             return false;
           }
           return true;

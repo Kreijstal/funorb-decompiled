@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class lp extends fe implements WidgetActionListener {
+class AccountMessageDialog extends ContentTransitionLayer implements WidgetActionListener {
     static NodeDeque queuedAchievementSubmissions;
-    private boolean field_Bb;
+    private boolean response256;
     private boolean field_vb;
     private boolean field_tb;
-    private cr field_qb;
-    private boolean field_zb;
+    private ActivityIndicatorWidget activityIndicator;
+    private boolean responseHandled;
     static RgbSprite[] field_yb;
     static UiComponent field_Ab;
     static ValidationStatus validationInvalid;
-    private TextFont field_sb;
+    private TextFont font;
     static GameScreen currentScreen;
     static PlatformServices field_ub;
 
@@ -24,7 +24,7 @@ class lp extends fe implements WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (13 == keyCode) {
-            this.m(obfuscationGuard ^ 127);
+            this.closeDialog(obfuscationGuard ^ 127);
             return true;
           }
           if (obfuscationGuard != 110) {
@@ -66,12 +66,12 @@ class lp extends fe implements WidgetActionListener {
         return false;
     }
 
-    final void i(byte param0) {
-        this.field_qb.b(2121792, 4210752, 2);
-        ec var2 = new ec(this, this.field_sb, FarmBackground.field_t);
-        if (param0 < -11) {
-          var2.a(false, DebouncedValidationSource.field_e, 15);
-          this.b((byte) 110, var2);
+    final void showPendingMessage(byte obfuscationGuard) {
+        this.activityIndicator.setActivityColors(2121792, 4210752, 2);
+        DialogMessagePanel var2 = new DialogMessagePanel(this, this.font, FarmBackground.field_t);
+        if (obfuscationGuard < -11) {
+          var2.addAction(false, DebouncedValidationSource.field_e, 15);
+          this.transitionToContent((byte) 110, var2);
           return;
         }
     }
@@ -83,16 +83,16 @@ class lp extends fe implements WidgetActionListener {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!this.field_Bb) {
+          if (!this.response256) {
             AgeValidator.a("tochangedisplayname.ws", (byte) -113, EmailConfirmationValidator.e((byte) -103));
           } else {
             CheckboxWidgetRenderer.a(3, true);
-            this.m(17);
+            this.closeDialog(17);
           }
           if (obfuscationGuard < -22) {
             return;
           }
-          lp.o(-11);
+          AccountMessageDialog.o(-11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,36 +108,36 @@ class lp extends fe implements WidgetActionListener {
         }
     }
 
-    final void a(int param0, boolean param1, String param2) {
+    final void showResponseMessage(int responseCode, boolean closeFirst, String message) {
         boolean stackIn_7_1 = false;
-        ec stackIn_14_0 = null;
+        DialogMessagePanel stackIn_14_0 = null;
         boolean stackIn_14_1 = false;
         String stackIn_15_2 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ec var4 = null;
+        DialogMessagePanel var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        ec var6 = null;
+        DialogMessagePanel var6 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_zb) {
+          if (this.responseHandled) {
             return;
           }
-          stackIn_7_1 = (256 == param0);
-          this.field_Bb = stackIn_7_1;
-          this.field_zb = true;
-          this.field_qb.b(8405024, 4210752, 2);
-          if (param1) {
-            this.m(6);
+          stackIn_7_1 = (256 == responseCode);
+          this.response256 = stackIn_7_1;
+          this.responseHandled = true;
+          this.activityIndicator.setActivityColors(8405024, 4210752, 2);
+          if (closeFirst) {
+            this.closeDialog(6);
           }
-          var6 = new ec(this, this.field_sb, param2);
+          var6 = new DialogMessagePanel(this, this.font, message);
           var4 = var6;
-          if (param0 != 5) {
-            if (param0 == 256) {
-              var6.a((byte) -78, TabbedPane.field_Tb, (WidgetListener) (this));
+          if (responseCode != 5) {
+            if (responseCode == 256) {
+              var6.appendButton((byte) -78, TabbedPane.field_Tb, (WidgetListener) (this));
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = false;
@@ -146,35 +146,35 @@ class lp extends fe implements WidgetActionListener {
               } else {
                 stackIn_15_2 = HalloweenBackground.field_s;
               }
-              ((ec) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, -1);
+              ((DialogMessagePanel) (Object) stackIn_14_0).addAction(stackIn_14_1, stackIn_15_2, -1);
             }
           } else {
-            var6.a(param1, ec.field_L, 11);
-            var6.a(false, wc.field_a, 17);
+            var6.addAction(closeFirst, DialogMessagePanel.field_L, 11);
+            var6.addAction(false, wc.field_a, 17);
           }
-          if (param0 != 3) {
-            if (param0 != 4) {
-              if (param0 == 6) {
-                var6.a(false, MatchingTextValidator.field_p, 9);
+          if (responseCode != 3) {
+            if (responseCode != 4) {
+              if (responseCode == 6) {
+                var6.addAction(false, MatchingTextValidator.field_p, 9);
               } else {
-                if (9 == param0) {
-                  var6.a((byte) 126, BrickABrac.field_G, (WidgetListener) (this));
+                if (9 == responseCode) {
+                  var6.appendButton((byte) 126, BrickABrac.field_G, (WidgetListener) (this));
                 }
               }
             } else {
-              var6.a(param1, MonotonicTime.field_f, 8);
+              var6.addAction(closeFirst, MonotonicTime.field_f, 8);
             }
           } else {
-            var6.a(false, Ball.field_H, 7);
+            var6.addAction(false, Ball.field_H, 7);
           }
-          this.b((byte) 125, var6);
+          this.transitionToContent((byte) 125, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
           stackIn_29_0 = var4_ref;
-          stackIn_29_1 = new StringBuilder().append("lp.R(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_29_1 = new StringBuilder().append("lp.R(").append(responseCode).append(',').append(closeFirst).append(',');
+          if (message == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
@@ -183,24 +183,24 @@ class lp extends fe implements WidgetActionListener {
         }
     }
 
-    lp(WidgetLayerStack param0, TextFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new ec((lp) null, param1, param2), 77, 10, 10);
+    AccountMessageDialog(WidgetLayerStack layerStack, TextFont font, String initialMessage, boolean param3, boolean param4) {
+        super(layerStack, new DialogMessagePanel((AccountMessageDialog) null, font, initialMessage), 77, 10, 10);
         try {
           this.field_tb = param4 ? true : false;
           this.field_vb = param3 ? true : false;
-          this.field_zb = false;
-          this.field_Bb = false;
-          this.field_sb = param1;
-          this.field_qb = new cr(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_qb.field_J = true;
-          this.addChild(this.field_qb, true);
+          this.responseHandled = false;
+          this.response256 = false;
+          this.font = font;
+          this.activityIndicator = new ActivityIndicatorWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.activityIndicator.animated = true;
+          this.addChild(this.activityIndicator, true);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lp.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lp.<init>(" + (layerStack != null ? "{...}" : "null") + ',' + (font != null ? "{...}" : "null") + ',' + (initialMessage != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final void m(int param0) {
-        if (param0 != 17) {
+    final void closeDialog(int obfuscationGuard) {
+        if (obfuscationGuard != 17) {
           this.field_vb = false;
           if (!this.visible) {
             return;
@@ -240,7 +240,7 @@ class lp extends fe implements WidgetActionListener {
           field_yb = null;
           return;
         }
-        lp.o(29);
+        AccountMessageDialog.o(29);
         validationInvalid = null;
         field_yb = null;
     }

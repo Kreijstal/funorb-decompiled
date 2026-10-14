@@ -98,7 +98,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                           if (fieldTemp$3 == 0) {
                             ga.field_i = 11;
                             pp.field_a = -1;
-                            tb.field_eb = bj.field_U;
+                            tb.field_eb = PopupWidgetLayer.field_U;
                             ValidationIconWidget.field_N = true;
                           }
                         }

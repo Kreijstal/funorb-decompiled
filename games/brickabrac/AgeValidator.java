@@ -109,7 +109,7 @@ final class AgeValidator extends TextFieldValidator {
         try {
           syntaxInput = (CharSequence) ((Object) text);
           if (!MeshAttributeRecord.a(syntaxInput, -125)) {
-            stackIn_2_0 = lp.validationInvalid;
+            stackIn_2_0 = AccountMessageDialog.validationInvalid;
             return stackIn_2_0;
           }
           parseInput = (CharSequence) ((Object) text);
@@ -122,7 +122,7 @@ final class AgeValidator extends TextFieldValidator {
             age <= 130) {
             return DualLinkIterator.validationValid;
           }
-          stackIn_9_0 = lp.validationInvalid;
+          stackIn_9_0 = AccountMessageDialog.validationInvalid;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ final class AgeValidator extends TextFieldValidator {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validateText(text, (byte) 106) == lp.validationInvalid) {
+          if (this.validateText(text, (byte) 106) == AccountMessageDialog.validationInvalid) {
             stackIn_3_0 = FarmBackground.field_y;
             return stackIn_3_0;
           }
@@ -317,7 +317,7 @@ final class AgeValidator extends TextFieldValidator {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = cr.loadRgbSpritesByName(param1, param2, param0, 2);
+          var6 = ActivityIndicatorWidget.loadRgbSpritesByName(param1, param2, param0, 2);
           var4 = var6;
           var6[3].canvasHeight = var6[3].height;
           var6[1].canvasWidth = var6[1].width;

@@ -132,9 +132,9 @@ final class CacheIoWorker implements Runnable {
           for (var13 = 0; 6 > var13; var13++) {
             if (var13 >= 5 ||
               null != ik.field_i[var13]) {
-              var14 = 3 + (2 + DualLinkDeque.field_d.height - 6) * var12 / (fe.field_pb + 1);
+              var14 = 3 + (2 + DualLinkDeque.field_d.height - 6) * var12 / (ContentTransitionLayer.field_pb + 1);
               var12++;
-              var7Lifetime1 = -var14 + 3 + (var12 * (2 + (DualLinkDeque.field_d.height - 6)) / (fe.field_pb + 1) - 2);
+              var7Lifetime1 = -var14 + 3 + (var12 * (2 + (DualLinkDeque.field_d.height - 6)) / (ContentTransitionLayer.field_pb + 1) - 2);
               if (5 > var13) {
                 ik.field_i[var13].setBounds(var7Lifetime1, var14, var6_int, var9, (byte) 64);
                 HalloweenBackground.field_w[var13].setBounds(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);

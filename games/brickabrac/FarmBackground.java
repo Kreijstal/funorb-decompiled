@@ -19,10 +19,10 @@ final class FarmBackground extends BackgroundScene {
         if (this.hasSprites((byte) -122)) {
           var6 = kd.a(this.sceneId, colorIndex, (byte) -36);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            qf.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
+            RegistrationResponseDialog.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          dg.a(-899814320, 306, destinationX, cr.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
+          dg.a(-899814320, 306, destinationX, ActivityIndicatorWidget.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
         } else {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, rm.farmBackgroundColors[colorIndex], 22953);
         }
@@ -33,7 +33,7 @@ final class FarmBackground extends BackgroundScene {
         if (this.hasSprites((byte) -106)) {
           var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            qf.a(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
+            RegistrationResponseDialog.a(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           dg.a(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, rm.farmMidSprite, scroll16, 0);
@@ -108,7 +108,7 @@ final class FarmBackground extends BackgroundScene {
         if (obfuscationGuard) {
           FarmBackground.g(-29);
         }
-        cr.field_D = jh.a(0, LevelPackCard.farmNearSprite);
+        ActivityIndicatorWidget.field_D = jh.a(0, LevelPackCard.farmNearSprite);
         WidgetTextLayout.field_b = jh.a(0, rm.farmMidSprite);
         MainMenuScreen.field_w = jh.a(0, MouseInput.farmFarSprite);
         return true;
@@ -299,7 +299,7 @@ final class FarmBackground extends BackgroundScene {
     final static void g(int param0) {
         if (10 == AchievementIcon.field_j ||
           !ReportAbuseDialog.i(0)) {
-          ec.h(6846);
+          DialogMessagePanel.h(6846);
           AchievementIcon.field_j = 11;
         }
         if (param0 < 105) {

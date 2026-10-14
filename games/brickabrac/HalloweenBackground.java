@@ -78,11 +78,11 @@ final class HalloweenBackground extends BackgroundScene {
         ch.field_m = jh.a(0, GameClock.halloweenFarSprite);
         QuickChatParameterType.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
         ba.halloweenCharacterSprite = pl.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.field_m);
-        ej.halloweenCapsSprites[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
-        GameConnectionShell.halloweenSegsSprites[0] = cr.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
+        ej.halloweenCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_caps", 2);
+        GameConnectionShell.halloweenSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.field_m, "halloween_segs", 2);
         ap.halloweenCentreSprites[0] = pl.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.field_m);
-        ej.halloweenCapsSprites[1] = ig.a(ej.halloweenCapsSprites[0], obfuscationGuard);
-        GameConnectionShell.halloweenSegsSprites[1] = ig.a(GameConnectionShell.halloweenSegsSprites[0], obfuscationGuard);
+        ej.halloweenCapsSprites[1] = Under13RegistrationNoticePanel.a(ej.halloweenCapsSprites[0], obfuscationGuard);
+        GameConnectionShell.halloweenSegsSprites[1] = Under13RegistrationNoticePanel.a(GameConnectionShell.halloweenSegsSprites[0], obfuscationGuard);
         ap.halloweenCentreSprites[1] = pl.a(-16371, ap.halloweenCentreSprites[0]);
         return true;
     }

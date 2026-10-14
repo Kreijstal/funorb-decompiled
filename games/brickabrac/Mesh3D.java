@@ -70,19 +70,19 @@ final class Mesh3D {
         UiComponent var3 = null;
         try {
           ok.field_g = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, param0);
-          GameScreen.field_f = new ScrollPaneWithFooter(0L, rq.field_b, hk.field_J, ChocolateBackground.field_y);
+          GameScreen.field_f = new ScrollPaneWithFooter(0L, rq.field_b, LoginPanel.field_J, ChocolateBackground.field_y);
           f.field_c = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
           QuickChatPhraseRegistry.field_c = new UiComponent(0L, (UiComponent) null);
           sj.field_d = new UiComponent(0L, CappedUrlRequest.field_l);
           sj.field_d.horizontalAlignment = 1;
           MouseWheelSource.field_c = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
           GameplayScreen.field_u = new UiComponent(0L, ik.field_a, ArchiveSource.field_c);
-          mo.field_R = new UiComponent(0L, DualLinkNode.field_t);
+          BirthDateEntryPanel.field_R = new UiComponent(0L, DualLinkNode.field_t);
           QuickChatPhraseRegistry.field_c.addChild(sj.field_d, 0);
           QuickChatPhraseRegistry.field_c.addChild(MouseWheelSource.field_c, 0);
           QuickChatPhraseRegistry.field_c.addChild(GameplayScreen.field_u, 0);
           QuickChatPhraseRegistry.field_c.addChild(GameScreen.field_f, 0);
-          QuickChatPhraseRegistry.field_c.addChild(mo.field_R, 0);
+          QuickChatPhraseRegistry.field_c.addChild(BirthDateEntryPanel.field_R, 0);
           GameScreen.field_f.scrollPane.viewport.copyStyle((byte) -102, CappedUrlRequest.field_l);
           var5 = GameScreen.field_f.scrollPane.viewport;
           var6 = var5;
@@ -156,7 +156,7 @@ final class Mesh3D {
         }
         if (IntArrayRequest.gameplayScreen.resultWordMode) {
           if ((IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask & 1 << IntArrayRequest.gameplayScreen.localPlayerId) != 0) {
-            ArrayWidgetGroup.buttonLabels[12] = mi.field_a;
+            ArrayWidgetGroup.buttonLabels[12] = ContentTransitionPhase.field_a;
           } else {
             if (IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask != 0) {
               ArrayWidgetGroup.buttonLabels[12] = qm.field_c;
@@ -245,10 +245,10 @@ final class Mesh3D {
     final static void a(boolean param0, String param1, String param2) {
         try {
           if (null != ej.field_I) {
-            ej.field_I.m(17);
+            ej.field_I.closeDialog(17);
           }
-          DirectByteStorage.field_k = new hk(param2, param1, false, true, param0);
-          rj.field_c.b((byte) 114, DirectByteStorage.field_k);
+          DirectByteStorage.field_k = new LoginPanel(param2, param1, false, true, param0);
+          rj.field_c.transitionToContent((byte) 114, DirectByteStorage.field_k);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -259,7 +259,7 @@ final class Mesh3D {
         if (param0 != -1) {
           return;
         }
-        rj.field_c.b((byte) 120, o.field_c);
+        rj.field_c.transitionToContent((byte) 120, o.field_c);
     }
 
     Mesh3D() {

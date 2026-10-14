@@ -4,7 +4,7 @@
 final class StateIconLabel extends UiComponent {
     static String field_Pb;
     private UiComponent label;
-    static UsernameAvailabilityResult field_Rb;
+    static AccountResponse field_Rb;
     static String field_Tb;
     static RgbSprite halloweenMidSprite;
     static boolean field_Sb;
@@ -106,7 +106,7 @@ final class StateIconLabel extends UiComponent {
         field_Wb = null;
         field_Rb = null;
         if (!param0) {
-          field_Rb = (UsernameAvailabilityResult) null;
+          field_Rb = (AccountResponse) null;
         }
     }
 

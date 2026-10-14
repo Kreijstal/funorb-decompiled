@@ -123,7 +123,7 @@ final class SocialListEntry extends UiComponent {
             highlights[direction] = highlight;
           }
           for (sortedFace = 0; sortedFace < mc.sortedFaceCount; sortedFace++) {
-            face = ek.sortedFaceIds[sortedFace];
+            face = FullscreenFailureDialog.sortedFaceIds[sortedFace];
             vertexA = mesh.faceVertexA[face];
             vertexB = mesh.faceVertexB[face];
             vertexC = mesh.faceVertexC[face];
@@ -243,13 +243,13 @@ final class SocialListEntry extends UiComponent {
           LevelPackCard.field_a[0] = ji.packetDelayRandom.nextInt();
           LevelPackCard.field_a[1] = ji.packetDelayRandom.nextInt();
           tq.field_f.position = 0;
-          LevelPackCard.field_a[3] = (int)bj.field_ab;
-          LevelPackCard.field_a[2] = (int)(bj.field_ab >> 32);
+          LevelPackCard.field_a[3] = (int)PopupWidgetLayer.field_ab;
+          LevelPackCard.field_a[2] = (int)(PopupWidgetLayer.field_ab >> 32);
           tq.field_f.writeInt(LevelPackCard.field_a[0], (byte) -79);
           tq.field_f.writeInt(LevelPackCard.field_a[1], (byte) -79);
           tq.field_f.writeInt(LevelPackCard.field_a[2], (byte) -79);
           tq.field_f.writeInt(LevelPackCard.field_a[3], (byte) -79);
-          he.a(tq.field_f, (byte) -95);
+          AccountIntroductionPanel.a(tq.field_f, (byte) -95);
           tq.field_f.writeShort((byte) 113, param0);
           param1.a(0, tq.field_f);
           TextFieldValidator.outgoingPackets.position = 0;
@@ -266,7 +266,7 @@ final class SocialListEntry extends UiComponent {
           if (FarmBackground.field_u) {
             var6 = var6 | 1;
           }
-          if (ec.field_O) {
+          if (DialogMessagePanel.field_O) {
             var6 = var6 | 4;
           }
           if (param3) {
@@ -289,7 +289,7 @@ final class SocialListEntry extends UiComponent {
           }
           LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
           TextFieldValidator.outgoingPackets.backfillShortLength(TextFieldValidator.outgoingPackets.position - var5_int, 255);
-          cr.a(-1, 10000);
+          ActivityIndicatorWidget.a(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

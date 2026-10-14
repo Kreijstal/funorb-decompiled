@@ -31,7 +31,7 @@ abstract class WidgetLayer extends WidgetGroup {
         }
     }
 
-    boolean h(int param0) {
+    boolean tickLayerAndCheckHidden(int obfuscationGuard) {
         int var2_int = 0;
         int var3 = 0;
         boolean stackIn_10_0 = false;
@@ -43,7 +43,7 @@ abstract class WidgetLayer extends WidgetGroup {
           if (var3 > 0) {
             this.opacity256 = this.opacity256 + (-1 + var3 + 8) / 8;
           }
-          if (param0 > var3) {
+          if (obfuscationGuard > var3) {
             this.opacity256 = this.opacity256 + (1 + (-16 + var3)) / 16;
           }
           stackIn_10_0 = (this.opacity256 == 0) && (var2_int == 0) && (!this.visible);
@@ -51,7 +51,7 @@ abstract class WidgetLayer extends WidgetGroup {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "jc.H(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "jc.H(" + obfuscationGuard + ')');
         }
     }
 
@@ -78,7 +78,7 @@ abstract class WidgetLayer extends WidgetGroup {
             if (0 != layer) {
               return;
             }
-            this.b(this.x + parentX, 274, this.y + parentY);
+            this.paintLayerFrame(this.x + parentX, 274, this.y + parentY);
             super.drawLayer(parentY, parentX, layer, (byte) -11);
             return;
           }
@@ -89,7 +89,7 @@ abstract class WidgetLayer extends WidgetGroup {
           }
           IndexedSpriteGeometry.pushSpriteRaster(-109, nl.field_e);
           Rasterizer2D.clear();
-          this.b(0, obfuscationGuard ^ -281, 0);
+          this.paintLayerFrame(0, obfuscationGuard ^ -281, 0);
           super.drawLayer(-parentY - this.y, -parentX - this.x, layer, obfuscationGuard);
           sc.popRaster(-117);
           nl.field_e.b(parentX + this.x, parentY + this.y, this.opacity256);
@@ -146,18 +146,18 @@ abstract class WidgetLayer extends WidgetGroup {
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void setCenteredSize(boolean obfuscationGuard, int height, int width) {
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             field_H = false;
           }
-          this.setBounds(param1, -param2 + SpriteGeometry.field_y >> 1, TextFieldRenderer.field_w - param1 >> 1, (byte) -119, param2);
+          this.setBounds(height, -width + SpriteGeometry.field_y >> 1, TextFieldRenderer.field_w - height >> 1, (byte) -119, width);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.V(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jc.V(" + obfuscationGuard + ',' + height + ',' + width + ')');
         }
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void paintLayerFrame(int x, int obfuscationGuard, int y);
 
     final static void a(java.applet.Applet param0, byte param1) {
         RuntimeException runtimeException = null;
@@ -170,7 +170,7 @@ abstract class WidgetLayer extends WidgetGroup {
           if (param1 != 97) {
             WidgetLayer.a((byte) -100);
           }
-          mi.a((byte) -111, param0);
+          ContentTransitionPhase.a((byte) -111, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

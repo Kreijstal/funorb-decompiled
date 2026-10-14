@@ -15,7 +15,7 @@ final class UnderwaterBackground extends BackgroundScene {
           if (wm.waterNearSprite == null) {
             return false;
           }
-          if (null == hk.waterMidSprite) {
+          if (null == LoginPanel.waterMidSprite) {
             return false;
           }
           if (null == n.waterFarSprite) {
@@ -35,7 +35,7 @@ final class UnderwaterBackground extends BackgroundScene {
         if (wm.waterNearSprite == null) {
           return false;
         }
-        if (null == hk.waterMidSprite) {
+        if (null == LoginPanel.waterMidSprite) {
           return false;
         }
         if (null == n.waterFarSprite) {
@@ -60,7 +60,7 @@ final class UnderwaterBackground extends BackgroundScene {
         if (AchievementIcon.field_m.ensureGroupAvailableByName("water", -28138)) {
           go.waterRaysSprite = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.field_m);
           wm.waterNearSprite = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.field_m);
-          hk.waterMidSprite = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
+          LoginPanel.waterMidSprite = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
           n.waterFarSprite = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.field_m);
           TableNameEntry.waterSmallSprite = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.field_m);
           ConstructionBackground.waterCharacterSprite = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.field_m);
@@ -69,9 +69,9 @@ final class UnderwaterBackground extends BackgroundScene {
           n.waterFarSprite.g(0, 0);
           sc.popRaster(-81);
           to.field_e = jh.a(0, wm.waterNearSprite);
-          GameplayScreen.field_l = jh.a(0, hk.waterMidSprite);
+          GameplayScreen.field_l = jh.a(0, LoginPanel.waterMidSprite);
           BufferedFile.field_a = jh.a(0, n.waterFarSprite);
-          ig.field_P = jh.a(0, vj.field_b);
+          Under13RegistrationNoticePanel.field_P = jh.a(0, vj.field_b);
           uo.field_d = new RgbSprite(go.waterRaysSprite.canvasWidth / 2, go.waterRaysSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-83, uo.field_d);
           go.waterRaysSprite.a(0, 0, go.waterRaysSprite.canvasWidth / 2, go.waterRaysSprite.canvasHeight);
@@ -79,7 +79,7 @@ final class UnderwaterBackground extends BackgroundScene {
           pl.a(n.waterFarSprite, 0);
           pl.a(vj.field_b, 0);
           pl.a(BufferedFile.field_a, 0);
-          pl.a(ig.field_P, 0);
+          pl.a(Under13RegistrationNoticePanel.field_P, 0);
           pl.a(go.waterRaysSprite, 0);
           pl.a(uo.field_d, 0);
           return true;
@@ -128,7 +128,7 @@ final class UnderwaterBackground extends BackgroundScene {
           }
           var8 = kd.a(this.sceneId, colorIndex, (byte) 106);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            hh.a(BufferedFile.field_a, -13, 2, var8, -8562, colorIndex, ig.field_P);
+            hh.a(BufferedFile.field_a, -13, 2, var8, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           BubbleDistortion.a(scroll16, to.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, uo.field_d, 306);
@@ -140,7 +140,7 @@ final class UnderwaterBackground extends BackgroundScene {
         }
         RasterCacheSurface var9 = kd.a(this.sceneId, colorIndex, (byte) 106);
         if (!var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          hh.a(BufferedFile.field_a, -13, 2, var9, -8562, colorIndex, ig.field_P);
+          hh.a(BufferedFile.field_a, -13, 2, var9, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
           var9.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         BubbleDistortion.a(scroll16, to.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, uo.field_d, 306);
@@ -159,7 +159,7 @@ final class UnderwaterBackground extends BackgroundScene {
             hh.a(n.waterFarSprite, 0, 1, var7, -8562, colorIndex, vj.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          BubbleDistortion.a(scroll16, wm.waterNearSprite, var7.sprite, 1, 2, hk.waterMidSprite, 0, colorIndex, destinationY, destinationX, go.waterRaysSprite, 640);
+          BubbleDistortion.a(scroll16, wm.waterNearSprite, var7.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, go.waterRaysSprite, 640);
           return;
         }
         if (!this.hasSprites((byte) -112)) {
@@ -171,7 +171,7 @@ final class UnderwaterBackground extends BackgroundScene {
           hh.a(n.waterFarSprite, 0, 1, var8, -8562, colorIndex, vj.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        BubbleDistortion.a(scroll16, wm.waterNearSprite, var8.sprite, 1, 2, hk.waterMidSprite, 0, colorIndex, destinationY, destinationX, go.waterRaysSprite, 640);
+        BubbleDistortion.a(scroll16, wm.waterNearSprite, var8.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, go.waterRaysSprite, 640);
     }
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {

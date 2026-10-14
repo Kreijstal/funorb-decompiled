@@ -212,7 +212,7 @@ final class LobbyGame extends UiComponent {
             if (param4.characterIndex != 5) {
               var12 = cn.field_e;
             } else {
-              var12 = lp.field_yb;
+              var12 = AccountMessageDialog.field_yb;
             }
           } else {
             var12 = ScorePopup.field_r;
@@ -361,7 +361,7 @@ final class LobbyGame extends UiComponent {
             if (param4.characterIndex != 5) {
               var12 = cn.field_e;
             } else {
-              var12 = lp.field_yb;
+              var12 = AccountMessageDialog.field_yb;
             }
           } else {
             var12 = ScorePopup.field_r;

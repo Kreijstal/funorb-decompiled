@@ -54,7 +54,7 @@ final class PlayerInputBatch extends IntrusiveNode {
     final static String a(int param0) {
         String var1 = "";
         if (null != DirectByteStorage.field_k) {
-          var1 = DirectByteStorage.field_k.j((byte) -76);
+          var1 = DirectByteStorage.field_k.getAccount((byte) -76);
         }
         if (param0 < -98) {
           if (0 == var1.length()) {

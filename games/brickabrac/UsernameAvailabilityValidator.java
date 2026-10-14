@@ -45,7 +45,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     final String describeTextValidation(int obfuscationGuard, String text) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        UsernameAvailabilityResult var4_ref_oh = null;
+        AccountResponse var4_ref_oh = null;
         int var4 = 0;
         CharSequence var5 = null;
         String stackIn_3_0 = null;
@@ -68,11 +68,11 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             if (var4_ref_oh == null) {
               return null;
             }
-            if (null != var4_ref_oh.field_g) {
+            if (null != var4_ref_oh.message) {
               stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }
-            this.usernameAvailable = var4_ref_oh.available;
+            this.usernameAvailable = var4_ref_oh.success;
             this.checkedUsername = text;
           }
           if (!this.usernameAvailable) {
@@ -122,7 +122,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     }
 
     final ValidationStatus validateText(String text, byte obfuscationGuard) {
-        UsernameAvailabilityResult var3 = null;
+        AccountResponse var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         ValidationStatus stackIn_4_0 = null;
@@ -138,22 +138,22 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           var4 = (CharSequence) ((Object) text);
           if (!ByteArrayNode.a(17165, var4)) {
-            stackIn_4_0 = lp.validationInvalid;
+            stackIn_4_0 = AccountMessageDialog.validationInvalid;
             return stackIn_4_0;
           }
           if (!text.equals(this.checkedUsername)) {
             var3 = GameplayAudioEvent.pollUsernameAvailability(text, 0);
             if (var3 != null &&
-              var3.field_g == null) {
+              var3.message == null) {
               this.checkedUsername = text;
-              this.usernameAvailable = var3.available;
+              this.usernameAvailable = var3.success;
             } else {
               stackIn_11_0 = SaveResultsPromptScreen.validationPending;
               return stackIn_11_0;
             }
           }
           if (!this.usernameAvailable) {
-            stackIn_16_0 = lp.validationInvalid;
+            stackIn_16_0 = AccountMessageDialog.validationInvalid;
           } else {
             stackIn_16_0 = DualLinkIterator.validationValid;
           }

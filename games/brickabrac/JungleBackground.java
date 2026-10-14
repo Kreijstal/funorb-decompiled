@@ -657,7 +657,7 @@ final class JungleBackground extends BackgroundScene {
                       var21 = PacketBuffer.field_m;
                     }
                   } else {
-                    var21 = fe.field_ib;
+                    var21 = ContentTransitionLayer.field_ib;
                   }
                   if (var4_int != 0 &&
                     !MeshAttributeRecord.field_g) {
@@ -933,11 +933,11 @@ final class JungleBackground extends BackgroundScene {
         HuffmanCodec.field_e = jh.a(0, dg.jungleMidSprite);
         WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
         WidgetTextLayout.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
-        DualLinkNode.jungleCapsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
-        DualLinkIterator.jungleSegsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
+        DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
+        DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
         up.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
-        DualLinkNode.jungleCapsSprites[1] = ig.a(DualLinkNode.jungleCapsSprites[0], false);
-        DualLinkIterator.jungleSegsSprites[1] = ig.a(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
+        DualLinkNode.jungleCapsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkNode.jungleCapsSprites[0], false);
+        DualLinkIterator.jungleSegsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
         up.jungleCentreSprites[1] = pl.a(-16371, up.jungleCentreSprites[0]);
         return true;
     }

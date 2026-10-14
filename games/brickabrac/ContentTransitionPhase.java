@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi {
+final class ContentTransitionPhase {
     static int[] field_b;
     static int field_d;
     static volatile int livePressedButton;
@@ -16,7 +16,7 @@ final class mi {
           return;
         }
         ResourceArchive var2 = (ResourceArchive) null;
-        mi.a((ResourceArchive) null, 51, -113);
+        ContentTransitionPhase.a((ResourceArchive) null, 51, -113);
         field_e = null;
         field_a = null;
         field_b = null;

@@ -187,7 +187,7 @@ final class MusicPatch extends IntrusiveNode {
             pointerX = 121;
           }
           t.field_g = true;
-          ej.field_I = new lp(ResourceArchive.field_f, wm.field_a, param1, NanoGameClock.field_l, ln.field_l);
+          ej.field_I = new AccountMessageDialog(ResourceArchive.field_f, wm.field_a, param1, NanoGameClock.field_l, ln.field_l);
           ResourceArchive.field_f.pushLayer(-80, ej.field_I);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

@@ -31,7 +31,7 @@ final class ValidationIconWidget extends FocusableWidget {
         var8 = this.validationSource.getValidationStatus((byte) -31);
         if (var8 != m.validationDebouncing &&
           SaveResultsPromptScreen.validationPending != var8) {
-          if (lp.validationInvalid == var8) {
+          if (AccountMessageDialog.validationInvalid == var8) {
             var13 = df.field_a[2];
             var13.f(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
           } else if (DualLinkIterator.validationValid == var8) {
@@ -163,7 +163,7 @@ final class ValidationIconWidget extends FocusableWidget {
             while (ratingRowIndex < rowCount) {
               ratingSourceIndex = VerticalScrollbar.rankingSortIndices[ratingRowIndex];
               namesBySort[0][ratingOutputIndex] = LevelCompleteScreen.receivedRankingNames[ratingSourceIndex];
-              statisticsBySort[0][4 * ratingOutputIndex] = ec.rankingRatings[ratingSourceIndex];
+              statisticsBySort[0][4 * ratingOutputIndex] = DialogMessagePanel.rankingRatings[ratingSourceIndex];
               statisticsBySort[0][ratingOutputIndex * 4 + 1] = RankingsScreen.rankingWins[ratingSourceIndex];
               statisticsBySort[0][2 + ratingOutputIndex * 4] = ObjectHistoryBuffer.rankingDraws[ratingSourceIndex];
               statisticsBySort[0][4 * ratingOutputIndex + 3] = WidgetGroup.rankingLosses[ratingSourceIndex];
@@ -181,7 +181,7 @@ final class ValidationIconWidget extends FocusableWidget {
             while (rowCount > winRateRowIndex) {
               winRateSourceIndex = VerticalScrollbar.rankingSortIndices[winRateRowIndex + rowLimit];
               namesBySort[1][winRateOutputIndex] = LevelCompleteScreen.receivedRankingNames[winRateSourceIndex];
-              statisticsBySort[1][winRateOutputIndex * 4] = ec.rankingRatings[winRateSourceIndex];
+              statisticsBySort[1][winRateOutputIndex * 4] = DialogMessagePanel.rankingRatings[winRateSourceIndex];
               statisticsBySort[1][1 + winRateOutputIndex * 4] = RankingsScreen.rankingWins[winRateSourceIndex];
               statisticsBySort[1][2 + 4 * winRateOutputIndex] = ObjectHistoryBuffer.rankingDraws[winRateSourceIndex];
               statisticsBySort[1][winRateOutputIndex * 4 + 3] = WidgetGroup.rankingLosses[winRateSourceIndex];
@@ -266,7 +266,7 @@ final class ValidationIconWidget extends FocusableWidget {
               tq.field_f.writePrefixedCp1252String(param6 ^ 4, var14);
               tq.field_f.writePrefixedCp1252String(0, var8);
               var15 = (CharSequence) ((Object) param0);
-              tq.field_f.writePrefixedCp1252String(0, he.a(var15, -58));
+              tq.field_f.writePrefixedCp1252String(0, AccountIntroductionPanel.a(var15, -58));
               tq.field_f.writeShort((byte) 113, param4);
               tq.field_f.writeByte(89, param2);
               tq.field_f.writeByte(127, var9);
@@ -306,7 +306,7 @@ final class ValidationIconWidget extends FocusableWidget {
               LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, to.field_g);
               TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
-            cr.a(-1, 10000);
+            ActivityIndicatorWidget.a(-1, 10000);
             rf.field_b = ck.field_k;
           }
           if (ck.field_k == rf.field_b &&

@@ -280,7 +280,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             MovingBody.a((byte) 125, widget.width + parentX + widget.x, widget.x + parentX, parentY + widget.y, widget.height + parentY + widget.y);
-            bj.widgetTheme.a(this.caretColor, var10, var11, 91, var12, var10);
+            PopupWidgetLayer.widgetTheme.a(this.caretColor, var10, var11, 91, var12, var10);
             sc.popRaster(-94);
           }
           if (obfuscationGuard <= 118) {
@@ -653,7 +653,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 }
               }
               var15 = stackIn_21_0;
-              bj.widgetTheme.a(var13.top + this.topInset + (widget.y + (parentY + widget.textOffsetY)), this.selectionArgb >>> 24, this.selectionArgb, this.computeTextX(var14, widget, 65263, parentX), var13.bottom, (byte) 55, var15 - var14);
+              PopupWidgetLayer.widgetTheme.a(var13.top + this.topInset + (widget.y + (parentY + widget.textOffsetY)), this.selectionArgb >>> 24, this.selectionArgb, this.computeTextX(var14, widget, 65263, parentX), var13.bottom, (byte) 55, var15 - var14);
             }
             sc.popRaster(-98);
             return;
@@ -1292,7 +1292,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 continue;
               }
               if (var13.field_nc.pressedButton == 0) {
-                tf.a(var13, param0, (byte) -71, var33);
+                FullscreenFailureKind.a(var13, param0, (byte) -71, var33);
               } else {
                 if (var13.started && (!var13.protocolFlag8 ||
                   !var13.directJoinAvailable &&

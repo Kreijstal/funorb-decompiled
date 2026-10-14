@@ -45,9 +45,9 @@ final class ToggleButtonWidget extends FocusableWidget {
     }
 
     private ToggleButtonWidget(String param0, WidgetListener param1) {
-        this(param0, bj.widgetTheme.defaultFocusableRenderer, param1);
+        this(param0, PopupWidgetLayer.widgetTheme.defaultFocusableRenderer, param1);
         try {
-          this.renderer = bj.widgetTheme.toggleButtonRenderer;
+          this.renderer = PopupWidgetLayer.widgetTheme.toggleButtonRenderer;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -67,7 +67,7 @@ final class ToggleButtonWidget extends FocusableWidget {
     private ToggleButtonWidget(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.renderer = bj.widgetTheme.toggleButtonRenderer;
+          this.renderer = PopupWidgetLayer.widgetTheme.toggleButtonRenderer;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -80,7 +80,7 @@ final class ToggleButtonWidget extends FocusableWidget {
           if (param2 != -15947) {
             parisFarSprite = (RgbSprite) null;
           }
-          DirectByteStorage.field_k = new hk(GameScreen.field_d, (String) null, NanoGameClock.field_l, param0, param1);
+          DirectByteStorage.field_k = new LoginPanel(GameScreen.field_d, (String) null, NanoGameClock.field_l, param0, param1);
           rj.field_c = new bh(ResourceArchive.field_f, DirectByteStorage.field_k);
           ResourceArchive.field_f.pushLayer(-117, rj.field_c);
         } catch (RuntimeException runtimeException) {

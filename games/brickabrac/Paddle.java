@@ -95,7 +95,7 @@ final class Paddle extends RectangleBody {
             Widget.writeAbuseReport(var3, param0, CircleBody.reportAbuseDialog.reportTargetId, 1, var4 != 0, CircleBody.reportAbuseDialog.getReportedName(107));
           }
           CircleBody.reportAbuseDialog = null;
-          cr.f((byte) -124);
+          ActivityIndicatorWidget.f((byte) -124);
         }
         if (param2 > 69) {
           return;

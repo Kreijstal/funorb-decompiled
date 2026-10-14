@@ -209,7 +209,7 @@ abstract class MenuScreen extends GameScreen {
           }
         }
         this.c(true, var4);
-        if (lp.currentScreen == this &&
+        if (AccountMessageDialog.currentScreen == this &&
           GzipInflater.field_e > 0) {
           fieldTemp$2 = GzipInflater.field_e - 1;
           GzipInflater.field_e = GzipInflater.field_e - 1;
@@ -494,11 +494,11 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 23) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   if (this.screenId != 10) {
-                    he.a(LevelPackLoader.field_a, true, (byte) 126);
+                    AccountIntroductionPanel.a(LevelPackLoader.field_a, true, (byte) 126);
                     sl.field_z = 2147483647;
                   } else {
                     var12 = (String) null;
-                    he.a((String) null, true, (byte) 123);
+                    AccountIntroductionPanel.a((String) null, true, (byte) 123);
                     if (WidgetGroup.a(pl.pendingAchievementMask, -1)) {
                       sl.field_z = 9;
                     } else {

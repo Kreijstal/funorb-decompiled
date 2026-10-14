@@ -179,7 +179,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var10 = var18_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var18_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
             if (var6 != m.validationDebouncing &&
               var6 != SaveResultsPromptScreen.validationPending) {
-              if (lp.validationInvalid == var6) {
+              if (AccountMessageDialog.validationInvalid == var6) {
                 var19 = df.field_a[2];
                 var19.f(var9, var10 - (var19.height >> 1), 256);
                 return;
@@ -215,7 +215,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime5 = var22_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var22_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6 != m.validationDebouncing &&
             var6 != SaveResultsPromptScreen.validationPending) {
-            if (lp.validationInvalid == var6) {
+            if (AccountMessageDialog.validationInvalid == var6) {
               var23 = df.field_a[2];
               var23.f(var9Lifetime5, var10Lifetime5 - (var23.height >> 1), 256);
               return;
@@ -264,7 +264,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var10Lifetime1 = var27_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var27_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
             if (var6 != m.validationDebouncing &&
               var6 != SaveResultsPromptScreen.validationPending) {
-              if (lp.validationInvalid == var6) {
+              if (AccountMessageDialog.validationInvalid == var6) {
                 var28 = df.field_a[2];
                 var28.f(var9Lifetime1, var10Lifetime1 - (var28.height >> 1), 256);
                 return;
@@ -300,7 +300,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime1Lifetime1 = var31_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var31_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6 != m.validationDebouncing &&
             var6 != SaveResultsPromptScreen.validationPending) {
-            if (lp.validationInvalid == var6) {
+            if (AccountMessageDialog.validationInvalid == var6) {
               var32 = df.field_a[2];
               var32.f(var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - (var32.height >> 1), 256);
               return;
@@ -347,7 +347,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             var10Lifetime2 = var50_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var50_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
             if (var6Lifetime1 != m.validationDebouncing &&
               var6Lifetime1 != SaveResultsPromptScreen.validationPending) {
-              if (lp.validationInvalid == var6Lifetime1) {
+              if (AccountMessageDialog.validationInvalid == var6Lifetime1) {
                 var51 = df.field_a[2];
                 var51.f(var9Lifetime2, var10Lifetime2 - (var51.height >> 1), 256);
                 return;
@@ -385,7 +385,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime2Lifetime1 = var44_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var44_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6Lifetime1Lifetime1 != m.validationDebouncing &&
             var6Lifetime1Lifetime1 != SaveResultsPromptScreen.validationPending) {
-            if (lp.validationInvalid == var6Lifetime1Lifetime1) {
+            if (AccountMessageDialog.validationInvalid == var6Lifetime1Lifetime1) {
               var45 = df.field_a[2];
               var45.f(var9Lifetime2Lifetime1, var10Lifetime2Lifetime1 - (var45.height >> 1), 256);
               return;
@@ -435,7 +435,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           var10Lifetime3 = var36_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var36_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6Lifetime2 != m.validationDebouncing &&
             var6Lifetime2 != SaveResultsPromptScreen.validationPending) {
-            if (lp.validationInvalid == var6Lifetime2) {
+            if (AccountMessageDialog.validationInvalid == var6Lifetime2) {
               var37 = df.field_a[2];
               var37.f(var9Lifetime3, var10Lifetime3 - (var37.height >> 1), 256);
               return;
@@ -471,7 +471,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         var10Lifetime4 = var40_ref.getTextOriginY(parentY, (byte) -107, (Widget) (this)) + (var40_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
         if (var6Lifetime3 != m.validationDebouncing &&
           var6Lifetime3 != SaveResultsPromptScreen.validationPending) {
-          if (lp.validationInvalid == var6Lifetime3) {
+          if (AccountMessageDialog.validationInvalid == var6Lifetime3) {
             var41 = df.field_a[2];
             var41.f(var9Lifetime4, var10Lifetime4 - (var41.height >> 1), 256);
             return;

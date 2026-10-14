@@ -11,7 +11,7 @@ abstract class ArchiveSource {
 
     final static boolean a(String param0, String param1, String param2, int param3, byte param4, AccountRegistrationPanel param5, boolean param6) {
         RuntimeException var7 = null;
-        qf var8 = null;
+        RegistrationResponseDialog var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -29,15 +29,15 @@ abstract class ArchiveSource {
           if (ik.field_g != ej.field_P) {
             return false;
           }
-          var8 = new qf(ResourceArchive.field_f, param5);
+          var8 = new RegistrationResponseDialog(ResourceArchive.field_f, param5);
           ResourceArchive.field_f.pushLayer(-102, var8);
           if (LevelPackLoader.a((byte) -56)) {
-            var8.c(true);
+            var8.showIneligibleResponse(true);
             return true;
           }
           VolcanicBackground.field_w = param0;
           ik.field_g = MusicEnvelope.field_f;
-          tf.field_i = param6;
+          FullscreenFailureKind.field_i = param6;
           VerticalScrollbar.field_Qb = param1;
           ReportAbuseDialog.field_cc = param2;
           StateIconLabel.field_Rb = null;

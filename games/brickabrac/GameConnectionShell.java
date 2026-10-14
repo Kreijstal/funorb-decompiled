@@ -66,9 +66,9 @@ abstract class GameConnectionShell extends AppletGameShell {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         cd.field_e = this.languageId;
-        hk.a(cd.field_e, (byte) 125);
-        GzipInflater.a(param7, this.host, this.memberAccount, this.serverNumber, 5000, 5000, cd.field_e, this.gameCrc, lp.field_ub, (byte) 123, param3, this.instanceId, this.gamePortTwo, this.gamePortOne);
-        cr.a(param7, cd.field_e, param0 + 3, this.gamePortOne, lp.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
+        LoginPanel.a(cd.field_e, (byte) 125);
+        GzipInflater.a(param7, this.host, this.memberAccount, this.serverNumber, 5000, 5000, cd.field_e, this.gameCrc, AccountMessageDialog.field_ub, (byte) 123, param3, this.instanceId, this.gamePortTwo, this.gamePortOne);
+        ActivityIndicatorWidget.a(param7, cd.field_e, param0 + 3, this.gamePortOne, AccountMessageDialog.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
         BoundedFile.patchJavaKeyCodeMap(59);
         NinjaBackground.mouseWheelSource = ea.createMouseWheelSource(60);
         ap.a((byte) 117, CacheIoRequest.field_D);
@@ -231,11 +231,11 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           return var2;
         }
-        if (!hk.field_R) {
+        if (!LoginPanel.field_R) {
           this.a("reconnect", 4000);
         }
         FarmBackground.g(108);
-        tf.a(DirectByteStorage.field_e, (byte) -61, var2);
+        FullscreenFailureKind.a(DirectByteStorage.field_e, (byte) -61, var2);
         n.field_e = true;
         NanoGameClock.field_i = MonotonicTime.nowMillis(false) + 15000L;
         return var2;
@@ -332,7 +332,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = ek.a(ChocolateBackground.f(param1 ^ 67), sq.a(64), (byte) -16);
+            var5_int = FullscreenFailureDialog.a(ChocolateBackground.f(param1 ^ 67), sq.a(64), (byte) -16);
             if (var5_int != -1) {
               ef.a(DirectByteStorage.field_e, -106, var5_int, co.field_f);
               DirectByteStorage.field_e = null;
@@ -361,7 +361,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               var5_intLifetime2 = SoundCache.a(LevelSelectScreen.d(true), false, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  tf.a(DirectByteStorage.field_e, (byte) -77, var5_intLifetime2);
+                  FullscreenFailureKind.a(DirectByteStorage.field_e, (byte) -77, var5_intLifetime2);
                   DirectByteStorage.field_e = null;
                 } else {
                   sb.field_e = sl.field_v;
@@ -405,15 +405,15 @@ abstract class GameConnectionShell extends AppletGameShell {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 17);
           }
           if (var4 == 11) {
-            mi.a((byte) -123, EmailConfirmationValidator.e((byte) -93));
+            ContentTransitionPhase.a((byte) -123, EmailConfirmationValidator.e((byte) -93));
           }
           if (12 == var4) {
-            AgeValidator.a(UsernameAvailabilityResult.b((byte) -49), (byte) -125, EmailConfirmationValidator.e((byte) -97));
+            AgeValidator.a(AccountResponse.b((byte) -49), (byte) -125, EmailConfirmationValidator.e((byte) -97));
           }
           if (var4 == 13) {
             try {
               if (null == po.countryListRequest) {
-                po.countryListRequest = new CappedUrlRequest(lp.field_ub, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                po.countryListRequest = new CappedUrlRequest(AccountMessageDialog.field_ub, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (po.countryListRequest.poll(1)) {
                 var12 = po.countryListRequest.getResult((byte) 100);
@@ -472,7 +472,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                 MouseWheelSource.a(GameplayAudioEvent.mouseWheelDelta, (byte) 124);
               }
             } else {
-              hk.a((byte) -122);
+              LoginPanel.a((byte) -122);
             }
           }
         }
@@ -543,7 +543,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             PowerUpWarning.acceptChatMessage(var3, 79);
                           }
                         } else {
-                          TextWidgetRenderer.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, lp.field_ub);
+                          TextWidgetRenderer.a(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, AccountMessageDialog.field_ub);
                         }
                       } else {
                         stackIn_22_1 = !(obfuscationGuard);
@@ -726,7 +726,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             this.reconnectRequested = false;
             hn.a((byte) 91);
             FarmBackground.g(120);
-            tf.a(NinjaBackground.field_s, (byte) -113, 2);
+            FullscreenFailureKind.a(NinjaBackground.field_s, (byte) -113, 2);
             rj.b(guardCode ^ -111);
             n.field_e = true;
             NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
@@ -754,20 +754,20 @@ abstract class GameConnectionShell extends AppletGameShell {
             if (10 <= AchievementIcon.field_j) {
               FarmBackground.g(114);
               if (tm.field_a == 3) {
-                tf.a(nk.field_d, (byte) -49, 256);
+                FullscreenFailureKind.a(nk.field_d, (byte) -49, 256);
               } else {
                 if (tm.field_a != 4) {
                   if (tm.field_a != 2) {
                     if (5 == tm.field_a) {
-                      tf.a(u.field_b, (byte) -48, 5);
+                      FullscreenFailureKind.a(u.field_b, (byte) -48, 5);
                     } else {
-                      tf.a(np.field_e, (byte) -55, 256);
+                      FullscreenFailureKind.a(np.field_e, (byte) -55, 256);
                     }
                   } else {
-                    tf.a(AppletGameShell.field_k, (byte) -54, 256);
+                    FullscreenFailureKind.a(AppletGameShell.field_k, (byte) -54, 256);
                   }
                 } else {
-                  tf.a(RadialSelectorWidget.field_M, (byte) -103, 256);
+                  FullscreenFailureKind.a(RadialSelectorWidget.field_M, (byte) -103, 256);
                 }
               }
               n.field_e = true;

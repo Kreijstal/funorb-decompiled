@@ -358,7 +358,7 @@ final class be {
 
     final static boolean a(byte param0) {
         int var1 = 47 % ((59 - param0) / 63);
-        return tf.field_i;
+        return FullscreenFailureKind.field_i;
     }
 
     final be a(RgbSprite[] param0, int param1) {

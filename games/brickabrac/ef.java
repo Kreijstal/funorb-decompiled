@@ -91,21 +91,21 @@ final class ef extends IOException {
           MusicVoice.field_l = up.field_v;
           if (param2 != 255) {
             if (param2 < 100) {
-              he.field_H = AchievementIcon.a(param2, -60, param0);
+              AccountIntroductionPanel.field_H = AchievementIcon.a(param2, -60, param0);
               return;
             }
             if (param2 > 105) {
-              he.field_H = AchievementIcon.a(param2, -60, param0);
+              AccountIntroductionPanel.field_H = AchievementIcon.a(param2, -60, param0);
               return;
             }
             var8 = param3;
             InstructionsScreen.a(var8, true);
-            he.field_H = IntKeyIndex.a(param1 ^ 2167, param3);
+            AccountIntroductionPanel.field_H = IntKeyIndex.a(param1 ^ 2167, param3);
             return;
           }
           stackIn_6_0 = true;
           stackIn_7_1 = !(Paddle.field_x >= 13);
-          he.field_H = cd.a(stackIn_6_0, stackIn_7_1);
+          AccountIntroductionPanel.field_H = cd.a(stackIn_6_0, stackIn_7_1);
           var7 = (String[]) null;
           InstructionsScreen.a((String[]) null, true);
           return;

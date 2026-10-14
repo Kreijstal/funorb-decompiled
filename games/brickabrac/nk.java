@@ -17,7 +17,7 @@ final class nk {
         int fieldTemp$1 = 0;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (UsernameAvailabilityResult.field_b == sm.field_b) {
+        if (AccountResponse.field_b == sm.field_b) {
           fieldTemp$0 = CachedArchiveSource.field_p;
           CachedArchiveSource.field_p = CachedArchiveSource.field_p + 1;
           if (fieldTemp$0 >= 16) {

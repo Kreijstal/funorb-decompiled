@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class cr extends Widget {
+final class ActivityIndicatorWidget extends Widget {
     int field_L;
-    boolean field_J;
+    boolean animated;
     static NodeDeque field_N;
-    private int field_K;
+    private int phaseTick;
     private int field_M;
     private RgbSprite field_C;
     private RgbSprite[] field_P;
@@ -16,20 +16,20 @@ final class cr extends Widget {
     static RgbSprite field_D;
     private RgbSprite field_O;
     private RgbSprite field_G;
-    private int field_H;
+    private int phaseSpan;
     private int field_E;
 
     final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, obfuscationGuard, width);
-        this.g(-1847795903);
+        this.rebuildActivitySprites(-1847795903);
     }
 
-    cr(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this(param0, param1, param2, param3, param4, param5, param6, 8355711 & param5 >> 1, (param6 & 16711422) >> 1);
+    ActivityIndicatorWidget(int x, int y, int width, int height, int phaseSpan, int foregroundColor, int backgroundColor) {
+        this(x, y, width, height, phaseSpan, foregroundColor, backgroundColor, 8355711 & foregroundColor >> 1, (backgroundColor & 16711422) >> 1);
     }
 
     final static void a(int param0, int param1, int param2, int param3, PlatformServices param4, String param5, int param6, int param7, int param8) {
-        ec.field_P = param4;
+        DialogMessagePanel.field_P = param4;
         ArcticBackground.field_t = param7;
         TextFieldWidget.field_S = param0;
         LevelMetadata.field_k = param5;
@@ -63,7 +63,7 @@ final class cr extends Widget {
         try {
           var5_int = param0 + this.width;
           MovingBody.a((byte) 107, var5_int - this.field_G.width, param0 + this.field_G.width, param1, param1 + this.height);
-          var6 = param0 - this.field_K;
+          var6 = param0 - this.phaseTick;
           if (param3 > -56) {
             this.field_C = (RgbSprite) null;
           }
@@ -74,18 +74,18 @@ final class cr extends Widget {
           sc.popRaster(-103);
           if (param0 + this.field_G.width >= Rasterizer2D.clipLeft) {
             IndexedSpriteGeometry.pushSpriteRaster(-112, this.field_C);
-            param2.drawTransparent(-this.field_K, 0);
-            param2.drawTransparent(this.field_H * 2 - this.field_K, 0);
+            param2.drawTransparent(-this.phaseTick, 0);
+            param2.drawTransparent(this.phaseSpan * 2 - this.phaseTick, 0);
             this.field_O.b(0, 0);
             sc.popRaster(-109);
             this.field_C.drawTransparent(param0, param1);
           }
           if (Rasterizer2D.clipRight >= var5_int - this.field_G.width) {
             IndexedSpriteGeometry.pushSpriteRaster(-51, this.field_C);
-            for (var7 = this.width - this.field_G.width + this.field_K; var7 > 2 * this.field_H; var7 = var7 - this.field_H * 2) {
+            for (var7 = this.width - this.field_G.width + this.phaseTick; var7 > 2 * this.phaseSpan; var7 = var7 - this.phaseSpan * 2) {
             }
             param2.drawTransparent(-var7, 0);
-            param2.drawTransparent(-var7 + 2 * this.field_H, 0);
+            param2.drawTransparent(-var7 + 2 * this.phaseSpan, 0);
             this.field_G.b(0, 0);
             sc.popRaster(-117);
             this.field_C.drawTransparent(var5_int - this.field_G.width, param1);
@@ -106,15 +106,15 @@ final class cr extends Widget {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
-        if (param2 != 2) {
+    final void setActivityColors(int foregroundColor, int backgroundColor, int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           this.setBounds(-106, -2, -16, (byte) 28, -96);
         }
-        this.field_M = (param0 & 16711422) >> 1;
-        this.field_F = param0;
-        this.field_I = 8355711 & param1 >> 1;
-        this.field_E = param1;
-        this.g(-1847795903);
+        this.field_M = (foregroundColor & 16711422) >> 1;
+        this.field_F = foregroundColor;
+        this.field_I = 8355711 & backgroundColor >> 1;
+        this.field_E = backgroundColor;
+        this.rebuildActivitySprites(-1847795903);
     }
 
     public static void a(byte param0) {
@@ -125,12 +125,12 @@ final class cr extends Widget {
         }
     }
 
-    private final void g(int param0) {
+    private final void rebuildActivitySprites(int obfuscationGuard) {
         this.field_P = new RgbSprite[]{this.a(this.field_E, (byte) -41, this.field_F), this.a(this.field_I, (byte) 107, this.field_M)};
         this.field_G = this.a(16711422);
         this.field_O = this.field_G.copyFlippedHorizontal();
         this.field_C = new RgbSprite(this.height >> 1, this.height);
-        if (param0 != -1847795903) {
+        if (obfuscationGuard != -1847795903) {
           this.field_F = 58;
         }
     }
@@ -141,7 +141,7 @@ final class cr extends Widget {
           bm.contextActions.anchorComponent.selected = false;
         }
         if (param0 >= -39) {
-          cr.a(0, 110);
+          ActivityIndicatorWidget.a(0, 110);
         }
         o.field_b = null;
         bm.contextActions = null;
@@ -157,12 +157,12 @@ final class cr extends Widget {
           if (obfuscationGuard != 0) {
             return;
           }
-          if (this.field_J) {
-            this.field_K = this.field_K + 1;
-            if (2 * this.field_H >= this.field_K) {
+          if (this.animated) {
+            this.phaseTick = this.phaseTick + 1;
+            if (2 * this.phaseSpan >= this.phaseTick) {
               return;
             }
-            this.field_K = this.field_K - this.field_H * 2;
+            this.phaseTick = this.phaseTick - this.phaseSpan * 2;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -216,26 +216,26 @@ final class cr extends Widget {
         int var13 = 0;
         int var14 = BrickABrac.field_J ? 1 : 0;
         int var4 = 93 % ((11 - param1) / 37);
-        RgbSprite var5 = new RgbSprite(2 * this.field_H, this.height);
+        RgbSprite var5 = new RgbSprite(2 * this.phaseSpan, this.height);
         int var9Lifetime1;
         int var10Lifetime1;
         int var13Lifetime1;
         IndexedSpriteGeometry.pushSpriteRaster(-102, var5);
         int var6 = this.height >> 1;
         for (var7 = 0; var7 < this.height; var7++) {
-          var8 = (var7 >> 1) * (-1 + this.field_H * 2) % (this.field_H * 2);
+          var8 = (var7 >> 1) * (-1 + this.phaseSpan * 2) % (this.phaseSpan * 2);
           var9 = param2 & 16711935;
           var10 = param2 & 65280;
           var11 = var7 - var6;
           var12 = 128 + (int)(128.0 * (Math.sqrt((double)(var6 * var6 - var11 * var11)) / (double)var6));
           var13 = var12 < 256 ? (var12 * var10 & 16711680 | var9 * var12 & -16711936) >>> 8 : var9 | var10;
-          Rasterizer2D.drawHorizontalLine(var8, var7, this.field_H, var13);
+          Rasterizer2D.drawHorizontalLine(var8, var7, this.phaseSpan, var13);
           var10Lifetime1 = 65280 & param0;
-          Rasterizer2D.drawHorizontalLine(-(2 * this.field_H) + var8, var7, this.field_H, var13);
+          Rasterizer2D.drawHorizontalLine(-(2 * this.phaseSpan) + var8, var7, this.phaseSpan, var13);
           var9Lifetime1 = 16711935 & param0;
           var13Lifetime1 = var12 >= 256 ? var9Lifetime1 | var10Lifetime1 : (-16711936 & var9Lifetime1 * var12 | 16711680 & var10Lifetime1 * var12) >>> 8;
-          Rasterizer2D.drawHorizontalLine(this.field_H + var8, var7, this.field_H, var13Lifetime1);
-          Rasterizer2D.drawHorizontalLine(var8 - this.field_H, var7, this.field_H, var13Lifetime1);
+          Rasterizer2D.drawHorizontalLine(this.phaseSpan + var8, var7, this.phaseSpan, var13Lifetime1);
+          Rasterizer2D.drawHorizontalLine(var8 - this.phaseSpan, var7, this.phaseSpan, var13Lifetime1);
         }
         sc.popRaster(-110);
         return var5;
@@ -288,8 +288,8 @@ final class cr extends Widget {
         }
     }
 
-    private cr(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        this.field_H = param4;
+    private ActivityIndicatorWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        this.phaseSpan = param4;
         this.field_M = param7;
         this.field_I = param8;
         this.field_F = param5;
@@ -310,7 +310,7 @@ final class cr extends Widget {
           sc.popRaster(-102);
         }
         if (obfuscationGuard != -11) {
-          this.field_J = true;
+          this.animated = true;
         }
     }
 

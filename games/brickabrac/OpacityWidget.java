@@ -42,7 +42,7 @@ final class OpacityWidget extends SingleChildWidget {
           }
           QuickChatMenu.field_Wb = 3;
           hg.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(102) << 16);
-          ek.field_kb = 72;
+          FullscreenFailureDialog.field_kb = 72;
           qm.field_a = 40;
           tm.field_g = 11;
           localPlayerMask = (1 << localPlayerCount) - 1;
@@ -102,10 +102,10 @@ final class OpacityWidget extends SingleChildWidget {
           if (hd.pendingScreen == null) {
             return;
           }
-          if (lp.currentScreen instanceof MenuScreen) {
-            ((MenuScreen) (lp.currentScreen)).onExit((byte) 79);
+          if (AccountMessageDialog.currentScreen instanceof MenuScreen) {
+            ((MenuScreen) (AccountMessageDialog.currentScreen)).onExit((byte) 79);
           }
-          lp.currentScreen = hd.pendingScreen;
+          AccountMessageDialog.currentScreen = hd.pendingScreen;
           hd.pendingScreen = null;
           NodeDequeCursor.screenTransitionTick = 0;
           if (NewAchievementsScreen.discardGameplayOnTransition) {
@@ -117,7 +117,7 @@ final class OpacityWidget extends SingleChildWidget {
           }
           if (eb.field_l) {
             VerticalScrollbar.field_Ub = null;
-            lp.queuedAchievementSubmissions.clear((byte) -121);
+            AccountMessageDialog.queuedAchievementSubmissions.clear((byte) -121);
             var9 = SecondaryHashTable.earnedAchievementMask;
             var7 = var9;
             var4 = var7;

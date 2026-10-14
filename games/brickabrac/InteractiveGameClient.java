@@ -188,7 +188,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
                 default:
                   break;
                 case 4:
-                  he.a(qn.field_k, false, (byte) 61);
+                  AccountIntroductionPanel.a(qn.field_k, false, (byte) 61);
                   wi.field_g = true;
                   if (var5 == 0) {
                     break;
@@ -226,7 +226,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
                 if (!me.b(param0 ^ -16)) {
                   var3 = RadialSelectorWidget.h(0);
                   if (1 == var3) {
-                    he.a(LevelPackLoader.field_a, true, (byte) 97);
+                    AccountIntroductionPanel.a(LevelPackLoader.field_a, true, (byte) 97);
                   }
                   this.updateGameLayer(false, (byte) 7);
                   decompiledFrameRemainder0 = (var5 != 0);
@@ -451,7 +451,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         }
         if (!QuickChatMenu.h(-26090)) {
           do {
-            var5 = (AchievementSubmission) (lp.queuedAchievementSubmissions.removeFirst(3));
+            var5 = (AchievementSubmission) (AccountMessageDialog.queuedAchievementSubmissions.removeFirst(3));
             if (var5 == null) {
               if (var4 == 0) {
                 break;

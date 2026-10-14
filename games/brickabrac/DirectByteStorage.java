@@ -3,7 +3,7 @@
  */
 final class DirectByteStorage extends ByteStorage {
     static String field_h;
-    static hk field_k;
+    static LoginPanel field_k;
     static PcmPlayer field_f;
     static java.awt.Font field_g;
     static volatile int livePointerX;

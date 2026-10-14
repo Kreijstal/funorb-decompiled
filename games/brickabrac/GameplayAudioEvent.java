@@ -12,10 +12,10 @@ final class GameplayAudioEvent extends IntrusiveNode {
     static ResourceArchive field_k;
     int eventCode;
 
-    final static UsernameAvailabilityResult pollUsernameAvailability(String username, int obfuscationGuard) {
+    final static AccountResponse pollUsernameAvailability(String username, int obfuscationGuard) {
         RuntimeException var2 = null;
-        UsernameAvailabilityResult stackIn_5_0 = null;
-        UsernameAvailabilityResult stackIn_9_0 = null;
+        AccountResponse stackIn_5_0 = null;
+        AccountResponse stackIn_9_0 = null;
         Object stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -26,20 +26,20 @@ final class GameplayAudioEvent extends IntrusiveNode {
             return null;
           }
           if (obfuscationGuard != 0) {
-            stackIn_5_0 = (UsernameAvailabilityResult) null;
+            stackIn_5_0 = (AccountResponse) null;
             return stackIn_5_0;
           }
           if (up.field_v == MusicVoice.field_l &&
             username.equals(LobbyGame.field_pc)) {
             MusicVoice.field_l = ej.field_P;
-            stackIn_9_0 = he.field_H;
+            stackIn_9_0 = AccountIntroductionPanel.field_H;
             return stackIn_9_0;
           }
-          he.field_H = null;
+          AccountIntroductionPanel.field_H = null;
           MusicVoice.field_l = MusicEnvelope.field_f;
           LobbyGame.field_pc = username;
           stackIn_11_0 = null;
-          return (UsernameAvailabilityResult) (stackIn_11_0);
+          return (AccountResponse) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -126,7 +126,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
             if (null != ua.field_d &&
               ua.field_d.focusLossPending) {
               LevelPack.b(109);
-              wo.field_b.pushLayer(-80, new ek(wo.field_b, ch.field_a));
+              wo.field_b.pushLayer(-80, new FullscreenFailureDialog(wo.field_b, ch.fullscreenFocusProblem));
             }
             return;
           }

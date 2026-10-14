@@ -57,11 +57,11 @@ final class VolcanicBackground extends BackgroundScene {
         NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
         NameEntryPopup.field_Sb = jh.a(0, WidgetLayerStack.volcanicMidSprite);
         RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
-        CacheIoWorker.volcanicCapsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
-        np.volcanicSegsSprites[0] = cr.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
+        CacheIoWorker.volcanicCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
+        np.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
         LevelList.volcanicCentreSprites[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
-        CacheIoWorker.volcanicCapsSprites[1] = ig.a(CacheIoWorker.volcanicCapsSprites[0], false);
-        np.volcanicSegsSprites[1] = ig.a(np.volcanicSegsSprites[0], obfuscationGuard);
+        CacheIoWorker.volcanicCapsSprites[1] = Under13RegistrationNoticePanel.a(CacheIoWorker.volcanicCapsSprites[0], false);
+        np.volcanicSegsSprites[1] = Under13RegistrationNoticePanel.a(np.volcanicSegsSprites[0], obfuscationGuard);
         LevelList.volcanicCentreSprites[1] = pl.a(-16371, LevelList.volcanicCentreSprites[0]);
         return true;
     }

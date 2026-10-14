@@ -70,8 +70,8 @@ final class hn {
           if (null == BlankScreen.friendIndex) {
             BlankScreen.friendIndex = new SecondaryHashTable(64);
           }
-          if (tf.ignoreIndex == null) {
-            tf.ignoreIndex = new SecondaryHashTable(64);
+          if (FullscreenFailureKind.ignoreIndex == null) {
+            FullscreenFailureKind.ignoreIndex = new SecondaryHashTable(64);
           }
           ToggleButtonWidget.friendEntries = param1.children;
           CachedArchiveSource.ignoreEntries = param0.children;

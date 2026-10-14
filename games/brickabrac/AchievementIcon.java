@@ -218,19 +218,19 @@ final class AchievementIcon extends IntrusiveNode {
         field_o = (String) null;
     }
 
-    final static UsernameAvailabilityResult a(int param0, int param1, String param2) {
-        UsernameAvailabilityResult var3 = null;
+    final static AccountResponse a(int param0, int param1, String param2) {
+        AccountResponse var3 = null;
         RuntimeException var3_ref = null;
         IntArrayRequest var4 = null;
-        UsernameAvailabilityResult stackIn_3_0 = null;
+        AccountResponse stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new UsernameAvailabilityResult(false);
-          var3.field_d = param0;
-          var3.field_g = param2;
+          var3 = new AccountResponse(false);
+          var3.responseCode = param0;
+          var3.message = param2;
           if (param1 > -27) {
             var4 = (IntArrayRequest) null;
             AchievementIcon.sendIntArrayRequest(-57, (IntArrayRequest) null, 111);

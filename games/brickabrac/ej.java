@@ -6,7 +6,7 @@ final class ej extends sl {
     static tq field_P;
     static String field_M;
     static NodeDeque pendingAchievementMaskRequests;
-    static lp field_I;
+    static AccountMessageDialog field_I;
     static int[] field_E;
     static double packetDelayJitter;
     static String field_K;

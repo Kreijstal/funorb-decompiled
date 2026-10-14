@@ -13,7 +13,7 @@ final class ng {
         if (hd.pendingScreen != null) {
           OpacityWidget.finishScreenTransition((byte) -127);
         }
-        if (lp.currentScreen.screenId == screenId) {
+        if (AccountMessageDialog.currentScreen.screenId == screenId) {
           return;
         }
         hd.pendingScreen = GameUiController.getScreen(screenId, (byte) -128);

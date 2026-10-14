@@ -44,7 +44,7 @@ abstract class ArchiveFetchClient {
             var8 = (CharSequence) ((Object) param0);
             var4_long = HighscoresScreen.a(false, var8);
           }
-          stackIn_4_0 = he.a(var4_long, 20, param1, param2, (String) (var6));
+          stackIn_4_0 = AccountIntroductionPanel.a(var4_long, 20, param1, param2, (String) (var6));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

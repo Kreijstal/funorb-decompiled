@@ -219,7 +219,7 @@ final class DateFieldsWidget extends DateInputWidget {
         if (m.field_h >= 0) {
           DraggableWidget.field_N.text = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);
-          stackIn_48_0 = fe.field_gb;
+          stackIn_48_0 = ContentTransitionLayer.field_gb;
           stackIn_49_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.currentLobbyGame) && (nl.pendingLobbyGame == null);
           ((UiComponent) (Object) stackIn_48_0).updateRoot(stackIn_49_1, -15211);
           stackIn_55_0 = rm.field_a;
@@ -231,7 +231,7 @@ final class DateFieldsWidget extends DateInputWidget {
         } else {
           DraggableWidget.field_N.text = null;
           var4 = 34 / ((-10 - param2) / 53);
-          stackIn_7_0 = fe.field_gb;
+          stackIn_7_0 = ContentTransitionLayer.field_gb;
           stackIn_8_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.currentLobbyGame) && (nl.pendingLobbyGame == null);
           ((UiComponent) (Object) stackIn_7_0).updateRoot(stackIn_8_1, -15211);
           stackIn_14_0 = rm.field_a;

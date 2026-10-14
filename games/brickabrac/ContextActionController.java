@@ -306,7 +306,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_private", (byte) 45);
                 if (var2 != null) {
-                  fe.field_hb = MenuButton.a(var2, (byte) 84);
+                  ContentTransitionLayer.field_hb = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = nk.a("mu_x_entered_game", (byte) 69);
                 if (null != var2) {
@@ -394,7 +394,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_lobby_friend_add", (byte) 61);
                 if (var2 != null) {
-                  hk.field_J = MenuButton.a(var2, (byte) 70);
+                  LoginPanel.field_J = MenuButton.a(var2, (byte) 70);
                 }
                 var2 = nk.a("mu_lobby_friend_rm", (byte) 72);
                 if (var2 != null) {
@@ -826,7 +826,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("offline", (byte) -126);
                 if (var2 != null) {
-                  ec.field_S = MenuButton.a(var2, (byte) 84);
+                  DialogMessagePanel.field_S = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = nk.a("multiconst_invite_only", (byte) 35);
                 if (var2 != null) {
@@ -886,7 +886,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("privatequickchat_from_x", (byte) -122);
                 if (null != var2) {
-                  ek.field_fb = MenuButton.a(var2, (byte) 115);
+                  FullscreenFailureDialog.field_fb = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("privatequickchat_to_x", (byte) -111);
                 if (var2 != null) {
@@ -946,7 +946,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_unratedonly", (byte) 45);
                 if (var2 != null) {
-                  fe.field_ib = MenuButton.a(var2, (byte) 114);
+                  ContentTransitionLayer.field_ib = MenuButton.a(var2, (byte) 114);
                 }
                 var2 = nk.a("gameopt_notunlocked", (byte) -110);
                 if (var2 != null) {
@@ -1068,7 +1068,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ra_mutethisplayer", (byte) -114);
                 if (var2 != null) {
-                  ek.field_gb = MenuButton.a(var2, (byte) 102);
+                  FullscreenFailureDialog.field_gb = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("ra_suggestmute", (byte) -109);
                 if (null != var2) {
@@ -1192,7 +1192,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("reloadgame", (byte) -18);
                 if (null != var2) {
-                  ec.field_L = MenuButton.a(var2, (byte) 119);
+                  DialogMessagePanel.field_L = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("toserverlist", (byte) -125);
                 if (var2 != null) {
@@ -1800,7 +1800,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_alert_yearrange", (byte) -122);
                 if (null != var2) {
-                  ig.field_J = MenuButton.a(var2, (byte) 90);
+                  Under13RegistrationNoticePanel.field_J = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("create_alert_mismatch", (byte) 26);
                 if (var2 != null) {
@@ -2214,7 +2214,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("singleplayergame", (byte) -107);
                 if (var2 != null) {
-                  mo.field_O = MenuButton.a(var2, (byte) 102);
+                  BirthDateEntryPanel.field_O = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("returntogame", (byte) -125);
                 if (var2 != null) {
@@ -2506,7 +2506,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mp_cancelrematch_unrated", (byte) -111);
                 if (null != var2) {
-                  mi.field_a = MenuButton.a(var2, (byte) 98);
+                  ContentTransitionPhase.field_a = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = nk.a("mp_rematchnewgame", (byte) -110);
                 if (null != var2) {
@@ -2594,7 +2594,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mp_hidechat", (byte) 4);
                 if (null != var2) {
-                  bj.field_V = MenuButton.a(var2, (byte) 88);
+                  PopupWidgetLayer.field_V = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("mp_showchat_nounread", (byte) 116);
                 if (var2 != null) {
@@ -2734,19 +2734,19 @@ final class ContextActionController {
                 }
                 var2 = nk.a("reconnect_lost_seq,0", (byte) -106);
                 if (var2 != null) {
-                  mi.field_e[0] = MenuButton.a(var2, (byte) 115);
+                  ContentTransitionPhase.field_e[0] = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("reconnect_lost_seq,1", (byte) -108);
                 if (null != var2) {
-                  mi.field_e[1] = MenuButton.a(var2, (byte) 127);
+                  ContentTransitionPhase.field_e[1] = MenuButton.a(var2, (byte) 127);
                 }
                 var2 = nk.a("reconnect_lost_seq,2", (byte) -114);
                 if (null != var2) {
-                  mi.field_e[2] = MenuButton.a(var2, (byte) 99);
+                  ContentTransitionPhase.field_e[2] = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("reconnect_lost_seq,3", (byte) -6);
                 if (var2 != null) {
-                  mi.field_e[3] = MenuButton.a(var2, (byte) 106);
+                  ContentTransitionPhase.field_e[3] = MenuButton.a(var2, (byte) 106);
                 }
                 var2 = nk.a("reconnect_lost", (byte) -110);
                 if (var2 != null) {
@@ -2852,7 +2852,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_focus_or_resolution", (byte) -124);
                 if (null != var2) {
-                  UsernameAvailabilityResult.field_h = MenuButton.a(var2, (byte) 112);
+                  AccountResponse.field_h = MenuButton.a(var2, (byte) 112);
                 }
                 var2 = nk.a("fs_timeout", (byte) 40);
                 if (null != var2) {
@@ -3028,31 +3028,31 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mustlogin3,1", (byte) 115);
                 if (var2 != null) {
-                  tf.field_e[1] = MenuButton.a(var2, (byte) 90);
+                  FullscreenFailureKind.field_e[1] = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("mustlogin3,2", (byte) -106);
                 if (null != var2) {
-                  tf.field_e[2] = MenuButton.a(var2, (byte) 81);
+                  FullscreenFailureKind.field_e[2] = MenuButton.a(var2, (byte) 81);
                 }
                 var2 = nk.a("mustlogin3,3", (byte) -107);
                 if (var2 != null) {
-                  tf.field_e[3] = MenuButton.a(var2, (byte) 78);
+                  FullscreenFailureKind.field_e[3] = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = nk.a("mustlogin3,4", (byte) -13);
                 if (var2 != null) {
-                  tf.field_e[4] = MenuButton.a(var2, (byte) 96);
+                  FullscreenFailureKind.field_e[4] = MenuButton.a(var2, (byte) 96);
                 }
                 var2 = nk.a("mustlogin3,5", (byte) -121);
                 if (null != var2) {
-                  tf.field_e[5] = MenuButton.a(var2, (byte) 116);
+                  FullscreenFailureKind.field_e[5] = MenuButton.a(var2, (byte) 116);
                 }
                 var2 = nk.a("mustlogin3,6", (byte) -19);
                 if (var2 != null) {
-                  tf.field_e[6] = MenuButton.a(var2, (byte) 71);
+                  FullscreenFailureKind.field_e[6] = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("mustlogin3,7", (byte) 61);
                 if (null != var2) {
-                  tf.field_e[7] = MenuButton.a(var2, (byte) 90);
+                  FullscreenFailureKind.field_e[7] = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("discard", (byte) -116);
                 if (null != var2) {

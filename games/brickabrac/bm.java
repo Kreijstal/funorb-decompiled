@@ -100,7 +100,7 @@ final class bm {
                         bucketBase = edgeBYOrBucket << 4;
                         bucketSlot = edgeCYOrBucketCount;
                         sortedIndex = bucketBase + bucketSlot;
-                        ek.sortedFaceIds[sortedIndex] = face;
+                        FullscreenFailureDialog.sortedFaceIds[sortedIndex] = face;
                         ArcticBackground.faceDepthBucketCounts[edgeBYOrBucket] = edgeCYOrBucketCount + 1;
                         if (mesh.faceGroupCount > 0 &&
                           mesh.faceGroups != null) {

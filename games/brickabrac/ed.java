@@ -18,15 +18,15 @@ final class ed {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         try {
-          ParisBackground.a(lp.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, GzipInflater.field_d, wi.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
+          ParisBackground.a(AccountMessageDialog.field_Ab, ScorePopup.field_m, f.field_a, Paddle.field_C, GzipInflater.field_d, wi.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
           if (param3 < 74) {
             ed.unsignedBitLength(2, -57);
           }
-          ef.field_b = cr.loadRgbSpritesByName("lobby", param1, "chatfilter", 2);
+          ef.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param1, "chatfilter", 2);
           rh.field_e[0] = mc.field_a;
           rh.field_e[2] = TableRowSubmission.field_s;
           rh.field_e[1] = AchievementSubmission.field_j;
-          hk.a(rd.field_e, (byte) 90, param2);
+          LoginPanel.a(rd.field_e, (byte) 90, param2);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ed.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

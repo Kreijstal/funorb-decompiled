@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class he extends WidgetGroup implements WidgetActionListener {
-    static UsernameAvailabilityResult field_H;
-    private FocusableWidget field_K;
-    private FocusableWidget field_I;
+final class AccountIntroductionPanel extends WidgetGroup implements WidgetActionListener {
+    static AccountResponse field_H;
+    private FocusableWidget backButton;
+    private FocusableWidget createAccountButton;
     static String[] field_L;
-    private FocusableWidget field_J;
+    private FocusableWidget guestPlayButton;
 
     final static ff a(long param0, int param1, boolean param2, String param3, String param4) {
         RuntimeException var6 = null;
@@ -25,7 +25,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
         try {
           if (param1 != 20) {
             var7 = (String) null;
-            he.a(-13L, 34, false, (String) null, (String) null);
+            AccountIntroductionPanel.a(-13L, 34, false, (String) null, (String) null);
           }
           if (0L == param0 &&
             param4 != null) {
@@ -58,29 +58,29 @@ final class he extends WidgetGroup implements WidgetActionListener {
         }
     }
 
-    public he() {
+    public AccountIntroductionPanel() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
-        this.field_I = new FocusableWidget(CheckboxWidgetRenderer.field_a, (WidgetListener) null);
-        this.field_K = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
-        this.field_J = new FocusableWidget(nd.field_d, (WidgetListener) null);
+        this.createAccountButton = new FocusableWidget(CheckboxWidgetRenderer.field_a, (WidgetListener) null);
+        this.backButton = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
+        this.guestPlayButton = new FocusableWidget(nd.field_d, (WidgetListener) null);
         ButtonWidgetRenderer var1 = new ButtonWidgetRenderer();
-        this.field_I.renderer = (WidgetRenderer) ((Object) var1);
-        this.field_K.renderer = (WidgetRenderer) ((Object) var1);
-        this.field_J.renderer = (WidgetRenderer) ((Object) var1);
+        this.createAccountButton.renderer = (WidgetRenderer) ((Object) var1);
+        this.backButton.renderer = (WidgetRenderer) ((Object) var1);
+        this.guestPlayButton.renderer = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = -var2 + var3 >> 1;
-        this.field_K.setBounds(30, this.width - var3 >> 1, this.height + (-48 - var2), (byte) -119, var4);
-        this.field_J.setBounds(30, (-var3 + this.width >> 1) + (var4 + var2), -var2 + (-48 + this.height), (byte) -119, var4);
-        this.field_I.setBounds(30, this.width - var3 >> 1, this.height - (78 + var2 * 2), (byte) -119, var3);
-        this.field_K.listener = (WidgetListener) (this);
-        this.field_I.listener = (WidgetListener) (this);
-        this.field_I.tooltip = MidiSynthesizer.field_q;
-        this.field_J.listener = (WidgetListener) (this);
-        this.field_J.tooltip = SoundCache.field_i;
-        this.addChild(this.field_K, true);
-        this.addChild(this.field_I, true);
-        this.addChild(this.field_J, true);
+        this.backButton.setBounds(30, this.width - var3 >> 1, this.height + (-48 - var2), (byte) -119, var4);
+        this.guestPlayButton.setBounds(30, (-var3 + this.width >> 1) + (var4 + var2), -var2 + (-48 + this.height), (byte) -119, var4);
+        this.createAccountButton.setBounds(30, this.width - var3 >> 1, this.height - (78 + var2 * 2), (byte) -119, var3);
+        this.backButton.listener = (WidgetListener) (this);
+        this.createAccountButton.listener = (WidgetListener) (this);
+        this.createAccountButton.tooltip = MidiSynthesizer.field_q;
+        this.guestPlayButton.listener = (WidgetListener) (this);
+        this.guestPlayButton.tooltip = SoundCache.field_i;
+        this.addChild(this.backButton, true);
+        this.addChild(this.createAccountButton, true);
+        this.addChild(this.guestPlayButton, true);
     }
 
     final static void a(PacketBuffer param0, byte param1) {
@@ -130,7 +130,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
               }
             }
             if (param1 > -41) {
-              field_H = (UsernameAvailabilityResult) null;
+              field_H = (AccountResponse) null;
             }
             param0.writeBytes(var10, -1, 0, 24);
             return;
@@ -212,7 +212,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
           var7 = var8;
           var3 = var7;
           if (param1 != -58) {
-            field_H = (UsernameAvailabilityResult) null;
+            field_H = (AccountResponse) null;
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var5 = param0.charAt(var4);
@@ -256,15 +256,15 @@ final class he extends WidgetGroup implements WidgetActionListener {
         try {
           if (obfuscationGuard > -22) {
             var8 = (PacketBuffer) null;
-            he.a((PacketBuffer) null, (byte) -62);
+            AccountIntroductionPanel.a((PacketBuffer) null, (byte) -62);
           }
-          if (this.field_K == widget) {
+          if (this.backButton == widget) {
             MotionWaypoint.d(-117);
           } else {
-            if (this.field_I == widget) {
+            if (this.createAccountButton == widget) {
               Mesh3D.d(-1);
             } else {
-              if (widget == this.field_J) {
+              if (widget == this.guestPlayButton) {
                 NewAchievementsScreen.f(967);
               }
             }
@@ -287,7 +287,7 @@ final class he extends WidgetGroup implements WidgetActionListener {
     public static void a(byte param0) {
         field_H = null;
         if (param0 != 36) {
-          field_H = (UsernameAvailabilityResult) null;
+          field_H = (AccountResponse) null;
         }
         field_L = null;
     }
@@ -295,9 +295,9 @@ final class he extends WidgetGroup implements WidgetActionListener {
     final static void a(String param0, boolean param1, byte param2) {
         try {
           if (param2 <= 18) {
-            field_H = (UsernameAvailabilityResult) null;
+            field_H = (AccountResponse) null;
           }
-          sm.field_b = UsernameAvailabilityResult.field_b;
+          sm.field_b = AccountResponse.field_b;
           ln.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "he.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

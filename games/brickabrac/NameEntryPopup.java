@@ -5,7 +5,7 @@ final class NameEntryPopup extends UiComponent {
     static RgbSprite field_Sb;
     static String field_Wb;
     private UiComponent inputText;
-    static mi field_Xb;
+    static ContentTransitionPhase contentFadingIn;
     private StringBuilder nameBuffer;
     private UiComponent prompt;
     private int completionState;
@@ -288,7 +288,7 @@ final class NameEntryPopup extends UiComponent {
           field_Rb = null;
           field_Sb = null;
           field_Wb = null;
-          field_Xb = null;
+          contentFadingIn = null;
           chocLeverSprites = null;
           return;
         }
@@ -296,7 +296,7 @@ final class NameEntryPopup extends UiComponent {
         field_Rb = null;
         field_Sb = null;
         field_Wb = null;
-        field_Xb = null;
+        contentFadingIn = null;
         chocLeverSprites = null;
     }
 
@@ -444,6 +444,6 @@ final class NameEntryPopup extends UiComponent {
 
     static {
         field_Wb = "Reject";
-        field_Xb = new mi();
+        contentFadingIn = new ContentTransitionPhase();
     }
 }

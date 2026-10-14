@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends bj {
+final class tb extends PopupWidgetLayer {
     private boolean field_hb;
     private String field_jb;
     static int pressX;
     private boolean field_gb;
-    private cr field_bb;
+    private ActivityIndicatorWidget field_bb;
     private String field_ib;
     static String field_eb;
     static String field_db;
     static String field_cb;
 
-    final void b(int param0, int param1, int param2) {
-        super.b(param0, param1 ^ 0, param2);
-        wm.field_a.drawCentered(this.field_jb, param0 + (this.width >> 1), param2 + 103, 16777215, -1);
-        if (param1 == 274) {
+    final void paintLayerFrame(int x, int obfuscationGuard, int y) {
+        super.paintLayerFrame(x, obfuscationGuard ^ 0, y);
+        wm.field_a.drawCentered(this.field_jb, x + (this.width >> 1), y + 103, 16777215, -1);
+        if (obfuscationGuard == 274) {
           if (this.field_ib != null) {
-            Rasterizer2D.drawHorizontalLine(20 + param0, 120 + param2 - 7, 260, 8421504);
-            wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+            Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
+            wm.field_a.a(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
           }
           return;
         }
         this.field_gb = false;
         if (this.field_ib != null) {
-          Rasterizer2D.drawHorizontalLine(20 + param0, 120 + param2 - 7, 260, 8421504);
-          wm.field_a.a(this.field_ib, param0 + 20, 8 + param2 + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+          Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
+          wm.field_a.a(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
         }
     }
 
@@ -178,12 +178,12 @@ final class tb extends bj {
             stackIn_8_1 = (param2);
             this.field_hb = stackIn_8_1;
             if (this.field_hb) {
-              this.field_bb.b(8405024, 4210752, 2);
-              this.field_bb.field_J = true;
+              this.field_bb.setActivityColors(8405024, 4210752, 2);
+              this.field_bb.animated = true;
             } else {
-              this.field_bb.b(2113632, 4210752, param3 - 84);
+              this.field_bb.setActivityColors(2113632, 4210752, param3 - 84);
               if (this.field_gb) {
-                this.field_bb.field_J = false;
+                this.field_bb.animated = false;
               }
             }
           }
@@ -209,12 +209,12 @@ final class tb extends bj {
 
     final void l(int param0) {
         if (param0 == 6457) {
-          this.field_bb.field_J = false;
+          this.field_bb.animated = false;
           this.field_gb = true;
           return;
         }
         this.l(88);
-        this.field_bb.field_J = false;
+        this.field_bb.animated = false;
         this.field_gb = true;
     }
 
@@ -225,12 +225,12 @@ final class tb extends bj {
           this.field_ib = param1;
           if (null != this.field_ib) {
             var3_int = wm.field_a.measureWrappedHeight(this.field_ib, 260, wm.field_a.ascent);
-            this.a(true, 150 + var3_int, 300);
+            this.setCenteredSize(true, 150 + var3_int, 300);
           }
-          this.field_bb = new cr(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.field_bb = new ActivityIndicatorWidget(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_hb = false;
           this.field_gb = false;
-          this.field_bb.field_J = true;
+          this.field_bb.animated = true;
           this.addChild(this.field_bb, true);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "tb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

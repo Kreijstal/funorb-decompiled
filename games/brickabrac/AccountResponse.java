@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class UsernameAvailabilityResult {
+final class AccountResponse {
     static String field_h;
-    String field_g;
+    String message;
     static int field_b;
-    boolean available;
-    String[] field_e;
-    boolean field_a;
+    boolean success;
+    String[] suggestedUsernames;
+    boolean underThirteen;
     static int field_f;
-    int field_d;
+    int responseCode;
 
     final static String b(byte param0) {
         if (param0 != -49) {
@@ -76,12 +76,12 @@ final class UsernameAvailabilityResult {
     public static void a(byte param0) {
         field_h = null;
         if (param0 < 57) {
-          UsernameAvailabilityResult.a((byte) 49);
+          AccountResponse.a((byte) 49);
         }
     }
 
-    UsernameAvailabilityResult(boolean available) {
-        this.available = available ? true : false;
+    AccountResponse(boolean success) {
+        this.success = success ? true : false;
     }
 
     static {

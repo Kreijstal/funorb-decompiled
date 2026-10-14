@@ -115,8 +115,8 @@ final class FileCacheStore {
                     return false;
                   }
                   this.indexFile.seek(0, (long)(entryId * 6));
-                  this.indexFile.readFully(6, 0, 120, tf.cacheSectorScratch);
-                  sector = (255 & tf.cacheSectorScratch[5]) + ((255 & tf.cacheSectorScratch[3]) << 16) + (65280 & tf.cacheSectorScratch[4] << 8);
+                  this.indexFile.readFully(6, 0, 120, FullscreenFailureKind.cacheSectorScratch);
+                  sector = (255 & FullscreenFailureKind.cacheSectorScratch[5]) + ((255 & FullscreenFailureKind.cacheSectorScratch[3]) << 16) + (65280 & FullscreenFailureKind.cacheSectorScratch[4] << 8);
                   if (0 >= sector ||
                     !((long)sector <= this.dataFile.length((byte) 71) / 520L)) {
                     return false;
@@ -127,17 +127,17 @@ final class FileCacheStore {
                     sector = 1;
                   }
                 }
-                tf.cacheSectorScratch[0] = (byte)(length >> 16);
-                tf.cacheSectorScratch[4] = (byte)(sector >> 8);
-                tf.cacheSectorScratch[5] = (byte)sector;
-                tf.cacheSectorScratch[2] = (byte)length;
+                FullscreenFailureKind.cacheSectorScratch[0] = (byte)(length >> 16);
+                FullscreenFailureKind.cacheSectorScratch[4] = (byte)(sector >> 8);
+                FullscreenFailureKind.cacheSectorScratch[5] = (byte)sector;
+                FullscreenFailureKind.cacheSectorScratch[2] = (byte)length;
                 if (!obfuscationGuard) {
                   FileCacheStore.a((byte) 8);
                 }
-                tf.cacheSectorScratch[1] = (byte)(length >> 8);
-                tf.cacheSectorScratch[3] = (byte)(sector >> 16);
+                FullscreenFailureKind.cacheSectorScratch[1] = (byte)(length >> 8);
+                FullscreenFailureKind.cacheSectorScratch[3] = (byte)(sector >> 16);
                 this.indexFile.seek(0, (long)(entryId * 6));
-                this.indexFile.write(tf.cacheSectorScratch, 0, 6, -1);
+                this.indexFile.write(FullscreenFailureKind.cacheSectorScratch, 0, 6, -1);
                 bytesWritten = 0;
                 chunkIndex = 0;
                 scanLoop1: while (true) {
@@ -148,7 +148,7 @@ final class FileCacheStore {
                       this.dataFile.seek(0, (long)(520 * sector));
                       if (65535 >= entryId) {
                         try {
-                          this.dataFile.readFully(8, 0, 121, tf.cacheSectorScratch);
+                          this.dataFile.readFully(8, 0, 121, FullscreenFailureKind.cacheSectorScratch);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,13 +158,13 @@ final class FileCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        headerStoreId = 255 & tf.cacheSectorScratch[7];
-                        headerChunkIndex = (tf.cacheSectorScratch[2] << 8 & 65280) + (255 & tf.cacheSectorScratch[3]);
-                        nextSector = ((255 & tf.cacheSectorScratch[5]) << 8) + ((tf.cacheSectorScratch[4] & 255) << 16) + (tf.cacheSectorScratch[6] & 255);
-                        headerEntryOrPayloadLength = ((255 & tf.cacheSectorScratch[0]) << 8) + (255 & tf.cacheSectorScratch[1]);
+                        headerStoreId = 255 & FullscreenFailureKind.cacheSectorScratch[7];
+                        headerChunkIndex = (FullscreenFailureKind.cacheSectorScratch[2] << 8 & 65280) + (255 & FullscreenFailureKind.cacheSectorScratch[3]);
+                        nextSector = ((255 & FullscreenFailureKind.cacheSectorScratch[5]) << 8) + ((FullscreenFailureKind.cacheSectorScratch[4] & 255) << 16) + (FullscreenFailureKind.cacheSectorScratch[6] & 255);
+                        headerEntryOrPayloadLength = ((255 & FullscreenFailureKind.cacheSectorScratch[0]) << 8) + (255 & FullscreenFailureKind.cacheSectorScratch[1]);
                       } else {
                         try {
-                          this.dataFile.readFully(10, 0, 119, tf.cacheSectorScratch);
+                          this.dataFile.readFully(10, 0, 119, FullscreenFailureKind.cacheSectorScratch);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -174,10 +174,10 @@ final class FileCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        headerEntryOrPayloadLength = ((tf.cacheSectorScratch[2] & 255) << 8) + ((16711680 & tf.cacheSectorScratch[1] << 16) + (-16777216 & tf.cacheSectorScratch[0] << 24)) + (tf.cacheSectorScratch[3] & 255);
-                        nextSector = (255 & tf.cacheSectorScratch[8]) + ((tf.cacheSectorScratch[6] << 16 & 16711680) + (tf.cacheSectorScratch[7] << 8 & 65280));
-                        headerChunkIndex = (255 & tf.cacheSectorScratch[5]) + ((255 & tf.cacheSectorScratch[4]) << 8);
-                        headerStoreId = tf.cacheSectorScratch[9] & 255;
+                        headerEntryOrPayloadLength = ((FullscreenFailureKind.cacheSectorScratch[2] & 255) << 8) + ((16711680 & FullscreenFailureKind.cacheSectorScratch[1] << 16) + (-16777216 & FullscreenFailureKind.cacheSectorScratch[0] << 24)) + (FullscreenFailureKind.cacheSectorScratch[3] & 255);
+                        nextSector = (255 & FullscreenFailureKind.cacheSectorScratch[8]) + ((FullscreenFailureKind.cacheSectorScratch[6] << 16 & 16711680) + (FullscreenFailureKind.cacheSectorScratch[7] << 8 & 65280));
+                        headerChunkIndex = (255 & FullscreenFailureKind.cacheSectorScratch[5]) + ((255 & FullscreenFailureKind.cacheSectorScratch[4]) << 8);
+                        headerStoreId = FullscreenFailureKind.cacheSectorScratch[9] & 255;
                       }
                       if ((entryId == headerEntryOrPayloadLength &&
                         headerChunkIndex == chunkIndex &&
@@ -204,16 +204,16 @@ final class FileCacheStore {
                       nextSector = 0;
                     }
                     if (entryId <= 65535) {
-                      tf.cacheSectorScratch[6] = (byte)nextSector;
-                      tf.cacheSectorScratch[1] = (byte)entryId;
-                      tf.cacheSectorScratch[5] = (byte)(nextSector >> 8);
-                      tf.cacheSectorScratch[0] = (byte)(entryId >> 8);
-                      tf.cacheSectorScratch[3] = (byte)chunkIndex;
-                      tf.cacheSectorScratch[2] = (byte)(chunkIndex >> 8);
-                      tf.cacheSectorScratch[7] = (byte)this.storeId;
-                      tf.cacheSectorScratch[4] = (byte)(nextSector >> 16);
+                      FullscreenFailureKind.cacheSectorScratch[6] = (byte)nextSector;
+                      FullscreenFailureKind.cacheSectorScratch[1] = (byte)entryId;
+                      FullscreenFailureKind.cacheSectorScratch[5] = (byte)(nextSector >> 8);
+                      FullscreenFailureKind.cacheSectorScratch[0] = (byte)(entryId >> 8);
+                      FullscreenFailureKind.cacheSectorScratch[3] = (byte)chunkIndex;
+                      FullscreenFailureKind.cacheSectorScratch[2] = (byte)(chunkIndex >> 8);
+                      FullscreenFailureKind.cacheSectorScratch[7] = (byte)this.storeId;
+                      FullscreenFailureKind.cacheSectorScratch[4] = (byte)(nextSector >> 16);
                       this.dataFile.seek(0, (long)(520 * sector));
-                      this.dataFile.write(tf.cacheSectorScratch, 0, 8, -1);
+                      this.dataFile.write(FullscreenFailureKind.cacheSectorScratch, 0, 8, -1);
                       headerEntryOrPayloadLength = length - bytesWritten;
                       if (headerEntryOrPayloadLength > 512) {
                         headerEntryOrPayloadLength = 512;
@@ -221,18 +221,18 @@ final class FileCacheStore {
                       this.dataFile.write(data, bytesWritten, headerEntryOrPayloadLength, -1);
                       bytesWritten = bytesWritten + headerEntryOrPayloadLength;
                     } else {
-                      tf.cacheSectorScratch[5] = (byte)chunkIndex;
-                      tf.cacheSectorScratch[8] = (byte)nextSector;
-                      tf.cacheSectorScratch[1] = (byte)(entryId >> 16);
-                      tf.cacheSectorScratch[6] = (byte)(nextSector >> 16);
-                      tf.cacheSectorScratch[0] = (byte)(entryId >> 24);
-                      tf.cacheSectorScratch[9] = (byte)this.storeId;
-                      tf.cacheSectorScratch[7] = (byte)(nextSector >> 8);
-                      tf.cacheSectorScratch[2] = (byte)(entryId >> 8);
-                      tf.cacheSectorScratch[3] = (byte)entryId;
-                      tf.cacheSectorScratch[4] = (byte)(chunkIndex >> 8);
+                      FullscreenFailureKind.cacheSectorScratch[5] = (byte)chunkIndex;
+                      FullscreenFailureKind.cacheSectorScratch[8] = (byte)nextSector;
+                      FullscreenFailureKind.cacheSectorScratch[1] = (byte)(entryId >> 16);
+                      FullscreenFailureKind.cacheSectorScratch[6] = (byte)(nextSector >> 16);
+                      FullscreenFailureKind.cacheSectorScratch[0] = (byte)(entryId >> 24);
+                      FullscreenFailureKind.cacheSectorScratch[9] = (byte)this.storeId;
+                      FullscreenFailureKind.cacheSectorScratch[7] = (byte)(nextSector >> 8);
+                      FullscreenFailureKind.cacheSectorScratch[2] = (byte)(entryId >> 8);
+                      FullscreenFailureKind.cacheSectorScratch[3] = (byte)entryId;
+                      FullscreenFailureKind.cacheSectorScratch[4] = (byte)(chunkIndex >> 8);
                       this.dataFile.seek(0, (long)(520 * sector));
-                      this.dataFile.write(tf.cacheSectorScratch, 0, 10, -1);
+                      this.dataFile.write(FullscreenFailureKind.cacheSectorScratch, 0, 10, -1);
                       headerEntryOrPayloadLength = length - bytesWritten;
                       if (510 < headerEntryOrPayloadLength) {
                         headerEntryOrPayloadLength = 510;
@@ -308,9 +308,9 @@ final class FileCacheStore {
                 return (byte[]) (stackIn_3_0);
               }
               this.indexFile.seek(0, (long)(entryId * 6));
-              this.indexFile.readFully(6, 0, 127, tf.cacheSectorScratch);
-              entryLength = (tf.cacheSectorScratch[2] & 255) + ((tf.cacheSectorScratch[1] & 255) << 8) + (16711680 & tf.cacheSectorScratch[0] << 16);
-              sector = (tf.cacheSectorScratch[5] & 255) + (tf.cacheSectorScratch[3] << 16 & 16711680) + ((tf.cacheSectorScratch[4] & 255) << 8);
+              this.indexFile.readFully(6, 0, 127, FullscreenFailureKind.cacheSectorScratch);
+              entryLength = (FullscreenFailureKind.cacheSectorScratch[2] & 255) + ((FullscreenFailureKind.cacheSectorScratch[1] & 255) << 8) + (16711680 & FullscreenFailureKind.cacheSectorScratch[0] << 16);
+              sector = (FullscreenFailureKind.cacheSectorScratch[5] & 255) + (FullscreenFailureKind.cacheSectorScratch[3] << 16 & 16711680) + ((FullscreenFailureKind.cacheSectorScratch[4] & 255) << 8);
               if (entryLength < 0) {
                 return null;
               }
@@ -337,21 +337,21 @@ final class FileCacheStore {
                     payloadLength = 512;
                   }
                   headerSize = 8;
-                  this.dataFile.readFully(payloadLength + headerSize, 0, 126, tf.cacheSectorScratch);
-                  headerEntryId = ((tf.cacheSectorScratch[0] & 255) << 8) + (tf.cacheSectorScratch[1] & 255);
-                  headerStoreId = tf.cacheSectorScratch[7] & 255;
-                  headerChunkIndex = (tf.cacheSectorScratch[3] & 255) + ((tf.cacheSectorScratch[2] & 255) << 8);
-                  nextSector = ((tf.cacheSectorScratch[4] & 255) << 16) - (-((255 & tf.cacheSectorScratch[5]) << 8) - (tf.cacheSectorScratch[6] & 255));
+                  this.dataFile.readFully(payloadLength + headerSize, 0, 126, FullscreenFailureKind.cacheSectorScratch);
+                  headerEntryId = ((FullscreenFailureKind.cacheSectorScratch[0] & 255) << 8) + (FullscreenFailureKind.cacheSectorScratch[1] & 255);
+                  headerStoreId = FullscreenFailureKind.cacheSectorScratch[7] & 255;
+                  headerChunkIndex = (FullscreenFailureKind.cacheSectorScratch[3] & 255) + ((FullscreenFailureKind.cacheSectorScratch[2] & 255) << 8);
+                  nextSector = ((FullscreenFailureKind.cacheSectorScratch[4] & 255) << 16) - (-((255 & FullscreenFailureKind.cacheSectorScratch[5]) << 8) - (FullscreenFailureKind.cacheSectorScratch[6] & 255));
                 } else {
                   headerSize = 10;
                   if (510 < payloadLength) {
                     payloadLength = 510;
                   }
-                  this.dataFile.readFully(headerSize + payloadLength, 0, obfuscationGuard ^ 117, tf.cacheSectorScratch);
-                  headerChunkIndex = ((255 & tf.cacheSectorScratch[4]) << 8) + (255 & tf.cacheSectorScratch[5]);
-                  headerStoreId = tf.cacheSectorScratch[9] & 255;
-                  nextSector = ((255 & tf.cacheSectorScratch[7]) << 8) + ((tf.cacheSectorScratch[6] & 255) << 16) + (tf.cacheSectorScratch[8] & 255);
-                  headerEntryId = (tf.cacheSectorScratch[3] & 255) + (((tf.cacheSectorScratch[1] & 255) << 16) + (tf.cacheSectorScratch[0] << 24 & -16777216) + (tf.cacheSectorScratch[2] << 8 & 65280));
+                  this.dataFile.readFully(headerSize + payloadLength, 0, obfuscationGuard ^ 117, FullscreenFailureKind.cacheSectorScratch);
+                  headerChunkIndex = ((255 & FullscreenFailureKind.cacheSectorScratch[4]) << 8) + (255 & FullscreenFailureKind.cacheSectorScratch[5]);
+                  headerStoreId = FullscreenFailureKind.cacheSectorScratch[9] & 255;
+                  nextSector = ((255 & FullscreenFailureKind.cacheSectorScratch[7]) << 8) + ((FullscreenFailureKind.cacheSectorScratch[6] & 255) << 16) + (FullscreenFailureKind.cacheSectorScratch[8] & 255);
+                  headerEntryId = (FullscreenFailureKind.cacheSectorScratch[3] & 255) + (((FullscreenFailureKind.cacheSectorScratch[1] & 255) << 16) + (FullscreenFailureKind.cacheSectorScratch[0] << 24 & -16777216) + (FullscreenFailureKind.cacheSectorScratch[2] << 8 & 65280));
                 }
                 if (entryId != headerEntryId) {
                   return null;
@@ -375,7 +375,7 @@ final class FileCacheStore {
                 for (sectorByteIndex = headerSize; sectorByteIndex < sectorDataEnd; sectorByteIndex++) {
                   incrementValue$2 = bytesRead;
                   bytesRead++;
-                  data[incrementValue$2] = tf.cacheSectorScratch[sectorByteIndex];
+                  data[incrementValue$2] = FullscreenFailureKind.cacheSectorScratch[sectorByteIndex];
                 }
                 sector = nextSector;
               }

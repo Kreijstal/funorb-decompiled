@@ -96,7 +96,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             stackIn_26_2 = !(0 > MenuSelection.field_q[var8Lifetime1]);
             var9Lifetime1 = pl.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
             if (MenuSelection.field_q[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + ek.field_lb * 2;
+              var9Lifetime1 = var9Lifetime1 + FullscreenFailureDialog.field_lb * 2;
             }
             if (var7Lifetime1 < var9Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             bg.field_r = stackIn_38_0 + stackIn_41_1;
             var8Lifetime2++;
           }
-          mi.field_d = ea.field_e - (bg.field_r >> 1);
+          ContentTransitionPhase.field_d = ea.field_e - (bg.field_r >> 1);
           ArcticBackground.field_r.initializeSelection(aj.a(param4 - 46, po.pointerY, MusicPatch.pointerX), 0, param3, (byte) -127);
           if (param4 != 46) {
             field_R = (RgbSprite) null;
@@ -664,7 +664,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             return true;
           }
           status = validationSource.getValidationStatus((byte) -31);
-          if (lp.validationInvalid == status) {
+          if (AccountMessageDialog.validationInvalid == status) {
             return false;
           }
           if (obfuscationGuard != 60) {

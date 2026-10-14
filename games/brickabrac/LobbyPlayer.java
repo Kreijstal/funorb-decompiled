@@ -75,7 +75,7 @@ final class LobbyPlayer extends UiComponent {
         RuntimeException decompiledCaughtException = null;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          characterCount = tf.trackHeads.length;
+          characterCount = FullscreenFailureKind.trackHeads.length;
           if (!LevelPackCard.hasFeatureBit(0, -107)) {
             characterCount--;
           }

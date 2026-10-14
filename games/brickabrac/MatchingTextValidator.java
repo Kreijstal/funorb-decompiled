@@ -21,18 +21,18 @@ final class MatchingTextValidator extends TextFieldValidator {
         }
         if (null == ej.field_I) {
           var1 = PlayerInputBatch.a(-123);
-          DirectByteStorage.field_k = new hk(var1, (String) null, true, false, false);
+          DirectByteStorage.field_k = new LoginPanel(var1, (String) null, true, false, false);
           ResourceArchive.field_f.pushLayer(-126, rj.field_c);
-          rj.field_c.b((byte) 108, DirectByteStorage.field_k);
-          rj.field_c.j(20);
+          rj.field_c.transitionToContent((byte) 108, DirectByteStorage.field_k);
+          rj.field_c.finishTransition(20);
           return;
         }
-        ej.field_I.m(17);
+        ej.field_I.closeDialog(17);
         var1Lifetime1 = PlayerInputBatch.a(-123);
-        DirectByteStorage.field_k = new hk(var1Lifetime1, (String) null, true, false, false);
+        DirectByteStorage.field_k = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
         ResourceArchive.field_f.pushLayer(-126, rj.field_c);
-        rj.field_c.b((byte) 108, DirectByteStorage.field_k);
-        rj.field_c.j(20);
+        rj.field_c.transitionToContent((byte) 108, DirectByteStorage.field_k);
+        rj.field_c.finishTransition(20);
     }
 
     final String describeTextValidation(int obfuscationGuard, String text) {
@@ -108,14 +108,14 @@ final class MatchingTextValidator extends TextFieldValidator {
             sourceValidation = ((ValidatableWidget) ((Object) this.matchingField)).getValidationSource(obfuscationGuard - 11117);
             if (sourceValidation != null &&
               sourceValidation.getValidationStatus((byte) -31) != DualLinkIterator.validationValid) {
-              stackIn_7_0 = lp.validationInvalid;
+              stackIn_7_0 = AccountMessageDialog.validationInvalid;
               return stackIn_7_0;
             }
           }
           if (text.equals(this.matchingField.text)) {
             stackIn_11_0 = DualLinkIterator.validationValid;
           } else {
-            stackIn_11_0 = lp.validationInvalid;
+            stackIn_11_0 = AccountMessageDialog.validationInvalid;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

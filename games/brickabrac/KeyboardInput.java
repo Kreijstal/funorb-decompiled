@@ -247,8 +247,8 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             PowerUp.keyboardIdleTicks = 0;
             mappedKeyCode = event.getKeyCode();
             if (mappedKeyCode >= 0 &&
-              tf.javaKeyCodeMap.length > mappedKeyCode) {
-              mappedKeyCode = -129 & tf.javaKeyCodeMap[mappedKeyCode];
+              FullscreenFailureKind.javaKeyCodeMap.length > mappedKeyCode) {
+              mappedKeyCode = -129 & FullscreenFailureKind.javaKeyCodeMap[mappedKeyCode];
             } else {
               mappedKeyCode = -1;
             }
@@ -256,7 +256,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               mappedKeyCode >= 0) {
               lo.keyChangeQueue[pl.keyChangeWriteIndex] = ~mappedKeyCode;
               pl.keyChangeWriteIndex = 1 + pl.keyChangeWriteIndex & 127;
-              if (ek.keyChangeReadIndex == pl.keyChangeWriteIndex) {
+              if (FullscreenFailureDialog.keyChangeReadIndex == pl.keyChangeWriteIndex) {
                 pl.keyChangeWriteIndex = -1;
               }
             }
@@ -291,8 +291,8 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             PowerUp.keyboardIdleTicks = 0;
             mappedKeyCode = event.getKeyCode();
             if (0 <= mappedKeyCode &&
-              mappedKeyCode < tf.javaKeyCodeMap.length) {
-              mappedKeyCode = tf.javaKeyCodeMap[mappedKeyCode];
+              mappedKeyCode < FullscreenFailureKind.javaKeyCodeMap.length) {
+              mappedKeyCode = FullscreenFailureKind.javaKeyCodeMap[mappedKeyCode];
               if (0 != (128 & mappedKeyCode)) {
                 mappedKeyCode = -1;
               }
@@ -303,7 +303,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               mappedKeyCode >= 0) {
               lo.keyChangeQueue[pl.keyChangeWriteIndex] = mappedKeyCode;
               pl.keyChangeWriteIndex = 127 & 1 + pl.keyChangeWriteIndex;
-              if (pl.keyChangeWriteIndex == ek.keyChangeReadIndex) {
+              if (pl.keyChangeWriteIndex == FullscreenFailureDialog.keyChangeReadIndex) {
                 pl.keyChangeWriteIndex = -1;
               }
             }

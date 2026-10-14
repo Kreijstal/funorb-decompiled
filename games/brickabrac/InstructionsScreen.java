@@ -254,7 +254,7 @@ final class InstructionsScreen extends MenuScreen {
             var6 = var6 + (var8.width + 10);
           }
         }
-        this.parentScreenId = lp.currentScreen.screenId;
+        this.parentScreenId = AccountMessageDialog.currentScreen.screenId;
     }
 
     public static void g(byte param0) {

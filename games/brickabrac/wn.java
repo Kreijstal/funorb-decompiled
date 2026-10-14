@@ -131,7 +131,7 @@ final class wn {
               if (var7.serverName != null) {
                 stackIn_38_1 = var7.serverName;
               } else {
-                stackIn_38_1 = ec.field_S;
+                stackIn_38_1 = DialogMessagePanel.field_S;
               }
               stackIn_37_0.text = stackIn_38_1;
               var7.serverLabel.setBounds(np.uiRowHeight, var9, -80 + var7.width, 80, (byte) 64);
@@ -235,7 +235,7 @@ final class wn {
                     continue;
                   }
                 } else {
-                  pl.keyChangeWriteIndex = ek.keyChangeReadIndex;
+                  pl.keyChangeWriteIndex = FullscreenFailureDialog.keyChangeReadIndex;
                 }
                 break;
               }
@@ -243,11 +243,11 @@ final class wn {
             }
             if (decompiledFrameRemainder0) {
               while (true) {
-                if (~pl.keyChangeWriteIndex == ~ek.keyChangeReadIndex) {
+                if (~pl.keyChangeWriteIndex == ~FullscreenFailureDialog.keyChangeReadIndex) {
                   break;
                 }
-                keyChange = lo.keyChangeQueue[ek.keyChangeReadIndex];
-                ek.keyChangeReadIndex = ek.keyChangeReadIndex + 1 & 127;
+                keyChange = lo.keyChangeQueue[FullscreenFailureDialog.keyChangeReadIndex];
+                FullscreenFailureDialog.keyChangeReadIndex = FullscreenFailureDialog.keyChangeReadIndex + 1 & 127;
                 stackIn_27_0 = keyChange;
                 if (clientBranchFlag != 0) {
                   decompiledFrameCompleted0 = false;
@@ -282,7 +282,7 @@ final class wn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          fe.field_jb = param1;
+          ContentTransitionLayer.field_jb = param1;
           if (param2 != 0) {
             wn.applyChatFilters(79, -114);
           }

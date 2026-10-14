@@ -32,9 +32,9 @@ final class cm extends bo {
     final cd a(int param0) {
         if (param0 != 13) {
           field_r = (RgbSprite[]) null;
-          return bj.field_Y;
+          return PopupWidgetLayer.field_Y;
         }
-        return bj.field_Y;
+        return PopupWidgetLayer.field_Y;
     }
 
     static {

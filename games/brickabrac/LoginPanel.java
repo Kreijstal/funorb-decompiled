@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hk extends WidgetGroup implements TextFieldListener, WidgetActionListener {
+final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetActionListener {
     static String field_L;
     static RgbSprite waterMidSprite;
-    private String field_N;
+    private String introMessage;
     static boolean field_R;
-    private FocusableWidget field_M;
-    private FocusableWidget field_O;
-    private boolean field_V;
-    private boolean field_K;
-    private FocusableWidget field_U;
+    private FocusableWidget backOrGuestButton;
+    private FocusableWidget createAccountButton;
+    private boolean showCreateAccountButton;
+    private boolean retryMode;
+    private FocusableWidget loginButton;
     static RgbSprite arcticFarSprite;
-    private TextFieldWidget field_P;
+    private TextFieldWidget accountField;
     static int field_W;
     static String field_J;
-    private boolean field_S;
-    private TextFieldWidget field_T;
+    private boolean showGuestPlayButton;
+    private TextFieldWidget passwordField;
 
     final static void a(byte param0) {
         if (MatchResultScreen.field_t != -BoundedFile.field_i + 0 &&
@@ -27,10 +27,10 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
     }
 
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
-        if (this.field_N != null) {
-          ArchiveNetworkClient.field_u.a(this.field_N, this.x + (parentX + 20), parentY - (-this.y - 15), -40 + this.width, this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
+        if (this.introMessage != null) {
+          ArchiveNetworkClient.field_u.a(this.introMessage, this.x + (parentX + 20), parentY - (-this.y - 15), -40 + this.width, this.height, 16777215, -1, 1, 0, ArchiveNetworkClient.field_u.ascent);
         }
-        if (null != this.field_O) {
+        if (null != this.createAccountButton) {
           Rasterizer2D.drawHorizontalLine(parentX + 10, parentY + 134, this.width - 20, 4210752);
         }
         super.drawLayer(parentY, parentX, layer, obfuscationGuard);
@@ -118,10 +118,10 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
             Rasterizer2D.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           if (param1 != 90) {
-            hk.i((byte) 86);
+            LoginPanel.i((byte) 86);
           }
           Rasterizer2D.bind(var14, var5, var6);
-          fe.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
+          ContentTransitionLayer.field_kb = AchievementSubmission.a(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
           QuickChatPhraseDefinition.quickChatMenuRoot.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -151,11 +151,11 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_P == textField) {
-            this.field_T.tryFocus(true, (Widget) (this));
+          if (this.accountField == textField) {
+            this.passwordField.tryFocus(true, (Widget) (this));
           }
-          if (textField == this.field_T) {
-            this.a(25);
+          if (textField == this.passwordField) {
+            this.submitLogin(25);
           }
           if (obfuscationGuard != -40) {
             this.drawLayer(-38, -29, -91, (byte) 20);
@@ -175,30 +175,30 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         }
     }
 
-    final String j(byte param0) {
-        if (param0 != -76) {
+    final String getAccount(byte obfuscationGuard) {
+        if (obfuscationGuard != -76) {
           String var3 = (String) null;
-          this.a(113, (String) null);
+          this.setAccountAndClearPassword(113, (String) null);
         }
-        if (null != this.field_P.text) {
-          return this.field_P.text;
+        if (null != this.accountField.text) {
+          return this.accountField.text;
         }
         return "";
     }
 
-    final void a(int param0, String param1) {
+    final void setAccountAndClearPassword(int obfuscationGuard, String account) {
         TextFieldWidget var3 = null;
         String var4 = null;
         try {
-          var3 = this.field_P;
-          var4 = param1;
-          if (param0 < 53) {
-            this.h(-119);
+          var3 = this.accountField;
+          var4 = account;
+          if (obfuscationGuard < 53) {
+            this.clearCredentials(-119);
           }
           var3.setText(var4, -12592, false);
-          this.field_T.clearText(false);
+          this.passwordField.clearText(false);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.B(" + obfuscationGuard + ',' + (account != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -237,7 +237,7 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
     public final void onTextChanged(TextFieldWidget textField, byte obfuscationGuard) {
         try {
           if (obfuscationGuard >= -39) {
-            this.h(68);
+            this.clearCredentials(68);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.I(" + (textField != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -245,10 +245,10 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
     }
 
     final static void a(int param0, byte param1) {
-        kd.field_c = tf.field_f[param0];
+        kd.field_c = FullscreenFailureKind.field_f[param0];
         int var2 = -14 % ((param1 + 33) / 34);
         wn.field_a = ua.field_b[param0];
-        FocusableWidget.field_C = he.field_L[param0];
+        FocusableWidget.field_C = AccountIntroductionPanel.field_L[param0];
     }
 
     public final void onAction(int pointerY, int button, byte obfuscationGuard, int pointerX, FocusableWidget widget) {
@@ -261,13 +261,13 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard > -22) {
-            this.field_O = (FocusableWidget) null;
+            this.createAccountButton = (FocusableWidget) null;
           }
-          if (this.field_U != widget) {
-            if (this.field_O != widget) {
-              if (widget == this.field_M) {
-                if (!this.field_K) {
-                  if (this.field_S) {
+          if (this.loginButton != widget) {
+            if (this.createAccountButton != widget) {
+              if (widget == this.backOrGuestButton) {
+                if (!this.retryMode) {
+                  if (this.showGuestPlayButton) {
                     ln.a(-107);
                   } else {
                     ResourceRequest.g(29);
@@ -280,7 +280,7 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
               Mesh3D.d(-1);
             }
           } else {
-            this.a(25);
+            this.submitLogin(25);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -309,7 +309,7 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         }
     }
 
-    hk(String param0, String param1, boolean param2, boolean param3, boolean param4) {
+    LoginPanel(String account, String introMessage, boolean retryMode, boolean showCreateAccountButton, boolean showGuestPlayButton) {
         super(0, 0, 310, 190, (WidgetRenderer) null);
         LabeledWidget dupTemp$0 = null;
         LabeledWidget dupTemp$1 = null;
@@ -335,24 +335,24 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         LabeledWidget var12 = null;
         LabeledWidget var13 = null;
         try {
-          stackIn_4_1 = (param4);
-          this.field_S = stackIn_4_1;
-          stackIn_7_1 = (param3);
-          this.field_V = stackIn_7_1;
-          stackIn_10_1 = (param2);
-          this.field_K = stackIn_10_1;
-          this.field_N = param1;
-          if (this.field_K && (this.field_V ||
-            this.field_S)) {
+          stackIn_4_1 = (showGuestPlayButton);
+          this.showGuestPlayButton = stackIn_4_1;
+          stackIn_7_1 = (showCreateAccountButton);
+          this.showCreateAccountButton = stackIn_7_1;
+          stackIn_10_1 = (retryMode);
+          this.retryMode = stackIn_10_1;
+          this.introMessage = introMessage;
+          if (this.retryMode && (this.showCreateAccountButton ||
+            this.showGuestPlayButton)) {
             throw new IllegalStateException();
           }
-          this.field_P = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget(param0, (WidgetListener) (this), 100));
-          this.field_T = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget("", (WidgetListener) (this), 20));
-          if (!this.field_K) {
-            this.field_U = new FocusableWidget(ok.field_a, (WidgetListener) null);
+          this.accountField = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget(account, (WidgetListener) (this), 100));
+          this.passwordField = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget("", (WidgetListener) (this), 20));
+          if (!this.retryMode) {
+            this.loginButton = new FocusableWidget(ok.field_a, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
-            if (!this.field_S) {
+            if (!this.showGuestPlayButton) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
               stackIn_19_3 = HalloweenBackground.field_s;
@@ -361,43 +361,43 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
               stackIn_19_2 = null;
               stackIn_19_3 = nd.field_d;
             }
-            this.field_M = new FocusableWidget(stackIn_19_3, (WidgetListener) null);
-            if (this.field_V) {
-              this.field_O = new FocusableWidget(CheckboxWidgetRenderer.field_a, (WidgetListener) (this));
+            this.backOrGuestButton = new FocusableWidget(stackIn_19_3, (WidgetListener) null);
+            if (this.showCreateAccountButton) {
+              this.createAccountButton = new FocusableWidget(CheckboxWidgetRenderer.field_a, (WidgetListener) (this));
             }
           } else {
-            this.field_U = new FocusableWidget(TabbedPane.field_Tb, (WidgetListener) null);
-            this.field_M = new FocusableWidget(wc.field_a, (WidgetListener) null);
-            this.field_P.enabled = false;
+            this.loginButton = new FocusableWidget(TabbedPane.field_Tb, (WidgetListener) null);
+            this.backOrGuestButton = new FocusableWidget(wc.field_a, (WidgetListener) null);
+            this.accountField.enabled = false;
           }
-          this.field_P.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
-          this.field_T.renderer = (WidgetRenderer) ((Object) new PasswordFieldRenderer(10000536));
+          this.accountField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
+          this.passwordField.renderer = (WidgetRenderer) ((Object) new PasswordFieldRenderer(10000536));
           var6 = new ButtonWidgetRenderer();
-          this.field_U.renderer = (WidgetRenderer) ((Object) var6);
-          if (null != this.field_M) {
-            this.field_M.renderer = (WidgetRenderer) ((Object) var6);
+          this.loginButton.renderer = (WidgetRenderer) ((Object) var6);
+          if (null != this.backOrGuestButton) {
+            this.backOrGuestButton.renderer = (WidgetRenderer) ((Object) var6);
           }
-          if (this.field_O != null) {
-            this.field_O.renderer = (WidgetRenderer) ((Object) var6);
+          if (this.createAccountButton != null) {
+            this.createAccountButton.renderer = (WidgetRenderer) ((Object) var6);
           }
-          this.field_P.tooltip = ValidatedTextFieldWidget.field_X;
-          if (this.field_O != null) {
-            this.field_O.tooltip = MidiSynthesizer.field_q;
+          this.accountField.tooltip = ValidatedTextFieldWidget.field_X;
+          if (this.createAccountButton != null) {
+            this.createAccountButton.tooltip = MidiSynthesizer.field_q;
           }
-          if (this.field_K) {
-            this.field_M.tooltip = LevelResultSubmission.field_o;
+          if (this.retryMode) {
+            this.backOrGuestButton.tooltip = LevelResultSubmission.field_o;
           } else {
-            if (this.field_S) {
-              this.field_M.tooltip = SoundCache.field_i;
-              this.field_M.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+            if (this.showGuestPlayButton) {
+              this.backOrGuestButton.tooltip = SoundCache.field_i;
+              this.backOrGuestButton.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             } else {
-              this.field_M.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
+              this.backOrGuestButton.renderer = (WidgetRenderer) ((Object) new LinkWidgetRenderer());
             }
           }
           this.y = 15;
           var7 = ArchiveNetworkClient.field_u;
-          if (this.field_N != null) {
-            this.y = this.y + (5 + var7.measureWrappedHeight(this.field_N, -40 + this.width, var7.ascent));
+          if (this.introMessage != null) {
+            this.y = this.y + (5 + var7.measureWrappedHeight(this.introMessage, -40 + this.width, var7.ascent));
           }
           var8 = PlayerInputBatch.field_p;
           var9 = qi.a(EmailConfirmationValidator.e((byte) -115), -28432);
@@ -408,49 +408,49 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
               var8 = IndexedSpriteGeometry.field_c;
             }
           }
-          dupTemp$0 = new LabeledWidget(10, this.y, this.width - 20, 25, this.field_P, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new LabeledWidget(10, this.y, this.width - 20, 25, this.accountField, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, true);
           this.y = this.y + (5 + ((Widget) ((Object) var12)).height);
-          dupTemp$1 = new LabeledWidget(10, this.y, this.width - 20, 25, this.field_T, false, 80, 3, var7, 16777215, wc.field_c);
+          dupTemp$1 = new LabeledWidget(10, this.y, this.width - 20, 25, this.passwordField, false, 80, 3, var7, 16777215, wc.field_c);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, true);
-          this.field_U.listener = (WidgetListener) (this);
+          this.loginButton.listener = (WidgetListener) (this);
           this.y = this.y + (5 + ((Widget) ((Object) var13)).height);
-          if (null != this.field_O) {
-            this.field_O.listener = (WidgetListener) (this);
+          if (null != this.createAccountButton) {
+            this.createAccountButton.listener = (WidgetListener) (this);
           }
-          if (this.field_M != null) {
-            this.field_M.listener = (WidgetListener) (this);
+          if (this.backOrGuestButton != null) {
+            this.backOrGuestButton.listener = (WidgetListener) (this);
           }
-          if (null == this.field_O) {
-            this.field_U.setBounds(30, 8, this.y, (byte) -119, this.width - 16);
+          if (null == this.createAccountButton) {
+            this.loginButton.setBounds(30, 8, this.y, (byte) -119, this.width - 16);
             this.y = this.y + 35;
           } else {
-            this.field_U.setBounds(30, 85, this.y, (byte) -119, -95 + this.width);
+            this.loginButton.setBounds(30, 85, this.y, (byte) -119, -95 + this.width);
             this.y = this.y + 60;
           }
-          if (null != this.field_O) {
-            this.field_O.setBounds(30, 8, this.y, (byte) -119, -6 + this.width - 10);
+          if (null != this.createAccountButton) {
+            this.createAccountButton.setBounds(30, 8, this.y, (byte) -119, -6 + this.width - 10);
             this.y = this.y + 35;
           }
-          if (null != this.field_M) {
-            if (!this.field_K &&
-              !this.field_S) {
-              this.field_M.setBounds(20, 8, this.y, (byte) -119, 40);
+          if (null != this.backOrGuestButton) {
+            if (!this.retryMode &&
+              !this.showGuestPlayButton) {
+              this.backOrGuestButton.setBounds(20, 8, this.y, (byte) -119, 40);
               this.y = this.y + 25;
             } else {
-              this.field_M.setBounds(30, 8, this.y, (byte) -119, -10 + (this.width - 6));
+              this.backOrGuestButton.setBounds(30, 8, this.y, (byte) -119, -10 + (this.width - 6));
               this.y = this.y + 35;
             }
           }
           this.setBounds(this.y + 3, 0, 0, (byte) -119, this.width);
-          this.addChild(this.field_U, true);
-          if (null != this.field_O) {
-            this.addChild(this.field_O, true);
+          this.addChild(this.loginButton, true);
+          if (null != this.createAccountButton) {
+            this.addChild(this.createAccountButton, true);
           }
-          if (this.field_M != null) {
-            this.addChild(this.field_M, true);
+          if (this.backOrGuestButton != null) {
+            this.addChild(this.backOrGuestButton, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -458,18 +458,18 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
           var6_ref = decompiledCaughtException;
           stackIn_59_0 = var6_ref;
           stackIn_59_1 = new StringBuilder().append("hk.<init>(");
-          if (param0 == null) {
+          if (account == null) {
             stackIn_60_2 = "null";
           } else {
             stackIn_60_2 = "{...}";
           }
           stackIn_62_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',');
-          if (param1 == null) {
+          if (introMessage == null) {
             stackIn_63_2 = "null";
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(retryMode).append(',').append(showCreateAccountButton).append(',').append(showGuestPlayButton).append(')').toString());
         }
     }
 
@@ -483,24 +483,24 @@ final class hk extends WidgetGroup implements TextFieldListener, WidgetActionLis
         field_L = null;
     }
 
-    private final void a(int param0) {
+    private final void submitLogin(int obfuscationGuard) {
         if (Mesh3D.a((byte) 114) ||
-          !(this.field_P.text.length() <= 0) &&
-          !(0 >= this.field_T.text.length())) {
-          HighscoresScreen.a(this.field_P.text, 11455, this.field_T.text);
+          !(this.accountField.text.length() <= 0) &&
+          !(0 >= this.passwordField.text.length())) {
+          HighscoresScreen.a(this.accountField.text, 11455, this.passwordField.text);
         }
-        if (param0 != 25) {
-          this.field_O = (FocusableWidget) null;
+        if (obfuscationGuard != 25) {
+          this.createAccountButton = (FocusableWidget) null;
         }
     }
 
-    final void h(int param0) {
-        if (param0 >= -101) {
+    final void clearCredentials(int obfuscationGuard) {
+        if (obfuscationGuard >= -101) {
           FocusableWidget var3 = (FocusableWidget) null;
           this.onAction(64, -27, (byte) 58, 71, (FocusableWidget) null);
         }
-        this.field_P.clearText(false);
-        this.field_T.clearText(false);
+        this.accountField.clearText(false);
+        this.passwordField.clearText(false);
     }
 
     static {

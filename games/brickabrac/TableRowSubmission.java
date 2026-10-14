@@ -91,8 +91,8 @@ final class TableRowSubmission extends IntrusiveNode {
           this.resultWordOne = resultWordOne;
           this.tableWord = tableWord;
           this.values = values;
-          fieldTemp$0 = qf.tableSubmissionSequence;
-          qf.tableSubmissionSequence = qf.tableSubmissionSequence + 1;
+          fieldTemp$0 = RegistrationResponseDialog.tableSubmissionSequence;
+          RegistrationResponseDialog.tableSubmissionSequence = RegistrationResponseDialog.tableSubmissionSequence + 1;
           this.requestId = 65535 & fieldTemp$0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sp.<init>(" + tableId + ',' + tableWord + ',' + resultWordOne + ',' + resultWordTwo + ',' + resultWordThree + ',' + resultWordFour + ',' + (values != null ? "{...}" : "null") + ')');

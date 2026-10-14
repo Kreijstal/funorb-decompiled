@@ -118,7 +118,7 @@ final class bq {
             UsernameSuggestionPanel.field_I[0] = 5;
           } else if (2 != ArchiveFetchClient.field_p) {
             if (3 == ArchiveFetchClient.field_p) {
-              if (lp.field_ub.privilegedMode) {
+              if (AccountMessageDialog.field_ub.privilegedMode) {
                 var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, ff.field_a);
               } else {
                 var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, df.field_d);

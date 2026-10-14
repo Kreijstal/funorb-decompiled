@@ -165,7 +165,7 @@ final class GameplayScreen extends GameScreen {
           WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - (var4 + this.progressBaseLevel);
           var5 = this.match.playerBoards[0].levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var5;
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
+          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (var4 + this.progressBaseLevel);
           WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - var5;
         }
@@ -351,19 +351,19 @@ final class GameplayScreen extends GameScreen {
           hg.field_e = hg.field_e ^ tm.field_g + qm.field_a << 16;
         }
         if (var5Lifetime1 == 1) {
-          ek.field_kb = ek.field_kb - tm.field_g;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - tm.field_g;
           qm.field_a = qm.field_a - 1;
         }
         if (var5Lifetime1 == 2) {
-          ek.field_kb = ek.field_kb + tm.field_g;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + tm.field_g;
           qm.field_a = qm.field_a + 1;
         }
         if (var5Lifetime1 == 3) {
-          ek.field_kb = ek.field_kb - qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - qm.field_a;
           tm.field_g = tm.field_g - 1;
         }
         if (var5Lifetime1 == 4) {
-          ek.field_kb = ek.field_kb + qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + qm.field_a;
           tm.field_g = tm.field_g + 1;
         }
         if (this.networkedMatch) {
@@ -822,20 +822,20 @@ final class GameplayScreen extends GameScreen {
           hg.field_e = hg.field_e ^ tm.field_g + qm.field_a << 16;
         }
         if (var4Lifetime1 == 1) {
-          ek.field_kb = ek.field_kb - tm.field_g;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - tm.field_g;
           qm.field_a = qm.field_a - 1;
         }
         if (var4Lifetime1 == 2) {
           qm.field_a = qm.field_a + 1;
-          ek.field_kb = ek.field_kb + tm.field_g;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + tm.field_g;
         }
         if (var4Lifetime1 == 3) {
           tm.field_g = tm.field_g - 1;
-          ek.field_kb = ek.field_kb - qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - qm.field_a;
         }
         if (var4Lifetime1 == 4) {
           tm.field_g = tm.field_g + 1;
-          ek.field_kb = ek.field_kb + qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + qm.field_a;
         }
         if (keyCode == 13) {
           boolean decompiledFrameRemainder0 = true;
@@ -1067,7 +1067,7 @@ final class GameplayScreen extends GameScreen {
           var5 = this.match.playerBoards[0].levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (this.progressBaseLevel + var4);
           WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + (-this.progressBaseLevel + var5);
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
+          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (-this.progressBaseLevel + var5);
           WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + (this.progressBaseLevel + var4);
         }
@@ -1174,11 +1174,11 @@ final class GameplayScreen extends GameScreen {
           if (0 > var6) {
             throw new IllegalArgumentException();
           }
-          ek.field_kb = ek.field_kb + hg.field_e;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + hg.field_e;
           var7 = 1 << var6;
           hg.field_e = hg.field_e ^ var7;
-          ek.field_kb = ek.field_kb - hg.field_e;
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, hg.field_e, ek.field_kb, tm.field_g, qm.field_a), (byte) 3);
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - hg.field_e;
+          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, hg.field_e, FullscreenFailureDialog.field_kb, tm.field_g, qm.field_a), (byte) 3);
         }
         var4Lifetime1 = 90 % ((obfuscationGuard - 36) / 46);
     }
@@ -1198,7 +1198,7 @@ final class GameplayScreen extends GameScreen {
           } else {
             WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - this.progressBaseLevel;
           }
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
+          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           if (achievementId != 7) {
             WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + this.progressBaseLevel;
           } else {

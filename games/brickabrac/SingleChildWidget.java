@@ -312,11 +312,11 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
               }
               incrementValue$1 = var6;
               var6++;
-              faceIdScratch = ek.sortedFaceIds[incrementValue$1];
+              faceIdScratch = FullscreenFailureDialog.sortedFaceIds[incrementValue$1];
               dupTemp$2 = faceGroups[faceIdScratch];
               dupTemp$3 = groupOffsets[dupTemp$2];
               groupOffsets[dupTemp$2] = dupTemp$3 + 1;
-              ek.sortedFaceIds[dupTemp$3] = faceIdScratch;
+              FullscreenFailureDialog.sortedFaceIds[dupTemp$3] = faceIdScratch;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -451,7 +451,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
           hc.a(param5, -7812, param4, param1);
           if (bm.contextActions != null &&
             bm.contextActions.pollAndDispatchAction(-2, param1, param6, param0, param5)) {
-            cr.f((byte) -124);
+            ActivityIndicatorWidget.f((byte) -124);
             param5 = false;
           }
           SoundCache.a(124, param1, param5);
@@ -634,9 +634,9 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
         RectangleBody.field_q.addChild(Ball.field_A, 0);
         ap.field_b = new vj(ArcticBackground.field_u, RectangleBody.field_q);
-        fe.field_gb = new UiComponent(0L, (UiComponent) null);
-        fe.field_gb.addChild(ap.field_b.field_d, 0);
-        fe.field_gb.addChild(HighscorePackSelector.field_k, 0);
+        ContentTransitionLayer.field_gb = new UiComponent(0L, (UiComponent) null);
+        ContentTransitionLayer.field_gb.addChild(ap.field_b.field_d, 0);
+        ContentTransitionLayer.field_gb.addChild(HighscorePackSelector.field_k, 0);
         NanoGameClock.b(param0 + 44);
     }
 

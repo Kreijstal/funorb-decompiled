@@ -84,7 +84,7 @@ abstract class GameClock {
 
     final static boolean c(byte param0) {
         int var1 = 15 % ((81 - param0) / 36);
-        hk.field_R = true;
+        LoginPanel.field_R = true;
         NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
         return AchievementIcon.field_j == 11 ? true : false;
     }

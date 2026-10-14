@@ -359,7 +359,7 @@ final class TabbedPane extends UiComponent {
         field_Xb[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = var0 * 8 - 8;
-            field_Xb[var0] = qf.a(ch.a(255L, field_Wb[7][7 + var1]), qf.a(ch.a(65280L, field_Wb[6][var1 + 6]), qf.a(ch.a(16711680L, field_Wb[5][var1 + 5]), qf.a(qf.a(ch.a(field_Wb[3][var1 + 3], 1095216660480L), qf.a(qf.a(ch.a(71776119061217280L, field_Wb[1][var1 + 1]), ch.a(field_Wb[0][var1], -72057594037927936L)), ch.a(field_Wb[2][var1 + 2], 280375465082880L))), ch.a(field_Wb[4][4 + var1], 4278190080L)))));
+            field_Xb[var0] = RegistrationResponseDialog.a(ch.a(255L, field_Wb[7][7 + var1]), RegistrationResponseDialog.a(ch.a(65280L, field_Wb[6][var1 + 6]), RegistrationResponseDialog.a(ch.a(16711680L, field_Wb[5][var1 + 5]), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(field_Wb[3][var1 + 3], 1095216660480L), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(71776119061217280L, field_Wb[1][var1 + 1]), ch.a(field_Wb[0][var1], -72057594037927936L)), ch.a(field_Wb[2][var1 + 2], 280375465082880L))), ch.a(field_Wb[4][4 + var1], 4278190080L)))));
         }
         field_Pb = "Set up new unrated game";
         field_Ub = 0;

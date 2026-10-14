@@ -120,7 +120,7 @@ final class IntNode extends IntrusiveNode {
                 message.messageKeyLow24 == 0) {
                 var4_ref = rd.a(SaveResultsPromptScreen.field_x, new String[]{(String) (var2)}, (byte) 103);
               } else {
-                var4_ref = rd.a(ek.field_fb, new String[]{(String) (var2)}, (byte) 103);
+                var4_ref = rd.a(FullscreenFailureDialog.field_fb, new String[]{(String) (var2)}, (byte) 103);
               }
             }
           } else {

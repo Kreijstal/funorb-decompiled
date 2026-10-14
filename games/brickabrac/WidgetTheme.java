@@ -186,11 +186,11 @@ final class WidgetTheme {
           dl.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
           TextHotspotRegion.decodedSpriteHeights = new int[nl.decodedSpriteCount];
           tm.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
-          bj.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
+          PopupWidgetLayer.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
           ArrayWidgetGroup.decodedSpriteOffsetX = new int[nl.decodedSpriteCount];
           metadataPacket.position = -(8 * nl.decodedSpriteCount) + (-7 + data.length);
           cf.decodedCanvasWidth = metadataPacket.readUnsignedShort(65280);
-          ek.decodedCanvasHeight = metadataPacket.readUnsignedShort(65280);
+          FullscreenFailureDialog.decodedCanvasHeight = metadataPacket.readUnsignedShort(65280);
           paletteSize = 1 + (metadataPacket.readUnsignedByte(255) & 255);
           for (var4 = 0; nl.decodedSpriteCount > var4; var4++) {
             ArrayWidgetGroup.decodedSpriteOffsetX[var4] = packet.readUnsignedShort(65280);
@@ -227,7 +227,7 @@ final class WidgetTheme {
             var21 = new byte[pixelCount];
             var19 = var21;
             alpha = var19;
-            bj.decodedSpriteAlpha[spriteIndex] = var21;
+            PopupWidgetLayer.decodedSpriteAlpha[spriteIndex] = var21;
             hasNonopaqueAlpha = 0;
             layoutFlags = metadataPacket.readUnsignedByte(255);
             if ((1 & layoutFlags) == 0) {
@@ -308,7 +308,7 @@ final class WidgetTheme {
         }
         packet.writeByte(-101, 2);
         packet.writeByte(-103, 4);
-        packet.writeByte(-109, qf.packChatFilters(248));
+        packet.writeByte(-109, RegistrationResponseDialog.packChatFilters(248));
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

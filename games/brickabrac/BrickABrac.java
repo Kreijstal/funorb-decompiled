@@ -18,21 +18,21 @@ public final class BrickABrac extends InteractiveGameClient {
         int stackIn_6_0 = 0;
         clientBranchFlag = field_J ? 1 : 0;
         if (null != hd.pendingScreen) {
-          stackIn_6_0 = (lp.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
+          stackIn_6_0 = (AccountMessageDialog.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
         transitionActive = stackIn_6_0;
         if (transitionActive != 0) {
           if (16 > NodeDequeCursor.screenTransitionTick) {
-            lp.currentScreen.drawScreen((byte) -75);
+            AccountMessageDialog.currentScreen.drawScreen((byte) -75);
             PixelBlockEffect.pixelate(NodeDequeCursor.screenTransitionTick + 1, 256, 16769381, false, false);
           } else {
             hd.pendingScreen.drawScreen((byte) -85);
             PixelBlockEffect.pixelate(32 - (NodeDequeCursor.screenTransitionTick - 1), 256, 16769381, false, false);
           }
         } else {
-          lp.currentScreen.drawScreen((byte) -63);
+          AccountMessageDialog.currentScreen.drawScreen((byte) -63);
         }
         notification = (IntNode) (kp.achievementNotifications.first(-123));
         if (obfuscationGuard != 16769381) {
@@ -80,15 +80,15 @@ public final class BrickABrac extends InteractiveGameClient {
           }
         }
         if (hd.pendingScreen != null) {
-          stackIn_10_0 = (lp.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
+          stackIn_10_0 = (AccountMessageDialog.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
         } else {
           stackIn_10_0 = 0;
         }
         transitionActive = stackIn_10_0;
-        if (IntArrayRequest.gameplayScreen != lp.currentScreen ||
+        if (IntArrayRequest.gameplayScreen != AccountMessageDialog.currentScreen ||
           IntArrayRequest.gameplayScreen.networkedMatch ||
           transitionActive == 0) {
-          stackIn_17_0 = lp.currentScreen;
+          stackIn_17_0 = AccountMessageDialog.currentScreen;
           stackIn_17_1 = true;
           stackIn_18_2 = (inputEnabled) && (transitionActive == 0);
           ((GameScreen) (Object) stackIn_17_0).advanceScreen(stackIn_17_1, stackIn_18_2, -104);
@@ -105,7 +105,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
         } else {
           if (IntArrayRequest.gameplayScreen != null &&
-            lp.currentScreen != IntArrayRequest.gameplayScreen &&
+            AccountMessageDialog.currentScreen != IntArrayRequest.gameplayScreen &&
             IntArrayRequest.gameplayScreen.networkedMatch) {
             IntArrayRequest.gameplayScreen.advanceScreen(false, false, -81);
           }
@@ -131,7 +131,7 @@ public final class BrickABrac extends InteractiveGameClient {
         this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
         ButtonWidgetRenderer.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         nk.field_c = new RgbSprite(640, 480);
-        Widget.a(lp.field_ub, (byte) 60, CacheIoRequest.field_D);
+        Widget.a(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.field_D);
         this.registerUiLifecycle(3160, new GameUiController());
         ReportAbuseDialog.a(ch.incomingPacketLengths, 1);
     }
@@ -462,7 +462,7 @@ public final class BrickABrac extends InteractiveGameClient {
         if (param0 != 1) {
           return;
         }
-        if (lp.currentScreen.screenId == 9 &&
+        if (AccountMessageDialog.currentScreen.screenId == 9 &&
           !WidgetGroup.a(pl.pendingAchievementMask, -1)) {
           ng.requestScreen(false, 69, 5);
         } else {
@@ -495,8 +495,8 @@ public final class BrickABrac extends InteractiveGameClient {
             } else {
               ng.requestScreen(false, 120, 0);
             }
-            if (lp.currentScreen instanceof MenuScreen) {
-              ((MenuScreen) (lp.currentScreen)).onEnter(false, 0, param1 + 116);
+            if (AccountMessageDialog.currentScreen instanceof MenuScreen) {
+              ((MenuScreen) (AccountMessageDialog.currentScreen)).onEnter(false, 0, param1 + 116);
             }
             MonotonicTime.field_c = false;
           }
@@ -540,7 +540,7 @@ public final class BrickABrac extends InteractiveGameClient {
         if (null != hd.pendingScreen) {
           return false;
         }
-        return null != lp.currentScreen ? lp.currentScreen.handleKey(character, 106, keyCode) : false;
+        return null != AccountMessageDialog.currentScreen ? AccountMessageDialog.currentScreen.handleKey(character, 106, keyCode) : false;
     }
 
     final static int cosine8192(int obfuscationGuard, int angle) {
@@ -693,7 +693,7 @@ public final class BrickABrac extends InteractiveGameClient {
         qp.a(false);
         o.b(31583);
         ok.b(-116);
-        mo.d(false);
+        BirthDateEntryPanel.d(false);
         rh.a(121);
         IndexedSpriteGeometry.b(31797);
         ArcticBackground.d((byte) -31);
@@ -732,15 +732,15 @@ public final class BrickABrac extends InteractiveGameClient {
         WidgetLayerStack.j((byte) -113);
         tb.m(-48);
         bh.n(28);
-        lp.o(50);
+        AccountMessageDialog.o(50);
         AccountRegistrationPanel.a(-11310);
-        he.a((byte) 36);
-        hk.i((byte) 88);
+        AccountIntroductionPanel.a((byte) 36);
+        LoginPanel.i((byte) 88);
         PlayerNameChooserPanel.h(-106);
         WidgetTheme.a(-31063);
         ua.a(2);
         ll.a(!obfuscationGuard ? true : false);
-        ek.c(obfuscationGuard);
+        FullscreenFailureDialog.c(obfuscationGuard);
         kp.a(-68);
         ArchiveFetchClient.c(-12200);
         CacheIoWorker.b(26679);
@@ -768,7 +768,7 @@ public final class BrickABrac extends InteractiveGameClient {
         WidgetTextLayout.a(obfuscationGuard);
         QuickChatHelpDialog.d((byte) 98);
         jl.a(31186);
-        bj.i(111);
+        PopupWidgetLayer.i(111);
         WidgetLayer.a((byte) -17);
         WidgetGroup.f((byte) -67);
         NodeDequeCursor.c(117);
@@ -815,8 +815,8 @@ public final class BrickABrac extends InteractiveGameClient {
         LabeledWidget.c(false);
         ValidatedTextFieldWidget.o(-16124);
         TextFieldWidget.i(80);
-        fe.l(98);
-        cr.a((byte) 123);
+        ContentTransitionLayer.l(98);
+        ActivityIndicatorWidget.a((byte) 123);
         UsernameSuggestionPanel.a((byte) -83);
         HotspotTextWidget.j(-2);
         ValidationIconWidget.a(2);
@@ -824,7 +824,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ToggleButtonWidget.a(8192);
         TextFieldValidator.c((byte) -109);
         go.a(-7393);
-        ig.a(12127);
+        Under13RegistrationNoticePanel.a(12127);
         uf.a((byte) 85);
         LevelDecoder.a((byte) 89);
         ArchiveNetworkClient.h((byte) -128);
@@ -880,7 +880,7 @@ public final class BrickABrac extends InteractiveGameClient {
         AchievementSubmission.a(105);
         pa.c(5);
         tq.a(1024);
-        UsernameAvailabilityResult.a((byte) 83);
+        AccountResponse.a((byte) 83);
         fa.a((byte) -102);
         nj.a(0);
         RasterCacheSurface.a((byte) 121);
@@ -898,8 +898,8 @@ public final class BrickABrac extends InteractiveGameClient {
         NewAchievementsScreen.g(6);
         AchievementsScreen.h((byte) -124);
         LevelPackCard.a(32156);
-        ec.a(0);
-        tf.a(6);
+        DialogMessagePanel.a(0);
+        FullscreenFailureKind.a(6);
         ln.a((byte) -46);
         ValidationStatus.a(109);
         DebouncedValidationSource.d(31366);
@@ -910,7 +910,7 @@ public final class BrickABrac extends InteractiveGameClient {
         EmailValidator.e((byte) 124);
         EmailConfirmationValidator.g(0);
         MatchingTextValidator.f(-71);
-        mi.a(-81);
+        ContentTransitionPhase.a(-81);
         TextHotspotRegion.a((byte) -25);
         lo.a((byte) 38);
         this.host = null;

@@ -106,7 +106,7 @@ final class SpaceBackground extends BackgroundScene {
           jh.field_d = jh.a(0, LobbyGame.spaceNearSprite);
           MusicVoiceMixer.field_t = jh.a(0, LevelResultSubmission.spaceMidSprite);
           NodeDequeCursor.field_b = jh.a(0, ng.spaceFarSprite);
-          b.spaceLeverSprites = cr.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
+          b.spaceLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
           return true;
         }
         return false;

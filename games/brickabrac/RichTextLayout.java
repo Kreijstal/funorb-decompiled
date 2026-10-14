@@ -157,9 +157,9 @@ final class RichTextLayout extends WidgetTextLayout {
           return;
         }
         if (null != c.field_e) {
-          c.field_e.drawAt(fe.field_gb.localX, 0);
+          c.field_e.drawAt(ContentTransitionLayer.field_gb.localX, 0);
         }
-        stackIn_7_0 = fe.field_gb;
+        stackIn_7_0 = ContentTransitionLayer.field_gb;
         stackIn_7_1 = true;
         stackIn_8_2 = (param0) && (!sc.field_c);
         ((UiComponent) (Object) stackIn_7_0).drawRoot(stackIn_7_1, stackIn_8_2);
@@ -304,7 +304,7 @@ final class RichTextLayout extends WidgetTextLayout {
             var12 = var15;
             var12.f((var11 + param6 * param2 - var15.canvasWidth * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
           }
-          tf.field_c[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
+          FullscreenFailureKind.field_c[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
           if (var7 != null) {
             var14[0].drawTransparent(param6 + var11 / param2, param3 + var10 / param2);
           }
@@ -332,7 +332,7 @@ final class RichTextLayout extends WidgetTextLayout {
             var12Lifetime1 = bq.field_e[0][ChocolateBackground.field_w.nextBoundedInt(-37880252, bq.field_e[0].length)];
             var12Lifetime1.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 + var10) / param2, 196);
           }
-          tf.field_c[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
+          FullscreenFailureKind.field_c[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           if (var7 == null) {
             return;
           }

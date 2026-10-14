@@ -355,7 +355,7 @@ final class pf implements WidgetRenderer {
         ResourceArchive var3;
         if (!param0) {
           if (null == hd.pendingScreen &&
-            param1 == lp.currentScreen.screenId) {
+            param1 == AccountMessageDialog.currentScreen.screenId) {
             return true;
           }
           if (null == hd.pendingScreen) {
@@ -369,7 +369,7 @@ final class pf implements WidgetRenderer {
         var3 = (ResourceArchive) null;
         pf.a(97, (byte[]) null, (ResourceArchive) null, (String[]) null, 18, true, (RgbSprite[][]) null, (ResourceArchive) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (ResourceArchive) null);
         if (null == hd.pendingScreen &&
-          param1 == lp.currentScreen.screenId) {
+          param1 == AccountMessageDialog.currentScreen.screenId) {
           return true;
         }
         if (null == hd.pendingScreen) {

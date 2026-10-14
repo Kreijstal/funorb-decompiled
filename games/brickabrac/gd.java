@@ -111,11 +111,11 @@ final class gd {
           }
           return new byte[param0];
         }
-        if (ig.field_N > 0) {
-          fieldTemp$17 = ig.field_N - 1;
-          ig.field_N = ig.field_N - 1;
+        if (Under13RegistrationNoticePanel.field_N > 0) {
+          fieldTemp$17 = Under13RegistrationNoticePanel.field_N - 1;
+          Under13RegistrationNoticePanel.field_N = Under13RegistrationNoticePanel.field_N - 1;
           var2_ref_byte__Lifetime1 = cf.field_b[fieldTemp$17];
-          cf.field_b[ig.field_N] = null;
+          cf.field_b[Under13RegistrationNoticePanel.field_N] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 != 5000) {

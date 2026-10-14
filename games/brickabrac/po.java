@@ -145,7 +145,7 @@ final class po {
         try {
           var4 = IntArrayRequest.gameplayScreen.match;
           var5 = var4;
-          ec.field_Q = TabbedPane.currentBackground;
+          DialogMessagePanel.field_Q = TabbedPane.currentBackground;
           SpaceBackground.field_r = IntArrayRequest.gameplayScreen.networkedMatch;
           TableDataRequest.field_k = IntArrayRequest.gameplayScreen.isSpectator(124);
           MatchingTextValidator.field_n = IntArrayRequest.gameplayScreen.resultWordMode;

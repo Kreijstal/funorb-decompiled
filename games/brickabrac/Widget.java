@@ -77,7 +77,7 @@ class Widget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        bj.widgetTheme.a(true, CappedUrlRequest.field_j, b.field_a, var5);
+        PopupWidgetLayer.widgetTheme.a(true, CappedUrlRequest.field_j, b.field_a, var5);
     }
 
     final static void a(int param0, int param1, int param2, PlayerBoard param3, MultiplayerMatch param4, byte param5) {
@@ -447,7 +447,7 @@ class Widget extends IntrusiveNode {
         try {
           SoundCache.field_c = param1;
           bq.field_b = new ck();
-          bj.field_P = new ck();
+          PopupWidgetLayer.field_P = new ck();
           if (param0 != 1) {
             Widget.c(16);
           }
@@ -804,7 +804,7 @@ class Widget extends IntrusiveNode {
     }
 
     Widget(String param0, WidgetListener param1) {
-        this(param0, bj.widgetTheme.field_i, param1);
+        this(param0, PopupWidgetLayer.widgetTheme.field_i, param1);
     }
 
     void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {

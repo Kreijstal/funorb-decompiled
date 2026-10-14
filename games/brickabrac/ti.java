@@ -41,7 +41,7 @@ final class ti {
             for (var11 = start; end > var11; var11++) {
               var12 = VerticalScrollbar.rankingSortIndices[var11];
               if (sortByRating) {
-                stackIn_25_0 = ec.rankingRatings[var12];
+                stackIn_25_0 = DialogMessagePanel.rankingRatings[var12];
               } else {
                 stackIn_25_0 = DebouncedValidationSource.rankingWinRateThousandths[var12];
               }

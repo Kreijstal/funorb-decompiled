@@ -120,7 +120,7 @@ class TextFieldRenderer extends TextWidgetRenderer {
         }
         try {
           if (obfuscationGuard) {
-            ig.b(widget.height, widget.x + parentX, widget.width, parentY + widget.y, -17634);
+            Under13RegistrationNoticePanel.b(widget.height, widget.x + parentX, widget.width, parentY + widget.y, -17634);
           }
           super.paintWidget(obfuscationGuard, callbackGuard ^ 0, parentX, widget, parentY);
         } catch (RuntimeException runtimeException) {

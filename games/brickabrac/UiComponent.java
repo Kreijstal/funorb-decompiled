@@ -48,7 +48,7 @@ class UiComponent extends ba {
     boolean activeInside;
     NodeDeque children;
     static ResourceArchive field_lb;
-    static tf field_ab;
+    static FullscreenFailureKind fullscreenUnsupported;
     static RgbSprite field_ib;
     int selectedOffsetY;
     String text;
@@ -520,7 +520,7 @@ class UiComponent extends ba {
 
     public static void c(byte param0) {
         field_Z = null;
-        field_ab = null;
+        fullscreenUnsupported = null;
         field_ob = null;
         field_ib = null;
         field_H = null;
@@ -825,6 +825,6 @@ class UiComponent extends ba {
         field_mb = "Log in / Create account";
         field_F = new int[9000];
         field_ob = new PcmSound[8];
-        field_ab = new tf();
+        fullscreenUnsupported = new FullscreenFailureKind();
     }
 }

@@ -6,7 +6,7 @@ final class ch {
     static RgbSprite field_m;
     static RgbSprite[] field_k;
     static RgbSprite field_l;
-    static tf field_a;
+    static FullscreenFailureKind fullscreenFocusProblem;
     static RgbSprite jungleNearSprite;
     static hl field_c;
     static int[] incomingPacketLengths;
@@ -43,8 +43,8 @@ final class ch {
           packet = jl.incomingPackets;
           responseKind = packet.readUnsignedByte(255);
           if (0 == responseKind) {
-            if (null == tf.ignoreIndex) {
-              tf.ignoreIndex = new SecondaryHashTable(128);
+            if (null == FullscreenFailureKind.ignoreIndex) {
+              FullscreenFailureKind.ignoreIndex = new SecondaryHashTable(128);
               IsaacGenerator.ignoreCount = 0;
             }
             alternateNameFlag = (1 != packet.readUnsignedByte(255)) ? 0 : 1;
@@ -66,12 +66,12 @@ final class ch {
             if (null == ignoredEntry) {
               ignoredEntry = HighscorePackSelector.findIgnoredPlayer(0, previousIgnoreName);
               if (null != ignoredEntry) {
-                tf.ignoreIndex.put((long)ignoreNameKey.hashCode(), ignoredEntry, 110);
+                FullscreenFailureKind.ignoreIndex.put((long)ignoreNameKey.hashCode(), ignoredEntry, 110);
               }
             }
             if (ignoredEntry == null) {
               ignoredEntry = new SocialListEntry();
-              tf.ignoreIndex.put((long)ignoreNameKey.hashCode(), ignoredEntry, 120);
+              FullscreenFailureKind.ignoreIndex.put((long)ignoreNameKey.hashCode(), ignoredEntry, 120);
               ignoreInsertionIndex = IsaacGenerator.ignoreCount;
               IsaacGenerator.ignoreCount = IsaacGenerator.ignoreCount + 1;
               ignoredEntry.insertionIndex = ignoreInsertionIndex;
@@ -176,7 +176,7 @@ final class ch {
           field_c = null;
           field_d = null;
           field_e = null;
-          field_a = null;
+          fullscreenFocusProblem = null;
           field_k = null;
           incomingPacketLengths = null;
           if (param0 != 20623) {
@@ -210,7 +210,7 @@ final class ch {
 
     static {
         field_b = -1;
-        field_a = new tf();
+        fullscreenFocusProblem = new FullscreenFailureKind();
         incomingPacketLengths = new int[256];
         field_j = "Genius!";
         field_e = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";

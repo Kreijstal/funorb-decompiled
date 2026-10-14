@@ -32,8 +32,8 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.matchingValidator.validateText(text, obfuscationGuard) == lp.validationInvalid) {
-            stackIn_2_0 = lp.validationInvalid;
+          if (this.matchingValidator.validateText(text, obfuscationGuard) == AccountMessageDialog.validationInvalid) {
+            stackIn_2_0 = AccountMessageDialog.validationInvalid;
             return stackIn_2_0;
           }
           if (!text.equals(this.checkedEmail)) {
@@ -46,7 +46,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             this.emailAvailable = var3.isAvailable(false);
           }
           if (!this.emailAvailable) {
-            stackIn_13_0 = lp.validationInvalid;
+            stackIn_13_0 = AccountMessageDialog.validationInvalid;
           } else {
             stackIn_13_0 = DualLinkIterator.validationValid;
           }
@@ -76,11 +76,11 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 27 / ((-16 - obfuscationGuard) / 50);
-          if (this.matchingValidator.validateText(text, (byte) 106) == lp.validationInvalid) {
+          if (this.matchingValidator.validateText(text, (byte) 106) == AccountMessageDialog.validationInvalid) {
             stackIn_2_0 = this.matchingValidator.describeTextValidation(37, text);
             return stackIn_2_0;
           }
-          if (this.validateText(text, (byte) 106) != lp.validationInvalid) {
+          if (this.validateText(text, (byte) 106) != AccountMessageDialog.validationInvalid) {
             return to.field_l;
           }
           stackIn_6_0 = ConstructionBackground.field_s;
@@ -137,10 +137,10 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             var2.unlinkSecondary(3);
             var2 = BlankScreen.friendIndex.next(false);
           }
-          var2Lifetime1 = tf.ignoreIndex.first((byte) 122);
+          var2Lifetime1 = FullscreenFailureKind.ignoreIndex.first((byte) 122);
           while (var2Lifetime1 != null) {
             var2Lifetime1.unlinkSecondary(3);
-            var2Lifetime1 = tf.ignoreIndex.next(false);
+            var2Lifetime1 = FullscreenFailureKind.ignoreIndex.next(false);
           }
           LevelMetadata.field_m = 0;
         } catch (RuntimeException runtimeException) {

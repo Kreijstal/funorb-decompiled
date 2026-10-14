@@ -159,7 +159,7 @@ final class tm {
           if (param0 != 110) {
             decodedSpriteHasAlpha = (boolean[]) null;
           }
-          cr.a(param1, 10000);
+          ActivityIndicatorWidget.a(param1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

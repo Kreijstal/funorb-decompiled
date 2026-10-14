@@ -7,7 +7,7 @@ final class vd {
     static int[] viewFacePointThreeX;
     static String field_d;
     static boolean field_e;
-    static mo field_a;
+    static BirthDateEntryPanel field_a;
     static int field_c;
     static ArchiveFetchClient field_f;
 
@@ -65,7 +65,7 @@ final class vd {
     final static void a(int param0) {
         ScrollPane.h(-29448);
         if (param0 >= -126) {
-          field_a = (mo) null;
+          field_a = (BirthDateEntryPanel) null;
         }
     }
 

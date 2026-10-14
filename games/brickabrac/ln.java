@@ -82,7 +82,7 @@ final class ln extends IntrusiveNode {
             JungleBackground.field_s.addLast(new RasterCacheSurface(960, 480), (byte) 3);
           }
           for (var7_intLifetime1 = 0; var7_intLifetime1 < 2; var7_intLifetime1++) {
-            cr.field_N.addLast(new RasterCacheSurface(1280, 480), (byte) 3);
+            ActivityIndicatorWidget.field_N.addLast(new RasterCacheSurface(1280, 480), (byte) 3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,12 +165,12 @@ final class ln extends IntrusiveNode {
     final static boolean a(int param0, int param1, int param2) {
         int var3 = null != nl.pendingLobbyGame ? 1 : 0;
         if (MeshAttributeRecord.currentKeyCode == 9 &&
-          QuickChatHelpDialog.a(QuickChatHelpDialog.field_Zb, -3, ig.field_K, ResourceRequest.field_z, TextFieldRenderer.field_x)) {
+          QuickChatHelpDialog.a(QuickChatHelpDialog.field_Zb, -3, Under13RegistrationNoticePanel.field_K, ResourceRequest.field_z, TextFieldRenderer.field_x)) {
           if (TextFieldRenderer.field_x != 2 &&
             var3 != 0) {
             return false;
           }
-          return QuickChatParameterType.a(ResourceRequest.field_z, QuickChatHelpDialog.field_Zb, TextFieldRenderer.field_x, false, ig.field_K);
+          return QuickChatParameterType.a(ResourceRequest.field_z, QuickChatHelpDialog.field_Zb, TextFieldRenderer.field_x, false, Under13RegistrationNoticePanel.field_K);
         }
         if (10 == MeshAttributeRecord.currentKeyCode) {
           if (var3 != 0) {
@@ -201,7 +201,7 @@ final class ln extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        rj.field_c.b((byte) 126, new he());
+        rj.field_c.transitionToContent((byte) 126, new AccountIntroductionPanel());
         int var1 = 48 % ((param0 - 32) / 62);
     }
 

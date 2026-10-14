@@ -239,14 +239,14 @@ final class SoundCache {
             if (BitPacketBuffer.field_u == rf.field_b) {
               if (param1) {
                 var10 = (String) null;
-                NanoGameClock.field_s = he.a(sl.field_v, 20, false, param5, (String) null);
+                NanoGameClock.field_s = AccountIntroductionPanel.a(sl.field_v, 20, false, param5, (String) null);
               } else {
                 NanoGameClock.field_s = ArchiveFetchClient.a(param0, false, param5, (byte) -109);
               }
               TextFieldValidator.outgoingPackets.position = 0;
               TextFieldValidator.outgoingPackets.writeByte(28, 14);
               TextFieldValidator.outgoingPackets.writeByte(107, NanoGameClock.field_s.a(13).field_a);
-              cr.a(-1, 10000);
+              ActivityIndicatorWidget.a(-1, 10000);
               rf.field_b = GameScreen.field_c;
             }
             if (rf.field_b == GameScreen.field_c &&
@@ -263,7 +263,7 @@ final class SoundCache {
             }
             if (rf.field_b == MeshAttributeRecord.field_f &&
               vd.ensureGamePacketBytes(20, 8)) {
-              bj.field_ab = jl.incomingPackets.readLong(-32768);
+              PopupWidgetLayer.field_ab = jl.incomingPackets.readLong(-32768);
               jl.incomingPackets.position = 0;
               SocialListEntry.a(param4, NanoGameClock.field_s, param1, param3, false);
               rf.field_b = rq.field_c;
@@ -319,7 +319,7 @@ final class SoundCache {
               }
               stackIn_53_0 = ((16 & var7) != 0);
               RasterSnapshot.field_j = stackIn_53_0;
-              if (ec.field_O) {
+              if (DialogMessagePanel.field_O) {
                 jl.incomingPackets.readUnsignedByte(255);
                 jl.incomingPackets.readUnsignedByte(255);
                 jl.incomingPackets.readInt(255);

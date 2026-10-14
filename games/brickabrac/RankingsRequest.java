@@ -112,7 +112,7 @@ final class RankingsRequest extends IntrusiveNode {
           hg.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(92) << 16);
           tm.field_g = 11;
           qm.field_a = 40;
-          ek.field_kb = 72;
+          FullscreenFailureDialog.field_kb = 72;
           ck.a((byte) 66);
           TextFieldRenderer.field_A = be.field_a;
           if (!TextFieldRenderer.field_A) {

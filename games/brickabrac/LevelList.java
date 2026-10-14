@@ -55,7 +55,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[1] = ArchiveNetworkRequest.field_H;
         ArrayWidgetGroup.buttonLabels[11] = ej.field_H;
         ArrayWidgetGroup.buttonLabels[7] = jj.field_b;
-        ArrayWidgetGroup.buttonLabels[0] = mo.field_O;
+        ArrayWidgetGroup.buttonLabels[0] = BirthDateEntryPanel.field_O;
         ArrayWidgetGroup.buttonLabels[6] = rd.field_b;
         ArrayWidgetGroup.buttonLabels[8] = null;
         ArrayWidgetGroup.buttonLabels[13] = di.field_a;
@@ -82,7 +82,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[35] = LevelPackLoader.field_d;
         ArrayWidgetGroup.buttonLabels[20] = LevelResultSubmission.field_q;
         ArrayWidgetGroup.buttonLabels[33] = t.field_c;
-        ArrayWidgetGroup.buttonLabels[32] = hk.field_L;
+        ArrayWidgetGroup.buttonLabels[32] = LoginPanel.field_L;
         ArrayWidgetGroup.buttonLabels[25] = ck.field_i;
         ArrayWidgetGroup.buttonLabels[24] = DesertBackground.field_r;
         ArrayWidgetGroup.buttonLabels[42] = Widget.field_u;
@@ -97,7 +97,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[26] = PauseMenuScreen.field_u;
         ArrayWidgetGroup.buttonLabels[22] = FocusableWidget.field_D;
         sl.field_A[13] = TimedSplashScreen.field_s;
-        hm.field_b = new String[]{mi.field_a, qm.field_c, TabbedPane.field_Pb, s.field_a};
+        hm.field_b = new String[]{ContentTransitionPhase.field_a, qm.field_c, TabbedPane.field_Pb, s.field_a};
         sl.field_A[16] = MeshAttributeRecord.field_d;
         qn.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
         WidgetTheme.field_e = new String[]{ArrayWidgetGroup.field_C, bh.field_ub, PlayerNameChooserPanel.field_P, bq.field_f, jh.field_c};

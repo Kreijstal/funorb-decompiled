@@ -124,15 +124,15 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               so.field_f = this;
               to.field_i = 0;
               var8_int = 88 / ((param1 - 24) / 56);
-              hk.field_W = 0;
+              LoginPanel.field_W = 0;
               RichTextLayout.field_m = param4;
               be.field_g = param2;
               mc.field_d = param2;
               SecondaryHashTable.field_i = EmailConfirmationValidator.e((byte) -64);
               dupTemp$0 = new PlatformServices(param0, param5, param6, true);
-              lp.field_ub = dupTemp$0;
+              AccountMessageDialog.field_ub = dupTemp$0;
               LevelPackLoader.field_e = dupTemp$0;
-              var9 = lp.field_ub.startThread(1, (Runnable) (this), (byte) -124);
+              var9 = AccountMessageDialog.field_ub.startThread(1, (Runnable) (this), (byte) -124);
               while (true) {
                 if (var9.status == 0) {
                   wj.sleepMillis(-125, 10L);
@@ -261,7 +261,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if (so.field_f == this &&
             !ParisBackground.field_s) {
             GameplayAudioEvent.redrawRequested = true;
-            if (tf.field_h &&
+            if (FullscreenFailureKind.field_h &&
               -er.field_c + MonotonicTime.nowMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
@@ -388,7 +388,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                   if (stackIn_79_0 < stackIn_79_1) {
                     break;
                   }
-                  tf.field_h = true;
+                  FullscreenFailureKind.field_h = true;
                   break;
                 }
               }
@@ -429,7 +429,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                   do {
                     if (!(c.cyclesDue > var3)) {
                       this.runRenderFrame(0);
-                      IntNode.a(-4317, lp.field_ub, CacheIoRequest.field_D);
+                      IntNode.a(-4317, AccountMessageDialog.field_ub, CacheIoRequest.field_D);
                       break;
                     }
                     this.runClientTick(26573);
@@ -467,8 +467,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           nowMillis = MonotonicTime.nowMillis(false);
-          previousRenderMillis = ig.renderTimes[MembershipBenefitsScreen.renderTimeCursor];
-          ig.renderTimes[MembershipBenefitsScreen.renderTimeCursor] = nowMillis;
+          previousRenderMillis = Under13RegistrationNoticePanel.renderTimes[MembershipBenefitsScreen.renderTimeCursor];
+          Under13RegistrationNoticePanel.renderTimes[MembershipBenefitsScreen.renderTimeCursor] = nowMillis;
           MembershipBenefitsScreen.renderTimeCursor = 31 & 1 + MembershipBenefitsScreen.renderTimeCursor;
           if ((long)obfuscationGuard != previousRenderMillis &&
             nowMillis > previousRenderMillis) {
@@ -485,12 +485,12 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             if (null != MatchingTextValidator.field_o &&
               null == BackgroundRegistry.field_e) {
               insets = MatchingTextValidator.field_o.getInsets();
-              CacheIoRequest.field_D.setLocation(insets.left + to.field_i, insets.top + hk.field_W);
+              CacheIoRequest.field_D.setLocation(insets.left + to.field_i, insets.top + LoginPanel.field_W);
               if (BrickABrac.field_J) {
-                CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
+                CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
               }
             } else {
-              CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
+              CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
             }
           }
           this.renderClient(obfuscationGuard + 102);
@@ -600,9 +600,9 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               var4_ref = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (lp.field_ub != null) {
+          if (AccountMessageDialog.field_ub != null) {
             try {
-              lp.field_ub.shutdown(true);
+              AccountMessageDialog.field_ub.shutdown(true);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var4_ref = (Exception) (Object) decompiledCaughtException;
@@ -668,12 +668,12 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           CacheIoRequest.field_D.setVisible(true);
           if (MatchingTextValidator.field_o == var2) {
             var3 = MatchingTextValidator.field_o.getInsets();
-            CacheIoRequest.field_D.setLocation(var3.left + to.field_i, var3.top + hk.field_W);
+            CacheIoRequest.field_D.setLocation(var3.left + to.field_i, var3.top + LoginPanel.field_W);
             if (var4 != 0) {
-              CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
+              CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
             }
           } else {
-            CacheIoRequest.field_D.setLocation(to.field_i, hk.field_W);
+            CacheIoRequest.field_D.setLocation(to.field_i, LoginPanel.field_W);
           }
           CacheIoRequest.field_D.addFocusListener((java.awt.event.FocusListener) (this));
           CacheIoRequest.field_D.requestFocus();
@@ -844,7 +844,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           }
           var8 = field_n.get(12);
           var9 = field_n.get(13);
-          stackIn_4_0 = JungleBackground.field_u[-1 + var3_int] + ", " + var4 / 10 + var4 % 10 + "-" + ek.field_eb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          stackIn_4_0 = JungleBackground.field_u[-1 + var3_int] + ", " + var4 / 10 + var4 % 10 + "-" + FullscreenFailureDialog.field_eb[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

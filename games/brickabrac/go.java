@@ -35,18 +35,18 @@ final class go {
           try {
             var6 = null;
             var7 = null;
-            if (ec.field_P.field_q != null) {
-              Widget.field_k = new BufferedFile(ec.field_P.field_q, 5200, 0);
-              ec.field_P.field_q = null;
-              var6 = new FileCacheStore(255, Widget.field_k, new BufferedFile(ec.field_P.field_m, 12000, 0), 2097152);
+            if (DialogMessagePanel.field_P.field_q != null) {
+              Widget.field_k = new BufferedFile(DialogMessagePanel.field_P.field_q, 5200, 0);
+              DialogMessagePanel.field_P.field_q = null;
+              var6 = new FileCacheStore(255, Widget.field_k, new BufferedFile(DialogMessagePanel.field_P.field_m, 12000, 0), 2097152);
             }
             if (Widget.field_k != null) {
               if (ClientException.field_g == null) {
-                ClientException.field_g = new BufferedFile[ec.field_P.field_s.length];
+                ClientException.field_g = new BufferedFile[DialogMessagePanel.field_P.field_s.length];
               }
               if (ClientException.field_g[param1] == null) {
-                ClientException.field_g[param1] = new BufferedFile(ec.field_P.field_s[param1], 12000, 0);
-                ec.field_P.field_s[param1] = null;
+                ClientException.field_g[param1] = new BufferedFile(DialogMessagePanel.field_P.field_s[param1], 12000, 0);
+                DialogMessagePanel.field_P.field_s[param1] = null;
               }
               var7 = new FileCacheStore(param1, Widget.field_k, ClientException.field_g[param1], 2097152);
             }

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends fe {
-    static mi field_qb;
+final class bh extends ContentTransitionLayer {
+    static ContentTransitionPhase contentFadingOut;
     static String field_rb;
     static s field_tb;
     static String field_ub;
@@ -23,7 +23,7 @@ final class bh extends fe {
 
     public static void n(int param0) {
         field_ub = null;
-        field_qb = null;
+        contentFadingOut = null;
         if (param0 < 26) {
           return;
         }
@@ -32,14 +32,14 @@ final class bh extends fe {
         field_sb = null;
     }
 
-    final void b(byte param0, Widget param1) {
-        if (param0 <= 105) {
+    final void transitionToContent(byte obfuscationGuard, Widget content) {
+        if (obfuscationGuard <= 105) {
           return;
         }
         try {
-          super.b((byte) 120, param1);
+          super.transitionToContent((byte) 120, content);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bh.C(" + obfuscationGuard + ',' + (content != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -47,6 +47,6 @@ final class bh extends fe {
         field_rb = "You do not have a suitable number of players for the current options.";
         field_sb = "This entry doesn't match";
         field_ub = "Oh dear!";
-        field_qb = new mi();
+        contentFadingOut = new ContentTransitionPhase();
     }
 }

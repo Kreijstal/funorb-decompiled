@@ -64,11 +64,11 @@ final class DesertBackground extends BackgroundScene {
           SecondaryNodeQueue.field_d = jh.a(0, wn.desertNearSprite);
           Widget.field_x = jh.a(0, PowerUpWarning.desertMidSprite);
           pp.field_b = jh.a(0, OptionsScreen.desertFarSprite);
-          GzipInflater.desertCapsSprites[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
-          TableNameEntry.desertSegsSprites[0] = cr.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
+          GzipInflater.desertCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
+          TableNameEntry.desertSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
           TextWidgetRenderer.desertCentreSprites[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
-          GzipInflater.desertCapsSprites[1] = ig.a(GzipInflater.desertCapsSprites[0], obfuscationGuard);
-          TableNameEntry.desertSegsSprites[1] = ig.a(TableNameEntry.desertSegsSprites[0], false);
+          GzipInflater.desertCapsSprites[1] = Under13RegistrationNoticePanel.a(GzipInflater.desertCapsSprites[0], obfuscationGuard);
+          TableNameEntry.desertSegsSprites[1] = Under13RegistrationNoticePanel.a(TableNameEntry.desertSegsSprites[0], false);
           TextWidgetRenderer.desertCentreSprites[1] = pl.a(-16371, TextWidgetRenderer.desertCentreSprites[0]);
           return true;
         }
@@ -198,7 +198,7 @@ final class DesertBackground extends BackgroundScene {
     final static void g(int param0) {
         int var1 = co.a((byte) -53);
         int var2 = ba.b(true);
-        vg.field_c.a(var1 + (un.field_a << 1), var2 + (Paddle.field_A << 1), LevelPack.field_k - un.field_a, false, mi.field_d - Paddle.field_A);
+        vg.field_c.a(var1 + (un.field_a << 1), var2 + (Paddle.field_A << 1), LevelPack.field_k - un.field_a, false, ContentTransitionPhase.field_d - Paddle.field_A);
         CachedArchiveSource.d(-16085);
         if (param0 == 11184810) {
           return;

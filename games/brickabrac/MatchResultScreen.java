@@ -72,8 +72,8 @@ abstract class MatchResultScreen extends MenuScreen {
         int var11;
         RgbSprite var12;
         var11 = BrickABrac.field_J ? 1 : 0;
-        if (null != ec.field_Q) {
-          ec.field_Q.drawFullBackground(true, 0, 0, 0, 0);
+        if (null != DialogMessagePanel.field_Q) {
+          DialogMessagePanel.field_Q.drawFullBackground(true, 0, 0, 0, 0);
         }
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         gh.a(120, true);

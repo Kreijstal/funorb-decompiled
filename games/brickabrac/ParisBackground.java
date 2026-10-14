@@ -293,7 +293,7 @@ final class ParisBackground extends BackgroundScene {
                   !QuickChatParameterType.field_d) {
                   decompiledFrameRemainder0 = (var18 == 2);
                   if (decompiledFrameRemainder0) {
-                    var19 = fe.field_hb;
+                    var19 = ContentTransitionLayer.field_hb;
                   }
                 } else {
                   var19 = UiComponent.field_Z;
@@ -318,7 +318,7 @@ final class ParisBackground extends BackgroundScene {
                 ik.field_i[var18].addChild(QuickChatPhraseDefinition.field_F[var18], 0);
                 ik.field_i[var18].markDescendantsToInheritVisualState(true);
                 DualLinkDeque.field_d.addChild(ik.field_i[var18], 0);
-                fe.field_pb = fe.field_pb + 1;
+                ContentTransitionLayer.field_pb = ContentTransitionLayer.field_pb + 1;
               }
               var18++;
               continue;
@@ -335,7 +335,7 @@ final class ParisBackground extends BackgroundScene {
             !TextWidgetRenderer.field_e) {
             return;
           }
-          vd.field_a = new mo(0, 0, 0, 0);
+          vd.field_a = new BirthDateEntryPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

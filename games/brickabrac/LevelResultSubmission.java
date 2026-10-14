@@ -88,7 +88,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             var7 = 0;
             if (2 == var6) {
               var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
-              var8 = rd.a(ek.field_fb, new String[]{var3}, (byte) 103);
+              var8 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var3}, (byte) 103);
               var7 = -485 + PasswordValidator.field_n.width + ap.field_e.width - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
               if (0 > var7) {
                 var7 = 0;

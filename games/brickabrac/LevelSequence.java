@@ -50,13 +50,13 @@ final class LevelSequence {
         }
         if (null != bm.contextActions &&
           bm.contextActions.handleContextCancelKey(param1 ^ -2100)) {
-          cr.f((byte) -123);
+          ActivityIndicatorWidget.f((byte) -123);
           return true;
         }
         if (CircleBody.reportAbuseDialog != null &&
           CircleBody.reportAbuseDialog.handleCancelKey((byte) 119)) {
           CircleBody.reportAbuseDialog = null;
-          cr.f((byte) -55);
+          ActivityIndicatorWidget.f((byte) -55);
           return true;
         }
         if (DateFieldsWidget.j((byte) -60)) {

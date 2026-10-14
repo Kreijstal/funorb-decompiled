@@ -264,7 +264,7 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_9_0Lifetime1 = this;
                 stackIn_9_1Lifetime1 = null;
                 stackIn_9_2Lifetime1 = null;
-                muteCaption = ek.field_gb;
+                muteCaption = FullscreenFailureDialog.field_gb;
               }
               this.muteControl = new StateIconLabel(muteControlId, muteStyleTemplate, muteCaption);
               this.body.addChild(this.muteControl, 0);

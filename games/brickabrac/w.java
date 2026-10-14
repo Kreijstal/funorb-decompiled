@@ -291,18 +291,18 @@ final class w {
             BufferedFile.field_d.ensureGroupAvailableByName("members_expansion_screen", -28138) &&
             BufferedFile.field_d.ensureGroupAvailableByName("arialish12", -28138) &&
             BufferedFile.field_d.ensureGroupAvailableByName("pump32", -28138) &&
-            fe.field_jb != null &&
-            fe.field_jb.ensureIndex((byte) -127) &&
-            fe.field_jb.ensureGroupAvailableByName("arialish12", -28138) &&
-            fe.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
+            ContentTransitionLayer.field_jb != null &&
+            ContentTransitionLayer.field_jb.ensureIndex((byte) -127) &&
+            ContentTransitionLayer.field_jb.ensureGroupAvailableByName("arialish12", -28138) &&
+            ContentTransitionLayer.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
             AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
             ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
-            ch.field_c = TooltipSprite.a((byte) -37, "arialish12", BufferedFile.field_d, fe.field_jb, "");
-            co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, fe.field_jb);
+            ch.field_c = TooltipSprite.a((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
+            co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
             MainMenuScreen.field_u = TextWidgetRenderer.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
             LevelPack.field_e = TextWidgetRenderer.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
             ValidatedTextFieldWidget.field_V = CheckboxWidgetRenderer.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);
-            fe.field_jb = null;
+            ContentTransitionLayer.field_jb = null;
             BufferedFile.field_d = null;
           }
           this.a(475);

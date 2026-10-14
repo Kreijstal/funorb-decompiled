@@ -210,34 +210,34 @@ final class so {
           CircleBody.field_t = new RgbSprite[lo.field_c.length][];
           var9 = null;
           for (var10_intLifetime1 = 0; lo.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
-            CircleBody.field_t[var10_intLifetime1] = cr.loadRgbSpritesByName("basic", param0, lo.field_c[var10_intLifetime1], 2);
+            CircleBody.field_t[var10_intLifetime1] = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, lo.field_c[var10_intLifetime1], 2);
           }
           MenuSelection.field_k = pl.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
           Ball.field_D = pl.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
           SingleChildWidget.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
-          dg.field_b = cr.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
-          GameConnectionShell.field_D = cr.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
+          dg.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
+          GameConnectionShell.field_D = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
           AccountRegistrationPanel.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
-          TextHotspotRegion.field_p = cr.loadRgbSpritesByName("basic", param0, "powerup", 2);
+          TextHotspotRegion.field_p = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "powerup", 2);
           LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
-          QuickChatHelpDialog.field_Ub = cr.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
-          GzipInflater.field_a = cr.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
-          IntrusiveNode.field_f = cr.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
-          tf.trackHeads = cr.loadRgbSpritesByName("basic", param0, "track_heads", 2);
-          ef.field_e = cr.loadRgbSpritesByName("basic", param0, "characters_small", 2);
-          ScorePopup.characterHeads = cr.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
-          cn.field_e = cr.loadRgbSpritesByName("basic", param0, "lever_small", 2);
-          ScorePopup.field_r = cr.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
-          lp.field_yb = cr.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
+          QuickChatHelpDialog.field_Ub = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
+          GzipInflater.field_a = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
+          IntrusiveNode.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
+          FullscreenFailureKind.trackHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "track_heads", 2);
+          ef.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_small", 2);
+          ScorePopup.characterHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
+          cn.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small", 2);
+          ScorePopup.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
+          AccountMessageDialog.field_yb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
           qi.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
           ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           ln.field_j = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.field_l = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
           me.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
           pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
-          BrickMotionPath.field_r = cr.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
-          AchievementSubmission.field_q = cr.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
+          BrickMotionPath.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
+          AchievementSubmission.field_q = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
           ValidationStatus.field_e = TextWidgetRenderer.a("basic", "congratulations", 1593955777, param0);
           pa.field_m = new RgbSprite[SingleChildWidget.field_C.length];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < pa.field_m.length; var10_intLifetime2++) {
@@ -290,10 +290,10 @@ final class so {
           }
           TextWidgetRenderer.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
           pa.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
-          gr.field_d = cr.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
+          gr.field_d = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
           nl.field_b = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
-          PasswordValidator.field_l = cr.loadRgbSpritesByName("basic", param0, "sliders", 2);
-          SocialListEntry.field_Vb = cr.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
+          PasswordValidator.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "sliders", 2);
+          SocialListEntry.field_Vb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
           pa.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
           for (var10_intLifetime9 = 0; SocialListEntry.field_Vb.length > var10_intLifetime9; var10_intLifetime9++) {
             dupTemp$0 = SocialListEntry.field_Vb[var10_intLifetime9].copy();
@@ -313,19 +313,19 @@ final class so {
           for (var10_intLifetime10 = 0; nd.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
             nd.field_f[var10_intLifetime10] = 14;
           }
-          UnderwaterBackground.field_u = HotspotTextWidget.a(2, mo.field_N, -1);
+          UnderwaterBackground.field_u = HotspotTextWidget.a(2, BirthDateEntryPanel.field_N, -1);
           ClientException.field_b = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
           ed.field_b = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
             ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
-          BoundedFile.field_a = new RgbSprite[tf.trackHeads.length];
+          BoundedFile.field_a = new RgbSprite[FullscreenFailureKind.trackHeads.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {
-            BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), tf.trackHeads[var10_intLifetime12], 14, 16755200);
+            BoundedFile.field_a[var10_intLifetime12] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), FullscreenFailureKind.trackHeads[var10_intLifetime12], 14, 16755200);
           }
-          MusicVoiceMixer.field_n = new RgbSprite[tf.trackHeads.length];
+          MusicVoiceMixer.field_n = new RgbSprite[FullscreenFailureKind.trackHeads.length];
           for (var10_intLifetime13 = 0; var10_intLifetime13 < MusicVoiceMixer.field_n.length; var10_intLifetime13++) {
-            MusicVoiceMixer.field_n[var10_intLifetime13] = DelayedPacket.a(tf.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
+            MusicVoiceMixer.field_n[var10_intLifetime13] = DelayedPacket.a(FullscreenFailureKind.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
           }
           AlignedIconLabel.field_Sb = ap.field_a.copy();
           AlignedIconLabel.field_Sb.rotateCounterclockwise();

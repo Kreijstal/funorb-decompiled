@@ -149,7 +149,7 @@ final class PowerUpWarning extends IntrusiveNode {
             }
           }
           if (null != message.suggestedPhraseIds) {
-            ig.field_K = message.senderName;
+            Under13RegistrationNoticePanel.field_K = message.senderName;
             QuickChatHelpDialog.field_Zb = message.senderId;
             TextFieldRenderer.field_x = message.channel;
             ResourceRequest.field_z = message.suggestedPhraseIds;

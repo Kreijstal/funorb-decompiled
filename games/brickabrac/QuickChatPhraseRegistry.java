@@ -3,7 +3,7 @@
  */
 final class QuickChatPhraseRegistry {
     private ResourceArchive extendedArchive;
-    static tf field_i;
+    static FullscreenFailureKind fullscreenTimeout;
     static String[] field_b;
     private to definitions;
     static String[] field_k;
@@ -55,7 +55,7 @@ final class QuickChatPhraseRegistry {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 45) {
-            field_i = (tf) null;
+            fullscreenTimeout = (FullscreenFailureKind) null;
           }
           stackIn_3_0 = param0.ensureAllGroupsAvailable(96);
           return stackIn_3_0;
@@ -75,7 +75,7 @@ final class QuickChatPhraseRegistry {
 
     public static void a(int param0) {
         field_g = null;
-        field_i = null;
+        fullscreenTimeout = null;
         field_e = null;
         field_c = null;
         chocolateFarSprite = null;
@@ -136,7 +136,7 @@ final class QuickChatPhraseRegistry {
 
     static {
         field_a = 22;
-        field_i = new tf();
+        fullscreenTimeout = new FullscreenFailureKind();
         field_g = new int[4];
     }
 }

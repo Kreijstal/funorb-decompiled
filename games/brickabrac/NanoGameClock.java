@@ -43,7 +43,7 @@ final class NanoGameClock extends GameClock {
         IsaacGenerator.field_i = Rasterizer2D.height;
         kp.field_a = Rasterizer2D.width;
         Brick.e(-67);
-        ap.field_b.a(fe.field_gb.width, 0, 80, 0, fe.field_gb.height - 40 - 2);
+        ap.field_b.a(ContentTransitionLayer.field_gb.width, 0, 80, 0, ContentTransitionLayer.field_gb.height - 40 - 2);
         DraggableWidget.field_N.setBounds(np.uiRowHeight, 0, 0, RectangleBody.field_q.width, (byte) 64);
         if (param0 <= 16) {
           field_l = true;
@@ -51,7 +51,7 @@ final class NanoGameClock extends GameClock {
         int var1 = np.uiRowHeight + 2;
         Ball.field_A.setBounds(-(!vd.field_e ? 0 : var1) + RectangleBody.field_q.height, !vd.field_e ? 0 : var1, 0, RectangleBody.field_q.width, (byte) 64);
         s.b(124);
-        HighscorePackSelector.field_k.setBounds(40, fe.field_gb.height - 40, 0, fe.field_gb.width, (byte) 64);
+        HighscorePackSelector.field_k.setBounds(40, ContentTransitionLayer.field_gb.height - 40, 0, ContentTransitionLayer.field_gb.width, (byte) 64);
         sc.field_b.setBounds(30, 0, 0, rm.field_a.width, (byte) 64);
         ll.field_e.setBounds(-72 + rm.field_a.height, 30, 0, rm.field_a.width, (byte) 64);
         nk.field_g.setBounds(30, 5, 5, 68, (byte) 64);
@@ -61,7 +61,7 @@ final class NanoGameClock extends GameClock {
         int var2 = vd.field_e ? 250 : 200;
         BufferedSocket.field_h.setBounds(30, 5, 5 + var2, -var2 + 363, (byte) 64);
         HalloweenBackground.field_x.setBounds(30, 5, 370, rm.field_a.width - 10 - 365, (byte) 64);
-        rl.field_e.setScrollPaneBounds(2, (byte) -128, -5 + (ll.field_e.width - 5), 5, 37, ec.field_J, -5 + (-5 + ll.field_e.height - 32));
+        rl.field_e.setScrollPaneBounds(2, (byte) -128, -5 + (ll.field_e.width - 5), 5, 37, DialogMessagePanel.field_J, -5 + (-5 + ll.field_e.height - 32));
         int var3 = (rm.field_a.width + 2) / 2;
         gj.field_b.setBounds(40, -40 + rm.field_a.height, 0, var3 - 2, (byte) 64);
         if (!vd.field_e) {

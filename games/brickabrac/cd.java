@@ -75,9 +75,9 @@ final class cd {
         return true;
     }
 
-    final static UsernameAvailabilityResult a(boolean param0, boolean param1) {
-        UsernameAvailabilityResult var2 = new UsernameAvailabilityResult(param0);
-        var2.field_a = param1 ? true : false;
+    final static AccountResponse a(boolean param0, boolean param1) {
+        AccountResponse var2 = new AccountResponse(param0);
+        var2.underThirteen = param1 ? true : false;
         return var2;
     }
 
@@ -104,7 +104,7 @@ final class cd {
           EmailConfirmationValidator.field_l = param1;
           ArrayWidgetGroup.field_F = param0;
           GameCanvas.field_f = param4;
-          ek.field_lb = param5;
+          FullscreenFailureDialog.field_lb = param5;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cd.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

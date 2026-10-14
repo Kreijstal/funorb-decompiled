@@ -17,7 +17,7 @@ final class eq {
     static SecondaryHashTable lobbyPlayerIndex;
 
     final static void a(int param0) {
-        cr.f((byte) -45);
+        ActivityIndicatorWidget.f((byte) -45);
         if (param0 != 7) {
           gameTransport = (BufferedSocket) null;
         }
@@ -108,7 +108,7 @@ final class eq {
           this.field_l = (long[]) null;
         }
         while (var2 < 8) {
-          this.field_e[var2] = qf.a(qf.a(qf.a(qf.a(qf.a(ch.a(255L, (long)this.field_h[var3 + 3]) << 32, qf.a(ch.a((long)this.field_h[2 + var3], 255L) << 40, qf.a(ch.a((long)this.field_h[1 + var3], 255L) << 48, (long)this.field_h[var3] << 56))), ch.a((long)this.field_h[var3 + 4], 255L) << 24), ch.a((long)this.field_h[var3 + 5], 255L) << 16), ch.a(65280L, (long)this.field_h[6 + var3] << 8)), ch.a((long)this.field_h[var3 + 7], 255L));
+          this.field_e[var2] = RegistrationResponseDialog.a(RegistrationResponseDialog.a(RegistrationResponseDialog.a(RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(255L, (long)this.field_h[var3 + 3]) << 32, RegistrationResponseDialog.a(ch.a((long)this.field_h[2 + var3], 255L) << 40, RegistrationResponseDialog.a(ch.a((long)this.field_h[1 + var3], 255L) << 48, (long)this.field_h[var3] << 56))), ch.a((long)this.field_h[var3 + 4], 255L) << 24), ch.a((long)this.field_h[var3 + 5], 255L) << 16), ch.a(65280L, (long)this.field_h[6 + var3] << 8)), ch.a((long)this.field_h[var3 + 7], 255L));
           var2++;
           var3 += 8;
         }
@@ -116,7 +116,7 @@ final class eq {
           dupTemp$0 = this.field_a[var2Lifetime1];
           arrayValue$1 = this.field_e[var2Lifetime1];
           this.field_f[var2Lifetime1] = dupTemp$0;
-          this.field_k[var2Lifetime1] = qf.a(arrayValue$1, dupTemp$0);
+          this.field_k[var2Lifetime1] = RegistrationResponseDialog.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -124,7 +124,7 @@ final class eq {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_l[var3Lifetime1] = qf.a(this.field_l[var3Lifetime1], TabbedPane.field_Wb[var4][ik.a((int)(this.field_f[ik.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_l[var3Lifetime1] = RegistrationResponseDialog.a(this.field_l[var3Lifetime1], TabbedPane.field_Wb[var4][ik.a((int)(this.field_f[ik.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -132,14 +132,14 @@ final class eq {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_f[var3Lifetime1Lifetime1] = this.field_l[var3Lifetime1Lifetime1];
           }
-          this.field_f[0] = qf.a(this.field_f[0], TabbedPane.field_Xb[var2Lifetime2]);
+          this.field_f[0] = RegistrationResponseDialog.a(this.field_f[0], TabbedPane.field_Xb[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_l[var3Lifetime1Lifetime2] = this.field_f[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_l[var3Lifetime1Lifetime2] = qf.a(this.field_l[var3Lifetime1Lifetime2], TabbedPane.field_Wb[var7][ik.a(255, (int)(this.field_k[ik.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_l[var3Lifetime1Lifetime2] = RegistrationResponseDialog.a(this.field_l[var3Lifetime1Lifetime2], TabbedPane.field_Wb[var7][ik.a(255, (int)(this.field_k[ik.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -149,7 +149,7 @@ final class eq {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_a[var2Lifetime3] = qf.a(this.field_a[var2Lifetime3], qf.a(this.field_k[var2Lifetime3], this.field_e[var2Lifetime3]));
+          this.field_a[var2Lifetime3] = RegistrationResponseDialog.a(this.field_a[var2Lifetime3], RegistrationResponseDialog.a(this.field_k[var2Lifetime3], this.field_e[var2Lifetime3]));
         }
     }
 

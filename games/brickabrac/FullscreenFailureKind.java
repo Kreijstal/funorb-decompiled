@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf {
+final class FullscreenFailureKind {
     static String[] field_f;
     static boolean field_h;
     static RgbSprite[] trackHeads;
@@ -32,7 +32,7 @@ final class tf {
                 param0 = DesertBackground.field_u;
               }
               param2 = 2;
-              DirectByteStorage.field_k.a(70, GameScreen.field_d);
+              DirectByteStorage.field_k.setAccountAndClearPassword(70, GameScreen.field_d);
             }
             if (param2 == 10) {
               RectangleBody.c(116);
@@ -45,14 +45,14 @@ final class tf {
               if (ln.field_l) {
                 param0 = GameCanvas.field_b;
               }
-              ej.field_I.a(param2, false, param0);
+              ej.field_I.showResponseMessage(param2, false, param0);
             }
             if (param2 != 256) {
               if (10 == param2) {
                 return;
               }
               if (!NanoGameClock.field_l) {
-                DirectByteStorage.field_k.h(-113);
+                DirectByteStorage.field_k.clearCredentials(-113);
                 return;
               }
             }
@@ -78,7 +78,7 @@ final class tf {
           return;
         }
         String var2 = (String) null;
-        tf.a((LobbyGame) null, false, (byte) -54, (String) null);
+        FullscreenFailureKind.a((LobbyGame) null, false, (byte) -54, (String) null);
         javaKeyCodeMap = null;
         cacheSectorScratch = null;
         field_f = null;

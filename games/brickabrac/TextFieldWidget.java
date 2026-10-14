@@ -53,7 +53,7 @@ class TextFieldWidget extends FocusableWidget {
         this.doubleClickSelection = false;
         this.wordSelectionEnd = -1;
         try {
-          this.renderer = bj.widgetTheme.textFieldRenderer;
+          this.renderer = PopupWidgetLayer.widgetTheme.textFieldRenderer;
           this.maxLength = maxLength;
           this.setText(text, -12592, true);
           this.autoScrollCaret = true;

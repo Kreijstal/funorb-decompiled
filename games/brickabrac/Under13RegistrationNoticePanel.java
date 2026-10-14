@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends WidgetGroup implements TextHotspotListener, WidgetActionListener {
-    private FocusableWidget field_L;
-    private qf field_I;
+final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHotspotListener, WidgetActionListener {
+    private FocusableWidget continueButton;
+    private RegistrationResponseDialog registrationDialog;
     static long[] renderTimes;
     static int field_N;
-    private HotspotTextWidget field_O;
+    private HotspotTextWidget noticeLinks;
     static String field_K;
     static RgbSprite field_P;
     static String field_J;
@@ -85,7 +85,7 @@ final class ig extends WidgetGroup implements TextHotspotListener, WidgetActionL
             Rasterizer2D.pixels[param2 + (param1 + (param3 + var7) * Rasterizer2D.width)] = var9;
           }
           if (param4 != -17634) {
-            ig.b(-122, -110, 30, -70, -97);
+            Under13RegistrationNoticePanel.b(-122, -110, 30, -70, -97);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -102,12 +102,12 @@ final class ig extends WidgetGroup implements TextHotspotListener, WidgetActionL
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (widget == this.field_L) {
-            ek.l(111);
-            this.field_I.m(17);
+          if (widget == this.continueButton) {
+            FullscreenFailureDialog.l(111);
+            this.registrationDialog.closeDialog(17);
           }
           if (obfuscationGuard > -22) {
-            this.field_L = (FocusableWidget) null;
+            this.continueButton = (FocusableWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,7 +124,7 @@ final class ig extends WidgetGroup implements TextHotspotListener, WidgetActionL
         }
     }
 
-    ig(qf param0) {
+    Under13RegistrationNoticePanel(RegistrationResponseDialog registrationDialog) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
@@ -132,29 +132,29 @@ final class ig extends WidgetGroup implements TextHotspotListener, WidgetActionL
         int var5 = 0;
         int var6 = 0;
         try {
-          this.field_I = param0;
-          this.field_L = new FocusableWidget(UsernameSuggestionPanel.field_L, (WidgetListener) null);
-          this.field_L.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
+          this.registrationDialog = registrationDialog;
+          this.continueButton = new FocusableWidget(UsernameSuggestionPanel.field_L, (WidgetListener) null);
+          this.continueButton.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
           var7 = rd.a(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
           var3 = 20;
           var4 = new TextWidgetRenderer(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
-          this.field_O = new HotspotTextWidget(var7, var4);
-          this.field_O.tooltip = "";
-          this.field_O.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);
-          this.field_O.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
-          this.field_O.listener = (WidgetListener) (this);
-          this.field_O.width = -40 + this.width;
-          this.field_O.a(26, (byte) 46, -40 + this.width, var3);
-          var3 = var3 + (15 + this.field_O.height);
-          this.addChild(this.field_O, true);
+          this.noticeLinks = new HotspotTextWidget(var7, var4);
+          this.noticeLinks.tooltip = "";
+          this.noticeLinks.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);
+          this.noticeLinks.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
+          this.noticeLinks.listener = (WidgetListener) (this);
+          this.noticeLinks.width = -40 + this.width;
+          this.noticeLinks.a(26, (byte) 46, -40 + this.width, var3);
+          var3 = var3 + (15 + this.noticeLinks.height);
+          this.addChild(this.noticeLinks, true);
           var5 = 4;
           var6 = 200;
-          this.field_L.setBounds(40, 300 - var6 >> 1, var3, (byte) -119, var6);
-          this.field_L.listener = (WidgetListener) (this);
-          this.addChild(this.field_L, true);
+          this.continueButton.setBounds(40, 300 - var6 >> 1, var3, (byte) -119, var6);
+          this.continueButton.listener = (WidgetListener) (this);
+          this.addChild(this.continueButton, true);
           this.setBounds(var3 + 55 + var5, 0, 0, (byte) -119, 300);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ig.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ig.<init>(" + (registrationDialog != null ? "{...}" : "null") + ')');
         }
     }
 

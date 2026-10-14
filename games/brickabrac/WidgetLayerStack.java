@@ -21,7 +21,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
         } else {
           if (null == jj.field_a) {
-            ua.field_d = ff.a(0, 0, 640, 480, true, lp.field_ub);
+            ua.field_d = ff.a(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
           } else {
             ua.field_d = jj.field_a.a(true);
             qm.a(97, 2);
@@ -192,7 +192,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         NodeDequeCursor var2 = new NodeDequeCursor(this.layers);
         WidgetLayer var4 = (WidgetLayer) (var2.first(240));
         while (var4 != null) {
-          if (var4.h(0)) {
+          if (var4.tickLayerAndCheckHidden(0)) {
             var4.unlink((byte) 111);
           }
           var4 = (WidgetLayer) (var2.next(7));

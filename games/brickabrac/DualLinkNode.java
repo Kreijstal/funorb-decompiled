@@ -182,9 +182,9 @@ class DualLinkNode extends IntrusiveNode {
           !(recordCount <= cf.rankingSourceIndices.length)) {
           cf.rankingSourceIndices = new int[recordCount * 2];
         }
-        if (ec.rankingRatings == null ||
-          !(ec.rankingRatings.length >= recordCount)) {
-          ec.rankingRatings = new int[recordCount * 2];
+        if (DialogMessagePanel.rankingRatings == null ||
+          !(DialogMessagePanel.rankingRatings.length >= recordCount)) {
+          DialogMessagePanel.rankingRatings = new int[recordCount * 2];
         }
         if (RankingsScreen.rankingWins == null ||
           !(RankingsScreen.rankingWins.length >= recordCount)) {

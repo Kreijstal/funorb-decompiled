@@ -212,7 +212,7 @@ final class sb implements vc {
         int var5Lifetime11;
         if (obfuscationGuard == 16769381) {
           if (LegacyUtf8Decoder.a((byte) 121)) {
-            stackIn_300_0 = (!lp.n(obfuscationGuard - 16769386)) ? 0 : 1;
+            stackIn_300_0 = (!AccountMessageDialog.n(obfuscationGuard - 16769386)) ? 0 : 1;
           } else {
             stackIn_300_0 = 0;
           }
@@ -384,7 +384,7 @@ final class sb implements vc {
           }
           return;
         }
-        if (!lp.n(obfuscationGuard - 16769386)) {
+        if (!AccountMessageDialog.n(obfuscationGuard - 16769386)) {
           var2Lifetime2 = 0;
           var3Lifetime2 = DualLinkDeque.field_d.screenY;
           if (!n.field_d) {
@@ -951,7 +951,7 @@ final class sb implements vc {
           this.field_a = 0;
           return;
         }
-        ContextActionController.field_f = bj.field_V;
+        ContextActionController.field_f = PopupWidgetLayer.field_V;
         if (this.c(-25437) &&
           this.field_a < 20) {
           this.field_a = this.field_a + 1;

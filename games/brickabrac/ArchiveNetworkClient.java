@@ -428,7 +428,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           }
           for (var2 = 1; ArcticBackground.faceDepthBucketCounts.length > var2; var2++) {
             var3 = ArcticBackground.faceDepthBucketCounts[var2];
-            ArrayOperations.copy(ek.sortedFaceIds, var2 << 4, ek.sortedFaceIds, var1_int, var3);
+            ArrayOperations.copy(FullscreenFailureDialog.sortedFaceIds, var2 << 4, FullscreenFailureDialog.sortedFaceIds, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

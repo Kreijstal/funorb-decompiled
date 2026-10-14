@@ -200,7 +200,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             var18 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
             var7Lifetime15 = var18;
             var7Lifetime15 = var18;
-            var8 = rd.a(ek.field_fb, new String[]{var16}, (byte) 103);
+            var8 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
             var7Lifetime15 = var8;
             var7Lifetime15 = var8;
             var9 = CachedArchiveSource.field_y.measureText(var18);
@@ -307,7 +307,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 var18Lifetime1 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var7Lifetime1Lifetime6 = var18Lifetime1;
-                var8Lifetime1 = rd.a(ek.field_fb, new String[]{var16}, (byte) 103);
+                var8Lifetime1 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
                 var7Lifetime1Lifetime6 = var8Lifetime1;
                 var7Lifetime1Lifetime6 = var8Lifetime1;
                 var9Lifetime1 = CachedArchiveSource.field_y.measureText(var18Lifetime1);
@@ -445,7 +445,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var18Lifetime2 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
           var7Lifetime9 = var18Lifetime2;
           var7Lifetime9 = var18Lifetime2;
-          var8Lifetime2 = rd.a(ek.field_fb, new String[]{var16}, (byte) 103);
+          var8Lifetime2 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
           var7Lifetime9 = var8Lifetime2;
           var7Lifetime9 = var8Lifetime2;
           var9Lifetime2 = CachedArchiveSource.field_y.measureText(var18Lifetime2);

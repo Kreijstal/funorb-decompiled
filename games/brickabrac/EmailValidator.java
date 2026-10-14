@@ -23,10 +23,10 @@ final class EmailValidator extends TextFieldValidator {
           po.pointerY = WidgetTextLayout.livePointerY;
           QuickChatHelpDialog.pointerChanged = kn.livePointerChanged;
           kn.livePointerChanged = false;
-          BackgroundScene.pressedButton = mi.livePressedButton;
+          BackgroundScene.pressedButton = ContentTransitionPhase.livePressedButton;
           tb.pressX = SoundPlayback.livePressX;
           PlayerNameChooserPanel.pressY = va.livePressY;
-          mi.livePressedButton = 0;
+          ContentTransitionPhase.livePressedButton = 0;
           var2 = 54 / ((obfuscationGuard + 49) / 63);
         }
     }
@@ -60,7 +60,7 @@ final class EmailValidator extends TextFieldValidator {
           if (var3_int != 0) {
             return DualLinkIterator.validationValid;
           }
-          stackIn_8_0 = lp.validationInvalid;
+          stackIn_8_0 = AccountMessageDialog.validationInvalid;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class EmailValidator extends TextFieldValidator {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.validateText(text, (byte) 106) == lp.validationInvalid) {
+          if (this.validateText(text, (byte) 106) == AccountMessageDialog.validationInvalid) {
             stackIn_3_0 = ValidationIconWidget.field_O;
             return stackIn_3_0;
           }

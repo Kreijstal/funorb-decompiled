@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bj extends WidgetLayer {
-    private int field_X;
+abstract class PopupWidgetLayer extends WidgetLayer {
+    private int startHeight;
     static String field_U;
-    private int field_O;
-    private int field_W;
-    private int field_Q;
-    private int field_R;
-    private int field_Z;
+    private int startWidth;
+    private int resizeTick;
+    private int targetWidth;
+    private int targetHeight;
+    private int resizeDuration;
     static cd field_Y;
     static byte[][] decodedSpriteAlpha;
     static WidgetTheme widgetTheme;
@@ -16,52 +16,52 @@ abstract class bj extends WidgetLayer {
     static long field_ab;
     static ck field_P;
 
-    void j(int param0) {
-        if (0 >= this.field_Z) {
+    void finishTransition(int obfuscationGuard) {
+        if (0 >= this.resizeDuration) {
           return;
         }
-        if (param0 != 20) {
+        if (obfuscationGuard != 20) {
           decodedSpriteAlpha = (byte[][]) null;
         }
-        this.a(true, this.field_R, this.field_Q);
-        this.field_Z = 0;
-        this.k(-13717);
+        this.setCenteredSize(true, this.targetHeight, this.targetWidth);
+        this.resizeDuration = 0;
+        this.onResizeCompleted(-13717);
     }
 
     boolean updateOpacityAndCheckHidden(int obfuscationGuard) {
-        this.j(20);
+        this.finishTransition(20);
         if (obfuscationGuard > -22) {
-          this.field_Q = 2;
+          this.targetWidth = 2;
         }
         return super.updateOpacityAndCheckHidden(-81);
     }
 
-    void k(int param0) {
-        if (param0 != -13717) {
-          this.field_X = -40;
+    void onResizeCompleted(int obfuscationGuard) {
+        if (obfuscationGuard != -13717) {
+          this.startHeight = -40;
         }
     }
 
-    bj(WidgetLayerStack param0, int param1, int param2) {
-        super(param0, param1, param2);
-        this.field_W = 0;
-        this.field_Z = 0;
+    PopupWidgetLayer(WidgetLayerStack layerStack, int width, int height) {
+        super(layerStack, width, height);
+        this.resizeTick = 0;
+        this.resizeDuration = 0;
     }
 
-    final void a(byte param0, int param1, int param2, int param3) {
-        if (param1 <= 0) {
-          this.a(true, param2, param3);
+    final void resizeTo(byte obfuscationGuard, int duration, int targetHeight, int targetWidth) {
+        if (duration <= 0) {
+          this.setCenteredSize(true, targetHeight, targetWidth);
           return;
         }
-        this.field_R = param2;
-        if (param0 != -116) {
+        this.targetHeight = targetHeight;
+        if (obfuscationGuard != -116) {
           this.updateOpacityAndCheckHidden(97);
         }
-        this.field_X = this.height;
-        this.field_Z = param1;
-        this.field_Q = param3;
-        this.field_W = 0;
-        this.field_O = this.width;
+        this.startHeight = this.height;
+        this.resizeDuration = duration;
+        this.targetWidth = targetWidth;
+        this.resizeTick = 0;
+        this.startWidth = this.width;
     }
 
     final static String readCompressedString(int maximumLength, byte obfuscationGuard, PacketBuffer packet) {
@@ -81,7 +81,7 @@ abstract class bj extends WidgetLayer {
           try {
             if (obfuscationGuard < 36) {
               var6 = (PacketBuffer) null;
-              bj.readCompressedString(61, (byte) 3, (PacketBuffer) null);
+              PopupWidgetLayer.readCompressedString(61, (byte) 3, (PacketBuffer) null);
             }
             var3_int = packet.readUnsignedSmart(-32768);
             if (maximumLength < var3_int) {
@@ -112,35 +112,35 @@ abstract class bj extends WidgetLayer {
         }
     }
 
-    boolean h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int fieldTemp$0 = 0;
-        int var5 = 0;
-        int var4 = 0;
-        if (this.field_Z > 0) {
-          var2 = this.field_Q;
-          var3 = this.field_R;
-          fieldTemp$0 = this.field_W + 1;
-          this.field_W = this.field_W + 1;
-          if (fieldTemp$0 < this.field_Z) {
-            var4 = this.field_W * (2 * this.field_Z - this.field_W);
-            var5 = this.field_Z * this.field_Z;
-            var2 = var4 * (this.field_Q - this.field_O) / var5 + this.field_O;
-            var3 = (this.field_R - this.field_X) * var4 / var5 + this.field_X;
+    boolean tickLayerAndCheckHidden(int obfuscationGuard) {
+        int nextWidth = 0;
+        int nextHeight = 0;
+        int nextTick = 0;
+        int easeDenominator = 0;
+        int easeNumerator = 0;
+        if (this.resizeDuration > 0) {
+          nextWidth = this.targetWidth;
+          nextHeight = this.targetHeight;
+          nextTick = this.resizeTick + 1;
+          this.resizeTick = this.resizeTick + 1;
+          if (nextTick < this.resizeDuration) {
+            easeNumerator = this.resizeTick * (2 * this.resizeDuration - this.resizeTick);
+            easeDenominator = this.resizeDuration * this.resizeDuration;
+            nextWidth = easeNumerator * (this.targetWidth - this.startWidth) / easeDenominator + this.startWidth;
+            nextHeight = (this.targetHeight - this.startHeight) * easeNumerator / easeDenominator + this.startHeight;
           } else {
-            this.field_Z = 0;
-            this.k(-13717);
+            this.resizeDuration = 0;
+            this.onResizeCompleted(-13717);
           }
-          this.a(true, var3, var2);
+          this.setCenteredSize(true, nextHeight, nextWidth);
         }
-        if (param0 != 0) {
-          this.h(109);
+        if (obfuscationGuard != 0) {
+          this.tickLayerAndCheckHidden(109);
         }
-        return super.h(0);
+        return super.tickLayerAndCheckHidden(0);
     }
 
-    void b(int param0, int param1, int param2) {
+    void paintLayerFrame(int x, int obfuscationGuard, int y) {
         int var4;
         int var5;
         int var6;
@@ -169,12 +169,12 @@ abstract class bj extends WidgetLayer {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = BrickABrac.field_J ? 1 : 0;
-        Rasterizer2D.fillVerticalGradient(param0 + 6, param2 + 35, -12 + this.width, this.height - 40, 2105376, 0);
+        Rasterizer2D.fillVerticalGradient(x + 6, y + 35, -12 + this.width, this.height - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
-        var8 = param2;
+        var8 = y;
         while (var4 > var7) {
           if (Rasterizer2D.clipTop <= var8 &&
             var8 < Rasterizer2D.clipBottom) {
@@ -190,7 +190,7 @@ abstract class bj extends WidgetLayer {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
-                  Rasterizer2D.pixels[var10 + var8 * Rasterizer2D.width + param0] = var13;
+                  Rasterizer2D.pixels[var10 + var8 * Rasterizer2D.width + x] = var13;
                 }
                 var10++;
               }
@@ -204,7 +204,7 @@ abstract class bj extends WidgetLayer {
                   if (var14 >= 420) {
                     var15 = var9 * (-var14 + 462) / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    Rasterizer2D.pixels[var11 + (Rasterizer2D.width * var8 + param0)] = var15;
+                    Rasterizer2D.pixels[var11 + (Rasterizer2D.width * var8 + x)] = var15;
                   } else {
                     var12Lifetime1 = var11 + 1;
                   }
@@ -216,7 +216,7 @@ abstract class bj extends WidgetLayer {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 16 | var9 << 8);
-            Rasterizer2D.drawHorizontalLine(var10 + param0, var8, -var10 + var11, var9);
+            Rasterizer2D.drawHorizontalLine(var10 + x, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -225,31 +225,31 @@ abstract class bj extends WidgetLayer {
         var4Lifetime1 = 22;
         var6Lifetime1 = 169;
         var7Lifetime1 = 0;
-        var8Lifetime1 = param2 + 35;
+        var8Lifetime1 = y + 35;
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var7Lifetime1 * (-var5Lifetime1 + var6Lifetime1) / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          Rasterizer2D.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
-          Rasterizer2D.drawHorizontalLine(this.width + param0 - 6, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer2D.drawHorizontalLine(x, var8Lifetime1, 6, var9Lifetime1);
+          Rasterizer2D.drawHorizontalLine(this.width + x - 6, var8Lifetime1, 6, var9Lifetime1);
           var7Lifetime1++;
           var8Lifetime1++;
         }
-        if (param1 != 274) {
+        if (obfuscationGuard != 274) {
           field_P = (ck) null;
         }
-        MusicVoice.field_n.drawTransparent(param0 + this.width - 90, 10 + param2);
-        fq.a(this.width - 10, 35 + param2, param1 ^ 1013, ValidationMessageWidget.field_W, 5 + param0);
-        fq.a(this.width, -22 + param2 + this.height, param1 + 469, GameplayAudioEvent.field_l, param0);
+        MusicVoice.field_n.drawTransparent(x + this.width - 90, 10 + y);
+        fq.a(this.width - 10, 35 + y, obfuscationGuard ^ 1013, ValidationMessageWidget.field_W, 5 + x);
+        fq.a(this.width, -22 + y + this.height, obfuscationGuard + 469, GameplayAudioEvent.field_l, x);
         var5Lifetime2 = 169;
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;
         var7Lifetime2 = 0;
-        var8Lifetime2 = param2 + 57;
+        var8Lifetime2 = y + 57;
         while (var4Lifetime2 > var7Lifetime2) {
           var9Lifetime2 = var5Lifetime2 + var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          Rasterizer2D.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
-          Rasterizer2D.drawHorizontalLine(param0 + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer2D.drawHorizontalLine(x, var8Lifetime2, 6, var9Lifetime2);
+          Rasterizer2D.drawHorizontalLine(x + this.width - 6, var8Lifetime2, 6, var9Lifetime2);
           var8Lifetime2++;
           var7Lifetime2++;
         }

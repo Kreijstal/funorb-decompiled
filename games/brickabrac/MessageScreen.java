@@ -33,7 +33,7 @@ final class MessageScreen extends MenuScreen {
         if (obfuscationGuard == -19824) {
           cf.rankingSourceIndices[wi.rankingRowCount] = sourceIndex;
           VerticalScrollbar.rankingSortIndices[wi.rankingRowCount] = wi.rankingRowCount;
-          ec.rankingRatings[wi.rankingRowCount] = rating;
+          DialogMessagePanel.rankingRatings[wi.rankingRowCount] = rating;
           if (rating <= BoundedFile.field_l) {
             if (IntArrayRequest.field_u > rating) {
               ba.field_w = rating;
@@ -86,7 +86,7 @@ final class MessageScreen extends MenuScreen {
         MessageScreen.resizeAndFillTextBuffer('￰', (StringBuilder) null, -124, false);
         cf.rankingSourceIndices[wi.rankingRowCount] = sourceIndex;
         VerticalScrollbar.rankingSortIndices[wi.rankingRowCount] = wi.rankingRowCount;
-        ec.rankingRatings[wi.rankingRowCount] = rating;
+        DialogMessagePanel.rankingRatings[wi.rankingRowCount] = rating;
         if (rating <= BoundedFile.field_l) {
           if (IntArrayRequest.field_u > rating) {
             ba.field_w = rating;

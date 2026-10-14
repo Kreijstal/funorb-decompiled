@@ -64,10 +64,10 @@ final class nd {
         int var4Lifetime3;
         int var5Lifetime3;
         if (sortByRating) {
-          if (ec.rankingRatings[leftIndex] > ec.rankingRatings[rightIndex]) {
+          if (DialogMessagePanel.rankingRatings[leftIndex] > DialogMessagePanel.rankingRatings[rightIndex]) {
             return true;
           }
-          if (ec.rankingRatings[rightIndex] > ec.rankingRatings[leftIndex]) {
+          if (DialogMessagePanel.rankingRatings[rightIndex] > DialogMessagePanel.rankingRatings[leftIndex]) {
             return false;
           }
           if (DebouncedValidationSource.rankingWinRateThousandths[leftIndex] > DebouncedValidationSource.rankingWinRateThousandths[rightIndex]) {
@@ -104,10 +104,10 @@ final class nd {
         if (DebouncedValidationSource.rankingWinRateThousandths[leftIndex] < DebouncedValidationSource.rankingWinRateThousandths[rightIndex]) {
           return false;
         }
-        if (ec.rankingRatings[leftIndex] > ec.rankingRatings[rightIndex]) {
+        if (DialogMessagePanel.rankingRatings[leftIndex] > DialogMessagePanel.rankingRatings[rightIndex]) {
           return true;
         }
-        if (ec.rankingRatings[rightIndex] > ec.rankingRatings[leftIndex]) {
+        if (DialogMessagePanel.rankingRatings[rightIndex] > DialogMessagePanel.rankingRatings[leftIndex]) {
           return false;
         }
         if (obfuscationGuard) {

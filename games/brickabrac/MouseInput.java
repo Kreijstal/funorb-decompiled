@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static mi field_e;
+    static ContentTransitionPhase contentResizing;
     static RgbSprite farmFarSprite;
     static String field_a;
     static BufferedSocket field_d;
@@ -24,10 +24,10 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             va.livePressY = event.getY();
             MonotonicTime.nowMillis(false);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
-              mi.livePressedButton = 2;
+              ContentTransitionPhase.livePressedButton = 2;
               QuickChatHelpDialog.liveHeldButton = 2;
             } else {
-              mi.livePressedButton = 1;
+              ContentTransitionPhase.livePressedButton = 1;
               QuickChatHelpDialog.liveHeldButton = 1;
             }
             var2_int = event.getModifiers();
@@ -115,7 +115,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     public static void a(byte param0) {
         field_g = null;
-        field_e = null;
+        contentResizing = null;
         field_c = null;
         field_d = null;
         field_a = null;
@@ -284,6 +284,6 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
 
     static {
         field_a = "(<%0>)";
-        field_e = new mi();
+        contentResizing = new ContentTransitionPhase();
     }
 }

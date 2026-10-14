@@ -1122,7 +1122,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime100 = gr.a(true, "end_of_paid");
           if (null != var2Lifetime100) {
-            mo.field_N = MenuButton.a(var2Lifetime100, (byte) 125);
+            BirthDateEntryPanel.field_N = MenuButton.a(var2Lifetime100, (byte) 125);
           }
           var2Lifetime101 = gr.a(true, "game_drawn");
           if (var2Lifetime101 != null) {
@@ -1230,7 +1230,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime127 = gr.a(true, "settings_label");
           if (var2Lifetime127 != null) {
-            hk.field_L = MenuButton.a(var2Lifetime127, (byte) 107);
+            LoginPanel.field_L = MenuButton.a(var2Lifetime127, (byte) 107);
           }
           var2Lifetime128 = gr.a(true, "continue_label");
           if (var2Lifetime128 != null) {
@@ -1342,7 +1342,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime155 = gr.a(true, "explain_hearts");
           if (null != var2Lifetime155) {
-            bj.field_U = MenuButton.a(var2Lifetime155, (byte) 78);
+            PopupWidgetLayer.field_U = MenuButton.a(var2Lifetime155, (byte) 78);
           }
           var2Lifetime156 = gr.a(true, "explain_reverse");
           if (var2Lifetime156 != null) {
@@ -1510,7 +1510,7 @@ final class QuickChatMenu extends UiComponent {
           GameplayAudioEvent.a(param0 + 14569);
           if (vg.a(param0 - 104)) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 1);
-            cr.a(0, 10000);
+            ActivityIndicatorWidget.a(0, 10000);
           }
           hn.a((byte) 53);
           return;

@@ -52,9 +52,9 @@ final class GameUiController implements GameUiLifecycle {
         qn.a(240, 0, 640, 0, -6532);
         bm.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
         Widget.a(1, PasswordFieldRenderer.field_D);
-        hk.h((byte) 55);
-        hk.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
-        lp.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
+        LoginPanel.h((byte) 55);
+        LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
+        AccountMessageDialog.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
         co.a((byte) -79, cd.field_g);
     }
 

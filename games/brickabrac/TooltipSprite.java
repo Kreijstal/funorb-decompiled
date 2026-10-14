@@ -33,10 +33,10 @@ final class TooltipSprite extends IntrusiveNode {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ValidationMessageWidget.field_W = cr.loadRgbSpritesByName("commonui", param3, "frame_top", param2 ^ -57);
-          GameplayAudioEvent.field_l = cr.loadRgbSpritesByName("commonui", param3, "frame_bottom", 2);
+          ValidationMessageWidget.field_W = ActivityIndicatorWidget.loadRgbSpritesByName("commonui", param3, "frame_top", param2 ^ -57);
+          GameplayAudioEvent.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("commonui", param3, "frame_bottom", 2);
           MusicVoice.field_n = pl.loadRgbSpriteByName("commonui", "jagex_logo_grey", (byte) -110, param3);
-          ValidatedTextFieldWidget.field_U = cr.loadRgbSpritesByName("commonui", param3, "button", 2);
+          ValidatedTextFieldWidget.field_U = ActivityIndicatorWidget.loadRgbSpritesByName("commonui", param3, "button", 2);
           df.field_a = CheckboxWidgetRenderer.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
           QuickChatMenu.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
           ArchiveNetworkClient.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
@@ -63,7 +63,7 @@ final class TooltipSprite extends IntrusiveNode {
             var14 = var6[var9];
             IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = ek.a(var5[var9], (byte) -85, var19[var11_int]);
+              var14[var11_int] = FullscreenFailureDialog.a(var5[var9], (byte) -85, var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.height;
@@ -94,7 +94,7 @@ final class TooltipSprite extends IntrusiveNode {
         if (obfuscationGuard != 0) {
           return;
         }
-        this.hovered = UsernameAvailabilityResult.a(MusicPatch.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
+        this.hovered = AccountResponse.a(MusicPatch.pointerX, po.pointerY, (byte) -24, this.y, this.x, this.sprite);
         this.hovered = this.sprite.containsPixel(this.x, this.y, MusicPatch.pointerX, po.pointerY);
     }
 

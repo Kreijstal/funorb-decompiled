@@ -62,9 +62,9 @@ final class CachedArchiveSource extends ArchiveSource {
             return;
           }
           LevelPack.field_k = NewAchievementsScreen.field_J - (var1_int >> 1);
-          mi.field_d = ea.field_e - (bg.field_r >> 1);
+          ContentTransitionPhase.field_d = ea.field_e - (bg.field_r >> 1);
           MusicVoiceMixer.field_p = var1_int + LevelPack.field_k;
-          var2 = mi.field_d;
+          var2 = ContentTransitionPhase.field_d;
           for (var3 = 0; var3 < kn.field_E.length; var3++) {
             var4 = MenuSelection.field_q[var3];
             if (var4 < 0) {
@@ -91,7 +91,7 @@ final class CachedArchiveSource extends ArchiveSource {
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((ek.field_lb << 1) + var7, (GameCanvas.field_f << 1) + TooltipSprite.field_i, -ek.field_lb + var8, false, var2);
+                var9.a((FullscreenFailureDialog.field_lb << 1) + var7, (GameCanvas.field_f << 1) + TooltipSprite.field_i, -FullscreenFailureDialog.field_lb + var8, false, var2);
               }
               var2 = var2 + GameCanvas.field_f;
             }

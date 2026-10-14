@@ -108,7 +108,7 @@ final class n {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = qp.decodedSpritePalette[ik.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
+        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var4;
     }

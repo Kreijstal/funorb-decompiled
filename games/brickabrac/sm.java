@@ -37,7 +37,7 @@ final class sm {
           }
           try {
             if (param0 == ~GameplayScreen.field_j) {
-              IndexedSpriteGeometry.field_e = ec.field_P.a(LevelMetadata.field_k, (byte) 120, gd.field_a);
+              IndexedSpriteGeometry.field_e = DialogMessagePanel.field_P.a(LevelMetadata.field_k, (byte) 120, gd.field_a);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
             }
             if (1 == GameplayScreen.field_j) {
@@ -50,7 +50,7 @@ final class sm {
               }
             }
             if (GameplayScreen.field_j == 2) {
-              MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.result), ec.field_P);
+              MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.result), DialogMessagePanel.field_P);
               var2 = new PacketBuffer(13);
               c.a(TextFieldWidget.field_S, 12, SoftwareFramebuffer.field_a, u.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);

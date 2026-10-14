@@ -13,7 +13,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         if (obfuscationGuard > -60) {
           this.isAchievementExcluded(-74, (byte) 4);
         }
-        this.initializeButtons(mi.field_b, 0);
+        this.initializeButtons(ContentTransitionPhase.field_b, 0);
     }
 
     final static String a(int param0, boolean param1, CharSequence param2) {

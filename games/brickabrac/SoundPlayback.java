@@ -23,7 +23,7 @@ final class SoundPlayback extends IntrusiveNode {
         }
     }
 
-    final static UsernameAvailabilityResult a(int param0) {
+    final static AccountResponse a(int param0) {
         if (ik.field_g == ej.field_P) {
           throw new IllegalStateException();
         }
@@ -32,7 +32,7 @@ final class SoundPlayback extends IntrusiveNode {
           return StateIconLabel.field_Rb;
         }
         if (param0 <= 17) {
-          return (UsernameAvailabilityResult) null;
+          return (AccountResponse) null;
         }
         return null;
     }

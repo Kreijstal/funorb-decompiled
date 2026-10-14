@@ -93,10 +93,10 @@ abstract class sl extends DualLinkNode {
           ff.field_i = param14;
           pf.field_i = param11;
           BackgroundScene.field_k = param9;
-          GameClock.field_f = cr.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
-          bq.field_c = cr.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
-          uo.field_c = cr.loadRgbSpritesByName("lobby", param7, "opentome", 2);
-          Ball.field_K = cr.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
+          GameClock.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
+          bq.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
+          uo.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "opentome", 2);
+          Ball.field_K = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
           AchievementsScreen.field_H = new String[5];
           AchievementsScreen.field_H[3] = cm.field_u;
           AchievementsScreen.field_H[1] = t.field_e;

@@ -17,10 +17,10 @@ final class vj {
           var7 = 5;
           this.field_d.setTabbedPaneBounds(var7, param1, param0, var6, param4, param3, 75);
           sj.field_d.setBounds(np.uiRowHeight, 0, 0, QuickChatPhraseRegistry.field_c.width, (byte) 64);
-          MouseWheelSource.field_c.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.field_c.width - ec.field_J - 2), (byte) 64);
-          GameplayScreen.field_u.setBounds(18, 2 + np.uiRowHeight, -2 + (-ec.field_J + (QuickChatPhraseRegistry.field_c.width - 80)), 82 + ec.field_J, (byte) 64);
-          GameScreen.field_f.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.field_c.width, 0, 20 + (np.uiRowHeight + 2), ec.field_J, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.field_c.height) - 20);
-          f.field_c.layoutPaneFooter(20, -779, ec.field_J, 2);
+          MouseWheelSource.field_c.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.field_c.width - DialogMessagePanel.field_J - 2), (byte) 64);
+          GameplayScreen.field_u.setBounds(18, 2 + np.uiRowHeight, -2 + (-DialogMessagePanel.field_J + (QuickChatPhraseRegistry.field_c.width - 80)), 82 + DialogMessagePanel.field_J, (byte) 64);
+          GameScreen.field_f.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.field_c.width, 0, 20 + (np.uiRowHeight + 2), DialogMessagePanel.field_J, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.field_c.height) - 20);
+          f.field_c.layoutPaneFooter(20, -779, DialogMessagePanel.field_J, 2);
           return;
         }
     }

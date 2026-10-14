@@ -39,21 +39,21 @@ final class BirthDateValidator extends DebouncedValidationSource implements Text
           year = this.dateInput.getYear(5390);
           currentYear = un.a(1);
           if (1890 > year) {
-            stackIn_6_0 = lp.validationInvalid;
+            stackIn_6_0 = AccountMessageDialog.validationInvalid;
             return stackIn_6_0;
           }
           if (year > -3 + currentYear) {
-            stackIn_9_0 = lp.validationInvalid;
+            stackIn_9_0 = AccountMessageDialog.validationInvalid;
             return stackIn_9_0;
           }
           if (!PlayerInputBatch.a((byte) -49, day, year, monthIndex)) {
-            stackIn_13_0 = lp.validationInvalid;
+            stackIn_13_0 = AccountMessageDialog.validationInvalid;
             return stackIn_13_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return lp.validationInvalid;
+          return AccountMessageDialog.validationInvalid;
         }
         return DualLinkIterator.validationValid;
     }
@@ -105,7 +105,7 @@ final class BirthDateValidator extends DebouncedValidationSource implements Text
               return (String) (stackIn_10_0);
             }
           } else {
-            stackIn_7_0 = rd.a(ig.field_J, new String[]{"1890", Integer.toString(-3 + currentYear)}, (byte) 103);
+            stackIn_7_0 = rd.a(Under13RegistrationNoticePanel.field_J, new String[]{"1890", Integer.toString(-3 + currentYear)}, (byte) 103);
             return stackIn_7_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

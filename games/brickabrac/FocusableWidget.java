@@ -53,7 +53,7 @@ class FocusableWidget extends Widget {
     }
 
     FocusableWidget(String param0, WidgetListener param1) {
-        this(param0, bj.widgetTheme.defaultFocusableRenderer, param1);
+        this(param0, PopupWidgetLayer.widgetTheme.defaultFocusableRenderer, param1);
     }
 
     FocusableWidget(String text, WidgetRenderer renderer, WidgetListener listener) {
@@ -285,7 +285,7 @@ class FocusableWidget extends Widget {
         this.focusable = true;
         this.focused = false;
         this.enabled = true;
-        this.renderer = bj.widgetTheme.emptyFocusableRenderer;
+        this.renderer = PopupWidgetLayer.widgetTheme.emptyFocusableRenderer;
     }
 
     static {

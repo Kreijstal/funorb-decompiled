@@ -93,7 +93,7 @@ final class HighscorePackSelector {
         RuntimeException var2_ref = null;
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (tf.ignoreIndex == null) {
+          if (FullscreenFailureKind.ignoreIndex == null) {
             return null;
           }
           nameCharacters = (CharSequence) ((Object) name);
@@ -105,7 +105,7 @@ final class HighscorePackSelector {
             unusedName = (String) null;
             HighscorePackSelector.findIgnoredPlayer(-82, (String) null);
           }
-          entry = (SocialListEntry) (tf.ignoreIndex.get((long)nameKey.hashCode(), -1));
+          entry = (SocialListEntry) (FullscreenFailureKind.ignoreIndex.get((long)nameKey.hashCode(), -1));
           while (true) {
             if (entry == null) {
               return null;
@@ -116,7 +116,7 @@ final class HighscorePackSelector {
               entryNameKey = entry.name;
             }
             if (!entryNameKey.equals(nameKey)) {
-              entry = (SocialListEntry) (tf.ignoreIndex.nextMatch((byte) -43));
+              entry = (SocialListEntry) (FullscreenFailureKind.ignoreIndex.nextMatch((byte) -43));
               continue;
             }
             break;

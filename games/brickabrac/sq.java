@@ -229,14 +229,14 @@ final class sq {
         var3 = var3 / 1024L;
         var1 = var1 / 1024L;
         if (~RankingsScreen.field_u != ~var1) {
-          bj.field_P.field_l.setLength(0);
-          DelegatingCanvas.a(-9, var5, bj.field_P.field_l);
-          discarded$10 = bj.field_P.field_l.append(" kB / ");
-          DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
-          discarded$11 = bj.field_P.field_l.append(" kB");
+          PopupWidgetLayer.field_P.field_l.setLength(0);
+          DelegatingCanvas.a(-9, var5, PopupWidgetLayer.field_P.field_l);
+          discarded$10 = PopupWidgetLayer.field_P.field_l.append(" kB / ");
+          DelegatingCanvas.a(-9, var1, PopupWidgetLayer.field_P.field_l);
+          discarded$11 = PopupWidgetLayer.field_P.field_l.append(" kB");
           SecondaryHashTable.field_j = var5;
           RankingsScreen.field_u = var1;
-          ff.field_d.addLast(bj.field_P, (byte) 3);
+          ff.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
               if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
@@ -262,7 +262,7 @@ final class sq {
           return;
         }
         if (SecondaryHashTable.field_j == var5) {
-          ff.field_d.addLast(bj.field_P, (byte) 3);
+          ff.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
           if (!param0) {
             if (GzipInflater.field_g) {
               if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
@@ -287,14 +287,14 @@ final class sq {
           }
           return;
         }
-        bj.field_P.field_l.setLength(0);
-        DelegatingCanvas.a(-9, var5, bj.field_P.field_l);
-        discarded$16 = bj.field_P.field_l.append(" kB / ");
-        DelegatingCanvas.a(-9, var1, bj.field_P.field_l);
-        discarded$17 = bj.field_P.field_l.append(" kB");
+        PopupWidgetLayer.field_P.field_l.setLength(0);
+        DelegatingCanvas.a(-9, var5, PopupWidgetLayer.field_P.field_l);
+        discarded$16 = PopupWidgetLayer.field_P.field_l.append(" kB / ");
+        DelegatingCanvas.a(-9, var1, PopupWidgetLayer.field_P.field_l);
+        discarded$17 = PopupWidgetLayer.field_P.field_l.append(" kB");
         SecondaryHashTable.field_j = var5;
         RankingsScreen.field_u = var1;
-        ff.field_d.addLast(bj.field_P, (byte) 3);
+        ff.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
         if (!param0) {
           if (GzipInflater.field_g) {
             if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {

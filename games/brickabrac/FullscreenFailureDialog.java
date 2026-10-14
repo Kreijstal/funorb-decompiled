@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends bj implements WidgetActionListener {
+final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetActionListener {
     static int[] sortedFaceIds;
     static int field_bb;
     static int field_lb;
@@ -10,7 +10,7 @@ final class ek extends bj implements WidgetActionListener {
     static int keyChangeReadIndex;
     static int decodedCanvasHeight;
     static RgbSprite field_hb;
-    private FocusableWidget field_ib;
+    private FocusableWidget dismissButton;
     static String[] field_eb;
     static String field_fb;
 
@@ -61,8 +61,8 @@ final class ek extends bj implements WidgetActionListener {
         }
     }
 
-    ek(WidgetLayerStack param0, tf param1) {
-        super(param0, 200, 150);
+    FullscreenFailureDialog(WidgetLayerStack layerStack, FullscreenFailureKind failureKind) {
+        super(layerStack, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -73,11 +73,11 @@ final class ek extends bj implements WidgetActionListener {
         Widget var4 = null;
         try {
           var3 = null;
-          if (UiComponent.field_ab == param1) {
+          if (UiComponent.fullscreenUnsupported == failureKind) {
             var3 = df.field_d;
           } else {
-            if (ch.field_a != param1) {
-              if (param1 == QuickChatPhraseRegistry.field_i) {
+            if (ch.fullscreenFocusProblem != failureKind) {
+              if (failureKind == QuickChatPhraseRegistry.fullscreenTimeout) {
                 this.height = this.height + 30;
                 var3 = DirectByteStorage.field_h;
               }
@@ -85,7 +85,7 @@ final class ek extends bj implements WidgetActionListener {
               this.height = this.height + 10;
               var3 = ChocolateBackground.field_s;
               if (ok.a(true)) {
-                var3 = UsernameAvailabilityResult.field_h;
+                var3 = AccountResponse.field_h;
                 this.height = this.height + 20;
               }
             }
@@ -97,20 +97,20 @@ final class ek extends bj implements WidgetActionListener {
           var4.x = 0;
           var4.renderer = (WidgetRenderer) ((Object) new TextWidgetRenderer(QuickChatMenu.field_Yb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(var4, true);
-          this.field_ib = this.a(LevelSequence.field_a, 101, (WidgetListener) (this));
+          this.dismissButton = this.a(LevelSequence.field_a, 101, (WidgetListener) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_12_0 = var3;
           stackIn_12_1 = new StringBuilder().append("ek.<init>(");
-          if (param0 == null) {
+          if (layerStack == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
           stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
-          if (param1 == null) {
+          if (failureKind == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -119,11 +119,11 @@ final class ek extends bj implements WidgetActionListener {
         }
     }
 
-    private final void d(boolean param0) {
+    private final void setFailureDialogVisible(boolean visible) {
         if (!this.visible) {
           return;
         }
-        this.visible = param0 ? true : false;
+        this.visible = visible ? true : false;
     }
 
     private final FocusableWidget a(String param0, int param1, WidgetListener param2) {
@@ -189,12 +189,12 @@ final class ek extends bj implements WidgetActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -22) {
-            ek.c(false);
+            FullscreenFailureDialog.c(false);
           }
-          if (widget != this.field_ib) {
+          if (widget != this.dismissButton) {
             return;
           }
-          this.d(false);
+          this.setFailureDialogVisible(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -224,7 +224,7 @@ final class ek extends bj implements WidgetActionListener {
         try {
           if (param2 > 0) {
             var4 = (m) null;
-            ek.a((m) null, (m) null, (byte) 87);
+            FullscreenFailureDialog.a((m) null, (m) null, (byte) 87);
           }
           var5 = (String) null;
           stackIn_3_0 = ValidationIconWidget.a((String) null, false, 0, param0, 0, param1, 4);

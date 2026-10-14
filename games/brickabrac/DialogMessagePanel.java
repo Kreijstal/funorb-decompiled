@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec extends WidgetGroup implements WidgetActionListener {
+final class DialogMessagePanel extends WidgetGroup implements WidgetActionListener {
     static int field_J;
     static String field_L;
-    private int[] field_T;
-    private FocusableWidget[] field_I;
-    private int field_M;
+    private int[] actionIds;
+    private FocusableWidget[] buttons;
+    private int buttonCount;
     static boolean field_O;
     static PlatformServices field_P;
     static int[] rankingRatings;
-    private String field_R;
+    private String message;
     static String field_S;
-    private TextFont field_H;
-    private lp field_K;
+    private TextFont font;
+    private AccountMessageDialog dialog;
     static BackgroundScene field_Q;
 
-    final void a(boolean param0, String param1, int param2) {
-        int var4_int = 0;
+    final void addAction(boolean obfuscationGuard, String caption, int actionId) {
+        int buttonIndex = 0;
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             FocusableWidget var5 = (FocusableWidget) null;
             this.onAction(117, -42, (byte) 27, -108, (FocusableWidget) null);
           }
-          var4_int = this.field_M;
-          this.a((byte) -106, 1 + var4_int);
-          this.field_I[var4_int] = this.a((byte) 126, param1, (WidgetListener) (this));
-          this.field_T[var4_int] = param2;
+          buttonIndex = this.buttonCount;
+          this.ensureButtonCapacity((byte) -106, 1 + buttonIndex);
+          this.buttons[buttonIndex] = this.appendButton((byte) 126, caption, (WidgetListener) (this));
+          this.actionIds[buttonIndex] = actionId;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ec.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ec.E(" + obfuscationGuard + ',' + (caption != null ? "{...}" : "null") + ',' + actionId + ')');
         }
     }
 
@@ -43,15 +43,15 @@ final class ec extends WidgetGroup implements WidgetActionListener {
         RuntimeException var6 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var6_int = 0; var6_int < this.field_M; var6_int++) {
-            if (widget != this.field_I[var6_int]) {
+          for (var6_int = 0; var6_int < this.buttonCount; var6_int++) {
+            if (widget != this.buttons[var6_int]) {
               continue;
             }
-            var7 = this.field_T[var6_int];
+            var7 = this.actionIds[var6_int];
             if (var7 != -1) {
-              CheckboxWidgetRenderer.a(this.field_T[var6_int], true);
+              CheckboxWidgetRenderer.a(this.actionIds[var6_int], true);
             } else {
-              this.field_K.m(17);
+              this.dialog.closeDialog(17);
             }
             break;
           }
@@ -79,17 +79,17 @@ final class ec extends WidgetGroup implements WidgetActionListener {
         InteractiveGameClient.field_E = true;
         ResourceArchive.field_f.hideLayers(-126);
         if (param0 != 6846) {
-          ec.a(-62);
+          DialogMessagePanel.a(-62);
         }
         MusicPatch.a(0, GameScreen.field_b, false);
     }
 
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         super.drawLayer(parentY, parentX, layer, obfuscationGuard);
-        this.field_H.a(this.field_R, 14 + (parentX + this.x), 10 + (parentY + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_H.ascent);
+        this.font.a(this.message, 14 + (parentX + this.x), 10 + (parentY + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.font.ascent);
     }
 
-    final FocusableWidget a(byte param0, String param1, WidgetListener param2) {
+    final FocusableWidget appendButton(byte obfuscationGuard, String caption, WidgetListener listener) {
         int var4_int = 0;
         RuntimeException var4 = null;
         FocusableWidget var5 = null;
@@ -102,8 +102,8 @@ final class ec extends WidgetGroup implements WidgetActionListener {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = -104 / ((param0 - 89) / 37);
-          var5 = new FocusableWidget(param1, param2);
+          var4_int = -104 / ((obfuscationGuard - 89) / 37);
+          var5 = new FocusableWidget(caption, listener);
           var5.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
           var6 = this.height - 2;
           this.setBounds(34 + this.height, 0, 0, (byte) -119, this.width);
@@ -115,14 +115,14 @@ final class ec extends WidgetGroup implements WidgetActionListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("ec.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_4_1 = new StringBuilder().append("ec.A(").append(obfuscationGuard).append(',');
+          if (caption == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
           stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
-          if (param2 == null) {
+          if (listener == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
@@ -131,25 +131,25 @@ final class ec extends WidgetGroup implements WidgetActionListener {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void ensureButtonCapacity(byte obfuscationGuard, int count) {
         int var5 = 0;
         int var6 = BrickABrac.field_J ? 1 : 0;
-        if (param1 <= this.field_M) {
+        if (count <= this.buttonCount) {
           return;
         }
-        FocusableWidget[] var7 = new FocusableWidget[param1];
+        FocusableWidget[] var7 = new FocusableWidget[count];
         FocusableWidget[] var3 = var7;
-        int[] var4 = new int[param1];
-        for (var5 = 0; var5 < this.field_M; var5++) {
-          var7[var5] = this.field_I[var5];
-          var4[var5] = this.field_T[var5];
+        int[] var4 = new int[count];
+        for (var5 = 0; var5 < this.buttonCount; var5++) {
+          var7[var5] = this.buttons[var5];
+          var4[var5] = this.actionIds[var5];
         }
-        this.field_T = var4;
-        if (param0 > -54) {
+        this.actionIds = var4;
+        if (obfuscationGuard > -54) {
           return;
         }
-        this.field_I = var3;
-        this.field_M = param1;
+        this.buttons = var3;
+        this.buttonCount = count;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
@@ -299,18 +299,18 @@ final class ec extends WidgetGroup implements WidgetActionListener {
         }
     }
 
-    ec(lp param0, TextFont param1, String param2) {
+    DialogMessagePanel(AccountMessageDialog dialog, TextFont font, String message) {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
-        this.field_M = 0;
+        this.buttonCount = 0;
         try {
-          this.field_K = param0;
-          this.field_R = param2;
-          this.field_H = param1;
-          var4_int = this.field_R == null ? 0 : this.field_H.measureWrappedHeight(this.field_R, 260, this.field_H.ascent);
+          this.dialog = dialog;
+          this.message = message;
+          this.font = font;
+          var4_int = this.message == null ? 0 : this.font.measureWrappedHeight(this.message, 260, this.font.ascent);
           this.setBounds(22 + var4_int, 0, 0, (byte) -119, 288);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ec.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ec.<init>(" + (dialog != null ? "{...}" : "null") + ',' + (font != null ? "{...}" : "null") + ',' + (message != null ? "{...}" : "null") + ')');
         }
     }
 

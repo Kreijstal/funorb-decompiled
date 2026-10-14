@@ -131,7 +131,7 @@ final class BallPulseEffect extends IntrusiveNode {
           sl.receivedChatContextLabel = var8.readCp1252String(-1);
         }
         if (!quickChat) {
-          gd.receivedChatText = bj.readCompressedString(80, (byte) 76, var8);
+          gd.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);
           BoundedFile.receivedChatSuggestions = null;
           return new ChatMessage(quickChat);
         }
@@ -216,7 +216,7 @@ final class BallPulseEffect extends IntrusiveNode {
           sl.receivedChatContextLabel = var8.readCp1252String(-1);
         }
         if (!param1) {
-          gd.receivedChatText = bj.readCompressedString(80, (byte) 76, var8);
+          gd.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);
           BoundedFile.receivedChatSuggestions = null;
           return new ChatMessage(param1);
         }

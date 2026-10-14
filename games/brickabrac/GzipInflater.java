@@ -42,7 +42,7 @@ final class GzipInflater {
           try {
             jl.incomingPackets = new BitPacketBuffer(param4);
             TextFieldValidator.outgoingPackets = new BitPacketBuffer(param5);
-            fe.field_ob = param6;
+            ContentTransitionLayer.field_ob = param6;
             tq.field_h = param1;
             FramedMenuScreen.field_s = param8;
             ArchiveIndex.field_e = param0;
@@ -53,7 +53,7 @@ final class GzipInflater {
             }
             dl.field_b = param13;
             DebouncedValidationSource.field_a = param12;
-            ec.field_O = param10;
+            DialogMessagePanel.field_O = param10;
             LevelSelectScreen.field_E = param11;
             IntArrayRequest.field_r = param3;
             if (null == FramedMenuScreen.field_s.field_k) {

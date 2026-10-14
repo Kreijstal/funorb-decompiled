@@ -59,18 +59,18 @@ final class BoundedFile {
     }
 
     final static void patchJavaKeyCodeMap(int keyCodeFor57) {
-        tf.javaKeyCodeMap[keyCodeFor57] = 57;
-        tf.javaKeyCodeMap[93] = 43;
-        tf.javaKeyCodeMap[91] = 42;
-        tf.javaKeyCodeMap[47] = 73;
-        tf.javaKeyCodeMap[46] = 72;
-        tf.javaKeyCodeMap[61] = 27;
-        tf.javaKeyCodeMap[92] = 74;
-        tf.javaKeyCodeMap[44] = 71;
-        tf.javaKeyCodeMap[45] = 26;
-        tf.javaKeyCodeMap[192] = 28;
-        tf.javaKeyCodeMap[520] = 59;
-        tf.javaKeyCodeMap[222] = 58;
+        FullscreenFailureKind.javaKeyCodeMap[keyCodeFor57] = 57;
+        FullscreenFailureKind.javaKeyCodeMap[93] = 43;
+        FullscreenFailureKind.javaKeyCodeMap[91] = 42;
+        FullscreenFailureKind.javaKeyCodeMap[47] = 73;
+        FullscreenFailureKind.javaKeyCodeMap[46] = 72;
+        FullscreenFailureKind.javaKeyCodeMap[61] = 27;
+        FullscreenFailureKind.javaKeyCodeMap[92] = 74;
+        FullscreenFailureKind.javaKeyCodeMap[44] = 71;
+        FullscreenFailureKind.javaKeyCodeMap[45] = 26;
+        FullscreenFailureKind.javaKeyCodeMap[192] = 28;
+        FullscreenFailureKind.javaKeyCodeMap[520] = 59;
+        FullscreenFailureKind.javaKeyCodeMap[222] = 58;
     }
 
     final void write(int offset, byte obfuscationGuard, byte[] data, int length) throws IOException {

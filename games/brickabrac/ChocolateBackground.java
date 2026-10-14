@@ -38,10 +38,10 @@ final class ChocolateBackground extends BackgroundScene {
             SoundPlayback.a(-35, 26746, var7, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           } else {
-            ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+            ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
             return;
           }
-          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, up.field_w, -35);
           return;
         }
         if (!this.hasSprites((byte) -128)) {
@@ -53,10 +53,10 @@ final class ChocolateBackground extends BackgroundScene {
           SoundPlayback.a(-35, 26746, var8, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
           return;
         }
-        ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, ek.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
+        ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, up.field_w, -35);
     }
 
     final RgbSprite a(boolean param0, int param1) {
@@ -77,18 +77,18 @@ final class ChocolateBackground extends BackgroundScene {
         CappedUrlRequest.chocolateSpiresSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
         QuickChatPhraseRegistry.chocolateFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
         QuickChatParameterType.field_i = jh.a(0, nl.chocolateNearSprite);
-        ek.field_hb = jh.a(0, chocolateMidSprite);
+        FullscreenFailureDialog.field_hb = jh.a(0, chocolateMidSprite);
         up.field_w = jh.a(0, CappedUrlRequest.chocolateSpiresSprite);
         u.chocolateSmallFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
         GameClock.chocolateSmallNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
         MeshAttributeRecord.chocolateCharacterSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
-        Brick.chocCapsSprites[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
-        aj.chocSegsSprites[0] = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
+        Brick.chocCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
+        aj.chocSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
         IntKeyIndex.chocCentreSprites[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
-        Brick.chocCapsSprites[1] = ig.a(Brick.chocCapsSprites[0], obfuscationGuard);
-        aj.chocSegsSprites[1] = ig.a(aj.chocSegsSprites[0], obfuscationGuard);
+        Brick.chocCapsSprites[1] = Under13RegistrationNoticePanel.a(Brick.chocCapsSprites[0], obfuscationGuard);
+        aj.chocSegsSprites[1] = Under13RegistrationNoticePanel.a(aj.chocSegsSprites[0], obfuscationGuard);
         IntKeyIndex.chocCentreSprites[1] = pl.a(-16371, IntKeyIndex.chocCentreSprites[0]);
-        NameEntryPopup.chocLeverSprites = cr.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
+        NameEntryPopup.chocLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
         return true;
     }
 

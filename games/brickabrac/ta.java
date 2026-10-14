@@ -33,16 +33,16 @@ class ta {
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = qp.decodedSpritePalette[ik.a((int) var16[var5_int], 255)];
           }
-          var3 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var8);
+          var3 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var8);
         } else {
-          var17 = bj.decodedSpriteAlpha[0];
+          var17 = PopupWidgetLayer.decodedSpriteAlpha[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
             var5[var6] = LevelSelectScreen.d(qp.decodedSpritePalette[ik.a((int) var16[var6], 255)], ik.a(-16777216, var17[var6] << 24));
           }
-          var3 = new ArgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var13);
+          var3 = new ArgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var13);
         }
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return (RgbSprite) (var3);

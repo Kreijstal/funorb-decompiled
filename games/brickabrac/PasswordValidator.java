@@ -193,18 +193,18 @@ final class PasswordValidator extends TextFieldValidator {
           normalizedUsername = this.usernameField.text.toLowerCase();
           normalizedPassword = text.toLowerCase();
           if (0 == normalizedPassword.length()) {
-            stackIn_4_0 = lp.validationInvalid;
+            stackIn_4_0 = AccountMessageDialog.validationInvalid;
             return stackIn_4_0;
           }
           if (!MatchCompleteScreen.isAcceptablePassword((byte) -120, normalizedPassword, normalizedUsername)) {
-            stackIn_8_0 = lp.validationInvalid;
+            stackIn_8_0 = AccountMessageDialog.validationInvalid;
             return stackIn_8_0;
           }
           if (!this.containsEmailPart(0, text)) {
             stackIn_13_0 = DualLinkIterator.validationValid;
             return stackIn_13_0;
           }
-          stackIn_11_0 = lp.validationInvalid;
+          stackIn_11_0 = AccountMessageDialog.validationInvalid;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
