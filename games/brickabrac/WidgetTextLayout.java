@@ -155,7 +155,7 @@ abstract class WidgetTextLayout {
           if (param1 != 73) {
             WidgetTextLayout.a(true);
           }
-          var3 = w.a(10, param2);
+          var3 = ScreenshotViewer.a(10, param2);
           stackIn_7_0 = (param0.indexOf(param2) != -1) || (-1 != param0.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

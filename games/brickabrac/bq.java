@@ -79,10 +79,10 @@ final class bq {
         int var7Lifetime1Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          ik.field_j = true;
+          IntrusiveHashIterator.field_j = true;
           ArchiveFetchClient.field_p = param1;
           if (0 == ArchiveFetchClient.field_p) {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, up.field_x);
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, StatefulWidgetRenderer.field_x);
             var4 = 3 + var3_int;
             BrickABrac.field_K = new int[var4];
             ValidationStatus.field_i = new String[var4];
@@ -101,7 +101,7 @@ final class bq {
             BrickABrac.field_K[-1 + var4] = 1;
             UsernameSuggestionPanel.field_I[1] = 5;
           } else if (1 == ArchiveFetchClient.field_p) {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, up.field_x);
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, StatefulWidgetRenderer.field_x);
             var4 = 2 + var3_int;
             BrickABrac.field_K = new int[var4];
             ValidationStatus.field_i = new String[var4];
@@ -205,12 +205,12 @@ final class bq {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            ik.field_b = new String[var4];
-            ArrayOperations.copy(CacheIoWorker.field_h, 0, ik.field_b, 0, var4);
+            IntrusiveHashIterator.field_b = new String[var4];
+            ArrayOperations.copy(CacheIoWorker.field_h, 0, IntrusiveHashIterator.field_b, 0, var4);
             HuffmanCodec.field_h = new String[var3_int - (var4 + 1)];
             ArrayOperations.copy(CacheIoWorker.field_h, var4 + 1, HuffmanCodec.field_h, 0, -1 + (var3_int - var4));
-            if (ik.field_b.length > QuickChatPhraseRegistry.field_k.length) {
-              stackIn_66_0 = ik.field_b.length;
+            if (IntrusiveHashIterator.field_b.length > QuickChatPhraseRegistry.field_k.length) {
+              stackIn_66_0 = IntrusiveHashIterator.field_b.length;
             } else {
               stackIn_66_0 = QuickChatPhraseRegistry.field_k.length;
             }
@@ -227,8 +227,8 @@ final class bq {
             for (var8 = 0; var8 < var7; var8++) {
               BrickABrac.field_K[var8] = -1;
             }
-            ValidationStatus.field_i[0] = dg.field_k;
-            ValidationStatus.field_i[1] = c.field_c;
+            ValidationStatus.field_i[0] = MultiValueSliderRenderer.field_k;
+            ValidationStatus.field_i[1] = GrowableIntList.field_c;
             BrickABrac.field_K[1] = 0;
             UsernameSuggestionPanel.field_I = new int[2];
             BrickABrac.field_K[3] = 1;
@@ -241,10 +241,10 @@ final class bq {
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_76_0 = ValidationStatus.field_i;
               stackIn_76_1 = 6 + var8Lifetime2;
-              if (0 > var8Lifetime2 - (-ik.field_b.length + var5)) {
+              if (0 > var8Lifetime2 - (-IntrusiveHashIterator.field_b.length + var5)) {
                 stackIn_77_2 = "";
               } else {
-                stackIn_77_2 = ik.field_b[-var5 + (ik.field_b.length + var8Lifetime2)];
+                stackIn_77_2 = IntrusiveHashIterator.field_b[-var5 + (IntrusiveHashIterator.field_b.length + var8Lifetime2)];
               }
               stackIn_76_0[stackIn_76_1] = stackIn_77_2;
             }
@@ -307,7 +307,7 @@ final class bq {
             }
             jj.field_c = stackIn_118_0 + stackIn_119_1;
           }
-          CachedArchiveSource.field_r = -(jj.field_c >> 1) + w.field_k;
+          CachedArchiveSource.field_r = -(jj.field_c >> 1) + ScreenshotViewer.field_k;
           ce.field_a = new int[ValidationStatus.field_i.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = CachedArchiveSource.field_r;

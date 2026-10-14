@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf implements WidgetRenderer {
+final class RadialSelectorRenderer implements WidgetRenderer {
     static String field_a;
     static int field_i;
-    private int field_j;
-    private int field_e;
-    private int field_g;
-    private TextFont field_l;
+    private int shadowPaint;
+    private int circleColor;
+    private int labelOffsetY;
+    private TextFont font;
     static int[] arcticBackgroundColors;
     static String field_c;
-    private int field_o;
-    private int field_m;
+    private int backgroundColor;
+    private int markedSectorColor;
     static boolean field_p;
-    private int field_k;
+    private int textPaint;
     static boolean field_d;
     static UiComponent field_h;
-    private int field_n;
+    private int labelGap;
     static boolean field_f;
 
     final static SocialListEntry findFriend(boolean obfuscationGuard, String name) {
@@ -104,15 +104,15 @@ final class pf implements WidgetRenderer {
           var14 = (RadialSelectorWidget) (stackIn_3_0);
           if (var14 != null) {
           }
-          Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_o);
+          Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.backgroundColor);
           var7 = var14.centerX + parentX + widget.x;
           var8 = var14.centerY + (parentY + widget.y);
-          Rasterizer2D.f(var7, var8, var14.radius, this.field_e);
-          if (var14.field_Q != -1) {
-            var9 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.sectorCount;
+          Rasterizer2D.f(var7, var8, var14.radius, this.circleColor);
+          if (var14.markedSector != -1) {
+            var9 = 3.141592653589793 * (double)var14.markedSector * 2.0 / (double)var14.sectorCount;
             var11 = (int)(-Math.sin(var9) * (double)var14.radius);
             var12 = (int)(Math.cos(var9) * (double)var14.radius);
-            Rasterizer2D.f(var7 + var11, var12 + var8, 1, this.field_m);
+            Rasterizer2D.f(var7 + var11, var12 + var8, 1, this.markedSectorColor);
           }
           Rasterizer2D.f(var7, var8, 2, 1);
           if (callbackGuard != -20618) {
@@ -122,11 +122,11 @@ final class pf implements WidgetRenderer {
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.radius);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.radius);
           Rasterizer2D.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
-          if (this.field_l == null) {
+          if (this.font == null) {
             return;
           }
-          var13 = var14.centerX + var14.radius + this.field_n;
-          this.field_l.a(widget.text, widget.x + parentX + var13, parentY + (widget.y + this.field_g), widget.width - (this.field_n + var13), widget.height - (this.field_n << 1), this.field_k, this.field_j, 1, 1, 0);
+          var13 = var14.centerX + var14.radius + this.labelGap;
+          this.font.a(widget.text, widget.x + parentX + var13, parentY + (widget.y + this.labelOffsetY), widget.width - (this.labelGap + var13), widget.height - (this.labelGap << 1), this.textPaint, this.shadowPaint, 1, 1, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -159,7 +159,7 @@ final class pf implements WidgetRenderer {
           field_h = null;
           return;
         }
-        pf.a(false, 38);
+        RadialSelectorRenderer.a(false, 38);
         arcticBackgroundColors = null;
         field_c = null;
         field_h = null;
@@ -367,7 +367,7 @@ final class pf implements WidgetRenderer {
           return true;
         }
         var3 = (ResourceArchive) null;
-        pf.a(97, (byte[]) null, (ResourceArchive) null, (String[]) null, 18, true, (RgbSprite[][]) null, (ResourceArchive) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (ResourceArchive) null);
+        RadialSelectorRenderer.a(97, (byte[]) null, (ResourceArchive) null, (String[]) null, 18, true, (RgbSprite[][]) null, (ResourceArchive) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (ResourceArchive) null);
         if (null == hd.pendingScreen &&
           param1 == AccountMessageDialog.currentScreen.screenId) {
           return true;
@@ -381,18 +381,18 @@ final class pf implements WidgetRenderer {
         return true;
     }
 
-    pf(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    RadialSelectorRenderer(TextFont font, int labelGap, int labelOffsetY, int textPaint, int shadowPaint, int circleColor, int markedSectorColor, int backgroundColor) {
         try {
-          this.field_n = param1;
-          this.field_o = param7;
-          this.field_m = param6;
-          this.field_k = param3;
-          this.field_g = param2;
-          this.field_l = param0;
-          this.field_j = param4;
-          this.field_e = param5;
+          this.labelGap = labelGap;
+          this.backgroundColor = backgroundColor;
+          this.markedSectorColor = markedSectorColor;
+          this.textPaint = textPaint;
+          this.labelOffsetY = labelOffsetY;
+          this.font = font;
+          this.shadowPaint = shadowPaint;
+          this.circleColor = circleColor;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pf.<init>(" + (font != null ? "{...}" : "null") + ',' + labelGap + ',' + labelOffsetY + ',' + textPaint + ',' + shadowPaint + ',' + circleColor + ',' + markedSectorColor + ',' + backgroundColor + ')');
         }
     }
 

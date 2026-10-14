@@ -69,7 +69,7 @@ final class MenuButton {
           } else {
             var3 = IntArrayRequest.field_k;
           }
-          nh.a(this.width, this.height, -40, this.x, var3, this.y);
+          nh.paintNineSliceFrame(this.width, this.height, -40, this.x, var3, this.y);
           if (29 != this.actionId &&
             this.actionId != 30) {
             if (44 != this.actionId &&
@@ -84,7 +84,7 @@ final class MenuButton {
                 stackIn_36_1 = array$0;
                 stackIn_36_2 = array$0;
                 stackIn_36_3 = 0;
-                if (!be.field_a) {
+                if (!WidgetPaintStyle.field_a) {
                   stackIn_37_4 = BufferedFile.field_q;
                 } else {
                   stackIn_37_4 = MusicVoiceMixer.field_q;
@@ -113,12 +113,12 @@ final class MenuButton {
               }
               if (this.actionId == 20 ||
                 this.actionId == 21) {
-                var6 = var6 + dg.field_d;
+                var6 = var6 + MultiValueSliderRenderer.field_d;
                 Rasterizer2D.drawHorizontalLine(var6, this.height / 2 + this.y - 1, 121, 11184810);
                 Rasterizer2D.drawHorizontalLine(var6, this.y + this.height / 2, 121, 0);
                 Rasterizer2D.drawHorizontalLine(var6, this.height / 2 + this.y + 1, 121, 11184810);
                 if (20 != this.actionId) {
-                  stackIn_56_0 = qi.i(-29946) * 120 / 256;
+                  stackIn_56_0 = MultiValueSliderWidget.i(-29946) * 120 / 256;
                 } else {
                   stackIn_56_0 = FramedMenuScreen.g((byte) -44) * 120 / MenuSelection.e((byte) 43);
                 }
@@ -172,7 +172,7 @@ final class MenuButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = w.a(param1 + 121, param2);
+          var3 = ScreenshotViewer.a(param1 + 121, param2);
           if (param1 != 0) {
             var4 = (String) null;
             MenuButton.a((String) null, 78, (String) null);

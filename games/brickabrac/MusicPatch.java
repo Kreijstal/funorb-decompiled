@@ -463,7 +463,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt((byte) 112);
             }
-            this.pitchOffsets[var23] = (short)(this.pitchOffsets[var23] + (ik.a(2, -1 + var22) << 14));
+            this.pitchOffsets[var23] = (short)(this.pitchOffsets[var23] + (IntrusiveHashIterator.a(2, -1 + var22) << 14));
             var20Lifetime2--;
             this.sampleCodes[var23] = var22;
           }

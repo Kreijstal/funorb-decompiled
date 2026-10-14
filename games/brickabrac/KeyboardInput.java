@@ -32,7 +32,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             stackIn_6_0 = ScrollPaneWithFooter.field_Ub;
             return stackIn_6_0;
           }
-          entry = pf.findFriend(obfuscationGuard, name);
+          entry = RadialSelectorRenderer.findFriend(obfuscationGuard, name);
           if (entry == null) {
             stackIn_9_0 = rd.a(MusicVoice.field_C, new String[]{name}, (byte) 103);
             return stackIn_9_0;
@@ -338,7 +338,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    final static void a(vc param0, int param1) {
+    final static void a(GameLayerController param0, int param1) {
         try {
           kp.field_d.insertElementAt(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -348,8 +348,8 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
 
     final static String a(boolean param0, int param1) {
         if (param0) {
-          vc var3 = (vc) null;
-          KeyboardInput.a((vc) null, -56);
+          GameLayerController var3 = (GameLayerController) null;
+          KeyboardInput.a((GameLayerController) null, -56);
         }
         return rd.a(FramedMenuScreen.field_t, new String[]{(param1 >= 10 ? "" : "0") + Integer.toString(param1)}, (byte) 103).toLowerCase();
     }

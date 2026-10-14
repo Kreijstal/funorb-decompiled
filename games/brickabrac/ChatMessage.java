@@ -48,14 +48,14 @@ final class ChatMessage {
           startIndex = 0;
           endIndex = name.length();
           while (startIndex < endIndex) {
-            if (ik.isNameSeparator((byte) -9, name.charAt(startIndex))) {
+            if (IntrusiveHashIterator.isNameSeparator((byte) -9, name.charAt(startIndex))) {
               startIndex++;
               continue;
             }
             break;
           }
           while (endIndex > startIndex) {
-            if (ik.isNameSeparator((byte) -9, name.charAt(endIndex - 1))) {
+            if (IntrusiveHashIterator.isNameSeparator((byte) -9, name.charAt(endIndex - 1))) {
               endIndex--;
               continue;
             }
@@ -143,7 +143,7 @@ final class ChatMessage {
         this.badgeId = nh.receivedChatBadge;
         this.senderId = BirthDateValidator.receivedChatSenderId;
         this.senderName = nd.receivedChatSenderName;
-        this.systemMessage = ji.receivedChatSystem;
+        this.systemMessage = IterableIntrusiveHashTable.receivedChatSystem;
         this.text = gd.receivedChatText;
         this.channel = gj.receivedChatChannel;
         this.messageKeyLow24 = LevelCompleteScreen.receivedChatKeyLow24;

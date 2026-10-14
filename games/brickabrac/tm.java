@@ -125,7 +125,7 @@ final class tm {
             var2_long = MonotonicTime.nowMillis(false);
             var4 = TabbedPane.field_Ub;
             if (HuffmanCodec.field_b != 0.0) {
-              var4 = (int)((double)var4 + ji.packetDelayRandom.nextGaussian() * HuffmanCodec.field_b);
+              var4 = (int)((double)var4 + IterableIntrusiveHashTable.packetDelayRandom.nextGaussian() * HuffmanCodec.field_b);
               if (0 > var4) {
                 var4 = 0;
               }

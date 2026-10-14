@@ -20,7 +20,7 @@ final class ll {
         RuntimeException var3_ref = null;
         try {
           param2 = wj.a(-1, param2, '_', "");
-          var3 = w.a(73, param0);
+          var3 = ScreenshotViewer.a(73, param0);
           if (param1 <= 117) {
             field_e = (UiComponent) null;
           }

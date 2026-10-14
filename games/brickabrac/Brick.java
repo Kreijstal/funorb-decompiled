@@ -424,7 +424,7 @@ final class Brick extends RectangleBody {
         MouseInput.field_d = null;
         IndexedSpriteGeometry.field_e = null;
         int var2 = gd.field_a;
-        gd.field_a = up.field_z;
+        gd.field_a = StatefulWidgetRenderer.field_z;
         int var3 = -47 / ((param0 + 22) / 61);
         if (param1 == 51) {
           vd.field_f.lastError = 2;
@@ -435,7 +435,7 @@ final class Brick extends RectangleBody {
             vd.field_f.lastError = 5;
           }
         }
-        up.field_z = var2;
+        StatefulWidgetRenderer.field_z = var2;
         vd.field_f.failureCount = vd.field_f.failureCount + 1;
         if (2 <= vd.field_f.failureCount &&
           param1 == 51) {

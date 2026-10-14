@@ -70,7 +70,7 @@ abstract class MenuScreen extends GameScreen {
     private final void c(boolean param0, int param1) {
         if (this.selection.selectedIndex != -1 &&
           param1 != this.selection.selectedIndex) {
-          PlayerBoard.playGameplaySound(ta.uiSounds[0], -106, FramedMenuScreen.g((byte) -44) / 4);
+          PlayerBoard.playGameplaySound(NineSliceFrame.uiSounds[0], -106, FramedMenuScreen.g((byte) -44) / 4);
         }
         if (!param0) {
           this.buttonLeft = -36;
@@ -153,7 +153,7 @@ abstract class MenuScreen extends GameScreen {
           this.handleNavigationKey(-120, keyCode, character);
           this.selection.pollKeyboardCode((byte) -124);
           if (this.a(false, (byte) 126)) {
-            SoundCache.playUiSound(8, ta.uiSounds[0]);
+            SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
           }
           this.c(true, var4);
         } else {
@@ -205,7 +205,7 @@ abstract class MenuScreen extends GameScreen {
           !ed.field_d) {
           this.selection.updatePointer(this.findButtonAt(po.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(PlayerNameChooserPanel.pressY, (byte) -80, tb.pressX));
           if (this.a(true, (byte) -117)) {
-            SoundCache.playUiSound(8, ta.uiSounds[0]);
+            SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
           }
         }
         this.c(true, var4);
@@ -215,7 +215,7 @@ abstract class MenuScreen extends GameScreen {
           GzipInflater.field_e = GzipInflater.field_e - 1;
           if (fieldTemp$2 == 0) {
             hc.field_h = 1;
-            c.field_g = 250;
+            GrowableIntList.field_g = 250;
           }
         }
     }
@@ -316,7 +316,7 @@ abstract class MenuScreen extends GameScreen {
               var8 != 27) {
               if (var8 == 37) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  be.field_a = true;
+                  WidgetPaintStyle.field_a = true;
                   RankingsRequest.a(16727, inputFlag, 0, new LevelSequence(DateFieldsWidget.field_L[0]));
                 }
                 break regionExit1;
@@ -327,7 +327,7 @@ abstract class MenuScreen extends GameScreen {
                     MatchingTextValidator.b(true);
                   } else {
                     sl.field_z = -2;
-                    AccountRegistrationPanel.a(sb.field_b, true, 0, inputFlag, 46);
+                    AccountRegistrationPanel.a(BrickGameLayerController.field_b, true, 0, inputFlag, 46);
                   }
                 }
                 break regionExit1;
@@ -404,7 +404,7 @@ abstract class MenuScreen extends GameScreen {
                   QuickChatParameterType.a((byte) -63);
                 }
                 if (this.selection.isHeld(false)) {
-                  var8 = -120 + var5.width + var5.x + var5.x + dg.field_d >> 1;
+                  var8 = -120 + var5.width + var5.x + var5.x + MultiValueSliderRenderer.field_d >> 1;
                   var9 = MusicPatch.pointerX - var8;
                   var10 = var9 * MenuSelection.e((byte) 51) / 120;
                   if (var10 <= 0) {
@@ -420,7 +420,7 @@ abstract class MenuScreen extends GameScreen {
                 }
                 if (((var7 != 0)) && ((!(this.selection.isHeld(false)) ||
                   !(MembershipBenefitsScreen.clientTick <= ea.field_d)))) {
-                  SoundCache.playUiSound(8, ta.uiSounds[1]);
+                  SoundCache.playUiSound(8, NineSliceFrame.uiSounds[1]);
                   ea.field_d = MembershipBenefitsScreen.clientTick + 20;
                 }
                 break regionExit1;
@@ -439,7 +439,7 @@ abstract class MenuScreen extends GameScreen {
                   ValidationMessageWidget.a((byte) 109);
                 }
                 if (!(!this.selection.isHeld(false))) {
-                  var8 = -120 + (dg.field_d + (var5.x + var5.width) + var5.x) >> 1;
+                  var8 = -120 + (MultiValueSliderRenderer.field_d + (var5.x + var5.width) + var5.x) >> 1;
                   var9 = -var8 + MusicPatch.pointerX;
                   var10 = 256 * var9 / 120;
                   if (var10 <= 0) {
@@ -560,8 +560,8 @@ abstract class MenuScreen extends GameScreen {
                   if (!this.selection.isActivated((byte) 113)) {
                     break regionExit1;
                   }
-                  stackIn_165_0 = !(be.field_a);
-                  be.field_a = stackIn_165_0;
+                  stackIn_165_0 = !(WidgetPaintStyle.field_a);
+                  WidgetPaintStyle.field_a = stackIn_165_0;
                   TextFieldRenderer.field_A = stackIn_165_0;
                   if (TextFieldRenderer.field_A &&
                     IntArrayRequest.gameplayScreen != null) {

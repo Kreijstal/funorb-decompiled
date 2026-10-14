@@ -7,7 +7,7 @@ final class to {
     static int privateChatFilter;
     private int field_d;
     static String field_l;
-    private ji field_c;
+    private IterableIntrusiveHashTable field_c;
     static RgbSprite field_e;
     private DualLinkDeque field_j;
     static int[] field_f;
@@ -17,7 +17,7 @@ final class to {
     static int field_i;
 
     final Object a(long param0, boolean param1) {
-        sl var4 = (sl) (this.field_c.a(param0, 101));
+        sl var4 = (sl) (this.field_c.get(param0, 101));
         if (var4 == null) {
           return null;
         }
@@ -34,7 +34,7 @@ final class to {
           return var5;
         }
         ej var6 = new ej(var5, var4.field_u);
-        this.field_c.a((byte) 44, var4.key, var6);
+        this.field_c.put((byte) 44, var4.key, var6);
         this.field_j.addLast(var6, (byte) -119);
         ((sl) ((Object) var6)).secondaryKey = 0L;
         var4.unlink((byte) 111);
@@ -48,7 +48,7 @@ final class to {
 
     private final void a(long param0, int param1) {
         int var4 = -89 % ((-26 - param1) / 48);
-        sl var5 = (sl) (this.field_c.a(param0, 121));
+        sl var5 = (sl) (this.field_c.get(param0, 121));
         this.a(false, var5);
     }
 
@@ -65,7 +65,7 @@ final class to {
           this.a(false, var6);
         }
         ej var6_ref = new ej(param3, param2);
-        this.field_c.a((byte) 79, param1, var6_ref);
+        this.field_c.put((byte) 79, param1, var6_ref);
         this.field_j.addLast(var6_ref, (byte) -123);
         if (param0 != -1) {
           return;
@@ -146,7 +146,7 @@ final class to {
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.field_c = new ji(var3);
+            this.field_c = new IterableIntrusiveHashTable(var3);
             return;
           }
           if (param1 > var3) {
@@ -155,7 +155,7 @@ final class to {
           }
           break;
         }
-        this.field_c = new ji(var3);
+        this.field_c = new IterableIntrusiveHashTable(var3);
         return;
     }
 

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ji implements Iterable {
+final class IterableIntrusiveHashTable implements Iterable {
     static boolean receivedChatSystem;
-    private IntrusiveNode field_h;
+    private IntrusiveNode lookupCursor;
     static Random packetDelayRandom;
     static String field_g;
-    IntrusiveNode[] field_d;
-    int field_c;
+    IntrusiveNode[] buckets;
+    int bucketCount;
     static ResourceArchive field_a;
     static UiComponent field_b;
 
@@ -19,64 +19,64 @@ final class ji implements Iterable {
         field_b = null;
         if (param0 != 24968) {
           MusicTrack var2 = (MusicTrack) null;
-          ji.a(-14, true, (MusicTrack) null, -51, -100, true);
+          IterableIntrusiveHashTable.a(-14, true, (MusicTrack) null, -51, -100, true);
           packetDelayRandom = null;
           return;
         }
         packetDelayRandom = null;
     }
 
-    final IntrusiveNode a(long param0, int param1) {
-        IntrusiveNode var5 = null;
-        int var6 = BrickABrac.field_J ? 1 : 0;
-        IntrusiveNode var4 = this.field_d[(int)((long)(this.field_c - 1) & param0)];
-        IntrusiveNode var5Lifetime1;
-        this.field_h = var4.next;
-        if (param1 > 85) {
-          while (var4 != this.field_h) {
-            if (param0 == this.field_h.key) {
-              var5 = this.field_h;
-              this.field_h = this.field_h.next;
-              return var5;
+    final IntrusiveNode get(long key, int obfuscationGuard) {
+        IntrusiveNode match = null;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        IntrusiveNode bucket = this.buckets[(int)((long)(this.bucketCount - 1) & key)];
+        IntrusiveNode guardedMatch;
+        this.lookupCursor = bucket.next;
+        if (obfuscationGuard > 85) {
+          while (bucket != this.lookupCursor) {
+            if (key == this.lookupCursor.key) {
+              match = this.lookupCursor;
+              this.lookupCursor = this.lookupCursor.next;
+              return match;
             }
-            this.field_h = this.field_h.next;
+            this.lookupCursor = this.lookupCursor.next;
           }
-          this.field_h = null;
+          this.lookupCursor = null;
           return null;
         }
-        this.field_c = -72;
-        while (var4 != this.field_h) {
-          if (param0 == this.field_h.key) {
-            var5Lifetime1 = this.field_h;
-            this.field_h = this.field_h.next;
-            return var5Lifetime1;
+        this.bucketCount = -72;
+        while (bucket != this.lookupCursor) {
+          if (key == this.lookupCursor.key) {
+            guardedMatch = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.next;
+            return guardedMatch;
           }
-          this.field_h = this.field_h.next;
+          this.lookupCursor = this.lookupCursor.next;
         }
-        this.field_h = null;
+        this.lookupCursor = null;
         return null;
     }
 
-    final void a(byte param0, long param1, IntrusiveNode param2) {
+    final void put(byte obfuscationGuard, long key, IntrusiveNode node) {
         IntrusiveNode var5 = null;
         try {
-          if (null != param2.previous) {
-            param2.unlink((byte) 111);
+          if (null != node.previous) {
+            node.unlink((byte) 111);
           }
-          var5 = this.field_d[(int)(param1 & (long)(-1 + this.field_c))];
-          param2.previous = var5.previous;
-          param2.next = var5;
-          param2.previous.next = param2;
-          param2.next.previous = param2;
-          int var6 = -64 % ((param0 + 60) / 52);
-          param2.key = param1;
+          var5 = this.buckets[(int)(key & (long)(-1 + this.bucketCount))];
+          node.previous = var5.previous;
+          node.next = var5;
+          node.previous.next = node;
+          node.next.previous = node;
+          int var6 = -64 % ((obfuscationGuard + 60) / 52);
+          node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ji.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ji.D(" + obfuscationGuard + ',' + key + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ik(this));
+        return (Iterator) ((Object) new IntrusiveHashIterator(this));
     }
 
     final static void a(int param0, boolean param1, MusicTrack param2, int param3, int param4, boolean param5) {
@@ -116,16 +116,16 @@ final class ji implements Iterable {
         }
     }
 
-    ji(int param0) {
+    IterableIntrusiveHashTable(int bucketCount) {
         int var2 = 0;
         IntrusiveNode dupTemp$1 = null;
         IntrusiveNode var3;
-        this.field_d = new IntrusiveNode[param0];
-        this.field_c = param0;
-        for (var2 = 0; var2 < param0; var2++) {
+        this.buckets = new IntrusiveNode[bucketCount];
+        this.bucketCount = bucketCount;
+        for (var2 = 0; var2 < bucketCount; var2++) {
           dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
-          this.field_d[var2] = dupTemp$1;
+          this.buckets[var2] = dupTemp$1;
           var3.previous = var3;
           var3.next = var3;
         }

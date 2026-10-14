@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei implements WidgetRenderer {
-    private int field_l;
+final class LabeledToggleRenderer implements WidgetRenderer {
+    private int boxWidth;
     static String field_g;
-    private int field_h;
-    private int field_j;
-    private int field_m;
-    private int field_k;
-    private int field_f;
+    private int boxY;
+    private int shadowPaint;
+    private int boxX;
+    private int verticalAlignment;
+    private int labelGap;
     static String field_a;
-    private int field_b;
-    private int field_d;
-    private int field_i;
-    private int field_c;
-    private TextFont field_n;
-    private int field_e;
+    private int backgroundColor;
+    private int boxHeight;
+    private int horizontalAlignment;
+    private int labelOffsetY;
+    private TextFont font;
+    private int textPaint;
 
     public final void paintWidget(boolean obfuscationGuard, int callbackGuard, int parentX, Widget widget, int parentY) {
         Widget stackIn_3_0 = null;
@@ -43,23 +43,23 @@ final class ei implements WidgetRenderer {
           if (obfuscationGuard) {
             var7 = 16777215;
           }
-          Rasterizer2D.fillRectangle(widget.x + parentX, parentY + widget.y, widget.width, widget.height, this.field_b);
-          var8 = this.field_m + parentX + widget.x;
-          var9 = this.field_h + parentY + widget.y;
-          Rasterizer2D.a(var8, var9, this.field_l, this.field_d, 5592405);
+          Rasterizer2D.fillRectangle(widget.x + parentX, parentY + widget.y, widget.width, widget.height, this.backgroundColor);
+          var8 = this.boxX + parentX + widget.x;
+          var9 = this.boxY + parentY + widget.y;
+          Rasterizer2D.a(var8, var9, this.boxWidth, this.boxHeight, 5592405);
           if (callbackGuard != -20618) {
-            this.field_h = 116;
+            this.boxY = 116;
           }
-          Rasterizer2D.fillRectangle(var8, var9, this.field_l, this.field_d, var7);
+          Rasterizer2D.fillRectangle(var8, var9, this.boxWidth, this.boxHeight, var7);
           if (var11.active) {
-            Rasterizer2D.drawLine(var8, var9, this.field_l + var8, var9 + this.field_d, 1);
-            Rasterizer2D.drawLine(var8 + this.field_l, var9, var8, var9 + this.field_d, 1);
+            Rasterizer2D.drawLine(var8, var9, this.boxWidth + var8, var9 + this.boxHeight, 1);
+            Rasterizer2D.drawLine(var8 + this.boxWidth, var9, var8, var9 + this.boxHeight, 1);
           }
-          if (null == this.field_n) {
+          if (null == this.font) {
             return;
           }
-          var10 = this.field_l + this.field_m + this.field_f;
-          this.field_n.a(widget.text, parentX + (widget.x + var10), this.field_c + (widget.y + parentY), widget.width - (this.field_f + var10), widget.height - (this.field_f << 1), this.field_e, this.field_j, this.field_i, this.field_k, 0);
+          var10 = this.boxWidth + this.boxX + this.labelGap;
+          this.font.a(widget.text, parentX + (widget.x + var10), this.labelOffsetY + (widget.y + parentY), widget.width - (this.labelGap + var10), widget.height - (this.labelGap << 1), this.textPaint, this.shadowPaint, this.horizontalAlignment, this.verticalAlignment, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,22 +109,22 @@ final class ei implements WidgetRenderer {
         field_a = null;
     }
 
-    ei(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        this.field_i = 1;
-        this.field_k = 1;
+    LabeledToggleRenderer(TextFont font, int labelGap, int labelOffsetY, int textPaint, int shadowPaint, int boxX, int boxY, int boxHeight, int boxWidth, int backgroundColor) {
+        this.horizontalAlignment = 1;
+        this.verticalAlignment = 1;
         try {
-          this.field_n = param0;
-          this.field_l = param8;
-          this.field_f = param1;
-          this.field_d = param7;
-          this.field_m = param5;
-          this.field_h = param6;
-          this.field_b = param9;
-          this.field_e = param3;
-          this.field_j = param4;
-          this.field_c = param2;
+          this.font = font;
+          this.boxWidth = boxWidth;
+          this.labelGap = labelGap;
+          this.boxHeight = boxHeight;
+          this.boxX = boxX;
+          this.boxY = boxY;
+          this.backgroundColor = backgroundColor;
+          this.textPaint = textPaint;
+          this.shadowPaint = shadowPaint;
+          this.labelOffsetY = labelOffsetY;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ei.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ei.<init>(" + (font != null ? "{...}" : "null") + ',' + labelGap + ',' + labelOffsetY + ',' + textPaint + ',' + shadowPaint + ',' + boxX + ',' + boxY + ',' + boxHeight + ',' + boxWidth + ',' + backgroundColor + ')');
         }
     }
 

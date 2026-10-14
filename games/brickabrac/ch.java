@@ -120,9 +120,9 @@ final class ch {
           }
           friendName = packet.readCp1252String(-1);
           previousFriendName = packet.readCp1252String(-1);
-          friendEntry = pf.findFriend(false, friendName);
+          friendEntry = RadialSelectorRenderer.findFriend(false, friendName);
           if (friendEntry == null) {
-            friendEntry = pf.findFriend(false, previousFriendName);
+            friendEntry = RadialSelectorRenderer.findFriend(false, previousFriendName);
             if (friendEntry != null) {
               BlankScreen.friendIndex.put((long)ChatMessage.normalizePlayerName((CharSequence) ((Object) friendName), 87).hashCode(), friendEntry, 104);
             }

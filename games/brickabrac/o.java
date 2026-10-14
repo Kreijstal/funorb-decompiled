@@ -19,12 +19,12 @@ final class o {
     }
 
     final static void c(int param0) {
-        ta.uiSounds[2] = GameScreen.field_e.getSoundEffectByName("BaB_move_thruster_loop", "", (byte) 115);
-        ta.uiSounds[5] = GameScreen.field_e.getSoundEffectByName("BaB_plasma_ball_charged", "", (byte) 116);
-        ta.uiSounds[6] = GameScreen.field_e.getSoundEffectByName("BaB_plasma_ball_fire", "", (byte) 108);
-        ta.uiSounds[10] = GameScreen.field_e.getSoundEffectByName("BaB_teleport_00", "", (byte) 108);
-        ta.uiSounds[11] = GameScreen.field_e.getSoundEffectByName("BaB_transform_block", "", (byte) 111);
-        ta.uiSounds[13] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_destroy", "", (byte) 110);
+        NineSliceFrame.uiSounds[2] = GameScreen.field_e.getSoundEffectByName("BaB_move_thruster_loop", "", (byte) 115);
+        NineSliceFrame.uiSounds[5] = GameScreen.field_e.getSoundEffectByName("BaB_plasma_ball_charged", "", (byte) 116);
+        NineSliceFrame.uiSounds[6] = GameScreen.field_e.getSoundEffectByName("BaB_plasma_ball_fire", "", (byte) 108);
+        NineSliceFrame.uiSounds[10] = GameScreen.field_e.getSoundEffectByName("BaB_teleport_00", "", (byte) 108);
+        NineSliceFrame.uiSounds[11] = GameScreen.field_e.getSoundEffectByName("BaB_transform_block", "", (byte) 111);
+        NineSliceFrame.uiSounds[13] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_destroy", "", (byte) 110);
         NanoGameClock.field_p[0] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_00", "", (byte) 124);
         NanoGameClock.field_p[1] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_01", "", (byte) 108);
         NanoGameClock.field_p[2] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_02", "", (byte) 117);
@@ -40,8 +40,8 @@ final class o {
         ef.field_a[14] = GameScreen.field_e.getSoundEffectByName("bab_powerup_stickypaddle_acquire", "", (byte) 121);
         ef.field_a[16] = GameScreen.field_e.getSoundEffectByName("bab_powerup_more_bricks", "", (byte) 109);
         ef.field_a[17] = GameScreen.field_e.getSoundEffectByName("bab_powerup_paddle_grow", "", (byte) 111);
-        ef.field_a[18] = ta.uiSounds[5];
-        ta.uiSounds[8] = GameScreen.field_e.getSoundEffectByName("bab_interface_pixeled_transition", "", (byte) 109);
+        ef.field_a[18] = NineSliceFrame.uiSounds[5];
+        NineSliceFrame.uiSounds[8] = GameScreen.field_e.getSoundEffectByName("bab_interface_pixeled_transition", "", (byte) 109);
         Mesh3D.field_e[0] = GameScreen.field_e.getMusicSampleByName((byte) -103, "bab_wall_generic_alt1_00", "");
         Mesh3D.field_e[1] = GameScreen.field_e.getMusicSampleByName((byte) 67, "bab_wall_generic_alt1_01", "");
         Mesh3D.field_e[2] = GameScreen.field_e.getMusicSampleByName((byte) 96, "bab_wall_generic_alt1_02", "");
@@ -65,13 +65,13 @@ final class o {
         ef.field_a[11] = GameScreen.field_e.getMusicSampleByName((byte) -108, "bab_powerup_more_speed", "");
         ef.field_a[13] = GameScreen.field_e.getMusicSampleByName((byte) -96, "bab_powerup_less_speed", "");
         ef.field_a[15] = GameScreen.field_e.getMusicSampleByName((byte) 127, "bab_powerup_weak_ball", "");
-        ta.uiSounds[7] = GameScreen.field_e.getMusicSampleByName((byte) -128, "BaB_ball_out_of_play", "");
-        ta.uiSounds[12] = GameScreen.field_e.getMusicSampleByName((byte) -112, "bab_powerup_stickypaddle_stick", "");
-        ta.uiSounds[0] = GameScreen.field_e.getMusicSampleByName((byte) -102, "bab_interface_mouseover", "");
-        ta.uiSounds[1] = GameScreen.field_e.getMusicSampleByName((byte) -116, "bab_interface_sfx_volume", "");
-        ta.uiSounds[9] = GameScreen.field_e.getMusicSampleByName((byte) -99, "bab_achievement", "");
-        ta.uiSounds[15] = GameScreen.field_e.getMusicSampleByName((byte) -104, "BaB_aaaaannnnd_go_FX", "");
-        ta.uiSounds[14] = GameScreen.field_e.getMusicSampleByName((byte) -105, "BaB_get_ready_FX", "");
+        NineSliceFrame.uiSounds[7] = GameScreen.field_e.getMusicSampleByName((byte) -128, "BaB_ball_out_of_play", "");
+        NineSliceFrame.uiSounds[12] = GameScreen.field_e.getMusicSampleByName((byte) -112, "bab_powerup_stickypaddle_stick", "");
+        NineSliceFrame.uiSounds[0] = GameScreen.field_e.getMusicSampleByName((byte) -102, "bab_interface_mouseover", "");
+        NineSliceFrame.uiSounds[1] = GameScreen.field_e.getMusicSampleByName((byte) -116, "bab_interface_sfx_volume", "");
+        NineSliceFrame.uiSounds[9] = GameScreen.field_e.getMusicSampleByName((byte) -99, "bab_achievement", "");
+        NineSliceFrame.uiSounds[15] = GameScreen.field_e.getMusicSampleByName((byte) -104, "BaB_aaaaannnnd_go_FX", "");
+        NineSliceFrame.uiSounds[14] = GameScreen.field_e.getMusicSampleByName((byte) -105, "BaB_get_ready_FX", "");
     }
 
     public static void b(int param0) {
@@ -93,7 +93,7 @@ final class o {
     final static void a(int param0) {
         int var1 = IntArrayRequest.a((byte) -89);
         int var2 = ClientException.b(param0 + 29830);
-        IntKeyIndex.field_c.a((hn.field_a << 1) + var1, var2 + (bh.field_vb << 1), -hn.field_a + np.field_b, false, -bh.field_vb + CachedArchiveSource.field_r);
+        IntKeyIndex.field_c.paintFrame((hn.field_a << 1) + var1, var2 + (bh.field_vb << 1), -hn.field_a + np.field_b, false, -bh.field_vb + CachedArchiveSource.field_r);
         if (param0 == -24435) {
           WidgetLayerStack.h(param0 ^ 8147);
           return;

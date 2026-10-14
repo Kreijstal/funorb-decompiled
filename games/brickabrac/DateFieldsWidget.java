@@ -260,11 +260,11 @@ final class DateFieldsWidget extends DateInputWidget {
           }
         }
         if (VolcanicBackground.field_v.pressedButton != 0) {
-          if (1 == w.field_n.length &&
-            pf.field_i != w.field_n[0]) {
-            pf.field_i = w.field_n[0];
+          if (1 == ScreenshotViewer.field_n.length &&
+            RadialSelectorRenderer.field_i != ScreenshotViewer.field_n[0]) {
+            RadialSelectorRenderer.field_i = ScreenshotViewer.field_n[0];
           }
-          pl.requestCreateGame(param3, Brick.field_O, pf.field_i, true, 0, (byte) -102);
+          pl.requestCreateGame(param3, Brick.field_O, RadialSelectorRenderer.field_i, true, 0, (byte) -102);
         }
         if (0 != nh.field_a.pressedButton) {
           sc.field_c = false;

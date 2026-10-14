@@ -4,7 +4,7 @@
 final class IntKeyIndex {
     static String field_d;
     static String field_a;
-    static ta field_c;
+    static NineSliceFrame field_c;
     static RgbSprite[] chocCentreSprites;
     static int field_b;
     private int[] entries;
@@ -63,7 +63,7 @@ final class IntKeyIndex {
         NanoGameClock.field_l = false;
         CheckboxWidgetRenderer.a(param0, true);
         MusicVoice.field_l = ej.field_P;
-        ik.field_g = ej.field_P;
+        IntrusiveHashIterator.field_g = ej.field_P;
     }
 
     final static boolean a(byte param0) {

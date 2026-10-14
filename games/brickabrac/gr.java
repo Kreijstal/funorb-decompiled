@@ -85,8 +85,8 @@ final class gr {
         } else {
           bq.field_e = JungleBackground.field_v;
           ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
-          FullscreenFailureKind.field_c = dg.field_b;
-          Ball.field_w = dg.field_e;
+          FullscreenFailureKind.field_c = MultiValueSliderRenderer.field_b;
+          Ball.field_w = MultiValueSliderRenderer.field_e;
           WidgetLayer.field_J = Ball.field_D;
           TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;
           nj.field_l = pa.field_m;

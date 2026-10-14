@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-interface vc {
+interface GameLayerController {
     public abstract void renderGameLayer(int obfuscationGuard);
 
     public abstract boolean b(int param0);

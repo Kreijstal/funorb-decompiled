@@ -91,7 +91,7 @@ final class LevelPack {
           if (obfuscationGuard != 0) {
             LevelPack.b(-40);
           }
-          stackIn_5_0 = (pf.findFriend(false, name) != null);
+          stackIn_5_0 = (RadialSelectorRenderer.findFriend(false, name) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

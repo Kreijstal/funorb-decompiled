@@ -131,12 +131,12 @@ final class CacheIoWorker implements Runnable {
           var12 = 0;
           for (var13 = 0; 6 > var13; var13++) {
             if (var13 >= 5 ||
-              null != ik.field_i[var13]) {
+              null != IntrusiveHashIterator.field_i[var13]) {
               var14 = 3 + (2 + DualLinkDeque.field_d.height - 6) * var12 / (ContentTransitionLayer.field_pb + 1);
               var12++;
               var7Lifetime1 = -var14 + 3 + (var12 * (2 + (DualLinkDeque.field_d.height - 6)) / (ContentTransitionLayer.field_pb + 1) - 2);
               if (5 > var13) {
-                ik.field_i[var13].setBounds(var7Lifetime1, var14, var6_int, var9, (byte) 64);
+                IntrusiveHashIterator.field_i[var13].setBounds(var7Lifetime1, var14, var6_int, var9, (byte) 64);
                 HalloweenBackground.field_w[var13].setBounds(var7Lifetime1, 0, param1, -param1 + var10, (byte) 64);
                 vj.field_a[var13].setBounds(-param5 + (var7Lifetime1 - param5), param5, var10, param2, (byte) 64);
                 QuickChatPhraseDefinition.field_F[var13].setBounds(-param5 - param5 + var7Lifetime1, param5, var11, -var11 + var9 - param1, (byte) 64);

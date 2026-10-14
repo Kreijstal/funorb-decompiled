@@ -41,12 +41,12 @@ final class TableNameEntry {
               var3_int = 1;
               GameplayAudioEvent.redrawRequested = false;
             }
-            po.a(ArchiveNetworkRequest.d((byte) 103), sb.field_f, RichTextLayout.b(false), var3_int != 0, 0);
+            po.a(ArchiveNetworkRequest.d((byte) 103), BrickGameLayerController.field_f, RichTextLayout.b(false), var3_int != 0, 0);
             return;
           }
           if (!BubbleDistortion.e((byte) -94)) {
             Rasterizer2D.clear();
-            dg.a(false, 240, 320);
+            MultiValueSliderRenderer.a(false, 240, 320);
             ck.a(param1, 0, 14209, 0);
             return;
           }

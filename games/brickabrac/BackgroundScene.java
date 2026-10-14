@@ -141,7 +141,7 @@ abstract class BackgroundScene {
             return;
           }
         }
-        if (!m.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, ji.field_a, SoundPlayback.soundCache)) {
+        if (!m.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, IterableIntrusiveHashTable.field_a, SoundPlayback.soundCache)) {
           return;
         }
         if (OpacityWidget.pendingMusicLoads > 0) {

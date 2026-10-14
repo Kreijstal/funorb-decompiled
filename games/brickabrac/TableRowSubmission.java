@@ -52,7 +52,7 @@ final class TableRowSubmission extends IntrusiveNode {
                 var10_int = param0[param8];
                 incrementValue$1 = param8;
                 param8++;
-                param0[incrementValue$1] = LevelSelectScreen.d(ik.a(var11 * ik.a(var10_int, 65280) >> 8, 65280), LevelSelectScreen.d(ik.a(-16777216, var10_int), ik.a(16711935, ik.a(var10_int, 16711935) * var11 >> 8)));
+                param0[incrementValue$1] = LevelSelectScreen.d(IntrusiveHashIterator.a(var11 * IntrusiveHashIterator.a(var10_int, 65280) >> 8, 65280), LevelSelectScreen.d(IntrusiveHashIterator.a(-16777216, var10_int), IntrusiveHashIterator.a(16711935, IntrusiveHashIterator.a(var10_int, 16711935) * var11 >> 8)));
               } else {
                 param8++;
               }

@@ -50,7 +50,7 @@ final class AgeValidator extends TextFieldValidator {
               for (var14Lifetime1 = 0; var14Lifetime1 < param3; var14Lifetime1++) {
                 if (var13_int >= param8) {
                   var20 = param0[param12 + var13_int];
-                  param0[param12 + var13_int] = ik.a(var17 * ik.a(65280, var20) + var19, 16711680) + ik.a(ik.a(var20, 16711935) * var17 + var18, -16711936) >>> 8;
+                  param0[param12 + var13_int] = IntrusiveHashIterator.a(var17 * IntrusiveHashIterator.a(65280, var20) + var19, 16711680) + IntrusiveHashIterator.a(IntrusiveHashIterator.a(var20, 16711935) * var17 + var18, -16711936) >>> 8;
                 }
                 var13_int++;
               }
@@ -64,7 +64,7 @@ final class AgeValidator extends TextFieldValidator {
               for (var14Lifetime1Lifetime1 = 0; var14Lifetime1Lifetime1 < param3; var14Lifetime1Lifetime1++) {
                 if (var13_int < param2) {
                   var20Lifetime1 = param0[param12 + var13_int];
-                  param0[param12 + var13_int] = ik.a(-16711936, var17 * ik.a(var20Lifetime1, 16711935) + var18) + ik.a(var19 + ik.a(var20Lifetime1, 65280) * var17, 16711680) >>> 8;
+                  param0[param12 + var13_int] = IntrusiveHashIterator.a(-16711936, var17 * IntrusiveHashIterator.a(var20Lifetime1, 16711935) + var18) + IntrusiveHashIterator.a(var19 + IntrusiveHashIterator.a(var20Lifetime1, 65280) * var17, 16711680) >>> 8;
                 }
                 var13_int++;
               }
@@ -204,8 +204,8 @@ final class AgeValidator extends TextFieldValidator {
             var4 = ChatMessage.normalizePlayerName(param1, param2 + 111);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!ik.isNameSeparator((byte) -9, var4.charAt(0)) &&
-                !ik.isNameSeparator((byte) -9, var4.charAt(-1 + var4.length()))) {
+              if (!IntrusiveHashIterator.isNameSeparator((byte) -9, var4.charAt(0)) &&
+                !IntrusiveHashIterator.isNameSeparator((byte) -9, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 if (param2 != 3) {
                   stackIn_22_0 = (String) null;
@@ -213,7 +213,7 @@ final class AgeValidator extends TextFieldValidator {
                 }
                 for (var6 = 0; var6 < param1.length(); var6++) {
                   var7 = param1.charAt(var6);
-                  if (ik.isNameSeparator((byte) -9, (char) var7)) {
+                  if (IntrusiveHashIterator.isNameSeparator((byte) -9, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;

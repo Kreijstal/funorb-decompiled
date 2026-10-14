@@ -64,12 +64,12 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
           var4 = ChatMessage.normalizePlayerName(name, 67);
           if (var4 != null &&
             var4.length() >= 1) {
-            if (!ik.isNameSeparator((byte) -9, var4.charAt(0)) &&
-              !ik.isNameSeparator((byte) -9, var4.charAt(var4.length() - 1))) {
+            if (!IntrusiveHashIterator.isNameSeparator((byte) -9, var4.charAt(0)) &&
+              !IntrusiveHashIterator.isNameSeparator((byte) -9, var4.charAt(var4.length() - 1))) {
               var5 = 0;
               for (var6 = startIndex; name.length() > var6; var6++) {
                 var7 = name.charAt(var6);
-                if (!ik.isNameSeparator((byte) -9, (char) var7)) {
+                if (!IntrusiveHashIterator.isNameSeparator((byte) -9, (char) var7)) {
                   var5 = 0;
                 } else {
                   var5++;

@@ -364,7 +364,7 @@ final class QuickChatMenu extends UiComponent {
                 if (tm.getChatFilter(effectiveChannel, (byte) 18) == 2) {
                   DirectByteStorage.updateChatFilter(0, filterOpcode, 1, effectiveChannel);
                 }
-                c.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ng.quickChatChannel, messageOpcode, (String) null);
+                GrowableIntList.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ng.quickChatChannel, messageOpcode, (String) null);
                 MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, qn.field_n, DualLinkNode.quickChatRecipient, ng.quickChatChannel);
                 rd.a(-1);
                 bh.m(-69);
@@ -1158,7 +1158,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime109 = gr.a(!param0, "cool");
           if (null != var2Lifetime109) {
-            qi.field_N = MenuButton.a(var2Lifetime109, (byte) 95);
+            MultiValueSliderWidget.field_N = MenuButton.a(var2Lifetime109, (byte) 95);
           }
           var2Lifetime110 = gr.a(true, "awesome");
           if (null != var2Lifetime110) {
@@ -1298,7 +1298,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime144 = gr.a(true, "explain_welcome");
           if (null != var2Lifetime144) {
-            sb.field_d = MenuButton.a(var2Lifetime144, (byte) 78);
+            BrickGameLayerController.field_d = MenuButton.a(var2Lifetime144, (byte) 78);
           }
           var2Lifetime145 = gr.a(true, "explain_lateral_move");
           if (var2Lifetime145 != null) {

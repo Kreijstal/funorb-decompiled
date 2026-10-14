@@ -12,7 +12,7 @@ final class MotionWaypoint extends MovingBody {
         if (param0) {
           return (String) null;
         }
-        if (MusicEnvelope.field_f == ik.field_g) {
+        if (MusicEnvelope.field_f == IntrusiveHashIterator.field_g) {
           return VerticalScrollbar.field_Qb;
         }
         return dl.field_e;

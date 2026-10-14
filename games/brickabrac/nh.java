@@ -7,7 +7,7 @@ final class nh {
     static int receivedChatBadge;
     static QuickChatPhraseRegistry quickChatPhrases;
 
-    final static void a(int param0, int param1, int param2, int param3, RgbSprite[] param4, int param5) {
+    final static void paintNineSliceFrame(int width, int height, int obfuscationGuard, int x, RgbSprite[] sprites, int y) {
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_18_0 = 0;
@@ -40,85 +40,85 @@ final class nh {
         int var20Lifetime4;
         var22 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param4 == null) {
+          if (sprites == null) {
             return;
           }
-          if (param0 > 0 &&
-            param1 > 0) {
-            if (param4[3] != null) {
-              stackIn_10_0 = param4[3].canvasWidth;
+          if (width > 0 &&
+            height > 0) {
+            if (sprites[3] != null) {
+              stackIn_10_0 = sprites[3].canvasWidth;
             } else {
               stackIn_10_0 = 0;
             }
             var6_int = stackIn_10_0;
-            if (param4[5] == null) {
+            if (sprites[5] == null) {
               stackIn_13_0 = 0;
             } else {
-              stackIn_13_0 = param4[5].canvasWidth;
+              stackIn_13_0 = sprites[5].canvasWidth;
             }
             var7 = stackIn_13_0;
-            if (param2 != -40) {
+            if (obfuscationGuard != -40) {
               return;
             }
-            if (null == param4[1]) {
+            if (null == sprites[1]) {
               stackIn_18_0 = 0;
             } else {
-              stackIn_18_0 = param4[1].canvasHeight;
+              stackIn_18_0 = sprites[1].canvasHeight;
             }
             var8 = stackIn_18_0;
-            if (param4[7] != null) {
-              stackIn_21_0 = param4[7].canvasHeight;
+            if (sprites[7] != null) {
+              stackIn_21_0 = sprites[7].canvasHeight;
             } else {
               stackIn_21_0 = 0;
             }
             var9 = stackIn_21_0;
-            var10 = param0 + param3;
-            var11 = param5 + param1;
-            var12 = var6_int + param3;
+            var10 = width + x;
+            var11 = y + height;
+            var12 = var6_int + x;
             var13 = -var7 + var10;
-            var14 = var8 + param5;
+            var14 = var8 + y;
             var15 = var11 - var9;
             var16 = var12;
             var17 = var13;
             if (var16 > var17) {
-              var17 = param0 * var6_int / (var7 + var6_int) + param3;
-              var16 = param0 * var6_int / (var7 + var6_int) + param3;
+              var17 = width * var6_int / (var7 + var6_int) + x;
+              var16 = width * var6_int / (var7 + var6_int) + x;
             }
             var18 = var14;
             var19 = var15;
             if (var19 < var18) {
-              var19 = param1 * var8 / (var8 + var9) + param5;
-              var18 = param1 * var8 / (var8 + var9) + param5;
+              var19 = height * var8 / (var8 + var9) + y;
+              var18 = height * var8 / (var8 + var9) + y;
             }
             Rasterizer2D.saveClip(QuickChatPhraseRegistry.field_g);
-            if (null != param4[0]) {
-              Rasterizer2D.intersectClip(param3, param5, var16, var18);
-              param4[0].drawTransparent(param3, param5);
+            if (null != sprites[0]) {
+              Rasterizer2D.intersectClip(x, y, var16, var18);
+              sprites[0].drawTransparent(x, y);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
-            if (null != param4[2]) {
-              Rasterizer2D.intersectClip(var17, param5, var10, var18);
-              param4[2].drawTransparent(var13, param5);
+            if (null != sprites[2]) {
+              Rasterizer2D.intersectClip(var17, y, var10, var18);
+              sprites[2].drawTransparent(var13, y);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
-            if (null != param4[6]) {
-              Rasterizer2D.intersectClip(param3, var19, var16, var11);
-              param4[6].drawTransparent(param3, var15);
+            if (null != sprites[6]) {
+              Rasterizer2D.intersectClip(x, var19, var16, var11);
+              sprites[6].drawTransparent(x, var15);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
-            if (param4[8] != null) {
+            if (sprites[8] != null) {
               Rasterizer2D.intersectClip(var17, var19, var10, var11);
-              param4[8].drawTransparent(var13, var15);
+              sprites[8].drawTransparent(var13, var15);
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
             }
             boolean decompiledFrameCompleted3 = true;
-            if (param4[1] != null &&
-              0 != param4[1].canvasWidth) {
-              Rasterizer2D.intersectClip(var16, param5, var17, var18);
+            if (sprites[1] != null &&
+              0 != sprites[1].canvasWidth) {
+              Rasterizer2D.intersectClip(var16, y, var17, var18);
               var20 = var12;
               while (var13 > var20) {
-                param4[1].drawTransparent(var20, param5);
-                var20 = var20 + param4[1].canvasWidth;
+                sprites[1].drawTransparent(var20, y);
+                var20 = var20 + sprites[1].canvasWidth;
                 if (var22 != 0) {
                   decompiledFrameCompleted3 = false;
                   break;
@@ -129,13 +129,13 @@ final class nh {
               }
             }
             boolean decompiledFrameCompleted2 = true;
-            if (param4[7] != null &&
-              param4[7].canvasWidth != 0) {
+            if (sprites[7] != null &&
+              sprites[7].canvasWidth != 0) {
               Rasterizer2D.intersectClip(var16, var19, var17, var11);
               var20Lifetime1 = var12;
               while (var13 > var20Lifetime1) {
-                param4[7].drawTransparent(var20Lifetime1, var15);
-                var20Lifetime1 = var20Lifetime1 + param4[7].canvasWidth;
+                sprites[7].drawTransparent(var20Lifetime1, var15);
+                var20Lifetime1 = var20Lifetime1 + sprites[7].canvasWidth;
                 if (var22 != 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -146,13 +146,13 @@ final class nh {
               }
             }
             boolean decompiledFrameCompleted1 = true;
-            if (param4[3] != null &&
-              param4[3].canvasHeight != 0) {
-              Rasterizer2D.intersectClip(param3, var18, var16, var19);
+            if (sprites[3] != null &&
+              sprites[3].canvasHeight != 0) {
+              Rasterizer2D.intersectClip(x, var18, var16, var19);
               var20Lifetime2 = var14;
               while (var20Lifetime2 < var15) {
-                param4[3].drawTransparent(param3, var20Lifetime2);
-                var20Lifetime2 = var20Lifetime2 + param4[3].canvasHeight;
+                sprites[3].drawTransparent(x, var20Lifetime2);
+                var20Lifetime2 = var20Lifetime2 + sprites[3].canvasHeight;
                 if (var22 != 0) {
                   decompiledFrameCompleted1 = false;
                   break;
@@ -163,13 +163,13 @@ final class nh {
               }
             }
             boolean decompiledFrameCompleted0 = true;
-            if (null != param4[5] &&
-              param4[5].canvasHeight != 0) {
+            if (null != sprites[5] &&
+              sprites[5].canvasHeight != 0) {
               Rasterizer2D.intersectClip(var17, var18, var10, var19);
               var20Lifetime3 = var14;
               while (var15 > var20Lifetime3) {
-                param4[5].drawTransparent(var13, var20Lifetime3);
-                var20Lifetime3 = var20Lifetime3 + param4[5].canvasHeight;
+                sprites[5].drawTransparent(var13, var20Lifetime3);
+                var20Lifetime3 = var20Lifetime3 + sprites[5].canvasHeight;
                 if (var22 != 0) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -179,9 +179,9 @@ final class nh {
                 Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               }
             }
-            if (null != param4[4] &&
-              param4[4].canvasWidth != 0 &&
-              param4[4].canvasHeight != 0) {
+            if (null != sprites[4] &&
+              sprites[4].canvasWidth != 0 &&
+              sprites[4].canvasHeight != 0) {
               Rasterizer2D.intersectClip(var16, var18, var17, var19);
               var20Lifetime4 = var14;
               while (var20Lifetime4 < var15) {
@@ -190,10 +190,10 @@ final class nh {
                 }
                 var21 = var12;
                 while (var21 < var13) {
-                  param4[4].drawTransparent(var21, var20Lifetime4);
-                  var21 = var21 + param4[4].canvasWidth;
+                  sprites[4].drawTransparent(var21, var20Lifetime4);
+                  var21 = var21 + sprites[4].canvasWidth;
                 }
-                var20Lifetime4 = var20Lifetime4 + param4[4].canvasHeight;
+                var20Lifetime4 = var20Lifetime4 + sprites[4].canvasHeight;
               }
               Rasterizer2D.restoreClip(QuickChatPhraseRegistry.field_g);
               return;
@@ -205,13 +205,13 @@ final class nh {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
           stackIn_88_0 = var6;
-          stackIn_88_1 = new StringBuilder().append("nh.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_88_1 = new StringBuilder().append("nh.D(").append(width).append(',').append(height).append(',').append(obfuscationGuard).append(',').append(x).append(',');
+          if (sprites == null) {
             stackIn_89_2 = "null";
           } else {
             stackIn_89_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_88_0), ((StringBuilder) (Object) stackIn_88_1).append(stackIn_89_2).append(',').append(y).append(')').toString());
         }
     }
 
@@ -341,9 +341,9 @@ final class nh {
           if (o.currentLobbyGame != null) {
             boolean decompiledFrameRemainder1 = true;
             GameUiController.field_e.enabled = true;
-            var23 = pf.field_h;
+            var23 = RadialSelectorRenderer.field_h;
             var27 = var23;
-            pf.field_h.height = 0;
+            RadialSelectorRenderer.field_h.height = 0;
             var27.width = 0;
             DraggableWidget.field_K.height = 0;
             var6 = DraggableWidget.field_K;
@@ -362,32 +362,32 @@ final class nh {
             if (decompiledFrameRemainder1) {
               ba.field_v.text = ba.field_x.toUpperCase();
               var9 = (MultiplayerMatch.field_d.width + 2) / 2;
-              pf.field_h.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, -2 + var9, (byte) 64);
+              RadialSelectorRenderer.field_h.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, -2 + var9, (byte) 64);
               if (o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
-                pf.field_h.text = GameCanvas.field_d.toUpperCase();
-                pf.field_h.enabled = false;
+                RadialSelectorRenderer.field_h.text = GameCanvas.field_d.toUpperCase();
+                RadialSelectorRenderer.field_h.enabled = false;
                 if (var19 != 0) {
-                  pf.field_h.text = SecondaryNodeQueue.field_a.toUpperCase();
-                  pf.field_h.enabled = true;
+                  RadialSelectorRenderer.field_h.text = SecondaryNodeQueue.field_a.toUpperCase();
+                  RadialSelectorRenderer.field_h.enabled = true;
                 }
               } else {
-                pf.field_h.text = SecondaryNodeQueue.field_a.toUpperCase();
-                pf.field_h.enabled = true;
+                RadialSelectorRenderer.field_h.text = SecondaryNodeQueue.field_a.toUpperCase();
+                RadialSelectorRenderer.field_h.enabled = true;
               }
-              pf.field_h.frameSprites = fm.field_b.frameSprites;
+              RadialSelectorRenderer.field_h.frameSprites = fm.field_b.frameSprites;
               if (uf.pendingJoinRequestCount > 0) {
                 boolean decompiledSharedTail1 = (uf.pendingJoinRequestCount != 1);
                 if (!decompiledSharedTail1) {
-                  var10_ref_String = ei.field_g;
+                  var10_ref_String = LabeledToggleRenderer.field_g;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
                   var10_ref_String = rd.a(LevelPackLoader.field_h, new String[]{Integer.toString(uf.pendingJoinRequestCount)}, (byte) 103);
                 }
-                pf.field_h.text = pf.field_h.text + "<br>" + var10_ref_String;
+                RadialSelectorRenderer.field_h.text = RadialSelectorRenderer.field_h.text + "<br>" + var10_ref_String;
                 if ((BirthDateValidator.field_h & 16) == 0 &&
                   !hc.field_c) {
-                  pf.field_h.frameSprites = fm.field_b.activeFrameSprites;
+                  RadialSelectorRenderer.field_h.frameSprites = fm.field_b.activeFrameSprites;
                 }
               }
               DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var9, MultiplayerMatch.field_d.width - var9, (byte) 64);
@@ -659,13 +659,13 @@ final class nh {
                 if (var16 != 0) {
                   DraggableWidget.field_K.enabled = false;
                   if (DraggableWidget.field_K.hovered) {
-                    if (sb.field_c.field_d.selectedTab != 0) {
-                      WidgetTextLayout.field_e = rd.a(ta.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
+                    if (BrickGameLayerController.field_c.field_d.selectedTab != 0) {
+                      WidgetTextLayout.field_e = rd.a(NineSliceFrame.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
                       if (var19 != 0) {
-                        WidgetTextLayout.field_e = ei.field_a;
+                        WidgetTextLayout.field_e = LabeledToggleRenderer.field_a;
                       }
                     } else {
-                      WidgetTextLayout.field_e = ei.field_a;
+                      WidgetTextLayout.field_e = LabeledToggleRenderer.field_a;
                     }
                   }
                 }
@@ -692,14 +692,14 @@ final class nh {
           ((UiComponent) (Object) stackIn_184_0).updateRoot(stackIn_185_1, -15211);
           if (!param0) {
             var20 = (RgbSprite[]) null;
-            nh.a(-9, -55, 119, -100, (RgbSprite[]) null, -102);
+            nh.paintNineSliceFrame(-9, -55, 119, -100, (RgbSprite[]) null, -102);
           }
-          sb.field_c.field_d.processTabPresses(0);
+          BrickGameLayerController.field_c.field_d.processTabPresses(0);
           if (null != o.currentLobbyGame) {
             if (GameUiController.field_e.pressedButton != 0) {
               vg.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 123), false, param3);
             }
-            if (pf.field_h.pressedButton != 0) {
+            if (RadialSelectorRenderer.field_h.pressedButton != 0) {
               hc.field_c = true;
             }
             if (DraggableWidget.field_K.pressedButton != 0) {

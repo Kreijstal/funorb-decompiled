@@ -59,8 +59,8 @@ final class WidgetLayerStack extends SingleChildWidget {
         volcanicMidSprite = null;
         field_G = null;
         if (param0 > -91) {
-          ta var2 = (ta) null;
-          WidgetLayerStack.a(-80, 69, (ta) null, 50, (ta) null, -32);
+          NineSliceFrame var2 = (NineSliceFrame) null;
+          WidgetLayerStack.a(-80, 69, (NineSliceFrame) null, 50, (NineSliceFrame) null, -32);
         }
         field_H = null;
         field_K = null;
@@ -149,7 +149,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             }
             var5 = SingleChildWidget.a(var3, false);
             if (var5 == null) {
-              stackIn_15_0 = ji.a(var4, 0);
+              stackIn_15_0 = IterableIntrusiveHashTable.a(var4, 0);
               return stackIn_15_0;
             }
             stackIn_13_0 = var5;
@@ -171,7 +171,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, int param1, ta param2, int param3, ta param4, int param5) {
+    final static void a(int param0, int param1, NineSliceFrame param2, int param3, NineSliceFrame param4, int param5) {
         try {
           kn.field_y = param1;
           cn.field_c = param5;
@@ -180,7 +180,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           }
           cd.field_c = param4;
           DropTargetWidget.field_H = param0;
-          c.field_l = param2;
+          GrowableIntList.field_l = param2;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -206,7 +206,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         int stackIn_22_0 = 0;
         String stackIn_27_0 = null;
         String stackIn_33_0 = null;
-        ta stackIn_44_0 = null;
+        NineSliceFrame stackIn_44_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -217,7 +217,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ta var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         PlayerBoard var11 = null;
         int var7Lifetime1;
@@ -251,10 +251,10 @@ final class WidgetLayerStack extends SingleChildWidget {
             var6 = ValidationStatus.field_i[var3];
             if (2 == ArchiveFetchClient.field_p &&
               1 == var2) {
-              if (QuickChatPhraseRegistry.field_k.length >= ik.field_b.length) {
+              if (QuickChatPhraseRegistry.field_k.length >= IntrusiveHashIterator.field_b.length) {
                 stackIn_19_0 = QuickChatPhraseRegistry.field_k.length;
               } else {
-                stackIn_19_0 = ik.field_b.length;
+                stackIn_19_0 = IntrusiveHashIterator.field_b.length;
               }
               var7 = stackIn_19_0;
               if (HuffmanCodec.field_h.length <= SingleChildWidget.field_F.length) {
@@ -292,11 +292,11 @@ final class WidgetLayerStack extends SingleChildWidget {
               if (UiComponent.field_H.selectedIndex != var4) {
                 stackIn_44_0 = cd.field_c;
               } else {
-                stackIn_44_0 = c.field_l;
+                stackIn_44_0 = GrowableIntList.field_l;
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a((cn.field_c << 1) + var7Lifetime1, b.field_c + (DropTargetWidget.field_H << 1), -cn.field_c + var8Lifetime1, false, var1_int);
+                var9.paintFrame((cn.field_c << 1) + var7Lifetime1, b.field_c + (DropTargetWidget.field_H << 1), -cn.field_c + var8Lifetime1, false, var1_int);
               }
               var1_int = var1_int + DropTargetWidget.field_H;
             }

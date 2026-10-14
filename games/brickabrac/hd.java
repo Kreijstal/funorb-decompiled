@@ -34,7 +34,7 @@ final class hd {
         packet.backfillByteLength((byte) 121, -payloadStart + packet.position);
     }
 
-    final static void a(int param0, ta param1, int param2, int param3) {
+    final static void a(int param0, NineSliceFrame param1, int param2, int param3) {
         try {
           IntKeyIndex.field_c = param1;
           int var4_int = -108 % ((46 - param0) / 37);
@@ -64,7 +64,7 @@ final class hd {
         QuickChatHelpDialog.field_Sb = true;
         ValidationIconWidget.field_N = true;
         wc.field_b = true;
-        c.field_i = un.field_e;
+        GrowableIntList.field_i = un.field_e;
     }
 
     static {

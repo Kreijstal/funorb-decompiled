@@ -42,7 +42,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   pp.field_a = -1;
                   jl.field_a = 250;
                   ga.field_i = 0;
-                  c.field_i = un.field_e;
+                  GrowableIntList.field_i = un.field_e;
                 }
               }
             } else {
@@ -54,7 +54,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     pp.field_a = -1;
                     ga.field_i = 1;
                     jl.field_a = 250;
-                    c.field_i = un.field_e;
+                    GrowableIntList.field_i = un.field_e;
                     SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                     tb.field_eb = va.field_d;
                   }
@@ -115,8 +115,8 @@ final class DelegatingCanvas extends java.awt.Canvas {
               if (0 == fieldTemp$4) {
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 pp.field_a = -1;
-                c.field_i = un.field_e;
-                tb.field_eb = sb.field_d;
+                GrowableIntList.field_i = un.field_e;
+                tb.field_eb = BrickGameLayerController.field_d;
                 jl.field_a = 250;
                 ga.field_i = 14;
               }

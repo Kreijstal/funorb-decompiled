@@ -126,7 +126,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               var8_int = 88 / ((param1 - 24) / 56);
               LoginPanel.field_W = 0;
               RichTextLayout.field_m = param4;
-              be.field_g = param2;
+              WidgetPaintStyle.field_g = param2;
               mc.field_d = param2;
               SecondaryHashTable.field_i = EmailConfirmationValidator.e((byte) -64);
               dupTemp$0 = new PlatformServices(param0, param5, param6, true);
@@ -408,7 +408,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 }
                 sh.b(1);
                 this.c(false);
-                BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.field_D), to.field_b, -2414, be.field_g);
+                BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.field_D), to.field_b, -2414, WidgetPaintStyle.field_g);
                 this.initializeClient(false);
                 MenuSelection.gameClock = ja.createGameClock((byte) 123);
                 do {
@@ -422,12 +422,12 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    c.cyclesDue = MenuSelection.gameClock.waitAndAdvance(ResourceRequest.tickDurationNanos, (byte) -71);
+                    GrowableIntList.cyclesDue = MenuSelection.gameClock.waitAndAdvance(ResourceRequest.tickDurationNanos, (byte) -71);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
                   do {
-                    if (!(c.cyclesDue > var3)) {
+                    if (!(GrowableIntList.cyclesDue > var3)) {
                       this.runRenderFrame(0);
                       IntNode.a(-4317, AccountMessageDialog.field_ub, CacheIoRequest.field_D);
                       break;
@@ -480,7 +480,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if (50 < fieldTemp$1) {
             GameplayAudioEvent.redrawRequested = true;
             MouseWheelSource.resizeFrameCounter = MouseWheelSource.resizeFrameCounter - 50;
-            CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
+            CacheIoRequest.field_D.setSize(to.field_b, WidgetPaintStyle.field_g);
             CacheIoRequest.field_D.setVisible(true);
             if (null != MatchingTextValidator.field_o &&
               null == BackgroundRegistry.field_e) {
@@ -664,7 +664,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           CacheIoRequest.field_D = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) CacheIoRequest.field_D));
-          CacheIoRequest.field_D.setSize(to.field_b, be.field_g);
+          CacheIoRequest.field_D.setSize(to.field_b, WidgetPaintStyle.field_g);
           CacheIoRequest.field_D.setVisible(true);
           if (MatchingTextValidator.field_o == var2) {
             var3 = MatchingTextValidator.field_o.getInsets();

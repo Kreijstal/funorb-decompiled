@@ -194,7 +194,7 @@ final class BitPacketBuffer extends PacketBuffer {
               }
             }
             Rasterizer2D.fillRectangleAlpha(7, 280, 510, 45, 0, 96 * var12 / 256);
-            w.field_r.b(7 + (-w.field_r.width + 510) / 2, 260, var12);
+            ScreenshotViewer.field_r.b(7 + (-ScreenshotViewer.field_r.width + 510) / 2, 260, var12);
           }
           if (3 == var24.boardState) {
             ja.a((byte) -113, ClientException.field_b, var8, var9, var24);

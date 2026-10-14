@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cd {
-    static ta field_c;
+    static NineSliceFrame field_c;
     static UiComponent field_d;
     static MusicTrack field_g;
     static String field_f;
@@ -95,7 +95,7 @@ final class cd {
         throw new IllegalStateException();
     }
 
-    final static void a(ta param0, ta param1, int param2, int param3, int param4, int param5) {
+    final static void a(NineSliceFrame param0, NineSliceFrame param1, int param2, int param3, int param4, int param5) {
         GameClock.field_g = param2;
         if (param3 != 7) {
           return;

@@ -91,7 +91,7 @@ final class ContextActionController {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (null == o.currentLobbyGame) {
-            var2 = dg.findLobbyGame(this.gameId, (byte) 61);
+            var2 = MultiValueSliderRenderer.findLobbyGame(this.gameId, (byte) 61);
             if (var2 != null) {
               var3 = var2.displayName;
               if (var2.invitationPending) {
@@ -390,7 +390,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_lobby_rating", (byte) -116);
                 if (var2 != null) {
-                  pf.field_c = MenuButton.a(var2, (byte) 71);
+                  RadialSelectorRenderer.field_c = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("mu_lobby_friend_add", (byte) 61);
                 if (var2 != null) {
@@ -566,7 +566,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("unable_to_send_message_password_b", (byte) -128);
                 if (var2 != null) {
-                  w.field_m = MenuButton.a(var2, (byte) 103);
+                  ScreenshotViewer.field_m = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("mu_chat_lobby_show_all", (byte) 75);
                 if (var2 != null) {
@@ -678,7 +678,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("join_requests_one", (byte) -111);
                 if (null != var2) {
-                  ei.field_g = MenuButton.a(var2, (byte) 86);
+                  LabeledToggleRenderer.field_g = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = nk.a("join_requests_many", (byte) 50);
                 if (var2 != null) {
@@ -790,7 +790,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("you_can_ask_to_join", (byte) 35);
                 if (null != var2) {
-                  be.field_n = MenuButton.a(var2, (byte) 75);
+                  WidgetPaintStyle.field_n = MenuButton.a(var2, (byte) 75);
                 }
                 var2 = nk.a("you_cannot_join_in_progress", (byte) 68);
                 if (var2 != null) {
@@ -838,7 +838,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("multiconst_friends", (byte) 56);
                 if (var2 != null) {
-                  ji.field_g = MenuButton.a(var2, (byte) 88);
+                  IterableIntrusiveHashTable.field_g = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("multiconst_similar_rating", (byte) 55);
                 if (null != var2) {
@@ -934,7 +934,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_1moreratedgame", (byte) 55);
                 if (var2 != null) {
-                  ta.field_a = MenuButton.a(var2, (byte) 119);
+                  NineSliceFrame.field_a = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("gameopt_moreratedgames", (byte) -126);
                 if (null != var2) {
@@ -1022,11 +1022,11 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_playersdontqualify", (byte) 20);
                 if (null != var2) {
-                  ei.field_a = MenuButton.a(var2, (byte) 79);
+                  LabeledToggleRenderer.field_a = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = nk.a("gameopt_playersdontqualify_selectgametab", (byte) 34);
                 if (var2 != null) {
-                  ta.field_d = MenuButton.a(var2, (byte) 85);
+                  NineSliceFrame.field_d = MenuButton.a(var2, (byte) 85);
                 }
                 var2 = nk.a("gameopt_unselectedoptions", (byte) 85);
             }
@@ -1056,7 +1056,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_novalidcombos", (byte) -119);
                 if (var2 != null) {
-                  pf.field_a = MenuButton.a(var2, (byte) 76);
+                  RadialSelectorRenderer.field_a = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("gameopt_pleasetrychanging", (byte) 36);
                 if (var2 != null) {
@@ -1128,7 +1128,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rule_1_2", (byte) -115);
                 if (var2 != null) {
-                  ta.field_c = MenuButton.a(var2, (byte) 118);
+                  NineSliceFrame.field_c = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("rule_1_3", (byte) -114);
                 if (var2 != null) {
@@ -1136,7 +1136,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rule_1_4", (byte) -4);
                 if (null != var2) {
-                  c.field_n = MenuButton.a(var2, (byte) 78);
+                  GrowableIntList.field_n = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = nk.a("rule_pillar_2", (byte) -109);
                 if (null != var2) {
@@ -1444,7 +1444,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create", (byte) 61);
                 if (null != var2) {
-                  c.field_d = MenuButton.a(var2, (byte) 126);
+                  GrowableIntList.field_d = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = nk.a("create_pleasechooseapassword", (byte) -120);
                 if (var2 != null) {
@@ -1896,7 +1896,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("text_lobby_pleaselogin_free", (byte) 63);
                 if (null != var2) {
-                  sb.field_b = MenuButton.a(var2, (byte) 105);
+                  BrickGameLayerController.field_b = MenuButton.a(var2, (byte) 105);
                 }
                 var2 = nk.a("opengl", (byte) -121);
                 if (null != var2) {
@@ -2690,7 +2690,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rating_won", (byte) -117);
                 if (var2 != null) {
-                  be.field_e = MenuButton.a(var2, (byte) 91);
+                  WidgetPaintStyle.field_e = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = nk.a("rating_lost", (byte) -126);
                 if (var2 != null) {
@@ -2798,11 +2798,11 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_accept_beforeaccept", (byte) -125);
                 if (var2 != null) {
-                  dg.field_k = MenuButton.a(var2, (byte) 124);
+                  MultiValueSliderRenderer.field_k = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("fs_button_accept", (byte) 6);
                 if (null != var2) {
-                  c.field_c = MenuButton.a(var2, (byte) 92);
+                  GrowableIntList.field_c = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("fs_accept_afteraccept", (byte) -115);
                 if (var2 != null) {
@@ -2828,7 +2828,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_nonmember", (byte) -123);
                 if (var2 != null) {
-                  up.field_x = MenuButton.a(var2, (byte) 102);
+                  StatefulWidgetRenderer.field_x = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("fs_button_close", (byte) -116);
                 if (var2 != null) {
@@ -3226,7 +3226,7 @@ final class ContextActionController {
           if (null != this.targetName && (Widget.field_p != this.targetId ||
             channel == 2) && 2 == LevelMetadata.field_m) {
             caption = this.getTargetCaption(-12688);
-            friend = pf.findFriend(false, this.targetName);
+            friend = RadialSelectorRenderer.findFriend(false, this.targetName);
             ignoredPlayer = AchievementBrowserScreen.isIgnoredPlayer(121, this.targetName) ? 1 : 0;
             if (friend == null &&
               ignoredPlayer == 0) {

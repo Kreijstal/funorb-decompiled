@@ -23,7 +23,7 @@ final class TextLineLayout {
             return null;
           }
           if (param3 == 1) {
-            stackIn_7_0 = ta.b(param3 ^ 13875);
+            stackIn_7_0 = NineSliceFrame.b(param3 ^ 13875);
             return stackIn_7_0;
           }
           stackIn_5_0 = (RgbSprite) null;
@@ -169,7 +169,7 @@ final class TextLineLayout {
                     } else {
                       var18 = Rasterizer2D.pixels[var8];
                       var19 = (16711935 & var18) * var16 + (var17 & 16711935) * var15 >> 8 & 16711935;
-                      Rasterizer2D.pixels[var8] = ik.a(65280, var16 * ik.a(var18, 65280) + var15 * ik.a(65280, var17) >> 8) + var19;
+                      Rasterizer2D.pixels[var8] = IntrusiveHashIterator.a(65280, var16 * IntrusiveHashIterator.a(var18, 65280) + var15 * IntrusiveHashIterator.a(65280, var17) >> 8) + var19;
                     }
                   }
                   var8++;

@@ -37,7 +37,7 @@ final class ActivityIndicatorWidget extends Widget {
           return;
         }
         try {
-          up.field_z = param6;
+          StatefulWidgetRenderer.field_z = param6;
           gd.field_a = param3;
           u.field_g = param1;
           SoftwareFramebuffer.field_a = param8;

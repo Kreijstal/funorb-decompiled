@@ -227,7 +227,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           var2 == 1) {
           if (AchievementIcon.field_j == 11 &&
             tm.field_a == 0) {
-            ei.b(~param0);
+            LabeledToggleRenderer.b(~param0);
           }
           return var2;
         }
@@ -344,7 +344,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, be.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.affiliateId);
+            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, WidgetPaintStyle.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.affiliateId);
             if (-1 != var5_intLifetime1) {
               RadialSelectorWidget.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, co.field_f);
               DirectByteStorage.field_e = null;
@@ -364,8 +364,8 @@ abstract class GameConnectionShell extends AppletGameShell {
                   FullscreenFailureKind.a(DirectByteStorage.field_e, (byte) -77, var5_intLifetime2);
                   DirectByteStorage.field_e = null;
                 } else {
-                  sb.field_e = sl.field_v;
-                  ei.b(0);
+                  BrickGameLayerController.field_e = sl.field_v;
+                  LabeledToggleRenderer.b(0);
                   AchievementIcon.field_j = 10;
                   LevelPackSelectScreen.field_s = false;
                 }
@@ -390,7 +390,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             AchievementIcon.field_j = 10;
           }
           if (7 == var4) {
-            pf.a(EmailConfirmationValidator.e((byte) -76), false);
+            RadialSelectorRenderer.a(EmailConfirmationValidator.e((byte) -76), false);
           }
           if (param1 != 46) {
             this.gameCrc = 120;
@@ -557,7 +557,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                   }
                 }
               } else {
-                qi.handleAchievementResponse(-1);
+                MultiValueSliderWidget.handleAchievementResponse(-1);
               }
             } else {
               f.handleTableResponse((byte) 7);
@@ -718,7 +718,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (NinjaBackground.mouseWheelSource != null) {
           GameplayAudioEvent.mouseWheelDelta = NinjaBackground.mouseWheelSource.pollRotation(500);
         }
-        if (ik.a(false)) {
+        if (IntrusiveHashIterator.a(false)) {
           var3 = wn.a((byte) -98) * 1200;
           if (this.reconnectRequested ||
             !(wi.c(1) <= var3) &&
@@ -741,7 +741,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             tm.field_a == 0 &&
             AchievementIcon.field_j == 11 &&
             !ui.a(false)) {
-            ei.b(0);
+            LabeledToggleRenderer.b(0);
           }
           if (-1 != tm.field_a &&
             tm.field_a != 0) {
@@ -878,7 +878,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (clientStage == 11) {
           if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.ensureIndex((byte) -127) ||
             !GameplayAudioEvent.field_k.ensureAllGroupsAvailable(98))) {
-            ParisBackground.a((byte) 24, 0.0f, be.a(GameplayAudioEvent.field_k, wn.field_a, 125, FocusableWidget.field_C));
+            ParisBackground.a((byte) 24, 0.0f, WidgetPaintStyle.a(GameplayAudioEvent.field_k, wn.field_a, 125, FocusableWidget.field_C));
             decompiledFrameRemainder0 = false;
           }
           else {

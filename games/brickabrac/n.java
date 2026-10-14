@@ -106,7 +106,7 @@ final class n {
         byte[] var2 = cn.decodedSpriteIndices[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = qp.decodedSpritePalette[ik.a(255, (int) var2[var4_int])];
+          var3[var4_int] = qp.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
@@ -171,9 +171,9 @@ final class n {
           }
           co.a(IntArrayRequest.field_j, false);
           if (nl.pendingLobbyGame != null) {
-            var15 = pf.field_h;
+            var15 = RadialSelectorRenderer.field_h;
             var17 = var15;
-            pf.field_h.height = 0;
+            RadialSelectorRenderer.field_h.height = 0;
             var17.width = 0;
             var5 = DraggableWidget.field_K;
             DraggableWidget.field_K.height = 0;
@@ -185,22 +185,22 @@ final class n {
             var7 = (MultiplayerMatch.field_d.width + 2) / 2;
             AppletGameShell.field_e.setBounds(40, -40 + MultiplayerMatch.field_d.height, 0, var7 - 2, (byte) 64);
             DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var7, MultiplayerMatch.field_d.width - var7, (byte) 64);
-            if (1 == w.field_n.length &&
-              w.field_n[0] == 2) {
+            if (1 == ScreenshotViewer.field_n.length &&
+              ScreenshotViewer.field_n[0] == 2) {
               var8 = 0;
             } else {
               var8 = 0;
               var9_int = 0;
               var10 = 0;
               while (true) {
-                if (var10 < w.field_n.length) {
+                if (var10 < ScreenshotViewer.field_n.length) {
                   stackIn_13_0 = ((rh.matchmakingChoiceMask[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
                   var11_int = stackIn_13_0;
                   if (var11_int != 0) {
                     var9_int++;
                   }
                   if (var11_int != 0 &&
-                    w.field_n[var10] != 2) {
+                    ScreenshotViewer.field_n[var10] != 2) {
                     var8 = 1;
                   } else {
                     var10++;
@@ -301,7 +301,7 @@ final class n {
                       }
                     }
                   }
-                  WidgetTextLayout.field_e = "<col=A00000>" + pf.field_a + "<br>" + AchievementsScreen.field_G + (String) (var9);
+                  WidgetTextLayout.field_e = "<col=A00000>" + RadialSelectorRenderer.field_a + "<br>" + AchievementsScreen.field_G + (String) (var9);
                 }
               }
             }
@@ -315,7 +315,7 @@ final class n {
           stackIn_83_0 = wi.field_j;
           stackIn_84_1 = (param1) && (!param2) && (hc.field_c);
           ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
-          sb.field_c.field_d.processTabPresses(0);
+          BrickGameLayerController.field_c.field_d.processTabPresses(0);
           if (nl.pendingLobbyGame != null) {
             if (GameUiController.field_e.pressedButton != 0) {
               ef.requestReturnToLobby(-22809, param0);

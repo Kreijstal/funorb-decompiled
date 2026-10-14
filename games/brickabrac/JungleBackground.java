@@ -21,7 +21,7 @@ final class JungleBackground extends BackgroundScene {
               ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ef.a(var7.sprite, dg.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
+            ef.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
           }
         } else {
           var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
@@ -29,7 +29,7 @@ final class JungleBackground extends BackgroundScene {
             ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ef.a(var7.sprite, dg.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
+          ef.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
         }
     }
 
@@ -42,7 +42,7 @@ final class JungleBackground extends BackgroundScene {
         if (!param0) {
           this.hasSprites((byte) -1);
         }
-        return up.jungleCentreSprites[param1 - 1];
+        return StatefulWidgetRenderer.jungleCentreSprites[param1 - 1];
     }
 
     final static void a(int param0, LobbyGame param1, boolean param2, boolean param3) {
@@ -231,7 +231,7 @@ final class JungleBackground extends BackgroundScene {
             }
           }
           boolean decompiledFrameCompleted3 = true;
-          if (w.field_n.length >= 2) {
+          if (ScreenshotViewer.field_n.length >= 2) {
             if (param2 &&
               BubbleDistortion.field_z != -1) {
               stackIn_52_0 = 1;
@@ -257,7 +257,7 @@ final class JungleBackground extends BackgroundScene {
             }
             stackIn_63_0 = (param2) ? -1 : 0;
             var7 = stackIn_63_0;
-            while (!(w.field_n.length <= var7)) {
+            while (!(ScreenshotViewer.field_n.length <= var7)) {
               stackIn_117_0 = var6Lifetime1;
               if (var26 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -273,7 +273,7 @@ final class JungleBackground extends BackgroundScene {
               if (var4_int != 0 &&
                 MatchCompleteScreen.field_A[1][1 + var7].pressedButton != 0) {
                 if (!param2) {
-                  var9 = w.field_n[var7];
+                  var9 = ScreenshotViewer.field_n[var7];
                   if (param1.maxPlayers != var9) {
                     var5 = 1;
                     param1.maxPlayers = var9;
@@ -281,7 +281,7 @@ final class JungleBackground extends BackgroundScene {
                 } else {
                   if (var6Lifetime1 == 0) {
                     if (var7 != -1) {
-                      rh.matchmakingChoiceMask[var7 / 8] = (byte)LevelResultSubmission.a((int) rh.matchmakingChoiceMask[var7 / 8], 1 << ik.a(var7, 7));
+                      rh.matchmakingChoiceMask[var7 / 8] = (byte)LevelResultSubmission.a((int) rh.matchmakingChoiceMask[var7 / 8], 1 << IntrusiveHashIterator.a(var7, 7));
                     } else {
                       var9 = 0;
                       while (!(var9 >= rh.matchmakingChoiceMask.length)) {
@@ -293,14 +293,14 @@ final class JungleBackground extends BackgroundScene {
                 }
               }
               if (!param2) {
-                var9 = w.field_n[var7];
+                var9 = ScreenshotViewer.field_n[var7];
                 stackIn_92_0 = MatchCompleteScreen.field_A[1][1 + var7];
                 stackIn_93_1 = (var9 == param1.maxPlayers);
                 stackIn_92_0.selected = stackIn_93_1;
               } else if (var7 == -1) {
                 MatchCompleteScreen.field_A[1][1 + var7].selected = true;
                 var9 = 0;
-                while (w.field_n.length > var9) {
+                while (ScreenshotViewer.field_n.length > var9) {
                   dupTemp$0 = MatchCompleteScreen.field_A[1][var7 + 1];
                   stackIn_105_0 = dupTemp$0;
                   stackOut_97_1 = dupTemp$0.selected;
@@ -563,11 +563,11 @@ final class JungleBackground extends BackgroundScene {
                     if (-1 == var9) {
                       var18 = var6Lifetime2;
                       while (-1 + (var6Lifetime2 + var27.length) > var18) {
-                        PowerUpWarning.matchmakingSettingMask[var18 / 8] = (byte)ik.a((int) PowerUpWarning.matchmakingSettingMask[var18 / 8], ~(1 << ik.a(7, var18)));
+                        PowerUpWarning.matchmakingSettingMask[var18 / 8] = (byte)IntrusiveHashIterator.a((int) PowerUpWarning.matchmakingSettingMask[var18 / 8], ~(1 << IntrusiveHashIterator.a(7, var18)));
                         var18++;
                       }
                     } else {
-                      PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], 1 << ik.a(7, var6Lifetime2 + var9));
+                      PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)LevelResultSubmission.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], 1 << IntrusiveHashIterator.a(7, var6Lifetime2 + var9));
                     }
                     decompiledFrameRemainder1 = false;
                   }
@@ -581,7 +581,7 @@ final class JungleBackground extends BackgroundScene {
                 }
                 if (param2 &&
                   var16Lifetime1 != 0) {
-                  PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)ik.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], ~(1 << ik.a(var9 + var6Lifetime2, 7)));
+                  PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8] = (byte)IntrusiveHashIterator.a((int) PowerUpWarning.matchmakingSettingMask[(var9 + var6Lifetime2) / 8], ~(1 << IntrusiveHashIterator.a(var9 + var6Lifetime2, 7)));
                 }
                 if (var9 >= 0 &&
                   var17.hovered) {
@@ -616,7 +616,7 @@ final class JungleBackground extends BackgroundScene {
                         if (var22_int != 1) {
                           var21 = rd.a(tq.field_e, new String[]{Integer.toString(var22_int)}, (byte) 103);
                         } else {
-                          var21 = ta.field_a;
+                          var21 = NineSliceFrame.field_a;
                         }
                       }
                       if (var12 != 0) {
@@ -813,7 +813,7 @@ final class JungleBackground extends BackgroundScene {
           var3 = (LobbyGame) null;
           JungleBackground.a(81, (LobbyGame) null, true, true);
         }
-        stackIn_13_0 = (null != ch.jungleNearSprite) && (null != dg.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != up.jungleCentreSprites);
+        stackIn_13_0 = (null != ch.jungleNearSprite) && (null != MultiValueSliderRenderer.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != StatefulWidgetRenderer.jungleCentreSprites);
         return stackIn_13_0;
     }
 
@@ -830,7 +830,7 @@ final class JungleBackground extends BackgroundScene {
         RuntimeException decompiledCaughtException = null;
         try {
           DualLinkNode.jungleCapsSprites = new RgbSprite[2][];
-          up.jungleCentreSprites = new RgbSprite[2];
+          StatefulWidgetRenderer.jungleCentreSprites = new RgbSprite[2];
           DualLinkIterator.jungleSegsSprites = new RgbSprite[2][];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -926,19 +926,19 @@ final class JungleBackground extends BackgroundScene {
           return false;
         }
         ch.jungleNearSprite = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);
-        dg.jungleMidSprite = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
+        MultiValueSliderRenderer.jungleMidSprite = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
         np.jungleFarSprite = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
         Brick.jungleSmallSprite = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
         sl.field_D = jh.a(0, ch.jungleNearSprite);
-        HuffmanCodec.field_e = jh.a(0, dg.jungleMidSprite);
+        HuffmanCodec.field_e = jh.a(0, MultiValueSliderRenderer.jungleMidSprite);
         WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
         WidgetTextLayout.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
         DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
         DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
-        up.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
+        StatefulWidgetRenderer.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
         DualLinkNode.jungleCapsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkNode.jungleCapsSprites[0], false);
         DualLinkIterator.jungleSegsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
-        up.jungleCentreSprites[1] = pl.a(-16371, up.jungleCentreSprites[0]);
+        StatefulWidgetRenderer.jungleCentreSprites[1] = pl.a(-16371, StatefulWidgetRenderer.jungleCentreSprites[0]);
         return true;
     }
 

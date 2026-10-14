@@ -167,7 +167,7 @@ final class AchievementIcon extends IntrusiveNode {
                 ValidationMessageWidget.selectedAchievementId = -1;
               }
               if (ValidationMessageWidget.selectedAchievementId != -1) {
-                SoundCache.playUiSound(8, ta.uiSounds[0]);
+                SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
               }
             }
           } else {
@@ -179,7 +179,7 @@ final class AchievementIcon extends IntrusiveNode {
                 ValidationMessageWidget.selectedAchievementId = -1;
               }
               if (ValidationMessageWidget.selectedAchievementId != -1) {
-                SoundCache.playUiSound(8, ta.uiSounds[0]);
+                SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
               }
             }
           }

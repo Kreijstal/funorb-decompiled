@@ -76,7 +76,7 @@ final class Mesh3D {
           sj.field_d = new UiComponent(0L, CappedUrlRequest.field_l);
           sj.field_d.horizontalAlignment = 1;
           MouseWheelSource.field_c = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
-          GameplayScreen.field_u = new UiComponent(0L, ik.field_a, ArchiveSource.field_c);
+          GameplayScreen.field_u = new UiComponent(0L, IntrusiveHashIterator.field_a, ArchiveSource.field_c);
           BirthDateEntryPanel.field_R = new UiComponent(0L, DualLinkNode.field_t);
           QuickChatPhraseRegistry.field_c.addChild(sj.field_d, 0);
           QuickChatPhraseRegistry.field_c.addChild(MouseWheelSource.field_c, 0);

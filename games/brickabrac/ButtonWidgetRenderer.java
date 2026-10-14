@@ -131,7 +131,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                   SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                   var15 = (String) null;
                   var14 = (String) null;
-                  SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                  SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ScreenshotViewer.field_m, (String) null, 2);
                 } else {
                   var5 = ng.quickChatChannel;
                   if (var5 == 0 &&
@@ -141,7 +141,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                   if (tm.getChatFilter(var5, (byte) 18) == 2) {
                     DirectByteStorage.updateChatFilter(0, param2, 1, var5);
                   }
-                  c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_String);
+                  GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_String);
                 }
               }
               UsernameAvailabilityValidator.b(true);
@@ -237,7 +237,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                     SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                     var15Lifetime1 = (String) null;
                     var14Lifetime1 = (String) null;
-                    SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                    SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ScreenshotViewer.field_m, (String) null, 2);
                     UsernameAvailabilityValidator.b(true);
                   } else {
                     var5Lifetime1 = ng.quickChatChannel;
@@ -248,7 +248,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                     if (tm.getChatFilter(var5Lifetime1, (byte) 18) == 2) {
                       DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime1);
                     }
-                    c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime1);
+                    GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime1);
                     UsernameAvailabilityValidator.b(true);
                   }
                 } else {
@@ -346,7 +346,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ck.field_j, (String) null, 2);
                 var15Lifetime2 = (String) null;
                 var14Lifetime2 = (String) null;
-                SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, w.field_m, (String) null, 2);
+                SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ScreenshotViewer.field_m, (String) null, 2);
               } else {
                 var5Lifetime2 = ng.quickChatChannel;
                 if (var5Lifetime2 == 0 &&
@@ -356,7 +356,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 if (tm.getChatFilter(var5Lifetime2, (byte) 18) == 2) {
                   DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime2);
                 }
-                c.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime2);
+                GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime2);
               }
             }
             UsernameAvailabilityValidator.b(true);

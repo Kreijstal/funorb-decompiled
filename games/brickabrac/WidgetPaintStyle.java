@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be {
-    private int field_m;
+final class WidgetPaintStyle {
+    private int offsetY;
     static String field_e;
-    private boolean field_p;
-    private int field_l;
+    private boolean paintPreviousStyle;
+    private int shadowPaint;
     static boolean field_a;
     static int uiBootstrapStage;
     static RgbSprite arcticSmallSprite;
-    private int field_b;
+    private int textAlpha256;
     static String field_n;
     static int field_j;
     static int[] field_o;
-    private int field_h;
-    RgbSprite[] field_f;
-    RgbSprite field_k;
+    private int textPaint;
+    RgbSprite[] frameSprites;
+    RgbSprite icon;
     static int field_g;
-    private int field_i;
+    private int offsetX;
 
     public static void b(int param0) {
         if (param0 != 2) {
@@ -29,33 +29,33 @@ final class be {
         arcticSmallSprite = null;
     }
 
-    final be b(int param0, byte param1) {
-        if (param1 != -50) {
-          this.a(true, -56);
-          this.field_i = param0;
+    final WidgetPaintStyle setOffsetX(int offsetX, byte obfuscationGuard) {
+        if (obfuscationGuard != -50) {
+          this.setTextPaint(true, -56);
+          this.offsetX = offsetX;
           return this;
         }
-        this.field_i = param0;
+        this.offsetX = offsetX;
         return this;
     }
 
-    final be a(boolean param0, boolean param1) {
-        this.field_p = param0 ? true : false;
-        if (!param1) {
+    final WidgetPaintStyle setPaintPreviousStyle(boolean paintPreviousStyle, boolean obfuscationGuard) {
+        this.paintPreviousStyle = paintPreviousStyle ? true : false;
+        if (!obfuscationGuard) {
           return this;
         }
         String var4 = (String) null;
-        be.a((ResourceArchive) null, (String) null, -112, (String) null);
+        WidgetPaintStyle.a((ResourceArchive) null, (String) null, -112, (String) null);
         return this;
     }
 
-    final be a(int param0, byte param1) {
-        if (param1 != -69) {
-          this.field_h = 10;
-          this.field_l = param0;
+    final WidgetPaintStyle setShadowPaint(int paint, byte obfuscationGuard) {
+        if (obfuscationGuard != -69) {
+          this.textPaint = 10;
+          this.shadowPaint = paint;
           return this;
         }
-        this.field_l = param0;
+        this.shadowPaint = paint;
         return this;
     }
 
@@ -106,7 +106,7 @@ final class be {
         }
     }
 
-    final void a(int param0, up param1, Widget param2, byte param3, int param4) {
+    final void paintStyle(int parentY, StatefulWidgetRenderer renderer, Widget widget, byte obfuscationGuard, int parentX) {
         TextFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
@@ -133,79 +133,79 @@ final class be {
         int var7 = 0;
         int var7Lifetime1;
         try {
-          nh.a(param2.width, param2.height, -40, param2.x + param4, this.field_f, param0 + param2.y);
-          if (null != this.field_k) {
-            var6_int = this.field_i + param2.x + param4;
-            if (param1.horizontalAlignment == 1) {
-              var6_int = var6_int + (param2.width - this.field_k.canvasWidth) / 2;
+          nh.paintNineSliceFrame(widget.width, widget.height, -40, widget.x + parentX, this.frameSprites, parentY + widget.y);
+          if (null != this.icon) {
+            var6_int = this.offsetX + widget.x + parentX;
+            if (renderer.horizontalAlignment == 1) {
+              var6_int = var6_int + (widget.width - this.icon.canvasWidth) / 2;
             }
-            var7 = this.field_m + (param0 + param2.y);
-            if (param1.verticalAlignment == 1) {
-              var7 = var7 + (-this.field_k.canvasHeight + param2.height) / 2;
+            var7 = this.offsetY + (parentY + widget.y);
+            if (renderer.verticalAlignment == 1) {
+              var7 = var7 + (-this.icon.canvasHeight + widget.height) / 2;
             }
-            if (2 == param1.horizontalAlignment) {
-              var6_int = var6_int + (param2.width - this.field_k.canvasWidth);
+            if (2 == renderer.horizontalAlignment) {
+              var6_int = var6_int + (widget.width - this.icon.canvasWidth);
             }
-            if (param1.verticalAlignment == 2) {
-              var7 = var7 + (param2.height - this.field_k.canvasHeight);
+            if (renderer.verticalAlignment == 2) {
+              var7 = var7 + (widget.height - this.icon.canvasHeight);
             }
-            this.field_k.drawTransparent(var6_int, var7);
+            this.icon.drawTransparent(var6_int, var7);
           }
-          var6 = param1.getDisplayText(param2, true);
-          var7Lifetime1 = 3 % ((param3 - 13) / 43);
+          var6 = renderer.getDisplayText(widget, true);
+          var7Lifetime1 = 3 % ((obfuscationGuard - 13) / 43);
           if (var6 != null &&
-            param1.font != null &&
-            0 <= this.field_h) {
-            stackIn_18_0 = param1.font;
+            renderer.font != null &&
+            0 <= this.textPaint) {
+            stackIn_18_0 = renderer.font;
             stackIn_18_1 = var6;
-            if (this.field_i != -2147483648) {
-              stackIn_19_2 = this.field_i;
+            if (this.offsetX != -2147483648) {
+              stackIn_19_2 = this.offsetX;
             } else {
               stackIn_19_2 = 0;
             }
-            stackIn_21_2 = stackIn_19_2 + param1.leftInset + (param4 + param2.x);
-            stackIn_21_3 = param0;
-            stackIn_21_4 = -param2.y;
-            stackIn_21_5 = -param1.topInset;
-            if (this.field_m == -2147483648) {
+            stackIn_21_2 = stackIn_19_2 + renderer.leftInset + (parentX + widget.x);
+            stackIn_21_3 = parentY;
+            stackIn_21_4 = -widget.y;
+            stackIn_21_5 = -renderer.topInset;
+            if (this.offsetY == -2147483648) {
               stackIn_22_6 = 0;
             } else {
-              stackIn_22_6 = this.field_m;
+              stackIn_22_6 = this.offsetY;
             }
             stackIn_24_3 = stackIn_21_3 - (stackIn_21_4 + (stackIn_21_5 - stackIn_22_6));
-            stackIn_24_4 = param2.width - param1.leftInset - param1.rightInset;
-            stackIn_24_5 = -param1.topInset + (param2.height - param1.bottomInset);
-            stackIn_24_6 = this.field_h;
-            stackIn_24_7 = this.field_l;
-            if (this.field_b == -2147483648) {
+            stackIn_24_4 = widget.width - renderer.leftInset - renderer.rightInset;
+            stackIn_24_5 = -renderer.topInset + (widget.height - renderer.bottomInset);
+            stackIn_24_6 = this.textPaint;
+            stackIn_24_7 = this.shadowPaint;
+            if (this.textAlpha256 == -2147483648) {
               stackIn_25_8 = 256;
             } else {
-              stackIn_25_8 = this.field_b;
+              stackIn_25_8 = this.textAlpha256;
             }
-            ((TextFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param1.horizontalAlignment, param1.verticalAlignment, param1.lineSpacing);
+            ((TextFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, renderer.horizontalAlignment, renderer.verticalAlignment, renderer.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6_ref = decompiledCaughtException;
           stackIn_29_0 = var6_ref;
-          stackIn_29_1 = new StringBuilder().append("be.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_29_1 = new StringBuilder().append("be.E(").append(parentY).append(',');
+          if (renderer == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
           stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
-          if (param2 == null) {
+          if (widget == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(')').toString());
         }
     }
 
-    final void a(be param0, int param1, up param2, Widget param3, int param4, int param5) {
+    final void mergeInto(WidgetPaintStyle target, int obfuscationGuard, StatefulWidgetRenderer renderer, Widget widget, int parentX, int parentY) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -216,56 +216,56 @@ final class be {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
         try {
-          if (this.field_p) {
-            param0.a(param5, param2, param3, (byte) 99, param4);
-            param0.a(-2147483648);
+          if (this.paintPreviousStyle) {
+            target.paintStyle(parentY, renderer, widget, (byte) 99, parentX);
+            target.resetPaintStyle(-2147483648);
           }
-          if (this.field_i != -2147483648) {
-            param0.field_i = this.field_i;
+          if (this.offsetX != -2147483648) {
+            target.offsetX = this.offsetX;
           }
-          if (this.field_m != -2147483648) {
-            param0.field_m = this.field_m;
+          if (this.offsetY != -2147483648) {
+            target.offsetY = this.offsetY;
           }
-          if (null != this.field_k) {
-            param0.field_k = this.field_k;
+          if (null != this.icon) {
+            target.icon = this.icon;
           }
-          if (-1 <= this.field_h) {
-            param0.field_h = this.field_h;
+          if (-1 <= this.textPaint) {
+            target.textPaint = this.textPaint;
           }
-          if (this.field_l >= -1) {
-            param0.field_l = this.field_l;
+          if (this.shadowPaint >= -1) {
+            target.shadowPaint = this.shadowPaint;
           }
-          if (~this.field_b != param1) {
-            param0.field_b = this.field_b;
+          if (~this.textAlpha256 != obfuscationGuard) {
+            target.textAlpha256 = this.textAlpha256;
           }
-          if (null == this.field_f) {
+          if (null == this.frameSprites) {
             return;
           }
-          param0.field_f = this.field_f;
+          target.frameSprites = this.frameSprites;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
           stackIn_23_0 = var7;
           stackIn_23_1 = new StringBuilder().append("be.N(");
-          if (param0 == null) {
+          if (target == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(obfuscationGuard).append(',');
+          if (renderer == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
           stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
-          if (param3 == null) {
+          if (widget == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 
@@ -318,41 +318,41 @@ final class be {
         }
     }
 
-    final be a(int param0, int param1) {
-        if (param0 != 0) {
-          this.field_h = 14;
-          this.field_m = param1;
+    final WidgetPaintStyle setOffsetY(int obfuscationGuard, int offsetY) {
+        if (obfuscationGuard != 0) {
+          this.textPaint = 14;
+          this.offsetY = offsetY;
           return this;
         }
-        this.field_m = param1;
+        this.offsetY = offsetY;
         return this;
     }
 
-    final be a(boolean param0, int param1) {
-        this.field_h = param1;
-        if (param0) {
-          this.a(false, 75);
+    final WidgetPaintStyle setTextPaint(boolean obfuscationGuard, int paint) {
+        this.textPaint = paint;
+        if (obfuscationGuard) {
+          this.setTextPaint(false, 75);
           return this;
         }
         return this;
     }
 
-    final void a(boolean param0, be param1) {
+    final void copyPaintStyleTo(boolean obfuscationGuard, WidgetPaintStyle target) {
         try {
-          if (param0) {
+          if (obfuscationGuard) {
             Object var4 = (Object) null;
-            be.readArchiveBytes(true, (Object) null, true);
+            WidgetPaintStyle.readArchiveBytes(true, (Object) null, true);
           }
-          param1.field_k = this.field_k;
-          param1.field_i = this.field_i;
-          param1.field_p = this.field_p;
-          param1.field_b = this.field_b;
-          param1.field_h = this.field_h;
-          param1.field_m = this.field_m;
-          param1.field_f = this.field_f;
-          param1.field_l = this.field_l;
+          target.icon = this.icon;
+          target.offsetX = this.offsetX;
+          target.paintPreviousStyle = this.paintPreviousStyle;
+          target.textAlpha256 = this.textAlpha256;
+          target.textPaint = this.textPaint;
+          target.offsetY = this.offsetY;
+          target.frameSprites = this.frameSprites;
+          target.shadowPaint = this.shadowPaint;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "be.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "be.M(" + obfuscationGuard + ',' + (target != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -361,54 +361,54 @@ final class be {
         return FullscreenFailureKind.field_i;
     }
 
-    final be a(RgbSprite[] param0, int param1) {
+    final WidgetPaintStyle setFrameSprites(RgbSprite[] sprites, int obfuscationGuard) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -2147483648) {
+          if (obfuscationGuard != -2147483648) {
             field_o = (int[]) null;
           }
-          this.field_f = param0;
+          this.frameSprites = sprites;
           return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_6_0 = var3;
           stackIn_6_1 = new StringBuilder().append("be.J(");
-          if (param0 == null) {
+          if (sprites == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void a(int param0) {
-        this.field_b = 256;
-        this.field_h = 0;
-        if (param0 == -2147483648) {
-          this.field_i = 0;
-          this.field_m = 0;
-          this.field_l = -1;
-          this.field_f = null;
-          this.field_k = null;
+    final void resetPaintStyle(int obfuscationGuard) {
+        this.textAlpha256 = 256;
+        this.textPaint = 0;
+        if (obfuscationGuard == -2147483648) {
+          this.offsetX = 0;
+          this.offsetY = 0;
+          this.shadowPaint = -1;
+          this.frameSprites = null;
+          this.icon = null;
           return;
         }
     }
 
-    be() {
-        this.field_m = -2147483648;
-        this.field_p = false;
-        this.field_l = -2;
-        this.field_b = -2147483648;
-        this.field_h = -2;
-        this.field_f = null;
-        this.field_k = null;
-        this.field_i = -2147483648;
+    WidgetPaintStyle() {
+        this.offsetY = -2147483648;
+        this.paintPreviousStyle = false;
+        this.shadowPaint = -2;
+        this.textAlpha256 = -2147483648;
+        this.textPaint = -2;
+        this.frameSprites = null;
+        this.icon = null;
+        this.offsetX = -2147483648;
     }
 
     static {

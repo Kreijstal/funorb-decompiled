@@ -154,14 +154,14 @@ final class Paddle extends RectangleBody {
             circle.velocityX256 = this.velocityX256;
             return;
           }
-          var5Lifetime1 = CacheIoRequest.approximateSqrt256(-w.b(circle.velocityX256, -circle.velocityX256, 93) - w.b(circle.velocityY256, -circle.velocityY256, 114) << 8, obfuscationGuard - 51) >> 8;
+          var5Lifetime1 = CacheIoRequest.approximateSqrt256(-ScreenshotViewer.b(circle.velocityX256, -circle.velocityX256, 93) - ScreenshotViewer.b(circle.velocityY256, -circle.velocityY256, 114) << 8, obfuscationGuard - 51) >> 8;
           var6 = this.reboundSpeedStage * 16 + var5Lifetime1;
           if (3840 < var6) {
             var6 = 3840;
           }
           var7 = 43520;
           var8 = circle.x256 + circle.radius256 - (this.x256 + (this.width256 >> 1));
-          var9 = -CacheIoRequest.approximateSqrt256(w.b(var8, -var8, 113) - w.b(var7, -var7, 111) << 8, 2);
+          var9 = -CacheIoRequest.approximateSqrt256(ScreenshotViewer.b(var8, -var8, 113) - ScreenshotViewer.b(var7, -var7, 111) << 8, 2);
           var9 = var9 / var7;
           var8 = (var8 << 8) / var7;
           var10 = circle.velocityY256 * var9 + var8 * circle.velocityX256 >> 7;
@@ -184,7 +184,7 @@ final class Paddle extends RectangleBody {
               circle.velocityY256 = -circle.velocityY256;
             }
           }
-          var5Lifetime2 = CacheIoRequest.approximateSqrt256(-w.b(circle.velocityX256, -circle.velocityX256, obfuscationGuard ^ 85) - w.b(circle.velocityY256, -circle.velocityY256, 95) << 8, obfuscationGuard ^ 55) >> 8;
+          var5Lifetime2 = CacheIoRequest.approximateSqrt256(-ScreenshotViewer.b(circle.velocityX256, -circle.velocityX256, obfuscationGuard ^ 85) - ScreenshotViewer.b(circle.velocityY256, -circle.velocityY256, 95) << 8, obfuscationGuard ^ 55) >> 8;
           circle.velocityX256 = var6 * circle.velocityX256 / var5Lifetime2;
           circle.velocityY256 = circle.velocityY256 * var6 / var5Lifetime2;
           return;

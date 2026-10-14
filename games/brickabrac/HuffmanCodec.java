@@ -266,7 +266,7 @@ final class HuffmanCodec {
             HuffmanCodec.a((ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, -121);
           }
           var1 = TextFieldValidator.outgoingPackets;
-          while (ik.a(104)) {
+          while (IntrusiveHashIterator.a(104)) {
             var1.writeCipheredOpcode(-13413, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

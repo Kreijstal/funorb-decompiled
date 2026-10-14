@@ -343,7 +343,7 @@ final class NameEntryPopup extends UiComponent {
           var9 = 0;
           var3Lifetime1 = var9;
           while (var9 < 8) {
-            var7[var9] = ik.a(var13[var9], ~var17[var9]);
+            var7[var9] = IntrusiveHashIterator.a(var13[var9], ~var17[var9]);
             var9++;
           }
           CheckboxWidgetRenderer.field_b = null;

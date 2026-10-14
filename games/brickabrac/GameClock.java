@@ -169,7 +169,7 @@ abstract class GameClock {
 
     final static void b(byte param0) {
         kd.field_d = new String[QuickChatPhraseRegistry.field_a];
-        kd.field_d[18] = ta.field_c;
+        kd.field_d[18] = NineSliceFrame.field_c;
         kd.field_d[4] = BackgroundRegistry.field_a;
         kd.field_d[16] = RichTextLayout.field_o;
         kd.field_d[21] = ContextMenu.field_Rb;
@@ -177,7 +177,7 @@ abstract class GameClock {
         kd.field_d[15] = DualLinkNode.field_i;
         kd.field_d[9] = sh.field_b;
         kd.field_d[6] = DelayedPacket.field_i;
-        kd.field_d[20] = c.field_n;
+        kd.field_d[20] = GrowableIntList.field_n;
         kd.field_d[7] = nk.field_i;
         kd.field_d[17] = RasterCacheSurface.field_l;
         kd.field_d[19] = tq.field_g;

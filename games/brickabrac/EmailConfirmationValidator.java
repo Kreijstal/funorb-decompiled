@@ -7,7 +7,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     private String checkedEmail;
     private MatchingTextValidator matchingValidator;
     private boolean emailAvailable;
-    static ta field_l;
+    static NineSliceFrame field_l;
     static String field_r;
     static NodeDeque field_q;
 

@@ -50,8 +50,8 @@ final class wo {
               var1Lifetime3 = stackIn_85_0;
             } else {
               if (var2 == 2) {
-                c.field_j = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_game_completed");
-                stackIn_124_0 = (null == c.field_j) ? 0 : 1;
+                GrowableIntList.field_j = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_game_completed");
+                stackIn_124_0 = (null == GrowableIntList.field_j) ? 0 : 1;
                 var1Lifetime3 = stackIn_124_0;
               } else {
                 if (var2 == 3) {
@@ -68,7 +68,7 @@ final class wo {
                       var1Lifetime3 = stackIn_132_0;
                     } else {
                       if (6 == var2) {
-                        stackIn_139_0 = (!m.musicSynthesizer.prepareTrack(-111, c.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                        stackIn_139_0 = (!m.musicSynthesizer.prepareTrack(-111, GrowableIntList.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                         var1Lifetime3 = stackIn_139_0;
                       } else {
                         if (7 != var2) {
@@ -103,8 +103,8 @@ final class wo {
             var1Lifetime2 = stackIn_13_0;
           } else {
             if (var2Lifetime1 == 2) {
-              c.field_j = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_game_completed");
-              stackIn_52_0 = (null == c.field_j) ? 0 : 1;
+              GrowableIntList.field_j = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_game_completed");
+              stackIn_52_0 = (null == GrowableIntList.field_j) ? 0 : 1;
               var1Lifetime2 = stackIn_52_0;
             } else {
               if (var2Lifetime1 == 3) {
@@ -121,7 +121,7 @@ final class wo {
                     var1Lifetime2 = stackIn_60_0;
                   } else {
                     if (6 == var2Lifetime1) {
-                      stackIn_68_0 = (!m.musicSynthesizer.prepareTrack(-111, c.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                      stackIn_68_0 = (!m.musicSynthesizer.prepareTrack(-111, GrowableIntList.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime2 = stackIn_68_0;
                     } else {
                       if (7 != var2Lifetime1) {

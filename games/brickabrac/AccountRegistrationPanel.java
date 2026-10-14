@@ -458,7 +458,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
 
     final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
         IndexedSpriteGeometry.pushSpriteRaster(-85, param2.sprite);
-        Rasterizer2D.fillVerticalGradient(0, 0, param2.width, param2.height, pf.arcticBackgroundColors[param1], 16777215);
+        Rasterizer2D.fillVerticalGradient(0, 0, param2.width, param2.height, RadialSelectorRenderer.arcticBackgroundColors[param1], 16777215);
         if (param4 != 23275) {
           return;
         }
@@ -589,7 +589,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         this.ageField = new ValidatedTextFieldWidget("", (WidgetListener) null, 3);
         int var1 = 1;
         this.newsletterToggle = new ToggleButtonWidget("", (WidgetListener) null, var1 != 0);
-        this.registerButton = new FocusableWidget(c.field_d, (WidgetListener) null);
+        this.registerButton = new FocusableWidget(GrowableIntList.field_d, (WidgetListener) null);
         this.backButton = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
         this.usernameField.tooltip = hh.field_a;
         this.emailField.tooltip = rf.field_d;

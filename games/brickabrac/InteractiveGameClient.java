@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class InteractiveGameClient extends GameConnectionShell implements vc {
+abstract class InteractiveGameClient extends GameConnectionShell implements GameLayerController {
     static boolean field_E;
 
     public abstract void updateGameLayer(boolean inputEnabled, byte obfuscationGuard);
@@ -98,7 +98,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             }
             break;
           }
-          ((vc) (kp.field_d.elementAt(var3))).renderGameLayer(16769381);
+          ((GameLayerController) (kp.field_d.elementAt(var3))).renderGameLayer(16769381);
           var3--;
         } while (var4 == 0);
         if (IntArrayRequest.field_i) {
@@ -132,7 +132,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
             ch.incomingPacketLengths[9] = -1;
             ch.incomingPacketLengths[10] = -1;
             kp.field_d = new Vector();
-            KeyboardInput.a((vc) (this), 0);
+            KeyboardInput.a((GameLayerController) (this), 0);
           } catch (RuntimeException runtimeException) {
             throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sa.HB(" + obfuscationGuard + ',' + (lifecycle != null ? "{...}" : "null") + ')');
           }
@@ -169,7 +169,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        vc var6 = null;
+        GameLayerController var6 = null;
         var5 = BrickABrac.field_J ? 1 : 0;
         if (param0 != 10) {
           return;
@@ -247,7 +247,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
                       stackIn_76_1 = -1;
                       if (var5 != 0) {
                         if (stackIn_76_0 < stackIn_76_1) {
-                          var6 = (vc) (kp.field_d.elementAt(var3));
+                          var6 = (GameLayerController) (kp.field_d.elementAt(var3));
                           var6.updateGameLayer(var2 != 0, (byte) -126);
                           decompiledFrameCompleted1 = false;
                           break;
@@ -269,7 +269,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
                       }
                       var4 = 0;
                       while (var4 < kp.field_d.size()) {
-                        stackIn_39_0 = ((vc) (kp.field_d.elementAt(var4))).handleGameKey(MeshAttributeRecord.currentKeyCode, go.currentKeyCharacter, -81);
+                        stackIn_39_0 = ((GameLayerController) (kp.field_d.elementAt(var4))).handleGameKey(MeshAttributeRecord.currentKeyCode, go.currentKeyCharacter, -81);
                         if (!stackIn_39_0) {
                           var4++;
                           continue;
@@ -302,7 +302,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements vc {
           (decompiledFrameCompleted0)) {
           var3 = 0;
           while (!(var3 >= kp.field_d.size())) {
-            var6 = (vc) (kp.field_d.elementAt(var3));
+            var6 = (GameLayerController) (kp.field_d.elementAt(var3));
             var6.updateGameLayer(var2 != 0, (byte) -126);
             if (var5 != 0) {
               break;

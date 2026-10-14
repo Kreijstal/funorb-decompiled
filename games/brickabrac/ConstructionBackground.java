@@ -170,7 +170,7 @@ final class ConstructionBackground extends BackgroundScene {
           for (var6 = 0; var6 < 256; var6++) {
             incrementValue$1 = var3_int;
             var3_int++;
-            var5[var6] = ik.a(255, (int) param1[incrementValue$1]);
+            var5[var6] = IntrusiveHashIterator.a(255, (int) param1[incrementValue$1]);
           }
           var3_int += 256;
           var8 = 0;

@@ -192,9 +192,9 @@ final class NodeDeque {
     }
 
     final static void a(boolean param0, int param1) {
-        sb.field_c = !param0 ? new vj(UiComponent.field_Z, ji.field_b) : new vj(MidiSynthesizer.field_u, t.field_f);
+        BrickGameLayerController.field_c = !param0 ? new vj(UiComponent.field_Z, IterableIntrusiveHashTable.field_b) : new vj(MidiSynthesizer.field_u, t.field_f);
         NinjaBackground.field_w = new UiComponent(0L, (UiComponent) null);
-        NinjaBackground.field_w.addChild(sb.field_c.field_d, 0);
+        NinjaBackground.field_w.addChild(BrickGameLayerController.field_c.field_d, 0);
         NinjaBackground.field_w.addChild(GameUiController.field_e, 0);
         wi.field_j = new UiComponent(0L, MenuSelection.field_m);
         MembershipBenefitsScreen.field_t = new UiComponent(0L, (UiComponent) null);

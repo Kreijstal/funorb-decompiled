@@ -287,7 +287,7 @@ final class MidiSynthesizer extends AudioStream {
 
     private final void d(int param0, int param1, int param2) {
         this.initialPrograms[param1] = param0;
-        this.channelBank[param1] = ik.a(param2, param0);
+        this.channelBank[param1] = IntrusiveHashIterator.a(param2, param0);
         this.a(param2 ^ 203445448, param0, param1);
     }
 
@@ -821,7 +821,7 @@ final class MidiSynthesizer extends AudioStream {
         int var6 = 0;
         var3 = var6;
         while (16 > var6) {
-          this.channelBank[var6] = ik.a(-128, this.initialPrograms[var6]);
+          this.channelBank[var6] = IntrusiveHashIterator.a(-128, this.initialPrograms[var6]);
           var6++;
         }
     }
@@ -1001,46 +1001,46 @@ final class MidiSynthesizer extends AudioStream {
         var5Lifetime4 = (32710 & message) >> 8;
         var6Lifetime3 = (message & 8377946) >> 16;
         if (var5Lifetime4 == 0) {
-          this.channelBank[var4Lifetime4] = ik.a(-2080769, this.channelBank[var4Lifetime4]) + (var6Lifetime3 << 14);
+          this.channelBank[var4Lifetime4] = IntrusiveHashIterator.a(-2080769, this.channelBank[var4Lifetime4]) + (var6Lifetime3 << 14);
         }
         if (var5Lifetime4 == 32) {
-          this.channelBank[var4Lifetime4] = ik.a(this.channelBank[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelBank[var4Lifetime4] = IntrusiveHashIterator.a(this.channelBank[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 1) {
-          this.channelModulation[var4Lifetime4] = (var6Lifetime3 << 7) + ik.a(-16257, this.channelModulation[var4Lifetime4]);
+          this.channelModulation[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(-16257, this.channelModulation[var4Lifetime4]);
         }
         if (33 == var5Lifetime4) {
-          this.channelModulation[var4Lifetime4] = ik.a(-128, this.channelModulation[var4Lifetime4]) + var6Lifetime3;
+          this.channelModulation[var4Lifetime4] = IntrusiveHashIterator.a(-128, this.channelModulation[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 5) {
-          this.channelPortamentoTime[var4Lifetime4] = ik.a(this.channelPortamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelPortamentoTime[var4Lifetime4] = IntrusiveHashIterator.a(this.channelPortamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 37) {
-          this.channelPortamentoTime[var4Lifetime4] = var6Lifetime3 + ik.a(this.channelPortamentoTime[var4Lifetime4], -128);
+          this.channelPortamentoTime[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(this.channelPortamentoTime[var4Lifetime4], -128);
         }
         if (7 == var5Lifetime4) {
-          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + ik.a(-16257, this.channelVolume[var4Lifetime4]);
+          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(-16257, this.channelVolume[var4Lifetime4]);
         }
         if (39 == var5Lifetime4) {
-          this.channelVolume[var4Lifetime4] = var6Lifetime3 + ik.a(this.channelVolume[var4Lifetime4], -128);
+          this.channelVolume[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(this.channelVolume[var4Lifetime4], -128);
         }
         if (var5Lifetime4 == 10) {
-          this.channelPan[var4Lifetime4] = ik.a(this.channelPan[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelPan[var4Lifetime4] = IntrusiveHashIterator.a(this.channelPan[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 42) {
-          this.channelPan[var4Lifetime4] = ik.a(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
+          this.channelPan[var4Lifetime4] = IntrusiveHashIterator.a(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.channelExpression[var4Lifetime4] = (var6Lifetime3 << 7) + ik.a(this.channelExpression[var4Lifetime4], -16257);
+          this.channelExpression[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(this.channelExpression[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 43) {
-          this.channelExpression[var4Lifetime4] = var6Lifetime3 + ik.a(-128, this.channelExpression[var4Lifetime4]);
+          this.channelExpression[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(-128, this.channelExpression[var4Lifetime4]);
         }
         if (64 == var5Lifetime4) {
           if (var6Lifetime3 >= 64) {
             this.channelFlags[var4Lifetime4] = LevelSelectScreen.d(this.channelFlags[var4Lifetime4], 1);
           } else {
-            this.channelFlags[var4Lifetime4] = ik.a(this.channelFlags[var4Lifetime4], -2);
+            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.a(this.channelFlags[var4Lifetime4], -2);
           }
         }
         if (var5Lifetime4 == 65) {
@@ -1048,20 +1048,20 @@ final class MidiSynthesizer extends AudioStream {
             this.channelFlags[var4Lifetime4] = LevelSelectScreen.d(this.channelFlags[var4Lifetime4], 2);
           } else {
             this.a(0, var4Lifetime4);
-            this.channelFlags[var4Lifetime4] = ik.a(this.channelFlags[var4Lifetime4], -3);
+            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.a(this.channelFlags[var4Lifetime4], -3);
           }
         }
         if (99 == var5Lifetime4) {
-          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + ik.a(127, this.channelParameter[var4Lifetime4]);
+          this.channelParameter[var4Lifetime4] = (var6Lifetime3 << 7) + IntrusiveHashIterator.a(127, this.channelParameter[var4Lifetime4]);
         }
         if (var5Lifetime4 == 98) {
-          this.channelParameter[var4Lifetime4] = ik.a(16256, this.channelParameter[var4Lifetime4]) + var6Lifetime3;
+          this.channelParameter[var4Lifetime4] = IntrusiveHashIterator.a(16256, this.channelParameter[var4Lifetime4]) + var6Lifetime3;
         }
         if (101 == var5Lifetime4) {
-          this.channelParameter[var4Lifetime4] = 16384 + ik.a(127, this.channelParameter[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelParameter[var4Lifetime4] = 16384 + IntrusiveHashIterator.a(127, this.channelParameter[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 100) {
-          this.channelParameter[var4Lifetime4] = ik.a(16256, this.channelParameter[var4Lifetime4]) + (16384 + var6Lifetime3);
+          this.channelParameter[var4Lifetime4] = IntrusiveHashIterator.a(16256, this.channelParameter[var4Lifetime4]) + (16384 + var6Lifetime3);
         }
         if (var5Lifetime4 == 120) {
           this.allSoundOff((byte) -86, var4Lifetime4);
@@ -1075,27 +1075,27 @@ final class MidiSynthesizer extends AudioStream {
         if (var5Lifetime4 == 6) {
           var7 = this.channelParameter[var4Lifetime4];
           if (var7 == 16384) {
-            this.channelPitchBendRange[var4Lifetime4] = ik.a(-16257, this.channelPitchBendRange[var4Lifetime4]) + (var6Lifetime3 << 7);
+            this.channelPitchBendRange[var4Lifetime4] = IntrusiveHashIterator.a(-16257, this.channelPitchBendRange[var4Lifetime4]) + (var6Lifetime3 << 7);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.channelParameter[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.channelPitchBendRange[var4Lifetime4] = var6Lifetime3 + ik.a(this.channelPitchBendRange[var4Lifetime4], -128);
+            this.channelPitchBendRange[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(this.channelPitchBendRange[var4Lifetime4], -128);
           }
         }
         if (var5Lifetime4 == 16) {
-          this.channelSampleOffset[var4Lifetime4] = ik.a(this.channelSampleOffset[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.channelSampleOffset[var4Lifetime4] = IntrusiveHashIterator.a(this.channelSampleOffset[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 48) {
-          this.channelSampleOffset[var4Lifetime4] = var6Lifetime3 + ik.a(-128, this.channelSampleOffset[var4Lifetime4]);
+          this.channelSampleOffset[var4Lifetime4] = var6Lifetime3 + IntrusiveHashIterator.a(-128, this.channelSampleOffset[var4Lifetime4]);
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 >= 64) {
             this.channelFlags[var4Lifetime4] = LevelSelectScreen.d(this.channelFlags[var4Lifetime4], 4);
           } else {
             this.c(var4Lifetime4, 0);
-            this.channelFlags[var4Lifetime4] = ik.a(this.channelFlags[var4Lifetime4], -5);
+            this.channelFlags[var4Lifetime4] = IntrusiveHashIterator.a(this.channelFlags[var4Lifetime4], -5);
           }
         }
         if (var5Lifetime4 == 17) {

@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w {
-    private int field_h;
-    private IndexedSprite[] field_q;
+final class ScreenshotViewer {
+    private int selectedScreenshot;
+    private IndexedSprite[] screenshots;
     private RgbSprite field_p;
     static RgbSprite field_r;
     private int field_b;
-    private String field_f;
+    private String title;
     private boolean field_a;
-    private String[] field_d;
+    private String[] captions;
     static int field_k;
     static String field_m;
     private RgbSprite field_e;
     static int[] field_n;
     private int field_c;
     private int field_j;
-    private MenuSelection field_g;
+    private MenuSelection selection;
     private int field_o;
     private int field_i;
     private RgbSprite field_l;
@@ -46,37 +46,37 @@ final class w {
             this.field_o = this.field_o - IsaacGenerator.field_c;
           }
           var3_int = -1;
-          if (null != this.field_q) {
-            var3_int = this.field_q.length;
+          if (null != this.screenshots) {
+            var3_int = this.screenshots.length;
           }
           if (var3_int != -1) {
             boolean decompiledFrameRemainder0 = true;
             if (IsaacGenerator.field_f > this.field_j) {
               this.field_j = this.field_j + 1;
-              if (IsaacGenerator.field_n < this.field_j && (null == this.field_q ||
-                this.field_q[this.field_h] == null)) {
+              if (IsaacGenerator.field_n < this.field_j && (null == this.screenshots ||
+                this.screenshots[this.selectedScreenshot] == null)) {
                 this.field_j = this.field_j - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (IsaacGenerator.field_f <= this.field_j &&
-                  null == this.field_q[(this.field_h + 1) % var3_int]) {
+                  null == this.screenshots[(this.selectedScreenshot + 1) % var3_int]) {
                   this.field_j = this.field_j - 1;
                 }
               }
             }
             if (IsaacGenerator.field_f <= this.field_j) {
-              this.field_b = this.field_h;
+              this.field_b = this.selectedScreenshot;
               this.field_j = this.field_j - IsaacGenerator.field_f;
               if (!this.field_a) {
-                this.field_h = this.field_h - 1;
-                if (this.field_h < 0) {
-                  this.field_h = this.field_h + var3_int;
+                this.selectedScreenshot = this.selectedScreenshot - 1;
+                if (this.selectedScreenshot < 0) {
+                  this.selectedScreenshot = this.selectedScreenshot + var3_int;
                 }
               } else {
-                this.field_h = this.field_h + 1;
-                if (var3_int <= this.field_h) {
-                  this.field_h = this.field_h - var3_int;
+                this.selectedScreenshot = this.selectedScreenshot + 1;
+                if (var3_int <= this.selectedScreenshot) {
+                  this.selectedScreenshot = this.selectedScreenshot - var3_int;
                 }
               }
             }
@@ -120,13 +120,13 @@ final class w {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.field_g.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, tb.pressX));
+          this.selection.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, tb.pressX));
           var4Lifetime1 = 0;
-          if (this.field_g.isActivated((byte) 113)) {
-            if (this.field_g.selectedIndex == 0) {
+          if (this.selection.isActivated((byte) 113)) {
+            if (this.selection.selectedIndex == 0) {
               var4Lifetime1 = 1;
             }
-            if (this.field_g.selectedIndex == 1) {
+            if (this.selection.selectedIndex == 1) {
               stackIn_75_0 = 2;
               return stackIn_75_0;
             }
@@ -166,13 +166,13 @@ final class w {
         IndexedSprite var2Lifetime1;
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_q == null) {
+          if (this.screenshots == null) {
             if (null != ch.field_c) {
               ch.field_c.a(cm.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = this.field_q[this.field_h];
+          var6 = this.screenshots[this.selectedScreenshot];
           var2 = var6;
           if (var2 == null) {
             if (null != ch.field_c) {
@@ -182,7 +182,7 @@ final class w {
             var6.drawTransparent(9, 58);
           }
           if (this.field_j < IsaacGenerator.field_n) {
-            var7 = this.field_q[this.field_b];
+            var7 = this.screenshots[this.field_b];
             var2Lifetime1 = var7;
             if (var2Lifetime1 != null) {
               var3 = (60 + var7.canvasWidth) * this.field_j / IsaacGenerator.field_n;
@@ -224,7 +224,7 @@ final class w {
             var2_int = 16448250;
             var3 = 10068666;
             var16 = MusicVoiceMixer.a(param0 - 580, var2_int, var3);
-            this.a(47, 0, this.field_f, var16, co.field_j, 622, 0, 0);
+            this.a(47, 0, this.title, var16, co.field_j, 622, 0, 0);
             sc.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
             this.a(co.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
@@ -340,16 +340,16 @@ final class w {
             }
           }
           this.field_e.drawTransparent(16, 302);
-          ch.field_c.a(this.field_d[this.field_h], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+          ch.field_c.a(this.captions[this.selectedScreenshot], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
           MainMenuScreen.field_u.drawTransparent(30, 330);
           ch.field_c.a(MatchCompleteScreen.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(MatchCompleteScreen.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
           ch.field_c.a(MatchCompleteScreen.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           LevelPack.field_e.drawTransparent((-LevelPack.field_e.canvasWidth + 127) / 2 + 508, 315);
-          if (0 == this.field_g.selectedIndex) {
+          if (0 == this.selection.selectedIndex) {
             ValidatedTextFieldWidget.field_V[0].drawTransparent(508, 299);
           } else {
-            if (this.field_g.selectedIndex == 1) {
+            if (this.selection.selectedIndex == 1) {
               ValidatedTextFieldWidget.field_V[1].drawTransparent(508, 387);
             }
           }
@@ -392,14 +392,14 @@ final class w {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          this.field_g.navigateVertical(-1);
-          if (this.field_g.isActivated((byte) 113)) {
-            if (this.field_g.selectedIndex == 0) {
+          this.selection.navigateVertical(-1);
+          if (this.selection.isActivated((byte) 113)) {
+            if (this.selection.selectedIndex == 0) {
               this.b((byte) 125);
               stackIn_5_0 = 3;
               return stackIn_5_0;
             }
-            if (this.field_g.selectedIndex == 1) {
+            if (this.selection.selectedIndex == 1) {
               stackIn_10_0 = 1;
               return stackIn_10_0;
             }
@@ -522,12 +522,12 @@ final class w {
           } else {
             this.field_c = 2;
           }
-          this.field_f = param0;
-          this.field_g = new MenuSelection(2);
-          this.field_q = param3;
-          this.field_d = param4;
-          if (this.field_q != null &&
-            3 <= this.field_q.length) {
+          this.title = param0;
+          this.selection = new MenuSelection(2);
+          this.screenshots = param3;
+          this.captions = param4;
+          if (this.screenshots != null &&
+            3 <= this.screenshots.length) {
             if (param1) {
               return;
             }
@@ -621,9 +621,9 @@ final class w {
             field_k = -112;
           }
           SingleChildWidget.field_F = null;
-          ik.field_j = false;
+          IntrusiveHashIterator.field_j = false;
           QuickChatPhraseRegistry.field_k = null;
-          ik.field_b = null;
+          IntrusiveHashIterator.field_b = null;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');
         }
@@ -768,7 +768,7 @@ final class w {
         }
     }
 
-    w(java.applet.Applet param0, String param1, IndexedSprite[] param2, boolean param3, String[] param4) {
+    ScreenshotViewer(java.applet.Applet applet, String title, IndexedSprite[] screenshots, boolean param3, String[] captions) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -790,21 +790,21 @@ final class w {
         this.field_i = 0;
         this.field_o = 0;
         try {
-          this.a(param1, false, param3, param2, param4, param0);
+          this.a(title, false, param3, screenshots, captions, applet);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
           stackIn_6_0 = runtimeException;
           stackIn_6_1 = new StringBuilder().append("w.<init>(");
-          if (param0 == null) {
+          if (applet == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_10_0 = stackIn_6_0;
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param1 == null) {
+          if (title == null) {
             stackIn_11_0 = stackIn_10_0;
             stackIn_11_2 = "null";
           } else {
@@ -813,7 +813,7 @@ final class w {
           }
           stackIn_14_0 = stackIn_11_0;
           stackIn_14_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
-          if (param2 == null) {
+          if (screenshots == null) {
             stackIn_15_0 = stackIn_14_0;
             stackIn_15_2 = "null";
           } else {
@@ -822,7 +822,7 @@ final class w {
           }
           stackIn_18_0 = stackIn_15_0;
           stackIn_18_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          if (captions == null) {
             stackIn_19_0 = stackIn_18_0;
             stackIn_19_2 = "null";
           } else {

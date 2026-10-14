@@ -57,7 +57,7 @@ final class sj {
               }
               var10 = IntNode.formatChatPrefix(var8_ref_gb, (byte) 91);
               var11 = var10 + TextFont.escapeAngles(var8_ref_gb.text);
-              var12 = ik.getChatMessageColor(-31126, var8_ref_gb);
+              var12 = IntrusiveHashIterator.getChatMessageColor(-31126, var8_ref_gb);
               var8_ref_gb.component = new UiComponent(0L, field_a, var11);
               var8_ref_gb.component.capturedTextColor = var12 + (-((var12 & 16711422) >> 1) + (field_a.capturedTextColor >> 1 & 8355711));
               var8_ref_gb.component.activeTextColor = (field_a.activeTextColor >> 1 & 8355711) - (8355711 & var12 >> 1) + var12;

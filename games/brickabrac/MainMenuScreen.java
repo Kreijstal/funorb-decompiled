@@ -54,7 +54,7 @@ final class MainMenuScreen extends MenuScreen {
               var8 = Rasterizer2D.pixels[var7];
               incrementValue$0 = var7;
               var7++;
-              Rasterizer2D.pixels[incrementValue$0] = ik.a(-16711936, ik.a(var8, 16711935) * param3) + ik.a(16711680, param3 * ik.a(65280, var8)) >>> 8;
+              Rasterizer2D.pixels[incrementValue$0] = IntrusiveHashIterator.a(-16711936, IntrusiveHashIterator.a(var8, 16711935) * param3) + IntrusiveHashIterator.a(16711680, param3 * IntrusiveHashIterator.a(65280, var8)) >>> 8;
             }
             var7 = var7 + var6_int;
           }
@@ -109,9 +109,9 @@ final class MainMenuScreen extends MenuScreen {
           this.getButtonHeight((byte) 59, 93);
         }
         if (inputEnabled &&
-          c.field_g > 0) {
-          fieldTemp$0 = c.field_g - 1;
-          c.field_g = c.field_g - 1;
+          GrowableIntList.field_g > 0) {
+          fieldTemp$0 = GrowableIntList.field_g - 1;
+          GrowableIntList.field_g = GrowableIntList.field_g - 1;
           if (0 == fieldTemp$0) {
             IndexedSpriteGeometry.pushSpriteRaster(-59, field_s);
             pa.a(true);
@@ -256,7 +256,7 @@ final class MainMenuScreen extends MenuScreen {
             var13 = greenQ16;
             var14 = blueQ16;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = ik.a(255, var14 >> 17) - (-ik.a(var12 >> 1, 16711680) + (-(ik.a(33423869, var13) >> 9) - var15));
+            var10[var11] = IntrusiveHashIterator.a(255, var14 >> 17) - (-IntrusiveHashIterator.a(var12 >> 1, 16711680) + (-(IntrusiveHashIterator.a(33423869, var13) >> 9) - var15));
             greenQ16 = greenQ16 + greenStepQ16;
             blueQ16 = blueQ16 + blueStepQ16;
             offset++;

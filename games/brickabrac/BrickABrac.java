@@ -119,7 +119,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
         }
         if (ok.achievementNotificationTick == 50) {
-          SoundCache.playUiSound(8, ta.uiSounds[9]);
+          SoundCache.playUiSound(8, NineSliceFrame.uiSounds[9]);
         }
         if (cf.a((byte) 62)) {
           sq.a(false);
@@ -231,7 +231,7 @@ public final class BrickABrac extends InteractiveGameClient {
               HalloweenBackground.field_y = true;
             }
             ed.field_d = false;
-            pf.field_p = false;
+            RadialSelectorRenderer.field_p = false;
             RadialSelectorWidget.field_L = false;
             return true;
           }
@@ -257,7 +257,7 @@ public final class BrickABrac extends InteractiveGameClient {
             var5_arrayLifetime1 = var19;
             var46 = SecondaryHashTable.earnedAchievementMask;
             for (var7 = 0; var7 < 8; var7++) {
-              var19[var7] = ik.a(var34[var7], ~var46[var7]);
+              var19[var7] = IntrusiveHashIterator.a(var34[var7], ~var46[var7]);
             }
             if (ResourceRequest.field_y) {
               var5_int = ea.a(true, var35);
@@ -317,7 +317,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 }
                 IntArrayRequest.gameplayScreen.a(false, (byte) 69);
                 NewAchievementsScreen.discardGameplayOnTransition = true;
-                pf.field_p = true;
+                RadialSelectorRenderer.field_p = true;
                 Brick.field_E = 0;
                 ng.requestScreen(false, 125, -2);
               }
@@ -428,7 +428,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           ed.field_d = false;
           TextFieldRenderer.field_A = false;
-          pf.field_p = false;
+          RadialSelectorRenderer.field_p = false;
           ng.requestScreen(false, obfuscationGuard ^ 105, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -527,7 +527,7 @@ public final class BrickABrac extends InteractiveGameClient {
             return true;
           }
           if (6 == keyCode) {
-            pf.field_f = !pf.field_f ? true : false;
+            RadialSelectorRenderer.field_f = !RadialSelectorRenderer.field_f ? true : false;
             return true;
           }
           if (keyCode == 7) {
@@ -633,7 +633,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MenuButton.a((byte) -32);
         hh.a(true);
         kk.a(0);
-        w.d((byte) 102);
+        ScreenshotViewer.d((byte) 102);
         rj.a(24311);
         bq.a(true);
         HuffmanCodec.a((byte) -94);
@@ -689,7 +689,7 @@ public final class BrickABrac extends InteractiveGameClient {
         u.a(2);
         TabbedPane.h(47);
         NameEntryPopup.d(false);
-        sb.a((byte) -102);
+        BrickGameLayerController.a((byte) -102);
         qp.a(false);
         o.b(31583);
         ok.b(-116);
@@ -725,7 +725,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MembershipBenefitsScreen.g(2);
         LevelPackSelectScreen.f(14529);
         TimedSplashScreen.f(0);
-        ta.a(0);
+        NineSliceFrame.a(0);
         np.a(true);
         BoundedFile.b(57);
         LegacyUtf8Decoder.clearStaticReferences((byte) 124);
@@ -784,10 +784,10 @@ public final class BrickABrac extends InteractiveGameClient {
         bg.a(6);
         gd.a(!obfuscationGuard ? true : false);
         rl.a(-18657);
-        ei.a(1);
-        up.b(3);
-        pf.a(0);
-        dg.a(-51);
+        LabeledToggleRenderer.a(1);
+        StatefulWidgetRenderer.b(3);
+        RadialSelectorRenderer.a(0);
+        MultiValueSliderRenderer.a(-51);
         gr.a((byte) 118);
         VorbisFloor1.releaseScratch();
         ui.b(1516);
@@ -837,21 +837,21 @@ public final class BrickABrac extends InteractiveGameClient {
         DateInputWidget.h(0);
         eq.b(-1);
         RadialSelectorWidget.a(110);
-        qi.j(18724);
+        MultiValueSliderWidget.j(18724);
         RichTextLayout.a((byte) -51);
-        ji.a(24968);
+        IterableIntrusiveHashTable.a(24968);
         DualLinkDeque.b(2);
         sl.f(31434);
         DraggableWidget.a(1);
         DropTargetWidget.i((byte) -116);
         DirectByteStorage.c(7301);
-        c.a(true);
+        GrowableIntList.a(true);
         QuickChatParameterType.a(125);
         ej.h(928072);
         wi.b((byte) -54);
         AudioFilter.releaseScratch();
         ja.a(2);
-        ik.c(-93);
+        IntrusiveHashIterator.c(-93);
         DualLinkIterator.a((byte) 84);
         LevelMetadata.a((byte) 127);
         LevelPack.a(0);
@@ -904,7 +904,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ValidationStatus.a(109);
         DebouncedValidationSource.d(31366);
         TextLineLayout.a((byte) 111);
-        be.b(2);
+        WidgetPaintStyle.b(2);
         UsernameAvailabilityValidator.f(-90);
         PasswordValidator.b(true);
         EmailValidator.e((byte) 124);

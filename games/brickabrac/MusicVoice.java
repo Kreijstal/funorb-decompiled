@@ -605,7 +605,7 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, ta param3) {
+    final static void a(int param0, int param1, int param2, NineSliceFrame param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

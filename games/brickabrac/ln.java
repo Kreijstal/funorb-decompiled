@@ -77,7 +77,7 @@ final class ln extends IntrusiveNode {
           UiComponent.field_lb = param2;
           SoundPlayback.soundCache = param1;
           QuickChatMenu.field_gc = param0;
-          ji.field_a = param6;
+          IterableIntrusiveHashTable.field_a = param6;
           for (var7_int = 0; var7_int < 2; var7_int++) {
             JungleBackground.field_s.addLast(new RasterCacheSurface(960, 480), (byte) 3);
           }
@@ -193,7 +193,7 @@ final class ln extends IntrusiveNode {
           }
           if (cd.a(param1 - 138)) {
             String var4 = (String) null;
-            c.writeChatMessage(WidgetTextLayout.repeatMessageId, ba.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
+            GrowableIntList.writeChatMessage(WidgetTextLayout.repeatMessageId, ba.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
           }
           return true;
         }

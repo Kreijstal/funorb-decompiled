@@ -60,7 +60,7 @@ final class EmailAvailabilityRequest {
         WidgetTextLayout.field_e = null;
         AchievementsScreen.f(0);
         param3 = SingleChildWidget.a(param11, param0, param1, (byte) -126, param8, param3, param7);
-        c.a(param13, param12, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
+        GrowableIntList.a(param13, param12, param11, param6, param2, (byte) 126, param4, param10, param3, param5);
         sq.a(param2, param13, -126);
         if (param9 == -113) {
           GameCanvas.a(param13, param7, -1, param3);

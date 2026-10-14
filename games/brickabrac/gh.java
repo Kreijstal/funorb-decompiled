@@ -19,7 +19,7 @@ final class gh {
         }
     }
 
-    final static void a(int param0, ta param1, int param2, int param3, int param4, int param5, TextFont param6, TextFont param7, int param8, int param9, ta param10, ta param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, NineSliceFrame param1, int param2, int param3, int param4, int param5, TextFont param6, TextFont param7, int param8, int param9, NineSliceFrame param10, NineSliceFrame param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -35,7 +35,7 @@ final class gh {
         RuntimeException var20 = null;
         try {
           if (param8 != 12) {
-            gh.a(71, (ta) null, 110, 68, 116, -46, (TextFont) null, (TextFont) null, 98, -11, (ta) null, (ta) null, -41, 115, -68, 100, 62, 64, -15, -127);
+            gh.a(71, (NineSliceFrame) null, 110, 68, 116, -46, (TextFont) null, (TextFont) null, 98, -11, (NineSliceFrame) null, (NineSliceFrame) null, -41, 115, -68, 100, 62, 64, -15, -127);
           }
           Widget.field_m = param7;
           PowerUpWarning.field_r = param6;

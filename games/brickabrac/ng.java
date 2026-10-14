@@ -24,7 +24,7 @@ final class ng {
           ng.requestScreen(true, 107, -22);
         }
         NodeDequeCursor.screenTransitionTick = 0;
-        SoundCache.playUiSound(8, ta.uiSounds[8]);
+        SoundCache.playUiSound(8, NineSliceFrame.uiSounds[8]);
     }
 
     public static void a(byte param0) {

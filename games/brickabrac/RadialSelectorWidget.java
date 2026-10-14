@@ -8,7 +8,7 @@ final class RadialSelectorWidget extends FocusableWidget {
     static String field_V;
     static PacketBuffer field_N;
     static boolean field_L;
-    int field_Q;
+    int markedSector;
     static cd field_X;
     static String field_T;
     static ResourceArchive field_S;
@@ -140,7 +140,7 @@ final class RadialSelectorWidget extends FocusableWidget {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           var4_int = 25 % ((param1 + 25) / 49);
-          ik.field_g = up.field_v;
+          IntrusiveHashIterator.field_g = StatefulWidgetRenderer.field_v;
           if (param0 != 255) {
             if (param0 < 100) {
               StateIconLabel.field_Rb = AchievementIcon.a(param0, -126, param2);

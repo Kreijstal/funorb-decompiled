@@ -240,8 +240,8 @@ final class SocialListEntry extends UiComponent {
         int var6 = 0;
         String var7 = null;
         try {
-          LevelPackCard.field_a[0] = ji.packetDelayRandom.nextInt();
-          LevelPackCard.field_a[1] = ji.packetDelayRandom.nextInt();
+          LevelPackCard.field_a[0] = IterableIntrusiveHashTable.packetDelayRandom.nextInt();
+          LevelPackCard.field_a[1] = IterableIntrusiveHashTable.packetDelayRandom.nextInt();
           tq.field_f.position = 0;
           LevelPackCard.field_a[3] = (int)PopupWidgetLayer.field_ab;
           LevelPackCard.field_a[2] = (int)(PopupWidgetLayer.field_ab >> 32);

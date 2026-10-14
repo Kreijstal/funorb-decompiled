@@ -43,7 +43,7 @@ final class CachedArchiveSource extends ArchiveSource {
         int stackIn_12_0 = 0;
         String stackIn_12_1 = null;
         boolean stackIn_13_2 = false;
-        ta stackIn_17_0 = null;
+        NineSliceFrame stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -53,7 +53,7 @@ final class CachedArchiveSource extends ArchiveSource {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ta var9 = null;
+        NineSliceFrame var9 = null;
         int var10 = 0;
         var10 = BrickABrac.field_J ? 1 : 0;
         try {
@@ -91,7 +91,7 @@ final class CachedArchiveSource extends ArchiveSource {
               }
               var9 = stackIn_17_0;
               if (var9 != null) {
-                var9.a((FullscreenFailureDialog.field_lb << 1) + var7, (GameCanvas.field_f << 1) + TooltipSprite.field_i, -FullscreenFailureDialog.field_lb + var8, false, var2);
+                var9.paintFrame((FullscreenFailureDialog.field_lb << 1) + var7, (GameCanvas.field_f << 1) + TooltipSprite.field_i, -FullscreenFailureDialog.field_lb + var8, false, var2);
               }
               var2 = var2 + GameCanvas.field_f;
             }

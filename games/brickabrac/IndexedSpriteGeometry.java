@@ -36,7 +36,7 @@ abstract class IndexedSpriteGeometry {
         if (param0 <= 6) {
           return (String) null;
         }
-        if (ik.field_g == MusicEnvelope.field_f) {
+        if (IntrusiveHashIterator.field_g == MusicEnvelope.field_f) {
           return ReportAbuseDialog.field_cc;
         }
         if (!LabeledWidget.emailAvailabilityRequest.isCompleted(96)) {

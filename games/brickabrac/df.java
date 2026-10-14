@@ -116,8 +116,8 @@ final class df {
         if (param1 == 103) {
           tq.field_f.position = 0;
           tq.field_f.writeByte(-112, 12);
-          tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
-          tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+          tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
+          tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
           tq.field_f.writeByte(-104, param2);
           tq.field_f.writeByte(50, param3);
           tq.field_f.writeShort((byte) 124, param0);
@@ -133,8 +133,8 @@ final class df {
         field_c = (String) null;
         tq.field_f.position = 0;
         tq.field_f.writeByte(-112, 12);
-        tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
-        tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+        tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
+        tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
         tq.field_f.writeByte(-104, param2);
         tq.field_f.writeByte(50, param3);
         tq.field_f.writeShort((byte) 124, param0);

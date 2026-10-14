@@ -78,7 +78,7 @@ final class ar {
                 var13_intLifetime1 = var19[var12];
                 var14 = var10_ref_int__[1 + var12];
                 if (var13_intLifetime1 == -1) {
-                  if (var14 != w.field_n[param3]) {
+                  if (var14 != ScreenshotViewer.field_n[param3]) {
                     break scanLoop1;
                   }
                 } else {
@@ -117,7 +117,7 @@ final class ar {
             var9 = 1;
             if (param0) {
               if (param4 == -1) {
-                for (var10 = 0; w.field_n.length > var10; var10++) {
+                for (var10 = 0; ScreenshotViewer.field_n.length > var10; var10++) {
                   if ((rh.matchmakingChoiceMask[var10 / 8] & 1 << (var10 & 7)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
@@ -143,7 +143,7 @@ final class ar {
             while (true) {
               stackIn_53_0 = ~var11;
               if (-1 == param4) {
-                stackIn_54_1 = w.field_n.length;
+                stackIn_54_1 = ScreenshotViewer.field_n.length;
               } else {
                 stackIn_54_1 = var18.length - 1;
               }
@@ -170,7 +170,7 @@ final class ar {
                 param3 = var11;
               }
               if (param4 == -1 &&
-                w.field_n.length == 1) {
+                ScreenshotViewer.field_n.length == 1) {
                 var12 = 1;
               } else {
                 var13 = var8[1 + var11];
@@ -189,7 +189,7 @@ final class ar {
                   if (param4 != -1) {
                     stackIn_69_0 = ((255 & o.currentLobbyGame.settings[param4]) != var11) ? 0 : 1;
                   } else {
-                    stackIn_69_0 = (o.currentLobbyGame.maxPlayers != w.field_n[var11]) ? 0 : 1;
+                    stackIn_69_0 = (o.currentLobbyGame.maxPlayers != ScreenshotViewer.field_n[var11]) ? 0 : 1;
                   }
                   var12 = stackIn_69_0;
                 }

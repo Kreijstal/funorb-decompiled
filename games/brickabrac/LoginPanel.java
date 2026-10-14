@@ -273,7 +273,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
                     ResourceRequest.g(29);
                   }
                 } else {
-                  dg.a(true);
+                  MultiValueSliderRenderer.a(true);
                 }
               }
             } else {
@@ -303,8 +303,8 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         if (param0 >= 4) {
           var1 = ContextActionController.field_g.measureText(ArrayWidgetGroup.buttonLabels[20]);
           var2 = ContextActionController.field_g.measureText(ArrayWidgetGroup.buttonLabels[21]);
-          dg.field_d = (var2 >= var1 ? var2 : var1) + 4;
-          QuickChatMenu.field_Zb = QuickChatMenu.field_Zb + (dg.field_d + 120);
+          MultiValueSliderRenderer.field_d = (var2 >= var1 ? var2 : var1) + 4;
+          QuickChatMenu.field_Zb = QuickChatMenu.field_Zb + (MultiValueSliderRenderer.field_d + 120);
           return;
         }
     }
@@ -400,7 +400,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             this.y = this.y + (5 + var7.measureWrappedHeight(this.introMessage, -40 + this.width, var7.ascent));
           }
           var8 = PlayerInputBatch.field_p;
-          var9 = qi.a(EmailConfirmationValidator.e((byte) -115), -28432);
+          var9 = MultiValueSliderWidget.a(EmailConfirmationValidator.e((byte) -115), -28432);
           if (EmailConfirmationValidator.field_k == var9) {
             var8 = sq.field_a;
           } else {

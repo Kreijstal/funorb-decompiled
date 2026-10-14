@@ -1270,7 +1270,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 if (!var13.protocolFlag8) {
                   stackIn_158_0 = AchievementsScreen.field_K;
                 } else {
-                  stackIn_158_0 = be.field_n;
+                  stackIn_158_0 = WidgetPaintStyle.field_n;
                 }
               } else {
                 stackIn_158_0 = ArchiveSource.field_d;

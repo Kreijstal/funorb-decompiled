@@ -64,7 +64,7 @@ final class ui {
           if (param8 < var14) {
             param8 = var14;
           }
-          nh.a(param8 + 18, param4 + 18, -40, -9 + (param5 - param8), qi.field_K, -param4 - 9 + param7);
+          nh.paintNineSliceFrame(param8 + 18, param4 + 18, -40, -9 + (param5 - param8), MultiValueSliderWidget.field_K, -param4 - 9 + param7);
           ap.field_a.drawTransparent(-(param8 * 0) + (param5 - 30), 6 + (param4 + (param7 - param4)));
           var16Lifetime1 = param7 + (-(var12 * var13) + param4 + 18) / 2;
           for (var17 = 0; var12 > var17; var17++) {
@@ -188,7 +188,7 @@ final class ui {
         if (param0) {
           field_b = (String) null;
         }
-        stackIn_7_0 = (AchievementIcon.field_j >= 10) && (!LevelPackSelectScreen.field_s) && (!ik.a(false));
+        stackIn_7_0 = (AchievementIcon.field_j >= 10) && (!LevelPackSelectScreen.field_s) && (!IntrusiveHashIterator.a(false));
         return stackIn_7_0;
     }
 

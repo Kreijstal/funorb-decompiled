@@ -173,7 +173,7 @@ final class eb extends ff {
             if (var6 < 0) {
               var6 = 0;
             }
-            field_r[var0][var3] = ik.a(var6 * var2, 65280) + ik.a(var1 * var6 >> 8, 16711934) + 1;
+            field_r[var0][var3] = IntrusiveHashIterator.a(var6 * var2, 65280) + IntrusiveHashIterator.a(var1 * var6 >> 8, 16711934) + 1;
           }
         }
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sb implements vc {
+final class BrickGameLayerController implements GameLayerController {
     static java.awt.Color field_f;
     private int field_a;
     static String field_b;
@@ -17,10 +17,10 @@ final class sb implements vc {
         if (!MonotonicTime.field_c) {
           return false;
         }
-        if (pf.a(false, -2)) {
+        if (RadialSelectorRenderer.a(false, -2)) {
           return false;
         }
-        if (pf.a(false, 19)) {
+        if (RadialSelectorRenderer.a(false, 19)) {
           return true;
         }
         var2 = -78 / ((0 - param0) / 34);
@@ -238,7 +238,7 @@ final class sb implements vc {
                 }
                 return;
               }
-              if (pf.field_p) {
+              if (RadialSelectorRenderer.field_p) {
                 stackIn_313_0 = 1;
                 var5Lifetime8 = stackIn_313_0;
                 if (this.d(-119)) {
@@ -304,7 +304,7 @@ final class sb implements vc {
           }
           var4Lifetime7 = stackIn_362_0;
           if (var4Lifetime7 == 0) {
-            if (!pf.field_p) {
+            if (!RadialSelectorRenderer.field_p) {
               if (IntArrayRequest.gameplayScreen != null &&
                 IntArrayRequest.gameplayScreen.match.resultsReady) {
                 var5Lifetime7 = 1;
@@ -360,7 +360,7 @@ final class sb implements vc {
           if (var4Lifetime1 != 0) {
             stackIn_20_0 = 1;
           } else {
-            if (!pf.field_p) {
+            if (!RadialSelectorRenderer.field_p) {
               if (IntArrayRequest.gameplayScreen != null) {
                 stackIn_20_0 = (IntArrayRequest.gameplayScreen.match.resultsReady) ? 1 : 0;
               } else {
@@ -394,7 +394,7 @@ final class sb implements vc {
               if (var4Lifetime2 != 0) {
                 stackIn_46_0 = 1;
               } else {
-                if (!pf.field_p) {
+                if (!RadialSelectorRenderer.field_p) {
                   if (IntArrayRequest.gameplayScreen != null) {
                     stackIn_46_0 = (IntArrayRequest.gameplayScreen.match.resultsReady) ? 1 : 0;
                   } else {
@@ -438,7 +438,7 @@ final class sb implements vc {
               ((RgbSprite) (Object) stackIn_108_0).b(stackIn_108_1, stackIn_108_2, stackIn_109_3);
             }
           } else {
-            if (pf.field_p) {
+            if (RadialSelectorRenderer.field_p) {
               stackIn_63_0 = 1;
               var5Lifetime2Lifetime1 = stackIn_63_0;
               if (this.d(-119)) {
@@ -518,7 +518,7 @@ final class sb implements vc {
               ((RgbSprite) (Object) stackIn_292_0).b(stackIn_292_1, stackIn_292_2, stackIn_293_3);
             }
           } else {
-            if (pf.field_p) {
+            if (RadialSelectorRenderer.field_p) {
               stackIn_247_0 = 1;
               var5Lifetime3 = stackIn_247_0;
               if (this.d(-119)) {
@@ -596,7 +596,7 @@ final class sb implements vc {
               ((RgbSprite) (Object) stackIn_165_0).b(stackIn_165_1, stackIn_165_2, stackIn_166_3);
             }
           } else {
-            if (pf.field_p) {
+            if (RadialSelectorRenderer.field_p) {
               stackIn_120_0 = 1;
               var5Lifetime4 = stackIn_120_0;
               if (this.d(-119)) {
@@ -660,7 +660,7 @@ final class sb implements vc {
         if (20 > MembershipBenefitsScreen.clientTick % 40) {
           var4Lifetime5 = 1;
           if (var4Lifetime5 == 0) {
-            if (!pf.field_p) {
+            if (!RadialSelectorRenderer.field_p) {
               if (IntArrayRequest.gameplayScreen != null) {
                 stackIn_181_0 = (IntArrayRequest.gameplayScreen.match.resultsReady) ? 1 : 0;
               } else {
@@ -689,7 +689,7 @@ final class sb implements vc {
         }
         var4Lifetime6 = 0;
         if (var4Lifetime6 == 0) {
-          if (pf.field_p) {
+          if (RadialSelectorRenderer.field_p) {
             stackIn_198_0 = 1;
             var5Lifetime6 = stackIn_198_0;
             if (this.d(-119)) {
@@ -971,9 +971,9 @@ final class sb implements vc {
                 n.field_d = stackIn_22_0;
                 if (n.field_d &&
                   BackgroundScene.pressedButton == 1) {
-                  stackIn_27_0 = !(pf.field_p);
-                  pf.field_p = stackIn_27_0;
-                  if (pf.field_p) {
+                  stackIn_27_0 = !(RadialSelectorRenderer.field_p);
+                  RadialSelectorRenderer.field_p = stackIn_27_0;
+                  if (RadialSelectorRenderer.field_p) {
                     this.field_a = 0;
                     Brick.field_E = 0;
                   } else {
@@ -984,7 +984,7 @@ final class sb implements vc {
                   stackIn_33_0 = n.field_d;
                   stackIn_34_1 = (var4 != 0) ? 0 : 1;
                   if ((stackIn_33_0 ? 1 : 0) == stackIn_34_1) {
-                    SoundCache.playUiSound(8, ta.uiSounds[0]);
+                    SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
                   }
                 }
               }
@@ -1120,7 +1120,7 @@ final class sb implements vc {
               stackIn_134_11 = (so.a((byte) -35) <= 50) ? false : true;
               MeshAttributeRecord.a(stackIn_130_0, stackIn_131_1, stackIn_133_2, stackIn_133_3, stackIn_133_4, stackIn_133_5, stackIn_133_6, stackIn_133_7, stackIn_133_8 != 0, stackIn_133_9, stackIn_133_10, stackIn_134_11);
             } else {
-              SoundCache.playUiSound(8, ta.uiSounds[0]);
+              SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
               var5Lifetime3 = 400 - this.field_a * this.field_a;
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               ConstructionBackground.b((byte) -118, var6Lifetime2);
@@ -1187,7 +1187,7 @@ final class sb implements vc {
                 MeshAttributeRecord.a(stackIn_240_0, stackIn_241_1, stackIn_243_2, stackIn_243_3, stackIn_243_4, stackIn_243_5, stackIn_243_6, stackIn_243_7, stackIn_243_8 != 0, stackIn_243_9, stackIn_243_10, stackIn_244_11);
                 break regionExit1;
               }
-              SoundCache.playUiSound(8, ta.uiSounds[0]);
+              SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
@@ -1214,9 +1214,9 @@ final class sb implements vc {
             MeshAttributeRecord.a(stackIn_259_0, stackIn_260_1, stackIn_262_2, stackIn_262_3, stackIn_262_4, stackIn_262_5, stackIn_262_6, stackIn_262_7, stackIn_262_8 != 0, stackIn_262_9, stackIn_262_10, stackIn_263_11);
           }
         } else {
-          stackIn_145_0 = !(pf.field_p);
-          pf.field_p = stackIn_145_0;
-          if (!pf.field_p) {
+          stackIn_145_0 = !(RadialSelectorRenderer.field_p);
+          RadialSelectorRenderer.field_p = stackIn_145_0;
+          if (!RadialSelectorRenderer.field_p) {
             this.field_a = 20;
             if (n.field_d) {
               stackIn_149_0 = n.field_d;
@@ -1255,7 +1255,7 @@ final class sb implements vc {
                 }
                 return;
               }
-              SoundCache.playUiSound(8, ta.uiSounds[0]);
+              SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
@@ -1320,7 +1320,7 @@ final class sb implements vc {
                 }
                 return;
               }
-              SoundCache.playUiSound(8, ta.uiSounds[0]);
+              SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
             }
             var5Lifetime4 = 400 - this.field_a * this.field_a;
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
@@ -1408,7 +1408,7 @@ final class sb implements vc {
           if (!MonotonicTime.field_c) {
             return false;
           }
-          if (pf.a(false, -2)) {
+          if (RadialSelectorRenderer.a(false, -2)) {
             return true;
           }
           return false;
@@ -1416,15 +1416,15 @@ final class sb implements vc {
         if (!MonotonicTime.field_c) {
           return false;
         }
-        if (pf.a(false, -2)) {
+        if (RadialSelectorRenderer.a(false, -2)) {
           return true;
         }
         return false;
     }
 
-    sb() {
-        LevelSelectScreen.field_w = ContextActionController.field_g.descent + (qi.field_K[0].height + qi.field_K[6].height) + ContextActionController.field_g.capHeight;
-        IntrusiveHashTable.field_l = qi.field_K[2].width + (3 + qi.field_K[0].width);
+    BrickGameLayerController() {
+        LevelSelectScreen.field_w = ContextActionController.field_g.descent + (MultiValueSliderWidget.field_K[0].height + MultiValueSliderWidget.field_K[6].height) + ContextActionController.field_g.capHeight;
+        IntrusiveHashTable.field_l = MultiValueSliderWidget.field_K[2].width + (3 + MultiValueSliderWidget.field_K[0].width);
     }
 
     private final boolean c(int param0) {
@@ -1434,7 +1434,7 @@ final class sb implements vc {
         if (this.b(param0 + 25496)) {
           return true;
         }
-        if (!pf.field_p) {
+        if (!RadialSelectorRenderer.field_p) {
           return false;
         }
         return true;

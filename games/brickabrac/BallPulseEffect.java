@@ -104,7 +104,7 @@ final class BallPulseEffect extends IntrusiveNode {
           BallPulseEffect.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
-        ji.receivedChatSystem = stackIn_5_0;
+        IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;
         nh.receivedChatBadge = var8.readUnsignedByte(255);
         BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
         if (gj.receivedChatChannel == 2) {
@@ -189,7 +189,7 @@ final class BallPulseEffect extends IntrusiveNode {
           BallPulseEffect.a(73, true);
         }
         stackIn_5_0 = ((var3 & 128) != 0);
-        ji.receivedChatSystem = stackIn_5_0;
+        IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;
         nh.receivedChatBadge = var8.readUnsignedByte(255);
         BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
         if (gj.receivedChatChannel == 2) {

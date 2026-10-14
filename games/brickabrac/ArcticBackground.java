@@ -14,7 +14,7 @@ final class ArcticBackground extends BackgroundScene {
         if (obfuscationGuard >= -84) {
           this.drawFullBackground(false, 56, -90, -99, 75);
           if (!this.hasSprites((byte) -111)) {
-            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, pf.arcticBackgroundColors[colorIndex], 16777215);
+            Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
             return;
           }
           var8 = kd.a(this.sceneId, colorIndex, (byte) 107);
@@ -28,7 +28,7 @@ final class ArcticBackground extends BackgroundScene {
           return;
         }
         if (!this.hasSprites((byte) -111)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, pf.arcticBackgroundColors[colorIndex], 16777215);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
           return;
         }
         RasterCacheSurface var9 = kd.a(this.sceneId, colorIndex, (byte) 107);
@@ -44,16 +44,16 @@ final class ArcticBackground extends BackgroundScene {
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         int var5 = 22 % ((obfuscationGuard + 28) / 43);
         if (colorIndex > -1) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 160, 238, pf.arcticBackgroundColors[colorIndex], 16777215);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 160, 238, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
           if (this.hasSprites((byte) -107)) {
-            be.arcticSmallSprite.drawTransparent(destinationX, destinationY);
+            WidgetPaintStyle.arcticSmallSprite.drawTransparent(destinationX, destinationY);
             return;
           }
           return;
         }
         Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 240, 16777215, 11184810);
         if (this.hasSprites((byte) -107)) {
-          be.arcticSmallSprite.drawTransparent(destinationX, destinationY);
+          WidgetPaintStyle.arcticSmallSprite.drawTransparent(destinationX, destinationY);
           return;
         }
     }
@@ -70,7 +70,7 @@ final class ArcticBackground extends BackgroundScene {
           if (null == LoginPanel.arcticFarSprite) {
             return false;
           }
-          if (be.arcticSmallSprite != null) {
+          if (WidgetPaintStyle.arcticSmallSprite != null) {
             return true;
           }
           return false;
@@ -84,7 +84,7 @@ final class ArcticBackground extends BackgroundScene {
         if (null == LoginPanel.arcticFarSprite) {
           return false;
         }
-        if (be.arcticSmallSprite != null) {
+        if (WidgetPaintStyle.arcticSmallSprite != null) {
           return true;
         }
         return false;
@@ -135,7 +135,7 @@ final class ArcticBackground extends BackgroundScene {
 
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         if (!this.hasSprites((byte) -125)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, pf.arcticBackgroundColors[colorIndex], 16777215);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
           if (!obfuscationGuard) {
             this.loadSprites(false);
             return;
@@ -166,7 +166,7 @@ final class ArcticBackground extends BackgroundScene {
           s.arcticNearSprite = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
           BallPulseEffect.arcticMidSprite = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
           LoginPanel.arcticFarSprite = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);
-          be.arcticSmallSprite = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
+          WidgetPaintStyle.arcticSmallSprite = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
           un.field_d = jh.a(0, s.arcticNearSprite);
           jl.field_d = jh.a(0, BallPulseEffect.arcticMidSprite);
           Brick.field_K = jh.a(0, LoginPanel.arcticFarSprite);

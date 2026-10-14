@@ -281,7 +281,7 @@ final class ParisBackground extends BackgroundScene {
           HalloweenBackground.field_w = new UiComponent[5];
           vj.field_a = new UiComponent[5];
           QuickChatPhraseDefinition.field_F = new UiComponent[5];
-          ik.field_i = new UiComponent[5];
+          IntrusiveHashIterator.field_i = new UiComponent[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -307,17 +307,17 @@ final class ParisBackground extends BackgroundScene {
                 var19 = stackIn_30_0;
               }
               if (decompiledFrameRemainder0) {
-                ik.field_i[var18] = new UiComponent(0L, param11);
+                IntrusiveHashIterator.field_i[var18] = new UiComponent(0L, param11);
                 HalloweenBackground.field_w[var18] = new UiComponent(0L, sj.field_a, var19);
                 vj.field_a[var18] = new UiComponent(0L, (UiComponent) null);
                 vj.field_a[var18].verticalAlignment = 1;
                 QuickChatPhraseDefinition.field_F[var18] = new UiComponent(0L, sj.field_a);
                 QuickChatPhraseDefinition.field_F[var18].verticalAlignment = 1;
-                ik.field_i[var18].addChild(HalloweenBackground.field_w[var18], 0);
-                ik.field_i[var18].addChild(vj.field_a[var18], 0);
-                ik.field_i[var18].addChild(QuickChatPhraseDefinition.field_F[var18], 0);
-                ik.field_i[var18].markDescendantsToInheritVisualState(true);
-                DualLinkDeque.field_d.addChild(ik.field_i[var18], 0);
+                IntrusiveHashIterator.field_i[var18].addChild(HalloweenBackground.field_w[var18], 0);
+                IntrusiveHashIterator.field_i[var18].addChild(vj.field_a[var18], 0);
+                IntrusiveHashIterator.field_i[var18].addChild(QuickChatPhraseDefinition.field_F[var18], 0);
+                IntrusiveHashIterator.field_i[var18].markDescendantsToInheritVisualState(true);
+                DualLinkDeque.field_d.addChild(IntrusiveHashIterator.field_i[var18], 0);
                 ContentTransitionLayer.field_pb = ContentTransitionLayer.field_pb + 1;
               }
               var18++;
@@ -329,7 +329,7 @@ final class ParisBackground extends BackgroundScene {
             LegacyUtf8Decoder.field_c = new UiComponent(0L, param4);
             LegacyUtf8Decoder.field_c.text = RadialSelectorWidget.field_Y;
             DualLinkDeque.field_d.addChild(LegacyUtf8Decoder.field_c, 0);
-            stackIn_34_0 = ik.a(false) ? 1 : 0;
+            stackIn_34_0 = IntrusiveHashIterator.a(false) ? 1 : 0;
           }
           if (stackIn_34_0 != 0 &&
             !TextWidgetRenderer.field_e) {

@@ -97,10 +97,10 @@ final class SecondaryNodeQueue {
 
     final static QuickChatParameterType[] getQuickChatParameterTypes(int obfuscationGuard) {
         if (obfuscationGuard == 0) {
-          return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, ro.field_r, BirthDateValidator.field_i, o.field_h, c.field_m, wi.field_i, ba.field_B, pa.field_k, ScrollPaneWithFooter.field_Sb, sl.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
+          return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, ro.field_r, BirthDateValidator.field_i, o.field_h, GrowableIntList.field_m, wi.field_i, ba.field_B, pa.field_k, ScrollPaneWithFooter.field_Sb, sl.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
         }
         field_e = (String) null;
-        return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, ro.field_r, BirthDateValidator.field_i, o.field_h, c.field_m, wi.field_i, ba.field_B, pa.field_k, ScrollPaneWithFooter.field_Sb, sl.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
+        return new QuickChatParameterType[]{un.field_b, IntrusiveNode.field_c, ro.field_r, BirthDateValidator.field_i, o.field_h, GrowableIntList.field_m, wi.field_i, ba.field_B, pa.field_k, ScrollPaneWithFooter.field_Sb, sl.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
     }
 
     public static void b(boolean param0) {
@@ -120,10 +120,10 @@ final class SecondaryNodeQueue {
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         try {
           BallPulseEffect.field_j = param1;
-          ta.field_g = param3;
+          NineSliceFrame.field_g = param3;
           ic.field_a = param0;
           ArrayWidgetGroup.field_G = param4;
-          GameScreen.field_e = new SoundCache(ArrayWidgetGroup.field_G, ta.field_g);
+          GameScreen.field_e = new SoundCache(ArrayWidgetGroup.field_G, NineSliceFrame.field_g);
           if (param2 != -38) {
             field_a = (String) null;
           }

@@ -50,7 +50,7 @@ final class bm {
           depthShift = depthBits - 10;
           if (mesh.faceGroupCount > 0 &&
             null != mesh.faceGroups) {
-            qi.clearFaceGroupCounts((byte) 109);
+            MultiValueSliderWidget.clearFaceGroupCounts((byte) 109);
           }
           mc.sortedFaceCount = 0;
           face = 0;
@@ -307,37 +307,37 @@ final class bm {
                   } else {
                     if (event.eventCode != 4) {
                       if (event.eventCode == 5) {
-                        sound = ta.uiSounds[5];
+                        sound = NineSliceFrame.uiSounds[5];
                       } else {
                         if (6 == event.eventCode) {
-                          sound = ta.uiSounds[6];
+                          sound = NineSliceFrame.uiSounds[6];
                         } else {
                           if (event.eventCode == 7) {
-                            sound = ta.uiSounds[7];
+                            sound = NineSliceFrame.uiSounds[7];
                           } else {
                             if (3 == event.eventCode) {
                               sound = ef.field_a[event.detailId];
                             } else {
                               if (8 == event.eventCode) {
-                                sound = ta.uiSounds[10];
+                                sound = NineSliceFrame.uiSounds[10];
                               } else {
                                 if (9 == event.eventCode) {
-                                  sound = ta.uiSounds[11];
+                                  sound = NineSliceFrame.uiSounds[11];
                                 } else {
                                   if (event.eventCode == 10) {
-                                    sound = ta.uiSounds[12];
+                                    sound = NineSliceFrame.uiSounds[12];
                                   } else {
                                     if (event.eventCode == 11) {
                                       sound = NanoGameClock.field_p[ChocolateBackground.field_w.nextBoundedInt(-37880252, NanoGameClock.field_p.length)];
                                     } else {
                                       if (event.eventCode == 12) {
-                                        sound = ta.uiSounds[13];
+                                        sound = NineSliceFrame.uiSounds[13];
                                       } else {
                                         if (event.eventCode == 14) {
-                                          sound = ta.uiSounds[14];
+                                          sound = NineSliceFrame.uiSounds[14];
                                         } else {
                                           if ((event.eventCode == 13)) {
-                                            sound = ta.uiSounds[15];
+                                            sound = NineSliceFrame.uiSounds[15];
                                           }
                                         }
                                       }

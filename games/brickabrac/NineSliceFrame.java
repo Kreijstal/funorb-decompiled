@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ta {
-    private RgbSprite[] field_b;
+class NineSliceFrame {
+    private RgbSprite[] sprites;
     static int field_f;
     static String field_a;
     static PcmSound[] uiSounds;
@@ -24,14 +24,14 @@ class ta {
         byte[] var17;
         var7 = BrickABrac.field_J ? 1 : 0;
         if (param0 != 13874) {
-          ta.a(-46);
+          NineSliceFrame.a(-46);
         }
         var1 = jh.decodedSpriteWidths[0] * TextHotspotRegion.decodedSpriteHeights[0];
         var16 = cn.decodedSpriteIndices[0];
         if (!tm.decodedSpriteHasAlpha[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {
-            var8[var5_int] = qp.decodedSpritePalette[ik.a((int) var16[var5_int], 255)];
+            var8[var5_int] = qp.decodedSpritePalette[IntrusiveHashIterator.a((int) var16[var5_int], 255)];
           }
           var3 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var8);
         } else {
@@ -40,7 +40,7 @@ class ta {
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = LevelSelectScreen.d(qp.decodedSpritePalette[ik.a((int) var16[var6], 255)], ik.a(-16777216, var17[var6] << 24));
+            var5[var6] = LevelSelectScreen.d(qp.decodedSpritePalette[IntrusiveHashIterator.a((int) var16[var6], 255)], IntrusiveHashIterator.a(-16777216, var17[var6] << 24));
           }
           var3 = new ArgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var13);
         }
@@ -59,11 +59,11 @@ class ta {
         uiSounds = null;
     }
 
-    void a(int param0, int param1, int param2, boolean param3, int param4) {
-        if (param3) {
-          ta.a(true, false);
+    void paintFrame(int width, int height, int x, boolean obfuscationGuard, int y) {
+        if (obfuscationGuard) {
+          NineSliceFrame.a(true, false);
         }
-        nh.a(param0, param1, -40, param2, this.field_b, param4);
+        nh.paintNineSliceFrame(width, height, -40, x, this.sprites, y);
     }
 
     final static void a(boolean param0, boolean param1) {
@@ -79,11 +79,11 @@ class ta {
         wo.field_b.a(0, 0, 0);
     }
 
-    ta(RgbSprite[] param0) {
+    NineSliceFrame(RgbSprite[] sprites) {
         try {
-          this.field_b = param0;
+          this.sprites = sprites;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ta.<init>(" + (sprites != null ? "{...}" : "null") + ')');
         }
     }
 

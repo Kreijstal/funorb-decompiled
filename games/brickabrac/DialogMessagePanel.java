@@ -208,8 +208,8 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
           var14 = 65280 & param0;
           for (var15 = 0; var15 < 16; var15++) {
             var16 = param6 * var15 >> 4;
-            var12[var15] = LevelSelectScreen.d(ik.a(var16 * var14, 16711680), ik.a(var13 * var16, -16711936)) >>> 8;
-            var12[-var15 + 31] = LevelSelectScreen.d(ik.a(var16 * var13, -16711936), ik.a(16711680, var16 * var14)) >>> 8;
+            var12[var15] = LevelSelectScreen.d(IntrusiveHashIterator.a(var16 * var14, 16711680), IntrusiveHashIterator.a(var13 * var16, -16711936)) >>> 8;
+            var12[-var15 + 31] = LevelSelectScreen.d(IntrusiveHashIterator.a(var16 * var13, -16711936), IntrusiveHashIterator.a(16711680, var16 * var14)) >>> 8;
           }
           var15Lifetime1 = var10 - var8_int;
           var16Lifetime1 = -var9 + var11;

@@ -26,7 +26,7 @@ abstract class ArchiveSource {
           if (param4 > -102) {
             ArchiveSource.a(51);
           }
-          if (ik.field_g != ej.field_P) {
+          if (IntrusiveHashIterator.field_g != ej.field_P) {
             return false;
           }
           var8 = new RegistrationResponseDialog(ResourceArchive.field_f, param5);
@@ -36,7 +36,7 @@ abstract class ArchiveSource {
             return true;
           }
           VolcanicBackground.field_w = param0;
-          ik.field_g = MusicEnvelope.field_f;
+          IntrusiveHashIterator.field_g = MusicEnvelope.field_f;
           FullscreenFailureKind.field_i = param6;
           VerticalScrollbar.field_Qb = param1;
           ReportAbuseDialog.field_cc = param2;

@@ -124,7 +124,7 @@ final class eq {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_l[var3Lifetime1] = RegistrationResponseDialog.a(this.field_l[var3Lifetime1], TabbedPane.field_Wb[var4][ik.a((int)(this.field_f[ik.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_l[var3Lifetime1] = RegistrationResponseDialog.a(this.field_l[var3Lifetime1], TabbedPane.field_Wb[var4][IntrusiveHashIterator.a((int)(this.field_f[IntrusiveHashIterator.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -139,7 +139,7 @@ final class eq {
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_l[var3Lifetime1Lifetime2] = RegistrationResponseDialog.a(this.field_l[var3Lifetime1Lifetime2], TabbedPane.field_Wb[var7][ik.a(255, (int)(this.field_k[ik.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_l[var3Lifetime1Lifetime2] = RegistrationResponseDialog.a(this.field_l[var3Lifetime1Lifetime2], TabbedPane.field_Wb[var7][IntrusiveHashIterator.a(255, (int)(this.field_k[IntrusiveHashIterator.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -168,7 +168,7 @@ final class eq {
         int var9 = 0;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          this.field_h[this.field_c] = (byte)LevelSelectScreen.d((int) this.field_h[this.field_c], 128 >>> ik.a(7, this.field_j));
+          this.field_h[this.field_c] = (byte)LevelSelectScreen.d((int) this.field_h[this.field_c], 128 >>> IntrusiveHashIterator.a(7, this.field_j));
           var4_int = -48 % ((-28 - param1) / 38);
           this.field_c = this.field_c + 1;
           if (this.field_c > 32) {
@@ -262,7 +262,7 @@ final class eq {
                 this.field_j = 0;
                 this.field_c = 0;
               }
-              this.field_h[this.field_c] = (byte)ik.a(255, var8 << 8 - var7);
+              this.field_h[this.field_c] = (byte)IntrusiveHashIterator.a(255, var8 << 8 - var7);
               this.field_j = this.field_j + var7;
               var5_int++;
               param2 = param2 - 8L;
@@ -285,7 +285,7 @@ final class eq {
               this.field_j = 0;
               this.field_c = 0;
             }
-            this.field_h[this.field_c] = (byte)ik.a(255, var8Lifetime1 << 8 - var7);
+            this.field_h[this.field_c] = (byte)IntrusiveHashIterator.a(255, var8Lifetime1 << 8 - var7);
             this.field_j = this.field_j + (int)param2;
           } else {
             this.field_j = (int)((long)this.field_j + param2);

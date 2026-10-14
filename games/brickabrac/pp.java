@@ -171,7 +171,7 @@ final class pp {
         if (param2 != 19) {
           return;
         }
-        w.field_k = param1;
+        ScreenshotViewer.field_k = param1;
     }
 
     final static int a(PlayerBoard param0, byte param1, MultiplayerMatch param2) {

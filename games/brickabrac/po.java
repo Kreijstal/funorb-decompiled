@@ -59,7 +59,7 @@ final class po {
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, to.field_b, be.field_g);
+              var9.fillRect(0, 0, to.field_b, WidgetPaintStyle.field_g);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -78,12 +78,12 @@ final class po {
               var10.setFont(DirectByteStorage.field_g);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
-              var9.drawImage(RichTextLayout.field_r, to.field_b / 2 - 152, be.field_g / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(RichTextLayout.field_r, to.field_b / 2 - 152, WidgetPaintStyle.field_g / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + to.field_b / 2;
-              var8 = be.field_g / 2 - 18;
+              var8 = WidgetPaintStyle.field_g / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(2 + var7, var8 + 2, param2 * 3, 30);
@@ -97,7 +97,7 @@ final class po {
             if (LevelSequence.field_g != null) {
               var9.setFont(DirectByteStorage.field_g);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(LevelSequence.field_g, to.field_b / 2 - 6 * LevelSequence.field_g.length() / 2, -26 + be.field_g / 2);
+              var9.drawString(LevelSequence.field_g, to.field_b / 2 - 6 * LevelSequence.field_g.length() / 2, -26 + WidgetPaintStyle.field_g / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

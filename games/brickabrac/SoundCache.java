@@ -284,7 +284,7 @@ final class SoundCache {
                 }
                 else {
                   hn.a((byte) 52);
-                  pf.field_d = false;
+                  RadialSelectorRenderer.field_d = false;
                   stackIn_29_0 = var6_intLifetime1;
                   return stackIn_29_0;
                 }
@@ -323,9 +323,9 @@ final class SoundCache {
                 jl.incomingPackets.readUnsignedByte(255);
                 jl.incomingPackets.readUnsignedByte(255);
                 jl.incomingPackets.readInt(255);
-                ta.field_f = jl.incomingPackets.readUnsignedShort(65280);
-                TextHotspotRegion.field_q = new byte[ta.field_f];
-                for (var8 = 0; ta.field_f > var8; var8++) {
+                NineSliceFrame.field_f = jl.incomingPackets.readUnsignedShort(65280);
+                TextHotspotRegion.field_q = new byte[NineSliceFrame.field_f];
+                for (var8 = 0; NineSliceFrame.field_f > var8; var8++) {
                   TextHotspotRegion.field_q[var8] = jl.incomingPackets.readByte(true);
                 }
               }
@@ -341,7 +341,7 @@ final class SoundCache {
                   ll.field_d.a(112, EmailConfirmationValidator.e((byte) -81));
                 }
               }
-              pf.field_d = false;
+              RadialSelectorRenderer.field_d = false;
               if (var11 != null) {
                 ui.a(-70, EmailConfirmationValidator.e((byte) -112), var11);
               }
@@ -379,8 +379,8 @@ final class SoundCache {
               TextWidgetRenderer.ensureGamePacketBody((byte) -41)) {
               hn.a((byte) 58);
               if (IntrusiveHashTable.currentPacketOpcode == 7 &&
-                !pf.field_d) {
-                pf.field_d = true;
+                !RadialSelectorRenderer.field_d) {
+                RadialSelectorRenderer.field_d = true;
                 stackIn_91_0 = -1;
                 return stackIn_91_0;
               }
@@ -388,24 +388,24 @@ final class SoundCache {
                 IntrusiveHashTable.currentPacketOpcode = 3;
               }
               DirectByteStorage.field_e = jl.incomingPackets.readCp1252String(-1);
-              pf.field_d = false;
+              RadialSelectorRenderer.field_d = false;
               stackIn_95_0 = IntrusiveHashTable.currentPacketOpcode;
               return stackIn_95_0;
             }
             if (eq.gameTransport == null) {
-              if (pf.field_d) {
+              if (RadialSelectorRenderer.field_d) {
                 if (30000L >= MembershipBenefitsScreen.f(-6792)) {
                   DirectByteStorage.field_e = gd.field_e;
                 } else {
                   DirectByteStorage.field_e = hg.field_b;
                 }
-                pf.field_d = false;
+                RadialSelectorRenderer.field_d = false;
                 stackIn_104_0 = 3;
                 return stackIn_104_0;
               }
               var6_intLifetime2 = dl.field_b;
               dl.field_b = DebouncedValidationSource.field_a;
-              pf.field_d = true;
+              RadialSelectorRenderer.field_d = true;
               DebouncedValidationSource.field_a = var6_intLifetime2;
             }
             stackIn_106_0 = -1;

@@ -125,7 +125,7 @@ final class AlignedIconLabel extends UiComponent {
             if (ua.field_a == null) {
               stackIn_17_2 = null;
               stackIn_17_3 = null;
-              stackIn_17_6 = "" + sb.field_e;
+              stackIn_17_6 = "" + BrickGameLayerController.field_e;
             } else {
               stackIn_17_2 = null;
               stackIn_17_3 = null;

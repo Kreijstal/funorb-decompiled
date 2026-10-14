@@ -48,10 +48,10 @@ final class IsaacGenerator {
             }
           }
           this.accumulator = this.accumulator + this.memory[255 & wordIndex + 128];
-          newMemoryWord = this.lastResult + (this.accumulator + this.memory[ik.a(1020, oldMemoryWord) >> 2]);
+          newMemoryWord = this.lastResult + (this.accumulator + this.memory[IntrusiveHashIterator.a(1020, oldMemoryWord) >> 2]);
           memoryWord = newMemoryWord;
           this.memory[wordIndex] = newMemoryWord;
-          newResult = this.memory[ik.a(memoryWord >> 8 >> 2, 255)] + oldMemoryWord;
+          newResult = this.memory[IntrusiveHashIterator.a(memoryWord >> 8 >> 2, 255)] + oldMemoryWord;
           this.lastResult = newResult;
           this.results[wordIndex] = newResult;
         }

@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg implements WidgetRenderer {
-    private TextFont field_j;
+final class MultiValueSliderRenderer implements WidgetRenderer {
+    private TextFont font;
     static String field_k;
-    private int field_i;
-    private int field_h;
+    private int backgroundColor;
+    private int textPaint;
     static RgbSprite field_e;
-    private int field_c;
-    private int field_a;
+    private int markerRadius;
+    private int markerColor;
     static RgbSprite jungleMidSprite;
     static RgbSprite[] field_b;
-    private int field_f;
+    private int shadowPaint;
     static int field_d;
-    private int field_l;
+    private int trackColor;
 
     public static void a(int param0) {
         jungleMidSprite = null;
@@ -37,30 +37,30 @@ final class dg implements WidgetRenderer {
         int var8 = 0;
         int var9 = 0;
         int var11 = 0;
-        qi var12 = null;
+        MultiValueSliderWidget var12 = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (widget instanceof qi) {
+          if (widget instanceof MultiValueSliderWidget) {
             stackIn_4_0 = (Widget) (widget);
           } else {
             stackIn_4_0 = null;
           }
-          var12 = (qi) (stackIn_4_0);
-          Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.field_i);
+          var12 = (MultiValueSliderWidget) (stackIn_4_0);
+          Rasterizer2D.fillRectangle(widget.x + parentX, widget.y + parentY, widget.width, widget.height, this.backgroundColor);
           if (var12 != null) {
           }
-          var7 = widget.width - 2 * var12.field_L;
-          var8 = parentX - (-widget.x - var12.field_L);
-          var9 = var12.field_M + widget.y + parentY;
-          Rasterizer2D.drawLine(var8, var9, var7 + var8, var9, this.field_l);
-          for (var10 = var12.c(false) - 1; var10 >= 0; var10--) {
-            Rasterizer2D.f(var8 + var12.a(var10, false) * var7 / var12.h(-119), var9, this.field_c, this.field_a);
+          var7 = widget.width - 2 * var12.horizontalInset;
+          var8 = parentX - (-widget.x - var12.horizontalInset);
+          var9 = var12.trackY + widget.y + parentY;
+          Rasterizer2D.drawLine(var8, var9, var7 + var8, var9, this.trackColor);
+          for (var10 = var12.getValueCount(false) - 1; var10 >= 0; var10--) {
+            Rasterizer2D.f(var8 + var12.getValue(var10, false) * var7 / var12.getMaximumValue(-119), var9, this.markerRadius, this.markerColor);
           }
           if (callbackGuard != -20618) {
-            dg.a(46);
+            MultiValueSliderRenderer.a(46);
           }
-          if (this.field_j != null) {
-            this.field_j.drawCentered(var12.text, var7 / 2 + var8, var9 + this.field_j.baselineHeight + var12.field_M, this.field_h, this.field_f);
+          if (this.font != null) {
+            this.font.drawCentered(var12.text, var7 / 2 + var8, var9 + this.font.baselineHeight + var12.trackY, this.textPaint, this.shadowPaint);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -150,7 +150,7 @@ final class dg implements WidgetRenderer {
           }
           return;
         }
-        dg.a(-70);
+        MultiValueSliderRenderer.a(-70);
         Rasterizer2D.clear();
         jl.b(-120);
         if (256 > var5) {
@@ -214,7 +214,7 @@ final class dg implements WidgetRenderer {
           param7.drawTransparent((-param7.canvasWidth + param1) / 2 + (param2 + (10 * param8 >> 16)), -param7.canvasHeight + 480 + (param9 + param5));
           param3.drawTransparent((20 * param8 >> 16) + (param1 - param3.canvasWidth) / 2 + param2, -param3.canvasHeight + (480 + param5) + param9);
           if (param0 != -899814320) {
-            dg.a(-80);
+            MultiValueSliderRenderer.a(-80);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,17 +243,17 @@ final class dg implements WidgetRenderer {
         }
     }
 
-    dg(TextFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    MultiValueSliderRenderer(TextFont font, int textPaint, int shadowPaint, int trackColor, int backgroundColor, int markerRadius, int markerColor) {
         try {
-          this.field_j = param0;
-          this.field_h = param1;
-          this.field_i = param4;
-          this.field_a = param6;
-          this.field_f = param2;
-          this.field_c = param5;
-          this.field_l = param3;
+          this.font = font;
+          this.textPaint = textPaint;
+          this.backgroundColor = backgroundColor;
+          this.markerColor = markerColor;
+          this.shadowPaint = shadowPaint;
+          this.markerRadius = markerRadius;
+          this.trackColor = trackColor;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dg.<init>(" + (font != null ? "{...}" : "null") + ',' + textPaint + ',' + shadowPaint + ',' + trackColor + ',' + backgroundColor + ',' + markerRadius + ',' + markerColor + ')');
         }
     }
 

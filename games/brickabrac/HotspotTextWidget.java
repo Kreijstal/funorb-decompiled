@@ -196,7 +196,7 @@ class HotspotTextWidget extends FocusableWidget {
         if (param0 != 9) {
           field_L = -88;
         }
-        return ik.field_j;
+        return IntrusiveHashIterator.field_j;
     }
 
     final static RgbSprite a(int param0, String param1, int param2) {

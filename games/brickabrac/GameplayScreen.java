@@ -34,7 +34,7 @@ final class GameplayScreen extends GameScreen {
         PlayerBoard var3;
         int var2Lifetime1;
         int var2Lifetime2;
-        if (!pf.field_p) {
+        if (!RadialSelectorRenderer.field_p) {
           stackIn_6_0 = (!la.field_c) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
@@ -86,11 +86,11 @@ final class GameplayScreen extends GameScreen {
         int[] var5 = SecondaryHashTable.earnedAchievementMask;
         int[] var3 = var5;
         int var4 = achievementId;
-        var5[var4 >> 5] = LevelSelectScreen.d(var5[var4 >> 5], 1 << ik.a(31, var4));
+        var5[var4 >> 5] = LevelSelectScreen.d(var5[var4 >> 5], 1 << IntrusiveHashIterator.a(31, var4));
         int[] var6 = pl.pendingAchievementMask;
         var3 = var6;
         var4 = achievementId;
-        var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], pendingBit << ik.a(var4, 31));
+        var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], pendingBit << IntrusiveHashIterator.a(var4, 31));
         kp.achievementNotifications.addLast(new IntNode(achievementId), (byte) 3);
         return false;
     }
@@ -255,27 +255,27 @@ final class GameplayScreen extends GameScreen {
         var4Lifetime1 = stackIn_19_0 | stackIn_20_1;
         if (1 == this.match.playerCount &&
           this.match.playerBoards[0].boardState == 5) {
-          ji.a(25459, true, c.field_j, 1, 1, true);
+          IterableIntrusiveHashTable.a(25459, true, GrowableIntList.field_j, 1, 1, true);
         } else {
           if (!this.match.resultsReady) {
             if (var4Lifetime1 != 0) {
-              ji.a(25459, true, MessageScreen.field_t, 1, 1, true);
+              IterableIntrusiveHashTable.a(25459, true, MessageScreen.field_t, 1, 1, true);
             } else {
               if (TabbedPane.currentBackground != null &&
                 TabbedPane.currentBackground.musicReady) {
                 wj.a(1, true, TabbedPane.currentBackground.c(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
-                ji.a(25459, true, cd.field_g, 1, 1, true);
+                IterableIntrusiveHashTable.a(25459, true, cd.field_g, 1, 1, true);
               }
             }
           } else {
-            ji.a(25459, true, RichTextLayout.field_q, 1, 1, true);
+            IterableIntrusiveHashTable.a(25459, true, RichTextLayout.field_q, 1, 1, true);
           }
         }
         if (this.match.resultsReady &&
           this.match.playerCount > 1) {
-          fieldTemp$2 = be.field_j + 1;
-          be.field_j = be.field_j + 1;
+          fieldTemp$2 = WidgetPaintStyle.field_j + 1;
+          WidgetPaintStyle.field_j = WidgetPaintStyle.field_j + 1;
           if (fieldTemp$2 == 300) {
             if (m.field_a) {
               fieldTemp$3 = TextLineLayout.field_f + 1;
@@ -444,7 +444,7 @@ final class GameplayScreen extends GameScreen {
               this.queueProgressAchievement(false, 239, 16);
             }
             if (this.lastReportedLevel < this.match.configuration.getPeriod(95)) {
-              w.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
+              ScreenshotViewer.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
             }
           }
           if (var20.field_tb) {
@@ -608,12 +608,12 @@ final class GameplayScreen extends GameScreen {
             this.a(NameEntryPopup.field_Yb, this.resultLevel, -UsernameAvailabilityValidator.field_l + MonotonicTime.nowMillis(false), false, 1000);
             jj.field_d = jj.field_d | ja.a(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
             stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
-            be.field_a = stackIn_8_0;
+            WidgetPaintStyle.field_a = stackIn_8_0;
           }
           if (this.match.playerCount == 1 &&
             this.match.playerBoards[0].boardState == 8) {
             ng.requestScreen(param1, 107, 18);
-            ji.a(25459, true, cd.field_g, 1, 1, true);
+            IterableIntrusiveHashTable.a(25459, true, cd.field_g, 1, 1, true);
           } else {
             this.a(param1, (byte) 69);
           }
@@ -631,7 +631,7 @@ final class GameplayScreen extends GameScreen {
         rj.a((byte) 80, me.alternateActivityLoop);
         if (!(this.match.playerCount <= 1) ||
           9 != this.match.playerBoards[0].boardState) {
-          ji.a(25459, true, cd.field_g, 1, 1, true);
+          IterableIntrusiveHashTable.a(25459, true, cd.field_g, 1, 1, true);
         }
         if (this.networkedMatch) {
           return;
@@ -869,8 +869,8 @@ final class GameplayScreen extends GameScreen {
           }
           if (this.match.playerCount != 1 &&
             this.match.resultsReady) {
-            if (!(200 >= be.field_j)) {
-              be.field_j = 299;
+            if (!(200 >= WidgetPaintStyle.field_j)) {
+              WidgetPaintStyle.field_j = 299;
               return true;
             }
           } else {
@@ -1027,7 +1027,7 @@ final class GameplayScreen extends GameScreen {
             return true;
           }
         }
-        stackIn_152_0 = !(pf.field_p);
+        stackIn_152_0 = !(RadialSelectorRenderer.field_p);
         return stackIn_152_0;
     }
 
@@ -1088,7 +1088,7 @@ final class GameplayScreen extends GameScreen {
           this.lastReportedLevel = levelIndex;
           counterLevelAdjustment = levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + counterLevelAdjustment;
-          w.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
+          ScreenshotViewer.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
         }
     }
 
@@ -1681,8 +1681,8 @@ final class GameplayScreen extends GameScreen {
             var21 = NodeDequeCursor.field_c[4];
             var16 = var21;
             var2 = var16;
-            nh.a(169, 482, -40, -1, cd.field_h, -1);
-            nh.a(169, 482, -40, 472, cd.field_h, -1);
+            nh.paintNineSliceFrame(169, 482, -40, -1, cd.field_h, -1);
+            nh.paintNineSliceFrame(169, 482, -40, 472, cd.field_h, -1);
             stackIn_83_0 = ((this.localPlayerMask & 1 << this.viewedPlayerId) == 0) ? 0 : 1;
             var7Lifetime3 = stackIn_83_0;
             stackIn_86_0 = this.resultWordMode;
@@ -1690,8 +1690,8 @@ final class GameplayScreen extends GameScreen {
             stackIn_86_2 = var21[0];
             stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.localPlayerMask);
             LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.viewedPlayerId], var22[0], this.viewedPlayerId, var7Lifetime3 != 0, this.match);
-            nh.a(169, 9, -40, -1, cd.field_h, 0 + (var22[2] - 3));
-            nh.a(169, 9, -40, 472, cd.field_h, -3 + var22[2] - 0);
+            nh.paintNineSliceFrame(169, 9, -40, -1, cd.field_h, 0 + (var22[2] - 3));
+            nh.paintNineSliceFrame(169, 9, -40, 472, cd.field_h, -3 + var22[2] - 0);
           } else {
             stackIn_44_0 = (this.networkedMatch) ? 0 : 1;
             var7Lifetime3 = stackIn_44_0;
@@ -1733,21 +1733,21 @@ final class GameplayScreen extends GameScreen {
           }
         } else {
           var7_ref_j = this.match.playerBoards[0];
-          nh.a(526, 482, -40, -1, cd.field_h, -1);
+          nh.paintNineSliceFrame(526, 482, -40, -1, cd.field_h, -1);
           Rasterizer2D.fillRectangleAlpha(7, 473, 510, 7, 0, 96);
           Rasterizer2D.fillRectangleAlpha(524, 0, 116, 480, 0, 96);
-          nh.a(125, 482, -40, 516, cd.field_h, -1);
+          nh.paintNineSliceFrame(125, 482, -40, 516, cd.field_h, -1);
           DualLinkNode.a(130, this.match, ContextActionController.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
-          nh.a(125, 9, -40, 516, cd.field_h, 137);
+          nh.paintNineSliceFrame(125, 9, -40, 516, cd.field_h, 137);
           if (!TextFieldRenderer.field_A ||
             wc.field_b) {
             ua.a(var7_ref_j, 524, 85, -68, 147, 81, this.match);
           }
-          nh.a(125, 9, -40, 516, cd.field_h, 229);
+          nh.paintNineSliceFrame(125, 9, -40, 516, cd.field_h, 229);
           ArchiveNetworkClient.a(640, this.match, var7_ref_j);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
-            ui.a(tb.field_eb + ro.field_v, PasswordFieldRenderer.field_D, 6, c.field_i, 100, 621, 1729, 340, 230, 0);
+            ui.a(tb.field_eb + ro.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != var7_ref_j.displayedMessage) {
               var12 = (IndexedSprite[]) null;
@@ -1855,8 +1855,8 @@ final class GameplayScreen extends GameScreen {
             ChocolateBackground.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           }
           MenuScreen.field_i = 0;
-          to.primaryActivityLoop = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
-          me.alternateActivityLoop = PcmStream.createWithVolume(ta.uiSounds[2], 256, 0);
+          to.primaryActivityLoop = PcmStream.createWithVolume(NineSliceFrame.uiSounds[2], 256, 0);
+          me.alternateActivityLoop = PcmStream.createWithVolume(NineSliceFrame.uiSounds[2], 256, 0);
           to.primaryActivityLoop.setLoopCount(-1);
           me.alternateActivityLoop.setLoopCount(-1);
           OpacityWidget.queueSoundPlayback((byte) 125, to.primaryActivityLoop);
@@ -1869,7 +1869,7 @@ final class GameplayScreen extends GameScreen {
             ProducerFramebuffer.field_j = rd.a(cm.field_p, new String[]{""}, (byte) 103).toLowerCase();
             ff.field_j = LevelResultSubmission.field_j.toLowerCase();
           }
-          be.field_j = 0;
+          WidgetPaintStyle.field_j = 0;
           KeyboardInput.hasNonnegativeResult = false;
           UsernameAvailabilityValidator.field_l = MonotonicTime.nowMillis(false);
           NameEntryPopup.field_Yb = configuration.pack.packId;

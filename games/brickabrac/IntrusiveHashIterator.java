@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class ik implements Iterator {
+final class IntrusiveHashIterator implements Iterator {
     static boolean field_j;
     static UiComponent field_a;
-    private ji field_e;
-    private int field_d;
+    private IterableIntrusiveHashTable table;
+    private int bucketIndex;
     static tq field_g;
-    private IntrusiveNode field_h;
-    private IntrusiveNode field_k;
+    private IntrusiveNode nextNode;
+    private IntrusiveNode lastReturned;
     static UiComponent[] field_i;
     static RgbSprite[] field_f;
     static String[] field_b;
@@ -20,13 +20,13 @@ final class ik implements Iterator {
         return param0 & param1;
     }
 
-    private final void b(int param0) {
-        this.field_d = 1;
-        this.field_h = this.field_e.field_d[0].next;
-        if (param0 > -71) {
+    private final void resetIterator(int obfuscationGuard) {
+        this.bucketIndex = 1;
+        this.nextNode = this.table.buckets[0].next;
+        if (obfuscationGuard > -71) {
           return;
         }
-        this.field_k = null;
+        this.lastReturned = null;
     }
 
     public final boolean hasNext() {
@@ -34,18 +34,18 @@ final class ik implements Iterator {
         int fieldTemp$1 = 0;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_h != this.field_e.field_d[this.field_d - 1]) {
+        if (this.nextNode != this.table.buckets[this.bucketIndex - 1]) {
           return true;
         }
-        while (this.field_e.field_c > this.field_d) {
-          fieldTemp$0 = this.field_e.field_d;
-          fieldTemp$1 = this.field_d;
-          this.field_d = this.field_d + 1;
-          if (fieldTemp$0[fieldTemp$1].next != this.field_e.field_d[this.field_d - 1]) {
-            this.field_h = this.field_e.field_d[this.field_d - 1].next;
+        while (this.table.bucketCount > this.bucketIndex) {
+          fieldTemp$0 = this.table.buckets;
+          fieldTemp$1 = this.bucketIndex;
+          this.bucketIndex = this.bucketIndex + 1;
+          if (fieldTemp$0[fieldTemp$1].next != this.table.buckets[this.bucketIndex - 1]) {
+            this.nextNode = this.table.buckets[this.bucketIndex - 1].next;
             return true;
           }
-          this.field_h = this.field_e.field_d[this.field_d - 1];
+          this.nextNode = this.table.buckets[this.bucketIndex - 1];
         }
         return false;
     }
@@ -56,23 +56,23 @@ final class ik implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_h != this.field_e.field_d[-1 + this.field_d]) {
-          var1 = this.field_h;
-          this.field_h = var1.next;
-          this.field_k = var1;
+        if (this.nextNode != this.table.buckets[-1 + this.bucketIndex]) {
+          var1 = this.nextNode;
+          this.nextNode = var1.next;
+          this.lastReturned = var1;
           return var1;
         }
         do {
-          if (this.field_d >= this.field_e.field_c) {
+          if (this.bucketIndex >= this.table.bucketCount) {
             return null;
           }
-          fieldTemp$0 = this.field_e.field_d;
-          fieldTemp$1 = this.field_d;
-          this.field_d = this.field_d + 1;
+          fieldTemp$0 = this.table.buckets;
+          fieldTemp$1 = this.bucketIndex;
+          this.bucketIndex = this.bucketIndex + 1;
           var1 = fieldTemp$0[fieldTemp$1].next;
-        } while (this.field_e.field_d[this.field_d - 1] == var1);
-        this.field_h = var1.next;
-        this.field_k = var1;
+        } while (this.table.buckets[this.bucketIndex - 1] == var1);
+        this.nextNode = var1.next;
+        this.lastReturned = var1;
         return var1;
     }
 
@@ -142,11 +142,11 @@ final class ik implements Iterator {
     }
 
     public final void remove() {
-        if (this.field_k == null) {
+        if (this.lastReturned == null) {
           throw new IllegalStateException();
         }
-        this.field_k.unlink((byte) 111);
-        this.field_k = null;
+        this.lastReturned.unlink((byte) 111);
+        this.lastReturned = null;
     }
 
     final static boolean a(int param0) {
@@ -200,19 +200,19 @@ final class ik implements Iterator {
     final static boolean isNameSeparator(byte obfuscationGuard, char character) {
         boolean stackIn_9_0 = false;
         if (obfuscationGuard != -9) {
-          ik.isNameSeparator((byte) -124, 'V');
+          IntrusiveHashIterator.isNameSeparator((byte) -124, 'V');
         }
         stackIn_9_0 = (character == 160) || (character == 32) || (character == 95) || (character == 45);
         return stackIn_9_0;
     }
 
-    ik(ji param0) {
-        this.field_k = null;
+    IntrusiveHashIterator(IterableIntrusiveHashTable table) {
+        this.lastReturned = null;
         try {
-          this.field_e = param0;
-          this.b(-101);
+          this.table = table;
+          this.resetIterator(-101);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ik.<init>(" + (table != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -278,7 +278,7 @@ final class QuickChatHelpDialog extends UiComponent {
 
     final static void a(String param0, int param1) {
         try {
-          pf.a(48, param0);
+          RadialSelectorRenderer.a(48, param0);
           int var2_int = 81 % ((param1 - 86) / 38);
           MusicPatch.a(0, WidgetTextLayout.field_d, false);
         } catch (RuntimeException runtimeException) {

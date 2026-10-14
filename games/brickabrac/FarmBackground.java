@@ -22,7 +22,7 @@ final class FarmBackground extends BackgroundScene {
             RegistrationResponseDialog.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          dg.a(-899814320, 306, destinationX, ActivityIndicatorWidget.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
+          MultiValueSliderRenderer.a(-899814320, 306, destinationX, ActivityIndicatorWidget.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
         } else {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, rm.farmBackgroundColors[colorIndex], 22953);
         }
@@ -36,7 +36,7 @@ final class FarmBackground extends BackgroundScene {
             RegistrationResponseDialog.a(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          dg.a(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, rm.farmMidSprite, scroll16, 0);
+          MultiValueSliderRenderer.a(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, rm.farmMidSprite, scroll16, 0);
         } else {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, rm.farmBackgroundColors[colorIndex], 22953);
         }

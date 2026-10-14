@@ -215,7 +215,7 @@ final class so {
           MenuSelection.field_k = pl.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
           Ball.field_D = pl.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
           SingleChildWidget.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
-          dg.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
+          MultiValueSliderRenderer.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
           GameConnectionShell.field_D = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
           AccountRegistrationPanel.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
           TextHotspotRegion.field_p = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "powerup", 2);
@@ -230,7 +230,7 @@ final class so {
           cn.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small", 2);
           ScorePopup.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
           AccountMessageDialog.field_yb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
-          qi.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
+          MultiValueSliderWidget.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
           ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           ln.field_j = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.field_l = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
@@ -251,11 +251,11 @@ final class so {
             ResourceArchive.field_a[var10_intLifetime3].bindRasterTarget();
             pa.field_m[var10_intLifetime3 % 29].a(0, 0);
           }
-          kp.field_e = new RgbSprite[dg.field_b.length];
-          for (var10_intLifetime4 = 0; dg.field_b.length > var10_intLifetime4; var10_intLifetime4++) {
-            kp.field_e[var10_intLifetime4] = new RgbSprite(dg.field_b[var10_intLifetime4].canvasWidth / 2, dg.field_b[var10_intLifetime4].canvasHeight / 2);
+          kp.field_e = new RgbSprite[MultiValueSliderRenderer.field_b.length];
+          for (var10_intLifetime4 = 0; MultiValueSliderRenderer.field_b.length > var10_intLifetime4; var10_intLifetime4++) {
+            kp.field_e[var10_intLifetime4] = new RgbSprite(MultiValueSliderRenderer.field_b[var10_intLifetime4].canvasWidth / 2, MultiValueSliderRenderer.field_b[var10_intLifetime4].canvasHeight / 2);
             kp.field_e[var10_intLifetime4].bindRasterTarget();
-            dg.field_b[var10_intLifetime4].a(0, 0);
+            MultiValueSliderRenderer.field_b[var10_intLifetime4].a(0, 0);
           }
           LevelPackSelectScreen.field_z = new RgbSprite[GameConnectionShell.field_D.length];
           for (var10_intLifetime5 = 0; GameConnectionShell.field_D.length > var10_intLifetime5; var10_intLifetime5++) {
@@ -329,10 +329,10 @@ final class so {
           }
           AlignedIconLabel.field_Sb = ap.field_a.copy();
           AlignedIconLabel.field_Sb.rotateCounterclockwise();
-          dg.field_e = pl.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
-          RankingsRequest.field_o = new RgbSprite(dg.field_e.canvasWidth / 2, dg.field_e.canvasHeight / 2);
+          MultiValueSliderRenderer.field_e = pl.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
+          RankingsRequest.field_o = new RgbSprite(MultiValueSliderRenderer.field_e.canvasWidth / 2, MultiValueSliderRenderer.field_e.canvasHeight / 2);
           RankingsRequest.field_o.bindRasterTarget();
-          dg.field_e.a(0, 0);
+          MultiValueSliderRenderer.field_e.a(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 118);
           var10 = pl.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
           hc.field_a = new RgbSprite[2][4];
@@ -360,9 +360,9 @@ final class so {
           for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {
             cm.field_r[var11Lifetime2] = DelayedPacket.a(ArchiveNetworkRequest.packSelectorIcons[var11Lifetime2], 20, -17912);
           }
-          ik.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
+          IntrusiveHashIterator.field_f = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime3 = 0; var11Lifetime3 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime3++) {
-            ik.field_f[var11Lifetime3] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
+            IntrusiveHashIterator.field_f[var11Lifetime3] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), ArchiveNetworkRequest.packSelectorIcons[var11Lifetime3], 14, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

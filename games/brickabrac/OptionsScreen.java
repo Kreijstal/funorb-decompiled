@@ -83,7 +83,7 @@ final class OptionsScreen extends FramedMenuScreen {
     }
 
     OptionsScreen() {
-        super(14, 180, 460, 155, 35, be.field_o);
+        super(14, 180, 460, 155, 35, WidgetPaintStyle.field_o);
     }
 
     final void drawScreen(byte obfuscationGuard) {

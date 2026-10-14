@@ -281,7 +281,7 @@ final class TabbedPane extends UiComponent {
           if (param15) {
             field_Xb = (long[]) null;
           }
-          gh.a(param2, new ta(param11), param3, param0, param14, param7, param18, param10, 12, param6, new ta(param17), new ta(param9), param4, param19, param13, param8, param1, param12, param16, param5);
+          gh.a(param2, new NineSliceFrame(param11), param3, param0, param14, param7, param18, param10, 12, param6, new NineSliceFrame(param17), new NineSliceFrame(param9), param4, param19, param13, param8, param1, param12, param16, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

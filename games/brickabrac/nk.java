@@ -137,7 +137,7 @@ final class nk {
           if (obfuscationGuard) {
             field_e = (String) null;
           }
-          if (!ik.isNameSeparator((byte) -9, character)) {
+          if (!IntrusiveHashIterator.isNameSeparator((byte) -9, character)) {
             return true;
           }
           if (0 != var3_int) {

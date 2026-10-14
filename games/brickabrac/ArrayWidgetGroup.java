@@ -12,7 +12,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
     static String field_J;
     static int[] field_L;
     static int field_E;
-    static ta field_F;
+    static NineSliceFrame field_F;
     static String field_C;
     static int[] decodedSpriteOffsetX;
 
@@ -497,7 +497,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
             return false;
           }
           if (param2 != 116) {
-            field_F = (ta) null;
+            field_F = (NineSliceFrame) null;
           }
           var4_int = 0;
           while (this.children.length > var4_int) {

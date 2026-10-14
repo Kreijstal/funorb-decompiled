@@ -80,7 +80,7 @@ final class CappedUrlRequest implements Runnable {
               UiComponent.previousPacketOpcode = stackIn_11_0;
               rf.field_b = BitPacketBuffer.field_u;
               var5.position = 0;
-              c.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, ContentTransitionLayer.field_ob, TextFieldValidator.outgoingPackets);
+              GrowableIntList.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, ContentTransitionLayer.field_ob, TextFieldValidator.outgoingPackets);
               ActivityIndicatorWidget.a(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

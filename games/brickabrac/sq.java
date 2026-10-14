@@ -198,7 +198,7 @@ final class sq {
         long var3;
         long var5;
         ff.field_d.clear((byte) -83);
-        if (!pf.field_f) {
+        if (!RadialSelectorRenderer.field_f) {
           if (!param0) {
             if (GzipInflater.field_g) {
               if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {

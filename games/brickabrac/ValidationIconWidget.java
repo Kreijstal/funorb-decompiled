@@ -42,18 +42,18 @@ final class ValidationIconWidget extends FocusableWidget {
           var12 = df.field_a[0];
           var9 = var12.canvasWidth << 1;
           var10 = var12.canvasHeight << 1;
-          if (ik.field_c != null &&
-            ik.field_c.width >= var9 &&
-            var10 <= ik.field_c.height) {
-            IndexedSpriteGeometry.pushSpriteRaster(-114, ik.field_c);
+          if (IntrusiveHashIterator.field_c != null &&
+            IntrusiveHashIterator.field_c.width >= var9 &&
+            var10 <= IntrusiveHashIterator.field_c.height) {
+            IndexedSpriteGeometry.pushSpriteRaster(-114, IntrusiveHashIterator.field_c);
             Rasterizer2D.clear();
           } else {
-            ik.field_c = new RgbSprite(var9, var10);
-            IndexedSpriteGeometry.pushSpriteRaster(-87, ik.field_c);
+            IntrusiveHashIterator.field_c = new RgbSprite(var9, var10);
+            IndexedSpriteGeometry.pushSpriteRaster(-87, IntrusiveHashIterator.field_c);
           }
           var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           sc.popRaster(-104);
-          ik.field_c.f(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
+          IntrusiveHashIterator.field_c.f(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
         }
     }
 
@@ -261,8 +261,8 @@ final class ValidationIconWidget extends FocusableWidget {
                 var9 = var9 | 1;
               }
               tq.field_f.position = 0;
-              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
-              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
+              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
               tq.field_f.writePrefixedCp1252String(param6 ^ 4, var14);
               tq.field_f.writePrefixedCp1252String(0, var8);
               var15 = (CharSequence) ((Object) param0);
@@ -282,8 +282,8 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.backfillShortLength(-var10 + TextFieldValidator.outgoingPackets.position, 255);
             } else {
               tq.field_f.position = 0;
-              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
-              tq.field_f.writeInt(ji.packetDelayRandom.nextInt(), (byte) -79);
+              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
+              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
               stackIn_11_0 = tq.field_f;
               stackIn_11_1 = 0;
               if (!param3.a((byte) 116)) {
@@ -322,7 +322,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -108), param6 + 5);
                 DirectByteStorage.field_e = m.field_d;
                 hn.a((byte) 96);
-                pf.field_d = false;
+                RadialSelectorRenderer.field_d = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
@@ -348,7 +348,7 @@ final class ValidationIconWidget extends FocusableWidget {
                   co.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
                 }
                 hn.a((byte) 79);
-                pf.field_d = false;
+                RadialSelectorRenderer.field_d = false;
                 stackIn_43_0 = 100 + var11;
                 return stackIn_43_0;
               }
@@ -365,7 +365,7 @@ final class ValidationIconWidget extends FocusableWidget {
               DirectByteStorage.field_e = jl.incomingPackets.readCp1252String(-1);
             }
             hn.a((byte) 106);
-            pf.field_d = false;
+            RadialSelectorRenderer.field_d = false;
             stackIn_51_0 = IntrusiveHashTable.currentPacketOpcode;
             return stackIn_51_0;
           }
@@ -373,20 +373,20 @@ final class ValidationIconWidget extends FocusableWidget {
             field_N = false;
           }
           if (null == eq.gameTransport) {
-            if (pf.field_d) {
+            if (RadialSelectorRenderer.field_d) {
               if (MembershipBenefitsScreen.f(param6 ^ -6788) > 30000L) {
                 DirectByteStorage.field_e = hg.field_b;
               } else {
                 DirectByteStorage.field_e = gd.field_e;
               }
-              pf.field_d = false;
+              RadialSelectorRenderer.field_d = false;
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
             var9Lifetime3 = dl.field_b;
             dl.field_b = DebouncedValidationSource.field_a;
             DebouncedValidationSource.field_a = var9Lifetime3;
-            pf.field_d = true;
+            RadialSelectorRenderer.field_d = true;
           }
           stackIn_64_0 = -1;
           return stackIn_64_0;

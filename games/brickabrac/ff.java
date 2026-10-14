@@ -6,7 +6,7 @@ abstract class ff {
     static int[] worldDirectionY;
     static String field_j;
     static String[][] field_i;
-    static w field_c;
+    static ScreenshotViewer field_c;
     static long field_b;
     static String field_a;
     static int[] field_h;

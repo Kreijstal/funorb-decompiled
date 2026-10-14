@@ -228,7 +228,7 @@ final class LevelSelectScreen extends MenuScreen {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -82 / ((-47 - param2) / 37);
-          var5 = pf.findFriend(false, param1);
+          var5 = RadialSelectorRenderer.findFriend(false, param1);
           if (var5 != null &&
             var5.serverName != null) {
             return true;
@@ -280,7 +280,7 @@ final class LevelSelectScreen extends MenuScreen {
     }
 
     final static String d(boolean param0) {
-        if (MusicEnvelope.field_f == ik.field_g) {
+        if (MusicEnvelope.field_f == IntrusiveHashIterator.field_g) {
           return VolcanicBackground.field_w;
         }
         if (MusicVoice.field_l == MusicEnvelope.field_f) {

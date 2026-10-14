@@ -52,7 +52,7 @@ final class sm {
             if (GameplayScreen.field_j == 2) {
               MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.result), DialogMessagePanel.field_P);
               var2 = new PacketBuffer(13);
-              c.a(TextFieldWidget.field_S, 12, SoftwareFramebuffer.field_a, u.field_g, var2);
+              GrowableIntList.a(TextFieldWidget.field_S, 12, SoftwareFramebuffer.field_a, u.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);
               var2.writeInt(ArcticBackground.field_t, (byte) -79);
               MouseInput.field_d.write(var2.data, true, 13, 0);

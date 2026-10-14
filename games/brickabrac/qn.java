@@ -59,7 +59,7 @@ final class qn {
             }
           }
           if (to.field_b == this.field_v &&
-            be.field_g == this.field_t) {
+            WidgetPaintStyle.field_g == this.field_t) {
             return;
           }
           this.field_e.a(this.field_v, this.field_t, -70);
@@ -77,7 +77,7 @@ final class qn {
           if (to.field_b != this.field_v) {
             this.field_e.a(this.field_v, this.field_t, -70);
           } else {
-            if (be.field_g != this.field_t) {
+            if (WidgetPaintStyle.field_g != this.field_t) {
               this.field_e.a(this.field_v, this.field_t, -70);
             }
           }
@@ -154,7 +154,7 @@ final class qn {
     }
 
     final GameCanvas a(boolean param0) {
-        this.field_d = be.field_g;
+        this.field_d = WidgetPaintStyle.field_g;
         this.field_l = to.field_b;
         this.field_e.a(this.field_q, this.field_s, -93);
         MusicCrossfadeStream.field_A = false;
@@ -225,7 +225,7 @@ final class qn {
               if (var2 != to.field_b) {
                 this.field_e.a(var2, var3, -97);
               } else {
-                if (var3 != be.field_g) {
+                if (var3 != WidgetPaintStyle.field_g) {
                   this.field_e.a(var2, var3, -97);
                 }
               }
@@ -245,7 +245,7 @@ final class qn {
             if (var2 != to.field_b) {
               this.field_e.a(var2, var3, -97);
             } else {
-              if (var3 != be.field_g) {
+              if (var3 != WidgetPaintStyle.field_g) {
                 this.field_e.a(var2, var3, -97);
               }
             }
@@ -271,7 +271,7 @@ final class qn {
                 }
                 return;
               }
-              if (var3 != be.field_g) {
+              if (var3 != WidgetPaintStyle.field_g) {
                 this.field_e.a(var2, var3, -97);
               }
               decompiledFrameRemainder0 = false;
@@ -282,7 +282,7 @@ final class qn {
           if (var2 != to.field_b) {
             this.field_e.a(var2, var3, -97);
           } else {
-            if (var3 != be.field_g) {
+            if (var3 != WidgetPaintStyle.field_g) {
               this.field_e.a(var2, var3, -97);
             }
           }

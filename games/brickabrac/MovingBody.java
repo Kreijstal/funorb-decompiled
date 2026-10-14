@@ -166,7 +166,7 @@ abstract class MovingBody extends IntrusiveNode {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (ik.field_g != MusicEnvelope.field_f) {
+          if (IntrusiveHashIterator.field_g != MusicEnvelope.field_f) {
             stackIn_23_0 = -1;
             return stackIn_23_0;
           }

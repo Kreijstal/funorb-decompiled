@@ -118,7 +118,7 @@ final class hc {
           if (param0 != 2) {
             field_c = false;
           }
-          c.cyclesDue = 0;
+          GrowableIntList.cyclesDue = 0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hc.D(" + param0 + ')');
         }
@@ -252,9 +252,9 @@ final class hc {
           cd.field_d = new UiComponent(0L, var10);
           cd.field_d.textInset = 2;
           cd.field_d.frameSprites = TimedSplashScreen.a(false, (byte) 77, 3815994, 30, 2039583, false);
-          ik.field_a = new UiComponent(0L, var10);
-          ik.field_a.textInset = 2;
-          ik.field_a.frameSprites = TimedSplashScreen.a(false, (byte) 83, 3815994, 30, 2039583, true);
+          IntrusiveHashIterator.field_a = new UiComponent(0L, var10);
+          IntrusiveHashIterator.field_a.textInset = 2;
+          IntrusiveHashIterator.field_a.frameSprites = TimedSplashScreen.a(false, (byte) 83, 3815994, 30, 2039583, true);
           CappedUrlRequest.field_l = new UiComponent(0L, (UiComponent) null);
           CappedUrlRequest.field_l.verticalAlignment = 1;
           CappedUrlRequest.field_l.font = (TextFont) ((Object) rd.field_e);

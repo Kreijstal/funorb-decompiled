@@ -419,7 +419,7 @@ final class ResourceArchive {
             throw new RuntimeException("");
           }
           if (this.decodedFiles[groupId][fileId] != null) {
-            var7 = be.readArchiveBytes(false, this.decodedFiles[groupId][fileId], false);
+            var7 = WidgetPaintStyle.readArchiveBytes(false, this.decodedFiles[groupId][fileId], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -722,7 +722,7 @@ final class ResourceArchive {
             xteaKey[1] != 0 ||
             0 != xteaKey[2] ||
             xteaKey[3] != 0)) {
-            groupCopyForDecrypt = be.readArchiveBytes(false, this.packedGroups[groupId], true);
+            groupCopyForDecrypt = WidgetPaintStyle.readArchiveBytes(false, this.packedGroups[groupId], true);
             encryptedGroupCopy = groupCopyForDecrypt;
             packedBytes = encryptedGroupCopy;
             decryptPacket = new PacketBuffer(groupCopyForDecrypt);
@@ -730,7 +730,7 @@ final class ResourceArchive {
             decompiledFrameRemainder0 = false;
           }
           else {
-            packedBytes = be.readArchiveBytes(false, this.packedGroups[groupId], false);
+            packedBytes = WidgetPaintStyle.readArchiveBytes(false, this.packedGroups[groupId], false);
           }
           try {
             uncompressedBytes = AchievementIcon.decompressArchiveContainer(true, packedBytes);

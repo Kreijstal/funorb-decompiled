@@ -34,7 +34,7 @@ final class IntArrayRequest extends IntrusiveNode {
 
     final static void c(int param0) {
         int var1 = -95 / ((param0 - 64) / 58);
-        ta.a(true, false);
+        NineSliceFrame.a(true, false);
     }
 
     final static int a(byte param0) {

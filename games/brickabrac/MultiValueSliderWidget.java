@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends FocusableWidget {
-    private int field_P;
+final class MultiValueSliderWidget extends FocusableWidget {
+    private int maximumValue;
     static String field_N;
-    int field_M;
-    private c field_O;
+    int trackY;
+    private GrowableIntList values;
     static RgbSprite[] field_K;
-    int field_L;
+    int horizontalInset;
 
     final static me a(java.applet.Applet param0, int param1) {
         int var4 = 0;
@@ -59,12 +59,12 @@ final class qi extends FocusableWidget {
         }
     }
 
-    final int c(boolean param0) {
-        if (param0) {
+    final int getValueCount(boolean obfuscationGuard) {
+        if (obfuscationGuard) {
           field_N = (String) null;
-          return this.field_O.b(true);
+          return this.values.size(true);
         }
-        return this.field_O.b(true);
+        return this.values.size(true);
     }
 
     public static void j(int param0) {
@@ -72,7 +72,7 @@ final class qi extends FocusableWidget {
         field_N = null;
         if (param0 != 18724) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          qi.a((java.applet.Applet) null, 5);
+          MultiValueSliderWidget.a((java.applet.Applet) null, 5);
         }
     }
 
@@ -111,26 +111,26 @@ final class qi extends FocusableWidget {
         }
     }
 
-    final int a(int param0, boolean param1) {
-        if (0 > param0) {
+    final int getValue(int index, boolean obfuscationGuard) {
+        if (0 > index) {
           return -1;
         }
-        if (this.field_O.b(!param1 ? true : false) <= param0) {
+        if (this.values.size(!obfuscationGuard ? true : false) <= index) {
           return -1;
         }
-        if (!param1) {
-          return this.field_O.a(param0, (byte) 64);
+        if (!obfuscationGuard) {
+          return this.values.get(index, (byte) 64);
         }
-        this.field_O = (c) null;
-        return this.field_O.a(param0, (byte) 64);
+        this.values = (GrowableIntList) null;
+        return this.values.get(index, (byte) 64);
     }
 
-    final int h(int param0) {
-        if (param0 >= -81) {
-          this.field_M = -5;
-          return this.field_P;
+    final int getMaximumValue(int obfuscationGuard) {
+        if (obfuscationGuard >= -81) {
+          this.trackY = -5;
+          return this.maximumValue;
         }
-        return this.field_P;
+        return this.maximumValue;
     }
 
     final static void handleAchievementResponse(int obfuscationGuard) {
@@ -221,23 +221,23 @@ final class qi extends FocusableWidget {
           if (!super.handlePointerPress(focusRoot, pointerX, parentX, parentY, button, pointerY, obfuscationGuard + obfuscationGuard)) {
             return false;
           }
-          var8_int = -this.field_L + (-parentX + pointerX);
-          var9 = -(this.field_L * 2) + this.width;
+          var8_int = -this.horizontalInset + (-parentX + pointerX);
+          var9 = -(this.horizontalInset * 2) + this.width;
           if (var9 < var8_int) {
             var8_int = var9;
           }
           if (var8_int < 0) {
             var8_int = 0;
           }
-          var8_int = this.field_P * var8_int / var9;
+          var8_int = this.maximumValue * var8_int / var9;
           if (button == 1) {
-            this.field_O.a(false, var8_int);
+            this.values.append(false, var8_int);
           } else {
             if (button == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_O.b(true) > var12; var12++) {
-                var13 = -var8_int + this.field_O.a(var12, (byte) 64);
+              for (var12 = 0; this.values.size(true) > var12; var12++) {
+                var13 = -var8_int + this.values.get(var12, (byte) 64);
                 var13 = var13 * var13;
                 if (var10 > var13) {
                   var10 = var13;
@@ -247,7 +247,7 @@ final class qi extends FocusableWidget {
               if (var11 < 0) {
                 return true;
               }
-              this.field_O.a((byte) 46, var11);
+              this.values.removeAt((byte) 46, var11);
             }
           }
           return true;
@@ -272,7 +272,7 @@ final class qi extends FocusableWidget {
         return ScorePopup.field_p;
     }
 
-    private qi() throws Throwable {
+    private MultiValueSliderWidget() throws Throwable {
         throw new Error();
     }
 

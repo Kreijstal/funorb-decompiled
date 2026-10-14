@@ -17,12 +17,12 @@ final class GameUiController implements GameUiLifecycle {
           return false;
         }
         if (rf.field_g.complete) {
-          be.field_a = true;
+          WidgetPaintStyle.field_a = true;
           TextFieldRenderer.field_A = true;
           if (null != rf.field_g.names &&
             null != rf.field_g.names[1][0]) {
             TextFieldRenderer.field_A = false;
-            be.field_a = false;
+            WidgetPaintStyle.field_a = false;
             return true;
           }
           return true;
@@ -45,9 +45,9 @@ final class GameUiController implements GameUiLifecycle {
         MusicVoice.a(20, -97, 20, var2);
         TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
         ea.field_g = true;
-        c.field_e = er.field_b;
+        GrowableIntList.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
-        KeyboardInput.a(new sb(), 0);
+        KeyboardInput.a(new BrickGameLayerController(), 0);
         VolcanicBackground.g(0);
         qn.a(240, 0, 640, 0, -6532);
         bm.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
@@ -182,7 +182,7 @@ final class GameUiController implements GameUiLifecycle {
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = 1;
-        var3 = be.uiBootstrapStage;
+        var3 = WidgetPaintStyle.uiBootstrapStage;
         if (0 != var3) {
           if (var3 != 1) {
             if (var3 != 2) {
@@ -190,7 +190,7 @@ final class GameUiController implements GameUiLifecycle {
                 if (4 == var3) {
                   ParisBackground.a((byte) 24, 92.0f, Ball.field_x);
                   sl.field_C.renderClient(121);
-                  sb.a(nl.field_a, IntHistoryBuffer.field_i, 2);
+                  BrickGameLayerController.a(nl.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
                   if (var3 != 5) {
                     return true;
@@ -219,7 +219,7 @@ final class GameUiController implements GameUiLifecycle {
           SecondaryNodeQueue.a(LevelList.field_o, NodeDequeCursor.field_i, (byte) -38, AchievementIcon.field_s, FarmBackground.field_r);
         }
         if (var2 != 0) {
-          be.uiBootstrapStage = be.uiBootstrapStage + 1;
+          WidgetPaintStyle.uiBootstrapStage = WidgetPaintStyle.uiBootstrapStage + 1;
         }
         hc.b(2);
         if (obfuscationGuard < -41) {

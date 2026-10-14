@@ -48,14 +48,14 @@ final class InstructionsScreen extends MenuScreen {
             UiComponent.field_H.selectedIndex >= 0) {
             var3 = UsernameSuggestionPanel.field_I[UiComponent.field_H.selectedIndex];
             if (var3 == 2) {
-              w.c((byte) 3);
+              ScreenshotViewer.c((byte) 3);
             } else if (5 == var3) {
-              w.c((byte) 3);
+              ScreenshotViewer.c((byte) 3);
             }
           } else {
             if (var2 != 0 &&
               ArchiveFetchClient.field_p != 2) {
-              w.c((byte) 3);
+              ScreenshotViewer.c((byte) 3);
             }
           }
           if (var3 == 0 &&

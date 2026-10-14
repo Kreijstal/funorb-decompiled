@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class c {
+final class GrowableIntList {
     static int field_g;
     static String field_c;
-    private boolean field_f;
+    private boolean multiplyGrowth;
     static IndexedSprite[] field_i;
-    static ta field_l;
-    private int field_h;
-    private int[] field_k;
+    static NineSliceFrame field_l;
+    private int lastIndex;
+    private int[] values;
     static MusicTrack field_j;
     static QuickChatParameterType field_m;
-    private int field_b;
+    private int growthStep;
     static int cyclesDue;
     static String field_d;
     static RgbSprite field_e;
@@ -28,7 +28,7 @@ final class c {
         field_c = null;
         if (!param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          c.a(6, -63, 125, -38, (PacketBuffer) null);
+          GrowableIntList.a(6, -63, 125, -38, (PacketBuffer) null);
           return;
         }
     }
@@ -58,24 +58,24 @@ final class c {
         }
     }
 
-    final void a(byte param0, int param1) {
-        if (param1 < 0) {
-          throw new ArrayIndexOutOfBoundsException(param1);
+    final void removeAt(byte obfuscationGuard, int index) {
+        if (index < 0) {
+          throw new ArrayIndexOutOfBoundsException(index);
         }
-        if (this.field_h < param1) {
-          throw new ArrayIndexOutOfBoundsException(param1);
+        if (this.lastIndex < index) {
+          throw new ArrayIndexOutOfBoundsException(index);
         }
-        if (param1 != this.field_h) {
-          ArrayOperations.copy(this.field_k, 1 + param1, this.field_k, param1, -param1 + this.field_h);
-          this.field_h = this.field_h - 1;
-          if (param0 != 46) {
+        if (index != this.lastIndex) {
+          ArrayOperations.copy(this.values, 1 + index, this.values, index, -index + this.lastIndex);
+          this.lastIndex = this.lastIndex - 1;
+          if (obfuscationGuard != 46) {
             field_c = (String) null;
             return;
           }
           return;
         }
-        this.field_h = this.field_h - 1;
-        if (param0 != 46) {
+        this.lastIndex = this.lastIndex - 1;
+        if (obfuscationGuard != 46) {
           field_c = (String) null;
           return;
         }
@@ -335,21 +335,21 @@ final class c {
         }
     }
 
-    private final int b(int param0, int param1) {
+    private final int capacityForIndex(int obfuscationGuard, int index) {
         int var3;
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var3 = this.field_k.length;
-        if (param0 != 1) {
+        var3 = this.values.length;
+        if (obfuscationGuard != 1) {
           return -35;
         }
-        while (param1 >= var3) {
-          if (!this.field_f) {
-            var3 = var3 + this.field_b;
+        while (index >= var3) {
+          if (!this.multiplyGrowth) {
+            var3 = var3 + this.growthStep;
             continue;
           }
           if (var3 != 0) {
-            var3 = var3 * this.field_b;
+            var3 = var3 * this.growthStep;
             continue;
           }
           var3 = 1;
@@ -357,68 +357,68 @@ final class c {
         return var3;
     }
 
-    private final void a(int param0, int param1) {
-        int[] var4 = new int[this.b(1, param0)];
+    private final void growForIndex(int index, int obfuscationGuard) {
+        int[] var4 = new int[this.capacityForIndex(1, index)];
         int[] var3 = var4;
-        ArrayOperations.copy(this.field_k, 0, var4, 0, this.field_k.length);
-        this.field_k = var4;
-        if (param1 != -7877) {
-          this.field_k = (int[]) null;
+        ArrayOperations.copy(this.values, 0, var4, 0, this.values.length);
+        this.values = var4;
+        if (obfuscationGuard != -7877) {
+          this.values = (int[]) null;
           return;
         }
     }
 
-    private c() throws Throwable {
+    private GrowableIntList() throws Throwable {
         throw new Error();
     }
 
-    private final void a(int param0, int param1, int param2) {
-        if (this.field_h < param2) {
-          this.field_h = param2;
+    private final void setAt(int value, int obfuscationGuard, int index) {
+        if (this.lastIndex < index) {
+          this.lastIndex = index;
         }
-        if (param1 != 0) {
+        if (obfuscationGuard != 0) {
           field_g = 55;
-          if (param2 >= this.field_k.length) {
-            this.a(param2, -7877);
-            this.field_k[param2] = param0;
+          if (index >= this.values.length) {
+            this.growForIndex(index, -7877);
+            this.values[index] = value;
             return;
           }
-          this.field_k[param2] = param0;
+          this.values[index] = value;
           return;
         }
-        if (param2 < this.field_k.length) {
-          this.field_k[param2] = param0;
+        if (index < this.values.length) {
+          this.values[index] = value;
           return;
         }
-        this.a(param2, -7877);
-        this.field_k[param2] = param0;
+        this.growForIndex(index, -7877);
+        this.values[index] = value;
     }
 
-    final void a(boolean param0, int param1) {
-        if (!param0) {
-          this.a(param1, 0, 1 + this.field_h);
+    final void append(boolean obfuscationGuard, int value) {
+        if (!obfuscationGuard) {
+          this.setAt(value, 0, 1 + this.lastIndex);
           return;
         }
-        this.a(-78, -117);
-        this.a(param1, 0, 1 + this.field_h);
+        this.growForIndex(-78, -117);
+        this.setAt(value, 0, 1 + this.lastIndex);
     }
 
-    final int b(boolean param0) {
-        if (!param0) {
+    final int size(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           return -51;
         }
-        return 1 + this.field_h;
+        return 1 + this.lastIndex;
     }
 
-    final int a(int param0, byte param1) {
-        if (this.field_h < param0) {
-          throw new ArrayIndexOutOfBoundsException(param0);
+    final int get(int index, byte obfuscationGuard) {
+        if (this.lastIndex < index) {
+          throw new ArrayIndexOutOfBoundsException(index);
         }
-        if (param1 == 64) {
-          return this.field_k[param0];
+        if (obfuscationGuard == 64) {
+          return this.values[index];
         }
         field_c = (String) null;
-        return this.field_k[param0];
+        return this.values[index];
     }
 
     static {

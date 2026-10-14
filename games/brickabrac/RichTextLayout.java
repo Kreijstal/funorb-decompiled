@@ -108,7 +108,7 @@ final class RichTextLayout extends WidgetTextLayout {
         MovingBody.a((byte) 74, 640 + Rasterizer2D.width >> 1, -640 + Rasterizer2D.width >> 1, 0, Rasterizer2D.height);
         if (TextLineLayout.field_b <= 0) {
           if (IntArrayRequest.field_j > 0) {
-            if (null == c.field_e) {
+            if (null == GrowableIntList.field_e) {
               stackIn_60_0 = NinjaBackground.field_w;
               stackIn_60_1 = true;
               stackIn_61_2 = (param0) && (!hc.field_c);
@@ -118,7 +118,7 @@ final class RichTextLayout extends WidgetTextLayout {
               stackIn_65_2 = (param0) && (!hc.field_c);
               ((UiComponent) (Object) stackIn_64_0).drawRoot(stackIn_64_1, stackIn_65_2);
             } else {
-              c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
+              GrowableIntList.field_e.drawAt(NinjaBackground.field_w.localX, 0);
               stackIn_69_0 = NinjaBackground.field_w;
               stackIn_69_1 = true;
               stackIn_70_2 = (param0) && (!hc.field_c);
@@ -130,7 +130,7 @@ final class RichTextLayout extends WidgetTextLayout {
             }
           } else {
             if (TableDataRequest.field_m > 0) {
-              if (null == c.field_e) {
+              if (null == GrowableIntList.field_e) {
                 stackIn_82_0 = NinjaBackground.field_w;
                 stackIn_82_1 = true;
                 stackIn_83_2 = (param0) && (!hc.field_c);
@@ -140,7 +140,7 @@ final class RichTextLayout extends WidgetTextLayout {
                 stackIn_87_2 = (param0) && (!hc.field_c);
                 ((UiComponent) (Object) stackIn_86_0).drawRoot(stackIn_86_1, stackIn_87_2);
               } else {
-                c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
+                GrowableIntList.field_e.drawAt(NinjaBackground.field_w.localX, 0);
                 stackIn_91_0 = NinjaBackground.field_w;
                 stackIn_91_1 = true;
                 stackIn_92_2 = (param0) && (!hc.field_c);
@@ -156,8 +156,8 @@ final class RichTextLayout extends WidgetTextLayout {
           var2 = -63 / ((70 - param1) / 49);
           return;
         }
-        if (null != c.field_e) {
-          c.field_e.drawAt(ContentTransitionLayer.field_gb.localX, 0);
+        if (null != GrowableIntList.field_e) {
+          GrowableIntList.field_e.drawAt(ContentTransitionLayer.field_gb.localX, 0);
         }
         stackIn_7_0 = ContentTransitionLayer.field_gb;
         stackIn_7_1 = true;
@@ -168,7 +168,7 @@ final class RichTextLayout extends WidgetTextLayout {
         stackIn_12_2 = (param0) && (!sc.field_c);
         ((UiComponent) (Object) stackIn_11_0).drawRoot(stackIn_11_1, stackIn_12_2);
         if (IntArrayRequest.field_j > 0) {
-          if (null == c.field_e) {
+          if (null == GrowableIntList.field_e) {
             stackIn_17_0 = NinjaBackground.field_w;
             stackIn_17_1 = true;
             stackIn_18_2 = (param0) && (!hc.field_c);
@@ -178,7 +178,7 @@ final class RichTextLayout extends WidgetTextLayout {
             stackIn_22_2 = (param0) && (!hc.field_c);
             ((UiComponent) (Object) stackIn_21_0).drawRoot(stackIn_21_1, stackIn_22_2);
           } else {
-            c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
+            GrowableIntList.field_e.drawAt(NinjaBackground.field_w.localX, 0);
             stackIn_26_0 = NinjaBackground.field_w;
             stackIn_26_1 = true;
             stackIn_27_2 = (param0) && (!hc.field_c);
@@ -197,7 +197,7 @@ final class RichTextLayout extends WidgetTextLayout {
           var2Lifetime2 = -63 / ((70 - param1) / 49);
           return;
         }
-        if (null == c.field_e) {
+        if (null == GrowableIntList.field_e) {
           stackIn_39_0 = NinjaBackground.field_w;
           stackIn_39_1 = true;
           stackIn_40_2 = (param0) && (!hc.field_c);
@@ -210,7 +210,7 @@ final class RichTextLayout extends WidgetTextLayout {
           var2Lifetime3 = -63 / ((70 - param1) / 49);
           return;
         }
-        c.field_e.drawAt(NinjaBackground.field_w.localX, 0);
+        GrowableIntList.field_e.drawAt(NinjaBackground.field_w.localX, 0);
         stackIn_48_0 = NinjaBackground.field_w;
         stackIn_48_1 = true;
         stackIn_49_2 = (param0) && (!hc.field_c);

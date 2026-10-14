@@ -58,7 +58,7 @@ final class PlayerInputBatch extends IntrusiveNode {
         }
         if (param0 < -98) {
           if (0 == var1.length()) {
-            var1 = dg.b(100);
+            var1 = MultiValueSliderRenderer.b(100);
           }
           if (var1.length() == 0) {
             var1 = LevelSelectScreen.field_t;
@@ -67,7 +67,7 @@ final class PlayerInputBatch extends IntrusiveNode {
         }
         field_i = (RgbSprite) null;
         if (0 == var1.length()) {
-          var1 = dg.b(100);
+          var1 = MultiValueSliderRenderer.b(100);
         }
         if (var1.length() == 0) {
           var1 = LevelSelectScreen.field_t;

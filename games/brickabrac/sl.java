@@ -81,7 +81,7 @@ abstract class sl extends DualLinkNode {
         int var17_intLifetime4;
         var21 = BrickABrac.field_J ? 1 : 0;
         try {
-          w.field_n = param8;
+          ScreenshotViewer.field_n = param8;
           IntArrayRequest.field_t = param4;
           Brick.field_O = param5;
           MouseInput.field_c = param10;
@@ -91,7 +91,7 @@ abstract class sl extends DualLinkNode {
           SecondaryHashTable.field_c = param0;
           GzipInflater.field_c = param6;
           ff.field_i = param14;
-          pf.field_i = param11;
+          RadialSelectorRenderer.field_i = param11;
           BackgroundScene.field_k = param9;
           GameClock.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
           bq.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
@@ -100,12 +100,12 @@ abstract class sl extends DualLinkNode {
           AchievementsScreen.field_H = new String[5];
           AchievementsScreen.field_H[3] = cm.field_u;
           AchievementsScreen.field_H[1] = t.field_e;
-          AchievementsScreen.field_H[2] = ji.field_g;
+          AchievementsScreen.field_H[2] = IterableIntrusiveHashTable.field_g;
           AchievementsScreen.field_H[4] = bq.field_a;
           AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
           Ball.field_A = new UiComponent(0L, (UiComponent) null);
           FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
-          GameUiController.field_a = new UiComponent(0L, ik.field_a, pf.field_c);
+          GameUiController.field_a = new UiComponent(0L, IntrusiveHashIterator.field_a, RadialSelectorRenderer.field_c);
           IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           Ball.field_A.addChild(FarmBackground.field_v, 0);
           if (vd.field_e) {
@@ -127,7 +127,7 @@ abstract class sl extends DualLinkNode {
           kk.field_b = new UiComponent(0L, cd.field_d, ch.field_d);
           la.field_b = new UiComponent(0L, cd.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, cd.field_d, TextFieldRenderer.field_v);
-          HalloweenBackground.field_x = new UiComponent(0L, ik.field_a, ByteStorage.field_d);
+          HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
           rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           gj.field_b = new UiComponent(0L, fm.field_b, ua.field_e.toUpperCase());
           gj.field_b.enabled = vd.field_e;
@@ -176,18 +176,18 @@ abstract class sl extends DualLinkNode {
           t.field_f.verticalAlignment = 1;
           var16 = t.field_f;
           var16.horizontalAlignment = 1;
-          ji.field_b = new UiComponent(0L, (UiComponent) null);
+          IterableIntrusiveHashTable.field_b = new UiComponent(0L, (UiComponent) null);
           TextWidgetRenderer.field_b = new UiComponent(0L, CappedUrlRequest.field_l);
           TextWidgetRenderer.field_b.horizontalAlignment = 1;
           BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
-          QuickChatPhraseDefinition.field_E = new UiComponent(0L, ik.field_a, pf.field_c);
+          QuickChatPhraseDefinition.field_E = new UiComponent(0L, IntrusiveHashIterator.field_a, RadialSelectorRenderer.field_c);
           TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
-          ji.field_b.addChild(TextWidgetRenderer.field_b, 0);
-          ji.field_b.addChild(BoundedFile.field_g, 0);
+          IterableIntrusiveHashTable.field_b.addChild(TextWidgetRenderer.field_b, 0);
+          IterableIntrusiveHashTable.field_b.addChild(BoundedFile.field_g, 0);
           if (vd.field_e) {
-            ji.field_b.addChild(QuickChatPhraseDefinition.field_E, 0);
+            IterableIntrusiveHashTable.field_b.addChild(QuickChatPhraseDefinition.field_E, 0);
           }
-          ji.field_b.addChild(TimedSplashScreen.field_u, 0);
+          IterableIntrusiveHashTable.field_b.addChild(TimedSplashScreen.field_u, 0);
           GameUiController.field_e = new UiComponent(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
           ba.field_v = new UiComponent(0L, ValidationStatus.field_j);
           QuickChatPhraseRegistry.field_e = new UiComponent(0L, FarmBackground.field_x);
@@ -199,13 +199,13 @@ abstract class sl extends DualLinkNode {
           for (var17_int = 0; var17_int < 5; var17_int++) {
             MatchCompleteScreen.field_A[0][1 + var17_int] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, GameClock.field_f[var17_int], AchievementsScreen.field_H[var17_int]);
           }
-          if (2 <= w.field_n.length) {
+          if (2 <= ScreenshotViewer.field_n.length) {
             ChatMessage.field_l[1] = new UiComponent(0L, wi.field_n, QuickChatMenu.field_ac);
-            array$0 = new AlignedIconLabel[1 + w.field_n.length];
+            array$0 = new AlignedIconLabel[1 + ScreenshotViewer.field_n.length];
             MatchCompleteScreen.field_A[1] = array$0;
             MatchCompleteScreen.field_A[1][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
-            for (var17_intLifetime1 = 0; var17_intLifetime1 < w.field_n.length; var17_intLifetime1++) {
-              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(w.field_n[var17_intLifetime1]));
+            for (var17_intLifetime1 = 0; var17_intLifetime1 < ScreenshotViewer.field_n.length; var17_intLifetime1++) {
+              MatchCompleteScreen.field_A[1][var17_intLifetime1 + 1] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, Integer.toString(ScreenshotViewer.field_n[var17_intLifetime1]));
             }
           }
           ChatMessage.field_l[2] = new UiComponent(0L, wi.field_n, PlayerInputBatch.field_j);
@@ -221,7 +221,7 @@ abstract class sl extends DualLinkNode {
           }
           for (var17_intLifetime3 = 0; param13 > var17_intLifetime3; var17_intLifetime3++) {
             ChatMessage.field_l[var17_intLifetime3 + 4] = new UiComponent(0L, wi.field_n, QuickChatPhraseRegistry.field_b[var17_intLifetime3]);
-            array$2 = new AlignedIconLabel[ik.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
+            array$2 = new AlignedIconLabel[IntrusiveHashIterator.a((int) MouseInput.field_c[var17_intLifetime3], 255) + 1];
             MatchCompleteScreen.field_A[4 + var17_intLifetime3] = array$2;
             MatchCompleteScreen.field_A[4 + var17_intLifetime3][0] = new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb);
             for (var18 = 0; (255 & MouseInput.field_c[var17_intLifetime3]) > var18; var18++) {
@@ -259,7 +259,7 @@ abstract class sl extends DualLinkNode {
               }
             }
           }
-          pf.field_h = new UiComponent(0L, fm.field_b);
+          RadialSelectorRenderer.field_h = new UiComponent(0L, fm.field_b);
           DraggableWidget.field_K = new UiComponent(0L, fm.field_b);
           AppletGameShell.field_e = new UiComponent(0L, Paddle.field_C);
           AppletGameShell.field_e.copyStyle((byte) -125, CappedUrlRequest.field_l);
@@ -272,7 +272,7 @@ abstract class sl extends DualLinkNode {
           QuickChatPhraseRegistry.field_e.addChild(jd.field_a, 0);
           for (var18Lifetime2 = 0; param13 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
-              !(w.field_n.length < 2)) && (var18Lifetime2 != 3 ||
+              !(ScreenshotViewer.field_n.length < 2)) && (var18Lifetime2 != 3 ||
               !(IntArrayRequest.field_t <= 1))) {
               QuickChatPhraseRegistry.field_e.addChild(ChatMessage.field_l[var18Lifetime2], 0);
               for (var19 = 0; MatchCompleteScreen.field_A[var18Lifetime2].length > var19; var19++) {
@@ -282,7 +282,7 @@ abstract class sl extends DualLinkNode {
               }
             }
           }
-          MultiplayerMatch.field_d.addChild(pf.field_h, 0);
+          MultiplayerMatch.field_d.addChild(RadialSelectorRenderer.field_h, 0);
           MultiplayerMatch.field_d.addChild(DraggableWidget.field_K, 0);
           MultiplayerMatch.field_d.addChild(AppletGameShell.field_e, 0);
           TableNameEntry.field_h = new UiComponent(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());

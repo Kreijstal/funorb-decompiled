@@ -34,7 +34,7 @@ final class wc {
             targetAlias = targetStorage;
             pixelIndex = offset;
             sourceHalfRgb = halfRgb;
-            targetStorage[pixelIndex] = sourceHalfRgb + (ik.a(targetStorage[pixelIndex], 16711422) >> 1);
+            targetStorage[pixelIndex] = sourceHalfRgb + (IntrusiveHashIterator.a(targetStorage[pixelIndex], 16711422) >> 1);
             offset++;
           }
         } catch (java.lang.RuntimeException caughtParameter) {
