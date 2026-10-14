@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends WidgetGroup implements ha, WidgetActionListener {
+final class ig extends WidgetGroup implements TextHotspotListener, WidgetActionListener {
     private FocusableWidget field_L;
     private qf field_I;
     static long[] renderTimes;
@@ -19,7 +19,7 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
         return "</col></u>";
     }
 
-    public final void a(int param0, int param1, int param2, HotspotTextWidget param3) {
+    public final void onHotspotAction(int button, int obfuscationGuard, int hotspotId, HotspotTextWidget widget) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -28,18 +28,18 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
         RuntimeException var5 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param2 == 0) {
-            ArchiveFetchClient.a("terms.ws", param1 + 538);
+          if (hotspotId == 0) {
+            ArchiveFetchClient.a("terms.ws", obfuscationGuard + 538);
           } else {
-            if (param2 == 1) {
-              ArchiveFetchClient.a("privacy.ws", param1 + 538);
+            if (hotspotId == 1) {
+              ArchiveFetchClient.a("privacy.ws", obfuscationGuard + 538);
             } else {
-              if (2 == param2) {
-                ArchiveFetchClient.a("conduct.ws", param1 + 538);
+              if (2 == hotspotId) {
+                ArchiveFetchClient.a("conduct.ws", obfuscationGuard + 538);
               }
             }
           }
-          if (param1 != -526) {
+          if (obfuscationGuard != -526) {
             field_K = (String) null;
           }
           return;
@@ -47,8 +47,8 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("ig.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = new StringBuilder().append("ig.G(").append(button).append(',').append(obfuscationGuard).append(',').append(hotspotId).append(',');
+          if (widget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -140,8 +140,8 @@ final class ig extends WidgetGroup implements ha, WidgetActionListener {
           var4 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
           this.field_O = new HotspotTextWidget(var7, var4);
           this.field_O.tooltip = "";
-          this.field_O.a(GameConnectionShell.field_z, 0, (byte) -98);
-          this.field_O.a(GameConnectionShell.field_z, 1, (byte) -98);
+          this.field_O.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);
+          this.field_O.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
           this.field_O.listener = (WidgetListener) (this);
           this.field_O.width = -40 + this.width;
           this.field_O.a(26, (byte) 46, -40 + this.width, var3);

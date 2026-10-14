@@ -184,7 +184,7 @@ final class WidgetTheme {
           cn.decodedSpriteIndices = new byte[nl.decodedSpriteCount][];
           jh.decodedSpriteWidths = new int[nl.decodedSpriteCount];
           dl.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
-          gg.decodedSpriteHeights = new int[nl.decodedSpriteCount];
+          TextHotspotRegion.decodedSpriteHeights = new int[nl.decodedSpriteCount];
           tm.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
           bj.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
           ag.decodedSpriteOffsetX = new int[nl.decodedSpriteCount];
@@ -202,7 +202,7 @@ final class WidgetTheme {
             jh.decodedSpriteWidths[widthIndex] = metadataPacket.readUnsignedShort(65280);
           }
           for (heightIndex = 0; heightIndex < nl.decodedSpriteCount; heightIndex++) {
-            gg.decodedSpriteHeights[heightIndex] = metadataPacket.readUnsignedShort(65280);
+            TextHotspotRegion.decodedSpriteHeights[heightIndex] = metadataPacket.readUnsignedShort(65280);
           }
           metadataPacket.position = -(3 * (paletteSize - 1)) + (-(nl.decodedSpriteCount * 8) + data.length - 7);
           qp.decodedSpritePalette = new int[paletteSize];
@@ -218,7 +218,7 @@ final class WidgetTheme {
           metadataPacket.position = 0;
           for (spriteIndex = 0; spriteIndex < nl.decodedSpriteCount; spriteIndex++) {
             spriteWidth = jh.decodedSpriteWidths[spriteIndex];
-            spriteHeight = gg.decodedSpriteHeights[spriteIndex];
+            spriteHeight = TextHotspotRegion.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteWidth * spriteHeight;
             var20 = new byte[pixelCount];
             var18 = var20;

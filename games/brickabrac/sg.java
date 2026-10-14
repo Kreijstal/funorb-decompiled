@@ -20,7 +20,7 @@ final class sg extends k {
           cb.heldButton = QuickChatHelpDialog.liveHeldButton;
           gr.pointerIdleTicks = gr.pointerIdleTicks + 1;
           MusicPatch.pointerX = DirectByteStorage.livePointerX;
-          po.pointerY = ep.livePointerY;
+          po.pointerY = WidgetTextLayout.livePointerY;
           QuickChatHelpDialog.pointerChanged = kn.livePointerChanged;
           kn.livePointerChanged = false;
           BackgroundScene.pressedButton = mi.livePressedButton;

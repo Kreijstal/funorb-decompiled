@@ -135,7 +135,7 @@ final class ui {
         if (param0 != 384920353) {
           ui.a(false);
         }
-        oj.field_r = null;
+        RichTextLayout.field_r = null;
         DirectByteStorage.field_g = null;
     }
 

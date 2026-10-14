@@ -324,9 +324,9 @@ final class SoundCache {
                 jl.incomingPackets.readUnsignedByte(255);
                 jl.incomingPackets.readInt(255);
                 ta.field_f = jl.incomingPackets.readUnsignedShort(65280);
-                gg.field_q = new byte[ta.field_f];
+                TextHotspotRegion.field_q = new byte[ta.field_f];
                 for (var8 = 0; ta.field_f > var8; var8++) {
-                  gg.field_q[var8] = jl.incomingPackets.readByte(true);
+                  TextHotspotRegion.field_q[var8] = jl.incomingPackets.readByte(true);
                 }
               }
               tb.field_cb = jl.incomingPackets.readCp1252String(-1);

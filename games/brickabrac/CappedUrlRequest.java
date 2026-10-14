@@ -65,7 +65,7 @@ final class CappedUrlRequest implements Runnable {
           }
           dupTemp$1 = MonotonicTime.nowMillis(false);
           BrickMotionPath.field_q = dupTemp$1;
-          oj.lastGameReadMillis = dupTemp$1;
+          RichTextLayout.lastGameReadMillis = dupTemp$1;
           if (qm.field_d.status != 1) {
             rf.field_b = mc.field_e;
           } else {

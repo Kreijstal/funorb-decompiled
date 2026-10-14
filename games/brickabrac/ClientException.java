@@ -102,7 +102,7 @@ final class ClientException extends RuntimeException {
           ClientException.a(false);
         }
         for (var2 = 0; var2 < nl.decodedSpriteCount; var2++) {
-          var3 = gg.decodedSpriteHeights[var2] * jh.decodedSpriteWidths[var2];
+          var3 = TextHotspotRegion.decodedSpriteHeights[var2] * jh.decodedSpriteWidths[var2];
           var21 = cn.decodedSpriteIndices[var2];
           if (!tm.decodedSpriteHasAlpha[var2]) {
             var10 = new int[var3];
@@ -110,7 +110,7 @@ final class ClientException extends RuntimeException {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = qp.decodedSpritePalette[ik.a((int) var21[var6], 255)];
             }
-            var1[var2] = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], gg.decodedSpriteHeights[var2], var22);
+            var1[var2] = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var22);
           } else {
             var15 = bj.decodedSpriteAlpha[var2];
             var11 = var15;
@@ -122,7 +122,7 @@ final class ClientException extends RuntimeException {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = LevelSelectScreen.d(ik.a(255, (int) var15[var7]) << 24, qp.decodedSpritePalette[ik.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], gg.decodedSpriteHeights[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var17));
           }
         }
         MotionWaypoint.clearDecodedSpriteData((byte) 96);

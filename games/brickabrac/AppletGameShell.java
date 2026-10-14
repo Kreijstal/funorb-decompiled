@@ -125,7 +125,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               to.field_i = 0;
               var8_int = 88 / ((param1 - 24) / 56);
               hk.field_W = 0;
-              oj.field_m = param4;
+              RichTextLayout.field_m = param4;
               be.field_g = param2;
               mc.field_d = param2;
               SecondaryHashTable.field_i = uc.e((byte) -64);

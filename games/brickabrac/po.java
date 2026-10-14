@@ -65,10 +65,10 @@ final class po {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == oj.field_r) {
-                oj.field_r = CacheIoRequest.field_D.createImage(304, 34);
+              if (null == RichTextLayout.field_r) {
+                RichTextLayout.field_r = CacheIoRequest.field_D.createImage(304, 34);
               }
-              var10 = oj.field_r.getGraphics();
+              var10 = RichTextLayout.field_r.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, param4, 303, 33);
               var10.fillRect(2, 2, param2 * 3, 30);
@@ -78,7 +78,7 @@ final class po {
               var10.setFont(DirectByteStorage.field_g);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(param0.length() * 6) + 304) / 2, 22);
-              var9.drawImage(oj.field_r, to.field_b / 2 - 152, be.field_g / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(RichTextLayout.field_r, to.field_b / 2 - 152, be.field_g / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

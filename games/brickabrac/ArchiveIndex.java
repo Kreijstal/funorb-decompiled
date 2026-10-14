@@ -241,8 +241,8 @@ final class ArchiveIndex {
 
     final static void a(int param0) {
         int var2 = BrickABrac.field_J ? 1 : 0;
-        if (ml.field_b > 0) {
-          ml.field_b = ml.field_b - 1;
+        if (TextLineLayout.field_b > 0) {
+          TextLineLayout.field_b = TextLineLayout.field_b - 1;
         } else {
           if (IntArrayRequest.field_j > 0) {
             IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
@@ -255,7 +255,7 @@ final class ArchiveIndex {
         if (param0 != -32120) {
           return;
         }
-        if (!(ml.field_b <= 0)) {
+        if (!(TextLineLayout.field_b <= 0)) {
           Brick.e(param0 ^ 32040);
         }
         if (!(IntArrayRequest.field_j <= 0)) {

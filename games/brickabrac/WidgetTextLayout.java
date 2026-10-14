@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ep {
+abstract class WidgetTextLayout {
     static int[] viewVertexY;
     static int repeatMessageId;
-    ml[] field_c;
+    TextLineLayout[] lines;
     static volatile int livePointerY;
     static String field_e;
     static int resultCounterTwo;
@@ -14,87 +14,87 @@ abstract class ep {
     static String field_d;
     static RgbSprite field_b;
 
-    final int a(int param0, boolean param1) {
-        int var3 = 0;
-        ml var4 = null;
-        int var5 = BrickABrac.field_J ? 1 : 0;
-        if (!param1) {
-          ep.a(false);
+    final int findLineIndex(int sourceOffset, boolean obfuscationGuard) {
+        int lineIndex = 0;
+        TextLineLayout line = null;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (!obfuscationGuard) {
+          WidgetTextLayout.a(false);
         }
-        for (var3 = 0; this.field_c.length > var3; var3++) {
-          var4 = this.field_c[var3];
-          if (!(var4.field_g.length <= param0)) {
-            return var3;
+        for (lineIndex = 0; this.lines.length > lineIndex; lineIndex++) {
+          line = this.lines[lineIndex];
+          if (!(line.caretX.length <= sourceOffset)) {
+            return lineIndex;
           }
-          param0 = param0 - (var4.field_g.length - 1);
+          sourceOffset = sourceOffset - (line.caretX.length - 1);
         }
-        return this.field_c.length;
+        return this.lines.length;
     }
 
-    final int a(int param0) {
+    final int getHeight(int obfuscationGuard) {
         int stackIn_6_0 = 0;
-        if (param0 != 0) {
-          this.a(-90, true, 49);
+        if (obfuscationGuard != 0) {
+          this.findSourceOffset(-90, true, 49);
         }
-        if (null != this.field_c &&
-          this.field_c.length > 0) {
-          stackIn_6_0 = -this.field_c[0].field_d + this.field_c[this.field_c.length - 1].field_a;
+        if (null != this.lines &&
+          this.lines.length > 0) {
+          stackIn_6_0 = -this.lines[0].top + this.lines[this.lines.length - 1].bottom;
         } else {
           stackIn_6_0 = 0;
         }
         return stackIn_6_0;
     }
 
-    final int a(int param0, byte param1) {
-        int var4 = 0;
-        ml var5 = null;
-        int var6 = BrickABrac.field_J ? 1 : 0;
-        if (param1 >= -33) {
+    final int getCaretX(int sourceOffset, byte obfuscationGuard) {
+        int lineIndex = 0;
+        TextLineLayout line = null;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (obfuscationGuard >= -33) {
           return -38;
         }
-        ml[] var7 = this.field_c;
-        ml[] var3 = var7;
-        for (var4 = 0; var4 < var7.length; var4++) {
-          var5 = var7[var4];
-          if (var5.field_g.length > param0) {
-            return var5.field_g[param0];
+        TextLineLayout[] lineArray = this.lines;
+        TextLineLayout[] traversalLines = lineArray;
+        for (lineIndex = 0; lineIndex < lineArray.length; lineIndex++) {
+          line = lineArray[lineIndex];
+          if (line.caretX.length > sourceOffset) {
+            return line.caretX[sourceOffset];
           }
-          param0 = param0 - (var5.field_g.length - 1);
+          sourceOffset = sourceOffset - (line.caretX.length - 1);
         }
         return 0;
     }
 
-    final int a(int param0, boolean param1, int param2) {
-        int var5 = 0;
-        int var4;
-        ml var6;
-        int var7;
-        int var8;
-        var8 = BrickABrac.field_J ? 1 : 0;
-        if (this.field_c != null &&
-          0 != this.field_c.length &&
-          this.field_c[0].field_d <= param2) {
-          if (this.field_c[-1 + this.field_c.length].field_a < param2) {
+    final int findSourceOffset(int x, boolean obfuscationGuard, int y) {
+        int lineIndex = 0;
+        int priorSourceLength;
+        TextLineLayout line;
+        int caretIndex;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (this.lines != null &&
+          0 != this.lines.length &&
+          this.lines[0].top <= y) {
+          if (this.lines[-1 + this.lines.length].bottom < y) {
             return -1;
           }
-          if (this.field_c.length == 1) {
-            return this.field_c[0].a((byte) -95, param0);
+          if (this.lines.length == 1) {
+            return this.lines[0].findCaretIndex((byte) -95, x);
           }
-          if (param1) {
+          if (obfuscationGuard) {
             field_d = (String) null;
           }
-          var4 = 0;
-          for (var5 = 0; var5 < this.field_c.length; var5++) {
-            var6 = this.field_c[var5];
-            if (param2 >= var6.field_d &&
-              var6.field_a >= param2) {
-              var7 = var6.a((byte) -95, param0);
-              if (var7 == -1) {
+          priorSourceLength = 0;
+          for (lineIndex = 0; lineIndex < this.lines.length; lineIndex++) {
+            line = this.lines[lineIndex];
+            if (y >= line.top &&
+              line.bottom >= y) {
+              caretIndex = line.findCaretIndex((byte) -95, x);
+              if (caretIndex == -1) {
                 return -1;
               }
-              return var7 + var4;
+              return caretIndex + priorSourceLength;
             }
-            var4 = var4 + (-1 + var6.field_g.length);
+            priorSourceLength = priorSourceLength + (-1 + line.caretX.length);
           }
           return -1;
         }
@@ -113,31 +113,31 @@ abstract class ep {
         field_d = null;
     }
 
-    final int b(int param0) {
-        int var4 = 0;
-        int var2;
-        ml[] var3;
-        ml var5;
-        int var7;
-        int var6;
-        var7 = BrickABrac.field_J ? 1 : 0;
-        if (param0 != 31458) {
+    final int getRightEdge(int obfuscationGuard) {
+        int lineIndex = 0;
+        int rightEdge;
+        TextLineLayout[] lineArray;
+        TextLineLayout line;
+        int unusedGameFlag;
+        int lineRightEdge;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (obfuscationGuard != 31458) {
           return 12;
         }
-        var2 = -1;
-        if (null != this.field_c) {
-          var3 = this.field_c;
-          for (var4 = 0; var4 < var3.length; var4++) {
-            var5 = var3[var4];
-            if (var5 != null) {
-              var6 = var5.b((byte) 56);
-              if (var6 > var2) {
-                var2 = var6;
+        rightEdge = -1;
+        if (null != this.lines) {
+          lineArray = this.lines;
+          for (lineIndex = 0; lineIndex < lineArray.length; lineIndex++) {
+            line = lineArray[lineIndex];
+            if (line != null) {
+              lineRightEdge = line.getRightEdge((byte) 56);
+              if (lineRightEdge > rightEdge) {
+                rightEdge = lineRightEdge;
               }
             }
           }
         }
-        return var2;
+        return rightEdge;
     }
 
     final static boolean a(String param0, byte param1, String param2) {
@@ -153,7 +153,7 @@ abstract class ep {
         try {
           param2 = wj.a(-1, param2, '_', "");
           if (param1 != 73) {
-            ep.a(true);
+            WidgetTextLayout.a(true);
           }
           var3 = w.a(10, param2);
           stackIn_7_0 = (param0.indexOf(param2) != -1) || (-1 != param0.indexOf(var3));

@@ -221,12 +221,12 @@ final class JungleBackground extends BackgroundScene {
                 break;
               }
               if (!hn.b((byte) 7)) {
-                ep.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.currentLobbyGame.displayName}, (byte) 103);
+                WidgetTextLayout.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.currentLobbyGame.displayName}, (byte) 103);
                 if (var26 == 0) {
                   break;
                 }
               }
-              ep.field_e = rq.field_d;
+              WidgetTextLayout.field_e = rq.field_d;
               break;
             }
           }
@@ -419,7 +419,7 @@ final class JungleBackground extends BackgroundScene {
                 }
                 var8 = stackIn_173_0;
                 if (var8 != null) {
-                  ep.field_e = var8;
+                  WidgetTextLayout.field_e = var8;
                 }
               }
               stackIn_178_0 = var29;
@@ -712,7 +712,7 @@ final class JungleBackground extends BackgroundScene {
                     }
                   }
                   if (null != var20) {
-                    ep.field_e = (String) (var20);
+                    WidgetTextLayout.field_e = (String) (var20);
                   }
                 }
                 boolean decompiledFrameRemainder0 = true;
@@ -813,7 +813,7 @@ final class JungleBackground extends BackgroundScene {
           var3 = (LobbyGame) null;
           JungleBackground.a(81, (LobbyGame) null, true, true);
         }
-        stackIn_13_0 = (null != ch.jungleNearSprite) && (null != dg.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != ep.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != up.jungleCentreSprites);
+        stackIn_13_0 = (null != ch.jungleNearSprite) && (null != dg.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != up.jungleCentreSprites);
         return stackIn_13_0;
     }
 
@@ -882,7 +882,7 @@ final class JungleBackground extends BackgroundScene {
         if (param0 > -74) {
           this.hasSprites((byte) -112);
         }
-        return ep.jungleCharacterSprite;
+        return WidgetTextLayout.jungleCharacterSprite;
     }
 
     public static void b(boolean param0) {
@@ -932,7 +932,7 @@ final class JungleBackground extends BackgroundScene {
         sl.field_D = jh.a(0, ch.jungleNearSprite);
         HuffmanCodec.field_e = jh.a(0, dg.jungleMidSprite);
         WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
-        ep.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
+        WidgetTextLayout.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
         DualLinkNode.jungleCapsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
         DualLinkIterator.jungleSegsSprites[0] = cr.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
         up.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);

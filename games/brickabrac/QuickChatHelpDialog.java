@@ -280,7 +280,7 @@ final class QuickChatHelpDialog extends UiComponent {
         try {
           pf.a(48, param0);
           int var2_int = 81 % ((param1 - 86) / 38);
-          MusicPatch.a(0, ep.field_d, false);
+          MusicPatch.a(0, WidgetTextLayout.field_d, false);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

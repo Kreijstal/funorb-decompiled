@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
+final class dk extends WidgetGroup implements TextHotspotListener, WidgetActionListener, vf {
     static RgbSprite field_R;
     private ToggleButtonWidget field_N;
     private HotspotTextWidget field_I;
@@ -199,7 +199,7 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         }
     }
 
-    public final void a(int param0, int param1, int param2, HotspotTextWidget param3) {
+    public final void onHotspotAction(int button, int obfuscationGuard, int hotspotId, HotspotTextWidget widget) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -208,14 +208,14 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         RuntimeException var5 = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != -526) {
+          if (obfuscationGuard != -526) {
             this.field_O = (sf) null;
           }
-          if (0 == param2) {
+          if (0 == hotspotId) {
             ArchiveFetchClient.a("terms.ws", 12);
           } else {
-            if (1 != param2) {
-              if (param2 == 2) {
+            if (1 != hotspotId) {
+              if (hotspotId == 2) {
                 ArchiveFetchClient.a("conduct.ws", 12);
               }
             } else {
@@ -227,8 +227,8 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("dk.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_13_1 = new StringBuilder().append("dk.G(").append(button).append(',').append(obfuscationGuard).append(',').append(hotspotId).append(',');
+          if (widget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -630,8 +630,8 @@ final class dk extends WidgetGroup implements ha, WidgetActionListener, vf {
         um var5 = new um(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 0, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
         this.field_I = new HotspotTextWidget(var2, var5);
         this.field_I.tooltip = "";
-        this.field_I.a(GameConnectionShell.field_z, 0, (byte) -98);
-        this.field_I.a(GameConnectionShell.field_z, 1, (byte) -98);
+        this.field_I.setHotspotTooltip(GameConnectionShell.field_z, 0, (byte) -98);
+        this.field_I.setHotspotTooltip(GameConnectionShell.field_z, 1, (byte) -98);
         this.field_I.listener = (WidgetListener) (this);
         this.field_I.a(46, (byte) 46, -90 + this.width, var3);
         var3 = var3 + (15 + this.field_I.height);

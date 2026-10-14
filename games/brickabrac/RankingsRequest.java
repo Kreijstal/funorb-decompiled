@@ -52,8 +52,8 @@ final class RankingsRequest extends IntrusiveNode {
     final static void a(boolean param0, byte param1) {
         LevelSequence var3;
         if (param1 < -118) {
-          if (null != ep.field_e) {
-            DelayedPacket.a(false, ep.field_e);
+          if (null != WidgetTextLayout.field_e) {
+            DelayedPacket.a(false, WidgetTextLayout.field_e);
           }
           if (bm.contextActions != null) {
             bm.contextActions.drawContextMenu((byte) -126, param0);
@@ -67,8 +67,8 @@ final class RankingsRequest extends IntrusiveNode {
         }
         var3 = (LevelSequence) null;
         RankingsRequest.a(103, true, 42, (LevelSequence) null);
-        if (null != ep.field_e) {
-          DelayedPacket.a(false, ep.field_e);
+        if (null != WidgetTextLayout.field_e) {
+          DelayedPacket.a(false, WidgetTextLayout.field_e);
         }
         if (bm.contextActions != null) {
           bm.contextActions.drawContextMenu((byte) -126, param0);
@@ -108,7 +108,7 @@ final class RankingsRequest extends IntrusiveNode {
           DelegatingCanvas.field_c = 13;
           OptionsScreen.resultCounterOne = 57;
           QuickChatMenu.field_Wb = 3;
-          ep.resultCounterTwo = 23;
+          WidgetTextLayout.resultCounterTwo = 23;
           hg.field_e = 51550 + (hi.field_w.nextInt(92) << 16);
           tm.field_g = 11;
           qm.field_a = 40;

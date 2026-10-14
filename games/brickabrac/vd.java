@@ -42,7 +42,7 @@ final class vd {
               availableBytes = -jl.incomingPackets.position + length;
             }
             eq.gameTransport.readFully(obfuscationGuard + 25806, jl.incomingPackets.data, availableBytes, jl.incomingPackets.position);
-            oj.lastGameReadMillis = MonotonicTime.nowMillis(false);
+            RichTextLayout.lastGameReadMillis = MonotonicTime.nowMillis(false);
             jl.incomingPackets.position = jl.incomingPackets.position + availableBytes;
             if (length > jl.incomingPackets.position) {
               return false;

@@ -5,7 +5,7 @@ import java.util.*;
 
 class Widget extends IntrusiveNode {
     int field_r;
-    ep field_j;
+    WidgetTextLayout textLayout;
     static BufferedFile field_k;
     int pressedButton;
     int height;
@@ -125,9 +125,9 @@ class Widget extends IntrusiveNode {
           }
           var6_intLifetime1 = stackIn_11_0 & stackIn_13_1;
           var7 = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
-          gg.field_p[param1].drawTransparent(param2, param0);
+          TextHotspotRegion.field_p[param1].drawTransparent(param2, param0);
           if (var6_intLifetime1 != 0) {
-            gg.field_p[param1].f(param2, param0, 64 + (InteractiveGameClient.sine8192(200 * var7, -4097) >> 10));
+            TextHotspotRegion.field_p[param1].f(param2, param0, 64 + (InteractiveGameClient.sine8192(200 * var7, -4097) >> 10));
           }
           param2 += 7;
           param0--;
@@ -427,7 +427,7 @@ class Widget extends IntrusiveNode {
           if (param3 <= -125) {
             return false;
           }
-          this.field_j = (ep) null;
+          this.textLayout = (WidgetTextLayout) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

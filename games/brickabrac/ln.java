@@ -193,7 +193,7 @@ final class ln extends IntrusiveNode {
           }
           if (cd.a(param1 - 138)) {
             String var4 = (String) null;
-            c.writeChatMessage(ep.repeatMessageId, ba.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
+            c.writeChatMessage(WidgetTextLayout.repeatMessageId, ba.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
           }
           return true;
         }

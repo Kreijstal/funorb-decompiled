@@ -172,7 +172,7 @@ final class bm {
           var3 = var2.readUnsignedByte(obfuscationGuard + 325);
           var2.beginBitRead(obfuscationGuard - 47);
           um.meshAttributeRecords = AlignedIconLabel.decodeMeshAttributeRecords(var2, 24);
-          gg.logoMeshes = new Mesh3D[var3];
+          TextHotspotRegion.logoMeshes = new Mesh3D[var3];
           BoundedFile.logoOriginalCenters = new int[var3][];
           if (obfuscationGuard != -70) {
             return;
@@ -183,12 +183,12 @@ final class bm {
               var2.finishBitRead((byte) 116);
               break;
             }
-            gg.logoMeshes[var4] = hc.decodeMesh(16, var2);
+            TextHotspotRegion.logoMeshes[var4] = hc.decodeMesh(16, var2);
             var4++;
           } while (var7 == 0);
           var4 = 0;
           while (var4 < var3) {
-            var5 = gg.logoMeshes[var4];
+            var5 = TextHotspotRegion.logoMeshes[var4];
             var5.scaleVertices(6, 127, 1, 6, 6);
             var5.ensureBounds(obfuscationGuard + 93);
             var6 = new int[]{var5.maxX + var5.minX >> 1, var5.maxY + var5.minY >> 1, var5.maxZ + var5.minZ >> 1};

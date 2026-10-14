@@ -176,7 +176,7 @@ final class nf extends HotspotTextWidget {
             var6 = this.field_R.b((byte) -31);
             var18_ref = (WidgetLayoutProvider) ((Object) this.renderer);
             var9 = parentX + this.x;
-            var10 = var18_ref.a(parentY, (byte) -107, (Widget) (this)) + (var18_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+            var10 = var18_ref.a(parentY, (byte) -107, (Widget) (this)) + (var18_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
             if (var6 != m.field_c &&
               var6 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6) {
@@ -212,7 +212,7 @@ final class nf extends HotspotTextWidget {
           var6 = this.field_R.b((byte) -31);
           var22_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime5 = parentX + this.x;
-          var10Lifetime5 = var22_ref.a(parentY, (byte) -107, (Widget) (this)) + (var22_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+          var10Lifetime5 = var22_ref.a(parentY, (byte) -107, (Widget) (this)) + (var22_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6 != m.field_c &&
             var6 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6) {
@@ -261,7 +261,7 @@ final class nf extends HotspotTextWidget {
             var6 = this.field_R.b((byte) -31);
             var27_ref = (WidgetLayoutProvider) ((Object) this.renderer);
             var9Lifetime1 = parentX + this.x;
-            var10Lifetime1 = var27_ref.a(parentY, (byte) -107, (Widget) (this)) + (var27_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+            var10Lifetime1 = var27_ref.a(parentY, (byte) -107, (Widget) (this)) + (var27_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
             if (var6 != m.field_c &&
               var6 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6) {
@@ -297,7 +297,7 @@ final class nf extends HotspotTextWidget {
           var6 = this.field_R.b((byte) -31);
           var31_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime1Lifetime1 = parentX + this.x;
-          var10Lifetime1Lifetime1 = var31_ref.a(parentY, (byte) -107, (Widget) (this)) + (var31_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+          var10Lifetime1Lifetime1 = var31_ref.a(parentY, (byte) -107, (Widget) (this)) + (var31_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6 != m.field_c &&
             var6 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6) {
@@ -344,7 +344,7 @@ final class nf extends HotspotTextWidget {
             var6Lifetime1 = this.field_R.b((byte) -31);
             var50_ref = (WidgetLayoutProvider) ((Object) this.renderer);
             var9Lifetime2 = parentX + this.x;
-            var10Lifetime2 = var50_ref.a(parentY, (byte) -107, (Widget) (this)) + (var50_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+            var10Lifetime2 = var50_ref.a(parentY, (byte) -107, (Widget) (this)) + (var50_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
             if (var6Lifetime1 != m.field_c &&
               var6Lifetime1 != SaveResultsPromptScreen.field_z) {
               if (lp.field_xb == var6Lifetime1) {
@@ -382,7 +382,7 @@ final class nf extends HotspotTextWidget {
           var6Lifetime1Lifetime1 = this.field_R.b((byte) -31);
           var44_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime2Lifetime1 = parentX + this.x;
-          var10Lifetime2Lifetime1 = var44_ref.a(parentY, (byte) -107, (Widget) (this)) + (var44_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+          var10Lifetime2Lifetime1 = var44_ref.a(parentY, (byte) -107, (Widget) (this)) + (var44_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6Lifetime1Lifetime1 != m.field_c &&
             var6Lifetime1Lifetime1 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6Lifetime1Lifetime1) {
@@ -432,7 +432,7 @@ final class nf extends HotspotTextWidget {
           var6Lifetime2 = this.field_R.b((byte) -31);
           var36_ref = (WidgetLayoutProvider) ((Object) this.renderer);
           var9Lifetime3 = parentX + this.x;
-          var10Lifetime3 = var36_ref.a(parentY, (byte) -107, (Widget) (this)) + (var36_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+          var10Lifetime3 = var36_ref.a(parentY, (byte) -107, (Widget) (this)) + (var36_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
           if (var6Lifetime2 != m.field_c &&
             var6Lifetime2 != SaveResultsPromptScreen.field_z) {
             if (lp.field_xb == var6Lifetime2) {
@@ -468,7 +468,7 @@ final class nf extends HotspotTextWidget {
         var6Lifetime3 = this.field_R.b((byte) -31);
         var40_ref = (WidgetLayoutProvider) ((Object) this.renderer);
         var9Lifetime4 = parentX + this.x;
-        var10Lifetime4 = var40_ref.a(parentY, (byte) -107, (Widget) (this)) + (var40_ref.c((Widget) (this), obfuscationGuard ^ 32).a(0) >> 1);
+        var10Lifetime4 = var40_ref.a(parentY, (byte) -107, (Widget) (this)) + (var40_ref.getTextLayout((Widget) (this), obfuscationGuard ^ 32).getHeight(0) >> 1);
         if (var6Lifetime3 != m.field_c &&
           var6Lifetime3 != SaveResultsPromptScreen.field_z) {
           if (lp.field_xb == var6Lifetime3) {

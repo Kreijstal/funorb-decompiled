@@ -15,7 +15,7 @@ final class kk {
         int var3 = BrickABrac.field_J ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[nl.decodedSpriteCount];
         for (var2 = 0; nl.decodedSpriteCount > var2; var2++) {
-          var1[var2] = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], gg.decodedSpriteHeights[var2], cn.decodedSpriteIndices[var2], qp.decodedSpritePalette);
+          var1[var2] = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[var2], dl.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], cn.decodedSpriteIndices[var2], qp.decodedSpritePalette);
         }
         if (obfuscationGuard == -2) {
           MotionWaypoint.clearDecodedSpriteData((byte) 96);

@@ -2,93 +2,93 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class HotspotTextWidget extends FocusableWidget {
-    private String[] field_K;
-    private NodeDeque field_O;
-    private gg field_N;
+    private String[] hotspotTooltips;
+    private NodeDeque hotspotRegions;
+    private TextHotspotRegion hoveredHotspot;
     static int field_L;
     static String field_M;
 
     final void rebuildHotspots(int obfuscationGuard) {
-        int var11 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_15_0 = 0;
-        int var2;
-        WidgetLayoutProvider var3;
-        ep var4;
-        int var5;
-        String var6;
-        int var7;
-        int var8;
-        int var9;
-        Object var10;
-        ml var12;
-        int var13;
-        int var14;
-        gg var15;
-        int var16;
-        int var7Lifetime1;
-        var16 = BrickABrac.field_J ? 1 : 0;
-        this.field_O = new NodeDeque();
-        var2 = 0;
-        var3 = (WidgetLayoutProvider) ((Object) this.renderer);
+        int lineIndex = 0;
+        int selectedLeftX = 0;
+        int selectedRightX = 0;
+        int searchOffset;
+        WidgetLayoutProvider layoutProvider;
+        WidgetTextLayout layout;
+        int openingTagOffset;
+        String hotspotIdText;
+        int openingTagEnd;
+        int firstLineIndex;
+        int lastLineIndex;
+        Object previousSegment;
+        TextLineLayout line;
+        int leftX;
+        int rightX;
+        TextHotspotRegion segment;
+        int unusedGameFlag;
+        int hotspotId;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        this.hotspotRegions = new NodeDeque();
+        searchOffset = 0;
+        layoutProvider = (WidgetLayoutProvider) ((Object) this.renderer);
         if (obfuscationGuard != -1) {
           this.a(-10, (byte) -28, 79, -11);
         }
-        var4 = var3.c((Widget) (this), -7);
+        layout = layoutProvider.getTextLayout((Widget) (this), -7);
         while (true) {
-          var5 = this.text.indexOf("<hotspot=", var2);
-          if (var5 == -1) {
+          openingTagOffset = this.text.indexOf("<hotspot=", searchOffset);
+          if (openingTagOffset == -1) {
             return;
           }
-          var7 = this.text.indexOf(">", var5);
-          var6 = this.text.substring(var5 + 9, var7);
-          var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.text.indexOf("</hotspot>", var5);
-          var8 = var4.a(var5, true);
-          var9 = var4.a(var2, true);
-          var10 = null;
-          for (var11 = var8; var9 >= var11; var11++) {
-            var12 = var4.field_c[var11];
-            if (~var11 == ~var8) {
-              stackIn_10_0 = var4.a(var5, (byte) -53);
+          openingTagEnd = this.text.indexOf(">", openingTagOffset);
+          hotspotIdText = this.text.substring(openingTagOffset + 9, openingTagEnd);
+          hotspotId = Integer.parseInt(hotspotIdText);
+          searchOffset = this.text.indexOf("</hotspot>", openingTagOffset);
+          firstLineIndex = layout.findLineIndex(openingTagOffset, true);
+          lastLineIndex = layout.findLineIndex(searchOffset, true);
+          previousSegment = null;
+          for (lineIndex = firstLineIndex; lastLineIndex >= lineIndex; lineIndex++) {
+            line = layout.lines[lineIndex];
+            if (~lineIndex == ~firstLineIndex) {
+              selectedLeftX = layout.getCaretX(openingTagOffset, (byte) -53);
             } else {
-              stackIn_10_0 = var12.field_g[0];
+              selectedLeftX = line.caretX[0];
             }
-            var13 = stackIn_10_0;
-            if (var9 != var11) {
-              if (var12 != null) {
-                stackIn_15_0 = var12.field_g[var12.field_g.length - 1];
+            leftX = selectedLeftX;
+            if (lastLineIndex != lineIndex) {
+              if (line != null) {
+                selectedRightX = line.caretX[line.caretX.length - 1];
               } else {
-                stackIn_15_0 = 0;
+                selectedRightX = 0;
               }
             } else {
-              stackIn_15_0 = var4.a(var2, (byte) -79);
+              selectedRightX = layout.getCaretX(searchOffset, (byte) -79);
             }
-            var14 = stackIn_15_0;
-            var15 = new gg(var7Lifetime1, var13, var12.field_d, -var13 + var14, Math.max(var3.a((byte) 71), -var12.field_d + var12.field_a));
-            if (var10 != null) {
-              ((gg) (var10)).field_k = var15;
+            rightX = selectedRightX;
+            segment = new TextHotspotRegion(hotspotId, leftX, line.top, -leftX + rightX, Math.max(layoutProvider.getLineHeight((byte) 71), -line.top + line.bottom));
+            if (previousSegment != null) {
+              ((TextHotspotRegion) (previousSegment)).nextSegment = segment;
             }
-            this.field_O.addLast(var15, (byte) 3);
-            var10 = var15;
+            this.hotspotRegions.addLast(segment, (byte) 3);
+            previousSegment = segment;
           }
         }
     }
 
     String getTooltip(int obfuscationGuard) {
-        if (null == this.field_N) {
+        if (null == this.hoveredHotspot) {
           return null;
         }
-        if (null == this.field_K) {
+        if (null == this.hotspotTooltips) {
           return null;
         }
         if (obfuscationGuard <= 6) {
           this.dispatchAction(-25, -88, 90, 70);
         }
-        if (this.field_N.field_u >= this.field_K.length) {
+        if (this.hoveredHotspot.hotspotId >= this.hotspotTooltips.length) {
           return null;
         }
-        return this.field_K[this.field_N.field_u];
+        return this.hotspotTooltips[this.hoveredHotspot.hotspotId];
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
@@ -124,27 +124,27 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    private final gg b(int param0, int param1, int param2) {
-        gg var4;
-        gg var5;
-        int var6;
-        var6 = BrickABrac.field_J ? 1 : 0;
-        if (param1 != 0) {
+    private final TextHotspotRegion findHotspot(int y, int obfuscationGuard, int x) {
+        TextHotspotRegion firstSegment;
+        TextHotspotRegion segment;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (obfuscationGuard != 0) {
           this.setBounds(3, -6, -76, (byte) 116, -98);
         }
-        var4 = (gg) (this.field_O.first(param1 - 75));
-        while (var4 != null) {
-          var5 = var4;
-          while (var5 != null) {
-            if (var5.field_j <= param2 &&
-              var5.field_s <= param0 &&
-              var5.field_j + var5.field_r > param2 &&
-              param0 <= var5.field_s + var5.field_n) {
-              return var4;
+        firstSegment = (TextHotspotRegion) (this.hotspotRegions.first(obfuscationGuard - 75));
+        while (firstSegment != null) {
+          segment = firstSegment;
+          while (segment != null) {
+            if (segment.x <= x &&
+              segment.y <= y &&
+              segment.x + segment.width > x &&
+              y <= segment.y + segment.height) {
+              return firstSegment;
             }
-            var5 = var5.field_k;
+            segment = segment.nextSegment;
           }
-          var4 = (gg) (this.field_O.next((byte) 116));
+          firstSegment = (TextHotspotRegion) (this.hotspotRegions.next((byte) 116));
         }
         return null;
     }
@@ -164,11 +164,11 @@ class HotspotTextWidget extends FocusableWidget {
         RuntimeException var5 = null;
         try {
           super.updatePointer(focusRoot, obfuscationGuard, parentX, parentY);
-          this.field_N = null;
+          this.hoveredHotspot = null;
           if (this.mouseOver) {
             var5_int = -parentX + (MusicPatch.pointerX - this.x);
             var6 = -parentY + (po.pointerY - this.y);
-            this.field_N = this.b(var6, 0, var5_int);
+            this.hoveredHotspot = this.findHotspot(var6, 0, var5_int);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,10 +234,10 @@ class HotspotTextWidget extends FocusableWidget {
         }
         int var5 = -this.x + pointerX;
         int var6 = -this.y + pointerY;
-        gg var7 = this.b(var6, 0, var5);
+        TextHotspotRegion var7 = this.findHotspot(var6, 0, var5);
         if (var7 != null &&
           this.listener != null) {
-          ((ha) ((Object) this.listener)).a(button, -526, var7.field_u, this);
+          ((TextHotspotListener) ((Object) this.listener)).onHotspotAction(button, -526, var7.hotspotId, this);
         }
     }
 
@@ -246,7 +246,7 @@ class HotspotTextWidget extends FocusableWidget {
         dl.field_f = param0;
     }
 
-    final void a(String param0, int param1, byte param2) {
+    final void setHotspotTooltip(String tooltip, int hotspotId, byte obfuscationGuard) {
         int var5 = 0;
         String[] var4 = null;
         int var6 = 0;
@@ -259,20 +259,20 @@ class HotspotTextWidget extends FocusableWidget {
         RuntimeException var4_ref = null;
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (this.field_K == null ||
-            this.field_K.length <= param1) {
-            var7 = new String[param1 + 1];
+          if (this.hotspotTooltips == null ||
+            this.hotspotTooltips.length <= hotspotId) {
+            var7 = new String[hotspotId + 1];
             var8 = var7;
             var4 = var8;
-            if (null != this.field_K) {
-              for (var5 = 0; var5 < this.field_K.length; var5++) {
-                var7[var5] = this.field_K[var5];
+            if (null != this.hotspotTooltips) {
+              for (var5 = 0; var5 < this.hotspotTooltips.length; var5++) {
+                var7[var5] = this.hotspotTooltips[var5];
               }
             }
-            this.field_K = var8;
+            this.hotspotTooltips = var8;
           }
-          this.field_K[param1] = param0;
-          if (param2 != -98) {
+          this.hotspotTooltips[hotspotId] = tooltip;
+          if (obfuscationGuard != -98) {
             this.getTooltip(-97);
           }
           return;
@@ -281,12 +281,12 @@ class HotspotTextWidget extends FocusableWidget {
           var4_ref = decompiledCaughtException;
           stackIn_15_0 = var4_ref;
           stackIn_15_1 = new StringBuilder().append("lg.E(");
-          if (param0 == null) {
+          if (tooltip == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(hotspotId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -298,21 +298,21 @@ class HotspotTextWidget extends FocusableWidget {
           return;
         }
         WidgetLayoutProvider var9 = (WidgetLayoutProvider) ((Object) this.renderer);
-        gg var6 = this.field_N;
+        TextHotspotRegion var6 = this.hoveredHotspot;
         if (var6 == null) {
         } else {
           var7 = var9.a((Widget) (this), (byte) 77, parentX);
           var8 = var9.a(parentY, (byte) -100, (Widget) (this));
           do {
-            ScrollPaneWithFooter.a(-2 + (var8 + var6.field_s), var7 - (-var6.field_j + 2), obfuscationGuard + 132, var6.field_n + 2, 2 + var6.field_r);
-            var6 = var6.field_k;
+            ScrollPaneWithFooter.a(-2 + (var8 + var6.y), var7 - (-var6.x + 2), obfuscationGuard + 132, var6.height + 2, 2 + var6.width);
+            var6 = var6.nextSegment;
           } while (var6 != null);
         }
     }
 
     HotspotTextWidget(String text, WidgetRenderer renderer) {
         super(text, (WidgetListener) null);
-        this.field_N = null;
+        this.hoveredHotspot = null;
         try {
           this.renderer = renderer;
         } catch (RuntimeException runtimeException) {

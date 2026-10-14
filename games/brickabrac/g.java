@@ -145,7 +145,7 @@ final class g extends k {
             stackIn_27_0 = GameUiController.field_f;
             return stackIn_27_0;
           }
-          if (!ep.a(var6, (byte) 73, var7)) {
+          if (!WidgetTextLayout.a(var6, (byte) 73, var7)) {
             return sc.field_a;
           }
           stackIn_31_0 = BackgroundRegistry.field_b;

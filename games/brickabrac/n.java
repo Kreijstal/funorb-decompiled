@@ -99,7 +99,7 @@ final class n {
     final static RgbSprite buildRgbSprite(byte obfuscationGuard) {
         int var4_int = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
-        int var1 = jh.decodedSpriteWidths[0] * gg.decodedSpriteHeights[0];
+        int var1 = jh.decodedSpriteWidths[0] * TextHotspotRegion.decodedSpriteHeights[0];
         if (obfuscationGuard != 21) {
           n.b(-24);
         }
@@ -108,7 +108,7 @@ final class n {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = qp.decodedSpritePalette[ik.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], gg.decodedSpriteHeights[0], var3);
+        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var4;
     }
@@ -301,7 +301,7 @@ final class n {
                       }
                     }
                   }
-                  ep.field_e = "<col=A00000>" + pf.field_a + "<br>" + AchievementsScreen.field_G + (String) (var9);
+                  WidgetTextLayout.field_e = "<col=A00000>" + pf.field_a + "<br>" + AchievementsScreen.field_G + (String) (var9);
                 }
               }
             }

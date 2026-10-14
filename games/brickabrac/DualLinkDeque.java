@@ -138,7 +138,7 @@ final class DualLinkDeque implements Iterable {
         if (DualLinkDeque.a(-4858)) {
           param0 = false;
         }
-        oj.a(param0, (byte) 123);
+        RichTextLayout.a(param0, (byte) 123);
         if (nf.field_V) {
           Rasterizer2D.darkenRectangle(sb.field_c.field_d.localX, sb.field_c.field_d.localY, sb.field_c.field_d.width, sb.field_c.field_d.height);
           sb.field_c.field_d.drawRoot(true, param0);

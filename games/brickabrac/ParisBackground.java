@@ -60,7 +60,7 @@ final class ParisBackground extends BackgroundScene {
           if (param0 != 24) {
             ParisBackground.readLevelMetadata((byte) 116, (PacketBuffer) null);
           }
-          ep.field_a = param1;
+          WidgetTextLayout.field_a = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -438,7 +438,7 @@ final class BufferedFile {
         try {
           var6_int = board.boardWidth / (scaleDivisor << 1) + destinationX;
           var7 = board.field_wb / (scaleDivisor << 1) + board.field_wb / (scaleDivisor << 3) + destinationY;
-          var8 = gg.field_p[warning.typeId];
+          var8 = TextHotspotRegion.field_p[warning.typeId];
           var9 = 96;
           var10 = 512;
           if (warning.ageTicks < entryTicks) {

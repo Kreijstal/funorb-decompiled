@@ -218,7 +218,7 @@ final class so {
           dg.field_b = cr.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
           GameConnectionShell.field_D = cr.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
           dk.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
-          gg.field_p = cr.loadRgbSpritesByName("basic", param0, "powerup", 2);
+          TextHotspotRegion.field_p = cr.loadRgbSpritesByName("basic", param0, "powerup", 2);
           LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
           QuickChatHelpDialog.field_Ub = cr.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
@@ -263,8 +263,8 @@ final class so {
             LevelPackSelectScreen.field_z[var10_intLifetime5].bindRasterTarget();
             GameConnectionShell.field_D[var10_intLifetime5].a(0, 0);
           }
-          ep.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
-          ep.field_j.bindRasterTarget();
+          WidgetTextLayout.field_j = new RgbSprite(dk.field_R.canvasWidth / 2, dk.field_R.canvasHeight / 2);
+          WidgetTextLayout.field_j.bindRasterTarget();
           dk.field_R.a(0, 0);
           PlayerInputBatch.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
           PlayerInputBatch.field_i.bindRasterTarget();
@@ -272,14 +272,14 @@ final class so {
           UiComponent.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
           UiComponent.field_ib.bindRasterTarget();
           Ball.field_D.a(0, 0);
-          ch.field_k = new RgbSprite[gg.field_p.length];
+          ch.field_k = new RgbSprite[TextHotspotRegion.field_p.length];
           if (param3 != 29137) {
             so.a((byte) -25);
           }
           for (var10_intLifetime6 = 0; ch.field_k.length > var10_intLifetime6; var10_intLifetime6++) {
-            ch.field_k[var10_intLifetime6] = new RgbSprite(gg.field_p[var10_intLifetime6].canvasWidth / 2, gg.field_p[var10_intLifetime6].canvasHeight / 2);
+            ch.field_k[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.field_p[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.field_p[var10_intLifetime6].canvasHeight / 2);
             ch.field_k[var10_intLifetime6].bindRasterTarget();
-            gg.field_p[var10_intLifetime6].a(0, 0);
+            TextHotspotRegion.field_p[var10_intLifetime6].a(0, 0);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 79);
           for (var10_intLifetime7 = 0; var10_intLifetime7 < ln.field_j.length; var10_intLifetime7++) {

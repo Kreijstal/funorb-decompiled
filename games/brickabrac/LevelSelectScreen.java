@@ -267,7 +267,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (obfuscationGuard) {
           return (IndexedSprite) null;
         }
-        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], gg.decodedSpriteHeights[0], cn.decodedSpriteIndices[0], qp.decodedSpritePalette);
+        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, ek.decodedCanvasHeight, ag.decodedSpriteOffsetX[0], dl.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], cn.decodedSpriteIndices[0], qp.decodedSpritePalette);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
@@ -306,7 +306,7 @@ final class LevelSelectScreen extends MenuScreen {
         this.field_s = new ga();
         this.maxNumberLabelWidth = 0;
         try {
-          this.emptySelectionText = oj.field_s.toLowerCase();
+          this.emptySelectionText = RichTextLayout.field_s.toLowerCase();
           this.pack = na.field_L[packIndex];
           for (var4_int = 0; this.pack.levelCount > var4_int; var4_int++) {
             var5 = ContextActionController.field_g.measureText(this.pack.metadata[var4_int].numberLabel);

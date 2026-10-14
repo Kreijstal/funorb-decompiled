@@ -1,47 +1,47 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ep {
+final class RichTextLayout extends WidgetTextLayout {
     static int field_m;
     static String field_s;
-    private String field_w;
-    private int field_n;
-    private int field_l;
+    private String cachedText;
+    private int wrapWidth;
+    private int horizontalAlignment;
     static java.awt.Image field_r;
     static MusicTrack field_q;
     static String field_o;
-    private boolean field_x;
+    private boolean singleLine;
     static long lastGameReadMillis;
-    private int field_p;
-    private TextFont field_u;
-    private int field_v;
-    private int field_y;
+    private int lineSpacing;
+    private TextFont font;
+    private int verticalAlignment;
+    private int layoutHeight;
 
-    final void a(String param0, int param1, TextFont param2, int param3, int param4) {
-        ml var8 = null;
+    final void layoutCentered(String text, int baselineY, TextFont font, int centerX, int horizontalAlignment) {
+        TextLineLayout var8 = null;
         int var7 = 0;
-        if (param0 == null) {
-          this.field_c = null;
+        if (text == null) {
+          this.lines = null;
           return;
         }
-        if (param2 == this.field_u &&
-          this.field_x &&
-          this.field_l == 1 &&
-          this.field_w != null &&
-          this.field_w.equals(param0)) {
+        if (font == this.font &&
+          this.singleLine &&
+          this.horizontalAlignment == 1 &&
+          this.cachedText != null &&
+          this.cachedText.equals(text)) {
           return;
         }
         try {
-          this.field_x = true;
-          this.field_u = param2;
-          this.field_l = param4;
-          var8 = this.a(param0, param2, (byte) -72, param1);
-          var7 = param2.measureText(param0);
-          var8.field_g[0] = param3 - (var7 >> 1);
-          var8.field_g[param0.length()] = param3 + (var7 >> 1);
-          DraggableWidget.a(25293, param0, var8, 0, param2);
+          this.singleLine = true;
+          this.font = font;
+          this.horizontalAlignment = horizontalAlignment;
+          var8 = this.createSingleLine(text, font, (byte) -72, baselineY);
+          var7 = font.measureText(text);
+          var8.caretX[0] = centerX - (var7 >> 1);
+          var8.caretX[text.length()] = centerX + (var7 >> 1);
+          DraggableWidget.populateCaretPositions(25293, text, var8, 0, font);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.J(" + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + (font != null ? "{...}" : "null") + ',' + centerX + ',' + horizontalAlignment + ')');
         }
     }
 
@@ -106,7 +106,7 @@ final class oj extends ep {
         int var2Lifetime3;
         int var2Lifetime4;
         MovingBody.a((byte) 74, 640 + Rasterizer2D.width >> 1, -640 + Rasterizer2D.width >> 1, 0, Rasterizer2D.height);
-        if (ml.field_b <= 0) {
+        if (TextLineLayout.field_b <= 0) {
           if (IntArrayRequest.field_j > 0) {
             if (null == c.field_e) {
               stackIn_60_0 = NinjaBackground.field_w;
@@ -224,29 +224,29 @@ final class oj extends ep {
         return;
     }
 
-    final void a(TextFont param0, int param1, int param2, String param3, int param4) {
-        ml var7 = null;
-        ml var8 = null;
-        if (param3 == null) {
-          this.field_c = null;
+    final void layoutLeftAligned(TextFont font, int baselineY, int leftX, String text, int horizontalAlignment) {
+        TextLineLayout var7 = null;
+        TextLineLayout var8 = null;
+        if (text == null) {
+          this.lines = null;
           return;
         }
-        if (this.field_u == param0 && this.field_x && this.field_l == 0 && this.field_w != null &&
-          this.field_w.equals(param3)) {
+        if (this.font == font && this.singleLine && this.horizontalAlignment == 0 && this.cachedText != null &&
+          this.cachedText.equals(text)) {
           return;
         }
         try {
-          this.field_u = param0;
-          this.field_x = true;
-          this.field_w = param3;
-          this.field_l = param4;
-          var7 = this.a(param3, param0, (byte) -109, param1);
+          this.font = font;
+          this.singleLine = true;
+          this.cachedText = text;
+          this.horizontalAlignment = horizontalAlignment;
+          var7 = this.createSingleLine(text, font, (byte) -109, baselineY);
           var8 = var7;
-          var7.field_g[0] = param2;
-          var8.field_g[param3.length()] = param0.measureText(param3) + param2;
-          DraggableWidget.a(param4 ^ 25293, param3, var8, 0, param0);
+          var7.caretX[0] = leftX;
+          var8.caretX[text.length()] = font.measureText(text) + leftX;
+          DraggableWidget.populateCaretPositions(horizontalAlignment ^ 25293, text, var8, 0, font);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.N(" + (font != null ? "{...}" : "null") + ',' + baselineY + ',' + leftX + ',' + (text != null ? "{...}" : "null") + ',' + horizontalAlignment + ')');
         }
     }
 
@@ -316,7 +316,7 @@ final class oj extends ep {
             }
             var11 += 6;
           }
-          gg.field_o.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
+          TextHotspotRegion.field_o.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           if (var9 != null) {
             var9.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           }
@@ -358,12 +358,12 @@ final class oj extends ep {
         }
     }
 
-    private final ml a(String param0, TextFont param1, byte param2, int param3) {
-        ml var5 = null;
+    private final TextLineLayout createSingleLine(String text, TextFont font, byte obfuscationGuard, int baselineY) {
+        TextLineLayout var5 = null;
         RuntimeException var5_ref = null;
-        ml var6 = null;
-        ml stackIn_2_0 = null;
-        ml stackIn_4_0 = null;
+        TextLineLayout var6 = null;
+        TextLineLayout stackIn_2_0 = null;
+        TextLineLayout stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -371,32 +371,32 @@ final class oj extends ep {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new ml(-param1.ascent + param3, param3 + param1.descent, param0.length());
+          var6 = new TextLineLayout(-font.ascent + baselineY, baselineY + font.descent, text.length());
           var5 = var6;
-          this.field_c = new ml[]{var6};
-          if (param2 < -71) {
+          this.lines = new TextLineLayout[]{var6};
+          if (obfuscationGuard < -71) {
             stackIn_4_0 = var5;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ml) null;
+          stackIn_2_0 = (TextLineLayout) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_7_0 = var5_ref;
           stackIn_7_1 = new StringBuilder().append("oj.I(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
           stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
-          if (param1 == null) {
+          if (font == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(obfuscationGuard).append(',').append(baselineY).append(')').toString());
         }
     }
 
@@ -415,33 +415,33 @@ final class oj extends ep {
         field_o = null;
     }
 
-    final void a(String param0, TextFont param1, int param2, byte param3, int param4) {
-        ml var9 = null;
-        ml var10 = null;
-        if (param0 == null) {
-          this.field_c = null;
+    final void layoutRightAligned(String text, TextFont font, int rightX, byte obfuscationGuard, int baselineY) {
+        TextLineLayout var9 = null;
+        TextLineLayout var10 = null;
+        if (text == null) {
+          this.lines = null;
           return;
         }
-        if (param1 == this.field_u && this.field_x && 2 == this.field_l && null != this.field_w &&
-          this.field_w.equals(param0)) {
+        if (font == this.font && this.singleLine && 2 == this.horizontalAlignment && null != this.cachedText &&
+          this.cachedText.equals(text)) {
           return;
         }
         try {
-          if (param3 > -90) {
+          if (obfuscationGuard > -90) {
             TextFont var7 = (TextFont) null;
-            this.a((String) null, -87, (TextFont) null, 2, -3);
+            this.layoutCentered((String) null, -87, (TextFont) null, 2, -3);
           }
-          this.field_u = param1;
-          this.field_w = param0;
-          this.field_x = true;
-          this.field_l = 2;
-          var9 = this.a(param0, param1, (byte) -108, param4);
+          this.font = font;
+          this.cachedText = text;
+          this.singleLine = true;
+          this.horizontalAlignment = 2;
+          var9 = this.createSingleLine(text, font, (byte) -108, baselineY);
           var10 = var9;
-          var10.field_g[0] = param2 - param1.measureText(param0);
-          var10.field_g[param0.length()] = param2;
-          DraggableWidget.a(25293, param0, var10, 0, param1);
+          var10.caretX[0] = rightX - font.measureText(text);
+          var10.caretX[text.length()] = rightX;
+          DraggableWidget.populateCaretPositions(25293, text, var10, 0, font);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.L(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oj.L(" + (text != null ? "{...}" : "null") + ',' + (font != null ? "{...}" : "null") + ',' + rightX + ',' + obfuscationGuard + ',' + baselineY + ')');
         }
     }
 
@@ -505,17 +505,17 @@ final class oj extends ep {
         return 100;
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, int param5, int param6, TextFont param7) {
-        ml stackIn_34_0;
-        ml stackIn_34_1;
+    final void layoutWrapped(String text, int horizontalAlignment, int obfuscationGuard, int layoutHeight, int lineSpacing, int wrapWidth, int verticalAlignment, TextFont font) {
+        TextLineLayout stackIn_34_0;
+        TextLineLayout stackIn_34_1;
         int stackIn_34_2;
         int stackIn_34_3;
-        ml stackIn_35_0 = null;
-        ml stackIn_35_1 = null;
+        TextLineLayout stackIn_35_0 = null;
+        TextLineLayout stackIn_35_1 = null;
         int stackIn_35_4 = 0;
         int stackIn_39_0 = 0;
         String stackIn_39_1 = null;
-        ml stackIn_39_2 = null;
+        TextLineLayout stackIn_39_2 = null;
         int stackIn_40_3;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -530,60 +530,60 @@ final class oj extends ep {
         int var12 = 0;
         int var13 = 0;
         String var14 = null;
-        ml var15 = null;
+        TextLineLayout var15 = null;
         int var16 = 0;
         int var13Lifetime1;
         var16 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (0 == param4) {
-            param4 = param7.baselineHeight;
+          if (0 == lineSpacing) {
+            lineSpacing = font.baselineHeight;
           }
-          if (param0 == null) {
-            this.field_c = null;
+          if (text == null) {
+            this.lines = null;
             return;
           }
-          if (param7 == this.field_u &&
-            !this.field_x &&
-            param1 == this.field_l &&
-            param6 == this.field_v &&
-            this.field_p == param4 &&
-            this.field_y == param3 &&
-            param5 == this.field_n &&
-            this.field_w != null &&
-            this.field_w.equals(param0)) {
+          if (font == this.font &&
+            !this.singleLine &&
+            horizontalAlignment == this.horizontalAlignment &&
+            verticalAlignment == this.verticalAlignment &&
+            this.lineSpacing == lineSpacing &&
+            this.layoutHeight == layoutHeight &&
+            wrapWidth == this.wrapWidth &&
+            this.cachedText != null &&
+            this.cachedText.equals(text)) {
             return;
           }
-          var9_int = -125 % ((26 - param2) / 49);
-          this.field_l = param1;
-          this.field_x = false;
-          this.field_w = param0;
-          this.field_y = param3;
-          this.field_v = param6;
-          this.field_p = param4;
-          this.field_n = param5;
-          this.field_u = param7;
-          var10 = new String[1 + param7.countWrappedLines(param0, param5)];
-          var11 = Math.max(1, param7.wrapText(param0, new int[]{param5}, var10));
-          if (this.field_v == 3 &&
+          var9_int = -125 % ((26 - obfuscationGuard) / 49);
+          this.horizontalAlignment = horizontalAlignment;
+          this.singleLine = false;
+          this.cachedText = text;
+          this.layoutHeight = layoutHeight;
+          this.verticalAlignment = verticalAlignment;
+          this.lineSpacing = lineSpacing;
+          this.wrapWidth = wrapWidth;
+          this.font = font;
+          var10 = new String[1 + font.countWrappedLines(text, wrapWidth)];
+          var11 = Math.max(1, font.wrapText(text, new int[]{wrapWidth}, var10));
+          if (this.verticalAlignment == 3 &&
             var11 == 1) {
-            this.field_v = 1;
+            this.verticalAlignment = 1;
           }
-          this.field_c = new ml[var11];
-          if (this.field_v == 0) {
-            var12 = param7.ascent;
+          this.lines = new TextLineLayout[var11];
+          if (this.verticalAlignment == 0) {
+            var12 = font.ascent;
           } else {
-            if (this.field_v == 1) {
-              var12 = (-(var11 * this.field_p) + this.field_y >> 1) + param7.ascent;
+            if (this.verticalAlignment == 1) {
+              var12 = (-(var11 * this.lineSpacing) + this.layoutHeight >> 1) + font.ascent;
             } else {
-              if (2 != this.field_v) {
-                var13 = (this.field_y - this.field_p * var11) / (var11 + 1);
+              if (2 != this.verticalAlignment) {
+                var13 = (this.layoutHeight - this.lineSpacing * var11) / (var11 + 1);
                 if (var13 < 0) {
                   var13 = 0;
                 }
-                var12 = var13 + param7.ascent;
-                this.field_p = this.field_p + var13;
+                var12 = var13 + font.ascent;
+                this.lineSpacing = this.lineSpacing + var13;
               } else {
-                var12 = this.field_y - param7.descent - var11 * this.field_p;
+                var12 = this.layoutHeight - font.descent - var11 * this.lineSpacing;
               }
             }
           }
@@ -591,8 +591,8 @@ final class oj extends ep {
             var14 = var10[var13Lifetime1];
             stackIn_34_0 = null;
             stackIn_34_1 = null;
-            stackIn_34_2 = var12 - param7.ascent;
-            stackIn_34_3 = param7.descent + var12;
+            stackIn_34_2 = var12 - font.ascent;
+            stackIn_34_3 = font.descent + var12;
             if (var14 != null) {
               stackIn_35_0 = null;
               stackIn_35_1 = null;
@@ -602,22 +602,22 @@ final class oj extends ep {
               stackIn_35_1 = null;
               stackIn_35_4 = 0;
             }
-            var15 = new ml(stackIn_34_2, stackIn_34_3, stackIn_35_4);
-            var15.field_g[0] = 0;
+            var15 = new TextLineLayout(stackIn_34_2, stackIn_34_3, stackIn_35_4);
+            var15.caretX[0] = 0;
             if (var14 != null) {
-              var15.field_g[var14.length()] = param7.measureText(var14);
+              var15.caretX[var14.length()] = font.measureText(var14);
               stackIn_39_0 = 25293;
               stackIn_39_1 = var14;
               stackIn_39_2 = var15;
-              if (param1 != 3) {
+              if (horizontalAlignment != 3) {
                 stackIn_40_3 = 0;
               } else {
-                stackIn_40_3 = this.a(param5, param7.measureText(var14), var14, true);
+                stackIn_40_3 = this.a(wrapWidth, font.measureText(var14), var14, true);
               }
-              DraggableWidget.a(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_40_3, param7);
+              DraggableWidget.populateCaretPositions(stackIn_39_0, stackIn_39_1, stackIn_39_2, stackIn_40_3, font);
             }
-            this.field_c[var13Lifetime1] = var15;
-            var12 = var12 + param4;
+            this.lines[var13Lifetime1] = var15;
+            var12 = var12 + lineSpacing;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -625,13 +625,13 @@ final class oj extends ep {
           var9 = decompiledCaughtException;
           stackIn_45_0 = var9;
           stackIn_45_1 = new StringBuilder().append("oj.O(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_46_2 = "null";
           } else {
             stackIn_46_2 = "{...}";
           }
-          stackIn_48_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_48_1 = ((StringBuilder) (Object) stackIn_45_1).append(stackIn_46_2).append(',').append(horizontalAlignment).append(',').append(obfuscationGuard).append(',').append(layoutHeight).append(',').append(lineSpacing).append(',').append(wrapWidth).append(',').append(verticalAlignment).append(',');
+          if (font == null) {
             stackIn_49_2 = "null";
           } else {
             stackIn_49_2 = "{...}";
@@ -640,7 +640,7 @@ final class oj extends ep {
         }
     }
 
-    public oj() {
+    public RichTextLayout() {
     }
 
     static {

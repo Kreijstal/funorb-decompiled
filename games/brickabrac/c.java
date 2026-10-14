@@ -88,7 +88,7 @@ final class c {
           if (param3) {
             qh.field_f = LobbyPlayer.field_Pb;
             MusicPatch.a(-128, param3);
-            if (ml.field_b > 0) {
+            if (TextLineLayout.field_b > 0) {
               na.a(param8, param3, -94, param2);
             }
             AppletGameShell.field_e.horizontalAlignment = 1;
@@ -112,7 +112,7 @@ final class c {
           } else {
             qh.field_f = (kp.field_a - 640) / 2;
             MusicPatch.a(-128, param3);
-            if (ml.field_b > 0) {
+            if (TextLineLayout.field_b > 0) {
               na.a(param8, param3, -94, param2);
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
@@ -176,7 +176,7 @@ final class c {
             if (param3) {
               qh.field_f = LobbyPlayer.field_Pb;
               MusicPatch.a(-128, param3);
-              if (ml.field_b > 0) {
+              if (TextLineLayout.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
@@ -200,7 +200,7 @@ final class c {
             } else {
               qh.field_f = (kp.field_a - 640) / 2;
               MusicPatch.a(-128, param3);
-              if (ml.field_b > 0) {
+              if (TextLineLayout.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
@@ -243,7 +243,7 @@ final class c {
             if (param3) {
               qh.field_f = LobbyPlayer.field_Pb;
               MusicPatch.a(-128, param3);
-              if (ml.field_b > 0) {
+              if (TextLineLayout.field_b > 0) {
                 na.a(param8, param3, -94, param2);
               }
               AppletGameShell.field_e.horizontalAlignment = 1;
@@ -267,7 +267,7 @@ final class c {
             } else {
               qh.field_f = (kp.field_a - 640) / 2;
               MusicPatch.a(-128, param3);
-              if (ml.field_b > 0) {
+              if (TextLineLayout.field_b > 0) {
                 na.a(param8, param3, -94, param2);
                 AppletGameShell.field_e.horizontalAlignment = 1;
                 AppletGameShell.field_e.textInset = Paddle.field_C.textInset;

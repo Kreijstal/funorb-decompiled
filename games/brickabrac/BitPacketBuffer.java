@@ -175,7 +175,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var24.boardState == 4 ||
             var24.boardState == 1) &&
             var10 == 0) {
-            oj.a(QuickChatHelpDialog.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
+            RichTextLayout.a(QuickChatHelpDialog.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
           }
           var27 = (BallPulseEffect) (var24.ballPulses.first(-30));
           while (var27 != null) {

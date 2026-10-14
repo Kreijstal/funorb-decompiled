@@ -10,11 +10,11 @@ interface WidgetLayoutProvider {
 
     public abstract int a(Widget param0, int param1, boolean param2, int param3, int param4, int param5);
 
-    public abstract ep c(Widget param0, int param1);
+    public abstract WidgetTextLayout getTextLayout(Widget widget, int obfuscationGuard);
 
     public abstract int a(int param0, Widget param1);
 
-    public abstract int a(byte param0);
+    public abstract int getLineHeight(byte obfuscationGuard);
 
     public abstract void a(int param0, int param1, int param2, int param3, int param4, Widget param5);
 

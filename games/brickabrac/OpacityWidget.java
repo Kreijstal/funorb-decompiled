@@ -34,7 +34,7 @@ final class OpacityWidget extends SingleChildWidget {
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           VerticalScrollbar.field_Ub = null;
-          ep.resultCounterTwo = 23;
+          WidgetTextLayout.resultCounterTwo = 23;
           OptionsScreen.resultCounterOne = 57;
           DelegatingCanvas.field_c = 13;
           if (obfuscationGuard != -12665) {

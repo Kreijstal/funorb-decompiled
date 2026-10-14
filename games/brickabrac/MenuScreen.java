@@ -682,7 +682,7 @@ abstract class MenuScreen extends GameScreen {
 
     final static void rememberRepeatMessage(int messageId, int obfuscationGuard, long recipientId, String recipientName, int channel) {
         try {
-          ep.repeatMessageId = messageId;
+          WidgetTextLayout.repeatMessageId = messageId;
           bo.repeatMessageAvailable = true;
           QuickChatPhraseDefinition.repeatMessageChannel = channel;
           MultiplayerExitScreen.repeatRecipientId = recipientId;

@@ -850,7 +850,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("no_options_available", (byte) -118);
                 if (var2 != null) {
-                  gg.field_m = MenuButton.a(var2, (byte) 88);
+                  TextHotspotRegion.field_m = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("reportabuse", (byte) -4);
                 if (null != var2) {
@@ -1120,7 +1120,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rule_1_0", (byte) 87);
                 if (null != var2) {
-                  oj.field_o = MenuButton.a(var2, (byte) 89);
+                  RichTextLayout.field_o = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("rule_1_1", (byte) 2);
                 if (null != var2) {
@@ -1244,7 +1244,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("logging_in", (byte) 40);
                 if (null != var2) {
-                  ep.field_d = MenuButton.a(var2, (byte) 95);
+                  WidgetTextLayout.field_d = MenuButton.a(var2, (byte) 95);
                 }
                 var2 = nk.a("reconnect", (byte) 5);
                 if (null != var2) {
@@ -2034,7 +2034,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("instructions", (byte) -119);
                 if (null != var2) {
-                  gg.field_l = MenuButton.a(var2, (byte) 86);
+                  TextHotspotRegion.field_l = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = nk.a("tutorial", (byte) -120);
                 if (null != var2) {

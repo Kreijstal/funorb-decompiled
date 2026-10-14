@@ -54,7 +54,7 @@ final class DraggableWidget extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, String param1, ml param2, int param3, TextFont param4) {
+    final static void populateCaretPositions(int obfuscationGuard, String text, TextLineLayout line, int extraSpaceAdvanceQ8, TextFont font) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -73,21 +73,21 @@ final class DraggableWidget extends SingleChildWidget {
         try {
           var5_int = 0;
           var6 = -1;
-          if (param0 != 25293) {
+          if (obfuscationGuard != 25293) {
             field_N = (UiComponent) null;
           }
-          for (var7 = 1; var7 < param1.length(); var7++) {
-            var8 = param1.charAt(var7);
+          for (var7 = 1; var7 < text.length(); var7++) {
+            var8 = text.charAt(var7);
             if (60 == var8) {
-              var6 = param2.field_g[0] + (var5_int >> 8) + param4.measureText(param1.substring(0, var7));
+              var6 = line.caretX[0] + (var5_int >> 8) + font.measureText(text.substring(0, var7));
             }
             if (-1 != var6) {
-              param2.field_g[var7] = var6;
+              line.caretX[var7] = var6;
             } else {
               if (32 == var8) {
-                var5_int = var5_int + param3;
+                var5_int = var5_int + extraSpaceAdvanceQ8;
               }
-              param2.field_g[var7] = (var5_int >> 8) - (-param2.field_g[0] - param4.measureText(param1.substring(0, var7 + 1))) - param4.getAdvance((char) var8);
+              line.caretX[var7] = (var5_int >> 8) - (-line.caretX[0] - font.measureText(text.substring(0, var7 + 1))) - font.getAdvance((char) var8);
             }
             if (var8 == 62) {
               var6 = -1;
@@ -98,20 +98,20 @@ final class DraggableWidget extends SingleChildWidget {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_20_0 = var5;
-          stackIn_20_1 = new StringBuilder().append("dn.E(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_20_1 = new StringBuilder().append("dn.E(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
           stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
-          if (param2 == null) {
+          if (line == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',');
-          if (param4 == null) {
+          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(extraSpaceAdvanceQ8).append(',');
+          if (font == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";

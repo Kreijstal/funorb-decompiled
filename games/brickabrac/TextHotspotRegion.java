@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gg extends IntrusiveNode {
+final class TextHotspotRegion extends IntrusiveNode {
     static int[] decodedSpriteHeights;
-    int field_j;
-    int field_r;
-    int field_s;
+    int x;
+    int width;
+    int y;
     static RgbSprite field_o;
     static Mesh3D[] logoMeshes;
-    gg field_k;
+    TextHotspotRegion nextSegment;
     static byte[] field_q;
     static String field_l;
-    int field_n;
-    int field_u;
+    int height;
+    int hotspotId;
     static String field_m;
     static RgbSprite[] field_p;
 
@@ -27,12 +27,12 @@ final class gg extends IntrusiveNode {
         logoMeshes = null;
     }
 
-    gg(int param0, int param1, int param2, int param3, int param4) {
-        this.field_r = param3;
-        this.field_u = param0;
-        this.field_s = param2;
-        this.field_n = param4;
-        this.field_j = param1;
+    TextHotspotRegion(int hotspotId, int x, int y, int width, int height) {
+        this.width = width;
+        this.hotspotId = hotspotId;
+        this.y = y;
+        this.height = height;
+        this.x = x;
     }
 
     static {

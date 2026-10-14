@@ -70,7 +70,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           }
           gr.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
-          ep.livePointerY = event.getY();
+          WidgetTextLayout.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -130,7 +130,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (PowerUpWarning.mouseInput != null) {
             gr.pointerIdleTicks = 0;
             DirectByteStorage.livePointerX = -1;
-            ep.livePointerY = -1;
+            WidgetTextLayout.livePointerY = -1;
             kn.livePointerChanged = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -233,7 +233,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           }
           gr.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
-          ep.livePointerY = event.getY();
+          WidgetTextLayout.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -262,7 +262,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           }
           gr.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
-          ep.livePointerY = event.getY();
+          WidgetTextLayout.livePointerY = event.getY();
           kn.livePointerChanged = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

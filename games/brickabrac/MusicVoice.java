@@ -372,16 +372,16 @@ final class MusicVoice extends IntrusiveNode {
               var13.ratingLabel.setBounds(np.uiRowHeight, var20, -40 + var13.width, 40, (byte) 64);
               if (var13.nameLabel.activeInside &&
                 var23 != 0) {
-                ep.field_e = var13.displayName;
+                WidgetTextLayout.field_e = var13.displayName;
                 if (null != PacketBuffer.field_i &&
                   PacketBuffer.field_i[var13.badgeId] != null) {
-                  ep.field_e = ep.field_e + " - " + PacketBuffer.field_i[var13.badgeId];
+                  WidgetTextLayout.field_e = WidgetTextLayout.field_e + " - " + PacketBuffer.field_i[var13.badgeId];
                 }
               } else {
                 if (var13.nameLabel.activeInside &&
                   null != PacketBuffer.field_i &&
                   PacketBuffer.field_i[var13.badgeId] != null) {
-                  ep.field_e = PacketBuffer.field_i[var13.badgeId];
+                  WidgetTextLayout.field_e = PacketBuffer.field_i[var13.badgeId];
                 }
               }
               var20 = var20 + np.uiRowHeight;
@@ -553,7 +553,7 @@ final class MusicVoice extends IntrusiveNode {
                   var28 = o.currentLobbyGame.displayName;
                   var25 = (String) (var25) + "<br>" + rd.a(ba.field_y, new String[]{var28}, (byte) 103);
                 }
-                ep.field_e = (String) (var25);
+                WidgetTextLayout.field_e = (String) (var25);
               }
             }
             var13 = (LobbyPlayer) (var10.next((byte) 116));
@@ -758,8 +758,8 @@ final class MusicVoice extends IntrusiveNode {
                 }
                 if (retainViewVertices) {
                   fh.viewVertexX[vertexOrFace] = scaledViewX >> LevelPackCard.projectionShift;
-                  ep.viewVertexY[vertexOrFace] = scaledViewY >> LevelPackCard.projectionShift;
-                  ml.viewVertexZ[vertexOrFace] = viewZ;
+                  WidgetTextLayout.viewVertexY[vertexOrFace] = scaledViewY >> LevelPackCard.projectionShift;
+                  TextLineLayout.viewVertexZ[vertexOrFace] = viewZ;
                 }
                 vertexOrFace++;
                 continue;

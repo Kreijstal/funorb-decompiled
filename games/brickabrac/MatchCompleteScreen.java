@@ -65,7 +65,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
           if (ll.a(param1, (byte) 122, param2)) {
             return false;
           }
-          if (!ep.a(param1, (byte) 73, param2)) {
+          if (!WidgetTextLayout.a(param1, (byte) 73, param2)) {
             return true;
           }
           return false;

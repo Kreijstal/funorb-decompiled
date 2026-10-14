@@ -106,8 +106,8 @@ final class MusicPatch extends IntrusiveNode {
           return;
         }
         if (param1) {
-          if (ml.field_b > 0) {
-            ml.field_b = ml.field_b - 1;
+          if (TextLineLayout.field_b > 0) {
+            TextLineLayout.field_b = TextLineLayout.field_b - 1;
           } else {
             if (IntArrayRequest.field_j <= 0) {
               if (TableDataRequest.field_m > 0) {
@@ -127,17 +127,17 @@ final class MusicPatch extends IntrusiveNode {
                 if (TableDataRequest.field_m > 0) {
                   TableDataRequest.field_m = TableDataRequest.field_m - 1;
                 } else {
-                  if (ml.field_b < ScrollPaneWithFooter.field_Yb) {
-                    if (ml.field_b == 0) {
+                  if (TextLineLayout.field_b < ScrollPaneWithFooter.field_Yb) {
+                    if (TextLineLayout.field_b == 0) {
                       SingleChildWidget.g((byte) -24);
                     }
-                    ml.field_b = ml.field_b + 1;
+                    TextLineLayout.field_b = TextLineLayout.field_b + 1;
                   }
                 }
               }
             } else {
-              if (ml.field_b > 0) {
-                ml.field_b = ml.field_b - 1;
+              if (TextLineLayout.field_b > 0) {
+                TextLineLayout.field_b = TextLineLayout.field_b - 1;
               } else {
                 if (0 < TableDataRequest.field_m) {
                   TableDataRequest.field_m = TableDataRequest.field_m - 1;
@@ -152,7 +152,7 @@ final class MusicPatch extends IntrusiveNode {
               }
             }
           } else {
-            if (ml.field_b <= 0) {
+            if (TextLineLayout.field_b <= 0) {
               if (0 >= IntArrayRequest.field_j) {
                 if (ScrollPaneWithFooter.field_Yb > TableDataRequest.field_m) {
                   if (TableDataRequest.field_m == 0) {
@@ -164,7 +164,7 @@ final class MusicPatch extends IntrusiveNode {
                 IntArrayRequest.field_j = IntArrayRequest.field_j - 1;
               }
             } else {
-              ml.field_b = ml.field_b - 1;
+              TextLineLayout.field_b = TextLineLayout.field_b - 1;
             }
           }
         }

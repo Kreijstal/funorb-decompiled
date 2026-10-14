@@ -36,14 +36,14 @@ final class MotionWaypoint extends MovingBody {
           cn.decodedSpriteIndices = (byte[][]) null;
           jh.decodedSpriteWidths = null;
           qp.decodedSpritePalette = null;
-          gg.decodedSpriteHeights = null;
+          TextHotspotRegion.decodedSpriteHeights = null;
           return;
         }
         halloweenMoonSprite = (RgbSprite) null;
         cn.decodedSpriteIndices = (byte[][]) null;
         jh.decodedSpriteWidths = null;
         qp.decodedSpritePalette = null;
-        gg.decodedSpriteHeights = null;
+        TextHotspotRegion.decodedSpriteHeights = null;
     }
 
     final void readBodySnapshot(int obfuscationGuard, PacketBuffer packet) {

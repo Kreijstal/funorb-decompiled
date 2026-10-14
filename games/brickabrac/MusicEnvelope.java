@@ -164,11 +164,11 @@ final class MusicEnvelope {
             }
             if (null != var6.renameIndicator &&
               var6.renameIndicator.activeInside) {
-              ep.field_e = var6.previousName;
+              WidgetTextLayout.field_e = var6.previousName;
             } else {
               if (var6.nameLabel.activeInside &&
                 var11 != 0) {
-                ep.field_e = var6.name;
+                WidgetTextLayout.field_e = var6.name;
               }
             }
             if (var6.pressedButton != 0) {
@@ -218,7 +218,7 @@ final class MusicEnvelope {
             stackIn_5_0 = (AlphaFont) null;
             return stackIn_5_0;
           }
-          var2 = new AlphaFont(param0, ag.decodedSpriteOffsetX, dl.decodedSpriteOffsetY, jh.decodedSpriteWidths, gg.decodedSpriteHeights, qp.decodedSpritePalette, cn.decodedSpriteIndices);
+          var2 = new AlphaFont(param0, ag.decodedSpriteOffsetX, dl.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, qp.decodedSpritePalette, cn.decodedSpriteIndices);
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;

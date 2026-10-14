@@ -79,7 +79,7 @@ final class gr {
           Ball.field_w = RankingsRequest.field_o;
           we.field_b = ch.field_k;
           bq.field_e = hc.field_a;
-          gg.field_o = ep.field_j;
+          TextHotspotRegion.field_o = WidgetTextLayout.field_j;
           nj.field_l = ResourceArchive.field_a;
           fq.field_d = LevelPackSelectScreen.field_z;
         } else {
@@ -88,10 +88,10 @@ final class gr {
           tf.field_c = dg.field_b;
           Ball.field_w = dg.field_e;
           WidgetLayer.field_J = Ball.field_D;
-          gg.field_o = dk.field_R;
+          TextHotspotRegion.field_o = dk.field_R;
           nj.field_l = pa.field_m;
           fq.field_d = GameConnectionShell.field_D;
-          we.field_b = gg.field_p;
+          we.field_b = TextHotspotRegion.field_p;
           field_c = MenuSelection.field_k;
         }
         if (param1 != -28463) {

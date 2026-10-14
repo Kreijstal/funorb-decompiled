@@ -208,7 +208,7 @@ final class ContextMenu extends UiComponent {
           }
           return;
         }
-        this.items[this.itemCount] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.emptyItemStyle, (RgbSprite) null, gg.field_m);
+        this.items[this.itemCount] = new AlignedIconLabel(0L, (UiComponent) null, (UiComponent) null, this.emptyItemStyle, (RgbSprite) null, TextHotspotRegion.field_m);
         this.items[this.itemCount].verticalAlignment = 1;
         this.addChild(this.items[this.itemCount], 0);
         this.actionIds[this.itemCount] = -1;

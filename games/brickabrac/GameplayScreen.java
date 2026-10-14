@@ -162,12 +162,12 @@ final class GameplayScreen extends GameScreen {
         }
         if (!this.suppressResultSubmission) {
           var4 = this.match.playerBoards[0].score;
-          ep.resultCounterTwo = ep.resultCounterTwo - (var4 + this.progressBaseLevel);
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - (var4 + this.progressBaseLevel);
           var5 = this.match.playerBoards[0].levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var5;
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
+          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (var4 + this.progressBaseLevel);
-          ep.resultCounterTwo = ep.resultCounterTwo - var5;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - var5;
         }
         if (obfuscationGuard != 67) {
           this.lastReportedLevel = 125;
@@ -269,7 +269,7 @@ final class GameplayScreen extends GameScreen {
               }
             }
           } else {
-            ji.a(25459, true, oj.field_q, 1, 1, true);
+            ji.a(25459, true, RichTextLayout.field_q, 1, 1, true);
           }
         }
         if (this.match.resultsReady &&
@@ -278,8 +278,8 @@ final class GameplayScreen extends GameScreen {
           be.field_j = be.field_j + 1;
           if (fieldTemp$2 == 300) {
             if (m.field_a) {
-              fieldTemp$3 = ml.field_f + 1;
-              ml.field_f = ml.field_f + 1;
+              fieldTemp$3 = TextLineLayout.field_f + 1;
+              TextLineLayout.field_f = TextLineLayout.field_f + 1;
               System.out.println("Concluded " + fieldTemp$3 + " games (" + cf.checksumMismatchCount + " errors)");
               if ((1 << this.localPlayerId & this.match.rematchOfferPlayerMask) == 0) {
                 this.requestRematchAction(87);
@@ -324,18 +324,18 @@ final class GameplayScreen extends GameScreen {
         }
         if (var5 == 4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + QuickChatMenu.field_Wb;
         }
         if (var5 == 5) {
-          ep.resultCounterTwo = ep.resultCounterTwo - QuickChatMenu.field_Wb * 2;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - QuickChatMenu.field_Wb * 2;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
         }
         if (6 == var5) {
-          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + QuickChatMenu.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var5 == 7) {
-          ep.resultCounterTwo = ep.resultCounterTwo - DelegatingCanvas.field_c * 2;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - DelegatingCanvas.field_c * 2;
           QuickChatMenu.field_Wb = QuickChatMenu.field_Wb - 2;
         }
         if (var5 == 8) {
@@ -343,7 +343,7 @@ final class GameplayScreen extends GameScreen {
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var6;
         }
         if (var5 == 9) {
-          ep.resultCounterTwo = ep.resultCounterTwo + var6;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + var6;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var6;
         }
         var5Lifetime1 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 5);
@@ -591,7 +591,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (null == VerticalScrollbar.field_Ub &&
           !(0 >= this.match.playerBoards[0].score)) {
-          VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.resultLevel});
+          VerticalScrollbar.field_Ub = new TableRowSubmission(this.match.configuration.pack.completionWord, 65535 ^ this.match.configuration.pack.completionWord, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb, new int[]{this.match.playerBoards[0].score, this.progressBaseLevel << 16 | this.resultLevel});
           if (!QuickChatMenu.h(-26090)) {
             bd.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
           }
@@ -792,29 +792,29 @@ final class GameplayScreen extends GameScreen {
         }
         if (4 == var4) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
-          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + QuickChatMenu.field_Wb;
         }
         if (var4 == 5) {
           DelegatingCanvas.field_c = DelegatingCanvas.field_c - 2;
-          ep.resultCounterTwo = ep.resultCounterTwo - 2 * QuickChatMenu.field_Wb;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - 2 * QuickChatMenu.field_Wb;
         }
         if (obfuscationGuard <= 98) {
           return false;
         }
         if (6 == var4) {
-          ep.resultCounterTwo = ep.resultCounterTwo + QuickChatMenu.field_Wb;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + QuickChatMenu.field_Wb;
           DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
         }
         if (var4 == 7) {
           QuickChatMenu.field_Wb = QuickChatMenu.field_Wb - 2;
-          ep.resultCounterTwo = ep.resultCounterTwo - DelegatingCanvas.field_c * 2;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - DelegatingCanvas.field_c * 2;
         }
         if (8 == var4) {
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + var5;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var5;
         }
         if (var4 == 9) {
-          ep.resultCounterTwo = ep.resultCounterTwo + var5;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + var5;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - var5;
         }
         var4Lifetime1 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 5);
@@ -1066,10 +1066,10 @@ final class GameplayScreen extends GameScreen {
           var4 = this.match.playerBoards[0].score;
           var5 = this.match.playerBoards[0].levelIndex;
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (this.progressBaseLevel + var4);
-          ep.resultCounterTwo = ep.resultCounterTwo + (-this.progressBaseLevel + var5);
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + (-this.progressBaseLevel + var5);
+          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (-this.progressBaseLevel + var5);
-          ep.resultCounterTwo = ep.resultCounterTwo + (this.progressBaseLevel + var4);
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + (this.progressBaseLevel + var4);
         }
     }
 
@@ -1150,7 +1150,7 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount == 1) {
           counterLevelAdjustment = levelIndex;
-          ep.resultCounterTwo = ep.resultCounterTwo - counterLevelAdjustment;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - counterLevelAdjustment;
         }
         this.resultLevel = levelIndex;
     }
@@ -1196,11 +1196,11 @@ final class GameplayScreen extends GameScreen {
           if (achievementId == 7) {
             OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - this.progressBaseLevel;
           } else {
-            ep.resultCounterTwo = ep.resultCounterTwo - this.progressBaseLevel;
+            WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - this.progressBaseLevel;
           }
-          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
+          lp.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb), (byte) 3);
           if (achievementId != 7) {
-            ep.resultCounterTwo = ep.resultCounterTwo + this.progressBaseLevel;
+            WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + this.progressBaseLevel;
           } else {
             OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + this.progressBaseLevel;
           }
@@ -1457,15 +1457,15 @@ final class GameplayScreen extends GameScreen {
           if (this.suppressResultSubmission) {
             return;
           }
-          ep.resultCounterTwo = ep.resultCounterTwo + (levelNumber + pack.scoreOffset);
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + (levelNumber + pack.scoreOffset);
           if (obfuscationGuard > -87) {
             this.networkedMatch = true;
           }
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (resultIncrement + this.progressBaseLevel);
-          var5 = new LevelResultSubmission(pack.packId, -1 + levelNumber, OptionsScreen.resultCounterOne, ep.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb);
+          var5 = new LevelResultSubmission(pack.packId, -1 + levelNumber, OptionsScreen.resultCounterOne, WidgetTextLayout.resultCounterTwo, DelegatingCanvas.field_c, QuickChatMenu.field_Wb);
           IntNode.queuedLevelResults.addLast(var5, (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (pack.scoreOffset + levelNumber);
-          ep.resultCounterTwo = ep.resultCounterTwo + (resultIncrement + this.progressBaseLevel);
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + (resultIncrement + this.progressBaseLevel);
           if (hh.unlockedLevelCounts[pack.packId] < levelNumber) {
             hh.unlockedLevelCounts[pack.packId] = levelNumber;
           }

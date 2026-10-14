@@ -247,14 +247,14 @@ final class na extends ug {
         }
         if (gj.field_b.pressedButton != 0) {
           if (ea.field_g) {
-            ml.requestMatchmakingOptions(param3, -1);
+            TextLineLayout.requestMatchmakingOptions(param3, -1);
           } else {
             if (go.field_c > 0) {
-              ml.requestMatchmakingOptions(param3, -1);
+              TextLineLayout.requestMatchmakingOptions(param3, -1);
             } else {
               if (QuickChatHelpDialog.field_Yb >= 2 &&
                 IntArrayRequest.heldKeys[12]) {
-                ml.requestMatchmakingOptions(param3, -1);
+                TextLineLayout.requestMatchmakingOptions(param3, -1);
               }
             }
           }

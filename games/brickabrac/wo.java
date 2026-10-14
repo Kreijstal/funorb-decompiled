@@ -55,8 +55,8 @@ final class wo {
                 var1Lifetime3 = stackIn_124_0;
               } else {
                 if (var2 == 3) {
-                  oj.field_q = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_podium");
-                  stackIn_95_0 = (null == oj.field_q) ? 0 : 1;
+                  RichTextLayout.field_q = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_podium");
+                  stackIn_95_0 = (null == RichTextLayout.field_q) ? 0 : 1;
                   var1Lifetime3 = stackIn_95_0;
                 } else {
                   if (4 == var2) {
@@ -74,7 +74,7 @@ final class wo {
                         if (7 != var2) {
                           return true;
                         }
-                        stackIn_116_0 = (!m.musicSynthesizer.prepareTrack(-123, oj.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                        stackIn_116_0 = (!m.musicSynthesizer.prepareTrack(-123, RichTextLayout.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                         var1Lifetime3 = stackIn_116_0;
                       }
                     }
@@ -108,8 +108,8 @@ final class wo {
               var1Lifetime2 = stackIn_52_0;
             } else {
               if (var2Lifetime1 == 3) {
-                oj.field_q = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_podium");
-                stackIn_23_0 = (null == oj.field_q) ? 0 : 1;
+                RichTextLayout.field_q = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_podium");
+                stackIn_23_0 = (null == RichTextLayout.field_q) ? 0 : 1;
                 var1Lifetime2 = stackIn_23_0;
               } else {
                 if (4 == var2Lifetime1) {
@@ -127,7 +127,7 @@ final class wo {
                       if (7 != var2Lifetime1) {
                         return true;
                       }
-                      stackIn_43_0 = (!m.musicSynthesizer.prepareTrack(-123, oj.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                      stackIn_43_0 = (!m.musicSynthesizer.prepareTrack(-123, RichTextLayout.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime2 = stackIn_43_0;
                     }
                   }

@@ -22,7 +22,7 @@ final class FarmBackground extends BackgroundScene {
             qf.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          dg.a(-899814320, 306, destinationX, cr.field_D, var6.sprite, destinationY, 2, ep.field_b, scroll16, -13);
+          dg.a(-899814320, 306, destinationX, cr.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
         } else {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, rm.farmBackgroundColors[colorIndex], 22953);
         }
@@ -109,7 +109,7 @@ final class FarmBackground extends BackgroundScene {
           FarmBackground.g(-29);
         }
         cr.field_D = jh.a(0, LevelPackCard.farmNearSprite);
-        ep.field_b = jh.a(0, rm.farmMidSprite);
+        WidgetTextLayout.field_b = jh.a(0, rm.farmMidSprite);
         MainMenuScreen.field_w = jh.a(0, MouseInput.farmFarSprite);
         return true;
     }

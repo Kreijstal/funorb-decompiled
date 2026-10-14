@@ -147,11 +147,11 @@ final class wn {
               var6 = var7;
               if (null != var7.renameIndicator &&
                 var7.renameIndicator.activeInside) {
-                ep.field_e = var7.previousName;
+                WidgetTextLayout.field_e = var7.previousName;
               } else if (0 == var7.pressedButton) {
                 if (var7.nameLabel.activeInside &&
                   var15 != 0) {
-                  ep.field_e = var7.name;
+                  WidgetTextLayout.field_e = var7.name;
                 }
               } else {
                 var16 = var7.name;

@@ -545,7 +545,7 @@ final class nh {
                       var14_ref_String = rd.a(MouseWheelSource.field_b, new String[]{(String) (var11_ref)}, (byte) 103);
                     }
                   }
-                  ep.field_e = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
+                  WidgetTextLayout.field_e = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
               if ((decompiledFrameRemainder1) && (!(var10 < 2) || var19 != 0) && (null != NodeDeque.field_a ||
@@ -660,12 +660,12 @@ final class nh {
                   DraggableWidget.field_K.enabled = false;
                   if (DraggableWidget.field_K.hovered) {
                     if (sb.field_c.field_d.selectedTab != 0) {
-                      ep.field_e = rd.a(ta.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
+                      WidgetTextLayout.field_e = rd.a(ta.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
                       if (var19 != 0) {
-                        ep.field_e = ei.field_a;
+                        WidgetTextLayout.field_e = ei.field_a;
                       }
                     } else {
-                      ep.field_e = ei.field_a;
+                      WidgetTextLayout.field_e = ei.field_a;
                     }
                   }
                 }

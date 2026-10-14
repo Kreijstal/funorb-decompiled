@@ -85,7 +85,7 @@ class TextFieldWidget extends FocusableWidget {
     }
 
     private final void f(byte param0) {
-        ep var3;
+        WidgetTextLayout var3;
         int var4;
         int var5;
         int var6;
@@ -105,16 +105,16 @@ class TextFieldWidget extends FocusableWidget {
           this.selectionAnchor = 16;
         }
         var9 = (WidgetLayoutProvider) ((Object) this.renderer);
-        var3 = var9.c((Widget) (this), -3);
-        var4 = var3.b(31458);
+        var3 = var9.getTextLayout((Widget) (this), -3);
+        var4 = var3.getRightEdge(31458);
         var5 = var9.a(61823, (Widget) (this));
-        var6 = var9.a((byte) 99) >> 1;
+        var6 = var9.getLineHeight((byte) 99) >> 1;
         if (var4 < var5 - var6) {
           this.field_B = 0;
           this.field_r = 0;
           return;
         }
-        var7 = this.field_r + var3.a(this.caretIndex, (byte) -108);
+        var7 = this.field_r + var3.getCaretX(this.caretIndex, (byte) -108);
         if (-var6 + var5 < var7) {
           this.field_r = -var7 - (-var5 + var6 - this.field_r);
         } else {

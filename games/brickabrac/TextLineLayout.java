@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml {
-    int field_a;
+final class TextLineLayout {
+    int bottom;
     static String[] field_e;
-    int field_d;
+    int top;
     static int[] viewVertexZ;
     static int field_f;
-    int[] field_g;
+    int[] caretX;
     static int field_b;
 
     final static RgbSprite a(ResourceArchive param0, int param1, int param2, int param3) {
@@ -52,33 +52,33 @@ final class ml {
         packet.writeByte(-111, 0);
     }
 
-    final int a(byte param0, int param1) {
-        int var3 = 0;
-        int var4;
-        var4 = BrickABrac.field_J ? 1 : 0;
-        if (null != this.field_g &&
-          this.field_g.length != 0) {
-          if (param0 != -95) {
-            this.field_a = -53;
+    final int findCaretIndex(byte obfuscationGuard, int x) {
+        int caretIndex = 0;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        if (null != this.caretX &&
+          this.caretX.length != 0) {
+          if (obfuscationGuard != -95) {
+            this.bottom = -53;
           }
-          for (var3 = 1; this.field_g.length > var3; var3++) {
-            if ((this.field_g[-1 + var3] + this.field_g[var3] >> 1) > param1) {
-              return -1 + var3;
+          for (caretIndex = 1; this.caretX.length > caretIndex; caretIndex++) {
+            if ((this.caretX[-1 + caretIndex] + this.caretX[caretIndex] >> 1) > x) {
+              return -1 + caretIndex;
             }
           }
-          return this.field_g.length - 1;
+          return this.caretX.length - 1;
         }
         return 0;
     }
 
-    final int b(byte param0) {
+    final int getRightEdge(byte obfuscationGuard) {
         int stackIn_7_0 = 0;
-        if (param0 != 56) {
+        if (obfuscationGuard != 56) {
           return 69;
         }
-        if (this.field_g != null &&
-          0 != this.field_g.length) {
-          stackIn_7_0 = this.field_g[-1 + this.field_g.length];
+        if (this.caretX != null &&
+          0 != this.caretX.length) {
+          stackIn_7_0 = this.caretX[-1 + this.caretX.length];
         } else {
           stackIn_7_0 = 0;
         }
@@ -203,14 +203,14 @@ final class ml {
         field_e = null;
         if (param0 != 111) {
           IndexedSprite var2 = (IndexedSprite) null;
-          ml.a(26, (IndexedSprite) null, (byte) 26, -9, 66, -42);
+          TextLineLayout.a(26, (IndexedSprite) null, (byte) 26, -9, 66, -42);
         }
     }
 
-    ml(int param0, int param1, int param2) {
-        this.field_a = param1;
-        this.field_g = new int[param2 + 1];
-        this.field_d = param0;
+    TextLineLayout(int top, int bottom, int sourceLength) {
+        this.bottom = bottom;
+        this.caretX = new int[sourceLength + 1];
+        this.top = top;
     }
 
     static {

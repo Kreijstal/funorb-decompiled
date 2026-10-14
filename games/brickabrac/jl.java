@@ -47,12 +47,12 @@ final class jl {
         var19 = BrickABrac.field_J ? 1 : 0;
         try {
           kk.field_e = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = gg.logoMeshes.length;
+          var1_int = TextHotspotRegion.logoMeshes.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_fr = gg.logoMeshes[var3];
+            var4_ref_fr = TextHotspotRegion.logoMeshes[var3];
             var4_ref_fr.ensureBounds(23);
             HuffmanCodec.a(var3, (byte) 77);
             var5 = var4_ref_fr.minX + var4_ref_fr.maxX >> 1;
@@ -93,15 +93,15 @@ final class jl {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; gg.logoMeshes.length > var15; var15++) {
+          for (var15 = 0; TextHotspotRegion.logoMeshes.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < gg.logoMeshes.length; var17_int++) {
+            for (var17_int = 1; var17_int < TextHotspotRegion.logoMeshes.length; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = gg.logoMeshes[var16];
+            var17 = TextHotspotRegion.logoMeshes[var16];
             HuffmanCodec.a(var16, (byte) 77);
             for (var18 = 0; var18 < 3; var18++) {
               MatchResultScreen.field_w[var18] = MatchResultScreen.field_w[var18] + BoundedFile.logoOriginalCenters[var15][var18];

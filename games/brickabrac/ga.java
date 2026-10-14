@@ -12,7 +12,7 @@ final class ga extends IntrusiveNode {
 
     final static void a(boolean param0, int param1) {
         boolean decompiledFrameRemainder0 = true;
-        if ((ml.field_b <= 0) &&
+        if ((TextLineLayout.field_b <= 0) &&
           (decompiledFrameRemainder0 = (!(IntArrayRequest.field_j <= 0) ||
           !(0 >= TableDataRequest.field_m))) &&
           (decompiledFrameRemainder0 = !(!hc.field_c))) {

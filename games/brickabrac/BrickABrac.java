@@ -765,7 +765,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ag.c(false);
         FocusableWidget.g(-66);
         Widget.c(-14711);
-        ep.a(obfuscationGuard);
+        WidgetTextLayout.a(obfuscationGuard);
         QuickChatHelpDialog.d((byte) 98);
         jl.a(31186);
         bj.i(111);
@@ -838,7 +838,7 @@ public final class BrickABrac extends InteractiveGameClient {
         eq.b(-1);
         RadialSelectorWidget.a(110);
         qi.j(18724);
-        oj.a((byte) -51);
+        RichTextLayout.a((byte) -51);
         ji.a(24968);
         DualLinkDeque.b(2);
         sl.f(31434);
@@ -903,7 +903,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ln.a((byte) -46);
         qh.a(109);
         pj.d(31366);
-        ml.a((byte) 111);
+        TextLineLayout.a((byte) 111);
         be.b(2);
         fl.f(-90);
         g.b(true);
@@ -911,7 +911,7 @@ public final class BrickABrac extends InteractiveGameClient {
         uc.g(0);
         cb.f(-71);
         mi.a(-81);
-        gg.a((byte) -25);
+        TextHotspotRegion.a((byte) -25);
         lo.a((byte) 38);
         this.host = null;
     }

@@ -121,7 +121,7 @@ final class AlignedIconLabel extends UiComponent {
             stackIn_16_2 = null;
             stackIn_16_3 = null;
             stackIn_16_4 = SecondaryHashTable.field_i.getCodeBase();
-            stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(oj.field_m).append("&u=");
+            stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(RichTextLayout.field_m).append("&u=");
             if (ua.field_a == null) {
               stackIn_17_2 = null;
               stackIn_17_3 = null;

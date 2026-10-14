@@ -173,7 +173,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (var8 == null) {
             return;
           }
-          ep.field_e = var8;
+          WidgetTextLayout.field_e = var8;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

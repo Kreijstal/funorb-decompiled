@@ -188,9 +188,9 @@ final class w {
               var3 = (60 + var7.canvasWidth) * this.field_j / IsaacGenerator.field_n;
               var4 = var3 - 30;
               if (this.field_a) {
-                ml.a(-256 * var4 / 30, var2Lifetime1, (byte) 101, 58, 9, (-var4 + var7.canvasWidth) * 256 / 30);
+                TextLineLayout.a(-256 * var4 / 30, var2Lifetime1, (byte) 101, 58, 9, (-var4 + var7.canvasWidth) * 256 / 30);
               } else {
-                ml.a(256 * (-var4 + var7.canvasWidth) / 30, var7, (byte) 106, 58, 9, -256 * var4 / 30);
+                TextLineLayout.a(256 * (-var4 + var7.canvasWidth) / 30, var7, (byte) 106, 58, 9, -256 * var4 / 30);
               }
             }
           }
