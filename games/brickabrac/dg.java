@@ -190,7 +190,7 @@ final class dg implements ub {
 
     final static LobbyGame findLobbyGame(int gameId, byte obfuscationGuard) {
         if (obfuscationGuard == 61) {
-          return null == LevelResultSubmission.field_i ? null : (LobbyGame) (LevelResultSubmission.field_i.get((long)gameId, -1));
+          return null == LevelResultSubmission.lobbyGameIndex ? null : (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)gameId, -1));
         }
         return (LobbyGame) null;
     }

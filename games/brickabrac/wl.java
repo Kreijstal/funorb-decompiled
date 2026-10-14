@@ -424,51 +424,51 @@ final class wl extends d {
         field_O = null;
         if (param0 != 2) {
           LobbyPlayer var2 = (LobbyPlayer) null;
-          wl.a((LobbyPlayer) null, -2);
+          wl.insertSortedLobbyPlayer((LobbyPlayer) null, -2);
         }
     }
 
-    final static void a(LobbyPlayer param0, int param1) {
-        LobbyPlayer var2 = null;
-        int var3 = 0;
+    final static void insertSortedLobbyPlayer(LobbyPlayer player, int obfuscationGuard) {
+        LobbyPlayer existingPlayer = null;
+        int clientBranchFlag = 0;
         LobbyPlayer var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var3 = BrickABrac.field_J ? 1 : 0;
+        RuntimeException failure = null;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          param0.unlink((byte) 111);
-          if (param1 != 17574) {
+          player.unlink((byte) 111);
+          if (obfuscationGuard != 17574) {
             var4 = (LobbyPlayer) null;
-            wl.a((LobbyPlayer) null, 48);
+            wl.insertSortedLobbyPlayer((LobbyPlayer) null, 48);
           }
-          var2 = (LobbyPlayer) (ua.field_c.first(-69));
-          while (var2 != null) {
-            if (var2.comesBeforePlayer(param0, param1 ^ -18005)) {
-              var2 = (LobbyPlayer) (ua.field_c.next((byte) 116));
+          existingPlayer = (LobbyPlayer) (ua.lobbyPlayers.first(-69));
+          while (existingPlayer != null) {
+            if (existingPlayer.comesBeforePlayer(player, obfuscationGuard ^ -18005)) {
+              existingPlayer = (LobbyPlayer) (ua.lobbyPlayers.next((byte) 116));
               continue;
             }
             break;
           }
-          if (var2 == null) {
-            ua.field_c.addLast(param0, (byte) 3);
+          if (existingPlayer == null) {
+            ua.lobbyPlayers.addLast(player, (byte) 3);
           } else {
-            BubbleDistortion.insertNodeBefore(param0, 56, var2);
+            BubbleDistortion.insertNodeBefore(player, 56, existingPlayer);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_13_0 = var2_ref;
+          failure = decompiledCaughtException;
+          stackIn_13_0 = failure;
           stackIn_13_1 = new StringBuilder().append("wl.B(");
-          if (param0 == null) {
+          if (player == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

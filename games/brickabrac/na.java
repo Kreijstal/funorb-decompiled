@@ -220,10 +220,10 @@ final class na extends ug {
           dn.field_N.text = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_48_0 = fe.field_gb;
-          stackIn_49_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.field_e) && (nl.field_f == null);
+          stackIn_49_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.currentLobbyGame) && (nl.pendingLobbyGame == null);
           ((UiComponent) (Object) stackIn_48_0).updateRoot(stackIn_49_1, -15211);
           stackIn_55_0 = rm.field_a;
-          stackIn_56_1 = (param0) && (!param1) && (!sc.field_c) && (o.field_e == null) && (null == nl.field_f);
+          stackIn_56_1 = (param0) && (!param1) && (!sc.field_c) && (o.currentLobbyGame == null) && (null == nl.pendingLobbyGame);
           ((UiComponent) (Object) stackIn_55_0).updateRoot(stackIn_56_1, -15211);
           stackIn_60_0 = qp.field_f;
           stackIn_61_1 = (param0) && (!param1) && (sc.field_c);
@@ -232,10 +232,10 @@ final class na extends ug {
           dn.field_N.text = null;
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_7_0 = fe.field_gb;
-          stackIn_8_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.field_e) && (nl.field_f == null);
+          stackIn_8_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.currentLobbyGame) && (nl.pendingLobbyGame == null);
           ((UiComponent) (Object) stackIn_7_0).updateRoot(stackIn_8_1, -15211);
           stackIn_14_0 = rm.field_a;
-          stackIn_15_1 = (param0) && (!param1) && (!sc.field_c) && (o.field_e == null) && (null == nl.field_f);
+          stackIn_15_1 = (param0) && (!param1) && (!sc.field_c) && (o.currentLobbyGame == null) && (null == nl.pendingLobbyGame);
           ((UiComponent) (Object) stackIn_14_0).updateRoot(stackIn_15_1, -15211);
           stackIn_19_0 = qp.field_f;
           stackIn_20_1 = (param0) && (!param1) && (sc.field_c);

@@ -4,7 +4,7 @@
 public final class BrickABrac extends InteractiveGameClient {
     static ResourceArchive field_I;
     static String field_G;
-    static SecondaryHashTable field_F;
+    static SecondaryHashTable gamePlayerIndex;
     static int[] field_K;
     static String field_H;
     public static boolean field_J;
@@ -214,7 +214,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (14 == opcode) {
             sk.finishScreenTransition((byte) -116);
-            hm.a(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, jb.field_I.length);
+            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, qh.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.a(2000, (byte) -54), aj.a(1345), VerticalScrollbar.a(8, (byte) -53), 1024, jb.field_I.length);
             hn.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             vh.field_L = false;
             MonotonicTime.field_c = true;
@@ -237,7 +237,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (opcode == 10 &&
             MonotonicTime.field_c) {
-            sj.a((byte) 33);
+            sj.handleLobbyResponse((byte) 33);
             return true;
           }
           if (opcode == 72) {
@@ -453,7 +453,7 @@ public final class BrickABrac extends InteractiveGameClient {
         }
         field_K = null;
         field_I = null;
-        field_F = null;
+        gamePlayerIndex = null;
     }
 
     final void p(int param0) {

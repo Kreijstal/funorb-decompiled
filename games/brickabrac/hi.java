@@ -110,7 +110,7 @@ final class hi extends um {
         if (param0) {
           rasterStack = (NodeDeque) null;
           if (ng.quickChatChannel == 0 &&
-            null != nl.field_f) {
+            null != nl.pendingLobbyGame) {
             var3 = 0;
           }
           if (ng.quickChatChannel == 2 &&
@@ -135,7 +135,7 @@ final class hi extends um {
                 } else {
                   var5 = ng.quickChatChannel;
                   if (var5 == 0 &&
-                    null != o.field_e) {
+                    null != o.currentLobbyGame) {
                     var5 = 1;
                   }
                   if (tm.getChatFilter(var5, (byte) 18) == 2) {
@@ -180,16 +180,16 @@ final class hi extends um {
           if (ng.quickChatChannel != 2) {
             var7Lifetime15 = "";
             if (ng.quickChatChannel == 0) {
-              if (o.field_e == null &&
+              if (o.currentLobbyGame == null &&
                 QuickChatParameterType.field_d) {
                 var7Lifetime15 = "[" + ArcticBackground.field_u + "] ";
               }
-              if (null != o.field_e) {
+              if (null != o.currentLobbyGame) {
                 if (PowerUp.field_v &&
                   null != jd.field_b) {
                   var7Lifetime15 = "[" + jd.field_b + "] ";
                 } else {
-                  var7Lifetime15 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
+                  var7Lifetime15 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
                 }
               }
             }
@@ -218,7 +218,7 @@ final class hi extends um {
           return true;
         }
         if (ng.quickChatChannel == 0) {
-          if (null == nl.field_f) {
+          if (null == nl.pendingLobbyGame) {
             if (ng.quickChatChannel == 2 &&
               !FileCacheStore.b(-21835160)) {
               var3 = 0;
@@ -242,7 +242,7 @@ final class hi extends um {
                   } else {
                     var5Lifetime1 = ng.quickChatChannel;
                     if (var5Lifetime1 == 0 &&
-                      null != o.field_e) {
+                      null != o.currentLobbyGame) {
                       var5Lifetime1 = 1;
                     }
                     if (tm.getChatFilter(var5Lifetime1, (byte) 18) == 2) {
@@ -285,16 +285,16 @@ final class hi extends um {
               if (ng.quickChatChannel != 2) {
                 var7Lifetime1Lifetime6 = "";
                 if (ng.quickChatChannel == 0) {
-                  if (o.field_e == null &&
+                  if (o.currentLobbyGame == null &&
                     QuickChatParameterType.field_d) {
                     var7Lifetime1Lifetime6 = "[" + ArcticBackground.field_u + "] ";
                   }
-                  if (null != o.field_e) {
+                  if (null != o.currentLobbyGame) {
                     if (PowerUp.field_v &&
                       null != jd.field_b) {
                       var7Lifetime1Lifetime6 = "[" + jd.field_b + "] ";
                     } else {
-                      var7Lifetime1Lifetime6 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
+                      var7Lifetime1Lifetime6 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
                     }
                   }
                 }
@@ -350,7 +350,7 @@ final class hi extends um {
               } else {
                 var5Lifetime2 = ng.quickChatChannel;
                 if (var5Lifetime2 == 0 &&
-                  null != o.field_e) {
+                  null != o.currentLobbyGame) {
                   var5Lifetime2 = 1;
                 }
                 if (tm.getChatFilter(var5Lifetime2, (byte) 18) == 2) {
@@ -407,11 +407,11 @@ final class hi extends um {
             }
             return true;
           }
-          if (o.field_e == null &&
+          if (o.currentLobbyGame == null &&
             QuickChatParameterType.field_d) {
             var7Lifetime9 = "[" + ArcticBackground.field_u + "] ";
           }
-          if (null == o.field_e) {
+          if (null == o.currentLobbyGame) {
             var20Lifetime2Lifetime1 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime1);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
@@ -420,7 +420,7 @@ final class hi extends um {
             return true;
           }
           if (!PowerUp.field_v) {
-            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime2);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
@@ -429,7 +429,7 @@ final class hi extends um {
             return true;
           }
           if (null == jd.field_b) {
-            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime3);
             if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {

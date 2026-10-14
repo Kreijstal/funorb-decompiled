@@ -14,7 +14,7 @@ final class hn {
         if (param0 != 7) {
           return true;
         }
-        return o.field_e.protocolId64 == oc.field_p ? true : false;
+        return o.currentLobbyGame.protocolId64 == oc.field_p ? true : false;
     }
 
     final static RgbSprite[] a(int param0, int param1, int param2, int param3) {

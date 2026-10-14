@@ -75,18 +75,18 @@ final class ea {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         var2.writeByte(71, 5);
-        var2.writeByte(param0 ^ 10903, o.field_e.maxPlayers);
+        var2.writeByte(param0 ^ 10903, o.currentLobbyGame.maxPlayers);
         if (param0 == -11008) {
-          var4 = o.field_e.joinSortPriority + (o.field_e.spectatorMode << 6);
+          var4 = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
           var2.writeByte(15, var4);
-          var2.writeBytes(o.field_e.settings, -1, 0, o.field_e.settings.length);
+          var2.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
           var2.backfillByteLength((byte) 118, -var3 + var2.position);
           return;
         }
         ea.a(109, -29);
-        var4Lifetime1 = o.field_e.joinSortPriority + (o.field_e.spectatorMode << 6);
+        var4Lifetime1 = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
         var2.writeByte(15, var4Lifetime1);
-        var2.writeBytes(o.field_e.settings, -1, 0, o.field_e.settings.length);
+        var2.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
         var2.backfillByteLength((byte) 118, -var3 + var2.position);
     }
 

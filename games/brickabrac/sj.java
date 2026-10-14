@@ -184,233 +184,233 @@ final class sj {
         }
     }
 
-    final static void a(byte param0) {
+    final static void handleLobbyResponse(byte obfuscationGuard) {
         LobbyPlayer stackIn_111_0 = null;
         boolean stackIn_112_1 = false;
         int stackIn_133_0 = 0;
         LobbyPlayer stackIn_139_0 = null;
         boolean stackIn_140_1 = false;
         RuntimeException decompiledCaughtException = null;
-        BitPacketBuffer var1 = null;
-        RuntimeException var1_ref = null;
-        int var2 = 0;
-        long var3 = 0L;
+        BitPacketBuffer packet = null;
+        RuntimeException failure = null;
+        int responseKind = 0;
+        long playerId = 0L;
         int var3_int = 0;
-        LobbyPlayer var3_ref_id = null;
-        int var4 = 0;
-        LobbyGame var4_ref_om = null;
-        int var5 = 0;
-        String var6 = null;
-        LobbyGame var6_ref = null;
-        LobbyPlayer var7 = null;
-        LobbyPlayer var8 = null;
-        int var8_int = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        LobbyPlayer var14 = null;
-        LobbyPlayer var15 = null;
-        LobbyGame var16 = null;
+        LobbyPlayer resetPlayer = null;
+        int gameStatus = 0;
+        LobbyGame updatedGame = null;
+        int playerStatus = 0;
+        String nameUpdateMarker = null;
+        LobbyGame statusGameAlias = null;
+        LobbyPlayer gamePlayer = null;
+        LobbyPlayer lobbyPlayer = null;
+        int gamePackedMembershipCount = 0;
+        int hasNameUpdate = 0;
+        int lobbyPackedMembershipCount = 0;
+        int clientBranchFlag = 0;
+        LobbyPlayer removedGamePlayer = null;
+        LobbyPlayer requestPlayer = null;
+        LobbyGame statusGame = null;
         Object var17 = null;
         Object var18 = null;
-        LobbyGame var18_ref = null;
+        LobbyGame requestGame = null;
         Object var19 = null;
         Object var20 = null;
-        LobbyGame var20_ref = null;
-        LobbyPlayer var21 = null;
+        LobbyGame invitedGameLookup = null;
+        LobbyPlayer removedLobbyPlayer = null;
         Object var22 = null;
-        LobbyGame var23 = null;
-        LobbyPlayer var24 = null;
-        LobbyPlayer var25 = null;
-        String var26 = null;
-        String var27 = null;
-        LobbyPlayer var28 = null;
-        String var29 = null;
-        String var30 = null;
-        LobbyPlayer var31 = null;
-        LobbyGame var32 = null;
-        LobbyGame var33 = null;
-        LobbyPlayer var34 = null;
+        LobbyGame invitedGame = null;
+        LobbyPlayer pendingPlayer = null;
+        LobbyPlayer removedGamePlayerAlias = null;
+        String gameAccountName = null;
+        String gameDisplayName = null;
+        LobbyPlayer requestPlayerAlias = null;
+        String lobbyAccountName = null;
+        String lobbyDisplayName = null;
+        LobbyPlayer existingLobbyPlayer = null;
+        LobbyGame removedGame = null;
+        LobbyGame clearedGame = null;
+        LobbyPlayer clearedLobbyPlayer = null;
         var22 = null;
         var17 = null;
         var20 = null;
         var18 = null;
         var19 = null;
-        var11 = BrickABrac.field_J ? 1 : 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           regionExit1: {
-            var1 = jl.incomingPackets;
-            var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-            if (var2 != 0 &&
-              var2 != 1 &&
-              var2 != 2 &&
-              var2 != 3 &&
-              4 != var2) {
-              if (var2 == 5) {
-                var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
-                var29 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
-                var6 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
-                var30 = ((PacketBuffer) ((Object) var1)).readCp1252String(-1);
-                var31 = MatchCompleteScreen.a((byte) 96, var3);
-                var8 = var31;
-                stackIn_133_0 = (var6.equals("")) ? 0 : 1;
-                var9 = stackIn_133_0;
-                if (var31 != null) {
-                  if (var9 != 0) {
-                    var31.updateNames(var30, var29, (byte) -121);
+            packet = jl.incomingPackets;
+            responseKind = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+            if (responseKind != 0 &&
+              responseKind != 1 &&
+              responseKind != 2 &&
+              responseKind != 3 &&
+              4 != responseKind) {
+              if (responseKind == 5) {
+                playerId = ((PacketBuffer) ((Object) packet)).readLong(-32768);
+                lobbyAccountName = ((PacketBuffer) ((Object) packet)).readCp1252String(-1);
+                nameUpdateMarker = ((PacketBuffer) ((Object) packet)).readCp1252String(-1);
+                lobbyDisplayName = ((PacketBuffer) ((Object) packet)).readCp1252String(-1);
+                existingLobbyPlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, playerId);
+                lobbyPlayer = existingLobbyPlayer;
+                stackIn_133_0 = (nameUpdateMarker.equals("")) ? 0 : 1;
+                hasNameUpdate = stackIn_133_0;
+                if (existingLobbyPlayer != null) {
+                  if (hasNameUpdate != 0) {
+                    existingLobbyPlayer.updateNames(lobbyDisplayName, lobbyAccountName, (byte) -121);
                   }
                 } else {
-                  var8 = new LobbyPlayer(var29, var30, var3);
-                  eq.field_m.put(var3, var8, 86);
+                  lobbyPlayer = new LobbyPlayer(lobbyAccountName, lobbyDisplayName, playerId);
+                  eq.lobbyPlayerIndex.put(playerId, lobbyPlayer, 86);
                 }
-                var8.arrivalTimeMillis = MonotonicTime.nowMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(255);
-                var8.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                var10 = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 110);
-                var8.ratedGameCount = var10 >> 1;
-                stackIn_139_0 = var8;
-                stackIn_140_1 = ((1 & var10) != 0);
+                lobbyPlayer.arrivalTimeMillis = MonotonicTime.nowMillis(false) - (long)((PacketBuffer) ((Object) packet)).readInt(255);
+                lobbyPlayer.rating = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                lobbyPackedMembershipCount = ((PacketBuffer) ((Object) packet)).readVarInt((byte) 110);
+                lobbyPlayer.ratedGameCount = lobbyPackedMembershipCount >> 1;
+                stackIn_139_0 = lobbyPlayer;
+                stackIn_140_1 = ((1 & lobbyPackedMembershipCount) != 0);
                 stackIn_139_0.member = stackIn_140_1;
-                var8.badgeId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var8.optionEligibilityMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                wl.a(var8, 17574);
+                lobbyPlayer.badgeId = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+                lobbyPlayer.optionEligibilityMask = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+                wl.insertSortedLobbyPlayer(lobbyPlayer, 17574);
                 break regionExit1;
               }
-              if (var2 == 6) {
-                var3 = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ -32735);
-                var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                var21 = MatchCompleteScreen.a((byte) 96, var3);
-                if ((var21 != null)) {
-                  if (var21.joinRequestPending) {
-                    uf.field_c = uf.field_c - 1;
-                    var21.joinRequestPending = false;
+              if (responseKind == 6) {
+                playerId = ((PacketBuffer) ((Object) packet)).readLong(obfuscationGuard ^ -32735);
+                playerStatus = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+                removedLobbyPlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, playerId);
+                if ((removedLobbyPlayer != null)) {
+                  if (removedLobbyPlayer.joinRequestPending) {
+                    uf.pendingJoinRequestCount = uf.pendingJoinRequestCount - 1;
+                    removedLobbyPlayer.joinRequestPending = false;
                   }
-                  if (var5 == 0) {
-                    var21.unlink((byte) 111);
+                  if (playerStatus == 0) {
+                    removedLobbyPlayer.unlink((byte) 111);
                   } else {
-                    var21.removalStatus = var5;
-                    var21.statusChangeTick = cm.field_o;
+                    removedLobbyPlayer.removalStatus = playerStatus;
+                    removedLobbyPlayer.statusChangeTick = cm.field_o;
                   }
-                  var21.unlinkSecondary(param0 ^ 34);
+                  removedLobbyPlayer.unlinkSecondary(obfuscationGuard ^ 34);
                 }
               } else {
-                if (var2 == 7) {
-                  var34 = (LobbyPlayer) (ua.field_c.first(-61));
-                  while (var34 != null) {
-                    var34.unlink((byte) 111);
-                    var34.unlinkSecondary(3);
-                    var34 = (LobbyPlayer) (ua.field_c.next((byte) 116));
+                if (responseKind == 7) {
+                  clearedLobbyPlayer = (LobbyPlayer) (ua.lobbyPlayers.first(-61));
+                  while (clearedLobbyPlayer != null) {
+                    clearedLobbyPlayer.unlink((byte) 111);
+                    clearedLobbyPlayer.unlinkSecondary(3);
+                    clearedLobbyPlayer = (LobbyPlayer) (ua.lobbyPlayers.next((byte) 116));
                   }
-                  uf.field_c = 0;
+                  uf.pendingJoinRequestCount = 0;
                 } else {
-                  if (var2 == 8) {
-                    var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                    var4_ref_om = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, -1));
-                    if (var4_ref_om == null) {
-                      var4_ref_om = new LobbyGame(cq.field_p);
-                      LevelResultSubmission.field_i.put((long)var3_int, var4_ref_om, 47);
+                  if (responseKind == 8) {
+                    var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                    updatedGame = (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)var3_int, -1));
+                    if (updatedGame == null) {
+                      updatedGame = new LobbyGame(cq.gameSettingCount);
+                      LevelResultSubmission.lobbyGameIndex.put((long)var3_int, updatedGame, 47);
                     }
-                    eb.decodeLobbyGame(var4_ref_om, var1, 0, true);
-                    ic.a(true, var4_ref_om);
+                    eb.decodeLobbyGame(updatedGame, packet, 0, true);
+                    ic.insertSortedLobbyGame(true, updatedGame);
                   } else {
-                    if (9 == var2) {
-                      var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                      var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                      var32 = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, -1));
-                      if ((var32 != null)) {
-                        if (var4 == 0) {
-                          var32.unlink((byte) 111);
+                    if (9 == responseKind) {
+                      var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                      gameStatus = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+                      removedGame = (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)var3_int, -1));
+                      if ((removedGame != null)) {
+                        if (gameStatus == 0) {
+                          removedGame.unlink((byte) 111);
                         } else {
-                          var32.removalStatus = var4;
-                          var32.statusChangeTick = cm.field_o;
+                          removedGame.removalStatus = gameStatus;
+                          removedGame.statusChangeTick = cm.field_o;
                         }
-                        var32.unlinkSecondary(3);
+                        removedGame.unlinkSecondary(3);
                       }
                     } else {
-                      if (var2 == 10) {
-                        var33 = (LobbyGame) (rq.field_a.first(-62));
-                        while (var33 != null) {
-                          var33.unlink((byte) 111);
-                          var33.unlinkSecondary(3);
-                          var33 = (LobbyGame) (rq.field_a.next((byte) 116));
+                      if (responseKind == 10) {
+                        clearedGame = (LobbyGame) (rq.lobbyGames.first(-62));
+                        while (clearedGame != null) {
+                          clearedGame.unlink((byte) 111);
+                          clearedGame.unlinkSecondary(3);
+                          clearedGame = (LobbyGame) (rq.lobbyGames.next((byte) 116));
                         }
                       } else {
-                        if (var2 != 11 &&
-                          var2 != 12) {
-                          if (var2 == 13) {
-                            var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                            var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                            var18_ref = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, param0 - 34));
-                            if ((var18_ref != null)) {
-                              var16 = var18_ref;
-                              var6_ref = var16;
-                              var18_ref.joinRequestPending = false;
-                              var16.invitationPending = false;
-                              if (var4 != 0) {
-                                var18_ref.removalStatus = var4;
-                                var18_ref.statusChangeTick = cm.field_o;
+                        if (responseKind != 11 &&
+                          responseKind != 12) {
+                          if (responseKind == 13) {
+                            var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                            gameStatus = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+                            requestGame = (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)var3_int, obfuscationGuard - 34));
+                            if ((requestGame != null)) {
+                              statusGame = requestGame;
+                              statusGameAlias = statusGame;
+                              requestGame.joinRequestPending = false;
+                              statusGame.invitationPending = false;
+                              if (gameStatus != 0) {
+                                requestGame.removalStatus = gameStatus;
+                                requestGame.statusChangeTick = cm.field_o;
                               }
-                              ic.a(true, var18_ref);
+                              ic.insertSortedLobbyGame(true, requestGame);
                             }
                           } else {
-                            if (var2 != 14 &&
-                              16 != var2) {
-                              if (var2 != 15 &&
-                                var2 != 17) {
-                                switch (var2) {
+                            if (responseKind != 14 &&
+                              16 != responseKind) {
+                              if (responseKind != 15 &&
+                                responseKind != 17) {
+                                switch (responseKind) {
                                   case 18:
-                                    var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
-                                    var26 = ((PacketBuffer) ((Object) var1)).readCp1252String(param0 - 34);
-                                    var27 = ((PacketBuffer) ((Object) var1)).readCp1252String(param0 - 34);
-                                    var7 = ac.a(var3, 2);
-                                    if (var7 == null) {
-                                      var7 = new LobbyPlayer(var26, var27, var3);
-                                      BrickABrac.field_F.put(var3, var7, 48);
-                                      o.field_e.playerCount = o.field_e.playerCount + 1;
+                                    playerId = ((PacketBuffer) ((Object) packet)).readLong(-32768);
+                                    gameAccountName = ((PacketBuffer) ((Object) packet)).readCp1252String(obfuscationGuard - 34);
+                                    gameDisplayName = ((PacketBuffer) ((Object) packet)).readCp1252String(obfuscationGuard - 34);
+                                    gamePlayer = ac.findGamePlayer(playerId, 2);
+                                    if (gamePlayer == null) {
+                                      gamePlayer = new LobbyPlayer(gameAccountName, gameDisplayName, playerId);
+                                      BrickABrac.gamePlayerIndex.put(playerId, gamePlayer, 48);
+                                      o.currentLobbyGame.playerCount = o.currentLobbyGame.playerCount + 1;
                                     }
-                                    var7.rating = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                                    var8_int = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 127);
-                                    stackIn_111_0 = var7;
-                                    stackIn_112_1 = (0 != (var8_int & 1));
+                                    gamePlayer.rating = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                                    gamePackedMembershipCount = ((PacketBuffer) ((Object) packet)).readVarInt((byte) 127);
+                                    stackIn_111_0 = gamePlayer;
+                                    stackIn_112_1 = (0 != (gamePackedMembershipCount & 1));
                                     stackIn_111_0.member = stackIn_112_1;
-                                    var7.ratedGameCount = var8_int >> 1;
-                                    var7.badgeId = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
-                                    var7.optionEligibilityMask = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
-                                    SocialListEntry.field_Tb.addLast(var7, (byte) 3);
+                                    gamePlayer.ratedGameCount = gamePackedMembershipCount >> 1;
+                                    gamePlayer.badgeId = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard ^ 222);
+                                    gamePlayer.optionEligibilityMask = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard + 222);
+                                    SocialListEntry.gamePlayers.addLast(gamePlayer, (byte) 3);
                                     break regionExit1;
                                   case 19:
-                                    var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
-                                    var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-                                    var14 = ac.a(var3, 2);
-                                    var25 = var14;
-                                    if (var14 == null) {
+                                    playerId = ((PacketBuffer) ((Object) packet)).readLong(-32768);
+                                    playerStatus = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+                                    removedGamePlayer = ac.findGamePlayer(playerId, 2);
+                                    removedGamePlayerAlias = removedGamePlayer;
+                                    if (removedGamePlayer == null) {
                                       break regionExit1;
                                     }
-                                    if (0 == var5) {
-                                      var25.unlink((byte) 111);
+                                    if (0 == playerStatus) {
+                                      removedGamePlayerAlias.unlink((byte) 111);
                                     } else {
-                                      var14.statusChangeTick = cm.field_o;
-                                      var14.removalStatus = var5;
+                                      removedGamePlayer.statusChangeTick = cm.field_o;
+                                      removedGamePlayer.removalStatus = playerStatus;
                                     }
-                                    var25.unlinkSecondary(param0 - 30);
-                                    o.field_e.playerCount = o.field_e.playerCount - 1;
+                                    removedGamePlayerAlias.unlinkSecondary(obfuscationGuard - 30);
+                                    o.currentLobbyGame.playerCount = o.currentLobbyGame.playerCount - 1;
                                     break regionExit1;
                                   case 20:
-                                    eb.decodeLobbyGame(o.field_e, var1, 0, false);
+                                    eb.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
                                     break regionExit1;
                                   case 21:
-                                    var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
+                                    var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
                                     if (var3_int != 0) {
-                                      ic.field_b = (long)var3_int + MonotonicTime.nowMillis(false);
+                                      ic.optionChangeDeadlineMillis = (long)var3_int + MonotonicTime.nowMillis(false);
                                       break regionExit1;
                                     }
-                                    ic.field_b = 0L;
+                                    ic.optionChangeDeadlineMillis = 0L;
                                     break regionExit1;
                                   case 22:
-                                    m.field_h = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                                    ArchiveIndex.field_s = ((PacketBuffer) ((Object) var1)).readVarInt((byte) 119);
+                                    m.field_h = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                                    ArchiveIndex.field_s = ((PacketBuffer) ((Object) packet)).readVarInt((byte) 119);
                                     break regionExit1;
                                   case 23:
-                                    oc.field_p = ((PacketBuffer) ((Object) var1)).readLong(-32768);
+                                    oc.field_p = ((PacketBuffer) ((Object) packet)).readLong(-32768);
                                     break regionExit1;
                                   default:
                                     AlignedIconLabel.a("L1: " + eq.c((byte) -121), (Throwable) null, 108);
@@ -418,52 +418,52 @@ final class sj {
                                     break regionExit1;
                                 }
                               }
-                              var3 = ((PacketBuffer) ((Object) var1)).readLong(-32768);
-                              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 ^ 222);
-                              var15 = MatchCompleteScreen.a((byte) 96, var3);
-                              var28 = var15;
-                              if ((var15 != null)) {
-                                if (15 != var2) {
-                                  if (var28.joinRequestPending) {
-                                    var28.joinRequestPending = false;
-                                    uf.field_c = uf.field_c - 1;
+                              playerId = ((PacketBuffer) ((Object) packet)).readLong(-32768);
+                              playerStatus = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard ^ 222);
+                              requestPlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, playerId);
+                              requestPlayerAlias = requestPlayer;
+                              if ((requestPlayer != null)) {
+                                if (15 != responseKind) {
+                                  if (requestPlayerAlias.joinRequestPending) {
+                                    requestPlayerAlias.joinRequestPending = false;
+                                    uf.pendingJoinRequestCount = uf.pendingJoinRequestCount - 1;
                                   }
                                 } else {
-                                  var15.invitationPending = false;
+                                  requestPlayer.invitationPending = false;
                                 }
-                                if (var5 != 0) {
-                                  var28.statusChangeTick = cm.field_o;
-                                  var28.removalStatus = var5;
+                                if (playerStatus != 0) {
+                                  requestPlayerAlias.statusChangeTick = cm.field_o;
+                                  requestPlayerAlias.removalStatus = playerStatus;
                                 }
-                                wl.a(var28, 17574);
+                                wl.insertSortedLobbyPlayer(requestPlayerAlias, 17574);
                               }
                             } else {
-                              var3 = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ -32735);
-                              var24 = MatchCompleteScreen.a((byte) 96, var3);
-                              if ((var24 != null)) {
-                                if (var2 != 14) {
-                                  if (!var24.joinRequestPending) {
-                                    uf.field_c = uf.field_c + 1;
-                                    var24.joinRequestPending = true;
+                              playerId = ((PacketBuffer) ((Object) packet)).readLong(obfuscationGuard ^ -32735);
+                              pendingPlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, playerId);
+                              if ((pendingPlayer != null)) {
+                                if (responseKind != 14) {
+                                  if (!pendingPlayer.joinRequestPending) {
+                                    uf.pendingJoinRequestCount = uf.pendingJoinRequestCount + 1;
+                                    pendingPlayer.joinRequestPending = true;
                                   }
                                 } else {
-                                  var24.invitationPending = true;
+                                  pendingPlayer.invitationPending = true;
                                 }
-                                wl.a(var24, 17574);
+                                wl.insertSortedLobbyPlayer(pendingPlayer, 17574);
                               }
                             }
                           }
                         } else {
-                          var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-                          var20_ref = (LobbyGame) (LevelResultSubmission.field_i.get((long)var3_int, -1));
-                          var23 = var20_ref;
-                          if ((var23 != null)) {
-                            if (var2 != 11) {
-                              var23.joinRequestPending = true;
+                          var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                          invitedGameLookup = (LobbyGame) (LevelResultSubmission.lobbyGameIndex.get((long)var3_int, -1));
+                          invitedGame = invitedGameLookup;
+                          if ((invitedGame != null)) {
+                            if (responseKind != 11) {
+                              invitedGame.joinRequestPending = true;
                             } else {
-                              var23.invitationPending = true;
+                              invitedGame.invitationPending = true;
                             }
-                            ic.a(true, var23);
+                            ic.insertSortedLobbyGame(true, invitedGame);
                           }
                         }
                       }
@@ -473,68 +473,68 @@ final class sj {
               }
               break regionExit1;
             }
-            var3_ref_id = (LobbyPlayer) (SocialListEntry.field_Tb.first(-8));
-            while (var3_ref_id != null) {
-              var3_ref_id.unlink((byte) 111);
-              var3_ref_id.unlinkSecondary(param0 - 30);
-              var3_ref_id = (LobbyPlayer) (SocialListEntry.field_Tb.next((byte) 116));
+            resetPlayer = (LobbyPlayer) (SocialListEntry.gamePlayers.first(-8));
+            while (resetPlayer != null) {
+              resetPlayer.unlink((byte) 111);
+              resetPlayer.unlinkSecondary(obfuscationGuard - 30);
+              resetPlayer = (LobbyPlayer) (SocialListEntry.gamePlayers.next((byte) 116));
             }
-            var3_ref_id = (LobbyPlayer) (eq.field_m.first((byte) 89));
-            while (var3_ref_id != null) {
-              if (var3_ref_id.invitationPending ||
-                var3_ref_id.joinRequestPending) {
-                var3_ref_id.invitationPending = false;
-                if (var3_ref_id.joinRequestPending) {
-                  uf.field_c = uf.field_c - 1;
-                  var3_ref_id.joinRequestPending = false;
+            resetPlayer = (LobbyPlayer) (eq.lobbyPlayerIndex.first((byte) 89));
+            while (resetPlayer != null) {
+              if (resetPlayer.invitationPending ||
+                resetPlayer.joinRequestPending) {
+                resetPlayer.invitationPending = false;
+                if (resetPlayer.joinRequestPending) {
+                  uf.pendingJoinRequestCount = uf.pendingJoinRequestCount - 1;
+                  resetPlayer.joinRequestPending = false;
                 }
-                wl.a(var3_ref_id, 17574);
+                wl.insertSortedLobbyPlayer(resetPlayer, 17574);
               }
-              var3_ref_id = (LobbyPlayer) (eq.field_m.next(false));
+              resetPlayer = (LobbyPlayer) (eq.lobbyPlayerIndex.next(false));
             }
-            if (var2 == 1 &&
-              o.field_e != null) {
-              TableNameEntry.field_g = o.field_e.displayName;
+            if (responseKind == 1 &&
+              o.currentLobbyGame != null) {
+              TableNameEntry.field_g = o.currentLobbyGame.displayName;
             }
-            if (4 == var2) {
-              var3_int = ((PacketBuffer) ((Object) var1)).readUnsignedShort(65280);
-              o.field_e = new LobbyGame(cq.field_p);
-              o.field_e.setSecondaryKey((long)var3_int, -105);
-              eb.decodeLobbyGame(o.field_e, var1, 0, false);
-              ic.field_b = 0L;
+            if (4 == responseKind) {
+              var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+              o.currentLobbyGame = new LobbyGame(cq.gameSettingCount);
+              o.currentLobbyGame.setSecondaryKey((long)var3_int, -105);
+              eb.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
+              ic.optionChangeDeadlineMillis = 0L;
             } else {
-              o.field_e = null;
+              o.currentLobbyGame = null;
             }
-            if (var2 != 2 &&
-              3 != var2) {
-              nl.field_f = null;
+            if (responseKind != 2 &&
+              3 != responseKind) {
+              nl.pendingLobbyGame = null;
             } else {
-              if (null == nl.field_f) {
-                nl.field_f = new LobbyGame(cq.field_p);
+              if (null == nl.pendingLobbyGame) {
+                nl.pendingLobbyGame = new LobbyGame(cq.gameSettingCount);
               }
             }
-            if (var2 != 3) {
-              fh.field_d = false;
+            if (responseKind != 3) {
+              fh.pendingGameOptionsReceived = false;
             } else {
-              fh.field_d = true;
+              fh.pendingGameOptionsReceived = true;
               for (var3_int = 0; var3_int < rh.field_d.length; var3_int++) {
-                rh.field_d[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
+                rh.field_d[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
               }
-              bb.field_e = ((PacketBuffer) ((Object) var1)).readUnsignedByte(255);
-              ResourceArchive.field_c = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 222);
+              bb.field_e = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
+              ResourceArchive.field_c = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard + 222);
               for (var3_int = 0; var3_int < PowerUpWarning.field_p.length; var3_int++) {
-                PowerUpWarning.field_p[var3_int] = ((PacketBuffer) ((Object) var1)).readByte(true);
+                PowerUpWarning.field_p[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
               }
             }
           }
-          if (param0 != 33) {
+          if (obfuscationGuard != 33) {
             sj.a((java.applet.Applet) null, (byte) -55, (String) null, (String) null, -27L);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1_ref), "sj.A(" + param0 + ')');
+          failure = decompiledCaughtException;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "sj.A(" + obfuscationGuard + ')');
         }
     }
 

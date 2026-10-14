@@ -7,7 +7,7 @@ final class SocialListEntry extends UiComponent {
     int insertionIndex;
     static String field_Pb;
     UiComponent nameLabel;
-    static NodeDeque field_Tb;
+    static NodeDeque gamePlayers;
     String serverName;
     String previousName;
     static String[] field_bc;
@@ -216,7 +216,7 @@ final class SocialListEntry extends UiComponent {
     }
 
     public static void h(int param0) {
-        field_Tb = null;
+        gamePlayers = null;
         field_Pb = null;
         field_Zb = null;
         field_Vb = null;

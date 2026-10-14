@@ -358,7 +358,7 @@ final class QuickChatMenu extends UiComponent {
                 encodedMessageId = this.messageIds[itemIndex] | 32768;
                 effectiveChannel = ng.quickChatChannel;
                 if (effectiveChannel == 0 &&
-                  o.field_e != null) {
+                  o.currentLobbyGame != null) {
                   effectiveChannel = 1;
                 }
                 if (tm.getChatFilter(effectiveChannel, (byte) 18) == 2) {

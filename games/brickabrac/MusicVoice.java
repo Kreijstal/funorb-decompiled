@@ -181,13 +181,13 @@ final class MusicVoice extends IntrusiveNode {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (o.field_e != null && (null != NodeDeque.field_a ||
+          if (o.currentLobbyGame != null && (null != NodeDeque.field_a ||
             null != AchievementsScreen.field_F ||
             null != MatchResultScreen.field_v ||
             null != me.field_e)) {
             var9 = 0;
-            while (!(var9 >= cq.field_p)) {
-              var10_int = 255 & o.field_e.settings[var9];
+            while (!(var9 >= cq.gameSettingCount)) {
+              var10_int = 255 & o.currentLobbyGame.settings[var9];
               if (var32 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -324,7 +324,7 @@ final class MusicVoice extends IntrusiveNode {
               var13.statusLabel.capturedTextColor = var25_int;
               var13.statusLabel.activeTextColor = var25_int;
               if (param1 == TimedSplashScreen.field_u) {
-                if (!o.field_e.started) {
+                if (!o.currentLobbyGame.started) {
                   var13.actionLabel.text = LegacyUtf8Decoder.field_b;
                 }
               } else if (!var13.invitationPending) {
@@ -340,7 +340,7 @@ final class MusicVoice extends IntrusiveNode {
                 var13.actionLabel.text = wl.field_L;
               }
               var26_int = 0;
-              if (null != o.field_e &&
+              if (null != o.currentLobbyGame &&
                 hn.b((byte) 7) &&
                 ~oc.field_p != ~var13.playerId) {
                 if (null != var13.statusLabel.text) {
@@ -482,8 +482,8 @@ final class MusicVoice extends IntrusiveNode {
                 var27Lifetime1 = 0;
                 var28_int = 0;
                 while (true) {
-                  if (cq.field_p > var28_int) {
-                    var29 = o.field_e.settings[var28_int] & 255;
+                  if (cq.gameSettingCount > var28_int) {
+                    var29 = o.currentLobbyGame.settings[var28_int] & 255;
                     var30 = 0;
                     if (NodeDeque.field_a != null &&
                       NodeDeque.field_a[var28_int] != null &&
@@ -550,7 +550,7 @@ final class MusicVoice extends IntrusiveNode {
                 }
                 if (TimedSplashScreen.field_u == param1 &&
                   !hn.b((byte) 7)) {
-                  var28 = o.field_e.displayName;
+                  var28 = o.currentLobbyGame.displayName;
                   var25 = (String) (var25) + "<br>" + rd.a(ba.field_y, new String[]{var28}, (byte) 103);
                 }
                 ep.field_e = (String) (var25);

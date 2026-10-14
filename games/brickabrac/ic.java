@@ -2,44 +2,44 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ic {
-    static long field_b;
+    static long optionChangeDeadlineMillis;
     static ResourceArchive field_a;
     static VerticalScrollbar field_c;
 
-    final static void a(boolean param0, LobbyGame param1) {
-        LobbyGame var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
+    final static void insertSortedLobbyGame(boolean obfuscationGuard, LobbyGame game) {
+        LobbyGame existingGame = null;
+        RuntimeException failure = null;
+        int clientBranchFlag = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = BrickABrac.field_J ? 1 : 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!param0) {
-            field_b = 8L;
+          if (!obfuscationGuard) {
+            optionChangeDeadlineMillis = 8L;
           }
-          param1.unlink((byte) 111);
-          var2 = (LobbyGame) (rq.field_a.first(-76));
-          while (var2 != null) {
-            if (var2.comesBeforeGame(param1, true)) {
-              var2 = (LobbyGame) (rq.field_a.next((byte) 116));
+          game.unlink((byte) 111);
+          existingGame = (LobbyGame) (rq.lobbyGames.first(-76));
+          while (existingGame != null) {
+            if (existingGame.comesBeforeGame(game, true)) {
+              existingGame = (LobbyGame) (rq.lobbyGames.next((byte) 116));
               continue;
             }
             break;
           }
-          if (var2 == null) {
-            rq.field_a.addLast(param1, (byte) 3);
+          if (existingGame == null) {
+            rq.lobbyGames.addLast(game, (byte) 3);
             return;
           }
-          BubbleDistortion.insertNodeBefore(param1, -90, var2);
+          BubbleDistortion.insertNodeBefore(game, -90, existingGame);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_13_0 = var2_ref;
-          stackIn_13_1 = new StringBuilder().append("ic.A(").append(param0).append(',');
-          if (param1 == null) {
+          failure = decompiledCaughtException;
+          stackIn_13_0 = failure;
+          stackIn_13_1 = new StringBuilder().append("ic.A(").append(obfuscationGuard).append(',');
+          if (game == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
@@ -69,7 +69,7 @@ final class ic {
         }
         if (obfuscationGuard > -63) {
           var3 = (LobbyGame) null;
-          ic.a(true, (LobbyGame) null);
+          ic.insertSortedLobbyGame(true, (LobbyGame) null);
         }
     }
 

@@ -90,7 +90,7 @@ final class ContextActionController {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (null == o.field_e) {
+          if (null == o.currentLobbyGame) {
             var2 = dg.findLobbyGame(this.gameId, (byte) 61);
             if (var2 != null) {
               var3 = var2.displayName;
@@ -3289,14 +3289,14 @@ final class ContextActionController {
           }
           if (this.targetName != null &&
             ~oc.field_p != ~this.targetId &&
-            null != o.field_e &&
+            null != o.currentLobbyGame &&
             hn.b((byte) 7)) {
-            gamePlayer = MatchCompleteScreen.a((byte) 96, this.targetId);
-            invitedPlayer = ac.a(this.targetId, 2);
+            gamePlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, this.targetId);
+            invitedPlayer = ac.findGamePlayer(this.targetId, 2);
             caption = this.getTargetCaption(-12688);
             if (invitedPlayer != null) {
-              if (o.field_e.started &&
-                o.field_e.concludedDurationMillis < 0) {
+              if (o.currentLobbyGame.started &&
+                o.currentLobbyGame.concludedDurationMillis < 0) {
                 return;
               }
               this.contextMenu.addAction(rd.a(cq.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
@@ -3305,8 +3305,8 @@ final class ContextActionController {
               }
             }
             if (null != gamePlayer &&
-              o.field_e.protocolFlag8 &&
-              o.field_e.maxPlayers > o.field_e.playerCount) {
+              o.currentLobbyGame.protocolFlag8 &&
+              o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
               if (gamePlayer.invitationPending) {
                 this.contextMenu.addAction(rd.a(hm.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
                 if (unusedGameFlag == 0) {

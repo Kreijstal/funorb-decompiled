@@ -14,7 +14,7 @@ final class eq {
     private long[] field_a;
     static String field_i;
     static BufferedSocket gameTransport;
-    static SecondaryHashTable field_m;
+    static SecondaryHashTable lobbyPlayerIndex;
 
     final static void a(int param0) {
         cr.f((byte) -45);
@@ -306,12 +306,12 @@ final class eq {
     }
 
     public static void b(int param0) {
-        field_m = null;
+        lobbyPlayerIndex = null;
         field_b = null;
         gameTransport = null;
         field_i = null;
         if (param0 != -1) {
-          field_m = (SecondaryHashTable) null;
+          lobbyPlayerIndex = (SecondaryHashTable) null;
         }
     }
 

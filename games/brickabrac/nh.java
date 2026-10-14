@@ -338,7 +338,7 @@ final class nh {
           stackIn_3_0 = TableDataRequest.field_m;
           stackIn_4_1 = !(param0);
           co.a(stackIn_3_0, stackIn_4_1);
-          if (o.field_e != null) {
+          if (o.currentLobbyGame != null) {
             boolean decompiledFrameRemainder1 = true;
             GameUiController.field_e.enabled = true;
             var23 = pf.field_h;
@@ -352,7 +352,7 @@ final class nh {
             AppletGameShell.field_e.height = 0;
             var7.width = 0;
             if (!hn.b((byte) 7)) {
-              var9_ref_String = o.field_e.displayName;
+              var9_ref_String = o.currentLobbyGame.displayName;
               ba.field_v.text = rd.a(fm.field_a, new String[]{var9_ref_String}, (byte) 103).toUpperCase();
               AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
               AppletGameShell.field_e.text = rd.a(IntrusiveNode.field_a, new String[]{var9_ref_String}, (byte) 103);
@@ -363,7 +363,7 @@ final class nh {
               ba.field_v.text = ba.field_x.toUpperCase();
               var9 = (MultiplayerMatch.field_d.width + 2) / 2;
               pf.field_h.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, -2 + var9, (byte) 64);
-              if (o.field_e.maxPlayers <= o.field_e.playerCount) {
+              if (o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                 pf.field_h.text = GameCanvas.field_d.toUpperCase();
                 pf.field_h.enabled = false;
                 if (var19 != 0) {
@@ -375,14 +375,14 @@ final class nh {
                 pf.field_h.enabled = true;
               }
               pf.field_h.frameSprites = fm.field_b.frameSprites;
-              if (uf.field_c > 0) {
-                boolean decompiledSharedTail1 = (uf.field_c != 1);
+              if (uf.pendingJoinRequestCount > 0) {
+                boolean decompiledSharedTail1 = (uf.pendingJoinRequestCount != 1);
                 if (!decompiledSharedTail1) {
                   var10_ref_String = ei.field_g;
                   decompiledSharedTail1 = (var19 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  var10_ref_String = rd.a(LevelPackLoader.field_h, new String[]{Integer.toString(uf.field_c)}, (byte) 103);
+                  var10_ref_String = rd.a(LevelPackLoader.field_h, new String[]{Integer.toString(uf.pendingJoinRequestCount)}, (byte) 103);
                 }
                 pf.field_h.text = pf.field_h.text + "<br>" + var10_ref_String;
                 if ((an.field_h & 16) == 0 &&
@@ -394,17 +394,17 @@ final class nh {
               dn.field_K.text = ConstructionBackground.field_r.toUpperCase();
               var8 = dn.field_K;
               stackIn_23_0 = dn.field_K;
-              stackIn_24_1 = (param4) && (ic.field_b == 0L);
+              stackIn_24_1 = (param4) && (ic.optionChangeDeadlineMillis == 0L);
               stackIn_23_0.enabled = stackIn_24_1;
               var10 = 2;
               if (null != ContextMenu.field_bc) {
                 if (qo.field_J == null) {
-                  h.field_D = new boolean[cq.field_p];
-                  qo.field_J = new byte[cq.field_p];
+                  h.field_D = new boolean[cq.gameSettingCount];
+                  qo.field_J = new byte[cq.gameSettingCount];
                 }
                 var11 = 0;
                 do {
-                  if (!(cq.field_p > var11)) {
+                  if (!(cq.gameSettingCount > var11)) {
                     var10 = 0;
                     break;
                   }
@@ -436,14 +436,14 @@ final class nh {
                             stackIn_58_0 = var15;
                             stackIn_58_1 = -1;
                             if (stackIn_58_0 != stackIn_58_1) {
-                              if (~(o.field_e.settings[var15] & 255) != ~var16) {
+                              if (~(o.currentLobbyGame.settings[var15] & 255) != ~var16) {
                                 break scanLoop2;
                               }
                             } else {
                               if (var10 != 0) {
-                                stackIn_51_0 = o.field_e.playerCount;
+                                stackIn_51_0 = o.currentLobbyGame.playerCount;
                               } else {
-                                stackIn_51_0 = o.field_e.maxPlayers;
+                                stackIn_51_0 = o.currentLobbyGame.maxPlayers;
                               }
                               var17_int = stackIn_51_0;
                               if (var17_int != var16 &&
@@ -502,7 +502,7 @@ final class nh {
                   var12 = 0;
                   var13 = 0;
                   while (true) {
-                    if (cq.field_p > var13) {
+                    if (cq.gameSettingCount > var13) {
                       stackOut_80_0 = h.field_D[var13];
                       stackIn_87_0 = stackOut_80_0 ? 1 : 0;
                       stackIn_81_0 = stackOut_80_0;
@@ -559,8 +559,8 @@ final class nh {
                 var15 = 0;
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!(cq.field_p > var16)))) {
-                  var17_int = 255 & o.field_e.settings[var16];
+                while (!(decompiledNaturalLoopExit0 = (!(cq.gameSettingCount > var16)))) {
+                  var17_int = 255 & o.currentLobbyGame.settings[var16];
                   if (var19 == 0) {
                     if (NodeDeque.field_a != null &&
                       NodeDeque.field_a[var16] != null &&
@@ -671,15 +671,15 @@ final class nh {
                 }
               }
             }
-            if (0L != ic.field_b) {
-              var9 = (int)(ic.field_b - MonotonicTime.nowMillis(false));
+            if (0L != ic.optionChangeDeadlineMillis) {
+              var9 = (int)(ic.optionChangeDeadlineMillis - MonotonicTime.nowMillis(false));
               var9 = (var9 + 999) / 1000;
               if (1 > var9) {
                 var9 = 1;
               }
               var8.text = rd.a(SpriteGeometry.field_w, new String[]{Integer.toString(var9)}, (byte) 103);
             }
-            um.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.field_e.playerCount), Integer.toString(o.field_e.maxPlayers)}, (byte) 103);
+            um.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.currentLobbyGame.playerCount), Integer.toString(o.currentLobbyGame.maxPlayers)}, (byte) 103);
           }
           stackIn_174_0 = NinjaBackground.field_w;
           stackIn_175_1 = (param2) && (!param1) && (!hc.field_c);
@@ -695,9 +695,9 @@ final class nh {
             nh.a(-9, -55, 119, -100, (RgbSprite[]) null, -102);
           }
           sb.field_c.field_d.processTabPresses(0);
-          if (null != o.field_e) {
+          if (null != o.currentLobbyGame) {
             if (GameUiController.field_e.pressedButton != 0) {
-              vg.a(o.field_e.getGameId((byte) 123), false, param3);
+              vg.a(o.currentLobbyGame.getGameId((byte) 123), false, param3);
             }
             if (pf.field_h.pressedButton != 0) {
               hc.field_c = true;
@@ -708,7 +708,7 @@ final class nh {
             if (0 != nd.field_a.pressedButton) {
               hc.field_c = false;
             }
-            JungleBackground.a(param3, o.field_e, false, false);
+            JungleBackground.a(param3, o.currentLobbyGame, false, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -734,7 +734,7 @@ final class nh {
         int stackIn_29_1Lifetime1;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = (LobbyPlayer) (ua.field_c.first(-50));
+          var1 = (LobbyPlayer) (ua.lobbyPlayers.first(-50));
           while (var1 != null) {
             stackIn_29_0 = -1;
             stackIn_29_1 = ~var1.statusChangeTick;
@@ -747,7 +747,7 @@ final class nh {
                   }
                 }
                 while (true) {
-                  var1 = (LobbyPlayer) (SocialListEntry.field_Tb.next((byte) 116));
+                  var1 = (LobbyPlayer) (SocialListEntry.gamePlayers.next((byte) 116));
                   return;
                 }
               }
@@ -761,13 +761,13 @@ final class nh {
                 }
               }
             }
-            var1 = (LobbyPlayer) (ua.field_c.next((byte) 116));
+            var1 = (LobbyPlayer) (ua.lobbyPlayers.next((byte) 116));
             if (var2 == 0) {
               continue;
             }
             break;
           }
-          var1_ref = (LobbyGame) (rq.field_a.first(-14));
+          var1_ref = (LobbyGame) (rq.lobbyGames.first(-14));
           if (param0 != 0) {
             receivedChatBadge = -23;
           }
@@ -786,13 +786,13 @@ final class nh {
                   }
                 }
               }
-              var1_ref = (LobbyGame) (rq.field_a.next((byte) 116));
+              var1_ref = (LobbyGame) (rq.lobbyGames.next((byte) 116));
               continue;
             }
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_23_0 = SocialListEntry.field_Tb.first(-21);
+            stackIn_23_0 = SocialListEntry.gamePlayers.first(-21);
           }
           var1Lifetime1 = (LobbyPlayer) (stackIn_23_0);
           while (true) {
@@ -813,7 +813,7 @@ final class nh {
                 }
               }
             }
-            var1Lifetime1 = (LobbyPlayer) (SocialListEntry.field_Tb.next((byte) 116));
+            var1Lifetime1 = (LobbyPlayer) (SocialListEntry.gamePlayers.next((byte) 116));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

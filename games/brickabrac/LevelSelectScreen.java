@@ -233,7 +233,7 @@ final class LevelSelectScreen extends MenuScreen {
             var5.serverName != null) {
             return true;
           }
-          stackIn_9_0 = (o.field_e != null) && (null != ac.a(param0, 2));
+          stackIn_9_0 = (o.currentLobbyGame != null) && (null != ac.findGamePlayer(param0, 2));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

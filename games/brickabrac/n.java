@@ -170,7 +170,7 @@ final class n {
             return;
           }
           co.a(IntArrayRequest.field_j, false);
-          if (nl.field_f != null) {
+          if (nl.pendingLobbyGame != null) {
             var15 = pf.field_h;
             var17 = var15;
             pf.field_h.height = 0;
@@ -215,7 +215,7 @@ final class n {
               }
             }
             dn.field_K.enabled = true;
-            if (fh.field_d) {
+            if (fh.pendingGameOptionsReceived) {
               GameUiController.field_e.enabled = false;
               t.field_f.text = gh.field_a;
               if (var8 != 0) {
@@ -261,18 +261,18 @@ final class n {
               GameUiController.field_e.enabled = true;
               if (ContextMenu.field_bc != null) {
                 if (null == qo.field_J) {
-                  qo.field_J = new byte[cq.field_p];
-                  h.field_D = new boolean[cq.field_p];
+                  qo.field_J = new byte[cq.gameSettingCount];
+                  h.field_D = new boolean[cq.gameSettingCount];
                 }
                 MusicVoiceMixer.field_s = false;
                 MeshAttributeRecord.field_g = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (cq.field_p > var13) {
+                while (cq.gameSettingCount > var13) {
                   h.field_D[var13] = false;
                   var13++;
                 }
-                ar.a(true, nl.field_f, -1, -1, -1, 0, cq.field_p, 0);
+                ar.a(true, nl.pendingLobbyGame, -1, -1, -1, 0, cq.gameSettingCount, 0);
                 if (!(QuickChatHelpDialog.field_Yb < 2) &&
                   IntArrayRequest.heldKeys[12]) {
                   MeshAttributeRecord.field_g = true;
@@ -289,7 +289,7 @@ final class n {
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; var10Lifetime1 < cq.field_p; var10Lifetime1++) {
+                  for (var10Lifetime1 = 0; var10Lifetime1 < cq.gameSettingCount; var10Lifetime1++) {
                     if (h.field_D[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + QuickChatPhraseRegistry.field_b[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
@@ -316,18 +316,18 @@ final class n {
           stackIn_84_1 = (param1) && (!param2) && (hc.field_c);
           ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
           sb.field_c.field_d.processTabPresses(0);
-          if (nl.field_f != null) {
+          if (nl.pendingLobbyGame != null) {
             if (GameUiController.field_e.pressedButton != 0) {
               ef.a(-22809, param0);
             }
             if (dn.field_K.pressedButton != 0) {
-              if (!fh.field_d) {
+              if (!fh.pendingGameOptionsReceived) {
                 UnderwaterBackground.a(param0, (byte) 98);
               } else {
                 um.a(param3 + 276, param0);
               }
             }
-            JungleBackground.a(param0, nl.field_f, true, false);
+            JungleBackground.a(param0, nl.pendingLobbyGame, true, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -7,7 +7,7 @@ final class fh {
     static int[] viewVertexX;
     static int field_g;
     static int field_c;
-    static boolean field_d;
+    static boolean pendingGameOptionsReceived;
     static String[] field_h;
     static String field_b;
     private static String field_z;

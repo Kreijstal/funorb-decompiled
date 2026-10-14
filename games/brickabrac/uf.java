@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uf {
-    static int field_c;
+    static int pendingJoinRequestCount;
     static ResourceArchive field_a;
     static boolean[] enabledCommonPackets;
     static int field_b;

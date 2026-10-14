@@ -100,7 +100,7 @@ final class c {
               nh.a(true, param3, param8, param2, param7);
             }
             if (hc.field_c &&
-              o.field_e.maxPlayers <= o.field_e.playerCount) {
+              o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
               IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
               Ball.field_A.enabled = false;
               jh.a(true, IsaacGenerator.field_b.content);
@@ -123,7 +123,7 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
-                o.field_e.maxPlayers <= o.field_e.playerCount) {
+                o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -146,7 +146,7 @@ final class c {
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
-                if (o.field_e.maxPlayers > o.field_e.playerCount) {
+                if (o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -163,10 +163,10 @@ final class c {
             if (Rasterizer2D.height != IsaacGenerator.field_i &&
               Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
               Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
-              if (o.field_e != null) {
+              if (o.currentLobbyGame != null) {
                 CacheIoRequest.a(true, false);
               } else {
-                if (null != nl.field_f) {
+                if (null != nl.pendingLobbyGame) {
                   CacheIoRequest.a(true, true);
                 } else {
                   NanoGameClock.b(31);
@@ -188,7 +188,7 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
-                o.field_e.maxPlayers <= o.field_e.playerCount) {
+                o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -216,7 +216,7 @@ final class c {
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
-                if (o.field_e.maxPlayers > o.field_e.playerCount) {
+                if (o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -230,10 +230,10 @@ final class c {
           } else {
             if (Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
               Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
-              if (o.field_e != null) {
+              if (o.currentLobbyGame != null) {
                 CacheIoRequest.a(true, false);
               } else {
-                if (null != nl.field_f) {
+                if (null != nl.pendingLobbyGame) {
                   CacheIoRequest.a(true, true);
                 } else {
                   NanoGameClock.b(31);
@@ -255,7 +255,7 @@ final class c {
                 nh.a(true, param3, param8, param2, param7);
               }
               if (hc.field_c &&
-                o.field_e.maxPlayers <= o.field_e.playerCount) {
+                o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -278,7 +278,7 @@ final class c {
                   nh.a(true, param3, param8, param2, param7);
                 }
                 if (hc.field_c &&
-                  o.field_e.maxPlayers <= o.field_e.playerCount) {
+                  o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
                   jh.a(true, IsaacGenerator.field_b.content);
@@ -301,7 +301,7 @@ final class c {
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  if (o.field_e.maxPlayers > o.field_e.playerCount) {
+                  if (o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
                     IsaacGenerator.field_b.viewport.text = null;
                     Ball.field_A.enabled = true;
                     MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);

@@ -91,35 +91,35 @@ final class bf extends d {
     final static void a(byte param0) {
         LobbyPlayer var3 = null;
         int var2 = BrickABrac.field_J ? 1 : 0;
-        o.field_e = null;
-        fh.field_d = false;
-        nl.field_f = null;
-        if (ua.field_c != null) {
-          ua.field_c.clear((byte) -57);
-          ua.field_c = null;
+        o.currentLobbyGame = null;
+        fh.pendingGameOptionsReceived = false;
+        nl.pendingLobbyGame = null;
+        if (ua.lobbyPlayers != null) {
+          ua.lobbyPlayers.clear((byte) -57);
+          ua.lobbyPlayers = null;
         }
         if (param0 < 29) {
           return;
         }
         try {
-          eq.field_m = null;
-          if (rq.field_a != null) {
-            rq.field_a.clear((byte) -91);
-            rq.field_a = null;
+          eq.lobbyPlayerIndex = null;
+          if (rq.lobbyGames != null) {
+            rq.lobbyGames.clear((byte) -91);
+            rq.lobbyGames = null;
           }
-          LevelResultSubmission.field_i = null;
-          if (null != SocialListEntry.field_Tb) {
-            SocialListEntry.field_Tb.clear((byte) -84);
-            SocialListEntry.field_Tb = null;
+          LevelResultSubmission.lobbyGameIndex = null;
+          if (null != SocialListEntry.gamePlayers) {
+            SocialListEntry.gamePlayers.clear((byte) -84);
+            SocialListEntry.gamePlayers = null;
           }
-          BrickABrac.field_F = null;
-          if (eq.field_m != null) {
-            var3 = (LobbyPlayer) (eq.field_m.first((byte) 120));
+          BrickABrac.gamePlayerIndex = null;
+          if (eq.lobbyPlayerIndex != null) {
+            var3 = (LobbyPlayer) (eq.lobbyPlayerIndex.first((byte) 120));
             while (var3 != null) {
               var3.unlinkSecondary(3);
-              var3 = (LobbyPlayer) (eq.field_m.next(false));
+              var3 = (LobbyPlayer) (eq.lobbyPlayerIndex.next(false));
             }
-            eq.field_m = null;
+            eq.lobbyPlayerIndex = null;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.A(" + param0 + ')');

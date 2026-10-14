@@ -15,7 +15,7 @@ final class hm {
         field_c = null;
     }
 
-    final static void a(UiComponent param0, byte param1, byte[] param2, UiComponent param3, int param4, int param5, UiComponent param6, int param7, int param8, int param9) {
+    final static void initializeLobby(UiComponent gamePlayerContent, byte obfuscationGuard, byte[] settingBitWidths, UiComponent lobbyPlayerContent, int initialTick, int lobbyPlayerBuckets, UiComponent lobbyGameContent, int gamePlayerBuckets, int lobbyGameBuckets, int choiceCount) {
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -32,77 +32,77 @@ final class hm {
         int var12 = 0;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          wc.field_e = param9;
+          wc.field_e = choiceCount;
           oc.field_p = -1L;
-          BufferedFile.field_c = param2;
-          cq.field_p = param2.length;
-          fh.field_d = false;
+          BufferedFile.field_c = settingBitWidths;
+          cq.gameSettingCount = settingBitWidths.length;
+          fh.pendingGameOptionsReceived = false;
           rh.field_d = new byte[(wc.field_e + 7) / 8];
-          o.field_e = null;
-          nl.field_f = null;
+          o.currentLobbyGame = null;
+          nl.pendingLobbyGame = null;
           var10_int = 0;
           for (var11 = 0; BufferedFile.field_c.length > var11; var11++) {
             var10_int = var10_int + (BufferedFile.field_c[var11] & 255);
           }
           var10_int = (7 + var10_int) / 8;
           PowerUpWarning.field_p = new byte[var10_int];
-          if (param3.children == null) {
-            param3.children = new NodeDeque();
+          if (lobbyPlayerContent.children == null) {
+            lobbyPlayerContent.children = new NodeDeque();
           }
-          ua.field_c = param3.children;
-          ua.field_c.clear((byte) -60);
-          eq.field_m = new SecondaryHashTable(param5);
+          ua.lobbyPlayers = lobbyPlayerContent.children;
+          ua.lobbyPlayers.clear((byte) -60);
+          eq.lobbyPlayerIndex = new SecondaryHashTable(lobbyPlayerBuckets);
           m.field_h = -1;
           MenuSelection.field_i = 0;
-          uf.field_c = 0;
+          uf.pendingJoinRequestCount = 0;
           ArchiveIndex.field_s = -1;
-          if (param6.children == null) {
-            param6.children = new NodeDeque();
+          if (lobbyGameContent.children == null) {
+            lobbyGameContent.children = new NodeDeque();
           }
-          rq.field_a = param6.children;
-          rq.field_a.clear((byte) -48);
-          LevelResultSubmission.field_i = new SecondaryHashTable(param8);
-          if (param0.children == null) {
-            param0.children = new NodeDeque();
+          rq.lobbyGames = lobbyGameContent.children;
+          rq.lobbyGames.clear((byte) -48);
+          LevelResultSubmission.lobbyGameIndex = new SecondaryHashTable(lobbyGameBuckets);
+          if (gamePlayerContent.children == null) {
+            gamePlayerContent.children = new NodeDeque();
           }
-          SocialListEntry.field_Tb = param0.children;
-          SocialListEntry.field_Tb.clear((byte) -61);
-          if (param1 != 86) {
+          SocialListEntry.gamePlayers = gamePlayerContent.children;
+          SocialListEntry.gamePlayers.clear((byte) -61);
+          if (obfuscationGuard != 86) {
             return;
           }
-          BrickABrac.field_F = new SecondaryHashTable(param7);
-          ic.field_b = 0L;
-          cm.field_o = param4;
+          BrickABrac.gamePlayerIndex = new SecondaryHashTable(gamePlayerBuckets);
+          ic.optionChangeDeadlineMillis = 0L;
+          cm.field_o = initialTick;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var10 = decompiledCaughtException;
           stackIn_19_0 = var10;
           stackIn_19_1 = new StringBuilder().append("hm.A(");
-          if (param0 == null) {
+          if (gamePlayerContent == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(',');
+          if (settingBitWidths == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
           stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param3 == null) {
+          if (lobbyPlayerContent == null) {
             stackIn_26_2 = "null";
           } else {
             stackIn_26_2 = "{...}";
           }
-          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(initialTick).append(',').append(lobbyPlayerBuckets).append(',');
+          if (lobbyGameContent == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(gamePlayerBuckets).append(',').append(lobbyGameBuckets).append(',').append(choiceCount).append(')').toString());
         }
     }
 

@@ -26,11 +26,11 @@ final class ac {
         return this.field_a;
     }
 
-    final static LobbyPlayer a(long param0, int param1) {
-        if (param1 != 2) {
+    final static LobbyPlayer findGamePlayer(long playerId, int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           return (LobbyPlayer) null;
         }
-        return (LobbyPlayer) (BrickABrac.field_F.get(param0, -1));
+        return (LobbyPlayer) (BrickABrac.gamePlayerIndex.get(playerId, -1));
     }
 
     final void a(boolean param0, int param1) {

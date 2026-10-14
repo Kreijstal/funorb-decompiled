@@ -59,7 +59,7 @@ final class ar {
               scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
-                    cq.field_p != param4) {
+                    cq.gameSettingCount != param4) {
                     break scanLoop1;
                   }
                   var8_int = 0;
@@ -187,9 +187,9 @@ final class ar {
                   var12 = stackIn_78_0;
                 } else {
                   if (param4 != -1) {
-                    stackIn_69_0 = ((255 & o.field_e.settings[param4]) != var11) ? 0 : 1;
+                    stackIn_69_0 = ((255 & o.currentLobbyGame.settings[param4]) != var11) ? 0 : 1;
                   } else {
-                    stackIn_69_0 = (o.field_e.maxPlayers != w.field_n[var11]) ? 0 : 1;
+                    stackIn_69_0 = (o.currentLobbyGame.maxPlayers != w.field_n[var11]) ? 0 : 1;
                   }
                   var12 = stackIn_69_0;
                 }

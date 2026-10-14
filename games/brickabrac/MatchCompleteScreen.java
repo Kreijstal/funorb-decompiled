@@ -126,11 +126,11 @@ final class MatchCompleteScreen extends MatchResultScreen {
         }
     }
 
-    final static LobbyPlayer a(byte param0, long param1) {
-        if (param0 != 96) {
-          MatchCompleteScreen.a((byte) 62, 38L);
+    final static LobbyPlayer findLobbyPlayer(byte obfuscationGuard, long playerId) {
+        if (obfuscationGuard != 96) {
+          MatchCompleteScreen.findLobbyPlayer((byte) 62, 38L);
         }
-        return (LobbyPlayer) (eq.field_m.get(param1, param0 ^ -97));
+        return (LobbyPlayer) (eq.lobbyPlayerIndex.get(playerId, obfuscationGuard ^ -97));
     }
 
     static {

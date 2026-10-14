@@ -5,7 +5,7 @@ final class ua {
     static String[] field_b;
     static GameCanvas field_d;
     static String field_e;
-    static NodeDeque field_c;
+    static NodeDeque lobbyPlayers;
     static String field_a;
 
     final static void a(PlayerBoard param0, int param1, int param2, int param3, int param4, int param5, MultiplayerMatch param6) {
@@ -20,7 +20,7 @@ final class ua {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        lobbyPlayers = null;
         field_d = null;
         if (param0 == 2) {
           field_a = null;

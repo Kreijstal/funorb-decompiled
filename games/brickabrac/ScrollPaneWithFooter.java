@@ -72,8 +72,8 @@ final class ScrollPaneWithFooter extends UiComponent {
           SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.senderId, param1.senderDisplayName);
           if (param1.channel == 0 &&
             !cb.e(-91) &&
-            null == o.field_e &&
-            nl.field_f == null) {
+            null == o.currentLobbyGame &&
+            nl.pendingLobbyGame == null) {
             if (!qo.field_I) {
               var5 = bm.contextActions;
               var6 = LevelPackSelectScreen.field_x;
@@ -85,8 +85,8 @@ final class ScrollPaneWithFooter extends UiComponent {
           }
           if (param1.channel == 1 &&
             !cb.e(-128) &&
-            null != o.field_e &&
-            param1.contextId == o.field_e.getGameId((byte) 118)) {
+            null != o.currentLobbyGame &&
+            param1.contextId == o.currentLobbyGame.getGameId((byte) 118)) {
             if (!qo.field_I) {
               var9 = bm.contextActions;
               var10 = hc.field_b;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rq {
-    static NodeDeque field_a;
+    static NodeDeque lobbyGames;
     static ScrollPaneWithFooter field_b;
     static String field_d;
     static n field_c;
@@ -11,14 +11,14 @@ final class rq {
     public static void a(byte param0) {
         if (param0 == -118) {
           field_d = null;
-          field_a = null;
+          lobbyGames = null;
           field_b = null;
           field_c = null;
           return;
         }
         field_d = (String) null;
         field_d = null;
-        field_a = null;
+        lobbyGames = null;
         field_b = null;
         field_c = null;
     }

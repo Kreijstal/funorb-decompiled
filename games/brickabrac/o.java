@@ -3,7 +3,7 @@
  */
 final class o {
     static n field_g;
-    static LobbyGame field_e;
+    static LobbyGame currentLobbyGame;
     static int field_f;
     static String field_a;
     static ScrollPane field_b;
@@ -79,13 +79,13 @@ final class o {
         field_b = null;
         field_a = null;
         if (param0 == 31583) {
-          field_e = null;
+          currentLobbyGame = null;
           field_c = null;
           field_h = null;
           return;
         }
         o.d(-14);
-        field_e = null;
+        currentLobbyGame = null;
         field_c = null;
         field_h = null;
     }

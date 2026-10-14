@@ -992,8 +992,8 @@ final class sb implements vc {
               var6 = var5Lifetime5 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               ConstructionBackground.b((byte) -118, var6);
               nh.a(0);
-              if (o.field_e != null) {
-                stackIn_43_0 = (IntKeyIndex.a(o.field_e.playerCount, 0)) ? 1 : 0;
+              if (o.currentLobbyGame != null) {
+                stackIn_43_0 = (IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 1 : 0;
               } else {
                 stackIn_43_0 = 0;
               }
@@ -1035,8 +1035,8 @@ final class sb implements vc {
           var6Lifetime1 = var5Lifetime1 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
           ConstructionBackground.b((byte) -118, var6Lifetime1);
           nh.a(0);
-          if (o.field_e != null) {
-            stackIn_62_0 = (IntKeyIndex.a(o.field_e.playerCount, 0)) ? 1 : 0;
+          if (o.currentLobbyGame != null) {
+            stackIn_62_0 = (IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 1 : 0;
           } else {
             stackIn_62_0 = 0;
           }
@@ -1073,8 +1073,8 @@ final class sb implements vc {
             var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             ConstructionBackground.b((byte) -118, var6Lifetime2);
             nh.a(0);
-            if (o.field_e != null) {
-              stackIn_88_0 = (IntKeyIndex.a(o.field_e.playerCount, 0)) ? 1 : 0;
+            if (o.currentLobbyGame != null) {
+              stackIn_88_0 = (IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 1 : 0;
             } else {
               stackIn_88_0 = 0;
             }
@@ -1100,8 +1100,8 @@ final class sb implements vc {
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               ConstructionBackground.b((byte) -118, var6Lifetime2);
               nh.a(0);
-              if (o.field_e != null) {
-                stackIn_128_0 = (IntKeyIndex.a(o.field_e.playerCount, 0)) ? 1 : 0;
+              if (o.currentLobbyGame != null) {
+                stackIn_128_0 = (IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 1 : 0;
               } else {
                 stackIn_128_0 = 0;
               }
@@ -1125,8 +1125,8 @@ final class sb implements vc {
               var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
               ConstructionBackground.b((byte) -118, var6Lifetime2);
               nh.a(0);
-              if (o.field_e != null) {
-                stackIn_110_0 = (IntKeyIndex.a(o.field_e.playerCount, 0)) ? 1 : 0;
+              if (o.currentLobbyGame != null) {
+                stackIn_110_0 = (IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 1 : 0;
               } else {
                 stackIn_110_0 = 0;
               }
@@ -1166,8 +1166,8 @@ final class sb implements vc {
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
                 ConstructionBackground.b((byte) -118, var6Lifetime3);
                 nh.a(0);
-                if (o.field_e != null) {
-                  stackIn_238_0 = (!IntKeyIndex.a(o.field_e.playerCount, 0)) ? 0 : 1;
+                if (o.currentLobbyGame != null) {
+                  stackIn_238_0 = (!IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 0 : 1;
                 } else {
                   stackIn_238_0 = 0;
                 }
@@ -1193,8 +1193,8 @@ final class sb implements vc {
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             ConstructionBackground.b((byte) -118, var6Lifetime3);
             nh.a(0);
-            if (o.field_e != null) {
-              stackIn_257_0 = (!IntKeyIndex.a(o.field_e.playerCount, 0)) ? 0 : 1;
+            if (o.currentLobbyGame != null) {
+              stackIn_257_0 = (!IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 0 : 1;
             } else {
               stackIn_257_0 = 0;
             }
@@ -1226,8 +1226,8 @@ final class sb implements vc {
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
                 ConstructionBackground.b((byte) -118, var6Lifetime3);
                 nh.a(0);
-                if (o.field_e != null) {
-                  stackIn_156_0 = (!IntKeyIndex.a(o.field_e.playerCount, 0)) ? 0 : 1;
+                if (o.currentLobbyGame != null) {
+                  stackIn_156_0 = (!IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 0 : 1;
                 } else {
                   stackIn_156_0 = 0;
                 }
@@ -1261,8 +1261,8 @@ final class sb implements vc {
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             ConstructionBackground.b((byte) -118, var6Lifetime3);
             nh.a(0);
-            if (o.field_e != null) {
-              stackIn_174_0 = (!IntKeyIndex.a(o.field_e.playerCount, 0)) ? 0 : 1;
+            if (o.currentLobbyGame != null) {
+              stackIn_174_0 = (!IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 0 : 1;
             } else {
               stackIn_174_0 = 0;
             }
@@ -1291,8 +1291,8 @@ final class sb implements vc {
                 var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
                 ConstructionBackground.b((byte) -118, var6Lifetime3);
                 nh.a(0);
-                if (o.field_e != null) {
-                  stackIn_197_0 = (!IntKeyIndex.a(o.field_e.playerCount, 0)) ? 0 : 1;
+                if (o.currentLobbyGame != null) {
+                  stackIn_197_0 = (!IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 0 : 1;
                 } else {
                   stackIn_197_0 = 0;
                 }
@@ -1326,8 +1326,8 @@ final class sb implements vc {
             var6Lifetime3 = var5Lifetime4 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             ConstructionBackground.b((byte) -118, var6Lifetime3);
             nh.a(0);
-            if (o.field_e != null) {
-              stackIn_215_0 = (!IntKeyIndex.a(o.field_e.playerCount, 0)) ? 0 : 1;
+            if (o.currentLobbyGame != null) {
+              stackIn_215_0 = (!IntKeyIndex.a(o.currentLobbyGame.playerCount, 0)) ? 0 : 1;
             } else {
               stackIn_215_0 = 0;
             }

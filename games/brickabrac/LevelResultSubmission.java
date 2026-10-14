@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LevelResultSubmission extends IntrusiveNode {
-    static SecondaryHashTable field_i;
+    static SecondaryHashTable lobbyGameIndex;
     int resultWordFour;
     int levelIndex;
     int packId;
@@ -54,7 +54,7 @@ final class LevelResultSubmission extends IntrusiveNode {
           var1 = null;
           var2 = null;
           if (ng.quickChatChannel == 0 &&
-            null != nl.field_f) {
+            null != nl.pendingLobbyGame) {
             var2 = rl.field_a;
           }
           if (2 == ng.quickChatChannel &&
@@ -97,11 +97,11 @@ final class LevelResultSubmission extends IntrusiveNode {
             if (2 != var6 ||
               var10 != 0) {
               if (0 == var6) {
-                if (null == o.field_e &&
+                if (null == o.currentLobbyGame &&
                   QuickChatParameterType.field_d) {
                   var4 = "[" + ArcticBackground.field_u + "] ";
                 }
-                if (null != o.field_e) {
+                if (null != o.currentLobbyGame) {
                   var6 = 1;
                   boolean decompiledSharedTail1 = (!(PowerUp.field_v) ||
                     null == jd.field_b);
@@ -110,7 +110,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + rd.a(fm.field_a, new String[]{o.field_e.displayName}, (byte) 103) + "] ";
+                    var4 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
                   }
                 }
               }
@@ -170,7 +170,7 @@ final class LevelResultSubmission extends IntrusiveNode {
         try {
           spaceMidSprite = null;
           field_s = null;
-          field_i = null;
+          lobbyGameIndex = null;
           field_q = null;
           field_o = null;
           field_j = null;

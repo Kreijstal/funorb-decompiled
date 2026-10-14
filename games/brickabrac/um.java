@@ -909,7 +909,7 @@ class um implements ub, qe {
               }
               stackIn_10_0.field_ec = new UiComponent(stackIn_10_3, stackIn_11_4);
               var13.addChild(var13.field_ec, 0);
-              var13.field_Ec = new UiComponent[cq.field_p];
+              var13.field_Ec = new UiComponent[cq.gameSettingCount];
               var13.field_sc = new UiComponent(0L, (UiComponent) null);
               if ((1 << BackgroundRegistry.field_c & var15) != 0) {
                 var13.field_ec.addChild(var13.field_sc, 0);
@@ -933,7 +933,7 @@ class um implements ub, qe {
               var44.verticalAlignment = 1;
               var45.verticalAlignment = 1;
               var46.verticalAlignment = 1;
-              for (var19_int = 0; cq.field_p > var19_int; var19_int++) {
+              for (var19_int = 0; cq.gameSettingCount > var19_int; var19_int++) {
                 var13.field_Ec[var19_int] = new UiComponent(0L, (UiComponent) null);
                 if ((var15 & 1 << jc.field_K + var19_int) != 0) {
                   var13.field_ec.addChild(var13.field_Ec[var19_int], 0);
@@ -999,7 +999,7 @@ class um implements ub, qe {
             var22 = var13.field_ec;
             var13.field_ec.height = 0;
             var22.width = 0;
-            for (var23_int = 0; cq.field_p > var23_int; var23_int++) {
+            for (var23_int = 0; cq.gameSettingCount > var23_int; var23_int++) {
               var13.field_Ec[var23_int].sprite = null;
               var24 = var13.field_Ec[var23_int];
               var13.field_Ec[var23_int].height = 0;
@@ -1148,7 +1148,7 @@ class um implements ub, qe {
                 var35_int = var35_int + (kn.field_z + var54_ref.canvasWidth);
               }
               if (null != aj.field_c) {
-                for (var37Lifetime1 = 0; var37Lifetime1 < cq.field_p; var37Lifetime1++) {
+                for (var37Lifetime1 = 0; var37Lifetime1 < cq.gameSettingCount; var37Lifetime1++) {
                   if (null != aj.field_c[var37Lifetime1] &&
                     (1 << var37Lifetime1 + jc.field_K & var15Lifetime1) != 0) {
                     var43 = aj.field_c[var37Lifetime1][255 & var13.settings[var37Lifetime1]];
@@ -1165,7 +1165,7 @@ class um implements ub, qe {
                 var13.field_Yb.localX = var13.field_Yb.localX + var37Lifetime2;
                 var13.field_Bc.localX = var13.field_Bc.localX + var37Lifetime2;
                 var13.field_lc.localX = var13.field_lc.localX + var37Lifetime2;
-                for (var38_int = 0; cq.field_p > var38_int; var38_int++) {
+                for (var38_int = 0; cq.gameSettingCount > var38_int; var38_int++) {
                   dupTemp$0 = var13.field_Ec[var38_int];
                   dupTemp$0.localX = dupTemp$0.localX + var37Lifetime2;
                 }
@@ -1230,7 +1230,7 @@ class um implements ub, qe {
             if (var14 != 0) {
               rl.field_e.content.placeBelow((UiComponent) (var11), 2, var13, 17290);
             }
-            for (var35_intLifetime2 = 0; cq.field_p > var35_intLifetime2; var35_intLifetime2++) {
+            for (var35_intLifetime2 = 0; cq.gameSettingCount > var35_intLifetime2; var35_intLifetime2++) {
               if (var13.field_Ec[var35_intLifetime2].activeInside) {
                 if (null == ff.field_i) {
                   var36 = null;

@@ -5,14 +5,14 @@ final class nl {
     static int decodedSpriteCount;
     static RgbSprite chocolateNearSprite;
     static ResourceArchive field_a;
-    static LobbyGame field_f;
+    static LobbyGame pendingLobbyGame;
     static RgbSprite field_e;
     static RgbSprite field_b;
 
     public static void a(int param0) {
         field_a = null;
         chocolateNearSprite = null;
-        field_f = null;
+        pendingLobbyGame = null;
         field_e = null;
         field_b = null;
         if (param0 > -68) {
@@ -41,7 +41,7 @@ final class nl {
             return false;
           }
           if (obfuscationGuard != 64) {
-            field_f = (LobbyGame) null;
+            pendingLobbyGame = (LobbyGame) null;
           }
           nowMillis = MonotonicTime.nowMillis(false);
           if (0 != MonotonicTime.packetDelayMillis &&

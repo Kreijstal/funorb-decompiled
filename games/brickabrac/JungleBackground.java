@@ -176,7 +176,7 @@ final class JungleBackground extends BackgroundScene {
         var26 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param2) {
-            stackIn_6_0 = (!fh.field_d) ? 1 : 0;
+            stackIn_6_0 = (!fh.pendingGameOptionsReceived) ? 1 : 0;
             var4_int = stackIn_6_0;
           }
           if (!param2 ||
@@ -221,7 +221,7 @@ final class JungleBackground extends BackgroundScene {
                 break;
               }
               if (!hn.b((byte) 7)) {
-                ep.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.field_e.displayName}, (byte) 103);
+                ep.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.currentLobbyGame.displayName}, (byte) 103);
                 if (var26 == 0) {
                   break;
                 }
@@ -437,7 +437,7 @@ final class JungleBackground extends BackgroundScene {
           }
           var7 = stackIn_184_0;
           scanLoop1: while (true) {
-            if (cq.field_p > var7) {
+            if (cq.gameSettingCount > var7) {
               dupTemp$1 = MatchCompleteScreen.field_A[var7 + 4];
               var27 = dupTemp$1;
               var8_array = dupTemp$1;
@@ -529,10 +529,10 @@ final class JungleBackground extends BackgroundScene {
                 if (var16Lifetime1 == 0 &&
                   var9 >= 0 &&
                   ContextMenu.field_bc != null && (!param2 ||
-                  !fh.field_d)) {
+                  !fh.pendingGameOptionsReceived)) {
                   if (qo.field_J == null) {
-                    h.field_D = new boolean[cq.field_p];
-                    qo.field_J = new byte[cq.field_p];
+                    h.field_D = new boolean[cq.gameSettingCount];
+                    qo.field_J = new byte[cq.gameSettingCount];
                   }
                   MeshAttributeRecord.field_g = false;
                   MusicVoiceMixer.field_s = false;
