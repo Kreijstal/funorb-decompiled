@@ -525,7 +525,7 @@ final class nh {
                     break;
                   }
                   if (stackIn_87_0 != ~var10) {
-                    var13_ref_String = bh.field_rb;
+                    var13_ref_String = AccountContentTransitionLayer.field_rb;
                     if (var12 == 0) {
                       var14_ref_String = rd.a(ContextMenu.field_ac, new String[]{(String) (var11_ref)}, (byte) 103);
                       if (var19 != 0) {

@@ -168,7 +168,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           }
           discarded$2 = OptionsScreen.field_A.append((char) var4);
           var5Lifetime4 = 485;
-          var17 = tb.field_cb;
+          var17 = LoadingProgressDialog.field_cb;
           var7 = var17;
           var7Lifetime10 = var17;
           var16 = TextFieldRenderer.a((byte) 104, var17);
@@ -273,7 +273,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               OptionsScreen.field_A.length() < 80) {
               discarded$0 = OptionsScreen.field_A.append((char) var4Lifetime1);
               var5Lifetime1Lifetime1 = 485;
-              var17Lifetime1 = tb.field_cb;
+              var17Lifetime1 = LoadingProgressDialog.field_cb;
               var7Lifetime1 = var17Lifetime1;
               var7Lifetime1Lifetime1 = var17Lifetime1;
               var16 = TextFieldRenderer.a((byte) 104, var17Lifetime1);
@@ -386,7 +386,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         }
         discarded$1 = OptionsScreen.field_A.append((char) var4Lifetime2);
         var5Lifetime3 = 485;
-        var17Lifetime2 = tb.field_cb;
+        var17Lifetime2 = LoadingProgressDialog.field_cb;
         var7Lifetime3 = var17Lifetime2;
         var7Lifetime4 = var17Lifetime2;
         var16 = TextFieldRenderer.a((byte) 104, var17Lifetime2);

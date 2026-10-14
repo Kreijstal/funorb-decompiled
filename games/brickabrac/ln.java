@@ -201,7 +201,7 @@ final class ln extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        rj.field_c.transitionToContent((byte) 126, new AccountIntroductionPanel());
+        rj.accountContentLayer.transitionToContent((byte) 126, new AccountIntroductionPanel());
         int var1 = 48 % ((param0 - 32) / 62);
     }
 

@@ -259,7 +259,7 @@ class Widget extends IntrusiveNode {
             this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, po.pointerY, this, param1);
           }
           if (BackgroundScene.pressedButton != 0) {
-            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
+            if (this.handlePointerPress(this, LoadingProgressDialog.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
               param3 = false;
             }
             this.clearFocus(false);
@@ -293,7 +293,7 @@ class Widget extends IntrusiveNode {
           if (var5 == 0) {
             regionExit1: {
               if (BackgroundScene.pressedButton != 0) {
-                if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
+                if (this.handlePointerPress(this, LoadingProgressDialog.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
                   param3 = false;
                   if (var7 == 0) {
                     break regionExit1;
@@ -347,7 +347,7 @@ class Widget extends IntrusiveNode {
         }
         regionExit2: {
           if (BackgroundScene.pressedButton != 0) {
-            if (this.handlePointerPress(this, tb.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
+            if (this.handlePointerPress(this, LoadingProgressDialog.pressX, param1, param0, BackgroundScene.pressedButton, PlayerNameChooserPanel.pressY, 0)) {
               param3 = false;
               if (var7 == 0) {
                 break regionExit2;

@@ -367,7 +367,7 @@ final class QuickChatMenu extends UiComponent {
                 GrowableIntList.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ng.quickChatChannel, messageOpcode, (String) null);
                 MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, qn.field_n, DualLinkNode.quickChatRecipient, ng.quickChatChannel);
                 rd.a(-1);
-                bh.m(-69);
+                AccountContentTransitionLayer.m(-69);
                 openHelpBranch = (unusedGameFlag != 0);
               }
               if (openHelpBranch) {
@@ -1194,7 +1194,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime118 = gr.a(true, "oh_dear");
           if (null != var2Lifetime118) {
-            bh.field_ub = MenuButton.a(var2Lifetime118, (byte) 89);
+            AccountContentTransitionLayer.field_ub = MenuButton.a(var2Lifetime118, (byte) 89);
           }
           var2Lifetime119 = gr.a(!param0, "curses");
           if (var2Lifetime119 != null) {
@@ -1318,7 +1318,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime149 = gr.a(true, "explain_first_release");
           if (null != var2Lifetime149) {
-            tb.field_db = MenuButton.a(var2Lifetime149, (byte) 104);
+            LoadingProgressDialog.field_db = MenuButton.a(var2Lifetime149, (byte) 104);
           }
           var2Lifetime150 = gr.a(!param0, "explain_gauges_intercept");
           if (var2Lifetime150 != null) {

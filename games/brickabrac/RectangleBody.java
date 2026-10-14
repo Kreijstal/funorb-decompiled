@@ -309,7 +309,7 @@ class RectangleBody extends MovingBody {
           StrongCacheEntry.field_I.closeDialog(17);
         }
         MusicPatch.field_o = new PlayerNameChooserPanel();
-        rj.field_c.transitionToContent((byte) 110, MusicPatch.field_o);
+        rj.accountContentLayer.transitionToContent((byte) 110, MusicPatch.field_o);
     }
 
     int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {

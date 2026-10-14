@@ -84,7 +84,7 @@ final class ck extends IntrusiveNode {
         wc.field_b = false;
         ga.field_i = 13;
         MatchCompleteScreen.field_E = 0;
-        tb.field_eb = null;
+        LoadingProgressDialog.field_eb = null;
         GameClock.field_d = 0;
         GrowableIntList.field_i = un.field_e;
         BitPacketBuffer.field_q = 0;

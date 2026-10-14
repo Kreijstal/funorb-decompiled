@@ -39,7 +39,7 @@ final class hd {
           IntKeyIndex.field_c = param1;
           int var4_int = -108 % ((46 - param0) / 37);
           hn.field_a = param2;
-          bh.field_vb = param3;
+          AccountContentTransitionLayer.field_vb = param3;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -58,7 +58,7 @@ final class hd {
     final static void a(boolean param0) {
         ga.field_i = 12;
         AlternateNumericLoginCredentials.field_s = param0 ? true : false;
-        tb.field_eb = null;
+        LoadingProgressDialog.field_eb = null;
         rf.field_f = true;
         pp.field_a = 12;
         QuickChatHelpDialog.field_Sb = true;

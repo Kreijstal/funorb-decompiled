@@ -8,7 +8,7 @@ final class sj {
     static UiComponent field_a;
     static String[] field_c;
     static UiComponent field_d;
-    static tb field_b;
+    static LoadingProgressDialog loadingProgressDialog;
 
     final static ChatMessage a(int param0, int param1, int param2, int param3) {
         Object stackIn_42_0 = null;
@@ -547,7 +547,7 @@ final class sj {
           field_d = (UiComponent) null;
         }
         field_g = null;
-        field_b = null;
+        loadingProgressDialog = null;
         field_e = null;
     }
 

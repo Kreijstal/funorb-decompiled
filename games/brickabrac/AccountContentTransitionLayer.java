@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bh extends ContentTransitionLayer {
+final class AccountContentTransitionLayer extends ContentTransitionLayer {
     static ContentTransitionPhase contentFadingOut;
     static String field_rb;
     static s field_tb;
@@ -13,12 +13,12 @@ final class bh extends ContentTransitionLayer {
         PasswordFieldRenderer.field_G = MonotonicTime.nowMillis(false);
         GameplayScreen.field_h = 0;
         if (param0 >= -58) {
-          bh.m(-3);
+          AccountContentTransitionLayer.m(-3);
         }
     }
 
-    bh(WidgetLayerStack param0, Widget param1) {
-        super(param0, param1, 33, 20, 30);
+    AccountContentTransitionLayer(WidgetLayerStack layerStack, Widget content) {
+        super(layerStack, content, 33, 20, 30);
     }
 
     public static void n(int param0) {
@@ -38,8 +38,8 @@ final class bh extends ContentTransitionLayer {
         }
         try {
           super.transitionToContent((byte) 120, content);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bh.C(" + obfuscationGuard + ',' + (content != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "bh.C(" + obfuscationGuard + ',' + (content != null ? "{...}" : "null") + ')');
         }
     }
 

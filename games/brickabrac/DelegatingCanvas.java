@@ -38,7 +38,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 jl.field_a = jl.field_a - 1;
                 if (0 == fieldTemp$0) {
                   SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
-                  tb.field_eb = SaveResultsPromptScreen.field_y;
+                  LoadingProgressDialog.field_eb = SaveResultsPromptScreen.field_y;
                   pp.field_a = -1;
                   jl.field_a = 250;
                   ga.field_i = 0;
@@ -56,7 +56,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     jl.field_a = 250;
                     GrowableIntList.field_i = un.field_e;
                     SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
-                    tb.field_eb = va.field_d;
+                    LoadingProgressDialog.field_eb = va.field_d;
                   }
                 }
               } else {
@@ -66,7 +66,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       fieldTemp$2 = jl.field_a - 1;
                       jl.field_a = jl.field_a - 1;
                       if (0 == fieldTemp$2) {
-                        tb.field_eb = KeyboardInput.field_b;
+                        LoadingProgressDialog.field_eb = KeyboardInput.field_b;
                         pp.field_a = -1;
                         ga.field_i = 3;
                       }
@@ -98,7 +98,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                           if (fieldTemp$3 == 0) {
                             ga.field_i = 11;
                             pp.field_a = -1;
-                            tb.field_eb = PopupWidgetLayer.field_U;
+                            LoadingProgressDialog.field_eb = PopupWidgetLayer.field_U;
                             ValidationIconWidget.field_N = true;
                           }
                         }
@@ -116,7 +116,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 pp.field_a = -1;
                 GrowableIntList.field_i = un.field_e;
-                tb.field_eb = BrickGameLayerController.field_d;
+                LoadingProgressDialog.field_eb = BrickGameLayerController.field_d;
                 jl.field_a = 250;
                 ga.field_i = 14;
               }

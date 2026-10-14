@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rj {
-    static bh field_c;
+    static AccountContentTransitionLayer accountContentLayer;
     static String field_a;
     static int field_b;
 
@@ -36,13 +36,13 @@ final class rj {
 
     public static void a(int param0) {
         if (param0 == 24311) {
-          field_c = null;
+          accountContentLayer = null;
           field_a = null;
           return;
         }
         HuffmanCodec var2 = (HuffmanCodec) null;
         rj.installTextHuffman((HuffmanCodec) null, true);
-        field_c = null;
+        accountContentLayer = null;
         field_a = null;
     }
 

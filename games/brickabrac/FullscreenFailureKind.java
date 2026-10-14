@@ -128,7 +128,7 @@ final class FullscreenFailureKind {
             }
           }
           var15 = bm.contextActions;
-          var6 = tb.pressX;
+          var6 = LoadingProgressDialog.pressX;
           var7 = PlayerNameChooserPanel.pressY;
           var15.contextMenu.layoutAtAnchor(var7, -102, 0, 0, var6);
           return;

@@ -177,7 +177,7 @@ final class MusicEnvelope {
               var13_ref_String = ng.field_e;
               var16.contextMenu.addAction(var13_ref_String, 7, (byte) 126);
               var17 = bm.contextActions;
-              var13 = tb.pressX;
+              var13 = LoadingProgressDialog.pressX;
               var14 = PlayerNameChooserPanel.pressY;
               var17.contextMenu.layoutAtAnchor(var14, -126, 0, 0, var13);
             }

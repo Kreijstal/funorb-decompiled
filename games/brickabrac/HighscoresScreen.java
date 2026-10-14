@@ -705,7 +705,7 @@ final class HighscoresScreen extends MenuScreen {
               var8Lifetime1 = var16[0];
               var9Lifetime1 = var16[1] >> 16 & 65535;
               var10Lifetime1 = 65535 & var16[1];
-              this.a(-1, var9Lifetime1, var2Lifetime1, 1, var10Lifetime1, 63, var8Lifetime1, tb.field_cb);
+              this.a(-1, var9Lifetime1, var2Lifetime1, 1, var10Lifetime1, 63, var8Lifetime1, LoadingProgressDialog.field_cb);
             }
           }
         } else {

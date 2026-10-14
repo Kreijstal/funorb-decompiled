@@ -1044,7 +1044,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_badnumplayers", (byte) -19);
                 if (var2 != null) {
-                  bh.field_rb = MenuButton.a(var2, (byte) 126);
+                  AccountContentTransitionLayer.field_rb = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = nk.a("gameopt_inviteplayers_or_trychanging1", (byte) -115);
                 if (null != var2) {
@@ -1804,7 +1804,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_alert_mismatch", (byte) 26);
                 if (var2 != null) {
-                  bh.field_sb = MenuButton.a(var2, (byte) 92);
+                  AccountContentTransitionLayer.field_sb = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("create_passwordvalid", (byte) -123);
                 if (null != var2) {

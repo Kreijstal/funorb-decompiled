@@ -160,7 +160,7 @@ final class AchievementIcon extends IntrusiveNode {
           if (ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 47, po.pointerY, MusicPatch.pointerX, this.y)) {
             ValidationMessageWidget.hoveredAchievementId = this.achievementId;
             if (1 == BackgroundScene.pressedButton &&
-              ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
+              ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX, this.y)) {
               if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
                 ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {
@@ -172,7 +172,7 @@ final class AchievementIcon extends IntrusiveNode {
             }
           } else {
             if (1 == BackgroundScene.pressedButton &&
-              ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, tb.pressX, this.y)) {
+              ReflectionCheck.containsRectanglePoint(this.x, this.height, this.width, (byte) 33, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX, this.y)) {
               if (ValidationMessageWidget.selectedAchievementId != this.achievementId) {
                 ValidationMessageWidget.selectedAchievementId = this.achievementId;
               } else {

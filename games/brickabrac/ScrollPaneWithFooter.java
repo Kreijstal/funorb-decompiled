@@ -102,7 +102,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           bm.contextActions.addReportAction((byte) -126);
           bm.contextActions.addMessageFilterActions(param1, -96);
           var13 = bm.contextActions;
-          var3 = tb.pressX;
+          var3 = LoadingProgressDialog.pressX;
           var4 = PlayerNameChooserPanel.pressY;
           var13.contextMenu.layoutAtAnchor(var4, -101, 0, param0, var3);
           return;

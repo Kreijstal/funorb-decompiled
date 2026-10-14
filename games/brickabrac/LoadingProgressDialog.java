@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends PopupWidgetLayer {
-    private boolean field_hb;
-    private String field_jb;
+final class LoadingProgressDialog extends PopupWidgetLayer {
+    private boolean highlighted;
+    private String statusText;
     static int pressX;
-    private boolean field_gb;
-    private ActivityIndicatorWidget field_bb;
-    private String field_ib;
+    private boolean stopAnimationRequested;
+    private ActivityIndicatorWidget activityBar;
+    private String details;
     static String field_eb;
     static String field_db;
     static String field_cb;
 
     final void paintLayerFrame(int x, int obfuscationGuard, int y) {
         super.paintLayerFrame(x, obfuscationGuard ^ 0, y);
-        wm.field_a.drawCentered(this.field_jb, x + (this.width >> 1), y + 103, 16777215, -1);
+        wm.field_a.drawCentered(this.statusText, x + (this.width >> 1), y + 103, 16777215, -1);
         if (obfuscationGuard == 274) {
-          if (this.field_ib != null) {
+          if (this.details != null) {
             Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
-            wm.field_a.drawParagraph(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+            wm.field_a.drawParagraph(this.details, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
           }
           return;
         }
-        this.field_gb = false;
-        if (this.field_ib != null) {
+        this.stopAnimationRequested = false;
+        if (this.details != null) {
           Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
-          wm.field_a.drawParagraph(this.field_ib, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+          wm.field_a.drawParagraph(this.details, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
         }
     }
 
@@ -105,7 +105,7 @@ final class tb extends PopupWidgetLayer {
           var7 = var4_int;
           if (!param2) {
             var13 = (ResourceArchive) null;
-            tb.a(95, -81, (ResourceArchive) null, (ResourceArchive) null, -12);
+            LoadingProgressDialog.a(95, -81, (ResourceArchive) null, (ResourceArchive) null, -12);
           }
           var8 = var6 - var5;
           if (var8 != 0) {
@@ -158,82 +158,82 @@ final class tb extends PopupWidgetLayer {
         }
     }
 
-    final void a(float param0, String param1, boolean param2, byte param3) {
-        RuntimeException runtimeException = null;
-        boolean stackIn_2_0 = false;
-        int stackIn_3_1 = 0;
-        boolean stackIn_8_1 = false;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final void setProgress(float percent, String statusText, boolean highlighted, byte obfuscationGuard) {
+        RuntimeException failure = null;
+        boolean previousHighlight = false;
+        int oppositeHighlightValue = 0;
+        boolean nextHighlight = false;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String statusSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          stackIn_2_0 = this.field_hb;
-          if (param2) {
-            stackIn_3_1 = 0;
+          previousHighlight = this.highlighted;
+          if (highlighted) {
+            oppositeHighlightValue = 0;
           } else {
-            stackIn_3_1 = 1;
+            oppositeHighlightValue = 1;
           }
-          if ((stackIn_2_0 ? 1 : 0) == stackIn_3_1) {
-            stackIn_8_1 = (param2);
-            this.field_hb = stackIn_8_1;
-            if (this.field_hb) {
-              this.field_bb.setActivityColors(8405024, 4210752, 2);
-              this.field_bb.animated = true;
+          if ((previousHighlight ? 1 : 0) == oppositeHighlightValue) {
+            nextHighlight = (highlighted);
+            this.highlighted = nextHighlight;
+            if (this.highlighted) {
+              this.activityBar.setActivityColors(8405024, 4210752, 2);
+              this.activityBar.animated = true;
             } else {
-              this.field_bb.setActivityColors(2113632, 4210752, param3 - 84);
-              if (this.field_gb) {
-                this.field_bb.animated = false;
+              this.activityBar.setActivityColors(2113632, 4210752, obfuscationGuard - 84);
+              if (this.stopAnimationRequested) {
+                this.activityBar.animated = false;
               }
             }
           }
-          this.field_bb.field_L = (int)(param0 / 100.0f * 65536.0f);
-          if (param3 != 86) {
+          this.activityBar.progressFraction65536 = (int)(percent / 100.0f * 65536.0f);
+          if (obfuscationGuard != 86) {
             return;
           }
-          this.field_jb = param1;
+          this.statusText = statusText;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_18_0 = runtimeException;
-          stackIn_18_1 = new StringBuilder().append("tb.P(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_19_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("tb.P(").append(percent).append(',');
+          if (statusText == null) {
+            statusSummary = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            statusSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(statusSummary).append(',').append(highlighted).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final void l(int param0) {
-        if (param0 == 6457) {
-          this.field_bb.animated = false;
-          this.field_gb = true;
+    final void stopActivityAnimation(int obfuscationGuard) {
+        if (obfuscationGuard == 6457) {
+          this.activityBar.animated = false;
+          this.stopAnimationRequested = true;
           return;
         }
-        this.l(88);
-        this.field_bb.animated = false;
-        this.field_gb = true;
+        this.stopActivityAnimation(88);
+        this.activityBar.animated = false;
+        this.stopAnimationRequested = true;
     }
 
-    tb(WidgetLayerStack param0, String param1) {
-        super(param0, 300, 120);
-        int var3_int = 0;
+    LoadingProgressDialog(WidgetLayerStack layerStack, String details) {
+        super(layerStack, 300, 120);
+        int detailHeight = 0;
         try {
-          this.field_ib = param1;
-          if (null != this.field_ib) {
-            var3_int = wm.field_a.measureWrappedHeight(this.field_ib, 260, wm.field_a.ascent);
-            this.setCenteredSize(true, 150 + var3_int, 300);
+          this.details = details;
+          if (null != this.details) {
+            detailHeight = wm.field_a.measureWrappedHeight(this.details, 260, wm.field_a.ascent);
+            this.setCenteredSize(true, 150 + detailHeight, 300);
           }
-          this.field_bb = new ActivityIndicatorWidget(13, 50, 274, 30, 15, 2113632, 4210752);
-          this.field_hb = false;
-          this.field_gb = false;
-          this.field_bb.animated = true;
-          this.addChild(this.field_bb, true);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "tb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          this.activityBar = new ActivityIndicatorWidget(13, 50, 274, 30, 15, 2113632, 4210752);
+          this.highlighted = false;
+          this.stopAnimationRequested = false;
+          this.activityBar.animated = true;
+          this.addChild(this.activityBar, true);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "tb.<init>(" + (layerStack != null ? "{...}" : "null") + ',' + (details != null ? "{...}" : "null") + ')');
         }
     }
 

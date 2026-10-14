@@ -98,10 +98,10 @@ final class RankingsRequest extends IntrusiveNode {
           stackIn_2_0 = array$0;
           stackIn_2_1 = array$0;
           stackIn_2_2 = 0;
-          if (tb.field_cb == null) {
+          if (LoadingProgressDialog.field_cb == null) {
             stackIn_3_3 = we.field_c;
           } else {
-            stackIn_3_3 = tb.field_cb;
+            stackIn_3_3 = LoadingProgressDialog.field_cb;
           }
           stackIn_2_1[stackIn_2_2] = stackIn_3_3;
           var5 = stackIn_2_0;

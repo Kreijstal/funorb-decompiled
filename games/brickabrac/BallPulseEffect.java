@@ -139,7 +139,7 @@ final class BallPulseEffect extends IntrusiveNode {
         try {
           var9 = nh.quickChatPhrases.getDefinition(var5, true);
           gd.receivedChatText = var9.getPreview(-3);
-          if (nd.receivedChatSenderName.equals(tb.field_cb)) {
+          if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.linkedPhraseIds;
@@ -224,7 +224,7 @@ final class BallPulseEffect extends IntrusiveNode {
         try {
           var9 = nh.quickChatPhrases.getDefinition(var5, true);
           gd.receivedChatText = var9.getPreview(-3);
-          if (nd.receivedChatSenderName.equals(tb.field_cb)) {
+          if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.linkedPhraseIds;

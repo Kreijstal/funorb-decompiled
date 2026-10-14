@@ -39,7 +39,7 @@ final class InstructionsScreen extends MenuScreen {
             var8 = (java.awt.Component) null;
             InstructionsScreen.attachKeyboardInput(22, (java.awt.Component) null);
           }
-          UiComponent.field_H.updatePointer(PlayerNameChooserPanel.b(120, po.pointerY, MusicPatch.pointerX), param0 + 27355, PlayerNameChooserPanel.b(param0 - 4, PlayerNameChooserPanel.pressY, tb.pressX));
+          UiComponent.field_H.updatePointer(PlayerNameChooserPanel.b(120, po.pointerY, MusicPatch.pointerX), param0 + 27355, PlayerNameChooserPanel.b(param0 - 4, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
           if (UiComponent.field_H.isActivated((byte) 113)) {
             var1_int = 1;
           }

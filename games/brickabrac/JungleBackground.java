@@ -704,7 +704,7 @@ final class JungleBackground extends BackgroundScene {
                   }
                   if (var21 != null) {
                     var21 = "<col=A00000>" + (String) (var21);
-                    var31 = tb.a("<br><col=A00000>", (String) (var21), true, "<br>");
+                    var31 = LoadingProgressDialog.a("<br><col=A00000>", (String) (var21), true, "<br>");
                     if (var20 != null) {
                       var20 = (String) (var20) + "<br>" + var31;
                     } else {

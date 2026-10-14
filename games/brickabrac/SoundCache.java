@@ -329,8 +329,8 @@ final class SoundCache {
                   TextHotspotRegion.field_q[var8] = jl.incomingPackets.readByte(true);
                 }
               }
-              tb.field_cb = jl.incomingPackets.readCp1252String(-1);
-              var12 = (CharSequence) ((Object) tb.field_cb);
+              LoadingProgressDialog.field_cb = jl.incomingPackets.readCp1252String(-1);
+              var12 = (CharSequence) ((Object) LoadingProgressDialog.field_cb);
               ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var12, 65);
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
               rf.field_b = MenuButton.field_i;

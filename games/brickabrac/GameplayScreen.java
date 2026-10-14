@@ -1094,7 +1094,7 @@ final class GameplayScreen extends GameScreen {
 
     final static void b(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
-        String[] var3 = new String[]{tb.field_cb == null ? we.field_c : tb.field_cb, DelayedPacket.field_q};
+        String[] var3 = new String[]{LoadingProgressDialog.field_cb == null ? we.field_c : LoadingProgressDialog.field_cb, DelayedPacket.field_q};
         LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, kk.createIndexOrder(false, ValidationStatus.field_b.levelCount, ButtonWidgetRenderer.field_w), 3);
         TextFieldRenderer.field_A = false;
         TabbedPane.currentBackground = rd.selectBackground(0, (byte) 19);
@@ -1747,7 +1747,7 @@ final class GameplayScreen extends GameScreen {
           ArchiveNetworkClient.a(640, this.match, var7_ref_j);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
-            ui.a(tb.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
+            ui.a(LoadingProgressDialog.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != var7_ref_j.displayedMessage) {
               var12 = (IndexedSprite[]) null;

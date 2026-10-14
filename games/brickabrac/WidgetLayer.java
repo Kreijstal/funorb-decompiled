@@ -277,7 +277,7 @@ abstract class WidgetLayer extends WidgetGroup {
             }
             SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
             ga.field_i = 4;
-            tb.field_eb = o.field_a;
+            LoadingProgressDialog.field_eb = o.field_a;
             pp.field_a = -1;
             return;
           }
@@ -290,10 +290,10 @@ abstract class WidgetLayer extends WidgetGroup {
             if (0 == BitPacketBuffer.field_q &&
               !QuickChatHelpDialog.field_Sb) {
               ga.field_i = 5;
-              tb.field_eb = tb.field_db + "<br><br>" + CacheEntry.field_A[AgeValidator.field_k];
+              LoadingProgressDialog.field_eb = LoadingProgressDialog.field_db + "<br><br>" + CacheEntry.field_A[AgeValidator.field_k];
             } else {
               ArchiveNetworkRequest.field_G = pp.field_a;
-              tb.field_eb = CacheEntry.field_A[AgeValidator.field_k];
+              LoadingProgressDialog.field_eb = CacheEntry.field_A[AgeValidator.field_k];
             }
             pp.field_a = -1;
             BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
@@ -306,7 +306,7 @@ abstract class WidgetLayer extends WidgetGroup {
               ga.field_i = 8;
               jl.field_a = 250;
               pp.field_a = -1;
-              tb.field_eb = rd.a(IntNode.field_n, new String[]{ui.field_b}, (byte) 103);
+              LoadingProgressDialog.field_eb = rd.a(IntNode.field_n, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }
@@ -318,7 +318,7 @@ abstract class WidgetLayer extends WidgetGroup {
               ga.field_i = 9;
               pp.field_a = -1;
               jl.field_a = 250;
-              tb.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
+              LoadingProgressDialog.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }
@@ -332,7 +332,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 }
                 ga.field_i = 12;
                 pp.field_a = -1;
-                tb.field_eb = rh.field_a;
+                LoadingProgressDialog.field_eb = rh.field_a;
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 return;
               }
@@ -341,7 +341,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 ga.field_i = 9;
                 jl.field_a = 250;
                 pp.field_a = -1;
-                tb.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
+                LoadingProgressDialog.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
                 wc.field_b = true;
                 return;
               }
@@ -352,7 +352,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 ArchiveNetworkRequest.field_G = pp.field_a;
                 ga.field_i = 10;
                 rf.field_f = true;
-                tb.field_eb = QuickChatHelpDialog.field_Tb;
+                LoadingProgressDialog.field_eb = QuickChatHelpDialog.field_Tb;
                 pp.field_a = -1;
                 return;
               }

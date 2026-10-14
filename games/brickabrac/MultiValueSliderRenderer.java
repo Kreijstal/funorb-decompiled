@@ -78,11 +78,11 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
     }
 
     final static String b(int param0) {
-        if (null == tb.field_cb) {
+        if (null == LoadingProgressDialog.field_cb) {
           return "";
         }
         int var1 = 90 % ((-28 - param0) / 48);
-        return tb.field_cb;
+        return LoadingProgressDialog.field_cb;
     }
 
     final static void a(boolean param0, int param1, int param2) {

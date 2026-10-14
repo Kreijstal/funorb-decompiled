@@ -173,7 +173,7 @@ final class sq {
           var5_ref_String = ChocolateBackground.field_y;
           var4_ref_nn.contextMenu.addAction(var5_ref_String, 5, (byte) 104);
           var4_ref_nnLifetime1 = bm.contextActions;
-          var5 = tb.pressX;
+          var5 = LoadingProgressDialog.pressX;
           var6 = PlayerNameChooserPanel.pressY;
           var4_ref_nnLifetime1.contextMenu.layoutAtAnchor(var6, -98, 0, 0, var5);
         }

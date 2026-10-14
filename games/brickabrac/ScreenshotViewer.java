@@ -89,14 +89,14 @@ final class ScreenshotViewer {
             if (BackgroundScene.pressedButton != 0 &&
               PlayerNameChooserPanel.pressY > 257 &&
               290 > PlayerNameChooserPanel.pressY) {
-              if (tb.pressX > 9 &&
-                tb.pressX < 82) {
+              if (LoadingProgressDialog.pressX > 9 &&
+                LoadingProgressDialog.pressX < 82) {
                 this.field_a = false;
                 this.field_j = IsaacGenerator.field_f;
                 var4 = 1;
               }
-              if (tb.pressX > 558 &&
-                tb.pressX < 631) {
+              if (LoadingProgressDialog.pressX > 558 &&
+                LoadingProgressDialog.pressX < 631) {
                 this.field_j = IsaacGenerator.field_f;
                 var4 = 1;
                 this.field_a = true;
@@ -120,7 +120,7 @@ final class ScreenshotViewer {
             stackIn_89_0 = 0;
             return stackIn_89_0;
           }
-          this.selection.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, tb.pressX));
+          this.selection.updatePointer(this.a(po.pointerY, -636, MusicPatch.pointerX), 27479, this.a(PlayerNameChooserPanel.pressY, -636, LoadingProgressDialog.pressX));
           var4Lifetime1 = 0;
           if (this.selection.isActivated((byte) 113)) {
             if (this.selection.selectedIndex == 0) {

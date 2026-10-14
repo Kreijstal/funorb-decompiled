@@ -132,12 +132,12 @@ class UiComponent extends ba {
         if (!wc.uiPressClaimed &&
           inputEnabled &&
           BackgroundScene.pressedButton != 0 &&
-          Rasterizer2D.clipLeft <= tb.pressX &&
-          Rasterizer2D.clipRight > tb.pressX &&
+          Rasterizer2D.clipLeft <= LoadingProgressDialog.pressX &&
+          Rasterizer2D.clipRight > LoadingProgressDialog.pressX &&
           PlayerNameChooserPanel.pressY >= Rasterizer2D.clipTop &&
           Rasterizer2D.clipBottom > PlayerNameChooserPanel.pressY) {
           this.pressedButton = BackgroundScene.pressedButton;
-          this.pressLocalX = -this.screenX + tb.pressX;
+          this.pressLocalX = -this.screenX + LoadingProgressDialog.pressX;
           this.capturedButton = BackgroundScene.pressedButton;
           claimedPress = 1;
           this.pressLocalY = -this.screenY + PlayerNameChooserPanel.pressY;

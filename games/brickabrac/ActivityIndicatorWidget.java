@@ -4,20 +4,20 @@
 import java.io.*;
 
 final class ActivityIndicatorWidget extends Widget {
-    int field_L;
+    int progressFraction65536;
     boolean animated;
     static NodeDeque field_N;
     private int phaseTick;
-    private int field_M;
-    private RgbSprite field_C;
-    private RgbSprite[] field_P;
-    private int field_I;
-    private int field_F;
+    private int inactiveForegroundColor;
+    private RgbSprite capWorkSurface;
+    private RgbSprite[] stripeSprites;
+    private int inactiveBackgroundColor;
+    private int foregroundColor;
     static RgbSprite field_D;
-    private RgbSprite field_O;
-    private RgbSprite field_G;
+    private RgbSprite leftCapMask;
+    private RgbSprite rightCapMask;
     private int phaseSpan;
-    private int field_E;
+    private int backgroundColor;
 
     final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, obfuscationGuard, width);
@@ -49,60 +49,60 @@ final class ActivityIndicatorWidget extends Widget {
         }
     }
 
-    private final void a(int param0, int param1, RgbSprite param2, int param3) {
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    private final void drawStripedBar(int x, int y, RgbSprite stripes, int obfuscationGuard) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String stripesSummary = null;
+        RuntimeException caughtFailure = null;
+        int rightEdge = 0;
+        RuntimeException failure = null;
+        int tileX = 0;
+        int rightCapPhase = 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var5_int = param0 + this.width;
-          MovingBody.a((byte) 107, var5_int - this.field_G.width, param0 + this.field_G.width, param1, param1 + this.height);
-          var6 = param0 - this.phaseTick;
-          if (param3 > -56) {
-            this.field_C = (RgbSprite) null;
+          rightEdge = x + this.width;
+          MovingBody.a((byte) 107, rightEdge - this.rightCapMask.width, x + this.rightCapMask.width, y, y + this.height);
+          tileX = x - this.phaseTick;
+          if (obfuscationGuard > -56) {
+            this.capWorkSurface = (RgbSprite) null;
           }
-          while (var5_int > var6) {
-            param2.drawTransparent(var6, param1);
-            var6 = var6 + param2.width;
+          while (rightEdge > tileX) {
+            stripes.drawTransparent(tileX, y);
+            tileX = tileX + stripes.width;
           }
           sc.popRaster(-103);
-          if (param0 + this.field_G.width >= Rasterizer2D.clipLeft) {
-            IndexedSpriteGeometry.pushSpriteRaster(-112, this.field_C);
-            param2.drawTransparent(-this.phaseTick, 0);
-            param2.drawTransparent(this.phaseSpan * 2 - this.phaseTick, 0);
-            this.field_O.b(0, 0);
+          if (x + this.rightCapMask.width >= Rasterizer2D.clipLeft) {
+            IndexedSpriteGeometry.pushSpriteRaster(-112, this.capWorkSurface);
+            stripes.drawTransparent(-this.phaseTick, 0);
+            stripes.drawTransparent(this.phaseSpan * 2 - this.phaseTick, 0);
+            this.leftCapMask.b(0, 0);
             sc.popRaster(-109);
-            this.field_C.drawTransparent(param0, param1);
+            this.capWorkSurface.drawTransparent(x, y);
           }
-          if (Rasterizer2D.clipRight >= var5_int - this.field_G.width) {
-            IndexedSpriteGeometry.pushSpriteRaster(-51, this.field_C);
-            for (var7 = this.width - this.field_G.width + this.phaseTick; var7 > 2 * this.phaseSpan; var7 = var7 - this.phaseSpan * 2) {
+          if (Rasterizer2D.clipRight >= rightEdge - this.rightCapMask.width) {
+            IndexedSpriteGeometry.pushSpriteRaster(-51, this.capWorkSurface);
+            for (rightCapPhase = this.width - this.rightCapMask.width + this.phaseTick; rightCapPhase > 2 * this.phaseSpan; rightCapPhase = rightCapPhase - this.phaseSpan * 2) {
             }
-            param2.drawTransparent(-var7, 0);
-            param2.drawTransparent(-var7 + 2 * this.phaseSpan, 0);
-            this.field_G.b(0, 0);
+            stripes.drawTransparent(-rightCapPhase, 0);
+            stripes.drawTransparent(-rightCapPhase + 2 * this.phaseSpan, 0);
+            this.rightCapMask.b(0, 0);
             sc.popRaster(-117);
-            this.field_C.drawTransparent(var5_int - this.field_G.width, param1);
+            this.capWorkSurface.drawTransparent(rightEdge - this.rightCapMask.width, y);
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("cr.H(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_17_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("cr.H(").append(x).append(',').append(y).append(',');
+          if (stripes == null) {
+            stripesSummary = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            stripesSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(stripesSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -110,10 +110,10 @@ final class ActivityIndicatorWidget extends Widget {
         if (obfuscationGuard != 2) {
           this.setBounds(-106, -2, -16, (byte) 28, -96);
         }
-        this.field_M = (foregroundColor & 16711422) >> 1;
-        this.field_F = foregroundColor;
-        this.field_I = 8355711 & backgroundColor >> 1;
-        this.field_E = backgroundColor;
+        this.inactiveForegroundColor = (foregroundColor & 16711422) >> 1;
+        this.foregroundColor = foregroundColor;
+        this.inactiveBackgroundColor = 8355711 & backgroundColor >> 1;
+        this.backgroundColor = backgroundColor;
         this.rebuildActivitySprites(-1847795903);
     }
 
@@ -126,12 +126,12 @@ final class ActivityIndicatorWidget extends Widget {
     }
 
     private final void rebuildActivitySprites(int obfuscationGuard) {
-        this.field_P = new RgbSprite[]{this.a(this.field_E, (byte) -41, this.field_F), this.a(this.field_I, (byte) 107, this.field_M)};
-        this.field_G = this.a(16711422);
-        this.field_O = this.field_G.copyFlippedHorizontal();
-        this.field_C = new RgbSprite(this.height >> 1, this.height);
+        this.stripeSprites = new RgbSprite[]{this.buildStripeSprite(this.backgroundColor, (byte) -41, this.foregroundColor), this.buildStripeSprite(this.inactiveBackgroundColor, (byte) 107, this.inactiveForegroundColor)};
+        this.rightCapMask = this.buildRightCapMask(16711422);
+        this.leftCapMask = this.rightCapMask.copyFlippedHorizontal();
+        this.capWorkSurface = new RgbSprite(this.height >> 1, this.height);
         if (obfuscationGuard != -1847795903) {
-          this.field_F = 58;
+          this.foregroundColor = 58;
         }
     }
 
@@ -148,11 +148,11 @@ final class ActivityIndicatorWidget extends Widget {
     }
 
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String focusSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
           if (obfuscationGuard != 0) {
             return;
@@ -165,80 +165,80 @@ final class ActivityIndicatorWidget extends Widget {
             this.phaseTick = this.phaseTick - this.phaseSpan * 2;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("cr.WA(");
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("cr.WA(");
           if (focusRoot == null) {
-            stackIn_10_2 = "null";
+            focusSummary = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            focusSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(focusSummary).append(',').append(obfuscationGuard).append(',').append(parentX).append(',').append(parentY).append(')').toString());
         }
     }
 
-    private final RgbSprite a(int param0) {
-        int var4 = 0;
-        int var5 = 0;
-        double var6 = 0.0;
-        int var8 = 0;
-        int var9 = BrickABrac.field_J ? 1 : 0;
-        int var2 = this.height >> 1;
-        if (param0 != 16711422) {
+    private final RgbSprite buildRightCapMask(int obfuscationGuard) {
+        int row = 0;
+        int column = 0;
+        double radiusRatioOrCoverage = 0.0;
+        int intensity = 0;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        int halfHeight = this.height >> 1;
+        if (obfuscationGuard != 16711422) {
           return (RgbSprite) null;
         }
-        RgbSprite var3 = new RgbSprite(var2, this.height);
-        IndexedSpriteGeometry.pushSpriteRaster(-67, var3);
-        for (var4 = 0; this.height > var4; var4++) {
-          for (var5 = 0; var2 > var5; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));
-            var8 = 1;
-            if (1.0 > var6) {
-              var6 = Math.sqrt(-var6 + 1.0);
-              var8 = !(var6 >= 1.0) ? (int)(255.0 * var6) : 255;
+        RgbSprite mask = new RgbSprite(halfHeight, this.height);
+        IndexedSpriteGeometry.pushSpriteRaster(-67, mask);
+        for (row = 0; this.height > row; row++) {
+          for (column = 0; halfHeight > column; column++) {
+            radiusRatioOrCoverage = (double)column * (double)column / (double)(row * (this.height - row));
+            intensity = 1;
+            if (1.0 > radiusRatioOrCoverage) {
+              radiusRatioOrCoverage = Math.sqrt(-radiusRatioOrCoverage + 1.0);
+              intensity = !(radiusRatioOrCoverage >= 1.0) ? (int)(255.0 * radiusRatioOrCoverage) : 255;
             }
-            Rasterizer2D.setPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
+            Rasterizer2D.setPixel(column, row, intensity << 16 | (intensity << 8 | intensity));
           }
         }
         sc.popRaster(-111);
-        return var3;
+        return mask;
     }
 
-    private final RgbSprite a(int param0, byte param1, int param2) {
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = BrickABrac.field_J ? 1 : 0;
-        int var4 = 93 % ((11 - param1) / 37);
-        RgbSprite var5 = new RgbSprite(2 * this.phaseSpan, this.height);
-        int var9Lifetime1;
-        int var10Lifetime1;
-        int var13Lifetime1;
-        IndexedSpriteGeometry.pushSpriteRaster(-102, var5);
-        int var6 = this.height >> 1;
-        for (var7 = 0; var7 < this.height; var7++) {
-          var8 = (var7 >> 1) * (-1 + this.phaseSpan * 2) % (this.phaseSpan * 2);
-          var9 = param2 & 16711935;
-          var10 = param2 & 65280;
-          var11 = var7 - var6;
-          var12 = 128 + (int)(128.0 * (Math.sqrt((double)(var6 * var6 - var11 * var11)) / (double)var6));
-          var13 = var12 < 256 ? (var12 * var10 & 16711680 | var9 * var12 & -16711936) >>> 8 : var9 | var10;
-          Rasterizer2D.drawHorizontalLine(var8, var7, this.phaseSpan, var13);
-          var10Lifetime1 = 65280 & param0;
-          Rasterizer2D.drawHorizontalLine(-(2 * this.phaseSpan) + var8, var7, this.phaseSpan, var13);
-          var9Lifetime1 = 16711935 & param0;
-          var13Lifetime1 = var12 >= 256 ? var9Lifetime1 | var10Lifetime1 : (-16711936 & var9Lifetime1 * var12 | 16711680 & var10Lifetime1 * var12) >>> 8;
-          Rasterizer2D.drawHorizontalLine(this.phaseSpan + var8, var7, this.phaseSpan, var13Lifetime1);
-          Rasterizer2D.drawHorizontalLine(var8 - this.phaseSpan, var7, this.phaseSpan, var13Lifetime1);
+    private final RgbSprite buildStripeSprite(int backgroundColor, byte obfuscationGuard, int foregroundColor) {
+        int row = 0;
+        int stripeOffset = 0;
+        int foregroundRedBlue = 0;
+        int foregroundGreen = 0;
+        int relativeY = 0;
+        int brightness256 = 0;
+        int litForeground = 0;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        int unusedGuardRemainder = 93 % ((11 - obfuscationGuard) / 37);
+        RgbSprite stripes = new RgbSprite(2 * this.phaseSpan, this.height);
+        int backgroundRedBlue;
+        int backgroundGreen;
+        int litBackground;
+        IndexedSpriteGeometry.pushSpriteRaster(-102, stripes);
+        int halfHeight = this.height >> 1;
+        for (row = 0; row < this.height; row++) {
+          stripeOffset = (row >> 1) * (-1 + this.phaseSpan * 2) % (this.phaseSpan * 2);
+          foregroundRedBlue = foregroundColor & 16711935;
+          foregroundGreen = foregroundColor & 65280;
+          relativeY = row - halfHeight;
+          brightness256 = 128 + (int)(128.0 * (Math.sqrt((double)(halfHeight * halfHeight - relativeY * relativeY)) / (double)halfHeight));
+          litForeground = brightness256 < 256 ? (brightness256 * foregroundGreen & 16711680 | foregroundRedBlue * brightness256 & -16711936) >>> 8 : foregroundRedBlue | foregroundGreen;
+          Rasterizer2D.drawHorizontalLine(stripeOffset, row, this.phaseSpan, litForeground);
+          backgroundGreen = 65280 & backgroundColor;
+          Rasterizer2D.drawHorizontalLine(-(2 * this.phaseSpan) + stripeOffset, row, this.phaseSpan, litForeground);
+          backgroundRedBlue = 16711935 & backgroundColor;
+          litBackground = brightness256 >= 256 ? backgroundRedBlue | backgroundGreen : (-16711936 & backgroundRedBlue * brightness256 | 16711680 & backgroundGreen * brightness256) >>> 8;
+          Rasterizer2D.drawHorizontalLine(this.phaseSpan + stripeOffset, row, this.phaseSpan, litBackground);
+          Rasterizer2D.drawHorizontalLine(stripeOffset - this.phaseSpan, row, this.phaseSpan, litBackground);
         }
         sc.popRaster(-110);
-        return var5;
+        return stripes;
     }
 
     final static RgbSprite[] loadRgbSpritesByName(String groupName, ResourceArchive archive, String fileName, int obfuscationGuard) {
@@ -288,25 +288,25 @@ final class ActivityIndicatorWidget extends Widget {
         }
     }
 
-    private ActivityIndicatorWidget(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        this.phaseSpan = param4;
-        this.field_M = param7;
-        this.field_I = param8;
-        this.field_F = param5;
-        this.field_E = param6;
-        this.setBounds(param3, param0, param1, (byte) -119, param2);
+    private ActivityIndicatorWidget(int x, int y, int width, int height, int phaseSpan, int foregroundColor, int backgroundColor, int inactiveForegroundColor, int inactiveBackgroundColor) {
+        this.phaseSpan = phaseSpan;
+        this.inactiveForegroundColor = inactiveForegroundColor;
+        this.inactiveBackgroundColor = inactiveBackgroundColor;
+        this.foregroundColor = foregroundColor;
+        this.backgroundColor = backgroundColor;
+        this.setBounds(height, x, y, (byte) -119, width);
     }
 
     final void drawLayer(int parentY, int parentX, int layer, byte obfuscationGuard) {
         if (layer != 0) {
           return;
         }
-        int var5 = this.x + parentX;
-        int var6 = parentY + this.y;
-        this.a(var5, var6, this.field_P[0], -63);
-        if (65536 > this.field_L) {
-          MovingBody.a((byte) 118, this.width + var5, var5 + (this.field_L * this.width >> 16), var6, this.height + var6);
-          this.a(var5, var6, this.field_P[1], obfuscationGuard ^ 92);
+        int destinationX = this.x + parentX;
+        int destinationY = parentY + this.y;
+        this.drawStripedBar(destinationX, destinationY, this.stripeSprites[0], -63);
+        if (65536 > this.progressFraction65536) {
+          MovingBody.a((byte) 118, this.width + destinationX, destinationX + (this.progressFraction65536 * this.width >> 16), destinationY, this.height + destinationY);
+          this.drawStripedBar(destinationX, destinationY, this.stripeSprites[1], obfuscationGuard ^ 92);
           sc.popRaster(-102);
         }
         if (obfuscationGuard != -11) {

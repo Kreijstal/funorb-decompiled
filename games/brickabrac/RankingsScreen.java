@@ -264,7 +264,7 @@ final class RankingsScreen extends MenuScreen {
               var2Lifetime1 += 18;
             }
             if (var7 == 0) {
-              AchievementIcon.drawRankingRow(ch.screenRankingsRequest.localLosses, var2Lifetime1, tb.field_cb, ch.screenRankingsRequest.localWins, ch.screenRankingsRequest.localRating, 1, -1, ch.screenRankingsRequest.localDraws, -1);
+              AchievementIcon.drawRankingRow(ch.screenRankingsRequest.localLosses, var2Lifetime1, LoadingProgressDialog.field_cb, ch.screenRankingsRequest.localWins, ch.screenRankingsRequest.localRating, 1, -1, ch.screenRankingsRequest.localDraws, -1);
             }
           }
         } else {

@@ -892,10 +892,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (clientStage == 13) {
           var3Lifetime2 = 1;
-          if (bh.field_tb != null) {
-            stackIn_132_0 = (!bh.field_tb.d(-115)) ? 0 : 1;
+          if (AccountContentTransitionLayer.field_tb != null) {
+            stackIn_132_0 = (!AccountContentTransitionLayer.field_tb.d(-115)) ? 0 : 1;
             var3Lifetime2 = stackIn_132_0;
-            ParisBackground.a((byte) 24, bh.field_tb.field_e, bh.field_tb.field_g);
+            ParisBackground.a((byte) 24, AccountContentTransitionLayer.field_tb.field_e, AccountContentTransitionLayer.field_tb.field_g);
           }
           if (var3Lifetime2 != 0) {
             clientStage = 20;

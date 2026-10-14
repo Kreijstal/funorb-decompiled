@@ -27,8 +27,8 @@ abstract class ContentTransitionLayer extends PopupWidgetLayer {
         try {
           this.pendingContent = content;
           if (MouseInput.contentResizing != this.transitionPhase) {
-            if (this.transitionPhase != bh.contentFadingOut) {
-              this.transitionPhase = bh.contentFadingOut;
+            if (this.transitionPhase != AccountContentTransitionLayer.contentFadingOut) {
+              this.transitionPhase = AccountContentTransitionLayer.contentFadingOut;
               this.phaseTick = 0;
             }
           } else {
@@ -84,7 +84,7 @@ abstract class ContentTransitionLayer extends PopupWidgetLayer {
           if (this.transitionPhase == null) {
             return super.tickLayerAndCheckHidden(0);
           }
-          if (this.transitionPhase != bh.contentFadingOut) {
+          if (this.transitionPhase != AccountContentTransitionLayer.contentFadingOut) {
             if (this.transitionPhase != NameEntryPopup.contentFadingIn) {
               return super.tickLayerAndCheckHidden(0);
             }
@@ -113,7 +113,7 @@ abstract class ContentTransitionLayer extends PopupWidgetLayer {
         if (this.transitionPhase == null) {
           return super.tickLayerAndCheckHidden(0);
         }
-        if (this.transitionPhase != bh.contentFadingOut) {
+        if (this.transitionPhase != AccountContentTransitionLayer.contentFadingOut) {
           if (this.transitionPhase != NameEntryPopup.contentFadingIn) {
             return super.tickLayerAndCheckHidden(0);
           }
@@ -162,7 +162,7 @@ abstract class ContentTransitionLayer extends PopupWidgetLayer {
     }
 
     final void onResizeCompleted(int obfuscationGuard) {
-        if (this.transitionPhase == bh.contentFadingOut) {
+        if (this.transitionPhase == AccountContentTransitionLayer.contentFadingOut) {
           return;
         }
         this.phaseTick = 0;

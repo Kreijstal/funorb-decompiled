@@ -730,8 +730,8 @@ public final class BrickABrac extends InteractiveGameClient {
         BoundedFile.b(57);
         LegacyUtf8Decoder.clearStaticReferences((byte) 124);
         WidgetLayerStack.j((byte) -113);
-        tb.m(-48);
-        bh.n(28);
+        LoadingProgressDialog.m(-48);
+        AccountContentTransitionLayer.n(28);
         AccountMessageDialog.o(50);
         AccountRegistrationPanel.a(-11310);
         AccountIntroductionPanel.a((byte) 36);

@@ -132,7 +132,7 @@ final class ValidationIconWidget extends FocusableWidget {
           }
           recordCount = packet.readUnsignedByte(255);
           if (recordCount != 0) {
-            LevelCompleteScreen.receivedRankingNames[0] = tb.field_cb;
+            LevelCompleteScreen.receivedRankingNames[0] = LoadingProgressDialog.field_cb;
             rowLimit = request.rowLimit;
             for (nameIndex = 1; recordCount > nameIndex; nameIndex++) {
               LevelCompleteScreen.receivedRankingNames[nameIndex] = packet.readCp1252String(-1);

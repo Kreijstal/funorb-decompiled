@@ -71,7 +71,7 @@ final class f {
             if (dictionarySize != 0) {
               rowLimit = tableRequest.rowLimit;
               SoftwareFramebuffer.tableNameScratch[0].secondaryLabel = null;
-              SoftwareFramebuffer.tableNameScratch[0].name = tb.field_cb;
+              SoftwareFramebuffer.tableNameScratch[0].name = LoadingProgressDialog.field_cb;
               columnCount = tableRequest.columnCount;
               SoftwareFramebuffer.tableNameScratch[0].partitionSeen = false;
               for (dictionaryIndex = 1; dictionarySize > dictionaryIndex; dictionaryIndex++) {
@@ -119,7 +119,7 @@ final class f {
                   }
                   if (name != null &&
                     SpaceBackground.isLocalPlayerName(name, obfuscationGuard ^ -88)) {
-                    names[1][playerPartitionRows] = tb.field_cb;
+                    names[1][playerPartitionRows] = LoadingProgressDialog.field_cb;
                     secondaryLabels[1][playerPartitionRows] = null;
                     rowIds[1][playerPartitionRows] = rowId;
                     playerPartitionRows++;

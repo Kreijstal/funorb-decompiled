@@ -22,17 +22,17 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (null == StrongCacheEntry.field_I) {
           var1 = PlayerInputBatch.a(-123);
           DirectByteStorage.field_k = new LoginPanel(var1, (String) null, true, false, false);
-          ResourceArchive.field_f.pushLayer(-126, rj.field_c);
-          rj.field_c.transitionToContent((byte) 108, DirectByteStorage.field_k);
-          rj.field_c.finishTransition(20);
+          ResourceArchive.field_f.pushLayer(-126, rj.accountContentLayer);
+          rj.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
+          rj.accountContentLayer.finishTransition(20);
           return;
         }
         StrongCacheEntry.field_I.closeDialog(17);
         var1Lifetime1 = PlayerInputBatch.a(-123);
         DirectByteStorage.field_k = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
-        ResourceArchive.field_f.pushLayer(-126, rj.field_c);
-        rj.field_c.transitionToContent((byte) 108, DirectByteStorage.field_k);
-        rj.field_c.finishTransition(20);
+        ResourceArchive.field_f.pushLayer(-126, rj.accountContentLayer);
+        rj.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
+        rj.accountContentLayer.finishTransition(20);
     }
 
     final String describeTextValidation(int obfuscationGuard, String text) {
@@ -52,7 +52,7 @@ final class MatchingTextValidator extends TextFieldValidator {
             if (sourceValidation != null) {
               if (sourceValidation.getValidationStatus((byte) -31) == DualLinkIterator.validationValid &&
                 !text.equals(this.matchingField.text)) {
-                stackIn_6_0 = bh.field_sb;
+                stackIn_6_0 = AccountContentTransitionLayer.field_sb;
                 return stackIn_6_0;
               }
               stackIn_8_0 = sourceValidation.getValidationMessage(45);
@@ -63,7 +63,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (text.equals(this.matchingField.text)) {
             return null;
           }
-          stackIn_12_0 = bh.field_sb;
+          stackIn_12_0 = AccountContentTransitionLayer.field_sb;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

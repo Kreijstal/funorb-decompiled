@@ -38,7 +38,7 @@ final class IntrusiveHashTable {
           var5_int = param3.getGroupId(param1, false);
           var6 = param3.getFileId(var5_int, -40, param2);
           if (param0 < -5) {
-            stackIn_4_0 = tb.a(117, var5_int, param3, param4, var6);
+            stackIn_4_0 = LoadingProgressDialog.a(117, var5_int, param3, param4, var6);
             return stackIn_4_0;
           }
           stackIn_2_0 = (AlphaFont) null;

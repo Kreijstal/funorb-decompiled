@@ -248,7 +248,7 @@ final class Mesh3D {
             StrongCacheEntry.field_I.closeDialog(17);
           }
           DirectByteStorage.field_k = new LoginPanel(param2, param1, false, true, param0);
-          rj.field_c.transitionToContent((byte) 114, DirectByteStorage.field_k);
+          rj.accountContentLayer.transitionToContent((byte) 114, DirectByteStorage.field_k);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -259,7 +259,7 @@ final class Mesh3D {
         if (param0 != -1) {
           return;
         }
-        rj.field_c.transitionToContent((byte) 120, o.field_c);
+        rj.accountContentLayer.transitionToContent((byte) 120, o.field_c);
     }
 
     Mesh3D() {
