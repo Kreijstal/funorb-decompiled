@@ -57,20 +57,20 @@ final class CappedUrlRequest implements Runnable {
           if (param1 != 10000) {
             CappedUrlRequest.b(46);
           }
-          if (null == qm.field_d) {
-            qm.field_d = FramedMenuScreen.field_s.a(tq.field_h, (byte) 120, SocketConnector.field_b);
+          if (null == BrowserResizeNotificationHelpers.field_d) {
+            BrowserResizeNotificationHelpers.field_d = FramedMenuScreen.field_s.a(tq.field_h, (byte) 120, SocketConnector.field_b);
           }
-          if (qm.field_d.status == 0) {
+          if (BrowserResizeNotificationHelpers.field_d.status == 0) {
             return false;
           }
           dupTemp$1 = MonotonicTime.nowMillis(false);
           BrickMotionPath.lastGameWriteMillis = dupTemp$1;
           RichTextLayout.lastGameReadMillis = dupTemp$1;
-          if (qm.field_d.status != 1) {
+          if (BrowserResizeNotificationHelpers.field_d.status != 1) {
             GameConnectionHelpers.connectionPhase = mc.connectionFailed;
           } else {
             try {
-              WhirlpoolHasher.gameTransport = new BufferedSocket((java.net.Socket) (qm.field_d.result), FramedMenuScreen.field_s);
+              WhirlpoolHasher.gameTransport = new BufferedSocket((java.net.Socket) (BrowserResizeNotificationHelpers.field_d.result), FramedMenuScreen.field_s);
               TextFieldValidator.outgoingPackets.position = 0;
               var4 = jl.incomingPackets;
               var5 = var4;
@@ -86,11 +86,11 @@ final class CappedUrlRequest implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
               GameConnectionHelpers.connectionPhase = mc.connectionFailed;
-              qm.field_d = null;
+              BrowserResizeNotificationHelpers.field_d = null;
               return true;
             }
           }
-          qm.field_d = null;
+          BrowserResizeNotificationHelpers.field_d = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

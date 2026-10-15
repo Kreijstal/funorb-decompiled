@@ -163,7 +163,7 @@ final class RichTextLayout extends WidgetTextLayout {
         stackIn_7_1 = true;
         stackIn_8_2 = (param0) && (!sc.field_c);
         ((UiComponent) (Object) stackIn_7_0).drawRoot(stackIn_7_1, stackIn_8_2);
-        stackIn_11_0 = rm.field_a;
+        stackIn_11_0 = FontRequestHelpers.field_a;
         stackIn_11_1 = true;
         stackIn_12_2 = (param0) && (!sc.field_c);
         ((UiComponent) (Object) stackIn_11_0).drawRoot(stackIn_11_1, stackIn_12_2);

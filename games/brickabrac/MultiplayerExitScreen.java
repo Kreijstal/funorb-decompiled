@@ -98,7 +98,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, int param4) {
         try {
-          LabeledWidget.emailAvailabilityRequest = rm.createEmailAvailabilityRequest("", 16711935);
+          LabeledWidget.emailAvailabilityRequest = FontRequestHelpers.createEmailAvailabilityRequest("", 16711935);
           LabeledWidget.emailAvailabilityRequest.complete(false, 20892);
           if (param4 <= 11) {
             savePrompts = (String[]) null;

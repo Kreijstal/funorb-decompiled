@@ -396,7 +396,7 @@ final class Brick extends RectangleBody {
         if (param0 >= -50) {
           Brick.d(61);
         }
-        rm.field_a.setBounds(-4 + Rasterizer2D.height - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
+        FontRequestHelpers.field_a.setBounds(-4 + Rasterizer2D.height - 120, 0, 438 * var3 / var2 + (var1 + 202), 438, (byte) 64);
     }
 
     Brick(int param0, int param1, int param2, int param3, int param4) {

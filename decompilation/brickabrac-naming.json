@@ -484,6 +484,14 @@
       "renamedSymbol": "C:NumericLoginCredentials"
     },
     {
+      "symbol": "C:bp",
+      "originalName": "bp",
+      "to": "QuickChatContextMarker",
+      "evidence": "bp.java: Empty interface implemented by FontRequestHelpers and used only as an unused QuickChatPhraseRegistry constructor context.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:QuickChatContextMarker"
+    },
+    {
       "symbol": "C:bq",
       "originalName": "bq",
       "to": "FullscreenDialogHelpers",
@@ -1340,6 +1348,14 @@
       "renamedSymbol": "C:JungleBackground"
     },
     {
+      "symbol": "C:iq",
+      "originalName": "iq",
+      "to": "MicrosoftDirectSoundInitializer",
+      "evidence": "iq.java: Legacy Microsoft-JVM startup probe allocates two descriptor/cursor records, DirectSound and WaveFormatEx objects; its owned reflected bootstrap name follows this rename.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MicrosoftDirectSoundInitializer"
+    },
+    {
       "symbol": "C:j",
       "originalName": "j",
       "to": "PlayerBoard",
@@ -1868,6 +1884,14 @@
       "renamedSymbol": "C:LevelPack"
     },
     {
+      "symbol": "C:ne",
+      "originalName": "ne",
+      "to": "AppletJavaScriptBridge",
+      "evidence": "ne.java: Guarded LiveConnect script evaluation and function calls, with caller arguments/results and thrown failures passed through directly.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AppletJavaScriptBridge"
+    },
+    {
       "symbol": "C:nf",
       "originalName": "nf",
       "to": "ValidationMessageWidget",
@@ -2108,6 +2132,14 @@
       "renamedSymbol": "C:RasterCacheSurface"
     },
     {
+      "symbol": "C:pc",
+      "originalName": "pc",
+      "to": "DirectSoundInitializerMarker",
+      "evidence": "pc.java: Empty marker interface implemented only by the Microsoft DirectSound initializer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectSoundInitializerMarker"
+    },
+    {
       "symbol": "C:pd",
       "originalName": "pd",
       "to": "JavaSoundPcmPlayer",
@@ -2138,6 +2170,14 @@
       "evidence": "pg.java: Intrusive delivery deadline, decoded opcode and retained packet payload for artificial network delay.",
       "confidence": "reviewed",
       "renamedSymbol": "C:DelayedPacket"
+    },
+    {
+      "symbol": "C:ph",
+      "originalName": "ph",
+      "to": "BirthDateValidationMarker",
+      "evidence": "ph.java: Empty marker interface implemented only by the birth-date validator; it adds no callable contract.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BirthDateValidationMarker"
     },
     {
       "symbol": "C:pi",
@@ -2300,6 +2340,14 @@
       "renamedSymbol": "C:PlatformTask"
     },
     {
+      "symbol": "C:qm",
+      "originalName": "qm",
+      "to": "BrowserResizeNotificationHelpers",
+      "evidence": "qm.java: Sends the browser resizing callback with one boxed mode word and swallows bridge failures; unrelated task/UI labels remain separate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BrowserResizeNotificationHelpers"
+    },
+    {
       "symbol": "C:qn",
       "originalName": "qn",
       "to": "CanvasResizeController",
@@ -2394,6 +2442,14 @@
       "evidence": "rk.java: Optional icon and label children positioned together using alignment, inset and gap; static mesh/error helpers remain separate.",
       "confidence": "reviewed",
       "renamedSymbol": "C:AlignedIconLabel"
+    },
+    {
+      "symbol": "C:rm",
+      "originalName": "rm",
+      "to": "FontRequestHelpers",
+      "evidence": "rm.java: Binary-mask font construction and email-availability request construction, plus an otherwise unused Quick Chat context marker and unrelated farm/UI globals.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FontRequestHelpers"
     },
     {
       "symbol": "C:rn",
@@ -9306,6 +9362,22 @@
       "evidence": "ip.java: Background bootstrap callers and consumers identify the sound-effect, music-sample, MIDI-track, patch and scene-sprite archives. Cache selection promotes the first matching surface or tail victim without changing keys. Level attributes combine an exclusive-end range. The byte-payload sender stores its CRC32; kind1 replies unlink the first matching submission and kind0 replies validate their CRC32 before FIFO request removal. Resends preserve submission-before-request order; fixtures use isolated in-memory state.",
       "confidence": "reviewed",
       "renamedSymbol": "F:JungleBackground.backgroundSurfacePool960:LNodeDeque;"
+    },
+    {
+      "symbol": "F:iq.field_a:[Lcom/ms/directX/DSBufferDesc;",
+      "originalName": "field_a",
+      "to": "bufferDescriptors",
+      "evidence": "iq.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MicrosoftDirectSoundInitializer.bufferDescriptors:[Lcom/ms/directX/DSBufferDesc;"
+    },
+    {
+      "symbol": "F:iq.field_b:[Lcom/ms/directX/DSCursors;",
+      "originalName": "field_b",
+      "to": "bufferCursors",
+      "evidence": "iq.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MicrosoftDirectSoundInitializer.bufferCursors:[Lcom/ms/directX/DSCursors;"
     },
     {
       "symbol": "F:j.field_B:Ljava/util/Random;",
@@ -16545,7 +16617,7 @@
       "to": "farmBackgroundColors",
       "evidence": "rm.java: Indexed color at top of named theme fallback gradient; bottom color is retained by scene rendering.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:rm.farmBackgroundColors:[I"
+      "renamedSymbol": "F:FontRequestHelpers.farmBackgroundColors:[I"
     },
     {
       "symbol": "F:rm.field_f:Ljp;",
@@ -16553,7 +16625,7 @@
       "to": "farmMidSprite",
       "evidence": "qb.java: Literal sprite resource farm/farm_mid assigned to this resolved field.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:rm.farmMidSprite:LRgbSprite;"
+      "renamedSymbol": "F:FontRequestHelpers.farmMidSprite:LRgbSprite;"
     },
     {
       "symbol": "F:rn.field_c:I",
@@ -33724,6 +33796,38 @@
       "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3"
     },
     {
+      "symbol": "L:iq.<init>()V#0",
+      "originalName": "var1",
+      "to": "descriptorIndex",
+      "evidence": "iq.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#0"
+    },
+    {
+      "symbol": "L:iq.<init>()V#1",
+      "originalName": "var1Lifetime1",
+      "to": "cursorIndex",
+      "evidence": "iq.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#1"
+    },
+    {
+      "symbol": "L:iq.<init>()V#2",
+      "originalName": "discarded$0",
+      "to": "discardedDirectSound",
+      "evidence": "iq.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#2"
+    },
+    {
+      "symbol": "L:iq.<init>()V#3",
+      "originalName": "discarded$1",
+      "to": "discardedWaveFormat",
+      "evidence": "iq.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#3"
+    },
+    {
       "symbol": "L:j.a(BLon;Lvn;)V#0",
       "originalName": "stackIn_11_0",
       "to": "failureContext",
@@ -46164,6 +46268,54 @@
       "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#9"
     },
     {
+      "symbol": "L:qm.a(II)V#0",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#0"
+    },
+    {
+      "symbol": "L:qm.a(II)V#1",
+      "originalName": "var2",
+      "to": "guardCalculation",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#1"
+    },
+    {
+      "symbol": "L:qm.a(II)V#2",
+      "originalName": "var3",
+      "to": "ignoredBridgeFailure",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#2"
+    },
+    {
+      "symbol": "L:qm.a(II)V#3",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtBridgeFailure",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#3"
+    },
+    {
+      "symbol": "L:qm.a(II)V#4",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedFailure",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#4"
+    },
+    {
+      "symbol": "L:qm.a(II)V#5",
+      "originalName": "decompiledCheckedException",
+      "to": "checkedFailure",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#5"
+    },
+    {
       "symbol": "L:qn.a(I)V#0",
       "originalName": "var2",
       "to": "unusedGuardQuotient",
@@ -47649,7 +47801,7 @@
       "to": "font",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#0"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#0"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#1",
@@ -47657,7 +47809,7 @@
       "to": "failure",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#1"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#1"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#2",
@@ -47665,7 +47817,7 @@
       "to": "guardRejectedFont",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#2"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#2"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#3",
@@ -47673,7 +47825,7 @@
       "to": "missingMetricsFont",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#3"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#3"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#4",
@@ -47681,7 +47833,7 @@
       "to": "result",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#4"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#4"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#5",
@@ -47689,7 +47841,7 @@
       "to": "failureContext",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#5"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#5"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#6",
@@ -47697,7 +47849,7 @@
       "to": "contextBuilder",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#6"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#6"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#7",
@@ -47705,7 +47857,7 @@
       "to": "metricsSummary",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#7"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#7"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#8",
@@ -47713,7 +47865,7 @@
       "to": "caughtFailure",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#8"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#8"
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#9",
@@ -47721,7 +47873,63 @@
       "to": "caughtParameter",
       "evidence": "rm.java: Reviewed binary glyph clipping, mask kernel, row-span intersection or decoded-font construction declaration.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#9"
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#9"
+    },
+    {
+      "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#0",
+      "originalName": "var2",
+      "to": "failure",
+      "evidence": "rm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#0"
+    },
+    {
+      "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#1",
+      "originalName": "stackIn_3_0",
+      "to": "request",
+      "evidence": "rm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#1"
+    },
+    {
+      "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#2",
+      "originalName": "stackIn_6_0",
+      "to": "failureContext",
+      "evidence": "rm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#2"
+    },
+    {
+      "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#3",
+      "originalName": "stackIn_6_1",
+      "to": "contextBuilder",
+      "evidence": "rm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#3"
+    },
+    {
+      "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#4",
+      "originalName": "stackIn_7_2",
+      "to": "emailSummary",
+      "evidence": "rm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#4"
+    },
+    {
+      "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#5",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "rm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#5"
+    },
+    {
+      "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#6",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "rm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#6"
     },
     {
       "symbol": "L:s.a(IILpo;)V#0",
@@ -63796,6 +64004,30 @@
       "renamedSymbol": "M:nd.comesBeforeRankingRow(ZIIZ)Z"
     },
     {
+      "symbol": "M:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "evaluateScript",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+      "originalName": "a",
+      "to": "callFunctionWithoutArguments",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;"
+    },
+    {
+      "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+      "originalName": "a",
+      "to": "callFunction",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;"
+    },
+    {
       "symbol": "M:nf.a(IIIB)V",
       "originalName": "a",
       "to": "drawLayer",
@@ -65828,6 +66060,14 @@
       "renamedSymbol": "M:MouseWheelInput.pollRotation(I)I"
     },
     {
+      "symbol": "M:qm.a(II)V",
+      "originalName": "a",
+      "to": "notifyBrowserResize",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V"
+    },
+    {
       "symbol": "M:qn.a(B)Z",
       "originalName": "a",
       "to": "canUseAdaptiveResize",
@@ -66361,7 +66601,7 @@
       "to": "createBinaryMaskFont",
       "evidence": "rm.java: Uses current decoded sprite geometry/masks then clears decoded globals only after successful construction; canonical guard12658477.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;"
+      "renamedSymbol": "M:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;"
     },
     {
       "symbol": "M:rm.a(Ljava/lang/String;I)Lac;",
@@ -66369,7 +66609,7 @@
       "to": "createEmailAvailabilityRequest",
       "evidence": "rm.java: Creates pending availability record; guard16711935.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;"
+      "renamedSymbol": "M:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;"
     },
     {
       "symbol": "M:rn.a(I)V",
@@ -95108,6 +95348,86 @@
       "renamedSymbol": "P:nd.comesBeforeRankingRow(ZIIZ)Z#3"
     },
     {
+      "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#0",
+      "originalName": "param0",
+      "to": "applet",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V#0"
+    },
+    {
+      "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#1",
+      "originalName": "param1",
+      "to": "script",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V#1"
+    },
+    {
+      "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V#2"
+    },
+    {
+      "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#0",
+      "originalName": "param0",
+      "to": "functionName",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#0"
+    },
+    {
+      "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#1"
+    },
+    {
+      "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#2",
+      "originalName": "param2",
+      "to": "applet",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#2"
+    },
+    {
+      "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#0",
+      "originalName": "param0",
+      "to": "arguments",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#0"
+    },
+    {
+      "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#1"
+    },
+    {
+      "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#2",
+      "originalName": "param2",
+      "to": "applet",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#2"
+    },
+    {
+      "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#3",
+      "originalName": "param3",
+      "to": "functionName",
+      "evidence": "ne.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#3"
+    },
+    {
       "symbol": "P:nf.<init>(Lia;Ljava/lang/String;IIII)V#0",
       "originalName": "param0",
       "to": "validationSource",
@@ -101716,6 +102036,22 @@
       "renamedSymbol": "P:MouseWheelInput.mouseWheelMoved(Ljava/awt/event/MouseWheelEvent;)V#0"
     },
     {
+      "symbol": "P:qm.a(II)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#0"
+    },
+    {
+      "symbol": "P:qm.a(II)V#1",
+      "originalName": "param1",
+      "to": "mode",
+      "evidence": "qm.java: A separate child-first class loader supplies a recording JavaScript boundary without changing published signature stubs or starting an applet host. Fixtures verify all guard boundaries, argument/applet/result identity, thrown-failure propagation and resize callback swallowing. DirectSound construction checks two distinct initialized descriptor/cursor entries and marker relationships; reflection-literal verification follows the renamed owned startup class. Existing binary-font/email request fixtures cover the mixed helper factories.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#1"
+    },
+    {
       "symbol": "P:qn.a(B)Z#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -102521,7 +102857,7 @@
       "to": "unusedOption",
       "evidence": "rg.java: Stores archives and initializes64-entry cache; queries group1 capacities; other inputs unused.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#0"
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#0"
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#1",
@@ -102529,7 +102865,7 @@
       "to": "standardArchive",
       "evidence": "rg.java: Stores archives and initializes64-entry cache; queries group1 capacities; other inputs unused.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#1"
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#1"
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#2",
@@ -102537,7 +102873,7 @@
       "to": "extendedArchive",
       "evidence": "rg.java: Stores archives and initializes64-entry cache; queries group1 capacities; other inputs unused.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#2"
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#2"
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#3",
@@ -102545,7 +102881,7 @@
       "to": "unusedContext",
       "evidence": "rg.java: Stores archives and initializes64-entry cache; queries group1 capacities; other inputs unused.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#3"
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#3"
     },
     {
       "symbol": "P:rg.a(IZ)Lwd;#0",
@@ -102929,7 +103265,7 @@
       "to": "obfuscationGuard",
       "evidence": "rm.java: Uses current decoded sprite geometry/masks then clears decoded globals only after successful construction; canonical guard12658477.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#0"
+      "renamedSymbol": "P:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#0"
     },
     {
       "symbol": "P:rm.a(I[B)Lhl;#1",
@@ -102937,7 +103273,7 @@
       "to": "metrics",
       "evidence": "rm.java: Uses current decoded sprite geometry/masks then clears decoded globals only after successful construction; canonical guard12658477.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#1"
+      "renamedSymbol": "P:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#1"
     },
     {
       "symbol": "P:rm.a(Ljava/lang/String;I)Lac;#0",
@@ -102945,7 +103281,7 @@
       "to": "email",
       "evidence": "rm.java: Creates pending availability record; guard16711935.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#0"
+      "renamedSymbol": "P:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#0"
     },
     {
       "symbol": "P:rm.a(Ljava/lang/String;I)Lac;#1",
@@ -102953,7 +103289,7 @@
       "to": "obfuscationGuard",
       "evidence": "rm.java: Creates pending availability record; guard16711935.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#1"
+      "renamedSymbol": "P:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#1"
     },
     {
       "symbol": "P:rn.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
@@ -112293,9 +112629,9 @@
     },
     {
       "symbol": "C:bp",
-      "renamedSymbol": "C:bp",
+      "renamedSymbol": "C:QuickChatContextMarker",
       "originalName": "bp",
-      "renamedName": "bp",
+      "renamedName": "QuickChatContextMarker",
       "declaration": {
         "file": "bp.java",
         "start": 48,
@@ -113734,9 +114070,9 @@
     },
     {
       "symbol": "C:iq",
-      "renamedSymbol": "C:iq",
+      "renamedSymbol": "C:MicrosoftDirectSoundInitializer",
       "originalName": "iq",
-      "renamedName": "iq",
+      "renamedName": "MicrosoftDirectSoundInitializer",
       "declaration": {
         "file": "iq.java",
         "start": 50,
@@ -114592,9 +114928,9 @@
     },
     {
       "symbol": "C:ne",
-      "renamedSymbol": "C:ne",
+      "renamedSymbol": "C:AppletJavaScriptBridge",
       "originalName": "ne",
-      "renamedName": "ne",
+      "renamedName": "AppletJavaScriptBridge",
       "declaration": {
         "file": "ne.java",
         "start": 50,
@@ -114977,9 +115313,9 @@
     },
     {
       "symbol": "C:pc",
-      "renamedSymbol": "C:pc",
+      "renamedSymbol": "C:DirectSoundInitializerMarker",
       "originalName": "pc",
-      "renamedName": "pc",
+      "renamedName": "DirectSoundInitializerMarker",
       "declaration": {
         "file": "pc.java",
         "start": 48,
@@ -115032,9 +115368,9 @@
     },
     {
       "symbol": "C:ph",
-      "renamedSymbol": "C:ph",
+      "renamedSymbol": "C:BirthDateValidationMarker",
       "originalName": "ph",
-      "renamedName": "ph",
+      "renamedName": "BirthDateValidationMarker",
       "declaration": {
         "file": "ph.java",
         "start": 48,
@@ -115285,9 +115621,9 @@
     },
     {
       "symbol": "C:qm",
-      "renamedSymbol": "C:qm",
+      "renamedSymbol": "C:BrowserResizeNotificationHelpers",
       "originalName": "qm",
-      "renamedName": "qm",
+      "renamedName": "BrowserResizeNotificationHelpers",
       "declaration": {
         "file": "qm.java",
         "start": 50,
@@ -115483,9 +115819,9 @@
     },
     {
       "symbol": "C:rm",
-      "renamedSymbol": "C:rm",
+      "renamedSymbol": "C:FontRequestHelpers",
       "originalName": "rm",
-      "renamedName": "rm",
+      "renamedName": "FontRequestHelpers",
       "declaration": {
         "file": "rm.java",
         "start": 50,
@@ -130938,9 +131274,9 @@
     },
     {
       "symbol": "F:iq.field_a:[Lcom/ms/directX/DSBufferDesc;",
-      "renamedSymbol": "F:iq.field_a:[Lcom/ms/directX/DSBufferDesc;",
+      "renamedSymbol": "F:MicrosoftDirectSoundInitializer.bufferDescriptors:[Lcom/ms/directX/DSBufferDesc;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "bufferDescriptors",
       "declaration": {
         "file": "iq.java",
         "start": 111,
@@ -130949,9 +131285,9 @@
     },
     {
       "symbol": "F:iq.field_b:[Lcom/ms/directX/DSCursors;",
-      "renamedSymbol": "F:iq.field_b:[Lcom/ms/directX/DSCursors;",
+      "renamedSymbol": "F:MicrosoftDirectSoundInitializer.bufferCursors:[Lcom/ms/directX/DSCursors;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "bufferCursors",
       "declaration": {
         "file": "iq.java",
         "start": 159,
@@ -145084,7 +145420,7 @@
     },
     {
       "symbol": "F:qm.field_a:I",
-      "renamedSymbol": "F:qm.field_a:I",
+      "renamedSymbol": "F:BrowserResizeNotificationHelpers.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -145095,7 +145431,7 @@
     },
     {
       "symbol": "F:qm.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:qm.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:BrowserResizeNotificationHelpers.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -145106,7 +145442,7 @@
     },
     {
       "symbol": "F:qm.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:qm.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:BrowserResizeNotificationHelpers.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -145117,7 +145453,7 @@
     },
     {
       "symbol": "F:qm.field_d:Lql;",
-      "renamedSymbol": "F:qm.field_d:LPlatformTask;",
+      "renamedSymbol": "F:BrowserResizeNotificationHelpers.field_d:LPlatformTask;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -145128,7 +145464,7 @@
     },
     {
       "symbol": "F:qm.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:qm.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:BrowserResizeNotificationHelpers.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -146778,7 +147114,7 @@
     },
     {
       "symbol": "F:rm.field_a:Lmh;",
-      "renamedSymbol": "F:rm.field_a:LUiComponent;",
+      "renamedSymbol": "F:FontRequestHelpers.field_a:LUiComponent;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -146789,7 +147125,7 @@
     },
     {
       "symbol": "F:rm.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:rm.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:FontRequestHelpers.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -146800,7 +147136,7 @@
     },
     {
       "symbol": "F:rm.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:rm.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:FontRequestHelpers.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -146811,7 +147147,7 @@
     },
     {
       "symbol": "F:rm.field_d:[I",
-      "renamedSymbol": "F:rm.farmBackgroundColors:[I",
+      "renamedSymbol": "F:FontRequestHelpers.farmBackgroundColors:[I",
       "originalName": "field_d",
       "renamedName": "farmBackgroundColors",
       "declaration": {
@@ -146822,7 +147158,7 @@
     },
     {
       "symbol": "F:rm.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:rm.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:FontRequestHelpers.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -146833,7 +147169,7 @@
     },
     {
       "symbol": "F:rm.field_f:Ljp;",
-      "renamedSymbol": "F:rm.farmMidSprite:LRgbSprite;",
+      "renamedSymbol": "F:FontRequestHelpers.farmMidSprite:LRgbSprite;",
       "originalName": "field_f",
       "renamedName": "farmMidSprite",
       "declaration": {
@@ -219796,9 +220132,9 @@
     },
     {
       "symbol": "L:iq.<init>()V#0",
-      "renamedSymbol": "L:iq.<init>()V#0",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#0",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "descriptorIndex",
       "declaration": {
         "file": "iq.java",
         "start": 216,
@@ -219807,9 +220143,9 @@
     },
     {
       "symbol": "L:iq.<init>()V#1",
-      "renamedSymbol": "L:iq.<init>()V#1",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#1",
       "originalName": "var1Lifetime1",
-      "renamedName": "var1Lifetime1",
+      "renamedName": "cursorIndex",
       "declaration": {
         "file": "iq.java",
         "start": 238,
@@ -219818,9 +220154,9 @@
     },
     {
       "symbol": "L:iq.<init>()V#2",
-      "renamedSymbol": "L:iq.<init>()V#2",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#2",
       "originalName": "discarded$0",
-      "renamedName": "discarded$0",
+      "renamedName": "discardedDirectSound",
       "declaration": {
         "file": "iq.java",
         "start": 403,
@@ -219829,9 +220165,9 @@
     },
     {
       "symbol": "L:iq.<init>()V#3",
-      "renamedSymbol": "L:iq.<init>()V#3",
+      "renamedSymbol": "L:MicrosoftDirectSoundInitializer.<init>()V#3",
       "originalName": "discarded$1",
-      "renamedName": "discarded$1",
+      "renamedName": "discardedWaveFormat",
       "declaration": {
         "file": "iq.java",
         "start": 487,
@@ -293749,9 +294085,9 @@
     },
     {
       "symbol": "L:qm.a(II)V#0",
-      "renamedSymbol": "L:qm.a(II)V#0",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#0",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "qm.java",
         "start": 529,
@@ -293760,9 +294096,9 @@
     },
     {
       "symbol": "L:qm.a(II)V#1",
-      "renamedSymbol": "L:qm.a(II)V#1",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#1",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "guardCalculation",
       "declaration": {
         "file": "qm.java",
         "start": 577,
@@ -293771,9 +294107,9 @@
     },
     {
       "symbol": "L:qm.a(II)V#2",
-      "renamedSymbol": "L:qm.a(II)V#2",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#2",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "ignoredBridgeFailure",
       "declaration": {
         "file": "qm.java",
         "start": 607,
@@ -293782,9 +294118,9 @@
     },
     {
       "symbol": "L:qm.a(II)V#3",
-      "renamedSymbol": "L:qm.a(II)V#3",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#3",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtBridgeFailure",
       "declaration": {
         "file": "qm.java",
         "start": 806,
@@ -293793,9 +294129,9 @@
     },
     {
       "symbol": "L:qm.a(II)V#4",
-      "renamedSymbol": "L:qm.a(II)V#4",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#4",
       "originalName": "decompiledUncheckedException",
-      "renamedName": "decompiledUncheckedException",
+      "renamedName": "uncheckedFailure",
       "declaration": {
         "file": "qm.java",
         "start": 1004,
@@ -293804,9 +294140,9 @@
     },
     {
       "symbol": "L:qm.a(II)V#5",
-      "renamedSymbol": "L:qm.a(II)V#5",
+      "renamedSymbol": "L:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#5",
       "originalName": "decompiledCheckedException",
-      "renamedName": "decompiledCheckedException",
+      "renamedName": "checkedFailure",
       "declaration": {
         "file": "qm.java",
         "start": 1109,
@@ -296433,7 +296769,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#0",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#0",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -296444,7 +296780,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#1",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#1",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#1",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -296455,7 +296791,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#2",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#2",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#2",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -296466,7 +296802,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#3",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#3",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#3",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -296477,7 +296813,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#4",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#4",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#4",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -296488,7 +296824,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#5",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#5",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#5",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -296499,7 +296835,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#6",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#6",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#6",
       "originalName": "stackIn_14_1",
       "renamedName": "stackIn_14_1",
       "declaration": {
@@ -296510,7 +296846,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#7",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#7",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#7",
       "originalName": "stackIn_15_2",
       "renamedName": "stackIn_15_2",
       "declaration": {
@@ -296521,7 +296857,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#8",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#8",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -296532,7 +296868,7 @@
     },
     {
       "symbol": "L:rg.<init>(ILmf;Lmf;Lbp;)V#9",
-      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#9",
+      "renamedSymbol": "L:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -297830,7 +298166,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#0",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#0",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#0",
       "originalName": "var2",
       "renamedName": "font",
       "declaration": {
@@ -297841,7 +298177,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#1",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#1",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#1",
       "originalName": "var2_ref",
       "renamedName": "failure",
       "declaration": {
@@ -297852,7 +298188,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#2",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#2",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "guardRejectedFont",
       "declaration": {
@@ -297863,7 +298199,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#3",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#3",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#3",
       "originalName": "stackIn_5_0",
       "renamedName": "missingMetricsFont",
       "declaration": {
@@ -297874,7 +298210,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#4",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#4",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "result",
       "declaration": {
@@ -297885,7 +298221,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#5",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#5",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#5",
       "originalName": "stackIn_10_0",
       "renamedName": "failureContext",
       "declaration": {
@@ -297896,7 +298232,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#6",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#6",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#6",
       "originalName": "stackIn_10_1",
       "renamedName": "contextBuilder",
       "declaration": {
@@ -297907,7 +298243,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#7",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#7",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#7",
       "originalName": "stackIn_11_2",
       "renamedName": "metricsSummary",
       "declaration": {
@@ -297918,7 +298254,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#8",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#8",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtFailure",
       "declaration": {
@@ -297929,7 +298265,7 @@
     },
     {
       "symbol": "L:rm.a(I[B)Lhl;#9",
-      "renamedSymbol": "L:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#9",
+      "renamedSymbol": "L:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "caughtParameter",
       "declaration": {
@@ -297940,9 +298276,9 @@
     },
     {
       "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#0",
-      "renamedSymbol": "L:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#0",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "failure",
       "declaration": {
         "file": "rm.java",
         "start": 2034,
@@ -297951,9 +298287,9 @@
     },
     {
       "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#1",
-      "renamedSymbol": "L:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#1",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#1",
       "originalName": "stackIn_3_0",
-      "renamedName": "stackIn_3_0",
+      "renamedName": "request",
       "declaration": {
         "file": "rm.java",
         "start": 2058,
@@ -297962,9 +298298,9 @@
     },
     {
       "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#2",
-      "renamedSymbol": "L:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#2",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#2",
       "originalName": "stackIn_6_0",
-      "renamedName": "stackIn_6_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "rm.java",
         "start": 2103,
@@ -297973,9 +298309,9 @@
     },
     {
       "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#3",
-      "renamedSymbol": "L:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#3",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#3",
       "originalName": "stackIn_6_1",
-      "renamedName": "stackIn_6_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "rm.java",
         "start": 2145,
@@ -297984,9 +298320,9 @@
     },
     {
       "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#4",
-      "renamedSymbol": "L:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#4",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#4",
       "originalName": "stackIn_7_2",
-      "renamedName": "stackIn_7_2",
+      "renamedName": "emailSummary",
       "declaration": {
         "file": "rm.java",
         "start": 2180,
@@ -297995,9 +298331,9 @@
     },
     {
       "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#5",
-      "renamedSymbol": "L:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#5",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#5",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "rm.java",
         "start": 2225,
@@ -298006,9 +298342,9 @@
     },
     {
       "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#6",
-      "renamedSymbol": "L:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#6",
+      "renamedSymbol": "L:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#6",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "rm.java",
         "start": 2471,
@@ -354128,9 +354464,9 @@
     },
     {
       "symbol": "M:iq.<init>()V",
-      "renamedSymbol": "M:iq.<init>()V",
+      "renamedSymbol": "M:MicrosoftDirectSoundInitializer.<init>()V",
       "originalName": "iq",
-      "renamedName": "iq",
+      "renamedName": "MicrosoftDirectSoundInitializer",
       "declaration": {
         "file": "iq.java",
         "start": 180,
@@ -362466,9 +362802,9 @@
     },
     {
       "symbol": "M:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V",
-      "renamedSymbol": "M:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V",
+      "renamedSymbol": "M:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "evaluateScript",
       "declaration": {
         "file": "ne.java",
         "start": 77,
@@ -362477,9 +362813,9 @@
     },
     {
       "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
-      "renamedSymbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+      "renamedSymbol": "M:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "callFunctionWithoutArguments",
       "declaration": {
         "file": "ne.java",
         "start": 586,
@@ -362488,9 +362824,9 @@
     },
     {
       "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
-      "renamedSymbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+      "renamedSymbol": "M:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "callFunction",
       "declaration": {
         "file": "ne.java",
         "start": 310,
@@ -367856,7 +368192,7 @@
     },
     {
       "symbol": "M:qm.a(B)V",
-      "renamedSymbol": "M:qm.a(B)V",
+      "renamedSymbol": "M:BrowserResizeNotificationHelpers.a(B)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -367867,9 +368203,9 @@
     },
     {
       "symbol": "M:qm.a(II)V",
-      "renamedSymbol": "M:qm.a(II)V",
+      "renamedSymbol": "M:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "notifyBrowserResize",
       "declaration": {
         "file": "qm.java",
         "start": 467,
@@ -368736,7 +369072,7 @@
     },
     {
       "symbol": "M:rg.<init>(ILmf;Lmf;Lbp;)V",
-      "renamedSymbol": "M:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V",
+      "renamedSymbol": "M:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V",
       "originalName": "rg",
       "renamedName": "QuickChatPhraseRegistry",
       "declaration": {
@@ -369055,7 +369391,7 @@
     },
     {
       "symbol": "M:rm.a(I)V",
-      "renamedSymbol": "M:rm.a(I)V",
+      "renamedSymbol": "M:FontRequestHelpers.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -369066,7 +369402,7 @@
     },
     {
       "symbol": "M:rm.a(I[B)Lhl;",
-      "renamedSymbol": "M:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;",
+      "renamedSymbol": "M:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;",
       "originalName": "a",
       "renamedName": "createBinaryMaskFont",
       "declaration": {
@@ -369077,7 +369413,7 @@
     },
     {
       "symbol": "M:rm.a(Ljava/lang/String;I)Lac;",
-      "renamedSymbol": "M:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;",
+      "renamedSymbol": "M:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;",
       "originalName": "a",
       "renamedName": "createEmailAvailabilityRequest",
       "declaration": {
@@ -435792,9 +436128,9 @@
     },
     {
       "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "applet",
       "declaration": {
         "file": "ne.java",
         "start": 98,
@@ -435803,9 +436139,9 @@
     },
     {
       "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "script",
       "declaration": {
         "file": "ne.java",
         "start": 113,
@@ -435814,9 +436150,9 @@
     },
     {
       "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#2",
-      "renamedSymbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#2",
+      "renamedSymbol": "P:AppletJavaScriptBridge.evaluateScript(Ljava/applet/Applet;Ljava/lang/String;I)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ne.java",
         "start": 125,
@@ -435825,9 +436161,9 @@
     },
     {
       "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "functionName",
       "declaration": {
         "file": "ne.java",
         "start": 595,
@@ -435836,9 +436172,9 @@
     },
     {
       "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ne.java",
         "start": 607,
@@ -435847,9 +436183,9 @@
     },
     {
       "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#2",
-      "renamedSymbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#2",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunctionWithoutArguments(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "applet",
       "declaration": {
         "file": "ne.java",
         "start": 634,
@@ -435858,9 +436194,9 @@
     },
     {
       "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "arguments",
       "declaration": {
         "file": "ne.java",
         "start": 321,
@@ -435869,9 +436205,9 @@
     },
     {
       "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ne.java",
         "start": 333,
@@ -435880,9 +436216,9 @@
     },
     {
       "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#2",
-      "renamedSymbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#2",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "applet",
       "declaration": {
         "file": "ne.java",
         "start": 360,
@@ -435891,9 +436227,9 @@
     },
     {
       "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#3",
-      "renamedSymbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#3",
+      "renamedSymbol": "P:AppletJavaScriptBridge.callFunction([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "functionName",
       "declaration": {
         "file": "ne.java",
         "start": 375,
@@ -449256,7 +449592,7 @@
     },
     {
       "symbol": "P:qm.a(B)V#0",
-      "renamedSymbol": "P:qm.a(B)V#0",
+      "renamedSymbol": "P:BrowserResizeNotificationHelpers.a(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -449267,9 +449603,9 @@
     },
     {
       "symbol": "P:qm.a(II)V#0",
-      "renamedSymbol": "P:qm.a(II)V#0",
+      "renamedSymbol": "P:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qm.java",
         "start": 473,
@@ -449278,9 +449614,9 @@
     },
     {
       "symbol": "P:qm.a(II)V#1",
-      "renamedSymbol": "P:qm.a(II)V#1",
+      "renamedSymbol": "P:BrowserResizeNotificationHelpers.notifyBrowserResize(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "mode",
       "declaration": {
         "file": "qm.java",
         "start": 485,
@@ -450752,7 +451088,7 @@
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#0",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#0",
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#0",
       "originalName": "param0",
       "renamedName": "unusedOption",
       "declaration": {
@@ -450763,7 +451099,7 @@
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#1",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#1",
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#1",
       "originalName": "param1",
       "renamedName": "standardArchive",
       "declaration": {
@@ -450774,7 +451110,7 @@
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#2",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#2",
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#2",
       "originalName": "param2",
       "renamedName": "extendedArchive",
       "declaration": {
@@ -450785,7 +451121,7 @@
     },
     {
       "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#3",
-      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;Lbp;)V#3",
+      "renamedSymbol": "P:QuickChatPhraseRegistry.<init>(ILResourceArchive;LResourceArchive;LQuickChatContextMarker;)V#3",
       "originalName": "param3",
       "renamedName": "unusedContext",
       "declaration": {
@@ -451511,7 +451847,7 @@
     },
     {
       "symbol": "P:rm.a(I)V#0",
-      "renamedSymbol": "P:rm.a(I)V#0",
+      "renamedSymbol": "P:FontRequestHelpers.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -451522,7 +451858,7 @@
     },
     {
       "symbol": "P:rm.a(I[B)Lhl;#0",
-      "renamedSymbol": "P:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#0",
+      "renamedSymbol": "P:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#0",
       "originalName": "param0",
       "renamedName": "obfuscationGuard",
       "declaration": {
@@ -451533,7 +451869,7 @@
     },
     {
       "symbol": "P:rm.a(I[B)Lhl;#1",
-      "renamedSymbol": "P:rm.createBinaryMaskFont(I[B)LBinaryMaskFont;#1",
+      "renamedSymbol": "P:FontRequestHelpers.createBinaryMaskFont(I[B)LBinaryMaskFont;#1",
       "originalName": "param1",
       "renamedName": "metrics",
       "declaration": {
@@ -451544,7 +451880,7 @@
     },
     {
       "symbol": "P:rm.a(Ljava/lang/String;I)Lac;#0",
-      "renamedSymbol": "P:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#0",
+      "renamedSymbol": "P:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#0",
       "originalName": "param0",
       "renamedName": "email",
       "declaration": {
@@ -451555,7 +451891,7 @@
     },
     {
       "symbol": "P:rm.a(Ljava/lang/String;I)Lac;#1",
-      "renamedSymbol": "P:rm.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#1",
+      "renamedSymbol": "P:FontRequestHelpers.createEmailAvailabilityRequest(Ljava/lang/String;I)LEmailAvailabilityRequest;#1",
       "originalName": "param1",
       "renamedName": "obfuscationGuard",
       "declaration": {
@@ -469511,7 +469847,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "73760c0edfb515f05b562dffe9d2125a58a53d21c014ac170d32dbcfc303c4d0",
+      "outputSha256": "d3f2534edfcfa59de28c432d959dc598cf8189b0f6a974f65f9c6a17d85b9eef",
       "edits": [
         {
           "start": 76,
@@ -475086,6 +475422,13 @@
           "renamed": "LevelPackLoader"
         },
         {
+          "start": 21755,
+          "end": 21757,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 21799,
           "end": 21801,
           "symbol": "C:og",
@@ -475203,6 +475546,13 @@
           "symbol": "C:h",
           "original": "h",
           "renamed": "SingleChildWidget"
+        },
+        {
+          "start": 22184,
+          "end": 22186,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 22228,
@@ -481584,7 +481934,7 @@
       "original": "ad.java",
       "renamed": "CappedUrlRequest.java",
       "inputSha256": "7fb7dc99d93b013df130c503d7a3c4b16a52a7ea9fadeb9d1d00dde398e5148b",
-      "outputSha256": "cb2b03d02a75f857bdd3efb28507bc5cc85b3ac254c2a2445cb9f5a64400b480",
+      "outputSha256": "8ebe4941835c233eac9aef0c11349e093af210990deb6548ef41d36da5c4faf7",
       "edits": [
         {
           "start": 69,
@@ -481846,6 +482196,20 @@
           "renamed": "CappedUrlRequest"
         },
         {
+          "start": 1577,
+          "end": 1579,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 1603,
+          "end": 1605,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 1616,
           "end": 1618,
           "symbol": "C:lh",
@@ -481858,6 +482222,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 1692,
+          "end": 1694,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 1703,
@@ -481909,6 +482280,13 @@
           "renamed": "lastGameReadMillis"
         },
         {
+          "start": 1874,
+          "end": 1876,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 1885,
           "end": 1892,
           "symbol": "F:ql.field_f:I",
@@ -481956,6 +482334,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 2028,
+          "end": 2030,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 2039,
@@ -482145,6 +482530,20 @@
           "symbol": "F:mc.field_e:Ln;",
           "original": "field_e",
           "renamed": "connectionFailed"
+        },
+        {
+          "start": 2770,
+          "end": 2772,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 2852,
+          "end": 2854,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 3212,
@@ -514058,7 +514457,7 @@
       "original": "an.java",
       "renamed": "BirthDateValidator.java",
       "inputSha256": "27930a58b7a59af9d29491db95ea28671b18580c1fa6c3b2d98ba62470e587df",
-      "outputSha256": "59a478359e016a4af8205c240ebf593f03e01dc3b40edcb28cf5316fd0f449a9",
+      "outputSha256": "c5580efd30c5ca97401778a254555fd0600cf6672099aceefbe4a4a56f01af81",
       "edits": [
         {
           "start": 50,
@@ -514080,6 +514479,13 @@
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "TextFieldListener"
+        },
+        {
+          "start": 79,
+          "end": 81,
+          "symbol": "C:ph",
+          "original": "ph",
+          "renamed": "BirthDateValidationMarker"
         },
         {
           "start": 88,
@@ -546962,10 +547368,18 @@
     },
     {
       "original": "bp.java",
-      "renamed": "bp.java",
+      "renamed": "QuickChatContextMarker.java",
       "inputSha256": "d59e559129794435846aa84f36db14d3225509559d4238d1238df495a7cb12d3",
-      "outputSha256": "d59e559129794435846aa84f36db14d3225509559d4238d1238df495a7cb12d3",
-      "edits": []
+      "outputSha256": "822e3325282595129a61834969f2798b10b2249d46799d1cf380488b41bf6e11",
+      "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:bp",
+          "original": "bp",
+          "renamed": "QuickChatContextMarker"
+        }
+      ]
     },
     {
       "original": "bq.java",
@@ -562905,7 +563319,7 @@
       "original": "cg.java",
       "renamed": "NanoGameClock.java",
       "inputSha256": "5115ebd3a6fb414d6e298e2e330d8fa86e71161f40d62d329f44a56ebd212998",
-      "outputSha256": "57d8a5500ac652eea3bcbb207c12570c3525eaec06b4bfb4317963cb15e22c02",
+      "outputSha256": "e4b8afad12c58a55c413aeb7979de3a12d41861c1e655812758596dd515b2f42",
       "edits": [
         {
           "start": 50,
@@ -563447,6 +563861,13 @@
           "renamed": "setBounds"
         },
         {
+          "start": 1727,
+          "end": 1729,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 1738,
           "end": 1746,
           "symbol": "F:mh.field_Ib:I",
@@ -563461,11 +563882,25 @@
           "renamed": "setBounds"
         },
         {
+          "start": 1787,
+          "end": 1789,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 1798,
           "end": 1806,
           "symbol": "F:mh.field_cb:I",
           "original": "field_cb",
           "renamed": "height"
+        },
+        {
+          "start": 1815,
+          "end": 1817,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 1826,
@@ -563545,6 +563980,13 @@
           "renamed": "setBounds"
         },
         {
+          "start": 2180,
+          "end": 2182,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 2191,
           "end": 2199,
           "symbol": "F:mh.field_Ib:I",
@@ -563587,6 +564029,13 @@
           "renamed": "height"
         },
         {
+          "start": 2371,
+          "end": 2373,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 2382,
           "end": 2390,
           "symbol": "F:mh.field_Ib:I",
@@ -563599,6 +564048,13 @@
           "symbol": "M:mh.a(IIIIB)V",
           "original": "a",
           "renamed": "setBounds"
+        },
+        {
+          "start": 2432,
+          "end": 2434,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 2443,
@@ -563629,11 +564085,25 @@
           "renamed": "setBounds"
         },
         {
+          "start": 2560,
+          "end": 2562,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 2571,
           "end": 2579,
           "symbol": "F:mh.field_cb:I",
           "original": "field_cb",
           "renamed": "height"
+        },
+        {
+          "start": 2600,
+          "end": 2602,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 2611,
@@ -573442,7 +573912,7 @@
       "original": "cp.java",
       "renamed": "WidgetLayerStack.java",
       "inputSha256": "4b704946f7d1a3a12952c7e037a867724d6c2d8ead54ce8763394c76e202a71d",
-      "outputSha256": "29c47f598c8749a57dd614837cf0edecd920a911326de09ce15e91967a31fc2e",
+      "outputSha256": "d9db9e663d6d9222a79d0ec3af09137b907f712c0d8d1e3e04ef748f5f585c54",
       "edits": [
         {
           "start": 50,
@@ -573611,6 +574081,20 @@
           "symbol": "M:qn.a(Z)Lwg;",
           "original": "a",
           "renamed": "openFullscreenCanvas"
+        },
+        {
+          "start": 735,
+          "end": 737,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 738,
+          "end": 739,
+          "symbol": "M:qm.a(II)V",
+          "original": "a",
+          "renamed": "notifyBrowserResize"
         },
         {
           "start": 774,
@@ -577321,7 +577805,7 @@
       "original": "cq.java",
       "renamed": "RankingsRequest.java",
       "inputSha256": "64596c3152f369f509e45c4bbe8b2b5690555ea78844e8108a52ebb4e437d5aa",
-      "outputSha256": "108339cb9bd2c74054806cd7830afbb72e453193a2cbf6cc2d44d80eb7fa5c0d",
+      "outputSha256": "b6b6bf3c57293a387aefc006dc4c780d45b2a8a1caaad1a680f1e0d72da72771",
       "edits": [
         {
           "start": 50,
@@ -577903,6 +578387,13 @@
           "symbol": "C:tm",
           "original": "tm",
           "renamed": "OutgoingPacketHelpers"
+        },
+        {
+          "start": 3029,
+          "end": 3031,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 3056,
@@ -583988,7 +584479,7 @@
       "original": "da.java",
       "renamed": "ArchiveNetworkRequest.java",
       "inputSha256": "b7092b4fc52e65920d023efeaba958b8560b0f01a847a165b18f9f8600c1de97",
-      "outputSha256": "0ebe28bce56a1e0351e895fbc24468369f5e74b14d69c102bf6c290953f09517",
+      "outputSha256": "280e9a9604bfb2e6b10425282cbebcf0693e7db279e8bca587b7db972690742e",
       "edits": [
         {
           "start": 50,
@@ -584236,6 +584727,20 @@
           "renamed": "OpacityWidget"
         },
         {
+          "start": 2072,
+          "end": 2074,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 2075,
+          "end": 2076,
+          "symbol": "M:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "evaluateScript"
+        },
+        {
           "start": 2347,
           "end": 2349,
           "symbol": "C:td",
@@ -584451,6 +584956,13 @@
           "symbol": "M:mf.a(I)Z",
           "original": "a",
           "renamed": "ensureAllGroupsAvailable"
+        },
+        {
+          "start": 4704,
+          "end": 4706,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 4736,
@@ -599635,7 +600147,7 @@
       "original": "dj.java",
       "renamed": "GameClock.java",
       "inputSha256": "d6c9c6e04cff6f350c26d619fb265594900adeaeab015206d8e6bf0388e9af34",
-      "outputSha256": "9b90ced274573730a7f9d6a9260b8f349429acf1047112ac1ba60ab98623ef3b",
+      "outputSha256": "51aad66099d2381c28e84e2e86e594b49d39f15e0a9b3268bb5a1000d182b6e9",
       "edits": [
         {
           "start": 53,
@@ -599895,6 +600407,20 @@
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "GameClock"
+        },
+        {
+          "start": 3456,
+          "end": 3458,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 3459,
+          "end": 3460,
+          "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunctionWithoutArguments"
         },
         {
           "start": 3512,
@@ -662696,7 +663222,7 @@
       "original": "fr.java",
       "renamed": "Mesh3D.java",
       "inputSha256": "0cd70bde2fb8c24810a34becf8c4851905d8155b4604028de4b9bf727af97ebb",
-      "outputSha256": "bb8e52ac673e0dfc54fcca133d91b6f9cf7f68345a28c685c0061b26202a2103",
+      "outputSha256": "e914366cb3d575ce40f7d6d1dc34c3836bc4540b5a3209c482be1ee2cdcc4361",
       "edits": [
         {
           "start": 50,
@@ -664748,6 +665274,13 @@
           "symbol": "F:ag.field_D:[Ljava/lang/String;",
           "original": "field_D",
           "renamed": "buttonLabels"
+        },
+        {
+          "start": 5058,
+          "end": 5060,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 5115,
@@ -676534,7 +677067,7 @@
       "original": "gn.java",
       "renamed": "MultiplayerExitScreen.java",
       "inputSha256": "bd4dc3f52f770cf1555cd48fff2fb6582c3ba9677c2b9d0ef28cfbc0b6e20ec3",
-      "outputSha256": "fd56666f06c39caf288af2ea75e86a26c54710b71904de7e363f1521ae24bcdb",
+      "outputSha256": "21d8711be6336a8b8e099786f01dd1ac6db17405c49f31deef3a9e8ff6b9c85e",
       "edits": [
         {
           "start": 50,
@@ -677438,6 +677971,13 @@
           "symbol": "F:ma.field_I:Lac;",
           "original": "field_I",
           "renamed": "emailAvailabilityRequest"
+        },
+        {
+          "start": 3165,
+          "end": 3167,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 3168,
@@ -693899,7 +694439,7 @@
       "original": "hg.java",
       "renamed": "DisplayModeInfo.java",
       "inputSha256": "825e76ddeb99e3c62f1874cea2f296e8925607be8647a9f1ecc645df4d984772",
-      "outputSha256": "b75711e288f8660a5afb16a52ab942fc912071d309d583fa684fc067356c2c77",
+      "outputSha256": "a330cb424661e5c961a00b4723d48721d2d1c6c368843afa64920c765b6665af",
       "edits": [
         {
           "start": 50,
@@ -694117,6 +694657,13 @@
           "symbol": "F:ma.field_I:Lac;",
           "original": "field_I",
           "renamed": "emailAvailabilityRequest"
+        },
+        {
+          "start": 2608,
+          "end": 2610,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 2611,
@@ -700812,7 +701359,7 @@
       "original": "hk.java",
       "renamed": "LoginPanel.java",
       "inputSha256": "f4d81ec9d202ff695813ca35852fed8756fde17ce2042c0bb6ce121e34719928",
-      "outputSha256": "0bd158820d948e4c5e196a007b32993fef40b875b4cd6336a616060d45891028",
+      "outputSha256": "0adfa89530274b731a02be77e2d3e91e2ace74eb9586c60859d6d25ccc79734d",
       "edits": [
         {
           "start": 50,
@@ -701478,6 +702025,13 @@
           "symbol": "C:rg",
           "original": "rg",
           "renamed": "QuickChatPhraseRegistry"
+        },
+        {
+          "start": 3559,
+          "end": 3561,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 3586,
@@ -731258,7 +731812,7 @@
       "original": "ij.java",
       "renamed": "GameUiController.java",
       "inputSha256": "339c7bc70a1ba21de91fa145135ab1baa57f171c2de6bb0204975e8531f8a5a5",
-      "outputSha256": "a19fdea3b0ddf66c3e651bc65136feb8cf236485b9a7b75875c84adbe5d2a07b",
+      "outputSha256": "bc177f9738015f8c9e4d16be22349c87bb26318014417a310e9aaeb16e62c2f2",
       "edits": [
         {
           "start": 50,
@@ -733172,6 +733726,13 @@
           "renamed": "IntHistoryBuffer"
         },
         {
+          "start": 5800,
+          "end": 5802,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 5821,
           "end": 5823,
           "symbol": "C:bh",
@@ -733198,6 +733759,13 @@
           "symbol": "C:hp",
           "original": "hp",
           "renamed": "IntHistoryBuffer"
+        },
+        {
+          "start": 5866,
+          "end": 5868,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 5911,
@@ -743236,10 +743804,158 @@
     },
     {
       "original": "iq.java",
-      "renamed": "iq.java",
+      "renamed": "MicrosoftDirectSoundInitializer.java",
       "inputSha256": "778006cde2192afb094d75a593a0009d78c594b94e48732bc38549214ae19e5b",
-      "outputSha256": "778006cde2192afb094d75a593a0009d78c594b94e48732bc38549214ae19e5b",
-      "edits": []
+      "outputSha256": "3aacc81c7e056fb417cb1e12a5715a696ebb233b24b549ede251ae5485b58c3c",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:iq",
+          "original": "iq",
+          "renamed": "MicrosoftDirectSoundInitializer"
+        },
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:pc",
+          "original": "pc",
+          "renamed": "DirectSoundInitializerMarker"
+        },
+        {
+          "start": 111,
+          "end": 118,
+          "symbol": "F:iq.field_a:[Lcom/ms/directX/DSBufferDesc;",
+          "original": "field_a",
+          "renamed": "bufferDescriptors"
+        },
+        {
+          "start": 159,
+          "end": 166,
+          "symbol": "F:iq.field_b:[Lcom/ms/directX/DSCursors;",
+          "original": "field_b",
+          "renamed": "bufferCursors"
+        },
+        {
+          "start": 180,
+          "end": 182,
+          "symbol": "M:iq.<init>()V",
+          "original": "iq",
+          "renamed": "MicrosoftDirectSoundInitializer"
+        },
+        {
+          "start": 216,
+          "end": 220,
+          "symbol": "L:iq.<init>()V#0",
+          "original": "var1",
+          "renamed": "descriptorIndex"
+        },
+        {
+          "start": 238,
+          "end": 251,
+          "symbol": "L:iq.<init>()V#1",
+          "original": "var1Lifetime1",
+          "renamed": "cursorIndex"
+        },
+        {
+          "start": 266,
+          "end": 273,
+          "symbol": "F:iq.field_a:[Lcom/ms/directX/DSBufferDesc;",
+          "original": "field_a",
+          "renamed": "bufferDescriptors"
+        },
+        {
+          "start": 325,
+          "end": 332,
+          "symbol": "F:iq.field_b:[Lcom/ms/directX/DSCursors;",
+          "original": "field_b",
+          "renamed": "bufferCursors"
+        },
+        {
+          "start": 403,
+          "end": 414,
+          "symbol": "L:iq.<init>()V#2",
+          "original": "discarded$0",
+          "renamed": "discardedDirectSound"
+        },
+        {
+          "start": 487,
+          "end": 498,
+          "symbol": "L:iq.<init>()V#3",
+          "original": "discarded$1",
+          "renamed": "discardedWaveFormat"
+        },
+        {
+          "start": 549,
+          "end": 553,
+          "symbol": "L:iq.<init>()V#0",
+          "original": "var1",
+          "renamed": "descriptorIndex"
+        },
+        {
+          "start": 559,
+          "end": 563,
+          "symbol": "L:iq.<init>()V#0",
+          "original": "var1",
+          "renamed": "descriptorIndex"
+        },
+        {
+          "start": 569,
+          "end": 573,
+          "symbol": "L:iq.<init>()V#0",
+          "original": "var1",
+          "renamed": "descriptorIndex"
+        },
+        {
+          "start": 594,
+          "end": 601,
+          "symbol": "F:iq.field_a:[Lcom/ms/directX/DSBufferDesc;",
+          "original": "field_a",
+          "renamed": "bufferDescriptors"
+        },
+        {
+          "start": 602,
+          "end": 606,
+          "symbol": "L:iq.<init>()V#0",
+          "original": "var1",
+          "renamed": "descriptorIndex"
+        },
+        {
+          "start": 668,
+          "end": 681,
+          "symbol": "L:iq.<init>()V#1",
+          "original": "var1Lifetime1",
+          "renamed": "cursorIndex"
+        },
+        {
+          "start": 687,
+          "end": 700,
+          "symbol": "L:iq.<init>()V#1",
+          "original": "var1Lifetime1",
+          "renamed": "cursorIndex"
+        },
+        {
+          "start": 706,
+          "end": 719,
+          "symbol": "L:iq.<init>()V#1",
+          "original": "var1Lifetime1",
+          "renamed": "cursorIndex"
+        },
+        {
+          "start": 740,
+          "end": 747,
+          "symbol": "F:iq.field_b:[Lcom/ms/directX/DSCursors;",
+          "original": "field_b",
+          "renamed": "bufferCursors"
+        },
+        {
+          "start": 748,
+          "end": 761,
+          "symbol": "L:iq.<init>()V#1",
+          "original": "var1Lifetime1",
+          "renamed": "cursorIndex"
+        }
+      ]
     },
     {
       "original": "j.java",
@@ -798931,7 +799647,7 @@
       "original": "ke.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "b309c005eee6446bfca63286a71b6f6abb3f7e0cc019e365ef498c71d8e36450",
-      "outputSha256": "540ebf3e3608be5a4730609d9f5cb267e0236397811a3381b83070b494e1f78e",
+      "outputSha256": "cd4d2f30b32b4ee243f1a71a6fb110160c7789cec39264d75f1dfc162b6e0116",
       "edits": [
         {
           "start": 81,
@@ -801473,6 +802189,20 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 29471,
+          "end": 29473,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 29474,
+          "end": 29475,
+          "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunctionWithoutArguments"
         },
         {
           "start": 29495,
@@ -805781,7 +806511,7 @@
       "original": "ki.java",
       "renamed": "BackgroundScene.java",
       "inputSha256": "bd44bf5992bb49320ddaddee6b8405e3d653374fb977a52899a3a4e0f43b743d",
-      "outputSha256": "a6039c84a654ccc33efa5afcdbf4231c59f48e7b57abff020b0d492580ac7037",
+      "outputSha256": "74fc03e1aebd681546c5a47fbbc0b1b2f15c546a622c0bf5908b7b3d3bf87ad4",
       "edits": [
         {
           "start": 53,
@@ -807266,6 +807996,20 @@
           "symbol": "C:ki",
           "original": "ki",
           "renamed": "BackgroundScene"
+        },
+        {
+          "start": 5273,
+          "end": 5275,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 5276,
+          "end": 5277,
+          "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunctionWithoutArguments"
         },
         {
           "start": 5329,
@@ -897076,7 +897820,7 @@
       "original": "na.java",
       "renamed": "DateFieldsWidget.java",
       "inputSha256": "5a8704376de500d107a61d89176da08c7c0961b70356626dc95f6f8cecbcbc74",
-      "outputSha256": "024ca4c132cafa342378fa652b5a1710f61548e93794cd529fc41ace999b5a39",
+      "outputSha256": "d017c2c4f9d17ab82508eae588c8de6edc3c975aaacec2508ba69b65eba3932e",
       "edits": [
         {
           "start": 50,
@@ -898829,6 +899573,13 @@
           "renamed": "formatIndexedText"
         },
         {
+          "start": 7803,
+          "end": 7805,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 7845,
           "end": 7846,
           "symbol": "C:m",
@@ -898883,6 +899634,13 @@
           "symbol": "M:mh.a(ZI)V",
           "original": "a",
           "renamed": "updateRoot"
+        },
+        {
+          "start": 8155,
+          "end": 8157,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 8235,
@@ -899002,6 +899760,13 @@
           "symbol": "M:mh.a(ZI)V",
           "original": "a",
           "renamed": "updateRoot"
+        },
+        {
+          "start": 8843,
+          "end": 8845,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 8923,
@@ -902160,10 +902925,179 @@
     },
     {
       "original": "ne.java",
-      "renamed": "ne.java",
+      "renamed": "AppletJavaScriptBridge.java",
       "inputSha256": "f589fb4597a763b1e2efe6e8844833bba9ca2bb370ecd985c0b14fd71652aa35",
-      "outputSha256": "f589fb4597a763b1e2efe6e8844833bba9ca2bb370ecd985c0b14fd71652aa35",
-      "edits": []
+      "outputSha256": "642a60571df51f54b97f40431cb5ba77358f16abc66d8132e6e56575033bc41d",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "symbol": "M:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "evaluateScript"
+        },
+        {
+          "start": 98,
+          "end": 104,
+          "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "applet"
+        },
+        {
+          "start": 113,
+          "end": 119,
+          "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#1",
+          "original": "param1",
+          "renamed": "script"
+        },
+        {
+          "start": 125,
+          "end": 131,
+          "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 164,
+          "end": 170,
+          "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 257,
+          "end": 263,
+          "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "applet"
+        },
+        {
+          "start": 270,
+          "end": 276,
+          "symbol": "P:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V#1",
+          "original": "param1",
+          "renamed": "script"
+        },
+        {
+          "start": 310,
+          "end": 311,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
+        },
+        {
+          "start": 321,
+          "end": 327,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#0",
+          "original": "param0",
+          "renamed": "arguments"
+        },
+        {
+          "start": 333,
+          "end": 339,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 360,
+          "end": 366,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#2",
+          "original": "param2",
+          "renamed": "applet"
+        },
+        {
+          "start": 375,
+          "end": 381,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#3",
+          "original": "param3",
+          "renamed": "functionName"
+        },
+        {
+          "start": 414,
+          "end": 420,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 525,
+          "end": 531,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#2",
+          "original": "param2",
+          "renamed": "applet"
+        },
+        {
+          "start": 538,
+          "end": 544,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#3",
+          "original": "param3",
+          "renamed": "functionName"
+        },
+        {
+          "start": 546,
+          "end": 552,
+          "symbol": "P:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;#0",
+          "original": "param0",
+          "renamed": "arguments"
+        },
+        {
+          "start": 586,
+          "end": 587,
+          "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunctionWithoutArguments"
+        },
+        {
+          "start": 595,
+          "end": 601,
+          "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#0",
+          "original": "param0",
+          "renamed": "functionName"
+        },
+        {
+          "start": 607,
+          "end": 613,
+          "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 634,
+          "end": 640,
+          "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#2",
+          "original": "param2",
+          "renamed": "applet"
+        },
+        {
+          "start": 673,
+          "end": 679,
+          "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 786,
+          "end": 792,
+          "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#2",
+          "original": "param2",
+          "renamed": "applet"
+        },
+        {
+          "start": 799,
+          "end": 805,
+          "symbol": "P:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;#0",
+          "original": "param0",
+          "renamed": "functionName"
+        }
+      ]
     },
     {
       "original": "nf.java",
@@ -922428,7 +923362,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "d80e005590ea9b60f77506b23936148857dea69e4847fae761e1c1077ad81264",
+      "outputSha256": "5a0cabd363293252ee1d926801f9a851e4a948508012516bd2ddc34f269888f5",
       "edits": [
         {
           "start": 50,
@@ -923297,6 +924231,13 @@
           "symbol": "M:rd.a(Ljava/lang/String;[Ljava/lang/String;B)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatIndexedText"
+        },
+        {
+          "start": 4308,
+          "end": 4310,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 4443,
@@ -924566,6 +925507,13 @@
           "renamed": "MenuButton"
         },
         {
+          "start": 20476,
+          "end": 20478,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 20489,
           "end": 20490,
           "symbol": "C:q",
@@ -924613,6 +925561,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 21487,
+          "end": 21489,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 21500,
@@ -924893,6 +925848,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 25390,
+          "end": 25392,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 25403,
@@ -928724,6 +929686,13 @@
           "renamed": "MenuButton"
         },
         {
+          "start": 82493,
+          "end": 82495,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 82506,
           "end": 82507,
           "symbol": "C:q",
@@ -929891,6 +930860,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 102807,
+          "end": 102809,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 102820,
@@ -932187,6 +933163,13 @@
           "symbol": "M:rd.a(Ljava/lang/String;[Ljava/lang/String;B)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatIndexedText"
+        },
+        {
+          "start": 134175,
+          "end": 134177,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 134200,
@@ -949725,7 +950708,7 @@
       "original": "og.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "71899f71a52c83eb6ccb0dee0cc74938ae731561777c8a4d21529059d9abf91c",
-      "outputSha256": "549ec3960cd44823a1d494e86a50ae1dce98996d32b3dd7a08746f3deadbe6c3",
+      "outputSha256": "6d44dae836866e9528d96d7c0a53434ec2d9a775a238d80b020761421c4614e7",
       "edits": [
         {
           "start": 50,
@@ -954261,6 +955244,13 @@
           "renamed": "MenuButton"
         },
         {
+          "start": 44194,
+          "end": 44196,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 44207,
           "end": 44208,
           "symbol": "C:q",
@@ -957810,7 +958800,7 @@
       "original": "oj.java",
       "renamed": "RichTextLayout.java",
       "inputSha256": "7b805a50e785f8de8547520c3786dc544d9d1a5c8c3f2ed1356432ae8b39c367",
-      "outputSha256": "9269e2a2692bb711bab4cfb446afe65ee1f053df7b1bd3ce330310180e10a024",
+      "outputSha256": "29fde630b868dc833b16c6f4a72b6772871ebe6f45f01b4c9fc67846fc1e5617",
       "edits": [
         {
           "start": 50,
@@ -958777,6 +959767,13 @@
           "symbol": "M:mh.a(ZZ)V",
           "original": "a",
           "renamed": "drawRoot"
+        },
+        {
+          "start": 6161,
+          "end": 6163,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 6262,
@@ -962615,7 +963612,7 @@
       "original": "om.java",
       "renamed": "LobbyGame.java",
       "inputSha256": "b1995cdbc88a8f3d6c58ba5bf8a9c3c896876a82dcc925d041b10721a391aba6",
-      "outputSha256": "84b21d811f9e591ccb66e941616a3fe2d0ee2bb5b9d166f8633747ec4285c4db",
+      "outputSha256": "f940cd251364a9d62d4aca76b8339e96e9016ea2601713574e3695fed6f49130",
       "edits": [
         {
           "start": 50,
@@ -964704,6 +965701,13 @@
           "renamed": "formatIndexedText"
         },
         {
+          "start": 7858,
+          "end": 7860,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 7905,
           "end": 7911,
           "symbol": "P:om.a(ZBIZLj;IIZLak;)V#4",
@@ -966762,6 +967766,13 @@
           "renamed": "formatIndexedText"
         },
         {
+          "start": 14133,
+          "end": 14135,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 14180,
           "end": 14186,
           "symbol": "P:om.$cfr$intArgs$a$687785aae666(ZIIZLj;IIZLak;)V#4",
@@ -967383,7 +968394,7 @@
       "original": "on.java",
       "renamed": "Brick.java",
       "inputSha256": "e2ea06abf1d907ffb3f1df2b918920b6464709bc1e74174e0fbf95abf27c359f",
-      "outputSha256": "26f3d3768ff1a96ca2c4603828749e9f37481badb81f113d320c0975a3948e5f",
+      "outputSha256": "806a6a428a4665b844b2ba85728abb8778b19ff8865eea5b6d8b6b4764b329ee",
       "edits": [
         {
           "start": 50,
@@ -970051,6 +971062,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 14225,
+          "end": 14227,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 14236,
@@ -977062,10 +978080,18 @@
     },
     {
       "original": "pc.java",
-      "renamed": "pc.java",
+      "renamed": "DirectSoundInitializerMarker.java",
       "inputSha256": "c05779c98410fdc9ce3b7f9f6e1674969fd2ca206628b7b4fa44514d99e04f85",
-      "outputSha256": "c05779c98410fdc9ce3b7f9f6e1674969fd2ca206628b7b4fa44514d99e04f85",
-      "edits": []
+      "outputSha256": "c1b657f78fb9555e3dfd65a66e6eef66988040e6278d93a75df9abca44d9b434",
+      "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:pc",
+          "original": "pc",
+          "renamed": "DirectSoundInitializerMarker"
+        }
+      ]
     },
     {
       "original": "pd.java",
@@ -980608,10 +981634,18 @@
     },
     {
       "original": "ph.java",
-      "renamed": "ph.java",
+      "renamed": "BirthDateValidationMarker.java",
       "inputSha256": "25a9d22821aeede316cadbddb14ce263a6073a4da6e4db3a875ce01b0a533fc4",
-      "outputSha256": "25a9d22821aeede316cadbddb14ce263a6073a4da6e4db3a875ce01b0a533fc4",
-      "edits": []
+      "outputSha256": "e0594dcd69491e234b5a429a4143ba34480e95216e8631d11b3266641c4d928c",
+      "edits": [
+        {
+          "start": 48,
+          "end": 50,
+          "symbol": "C:ph",
+          "original": "ph",
+          "renamed": "BirthDateValidationMarker"
+        }
+      ]
     },
     {
       "original": "pi.java",
@@ -998415,7 +999449,7 @@
       "original": "qb.java",
       "renamed": "FarmBackground.java",
       "inputSha256": "a98512afbda00437b5a429b569469317260dff4b25290584c968fc576e126e6a",
-      "outputSha256": "54d6bc1372cf499f029f7991f12a972b4f47cc6a264bb352b9d8efa7ebe4c552",
+      "outputSha256": "bad93a7c2fc5b6a1cce57e22d9e69ee11425fc172fc85ff6b0e104d75fe7e8c4",
       "edits": [
         {
           "start": 50,
@@ -998691,6 +999725,13 @@
           "renamed": "destinationY"
         },
         {
+          "start": 879,
+          "end": 881,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 882,
           "end": 889,
           "symbol": "F:rm.field_d:[I",
@@ -998908,6 +999949,13 @@
           "renamed": "destinationY"
         },
         {
+          "start": 1394,
+          "end": 1396,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 1397,
           "end": 1404,
           "symbol": "F:rm.field_f:Ljp;",
@@ -998948,6 +999996,13 @@
           "symbol": "P:qb.a(ZIIII)V#2",
           "original": "param2",
           "renamed": "destinationY"
+        },
+        {
+          "start": 1476,
+          "end": 1478,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 1479,
@@ -999195,6 +1000250,13 @@
           "renamed": "farmNearSprite"
         },
         {
+          "start": 3404,
+          "end": 3406,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 3407,
           "end": 3414,
           "symbol": "F:rm.field_f:Ljp;",
@@ -999298,6 +1000360,13 @@
           "symbol": "F:i.field_m:Lmf;",
           "original": "field_m",
           "renamed": "backgroundSpriteArchive"
+        },
+        {
+          "start": 3703,
+          "end": 3705,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 3706,
@@ -999440,6 +1000509,13 @@
           "renamed": "WidgetTextLayout"
         },
         {
+          "start": 4031,
+          "end": 4033,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 4034,
           "end": 4041,
           "symbol": "F:rm.field_f:Ljp;",
@@ -999536,6 +1000612,13 @@
           "symbol": "P:qb.a(BIII)V#3",
           "original": "param3",
           "renamed": "destinationY"
+        },
+        {
+          "start": 4250,
+          "end": 4252,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 4253,
@@ -1002570,7 +1003653,7 @@
       "original": "qf.java",
       "renamed": "RegistrationResponseDialog.java",
       "inputSha256": "77cf3477a19b72905ba69769e92d27a2e69f4eb5d0911100ee1c69e397d990fc",
-      "outputSha256": "7bdb9531492c997b17dd6cbb2501700dc02ba2d9f53924610fb4e7d9da6c2a9d",
+      "outputSha256": "eef25521f322f4a2ce797565673faaa2a27426ab6c3afa7852482004a87f6a22",
       "edits": [
         {
           "start": 50,
@@ -1002697,6 +1003780,13 @@
           "symbol": "F:pb.field_q:I",
           "original": "field_q",
           "renamed": "height"
+        },
+        {
+          "start": 459,
+          "end": 461,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 462,
@@ -1009631,7 +1010721,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "3abd5a492480b51a657af74ee88e6eb615ce623cddd624ea9083f8bb121b4119",
+      "outputSha256": "6a7724d9a323b687bb8b3f6312aa9b9959a592ed72093fad413c730a5fb4b5af",
       "edits": [
         {
           "start": 50,
@@ -1012777,6 +1013867,13 @@
           "renamed": "OutgoingPacketHelpers"
         },
         {
+          "start": 11304,
+          "end": 11306,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 11376,
           "end": 11378,
           "symbol": "C:ek",
@@ -1012796,6 +1013893,20 @@
           "symbol": "C:tm",
           "original": "tm",
           "renamed": "OutgoingPacketHelpers"
+        },
+        {
+          "start": 11426,
+          "end": 11428,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 11439,
+          "end": 11441,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 11509,
@@ -1012819,6 +1013930,20 @@
           "renamed": "OutgoingPacketHelpers"
         },
         {
+          "start": 11559,
+          "end": 11561,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 11572,
+          "end": 11574,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 11642,
           "end": 11644,
           "symbol": "C:ek",
@@ -1012831,6 +1013956,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "FullscreenFailureDialog"
+        },
+        {
+          "start": 11670,
+          "end": 11672,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 11692,
@@ -1012859,6 +1013991,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "FullscreenFailureDialog"
+        },
+        {
+          "start": 11803,
+          "end": 11805,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 11825,
@@ -1016760,6 +1017899,13 @@
           "renamed": "OutgoingPacketHelpers"
         },
         {
+          "start": 27920,
+          "end": 27922,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 27992,
           "end": 27994,
           "symbol": "C:ek",
@@ -1016779,6 +1017925,34 @@
           "symbol": "C:tm",
           "original": "tm",
           "renamed": "OutgoingPacketHelpers"
+        },
+        {
+          "start": 28042,
+          "end": 28044,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 28055,
+          "end": 28057,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 28125,
+          "end": 28127,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 28138,
+          "end": 28140,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 28164,
@@ -1016830,6 +1018004,13 @@
           "renamed": "FullscreenFailureDialog"
         },
         {
+          "start": 28325,
+          "end": 28327,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 28391,
           "end": 28393,
           "symbol": "C:tm",
@@ -1016856,6 +1018037,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "FullscreenFailureDialog"
+        },
+        {
+          "start": 28458,
+          "end": 28460,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 28492,
@@ -1019243,6 +1020431,13 @@
           "symbol": "C:tm",
           "original": "tm",
           "renamed": "OutgoingPacketHelpers"
+        },
+        {
+          "start": 39672,
+          "end": 39674,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 39737,
@@ -1027804,10 +1028999,17 @@
     },
     {
       "original": "qm.java",
-      "renamed": "qm.java",
+      "renamed": "BrowserResizeNotificationHelpers.java",
       "inputSha256": "219399bed0194ff136f44c3edb9a8edac4edb98107d162907c8199ac1598a25a",
-      "outputSha256": "7407e2fe08f4dd8272a954b74b4056cec461051c29d33d33f3899bc6bcdeadf4",
+      "outputSha256": "2abfac22b435d69ffa6b52dc03f0839277d09cd62d1a6d832f7c6c8b7d68fd28",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
         {
           "start": 66,
           "end": 68,
@@ -1027816,11 +1029018,151 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 467,
+          "end": 468,
+          "symbol": "M:qm.a(II)V",
+          "original": "a",
+          "renamed": "notifyBrowserResize"
+        },
+        {
+          "start": 473,
+          "end": 479,
+          "symbol": "P:qm.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 485,
+          "end": 491,
+          "symbol": "P:qm.a(II)V#1",
+          "original": "param1",
+          "renamed": "mode"
+        },
+        {
+          "start": 529,
+          "end": 554,
+          "symbol": "L:qm.a(II)V#0",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 577,
+          "end": 581,
+          "symbol": "L:qm.a(II)V#1",
+          "original": "var2",
+          "renamed": "guardCalculation"
+        },
+        {
+          "start": 607,
+          "end": 611,
+          "symbol": "L:qm.a(II)V#2",
+          "original": "var3",
+          "renamed": "ignoredBridgeFailure"
+        },
+        {
+          "start": 630,
+          "end": 634,
+          "symbol": "L:qm.a(II)V#1",
+          "original": "var2",
+          "renamed": "guardCalculation"
+        },
+        {
+          "start": 649,
+          "end": 655,
+          "symbol": "P:qm.a(II)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 692,
+          "end": 694,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 695,
+          "end": 696,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
+        },
+        {
+          "start": 722,
+          "end": 728,
+          "symbol": "P:qm.a(II)V#1",
+          "original": "param1",
+          "renamed": "mode"
+        },
+        {
           "start": 736,
           "end": 738,
           "symbol": "C:uc",
           "original": "uc",
           "renamed": "EmailConfirmationValidator"
+        },
+        {
+          "start": 806,
+          "end": 832,
+          "symbol": "L:qm.a(II)V#3",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtBridgeFailure"
+        },
+        {
+          "start": 848,
+          "end": 873,
+          "symbol": "L:qm.a(II)V#0",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 876,
+          "end": 902,
+          "symbol": "L:qm.a(II)V#3",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtBridgeFailure"
+        },
+        {
+          "start": 916,
+          "end": 920,
+          "symbol": "L:qm.a(II)V#2",
+          "original": "var3",
+          "renamed": "ignoredBridgeFailure"
+        },
+        {
+          "start": 923,
+          "end": 948,
+          "symbol": "L:qm.a(II)V#0",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 1004,
+          "end": 1032,
+          "symbol": "L:qm.a(II)V#4",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 1052,
+          "end": 1080,
+          "symbol": "L:qm.a(II)V#4",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 1109,
+          "end": 1135,
+          "symbol": "L:qm.a(II)V#5",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
+        },
+        {
+          "start": 1176,
+          "end": 1202,
+          "symbol": "L:qm.a(II)V#5",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
         }
       ]
     },
@@ -1046507,7 +1047849,7 @@
       "original": "rg.java",
       "renamed": "QuickChatPhraseRegistry.java",
       "inputSha256": "8bcb1e2384c59dc0d1aebac80175e31ae1bbcc44768e34e0857f8090c08c96b6",
-      "outputSha256": "277e58b24e2e9efd4313a0c21de3615b526ad3300f0e411b567ef41031669401",
+      "outputSha256": "2fc1a69ff179f7525d3de83e8bd8149bb2c6be6841e5a2c15308d8291aa71912",
       "edits": [
         {
           "start": 50,
@@ -1047089,6 +1048431,13 @@
           "symbol": "P:rg.<init>(ILmf;Lmf;Lbp;)V#2",
           "original": "param2",
           "renamed": "extendedArchive"
+        },
+        {
+          "start": 2547,
+          "end": 2549,
+          "symbol": "C:bp",
+          "original": "bp",
+          "renamed": "QuickChatContextMarker"
         },
         {
           "start": 2550,
@@ -1051495,10 +1052844,24 @@
     },
     {
       "original": "rm.java",
-      "renamed": "rm.java",
+      "renamed": "FontRequestHelpers.java",
       "inputSha256": "b7d7c1701eeb700132fac23eb4bf976c13b2a69f106fc287ae4916c4c558cf4b",
-      "outputSha256": "405cec2ef0a9bff8e79ea5bc357a519e939f16aa1549199de9aa95ca0b929495",
+      "outputSha256": "b2a117b54b35375f2b7c6d0f1fccf147a772d93b237047a9b1ccf220f335a8d7",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
+          "start": 64,
+          "end": 66,
+          "symbol": "C:bp",
+          "original": "bp",
+          "renamed": "QuickChatContextMarker"
+        },
         {
           "start": 107,
           "end": 109,
@@ -1051976,11 +1053339,53 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 2034,
+          "end": 2038,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#0",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
           "start": 2055,
           "end": 2057,
           "symbol": "C:ac",
           "original": "ac",
           "renamed": "EmailAvailabilityRequest"
+        },
+        {
+          "start": 2058,
+          "end": 2069,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#1",
+          "original": "stackIn_3_0",
+          "renamed": "request"
+        },
+        {
+          "start": 2103,
+          "end": 2114,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#2",
+          "original": "stackIn_6_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 2145,
+          "end": 2156,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#3",
+          "original": "stackIn_6_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 2180,
+          "end": 2191,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#4",
+          "original": "stackIn_7_2",
+          "renamed": "emailSummary"
+        },
+        {
+          "start": 2225,
+          "end": 2250,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
         },
         {
           "start": 2287,
@@ -1051997,6 +1053402,13 @@
           "renamed": "farmBackgroundColors"
         },
         {
+          "start": 2367,
+          "end": 2378,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#1",
+          "original": "stackIn_3_0",
+          "renamed": "request"
+        },
+        {
           "start": 2385,
           "end": 2387,
           "symbol": "C:ac",
@@ -1052011,11 +1053423,88 @@
           "renamed": "email"
         },
         {
+          "start": 2414,
+          "end": 2425,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#1",
+          "original": "stackIn_3_0",
+          "renamed": "request"
+        },
+        {
+          "start": 2471,
+          "end": 2497,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#6",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 2511,
+          "end": 2536,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 2539,
+          "end": 2565,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#6",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 2577,
+          "end": 2581,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#0",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 2584,
+          "end": 2609,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 2621,
+          "end": 2632,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#2",
+          "original": "stackIn_6_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 2635,
+          "end": 2639,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#0",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 2651,
+          "end": 2662,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#3",
+          "original": "stackIn_6_1",
+          "renamed": "contextBuilder"
+        },
+        {
           "start": 2716,
           "end": 2722,
           "symbol": "P:rm.a(Ljava/lang/String;I)Lac;#0",
           "original": "param0",
           "renamed": "email"
+        },
+        {
+          "start": 2746,
+          "end": 2757,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#4",
+          "original": "stackIn_7_2",
+          "renamed": "emailSummary"
+        },
+        {
+          "start": 2799,
+          "end": 2810,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#4",
+          "original": "stackIn_7_2",
+          "renamed": "emailSummary"
         },
         {
           "start": 2850,
@@ -1052030,6 +1053519,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 2877,
+          "end": 2888,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#2",
+          "original": "stackIn_6_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 2917,
+          "end": 2928,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#3",
+          "original": "stackIn_6_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 2937,
+          "end": 2948,
+          "symbol": "L:rm.a(Ljava/lang/String;I)Lac;#4",
+          "original": "stackIn_7_2",
+          "renamed": "emailSummary"
         },
         {
           "start": 2969,
@@ -1057453,7 +1058963,7 @@
       "original": "sa.java",
       "renamed": "InteractiveGameClient.java",
       "inputSha256": "607c5ab0057640dc6d04019daabb710459c4e76211ce68acac07edf4f7fc977f",
-      "outputSha256": "b6de984488000edd6d1b9ac638c53d94d102f989e7b6ff679bf6dc78d1e6013c",
+      "outputSha256": "71bc24d3d92d9c7d83439ee14f2840dec9f1620036847752fa89a1f0e21916bb",
       "edits": [
         {
           "start": 74,
@@ -1057909,6 +1059419,13 @@
           "symbol": "C:ai",
           "original": "ai",
           "renamed": "ParisBackground"
+        },
+        {
+          "start": 2433,
+          "end": 2435,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 2456,
@@ -1068734,7 +1070251,7 @@
       "original": "sj.java",
       "renamed": "ChatLobbyUiHelpers.java",
       "inputSha256": "80078b150c07b3277b72c50f24f2e31a3a63229821b05c75d116d3e9ba8765af",
-      "outputSha256": "170d299e61435fdebaab8f47446fd1d5379e9797790accaa50400b8f5a669e35",
+      "outputSha256": "6d76fce39fd3d6d117f4bea029e7656facd30f5a242c711ed724de451226ec4b",
       "edits": [
         {
           "start": 50,
@@ -1071094,6 +1072611,20 @@
           "symbol": "P:sj.a(Ljava/applet/Applet;BLjava/lang/String;Ljava/lang/String;J)V#4",
           "original": "param4",
           "renamed": "maxAgeSeconds"
+        },
+        {
+          "start": 5599,
+          "end": 5601,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 5602,
+          "end": 5603,
+          "symbol": "M:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "evaluateScript"
         },
         {
           "start": 5604,
@@ -1075803,7 +1077334,7 @@
       "original": "sk.java",
       "renamed": "OpacityWidget.java",
       "inputSha256": "287e4e7d36c1e90c404ba2f2e99e925d84b2c85234a884114ea8cecff4676c71",
-      "outputSha256": "215bd36429d1bc385a59692c0a24c31bec807fafc183d9195c592795971554d4",
+      "outputSha256": "c58ead0b2f3ad0ebe20775a0c6509789a393eceaf7ae87c27b087d4a03f4e814",
       "edits": [
         {
           "start": 50,
@@ -1076091,6 +1077622,13 @@
           "symbol": "C:ek",
           "original": "ek",
           "renamed": "FullscreenFailureDialog"
+        },
+        {
+          "start": 1339,
+          "end": 1341,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 1366,
@@ -1077365,7 +1078903,7 @@
       "original": "sl.java",
       "renamed": "CacheEntry.java",
       "inputSha256": "39de8a1c790e82bdf37a36715a04f2d9b74aab323b69a00586cb7f12eb46ed0f",
-      "outputSha256": "f660e8a4651ba709a947b84115265521c5792c44f8aff8315af4c37eeb031446",
+      "outputSha256": "520e58531de71cb41c53698210196db64405f440e61e0f36683e5fdfbc581039",
       "edits": [
         {
           "start": 53,
@@ -1078369,6 +1079907,13 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 5651,
+          "end": 5653,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 5668,
           "end": 5670,
           "symbol": "C:mh",
@@ -1078383,11 +1079928,25 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 5697,
+          "end": 5699,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 5708,
           "end": 5709,
           "symbol": "M:mh.a(Lmh;I)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 5736,
+          "end": 5738,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 5747,
@@ -1078481,11 +1080040,25 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 6181,
+          "end": 6183,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
+        },
+        {
           "start": 6192,
           "end": 6193,
           "symbol": "M:mh.a(Lmh;I)V",
           "original": "a",
           "renamed": "addChild"
+        },
+        {
+          "start": 6232,
+          "end": 6234,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 6243,
@@ -1101731,7 +1103304,7 @@
       "original": "td.java",
       "renamed": "VolcanicBackground.java",
       "inputSha256": "b940369342ab048f199607a9b518a3765bbd0286b1592243640d7e6d7f4bf34d",
-      "outputSha256": "fcca91084a4933ec96a5ffdfa4c381a87f0129ca4479fb61e70aabed4a9f6aab",
+      "outputSha256": "84cfc918334d969e76b58771d1ba32bfc956eb1915b8988673107ddf3b239586",
       "edits": [
         {
           "start": 50,
@@ -1103503,6 +1105076,90 @@
           "symbol": "C:hg",
           "original": "hg",
           "renamed": "DisplayModeInfo"
+        },
+        {
+          "start": 8514,
+          "end": 8516,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 8517,
+          "end": 8518,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
+        },
+        {
+          "start": 8602,
+          "end": 8604,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 8605,
+          "end": 8606,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
+        },
+        {
+          "start": 8699,
+          "end": 8701,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 8702,
+          "end": 8703,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
+        },
+        {
+          "start": 8800,
+          "end": 8802,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 8803,
+          "end": 8804,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
+        },
+        {
+          "start": 8893,
+          "end": 8895,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 8896,
+          "end": 8897,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
+        },
+        {
+          "start": 8983,
+          "end": 8985,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 8986,
+          "end": 8987,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
         },
         {
           "start": 9794,
@@ -1106942,7 +1108599,7 @@
       "original": "tg.java",
       "renamed": "PlatformServices.java",
       "inputSha256": "0da0d4db936e4a03910b5bc134333fd73e0c85c67580c6a3f1ce6d08ff7043c3",
-      "outputSha256": "c7f911ef2575f7628a1ad6c718363a0b61df8325ca2b6f983f2cda84e01335db",
+      "outputSha256": "d5674238702ad46b2e5919d68b3b05f29e8a21c70c2b9dd2bade29d08662f0b8",
       "edits": [
         {
           "start": 69,
@@ -1108993,6 +1110650,14 @@
           "symbol": "F:tg.field_r:Z",
           "original": "field_r",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 24880,
+          "end": 24882,
+          "symbol": "C:iq",
+          "original": "iq",
+          "renamed": "MicrosoftDirectSoundInitializer",
+          "kind": "class-name-literal"
         },
         {
           "start": 25157,
@@ -1135056,7 +1136721,7 @@
       "original": "ui.java",
       "renamed": "ui.java",
       "inputSha256": "8dbfb7cea9d66ad0ee5a196eb08ed0df4990072675528f7e0540c065505cc306",
-      "outputSha256": "aa7ee0b0e5c5e924b1f1095136f6aeec0194aadbd28e9b765567bb39ef144ac7",
+      "outputSha256": "0e67e3975ecf059e6c734c071097bccfd94949903ad003e5fa78ce222eedf6db",
       "edits": [
         {
           "start": 148,
@@ -1135402,6 +1137067,20 @@
           "renamed": "nowMillis"
         },
         {
+          "start": 6423,
+          "end": 6425,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 6426,
+          "end": 6427,
+          "symbol": "M:ne.a(Ljava/applet/Applet;Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "evaluateScript"
+        },
+        {
           "start": 6558,
           "end": 6560,
           "symbol": "C:td",
@@ -1135449,7 +1137128,7 @@
       "original": "uj.java",
       "renamed": "LevelList.java",
       "inputSha256": "24f3c828504851d3fa276e35f7adecb4bb8180253d852a801475f7acdb396f53",
-      "outputSha256": "1a4a08c42e814d2be27f2daff5cd1c0a81caed1e277b7c12adf63e9d93eeb62d",
+      "outputSha256": "a3c0fdd1d4e92c6c0dbb126cdf815d2ec960f563de7f5cc90f6b18cc8958b781",
       "edits": [
         {
           "start": 50,
@@ -1136556,6 +1138235,13 @@
           "symbol": "C:mi",
           "original": "mi",
           "renamed": "ContentTransitionPhase"
+        },
+        {
+          "start": 2957,
+          "end": 2959,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
         },
         {
           "start": 2969,
@@ -1152443,7 +1154129,7 @@
       "original": "uo.java",
       "renamed": "uo.java",
       "inputSha256": "5dd6608600bd503af8fd39c3e99deedc7958c328477d03ea7dbe4abc31402e9b",
-      "outputSha256": "4c8dc7f80af51f3ebe17ba458665c0f76787b6bad691157694ed96a824bd2e4f",
+      "outputSha256": "74aeed16adaef504bf7e1c709703245ae9313d1e65f3af513f32391e5a4b79a5",
       "edits": [
         {
           "start": 95,
@@ -1152864,6 +1154550,20 @@
           "symbol": "C:ni",
           "original": "ni",
           "renamed": "StateIconLabel"
+        },
+        {
+          "start": 4705,
+          "end": 4707,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 4708,
+          "end": 4709,
+          "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunctionWithoutArguments"
         },
         {
           "start": 4761,
@@ -1193347,7 +1195047,7 @@
       "original": "wn.java",
       "renamed": "FriendListUi.java",
       "inputSha256": "c68136e5d30cb8f3326c449a7e49ac2114736f5ac370fe7cc899eea056918bac",
-      "outputSha256": "093a373d06805f82e98d40452fe787fcbfde1cbe3a11337fedd75cfc5c57a6e6",
+      "outputSha256": "d47e0ad7074281addf010ec8914a252d7a7091d4eb52099ff64c586ea9be4dbd",
       "edits": [
         {
           "start": 50,
@@ -1195898,6 +1197598,13 @@
           "renamed": "formatIndexedText"
         },
         {
+          "start": 6355,
+          "end": 6357,
+          "symbol": "C:qm",
+          "original": "qm",
+          "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
           "start": 6380,
           "end": 6385,
           "symbol": "L:wn.a(ZII)Lmp;#30",
@@ -1197387,6 +1199094,13 @@
           "symbol": "L:wn.a(ILmf;Lmf;IB)Lhl;#3",
           "original": "stackIn_6_0",
           "renamed": "font"
+        },
+        {
+          "start": 12849,
+          "end": 12851,
+          "symbol": "C:rm",
+          "original": "rm",
+          "renamed": "FontRequestHelpers"
         },
         {
           "start": 12852,
@@ -1200069,7 +1201783,7 @@
       "original": "wp.java",
       "renamed": "SoundCache.java",
       "inputSha256": "e64dd26300416712ce6cf148e8f1c4cf620baa69fa3c6ca3450519ae31fa3db1",
-      "outputSha256": "d56037cfcb1b24577cf45714e367bd01322a0250b9caa0752104e84a728ef5ba",
+      "outputSha256": "6d3ac9c670009c299a726cc964c38492533ac4ef47e38ae72ee3cbb6087f0c07",
       "edits": [
         {
           "start": 50,
@@ -1202200,11 +1203914,39 @@
           "renamed": "ChocolateBackground"
         },
         {
+          "start": 12529,
+          "end": 12531,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 12532,
+          "end": 12533,
+          "symbol": "M:ne.a(Ljava/lang/String;ILjava/applet/Applet;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunctionWithoutArguments"
+        },
+        {
           "start": 12549,
           "end": 12551,
           "symbol": "C:uc",
           "original": "uc",
           "renamed": "EmailConfirmationValidator"
+        },
+        {
+          "start": 12865,
+          "end": 12867,
+          "symbol": "C:ne",
+          "original": "ne",
+          "renamed": "AppletJavaScriptBridge"
+        },
+        {
+          "start": 12868,
+          "end": 12869,
+          "symbol": "M:ne.a([Ljava/lang/Object;ILjava/applet/Applet;Ljava/lang/String;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callFunction"
         },
         {
           "start": 12883,
@@ -1209743,10 +1211485,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "2415d3121eef96aea0c80f0d4759bfb015fba3c2cbbec6c246367d83124c05e0",
+    "rulesSha256": "c8c597e3b6dde5cc119a809c2374c463e57de5105e79e8e0d3b2d8e4a0c9dd4b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "3457cf004b6d989fc394dec040b02c5aff9bf0e77dd6ce0624db79ca34e4aa43",
+    "outputTreeSha256": "f5c907f3fc468599079e8bbc3acfa063e75b7815183da001ee767325cc80a6e5",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1209761,15 +1211503,22 @@
       "overrideFamiliesChecked": 690,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
-      "classNameLiteralEdits": 10,
+      "classNameLiteralEdits": 11,
       "labelBindingsCompared": 121,
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 1625613,
-        "traceSha256": "2f0a53d6c9c90c4cf8baba7eb6852079e03a9f5d369bb80aba2b8896bd3b251e",
+        "checks": 1627044,
+        "traceSha256": "42a246695456f11842908d2711ddab1233170c299e4035f211f3c603afcfe2d2",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "isolatedJavaScriptBoundaryFixtures": true,
+        "javaScriptGuardFixtures": true,
+        "javaScriptIdentityFixtures": true,
+        "javaScriptFailureFixtures": true,
+        "browserResizeCallbackFixtures": true,
+        "emptyMarkerContractFixtures": true,
+        "directSoundInitializerFixtures": true,
         "scaledDecimalStringFixtures": true,
         "scaledDecimalOverflowFixtures": true,
         "incomingPartialCursorFixtures": true,

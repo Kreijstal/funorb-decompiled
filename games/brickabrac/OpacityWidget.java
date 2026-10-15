@@ -43,7 +43,7 @@ final class OpacityWidget extends SingleChildWidget {
           QuickChatMenu.field_Wb = 3;
           DisplayModeInfo.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(102) << 16);
           FullscreenFailureDialog.field_kb = 72;
-          qm.field_a = 40;
+          BrowserResizeNotificationHelpers.field_a = 40;
           OutgoingPacketHelpers.field_g = 11;
           localPlayerMask = (1 << localPlayerCount) - 1;
           randomSeeds = new int[localPlayerCount];

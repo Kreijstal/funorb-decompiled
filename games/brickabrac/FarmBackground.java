@@ -24,7 +24,7 @@ final class FarmBackground extends BackgroundScene {
           }
           MultiValueSliderRenderer.a(-899814320, 306, destinationX, ActivityIndicatorWidget.field_D, var6.sprite, destinationY, 2, WidgetTextLayout.field_b, scroll16, -13);
         } else {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, rm.farmBackgroundColors[colorIndex], 22953);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, FontRequestHelpers.farmBackgroundColors[colorIndex], 22953);
         }
     }
 
@@ -36,9 +36,9 @@ final class FarmBackground extends BackgroundScene {
             RegistrationResponseDialog.a(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          MultiValueSliderRenderer.a(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, rm.farmMidSprite, scroll16, 0);
+          MultiValueSliderRenderer.a(-899814320, 640, destinationX, LevelPackCard.farmNearSprite, var7.sprite, destinationY, 1, FontRequestHelpers.farmMidSprite, scroll16, 0);
         } else {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, rm.farmBackgroundColors[colorIndex], 22953);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, FontRequestHelpers.farmBackgroundColors[colorIndex], 22953);
         }
         if (!obfuscationGuard) {
           this.drawPreview((byte) -27, 96, -30, 88);
@@ -93,7 +93,7 @@ final class FarmBackground extends BackgroundScene {
         if (obfuscationGuard > -91) {
           field_u = true;
         }
-        stackIn_8_0 = (null != LevelPackCard.farmNearSprite) && (rm.farmMidSprite != null) && (MouseInput.farmFarSprite != null) && (null != MultiplayerExitScreen.farmSmallSprite);
+        stackIn_8_0 = (null != LevelPackCard.farmNearSprite) && (FontRequestHelpers.farmMidSprite != null) && (MouseInput.farmFarSprite != null) && (null != MultiplayerExitScreen.farmSmallSprite);
         return stackIn_8_0;
     }
 
@@ -102,21 +102,21 @@ final class FarmBackground extends BackgroundScene {
           return false;
         }
         LevelPackCard.farmNearSprite = pl.loadRgbSpriteByName("farm", "farm_near", (byte) 103, AchievementIcon.backgroundSpriteArchive);
-        rm.farmMidSprite = pl.loadRgbSpriteByName("farm", "farm_mid", (byte) -63, AchievementIcon.backgroundSpriteArchive);
+        FontRequestHelpers.farmMidSprite = pl.loadRgbSpriteByName("farm", "farm_mid", (byte) -63, AchievementIcon.backgroundSpriteArchive);
         MouseInput.farmFarSprite = pl.loadRgbSpriteByName("farm", "farm_far", (byte) -78, AchievementIcon.backgroundSpriteArchive);
         MultiplayerExitScreen.farmSmallSprite = pl.loadRgbSpriteByName("farm", "farm_small", (byte) 106, AchievementIcon.backgroundSpriteArchive);
         if (obfuscationGuard) {
           FarmBackground.g(-29);
         }
         ActivityIndicatorWidget.field_D = jh.a(0, LevelPackCard.farmNearSprite);
-        WidgetTextLayout.field_b = jh.a(0, rm.farmMidSprite);
+        WidgetTextLayout.field_b = jh.a(0, FontRequestHelpers.farmMidSprite);
         MainMenuScreen.field_w = jh.a(0, MouseInput.farmFarSprite);
         return true;
     }
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         if (colorIndex > -1) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, rm.farmBackgroundColors[colorIndex], 22953);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, FontRequestHelpers.farmBackgroundColors[colorIndex], 22953);
         } else {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 7829367, 22953);
         }

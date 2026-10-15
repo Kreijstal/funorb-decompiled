@@ -159,7 +159,7 @@ final class Mesh3D {
             ArrayWidgetGroup.buttonLabels[12] = ContentTransitionPhase.field_a;
           } else {
             if (IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask != 0) {
-              ArrayWidgetGroup.buttonLabels[12] = qm.field_c;
+              ArrayWidgetGroup.buttonLabels[12] = BrowserResizeNotificationHelpers.field_c;
             } else {
               if ((1 << IntArrayRequest.gameplayScreen.localPlayerId | IntArrayRequest.gameplayScreen.rematchSetupPlayerMask) != (1 << IntArrayRequest.gameplayScreen.match.playerCount) - 1) {
                 ArrayWidgetGroup.buttonLabels[12] = ResourcePreparationQueue.field_a;

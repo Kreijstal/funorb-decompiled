@@ -135,7 +135,7 @@ final class uo {
             try {
               var3 = 98 / ((89 - param1) / 35);
               var2 = "tuhstatbut";
-              var4 = (String) (ne.a("getcookies", -126, param0));
+              var4 = (String) (AppletJavaScriptBridge.callFunctionWithoutArguments("getcookies", -126, param0));
               var5 = FarmBackground.splitPreservingEmptyParts((byte) -103, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

@@ -129,7 +129,7 @@ abstract class GameClock {
                 GameClock.a(true, (java.applet.Applet) null);
               }
               var3 = var10 + "settings";
-              var4 = (String) (ne.a("getcookies", -125, param1));
+              var4 = (String) (AppletJavaScriptBridge.callFunctionWithoutArguments("getcookies", -125, param1));
               var5 = FarmBackground.splitPreservingEmptyParts((byte) 123, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

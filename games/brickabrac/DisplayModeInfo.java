@@ -71,7 +71,7 @@ final class DisplayModeInfo {
         try {
           if (LabeledWidget.emailAvailabilityRequest.isCompleted(96) &&
             !email.equals(LabeledWidget.emailAvailabilityRequest.getEmail(0))) {
-            LabeledWidget.emailAvailabilityRequest = rm.createEmailAvailabilityRequest(email, 16711935);
+            LabeledWidget.emailAvailabilityRequest = FontRequestHelpers.createEmailAvailabilityRequest(email, 16711935);
           }
           if (obfuscationGuard != 0) {
             field_g = (RgbSprite) null;

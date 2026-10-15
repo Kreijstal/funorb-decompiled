@@ -348,22 +348,22 @@ final class GameplayScreen extends GameScreen {
         }
         var5Lifetime1 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 5);
         if (var5Lifetime1 == 0) {
-          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ OutgoingPacketHelpers.field_g + qm.field_a << 16;
+          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ OutgoingPacketHelpers.field_g + BrowserResizeNotificationHelpers.field_a << 16;
         }
         if (var5Lifetime1 == 1) {
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - OutgoingPacketHelpers.field_g;
-          qm.field_a = qm.field_a - 1;
+          BrowserResizeNotificationHelpers.field_a = BrowserResizeNotificationHelpers.field_a - 1;
         }
         if (var5Lifetime1 == 2) {
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + OutgoingPacketHelpers.field_g;
-          qm.field_a = qm.field_a + 1;
+          BrowserResizeNotificationHelpers.field_a = BrowserResizeNotificationHelpers.field_a + 1;
         }
         if (var5Lifetime1 == 3) {
-          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - BrowserResizeNotificationHelpers.field_a;
           OutgoingPacketHelpers.field_g = OutgoingPacketHelpers.field_g - 1;
         }
         if (var5Lifetime1 == 4) {
-          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + BrowserResizeNotificationHelpers.field_a;
           OutgoingPacketHelpers.field_g = OutgoingPacketHelpers.field_g + 1;
         }
         if (this.networkedMatch) {
@@ -819,23 +819,23 @@ final class GameplayScreen extends GameScreen {
         }
         var4Lifetime1 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 5);
         if (var4Lifetime1 == 0) {
-          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ OutgoingPacketHelpers.field_g + qm.field_a << 16;
+          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ OutgoingPacketHelpers.field_g + BrowserResizeNotificationHelpers.field_a << 16;
         }
         if (var4Lifetime1 == 1) {
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - OutgoingPacketHelpers.field_g;
-          qm.field_a = qm.field_a - 1;
+          BrowserResizeNotificationHelpers.field_a = BrowserResizeNotificationHelpers.field_a - 1;
         }
         if (var4Lifetime1 == 2) {
-          qm.field_a = qm.field_a + 1;
+          BrowserResizeNotificationHelpers.field_a = BrowserResizeNotificationHelpers.field_a + 1;
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + OutgoingPacketHelpers.field_g;
         }
         if (var4Lifetime1 == 3) {
           OutgoingPacketHelpers.field_g = OutgoingPacketHelpers.field_g - 1;
-          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - BrowserResizeNotificationHelpers.field_a;
         }
         if (var4Lifetime1 == 4) {
           OutgoingPacketHelpers.field_g = OutgoingPacketHelpers.field_g + 1;
-          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + qm.field_a;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + BrowserResizeNotificationHelpers.field_a;
         }
         if (keyCode == 13) {
           boolean decompiledFrameRemainder0 = true;
@@ -1178,7 +1178,7 @@ final class GameplayScreen extends GameScreen {
           var7 = 1 << var6;
           DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ var7;
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - DisplayModeInfo.field_e;
-          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, DisplayModeInfo.field_e, FullscreenFailureDialog.field_kb, OutgoingPacketHelpers.field_g, qm.field_a), (byte) 3);
+          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, DisplayModeInfo.field_e, FullscreenFailureDialog.field_kb, OutgoingPacketHelpers.field_g, BrowserResizeNotificationHelpers.field_a), (byte) 3);
         }
         var4Lifetime1 = 90 % ((obfuscationGuard - 36) / 46);
     }

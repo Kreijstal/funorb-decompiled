@@ -145,9 +145,9 @@ abstract class CacheEntry extends DualLinkNode {
             stackIn_7_4 = UnderwaterBackground.field_v;
           }
           VolcanicBackground.field_v = new UiComponent(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
-          rm.field_a = new UiComponent(0L, (UiComponent) null);
-          rm.field_a.addChild(sc.field_b, 0);
-          rm.field_a.addChild(ll.field_e, 0);
+          FontRequestHelpers.field_a = new UiComponent(0L, (UiComponent) null);
+          FontRequestHelpers.field_a.addChild(sc.field_b, 0);
+          FontRequestHelpers.field_a.addChild(ll.field_e, 0);
           ll.field_e.addChild(nk.field_g, 0);
           if (param2 < 13) {
             return;
@@ -161,9 +161,9 @@ abstract class CacheEntry extends DualLinkNode {
           ll.field_e.addChild(HalloweenBackground.field_x, 0);
           ll.field_e.addChild(rl.field_e, 0);
           if (PacketReceiveHelpers.field_e) {
-            rm.field_a.addChild(gj.field_b, 0);
+            FontRequestHelpers.field_a.addChild(gj.field_b, 0);
           }
-          rm.field_a.addChild(VolcanicBackground.field_v, 0);
+          FontRequestHelpers.field_a.addChild(VolcanicBackground.field_v, 0);
           Brick.field_A = new UiComponent(0L, CappedUrlRequest.field_l);
           Brick.field_A.horizontalAlignment = 1;
           Brick.field_A.verticalAlignment = 0;

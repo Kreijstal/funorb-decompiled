@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class BirthDateValidator extends DebouncedValidationSource implements TextFieldListener, ph {
+final class BirthDateValidator extends DebouncedValidationSource implements TextFieldListener, BirthDateValidationMarker {
     DateInputWidget dateInput;
     static String[] field_j;
     static String field_g;

@@ -754,7 +754,7 @@ public final class BrickABrac extends InteractiveGameClient {
         fm.a((byte) 68);
         gj.a(-27956);
         LevelPackLoader.b(-30593);
-        rm.a(-41);
+        FontRequestHelpers.a(-41);
         uo.a((byte) 66);
         QuickChatMenu.d(true);
         QuickChatCategoryRegistry.b((byte) -19);
@@ -773,7 +773,7 @@ public final class BrickABrac extends InteractiveGameClient {
         WidgetGroup.f((byte) -67);
         NodeDequeCursor.c(117);
         SingleChildWidget.f((byte) -102);
-        qm.a((byte) -120);
+        BrowserResizeNotificationHelpers.a((byte) -120);
         pl.a(0);
         DelegatingCanvas.a(!obfuscationGuard ? true : false);
         nd.a((byte) 121);

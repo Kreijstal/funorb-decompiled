@@ -147,7 +147,7 @@ final class ChatLobbyUiHelpers {
               } else {
                 cookieWithLifetime = cookieAttributes + "; Expires=" + AppletGameShell.a((byte) -75, MonotonicTime.nowMillis(false) + maxAgeSeconds * 1000L) + "; Max-Age=" + maxAgeSeconds;
               }
-              ne.a(applet, "document.cookie=\"" + cookieWithLifetime + "\"", 5797);
+              AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieWithLifetime + "\"", 5797);
             } catch (java.lang.Throwable caughtBrowserFailure) {
               caughtFailure = caughtBrowserFailure;
               ignoredBrowserFailure = caughtFailure;

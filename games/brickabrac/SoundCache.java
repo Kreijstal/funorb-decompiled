@@ -348,14 +348,14 @@ final class SoundCache {
               if (0 >= ResourceArchiveFactory.windowModeCapabilityWord &&
                 !ChocolateBackground.field_r) {
                 try {
-                  ne.a("unzap", -121, EmailConfirmationValidator.e((byte) -100));
+                  AppletJavaScriptBridge.callFunctionWithoutArguments("unzap", -121, EmailConfirmationValidator.e((byte) -100));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ne.a(new Object[]{GameplayAudioEvent.a(CacheEntry.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
+                  AppletJavaScriptBridge.callFunction(new Object[]{GameplayAudioEvent.a(CacheEntry.field_v, (byte) 3)}, 116, EmailConfirmationValidator.e((byte) -75), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

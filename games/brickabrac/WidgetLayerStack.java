@@ -24,7 +24,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             GameplayRenderHelpers.fullscreenCanvas = LoginCredentials.createFullscreenCanvas(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
           } else {
             GameplayRenderHelpers.fullscreenCanvas = jj.canvasResizeController.openFullscreenCanvas(true);
-            qm.a(97, 2);
+            BrowserResizeNotificationHelpers.notifyBrowserResize(97, 2);
           }
           if (GameplayRenderHelpers.fullscreenCanvas == null) {
             var2 = 3;

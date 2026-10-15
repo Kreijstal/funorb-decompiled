@@ -85,7 +85,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         }
         if (!TextWidgetRenderer.field_t &&
           !QuickChatMenu.h(-26090)) {
-          ParisBackground.a((byte) 24, 100.0f, qm.field_e);
+          ParisBackground.a((byte) 24, 100.0f, BrowserResizeNotificationHelpers.field_e);
           QuickChatCategoryDefinition.a(true, var2);
           return;
         }

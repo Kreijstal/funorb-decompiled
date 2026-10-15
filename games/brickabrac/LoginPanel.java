@@ -98,7 +98,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           param2.decodedFilePolicy = 0;
           param2.discardPackedGroups = false;
           DebouncedValidationSource.quickChatCategories = new QuickChatCategoryRegistry(var3_int, param2, param2);
-          LobbyUiHelpers.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, param2, param2, new rm());
+          LobbyUiHelpers.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, param2, param2, new FontRequestHelpers());
           var4 = gj.findRootQuickChatCategory(0);
           if (var4 == null) {
             AlignedIconLabel.a("QC2", (Throwable) null, param1 - 14);

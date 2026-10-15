@@ -97,7 +97,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[26] = PauseMenuScreen.field_u;
         ArrayWidgetGroup.buttonLabels[22] = FocusableWidget.field_D;
         CacheEntry.field_A[13] = TimedSplashScreen.field_s;
-        hm.field_b = new String[]{ContentTransitionPhase.field_a, qm.field_c, TabbedPane.field_Pb, ResourcePreparationQueue.field_a};
+        hm.field_b = new String[]{ContentTransitionPhase.field_a, BrowserResizeNotificationHelpers.field_c, TabbedPane.field_Pb, ResourcePreparationQueue.field_a};
         CacheEntry.field_A[16] = MeshAttributeRecord.field_d;
         CanvasResizeController.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
         WidgetTheme.lostBallMessages = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, FullscreenDialogHelpers.field_f, jh.field_c};

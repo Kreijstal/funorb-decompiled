@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm implements bp {
+final class FontRequestHelpers implements QuickChatContextMarker {
     static String field_b;
     static UiComponent field_a;
     static RgbSprite farmMidSprite;
@@ -61,29 +61,29 @@ final class rm implements bp {
     }
 
     final static EmailAvailabilityRequest createEmailAvailabilityRequest(String email, int obfuscationGuard) {
-        RuntimeException var2 = null;
-        EmailAvailabilityRequest stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException failure = null;
+        EmailAvailabilityRequest request = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String emailSummary = null;
+        RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != 16711935) {
             farmBackgroundColors = (int[]) null;
           }
-          stackIn_3_0 = new EmailAvailabilityRequest(email);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("rm.A(");
+          request = new EmailAvailabilityRequest(email);
+          return request;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("rm.A(");
           if (email == null) {
-            stackIn_7_2 = "null";
+            emailSummary = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            emailSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(emailSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

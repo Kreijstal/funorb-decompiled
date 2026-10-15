@@ -584,7 +584,7 @@ final class PlatformServices implements Runnable {
           }
           if (this.microsoftJvm) {
             try {
-              Class.forName("iq").newInstance();
+              Class.forName("MicrosoftDirectSoundInitializer").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;

@@ -86,7 +86,7 @@ final class QuickChatPhraseRegistry {
         }
     }
 
-    QuickChatPhraseRegistry(int unusedOption, ResourceArchive standardArchive, ResourceArchive extendedArchive, bp unusedContext) {
+    QuickChatPhraseRegistry(int unusedOption, ResourceArchive standardArchive, ResourceArchive extendedArchive, QuickChatContextMarker unusedContext) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

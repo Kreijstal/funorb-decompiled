@@ -112,7 +112,7 @@ final class ContextActionController {
                   this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                 }
                 if (var2.joinRequestPending) {
-                  this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(rm.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
+                  this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
                 }
               }
             }
@@ -510,7 +510,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("send_qc_to_x", (byte) -115);
                 if (var2 != null) {
-                  qm.field_b = MenuButton.a(var2, (byte) 103);
+                  BrowserResizeNotificationHelpers.field_b = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = nk.a("send_pm", (byte) -110);
                 if (null != var2) {
@@ -534,7 +534,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("join_withdraw_request_xs_game", (byte) 71);
                 if (null != var2) {
-                  rm.field_b = MenuButton.a(var2, (byte) 115);
+                  FontRequestHelpers.field_b = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("mu_gameopt_kick_x_from_this_game", (byte) -115);
                 if (null != var2) {
@@ -622,7 +622,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("your_rating_is_x", (byte) 48);
                 if (var2 != null) {
-                  rm.field_c = MenuButton.a(var2, (byte) 110);
+                  FontRequestHelpers.field_c = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("you_are_on_x_server", (byte) -125);
                 if (null != var2) {
@@ -1986,7 +1986,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("loading_extradata", (byte) 92);
                 if (null != var2) {
-                  qm.field_e = MenuButton.a(var2, (byte) 84);
+                  BrowserResizeNotificationHelpers.field_e = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = nk.a("loading_languages", (byte) 76);
                 if (var2 != null) {
@@ -2498,7 +2498,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mp_acceptrematch_unrated", (byte) 12);
                 if (null != var2) {
-                  qm.field_c = MenuButton.a(var2, (byte) 117);
+                  BrowserResizeNotificationHelpers.field_c = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = nk.a("mp_cancelrematch", (byte) 0);
                 if (null != var2) {
@@ -3245,7 +3245,7 @@ final class ContextActionController {
                 if (!PlayerNameChooserPanel.field_I) {
                   this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(ClientException.field_c, new String[]{caption}, (byte) 103), 8, (byte) 80);
                 }
-                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(qm.field_b, new String[]{caption}, (byte) 103), 18, (byte) 104);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(BrowserResizeNotificationHelpers.field_b, new String[]{caption}, (byte) 103), 18, (byte) 104);
                 if (null != suggestedPhraseIds) {
                   this.suggestedPhraseIds = suggestedPhraseIds;
                   this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 72);

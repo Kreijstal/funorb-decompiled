@@ -761,7 +761,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             this.field_d = true;
             System.out.println("error_game_" + param0);
             try {
-              ne.a("loggedout", -123, EmailConfirmationValidator.e((byte) -124));
+              AppletJavaScriptBridge.callFunctionWithoutArguments("loggedout", -123, EmailConfirmationValidator.e((byte) -124));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;

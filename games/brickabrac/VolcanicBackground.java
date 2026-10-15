@@ -242,12 +242,12 @@ final class VolcanicBackground extends BackgroundScene {
                 VolcanicBackground.g(-95);
               }
               var3 = DisplayModeInfo.a(param1, var4, -1).getFile();
-              ne.a(new Object[]{"home", var3 + "home.ws"}, 111, param1, "updatelinks");
-              ne.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, 76, param1, "updatelinks");
-              ne.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, 88, param1, "updatelinks");
-              ne.a(new Object[]{"options", var3 + "options.ws"}, 98, param1, "updatelinks");
-              ne.a(new Object[]{"terms", var3 + "terms.ws"}, 109, param1, "updatelinks");
-              ne.a(new Object[]{"privacy", var3 + "privacy.ws"}, 113, param1, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"home", var3 + "home.ws"}, 111, param1, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"gamelist", var3 + "togamelist.ws"}, 76, param1, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"serverlist", var3 + "toserverlist.ws"}, 88, param1, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"options", var3 + "options.ws"}, 98, param1, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"terms", var3 + "terms.ws"}, 109, param1, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"privacy", var3 + "privacy.ws"}, 113, param1, "updatelinks");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

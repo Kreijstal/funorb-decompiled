@@ -236,7 +236,7 @@ final class LobbyGame extends UiComponent {
               }
             } else {
               if (!match.configuration.repeats) {
-                statusText = GamePresentationHelpers.formatIndexedText(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
                 statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
               }
@@ -385,7 +385,7 @@ final class LobbyGame extends UiComponent {
               }
             } else {
               if (!match.configuration.repeats) {
-                statusText = GamePresentationHelpers.formatIndexedText(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
                 statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
               }

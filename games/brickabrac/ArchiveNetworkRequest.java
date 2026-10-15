@@ -66,7 +66,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
               if (param0.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ne.a(param2, "document.cookie=\"" + var5 + "\"", 5797);
+              AppletJavaScriptBridge.evaluateScript(param2, "document.cookie=\"" + var5 + "\"", 5797);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;
@@ -137,7 +137,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           return IntHistoryBuffer.field_k;
         }
         if (!ja.field_c.ensureAllGroupsAvailable(param0 ^ 12)) {
-          return qm.field_e + " - " + ja.field_c.getProgress(-4126) + "%";
+          return BrowserResizeNotificationHelpers.field_e + " - " + ja.field_c.getProgress(-4126) + "%";
         }
         return kd.field_a;
     }

@@ -168,7 +168,7 @@ final class ui {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ne.a(param1, "document.cookie=\"" + var5Lifetime6 + "\"", 5797);
+              AppletJavaScriptBridge.evaluateScript(param1, "document.cookie=\"" + var5Lifetime6 + "\"", 5797);
             } catch (Throwable throwable) {
             }
             VolcanicBackground.a(false, param1);

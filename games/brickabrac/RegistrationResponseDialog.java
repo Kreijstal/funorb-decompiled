@@ -13,7 +13,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
             tableSubmissionSequence = -58;
           }
           IndexedSpriteGeometry.pushSpriteRaster(-77, param1.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, rm.farmBackgroundColors[param0], 22953);
+          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, FontRequestHelpers.farmBackgroundColors[param0], 22953);
           param3.b((-param3.canvasWidth + param1.width) / 2 - 80 / param2, -param3.canvasHeight + (param1.height + param4 - 201 / param2), 41, 110);
           sc.popRaster(-107);
         } catch (RuntimeException runtimeException) {

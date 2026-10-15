@@ -165,7 +165,7 @@ final class FriendListUi {
                     contextForMessage.contextMenu.addAction(messageCaption, 8, (byte) 84);
                   }
                   contextForSpectate = GameRenderAudioHelpers.contextActions;
-                  spectateCaption = GamePresentationHelpers.formatIndexedText(qm.field_b, new String[]{pressedName}, (byte) 103);
+                  spectateCaption = GamePresentationHelpers.formatIndexedText(BrowserResizeNotificationHelpers.field_b, new String[]{pressedName}, (byte) 103);
                   contextForSpectate.contextMenu.addAction(spectateCaption, 18, (byte) 97);
                 }
                 pressedEntry = entry;
@@ -336,7 +336,7 @@ final class FriendListUi {
             return (BinaryMaskFont) (unavailableFont);
           }
           unusedGuardQuotient = 126 / ((obfuscationGuard + 35) / 45);
-          font = rm.createBinaryMaskFont(12658477, metricsArchive.takeFile(fileId, groupId, 4));
+          font = FontRequestHelpers.createBinaryMaskFont(12658477, metricsArchive.takeFile(fileId, groupId, 4));
           return font;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
