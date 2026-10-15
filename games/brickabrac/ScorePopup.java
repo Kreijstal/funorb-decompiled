@@ -5,7 +5,7 @@ final class ScorePopup extends IntrusiveNode {
     static String field_j;
     String text;
     int y256;
-    static RgbSprite[] field_r;
+    static RgbSprite[] chocolateSmallLeverSprites;
     int x256;
     static ResourceArchive field_l;
     static BinaryMaskFont field_m;
@@ -53,7 +53,7 @@ final class ScorePopup extends IntrusiveNode {
         if (param0 >= -41) {
           return;
         }
-        field_r = null;
+        chocolateSmallLeverSprites = null;
         field_j = null;
     }
 

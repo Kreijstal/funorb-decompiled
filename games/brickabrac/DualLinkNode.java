@@ -28,85 +28,85 @@ class DualLinkNode extends IntrusiveNode {
         this.secondaryNext = null;
     }
 
-    final static void a(int param0, MultiplayerMatch param1, PaletteFont param2, PlayerBoard param3, byte param4, int param5, int param6, int param7) {
-        int var13 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var14 = 0;
-        var14 = BrickABrac.field_J ? 1 : 0;
+    final static void drawSinglePlayerStatus(int height, MultiplayerMatch match, PaletteFont font, PlayerBoard board, byte obfuscationGuard, int x, int y, int width) {
+        int lifeIndex = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String matchSummary = null;
+        StringBuilder fontContextBuilder = null;
+        String fontSummary = null;
+        StringBuilder boardContextBuilder = null;
+        String boardSummary = null;
+        RuntimeException caughtFailure = null;
+        int insetX = 0;
+        RuntimeException failure = null;
+        int insetY = 0;
+        int lineHeight = 0;
+        int drawX = 0;
+        int drawY = 0;
+        int unusedClientFlag = 0;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var8_int = 5;
-          var9 = 5;
-          var10 = 3 + param2.capHeight + param2.descent;
-          var11 = var8_int + param5;
-          var12 = param6 + (var9 + param2.capHeight);
-          param2.drawLeft(ProducerFramebuffer.field_j, var11, var12, 2, -1);
-          var12 = var12 + var10;
-          param2.drawLeft(SecondaryNodeQueue.field_e, var11, var12, 1, -1);
-          var12 = var12 + var10;
-          param2.drawLeft(LoginCredentials.field_j, var11, var12, 2, -1);
-          var12 = var12 + var10;
-          param2.drawLeft(vd.field_d, var11, var12, 0, -1);
-          if (param4 >= -96) {
+          insetX = 5;
+          insetY = 5;
+          lineHeight = 3 + font.capHeight + font.descent;
+          drawX = insetX + x;
+          drawY = y + (insetY + font.capHeight);
+          font.drawLeft(ProducerFramebuffer.field_j, drawX, drawY, 2, -1);
+          drawY = drawY + lineHeight;
+          font.drawLeft(SecondaryNodeQueue.field_e, drawX, drawY, 1, -1);
+          drawY = drawY + lineHeight;
+          font.drawLeft(LoginCredentials.field_j, drawX, drawY, 2, -1);
+          drawY = drawY + lineHeight;
+          font.drawLeft(vd.field_d, drawX, drawY, 0, -1);
+          if (obfuscationGuard >= -96) {
             return;
           }
           if (TextFieldRenderer.field_A &&
             !ValidationIconWidget.field_N) {
             return;
           }
-          var11 -= 2;
-          var12 = var12 + (param2.descent + 4);
-          for (var13 = 0; var13 < -1 + param3.lives; var13++) {
-            if (var13 < -2 + param3.lives) {
-              ch.field_l.a(var11, var12, 196);
+          drawX -= 2;
+          drawY = drawY + (font.descent + 4);
+          for (lifeIndex = 0; lifeIndex < -1 + board.lives; lifeIndex++) {
+            if (lifeIndex < -2 + board.lives) {
+              ch.field_l.a(drawX, drawY, 196);
             } else {
-              ch.field_l.e(ch.field_l.canvasWidth / 2 + var11, var12 + ch.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.cosine8192(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
+              ch.field_l.e(ch.field_l.canvasWidth / 2 + drawX, drawY + ch.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.cosine8192(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
             }
-            var11 = var11 + ch.field_l.width / 2;
-            if (param5 + param7 < var11 + ch.field_l.width) {
-              var12 = var12 + (ch.field_l.height + 2);
-              var11 = param5 + var8_int - 2;
+            drawX = drawX + ch.field_l.width / 2;
+            if (x + width < drawX + ch.field_l.width) {
+              drawY = drawY + (ch.field_l.height + 2);
+              drawX = x + insetX - 2;
             }
-            if (var12 + ch.field_l.height > param6 - (-param0 + var9)) {
+            if (drawY + ch.field_l.height > y - (-height + insetY)) {
               return;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_19_0 = var8;
-          stackIn_19_1 = new StringBuilder().append("tk.VB(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_20_2 = "null";
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("tk.VB(").append(height).append(',');
+          if (match == null) {
+            matchSummary = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            matchSummary = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
-          if (param2 == null) {
-            stackIn_23_2 = "null";
+          fontContextBuilder = ((StringBuilder) (Object) contextBuilder).append(matchSummary).append(',');
+          if (font == null) {
+            fontSummary = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            fontSummary = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param3 == null) {
-            stackIn_26_2 = "null";
+          boardContextBuilder = ((StringBuilder) (Object) fontContextBuilder).append(fontSummary).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            boardSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) boardContextBuilder).append(boardSummary).append(',').append(obfuscationGuard).append(',').append(x).append(',').append(y).append(',').append(width).append(')').toString());
         }
     }
 

@@ -153,125 +153,125 @@ final class LobbyGame extends UiComponent {
         }
     }
 
-    final static void a(boolean param0, byte param1, int param2, boolean param3, PlayerBoard param4, int param5, int param6, boolean param7, MultiplayerMatch param8) {
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_38_2 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_41_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var9_int = 0;
-        RuntimeException var9 = null;
-        int var10 = 0;
-        RgbSprite var11 = null;
-        int var12_int = 0;
-        RgbSprite[] var12 = null;
-        int var13_int = 0;
-        RgbSprite var13 = null;
-        int var14_int = 0;
-        String var14 = null;
-        int var15_int = 0;
-        Object var15 = null;
-        String var15_ref = null;
-        String var16_ref_String = null;
-        int var16 = 0;
-        RgbSprite var17 = null;
-        RgbSprite var18 = null;
-        int var10Lifetime1;
+    final static void drawMultiplayerBoardHud(boolean resultWordMode, byte obfuscationGuard, int x, boolean showCountdown, PlayerBoard board, int y, int playerId, boolean showMessages, MultiplayerMatch match) {
+        int maskedValue = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        StringBuilder matchContextBuilder = null;
+        String matchSummary = null;
+        RuntimeException caughtFailure = null;
+        int isPlayerMasked = 0;
+        RuntimeException failure = null;
+        int countdownIndex = 0;
+        RgbSprite characterSpriteAlias = null;
+        int countdownAge = 0;
+        RgbSprite[] leverSprites = null;
+        int countdownWidth = 0;
+        RgbSprite leverSprite = null;
+        int countdownHeight = 0;
+        String truncatedPlayerName = null;
+        int countdownFadeAge = 0;
+        Object unusedMessageSlot = null;
+        String statusText = null;
+        String nameAndStatusText = null;
+        int messageWidth = 0;
+        RgbSprite countdownSprite = null;
+        RgbSprite characterSprite = null;
+        int statusTop;
         try {
-          stackIn_3_0 = ((1 << param6 & (param8.playerMaskTwo | param8.playerMaskOne | param8.playerMaskThree)) == 0) ? 0 : 1;
-          var9_int = stackIn_3_0;
-          if (var9_int == 0 &&
-            param3 &&
-            param4.simulationTick < 150) {
-            var10 = param4.simulationTick / 50;
-            var17 = ed.field_b[var10];
-            var12_int = param4.simulationTick - 50 * var10;
-            var13_int = (50 + var12_int * 2) * var17.canvasWidth / 50;
-            var14_int = var17.canvasHeight * (50 + var12_int * 3) / 50;
-            var15_int = var12_int;
-            if (4 * var12_int < 150) {
-              var15_int = var12_int / 2;
+          maskedValue = ((1 << playerId & (match.playerMaskTwo | match.playerMaskOne | match.playerMaskThree)) == 0) ? 0 : 1;
+          isPlayerMasked = maskedValue;
+          if (isPlayerMasked == 0 &&
+            showCountdown &&
+            board.simulationTick < 150) {
+            countdownIndex = board.simulationTick / 50;
+            countdownSprite = ed.countdownSprites[countdownIndex];
+            countdownAge = board.simulationTick - 50 * countdownIndex;
+            countdownWidth = (50 + countdownAge * 2) * countdownSprite.canvasWidth / 50;
+            countdownHeight = countdownSprite.canvasHeight * (50 + countdownAge * 3) / 50;
+            countdownFadeAge = countdownAge;
+            if (4 * countdownAge < 150) {
+              countdownFadeAge = countdownAge / 2;
             }
-            var17.b(param2 + (306 - var13_int) / 2, 300 + param5 - (var14_int / 2 + param4.simulationTick / 5), var13_int, var14_int, (12800 - 256 * var15_int) / 50);
+            countdownSprite.b(x + (306 - countdownWidth) / 2, 300 + y - (countdownHeight / 2 + board.simulationTick / 5), countdownWidth, countdownHeight, (12800 - 256 * countdownFadeAge) / 50);
           }
-          param2 -= 7;
-          param5 -= 7;
-          var10Lifetime1 = 445 + param5;
-          Rasterizer2D.fillRectangleAlpha(7 + param2, var10Lifetime1, 306, 28, 0, 96);
-          nh.paintNineSliceFrame(322, 482, -40, param2 - 1, LoginCredentialKind.field_h, param5 - 1);
-          nh.paintNineSliceFrame(322, 44, -40, param2 - 1, LoginCredentialKind.field_h, -7 + var10Lifetime1 - 1);
-          param2 += 7;
-          PowerUpWarning.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
-          param2 += 306;
-          var18 = ProxyAuthenticationRequiredException.field_e[param4.characterIndex];
-          var11 = var18;
-          var11.drawTransparent(-var18.canvasWidth + param2 + 5, 480 - var18.canvasHeight);
-          if (param4.characterIndex != 2) {
-            if (param4.characterIndex != 5) {
-              var12 = cn.field_e;
+          x -= 7;
+          y -= 7;
+          statusTop = 445 + y;
+          Rasterizer2D.fillRectangleAlpha(7 + x, statusTop, 306, 28, 0, 96);
+          nh.paintNineSliceFrame(322, 482, -40, x - 1, LoginCredentialKind.field_h, y - 1);
+          nh.paintNineSliceFrame(322, 44, -40, x - 1, LoginCredentialKind.field_h, -7 + statusTop - 1);
+          x += 7;
+          PowerUpWarning.drawPowerUpMeterRow(5 + x, board, match, -34, 4 + statusTop);
+          x += 306;
+          characterSprite = ProxyAuthenticationRequiredException.smallCharacterSprites[board.characterIndex];
+          characterSpriteAlias = characterSprite;
+          characterSpriteAlias.drawTransparent(-characterSprite.canvasWidth + x + 5, 480 - characterSprite.canvasHeight);
+          if (board.characterIndex != 2) {
+            if (board.characterIndex != 5) {
+              leverSprites = GameOverlayHelpers.smallLeverSprites;
             } else {
-              var12 = AccountMessageDialog.field_yb;
+              leverSprites = AccountMessageDialog.spaceSmallLeverSprites;
             }
           } else {
-            var12 = ScorePopup.field_r;
+            leverSprites = ScorePopup.chocolateSmallLeverSprites;
           }
-          var13 = var12[QuickChatHelpDialog.a(param8, param6, 87, param4)];
-          var13.drawTransparent(-8 + param2 - (var18.canvasWidth + var13.canvasWidth) / 2, -var13.canvasHeight + 480 + 10);
-          if (param1 != -103) {
+          leverSprite = leverSprites[QuickChatHelpDialog.getLeverFrameIndex(match, playerId, 87, board)];
+          leverSprite.drawTransparent(-8 + x - (characterSprite.canvasWidth + leverSprite.canvasWidth) / 2, -leverSprite.canvasHeight + 480 + 10);
+          if (obfuscationGuard != -103) {
             field_hc = 38;
           }
-          var14 = TextFont.truncateText(ce.field_e, param8.playerNames[param6], 73);
-          var15 = null;
-          if (!param7 ||
-            var9_int != 0 ||
-            param4.displayedMessage == null) {
-            if (param0 &&
-              var9_int != 0) {
-              if (param4.resultWord < 0) {
-                var15_ref = Integer.toString(param4.resultWord);
+          truncatedPlayerName = TextFont.truncateText(ce.field_e, match.playerNames[playerId], 73);
+          unusedMessageSlot = null;
+          if (!showMessages ||
+            isPlayerMasked != 0 ||
+            board.displayedMessage == null) {
+            if (resultWordMode &&
+              isPlayerMasked != 0) {
+              if (board.resultWord < 0) {
+                statusText = Integer.toString(board.resultWord);
               } else {
-                var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.resultWord)}, (byte) 103);
+                statusText = rd.a(hh.field_e, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
-              if (!param8.configuration.repeats) {
-                var15_ref = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(param4, (byte) 66, param8) + 1), Integer.toString(param8.configuration.getPeriod(-103))}, (byte) 103);
+              if (!match.configuration.repeats) {
+                statusText = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
-                var15_ref = rd.a(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(param4, (byte) 97, param8))}, (byte) 103);
+                statusText = rd.a(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
               }
             }
-            var16_ref_String = rd.a(BrickABrac.field_H, new String[]{var14, var15_ref}, (byte) 103);
-            ce.field_e.drawRight(var16_ref_String, -var18.canvasWidth + (param2 - 9), ce.field_e.ascent + var10Lifetime1, 2, -1);
+            nameAndStatusText = rd.a(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
+            ce.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), ce.field_e.ascent + statusTop, 2, -1);
           }
-          if (param7 &&
-            var9_int == 0) {
-            if (param4.displayedMessage == null) {
+          if (showMessages &&
+            isPlayerMasked == 0) {
+            if (board.displayedMessage == null) {
               return;
             }
-            var16 = ContextActionController.field_g.measureText(param4.displayedMessage) + 20;
-            nh.paintNineSliceFrame(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), MultiValueSliderWidget.field_K, 2 + var10Lifetime1);
-            AlignedIconLabel.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
-            PasswordFieldRenderer.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + PasswordFieldRenderer.field_D.ascent), 6, -1);
+            messageWidth = ContextActionController.field_g.measureText(board.displayedMessage) + 20;
+            nh.paintNineSliceFrame(messageWidth, 24, obfuscationGuard + 63, x + (-characterSprite.canvasWidth + (-9 - messageWidth)), MultiValueSliderWidget.field_K, 2 + statusTop);
+            AlignedIconLabel.field_Sb.drawTransparent(x - characterSprite.canvasWidth - 13, 6 + statusTop);
+            PasswordFieldRenderer.field_D.drawCentered(board.displayedMessage, -(messageWidth / 2) + x + (-characterSprite.canvasWidth - 9), 6 + (statusTop + PasswordFieldRenderer.field_D.ascent), 6, -1);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9 = decompiledCaughtException;
-          stackIn_37_0 = var9;
-          stackIn_37_1 = new StringBuilder().append("om.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_38_2 = "null";
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("om.D(").append(resultWordMode).append(',').append(obfuscationGuard).append(',').append(x).append(',').append(showCountdown).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_38_2 = "{...}";
+            boardSummary = "{...}";
           }
-          stackIn_40_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-          if (param8 == null) {
-            stackIn_41_2 = "null";
+          matchContextBuilder = ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(',').append(y).append(',').append(playerId).append(',').append(showMessages).append(',');
+          if (match == null) {
+            matchSummary = "null";
           } else {
-            stackIn_41_2 = "{...}";
+            matchSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) matchContextBuilder).append(matchSummary).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class LobbyGame extends UiComponent {
         field_Xb = null;
         if (param0 != -32) {
           MultiplayerMatch var2 = (MultiplayerMatch) null;
-          LobbyGame.$cfr$intArgs$a$687785aae666(true, -24, 25, true, (PlayerBoard) null, 48, -120, false, (MultiplayerMatch) null);
+          LobbyGame.drawMultiplayerBoardHud(true, -24, 25, true, (PlayerBoard) null, 48, -120, false, (MultiplayerMatch) null);
         }
         spaceNearSprite = null;
         field_pc = null;
@@ -302,125 +302,125 @@ final class LobbyGame extends UiComponent {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$687785aae666(boolean param0, int param1, int param2, boolean param3, PlayerBoard param4, int param5, int param6, boolean param7, MultiplayerMatch param8) {
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_38_2 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_41_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var9_int = 0;
-        RuntimeException var9 = null;
-        int var10 = 0;
-        RgbSprite var11 = null;
-        int var12_int = 0;
-        RgbSprite[] var12 = null;
-        int var13_int = 0;
-        RgbSprite var13 = null;
-        int var14_int = 0;
-        String var14 = null;
-        int var15_int = 0;
-        Object var15 = null;
-        String var15_ref = null;
-        String var16_ref_String = null;
-        int var16 = 0;
-        RgbSprite var17 = null;
-        RgbSprite var18 = null;
-        int var10Lifetime1;
+    final static void drawMultiplayerBoardHud(boolean resultWordMode, int obfuscationGuard, int x, boolean showCountdown, PlayerBoard board, int y, int playerId, boolean showMessages, MultiplayerMatch match) {
+        int maskedValue = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        StringBuilder matchContextBuilder = null;
+        String matchSummary = null;
+        RuntimeException caughtFailure = null;
+        int isPlayerMasked = 0;
+        RuntimeException failure = null;
+        int countdownIndex = 0;
+        RgbSprite characterSpriteAlias = null;
+        int countdownAge = 0;
+        RgbSprite[] leverSprites = null;
+        int countdownWidth = 0;
+        RgbSprite leverSprite = null;
+        int countdownHeight = 0;
+        String truncatedPlayerName = null;
+        int countdownFadeAge = 0;
+        Object unusedMessageSlot = null;
+        String statusText = null;
+        String nameAndStatusText = null;
+        int messageWidth = 0;
+        RgbSprite countdownSprite = null;
+        RgbSprite characterSprite = null;
+        int statusTop;
         try {
-          stackIn_3_0 = ((1 << param6 & (param8.playerMaskTwo | param8.playerMaskOne | param8.playerMaskThree)) == 0) ? 0 : 1;
-          var9_int = stackIn_3_0;
-          if (var9_int == 0 &&
-            param3 &&
-            param4.simulationTick < 150) {
-            var10 = param4.simulationTick / 50;
-            var17 = ed.field_b[var10];
-            var12_int = param4.simulationTick - 50 * var10;
-            var13_int = (50 + var12_int * 2) * var17.canvasWidth / 50;
-            var14_int = var17.canvasHeight * (50 + var12_int * 3) / 50;
-            var15_int = var12_int;
-            if (4 * var12_int < 150) {
-              var15_int = var12_int / 2;
+          maskedValue = ((1 << playerId & (match.playerMaskTwo | match.playerMaskOne | match.playerMaskThree)) == 0) ? 0 : 1;
+          isPlayerMasked = maskedValue;
+          if (isPlayerMasked == 0 &&
+            showCountdown &&
+            board.simulationTick < 150) {
+            countdownIndex = board.simulationTick / 50;
+            countdownSprite = ed.countdownSprites[countdownIndex];
+            countdownAge = board.simulationTick - 50 * countdownIndex;
+            countdownWidth = (50 + countdownAge * 2) * countdownSprite.canvasWidth / 50;
+            countdownHeight = countdownSprite.canvasHeight * (50 + countdownAge * 3) / 50;
+            countdownFadeAge = countdownAge;
+            if (4 * countdownAge < 150) {
+              countdownFadeAge = countdownAge / 2;
             }
-            var17.b(param2 + (306 - var13_int) / 2, 300 + param5 - (var14_int / 2 + param4.simulationTick / 5), var13_int, var14_int, (12800 - 256 * var15_int) / 50);
+            countdownSprite.b(x + (306 - countdownWidth) / 2, 300 + y - (countdownHeight / 2 + board.simulationTick / 5), countdownWidth, countdownHeight, (12800 - 256 * countdownFadeAge) / 50);
           }
-          param2 -= 7;
-          param5 -= 7;
-          var10Lifetime1 = 445 + param5;
-          Rasterizer2D.fillRectangleAlpha(7 + param2, var10Lifetime1, 306, 28, 0, 96);
-          nh.paintNineSliceFrame(322, 482, -40, param2 - 1, LoginCredentialKind.field_h, param5 - 1);
-          nh.paintNineSliceFrame(322, 44, -40, param2 - 1, LoginCredentialKind.field_h, -7 + var10Lifetime1 - 1);
-          param2 += 7;
-          PowerUpWarning.a(5 + param2, param4, param8, -34, 4 + var10Lifetime1);
-          param2 += 306;
-          var18 = ProxyAuthenticationRequiredException.field_e[param4.characterIndex];
-          var11 = var18;
-          var11.drawTransparent(-var18.canvasWidth + param2 + 5, 480 - var18.canvasHeight);
-          if (param4.characterIndex != 2) {
-            if (param4.characterIndex != 5) {
-              var12 = cn.field_e;
+          x -= 7;
+          y -= 7;
+          statusTop = 445 + y;
+          Rasterizer2D.fillRectangleAlpha(7 + x, statusTop, 306, 28, 0, 96);
+          nh.paintNineSliceFrame(322, 482, -40, x - 1, LoginCredentialKind.field_h, y - 1);
+          nh.paintNineSliceFrame(322, 44, -40, x - 1, LoginCredentialKind.field_h, -7 + statusTop - 1);
+          x += 7;
+          PowerUpWarning.drawPowerUpMeterRow(5 + x, board, match, -34, 4 + statusTop);
+          x += 306;
+          characterSprite = ProxyAuthenticationRequiredException.smallCharacterSprites[board.characterIndex];
+          characterSpriteAlias = characterSprite;
+          characterSpriteAlias.drawTransparent(-characterSprite.canvasWidth + x + 5, 480 - characterSprite.canvasHeight);
+          if (board.characterIndex != 2) {
+            if (board.characterIndex != 5) {
+              leverSprites = GameOverlayHelpers.smallLeverSprites;
             } else {
-              var12 = AccountMessageDialog.field_yb;
+              leverSprites = AccountMessageDialog.spaceSmallLeverSprites;
             }
           } else {
-            var12 = ScorePopup.field_r;
+            leverSprites = ScorePopup.chocolateSmallLeverSprites;
           }
-          var13 = var12[QuickChatHelpDialog.a(param8, param6, 87, param4)];
-          var13.drawTransparent(-8 + param2 - (var18.canvasWidth + var13.canvasWidth) / 2, -var13.canvasHeight + 480 + 10);
-          if (param1 != -103) {
+          leverSprite = leverSprites[QuickChatHelpDialog.getLeverFrameIndex(match, playerId, 87, board)];
+          leverSprite.drawTransparent(-8 + x - (characterSprite.canvasWidth + leverSprite.canvasWidth) / 2, -leverSprite.canvasHeight + 480 + 10);
+          if (obfuscationGuard != -103) {
             field_hc = 38;
           }
-          var14 = TextFont.truncateText(ce.field_e, param8.playerNames[param6], 73);
-          var15 = null;
-          if (!param7 ||
-            var9_int != 0 ||
-            param4.displayedMessage == null) {
-            if (param0 &&
-              var9_int != 0) {
-              if (param4.resultWord < 0) {
-                var15_ref = Integer.toString(param4.resultWord);
+          truncatedPlayerName = TextFont.truncateText(ce.field_e, match.playerNames[playerId], 73);
+          unusedMessageSlot = null;
+          if (!showMessages ||
+            isPlayerMasked != 0 ||
+            board.displayedMessage == null) {
+            if (resultWordMode &&
+              isPlayerMasked != 0) {
+              if (board.resultWord < 0) {
+                statusText = Integer.toString(board.resultWord);
               } else {
-                var15_ref = rd.a(hh.field_e, new String[]{Integer.toString(param4.resultWord)}, (byte) 103);
+                statusText = rd.a(hh.field_e, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
-              if (!param8.configuration.repeats) {
-                var15_ref = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(param4, (byte) 66, param8) + 1), Integer.toString(param8.configuration.getPeriod(-103))}, (byte) 103);
+              if (!match.configuration.repeats) {
+                statusText = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
-                var15_ref = rd.a(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(param4, (byte) 97, param8))}, (byte) 103);
+                statusText = rd.a(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
               }
             }
-            var16_ref_String = rd.a(BrickABrac.field_H, new String[]{var14, var15_ref}, (byte) 103);
-            ce.field_e.drawRight(var16_ref_String, -var18.canvasWidth + (param2 - 9), ce.field_e.ascent + var10Lifetime1, 2, -1);
+            nameAndStatusText = rd.a(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
+            ce.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), ce.field_e.ascent + statusTop, 2, -1);
           }
-          if (param7 &&
-            var9_int == 0) {
-            if (param4.displayedMessage == null) {
+          if (showMessages &&
+            isPlayerMasked == 0) {
+            if (board.displayedMessage == null) {
               return;
             }
-            var16 = ContextActionController.field_g.measureText(param4.displayedMessage) + 20;
-            nh.paintNineSliceFrame(var16, 24, param1 + 63, param2 + (-var18.canvasWidth + (-9 - var16)), MultiValueSliderWidget.field_K, 2 + var10Lifetime1);
-            AlignedIconLabel.field_Sb.drawTransparent(param2 - var18.canvasWidth - 13, 6 + var10Lifetime1);
-            PasswordFieldRenderer.field_D.drawCentered(param4.displayedMessage, -(var16 / 2) + param2 + (-var18.canvasWidth - 9), 6 + (var10Lifetime1 + PasswordFieldRenderer.field_D.ascent), 6, -1);
+            messageWidth = ContextActionController.field_g.measureText(board.displayedMessage) + 20;
+            nh.paintNineSliceFrame(messageWidth, 24, obfuscationGuard + 63, x + (-characterSprite.canvasWidth + (-9 - messageWidth)), MultiValueSliderWidget.field_K, 2 + statusTop);
+            AlignedIconLabel.field_Sb.drawTransparent(x - characterSprite.canvasWidth - 13, 6 + statusTop);
+            PasswordFieldRenderer.field_D.drawCentered(board.displayedMessage, -(messageWidth / 2) + x + (-characterSprite.canvasWidth - 9), 6 + (statusTop + PasswordFieldRenderer.field_D.ascent), 6, -1);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9 = decompiledCaughtException;
-          stackIn_37_0 = var9;
-          stackIn_37_1 = new StringBuilder().append("om.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_38_2 = "null";
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("om.D(").append(resultWordMode).append(',').append(obfuscationGuard).append(',').append(x).append(',').append(showCountdown).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_38_2 = "{...}";
+            boardSummary = "{...}";
           }
-          stackIn_40_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',');
-          if (param8 == null) {
-            stackIn_41_2 = "null";
+          matchContextBuilder = ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(',').append(y).append(',').append(playerId).append(',').append(showMessages).append(',');
+          if (match == null) {
+            matchSummary = "null";
           } else {
-            stackIn_41_2 = "{...}";
+            matchSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) matchContextBuilder).append(matchSummary).append(')').toString());
         }
     }
 }

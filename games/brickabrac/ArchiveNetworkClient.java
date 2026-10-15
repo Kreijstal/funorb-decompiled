@@ -10,76 +10,76 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
     private BufferedSocket transport;
     static String field_r;
 
-    final static void a(int param0, MultiplayerMatch param1, PlayerBoard param2) {
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        StringBuilder stackIn_28_1 = null;
-        String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        RgbSprite var4 = null;
-        RgbSprite var5 = null;
-        int var6 = 0;
-        RgbSprite[] var7 = null;
-        RgbSprite var9 = null;
-        RgbSprite var10 = null;
+    final static void drawSinglePlayerCharacterHud(int obfuscationGuard, MultiplayerMatch match, PlayerBoard board) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String matchSummary = null;
+        StringBuilder boardContextBuilder = null;
+        String boardSummary = null;
+        RuntimeException caughtFailure = null;
+        int fadeAlpha = 0;
+        RuntimeException failure = null;
+        RgbSprite currentCharacter = null;
+        RgbSprite eyeSprite = null;
+        int leverFrame = 0;
+        RgbSprite[] leverSprites = null;
+        RgbSprite currentLever = null;
+        RgbSprite fadingLever = null;
         try {
           if (TabbedPane.currentBackground == null) {
             return;
           }
-          var3_int = 256 * MenuScreen.field_i / 32;
-          var4 = TabbedPane.currentBackground.c((byte) -123);
-          if (var4 != null) {
+          fadeAlpha = 256 * MenuScreen.field_i / 32;
+          currentCharacter = TabbedPane.currentBackground.c((byte) -123);
+          if (currentCharacter != null) {
             if (MenuScreen.field_i == 0) {
-              var4.drawTransparent(-var4.canvasWidth + 640, 470 - var4.canvasHeight);
+              currentCharacter.drawTransparent(-currentCharacter.canvasWidth + 640, 470 - currentCharacter.canvasHeight);
             } else {
-              var4.b(-var4.canvasWidth + 640, 470 - var4.canvasHeight, 256 - var3_int);
+              currentCharacter.b(-currentCharacter.canvasWidth + 640, 470 - currentCharacter.canvasHeight, 256 - fadeAlpha);
             }
           }
-          if (param0 != 640) {
+          if (obfuscationGuard != 640) {
             field_r = (String) null;
           }
           if (MenuScreen.field_i > 0 &&
             ArchiveFetchClient.field_k != null) {
-            ArchiveFetchClient.field_k.b(640 - ArchiveFetchClient.field_k.canvasWidth, 480 - ArchiveFetchClient.field_k.canvasHeight - 10, var3_int);
+            ArchiveFetchClient.field_k.b(640 - ArchiveFetchClient.field_k.canvasWidth, 480 - ArchiveFetchClient.field_k.canvasHeight - 10, fadeAlpha);
           }
-          var5 = IntrusiveNode.gameEyeSprites[param2.eyeExpression];
-          if (var4 != null) {
-            var5.drawTransparent(-3 + (640 - (var4.canvasWidth + var5.canvasWidth) / 2), -var4.canvasHeight + 480 - 10 + 45);
+          eyeSprite = IntrusiveNode.gameEyeSprites[board.eyeExpression];
+          if (currentCharacter != null) {
+            eyeSprite.drawTransparent(-3 + (640 - (currentCharacter.canvasWidth + eyeSprite.canvasWidth) / 2), -currentCharacter.canvasHeight + 480 - 10 + 45);
           }
-          var6 = QuickChatHelpDialog.a(param1, 0, 100, param2);
-          var7 = TabbedPane.currentBackground.b(param0 ^ -746);
-          if (var7 != null) {
-            var9 = var7[var6];
-            var9.drawTransparent(-20 + (-var9.canvasWidth + 640), 520 - var9.canvasHeight);
+          leverFrame = QuickChatHelpDialog.getLeverFrameIndex(match, 0, 100, board);
+          leverSprites = TabbedPane.currentBackground.b(obfuscationGuard ^ -746);
+          if (leverSprites != null) {
+            currentLever = leverSprites[leverFrame];
+            currentLever.drawTransparent(-20 + (-currentLever.canvasWidth + 640), 520 - currentLever.canvasHeight);
           }
           if (MenuScreen.field_i > 0) {
             if (null == fq.field_c) {
               return;
             }
-            var10 = fq.field_c[var6];
-            var10.b(-var10.canvasWidth + 620, 40 + (-var10.canvasHeight + 480), var3_int);
+            fadingLever = fq.field_c[leverFrame];
+            fadingLever.b(-fadingLever.canvasWidth + 620, 40 + (-fadingLever.canvasHeight + 480), fadeAlpha);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_25_0 = var3;
-          stackIn_25_1 = new StringBuilder().append("a.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_26_2 = "null";
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("a.B(").append(obfuscationGuard).append(',');
+          if (match == null) {
+            matchSummary = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            matchSummary = "{...}";
           }
-          stackIn_28_1 = ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',');
-          if (param2 == null) {
-            stackIn_29_2 = "null";
+          boardContextBuilder = ((StringBuilder) (Object) contextBuilder).append(matchSummary).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_29_2 = "{...}";
+            boardSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) boardContextBuilder).append(boardSummary).append(')').toString());
         }
     }
 

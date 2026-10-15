@@ -54,12 +54,12 @@ final class LevelPack {
     }
 
     final static void b(int param0) {
-        if (null == ua.field_d) {
+        if (null == GameplayRenderHelpers.field_d) {
           return;
         }
-        t.a(false, ua.field_d);
-        ua.field_d.a(AccountMessageDialog.field_ub, 121);
-        ua.field_d = null;
+        t.a(false, GameplayRenderHelpers.field_d);
+        GameplayRenderHelpers.field_d.a(AccountMessageDialog.field_ub, 121);
+        GameplayRenderHelpers.field_d = null;
         if (param0 <= 49) {
           field_f = (String) null;
         }

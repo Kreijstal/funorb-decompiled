@@ -22,7 +22,7 @@ final class gd {
 
     final static java.awt.Canvas a(byte param0) {
         int var1 = -97 / ((param0 - 81) / 36);
-        return null == ua.field_d ? CacheIoRequest.field_D : (java.awt.Canvas) ((Object) ua.field_d);
+        return null == GameplayRenderHelpers.field_d ? CacheIoRequest.field_D : (java.awt.Canvas) ((Object) GameplayRenderHelpers.field_d);
     }
 
     final synchronized static byte[] a(int param0, byte param1) {

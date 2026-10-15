@@ -181,7 +181,7 @@ final class WidgetTheme {
           metadataPacket = packet;
           metadataPacket.position = -2 + data.length;
           nl.decodedSpriteCount = metadataPacket.readUnsignedShort(65280);
-          cn.decodedSpriteIndices = new byte[nl.decodedSpriteCount][];
+          GameOverlayHelpers.decodedSpriteIndices = new byte[nl.decodedSpriteCount][];
           jh.decodedSpriteWidths = new int[nl.decodedSpriteCount];
           SocketConnector.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
           TextHotspotRegion.decodedSpriteHeights = new int[nl.decodedSpriteCount];
@@ -223,7 +223,7 @@ final class WidgetTheme {
             var20 = new byte[pixelCount];
             var18 = var20;
             indices = var18;
-            cn.decodedSpriteIndices[spriteIndex] = var20;
+            GameOverlayHelpers.decodedSpriteIndices[spriteIndex] = var20;
             var21 = new byte[pixelCount];
             var19 = var21;
             alpha = var19;

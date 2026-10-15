@@ -27,7 +27,7 @@ class NineSliceFrame {
           NineSliceFrame.a(-46);
         }
         var1 = jh.decodedSpriteWidths[0] * TextHotspotRegion.decodedSpriteHeights[0];
-        var16 = cn.decodedSpriteIndices[0];
+        var16 = GameOverlayHelpers.decodedSpriteIndices[0];
         if (!tm.decodedSpriteHasAlpha[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {

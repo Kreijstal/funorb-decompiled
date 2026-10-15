@@ -42,7 +42,7 @@ final class jj {
             }
             if (!HotspotTextWidget.a(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
+              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
               if (LoginMethodPreference.b(param0 + 39)) {
                 var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
@@ -70,7 +70,7 @@ final class jj {
             if (GameClock.c((byte) 119) &&
               !HotspotTextWidget.a(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
+              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
             }
             if (LoginMethodPreference.b(param0 + 39)) {
               var2Lifetime4 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -86,7 +86,7 @@ final class jj {
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
           }
           if (LoginMethodPreference.b(param0 + 39)) {
             var2Lifetime5 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -103,7 +103,7 @@ final class jj {
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
           }
           if (LoginMethodPreference.b(param0 + 39)) {
             var2Lifetime1 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -123,7 +123,7 @@ final class jj {
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
           }
           if (LoginMethodPreference.b(param0 + 39)) {
             var2Lifetime2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -139,7 +139,7 @@ final class jj {
         if (GameClock.c((byte) 119) &&
           !HotspotTextWidget.a(9)) {
           var1Lifetime1 = 1;
-          ArchiveFetchClient.a((byte) -118, ua.field_d == null ? NinjaBackground.frameFocus : true);
+          ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
         }
         if (LoginMethodPreference.b(param0 + 39)) {
           var2Lifetime3 = (CachedArchiveSource.field_p - 1 << 8) / 16;

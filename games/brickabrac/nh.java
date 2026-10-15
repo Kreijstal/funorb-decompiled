@@ -734,7 +734,7 @@ final class nh {
         int stackIn_29_1Lifetime1;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          var1 = (LobbyPlayer) (ua.lobbyPlayers.first(-50));
+          var1 = (LobbyPlayer) (GameplayRenderHelpers.lobbyPlayers.first(-50));
           while (var1 != null) {
             stackIn_29_0 = -1;
             stackIn_29_1 = ~var1.statusChangeTick;
@@ -761,7 +761,7 @@ final class nh {
                 }
               }
             }
-            var1 = (LobbyPlayer) (ua.lobbyPlayers.next((byte) 116));
+            var1 = (LobbyPlayer) (GameplayRenderHelpers.lobbyPlayers.next((byte) 116));
             if (var2 == 0) {
               continue;
             }

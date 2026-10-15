@@ -123,8 +123,8 @@ final class GameplayAudioEvent extends IntrusiveNode {
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
           if (!m.a(param0 ^ 27146)) {
-            if (null != ua.field_d &&
-              ua.field_d.focusLossPending) {
+            if (null != GameplayRenderHelpers.field_d &&
+              GameplayRenderHelpers.field_d.focusLossPending) {
               LevelPack.b(109);
               wo.field_b.pushLayer(-80, new FullscreenFailureDialog(wo.field_b, ch.fullscreenFocusProblem));
             }

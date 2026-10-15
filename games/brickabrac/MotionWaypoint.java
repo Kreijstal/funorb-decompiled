@@ -33,14 +33,14 @@ final class MotionWaypoint extends MovingBody {
         ArrayWidgetGroup.decodedSpriteOffsetX = null;
         SocketConnector.decodedSpriteOffsetY = null;
         if (obfuscationGuard == 96) {
-          cn.decodedSpriteIndices = (byte[][]) null;
+          GameOverlayHelpers.decodedSpriteIndices = (byte[][]) null;
           jh.decodedSpriteWidths = null;
           qp.decodedSpritePalette = null;
           TextHotspotRegion.decodedSpriteHeights = null;
           return;
         }
         halloweenMoonSprite = (RgbSprite) null;
-        cn.decodedSpriteIndices = (byte[][]) null;
+        GameOverlayHelpers.decodedSpriteIndices = (byte[][]) null;
         jh.decodedSpriteWidths = null;
         qp.decodedSpritePalette = null;
         TextHotspotRegion.decodedSpriteHeights = null;

@@ -410,7 +410,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var9 = (IntNode) (achievementIds.first(-74));
           var10 = 0;
           while (var9 != null) {
-            this.visibleIcons.addLast(cn.acquireAchievementIcon(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, columnDivisor - 1), (byte) 3);
+            this.visibleIcons.addLast(GameOverlayHelpers.acquireAchievementIcon(-var4_int, var8, 32, this, 32, var10, var4_int + var7, var9.value, columnDivisor - 1), (byte) 3);
             AlignedIconLabel.achievementTransitionMask = AlignedIconLabel.achievementTransitionMask | 1 << var10;
             var9 = (IntNode) (achievementIds.next((byte) 116));
             var10++;

@@ -457,7 +457,7 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 6) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
-                  if (null == ua.field_d) {
+                  if (null == GameplayRenderHelpers.field_d) {
                     WidgetLayerStack.a(inputFlag, 21543);
                   } else {
                     LevelPack.b(82);
@@ -590,63 +590,63 @@ abstract class MenuScreen extends GameScreen {
         return var4 != 0;
     }
 
-    final static void a(MultiplayerMatch param0, PlayerBoard param1, int param2, int param3, boolean param4, int param5, int param6) {
-        int var11 = 0;
-        int var7_int = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var12 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
-        var12 = BrickABrac.field_J ? 1 : 0;
+    final static void drawPowerUpMeterGrid(MultiplayerMatch match, PlayerBoard board, int y, int x, boolean enabled, int columns, int rows) {
+        int typeId = 0;
+        int iconX = 0;
+        int iconY = 0;
+        int column = 0;
+        int row = 0;
+        int unusedClientFlag = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String matchSummary = null;
+        StringBuilder boardContextBuilder = null;
+        String boardSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var7_int = param3;
-          var8 = param2;
-          if (!param4) {
+          iconX = x;
+          iconY = y;
+          if (!enabled) {
             return;
           }
-          var9 = 0;
-          var10 = 0;
-          for (var11 = 0; var11 < 29; var11++) {
-            if ((1 << var11 & param1.flaggedBrickTypeMask) != 0) {
-              Widget.a(var8, var11, var7_int, param1, param0, (byte) 115);
-              var7_int += 25;
-              var9++;
-              if (var9 == param5) {
-                var10++;
-                if (var10 == param6) {
+          column = 0;
+          row = 0;
+          for (typeId = 0; typeId < 29; typeId++) {
+            if ((1 << typeId & board.flaggedBrickTypeMask) != 0) {
+              Widget.drawPowerUpMeter(iconY, typeId, iconX, board, match, (byte) 115);
+              iconX += 25;
+              column++;
+              if (column == columns) {
+                row++;
+                if (row == rows) {
                   return;
                 }
-                var9 = 0;
-                var8 += 25;
-                var7_int = param3;
+                column = 0;
+                iconY += 25;
+                iconX = x;
               }
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_18_0 = var7;
-          stackIn_18_1 = new StringBuilder().append("km.EA(");
-          if (param0 == null) {
-            stackIn_19_2 = "null";
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("km.EA(");
+          if (match == null) {
+            matchSummary = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            matchSummary = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
-          if (param1 == null) {
-            stackIn_22_2 = "null";
+          boardContextBuilder = ((StringBuilder) (Object) contextBuilder).append(matchSummary).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            boardSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) boardContextBuilder).append(boardSummary).append(',').append(y).append(',').append(x).append(',').append(enabled).append(',').append(columns).append(',').append(rows).append(')').toString());
         }
     }
 
@@ -700,7 +700,7 @@ abstract class MenuScreen extends GameScreen {
         field_n = null;
         if (param0 >= -57) {
           PlayerBoard var2 = (PlayerBoard) null;
-          MenuScreen.a((MultiplayerMatch) null, (PlayerBoard) null, 113, 61, false, -53, 18);
+          MenuScreen.drawPowerUpMeterGrid((MultiplayerMatch) null, (PlayerBoard) null, 113, 61, false, -53, 18);
         }
         field_k = null;
     }

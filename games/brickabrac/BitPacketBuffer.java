@@ -175,7 +175,7 @@ final class BitPacketBuffer extends PacketBuffer {
             var24.boardState == 4 ||
             var24.boardState == 1) &&
             var10 == 0) {
-            RichTextLayout.a(QuickChatHelpDialog.a(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
+            RichTextLayout.a(QuickChatHelpDialog.getLeverFrameIndex(match, playerId, 127, var24), var7, scaleDivisor, destinationY, (byte) 107, var24, destinationX);
           }
           var27 = (BallPulseEffect) (var24.ballPulses.first(-30));
           while (var27 != null) {
@@ -213,7 +213,7 @@ final class BitPacketBuffer extends PacketBuffer {
             return;
           }
           while (var28 != null) {
-            cn.a(var28, var24, 10030, destinationX, destinationY);
+            GameOverlayHelpers.drawScorePopup(var28, var24, 10030, destinationX, destinationY);
             var28 = (ScorePopup) (var24.scorePopups.next((byte) 116));
           }
           if (0 != (match.playerMaskThree & 1 << playerId)) {

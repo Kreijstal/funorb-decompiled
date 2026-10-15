@@ -94,9 +94,9 @@ final class ToggleButtonWidget extends FocusableWidget {
         o.currentLobbyGame = null;
         fh.pendingGameOptionsReceived = false;
         nl.pendingLobbyGame = null;
-        if (ua.lobbyPlayers != null) {
-          ua.lobbyPlayers.clear((byte) -57);
-          ua.lobbyPlayers = null;
+        if (GameplayRenderHelpers.lobbyPlayers != null) {
+          GameplayRenderHelpers.lobbyPlayers.clear((byte) -57);
+          GameplayRenderHelpers.lobbyPlayers = null;
         }
         if (param0 < 29) {
           return;

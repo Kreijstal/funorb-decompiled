@@ -8,7 +8,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
     private boolean field_tb;
     private ActivityIndicatorWidget activityIndicator;
     private boolean responseHandled;
-    static RgbSprite[] field_yb;
+    static RgbSprite[] spaceSmallLeverSprites;
     static UiComponent field_Ab;
     static ValidationStatus validationInvalid;
     private TextFont font;
@@ -48,7 +48,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
 
     final static boolean n(int param0) {
         if (param0 != -5) {
-          field_yb = (RgbSprite[]) null;
+          spaceSmallLeverSprites = (RgbSprite[]) null;
           if (!LegacyUtf8Decoder.a((byte) -80)) {
             return false;
           }
@@ -237,12 +237,12 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
         field_Ab = null;
         if (param0 == 50) {
           validationInvalid = null;
-          field_yb = null;
+          spaceSmallLeverSprites = null;
           return;
         }
         AccountMessageDialog.o(29);
         validationInvalid = null;
-        field_yb = null;
+        spaceSmallLeverSprites = null;
     }
 
     static {

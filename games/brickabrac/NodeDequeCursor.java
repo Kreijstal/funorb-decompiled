@@ -3,27 +3,27 @@
  */
 final class NodeDequeCursor {
     private IntrusiveNode cursor;
-    static int[][] field_e;
+    static int[][] boardLayoutYByPlayerCount;
     private NodeDeque deque;
     static int screenTransitionTick;
     static RgbSprite[][] constructionSegsSprites;
-    static int[][] field_c;
+    static int[][] boardLayoutXByPlayerCount;
     static ResourceArchive field_i;
-    static int[][] field_h;
+    static int[][] boardScaleDivisorsByPlayerCount;
     static RgbSprite field_b;
 
     public static void c(int param0) {
         field_b = null;
         field_i = null;
         constructionSegsSprites = (RgbSprite[][]) null;
-        field_h = (int[][]) null;
-        field_e = (int[][]) null;
+        boardScaleDivisorsByPlayerCount = (int[][]) null;
+        boardLayoutYByPlayerCount = (int[][]) null;
         if (param0 > 23) {
-          field_c = (int[][]) null;
+          boardLayoutXByPlayerCount = (int[][]) null;
           return;
         }
         field_i = (ResourceArchive) null;
-        field_c = (int[][]) null;
+        boardLayoutXByPlayerCount = (int[][]) null;
     }
 
     final IntrusiveNode last(boolean obfuscationGuard) {
@@ -185,23 +185,23 @@ final class NodeDequeCursor {
     }
 
     static {
-        field_e = new int[5][];
-        field_c = new int[5][];
-        field_h = new int[5][];
-        field_c[0] = new int[]{7};
-        field_c[3] = new int[]{167, 7, 480, 480, 7};
-        field_c[4] = new int[]{167, 7, 7, 480, 480};
-        field_c[2] = new int[]{167, 7, 480, 480, 7};
-        field_c[1] = new int[]{7, 327};
-        field_e[4] = new int[]{7, 7, 240, 240, 7};
-        field_e[3] = new int[]{7, 7, 240, 7, 240};
-        field_e[2] = new int[]{7, 7, 7, 240, 240};
-        field_e[1] = new int[]{7, 7};
-        field_e[0] = new int[]{7};
-        field_h[0] = new int[]{1};
-        field_h[2] = new int[]{1, 2, 2, 2, 2};
-        field_h[4] = new int[]{1, 2, 2, 2, 2};
-        field_h[3] = new int[]{1, 2, 2, 2, 2};
-        field_h[1] = new int[]{1, 1};
+        boardLayoutYByPlayerCount = new int[5][];
+        boardLayoutXByPlayerCount = new int[5][];
+        boardScaleDivisorsByPlayerCount = new int[5][];
+        boardLayoutXByPlayerCount[0] = new int[]{7};
+        boardLayoutXByPlayerCount[3] = new int[]{167, 7, 480, 480, 7};
+        boardLayoutXByPlayerCount[4] = new int[]{167, 7, 7, 480, 480};
+        boardLayoutXByPlayerCount[2] = new int[]{167, 7, 480, 480, 7};
+        boardLayoutXByPlayerCount[1] = new int[]{7, 327};
+        boardLayoutYByPlayerCount[4] = new int[]{7, 7, 240, 240, 7};
+        boardLayoutYByPlayerCount[3] = new int[]{7, 7, 240, 7, 240};
+        boardLayoutYByPlayerCount[2] = new int[]{7, 7, 7, 240, 240};
+        boardLayoutYByPlayerCount[1] = new int[]{7, 7};
+        boardLayoutYByPlayerCount[0] = new int[]{7};
+        boardScaleDivisorsByPlayerCount[0] = new int[]{1};
+        boardScaleDivisorsByPlayerCount[2] = new int[]{1, 2, 2, 2, 2};
+        boardScaleDivisorsByPlayerCount[4] = new int[]{1, 2, 2, 2, 2};
+        boardScaleDivisorsByPlayerCount[3] = new int[]{1, 2, 2, 2, 2};
+        boardScaleDivisorsByPlayerCount[1] = new int[]{1, 1};
     }
 }

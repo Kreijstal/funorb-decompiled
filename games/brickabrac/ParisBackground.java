@@ -245,7 +245,7 @@ final class ParisBackground extends BackgroundScene {
           BackgroundScene.field_i[2] = 9474303;
           TextFieldRenderer.field_C[2] = 16736352;
           BackgroundScene.field_i[4] = 16711935;
-          cn.field_d = 8421504;
+          GameOverlayHelpers.field_d = 8421504;
           TextFieldRenderer.field_C[3] = 16736511;
           TextFieldRenderer.field_C[0] = 16764000;
           if (param8 != 61) {

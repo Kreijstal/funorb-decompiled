@@ -14,7 +14,7 @@ final class TextHotspotRegion extends IntrusiveNode {
     int height;
     int hotspotId;
     static String field_m;
-    static RgbSprite[] field_p;
+    static RgbSprite[] powerUpMeterIcons;
 
     public static void a(byte param0) {
         int var1 = 127 % ((-74 - param0) / 42);
@@ -22,7 +22,7 @@ final class TextHotspotRegion extends IntrusiveNode {
         decodedSpriteHeights = null;
         field_q = null;
         field_m = null;
-        field_p = null;
+        powerUpMeterIcons = null;
         field_l = null;
         logoMeshes = null;
     }

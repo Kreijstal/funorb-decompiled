@@ -444,16 +444,16 @@ final class ValidationIconWidget extends FocusableWidget {
             var4 = (LobbyPlayer) null;
             ValidationIconWidget.insertSortedLobbyPlayer((LobbyPlayer) null, 48);
           }
-          existingPlayer = (LobbyPlayer) (ua.lobbyPlayers.first(-69));
+          existingPlayer = (LobbyPlayer) (GameplayRenderHelpers.lobbyPlayers.first(-69));
           while (existingPlayer != null) {
             if (existingPlayer.comesBeforePlayer(player, obfuscationGuard ^ -18005)) {
-              existingPlayer = (LobbyPlayer) (ua.lobbyPlayers.next((byte) 116));
+              existingPlayer = (LobbyPlayer) (GameplayRenderHelpers.lobbyPlayers.next((byte) 116));
               continue;
             }
             break;
           }
           if (existingPlayer == null) {
-            ua.lobbyPlayers.addLast(player, (byte) 3);
+            GameplayRenderHelpers.lobbyPlayers.addLast(player, (byte) 3);
           } else {
             BubbleDistortion.insertNodeBefore(player, 56, existingPlayer);
           }

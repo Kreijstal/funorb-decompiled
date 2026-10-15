@@ -1343,20 +1343,20 @@ final class GameplayScreen extends GameScreen {
                 if ((1 << var15 & var8_intLifetime1) != 0) {
                   var10 = 5120;
                 }
-                effectBoard.field_xb[var15] = effectBoard.field_xb[var15] + (-effectBoard.field_cb[var15] + var10) / 100;
-                effectBoard.field_xb[var15] = 7 * effectBoard.field_xb[var15] / 8;
-                if (512 < effectBoard.field_xb[var15]) {
-                  effectBoard.field_xb[var15] = 512;
+                effectBoard.powerUpMeterVelocities256[var15] = effectBoard.powerUpMeterVelocities256[var15] + (-effectBoard.powerUpMeterLevels256[var15] + var10) / 100;
+                effectBoard.powerUpMeterVelocities256[var15] = 7 * effectBoard.powerUpMeterVelocities256[var15] / 8;
+                if (512 < effectBoard.powerUpMeterVelocities256[var15]) {
+                  effectBoard.powerUpMeterVelocities256[var15] = 512;
                 }
-                if (effectBoard.field_xb[var15] < -512) {
-                  effectBoard.field_xb[var15] = -512;
+                if (effectBoard.powerUpMeterVelocities256[var15] < -512) {
+                  effectBoard.powerUpMeterVelocities256[var15] = -512;
                 }
-                effectBoard.field_cb[var15] = effectBoard.field_cb[var15] + effectBoard.field_xb[var15];
-                if (effectBoard.field_xb[var15] > 0 &&
-                  effectBoard.field_cb[var15] > var10 ||
-                  !(effectBoard.field_xb[var15] >= 0) &&
-                  !(var10 <= effectBoard.field_cb[var15])) {
-                  effectBoard.field_cb[var15] = var10;
+                effectBoard.powerUpMeterLevels256[var15] = effectBoard.powerUpMeterLevels256[var15] + effectBoard.powerUpMeterVelocities256[var15];
+                if (effectBoard.powerUpMeterVelocities256[var15] > 0 &&
+                  effectBoard.powerUpMeterLevels256[var15] > var10 ||
+                  !(effectBoard.powerUpMeterVelocities256[var15] >= 0) &&
+                  !(var10 <= effectBoard.powerUpMeterLevels256[var15])) {
+                  effectBoard.powerUpMeterLevels256[var15] = var10;
                 }
               }
               var15++;
@@ -1613,11 +1613,11 @@ final class GameplayScreen extends GameScreen {
         int secondHudLocalFlag;
         unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         unusedGuardQuotient = -76 / ((-79 - obfuscationGuard) / 35);
-        layoutXAlias = NodeDequeCursor.field_c[this.match.playerCount - 1];
+        layoutXAlias = NodeDequeCursor.boardLayoutXByPlayerCount[this.match.playerCount - 1];
         layoutX = layoutXAlias;
-        layoutYAlias = NodeDequeCursor.field_e[this.match.playerCount - 1];
+        layoutYAlias = NodeDequeCursor.boardLayoutYByPlayerCount[this.match.playerCount - 1];
         layoutY = layoutYAlias;
-        layoutModes = NodeDequeCursor.field_h[-1 + this.match.playerCount];
+        layoutModes = NodeDequeCursor.boardScaleDivisorsByPlayerCount[-1 + this.match.playerCount];
         backgroundPlayerId = this.viewedPlayerId;
         if (null != TabbedPane.currentBackground) {
           for (backgroundSlot = 0; backgroundSlot < this.match.playerCount; backgroundSlot++) {
@@ -1675,10 +1675,10 @@ final class GameplayScreen extends GameScreen {
         }
         if (this.match.playerCount != 1) {
           if (2 != this.match.playerCount) {
-            fixedLayoutY = NodeDequeCursor.field_e[4];
+            fixedLayoutY = NodeDequeCursor.boardLayoutYByPlayerCount[4];
             fixedLayoutYAlias = fixedLayoutY;
             layoutY = fixedLayoutYAlias;
-            fixedLayoutX = NodeDequeCursor.field_c[4];
+            fixedLayoutX = NodeDequeCursor.boardLayoutXByPlayerCount[4];
             fixedLayoutXAlias = fixedLayoutX;
             layoutX = fixedLayoutXAlias;
             nh.paintNineSliceFrame(169, 482, -40, -1, LoginCredentialKind.field_h, -1);
@@ -1689,7 +1689,7 @@ final class GameplayScreen extends GameScreen {
             viewedHudGuard = -103;
             viewedHudX = fixedLayoutX[0];
             showViewedHudDetails = (localOrOfflineFlag != 0) || (0 == this.localPlayerMask);
-            LobbyGame.$cfr$intArgs$a$687785aae666(viewedHudResultMode, viewedHudGuard, viewedHudX, showViewedHudDetails, this.match.playerBoards[this.viewedPlayerId], fixedLayoutY[0], this.viewedPlayerId, localOrOfflineFlag != 0, this.match);
+            LobbyGame.drawMultiplayerBoardHud(viewedHudResultMode, viewedHudGuard, viewedHudX, showViewedHudDetails, this.match.playerBoards[this.viewedPlayerId], fixedLayoutY[0], this.viewedPlayerId, localOrOfflineFlag != 0, this.match);
             nh.paintNineSliceFrame(169, 9, -40, -1, LoginCredentialKind.field_h, 0 + (fixedLayoutY[2] - 3));
             nh.paintNineSliceFrame(169, 9, -40, 472, LoginCredentialKind.field_h, -3 + fixedLayoutY[2] - 0);
           } else {
@@ -1717,7 +1717,7 @@ final class GameplayScreen extends GameScreen {
             firstHudY = layoutYAlias[0];
             firstHudPlayerId = hudPlayerId;
             firstHudLocalOrOffline = (localOrOfflineFlag != 0) || (firstHudLocalFlag != 0);
-            LobbyGame.$cfr$intArgs$a$687785aae666(firstHudResultMode, firstHudGuard, firstHudX, showFirstHudDetails, firstHudBoard, firstHudY, firstHudPlayerId, firstHudLocalOrOffline, this.match);
+            LobbyGame.drawMultiplayerBoardHud(firstHudResultMode, firstHudGuard, firstHudX, showFirstHudDetails, firstHudBoard, firstHudY, firstHudPlayerId, firstHudLocalOrOffline, this.match);
             hudPlayerId = 1 - hudPlayerId;
             secondHudLocalValue = (0 == (1 << hudPlayerId & this.localPlayerMask)) ? 0 : 1;
             secondHudLocalFlag = secondHudLocalValue;
@@ -1729,7 +1729,7 @@ final class GameplayScreen extends GameScreen {
             secondHudY = layoutYAlias[1];
             secondHudPlayerId = hudPlayerId;
             secondHudLocalOrOffline = (localOrOfflineFlag != 0) || (secondHudLocalFlag != 0);
-            LobbyGame.$cfr$intArgs$a$687785aae666(secondHudResultMode, secondHudGuard, secondHudX, showSecondHudDetails, secondHudBoard, secondHudY, secondHudPlayerId, secondHudLocalOrOffline, this.match);
+            LobbyGame.drawMultiplayerBoardHud(secondHudResultMode, secondHudGuard, secondHudX, showSecondHudDetails, secondHudBoard, secondHudY, secondHudPlayerId, secondHudLocalOrOffline, this.match);
           }
         } else {
           singleBoard = this.match.playerBoards[0];
@@ -1737,14 +1737,14 @@ final class GameplayScreen extends GameScreen {
           Rasterizer2D.fillRectangleAlpha(7, 473, 510, 7, 0, 96);
           Rasterizer2D.fillRectangleAlpha(524, 0, 116, 480, 0, 96);
           nh.paintNineSliceFrame(125, 482, -40, 516, LoginCredentialKind.field_h, -1);
-          DualLinkNode.a(130, this.match, ContextActionController.field_g, singleBoard, (byte) -104, 527, 10, 85);
+          DualLinkNode.drawSinglePlayerStatus(130, this.match, ContextActionController.field_g, singleBoard, (byte) -104, 527, 10, 85);
           nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 137);
           if (!TextFieldRenderer.field_A ||
             wc.field_b) {
-            ua.a(singleBoard, 524, 85, -68, 147, 81, this.match);
+            GameplayRenderHelpers.drawCenteredPowerUpMeters(singleBoard, 524, 85, -68, 147, 81, this.match);
           }
           nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 229);
-          ArchiveNetworkClient.a(640, this.match, singleBoard);
+          ArchiveNetworkClient.drawSinglePlayerCharacterHud(640, this.match, singleBoard);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
             ui.a(LoadingProgressDialog.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
@@ -1763,9 +1763,9 @@ final class GameplayScreen extends GameScreen {
           0 == (1 << 1 - this.viewedPlayerId & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
           ClientException.a(layoutX[1], 424, false, this.match, 1 - this.viewedPlayerId, layoutY[1]);
         }
-        portraitLayoutY = NodeDequeCursor.field_e[this.match.playerCount - 1];
+        portraitLayoutY = NodeDequeCursor.boardLayoutYByPlayerCount[this.match.playerCount - 1];
         portraitPlayerId = this.viewedPlayerId;
-        portraitLayoutX = NodeDequeCursor.field_c[this.match.playerCount - 1];
+        portraitLayoutX = NodeDequeCursor.boardLayoutXByPlayerCount[this.match.playerCount - 1];
         for (portraitSlot = 0; this.match.playerCount > portraitSlot; portraitSlot++) {
           if (layoutModes[portraitSlot] == 2) {
             headSprite = ScorePopup.characterHeads[this.match.playerBoards[portraitPlayerId].characterIndex];

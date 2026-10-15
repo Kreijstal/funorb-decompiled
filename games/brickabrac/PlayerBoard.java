@@ -60,7 +60,7 @@ final class PlayerBoard extends IntrusiveNode {
     int field_r;
     int receivedInputTick;
     String pendingMessage;
-    int[] field_cb;
+    int[] powerUpMeterLevels256;
     int eyeExpressionTicks;
     int maskedTicks;
     PowerUpWarning displayedWarning;
@@ -71,7 +71,7 @@ final class PlayerBoard extends IntrusiveNode {
     int field_l;
     int positionOrderTicks;
     String displayedMessage;
-    int[] field_xb;
+    int[] powerUpMeterVelocities256;
     int resultWord;
     int resultCode;
 
@@ -934,8 +934,8 @@ final class PlayerBoard extends IntrusiveNode {
         this.randomSeed = randomSeed;
         this.boardState = 0;
         this.seededRandom = new IsaacGenerator(new int[]{this.randomSeed});
-        this.field_cb = new int[29];
-        this.field_xb = new int[29];
+        this.powerUpMeterLevels256 = new int[29];
+        this.powerUpMeterVelocities256 = new int[29];
         this.snapshotHistory = new ObjectHistoryBuffer(500);
         this.setBriefEyeExpression(16387, 0);
         this.characterIndex = characterIndex;

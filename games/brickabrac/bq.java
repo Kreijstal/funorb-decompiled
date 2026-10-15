@@ -318,9 +318,9 @@ final class bq {
               var8Lifetime1 = ProxySocketConnector.field_k - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + QuickChatCategoryDefinition.field_y;
               ce.field_a[var4Lifetime3] = new int[4];
-              ce.field_a[var4Lifetime3][0] = -cn.field_c + var8Lifetime1;
+              ce.field_a[var4Lifetime3][0] = -GameOverlayHelpers.field_c + var8Lifetime1;
               ce.field_a[var4Lifetime3][1] = var5Lifetime3;
-              ce.field_a[var4Lifetime3][2] = (cn.field_c << 1) + var7Lifetime2;
+              ce.field_a[var4Lifetime3][2] = (GameOverlayHelpers.field_c << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + (QuickChatCategoryDefinition.field_y + ((DropTargetWidget.field_H << 1) + b.field_c));
               ce.field_a[var4Lifetime3][3] = (DropTargetWidget.field_H << 1) + b.field_c;
             } else {

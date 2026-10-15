@@ -80,124 +80,124 @@ class Widget extends IntrusiveNode {
         PopupWidgetLayer.widgetTheme.a(true, CappedUrlRequest.field_j, b.field_a, var5);
     }
 
-    final static void a(int param0, int param1, int param2, PlayerBoard param3, MultiplayerMatch param4, byte param5) {
-        int stackIn_8_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_13_1 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_32_0 = 0;
-        int stackIn_38_0 = 0;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        String stackIn_49_2 = null;
-        StringBuilder stackIn_51_1 = null;
-        String stackIn_52_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var6_intLifetime1;
-        int var11Lifetime1;
-        int var11Lifetime2;
-        int var11Lifetime3;
+    final static void drawPowerUpMeter(int y, int typeId, int x, PlayerBoard board, MultiplayerMatch match, byte obfuscationGuard) {
+        int tutorialActiveValue = 0;
+        int tutorialValue = 0;
+        int highlightStageValue = 0;
+        int firstBandValue = 0;
+        int secondBandValue = 0;
+        int thirdBandValue = 0;
+        int fourthBandValue = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        StringBuilder matchContextBuilder = null;
+        String matchSummary = null;
+        RuntimeException caughtFailure = null;
+        int tutorialActive = 0;
+        RuntimeException failure = null;
+        int highlightAge = 0;
+        int barX = 0;
+        int meterLevel = 0;
+        int barBottom = 0;
+        int firstBandHeight = 0;
+        int highlightMeter;
+        int secondBandHeight;
+        int thirdBandHeight;
+        int fourthBandHeight;
         try {
-          if (param4.playerCount == 1) {
+          if (match.playerCount == 1) {
             if (TextFieldRenderer.field_A) {
-              stackIn_8_0 = (MusicVoice.a((byte) 88)) ? 1 : 0;
+              tutorialActiveValue = (MusicVoice.a((byte) 88)) ? 1 : 0;
             } else {
-              stackIn_8_0 = 0;
+              tutorialActiveValue = 0;
             }
           } else {
-            stackIn_8_0 = 0;
+            tutorialActiveValue = 0;
           }
-          var6_int = stackIn_8_0;
-          stackIn_11_0 = var6_int;
+          tutorialActive = tutorialActiveValue;
+          tutorialValue = tutorialActive;
           if (8 != ga.field_i &&
             ga.field_i != 9) {
-            stackIn_13_1 = 0;
+            highlightStageValue = 0;
           } else {
-            stackIn_13_1 = 1;
+            highlightStageValue = 1;
           }
-          var6_intLifetime1 = stackIn_11_0 & stackIn_13_1;
-          var7 = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
-          TextHotspotRegion.field_p[param1].drawTransparent(param2, param0);
-          if (var6_intLifetime1 != 0) {
-            TextHotspotRegion.field_p[param1].f(param2, param0, 64 + (InteractiveGameClient.sine8192(200 * var7, -4097) >> 10));
+          highlightMeter = tutorialValue & highlightStageValue;
+          highlightAge = MembershipBenefitsScreen.clientTick - SpriteGeometry.field_v;
+          TextHotspotRegion.powerUpMeterIcons[typeId].drawTransparent(x, y);
+          if (highlightMeter != 0) {
+            TextHotspotRegion.powerUpMeterIcons[typeId].f(x, y, 64 + (InteractiveGameClient.sine8192(200 * highlightAge, -4097) >> 10));
           }
-          param2 += 7;
-          param0--;
-          var8 = LevelPackSelectScreen.field_r.width + param2 - 5;
-          Rasterizer2D.fillRectangle(var8, param0 + 1, 4, LevelPackSelectScreen.field_r.height - 2, 16777215);
-          if (param5 <= 106) {
+          x += 7;
+          y--;
+          barX = LevelPackSelectScreen.powerUpMeterBarSprite.width + x - 5;
+          Rasterizer2D.fillRectangle(barX, y + 1, 4, LevelPackSelectScreen.powerUpMeterBarSprite.height - 2, 16777215);
+          if (obfuscationGuard <= 106) {
             Widget.a(120, (TextFont) null);
           }
-          var9 = param3.field_cb[param1] >> 8;
-          var10 = LevelPackSelectScreen.field_r.height + (param0 - 1);
-          if (var9 > 0) {
-            stackIn_22_0 = (var9 <= 3) ? var9 : 3;
-            var11 = stackIn_22_0;
-            Rasterizer2D.fillRectangle(var8, var10 - var11, 4, var11, 16735667);
-            var10 -= 3;
+          meterLevel = board.powerUpMeterLevels256[typeId] >> 8;
+          barBottom = LevelPackSelectScreen.powerUpMeterBarSprite.height + (y - 1);
+          if (meterLevel > 0) {
+            firstBandValue = (meterLevel <= 3) ? meterLevel : 3;
+            firstBandHeight = firstBandValue;
+            Rasterizer2D.fillRectangle(barX, barBottom - firstBandHeight, 4, firstBandHeight, 16735667);
+            barBottom -= 3;
           }
-          if (var9 > 3) {
-            if (var9 > 7) {
-              stackIn_27_0 = 4;
+          if (meterLevel > 3) {
+            if (meterLevel > 7) {
+              secondBandValue = 4;
             } else {
-              stackIn_27_0 = -3 + var9;
+              secondBandValue = -3 + meterLevel;
             }
-            var11Lifetime1 = stackIn_27_0;
-            Rasterizer2D.fillRectangle(var8, -var11Lifetime1 + var10, 4, var11Lifetime1, 15876234);
-            var10 -= 4;
+            secondBandHeight = secondBandValue;
+            Rasterizer2D.fillRectangle(barX, -secondBandHeight + barBottom, 4, secondBandHeight, 15876234);
+            barBottom -= 4;
           }
-          if (7 < var9) {
-            if (var9 > 13) {
-              stackIn_32_0 = 6;
+          if (7 < meterLevel) {
+            if (meterLevel > 13) {
+              thirdBandValue = 6;
             } else {
-              stackIn_32_0 = -7 + var9;
+              thirdBandValue = -7 + meterLevel;
             }
-            var11Lifetime2 = stackIn_32_0;
-            Rasterizer2D.fillRectangle(var8, -var11Lifetime2 + var10, 4, var11Lifetime2, 15410040);
-            var10 -= 6;
+            thirdBandHeight = thirdBandValue;
+            Rasterizer2D.fillRectangle(barX, -thirdBandHeight + barBottom, 4, thirdBandHeight, 15410040);
+            barBottom -= 6;
           }
-          if (var9 > 13) {
-            if (var9 <= 20) {
-              stackIn_38_0 = -13 + var9;
+          if (meterLevel > 13) {
+            if (meterLevel <= 20) {
+              fourthBandValue = -13 + meterLevel;
             } else {
-              stackIn_38_0 = 7;
+              fourthBandValue = 7;
             }
-            var11Lifetime3 = stackIn_38_0;
-            Rasterizer2D.fillRectangle(var8, var10 - var11Lifetime3, 4, var11Lifetime3, 13245286);
+            fourthBandHeight = fourthBandValue;
+            Rasterizer2D.fillRectangle(barX, barBottom - fourthBandHeight, 4, fourthBandHeight, 13245286);
           }
-          if (var9 >= 20) {
-            Rasterizer2D.fillRectangleAlpha(var8, param0 + LevelPackSelectScreen.field_r.height - 21, 4, 20, 16777215, (InteractiveGameClient.sine8192(200 * MembershipBenefitsScreen.clientTick, -4097) >> 10) + 64);
+          if (meterLevel >= 20) {
+            Rasterizer2D.fillRectangleAlpha(barX, y + LevelPackSelectScreen.powerUpMeterBarSprite.height - 21, 4, 20, 16777215, (InteractiveGameClient.sine8192(200 * MembershipBenefitsScreen.clientTick, -4097) >> 10) + 64);
           }
-          LevelPackSelectScreen.field_r.drawTransparent(param2, param0);
-          if (var6_intLifetime1 != 0) {
-            LevelPackSelectScreen.field_r.f(param2, param0, (InteractiveGameClient.sine8192(400 * var7, -4097) >> 10) + 64);
+          LevelPackSelectScreen.powerUpMeterBarSprite.drawTransparent(x, y);
+          if (highlightMeter != 0) {
+            LevelPackSelectScreen.powerUpMeterBarSprite.f(x, y, (InteractiveGameClient.sine8192(400 * highlightAge, -4097) >> 10) + 64);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_48_0 = var6;
-          stackIn_48_1 = new StringBuilder().append("oc.IA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_49_2 = "null";
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("oc.IA(").append(y).append(',').append(typeId).append(',').append(x).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_49_2 = "{...}";
+            boardSummary = "{...}";
           }
-          stackIn_51_1 = ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',');
-          if (param4 == null) {
-            stackIn_52_2 = "null";
+          matchContextBuilder = ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(',');
+          if (match == null) {
+            matchSummary = "null";
           } else {
-            stackIn_52_2 = "{...}";
+            matchSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) matchContextBuilder).append(matchSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -600,7 +600,7 @@ class Widget extends IntrusiveNode {
 
     final static void c(byte param0) {
         if (param0 >= -12) {
-          Widget.a(89, -103, -10, (PlayerBoard) null, (MultiplayerMatch) null, (byte) 67);
+          Widget.drawPowerUpMeter(89, -103, -10, (PlayerBoard) null, (MultiplayerMatch) null, (byte) 67);
           o.enabledFeatureMask = 0;
           return;
         }

@@ -91,7 +91,7 @@ final class gr {
           TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;
           nj.field_l = TranslucentNineSliceFrame.field_m;
           fq.field_d = GameConnectionShell.field_D;
-          we.field_b = TextHotspotRegion.field_p;
+          we.field_b = TextHotspotRegion.powerUpMeterIcons;
           field_c = MenuSelection.field_k;
         }
         if (param1 != -28463) {

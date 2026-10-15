@@ -38,10 +38,10 @@ final class ChocolateBackground extends BackgroundScene {
             SoundPlayback.a(-35, 26746, var7, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           } else {
-            ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
+            GameplayRenderHelpers.drawOffsetParallaxLayers(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
             return;
           }
-          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
+          GameplayRenderHelpers.drawOffsetParallaxLayers(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var7.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
           return;
         }
         if (!this.hasSprites((byte) -128)) {
@@ -53,10 +53,10 @@ final class ChocolateBackground extends BackgroundScene {
           SoundPlayback.a(-35, 26746, var8, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
+          GameplayRenderHelpers.drawOffsetParallaxLayers(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
           return;
         }
-        ua.a(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
+        GameplayRenderHelpers.drawOffsetParallaxLayers(QuickChatParameterType.field_i, destinationX, 306, destinationY, FullscreenFailureDialog.field_hb, 79, var8.sprite, scroll16, colorIndex, 2, StatefulWidgetRenderer.field_w, -35);
     }
 
     final RgbSprite a(boolean param0, int param1) {
@@ -146,7 +146,7 @@ final class ChocolateBackground extends BackgroundScene {
             SoundPlayback.a(0, 26746, var6, colorIndex, 1, QuickChatPhraseRegistry.chocolateFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ua.a(nl.chocolateNearSprite, destinationX, 640, destinationY, chocolateMidSprite, 95, var6.sprite, scroll16, colorIndex, 1, CappedUrlRequest.chocolateSpiresSprite, 0);
+          GameplayRenderHelpers.drawOffsetParallaxLayers(nl.chocolateNearSprite, destinationX, 640, destinationY, chocolateMidSprite, 95, var6.sprite, scroll16, colorIndex, 1, CappedUrlRequest.chocolateSpiresSprite, 0);
           if (!obfuscationGuard) {
             field_t = (String) null;
             return;

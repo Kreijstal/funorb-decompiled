@@ -49,8 +49,8 @@ final class hm {
           if (lobbyPlayerContent.children == null) {
             lobbyPlayerContent.children = new NodeDeque();
           }
-          ua.lobbyPlayers = lobbyPlayerContent.children;
-          ua.lobbyPlayers.clear((byte) -60);
+          GameplayRenderHelpers.lobbyPlayers = lobbyPlayerContent.children;
+          GameplayRenderHelpers.lobbyPlayers.clear((byte) -60);
           WhirlpoolHasher.lobbyPlayerIndex = new SecondaryHashTable(lobbyPlayerBuckets);
           m.field_h = -1;
           MenuSelection.previewGameId = 0;

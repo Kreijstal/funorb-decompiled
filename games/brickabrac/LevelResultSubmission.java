@@ -78,7 +78,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             var2 = un.field_h;
           }
           if (null != var2) {
-            DateFieldsWidget.a(-115, (String) null, (String) (var2), 0, cn.field_d);
+            DateFieldsWidget.a(-115, (String) null, (String) (var2), 0, GameOverlayHelpers.field_d);
           } else {
             var3 = LoadingProgressDialog.field_cb;
             var3 = TextFieldRenderer.a((byte) 82, var3);

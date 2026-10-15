@@ -98,7 +98,7 @@ final class IntrusiveHashIterator implements Iterator {
         int var2_intLifetime1;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = cn.field_d;
+          var2_int = GameOverlayHelpers.field_d;
           if (message.channel != 2) {
             if (message.channel != 4) {
               if (~message.senderId != ~Widget.field_p) {
@@ -118,7 +118,7 @@ final class IntrusiveHashIterator implements Iterator {
                 var2_intLifetime1 = TextFieldRenderer.field_C[message.channel];
               }
             } else {
-              var2_intLifetime1 = cn.field_d;
+              var2_intLifetime1 = GameOverlayHelpers.field_d;
             }
           }
           if (obfuscationGuard == -31126) {

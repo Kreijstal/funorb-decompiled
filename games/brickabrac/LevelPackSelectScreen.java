@@ -5,7 +5,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     private LevelPackCard firstPackCard;
     static String field_x;
     static RgbSprite[] field_z;
-    static RgbSprite field_r;
+    static RgbSprite powerUpMeterBarSprite;
     static int[] field_v;
     private LevelPackCard secondPackCard;
     static int field_y;
@@ -83,7 +83,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     }
 
     public static void f(int param0) {
-        field_r = null;
+        powerUpMeterBarSprite = null;
         field_v = null;
         field_x = null;
         if (param0 != 14529) {
@@ -175,7 +175,7 @@ final class LevelPackSelectScreen extends MenuScreen {
         this.firstPackCard.updateFocus((byte) -75);
         this.secondPackCard.updateFocus((byte) -75);
         if (obfuscationGuard > -52) {
-          field_r = (RgbSprite) null;
+          powerUpMeterBarSprite = (RgbSprite) null;
         }
     }
 

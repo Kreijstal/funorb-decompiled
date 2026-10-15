@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cn {
+final class GameOverlayHelpers {
     static int field_c;
     static byte[][] decodedSpriteIndices;
-    static RgbSprite[] field_e;
+    static RgbSprite[] smallLeverSprites;
     static int field_d;
     static String field_b;
 
@@ -45,25 +45,25 @@ final class cn {
         }
     }
 
-    final static void a(ScorePopup param0, PlayerBoard param1, int param2, int param3, int param4) {
+    final static void drawScorePopup(ScorePopup popup, PlayerBoard unusedBoard, int obfuscationGuard, int offsetX, int offsetY) {
         try {
-          ContextActionController.field_g.drawCenteredAlpha(param0.text, (param0.x256 >> 8) + param3, (param0.y256 >> 8) + param4 + ContextActionController.field_g.capHeight, 0, -1, 256 * param0.remainingTicks / 50);
-          if (param2 != 10030) {
+          ContextActionController.field_g.drawCenteredAlpha(popup.text, (popup.x256 >> 8) + offsetX, (popup.y256 >> 8) + offsetY + ContextActionController.field_g.capHeight, 0, -1, 256 * popup.remainingTicks / 50);
+          if (obfuscationGuard != 10030) {
             PlayerBoard var6 = (PlayerBoard) null;
-            cn.a((ScorePopup) null, (PlayerBoard) null, -6, -71, 111);
+            GameOverlayHelpers.drawScorePopup((ScorePopup) null, (PlayerBoard) null, -6, -71, 111);
           }
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cn.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cn.B(" + (popup != null ? "{...}" : "null") + ',' + (unusedBoard != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + offsetX + ',' + offsetY + ')');
         }
     }
 
     public static void a(int param0) {
-        field_e = null;
+        smallLeverSprites = null;
         decodedSpriteIndices = (byte[][]) null;
         field_b = null;
         if (param0 < 97) {
           PlayerBoard var2 = (PlayerBoard) null;
-          cn.a((ScorePopup) null, (PlayerBoard) null, 41, -50, 10);
+          GameOverlayHelpers.drawScorePopup((ScorePopup) null, (PlayerBoard) null, 41, -50, 10);
         }
     }
 

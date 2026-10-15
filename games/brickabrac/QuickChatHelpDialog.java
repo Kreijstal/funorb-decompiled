@@ -28,7 +28,7 @@ final class QuickChatHelpDialog extends UiComponent {
         try {
           if (param1 != -3) {
             var7 = (PlayerBoard) null;
-            QuickChatHelpDialog.a((MultiplayerMatch) null, 109, -70, (PlayerBoard) null);
+            QuickChatHelpDialog.getLeverFrameIndex((MultiplayerMatch) null, 109, -70, (PlayerBoard) null);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param3 != null && (param4 != 2 ||
@@ -299,62 +299,62 @@ final class QuickChatHelpDialog extends UiComponent {
         return false;
     }
 
-    final static int a(MultiplayerMatch param0, int param1, int param2, PlayerBoard param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int[] var5 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_20_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
-        String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int getLeverFrameIndex(MultiplayerMatch match, int playerId, int obfuscationGuard, PlayerBoard board) {
+        int isPlayerMasked = 0;
+        RuntimeException failure = null;
+        int[] unusedWords = null;
+        int maskedValue = 0;
+        int leftFrame = 0;
+        int rightFrame = 0;
+        int neutralFrame = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String matchSummary = null;
+        StringBuilder boardContextBuilder = null;
+        String boardSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          stackIn_3_0 = ((1 << param1 & (param0.playerMaskThree | (param0.playerMaskTwo | param0.playerMaskOne))) == 0) ? 0 : 1;
-          var4_int = stackIn_3_0;
-          if (param2 <= 63) {
-            var5 = (int[]) null;
+          maskedValue = ((1 << playerId & (match.playerMaskThree | (match.playerMaskTwo | match.playerMaskOne))) == 0) ? 0 : 1;
+          isPlayerMasked = maskedValue;
+          if (obfuscationGuard <= 63) {
+            unusedWords = (int[]) null;
             QuickChatHelpDialog.a(-35L, 83, (String) null, (int[]) null, -41);
           }
-          if (var4_int == 0 &&
-            param3.boardState == 2 && (!TextFieldRenderer.field_A ||
+          if (isPlayerMasked == 0 &&
+            board.boardState == 2 && (!TextFieldRenderer.field_A ||
             !MusicVoice.a((byte) 93))) {
-            if ((1 & param3.controlMask) != 0 &&
-              (-2 & param3.controlMask) == 0) {
-              stackIn_13_0 = 0;
-              return stackIn_13_0;
+            if ((1 & board.controlMask) != 0 &&
+              (-2 & board.controlMask) == 0) {
+              leftFrame = 0;
+              return leftFrame;
             }
-            if ((param3.controlMask & 2) != 0) {
-              if ((param3.controlMask & -3) != 0) {
+            if ((board.controlMask & 2) != 0) {
+              if ((board.controlMask & -3) != 0) {
                 return 1;
               }
-              stackIn_18_0 = 2;
-              return stackIn_18_0;
+              rightFrame = 2;
+              return rightFrame;
             }
           }
-          stackIn_20_0 = 1;
-          return stackIn_20_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_23_0 = var4;
-          stackIn_23_1 = new StringBuilder().append("kb.H(");
-          if (param0 == null) {
-            stackIn_24_2 = "null";
+          neutralFrame = 1;
+          return neutralFrame;
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("kb.H(");
+          if (match == null) {
+            matchSummary = "null";
           } else {
-            stackIn_24_2 = "{...}";
+            matchSummary = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_27_2 = "null";
+          boardContextBuilder = ((StringBuilder) (Object) contextBuilder).append(matchSummary).append(',').append(playerId).append(',').append(obfuscationGuard).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            boardSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) boardContextBuilder).append(boardSummary).append(')').toString());
         }
     }
 

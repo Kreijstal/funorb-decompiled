@@ -218,18 +218,18 @@ final class QuickChatCategoryRegistry {
           MultiValueSliderRenderer.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
           GameConnectionShell.field_D = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
           AccountRegistrationPanel.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
-          TextHotspotRegion.field_p = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "powerup", 2);
-          LevelPackSelectScreen.field_r = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
+          TextHotspotRegion.powerUpMeterIcons = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "powerup", 2);
+          LevelPackSelectScreen.powerUpMeterBarSprite = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
           QuickChatHelpDialog.field_Ub = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
           GzipInflater.field_a = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
           IntrusiveNode.gameEyeSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
           FullscreenFailureKind.trackHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "track_heads", 2);
-          ProxyAuthenticationRequiredException.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_small", 2);
+          ProxyAuthenticationRequiredException.smallCharacterSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_small", 2);
           ScorePopup.characterHeads = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "character_heads", param3 ^ 29139);
-          cn.field_e = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small", 2);
-          ScorePopup.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
-          AccountMessageDialog.field_yb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
+          GameOverlayHelpers.smallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small", 2);
+          ScorePopup.chocolateSmallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
+          AccountMessageDialog.spaceSmallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
           MultiValueSliderWidget.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
           ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           ln.field_j = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
@@ -272,14 +272,14 @@ final class QuickChatCategoryRegistry {
           UiComponent.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
           UiComponent.field_ib.bindRasterTarget();
           Ball.field_D.a(0, 0);
-          ch.field_k = new RgbSprite[TextHotspotRegion.field_p.length];
+          ch.field_k = new RgbSprite[TextHotspotRegion.powerUpMeterIcons.length];
           if (param3 != 29137) {
             QuickChatCategoryRegistry.a((byte) -25);
           }
           for (var10_intLifetime6 = 0; ch.field_k.length > var10_intLifetime6; var10_intLifetime6++) {
-            ch.field_k[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.field_p[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.field_p[var10_intLifetime6].canvasHeight / 2);
+            ch.field_k[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasHeight / 2);
             ch.field_k[var10_intLifetime6].bindRasterTarget();
-            TextHotspotRegion.field_p[var10_intLifetime6].a(0, 0);
+            TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].a(0, 0);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 79);
           for (var10_intLifetime7 = 0; var10_intLifetime7 < ln.field_j.length; var10_intLifetime7++) {
@@ -315,9 +315,9 @@ final class QuickChatCategoryRegistry {
           }
           UnderwaterBackground.field_u = HotspotTextWidget.a(2, BirthDateEntryPanel.field_N, -1);
           ClientException.field_b = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
-          ed.field_b = new RgbSprite[3];
-          for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.field_b.length; var10_intLifetime11++) {
-            ed.field_b[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
+          ed.countdownSprites = new RgbSprite[3];
+          for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.countdownSprites.length; var10_intLifetime11++) {
+            ed.countdownSprites[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
           BoundedFile.field_a = new RgbSprite[FullscreenFailureKind.trackHeads.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {

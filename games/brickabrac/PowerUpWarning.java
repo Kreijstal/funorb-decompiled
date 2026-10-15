@@ -182,12 +182,12 @@ final class PowerUpWarning extends IntrusiveNode {
         field_i = param1;
     }
 
-    final static void a(int param0, PlayerBoard param1, MultiplayerMatch param2, int param3, int param4) {
+    final static void drawPowerUpMeterRow(int x, PlayerBoard board, MultiplayerMatch match, int obfuscationGuard, int y) {
         try {
-          int var5_int = -82 % ((param3 - 81) / 41);
-          MenuScreen.a(param2, param1, param4, param0, true, 5, 1);
+          int var5_int = -82 % ((obfuscationGuard - 81) / 41);
+          MenuScreen.drawPowerUpMeterGrid(match, board, y, x, true, 5, 1);
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lj.A(" + x + ',' + (board != null ? "{...}" : "null") + ',' + (match != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + y + ')');
         }
     }
 

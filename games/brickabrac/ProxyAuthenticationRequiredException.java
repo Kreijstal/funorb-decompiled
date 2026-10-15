@@ -7,7 +7,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static String field_f;
     static RgbSprite[] field_b;
     static PcmSound[] field_a;
-    static RgbSprite[] field_e;
+    static RgbSprite[] smallCharacterSprites;
     static int[] keyEventCodes;
     static String field_c;
 
@@ -28,7 +28,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           return;
         }
         keyEventCodes = null;
-        field_e = null;
+        smallCharacterSprites = null;
         field_a = null;
         field_b = null;
         field_c = null;

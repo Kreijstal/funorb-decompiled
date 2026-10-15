@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ed {
-    static RgbSprite[] field_b;
+    static RgbSprite[] countdownSprites;
     static String field_c;
     static boolean field_d;
     static int[] field_f;
@@ -106,7 +106,7 @@ final class ed {
         }
         field_c = null;
         projectedVertexY = null;
-        field_b = null;
+        countdownSprites = null;
     }
 
     static {

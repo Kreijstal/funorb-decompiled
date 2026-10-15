@@ -129,7 +129,7 @@ abstract class CacheEntry extends DualLinkNode {
           BufferedSocket.field_h = new UiComponent(0L, LoginCredentialKind.field_d, TextFieldRenderer.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
           rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
-          gj.field_b = new UiComponent(0L, fm.field_b, ua.field_e.toUpperCase());
+          gj.field_b = new UiComponent(0L, fm.field_b, GameplayRenderHelpers.field_e.toUpperCase());
           gj.field_b.enabled = vd.field_e;
           stackIn_6_0 = null;
           stackIn_6_1 = null;

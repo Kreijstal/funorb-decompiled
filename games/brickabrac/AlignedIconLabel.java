@@ -122,14 +122,14 @@ final class AlignedIconLabel extends UiComponent {
             stackIn_16_3 = null;
             stackIn_16_4 = SecondaryHashTable.field_i.getCodeBase();
             stackIn_16_5 = new StringBuilder().append("clienterror.ws?c=").append(RichTextLayout.field_m).append("&u=");
-            if (ua.field_a == null) {
+            if (GameplayRenderHelpers.field_a == null) {
               stackIn_17_2 = null;
               stackIn_17_3 = null;
               stackIn_17_6 = "" + BrickGameLayerController.field_e;
             } else {
               stackIn_17_2 = null;
               stackIn_17_3 = null;
-              stackIn_17_6 = ua.field_a;
+              stackIn_17_6 = GameplayRenderHelpers.field_a;
             }
             var4 = ((PlatformServices) (Object) stackIn_16_0).openUrl((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(PlatformServices.javaVendor).append("&v2=").append(PlatformServices.javaVersion).append("&e=").append(var10).toString()));
             while (var4.status == 0) {

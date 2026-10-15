@@ -21,16 +21,16 @@ final class WidgetLayerStack extends SingleChildWidget {
           var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
         } else {
           if (null == jj.field_a) {
-            ua.field_d = LoginCredentials.a(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
+            GameplayRenderHelpers.field_d = LoginCredentials.a(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
           } else {
-            ua.field_d = jj.field_a.a(true);
+            GameplayRenderHelpers.field_d = jj.field_a.a(true);
             qm.a(97, 2);
           }
-          if (ua.field_d == null) {
+          if (GameplayRenderHelpers.field_d == null) {
             var2 = 3;
           } else {
             var2 = 2;
-            ap.a((byte) 117, ua.field_d);
+            ap.a((byte) 117, GameplayRenderHelpers.field_d);
           }
         }
         if (null == jj.field_a &&
@@ -174,7 +174,7 @@ final class WidgetLayerStack extends SingleChildWidget {
     final static void a(int param0, int param1, NineSliceFrame param2, int param3, NineSliceFrame param4, int param5) {
         try {
           QuickChatCategoryDefinition.field_y = param1;
-          cn.field_c = param5;
+          GameOverlayHelpers.field_c = param5;
           if (param3 <= 25) {
             WidgetLayerStack.h(24);
           }
@@ -296,7 +296,7 @@ final class WidgetLayerStack extends SingleChildWidget {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.paintFrame((cn.field_c << 1) + var7Lifetime1, b.field_c + (DropTargetWidget.field_H << 1), -cn.field_c + var8Lifetime1, false, var1_int);
+                var9.paintFrame((GameOverlayHelpers.field_c << 1) + var7Lifetime1, b.field_c + (DropTargetWidget.field_H << 1), -GameOverlayHelpers.field_c + var8Lifetime1, false, var1_int);
               }
               var1_int = var1_int + DropTargetWidget.field_H;
             }

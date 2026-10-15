@@ -247,7 +247,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
     final static void a(int param0, byte param1) {
         kd.field_c = FullscreenFailureKind.field_f[param0];
         int var2 = -14 % ((param1 + 33) / 34);
-        wn.field_a = ua.field_b[param0];
+        wn.field_a = GameplayRenderHelpers.field_b[param0];
         FocusableWidget.field_C = AccountIntroductionPanel.field_L[param0];
     }
 

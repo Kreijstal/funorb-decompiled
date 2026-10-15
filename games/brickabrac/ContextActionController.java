@@ -442,7 +442,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_play_rated", (byte) 60);
                 if (var2 != null) {
-                  ua.field_e = MenuButton.a(var2, (byte) 110);
+                  GameplayRenderHelpers.field_e = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("mu_create_unrated", (byte) 8);
                 if (var2 != null) {
@@ -2614,7 +2614,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("autorespond", (byte) -107);
                 if (null != var2) {
-                  cn.field_b = MenuButton.a(var2, (byte) 71);
+                  GameOverlayHelpers.field_b = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("quickchat_help", (byte) 37);
                 if (var2 != null) {
@@ -3236,7 +3236,7 @@ final class ContextActionController {
                 2 != channel &&
                 !TextWidgetRenderer.field_e) {
                 this.suggestedPhraseIds = suggestedPhraseIds;
-                this.contextMenu.addAction(rd.a(cn.field_b, new String[]{caption}, (byte) 103), 19, (byte) 95);
+                this.contextMenu.addAction(rd.a(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 95);
               }
             }
             if (null != friend) {
@@ -3248,7 +3248,7 @@ final class ContextActionController {
                 this.contextMenu.addAction(rd.a(qm.field_b, new String[]{caption}, (byte) 103), 18, (byte) 104);
                 if (null != suggestedPhraseIds) {
                   this.suggestedPhraseIds = suggestedPhraseIds;
-                  this.contextMenu.addAction(rd.a(cn.field_b, new String[]{caption}, (byte) 103), 19, (byte) 72);
+                  this.contextMenu.addAction(rd.a(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 72);
                 }
               }
               this.contextMenu.addAction(rd.a(sj.field_g, new String[]{caption}, (byte) 103), 5, (byte) 106);

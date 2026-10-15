@@ -103,7 +103,7 @@ final class n {
         if (obfuscationGuard != 21) {
           n.b(-24);
         }
-        byte[] var2 = cn.decodedSpriteIndices[0];
+        byte[] var2 = GameOverlayHelpers.decodedSpriteIndices[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = qp.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var2[var4_int])];

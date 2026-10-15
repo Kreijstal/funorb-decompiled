@@ -30,7 +30,7 @@ final class qn {
     final void c(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        if (null != ua.field_d) {
+        if (null != GameplayRenderHelpers.field_d) {
           return;
         }
         if (go.field_c > 0) {

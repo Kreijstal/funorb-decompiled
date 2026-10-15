@@ -602,7 +602,7 @@ public final class BrickABrac extends InteractiveGameClient {
         wn.c((byte) -41);
         vg.b(13);
         rd.a((byte) 46);
-        cn.a(117);
+        GameOverlayHelpers.a(117);
         ChatMessage.a(0);
         kd.a(obfuscationGuard);
         fq.a((byte) 15);
@@ -738,7 +738,7 @@ public final class BrickABrac extends InteractiveGameClient {
         LoginPanel.i((byte) 88);
         PlayerNameChooserPanel.h(-106);
         WidgetTheme.a(-31063);
-        ua.a(2);
+        GameplayRenderHelpers.a(2);
         ll.a(!obfuscationGuard ? true : false);
         FullscreenFailureDialog.c(obfuscationGuard);
         kp.a(-68);

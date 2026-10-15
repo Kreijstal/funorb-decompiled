@@ -267,7 +267,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (obfuscationGuard) {
           return (IndexedSprite) null;
         }
-        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], cn.decodedSpriteIndices[0], qp.decodedSpritePalette);
+        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], GameOverlayHelpers.decodedSpriteIndices[0], qp.decodedSpritePalette);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }

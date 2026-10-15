@@ -294,11 +294,11 @@ final class sj {
                 }
               } else {
                 if (responseKind == 7) {
-                  clearedLobbyPlayer = (LobbyPlayer) (ua.lobbyPlayers.first(-61));
+                  clearedLobbyPlayer = (LobbyPlayer) (GameplayRenderHelpers.lobbyPlayers.first(-61));
                   while (clearedLobbyPlayer != null) {
                     clearedLobbyPlayer.unlink((byte) 111);
                     clearedLobbyPlayer.unlinkSecondary(3);
-                    clearedLobbyPlayer = (LobbyPlayer) (ua.lobbyPlayers.next((byte) 116));
+                    clearedLobbyPlayer = (LobbyPlayer) (GameplayRenderHelpers.lobbyPlayers.next((byte) 116));
                   }
                   uf.pendingJoinRequestCount = 0;
                 } else {
