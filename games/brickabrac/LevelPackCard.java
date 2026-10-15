@@ -23,12 +23,12 @@ final class LevelPackCard {
           if (-1 == featureId) {
             return true;
           }
-          return (1 << featureId & o.enabledFeatureMask) != 0 ? true : false;
+          return (1 << featureId & ClientResourceHelpers.enabledFeatureMask) != 0 ? true : false;
         }
         if (-1 == featureId) {
           return true;
         }
-        return (1 << featureId & o.enabledFeatureMask) != 0 ? true : false;
+        return (1 << featureId & ClientResourceHelpers.enabledFeatureMask) != 0 ? true : false;
     }
 
     final static void a(String[][] param0, IndexedSprite[] param1, byte param2, String[] param3, int param4, String[] param5, String[][] param6, ResourceArchive param7, ResourceArchive param8, ResourceArchive param9, int[] param10, RgbSprite[][] param11, int param12, boolean param13, RgbSprite[][] param14, byte[] param15, byte[] param16, int[] param17, int param18) {

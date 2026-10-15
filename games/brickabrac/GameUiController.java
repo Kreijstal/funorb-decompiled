@@ -36,7 +36,7 @@ final class GameUiController implements GameUiLifecycle {
         TranslucentNineSliceFrame var2 = new TranslucentNineSliceFrame(LoginCredentialKind.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
         MidiSynthesizer.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, ContextActionController.field_g, 0, 2, 100, 8, 0, 320, 0);
-        hd.a(93, var2, 20, 20);
+        hd.configureFullscreenDialogFrame(93, var2, 20, 20);
         if (obfuscationGuard) {
           discarded$0 = this.pollSavedProgress((byte) -1);
         }
@@ -211,7 +211,7 @@ final class GameUiController implements GameUiLifecycle {
           } else {
             ParisBackground.a((byte) 24, 82.0f, BitPacketBuffer.field_s);
             CacheEntry.field_C.renderClient(123);
-            o.c(123);
+            ClientResourceHelpers.loadGameplaySoundAssets(123);
           }
         } else {
           mc.a((byte) 115);

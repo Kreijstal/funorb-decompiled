@@ -93,7 +93,7 @@ final class AchievementSubmission extends IntrusiveNode {
             for (phraseIndex = 0; category.phraseIds.length > phraseIndex; phraseIndex++) {
               phraseId = category.phraseIds[phraseIndex];
               if (phraseId == -1) {
-                labels[phraseIndex + phraseOffset] = ng.field_c;
+                labels[phraseIndex + phraseOffset] = ScreenNavigationHelpers.quickChatHelpTitle;
                 shortcuts[phraseIndex + phraseOffset] = category.phraseShortcuts[phraseIndex];
                 messageIds[phraseOffset + phraseIndex] = category.phraseIds[phraseIndex];
               } else {

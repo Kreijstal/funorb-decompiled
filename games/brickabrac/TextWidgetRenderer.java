@@ -867,7 +867,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
           stackIn_3_3 = 2 * (2 + np.uiRowHeight);
           stackIn_3_4 = 22676;
           stackIn_3_5 = param2;
-          stackIn_4_6 = (rl.field_e == o.field_b);
+          stackIn_4_6 = (rl.field_e == ClientResourceHelpers.field_b);
           var7_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
           var8 = rl.field_e.content.children;
           var9 = MonotonicTime.nowMillis(false);

@@ -59,46 +59,46 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         }
     }
 
-    final static int b(int param0, int param1, int param2) {
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    final static int hitTestFullscreenDialogButton(int obfuscationGuard, int y, int x) {
+        int rowIndex = 0;
+        int rowY = 0;
+        int buttonIndex = 0;
+        int textWidth = 0;
+        int textX = 0;
+        int unusedGameFlag = 0;
+        int hitButton = 0;
+        int missResult = 0;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = 0;
-          var4 = CachedArchiveSource.fullscreenDialogTop;
-          if (param0 != 120) {
+          rowIndex = 0;
+          rowY = CachedArchiveSource.fullscreenDialogTop;
+          if (obfuscationGuard != 120) {
             pressY = -69;
           }
-          while (ValidationStatus.fullscreenDialogRows.length > var3_int) {
-            var5 = BrickABrac.fullscreenDialogRowButtons[var3_int];
-            if (var5 < 0) {
-              var4 = var4 + IntArrayRequest.fullscreenDialogBodyLineHeight;
+          while (ValidationStatus.fullscreenDialogRows.length > rowIndex) {
+            buttonIndex = BrickABrac.fullscreenDialogRowButtons[rowIndex];
+            if (buttonIndex < 0) {
+              rowY = rowY + IntArrayRequest.fullscreenDialogBodyLineHeight;
             } else {
-              var6 = hm.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[var3_int], 0);
-              var4 = var4 + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
-              var7 = ProxySocketConnector.fullscreenDialogCenterX - (var6 >> 1);
-              if (ReflectionCheck.containsRectanglePoint(var7 - GameOverlayHelpers.fullscreenDialogButtonPaddingX, (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight, var6 + (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1), (byte) 65, param1, param2, var4)) {
-                stackIn_7_0 = var5;
-                return stackIn_7_0;
+              textWidth = hm.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[rowIndex], 0);
+              rowY = rowY + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
+              textX = ProxySocketConnector.fullscreenDialogCenterX - (textWidth >> 1);
+              if (ReflectionCheck.containsRectanglePoint(textX - GameOverlayHelpers.fullscreenDialogButtonPaddingX, (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight, textWidth + (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1), (byte) 65, y, x, rowY)) {
+                hitButton = buttonIndex;
+                return hitButton;
               }
-              var4 = var4 + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight));
+              rowY = rowY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight));
             }
-            var3_int++;
+            rowIndex++;
           }
-          stackIn_13_0 = -1;
-          return stackIn_13_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "qo.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          missResult = -1;
+          return missResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "qo.A(" + obfuscationGuard + ',' + y + ',' + x + ')');
         }
     }
 

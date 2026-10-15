@@ -221,7 +221,7 @@ final class JungleBackground extends BackgroundScene {
                 break;
               }
               if (!hn.b((byte) 7)) {
-                WidgetTextLayout.field_e = GamePresentationHelpers.formatIndexedText(ChocolateBackground.field_t, new String[]{o.currentLobbyGame.displayName}, (byte) 103);
+                WidgetTextLayout.field_e = GamePresentationHelpers.formatIndexedText(ChocolateBackground.field_t, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103);
                 if (var26 == 0) {
                   break;
                 }

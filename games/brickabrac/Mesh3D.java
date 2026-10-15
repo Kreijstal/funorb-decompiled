@@ -71,7 +71,7 @@ final class Mesh3D {
         try {
           ok.displayNameChangedSprite = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, archive);
           GameScreen.friendsListPane = new ScrollPaneWithFooter(0L, rq.field_b, LoginPanel.field_J, ChocolateBackground.field_y);
-          f.ignoreListPane = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
+          f.ignoreListPane = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ScreenNavigationHelpers.field_e);
           QuickChatPhraseRegistry.friendsPanel = new UiComponent(0L, (UiComponent) null);
           ChatLobbyUiHelpers.friendsStatusLabel = new UiComponent(0L, CappedUrlRequest.field_l);
           ChatLobbyUiHelpers.friendsStatusLabel.horizontalAlignment = 1;
@@ -100,18 +100,18 @@ final class Mesh3D {
         }
     }
 
-    final static void a(int param0, TextFont param1, TextFont param2, boolean param3) {
+    final static void configureFullscreenDialogFonts(int maximumWrapWidth, TextFont buttonFont, TextFont bodyFont, boolean obfuscationGuard) {
         try {
-          ConditionalTextValue.fullscreenDialogWrapWidth = param0;
-          kp.fullscreenDialogButtonFont = param1;
-          StateIconLabel.fullscreenDialogBodyFont = param2;
-          pp.a(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
-          if (!param3) {
+          ConditionalTextValue.fullscreenDialogWrapWidth = maximumWrapWidth;
+          kp.fullscreenDialogButtonFont = buttonFont;
+          StateIconLabel.fullscreenDialogBodyFont = bodyFont;
+          pp.setFullscreenDialogCenter(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
+          if (!obfuscationGuard) {
             fireworkSpawnMinY = -98;
           }
-          MusicCrossfadeStream.a(param1.capHeight, param1.descent + param1.capHeight, 256, param2.capHeight, param2.descent + param2.capHeight);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          MusicCrossfadeStream.configureFullscreenDialogMetrics(buttonFont.capHeight, buttonFont.descent + buttonFont.capHeight, 256, bodyFont.capHeight, bodyFont.descent + bodyFont.capHeight);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "fr.K(" + maximumWrapWidth + ',' + (buttonFont != null ? "{...}" : "null") + ',' + (bodyFont != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -255,11 +255,11 @@ final class Mesh3D {
     }
 
     final static void d(int param0) {
-        o.field_c = new AccountRegistrationPanel();
+        ClientResourceHelpers.field_c = new AccountRegistrationPanel();
         if (param0 != -1) {
           return;
         }
-        rj.accountContentLayer.transitionToContent((byte) 120, o.field_c);
+        rj.accountContentLayer.transitionToContent((byte) 120, ClientResourceHelpers.field_c);
     }
 
     Mesh3D() {

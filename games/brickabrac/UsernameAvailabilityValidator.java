@@ -76,7 +76,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             this.checkedUsername = text;
           }
           if (!this.usernameAvailable) {
-            stackIn_13_0 = ng.field_f;
+            stackIn_13_0 = ScreenNavigationHelpers.field_f;
             return stackIn_13_0;
           }
           var4 = 21 / ((-16 - obfuscationGuard) / 50);
@@ -100,11 +100,11 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         if (!param0) {
           UsernameAvailabilityValidator.f((byte) -72);
           OptionsScreen.field_A.setLength(0);
-          ng.quickChatChannel = 0;
+          ScreenNavigationHelpers.quickChatChannel = 0;
           return;
         }
         OptionsScreen.field_A.setLength(0);
-        ng.quickChatChannel = 0;
+        ScreenNavigationHelpers.quickChatChannel = 0;
     }
 
     UsernameAvailabilityValidator(TextFieldWidget textField) {

@@ -189,7 +189,7 @@ final class QuickChatHelpDialog extends UiComponent {
         UiComponent title = null;
         int unusedCenteredY;
         try {
-          title = new UiComponent(0L, titleStyle, ng.field_c.toUpperCase());
+          title = new UiComponent(0L, titleStyle, ScreenNavigationHelpers.quickChatHelpTitle.toUpperCase());
           title.horizontalAlignment = 1;
           this.closeButton = new UiComponent(0L, closeStyle);
           body = new UiComponent(0L, textStyle);

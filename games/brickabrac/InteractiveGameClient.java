@@ -181,7 +181,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         if (!ConditionalTextValue.a(2)) {
           if (HotspotTextWidget.a(9)) {
             if (!LoginMethodPreference.b(126)) {
-              var3 = InstructionsScreen.f((byte) 124);
+              var3 = InstructionsScreen.pollFullscreenDialogAction((byte) 124);
               switch (var3) {
                 case 3:
                   WidgetLayerStack.a(true, 21543);

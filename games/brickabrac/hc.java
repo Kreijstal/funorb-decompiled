@@ -418,7 +418,7 @@ final class hc {
     }
 
     final static void a(boolean param0, int param1, int param2, int param3) {
-        ng.a((byte) -86, param0);
+        ScreenNavigationHelpers.pollQuickChatHelpDialog((byte) -86, param0);
         ce.a(param0, param3, (byte) 94, param2);
         if (param1 != -7812) {
           hc.b(4);

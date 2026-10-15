@@ -66,7 +66,7 @@ final class MembershipBenefitsScreen extends MenuScreen {
         }
         if (3 != param1) {
           var3 = param1 == 2 ? 1 : 0;
-          ng.requestScreen(var3 != 0, param0 - 386, this.getParentScreenId(true));
+          ScreenNavigationHelpers.requestScreen(var3 != 0, param0 - 386, this.getParentScreenId(true));
           return var3 == 0 ? true : false;
         }
         return false;

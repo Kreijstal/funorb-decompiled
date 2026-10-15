@@ -4,7 +4,7 @@
 final class IntKeyIndex {
     static String field_d;
     static String field_a;
-    static NineSliceFrame field_c;
+    static NineSliceFrame fullscreenDialogFrame;
     static RgbSprite[] chocCentreSprites;
     static int field_b;
     private int[] entries;
@@ -51,7 +51,7 @@ final class IntKeyIndex {
     public static void a(boolean param0) {
         field_d = null;
         chocCentreSprites = null;
-        field_c = null;
+        fullscreenDialogFrame = null;
         field_a = null;
         if (!param0) {
           IntKeyIndex.a(true);

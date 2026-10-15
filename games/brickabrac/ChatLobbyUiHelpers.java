@@ -365,7 +365,7 @@ final class ChatLobbyUiHelpers {
                                     if (gamePlayer == null) {
                                       gamePlayer = new LobbyPlayer(gameAccountName, gameDisplayName, playerId);
                                       BrickABrac.gamePlayerIndex.put(playerId, gamePlayer, 48);
-                                      o.currentLobbyGame.playerCount = o.currentLobbyGame.playerCount + 1;
+                                      ClientResourceHelpers.currentLobbyGame.playerCount = ClientResourceHelpers.currentLobbyGame.playerCount + 1;
                                     }
                                     gamePlayer.rating = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
                                     gamePackedMembershipCount = ((PacketBuffer) ((Object) packet)).readVarInt((byte) 127);
@@ -392,10 +392,10 @@ final class ChatLobbyUiHelpers {
                                       removedGamePlayer.removalStatus = playerStatus;
                                     }
                                     removedGamePlayerAlias.unlinkSecondary(obfuscationGuard - 30);
-                                    o.currentLobbyGame.playerCount = o.currentLobbyGame.playerCount - 1;
+                                    ClientResourceHelpers.currentLobbyGame.playerCount = ClientResourceHelpers.currentLobbyGame.playerCount - 1;
                                     break regionExit1;
                                   case 20:
-                                    EmailLoginCredentials.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
+                                    EmailLoginCredentials.decodeLobbyGame(ClientResourceHelpers.currentLobbyGame, packet, 0, false);
                                     break regionExit1;
                                   case 21:
                                     var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
@@ -493,17 +493,17 @@ final class ChatLobbyUiHelpers {
               resetPlayer = (LobbyPlayer) (WhirlpoolHasher.lobbyPlayerIndex.next(false));
             }
             if (responseKind == 1 &&
-              o.currentLobbyGame != null) {
-              TableNameEntry.field_g = o.currentLobbyGame.displayName;
+              ClientResourceHelpers.currentLobbyGame != null) {
+              TableNameEntry.field_g = ClientResourceHelpers.currentLobbyGame.displayName;
             }
             if (4 == responseKind) {
               var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
-              o.currentLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
-              o.currentLobbyGame.setSecondaryKey((long)var3_int, -105);
-              EmailLoginCredentials.decodeLobbyGame(o.currentLobbyGame, packet, 0, false);
+              ClientResourceHelpers.currentLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
+              ClientResourceHelpers.currentLobbyGame.setSecondaryKey((long)var3_int, -105);
+              EmailLoginCredentials.decodeLobbyGame(ClientResourceHelpers.currentLobbyGame, packet, 0, false);
               ic.optionChangeDeadlineMillis = 0L;
             } else {
-              o.currentLobbyGame = null;
+              ClientResourceHelpers.currentLobbyGame = null;
             }
             if (responseKind != 2 &&
               3 != responseKind) {

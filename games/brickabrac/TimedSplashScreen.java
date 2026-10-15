@@ -17,17 +17,17 @@ final class TimedSplashScreen extends MenuScreen {
           fieldTemp$0 = this.remainingTicks - 1;
           this.remainingTicks = this.remainingTicks - 1;
           if (fieldTemp$0 == 0) {
-            ng.requestScreen(true, 120, 0);
+            ScreenNavigationHelpers.requestScreen(true, 120, 0);
             return;
           }
           if (MatchingTextValidator.heldButton != 0) {
-            ng.requestScreen(true, 120, 0);
+            ScreenNavigationHelpers.requestScreen(true, 120, 0);
             return;
           }
           if (0 == BackgroundScene.pressedButton) {
             return;
           }
-          ng.requestScreen(true, 120, 0);
+          ScreenNavigationHelpers.requestScreen(true, 120, 0);
           return;
         }
         if (!inputEnabled) {
@@ -36,17 +36,17 @@ final class TimedSplashScreen extends MenuScreen {
         int fieldTemp$1 = this.remainingTicks - 1;
         this.remainingTicks = this.remainingTicks - 1;
         if (fieldTemp$1 == 0) {
-          ng.requestScreen(true, 120, 0);
+          ScreenNavigationHelpers.requestScreen(true, 120, 0);
           return;
         }
         if (MatchingTextValidator.heldButton != 0) {
-          ng.requestScreen(true, 120, 0);
+          ScreenNavigationHelpers.requestScreen(true, 120, 0);
           return;
         }
         if (0 == BackgroundScene.pressedButton) {
           return;
         }
-        ng.requestScreen(true, 120, 0);
+        ScreenNavigationHelpers.requestScreen(true, 120, 0);
     }
 
     final void onExit(byte obfuscationGuard) {
@@ -156,13 +156,13 @@ final class TimedSplashScreen extends MenuScreen {
     final boolean handleKey(char character, int obfuscationGuard, int keyCode) {
         if (obfuscationGuard >= 98) {
           if (keyCode >= 0) {
-            ng.requestScreen(false, 99, 0);
+            ScreenNavigationHelpers.requestScreen(false, 99, 0);
           }
           return true;
         }
         this.remainingTicks = -100;
         if (keyCode >= 0) {
-          ng.requestScreen(false, 99, 0);
+          ScreenNavigationHelpers.requestScreen(false, 99, 0);
           return true;
         }
         return true;

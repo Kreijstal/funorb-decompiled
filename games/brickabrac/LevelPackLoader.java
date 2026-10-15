@@ -30,7 +30,7 @@ final class LevelPackLoader {
         if (param0 != 4252) {
           return;
         }
-        ng.quickChatChannel = 0;
+        ScreenNavigationHelpers.quickChatChannel = 0;
         di.a((byte) -114);
     }
 

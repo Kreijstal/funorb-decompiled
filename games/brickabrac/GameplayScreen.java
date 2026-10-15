@@ -287,13 +287,13 @@ final class GameplayScreen extends GameScreen {
             }
             ResourcePreparationEntry.a((byte) -97);
             if (!this.networkedMatch) {
-              ng.requestScreen(false, 62, 20);
+              ScreenNavigationHelpers.requestScreen(false, 62, 20);
               NewAchievementsScreen.discardGameplayOnTransition = true;
             } else {
               if (KeyboardInput.hasNonnegativeResult) {
                 if (null == hd.pendingScreen ||
                   hd.pendingScreen.screenId != -2) {
-                  ng.requestScreen(false, 101, 19);
+                  ScreenNavigationHelpers.requestScreen(false, 101, 19);
                 }
               } else {
                 ArchiveNetworkRequest.f((byte) 122);
@@ -612,7 +612,7 @@ final class GameplayScreen extends GameScreen {
           }
           if (this.match.playerCount == 1 &&
             this.match.playerBoards[0].boardState == 8) {
-            ng.requestScreen(usePointer, 107, 18);
+            ScreenNavigationHelpers.requestScreen(usePointer, 107, 18);
             IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
           } else {
             this.showPostMatchScreen(usePointer, (byte) 69);
@@ -642,19 +642,19 @@ final class GameplayScreen extends GameScreen {
         if (QuickChatMenu.h(-26090)) {
           if (!WidgetGroup.a(pl.pendingAchievementMask, -1) &&
             VerticalScrollbar.field_Ub == null) {
-            ng.requestScreen(usePointer, 121, 0);
+            ScreenNavigationHelpers.requestScreen(usePointer, 121, 0);
           } else {
-            ng.requestScreen(usePointer, 68, 10);
+            ScreenNavigationHelpers.requestScreen(usePointer, 68, 10);
           }
         } else {
           if (!WidgetGroup.a(pl.pendingAchievementMask, -1)) {
             if (VerticalScrollbar.field_Ub != null) {
-              ng.requestScreen(usePointer, 68, 5);
+              ScreenNavigationHelpers.requestScreen(usePointer, 68, 5);
             } else {
-              ng.requestScreen(usePointer, 100, 0);
+              ScreenNavigationHelpers.requestScreen(usePointer, 100, 0);
             }
           } else {
-            ng.requestScreen(usePointer, 60, 9);
+            ScreenNavigationHelpers.requestScreen(usePointer, 60, 9);
           }
         }
     }
@@ -874,7 +874,7 @@ final class GameplayScreen extends GameScreen {
               return true;
             }
           } else {
-            ng.requestScreen(false, 64, var4Lifetime2);
+            ScreenNavigationHelpers.requestScreen(false, 64, var4Lifetime2);
           }
           return true;
         }

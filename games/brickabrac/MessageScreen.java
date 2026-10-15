@@ -131,7 +131,7 @@ final class MessageScreen extends MenuScreen {
     final static void a(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
-          ng.quickChatChannel = param2;
+          ScreenNavigationHelpers.quickChatChannel = param2;
           DualLinkNode.quickChatRecipient = param0;
           var5 = (CharSequence) ((Object) param0);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var5, param2 ^ 103);

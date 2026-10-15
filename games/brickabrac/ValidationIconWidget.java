@@ -315,7 +315,7 @@ final class ValidationIconWidget extends FocusableWidget {
             jl.incomingPackets.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              rf.connectionPhase = o.awaitingValidationStrings;
+              rf.connectionPhase = ClientResourceHelpers.awaitingValidationStrings;
               ArchiveSourceManager.field_f = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -337,7 +337,7 @@ final class ValidationIconWidget extends FocusableWidget {
               }
             }
           }
-          if (rf.connectionPhase == o.awaitingValidationStrings) {
+          if (rf.connectionPhase == ClientResourceHelpers.awaitingValidationStrings) {
             var9Lifetime2 = 2;
             if (vd.ensureGamePacketBytes(20, var9Lifetime2)) {
               var10Lifetime1 = jl.incomingPackets.readUnsignedShort(65280);

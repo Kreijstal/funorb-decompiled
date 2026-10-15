@@ -356,16 +356,16 @@ final class QuickChatMenu extends UiComponent {
             if (this.submenus[itemIndex] == null) {
               if (this.messageIds[itemIndex] != -1) {
                 encodedMessageId = this.messageIds[itemIndex] | 32768;
-                effectiveChannel = ng.quickChatChannel;
+                effectiveChannel = ScreenNavigationHelpers.quickChatChannel;
                 if (effectiveChannel == 0 &&
-                  o.currentLobbyGame != null) {
+                  ClientResourceHelpers.currentLobbyGame != null) {
                   effectiveChannel = 1;
                 }
                 if (tm.getChatFilter(effectiveChannel, (byte) 18) == 2) {
                   DirectByteStorage.updateChatFilter(0, filterOpcode, 1, effectiveChannel);
                 }
-                GrowableIntList.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ng.quickChatChannel, messageOpcode, (String) null);
-                MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, CanvasResizeController.field_n, DualLinkNode.quickChatRecipient, ng.quickChatChannel);
+                GrowableIntList.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ScreenNavigationHelpers.quickChatChannel, messageOpcode, (String) null);
+                MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, CanvasResizeController.field_n, DualLinkNode.quickChatRecipient, ScreenNavigationHelpers.quickChatChannel);
                 GamePresentationHelpers.a(-1);
                 AccountContentTransitionLayer.m(-69);
                 openHelpBranch = (unusedGameFlag != 0);
@@ -1314,7 +1314,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime148 = gr.a(true, "explain_powerup_bricks");
           if (null != var2Lifetime148) {
-            o.field_a = MenuButton.a(var2Lifetime148, (byte) 89);
+            ClientResourceHelpers.field_a = MenuButton.a(var2Lifetime148, (byte) 89);
           }
           var2Lifetime149 = gr.a(true, "explain_first_release");
           if (null != var2Lifetime149) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class o {
+final class ClientResourceHelpers {
     static ConnectionPhase awaitingValidationStrings;
     static LobbyGame currentLobbyGame;
     static int field_f;
@@ -18,7 +18,7 @@ final class o {
         return HalloweenBackground.archiveSourceManager.pollMasterIndex(false);
     }
 
-    final static void c(int param0) {
+    final static void loadGameplaySoundAssets(int obfuscationGuard) {
         NineSliceFrame.uiSounds[2] = GameScreen.field_e.getSoundEffectByName("BaB_move_thruster_loop", "", (byte) 115);
         NineSliceFrame.uiSounds[5] = GameScreen.field_e.getSoundEffectByName("BaB_plasma_ball_charged", "", (byte) 116);
         NineSliceFrame.uiSounds[6] = GameScreen.field_e.getSoundEffectByName("BaB_plasma_ball_fire", "", (byte) 108);
@@ -28,8 +28,8 @@ final class o {
         NanoGameClock.field_p[0] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_00", "", (byte) 124);
         NanoGameClock.field_p[1] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_01", "", (byte) 108);
         NanoGameClock.field_p[2] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_02", "", (byte) 117);
-        if (param0 <= 122) {
-          o.c(-9);
+        if (obfuscationGuard <= 122) {
+          ClientResourceHelpers.loadGameplaySoundAssets(-9);
         }
         NanoGameClock.field_p[3] = GameScreen.field_e.getSoundEffectByName("BaB_indestructable_block_03", "", (byte) 118);
         ProxyAuthenticationRequiredException.field_a[5] = GameScreen.field_e.getSoundEffectByName("bab_powerup_extralife", "", (byte) 115);
@@ -84,22 +84,22 @@ final class o {
           field_h = null;
           return;
         }
-        o.pollArchiveMasterIndex(-14);
+        ClientResourceHelpers.pollArchiveMasterIndex(-14);
         currentLobbyGame = null;
         field_c = null;
         field_h = null;
     }
 
-    final static void a(int param0) {
-        int var1 = IntArrayRequest.a((byte) -89);
-        int var2 = ClientException.b(param0 + 29830);
-        IntKeyIndex.field_c.paintFrame((hn.field_a << 1) + var1, var2 + (AccountContentTransitionLayer.field_vb << 1), -hn.field_a + np.fullscreenDialogLeft, false, -AccountContentTransitionLayer.field_vb + CachedArchiveSource.fullscreenDialogTop);
-        if (param0 == -24435) {
-          WidgetLayerStack.h(param0 ^ 8147);
+    final static void drawFullscreenDialog(int obfuscationGuard) {
+        int contentWidth = IntArrayRequest.getFullscreenDialogWidth((byte) -89);
+        int contentHeight = ClientException.getFullscreenDialogHeight(obfuscationGuard + 29830);
+        IntKeyIndex.fullscreenDialogFrame.paintFrame((hn.fullscreenDialogPaddingX << 1) + contentWidth, contentHeight + (AccountContentTransitionLayer.fullscreenDialogPaddingY << 1), -hn.fullscreenDialogPaddingX + np.fullscreenDialogLeft, false, -AccountContentTransitionLayer.fullscreenDialogPaddingY + CachedArchiveSource.fullscreenDialogTop);
+        if (obfuscationGuard == -24435) {
+          WidgetLayerStack.drawFullscreenDialogRows(obfuscationGuard ^ 8147);
           return;
         }
         field_b = (ScrollPane) null;
-        WidgetLayerStack.h(param0 ^ 8147);
+        WidgetLayerStack.drawFullscreenDialogRows(obfuscationGuard ^ 8147);
     }
 
     static {

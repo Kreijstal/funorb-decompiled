@@ -53,11 +53,11 @@ final class LevelResultSubmission extends IntrusiveNode {
           }
           var1 = null;
           var2 = null;
-          if (ng.quickChatChannel == 0 &&
+          if (ScreenNavigationHelpers.quickChatChannel == 0 &&
             null != nl.pendingLobbyGame) {
             var2 = rl.field_a;
           }
-          if (2 == ng.quickChatChannel &&
+          if (2 == ScreenNavigationHelpers.quickChatChannel &&
             !FileCacheStore.b(-21835160)) {
             boolean decompiledSharedTail2 = !(LevelPack.isFriend(0, QuickChatHelpDialog.field_Qb));
             if (!decompiledSharedTail2) {
@@ -84,7 +84,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             var3 = TextFieldRenderer.a((byte) 82, var3);
             var4 = "";
             var5 = "|";
-            var6 = ng.quickChatChannel;
+            var6 = ScreenNavigationHelpers.quickChatChannel;
             var7 = 0;
             if (2 == var6) {
               var4 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
@@ -97,11 +97,11 @@ final class LevelResultSubmission extends IntrusiveNode {
             if (2 != var6 ||
               var10 != 0) {
               if (0 == var6) {
-                if (null == o.currentLobbyGame &&
+                if (null == ClientResourceHelpers.currentLobbyGame &&
                   QuickChatParameterType.field_d) {
                   var4 = "[" + ArcticBackground.field_u + "] ";
                 }
-                if (null != o.currentLobbyGame) {
+                if (null != ClientResourceHelpers.currentLobbyGame) {
                   var6 = 1;
                   boolean decompiledSharedTail1 = (!(PowerUp.field_v) ||
                     null == jd.field_b);
@@ -110,7 +110,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+                    var4 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
                   }
                 }
               }

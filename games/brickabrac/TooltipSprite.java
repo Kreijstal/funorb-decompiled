@@ -46,8 +46,8 @@ final class TooltipSprite extends IntrusiveNode {
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
           LevelPackLoader.field_b = new IndexedSprite[4];
           LoginCredentialKind.field_b = new IndexedSprite[4];
-          ng.field_d = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{LevelPackLoader.field_b, ng.field_d, LoginCredentialKind.field_b};
+          ScreenNavigationHelpers.field_d = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{LevelPackLoader.field_b, ScreenNavigationHelpers.field_d, LoginCredentialKind.field_b};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
@@ -123,7 +123,7 @@ final class TooltipSprite extends IntrusiveNode {
           textChoiceButtonLineHeight = 90;
         }
         MatchResultScreen.field_s = true;
-        ng.quickChatChannel = 0;
+        ScreenNavigationHelpers.quickChatChannel = 0;
     }
 
     final static void resendPendingAchievements(int opcode, int obfuscationGuard) {

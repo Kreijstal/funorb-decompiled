@@ -34,14 +34,14 @@ final class hd {
         packet.backfillByteLength((byte) 121, -payloadStart + packet.position);
     }
 
-    final static void a(int param0, NineSliceFrame param1, int param2, int param3) {
+    final static void configureFullscreenDialogFrame(int obfuscationGuard, NineSliceFrame frame, int paddingX, int paddingY) {
         try {
-          IntKeyIndex.field_c = param1;
-          int var4_int = -108 % ((46 - param0) / 37);
-          hn.field_a = param2;
-          AccountContentTransitionLayer.field_vb = param3;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          IntKeyIndex.fullscreenDialogFrame = frame;
+          int guardCalculation = -108 % ((46 - obfuscationGuard) / 37);
+          hn.fullscreenDialogPaddingX = paddingX;
+          AccountContentTransitionLayer.fullscreenDialogPaddingY = paddingY;
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "hd.C(" + obfuscationGuard + ',' + (frame != null ? "{...}" : "null") + ',' + paddingX + ',' + paddingY + ')');
         }
     }
 

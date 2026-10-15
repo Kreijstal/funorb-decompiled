@@ -51,7 +51,7 @@ final class FriendListUi {
           lineStep = np.uiRowHeight + 2;
           layoutGuard = 22676;
           activeRelayout = allowActiveRelayout;
-          keepChildLayout = (GameScreen.friendsListPane.scrollPane == o.field_b);
+          keepChildLayout = (GameScreen.friendsListPane.scrollPane == ClientResourceHelpers.field_b);
           layoutRetained = ((ScrollPane) (Object) scrollPaneForLayout).updateContentLayout(rowGapForLayout, wheelPixels, lineStep, layoutGuard, activeRelayout, keepChildLayout) ? 1 : 0;
           if (obfuscationGuard > -12) {
             FriendListUi.a((byte) 96);

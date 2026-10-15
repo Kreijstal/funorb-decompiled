@@ -26,7 +26,7 @@ final class IntArrayRequest extends IntrusiveNode {
           field_k = null;
           return;
         }
-        IntArrayRequest.a((byte) 91);
+        IntArrayRequest.getFullscreenDialogWidth((byte) 91);
         field_p = null;
         gameplayScreen = null;
         field_k = null;
@@ -37,8 +37,8 @@ final class IntArrayRequest extends IntrusiveNode {
         NineSliceFrame.a(true, false);
     }
 
-    final static int a(byte param0) {
-        int var1 = 119 % ((param0 + 15) / 60);
+    final static int getFullscreenDialogWidth(byte obfuscationGuard) {
+        int guardCalculation = 119 % ((obfuscationGuard + 15) / 60);
         return SpaceBackground.fullscreenDialogRight - np.fullscreenDialogLeft;
     }
 

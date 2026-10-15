@@ -25,11 +25,11 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          Mesh3D.a(param6, param16, param3, true);
-          MusicCrossfadeStream.a(param11, param14, 256, param18, param0);
-          pp.a(param5, param4, (byte) 19);
-          WidgetLayerStack.a(param15, param2, param13, 73, param17, param19);
-          hd.a(117, param7, param10, param1);
+          Mesh3D.configureFullscreenDialogFonts(param6, param16, param3, true);
+          MusicCrossfadeStream.configureFullscreenDialogMetrics(param11, param14, 256, param18, param0);
+          pp.setFullscreenDialogCenter(param5, param4, (byte) 19);
+          WidgetLayerStack.configureFullscreenDialogButtons(param15, param2, param13, 73, param17, param19);
+          hd.configureFullscreenDialogFrame(117, param7, param10, param1);
           LegacyUtf8Decoder.a(param12, param9, false, param8);
           if (param20 != 10) {
             TranslucentNineSliceFrame.a(true);

@@ -148,7 +148,7 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (!MatchResultScreen.field_s) {
           return false;
         }
-        if (ng.quickChatChannel == 0) {
+        if (ScreenNavigationHelpers.quickChatChannel == 0) {
           return true;
         }
         return false;

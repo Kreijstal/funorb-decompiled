@@ -96,7 +96,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
             message = FramedMenuScreen.field_r;
           } else {
             if (null != response.suggestedUsernames) {
-              message = ng.field_f;
+              message = ScreenNavigationHelpers.field_f;
               if (null != this.registrationPanel) {
                 this.registrationPanel.onRefreshUsernameSuggestions((byte) 124);
               }

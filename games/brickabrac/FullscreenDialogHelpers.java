@@ -329,7 +329,7 @@ final class FullscreenDialogHelpers {
             boundsRowIndex++;
           }
           if (ArchiveFetchClient.fullscreenDialogKind != 2) {
-            UiComponent.fullscreenDialogSelection.initializeSelection(PlayerNameChooserPanel.b(120, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, usePointer, (byte) -127);
+            UiComponent.fullscreenDialogSelection.initializeSelection(PlayerNameChooserPanel.hitTestFullscreenDialogButton(120, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, usePointer, (byte) -127);
           } else {
             UiComponent.fullscreenDialogSelection.initializeSelection(-1, -1, usePointer, (byte) -128);
           }

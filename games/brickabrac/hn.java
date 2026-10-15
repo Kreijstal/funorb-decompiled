@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hn {
-    static int field_a;
+    static int fullscreenDialogPaddingX;
     static RgbSprite ninjaFarSprite;
 
     public static void a(int param0) {
@@ -14,7 +14,7 @@ final class hn {
         if (param0 != 7) {
           return true;
         }
-        return o.currentLobbyGame.protocolId64 == Widget.field_p ? true : false;
+        return ClientResourceHelpers.currentLobbyGame.protocolId64 == Widget.field_p ? true : false;
     }
 
     final static RgbSprite[] a(int param0, int param1, int param2, int param3) {

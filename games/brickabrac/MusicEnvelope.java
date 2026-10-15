@@ -103,7 +103,7 @@ final class MusicEnvelope {
           lineStep = np.uiRowHeight + 2;
           layoutGuard = 22676;
           activeRelayout = allowActiveRelayout;
-          keepChildLayout = (o.field_b == f.ignoreListPane.scrollPane);
+          keepChildLayout = (ClientResourceHelpers.field_b == f.ignoreListPane.scrollPane);
           layoutRetained = ((ScrollPane) (Object) scrollPaneForLayout).updateContentLayout(rowGapForLayout, wheelPixels, lineStep, layoutGuard, activeRelayout, keepChildLayout) ? 1 : 0;
           entries = f.ignoreListPane.content.children;
           if (!obfuscationGuard) {
@@ -174,7 +174,7 @@ final class MusicEnvelope {
             if (entry.pressedButton != 0) {
               SpriteGeometry.a(-1, entry, f.ignoreListPane.scrollPane, (int[]) null, entry.actionName, -1, (byte) -58, 0L, entry.name);
               contextForRemove = GameRenderAudioHelpers.contextActions;
-              removeIgnoreCaption = ng.field_e;
+              removeIgnoreCaption = ScreenNavigationHelpers.field_e;
               contextForRemove.contextMenu.addAction(removeIgnoreCaption, 7, (byte) 126);
               contextForLayout = GameRenderAudioHelpers.contextActions;
               pressX = LoadingProgressDialog.pressX;

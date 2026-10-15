@@ -8,7 +8,7 @@ final class EmailLoginCredentials extends LoginCredentials {
     private String email;
     static int[][] fireworkColorRamps;
     static String[][] field_p;
-    static int field_n;
+    static int fullscreenDialogButtonPaint;
     static boolean field_l;
 
     public static void a(boolean param0) {

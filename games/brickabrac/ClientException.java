@@ -10,8 +10,8 @@ final class ClientException extends RuntimeException {
     static String field_c;
     static int[] meshHighlightTable;
 
-    final static int b(int param0) {
-        if (param0 != 5395) {
+    final static int getFullscreenDialogHeight(int obfuscationGuard) {
+        if (obfuscationGuard != 5395) {
           return -14;
         }
         return jj.fullscreenDialogHeight;

@@ -97,7 +97,7 @@ final class ConditionalTextValue {
           if (!MatchResultScreen.field_s) {
             return false;
           }
-          if (ng.quickChatChannel == 2 &&
+          if (ScreenNavigationHelpers.quickChatChannel == 2 &&
             QuickChatHelpDialog.field_Qb != null) {
             var3 = (CharSequence) ((Object) param1);
             if (QuickChatHelpDialog.field_Qb.equals(ChatMessage.normalizePlayerName(var3, param0 - 13073))) {

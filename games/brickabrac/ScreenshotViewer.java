@@ -614,18 +614,18 @@ final class ScreenshotViewer {
         }
     }
 
-    final static void c(byte param0) {
+    final static void closeFullscreenDialog(byte obfuscationGuard) {
         try {
           HuffmanCodec.fullscreenPluralSuffix = null;
-          if (param0 != 3) {
+          if (obfuscationGuard != 3) {
             fullscreenDialogCenterY = -112;
           }
           SingleChildWidget.fullscreenSingularSuffix = null;
           IntrusiveHashIterator.fullscreenDialogOpen = false;
           QuickChatPhraseRegistry.fullscreenSingularPrefix = null;
           IntrusiveHashIterator.fullscreenPluralPrefix = null;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "w.N(" + obfuscationGuard + ')');
         }
     }
 

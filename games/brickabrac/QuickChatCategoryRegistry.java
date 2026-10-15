@@ -5,7 +5,7 @@ final class QuickChatCategoryRegistry {
     static String field_e;
     private WeightedLruCache definitions;
     static AppletGameShell field_f;
-    static int field_b;
+    static int fullscreenDialogButtonBaseline;
     static HuffmanCodec textHuffman;
     private ResourceArchive standardArchive;
     private ResourceArchive extendedArchive;

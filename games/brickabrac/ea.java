@@ -75,18 +75,18 @@ final class ea {
         packet.position = packet.position + 1;
         int payloadStart = packet.position;
         packet.writeByte(71, 5);
-        packet.writeByte(obfuscationGuard ^ 10903, o.currentLobbyGame.maxPlayers);
+        packet.writeByte(obfuscationGuard ^ 10903, ClientResourceHelpers.currentLobbyGame.maxPlayers);
         if (obfuscationGuard == -11008) {
-          packedMode = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
+          packedMode = ClientResourceHelpers.currentLobbyGame.joinSortPriority + (ClientResourceHelpers.currentLobbyGame.spectatorMode << 6);
           packet.writeByte(15, packedMode);
-          packet.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
+          packet.writeBytes(ClientResourceHelpers.currentLobbyGame.settings, -1, 0, ClientResourceHelpers.currentLobbyGame.settings.length);
           packet.backfillByteLength((byte) 118, -payloadStart + packet.position);
           return;
         }
         ea.requestUpdateGameOptions(109, -29);
-        packedModeAfterWrongGuard = o.currentLobbyGame.joinSortPriority + (o.currentLobbyGame.spectatorMode << 6);
+        packedModeAfterWrongGuard = ClientResourceHelpers.currentLobbyGame.joinSortPriority + (ClientResourceHelpers.currentLobbyGame.spectatorMode << 6);
         packet.writeByte(15, packedModeAfterWrongGuard);
-        packet.writeBytes(o.currentLobbyGame.settings, -1, 0, o.currentLobbyGame.settings.length);
+        packet.writeBytes(ClientResourceHelpers.currentLobbyGame.settings, -1, 0, ClientResourceHelpers.currentLobbyGame.settings.length);
         packet.backfillByteLength((byte) 118, -payloadStart + packet.position);
     }
 

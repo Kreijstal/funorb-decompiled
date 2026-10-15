@@ -72,7 +72,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           SpriteGeometry.a(stackIn_2_0, stackIn_2_1, (ScrollPane) (stackIn_2_2), (int[]) (stackIn_2_3), stackIn_2_4, stackIn_3_5, (byte) -58, param1.senderId, param1.senderDisplayName);
           if (param1.channel == 0 &&
             !MatchingTextValidator.e(-91) &&
-            null == o.currentLobbyGame &&
+            null == ClientResourceHelpers.currentLobbyGame &&
             nl.pendingLobbyGame == null) {
             if (!PlayerNameChooserPanel.field_I) {
               var5 = GameRenderAudioHelpers.contextActions;
@@ -85,8 +85,8 @@ final class ScrollPaneWithFooter extends UiComponent {
           }
           if (param1.channel == 1 &&
             !MatchingTextValidator.e(-128) &&
-            null != o.currentLobbyGame &&
-            param1.contextId == o.currentLobbyGame.getGameId((byte) 118)) {
+            null != ClientResourceHelpers.currentLobbyGame &&
+            param1.contextId == ClientResourceHelpers.currentLobbyGame.getGameId((byte) 118)) {
             if (!PlayerNameChooserPanel.field_I) {
               var9 = GameRenderAudioHelpers.contextActions;
               var10 = hc.field_b;

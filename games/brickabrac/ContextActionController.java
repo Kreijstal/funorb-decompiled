@@ -90,7 +90,7 @@ final class ContextActionController {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          if (null == o.currentLobbyGame) {
+          if (null == ClientResourceHelpers.currentLobbyGame) {
             var2 = MultiValueSliderRenderer.findLobbyGame(this.gameId, (byte) 61);
             if (var2 != null) {
               var3 = var2.displayName;
@@ -406,7 +406,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_lobby_name_rm", (byte) -117);
                 if (var2 != null) {
-                  ng.field_e = MenuButton.a(var2, (byte) 90);
+                  ScreenNavigationHelpers.field_e = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = nk.a("mu_lobby_location", (byte) 8);
                 if (var2 != null) {
@@ -1732,7 +1732,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_username_unavailable", (byte) -113);
                 if (var2 != null) {
-                  ng.field_f = MenuButton.a(var2, (byte) 125);
+                  ScreenNavigationHelpers.field_f = MenuButton.a(var2, (byte) 125);
                 }
                 var2 = nk.a("create_username_available", (byte) 74);
                 if (var2 != null) {
@@ -2618,7 +2618,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("quickchat_help", (byte) 37);
                 if (var2 != null) {
-                  ng.field_c = MenuButton.a(var2, (byte) 127);
+                  ScreenNavigationHelpers.quickChatHelpTitle = MenuButton.a(var2, (byte) 127);
                 }
                 var2 = nk.a("quickchat_help_title", (byte) 63);
                 if (null != var2) {
@@ -3289,14 +3289,14 @@ final class ContextActionController {
           }
           if (this.targetName != null &&
             ~Widget.field_p != ~this.targetId &&
-            null != o.currentLobbyGame &&
+            null != ClientResourceHelpers.currentLobbyGame &&
             hn.b((byte) 7)) {
             gamePlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, this.targetId);
             invitedPlayer = EmailAvailabilityRequest.findGamePlayer(this.targetId, 2);
             caption = this.getTargetCaption(-12688);
             if (invitedPlayer != null) {
-              if (o.currentLobbyGame.started &&
-                o.currentLobbyGame.concludedDurationMillis < 0) {
+              if (ClientResourceHelpers.currentLobbyGame.started &&
+                ClientResourceHelpers.currentLobbyGame.concludedDurationMillis < 0) {
                 return;
               }
               this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(RankingsRequest.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
@@ -3305,8 +3305,8 @@ final class ContextActionController {
               }
             }
             if (null != gamePlayer &&
-              o.currentLobbyGame.protocolFlag8 &&
-              o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
+              ClientResourceHelpers.currentLobbyGame.protocolFlag8 &&
+              ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
               if (gamePlayer.invitationPending) {
                 this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(hm.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
                 if (unusedGameFlag == 0) {

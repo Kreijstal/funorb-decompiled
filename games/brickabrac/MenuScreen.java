@@ -281,7 +281,7 @@ abstract class MenuScreen extends GameScreen {
     }
 
     void navigateBack(int obfuscationGuard) {
-        ng.requestScreen(false, 97, this.getParentScreenId(true));
+        ScreenNavigationHelpers.requestScreen(false, 97, this.getParentScreenId(true));
         if (obfuscationGuard != -1) {
           field_n = (String) null;
         }
@@ -334,50 +334,50 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 2) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, 69, -1);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 69, -1);
                 }
                 break regionExit1;
               }
               if (var8 == 7) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, 74, 0);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 74, 0);
                 }
                 break regionExit1;
               }
               if (var8 == 24) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   EmailLoginCredentials.field_l = true;
-                  ng.requestScreen(inputFlag, obfuscationGuard ^ 61, 0);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, obfuscationGuard ^ 61, 0);
                 }
                 break regionExit1;
               }
               if (var8 == 22) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, 67, 8);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 67, 8);
                 }
                 break regionExit1;
               }
               if (var8 == 5) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, 126, 7);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 126, 7);
                 }
                 break regionExit1;
               }
               if (var8 == 8) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, obfuscationGuard ^ 28, this.getParentScreenId(true));
+                  ScreenNavigationHelpers.requestScreen(inputFlag, obfuscationGuard ^ 28, this.getParentScreenId(true));
                 }
                 break regionExit1;
               }
               if (var8 == 4) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, 71, 6);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 71, 6);
                 }
                 break regionExit1;
               }
               if (var8 == 3) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, 86, 5);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 86, 5);
                 }
                 break regionExit1;
               }
@@ -475,7 +475,7 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 11) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   IntArrayRequest.gameplayScreen.requestLeaveMatch(29);
-                  ng.requestScreen(inputFlag, 73, -1);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 73, -1);
                 }
                 break regionExit1;
               }
@@ -518,7 +518,7 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 32) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  ng.requestScreen(inputFlag, 62, 14);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 62, 14);
                 }
                 break regionExit1;
               }
@@ -534,7 +534,7 @@ abstract class MenuScreen extends GameScreen {
                   if (NameEntryPopup.field_Yb == 1) {
                     var8 = 15;
                   }
-                  ng.requestScreen(inputFlag, obfuscationGuard ^ 25, var8);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, obfuscationGuard ^ 25, var8);
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
                 break regionExit1;
@@ -554,7 +554,7 @@ abstract class MenuScreen extends GameScreen {
                     break regionExit1;
                   }
                   var4 = 1;
-                  ng.requestScreen(inputFlag, 110, 12);
+                  ScreenNavigationHelpers.requestScreen(inputFlag, 110, 12);
                   break regionExit1;
                 case 36:
                   if (!this.selection.isActivated((byte) 113)) {
@@ -583,7 +583,7 @@ abstract class MenuScreen extends GameScreen {
               } else {
                 stackIn_48_2 = 16;
               }
-              ng.requestScreen(stackIn_47_0, stackIn_47_1, stackIn_48_2);
+              ScreenNavigationHelpers.requestScreen(stackIn_47_0, stackIn_47_1, stackIn_48_2);
             }
           }
         }

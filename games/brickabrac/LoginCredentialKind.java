@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoginCredentialKind {
-    static NineSliceFrame field_c;
+    static NineSliceFrame fullscreenDialogButtonFrame;
     static UiComponent field_d;
     static MusicTrack titleMusicTrack;
     static String field_f;
@@ -82,7 +82,7 @@ final class LoginCredentialKind {
     }
 
     public static void a(byte param0) {
-        field_c = null;
+        fullscreenDialogButtonFrame = null;
         field_h = null;
         field_d = null;
         int var1 = 123 / ((param0 + 23) / 38);

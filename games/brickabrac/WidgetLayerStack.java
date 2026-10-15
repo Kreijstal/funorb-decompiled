@@ -60,7 +60,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         field_G = null;
         if (param0 > -91) {
           NineSliceFrame var2 = (NineSliceFrame) null;
-          WidgetLayerStack.a(-80, 69, (NineSliceFrame) null, 50, (NineSliceFrame) null, -32);
+          WidgetLayerStack.configureFullscreenDialogButtons(-80, 69, (NineSliceFrame) null, 50, (NineSliceFrame) null, -32);
         }
         field_H = null;
         field_K = null;
@@ -171,18 +171,18 @@ final class WidgetLayerStack extends SingleChildWidget {
         }
     }
 
-    final static void a(int param0, int param1, NineSliceFrame param2, int param3, NineSliceFrame param4, int param5) {
+    final static void configureFullscreenDialogButtons(int paddingY, int gapY, NineSliceFrame selectedFrame, int obfuscationGuard, NineSliceFrame normalFrame, int paddingX) {
         try {
-          QuickChatCategoryDefinition.fullscreenDialogButtonGapY = param1;
-          GameOverlayHelpers.fullscreenDialogButtonPaddingX = param5;
-          if (param3 <= 25) {
-            WidgetLayerStack.h(24);
+          QuickChatCategoryDefinition.fullscreenDialogButtonGapY = gapY;
+          GameOverlayHelpers.fullscreenDialogButtonPaddingX = paddingX;
+          if (obfuscationGuard <= 25) {
+            WidgetLayerStack.drawFullscreenDialogRows(24);
           }
-          LoginCredentialKind.field_c = param4;
-          DropTargetWidget.fullscreenDialogButtonPaddingY = param0;
-          GrowableIntList.field_l = param2;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cp.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          LoginCredentialKind.fullscreenDialogButtonFrame = normalFrame;
+          DropTargetWidget.fullscreenDialogButtonPaddingY = paddingY;
+          GrowableIntList.fullscreenDialogSelectedFrame = selectedFrame;
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "cp.Q(" + paddingY + ',' + gapY + ',' + (selectedFrame != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (normalFrame != null ? "{...}" : "null") + ',' + paddingX + ')');
         }
     }
 
@@ -200,119 +200,119 @@ final class WidgetLayerStack extends SingleChildWidget {
         this.child = (Widget) ((Object) this.getTopVisibleLayer(-126));
     }
 
-    final static void h(int param0) {
-        int var3 = 0;
-        int stackIn_19_0 = 0;
-        int stackIn_22_0 = 0;
-        String stackIn_27_0 = null;
-        String stackIn_33_0 = null;
-        NineSliceFrame stackIn_44_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        long var3_long = 0L;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        NineSliceFrame var9 = null;
-        int var10 = 0;
-        PlayerBoard var11 = null;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        var10 = BrickABrac.field_J ? 1 : 0;
+    final static void drawFullscreenDialogRows(int obfuscationGuard) {
+        int rowIndex = 0;
+        int maximumPrefixLines = 0;
+        int maximumSuffixLines = 0;
+        String singularPrefixText = null;
+        String singularSuffixText = null;
+        NineSliceFrame selectedFrame = null;
+        RuntimeException caughtFailure = null;
+        int rowY = 0;
+        RuntimeException failure = null;
+        int secondsRemaining = 0;
+        long elapsedMillis = 0L;
+        int buttonIndex = 0;
+        int paint = 0;
+        String text = null;
+        int prefixLineCount = 0;
+        int suffixLineCount = 0;
+        NineSliceFrame frame = null;
+        int unusedGameFlag = 0;
+        PlayerBoard unusedBoard = null;
+        int textWidth;
+        int textX;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = CachedArchiveSource.fullscreenDialogTop;
-          var2 = 0;
-          if (param0 != -16546) {
-            var11 = (PlayerBoard) null;
+          rowY = CachedArchiveSource.fullscreenDialogTop;
+          secondsRemaining = 0;
+          if (obfuscationGuard != -16546) {
+            unusedBoard = (PlayerBoard) null;
             WidgetLayerStack.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
           }
           if (ArchiveFetchClient.fullscreenDialogKind == 2) {
-            var3_long = -un.fullscreenConfirmationStartMillis + MonotonicTime.nowMillis(false);
-            var2 = (int)((-var3_long + 10999L) / 1000L);
-            if (0 > var2) {
-              var2 = 0;
+            elapsedMillis = -un.fullscreenConfirmationStartMillis + MonotonicTime.nowMillis(false);
+            secondsRemaining = (int)((-elapsedMillis + 10999L) / 1000L);
+            if (0 > secondsRemaining) {
+              secondsRemaining = 0;
             }
           }
-          for (var3 = 0; ValidationStatus.fullscreenDialogRows.length > var3; var3++) {
-            var4 = BrickABrac.fullscreenDialogRowButtons[var3];
-            if (var4 < 0) {
-              var5 = NewAchievementsScreen.field_H;
+          for (rowIndex = 0; ValidationStatus.fullscreenDialogRows.length > rowIndex; rowIndex++) {
+            buttonIndex = BrickABrac.fullscreenDialogRowButtons[rowIndex];
+            if (buttonIndex < 0) {
+              paint = NewAchievementsScreen.fullscreenDialogBodyPaint;
             } else {
-              if (UiComponent.fullscreenDialogSelection.selectedIndex != var4) {
-                var5 = EmailLoginCredentials.field_n;
+              if (UiComponent.fullscreenDialogSelection.selectedIndex != buttonIndex) {
+                paint = EmailLoginCredentials.fullscreenDialogButtonPaint;
               } else {
-                var5 = LevelCompleteScreen.field_A;
+                paint = LevelCompleteScreen.fullscreenDialogSelectedPaint;
               }
             }
-            var6 = ValidationStatus.fullscreenDialogRows[var3];
+            text = ValidationStatus.fullscreenDialogRows[rowIndex];
             if (2 == ArchiveFetchClient.fullscreenDialogKind &&
-              1 == var2) {
+              1 == secondsRemaining) {
               if (QuickChatPhraseRegistry.fullscreenSingularPrefix.length >= IntrusiveHashIterator.fullscreenPluralPrefix.length) {
-                stackIn_19_0 = QuickChatPhraseRegistry.fullscreenSingularPrefix.length;
+                maximumPrefixLines = QuickChatPhraseRegistry.fullscreenSingularPrefix.length;
               } else {
-                stackIn_19_0 = IntrusiveHashIterator.fullscreenPluralPrefix.length;
+                maximumPrefixLines = IntrusiveHashIterator.fullscreenPluralPrefix.length;
               }
-              var7 = stackIn_19_0;
+              prefixLineCount = maximumPrefixLines;
               if (HuffmanCodec.fullscreenPluralSuffix.length <= SingleChildWidget.fullscreenSingularSuffix.length) {
-                stackIn_22_0 = SingleChildWidget.fullscreenSingularSuffix.length;
+                maximumSuffixLines = SingleChildWidget.fullscreenSingularSuffix.length;
               } else {
-                stackIn_22_0 = HuffmanCodec.fullscreenPluralSuffix.length;
+                maximumSuffixLines = HuffmanCodec.fullscreenPluralSuffix.length;
               }
-              var8 = stackIn_22_0;
-              if (var3 >= 6 &&
-                6 + var7 > var3) {
-                if (-var7 - 6 + var3 + QuickChatPhraseRegistry.fullscreenSingularPrefix.length < 0) {
-                  stackIn_27_0 = "";
+              suffixLineCount = maximumSuffixLines;
+              if (rowIndex >= 6 &&
+                6 + prefixLineCount > rowIndex) {
+                if (-prefixLineCount - 6 + rowIndex + QuickChatPhraseRegistry.fullscreenSingularPrefix.length < 0) {
+                  singularPrefixText = "";
                 } else {
-                  stackIn_27_0 = QuickChatPhraseRegistry.fullscreenSingularPrefix[-var7 + var3 + (-6 + QuickChatPhraseRegistry.fullscreenSingularPrefix.length)];
+                  singularPrefixText = QuickChatPhraseRegistry.fullscreenSingularPrefix[-prefixLineCount + rowIndex + (-6 + QuickChatPhraseRegistry.fullscreenSingularPrefix.length)];
                 }
-                var6 = stackIn_27_0;
+                text = singularPrefixText;
               }
-              if (7 + var7 <= var3 &&
-                7 - (-var7 - var8) > var3) {
-                if (-var7 + (var3 - 7) < SingleChildWidget.fullscreenSingularSuffix.length) {
-                  stackIn_33_0 = SingleChildWidget.fullscreenSingularSuffix[var3 + (-7 - var7)];
+              if (7 + prefixLineCount <= rowIndex &&
+                7 - (-prefixLineCount - suffixLineCount) > rowIndex) {
+                if (-prefixLineCount + (rowIndex - 7) < SingleChildWidget.fullscreenSingularSuffix.length) {
+                  singularSuffixText = SingleChildWidget.fullscreenSingularSuffix[rowIndex + (-7 - prefixLineCount)];
                 } else {
-                  stackIn_33_0 = "";
+                  singularSuffixText = "";
                 }
-                var6 = stackIn_33_0;
+                text = singularSuffixText;
               }
             }
-            if (-2 == var4) {
-              var6 = Integer.toString(var2);
+            if (-2 == buttonIndex) {
+              text = Integer.toString(secondsRemaining);
             }
-            var7Lifetime1 = hm.measureFullscreenDialogText(!(0 > var4), var6, 0);
-            var8Lifetime1 = ProxySocketConnector.fullscreenDialogCenterX - (var7Lifetime1 >> 1);
-            if (var4 >= 0) {
-              var1_int = var1_int + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
-              if (UiComponent.fullscreenDialogSelection.selectedIndex != var4) {
-                stackIn_44_0 = LoginCredentialKind.field_c;
+            textWidth = hm.measureFullscreenDialogText(!(0 > buttonIndex), text, 0);
+            textX = ProxySocketConnector.fullscreenDialogCenterX - (textWidth >> 1);
+            if (buttonIndex >= 0) {
+              rowY = rowY + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
+              if (UiComponent.fullscreenDialogSelection.selectedIndex != buttonIndex) {
+                selectedFrame = LoginCredentialKind.fullscreenDialogButtonFrame;
               } else {
-                stackIn_44_0 = GrowableIntList.field_l;
+                selectedFrame = GrowableIntList.fullscreenDialogSelectedFrame;
               }
-              var9 = stackIn_44_0;
-              if (var9 != null) {
-                var9.paintFrame((GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1) + var7Lifetime1, b.fullscreenDialogButtonLineHeight + (DropTargetWidget.fullscreenDialogButtonPaddingY << 1), -GameOverlayHelpers.fullscreenDialogButtonPaddingX + var8Lifetime1, false, var1_int);
+              frame = selectedFrame;
+              if (frame != null) {
+                frame.paintFrame((GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1) + textWidth, b.fullscreenDialogButtonLineHeight + (DropTargetWidget.fullscreenDialogButtonPaddingY << 1), -GameOverlayHelpers.fullscreenDialogButtonPaddingX + textX, false, rowY);
               }
-              var1_int = var1_int + DropTargetWidget.fullscreenDialogButtonPaddingY;
+              rowY = rowY + DropTargetWidget.fullscreenDialogButtonPaddingY;
             }
-            if (var4 >= 0) {
-              kp.fullscreenDialogButtonFont.drawLeft(var6, var8Lifetime1, var1_int + QuickChatCategoryRegistry.field_b, var5, -1);
-              var1_int = var1_int + (DropTargetWidget.fullscreenDialogButtonPaddingY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + b.fullscreenDialogButtonLineHeight));
+            if (buttonIndex >= 0) {
+              kp.fullscreenDialogButtonFont.drawLeft(text, textX, rowY + QuickChatCategoryRegistry.fullscreenDialogButtonBaseline, paint, -1);
+              rowY = rowY + (DropTargetWidget.fullscreenDialogButtonPaddingY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + b.fullscreenDialogButtonLineHeight));
             } else {
-              StateIconLabel.fullscreenDialogBodyFont.drawLeft(var6, var8Lifetime1, var1_int + DualLinkIterator.field_f, var5, -1);
-              var1_int = var1_int + IntArrayRequest.fullscreenDialogBodyLineHeight;
+              StateIconLabel.fullscreenDialogBodyFont.drawLeft(text, textX, rowY + DualLinkIterator.fullscreenDialogBodyBaseline, paint, -1);
+              rowY = rowY + IntArrayRequest.fullscreenDialogBodyLineHeight;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "cp.F(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "cp.F(" + obfuscationGuard + ')');
         }
     }
 

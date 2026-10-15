@@ -99,7 +99,7 @@ final class MusicPatch extends IntrusiveNode {
         int var3;
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param1 ||
-          null == o.currentLobbyGame) {
+          null == ClientResourceHelpers.currentLobbyGame) {
           hc.joinRequestsPanelOpen = false;
         }
         if (param0 >= -111) {
@@ -118,7 +118,7 @@ final class MusicPatch extends IntrusiveNode {
             }
           }
         } else {
-          if (null == o.currentLobbyGame) {
+          if (null == ClientResourceHelpers.currentLobbyGame) {
             if (nl.pendingLobbyGame == null) {
               hc.joinRequestsPanelOpen = false;
               if (IntArrayRequest.field_j > 0) {

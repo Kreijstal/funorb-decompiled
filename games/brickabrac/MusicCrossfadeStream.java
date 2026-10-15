@@ -387,14 +387,14 @@ final class MusicCrossfadeStream extends AudioStream {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        b.fullscreenDialogButtonLineHeight = param1;
-        if (param2 != 256) {
+    final static void configureFullscreenDialogMetrics(int buttonBaseline, int buttonLineHeight, int obfuscationGuard, int bodyBaseline, int bodyLineHeight) {
+        b.fullscreenDialogButtonLineHeight = buttonLineHeight;
+        if (obfuscationGuard != 256) {
           return;
         }
-        QuickChatCategoryRegistry.field_b = param0;
-        DualLinkIterator.field_f = param3;
-        IntArrayRequest.fullscreenDialogBodyLineHeight = param4;
+        QuickChatCategoryRegistry.fullscreenDialogButtonBaseline = buttonBaseline;
+        DualLinkIterator.fullscreenDialogBodyBaseline = bodyBaseline;
+        IntArrayRequest.fullscreenDialogBodyLineHeight = bodyLineHeight;
     }
 
     private MusicCrossfadeStream() throws Throwable {

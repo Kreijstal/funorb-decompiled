@@ -109,17 +109,17 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         }
         if (param0) {
           rasterStack = (NodeDeque) null;
-          if (ng.quickChatChannel == 0 &&
+          if (ScreenNavigationHelpers.quickChatChannel == 0 &&
             null != nl.pendingLobbyGame) {
             var3 = 0;
           }
-          if (ng.quickChatChannel == 2 &&
+          if (ScreenNavigationHelpers.quickChatChannel == 2 &&
             !FileCacheStore.b(-21835160)) {
             var3 = 0;
           }
           if (MeshAttributeRecord.currentKeyCode == 84) {
             if (var3 == 0) {
-              if (ng.quickChatChannel != 0) {
+              if (ScreenNavigationHelpers.quickChatChannel != 0) {
                 UsernameAvailabilityValidator.b(!param0);
               }
             } else {
@@ -133,15 +133,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                   var14 = (String) null;
                   SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ScreenshotViewer.field_m, (String) null, 2);
                 } else {
-                  var5 = ng.quickChatChannel;
+                  var5 = ScreenNavigationHelpers.quickChatChannel;
                   if (var5 == 0 &&
-                    null != o.currentLobbyGame) {
+                    null != ClientResourceHelpers.currentLobbyGame) {
                     var5 = 1;
                   }
                   if (tm.getChatFilter(var5, (byte) 18) == 2) {
                     DirectByteStorage.updateChatFilter(0, param2, 1, var5);
                   }
-                  GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_String);
+                  GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_String);
                 }
               }
               UsernameAvailabilityValidator.b(true);
@@ -177,19 +177,19 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var19 = var16;
           var7Lifetime13 = var19;
           var7Lifetime14 = var19;
-          if (ng.quickChatChannel != 2) {
+          if (ScreenNavigationHelpers.quickChatChannel != 2) {
             var7Lifetime15 = "";
-            if (ng.quickChatChannel == 0) {
-              if (o.currentLobbyGame == null &&
+            if (ScreenNavigationHelpers.quickChatChannel == 0) {
+              if (ClientResourceHelpers.currentLobbyGame == null &&
                 QuickChatParameterType.field_d) {
                 var7Lifetime15 = "[" + ArcticBackground.field_u + "] ";
               }
-              if (null != o.currentLobbyGame) {
+              if (null != ClientResourceHelpers.currentLobbyGame) {
                 if (PowerUp.field_v &&
                   null != jd.field_b) {
                   var7Lifetime15 = "[" + jd.field_b + "] ";
                 } else {
-                  var7Lifetime15 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+                  var7Lifetime15 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
                 }
               }
             }
@@ -217,15 +217,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
           return true;
         }
-        if (ng.quickChatChannel == 0) {
+        if (ScreenNavigationHelpers.quickChatChannel == 0) {
           if (null == nl.pendingLobbyGame) {
-            if (ng.quickChatChannel == 2 &&
+            if (ScreenNavigationHelpers.quickChatChannel == 2 &&
               !FileCacheStore.b(-21835160)) {
               var3 = 0;
             }
             if (MeshAttributeRecord.currentKeyCode == 84) {
               if (var3 == 0) {
-                if (ng.quickChatChannel != 0) {
+                if (ScreenNavigationHelpers.quickChatChannel != 0) {
                   UsernameAvailabilityValidator.b(!param0);
                 }
               } else {
@@ -240,15 +240,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                     SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ScreenshotViewer.field_m, (String) null, 2);
                     UsernameAvailabilityValidator.b(true);
                   } else {
-                    var5Lifetime1 = ng.quickChatChannel;
+                    var5Lifetime1 = ScreenNavigationHelpers.quickChatChannel;
                     if (var5Lifetime1 == 0 &&
-                      null != o.currentLobbyGame) {
+                      null != ClientResourceHelpers.currentLobbyGame) {
                       var5Lifetime1 = 1;
                     }
                     if (tm.getChatFilter(var5Lifetime1, (byte) 18) == 2) {
                       DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime1);
                     }
-                    GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime1);
+                    GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_StringLifetime1);
                     UsernameAvailabilityValidator.b(true);
                   }
                 } else {
@@ -282,19 +282,19 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               var19Lifetime1 = var16;
               var7Lifetime1Lifetime4 = var19Lifetime1;
               var7Lifetime1Lifetime5 = var19Lifetime1;
-              if (ng.quickChatChannel != 2) {
+              if (ScreenNavigationHelpers.quickChatChannel != 2) {
                 var7Lifetime1Lifetime6 = "";
-                if (ng.quickChatChannel == 0) {
-                  if (o.currentLobbyGame == null &&
+                if (ScreenNavigationHelpers.quickChatChannel == 0) {
+                  if (ClientResourceHelpers.currentLobbyGame == null &&
                     QuickChatParameterType.field_d) {
                     var7Lifetime1Lifetime6 = "[" + ArcticBackground.field_u + "] ";
                   }
-                  if (null != o.currentLobbyGame) {
+                  if (null != ClientResourceHelpers.currentLobbyGame) {
                     if (PowerUp.field_v &&
                       null != jd.field_b) {
                       var7Lifetime1Lifetime6 = "[" + jd.field_b + "] ";
                     } else {
-                      var7Lifetime1Lifetime6 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+                      var7Lifetime1Lifetime6 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
                     }
                   }
                 }
@@ -326,13 +326,13 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           }
           var3 = 0;
         }
-        if (ng.quickChatChannel == 2 &&
+        if (ScreenNavigationHelpers.quickChatChannel == 2 &&
           !FileCacheStore.b(-21835160)) {
           var3 = 0;
         }
         if (MeshAttributeRecord.currentKeyCode == 84) {
           if (var3 == 0) {
-            if (ng.quickChatChannel != 0) {
+            if (ScreenNavigationHelpers.quickChatChannel != 0) {
               UsernameAvailabilityValidator.b(!param0);
             }
           } else {
@@ -348,15 +348,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 var14Lifetime2 = (String) null;
                 SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, ScreenshotViewer.field_m, (String) null, 2);
               } else {
-                var5Lifetime2 = ng.quickChatChannel;
+                var5Lifetime2 = ScreenNavigationHelpers.quickChatChannel;
                 if (var5Lifetime2 == 0 &&
-                  null != o.currentLobbyGame) {
+                  null != ClientResourceHelpers.currentLobbyGame) {
                   var5Lifetime2 = 1;
                 }
                 if (tm.getChatFilter(var5Lifetime2, (byte) 18) == 2) {
                   DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime2);
                 }
-                GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ng.quickChatChannel, param1, var4_ref_StringLifetime2);
+                GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_StringLifetime2);
               }
             }
             UsernameAvailabilityValidator.b(true);
@@ -395,9 +395,9 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         var19Lifetime2 = var16;
         var7Lifetime7 = var19Lifetime2;
         var7Lifetime8 = var19Lifetime2;
-        if (ng.quickChatChannel != 2) {
+        if (ScreenNavigationHelpers.quickChatChannel != 2) {
           var7Lifetime9 = "";
-          if (ng.quickChatChannel != 0) {
+          if (ScreenNavigationHelpers.quickChatChannel != 0) {
             var20Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var7Lifetime9 = var20Lifetime2;
             var7Lifetime9 = var20Lifetime2;
@@ -407,11 +407,11 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             }
             return true;
           }
-          if (o.currentLobbyGame == null &&
+          if (ClientResourceHelpers.currentLobbyGame == null &&
             QuickChatParameterType.field_d) {
             var7Lifetime9 = "[" + ArcticBackground.field_u + "] ";
           }
-          if (null == o.currentLobbyGame) {
+          if (null == ClientResourceHelpers.currentLobbyGame) {
             var20Lifetime2Lifetime1 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime1);
             if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
@@ -420,7 +420,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             return true;
           }
           if (!PowerUp.field_v) {
-            var7Lifetime9 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime2);
             if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
@@ -429,7 +429,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             return true;
           }
           if (null == jd.field_b) {
-            var7Lifetime9 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime3);
             if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {

@@ -95,7 +95,7 @@ abstract class SpriteGeometry extends DualLinkNode {
 
     final static void a(int param0, UiComponent param1, ScrollPane param2, int[] param3, String param4, int param5, byte param6, long param7, String param8) {
         try {
-          o.field_b = param2;
+          ClientResourceHelpers.field_b = param2;
           if (param6 != -58) {
             field_u = (String) null;
           }

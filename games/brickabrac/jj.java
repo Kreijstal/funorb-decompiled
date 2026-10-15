@@ -81,7 +81,7 @@ final class jj {
             }
             return var1 != 0;
           }
-          o.a(-24435);
+          ClientResourceHelpers.drawFullscreenDialog(-24435);
           var1 = 1;
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {
@@ -134,7 +134,7 @@ final class jj {
           }
           return var1 != 0;
         }
-        o.a(-24435);
+        ClientResourceHelpers.drawFullscreenDialog(-24435);
         var1Lifetime1 = 1;
         if (GameClock.c((byte) 119) &&
           !HotspotTextWidget.a(9)) {

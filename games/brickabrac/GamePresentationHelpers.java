@@ -13,7 +13,7 @@ final class GamePresentationHelpers {
         if (null != hd.quickChatMenu) {
           hd.quickChatMenu.resetSelection((byte) 41);
         }
-        if (param0 != ~ng.quickChatChannel) {
+        if (param0 != ~ScreenNavigationHelpers.quickChatChannel) {
           UsernameAvailabilityValidator.b(true);
         }
         HighscoresScreen.field_v = 0;

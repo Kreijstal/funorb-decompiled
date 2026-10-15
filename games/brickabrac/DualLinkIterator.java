@@ -12,7 +12,7 @@ final class DualLinkIterator implements Iterator {
     private DualLinkNode lastReturned;
     static ValidationStatus validationValid;
     static RgbSprite[][] jungleSegsSprites;
-    static int field_f;
+    static int fullscreenDialogBodyBaseline;
 
     public static void a(byte param0) {
         field_i = null;

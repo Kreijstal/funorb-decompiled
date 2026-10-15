@@ -338,7 +338,7 @@ final class LobbyUiHelpers {
           transitionTick = TableDataRequest.field_m;
           transitionAlternateGuard = !(obfuscationGuard);
           ArchiveSourceManager.layoutLobbyTransition(transitionTick, transitionAlternateGuard);
-          if (o.currentLobbyGame != null) {
+          if (ClientResourceHelpers.currentLobbyGame != null) {
             boolean continueOwnerEligibility = true;
             GameUiController.field_e.enabled = true;
             requestsButtonForCollapse = RadialSelectorRenderer.field_h;
@@ -352,7 +352,7 @@ final class LobbyUiHelpers {
             AppletGameShell.field_e.height = 0;
             waitingMessageForCollapse.width = 0;
             if (!hn.b((byte) 7)) {
-              gameDisplayName = o.currentLobbyGame.displayName;
+              gameDisplayName = ClientResourceHelpers.currentLobbyGame.displayName;
               ba.field_v.text = GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
               AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
               AppletGameShell.field_e.text = GamePresentationHelpers.formatIndexedText(IntrusiveNode.field_a, new String[]{gameDisplayName}, (byte) 103);
@@ -363,7 +363,7 @@ final class LobbyUiHelpers {
               ba.field_v.text = ba.field_x.toUpperCase();
               buttonSplitXOrCountdownSeconds = (MultiplayerMatch.field_d.width + 2) / 2;
               RadialSelectorRenderer.field_h.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, -2 + buttonSplitXOrCountdownSeconds, (byte) 64);
-              if (o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
+              if (ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                 RadialSelectorRenderer.field_h.text = GameCanvas.field_d.toUpperCase();
                 RadialSelectorRenderer.field_h.enabled = false;
                 if (clientBranchFlag != 0) {
@@ -436,14 +436,14 @@ final class LobbyUiHelpers {
                             ruleSettingIndex = settingCursorOrEligibilityMask;
                             playerCountRuleSentinel = -1;
                             if (ruleSettingIndex != playerCountRuleSentinel) {
-                              if (~(o.currentLobbyGame.settings[settingCursorOrEligibilityMask] & 255) != ~settingCursorOrIneligiblePlayer) {
+                              if (~(ClientResourceHelpers.currentLobbyGame.settings[settingCursorOrEligibilityMask] & 255) != ~settingCursorOrIneligiblePlayer) {
                                 break scanLoop2;
                               }
                             } else {
                               if (restrictionPass != 0) {
-                                playerCountForRule = o.currentLobbyGame.playerCount;
+                                playerCountForRule = ClientResourceHelpers.currentLobbyGame.playerCount;
                               } else {
-                                playerCountForRule = o.currentLobbyGame.maxPlayers;
+                                playerCountForRule = ClientResourceHelpers.currentLobbyGame.maxPlayers;
                               }
                               settingValueOrPlayerCount = playerCountForRule;
                               if (settingValueOrPlayerCount != settingCursorOrIneligiblePlayer &&
@@ -560,7 +560,7 @@ final class LobbyUiHelpers {
                 settingCursorOrIneligiblePlayer = 0;
                 boolean allSettingsVisited = false;
                 while (!(allSettingsVisited = (!(RankingsRequest.gameSettingCount > settingCursorOrIneligiblePlayer)))) {
-                  settingValueOrPlayerCount = 255 & o.currentLobbyGame.settings[settingCursorOrIneligiblePlayer];
+                  settingValueOrPlayerCount = 255 & ClientResourceHelpers.currentLobbyGame.settings[settingCursorOrIneligiblePlayer];
                   if (clientBranchFlag == 0) {
                     if (NodeDeque.field_a != null &&
                       NodeDeque.field_a[settingCursorOrIneligiblePlayer] != null &&
@@ -679,7 +679,7 @@ final class LobbyUiHelpers {
               }
               countdownTarget.text = GamePresentationHelpers.formatIndexedText(SpriteGeometry.field_w, new String[]{Integer.toString(buttonSplitXOrCountdownSeconds)}, (byte) 103);
             }
-            TextWidgetRenderer.field_b.text = GamePresentationHelpers.formatIndexedText(rl.field_d, new String[]{Integer.toString(o.currentLobbyGame.playerCount), Integer.toString(o.currentLobbyGame.maxPlayers)}, (byte) 103);
+            TextWidgetRenderer.field_b.text = GamePresentationHelpers.formatIndexedText(rl.field_d, new String[]{Integer.toString(ClientResourceHelpers.currentLobbyGame.playerCount), Integer.toString(ClientResourceHelpers.currentLobbyGame.maxPlayers)}, (byte) 103);
           }
           lobbyRoot = NinjaBackground.field_w;
           lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);
@@ -695,9 +695,9 @@ final class LobbyUiHelpers {
             LobbyUiHelpers.paintNineSliceFrame(-9, -55, 119, -100, (RgbSprite[]) null, -102);
           }
           BrickGameLayerController.field_c.tabs.processTabPresses(0);
-          if (null != o.currentLobbyGame) {
+          if (null != ClientResourceHelpers.currentLobbyGame) {
             if (GameUiController.field_e.pressedButton != 0) {
-              GameTransportActions.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 123), false, gameActionOpcode);
+              GameTransportActions.requestLeaveOrDeclineGame(ClientResourceHelpers.currentLobbyGame.getGameId((byte) 123), false, gameActionOpcode);
             }
             if (RadialSelectorRenderer.field_h.pressedButton != 0) {
               hc.joinRequestsPanelOpen = true;
@@ -708,7 +708,7 @@ final class LobbyUiHelpers {
             if (0 != nd.field_a.pressedButton) {
               hc.joinRequestsPanelOpen = false;
             }
-            JungleBackground.a(gameActionOpcode, o.currentLobbyGame, false, false);
+            JungleBackground.a(gameActionOpcode, ClientResourceHelpers.currentLobbyGame, false, false);
           }
           return;
         } catch (java.lang.RuntimeException caughtUpdateFailure) {

@@ -6,7 +6,7 @@ final class GrowableIntList {
     static String field_c;
     private boolean multiplyGrowth;
     static IndexedSprite[] field_i;
-    static NineSliceFrame field_l;
+    static NineSliceFrame fullscreenDialogSelectedFrame;
     private int lastIndex;
     private int[] values;
     static MusicTrack completionMusicTrack;
@@ -23,7 +23,7 @@ final class GrowableIntList {
         field_m = null;
         field_n = null;
         field_i = null;
-        field_l = null;
+        fullscreenDialogSelectedFrame = null;
         field_e = null;
         field_c = null;
         if (!param0) {
@@ -100,7 +100,7 @@ final class GrowableIntList {
               LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
             }
             if (hc.joinRequestsPanelOpen &&
-              o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
+              ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
               IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
               Ball.field_A.enabled = false;
               jh.a(true, IsaacGenerator.field_b.content);
@@ -123,7 +123,7 @@ final class GrowableIntList {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
               if (hc.joinRequestsPanelOpen &&
-                o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
+                ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -146,7 +146,7 @@ final class GrowableIntList {
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
-                if (o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
+                if (ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -163,7 +163,7 @@ final class GrowableIntList {
             if (Rasterizer2D.height != IsaacGenerator.field_i &&
               Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
               Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
-              if (o.currentLobbyGame != null) {
+              if (ClientResourceHelpers.currentLobbyGame != null) {
                 CacheIoRequest.a(true, false);
               } else {
                 if (null != nl.pendingLobbyGame) {
@@ -188,7 +188,7 @@ final class GrowableIntList {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
               if (hc.joinRequestsPanelOpen &&
-                o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
+                ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -216,7 +216,7 @@ final class GrowableIntList {
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               } else {
-                if (o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
+                if (ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -230,7 +230,7 @@ final class GrowableIntList {
           } else {
             if (Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
               Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
-              if (o.currentLobbyGame != null) {
+              if (ClientResourceHelpers.currentLobbyGame != null) {
                 CacheIoRequest.a(true, false);
               } else {
                 if (null != nl.pendingLobbyGame) {
@@ -255,7 +255,7 @@ final class GrowableIntList {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
               if (hc.joinRequestsPanelOpen &&
-                o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
+                ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
                 jh.a(true, IsaacGenerator.field_b.content);
@@ -278,7 +278,7 @@ final class GrowableIntList {
                   LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
                 }
                 if (hc.joinRequestsPanelOpen &&
-                  o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
+                  ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
                   jh.a(true, IsaacGenerator.field_b.content);
@@ -301,7 +301,7 @@ final class GrowableIntList {
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
                 } else {
-                  if (o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
+                  if (ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
                     IsaacGenerator.field_b.viewport.text = null;
                     Ball.field_A.enabled = true;
                     MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);

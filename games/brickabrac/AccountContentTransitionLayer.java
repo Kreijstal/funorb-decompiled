@@ -7,7 +7,7 @@ final class AccountContentTransitionLayer extends ContentTransitionLayer {
     static ResourcePreparationQueue startupResources;
     static String field_ub;
     static String field_sb;
-    static int field_vb;
+    static int fullscreenDialogPaddingY;
 
     final static void m(int param0) {
         PasswordFieldRenderer.field_G = MonotonicTime.nowMillis(false);

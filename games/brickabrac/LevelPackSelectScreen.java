@@ -68,11 +68,11 @@ final class LevelPackSelectScreen extends MenuScreen {
             return super.handleMenuAction(buttonIndex, inputFlag, (byte) 123);
           }
           if (this.selection.isActivated((byte) 113)) {
-            ng.requestScreen(inputFlag, 54, 15);
+            ScreenNavigationHelpers.requestScreen(inputFlag, 54, 15);
           }
         } else {
           if (this.selection.isActivated((byte) 113)) {
-            ng.requestScreen(inputFlag, obfuscationGuard - 54, 13);
+            ScreenNavigationHelpers.requestScreen(inputFlag, obfuscationGuard - 54, 13);
           }
         }
         if (obfuscationGuard == 123) {

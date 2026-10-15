@@ -60,7 +60,7 @@ final class OpacityWidget extends SingleChildWidget {
           stackIn_10_1 = IntArrayRequest.gameplayScreen.suppressResultSubmission;
           stackIn_11_2 = (QuickChatHelpDialog.field_Yb >= 2) && (localPlayerCount == 1) && (GameConnectionShell.field_t);
           stackIn_10_0.suppressResultSubmission = stackIn_10_1 | stackIn_11_2;
-          ng.requestScreen(inputFlag, 103, -1);
+          ScreenNavigationHelpers.requestScreen(inputFlag, 103, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

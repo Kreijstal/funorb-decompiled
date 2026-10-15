@@ -40,7 +40,7 @@ final class QuickChatParameterType {
             param2 = 0;
           }
           DualLinkNode.quickChatRecipient = param4;
-          ng.quickChatChannel = param2;
+          ScreenNavigationHelpers.quickChatChannel = param2;
           var7 = (CharSequence) ((Object) param4);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var7, 64);
           CanvasResizeController.field_n = param1;

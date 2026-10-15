@@ -3,7 +3,7 @@
  */
 final class NewAchievementsScreen extends AchievementBrowserScreen {
     static String field_F;
-    static int field_H;
+    static int fullscreenDialogBodyPaint;
     static int[] viewFacePointThreeY;
     static int textChoiceCenterX;
     static boolean discardGameplayOnTransition;

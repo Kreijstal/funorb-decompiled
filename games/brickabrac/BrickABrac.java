@@ -208,7 +208,7 @@ public final class BrickABrac extends InteractiveGameClient {
           if (9 == opcode) {
             OpacityWidget.finishScreenTransition((byte) -113);
             RadialSelectorWidget.field_L = false;
-            ng.requestScreen(false, obfuscationGuard + 66, 11);
+            ScreenNavigationHelpers.requestScreen(false, obfuscationGuard + 66, 11);
             kk.setMessageText(true, packet.readCp1252String(-1));
             return true;
           }
@@ -218,14 +218,14 @@ public final class BrickABrac extends InteractiveGameClient {
             hn.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             RadialSelectorWidget.field_L = false;
             MonotonicTime.field_c = true;
-            ng.requestScreen(false, 113, -2);
+            ScreenNavigationHelpers.requestScreen(false, 113, -2);
             return true;
           }
           if (opcode == 15) {
             if (MonotonicTime.field_c) {
               WhirlpoolHasher.a(7);
               BirthDateValidator.d((byte) -56);
-              ng.requestScreen(false, obfuscationGuard + 43, 0);
+              ScreenNavigationHelpers.requestScreen(false, obfuscationGuard + 43, 0);
               MonotonicTime.field_c = false;
               NewAchievementsScreen.discardGameplayOnTransition = true;
               HalloweenBackground.field_y = true;
@@ -319,7 +319,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 NewAchievementsScreen.discardGameplayOnTransition = true;
                 RadialSelectorRenderer.field_p = true;
                 Brick.unreadChatMessageCount = 0;
-                ng.requestScreen(false, 125, -2);
+                ScreenNavigationHelpers.requestScreen(false, 125, -2);
               }
               ed.field_d = false;
               return true;
@@ -429,7 +429,7 @@ public final class BrickABrac extends InteractiveGameClient {
           ed.field_d = false;
           TextFieldRenderer.field_A = false;
           RadialSelectorRenderer.field_p = false;
-          ng.requestScreen(false, obfuscationGuard ^ 105, -1);
+          ScreenNavigationHelpers.requestScreen(false, obfuscationGuard ^ 105, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -464,11 +464,11 @@ public final class BrickABrac extends InteractiveGameClient {
         }
         if (AccountMessageDialog.currentScreen.screenId == 9 &&
           !WidgetGroup.a(pl.pendingAchievementMask, -1)) {
-          ng.requestScreen(false, 69, 5);
+          ScreenNavigationHelpers.requestScreen(false, 69, 5);
         } else {
           if (CacheEntry.field_z != 2147483647) {
             if (CacheEntry.field_z != -2) {
-              ng.requestScreen(false, param0 + 55, CacheEntry.field_z);
+              ScreenNavigationHelpers.requestScreen(false, param0 + 55, CacheEntry.field_z);
             } else {
               MatchingTextValidator.b(true);
             }
@@ -491,9 +491,9 @@ public final class BrickABrac extends InteractiveGameClient {
             if (IntArrayRequest.gameplayScreen != null &&
               !IntArrayRequest.gameplayScreen.isSpectator(param1 + 94)) {
               kk.setMessageText(true, EmailValidator.field_k);
-              ng.requestScreen(false, param1 ^ 118, 11);
+              ScreenNavigationHelpers.requestScreen(false, param1 ^ 118, 11);
             } else {
-              ng.requestScreen(false, 120, 0);
+              ScreenNavigationHelpers.requestScreen(false, 120, 0);
             }
             if (AccountMessageDialog.currentScreen instanceof MenuScreen) {
               ((MenuScreen) (AccountMessageDialog.currentScreen)).onEnter(false, 0, param1 + 116);
@@ -611,7 +611,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ResourcePreparationQueue.c(4862);
         GameCanvas.a(0);
         CanvasResizeController.b(0);
-        ng.a((byte) -49);
+        ScreenNavigationHelpers.a((byte) -49);
         GameScreen.c((byte) -91);
         BlankScreen.a(-2);
         GameplayScreen.d(81);
@@ -691,7 +691,7 @@ public final class BrickABrac extends InteractiveGameClient {
         NameEntryPopup.d(false);
         BrickGameLayerController.a((byte) -102);
         qp.a(false);
-        o.b(31583);
+        ClientResourceHelpers.b(31583);
         ok.b(-116);
         BirthDateEntryPanel.d(false);
         rh.a(121);

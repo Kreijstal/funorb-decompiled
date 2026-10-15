@@ -372,7 +372,7 @@ final class BitPacketBuffer extends PacketBuffer {
 
     final static void a(int param0, String param1, long param2) {
         CharSequence var5 = null;
-        ng.quickChatChannel = 2;
+        ScreenNavigationHelpers.quickChatChannel = 2;
         if (param0 != 21846) {
           return;
         }

@@ -277,7 +277,7 @@ abstract class WidgetLayer extends WidgetGroup {
             }
             SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
             ga.field_i = 4;
-            LoadingProgressDialog.field_eb = o.field_a;
+            LoadingProgressDialog.field_eb = ClientResourceHelpers.field_a;
             pp.field_a = -1;
             return;
           }

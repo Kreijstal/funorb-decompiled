@@ -3,7 +3,7 @@
  */
 final class LevelCompleteScreen extends PauseMenuScreen {
     static int receivedChatKeyLow24;
-    static int field_A;
+    static int fullscreenDialogSelectedPaint;
     static int[] crc32Table;
     static RgbSprite field_F;
     static String field_z;

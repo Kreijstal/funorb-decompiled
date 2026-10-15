@@ -143,7 +143,7 @@ final class ActivityIndicatorWidget extends Widget {
         if (param0 >= -39) {
           ActivityIndicatorWidget.a(0, 110);
         }
-        o.field_b = null;
+        ClientResourceHelpers.field_b = null;
         GameRenderAudioHelpers.contextActions = null;
     }
 

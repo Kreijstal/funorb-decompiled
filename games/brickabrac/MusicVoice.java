@@ -181,13 +181,13 @@ final class MusicVoice extends IntrusiveNode {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (o.currentLobbyGame != null && (null != NodeDeque.field_a ||
+          if (ClientResourceHelpers.currentLobbyGame != null && (null != NodeDeque.field_a ||
             null != AchievementsScreen.field_F ||
             null != MatchResultScreen.field_v ||
             null != LoginMethodPreference.field_e)) {
             var9 = 0;
             while (!(var9 >= RankingsRequest.gameSettingCount)) {
-              var10_int = 255 & o.currentLobbyGame.settings[var9];
+              var10_int = 255 & ClientResourceHelpers.currentLobbyGame.settings[var9];
               if (var32 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -233,7 +233,7 @@ final class MusicVoice extends IntrusiveNode {
             stackIn_68_3 = np.uiRowHeight * 2 + 4;
             stackIn_68_4 = 22676;
             stackIn_68_5 = param0;
-            stackIn_69_6 = (param1 == o.field_b);
+            stackIn_69_6 = (param1 == ClientResourceHelpers.field_b);
             var9 = ((ScrollPane) (Object) stackIn_68_0).updateContentLayout(stackIn_68_1, stackIn_68_2, stackIn_68_3, stackIn_68_4, stackIn_68_5, stackIn_69_6) ? 1 : 0;
           }
           var10 = param1.content.children;
@@ -324,7 +324,7 @@ final class MusicVoice extends IntrusiveNode {
               var13.statusLabel.capturedTextColor = var25_int;
               var13.statusLabel.activeTextColor = var25_int;
               if (param1 == TimedSplashScreen.field_u) {
-                if (!o.currentLobbyGame.started) {
+                if (!ClientResourceHelpers.currentLobbyGame.started) {
                   var13.actionLabel.text = LegacyUtf8Decoder.field_b;
                 }
               } else if (!var13.invitationPending) {
@@ -340,7 +340,7 @@ final class MusicVoice extends IntrusiveNode {
                 var13.actionLabel.text = ValidationIconWidget.field_L;
               }
               var26_int = 0;
-              if (null != o.currentLobbyGame &&
+              if (null != ClientResourceHelpers.currentLobbyGame &&
                 hn.b((byte) 7) &&
                 ~Widget.field_p != ~var13.playerId) {
                 if (null != var13.statusLabel.text) {
@@ -483,7 +483,7 @@ final class MusicVoice extends IntrusiveNode {
                 var28_int = 0;
                 while (true) {
                   if (RankingsRequest.gameSettingCount > var28_int) {
-                    var29 = o.currentLobbyGame.settings[var28_int] & 255;
+                    var29 = ClientResourceHelpers.currentLobbyGame.settings[var28_int] & 255;
                     var30 = 0;
                     if (NodeDeque.field_a != null &&
                       NodeDeque.field_a[var28_int] != null &&
@@ -550,7 +550,7 @@ final class MusicVoice extends IntrusiveNode {
                 }
                 if (TimedSplashScreen.field_u == param1 &&
                   !hn.b((byte) 7)) {
-                  var28 = o.currentLobbyGame.displayName;
+                  var28 = ClientResourceHelpers.currentLobbyGame.displayName;
                   var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(ba.field_y, new String[]{var28}, (byte) 103);
                 }
                 WidgetTextLayout.field_e = (String) (var25);

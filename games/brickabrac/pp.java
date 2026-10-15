@@ -166,12 +166,12 @@ final class pp {
         int var1 = -90 % ((-32 - param0) / 62);
     }
 
-    final static void a(int param0, int param1, byte param2) {
-        ProxySocketConnector.fullscreenDialogCenterX = param0;
-        if (param2 != 19) {
+    final static void setFullscreenDialogCenter(int x, int y, byte obfuscationGuard) {
+        ProxySocketConnector.fullscreenDialogCenterX = x;
+        if (obfuscationGuard != 19) {
           return;
         }
-        ScreenshotViewer.fullscreenDialogCenterY = param1;
+        ScreenshotViewer.fullscreenDialogCenterY = y;
     }
 
     final static int a(PlayerBoard param0, byte param1, MultiplayerMatch param2) {

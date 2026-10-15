@@ -10,69 +10,69 @@ final class InstructionsScreen extends MenuScreen {
     private int parentScreenId;
     static String field_w;
 
-    final static int f(byte param0) {
-        int stackIn_32_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
-        java.awt.Component var8 = null;
-        var7 = BrickABrac.field_J ? 1 : 0;
+    final static int pollFullscreenDialogAction(byte obfuscationGuard) {
+        int resultAction = 0;
+        RuntimeException caughtFailure = null;
+        int activatedFlag = 0;
+        RuntimeException failure = null;
+        int escapeFlag = 0;
+        int action = 0;
+        long elapsedMillis = 0L;
+        int secondsRemaining = 0;
+        int unusedGameFlag = 0;
+        java.awt.Component unusedComponent = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = 0;
-          var2 = 0;
+          activatedFlag = 0;
+          escapeFlag = 0;
           while (jl.pollKeyEvent((byte) 5)) {
             UiComponent.fullscreenDialogSelection.navigateVertical(-1);
             if (UiComponent.fullscreenDialogSelection.isActivated((byte) 113)) {
-              var1_int = 1;
+              activatedFlag = 1;
             }
             if (MeshAttributeRecord.currentKeyCode != 13) {
               continue;
             }
-            var2 = 1;
+            escapeFlag = 1;
           }
-          if (param0 != 124) {
-            var8 = (java.awt.Component) null;
+          if (obfuscationGuard != 124) {
+            unusedComponent = (java.awt.Component) null;
             InstructionsScreen.attachKeyboardInput(22, (java.awt.Component) null);
           }
-          UiComponent.fullscreenDialogSelection.updatePointer(PlayerNameChooserPanel.b(120, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), param0 + 27355, PlayerNameChooserPanel.b(param0 - 4, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
+          UiComponent.fullscreenDialogSelection.updatePointer(PlayerNameChooserPanel.hitTestFullscreenDialogButton(120, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), obfuscationGuard + 27355, PlayerNameChooserPanel.hitTestFullscreenDialogButton(obfuscationGuard - 4, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
           if (UiComponent.fullscreenDialogSelection.isActivated((byte) 113)) {
-            var1_int = 1;
+            activatedFlag = 1;
           }
-          var3 = 0;
-          if (var1_int != 0 &&
+          action = 0;
+          if (activatedFlag != 0 &&
             UiComponent.fullscreenDialogSelection.selectedIndex >= 0) {
-            var3 = UsernameSuggestionPanel.fullscreenDialogButtonActions[UiComponent.fullscreenDialogSelection.selectedIndex];
-            if (var3 == 2) {
-              ScreenshotViewer.c((byte) 3);
-            } else if (5 == var3) {
-              ScreenshotViewer.c((byte) 3);
+            action = UsernameSuggestionPanel.fullscreenDialogButtonActions[UiComponent.fullscreenDialogSelection.selectedIndex];
+            if (action == 2) {
+              ScreenshotViewer.closeFullscreenDialog((byte) 3);
+            } else if (5 == action) {
+              ScreenshotViewer.closeFullscreenDialog((byte) 3);
             }
           } else {
-            if (var2 != 0 &&
+            if (escapeFlag != 0 &&
               ArchiveFetchClient.fullscreenDialogKind != 2) {
-              ScreenshotViewer.c((byte) 3);
+              ScreenshotViewer.closeFullscreenDialog((byte) 3);
             }
           }
-          if (var3 == 0 &&
+          if (action == 0 &&
             ArchiveFetchClient.fullscreenDialogKind == 2) {
-            var4 = MonotonicTime.nowMillis(false) - un.fullscreenConfirmationStartMillis;
-            var6 = (int)((-var4 + 10999L) / 1000L);
-            if (var6 <= 0) {
+            elapsedMillis = MonotonicTime.nowMillis(false) - un.fullscreenConfirmationStartMillis;
+            secondsRemaining = (int)((-elapsedMillis + 10999L) / 1000L);
+            if (secondsRemaining <= 0) {
               FullscreenDialogHelpers.buildFullscreenDialog(true, 5, (byte) 104);
-              var3 = 2;
+              action = 2;
             }
           }
-          stackIn_32_0 = var3;
-          return stackIn_32_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "md.C(" + param0 + ')');
+          resultAction = action;
+          return resultAction;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "md.C(" + obfuscationGuard + ')');
         }
     }
 
@@ -417,8 +417,8 @@ final class InstructionsScreen extends MenuScreen {
           if (!param1) {
             field_t = (String) null;
           }
-          if (null != o.field_c) {
-            o.field_c.suggestionPanel.setSuggestions((byte) -94, args);
+          if (null != ClientResourceHelpers.field_c) {
+            ClientResourceHelpers.field_c.suggestionPanel.setSuggestions((byte) -94, args);
           }
           if (MusicPatch.field_o != null) {
             MusicPatch.field_o.suggestionPanel.setSuggestions((byte) 102, args);

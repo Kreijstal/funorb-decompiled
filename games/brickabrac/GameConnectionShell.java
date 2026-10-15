@@ -75,7 +75,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         nd.field_c = param4;
         LevelPackCard.field_i = param5;
         PacketBuffer.field_j = param1;
-        o.field_f = param6;
+        ClientResourceHelpers.field_f = param6;
         ea.field_c = param2;
         if (param0 != 39) {
           this.g(false);
@@ -808,7 +808,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           LevelCompleteScreen.field_C = false;
         }
         if (0 == clientStage &&
-          o.pollArchiveMasterIndex(guardCode ^ -572695520)) {
+          ClientResourceHelpers.pollArchiveMasterIndex(guardCode ^ -572695520)) {
           clientStage = 1;
         }
         if (clientStage == guardCode) {
@@ -817,7 +817,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           LabeledWidget.field_P = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, nd.field_c, false);
           RadialSelectorWidget.field_S = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ea.field_c, false);
-          ja.field_c = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, o.field_f, false);
+          ja.field_c = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ClientResourceHelpers.field_f, false);
           FriendListUi.field_c = RadialSelectorWidget.field_S;
           clientStage = 2;
           NameEntryPopup.field_Rb = LabeledWidget.field_P;

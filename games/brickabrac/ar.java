@@ -187,9 +187,9 @@ final class ar {
                   var12 = stackIn_78_0;
                 } else {
                   if (param4 != -1) {
-                    stackIn_69_0 = ((255 & o.currentLobbyGame.settings[param4]) != var11) ? 0 : 1;
+                    stackIn_69_0 = ((255 & ClientResourceHelpers.currentLobbyGame.settings[param4]) != var11) ? 0 : 1;
                   } else {
-                    stackIn_69_0 = (o.currentLobbyGame.maxPlayers != ScreenshotViewer.field_n[var11]) ? 0 : 1;
+                    stackIn_69_0 = (ClientResourceHelpers.currentLobbyGame.maxPlayers != ScreenshotViewer.field_n[var11]) ? 0 : 1;
                   }
                   var12 = stackIn_69_0;
                 }

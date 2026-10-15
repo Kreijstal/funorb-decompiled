@@ -154,9 +154,9 @@ final class LegacyUtf8Decoder {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {
-        EmailLoginCredentials.field_n = param0;
-        LevelCompleteScreen.field_A = param1;
-        NewAchievementsScreen.field_H = param3;
+        EmailLoginCredentials.fullscreenDialogButtonPaint = param0;
+        LevelCompleteScreen.fullscreenDialogSelectedPaint = param1;
+        NewAchievementsScreen.fullscreenDialogBodyPaint = param3;
         if (param2) {
           byte[] var5 = (byte[]) null;
           LegacyUtf8Decoder.decode((byte) 117, 3, -87, (byte[]) null);
