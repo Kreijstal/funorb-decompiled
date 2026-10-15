@@ -300,7 +300,7 @@ final class RichTextLayout extends WidgetTextLayout {
           var10 = param1.y256 >> 8;
           var11 = param1.x256 >> 8;
           if (param0 == 2) {
-            var15 = bq.field_e[1][ChocolateBackground.field_w.nextBoundedInt(-37880252, bq.field_e[1].length)];
+            var15 = FullscreenDialogHelpers.field_e[1][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.field_e[1].length)];
             var12 = var15;
             var12.f((var11 + param6 * param2 - var15.canvasWidth * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
           }
@@ -329,7 +329,7 @@ final class RichTextLayout extends WidgetTextLayout {
             var11 += 6;
           }
           if (0 == param0) {
-            var12Lifetime1 = bq.field_e[0][ChocolateBackground.field_w.nextBoundedInt(-37880252, bq.field_e[0].length)];
+            var12Lifetime1 = FullscreenDialogHelpers.field_e[0][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.field_e[0].length)];
             var12Lifetime1.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 + var10) / param2, 196);
           }
           FullscreenFailureKind.field_c[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);

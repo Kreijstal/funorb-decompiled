@@ -167,11 +167,11 @@ final class pp {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        ProxySocketConnector.field_k = param0;
+        ProxySocketConnector.fullscreenDialogCenterX = param0;
         if (param2 != 19) {
           return;
         }
-        ScreenshotViewer.field_k = param1;
+        ScreenshotViewer.fullscreenDialogCenterY = param1;
     }
 
     final static int a(PlayerBoard param0, byte param1, MultiplayerMatch param2) {

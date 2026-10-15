@@ -9,7 +9,7 @@ final class IntArrayRequest extends IntrusiveNode {
     static boolean[] heldKeys;
     static int field_t;
     static int field_q;
-    static int field_s;
+    static int fullscreenDialogBodyLineHeight;
     static int lastBackgroundId;
     int requestId;
     static RgbSprite[] field_k;
@@ -39,7 +39,7 @@ final class IntArrayRequest extends IntrusiveNode {
 
     final static int a(byte param0) {
         int var1 = 119 % ((param0 + 15) / 60);
-        return SpaceBackground.field_u - np.field_b;
+        return SpaceBackground.fullscreenDialogRight - np.fullscreenDialogLeft;
     }
 
     IntArrayRequest() {

@@ -20,7 +20,7 @@ final class ConstructionBackground extends BackgroundScene {
 
     final RgbSprite[] a(byte param0, int param1) {
         int var3 = -31 / ((param0 - 65) / 49);
-        return rd.constructionCapsSprites[-1 + param1];
+        return GamePresentationHelpers.constructionCapsSprites[-1 + param1];
     }
 
     final RgbSprite a(boolean param0, int param1) {
@@ -51,7 +51,7 @@ final class ConstructionBackground extends BackgroundScene {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
           OpacityWidget.constructionCentreSprites = new RgbSprite[2];
-          rd.constructionCapsSprites = new RgbSprite[2][];
+          GamePresentationHelpers.constructionCapsSprites = new RgbSprite[2][];
           NodeDequeCursor.constructionSegsSprites = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sn.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectPrefix != null ? "{...}" : "null") + ',' + soundEffectCount + ')');
@@ -120,10 +120,10 @@ final class ConstructionBackground extends BackgroundScene {
         IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.constructionMidSprite);
         DisplayModeInfo.field_g = jh.a(0, ValidatedTextFieldWidget.constructionFarSprite);
         er.field_d = jh.a(0, IntNode.constructionSmokeSprite);
-        rd.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_caps", 2);
+        GamePresentationHelpers.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_caps", 2);
         NodeDequeCursor.constructionSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_segs", 2);
         OpacityWidget.constructionCentreSprites[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.backgroundSpriteArchive);
-        rd.constructionCapsSprites[1] = Under13RegistrationNoticePanel.a(rd.constructionCapsSprites[0], false);
+        GamePresentationHelpers.constructionCapsSprites[1] = Under13RegistrationNoticePanel.a(GamePresentationHelpers.constructionCapsSprites[0], false);
         NodeDequeCursor.constructionSegsSprites[1] = Under13RegistrationNoticePanel.a(NodeDequeCursor.constructionSegsSprites[0], obfuscationGuard);
         OpacityWidget.constructionCentreSprites[1] = pl.a(-16371, OpacityWidget.constructionCentreSprites[0]);
         pl.a(IntNode.constructionSmokeSprite, 0);

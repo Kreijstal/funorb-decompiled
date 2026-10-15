@@ -228,7 +228,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           GameCanvas.registerMenuScreen(-91, new MatchCompleteScreen());
           int var2_int = -5 / ((obfuscationGuard - 70) / 42);
           GameCanvas.registerMenuScreen(-73, new TimedSplashScreen());
-          IntrusiveHashTable.field_k = rd.selectBackground(0, (byte) 19);
+          IntrusiveHashTable.field_k = GamePresentationHelpers.selectBackground(0, (byte) 19);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hk.E(" + obfuscationGuard + ',' + (archive != null ? "{...}" : "null") + ')');
         }

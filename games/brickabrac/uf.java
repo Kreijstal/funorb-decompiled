@@ -256,7 +256,7 @@ final class uf {
           entry = HighscorePackSelector.findIgnoredPlayer(0, lookupName);
           guardDivision = 42 / ((15 - obfuscationGuard) / 34);
           if (entry == null) {
-            stackIn_9_0 = rd.a(WeightedLruCache.field_h, new String[]{lookupName}, (byte) 103);
+            stackIn_9_0 = GamePresentationHelpers.formatIndexedText(WeightedLruCache.field_h, new String[]{lookupName}, (byte) 103);
             return stackIn_9_0;
           }
           entry.unlink((byte) 111);

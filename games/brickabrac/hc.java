@@ -209,10 +209,10 @@ final class hc {
           QuickChatCategoryDefinition.field_z = 2;
           ok.field_f = 11;
           var7 = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "largefont");
-          rd.field_e = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "generalfont");
+          GamePresentationHelpers.field_e = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "generalfont");
           ScorePopup.field_m = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "chatfont");
           var7.setInlineSprites(var5, var24);
-          rd.field_e.setInlineSprites(var5, var24);
+          GamePresentationHelpers.field_e.setInlineSprites(var5, var24);
           ScorePopup.field_m.setInlineSprites(var5, var24);
           var8 = new UiComponent(0L, (UiComponent) null);
           var8.font = (TextFont) ((Object) var7);
@@ -224,7 +224,7 @@ final class hc {
           var10 = new UiComponent(0L, (UiComponent) null);
           var10.lineSpacing = np.uiRowHeight;
           var10.textColor = 16777215;
-          var10.font = (TextFont) ((Object) rd.field_e);
+          var10.font = (TextFont) ((Object) GamePresentationHelpers.field_e);
           var11 = var10;
           var10.verticalAlignment = 1;
           var11.horizontalAlignment = 1;
@@ -257,7 +257,7 @@ final class hc {
           IntrusiveHashIterator.field_a.frameSprites = TimedSplashScreen.a(false, (byte) 83, 3815994, 30, 2039583, true);
           CappedUrlRequest.field_l = new UiComponent(0L, (UiComponent) null);
           CappedUrlRequest.field_l.verticalAlignment = 1;
-          CappedUrlRequest.field_l.font = (TextFont) ((Object) rd.field_e);
+          CappedUrlRequest.field_l.font = (TextFont) ((Object) GamePresentationHelpers.field_e);
           CappedUrlRequest.field_l.lineSpacing = np.uiRowHeight;
           CappedUrlRequest.field_l.textColor = 13421772;
           DualLinkNode.field_t = new UiComponent(0L, CappedUrlRequest.field_l);

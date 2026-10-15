@@ -176,99 +176,99 @@ final class FarmBackground extends BackgroundScene {
         }
     }
 
-    final static int a(String[] args, int param1, int param2, TextFont param3, String param4) {
-        int var9 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$0 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_28_0 = 0;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
-        String stackIn_32_2 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_35_2 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_38_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var6Lifetime1;
-        var13 = BrickABrac.field_J ? 1 : 0;
+    final static int wrapBalancedDialogText(String[] lines, int maximumWidth, int obfuscationGuard, TextFont font, String text) {
+        int characterIndex = 0;
+        int spaceLineIndex = 0;
+        int breakLineIndex = 0;
+        int tailLineIndex = 0;
+        int fastLineCount = 0;
+        int lineCountResult = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String linesSummary = null;
+        StringBuilder fontContextBuilder = null;
+        String fontSummary = null;
+        StringBuilder textContextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
+        int textWidth = 0;
+        RuntimeException failure = null;
+        int estimatedLineCount = 0;
+        int lineStart = 0;
+        int textLength = 0;
+        int character = 0;
+        String candidateLine = null;
+        int candidateWidth = 0;
+        int unusedGameFlag = 0;
+        int lineCount;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var5_int = param3.measureText(param4);
-          if (param1 >= var5_int &&
-            param4.indexOf("<br>") == -1) {
-            args[0] = param4;
-            stackIn_4_0 = 1;
-            return stackIn_4_0;
+          textWidth = font.measureText(text);
+          if (maximumWidth >= textWidth &&
+            text.indexOf("<br>") == -1) {
+            lines[0] = text;
+            fastLineCount = 1;
+            return fastLineCount;
           }
-          var6 = (var5_int - (-param1 + 1)) / param1;
-          param1 = var5_int / var6;
-          var6Lifetime1 = 0;
-          var7 = 0;
-          var8 = param4.length();
-          for (var9 = 0; var9 < var8; var9++) {
-            var10 = param4.charAt(var9);
-            if (var10 == 32 ||
-              var10 == 45) {
-              var11 = param4.substring(var7, var9 + 1).trim();
-              var12 = param3.measureText(var11);
-              if (param1 <= var12) {
-                incrementValue$1 = var6Lifetime1;
-                var6Lifetime1++;
-                args[incrementValue$1] = var11;
-                var7 = 1 + var9;
+          estimatedLineCount = (textWidth - (-maximumWidth + 1)) / maximumWidth;
+          maximumWidth = textWidth / estimatedLineCount;
+          lineCount = 0;
+          lineStart = 0;
+          textLength = text.length();
+          for (characterIndex = 0; characterIndex < textLength; characterIndex++) {
+            character = text.charAt(characterIndex);
+            if (character == 32 ||
+              character == 45) {
+              candidateLine = text.substring(lineStart, characterIndex + 1).trim();
+              candidateWidth = font.measureText(candidateLine);
+              if (maximumWidth <= candidateWidth) {
+                spaceLineIndex = lineCount;
+                lineCount++;
+                lines[spaceLineIndex] = candidateLine;
+                lineStart = 1 + characterIndex;
               }
             }
-            if (var10 == 62 &&
-              param4.regionMatches(var9 - 3, "<br>", 0, 4)) {
-              incrementValue$2 = var6Lifetime1;
-              var6Lifetime1++;
-              args[incrementValue$2] = param4.substring(var7, var9 - 3).trim();
-              var7 = var9 + 1;
+            if (character == 62 &&
+              text.regionMatches(characterIndex - 3, "<br>", 0, 4)) {
+              breakLineIndex = lineCount;
+              lineCount++;
+              lines[breakLineIndex] = text.substring(lineStart, characterIndex - 3).trim();
+              lineStart = characterIndex + 1;
             }
           }
-          if (var8 > var7) {
-            incrementValue$0 = var6Lifetime1;
-            var6Lifetime1++;
-            args[incrementValue$0] = param4.substring(var7, var8).trim();
+          if (textLength > lineStart) {
+            tailLineIndex = lineCount;
+            lineCount++;
+            lines[tailLineIndex] = text.substring(lineStart, textLength).trim();
           }
-          if (param2 != -63) {
+          if (obfuscationGuard != -63) {
             field_s = (String) null;
           }
-          stackIn_28_0 = var6Lifetime1;
-          return stackIn_28_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_31_0 = var5;
-          stackIn_31_1 = new StringBuilder().append("qb.A(");
-          if (args == null) {
-            stackIn_32_2 = "null";
+          lineCountResult = lineCount;
+          return lineCountResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("qb.A(");
+          if (lines == null) {
+            linesSummary = "null";
           } else {
-            stackIn_32_2 = "{...}";
+            linesSummary = "{...}";
           }
-          stackIn_34_1 = ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_35_2 = "null";
+          fontContextBuilder = ((StringBuilder) (Object) contextBuilder).append(linesSummary).append(',').append(maximumWidth).append(',').append(obfuscationGuard).append(',');
+          if (font == null) {
+            fontSummary = "null";
           } else {
-            stackIn_35_2 = "{...}";
+            fontSummary = "{...}";
           }
-          stackIn_37_1 = ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',');
-          if (param4 == null) {
-            stackIn_38_2 = "null";
+          textContextBuilder = ((StringBuilder) (Object) fontContextBuilder).append(fontSummary).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_38_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) textContextBuilder).append(textSummary).append(')').toString());
         }
     }
 

@@ -5,7 +5,7 @@ public final class BrickABrac extends InteractiveGameClient {
     static ResourceArchive backgroundSoundEffectArchive;
     static String field_G;
     static SecondaryHashTable gamePlayerIndex;
-    static int[] field_K;
+    static int[] fullscreenDialogRowButtons;
     static String field_H;
     public static boolean field_J;
 
@@ -53,7 +53,7 @@ public final class BrickABrac extends InteractiveGameClient {
           ContextActionController.field_g.drawLeft(AchievementBrowserScreen.field_s[notification.value], 48, notificationY + ContextActionController.field_g.ascent, 0, -1);
         }
         if (cf.a((byte) 62)) {
-          rd.drawDiagnosticOverlay(-79);
+          GamePresentationHelpers.drawDiagnosticOverlay(-79);
         }
     }
 
@@ -406,7 +406,7 @@ public final class BrickABrac extends InteractiveGameClient {
           repeatMode = packet.readByte(true);
           configuration = new LevelSequence(tq.field_d, levelOrder, repeatMode);
           backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
-          TabbedPane.currentBackground = rd.selectBackground(backgroundSelector, (byte) 19);
+          TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(backgroundSelector, (byte) 19);
           characterOrder = LobbyPlayer.createCharacterOrder(matchRandom, false);
           VerticalScrollbar.field_Ub = null;
           if (0 <= localPlayerId) {
@@ -451,7 +451,7 @@ public final class BrickABrac extends InteractiveGameClient {
         if (param0 != -65) {
           BrickABrac.s(10);
         }
-        field_K = null;
+        fullscreenDialogRowButtons = null;
         backgroundSoundEffectArchive = null;
         gamePlayerIndex = null;
     }
@@ -601,7 +601,7 @@ public final class BrickABrac extends InteractiveGameClient {
         PacketBuffer.clearStaticStrings(0);
         FriendListUi.c((byte) -41);
         GameTransportActions.b(13);
-        rd.a((byte) 46);
+        GamePresentationHelpers.a((byte) 46);
         GameOverlayHelpers.a(117);
         ChatMessage.a(0);
         kd.a(obfuscationGuard);
@@ -635,7 +635,7 @@ public final class BrickABrac extends InteractiveGameClient {
         kk.a(0);
         ScreenshotViewer.d((byte) 102);
         rj.a(24311);
-        bq.a(true);
+        FullscreenDialogHelpers.a(true);
         HuffmanCodec.a((byte) -94);
         jj.a(true);
         sq.a((byte) -11);

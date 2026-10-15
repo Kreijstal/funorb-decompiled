@@ -6,7 +6,7 @@ final class QuickChatPhraseRegistry {
     static FullscreenFailureKind fullscreenTimeout;
     static String[] field_b;
     private WeightedLruCache definitions;
-    static String[] field_k;
+    static String[] fullscreenSingularPrefix;
     static int field_a;
     static UiComponent field_e;
     private ResourceArchive standardArchive;
@@ -80,7 +80,7 @@ final class QuickChatPhraseRegistry {
         friendsPanel = null;
         chocolateFarSprite = null;
         field_b = null;
-        field_k = null;
+        fullscreenSingularPrefix = null;
         if (param0 != 64) {
           QuickChatPhraseRegistry.a(-104);
         }

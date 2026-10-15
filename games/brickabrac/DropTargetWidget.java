@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DropTargetWidget extends SingleChildWidget {
-    static int field_H;
+    static int fullscreenDialogButtonPaddingY;
     static String field_G;
     static int[] field_I;
 

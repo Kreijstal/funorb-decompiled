@@ -331,12 +331,12 @@ final class MusicVoice extends IntrusiveNode {
                 if (!var13.joinRequestPending) {
                   var13.statusLabel.text = ea.field_f;
                 } else {
-                  var13.nameLabel.text = rd.a(ce.field_g, new String[]{var21}, (byte) 103);
+                  var13.nameLabel.text = GamePresentationHelpers.formatIndexedText(ce.field_g, new String[]{var21}, (byte) 103);
                   var13.statusLabel.text = JungleBackground.field_t;
                   var13.actionLabel.text = NameEntryPopup.field_Wb;
                 }
               } else {
-                var13.nameLabel.text = rd.a(ll.field_a, new String[]{var21}, (byte) 103);
+                var13.nameLabel.text = GamePresentationHelpers.formatIndexedText(ll.field_a, new String[]{var21}, (byte) 103);
                 var13.actionLabel.text = ValidationIconWidget.field_L;
               }
               var26_int = 0;
@@ -426,7 +426,7 @@ final class MusicVoice extends IntrusiveNode {
                 } else {
                   if (var13.ratedGameCount >= var7) {
                     if (var6 > var13.rating) {
-                      var25 = rd.a(ea.field_h, new String[]{null, Integer.toString(var6)}, (byte) 103);
+                      var25 = GamePresentationHelpers.formatIndexedText(ea.field_h, new String[]{null, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
                         var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
@@ -444,35 +444,35 @@ final class MusicVoice extends IntrusiveNode {
                     if (var26_int == 1) {
                       var25 = SaveResultsPromptScreen.field_w;
                     }
-                    var25 = rd.a(Brick.field_F, new String[]{null, Integer.toString(var26_int)}, (byte) 103);
+                    var25 = GamePresentationHelpers.formatIndexedText(Brick.field_F, new String[]{null, Integer.toString(var26_int)}, (byte) 103);
                   }
                 }
               } else {
                 if (var5_int != 0 &&
                   !var13.member) {
-                  var25 = rd.a(MenuSelection.field_f, new String[]{var21}, (byte) 103);
+                  var25 = GamePresentationHelpers.formatIndexedText(MenuSelection.field_f, new String[]{var21}, (byte) 103);
                 } else {
                   if (var13.ratedGameCount >= var7) {
                     if (var13.rating < var6) {
-                      var25 = rd.a(WidgetLayerStack.field_H, new String[]{var21, Integer.toString(var6)}, (byte) 103);
+                      var25 = GamePresentationHelpers.formatIndexedText(WidgetLayerStack.field_H, new String[]{var21, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
                         var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
-                        var25 = rd.a(IntNode.field_m, new String[]{var21}, (byte) 103);
+                        var25 = GamePresentationHelpers.formatIndexedText(IntNode.field_m, new String[]{var21}, (byte) 103);
                         if (var26_int > 0 &&
                           null != EmailLoginCredentials.field_p &&
                           var26_int <= EmailLoginCredentials.field_p.length &&
                           EmailLoginCredentials.field_p[-1 + var26_int] != null) {
-                          var25 = rd.a(EmailLoginCredentials.field_p[var26_int - 1][2], new String[]{var21}, (byte) 103);
+                          var25 = GamePresentationHelpers.formatIndexedText(EmailLoginCredentials.field_p[var26_int - 1][2], new String[]{var21}, (byte) 103);
                         }
                       }
                     }
                   } else {
                     var26_int = var7 - var13.ratedGameCount;
                     if (var26_int == 1) {
-                      var25 = rd.a(di.field_b, new String[]{var21}, (byte) 103);
+                      var25 = GamePresentationHelpers.formatIndexedText(di.field_b, new String[]{var21}, (byte) 103);
                     }
-                    var25 = rd.a(ValidationStatus.field_g, new String[]{var21, Integer.toString(var26_int)}, (byte) 103);
+                    var25 = GamePresentationHelpers.formatIndexedText(ValidationStatus.field_g, new String[]{var21, Integer.toString(var26_int)}, (byte) 103);
                   }
                 }
               }
@@ -535,13 +535,13 @@ final class MusicVoice extends IntrusiveNode {
                   if (param1 != TimedSplashScreen.field_u ||
                     !hn.b((byte) 7)) {
                     if (var27Lifetime1 == 0) {
-                      var25 = (String) (var25) + "<br>" + rd.a(ProducerFramebuffer.field_k, new String[]{(String) (var26)}, (byte) 103);
+                      var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(ProducerFramebuffer.field_k, new String[]{(String) (var26)}, (byte) 103);
                     } else {
                       var25 = (String) (var25) + "<br>" + MusicEnvelope.field_l + (String) (var26);
                     }
                   } else {
                     if (var27Lifetime1 == 0) {
-                      var25 = (String) (var25) + "<br>" + rd.a(LobbyPlayer.field_bc, new String[]{(String) (var26)}, (byte) 103);
+                      var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(LobbyPlayer.field_bc, new String[]{(String) (var26)}, (byte) 103);
                     } else {
                       var25 = (String) (var25) + "<br>" + QuickChatHelpDialog.field_Rb + (String) (var26);
                     }
@@ -551,7 +551,7 @@ final class MusicVoice extends IntrusiveNode {
                 if (TimedSplashScreen.field_u == param1 &&
                   !hn.b((byte) 7)) {
                   var28 = o.currentLobbyGame.displayName;
-                  var25 = (String) (var25) + "<br>" + rd.a(ba.field_y, new String[]{var28}, (byte) 103);
+                  var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(ba.field_y, new String[]{var28}, (byte) 103);
                 }
                 WidgetTextLayout.field_e = (String) (var25);
               }

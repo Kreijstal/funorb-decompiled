@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameOverlayHelpers {
-    static int field_c;
+    static int fullscreenDialogButtonPaddingX;
     static byte[][] decodedSpriteIndices;
     static RgbSprite[] smallLeverSprites;
     static int field_d;

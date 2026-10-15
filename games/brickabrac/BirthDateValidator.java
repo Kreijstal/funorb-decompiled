@@ -105,7 +105,7 @@ final class BirthDateValidator extends DebouncedValidationSource implements Text
               return (String) (stackIn_10_0);
             }
           } else {
-            stackIn_7_0 = rd.a(Under13RegistrationNoticePanel.field_J, new String[]{"1890", Integer.toString(-3 + currentYear)}, (byte) 103);
+            stackIn_7_0 = GamePresentationHelpers.formatIndexedText(Under13RegistrationNoticePanel.field_J, new String[]{"1890", Integer.toString(-3 + currentYear)}, (byte) 103);
             return stackIn_7_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {

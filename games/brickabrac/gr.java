@@ -78,12 +78,12 @@ final class gr {
           field_c = PlayerInputBatch.field_i;
           Ball.activeBoardMaskSprite = RankingsRequest.field_o;
           we.field_b = ch.field_k;
-          bq.field_e = hc.field_a;
+          FullscreenDialogHelpers.field_e = hc.field_a;
           TextHotspotRegion.field_o = WidgetTextLayout.field_j;
           FireworkBurst.activeBrickSprites = ResourceArchive.field_a;
           HorizontalFrameHelpers.field_d = LevelPackSelectScreen.field_z;
         } else {
-          bq.field_e = JungleBackground.field_v;
+          FullscreenDialogHelpers.field_e = JungleBackground.field_v;
           ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
           FullscreenFailureKind.field_c = MultiValueSliderRenderer.field_b;
           Ball.activeBoardMaskSprite = MultiValueSliderRenderer.field_e;

@@ -221,7 +221,7 @@ final class JungleBackground extends BackgroundScene {
                 break;
               }
               if (!hn.b((byte) 7)) {
-                WidgetTextLayout.field_e = rd.a(ChocolateBackground.field_t, new String[]{o.currentLobbyGame.displayName}, (byte) 103);
+                WidgetTextLayout.field_e = GamePresentationHelpers.formatIndexedText(ChocolateBackground.field_t, new String[]{o.currentLobbyGame.displayName}, (byte) 103);
                 if (var26 == 0) {
                   break;
                 }
@@ -614,13 +614,13 @@ final class JungleBackground extends BackgroundScene {
                       if (var11 != 0) {
                         var22_int = MatchResultScreen.field_v[var7][var9] - ArchiveIndex.field_s;
                         if (var22_int != 1) {
-                          var21 = rd.a(tq.field_e, new String[]{Integer.toString(var22_int)}, (byte) 103);
+                          var21 = GamePresentationHelpers.formatIndexedText(tq.field_e, new String[]{Integer.toString(var22_int)}, (byte) 103);
                         } else {
                           var21 = NineSliceFrame.field_a;
                         }
                       }
                       if (var12 != 0) {
-                        var30 = rd.a(QuickChatPhraseDefinition.field_x, new String[]{Integer.toString(ConditionalTextValue.field_h), Integer.toString(AchievementsScreen.field_F[var7][var9])}, (byte) 103);
+                        var30 = GamePresentationHelpers.formatIndexedText(QuickChatPhraseDefinition.field_x, new String[]{Integer.toString(ConditionalTextValue.field_h), Integer.toString(AchievementsScreen.field_F[var7][var9])}, (byte) 103);
                         var21 = var30;
                         var21 = var30;
                         if (null == var21) {
@@ -698,7 +698,7 @@ final class JungleBackground extends BackgroundScene {
                         var21 = FileCacheStore.field_e + (String) (var22);
                         break;
                       }
-                      var21 = rd.a(fh.field_b, new String[]{(String) (var22)}, (byte) 103);
+                      var21 = GamePresentationHelpers.formatIndexedText(fh.field_b, new String[]{(String) (var22)}, (byte) 103);
                       break;
                     }
                   }

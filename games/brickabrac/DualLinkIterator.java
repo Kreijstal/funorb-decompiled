@@ -68,7 +68,7 @@ final class DualLinkIterator implements Iterator {
             DualLinkIterator.a((byte) -84);
           }
           if (BytePayloadSubmission.decodeSpritesFromArchive(-107, fileId, archive, groupId)) {
-            stackIn_6_0 = rd.c(117);
+            stackIn_6_0 = GamePresentationHelpers.buildRgbSprites(117);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

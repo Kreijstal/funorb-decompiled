@@ -454,7 +454,7 @@ final class GameplayScreen extends GameScreen {
             BallPulseEffect.framebuffer.bindRaster((byte) 78);
             ArchiveFetchClient.field_k = TabbedPane.currentBackground.c((byte) -116);
             HorizontalFrameHelpers.field_c = TabbedPane.currentBackground.b(-102);
-            TabbedPane.currentBackground = rd.selectBackground(var20.levelState.value, (byte) 19);
+            TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(var20.levelState.value, (byte) 19);
             MenuScreen.field_i = 32;
             var20.field_tb = false;
             IntArrayRequest.lastBackgroundId = var20.levelState.value;
@@ -976,7 +976,7 @@ final class GameplayScreen extends GameScreen {
               var5Lifetime2Lifetime1 += 10;
             }
             if (var5Lifetime2Lifetime1 <= 11) {
-              TabbedPane.currentBackground = rd.selectBackground(var5Lifetime2Lifetime1, (byte) 19);
+              TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(var5Lifetime2Lifetime1, (byte) 19);
               return true;
             }
           }
@@ -1097,7 +1097,7 @@ final class GameplayScreen extends GameScreen {
         String[] var3 = new String[]{LoadingProgressDialog.field_cb == null ? we.field_c : LoadingProgressDialog.field_cb, DelayedPacket.field_q};
         LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, kk.createIndexOrder(false, ValidationStatus.field_b.levelCount, ButtonWidgetRenderer.field_w), 3);
         TextFieldRenderer.field_A = false;
-        TabbedPane.currentBackground = rd.selectBackground(0, (byte) 19);
+        TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(0, (byte) 19);
         OpacityWidget.startLocalGame(var3, 0, var4, 2, param1, -12665);
     }
 
@@ -1866,7 +1866,7 @@ final class GameplayScreen extends GameScreen {
           DelayedPacket.field_m = -1;
           GameClock.field_b = -1;
           if (ProducerFramebuffer.field_j == null) {
-            ProducerFramebuffer.field_j = rd.a(AlternateNumericLoginCredentials.field_p, new String[]{""}, (byte) 103).toLowerCase();
+            ProducerFramebuffer.field_j = GamePresentationHelpers.formatIndexedText(AlternateNumericLoginCredentials.field_p, new String[]{""}, (byte) 103).toLowerCase();
             LoginCredentials.field_j = LevelResultSubmission.field_j.toLowerCase();
           }
           WidgetPaintStyle.field_j = 0;

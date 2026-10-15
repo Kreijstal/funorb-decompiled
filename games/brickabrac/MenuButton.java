@@ -90,7 +90,7 @@ final class MenuButton {
                   stackIn_37_4 = MusicVoiceMixer.field_q;
                 }
                 stackIn_36_2[stackIn_36_3] = stackIn_37_4;
-                var4 = rd.a(stackIn_36_0, stackIn_36_1, (byte) 103);
+                var4 = GamePresentationHelpers.formatIndexedText(stackIn_36_0, stackIn_36_1, (byte) 103);
               }
               var5 = ContextActionController.field_g.measureText(var4);
               if (20 == this.actionId ||

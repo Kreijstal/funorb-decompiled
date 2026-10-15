@@ -1136,7 +1136,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var35_int = var35_int + (var53_ref.canvasWidth + QuickChatCategoryDefinition.field_z);
               }
               if ((var15Lifetime1 & 1 << ScrollPane.field_Pb) != 0) {
-                stackIn_87_0 = bq.field_c;
+                stackIn_87_0 = FullscreenDialogHelpers.field_c;
                 if (var13.rated) {
                   stackIn_88_1 = 1;
                 } else {
@@ -1204,12 +1204,12 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var32 = var32 + np.uiRowHeight * var40Lifetime1;
               }
               if (var13.invitationPending) {
-                var13.field_ic.text = rd.a(TextFieldRenderer.field_y, new String[]{var33}, (byte) 103);
+                var13.field_ic.text = GamePresentationHelpers.formatIndexedText(TextFieldRenderer.field_y, new String[]{var33}, (byte) 103);
                 var13.field_ic.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.uiRowHeight;
               }
               if (var13.joinRequestPending) {
-                var13.field_Sb.text = rd.a(TextChoiceDialogHitTest.field_b, new String[]{var33}, (byte) 103);
+                var13.field_Sb.text = GamePresentationHelpers.formatIndexedText(TextChoiceDialogHitTest.field_b, new String[]{var33}, (byte) 103);
                 var13.field_Sb.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.uiRowHeight;
               }

@@ -202,23 +202,23 @@ final class sq {
           if (!obfuscationGuard) {
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-                bq.renderRateDiagnosticLine.text.setLength(0);
-                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-                discardedRateAppendHeapDisabled = bq.renderRateDiagnosticLine.text.append(" fps");
+                FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+                discardedRateAppendHeapDisabled = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
                 BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-                bq.renderRateDiagnosticLine.text.setLength(0);
-                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-                discardedRateAppendAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+                FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+                discardedRateAppendAlternateGuard = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
                 BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           }
           return;
@@ -240,23 +240,23 @@ final class sq {
           if (!obfuscationGuard) {
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-                bq.renderRateDiagnosticLine.text.setLength(0);
-                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-                discardedRateAppendAllocationChanged = bq.renderRateDiagnosticLine.text.append(" fps");
+                FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+                discardedRateAppendAllocationChanged = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
                 BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-                bq.renderRateDiagnosticLine.text.setLength(0);
-                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-                discardedRateAppendAllocationChangedAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+                FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+                discardedRateAppendAllocationChangedAlternateGuard = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
                 BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           }
           return;
@@ -266,23 +266,23 @@ final class sq {
           if (!obfuscationGuard) {
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-                bq.renderRateDiagnosticLine.text.setLength(0);
-                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-                discardedRateAppendHeapUnchanged = bq.renderRateDiagnosticLine.text.append(" fps");
+                FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+                discardedRateAppendHeapUnchanged = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
                 BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
             sq.a(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-                bq.renderRateDiagnosticLine.text.setLength(0);
-                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-                discardedRateAppendHeapUnchangedAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+                FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+                discardedRateAppendHeapUnchangedAlternateGuard = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
                 BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           }
           return;
@@ -298,23 +298,23 @@ final class sq {
         if (!obfuscationGuard) {
           if (GzipInflater.showRenderRateDiagnostic) {
             if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-              bq.renderRateDiagnosticLine.text.setLength(0);
-              DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-              discardedRateAppendUsageChanged = bq.renderRateDiagnosticLine.text.append(" fps");
+              FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+              DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+              discardedRateAppendUsageChanged = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
               BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
             }
-            LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+            LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
           }
         } else {
           sq.a(15);
           if (GzipInflater.showRenderRateDiagnostic) {
             if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
-              bq.renderRateDiagnosticLine.text.setLength(0);
-              DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
-              discardedRateAppendUsageChangedAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+              FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
+              DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, FullscreenDialogHelpers.renderRateDiagnosticLine.text);
+              discardedRateAppendUsageChangedAlternateGuard = FullscreenDialogHelpers.renderRateDiagnosticLine.text.append(" fps");
               BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
             }
-            LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
+            LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
           }
         }
         return;

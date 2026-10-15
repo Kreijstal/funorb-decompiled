@@ -36,7 +36,7 @@ final class LegacyEmailValidationError {
             if (board.resultWord < 0) {
               formattedResult = Integer.toString(board.resultWord);
             } else {
-              formattedResult = rd.a(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
+              formattedResult = GamePresentationHelpers.formatIndexedText(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
             }
             resultText = formattedResult;
             ce.field_e.drawCenteredAlpha(resultText, x + boardWidth / (scaleDivisor * 2), 60 / scaleDivisor + (y + (boardHeight / (scaleDivisor * 2) + ce.field_e.ascent)), 2, -1, alpha256);

@@ -9,7 +9,7 @@ final class ValidationStatus {
     static byte[] field_h;
     static int field_f;
     static RgbSprite field_e;
-    static String[] field_i;
+    static String[] fullscreenDialogRows;
     static RgbSprite field_c;
     static String field_g;
 
@@ -21,7 +21,7 @@ final class ValidationStatus {
         field_j = null;
         field_e = null;
         field_c = null;
-        field_i = null;
+        fullscreenDialogRows = null;
         field_g = null;
         if (param0 >= 91) {
           field_h = null;

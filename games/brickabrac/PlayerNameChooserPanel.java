@@ -73,23 +73,23 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = CachedArchiveSource.field_r;
+          var4 = CachedArchiveSource.fullscreenDialogTop;
           if (param0 != 120) {
             pressY = -69;
           }
-          while (ValidationStatus.field_i.length > var3_int) {
-            var5 = BrickABrac.field_K[var3_int];
+          while (ValidationStatus.fullscreenDialogRows.length > var3_int) {
+            var5 = BrickABrac.fullscreenDialogRowButtons[var3_int];
             if (var5 < 0) {
-              var4 = var4 + IntArrayRequest.field_s;
+              var4 = var4 + IntArrayRequest.fullscreenDialogBodyLineHeight;
             } else {
-              var6 = hm.a(true, ValidationStatus.field_i[var3_int], 0);
-              var4 = var4 + QuickChatCategoryDefinition.field_y;
-              var7 = ProxySocketConnector.field_k - (var6 >> 1);
-              if (ReflectionCheck.containsRectanglePoint(var7 - GameOverlayHelpers.field_c, (DropTargetWidget.field_H << 1) + b.field_c, var6 + (GameOverlayHelpers.field_c << 1), (byte) 65, param1, param2, var4)) {
+              var6 = hm.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[var3_int], 0);
+              var4 = var4 + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
+              var7 = ProxySocketConnector.fullscreenDialogCenterX - (var6 >> 1);
+              if (ReflectionCheck.containsRectanglePoint(var7 - GameOverlayHelpers.fullscreenDialogButtonPaddingX, (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight, var6 + (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1), (byte) 65, param1, param2, var4)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
-              var4 = var4 + (QuickChatCategoryDefinition.field_y + ((DropTargetWidget.field_H << 1) + b.field_c));
+              var4 = var4 + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight));
             }
             var3_int++;
           }

@@ -26,8 +26,8 @@ final class InstructionsScreen extends MenuScreen {
           var1_int = 0;
           var2 = 0;
           while (jl.pollKeyEvent((byte) 5)) {
-            UiComponent.field_H.navigateVertical(-1);
-            if (UiComponent.field_H.isActivated((byte) 113)) {
+            UiComponent.fullscreenDialogSelection.navigateVertical(-1);
+            if (UiComponent.fullscreenDialogSelection.isActivated((byte) 113)) {
               var1_int = 1;
             }
             if (MeshAttributeRecord.currentKeyCode != 13) {
@@ -39,14 +39,14 @@ final class InstructionsScreen extends MenuScreen {
             var8 = (java.awt.Component) null;
             InstructionsScreen.attachKeyboardInput(22, (java.awt.Component) null);
           }
-          UiComponent.field_H.updatePointer(PlayerNameChooserPanel.b(120, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), param0 + 27355, PlayerNameChooserPanel.b(param0 - 4, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
-          if (UiComponent.field_H.isActivated((byte) 113)) {
+          UiComponent.fullscreenDialogSelection.updatePointer(PlayerNameChooserPanel.b(120, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), param0 + 27355, PlayerNameChooserPanel.b(param0 - 4, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
+          if (UiComponent.fullscreenDialogSelection.isActivated((byte) 113)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            UiComponent.field_H.selectedIndex >= 0) {
-            var3 = UsernameSuggestionPanel.field_I[UiComponent.field_H.selectedIndex];
+            UiComponent.fullscreenDialogSelection.selectedIndex >= 0) {
+            var3 = UsernameSuggestionPanel.fullscreenDialogButtonActions[UiComponent.fullscreenDialogSelection.selectedIndex];
             if (var3 == 2) {
               ScreenshotViewer.c((byte) 3);
             } else if (5 == var3) {
@@ -54,16 +54,16 @@ final class InstructionsScreen extends MenuScreen {
             }
           } else {
             if (var2 != 0 &&
-              ArchiveFetchClient.field_p != 2) {
+              ArchiveFetchClient.fullscreenDialogKind != 2) {
               ScreenshotViewer.c((byte) 3);
             }
           }
           if (var3 == 0 &&
-            ArchiveFetchClient.field_p == 2) {
-            var4 = MonotonicTime.nowMillis(false) - un.field_g;
+            ArchiveFetchClient.fullscreenDialogKind == 2) {
+            var4 = MonotonicTime.nowMillis(false) - un.fullscreenConfirmationStartMillis;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
-              bq.a(true, 5, (byte) 104);
+              FullscreenDialogHelpers.buildFullscreenDialog(true, 5, (byte) 104);
               var3 = 2;
             }
           }

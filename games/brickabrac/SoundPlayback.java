@@ -66,52 +66,52 @@ final class SoundPlayback extends IntrusiveNode {
         RuntimeException var3 = null;
         try {
           if (1 == param2) {
-            stackIn_2_0 = rd.a(IntKeyIndex.field_d, new String[]{param1}, (byte) 103);
+            stackIn_2_0 = GamePresentationHelpers.formatIndexedText(IntKeyIndex.field_d, new String[]{param1}, (byte) 103);
             return stackIn_2_0;
           }
           if (param2 == 2) {
-            stackIn_5_0 = rd.a(InstructionsScreen.field_w, new String[]{param1}, (byte) 103);
+            stackIn_5_0 = GamePresentationHelpers.formatIndexedText(InstructionsScreen.field_w, new String[]{param1}, (byte) 103);
             return stackIn_5_0;
           }
           if (param2 == 3) {
-            stackIn_9_0 = rd.a(DateInputWidget.field_K, new String[]{param1}, (byte) 103);
+            stackIn_9_0 = GamePresentationHelpers.formatIndexedText(DateInputWidget.field_K, new String[]{param1}, (byte) 103);
             return stackIn_9_0;
           }
           if (param2 == 4) {
-            stackIn_13_0 = rd.a(ArcticBackground.field_v, new String[]{param1}, (byte) 103);
+            stackIn_13_0 = GamePresentationHelpers.formatIndexedText(ArcticBackground.field_v, new String[]{param1}, (byte) 103);
             return stackIn_13_0;
           }
           if (5 == param2) {
-            stackIn_17_0 = rd.a(Brick.field_z, new String[]{param1}, (byte) 103);
+            stackIn_17_0 = GamePresentationHelpers.formatIndexedText(Brick.field_z, new String[]{param1}, (byte) 103);
             return stackIn_17_0;
           }
           if (param2 == 6) {
-            stackIn_20_0 = rd.a(SpriteGeometry.field_B, new String[]{param1}, (byte) 103);
+            stackIn_20_0 = GamePresentationHelpers.formatIndexedText(SpriteGeometry.field_B, new String[]{param1}, (byte) 103);
             return stackIn_20_0;
           }
           if (param2 == 7) {
-            stackIn_23_0 = rd.a(GameRenderAudioHelpers.field_e, new String[]{param1}, (byte) 103);
+            stackIn_23_0 = GamePresentationHelpers.formatIndexedText(GameRenderAudioHelpers.field_e, new String[]{param1}, (byte) 103);
             return stackIn_23_0;
           }
           if (8 == param2) {
-            stackIn_27_0 = rd.a(BlankScreen.field_h, new String[]{param1}, (byte) 103);
+            stackIn_27_0 = GamePresentationHelpers.formatIndexedText(BlankScreen.field_h, new String[]{param1}, (byte) 103);
             return stackIn_27_0;
           }
           if (param0 != -110) {
             field_k = (String) null;
           }
           if (param2 == 11) {
-            stackIn_33_0 = rd.a(rd.field_c, new String[]{param1}, (byte) 103);
+            stackIn_33_0 = GamePresentationHelpers.formatIndexedText(GamePresentationHelpers.field_c, new String[]{param1}, (byte) 103);
             return stackIn_33_0;
           }
           if (param2 == 12) {
-            stackIn_36_0 = rd.a(LevelPack.field_f, new String[]{param1}, (byte) 103);
+            stackIn_36_0 = GamePresentationHelpers.formatIndexedText(LevelPack.field_f, new String[]{param1}, (byte) 103);
             return stackIn_36_0;
           }
           if (param2 != 13) {
             return null;
           }
-          stackIn_40_0 = rd.a(gr.field_b, new String[]{param1}, (byte) 103);
+          stackIn_40_0 = GamePresentationHelpers.formatIndexedText(gr.field_b, new String[]{param1}, (byte) 103);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

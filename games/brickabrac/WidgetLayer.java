@@ -306,7 +306,7 @@ abstract class WidgetLayer extends WidgetGroup {
               ga.field_i = 8;
               jl.field_a = 250;
               pp.field_a = -1;
-              LoadingProgressDialog.field_eb = rd.a(IntNode.field_n, new String[]{ui.field_b}, (byte) 103);
+              LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(IntNode.field_n, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }
@@ -318,7 +318,7 @@ abstract class WidgetLayer extends WidgetGroup {
               ga.field_i = 9;
               pp.field_a = -1;
               jl.field_a = 250;
-              LoadingProgressDialog.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
+              LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }
@@ -341,7 +341,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 ga.field_i = 9;
                 jl.field_a = 250;
                 pp.field_a = -1;
-                LoadingProgressDialog.field_eb = rd.a(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
+                LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
                 wc.field_b = true;
                 return;
               }

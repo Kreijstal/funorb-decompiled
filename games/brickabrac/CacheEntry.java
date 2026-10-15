@@ -94,14 +94,14 @@ abstract class CacheEntry extends DualLinkNode {
           RadialSelectorRenderer.field_i = param11;
           BackgroundScene.field_k = param9;
           GameClock.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
-          bq.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
+          FullscreenDialogHelpers.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
           uo.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "opentome", 2);
           Ball.field_K = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
           AchievementsScreen.field_H = new String[5];
           AchievementsScreen.field_H[3] = AlternateNumericLoginCredentials.field_u;
           AchievementsScreen.field_H[1] = t.field_e;
           AchievementsScreen.field_H[2] = IterableIntrusiveHashTable.field_g;
-          AchievementsScreen.field_H[4] = bq.field_a;
+          AchievementsScreen.field_H[4] = FullscreenDialogHelpers.field_a;
           AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
           Ball.field_A = new UiComponent(0L, (UiComponent) null);
           FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, ConnectionPhase.nameColumnHeadingText);

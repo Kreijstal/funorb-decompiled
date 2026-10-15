@@ -54,7 +54,7 @@ final class GameUiController implements GameUiLifecycle {
         Widget.initializeDiagnosticOverlay(1, PasswordFieldRenderer.field_D);
         LoginPanel.h((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
-        AccountMessageDialog.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
+        AccountMessageDialog.currentScreen = (GameScreen) ((Object) FullscreenDialogHelpers.lookupMenuScreen(21, 28472));
         ArchiveSourceManager.a((byte) -79, LoginCredentialKind.titleMusicTrack);
     }
 
@@ -68,7 +68,7 @@ final class GameUiController implements GameUiLifecycle {
         if (obfuscationGuard > -5) {
           field_e = (UiComponent) null;
         }
-        return (GameScreen) ((Object) bq.a(screenId, 28472));
+        return (GameScreen) ((Object) FullscreenDialogHelpers.lookupMenuScreen(screenId, 28472));
     }
 
     public static void c(boolean param0) {
@@ -148,7 +148,7 @@ final class GameUiController implements GameUiLifecycle {
           hc.b(2);
         }
         uf.field_a = TextChoiceDialogHitTest.a(3, true);
-        BackgroundScene.field_f = bq.a(-6, 0, false, 5, true);
+        BackgroundScene.field_f = FullscreenDialogHelpers.createConfiguredArchive(-6, 0, false, 5, true);
         ScorePopup.field_l = TextChoiceDialogHitTest.a(6, true);
         FarmBackground.field_r = TextChoiceDialogHitTest.a(7, true);
         AchievementIcon.field_s = TextChoiceDialogHitTest.a(8, obfuscationGuard);

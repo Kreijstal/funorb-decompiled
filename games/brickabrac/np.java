@@ -4,7 +4,7 @@
 final class np {
     static String field_e;
     static String field_f;
-    static int field_b;
+    static int fullscreenDialogLeft;
     static RgbSprite jungleFarSprite;
     static RgbSprite[][] volcanicSegsSprites;
     static int uiRowHeight;

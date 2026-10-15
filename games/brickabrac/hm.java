@@ -106,37 +106,37 @@ final class hm {
         }
     }
 
-    final static int a(boolean param0, String param1, int param2) {
-        RuntimeException var3 = null;
-        PcmSound var4 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int measureFullscreenDialogText(boolean buttonText, String text, int obfuscationGuard) {
+        RuntimeException failure = null;
+        PcmSound unusedSound = null;
+        int bodyWidth = 0;
+        int buttonWidth = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param2 != 0) {
-            var4 = (PcmSound) null;
+          if (obfuscationGuard != 0) {
+            unusedSound = (PcmSound) null;
             hm.playSoundAtVolume(-91, (PcmSound) null, 44);
           }
-          if (param0) {
-            stackIn_6_0 = kp.field_b.measureText(param1);
-            return stackIn_6_0;
+          if (buttonText) {
+            buttonWidth = kp.fullscreenDialogButtonFont.measureText(text);
+            return buttonWidth;
           }
-          stackIn_4_0 = StateIconLabel.field_Wb.measureText(param1);
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("hm.C(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_10_2 = "null";
+          bodyWidth = StateIconLabel.fullscreenDialogBodyFont.measureText(text);
+          return bodyWidth;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("hm.C(").append(buttonText).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

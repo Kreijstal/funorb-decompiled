@@ -4,7 +4,7 @@
 final class b {
     static RgbSprite[] spaceLeverSprites;
     static int field_a;
-    static int field_c;
+    static int fullscreenDialogButtonLineHeight;
 
     final static void a(int param0, java.awt.Component param1) {
         param1.removeMouseListener(PowerUpWarning.mouseInput);

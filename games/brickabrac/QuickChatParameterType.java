@@ -113,11 +113,11 @@ final class QuickChatParameterType {
           if (!TooltipSprite.field_p) {
             return;
           }
-          rd.a(-1);
+          GamePresentationHelpers.a(-1);
           return;
         }
         if (TooltipSprite.field_p) {
-          rd.a(-1);
+          GamePresentationHelpers.a(-1);
           return;
         }
     }

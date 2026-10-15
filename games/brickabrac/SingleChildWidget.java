@@ -6,12 +6,12 @@ import java.util.*;
 abstract class SingleChildWidget extends Widget implements WidgetContainer {
     Widget child;
     static boolean[] field_D;
-    static String[] field_F;
+    static String[] fullscreenSingularSuffix;
     static IndexedSprite[] field_C;
 
     public static void f(byte param0) {
         field_C = null;
-        field_F = null;
+        fullscreenSingularSuffix = null;
         if (param0 > -82) {
           String var2 = (String) null;
           SingleChildWidget.validateEmailLocalPart((String) null, false);
@@ -295,7 +295,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         try {
           var5_int = 0;
           if (obfuscationGuard != 114) {
-            field_F = (String[]) null;
+            fullscreenSingularSuffix = (String[]) null;
           }
           while (true) {
             if (var5_int >= ArcticBackground.faceDepthBucketCounts.length) {

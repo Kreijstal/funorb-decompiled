@@ -85,7 +85,7 @@ final class AchievementsScreen extends AchievementBrowserScreen {
         if (TableNameEntry.field_g != null) {
           var2 = TableNameEntry.field_g;
           String var1 = var2;
-          ArrayWidgetGroup.a((byte) -83, rd.a(ValidationMessageWidget.field_T, new String[]{var2}, (byte) 103));
+          ArrayWidgetGroup.a((byte) -83, GamePresentationHelpers.formatIndexedText(ValidationMessageWidget.field_T, new String[]{var2}, (byte) 103));
           TableNameEntry.field_g = null;
         }
     }

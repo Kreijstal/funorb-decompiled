@@ -83,8 +83,8 @@ final class AchievementIcon extends IntrusiveNode {
           var9 = new PacketBuffer(data);
           var3 = var9.readUnsignedByte(255);
           var4 = var9.readInt(255);
-          if (0 <= var4 && (bq.maxArchiveContainerBytes == 0 ||
-            !(var4 > bq.maxArchiveContainerBytes))) {
+          if (0 <= var4 && (FullscreenDialogHelpers.maxArchiveContainerBytes == 0 ||
+            !(var4 > FullscreenDialogHelpers.maxArchiveContainerBytes))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
@@ -94,8 +94,8 @@ final class AchievementIcon extends IntrusiveNode {
               return stackIn_9_0;
             }
             var5 = var9.readInt(255);
-            if (var5 >= 0 && (bq.maxArchiveContainerBytes == 0 ||
-              !(var5 > bq.maxArchiveContainerBytes))) {
+            if (var5 >= 0 && (FullscreenDialogHelpers.maxArchiveContainerBytes == 0 ||
+              !(var5 > FullscreenDialogHelpers.maxArchiveContainerBytes))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;

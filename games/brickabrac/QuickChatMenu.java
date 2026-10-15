@@ -366,13 +366,13 @@ final class QuickChatMenu extends UiComponent {
                 }
                 GrowableIntList.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ng.quickChatChannel, messageOpcode, (String) null);
                 MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, CanvasResizeController.field_n, DualLinkNode.quickChatRecipient, ng.quickChatChannel);
-                rd.a(-1);
+                GamePresentationHelpers.a(-1);
                 AccountContentTransitionLayer.m(-69);
                 openHelpBranch = (unusedGameFlag != 0);
               }
               if (openHelpBranch) {
                 ResourcePreparationEntry.a(true);
-                rd.a(-1);
+                GamePresentationHelpers.a(-1);
                 if (unusedGameFlag != 0) {
                   this.resetSelection((byte) 41);
                   this.setExpansionTicks(0, (byte) -81);
@@ -1202,7 +1202,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime120 = gr.a(true, "crumbs");
           if (null != var2Lifetime120) {
-            bq.field_f = MenuButton.a(var2Lifetime120, (byte) 77);
+            FullscreenDialogHelpers.field_f = MenuButton.a(var2Lifetime120, (byte) 77);
           }
           var2Lifetime121 = gr.a(!param0, "good_grief");
           if (var2Lifetime121 != null) {
@@ -1548,7 +1548,7 @@ final class QuickChatMenu extends UiComponent {
           if (this.openSubmenu == null &&
             hd.quickChatMenu == this &&
             backspace != 0) {
-            rd.a(-1);
+            GamePresentationHelpers.a(-1);
             return true;
           }
           if (obfuscationGuard != -126) {

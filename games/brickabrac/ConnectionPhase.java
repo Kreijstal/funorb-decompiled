@@ -255,7 +255,7 @@ final class ConnectionPhase {
               } else {
                 messagePanelCaption = LabeledWidget.field_G;
               }
-              messagePanelForText.text = rd.a(messagePanelCaption, new String[]{DraggableWidget.field_K.text}, (byte) 103);
+              messagePanelForText.text = GamePresentationHelpers.formatIndexedText(messagePanelCaption, new String[]{DraggableWidget.field_K.text}, (byte) 103);
               MeshAttributeRecord.field_g = true;
               AppletGameShell.field_e.text = SocialListEntry.field_Pb;
               GameUiController.field_e.enabled = true;

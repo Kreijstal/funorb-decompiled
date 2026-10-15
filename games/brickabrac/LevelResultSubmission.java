@@ -61,11 +61,11 @@ final class LevelResultSubmission extends IntrusiveNode {
             !FileCacheStore.b(-21835160)) {
             boolean decompiledSharedTail2 = !(LevelPack.isFriend(0, QuickChatHelpDialog.field_Qb));
             if (!decompiledSharedTail2) {
-              var2 = rd.a(ScorePopup.field_j, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
+              var2 = GamePresentationHelpers.formatIndexedText(ScorePopup.field_j, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
-              var2 = rd.a(kk.field_c, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
+              var2 = GamePresentationHelpers.formatIndexedText(kk.field_c, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
             }
             if (TooltipSprite.field_p) {
               SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
@@ -87,8 +87,8 @@ final class LevelResultSubmission extends IntrusiveNode {
             var6 = ng.quickChatChannel;
             var7 = 0;
             if (2 == var6) {
-              var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
-              var8 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var3}, (byte) 103);
+              var4 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
+              var8 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var3}, (byte) 103);
               var7 = -485 + PasswordValidator.field_n.width + ap.field_e.width - (-CachedArchiveSource.chatFont.measureText(var8) + CachedArchiveSource.chatFont.measureText(var4));
               if (0 > var7) {
                 var7 = 0;
@@ -110,7 +110,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+                    var4 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
                   }
                 }
               }
@@ -154,7 +154,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               ap.field_e.activeInside = false;
             }
             if (ap.field_e.activeInside) {
-              var1 = rd.a(df.field_b, new String[]{var3, DualLinkNode.quickChatRecipient}, (byte) 103);
+              var1 = GamePresentationHelpers.formatIndexedText(df.field_b, new String[]{var3, DualLinkNode.quickChatRecipient}, (byte) 103);
             }
           }
           stackIn_96_0 = var1;

@@ -5,7 +5,7 @@ final class ce {
     static String field_g;
     static ContextMenu contextMenuStyle;
     static RgbSprite desertSmallSprite;
-    static int[][] field_a;
+    static int[][] fullscreenDialogButtonBounds;
     static char[] nameCharacterExtensions;
     static int field_d;
     static PaletteFont field_e;
@@ -139,7 +139,7 @@ final class ce {
         nameCharacterExtensions = null;
         contextMenuStyle = null;
         desertSmallSprite = null;
-        field_a = (int[][]) null;
+        fullscreenDialogButtonBounds = (int[][]) null;
         field_g = null;
     }
 

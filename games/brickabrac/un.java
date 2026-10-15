@@ -9,7 +9,7 @@ final class un {
     static String field_h;
     static String[] field_c;
     static RgbSprite field_d;
-    static long field_g;
+    static long fullscreenConfirmationStartMillis;
     static boolean field_f;
     static QuickChatParameterType field_b;
 

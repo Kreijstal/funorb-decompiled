@@ -118,9 +118,9 @@ final class IntNode extends IntrusiveNode {
             if (!message.systemMessage) {
               if (message.messageKeyHigh16 == 0 &&
                 message.messageKeyLow24 == 0) {
-                var4_ref = rd.a(SaveResultsPromptScreen.field_x, new String[]{(String) (var2)}, (byte) 103);
+                var4_ref = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{(String) (var2)}, (byte) 103);
               } else {
-                var4_ref = rd.a(FullscreenFailureDialog.field_fb, new String[]{(String) (var2)}, (byte) 103);
+                var4_ref = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{(String) (var2)}, (byte) 103);
               }
             }
           } else {
@@ -129,7 +129,7 @@ final class IntNode extends IntrusiveNode {
               var4_ref = "[" + ArcticBackground.field_u + "] ";
             }
             if (message.channel == 1) {
-              var4_ref = "[" + rd.a(fm.field_a, new String[]{message.contextLabel}, (byte) 103) + "] ";
+              var4_ref = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{message.contextLabel}, (byte) 103) + "] ";
             }
             if (message.channel == 4 &&
               jd.field_b != null) {

@@ -8,7 +8,7 @@ final class StateIconLabel extends UiComponent {
     static String field_Tb;
     static RgbSprite halloweenMidSprite;
     static boolean field_Sb;
-    static TextFont field_Wb;
+    static TextFont fullscreenDialogBodyFont;
     private UiComponent icon;
 
     final int measureIconLabelWidth(byte obfuscationGuard, int gap) {
@@ -103,7 +103,7 @@ final class StateIconLabel extends UiComponent {
         halloweenMidSprite = null;
         field_Pb = null;
         field_Tb = null;
-        field_Wb = null;
+        fullscreenDialogBodyFont = null;
         field_Rb = null;
         if (!param0) {
           field_Rb = (AccountResponse) null;

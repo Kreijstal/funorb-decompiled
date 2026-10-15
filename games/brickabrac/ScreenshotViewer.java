@@ -10,7 +10,7 @@ final class ScreenshotViewer {
     private String title;
     private boolean field_a;
     private String[] captions;
-    static int field_k;
+    static int fullscreenDialogCenterY;
     static String field_m;
     private RgbSprite field_e;
     static int[] field_n;
@@ -195,7 +195,7 @@ final class ScreenshotViewer {
             }
           }
           if (!param0) {
-            field_k = -125;
+            fullscreenDialogCenterY = -125;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -588,7 +588,7 @@ final class ScreenshotViewer {
           var3_int = param0 >> 8;
           var4 = 255 & param0;
           if (param2 <= 90) {
-            field_k = 6;
+            fullscreenDialogCenterY = 6;
           }
           var5 = param1 >> 8;
           var6 = 255 & param1;
@@ -616,14 +616,14 @@ final class ScreenshotViewer {
 
     final static void c(byte param0) {
         try {
-          HuffmanCodec.field_h = null;
+          HuffmanCodec.fullscreenPluralSuffix = null;
           if (param0 != 3) {
-            field_k = -112;
+            fullscreenDialogCenterY = -112;
           }
-          SingleChildWidget.field_F = null;
-          IntrusiveHashIterator.field_j = false;
-          QuickChatPhraseRegistry.field_k = null;
-          IntrusiveHashIterator.field_b = null;
+          SingleChildWidget.fullscreenSingularSuffix = null;
+          IntrusiveHashIterator.fullscreenDialogOpen = false;
+          QuickChatPhraseRegistry.fullscreenSingularPrefix = null;
+          IntrusiveHashIterator.fullscreenPluralPrefix = null;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "w.N(" + param0 + ')');
         }

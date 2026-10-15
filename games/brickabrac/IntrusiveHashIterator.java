@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class IntrusiveHashIterator implements Iterator {
-    static boolean field_j;
+    static boolean fullscreenDialogOpen;
     static UiComponent field_a;
     private IterableIntrusiveHashTable table;
     private int bucketIndex;
@@ -13,7 +13,7 @@ final class IntrusiveHashIterator implements Iterator {
     private IntrusiveNode lastReturned;
     static UiComponent[] field_i;
     static RgbSprite[] field_f;
-    static String[] field_b;
+    static String[] fullscreenPluralPrefix;
     static RgbSprite field_c;
 
     static int a(int param0, int param1) {
@@ -192,7 +192,7 @@ final class IntrusiveHashIterator implements Iterator {
         field_g = null;
         field_f = null;
         field_i = null;
-        field_b = null;
+        fullscreenPluralPrefix = null;
         field_c = null;
         field_a = null;
     }
@@ -217,6 +217,6 @@ final class IntrusiveHashIterator implements Iterator {
     }
 
     static {
-        field_j = false;
+        fullscreenDialogOpen = false;
     }
 }

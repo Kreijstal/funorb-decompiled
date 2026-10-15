@@ -180,7 +180,7 @@ final class jl {
             return stackIn_11_0;
           }
           if (LevelPack.isFriend(0, name)) {
-            stackIn_14_0 = rd.a(TextChoiceDialogStyles.field_d, new String[]{name}, (byte) 103);
+            stackIn_14_0 = GamePresentationHelpers.formatIndexedText(TextChoiceDialogStyles.field_d, new String[]{name}, (byte) 103);
             return stackIn_14_0;
           }
           if (LevelPackSelectScreen.friendCount >= 100 &&
@@ -193,7 +193,7 @@ final class jl {
             return stackIn_21_0;
           }
           if (AchievementBrowserScreen.isIgnoredPlayer(121, name)) {
-            stackIn_24_0 = rd.a(ConstructionBackground.field_u, new String[]{name}, (byte) 103);
+            stackIn_24_0 = GamePresentationHelpers.formatIndexedText(ConstructionBackground.field_u, new String[]{name}, (byte) 103);
             return stackIn_24_0;
           }
           if (obfuscationGuard != 24943) {

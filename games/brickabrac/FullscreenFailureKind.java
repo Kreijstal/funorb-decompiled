@@ -40,7 +40,7 @@ final class FullscreenFailureKind {
             }
             if (var3_int != 0) {
               if (InteractiveGameClient.field_E) {
-                param0 = rd.a(ProxySocketConnector.field_h, new String[]{param0}, (byte) 103);
+                param0 = GamePresentationHelpers.formatIndexedText(ProxySocketConnector.field_h, new String[]{param0}, (byte) 103);
               }
               if (BytePayloadSubmission.field_l) {
                 param0 = GameCanvas.field_b;
@@ -112,18 +112,18 @@ final class FullscreenFailureKind {
           if (param0.started && (param0.spectatorMode == 2 ||
             !(QuickChatHelpDialog.field_Yb < 2))) {
             var9 = GameRenderAudioHelpers.contextActions;
-            var10 = rd.a(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);
+            var10 = GamePresentationHelpers.formatIndexedText(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);
             var9.contextMenu.addAction(var10, 10, (byte) 91);
           }
           GameRenderAudioHelpers.contextActions.addGameActions(true);
           if (param1) {
             if (GameRenderAudioHelpers.contextActions.gameId == MenuSelection.previewGameId) {
               var13 = GameRenderAudioHelpers.contextActions;
-              var14 = rd.a(ArchiveSourceManager.field_d, new String[]{param3}, (byte) 103);
+              var14 = GamePresentationHelpers.formatIndexedText(ArchiveSourceManager.field_d, new String[]{param3}, (byte) 103);
               var13.contextMenu.addAction(var14, 16, (byte) 90);
             } else {
               var11 = GameRenderAudioHelpers.contextActions;
-              var12 = rd.a(Paddle.field_G, new String[]{param3}, (byte) 103);
+              var12 = GamePresentationHelpers.formatIndexedText(Paddle.field_G, new String[]{param3}, (byte) 103);
               var11.contextMenu.addAction(var12, 15, (byte) 116);
             }
           }

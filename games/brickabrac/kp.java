@@ -5,7 +5,7 @@ import java.util.*;
 
 final class kp {
     static NodeDeque achievementNotifications;
-    static TextFont field_b;
+    static TextFont fullscreenDialogButtonFont;
     static RgbSprite[] field_e;
     static int field_a;
     static Vector field_d;
@@ -38,7 +38,7 @@ final class kp {
         achievementNotifications = null;
         field_e = null;
         field_d = null;
-        field_b = null;
+        fullscreenDialogButtonFont = null;
     }
 
     static {

@@ -186,7 +186,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         int var4 = WidgetGroup.a(pl.pendingAchievementMask, -1) ? 1 : 0;
         if (obfuscationGuard >= 96) {
           var5 = null != VerticalScrollbar.field_Ub ? 1 : 0;
-          this.promptText = PauseMenuScreen.field_w + " " + BytePayloadRequest.a(-1, rd.a(AchievementBrowserScreen.buildSavePrompt(var4 != 0, var5 != 0, false, 126), new String[]{DesertBackground.field_r}, (byte) 103), '#', "<br><br>");
+          this.promptText = PauseMenuScreen.field_w + " " + BytePayloadRequest.replaceCharacter(-1, GamePresentationHelpers.formatIndexedText(AchievementBrowserScreen.buildSavePrompt(var4 != 0, var5 != 0, false, 126), new String[]{DesertBackground.field_r}, (byte) 103), '#', "<br><br>");
           return;
         }
     }

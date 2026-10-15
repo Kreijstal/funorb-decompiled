@@ -67,7 +67,7 @@ final class LoginMethodPreference {
             return stackIn_9_0;
           }
           if (AchievementBrowserScreen.isIgnoredPlayer(124, name)) {
-            stackIn_12_0 = rd.a(DraggableWidget.field_J, new String[]{name}, (byte) 103);
+            stackIn_12_0 = GamePresentationHelpers.formatIndexedText(DraggableWidget.field_J, new String[]{name}, (byte) 103);
             return stackIn_12_0;
           }
           if (IsaacGenerator.ignoreCount >= 100) {
@@ -75,7 +75,7 @@ final class LoginMethodPreference {
             return stackIn_15_0;
           }
           if (LevelPack.isFriend(expectedLoginStage - 2, name)) {
-            stackIn_19_0 = rd.a(tq.field_a, new String[]{name}, (byte) 103);
+            stackIn_19_0 = GamePresentationHelpers.formatIndexedText(tq.field_a, new String[]{name}, (byte) 103);
             return stackIn_19_0;
           }
           packet = TextFieldValidator.outgoingPackets;

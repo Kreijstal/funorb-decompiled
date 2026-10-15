@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd {
+final class GamePresentationHelpers {
     static String field_b;
     static BinaryMaskFont field_e;
     static String field_c;
@@ -93,7 +93,7 @@ final class rd {
         int var3 = 0;
         Object var2 = null;
         if (obfuscationGuard != 19) {
-          rd.a((byte) -86);
+          GamePresentationHelpers.a((byte) -86);
         }
         ChatMessage.backgroundVariant = ButtonWidgetRenderer.field_w.nextBoundedInt(-37880252, 2);
         if (selector == 0) {
@@ -112,148 +112,148 @@ final class rd {
         return var2_ref;
     }
 
-    final static String a(String param0, String[] param1, byte param2) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        String stackIn_27_0 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_31_2 = null;
-        StringBuilder stackIn_33_1 = null;
-        String stackIn_34_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6_int = 0;
-        StringBuilder var6 = null;
-        int var7 = 0;
-        String var7_ref_String = null;
-        int var8 = 0;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        String[] var12 = null;
-        int var5Lifetime1;
-        int var8Lifetime1;
-        var11 = BrickABrac.field_J ? 1 : 0;
+    final static String formatIndexedText(String template, String[] replacements, byte obfuscationGuard) {
+        StringBuilder tailAppendResult = null;
+        StringBuilder literalAppendResult = null;
+        StringBuilder replacementAppendResult = null;
+        String formattedText = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String templateSummary = null;
+        StringBuilder replacementContextBuilder = null;
+        String replacementsSummary = null;
+        RuntimeException caughtFailure = null;
+        int templateLength = 0;
+        RuntimeException failure = null;
+        int outputCapacity = 0;
+        int scanIndex = 0;
+        int tokenStart = 0;
+        StringBuilder resultBuilder = null;
+        int literalStart = 0;
+        String indexDigits = null;
+        int replacementIndex = 0;
+        String copyIndexDigits = null;
+        int copyReplacementIndex = 0;
+        int unusedGameFlag = 0;
+        String[] unusedReplacements = null;
+        int copyScanIndex;
+        int copyTokenStart;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = param0.length();
-          var4 = var3_int;
-          var5 = 0;
-          if (param2 != 103) {
-            var12 = (String[]) null;
-            rd.a((String) null, (String[]) null, (byte) -1);
+          templateLength = template.length();
+          outputCapacity = templateLength;
+          scanIndex = 0;
+          if (obfuscationGuard != 103) {
+            unusedReplacements = (String[]) null;
+            GamePresentationHelpers.formatIndexedText((String) null, (String[]) null, (byte) -1);
           }
           while (true) {
-            var6_int = param0.indexOf("<%", var5);
-            if (var6_int >= 0) {
-              for (var5 = 2 + var6_int; var5 < var3_int; var5++) {
-                if (WidgetTheme.isAsciiDigit(param0.charAt(var5), (byte) 44)) {
+            tokenStart = template.indexOf("<%", scanIndex);
+            if (tokenStart >= 0) {
+              for (scanIndex = 2 + tokenStart; scanIndex < templateLength; scanIndex++) {
+                if (WidgetTheme.isAsciiDigit(template.charAt(scanIndex), (byte) 44)) {
                   continue;
                 }
                 break;
               }
-              var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!MeshAttributeRecord.a((CharSequence) ((Object) var7_ref_String), -43)) {
+              indexDigits = template.substring(2 + tokenStart, scanIndex);
+              if (!MeshAttributeRecord.a((CharSequence) ((Object) indexDigits), -43)) {
                 continue;
               }
-              if (var5 >= var3_int) {
+              if (scanIndex >= templateLength) {
                 continue;
               }
-              if (param0.charAt(var5) != 62) {
+              if (template.charAt(scanIndex) != 62) {
                 continue;
               }
-              var5++;
-              var8 = UsernameAvailabilityValidator.a((CharSequence) ((Object) var7_ref_String), -28734);
-              var4 = var4 + (var6_int - var5 + param1[var8].length());
+              scanIndex++;
+              replacementIndex = UsernameAvailabilityValidator.a((CharSequence) ((Object) indexDigits), -28734);
+              outputCapacity = outputCapacity + (tokenStart - scanIndex + replacements[replacementIndex].length());
               continue;
             }
             break;
           }
-          var6 = new StringBuilder(var4);
-          var7 = 0;
-          var5Lifetime1 = 0;
+          resultBuilder = new StringBuilder(outputCapacity);
+          literalStart = 0;
+          copyScanIndex = 0;
           while (true) {
-            var8Lifetime1 = param0.indexOf("<%", var5Lifetime1);
-            if (var8Lifetime1 < 0) {
-              discarded$2 = var6.append(param0.substring(var7));
-              stackIn_27_0 = var6.toString();
-              return stackIn_27_0;
+            copyTokenStart = template.indexOf("<%", copyScanIndex);
+            if (copyTokenStart < 0) {
+              tailAppendResult = resultBuilder.append(template.substring(literalStart));
+              formattedText = resultBuilder.toString();
+              return formattedText;
             }
-            for (var5Lifetime1 = 2 + var8Lifetime1; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (WidgetTheme.isAsciiDigit(param0.charAt(var5Lifetime1), (byte) 60)) {
+            for (copyScanIndex = 2 + copyTokenStart; templateLength > copyScanIndex; copyScanIndex++) {
+              if (WidgetTheme.isAsciiDigit(template.charAt(copyScanIndex), (byte) 60)) {
                 continue;
               }
               break;
             }
-            var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!MeshAttributeRecord.a((CharSequence) ((Object) var9), param2 ^ -23)) {
+            copyIndexDigits = template.substring(2 + copyTokenStart, copyScanIndex);
+            if (!MeshAttributeRecord.a((CharSequence) ((Object) copyIndexDigits), obfuscationGuard ^ -23)) {
               continue;
             }
-            if (var3_int <= var5Lifetime1) {
+            if (templateLength <= copyScanIndex) {
               continue;
             }
-            if (62 != param0.charAt(var5Lifetime1)) {
+            if (62 != template.charAt(copyScanIndex)) {
               continue;
             }
-            var5Lifetime1++;
-            var10 = UsernameAvailabilityValidator.a((CharSequence) ((Object) var9), -28734);
-            discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
-            var7 = var5Lifetime1;
-            discarded$1 = var6.append(param1[var10]);
+            copyScanIndex++;
+            copyReplacementIndex = UsernameAvailabilityValidator.a((CharSequence) ((Object) copyIndexDigits), -28734);
+            literalAppendResult = resultBuilder.append(template.substring(literalStart, copyTokenStart));
+            literalStart = copyScanIndex;
+            replacementAppendResult = resultBuilder.append(replacements[copyReplacementIndex]);
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_30_0 = var3;
-          stackIn_30_1 = new StringBuilder().append("rd.D(");
-          if (param0 == null) {
-            stackIn_31_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("rd.D(");
+          if (template == null) {
+            templateSummary = "null";
           } else {
-            stackIn_31_2 = "{...}";
+            templateSummary = "{...}";
           }
-          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param1 == null) {
-            stackIn_34_2 = "null";
+          replacementContextBuilder = ((StringBuilder) (Object) contextBuilder).append(templateSummary).append(',');
+          if (replacements == null) {
+            replacementsSummary = "null";
           } else {
-            stackIn_34_2 = "{...}";
+            replacementsSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) replacementContextBuilder).append(replacementsSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static RgbSprite[] c(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = BrickABrac.field_J ? 1 : 0;
-        RgbSprite[] var1 = new RgbSprite[nl.decodedSpriteCount];
-        for (var2 = 0; var2 < nl.decodedSpriteCount; var2++) {
-          var3 = jh.decodedSpriteWidths[var2] * TextHotspotRegion.decodedSpriteHeights[var2];
-          var4 = GameOverlayHelpers.decodedSpriteIndices[var2];
-          var5 = new int[var3];
-          for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = qp.decodedSpritePalette[IntrusiveHashIterator.a((int) var4[var6], 255)];
+    final static RgbSprite[] buildRgbSprites(int obfuscationGuard) {
+        int spriteIndex = 0;
+        int pixelCount = 0;
+        byte[] indices = null;
+        int[] pixels = null;
+        int pixelIndex = 0;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        RgbSprite[] sprites = new RgbSprite[nl.decodedSpriteCount];
+        for (spriteIndex = 0; spriteIndex < nl.decodedSpriteCount; spriteIndex++) {
+          pixelCount = jh.decodedSpriteWidths[spriteIndex] * TextHotspotRegion.decodedSpriteHeights[spriteIndex];
+          indices = GameOverlayHelpers.decodedSpriteIndices[spriteIndex];
+          pixels = new int[pixelCount];
+          for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
+            pixels[pixelIndex] = qp.decodedSpritePalette[IntrusiveHashIterator.a((int) indices[pixelIndex], 255)];
           }
-          var1[var2] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var5);
+          sprites[spriteIndex] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[spriteIndex], SocketConnector.decodedSpriteOffsetY[spriteIndex], jh.decodedSpriteWidths[spriteIndex], TextHotspotRegion.decodedSpriteHeights[spriteIndex], pixels);
         }
-        if (param0 < 93) {
+        if (obfuscationGuard < 93) {
           return (RgbSprite[]) null;
         }
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
-        return var1;
+        return sprites;
     }
 
     public static void a(byte param0) {
         field_e = null;
         field_b = null;
         if (param0 != 46) {
-          rd.c(110);
+          GamePresentationHelpers.buildRgbSprites(110);
         }
         field_c = null;
         constructionCapsSprites = (RgbSprite[][]) null;

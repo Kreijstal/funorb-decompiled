@@ -4,7 +4,7 @@
 abstract class ArchiveFetchClient {
     static String localPlayerNameKey;
     static String[] field_j;
-    static int field_p;
+    static int fullscreenDialogKind;
     static RgbSprite field_k;
     SecondaryNodeQueue pendingPriority;
     SecondaryNodeQueue activePriority;

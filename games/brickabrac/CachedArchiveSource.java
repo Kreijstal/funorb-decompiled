@@ -15,7 +15,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private FileCacheStore indexCache;
     static NodeDeque ignoreEntries;
     private int archiveId;
-    static int field_r;
+    static int fullscreenDialogTop;
     static int field_p;
     private int expectedIndexRevision;
     private CacheIoWorker cacheIo;
@@ -577,7 +577,7 @@ final class CachedArchiveSource extends ArchiveSource {
         chatFont = null;
         field_t = null;
         if (param0 != 56) {
-          field_r = 120;
+          fullscreenDialogTop = 120;
         }
         ignoreEntries = null;
     }

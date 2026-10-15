@@ -27,74 +27,74 @@ final class BytePayloadRequest extends IntrusiveNode {
         ArchiveSource.sleepOnce(-29869, 1L);
     }
 
-    final static String a(int param0, String param1, char param2, String param3) {
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8_int = 0;
-        StringBuilder var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
-        String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var11 = BrickABrac.field_J ? 1 : 0;
+    final static String replaceCharacter(int capacityAdjustment, String text, char character, String replacement) {
+        StringBuilder tailAppendResult = null;
+        StringBuilder literalAppendResult = null;
+        StringBuilder replacementAppendResult = null;
+        int textLength = 0;
+        int replacementLength = 0;
+        int outputCapacity = 0;
+        int capacityDelta = 0;
+        int countScanIndex = 0;
+        StringBuilder resultBuilder = null;
+        int literalStart = 0;
+        int matchIndex = 0;
+        int unusedGameFlag = 0;
+        String result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        StringBuilder replacementContextBuilder = null;
+        String replacementSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var4_int = param1.length();
-          var5 = param3.length();
-          var6 = var4_int;
-          var7 = param0 + var5;
-          if (var7 != 0) {
-            var8_int = 0;
+          textLength = text.length();
+          replacementLength = replacement.length();
+          outputCapacity = textLength;
+          capacityDelta = capacityAdjustment + replacementLength;
+          if (capacityDelta != 0) {
+            countScanIndex = 0;
             while (true) {
-              var8_int = param1.indexOf((int) param2, var8_int);
-              if (var8_int < 0) {
+              countScanIndex = text.indexOf((int) character, countScanIndex);
+              if (countScanIndex < 0) {
                 break;
               }
-              var8_int++;
-              var6 = var6 + var7;
+              countScanIndex++;
+              outputCapacity = outputCapacity + capacityDelta;
             }
           }
-          var8 = new StringBuilder(var6);
-          var9 = 0;
+          resultBuilder = new StringBuilder(outputCapacity);
+          literalStart = 0;
           while (true) {
-            var10 = param1.indexOf((int) param2, var9);
-            if (var10 < 0) {
-              discarded$4 = var8.append(param1.substring(var9));
-              stackIn_10_0 = var8.toString();
-              return stackIn_10_0;
+            matchIndex = text.indexOf((int) character, literalStart);
+            if (matchIndex < 0) {
+              tailAppendResult = resultBuilder.append(text.substring(literalStart));
+              result = resultBuilder.toString();
+              return result;
             }
-            discarded$2 = var8.append(param1.substring(var9, var10));
-            var9 = 1 + var10;
-            discarded$3 = var8.append(param3);
+            literalAppendResult = resultBuilder.append(text.substring(literalStart, matchIndex));
+            literalStart = 1 + matchIndex;
+            replacementAppendResult = resultBuilder.append(replacement);
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("wj.A(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_14_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("wj.A(").append(capacityAdjustment).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_14_2 = "{...}";
+            textSummary = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_17_2 = "null";
+          replacementContextBuilder = ((StringBuilder) (Object) contextBuilder).append(textSummary).append(',').append(character).append(',');
+          if (replacement == null) {
+            replacementSummary = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            replacementSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) replacementContextBuilder).append(replacementSummary).append(')').toString());
         }
     }
 

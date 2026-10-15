@@ -90,7 +90,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
           var1 = OptionsScreen.field_x;
           if (var1 > 0) {
             if (var1 != 1) {
-              AppletGameShell.field_b = rd.a(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);
+              AppletGameShell.field_b = GamePresentationHelpers.formatIndexedText(ed.field_c, new String[]{Integer.toString(var1)}, (byte) 103);
             } else {
               AppletGameShell.field_b = WidgetGroup.field_C;
             }

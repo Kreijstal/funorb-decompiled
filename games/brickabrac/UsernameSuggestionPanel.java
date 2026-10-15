@@ -4,7 +4,7 @@
 final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionListener {
     private UsernameSuggestionListener listener;
     private String[] suggestions;
-    static int[] field_I;
+    static int[] fullscreenDialogButtonActions;
     static String field_O;
     static String field_L;
     static String field_N;
@@ -214,7 +214,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
     }
 
     public static void a(byte param0) {
-        field_I = null;
+        fullscreenDialogButtonActions = null;
         if (param0 != -83) {
           field_O = (String) null;
         }

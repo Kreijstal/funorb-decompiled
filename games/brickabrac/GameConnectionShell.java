@@ -815,9 +815,9 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (LoginCredentialKind.field_e != 0) {
             ValidationIconWidget.field_K = TextChoiceDialogHitTest.a(PacketBuffer.field_j, true);
           }
-          LabeledWidget.field_P = bq.a(-6, 1, true, nd.field_c, false);
-          RadialSelectorWidget.field_S = bq.a(-6, 1, true, ea.field_c, false);
-          ja.field_c = bq.a(-6, 1, true, o.field_f, false);
+          LabeledWidget.field_P = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, nd.field_c, false);
+          RadialSelectorWidget.field_S = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ea.field_c, false);
+          ja.field_c = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, o.field_f, false);
           FriendListUi.field_c = RadialSelectorWidget.field_S;
           clientStage = 2;
           NameEntryPopup.field_Rb = LabeledWidget.field_P;

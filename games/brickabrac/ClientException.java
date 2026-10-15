@@ -14,7 +14,7 @@ final class ClientException extends RuntimeException {
         if (param0 != 5395) {
           return -14;
         }
-        return jj.field_c;
+        return jj.fullscreenDialogHeight;
     }
 
     public static void a(boolean param0) {

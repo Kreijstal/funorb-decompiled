@@ -7,7 +7,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
     static int field_z;
     static String[] textChoiceLines;
     String title;
-    static int field_y;
+    static int fullscreenDialogButtonGapY;
     char[] phraseShortcuts;
     static volatile boolean livePointerChanged;
     int[] phraseIds;

@@ -25,7 +25,7 @@ class UiComponent extends ba {
     private int activeOffsetX;
     private int pressLocalY;
     String textSuffix;
-    static MenuSelection field_H;
+    static MenuSelection fullscreenDialogSelection;
     boolean hovered;
     int capturedButton;
     int verticalAlignment;
@@ -523,7 +523,7 @@ class UiComponent extends ba {
         fullscreenUnsupported = null;
         field_ob = null;
         field_ib = null;
-        field_H = null;
+        fullscreenDialogSelection = null;
         glowSequenceWords = null;
         if (param0 > 60) {
           field_mb = null;
@@ -819,7 +819,7 @@ class UiComponent extends ba {
     }
 
     static {
-        field_H = new MenuSelection(1);
+        fullscreenDialogSelection = new MenuSelection(1);
         field_Z = "Game";
         previousPacketOpcode = -1;
         field_mb = "Log in / Create account";

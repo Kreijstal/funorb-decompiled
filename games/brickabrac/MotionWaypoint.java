@@ -26,7 +26,7 @@ final class MotionWaypoint extends MovingBody {
         if (!HotspotTextWidget.a(9)) {
           return;
         }
-        bq.a(false, param0, (byte) 104);
+        FullscreenDialogHelpers.buildFullscreenDialog(false, param0, (byte) 104);
     }
 
     final static void clearDecodedSpriteData(byte obfuscationGuard) {

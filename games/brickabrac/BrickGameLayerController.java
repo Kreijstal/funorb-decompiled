@@ -962,7 +962,7 @@ final class BrickGameLayerController implements GameLayerController {
           }
           if (Brick.unreadChatMessageCount != 1) {
             if (1 < Brick.unreadChatMessageCount) {
-              ContextActionController.field_f = rd.a(ArchiveSource.field_a, new String[]{Integer.toString(Brick.unreadChatMessageCount)}, (byte) 103);
+              ContextActionController.field_f = GamePresentationHelpers.formatIndexedText(ArchiveSource.field_a, new String[]{Integer.toString(Brick.unreadChatMessageCount)}, (byte) 103);
               var4 = ConnectionPhase.field_d ? 1 : 0;
               ConnectionPhase.field_d = false;
               if (this.d(76)) {

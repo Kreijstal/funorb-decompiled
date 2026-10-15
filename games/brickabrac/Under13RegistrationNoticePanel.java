@@ -135,7 +135,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
           this.registrationDialog = registrationDialog;
           this.continueButton = new FocusableWidget(UsernameSuggestionPanel.field_L, (WidgetListener) null);
           this.continueButton.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());
-          var7 = rd.a(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
+          var7 = GamePresentationHelpers.formatIndexedText(MainMenuScreen.field_z, new String[]{this.a((byte) 34), this.h(0)}, (byte) 103);
           var3 = 20;
           var4 = new TextWidgetRenderer(ArchiveNetworkClient.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, ArchiveNetworkClient.field_u.ascent, -1, 2147483647, true);
           this.noticeLinks = new HotspotTextWidget(var7, var4);

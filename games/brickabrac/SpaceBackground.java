@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpaceBackground extends BackgroundScene {
-    static int field_u;
+    static int fullscreenDialogRight;
     static String field_s;
     static boolean field_r;
     static boolean field_t;
@@ -167,7 +167,7 @@ final class SpaceBackground extends BackgroundScene {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -6) {
-            field_u = -69;
+            fullscreenDialogRight = -69;
           }
           var3 = (CharSequence) ((Object) name);
           stackIn_3_0 = ArchiveFetchClient.localPlayerNameKey.equals(ChatMessage.normalizePlayerName(var3, 92));

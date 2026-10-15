@@ -95,24 +95,24 @@ final class ContextActionController {
             if (var2 != null) {
               var3 = var2.displayName;
               if (var2.invitationPending) {
-                this.contextMenu.addAction(rd.a(kk.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
-                this.contextMenu.addAction(rd.a(np.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(kk.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(np.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
                 if (!var2.directJoinAvailable) {
                   if ((!var2.joinRequestPending) && (var2.protocolFlag8) && (!var2.started ||
                     var2.directJoinAvailable)) {
-                    this.contextMenu.addAction(rd.a(qp.field_a, new String[]{var3}, (byte) 103), 2, (byte) 105);
+                    this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(qp.field_a, new String[]{var3}, (byte) 103), 2, (byte) 105);
                     if (var4 != 0) {
-                      this.contextMenu.addAction(rd.a(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
+                      this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                     }
                   }
                 } else {
-                  this.contextMenu.addAction(rd.a(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
+                  this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                 }
                 if (var2.joinRequestPending) {
-                  this.contextMenu.addAction(rd.a(rm.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
+                  this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(rm.field_b, new String[]{var3}, (byte) 103), 3, (byte) 87);
                 }
               }
             }
@@ -342,7 +342,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_x_withdrew_request", (byte) 110);
                 if (var2 != null) {
-                  rd.field_c = MenuButton.a(var2, (byte) 76);
+                  GamePresentationHelpers.field_c = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("mu_x_removed", (byte) -119);
                 if (null != var2) {
@@ -846,7 +846,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("multiconst_open", (byte) -115);
                 if (null != var2) {
-                  bq.field_a = MenuButton.a(var2, (byte) 96);
+                  FullscreenDialogHelpers.field_a = MenuButton.a(var2, (byte) 96);
                 }
                 var2 = nk.a("no_options_available", (byte) -118);
                 if (var2 != null) {
@@ -2054,7 +2054,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fullscreen", (byte) -118);
                 if (var2 != null) {
-                  rd.field_b = MenuButton.a(var2, (byte) 112);
+                  GamePresentationHelpers.field_b = MenuButton.a(var2, (byte) 112);
                 }
                 var2 = nk.a("screensize", (byte) -107);
                 if (null != var2) {
@@ -3230,31 +3230,31 @@ final class ContextActionController {
             ignoredPlayer = AchievementBrowserScreen.isIgnoredPlayer(121, this.targetName) ? 1 : 0;
             if (friend == null &&
               ignoredPlayer == 0) {
-              this.contextMenu.addAction(rd.a(AchievementMaskRequest.field_l, new String[]{caption}, (byte) 103), 4, (byte) 105);
-              this.contextMenu.addAction(rd.a(PasswordFieldRenderer.field_H, new String[]{caption}, (byte) 103), 6, (byte) 110);
+              this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(AchievementMaskRequest.field_l, new String[]{caption}, (byte) 103), 4, (byte) 105);
+              this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(PasswordFieldRenderer.field_H, new String[]{caption}, (byte) 103), 6, (byte) 110);
               if (null != suggestedPhraseIds &&
                 2 != channel &&
                 !TextWidgetRenderer.field_e) {
                 this.suggestedPhraseIds = suggestedPhraseIds;
-                this.contextMenu.addAction(rd.a(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 95);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 95);
               }
             }
             if (null != friend) {
               if (!ConditionalTextValue.a(13134, this.targetName) &&
                 !TextWidgetRenderer.field_e) {
                 if (!PlayerNameChooserPanel.field_I) {
-                  this.contextMenu.addAction(rd.a(ClientException.field_c, new String[]{caption}, (byte) 103), 8, (byte) 80);
+                  this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(ClientException.field_c, new String[]{caption}, (byte) 103), 8, (byte) 80);
                 }
-                this.contextMenu.addAction(rd.a(qm.field_b, new String[]{caption}, (byte) 103), 18, (byte) 104);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(qm.field_b, new String[]{caption}, (byte) 103), 18, (byte) 104);
                 if (null != suggestedPhraseIds) {
                   this.suggestedPhraseIds = suggestedPhraseIds;
-                  this.contextMenu.addAction(rd.a(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 72);
+                  this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 72);
                 }
               }
-              this.contextMenu.addAction(rd.a(ChatLobbyUiHelpers.field_g, new String[]{caption}, (byte) 103), 5, (byte) 106);
+              this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(ChatLobbyUiHelpers.field_g, new String[]{caption}, (byte) 103), 5, (byte) 106);
             }
             if (ignoredPlayer != 0) {
-              this.contextMenu.addAction(rd.a(UsernameSuggestionPanel.field_O, new String[]{caption}, (byte) 103), 7, (byte) 82);
+              this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(UsernameSuggestionPanel.field_O, new String[]{caption}, (byte) 103), 7, (byte) 82);
             }
           }
           if (obfuscationGuard > -68) {
@@ -3299,7 +3299,7 @@ final class ContextActionController {
                 o.currentLobbyGame.concludedDurationMillis < 0) {
                 return;
               }
-              this.contextMenu.addAction(rd.a(RankingsRequest.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
+              this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(RankingsRequest.field_q, new String[]{caption}, (byte) 103), 1, (byte) 94);
               if (unusedGameFlag == 0) {
                 return;
               }
@@ -3308,20 +3308,20 @@ final class ContextActionController {
               o.currentLobbyGame.protocolFlag8 &&
               o.currentLobbyGame.maxPlayers > o.currentLobbyGame.playerCount) {
               if (gamePlayer.invitationPending) {
-                this.contextMenu.addAction(rd.a(hm.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(hm.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
                 if (unusedGameFlag == 0) {
                   return;
                 }
               }
               if (allowAdditionalActions &&
                 gamePlayer.joinRequestPending) {
-                this.contextMenu.addAction(rd.a(mc.field_b, new String[]{caption}, (byte) 103), 0, (byte) 112);
-                this.contextMenu.addAction(rd.a(RasterCacheSurface.field_o, new String[]{caption}, (byte) 103), 1, (byte) 116);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(mc.field_b, new String[]{caption}, (byte) 103), 0, (byte) 112);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(RasterCacheSurface.field_o, new String[]{caption}, (byte) 103), 1, (byte) 116);
                 if (unusedGameFlag == 0) {
                   return;
                 }
               }
-              this.contextMenu.addAction(rd.a(ResourceRequest.field_A, new String[]{caption}, (byte) 103), 0, (byte) 126);
+              this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(ResourceRequest.field_A, new String[]{caption}, (byte) 103), 0, (byte) 126);
             }
           }
           return;
@@ -3343,7 +3343,7 @@ final class ContextActionController {
           if (null != this.targetName &&
             this.targetId != Widget.field_p) {
             var2 = this.getTargetCaption(-12688);
-            this.contextMenu.addAction(rd.a(DesertBackground.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
+            this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(DesertBackground.field_t, new String[]{var2}, (byte) 103), 17, (byte) 107);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

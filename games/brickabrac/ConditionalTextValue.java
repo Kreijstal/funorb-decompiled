@@ -7,7 +7,7 @@ final class ConditionalTextValue {
     static int field_j;
     static String field_k;
     static int specialMusicPreparationStage;
-    static int field_b;
+    static int fullscreenDialogWrapWidth;
     static int field_h;
     private boolean included;
     static String field_d;

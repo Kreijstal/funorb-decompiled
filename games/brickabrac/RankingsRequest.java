@@ -132,7 +132,7 @@ final class RankingsRequest extends IntrusiveNode {
           if (param0 != 16727) {
             tickTimeCursor = 49;
           }
-          TabbedPane.currentBackground = rd.selectBackground(param3.pack.metadata[param2].attributeByte, (byte) 19);
+          TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(param3.pack.metadata[param2].attributeByte, (byte) 19);
           OpacityWidget.startLocalGame(var5, param2, param3, 1, param1, -12665);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

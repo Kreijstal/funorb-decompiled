@@ -232,16 +232,16 @@ final class LobbyGame extends UiComponent {
               if (board.resultWord < 0) {
                 statusText = Integer.toString(board.resultWord);
               } else {
-                statusText = rd.a(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
               if (!match.configuration.repeats) {
-                statusText = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
-                statusText = rd.a(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
               }
             }
-            nameAndStatusText = rd.a(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
+            nameAndStatusText = GamePresentationHelpers.formatIndexedText(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
             ce.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), ce.field_e.ascent + statusTop, 2, -1);
           }
           if (showMessages &&
@@ -381,16 +381,16 @@ final class LobbyGame extends UiComponent {
               if (board.resultWord < 0) {
                 statusText = Integer.toString(board.resultWord);
               } else {
-                statusText = rd.a(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
               if (!match.configuration.repeats) {
-                statusText = rd.a(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(rm.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
-                statusText = rd.a(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
               }
             }
-            nameAndStatusText = rd.a(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
+            nameAndStatusText = GamePresentationHelpers.formatIndexedText(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
             ce.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), ce.field_e.ascent + statusTop, 2, -1);
           }
           if (showMessages &&

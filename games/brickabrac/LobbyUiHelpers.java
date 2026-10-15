@@ -353,9 +353,9 @@ final class LobbyUiHelpers {
             waitingMessageForCollapse.width = 0;
             if (!hn.b((byte) 7)) {
               gameDisplayName = o.currentLobbyGame.displayName;
-              ba.field_v.text = rd.a(fm.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
+              ba.field_v.text = GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
               AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
-              AppletGameShell.field_e.text = rd.a(IntrusiveNode.field_a, new String[]{gameDisplayName}, (byte) 103);
+              AppletGameShell.field_e.text = GamePresentationHelpers.formatIndexedText(IntrusiveNode.field_a, new String[]{gameDisplayName}, (byte) 103);
               countdownTarget = AppletGameShell.field_e;
               continueOwnerEligibility = (clientBranchFlag != 0);
             }
@@ -382,7 +382,7 @@ final class LobbyUiHelpers {
                   usePluralRequestCaption = (clientBranchFlag != 0);
                 }
                 if (usePluralRequestCaption) {
-                  pendingRequestCaption = rd.a(LevelPackLoader.field_h, new String[]{Integer.toString(uf.pendingJoinRequestCount)}, (byte) 103);
+                  pendingRequestCaption = GamePresentationHelpers.formatIndexedText(LevelPackLoader.field_h, new String[]{Integer.toString(uf.pendingJoinRequestCount)}, (byte) 103);
                 }
                 RadialSelectorRenderer.field_h.text = RadialSelectorRenderer.field_h.text + "<br>" + pendingRequestCaption;
                 if ((BirthDateValidator.field_h & 16) == 0 &&
@@ -527,7 +527,7 @@ final class LobbyUiHelpers {
                   if (affectedSettingValue != ~restrictionPass) {
                     restrictionHeading = AccountContentTransitionLayer.field_rb;
                     if (ruleCursorOrMultipleSettingsFlag == 0) {
-                      restrictionDetails = rd.a(ContextMenu.field_ac, new String[]{(String) (affectedSettingNames)}, (byte) 103);
+                      restrictionDetails = GamePresentationHelpers.formatIndexedText(ContextMenu.field_ac, new String[]{(String) (affectedSettingNames)}, (byte) 103);
                       if (clientBranchFlag != 0) {
                         restrictionDetails = LoginCredentials.field_e + (String) (affectedSettingNames);
                       }
@@ -542,7 +542,7 @@ final class LobbyUiHelpers {
                       useSingularRestrictionCaption = (clientBranchFlag != 0);
                     }
                     if (useSingularRestrictionCaption) {
-                      restrictionDetails = rd.a(MouseWheelSource.field_b, new String[]{(String) (affectedSettingNames)}, (byte) 103);
+                      restrictionDetails = GamePresentationHelpers.formatIndexedText(MouseWheelSource.field_b, new String[]{(String) (affectedSettingNames)}, (byte) 103);
                     }
                   }
                   WidgetTextLayout.field_e = "<col=A00000>" + restrictionHeading + "<br>" + restrictionDetails;
@@ -660,7 +660,7 @@ final class LobbyUiHelpers {
                   DraggableWidget.field_K.enabled = false;
                   if (DraggableWidget.field_K.hovered) {
                     if (BrickGameLayerController.field_c.tabs.selectedTab != 0) {
-                      WidgetTextLayout.field_e = rd.a(NineSliceFrame.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
+                      WidgetTextLayout.field_e = GamePresentationHelpers.formatIndexedText(NineSliceFrame.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
                       if (clientBranchFlag != 0) {
                         WidgetTextLayout.field_e = LabeledToggleRenderer.field_a;
                       }
@@ -677,9 +677,9 @@ final class LobbyUiHelpers {
               if (1 > buttonSplitXOrCountdownSeconds) {
                 buttonSplitXOrCountdownSeconds = 1;
               }
-              countdownTarget.text = rd.a(SpriteGeometry.field_w, new String[]{Integer.toString(buttonSplitXOrCountdownSeconds)}, (byte) 103);
+              countdownTarget.text = GamePresentationHelpers.formatIndexedText(SpriteGeometry.field_w, new String[]{Integer.toString(buttonSplitXOrCountdownSeconds)}, (byte) 103);
             }
-            TextWidgetRenderer.field_b.text = rd.a(rl.field_d, new String[]{Integer.toString(o.currentLobbyGame.playerCount), Integer.toString(o.currentLobbyGame.maxPlayers)}, (byte) 103);
+            TextWidgetRenderer.field_b.text = GamePresentationHelpers.formatIndexedText(rl.field_d, new String[]{Integer.toString(o.currentLobbyGame.playerCount), Integer.toString(o.currentLobbyGame.maxPlayers)}, (byte) 103);
           }
           lobbyRoot = NinjaBackground.field_w;
           lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);

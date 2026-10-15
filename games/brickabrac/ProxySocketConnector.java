@@ -10,7 +10,7 @@ final class ProxySocketConnector extends SocketConnector {
     static QuickChatParameterType field_i;
     private java.net.ProxySelector proxySelector;
     static UiComponent field_n;
-    static int field_k;
+    static int fullscreenDialogCenterX;
     static boolean field_g;
     static UiComponent field_j;
 

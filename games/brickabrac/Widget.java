@@ -446,7 +446,7 @@ class Widget extends IntrusiveNode {
     final static void initializeDiagnosticOverlay(int obfuscationGuard, TextFont font) {
         try {
           SoundCache.diagnosticFont = font;
-          bq.renderRateDiagnosticLine = new DiagnosticTextLine();
+          FullscreenDialogHelpers.renderRateDiagnosticLine = new DiagnosticTextLine();
           PopupWidgetLayer.heapDiagnosticLine = new DiagnosticTextLine();
           if (obfuscationGuard != 1) {
             Widget.c(16);

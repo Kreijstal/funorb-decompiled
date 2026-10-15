@@ -7,7 +7,7 @@ final class CacheIoWorker implements Runnable {
     static int[] desertBackgroundColors;
     static RgbSprite[][] volcanicCapsSprites;
     static String field_e;
-    static String[] field_h;
+    static String[] fullscreenDialogWrapScratch;
     private boolean shutdownRequested;
     int queuedCount;
     static int[] halloweenBackgroundColors;
@@ -328,13 +328,13 @@ final class CacheIoWorker implements Runnable {
         field_b = null;
         desertBackgroundColors = null;
         volcanicCapsSprites = (RgbSprite[][]) null;
-        field_h = null;
+        fullscreenDialogWrapScratch = null;
         if (param0 == 26679) {
           halloweenBackgroundColors = null;
           field_e = null;
           return;
         }
-        field_h = (String[]) null;
+        fullscreenDialogWrapScratch = (String[]) null;
         halloweenBackgroundColors = null;
         field_e = null;
     }
@@ -362,7 +362,7 @@ final class CacheIoWorker implements Runnable {
         field_b = "Hide game chat";
         desertBackgroundColors = new int[]{16494651, 27571, 12658477, 26679, 16711935};
         field_e = "Enter name of player to add to list";
-        field_h = new String[16];
+        fullscreenDialogWrapScratch = new String[16];
         halloweenBackgroundColors = new int[]{12658477, 22953, 16494651, 26679, 16711935};
     }
 }

@@ -61,7 +61,7 @@ final class FriendListUi {
           pressedEntry = null;
           if (LevelMetadata.field_m == 2) {
             QuickChatPhraseRegistry.friendsPanel.enabled = true;
-            ChatLobbyUiHelpers.friendsStatusLabel.text = rd.a(LevelDecoder.field_c, new String[]{AlignedIconLabel.currentSocialServer}, (byte) 103);
+            ChatLobbyUiHelpers.friendsStatusLabel.text = GamePresentationHelpers.formatIndexedText(LevelDecoder.field_c, new String[]{AlignedIconLabel.currentSocialServer}, (byte) 103);
             GameScreen.friendsListPane.scrollPane.viewport.text = null;
             previousEntry = null;
             entry = (SocialListEntry) (entries.first(-76));
@@ -161,11 +161,11 @@ final class FriendListUi {
                   !TextWidgetRenderer.field_e) {
                   if (!PlayerNameChooserPanel.field_I) {
                     contextForMessage = GameRenderAudioHelpers.contextActions;
-                    messageCaption = rd.a(ClientException.field_c, new String[]{pressedName}, (byte) 103);
+                    messageCaption = GamePresentationHelpers.formatIndexedText(ClientException.field_c, new String[]{pressedName}, (byte) 103);
                     contextForMessage.contextMenu.addAction(messageCaption, 8, (byte) 84);
                   }
                   contextForSpectate = GameRenderAudioHelpers.contextActions;
-                  spectateCaption = rd.a(qm.field_b, new String[]{pressedName}, (byte) 103);
+                  spectateCaption = GamePresentationHelpers.formatIndexedText(qm.field_b, new String[]{pressedName}, (byte) 103);
                   contextForSpectate.contextMenu.addAction(spectateCaption, 18, (byte) 97);
                 }
                 pressedEntry = entry;

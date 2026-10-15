@@ -189,7 +189,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                   null != jd.field_b) {
                   var7Lifetime15 = "[" + jd.field_b + "] ";
                 } else {
-                  var7Lifetime15 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+                  var7Lifetime15 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
                 }
               }
             }
@@ -197,10 +197,10 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             var5Lifetime4 = var5Lifetime4 - CachedArchiveSource.chatFont.measureText(var20);
           } else {
             var24 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-            var18 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
+            var18 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
             var7Lifetime15 = var18;
             var7Lifetime15 = var18;
-            var8 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
+            var8 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
             var7Lifetime15 = var8;
             var7Lifetime15 = var8;
             var9 = CachedArchiveSource.chatFont.measureText(var18);
@@ -294,7 +294,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                       null != jd.field_b) {
                       var7Lifetime1Lifetime6 = "[" + jd.field_b + "] ";
                     } else {
-                      var7Lifetime1Lifetime6 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+                      var7Lifetime1Lifetime6 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
                     }
                   }
                 }
@@ -304,10 +304,10 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - CachedArchiveSource.chatFont.measureText(var20Lifetime1);
               } else {
                 var25 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-                var18Lifetime1 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
+                var18Lifetime1 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var7Lifetime1Lifetime6 = var18Lifetime1;
-                var8Lifetime1 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
+                var8Lifetime1 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
                 var7Lifetime1Lifetime6 = var8Lifetime1;
                 var7Lifetime1Lifetime6 = var8Lifetime1;
                 var9Lifetime1 = CachedArchiveSource.chatFont.measureText(var18Lifetime1);
@@ -420,7 +420,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             return true;
           }
           if (!PowerUp.field_v) {
-            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime2);
             if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
@@ -429,7 +429,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             return true;
           }
           if (null == jd.field_b) {
-            var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
+            var7Lifetime9 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime3);
             if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
@@ -442,10 +442,10 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime4);
         } else {
           var26 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-          var18Lifetime2 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
+          var18Lifetime2 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
           var7Lifetime9 = var18Lifetime2;
           var7Lifetime9 = var18Lifetime2;
-          var8Lifetime2 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
+          var8Lifetime2 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
           var7Lifetime9 = var8Lifetime2;
           var7Lifetime9 = var8Lifetime2;
           var9Lifetime2 = CachedArchiveSource.chatFont.measureText(var18Lifetime2);

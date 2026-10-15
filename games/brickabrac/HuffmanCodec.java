@@ -3,7 +3,7 @@
  */
 final class HuffmanCodec {
     private byte[] codeLengths;
-    static String[] field_h;
+    static String[] fullscreenPluralSuffix;
     private int[] decodeTrie;
     static NodeDeque pendingRankingsRequests;
     static int field_g;
@@ -283,7 +283,7 @@ final class HuffmanCodec {
     }
 
     public static void a(byte param0) {
-        field_h = null;
+        fullscreenPluralSuffix = null;
         field_c = null;
         field_e = null;
         pendingRankingsRequests = null;

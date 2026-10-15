@@ -196,7 +196,7 @@ class HotspotTextWidget extends FocusableWidget {
         if (param0 != 9) {
           fireworkSpawnMaxX = -88;
         }
-        return IntrusiveHashIterator.field_j;
+        return IntrusiveHashIterator.fullscreenDialogOpen;
     }
 
     final static RgbSprite a(int param0, String param1, int param2) {

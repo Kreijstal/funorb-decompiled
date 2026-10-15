@@ -34,7 +34,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           }
           entry = RadialSelectorRenderer.findFriend(obfuscationGuard, name);
           if (entry == null) {
-            stackIn_9_0 = rd.a(MusicVoice.field_C, new String[]{name}, (byte) 103);
+            stackIn_9_0 = GamePresentationHelpers.formatIndexedText(MusicVoice.field_C, new String[]{name}, (byte) 103);
             return stackIn_9_0;
           }
           ToggleButtonWidget.friendEntries.a((byte) 107, entry);
@@ -351,7 +351,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
           GameLayerController var3 = (GameLayerController) null;
           KeyboardInput.a((GameLayerController) null, -56);
         }
-        return rd.a(FramedMenuScreen.field_t, new String[]{(param1 >= 10 ? "" : "0") + Integer.toString(param1)}, (byte) 103).toLowerCase();
+        return GamePresentationHelpers.formatIndexedText(FramedMenuScreen.field_t, new String[]{(param1 >= 10 ? "" : "0") + Integer.toString(param1)}, (byte) 103).toLowerCase();
     }
 
     public static void a(byte param0) {

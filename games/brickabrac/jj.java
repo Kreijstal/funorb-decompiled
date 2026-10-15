@@ -3,7 +3,7 @@
  */
 final class jj {
     static String field_b;
-    static int field_c;
+    static int fullscreenDialogHeight;
     static int field_d;
     static CanvasResizeController canvasResizeController;
 
