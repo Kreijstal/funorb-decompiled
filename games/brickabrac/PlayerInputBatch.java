@@ -19,16 +19,16 @@ final class PlayerInputBatch extends IntrusiveNode {
     }
 
     final int nextControlMask(byte obfuscationGuard) {
-        int fieldTemp$0 = 0;
+        int consumedIndex = 0;
         if (obfuscationGuard == -104) {
-          fieldTemp$0 = this.readIndex;
+          consumedIndex = this.readIndex;
           this.readIndex = this.readIndex + 1;
-          return this.controlMasks[fieldTemp$0];
+          return this.controlMasks[consumedIndex];
         }
         PlayerInputBatch.b(true);
-        int fieldTemp$1 = this.readIndex;
+        int fallbackIndex = this.readIndex;
         this.readIndex = this.readIndex + 1;
-        return this.controlMasks[fieldTemp$1];
+        return this.controlMasks[fallbackIndex];
     }
 
     final static boolean isValidLegacyDate(byte obfuscationGuard, int day, int year, int monthIndex) {

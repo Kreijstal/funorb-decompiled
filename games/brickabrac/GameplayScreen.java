@@ -140,17 +140,17 @@ final class GameplayScreen extends GameScreen {
     }
 
     final void readPositionCorrection(byte obfuscationGuard, BitPacketBuffer packet) {
-        PlayerBoard dupTemp$0 = null;
+        PlayerBoard localBoard = null;
         try {
-          dupTemp$0 = this.match.playerBoards[this.localPlayerId];
-          dupTemp$0.receivedInputTick = dupTemp$0.receivedInputTick + 5;
+          localBoard = this.match.playerBoards[this.localPlayerId];
+          localBoard.receivedInputTick = localBoard.receivedInputTick + 5;
           this.match.playerBoards[this.localPlayerId].positionWord = packet.readUnsignedShort(65280);
           if (obfuscationGuard != 33) {
-            PlayerBoard var4 = (PlayerBoard) null;
+            PlayerBoard unusedBoard = (PlayerBoard) null;
             this.readLocalControls((byte) 15, (PlayerBoard) null);
           }
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qj.M(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "qj.M(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -661,12 +661,12 @@ final class GameplayScreen extends GameScreen {
 
     final void readInputBatch(byte obfuscationGuard, BitPacketBuffer packet, boolean hasChecksum) {
         int maskIndex = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String packetSummary = null;
+        RuntimeException caughtFailure = null;
         int playerId = 0;
-        RuntimeException var4 = null;
+        RuntimeException failure = null;
         PlayerInputBatch batch = null;
         PlayerBoard board = null;
         int clientBranchFlag = 0;
@@ -697,17 +697,17 @@ final class GameplayScreen extends GameScreen {
           board.bufferedInputTicks = board.bufferedInputTicks + 5;
           board.incomingInputBatches.addLast(batch, (byte) 3);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_15_0 = var4;
-          stackIn_15_1 = new StringBuilder().append("qj.B(").append(obfuscationGuard).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("qj.B(").append(obfuscationGuard).append(',');
           if (packet == null) {
-            stackIn_16_2 = "null";
+            packetSummary = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            packetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(hasChecksum).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(packetSummary).append(',').append(hasChecksum).append(')').toString());
         }
     }
 
@@ -741,18 +741,18 @@ final class GameplayScreen extends GameScreen {
     }
 
     private final void sendInputBatch(byte obfuscationGuard, int playerId, boolean hasChecksum) {
-        int var6 = 0;
-        int var7 = BrickABrac.field_J ? 1 : 0;
-        int var4 = 17 % ((29 - obfuscationGuard) / 57);
+        int maskIndex = 0;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        int guardCalculation = 17 % ((29 - obfuscationGuard) / 57);
         TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, !hasChecksum ? 68 : 69);
         TextFieldValidator.outgoingPackets.beginBitWrite(62);
-        PlayerBoard var5 = this.match.playerBoards[playerId];
-        for (var6 = 0; var6 < 5; var6++) {
-          TextFieldValidator.outgoingPackets.writeBits(3, -17566, var5.outgoingInputMasks[var6]);
+        PlayerBoard board = this.match.playerBoards[playerId];
+        for (maskIndex = 0; maskIndex < 5; maskIndex++) {
+          TextFieldValidator.outgoingPackets.writeBits(3, -17566, board.outgoingInputMasks[maskIndex]);
         }
         TextFieldValidator.outgoingPackets.finishBitWrite(-105);
         if (hasChecksum) {
-          TextFieldValidator.outgoingPackets.writeInt(var5.computeBoardChecksum(true, (StringBuilder) null) ^ var5.nextRandomInt(122), (byte) -79);
+          TextFieldValidator.outgoingPackets.writeInt(board.computeBoardChecksum(true, (StringBuilder) null) ^ board.nextRandomInt(122), (byte) -79);
         }
     }
 
@@ -1208,59 +1208,59 @@ final class GameplayScreen extends GameScreen {
     }
 
     private final boolean advanceMatch(NodeDeque remoteAudioEvents, boolean obfuscationGuard, NodeDeque localAudioEvents) {
-        NodeDeque stackIn_4_0 = null;
-        int stackIn_107_0 = 0;
-        RuntimeException stackIn_110_0 = null;
-        StringBuilder stackIn_110_1 = null;
-        String stackIn_111_2 = null;
-        StringBuilder stackIn_113_1 = null;
-        String stackIn_114_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        NodeDeque collectedQueueValue = null;
+        int advancedLocalTickResult = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String remoteAudioSummary = null;
+        StringBuilder localAudioContextBuilder = null;
+        String localAudioSummary = null;
+        RuntimeException caughtFailure = null;
         int advancedLocalTick = 0;
-        RuntimeException var4 = null;
+        RuntimeException failure = null;
         NodeDeque collectedPowerUps = null;
         int playerId = 0;
-        PlayerBoard var6 = null;
-        int var7 = 0;
+        PlayerBoard singlePlayerBoard = null;
+        int orderPlayerId = 0;
         int catchUpTicks = 0;
-        PlayerBoard var8 = null;
+        PlayerBoard orderBoard = null;
         PowerUp fallingPowerUp = null;
         int consumedTicks = 0;
-        int var10 = 0;
+        int targetMeterLevel256 = 0;
         PlayerInputBatch inputBatch = null;
-        Object var11 = null;
+        Object checksumDiagnostics = null;
         int expectedChecksum = 0;
         int clientBranchFlag = 0;
-        int var15 = 0;
+        int powerUpType = 0;
         PlayerBoard inputBoard = null;
         PlayerBoard effectBoard = null;
         PlayerBoard displayBoard = null;
-        int var6_intLifetime1;
-        int var6_intLifetime2;
-        int var6_intLifetime3;
-        int var6_intLifetime4;
-        int var7Lifetime1;
-        int var8_intLifetime1;
-        int var8_intLifetime2;
-        int var9Lifetime1;
+        int effectPlayerId;
+        int displayPlayerId;
+        int positionInversionMask;
+        int winningPlayerId;
+        int otherPlayerId;
+        int fallingPowerUpMask;
+        int targetPosition256;
+        int unusedPowerUpTypeAlias;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           advancedLocalTick = 0;
           if (!this.networkedMatch) {
-            stackIn_4_0 = new NodeDeque();
+            collectedQueueValue = new NodeDeque();
           } else {
-            stackIn_4_0 = null;
+            collectedQueueValue = null;
           }
-          collectedPowerUps = stackIn_4_0;
+          collectedPowerUps = collectedQueueValue;
           for (playerId = 0; playerId < this.match.playerCount; playerId++) {
             inputBoard = this.match.playerBoards[playerId];
             if ((1 << playerId & (this.match.playerMaskOne | (this.match.playerMaskTwo | this.match.playerMaskThree))) != 0) {
               inputBoard.maskedTicks = inputBoard.maskedTicks + 1;
             }
-            boolean decompiledFrameRemainder0 = true;
+            boolean processBoardTail = true;
             if ((1 << playerId & this.localPlayerMask) == 0) {
-              decompiledFrameRemainder0 = (inputBoard.bufferedInputTicks != 0);
-              if (decompiledFrameRemainder0) {
+              processBoardTail = (inputBoard.bufferedInputTicks != 0);
+              if (processBoardTail) {
                 catchUpTicks = 1;
                 if (inputBoard.bufferedInputTicks > 25) {
                   catchUpTicks = 3;
@@ -1279,8 +1279,8 @@ final class GameplayScreen extends GameScreen {
                     inputBatch.unlink((byte) 111);
                     inputBoard.positionWord = inputBatch.positionWord;
                     if (inputBatch.hasChecksum) {
-                      var11 = null;
-                      expectedChecksum = inputBoard.computeBoardChecksum(obfuscationGuard, (StringBuilder) (var11)) ^ inputBoard.nextRandomInt(120);
+                      checksumDiagnostics = null;
+                      expectedChecksum = inputBoard.computeBoardChecksum(obfuscationGuard, (StringBuilder) (checksumDiagnostics)) ^ inputBoard.nextRandomInt(120);
                       if (inputBatch.maskedChecksum != expectedChecksum) {
                         GameTransportHelpers.closeGameTransport((byte) 91);
                         AlignedIconLabel.a("T2 " + inputBatch.maskedChecksum + " " + expectedChecksum + " ", (Throwable) null, 54);
@@ -1296,16 +1296,16 @@ final class GameplayScreen extends GameScreen {
             } else {
               if (this.networkedMatch) {
                 catchUpTicks = inputBoard.simulationTick - inputBoard.receivedInputTick;
-                decompiledFrameRemainder0 = (!(catchUpTicks > 30) ||
+                processBoardTail = (!(catchUpTicks > 30) ||
                   0 != MembershipBenefitsScreen.clientTick % 10);
-                if ((decompiledFrameRemainder0) &&
-                  (decompiledFrameRemainder0 = (!(40 < catchUpTicks) ||
+                if ((processBoardTail) &&
+                  (processBoardTail = (!(40 < catchUpTicks) ||
                   0 != MembershipBenefitsScreen.clientTick % 5))) {
-                  decompiledFrameRemainder0 = (50 != catchUpTicks);
+                  processBoardTail = (50 != catchUpTicks);
                 }
               }
-              if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = (((this.match.playerMaskThree | (this.match.playerMaskTwo | this.match.playerMaskOne)) & 1 << playerId) == 0))) {
+              if ((processBoardTail) &&
+                (processBoardTail = (((this.match.playerMaskThree | (this.match.playerMaskTwo | this.match.playerMaskOne)) & 1 << playerId) == 0))) {
                 this.match.applyPendingPowerUps((byte) 127, playerId);
                 this.match.advanceBoard(inputBoard, localAudioEvents, collectedPowerUps, 0);
                 if (!this.networkedMatch) {
@@ -1316,133 +1316,133 @@ final class GameplayScreen extends GameScreen {
                 inputBoard.simulationTick = inputBoard.simulationTick + 1;
               }
             }
-            if (decompiledFrameRemainder0) {
+            if (processBoardTail) {
               if (collectedPowerUps != null) {
                 collectedPowerUps.clear((byte) -110);
               }
               inputBoard.advancePowerUpWarnings(-101);
             }
           }
-          var6_intLifetime1 = 0;
+          effectPlayerId = 0;
           if (!obfuscationGuard) {
             this.localPlayerId = 29;
           }
-          while (this.match.playerCount > var6_intLifetime1) {
-            effectBoard = this.match.playerBoards[var6_intLifetime1];
-            var8_intLifetime1 = 0;
+          while (this.match.playerCount > effectPlayerId) {
+            effectBoard = this.match.playerBoards[effectPlayerId];
+            fallingPowerUpMask = 0;
             fallingPowerUp = (PowerUp) (effectBoard.fallingPowerUps.first(-48));
             while (fallingPowerUp != null) {
-              var8_intLifetime1 = var8_intLifetime1 | 1 << fallingPowerUp.typeId;
+              fallingPowerUpMask = fallingPowerUpMask | 1 << fallingPowerUp.typeId;
               fallingPowerUp = (PowerUp) (effectBoard.fallingPowerUps.next((byte) 116));
             }
-            var15 = 0;
-            var9Lifetime1 = var15;
-            while (var15 < 29) {
-              if (WeightedLruCache.powerUpDropPeriods[var15] >= 1) {
-                var10 = (20 * effectBoard.powerUpDropCounters[var15] << 8) / WeightedLruCache.powerUpDropPeriods[var15];
-                if ((1 << var15 & var8_intLifetime1) != 0) {
-                  var10 = 5120;
+            powerUpType = 0;
+            unusedPowerUpTypeAlias = powerUpType;
+            while (powerUpType < 29) {
+              if (WeightedLruCache.powerUpDropPeriods[powerUpType] >= 1) {
+                targetMeterLevel256 = (20 * effectBoard.powerUpDropCounters[powerUpType] << 8) / WeightedLruCache.powerUpDropPeriods[powerUpType];
+                if ((1 << powerUpType & fallingPowerUpMask) != 0) {
+                  targetMeterLevel256 = 5120;
                 }
-                effectBoard.powerUpMeterVelocities256[var15] = effectBoard.powerUpMeterVelocities256[var15] + (-effectBoard.powerUpMeterLevels256[var15] + var10) / 100;
-                effectBoard.powerUpMeterVelocities256[var15] = 7 * effectBoard.powerUpMeterVelocities256[var15] / 8;
-                if (512 < effectBoard.powerUpMeterVelocities256[var15]) {
-                  effectBoard.powerUpMeterVelocities256[var15] = 512;
+                effectBoard.powerUpMeterVelocities256[powerUpType] = effectBoard.powerUpMeterVelocities256[powerUpType] + (-effectBoard.powerUpMeterLevels256[powerUpType] + targetMeterLevel256) / 100;
+                effectBoard.powerUpMeterVelocities256[powerUpType] = 7 * effectBoard.powerUpMeterVelocities256[powerUpType] / 8;
+                if (512 < effectBoard.powerUpMeterVelocities256[powerUpType]) {
+                  effectBoard.powerUpMeterVelocities256[powerUpType] = 512;
                 }
-                if (effectBoard.powerUpMeterVelocities256[var15] < -512) {
-                  effectBoard.powerUpMeterVelocities256[var15] = -512;
+                if (effectBoard.powerUpMeterVelocities256[powerUpType] < -512) {
+                  effectBoard.powerUpMeterVelocities256[powerUpType] = -512;
                 }
-                effectBoard.powerUpMeterLevels256[var15] = effectBoard.powerUpMeterLevels256[var15] + effectBoard.powerUpMeterVelocities256[var15];
-                if (effectBoard.powerUpMeterVelocities256[var15] > 0 &&
-                  effectBoard.powerUpMeterLevels256[var15] > var10 ||
-                  !(effectBoard.powerUpMeterVelocities256[var15] >= 0) &&
-                  !(var10 <= effectBoard.powerUpMeterLevels256[var15])) {
-                  effectBoard.powerUpMeterLevels256[var15] = var10;
+                effectBoard.powerUpMeterLevels256[powerUpType] = effectBoard.powerUpMeterLevels256[powerUpType] + effectBoard.powerUpMeterVelocities256[powerUpType];
+                if (effectBoard.powerUpMeterVelocities256[powerUpType] > 0 &&
+                  effectBoard.powerUpMeterLevels256[powerUpType] > targetMeterLevel256 ||
+                  !(effectBoard.powerUpMeterVelocities256[powerUpType] >= 0) &&
+                  !(targetMeterLevel256 <= effectBoard.powerUpMeterLevels256[powerUpType])) {
+                  effectBoard.powerUpMeterLevels256[powerUpType] = targetMeterLevel256;
                 }
               }
-              var15++;
+              powerUpType++;
             }
-            var6_intLifetime1++;
+            effectPlayerId++;
           }
           if (this.match.playerCount > 1) {
-            for (var6_intLifetime2 = 0; var6_intLifetime2 < this.match.playerCount; var6_intLifetime2++) {
-              displayBoard = this.match.playerBoards[var6_intLifetime2];
-              var8_intLifetime2 = displayBoard.positionWord + displayBoard.boardOffset << 8;
-              displayBoard.displayedPositionVelocity256 = displayBoard.displayedPositionVelocity256 + (var8_intLifetime2 - displayBoard.displayedPosition256) / 100;
+            for (displayPlayerId = 0; displayPlayerId < this.match.playerCount; displayPlayerId++) {
+              displayBoard = this.match.playerBoards[displayPlayerId];
+              targetPosition256 = displayBoard.positionWord + displayBoard.boardOffset << 8;
+              displayBoard.displayedPositionVelocity256 = displayBoard.displayedPositionVelocity256 + (targetPosition256 - displayBoard.displayedPosition256) / 100;
               displayBoard.displayedPositionVelocity256 = 7 * displayBoard.displayedPositionVelocity256 / 8;
               if (displayBoard.displayedPositionVelocity256 > 1280) {
                 displayBoard.displayedPositionVelocity256 = 1280;
               }
               displayBoard.displayedPosition256 = displayBoard.displayedPosition256 + displayBoard.displayedPositionVelocity256;
-              if (displayBoard.displayedPosition256 > var8_intLifetime2) {
-                displayBoard.displayedPosition256 = var8_intLifetime2;
+              if (displayBoard.displayedPosition256 > targetPosition256) {
+                displayBoard.displayedPosition256 = targetPosition256;
               }
             }
           }
           if (this.match.playerCount > 1) {
-            var6_intLifetime3 = this.match.getWrappedPositionInversionMask(125);
-            for (var7 = 0; this.match.playerCount > var7; var7++) {
-              var8 = this.match.playerBoards[var7];
-              if ((1 << var7 & var6_intLifetime3) != 0) {
-                if (var8.positionOrderTicks == -1) {
-                  var8.positionOrderTicks = 500;
+            positionInversionMask = this.match.getWrappedPositionInversionMask(125);
+            for (orderPlayerId = 0; this.match.playerCount > orderPlayerId; orderPlayerId++) {
+              orderBoard = this.match.playerBoards[orderPlayerId];
+              if ((1 << orderPlayerId & positionInversionMask) != 0) {
+                if (orderBoard.positionOrderTicks == -1) {
+                  orderBoard.positionOrderTicks = 500;
                 }
               } else {
-                var8.positionOrderTicks = -1;
+                orderBoard.positionOrderTicks = -1;
               }
             }
           }
           if (!this.networkedMatch) {
             if (this.match.playerCount == 1) {
-              var6 = this.match.playerBoards[0];
-              if (var6.boardState == 8 ||
-                var6.boardState == 9) {
+              singlePlayerBoard = this.match.playerBoards[0];
+              if (singlePlayerBoard.boardState == 8 ||
+                singlePlayerBoard.boardState == 9) {
                 this.finishOfflineMatch((byte) 40, false);
-                if (8 != var6.boardState) {
+                if (8 != singlePlayerBoard.boardState) {
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
               }
             } else {
               if (!this.match.resultsReady) {
                 this.match.playerMaskThree = this.match.playerMaskThree | this.match.getStateSevenPlayerMask(-17566);
-                this.match.playerMaskTwo = this.match.playerMaskTwo | this.match.getStateZeroPlayerMask((byte) -92);
+                this.match.playerMaskTwo = this.match.playerMaskTwo | this.match.getExpiredPositionTimerMask((byte) -92);
                 if (this.match.checkMatchCompletion(82)) {
                   if (-1 == this.match.lastRemainingPlayerId) {
                     this.match.lastRemainingPlayerId = 0;
                   }
-                  var6_intLifetime4 = this.match.lastRemainingPlayerId;
-                  var7Lifetime1 = 1 - this.match.lastRemainingPlayerId;
-                  if ((this.match.playerMaskThree & 1 << var7Lifetime1) != 0) {
-                    var6_intLifetime4 = var7Lifetime1;
+                  winningPlayerId = this.match.lastRemainingPlayerId;
+                  otherPlayerId = 1 - this.match.lastRemainingPlayerId;
+                  if ((this.match.playerMaskThree & 1 << otherPlayerId) != 0) {
+                    winningPlayerId = otherPlayerId;
                   }
-                  this.match.playerBoards[var6_intLifetime4].resultCode = 1;
-                  this.match.resultOrder[0] = var6_intLifetime4;
-                  this.match.playerBoards[-var6_intLifetime4 + 1].resultCode = 2;
-                  this.match.resultOrder[1] = 1 - var6_intLifetime4;
+                  this.match.playerBoards[winningPlayerId].resultCode = 1;
+                  this.match.resultOrder[0] = winningPlayerId;
+                  this.match.playerBoards[-winningPlayerId + 1].resultCode = 2;
+                  this.match.resultOrder[1] = 1 - winningPlayerId;
                   this.match.markResultsReady(false);
                   KeyboardInput.hasNonnegativeResult = true;
                 }
               }
             }
           }
-          stackIn_107_0 = advancedLocalTick;
-          return stackIn_107_0 != 0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_110_0 = var4;
-          stackIn_110_1 = new StringBuilder().append("qj.P(");
+          advancedLocalTickResult = advancedLocalTick;
+          return advancedLocalTickResult != 0;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("qj.P(");
           if (remoteAudioEvents == null) {
-            stackIn_111_2 = "null";
+            remoteAudioSummary = "null";
           } else {
-            stackIn_111_2 = "{...}";
+            remoteAudioSummary = "{...}";
           }
-          stackIn_113_1 = ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(',').append(obfuscationGuard).append(',');
+          localAudioContextBuilder = ((StringBuilder) (Object) contextBuilder).append(remoteAudioSummary).append(',').append(obfuscationGuard).append(',');
           if (localAudioEvents == null) {
-            stackIn_114_2 = "null";
+            localAudioSummary = "null";
           } else {
-            stackIn_114_2 = "{...}";
+            localAudioSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_110_0), ((StringBuilder) (Object) stackIn_113_1).append(stackIn_114_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) localAudioContextBuilder).append(localAudioSummary).append(')').toString());
         }
     }
 
@@ -1503,11 +1503,11 @@ final class GameplayScreen extends GameScreen {
     }
 
     private final void readLocalControls(byte obfuscationGuard, PlayerBoard board) {
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
           board.controlMask = 0;
           if (IntArrayRequest.heldKeys[board.leftKeyCode]) {
@@ -1536,17 +1536,17 @@ final class GameplayScreen extends GameScreen {
             board.controlMask = board.controlMask | 4;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_22_0 = var3;
-          stackIn_22_1 = new StringBuilder().append("qj.GA(").append(obfuscationGuard).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("qj.GA(").append(obfuscationGuard).append(',');
           if (board == null) {
-            stackIn_23_2 = "null";
+            boardSummary = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            boardSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(')').toString());
         }
     }
 

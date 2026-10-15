@@ -19,25 +19,25 @@ final class MultiplayerMatch {
 
     final void distributeQueuedAttacks(int playerId, int tickOffset, NodeDeque attacks, byte obfuscationGuard) {
         int recipientIndex = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_6_1 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
-        String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        int var7 = 0;
+        int routingPlayerCount = 0;
+        int singlePlayerCount = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String attacksSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int unusedGameFlag = 0;
         PowerUp powerUp = null;
-        var7 = BrickABrac.field_J ? 1 : 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard > -39) {
             this.getStateSevenPlayerMask(86);
           }
           powerUp = (PowerUp) (attacks.first(-44));
           while (powerUp != null) {
-            stackIn_6_0 = this.playerCount;
-            stackIn_6_1 = 1;
-            if (stackIn_6_0 != stackIn_6_1 &&
+            routingPlayerCount = this.playerCount;
+            singlePlayerCount = 1;
+            if (routingPlayerCount != singlePlayerCount &&
               !powerUp.isSelfTargeted(false)) {
               for (recipientIndex = 0; recipientIndex < this.playerCount; recipientIndex++) {
                 if (recipientIndex != playerId &&
@@ -51,39 +51,39 @@ final class MultiplayerMatch {
             powerUp = (PowerUp) (attacks.next((byte) 116));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("ak.I(").append(playerId).append(',').append(tickOffset).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ak.I(").append(playerId).append(',').append(tickOffset).append(',');
           if (attacks == null) {
-            stackIn_20_2 = "null";
+            attacksSummary = "null";
           } else {
-            stackIn_20_2 = "{...}";
+            attacksSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(attacksSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final int getStateZeroPlayerMask(byte obfuscationGuard) {
-        boolean discarded$1 = false;
-        int var3 = 0;
-        int var2;
-        int var4;
-        Ball var5;
-        var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = 0;
+    final int getExpiredPositionTimerMask(byte obfuscationGuard) {
+        boolean unusedSubstepResult = false;
+        int playerIndex = 0;
+        int expiredMask;
+        int unusedGameFlag;
+        Ball unusedBall;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        expiredMask = 0;
         if (obfuscationGuard != -92) {
-          var5 = (Ball) null;
-          discarded$1 = this.advanceBallSubstep((PlayerBoard) null, (NodeDeque) null, -18, 53, (Ball) null);
+          unusedBall = (Ball) null;
+          unusedSubstepResult = this.advanceBallSubstep((PlayerBoard) null, (NodeDeque) null, -18, 53, (Ball) null);
         }
-        for (var3 = 0; var3 < this.playerCount; var3++) {
-          if (((this.playerMaskOne | (this.playerMaskThree | this.playerMaskTwo)) & 1 << var3) == 0 &&
-            this.playerBoards[var3].positionOrderTicks == 0) {
-            var2 = var2 | 1 << var3;
+        for (playerIndex = 0; playerIndex < this.playerCount; playerIndex++) {
+          if (((this.playerMaskOne | (this.playerMaskThree | this.playerMaskTwo)) & 1 << playerIndex) == 0 &&
+            this.playerBoards[playerIndex].positionOrderTicks == 0) {
+            expiredMask = expiredMask | 1 << playerIndex;
           }
         }
-        return var2;
+        return expiredMask;
     }
 
     final void markResultsReady(boolean obfuscationGuard) {
@@ -94,23 +94,23 @@ final class MultiplayerMatch {
     }
 
     final int getStateSevenPlayerMask(int obfuscationGuard) {
-        int var2;
-        int var3;
-        int var4;
-        var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = 0;
-        var3 = 0;
+        int stateSevenMask;
+        int playerIndex;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        stateSevenMask = 0;
+        playerIndex = 0;
         if (obfuscationGuard != -17566) {
           return -12;
         }
-        while (var3 < this.playerCount) {
-          if ((1 << var3 & this.playerMaskThree) == 0 &&
-            7 == this.playerBoards[var3].boardState) {
-            var2 = var2 | 1 << var3;
+        while (playerIndex < this.playerCount) {
+          if ((1 << playerIndex & this.playerMaskThree) == 0 &&
+            7 == this.playerBoards[playerIndex].boardState) {
+            stateSevenMask = stateSevenMask | 1 << playerIndex;
           }
-          var3++;
+          playerIndex++;
         }
-        return var2;
+        return stateSevenMask;
     }
 
     final void advanceBoard(PlayerBoard board, NodeDeque audioEvents, NodeDeque collectedPowerUps, int obfuscationGuard) {
@@ -946,8 +946,8 @@ final class MultiplayerMatch {
     final void applyPendingPowerUps(byte obfuscationGuard, int playerId) {
         PlayerBoard board;
         PowerUp powerUp;
-        int var5;
-        var5 = BrickABrac.field_J ? 1 : 0;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         if (obfuscationGuard < 81) {
           this.resultsReady = true;
         }

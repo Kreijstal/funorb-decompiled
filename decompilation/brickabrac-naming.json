@@ -22276,6 +22276,46 @@
       "renamedSymbol": "L:MultiplayerMatch.<init>([Ljava/lang/String;ILLevelSequence;[I[I)V#16"
     },
     {
+      "symbol": "L:ak.a(B)I#0",
+      "originalName": "discarded$1",
+      "to": "unusedSubstepResult",
+      "evidence": "ak.java: The position timer mask selects countdown zero independently of boardState, after excluding all three masks. Its noncanonical guard retains a discarded ball-substep call with null arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#0"
+    },
+    {
+      "symbol": "L:ak.a(B)I#1",
+      "originalName": "var3",
+      "to": "playerIndex",
+      "evidence": "ak.java: The position timer mask selects countdown zero independently of boardState, after excluding all three masks. Its noncanonical guard retains a discarded ball-substep call with null arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#1"
+    },
+    {
+      "symbol": "L:ak.a(B)I#2",
+      "originalName": "var2",
+      "to": "expiredMask",
+      "evidence": "ak.java: The position timer mask selects countdown zero independently of boardState, after excluding all three masks. Its noncanonical guard retains a discarded ball-substep call with null arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#2"
+    },
+    {
+      "symbol": "L:ak.a(B)I#3",
+      "originalName": "var4",
+      "to": "unusedGameFlag",
+      "evidence": "ak.java: The position timer mask selects countdown zero independently of boardState, after excluding all three masks. Its noncanonical guard retains a discarded ball-substep call with null arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#3"
+    },
+    {
+      "symbol": "L:ak.a(B)I#4",
+      "originalName": "var5",
+      "to": "unusedBall",
+      "evidence": "ak.java: The position timer mask selects countdown zero independently of boardState, after excluding all three masks. Its noncanonical guard retains a discarded ball-substep call with null arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#4"
+    },
+    {
       "symbol": "L:ak.a(BI)V#0",
       "originalName": "var3",
       "to": "board",
@@ -22290,6 +22330,14 @@
       "evidence": "ak.java: Current pending power-up; its activation tick gates application.",
       "confidence": "reviewed",
       "renamedSymbol": "L:MultiplayerMatch.applyPendingPowerUps(BI)V#1"
+    },
+    {
+      "symbol": "L:ak.a(BI)V#2",
+      "originalName": "var5",
+      "to": "unusedGameFlag",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.applyPendingPowerUps(BI)V#2"
     },
     {
       "symbol": "L:ak.a(I)I#0",
@@ -22362,6 +22410,78 @@
       "evidence": "ak.java: Opponent routing iterates this board index.",
       "confidence": "reviewed",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#0"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#1",
+      "originalName": "stackIn_6_0",
+      "to": "routingPlayerCount",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#1"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#10",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#10"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#2",
+      "originalName": "stackIn_6_1",
+      "to": "singlePlayerCount",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#2"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#3",
+      "originalName": "stackIn_19_0",
+      "to": "failureContext",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#3"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#4",
+      "originalName": "stackIn_19_1",
+      "to": "contextBuilder",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#4"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#5",
+      "originalName": "stackIn_20_2",
+      "to": "attacksSummary",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#5"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#6",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#6"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#7",
+      "originalName": "var5",
+      "to": "failure",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#7"
+    },
+    {
+      "symbol": "L:ak.a(IILvl;B)V#8",
+      "originalName": "var7",
+      "to": "unusedGameFlag",
+      "evidence": "ak.java: Reviewed queued-effect routing copies each effect at the recipient board simulationTick plus tickOffset, selecting the source board for self-targeted/single-player cases and other unmasked boards otherwise. Due-effect application consumes only the ordered prefix up to the first future activation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#8"
     },
     {
       "symbol": "L:ak.a(IILvl;B)V#9",
@@ -22658,6 +22778,30 @@
       "evidence": "ak.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
       "confidence": "reviewed",
       "renamedSymbol": "L:MultiplayerMatch.checkMatchCompletion(I)Z#0"
+    },
+    {
+      "symbol": "L:ak.c(I)I#0",
+      "originalName": "var2",
+      "to": "stateSevenMask",
+      "evidence": "ak.java: Selects boardState7 after excluding playerMaskThree; the local accumulator and index retain their exact source roles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getStateSevenPlayerMask(I)I#0"
+    },
+    {
+      "symbol": "L:ak.c(I)I#1",
+      "originalName": "var3",
+      "to": "playerIndex",
+      "evidence": "ak.java: Selects boardState7 after excluding playerMaskThree; the local accumulator and index retain their exact source roles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getStateSevenPlayerMask(I)I#1"
+    },
+    {
+      "symbol": "L:ak.c(I)I#2",
+      "originalName": "var4",
+      "to": "unusedGameFlag",
+      "evidence": "ak.java: Selects boardState7 after excluding playerMaskThree; the local accumulator and index retain their exact source roles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.getStateSevenPlayerMask(I)I#2"
     },
     {
       "symbol": "L:am.<init>(IIIIILmh;Lmh;Lmh;Lmh;Lni;Lmh;Ljava/lang/String;J)V#0",
@@ -49140,6 +49284,22 @@
       "renamedSymbol": "L:KeyboardInput.keyTyped(Ljava/awt/event/KeyEvent;)V#1"
     },
     {
+      "symbol": "L:p.a(B)I#0",
+      "originalName": "fieldTemp$0",
+      "to": "consumedIndex",
+      "evidence": "p.java: Retains the old readIndex before increment and array access; the cursor still advances before a failing array read.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerInputBatch.nextControlMask(B)I#0"
+    },
+    {
+      "symbol": "L:p.a(B)I#1",
+      "originalName": "fieldTemp$1",
+      "to": "fallbackIndex",
+      "evidence": "p.java: Noncanonical input-mask reads retain their cleanup call before the same cursor increment and array access.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PlayerInputBatch.nextControlMask(B)I#1"
+    },
+    {
       "symbol": "L:pa.a(IIILdh;IIILta;IIIIILta;IILdh;Lta;III)V#0",
       "originalName": "stackIn_5_0",
       "to": "failureContext",
@@ -50660,6 +50820,110 @@
       "renamedSymbol": "L:GameplayScreen.setStartingLevel(BI)V#2"
     },
     {
+      "symbol": "L:qj.a(BIZ)V#0",
+      "originalName": "var6",
+      "to": "maskIndex",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#0"
+    },
+    {
+      "symbol": "L:qj.a(BIZ)V#1",
+      "originalName": "var7",
+      "to": "unusedGameFlag",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#1"
+    },
+    {
+      "symbol": "L:qj.a(BIZ)V#2",
+      "originalName": "var4",
+      "to": "guardCalculation",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#2"
+    },
+    {
+      "symbol": "L:qj.a(BIZ)V#3",
+      "originalName": "var5",
+      "to": "board",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#3"
+    },
+    {
+      "symbol": "L:qj.a(BLj;)V#0",
+      "originalName": "stackIn_22_0",
+      "to": "failureContext",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#0"
+    },
+    {
+      "symbol": "L:qj.a(BLj;)V#1",
+      "originalName": "stackIn_22_1",
+      "to": "contextBuilder",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#1"
+    },
+    {
+      "symbol": "L:qj.a(BLj;)V#2",
+      "originalName": "stackIn_23_2",
+      "to": "boardSummary",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#2"
+    },
+    {
+      "symbol": "L:qj.a(BLj;)V#3",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#3"
+    },
+    {
+      "symbol": "L:qj.a(BLj;)V#4",
+      "originalName": "var3",
+      "to": "failure",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#4"
+    },
+    {
+      "symbol": "L:qj.a(BLj;)V#5",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#5"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;)V#0",
+      "originalName": "dupTemp$0",
+      "to": "localBoard",
+      "evidence": "qj.java: Position correction advances the local board receive tick by5 and decodes its unsigned16 position; the noncanonical guard retains a null-board input call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readPositionCorrection(BLBitPacketBuffer;)V#0"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;)V#1",
+      "originalName": "var4",
+      "to": "unusedBoard",
+      "evidence": "qj.java: Position correction advances the local board receive tick by5 and decodes its unsigned16 position; the noncanonical guard retains a null-board input call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readPositionCorrection(BLBitPacketBuffer;)V#1"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;)V#2",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "qj.java: Position correction advances the local board receive tick by5 and decodes its unsigned16 position; the noncanonical guard retains a null-board input call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readPositionCorrection(BLBitPacketBuffer;)V#2"
+    },
+    {
       "symbol": "L:qj.a(BLpi;Z)V#0",
       "originalName": "var6_int",
       "to": "maskIndex",
@@ -50668,12 +50932,60 @@
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#0"
     },
     {
+      "symbol": "L:qj.a(BLpi;Z)V#1",
+      "originalName": "stackIn_15_0",
+      "to": "failureContext",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#1"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;Z)V#10",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#10"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;Z)V#2",
+      "originalName": "stackIn_15_1",
+      "to": "contextBuilder",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#2"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;Z)V#3",
+      "originalName": "stackIn_16_2",
+      "to": "packetSummary",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#3"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;Z)V#4",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#4"
+    },
+    {
       "symbol": "L:qj.a(BLpi;Z)V#5",
       "originalName": "var4_int",
       "to": "playerId",
       "evidence": "qj.java: Reviewed incoming control-batch parser declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#5"
+    },
+    {
+      "symbol": "L:qj.a(BLpi;Z)V#6",
+      "originalName": "var4",
+      "to": "failure",
+      "evidence": "qj.java: Reviewed control transport uses five three-bit masks per batch, an optional masked checksum, per-player receive/buffered tick accounting and the existing context wrappers. Local controls OR held keys into the three-bit mask before the controller consumes it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#6"
     },
     {
       "symbol": "L:qj.a(BLpi;Z)V#7",
@@ -50828,6 +51140,22 @@
       "renamedSymbol": "L:GameplayScreen.setResultLevel(IZ)V#0"
     },
     {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#0",
+      "originalName": "stackIn_4_0",
+      "to": "collectedQueueValue",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#0"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#1",
+      "originalName": "stackIn_107_0",
+      "to": "advancedLocalTickResult",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#1"
+    },
+    {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#10",
       "originalName": "var5",
       "to": "collectedPowerUps",
@@ -50844,12 +51172,36 @@
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#11"
     },
     {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#12",
+      "originalName": "var6",
+      "to": "singlePlayerBoard",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#12"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
+      "originalName": "var7",
+      "to": "orderPlayerId",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#13"
+    },
+    {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#14",
       "originalName": "var8_int",
       "to": "catchUpTicks",
       "evidence": "qj.java: Reviewed remote/local simulation and input-batch consumption declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#14"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#15",
+      "originalName": "var8",
+      "to": "orderBoard",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#15"
     },
     {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#16",
@@ -50868,12 +51220,36 @@
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#17"
     },
     {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+      "originalName": "var10",
+      "to": "targetMeterLevel256",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#18"
+    },
+    {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#19",
       "originalName": "var10_ref_p",
       "to": "inputBatch",
       "evidence": "qj.java: Reviewed remote/local simulation and input-batch consumption declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#19"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#2",
+      "originalName": "stackIn_110_0",
+      "to": "failureContext",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#2"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#20",
+      "originalName": "var11",
+      "to": "checksumDiagnostics",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#20"
     },
     {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#21",
@@ -50890,6 +51266,14 @@
       "evidence": "qj.java: Reviewed remote/local simulation and input-batch consumption declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#22"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+      "originalName": "var15",
+      "to": "powerUpType",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#23"
     },
     {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#24",
@@ -50916,12 +51300,140 @@
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#26"
     },
     {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#27",
+      "originalName": "var6_intLifetime1",
+      "to": "effectPlayerId",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#27"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#28",
+      "originalName": "var6_intLifetime2",
+      "to": "displayPlayerId",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#28"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#29",
+      "originalName": "var6_intLifetime3",
+      "to": "positionInversionMask",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#29"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#3",
+      "originalName": "stackIn_110_1",
+      "to": "contextBuilder",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#3"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+      "originalName": "var6_intLifetime4",
+      "to": "winningPlayerId",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#30"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#31",
+      "originalName": "var7Lifetime1",
+      "to": "otherPlayerId",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#31"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#32",
+      "originalName": "var8_intLifetime1",
+      "to": "fallingPowerUpMask",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#32"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#33",
+      "originalName": "var8_intLifetime2",
+      "to": "targetPosition256",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#33"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#34",
+      "originalName": "var9Lifetime1",
+      "to": "unusedPowerUpTypeAlias",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#34"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+      "originalName": "decompiledFrameRemainder0",
+      "to": "processBoardTail",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#35"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#36",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#36"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#4",
+      "originalName": "stackIn_111_2",
+      "to": "remoteAudioSummary",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#4"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#5",
+      "originalName": "stackIn_113_1",
+      "to": "localAudioContextBuilder",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#5"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#6",
+      "originalName": "stackIn_114_2",
+      "to": "localAudioSummary",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#6"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#7",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#7"
+    },
+    {
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#8",
       "originalName": "var4_int",
       "to": "advancedLocalTick",
       "evidence": "qj.java: Reviewed remote/local simulation and input-batch consumption declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#8"
+    },
+    {
+      "symbol": "L:qj.a(Lvl;ZLvl;)Z#9",
+      "originalName": "var4",
+      "to": "failure",
+      "evidence": "qj.java: Reviewed match advancement separates remote batch consumption and local tick throttling from power-up meter easing, displayed position easing, inversion countdowns and offline result selection. The shared conditional carrier controls per-board tail processing; retained aliases and context carriers are not removed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#9"
     },
     {
       "symbol": "L:qj.b(I)V#0",
@@ -62614,10 +63126,10 @@
     {
       "symbol": "M:ak.a(B)I",
       "originalName": "a",
-      "to": "getStateZeroPlayerMask",
-      "evidence": "ak.java: Selects boards with state M zero excluding OR of three masks; canonical guard -92.",
+      "to": "getExpiredPositionTimerMask",
+      "evidence": "ak.java: Selects unmasked players whose positionOrderTicks countdown is exactly zero; this predicate does not test boardState. The existing independent mask fixture distinguishes the timer from board state; canonical guard -92.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MultiplayerMatch.getStateZeroPlayerMask(B)I"
+      "renamedSymbol": "M:MultiplayerMatch.getExpiredPositionTimerMask(B)I"
     },
     {
       "symbol": "M:ak.a(BI)V",
@@ -78231,9 +78743,9 @@
       "symbol": "P:ak.a(B)I#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
-      "evidence": "ak.java: Selects boards with state M zero excluding OR of three masks; canonical guard -92.",
+      "evidence": "ak.java: Selects unmasked players whose positionOrderTicks countdown is exactly zero; this predicate does not test boardState. The existing independent mask fixture distinguishes the timer from board state; canonical guard -92.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:MultiplayerMatch.getStateZeroPlayerMask(B)I#0"
+      "renamedSymbol": "P:MultiplayerMatch.getExpiredPositionTimerMask(B)I#0"
     },
     {
       "symbol": "P:ak.a(BI)V#0",
@@ -171815,9 +172327,9 @@
     },
     {
       "symbol": "L:ak.a(B)I#0",
-      "renamedSymbol": "L:MultiplayerMatch.getStateZeroPlayerMask(B)I#0",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#0",
       "originalName": "discarded$1",
-      "renamedName": "discarded$1",
+      "renamedName": "unusedSubstepResult",
       "declaration": {
         "file": "ak.java",
         "start": 2331,
@@ -171826,9 +172338,9 @@
     },
     {
       "symbol": "L:ak.a(B)I#1",
-      "renamedSymbol": "L:MultiplayerMatch.getStateZeroPlayerMask(B)I#1",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "playerIndex",
       "declaration": {
         "file": "ak.java",
         "start": 2364,
@@ -171837,9 +172349,9 @@
     },
     {
       "symbol": "L:ak.a(B)I#2",
-      "renamedSymbol": "L:MultiplayerMatch.getStateZeroPlayerMask(B)I#2",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#2",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "expiredMask",
       "declaration": {
         "file": "ak.java",
         "start": 2386,
@@ -171848,9 +172360,9 @@
     },
     {
       "symbol": "L:ak.a(B)I#3",
-      "renamedSymbol": "L:MultiplayerMatch.getStateZeroPlayerMask(B)I#3",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#3",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "ak.java",
         "start": 2404,
@@ -171859,9 +172371,9 @@
     },
     {
       "symbol": "L:ak.a(B)I#4",
-      "renamedSymbol": "L:MultiplayerMatch.getStateZeroPlayerMask(B)I#4",
+      "renamedSymbol": "L:MultiplayerMatch.getExpiredPositionTimerMask(B)I#4",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "unusedBall",
       "declaration": {
         "file": "ak.java",
         "start": 2421,
@@ -171894,7 +172406,7 @@
       "symbol": "L:ak.a(BI)V#2",
       "renamedSymbol": "L:MultiplayerMatch.applyPendingPowerUps(BI)V#2",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "ak.java",
         "start": 37034,
@@ -172004,7 +172516,7 @@
       "symbol": "L:ak.a(IILvl;B)V#1",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#1",
       "originalName": "stackIn_6_0",
-      "renamedName": "stackIn_6_0",
+      "renamedName": "routingPlayerCount",
       "declaration": {
         "file": "ak.java",
         "start": 421,
@@ -172015,7 +172527,7 @@
       "symbol": "L:ak.a(IILvl;B)V#10",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#10",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "ak.java",
         "start": 1675,
@@ -172026,7 +172538,7 @@
       "symbol": "L:ak.a(IILvl;B)V#2",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#2",
       "originalName": "stackIn_6_1",
-      "renamedName": "stackIn_6_1",
+      "renamedName": "singlePlayerCount",
       "declaration": {
         "file": "ak.java",
         "start": 450,
@@ -172037,7 +172549,7 @@
       "symbol": "L:ak.a(IILvl;B)V#3",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#3",
       "originalName": "stackIn_19_0",
-      "renamedName": "stackIn_19_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "ak.java",
         "start": 492,
@@ -172048,7 +172560,7 @@
       "symbol": "L:ak.a(IILvl;B)V#4",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#4",
       "originalName": "stackIn_19_1",
-      "renamedName": "stackIn_19_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "ak.java",
         "start": 535,
@@ -172059,7 +172571,7 @@
       "symbol": "L:ak.a(IILvl;B)V#5",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#5",
       "originalName": "stackIn_20_2",
-      "renamedName": "stackIn_20_2",
+      "renamedName": "attacksSummary",
       "declaration": {
         "file": "ak.java",
         "start": 571,
@@ -172070,7 +172582,7 @@
       "symbol": "L:ak.a(IILvl;B)V#6",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#6",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "ak.java",
         "start": 617,
@@ -172081,7 +172593,7 @@
       "symbol": "L:ak.a(IILvl;B)V#7",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#7",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "failure",
       "declaration": {
         "file": "ak.java",
         "start": 676,
@@ -172092,7 +172604,7 @@
       "symbol": "L:ak.a(IILvl;B)V#8",
       "renamedSymbol": "L:MultiplayerMatch.distributeQueuedAttacks(IILNodeDeque;B)V#8",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "ak.java",
         "start": 701,
@@ -173423,7 +173935,7 @@
       "symbol": "L:ak.c(I)I#0",
       "renamedSymbol": "L:MultiplayerMatch.getStateSevenPlayerMask(I)I#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "stateSevenMask",
       "declaration": {
         "file": "ak.java",
         "start": 3067,
@@ -173434,7 +173946,7 @@
       "symbol": "L:ak.c(I)I#1",
       "renamedSymbol": "L:MultiplayerMatch.getStateSevenPlayerMask(I)I#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "playerIndex",
       "declaration": {
         "file": "ak.java",
         "start": 3085,
@@ -173445,7 +173957,7 @@
       "symbol": "L:ak.c(I)I#2",
       "renamedSymbol": "L:MultiplayerMatch.getStateSevenPlayerMask(I)I#2",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "ak.java",
         "start": 3103,
@@ -289682,7 +290194,7 @@
       "symbol": "L:p.a(B)I#0",
       "renamedSymbol": "L:PlayerInputBatch.nextControlMask(B)I#0",
       "originalName": "fieldTemp$0",
-      "renamedName": "fieldTemp$0",
+      "renamedName": "consumedIndex",
       "declaration": {
         "file": "p.java",
         "start": 453,
@@ -289693,7 +290205,7 @@
       "symbol": "L:p.a(B)I#1",
       "renamedSymbol": "L:PlayerInputBatch.nextControlMask(B)I#1",
       "originalName": "fieldTemp$1",
-      "renamedName": "fieldTemp$1",
+      "renamedName": "fallbackIndex",
       "declaration": {
         "file": "p.java",
         "start": 666,
@@ -299989,7 +300501,7 @@
       "symbol": "L:qj.a(BIZ)V#0",
       "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#0",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "maskIndex",
       "declaration": {
         "file": "qj.java",
         "start": 25456,
@@ -300000,7 +300512,7 @@
       "symbol": "L:qj.a(BIZ)V#1",
       "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#1",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "qj.java",
         "start": 25478,
@@ -300011,7 +300523,7 @@
       "symbol": "L:qj.a(BIZ)V#2",
       "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#2",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "guardCalculation",
       "declaration": {
         "file": "qj.java",
         "start": 25525,
@@ -300022,7 +300534,7 @@
       "symbol": "L:qj.a(BIZ)V#3",
       "renamedSymbol": "L:GameplayScreen.sendInputBatch(BIZ)V#3",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "board",
       "declaration": {
         "file": "qj.java",
         "start": 25642,
@@ -300033,7 +300545,7 @@
       "symbol": "L:qj.a(BLj;)V#0",
       "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#0",
       "originalName": "stackIn_22_0",
-      "renamedName": "stackIn_22_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "qj.java",
         "start": 52666,
@@ -300044,7 +300556,7 @@
       "symbol": "L:qj.a(BLj;)V#1",
       "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#1",
       "originalName": "stackIn_22_1",
-      "renamedName": "stackIn_22_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "qj.java",
         "start": 52709,
@@ -300055,7 +300567,7 @@
       "symbol": "L:qj.a(BLj;)V#2",
       "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#2",
       "originalName": "stackIn_23_2",
-      "renamedName": "stackIn_23_2",
+      "renamedName": "boardSummary",
       "declaration": {
         "file": "qj.java",
         "start": 52745,
@@ -300066,7 +300578,7 @@
       "symbol": "L:qj.a(BLj;)V#3",
       "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#3",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "qj.java",
         "start": 52791,
@@ -300077,7 +300589,7 @@
       "symbol": "L:qj.a(BLj;)V#4",
       "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#4",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "failure",
       "declaration": {
         "file": "qj.java",
         "start": 52850,
@@ -300088,7 +300600,7 @@
       "symbol": "L:qj.a(BLj;)V#5",
       "renamedSymbol": "L:GameplayScreen.readLocalControls(BLPlayerBoard;)V#5",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "qj.java",
         "start": 53807,
@@ -300099,7 +300611,7 @@
       "symbol": "L:qj.a(BLpi;)V#0",
       "renamedSymbol": "L:GameplayScreen.readPositionCorrection(BLBitPacketBuffer;)V#0",
       "originalName": "dupTemp$0",
-      "renamedName": "dupTemp$0",
+      "renamedName": "localBoard",
       "declaration": {
         "file": "qj.java",
         "start": 4683,
@@ -300110,7 +300622,7 @@
       "symbol": "L:qj.a(BLpi;)V#1",
       "renamedSymbol": "L:GameplayScreen.readPositionCorrection(BLBitPacketBuffer;)V#1",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "unusedBoard",
       "declaration": {
         "file": "qj.java",
         "start": 4942,
@@ -300121,7 +300633,7 @@
       "symbol": "L:qj.a(BLpi;)V#2",
       "renamedSymbol": "L:GameplayScreen.readPositionCorrection(BLBitPacketBuffer;)V#2",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "qj.java",
         "start": 5046,
@@ -300143,7 +300655,7 @@
       "symbol": "L:qj.a(BLpi;Z)V#1",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#1",
       "originalName": "stackIn_15_0",
-      "renamedName": "stackIn_15_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "qj.java",
         "start": 22323,
@@ -300154,7 +300666,7 @@
       "symbol": "L:qj.a(BLpi;Z)V#10",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#10",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "qj.java",
         "start": 23621,
@@ -300165,7 +300677,7 @@
       "symbol": "L:qj.a(BLpi;Z)V#2",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#2",
       "originalName": "stackIn_15_1",
-      "renamedName": "stackIn_15_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "qj.java",
         "start": 22366,
@@ -300176,7 +300688,7 @@
       "symbol": "L:qj.a(BLpi;Z)V#3",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#3",
       "originalName": "stackIn_16_2",
-      "renamedName": "stackIn_16_2",
+      "renamedName": "packetSummary",
       "declaration": {
         "file": "qj.java",
         "start": 22402,
@@ -300187,7 +300699,7 @@
       "symbol": "L:qj.a(BLpi;Z)V#4",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#4",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "qj.java",
         "start": 22448,
@@ -300209,7 +300721,7 @@
       "symbol": "L:qj.a(BLpi;Z)V#6",
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#6",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "failure",
       "declaration": {
         "file": "qj.java",
         "start": 22533,
@@ -301100,7 +301612,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#0",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#0",
       "originalName": "stackIn_4_0",
-      "renamedName": "stackIn_4_0",
+      "renamedName": "collectedQueueValue",
       "declaration": {
         "file": "qj.java",
         "start": 40568,
@@ -301111,7 +301623,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#1",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#1",
       "originalName": "stackIn_107_0",
-      "renamedName": "stackIn_107_0",
+      "renamedName": "advancedLocalTickResult",
       "declaration": {
         "file": "qj.java",
         "start": 40600,
@@ -301144,7 +301656,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#12",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#12",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "singlePlayerBoard",
       "declaration": {
         "file": "qj.java",
         "start": 41011,
@@ -301155,7 +301667,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#13",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "orderPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 41036,
@@ -301177,7 +301689,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#15",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#15",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "orderBoard",
       "declaration": {
         "file": "qj.java",
         "start": 41082,
@@ -301210,7 +301722,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#18",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "targetMeterLevel256",
       "declaration": {
         "file": "qj.java",
         "start": 41160,
@@ -301232,7 +301744,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#2",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#2",
       "originalName": "stackIn_110_0",
-      "renamedName": "stackIn_110_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "qj.java",
         "start": 40644,
@@ -301243,7 +301755,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#20",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#20",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "checksumDiagnostics",
       "declaration": {
         "file": "qj.java",
         "start": 41216,
@@ -301276,7 +301788,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#23",
       "originalName": "var15",
-      "renamedName": "var15",
+      "renamedName": "powerUpType",
       "declaration": {
         "file": "qj.java",
         "start": 41288,
@@ -301320,7 +301832,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#27",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#27",
       "originalName": "var6_intLifetime1",
-      "renamedName": "var6_intLifetime1",
+      "renamedName": "effectPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 41383,
@@ -301331,7 +301843,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#28",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#28",
       "originalName": "var6_intLifetime2",
-      "renamedName": "var6_intLifetime2",
+      "renamedName": "displayPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 41414,
@@ -301342,7 +301854,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#29",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#29",
       "originalName": "var6_intLifetime3",
-      "renamedName": "var6_intLifetime3",
+      "renamedName": "positionInversionMask",
       "declaration": {
         "file": "qj.java",
         "start": 41445,
@@ -301353,7 +301865,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#3",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#3",
       "originalName": "stackIn_110_1",
-      "renamedName": "stackIn_110_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "qj.java",
         "start": 40688,
@@ -301364,7 +301876,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#30",
       "originalName": "var6_intLifetime4",
-      "renamedName": "var6_intLifetime4",
+      "renamedName": "winningPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 41476,
@@ -301375,7 +301887,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#31",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#31",
       "originalName": "var7Lifetime1",
-      "renamedName": "var7Lifetime1",
+      "renamedName": "otherPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 41507,
@@ -301386,7 +301898,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#32",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#32",
       "originalName": "var8_intLifetime1",
-      "renamedName": "var8_intLifetime1",
+      "renamedName": "fallingPowerUpMask",
       "declaration": {
         "file": "qj.java",
         "start": 41534,
@@ -301397,7 +301909,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#33",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#33",
       "originalName": "var8_intLifetime2",
-      "renamedName": "var8_intLifetime2",
+      "renamedName": "targetPosition256",
       "declaration": {
         "file": "qj.java",
         "start": 41565,
@@ -301408,7 +301920,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#34",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#34",
       "originalName": "var9Lifetime1",
-      "renamedName": "var9Lifetime1",
+      "renamedName": "unusedPowerUpTypeAlias",
       "declaration": {
         "file": "qj.java",
         "start": 41596,
@@ -301419,7 +301931,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#35",
       "originalName": "decompiledFrameRemainder0",
-      "renamedName": "decompiledFrameRemainder0",
+      "renamedName": "processBoardTail",
       "declaration": {
         "file": "qj.java",
         "start": 42177,
@@ -301430,7 +301942,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#36",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#36",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "qj.java",
         "start": 49494,
@@ -301441,7 +301953,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#4",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#4",
       "originalName": "stackIn_111_2",
-      "renamedName": "stackIn_111_2",
+      "renamedName": "remoteAudioSummary",
       "declaration": {
         "file": "qj.java",
         "start": 40725,
@@ -301452,7 +301964,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#5",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#5",
       "originalName": "stackIn_113_1",
-      "renamedName": "stackIn_113_1",
+      "renamedName": "localAudioContextBuilder",
       "declaration": {
         "file": "qj.java",
         "start": 40769,
@@ -301463,7 +301975,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#6",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#6",
       "originalName": "stackIn_114_2",
-      "renamedName": "stackIn_114_2",
+      "renamedName": "localAudioSummary",
       "declaration": {
         "file": "qj.java",
         "start": 40806,
@@ -301474,7 +301986,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#7",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#7",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "qj.java",
         "start": 40853,
@@ -301496,7 +302008,7 @@
       "symbol": "L:qj.a(Lvl;ZLvl;)Z#9",
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#9",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "failure",
       "declaration": {
         "file": "qj.java",
         "start": 40938,
@@ -350873,9 +351385,9 @@
     },
     {
       "symbol": "M:ak.a(B)I",
-      "renamedSymbol": "M:MultiplayerMatch.getStateZeroPlayerMask(B)I",
+      "renamedSymbol": "M:MultiplayerMatch.getExpiredPositionTimerMask(B)I",
       "originalName": "a",
-      "renamedName": "getStateZeroPlayerMask",
+      "renamedName": "getExpiredPositionTimerMask",
       "declaration": {
         "file": "ak.java",
         "start": 2298,
@@ -389263,7 +389775,7 @@
     },
     {
       "symbol": "P:ak.a(B)I#0",
-      "renamedSymbol": "P:MultiplayerMatch.getStateZeroPlayerMask(B)I#0",
+      "renamedSymbol": "P:MultiplayerMatch.getExpiredPositionTimerMask(B)I#0",
       "originalName": "param0",
       "renamedName": "obfuscationGuard",
       "declaration": {
@@ -508270,7 +508782,7 @@
       "original": "ak.java",
       "renamed": "MultiplayerMatch.java",
       "inputSha256": "44ef57260a869da05db5b717d65518d04318fe4b8ac90975756f82aa77d07565",
-      "outputSha256": "aecff863d962fa2135c93ed9f611bdd06f0dfbc5fa0351404e8cc6a22b11c7a6",
+      "outputSha256": "603e7dd684afbb65c226ee3b4fd081b7d9aac6a22a4f73f953d98fd8a1f275c9",
       "edits": [
         {
           "start": 50,
@@ -508434,6 +508946,62 @@
           "renamed": "recipientIndex"
         },
         {
+          "start": 421,
+          "end": 432,
+          "symbol": "L:ak.a(IILvl;B)V#1",
+          "original": "stackIn_6_0",
+          "renamed": "routingPlayerCount"
+        },
+        {
+          "start": 450,
+          "end": 461,
+          "symbol": "L:ak.a(IILvl;B)V#2",
+          "original": "stackIn_6_1",
+          "renamed": "singlePlayerCount"
+        },
+        {
+          "start": 492,
+          "end": 504,
+          "symbol": "L:ak.a(IILvl;B)V#3",
+          "original": "stackIn_19_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 535,
+          "end": 547,
+          "symbol": "L:ak.a(IILvl;B)V#4",
+          "original": "stackIn_19_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 571,
+          "end": 583,
+          "symbol": "L:ak.a(IILvl;B)V#5",
+          "original": "stackIn_20_2",
+          "renamed": "attacksSummary"
+        },
+        {
+          "start": 617,
+          "end": 642,
+          "symbol": "L:ak.a(IILvl;B)V#6",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 676,
+          "end": 680,
+          "symbol": "L:ak.a(IILvl;B)V#7",
+          "original": "var5",
+          "renamed": "failure"
+        },
+        {
+          "start": 701,
+          "end": 705,
+          "symbol": "L:ak.a(IILvl;B)V#8",
+          "original": "var7",
+          "renamed": "unusedGameFlag"
+        },
+        {
           "start": 719,
           "end": 721,
           "symbol": "C:ge",
@@ -508446,6 +509014,13 @@
           "symbol": "L:ak.a(IILvl;B)V#9",
           "original": "var8",
           "renamed": "powerUp"
+        },
+        {
+          "start": 743,
+          "end": 747,
+          "symbol": "L:ak.a(IILvl;B)V#8",
+          "original": "var7",
+          "renamed": "unusedGameFlag"
         },
         {
           "start": 806,
@@ -508497,11 +509072,39 @@
           "renamed": "powerUp"
         },
         {
+          "start": 942,
+          "end": 953,
+          "symbol": "L:ak.a(IILvl;B)V#1",
+          "original": "stackIn_6_0",
+          "renamed": "routingPlayerCount"
+        },
+        {
           "start": 961,
           "end": 968,
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 982,
+          "end": 993,
+          "symbol": "L:ak.a(IILvl;B)V#2",
+          "original": "stackIn_6_1",
+          "renamed": "singlePlayerCount"
+        },
+        {
+          "start": 1015,
+          "end": 1026,
+          "symbol": "L:ak.a(IILvl;B)V#1",
+          "original": "stackIn_6_0",
+          "renamed": "routingPlayerCount"
+        },
+        {
+          "start": 1030,
+          "end": 1041,
+          "symbol": "L:ak.a(IILvl;B)V#2",
+          "original": "stackIn_6_1",
+          "renamed": "singlePlayerCount"
         },
         {
           "start": 1060,
@@ -508756,6 +509359,62 @@
           "renamed": "next"
         },
         {
+          "start": 1675,
+          "end": 1701,
+          "symbol": "L:ak.a(IILvl;B)V#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 1715,
+          "end": 1740,
+          "symbol": "L:ak.a(IILvl;B)V#6",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 1743,
+          "end": 1769,
+          "symbol": "L:ak.a(IILvl;B)V#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 1781,
+          "end": 1785,
+          "symbol": "L:ak.a(IILvl;B)V#7",
+          "original": "var5",
+          "renamed": "failure"
+        },
+        {
+          "start": 1788,
+          "end": 1813,
+          "symbol": "L:ak.a(IILvl;B)V#6",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 1825,
+          "end": 1837,
+          "symbol": "L:ak.a(IILvl;B)V#3",
+          "original": "stackIn_19_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 1840,
+          "end": 1844,
+          "symbol": "L:ak.a(IILvl;B)V#7",
+          "original": "var5",
+          "renamed": "failure"
+        },
+        {
+          "start": 1856,
+          "end": 1868,
+          "symbol": "L:ak.a(IILvl;B)V#4",
+          "original": "stackIn_19_1",
+          "renamed": "contextBuilder"
+        },
+        {
           "start": 1914,
           "end": 1920,
           "symbol": "P:ak.a(IILvl;B)V#0",
@@ -508777,6 +509436,20 @@
           "renamed": "attacks"
         },
         {
+          "start": 2006,
+          "end": 2018,
+          "symbol": "L:ak.a(IILvl;B)V#5",
+          "original": "stackIn_20_2",
+          "renamed": "attacksSummary"
+        },
+        {
+          "start": 2060,
+          "end": 2072,
+          "symbol": "L:ak.a(IILvl;B)V#5",
+          "original": "stackIn_20_2",
+          "renamed": "attacksSummary"
+        },
+        {
           "start": 2112,
           "end": 2114,
           "symbol": "C:qb",
@@ -508791,6 +509464,27 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 2139,
+          "end": 2151,
+          "symbol": "L:ak.a(IILvl;B)V#3",
+          "original": "stackIn_19_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 2180,
+          "end": 2192,
+          "symbol": "L:ak.a(IILvl;B)V#4",
+          "original": "stackIn_19_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 2201,
+          "end": 2213,
+          "symbol": "L:ak.a(IILvl;B)V#5",
+          "original": "stackIn_20_2",
+          "renamed": "attacksSummary"
+        },
+        {
           "start": 2234,
           "end": 2240,
           "symbol": "P:ak.a(IILvl;B)V#3",
@@ -508802,7 +509496,7 @@
           "end": 2299,
           "symbol": "M:ak.a(B)I",
           "original": "a",
-          "renamed": "getStateZeroPlayerMask"
+          "renamed": "getExpiredPositionTimerMask"
         },
         {
           "start": 2305,
@@ -508812,11 +509506,60 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 2331,
+          "end": 2342,
+          "symbol": "L:ak.a(B)I#0",
+          "original": "discarded$1",
+          "renamed": "unusedSubstepResult"
+        },
+        {
+          "start": 2364,
+          "end": 2368,
+          "symbol": "L:ak.a(B)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 2386,
+          "end": 2390,
+          "symbol": "L:ak.a(B)I#2",
+          "original": "var2",
+          "renamed": "expiredMask"
+        },
+        {
+          "start": 2404,
+          "end": 2408,
+          "symbol": "L:ak.a(B)I#3",
+          "original": "var4",
+          "renamed": "unusedGameFlag"
+        },
+        {
           "start": 2418,
           "end": 2420,
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "Ball"
+        },
+        {
+          "start": 2421,
+          "end": 2425,
+          "symbol": "L:ak.a(B)I#4",
+          "original": "var5",
+          "renamed": "unusedBall"
+        },
+        {
+          "start": 2435,
+          "end": 2439,
+          "symbol": "L:ak.a(B)I#3",
+          "original": "var4",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 2478,
+          "end": 2482,
+          "symbol": "L:ak.a(B)I#2",
+          "original": "var2",
+          "renamed": "expiredMask"
         },
         {
           "start": 2500,
@@ -508826,11 +509569,25 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 2527,
+          "end": 2531,
+          "symbol": "L:ak.a(B)I#4",
+          "original": "var5",
+          "renamed": "unusedBall"
+        },
+        {
           "start": 2535,
           "end": 2537,
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "Ball"
+        },
+        {
+          "start": 2555,
+          "end": 2566,
+          "symbol": "L:ak.a(B)I#0",
+          "original": "discarded$1",
+          "renamed": "unusedSubstepResult"
         },
         {
           "start": 2574,
@@ -508861,11 +509618,32 @@
           "renamed": "Ball"
         },
         {
+          "start": 2641,
+          "end": 2645,
+          "symbol": "L:ak.a(B)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 2651,
+          "end": 2655,
+          "symbol": "L:ak.a(B)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 2663,
           "end": 2670,
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 2672,
+          "end": 2676,
+          "symbol": "L:ak.a(B)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
         },
         {
           "start": 2703,
@@ -508889,6 +509667,13 @@
           "renamed": "playerMaskTwo"
         },
         {
+          "start": 2751,
+          "end": 2755,
+          "symbol": "L:ak.a(B)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 2782,
           "end": 2789,
           "symbol": "F:ak.field_l:[Lj;",
@@ -508896,11 +509681,46 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 2790,
+          "end": 2794,
+          "symbol": "L:ak.a(B)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 2796,
           "end": 2803,
           "symbol": "F:j.field_M:I",
           "original": "field_M",
           "renamed": "positionOrderTicks"
+        },
+        {
+          "start": 2824,
+          "end": 2828,
+          "symbol": "L:ak.a(B)I#2",
+          "original": "var2",
+          "renamed": "expiredMask"
+        },
+        {
+          "start": 2831,
+          "end": 2835,
+          "symbol": "L:ak.a(B)I#2",
+          "original": "var2",
+          "renamed": "expiredMask"
+        },
+        {
+          "start": 2843,
+          "end": 2847,
+          "symbol": "L:ak.a(B)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 2886,
+          "end": 2890,
+          "symbol": "L:ak.a(B)I#2",
+          "original": "var2",
+          "renamed": "expiredMask"
         },
         {
           "start": 2914,
@@ -508952,6 +509772,48 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 3067,
+          "end": 3071,
+          "symbol": "L:ak.c(I)I#0",
+          "original": "var2",
+          "renamed": "stateSevenMask"
+        },
+        {
+          "start": 3085,
+          "end": 3089,
+          "symbol": "L:ak.c(I)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 3103,
+          "end": 3107,
+          "symbol": "L:ak.c(I)I#2",
+          "original": "var4",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 3117,
+          "end": 3121,
+          "symbol": "L:ak.c(I)I#2",
+          "original": "var4",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 3160,
+          "end": 3164,
+          "symbol": "L:ak.c(I)I#0",
+          "original": "var2",
+          "renamed": "stateSevenMask"
+        },
+        {
+          "start": 3178,
+          "end": 3182,
+          "symbol": "L:ak.c(I)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 3200,
           "end": 3206,
           "symbol": "P:ak.c(I)I#0",
@@ -508959,11 +509821,25 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 3267,
+          "end": 3271,
+          "symbol": "L:ak.c(I)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 3279,
           "end": 3286,
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 3310,
+          "end": 3314,
+          "symbol": "L:ak.c(I)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
         },
         {
           "start": 3322,
@@ -508980,11 +509856,53 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 3369,
+          "end": 3373,
+          "symbol": "L:ak.c(I)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
           "start": 3375,
           "end": 3382,
           "symbol": "F:j.field_Z:I",
           "original": "field_Z",
           "renamed": "boardState"
+        },
+        {
+          "start": 3398,
+          "end": 3402,
+          "symbol": "L:ak.c(I)I#0",
+          "original": "var2",
+          "renamed": "stateSevenMask"
+        },
+        {
+          "start": 3405,
+          "end": 3409,
+          "symbol": "L:ak.c(I)I#0",
+          "original": "var2",
+          "renamed": "stateSevenMask"
+        },
+        {
+          "start": 3417,
+          "end": 3421,
+          "symbol": "L:ak.c(I)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 3445,
+          "end": 3449,
+          "symbol": "L:ak.c(I)I#1",
+          "original": "var3",
+          "renamed": "playerIndex"
+        },
+        {
+          "start": 3478,
+          "end": 3482,
+          "symbol": "L:ak.c(I)I#0",
+          "original": "var2",
+          "renamed": "stateSevenMask"
         },
         {
           "start": 3506,
@@ -516646,6 +517564,20 @@
           "symbol": "L:ak.a(BI)V#1",
           "original": "var4",
           "renamed": "powerUp"
+        },
+        {
+          "start": 37034,
+          "end": 37038,
+          "symbol": "L:ak.a(BI)V#2",
+          "original": "var5",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 37048,
+          "end": 37052,
+          "symbol": "L:ak.a(BI)V#2",
+          "original": "var5",
+          "renamed": "unusedGameFlag"
         },
         {
           "start": 37095,
@@ -1025388,7 +1026320,7 @@
       "original": "p.java",
       "renamed": "PlayerInputBatch.java",
       "inputSha256": "55ab58e0e148fdec4e2f95890d703eee4e9f11aa6a116e1778c02bfa89aace88",
-      "outputSha256": "88d71f07d6fc0da6aebf5b7c743eda08e760362d5fba82421995733dc824fdfa",
+      "outputSha256": "beb5d6abdee7e6503917777c24feff8d6baa9dc5c60f2c35c5cd3e77eef2d71a",
       "edits": [
         {
           "start": 50,
@@ -1025503,11 +1026435,25 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 453,
+          "end": 464,
+          "symbol": "L:p.a(B)I#0",
+          "original": "fieldTemp$0",
+          "renamed": "consumedIndex"
+        },
+        {
           "start": 482,
           "end": 488,
           "symbol": "P:p.a(B)I#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 510,
+          "end": 521,
+          "symbol": "L:p.a(B)I#0",
+          "original": "fieldTemp$0",
+          "renamed": "consumedIndex"
         },
         {
           "start": 529,
@@ -1025538,11 +1026484,25 @@
           "renamed": "controlMasks"
         },
         {
+          "start": 611,
+          "end": 622,
+          "symbol": "L:p.a(B)I#0",
+          "original": "fieldTemp$0",
+          "renamed": "consumedIndex"
+        },
+        {
           "start": 643,
           "end": 644,
           "symbol": "C:p",
           "original": "p",
           "renamed": "PlayerInputBatch"
+        },
+        {
+          "start": 666,
+          "end": 677,
+          "symbol": "L:p.a(B)I#1",
+          "original": "fieldTemp$1",
+          "renamed": "fallbackIndex"
         },
         {
           "start": 685,
@@ -1025571,6 +1026531,13 @@
           "symbol": "F:p.field_n:[I",
           "original": "field_n",
           "renamed": "controlMasks"
+        },
+        {
+          "start": 763,
+          "end": 774,
+          "symbol": "L:p.a(B)I#1",
+          "original": "fieldTemp$1",
+          "renamed": "fallbackIndex"
         },
         {
           "start": 809,
@@ -1063168,7 +1064135,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "85f7689cfb54f60c02cc731b32f650bed6760c47163963a66f0071061ede8155",
+      "outputSha256": "a9dbcf2d90c26f9fc823b5b5da72668fe4b0bdd8af0c1c9fbaa7739d0f65babe",
       "edits": [
         {
           "start": 50,
@@ -1064501,6 +1065468,20 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 4683,
+          "end": 4692,
+          "symbol": "L:qj.a(BLpi;)V#0",
+          "original": "dupTemp$0",
+          "renamed": "localBoard"
+        },
+        {
+          "start": 4725,
+          "end": 4734,
+          "symbol": "L:qj.a(BLpi;)V#0",
+          "original": "dupTemp$0",
+          "renamed": "localBoard"
+        },
+        {
           "start": 4742,
           "end": 4749,
           "symbol": "F:qj.field_w:Lak;",
@@ -1064522,11 +1065503,25 @@
           "renamed": "localPlayerId"
         },
         {
+          "start": 4783,
+          "end": 4792,
+          "symbol": "L:qj.a(BLpi;)V#0",
+          "original": "dupTemp$0",
+          "renamed": "localBoard"
+        },
+        {
           "start": 4793,
           "end": 4800,
           "symbol": "F:j.field_E:I",
           "original": "field_E",
           "renamed": "receivedInputTick"
+        },
+        {
+          "start": 4803,
+          "end": 4812,
+          "symbol": "L:qj.a(BLpi;)V#0",
+          "original": "dupTemp$0",
+          "renamed": "localBoard"
         },
         {
           "start": 4813,
@@ -1064592,6 +1065587,13 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 4942,
+          "end": 4946,
+          "symbol": "L:qj.a(BLpi;)V#1",
+          "original": "var4",
+          "renamed": "unusedBoard"
+        },
+        {
           "start": 4950,
           "end": 4951,
           "symbol": "C:j",
@@ -1064613,6 +1065615,13 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 5046,
+          "end": 5062,
+          "symbol": "L:qj.a(BLpi;)V#2",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
           "start": 5082,
           "end": 5084,
           "symbol": "C:qb",
@@ -1064625,6 +1065634,13 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 5109,
+          "end": 5125,
+          "symbol": "L:qj.a(BLpi;)V#2",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 5138,
@@ -1069142,11 +1070158,46 @@
           "renamed": "maskIndex"
         },
         {
+          "start": 22323,
+          "end": 22335,
+          "symbol": "L:qj.a(BLpi;Z)V#1",
+          "original": "stackIn_15_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 22366,
+          "end": 22378,
+          "symbol": "L:qj.a(BLpi;Z)V#2",
+          "original": "stackIn_15_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 22402,
+          "end": 22414,
+          "symbol": "L:qj.a(BLpi;Z)V#3",
+          "original": "stackIn_16_2",
+          "renamed": "packetSummary"
+        },
+        {
+          "start": 22448,
+          "end": 22473,
+          "symbol": "L:qj.a(BLpi;Z)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
           "start": 22494,
           "end": 22502,
           "symbol": "L:qj.a(BLpi;Z)V#5",
           "original": "var4_int",
           "renamed": "playerId"
+        },
+        {
+          "start": 22533,
+          "end": 22537,
+          "symbol": "L:qj.a(BLpi;Z)V#6",
+          "original": "var4",
+          "renamed": "failure"
         },
         {
           "start": 22554,
@@ -1069590,6 +1070641,62 @@
           "renamed": "batch"
         },
         {
+          "start": 23621,
+          "end": 23647,
+          "symbol": "L:qj.a(BLpi;Z)V#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 23661,
+          "end": 23686,
+          "symbol": "L:qj.a(BLpi;Z)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 23689,
+          "end": 23715,
+          "symbol": "L:qj.a(BLpi;Z)V#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 23727,
+          "end": 23731,
+          "symbol": "L:qj.a(BLpi;Z)V#6",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 23734,
+          "end": 23759,
+          "symbol": "L:qj.a(BLpi;Z)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 23771,
+          "end": 23783,
+          "symbol": "L:qj.a(BLpi;Z)V#1",
+          "original": "stackIn_15_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 23786,
+          "end": 23790,
+          "symbol": "L:qj.a(BLpi;Z)V#6",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 23802,
+          "end": 23814,
+          "symbol": "L:qj.a(BLpi;Z)V#2",
+          "original": "stackIn_15_1",
+          "renamed": "contextBuilder"
+        },
+        {
           "start": 23860,
           "end": 23866,
           "symbol": "P:qj.a(BLpi;Z)V#0",
@@ -1069604,6 +1070711,20 @@
           "renamed": "packet"
         },
         {
+          "start": 23925,
+          "end": 23937,
+          "symbol": "L:qj.a(BLpi;Z)V#3",
+          "original": "stackIn_16_2",
+          "renamed": "packetSummary"
+        },
+        {
+          "start": 23979,
+          "end": 23991,
+          "symbol": "L:qj.a(BLpi;Z)V#3",
+          "original": "stackIn_16_2",
+          "renamed": "packetSummary"
+        },
+        {
           "start": 24031,
           "end": 24033,
           "symbol": "C:qb",
@@ -1069616,6 +1070737,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 24058,
+          "end": 24070,
+          "symbol": "L:qj.a(BLpi;Z)V#1",
+          "original": "stackIn_15_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 24099,
+          "end": 24111,
+          "symbol": "L:qj.a(BLpi;Z)V#2",
+          "original": "stackIn_15_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 24120,
+          "end": 24132,
+          "symbol": "L:qj.a(BLpi;Z)V#3",
+          "original": "stackIn_16_2",
+          "renamed": "packetSummary"
         },
         {
           "start": 24153,
@@ -1069814,6 +1070956,27 @@
           "renamed": "hasChecksum"
         },
         {
+          "start": 25456,
+          "end": 25460,
+          "symbol": "L:qj.a(BIZ)V#0",
+          "original": "var6",
+          "renamed": "maskIndex"
+        },
+        {
+          "start": 25478,
+          "end": 25482,
+          "symbol": "L:qj.a(BIZ)V#1",
+          "original": "var7",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 25525,
+          "end": 25529,
+          "symbol": "L:qj.a(BIZ)V#2",
+          "original": "var4",
+          "renamed": "guardCalculation"
+        },
+        {
           "start": 25544,
           "end": 25550,
           "symbol": "P:qj.a(BIZ)V#0",
@@ -1069877,6 +1071040,13 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 25642,
+          "end": 25646,
+          "symbol": "L:qj.a(BIZ)V#3",
+          "original": "var5",
+          "renamed": "board"
+        },
+        {
           "start": 25654,
           "end": 25661,
           "symbol": "F:qj.field_w:Lak;",
@@ -1069896,6 +1071066,27 @@
           "symbol": "P:qj.a(BIZ)V#1",
           "original": "param1",
           "renamed": "playerId"
+        },
+        {
+          "start": 25692,
+          "end": 25696,
+          "symbol": "L:qj.a(BIZ)V#0",
+          "original": "var6",
+          "renamed": "maskIndex"
+        },
+        {
+          "start": 25702,
+          "end": 25706,
+          "symbol": "L:qj.a(BIZ)V#0",
+          "original": "var6",
+          "renamed": "maskIndex"
+        },
+        {
+          "start": 25712,
+          "end": 25716,
+          "symbol": "L:qj.a(BIZ)V#0",
+          "original": "var6",
+          "renamed": "maskIndex"
         },
         {
           "start": 25732,
@@ -1069919,11 +1071110,25 @@
           "renamed": "writeBits"
         },
         {
+          "start": 25755,
+          "end": 25759,
+          "symbol": "L:qj.a(BIZ)V#3",
+          "original": "var5",
+          "renamed": "board"
+        },
+        {
           "start": 25760,
           "end": 25768,
           "symbol": "F:j.field_vb:[I",
           "original": "field_vb",
           "renamed": "outgoingInputMasks"
+        },
+        {
+          "start": 25769,
+          "end": 25773,
+          "symbol": "L:qj.a(BIZ)V#0",
+          "original": "var6",
+          "renamed": "maskIndex"
         },
         {
           "start": 25795,
@@ -1069975,11 +1071180,25 @@
           "renamed": "writeInt"
         },
         {
+          "start": 25858,
+          "end": 25862,
+          "symbol": "L:qj.a(BIZ)V#3",
+          "original": "var5",
+          "renamed": "board"
+        },
+        {
           "start": 25863,
           "end": 25864,
           "symbol": "M:j.a(ZLjava/lang/StringBuilder;)I",
           "original": "a",
           "renamed": "computeBoardChecksum"
+        },
+        {
+          "start": 25895,
+          "end": 25899,
+          "symbol": "L:qj.a(BIZ)V#3",
+          "original": "var5",
+          "renamed": "board"
         },
         {
           "start": 25900,
@@ -1073727,11 +1074946,74 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 40568,
+          "end": 40579,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#0",
+          "original": "stackIn_4_0",
+          "renamed": "collectedQueueValue"
+        },
+        {
+          "start": 40600,
+          "end": 40613,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#1",
+          "original": "stackIn_107_0",
+          "renamed": "advancedLocalTickResult"
+        },
+        {
+          "start": 40644,
+          "end": 40657,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#2",
+          "original": "stackIn_110_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 40688,
+          "end": 40701,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#3",
+          "original": "stackIn_110_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 40725,
+          "end": 40738,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#4",
+          "original": "stackIn_111_2",
+          "renamed": "remoteAudioSummary"
+        },
+        {
+          "start": 40769,
+          "end": 40782,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#5",
+          "original": "stackIn_113_1",
+          "renamed": "localAudioContextBuilder"
+        },
+        {
+          "start": 40806,
+          "end": 40819,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#6",
+          "original": "stackIn_114_2",
+          "renamed": "localAudioSummary"
+        },
+        {
+          "start": 40853,
+          "end": 40878,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
           "start": 40899,
           "end": 40907,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#8",
           "original": "var4_int",
           "renamed": "advancedLocalTick"
+        },
+        {
+          "start": 40938,
+          "end": 40942,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#9",
+          "original": "var4",
+          "renamed": "failure"
         },
         {
           "start": 40959,
@@ -1073762,6 +1075044,20 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 41011,
+          "end": 41015,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#12",
+          "original": "var6",
+          "renamed": "singlePlayerBoard"
+        },
+        {
+          "start": 41036,
+          "end": 41040,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
+          "original": "var7",
+          "renamed": "orderPlayerId"
+        },
+        {
           "start": 41058,
           "end": 41066,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#14",
@@ -1073774,6 +1075070,13 @@
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 41082,
+          "end": 41086,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#15",
+          "original": "var8",
+          "renamed": "orderBoard"
         },
         {
           "start": 41103,
@@ -1073797,6 +1075100,13 @@
           "renamed": "consumedTicks"
         },
         {
+          "start": 41160,
+          "end": 41165,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+          "original": "var10",
+          "renamed": "targetMeterLevel256"
+        },
+        {
           "start": 41179,
           "end": 41180,
           "symbol": "C:p",
@@ -1073811,6 +1075121,13 @@
           "renamed": "inputBatch"
         },
         {
+          "start": 41216,
+          "end": 41221,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#20",
+          "original": "var11",
+          "renamed": "checksumDiagnostics"
+        },
+        {
           "start": 41242,
           "end": 41247,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#21",
@@ -1073823,6 +1075140,13 @@
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#22",
           "original": "var13",
           "renamed": "clientBranchFlag"
+        },
+        {
+          "start": 41288,
+          "end": 41293,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 41307,
@@ -1073867,6 +1075191,62 @@
           "renamed": "displayBoard"
         },
         {
+          "start": 41383,
+          "end": 41400,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#27",
+          "original": "var6_intLifetime1",
+          "renamed": "effectPlayerId"
+        },
+        {
+          "start": 41414,
+          "end": 41431,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#28",
+          "original": "var6_intLifetime2",
+          "renamed": "displayPlayerId"
+        },
+        {
+          "start": 41445,
+          "end": 41462,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#29",
+          "original": "var6_intLifetime3",
+          "renamed": "positionInversionMask"
+        },
+        {
+          "start": 41476,
+          "end": 41493,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+          "original": "var6_intLifetime4",
+          "renamed": "winningPlayerId"
+        },
+        {
+          "start": 41507,
+          "end": 41520,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#31",
+          "original": "var7Lifetime1",
+          "renamed": "otherPlayerId"
+        },
+        {
+          "start": 41534,
+          "end": 41551,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#32",
+          "original": "var8_intLifetime1",
+          "renamed": "fallingPowerUpMask"
+        },
+        {
+          "start": 41565,
+          "end": 41582,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#33",
+          "original": "var8_intLifetime2",
+          "renamed": "targetPosition256"
+        },
+        {
+          "start": 41596,
+          "end": 41609,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#34",
+          "original": "var9Lifetime1",
+          "renamed": "unusedPowerUpTypeAlias"
+        },
+        {
           "start": 41619,
           "end": 41624,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#22",
@@ -1073888,6 +1075268,13 @@
           "renamed": "networkedMatch"
         },
         {
+          "start": 41736,
+          "end": 41747,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#0",
+          "original": "stackIn_4_0",
+          "renamed": "collectedQueueValue"
+        },
+        {
           "start": 41754,
           "end": 41756,
           "symbol": "C:vl",
@@ -1073895,11 +1075282,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 41791,
+          "end": 41802,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#0",
+          "original": "stackIn_4_0",
+          "renamed": "collectedQueueValue"
+        },
+        {
           "start": 41833,
           "end": 41837,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#10",
           "original": "var5",
           "renamed": "collectedPowerUps"
+        },
+        {
+          "start": 41840,
+          "end": 41851,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#0",
+          "original": "stackIn_4_0",
+          "renamed": "collectedQueueValue"
         },
         {
           "start": 41868,
@@ -1074042,6 +1075443,13 @@
           "renamed": "maskedTicks"
         },
         {
+          "start": 42177,
+          "end": 42202,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
+        },
+        {
           "start": 42233,
           "end": 42241,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#11",
@@ -1074056,6 +1075464,13 @@
           "renamed": "localPlayerMask"
         },
         {
+          "start": 42280,
+          "end": 42305,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
+        },
+        {
           "start": 42309,
           "end": 42314,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#24",
@@ -1074068,6 +1075483,13 @@
           "symbol": "F:j.field_q:I",
           "original": "field_q",
           "renamed": "bufferedInputTicks"
+        },
+        {
+          "start": 42348,
+          "end": 42373,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
         },
         {
           "start": 42393,
@@ -1074371,6 +1075793,13 @@
           "renamed": "hasChecksum"
         },
         {
+          "start": 43181,
+          "end": 43186,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#20",
+          "original": "var11",
+          "renamed": "checksumDiagnostics"
+        },
+        {
           "start": 43217,
           "end": 43222,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#21",
@@ -1074397,6 +1075826,13 @@
           "symbol": "P:qj.a(Lvl;ZLvl;)Z#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 43258,
+          "end": 43263,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#20",
+          "original": "var11",
+          "renamed": "checksumDiagnostics"
         },
         {
           "start": 43268,
@@ -1074616,6 +1076052,13 @@
           "renamed": "receivedInputTick"
         },
         {
+          "start": 43906,
+          "end": 43931,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
+        },
+        {
           "start": 43937,
           "end": 43945,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#14",
@@ -1074635,6 +1076078,20 @@
           "symbol": "F:de.field_x:I",
           "original": "field_x",
           "renamed": "clientTick"
+        },
+        {
+          "start": 44017,
+          "end": 44042,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
+        },
+        {
+          "start": 44066,
+          "end": 44091,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
         },
         {
           "start": 44102,
@@ -1074658,11 +1076115,32 @@
           "renamed": "clientTick"
         },
         {
+          "start": 44176,
+          "end": 44201,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
+        },
+        {
           "start": 44211,
           "end": 44219,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#14",
           "original": "var8_int",
           "renamed": "catchUpTicks"
+        },
+        {
+          "start": 44275,
+          "end": 44300,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
+        },
+        {
+          "start": 44322,
+          "end": 44347,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
         },
         {
           "start": 44358,
@@ -1074875,6 +1076353,13 @@
           "renamed": "simulationTick"
         },
         {
+          "start": 44868,
+          "end": 44893,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#35",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "processBoardTail"
+        },
+        {
           "start": 44915,
           "end": 44919,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#10",
@@ -1074910,6 +1076395,13 @@
           "renamed": "advancePowerUpWarnings"
         },
         {
+          "start": 45049,
+          "end": 45066,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#27",
+          "original": "var6_intLifetime1",
+          "renamed": "effectPlayerId"
+        },
+        {
           "start": 45087,
           "end": 45093,
           "symbol": "P:qj.a(Lvl;ZLvl;)Z#1",
@@ -1074938,6 +1076430,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 45180,
+          "end": 45197,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#27",
+          "original": "var6_intLifetime1",
+          "renamed": "effectPlayerId"
+        },
+        {
           "start": 45213,
           "end": 45218,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1074957,6 +1076456,20 @@
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 45242,
+          "end": 45259,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#27",
+          "original": "var6_intLifetime1",
+          "renamed": "effectPlayerId"
+        },
+        {
+          "start": 45274,
+          "end": 45291,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#32",
+          "original": "var8_intLifetime1",
+          "renamed": "fallingPowerUpMask"
         },
         {
           "start": 45309,
@@ -1074999,6 +1076512,20 @@
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#16",
           "original": "var9_ref_ge",
           "renamed": "fallingPowerUp"
+        },
+        {
+          "start": 45409,
+          "end": 45426,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#32",
+          "original": "var8_intLifetime1",
+          "renamed": "fallingPowerUpMask"
+        },
+        {
+          "start": 45429,
+          "end": 45446,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#32",
+          "original": "var8_intLifetime1",
+          "renamed": "fallingPowerUpMask"
         },
         {
           "start": 45454,
@@ -1075050,6 +1076577,34 @@
           "renamed": "next"
         },
         {
+          "start": 45566,
+          "end": 45571,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 45589,
+          "end": 45602,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#34",
+          "original": "var9Lifetime1",
+          "renamed": "unusedPowerUpTypeAlias"
+        },
+        {
+          "start": 45605,
+          "end": 45610,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 45631,
+          "end": 45636,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 45663,
           "end": 45665,
           "symbol": "C:to",
@@ -1075062,6 +1076617,20 @@
           "symbol": "F:to.field_f:[I",
           "original": "field_f",
           "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 45674,
+          "end": 45679,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 45705,
+          "end": 45710,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+          "original": "var10",
+          "renamed": "targetMeterLevel256"
         },
         {
           "start": 45719,
@@ -1075078,6 +1076647,13 @@
           "renamed": "powerUpDropCounters"
         },
         {
+          "start": 45733,
+          "end": 45738,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 45748,
           "end": 45750,
           "symbol": "C:to",
@@ -1075090,6 +1076666,34 @@
           "symbol": "F:to.field_f:[I",
           "original": "field_f",
           "renamed": "powerUpDropPeriods"
+        },
+        {
+          "start": 45759,
+          "end": 45764,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 45793,
+          "end": 45798,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 45801,
+          "end": 45818,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#32",
+          "original": "var8_intLifetime1",
+          "renamed": "fallingPowerUpMask"
+        },
+        {
+          "start": 45846,
+          "end": 45851,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+          "original": "var10",
+          "renamed": "targetMeterLevel256"
         },
         {
           "start": 45894,
@@ -1075106,6 +1076710,13 @@
           "renamed": "powerUpMeterVelocities256"
         },
         {
+          "start": 45909,
+          "end": 45914,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 45918,
           "end": 45923,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075118,6 +1076729,13 @@
           "symbol": "F:j.field_xb:[I",
           "original": "field_xb",
           "renamed": "powerUpMeterVelocities256"
+        },
+        {
+          "start": 45933,
+          "end": 45938,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 45944,
@@ -1075134,6 +1076752,20 @@
           "renamed": "powerUpMeterLevels256"
         },
         {
+          "start": 45959,
+          "end": 45964,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 45968,
+          "end": 45973,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+          "original": "var10",
+          "renamed": "targetMeterLevel256"
+        },
+        {
           "start": 45998,
           "end": 46003,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075146,6 +1076778,13 @@
           "symbol": "F:j.field_xb:[I",
           "original": "field_xb",
           "renamed": "powerUpMeterVelocities256"
+        },
+        {
+          "start": 46013,
+          "end": 46018,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 46026,
@@ -1075162,6 +1076801,13 @@
           "renamed": "powerUpMeterVelocities256"
         },
         {
+          "start": 46041,
+          "end": 46046,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 46079,
           "end": 46084,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075174,6 +1076820,13 @@
           "symbol": "F:j.field_xb:[I",
           "original": "field_xb",
           "renamed": "powerUpMeterVelocities256"
+        },
+        {
+          "start": 46094,
+          "end": 46099,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 46122,
@@ -1075190,6 +1076843,13 @@
           "renamed": "powerUpMeterVelocities256"
         },
         {
+          "start": 46137,
+          "end": 46142,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 46189,
           "end": 46194,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075202,6 +1076862,13 @@
           "symbol": "F:j.field_xb:[I",
           "original": "field_xb",
           "renamed": "powerUpMeterVelocities256"
+        },
+        {
+          "start": 46204,
+          "end": 46209,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 46239,
@@ -1075218,6 +1076885,13 @@
           "renamed": "powerUpMeterVelocities256"
         },
         {
+          "start": 46254,
+          "end": 46259,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 46303,
           "end": 46308,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075230,6 +1076904,13 @@
           "symbol": "F:j.field_cb:[I",
           "original": "field_cb",
           "renamed": "powerUpMeterLevels256"
+        },
+        {
+          "start": 46318,
+          "end": 46323,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 46327,
@@ -1075246,6 +1076927,13 @@
           "renamed": "powerUpMeterLevels256"
         },
         {
+          "start": 46342,
+          "end": 46347,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 46351,
           "end": 46356,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075258,6 +1076946,13 @@
           "symbol": "F:j.field_xb:[I",
           "original": "field_xb",
           "renamed": "powerUpMeterVelocities256"
+        },
+        {
+          "start": 46366,
+          "end": 46371,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 46394,
@@ -1075274,6 +1076969,13 @@
           "renamed": "powerUpMeterVelocities256"
         },
         {
+          "start": 46409,
+          "end": 46414,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
           "start": 46441,
           "end": 46446,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075286,6 +1076988,20 @@
           "symbol": "F:j.field_cb:[I",
           "original": "field_cb",
           "renamed": "powerUpMeterLevels256"
+        },
+        {
+          "start": 46456,
+          "end": 46461,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 46465,
+          "end": 46470,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+          "original": "var10",
+          "renamed": "targetMeterLevel256"
         },
         {
           "start": 46494,
@@ -1075302,6 +1077018,20 @@
           "renamed": "powerUpMeterVelocities256"
         },
         {
+          "start": 46509,
+          "end": 46514,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 46545,
+          "end": 46550,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+          "original": "var10",
+          "renamed": "targetMeterLevel256"
+        },
+        {
           "start": 46554,
           "end": 46559,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#25",
@@ -1075314,6 +1077044,13 @@
           "symbol": "F:j.field_cb:[I",
           "original": "field_cb",
           "renamed": "powerUpMeterLevels256"
+        },
+        {
+          "start": 46569,
+          "end": 46574,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
         },
         {
           "start": 46598,
@@ -1075330,6 +1077067,34 @@
           "renamed": "powerUpMeterLevels256"
         },
         {
+          "start": 46613,
+          "end": 46618,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 46622,
+          "end": 46627,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#18",
+          "original": "var10",
+          "renamed": "targetMeterLevel256"
+        },
+        {
+          "start": 46677,
+          "end": 46682,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#23",
+          "original": "var15",
+          "renamed": "powerUpType"
+        },
+        {
+          "start": 46712,
+          "end": 46729,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#27",
+          "original": "var6_intLifetime1",
+          "renamed": "effectPlayerId"
+        },
+        {
           "start": 46764,
           "end": 46771,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075344,6 +1077109,20 @@
           "renamed": "playerCount"
         },
         {
+          "start": 46804,
+          "end": 46821,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#28",
+          "original": "var6_intLifetime2",
+          "renamed": "displayPlayerId"
+        },
+        {
+          "start": 46827,
+          "end": 46844,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#28",
+          "original": "var6_intLifetime2",
+          "renamed": "displayPlayerId"
+        },
+        {
           "start": 46852,
           "end": 46859,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075356,6 +1077135,13 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 46869,
+          "end": 46886,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#28",
+          "original": "var6_intLifetime2",
+          "renamed": "displayPlayerId"
         },
         {
           "start": 46906,
@@ -1075377,6 +1077163,20 @@
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 46935,
+          "end": 46952,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#28",
+          "original": "var6_intLifetime2",
+          "renamed": "displayPlayerId"
+        },
+        {
+          "start": 46969,
+          "end": 46986,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#33",
+          "original": "var8_intLifetime2",
+          "renamed": "targetPosition256"
         },
         {
           "start": 46989,
@@ -1075433,6 +1077233,13 @@
           "symbol": "F:j.field_J:I",
           "original": "field_J",
           "renamed": "displayedPositionVelocity256"
+        },
+        {
+          "start": 47073,
+          "end": 47090,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#33",
+          "original": "var8_intLifetime2",
+          "renamed": "targetPosition256"
         },
         {
           "start": 47093,
@@ -1075561,6 +1077368,13 @@
           "renamed": "displayedPosition256"
         },
         {
+          "start": 47359,
+          "end": 47376,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#33",
+          "original": "var8_intLifetime2",
+          "renamed": "targetPosition256"
+        },
+        {
           "start": 47396,
           "end": 47401,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#26",
@@ -1075573,6 +1077387,13 @@
           "symbol": "F:j.field_G:I",
           "original": "field_G",
           "renamed": "displayedPosition256"
+        },
+        {
+          "start": 47412,
+          "end": 47429,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#33",
+          "original": "var8_intLifetime2",
+          "renamed": "targetPosition256"
         },
         {
           "start": 47492,
@@ -1075589,6 +1077410,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 47527,
+          "end": 47544,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#29",
+          "original": "var6_intLifetime3",
+          "renamed": "positionInversionMask"
+        },
+        {
           "start": 47552,
           "end": 47559,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075601,6 +1077429,13 @@
           "symbol": "M:ak.a(I)I",
           "original": "a",
           "renamed": "getWrappedPositionInversionMask"
+        },
+        {
+          "start": 47585,
+          "end": 47589,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
+          "original": "var7",
+          "renamed": "orderPlayerId"
         },
         {
           "start": 47600,
@@ -1075617,6 +1077452,27 @@
           "renamed": "playerCount"
         },
         {
+          "start": 47618,
+          "end": 47622,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
+          "original": "var7",
+          "renamed": "orderPlayerId"
+        },
+        {
+          "start": 47624,
+          "end": 47628,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
+          "original": "var7",
+          "renamed": "orderPlayerId"
+        },
+        {
+          "start": 47648,
+          "end": 47652,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#15",
+          "original": "var8",
+          "renamed": "orderBoard"
+        },
+        {
           "start": 47660,
           "end": 47667,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075631,6 +1077487,34 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 47676,
+          "end": 47680,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
+          "original": "var7",
+          "renamed": "orderPlayerId"
+        },
+        {
+          "start": 47707,
+          "end": 47711,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#13",
+          "original": "var7",
+          "renamed": "orderPlayerId"
+        },
+        {
+          "start": 47714,
+          "end": 47731,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#29",
+          "original": "var6_intLifetime3",
+          "renamed": "positionInversionMask"
+        },
+        {
+          "start": 47761,
+          "end": 47765,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#15",
+          "original": "var8",
+          "renamed": "orderBoard"
+        },
+        {
           "start": 47766,
           "end": 47773,
           "symbol": "F:j.field_M:I",
@@ -1075638,11 +1077522,25 @@
           "renamed": "positionOrderTicks"
         },
         {
+          "start": 47801,
+          "end": 47805,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#15",
+          "original": "var8",
+          "renamed": "orderBoard"
+        },
+        {
           "start": 47806,
           "end": 47813,
           "symbol": "F:j.field_M:I",
           "original": "field_M",
           "renamed": "positionOrderTicks"
+        },
+        {
+          "start": 47878,
+          "end": 47882,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#15",
+          "original": "var8",
+          "renamed": "orderBoard"
         },
         {
           "start": 47883,
@@ -1075673,6 +1077571,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 48029,
+          "end": 48033,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#12",
+          "original": "var6",
+          "renamed": "singlePlayerBoard"
+        },
+        {
           "start": 48041,
           "end": 48048,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075687,11 +1077592,25 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 48079,
+          "end": 48083,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#12",
+          "original": "var6",
+          "renamed": "singlePlayerBoard"
+        },
+        {
           "start": 48084,
           "end": 48091,
           "symbol": "F:j.field_Z:I",
           "original": "field_Z",
           "renamed": "boardState"
+        },
+        {
+          "start": 48116,
+          "end": 48120,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#12",
+          "original": "var6",
+          "renamed": "singlePlayerBoard"
         },
         {
           "start": 48121,
@@ -1075706,6 +1077625,13 @@
           "symbol": "M:qj.a(BZ)V",
           "original": "a",
           "renamed": "finishOfflineMatch"
+        },
+        {
+          "start": 48204,
+          "end": 48208,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#12",
+          "original": "var6",
+          "renamed": "singlePlayerBoard"
         },
         {
           "start": 48209,
@@ -1075824,7 +1077750,7 @@
           "end": 48517,
           "symbol": "M:ak.a(B)I",
           "original": "a",
-          "renamed": "getStateZeroPlayerMask"
+          "renamed": "getExpiredPositionTimerMask"
         },
         {
           "start": 48556,
@@ -1075869,6 +1077795,13 @@
           "renamed": "lastRemainingPlayerId"
         },
         {
+          "start": 48709,
+          "end": 48726,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+          "original": "var6_intLifetime4",
+          "renamed": "winningPlayerId"
+        },
+        {
           "start": 48734,
           "end": 48741,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075881,6 +1077814,13 @@
           "symbol": "F:ak.field_h:I",
           "original": "field_h",
           "renamed": "lastRemainingPlayerId"
+        },
+        {
+          "start": 48769,
+          "end": 48782,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#31",
+          "original": "var7Lifetime1",
+          "renamed": "otherPlayerId"
         },
         {
           "start": 48794,
@@ -1075911,6 +1077851,27 @@
           "renamed": "playerMaskThree"
         },
         {
+          "start": 48862,
+          "end": 48875,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#31",
+          "original": "var7Lifetime1",
+          "renamed": "otherPlayerId"
+        },
+        {
+          "start": 48905,
+          "end": 48922,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+          "original": "var6_intLifetime4",
+          "renamed": "winningPlayerId"
+        },
+        {
+          "start": 48925,
+          "end": 48938,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#31",
+          "original": "var7Lifetime1",
+          "renamed": "otherPlayerId"
+        },
+        {
           "start": 48983,
           "end": 48990,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075923,6 +1077884,13 @@
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 48999,
+          "end": 49016,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+          "original": "var6_intLifetime4",
+          "renamed": "winningPlayerId"
         },
         {
           "start": 49018,
@@ -1075946,6 +1077914,13 @@
           "renamed": "resultOrder"
         },
         {
+          "start": 49076,
+          "end": 49093,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+          "original": "var6_intLifetime4",
+          "renamed": "winningPlayerId"
+        },
+        {
           "start": 49118,
           "end": 49125,
           "symbol": "F:qj.field_w:Lak;",
@@ -1075958,6 +1077933,13 @@
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 49135,
+          "end": 49152,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+          "original": "var6_intLifetime4",
+          "renamed": "winningPlayerId"
         },
         {
           "start": 49158,
@@ -1075979,6 +1077961,13 @@
           "symbol": "F:ak.field_m:[I",
           "original": "field_m",
           "renamed": "resultOrder"
+        },
+        {
+          "start": 49220,
+          "end": 49237,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#30",
+          "original": "var6_intLifetime4",
+          "renamed": "winningPlayerId"
         },
         {
           "start": 49262,
@@ -1076009,6 +1077998,13 @@
           "renamed": "hasNonnegativeResult"
         },
         {
+          "start": 49387,
+          "end": 49400,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#1",
+          "original": "stackIn_107_0",
+          "renamed": "advancedLocalTickResult"
+        },
+        {
           "start": 49403,
           "end": 49411,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#8",
@@ -1076016,11 +1078012,109 @@
           "renamed": "advancedLocalTick"
         },
         {
+          "start": 49430,
+          "end": 49443,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#1",
+          "original": "stackIn_107_0",
+          "renamed": "advancedLocalTickResult"
+        },
+        {
+          "start": 49494,
+          "end": 49520,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#36",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 49534,
+          "end": 49559,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 49562,
+          "end": 49588,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#36",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 49600,
+          "end": 49604,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#9",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 49607,
+          "end": 49632,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 49644,
+          "end": 49657,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#2",
+          "original": "stackIn_110_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 49660,
+          "end": 49664,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#9",
+          "original": "var4",
+          "renamed": "failure"
+        },
+        {
+          "start": 49676,
+          "end": 49689,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#3",
+          "original": "stackIn_110_1",
+          "renamed": "contextBuilder"
+        },
+        {
           "start": 49743,
           "end": 49749,
           "symbol": "P:qj.a(Lvl;ZLvl;)Z#0",
           "original": "param0",
           "renamed": "remoteAudioEvents"
+        },
+        {
+          "start": 49773,
+          "end": 49786,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#4",
+          "original": "stackIn_111_2",
+          "renamed": "remoteAudioSummary"
+        },
+        {
+          "start": 49828,
+          "end": 49841,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#4",
+          "original": "stackIn_111_2",
+          "renamed": "remoteAudioSummary"
+        },
+        {
+          "start": 49875,
+          "end": 49888,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#5",
+          "original": "stackIn_113_1",
+          "renamed": "localAudioContextBuilder"
+        },
+        {
+          "start": 49917,
+          "end": 49930,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#3",
+          "original": "stackIn_110_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 49939,
+          "end": 49952,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#4",
+          "original": "stackIn_111_2",
+          "renamed": "remoteAudioSummary"
         },
         {
           "start": 49973,
@@ -1076037,6 +1078131,20 @@
           "renamed": "localAudioEvents"
         },
         {
+          "start": 50038,
+          "end": 50051,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#6",
+          "original": "stackIn_114_2",
+          "renamed": "localAudioSummary"
+        },
+        {
+          "start": 50093,
+          "end": 50106,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#6",
+          "original": "stackIn_114_2",
+          "renamed": "localAudioSummary"
+        },
+        {
           "start": 50146,
           "end": 50148,
           "symbol": "C:qb",
@@ -1076049,6 +1078157,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 50173,
+          "end": 50186,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#2",
+          "original": "stackIn_110_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 50215,
+          "end": 50228,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#5",
+          "original": "stackIn_113_1",
+          "renamed": "localAudioContextBuilder"
+        },
+        {
+          "start": 50237,
+          "end": 50250,
+          "symbol": "L:qj.a(Lvl;ZLvl;)Z#6",
+          "original": "stackIn_114_2",
+          "renamed": "localAudioSummary"
         },
         {
           "start": 50317,
@@ -1076688,6 +1078817,41 @@
           "renamed": "board"
         },
         {
+          "start": 52666,
+          "end": 52678,
+          "symbol": "L:qj.a(BLj;)V#0",
+          "original": "stackIn_22_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 52709,
+          "end": 52721,
+          "symbol": "L:qj.a(BLj;)V#1",
+          "original": "stackIn_22_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 52745,
+          "end": 52757,
+          "symbol": "L:qj.a(BLj;)V#2",
+          "original": "stackIn_23_2",
+          "renamed": "boardSummary"
+        },
+        {
+          "start": 52791,
+          "end": 52816,
+          "symbol": "L:qj.a(BLj;)V#3",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 52850,
+          "end": 52854,
+          "symbol": "L:qj.a(BLj;)V#4",
+          "original": "var3",
+          "renamed": "failure"
+        },
+        {
           "start": 52887,
           "end": 52893,
           "symbol": "P:qj.a(BLj;)V#1",
@@ -1077052,6 +1079216,62 @@
           "renamed": "controlMask"
         },
         {
+          "start": 53807,
+          "end": 53833,
+          "symbol": "L:qj.a(BLj;)V#5",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 53847,
+          "end": 53872,
+          "symbol": "L:qj.a(BLj;)V#3",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 53875,
+          "end": 53901,
+          "symbol": "L:qj.a(BLj;)V#5",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 53913,
+          "end": 53917,
+          "symbol": "L:qj.a(BLj;)V#4",
+          "original": "var3",
+          "renamed": "failure"
+        },
+        {
+          "start": 53920,
+          "end": 53945,
+          "symbol": "L:qj.a(BLj;)V#3",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 53957,
+          "end": 53969,
+          "symbol": "L:qj.a(BLj;)V#0",
+          "original": "stackIn_22_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 53972,
+          "end": 53976,
+          "symbol": "L:qj.a(BLj;)V#4",
+          "original": "var3",
+          "renamed": "failure"
+        },
+        {
+          "start": 53988,
+          "end": 54000,
+          "symbol": "L:qj.a(BLj;)V#1",
+          "original": "stackIn_22_1",
+          "renamed": "contextBuilder"
+        },
+        {
           "start": 54047,
           "end": 54053,
           "symbol": "P:qj.a(BLj;)V#0",
@@ -1077066,6 +1079286,20 @@
           "renamed": "board"
         },
         {
+          "start": 54112,
+          "end": 54124,
+          "symbol": "L:qj.a(BLj;)V#2",
+          "original": "stackIn_23_2",
+          "renamed": "boardSummary"
+        },
+        {
+          "start": 54166,
+          "end": 54178,
+          "symbol": "L:qj.a(BLj;)V#2",
+          "original": "stackIn_23_2",
+          "renamed": "boardSummary"
+        },
+        {
           "start": 54218,
           "end": 54220,
           "symbol": "C:qb",
@@ -1077078,6 +1079312,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 54245,
+          "end": 54257,
+          "symbol": "L:qj.a(BLj;)V#0",
+          "original": "stackIn_22_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 54286,
+          "end": 54298,
+          "symbol": "L:qj.a(BLj;)V#1",
+          "original": "stackIn_22_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 54307,
+          "end": 54319,
+          "symbol": "L:qj.a(BLj;)V#2",
+          "original": "stackIn_23_2",
+          "renamed": "boardSummary"
         },
         {
           "start": 54386,
@@ -1276974,10 +1279229,10 @@
       "commit": "9159750b0604b9082db8b91fe73a0a0b119c7f22",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "96b396dca86e4279528b0d88870c856bbbc4574c112e0a25fd5c25e1f99d44aa",
+    "rulesSha256": "796241a0e1b814be5b2b6f6e407aa5381773408910770eca457a96a0dd72037e",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
-    "outputTreeSha256": "11d69d850b43fa7983f3d7b164836831619e0a375c503e88976a139bac8f4cbc",
+    "outputTreeSha256": "0bc0ff6e6e4b9e266700356eab639697b91fcbfd2b8313aacdfd17a4be933d98",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
