@@ -5,7 +5,7 @@ import java.util.*;
 
 final class un {
     static IndexedSprite[] field_e;
-    static int field_a;
+    static int textChoiceOuterPaddingX;
     static String field_h;
     static String[] field_c;
     static RgbSprite field_d;

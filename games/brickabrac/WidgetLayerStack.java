@@ -34,7 +34,7 @@ final class WidgetLayerStack extends SingleChildWidget {
           }
         }
         if (null == jj.canvasResizeController &&
-          gh.field_c) {
+          TextChoiceDialogStyles.field_c) {
           bq.a(param0, var2, (byte) 104);
         }
     }

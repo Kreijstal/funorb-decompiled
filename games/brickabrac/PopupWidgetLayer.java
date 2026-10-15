@@ -238,8 +238,8 @@ abstract class PopupWidgetLayer extends WidgetLayer {
           heapDiagnosticLine = (DiagnosticTextLine) null;
         }
         MusicVoice.field_n.drawTransparent(x + this.width - 90, 10 + y);
-        fq.a(this.width - 10, 35 + y, obfuscationGuard ^ 1013, ValidationMessageWidget.field_W, 5 + x);
-        fq.a(this.width, -22 + y + this.height, obfuscationGuard + 469, GameplayAudioEvent.field_l, x);
+        HorizontalFrameHelpers.drawHorizontalFrame(this.width - 10, 35 + y, obfuscationGuard ^ 1013, ValidationMessageWidget.field_W, 5 + x);
+        HorizontalFrameHelpers.drawHorizontalFrame(this.width, -22 + y + this.height, obfuscationGuard + 469, GameplayAudioEvent.field_l, x);
         var5Lifetime2 = 169;
         var4Lifetime2 = this.height - 79;
         var6Lifetime2 = 127;

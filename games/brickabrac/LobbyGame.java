@@ -36,7 +36,7 @@ final class LobbyGame extends UiComponent {
     int joinSortPriority;
     UiComponent field_mc;
     static RgbSprite spaceNearSprite;
-    static int field_hc;
+    static int textChoiceSelectedButtonTextColor;
     UiComponent field_gc;
     UiComponent field_ec;
     UiComponent field_Yb;
@@ -220,7 +220,7 @@ final class LobbyGame extends UiComponent {
           leverSprite = leverSprites[QuickChatHelpDialog.getLeverFrameIndex(match, playerId, 87, board)];
           leverSprite.drawTransparent(-8 + x - (characterSprite.canvasWidth + leverSprite.canvasWidth) / 2, -leverSprite.canvasHeight + 480 + 10);
           if (obfuscationGuard != -103) {
-            field_hc = 38;
+            textChoiceSelectedButtonTextColor = 38;
           }
           truncatedPlayerName = TextFont.truncateText(ce.field_e, match.playerNames[playerId], 73);
           unusedMessageSlot = null;
@@ -369,7 +369,7 @@ final class LobbyGame extends UiComponent {
           leverSprite = leverSprites[QuickChatHelpDialog.getLeverFrameIndex(match, playerId, 87, board)];
           leverSprite.drawTransparent(-8 + x - (characterSprite.canvasWidth + leverSprite.canvasWidth) / 2, -leverSprite.canvasHeight + 480 + 10);
           if (obfuscationGuard != -103) {
-            field_hc = 38;
+            textChoiceSelectedButtonTextColor = 38;
           }
           truncatedPlayerName = TextFont.truncateText(ce.field_e, match.playerNames[playerId], 73);
           unusedMessageSlot = null;

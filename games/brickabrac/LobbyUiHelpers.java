@@ -215,7 +215,7 @@ final class LobbyUiHelpers {
         }
     }
 
-    final static void initializeUiStylesWithSharedFont(RgbSprite[] param0, int param1, int param2, int param3, int param4, TextFont font, int param6, int param7, int param8, RgbSprite[] param9, int param10, RgbSprite[] param11, int param12, byte obfuscationGuard, int param14) {
+    final static void configureTextChoiceDialogWithFont(RgbSprite[] outerFrameSprites, int centerY, int buttonPaddingX, int centerX, int buttonTextColor, TextFont font, int bodyTextColor, int outerPaddingY, int selectedButtonTextColor, RgbSprite[] buttonFrameSprites, int outerPaddingX, RgbSprite[] selectedButtonFrameSprites, int buttonGapY, byte obfuscationGuard, int buttonPaddingY) {
         RuntimeException contextFailure = null;
         StringBuilder contextPrefix = null;
         String firstSpritesSummary = null;
@@ -235,39 +235,39 @@ final class LobbyUiHelpers {
           fontCapHeight = font.capHeight;
           if (obfuscationGuard != -110) {
             unusedSprites = (RgbSprite[]) null;
-            LobbyUiHelpers.initializeUiStylesWithSharedFont((RgbSprite[]) null, -71, 62, -50, 61, (TextFont) null, 97, 90, 79, (RgbSprite[]) null, 117, (RgbSprite[]) null, 81, (byte) 46, -119);
+            LobbyUiHelpers.configureTextChoiceDialogWithFont((RgbSprite[]) null, -71, 62, -50, 61, (TextFont) null, 97, 90, 79, (RgbSprite[]) null, 117, (RgbSprite[]) null, 81, (byte) 46, -119);
           }
-          TabbedPane.a(param3, fontLineHeight, param10, param2, fontLineHeight, param12, param1, param7, param4, param0, font, param11, param8, param6, fontCapHeight, false, param14, param9, font, fontCapHeight);
+          TabbedPane.configureTextChoiceDialogFromSprites(centerX, fontLineHeight, outerPaddingX, buttonPaddingX, fontLineHeight, buttonGapY, centerY, outerPaddingY, buttonTextColor, outerFrameSprites, font, selectedButtonFrameSprites, selectedButtonTextColor, bodyTextColor, fontCapHeight, false, buttonPaddingY, buttonFrameSprites, font, fontCapHeight);
           return;
         } catch (java.lang.RuntimeException caughtInitializationFailure) {
           caughtFailure = caughtInitializationFailure;
           initializationFailure = caughtFailure;
           contextFailure = initializationFailure;
           contextPrefix = new StringBuilder().append("nh.C(");
-          if (param0 == null) {
+          if (outerFrameSprites == null) {
             firstSpritesSummary = "null";
           } else {
             firstSpritesSummary = "{...}";
           }
-          fontContextPrefix = ((StringBuilder) (Object) contextPrefix).append(firstSpritesSummary).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          fontContextPrefix = ((StringBuilder) (Object) contextPrefix).append(firstSpritesSummary).append(',').append(centerY).append(',').append(buttonPaddingX).append(',').append(centerX).append(',').append(buttonTextColor).append(',');
           if (font == null) {
             fontArgumentSummary = "null";
           } else {
             fontArgumentSummary = "{...}";
           }
-          secondSpritesContextPrefix = ((StringBuilder) (Object) fontContextPrefix).append(fontArgumentSummary).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
+          secondSpritesContextPrefix = ((StringBuilder) (Object) fontContextPrefix).append(fontArgumentSummary).append(',').append(bodyTextColor).append(',').append(outerPaddingY).append(',').append(selectedButtonTextColor).append(',');
+          if (buttonFrameSprites == null) {
             secondSpritesSummary = "null";
           } else {
             secondSpritesSummary = "{...}";
           }
-          thirdSpritesContextPrefix = ((StringBuilder) (Object) secondSpritesContextPrefix).append(secondSpritesSummary).append(',').append(param10).append(',');
-          if (param11 == null) {
+          thirdSpritesContextPrefix = ((StringBuilder) (Object) secondSpritesContextPrefix).append(secondSpritesSummary).append(',').append(outerPaddingX).append(',');
+          if (selectedButtonFrameSprites == null) {
             thirdSpritesSummary = "null";
           } else {
             thirdSpritesSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) thirdSpritesContextPrefix).append(thirdSpritesSummary).append(',').append(param12).append(',').append(obfuscationGuard).append(',').append(param14).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) thirdSpritesContextPrefix).append(thirdSpritesSummary).append(',').append(buttonGapY).append(',').append(obfuscationGuard).append(',').append(buttonPaddingY).append(')').toString());
         }
     }
 

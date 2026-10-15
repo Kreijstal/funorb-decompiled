@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh {
+final class TextChoiceDialogStyles {
     static String field_a;
     static String[] field_b;
     static StringBuilder diagnosticDecimalScratch;
@@ -15,78 +15,78 @@ final class gh {
         field_d = null;
         field_b = null;
         if (param0 != -21727) {
-          gh.a(-77);
+          TextChoiceDialogStyles.a(-77);
         }
     }
 
-    final static void a(int param0, NineSliceFrame param1, int param2, int param3, int param4, int param5, TextFont param6, TextFont param7, int param8, int param9, NineSliceFrame param10, NineSliceFrame param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19) {
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var20 = null;
+    final static void configureTextChoiceDialog(int outerPaddingX, NineSliceFrame selectedButtonFrame, int buttonPaddingX, int centerX, int bodyBaseline, int outerPaddingY, TextFont buttonFont, TextFont bodyFont, int obfuscationGuard, int centerY, NineSliceFrame buttonFrame, NineSliceFrame outerFrame, int bodyLineHeight, int buttonBaseline, int bodyTextColor, int buttonTextColor, int buttonLineHeight, int selectedButtonTextColor, int buttonPaddingY, int buttonGapY) {
+        RuntimeException contextFailure = null;
+        StringBuilder contextPrefix = null;
+        String firstFrameSummary = null;
+        StringBuilder buttonFontContextPrefix = null;
+        String buttonFontSummary = null;
+        StringBuilder bodyFontContextPrefix = null;
+        String bodyFontSummary = null;
+        StringBuilder buttonFrameContextPrefix = null;
+        String buttonFrameSummary = null;
+        StringBuilder outerFrameContextPrefix = null;
+        String outerFrameSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException configurationFailure = null;
         try {
-          if (param8 != 12) {
-            gh.a(71, (NineSliceFrame) null, 110, 68, 116, -46, (TextFont) null, (TextFont) null, 98, -11, (NineSliceFrame) null, (NineSliceFrame) null, -41, 115, -68, 100, 62, 64, -15, -127);
+          if (obfuscationGuard != 12) {
+            TextChoiceDialogStyles.configureTextChoiceDialog(71, (NineSliceFrame) null, 110, 68, 116, -46, (TextFont) null, (TextFont) null, 98, -11, (NineSliceFrame) null, (NineSliceFrame) null, -41, 115, -68, 100, 62, 64, -15, -127);
           }
-          Widget.field_m = param7;
-          PowerUpWarning.field_r = param6;
-          PowerUpWarning.a(param16, param13, param12, 0, param4);
-          MusicVoice.a(param0, -28, param5, param11);
-          LoginCredentialKind.a(param10, param1, param19, 7, param18, param2);
-          GameConnectionShell.a(param3, param9, (byte) -119);
-          fq.a((byte) 94, param15, param17, param14);
+          Widget.textChoiceBodyFont = bodyFont;
+          PowerUpWarning.textChoiceButtonFont = buttonFont;
+          PowerUpWarning.configureTextChoiceMetrics(buttonLineHeight, buttonBaseline, bodyLineHeight, 0, bodyBaseline);
+          MusicVoice.configureTextChoiceOuterFrame(outerPaddingX, -28, outerPaddingY, outerFrame);
+          LoginCredentialKind.configureTextChoiceButtonFrames(buttonFrame, selectedButtonFrame, buttonGapY, 7, buttonPaddingY, buttonPaddingX);
+          GameConnectionShell.setTextChoiceCenter(centerX, centerY, (byte) -119);
+          HorizontalFrameHelpers.configureTextChoiceColors((byte) 94, buttonTextColor, selectedButtonTextColor, bodyTextColor);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var20 = decompiledCaughtException;
-          stackIn_6_0 = var20;
-          stackIn_6_1 = new StringBuilder().append("gh.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+        } catch (java.lang.RuntimeException caughtConfigurationFailure) {
+          caughtFailure = caughtConfigurationFailure;
+          configurationFailure = caughtFailure;
+          contextFailure = configurationFailure;
+          contextPrefix = new StringBuilder().append("gh.B(").append(outerPaddingX).append(',');
+          if (selectedButtonFrame == null) {
+            firstFrameSummary = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            firstFrameSummary = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
-            stackIn_10_2 = "null";
+          buttonFontContextPrefix = ((StringBuilder) (Object) contextPrefix).append(firstFrameSummary).append(',').append(buttonPaddingX).append(',').append(centerX).append(',').append(bodyBaseline).append(',').append(outerPaddingY).append(',');
+          if (buttonFont == null) {
+            buttonFontSummary = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            buttonFontSummary = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param7 == null) {
-            stackIn_13_2 = "null";
+          bodyFontContextPrefix = ((StringBuilder) (Object) buttonFontContextPrefix).append(buttonFontSummary).append(',');
+          if (bodyFont == null) {
+            bodyFontSummary = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            bodyFontSummary = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param8).append(',').append(param9).append(',');
-          if (param10 == null) {
-            stackIn_16_2 = "null";
+          buttonFrameContextPrefix = ((StringBuilder) (Object) bodyFontContextPrefix).append(bodyFontSummary).append(',').append(obfuscationGuard).append(',').append(centerY).append(',');
+          if (buttonFrame == null) {
+            buttonFrameSummary = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            buttonFrameSummary = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param11 == null) {
-            stackIn_19_2 = "null";
+          outerFrameContextPrefix = ((StringBuilder) (Object) buttonFrameContextPrefix).append(buttonFrameSummary).append(',');
+          if (outerFrame == null) {
+            outerFrameSummary = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            outerFrameSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) outerFrameContextPrefix).append(outerFrameSummary).append(',').append(bodyLineHeight).append(',').append(buttonBaseline).append(',').append(bodyTextColor).append(',').append(buttonTextColor).append(',').append(buttonLineHeight).append(',').append(selectedButtonTextColor).append(',').append(buttonPaddingY).append(',').append(buttonGapY).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
         SaveResultsPromptScreen.advanceAndDrawFireworks(true, param1, 0);
         if (param0 < 119) {
-          gh.a(35);
+          TextChoiceDialogStyles.a(35);
         }
     }
 

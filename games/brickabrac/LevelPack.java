@@ -7,7 +7,7 @@ final class LevelPack {
     byte[][] levelData;
     static int field_g;
     LevelMetadata[] metadata;
-    static int field_k;
+    static int textChoiceLeft;
     static String field_f;
     int completionWord;
     int packId;

@@ -202,11 +202,11 @@ final class ArchiveSourceManager {
         }
     }
 
-    final static int a(byte param0) {
-        if (param0 != -53) {
+    final static int getTextChoiceContentWidth(byte obfuscationGuard) {
+        if (obfuscationGuard != -53) {
           field_j = (AlphaFont) null;
         }
-        return MusicVoiceMixer.field_p - LevelPack.field_k;
+        return MusicVoiceMixer.textChoiceRight - LevelPack.textChoiceLeft;
     }
 
     static {

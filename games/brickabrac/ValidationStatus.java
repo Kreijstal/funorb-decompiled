@@ -5,7 +5,7 @@ final class ValidationStatus {
     static int reportedHeapLimitMiB;
     static UiComponent field_j;
     static LevelPack field_b;
-    static int field_d;
+    static int textChoiceBodyTextColor;
     static byte[] field_h;
     static int field_f;
     static RgbSprite field_e;

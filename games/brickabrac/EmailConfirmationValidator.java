@@ -7,7 +7,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     private String checkedEmail;
     private MatchingTextValidator matchingValidator;
     private boolean emailAvailable;
-    static NineSliceFrame field_l;
+    static NineSliceFrame textChoiceSelectedButtonFrame;
     static String field_r;
     static NodeDeque field_q;
 
@@ -115,7 +115,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
           field_q = (NodeDeque) null;
         }
         field_r = null;
-        field_l = null;
+        textChoiceSelectedButtonFrame = null;
         field_m = null;
         field_k = null;
         field_q = null;
@@ -189,7 +189,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         if (param0 != 21651) {
           return false;
         }
-        return va.field_a;
+        return va.textChoiceDialogOpen;
     }
 
     static {

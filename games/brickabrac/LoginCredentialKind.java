@@ -95,18 +95,18 @@ final class LoginCredentialKind {
         throw new IllegalStateException();
     }
 
-    final static void a(NineSliceFrame param0, NineSliceFrame param1, int param2, int param3, int param4, int param5) {
-        GameClock.field_g = param2;
-        if (param3 != 7) {
+    final static void configureTextChoiceButtonFrames(NineSliceFrame buttonFrame, NineSliceFrame selectedButtonFrame, int gapY, int obfuscationGuard, int paddingY, int paddingX) {
+        GameClock.textChoiceButtonGapY = gapY;
+        if (obfuscationGuard != 7) {
           return;
         }
         try {
-          EmailConfirmationValidator.field_l = param1;
-          ArrayWidgetGroup.field_F = param0;
-          GameCanvas.field_f = param4;
-          FullscreenFailureDialog.field_lb = param5;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cd.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          EmailConfirmationValidator.textChoiceSelectedButtonFrame = selectedButtonFrame;
+          ArrayWidgetGroup.textChoiceButtonFrame = buttonFrame;
+          GameCanvas.textChoiceButtonPaddingY = paddingY;
+          FullscreenFailureDialog.textChoiceButtonPaddingX = paddingX;
+        } catch (RuntimeException configurationFailure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) configurationFailure), "cd.C(" + (buttonFrame != null ? "{...}" : "null") + ',' + (selectedButtonFrame != null ? "{...}" : "null") + ',' + gapY + ',' + obfuscationGuard + ',' + paddingY + ',' + paddingX + ')');
         }
     }
 

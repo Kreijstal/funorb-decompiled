@@ -5,7 +5,7 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
     static String field_F;
     static int field_H;
     static int[] viewFacePointThreeY;
-    static int field_J;
+    static int textChoiceCenterX;
     static boolean discardGameplayOnTransition;
 
     NewAchievementsScreen() {

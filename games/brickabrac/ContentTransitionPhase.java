@@ -3,7 +3,7 @@
  */
 final class ContentTransitionPhase {
     static int[] field_b;
-    static int field_d;
+    static int textChoiceTop;
     static volatile int livePressedButton;
     static String field_a;
     static String[] field_e;

@@ -31,7 +31,7 @@ final class RadialSelectorWidget extends FocusableWidget {
           field_Y = null;
           return;
         }
-        RadialSelectorWidget.h(64);
+        RadialSelectorWidget.pollTextChoiceDialog(64);
         emailLoginKind = null;
         field_T = null;
         field_Y = null;
@@ -87,41 +87,41 @@ final class RadialSelectorWidget extends FocusableWidget {
         }
     }
 
-    final static int h(int param0) {
-        int var1_int = 0;
-        int var3 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        var3 = BrickABrac.field_J ? 1 : 0;
+    final static int pollTextChoiceDialog(int obfuscationGuard) {
+        int activated = 0;
+        int unusedClientFlag = 0;
+        int returnedResult = 0;
+        RuntimeException caughtFailure = null;
+        RuntimeException inputFailure = null;
+        int resultCode = 0;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = 0;
+          activated = 0;
           while (jl.pollKeyEvent((byte) 5)) {
-            ArcticBackground.field_r.navigateVertical(param0 - 1);
-            if (!ArcticBackground.field_r.isActivated((byte) 113)) {
+            ArcticBackground.textChoiceSelection.navigateVertical(obfuscationGuard - 1);
+            if (!ArcticBackground.textChoiceSelection.isActivated((byte) 113)) {
               continue;
             }
-            var1_int = 1;
+            activated = 1;
           }
-          ArcticBackground.field_r.updatePointer(aj.a(param0 + param0, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), param0 ^ 27479, aj.a(0, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
-          if (ArcticBackground.field_r.isActivated((byte) 113)) {
-            var1_int = 1;
+          ArcticBackground.textChoiceSelection.updatePointer(TextChoiceDialogHitTest.hitTestTextChoiceDialog(obfuscationGuard + obfuscationGuard, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), obfuscationGuard ^ 27479, TextChoiceDialogHitTest.hitTestTextChoiceDialog(0, PlayerNameChooserPanel.pressY, LoadingProgressDialog.pressX));
+          if (ArcticBackground.textChoiceSelection.isActivated((byte) 113)) {
+            activated = 1;
           }
-          var2 = 0;
-          if (var1_int != 0 &&
-            ArcticBackground.field_r.selectedIndex >= 0) {
-            var2 = ButtonWidgetRenderer.field_A[ArcticBackground.field_r.selectedIndex];
-            if (var2 == 2) {
-              DualLinkIterator.b((byte) 99);
+          resultCode = 0;
+          if (activated != 0 &&
+            ArcticBackground.textChoiceSelection.selectedIndex >= 0) {
+            resultCode = ButtonWidgetRenderer.textChoiceResultCodes[ArcticBackground.textChoiceSelection.selectedIndex];
+            if (resultCode == 2) {
+              DualLinkIterator.closeTextChoiceDialog((byte) 99);
             }
           }
-          stackIn_14_0 = var2;
-          return stackIn_14_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "vh.B(" + param0 + ')');
+          returnedResult = resultCode;
+          return returnedResult;
+        } catch (java.lang.RuntimeException caughtInputFailure) {
+          caughtFailure = caughtInputFailure;
+          inputFailure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) inputFailure), "vh.B(" + obfuscationGuard + ')');
         }
     }
 

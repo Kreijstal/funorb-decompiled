@@ -12,7 +12,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
     static String field_J;
     static int[] field_L;
     static int fireworkSpawnHeight;
-    static NineSliceFrame field_F;
+    static NineSliceFrame textChoiceButtonFrame;
     static String field_C;
     static int[] decodedSpriteOffsetX;
 
@@ -109,7 +109,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         field_J = null;
         decodedSpriteOffsetX = null;
         field_C = null;
-        field_F = null;
+        textChoiceButtonFrame = null;
         if (param0) {
           ArrayWidgetGroup.c(true);
         }
@@ -497,7 +497,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
             return false;
           }
           if (param2 != 116) {
-            field_F = (NineSliceFrame) null;
+            textChoiceButtonFrame = (NineSliceFrame) null;
           }
           var4_int = 0;
           while (this.children.length > var4_int) {

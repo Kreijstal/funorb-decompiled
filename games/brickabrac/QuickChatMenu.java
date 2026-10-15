@@ -1210,23 +1210,23 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime122 = gr.a(true, "instructions_pages,0");
           if (null != var2Lifetime122) {
-            gh.field_b[0] = MenuButton.a(var2Lifetime122, (byte) 95);
+            TextChoiceDialogStyles.field_b[0] = MenuButton.a(var2Lifetime122, (byte) 95);
           }
           var2Lifetime123 = gr.a(true, "instructions_pages,1");
           if (var2Lifetime123 != null) {
-            gh.field_b[1] = MenuButton.a(var2Lifetime123, (byte) 78);
+            TextChoiceDialogStyles.field_b[1] = MenuButton.a(var2Lifetime123, (byte) 78);
           }
           var2Lifetime124 = gr.a(true, "instructions_pages,2");
           if (var2Lifetime124 != null) {
-            gh.field_b[2] = MenuButton.a(var2Lifetime124, (byte) 97);
+            TextChoiceDialogStyles.field_b[2] = MenuButton.a(var2Lifetime124, (byte) 97);
           }
           var2Lifetime125 = gr.a(!param0, "instructions_pages,3");
           if (null != var2Lifetime125) {
-            gh.field_b[3] = MenuButton.a(var2Lifetime125, (byte) 77);
+            TextChoiceDialogStyles.field_b[3] = MenuButton.a(var2Lifetime125, (byte) 77);
           }
           var2Lifetime126 = gr.a(true, "instructions_pages,4");
           if (null != var2Lifetime126) {
-            gh.field_b[4] = MenuButton.a(var2Lifetime126, (byte) 76);
+            TextChoiceDialogStyles.field_b[4] = MenuButton.a(var2Lifetime126, (byte) 76);
           }
           var2Lifetime127 = gr.a(true, "settings_label");
           if (var2Lifetime127 != null) {
@@ -1414,7 +1414,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime173 = gr.a(true, "keycode_player0_right");
           if (null != var2Lifetime173) {
-            fq.field_b = var2Lifetime173[0] & 255;
+            HorizontalFrameHelpers.field_b = var2Lifetime173[0] & 255;
           }
           var2Lifetime174 = gr.a(true, "keycode_player0_launch");
           if (var2Lifetime174 != null) {

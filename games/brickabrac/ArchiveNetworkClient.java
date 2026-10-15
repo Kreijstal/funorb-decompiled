@@ -56,10 +56,10 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
             currentLever.drawTransparent(-20 + (-currentLever.canvasWidth + 640), 520 - currentLever.canvasHeight);
           }
           if (MenuScreen.field_i > 0) {
-            if (null == fq.field_c) {
+            if (null == HorizontalFrameHelpers.field_c) {
               return;
             }
-            fadingLever = fq.field_c[leverFrame];
+            fadingLever = HorizontalFrameHelpers.field_c[leverFrame];
             fadingLever.b(-fadingLever.canvasWidth + 620, 40 + (-fadingLever.canvasHeight + 480), fadeAlpha);
           }
           return;

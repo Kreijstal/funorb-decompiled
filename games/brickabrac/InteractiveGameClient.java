@@ -224,7 +224,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
             if (decompiledFrameRemainder0) {
               if (EmailConfirmationValidator.f(21651)) {
                 if (!LoginMethodPreference.b(param0 ^ -16)) {
-                  var3 = RadialSelectorWidget.h(0);
+                  var3 = RadialSelectorWidget.pollTextChoiceDialog(0);
                   if (1 == var3) {
                     AccountIntroductionPanel.a(LevelPackLoader.field_a, true, (byte) 97);
                   }

@@ -89,7 +89,7 @@ final class EmailAvailabilityRequest {
             var8 = param0[1].canvasWidth;
             param0[0].e(param2, param1, param4);
             param0[2].e(param3 + (param2 - var7), param1, param4);
-            Rasterizer2D.saveClip(RasterCacheSurface.field_n);
+            Rasterizer2D.saveClip(RasterCacheSurface.horizontalFrameClipScratch);
             Rasterizer2D.intersectClip(param2 + var6_int, param1, -var7 + param2 + param3, param1 + param0[1].canvasHeight);
             var9 = param2 + var6_int;
             var10 = -var7 + param3 + param2;
@@ -99,7 +99,7 @@ final class EmailAvailabilityRequest {
             for (param2 = var9; param2 < var10; param2 = param2 + var8) {
               param0[1].e(param2, param1, param4);
             }
-            Rasterizer2D.restoreClip(RasterCacheSurface.field_n);
+            Rasterizer2D.restoreClip(RasterCacheSurface.horizontalFrameClipScratch);
             return;
           }
           return;

@@ -14,7 +14,7 @@ final class Paddle extends RectangleBody {
     static String field_G;
     int sizeStage;
     int field_H;
-    static int field_A;
+    static int textChoiceOuterPaddingY;
 
     public static void e(int param0) {
         field_C = null;

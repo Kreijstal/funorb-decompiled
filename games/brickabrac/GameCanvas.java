@@ -7,7 +7,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
     java.awt.Frame window;
     static String field_b;
     static String field_d;
-    static int field_f;
+    static int textChoiceButtonPaddingY;
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
         try {

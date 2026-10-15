@@ -7,7 +7,7 @@ abstract class GameClock {
     static RgbSprite[] field_f;
     static RgbSprite halloweenFarSprite;
     static RgbSprite chocolateSmallNearSprite;
-    static int field_g;
+    static int textChoiceButtonGapY;
     static RectangleBody collisionBody;
     static int field_b;
 

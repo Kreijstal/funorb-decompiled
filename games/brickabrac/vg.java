@@ -4,7 +4,7 @@
 final class vg {
     static String field_a;
     static String field_b;
-    static NineSliceFrame field_c;
+    static NineSliceFrame textChoiceOuterFrame;
 
     final static boolean a(int param0) {
         if (param0 != 3) {
@@ -28,7 +28,7 @@ final class vg {
         if (!obfuscationGuard) {
           return;
         }
-        field_c = (NineSliceFrame) null;
+        textChoiceOuterFrame = (NineSliceFrame) null;
     }
 
     public static void b(int param0) {
@@ -37,7 +37,7 @@ final class vg {
           return;
         }
         field_b = null;
-        field_c = null;
+        textChoiceOuterFrame = null;
     }
 
     static {

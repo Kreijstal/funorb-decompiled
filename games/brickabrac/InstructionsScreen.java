@@ -145,13 +145,13 @@ final class InstructionsScreen extends MenuScreen {
           return stackIn_20_0;
         }
         if (26 == var3) {
-          stackIn_10_0 = !(gh.field_b.length - 1 <= this.pageIndex);
+          stackIn_10_0 = !(TextChoiceDialogStyles.field_b.length - 1 <= this.pageIndex);
           return stackIn_10_0;
         }
         if (var3 != 37) {
           return true;
         }
-        stackIn_16_0 = (gh.field_b.length - 1 == this.pageIndex) && (!IntKeyIndex.a((byte) -10));
+        stackIn_16_0 = (TextChoiceDialogStyles.field_b.length - 1 == this.pageIndex) && (!IntKeyIndex.a((byte) -10));
         return stackIn_16_0;
     }
 
@@ -284,7 +284,7 @@ final class InstructionsScreen extends MenuScreen {
         } else {
           PasswordFieldRenderer.field_D.setInlineSprites(un.field_e, SocialTabbedPanel.field_f);
         }
-        var2 = PasswordFieldRenderer.field_D.wrapText(gh.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
+        var2 = PasswordFieldRenderer.field_D.wrapText(TextChoiceDialogStyles.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
         var3 = 145 - (-ConditionalTextValue.field_j - 4);
         for (var4 = 0; var2 > var4; var4++) {
           var5 = PasswordFieldRenderer.field_D;
@@ -369,8 +369,8 @@ final class InstructionsScreen extends MenuScreen {
             this.isButtonEnabled((byte) 106, buttonIndex)) {
             fieldTemp$1 = this.pageIndex + 1;
             this.pageIndex = this.pageIndex + 1;
-            if (fieldTemp$1 >= gh.field_b.length) {
-              this.pageIndex = gh.field_b.length - 1;
+            if (fieldTemp$1 >= TextChoiceDialogStyles.field_b.length) {
+              this.pageIndex = TextChoiceDialogStyles.field_b.length - 1;
             }
             if (!this.isButtonEnabled((byte) 123, 2)) {
               this.selection.setSelectedIndex(false, 3);

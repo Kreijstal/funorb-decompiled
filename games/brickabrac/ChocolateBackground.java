@@ -83,10 +83,10 @@ final class ChocolateBackground extends BackgroundScene {
         GameClock.chocolateSmallNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
         MeshAttributeRecord.chocolateCharacterSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
         Brick.chocCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
-        aj.chocSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
+        TextChoiceDialogHitTest.chocSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
         IntKeyIndex.chocCentreSprites[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
         Brick.chocCapsSprites[1] = Under13RegistrationNoticePanel.a(Brick.chocCapsSprites[0], obfuscationGuard);
-        aj.chocSegsSprites[1] = Under13RegistrationNoticePanel.a(aj.chocSegsSprites[0], obfuscationGuard);
+        TextChoiceDialogHitTest.chocSegsSprites[1] = Under13RegistrationNoticePanel.a(TextChoiceDialogHitTest.chocSegsSprites[0], obfuscationGuard);
         IntKeyIndex.chocCentreSprites[1] = pl.a(-16371, IntKeyIndex.chocCentreSprites[0]);
         NameEntryPopup.chocLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
         return true;
@@ -103,9 +103,9 @@ final class ChocolateBackground extends BackgroundScene {
     final RgbSprite[] a(int param0, boolean param1) {
         if (!param1) {
           field_t = (String) null;
-          return aj.chocSegsSprites[-1 + param0];
+          return TextChoiceDialogHitTest.chocSegsSprites[-1 + param0];
         }
-        return aj.chocSegsSprites[-1 + param0];
+        return TextChoiceDialogHitTest.chocSegsSprites[-1 + param0];
     }
 
     final static ConditionalTextValue f(int param0) {
@@ -168,7 +168,7 @@ final class ChocolateBackground extends BackgroundScene {
     ChocolateBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
-          aj.chocSegsSprites = new RgbSprite[2][];
+          TextChoiceDialogHitTest.chocSegsSprites = new RgbSprite[2][];
           IntKeyIndex.chocCentreSprites = new RgbSprite[2];
           Brick.chocCapsSprites = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {

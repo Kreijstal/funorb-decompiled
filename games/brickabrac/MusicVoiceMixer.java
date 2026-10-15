@@ -6,7 +6,7 @@ final class MusicVoiceMixer extends AudioStream {
     static RgbSprite field_t;
     private MidiSynthesizer synthesizer;
     NodeDeque voices;
-    static int field_p;
+    static int textChoiceRight;
     static boolean field_s;
     static RgbSprite[] field_n;
     static int[] field_u;

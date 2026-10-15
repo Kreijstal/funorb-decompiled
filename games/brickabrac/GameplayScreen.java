@@ -60,7 +60,7 @@ final class GameplayScreen extends GameScreen {
         boolean unusedDirectionRemainder = true;
         canCycleView = maskedEligibilityValue & spectatingAllowedValue;
         if (canCycleView != 0) {
-          if (!IntArrayRequest.heldKeys[fq.field_b] &&
+          if (!IntArrayRequest.heldKeys[HorizontalFrameHelpers.field_b] &&
             !IntArrayRequest.heldKeys[VolcanicBackground.field_u]) {
             if (!(!IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f])) {
               previousViewedPlayer = this.viewedPlayerId - 1;
@@ -75,7 +75,7 @@ final class GameplayScreen extends GameScreen {
             this.viewedPlayerId = nextViewedPlayer % this.match.playerCount;
           }
         }
-        viewKeyHeld = (IntArrayRequest.heldKeys[fq.field_b]) || (IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f]) || (IntArrayRequest.heldKeys[VolcanicBackground.field_u]);
+        viewKeyHeld = (IntArrayRequest.heldKeys[HorizontalFrameHelpers.field_b]) || (IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f]) || (IntArrayRequest.heldKeys[VolcanicBackground.field_u]);
         la.field_c = viewKeyHeld;
     }
 
@@ -228,7 +228,7 @@ final class GameplayScreen extends GameScreen {
             fieldTemp$0 = MenuScreen.field_i - 1;
             MenuScreen.field_i = MenuScreen.field_i - 1;
             if (fieldTemp$0 == 0) {
-              fq.field_c = null;
+              HorizontalFrameHelpers.field_c = null;
               ArchiveFetchClient.field_k = null;
             }
           }
@@ -237,7 +237,7 @@ final class GameplayScreen extends GameScreen {
             fieldTemp$1 = MenuScreen.field_i - 1;
             MenuScreen.field_i = MenuScreen.field_i - 1;
             if (fieldTemp$1 == 0) {
-              fq.field_c = null;
+              HorizontalFrameHelpers.field_c = null;
               ArchiveFetchClient.field_k = null;
             }
           }
@@ -453,7 +453,7 @@ final class GameplayScreen extends GameScreen {
             TabbedPane.currentBackground.drawFullBackground(true, var9_int, 0, 0, 0);
             BallPulseEffect.framebuffer.bindRaster((byte) 78);
             ArchiveFetchClient.field_k = TabbedPane.currentBackground.c((byte) -116);
-            fq.field_c = TabbedPane.currentBackground.b(-102);
+            HorizontalFrameHelpers.field_c = TabbedPane.currentBackground.b(-102);
             TabbedPane.currentBackground = rd.selectBackground(var20.levelState.value, (byte) 19);
             MenuScreen.field_i = 32;
             var20.field_tb = false;
@@ -1627,7 +1627,7 @@ final class GameplayScreen extends GameScreen {
               TabbedPane.currentBackground.drawFullBackground(true, singleBoardScroll, 0, 0, 0);
               if (TabbedPane.currentBackground.sceneId == 7 ||
                 this.match.playerBoards[backgroundPlayerId].boardState == 5) {
-                gh.a(121, true);
+                TextChoiceDialogStyles.a(121, true);
               }
               if (MenuScreen.field_i <= 0) {
                 break;

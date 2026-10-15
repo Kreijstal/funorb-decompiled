@@ -180,7 +180,7 @@ final class jl {
             return stackIn_11_0;
           }
           if (LevelPack.isFriend(0, name)) {
-            stackIn_14_0 = rd.a(gh.field_d, new String[]{name}, (byte) 103);
+            stackIn_14_0 = rd.a(TextChoiceDialogStyles.field_d, new String[]{name}, (byte) 103);
             return stackIn_14_0;
           }
           if (LevelPackSelectScreen.friendCount >= 100 &&

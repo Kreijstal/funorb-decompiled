@@ -102,7 +102,7 @@ final class DesertBackground extends BackgroundScene {
         field_r = null;
         field_s = null;
         if (param0 != -417029247) {
-          DesertBackground.g(-5);
+          DesertBackground.drawTextChoiceDialog(-5);
         }
     }
 
@@ -195,12 +195,12 @@ final class DesertBackground extends BackgroundScene {
         return false;
     }
 
-    final static void g(int param0) {
-        int var1 = ArchiveSourceManager.a((byte) -53);
-        int var2 = ba.b(true);
-        vg.field_c.paintFrame(var1 + (un.field_a << 1), var2 + (Paddle.field_A << 1), LevelPack.field_k - un.field_a, false, ContentTransitionPhase.field_d - Paddle.field_A);
-        CachedArchiveSource.d(-16085);
-        if (param0 == 11184810) {
+    final static void drawTextChoiceDialog(int obfuscationGuard) {
+        int contentWidth = ArchiveSourceManager.getTextChoiceContentWidth((byte) -53);
+        int contentHeight = ba.getTextChoiceContentHeight(true);
+        vg.textChoiceOuterFrame.paintFrame(contentWidth + (un.textChoiceOuterPaddingX << 1), contentHeight + (Paddle.textChoiceOuterPaddingY << 1), LevelPack.textChoiceLeft - un.textChoiceOuterPaddingX, false, ContentTransitionPhase.textChoiceTop - Paddle.textChoiceOuterPaddingY);
+        CachedArchiveSource.drawTextChoiceLines(-16085);
+        if (obfuscationGuard == 11184810) {
           return;
         }
         field_t = (String) null;

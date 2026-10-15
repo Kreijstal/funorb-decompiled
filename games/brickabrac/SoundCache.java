@@ -299,7 +299,7 @@ final class SoundCache {
               CacheEntry.field_v = jl.incomingPackets.readLong(-32768);
               gd.field_b = param5;
               QuickChatHelpDialog.field_Yb = jl.incomingPackets.readUnsignedByte(255);
-              gh.field_f = jl.incomingPackets.readUnsignedByte(255);
+              TextChoiceDialogStyles.field_f = jl.incomingPackets.readUnsignedByte(255);
               ResourceArchiveFactory.windowModeCapabilityWord = jl.incomingPackets.readUnsignedShort(65280);
               var11 = jl.incomingPackets.readNullableCp1252String(0);
               var7 = jl.incomingPackets.readUnsignedByte(255);

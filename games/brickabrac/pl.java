@@ -182,35 +182,35 @@ final class pl {
         }
     }
 
-    final static int a(int param0, String param1, boolean param2) {
-        RuntimeException var3 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int measureTextChoiceLine(int obfuscationGuard, String text, boolean buttonLine) {
+        RuntimeException measurementFailure = null;
+        int buttonWidth = 0;
+        int bodyWidth = 0;
+        RuntimeException contextFailure = null;
+        StringBuilder contextPrefix = null;
+        String textArgumentSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 != 0) {
+          if (obfuscationGuard != 0) {
             pl.a(-94);
           }
-          if (!param2) {
-            stackIn_6_0 = Widget.field_m.measureText(param1);
-            return stackIn_6_0;
+          if (!buttonLine) {
+            bodyWidth = Widget.textChoiceBodyFont.measureText(text);
+            return bodyWidth;
           }
-          stackIn_4_0 = PowerUpWarning.field_r.measureText(param1);
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("pl.G(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_10_2 = "null";
+          buttonWidth = PowerUpWarning.textChoiceButtonFont.measureText(text);
+          return buttonWidth;
+        } catch (java.lang.RuntimeException caughtMeasurementFailure) {
+          caughtFailure = caughtMeasurementFailure;
+          measurementFailure = caughtFailure;
+          contextFailure = measurementFailure;
+          contextPrefix = new StringBuilder().append("pl.G(").append(obfuscationGuard).append(',');
+          if (text == null) {
+            textArgumentSummary = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            textArgumentSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) contextPrefix).append(textArgumentSummary).append(',').append(buttonLine).append(')').toString());
         }
     }
 

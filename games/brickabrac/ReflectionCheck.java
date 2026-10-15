@@ -8,7 +8,7 @@ final class ReflectionCheck extends IntrusiveNode {
     PlatformTask[] fieldTasks;
     int[] fieldSetValues;
     static int[] parisBackgroundColors;
-    static int field_r;
+    static int textChoiceContentHeight;
     int[] operations;
     static String field_o;
     static int[][] field_n;
@@ -48,7 +48,7 @@ final class ReflectionCheck extends IntrusiveNode {
 
     final static boolean containsRectanglePoint(int left, int rectangleHeight, int rectangleWidth, byte obfuscationGuard, int pointY, int pointX, int top) {
         if (obfuscationGuard <= 32) {
-          field_r = -47;
+          textChoiceContentHeight = -47;
           if (pointX < left) {
             return false;
           }

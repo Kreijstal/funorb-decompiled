@@ -81,7 +81,7 @@ final class gr {
           bq.field_e = hc.field_a;
           TextHotspotRegion.field_o = WidgetTextLayout.field_j;
           FireworkBurst.activeBrickSprites = ResourceArchive.field_a;
-          fq.field_d = LevelPackSelectScreen.field_z;
+          HorizontalFrameHelpers.field_d = LevelPackSelectScreen.field_z;
         } else {
           bq.field_e = JungleBackground.field_v;
           ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
@@ -90,7 +90,7 @@ final class gr {
           WidgetLayer.field_J = Ball.field_D;
           TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;
           FireworkBurst.activeBrickSprites = TranslucentNineSliceFrame.field_m;
-          fq.field_d = GameConnectionShell.field_D;
+          HorizontalFrameHelpers.field_d = GameConnectionShell.field_D;
           we.field_b = TextHotspotRegion.powerUpMeterIcons;
           field_c = MenuSelection.field_k;
         }

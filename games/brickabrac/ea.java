@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ea {
-    static int field_e;
+    static int textChoiceCenterY;
     static int collisionTime256;
     static int field_d;
     static String field_f;

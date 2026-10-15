@@ -10,8 +10,8 @@ final class PowerUpWarning extends IntrusiveNode {
     static int[] field_l;
     static MouseInput mouseInput;
     static UiComponent field_k;
-    static TextFont field_r;
-    static int field_i;
+    static TextFont textChoiceButtonFont;
+    static int textChoiceButtonBaseline;
 
     final static DisplayModeInfo[] listDisplayModes(boolean obfuscationGuard, PlatformServices platform) {
         int modeIndex = 0;
@@ -83,7 +83,7 @@ final class PowerUpWarning extends IntrusiveNode {
         }
         mouseInput = null;
         field_l = null;
-        field_r = null;
+        textChoiceButtonFont = null;
         field_n = null;
         field_k = null;
         matchmakingSettingMask = null;
@@ -171,15 +171,15 @@ final class PowerUpWarning extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        DualLinkDeque.field_b = param4;
-        BufferedSocket.field_m = param2;
-        TooltipSprite.field_i = param0;
-        if (param3 != 0) {
+    final static void configureTextChoiceMetrics(int buttonLineHeight, int buttonBaseline, int bodyLineHeight, int obfuscationGuard, int bodyBaseline) {
+        DualLinkDeque.textChoiceBodyBaseline = bodyBaseline;
+        BufferedSocket.textChoiceBodyLineHeight = bodyLineHeight;
+        TooltipSprite.textChoiceButtonLineHeight = buttonLineHeight;
+        if (obfuscationGuard != 0) {
           PlatformServices var6 = (PlatformServices) null;
           PowerUpWarning.listDisplayModes(true, (PlatformServices) null);
         }
-        field_i = param1;
+        textChoiceButtonBaseline = buttonBaseline;
     }
 
     final static void drawPowerUpMeterRow(int x, PlayerBoard board, MultiplayerMatch match, int obfuscationGuard, int y) {

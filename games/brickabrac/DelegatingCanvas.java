@@ -201,7 +201,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         RuntimeException appendFailure = null;
         unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          gh.diagnosticDecimalScratch.setLength(0);
+          TextChoiceDialogStyles.diagnosticDecimalScratch.setLength(0);
           if (obfuscationGuard != -9) {
             field_c = -91;
           }
@@ -209,15 +209,15 @@ final class DelegatingCanvas extends java.awt.Canvas {
           negativeFlag = negativeValue;
           digitCount = 0;
           do {
-            discardedDigitAppend = gh.diagnosticDecimalScratch.append((char)(48 + (int)(value % 10L)));
+            discardedDigitAppend = TextChoiceDialogStyles.diagnosticDecimalScratch.append((char)(48 + (int)(value % 10L)));
             value = value / 10L;
             digitCount++;
           } while (0L != value);
           if (negativeFlag != 0) {
-            discardedSignAppend = gh.diagnosticDecimalScratch.append('-');
+            discardedSignAppend = TextChoiceDialogStyles.diagnosticDecimalScratch.append('-');
           }
           for (digitIndex = digitCount - 1; digitIndex >= 0; digitIndex--) {
-            discardedDestinationAppend = destination.append(gh.diagnosticDecimalScratch.charAt(digitIndex));
+            discardedDestinationAppend = destination.append(TextChoiceDialogStyles.diagnosticDecimalScratch.charAt(digitIndex));
           }
           return;
         } catch (java.lang.RuntimeException caughtAppendFailure) {

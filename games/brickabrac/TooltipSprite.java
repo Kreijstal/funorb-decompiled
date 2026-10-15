@@ -11,7 +11,7 @@ final class TooltipSprite extends IntrusiveNode {
     private RgbSprite sprite;
     static String field_n;
     private String tooltipText;
-    static int field_i;
+    static int textChoiceButtonLineHeight;
     private boolean hovered;
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
@@ -120,7 +120,7 @@ final class TooltipSprite extends IntrusiveNode {
 
     final static void d(int param0) {
         if (param0 != 2) {
-          field_i = 90;
+          textChoiceButtonLineHeight = 90;
         }
         MatchResultScreen.field_s = true;
         ng.quickChatChannel = 0;

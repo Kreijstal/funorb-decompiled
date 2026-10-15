@@ -214,7 +214,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (14 == opcode) {
             OpacityWidget.finishScreenTransition((byte) -116);
-            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.roundUpPowerOfTwo(2000, (byte) -54), aj.a(1345), VerticalScrollbar.roundUpPowerOfTwo(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
+            hm.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.roundUpPowerOfTwo(2000, (byte) -54), TextChoiceDialogHitTest.a(1345), VerticalScrollbar.roundUpPowerOfTwo(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
             hn.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
             RadialSelectorWidget.field_L = false;
             MonotonicTime.field_c = true;
@@ -577,14 +577,14 @@ public final class BrickABrac extends InteractiveGameClient {
         LobbyUiHelpers.clearSharedReferences(120);
         GameConnectionShell.k(-113);
         nk.a((byte) 121);
-        aj.b(-789103103);
+        TextChoiceDialogHitTest.b(-789103103);
         sj.a(11);
         pp.a(0);
         jd.a(0);
         wc.a(100);
         ch.a(20623);
         df.a((byte) 108);
-        gh.a(-21727);
+        TextChoiceDialogStyles.a(-21727);
         SocialTabbedPanel.a(true);
         hm.a(8);
         Rasterizer2D.clearStaticReferences();
@@ -605,7 +605,7 @@ public final class BrickABrac extends InteractiveGameClient {
         GameOverlayHelpers.a(117);
         ChatMessage.a(0);
         kd.a(obfuscationGuard);
-        fq.a((byte) 15);
+        HorizontalFrameHelpers.a((byte) 15);
         GameClock.a((byte) 66);
         SoftwareFramebuffer.a(-125);
         ResourcePreparationQueue.c(4862);

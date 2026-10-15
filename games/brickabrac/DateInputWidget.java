@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class DateInputWidget extends WidgetGroup implements ValidatableWidget {
-    static int field_I;
+    static int textChoiceButtonTextColor;
     static String field_J;
     private BirthDateValidator validator;
     static String field_K;

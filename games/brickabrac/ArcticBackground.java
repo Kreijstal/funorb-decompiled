@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArcticBackground extends BackgroundScene {
-    static MenuSelection field_r;
+    static MenuSelection textChoiceSelection;
     static String field_u;
     static int[] faceDepthBucketCounts;
     static UiComponent field_s;
@@ -107,7 +107,7 @@ final class ArcticBackground extends BackgroundScene {
           return;
         }
         field_u = null;
-        field_r = null;
+        textChoiceSelection = null;
         field_s = null;
         faceDepthBucketCounts = null;
     }
@@ -182,7 +182,7 @@ final class ArcticBackground extends BackgroundScene {
     }
 
     static {
-        field_r = new MenuSelection(1);
+        textChoiceSelection = new MenuSelection(1);
         faceDepthBucketCounts = new int[1024];
         field_u = "Lobby";
         field_v = "<%0> has left the lobby.";

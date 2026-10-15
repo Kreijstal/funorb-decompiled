@@ -310,7 +310,7 @@ final class RichTextLayout extends WidgetTextLayout {
           }
           var11 += 16;
           for (var12_int = 0; param1.sizeStage / 2 > var12_int; var12_int++) {
-            fq.field_d[0].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
+            HorizontalFrameHelpers.field_d[0].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
             if (null != var8) {
               var8[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
             }
@@ -322,7 +322,7 @@ final class RichTextLayout extends WidgetTextLayout {
           }
           var11 += 8;
           for (var12_intLifetime1 = 0; param1.sizeStage / 2 > var12_intLifetime1; var12_intLifetime1++) {
-            fq.field_d[1].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
+            HorizontalFrameHelpers.field_d[1].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
             if (null != var8) {
               var8[1].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
             }

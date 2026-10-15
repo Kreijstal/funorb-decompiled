@@ -241,7 +241,7 @@ final class ReportAbuseDialog extends UiComponent {
             this.nameDisplay.textColor = 16764006;
             this.body.addChild(this.nameDisplay, 0);
             this.nameDisplay.textSuffix = "|";
-            if (!(gh.field_f < 5) ||
+            if (!(TextChoiceDialogStyles.field_f < 5) ||
               !(QuickChatHelpDialog.field_Yb < 2)) {
               regionExit1: {
                 stackIn_8_0 = this;
@@ -249,7 +249,7 @@ final class ReportAbuseDialog extends UiComponent {
                 stackIn_8_2 = null;
                 muteControlId = 0L;
                 muteStyleTemplate = (StateIconLabel) (muteStyle);
-                if (gh.field_f < 7) {
+                if (TextChoiceDialogStyles.field_f < 7) {
                   stackIn_8_0Lifetime1 = this;
                   stackIn_8_1Lifetime1 = null;
                   stackIn_8_2Lifetime1 = null;

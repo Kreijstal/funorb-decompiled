@@ -5,7 +5,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
     boolean rootMarker;
     int[] subcategoryIds;
     static int field_z;
-    static String[] field_E;
+    static String[] textChoiceLines;
     String title;
     static int field_y;
     char[] phraseShortcuts;
@@ -92,7 +92,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
     }
 
     public static void a(byte param0) {
-        field_E = null;
+        textChoiceLines = null;
         if (param0 <= 44) {
           QuickChatCategoryDefinition.a((byte) -32);
         }
@@ -109,7 +109,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard != -29539) {
-            field_E = (String[]) null;
+            textChoiceLines = (String[]) null;
           }
           while (true) {
             tag = packet.readUnsignedByte(255);

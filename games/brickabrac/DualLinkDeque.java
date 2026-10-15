@@ -7,7 +7,7 @@ final class DualLinkDeque implements Iterable {
     static KeyboardInput keyboardInput;
     DualLinkNode sentinel;
     static UiComponent field_d;
-    static int field_b;
+    static int textChoiceBodyBaseline;
 
     final static boolean consistsOfRepeatedCharacter(byte obfuscationGuard, String text) {
         int var3 = 0;

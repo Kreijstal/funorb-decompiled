@@ -11,7 +11,7 @@ final class BufferedSocket implements Runnable {
     private byte[] outputBuffer;
     private boolean closed;
     private OutputStream output;
-    static int field_m;
+    static int textChoiceBodyLineHeight;
     private int readPosition;
     private InputStream input;
     private PlatformTask writerTask;

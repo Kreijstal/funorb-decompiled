@@ -33,7 +33,7 @@ class TextFieldRenderer extends TextWidgetRenderer {
           if (param0 < 72) {
             TextFieldRenderer.a((byte) 33, 79);
           }
-          var2_int = qp.a(QuickChatHelpDialog.field_Yb, gh.field_f, (byte) -22);
+          var2_int = qp.a(QuickChatHelpDialog.field_Yb, TextChoiceDialogStyles.field_f, (byte) -22);
           if (var2_int == 1) {
             param1 = "<img=0>" + param1;
           }

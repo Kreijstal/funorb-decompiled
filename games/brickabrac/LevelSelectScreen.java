@@ -6,7 +6,7 @@ final class LevelSelectScreen extends MenuScreen {
     static long field_E;
     private NodeDeque previewPaths;
     private NodeDeque[] previewBrickGroups;
-    static int field_v;
+    static int textChoiceMode;
     static int field_w;
     static String field_t;
     private IntNode previewState;
@@ -492,7 +492,7 @@ final class LevelSelectScreen extends MenuScreen {
         super.advanceScreen(updateFlag, inputEnabled, -113);
         this.levelList.updatePointerSelection(false);
         if (obfuscationGuard >= -52) {
-          field_v = -8;
+          textChoiceMode = -8;
         }
     }
 

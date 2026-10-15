@@ -217,7 +217,7 @@ final class n {
             DraggableWidget.field_K.enabled = true;
             if (fh.pendingGameOptionsReceived) {
               GameUiController.field_e.enabled = false;
-              t.field_f.text = gh.field_a;
+              t.field_f.text = TextChoiceDialogStyles.field_a;
               if (var8 != 0) {
                 stackIn_61_0 = FireworkBurst.matchmakingStatusText;
               } else {

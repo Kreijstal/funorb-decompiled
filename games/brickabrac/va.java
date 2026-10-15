@@ -3,7 +3,7 @@
  */
 final class va {
     static String field_c;
-    static boolean field_a;
+    static boolean textChoiceDialogOpen;
     static RgbSprite field_b;
     static String field_d;
     static volatile int livePressY;
@@ -27,6 +27,6 @@ final class va {
         field_d = "Press <img=2> or <img=5> to launch the ball!";
         field_c = "Become a member to get this expansion and...";
         livePressY = 0;
-        field_a = false;
+        textChoiceDialogOpen = false;
     }
 }

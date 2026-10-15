@@ -41,8 +41,8 @@ final class GameUiController implements GameUiLifecycle {
           discarded$0 = this.pollSavedProgress((byte) -1);
         }
         RgbSprite[] var4 = (RgbSprite[]) null;
-        LobbyUiHelpers.initializeUiStylesWithSharedFont((RgbSprite[]) null, 240, 8, 320, 0, ContextActionController.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
-        MusicVoice.a(20, -97, 20, var2);
+        LobbyUiHelpers.configureTextChoiceDialogWithFont((RgbSprite[]) null, 240, 8, 320, 0, ContextActionController.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
+        MusicVoice.configureTextChoiceOuterFrame(20, -97, 20, var2);
         TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, FriendListUi.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
         ea.field_g = true;
         GrowableIntList.field_e = er.field_b;
@@ -147,16 +147,16 @@ final class GameUiController implements GameUiLifecycle {
           GameplayAudioEvent.field_k = null;
           hc.b(2);
         }
-        uf.field_a = aj.a(3, true);
+        uf.field_a = TextChoiceDialogHitTest.a(3, true);
         BackgroundScene.field_f = bq.a(-6, 0, false, 5, true);
-        ScorePopup.field_l = aj.a(6, true);
-        FarmBackground.field_r = aj.a(7, true);
-        AchievementIcon.field_s = aj.a(8, obfuscationGuard);
-        LevelList.field_o = aj.a(9, true);
-        NodeDequeCursor.field_i = aj.a(10, true);
-        nl.field_a = aj.a(11, true);
-        IntHistoryBuffer.field_i = aj.a(12, true);
-        QuickChatPhraseDefinition.field_C = aj.a(13, true);
+        ScorePopup.field_l = TextChoiceDialogHitTest.a(6, true);
+        FarmBackground.field_r = TextChoiceDialogHitTest.a(7, true);
+        AchievementIcon.field_s = TextChoiceDialogHitTest.a(8, obfuscationGuard);
+        LevelList.field_o = TextChoiceDialogHitTest.a(9, true);
+        NodeDequeCursor.field_i = TextChoiceDialogHitTest.a(10, true);
+        nl.field_a = TextChoiceDialogHitTest.a(11, true);
+        IntHistoryBuffer.field_i = TextChoiceDialogHitTest.a(12, true);
+        QuickChatPhraseDefinition.field_C = TextChoiceDialogHitTest.a(13, true);
         FriendListUi.a(NameEntryPopup.field_Rb, FriendListUi.field_c, 0);
         AccountContentTransitionLayer.startupResources = new ResourcePreparationQueue(82);
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);

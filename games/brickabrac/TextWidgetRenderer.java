@@ -1147,11 +1147,11 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var13.field_lc.setBounds(var13.field_ec.height, 0, var35_int, var54_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (QuickChatCategoryDefinition.field_z + var54_ref.canvasWidth);
               }
-              if (null != aj.field_c) {
+              if (null != TextChoiceDialogHitTest.field_c) {
                 for (var37Lifetime1 = 0; var37Lifetime1 < RankingsRequest.gameSettingCount; var37Lifetime1++) {
-                  if (null != aj.field_c[var37Lifetime1] &&
+                  if (null != TextChoiceDialogHitTest.field_c[var37Lifetime1] &&
                     (1 << var37Lifetime1 + WidgetLayer.field_K & var15Lifetime1) != 0) {
-                    var43 = aj.field_c[var37Lifetime1][255 & var13.settings[var37Lifetime1]];
+                    var43 = TextChoiceDialogHitTest.field_c[var37Lifetime1][255 & var13.settings[var37Lifetime1]];
                     var55 = var43;
                     var13.field_Ec[var37Lifetime1].sprite = var43;
                     var13.field_Ec[var37Lifetime1].setBounds(var13.field_ec.height, 0, var35_int, var55.canvasWidth, (byte) 64);
@@ -1209,7 +1209,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var32 = var32 + np.uiRowHeight;
               }
               if (var13.joinRequestPending) {
-                var13.field_Sb.text = rd.a(aj.field_b, new String[]{var33}, (byte) 103);
+                var13.field_Sb.text = rd.a(TextChoiceDialogHitTest.field_b, new String[]{var33}, (byte) 103);
                 var13.field_Sb.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
                 var32 = var32 + np.uiRowHeight;
               }

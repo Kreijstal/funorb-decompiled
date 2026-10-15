@@ -10,7 +10,7 @@ final class RasterCacheSurface extends IntrusiveNode {
     static String field_l;
     private int cacheKeyTwo;
     RgbSprite sprite;
-    static int[] field_n;
+    static int[] horizontalFrameClipScratch;
 
     final boolean matchesCacheKeys(byte obfuscationGuard, int cacheKeyOne, int cacheKeyTwo) {
         if (obfuscationGuard != -84) {
@@ -34,7 +34,7 @@ final class RasterCacheSurface extends IntrusiveNode {
 
     public static void a(byte param0) {
         field_o = null;
-        field_n = null;
+        horizontalFrameClipScratch = null;
         field_l = null;
         if (param0 < 22) {
           field_l = (String) null;
@@ -57,7 +57,7 @@ final class RasterCacheSurface extends IntrusiveNode {
 
     final static String a(int param0, int param1) {
         if (param1 == 4) {
-          return 1 + param0 + "/" + gh.field_b.length;
+          return 1 + param0 + "/" + TextChoiceDialogStyles.field_b.length;
         }
         return (String) null;
     }
@@ -71,7 +71,7 @@ final class RasterCacheSurface extends IntrusiveNode {
 
     static {
         field_o = "Reject <%0> from this game";
-        field_n = new int[4];
+        horizontalFrameClipScratch = new int[4];
         field_l = "Solicitation";
     }
 }

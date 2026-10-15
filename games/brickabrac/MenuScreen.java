@@ -327,7 +327,7 @@ abstract class MenuScreen extends GameScreen {
                     MatchingTextValidator.b(true);
                   } else {
                     CacheEntry.field_z = -2;
-                    AccountRegistrationPanel.a(BrickGameLayerController.field_b, true, 0, inputFlag, 46);
+                    AccountRegistrationPanel.showTextChoiceDialog(BrickGameLayerController.field_b, true, 0, inputFlag, 46);
                   }
                 }
                 break regionExit1;

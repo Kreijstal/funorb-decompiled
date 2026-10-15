@@ -4,7 +4,7 @@
 final class ButtonWidgetRenderer extends TextWidgetRenderer {
     private int normalTint;
     static NodeDeque rasterStack;
-    static int[] field_A;
+    static int[] textChoiceResultCodes;
     private int hoverTint;
     private int disabledTint;
     static IsaacGenerator field_w;
@@ -499,7 +499,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           stackIn_17_0 = (!obfuscationGuard) ? 7105644 : 16777215;
           var8 = stackIn_17_0;
           if (callbackGuard != -20618) {
-            field_A = (int[]) null;
+            textChoiceResultCodes = (int[]) null;
           }
           this.font.drawParagraph(widget.text, widget.x + parentX, parentY + widget.y - 2, widget.width, widget.height, var8, -1, 1, 1, this.font.ascent);
           return;
@@ -524,7 +524,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
     final static void a(int param0, String param1) {
         try {
           if (param0 != 85) {
-            field_A = (int[]) null;
+            textChoiceResultCodes = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "hi.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -534,9 +534,9 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
     public static void c(byte param0) {
         rasterStack = null;
         field_w = null;
-        field_A = null;
+        textChoiceResultCodes = null;
         if (param0 > -82) {
-          field_A = (int[]) null;
+          textChoiceResultCodes = (int[]) null;
         }
     }
 

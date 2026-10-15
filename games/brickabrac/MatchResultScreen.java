@@ -76,7 +76,7 @@ abstract class MatchResultScreen extends MenuScreen {
           DialogMessagePanel.field_Q.drawFullBackground(true, 0, 0, 0, 0);
         }
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
-        gh.a(120, true);
+        TextChoiceDialogStyles.a(120, true);
         if (LevelMetadata.field_p) {
           var12 = ValidationStatus.field_e;
           var12.drawTransparent((640 - var12.canvasWidth) / 2, 20);

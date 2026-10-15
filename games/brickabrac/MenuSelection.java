@@ -9,7 +9,7 @@ final class MenuSelection {
     int itemCount;
     static GameClock gameClock;
     private int activationCode;
-    static int[] field_q;
+    static int[] textChoiceLineActions;
     static String field_f;
     static String field_a;
     static int previewGameId;
@@ -28,7 +28,7 @@ final class MenuSelection {
           field_a = null;
           field_f = null;
           gameClock = null;
-          field_q = null;
+          textChoiceLineActions = null;
           field_k = null;
           field_p = null;
           return;

@@ -87,7 +87,7 @@ abstract class CacheEntry extends DualLinkNode {
           MouseInput.field_c = param10;
           QuickChatPhraseRegistry.field_b = param12;
           QuickChatParameterType.field_a = param3;
-          aj.field_c = param1;
+          TextChoiceDialogHitTest.field_c = param1;
           SecondaryHashTable.field_c = param0;
           GzipInflater.field_c = param6;
           LoginCredentials.field_i = param14;

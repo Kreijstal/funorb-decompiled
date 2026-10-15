@@ -605,31 +605,31 @@ final class MusicVoice extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, NineSliceFrame param3) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void configureTextChoiceOuterFrame(int paddingX, int obfuscationGuard, int paddingY, NineSliceFrame frame) {
+        RuntimeException configurationFailure = null;
+        RuntimeException contextFailure = null;
+        StringBuilder contextPrefix = null;
+        String frameArgumentSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          vg.field_c = param3;
-          un.field_a = param0;
-          Paddle.field_A = param2;
-          if (param1 >= -25) {
+          vg.textChoiceOuterFrame = frame;
+          un.textChoiceOuterPaddingX = paddingX;
+          Paddle.textChoiceOuterPaddingY = paddingY;
+          if (obfuscationGuard >= -25) {
             field_l = (tq) null;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("ka.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_7_2 = "null";
+        } catch (java.lang.RuntimeException caughtConfigurationFailure) {
+          caughtFailure = caughtConfigurationFailure;
+          configurationFailure = caughtFailure;
+          contextFailure = configurationFailure;
+          contextPrefix = new StringBuilder().append("ka.F(").append(paddingX).append(',').append(obfuscationGuard).append(',').append(paddingY).append(',');
+          if (frame == null) {
+            frameArgumentSummary = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            frameArgumentSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) contextPrefix).append(frameArgumentSummary).append(')').toString());
         }
     }
 

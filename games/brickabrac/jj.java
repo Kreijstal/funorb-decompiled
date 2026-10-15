@@ -65,7 +65,7 @@ final class jj {
             if (EmailConfirmationValidator.f(21651)) {
               Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
               var1 = 1;
-              DesertBackground.g(param0 ^ -11184849);
+              DesertBackground.drawTextChoiceDialog(param0 ^ -11184849);
             }
             if (GameClock.c((byte) 119) &&
               !HotspotTextWidget.a(9)) {
@@ -118,7 +118,7 @@ final class jj {
           if (EmailConfirmationValidator.f(21651)) {
             Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
             var1 = 1;
-            DesertBackground.g(param0 ^ -11184849);
+            DesertBackground.drawTextChoiceDialog(param0 ^ -11184849);
           }
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {

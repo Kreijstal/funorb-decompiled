@@ -301,10 +301,10 @@ abstract class GameConnectionShell extends AppletGameShell {
         uf.enabledCommonPackets[13] = true;
     }
 
-    final static void a(int param0, int param1, byte param2) {
-        NewAchievementsScreen.field_J = param0;
-        ea.field_e = param1;
-        if (param2 > -110) {
+    final static void setTextChoiceCenter(int x, int y, byte obfuscationGuard) {
+        NewAchievementsScreen.textChoiceCenterX = x;
+        ea.textChoiceCenterY = y;
+        if (obfuscationGuard > -110) {
           field_z = (String) null;
         }
     }
@@ -813,7 +813,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (clientStage == guardCode) {
           if (LoginCredentialKind.field_e != 0) {
-            ValidationIconWidget.field_K = aj.a(PacketBuffer.field_j, true);
+            ValidationIconWidget.field_K = TextChoiceDialogHitTest.a(PacketBuffer.field_j, true);
           }
           LabeledWidget.field_P = bq.a(-6, 1, true, nd.field_c, false);
           RadialSelectorWidget.field_S = bq.a(-6, 1, true, ea.field_c, false);
@@ -870,7 +870,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (10 == clientStage) {
           if (0 != LoginCredentialKind.field_e) {
-            GameplayAudioEvent.field_k = aj.a(LevelPackCard.field_i, true);
+            GameplayAudioEvent.field_k = TextChoiceDialogHitTest.a(LevelPackCard.field_i, true);
           }
           clientStage = 11;
         }

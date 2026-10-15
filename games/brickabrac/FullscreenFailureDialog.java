@@ -4,7 +4,7 @@
 final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetActionListener {
     static int[] sortedFaceIds;
     static int field_bb;
-    static int field_lb;
+    static int textChoiceButtonPaddingX;
     static int field_kb;
     static String field_gb;
     static int keyChangeReadIndex;

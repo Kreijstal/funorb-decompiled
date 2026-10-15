@@ -638,7 +638,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rated_game_tips", (byte) -107);
                 if (null != var2) {
-                  gh.field_a = MenuButton.a(var2, (byte) 107);
+                  TextChoiceDialogStyles.field_a = MenuButton.a(var2, (byte) 107);
                 }
                 var2 = nk.a("searching_for_opponent_singular", (byte) -115);
                 if (null != var2) {
@@ -778,7 +778,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("asking_to_join_xs_game", (byte) 28);
                 if (null != var2) {
-                  aj.field_b = MenuButton.a(var2, (byte) 88);
+                  TextChoiceDialogHitTest.field_b = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("who_can_join", (byte) 47);
                 if (var2 != null) {
@@ -1848,7 +1848,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("friendlistdupe", (byte) 19);
                 if (var2 != null) {
-                  gh.field_d = MenuButton.a(var2, (byte) 89);
+                  TextChoiceDialogStyles.field_d = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("friendnotfound", (byte) 56);
                 if (null != var2) {

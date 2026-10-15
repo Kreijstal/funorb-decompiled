@@ -43,7 +43,7 @@ final class TabbedPane extends UiComponent {
         try {
           if (param14 != 22287) {
             var16 = (TextFont) null;
-            TabbedPane.a(56, 101, -86, 51, -89, 7, -10, 119, -103, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -32, 111, 0, true, -111, (RgbSprite[]) null, (TextFont) null, 2);
+            TabbedPane.configureTextChoiceDialogFromSprites(56, 101, -86, 51, -89, 7, -10, 119, -103, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -32, 111, 0, true, -111, (RgbSprite[]) null, (TextFont) null, 2);
           }
           QuickChatMenu.a(args, (IndexedSprite[]) null, param13, param6, param4, param10, param14 - 22286, param1, param12, param9, param5, param3, param7, param2, (int[]) null, param11, param8);
           return;
@@ -159,7 +159,7 @@ final class TabbedPane extends UiComponent {
         this.localX = x;
         if (obfuscationGuard < 44) {
           TextFont var9 = (TextFont) null;
-          TabbedPane.a(23, 14, 2, 105, -34, -65, 67, 44, -119, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -66, -50, -90, false, 92, (RgbSprite[]) null, (TextFont) null, -101);
+          TabbedPane.configureTextChoiceDialogFromSprites(23, 14, 2, 105, -34, -65, 67, 44, -119, (RgbSprite[]) null, (TextFont) null, (RgbSprite[]) null, -66, -50, -90, false, 92, (RgbSprite[]) null, (TextFont) null, -101);
         }
         this.height = height;
         this.layoutTabs(tabHeight, panelInset, -117);
@@ -263,61 +263,61 @@ final class TabbedPane extends UiComponent {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, RgbSprite[] param9, TextFont param10, RgbSprite[] param11, int param12, int param13, int param14, boolean param15, int param16, RgbSprite[] param17, TextFont param18, int param19) {
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var20 = null;
+    final static void configureTextChoiceDialogFromSprites(int centerX, int buttonLineHeight, int outerPaddingX, int buttonPaddingX, int bodyLineHeight, int buttonGapY, int centerY, int outerPaddingY, int buttonTextColor, RgbSprite[] outerFrameSprites, TextFont bodyFont, RgbSprite[] selectedButtonFrameSprites, int selectedButtonTextColor, int bodyTextColor, int bodyBaseline, boolean obfuscationGuard, int buttonPaddingY, RgbSprite[] buttonFrameSprites, TextFont buttonFont, int buttonBaseline) {
+        RuntimeException contextFailure = null;
+        StringBuilder contextPrefix = null;
+        String outerSpritesSummary = null;
+        StringBuilder bodyFontContextPrefix = null;
+        String bodyFontSummary = null;
+        StringBuilder selectedSpritesContextPrefix = null;
+        String selectedSpritesSummary = null;
+        StringBuilder buttonSpritesContextPrefix = null;
+        String buttonSpritesSummary = null;
+        StringBuilder buttonFontContextPrefix = null;
+        String buttonFontSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException configurationFailure = null;
         try {
-          if (param15) {
+          if (obfuscationGuard) {
             whirlpoolRoundConstants = (long[]) null;
           }
-          gh.a(param2, new NineSliceFrame(param11), param3, param0, param14, param7, param18, param10, 12, param6, new NineSliceFrame(param17), new NineSliceFrame(param9), param4, param19, param13, param8, param1, param12, param16, param5);
+          TextChoiceDialogStyles.configureTextChoiceDialog(outerPaddingX, new NineSliceFrame(selectedButtonFrameSprites), buttonPaddingX, centerX, bodyBaseline, outerPaddingY, buttonFont, bodyFont, 12, centerY, new NineSliceFrame(buttonFrameSprites), new NineSliceFrame(outerFrameSprites), bodyLineHeight, buttonBaseline, bodyTextColor, buttonTextColor, buttonLineHeight, selectedButtonTextColor, buttonPaddingY, buttonGapY);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var20 = decompiledCaughtException;
-          stackIn_6_0 = var20;
-          stackIn_6_1 = new StringBuilder().append("oa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
-            stackIn_7_2 = "null";
+        } catch (java.lang.RuntimeException caughtConfigurationFailure) {
+          caughtFailure = caughtConfigurationFailure;
+          configurationFailure = caughtFailure;
+          contextFailure = configurationFailure;
+          contextPrefix = new StringBuilder().append("oa.D(").append(centerX).append(',').append(buttonLineHeight).append(',').append(outerPaddingX).append(',').append(buttonPaddingX).append(',').append(bodyLineHeight).append(',').append(buttonGapY).append(',').append(centerY).append(',').append(outerPaddingY).append(',').append(buttonTextColor).append(',');
+          if (outerFrameSprites == null) {
+            outerSpritesSummary = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            outerSpritesSummary = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param10 == null) {
-            stackIn_10_2 = "null";
+          bodyFontContextPrefix = ((StringBuilder) (Object) contextPrefix).append(outerSpritesSummary).append(',');
+          if (bodyFont == null) {
+            bodyFontSummary = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            bodyFontSummary = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
-          if (param11 == null) {
-            stackIn_13_2 = "null";
+          selectedSpritesContextPrefix = ((StringBuilder) (Object) bodyFontContextPrefix).append(bodyFontSummary).append(',');
+          if (selectedButtonFrameSprites == null) {
+            selectedSpritesSummary = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            selectedSpritesSummary = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',');
-          if (param17 == null) {
-            stackIn_16_2 = "null";
+          buttonSpritesContextPrefix = ((StringBuilder) (Object) selectedSpritesContextPrefix).append(selectedSpritesSummary).append(',').append(selectedButtonTextColor).append(',').append(bodyTextColor).append(',').append(bodyBaseline).append(',').append(obfuscationGuard).append(',').append(buttonPaddingY).append(',');
+          if (buttonFrameSprites == null) {
+            buttonSpritesSummary = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            buttonSpritesSummary = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
-          if (param18 == null) {
-            stackIn_19_2 = "null";
+          buttonFontContextPrefix = ((StringBuilder) (Object) buttonSpritesContextPrefix).append(buttonSpritesSummary).append(',');
+          if (buttonFont == null) {
+            buttonFontSummary = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            buttonFontSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param19).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) buttonFontContextPrefix).append(buttonFontSummary).append(',').append(buttonBaseline).append(')').toString());
         }
     }
 

@@ -48,12 +48,12 @@ class ba extends DualLinkNode {
         }
     }
 
-    final static int b(boolean param0) {
-        if (!param0) {
+    final static int getTextChoiceContentHeight(boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           ba.f(-108);
-          return ReflectionCheck.field_r;
+          return ReflectionCheck.textChoiceContentHeight;
         }
-        return ReflectionCheck.field_r;
+        return ReflectionCheck.textChoiceContentHeight;
     }
 
     final static void f(int param0) {
@@ -89,7 +89,7 @@ class ba extends DualLinkNode {
         try {
           crc = -1;
           if (obfuscationGuard != 9) {
-            ba.b(false);
+            ba.getTextChoiceContentHeight(false);
           }
           for (inputIndex = start; end > inputIndex; inputIndex++) {
             crc = LevelCompleteScreen.crc32Table[(crc ^ input[inputIndex]) & 255] ^ crc >>> 8;

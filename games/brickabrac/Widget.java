@@ -13,7 +13,7 @@ class Widget extends IntrusiveNode {
     boolean mouseOver;
     String text;
     int width;
-    static TextFont field_m;
+    static TextFont textChoiceBodyFont;
     static long field_p;
     static String field_u;
     int x;
@@ -626,13 +626,13 @@ class Widget extends IntrusiveNode {
         field_y = null;
         if (param0 == -14711) {
           field_v = null;
-          field_m = null;
+          textChoiceBodyFont = null;
           field_k = null;
           return;
         }
         field_p = 65L;
         field_v = null;
-        field_m = null;
+        textChoiceBodyFont = null;
         field_k = null;
     }
 

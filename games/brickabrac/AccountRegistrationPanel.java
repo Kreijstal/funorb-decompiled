@@ -15,126 +15,126 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
     private FocusableWidget backButton;
     UsernameSuggestionPanel suggestionPanel;
 
-    final static void a(String param0, boolean param1, int param2, boolean param3, int param4) {
-        String stackIn_4_0 = null;
-        int stackIn_25_0 = 0;
-        String stackIn_25_1 = null;
-        boolean stackIn_26_2 = false;
-        int stackIn_38_0 = 0;
-        int stackIn_38_1 = 0;
-        int stackIn_41_1 = 0;
-        RuntimeException stackIn_47_0 = null;
-        StringBuilder stackIn_47_1 = null;
-        String stackIn_48_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        String var11 = null;
-        int var7Lifetime1;
-        int var9Lifetime1;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        var10 = BrickABrac.field_J ? 1 : 0;
+    final static void showTextChoiceDialog(String message, boolean useLoginCaption, int mode, boolean usePointer, int obfuscationGuard) {
+        String actionCaptionValue = null;
+        int measureGuard = 0;
+        String textForMeasurement = null;
+        boolean isButtonLine = false;
+        int contentHeightValue = 0;
+        int lineAction = 0;
+        int lineHeight = 0;
+        RuntimeException contextFailure = null;
+        StringBuilder contextPrefix = null;
+        String messageArgumentSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException layoutFailure = null;
+        String actionCaption = null;
+        int bodyLineCount = 0;
+        int totalLineCount = 0;
+        int lineIndex = 0;
+        int unusedClientFlag = 0;
+        String messageToWrap = null;
+        int contentWidth;
+        int lineWidth;
+        int measureLineIndex;
+        int heightLineIndex;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          va.field_a = true;
-          LevelSelectScreen.field_v = param2;
-          var11 = param0;
-          if (!param1) {
-            stackIn_4_0 = PasswordValidator.field_q;
+          va.textChoiceDialogOpen = true;
+          LevelSelectScreen.textChoiceMode = mode;
+          messageToWrap = message;
+          if (!useLoginCaption) {
+            actionCaptionValue = PasswordValidator.field_q;
           } else {
-            stackIn_4_0 = UiComponent.field_mb;
+            actionCaptionValue = UiComponent.field_mb;
           }
-          var6 = stackIn_4_0;
-          if (LevelSelectScreen.field_v == 0) {
-            var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 ^ -17, Widget.field_m, var11);
-            var8 = var7 + 3;
-            MenuSelection.field_q = new int[var8];
-            QuickChatCategoryDefinition.field_E = new String[var8];
-            for (var9 = 0; var8 > var9; var9++) {
-              MenuSelection.field_q[var9] = -1;
+          actionCaption = actionCaptionValue;
+          if (LevelSelectScreen.textChoiceMode == 0) {
+            bodyLineCount = FarmBackground.a(RasterSnapshot.field_r, 480, obfuscationGuard ^ -17, Widget.textChoiceBodyFont, messageToWrap);
+            totalLineCount = bodyLineCount + 3;
+            MenuSelection.textChoiceLineActions = new int[totalLineCount];
+            QuickChatCategoryDefinition.textChoiceLines = new String[totalLineCount];
+            for (lineIndex = 0; totalLineCount > lineIndex; lineIndex++) {
+              MenuSelection.textChoiceLineActions[lineIndex] = -1;
             }
-            ButtonWidgetRenderer.field_A = new int[2];
-            for (var9 = 0; var7 > var9; var9++) {
-              QuickChatCategoryDefinition.field_E[var9] = RasterSnapshot.field_r[var9];
+            ButtonWidgetRenderer.textChoiceResultCodes = new int[2];
+            for (lineIndex = 0; bodyLineCount > lineIndex; lineIndex++) {
+              QuickChatCategoryDefinition.textChoiceLines[lineIndex] = RasterSnapshot.field_r[lineIndex];
             }
-            QuickChatCategoryDefinition.field_E[-3 + var8] = "";
-            QuickChatCategoryDefinition.field_E[var8 - 2] = var6;
-            MenuSelection.field_q[-2 + var8] = 0;
-            ButtonWidgetRenderer.field_A[0] = 1;
-            QuickChatCategoryDefinition.field_E[-1 + var8] = LevelSequence.field_a;
-            MenuSelection.field_q[var8 - 1] = 1;
-            ButtonWidgetRenderer.field_A[1] = 2;
+            QuickChatCategoryDefinition.textChoiceLines[-3 + totalLineCount] = "";
+            QuickChatCategoryDefinition.textChoiceLines[totalLineCount - 2] = actionCaption;
+            MenuSelection.textChoiceLineActions[-2 + totalLineCount] = 0;
+            ButtonWidgetRenderer.textChoiceResultCodes[0] = 1;
+            QuickChatCategoryDefinition.textChoiceLines[-1 + totalLineCount] = LevelSequence.field_a;
+            MenuSelection.textChoiceLineActions[totalLineCount - 1] = 1;
+            ButtonWidgetRenderer.textChoiceResultCodes[1] = 2;
           } else {
-            if (LevelSelectScreen.field_v != 1) {
+            if (LevelSelectScreen.textChoiceMode != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = FarmBackground.a(RasterSnapshot.field_r, 480, param4 - 109, Widget.field_m, var11);
-            var8 = 2 + var7;
-            MenuSelection.field_q = new int[var8];
-            QuickChatCategoryDefinition.field_E = new String[var8];
-            for (var9 = 0; var8 > var9; var9++) {
-              MenuSelection.field_q[var9] = -1;
+            bodyLineCount = FarmBackground.a(RasterSnapshot.field_r, 480, obfuscationGuard - 109, Widget.textChoiceBodyFont, messageToWrap);
+            totalLineCount = 2 + bodyLineCount;
+            MenuSelection.textChoiceLineActions = new int[totalLineCount];
+            QuickChatCategoryDefinition.textChoiceLines = new String[totalLineCount];
+            for (lineIndex = 0; totalLineCount > lineIndex; lineIndex++) {
+              MenuSelection.textChoiceLineActions[lineIndex] = -1;
             }
-            ButtonWidgetRenderer.field_A = new int[1];
-            for (var9 = 0; var7 > var9; var9++) {
-              QuickChatCategoryDefinition.field_E[var9] = RasterSnapshot.field_r[var9];
+            ButtonWidgetRenderer.textChoiceResultCodes = new int[1];
+            for (lineIndex = 0; bodyLineCount > lineIndex; lineIndex++) {
+              QuickChatCategoryDefinition.textChoiceLines[lineIndex] = RasterSnapshot.field_r[lineIndex];
             }
-            QuickChatCategoryDefinition.field_E[var8 - 2] = "";
-            QuickChatCategoryDefinition.field_E[-1 + var8] = LevelSequence.field_a;
-            MenuSelection.field_q[-1 + var8] = 0;
-            ButtonWidgetRenderer.field_A[0] = 2;
+            QuickChatCategoryDefinition.textChoiceLines[totalLineCount - 2] = "";
+            QuickChatCategoryDefinition.textChoiceLines[-1 + totalLineCount] = LevelSequence.field_a;
+            MenuSelection.textChoiceLineActions[-1 + totalLineCount] = 0;
+            ButtonWidgetRenderer.textChoiceResultCodes[0] = 2;
           }
-          ArcticBackground.field_r.itemCount = ButtonWidgetRenderer.field_A.length;
-          var7Lifetime1 = 0;
-          for (var8Lifetime1 = 0; var8Lifetime1 < QuickChatCategoryDefinition.field_E.length; var8Lifetime1++) {
-            stackIn_25_0 = 0;
-            stackIn_25_1 = QuickChatCategoryDefinition.field_E[var8Lifetime1];
-            stackIn_26_2 = !(0 > MenuSelection.field_q[var8Lifetime1]);
-            var9Lifetime1 = pl.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
-            if (MenuSelection.field_q[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + FullscreenFailureDialog.field_lb * 2;
+          ArcticBackground.textChoiceSelection.itemCount = ButtonWidgetRenderer.textChoiceResultCodes.length;
+          contentWidth = 0;
+          for (measureLineIndex = 0; measureLineIndex < QuickChatCategoryDefinition.textChoiceLines.length; measureLineIndex++) {
+            measureGuard = 0;
+            textForMeasurement = QuickChatCategoryDefinition.textChoiceLines[measureLineIndex];
+            isButtonLine = !(0 > MenuSelection.textChoiceLineActions[measureLineIndex]);
+            lineWidth = pl.measureTextChoiceLine(measureGuard, textForMeasurement, isButtonLine);
+            if (MenuSelection.textChoiceLineActions[measureLineIndex] != -1) {
+              lineWidth = lineWidth + FullscreenFailureDialog.textChoiceButtonPaddingX * 2;
             }
-            if (var7Lifetime1 < var9Lifetime1) {
-              var7Lifetime1 = var9Lifetime1;
+            if (contentWidth < lineWidth) {
+              contentWidth = lineWidth;
             }
           }
-          MusicVoiceMixer.field_p = var7Lifetime1 + (NewAchievementsScreen.field_J - (var7Lifetime1 >> 1));
-          ReflectionCheck.field_r = ArcticBackground.field_r.itemCount * (GameCanvas.field_f + GameClock.field_g << 1);
-          LevelPack.field_k = NewAchievementsScreen.field_J - (var7Lifetime1 >> 1);
-          var8Lifetime2 = 0;
-          while (QuickChatCategoryDefinition.field_E.length > var8Lifetime2) {
-            stackIn_38_0 = ReflectionCheck.field_r;
-            stackIn_38_1 = MenuSelection.field_q[var8Lifetime2];
-            if (stackIn_38_1 >= 0) {
-              stackIn_41_1 = TooltipSprite.field_i;
+          MusicVoiceMixer.textChoiceRight = contentWidth + (NewAchievementsScreen.textChoiceCenterX - (contentWidth >> 1));
+          ReflectionCheck.textChoiceContentHeight = ArcticBackground.textChoiceSelection.itemCount * (GameCanvas.textChoiceButtonPaddingY + GameClock.textChoiceButtonGapY << 1);
+          LevelPack.textChoiceLeft = NewAchievementsScreen.textChoiceCenterX - (contentWidth >> 1);
+          heightLineIndex = 0;
+          while (QuickChatCategoryDefinition.textChoiceLines.length > heightLineIndex) {
+            contentHeightValue = ReflectionCheck.textChoiceContentHeight;
+            lineAction = MenuSelection.textChoiceLineActions[heightLineIndex];
+            if (lineAction >= 0) {
+              lineHeight = TooltipSprite.textChoiceButtonLineHeight;
             } else {
-              stackIn_41_1 = BufferedSocket.field_m;
+              lineHeight = BufferedSocket.textChoiceBodyLineHeight;
             }
-            ReflectionCheck.field_r = stackIn_38_0 + stackIn_41_1;
-            var8Lifetime2++;
+            ReflectionCheck.textChoiceContentHeight = contentHeightValue + lineHeight;
+            heightLineIndex++;
           }
-          ContentTransitionPhase.field_d = ea.field_e - (ReflectionCheck.field_r >> 1);
-          ArcticBackground.field_r.initializeSelection(aj.a(param4 - 46, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, param3, (byte) -127);
-          if (param4 != 46) {
+          ContentTransitionPhase.textChoiceTop = ea.textChoiceCenterY - (ReflectionCheck.textChoiceContentHeight >> 1);
+          ArcticBackground.textChoiceSelection.initializeSelection(TextChoiceDialogHitTest.hitTestTextChoiceDialog(obfuscationGuard - 46, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, usePointer, (byte) -127);
+          if (obfuscationGuard != 46) {
             field_R = (RgbSprite) null;
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_47_0 = var5;
-          stackIn_47_1 = new StringBuilder().append("dk.N(");
-          if (param0 == null) {
-            stackIn_48_2 = "null";
+        } catch (java.lang.RuntimeException caughtLayoutFailure) {
+          caughtFailure = caughtLayoutFailure;
+          layoutFailure = caughtFailure;
+          contextFailure = layoutFailure;
+          contextPrefix = new StringBuilder().append("dk.N(");
+          if (message == null) {
+            messageArgumentSummary = "null";
           } else {
-            stackIn_48_2 = "{...}";
+            messageArgumentSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_47_0), ((StringBuilder) (Object) stackIn_47_1).append(stackIn_48_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) contextPrefix).append(messageArgumentSummary).append(',').append(useLoginCaption).append(',').append(mode).append(',').append(usePointer).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

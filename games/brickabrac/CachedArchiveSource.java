@@ -38,76 +38,76 @@ final class CachedArchiveSource extends ArchiveSource {
         return 0;
     }
 
-    final static void d(int param0) {
-        int var3 = 0;
-        int stackIn_12_0 = 0;
-        String stackIn_12_1 = null;
-        boolean stackIn_13_2 = false;
-        NineSliceFrame stackIn_17_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        NineSliceFrame var9 = null;
-        int var10 = 0;
-        var10 = BrickABrac.field_J ? 1 : 0;
+    final static void drawTextChoiceLines(int obfuscationGuard) {
+        int lineIndex = 0;
+        int measureGuard = 0;
+        String textForMeasurement = null;
+        boolean isButtonLine = false;
+        NineSliceFrame buttonFrame = null;
+        RuntimeException caughtFailure = null;
+        int contentWidth = 0;
+        RuntimeException drawingFailure = null;
+        int lineTop = 0;
+        int actionIndex = 0;
+        int textColor = 0;
+        String text = null;
+        int textWidth = 0;
+        int textLeft = 0;
+        NineSliceFrame frame = null;
+        int unusedClientFlag = 0;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var1_int = -LevelPack.field_k + MusicVoiceMixer.field_p;
-          if (param0 != -16085) {
+          contentWidth = -LevelPack.textChoiceLeft + MusicVoiceMixer.textChoiceRight;
+          if (obfuscationGuard != -16085) {
             return;
           }
-          LevelPack.field_k = NewAchievementsScreen.field_J - (var1_int >> 1);
-          ContentTransitionPhase.field_d = ea.field_e - (ReflectionCheck.field_r >> 1);
-          MusicVoiceMixer.field_p = var1_int + LevelPack.field_k;
-          var2 = ContentTransitionPhase.field_d;
-          for (var3 = 0; var3 < QuickChatCategoryDefinition.field_E.length; var3++) {
-            var4 = MenuSelection.field_q[var3];
-            if (var4 < 0) {
-              var5 = ValidationStatus.field_d;
+          LevelPack.textChoiceLeft = NewAchievementsScreen.textChoiceCenterX - (contentWidth >> 1);
+          ContentTransitionPhase.textChoiceTop = ea.textChoiceCenterY - (ReflectionCheck.textChoiceContentHeight >> 1);
+          MusicVoiceMixer.textChoiceRight = contentWidth + LevelPack.textChoiceLeft;
+          lineTop = ContentTransitionPhase.textChoiceTop;
+          for (lineIndex = 0; lineIndex < QuickChatCategoryDefinition.textChoiceLines.length; lineIndex++) {
+            actionIndex = MenuSelection.textChoiceLineActions[lineIndex];
+            if (actionIndex < 0) {
+              textColor = ValidationStatus.textChoiceBodyTextColor;
             } else {
-              if (ArcticBackground.field_r.selectedIndex != var4) {
-                var5 = DateInputWidget.field_I;
+              if (ArcticBackground.textChoiceSelection.selectedIndex != actionIndex) {
+                textColor = DateInputWidget.textChoiceButtonTextColor;
               } else {
-                var5 = LobbyGame.field_hc;
+                textColor = LobbyGame.textChoiceSelectedButtonTextColor;
               }
             }
-            var6 = QuickChatCategoryDefinition.field_E[var3];
-            stackIn_12_0 = 0;
-            stackIn_12_1 = var6;
-            stackIn_13_2 = !(var4 < 0);
-            var7 = pl.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
-            var8 = NewAchievementsScreen.field_J - (var7 >> 1);
-            if (var4 >= 0) {
-              var2 = var2 + GameClock.field_g;
-              if (ArcticBackground.field_r.selectedIndex != var4) {
-                stackIn_17_0 = ArrayWidgetGroup.field_F;
+            text = QuickChatCategoryDefinition.textChoiceLines[lineIndex];
+            measureGuard = 0;
+            textForMeasurement = text;
+            isButtonLine = !(actionIndex < 0);
+            textWidth = pl.measureTextChoiceLine(measureGuard, textForMeasurement, isButtonLine);
+            textLeft = NewAchievementsScreen.textChoiceCenterX - (textWidth >> 1);
+            if (actionIndex >= 0) {
+              lineTop = lineTop + GameClock.textChoiceButtonGapY;
+              if (ArcticBackground.textChoiceSelection.selectedIndex != actionIndex) {
+                buttonFrame = ArrayWidgetGroup.textChoiceButtonFrame;
               } else {
-                stackIn_17_0 = EmailConfirmationValidator.field_l;
+                buttonFrame = EmailConfirmationValidator.textChoiceSelectedButtonFrame;
               }
-              var9 = stackIn_17_0;
-              if (var9 != null) {
-                var9.paintFrame((FullscreenFailureDialog.field_lb << 1) + var7, (GameCanvas.field_f << 1) + TooltipSprite.field_i, -FullscreenFailureDialog.field_lb + var8, false, var2);
+              frame = buttonFrame;
+              if (frame != null) {
+                frame.paintFrame((FullscreenFailureDialog.textChoiceButtonPaddingX << 1) + textWidth, (GameCanvas.textChoiceButtonPaddingY << 1) + TooltipSprite.textChoiceButtonLineHeight, -FullscreenFailureDialog.textChoiceButtonPaddingX + textLeft, false, lineTop);
               }
-              var2 = var2 + GameCanvas.field_f;
+              lineTop = lineTop + GameCanvas.textChoiceButtonPaddingY;
             }
-            if (var4 >= 0) {
-              PowerUpWarning.field_r.drawLeft(var6, var8, PowerUpWarning.field_i + var2, var5, -1);
-              var2 = var2 + (TooltipSprite.field_i + GameClock.field_g + GameCanvas.field_f);
+            if (actionIndex >= 0) {
+              PowerUpWarning.textChoiceButtonFont.drawLeft(text, textLeft, PowerUpWarning.textChoiceButtonBaseline + lineTop, textColor, -1);
+              lineTop = lineTop + (TooltipSprite.textChoiceButtonLineHeight + GameClock.textChoiceButtonGapY + GameCanvas.textChoiceButtonPaddingY);
             } else {
-              Widget.field_m.drawLeft(var6, var8, DualLinkDeque.field_b + var2, var5, -1);
-              var2 = var2 + BufferedSocket.field_m;
+              Widget.textChoiceBodyFont.drawLeft(text, textLeft, DualLinkDeque.textChoiceBodyBaseline + lineTop, textColor, -1);
+              lineTop = lineTop + BufferedSocket.textChoiceBodyLineHeight;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "jq.J(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtDrawingFailure) {
+          caughtFailure = caughtDrawingFailure;
+          drawingFailure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) drawingFailure), "jq.J(" + obfuscationGuard + ')');
         }
     }
 
@@ -396,9 +396,9 @@ final class CachedArchiveSource extends ArchiveSource {
           try {
             if (data != null &&
               2 < payload.length) {
-              fq.archiveCrc.reset();
-              fq.archiveCrc.update(data, 0, -2 + payload.length);
-              actualCrc = (int)fq.archiveCrc.getValue();
+              HorizontalFrameHelpers.archiveCrc.reset();
+              HorizontalFrameHelpers.archiveCrc.update(data, 0, -2 + payload.length);
+              actualCrc = (int)HorizontalFrameHelpers.archiveCrc.getValue();
               if (actualCrc != this.index.groupCrcs[groupId]) {
                 throw new RuntimeException();
               }
@@ -444,9 +444,9 @@ final class CachedArchiveSource extends ArchiveSource {
         try {
           if (data != null &&
             payload.length > 2) {
-            fq.archiveCrc.reset();
-            fq.archiveCrc.update(data, 0, -2 + payload.length);
-            actualCrc = (int)fq.archiveCrc.getValue();
+            HorizontalFrameHelpers.archiveCrc.reset();
+            HorizontalFrameHelpers.archiveCrc.update(data, 0, -2 + payload.length);
+            actualCrc = (int)HorizontalFrameHelpers.archiveCrc.getValue();
             if (actualCrc != this.index.groupCrcs[groupId]) {
               throw new RuntimeException();
             }

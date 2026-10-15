@@ -24,9 +24,9 @@ final class DualLinkIterator implements Iterator {
         jungleSegsSprites = (RgbSprite[][]) null;
     }
 
-    final static void b(byte param0) {
-        va.field_a = false;
-        if (param0 < 97) {
+    final static void closeTextChoiceDialog(byte obfuscationGuard) {
+        va.textChoiceDialogOpen = false;
+        if (obfuscationGuard < 97) {
           DualLinkIterator.a((byte) -19);
         }
     }
