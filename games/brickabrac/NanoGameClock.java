@@ -54,8 +54,8 @@ final class NanoGameClock extends GameClock {
         HighscorePackSelector.field_k.setBounds(40, ContentTransitionLayer.field_gb.height - 40, 0, ContentTransitionLayer.field_gb.width, (byte) 64);
         sc.field_b.setBounds(30, 0, 0, FontRequestHelpers.field_a.width, (byte) 64);
         ll.field_e.setBounds(-72 + FontRequestHelpers.field_a.height, 30, 0, FontRequestHelpers.field_a.width, (byte) 64);
-        nk.field_g.setBounds(30, 5, 5, 68, (byte) 64);
-        nk.field_a.setBounds(30, 5, 75, 78, (byte) 64);
+        AppletFlowHelpers.field_g.setBounds(30, 5, 5, 68, (byte) 64);
+        AppletFlowHelpers.field_a.setBounds(30, 5, 75, 78, (byte) 64);
         kk.field_b.setBounds(30, 5, 155, 48, (byte) 64);
         RasterEffectHelpers.field_b.setBounds(30, 5, 205, 48, (byte) 64);
         int var2 = PacketReceiveHelpers.field_e ? 250 : 200;

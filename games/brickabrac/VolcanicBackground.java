@@ -225,50 +225,50 @@ final class VolcanicBackground extends BackgroundScene {
         }
     }
 
-    final static void a(boolean param0, java.applet.Applet param1) {
+    final static void refreshAppletLinks(boolean obfuscationGuard, java.applet.Applet applet) {
         try {
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
-          String stackIn_9_2 = null;
-          Throwable decompiledCaughtException = null;
-          Throwable var2 = null;
-          RuntimeException var2_ref = null;
-          String var3 = null;
-          java.net.URL var4 = null;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String appletSummary = null;
+          Throwable caughtFailure = null;
+          Throwable ignoredBrowserFailure = null;
+          RuntimeException refreshFailure = null;
+          String rewrittenPrefix = null;
+          java.net.URL codeBase = null;
           try {
             try {
-              var4 = param1.getCodeBase();
-              if (param0) {
+              codeBase = applet.getCodeBase();
+              if (obfuscationGuard) {
                 VolcanicBackground.g(-95);
               }
-              var3 = DisplayModeInfo.a(param1, var4, -1).getFile();
-              AppletJavaScriptBridge.callFunction(new Object[]{"home", var3 + "home.ws"}, 111, param1, "updatelinks");
-              AppletJavaScriptBridge.callFunction(new Object[]{"gamelist", var3 + "togamelist.ws"}, 76, param1, "updatelinks");
-              AppletJavaScriptBridge.callFunction(new Object[]{"serverlist", var3 + "toserverlist.ws"}, 88, param1, "updatelinks");
-              AppletJavaScriptBridge.callFunction(new Object[]{"options", var3 + "options.ws"}, 98, param1, "updatelinks");
-              AppletJavaScriptBridge.callFunction(new Object[]{"terms", var3 + "terms.ws"}, 109, param1, "updatelinks");
-              AppletJavaScriptBridge.callFunction(new Object[]{"privacy", var3 + "privacy.ws"}, 113, param1, "updatelinks");
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+              rewrittenPrefix = DisplayModeInfo.applyChangedAppletParameters(applet, codeBase, -1).getFile();
+              AppletJavaScriptBridge.callFunction(new Object[]{"home", rewrittenPrefix + "home.ws"}, 111, applet, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"gamelist", rewrittenPrefix + "togamelist.ws"}, 76, applet, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"serverlist", rewrittenPrefix + "toserverlist.ws"}, 88, applet, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"options", rewrittenPrefix + "options.ws"}, 98, applet, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"terms", rewrittenPrefix + "terms.ws"}, 109, applet, "updatelinks");
+              AppletJavaScriptBridge.callFunction(new Object[]{"privacy", rewrittenPrefix + "privacy.ws"}, 113, applet, "updatelinks");
+            } catch (java.lang.Throwable caughtBrowserFailure) {
+              caughtFailure = caughtBrowserFailure;
+              ignoredBrowserFailure = caughtFailure;
             }
             return;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var2_ref;
-            stackIn_8_1 = new StringBuilder().append("td.A(").append(param0).append(',');
-            if (param1 == null) {
-              stackIn_9_2 = "null";
+          } catch (java.lang.RuntimeException caughtRefreshFailure) {
+            caughtFailure = caughtRefreshFailure;
+            refreshFailure = (RuntimeException) (Object) caughtFailure;
+            failureContext = refreshFailure;
+            contextBuilder = new StringBuilder().append("td.A(").append(obfuscationGuard).append(',');
+            if (applet == null) {
+              appletSummary = "null";
             } else {
-              stackIn_9_2 = "{...}";
+              appletSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(appletSummary).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

@@ -396,7 +396,7 @@ final class WidgetLayerStack extends SingleChildWidget {
         }
         request.tableId = tableId;
         GameplayAudioEvent.pendingTableRequests.addLast(request, (byte) 3);
-        uo.sendTableRequest(request, opcode, (byte) 68);
+        AppletResourceHelpers.sendTableRequest(request, opcode, (byte) 68);
         return request;
     }
 

@@ -273,7 +273,7 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.writeByte(53, 18);
               TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 2;
               var10 = TextFieldValidator.outgoingPackets.position;
-              var11_ref_String = GameClock.a(true, EmailConfirmationValidator.e((byte) -75));
+              var11_ref_String = GameClock.readSettingsCookie(true, EmailConfirmationValidator.e((byte) -75));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -319,7 +319,7 @@ final class ValidationIconWidget extends FocusableWidget {
               ArchiveSourceManager.field_f = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
-                MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -108), param6 + 5);
+                MatchingTextValidator.setTuhstatbutMarker(EmailConfirmationValidator.e((byte) -108), param6 + 5);
                 DirectByteStorage.field_e = ConditionalTextValue.field_d;
                 hn.closeGameTransport((byte) 96);
                 RadialSelectorRenderer.field_d = false;
@@ -359,7 +359,7 @@ final class ValidationIconWidget extends FocusableWidget {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
               var9_ref_String = LogoRenderHelpers.incomingPackets.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {
-                ui.a(param6 ^ -55, EmailConfirmationValidator.e((byte) -120), var9_ref_String);
+                AppletSettingsUiHelpers.setSettingsCookie(param6 ^ -55, EmailConfirmationValidator.e((byte) -120), var9_ref_String);
               }
             } else {
               DirectByteStorage.field_e = LogoRenderHelpers.incomingPackets.readCp1252String(-1);

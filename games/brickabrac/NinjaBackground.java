@@ -28,7 +28,7 @@ final class NinjaBackground extends BackgroundScene {
         hn.ninjaFarSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
         hc.ninjaSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
         ObjectHistoryBuffer.ninjaCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.backgroundSpriteArchive);
-        nk.field_h = jh.a(0, LegacyUtf8Decoder.ninjaNearSprite);
+        AppletFlowHelpers.field_h = jh.a(0, LegacyUtf8Decoder.ninjaNearSprite);
         SocialListEntry.field_Zb = jh.a(0, CanvasInputHelpers.ninjaMidSprite);
         CalendarMatchmakingState.field_c = jh.a(0, hn.ninjaFarSprite);
         SpriteInputHelpers.encodeBinaryMaskRuns(hn.ninjaFarSprite, 0);
@@ -164,7 +164,7 @@ final class NinjaBackground extends BackgroundScene {
           aa.a(0, CalendarMatchmakingState.field_c, true, colorIndex, var8, 2);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
-          ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, nk.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
+          ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, AppletFlowHelpers.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
           if (obfuscationGuard > -84) {
             var7Lifetime1 = (ResourceArchive) null;
             NinjaBackground.loadRgbSprites(90, 38, (ResourceArchive) null, true);
@@ -172,7 +172,7 @@ final class NinjaBackground extends BackgroundScene {
           }
           return;
         }
-        ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, nk.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
+        ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, AppletFlowHelpers.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);
         if (obfuscationGuard <= -84) {
           return;
         }

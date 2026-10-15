@@ -40,7 +40,7 @@ abstract class DebouncedValidationSource implements ValidationSource {
 
     public final ValidationStatus getValidationStatus(byte obfuscationGuard) {
         if (this.isIncomplete((byte) -44)) {
-          return uo.validationEmpty;
+          return AppletResourceHelpers.validationEmpty;
         }
         if (obfuscationGuard != -31) {
           DebouncedValidationSource.d(100);

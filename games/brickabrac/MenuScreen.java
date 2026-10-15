@@ -512,7 +512,7 @@ abstract class MenuScreen extends GameScreen {
               if (19 == var8) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
-                  nk.a(2048, EmailConfirmationValidator.e((byte) -66));
+                  AppletFlowHelpers.showQuitPage(2048, EmailConfirmationValidator.e((byte) -66));
                 }
                 break regionExit1;
               }

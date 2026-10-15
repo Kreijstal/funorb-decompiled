@@ -237,7 +237,7 @@ final class ScreenshotViewer {
             var7 = ArchiveIndex.field_q;
             this.a(ArchiveSourceManager.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
             this.a(ArchiveSourceManager.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
-            this.a(ArchiveSourceManager.field_j, -ArchiveSourceManager.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
+            this.a(ArchiveSourceManager.field_j, -ArchiveSourceManager.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, AppletResourceHelpers.field_e[this.field_c], var17, var5.height / 3, var5, 0);
             sc.popRaster(-119);
             this.field_p = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(-115, this.field_p);
@@ -295,7 +295,7 @@ final class ScreenshotViewer {
             ContentTransitionLayer.field_jb.ensureIndex((byte) -127) &&
             ContentTransitionLayer.field_jb.ensureGroupAvailableByName("arialish12", -28138) &&
             ContentTransitionLayer.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
-            AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
+            AchievementsScreen.field_J = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
             ll.field_c = SpriteInputHelpers.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
             ch.field_c = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
             ArchiveSourceManager.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);

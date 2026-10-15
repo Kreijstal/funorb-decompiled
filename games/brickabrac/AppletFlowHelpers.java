@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nk {
+final class AppletFlowHelpers {
     static String field_e;
     static String field_d;
     static String field_f;
@@ -97,7 +97,7 @@ final class nk {
           return;
         }
         java.applet.Applet var3 = (java.applet.Applet) null;
-        nk.a(-89, (java.applet.Applet) null);
+        AppletFlowHelpers.showQuitPage(-89, (java.applet.Applet) null);
         BufferedSocket.a(21862);
     }
 
@@ -158,45 +158,45 @@ final class nk {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void showQuitPage(int obfuscationGuard, java.applet.Applet applet) {
         try {
-          java.net.URL var2 = null;
-          Exception var2_ref = null;
-          RuntimeException var2_ref2 = null;
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
-          String stackIn_9_2 = null;
-          Throwable decompiledCaughtException = null;
+          java.net.URL quitUrl = null;
+          Exception ignoredNavigationFailure = null;
+          RuntimeException navigationFailure = null;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String appletSummary = null;
+          Throwable caughtFailure = null;
           try {
             try {
-              if (param0 != 2048) {
+              if (obfuscationGuard != 2048) {
                 field_b = (String) null;
               }
-              var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(DisplayModeInfo.a(param1, var2, -1), "_top");
+              quitUrl = new java.net.URL(applet.getCodeBase(), "quit.ws");
+              applet.getAppletContext().showDocument(DisplayModeInfo.applyChangedAppletParameters(applet, quitUrl, -1), "_top");
               return;
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              var2_ref.printStackTrace();
+            } catch (java.lang.Exception caughtNavigationFailure) {
+              caughtFailure = caughtNavigationFailure;
+              ignoredNavigationFailure = (Exception) (Object) caughtFailure;
+              ignoredNavigationFailure.printStackTrace();
               return;
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var2_ref2;
-            stackIn_8_1 = new StringBuilder().append("nk.D(").append(param0).append(',');
-            if (param1 == null) {
-              stackIn_9_2 = "null";
+          } catch (java.lang.RuntimeException caughtContextFailure) {
+            caughtFailure = caughtContextFailure;
+            navigationFailure = (RuntimeException) (Object) caughtFailure;
+            failureContext = navigationFailure;
+            contextBuilder = new StringBuilder().append("nk.D(").append(obfuscationGuard).append(',');
+            if (applet == null) {
+              appletSummary = "null";
             } else {
-              stackIn_9_2 = "{...}";
+              appletSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(appletSummary).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

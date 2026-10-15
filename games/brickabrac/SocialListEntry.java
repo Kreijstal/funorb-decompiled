@@ -279,7 +279,7 @@ final class SocialListEntry extends UiComponent {
             return;
           }
           TextFieldValidator.outgoingPackets.writeByte(-105, var6);
-          var7 = GameClock.a(true, EmailConfirmationValidator.e((byte) -101));
+          var7 = GameClock.readSettingsCookie(true, EmailConfirmationValidator.e((byte) -101));
           if (var7 == null) {
             var7 = "";
           }

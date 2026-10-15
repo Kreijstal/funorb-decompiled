@@ -91,7 +91,7 @@ final class LevelList {
         CacheEntry.field_A[8] = PauseMenuScreen.field_v;
         ArrayWidgetGroup.buttonLabels[15] = SpriteInputHelpers.field_c[1];
         ArrayWidgetGroup.buttonLabels[16] = SpriteInputHelpers.field_c[2];
-        CacheEntry.field_A[12] = uo.field_b;
+        CacheEntry.field_A[12] = AppletResourceHelpers.field_b;
         CacheEntry.field_A[10] = WidgetTheme.field_d;
         ArrayWidgetGroup.buttonLabels[18] = LevelCompleteScreen.field_E[1];
         ArrayWidgetGroup.buttonLabels[26] = PauseMenuScreen.field_u;
@@ -104,7 +104,7 @@ final class LevelList {
         ar.field_a = new String[]{kk.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, GameRenderAudioHelpers.field_b, RectangleBody.field_t};
-        TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, ch.field_j, GameTransportActions.field_a, nk.field_f, OutgoingPacketHelpers.field_h};
+        TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, ch.field_j, GameTransportActions.field_a, AppletFlowHelpers.field_f, OutgoingPacketHelpers.field_h};
         CacheEntry.field_A[17] = MusicPatch.field_q;
         CacheEntry.field_A[14] = RadialSelectorWidget.field_V;
         CacheEntry.field_A[18] = GameScreen.field_g;

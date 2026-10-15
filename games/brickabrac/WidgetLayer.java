@@ -166,7 +166,7 @@ abstract class WidgetLayer extends WidgetGroup {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ArchiveNetworkRequest.a("", 121, param0);
+          ArchiveNetworkRequest.setSessionCookie("", 121, param0);
           if (param1 != 97) {
             WidgetLayer.a((byte) -100);
           }
@@ -306,7 +306,7 @@ abstract class WidgetLayer extends WidgetGroup {
               ga.field_i = 8;
               LogoRenderHelpers.field_a = 250;
               pp.field_a = -1;
-              LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(IntNode.field_n, new String[]{ui.field_b}, (byte) 103);
+              LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(IntNode.field_n, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }
@@ -318,7 +318,7 @@ abstract class WidgetLayer extends WidgetGroup {
               ga.field_i = 9;
               pp.field_a = -1;
               LogoRenderHelpers.field_a = 250;
-              LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
+              LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
               wc.field_b = true;
               return;
             }
@@ -341,7 +341,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 ga.field_i = 9;
                 LogoRenderHelpers.field_a = 250;
                 pp.field_a = -1;
-                LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
+                LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
                 wc.field_b = true;
                 return;
               }

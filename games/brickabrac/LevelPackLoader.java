@@ -90,7 +90,7 @@ final class LevelPackLoader {
 
     final static boolean a(byte param0) {
         int var1 = 25 % ((param0 - 55) / 54);
-        return uo.a(EmailConfirmationValidator.e((byte) -95), (byte) 14);
+        return AppletResourceHelpers.hasTuhstatbutMarker(EmailConfirmationValidator.e((byte) -95), (byte) 14);
     }
 
     final static UiComponent c(int param0) {

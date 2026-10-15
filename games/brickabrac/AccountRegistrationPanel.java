@@ -673,7 +673,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           if (ConditionalTextValue.validationDebouncing == status) {
             return false;
           }
-          if (status != uo.validationEmpty) {
+          if (status != AppletResourceHelpers.validationEmpty) {
             return true;
           }
           return false;

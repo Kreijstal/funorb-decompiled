@@ -91,7 +91,7 @@ abstract class LoginCredentials {
           }
           var5 = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.first(-71));
           while (var5 != null) {
-            uo.sendTableRequest(var5, param1, (byte) 68);
+            AppletResourceHelpers.sendTableRequest(var5, param1, (byte) 68);
             var5 = (TableDataRequest) (GameplayAudioEvent.pendingTableRequests.next((byte) 116));
           }
           return;

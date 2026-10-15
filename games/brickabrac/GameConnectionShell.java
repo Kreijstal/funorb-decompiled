@@ -21,7 +21,7 @@ abstract class GameConnectionShell extends AppletGameShell {
 
     private final void f(boolean param0) {
         String var2 = ResourceArchiveFactory.readIncomingString((byte) 120);
-        ArchiveNetworkRequest.a(var2, 70, EmailConfirmationValidator.e((byte) -116));
+        ArchiveNetworkRequest.setSessionCookie(var2, 70, EmailConfirmationValidator.e((byte) -116));
         if (!param0) {
           this.g(false);
         }
@@ -213,7 +213,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (this.field_d) {
           return -1;
         }
-        if (!ui.a(false)) {
+        if (!AppletSettingsUiHelpers.a(false)) {
           return -1;
         }
         if (ConnectionPhase.field_e) {
@@ -262,7 +262,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             TooltipSprite.resendPendingAchievements(4, 13330);
           }
           if (KeyDispatchHelpers.enabledCommonPackets[4]) {
-            ui.a(5, (byte) 115);
+            AppletSettingsUiHelpers.a(5, (byte) 115);
           }
           if (KeyDispatchHelpers.enabledCommonPackets[5]) {
             ScrollPaneWithFooter.resendBytePayloadOperations(6, 0);
@@ -383,7 +383,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
           }
           if (var4 == 5) {
-            nk.a(2048, EmailConfirmationValidator.e((byte) -110));
+            AppletFlowHelpers.showQuitPage(2048, EmailConfirmationValidator.e((byte) -110));
           }
           if (var4 == 6 &&
             SpaceBackground.field_t) {
@@ -740,7 +740,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (var3Lifetime1 != 0 &&
             OutgoingPacketHelpers.field_a == 0 &&
             AchievementIcon.field_j == 11 &&
-            !ui.a(false)) {
+            !AppletSettingsUiHelpers.a(false)) {
             LabeledToggleRenderer.b(0);
           }
           if (-1 != OutgoingPacketHelpers.field_a &&
@@ -754,7 +754,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             if (10 <= AchievementIcon.field_j) {
               FarmBackground.g(114);
               if (OutgoingPacketHelpers.field_a == 3) {
-                FullscreenFailureKind.a(nk.field_d, (byte) -49, 256);
+                FullscreenFailureKind.a(AppletFlowHelpers.field_d, (byte) -49, 256);
               } else {
                 if (OutgoingPacketHelpers.field_a != 4) {
                   if (OutgoingPacketHelpers.field_a != 2) {
@@ -794,7 +794,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if ((OutgoingPacketHelpers.field_a != -1 &&
           0 != OutgoingPacketHelpers.field_a ||
-          ui.a(false)) &&
+          AppletSettingsUiHelpers.a(false)) &&
           NanoGameClock.field_i <= MonotonicTime.nowMillis(false)) {
           ConnectionPhase.field_e = false;
           if (OutgoingPacketHelpers.field_a != -1 &&
@@ -804,7 +804,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
         }
         if (OutgoingPacketHelpers.field_a == 0 &&
-          !ui.a(false)) {
+          !AppletSettingsUiHelpers.a(false)) {
           LevelCompleteScreen.field_C = false;
         }
         if (0 == clientStage &&
@@ -842,7 +842,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (3 == clientStage &&
           HuffmanCodec.a(RadialSelectorWidget.field_S, LabeledWidget.field_P, BoardPresentationHelpers.field_c, -111) &&
           QuickChatPhraseRegistry.a(BoardPresentationHelpers.field_c, (byte) 101)) {
-          ui.a(384920353);
+          AppletSettingsUiHelpers.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
           SpaceBackground.field_t = false;
           UsernameSuggestionPanel.field_N = AlternateNumericLoginCredentials.field_t;

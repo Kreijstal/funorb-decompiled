@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpacityWidget extends SingleChildWidget {
-    static String field_G;
+    static String clientSession;
     static RgbSprite[] constructionCentreSprites;
     static int field_I;
     int opacity256;
@@ -174,10 +174,10 @@ final class OpacityWidget extends SingleChildWidget {
 
     public static void a(int param0) {
         if (param0 != 51550) {
-          field_G = (String) null;
+          clientSession = (String) null;
         }
         constructionCentreSprites = null;
-        field_G = null;
+        clientSession = null;
     }
 
     final static SoundPlayback queueSoundPlayback(byte obfuscationGuard, PcmStream stream) {

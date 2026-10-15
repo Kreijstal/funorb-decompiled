@@ -1118,7 +1118,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                   stackIn_77_0 = 1;
                 }
                 var37 = stackIn_77_0;
-                stackIn_79_0 = uo.field_c;
+                stackIn_79_0 = AppletResourceHelpers.field_c;
                 if (var37 == 0) {
                   stackIn_80_1 = 0;
                 } else {

@@ -12,7 +12,7 @@ final class SoundCache {
     static char field_h;
     private IntrusiveHashTable decodedSounds;
     static String field_b;
-    static String field_d;
+    static String clientSettings;
 
     final static void a(int param0, int param1, boolean param2) {
         int var3;
@@ -147,7 +147,7 @@ final class SoundCache {
             return stackIn_2_0;
           }
           if (obfuscationGuard != 0) {
-            field_d = (String) null;
+            clientSettings = (String) null;
           }
           if (budget != null &&
             budget[0] <= 0) {
@@ -343,7 +343,7 @@ final class SoundCache {
               }
               RadialSelectorRenderer.field_d = false;
               if (var11 != null) {
-                ui.a(-70, EmailConfirmationValidator.e((byte) -112), var11);
+                AppletSettingsUiHelpers.setSettingsCookie(-70, EmailConfirmationValidator.e((byte) -112), var11);
               }
               if (0 >= ResourceArchiveFactory.windowModeCapabilityWord &&
                 !ChocolateBackground.field_r) {
@@ -657,7 +657,7 @@ final class SoundCache {
 
     public static void a(byte param0) {
         field_f = null;
-        field_d = null;
+        clientSettings = null;
         field_i = null;
         field_k = null;
         if (param0 >= -99) {

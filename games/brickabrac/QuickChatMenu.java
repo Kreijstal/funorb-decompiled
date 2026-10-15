@@ -1182,7 +1182,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime115 = gr.a(!param0, "sweet");
           if (var2Lifetime115 != null) {
-            nk.field_f = MenuButton.a(var2Lifetime115, (byte) 81);
+            AppletFlowHelpers.field_f = MenuButton.a(var2Lifetime115, (byte) 81);
           }
           var2Lifetime116 = gr.a(true, "ninja_skills");
           if (var2Lifetime116 != null) {
@@ -1330,7 +1330,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime152 = gr.a(true, "explain_gauges");
           if (var2Lifetime152 != null) {
-            ui.field_b = MenuButton.a(var2Lifetime152, (byte) 75);
+            AppletSettingsUiHelpers.field_b = MenuButton.a(var2Lifetime152, (byte) 75);
           }
           var2Lifetime153 = gr.a(true, "explain_fall_out");
           if (var2Lifetime153 != null) {
@@ -1382,7 +1382,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime165 = gr.a(true, "explain_control");
           if (null != var2Lifetime165) {
-            uo.field_b = MenuButton.a(var2Lifetime165, (byte) 97);
+            AppletResourceHelpers.field_b = MenuButton.a(var2Lifetime165, (byte) 97);
           }
           var2Lifetime166 = gr.a(true, "explain_slowdown");
           if (null != var2Lifetime166) {

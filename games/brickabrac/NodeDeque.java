@@ -278,7 +278,7 @@ final class NodeDeque {
           try {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
-              param0.getAppletContext().showDocument(DisplayModeInfo.a(param0, var2, -1), "_top");
+              param0.getAppletContext().showDocument(DisplayModeInfo.applyChangedAppletParameters(param0, var2, -1), "_top");
               if (param1 <= -42) {
                 return;
               }

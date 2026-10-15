@@ -150,7 +150,7 @@ final class LevelSelectScreen extends MenuScreen {
     }
 
     LevelSelectScreen(int screenId, int packIndex) {
-        this(screenId, ui.field_a, packIndex);
+        this(screenId, AppletSettingsUiHelpers.field_a, packIndex);
     }
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {

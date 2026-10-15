@@ -7,7 +7,7 @@ final class StateIconLabel extends UiComponent {
     static AccountResponse field_Rb;
     static String field_Tb;
     static RgbSprite halloweenMidSprite;
-    static boolean field_Sb;
+    static boolean tuhstatbutMarkerSet;
     static TextFont fullscreenDialogBodyFont;
     private UiComponent icon;
 

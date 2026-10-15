@@ -95,7 +95,7 @@ abstract class CacheEntry extends DualLinkNode {
           BackgroundScene.field_k = param9;
           GameClock.field_f = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "gameprivacy", 2);
           FullscreenDialogHelpers.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "ratedgame", 2);
-          uo.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "opentome", 2);
+          AppletResourceHelpers.field_c = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "opentome", 2);
           Ball.field_K = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
           AchievementsScreen.field_H = new String[5];
           AchievementsScreen.field_H[3] = AlternateNumericLoginCredentials.field_u;
@@ -122,8 +122,8 @@ abstract class CacheEntry extends DualLinkNode {
           HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, VerticalScrollbar.field_Rb.toUpperCase());
           sc.field_b = new UiComponent(0L, ValidationStatus.field_j, rl.field_c.toUpperCase());
           ll.field_e = new UiComponent(0L, FarmBackground.field_x);
-          nk.field_g = new UiComponent(0L, MainMenuScreen.field_t, nk.field_b);
-          nk.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
+          AppletFlowHelpers.field_g = new UiComponent(0L, MainMenuScreen.field_t, AppletFlowHelpers.field_b);
+          AppletFlowHelpers.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
           kk.field_b = new UiComponent(0L, LoginCredentialKind.field_d, ch.field_d);
           RasterEffectHelpers.field_b = new UiComponent(0L, LoginCredentialKind.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, LoginCredentialKind.field_d, TextFieldRenderer.field_v);
@@ -148,11 +148,11 @@ abstract class CacheEntry extends DualLinkNode {
           FontRequestHelpers.field_a = new UiComponent(0L, (UiComponent) null);
           FontRequestHelpers.field_a.addChild(sc.field_b, 0);
           FontRequestHelpers.field_a.addChild(ll.field_e, 0);
-          ll.field_e.addChild(nk.field_g, 0);
+          ll.field_e.addChild(AppletFlowHelpers.field_g, 0);
           if (param2 < 13) {
             return;
           }
-          ll.field_e.addChild(nk.field_a, 0);
+          ll.field_e.addChild(AppletFlowHelpers.field_a, 0);
           ll.field_e.addChild(kk.field_b, 0);
           if (PacketReceiveHelpers.field_e) {
             ll.field_e.addChild(RasterEffectHelpers.field_b, 0);

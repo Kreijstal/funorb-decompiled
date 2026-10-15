@@ -130,7 +130,7 @@ public final class BrickABrac extends InteractiveGameClient {
     final void initializeClient(boolean obfuscationGuard) {
         this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
         ButtonWidgetRenderer.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
-        nk.field_c = new RgbSprite(640, 480);
+        AppletFlowHelpers.field_c = new RgbSprite(640, 480);
         Widget.a(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.windowCanvas);
         this.registerUiLifecycle(3160, new GameUiController());
         ReportAbuseDialog.a(ch.incomingPacketLengths, 1);
@@ -576,7 +576,7 @@ public final class BrickABrac extends InteractiveGameClient {
         CanvasInputHelpers.a(!obfuscationGuard ? true : false);
         LobbyUiHelpers.clearSharedReferences(120);
         GameConnectionShell.k(-113);
-        nk.a((byte) 121);
+        AppletFlowHelpers.a((byte) 121);
         TextChoiceDialogHitTest.b(-789103103);
         ChatLobbyUiHelpers.a(11);
         pp.a(0);
@@ -755,7 +755,7 @@ public final class BrickABrac extends InteractiveGameClient {
         gj.a(-27956);
         LevelPackLoader.b(-30593);
         FontRequestHelpers.a(-41);
-        uo.a((byte) 66);
+        AppletResourceHelpers.a((byte) 66);
         QuickChatMenu.d(true);
         QuickChatCategoryRegistry.b((byte) -19);
         QuickChatPhraseRegistry.a(64);
@@ -790,7 +790,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MultiValueSliderRenderer.a(-51);
         gr.a((byte) 118);
         VorbisFloor1.releaseScratch();
-        ui.b(1516);
+        AppletSettingsUiHelpers.b(1516);
         QuickChatPhraseDefinition.f(32463);
         WeightedLruCache.a(-125);
         IntrusiveHashTable.a(120);

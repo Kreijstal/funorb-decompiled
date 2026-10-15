@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uo {
+final class AppletResourceHelpers {
     static String[] field_e;
     static ValidationStatus validationEmpty;
     static String field_b;
@@ -58,7 +58,7 @@ final class uo {
 
     final static void a(boolean param0, boolean param1) {
         DualLinkDeque.a(param0, param1);
-        nk.a((byte) -25, param0);
+        AppletFlowHelpers.a((byte) -25, param0);
     }
 
     final static void sendTableRequest(TableDataRequest request, int opcode, byte obfuscationGuard) {
@@ -105,67 +105,67 @@ final class uo {
           field_a = null;
           return;
         }
-        uo.a((byte) 51);
+        AppletResourceHelpers.a((byte) 51);
         field_d = null;
         field_e = null;
         field_a = null;
     }
 
-    final static boolean a(java.applet.Applet param0, byte param1) {
+    final static boolean hasTuhstatbutMarker(java.applet.Applet applet, byte obfuscationGuard) {
         try {
-          int var6 = 0;
-          String var2 = null;
-          int var3 = 0;
-          String var4 = null;
-          String[] var5 = null;
-          int var7 = 0;
-          int var8 = 0;
-          boolean stackIn_17_0 = false;
-          RuntimeException stackIn_20_0 = null;
-          StringBuilder stackIn_20_1 = null;
-          String stackIn_21_2 = null;
-          Throwable decompiledCaughtException = null;
-          Throwable var2_ref = null;
-          RuntimeException var2_ref2 = null;
-          var8 = BrickABrac.field_J ? 1 : 0;
+          int cookieIndex = 0;
+          String markerName = null;
+          int unusedGuardQuotient = 0;
+          String cookieText = null;
+          String[] cookieParts = null;
+          int equalsIndex = 0;
+          int unusedGameFlag = 0;
+          boolean appletMarkerPresent = false;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String appletSummary = null;
+          Throwable caughtFailure = null;
+          Throwable ignoredBrowserFailure = null;
+          RuntimeException markerFailure = null;
+          unusedGameFlag = BrickABrac.field_J ? 1 : 0;
           try {
-            if (StateIconLabel.field_Sb) {
+            if (StateIconLabel.tuhstatbutMarkerSet) {
               return true;
             }
             try {
-              var3 = 98 / ((89 - param1) / 35);
-              var2 = "tuhstatbut";
-              var4 = (String) (AppletJavaScriptBridge.callFunctionWithoutArguments("getcookies", -126, param0));
-              var5 = FarmBackground.splitPreservingEmptyParts((byte) -103, var4, ';');
-              for (var6 = 0; var5.length > var6; var6++) {
-                var7 = var5[var6].indexOf('=');
-                if (var7 >= 0 &&
-                  var5[var6].substring(0, var7).trim().equals(var2)) {
+              unusedGuardQuotient = 98 / ((89 - obfuscationGuard) / 35);
+              markerName = "tuhstatbut";
+              cookieText = (String) (AppletJavaScriptBridge.callFunctionWithoutArguments("getcookies", -126, applet));
+              cookieParts = FarmBackground.splitPreservingEmptyParts((byte) -103, cookieText, ';');
+              for (cookieIndex = 0; cookieParts.length > cookieIndex; cookieIndex++) {
+                equalsIndex = cookieParts[cookieIndex].indexOf('=');
+                if (equalsIndex >= 0 &&
+                  cookieParts[cookieIndex].substring(0, equalsIndex).trim().equals(markerName)) {
                   return true;
                 }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = decompiledCaughtException;
+            } catch (java.lang.Throwable caughtBrowserFailure) {
+              caughtFailure = caughtBrowserFailure;
+              ignoredBrowserFailure = caughtFailure;
             }
-            stackIn_17_0 = (null != param0.getParameter("tuhstatbut"));
-            return stackIn_17_0;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_20_0 = var2_ref2;
-            stackIn_20_1 = new StringBuilder().append("uo.D(");
-            if (param0 == null) {
-              stackIn_21_2 = "null";
+            appletMarkerPresent = (null != applet.getParameter("tuhstatbut"));
+            return appletMarkerPresent;
+          } catch (java.lang.RuntimeException caughtMarkerFailure) {
+            caughtFailure = caughtMarkerFailure;
+            markerFailure = (RuntimeException) (Object) caughtFailure;
+            failureContext = markerFailure;
+            contextBuilder = new StringBuilder().append("uo.D(");
+            if (applet == null) {
+              appletSummary = "null";
             } else {
-              stackIn_21_2 = "{...}";
+              appletSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(appletSummary).append(',').append(obfuscationGuard).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

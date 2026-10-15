@@ -102,68 +102,68 @@ abstract class GameClock {
 
     abstract int advanceCycles(int obfuscationGuard, long tickDurationNanos);
 
-    final static String a(boolean param0, java.applet.Applet param1) {
+    final static String readSettingsCookie(boolean obfuscationGuard, java.applet.Applet applet) {
         try {
-          int var6 = 0;
-          String var3 = null;
-          String var4 = null;
-          String[] var5 = null;
-          int var7 = 0;
-          int var8 = 0;
-          java.applet.Applet var9 = null;
-          String var10 = null;
-          String stackIn_8_0 = null;
-          String stackIn_15_0 = null;
-          RuntimeException stackIn_18_0 = null;
-          StringBuilder stackIn_18_1 = null;
-          String stackIn_19_2 = null;
-          Throwable decompiledCaughtException = null;
-          Throwable var2 = null;
-          RuntimeException var2_ref = null;
-          var8 = BrickABrac.field_J ? 1 : 0;
+          int cookieIndex = 0;
+          String settingsCookieName = null;
+          String cookieText = null;
+          String[] cookieParts = null;
+          int equalsIndex = 0;
+          int unusedGameFlag = 0;
+          java.applet.Applet unusedApplet = null;
+          String cookiePrefix = null;
+          String cookieValue = null;
+          String fallbackSettings = null;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String appletSummary = null;
+          Throwable caughtFailure = null;
+          Throwable ignoredBrowserFailure = null;
+          RuntimeException readFailure = null;
+          unusedGameFlag = BrickABrac.field_J ? 1 : 0;
           try {
             try {
-              var10 = param1.getParameter("cookieprefix");
-              if (!param0) {
-                var9 = (java.applet.Applet) null;
-                GameClock.a(true, (java.applet.Applet) null);
+              cookiePrefix = applet.getParameter("cookieprefix");
+              if (!obfuscationGuard) {
+                unusedApplet = (java.applet.Applet) null;
+                GameClock.readSettingsCookie(true, (java.applet.Applet) null);
               }
-              var3 = var10 + "settings";
-              var4 = (String) (AppletJavaScriptBridge.callFunctionWithoutArguments("getcookies", -125, param1));
-              var5 = FarmBackground.splitPreservingEmptyParts((byte) 123, var4, ';');
-              for (var6 = 0; var5.length > var6; var6++) {
-                var7 = var5[var6].indexOf('=');
-                if (0 <= var7 &&
-                  var5[var6].substring(0, var7).trim().equals(var3)) {
-                  stackIn_8_0 = var5[var6].substring(1 + var7).trim();
-                  return stackIn_8_0;
+              settingsCookieName = cookiePrefix + "settings";
+              cookieText = (String) (AppletJavaScriptBridge.callFunctionWithoutArguments("getcookies", -125, applet));
+              cookieParts = FarmBackground.splitPreservingEmptyParts((byte) 123, cookieText, ';');
+              for (cookieIndex = 0; cookieParts.length > cookieIndex; cookieIndex++) {
+                equalsIndex = cookieParts[cookieIndex].indexOf('=');
+                if (0 <= equalsIndex &&
+                  cookieParts[cookieIndex].substring(0, equalsIndex).trim().equals(settingsCookieName)) {
+                  cookieValue = cookieParts[cookieIndex].substring(1 + equalsIndex).trim();
+                  return cookieValue;
                 }
               }
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var2 = decompiledCaughtException;
+            } catch (java.lang.Throwable caughtBrowserFailure) {
+              caughtFailure = caughtBrowserFailure;
+              ignoredBrowserFailure = caughtFailure;
             }
-            if (SoundCache.field_d == null) {
-              return param1.getParameter("settings");
+            if (SoundCache.clientSettings == null) {
+              return applet.getParameter("settings");
             }
-            stackIn_15_0 = SoundCache.field_d;
-            return stackIn_15_0;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_18_0 = var2_ref;
-            stackIn_18_1 = new StringBuilder().append("dj.G(").append(param0).append(',');
-            if (param1 == null) {
-              stackIn_19_2 = "null";
+            fallbackSettings = SoundCache.clientSettings;
+            return fallbackSettings;
+          } catch (java.lang.RuntimeException caughtReadFailure) {
+            caughtFailure = caughtReadFailure;
+            readFailure = (RuntimeException) (Object) caughtFailure;
+            failureContext = readFailure;
+            contextBuilder = new StringBuilder().append("dj.G(").append(obfuscationGuard).append(',');
+            if (applet == null) {
+              appletSummary = "null";
             } else {
-              stackIn_19_2 = "{...}";
+              appletSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(appletSummary).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 
@@ -178,7 +178,7 @@ abstract class GameClock {
         kd.field_d[9] = IntegerValidationHelpers.field_b;
         kd.field_d[6] = DelayedPacket.field_i;
         kd.field_d[20] = GrowableIntList.field_n;
-        kd.field_d[7] = nk.field_i;
+        kd.field_d[7] = AppletFlowHelpers.field_i;
         kd.field_d[17] = RasterCacheSurface.field_l;
         kd.field_d[19] = MeshAudioHelpers.field_g;
         kd.field_d[param0] = ed.field_a;

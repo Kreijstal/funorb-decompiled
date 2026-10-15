@@ -52,7 +52,7 @@ final class NameEntryPopup extends UiComponent {
             this.nameBuffer.length() > 0) {
             MessageScreen.resizeAndFillTextBuffer(' ', this.nameBuffer, -1 + this.nameBuffer.length(), false);
           }
-          if (nk.canAppendNameCharacter(ResourceArchiveFactory.currentKeyCharacter, (CharSequence) ((Object) this.nameBuffer), false)) {
+          if (AppletFlowHelpers.canAppendNameCharacter(ResourceArchiveFactory.currentKeyCharacter, (CharSequence) ((Object) this.nameBuffer), false)) {
             ignoredCharacterAppend = this.nameBuffer.append(ResourceArchiveFactory.currentKeyCharacter);
           } else {
             if (this.nameBuffer.length() == 0 &&

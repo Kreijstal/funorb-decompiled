@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui {
+final class AppletSettingsUiHelpers {
     static int[] field_a;
     static String field_b;
 
@@ -121,7 +121,7 @@ final class ui {
             var5 = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.next((byte) 116));
           }
           if (param1 != 115) {
-            ui.a(-72);
+            AppletSettingsUiHelpers.a(-72);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -133,53 +133,53 @@ final class ui {
 
     final static void a(int param0) {
         if (param0 != 384920353) {
-          ui.a(false);
+          AppletSettingsUiHelpers.a(false);
         }
         RichTextLayout.field_r = null;
         DirectByteStorage.field_g = null;
     }
 
-    final static void a(int param0, java.applet.Applet param1, String param2) {
+    final static void setSettingsCookie(int obfuscationGuard, java.applet.Applet applet, String settingsValue) {
         try {
-          String var6 = null;
-          String var5 = null;
-          String var4 = null;
-          String var7 = null;
-          String var5Lifetime1;
-          String var5Lifetime2;
-          String var5Lifetime3;
-          String var5Lifetime4;
-          String var5Lifetime5;
-          String var5Lifetime6;
+          String cookiePrefix = null;
+          String unusedPrefixCopy = null;
+          String cookieHost = null;
+          String cookieAttributes = null;
+          String unusedPrefixAlias;
+          String unusedHostCopy;
+          String unusedHostAlias;
+          String unusedAttributesCopy;
+          String unusedAttributesAlias;
+          String cookieWithLifetime;
           try {
-            SoundCache.field_d = param2;
+            SoundCache.clientSettings = settingsValue;
             try {
-              var6 = param1.getParameter("cookieprefix");
-              var5 = var6;
-              var5Lifetime1 = var6;
-              var4 = param1.getParameter("cookiehost");
-              var5Lifetime2 = var4;
-              var5Lifetime3 = var4;
-              var7 = var6 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
-              var5Lifetime4 = var7;
-              var5Lifetime5 = var7;
-              if (param2.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + AppletGameShell.a((byte) -75, 94608000000L + MonotonicTime.nowMillis(false)) + "; Max-Age=" + 94608000L;
+              cookiePrefix = applet.getParameter("cookieprefix");
+              unusedPrefixCopy = cookiePrefix;
+              unusedPrefixAlias = cookiePrefix;
+              cookieHost = applet.getParameter("cookiehost");
+              unusedHostCopy = cookieHost;
+              unusedHostAlias = cookieHost;
+              cookieAttributes = cookiePrefix + "settings=" + settingsValue + "; version=1; path=/; domain=" + cookieHost;
+              unusedAttributesCopy = cookieAttributes;
+              unusedAttributesAlias = cookieAttributes;
+              if (settingsValue.length() != 0) {
+                cookieWithLifetime = cookieAttributes + "; Expires=" + AppletGameShell.a((byte) -75, 94608000000L + MonotonicTime.nowMillis(false)) + "; Max-Age=" + 94608000L;
               } else {
-                var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+                cookieWithLifetime = cookieAttributes + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              AppletJavaScriptBridge.evaluateScript(param1, "document.cookie=\"" + var5Lifetime6 + "\"", 5797);
-            } catch (Throwable throwable) {
+              AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieWithLifetime + "\"", 5797);
+            } catch (Throwable ignoredBrowserFailure) {
             }
-            VolcanicBackground.a(false, param1);
-            int var3_int = -23 / ((0 - param0) / 43);
-          } catch (RuntimeException runtimeException) {
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ui.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            VolcanicBackground.refreshAppletLinks(false, applet);
+            int unusedGuardQuotient = -23 / ((0 - obfuscationGuard) / 43);
+          } catch (RuntimeException failure) {
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "ui.B(" + obfuscationGuard + ',' + (applet != null ? "{...}" : "null") + ',' + (settingsValue != null ? "{...}" : "null") + ')');
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

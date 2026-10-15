@@ -257,7 +257,7 @@ final class ReportAbuseDialog extends UiComponent {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
-                    muteCaption = nk.field_e;
+                    muteCaption = AppletFlowHelpers.field_e;
                     break regionExit1;
                   }
                 }

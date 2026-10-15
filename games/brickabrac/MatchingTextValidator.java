@@ -154,21 +154,21 @@ final class MatchingTextValidator extends TextFieldValidator {
         return false;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
-        String var2 = null;
-        String var3 = null;
-        long var4 = 0L;
+    final static void setTuhstatbutMarker(java.applet.Applet applet, int obfuscationGuard) {
+        String markerName = null;
+        String markerValue = null;
+        long discardLifetime = 0L;
         try {
-          StateIconLabel.field_Sb = true;
-          if (param1 != 9) {
+          StateIconLabel.tuhstatbutMarkerSet = true;
+          if (obfuscationGuard != 9) {
             MatchingTextValidator.f(-31);
           }
-          var2 = "tuhstatbut";
-          var3 = "rvnadlm";
-          var4 = -1L;
-          ChatLobbyUiHelpers.setAppletCookie(param0, (byte) 117, var3, var2, var4);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          markerName = "tuhstatbut";
+          markerValue = "rvnadlm";
+          discardLifetime = -1L;
+          ChatLobbyUiHelpers.setAppletCookie(applet, (byte) 117, markerValue, markerName, discardLifetime);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "cb.G(" + (applet != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

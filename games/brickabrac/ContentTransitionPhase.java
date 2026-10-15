@@ -53,7 +53,7 @@ final class ContentTransitionPhase {
                 var5Lifetime2 = var5Lifetime2 + var3.substring(var4);
               }
               var6 = new java.net.URL(param1.getCodeBase(), var5Lifetime2);
-              param1.getAppletContext().showDocument(DisplayModeInfo.a(param1, var6, -1), "_self");
+              param1.getAppletContext().showDocument(DisplayModeInfo.applyChangedAppletParameters(param1, var6, -1), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

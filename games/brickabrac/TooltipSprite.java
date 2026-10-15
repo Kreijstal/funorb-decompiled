@@ -42,7 +42,7 @@ final class TooltipSprite extends IntrusiveNode {
           ArchiveNetworkClient.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
           wm.field_a = (TextFont) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));
           var17 = new RgbSprite(param1.takeFileByName(122, "button.gif", ""), (java.awt.Component) ((Object) CacheIoRequest.windowCanvas));
-          uo.loadIndexedSpriteByName((byte) 29, param3, "dropdown", "commonui");
+          AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param3, "dropdown", "commonui");
           var5 = PacketBuffer.a("commonui", param3, "screen_options", param2 ^ 946715361);
           LevelPackLoader.field_b = new IndexedSprite[4];
           LoginCredentialKind.field_b = new IndexedSprite[4];

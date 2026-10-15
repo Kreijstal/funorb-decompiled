@@ -11,53 +11,53 @@ final class DisplayModeInfo {
     int bitDepth;
     static int field_e;
 
-    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
-        Object var3 = null;
-        Object var4 = null;
-        java.net.URL stackIn_11_0 = null;
-        Object stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object var4Lifetime1;
-        Object var4Lifetime2;
+    final static java.net.URL applyChangedAppletParameters(java.applet.Applet applet, java.net.URL url, int obfuscationGuard) {
+        Object settingsOverride = null;
+        Object unusedSettingsAlias = null;
+        java.net.URL rewrittenUrl = null;
+        Object failureContext = null;
+        StringBuilder contextBuilder = null;
+        String appletSummary = null;
+        StringBuilder urlContextBuilder = null;
+        String urlSummary = null;
+        RuntimeException caughtFailure = null;
+        Object sessionOverride;
+        Object unusedSettingsCopy;
         try {
-          var3 = null;
-          if (param2 != -1) {
+          settingsOverride = null;
+          if (obfuscationGuard != -1) {
             field_b = (String) null;
           }
-          if (null != SoundCache.field_d &&
-            !SoundCache.field_d.equals(param0.getParameter("settings"))) {
-            var3 = SoundCache.field_d;
-            var4 = var3;
-            var4Lifetime2 = var3;
+          if (null != SoundCache.clientSettings &&
+            !SoundCache.clientSettings.equals(applet.getParameter("settings"))) {
+            settingsOverride = SoundCache.clientSettings;
+            unusedSettingsAlias = settingsOverride;
+            unusedSettingsCopy = settingsOverride;
           }
-          var4Lifetime1 = null;
-          if (null != OpacityWidget.field_G &&
-            !OpacityWidget.field_G.equals(param0.getParameter("session"))) {
-            var4Lifetime1 = OpacityWidget.field_G;
+          sessionOverride = null;
+          if (null != OpacityWidget.clientSession &&
+            !OpacityWidget.clientSession.equals(applet.getParameter("session"))) {
+            sessionOverride = OpacityWidget.clientSession;
           }
-          stackIn_11_0 = FramedMenuScreen.a((String) (var3), (byte) 60, (String) (var4Lifetime1), -1, param1);
-          return stackIn_11_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_14_0 = var3;
-          stackIn_14_1 = new StringBuilder().append("hg.D(");
-          if (param0 == null) {
-            stackIn_15_2 = "null";
+          rewrittenUrl = FramedMenuScreen.rewriteAppletPath((String) (settingsOverride), (byte) 60, (String) (sessionOverride), -1, url);
+          return rewrittenUrl;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          settingsOverride = caughtFailure;
+          failureContext = settingsOverride;
+          contextBuilder = new StringBuilder().append("hg.D(");
+          if (applet == null) {
+            appletSummary = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            appletSummary = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param1 == null) {
-            stackIn_18_2 = "null";
+          urlContextBuilder = ((StringBuilder) (Object) contextBuilder).append(appletSummary).append(',');
+          if (url == null) {
+            urlSummary = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            urlSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) (failureContext), ((StringBuilder) (Object) urlContextBuilder).append(urlSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

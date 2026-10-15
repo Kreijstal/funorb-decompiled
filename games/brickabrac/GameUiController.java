@@ -170,8 +170,8 @@ final class GameUiController implements GameUiLifecycle {
         AccountContentTransitionLayer.startupResources.addArchive(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         AccountContentTransitionLayer.startupResources.addArchive(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
         AccountContentTransitionLayer.startupResources.addArchive(NodeDequeCursor.field_i, false, AlternateNumericLoginCredentials.field_n, LinkWidgetRenderer.field_a);
-        AccountContentTransitionLayer.startupResources.addArchive(IncomingPacketHelpers.field_a, false, fa.field_j, uo.field_a);
-        AccountContentTransitionLayer.startupResources.addArchive(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
+        AccountContentTransitionLayer.startupResources.addArchive(IncomingPacketHelpers.field_a, false, fa.field_j, AppletResourceHelpers.field_a);
+        AccountContentTransitionLayer.startupResources.addArchive(IntHistoryBuffer.field_i, false, fa.field_j, AppletResourceHelpers.field_a);
         AccountContentTransitionLayer.startupResources.addArchive(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, BrowserResizeNotificationHelpers.field_e);
         AccountContentTransitionLayer.startupResources.addArchive(KeyDispatchHelpers.field_a, false, IntHistoryBuffer.field_k, BrowserResizeNotificationHelpers.field_e);
     }

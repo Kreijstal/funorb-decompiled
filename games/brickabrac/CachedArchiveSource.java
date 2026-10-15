@@ -168,7 +168,7 @@ final class CachedArchiveSource extends ArchiveSource {
 
     final static void e(int param0) {
         int var1 = -91 / ((33 - param0) / 48);
-        MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -119), 9);
+        MatchingTextValidator.setTuhstatbutMarker(EmailConfirmationValidator.e((byte) -119), 9);
     }
 
     final byte[] getPackedGroup(int groupId, byte obfuscationGuard) {

@@ -201,7 +201,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              nk.a(58);
+              AppletFlowHelpers.a(58);
               decompiledFrameRemainder0 = (var5 != 0);
             }
           }
@@ -215,7 +215,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                   LevelPack.b(118);
                 }
                 if (var3 == 2) {
-                  nk.a(param0 ^ 2058, EmailConfirmationValidator.e((byte) -85));
+                  AppletFlowHelpers.showQuitPage(param0 ^ 2058, EmailConfirmationValidator.e((byte) -85));
                 }
               }
               this.updateGameLayer(false, (byte) 81);
@@ -232,7 +232,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  nk.a(param0 + 47);
+                  AppletFlowHelpers.a(param0 + 47);
                   decompiledFrameRemainder0 = (var5 != 0);
                 }
               }
@@ -283,11 +283,11 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                   if ((decompiledFrameCompleted1) &&
                     (decompiledFrameCompleted0) &&
                     (var5 != 0)) {
-                    nk.a(114);
+                    AppletFlowHelpers.a(114);
                     this.updateGameLayer(false, (byte) 28);
                   }
                 } else {
-                  nk.a(114);
+                  AppletFlowHelpers.a(114);
                   if (var5 != 0) {
                     this.updateGameLayer(false, (byte) 28);
                   }
@@ -463,7 +463,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         }
         HuffmanCodec.a(14114);
         OutgoingPacketHelpers.flushGamePackets((byte) 110, 0);
-        if (ui.a(false)) {
+        if (AppletSettingsUiHelpers.a(false)) {
           var2 = this.o(-105);
           if (0 == var2 ||
             var2 == 1) {
@@ -476,7 +476,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           if (this.q(73)) {
             var3 = 1;
           }
-          if (!ui.a(false)) {
+          if (!AppletSettingsUiHelpers.a(false)) {
             var3 = 0;
           }
           if (var3 != 0) {

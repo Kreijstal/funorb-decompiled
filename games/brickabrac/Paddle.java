@@ -177,7 +177,7 @@ final class Paddle extends RectangleBody {
             } else {
               stackIn_9_1 = (var12 << 8) / var11 << 8;
             }
-            if (stackIn_8_0 < nk.a(stackIn_9_1, 30922)) {
+            if (stackIn_8_0 < AppletFlowHelpers.a(stackIn_9_1, 30922)) {
               circle.velocityY256 = var12;
               circle.velocityX256 = var11;
             } else {

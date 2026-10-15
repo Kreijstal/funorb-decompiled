@@ -41,60 +41,60 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         }
     }
 
-    final static void a(String param0, int param1, java.applet.Applet param2) {
+    final static void setSessionCookie(String sessionValue, int obfuscationGuard, java.applet.Applet applet) {
         try {
-          String var3 = null;
-          String var4 = null;
-          String var5 = null;
-          RuntimeException stackIn_13_0 = null;
-          StringBuilder stackIn_13_1 = null;
-          String stackIn_14_2 = null;
-          StringBuilder stackIn_16_1 = null;
-          String stackIn_17_2 = null;
-          Throwable decompiledCaughtException = null;
-          Throwable var3_ref = null;
-          RuntimeException var3_ref2 = null;
+          String cookiePrefix = null;
+          String cookieHost = null;
+          String cookieAttributes = null;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String sessionSummary = null;
+          StringBuilder appletContextBuilder = null;
+          String appletSummary = null;
+          Throwable caughtFailure = null;
+          Throwable ignoredBrowserFailure = null;
+          RuntimeException sessionFailure = null;
           try {
-            OpacityWidget.field_G = param0;
+            OpacityWidget.clientSession = sessionValue;
             try {
-              var3 = param2.getParameter("cookieprefix");
-              var4 = param2.getParameter("cookiehost");
-              if (param1 <= 44) {
+              cookiePrefix = applet.getParameter("cookieprefix");
+              cookieHost = applet.getParameter("cookiehost");
+              if (obfuscationGuard <= 44) {
                 return;
               }
-              var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
-              if (param0.length() == 0) {
-                var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+              cookieAttributes = cookiePrefix + "session=" + sessionValue + "; version=1; path=/; domain=" + cookieHost;
+              if (sessionValue.length() == 0) {
+                cookieAttributes = cookieAttributes + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              AppletJavaScriptBridge.evaluateScript(param2, "document.cookie=\"" + var5 + "\"", 5797);
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref = decompiledCaughtException;
+              AppletJavaScriptBridge.evaluateScript(applet, "document.cookie=\"" + cookieAttributes + "\"", 5797);
+            } catch (java.lang.Throwable caughtBrowserFailure) {
+              caughtFailure = caughtBrowserFailure;
+              ignoredBrowserFailure = caughtFailure;
             }
-            VolcanicBackground.a(false, param2);
+            VolcanicBackground.refreshAppletLinks(false, applet);
             return;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var3_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_13_0 = var3_ref2;
-            stackIn_13_1 = new StringBuilder().append("da.A(");
-            if (param0 == null) {
-              stackIn_14_2 = "null";
+          } catch (java.lang.RuntimeException caughtSessionFailure) {
+            caughtFailure = caughtSessionFailure;
+            sessionFailure = (RuntimeException) (Object) caughtFailure;
+            failureContext = sessionFailure;
+            contextBuilder = new StringBuilder().append("da.A(");
+            if (sessionValue == null) {
+              sessionSummary = "null";
             } else {
-              stackIn_14_2 = "{...}";
+              sessionSummary = "{...}";
             }
-            stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',');
-            if (param2 == null) {
-              stackIn_17_2 = "null";
+            appletContextBuilder = ((StringBuilder) (Object) contextBuilder).append(sessionSummary).append(',').append(obfuscationGuard).append(',');
+            if (applet == null) {
+              appletSummary = "null";
             } else {
-              stackIn_17_2 = "{...}";
+              appletSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) appletContextBuilder).append(appletSummary).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

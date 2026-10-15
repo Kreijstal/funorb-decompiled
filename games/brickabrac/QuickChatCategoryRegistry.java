@@ -142,7 +142,7 @@ final class QuickChatCategoryRegistry {
         int var11Lifetime3;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          RankingsScreen.field_t = uo.loadIndexedSpriteByName((byte) 29, param0, "splash", "basic");
+          RankingsScreen.field_t = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "splash", "basic");
           er.field_b = SpriteInputHelpers.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
           var21 = param2.takeFileByName(-86, "basic", "gamefont");
           var15 = var21;
@@ -302,13 +302,13 @@ final class QuickChatCategoryRegistry {
             var11_ref_jp.rotateCounterclockwise();
           }
           CalendarRankingHelpers.field_e = new IndexedSprite[7];
-          CalendarRankingHelpers.field_e[0] = uo.loadIndexedSpriteByName((byte) 29, param0, "p1_key_right", "basic");
-          CalendarRankingHelpers.field_e[1] = uo.loadIndexedSpriteByName((byte) 29, param0, "p1_key_left", "basic");
-          CalendarRankingHelpers.field_e[2] = uo.loadIndexedSpriteByName((byte) 29, param0, "p1_key_launch", "basic");
-          CalendarRankingHelpers.field_e[3] = uo.loadIndexedSpriteByName((byte) 29, param0, "p2_key_right", "basic");
-          CalendarRankingHelpers.field_e[4] = uo.loadIndexedSpriteByName((byte) 29, param0, "p2_key_left", "basic");
-          CalendarRankingHelpers.field_e[5] = uo.loadIndexedSpriteByName((byte) 29, param0, "p2_key_launch", "basic");
-          CalendarRankingHelpers.field_e[6] = uo.loadIndexedSpriteByName((byte) 29, param0, "key_enter", "basic");
+          CalendarRankingHelpers.field_e[0] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p1_key_right", "basic");
+          CalendarRankingHelpers.field_e[1] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p1_key_left", "basic");
+          CalendarRankingHelpers.field_e[2] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p1_key_launch", "basic");
+          CalendarRankingHelpers.field_e[3] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p2_key_right", "basic");
+          CalendarRankingHelpers.field_e[4] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p2_key_left", "basic");
+          CalendarRankingHelpers.field_e[5] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p2_key_launch", "basic");
+          CalendarRankingHelpers.field_e[6] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "key_enter", "basic");
           nd.field_f = new int[58];
           for (var10_intLifetime10 = 0; nd.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
             nd.field_f[var10_intLifetime10] = 14;

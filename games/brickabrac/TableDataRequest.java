@@ -14,7 +14,7 @@ final class TableDataRequest extends IntrusiveNode {
     int columnCount;
 
     final static void a(boolean param0, int param1) {
-        uo.a(param0, false);
+        AppletResourceHelpers.a(param0, false);
         RankingsRequest.a(param0, (byte) -125);
         if (param1 < 10) {
           byte[] var3 = (byte[]) null;

@@ -449,7 +449,7 @@ final class GameplayScreen extends GameScreen {
           }
           if (var20.field_tb) {
             var9_int = (33423360 - 2 * (var20.paddle.x256 + var20.paddle.width256 / 2 << 8)) / 510;
-            nk.field_c.bindRasterTarget();
+            AppletFlowHelpers.field_c.bindRasterTarget();
             TabbedPane.currentBackground.drawFullBackground(true, var9_int, 0, 0, 0);
             BallPulseEffect.framebuffer.bindRaster((byte) 78);
             ArchiveFetchClient.field_k = TabbedPane.currentBackground.c((byte) -116);
@@ -1633,7 +1633,7 @@ final class GameplayScreen extends GameScreen {
                 break;
               }
               backgroundFadeAlpha = MenuScreen.field_i * 256 / 32;
-              nk.field_c.b(0, 0, backgroundFadeAlpha);
+              AppletFlowHelpers.field_c.b(0, 0, backgroundFadeAlpha);
               break;
             }
             layoutXAlias = layoutX;
@@ -1747,11 +1747,11 @@ final class GameplayScreen extends GameScreen {
           ArchiveNetworkClient.drawSinglePlayerCharacterHud(640, this.match, singleBoard);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
-            ui.a(LoadingProgressDialog.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
+            AppletSettingsUiHelpers.a(LoadingProgressDialog.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
             if (null != singleBoard.displayedMessage) {
               unusedInlineSprites = (IndexedSprite[]) null;
-              ui.a(singleBoard.displayedMessage, ContextActionController.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
+              AppletSettingsUiHelpers.a(singleBoard.displayedMessage, ContextActionController.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
             }
           }
         }

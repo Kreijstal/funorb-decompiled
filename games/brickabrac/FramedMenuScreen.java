@@ -43,147 +43,147 @@ class FramedMenuScreen extends MenuScreen {
         return f.ignoreListPane.content;
     }
 
-    final static java.net.URL a(String param0, byte param1, String param2, int param3, java.net.URL param4) {
+    final static java.net.URL rewriteAppletPath(String settingsOverride, byte obfuscationGuard, String sessionOverride, int languageOverride, java.net.URL url) {
         try {
-          StringBuilder discarded$0 = null;
-          StringBuilder discarded$1 = null;
-          StringBuilder discarded$2 = null;
-          StringBuilder discarded$3 = null;
-          StringBuilder discarded$4 = null;
-          StringBuilder discarded$5 = null;
-          StringBuilder discarded$6 = null;
-          StringBuilder discarded$7 = null;
-          StringBuilder discarded$8 = null;
-          java.net.URL stackIn_41_0 = null;
-          java.net.URL stackIn_43_0 = null;
-          RuntimeException stackIn_46_0 = null;
-          StringBuilder stackIn_46_1 = null;
-          String stackIn_47_2 = null;
-          StringBuilder stackIn_49_1 = null;
-          String stackIn_50_2 = null;
-          StringBuilder stackIn_52_1 = null;
-          String stackIn_53_2 = null;
-          Throwable decompiledCaughtException = null;
-          String var5 = null;
-          RuntimeException var5_ref = null;
-          int var6 = 0;
-          int var7_int = 0;
-          StringBuilder var7 = null;
-          Exception var8 = null;
-          int var9 = 0;
-          int var7_intLifetime1;
-          int var7_intLifetime2;
-          int var7_intLifetime3;
-          var9 = BrickABrac.field_J ? 1 : 0;
+          StringBuilder unusedRetainedPrefixAppend = null;
+          StringBuilder unusedLanguageKeyAppend = null;
+          StringBuilder unusedLanguageValueAppend = null;
+          StringBuilder unusedSettingsKeyAppend = null;
+          StringBuilder unusedSettingsValueAppend = null;
+          StringBuilder unusedSessionKeyAppend = null;
+          StringBuilder unusedSessionValueAppend = null;
+          StringBuilder unusedTrailingSlashAppend = null;
+          StringBuilder unusedSuffixAppend = null;
+          java.net.URL rewrittenUrl = null;
+          java.net.URL originalUrlFallback = null;
+          RuntimeException failureContext = null;
+          StringBuilder contextBuilder = null;
+          String settingsSummary = null;
+          StringBuilder sessionContextBuilder = null;
+          String sessionSummary = null;
+          StringBuilder urlContextBuilder = null;
+          String urlSummary = null;
+          Throwable caughtFailure = null;
+          String filePath = null;
+          RuntimeException rewriteFailure = null;
+          int prefixEnd = 0;
+          int languageSegmentEnd = 0;
+          StringBuilder rewrittenPath = null;
+          Exception invalidUrlFailure = null;
+          int unusedGameFlag = 0;
+          int affiliateSegmentEnd;
+          int settingsSegmentEnd;
+          int sessionSegmentEnd;
+          unusedGameFlag = BrickABrac.field_J ? 1 : 0;
           try {
-            var5 = param4.getFile();
-            var6 = 0;
-            if (param1 != 60) {
+            filePath = url.getFile();
+            prefixEnd = 0;
+            if (obfuscationGuard != 60) {
               FramedMenuScreen.f((byte) 78);
             }
             while (true) {
-              if (var5.regionMatches(var6, "/l=", 0, 3)) {
-                var7_int = var5.indexOf('/', 1 + var6);
-                if (var7_int >= 0) {
-                  if (0 <= param3) {
-                    var5 = var5.substring(0, var6) + var5.substring(var7_int);
+              if (filePath.regionMatches(prefixEnd, "/l=", 0, 3)) {
+                languageSegmentEnd = filePath.indexOf('/', 1 + prefixEnd);
+                if (languageSegmentEnd >= 0) {
+                  if (0 <= languageOverride) {
+                    filePath = filePath.substring(0, prefixEnd) + filePath.substring(languageSegmentEnd);
                     continue;
                   }
-                  var6 = var7_int;
+                  prefixEnd = languageSegmentEnd;
                   continue;
                 }
               }
-              if (var5.regionMatches(var6, "/a=", 0, 3)) {
-                var7_intLifetime1 = var5.indexOf('/', var6 + 1);
-                if (var7_intLifetime1 >= 0) {
-                  var6 = var7_intLifetime1;
+              if (filePath.regionMatches(prefixEnd, "/a=", 0, 3)) {
+                affiliateSegmentEnd = filePath.indexOf('/', prefixEnd + 1);
+                if (affiliateSegmentEnd >= 0) {
+                  prefixEnd = affiliateSegmentEnd;
                   continue;
                 }
               }
-              if (var5.regionMatches(var6, "/p=", 0, 3)) {
-                var7_intLifetime2 = var5.indexOf('/', var6 + 1);
-                if (0 <= var7_intLifetime2) {
-                  if (param0 != null) {
-                    var5 = var5.substring(0, var6) + var5.substring(var7_intLifetime2);
+              if (filePath.regionMatches(prefixEnd, "/p=", 0, 3)) {
+                settingsSegmentEnd = filePath.indexOf('/', prefixEnd + 1);
+                if (0 <= settingsSegmentEnd) {
+                  if (settingsOverride != null) {
+                    filePath = filePath.substring(0, prefixEnd) + filePath.substring(settingsSegmentEnd);
                     continue;
                   }
-                  var6 = var7_intLifetime2;
+                  prefixEnd = settingsSegmentEnd;
                   continue;
                 }
               }
-              if (var5.regionMatches(var6, "/s=", 0, 3) ||
-                var5.regionMatches(var6, "/c=", 0, 3)) {
-                var7_intLifetime3 = var5.indexOf('/', 1 + var6);
-                if (var7_intLifetime3 >= 0) {
-                  if (param2 == null) {
-                    var6 = var7_intLifetime3;
+              if (filePath.regionMatches(prefixEnd, "/s=", 0, 3) ||
+                filePath.regionMatches(prefixEnd, "/c=", 0, 3)) {
+                sessionSegmentEnd = filePath.indexOf('/', 1 + prefixEnd);
+                if (sessionSegmentEnd >= 0) {
+                  if (sessionOverride == null) {
+                    prefixEnd = sessionSegmentEnd;
                     continue;
                   }
-                  var5 = var5.substring(0, var6) + var5.substring(var7_intLifetime3);
+                  filePath = filePath.substring(0, prefixEnd) + filePath.substring(sessionSegmentEnd);
                   continue;
                 }
               }
               break;
             }
-            var7 = new StringBuilder(var6);
-            discarded$0 = var7.append(var5.substring(0, var6));
-            if (0 < param3) {
-              discarded$1 = var7.append("/l=");
-              discarded$2 = var7.append(Integer.toString(param3));
+            rewrittenPath = new StringBuilder(prefixEnd);
+            unusedRetainedPrefixAppend = rewrittenPath.append(filePath.substring(0, prefixEnd));
+            if (0 < languageOverride) {
+              unusedLanguageKeyAppend = rewrittenPath.append("/l=");
+              unusedLanguageValueAppend = rewrittenPath.append(Integer.toString(languageOverride));
             }
-            if (param0 != null &&
-              param0.length() > 0) {
-              discarded$3 = var7.append("/p=");
-              discarded$4 = var7.append(param0);
+            if (settingsOverride != null &&
+              settingsOverride.length() > 0) {
+              unusedSettingsKeyAppend = rewrittenPath.append("/p=");
+              unusedSettingsValueAppend = rewrittenPath.append(settingsOverride);
             }
-            if (param2 != null &&
-              param2.length() > 0) {
-              discarded$5 = var7.append("/s=");
-              discarded$6 = var7.append(param2);
+            if (sessionOverride != null &&
+              sessionOverride.length() > 0) {
+              unusedSessionKeyAppend = rewrittenPath.append("/s=");
+              unusedSessionValueAppend = rewrittenPath.append(sessionOverride);
             }
-            if (var6 >= var5.length()) {
-              discarded$7 = var7.append('/');
+            if (prefixEnd >= filePath.length()) {
+              unusedTrailingSlashAppend = rewrittenPath.append('/');
             } else {
-              discarded$8 = var7.append(var5.substring(var6, var5.length()));
+              unusedSuffixAppend = rewrittenPath.append(filePath.substring(prefixEnd, filePath.length()));
             }
             try {
-              stackIn_41_0 = new java.net.URL(param4, var7.toString());
-              return stackIn_41_0;
-            } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var8 = (Exception) (Object) decompiledCaughtException;
-              var8.printStackTrace();
-              stackIn_43_0 = (java.net.URL) (param4);
-              return stackIn_43_0;
+              rewrittenUrl = new java.net.URL(url, rewrittenPath.toString());
+              return rewrittenUrl;
+            } catch (java.lang.Exception caughtUrlFailure) {
+              caughtFailure = caughtUrlFailure;
+              invalidUrlFailure = (Exception) (Object) caughtFailure;
+              invalidUrlFailure.printStackTrace();
+              originalUrlFallback = (java.net.URL) (url);
+              return originalUrlFallback;
             }
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_46_0 = var5_ref;
-            stackIn_46_1 = new StringBuilder().append("lh.KA(");
-            if (param0 == null) {
-              stackIn_47_2 = "null";
+          } catch (java.lang.RuntimeException caughtRewriteFailure) {
+            caughtFailure = caughtRewriteFailure;
+            rewriteFailure = (RuntimeException) (Object) caughtFailure;
+            failureContext = rewriteFailure;
+            contextBuilder = new StringBuilder().append("lh.KA(");
+            if (settingsOverride == null) {
+              settingsSummary = "null";
             } else {
-              stackIn_47_2 = "{...}";
+              settingsSummary = "{...}";
             }
-            stackIn_49_1 = ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(',');
-            if (param2 == null) {
-              stackIn_50_2 = "null";
+            sessionContextBuilder = ((StringBuilder) (Object) contextBuilder).append(settingsSummary).append(',').append(obfuscationGuard).append(',');
+            if (sessionOverride == null) {
+              sessionSummary = "null";
             } else {
-              stackIn_50_2 = "{...}";
+              sessionSummary = "{...}";
             }
-            stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param3).append(',');
-            if (param4 == null) {
-              stackIn_53_2 = "null";
+            urlContextBuilder = ((StringBuilder) (Object) sessionContextBuilder).append(sessionSummary).append(',').append(languageOverride).append(',');
+            if (url == null) {
+              urlSummary = "null";
             } else {
-              stackIn_53_2 = "{...}";
+              urlSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) urlContextBuilder).append(urlSummary).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

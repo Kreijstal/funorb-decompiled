@@ -26,10 +26,10 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
 
     final boolean isAchievementExcluded(int achievementId, byte obfuscationGuard) {
         if (obfuscationGuard == 38) {
-          return uo.isBitClear(achievementId, (byte) 47, this.achievementMask);
+          return AppletResourceHelpers.isBitClear(achievementId, (byte) 47, this.achievementMask);
         }
         NewAchievementsScreen.a(-57, true, false, -49);
-        return uo.isBitClear(achievementId, (byte) 47, this.achievementMask);
+        return AppletResourceHelpers.isBitClear(achievementId, (byte) 47, this.achievementMask);
     }
 
     final static void a(int param0, boolean param1, boolean param2, int param3) {
