@@ -1,0 +1,431 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class c {
+    static int field_g;
+    static String field_c;
+    private boolean field_f;
+    static tp[] field_i;
+    static ta field_l;
+    private int field_h;
+    private int[] field_k;
+    static vm field_j;
+    static th field_m;
+    private int field_b;
+    static int field_a;
+    static String field_d;
+    static jp field_e;
+    static String field_n;
+
+    public static void a(boolean param0) {
+        field_j = null;
+        field_d = null;
+        field_m = null;
+        field_n = null;
+        field_i = null;
+        field_l = null;
+        field_e = null;
+        field_c = null;
+        if (!param0) {
+          wq var2 = (wq) null;
+          c.a(6, -63, 125, -38, (wq) null);
+          return;
+        }
+    }
+
+    final static void a(int param0, String param1, byte param2, int param3, int param4, String param5) {
+        pi var9 = null;
+        int var8 = 0;
+        try {
+          var9 = k.field_h;
+          pi var6 = var9;
+          int var7 = -44 / ((-59 - param2) / 38);
+          var9.e(-13413, param4);
+          var9.field_l = var9.field_l + 1;
+          var8 = var9.field_l;
+          var9.a(86, param3);
+          if (param3 == 2) {
+            var9.a(param1, -1);
+          }
+          if (param5 != null) {
+            md.a(26152, param5, var9);
+          } else {
+            var9.b((byte) 123, param0);
+          }
+          var9.d((byte) 116, var9.field_l - var8);
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "c.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final void a(byte param0, int param1) {
+        if (param1 < 0) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (this.field_h < param1) {
+          throw new ArrayIndexOutOfBoundsException(param1);
+        }
+        if (param1 != this.field_h) {
+          pm.a(this.field_k, 1 + param1, this.field_k, param1, -param1 + this.field_h);
+          this.field_h = this.field_h - 1;
+          if (param0 != 46) {
+            field_c = (String) null;
+            return;
+          }
+          return;
+        }
+        this.field_h = this.field_h - 1;
+        if (param0 != 46) {
+          field_c = (String) null;
+          return;
+        }
+    }
+
+    final static void a(int param0, int param1, int param2, boolean param3, boolean param4, byte param5, boolean param6, boolean param7, boolean param8, int param9) {
+        int var11;
+        var11 = BrickABrac.field_J ? 1 : 0;
+        if (param3) {
+          if (param3) {
+            qh.field_f = id.field_Pb;
+            pq.a(-128, param3);
+            if (ml.field_b > 0) {
+              na.a(param8, param3, -94, param2);
+            }
+            ke.field_e.field_S = 1;
+            ke.field_e.field_V = vo.field_C.field_V;
+            if (0 < pe.field_j) {
+              n.a(param2, param8, param3, (byte) -76);
+            }
+            if (eg.field_m > 0) {
+              nh.a(true, param3, param8, param2, param7);
+            }
+            if (hc.field_c &&
+              o.field_e.field_jc <= o.field_e.field_cc) {
+              fo.field_b.field_Qb.field_Mb = wg.field_d;
+              vn.field_A.field_eb = false;
+              jh.a(true, fo.field_b.field_Rb);
+            } else {
+              fo.field_b.field_Qb.field_Mb = null;
+              vn.field_A.field_eb = true;
+              ka.a(param4, fo.field_b, param2, param0, -108);
+            }
+          } else {
+            qh.field_f = (kp.field_a - 640) / 2;
+            pq.a(-128, param3);
+            if (ml.field_b > 0) {
+              na.a(param8, param3, -94, param2);
+              ke.field_e.field_S = 1;
+              ke.field_e.field_V = vo.field_C.field_V;
+              if (0 < pe.field_j) {
+                n.a(param2, param8, param3, (byte) -76);
+              }
+              if (eg.field_m > 0) {
+                nh.a(true, param3, param8, param2, param7);
+              }
+              if (hc.field_c &&
+                o.field_e.field_jc <= o.field_e.field_cc) {
+                fo.field_b.field_Qb.field_Mb = wg.field_d;
+                vn.field_A.field_eb = false;
+                jh.a(true, fo.field_b.field_Rb);
+              } else {
+                fo.field_b.field_Qb.field_Mb = null;
+                vn.field_A.field_eb = true;
+                ka.a(param4, fo.field_b, param2, param0, -108);
+              }
+            } else {
+              ke.field_e.field_S = 1;
+              ke.field_e.field_V = vo.field_C.field_V;
+              if (0 < pe.field_j) {
+                n.a(param2, param8, param3, (byte) -76);
+              }
+              if (eg.field_m > 0) {
+                nh.a(true, param3, param8, param2, param7);
+              }
+              if (!hc.field_c) {
+                fo.field_b.field_Qb.field_Mb = null;
+                vn.field_A.field_eb = true;
+                ka.a(param4, fo.field_b, param2, param0, -108);
+              } else {
+                if (o.field_e.field_jc > o.field_e.field_cc) {
+                  fo.field_b.field_Qb.field_Mb = null;
+                  vn.field_A.field_eb = true;
+                  ka.a(param4, fo.field_b, param2, param0, -108);
+                } else {
+                  fo.field_b.field_Qb.field_Mb = wg.field_d;
+                  vn.field_A.field_eb = false;
+                  jh.a(true, fo.field_b.field_Rb);
+                }
+              }
+            }
+          }
+        } else {
+          if (lb.field_c == kp.field_a) {
+            if (lb.field_d != fo.field_i &&
+              lb.field_d == kc.field_q.field_f &&
+              lb.field_c == kc.field_q.field_g) {
+              if (o.field_e != null) {
+                kj.a(true, false);
+              } else {
+                if (null != nl.field_f) {
+                  kj.a(true, true);
+                } else {
+                  cg.b(31);
+                }
+              }
+            }
+            if (param3) {
+              qh.field_f = id.field_Pb;
+              pq.a(-128, param3);
+              if (ml.field_b > 0) {
+                na.a(param8, param3, -94, param2);
+              }
+              ke.field_e.field_S = 1;
+              ke.field_e.field_V = vo.field_C.field_V;
+              if (0 < pe.field_j) {
+                n.a(param2, param8, param3, (byte) -76);
+              }
+              if (eg.field_m > 0) {
+                nh.a(true, param3, param8, param2, param7);
+              }
+              if (hc.field_c &&
+                o.field_e.field_jc <= o.field_e.field_cc) {
+                fo.field_b.field_Qb.field_Mb = wg.field_d;
+                vn.field_A.field_eb = false;
+                jh.a(true, fo.field_b.field_Rb);
+              } else {
+                fo.field_b.field_Qb.field_Mb = null;
+                vn.field_A.field_eb = true;
+                ka.a(param4, fo.field_b, param2, param0, -108);
+              }
+            } else {
+              qh.field_f = (kp.field_a - 640) / 2;
+              pq.a(-128, param3);
+              if (ml.field_b > 0) {
+                na.a(param8, param3, -94, param2);
+              }
+              ke.field_e.field_S = 1;
+              ke.field_e.field_V = vo.field_C.field_V;
+              if (0 < pe.field_j) {
+                n.a(param2, param8, param3, (byte) -76);
+              }
+              if (eg.field_m > 0) {
+                nh.a(true, param3, param8, param2, param7);
+              }
+              if (!hc.field_c) {
+                fo.field_b.field_Qb.field_Mb = null;
+                vn.field_A.field_eb = true;
+                ka.a(param4, fo.field_b, param2, param0, -108);
+              } else {
+                if (o.field_e.field_jc > o.field_e.field_cc) {
+                  fo.field_b.field_Qb.field_Mb = null;
+                  vn.field_A.field_eb = true;
+                  ka.a(param4, fo.field_b, param2, param0, -108);
+                } else {
+                  fo.field_b.field_Qb.field_Mb = wg.field_d;
+                  vn.field_A.field_eb = false;
+                  jh.a(true, fo.field_b.field_Rb);
+                }
+              }
+            }
+          } else {
+            if (lb.field_d == kc.field_q.field_f &&
+              lb.field_c == kc.field_q.field_g) {
+              if (o.field_e != null) {
+                kj.a(true, false);
+              } else {
+                if (null != nl.field_f) {
+                  kj.a(true, true);
+                } else {
+                  cg.b(31);
+                }
+              }
+            }
+            if (param3) {
+              qh.field_f = id.field_Pb;
+              pq.a(-128, param3);
+              if (ml.field_b > 0) {
+                na.a(param8, param3, -94, param2);
+              }
+              ke.field_e.field_S = 1;
+              ke.field_e.field_V = vo.field_C.field_V;
+              if (0 < pe.field_j) {
+                n.a(param2, param8, param3, (byte) -76);
+              }
+              if (eg.field_m > 0) {
+                nh.a(true, param3, param8, param2, param7);
+              }
+              if (hc.field_c &&
+                o.field_e.field_jc <= o.field_e.field_cc) {
+                fo.field_b.field_Qb.field_Mb = wg.field_d;
+                vn.field_A.field_eb = false;
+                jh.a(true, fo.field_b.field_Rb);
+              } else {
+                fo.field_b.field_Qb.field_Mb = null;
+                vn.field_A.field_eb = true;
+                ka.a(param4, fo.field_b, param2, param0, -108);
+              }
+            } else {
+              qh.field_f = (kp.field_a - 640) / 2;
+              pq.a(-128, param3);
+              if (ml.field_b > 0) {
+                na.a(param8, param3, -94, param2);
+                ke.field_e.field_S = 1;
+                ke.field_e.field_V = vo.field_C.field_V;
+                if (0 < pe.field_j) {
+                  n.a(param2, param8, param3, (byte) -76);
+                }
+                if (eg.field_m > 0) {
+                  nh.a(true, param3, param8, param2, param7);
+                }
+                if (hc.field_c &&
+                  o.field_e.field_jc <= o.field_e.field_cc) {
+                  fo.field_b.field_Qb.field_Mb = wg.field_d;
+                  vn.field_A.field_eb = false;
+                  jh.a(true, fo.field_b.field_Rb);
+                } else {
+                  fo.field_b.field_Qb.field_Mb = null;
+                  vn.field_A.field_eb = true;
+                  ka.a(param4, fo.field_b, param2, param0, -108);
+                }
+              } else {
+                ke.field_e.field_S = 1;
+                ke.field_e.field_V = vo.field_C.field_V;
+                if (0 < pe.field_j) {
+                  n.a(param2, param8, param3, (byte) -76);
+                }
+                if (eg.field_m > 0) {
+                  nh.a(true, param3, param8, param2, param7);
+                }
+                if (!hc.field_c) {
+                  fo.field_b.field_Qb.field_Mb = null;
+                  vn.field_A.field_eb = true;
+                  ka.a(param4, fo.field_b, param2, param0, -108);
+                } else {
+                  if (o.field_e.field_jc > o.field_e.field_cc) {
+                    fo.field_b.field_Qb.field_Mb = null;
+                    vn.field_A.field_eb = true;
+                    ka.a(param4, fo.field_b, param2, param0, -108);
+                  } else {
+                    fo.field_b.field_Qb.field_Mb = wg.field_d;
+                    vn.field_A.field_eb = false;
+                    jh.a(true, fo.field_b.field_Rb);
+                  }
+                }
+              }
+            }
+          }
+        }
+        um.a(param6, param9, param4, param0, param2, param1, (byte) -114);
+        ka.a(param4, vp.field_u, param2, param0, 121);
+        if (param5 <= 6) {
+          field_g = -90;
+        }
+        an.field_h = an.field_h + 1;
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, wq param4) {
+        try {
+          param4.a(33, param1);
+          param4.b((byte) 115, 17);
+          param4.b((byte) 120, param0);
+          param4.b((byte) 107, param2);
+          param4.a(5, param3);
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "c.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final int b(int param0, int param1) {
+        int var3;
+        int var4;
+        var4 = BrickABrac.field_J ? 1 : 0;
+        var3 = this.field_k.length;
+        if (param0 != 1) {
+          return -35;
+        }
+        while (param1 >= var3) {
+          if (!this.field_f) {
+            var3 = var3 + this.field_b;
+            continue;
+          }
+          if (var3 != 0) {
+            var3 = var3 * this.field_b;
+            continue;
+          }
+          var3 = 1;
+        }
+        return var3;
+    }
+
+    private final void a(int param0, int param1) {
+        int[] var4 = new int[this.b(1, param0)];
+        int[] var3 = var4;
+        pm.a(this.field_k, 0, var4, 0, this.field_k.length);
+        this.field_k = var4;
+        if (param1 != -7877) {
+          this.field_k = (int[]) null;
+          return;
+        }
+    }
+
+    private c() throws Throwable {
+        throw new Error();
+    }
+
+    private final void a(int param0, int param1, int param2) {
+        if (this.field_h < param2) {
+          this.field_h = param2;
+        }
+        if (param1 != 0) {
+          field_g = 55;
+          if (param2 >= this.field_k.length) {
+            this.a(param2, -7877);
+            this.field_k[param2] = param0;
+            return;
+          }
+          this.field_k[param2] = param0;
+          return;
+        }
+        if (param2 < this.field_k.length) {
+          this.field_k[param2] = param0;
+          return;
+        }
+        this.a(param2, -7877);
+        this.field_k[param2] = param0;
+    }
+
+    final void a(boolean param0, int param1) {
+        if (!param0) {
+          this.a(param1, 0, 1 + this.field_h);
+          return;
+        }
+        this.a(-78, -117);
+        this.a(param1, 0, 1 + this.field_h);
+    }
+
+    final int b(boolean param0) {
+        if (!param0) {
+          return -51;
+        }
+        return 1 + this.field_h;
+    }
+
+    final int a(int param0, byte param1) {
+        if (this.field_h < param0) {
+          throw new ArrayIndexOutOfBoundsException(param0);
+        }
+        if (param1 == 64) {
+          return this.field_k[param0];
+        }
+        field_c = (String) null;
+        return this.field_k[param0];
+    }
+
+    static {
+        field_g = 250;
+        field_d = "Create";
+        field_c = "Accept";
+        field_n = "Real-life threats";
+        field_m = new th(7, 0, 1, 1);
+    }
+}

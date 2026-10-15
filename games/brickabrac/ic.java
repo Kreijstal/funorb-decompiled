@@ -1,0 +1,78 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ic {
+    static long field_b;
+    static mf field_a;
+    static fj field_c;
+
+    final static void a(boolean param0, om param1) {
+        om var2 = null;
+        RuntimeException var2_ref = null;
+        int var3 = 0;
+        RuntimeException stackIn_13_0 = null;
+        StringBuilder stackIn_13_1 = null;
+        String stackIn_14_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = BrickABrac.field_J ? 1 : 0;
+        try {
+          if (!param0) {
+            field_b = 8L;
+          }
+          param1.b((byte) 111);
+          var2 = (om) (rq.field_a.d(-76));
+          while (var2 != null) {
+            if (var2.a(param1, true)) {
+              var2 = (om) (rq.field_a.a((byte) 116));
+              continue;
+            }
+            break;
+          }
+          if (var2 == null) {
+            rq.field_a.a(param1, (byte) 3);
+            return;
+          }
+          il.a(param1, -90, var2);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_13_0 = var2_ref;
+          stackIn_13_1 = new StringBuilder().append("ic.A(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_14_2 = "null";
+          } else {
+            stackIn_14_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+        }
+    }
+
+    public static void a(boolean param0) {
+        field_a = null;
+        if (param0) {
+          return;
+        }
+        field_c = null;
+    }
+
+    final static void a(byte param0) {
+        Object var1 = null;
+        Throwable var2 = null;
+        om var3 = null;
+        Throwable decompiledCaughtException = null;
+        if (gp.field_c != null) {
+          var1 = gp.field_c;
+          synchronized (var1) {
+            gp.field_c = null;
+          }
+        }
+        if (param0 > -63) {
+          var3 = (om) null;
+          ic.a(true, (om) null);
+        }
+    }
+
+    static {
+    }
+}

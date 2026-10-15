@@ -1,0 +1,121 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class hg {
+    static jp field_g;
+    int field_c;
+    static String field_b;
+    int field_f;
+    static vl field_a;
+    int field_d;
+    int field_h;
+    static int field_e;
+
+    final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
+        Object var3 = null;
+        Object var4 = null;
+        java.net.URL stackIn_11_0 = null;
+        Object stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        StringBuilder stackIn_17_1 = null;
+        String stackIn_18_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        Object var4Lifetime1;
+        Object var4Lifetime2;
+        try {
+          var3 = null;
+          if (param2 != -1) {
+            field_b = (String) null;
+          }
+          if (null != wp.field_d &&
+            !wp.field_d.equals(param0.getParameter("settings"))) {
+            var3 = wp.field_d;
+            var4 = var3;
+            var4Lifetime2 = var3;
+          }
+          var4Lifetime1 = null;
+          if (null != sk.field_G &&
+            !sk.field_G.equals(param0.getParameter("session"))) {
+            var4Lifetime1 = sk.field_G;
+          }
+          stackIn_11_0 = lh.a((String) (var3), (byte) 60, (String) (var4Lifetime1), -1, param1);
+          return stackIn_11_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_14_0 = var3;
+          stackIn_14_1 = new StringBuilder().append("hg.D(");
+          if (param0 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          if (param1 == null) {
+            stackIn_18_2 = "null";
+          } else {
+            stackIn_18_2 = "{...}";
+          }
+          throw qb.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final static ac a(int param0, String param1) {
+        RuntimeException var2 = null;
+        ac stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (ma.field_I.b(96) &&
+            !param1.equals(ma.field_I.a(0))) {
+            ma.field_I = rm.a(param1, 16711935);
+          }
+          if (param0 != 0) {
+            field_g = (jp) null;
+          }
+          stackIn_7_0 = ma.field_I;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("hg.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    public static void a(byte param0) {
+        field_g = null;
+        if (param0 != 19) {
+          field_b = (String) null;
+          field_a = null;
+          field_b = null;
+          return;
+        }
+        field_a = null;
+        field_b = null;
+    }
+
+    final static void a(int param0) {
+        if (param0 != -1) {
+          return;
+        }
+        mn.field_A = 0;
+        dj.field_c = null;
+        ea.field_b = 0;
+        ae.field_b = 0;
+        sh.field_a = 0;
+    }
+
+    static {
+        field_b = "Connection timed out. Please try using a different server.";
+    }
+}

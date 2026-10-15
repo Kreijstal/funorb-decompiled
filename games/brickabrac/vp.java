@@ -1,0 +1,175 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class vp extends km {
+    static mm field_u;
+    static String field_s;
+    static char[] field_r;
+    private int field_t;
+
+    final void a(boolean param0, boolean param1, int param2) {
+        int fieldTemp$0 = 0;
+        if (param2 >= -52) {
+          vp.a(true, (byte) -10, 12, -97, -36, false);
+          if (!param1) {
+            return;
+          }
+          fieldTemp$0 = this.field_t - 1;
+          this.field_t = this.field_t - 1;
+          if (fieldTemp$0 == 0) {
+            ng.a(true, 120, 0);
+            return;
+          }
+          if (cb.field_q != 0) {
+            ng.a(true, 120, 0);
+            return;
+          }
+          if (0 == ki.field_e) {
+            return;
+          }
+          ng.a(true, 120, 0);
+          return;
+        }
+        if (!param1) {
+          return;
+        }
+        int fieldTemp$1 = this.field_t - 1;
+        this.field_t = this.field_t - 1;
+        if (fieldTemp$1 == 0) {
+          ng.a(true, 120, 0);
+          return;
+        }
+        if (cb.field_q != 0) {
+          ng.a(true, 120, 0);
+          return;
+        }
+        if (0 == ki.field_e) {
+          return;
+        }
+        ng.a(true, 120, 0);
+    }
+
+    final void d(byte param0) {
+        if (param0 != 79) {
+          field_s = (String) null;
+          lf.field_t = null;
+          return;
+        }
+        lf.field_t = null;
+    }
+
+    vp() {
+        super(21, 0, 0, 0, 0, (int[]) null);
+        this.field_t = 250;
+    }
+
+    final static l a(int param0, oe param1) {
+        RuntimeException var2 = null;
+        l stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 < 75) {
+            field_u = (mm) null;
+          }
+          stackIn_3_0 = sk.a((byte) 117, kl.b(param1, 100, 96));
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("vp.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    public static void f(int param0) {
+        field_u = null;
+        if (param0 == 0) {
+          field_s = null;
+          field_r = null;
+          return;
+        }
+        oe var2 = (oe) null;
+        vp.a(-53, (oe) null);
+        field_s = null;
+        field_r = null;
+    }
+
+    final void b(byte param0) {
+        if (param0 >= -14) {
+          return;
+        }
+        lf.field_t.b(0, 0);
+        pg.d(0);
+        vi.a((byte) -115);
+    }
+
+    final static jp[] a(boolean param0, byte param1, int param2, int param3, int param4, boolean param5) {
+        jp var13 = null;
+        jp var14 = null;
+        int[] var16 = lb.field_l;
+        int[] var15 = var16;
+        int[] var12 = var15;
+        int[] var6 = var12;
+        int var7 = lb.field_c;
+        int var8 = lb.field_d;
+        jp var9 = new jp(16, param3);
+        var9.g();
+        lb.g(0, 0, 16, param3, param2, param4);
+        Object var10 = null;
+        if (param0) {
+          var13 = var9.e();
+          var10 = var13;
+          var13.g();
+          lb.c(0, 0, 5, 0);
+          lb.c(0, 1, 3, 0);
+          lb.c(0, 2, 2, 0);
+          lb.c(0, 3, 1, 0);
+          lb.c(0, 4, 1, 0);
+        }
+        Object var11 = null;
+        if (param5) {
+          var14 = var9.e();
+          var11 = var14;
+          var14.g();
+          lb.c(11, 0, 5, 0);
+          lb.c(13, 1, 3, 0);
+          lb.c(14, 2, 2, 0);
+          lb.c(15, 3, 1, 0);
+          lb.c(15, 4, 1, 0);
+        }
+        if (param1 >= 32) {
+          lb.a(var16, var7, var8);
+          return new jp[]{null, null, null, (jp) (var10), var9, (jp) (var11), null, null, null};
+        }
+        return (jp[]) null;
+    }
+
+    final boolean a(char param0, int param1, int param2) {
+        if (param1 >= 98) {
+          if (param2 >= 0) {
+            ng.a(false, 99, 0);
+          }
+          return true;
+        }
+        this.field_t = -100;
+        if (param2 >= 0) {
+          ng.a(false, 99, 0);
+          return true;
+        }
+        return true;
+    }
+
+    static {
+        field_s = "Speed down: decreases the speed of any ball in play.";
+        field_r = new char[128];
+    }
+}

@@ -1,139 +1,139 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class BrickABrac extends InteractiveGameClient {
-    static ResourceArchive backgroundSoundEffectArchive;
+public final class BrickABrac extends sa {
+    static mf field_I;
     static String field_G;
-    static SecondaryHashTable gamePlayerIndex;
-    static int[] fullscreenDialogRowButtons;
+    static mk field_F;
+    static int[] field_K;
     static String field_H;
     public static boolean field_J;
 
-    public final void renderGameLayer(int obfuscationGuard) {
-        int transitionActive;
-        IntNode notification;
-        int notificationY;
-        int notificationTick;
-        int clientBranchFlag;
+    public final void a(int param0) {
+        int var2;
+        kq var3;
+        int var4;
+        int var5;
+        int var6;
         int stackIn_6_0 = 0;
-        clientBranchFlag = field_J ? 1 : 0;
-        if (null != InvitationDialogHelpers.pendingScreen) {
-          stackIn_6_0 = (AccountMessageDialog.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
+        var6 = field_J ? 1 : 0;
+        if (null != hd.field_d) {
+          stackIn_6_0 = (lp.field_rb.a((byte) -51)) ? 1 : 0;
         } else {
           stackIn_6_0 = 0;
         }
-        transitionActive = stackIn_6_0;
-        if (transitionActive != 0) {
-          if (16 > NodeDequeCursor.screenTransitionTick) {
-            AccountMessageDialog.currentScreen.drawScreen((byte) -75);
-            PixelBlockEffect.pixelate(NodeDequeCursor.screenTransitionTick + 1, 256, 16769381, false, false);
+        var2 = stackIn_6_0;
+        if (var2 != 0) {
+          if (16 > kh.field_a) {
+            lp.field_rb.b((byte) -75);
+            jn.a(kh.field_a + 1, 256, 16769381, false, false);
           } else {
-            InvitationDialogHelpers.pendingScreen.drawScreen((byte) -85);
-            PixelBlockEffect.pixelate(32 - (NodeDequeCursor.screenTransitionTick - 1), 256, 16769381, false, false);
+            hd.field_d.b((byte) -85);
+            jn.a(32 - (kh.field_a - 1), 256, 16769381, false, false);
           }
         } else {
-          AccountMessageDialog.currentScreen.drawScreen((byte) -63);
+          lp.field_rb.b((byte) -63);
         }
-        notification = (IntNode) (LevelResultWireHelpers.achievementNotifications.first(-123));
-        if (obfuscationGuard != 16769381) {
-          backgroundSoundEffectArchive = (ResourceArchive) null;
+        var3 = (kq) (kp.field_c.d(-123));
+        if (param0 != 16769381) {
+          field_I = (mf) null;
         }
-        if (notification != null) {
-          notificationTick = ClientViewHelpers.achievementNotificationTick;
-          if (notificationTick < 80) {
-            notificationY = -32 + notificationTick / 2;
+        if (var3 != null) {
+          var5 = ok.field_c;
+          if (var5 < 80) {
+            var4 = -32 + var5 / 2;
           } else {
-            if (230 > notificationTick) {
-              notificationY = 8;
+            if (230 > var5) {
+              var4 = 8;
             } else {
-              notificationY = 123 - notificationTick / 2;
+              var4 = 123 - var5 / 2;
             }
           }
-          IntrusiveHashTable.achievementSourceIcons[notification.value].drawQuarter(8, notificationY);
-          ContextActionController.field_g.drawLeft(AchievementBrowserScreen.field_s[notification.value], 48, notificationY + ContextActionController.field_g.ascent, 0, -1);
+          si.field_c[var3.field_p].c(8, var4);
+          nn.field_g.c(af.field_s[var3.field_p], 48, var4 + nn.field_g.field_F, 0, -1);
         }
-        if (PauseMenuHelpers.a((byte) 62)) {
-          GamePresentationHelpers.drawDiagnosticOverlay(-79);
+        if (cf.a((byte) 62)) {
+          rd.b(-79);
         }
     }
 
-    public final void updateGameLayer(boolean inputEnabled, byte obfuscationGuard) {
+    public final void a(boolean param0, byte param1) {
         int fieldTemp$0 = 0;
         int stackIn_10_0 = 0;
-        GameScreen stackIn_17_0 = null;
+        gf stackIn_17_0 = null;
         boolean stackIn_17_1 = false;
         boolean stackIn_18_2 = false;
-        int transitionActive;
+        int var3;
         int var4;
-        int clientBranchFlag;
-        LevelResultSubmission var6;
-        clientBranchFlag = field_J ? 1 : 0;
-        PacketReceiveHelpers.a(-127);
-        MembershipBenefitsScreen.clientTick = MembershipBenefitsScreen.clientTick + 1;
-        if (!QuickChatMenu.h(-26090)) {
+        int var5;
+        pn var6;
+        var5 = field_J ? 1 : 0;
+        vd.a(-127);
+        de.field_x = de.field_x + 1;
+        if (!og.h(-26090)) {
           while (true) {
-            var6 = (LevelResultSubmission) (IntNode.queuedLevelResults.removeFirst(3));
+            var6 = (pn) (kq.field_j.c(3));
             if (var6 == null) {
               break;
             }
-            PasswordValidator.submitLevelResult(var6, 5, (byte) -116);
+            g.a(var6, 5, (byte) -116);
           }
         }
-        if (InvitationDialogHelpers.pendingScreen != null) {
-          stackIn_10_0 = (AccountMessageDialog.currentScreen.supportsTransition((byte) -51)) ? 1 : 0;
+        if (hd.field_d != null) {
+          stackIn_10_0 = (lp.field_rb.a((byte) -51)) ? 1 : 0;
         } else {
           stackIn_10_0 = 0;
         }
-        transitionActive = stackIn_10_0;
-        if (IntArrayRequest.gameplayScreen != AccountMessageDialog.currentScreen ||
-          IntArrayRequest.gameplayScreen.networkedMatch ||
-          transitionActive == 0) {
-          stackIn_17_0 = AccountMessageDialog.currentScreen;
+        var3 = stackIn_10_0;
+        if (pe.field_o != lp.field_rb ||
+          pe.field_o.field_p ||
+          var3 == 0) {
+          stackIn_17_0 = lp.field_rb;
           stackIn_17_1 = true;
-          stackIn_18_2 = (inputEnabled) && (transitionActive == 0);
-          ((GameScreen) (Object) stackIn_17_0).advanceScreen(stackIn_17_1, stackIn_18_2, -104);
+          stackIn_18_2 = (param0) && (var3 == 0);
+          ((gf) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2, -104);
         }
-        if (transitionActive != 0) {
-          if ((IntArrayRequest.gameplayScreen != InvitationDialogHelpers.pendingScreen ||
-            IntArrayRequest.gameplayScreen.networkedMatch) &&
-            InvitationDialogHelpers.pendingScreen != null) {
-            InvitationDialogHelpers.pendingScreen.advanceScreen(false, false, -82);
+        if (var3 != 0) {
+          if ((pe.field_o != hd.field_d ||
+            pe.field_o.field_p) &&
+            hd.field_d != null) {
+            hd.field_d.a(false, false, -82);
           }
-          NodeDequeCursor.screenTransitionTick = NodeDequeCursor.screenTransitionTick + 1;
-          if (32 == NodeDequeCursor.screenTransitionTick) {
-            OpacityWidget.finishScreenTransition((byte) -126);
+          kh.field_a = kh.field_a + 1;
+          if (32 == kh.field_a) {
+            sk.i((byte) -126);
           }
         } else {
-          if (IntArrayRequest.gameplayScreen != null &&
-            AccountMessageDialog.currentScreen != IntArrayRequest.gameplayScreen &&
-            IntArrayRequest.gameplayScreen.networkedMatch) {
-            IntArrayRequest.gameplayScreen.advanceScreen(false, false, -81);
+          if (pe.field_o != null &&
+            lp.field_rb != pe.field_o &&
+            pe.field_o.field_p) {
+            pe.field_o.a(false, false, -81);
           }
         }
-        if (null != LevelResultWireHelpers.achievementNotifications.first(-8)) {
-          fieldTemp$0 = ClientViewHelpers.achievementNotificationTick + 1;
-          ClientViewHelpers.achievementNotificationTick = ClientViewHelpers.achievementNotificationTick + 1;
+        if (null != kp.field_c.d(-8)) {
+          fieldTemp$0 = ok.field_c + 1;
+          ok.field_c = ok.field_c + 1;
           if (fieldTemp$0 == 335) {
-            ClientViewHelpers.achievementNotificationTick = 0;
-            LevelResultWireHelpers.achievementNotifications.removeFirst(3);
+            ok.field_c = 0;
+            kp.field_c.c(3);
           }
         }
-        if (ClientViewHelpers.achievementNotificationTick == 50) {
-          SoundCache.playUiSound(8, NineSliceFrame.uiSounds[9]);
+        if (ok.field_c == 50) {
+          wp.a(8, ta.field_e[9]);
         }
-        if (PauseMenuHelpers.a((byte) 62)) {
-          IntegerParsingHelpers.updateDiagnosticOverlay(false);
+        if (cf.a((byte) 62)) {
+          sq.a(false);
         }
-        var4 = 46 / ((-61 - obfuscationGuard) / 47);
+        var4 = 46 / ((-61 - param1) / 47);
     }
 
-    final void initializeClient(boolean obfuscationGuard) {
-        this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
-        ButtonWidgetRenderer.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
-        AppletFlowHelpers.field_c = new RgbSprite(640, 480);
-        Widget.a(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.windowCanvas);
-        this.registerUiLifecycle(3160, new GameUiController());
-        ReportAbuseDialog.a(SocialListResponseHelpers.incomingPacketLengths, 1);
+    final void b(boolean param0) {
+        this.a((byte) 39, 0, 2, param0, 1, 4, 14, 65);
+        hi.field_w = new fo(new int[]{(int)ue.a(false)});
+        nk.field_c = new jp(640, 480);
+        oc.a(lp.field_ub, (byte) 60, kj.field_D);
+        this.a(3160, new ij());
+        am.a(ch.field_g, 1);
     }
 
     final boolean q(int param0) {
@@ -141,307 +141,307 @@ public final class BrickABrac extends InteractiveGameClient {
         if (param0 != 73) {
           return false;
         }
-        stackIn_8_0 = (MonotonicTime.field_c) || (RadialSelectorWidget.field_L) || (IntegerBitLengthHelpers.field_d);
+        stackIn_8_0 = (ue.field_c) || (vh.field_L) || (ed.field_d);
         return stackIn_8_0;
     }
 
-    final boolean handleGamePacket(BitPacketBuffer packet, byte obfuscationGuard, int opcode) {
+    final boolean a(pi param0, byte param1, int param2) {
         int var8_int = 0;
         int fieldTemp$0 = 0;
         int var10 = 0;
         int stackIn_44_0 = 0;
         int stackIn_56_0 = 0;
-        GameplayScreen stackIn_58_0 = null;
+        qj stackIn_58_0 = null;
         boolean stackIn_59_1 = false;
-        GameplayScreen stackIn_74_0 = null;
+        qj stackIn_74_0 = null;
         boolean stackIn_75_1 = false;
-        GameplayScreen stackIn_99_0 = null;
+        qj stackIn_99_0 = null;
         int stackIn_99_1 = 0;
-        BitPacketBuffer stackIn_99_2 = null;
+        pi stackIn_99_2 = null;
         boolean stackIn_100_3;
         RuntimeException stackIn_137_0 = null;
         StringBuilder stackIn_137_1 = null;
         String stackIn_138_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int resultWordFlag = 0;
+        int var4_int = 0;
         int[] var4 = null;
-        RuntimeException failure = null;
-        String[] playerNameStorage = null;
+        RuntimeException var4_ref = null;
+        String[] var5 = null;
         int[] var5_array = null;
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
-        IsaacGenerator matchRandom = null;
-        int[] seedWords = null;
-        int repeatMode = 0;
-        LevelSequence configuration = null;
-        int backgroundSelector = 0;
-        int localPlayerMask = 0;
+        fo var8 = null;
+        int[] var9 = null;
+        int var11 = 0;
+        oi var12 = null;
+        int var13 = 0;
+        int var15 = 0;
         int var16 = 0;
         int[] var18 = null;
         int[] var19 = null;
         int[] var21 = null;
         int[] var23 = null;
-        BitPacketBuffer var25 = null;
+        pi var25 = null;
         int[] var26 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
-        String[] playerNames = null;
-        int[] randomSeedStorage = null;
+        String[] var30 = null;
+        int[] var32 = null;
         int[] var34 = null;
         int[] var35 = null;
         int[] var36 = null;
         int[] var37 = null;
-        int[] randomSeeds = null;
+        int[] var39 = null;
         int[] var46 = null;
         int[] var47 = null;
         int[] var48 = null;
-        int[] levelOrder = null;
-        int[] characterOrder = null;
+        int[] var49 = null;
+        int[] var50 = null;
         int[] var5_arrayLifetime1;
         int[] var5_arrayLifetime2;
         int[] var5_arrayLifetime3;
-        int localPlayerId;
+        int var6Lifetime1;
         var16 = field_J ? 1 : 0;
         try {
-          if (9 == opcode) {
-            OpacityWidget.finishScreenTransition((byte) -113);
-            RadialSelectorWidget.field_L = false;
-            ScreenNavigationHelpers.requestScreen(false, obfuscationGuard + 66, 11);
-            IndexedSpriteHelpers.setMessageText(true, packet.readCp1252String(-1));
+          if (9 == param2) {
+            sk.i((byte) -113);
+            vh.field_L = false;
+            ng.a(false, param1 + 66, 11);
+            kk.a(true, param0.d(-1));
             return true;
           }
-          if (14 == opcode) {
-            OpacityWidget.finishScreenTransition((byte) -116);
-            LobbySetupHelpers.initializeLobby(LevelPack.c(obfuscationGuard ^ -71), (byte) 86, ValidationStatus.field_h, LevelPackLoader.c(0), 150, VerticalScrollbar.roundUpPowerOfTwo(2000, (byte) -54), TextChoiceDialogHitTest.a(1345), VerticalScrollbar.roundUpPowerOfTwo(8, (byte) -53), 1024, DropTargetWidget.field_I.length);
-            GameTransportHelpers.a(FramedMenuScreen.f(115), QuickChatHelpDialog.h(obfuscationGuard - 45), obfuscationGuard ^ 12);
-            RadialSelectorWidget.field_L = false;
-            MonotonicTime.field_c = true;
-            ScreenNavigationHelpers.requestScreen(false, 113, -2);
+          if (14 == param2) {
+            sk.i((byte) -116);
+            hm.a(nc.c(param1 ^ -71), (byte) 86, qh.field_h, mq.c(0), 150, fj.a(2000, (byte) -54), aj.a(1345), fj.a(8, (byte) -53), 1024, jb.field_I.length);
+            hn.a(lh.f(115), kb.h(param1 - 45), param1 ^ 12);
+            vh.field_L = false;
+            ue.field_c = true;
+            ng.a(false, 113, -2);
             return true;
           }
-          if (opcode == 15) {
-            if (MonotonicTime.field_c) {
-              WhirlpoolHasher.a(7);
-              BirthDateValidator.d((byte) -56);
-              ScreenNavigationHelpers.requestScreen(false, obfuscationGuard + 43, 0);
-              MonotonicTime.field_c = false;
-              NewAchievementsScreen.discardGameplayOnTransition = true;
-              HalloweenBackground.field_y = true;
+          if (param2 == 15) {
+            if (ue.field_c) {
+              eq.a(7);
+              an.d((byte) -56);
+              ng.a(false, param1 + 43, 0);
+              ue.field_c = false;
+              cc.field_G = true;
+              dp.field_y = true;
             }
-            IntegerBitLengthHelpers.field_d = false;
-            RadialSelectorRenderer.field_p = false;
-            RadialSelectorWidget.field_L = false;
+            ed.field_d = false;
+            pf.field_p = false;
+            vh.field_L = false;
             return true;
           }
-          if (opcode == 10 &&
-            MonotonicTime.field_c) {
-            ChatLobbyUiHelpers.handleLobbyResponse((byte) 33);
+          if (param2 == 10 &&
+            ue.field_c) {
+            sj.a((byte) 33);
             return true;
           }
-          if (opcode == 72) {
-            var35 = Ball.createAchievementMask(8);
+          if (param2 == 72) {
+            var35 = vn.d(8);
             var27 = var35;
             var4 = var27;
             var18 = var4;
             var5_array = var18;
-            var25 = packet;
-            var7 = ((PacketBuffer) ((Object) var25)).readUnsignedByte(255);
+            var25 = param0;
+            var7 = ((wq) ((Object) var25)).l(255);
             for (var8_int = 0; var7 > var8_int; var8_int++) {
-              var18[var8_int] = ((PacketBuffer) ((Object) var25)).readInt(255);
+              var18[var8_int] = ((wq) ((Object) var25)).e(255);
             }
             var34 = var4;
             var26 = var34;
             var19 = var26;
             var5_arrayLifetime1 = var19;
-            var46 = SecondaryHashTable.earnedAchievementMask;
+            var46 = mk.field_b;
             for (var7 = 0; var7 < 8; var7++) {
-              var19[var7] = IntrusiveHashIterator.a(var34[var7], ~var46[var7]);
+              var19[var7] = ik.a(var34[var7], ~var46[var7]);
             }
-            if (ResourceRequest.field_y) {
-              var5_int = InputOptionsHelpers.a(true, var35);
+            if (hb.field_y) {
+              var5_int = ea.a(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
-                if (DirectByteStorage.isBitSet(var35, var6, (byte) -75)) {
-                  LevelResultWireHelpers.achievementNotifications.addLast(new IntNode(var6), (byte) 3);
+                if (eo.a(var35, var6, (byte) -75)) {
+                  kp.field_c.a(new kq(var6), (byte) 3);
                 }
               }
             }
-            var36 = SecondaryHashTable.earnedAchievementMask;
+            var36 = mk.field_b;
             var28 = var36;
             var21 = var28;
             var5_arrayLifetime2 = var21;
             var47 = var4;
             for (var7 = 0; var7 < 8; var7++) {
-              var21[var7] = LevelSelectScreen.d(var36[var7], var47[var7]);
+              var21[var7] = ud.d(var36[var7], var47[var7]);
             }
-            var37 = SpriteInputHelpers.pendingAchievementMask;
+            var37 = pl.field_b;
             var29 = var37;
             var23 = var29;
             var5_arrayLifetime3 = var23;
             var48 = var4;
             for (var7 = 0; var7 < 8; var7++) {
-              var23[var7] = LevelSelectScreen.d(var37[var7], var48[var7]);
+              var23[var7] = ud.d(var37[var7], var48[var7]);
             }
             return true;
           }
-          if (IntrusiveHashTable.currentPacketOpcode != 64 &&
-            65 != IntrusiveHashTable.currentPacketOpcode) {
-            if (79 == IntrusiveHashTable.currentPacketOpcode) {
-              if (IntArrayRequest.gameplayScreen == null) {
+          if (si.field_a != 64 &&
+            65 != si.field_a) {
+            if (79 == si.field_a) {
+              if (pe.field_o == null) {
                 return true;
               }
-              if (IntArrayRequest.gameplayScreen.snapshotsReady) {
-                AlignedIconLabel.a("T3", (Throwable) null, 44);
+              if (pe.field_o.field_q) {
+                rk.a("T3", (Throwable) null, 44);
               } else {
-                fieldTemp$0 = IntArrayRequest.gameplayScreen.loadedBoardSnapshots;
-                IntArrayRequest.gameplayScreen.loadedBoardSnapshots = IntArrayRequest.gameplayScreen.loadedBoardSnapshots + 1;
-                IntArrayRequest.gameplayScreen.match.playerBoards[fieldTemp$0].readBoardSnapshot(false, packet, IntArrayRequest.gameplayScreen.match.playerCount);
-                stackIn_74_0 = IntArrayRequest.gameplayScreen;
-                stackIn_75_1 = (IntArrayRequest.gameplayScreen.loadedBoardSnapshots == IntArrayRequest.gameplayScreen.match.playerCount);
-                stackIn_74_0.snapshotsReady = stackIn_75_1;
-                if (IntArrayRequest.gameplayScreen.snapshotsReady) {
-                  if (IntArrayRequest.gameplayScreen.isSpectator(103)) {
+                fieldTemp$0 = pe.field_o.field_x;
+                pe.field_o.field_x = pe.field_o.field_x + 1;
+                pe.field_o.field_w.field_l[fieldTemp$0].a(false, param0, pe.field_o.field_w.field_k);
+                stackIn_74_0 = pe.field_o;
+                stackIn_75_1 = (pe.field_o.field_x == pe.field_o.field_w.field_k);
+                stackIn_74_0.field_q = stackIn_75_1;
+                if (pe.field_o.field_q) {
+                  if (pe.field_o.c(103)) {
                     return true;
                   }
-                  IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.localPlayerId].receivedInputTick = IntArrayRequest.gameplayScreen.match.playerBoards[IntArrayRequest.gameplayScreen.localPlayerId].simulationTick - 50;
+                  pe.field_o.field_w.field_l[pe.field_o.field_k].field_E = pe.field_o.field_w.field_l[pe.field_o.field_k].field_F - 50;
                 }
               }
               return true;
             }
-            if (66 == IntrusiveHashTable.currentPacketOpcode) {
-              if (IntArrayRequest.gameplayScreen != null) {
-                OpacityWidget.finishScreenTransition((byte) -123);
-                if (!IntArrayRequest.gameplayScreen.isSpectator(123)) {
-                  IntArrayRequest.gameplayScreen.finishOfflineMatch((byte) 40, false);
+            if (66 == si.field_a) {
+              if (pe.field_o != null) {
+                sk.i((byte) -123);
+                if (!pe.field_o.c(123)) {
+                  pe.field_o.a((byte) 40, false);
                 }
-                IntArrayRequest.gameplayScreen.showPostMatchScreen(false, (byte) 69);
-                NewAchievementsScreen.discardGameplayOnTransition = true;
-                RadialSelectorRenderer.field_p = true;
-                Brick.unreadChatMessageCount = 0;
-                ScreenNavigationHelpers.requestScreen(false, 125, -2);
+                pe.field_o.a(false, (byte) 69);
+                cc.field_G = true;
+                pf.field_p = true;
+                on.field_E = 0;
+                ng.a(false, 125, -2);
               }
-              IntegerBitLengthHelpers.field_d = false;
+              ed.field_d = false;
               return true;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (null != IntArrayRequest.gameplayScreen) {
-              if (76 == IntrusiveHashTable.currentPacketOpcode) {
-                IntArrayRequest.gameplayScreen.readScheduledPowerUp(packet, (byte) 74);
+            if (null != pe.field_o) {
+              if (76 == si.field_a) {
+                pe.field_o.a(param0, (byte) 74);
                 return true;
               }
-              if (73 != IntrusiveHashTable.currentPacketOpcode &&
-                IntrusiveHashTable.currentPacketOpcode != 74) {
-                if (IntrusiveHashTable.currentPacketOpcode == 75) {
-                  IntArrayRequest.gameplayScreen.readPositionCorrection((byte) 33, packet);
+              if (73 != si.field_a &&
+                si.field_a != 74) {
+                if (si.field_a == 75) {
+                  pe.field_o.a((byte) 33, param0);
                   return true;
                 }
-                if (77 == IntrusiveHashTable.currentPacketOpcode) {
-                  IntArrayRequest.gameplayScreen.readMaskedPlayerResult(packet, false, 87);
+                if (77 == si.field_a) {
+                  pe.field_o.a(param0, false, 87);
                   return true;
                 }
-                if (IntrusiveHashTable.currentPacketOpcode == 78) {
-                  IntArrayRequest.gameplayScreen.readMaskedPlayerResult(packet, true, 118);
+                if (si.field_a == 78) {
+                  pe.field_o.a(param0, true, 118);
                   return true;
                 }
-                if (IntrusiveHashTable.currentPacketOpcode == 67) {
-                  IntArrayRequest.gameplayScreen.readResultOrder(packet, obfuscationGuard - 47);
+                if (si.field_a == 67) {
+                  pe.field_o.a(param0, param1 - 47);
                   return true;
                 }
-                if (IntrusiveHashTable.currentPacketOpcode == 69) {
-                  IntArrayRequest.gameplayScreen.readMaskOnePlayerResult(18504, packet);
+                if (si.field_a == 69) {
+                  pe.field_o.a(18504, param0);
                   return true;
                 }
-                if (IntrusiveHashTable.currentPacketOpcode == 70) {
-                  IntArrayRequest.gameplayScreen.match.rematchOfferPlayerMask = packet.readUnsignedByte(255);
-                  if (IntArrayRequest.gameplayScreen != null) {
-                    Mesh3D.updateRematchCaption(1);
+                if (si.field_a == 70) {
+                  pe.field_o.field_w.field_j = param0.l(255);
+                  if (pe.field_o != null) {
+                    fr.a(1);
                   }
                   return true;
                 }
-                decompiledFrameRemainder0 = (IntrusiveHashTable.currentPacketOpcode == 71);
+                decompiledFrameRemainder0 = (si.field_a == 71);
                 if (decompiledFrameRemainder0) {
-                  IntArrayRequest.gameplayScreen.rematchSetupPlayerMask = packet.readUnsignedByte(255);
-                  if (IntArrayRequest.gameplayScreen != null) {
-                    Mesh3D.updateRematchCaption(1);
+                  pe.field_o.field_v = param0.l(255);
+                  if (pe.field_o != null) {
+                    fr.a(1);
                   }
                   return true;
                 }
               }
               if (decompiledFrameRemainder0) {
-                stackIn_99_0 = IntArrayRequest.gameplayScreen;
+                stackIn_99_0 = pe.field_o;
                 stackIn_99_1 = -15;
-                stackIn_99_2 = (BitPacketBuffer) (packet);
-                stackIn_100_3 = (IntrusiveHashTable.currentPacketOpcode == 74);
-                ((GameplayScreen) (Object) stackIn_99_0).readInputBatch((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
+                stackIn_99_2 = (pi) (param0);
+                stackIn_100_3 = (si.field_a == 74);
+                ((qj) (Object) stackIn_99_0).a((byte) stackIn_99_1, stackIn_99_2, stackIn_100_3);
                 return true;
               }
             }
-            if (obfuscationGuard == 47) {
+            if (param1 == 47) {
               return false;
             }
             return true;
           }
-          OpacityWidget.finishScreenTransition((byte) -125);
-          stackIn_44_0 = (packet.readUnsignedByte(255) == 0) ? 0 : 1;
-          resultWordFlag = stackIn_44_0;
-          playerNames = new String[packet.readUnsignedByte(255)];
-          playerNameStorage = playerNames;
-          localPlayerId = packet.readByte(true);
-          for (var7 = 0; playerNames.length > var7; var7++) {
-            playerNameStorage[var7] = packet.readPrefixedCp1252String(255);
+          sk.i((byte) -125);
+          stackIn_44_0 = (param0.l(255) == 0) ? 0 : 1;
+          var4_int = stackIn_44_0;
+          var30 = new String[param0.l(255)];
+          var5 = var30;
+          var6Lifetime1 = param0.b(true);
+          for (var7 = 0; var30.length > var7; var7++) {
+            var5[var7] = param0.f(255);
           }
-          if (localPlayerId < 0) {
-            localPlayerId = -2;
+          if (var6Lifetime1 < 0) {
+            var6Lifetime1 = -2;
           }
-          var7 = packet.readInt(obfuscationGuard ^ 208);
-          matchRandom = new IsaacGenerator(new int[]{var7});
-          randomSeeds = new int[playerNames.length];
-          randomSeedStorage = randomSeeds;
-          seedWords = randomSeedStorage;
-          for (var10 = 0; var10 < playerNames.length; var10++) {
-            seedWords[var10] = matchRandom.nextInt(105);
+          var7 = param0.e(param1 ^ 208);
+          var8 = new fo(new int[]{var7});
+          var39 = new int[var30.length];
+          var32 = var39;
+          var9 = var32;
+          for (var10 = 0; var10 < var30.length; var10++) {
+            var9[var10] = var8.b(105);
           }
-          levelOrder = IndexedSpriteHelpers.createIndexOrder(false, MeshAudioHelpers.field_d.levelCount, matchRandom);
-          repeatMode = packet.readByte(true);
-          configuration = new LevelSequence(MeshAudioHelpers.field_d, levelOrder, repeatMode);
-          backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
-          TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(backgroundSelector, (byte) 19);
-          characterOrder = LobbyPlayer.createCharacterOrder(matchRandom, false);
-          VerticalScrollbar.field_Ub = null;
-          if (0 <= localPlayerId) {
-            stackIn_56_0 = 1 << localPlayerId;
+          var49 = kk.a(false, tq.field_d.field_i, var8);
+          var11 = param0.b(true);
+          var12 = new oi(tq.field_d, var49, var11);
+          var13 = var8.a(-37880252, 11);
+          oa.field_Sb = rd.a(var13, (byte) 19);
+          var50 = id.a(var8, false);
+          fj.field_Ub = null;
+          if (0 <= var6Lifetime1) {
+            stackIn_56_0 = 1 << var6Lifetime1;
           } else {
             stackIn_56_0 = 0;
           }
-          localPlayerMask = stackIn_56_0;
-          IntArrayRequest.gameplayScreen = new GameplayScreen(true, resultWordFlag != 0, playerNames, localPlayerId, localPlayerMask, configuration, randomSeeds, characterOrder);
-          stackIn_58_0 = IntArrayRequest.gameplayScreen;
-          stackIn_59_1 = (packet.readUnsignedByte(255) == 0);
-          stackIn_58_0.snapshotsReady = stackIn_59_1;
-          if (!IntArrayRequest.gameplayScreen.snapshotsReady) {
-            IntArrayRequest.gameplayScreen.loadedBoardSnapshots = 0;
+          var15 = stackIn_56_0;
+          pe.field_o = new qj(true, var4_int != 0, var30, var6Lifetime1, var15, var12, var39, var50);
+          stackIn_58_0 = pe.field_o;
+          stackIn_59_1 = (param0.l(255) == 0);
+          stackIn_58_0.field_q = stackIn_59_1;
+          if (!pe.field_o.field_q) {
+            pe.field_o.field_x = 0;
           }
-          if (IntrusiveHashTable.currentPacketOpcode == 64) {
-            AchievementIcon.updateDrawCaption((byte) 32);
-            Mesh3D.updateRematchCaption(obfuscationGuard ^ 46);
+          if (si.field_a == 64) {
+            i.c((byte) 32);
+            fr.a(param1 ^ 46);
           }
-          IntegerBitLengthHelpers.field_d = false;
-          TextFieldRenderer.field_A = false;
-          RadialSelectorRenderer.field_p = false;
-          ScreenNavigationHelpers.requestScreen(false, obfuscationGuard ^ 105, -1);
+          ed.field_d = false;
+          r.field_A = false;
+          pf.field_p = false;
+          ng.a(false, param1 ^ 105, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
-          failure = decompiledCaughtException;
-          stackIn_137_0 = failure;
+          var4_ref = decompiledCaughtException;
+          stackIn_137_0 = var4_ref;
           stackIn_137_1 = new StringBuilder().append("BrickABrac.K(");
-          if (packet == null) {
+          if (param0 == null) {
             stackIn_138_2 = "null";
           } else {
             stackIn_138_2 = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(obfuscationGuard).append(',').append(opcode).append(')').toString());
+          throw qb.a((Throwable) ((Object) stackIn_137_0), ((StringBuilder) (Object) stackIn_137_1).append(stackIn_138_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -451,9 +451,9 @@ public final class BrickABrac extends InteractiveGameClient {
         if (param0 != -65) {
           BrickABrac.s(10);
         }
-        fullscreenDialogRowButtons = null;
-        backgroundSoundEffectArchive = null;
-        gamePlayerIndex = null;
+        field_K = null;
+        field_I = null;
+        field_F = null;
     }
 
     final void p(int param0) {
@@ -462,458 +462,458 @@ public final class BrickABrac extends InteractiveGameClient {
         if (param0 != 1) {
           return;
         }
-        if (AccountMessageDialog.currentScreen.screenId == 9 &&
-          !WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1)) {
-          ScreenNavigationHelpers.requestScreen(false, 69, 5);
+        if (lp.field_rb.field_a == 9 &&
+          !ib.a(pl.field_b, -1)) {
+          ng.a(false, 69, 5);
         } else {
-          if (CacheEntry.field_z != 2147483647) {
-            if (CacheEntry.field_z != -2) {
-              ScreenNavigationHelpers.requestScreen(false, param0 + 55, CacheEntry.field_z);
+          if (sl.field_z != 2147483647) {
+            if (sl.field_z != -2) {
+              ng.a(false, param0 + 55, sl.field_z);
             } else {
-              MatchingTextValidator.b(true);
+              cb.b(true);
             }
           }
         }
-        AccountRegistrationPanel.h((byte) -64);
+        dk.h((byte) -64);
     }
 
     public BrickABrac() {
-        CacheEntry.field_C = this;
+        sl.field_C = this;
     }
 
     final void b(int param0, int param1) {
         int var4;
         var4 = field_J ? 1 : 0;
         if (param1 != param0) {
-          if (MonotonicTime.field_c) {
-            HalloweenBackground.field_y = true;
-            NewAchievementsScreen.discardGameplayOnTransition = true;
-            if (IntArrayRequest.gameplayScreen != null &&
-              !IntArrayRequest.gameplayScreen.isSpectator(param1 + 94)) {
-              IndexedSpriteHelpers.setMessageText(true, EmailValidator.field_k);
-              ScreenNavigationHelpers.requestScreen(false, param1 ^ 118, 11);
+          if (ue.field_c) {
+            dp.field_y = true;
+            cc.field_G = true;
+            if (pe.field_o != null &&
+              !pe.field_o.c(param1 + 94)) {
+              kk.a(true, sg.field_k);
+              ng.a(false, param1 ^ 118, 11);
             } else {
-              ScreenNavigationHelpers.requestScreen(false, 120, 0);
+              ng.a(false, 120, 0);
             }
-            if (AccountMessageDialog.currentScreen instanceof MenuScreen) {
-              ((MenuScreen) (AccountMessageDialog.currentScreen)).onEnter(false, 0, param1 + 116);
+            if (lp.field_rb instanceof km) {
+              ((km) (lp.field_rb)).a(false, 0, param1 + 116);
             }
-            MonotonicTime.field_c = false;
+            ue.field_c = false;
           }
-          RadialSelectorWidget.field_L = false;
-          IntegerBitLengthHelpers.field_d = false;
+          vh.field_L = false;
+          ed.field_d = false;
         } else {
-          IntegerBitLengthHelpers.field_d = true;
-          RadialSelectorWidget.field_L = true;
+          ed.field_d = true;
+          vh.field_L = true;
         }
     }
 
     public final void init() {
-        this.initializeApplet("brickabrac", 15, 1686);
+        this.a("brickabrac", 15, 1686);
     }
 
-    final void stopClientServices(boolean obfuscationGuard) {
-        LobbyCaptionGlobals.b(18);
-        if (obfuscationGuard) {
+    final void a(boolean param0) {
+        rl.b(18);
+        if (param0) {
           field_G = (String) null;
         }
-        QuickChatMenu.d((byte) 107);
+        og.d((byte) 107);
     }
 
-    public final boolean handleGameKey(int keyCode, char character, int obfuscationGuard) {
-        if (PauseMenuHelpers.a((byte) 62)) {
-          if (keyCode == 5) {
-            GzipInflater.showRenderRateDiagnostic = !GzipInflater.showRenderRateDiagnostic ? true : false;
+    public final boolean a(int param0, char param1, int param2) {
+        if (cf.a((byte) 62)) {
+          if (param0 == 5) {
+            im.field_g = !im.field_g ? true : false;
             return true;
           }
-          if (6 == keyCode) {
-            RadialSelectorRenderer.showHeapDiagnostic = !RadialSelectorRenderer.showHeapDiagnostic ? true : false;
+          if (6 == param0) {
+            pf.field_f = !pf.field_f ? true : false;
             return true;
           }
-          if (keyCode == 7) {
+          if (param0 == 7) {
             return true;
           }
         }
-        if (obfuscationGuard > -58) {
+        if (param2 > -58) {
           this.b(78, 8);
         }
-        if (null != InvitationDialogHelpers.pendingScreen) {
+        if (null != hd.field_d) {
           return false;
         }
-        return null != AccountMessageDialog.currentScreen ? AccountMessageDialog.currentScreen.handleKey(character, 106, keyCode) : false;
+        return null != lp.field_rb ? lp.field_rb.a(param1, 106, param0) : false;
     }
 
-    final static int cosine8192(int obfuscationGuard, int angle) {
-        angle = angle & 8191;
-        if (obfuscationGuard != 2048) {
+    final static int c(int param0, int param1) {
+        param1 = param1 & 8191;
+        if (param0 != 2048) {
           BrickABrac.s(116);
         }
-        if (angle >= 4096) {
-          return angle < 6144 ? -TextWidgetRenderer.quarterSineQ16[6144 - angle] : TextWidgetRenderer.quarterSineQ16[angle - 6144];
+        if (param1 >= 4096) {
+          return param1 < 6144 ? -um.field_j[6144 - param1] : um.field_j[param1 - 6144];
         }
-        return 2048 > angle ? TextWidgetRenderer.quarterSineQ16[-angle + 2048] : -TextWidgetRenderer.quarterSineQ16[-2048 + angle];
+        return 2048 > param1 ? um.field_j[-param1 + 2048] : -um.field_j[-2048 + param1];
     }
 
-    final void clearClientResources(boolean obfuscationGuard) {
+    final void d(boolean param0) {
         BrickABrac.s(-65);
-        InputOptionsHelpers.a((byte) -42);
-        MouseInputCleanup.a(true);
-        BackgroundRegistry.a(0);
-        LevelSequence.a((byte) 70);
-        MenuScreen.b(-107);
-        MessageScreen.f((byte) 88);
-        LevelSelectScreen.f((byte) -115);
-        MatchResultScreen.g(-25617);
-        RasterEffectHelpers.a((byte) -75);
-        ClientException.a(false);
-        KeyboardInput.a((byte) -42);
-        IntNode.a((byte) -115);
-        NodeDeque.b((byte) 100);
-        IsaacGenerator.a(2);
-        RasterStackHelpers.a(81);
-        MonotonicTime.a((byte) -114);
-        BitPacketBuffer.clearStaticReferences(60);
-        CanvasInputHelpers.a(!obfuscationGuard ? true : false);
-        LobbyUiHelpers.clearSharedReferences(120);
-        GameConnectionShell.k(-113);
-        AppletFlowHelpers.a((byte) 121);
-        TextChoiceDialogHitTest.b(-789103103);
-        ChatLobbyUiHelpers.a(11);
-        TextValidationHelpers.a(0);
-        WhirlpoolDigestHelpers.a(0);
-        HalfRgbBlendHelpers.clearSharedReferences(100);
-        SocialListResponseHelpers.clearSharedReferences(20623);
-        AccountDateHelpers.a((byte) 108);
-        TextChoiceDialogStyles.a(-21727);
-        SocialTabbedPanel.a(true);
-        LobbySetupHelpers.a(8);
-        Rasterizer2D.clearStaticReferences();
-        UiCleanupHelpers.a(-128);
-        OutgoingPacketHelpers.a(obfuscationGuard);
-        ParallaxMusicHelpers.b(78);
-        AppletGameShell.d(19254);
-        CappedUrlRequest.b(-16637);
-        MouseInput.a((byte) 24);
-        MouseWheelSource.a(102);
-        ResourceArchive.a(false);
-        CanvasInputCleanup.a(-11470);
-        FontSceneGlobals.a(108);
-        PacketBuffer.clearStaticStrings(0);
-        FriendListUi.c((byte) -41);
-        GameTransportActions.b(13);
-        GamePresentationHelpers.a((byte) 46);
-        GameOverlayHelpers.a(117);
-        ChatMessage.a(0);
-        BackgroundSurfaceHelpers.a(obfuscationGuard);
-        HorizontalFrameHelpers.a((byte) 15);
-        GameClock.a((byte) 66);
-        SoftwareFramebuffer.a(-125);
-        ResourcePreparationQueue.c(4862);
-        GameCanvas.a(0);
-        CanvasResizeController.b(0);
-        ScreenNavigationHelpers.a((byte) -49);
-        GameScreen.c((byte) -91);
-        BlankScreen.a(-2);
-        GameplayScreen.d(81);
-        Brick.d(4641);
-        IntrusiveNode.a(true);
-        SpriteGeometry.f(2);
-        DualLinkNode.a(-2);
-        CalendarRankingHelpers.a(!obfuscationGuard ? true : false);
-        MidiSynthesizer.c(-1);
-        SoundCache.a((byte) -117);
-        RectangleBody.d((byte) -106);
-        MovingBody.a(34);
-        CircleBody.d((byte) 97);
-        PlayerBoard.d(-2947);
-        MotionWaypoint.e(-116);
-        BrickMotionPath.b(true);
-        GameUiController.c(false);
-        PauseMenuHelpers.a(-12251);
-        MenuButton.a((byte) -32);
-        IntegerPowerHelpers.clearSharedReferences(true);
-        IndexedSpriteHelpers.a(0);
-        ScreenshotViewer.d((byte) 102);
-        TextHuffmanHelpers.a(24311);
-        FullscreenDialogHelpers.a(true);
-        HuffmanCodec.a((byte) -94);
-        ModalOverlayHelpers.a(true);
-        IntegerParsingHelpers.a((byte) -11);
-        IncomingPacketHelpers.a(-106);
-        MenuSelection.b((byte) -60);
-        IntegerBitLengthHelpers.clearSharedReferences(-104);
-        BackgroundScene.a((byte) 7);
-        BrickHitTransitionTable.clearTransitionCodes((byte) -116);
-        BufferedFile.a(-54);
-        MeshLobbyUiHelpers.a(-61);
-        ConditionalTextValue.c(2);
-        TableResponseHelpers.clearSharedReferences(1);
-        InvitationDialogHelpers.a(12);
-        LoginCredentialKind.a((byte) 65);
-        LoginCredentials.a((byte) 114);
-        BufferedSocket.b(119);
-        ReflectionCheckHelpers.a(-8495);
-        ArchiveConnectionHelpers.a(30000);
-        LobbyRenderGlobals.a(-29988);
-        StateIconLabel.d(true);
-        VerticalScrollbar.e((byte) 33);
-        UiComponentNode.a((byte) -115);
-        UiComponent.c((byte) 88);
-        ContextMenu.h(21);
-        ScrollPaneWithFooter.h(-48);
-        ContextActionController.a(0);
-        ReportAbuseDialog.k(8421504);
-        LobbyPlayer.h(-56);
-        LobbyGame.d((byte) -32);
-        SecondaryHashTable.c((byte) 85);
-        QuickChatPopupHelpers.b(46);
-        GameTransportHelpers.a(122);
-        GameplayAudioEvent.d(0);
-        Ball.c(122);
-        BubbleDistortion.c(124);
-        BallPulseEffect.a(95);
-        Paddle.e(-77);
-        PowerUp.c(6);
-        PowerUpWarning.b(false);
-        ScorePopup.a((byte) -73);
-        MultiplayerMatch.d(-19537);
-        PlayerInputBatch.b(false);
-        PacketReceiveHelpers.a(true);
-        TextFont.clearTextScratchBuffers();
-        GameConnectionHelpers.a((byte) 98);
-        ObjectHistoryBuffer.a(81);
-        JavaRandomHelpers.b(118);
-        LobbyInputHelpers.a(false);
-        LobbyOverlayHelpers.a(0);
-        AlignedIconLabel.d((byte) 21);
-        CanvasViewGlobals.a(2);
-        TabbedPane.h(47);
-        NameEntryPopup.d(false);
-        BrickGameLayerController.a((byte) -102);
-        PlayerBadgeHelpers.a(false);
-        ClientResourceHelpers.b(31583);
-        ClientViewHelpers.b(-116);
-        BirthDateEntryPanel.d(false);
-        CalendarMatchmakingState.a(121);
-        IndexedSpriteGeometry.b(31797);
-        ArcticBackground.d((byte) -31);
-        ChocolateBackground.d((byte) -61);
-        ConstructionBackground.f(94);
-        IntegerRemainderHelpers.clearSharedReferences((byte) -121);
-        DesertBackground.f(-417029247);
-        JungleBackground.b(false);
-        ParisBackground.f(0);
-        SpaceBackground.d((byte) 21);
-        VolcanicBackground.f(0);
-        UnderwaterBackground.d((byte) -46);
-        HalloweenBackground.f(1);
-        FarmBackground.f(0);
-        NinjaBackground.d((byte) -119);
-        PcmPlayer.clearServiceReference();
-        MusicCrossfadeStream.c(-52);
-        ArchiveIndex.a((byte) 117);
-        GzipInflater.a(-32);
-        ArchiveSource.a((byte) -59);
-        MainMenuScreen.c(!obfuscationGuard ? true : false);
-        FramedMenuScreen.f((byte) -101);
-        HighscoresScreen.f(-5);
-        RankingsScreen.g(-118);
-        InstructionsScreen.g((byte) 121);
-        AchievementBrowserScreen.f((byte) -106);
-        QuickChatSineHelpers.a(8070);
-        SaveResultsPromptScreen.f(550);
-        MembershipBenefitsScreen.g(2);
-        LevelPackSelectScreen.f(14529);
-        TimedSplashScreen.f(0);
-        NineSliceFrame.a(0);
-        WidgetLayerBootstrap.a(true);
-        BoundedFile.b(57);
-        LegacyUtf8Decoder.clearStaticReferences((byte) 124);
-        WidgetLayerStack.j((byte) -113);
-        LoadingProgressDialog.m(-48);
-        AccountContentTransitionLayer.n(28);
-        AccountMessageDialog.o(50);
-        AccountRegistrationPanel.a(-11310);
-        AccountIntroductionPanel.a((byte) 36);
-        LoginPanel.i((byte) 88);
-        PlayerNameChooserPanel.h(-106);
-        WidgetTheme.a(-31063);
-        GameplayRenderHelpers.a(2);
-        PasswordTooltipHelpers.a(!obfuscationGuard ? true : false);
-        FullscreenFailureDialog.c(obfuscationGuard);
-        LevelResultWireHelpers.clearSharedReferences(-68);
-        ArchiveFetchClient.c(-12200);
-        CacheIoWorker.b(26679);
-        ArchiveSourceManager.b(-70);
-        TextWidgetRenderer.a(31292);
-        MeshRasterState.releaseTables();
-        VorbisSample.releaseScratch();
-        MeshAttributeRecord.a(-9669);
-        Mesh3D.b((byte) -52);
-        IntegerValidationHelpers.a(125);
-        LobbyKeyboardGlobals.a((byte) 68);
-        TableQuickChatHelpers.a(-27956);
-        LevelPackLoader.b(-30593);
-        FontRequestHelpers.a(-41);
-        AppletResourceHelpers.a((byte) 66);
-        QuickChatMenu.d(true);
-        QuickChatCategoryRegistry.b((byte) -19);
-        QuickChatPhraseRegistry.a(64);
-        QuickChatCategoryDefinition.a((byte) 90);
-        BirthDateValidator.c((byte) -93);
-        DateFieldsWidget.k((byte) 84);
-        ArrayWidgetGroup.c(false);
-        FocusableWidget.g(-66);
-        Widget.c(-14711);
-        WidgetTextLayout.a(obfuscationGuard);
-        QuickChatHelpDialog.d((byte) 98);
-        LogoRenderHelpers.a(31186);
-        PopupWidgetLayer.i(111);
-        WidgetLayer.a((byte) -17);
-        WidgetGroup.f((byte) -67);
-        NodeDequeCursor.c(117);
-        SingleChildWidget.f((byte) -102);
-        BrowserResizeNotificationHelpers.a((byte) -120);
-        SpriteInputHelpers.a(0);
-        DelegatingCanvas.a(!obfuscationGuard ? true : false);
-        RankingSocketHelpers.clearSharedReferences((byte) 121);
-        IntKeyIndex.a(true);
-        ByteStorage.a(10);
-        Bzip2Decoder.releaseSharedState();
-        Bzip2State.a((byte) -102);
-        ReflectionCheck.a(6);
-        ByteArrayPoolHelpers.a(!obfuscationGuard ? true : false);
-        LobbyCaptionGlobals.a(-18657);
-        LabeledToggleRenderer.a(1);
-        StatefulWidgetRenderer.b(3);
-        RadialSelectorRenderer.a(0);
-        MultiValueSliderRenderer.a(-51);
-        GameplaySpriteHelpers.a((byte) 118);
-        VorbisFloor1.releaseScratch();
-        AppletSettingsUiHelpers.b(1516);
-        QuickChatPhraseDefinition.f(32463);
-        WeightedLruCache.a(-125);
-        IntrusiveHashTable.a(120);
-        MusicVoice.c((byte) 67);
-        MidiFileReader.g();
-        MusicVoiceMixer.c(2143);
-        SocketConnector.b(-9125);
-        ProxyAuthenticationRequiredException.b(10);
-        NanoGameClock.f((byte) -124);
-        ProducerFramebuffer.b(11);
-        LobbyLoginGlobals.a((byte) -118);
-        DisplayModeInfo.a((byte) 19);
-        IntHistoryBuffer.a(67108864);
-        DialogPointerGlobals.a(-15504);
-        UiGeometryHelpers.clearSharedReferences((byte) -123);
-        ByteArrayNode.a(84);
-        MusicPatch.a((byte) 118);
-        MusicEnvelope.b((byte) 31);
-        SoundTone.releaseScratch();
-        GameRenderAudioHelpers.a((byte) -116);
-        GameSettingConstraintHelpers.a(-1);
-        LabeledWidget.c(false);
-        ValidatedTextFieldWidget.o(-16124);
-        TextFieldWidget.i(80);
-        ContentTransitionLayer.l(98);
-        ActivityIndicatorWidget.a((byte) 123);
-        UsernameSuggestionPanel.a((byte) -83);
-        HotspotTextWidget.j(-2);
-        ValidationIconWidget.a(2);
-        ValidationMessageWidget.f((byte) -42);
-        ToggleButtonWidget.a(8192);
-        TextFieldValidator.c((byte) -109);
-        ResourceArchiveFactory.a(-7393);
-        Under13RegistrationNoticePanel.a(12127);
-        KeyDispatchHelpers.a((byte) 85);
-        LevelDecoder.a((byte) 89);
-        ArchiveNetworkClient.h((byte) -128);
-        SecondaryNodeQueue.b(true);
-        ArchiveNetworkRequest.e((byte) 102);
-        FileCacheStore.a((byte) 47);
-        CacheIoRequest.h(-122);
-        CachedArchiveSource.c((byte) 56);
-        ResourceRequest.a((byte) 78);
-        DateInputWidget.h(0);
-        WhirlpoolHasher.b(-1);
-        RadialSelectorWidget.a(110);
-        MultiValueSliderWidget.j(18724);
-        RichTextLayout.a((byte) -51);
-        IterableIntrusiveHashTable.a(24968);
-        DualLinkDeque.b(2);
-        CacheEntry.f(31434);
-        DraggableWidget.a(1);
-        DropTargetWidget.i((byte) -116);
-        DirectByteStorage.c(7301);
-        GrowableIntList.a(true);
-        QuickChatParameterType.a(125);
-        StrongCacheEntry.h(928072);
-        ProxySocketConnector.b((byte) -54);
-        AudioFilter.releaseScratch();
-        BoardPresentationHelpers.a(2);
-        IntrusiveHashIterator.c(-93);
-        DualLinkIterator.a((byte) 84);
-        LevelMetadata.a((byte) 127);
-        LevelPack.a(0);
-        LevelList.a(true);
-        MatchCompleteScreen.f((byte) -112);
-        MultiplayerExitScreen.i(61);
-        EmailAvailabilityRequest.c(0);
-        ConnectionPhase.b(-2);
-        DelayedPacket.a(-128);
-        IntArrayRequest.a(112);
-        LevelResultSubmission.a(-17432);
-        SocialListEntry.h(-115);
-        TableDataRequest.a(136);
-        TableRowSubmission.a(-241);
-        TableNameEntry.a((byte) -105);
-        RankingsRequest.a((byte) -105);
-        ButtonWidgetRenderer.c((byte) -93);
-        LinkWidgetRenderer.a(false);
-        TextFieldRenderer.d((byte) 91);
-        PasswordFieldRenderer.b(-95);
-        CheckboxWidgetRenderer.a(true);
-        OpacityWidget.a(51550);
-        SoundPlayback.a((byte) 49);
-        ResourcePreparationEntry.b(-81);
-        AchievementMaskRequest.a(28391);
-        AchievementSubmission.a(105);
-        TranslucentNineSliceFrame.c(5);
-        MeshAudioHelpers.a(1024);
-        AccountResponse.a((byte) 83);
-        IntArrayRequestHelpers.clearWaitingForLevelsText((byte) -102);
-        FireworkBurst.a(0);
-        RasterCacheSurface.a((byte) 121);
-        LoginMethodPreference.a(100);
-        AlternateNumericLoginCredentials.b((byte) -121);
-        EmailLoginCredentials.a(false);
-        RasterSnapshot.a(20888);
-        DiagnosticTextLine.a(30850);
-        TooltipSprite.a((byte) -77);
-        OptionsScreen.c(false);
-        LevelCompleteScreen.h(-257);
-        PauseMenuScreen.h((byte) -34);
-        HighscorePackSelector.a(false);
-        AchievementIcon.d(0);
-        NewAchievementsScreen.g(6);
-        AchievementsScreen.h((byte) -124);
-        LevelPackCard.a(32156);
-        DialogMessagePanel.a(0);
-        FullscreenFailureKind.a(6);
-        BytePayloadSubmission.a((byte) -46);
-        ValidationStatus.a(109);
-        DebouncedValidationSource.d(31366);
-        TextLineLayout.a((byte) 111);
-        WidgetPaintStyle.b(2);
-        UsernameAvailabilityValidator.f(-90);
-        PasswordValidator.b(true);
-        EmailValidator.e((byte) 124);
-        EmailConfirmationValidator.g(0);
-        MatchingTextValidator.f(-71);
-        ContentTransitionPhase.a(-81);
-        TextHotspotRegion.a((byte) -25);
-        LegacyEmailValidationError.a((byte) 38);
-        this.host = null;
+        ea.a((byte) -42);
+        b.a(true);
+        fd.a(0);
+        oi.a((byte) 70);
+        km.b(-107);
+        uk.f((byte) 88);
+        ud.f((byte) -115);
+        ld.g(-25617);
+        la.a((byte) -75);
+        v.a(false);
+        op.a((byte) -42);
+        kq.a((byte) -115);
+        vl.b((byte) 100);
+        fo.a(2);
+        sc.a(81);
+        ue.a((byte) -114);
+        pi.o(60);
+        ap.a(!param0 ? true : false);
+        nh.b(120);
+        qg.k(-113);
+        nk.a((byte) 121);
+        aj.b(-789103103);
+        sj.a(11);
+        pp.a(0);
+        jd.a(0);
+        wc.a(100);
+        ch.a(20623);
+        df.a((byte) 108);
+        gh.a(-21727);
+        vj.a(true);
+        hm.a(8);
+        lb.c();
+        mc.a(-128);
+        tm.a(param0);
+        wo.b(78);
+        ke.d(19254);
+        ad.b(-16637);
+        dm.a((byte) 24);
+        gk.a(102);
+        mf.a(false);
+        t.a(-11470);
+        wm.a(108);
+        wq.h(0);
+        wn.c((byte) -41);
+        vg.b(13);
+        rd.a((byte) 46);
+        cn.a(117);
+        gb.a(0);
+        kd.a(param0);
+        fq.a((byte) 15);
+        dj.a((byte) 66);
+        nb.a(-125);
+        s.c(4862);
+        wg.a(0);
+        qn.b(0);
+        ng.a((byte) -49);
+        gf.c((byte) -91);
+        of.a(-2);
+        qj.d(81);
+        on.d(4641);
+        nm.a(true);
+        mn.f(2);
+        tk.a(-2);
+        un.a(!param0 ? true : false);
+        ie.c(-1);
+        wp.a((byte) -117);
+        bn.d((byte) -106);
+        vi.a(34);
+        no.d((byte) 97);
+        j.d(-2947);
+        ee.e(-116);
+        cl.b(true);
+        ij.c(false);
+        cf.a(-12251);
+        q.a((byte) -32);
+        hh.a(true);
+        kk.a(0);
+        w.d((byte) 102);
+        rj.a(24311);
+        bq.a(true);
+        fk.a((byte) -94);
+        jj.a(true);
+        sq.a((byte) -11);
+        nl.a(-106);
+        re.b((byte) -60);
+        ed.a(-104);
+        ki.a((byte) 7);
+        rb.a((byte) -116);
+        jg.a(-54);
+        hc.a(-61);
+        m.c(2);
+        f.a(1);
+        hd.a(12);
+        cd.a((byte) 65);
+        ff.a((byte) 114);
+        wh.b(119);
+        we.a(-8495);
+        sm.a(30000);
+        fh.a(-29988);
+        ni.d(true);
+        fj.e((byte) 33);
+        ba.a((byte) -115);
+        mh.c((byte) 88);
+        br.h(21);
+        hj.h(-48);
+        nn.a(0);
+        am.k(8421504);
+        id.h(-56);
+        om.d((byte) -32);
+        mk.c((byte) 85);
+        ce.b(46);
+        hn.a(122);
+        qc.d(0);
+        vn.c(122);
+        il.c(124);
+        kc.a(95);
+        vo.e(-77);
+        ge.c(6);
+        lj.b(false);
+        ul.a((byte) -73);
+        ak.d(-19537);
+        p.b(false);
+        vd.a(true);
+        dh.a();
+        rf.a((byte) 98);
+        ao.a(81);
+        aa.b(118);
+        ic.a(false);
+        ga.a(0);
+        rk.d((byte) 21);
+        u.a(2);
+        oa.h(47);
+        gq.d(false);
+        sb.a((byte) -102);
+        qp.a(false);
+        o.b(31583);
+        ok.b(-116);
+        mo.d(false);
+        rh.a(121);
+        fc.b(31797);
+        fi.d((byte) -31);
+        oo.d((byte) -61);
+        sn.f(94);
+        er.a((byte) -121);
+        gi.f(-417029247);
+        ip.b(false);
+        ai.f(0);
+        ci.d((byte) 21);
+        td.f(0);
+        jk.d((byte) -46);
+        dp.f(1);
+        qb.f(0);
+        qa.d((byte) -119);
+        tj.g();
+        tn.c(-52);
+        ko.a((byte) 117);
+        im.a(-32);
+        bc.a((byte) -59);
+        rp.c(!param0 ? true : false);
+        lh.f((byte) -101);
+        ah.f(-5);
+        lf.g(-118);
+        md.g((byte) 121);
+        af.f((byte) -106);
+        di.a(8070);
+        hq.f(550);
+        de.g(2);
+        ol.f(14529);
+        vp.f(0);
+        ta.a(0);
+        np.a(true);
+        rn.b(57);
+        mj.b((byte) 124);
+        cp.j((byte) -113);
+        tb.m(-48);
+        bh.n(28);
+        lp.o(50);
+        dk.a(-11310);
+        he.a((byte) 36);
+        hk.i((byte) 88);
+        qo.h(-106);
+        eh.a(-31063);
+        ua.a(2);
+        ll.a(!param0 ? true : false);
+        ek.c(param0);
+        kp.a(-68);
+        ih.c(-12200);
+        kg.b(26679);
+        co.b(-70);
+        um.a(31292);
+        mg.b();
+        bk.a();
+        dc.a(-9669);
+        fr.b((byte) -52);
+        sh.a(125);
+        fm.a((byte) 68);
+        gj.a(-27956);
+        mq.b(-30593);
+        rm.a(-41);
+        uo.a((byte) 66);
+        og.d(true);
+        so.b((byte) -19);
+        rg.a(64);
+        kn.a((byte) 90);
+        an.c((byte) -93);
+        na.k((byte) 84);
+        ag.c(false);
+        d.g(-66);
+        oc.c(-14711);
+        ep.a(param0);
+        kb.d((byte) 98);
+        jl.a(31186);
+        bj.i(111);
+        jc.a((byte) -17);
+        ib.f((byte) -67);
+        kh.c(117);
+        h.f((byte) -102);
+        qm.a((byte) -120);
+        pl.a(0);
+        od.a(!param0 ? true : false);
+        nd.a((byte) 121);
+        lm.a(true);
+        tl.a(10);
+        tc.a();
+        ro.a((byte) -102);
+        bg.a(6);
+        gd.a(!param0 ? true : false);
+        rl.a(-18657);
+        ei.a(1);
+        up.b(3);
+        pf.a(0);
+        dg.a(-51);
+        gr.a((byte) 118);
+        fg.a();
+        ui.b(1516);
+        wd.f(32463);
+        to.a(-125);
+        si.a(120);
+        ka.c((byte) 67);
+        hr.g();
+        lk.c(2143);
+        dl.b(-9125);
+        ef.b(10);
+        cg.f((byte) -124);
+        jo.b(11);
+        rq.a((byte) -118);
+        hg.a((byte) 19);
+        hp.a(67108864);
+        va.a(-15504);
+        jh.a((byte) -123);
+        se.a(84);
+        pq.a((byte) 118);
+        jm.b((byte) 31);
+        qq.a();
+        bm.a((byte) -116);
+        ar.a(-1);
+        ma.c(false);
+        sf.o(-16124);
+        vb.i(80);
+        fe.l(98);
+        cr.a((byte) 123);
+        ri.a((byte) -83);
+        lg.j(-2);
+        wl.a(2);
+        nf.f((byte) -42);
+        bf.a(8192);
+        k.c((byte) -109);
+        go.a(-7393);
+        ig.a(12127);
+        uf.a((byte) 85);
+        dq.a((byte) 89);
+        a.h((byte) -128);
+        lq.b(true);
+        da.e((byte) 102);
+        ve.a((byte) 47);
+        kj.h(-122);
+        jq.c((byte) 56);
+        hb.a((byte) 78);
+        ug.h(0);
+        eq.b(-1);
+        vh.a(110);
+        qi.j(18724);
+        oj.a((byte) -51);
+        ji.a(24968);
+        gp.b(2);
+        sl.f(31434);
+        dn.a(1);
+        jb.i((byte) -116);
+        eo.c(7301);
+        c.a(true);
+        th.a(125);
+        ej.h(928072);
+        wi.b((byte) -54);
+        ho.a();
+        ja.a(2);
+        ik.c(-93);
+        ae.a((byte) 84);
+        wk.a((byte) 127);
+        nc.a(0);
+        uj.a(true);
+        ab.f((byte) -112);
+        gn.i(61);
+        ac.c(0);
+        n.b(-2);
+        pg.a(-128);
+        pe.a(112);
+        pn.a(-17432);
+        mp.h(-115);
+        eg.a(136);
+        sp.a(-241);
+        pk.a((byte) -105);
+        cq.a((byte) -105);
+        hi.c((byte) -93);
+        bb.a(false);
+        r.d((byte) 91);
+        ob.b(-95);
+        bd.a(true);
+        sk.a(51550);
+        l.a((byte) 49);
+        po.b(-81);
+        al.a(28391);
+        e.a(105);
+        pa.c(5);
+        tq.a(1024);
+        oh.a((byte) 83);
+        fa.a((byte) -102);
+        nj.a(0);
+        pb.a((byte) 121);
+        me.a(100);
+        cm.b((byte) -121);
+        eb.a(false);
+        ii.a(20888);
+        ck.a(30850);
+        nq.a((byte) -77);
+        fp.c(false);
+        vq.h(-257);
+        oq.h((byte) -34);
+        jf.a(false);
+        i.d(0);
+        cc.g(6);
+        bl.h((byte) -124);
+        lc.a(32156);
+        ec.a(0);
+        tf.a(6);
+        ln.a((byte) -46);
+        qh.a(109);
+        pj.d(31366);
+        ml.a((byte) 111);
+        be.b(2);
+        fl.f(-90);
+        g.b(true);
+        sg.e((byte) 124);
+        uc.g(0);
+        cb.f(-71);
+        mi.a(-81);
+        gg.a((byte) -25);
+        lo.a((byte) 38);
+        this.field_x = null;
     }
 
     static {

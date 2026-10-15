@@ -1,0 +1,139 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class pg extends nm {
+    static jp field_p;
+    static String field_i;
+    static String field_q;
+    static String field_n;
+    int field_r;
+    static int field_m;
+    static String field_o;
+    byte[] field_l;
+    long field_j;
+    static km[] field_k;
+
+    final static boolean c(int param0) {
+        if (param0 <= 57) {
+          field_o = (String) null;
+          if (!og.h(-26090)) {
+            return 0 >= go.field_c ? true : false;
+          }
+          return true;
+        }
+        if (og.h(-26090)) {
+          return true;
+        }
+        if (0 < go.field_c) {
+          return false;
+        }
+        return true;
+    }
+
+    final static jp a(jp param0, int param1, int param2) {
+        int var4 = 0;
+        RuntimeException var3 = null;
+        int var5 = 0;
+        jp var6 = null;
+        jp stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = BrickABrac.field_J ? 1 : 0;
+        try {
+          if (param2 != -17912) {
+            pg.c(-48);
+          }
+          var6 = new jp(param1 * 2 + param0.field_D, 2 * param1 + param0.field_C);
+          var6.g();
+          lb.g(0, 0, var6.field_D, var6.field_C, 16777215);
+          for (var4 = 0; param1 > var4; var4++) {
+            param0.d(-param0.field_E + param1, -param0.field_F + param1, 0);
+            lb.e(1, 1, 0, 0, var6.field_D, var6.field_C);
+          }
+          var6.h();
+          param0.d(-param0.field_E + param1, param1 - param0.field_F, 0);
+          kc.field_q.a((byte) 109);
+          var6.field_F = param0.field_F - param1;
+          var6.field_E = -param1 + param0.field_E;
+          stackIn_7_0 = var6;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_10_0 = var3;
+          stackIn_10_1 = new StringBuilder().append("pg.D(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void a(int param0) {
+        field_k = null;
+        field_o = null;
+        field_i = null;
+        field_p = null;
+        field_q = null;
+        field_n = null;
+        if (param0 > -123) {
+          field_p = (jp) null;
+        }
+    }
+
+    final static void d(int param0) {
+        if (param0 != 0) {
+          return;
+        }
+        nh.a(642, 482, -40, -1, cd.field_h, -1);
+    }
+
+    pg(long param0, int param1, byte[] param2) {
+        try {
+          this.field_r = param1;
+          this.field_l = param2;
+          this.field_j = param0;
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "pg.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(boolean param0, String param1) {
+        int var2_int = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        try {
+          var2_int = pq.field_k;
+          var3 = po.field_a;
+          if (param0) {
+            String var9 = (String) null;
+            pg.a(false, (String) null);
+          }
+          var4 = ad.field_l.field_O.a(param1, 500);
+          var5 = ad.field_l.field_O.b(param1, 500) + 6;
+          var6 = 2 + np.field_a * var4;
+          var7 = fp.a(-1, var5, var2_int, 12);
+          var8 = br.a(var6, var3, 20, -30);
+          lb.e(var7, var8, var5, var6, 0);
+          lb.g(var7 + 1, 1 + var8, -2 + var5, var6 - 2, 16777088);
+          ad.field_l.field_O.a(param1, 3 + var7, -ad.field_l.field_O.field_F + (1 + var8) + ok.field_f, 500, 1000, 0, -1, 0, 0, np.field_a);
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_n = "Rated game";
+        field_q = "Player Two";
+        field_i = "Buying or selling an account";
+        field_o = "Confirm Email:";
+    }
+}

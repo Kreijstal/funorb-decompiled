@@ -1,0 +1,98 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class bg extends nm {
+    byte[][][] field_m;
+    int field_s;
+    static java.security.SecureRandom field_p;
+    ql[] field_j;
+    int[] field_q;
+    static int[] field_u;
+    static int field_r;
+    int[] field_t;
+    static String field_o;
+    static int[][] field_n;
+    int[] field_k;
+    ql[] field_l;
+    int field_i;
+
+    final static int a(int param0, int param1, int param2) {
+        if (param1 != 29) {
+          bg.a(6);
+          if (param2 != 1) {
+            return rh.field_b[param2];
+          }
+          if (gq.b(param0, -1)) {
+            return 29;
+          }
+          return rh.field_b[param2];
+        }
+        if (param2 != 1) {
+          return rh.field_b[param2];
+        }
+        if (gq.b(param0, -1)) {
+          return 29;
+        }
+        return rh.field_b[param2];
+    }
+
+    public static void a(int param0) {
+        if (param0 != 6) {
+          return;
+        }
+        field_n = (int[][]) null;
+        field_o = null;
+        field_u = null;
+        field_p = null;
+    }
+
+    final static boolean a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
+        if (param3 <= 32) {
+          field_r = -47;
+          if (param5 < param0) {
+            return false;
+          }
+          if (param0 + param2 <= param5) {
+            return false;
+          }
+          if (param6 > param4) {
+            return false;
+          }
+          if (param1 + param6 > param4) {
+            return true;
+          }
+          return false;
+        }
+        if (param5 < param0) {
+          return false;
+        }
+        if (param0 + param2 <= param5) {
+          return false;
+        }
+        if (param6 > param4) {
+          return false;
+        }
+        if (param1 + param6 > param4) {
+          return true;
+        }
+        return false;
+    }
+
+    bg() {
+    }
+
+    static {
+        field_o = "Awesome!";
+        field_n = new int[9][];
+        field_u = new int[]{31114, 12658477, 16494651, 26679, 16711935};
+        field_n[3] = new int[]{1, 4473924, 1};
+        field_n[5] = new int[]{1, 128, 1};
+        field_n[4] = new int[]{1, 255, 1};
+        field_n[8] = new int[]{1, 12303291, 1};
+        field_n[1] = new int[]{1, 13966189, 1};
+        field_n[7] = new int[]{1, 5367552, 1};
+        field_n[6] = new int[]{1, 0, 1};
+        field_n[0] = new int[]{1, 4826854, 1};
+        field_n[2] = new int[]{1, 16777215, 1};
+    }
+}

@@ -1,0 +1,158 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class jj {
+    static String field_b;
+    static int field_c;
+    static int field_d;
+    static qn field_a;
+
+    public static void a(boolean param0) {
+        field_a = null;
+        field_b = null;
+        if (!param0) {
+          jj.a(false);
+        }
+    }
+
+    final static boolean a(byte param0) {
+        int var2 = 0;
+        int var3 = BrickABrac.field_J ? 1 : 0;
+        int var1 = 0;
+        int var2Lifetime1;
+        int var2Lifetime2;
+        int var2Lifetime3;
+        int var1Lifetime1;
+        int var2Lifetime4;
+        int var2Lifetime5;
+        if (param0 != -123) {
+          field_a = (qn) null;
+          if (m.a(2)) {
+            var1 = 1;
+            pe.c(126);
+            if (!dj.c((byte) 119)) {
+              if (me.b(param0 + 39)) {
+                var2 = (jq.field_p - 1 << 8) / 16;
+                if (var2 > 0) {
+                  lb.d(0, 0, lb.field_c, lb.field_d, 0, var2);
+                  var1 = 1;
+                }
+              }
+              return var1 != 0;
+            }
+            if (!lg.a(9)) {
+              var1 = 1;
+              ih.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+              if (me.b(param0 + 39)) {
+                var2 = (jq.field_p - 1 << 8) / 16;
+                if (var2 > 0) {
+                  lb.d(0, 0, lb.field_c, lb.field_d, 0, var2);
+                  var1 = 1;
+                }
+              }
+              return var1 != 0;
+            }
+            if (me.b(param0 + 39)) {
+              var2 = (jq.field_p - 1 << 8) / 16;
+              if (var2 > 0) {
+                lb.d(0, 0, lb.field_c, lb.field_d, 0, var2);
+                var1 = 1;
+              }
+            }
+            return var1 != 0;
+          }
+          if (!lg.a(9)) {
+            if (uc.f(21651)) {
+              lb.b(0, 0, lb.field_c, lb.field_d);
+              var1 = 1;
+              gi.g(param0 ^ -11184849);
+            }
+            if (dj.c((byte) 119) &&
+              !lg.a(9)) {
+              var1 = 1;
+              ih.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+            }
+            if (me.b(param0 + 39)) {
+              var2Lifetime4 = (jq.field_p - 1 << 8) / 16;
+              if (var2Lifetime4 > 0) {
+                lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime4);
+                var1 = 1;
+              }
+            }
+            return var1 != 0;
+          }
+          o.a(-24435);
+          var1 = 1;
+          if (dj.c((byte) 119) &&
+            !lg.a(9)) {
+            var1 = 1;
+            ih.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+          }
+          if (me.b(param0 + 39)) {
+            var2Lifetime5 = (jq.field_p - 1 << 8) / 16;
+            if (var2Lifetime5 > 0) {
+              lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime5);
+              var1 = 1;
+            }
+          }
+          return var1 != 0;
+        }
+        if (m.a(2)) {
+          var1 = 1;
+          pe.c(126);
+          if (dj.c((byte) 119) &&
+            !lg.a(9)) {
+            var1 = 1;
+            ih.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+          }
+          if (me.b(param0 + 39)) {
+            var2Lifetime1 = (jq.field_p - 1 << 8) / 16;
+            if (var2Lifetime1 > 0) {
+              lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime1);
+              var1 = 1;
+            }
+          }
+          return var1 != 0;
+        }
+        if (!lg.a(9)) {
+          if (uc.f(21651)) {
+            lb.b(0, 0, lb.field_c, lb.field_d);
+            var1 = 1;
+            gi.g(param0 ^ -11184849);
+          }
+          if (dj.c((byte) 119) &&
+            !lg.a(9)) {
+            var1 = 1;
+            ih.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+          }
+          if (me.b(param0 + 39)) {
+            var2Lifetime2 = (jq.field_p - 1 << 8) / 16;
+            if (var2Lifetime2 > 0) {
+              lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime2);
+              var1 = 1;
+            }
+          }
+          return var1 != 0;
+        }
+        o.a(-24435);
+        var1Lifetime1 = 1;
+        if (dj.c((byte) 119) &&
+          !lg.a(9)) {
+          var1Lifetime1 = 1;
+          ih.a((byte) -118, ua.field_d == null ? qa.field_r : true);
+        }
+        if (me.b(param0 + 39)) {
+          var2Lifetime3 = (jq.field_p - 1 << 8) / 16;
+          if (var2Lifetime3 > 0) {
+            lb.d(0, 0, lb.field_c, lb.field_d, 0, var2Lifetime3);
+            var1Lifetime1 = 1;
+          }
+        }
+        return var1Lifetime1 != 0;
+    }
+
+    static {
+        field_b = "Menu";
+        field_a = null;
+    }
+}

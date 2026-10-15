@@ -1,0 +1,96 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class rm implements bp {
+    static String field_b;
+    static mh field_a;
+    static jp field_f;
+    static int[] field_d;
+    static String field_c;
+    static String field_e;
+
+    public static void a(int param0) {
+        field_a = null;
+        field_d = null;
+        field_f = null;
+        field_e = null;
+        field_b = null;
+        if (param0 < -2) {
+          field_c = null;
+          return;
+        }
+        field_e = (String) null;
+        field_c = null;
+    }
+
+    final static hl a(int param0, byte[] param1) {
+        hl var2 = null;
+        RuntimeException var2_ref = null;
+        hl stackIn_2_0 = null;
+        Object stackIn_5_0 = null;
+        hl stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 12658477) {
+            stackIn_2_0 = (hl) null;
+            return stackIn_2_0;
+          }
+          if (param1 == null) {
+            stackIn_5_0 = null;
+            return (hl) (stackIn_5_0);
+          }
+          var2 = new hl(param1, ag.field_K, dl.field_d, jh.field_b, gg.field_t, cn.field_a);
+          ee.d((byte) 96);
+          stackIn_7_0 = var2;
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_10_0 = var2_ref;
+          stackIn_10_1 = new StringBuilder().append("rm.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    final static ac a(String param0, int param1) {
+        RuntimeException var2 = null;
+        ac stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 16711935) {
+            field_d = (int[]) null;
+          }
+          stackIn_3_0 = new ac(param0);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("rm.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    static {
+        field_b = "Withdraw request to join <%0>'s game";
+        field_d = new int[]{12658477, 22953, 16494651, 26679, 16711935};
+        field_c = "Your rating is <%0>";
+        field_e = "(<%0>/<%1>)";
+    }
+}

@@ -1,0 +1,204 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class ih {
+    static String field_d;
+    static String[] field_j;
+    static int field_p;
+    static jp field_k;
+    lq field_g;
+    lq field_n;
+    lq field_a;
+    lq field_c;
+    int field_b;
+    long field_o;
+    wq field_m;
+    byte field_h;
+    volatile int field_i;
+    volatile int field_f;
+    wq field_l;
+    da field_e;
+
+    abstract void a(byte param0);
+
+    final static ff a(String param0, boolean param1, String param2, byte param3) {
+        long var4_long = 0L;
+        RuntimeException var4 = null;
+        Object var6 = null;
+        int var7 = 0;
+        CharSequence var8 = null;
+        ff stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4_long = 0L;
+          var7 = -101 % ((param3 + 57) / 48);
+          var6 = null;
+          if (-1 != param0.indexOf('@')) {
+            var6 = param0;
+          } else {
+            var8 = (CharSequence) ((Object) param0);
+            var4_long = ah.a(false, var8);
+          }
+          stackIn_4_0 = he.a(var4_long, 20, param1, param2, (String) (var6));
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("ih.N(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    abstract void b(byte param0);
+
+    final boolean a(int param0) {
+        if (param0 == 2) {
+          return this.e((byte) -123) >= 20 ? true : false;
+        }
+        this.field_c = (lq) null;
+        return this.e((byte) -123) >= 20 ? true : false;
+    }
+
+    final static void a(String param0, int param1) {
+        try {
+          g.field_m = param0;
+          bd.a(param1, true);
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "ih.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    final int c(byte param0) {
+        int var2 = 88 % ((param0 - 30) / 42);
+        return this.field_a.c(-25906) + this.field_c.c(-25906);
+    }
+
+    public static void c(int param0) {
+        field_j = null;
+        if (param0 != -12200) {
+          field_j = (String[]) null;
+          field_k = null;
+          field_d = null;
+          return;
+        }
+        field_k = null;
+        field_d = null;
+    }
+
+    final static void a(pb param0, jp param1, int param2, int param3, int param4, boolean param5) {
+        try {
+          fc.a(-77, param0.field_p);
+          lb.g(0, 0, param0.field_i, param0.field_q, ro.field_x[param2], 16777215);
+          param1.b((-param1.field_x + param0.field_i) / 2 - 30 / param3, -param1.field_z + param4 + (param0.field_q - 200 / param3), 55, 110);
+          sc.b(-117);
+          if (!param5) {
+            jp var7 = (jp) null;
+            ih.a((pb) null, (jp) null, 100, 125, 72, false);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "ih.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    abstract void a(Object param0, boolean param1, int param2);
+
+    final da a(int param0, int param1, byte param2, int param3, boolean param4) {
+        da stackIn_2_0 = null;
+        boolean stackIn_3_1 = false;
+        long var6;
+        da var8;
+        var6 = ((long)param1 << 32) + (long)param3;
+        var8 = new da();
+        stackIn_2_0 = var8;
+        stackIn_3_1 = (!param4) ? false : true;
+        stackIn_2_0.field_B = stackIn_3_1;
+        var8.field_F = param2;
+        if (param0 != -952050528) {
+          this.field_f = 5;
+        }
+        var8.field_j = var6;
+        if (!param4) {
+          if (20 <= this.c((byte) -42)) {
+            throw new RuntimeException();
+          }
+          this.field_a.a(var8, false);
+          return var8;
+        }
+        if (this.e((byte) -42) >= 20) {
+          throw new RuntimeException();
+        }
+        this.field_g.a(var8, false);
+        return var8;
+    }
+
+    final boolean d(byte param0) {
+        if (param0 == 101) {
+          return this.c((byte) 105) >= 20 ? true : false;
+        }
+        this.field_c = (lq) null;
+        return this.c((byte) 105) >= 20 ? true : false;
+    }
+
+    final static void a(boolean param0, String param1, String param2, int param3) {
+        gf.field_d = param1;
+        dl.field_e = param2;
+        if (param3 != 2) {
+          return;
+        }
+        try {
+          pq.a(0, ep.field_d, param0);
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "ih.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    final int e(byte param0) {
+        if (param0 >= -33) {
+          return 20;
+        }
+        return this.field_g.c(-25906) + this.field_n.c(-25906);
+    }
+
+    abstract boolean b(int param0);
+
+    final static void a(byte param0, boolean param1) {
+        if (param0 > -16) {
+          ih.c(-18);
+          lf.a(param1, -58, true);
+          return;
+        }
+        lf.a(param1, -58, true);
+    }
+
+    ih() {
+        this.field_g = new lq();
+        this.field_n = new lq();
+        this.field_a = new lq();
+        this.field_c = new lq();
+        this.field_m = new wq(6);
+        this.field_i = 0;
+        this.field_h = (byte) 0;
+        this.field_f = 0;
+        this.field_l = new wq(10);
+    }
+
+    static {
+    }
+}

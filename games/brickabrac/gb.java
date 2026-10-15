@@ -1,0 +1,174 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class gb {
+    int field_a;
+    static int field_h;
+    static int[] field_i;
+    int field_o;
+    int field_d;
+    mh field_b;
+    int[] field_g;
+    static mh[] field_l;
+    String field_q;
+    String field_m;
+    int field_c;
+    String field_p;
+    String field_j;
+    long field_k;
+    int field_f;
+    static int field_n;
+    boolean field_e;
+
+    final static String a(CharSequence param0, int param1) {
+        int var6 = 0;
+        StringBuilder discarded$0 = null;
+        Object stackIn_3_0 = null;
+        Object stackIn_16_0 = null;
+        Object stackIn_29_0 = null;
+        String stackIn_31_0 = null;
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        int var3 = 0;
+        int var4 = 0;
+        StringBuilder var5 = null;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        var9 = BrickABrac.field_J ? 1 : 0;
+        try {
+          if (param0 == null) {
+            stackIn_3_0 = null;
+            return (String) (stackIn_3_0);
+          }
+          var2_int = 0;
+          var3 = param0.length();
+          while (var2_int < var3) {
+            if (ik.a((byte) -9, param0.charAt(var2_int))) {
+              var2_int++;
+              continue;
+            }
+            break;
+          }
+          while (var3 > var2_int) {
+            if (ik.a((byte) -9, param0.charAt(var3 - 1))) {
+              var3--;
+              continue;
+            }
+            break;
+          }
+          var4 = -var2_int + var3;
+          if (var4 < 1) {
+            return null;
+          }
+          if (var4 > 12) {
+            stackIn_16_0 = null;
+            return (String) (stackIn_16_0);
+          }
+          var5 = new StringBuilder(var4);
+          if (param1 < 46) {
+            gb.a(-114);
+          }
+          for (var6 = var2_int; var6 < var3; var6++) {
+            var7 = param0.charAt(var6);
+            if (m.a(true, (char) var7)) {
+              var8 = ah.a(207, (char) var7);
+              if (0 != var8) {
+                discarded$0 = var5.append((char) var8);
+              }
+            }
+          }
+          if (0 != var5.length()) {
+            stackIn_31_0 = var5.toString();
+            return stackIn_31_0;
+          }
+          stackIn_29_0 = null;
+          return (String) (stackIn_29_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_34_0 = var2;
+          stackIn_34_1 = new StringBuilder().append("gb.C(");
+          if (param0 == null) {
+            stackIn_35_2 = "null";
+          } else {
+            stackIn_35_2 = "{...}";
+          }
+          throw qb.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final int a(boolean param0) {
+        CharSequence var3;
+        if (!param0) {
+          var3 = (CharSequence) null;
+          gb.a((CharSequence) null, -7);
+        }
+        if (!this.field_e && (this.field_c != 2 ||
+          this.field_a <= 0)) {
+          if (this.field_k == oc.field_p) {
+            return 1;
+          }
+          if (wk.field_m == 2 &&
+            nc.a(0, this.field_m)) {
+            return 1;
+          }
+          return 0;
+        }
+        return 2;
+    }
+
+    public static void a(int param0) {
+        field_l = null;
+        if (param0 != 0) {
+          field_h = -77;
+        }
+        field_i = null;
+    }
+
+    gb(boolean param0) {
+        this.field_o = ka.field_E;
+        this.field_f = field_h;
+        if (param0) {
+          this.field_g = rn.field_m;
+        } else {
+          this.field_g = null;
+        }
+        this.field_q = dp.field_t;
+        this.field_p = sl.field_y;
+        this.field_a = nh.field_b;
+        this.field_k = an.field_k;
+        this.field_m = nd.field_g;
+        this.field_e = ji.field_f;
+        this.field_j = gd.field_d;
+        this.field_c = gj.field_a;
+        this.field_d = vq.field_H;
+    }
+
+    gb(int param0, String param1, int param2, String param3, String param4) {
+        try {
+          this.field_k = 0L;
+          this.field_f = 0;
+          this.field_q = param1;
+          this.field_g = null;
+          this.field_e = true;
+          this.field_d = 0;
+          this.field_p = param3;
+          this.field_j = param4;
+          this.field_c = param0;
+          this.field_m = param1;
+          this.field_o = param2;
+          this.field_a = 0;
+        } catch (RuntimeException runtimeException) {
+          throw qb.a((Throwable) ((Object) runtimeException), "gb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_i = new int[]{33, 34, 35};
+    }
+}
