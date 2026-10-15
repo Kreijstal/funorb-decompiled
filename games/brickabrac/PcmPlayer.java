@@ -379,7 +379,7 @@ class PcmPlayer {
           if (serviceEmpty != 0) {
             service.stopRequested = true;
             while (service.running) {
-              wj.sleepMillis(-125, 50L);
+              BytePayloadRequest.sleepMillis(-125, 50L);
             }
             service = null;
           }

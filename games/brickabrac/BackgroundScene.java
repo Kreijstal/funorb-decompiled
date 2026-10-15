@@ -33,10 +33,10 @@ abstract class BackgroundScene {
         if (this.loadedSoundCount < this.soundEffects.length) {
           var3 = this.soundEffectNames[this.soundEffectOrder[this.loadedSoundCount]];
           var2 = var3;
-          if (BrickABrac.field_I.hasFileName(var2, "", (byte) -121)) {
+          if (BrickABrac.backgroundSoundEffectArchive.hasFileName(var2, "", (byte) -121)) {
             this.soundEffects[this.loadedSoundCount] = SoundPlayback.soundCache.getSoundEffectByName(var3, "", (byte) 122);
           }
-          if (QuickChatMenu.field_gc.hasFileName(var2, "", (byte) -121)) {
+          if (QuickChatMenu.backgroundMusicSampleArchive.hasFileName(var2, "", (byte) -121)) {
             this.soundEffects[this.loadedSoundCount] = SoundPlayback.soundCache.getMusicSampleByName((byte) 28, var3, "");
           }
           if (this.soundEffects[this.loadedSoundCount] != null) {
@@ -135,13 +135,13 @@ abstract class BackgroundScene {
         MusicTrack dupTemp$0 = null;
         int fieldTemp$1 = 0;
         if (this.musicData == null) {
-          dupTemp$0 = MusicTrack.load(UiComponent.field_lb, "", this.musicName);
+          dupTemp$0 = MusicTrack.load(UiComponent.backgroundMusicTrackArchive, "", this.musicName);
           this.musicData = dupTemp$0;
           if (dupTemp$0 == null) {
             return;
           }
         }
-        if (!ConditionalTextValue.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, IterableIntrusiveHashTable.field_a, SoundPlayback.soundCache)) {
+        if (!ConditionalTextValue.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, IterableIntrusiveHashTable.backgroundMusicPatchArchive, SoundPlayback.soundCache)) {
           return;
         }
         if (OpacityWidget.pendingMusicLoads > 0) {

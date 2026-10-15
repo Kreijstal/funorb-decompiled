@@ -135,7 +135,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               var9 = AccountMessageDialog.field_ub.startThread(1, (Runnable) (this), (byte) -124);
               while (true) {
                 if (var9.status == 0) {
-                  wj.sleepMillis(-125, 10L);
+                  BytePayloadRequest.sleepMillis(-125, 10L);
                   if (var10 == 0) {
                     continue;
                   }
@@ -804,7 +804,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if (this == QuickChatCategoryRegistry.field_f &&
             !ParisBackground.field_s) {
             BufferedFile.shutdownDeadlineMillis = MonotonicTime.nowMillis(false);
-            wj.sleepMillis(-127, 5000L);
+            BytePayloadRequest.sleepMillis(-127, 5000L);
             LevelPackLoader.field_e = null;
             this.shutdown(false, 46);
             return;

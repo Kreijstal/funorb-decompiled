@@ -28,7 +28,7 @@ class ba extends DualLinkNode {
             stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
-          if (ln.decodeSpritesFromArchive(-125, param1, param3, param0)) {
+          if (BytePayloadSubmission.decodeSpritesFromArchive(-125, param1, param3, param0)) {
             stackIn_7_0 = kk.buildIndexedSprites((byte) -2);
             return stackIn_7_0;
           }

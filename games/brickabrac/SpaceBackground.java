@@ -13,7 +13,7 @@ final class SpaceBackground extends BackgroundScene {
           if (!this.hasSprites((byte) -102)) {
             Rasterizer2D.fillRectangle(destinationX, destinationY, 640, 480, 0);
           } else {
-            var8 = PowerUp.a(this.sceneId, colorIndex, -20777);
+            var8 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
             if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               HalloweenBackground.a(1, 0, !obfuscationGuard ? true : false, colorIndex, ng.spaceFarSprite, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -27,7 +27,7 @@ final class SpaceBackground extends BackgroundScene {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 640, 480, 0);
           return;
         }
-        RasterCacheSurface var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+        RasterCacheSurface var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           HalloweenBackground.a(1, 0, !obfuscationGuard ? true : false, colorIndex, ng.spaceFarSprite, var7);
           var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -50,7 +50,7 @@ final class SpaceBackground extends BackgroundScene {
           if (!this.hasSprites((byte) -101)) {
             Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 0);
           } else {
-            var8 = kd.a(this.sceneId, colorIndex, (byte) 125);
+            var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
             if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -63,7 +63,7 @@ final class SpaceBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -101)) {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 0);
         } else {
-          var7 = kd.a(this.sceneId, colorIndex, (byte) 125);
+          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var7);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -91,22 +91,22 @@ final class SpaceBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (!AchievementIcon.field_m.ensureGroupAvailableByName("space", -28138)) {
+        if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("space", -28138)) {
           return false;
         }
-        LobbyGame.spaceNearSprite = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.field_m);
-        LevelResultSubmission.spaceMidSprite = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.field_m);
-        ng.spaceFarSprite = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.field_m);
-        rf.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.field_m);
+        LobbyGame.spaceNearSprite = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.backgroundSpriteArchive);
+        LevelResultSubmission.spaceMidSprite = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.backgroundSpriteArchive);
+        ng.spaceFarSprite = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.backgroundSpriteArchive);
+        rf.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.backgroundSpriteArchive);
         ng.spaceFarSprite.bindRasterTarget();
         Rasterizer2D.drawRadialGlow(7136, 6592, 1600, 128, sq.field_b);
         if (!obfuscationGuard) {
           BallPulseEffect.framebuffer.bindRaster((byte) 100);
-          TableNameEntry.spaceCharacterSprite = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);
+          TableNameEntry.spaceCharacterSprite = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.backgroundSpriteArchive);
           jh.field_d = jh.a(0, LobbyGame.spaceNearSprite);
           MusicVoiceMixer.field_t = jh.a(0, LevelResultSubmission.spaceMidSprite);
           NodeDequeCursor.field_b = jh.a(0, ng.spaceFarSprite);
-          b.spaceLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("space", AchievementIcon.field_m, "space_lever", 2);
+          b.spaceLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("space", AchievementIcon.backgroundSpriteArchive, "space_lever", 2);
           return true;
         }
         return false;

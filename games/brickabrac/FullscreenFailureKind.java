@@ -42,7 +42,7 @@ final class FullscreenFailureKind {
               if (InteractiveGameClient.field_E) {
                 param0 = rd.a(ProxySocketConnector.field_h, new String[]{param0}, (byte) 103);
               }
-              if (ln.field_l) {
+              if (BytePayloadSubmission.field_l) {
                 param0 = GameCanvas.field_b;
               }
               StrongCacheEntry.field_I.showResponseMessage(param2, false, param0);

@@ -8,7 +8,7 @@ final class QuickChatMenu extends UiComponent {
     private char[] shortcuts;
     static String field_ac;
     private AlignedIconLabel[] items;
-    static ResourceArchive field_gc;
+    static ResourceArchive backgroundMusicSampleArchive;
     private int contentWidth;
     private int animationAnchorY;
     private int selectedItem;
@@ -301,7 +301,7 @@ final class QuickChatMenu extends UiComponent {
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard != 28) {
-            field_gc = (ResourceArchive) null;
+            backgroundMusicSampleArchive = (ResourceArchive) null;
           }
           anyPressed = 0;
           rows = this.items;
@@ -1499,7 +1499,7 @@ final class QuickChatMenu extends UiComponent {
         RuntimeException var1 = null;
         try {
           if (param0 != 107) {
-            field_gc = (ResourceArchive) null;
+            backgroundMusicSampleArchive = (ResourceArchive) null;
           }
           LevelPack.b(124);
           if (null != CacheIoRequest.field_D) {
@@ -1617,7 +1617,7 @@ final class QuickChatMenu extends UiComponent {
         try {
           field_Yb = null;
           field_ac = null;
-          field_gc = null;
+          backgroundMusicSampleArchive = null;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "og.F(" + param0 + ')');
         }

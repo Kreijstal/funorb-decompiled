@@ -17,7 +17,7 @@ final class FarmBackground extends BackgroundScene {
           field_v = (UiComponent) null;
         }
         if (this.hasSprites((byte) -122)) {
-          var6 = kd.a(this.sceneId, colorIndex, (byte) -36);
+          var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -36);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             RegistrationResponseDialog.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -31,7 +31,7 @@ final class FarmBackground extends BackgroundScene {
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var7 = null;
         if (this.hasSprites((byte) -106)) {
-          var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             RegistrationResponseDialog.a(colorIndex, var7, 1, MouseInput.farmFarSprite, 0, !obfuscationGuard ? true : false);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -98,13 +98,13 @@ final class FarmBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (!AchievementIcon.field_m.ensureGroupAvailableByName("farm", -28138)) {
+        if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("farm", -28138)) {
           return false;
         }
-        LevelPackCard.farmNearSprite = pl.loadRgbSpriteByName("farm", "farm_near", (byte) 103, AchievementIcon.field_m);
-        rm.farmMidSprite = pl.loadRgbSpriteByName("farm", "farm_mid", (byte) -63, AchievementIcon.field_m);
-        MouseInput.farmFarSprite = pl.loadRgbSpriteByName("farm", "farm_far", (byte) -78, AchievementIcon.field_m);
-        MultiplayerExitScreen.farmSmallSprite = pl.loadRgbSpriteByName("farm", "farm_small", (byte) 106, AchievementIcon.field_m);
+        LevelPackCard.farmNearSprite = pl.loadRgbSpriteByName("farm", "farm_near", (byte) 103, AchievementIcon.backgroundSpriteArchive);
+        rm.farmMidSprite = pl.loadRgbSpriteByName("farm", "farm_mid", (byte) -63, AchievementIcon.backgroundSpriteArchive);
+        MouseInput.farmFarSprite = pl.loadRgbSpriteByName("farm", "farm_far", (byte) -78, AchievementIcon.backgroundSpriteArchive);
+        MultiplayerExitScreen.farmSmallSprite = pl.loadRgbSpriteByName("farm", "farm_small", (byte) 106, AchievementIcon.backgroundSpriteArchive);
         if (obfuscationGuard) {
           FarmBackground.g(-29);
         }

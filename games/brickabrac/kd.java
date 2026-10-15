@@ -19,9 +19,9 @@ final class kd {
         field_a = null;
     }
 
-    final static RasterCacheSurface a(int param0, int param1, byte param2) {
-        int var3 = 117 / ((param2 - 38) / 63);
-        return QuickChatCategoryRegistry.a(0, param1, param0, ActivityIndicatorWidget.field_N);
+    final static RasterCacheSurface selectBackgroundSurface1280(int cacheKeyTwo, int cacheKeyOne, byte obfuscationGuard) {
+        int guardCalculation = 117 / ((obfuscationGuard - 38) / 63);
+        return QuickChatCategoryRegistry.selectCachedSurface(0, cacheKeyOne, cacheKeyTwo, ActivityIndicatorWidget.backgroundSurfacePool1280);
     }
 
     final static boolean a(int param0, PacketBuffer param1) {

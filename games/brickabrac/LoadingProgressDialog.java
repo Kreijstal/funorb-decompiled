@@ -43,7 +43,7 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
           if (param0 <= 111) {
             pressX = -88;
           }
-          if (ln.decodeSpritesFromArchive(-104, param4, param2, param1)) {
+          if (BytePayloadSubmission.decodeSpritesFromArchive(-104, param4, param2, param1)) {
             stackIn_6_0 = MusicEnvelope.a(param3.takeFile(param4, param1, 4), (byte) -14);
             return stackIn_6_0;
           }

@@ -39,7 +39,7 @@ final class PowerUpWarning extends IntrusiveNode {
           }
           task = platform.requestDisplayModes(0);
           while (task.status == 0) {
-            wj.sleepMillis(-128, 10L);
+            BytePayloadRequest.sleepMillis(-128, 10L);
           }
           if (task.status == 2) {
             failedTaskResult = new DisplayModeInfo[]{};

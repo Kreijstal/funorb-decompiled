@@ -17,7 +17,7 @@ final class ArcticBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
             return;
           }
-          var8 = kd.a(this.sceneId, colorIndex, (byte) 107);
+          var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             AccountRegistrationPanel.a(2, colorIndex, var8, -35, 23275, Brick.field_K);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -31,7 +31,7 @@ final class ArcticBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
           return;
         }
-        RasterCacheSurface var9 = kd.a(this.sceneId, colorIndex, (byte) 107);
+        RasterCacheSurface var9 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
         if (var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, jl.field_d, 1, -35);
           return;
@@ -142,7 +142,7 @@ final class ArcticBackground extends BackgroundScene {
           }
           return;
         }
-        RasterCacheSurface var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+        RasterCacheSurface var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           AccountRegistrationPanel.a(1, colorIndex, var6, 0, 23275, LoginPanel.arcticFarSprite);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -162,17 +162,17 @@ final class ArcticBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (AchievementIcon.field_m.ensureGroupAvailableByName("arctic", -28138)) {
-          ResourcePreparationQueue.arcticNearSprite = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.field_m);
-          BallPulseEffect.arcticMidSprite = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.field_m);
-          LoginPanel.arcticFarSprite = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.field_m);
-          WidgetPaintStyle.arcticSmallSprite = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.field_m);
+        if (AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("arctic", -28138)) {
+          ResourcePreparationQueue.arcticNearSprite = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.backgroundSpriteArchive);
+          BallPulseEffect.arcticMidSprite = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.backgroundSpriteArchive);
+          LoginPanel.arcticFarSprite = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.backgroundSpriteArchive);
+          WidgetPaintStyle.arcticSmallSprite = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.backgroundSpriteArchive);
           un.field_d = jh.a(0, ResourcePreparationQueue.arcticNearSprite);
           jl.field_d = jh.a(0, BallPulseEffect.arcticMidSprite);
           Brick.field_K = jh.a(0, LoginPanel.arcticFarSprite);
-          ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.field_m, "arctic_caps", 2);
-          ja.arcticSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.field_m, "arctic_segs", 2);
-          ga.arcticCentreSprites[0] = pl.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.field_m);
+          ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_caps", 2);
+          ja.arcticSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_segs", 2);
+          ga.arcticCentreSprites[0] = pl.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.backgroundSpriteArchive);
           ObjectHistoryBuffer.arcticCapsSprites[1] = Under13RegistrationNoticePanel.a(ObjectHistoryBuffer.arcticCapsSprites[0], obfuscationGuard);
           ja.arcticSegsSprites[1] = Under13RegistrationNoticePanel.a(ja.arcticSegsSprites[0], false);
           ga.arcticCentreSprites[1] = pl.a(-16371, ga.arcticCentreSprites[0]);

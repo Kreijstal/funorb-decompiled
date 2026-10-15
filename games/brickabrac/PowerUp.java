@@ -40,12 +40,12 @@ final class PowerUp extends CircleBody {
         this(x256, y256, typeId, 0);
     }
 
-    final static RasterCacheSurface a(int param0, int param1, int param2) {
-        if (param2 != -20777) {
-          java.awt.Component var4 = (java.awt.Component) null;
+    final static RasterCacheSurface selectBackgroundSurface960(int cacheKeyTwo, int cacheKeyOne, int obfuscationGuard) {
+        if (obfuscationGuard != -20777) {
+          java.awt.Component unusedComponent = (java.awt.Component) null;
           PowerUp.detachKeyboardInput(58, (java.awt.Component) null);
         }
-        return QuickChatCategoryRegistry.a(param2 ^ -20777, param1, param0, JungleBackground.field_s);
+        return QuickChatCategoryRegistry.selectCachedSurface(obfuscationGuard ^ -20777, cacheKeyOne, cacheKeyTwo, JungleBackground.backgroundSurfacePool960);
     }
 
     final boolean isSelfTargeted(boolean obfuscationGuard) {

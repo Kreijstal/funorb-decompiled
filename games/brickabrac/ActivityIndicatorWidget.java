@@ -6,7 +6,7 @@ import java.io.*;
 final class ActivityIndicatorWidget extends Widget {
     int progressFraction65536;
     boolean animated;
-    static NodeDeque field_N;
+    static NodeDeque backgroundSurfacePool1280;
     private int phaseTick;
     private int inactiveForegroundColor;
     private RgbSprite capWorkSurface;
@@ -119,9 +119,9 @@ final class ActivityIndicatorWidget extends Widget {
 
     public static void a(byte param0) {
         field_D = null;
-        field_N = null;
+        backgroundSurfacePool1280 = null;
         if (param0 <= 36) {
-          field_N = (NodeDeque) null;
+          backgroundSurfacePool1280 = (NodeDeque) null;
         }
     }
 
@@ -256,7 +256,7 @@ final class ActivityIndicatorWidget extends Widget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 2) {
-            field_N = (NodeDeque) null;
+            backgroundSurfacePool1280 = (NodeDeque) null;
           }
           var4_int = archive.getGroupId(groupName, false);
           var5 = archive.getFileId(var4_int, obfuscationGuard ^ -31, fileName);
@@ -359,6 +359,6 @@ final class ActivityIndicatorWidget extends Widget {
     }
 
     static {
-        field_N = new NodeDeque();
+        backgroundSurfacePool1280 = new NodeDeque();
     }
 }

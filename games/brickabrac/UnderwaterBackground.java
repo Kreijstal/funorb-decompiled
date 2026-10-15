@@ -57,13 +57,13 @@ final class UnderwaterBackground extends BackgroundScene {
         if (obfuscationGuard) {
           return true;
         }
-        if (AchievementIcon.field_m.ensureGroupAvailableByName("water", -28138)) {
-          ResourceArchiveFactory.waterRaysSprite = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.field_m);
-          wm.waterNearSprite = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.field_m);
-          LoginPanel.waterMidSprite = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
-          ConnectionPhase.waterFarSprite = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.field_m);
-          TableNameEntry.waterSmallSprite = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.field_m);
-          ConstructionBackground.waterCharacterSprite = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.field_m);
+        if (AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("water", -28138)) {
+          ResourceArchiveFactory.waterRaysSprite = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.backgroundSpriteArchive);
+          wm.waterNearSprite = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.backgroundSpriteArchive);
+          LoginPanel.waterMidSprite = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.backgroundSpriteArchive);
+          ConnectionPhase.waterFarSprite = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.backgroundSpriteArchive);
+          TableNameEntry.waterSmallSprite = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.backgroundSpriteArchive);
+          ConstructionBackground.waterCharacterSprite = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
           SocialTabbedPanel.field_b = new RgbSprite(ConnectionPhase.waterFarSprite.canvasWidth, ConnectionPhase.waterFarSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-49, SocialTabbedPanel.field_b);
           ConnectionPhase.waterFarSprite.drawVerticallyFlipped(0, 0);
@@ -126,7 +126,7 @@ final class UnderwaterBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
             return;
           }
-          var8 = kd.a(this.sceneId, colorIndex, (byte) 106);
+          var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             hh.a(BufferedFile.field_a, -13, 2, var8, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -138,7 +138,7 @@ final class UnderwaterBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
           return;
         }
-        RasterCacheSurface var9 = kd.a(this.sceneId, colorIndex, (byte) 106);
+        RasterCacheSurface var9 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
         if (!var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           hh.a(BufferedFile.field_a, -13, 2, var9, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
           var9.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -154,7 +154,7 @@ final class UnderwaterBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
             return;
           }
-          var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             hh.a(ConnectionPhase.waterFarSprite, 0, 1, var7, -8562, colorIndex, SocialTabbedPanel.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -166,7 +166,7 @@ final class UnderwaterBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
           return;
         }
-        RasterCacheSurface var8 = PowerUp.a(this.sceneId, colorIndex, -20777);
+        RasterCacheSurface var8 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           hh.a(ConnectionPhase.waterFarSprite, 0, 1, var8, -8562, colorIndex, SocialTabbedPanel.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

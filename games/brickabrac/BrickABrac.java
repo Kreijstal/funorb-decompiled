@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public final class BrickABrac extends InteractiveGameClient {
-    static ResourceArchive field_I;
+    static ResourceArchive backgroundSoundEffectArchive;
     static String field_G;
     static SecondaryHashTable gamePlayerIndex;
     static int[] field_K;
@@ -36,7 +36,7 @@ public final class BrickABrac extends InteractiveGameClient {
         }
         notification = (IntNode) (kp.achievementNotifications.first(-123));
         if (obfuscationGuard != 16769381) {
-          field_I = (ResourceArchive) null;
+          backgroundSoundEffectArchive = (ResourceArchive) null;
         }
         if (notification != null) {
           notificationTick = ok.achievementNotificationTick;
@@ -452,7 +452,7 @@ public final class BrickABrac extends InteractiveGameClient {
           BrickABrac.s(10);
         }
         field_K = null;
-        field_I = null;
+        backgroundSoundEffectArchive = null;
         gamePlayerIndex = null;
     }
 
@@ -900,7 +900,7 @@ public final class BrickABrac extends InteractiveGameClient {
         LevelPackCard.a(32156);
         DialogMessagePanel.a(0);
         FullscreenFailureKind.a(6);
-        ln.a((byte) -46);
+        BytePayloadSubmission.a((byte) -46);
         ValidationStatus.a(109);
         DebouncedValidationSource.d(31366);
         TextLineLayout.a((byte) 111);

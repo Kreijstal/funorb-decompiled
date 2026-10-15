@@ -242,70 +242,70 @@ final class MenuSelection {
         this.selectedIndex = pointerIndex;
     }
 
-    final static void f(byte param0) {
-        RuntimeException runtimeException = null;
-        int var2 = 0;
-        wj var3_ref_wj = null;
-        int var3 = 0;
-        int var4_int = 0;
-        ln var4 = null;
-        Object var5 = null;
-        int var6 = 0;
-        BitPacketBuffer var9 = null;
-        byte[] var13 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+    final static void receiveBytePayloadReply(byte obfuscationGuard) {
+        RuntimeException failure = null;
+        int replyKind = 0;
+        BytePayloadRequest pendingRequest = null;
+        int acknowledgementChecksum = 0;
+        int replyPayloadLength = 0;
+        BytePayloadSubmission submission = null;
+        Object unusedPayloadSlot = null;
+        int gameFlag = 0;
+        BitPacketBuffer incoming = null;
+        byte[] replyPayload = null;
+        RuntimeException caughtFailure = null;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 != -71) {
+          if (obfuscationGuard != -71) {
             return;
           }
-          var9 = jl.incomingPackets;
-          var2 = var9.readUnsignedByte(255);
-          if (0 != var2) {
-            if (var2 == 1) {
-              var3 = var9.readInt(255);
-              var4 = (ln) (MidiSynthesizer.field_v.first(-37));
-              while (var4 != null) {
-                if (var3 != var4.field_m) {
-                  var4 = (ln) (MidiSynthesizer.field_v.next((byte) 116));
+          incoming = jl.incomingPackets;
+          replyKind = incoming.readUnsignedByte(255);
+          if (0 != replyKind) {
+            if (replyKind == 1) {
+              acknowledgementChecksum = incoming.readInt(255);
+              submission = (BytePayloadSubmission) (MidiSynthesizer.pendingBytePayloadSubmissions.first(-37));
+              while (submission != null) {
+                if (acknowledgementChecksum != submission.checksum) {
+                  submission = (BytePayloadSubmission) (MidiSynthesizer.pendingBytePayloadSubmissions.next((byte) 116));
                   continue;
                 }
                 break;
               }
-              if (var4 == null) {
+              if (submission == null) {
                 hn.a((byte) 104);
                 return;
               }
-              var4.unlink((byte) 111);
+              submission.unlink((byte) 111);
               return;
             }
             AlignedIconLabel.a("A1: " + WhirlpoolHasher.c((byte) -101), (Throwable) null, 123);
             hn.a((byte) 60);
           } else {
-            var3_ref_wj = (wj) (EmailConfirmationValidator.field_q.first(-110));
-            if (var3_ref_wj == null) {
+            pendingRequest = (BytePayloadRequest) (EmailConfirmationValidator.pendingBytePayloadRequests.first(-110));
+            if (pendingRequest == null) {
               hn.a((byte) 76);
               return;
             }
-            var4_int = var9.readUnsignedByte(255);
-            if (var4_int == 0) {
-              var5 = null;
+            replyPayloadLength = incoming.readUnsignedByte(255);
+            if (replyPayloadLength == 0) {
+              unusedPayloadSlot = null;
             } else {
-              var13 = new byte[var4_int];
-              var9.readBytes(0, var13, 116, var4_int);
+              replyPayload = new byte[replyPayloadLength];
+              incoming.readBytes(0, replyPayload, 116, replyPayloadLength);
             }
-            var9.position = var9.position + 4;
-            if (!var9.verifyCrc32((byte) -27)) {
+            incoming.position = incoming.position + 4;
+            if (!incoming.verifyCrc32((byte) -27)) {
               hn.a((byte) 86);
               return;
             }
-            var3_ref_wj.unlink((byte) 111);
+            pendingRequest.unlink((byte) 111);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "re.P(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "re.P(" + obfuscationGuard + ')');
         }
     }
 

@@ -10,7 +10,7 @@ final class DesertBackground extends BackgroundScene {
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var6 = null;
         if (this.hasSprites((byte) -127)) {
-          var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             RankingsScreen.a(var6, 1, 0, OptionsScreen.desertFarSprite, colorIndex, 100);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -56,17 +56,17 @@ final class DesertBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (AchievementIcon.field_m.ensureGroupAvailableByName("desert", -28138)) {
-          FriendListUi.desertNearSprite = pl.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.field_m);
-          PowerUpWarning.desertMidSprite = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
-          OptionsScreen.desertFarSprite = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
-          ce.desertSmallSprite = pl.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.field_m);
+        if (AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("desert", -28138)) {
+          FriendListUi.desertNearSprite = pl.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.backgroundSpriteArchive);
+          PowerUpWarning.desertMidSprite = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.backgroundSpriteArchive);
+          OptionsScreen.desertFarSprite = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.backgroundSpriteArchive);
+          ce.desertSmallSprite = pl.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.backgroundSpriteArchive);
           SecondaryNodeQueue.field_d = jh.a(0, FriendListUi.desertNearSprite);
           Widget.field_x = jh.a(0, PowerUpWarning.desertMidSprite);
           pp.field_b = jh.a(0, OptionsScreen.desertFarSprite);
-          GzipInflater.desertCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
-          TableNameEntry.desertSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_segs", 2);
-          TextWidgetRenderer.desertCentreSprites[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.field_m);
+          GzipInflater.desertCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_caps", 2);
+          TableNameEntry.desertSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_segs", 2);
+          TextWidgetRenderer.desertCentreSprites[0] = pl.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.backgroundSpriteArchive);
           GzipInflater.desertCapsSprites[1] = Under13RegistrationNoticePanel.a(GzipInflater.desertCapsSprites[0], obfuscationGuard);
           TableNameEntry.desertSegsSprites[1] = Under13RegistrationNoticePanel.a(TableNameEntry.desertSegsSprites[0], false);
           TextWidgetRenderer.desertCentreSprites[1] = pl.a(-16371, TextWidgetRenderer.desertCentreSprites[0]);
@@ -114,7 +114,7 @@ final class DesertBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.desertBackgroundColors[colorIndex], 16777215);
             return;
           }
-          var7 = kd.a(this.sceneId, colorIndex, (byte) -74);
+          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             RankingsScreen.a(var7, 2, -13, pp.field_b, colorIndex, 102);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -129,7 +129,7 @@ final class DesertBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.desertBackgroundColors[colorIndex], 16777215);
           return;
         }
-        RasterCacheSurface var8 = kd.a(this.sceneId, colorIndex, (byte) -74);
+        RasterCacheSurface var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           RankingsScreen.a(var8, 2, -13, pp.field_b, colorIndex, 102);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

@@ -457,7 +457,7 @@ final class WidgetTheme {
           }
           task = platform.requestEnterFullscreen(refreshRate, -35, height, bitDepth, width);
           while (0 == task.status) {
-            wj.sleepMillis(-126, 10L);
+            BytePayloadRequest.sleepMillis(-126, 10L);
           }
           frame = (java.awt.Frame) (task.result);
           if (obfuscationGuard <= 80) {

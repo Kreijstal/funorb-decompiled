@@ -47,7 +47,7 @@ class UiComponent extends ba {
     RgbSprite sprite;
     boolean activeInside;
     NodeDeque children;
-    static ResourceArchive field_lb;
+    static ResourceArchive backgroundMusicTrackArchive;
     static FullscreenFailureKind fullscreenUnsupported;
     static RgbSprite field_ib;
     int selectedOffsetY;
@@ -527,7 +527,7 @@ class UiComponent extends ba {
         glowSequenceWords = null;
         if (param0 > 60) {
           field_mb = null;
-          field_lb = null;
+          backgroundMusicTrackArchive = null;
           return;
         }
     }

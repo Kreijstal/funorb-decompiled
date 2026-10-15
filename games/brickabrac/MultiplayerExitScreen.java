@@ -51,48 +51,48 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         return true;
     }
 
-    final static void a(int param0, int param1, ln param2) {
-        BitPacketBuffer var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        BitPacketBuffer var5 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void sendBytePayloadSubmission(int opcode, int obfuscationGuard, BytePayloadSubmission submission) {
+        BitPacketBuffer outgoingAlias = null;
+        RuntimeException failure = null;
+        int payloadStart = 0;
+        BitPacketBuffer outgoing = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String submissionSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          var5 = TextFieldValidator.outgoingPackets;
-          var3 = var5;
-          var5.writeCipheredOpcode(-13413, param0);
-          var5.position = var5.position + 1;
-          var4 = var5.position;
-          var5.writeByte(-125, 1);
-          if (null == param2.field_i) {
-            var5.writeByte(-11, 0);
+          outgoing = TextFieldValidator.outgoingPackets;
+          outgoingAlias = outgoing;
+          outgoing.writeCipheredOpcode(-13413, opcode);
+          outgoing.position = outgoing.position + 1;
+          payloadStart = outgoing.position;
+          outgoing.writeByte(-125, 1);
+          if (null == submission.payload) {
+            outgoing.writeByte(-11, 0);
           } else {
-            var5.writeByte(-108, param2.field_i.length);
-            var5.writeBytes(param2.field_i, -1, 0, param2.field_i.length);
+            outgoing.writeByte(-108, submission.payload.length);
+            outgoing.writeBytes(submission.payload, -1, 0, submission.payload.length);
           }
-          var5.appendCrc32(3, var4);
-          var5.position = var5.position - 4;
-          param2.field_m = var5.readInt(255);
-          var5.backfillByteLength((byte) 121, -var4 + var5.position);
-          if (param1 > 113) {
+          outgoing.appendCrc32(3, payloadStart);
+          outgoing.position = outgoing.position - 4;
+          submission.checksum = outgoing.readInt(255);
+          outgoing.backfillByteLength((byte) 121, -payloadStart + outgoing.position);
+          if (obfuscationGuard > 113) {
             return;
           }
           MultiplayerExitScreen.i(-46);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_8_0 = var3_ref;
-          stackIn_8_1 = new StringBuilder().append("gn.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_9_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("gn.G(").append(opcode).append(',').append(obfuscationGuard).append(',');
+          if (submission == null) {
+            submissionSummary = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            submissionSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(submissionSummary).append(')').toString());
         }
     }
 

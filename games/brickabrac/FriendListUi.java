@@ -331,7 +331,7 @@ final class FriendListUi {
         String spriteArchiveSummary = null;
         RuntimeException caughtFailure = null;
         try {
-          if (!ln.decodeSpritesFromArchive(-123, fileId, spriteArchive, groupId)) {
+          if (!BytePayloadSubmission.decodeSpritesFromArchive(-123, fileId, spriteArchive, groupId)) {
             unavailableFont = null;
             return (BinaryMaskFont) (unavailableFont);
           }

@@ -268,7 +268,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
               if (widget == this.backOrGuestButton) {
                 if (!this.retryMode) {
                   if (this.showGuestPlayButton) {
-                    ln.a(-107);
+                    BytePayloadSubmission.a(-107);
                   } else {
                     ResourceRequest.g(29);
                   }

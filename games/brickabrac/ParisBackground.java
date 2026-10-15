@@ -110,14 +110,14 @@ final class ParisBackground extends BackgroundScene {
         RuntimeException var2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!AchievementIcon.field_m.ensureGroupAvailableByName("paris", -28138)) {
+          if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("paris", -28138)) {
             return false;
           }
-          NinjaBackground.parisNearSprite = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.field_m);
-          QuickChatParameterType.parisMidSprite = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.field_m);
-          ToggleButtonWidget.parisFarSprite = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.field_m);
-          pl.parisSmallSprite = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.field_m);
-          BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.field_m);
+          NinjaBackground.parisNearSprite = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.backgroundSpriteArchive);
+          QuickChatParameterType.parisMidSprite = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.backgroundSpriteArchive);
+          ToggleButtonWidget.parisFarSprite = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.backgroundSpriteArchive);
+          pl.parisSmallSprite = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.backgroundSpriteArchive);
+          BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
           IntrusiveHashTable.field_i = jh.a(0, NinjaBackground.parisNearSprite);
           if (obfuscationGuard) {
             ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
@@ -151,7 +151,7 @@ final class ParisBackground extends BackgroundScene {
             decompiledSharedTail0 = (BrickABrac.field_J);
           }
           if (decompiledSharedTail0) {
-            var6 = kd.a(this.sceneId, colorIndex, (byte) -34);
+            var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -34);
             if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               StrongCacheEntry.a(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
               var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -419,7 +419,7 @@ final class ParisBackground extends BackgroundScene {
               return;
             }
           }
-          var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             StrongCacheEntry.a(0, ToggleButtonWidget.parisFarSprite, 1, 0, colorIndex, var6);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

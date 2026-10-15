@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends IntrusiveNode {
+final class BytePayloadRequest extends IntrusiveNode {
     final static void sleepMillis(int obfuscationGuard, long millis) {
         if (obfuscationGuard > -123) {
-          wj.sleepMillis(112, -29L);
+          BytePayloadRequest.sleepMillis(112, -29L);
           if (0L >= millis) {
             return;
           }
@@ -129,7 +129,7 @@ final class wj extends IntrusiveNode {
         }
     }
 
-    private wj() throws Throwable {
+    private BytePayloadRequest() throws Throwable {
         throw new Error();
     }
 

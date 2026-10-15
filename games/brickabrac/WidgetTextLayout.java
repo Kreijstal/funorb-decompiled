@@ -151,7 +151,7 @@ abstract class WidgetTextLayout {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = wj.a(-1, param2, '_', "");
+          param2 = BytePayloadRequest.a(-1, param2, '_', "");
           if (param1 != 73) {
             WidgetTextLayout.a(true);
           }

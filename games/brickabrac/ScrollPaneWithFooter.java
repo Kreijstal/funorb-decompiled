@@ -159,32 +159,32 @@ final class ScrollPaneWithFooter extends UiComponent {
         field_Rb = null;
     }
 
-    final static void b(int param0, int param1) {
-        IntrusiveNode var2 = null;
-        int var3 = 0;
-        ln var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        var3 = BrickABrac.field_J ? 1 : 0;
+    final static void resendBytePayloadOperations(int opcode, int obfuscationGuard) {
+        IntrusiveNode pendingRequest = null;
+        int gameFlag = 0;
+        BytePayloadSubmission submission = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 != 0) {
+          if (obfuscationGuard != 0) {
             return;
           }
-          var4 = (ln) (MidiSynthesizer.field_v.first(-28));
-          while (var4 != null) {
-            MultiplayerExitScreen.a(param0, 125, var4);
-            var4 = (ln) (MidiSynthesizer.field_v.next((byte) 116));
+          submission = (BytePayloadSubmission) (MidiSynthesizer.pendingBytePayloadSubmissions.first(-28));
+          while (submission != null) {
+            MultiplayerExitScreen.sendBytePayloadSubmission(opcode, 125, submission);
+            submission = (BytePayloadSubmission) (MidiSynthesizer.pendingBytePayloadSubmissions.next((byte) 116));
           }
-          var2 = EmailConfirmationValidator.field_q.first(-54);
-          while (var2 != null) {
-            CheckboxWidgetRenderer.a(param0, 92);
-            var2 = EmailConfirmationValidator.field_q.next((byte) 116);
+          pendingRequest = EmailConfirmationValidator.pendingBytePayloadRequests.first(-54);
+          while (pendingRequest != null) {
+            CheckboxWidgetRenderer.sendBytePayloadRequest(opcode, 92);
+            pendingRequest = EmailConfirmationValidator.pendingBytePayloadRequests.next((byte) 116);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2_ref), "hj.D(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "hj.D(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 

@@ -21,7 +21,7 @@ final class nk {
           fieldTemp$0 = CachedArchiveSource.field_p;
           CachedArchiveSource.field_p = CachedArchiveSource.field_p + 1;
           if (fieldTemp$0 >= 16) {
-            if (ln.field_k) {
+            if (BytePayloadSubmission.field_k) {
               TextFieldWidget.k(0);
             } else {
               ok.a(0);

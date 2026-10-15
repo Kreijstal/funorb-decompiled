@@ -7,7 +7,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
-          CheckboxWidgetRenderer.a(-34, 70);
+          CheckboxWidgetRenderer.sendBytePayloadRequest(-34, 70);
           ch.field_b = param0;
           return;
         }
@@ -190,12 +190,12 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
         }
     }
 
-    final static void a(int param0, int param1) {
-        BitPacketBuffer var2 = TextFieldValidator.outgoingPackets;
-        var2.writeCipheredOpcode(-13413, param0);
-        var2.writeByte(-119, 1);
-        var2.writeByte(-127, 0);
-        if (param1 >= 63) {
+    final static void sendBytePayloadRequest(int opcode, int obfuscationGuard) {
+        BitPacketBuffer outgoing = TextFieldValidator.outgoingPackets;
+        outgoing.writeCipheredOpcode(-13413, opcode);
+        outgoing.writeByte(-119, 1);
+        outgoing.writeByte(-127, 0);
+        if (obfuscationGuard >= 63) {
           return;
         }
         field_a = (String) null;

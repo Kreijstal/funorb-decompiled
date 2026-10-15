@@ -20,14 +20,14 @@ final class NinjaBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (!AchievementIcon.field_m.ensureGroupAvailableByName("ninja", -28138)) {
+        if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("ninja", -28138)) {
           return false;
         }
-        LegacyUtf8Decoder.ninjaNearSprite = pl.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.field_m);
-        ap.ninjaMidSprite = pl.loadRgbSpriteByName("ninja", "ninja_mid", (byte) -128, AchievementIcon.field_m);
-        hn.ninjaFarSprite = pl.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.field_m);
-        hc.ninjaSmallSprite = pl.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.field_m);
-        ObjectHistoryBuffer.ninjaCharacterSprite = pl.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.field_m);
+        LegacyUtf8Decoder.ninjaNearSprite = pl.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.backgroundSpriteArchive);
+        ap.ninjaMidSprite = pl.loadRgbSpriteByName("ninja", "ninja_mid", (byte) -128, AchievementIcon.backgroundSpriteArchive);
+        hn.ninjaFarSprite = pl.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
+        hc.ninjaSmallSprite = pl.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
+        ObjectHistoryBuffer.ninjaCharacterSprite = pl.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.backgroundSpriteArchive);
         nk.field_h = jh.a(0, LegacyUtf8Decoder.ninjaNearSprite);
         SocialListEntry.field_Zb = jh.a(0, ap.ninjaMidSprite);
         rh.field_c = jh.a(0, hn.ninjaFarSprite);
@@ -47,7 +47,7 @@ final class NinjaBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, VerticalScrollbar.ninjaBackgroundColors[colorIndex], 0);
           return;
         }
-        RasterCacheSurface var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+        RasterCacheSurface var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           aa.a(0, hn.ninjaFarSprite, true, colorIndex, var6, 1);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -115,7 +115,7 @@ final class NinjaBackground extends BackgroundScene {
             var5 = (ResourceArchive) null;
             NinjaBackground.loadRgbSprites(-20, -51, (ResourceArchive) null, true);
           }
-          if (ln.decodeSpritesFromArchive(-97, fileId, archive, groupId)) {
+          if (BytePayloadSubmission.decodeSpritesFromArchive(-97, fileId, archive, groupId)) {
             stackIn_6_0 = ClientException.buildRgbSprites(-835);
             return stackIn_6_0;
           }
@@ -159,7 +159,7 @@ final class NinjaBackground extends BackgroundScene {
           }
           return;
         }
-        RasterCacheSurface var8 = kd.a(this.sceneId, colorIndex, (byte) 120);
+        RasterCacheSurface var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 120);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           aa.a(0, rh.field_c, true, colorIndex, var8, 2);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -205,7 +205,7 @@ final class NinjaBackground extends BackgroundScene {
         if (TooltipSprite.field_p) {
           return InteractiveGameClient.a(param1, 102, param0);
         }
-        if (ln.a(param1, 11, param0)) {
+        if (BytePayloadSubmission.a(param1, 11, param0)) {
           return true;
         }
         if (PlayerNameChooserPanel.field_I) {

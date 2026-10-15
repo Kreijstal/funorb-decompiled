@@ -147,7 +147,7 @@ final class ja {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3) {
-            stackIn_4_0 = ln.a(param1.pack, param0, true, param2);
+            stackIn_4_0 = BytePayloadSubmission.combineLevelAttributes(param1.pack, param0, true, param2);
             return stackIn_4_0;
           }
           stackIn_2_0 = -123;

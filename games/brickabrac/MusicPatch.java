@@ -182,12 +182,12 @@ final class MusicPatch extends IntrusiveNode {
 
     final static void a(int param0, String param1, boolean param2) {
         try {
-          ln.field_l = param2;
+          BytePayloadSubmission.field_l = param2;
           if (param0 != 0) {
             pointerX = 121;
           }
           t.field_g = true;
-          StrongCacheEntry.field_I = new AccountMessageDialog(ResourceArchive.field_f, wm.field_a, param1, NanoGameClock.field_l, ln.field_l);
+          StrongCacheEntry.field_I = new AccountMessageDialog(ResourceArchive.field_f, wm.field_a, param1, NanoGameClock.field_l, BytePayloadSubmission.field_l);
           ResourceArchive.field_f.pushLayer(-80, StrongCacheEntry.field_I);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

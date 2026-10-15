@@ -33,7 +33,7 @@ final class PcmPlayerService implements Runnable {
                     player.pump();
                   }
                 }
-                wj.sleepMillis(-128, 10L);
+                BytePayloadRequest.sleepMillis(-128, 10L);
                 unusedEventSource = (Object) null;
                 IntNode.pumpPlatformEvents(-4317, this.platformServices, (Object) null);
               }

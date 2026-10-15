@@ -14,7 +14,7 @@ abstract class GameClock {
     final int waitAndAdvance(long tickDurationNanos, byte obfuscationGuard) {
         long var4 = this.getSleepMillis((byte) 107);
         if (var4 > 0L) {
-          wj.sleepMillis(-124, var4);
+          BytePayloadRequest.sleepMillis(-124, var4);
           if (obfuscationGuard == -71) {
             return this.advanceCycles(15, tickDurationNanos);
           }

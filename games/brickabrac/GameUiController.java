@@ -50,7 +50,7 @@ final class GameUiController implements GameUiLifecycle {
         KeyboardInput.a(new BrickGameLayerController(), 0);
         VolcanicBackground.g(0);
         CanvasResizeController.initializeFireworkSpawnArea(240, 0, 640, 0, -6532);
-        GameRenderAudioHelpers.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
+        GameRenderAudioHelpers.initializeBackgroundScenes(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
         Widget.initializeDiagnosticOverlay(1, PasswordFieldRenderer.field_D);
         LoginPanel.h((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
@@ -125,7 +125,7 @@ final class GameUiController implements GameUiLifecycle {
               if (OptionsScreen.progressRequests[var3].values[0] > hh.unlockedLevelCounts[var3]) {
                 hh.unlockedLevelCounts[var3] = OptionsScreen.progressRequests[var3].values[0];
               }
-              jj.field_d = jj.field_d | ln.a(DateFieldsWidget.field_L[var3], 0, true, hh.unlockedLevelCounts[var3]);
+              jj.field_d = jj.field_d | BytePayloadSubmission.combineLevelAttributes(DateFieldsWidget.field_L[var3], 0, true, hh.unlockedLevelCounts[var3]);
               if (!DelayedPacket.c(obfuscationGuard ^ 27)) {
                 hh.unlockedLevelCounts[var3] = 0;
               } else {

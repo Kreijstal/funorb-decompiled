@@ -10,11 +10,11 @@ final class IterableIntrusiveHashTable implements Iterable {
     static String field_g;
     IntrusiveNode[] buckets;
     int bucketCount;
-    static ResourceArchive field_a;
+    static ResourceArchive backgroundMusicPatchArchive;
     static UiComponent field_b;
 
     public static void a(int param0) {
-        field_a = null;
+        backgroundMusicPatchArchive = null;
         field_g = null;
         field_b = null;
         if (param0 != 24968) {

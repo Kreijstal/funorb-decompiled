@@ -10,47 +10,47 @@ final class QuickChatCategoryRegistry {
     private ResourceArchive standardArchive;
     private ResourceArchive extendedArchive;
 
-    final static RasterCacheSurface a(int param0, int param1, int param2, NodeDeque param3) {
-        Object var4 = null;
-        RasterCacheSurface var5 = null;
-        NodeDeque var6 = null;
-        Object stackIn_11_0 = null;
-        Object stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static RasterCacheSurface selectCachedSurface(int obfuscationGuard, int cacheKeyOne, int cacheKeyTwo, NodeDeque pool) {
+        Object selectedOrFailure = null;
+        RasterCacheSurface candidate = null;
+        NodeDeque unusedPool = null;
+        Object selectedSurface = null;
+        Object failureContext = null;
+        StringBuilder contextBuilder = null;
+        String poolSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          var4 = null;
-          if (param0 != 0) {
-            var6 = (NodeDeque) null;
-            QuickChatCategoryRegistry.a(8, 113, -81, (NodeDeque) null);
+          selectedOrFailure = null;
+          if (obfuscationGuard != 0) {
+            unusedPool = (NodeDeque) null;
+            QuickChatCategoryRegistry.selectCachedSurface(8, 113, -81, (NodeDeque) null);
           }
-          var5 = (RasterCacheSurface) (param3.first(-15));
-          while (var5 != null) {
-            if (!var5.matchesCacheKeys((byte) -84, param1, param2)) {
-              var5 = (RasterCacheSurface) (param3.next((byte) 116));
+          candidate = (RasterCacheSurface) (pool.first(-15));
+          while (candidate != null) {
+            if (!candidate.matchesCacheKeys((byte) -84, cacheKeyOne, cacheKeyTwo)) {
+              candidate = (RasterCacheSurface) (pool.next((byte) 116));
               continue;
             }
-            var4 = var5;
+            selectedOrFailure = candidate;
             break;
           }
-          if (var4 == null) {
-            var4 = (RasterCacheSurface) (param3.removeLast(127));
+          if (selectedOrFailure == null) {
+            selectedOrFailure = (RasterCacheSurface) (pool.removeLast(127));
           }
-          param3.addFirst(true, (IntrusiveNode) (var4));
-          stackIn_11_0 = var4;
-          return (RasterCacheSurface) (stackIn_11_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_14_0 = var4;
-          stackIn_14_1 = new StringBuilder().append("so.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_15_2 = "null";
+          pool.addFirst(true, (IntrusiveNode) (selectedOrFailure));
+          selectedSurface = selectedOrFailure;
+          return (RasterCacheSurface) (selectedSurface);
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          selectedOrFailure = caughtFailure;
+          failureContext = selectedOrFailure;
+          contextBuilder = new StringBuilder().append("so.B(").append(obfuscationGuard).append(',').append(cacheKeyOne).append(',').append(cacheKeyTwo).append(',');
+          if (pool == null) {
+            poolSummary = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            poolSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) (failureContext), ((StringBuilder) (Object) contextBuilder).append(poolSummary).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class QuickChatCategoryRegistry {
           AccountMessageDialog.spaceSmallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
           MultiValueSliderWidget.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
           ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
-          ln.field_j = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
+          BytePayloadSubmission.smallRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.field_l = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
           LoginMethodPreference.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
           pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
@@ -282,8 +282,8 @@ final class QuickChatCategoryRegistry {
             TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].a(0, 0);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 79);
-          for (var10_intLifetime7 = 0; var10_intLifetime7 < ln.field_j.length; var10_intLifetime7++) {
-            ln.field_j[var10_intLifetime7].trimTransparentBorders();
+          for (var10_intLifetime7 = 0; var10_intLifetime7 < BytePayloadSubmission.smallRosetteSprites.length; var10_intLifetime7++) {
+            BytePayloadSubmission.smallRosetteSprites[var10_intLifetime7].trimTransparentBorders();
           }
           for (var10_intLifetime8 = 0; IntHistoryBuffer.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
             IntHistoryBuffer.field_l[var10_intLifetime8].trimTransparentBorders();

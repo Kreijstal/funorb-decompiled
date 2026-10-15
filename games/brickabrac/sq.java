@@ -21,10 +21,10 @@ final class sq {
           while (true) {
             var3 = param0.a(10, param2);
             while (var3.status == 0) {
-              wj.sleepMillis(param1 ^ 20898, 10L);
+              BytePayloadRequest.sleepMillis(param1 ^ 20898, 10L);
             }
             if (var3.status != 1) {
-              wj.sleepMillis(-128, 100L);
+              BytePayloadRequest.sleepMillis(-128, 100L);
               continue;
             }
             break;

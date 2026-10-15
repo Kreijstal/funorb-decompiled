@@ -298,7 +298,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
             field_H = (AccountResponse) null;
           }
           sm.field_b = AccountResponse.field_b;
-          ln.field_k = param1 ? true : false;
+          BytePayloadSubmission.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "he.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

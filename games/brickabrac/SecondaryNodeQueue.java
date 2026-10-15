@@ -141,7 +141,7 @@ final class SecondaryNodeQueue {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ln.decodeSpritesFromArchive(-105, fileId, archive, groupId)) {
+          if (!BytePayloadSubmission.decodeSpritesFromArchive(-105, fileId, archive, groupId)) {
             stackIn_2_0 = null;
             return (IndexedSprite) (stackIn_2_0);
           }

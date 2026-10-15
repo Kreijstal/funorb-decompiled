@@ -43,7 +43,7 @@ final class IntNode extends IntrusiveNode {
           }
           for (var3_int = 0; var3_int < 50; var3_int++) {
             if (null != services.eventQueue.peekEvent()) {
-              wj.sleepMillis(obfuscationGuard + 4192, 1L);
+              BytePayloadRequest.sleepMillis(obfuscationGuard + 4192, 1L);
               continue;
             }
             break;

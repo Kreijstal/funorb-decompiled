@@ -5,7 +5,7 @@ final class JungleBackground extends BackgroundScene {
     static RgbSprite[][] field_v;
     static String field_t;
     static IsaacGenerator fireworkRandom;
-    static NodeDeque field_s;
+    static NodeDeque backgroundSurfacePool960;
     static String[] field_u;
 
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
@@ -16,7 +16,7 @@ final class JungleBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -99)) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, Bzip2State.jungleBackgroundColors[colorIndex], 16777215);
           if (BrickABrac.field_J) {
-            var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+            var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -24,7 +24,7 @@ final class JungleBackground extends BackgroundScene {
             ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
           }
         } else {
-          var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -889,7 +889,7 @@ final class JungleBackground extends BackgroundScene {
         field_t = null;
         field_u = null;
         field_v = (RgbSprite[][]) null;
-        field_s = null;
+        backgroundSurfacePool960 = null;
         if (param0) {
           field_v = (RgbSprite[][]) null;
         }
@@ -901,7 +901,7 @@ final class JungleBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -95)) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, Bzip2State.jungleBackgroundColors[colorIndex], 16777215);
           if (BrickABrac.field_J) {
-            var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
+            var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -909,7 +909,7 @@ final class JungleBackground extends BackgroundScene {
             ProxyAuthenticationRequiredException.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
           }
         } else {
-          var7 = kd.a(this.sceneId, colorIndex, (byte) -121);
+          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -922,20 +922,20 @@ final class JungleBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (!AchievementIcon.field_m.ensureGroupAvailableByName("jungle", -28138)) {
+        if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("jungle", -28138)) {
           return false;
         }
-        ch.jungleNearSprite = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.field_m);
-        MultiValueSliderRenderer.jungleMidSprite = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.field_m);
-        np.jungleFarSprite = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.field_m);
-        Brick.jungleSmallSprite = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.field_m);
+        ch.jungleNearSprite = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.backgroundSpriteArchive);
+        MultiValueSliderRenderer.jungleMidSprite = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.backgroundSpriteArchive);
+        np.jungleFarSprite = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.backgroundSpriteArchive);
+        Brick.jungleSmallSprite = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.backgroundSpriteArchive);
         CacheEntry.field_D = jh.a(0, ch.jungleNearSprite);
         HuffmanCodec.field_e = jh.a(0, MultiValueSliderRenderer.jungleMidSprite);
         WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
-        WidgetTextLayout.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.field_m);
-        DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_caps", 2);
-        DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.field_m, "jungle_segs", 2);
-        StatefulWidgetRenderer.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.field_m);
+        WidgetTextLayout.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.backgroundSpriteArchive);
+        DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_caps", 2);
+        DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_segs", 2);
+        StatefulWidgetRenderer.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.backgroundSpriteArchive);
         DualLinkNode.jungleCapsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkNode.jungleCapsSprites[0], false);
         DualLinkIterator.jungleSegsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
         StatefulWidgetRenderer.jungleCentreSprites[1] = pl.a(-16371, StatefulWidgetRenderer.jungleCentreSprites[0]);
@@ -945,6 +945,6 @@ final class JungleBackground extends BackgroundScene {
     static {
         field_t = "Accept";
         field_u = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        field_s = new NodeDeque();
+        backgroundSurfacePool960 = new NodeDeque();
     }
 }

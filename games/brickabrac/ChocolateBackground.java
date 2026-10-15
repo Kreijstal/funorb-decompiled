@@ -33,7 +33,7 @@ final class ChocolateBackground extends BackgroundScene {
             Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
             return;
           }
-          var7 = kd.a(this.sceneId, colorIndex, (byte) -50);
+          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             SoundPlayback.a(-35, 26746, var7, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -48,7 +48,7 @@ final class ChocolateBackground extends BackgroundScene {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
           return;
         }
-        RasterCacheSurface var8 = kd.a(this.sceneId, colorIndex, (byte) -50);
+        RasterCacheSurface var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           SoundPlayback.a(-35, 26746, var8, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -69,26 +69,26 @@ final class ChocolateBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (!AchievementIcon.field_m.ensureGroupAvailableByName("chocolate", -28138)) {
+        if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("chocolate", -28138)) {
           return false;
         }
-        nl.chocolateNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.field_m);
-        chocolateMidSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.field_m);
-        CappedUrlRequest.chocolateSpiresSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.field_m);
-        QuickChatPhraseRegistry.chocolateFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.field_m);
+        nl.chocolateNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.backgroundSpriteArchive);
+        chocolateMidSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.backgroundSpriteArchive);
+        CappedUrlRequest.chocolateSpiresSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.backgroundSpriteArchive);
+        QuickChatPhraseRegistry.chocolateFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
         QuickChatParameterType.field_i = jh.a(0, nl.chocolateNearSprite);
         FullscreenFailureDialog.field_hb = jh.a(0, chocolateMidSprite);
         StatefulWidgetRenderer.field_w = jh.a(0, CappedUrlRequest.chocolateSpiresSprite);
-        u.chocolateSmallFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.field_m);
-        GameClock.chocolateSmallNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.field_m);
-        MeshAttributeRecord.chocolateCharacterSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.field_m);
-        Brick.chocCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_caps", 2);
-        TextChoiceDialogHitTest.chocSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_segs", 2);
-        IntKeyIndex.chocCentreSprites[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.field_m);
+        u.chocolateSmallFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.backgroundSpriteArchive);
+        GameClock.chocolateSmallNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.backgroundSpriteArchive);
+        MeshAttributeRecord.chocolateCharacterSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.backgroundSpriteArchive);
+        Brick.chocCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_caps", 2);
+        TextChoiceDialogHitTest.chocSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_segs", 2);
+        IntKeyIndex.chocCentreSprites[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.backgroundSpriteArchive);
         Brick.chocCapsSprites[1] = Under13RegistrationNoticePanel.a(Brick.chocCapsSprites[0], obfuscationGuard);
         TextChoiceDialogHitTest.chocSegsSprites[1] = Under13RegistrationNoticePanel.a(TextChoiceDialogHitTest.chocSegsSprites[0], obfuscationGuard);
         IntKeyIndex.chocCentreSprites[1] = pl.a(-16371, IntKeyIndex.chocCentreSprites[0]);
-        NameEntryPopup.chocLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.field_m, "choc_lever", 2);
+        NameEntryPopup.chocLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_lever", 2);
         return true;
     }
 
@@ -141,7 +141,7 @@ final class ChocolateBackground extends BackgroundScene {
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var6 = null;
         if (this.hasSprites((byte) -112)) {
-          var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             SoundPlayback.a(0, 26746, var6, colorIndex, 1, QuickChatPhraseRegistry.chocolateFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

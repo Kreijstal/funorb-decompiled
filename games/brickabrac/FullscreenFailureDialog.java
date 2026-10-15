@@ -251,7 +251,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
 
     final static void l(int param0) {
         ArchiveFetchClient.a(true, ReportAbuseDialog.field_cc, VerticalScrollbar.field_Qb, 2);
-        ln.field_l = true;
+        BytePayloadSubmission.field_l = true;
         int var1 = -31 / ((-11 - param0) / 62);
     }
 

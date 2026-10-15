@@ -408,24 +408,24 @@ final class GameRenderAudioHelpers {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, ResourceArchive param3, SoundCache param4, ResourceArchive param5, ResourceArchive param6) {
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        StringBuilder stackIn_26_1 = null;
-        String stackIn_27_2 = null;
-        StringBuilder stackIn_30_1 = null;
-        String stackIn_31_2 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_35_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
+    final static void initializeBackgroundScenes(ResourceArchive musicTrackArchive, ResourceArchive soundEffectArchive, int obfuscationGuard, ResourceArchive musicPatchArchive, SoundCache soundCache, ResourceArchive sceneSpriteArchive, ResourceArchive musicSampleArchive) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String trackArchiveSummary = null;
+        StringBuilder trackContextBuilder = null;
+        String effectArchiveSummary = null;
+        StringBuilder effectContextBuilder = null;
+        String patchArchiveSummary = null;
+        StringBuilder patchContextBuilder = null;
+        String soundCacheSummary = null;
+        StringBuilder cacheContextBuilder = null;
+        String spriteArchiveSummary = null;
+        StringBuilder spriteContextBuilder = null;
+        String sampleArchiveSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
-          ln.a(param6, param4, param0, param5, param1, param2 ^ -24870, param3);
+          BytePayloadSubmission.initializeBackgroundResources(musicSampleArchive, soundCache, musicTrackArchive, sceneSpriteArchive, soundEffectArchive, obfuscationGuard ^ -24870, musicPatchArchive);
           BackgroundRegistry.scenes[1] = (BackgroundScene) ((Object) new ArcticBackground(1, "BaB_arctic", "BaB_block_arctic", 6));
           BackgroundRegistry.scenes[2] = (BackgroundScene) ((Object) new ChocolateBackground(2, "BaB_chocolate", "BaB_block_chocolate", 8));
           BackgroundRegistry.scenes[3] = (BackgroundScene) ((Object) new ConstructionBackground(3, "BaB_construction", "BaB_block_construction", 8));
@@ -435,61 +435,61 @@ final class GameRenderAudioHelpers {
           BackgroundRegistry.scenes[8] = (BackgroundScene) ((Object) new SpaceBackground(8, "BaB_space", "BaB_block_space", 8));
           BackgroundRegistry.scenes[9] = (BackgroundScene) ((Object) new VolcanicBackground(9, "BaB_volcano", "BaB_block_volcano", 6));
           BackgroundRegistry.scenes[10] = (BackgroundScene) ((Object) new UnderwaterBackground(10, "BaB_underthesea", "BaB_block_underwater", 5));
-          boolean decompiledSharedTail0 = !(!LevelPackCard.hasFeatureBit(0, param2 ^ -24881));
-          if (!decompiledSharedTail0) {
+          boolean useHalloweenScene = !(!LevelPackCard.hasFeatureBit(0, obfuscationGuard ^ -24881));
+          if (!useHalloweenScene) {
             BackgroundRegistry.scenes[5] = (BackgroundScene) ((Object) new FarmBackground(5, "BaB_farmyard", "BaB_block_farmyard", 7));
-            decompiledSharedTail0 = (BrickABrac.field_J);
+            useHalloweenScene = (BrickABrac.field_J);
           }
-          if (decompiledSharedTail0) {
+          if (useHalloweenScene) {
             BackgroundRegistry.scenes[5] = (BackgroundScene) ((Object) new HalloweenBackground(5, "BaB_halloween", "BaB_block_halloween", 8));
           }
-          if (param2 != 24876) {
+          if (obfuscationGuard != 24876) {
             GameRenderAudioHelpers.a((byte) 96);
           }
           BackgroundRegistry.scenes[11] = (BackgroundScene) ((Object) new NinjaBackground(11, "BAB_ninja", "BaB_block_ninja", 7));
           OpacityWidget.pendingMusicLoads = 11;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_14_0 = var7;
-          stackIn_14_1 = new StringBuilder().append("bm.B(");
-          if (param0 == null) {
-            stackIn_15_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("bm.B(");
+          if (musicTrackArchive == null) {
+            trackArchiveSummary = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            trackArchiveSummary = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param1 == null) {
-            stackIn_19_2 = "null";
+          trackContextBuilder = ((StringBuilder) (Object) contextBuilder).append(trackArchiveSummary).append(',');
+          if (soundEffectArchive == null) {
+            effectArchiveSummary = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            effectArchiveSummary = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_23_2 = "null";
+          effectContextBuilder = ((StringBuilder) (Object) trackContextBuilder).append(effectArchiveSummary).append(',').append(obfuscationGuard).append(',');
+          if (musicPatchArchive == null) {
+            patchArchiveSummary = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            patchArchiveSummary = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
-          if (param4 == null) {
-            stackIn_27_2 = "null";
+          patchContextBuilder = ((StringBuilder) (Object) effectContextBuilder).append(patchArchiveSummary).append(',');
+          if (soundCache == null) {
+            soundCacheSummary = "null";
           } else {
-            stackIn_27_2 = "{...}";
+            soundCacheSummary = "{...}";
           }
-          stackIn_30_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
-          if (param5 == null) {
-            stackIn_31_2 = "null";
+          cacheContextBuilder = ((StringBuilder) (Object) patchContextBuilder).append(soundCacheSummary).append(',');
+          if (sceneSpriteArchive == null) {
+            spriteArchiveSummary = "null";
           } else {
-            stackIn_31_2 = "{...}";
+            spriteArchiveSummary = "{...}";
           }
-          stackIn_34_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
-          if (param6 == null) {
-            stackIn_35_2 = "null";
+          spriteContextBuilder = ((StringBuilder) (Object) cacheContextBuilder).append(spriteArchiveSummary).append(',');
+          if (musicSampleArchive == null) {
+            sampleArchiveSummary = "null";
           } else {
-            stackIn_35_2 = "{...}";
+            sampleArchiveSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) spriteContextBuilder).append(sampleArchiveSummary).append(')').toString());
         }
     }
 

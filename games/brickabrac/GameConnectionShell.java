@@ -265,7 +265,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             ui.a(5, (byte) 115);
           }
           if (uf.enabledCommonPackets[5]) {
-            ScrollPaneWithFooter.b(6, 0);
+            ScrollPaneWithFooter.resendBytePayloadOperations(6, 0);
           }
           if (uf.enabledCommonPackets[6]) {
             CanvasResizeController.resendPendingRankingsRequests((byte) 119, 7);
@@ -553,7 +553,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                       ValidationIconWidget.handleRankingsResponse(false);
                     }
                   } else {
-                    MenuSelection.f((byte) -71);
+                    MenuSelection.receiveBytePayloadReply((byte) -71);
                   }
                 }
               } else {

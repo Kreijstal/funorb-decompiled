@@ -19,7 +19,7 @@ final class ll {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = wj.a(-1, param2, '_', "");
+          param2 = BytePayloadRequest.a(-1, param2, '_', "");
           var3 = ScreenshotViewer.a(73, param0);
           if (param1 <= 117) {
             field_e = (UiComponent) null;

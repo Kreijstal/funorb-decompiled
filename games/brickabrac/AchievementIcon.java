@@ -11,7 +11,7 @@ final class AchievementIcon extends IntrusiveNode {
     int remainingOffset;
     static String field_l;
     int transitionKeepMask;
-    static ResourceArchive field_m;
+    static ResourceArchive backgroundSpriteArchive;
     int achievementId;
     static String field_o;
     private boolean thumbnailIsPlaceholder;
@@ -45,7 +45,7 @@ final class AchievementIcon extends IntrusiveNode {
     public static void d(int param0) {
         field_s = null;
         field_o = null;
-        field_m = null;
+        backgroundSpriteArchive = null;
         if (param0 == 0) {
           field_l = null;
           chatHistoryPane = null;

@@ -72,7 +72,7 @@ final class gr {
     final static void b(int param0, int param1) {
         MusicCrossfadeStream.field_C = param0;
         if (MusicCrossfadeStream.field_C != 1) {
-          ArchiveNetworkClient.field_s = ln.field_j;
+          ArchiveNetworkClient.field_s = BytePayloadSubmission.smallRosetteSprites;
           WidgetLayer.field_J = UiComponent.field_ib;
           FullscreenFailureKind.field_c = kp.field_e;
           field_c = PlayerInputBatch.field_i;

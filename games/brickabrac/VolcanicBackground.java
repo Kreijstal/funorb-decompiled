@@ -47,19 +47,19 @@ final class VolcanicBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (!AchievementIcon.field_m.ensureGroupAvailableByName("volcanic", -28138)) {
+        if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("volcanic", -28138)) {
           return false;
         }
-        RasterCacheSurface.volcanicNearSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.field_m);
-        WidgetLayerStack.volcanicMidSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.field_m);
-        ByteArrayNode.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.field_m);
-        mc.volcanicSmallSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.field_m);
+        RasterCacheSurface.volcanicNearSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.backgroundSpriteArchive);
+        WidgetLayerStack.volcanicMidSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.backgroundSpriteArchive);
+        ByteArrayNode.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.backgroundSpriteArchive);
+        mc.volcanicSmallSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.backgroundSpriteArchive);
         NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
         NameEntryPopup.field_Sb = jh.a(0, WidgetLayerStack.volcanicMidSprite);
         RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
-        CacheIoWorker.volcanicCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_caps", 2);
-        np.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.field_m, "volcanic_segs", 2);
-        LevelList.volcanicCentreSprites[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.field_m);
+        CacheIoWorker.volcanicCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_caps", 2);
+        np.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_segs", 2);
+        LevelList.volcanicCentreSprites[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.backgroundSpriteArchive);
         CacheIoWorker.volcanicCapsSprites[1] = Under13RegistrationNoticePanel.a(CacheIoWorker.volcanicCapsSprites[0], false);
         np.volcanicSegsSprites[1] = Under13RegistrationNoticePanel.a(np.volcanicSegsSprites[0], obfuscationGuard);
         LevelList.volcanicCentreSprites[1] = pl.a(-16371, LevelList.volcanicCentreSprites[0]);
@@ -99,7 +99,7 @@ final class VolcanicBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -92)) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, hh.volcanicBackgroundColors[colorIndex], 10792131);
         } else {
-          var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             BitPacketBuffer.a(ByteArrayNode.volcanicFarSprite, var6, colorIndex, 1, (byte) 18, 0);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -190,7 +190,7 @@ final class VolcanicBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -120)) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, hh.volcanicBackgroundColors[colorIndex], 10792131);
         } else {
-          var6 = kd.a(this.sceneId, colorIndex, (byte) -111);
+          var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -111);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             BitPacketBuffer.a(RectangleBody.field_p, var6, colorIndex, 2, (byte) 119, -14);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

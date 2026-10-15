@@ -76,7 +76,7 @@ final class ConstructionBackground extends BackgroundScene {
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var6 = null;
         if (this.hasSprites((byte) -116)) {
-          var6 = kd.a(this.sceneId, colorIndex, (byte) -47);
+          var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -47);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             FullscreenFailureKind.a(-10, colorIndex, var6, 2, -119, DisplayModeInfo.field_g);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -98,7 +98,7 @@ final class ConstructionBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -124)) {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 640, 480, 16777215);
         } else {
-          var6 = PowerUp.a(this.sceneId, colorIndex, -20777);
+          var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             FullscreenFailureKind.a(0, colorIndex, var6, 1, 114, ValidatedTextFieldWidget.constructionFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -108,21 +108,21 @@ final class ConstructionBackground extends BackgroundScene {
     }
 
     final boolean loadSprites(boolean obfuscationGuard) {
-        if (!AchievementIcon.field_m.ensureGroupAvailableByName("construct", -28138)) {
+        if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("construct", -28138)) {
           return false;
         }
-        ValidatedTextFieldWidget.constructionNearSprite = pl.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.field_m);
-        AchievementBrowserScreen.constructionMidSprite = pl.loadRgbSpriteByName("construct", "construction_mid", (byte) 102, AchievementIcon.field_m);
-        ValidatedTextFieldWidget.constructionFarSprite = pl.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.field_m);
-        IntNode.constructionSmokeSprite = pl.loadRgbSpriteByName("construct", "construction_smoke", (byte) -128, AchievementIcon.field_m);
-        MenuSelection.constructionSmallSprite = pl.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.field_m);
+        ValidatedTextFieldWidget.constructionNearSprite = pl.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.backgroundSpriteArchive);
+        AchievementBrowserScreen.constructionMidSprite = pl.loadRgbSpriteByName("construct", "construction_mid", (byte) 102, AchievementIcon.backgroundSpriteArchive);
+        ValidatedTextFieldWidget.constructionFarSprite = pl.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.backgroundSpriteArchive);
+        IntNode.constructionSmokeSprite = pl.loadRgbSpriteByName("construct", "construction_smoke", (byte) -128, AchievementIcon.backgroundSpriteArchive);
+        MenuSelection.constructionSmallSprite = pl.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.backgroundSpriteArchive);
         t.field_a = jh.a(0, ValidatedTextFieldWidget.constructionNearSprite);
         IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.constructionMidSprite);
         DisplayModeInfo.field_g = jh.a(0, ValidatedTextFieldWidget.constructionFarSprite);
         er.field_d = jh.a(0, IntNode.constructionSmokeSprite);
-        rd.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_caps", 2);
-        NodeDequeCursor.constructionSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_segs", 2);
-        OpacityWidget.constructionCentreSprites[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.field_m);
+        rd.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_caps", 2);
+        NodeDequeCursor.constructionSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_segs", 2);
+        OpacityWidget.constructionCentreSprites[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.backgroundSpriteArchive);
         rd.constructionCapsSprites[1] = Under13RegistrationNoticePanel.a(rd.constructionCapsSprites[0], false);
         NodeDequeCursor.constructionSegsSprites[1] = Under13RegistrationNoticePanel.a(NodeDequeCursor.constructionSegsSprites[0], obfuscationGuard);
         OpacityWidget.constructionCentreSprites[1] = pl.a(-16371, OpacityWidget.constructionCentreSprites[0]);

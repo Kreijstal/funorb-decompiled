@@ -263,7 +263,7 @@ final class GameplayScreen extends GameScreen {
             } else {
               if (TabbedPane.currentBackground != null &&
                 TabbedPane.currentBackground.musicReady) {
-                wj.a(1, true, TabbedPane.currentBackground.c(-109), false, 1, TabbedPane.currentBackground.musicData, true);
+                BytePayloadRequest.a(1, true, TabbedPane.currentBackground.c(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
                 IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
               }

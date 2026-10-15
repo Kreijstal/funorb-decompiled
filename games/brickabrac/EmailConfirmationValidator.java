@@ -9,7 +9,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
     private boolean emailAvailable;
     static NineSliceFrame textChoiceSelectedButtonFrame;
     static String field_r;
-    static NodeDeque field_q;
+    static NodeDeque pendingBytePayloadRequests;
 
     final static java.applet.Applet e(byte param0) {
         if (null != CacheEntry.field_x) {
@@ -112,13 +112,13 @@ final class EmailConfirmationValidator extends TextFieldValidator {
 
     public static void g(int param0) {
         if (param0 != 0) {
-          field_q = (NodeDeque) null;
+          pendingBytePayloadRequests = (NodeDeque) null;
         }
         field_r = null;
         textChoiceSelectedButtonFrame = null;
         field_m = null;
         field_k = null;
-        field_q = null;
+        pendingBytePayloadRequests = null;
     }
 
     final static void e(int param0) {
@@ -196,6 +196,6 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         field_r = "Match by...";
         field_m = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
         field_k = new LoginMethodPreference("email");
-        field_q = new NodeDeque();
+        pendingBytePayloadRequests = new NodeDeque();
     }
 }

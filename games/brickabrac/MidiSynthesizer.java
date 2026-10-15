@@ -12,7 +12,7 @@ final class MidiSynthesizer extends AudioStream {
     private int masterGain;
     private MusicVoice[][] voicesByGroup;
     private int[] channelPan;
-    static NodeDeque field_v;
+    static NodeDeque pendingBytePayloadSubmissions;
     private int[] channelGain;
     private int[] channelExpression;
     private MidiFileReader midiReader;
@@ -281,7 +281,7 @@ final class MidiSynthesizer extends AudioStream {
           }
         }
         if (param0 != 0) {
-          field_v = (NodeDeque) null;
+          pendingBytePayloadSubmissions = (NodeDeque) null;
         }
     }
 
@@ -1189,7 +1189,7 @@ final class MidiSynthesizer extends AudioStream {
         }
         field_u = null;
         field_q = null;
-        field_v = null;
+        pendingBytePayloadSubmissions = null;
         field_o = null;
     }
 
@@ -1425,7 +1425,7 @@ final class MidiSynthesizer extends AudioStream {
 
     static {
         field_o = "Creating your account";
-        field_v = new NodeDeque();
+        pendingBytePayloadSubmissions = new NodeDeque();
         field_u = "Tips";
         field_q = "Create your own free Jagex account";
     }

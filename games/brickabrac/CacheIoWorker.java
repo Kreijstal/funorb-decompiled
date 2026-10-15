@@ -347,7 +347,7 @@ final class CacheIoWorker implements Runnable {
         try {
           var2 = param0.startThread(5, (Runnable) (this), (byte) -72);
           while (var2.status == 0) {
-            wj.sleepMillis(-124, 10L);
+            BytePayloadRequest.sleepMillis(-124, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

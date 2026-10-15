@@ -181,7 +181,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           if (obfuscationGuard != -873) {
             field_R = (RgbSprite) null;
           }
-          if (ln.decodeSpritesFromArchive(-123, fileId, archive, groupId)) {
+          if (BytePayloadSubmission.decodeSpritesFromArchive(-123, fileId, archive, groupId)) {
             return ConnectionPhase.buildRgbSprite((byte) 21);
           }
           return null;
@@ -246,7 +246,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         RuntimeException var6 = null;
         try {
           if (this.backButton == widget) {
-            ln.a(103);
+            BytePayloadSubmission.a(103);
           } else {
             if (widget == this.registerButton) {
               discarded$1 = this.submitRegistration(-1);

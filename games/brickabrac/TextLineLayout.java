@@ -19,7 +19,7 @@ final class TextLineLayout {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ln.decodeSpritesFromArchive(-100, param2, param0, param1)) {
+          if (!BytePayloadSubmission.decodeSpritesFromArchive(-100, param2, param0, param1)) {
             return null;
           }
           if (param3 == 1) {

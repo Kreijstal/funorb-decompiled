@@ -67,7 +67,7 @@ final class DualLinkIterator implements Iterator {
           if (obfuscationGuard != -23176) {
             DualLinkIterator.a((byte) -84);
           }
-          if (ln.decodeSpritesFromArchive(-107, fileId, archive, groupId)) {
+          if (BytePayloadSubmission.decodeSpritesFromArchive(-107, fileId, archive, groupId)) {
             stackIn_6_0 = rd.c(117);
             return stackIn_6_0;
           }
