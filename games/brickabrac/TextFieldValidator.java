@@ -20,7 +20,7 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
         if (param0 < 114) {
           return;
         }
-        ga.d(-105);
+        LobbyOverlayHelpers.d(-105);
     }
 
     abstract String describeTextValidation(int obfuscationGuard, String text);

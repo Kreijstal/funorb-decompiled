@@ -20,7 +20,7 @@ final class VolcanicBackground extends BackgroundScene {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
           LevelList.volcanicCentreSprites = new RgbSprite[2];
-          np.volcanicSegsSprites = new RgbSprite[2][];
+          WidgetLayerBootstrap.volcanicSegsSprites = new RgbSprite[2][];
           CacheIoWorker.volcanicCapsSprites = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "td.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectPrefix != null ? "{...}" : "null") + ',' + soundEffectCount + ')');
@@ -58,10 +58,10 @@ final class VolcanicBackground extends BackgroundScene {
         NameEntryPopup.field_Sb = UiGeometryHelpers.createScaledHalfSizeSprite(0, WidgetLayerStack.volcanicMidSprite);
         RectangleBody.field_p = UiGeometryHelpers.createScaledHalfSizeSprite(0, ByteArrayNode.volcanicFarSprite);
         CacheIoWorker.volcanicCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_caps", 2);
-        np.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_segs", 2);
+        WidgetLayerBootstrap.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_segs", 2);
         LevelList.volcanicCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.backgroundSpriteArchive);
         CacheIoWorker.volcanicCapsSprites[1] = Under13RegistrationNoticePanel.a(CacheIoWorker.volcanicCapsSprites[0], false);
-        np.volcanicSegsSprites[1] = Under13RegistrationNoticePanel.a(np.volcanicSegsSprites[0], obfuscationGuard);
+        WidgetLayerBootstrap.volcanicSegsSprites[1] = Under13RegistrationNoticePanel.a(WidgetLayerBootstrap.volcanicSegsSprites[0], obfuscationGuard);
         LevelList.volcanicCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, LevelList.volcanicCentreSprites[0]);
         return true;
     }
@@ -112,7 +112,7 @@ final class VolcanicBackground extends BackgroundScene {
         }
     }
 
-    final static int decodeLevelBytes(NodeDeque[] brickGroups, byte[] data, IntNode levelState, NodeDeque motionPaths, ga unusedContext, int obfuscationGuard) {
+    final static int decodeLevelBytes(NodeDeque[] brickGroups, byte[] data, IntNode levelState, NodeDeque motionPaths, LobbyOverlayHelpers unusedContext, int obfuscationGuard) {
         RuntimeException var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -177,7 +177,7 @@ final class VolcanicBackground extends BackgroundScene {
         if (!param1) {
           return (RgbSprite[]) null;
         }
-        return np.volcanicSegsSprites[-1 + param0];
+        return WidgetLayerBootstrap.volcanicSegsSprites[-1 + param0];
     }
 
     final RgbSprite[] a(byte param0, int param1) {

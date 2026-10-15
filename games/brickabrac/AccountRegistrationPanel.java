@@ -40,7 +40,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         int heightLineIndex;
         unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          va.textChoiceDialogOpen = true;
+          DialogPointerGlobals.textChoiceDialogOpen = true;
           LevelSelectScreen.textChoiceMode = mode;
           messageToWrap = message;
           if (!useLoginCaption) {
@@ -597,7 +597,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         this.passwordField.tooltip = IntKeyIndex.field_a;
         this.passwordConfirmationField.tooltip = BoundedFile.field_b;
         this.ageField.tooltip = MeshLobbyUiHelpers.field_d;
-        this.newsletterToggle.tooltip = ok.field_e;
+        this.newsletterToggle.tooltip = ClientViewHelpers.field_e;
         this.usernameField.setValidationSource(new UsernameAvailabilityValidator(this.usernameField), (byte) -68);
         this.emailField.setValidationSource(new EmailValidator(this.emailField), (byte) -68);
         this.emailConfirmationField.setValidationSource(new EmailConfirmationValidator(this.emailConfirmationField, this.emailField), (byte) -68);

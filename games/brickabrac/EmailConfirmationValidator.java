@@ -189,7 +189,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
         if (param0 != 21651) {
           return false;
         }
-        return va.textChoiceDialogOpen;
+        return DialogPointerGlobals.textChoiceDialogOpen;
     }
 
     static {

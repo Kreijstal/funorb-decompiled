@@ -125,7 +125,7 @@ final class LogoRenderHelpers {
         Throwable decompiledCaughtException = null;
         keyboardMonitor = DualLinkDeque.keyboardInput;
         synchronized (keyboardMonitor) {
-          if (IntrusiveHashTable.keyEventReadIndex == fm.keyEventFrameEnd) {
+          if (IntrusiveHashTable.keyEventReadIndex == LobbyKeyboardGlobals.keyEventFrameEnd) {
             return false;
           }
           MeshAttributeRecord.currentKeyCode = ProxyAuthenticationRequiredException.keyEventCodes[IntrusiveHashTable.keyEventReadIndex];

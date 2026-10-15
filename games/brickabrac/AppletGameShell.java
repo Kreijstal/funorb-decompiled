@@ -60,8 +60,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if (obfuscationGuard != 26573) {
             field_f = (String) null;
           }
-          previousTickMillis = sm.tickTimes[RankingsRequest.tickTimeCursor];
-          sm.tickTimes[RankingsRequest.tickTimeCursor] = nowMillis;
+          previousTickMillis = ArchiveConnectionHelpers.tickTimes[RankingsRequest.tickTimeCursor];
+          ArchiveConnectionHelpers.tickTimes[RankingsRequest.tickTimeCursor] = nowMillis;
           RankingsRequest.tickTimeCursor = 31 & 1 + RankingsRequest.tickTimeCursor;
           if (0L != previousTickMillis &&
             previousTickMillis < nowMillis) {
@@ -120,7 +120,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 return;
               }
               WeightedLruCache.canvasWidth = param3;
-              u.field_d = param3;
+              CanvasViewGlobals.field_d = param3;
               QuickChatCategoryRegistry.field_f = this;
               WeightedLruCache.canvasOffsetX = 0;
               var8_int = 88 / ((param1 - 24) / 56);
@@ -265,7 +265,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               -IntegerRemainderHelpers.field_c + MonotonicTime.nowMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (var2.width < u.field_d) {
+                if (var2.width < CanvasViewGlobals.field_d) {
                   return;
                 }
                 if (UiCleanupHelpers.field_d > var2.height) {

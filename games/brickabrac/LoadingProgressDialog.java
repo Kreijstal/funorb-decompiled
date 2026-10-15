@@ -14,18 +14,18 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
 
     final void paintLayerFrame(int x, int obfuscationGuard, int y) {
         super.paintLayerFrame(x, obfuscationGuard ^ 0, y);
-        wm.field_a.drawCentered(this.statusText, x + (this.width >> 1), y + 103, 16777215, -1);
+        FontSceneGlobals.field_a.drawCentered(this.statusText, x + (this.width >> 1), y + 103, 16777215, -1);
         if (obfuscationGuard == 274) {
           if (this.details != null) {
             Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
-            wm.field_a.drawParagraph(this.details, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+            FontSceneGlobals.field_a.drawParagraph(this.details, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, FontSceneGlobals.field_a.ascent);
           }
           return;
         }
         this.stopAnimationRequested = false;
         if (this.details != null) {
           Rasterizer2D.drawHorizontalLine(20 + x, 120 + y - 7, 260, 8421504);
-          wm.field_a.drawParagraph(this.details, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, wm.field_a.ascent);
+          FontSceneGlobals.field_a.drawParagraph(this.details, x + 20, 8 + y + 120, 260, 100, 16777215, -1, 1, 0, FontSceneGlobals.field_a.ascent);
         }
     }
 
@@ -224,7 +224,7 @@ final class LoadingProgressDialog extends PopupWidgetLayer {
         try {
           this.details = details;
           if (null != this.details) {
-            detailHeight = wm.field_a.measureWrappedHeight(this.details, 260, wm.field_a.ascent);
+            detailHeight = FontSceneGlobals.field_a.measureWrappedHeight(this.details, 260, FontSceneGlobals.field_a.ascent);
             this.setCenteredSize(true, 150 + detailHeight, 300);
           }
           this.activityBar = new ActivityIndicatorWidget(13, 50, 274, 30, 15, 2113632, 4210752);

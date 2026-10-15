@@ -349,7 +349,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           this.accountField = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget(account, (WidgetListener) (this), 100));
           this.passwordField = (TextFieldWidget) ((Object) new ValidatedTextFieldWidget("", (WidgetListener) (this), 20));
           if (!this.retryMode) {
-            this.loginButton = new FocusableWidget(ok.field_a, (WidgetListener) null);
+            this.loginButton = new FocusableWidget(ClientViewHelpers.field_a, (WidgetListener) null);
             stackIn_18_1 = null;
             stackIn_18_2 = null;
             if (!this.showGuestPlayButton) {

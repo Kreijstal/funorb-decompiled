@@ -327,11 +327,11 @@ final class ChatLobbyUiHelpers {
                       }
                     } else {
                       if (responseKind == 10) {
-                        clearedGame = (LobbyGame) (rq.lobbyGames.first(-62));
+                        clearedGame = (LobbyGame) (LobbyLoginGlobals.lobbyGames.first(-62));
                         while (clearedGame != null) {
                           clearedGame.unlink((byte) 111);
                           clearedGame.unlinkSecondary(3);
-                          clearedGame = (LobbyGame) (rq.lobbyGames.next((byte) 116));
+                          clearedGame = (LobbyGame) (LobbyLoginGlobals.lobbyGames.next((byte) 116));
                         }
                       } else {
                         if (responseKind != 11 &&
@@ -514,9 +514,9 @@ final class ChatLobbyUiHelpers {
               }
             }
             if (responseKind != 3) {
-              fh.pendingGameOptionsReceived = false;
+              LobbyRenderGlobals.pendingGameOptionsReceived = false;
             } else {
-              fh.pendingGameOptionsReceived = true;
+              LobbyRenderGlobals.pendingGameOptionsReceived = true;
               for (var3_int = 0; var3_int < CalendarMatchmakingState.matchmakingChoiceMask.length; var3_int++) {
                 CalendarMatchmakingState.matchmakingChoiceMask[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
               }

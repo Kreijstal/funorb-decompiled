@@ -25,7 +25,7 @@ final class EmailValidator extends TextFieldValidator {
           QuickChatCategoryDefinition.livePointerChanged = false;
           BackgroundScene.pressedButton = ContentTransitionPhase.livePressedButton;
           LoadingProgressDialog.pressX = SoundPlayback.livePressX;
-          PlayerNameChooserPanel.pressY = va.livePressY;
+          PlayerNameChooserPanel.pressY = DialogPointerGlobals.livePressY;
           ContentTransitionPhase.livePressedButton = 0;
           var2 = 54 / ((obfuscationGuard + 49) / 63);
         }

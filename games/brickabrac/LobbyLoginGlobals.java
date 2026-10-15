@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq {
+final class LobbyLoginGlobals {
     static NodeDeque lobbyGames;
     static ScrollPaneWithFooter field_b;
     static String field_d;

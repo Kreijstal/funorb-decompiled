@@ -39,7 +39,7 @@ final class ActivityIndicatorWidget extends Widget {
         try {
           StatefulWidgetRenderer.field_z = param6;
           ByteArrayPoolHelpers.field_a = param3;
-          u.field_g = param1;
+          CanvasViewGlobals.field_g = param1;
           SoftwareFramebuffer.field_a = param8;
           PacketReceiveHelpers.field_f = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
           Brick.field_x = new CacheIoWorker(param4);

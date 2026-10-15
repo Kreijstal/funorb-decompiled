@@ -727,7 +727,7 @@ final class MultiplayerMatch {
               }
               decodedPaths = new NodeDeque();
               var10 = board.levelState.value;
-              this.configuration.decodeLevel(new ga(), board.levelState, decodedPaths, board.levelIndex, (byte) -118, decodedGroups);
+              this.configuration.decodeLevel(new LobbyOverlayHelpers(), board.levelState, decodedPaths, board.levelIndex, (byte) -118, decodedGroups);
               board.installLevelBricks(decodedPaths, obfuscationGuard + 9, decodedGroups);
               board.resetServeWithRandomAngle(26496, false);
               if (this.playerCount == 1 &&

@@ -150,9 +150,9 @@ final class ResourcePreparationEntry {
           TableDataRequest.field_k = IntArrayRequest.gameplayScreen.isSpectator(124);
           MatchingTextValidator.field_n = IntArrayRequest.gameplayScreen.resultWordMode;
           OpacityWidget.field_I = IntArrayRequest.gameplayScreen.match.playerCount;
-          fh.field_h = new String[OpacityWidget.field_I];
+          LobbyRenderGlobals.field_h = new String[OpacityWidget.field_I];
           for (var2 = 0; var2 < OpacityWidget.field_I; var2++) {
-            fh.field_h[var2] = var4.playerNames[var2];
+            LobbyRenderGlobals.field_h[var2] = var4.playerNames[var2];
           }
           BitPacketBuffer.field_o = new int[var5.resultOrder.length];
           for (var2Lifetime1 = 0; var5.resultOrder.length > var2Lifetime1; var2Lifetime1++) {
@@ -178,7 +178,7 @@ final class ResourcePreparationEntry {
               stackIn_25_0 = ArchiveFetchClient.field_j;
             }
           } else {
-            stackIn_25_0 = ar.field_a;
+            stackIn_25_0 = GameSettingConstraintHelpers.field_a;
           }
           ChatLobbyUiHelpers.field_c = stackIn_25_0;
           var2Lifetime4 = 57 % ((-7 - param0) / 42);

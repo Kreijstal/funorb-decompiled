@@ -120,7 +120,7 @@ abstract class CacheEntry extends DualLinkNode {
           DraggableWidget.field_N = new UiComponent(0L, CappedUrlRequest.field_l);
           DraggableWidget.field_N.horizontalAlignment = 1;
           HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, VerticalScrollbar.field_Rb.toUpperCase());
-          RasterStackHelpers.field_b = new UiComponent(0L, ValidationStatus.field_j, rl.field_c.toUpperCase());
+          RasterStackHelpers.field_b = new UiComponent(0L, ValidationStatus.field_j, LobbyCaptionGlobals.field_c.toUpperCase());
           PasswordTooltipHelpers.field_e = new UiComponent(0L, FarmBackground.field_x);
           AppletFlowHelpers.field_g = new UiComponent(0L, MainMenuScreen.field_t, AppletFlowHelpers.field_b);
           AppletFlowHelpers.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
@@ -128,13 +128,13 @@ abstract class CacheEntry extends DualLinkNode {
           RasterEffectHelpers.field_b = new UiComponent(0L, LoginCredentialKind.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, LoginCredentialKind.field_d, TextFieldRenderer.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
-          rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c);
-          TableQuickChatHelpers.field_b = new UiComponent(0L, fm.field_b, GameplayRenderHelpers.field_e.toUpperCase());
+          LobbyCaptionGlobals.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c);
+          TableQuickChatHelpers.field_b = new UiComponent(0L, LobbyKeyboardGlobals.field_b, GameplayRenderHelpers.field_e.toUpperCase());
           TableQuickChatHelpers.field_b.enabled = PacketReceiveHelpers.field_e;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
-          stackIn_6_3 = fm.field_b;
+          stackIn_6_3 = LobbyKeyboardGlobals.field_b;
           if (PacketReceiveHelpers.field_e) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
@@ -159,7 +159,7 @@ abstract class CacheEntry extends DualLinkNode {
           }
           PasswordTooltipHelpers.field_e.addChild(BufferedSocket.field_h, 0);
           PasswordTooltipHelpers.field_e.addChild(HalloweenBackground.field_x, 0);
-          PasswordTooltipHelpers.field_e.addChild(rl.field_e, 0);
+          PasswordTooltipHelpers.field_e.addChild(LobbyCaptionGlobals.field_e, 0);
           if (PacketReceiveHelpers.field_e) {
             FontRequestHelpers.field_a.addChild(TableQuickChatHelpers.field_b, 0);
           }
@@ -259,8 +259,8 @@ abstract class CacheEntry extends DualLinkNode {
               }
             }
           }
-          RadialSelectorRenderer.field_h = new UiComponent(0L, fm.field_b);
-          DraggableWidget.field_K = new UiComponent(0L, fm.field_b);
+          RadialSelectorRenderer.field_h = new UiComponent(0L, LobbyKeyboardGlobals.field_b);
+          DraggableWidget.field_K = new UiComponent(0L, LobbyKeyboardGlobals.field_b);
           AppletGameShell.field_e = new UiComponent(0L, Paddle.field_C);
           AppletGameShell.field_e.copyStyle((byte) -125, CappedUrlRequest.field_l);
           var17 = AppletGameShell.field_e;
@@ -286,7 +286,7 @@ abstract class CacheEntry extends DualLinkNode {
           MultiplayerMatch.field_d.addChild(DraggableWidget.field_K, 0);
           MultiplayerMatch.field_d.addChild(AppletGameShell.field_e, 0);
           TableNameEntry.field_h = new UiComponent(0L, GameConnectionHelpers.field_c, SecondaryNodeQueue.field_a.toUpperCase());
-          RankingSocketHelpers.field_a = new UiComponent(0L, GameUiController.field_b, fh.field_e.toUpperCase());
+          RankingSocketHelpers.field_a = new UiComponent(0L, GameUiController.field_b, LobbyRenderGlobals.field_e.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -361,16 +361,16 @@ final class ReportAbuseDialog extends UiComponent {
             this.title.setBounds(24, 0, 0, contentWidth + 13 + 13, (byte) 64);
             this.closeButton.setBounds(15, 5, this.title.width - 20, 15, (byte) 64);
             nextY = 10;
-            this.instructions.setBounds(np.uiRowHeight * 2, nextY, 13, contentWidth, (byte) 64);
-            nextY = nextY + np.uiRowHeight * 2;
-            this.nameInstructions.setBounds(2 * np.uiRowHeight, nextY, 13, contentWidth, (byte) 64);
-            nextY = nextY + (np.uiRowHeight * 2 + 10);
-            this.nameDisplay.setBounds(np.uiRowHeight, nextY, 0, 0, (byte) 64);
-            nextY = nextY + (10 + np.uiRowHeight);
+            this.instructions.setBounds(WidgetLayerBootstrap.uiRowHeight * 2, nextY, 13, contentWidth, (byte) 64);
+            nextY = nextY + WidgetLayerBootstrap.uiRowHeight * 2;
+            this.nameInstructions.setBounds(2 * WidgetLayerBootstrap.uiRowHeight, nextY, 13, contentWidth, (byte) 64);
+            nextY = nextY + (WidgetLayerBootstrap.uiRowHeight * 2 + 10);
+            this.nameDisplay.setBounds(WidgetLayerBootstrap.uiRowHeight, nextY, 0, 0, (byte) 64);
+            nextY = nextY + (10 + WidgetLayerBootstrap.uiRowHeight);
             if (this.muteControl != null) {
               muteWidthForBounds = this.muteControl.measureIconLabelWidth((byte) 11, 4);
-              this.muteControl.setIconLabelBounds(muteWidthForBounds, 4, np.uiRowHeight, nextY, true, (-muteWidthForBounds + contentWidth) / 2 + 13);
-              nextY = nextY + (np.uiRowHeight + 10);
+              this.muteControl.setIconLabelBounds(muteWidthForBounds, 4, WidgetLayerBootstrap.uiRowHeight, nextY, true, (-muteWidthForBounds + contentWidth) / 2 + 13);
+              nextY = nextY + (WidgetLayerBootstrap.uiRowHeight + 10);
             }
             reasonColumns[0].setBounds(columnHeight, nextY, 13, columnWidth, (byte) 64);
             reasonColumns[1].setBounds(columnHeight, nextY, columnWidth + 13 + 13, columnWidth, (byte) 64);
@@ -392,8 +392,8 @@ final class ReportAbuseDialog extends UiComponent {
           infoContentWidth = 226;
           infoNextY = 10;
           infoLineCount = this.instructions.font.countWrappedLines(this.instructions.text, infoContentWidth);
-          this.instructions.setBounds(np.uiRowHeight * infoLineCount, infoNextY, 13, infoContentWidth, (byte) 64);
-          infoNextY = infoNextY + infoLineCount * np.uiRowHeight;
+          this.instructions.setBounds(WidgetLayerBootstrap.uiRowHeight * infoLineCount, infoNextY, 13, infoContentWidth, (byte) 64);
+          infoNextY = infoNextY + infoLineCount * WidgetLayerBootstrap.uiRowHeight;
           this.body.setBounds(10 + infoNextY, 24, 0, 13 + (infoContentWidth + 13), (byte) 64);
           this.body.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, this.body.height, 2105376);
           infoPopupWidth = infoContentWidth + 13 + 13;

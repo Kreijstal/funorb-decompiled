@@ -33,7 +33,7 @@ final class LoginMethodPreference {
 
     final static boolean b(int param0) {
         int var1 = 0 % ((param0 - 66) / 35);
-        return sm.field_b != sm.field_a ? true : false;
+        return ArchiveConnectionHelpers.field_b != ArchiveConnectionHelpers.field_a ? true : false;
     }
 
     final static String requestAddIgnoredPlayer(String name, int opcode, int expectedLoginStage) {

@@ -41,7 +41,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   LoadingProgressDialog.field_eb = SaveResultsPromptScreen.field_y;
                   TextValidationHelpers.field_a = -1;
                   LogoRenderHelpers.field_a = 250;
-                  ga.field_i = 0;
+                  LobbyOverlayHelpers.field_i = 0;
                   GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                 }
               }
@@ -52,11 +52,11 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                   if (0 == fieldTemp$1) {
                     TextValidationHelpers.field_a = -1;
-                    ga.field_i = 1;
+                    LobbyOverlayHelpers.field_i = 1;
                     LogoRenderHelpers.field_a = 250;
                     GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                     SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
-                    LoadingProgressDialog.field_eb = va.field_d;
+                    LoadingProgressDialog.field_eb = DialogPointerGlobals.field_d;
                   }
                 }
               } else {
@@ -68,7 +68,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       if (0 == fieldTemp$2) {
                         LoadingProgressDialog.field_eb = KeyboardInput.field_b;
                         TextValidationHelpers.field_a = -1;
-                        ga.field_i = 3;
+                        LobbyOverlayHelpers.field_i = 3;
                       }
                     }
                   } else {
@@ -77,12 +77,12 @@ final class DelegatingCanvas extends java.awt.Canvas {
                       TextValidationHelpers.field_a != 5) {
                       if (TextValidationHelpers.field_a == 6) {
                         TextValidationHelpers.field_a = ArchiveNetworkRequest.field_G;
-                        ga.field_i = ArchiveNetworkRequest.field_G;
+                        LobbyOverlayHelpers.field_i = ArchiveNetworkRequest.field_G;
                       } else {
                         if (TextValidationHelpers.field_a != 8 &&
                           TextValidationHelpers.field_a != 9) {
                           if (TextValidationHelpers.field_a == 10) {
-                            ga.field_i = ArchiveNetworkRequest.field_G;
+                            LobbyOverlayHelpers.field_i = ArchiveNetworkRequest.field_G;
                             TextValidationHelpers.field_a = ArchiveNetworkRequest.field_G;
                           } else {
                             if (((TextValidationHelpers.field_a != 11)) &&
@@ -96,7 +96,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                           fieldTemp$3 = LogoRenderHelpers.field_a - 1;
                           LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                           if (fieldTemp$3 == 0) {
-                            ga.field_i = 11;
+                            LobbyOverlayHelpers.field_i = 11;
                             TextValidationHelpers.field_a = -1;
                             LoadingProgressDialog.field_eb = PopupWidgetLayer.field_U;
                             ValidationIconWidget.field_N = true;
@@ -118,7 +118,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                 LoadingProgressDialog.field_eb = BrickGameLayerController.field_d;
                 LogoRenderHelpers.field_a = 250;
-                ga.field_i = 14;
+                LobbyOverlayHelpers.field_i = 14;
               }
             }
           }

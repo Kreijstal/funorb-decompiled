@@ -92,7 +92,7 @@ final class ToggleButtonWidget extends FocusableWidget {
         LobbyPlayer var3 = null;
         int var2 = BrickABrac.field_J ? 1 : 0;
         ClientResourceHelpers.currentLobbyGame = null;
-        fh.pendingGameOptionsReceived = false;
+        LobbyRenderGlobals.pendingGameOptionsReceived = false;
         IncomingPacketHelpers.pendingLobbyGame = null;
         if (GameplayRenderHelpers.lobbyPlayers != null) {
           GameplayRenderHelpers.lobbyPlayers.clear((byte) -57);
@@ -103,9 +103,9 @@ final class ToggleButtonWidget extends FocusableWidget {
         }
         try {
           WhirlpoolHasher.lobbyPlayerIndex = null;
-          if (rq.lobbyGames != null) {
-            rq.lobbyGames.clear((byte) -91);
-            rq.lobbyGames = null;
+          if (LobbyLoginGlobals.lobbyGames != null) {
+            LobbyLoginGlobals.lobbyGames.clear((byte) -91);
+            LobbyLoginGlobals.lobbyGames = null;
           }
           LevelResultSubmission.lobbyGameIndex = null;
           if (null != SocialListEntry.gamePlayers) {

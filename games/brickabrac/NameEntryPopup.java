@@ -402,10 +402,10 @@ final class NameEntryPopup extends UiComponent {
           this.inputText.textSuffix = "|";
           this.nameBuffer = new StringBuilder(12);
           promptWidth = this.prompt.getContentWidth(81);
-          this.prompt.setBounds(np.uiRowHeight, 3, 5, promptWidth, (byte) 64);
-          this.inputText.setBounds(np.uiRowHeight, np.uiRowHeight + 3, 5, promptWidth, (byte) 64);
+          this.prompt.setBounds(WidgetLayerBootstrap.uiRowHeight, 3, 5, promptWidth, (byte) 64);
+          this.inputText.setBounds(WidgetLayerBootstrap.uiRowHeight, WidgetLayerBootstrap.uiRowHeight + 3, 5, promptWidth, (byte) 64);
           popupWidth = 10 + promptWidth;
-          popupHeight = 3 + np.uiRowHeight * 2 + 3;
+          popupHeight = 3 + WidgetLayerBootstrap.uiRowHeight * 2 + 3;
           popupX = OptionsScreen.choosePopupX(-1, popupWidth, anchorX, anchorWidth);
           popupY = ContextMenu.choosePopupY(popupHeight, anchorY, anchorHeight, 121);
           this.setBounds(popupHeight, popupY, popupX, popupWidth, (byte) 64);

@@ -16,10 +16,10 @@ final class SocialTabbedPanel {
           tabHeight = 24;
           panelInset = 5;
           this.tabs.setTabbedPaneBounds(panelInset, x, width, tabHeight, height, y, 75);
-          ChatLobbyUiHelpers.friendsStatusLabel.setBounds(np.uiRowHeight, 0, 0, QuickChatPhraseRegistry.friendsPanel.width, (byte) 64);
-          MouseWheelSource.friendNameHeading.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.friendsPanel.width - DialogMessagePanel.uiScrollbarWidth - 2), (byte) 64);
-          GameplayScreen.friendLocationHeading.setBounds(18, 2 + np.uiRowHeight, -2 + (-DialogMessagePanel.uiScrollbarWidth + (QuickChatPhraseRegistry.friendsPanel.width - 80)), 82 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
-          GameScreen.friendsListPane.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.friendsPanel.width, 0, 20 + (np.uiRowHeight + 2), DialogMessagePanel.uiScrollbarWidth, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.friendsPanel.height) - 20);
+          ChatLobbyUiHelpers.friendsStatusLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, 0, 0, QuickChatPhraseRegistry.friendsPanel.width, (byte) 64);
+          MouseWheelSource.friendNameHeading.setBounds(18, 2 + WidgetLayerBootstrap.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.friendsPanel.width - DialogMessagePanel.uiScrollbarWidth - 2), (byte) 64);
+          GameplayScreen.friendLocationHeading.setBounds(18, 2 + WidgetLayerBootstrap.uiRowHeight, -2 + (-DialogMessagePanel.uiScrollbarWidth + (QuickChatPhraseRegistry.friendsPanel.width - 80)), 82 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
+          GameScreen.friendsListPane.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.friendsPanel.width, 0, 20 + (WidgetLayerBootstrap.uiRowHeight + 2), DialogMessagePanel.uiScrollbarWidth, 20, -2 + (-WidgetLayerBootstrap.uiRowHeight + QuickChatPhraseRegistry.friendsPanel.height) - 20);
           TableResponseHelpers.ignoreListPane.layoutPaneFooter(20, -779, DialogMessagePanel.uiScrollbarWidth, 2);
           return;
         }

@@ -10,7 +10,7 @@ final class LevelSelectScreen extends MenuScreen {
     static int field_w;
     static String field_t;
     private IntNode previewState;
-    private ga field_s;
+    private LobbyOverlayHelpers field_s;
     private int previewBottom256;
     private int previewLevelIndex;
     private int maxNumberLabelWidth;
@@ -303,7 +303,7 @@ final class LevelSelectScreen extends MenuScreen {
         this.previewBrickGroups = new NodeDeque[3];
         this.previewPaths = new NodeDeque();
         this.previewState = new IntNode();
-        this.field_s = new ga();
+        this.field_s = new LobbyOverlayHelpers();
         this.maxNumberLabelWidth = 0;
         try {
           this.emptySelectionText = RichTextLayout.field_s.toLowerCase();
@@ -404,7 +404,7 @@ final class LevelSelectScreen extends MenuScreen {
         Brick var9 = null;
         int var10 = BrickABrac.field_J ? 1 : 0;
         if (param4 != 85) {
-          this.field_s = (ga) null;
+          this.field_s = (LobbyOverlayHelpers) null;
         }
         int var6 = this.previewRight256 - this.previewLeft256 >> 9;
         param2 = param2 + (-var6 + param3) / 2;
@@ -498,7 +498,7 @@ final class LevelSelectScreen extends MenuScreen {
 
     final int getParentScreenId(boolean obfuscationGuard) {
         if (!obfuscationGuard) {
-          this.field_s = (ga) null;
+          this.field_s = (LobbyOverlayHelpers) null;
         }
         return !DelayedPacket.c(73) ? 16 : 0;
     }

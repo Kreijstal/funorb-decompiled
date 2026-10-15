@@ -297,7 +297,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
           if (param2 <= 18) {
             field_H = (AccountResponse) null;
           }
-          sm.field_b = AccountResponse.field_b;
+          ArchiveConnectionHelpers.field_b = AccountResponse.field_b;
           BytePayloadSubmission.field_k = param1 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "he.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

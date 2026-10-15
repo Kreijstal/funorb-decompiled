@@ -50,9 +50,9 @@ final class IncomingPacketHelpers {
             if (queuedPacket != null &&
               nowMillis > queuedPacket.deliverAfterMillis) {
               queuedPacket.unlink((byte) 111);
-              ga.incomingPacketLength = queuedPacket.data.length;
+              LobbyOverlayHelpers.incomingPacketLength = queuedPacket.data.length;
               LogoRenderHelpers.incomingPackets.position = 0;
-              for (queuedByteIndex = 0; ga.incomingPacketLength > queuedByteIndex; queuedByteIndex++) {
+              for (queuedByteIndex = 0; LobbyOverlayHelpers.incomingPacketLength > queuedByteIndex; queuedByteIndex++) {
                 LogoRenderHelpers.incomingPackets.data[queuedByteIndex] = queuedPacket.data[queuedByteIndex];
               }
               TextFieldRenderer.thirdPreviousPacketOpcode = ReflectionCheckHelpers.secondPreviousPacketOpcode;
@@ -70,7 +70,7 @@ final class IncomingPacketHelpers {
               }
               PasswordFieldRenderer.pendingPacketOpcode = LogoRenderHelpers.incomingPackets.readCipheredOpcode(true);
               LogoRenderHelpers.incomingPackets.position = 0;
-              ga.incomingPacketLength = packetLengths[PasswordFieldRenderer.pendingPacketOpcode];
+              LobbyOverlayHelpers.incomingPacketLength = packetLengths[PasswordFieldRenderer.pendingPacketOpcode];
             }
             if (!TextWidgetRenderer.ensureGamePacketBody((byte) -104)) {
               return false;
@@ -90,8 +90,8 @@ final class IncomingPacketHelpers {
                 delayMillis = 0;
               }
             }
-            delayedPacket = new DelayedPacket(nowMillis + (long)delayMillis, PasswordFieldRenderer.pendingPacketOpcode, new byte[ga.incomingPacketLength]);
-            for (receivedByteIndex = 0; ga.incomingPacketLength > receivedByteIndex; receivedByteIndex++) {
+            delayedPacket = new DelayedPacket(nowMillis + (long)delayMillis, PasswordFieldRenderer.pendingPacketOpcode, new byte[LobbyOverlayHelpers.incomingPacketLength]);
+            for (receivedByteIndex = 0; LobbyOverlayHelpers.incomingPacketLength > receivedByteIndex; receivedByteIndex++) {
               delayedPacket.data[receivedByteIndex] = LogoRenderHelpers.incomingPackets.data[receivedByteIndex];
             }
             AchievementMaskRequest.delayedPackets.addLast(delayedPacket, (byte) 3);

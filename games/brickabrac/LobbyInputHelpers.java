@@ -20,16 +20,16 @@ final class LobbyInputHelpers {
             optionChangeDeadlineMillis = 8L;
           }
           game.unlink((byte) 111);
-          existingGame = (LobbyGame) (rq.lobbyGames.first(-76));
+          existingGame = (LobbyGame) (LobbyLoginGlobals.lobbyGames.first(-76));
           while (existingGame != null) {
             if (existingGame.comesBeforeGame(game, true)) {
-              existingGame = (LobbyGame) (rq.lobbyGames.next((byte) 116));
+              existingGame = (LobbyGame) (LobbyLoginGlobals.lobbyGames.next((byte) 116));
               continue;
             }
             break;
           }
           if (existingGame == null) {
-            rq.lobbyGames.addLast(game, (byte) 3);
+            LobbyLoginGlobals.lobbyGames.addLast(game, (byte) 3);
             return;
           }
           BubbleDistortion.insertNodeBefore(game, -90, existingGame);

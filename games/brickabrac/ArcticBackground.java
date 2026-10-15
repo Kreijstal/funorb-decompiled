@@ -93,7 +93,7 @@ final class ArcticBackground extends BackgroundScene {
     ArcticBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
         super(sceneId, musicName, soundEffectPrefix, soundEffectCount);
         try {
-          ga.arcticCentreSprites = new RgbSprite[2];
+          LobbyOverlayHelpers.arcticCentreSprites = new RgbSprite[2];
           ObjectHistoryBuffer.arcticCapsSprites = new RgbSprite[2][];
           BoardPresentationHelpers.arcticSegsSprites = new RgbSprite[2][];
         } catch (RuntimeException runtimeException) {
@@ -127,10 +127,10 @@ final class ArcticBackground extends BackgroundScene {
 
     final RgbSprite a(boolean param0, int param1) {
         if (param0) {
-          return ga.arcticCentreSprites[-1 + param1];
+          return LobbyOverlayHelpers.arcticCentreSprites[-1 + param1];
         }
         this.drawFullBackground(true, -66, 69, -83, 51);
-        return ga.arcticCentreSprites[-1 + param1];
+        return LobbyOverlayHelpers.arcticCentreSprites[-1 + param1];
     }
 
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
@@ -172,10 +172,10 @@ final class ArcticBackground extends BackgroundScene {
           Brick.field_K = UiGeometryHelpers.createScaledHalfSizeSprite(0, LoginPanel.arcticFarSprite);
           ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_caps", 2);
           BoardPresentationHelpers.arcticSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_segs", 2);
-          ga.arcticCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.backgroundSpriteArchive);
+          LobbyOverlayHelpers.arcticCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.backgroundSpriteArchive);
           ObjectHistoryBuffer.arcticCapsSprites[1] = Under13RegistrationNoticePanel.a(ObjectHistoryBuffer.arcticCapsSprites[0], obfuscationGuard);
           BoardPresentationHelpers.arcticSegsSprites[1] = Under13RegistrationNoticePanel.a(BoardPresentationHelpers.arcticSegsSprites[0], false);
-          ga.arcticCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, ga.arcticCentreSprites[0]);
+          LobbyOverlayHelpers.arcticCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, LobbyOverlayHelpers.arcticCentreSprites[0]);
           return true;
         }
         return false;

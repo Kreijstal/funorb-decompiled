@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class np {
+final class WidgetLayerBootstrap {
     static String field_e;
     static String field_f;
     static int fullscreenDialogLeft;
@@ -27,7 +27,7 @@ final class np {
         field_e = null;
         volcanicSegsSprites = (RgbSprite[][]) null;
         if (!param0) {
-          np.a(false);
+          WidgetLayerBootstrap.a(false);
         }
     }
 

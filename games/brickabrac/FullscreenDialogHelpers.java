@@ -193,7 +193,7 @@ final class FullscreenDialogHelpers {
             ArrayOperations.copy(CacheIoWorker.fullscreenDialogWrapScratch, 0, QuickChatPhraseRegistry.fullscreenSingularPrefix, 0, rowCountOrMarkerIndex);
             SingleChildWidget.fullscreenSingularSuffix = new String[-1 - rowCountOrMarkerIndex + wrappedLineCount];
             ArrayOperations.copy(CacheIoWorker.fullscreenDialogWrapScratch, 1 + rowCountOrMarkerIndex, SingleChildWidget.fullscreenSingularSuffix, 0, -1 + (-rowCountOrMarkerIndex + wrappedLineCount));
-            wrappedLineCount = FarmBackground.wrapBalancedDialogText(CacheIoWorker.fullscreenDialogWrapScratch, ConditionalTextValue.fullscreenDialogWrapWidth, -63, StateIconLabel.fullscreenDialogBodyFont, GamePresentationHelpers.formatIndexedText(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
+            wrappedLineCount = FarmBackground.wrapBalancedDialogText(CacheIoWorker.fullscreenDialogWrapScratch, ConditionalTextValue.fullscreenDialogWrapWidth, -63, StateIconLabel.fullscreenDialogBodyFont, GamePresentationHelpers.formatIndexedText(CanvasViewGlobals.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
             rowCountOrMarkerIndex = -1;
             for (rowIndexOrPrefixCount = 0; wrappedLineCount > rowIndexOrPrefixCount; rowIndexOrPrefixCount++) {
               if (!"<%0>".equals(CacheIoWorker.fullscreenDialogWrapScratch[rowIndexOrPrefixCount])) {
@@ -233,7 +233,7 @@ final class FullscreenDialogHelpers {
             UsernameSuggestionPanel.fullscreenDialogButtonActions = new int[2];
             BrickABrac.fullscreenDialogRowButtons[3] = 1;
             UsernameSuggestionPanel.fullscreenDialogButtonActions[1] = 2;
-            ValidationStatus.fullscreenDialogRows[4] = u.field_f;
+            ValidationStatus.fullscreenDialogRows[4] = CanvasViewGlobals.field_f;
             UsernameSuggestionPanel.fullscreenDialogButtonActions[0] = 5;
             ValidationStatus.fullscreenDialogRows[2] = GameConnectionHelpers.field_e;
             ValidationStatus.fullscreenDialogRows[5] = "";
@@ -295,19 +295,19 @@ final class FullscreenDialogHelpers {
               }
             }
           }
-          jj.fullscreenDialogHeight = UiComponent.fullscreenDialogSelection.itemCount * (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + DropTargetWidget.fullscreenDialogButtonPaddingY << 1);
-          np.fullscreenDialogLeft = ProxySocketConnector.fullscreenDialogCenterX - (maximumTextWidth >> 1);
+          ModalOverlayHelpers.fullscreenDialogHeight = UiComponent.fullscreenDialogSelection.itemCount * (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + DropTargetWidget.fullscreenDialogButtonPaddingY << 1);
+          WidgetLayerBootstrap.fullscreenDialogLeft = ProxySocketConnector.fullscreenDialogCenterX - (maximumTextWidth >> 1);
           SpaceBackground.fullscreenDialogRight = -(maximumTextWidth >> 1) + (maximumTextWidth + ProxySocketConnector.fullscreenDialogCenterX);
           for (heightRowIndex = 0; ValidationStatus.fullscreenDialogRows.length > heightRowIndex; heightRowIndex++) {
-            heightSoFar = jj.fullscreenDialogHeight;
+            heightSoFar = ModalOverlayHelpers.fullscreenDialogHeight;
             if (BrickABrac.fullscreenDialogRowButtons[heightRowIndex] >= 0) {
               rowHeight = MouseInputCleanup.fullscreenDialogButtonLineHeight;
             } else {
               rowHeight = IntArrayRequest.fullscreenDialogBodyLineHeight;
             }
-            jj.fullscreenDialogHeight = heightSoFar + rowHeight;
+            ModalOverlayHelpers.fullscreenDialogHeight = heightSoFar + rowHeight;
           }
-          CachedArchiveSource.fullscreenDialogTop = -(jj.fullscreenDialogHeight >> 1) + ScreenshotViewer.fullscreenDialogCenterY;
+          CachedArchiveSource.fullscreenDialogTop = -(ModalOverlayHelpers.fullscreenDialogHeight >> 1) + ScreenshotViewer.fullscreenDialogCenterY;
           QuickChatPopupHelpers.fullscreenDialogButtonBounds = new int[ValidationStatus.fullscreenDialogRows.length][];
           boundsRowIndex = 0;
           rowY = CachedArchiveSource.fullscreenDialogTop;

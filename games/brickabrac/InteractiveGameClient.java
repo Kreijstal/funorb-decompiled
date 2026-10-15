@@ -102,7 +102,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           var3--;
         } while (var4 == 0);
         if (IntArrayRequest.field_i) {
-          jj.a((byte) -123);
+          ModalOverlayHelpers.a((byte) -123);
           DiagnosticTextLine.a(var2, 0, 14209, 0);
           if (var4 == 0) {
             return;

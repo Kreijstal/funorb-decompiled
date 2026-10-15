@@ -56,7 +56,7 @@ final class InvitationDialogHelpers {
     }
 
     final static void a(boolean param0) {
-        ga.field_i = 12;
+        LobbyOverlayHelpers.field_i = 12;
         AlternateNumericLoginCredentials.field_s = param0 ? true : false;
         LoadingProgressDialog.field_eb = null;
         GameConnectionHelpers.field_f = true;

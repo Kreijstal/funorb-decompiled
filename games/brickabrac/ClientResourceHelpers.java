@@ -93,7 +93,7 @@ final class ClientResourceHelpers {
     final static void drawFullscreenDialog(int obfuscationGuard) {
         int contentWidth = IntArrayRequest.getFullscreenDialogWidth((byte) -89);
         int contentHeight = ClientException.getFullscreenDialogHeight(obfuscationGuard + 29830);
-        IntKeyIndex.fullscreenDialogFrame.paintFrame((GameTransportHelpers.fullscreenDialogPaddingX << 1) + contentWidth, contentHeight + (AccountContentTransitionLayer.fullscreenDialogPaddingY << 1), -GameTransportHelpers.fullscreenDialogPaddingX + np.fullscreenDialogLeft, false, -AccountContentTransitionLayer.fullscreenDialogPaddingY + CachedArchiveSource.fullscreenDialogTop);
+        IntKeyIndex.fullscreenDialogFrame.paintFrame((GameTransportHelpers.fullscreenDialogPaddingX << 1) + contentWidth, contentHeight + (AccountContentTransitionLayer.fullscreenDialogPaddingY << 1), -GameTransportHelpers.fullscreenDialogPaddingX + WidgetLayerBootstrap.fullscreenDialogLeft, false, -AccountContentTransitionLayer.fullscreenDialogPaddingY + CachedArchiveSource.fullscreenDialogTop);
         if (obfuscationGuard == -24435) {
           WidgetLayerStack.drawFullscreenDialogRows(obfuscationGuard ^ 8147);
           return;

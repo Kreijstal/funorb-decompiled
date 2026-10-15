@@ -18,7 +18,7 @@ final class JungleBackground extends BackgroundScene {
           if (BrickABrac.field_J) {
             var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-              ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
+              ArchiveFetchClient.a(var7, WidgetLayerBootstrap.jungleFarSprite, colorIndex, 1, 0, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
             ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
@@ -26,7 +26,7 @@ final class JungleBackground extends BackgroundScene {
         } else {
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
+            ArchiveFetchClient.a(var7, WidgetLayerBootstrap.jungleFarSprite, colorIndex, 1, 0, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
@@ -176,7 +176,7 @@ final class JungleBackground extends BackgroundScene {
         var26 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param2) {
-            stackIn_6_0 = (!fh.pendingGameOptionsReceived) ? 1 : 0;
+            stackIn_6_0 = (!LobbyRenderGlobals.pendingGameOptionsReceived) ? 1 : 0;
             var4_int = stackIn_6_0;
           }
           if (!param2 ||
@@ -226,7 +226,7 @@ final class JungleBackground extends BackgroundScene {
                   break;
                 }
               }
-              WidgetTextLayout.field_e = rq.field_d;
+              WidgetTextLayout.field_e = LobbyLoginGlobals.field_d;
               break;
             }
           }
@@ -529,7 +529,7 @@ final class JungleBackground extends BackgroundScene {
                 if (var16Lifetime1 == 0 &&
                   var9 >= 0 &&
                   ContextMenu.field_bc != null && (!param2 ||
-                  !fh.pendingGameOptionsReceived)) {
+                  !LobbyRenderGlobals.pendingGameOptionsReceived)) {
                   if (PlayerNameChooserPanel.field_J == null) {
                     SingleChildWidget.field_D = new boolean[RankingsRequest.gameSettingCount];
                     PlayerNameChooserPanel.field_J = new byte[RankingsRequest.gameSettingCount];
@@ -543,7 +543,7 @@ final class JungleBackground extends BackgroundScene {
                       var17_int++;
                       continue;
                     }
-                    ar.a(param2, param1, var9, -1, -1, 0, var7, 0);
+                    GameSettingConstraintHelpers.a(param2, param1, var9, -1, -1, 0, var7, 0);
                     if (2 <= QuickChatHelpDialog.loginPrivilegeByteOne &&
                       IntArrayRequest.heldKeys[12]) {
                       MeshAttributeRecord.field_g = true;
@@ -698,7 +698,7 @@ final class JungleBackground extends BackgroundScene {
                         var21 = FileCacheStore.field_e + (String) (var22);
                         break;
                       }
-                      var21 = GamePresentationHelpers.formatIndexedText(fh.field_b, new String[]{(String) (var22)}, (byte) 103);
+                      var21 = GamePresentationHelpers.formatIndexedText(LobbyRenderGlobals.field_b, new String[]{(String) (var22)}, (byte) 103);
                       break;
                     }
                   }
@@ -813,7 +813,7 @@ final class JungleBackground extends BackgroundScene {
           var3 = (LobbyGame) null;
           JungleBackground.a(81, (LobbyGame) null, true, true);
         }
-        stackIn_13_0 = (null != SocialListResponseHelpers.jungleNearSprite) && (null != MultiValueSliderRenderer.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != StatefulWidgetRenderer.jungleCentreSprites);
+        stackIn_13_0 = (null != SocialListResponseHelpers.jungleNearSprite) && (null != MultiValueSliderRenderer.jungleMidSprite) && (WidgetLayerBootstrap.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != StatefulWidgetRenderer.jungleCentreSprites);
         return stackIn_13_0;
     }
 
@@ -927,11 +927,11 @@ final class JungleBackground extends BackgroundScene {
         }
         SocialListResponseHelpers.jungleNearSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.backgroundSpriteArchive);
         MultiValueSliderRenderer.jungleMidSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.backgroundSpriteArchive);
-        np.jungleFarSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.backgroundSpriteArchive);
+        WidgetLayerBootstrap.jungleFarSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.backgroundSpriteArchive);
         Brick.jungleSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.backgroundSpriteArchive);
         CacheEntry.field_D = UiGeometryHelpers.createScaledHalfSizeSprite(0, SocialListResponseHelpers.jungleNearSprite);
         HuffmanCodec.field_e = UiGeometryHelpers.createScaledHalfSizeSprite(0, MultiValueSliderRenderer.jungleMidSprite);
-        WidgetGroup.field_E = UiGeometryHelpers.createScaledHalfSizeSprite(0, np.jungleFarSprite);
+        WidgetGroup.field_E = UiGeometryHelpers.createScaledHalfSizeSprite(0, WidgetLayerBootstrap.jungleFarSprite);
         WidgetTextLayout.jungleCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.backgroundSpriteArchive);
         DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_caps", 2);
         DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_segs", 2);

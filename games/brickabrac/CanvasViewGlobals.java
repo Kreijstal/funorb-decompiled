@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class u {
+final class CanvasViewGlobals {
     static int field_g;
     static String field_b;
     static String field_f;

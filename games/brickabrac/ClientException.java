@@ -14,7 +14,7 @@ final class ClientException extends RuntimeException {
         if (obfuscationGuard != 5395) {
           return -14;
         }
-        return jj.fullscreenDialogHeight;
+        return ModalOverlayHelpers.fullscreenDialogHeight;
     }
 
     public static void a(boolean param0) {

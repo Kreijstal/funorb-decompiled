@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ar {
+final class GameSettingConstraintHelpers {
     static String[] field_a;
 
     final static void a(boolean param0, LobbyGame param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -157,7 +157,7 @@ final class ar {
                   } else {
                     param3 = var11;
                   }
-                  ar.a(param0, param1, param2, param3, 1 + param4, 0, param6, param7);
+                  GameSettingConstraintHelpers.a(param0, param1, param2, param3, 1 + param4, 0, param6, param7);
                   if (MeshAttributeRecord.field_g) {
                     return;
                   }
@@ -195,7 +195,7 @@ final class ar {
                 }
               }
               if (var12 != 0) {
-                ar.a(param0, param1, param2, param3, param4 + 1, 0, param6, param7);
+                GameSettingConstraintHelpers.a(param0, param1, param2, param3, param4 + 1, 0, param6, param7);
                 var10Lifetime1 = 1;
               }
               if (MeshAttributeRecord.field_g) {
@@ -205,7 +205,7 @@ final class ar {
             }
           }
           if (param5 != 0) {
-            ar.a(33);
+            GameSettingConstraintHelpers.a(33);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,7 +232,7 @@ final class ar {
     public static void a(int param0) {
         if (param0 != -1) {
           LobbyGame var2 = (LobbyGame) null;
-          ar.a(true, (LobbyGame) null, -103, -124, -112, 116, 82, 7);
+          GameSettingConstraintHelpers.a(true, (LobbyGame) null, -103, -124, -112, 116, 82, 7);
         }
         field_a = null;
     }

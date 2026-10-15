@@ -117,15 +117,15 @@ final class RankingsRequest extends IntrusiveNode {
           TextFieldRenderer.field_A = WidgetPaintStyle.field_a;
           if (!TextFieldRenderer.field_A) {
             InvitationDialogHelpers.a(true);
-            BitPacketBuffer.field_q = jj.field_d;
+            BitPacketBuffer.field_q = ModalOverlayHelpers.field_d;
           } else {
             if (param3.pack.packId != 0) {
               InvitationDialogHelpers.a(true);
-              BitPacketBuffer.field_q = jj.field_d;
+              BitPacketBuffer.field_q = ModalOverlayHelpers.field_d;
             } else {
               if (param2 > 0) {
                 InvitationDialogHelpers.a(true);
-                BitPacketBuffer.field_q = jj.field_d;
+                BitPacketBuffer.field_q = ModalOverlayHelpers.field_d;
               }
             }
           }

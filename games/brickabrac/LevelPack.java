@@ -63,8 +63,8 @@ final class LevelPack {
         if (param0 <= 49) {
           field_f = (String) null;
         }
-        if (null != jj.canvasResizeController) {
-          jj.canvasResizeController.restoreSavedCanvasSize(-33);
+        if (null != ModalOverlayHelpers.canvasResizeController) {
+          ModalOverlayHelpers.canvasResizeController.restoreSavedCanvasSize(-33);
         }
         CacheIoRequest.windowCanvas.requestFocus();
     }

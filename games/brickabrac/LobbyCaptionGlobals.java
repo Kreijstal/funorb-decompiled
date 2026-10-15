@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rl {
+final class LobbyCaptionGlobals {
     static String field_c;
     static String field_a;
     static String field_b;
@@ -19,7 +19,7 @@ final class rl {
           field_a = null;
           return;
         }
-        rl.b(-43);
+        LobbyCaptionGlobals.b(-43);
         field_d = null;
         field_f = null;
         field_e = null;
@@ -31,7 +31,7 @@ final class rl {
     final static void b(int param0) {
         TooltipSprite.e(40);
         if (param0 != 18) {
-          rl.a(81);
+          LobbyCaptionGlobals.a(81);
         }
     }
 

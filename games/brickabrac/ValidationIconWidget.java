@@ -141,13 +141,13 @@ final class ValidationIconWidget extends FocusableWidget {
             for (recordIndex = 0; recordCount > recordIndex; recordIndex++) {
               CalendarRankingHelpers.decodeRankingStatistics((byte) -122, packet);
               if (recordIndex == 0) {
-                request.localDraws = fh.decodedRankingDraws;
+                request.localDraws = LobbyRenderGlobals.decodedRankingDraws;
                 request.localRating = SocialTabbedPanel.decodedRankingRating;
                 request.localLosses = ValidatedTextFieldWidget.decodedRankingLosses;
                 request.localWins = RadialSelectorWidget.decodedRankingWins;
-                MessageScreen.appendRankingStatistics(SocialTabbedPanel.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
+                MessageScreen.appendRankingStatistics(SocialTabbedPanel.decodedRankingRating, LobbyRenderGlobals.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               } else {
-                MessageScreen.appendRankingStatistics(SocialTabbedPanel.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
+                MessageScreen.appendRankingStatistics(SocialTabbedPanel.decodedRankingRating, LobbyRenderGlobals.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               }
             }
             GameplaySpriteHelpers.sortRankingViews(12429, rowLimit);
@@ -333,7 +333,7 @@ final class ValidationIconWidget extends FocusableWidget {
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
                 GameConnectionHelpers.connectionPhase = SocialTabbedPanel.awaitingValidationBody;
-                ga.incomingPacketLength = -1;
+                LobbyOverlayHelpers.incomingPacketLength = -1;
               }
             }
           }

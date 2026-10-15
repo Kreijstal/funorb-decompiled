@@ -96,7 +96,7 @@ final class ContextActionController {
               var3 = var2.displayName;
               if (var2.invitationPending) {
                 this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(IndexedSpriteHelpers.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
-                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(np.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(WidgetLayerBootstrap.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -222,11 +222,11 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("error_js5connect", (byte) -114);
                 if (var2 != null) {
-                  np.field_e = MenuButton.a(var2, (byte) 72);
+                  WidgetLayerBootstrap.field_e = MenuButton.a(var2, (byte) 72);
                 }
                 var2 = AppletFlowHelpers.a("login_gameupdated", (byte) 24);
                 if (null != var2) {
-                  u.field_b = MenuButton.a(var2, (byte) 71);
+                  CanvasViewGlobals.field_b = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("create_unable", (byte) 91);
                 if (null != var2) {
@@ -382,7 +382,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_all_players_have_left", (byte) 95);
                 if (null != var2) {
-                  fm.field_c = MenuButton.a(var2, (byte) 74);
+                  LobbyKeyboardGlobals.field_c = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("mu_lobby_name", (byte) 3);
                 if (null != var2) {
@@ -414,7 +414,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_all_games", (byte) -116);
                 if (null != var2) {
-                  rl.field_c = MenuButton.a(var2, (byte) 114);
+                  LobbyCaptionGlobals.field_c = MenuButton.a(var2, (byte) 114);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_status", (byte) -119);
                 if (var2 != null) {
@@ -486,7 +486,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("close", (byte) -17);
                 if (var2 != null) {
-                  fh.field_e = MenuButton.a(var2, (byte) 98);
+                  LobbyRenderGlobals.field_e = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = AppletFlowHelpers.a("add_x_to_friends", (byte) 4);
                 if (null != var2) {
@@ -522,7 +522,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("invite_decline_xs_game", (byte) 54);
                 if (null != var2) {
-                  np.field_f = MenuButton.a(var2, (byte) 126);
+                  WidgetLayerBootstrap.field_f = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("join_xs_game", (byte) -122);
                 if (null != var2) {
@@ -634,7 +634,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("unrated_game", (byte) -125);
                 if (var2 != null) {
-                  rl.field_b = MenuButton.a(var2, (byte) 90);
+                  LobbyCaptionGlobals.field_b = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("rated_game_tips", (byte) -107);
                 if (null != var2) {
@@ -686,7 +686,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("xs_game", (byte) -12);
                 if (null != var2) {
-                  fm.field_a = MenuButton.a(var2, (byte) 124);
+                  LobbyKeyboardGlobals.field_a = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = AppletFlowHelpers.a("waiting_for_x_to_start_game", (byte) -127);
                 if (null != var2) {
@@ -698,7 +698,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("players_x_of_y", (byte) -114);
                 if (null != var2) {
-                  rl.field_d = MenuButton.a(var2, (byte) 106);
+                  LobbyCaptionGlobals.field_d = MenuButton.a(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("message_lobby", (byte) -109);
                 if (null != var2) {
@@ -898,7 +898,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("publicchat_unavailable_ratedgame", (byte) -111);
                 if (null != var2) {
-                  rl.field_a = MenuButton.a(var2, (byte) 121);
+                  LobbyCaptionGlobals.field_a = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("privatechat_friend_offline", (byte) -120);
                 if (var2 != null) {
@@ -914,7 +914,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("thisisrunescapeclan", (byte) -125);
                 if (var2 != null) {
-                  rq.field_d = MenuButton.a(var2, (byte) 89);
+                  LobbyLoginGlobals.field_d = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = AppletFlowHelpers.a("thisisrunescapeclan_notowner", (byte) 46);
                 if (var2 != null) {
@@ -954,7 +954,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("gameopt_cannotbecombined1", (byte) 55);
                 if (null != var2) {
-                  fh.field_b = MenuButton.a(var2, (byte) 79);
+                  LobbyRenderGlobals.field_b = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_cannotbecombined2", (byte) -119);
                 if (null != var2) {
@@ -1220,7 +1220,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("login", (byte) -119);
                 if (null != var2) {
-                  ok.field_a = MenuButton.a(var2, (byte) 76);
+                  ClientViewHelpers.field_a = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = AppletFlowHelpers.a("goback", (byte) -120);
                 if (var2 != null) {
@@ -1480,7 +1480,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("month", (byte) 36);
                 if (null != var2) {
-                  rl.field_f = MenuButton.a(var2, (byte) 86);
+                  LobbyCaptionGlobals.field_f = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("year", (byte) 85);
                 if (null != var2) {
@@ -1704,7 +1704,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_optin_news_tooltip", (byte) -117);
                 if (var2 != null) {
-                  ok.field_e = MenuButton.a(var2, (byte) 79);
+                  ClientViewHelpers.field_e = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = AppletFlowHelpers.a("create_u13_email_tooltip", (byte) -122);
                 if (null != var2) {
@@ -2122,7 +2122,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("menu", (byte) 35);
                 if (null != var2) {
-                  jj.field_b = MenuButton.a(var2, (byte) 127);
+                  ModalOverlayHelpers.field_b = MenuButton.a(var2, (byte) 127);
                 }
                 var2 = AppletFlowHelpers.a("selectlevel", (byte) 36);
                 if (null != var2) {
@@ -2230,7 +2230,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("canceldraw", (byte) -106);
                 if (null != var2) {
-                  fh.field_a = MenuButton.a(var2, (byte) 84);
+                  LobbyRenderGlobals.field_a = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("acceptdraw", (byte) -116);
                 if (var2 != null) {
@@ -2816,7 +2816,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_aftercancel", (byte) -127);
                 if (var2 != null) {
-                  u.field_f = MenuButton.a(var2, (byte) 73);
+                  CanvasViewGlobals.field_f = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_countdown_sing", (byte) 40);
                 if (var2 != null) {
@@ -2824,7 +2824,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_countdown_pl", (byte) -107);
                 if (var2 != null) {
-                  u.field_e = MenuButton.a(var2, (byte) 78);
+                  CanvasViewGlobals.field_e = MenuButton.a(var2, (byte) 78);
                 }
                 var2 = AppletFlowHelpers.a("fs_nonmember", (byte) -123);
                 if (var2 != null) {
@@ -2900,7 +2900,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("me_extra_benefits", (byte) -117);
                 if (var2 != null) {
-                  va.field_c = MenuButton.a(var2, (byte) 111);
+                  DialogPointerGlobals.field_c = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = AppletFlowHelpers.a("hs_friend_tip", (byte) -125);
                 if (var2 != null) {

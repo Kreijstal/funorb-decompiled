@@ -218,13 +218,13 @@ abstract class WidgetLayer extends WidgetGroup {
               if (0 != (3 & param0)) {
                 TextValidationHelpers.field_a = 0;
                 LogoRenderHelpers.field_a = 250;
-                ga.field_i = 0;
+                LobbyOverlayHelpers.field_i = 0;
               }
               if ((param0 & 4) == 0) {
                 return;
               }
               TextValidationHelpers.field_a = 2;
-              ga.field_i = 2;
+              LobbyOverlayHelpers.field_i = 2;
               LogoRenderHelpers.field_a = 25;
               return;
             }
@@ -233,20 +233,20 @@ abstract class WidgetLayer extends WidgetGroup {
               if (!MusicVoice.a((byte) 91)) {
                 return;
               }
-              if (ga.field_i == 0) {
+              if (LobbyOverlayHelpers.field_i == 0) {
                 if (param0 == 0) {
                   return;
                 }
                 if ((param0 & 4) != 0) {
                   TextValidationHelpers.field_a = 2;
                   LogoRenderHelpers.field_a = 25;
-                  ga.field_i = 2;
+                  LobbyOverlayHelpers.field_i = 2;
                 }
                 GzipInflater.b(-8);
                 return;
               }
-              if (ga.field_i != 1 &&
-                ga.field_i != 12) {
+              if (LobbyOverlayHelpers.field_i != 1 &&
+                LobbyOverlayHelpers.field_i != 12) {
                 return;
               }
               if (0 == (param0 & 4)) {
@@ -258,7 +258,7 @@ abstract class WidgetLayer extends WidgetGroup {
             if ((4 & param0) == 0) {
               return;
             }
-            ga.field_i = 2;
+            LobbyOverlayHelpers.field_i = 2;
             TextValidationHelpers.field_a = 2;
             LogoRenderHelpers.field_a = 25;
             return;
@@ -276,7 +276,7 @@ abstract class WidgetLayer extends WidgetGroup {
               return;
             }
             SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
-            ga.field_i = 4;
+            LobbyOverlayHelpers.field_i = 4;
             LoadingProgressDialog.field_eb = ClientResourceHelpers.field_a;
             TextValidationHelpers.field_a = -1;
             return;
@@ -286,10 +286,10 @@ abstract class WidgetLayer extends WidgetGroup {
               return;
             }
             AgeValidator.field_k = param0;
-            ga.field_i = 6;
+            LobbyOverlayHelpers.field_i = 6;
             if (0 == BitPacketBuffer.field_q &&
               !QuickChatHelpDialog.field_Sb) {
-              ga.field_i = 5;
+              LobbyOverlayHelpers.field_i = 5;
               LoadingProgressDialog.field_eb = LoadingProgressDialog.field_db + "<br><br>" + CacheEntry.field_A[AgeValidator.field_k];
             } else {
               ArchiveNetworkRequest.field_G = TextValidationHelpers.field_a;
@@ -303,7 +303,7 @@ abstract class WidgetLayer extends WidgetGroup {
           }
           if (param1 == 3) {
             if (TextValidationHelpers.field_a == 5) {
-              ga.field_i = 8;
+              LobbyOverlayHelpers.field_i = 8;
               LogoRenderHelpers.field_a = 250;
               TextValidationHelpers.field_a = -1;
               LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(IntNode.field_n, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
@@ -315,7 +315,7 @@ abstract class WidgetLayer extends WidgetGroup {
               if (TextValidationHelpers.field_a != 5) {
                 return;
               }
-              ga.field_i = 9;
+              LobbyOverlayHelpers.field_i = 9;
               TextValidationHelpers.field_a = -1;
               LogoRenderHelpers.field_a = 250;
               LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
@@ -330,7 +330,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 if (AlternateNumericLoginCredentials.field_s) {
                   return;
                 }
-                ga.field_i = 12;
+                LobbyOverlayHelpers.field_i = 12;
                 TextValidationHelpers.field_a = -1;
                 LoadingProgressDialog.field_eb = CalendarMatchmakingState.field_a;
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
@@ -338,7 +338,7 @@ abstract class WidgetLayer extends WidgetGroup {
               }
             } else {
               if (TextValidationHelpers.field_a == 5) {
-                ga.field_i = 9;
+                LobbyOverlayHelpers.field_i = 9;
                 LogoRenderHelpers.field_a = 250;
                 TextValidationHelpers.field_a = -1;
                 LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
@@ -350,7 +350,7 @@ abstract class WidgetLayer extends WidgetGroup {
                   return;
                 }
                 ArchiveNetworkRequest.field_G = TextValidationHelpers.field_a;
-                ga.field_i = 10;
+                LobbyOverlayHelpers.field_i = 10;
                 GameConnectionHelpers.field_f = true;
                 LoadingProgressDialog.field_eb = QuickChatHelpDialog.field_Tb;
                 TextValidationHelpers.field_a = -1;

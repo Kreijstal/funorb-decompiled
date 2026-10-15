@@ -59,9 +59,9 @@ final class WhirlpoolHasher {
         }
         var6 = "(" + TextFieldRenderer.thirdPreviousPacketOpcode + " " + ReflectionCheckHelpers.secondPreviousPacketOpcode + " " + UiComponent.previousPacketOpcode + ") " + IntrusiveHashTable.currentPacketOpcode;
         var1 = var6;
-        if (ga.incomingPacketLength > 0) {
+        if (LobbyOverlayHelpers.incomingPacketLength > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < ga.incomingPacketLength; var2++) {
+          for (var2 = 0; var2 < LobbyOverlayHelpers.incomingPacketLength; var2++) {
             var7 = var1 + ' ';
             var3 = 255 & LogoRenderHelpers.incomingPackets.data[var2];
             var4 = var3 >> 4;

@@ -543,7 +543,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             PowerUpWarning.acceptChatMessage(var3, 79);
                           }
                         } else {
-                          TextWidgetRenderer.readReflectionCheckRequest(ga.incomingPacketLength, LogoRenderHelpers.incomingPackets, (byte) 107, AccountMessageDialog.field_ub);
+                          TextWidgetRenderer.readReflectionCheckRequest(LobbyOverlayHelpers.incomingPacketLength, LogoRenderHelpers.incomingPackets, (byte) 107, AccountMessageDialog.field_ub);
                         }
                       } else {
                         stackIn_22_1 = !(obfuscationGuard);
@@ -701,13 +701,13 @@ abstract class GameConnectionShell extends AppletGameShell {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (jj.canvasResizeController != null) {
+        if (ModalOverlayHelpers.canvasResizeController != null) {
           if (null == GameplayRenderHelpers.fullscreenCanvas) {
             var6 = InputOptionsHelpers.b(0);
             var4 = var6.getSize();
-            jj.canvasResizeController.setRequestedSize(44, var4.width, var4.height);
+            ModalOverlayHelpers.canvasResizeController.setRequestedSize(44, var4.width, var4.height);
           }
-          jj.canvasResizeController.tickResizePolicy(guardCode + 118);
+          ModalOverlayHelpers.canvasResizeController.tickResizePolicy(guardCode + 118);
         }
         FriendListUi.snapshotKeyboardInput((byte) -97);
         EmailValidator.snapshotMouseInput(70);
@@ -759,9 +759,9 @@ abstract class GameConnectionShell extends AppletGameShell {
                 if (OutgoingPacketHelpers.field_a != 4) {
                   if (OutgoingPacketHelpers.field_a != 2) {
                     if (5 == OutgoingPacketHelpers.field_a) {
-                      FullscreenFailureKind.a(u.field_b, (byte) -48, 5);
+                      FullscreenFailureKind.a(CanvasViewGlobals.field_b, (byte) -48, 5);
                     } else {
-                      FullscreenFailureKind.a(np.field_e, (byte) -55, 256);
+                      FullscreenFailureKind.a(WidgetLayerBootstrap.field_e, (byte) -55, 256);
                     }
                   } else {
                     FullscreenFailureKind.a(AppletGameShell.field_k, (byte) -54, 256);
@@ -858,7 +858,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           if (null == EmailValidator.field_l) {
             EmailValidator.field_l = StateIconLabel.h(114);
-            UsernameSuggestionPanel.field_M = ar.a((byte) 120);
+            UsernameSuggestionPanel.field_M = GameSettingConstraintHelpers.a((byte) 120);
           }
           BallPulseEffect.a(BoardPresentationHelpers.field_c, EmailValidator.field_l, UsernameSuggestionPanel.field_M, 107);
           RadialSelectorWidget.field_S = null;
@@ -926,7 +926,7 @@ abstract class GameConnectionShell extends AppletGameShell {
     private final void handleBrowserPayload(byte obfuscationGuard) {
         int var2 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
         int var3 = (1 & var2) != 0 ? 1 : 0;
-        int var4 = -1 + ga.incomingPacketLength;
+        int var4 = -1 + LobbyOverlayHelpers.incomingPacketLength;
         byte[] var5 = new byte[var4];
         if (obfuscationGuard != 120) {
           return;

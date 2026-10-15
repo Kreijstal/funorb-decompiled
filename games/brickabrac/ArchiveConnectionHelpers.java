@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sm {
+final class ArchiveConnectionHelpers {
     static int field_b;
     static int field_a;
     static long[] tickTimes;
@@ -11,7 +11,7 @@ final class sm {
     public static void a(int param0) {
         tickTimes = null;
         if (param0 != 30000) {
-          sm.a(21);
+          ArchiveConnectionHelpers.a(21);
         }
     }
 
@@ -52,7 +52,7 @@ final class sm {
             if (GameplayScreen.field_j == 2) {
               MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.result), DialogMessagePanel.field_P);
               var2 = new PacketBuffer(13);
-              GrowableIntList.a(TextFieldWidget.field_S, 12, SoftwareFramebuffer.field_a, u.field_g, var2);
+              GrowableIntList.a(TextFieldWidget.field_S, 12, SoftwareFramebuffer.field_a, CanvasViewGlobals.field_g, var2);
               var2.writeByte(param0 ^ 119, 15);
               var2.writeInt(ArcticBackground.field_t, (byte) -79);
               MouseInput.field_d.write(var2.data, true, 13, 0);

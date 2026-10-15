@@ -17,16 +17,16 @@ final class AppletFlowHelpers {
         int fieldTemp$1 = 0;
         int var2;
         var2 = BrickABrac.field_J ? 1 : 0;
-        if (AccountResponse.field_b == sm.field_b) {
+        if (AccountResponse.field_b == ArchiveConnectionHelpers.field_b) {
           fieldTemp$0 = CachedArchiveSource.field_p;
           CachedArchiveSource.field_p = CachedArchiveSource.field_p + 1;
           if (fieldTemp$0 >= 16) {
             if (BytePayloadSubmission.field_k) {
               TextFieldWidget.k(0);
             } else {
-              ok.a(0);
+              ClientViewHelpers.a(0);
             }
-            sm.field_b = RasterSnapshot.field_q;
+            ArchiveConnectionHelpers.field_b = RasterSnapshot.field_q;
           }
           if (param0 >= 20) {
             return;
@@ -34,7 +34,7 @@ final class AppletFlowHelpers {
           field_c = (RgbSprite) null;
           return;
         }
-        if (sm.field_b == RasterSnapshot.field_q) {
+        if (ArchiveConnectionHelpers.field_b == RasterSnapshot.field_q) {
           if (!QuickChatMenu.h(-26090)) {
             if (VerticalScrollbar.field_Ub != null) {
               CheckboxWidgetRenderer.submitTableRow(3, (byte) 25, VerticalScrollbar.field_Ub);
@@ -45,14 +45,14 @@ final class AppletFlowHelpers {
               WidgetLayerStack.a(false, 21543);
             }
           }
-          sm.field_b = NodeDeque.field_d;
+          ArchiveConnectionHelpers.field_b = NodeDeque.field_d;
           if (param0 >= 20) {
             return;
           }
           field_c = (RgbSprite) null;
           return;
         }
-        if (NodeDeque.field_d != sm.field_b) {
+        if (NodeDeque.field_d != ArchiveConnectionHelpers.field_b) {
           if (param0 >= 20) {
             return;
           }
@@ -62,7 +62,7 @@ final class AppletFlowHelpers {
         fieldTemp$1 = CachedArchiveSource.field_p;
         CachedArchiveSource.field_p = CachedArchiveSource.field_p - 1;
         if (fieldTemp$1 <= 0) {
-          sm.field_b = sm.field_a;
+          ArchiveConnectionHelpers.field_b = ArchiveConnectionHelpers.field_a;
         }
         if (param0 >= 20) {
           return;
@@ -91,7 +91,7 @@ final class AppletFlowHelpers {
         if (DualLinkDeque.a(-4858)) {
           param1 = false;
         }
-        ga.a(param1, -124);
+        LobbyOverlayHelpers.a(param1, -124);
         if (param0 == -25) {
           BufferedSocket.a(21862);
           return;

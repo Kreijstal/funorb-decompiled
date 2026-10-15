@@ -25,7 +25,7 @@ final class DualLinkIterator implements Iterator {
     }
 
     final static void closeTextChoiceDialog(byte obfuscationGuard) {
-        va.textChoiceDialogOpen = false;
+        DialogPointerGlobals.textChoiceDialogOpen = false;
         if (obfuscationGuard < 97) {
           DualLinkIterator.a((byte) -19);
         }

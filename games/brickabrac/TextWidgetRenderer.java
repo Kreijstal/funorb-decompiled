@@ -405,24 +405,24 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
     }
 
     final static boolean ensureGamePacketBody(byte obfuscationGuard) {
-        if (ga.incomingPacketLength == -1) {
+        if (LobbyOverlayHelpers.incomingPacketLength == -1) {
           if (!PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
             return false;
           }
-          ga.incomingPacketLength = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+          LobbyOverlayHelpers.incomingPacketLength = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
           LogoRenderHelpers.incomingPackets.position = 0;
         }
         if (obfuscationGuard > -40) {
           desertCentreSprites = (RgbSprite[]) null;
         }
-        if (-2 == ga.incomingPacketLength) {
+        if (-2 == LobbyOverlayHelpers.incomingPacketLength) {
           if (!PacketReceiveHelpers.ensureGamePacketBytes(20, 2)) {
             return false;
           }
-          ga.incomingPacketLength = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
+          LobbyOverlayHelpers.incomingPacketLength = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
           LogoRenderHelpers.incomingPackets.position = 0;
         }
-        return PacketReceiveHelpers.ensureGamePacketBytes(20, ga.incomingPacketLength);
+        return PacketReceiveHelpers.ensureGamePacketBytes(20, LobbyOverlayHelpers.incomingPacketLength);
     }
 
     public final int getPreferredWidth(Widget widget, int obfuscationGuard) {
@@ -861,15 +861,15 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
         var54 = null;
         var42 = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_3_0 = rl.field_e;
+          stackIn_3_0 = LobbyCaptionGlobals.field_e;
           stackIn_3_1 = 2;
-          stackIn_3_2 = (np.uiRowHeight * 4 + 8) * param3;
-          stackIn_3_3 = 2 * (2 + np.uiRowHeight);
+          stackIn_3_2 = (WidgetLayerBootstrap.uiRowHeight * 4 + 8) * param3;
+          stackIn_3_3 = 2 * (2 + WidgetLayerBootstrap.uiRowHeight);
           stackIn_3_4 = 22676;
           stackIn_3_5 = param2;
-          stackIn_4_6 = (rl.field_e == ClientResourceHelpers.field_b);
+          stackIn_4_6 = (LobbyCaptionGlobals.field_e == ClientResourceHelpers.field_b);
           var7_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
-          var8 = rl.field_e.content.children;
+          var8 = LobbyCaptionGlobals.field_e.content.children;
           var9 = MonotonicTime.nowMillis(false);
           var12 = -30 / ((param6 + 26) / 55);
           var11 = null;
@@ -919,7 +919,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var13.field_ec.addChild(var13.field_Yb, 0);
               }
               var13.field_Bc = new UiComponent(0L, (UiComponent) null);
-              if ((1 << u.field_a & var15) != 0) {
+              if ((1 << CanvasViewGlobals.field_a & var15) != 0) {
                 var13.field_ec.addChild(var13.field_Bc, 0);
               }
               var13.field_lc = new UiComponent(0L, (UiComponent) null);
@@ -965,7 +965,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               var13.field_gc = new UiComponent(0L, CappedUrlRequest.field_l);
               var13.addChild(var13.field_gc, 0);
               var13.markDescendantsToInheritVisualState(true);
-              var13.field_nc = new UiComponent(0L, ok.field_d);
+              var13.field_nc = new UiComponent(0L, ClientViewHelpers.field_d);
               var14 = 1;
               var13.addChild(var13.field_nc, 0);
             }
@@ -1041,7 +1041,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             var31 = var13.field_gc;
             var13.field_gc.height = 0;
             var31.width = 0;
-            var13.width = rl.field_e.content.width;
+            var13.width = LobbyCaptionGlobals.field_e.content.width;
             var32 = 0;
             var33 = var13.displayName;
             if (!var13.isUnindexed(107)) {
@@ -1078,12 +1078,12 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 }
               }
               if (null == var13.field_nc.text) {
-                var13.field_Ac.setBounds(np.uiRowHeight, var32, 0, 68, (byte) 64);
+                var13.field_Ac.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, 0, 68, (byte) 64);
               } else {
-                var13.field_nc.setBounds(np.uiRowHeight, var32, 0, 68, (byte) 64);
+                var13.field_nc.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, 0, 68, (byte) 64);
               }
               var13.field_Vb.text = TextFont.truncateText(var13.field_Vb.font, var33, 78);
-              var13.field_Vb.setBounds(np.uiRowHeight, var32, 70, 78, (byte) 64);
+              var13.field_Vb.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, 70, 78, (byte) 64);
               if (var13.field_Vb.activeInside &&
                 !var13.field_Vb.text.equals(var33)) {
                 WidgetTextLayout.field_e = var33;
@@ -1091,19 +1091,19 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               var13.field_tc.text = Integer.toString(var13.playerCount);
               if (!var13.protocolFlag8) {
                 var13.field_tc.horizontalAlignment = 1;
-                var13.field_tc.setBounds(np.uiRowHeight, var32, 150, 48, (byte) 64);
+                var13.field_tc.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, 150, 48, (byte) 64);
               } else {
                 var13.field_Cc.text = "/" + var13.maxPlayers;
                 var13.field_tc.horizontalAlignment = 2;
                 var34_int = (348 - var13.field_Cc.font.measureText("/")) / 2;
-                var13.field_tc.setBounds(np.uiRowHeight, var32, 150, -150 + var34_int, (byte) 64);
-                var13.field_Cc.setBounds(np.uiRowHeight, var32, var34_int, 198 - var34_int, (byte) 64);
+                var13.field_tc.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, 150, -150 + var34_int, (byte) 64);
+                var13.field_Cc.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, var34_int, 198 - var34_int, (byte) 64);
               }
               var13.field_mc.text = Integer.toString(var13.protocolWord16);
-              var13.field_mc.setBounds(np.uiRowHeight, var32, 200, 48, (byte) 64);
+              var13.field_mc.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, 200, 48, (byte) 64);
               stackIn_66_0 = (!PacketReceiveHelpers.field_e) ? 200 : 250;
               var34_intLifetime1 = stackIn_66_0;
-              var13.field_ec.setBounds(np.uiRowHeight, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
+              var13.field_ec.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
               var35_int = QuickChatCategoryDefinition.field_z;
               if ((var15Lifetime1 & 1 << BackgroundRegistry.field_c) != 0) {
                 var51_ref = GameClock.field_f[var13.joinSortPriority];
@@ -1129,7 +1129,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var13.field_Yb.setBounds(var13.field_ec.height, 0, var35_int, var52_ref.canvasWidth, (byte) 64);
                 var35_int = var35_int + (var52_ref.canvasWidth + QuickChatCategoryDefinition.field_z);
               }
-              if ((1 << u.field_a & var15Lifetime1) != 0) {
+              if ((1 << CanvasViewGlobals.field_a & var15Lifetime1) != 0) {
                 var53_ref = Ball.field_K[var13.spectatorMode - 1];
                 var13.field_Bc.sprite = var53_ref;
                 var13.field_Bc.setBounds(var13.field_ec.height, 0, var35_int, var53_ref.canvasWidth, (byte) 64);
@@ -1186,8 +1186,8 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                   var13.field_zc.text = var40 + ":" + var39_int / 10 + var39_int % 10;
                 }
               }
-              var13.field_zc.setBounds(np.uiRowHeight, var32, 365, var13.width - 365, (byte) 64);
-              var32 = var32 + np.uiRowHeight;
+              var13.field_zc.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, 365, var13.width - 365, (byte) 64);
+              var32 = var32 + WidgetLayerBootstrap.uiRowHeight;
               if (var13.playerNames != null) {
                 var32 += 2;
                 var38 = new StringBuilder(64);
@@ -1200,18 +1200,18 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 var39 = var38.toString();
                 var13.field_Ub.text = var39;
                 var40Lifetime1 = var13.field_Ub.font.countWrappedLines(var39, var13.width - var13.field_Ub.textInset * 2);
-                var13.field_Ub.setBounds(np.uiRowHeight * var40Lifetime1, var32, 0, var13.width, (byte) 64);
-                var32 = var32 + np.uiRowHeight * var40Lifetime1;
+                var13.field_Ub.setBounds(WidgetLayerBootstrap.uiRowHeight * var40Lifetime1, var32, 0, var13.width, (byte) 64);
+                var32 = var32 + WidgetLayerBootstrap.uiRowHeight * var40Lifetime1;
               }
               if (var13.invitationPending) {
                 var13.field_ic.text = GamePresentationHelpers.formatIndexedText(TextFieldRenderer.field_y, new String[]{var33}, (byte) 103);
-                var13.field_ic.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
-                var32 = var32 + np.uiRowHeight;
+                var13.field_ic.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
+                var32 = var32 + WidgetLayerBootstrap.uiRowHeight;
               }
               if (var13.joinRequestPending) {
                 var13.field_Sb.text = GamePresentationHelpers.formatIndexedText(TextChoiceDialogHitTest.field_b, new String[]{var33}, (byte) 103);
-                var13.field_Sb.setBounds(np.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
-                var32 = var32 + np.uiRowHeight;
+                var13.field_Sb.setBounds(WidgetLayerBootstrap.uiRowHeight, var32, LobbyGame.field_oc, -(LobbyGame.field_oc * 2) + var13.width, (byte) 64);
+                var32 = var32 + WidgetLayerBootstrap.uiRowHeight;
               }
             }
             var34 = NodeDeque.a(var13.removalStatus, var33, -15);
@@ -1221,14 +1221,14 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               var35_intLifetime1 = var13.field_gc.font.countWrappedLines(var34, -LobbyGame.field_oc + (var13.width - LobbyGame.field_oc));
               var13.field_gc.text = var34;
               var13.field_gc.textAlpha256 = var13.statusChangeTick * 256 / AlternateNumericLoginCredentials.field_o;
-              var13.field_gc.setBounds(np.uiRowHeight * var35_intLifetime1, var32, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
-              var32 = var32 + np.uiRowHeight * var35_intLifetime1;
+              var13.field_gc.setBounds(WidgetLayerBootstrap.uiRowHeight * var35_intLifetime1, var32, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
+              var32 = var32 + WidgetLayerBootstrap.uiRowHeight * var35_intLifetime1;
             }
             if (var7_int == 0) {
               var13.remainingHeight = -var13.height + var32;
             }
             if (var14 != 0) {
-              rl.field_e.content.placeBelow((UiComponent) (var11), 2, var13, 17290);
+              LobbyCaptionGlobals.field_e.content.placeBelow((UiComponent) (var11), 2, var13, 17290);
             }
             for (var35_intLifetime2 = 0; RankingsRequest.gameSettingCount > var35_intLifetime2; var35_intLifetime2++) {
               if (var13.field_Ec[var35_intLifetime2].activeInside) {
@@ -1260,7 +1260,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               if (var13.rated) {
                 stackIn_148_0 = DelayedPacket.field_n;
               } else {
-                stackIn_148_0 = rl.field_b;
+                stackIn_148_0 = LobbyCaptionGlobals.field_b;
               }
               WidgetTextLayout.field_e = stackIn_148_0;
             }

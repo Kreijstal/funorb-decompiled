@@ -104,7 +104,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
             savePrompts = (String[]) null;
           }
           TooltipSprite.a(param3, param1, (byte) -59, param2);
-          np.b(false);
+          WidgetLayerBootstrap.b(false);
           MusicVoice.field_l = StrongCacheEntry.field_P;
           IntrusiveHashIterator.field_g = StrongCacheEntry.field_P;
         } catch (RuntimeException runtimeException) {

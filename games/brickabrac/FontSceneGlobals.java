@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wm {
+final class FontSceneGlobals {
     static TextFont field_a;
     static RgbSprite waterNearSprite;
     private static String field_z;

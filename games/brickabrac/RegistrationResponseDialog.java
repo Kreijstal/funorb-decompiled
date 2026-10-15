@@ -48,7 +48,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
     }
 
     RegistrationResponseDialog(WidgetLayerStack layerStack, AccountRegistrationPanel registrationPanel) {
-        super(layerStack, wm.field_a, MidiSynthesizer.field_o, false, false);
+        super(layerStack, FontSceneGlobals.field_a, MidiSynthesizer.field_o, false, false);
         try {
           this.registrationPanel = registrationPanel;
         } catch (RuntimeException runtimeException) {
@@ -111,7 +111,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
               }
             }
           }
-          messagePanel = new DialogMessagePanel((AccountMessageDialog) (this), wm.field_a, message);
+          messagePanel = new DialogMessagePanel((AccountMessageDialog) (this), FontSceneGlobals.field_a, message);
           if (response.success) {
             if (response.underThirteen) {
               this.transitionToContent((byte) 118, new Under13RegistrationNoticePanel(this));

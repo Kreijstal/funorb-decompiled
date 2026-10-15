@@ -1306,7 +1306,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime146 = GameplaySpriteHelpers.a(true, "explain_launch");
           if (null != var2Lifetime146) {
-            va.field_d = MenuButton.a(var2Lifetime146, (byte) 90);
+            DialogPointerGlobals.field_d = MenuButton.a(var2Lifetime146, (byte) 90);
           }
           var2Lifetime147 = GameplaySpriteHelpers.a(true, "explain_objective");
           if (null != var2Lifetime147) {

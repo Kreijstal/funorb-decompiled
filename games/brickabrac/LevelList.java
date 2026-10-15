@@ -54,7 +54,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[9] = LevelPackLoader.field_d;
         ArrayWidgetGroup.buttonLabels[1] = ArchiveNetworkRequest.field_H;
         ArrayWidgetGroup.buttonLabels[11] = StrongCacheEntry.field_H;
-        ArrayWidgetGroup.buttonLabels[7] = jj.field_b;
+        ArrayWidgetGroup.buttonLabels[7] = ModalOverlayHelpers.field_b;
         ArrayWidgetGroup.buttonLabels[0] = BirthDateEntryPanel.field_O;
         ArrayWidgetGroup.buttonLabels[6] = GamePresentationHelpers.field_b;
         ArrayWidgetGroup.buttonLabels[8] = null;
@@ -101,7 +101,7 @@ final class LevelList {
         CacheEntry.field_A[16] = MeshAttributeRecord.field_d;
         CanvasResizeController.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
         WidgetTheme.lostBallMessages = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, FullscreenDialogHelpers.field_f, UiGeometryHelpers.goodGriefText};
-        ar.field_a = new String[]{IndexedSpriteHelpers.field_a};
+        GameSettingConstraintHelpers.field_a = new String[]{IndexedSpriteHelpers.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, GameRenderAudioHelpers.field_b, RectangleBody.field_t};
         TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, SocialListResponseHelpers.geniusText, GameTransportActions.field_a, AppletFlowHelpers.field_f, OutgoingPacketHelpers.field_h};

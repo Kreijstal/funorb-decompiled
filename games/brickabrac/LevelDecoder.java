@@ -25,7 +25,7 @@ final class LevelDecoder {
         field_a = null;
     }
 
-    final static int decodeLevel(NodeDeque[] brickGroups, boolean obfuscationGuard, PacketBuffer packet, NodeDeque motionPaths, IntNode levelState, ga unusedContext) {
+    final static int decodeLevel(NodeDeque[] brickGroups, boolean obfuscationGuard, PacketBuffer packet, NodeDeque motionPaths, IntNode levelState, LobbyOverlayHelpers unusedContext) {
         int brickIndex = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;

@@ -108,7 +108,7 @@ final class FullscreenFailureKind {
         ContextActionController var15 = null;
         try {
           var4_int = 47 / ((param2 + 13) / 51);
-          SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.getGameId((byte) -14), (byte) -58, 0L, (String) null);
+          SpriteGeometry.a(-1, param0, LobbyCaptionGlobals.field_e, (int[]) null, (String) null, param0.getGameId((byte) -14), (byte) -58, 0L, (String) null);
           if (param0.started && (param0.spectatorMode == 2 ||
             !(QuickChatHelpDialog.loginPrivilegeByteOne < 2))) {
             var9 = GameRenderAudioHelpers.contextActions;

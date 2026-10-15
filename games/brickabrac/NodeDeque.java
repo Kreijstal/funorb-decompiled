@@ -74,7 +74,7 @@ final class NodeDeque {
           if (param2 != ~param0) {
             return null;
           }
-          stackIn_25_0 = GamePresentationHelpers.formatIndexedText(fm.field_c, new String[]{param1}, (byte) 103);
+          stackIn_25_0 = GamePresentationHelpers.formatIndexedText(LobbyKeyboardGlobals.field_c, new String[]{param1}, (byte) 103);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -84,7 +84,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
             } else {
               this.height = this.height + 10;
               var3 = ChocolateBackground.field_s;
-              if (ok.a(true)) {
+              if (ClientViewHelpers.a(true)) {
                 var3 = AccountResponse.field_h;
                 this.height = this.height + 20;
               }

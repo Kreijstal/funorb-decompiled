@@ -129,7 +129,7 @@ final class IntNode extends IntrusiveNode {
               var4_ref = "[" + ArcticBackground.field_u + "] ";
             }
             if (message.channel == 1) {
-              var4_ref = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{message.contextLabel}, (byte) 103) + "] ";
+              var4_ref = "[" + GamePresentationHelpers.formatIndexedText(LobbyKeyboardGlobals.field_a, new String[]{message.contextLabel}, (byte) 103) + "] ";
             }
             if (message.channel == 4 &&
               WhirlpoolDigestHelpers.field_b != null) {

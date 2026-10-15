@@ -47,8 +47,8 @@ final class FriendListUi {
         try {
           scrollPaneForLayout = GameScreen.friendsListPane.scrollPane;
           rowGapForLayout = 2;
-          wheelPixels = wheelTurns * (6 + 3 * np.uiRowHeight);
-          lineStep = np.uiRowHeight + 2;
+          wheelPixels = wheelTurns * (6 + 3 * WidgetLayerBootstrap.uiRowHeight);
+          lineStep = WidgetLayerBootstrap.uiRowHeight + 2;
           layoutGuard = 22676;
           activeRelayout = allowActiveRelayout;
           keepChildLayout = (GameScreen.friendsListPane.scrollPane == ClientResourceHelpers.field_b);
@@ -100,9 +100,9 @@ final class FriendListUi {
               hasPreviousName = 0;
               if (null != entry.previousName &&
                 !entry.previousName.equals("")) {
-                entry.renameIndicator.sprite = ok.displayNameChangedSprite;
+                entry.renameIndicator.sprite = ClientViewHelpers.displayNameChangedSprite;
                 entry.renameIndicator.activeTextColor = activeTextColor;
-                entry.renameIndicator.setBounds(np.uiRowHeight, rowY, 0, 3 + ok.displayNameChangedSprite.canvasWidth, (byte) 64);
+                entry.renameIndicator.setBounds(WidgetLayerBootstrap.uiRowHeight, rowY, 0, 3 + ClientViewHelpers.displayNameChangedSprite.canvasWidth, (byte) 64);
                 hasPreviousName = 1;
               }
               entry.serverLabel.capturedTextColor = activeTextColor;
@@ -116,7 +116,7 @@ final class FriendListUi {
               nameX = 0;
               nameWidth = -80 + (entry.width - 2);
               if (hasPreviousName != 0) {
-                nameX = 3 + ok.displayNameChangedSprite.canvasWidth;
+                nameX = 3 + ClientViewHelpers.displayNameChangedSprite.canvasWidth;
                 nameWidth = nameWidth - nameX;
               }
               nameLabelForText = entry.nameLabel;
@@ -126,7 +126,7 @@ final class FriendListUi {
                 displayedName = entry.name;
               }
               nameLabelForText.text = displayedName;
-              entry.nameLabel.setBounds(np.uiRowHeight, rowY, nameX, nameWidth, (byte) 64);
+              entry.nameLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, rowY, nameX, nameWidth, (byte) 64);
               serverLabelForText = entry.serverLabel;
               if (entry.serverName != null) {
                 displayedLocation = entry.serverName;
@@ -134,10 +134,10 @@ final class FriendListUi {
                 displayedLocation = DialogMessagePanel.field_S;
               }
               serverLabelForText.text = displayedLocation;
-              entry.serverLabel.setBounds(np.uiRowHeight, rowY, -80 + entry.width, 80, (byte) 64);
+              entry.serverLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, rowY, -80 + entry.width, 80, (byte) 64);
               truncatedValue = (entry.nameLabel.text.equals(entry.name)) ? 0 : 1;
               isTruncated = truncatedValue;
-              rowY = rowY + np.uiRowHeight;
+              rowY = rowY + WidgetLayerBootstrap.uiRowHeight;
               if (layoutRetained == 0) {
                 entry.remainingHeight = rowY - entry.height;
               }
@@ -223,7 +223,7 @@ final class FriendListUi {
             }
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder0 = true;
-            IntrusiveHashTable.keyEventReadIndex = fm.keyEventFrameEnd;
+            IntrusiveHashTable.keyEventReadIndex = LobbyKeyboardGlobals.keyEventFrameEnd;
             PowerUp.keyboardIdleTicks = PowerUp.keyboardIdleTicks + 1;
             if (SpriteInputHelpers.keyChangeWriteIndex < 0) {
               keyIndex = 0;
@@ -263,7 +263,7 @@ final class FriendListUi {
             if (decompiledFrameCompleted0) {
               stackIn_27_0 = ResourceRequest.keyEventWriteIndex;
             }
-            fm.keyEventFrameEnd = stackIn_27_0;
+            LobbyKeyboardGlobals.keyEventFrameEnd = stackIn_27_0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

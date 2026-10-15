@@ -229,8 +229,8 @@ final class MusicVoice extends IntrusiveNode {
           if (decompiledFrameCompleted0) {
             stackIn_68_0 = (ScrollPane) (param1);
             stackIn_68_1 = 2;
-            stackIn_68_2 = param3 * 4 * (2 + np.uiRowHeight);
-            stackIn_68_3 = np.uiRowHeight * 2 + 4;
+            stackIn_68_2 = param3 * 4 * (2 + WidgetLayerBootstrap.uiRowHeight);
+            stackIn_68_3 = WidgetLayerBootstrap.uiRowHeight * 2 + 4;
             stackIn_68_4 = 22676;
             stackIn_68_5 = param0;
             stackIn_69_6 = (param1 == ClientResourceHelpers.field_b);
@@ -256,7 +256,7 @@ final class MusicVoice extends IntrusiveNode {
               var13.field_Tb = new UiComponent(0L, CappedUrlRequest.field_l);
               var13.addChild(var13.field_Tb, 0);
               var13.markDescendantsToInheritVisualState(true);
-              var13.statusLabel = new UiComponent(0L, ok.field_d);
+              var13.statusLabel = new UiComponent(0L, ClientViewHelpers.field_d);
               var13.addChild(var13.statusLabel, 0);
               var13.actionLabel = new UiComponent(0L, MotionWaypoint.field_s);
               var13.addChild(var13.actionLabel, 0);
@@ -345,7 +345,7 @@ final class MusicVoice extends IntrusiveNode {
                 ~Widget.field_p != ~var13.playerId) {
                 if (null != var13.statusLabel.text) {
                   var27 = var13.statusLabel.getContentWidth(123) + 2 * LobbyGame.field_oc;
-                  var13.statusLabel.setBounds(np.uiRowHeight, var20, var26_int, var27, (byte) 64);
+                  var13.statusLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, var20, var26_int, var27, (byte) 64);
                   var26_int = var26_int + var27;
                 }
                 if (var13.actionLabel.text != null) {
@@ -354,12 +354,12 @@ final class MusicVoice extends IntrusiveNode {
                   } else {
                     var27Lifetime2 = var13.actionLabel.getContentWidth(99) + 2 * LobbyGame.field_oc;
                   }
-                  var13.actionLabel.setBounds(np.uiRowHeight, var20, var26_int, var27Lifetime2, (byte) 64);
+                  var13.actionLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, var20, var26_int, var27Lifetime2, (byte) 64);
                   var26_int = var26_int + var27Lifetime2;
                 }
               }
               stackIn_155_0 = var13.nameLabel;
-              stackIn_155_1 = np.uiRowHeight;
+              stackIn_155_1 = WidgetLayerBootstrap.uiRowHeight;
               stackIn_155_2 = var20;
               stackIn_155_3 = var26_int;
               if (PacketReceiveHelpers.field_e) {
@@ -369,7 +369,7 @@ final class MusicVoice extends IntrusiveNode {
               }
               ((UiComponent) (Object) stackIn_155_0).setBounds(stackIn_155_1, stackIn_155_2, stackIn_155_3, -stackIn_156_4 + var13.width - var26_int, (byte) 64);
               var13.ratingLabel.text = Integer.toString(var13.rating);
-              var13.ratingLabel.setBounds(np.uiRowHeight, var20, -40 + var13.width, 40, (byte) 64);
+              var13.ratingLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, var20, -40 + var13.width, 40, (byte) 64);
               if (var13.nameLabel.activeInside &&
                 var23 != 0) {
                 WidgetTextLayout.field_e = var13.displayName;
@@ -384,15 +384,15 @@ final class MusicVoice extends IntrusiveNode {
                   WidgetTextLayout.field_e = PacketBuffer.field_i[var13.badgeId];
                 }
               }
-              var20 = var20 + np.uiRowHeight;
+              var20 = var20 + WidgetLayerBootstrap.uiRowHeight;
             }
             var24 = SoundPlayback.a((byte) -110, var21, var13.removalStatus);
             if (null != var24) {
               var25_intLifetime1 = var13.field_Tb.font.countWrappedLines(var24, -LobbyGame.field_oc + var13.width - LobbyGame.field_oc);
               var13.field_Tb.textAlpha256 = var13.statusChangeTick * 256 / AlternateNumericLoginCredentials.field_o;
               var13.field_Tb.text = var24;
-              var13.field_Tb.setBounds(var25_intLifetime1 * np.uiRowHeight, var20, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
-              var20 = var20 + np.uiRowHeight * var25_intLifetime1;
+              var13.field_Tb.setBounds(var25_intLifetime1 * WidgetLayerBootstrap.uiRowHeight, var20, LobbyGame.field_oc, var13.width - 2 * LobbyGame.field_oc, (byte) 64);
+              var20 = var20 + WidgetLayerBootstrap.uiRowHeight * var25_intLifetime1;
             }
             if (var9 == 0) {
               var13.remainingHeight = var20 - var13.height;
@@ -641,7 +641,7 @@ final class MusicVoice extends IntrusiveNode {
           if (param0 < 60) {
             receivedChatContextId = -98;
           }
-          stackIn_10_0 = (TextFieldRenderer.field_A) && (~ga.field_i != ~TextValidationHelpers.field_a);
+          stackIn_10_0 = (TextFieldRenderer.field_A) && (~LobbyOverlayHelpers.field_i != ~TextValidationHelpers.field_a);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -757,7 +757,7 @@ final class MusicVoice extends IntrusiveNode {
                   Paddle.projectedVertexDepth[vertexOrFace] = -2147483648;
                 }
                 if (retainViewVertices) {
-                  fh.viewVertexX[vertexOrFace] = scaledViewX >> LevelPackCard.projectionShift;
+                  LobbyRenderGlobals.viewVertexX[vertexOrFace] = scaledViewX >> LevelPackCard.projectionShift;
                   WidgetTextLayout.viewVertexY[vertexOrFace] = scaledViewY >> LevelPackCard.projectionShift;
                   TextLineLayout.viewVertexZ[vertexOrFace] = viewZ;
                 }

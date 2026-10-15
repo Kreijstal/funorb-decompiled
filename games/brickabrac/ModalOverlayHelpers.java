@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj {
+final class ModalOverlayHelpers {
     static String field_b;
     static int fullscreenDialogHeight;
     static int field_d;
@@ -11,7 +11,7 @@ final class jj {
         canvasResizeController = null;
         field_b = null;
         if (!param0) {
-          jj.a(false);
+          ModalOverlayHelpers.a(false);
         }
     }
 

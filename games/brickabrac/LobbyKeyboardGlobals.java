@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fm {
+final class LobbyKeyboardGlobals {
     static UiComponent field_b;
     static String field_a;
     static int keyEventFrameEnd;
@@ -11,7 +11,7 @@ final class fm {
     public static void a(byte param0) {
         field_c = null;
         if (param0 != 68) {
-          fm.a((byte) -53);
+          LobbyKeyboardGlobals.a((byte) -53);
           field_a = null;
           field_b = null;
           return;

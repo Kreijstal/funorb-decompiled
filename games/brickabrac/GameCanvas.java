@@ -72,12 +72,12 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (PacketReceiveHelpers.field_f.pollTransport(72)) {
             return 0;
           }
-          return sm.b(-1);
+          return ArchiveConnectionHelpers.b(-1);
         }
         if (PacketReceiveHelpers.field_f.pollTransport(72)) {
           return 0;
         }
-        return sm.b(-1);
+        return ArchiveConnectionHelpers.b(-1);
     }
 
     public static void a(int param0) {
@@ -165,7 +165,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           if (LegacyUtf8Decoder.field_c.pressedButton != 0) {
             CircleBody.reportAbuseDialog = new ReportAbuseDialog(LegacyUtf8Decoder.field_c.screenX, LegacyUtf8Decoder.field_c.screenY, LegacyUtf8Decoder.field_c.width, LegacyUtf8Decoder.field_c.height, param1, MenuSelection.field_m, GameConnectionHelpers.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, (String) null, 0L);
           }
-          var9 = ChatLobbyUiHelpers.rebuildChatHistoryRows(LobbyGame.field_oc, np.uiRowHeight, -13294, param0);
+          var9 = ChatLobbyUiHelpers.rebuildChatHistoryRows(LobbyGame.field_oc, WidgetLayerBootstrap.uiRowHeight, -13294, param0);
           if (var9 != null) {
             ScrollPaneWithFooter.a(0, var9);
           }

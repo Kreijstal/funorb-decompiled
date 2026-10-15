@@ -99,8 +99,8 @@ final class MusicEnvelope {
         try {
           scrollPaneForLayout = TableResponseHelpers.ignoreListPane.scrollPane;
           rowGapForLayout = 2;
-          wheelPixels = wheelTurns * (np.uiRowHeight * 3 + 6);
-          lineStep = np.uiRowHeight + 2;
+          wheelPixels = wheelTurns * (WidgetLayerBootstrap.uiRowHeight * 3 + 6);
+          lineStep = WidgetLayerBootstrap.uiRowHeight + 2;
           layoutGuard = 22676;
           activeRelayout = allowActiveRelayout;
           keepChildLayout = (ClientResourceHelpers.field_b == TableResponseHelpers.ignoreListPane.scrollPane);
@@ -131,19 +131,19 @@ final class MusicEnvelope {
               createdLabels = 1;
             }
             entry.width = TableResponseHelpers.ignoreListPane.content.width;
-            entry.nameLabel.setBounds(np.uiRowHeight, 0, 0, entry.width, (byte) 64);
+            entry.nameLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, 0, 0, entry.width, (byte) 64);
             hasPreviousName = 0;
             if (null != entry.previousName &&
               !entry.previousName.equals("")) {
-              entry.renameIndicator.sprite = ok.displayNameChangedSprite;
+              entry.renameIndicator.sprite = ClientViewHelpers.displayNameChangedSprite;
               entry.renameIndicator.activeTextColor = 16737894;
               hasPreviousName = 1;
-              entry.renameIndicator.setBounds(np.uiRowHeight, 0, 0, ok.displayNameChangedSprite.canvasWidth + 3, (byte) 64);
+              entry.renameIndicator.setBounds(WidgetLayerBootstrap.uiRowHeight, 0, 0, ClientViewHelpers.displayNameChangedSprite.canvasWidth + 3, (byte) 64);
             }
             nameX = 0;
             nameWidth = entry.width;
             if (hasPreviousName != 0) {
-              nameX = ok.displayNameChangedSprite.canvasWidth + 3;
+              nameX = ClientViewHelpers.displayNameChangedSprite.canvasWidth + 3;
               nameWidth = nameWidth - nameX;
             }
             nameLabelForText = entry.nameLabel;
@@ -155,9 +155,9 @@ final class MusicEnvelope {
             nameLabelForText.text = displayedName;
             truncatedValue = (entry.nameLabel.text.equals(entry.name)) ? 0 : 1;
             isTruncated = truncatedValue;
-            entry.nameLabel.setBounds(np.uiRowHeight, 0, nameX, nameWidth, (byte) 64);
+            entry.nameLabel.setBounds(WidgetLayerBootstrap.uiRowHeight, 0, nameX, nameWidth, (byte) 64);
             if (layoutRetained == 0) {
-              entry.remainingHeight = np.uiRowHeight - entry.height;
+              entry.remainingHeight = WidgetLayerBootstrap.uiRowHeight - entry.height;
             }
             if (createdLabels != 0) {
               TableResponseHelpers.ignoreListPane.content.placeBelow((UiComponent) (previousEntry), 2, entry, 17290);
@@ -272,7 +272,7 @@ final class MusicEnvelope {
               GameTransportHelpers.closeGameTransport((byte) 57);
               return;
             }
-            var5_int = ga.incomingPacketLength - var10.position;
+            var5_int = LobbyOverlayHelpers.incomingPacketLength - var10.position;
             var12 = var4_ref_pe.values;
             var11 = var12;
             var6 = var11;

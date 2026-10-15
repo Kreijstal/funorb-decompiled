@@ -113,7 +113,7 @@ final class MeshLobbyUiHelpers {
             Under13RegistrationNoticePanel.renderTimes[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-            sm.tickTimes[var1_intLifetime1] = 0L;
+            ArchiveConnectionHelpers.tickTimes[var1_intLifetime1] = 0L;
           }
           if (param0 != 2) {
             joinRequestsPanelOpen = false;
@@ -200,14 +200,14 @@ final class MeshLobbyUiHelpers {
               }
             }
           }
-          np.uiRowHeight = 15;
+          WidgetLayerBootstrap.uiRowHeight = 15;
           MenuSelection.field_g = 2;
           LobbyGame.field_oc = 4;
           if (param0 < 102) {
             return;
           }
           QuickChatCategoryDefinition.field_z = 2;
-          ok.field_f = 11;
+          ClientViewHelpers.field_f = 11;
           var7 = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "largefont");
           GamePresentationHelpers.field_e = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "generalfont");
           ScorePopup.field_m = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "lobby", param3, param4, "chatfont");
@@ -217,12 +217,12 @@ final class MeshLobbyUiHelpers {
           var8 = new UiComponent(0L, (UiComponent) null);
           var8.font = (TextFont) ((Object) var7);
           var8.textColor = 16777215;
-          var8.lineSpacing = np.uiRowHeight;
+          var8.lineSpacing = WidgetLayerBootstrap.uiRowHeight;
           var8.verticalAlignment = 1;
           var9 = var8;
           var9.horizontalAlignment = 1;
           var10 = new UiComponent(0L, (UiComponent) null);
-          var10.lineSpacing = np.uiRowHeight;
+          var10.lineSpacing = WidgetLayerBootstrap.uiRowHeight;
           var10.textColor = 16777215;
           var10.font = (TextFont) ((Object) GamePresentationHelpers.field_e);
           var11 = var10;
@@ -258,7 +258,7 @@ final class MeshLobbyUiHelpers {
           CappedUrlRequest.field_l = new UiComponent(0L, (UiComponent) null);
           CappedUrlRequest.field_l.verticalAlignment = 1;
           CappedUrlRequest.field_l.font = (TextFont) ((Object) GamePresentationHelpers.field_e);
-          CappedUrlRequest.field_l.lineSpacing = np.uiRowHeight;
+          CappedUrlRequest.field_l.lineSpacing = WidgetLayerBootstrap.uiRowHeight;
           CappedUrlRequest.field_l.textColor = 13421772;
           DualLinkNode.field_t = new UiComponent(0L, CappedUrlRequest.field_l);
           DualLinkNode.field_t.capturedTextColor = 16777215;
@@ -269,7 +269,7 @@ final class MeshLobbyUiHelpers {
           var15 = new UiComponent(0L, DualLinkNode.field_t);
           var15.font = (TextFont) ((Object) var7);
           var15.textColor = 16777215;
-          var15.lineSpacing = np.uiRowHeight;
+          var15.lineSpacing = WidgetLayerBootstrap.uiRowHeight;
           Paddle.field_C = new UiComponent(0L, CappedUrlRequest.field_l);
           Paddle.field_C.frameSprites = TimedSplashScreen.a(false, (byte) 94, 2236962, 16, 2236962, false);
           Paddle.field_C.textInset = 2;
@@ -281,7 +281,7 @@ final class MeshLobbyUiHelpers {
           TextFieldWidget.field_K = new UiComponent(0L, ProxySocketConnector.field_n);
           TextFieldWidget.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
           var16 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
-          QuickChatPopupHelpers.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, QuickChatCategoryDefinition.field_z, 3, np.uiRowHeight);
+          QuickChatPopupHelpers.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, QuickChatCategoryDefinition.field_z, 3, WidgetLayerBootstrap.uiRowHeight);
           ArcticBackground.field_s = new UiComponent(0L, DualLinkNode.field_t);
           ArcticBackground.field_s.capturedOffsetY = 1;
           ArcticBackground.field_s.capturedOffsetX = 1;
@@ -302,22 +302,22 @@ final class MeshLobbyUiHelpers {
           InvitationDialogHelpers.field_c.frameSprites = DateFieldsWidget.a(false, 1127256, 3, 1856141, 206, -1);
           FarmBackground.field_x = new UiComponent(0L, (UiComponent) null);
           FarmBackground.field_x.frameSprites = DateFieldsWidget.a(false, 6052956, 3, 11579568, 290, -1);
-          fm.field_b = new UiComponent(0L, var15);
-          fm.field_b.selectedOffsetX = 1;
-          fm.field_b.selectedOffsetY = 1;
-          fm.field_b.capturedOffsetY = 1;
-          fm.field_b.horizontalAlignment = 1;
-          fm.field_b.capturedOffsetX = 1;
-          GameUiController.field_b = new UiComponent(0L, fm.field_b);
+          LobbyKeyboardGlobals.field_b = new UiComponent(0L, var15);
+          LobbyKeyboardGlobals.field_b.selectedOffsetX = 1;
+          LobbyKeyboardGlobals.field_b.selectedOffsetY = 1;
+          LobbyKeyboardGlobals.field_b.capturedOffsetY = 1;
+          LobbyKeyboardGlobals.field_b.horizontalAlignment = 1;
+          LobbyKeyboardGlobals.field_b.capturedOffsetX = 1;
+          GameUiController.field_b = new UiComponent(0L, LobbyKeyboardGlobals.field_b);
           MessageScreen.field_r = new UiComponent(0L, DualLinkNode.field_t);
           MessageScreen.field_r.selectedOffsetY = 1;
           MessageScreen.field_r.horizontalAlignment = 1;
           MessageScreen.field_r.capturedOffsetY = 1;
           MessageScreen.field_r.selectedOffsetX = 1;
           MessageScreen.field_r.capturedOffsetX = 1;
-          ok.field_d = new UiComponent(0L, MessageScreen.field_r);
+          ClientViewHelpers.field_d = new UiComponent(0L, MessageScreen.field_r);
           MotionWaypoint.field_s = new UiComponent(0L, MessageScreen.field_r);
-          MatchCompleteScreen.field_x = new UiComponent(0L, fm.field_b);
+          MatchCompleteScreen.field_x = new UiComponent(0L, LobbyKeyboardGlobals.field_b);
           GzipInflater.field_d = new UiComponent(0L, MessageScreen.field_r);
           OptionsScreen.field_u = new UiComponent(0L, MessageScreen.field_r);
           AchievementMaskRequest.field_n = new UiComponent(0L, MessageScreen.field_r);
@@ -330,13 +330,13 @@ final class MeshLobbyUiHelpers {
           GameUiController.field_b.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton", 2), (byte) -102);
           GameUiController.field_b.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseover", 2), (byte) -105);
           GameUiController.field_b.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "mediumbutton_mouseheld", 2), (byte) -123);
-          fm.field_b.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton", 2), (byte) -114);
-          fm.field_b.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
-          fm.field_b.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
-          fm.field_b.disabledFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
-          ok.field_d.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton", 2), (byte) -127);
-          ok.field_d.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
-          ok.field_d.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
+          LobbyKeyboardGlobals.field_b.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton", 2), (byte) -114);
+          LobbyKeyboardGlobals.field_b.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseover", 2), (byte) -120);
+          LobbyKeyboardGlobals.field_b.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_mouseheld", 2), (byte) -114);
+          LobbyKeyboardGlobals.field_b.disabledFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "bigbutton_disabled", 2), (byte) -106);
+          ClientViewHelpers.field_d.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton", 2), (byte) -127);
+          ClientViewHelpers.field_d.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseover", 2), (byte) -126);
+          ClientViewHelpers.field_d.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "greenbutton_mouseheld", 2), (byte) -119);
           MotionWaypoint.field_s.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton", 2), (byte) -105);
           MotionWaypoint.field_s.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton_mouseover", 2), (byte) -106);
           MotionWaypoint.field_s.capturedFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "redbutton_mouseheld", 2), (byte) -121);
@@ -383,7 +383,7 @@ final class MeshLobbyUiHelpers {
           MessageScreen.field_s.capturedSprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "downbutton_mouseheld", (byte) 97, param3);
           MessageScreen.field_s.disabledSprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "downbutton_disabled", (byte) 104, param3);
           LobbyInputHelpers.field_c = new VerticalScrollbar(0L, ChocolateBackground.field_u, MessageScreen.field_s, QuickChatHelpDialog.field_Vb, RankingsScreen.field_s);
-          rq.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c, MessageScreen.field_r, (String) null, (String) null);
+          LobbyLoginGlobals.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c, MessageScreen.field_r, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

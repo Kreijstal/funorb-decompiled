@@ -18,9 +18,9 @@ final class ChocolateBackground extends BackgroundScene {
           return;
         }
         if (-1 >= colorIndex) {
-          u.chocolateSmallFarSprite.drawTransparent(destinationX, destinationY);
+          CanvasViewGlobals.chocolateSmallFarSprite.drawTransparent(destinationX, destinationY);
         } else {
-          RasterEffectHelpers.drawGrayscalePaletteSprite(u.chocolateSmallFarSprite, destinationX, destinationY, MatchCompleteScreen.field_C[colorIndex]);
+          RasterEffectHelpers.drawGrayscalePaletteSprite(CanvasViewGlobals.chocolateSmallFarSprite, destinationX, destinationY, MatchCompleteScreen.field_C[colorIndex]);
         }
         GameClock.chocolateSmallNearSprite.drawTransparent(destinationX, destinationY);
     }
@@ -79,7 +79,7 @@ final class ChocolateBackground extends BackgroundScene {
         QuickChatParameterType.field_i = UiGeometryHelpers.createScaledHalfSizeSprite(0, IncomingPacketHelpers.chocolateNearSprite);
         FullscreenFailureDialog.field_hb = UiGeometryHelpers.createScaledHalfSizeSprite(0, chocolateMidSprite);
         StatefulWidgetRenderer.field_w = UiGeometryHelpers.createScaledHalfSizeSprite(0, CappedUrlRequest.chocolateSpiresSprite);
-        u.chocolateSmallFarSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.backgroundSpriteArchive);
+        CanvasViewGlobals.chocolateSmallFarSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.backgroundSpriteArchive);
         GameClock.chocolateSmallNearSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.backgroundSpriteArchive);
         MeshAttributeRecord.chocolateCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.backgroundSpriteArchive);
         Brick.chocCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_caps", 2);
@@ -191,7 +191,7 @@ final class ChocolateBackground extends BackgroundScene {
           if (CappedUrlRequest.chocolateSpiresSprite == null) {
             return false;
           }
-          if (u.chocolateSmallFarSprite == null) {
+          if (CanvasViewGlobals.chocolateSmallFarSprite == null) {
             return false;
           }
           if (null != GameClock.chocolateSmallNearSprite) {
@@ -211,7 +211,7 @@ final class ChocolateBackground extends BackgroundScene {
         if (CappedUrlRequest.chocolateSpiresSprite == null) {
           return false;
         }
-        if (u.chocolateSmallFarSprite == null) {
+        if (CanvasViewGlobals.chocolateSmallFarSprite == null) {
           return false;
         }
         if (null != GameClock.chocolateSmallNearSprite) {

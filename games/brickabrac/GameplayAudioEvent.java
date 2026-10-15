@@ -130,7 +130,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
             }
             return;
           }
-          ParallaxMusicHelpers.field_b.a(TextHuffmanHelpers.field_b, fh.field_g, param0 - 27268, true);
+          ParallaxMusicHelpers.field_b.a(TextHuffmanHelpers.field_b, LobbyRenderGlobals.field_g, param0 - 27268, true);
           if (param0 != 27144) {
             return;
           }

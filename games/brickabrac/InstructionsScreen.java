@@ -284,30 +284,30 @@ final class InstructionsScreen extends MenuScreen {
         } else {
           PasswordFieldRenderer.field_D.setInlineSprites(CalendarRankingHelpers.field_e, SocialTabbedPanel.field_f);
         }
-        var2 = PasswordFieldRenderer.field_D.wrapText(TextChoiceDialogStyles.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
+        var2 = PasswordFieldRenderer.field_D.wrapText(TextChoiceDialogStyles.field_b[this.pageIndex], CachedArchiveSource.field_t, ClientViewHelpers.field_b);
         var3 = 145 - (-ConditionalTextValue.field_j - 4);
         for (var4 = 0; var2 > var4; var4++) {
           var5 = PasswordFieldRenderer.field_D;
           var6 = 2;
           var7 = -1;
           var8 = 0;
-          if (ok.field_b[var4].startsWith("<bab:heading1>")) {
+          if (ClientViewHelpers.field_b[var4].startsWith("<bab:heading1>")) {
             var5 = QuickChatPopupHelpers.field_e;
             var8 = 4;
             var6 = 0;
           } else {
-            if (ok.field_b[var4].startsWith("<bab:heading2>")) {
+            if (ClientViewHelpers.field_b[var4].startsWith("<bab:heading2>")) {
               var8 = 3;
               var6 = 8;
               var5 = QuickChatPopupHelpers.field_e;
             } else {
-              if (ok.field_b[var4].startsWith("<bab:vspace>")) {
+              if (ClientViewHelpers.field_b[var4].startsWith("<bab:vspace>")) {
                 var8 = 4;
               } else {
-                if (!ok.field_b[var4].startsWith("<bab:smlvspace>")) {
-                  if (!ok.field_b[var4].endsWith("<bab:smlbr><br>")) {
-                    if (ok.field_b[var4].endsWith("<bab:smlvspace><br>") &&
-                      !ok.field_b[var4].startsWith("<bab:smlvspace>")) {
+                if (!ClientViewHelpers.field_b[var4].startsWith("<bab:smlvspace>")) {
+                  if (!ClientViewHelpers.field_b[var4].endsWith("<bab:smlbr><br>")) {
+                    if (ClientViewHelpers.field_b[var4].endsWith("<bab:smlvspace><br>") &&
+                      !ClientViewHelpers.field_b[var4].startsWith("<bab:smlvspace>")) {
                       var8 = 3;
                     }
                   } else {
@@ -319,7 +319,7 @@ final class InstructionsScreen extends MenuScreen {
               }
             }
           }
-          var5.drawLeft(ok.field_b[var4], 60, var3, var6, var7);
+          var5.drawLeft(ClientViewHelpers.field_b[var4], 60, var3, var6, var7);
           var3 = var3 + (ConditionalTextValue.field_j + var8);
         }
         if (obfuscationGuard >= -14) {

@@ -117,8 +117,8 @@ class Widget extends IntrusiveNode {
           }
           tutorialActive = tutorialActiveValue;
           tutorialValue = tutorialActive;
-          if (8 != ga.field_i &&
-            ga.field_i != 9) {
+          if (8 != LobbyOverlayHelpers.field_i &&
+            LobbyOverlayHelpers.field_i != 9) {
             highlightStageValue = 0;
           } else {
             highlightStageValue = 1;

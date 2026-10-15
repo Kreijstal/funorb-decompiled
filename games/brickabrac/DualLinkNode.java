@@ -206,9 +206,9 @@ class DualLinkNode extends IntrusiveNode {
           !(rowLimit + recordCount <= VerticalScrollbar.rankingSortIndices.length)) {
           VerticalScrollbar.rankingSortIndices = new int[2 * (rowLimit + recordCount)];
         }
-        if (null == ga.field_l ||
-          !(ga.field_l.length >= recordCount)) {
-          ga.field_l = new boolean[2 * recordCount];
+        if (null == LobbyOverlayHelpers.field_l ||
+          !(LobbyOverlayHelpers.field_l.length >= recordCount)) {
+          LobbyOverlayHelpers.field_l = new boolean[2 * recordCount];
         }
         BoundedFile.field_l = -2147483648;
         if (obfuscationGuard < 0) {

@@ -353,7 +353,7 @@ final class LobbyUiHelpers {
             waitingMessageForCollapse.width = 0;
             if (!GameTransportHelpers.b((byte) 7)) {
               gameDisplayName = ClientResourceHelpers.currentLobbyGame.displayName;
-              UiComponentNode.field_v.text = GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
+              UiComponentNode.field_v.text = GamePresentationHelpers.formatIndexedText(LobbyKeyboardGlobals.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
               AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
               AppletGameShell.field_e.text = GamePresentationHelpers.formatIndexedText(IntrusiveNode.field_a, new String[]{gameDisplayName}, (byte) 103);
               countdownTarget = AppletGameShell.field_e;
@@ -374,7 +374,7 @@ final class LobbyUiHelpers {
                 RadialSelectorRenderer.field_h.text = SecondaryNodeQueue.field_a.toUpperCase();
                 RadialSelectorRenderer.field_h.enabled = true;
               }
-              RadialSelectorRenderer.field_h.frameSprites = fm.field_b.frameSprites;
+              RadialSelectorRenderer.field_h.frameSprites = LobbyKeyboardGlobals.field_b.frameSprites;
               if (KeyDispatchHelpers.pendingJoinRequestCount > 0) {
                 boolean usePluralRequestCaption = (KeyDispatchHelpers.pendingJoinRequestCount != 1);
                 if (!usePluralRequestCaption) {
@@ -387,7 +387,7 @@ final class LobbyUiHelpers {
                 RadialSelectorRenderer.field_h.text = RadialSelectorRenderer.field_h.text + "<br>" + pendingRequestCaption;
                 if ((BirthDateValidator.field_h & 16) == 0 &&
                   !MeshLobbyUiHelpers.joinRequestsPanelOpen) {
-                  RadialSelectorRenderer.field_h.frameSprites = fm.field_b.activeFrameSprites;
+                  RadialSelectorRenderer.field_h.frameSprites = LobbyKeyboardGlobals.field_b.activeFrameSprites;
                 }
               }
               DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, buttonSplitXOrCountdownSeconds, MultiplayerMatch.field_d.width - buttonSplitXOrCountdownSeconds, (byte) 64);
@@ -679,7 +679,7 @@ final class LobbyUiHelpers {
               }
               countdownTarget.text = GamePresentationHelpers.formatIndexedText(SpriteGeometry.field_w, new String[]{Integer.toString(buttonSplitXOrCountdownSeconds)}, (byte) 103);
             }
-            TextWidgetRenderer.field_b.text = GamePresentationHelpers.formatIndexedText(rl.field_d, new String[]{Integer.toString(ClientResourceHelpers.currentLobbyGame.playerCount), Integer.toString(ClientResourceHelpers.currentLobbyGame.maxPlayers)}, (byte) 103);
+            TextWidgetRenderer.field_b.text = GamePresentationHelpers.formatIndexedText(LobbyCaptionGlobals.field_d, new String[]{Integer.toString(ClientResourceHelpers.currentLobbyGame.playerCount), Integer.toString(ClientResourceHelpers.currentLobbyGame.maxPlayers)}, (byte) 103);
           }
           lobbyRoot = NinjaBackground.field_w;
           lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
@@ -767,7 +767,7 @@ final class LobbyUiHelpers {
             }
             break;
           }
-          game = (LobbyGame) (rq.lobbyGames.first(-14));
+          game = (LobbyGame) (LobbyLoginGlobals.lobbyGames.first(-14));
           if (obfuscationGuard != 0) {
             receivedChatBadge = -23;
           }
@@ -786,7 +786,7 @@ final class LobbyUiHelpers {
                   }
                 }
               }
-              game = (LobbyGame) (rq.lobbyGames.next((byte) 116));
+              game = (LobbyGame) (LobbyLoginGlobals.lobbyGames.next((byte) 116));
               continue;
             }
             break;

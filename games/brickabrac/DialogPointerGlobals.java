@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va {
+final class DialogPointerGlobals {
     static String field_c;
     static boolean textChoiceDialogOpen;
     static RgbSprite field_b;

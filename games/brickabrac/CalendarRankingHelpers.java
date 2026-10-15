@@ -43,13 +43,13 @@ final class CalendarRankingHelpers {
         try {
           RadialSelectorWidget.decodedRankingWins = packet.readUnsignedShort(65280) << 5;
           winsDrawsBoundary = packet.readUnsignedByte(255);
-          fh.decodedRankingDraws = 1835008 & winsDrawsBoundary << 18;
+          LobbyRenderGlobals.decodedRankingDraws = 1835008 & winsDrawsBoundary << 18;
           int guardArithmetic = -32 % ((obfuscationGuard + 69) / 37);
           RadialSelectorWidget.decodedRankingWins = RadialSelectorWidget.decodedRankingWins + (winsDrawsBoundary >> 3);
-          fh.decodedRankingDraws = fh.decodedRankingDraws + (packet.readUnsignedShort(65280) << 2);
+          LobbyRenderGlobals.decodedRankingDraws = LobbyRenderGlobals.decodedRankingDraws + (packet.readUnsignedShort(65280) << 2);
           drawsLossesBoundary = packet.readUnsignedByte(255);
           ValidatedTextFieldWidget.decodedRankingLosses = 2064384 & drawsLossesBoundary << 15;
-          fh.decodedRankingDraws = fh.decodedRankingDraws + (drawsLossesBoundary >> 6);
+          LobbyRenderGlobals.decodedRankingDraws = LobbyRenderGlobals.decodedRankingDraws + (drawsLossesBoundary >> 6);
           ValidatedTextFieldWidget.decodedRankingLosses = ValidatedTextFieldWidget.decodedRankingLosses + (packet.readUnsignedByte(255) << 7);
           lossesRatingBoundary = packet.readUnsignedByte(255);
           ValidatedTextFieldWidget.decodedRankingLosses = ValidatedTextFieldWidget.decodedRankingLosses + (lossesRatingBoundary >> 1);

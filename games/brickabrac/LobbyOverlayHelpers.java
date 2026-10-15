@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends IntrusiveNode {
+final class LobbyOverlayHelpers extends IntrusiveNode {
     static RgbSprite[] arcticCentreSprites;
     static int field_i;
     static int incomingPacketLength;
     static boolean[] field_l;
 
-    public ga() {
+    public LobbyOverlayHelpers() {
     }
 
     final static void a(boolean param0, int param1) {
@@ -80,7 +80,7 @@ final class ga extends IntrusiveNode {
 
     public static void a(int param0) {
         if (param0 != 0) {
-          ga.a(51);
+          LobbyOverlayHelpers.a(51);
           field_l = null;
           arcticCentreSprites = null;
           return;

@@ -227,7 +227,7 @@ final class ScreenshotViewer {
             this.a(47, 0, this.title, var16, ArchiveSourceManager.field_j, 622, 0, 0);
             RasterStackHelpers.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
-            this.a(ArchiveSourceManager.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
+            this.a(ArchiveSourceManager.field_j, -4, 0.75f, (byte) 124, 475, DialogPointerGlobals.field_c, var16, 24, this.field_e, 0);
             var17 = MusicVoiceMixer.a(-124, 526344, 526344);
             var5 = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(param0 ^ -388, var5);

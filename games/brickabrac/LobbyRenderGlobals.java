@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fh {
+final class LobbyRenderGlobals {
     static String field_a;
     static String field_e;
     static int[] viewVertexX;

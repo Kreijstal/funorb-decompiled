@@ -20,10 +20,10 @@ final class WidgetLayerStack extends SingleChildWidget {
         if (0 >= ResourceArchiveFactory.windowModeCapabilityWord) {
           var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
         } else {
-          if (null == jj.canvasResizeController) {
+          if (null == ModalOverlayHelpers.canvasResizeController) {
             GameplayRenderHelpers.fullscreenCanvas = LoginCredentials.createFullscreenCanvas(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
           } else {
-            GameplayRenderHelpers.fullscreenCanvas = jj.canvasResizeController.openFullscreenCanvas(true);
+            GameplayRenderHelpers.fullscreenCanvas = ModalOverlayHelpers.canvasResizeController.openFullscreenCanvas(true);
             BrowserResizeNotificationHelpers.notifyBrowserResize(97, 2);
           }
           if (GameplayRenderHelpers.fullscreenCanvas == null) {
@@ -33,7 +33,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             CanvasInputHelpers.attachCanvasInput((byte) 117, GameplayRenderHelpers.fullscreenCanvas);
           }
         }
-        if (null == jj.canvasResizeController &&
+        if (null == ModalOverlayHelpers.canvasResizeController &&
           TextChoiceDialogStyles.field_c) {
           FullscreenDialogHelpers.buildFullscreenDialog(param0, var2, (byte) 104);
         }

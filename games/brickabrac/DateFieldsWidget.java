@@ -277,7 +277,7 @@ final class DateFieldsWidget extends DateInputWidget {
           parentY = parentY + this.y;
           parentX = parentX + this.x;
           this.a(this.dayField, StrongCacheEntry.field_M, (byte) 127, parentX, parentY);
-          this.a(this.monthField, rl.field_f, (byte) 123, parentX, parentY);
+          this.a(this.monthField, LobbyCaptionGlobals.field_f, (byte) 123, parentX, parentY);
           this.a(this.yearField, IndexedSpriteHelpers.field_f, (byte) -86, parentX, parentY);
           return;
         }

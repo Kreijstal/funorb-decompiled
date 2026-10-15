@@ -134,10 +134,10 @@ final class CacheIoRequest extends ResourceRequest {
           }
           ArchiveSourceManager.layoutLobbyTransition(stackIn_4_0, false);
           BrickGameLayerController.field_c.setBounds(NinjaBackground.field_w.width, 0, 88, 0, -40 + NinjaBackground.field_w.height - 2);
-          TextWidgetRenderer.field_b.setBounds(np.uiRowHeight, 0, 0, IterableIntrusiveHashTable.field_b.width, (byte) 64);
+          TextWidgetRenderer.field_b.setBounds(WidgetLayerBootstrap.uiRowHeight, 0, 0, IterableIntrusiveHashTable.field_b.width, (byte) 64);
           stackIn_6_0 = BoundedFile.field_g;
           stackIn_6_1 = 18;
-          stackIn_6_2 = np.uiRowHeight + 2;
+          stackIn_6_2 = WidgetLayerBootstrap.uiRowHeight + 2;
           stackIn_6_3 = 0;
           stackIn_6_4 = IterableIntrusiveHashTable.field_b.width;
           if (!PacketReceiveHelpers.field_e) {
@@ -149,8 +149,8 @@ final class CacheIoRequest extends ResourceRequest {
           if (!param0) {
             windowCanvas = (java.awt.Canvas) null;
           }
-          QuickChatPhraseDefinition.field_E.setBounds(18, np.uiRowHeight + 2, -40 + (-2 + IterableIntrusiveHashTable.field_b.width) - DialogMessagePanel.uiScrollbarWidth, 42 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
-          TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, IterableIntrusiveHashTable.field_b.width, 0, np.uiRowHeight + 2 + 20, DialogMessagePanel.uiScrollbarWidth, -2 + IterableIntrusiveHashTable.field_b.height - (np.uiRowHeight + 20));
+          QuickChatPhraseDefinition.field_E.setBounds(18, WidgetLayerBootstrap.uiRowHeight + 2, -40 + (-2 + IterableIntrusiveHashTable.field_b.width) - DialogMessagePanel.uiScrollbarWidth, 42 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
+          TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, IterableIntrusiveHashTable.field_b.width, 0, WidgetLayerBootstrap.uiRowHeight + 2 + 20, DialogMessagePanel.uiScrollbarWidth, -2 + IterableIntrusiveHashTable.field_b.height - (WidgetLayerBootstrap.uiRowHeight + 20));
           GameUiController.field_e.setBounds(40, -40 + NinjaBackground.field_w.height, 0, NinjaBackground.field_w.width, (byte) 64);
           UiComponentNode.field_v.setBounds(30, 0, 0, MultiplayerMatch.field_d.width, (byte) 64);
           QuickChatPhraseRegistry.field_e.setBounds(-2 + (-40 + MultiplayerMatch.field_d.height) - 30, 30, 0, MultiplayerMatch.field_d.width, (byte) 64);

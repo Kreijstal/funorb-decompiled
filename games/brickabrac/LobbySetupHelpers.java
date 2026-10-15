@@ -36,7 +36,7 @@ final class LobbySetupHelpers {
           Widget.field_p = -1L;
           BufferedFile.gameSettingBitWidths = settingBitWidths;
           RankingsRequest.gameSettingCount = settingBitWidths.length;
-          fh.pendingGameOptionsReceived = false;
+          LobbyRenderGlobals.pendingGameOptionsReceived = false;
           CalendarMatchmakingState.matchmakingChoiceMask = new byte[(HalfRgbBlendHelpers.field_e + 7) / 8];
           ClientResourceHelpers.currentLobbyGame = null;
           IncomingPacketHelpers.pendingLobbyGame = null;
@@ -59,8 +59,8 @@ final class LobbySetupHelpers {
           if (lobbyGameContent.children == null) {
             lobbyGameContent.children = new NodeDeque();
           }
-          rq.lobbyGames = lobbyGameContent.children;
-          rq.lobbyGames.clear((byte) -48);
+          LobbyLoginGlobals.lobbyGames = lobbyGameContent.children;
+          LobbyLoginGlobals.lobbyGames.clear((byte) -48);
           LevelResultSubmission.lobbyGameIndex = new SecondaryHashTable(lobbyGameBuckets);
           if (gamePlayerContent.children == null) {
             gamePlayerContent.children = new NodeDeque();

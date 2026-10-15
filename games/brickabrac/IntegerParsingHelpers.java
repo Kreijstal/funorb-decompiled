@@ -141,10 +141,10 @@ final class IntegerParsingHelpers {
 
     final static ConditionalTextValue a(int param0) {
         if (param0 > 31) {
-          return new ConditionalTextValue(IndexedSpriteGeometry.a(57), ga.c(30794));
+          return new ConditionalTextValue(IndexedSpriteGeometry.a(57), LobbyOverlayHelpers.c(30794));
         }
         quickChatHelpDialog = (QuickChatHelpDialog) null;
-        return new ConditionalTextValue(IndexedSpriteGeometry.a(57), ga.c(30794));
+        return new ConditionalTextValue(IndexedSpriteGeometry.a(57), LobbyOverlayHelpers.c(30794));
     }
 
     public static void a(byte param0) {

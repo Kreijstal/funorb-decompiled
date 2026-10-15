@@ -10,7 +10,7 @@ final class LevelSequence {
     static boolean chatFiltersChanged;
     boolean repeats;
 
-    final void decodeLevel(ga unusedContext, IntNode levelState, NodeDeque motionPaths, int levelIndex, byte obfuscationGuard, NodeDeque[] brickGroups) {
+    final void decodeLevel(LobbyOverlayHelpers unusedContext, IntNode levelState, NodeDeque motionPaths, int levelIndex, byte obfuscationGuard, NodeDeque[] brickGroups) {
         if (obfuscationGuard > -90) {
           return;
         }

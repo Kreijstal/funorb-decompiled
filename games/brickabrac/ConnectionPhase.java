@@ -118,7 +118,7 @@ final class ConnectionPhase {
         if (obfuscationGuard != -26774) {
           return true;
         }
-        phaseAllowsTransport = (this == rq.awaitingLoginReply) || (this == IsaacGenerator.awaitingLoginSuccessBody) || (this == MenuButton.loggedInConnection);
+        phaseAllowsTransport = (this == LobbyLoginGlobals.awaitingLoginReply) || (this == IsaacGenerator.awaitingLoginSuccessBody) || (this == MenuButton.loggedInConnection);
         return phaseAllowsTransport;
     }
 
@@ -215,7 +215,7 @@ final class ConnectionPhase {
               }
             }
             DraggableWidget.field_K.enabled = true;
-            if (fh.pendingGameOptionsReceived) {
+            if (LobbyRenderGlobals.pendingGameOptionsReceived) {
               GameUiController.field_e.enabled = false;
               CanvasInputCleanup.field_f.text = TextChoiceDialogStyles.field_a;
               if (alternateSearchCaption != 0) {
@@ -272,7 +272,7 @@ final class ConnectionPhase {
                   SingleChildWidget.field_D[settingIndex] = false;
                   settingIndex++;
                 }
-                ar.a(true, IncomingPacketHelpers.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
+                GameSettingConstraintHelpers.a(true, IncomingPacketHelpers.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
                 if (!(QuickChatHelpDialog.loginPrivilegeByteOne < 2) &&
                   IntArrayRequest.heldKeys[12]) {
                   MeshAttributeRecord.field_g = true;
@@ -321,7 +321,7 @@ final class ConnectionPhase {
               ProxyAuthenticationRequiredException.requestReturnToLobby(-22809, gameActionOpcode);
             }
             if (DraggableWidget.field_K.pressedButton != 0) {
-              if (!fh.pendingGameOptionsReceived) {
+              if (!LobbyRenderGlobals.pendingGameOptionsReceived) {
                 UnderwaterBackground.requestFindOpponents(gameActionOpcode, (byte) 98);
               } else {
                 TextWidgetRenderer.requestCancelOpponentSearch(obfuscationGuard + 276, gameActionOpcode);

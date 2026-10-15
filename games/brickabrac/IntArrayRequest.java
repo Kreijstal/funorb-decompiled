@@ -39,7 +39,7 @@ final class IntArrayRequest extends IntrusiveNode {
 
     final static int getFullscreenDialogWidth(byte obfuscationGuard) {
         int guardCalculation = 119 % ((obfuscationGuard + 15) / 60);
-        return SpaceBackground.fullscreenDialogRight - np.fullscreenDialogLeft;
+        return SpaceBackground.fullscreenDialogRight - WidgetLayerBootstrap.fullscreenDialogLeft;
     }
 
     IntArrayRequest() {

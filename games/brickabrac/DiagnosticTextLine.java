@@ -82,7 +82,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
 
     final static void a(byte param0) {
         HalfRgbBlendHelpers.field_b = false;
-        ga.field_i = 13;
+        LobbyOverlayHelpers.field_i = 13;
         MatchCompleteScreen.field_E = 0;
         LoadingProgressDialog.field_eb = null;
         GameClock.field_d = 0;

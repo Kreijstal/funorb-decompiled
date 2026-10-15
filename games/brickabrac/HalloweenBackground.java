@@ -39,7 +39,7 @@ final class HalloweenBackground extends BackgroundScene {
           }
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, va.field_b);
+            ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var7, 0, (byte) -86, DialogPointerGlobals.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var7.sprite, destinationY);
@@ -51,7 +51,7 @@ final class HalloweenBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, va.field_b);
+          ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 1, colorIndex, QuickChatParameterType.field_j, var8, 0, (byte) -86, DialogPointerGlobals.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         ValidationStatus.a(1, 0, StateIconLabel.halloweenMidSprite, scroll16, ValidationMessageWidget.halloweenNearSprite, 67, 640, destinationX, var8.sprite, destinationY);
@@ -73,7 +73,7 @@ final class HalloweenBackground extends BackgroundScene {
         GameClock.halloweenFarSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.backgroundSpriteArchive);
         LevelPackLoader.halloweenSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.backgroundSpriteArchive);
         MotionWaypoint.halloweenMoonSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.backgroundSpriteArchive);
-        va.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, ValidationMessageWidget.halloweenNearSprite);
+        DialogPointerGlobals.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, ValidationMessageWidget.halloweenNearSprite);
         field_u = UiGeometryHelpers.createScaledHalfSizeSprite(0, StateIconLabel.halloweenMidSprite);
         SocialListResponseHelpers.field_m = UiGeometryHelpers.createScaledHalfSizeSprite(0, GameClock.halloweenFarSprite);
         QuickChatParameterType.field_j = UiGeometryHelpers.createScaledHalfSizeSprite(0, MotionWaypoint.halloweenMoonSprite);
@@ -193,12 +193,12 @@ final class HalloweenBackground extends BackgroundScene {
           }
           var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, va.field_b);
+            ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, DialogPointerGlobals.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-            ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+            ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var7.sprite, destinationY);
             return;
           }
-          ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var7.sprite, destinationY);
+          ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var7.sprite, destinationY);
           return;
         }
         if (!this.hasSprites((byte) -126)) {
@@ -207,12 +207,12 @@ final class HalloweenBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
         if (var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+          ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var8.sprite, destinationY);
           return;
         }
-        ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, va.field_b);
+        ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var8, -13, (byte) -96, DialogPointerGlobals.field_b);
         var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-        ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
+        ValidationStatus.a(2, -13, field_u, scroll16, DialogPointerGlobals.field_b, 62, 306, destinationX, var8.sprite, destinationY);
     }
 
     final RgbSprite a(boolean param0, int param1) {

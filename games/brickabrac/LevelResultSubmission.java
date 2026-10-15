@@ -55,7 +55,7 @@ final class LevelResultSubmission extends IntrusiveNode {
           var2 = null;
           if (ScreenNavigationHelpers.quickChatChannel == 0 &&
             null != IncomingPacketHelpers.pendingLobbyGame) {
-            var2 = rl.field_a;
+            var2 = LobbyCaptionGlobals.field_a;
           }
           if (2 == ScreenNavigationHelpers.quickChatChannel &&
             !FileCacheStore.b(-21835160)) {
@@ -110,7 +110,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
+                    var4 = "[" + GamePresentationHelpers.formatIndexedText(LobbyKeyboardGlobals.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
                   }
                 }
               }

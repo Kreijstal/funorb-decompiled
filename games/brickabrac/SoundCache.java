@@ -257,7 +257,7 @@ final class SoundCache {
                 GameConnectionHelpers.connectionPhase = MeshAttributeRecord.awaitingLoginSeed;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var6_int;
-                ga.incomingPacketLength = -1;
+                LobbyOverlayHelpers.incomingPacketLength = -1;
                 GameConnectionHelpers.connectionPhase = MenuScreen.awaitingLoginErrorBody;
               }
             }
@@ -266,10 +266,10 @@ final class SoundCache {
               PopupWidgetLayer.field_ab = LogoRenderHelpers.incomingPackets.readLong(-32768);
               LogoRenderHelpers.incomingPackets.position = 0;
               SocialListEntry.a(param4, NanoGameClock.field_s, param1, param3, false);
-              GameConnectionHelpers.connectionPhase = rq.awaitingLoginReply;
+              GameConnectionHelpers.connectionPhase = LobbyLoginGlobals.awaitingLoginReply;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (GameConnectionHelpers.connectionPhase == rq.awaitingLoginReply &&
+            if (GameConnectionHelpers.connectionPhase == LobbyLoginGlobals.awaitingLoginReply &&
               PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
               var6_intLifetime1 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               ParisBackground.field_t = null;
@@ -278,7 +278,7 @@ final class SoundCache {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  ga.incomingPacketLength = -1;
+                  LobbyOverlayHelpers.incomingPacketLength = -1;
                   GameConnectionHelpers.connectionPhase = MenuScreen.awaitingLoginErrorBody;
                   decompiledFrameRemainder0 = false;
                 }
@@ -290,7 +290,7 @@ final class SoundCache {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ga.incomingPacketLength = -1;
+                LobbyOverlayHelpers.incomingPacketLength = -1;
                 GameConnectionHelpers.connectionPhase = IsaacGenerator.awaitingLoginSuccessBody;
               }
             }

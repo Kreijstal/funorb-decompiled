@@ -125,7 +125,7 @@ final class GameUiController implements GameUiLifecycle {
               if (OptionsScreen.progressRequests[var3].values[0] > IntegerPowerHelpers.unlockedLevelCounts[var3]) {
                 IntegerPowerHelpers.unlockedLevelCounts[var3] = OptionsScreen.progressRequests[var3].values[0];
               }
-              jj.field_d = jj.field_d | BytePayloadSubmission.combineLevelAttributes(DateFieldsWidget.field_L[var3], 0, true, IntegerPowerHelpers.unlockedLevelCounts[var3]);
+              ModalOverlayHelpers.field_d = ModalOverlayHelpers.field_d | BytePayloadSubmission.combineLevelAttributes(DateFieldsWidget.field_L[var3], 0, true, IntegerPowerHelpers.unlockedLevelCounts[var3]);
               if (!DelayedPacket.c(obfuscationGuard ^ 27)) {
                 IntegerPowerHelpers.unlockedLevelCounts[var3] = 0;
               } else {

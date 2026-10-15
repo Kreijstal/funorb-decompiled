@@ -44,11 +44,11 @@ final class NanoGameClock extends GameClock {
         LevelResultWireHelpers.field_a = Rasterizer2D.width;
         Brick.e(-67);
         CanvasInputHelpers.field_b.setBounds(ContentTransitionLayer.field_gb.width, 0, 80, 0, ContentTransitionLayer.field_gb.height - 40 - 2);
-        DraggableWidget.field_N.setBounds(np.uiRowHeight, 0, 0, RectangleBody.field_q.width, (byte) 64);
+        DraggableWidget.field_N.setBounds(WidgetLayerBootstrap.uiRowHeight, 0, 0, RectangleBody.field_q.width, (byte) 64);
         if (param0 <= 16) {
           field_l = true;
         }
-        int var1 = np.uiRowHeight + 2;
+        int var1 = WidgetLayerBootstrap.uiRowHeight + 2;
         Ball.field_A.setBounds(-(!PacketReceiveHelpers.field_e ? 0 : var1) + RectangleBody.field_q.height, !PacketReceiveHelpers.field_e ? 0 : var1, 0, RectangleBody.field_q.width, (byte) 64);
         ResourcePreparationQueue.b(124);
         HighscorePackSelector.field_k.setBounds(40, ContentTransitionLayer.field_gb.height - 40, 0, ContentTransitionLayer.field_gb.width, (byte) 64);
@@ -61,7 +61,7 @@ final class NanoGameClock extends GameClock {
         int var2 = PacketReceiveHelpers.field_e ? 250 : 200;
         BufferedSocket.field_h.setBounds(30, 5, 5 + var2, -var2 + 363, (byte) 64);
         HalloweenBackground.field_x.setBounds(30, 5, 370, FontRequestHelpers.field_a.width - 10 - 365, (byte) 64);
-        rl.field_e.setScrollPaneBounds(2, (byte) -128, -5 + (PasswordTooltipHelpers.field_e.width - 5), 5, 37, DialogMessagePanel.uiScrollbarWidth, -5 + (-5 + PasswordTooltipHelpers.field_e.height - 32));
+        LobbyCaptionGlobals.field_e.setScrollPaneBounds(2, (byte) -128, -5 + (PasswordTooltipHelpers.field_e.width - 5), 5, 37, DialogMessagePanel.uiScrollbarWidth, -5 + (-5 + PasswordTooltipHelpers.field_e.height - 32));
         int var3 = (FontRequestHelpers.field_a.width + 2) / 2;
         TableQuickChatHelpers.field_b.setBounds(40, -40 + FontRequestHelpers.field_a.height, 0, var3 - 2, (byte) 64);
         if (!PacketReceiveHelpers.field_e) {

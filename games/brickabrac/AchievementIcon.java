@@ -211,7 +211,7 @@ final class AchievementIcon extends IntrusiveNode {
           }
           return;
         }
-        ArrayWidgetGroup.buttonLabels[10] = fh.field_a;
+        ArrayWidgetGroup.buttonLabels[10] = LobbyRenderGlobals.field_a;
         if (obfuscationGuard == 32) {
           return;
         }

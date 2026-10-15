@@ -30,9 +30,9 @@ final class TextChoiceDialogHitTest {
     final static UiComponent a(int param0) {
         if (param0 != 1345) {
           TextChoiceDialogHitTest.b(94);
-          return rl.field_e.content;
+          return LobbyCaptionGlobals.field_e.content;
         }
-        return rl.field_e.content;
+        return LobbyCaptionGlobals.field_e.content;
     }
 
     final static int hitTestTextChoiceDialog(int firstLineIndex, int pointerY, int pointerX) {

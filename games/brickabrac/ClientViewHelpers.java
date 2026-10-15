@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok {
+final class ClientViewHelpers {
     static String field_a;
     static int achievementNotificationTick;
     static String[] field_b;
@@ -26,25 +26,25 @@ final class ok {
         field_e = null;
         field_b = null;
         if (param0 > -2) {
-          ok.a(false);
+          ClientViewHelpers.a(false);
         }
     }
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          ok.a(true);
-          if (null == jj.canvasResizeController) {
+          ClientViewHelpers.a(true);
+          if (null == ModalOverlayHelpers.canvasResizeController) {
             return false;
           }
-          if (jj.canvasResizeController.canUseAdaptiveResize((byte) -32)) {
+          if (ModalOverlayHelpers.canvasResizeController.canUseAdaptiveResize((byte) -32)) {
             return true;
           }
           return false;
         }
-        if (null == jj.canvasResizeController) {
+        if (null == ModalOverlayHelpers.canvasResizeController) {
           return false;
         }
-        if (jj.canvasResizeController.canUseAdaptiveResize((byte) -32)) {
+        if (ModalOverlayHelpers.canvasResizeController.canUseAdaptiveResize((byte) -32)) {
           return true;
         }
         return false;

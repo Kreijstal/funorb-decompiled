@@ -103,7 +103,7 @@ final class GzipInflater {
     }
 
     final static void b(int param0) {
-        TextValidationHelpers.field_a = ga.field_i;
+        TextValidationHelpers.field_a = LobbyOverlayHelpers.field_i;
         if (param0 != -8) {
           GzipInflater.a(42);
         }
