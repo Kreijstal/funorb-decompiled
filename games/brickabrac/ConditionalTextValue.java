@@ -57,7 +57,7 @@ final class ConditionalTextValue {
           if (!obfuscationGuard) {
             ConditionalTextValue.a(-100);
           }
-          var6 = ce.nameCharacterExtensions;
+          var6 = QuickChatPopupHelpers.nameCharacterExtensions;
           var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];

@@ -127,7 +127,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
               LoginPanel.field_W = 0;
               RichTextLayout.field_m = param4;
               WidgetPaintStyle.canvasHeight = param2;
-              mc.field_d = param2;
+              UiCleanupHelpers.field_d = param2;
               SecondaryHashTable.field_i = EmailConfirmationValidator.e((byte) -64);
               dupTemp$0 = new PlatformServices(param0, param5, param6, true);
               AccountMessageDialog.field_ub = dupTemp$0;
@@ -268,7 +268,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 if (var2.width < u.field_d) {
                   return;
                 }
-                if (mc.field_d > var2.height) {
+                if (UiCleanupHelpers.field_d > var2.height) {
                   return;
                 }
               }

@@ -40,7 +40,7 @@ final class VolcanicBackground extends BackgroundScene {
         if (null == ByteArrayNode.volcanicFarSprite) {
           return false;
         }
-        if (mc.volcanicSmallSprite == null) {
+        if (UiCleanupHelpers.volcanicSmallSprite == null) {
           return false;
         }
         return true;
@@ -53,7 +53,7 @@ final class VolcanicBackground extends BackgroundScene {
         RasterCacheSurface.volcanicNearSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.backgroundSpriteArchive);
         WidgetLayerStack.volcanicMidSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.backgroundSpriteArchive);
         ByteArrayNode.volcanicFarSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.backgroundSpriteArchive);
-        mc.volcanicSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.backgroundSpriteArchive);
+        UiCleanupHelpers.volcanicSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.backgroundSpriteArchive);
         NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
         NameEntryPopup.field_Sb = jh.a(0, WidgetLayerStack.volcanicMidSprite);
         RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
@@ -71,13 +71,13 @@ final class VolcanicBackground extends BackgroundScene {
         if (colorIndex > -1) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, hh.volcanicBackgroundColors[colorIndex], 10792131);
           if (this.hasSprites((byte) -125)) {
-            mc.volcanicSmallSprite.drawTransparent(destinationX, destinationY);
+            UiCleanupHelpers.volcanicSmallSprite.drawTransparent(destinationX, destinationY);
           }
           return;
         }
         Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 16777215, 11184810);
         if (this.hasSprites((byte) -125)) {
-          mc.volcanicSmallSprite.drawTransparent(destinationX, destinationY);
+          UiCleanupHelpers.volcanicSmallSprite.drawTransparent(destinationX, destinationY);
         }
     }
 

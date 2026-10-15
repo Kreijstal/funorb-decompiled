@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mc {
+final class UiCleanupHelpers {
     static ConnectionPhase connectionFailed;
     static RgbSprite volcanicSmallSprite;
     static int field_d;
@@ -14,16 +14,16 @@ final class mc {
         field_a = null;
         connectionFailed = null;
         if (param0 > -46) {
-          mc.a((byte) -35);
+          UiCleanupHelpers.cleanupPopupUi((byte) -35);
           field_b = null;
           return;
         }
         field_b = null;
     }
 
-    final static void a(byte param0) {
-        ce.a(224);
-        int var1 = -38 % ((46 - param0) / 52);
+    final static void cleanupPopupUi(byte obfuscationGuard) {
+        QuickChatPopupHelpers.cleanupPopupUi(224);
+        int unusedGuardRemainder = -38 % ((46 - obfuscationGuard) / 52);
     }
 
     static {

@@ -90,7 +90,7 @@ final class MainMenuScreen extends MenuScreen {
         if (obfuscationGuard > -14) {
           field_s = (RgbSprite) null;
         }
-        IntrusiveHashTable.a(MusicPatch.pointerX, (byte) -118, ResourcePreparationEntry.pointerY, hc.field_h);
+        IntrusiveHashTable.a(MusicPatch.pointerX, (byte) -118, ResourcePreparationEntry.pointerY, MeshLobbyUiHelpers.field_h);
         if (!DelayedPacket.c(77)) {
           var4 = (TooltipSprite) (this.tooltipSprites.first(-90));
           while (var4 != null) {
@@ -120,7 +120,7 @@ final class MainMenuScreen extends MenuScreen {
               IntArrayRequest.lastBackgroundId = IntrusiveHashTable.field_k.sceneId;
             }
             IntrusiveHashTable.field_k = GamePresentationHelpers.selectBackground(0, (byte) 19);
-            hc.field_h = 2 * ButtonWidgetRenderer.field_w.nextBoundedInt(-37880252, 2);
+            MeshLobbyUiHelpers.field_h = 2 * ButtonWidgetRenderer.field_w.nextBoundedInt(-37880252, 2);
             GzipInflater.field_e = 50;
           }
         }
@@ -218,7 +218,7 @@ final class MainMenuScreen extends MenuScreen {
     }
 
     MainMenuScreen() {
-        super(0, 180, 460, 150, 35, hc.field_e);
+        super(0, 180, 460, 150, 35, MeshLobbyUiHelpers.field_e);
         this.tooltipSprites = new NodeDeque();
         int var1 = 468;
         var1 = var1 - ArchiveNetworkRequest.packSelectorIcons[1].canvasHeight;

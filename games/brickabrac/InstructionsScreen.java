@@ -292,14 +292,14 @@ final class InstructionsScreen extends MenuScreen {
           var7 = -1;
           var8 = 0;
           if (ok.field_b[var4].startsWith("<bab:heading1>")) {
-            var5 = ce.field_e;
+            var5 = QuickChatPopupHelpers.field_e;
             var8 = 4;
             var6 = 0;
           } else {
             if (ok.field_b[var4].startsWith("<bab:heading2>")) {
               var8 = 3;
               var6 = 8;
-              var5 = ce.field_e;
+              var5 = QuickChatPopupHelpers.field_e;
             } else {
               if (ok.field_b[var4].startsWith("<bab:vspace>")) {
                 var8 = 4;

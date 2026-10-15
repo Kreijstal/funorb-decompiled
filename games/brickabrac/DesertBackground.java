@@ -42,7 +42,7 @@ final class DesertBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 16777215, 11184810);
           var5 = 52 % ((obfuscationGuard + 28) / 43);
           if (this.hasSprites((byte) -106)) {
-            ce.desertSmallSprite.drawTransparent(destinationX, destinationY);
+            QuickChatPopupHelpers.desertSmallSprite.drawTransparent(destinationX, destinationY);
             return;
           }
           return;
@@ -50,7 +50,7 @@ final class DesertBackground extends BackgroundScene {
         Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, CacheIoWorker.desertBackgroundColors[colorIndex], 16777215);
         var5Lifetime1 = 52 % ((obfuscationGuard + 28) / 43);
         if (this.hasSprites((byte) -106)) {
-          ce.desertSmallSprite.drawTransparent(destinationX, destinationY);
+          QuickChatPopupHelpers.desertSmallSprite.drawTransparent(destinationX, destinationY);
           return;
         }
     }
@@ -60,7 +60,7 @@ final class DesertBackground extends BackgroundScene {
           FriendListUi.desertNearSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.backgroundSpriteArchive);
           PowerUpWarning.desertMidSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.backgroundSpriteArchive);
           OptionsScreen.desertFarSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.backgroundSpriteArchive);
-          ce.desertSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.backgroundSpriteArchive);
+          QuickChatPopupHelpers.desertSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.backgroundSpriteArchive);
           SecondaryNodeQueue.field_d = jh.a(0, FriendListUi.desertNearSprite);
           Widget.field_x = jh.a(0, PowerUpWarning.desertMidSprite);
           pp.field_b = jh.a(0, OptionsScreen.desertFarSprite);
@@ -163,7 +163,7 @@ final class DesertBackground extends BackgroundScene {
           if (null == OptionsScreen.desertFarSprite) {
             return false;
           }
-          if (ce.desertSmallSprite == null) {
+          if (QuickChatPopupHelpers.desertSmallSprite == null) {
             return false;
           }
           if (GzipInflater.desertCapsSprites == null) {
@@ -183,7 +183,7 @@ final class DesertBackground extends BackgroundScene {
         if (null == OptionsScreen.desertFarSprite) {
           return false;
         }
-        if (ce.desertSmallSprite == null) {
+        if (QuickChatPopupHelpers.desertSmallSprite == null) {
           return false;
         }
         if (GzipInflater.desertCapsSprites == null) {

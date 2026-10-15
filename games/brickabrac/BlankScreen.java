@@ -34,14 +34,14 @@ final class BlankScreen extends GameScreen {
         field_j = null;
     }
 
-    final static void a(int param0, QuickChatMenu param1) {
+    final static void appendQuickChatSubmenu(int obfuscationGuard, QuickChatMenu submenu) {
         try {
-          if (param0 != -2) {
+          if (obfuscationGuard != -2) {
             BlankScreen.d((byte) 104);
           }
-          QuickChatPhraseDefinition.quickChatMenuRoot.addChild(param1, 0);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "of.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          QuickChatPhraseDefinition.quickChatMenuRoot.addChild(submenu, 0);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "of.C(" + obfuscationGuard + ',' + (submenu != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,14 +57,14 @@ final class BlankScreen extends GameScreen {
         if (param0 != 63) {
           return (String) null;
         }
-        if (QuickChatParameterType.field_h) {
+        if (QuickChatParameterType.tooltipSuppressed) {
           return null;
         }
-        if (MonotonicTime.field_e > ResourceArchiveFactory.field_e) {
+        if (MonotonicTime.field_e > ResourceArchiveFactory.tooltipTicks) {
           return null;
         }
-        if (ResourceArchiveFactory.field_e < jh.field_a + MonotonicTime.field_e) {
-          return LevelCompleteScreen.field_J;
+        if (ResourceArchiveFactory.tooltipTicks < jh.field_a + MonotonicTime.field_e) {
+          return LevelCompleteScreen.tooltipText;
         }
         return null;
     }

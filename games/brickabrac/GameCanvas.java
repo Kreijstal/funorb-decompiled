@@ -132,14 +132,14 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         ChatMessage var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (ScrollPaneWithFooter.field_Yb > hc.field_f) {
-            hc.field_f = hc.field_f + 1;
+          if (ScrollPaneWithFooter.field_Yb > MeshLobbyUiHelpers.field_f) {
+            MeshLobbyUiHelpers.field_f = MeshLobbyUiHelpers.field_f + 1;
           }
           if (BallPulseEffect.framebuffer.height != StrongCacheEntry.field_O) {
             BoundedFile.field_h = BoundedFile.field_h + (-StrongCacheEntry.field_O + BallPulseEffect.framebuffer.height);
             StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
           }
-          if (param2 <= ~hc.field_f) {
+          if (param2 <= ~MeshLobbyUiHelpers.field_f) {
             return;
           }
           ProxyAuthenticationRequiredException.a(param2 - 123);

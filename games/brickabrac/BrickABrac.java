@@ -588,7 +588,7 @@ public final class BrickABrac extends InteractiveGameClient {
         SocialTabbedPanel.a(true);
         hm.a(8);
         Rasterizer2D.clearStaticReferences();
-        mc.a(-128);
+        UiCleanupHelpers.a(-128);
         OutgoingPacketHelpers.a(obfuscationGuard);
         ParallaxMusicHelpers.b(78);
         AppletGameShell.d(19254);
@@ -645,7 +645,7 @@ public final class BrickABrac extends InteractiveGameClient {
         BackgroundScene.a((byte) 7);
         rb.a((byte) -116);
         BufferedFile.a(-54);
-        hc.a(-61);
+        MeshLobbyUiHelpers.a(-61);
         ConditionalTextValue.c(2);
         f.a(1);
         hd.a(12);
@@ -666,7 +666,7 @@ public final class BrickABrac extends InteractiveGameClient {
         LobbyPlayer.h(-56);
         LobbyGame.d((byte) -32);
         SecondaryHashTable.c((byte) 85);
-        ce.b(46);
+        QuickChatPopupHelpers.b(46);
         hn.a(122);
         GameplayAudioEvent.d(0);
         Ball.c(122);

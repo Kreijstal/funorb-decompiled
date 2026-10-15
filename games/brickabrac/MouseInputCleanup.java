@@ -3,7 +3,7 @@
  */
 final class MouseInputCleanup {
     static RgbSprite[] spaceLeverSprites;
-    static int field_a;
+    static int tooltipAnchorX;
     static int fullscreenDialogButtonLineHeight;
 
     final static void detachMouseInput(int obfuscationGuard, java.awt.Component component) {
@@ -23,11 +23,11 @@ final class MouseInputCleanup {
     public static void a(boolean param0) {
         spaceLeverSprites = null;
         if (!param0) {
-          field_a = 50;
+          tooltipAnchorX = 50;
         }
     }
 
     static {
-        field_a = -1;
+        tooltipAnchorX = -1;
     }
 }

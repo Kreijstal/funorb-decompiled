@@ -13,7 +13,7 @@ final class CappedUrlRequest implements Runnable {
     static RgbSprite chocolateSpiresSprite;
     static TextWidgetRenderer field_e;
     private PlatformTask urlTask;
-    static int field_j;
+    static int tooltipAnchorY;
     private PlatformTask socketTask;
     static UiComponent field_l;
 
@@ -67,7 +67,7 @@ final class CappedUrlRequest implements Runnable {
           BrickMotionPath.lastGameWriteMillis = dupTemp$1;
           RichTextLayout.lastGameReadMillis = dupTemp$1;
           if (BrowserResizeNotificationHelpers.field_d.status != 1) {
-            GameConnectionHelpers.connectionPhase = mc.connectionFailed;
+            GameConnectionHelpers.connectionPhase = UiCleanupHelpers.connectionFailed;
           } else {
             try {
               WhirlpoolHasher.gameTransport = new BufferedSocket((java.net.Socket) (BrowserResizeNotificationHelpers.field_d.result), FramedMenuScreen.field_s);
@@ -85,7 +85,7 @@ final class CappedUrlRequest implements Runnable {
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              GameConnectionHelpers.connectionPhase = mc.connectionFailed;
+              GameConnectionHelpers.connectionPhase = UiCleanupHelpers.connectionFailed;
               BrowserResizeNotificationHelpers.field_d = null;
               return true;
             }
@@ -264,7 +264,7 @@ final class CappedUrlRequest implements Runnable {
     }
 
     static {
-        field_j = -1;
+        tooltipAnchorY = -1;
     }
 
     @SuppressWarnings("unchecked")

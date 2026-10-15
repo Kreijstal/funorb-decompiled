@@ -39,7 +39,7 @@ final class MusicVoice extends IntrusiveNode {
         int var3 = 0;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          ResourceArchiveFactory.field_e = ResourceArchiveFactory.field_e + 1;
+          ResourceArchiveFactory.tooltipTicks = ResourceArchiveFactory.tooltipTicks + 1;
           if (-1 == ChocolateBackground.field_v &&
             ll.field_b == -1) {
             ChocolateBackground.field_v = MusicPatch.pointerX;
@@ -50,53 +50,53 @@ final class MusicVoice extends IntrusiveNode {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 == null) {
-            decompiledFrameRemainder0 = (null == LevelCompleteScreen.field_J);
+            decompiledFrameRemainder0 = (null == LevelCompleteScreen.tooltipText);
           } else {
-            decompiledFrameRemainder0 = !(param0.equals(LevelCompleteScreen.field_J));
+            decompiledFrameRemainder0 = !(param0.equals(LevelCompleteScreen.tooltipText));
           }
           if (decompiledFrameRemainder0) {
-            if (!QuickChatParameterType.field_h &&
-              ResourceArchiveFactory.field_e >= MonotonicTime.field_e &&
-              MonotonicTime.field_e + jh.field_a > ResourceArchiveFactory.field_e) {
+            if (!QuickChatParameterType.tooltipSuppressed &&
+              ResourceArchiveFactory.tooltipTicks >= MonotonicTime.field_e &&
+              MonotonicTime.field_e + jh.field_a > ResourceArchiveFactory.tooltipTicks) {
               stackIn_28_0 = 1;
             } else {
               stackIn_28_0 = 0;
             }
             var2_int = stackIn_28_0;
-            if (param0 != null && (QuickChatParameterType.field_h ||
+            if (param0 != null && (QuickChatParameterType.tooltipSuppressed ||
               var2_int != 0)) {
-              ResourceArchiveFactory.field_e = MonotonicTime.field_e;
+              ResourceArchiveFactory.tooltipTicks = MonotonicTime.field_e;
               if (var3 != 0) {
-                ResourceArchiveFactory.field_e = 0;
+                ResourceArchiveFactory.tooltipTicks = 0;
               }
             } else {
-              ResourceArchiveFactory.field_e = 0;
+              ResourceArchiveFactory.tooltipTicks = 0;
             }
-            CappedUrlRequest.field_j = ll.field_b;
+            CappedUrlRequest.tooltipAnchorY = ll.field_b;
             if (null == param0) {
               if (var2_int != 0) {
-                QuickChatParameterType.field_h = true;
+                QuickChatParameterType.tooltipSuppressed = true;
                 if (var3 != 0) {
-                  QuickChatParameterType.field_h = false;
+                  QuickChatParameterType.tooltipSuppressed = false;
                 }
               }
             } else {
-              QuickChatParameterType.field_h = false;
+              QuickChatParameterType.tooltipSuppressed = false;
             }
-            MouseInputCleanup.field_a = ChocolateBackground.field_v;
+            MouseInputCleanup.tooltipAnchorX = ChocolateBackground.field_v;
           }
-          LevelCompleteScreen.field_J = param0;
-          if (!QuickChatParameterType.field_h &&
-            ResourceArchiveFactory.field_e < MonotonicTime.field_e &&
+          LevelCompleteScreen.tooltipText = param0;
+          if (!QuickChatParameterType.tooltipSuppressed &&
+            ResourceArchiveFactory.tooltipTicks < MonotonicTime.field_e &&
             QuickChatHelpDialog.pointerChanged) {
-            MouseInputCleanup.field_a = ChocolateBackground.field_v;
-            ResourceArchiveFactory.field_e = 0;
-            CappedUrlRequest.field_j = ll.field_b;
+            MouseInputCleanup.tooltipAnchorX = ChocolateBackground.field_v;
+            ResourceArchiveFactory.tooltipTicks = 0;
+            CappedUrlRequest.tooltipAnchorY = ll.field_b;
           }
-          if (QuickChatParameterType.field_h &&
-            ResourceArchiveFactory.field_e == LevelPackSelectScreen.field_y) {
-            QuickChatParameterType.field_h = false;
-            ResourceArchiveFactory.field_e = 0;
+          if (QuickChatParameterType.tooltipSuppressed &&
+            ResourceArchiveFactory.tooltipTicks == LevelPackSelectScreen.field_y) {
+            QuickChatParameterType.tooltipSuppressed = false;
+            ResourceArchiveFactory.tooltipTicks = 0;
           }
           ll.field_b = -1;
           ChocolateBackground.field_v = -1;
@@ -331,7 +331,7 @@ final class MusicVoice extends IntrusiveNode {
                 if (!var13.joinRequestPending) {
                   var13.statusLabel.text = ea.field_f;
                 } else {
-                  var13.nameLabel.text = GamePresentationHelpers.formatIndexedText(ce.field_g, new String[]{var21}, (byte) 103);
+                  var13.nameLabel.text = GamePresentationHelpers.formatIndexedText(QuickChatPopupHelpers.field_g, new String[]{var21}, (byte) 103);
                   var13.statusLabel.text = JungleBackground.field_t;
                   var13.actionLabel.text = NameEntryPopup.field_Wb;
                 }

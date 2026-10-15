@@ -448,7 +448,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
           return true;
         }
         if (DualLinkDeque.a(-4858)) {
-          hc.a(param5, -7812, param4, param1);
+          MeshLobbyUiHelpers.updateQuickChatInterface(param5, -7812, param4, param1);
           if (GameRenderAudioHelpers.contextActions != null &&
             GameRenderAudioHelpers.contextActions.pollAndDispatchAction(-2, param1, param6, param0, param5)) {
             ActivityIndicatorWidget.f((byte) -124);

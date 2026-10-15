@@ -77,7 +77,7 @@ class Widget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        PopupWidgetLayer.widgetTheme.a(true, CappedUrlRequest.field_j, MouseInputCleanup.field_a, var5);
+        PopupWidgetLayer.widgetTheme.a(true, CappedUrlRequest.tooltipAnchorY, MouseInputCleanup.tooltipAnchorX, var5);
     }
 
     final static void drawPowerUpMeter(int y, int typeId, int x, PlayerBoard board, MultiplayerMatch match, byte obfuscationGuard) {

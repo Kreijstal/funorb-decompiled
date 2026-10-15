@@ -8,7 +8,7 @@ final class QuickChatParameterType {
     static String[] field_a;
     static boolean field_d;
     static RgbSprite field_i;
-    static boolean field_h;
+    static boolean tooltipSuppressed;
     static RgbSprite parisMidSprite;
     int commandId;
     static boolean field_b;
@@ -107,8 +107,8 @@ final class QuickChatParameterType {
         }
     }
 
-    final static void b(int param0) {
-        if (param0 != 1) {
+    final static void closeQuickChatIfOpen(int obfuscationGuard) {
+        if (obfuscationGuard != 1) {
           QuickChatParameterType.a((byte) 83);
           if (!TooltipSprite.quickChatMenuOpen) {
             return;
@@ -132,7 +132,7 @@ final class QuickChatParameterType {
     }
 
     static {
-        field_h = false;
+        tooltipSuppressed = false;
         field_f = "Players: ";
     }
 }

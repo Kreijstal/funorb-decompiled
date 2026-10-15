@@ -54,7 +54,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     final static void a(int param0) {
         int var3 = 0;
         int var1 = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
-        int var2 = -(hc.field_f * hc.field_f) + var1;
+        int var2 = -(MeshLobbyUiHelpers.field_f * MeshLobbyUiHelpers.field_f) + var1;
         int var3Lifetime1;
         if (param0 < -27) {
           var3 = (-BoundedFile.field_h + StrongCacheEntry.field_O) * var2 / var1 + BoundedFile.field_h;

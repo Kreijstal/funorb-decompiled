@@ -308,7 +308,7 @@ final class FullscreenDialogHelpers {
             jj.fullscreenDialogHeight = heightSoFar + rowHeight;
           }
           CachedArchiveSource.fullscreenDialogTop = -(jj.fullscreenDialogHeight >> 1) + ScreenshotViewer.fullscreenDialogCenterY;
-          ce.fullscreenDialogButtonBounds = new int[ValidationStatus.fullscreenDialogRows.length][];
+          QuickChatPopupHelpers.fullscreenDialogButtonBounds = new int[ValidationStatus.fullscreenDialogRows.length][];
           boundsRowIndex = 0;
           rowY = CachedArchiveSource.fullscreenDialogTop;
           while (boundsRowIndex < ValidationStatus.fullscreenDialogRows.length) {
@@ -317,12 +317,12 @@ final class FullscreenDialogHelpers {
               buttonTextWidth = hm.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[boundsRowIndex], obfuscationGuard - 104);
               buttonLeft = ProxySocketConnector.fullscreenDialogCenterX - (buttonTextWidth >> 1);
               rowY = rowY + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
-              ce.fullscreenDialogButtonBounds[boundsRowIndex] = new int[4];
-              ce.fullscreenDialogButtonBounds[boundsRowIndex][0] = -GameOverlayHelpers.fullscreenDialogButtonPaddingX + buttonLeft;
-              ce.fullscreenDialogButtonBounds[boundsRowIndex][1] = rowY;
-              ce.fullscreenDialogButtonBounds[boundsRowIndex][2] = (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1) + buttonTextWidth;
+              QuickChatPopupHelpers.fullscreenDialogButtonBounds[boundsRowIndex] = new int[4];
+              QuickChatPopupHelpers.fullscreenDialogButtonBounds[boundsRowIndex][0] = -GameOverlayHelpers.fullscreenDialogButtonPaddingX + buttonLeft;
+              QuickChatPopupHelpers.fullscreenDialogButtonBounds[boundsRowIndex][1] = rowY;
+              QuickChatPopupHelpers.fullscreenDialogButtonBounds[boundsRowIndex][2] = (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1) + buttonTextWidth;
               rowY = rowY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight));
-              ce.fullscreenDialogButtonBounds[boundsRowIndex][3] = (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight;
+              QuickChatPopupHelpers.fullscreenDialogButtonBounds[boundsRowIndex][3] = (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight;
             } else {
               rowY = rowY + IntArrayRequest.fullscreenDialogBodyLineHeight;
             }

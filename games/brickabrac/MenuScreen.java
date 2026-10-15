@@ -21,7 +21,7 @@ abstract class MenuScreen extends GameScreen {
           TranslucentNineSliceFrame.a(true);
         } else {
           var2 = (-50 + GzipInflater.field_e) * 640 / 50;
-          if (0 != hc.field_h) {
+          if (0 != MeshLobbyUiHelpers.field_h) {
             ed.a(-640 - var2, 0);
             MainMenuScreen.field_s.drawAt(-var2, 0);
           } else {
@@ -214,7 +214,7 @@ abstract class MenuScreen extends GameScreen {
           fieldTemp$2 = GzipInflater.field_e - 1;
           GzipInflater.field_e = GzipInflater.field_e - 1;
           if (fieldTemp$2 == 0) {
-            hc.field_h = 1;
+            MeshLobbyUiHelpers.field_h = 1;
             GrowableIntList.field_g = 250;
           }
         }

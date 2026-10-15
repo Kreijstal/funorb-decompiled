@@ -78,7 +78,7 @@ final class GameplaySpriteHelpers {
           activeBallSprite = PlayerInputBatch.halfBallSprite;
           Ball.activeBoardMaskSprite = RankingsRequest.halfBoardMaskSprite;
           we.activePowerUpSprites = ch.halfPowerUpSprites;
-          FullscreenDialogHelpers.activePaddleFlameSprites = hc.halfPaddleFlameSprites;
+          FullscreenDialogHelpers.activePaddleFlameSprites = MeshLobbyUiHelpers.halfPaddleFlameSprites;
           TextHotspotRegion.activePaddleCenterSprite = WidgetTextLayout.halfPaddleCenterSprite;
           FireworkBurst.activeBrickSprites = ResourceArchive.halfBrickSprites;
           HorizontalFrameHelpers.activePaddleSegmentSprites = LevelPackSelectScreen.halfPaddleSegmentSprites;

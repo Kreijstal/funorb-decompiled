@@ -378,7 +378,7 @@ final class QuickChatMenu extends UiComponent {
                   this.setExpansionTicks(0, (byte) -81);
                   this.selectedItem = itemIndex;
                   this.openSubmenu = this.submenus[this.selectedItem];
-                  BlankScreen.a(obfuscationGuard ^ -2, this.openSubmenu);
+                  BlankScreen.appendQuickChatSubmenu(obfuscationGuard ^ -2, this.openSubmenu);
                   this.openSubmenu.setExpansionTicks(12, (byte) -81);
                   this.resetSelection((byte) 41);
                   this.setExpansionTicks(0, (byte) -81);
@@ -389,7 +389,7 @@ final class QuickChatMenu extends UiComponent {
               this.setExpansionTicks(0, (byte) -81);
               this.selectedItem = itemIndex;
               this.openSubmenu = this.submenus[this.selectedItem];
-              BlankScreen.a(obfuscationGuard ^ -2, this.openSubmenu);
+              BlankScreen.appendQuickChatSubmenu(obfuscationGuard ^ -2, this.openSubmenu);
               this.openSubmenu.setExpansionTicks(12, (byte) -81);
               if (unusedGameFlag != 0) {
                 this.resetSelection((byte) 41);
@@ -1426,7 +1426,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime176 = GameplaySpriteHelpers.a(true, "keycode_player1_right");
           if (null != var2Lifetime176) {
-            ce.field_d = 255 & var2Lifetime176[0];
+            QuickChatPopupHelpers.field_d = 255 & var2Lifetime176[0];
           }
           var2Lifetime177 = GameplaySpriteHelpers.a(!param0, "keycode_player1_launch");
           SaveResultsPromptScreen.field_t = null;

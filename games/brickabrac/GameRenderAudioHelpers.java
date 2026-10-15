@@ -52,7 +52,7 @@ final class GameRenderAudioHelpers {
             null != mesh.faceGroups) {
             MultiValueSliderWidget.clearFaceGroupCounts((byte) 109);
           }
-          mc.sortedFaceCount = 0;
+          UiCleanupHelpers.sortedFaceCount = 0;
           face = 0;
           boolean facesExhausted = false;
           while (!(facesExhausted = (!(mesh.faceCount > face)))) {
@@ -107,7 +107,7 @@ final class GameRenderAudioHelpers {
                           groupId = mesh.faceGroups[face];
                           AppletGameShell.faceGroupOffsets[groupId] = AppletGameShell.faceGroupOffsets[groupId] + 1;
                         }
-                        mc.sortedFaceCount = mc.sortedFaceCount + 1;
+                        UiCleanupHelpers.sortedFaceCount = UiCleanupHelpers.sortedFaceCount + 1;
                         break;
                       }
                     }
@@ -183,7 +183,7 @@ final class GameRenderAudioHelpers {
               var2.finishBitRead((byte) 116);
               break;
             }
-            TextHotspotRegion.logoMeshes[var4] = hc.decodeMesh(16, var2);
+            TextHotspotRegion.logoMeshes[var4] = MeshLobbyUiHelpers.decodeMesh(16, var2);
             var4++;
           } while (var7 == 0);
           var4 = 0;

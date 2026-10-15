@@ -1773,7 +1773,7 @@ final class GameplayScreen extends GameScreen {
             nameStripHeight = PasswordFieldRenderer.field_D.ascent + PasswordFieldRenderer.field_D.descent;
             Rasterizer2D.fillRectangleAlpha(portraitLayoutX[portraitSlot], 235 + portraitLayoutY[portraitSlot] - 23, 153, nameStripHeight, 0, 141);
             headSpriteAlias.drawTransparent(-headSprite.canvasWidth + (153 + portraitLayoutX[portraitSlot]), 0 + (-headSprite.canvasHeight + portraitLayoutY[portraitSlot]) + 233);
-            ce.field_e.drawLeft(this.match.playerNames[portraitPlayerId], portraitLayoutX[portraitSlot] + 4, 2 + portraitLayoutY[portraitSlot] + 223, 2, -1);
+            QuickChatPopupHelpers.field_e.drawLeft(this.match.playerNames[portraitPlayerId], portraitLayoutX[portraitSlot] + 4, 2 + portraitLayoutY[portraitSlot] + 223, 2, -1);
           }
           portraitPlayerId++;
           portraitPlayerId = portraitPlayerId % this.match.playerCount;

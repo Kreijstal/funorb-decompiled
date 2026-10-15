@@ -222,7 +222,7 @@ final class LobbyGame extends UiComponent {
           if (obfuscationGuard != -103) {
             textChoiceSelectedButtonTextColor = 38;
           }
-          truncatedPlayerName = TextFont.truncateText(ce.field_e, match.playerNames[playerId], 73);
+          truncatedPlayerName = TextFont.truncateText(QuickChatPopupHelpers.field_e, match.playerNames[playerId], 73);
           unusedMessageSlot = null;
           if (!showMessages ||
             isPlayerMasked != 0 ||
@@ -242,7 +242,7 @@ final class LobbyGame extends UiComponent {
               }
             }
             nameAndStatusText = GamePresentationHelpers.formatIndexedText(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
-            ce.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), ce.field_e.ascent + statusTop, 2, -1);
+            QuickChatPopupHelpers.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), QuickChatPopupHelpers.field_e.ascent + statusTop, 2, -1);
           }
           if (showMessages &&
             isPlayerMasked == 0) {
@@ -371,7 +371,7 @@ final class LobbyGame extends UiComponent {
           if (obfuscationGuard != -103) {
             textChoiceSelectedButtonTextColor = 38;
           }
-          truncatedPlayerName = TextFont.truncateText(ce.field_e, match.playerNames[playerId], 73);
+          truncatedPlayerName = TextFont.truncateText(QuickChatPopupHelpers.field_e, match.playerNames[playerId], 73);
           unusedMessageSlot = null;
           if (!showMessages ||
             isPlayerMasked != 0 ||
@@ -391,7 +391,7 @@ final class LobbyGame extends UiComponent {
               }
             }
             nameAndStatusText = GamePresentationHelpers.formatIndexedText(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
-            ce.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), ce.field_e.ascent + statusTop, 2, -1);
+            QuickChatPopupHelpers.field_e.drawRight(nameAndStatusText, -characterSprite.canvasWidth + (x - 9), QuickChatPopupHelpers.field_e.ascent + statusTop, 2, -1);
           }
           if (showMessages &&
             isPlayerMasked == 0) {

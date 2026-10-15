@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce {
+final class QuickChatPopupHelpers {
     static String field_g;
     static ContextMenu contextMenuStyle;
     static RgbSprite desertSmallSprite;
@@ -10,61 +10,61 @@ final class ce {
     static int field_d;
     static PaletteFont field_e;
 
-    final static void a(int param0) {
+    final static void cleanupPopupUi(int obfuscationGuard) {
         if (ResourceArchive.field_f != null) {
           ResourceArchive.field_f.removeHiddenLayers((byte) -36);
-          if (param0 != 224) {
+          if (obfuscationGuard != 224) {
             field_d = -126;
             if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
               ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
             }
-            UsernameAvailabilityValidator.f((byte) -83);
+            UsernameAvailabilityValidator.clearTooltipState((byte) -83);
             return;
           }
           if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
             ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
           }
-          UsernameAvailabilityValidator.f((byte) -83);
+          UsernameAvailabilityValidator.clearTooltipState((byte) -83);
           return;
         }
-        if (param0 == 224) {
+        if (obfuscationGuard == 224) {
           if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
             ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
           }
-          UsernameAvailabilityValidator.f((byte) -83);
+          UsernameAvailabilityValidator.clearTooltipState((byte) -83);
           return;
         }
         field_d = -126;
         if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
           ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
         }
-        UsernameAvailabilityValidator.f((byte) -83);
+        UsernameAvailabilityValidator.clearTooltipState((byte) -83);
     }
 
-    final static void a(boolean param0, int param1, byte param2, int param3) {
-        int var4;
-        int var5;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        int var5Lifetime3;
+    final static void updateQuickChatMenu(boolean inputEnabled, int filterOpcode, byte obfuscationGuard, int messageOpcode) {
+        int anyPressedItem;
+        int rightEdgeWithInputDisabled;
+        int rightEdge;
+        int rightEdgeAfterPress;
+        int rightEdgeAfterPressWithGuardSideEffect;
         if (!TooltipSprite.quickChatMenuOpen) {
           return;
         }
-        QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
-        var4 = hd.quickChatMenu.hasPressedItem(28) ? 1 : 0;
+        QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(inputEnabled, -15211);
+        anyPressedItem = hd.quickChatMenu.hasPressedItem(28) ? 1 : 0;
         if (0 != BackgroundScene.pressedButton) {
-          if (var4 != 0) {
-            if (!param0) {
-              QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
-              if (param2 < 89) {
+          if (anyPressedItem != 0) {
+            if (!inputEnabled) {
+              QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(inputEnabled, -15211);
+              if (obfuscationGuard < 89) {
                 field_e = (PaletteFont) null;
               }
-              var5 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
-              if (var5 > 640) {
+              rightEdgeWithInputDisabled = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+              if (rightEdgeWithInputDisabled > 640) {
                 HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
                 return;
               }
-              if (635 <= var5) {
+              if (635 <= rightEdgeWithInputDisabled) {
                 return;
               }
               if (HighscoresScreen.quickChatScrollX <= 0) {
@@ -73,15 +73,15 @@ final class ce {
               HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX - 5;
               return;
             }
-            hd.quickChatMenu.processPressedItems(38, param3, param1);
-            QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
-            if (param2 >= 89) {
-              var5Lifetime2 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
-              if (var5Lifetime2 > 640) {
+            hd.quickChatMenu.processPressedItems(38, messageOpcode, filterOpcode);
+            QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(inputEnabled, -15211);
+            if (obfuscationGuard >= 89) {
+              rightEdgeAfterPress = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+              if (rightEdgeAfterPress > 640) {
                 HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
                 return;
               }
-              if (635 <= var5Lifetime2) {
+              if (635 <= rightEdgeAfterPress) {
                 return;
               }
               if (HighscoresScreen.quickChatScrollX <= 0) {
@@ -91,9 +91,9 @@ final class ce {
               return;
             }
             field_e = (PaletteFont) null;
-            var5Lifetime3 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
-            if (var5Lifetime3 <= 640) {
-              if (635 <= var5Lifetime3) {
+            rightEdgeAfterPressWithGuardSideEffect = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+            if (rightEdgeAfterPressWithGuardSideEffect <= 640) {
+              if (635 <= rightEdgeAfterPressWithGuardSideEffect) {
                 return;
               }
               if (HighscoresScreen.quickChatScrollX <= 0) {
@@ -105,24 +105,24 @@ final class ce {
             }
             return;
           }
-          QuickChatParameterType.b(1);
-          param0 = false;
+          QuickChatParameterType.closeQuickChatIfOpen(1);
+          inputEnabled = false;
         }
-        if (param0) {
-          hd.quickChatMenu.processPressedItems(38, param3, param1);
+        if (inputEnabled) {
+          hd.quickChatMenu.processPressedItems(38, messageOpcode, filterOpcode);
         }
-        if (var4 != 0) {
-          QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
+        if (anyPressedItem != 0) {
+          QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(inputEnabled, -15211);
         }
-        if (param2 < 89) {
+        if (obfuscationGuard < 89) {
           field_e = (PaletteFont) null;
         }
-        var5Lifetime1 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
-        if (var5Lifetime1 > 640) {
+        rightEdge = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+        if (rightEdge > 640) {
           HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
           return;
         }
-        if (635 > var5Lifetime1) {
+        if (635 > rightEdge) {
           if (HighscoresScreen.quickChatScrollX <= 0) {
             return;
           }

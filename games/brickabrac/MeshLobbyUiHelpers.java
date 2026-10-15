@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hc {
+final class MeshLobbyUiHelpers {
     static String field_d;
     static RgbSprite[][] halfPaddleFlameSprites;
     static int field_h;
@@ -281,7 +281,7 @@ final class hc {
           TextFieldWidget.field_K = new UiComponent(0L, ProxySocketConnector.field_n);
           TextFieldWidget.field_K.copyStyle((byte) -72, DualLinkNode.field_t);
           var16 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "button_mouseover", 2);
-          ce.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, QuickChatCategoryDefinition.field_z, 3, np.uiRowHeight);
+          QuickChatPopupHelpers.contextMenuStyle = new ContextMenu(GameUiController.field_c, var12, CappedUrlRequest.field_l, DualLinkNode.field_t, 3, 2, QuickChatCategoryDefinition.field_z, 3, np.uiRowHeight);
           ArcticBackground.field_s = new UiComponent(0L, DualLinkNode.field_t);
           ArcticBackground.field_s.capturedOffsetY = 1;
           ArcticBackground.field_s.capturedOffsetX = 1;
@@ -417,11 +417,11 @@ final class hc {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3) {
-        ScreenNavigationHelpers.pollQuickChatHelpDialog((byte) -86, param0);
-        ce.a(param0, param3, (byte) 94, param2);
-        if (param1 != -7812) {
-          hc.b(4);
+    final static void updateQuickChatInterface(boolean inputEnabled, int obfuscationGuard, int messageOpcode, int filterOpcode) {
+        ScreenNavigationHelpers.pollQuickChatHelpDialog((byte) -86, inputEnabled);
+        QuickChatPopupHelpers.updateQuickChatMenu(inputEnabled, filterOpcode, (byte) 94, messageOpcode);
+        if (obfuscationGuard != -7812) {
+          MeshLobbyUiHelpers.b(4);
         }
     }
 

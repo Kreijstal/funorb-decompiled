@@ -69,7 +69,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             }
             if (TooltipSprite.quickChatMenuOpen) {
               SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
-              QuickChatParameterType.b(1);
+              QuickChatParameterType.closeQuickChatIfOpen(1);
             }
           }
           if (null == var2 &&

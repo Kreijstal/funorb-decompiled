@@ -82,28 +82,28 @@ final class aa {
     final static void a(byte param0) {
         RasterCacheSurface var2;
         if (param0 >= 23) {
-          if (hc.field_f > 0) {
-            hc.field_f = hc.field_f - 1;
+          if (MeshLobbyUiHelpers.field_f > 0) {
+            MeshLobbyUiHelpers.field_f = MeshLobbyUiHelpers.field_f - 1;
           }
           if (BallPulseEffect.framebuffer.height != StrongCacheEntry.field_O) {
             BoundedFile.field_h = BoundedFile.field_h + (BallPulseEffect.framebuffer.height - StrongCacheEntry.field_O);
             StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
           }
-          if (hc.field_f > 0) {
+          if (MeshLobbyUiHelpers.field_f > 0) {
             ProxyAuthenticationRequiredException.a(-83);
           }
           return;
         }
         var2 = (RasterCacheSurface) null;
         aa.a(90, (RgbSprite) null, false, 114, (RasterCacheSurface) null, 94);
-        if (hc.field_f > 0) {
-          hc.field_f = hc.field_f - 1;
+        if (MeshLobbyUiHelpers.field_f > 0) {
+          MeshLobbyUiHelpers.field_f = MeshLobbyUiHelpers.field_f - 1;
         }
         if (BallPulseEffect.framebuffer.height != StrongCacheEntry.field_O) {
           BoundedFile.field_h = BoundedFile.field_h + (BallPulseEffect.framebuffer.height - StrongCacheEntry.field_O);
           StrongCacheEntry.field_O = BallPulseEffect.framebuffer.height;
         }
-        if (hc.field_f > 0) {
+        if (MeshLobbyUiHelpers.field_f > 0) {
           ProxyAuthenticationRequiredException.a(-83);
         }
         return;

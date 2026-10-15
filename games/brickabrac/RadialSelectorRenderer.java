@@ -200,7 +200,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          hc.a((byte) 113, param12, param9, param7, param19);
+          MeshLobbyUiHelpers.a((byte) 113, param12, param9, param7, param19);
           Mesh3D.initializeSocialPanels(param7, (byte) 121);
           if (param4 != -27460) {
             field_i = 90;

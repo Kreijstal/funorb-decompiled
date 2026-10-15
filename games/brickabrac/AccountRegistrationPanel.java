@@ -596,7 +596,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         this.emailConfirmationField.tooltip = ResourceArchive.field_e;
         this.passwordField.tooltip = IntKeyIndex.field_a;
         this.passwordConfirmationField.tooltip = BoundedFile.field_b;
-        this.ageField.tooltip = hc.field_d;
+        this.ageField.tooltip = MeshLobbyUiHelpers.field_d;
         this.newsletterToggle.tooltip = ok.field_e;
         this.usernameField.setValidationSource(new UsernameAvailabilityValidator(this.usernameField), (byte) -68);
         this.emailField.setValidationSource(new EmailValidator(this.emailField), (byte) -68);

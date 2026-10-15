@@ -26,7 +26,7 @@ final class NinjaBackground extends BackgroundScene {
         LegacyUtf8Decoder.ninjaNearSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.backgroundSpriteArchive);
         CanvasInputHelpers.ninjaMidSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_mid", (byte) -128, AchievementIcon.backgroundSpriteArchive);
         hn.ninjaFarSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
-        hc.ninjaSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
+        MeshLobbyUiHelpers.ninjaSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
         ObjectHistoryBuffer.ninjaCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.backgroundSpriteArchive);
         AppletFlowHelpers.field_h = jh.a(0, LegacyUtf8Decoder.ninjaNearSprite);
         SocialListEntry.field_Zb = jh.a(0, CanvasInputHelpers.ninjaMidSprite);
@@ -81,7 +81,7 @@ final class NinjaBackground extends BackgroundScene {
           if (null == hn.ninjaFarSprite) {
             return false;
           }
-          if (null != hc.ninjaSmallSprite) {
+          if (null != MeshLobbyUiHelpers.ninjaSmallSprite) {
             return null != ObjectHistoryBuffer.ninjaCharacterSprite ? true : false;
           }
           return false;
@@ -95,7 +95,7 @@ final class NinjaBackground extends BackgroundScene {
         if (null == hn.ninjaFarSprite) {
           return false;
         }
-        if (null != hc.ninjaSmallSprite) {
+        if (null != MeshLobbyUiHelpers.ninjaSmallSprite) {
           return null != ObjectHistoryBuffer.ninjaCharacterSprite ? true : false;
         }
         return false;
@@ -187,14 +187,14 @@ final class NinjaBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, VerticalScrollbar.ninjaBackgroundColors[colorIndex], 0);
           var5 = 110 / ((obfuscationGuard + 28) / 43);
           if (this.hasSprites((byte) -97)) {
-            hc.ninjaSmallSprite.drawTransparent(destinationX, destinationY);
+            MeshLobbyUiHelpers.ninjaSmallSprite.drawTransparent(destinationX, destinationY);
           }
           return;
         }
         Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 7829367, 928072);
         var5Lifetime1 = 110 / ((obfuscationGuard + 28) / 43);
         if (this.hasSprites((byte) -97)) {
-          hc.ninjaSmallSprite.drawTransparent(destinationX, destinationY);
+          MeshLobbyUiHelpers.ninjaSmallSprite.drawTransparent(destinationX, destinationY);
         }
     }
 

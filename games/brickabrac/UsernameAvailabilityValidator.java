@@ -7,13 +7,13 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     static String field_m;
     private boolean usernameAvailable;
 
-    final static void f(byte param0) {
-        int var1 = 50 / ((31 - param0) / 52);
-        LevelCompleteScreen.field_J = null;
-        ResourceArchiveFactory.field_e = 0;
-        QuickChatParameterType.field_h = false;
-        MouseInputCleanup.field_a = -1;
-        CappedUrlRequest.field_j = -1;
+    final static void clearTooltipState(byte obfuscationGuard) {
+        int unusedGuardQuotient = 50 / ((31 - obfuscationGuard) / 52);
+        LevelCompleteScreen.tooltipText = null;
+        ResourceArchiveFactory.tooltipTicks = 0;
+        QuickChatParameterType.tooltipSuppressed = false;
+        MouseInputCleanup.tooltipAnchorX = -1;
+        CappedUrlRequest.tooltipAnchorY = -1;
     }
 
     final static void e(int param0) {
@@ -98,7 +98,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
 
     final static void b(boolean param0) {
         if (!param0) {
-          UsernameAvailabilityValidator.f((byte) -72);
+          UsernameAvailabilityValidator.clearTooltipState((byte) -72);
           OptionsScreen.field_A.setLength(0);
           ScreenNavigationHelpers.quickChatChannel = 0;
           return;
@@ -134,7 +134,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 106) {
-            UsernameAvailabilityValidator.f((byte) -106);
+            UsernameAvailabilityValidator.clearTooltipState((byte) -106);
           }
           var4 = (CharSequence) ((Object) text);
           if (!ByteArrayNode.a(17165, var4)) {

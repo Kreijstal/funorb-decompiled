@@ -145,7 +145,7 @@ final class GameUiController implements GameUiLifecycle {
         if (null != GameplayAudioEvent.field_k) {
           QuickChatMenu.a(!obfuscationGuard ? true : false, GameplayAudioEvent.field_k);
           GameplayAudioEvent.field_k = null;
-          hc.b(2);
+          MeshLobbyUiHelpers.b(2);
         }
         KeyDispatchHelpers.field_a = TextChoiceDialogHitTest.a(3, true);
         BackgroundScene.field_f = FullscreenDialogHelpers.createConfiguredArchive(-6, 0, false, 5, true);
@@ -214,14 +214,14 @@ final class GameUiController implements GameUiLifecycle {
             ClientResourceHelpers.loadGameplaySoundAssets(123);
           }
         } else {
-          mc.a((byte) 115);
+          UiCleanupHelpers.cleanupPopupUi((byte) 115);
           LevelList.a(-1);
           SecondaryNodeQueue.a(LevelList.field_o, NodeDequeCursor.field_i, (byte) -38, AchievementIcon.field_s, FarmBackground.field_r);
         }
         if (var2 != 0) {
           WidgetPaintStyle.uiBootstrapStage = WidgetPaintStyle.uiBootstrapStage + 1;
         }
-        hc.b(2);
+        MeshLobbyUiHelpers.b(2);
         if (obfuscationGuard < -41) {
           return false;
         }

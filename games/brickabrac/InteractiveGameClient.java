@@ -46,7 +46,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_10_0 = false;
         if (MeshAttributeRecord.currentKeyCode == 13) {
-          QuickChatParameterType.b(param1 ^ 103);
+          QuickChatParameterType.closeQuickChatIfOpen(param1 ^ 103);
           return true;
         }
         if (MeshAttributeRecord.currentKeyCode == param1) {
@@ -446,7 +446,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
             (AchievementMaskRequest.uiLifecycle.pollUiReady(23570))) {
             TextWidgetRenderer.field_t = true;
             this.p(1);
-            mc.a((byte) 126);
+            UiCleanupHelpers.cleanupPopupUi((byte) 126);
           }
         }
         if (!QuickChatMenu.h(-26090)) {

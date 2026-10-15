@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 373 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 376 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -451,5 +451,13 @@ AppletFlowHelpers.atan8192FromQ16 and IntrusiveHashTable.atanRatio2048Table expo
 QuickChatSineHelpers.activateDefaultQuickChatMenu, HuffmanCodec.installQuickChatMenu and GamePresentationHelpers.closeQuickChatMenu expose menu installation and closure. defaultQuickChatMenu, quickChatMenuOpen and quickChatScrollX name their shared state. Real menu/component/deque fixtures verify replacement, reparenting, repeated installation, null/default behavior, recursive row/submenu reset, scroll reset and closed-state timing. Broken roots and null/partial row arrays check the exact state retained when an exception interrupts installation or closure.
 
 Sprite fixtures verify all ten active asset roles by identity, source pixel retention, null/shared/empty arrays, arbitrary divisors and guard side effects. Independent pixels exercise normal and steel balls at both supported scales, negative coordinates and clipping. The export is still a reproducible naming pass over pinned decompiled sources. Original asset loading, phased-ball alpha drawing, live quick-chat interaction and original-gamepack equivalence remain unverified.
+
+QuickChatPopupHelpers.updateQuickChatMenu and MeshLobbyUiHelpers.updateQuickChatInterface expose quick-chat input and help/menu forwarding. BlankScreen.appendQuickChatSubmenu and QuickChatParameterType.closeQuickChatIfOpen name the remaining root-link and conditional-close helpers. The horizontal pan adds 5 beyond right edge 640, subtracts 5 below 635 only when the offset is positive, and holds within 635 through 640. It retains integer overflow and can subtract below zero. An outside click closes the menu before the same update still evaluates panning. Pressed items cause a second root update even when input dispatch is disabled.
+
+Controlled fixtures use real detached menus to isolate pressed-state branches and a real component hierarchy for pointer interaction. They verify one/two root updates through animation state, selected-row toggles, outside close, all pan thresholds, signed overflow, disabled input and the font-clearing guard. Pointer fixtures open/unlink a submenu and send a leaf message through both controller entry points. Seeded independent cipher/body references check complete message and filter packet bytes and distinguish the forwarded opcodes. Closed and malformed roots/menus verify early return and plain versus contextual failures.
+
+QuickChatPopupHelpers.cleanupPopupUi and UiCleanupHelpers.cleanupPopupUi expose hidden-layer removal, loading-animation stop and tooltip reset. UsernameAvailabilityValidator.clearTooltipState and tooltipText, tooltipTicks, tooltipSuppressed, tooltipAnchorX and tooltipAnchorY identify the five reset fields. Real layer deques and recording layer callbacks check removal order, retained visible layers and opacity. A minimally initialized loading dialog with a real activity indicator checks stop flags. Injected pruning failures and missing indicators verify which mutations happen before failure; the direct tooltip guard runs before resets, while the outer cleanup wrapper guard runs afterward.
+
+The export remains a reproducible naming pass over fixed decompiled input. Original loading-dialog rendering, live quick-chat interaction, the noncanonical interface guard clock reset, actual server delivery and original-gamepack equivalence remain unverified. Other mesh/resource helpers and unrelated static fields retain their separate roles.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

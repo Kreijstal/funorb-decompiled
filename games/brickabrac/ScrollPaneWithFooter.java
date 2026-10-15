@@ -89,7 +89,7 @@ final class ScrollPaneWithFooter extends UiComponent {
             param1.contextId == ClientResourceHelpers.currentLobbyGame.getGameId((byte) 118)) {
             if (!PlayerNameChooserPanel.field_I) {
               var9 = GameRenderAudioHelpers.contextActions;
-              var10 = hc.field_b;
+              var10 = MeshLobbyUiHelpers.field_b;
               var9.contextMenu.addAction(var10, 14, (byte) 120);
             }
             var11 = GameRenderAudioHelpers.contextActions;

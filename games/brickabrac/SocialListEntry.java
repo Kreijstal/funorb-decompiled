@@ -122,7 +122,7 @@ final class SocialListEntry extends UiComponent {
             diffuseGains[direction] = diffuseGain;
             highlights[direction] = highlight;
           }
-          for (sortedFace = 0; sortedFace < mc.sortedFaceCount; sortedFace++) {
+          for (sortedFace = 0; sortedFace < UiCleanupHelpers.sortedFaceCount; sortedFace++) {
             face = FullscreenFailureDialog.sortedFaceIds[sortedFace];
             vertexA = mesh.faceVertexA[face];
             vertexB = mesh.faceVertexB[face];

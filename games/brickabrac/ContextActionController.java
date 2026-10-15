@@ -274,7 +274,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_on", (byte) -127);
                 if (var2 != null) {
-                  mc.field_a = MenuButton.a(var2, (byte) 123);
+                  UiCleanupHelpers.field_a = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_friends", (byte) -127);
                 if (null != var2) {
@@ -546,7 +546,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_accept_x_into_game", (byte) -114);
                 if (null != var2) {
-                  mc.field_b = MenuButton.a(var2, (byte) 126);
+                  UiCleanupHelpers.field_b = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_reject_x_from_game", (byte) 123);
                 if (null != var2) {
@@ -710,7 +710,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("message_game", (byte) 79);
                 if (var2 != null) {
-                  hc.field_b = MenuButton.a(var2, (byte) 121);
+                  MeshLobbyUiHelpers.field_b = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("message_team", (byte) -109);
                 if (var2 != null) {
@@ -730,7 +730,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("x_wants_to_join", (byte) 63);
                 if (var2 != null) {
-                  ce.field_g = MenuButton.a(var2, (byte) 90);
+                  QuickChatPopupHelpers.field_g = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("accept", (byte) 80);
                 if (var2 != null) {
@@ -1700,7 +1700,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_age_tooltip", (byte) -124);
                 if (null != var2) {
-                  hc.field_d = MenuButton.a(var2, (byte) 73);
+                  MeshLobbyUiHelpers.field_d = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("create_optin_news_tooltip", (byte) -117);
                 if (var2 != null) {
@@ -3315,7 +3315,7 @@ final class ContextActionController {
               }
               if (allowAdditionalActions &&
                 gamePlayer.joinRequestPending) {
-                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(mc.field_b, new String[]{caption}, (byte) 103), 0, (byte) 112);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(UiCleanupHelpers.field_b, new String[]{caption}, (byte) 103), 0, (byte) 112);
                 this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(RasterCacheSurface.field_o, new String[]{caption}, (byte) 103), 1, (byte) 116);
                 if (unusedGameFlag == 0) {
                   return;
@@ -3535,7 +3535,7 @@ final class ContextActionController {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.contextMenu = new ContextMenu(ce.contextMenuStyle);
+          this.contextMenu = new ContextMenu(QuickChatPopupHelpers.contextMenuStyle);
           this.targetId = targetId;
           this.anchorComponent = anchorComponent;
           this.chatChannel = chatChannel;

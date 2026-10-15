@@ -831,7 +831,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               if (ValidationIconWidget.field_K.ensureGroupAvailableByName("", -28138)) {
                 ContextActionController.a(ValidationIconWidget.field_K, 122);
                 ValidationIconWidget.field_K = null;
-                hc.b(guardCode ^ 3);
+                MeshLobbyUiHelpers.b(guardCode ^ 3);
               }
             }
           }
@@ -865,7 +865,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           LabeledWidget.field_P = null;
           BoardPresentationHelpers.field_c = null;
           MenuScreen.a((java.applet.Applet) (this), -90);
-          hc.b(2);
+          MeshLobbyUiHelpers.b(2);
           clientStage = 10;
         }
         if (10 == clientStage) {

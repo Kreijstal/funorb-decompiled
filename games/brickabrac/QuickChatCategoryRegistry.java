@@ -161,8 +161,8 @@ final class QuickChatCategoryRegistry {
           var18 = PacketBuffer.a("kartika13", param1, "", -946715356);
           PasswordFieldRenderer.field_D = IndexedSpriteGeometry.a(0, var22, 0, var18, 0, 1);
           PasswordFieldRenderer.field_D.palettes = ReflectionCheck.field_n;
-          ce.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
-          ce.field_e.palettes = ReflectionCheck.field_n;
+          QuickChatPopupHelpers.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
+          QuickChatPopupHelpers.field_e.palettes = ReflectionCheck.field_n;
           gj.field_c = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
           for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
             gj.field_c[var7_int] = GameConnectionShell.a(gj.field_c[var7_int], 1);
@@ -335,17 +335,17 @@ final class QuickChatCategoryRegistry {
           MultiValueSliderRenderer.fullBoardMaskSprite.drawHalfSize(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 118);
           var10 = SpriteInputHelpers.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
-          hc.halfPaddleFlameSprites = new RgbSprite[2][4];
+          MeshLobbyUiHelpers.halfPaddleFlameSprites = new RgbSprite[2][4];
           JungleBackground.fullPaddleFlameSprites = new RgbSprite[2][4];
           for (var11 = 0; var11 < 4; var11++) {
             JungleBackground.fullPaddleFlameSprites[0][var11] = new RgbSprite(var10.canvasWidth - var11, var10.canvasHeight);
             JungleBackground.fullPaddleFlameSprites[0][var11].bindRasterTarget();
             var10.a(0, 0, -var11 + var10.canvasWidth, var10.canvasHeight);
             JungleBackground.fullPaddleFlameSprites[1][var11] = JungleBackground.fullPaddleFlameSprites[0][var11].copyFlippedHorizontal();
-            hc.halfPaddleFlameSprites[0][var11] = new RgbSprite(JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
-            hc.halfPaddleFlameSprites[0][var11].bindRasterTarget();
+            MeshLobbyUiHelpers.halfPaddleFlameSprites[0][var11] = new RgbSprite(JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
+            MeshLobbyUiHelpers.halfPaddleFlameSprites[0][var11].bindRasterTarget();
             var10.a(0, 0, JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
-            hc.halfPaddleFlameSprites[1][var11] = hc.halfPaddleFlameSprites[0][var11].copyFlippedHorizontal();
+            MeshLobbyUiHelpers.halfPaddleFlameSprites[1][var11] = MeshLobbyUiHelpers.halfPaddleFlameSprites[0][var11].copyFlippedHorizontal();
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 127);
           SaveResultsPromptScreen.packCardIcons = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);

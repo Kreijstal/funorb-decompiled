@@ -9,7 +9,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
     static String field_z;
     static String[] field_E;
     static String[] receivedRankingNames;
-    static String field_J;
+    static String tooltipText;
     static boolean field_C;
     static RgbSprite field_I;
     static int[] viewFacePointTwoZ;
@@ -21,7 +21,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         crc32Table = null;
         field_F = null;
         viewFacePointTwoZ = null;
-        field_J = null;
+        tooltipText = null;
         receivedRankingNames = null;
         field_z = null;
         field_I = null;
@@ -41,7 +41,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         IntArrayRequest.gameplayScreen.drawScreen((byte) -19);
         if (obfuscationGuard > -14) {
-          field_J = (String) null;
+          tooltipText = (String) null;
         }
         Rasterizer2D.darkenRectangle(0, 0, 640, 480);
         this.drawMenuFrame(124);
@@ -77,7 +77,7 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         }
         field_E = new String[]{"By rating", "By win percentage"};
         field_z = "Please send me news and updates (I can unsubscribe at any time)";
-        field_J = null;
+        tooltipText = null;
         receivedRankingNames = new String[255];
         viewFacePointTwoZ = new int[8192];
     }

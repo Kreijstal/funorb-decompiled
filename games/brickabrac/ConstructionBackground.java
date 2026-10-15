@@ -135,9 +135,9 @@ final class ConstructionBackground extends BackgroundScene {
         int var2 = 0;
         int var3 = 0;
         BoundedFile.field_h = param1;
-        if (ScrollPaneWithFooter.field_Yb != hc.field_f) {
+        if (ScrollPaneWithFooter.field_Yb != MeshLobbyUiHelpers.field_f) {
           var2 = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
-          var3 = var2 - hc.field_f * hc.field_f;
+          var3 = var2 - MeshLobbyUiHelpers.field_f * MeshLobbyUiHelpers.field_f;
           param1 = param1 + var3 * (StrongCacheEntry.field_O - param1) / var2;
         }
         DualLinkDeque.field_d.setBounds(120, param1, ValidationStatus.field_f, 640, (byte) 64);

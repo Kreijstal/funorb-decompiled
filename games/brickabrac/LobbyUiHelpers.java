@@ -386,7 +386,7 @@ final class LobbyUiHelpers {
                 }
                 RadialSelectorRenderer.field_h.text = RadialSelectorRenderer.field_h.text + "<br>" + pendingRequestCaption;
                 if ((BirthDateValidator.field_h & 16) == 0 &&
-                  !hc.joinRequestsPanelOpen) {
+                  !MeshLobbyUiHelpers.joinRequestsPanelOpen) {
                   RadialSelectorRenderer.field_h.frameSprites = fm.field_b.activeFrameSprites;
                 }
               }
@@ -682,13 +682,13 @@ final class LobbyUiHelpers {
             TextWidgetRenderer.field_b.text = GamePresentationHelpers.formatIndexedText(rl.field_d, new String[]{Integer.toString(ClientResourceHelpers.currentLobbyGame.playerCount), Integer.toString(ClientResourceHelpers.currentLobbyGame.maxPlayers)}, (byte) 103);
           }
           lobbyRoot = NinjaBackground.field_w;
-          lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);
+          lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
           ((UiComponent) (Object) lobbyRoot).updateRoot(lobbyInputEnabled, -15211);
           gameRoot = MultiplayerMatch.field_d;
-          gameInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);
+          gameInputEnabled = (inputEnabled) && (!suppressInput) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
           ((UiComponent) (Object) gameRoot).updateRoot(gameInputEnabled, -15211);
           requestsRoot = ProxySocketConnector.field_j;
-          requestsInputEnabled = (inputEnabled) && (!suppressInput) && (hc.joinRequestsPanelOpen);
+          requestsInputEnabled = (inputEnabled) && (!suppressInput) && (MeshLobbyUiHelpers.joinRequestsPanelOpen);
           ((UiComponent) (Object) requestsRoot).updateRoot(requestsInputEnabled, -15211);
           if (!obfuscationGuard) {
             unusedSprites = (RgbSprite[]) null;
@@ -700,13 +700,13 @@ final class LobbyUiHelpers {
               GameTransportActions.requestLeaveOrDeclineGame(ClientResourceHelpers.currentLobbyGame.getGameId((byte) 123), false, gameActionOpcode);
             }
             if (RadialSelectorRenderer.field_h.pressedButton != 0) {
-              hc.joinRequestsPanelOpen = true;
+              MeshLobbyUiHelpers.joinRequestsPanelOpen = true;
             }
             if (DraggableWidget.field_K.pressedButton != 0) {
               CacheEntry.field_w = true;
             }
             if (0 != nd.field_a.pressedButton) {
-              hc.joinRequestsPanelOpen = false;
+              MeshLobbyUiHelpers.joinRequestsPanelOpen = false;
             }
             JungleBackground.a(gameActionOpcode, ClientResourceHelpers.currentLobbyGame, false, false);
           }

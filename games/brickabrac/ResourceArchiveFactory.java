@@ -7,7 +7,7 @@ final class ResourceArchiveFactory {
     static char currentKeyCharacter;
     static String field_f;
     static int windowModeCapabilityWord;
-    static int field_e;
+    static int tooltipTicks;
     static RgbSprite waterRaysSprite;
     static BufferedFile field_a;
 
@@ -72,7 +72,7 @@ final class ResourceArchiveFactory {
     }
 
     static {
-        field_e = 0;
+        tooltipTicks = 0;
         field_f = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find a suitable opponent in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
     }
 }

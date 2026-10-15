@@ -307,13 +307,13 @@ final class ConnectionPhase {
             }
           }
           lobbyRoot = NinjaBackground.field_w;
-          lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);
+          lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
           ((UiComponent) (Object) lobbyRoot).updateRoot(lobbyInputEnabled, -15211);
           gameRoot = MultiplayerMatch.field_d;
-          gameInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);
+          gameInputEnabled = (inputEnabled) && (!suppressInput) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
           ((UiComponent) (Object) gameRoot).updateRoot(gameInputEnabled, -15211);
           requestsRoot = ProxySocketConnector.field_j;
-          requestsInputEnabled = (inputEnabled) && (!suppressInput) && (hc.joinRequestsPanelOpen);
+          requestsInputEnabled = (inputEnabled) && (!suppressInput) && (MeshLobbyUiHelpers.joinRequestsPanelOpen);
           ((UiComponent) (Object) requestsRoot).updateRoot(requestsInputEnabled, -15211);
           BrickGameLayerController.field_c.tabs.processTabPresses(0);
           if (IncomingPacketHelpers.pendingLobbyGame != null) {
