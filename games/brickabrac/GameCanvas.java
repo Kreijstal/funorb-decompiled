@@ -3,7 +3,7 @@
  */
 final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean focusLossPending;
-    static lo field_c;
+    static LegacyEmailValidationError invalidEmailSyntax;
     java.awt.Frame window;
     static String field_b;
     static String field_d;
@@ -33,7 +33,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         try {
           var7 = new ConditionalTextValue(param5);
           if (param1 > -45) {
-            field_c = (lo) null;
+            invalidEmailSyntax = (LegacyEmailValidationError) null;
           }
           var8 = new ConditionalTextValue(param3);
           stackIn_3_0 = ValidationIconWidget.a(param0, param2, param4, var7, param6, var8, 4);
@@ -82,14 +82,14 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
 
     public static void a(int param0) {
         if (param0 == 0) {
-          field_c = null;
+          invalidEmailSyntax = null;
           field_b = null;
           field_d = null;
           return;
         }
         String var2 = (String) null;
         GameCanvas.a((String) null, (byte) 44, true, (String) null, -49, (String) null, 29);
-        field_c = null;
+        invalidEmailSyntax = null;
         field_b = null;
         field_d = null;
     }
@@ -192,7 +192,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
     }
 
     static {
-        field_c = new lo();
+        invalidEmailSyntax = new LegacyEmailValidationError();
         field_d = "Game full";
         field_b = "Please try again in a few minutes.";
     }

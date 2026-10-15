@@ -108,7 +108,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
               }
             }
           } else {
-            this.fragments = FarmBackground.a((byte) -63, packet.readCp1252String(-1), '<');
+            this.fragments = FarmBackground.splitPreservingEmptyParts((byte) -63, packet.readCp1252String(-1), '<');
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

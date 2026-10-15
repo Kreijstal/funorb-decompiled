@@ -119,44 +119,44 @@ final class pp {
         }
     }
 
-    final static int a(byte param0, char param1, CharSequence param2) {
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int stackIn_9_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+    final static int countCharacter(byte obfuscationGuard, char character, CharSequence text) {
+        int count = 0;
+        int length = 0;
+        int characterIndex = 0;
+        int gameFlag = 0;
+        int resultCount = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = 0;
-          var4 = param2.length();
-          var5 = 0;
-          if (param0 != 120) {
+          count = 0;
+          length = text.length();
+          characterIndex = 0;
+          if (obfuscationGuard != 120) {
             field_b = (RgbSprite) null;
           }
-          while (var4 > var5) {
-            if (param1 == param2.charAt(var5)) {
-              var3_int++;
+          while (length > characterIndex) {
+            if (character == text.charAt(characterIndex)) {
+              count++;
             }
-            var5++;
+            characterIndex++;
           }
-          stackIn_9_0 = var3_int;
-          return stackIn_9_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("pp.G(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_13_2 = "null";
+          resultCount = count;
+          return resultCount;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("pp.G(").append(obfuscationGuard).append(',').append(character).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(')').toString());
         }
     }
 
@@ -221,7 +221,7 @@ final class pp {
         field_c = null;
         if (param0 != 0) {
           CharSequence var2 = (CharSequence) null;
-          pp.a((byte) -84, 'ﾽ', (CharSequence) null);
+          pp.countCharacter((byte) -84, 'ﾽ', (CharSequence) null);
           field_b = null;
           return;
         }

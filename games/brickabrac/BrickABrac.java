@@ -912,7 +912,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MatchingTextValidator.f(-71);
         ContentTransitionPhase.a(-81);
         TextHotspotRegion.a((byte) -25);
-        lo.a((byte) 38);
+        LegacyEmailValidationError.a((byte) 38);
         this.host = null;
     }
 

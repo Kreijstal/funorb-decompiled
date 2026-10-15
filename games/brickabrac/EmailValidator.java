@@ -43,67 +43,67 @@ final class EmailValidator extends TextFieldValidator {
     }
 
     final ValidationStatus validateText(String text, byte obfuscationGuard) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int stackIn_5_0 = 0;
-        ValidationStatus stackIn_8_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int validFlag = 0;
+        RuntimeException failure = null;
+        int validationFlag = 0;
+        ValidationStatus invalidStatus = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != 106) {
             alwaysSolidBrickTypeMask = 85;
           }
-          stackIn_5_0 = (null != WidgetLayerStack.a(text, (byte) -24)) ? 0 : 1;
-          var3_int = stackIn_5_0;
-          if (var3_int != 0) {
+          validationFlag = (null != WidgetLayerStack.validateLegacyEmailAddress(text, (byte) -24)) ? 0 : 1;
+          validFlag = validationFlag;
+          if (validFlag != 0) {
             return DualLinkIterator.validationValid;
           }
-          stackIn_8_0 = AccountMessageDialog.validationInvalid;
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("sg.B(");
+          invalidStatus = AccountMessageDialog.validationInvalid;
+          return invalidStatus;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("sg.B(");
           if (text == null) {
-            stackIn_12_2 = "null";
+            textSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
     final String describeTextValidation(int obfuscationGuard, String text) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String stackIn_3_0 = null;
-        String stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
+        int guardCalculation = 0;
+        RuntimeException failure = null;
+        String invalidMessage = null;
+        String validMessage = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
         try {
           if (this.validateText(text, (byte) 106) == AccountMessageDialog.validationInvalid) {
-            stackIn_3_0 = ValidationIconWidget.field_O;
-            return stackIn_3_0;
+            invalidMessage = ValidationIconWidget.invalidEmailMessage;
+            return invalidMessage;
           }
-          var3_int = -38 % ((obfuscationGuard + 16) / 50);
-          stackIn_5_0 = WeightedLruCache.field_l;
-          return stackIn_5_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("sg.C(").append(obfuscationGuard).append(',');
+          guardCalculation = -38 % ((obfuscationGuard + 16) / 50);
+          validMessage = WeightedLruCache.validEmailMessage;
+          return validMessage;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("sg.C(").append(obfuscationGuard).append(',');
           if (text == null) {
-            stackIn_9_2 = "null";
+            textSummary = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(')').toString());
         }
     }
 

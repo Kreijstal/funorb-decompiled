@@ -254,7 +254,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (pl.keyChangeWriteIndex >= 0 &&
               mappedKeyCode >= 0) {
-              lo.keyChangeQueue[pl.keyChangeWriteIndex] = ~mappedKeyCode;
+              LegacyEmailValidationError.keyChangeQueue[pl.keyChangeWriteIndex] = ~mappedKeyCode;
               pl.keyChangeWriteIndex = 1 + pl.keyChangeWriteIndex & 127;
               if (FullscreenFailureDialog.keyChangeReadIndex == pl.keyChangeWriteIndex) {
                 pl.keyChangeWriteIndex = -1;
@@ -301,7 +301,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (pl.keyChangeWriteIndex >= 0 &&
               mappedKeyCode >= 0) {
-              lo.keyChangeQueue[pl.keyChangeWriteIndex] = mappedKeyCode;
+              LegacyEmailValidationError.keyChangeQueue[pl.keyChangeWriteIndex] = mappedKeyCode;
               pl.keyChangeWriteIndex = 127 & 1 + pl.keyChangeWriteIndex;
               if (pl.keyChangeWriteIndex == FullscreenFailureDialog.keyChangeReadIndex) {
                 pl.keyChangeWriteIndex = -1;

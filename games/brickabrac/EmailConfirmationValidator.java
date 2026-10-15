@@ -81,7 +81,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (this.validateText(text, (byte) 106) != AccountMessageDialog.validationInvalid) {
-            return WeightedLruCache.field_l;
+            return WeightedLruCache.validEmailMessage;
           }
           stackIn_6_0 = ConstructionBackground.field_s;
           return stackIn_6_0;

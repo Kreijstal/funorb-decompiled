@@ -3,7 +3,7 @@
  */
 abstract class ByteStorage {
     static String field_a;
-    static lo field_b;
+    static LegacyEmailValidationError missingEmailAddress;
     static String field_c;
     static String field_d;
 
@@ -14,13 +14,13 @@ abstract class ByteStorage {
         field_a = null;
         if (param0 == 10) {
           field_c = null;
-          field_b = null;
+          missingEmailAddress = null;
           return;
         }
         RgbSprite var2 = (RgbSprite) null;
         ByteStorage.a((RgbSprite) null, (byte) 73, 53, -72, (RgbSprite) null, (RgbSprite) null, 93, 73, -92, 81, -52);
         field_c = null;
-        field_b = null;
+        missingEmailAddress = null;
     }
 
     abstract void store(int obfuscationGuard, byte[] data);
@@ -73,6 +73,6 @@ abstract class ByteStorage {
         field_a = "FROM ONLY";
         field_c = "Never mind! <%0>";
         field_d = "Elapsed time";
-        field_b = new lo();
+        missingEmailAddress = new LegacyEmailValidationError();
     }
 }

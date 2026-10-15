@@ -246,7 +246,7 @@ final class FriendListUi {
                 if (~pl.keyChangeWriteIndex == ~FullscreenFailureDialog.keyChangeReadIndex) {
                   break;
                 }
-                keyChange = lo.keyChangeQueue[FullscreenFailureDialog.keyChangeReadIndex];
+                keyChange = LegacyEmailValidationError.keyChangeQueue[FullscreenFailureDialog.keyChangeReadIndex];
                 FullscreenFailureDialog.keyChangeReadIndex = FullscreenFailureDialog.keyChangeReadIndex + 1 & 127;
                 stackIn_27_0 = keyChange;
                 if (clientBranchFlag != 0) {

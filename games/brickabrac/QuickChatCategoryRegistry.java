@@ -207,10 +207,10 @@ final class QuickChatCategoryRegistry {
             AchievementSubmission.field_l[var10_int] = PlayerInputBatch.a(-12, var20, 8, 9838226);
             TranslucentNineSliceFrame.field_h[var10_int] = PlayerInputBatch.a(LevelResultSubmission.a(param3, -29147), var20, 12, 9838226);
           }
-          CircleBody.field_t = new RgbSprite[lo.field_c.length][];
+          CircleBody.field_t = new RgbSprite[LegacyEmailValidationError.field_c.length][];
           var9 = null;
-          for (var10_intLifetime1 = 0; lo.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
-            CircleBody.field_t[var10_intLifetime1] = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, lo.field_c[var10_intLifetime1], 2);
+          for (var10_intLifetime1 = 0; LegacyEmailValidationError.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
+            CircleBody.field_t[var10_intLifetime1] = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, LegacyEmailValidationError.field_c[var10_intLifetime1], 2);
           }
           MenuSelection.field_k = pl.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
           Ball.field_D = pl.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);

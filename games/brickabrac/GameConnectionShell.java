@@ -883,11 +883,11 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           else {
             clientStage = 12;
-            lo.field_d = true;
+            LegacyEmailValidationError.field_d = true;
           }
         }
         if (clientStage == 12 &&
-          !lo.field_d) {
+          !LegacyEmailValidationError.field_d) {
           clientStage = 13;
         }
         if (clientStage == 13) {

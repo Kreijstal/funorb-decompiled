@@ -5,7 +5,7 @@ final class IntNode extends IntrusiveNode {
     int value;
     static QuickChatParameterType field_i;
     static String field_n;
-    static String field_k;
+    static String emailDomainAlphanumerics;
     static RgbSprite constructionSmokeSprite;
     static String field_m;
     static String field_l;
@@ -13,7 +13,7 @@ final class IntNode extends IntrusiveNode {
 
     public static void a(byte param0) {
         field_n = null;
-        field_k = null;
+        emailDomainAlphanumerics = null;
         field_m = null;
         constructionSmokeSprite = null;
         int var1 = 119 / ((param0 - 71) / 51);
@@ -203,7 +203,7 @@ final class IntNode extends IntrusiveNode {
     static {
         field_n = "Well done! <%0>";
         field_i = new QuickChatParameterType(14, 0, 4, 1);
-        field_k = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        emailDomainAlphanumerics = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
         field_m = "<%0> has not yet unlocked this option for use.";
         field_l = "Email (Login):";
         queuedLevelResults = new NodeDeque();

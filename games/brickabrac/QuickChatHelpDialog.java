@@ -104,61 +104,61 @@ final class QuickChatHelpDialog extends UiComponent {
         field_Vb = null;
     }
 
-    final static lo a(int param0, String param1) {
-        int var3 = 0;
-        int var2_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        lo stackIn_3_0 = null;
-        lo stackIn_8_0 = null;
-        lo stackIn_17_0 = null;
-        lo stackIn_20_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
-        String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var5 = BrickABrac.field_J ? 1 : 0;
+    final static LegacyEmailValidationError validateEmailDomainLabel(int obfuscationGuard, String label) {
+        int characterIndex = 0;
+        int labelLength = 0;
+        int character = 0;
+        int gameFlag = 0;
+        LegacyEmailValidationError missingPartError = null;
+        LegacyEmailValidationError lengthError = null;
+        LegacyEmailValidationError hyphenError = null;
+        LegacyEmailValidationError characterError = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String labelSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param1.length();
-          if (var2_int == 0) {
-            stackIn_3_0 = RasterEffectHelpers.field_a;
-            return stackIn_3_0;
+          labelLength = label.length();
+          if (labelLength == 0) {
+            missingPartError = RasterEffectHelpers.missingEmailPart;
+            return missingPartError;
           }
-          if (param0 <= 80) {
+          if (obfuscationGuard <= 80) {
             field_Tb = (String) null;
           }
-          if (var2_int > 63) {
-            stackIn_8_0 = BitPacketBuffer.field_r;
-            return stackIn_8_0;
+          if (labelLength > 63) {
+            lengthError = BitPacketBuffer.emailPartTooLong;
+            return lengthError;
           }
-          for (var3 = 0; var2_int > var3; var3++) {
-            var4 = param1.charAt(var3);
-            if (var4 == 45) {
-              if (var3 == 0 ||
-                var3 == var2_int - 1) {
-                stackIn_17_0 = GameCanvas.field_c;
-                return stackIn_17_0;
+          for (characterIndex = 0; labelLength > characterIndex; characterIndex++) {
+            character = label.charAt(characterIndex);
+            if (character == 45) {
+              if (characterIndex == 0 ||
+                characterIndex == labelLength - 1) {
+                hyphenError = GameCanvas.invalidEmailSyntax;
+                return hyphenError;
               }
             } else {
-              if (IntNode.field_k.indexOf(var4) == -1) {
-                stackIn_20_0 = GameCanvas.field_c;
-                return stackIn_20_0;
+              if (IntNode.emailDomainAlphanumerics.indexOf(character) == -1) {
+                characterError = GameCanvas.invalidEmailSyntax;
+                return characterError;
               }
             }
           }
           return null;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_25_0 = var2;
-          stackIn_25_1 = new StringBuilder().append("kb.B(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_26_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("kb.B(").append(obfuscationGuard).append(',');
+          if (label == null) {
+            labelSummary = "null";
           } else {
-            stackIn_26_2 = "{...}";
+            labelSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(labelSummary).append(')').toString());
         }
     }
 

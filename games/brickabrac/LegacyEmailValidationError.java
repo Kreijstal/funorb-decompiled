@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lo {
+final class LegacyEmailValidationError {
     static String[] field_c;
     static int[] keyChangeQueue;
     static int[] field_a;
@@ -44,7 +44,7 @@ final class lo {
           if (obfuscationGuard == 60) {
             return;
           }
-          lo.a((byte) 126);
+          LegacyEmailValidationError.a((byte) 126);
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

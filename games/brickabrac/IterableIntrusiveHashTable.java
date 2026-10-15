@@ -131,68 +131,68 @@ final class IterableIntrusiveHashTable implements Iterable {
         }
     }
 
-    final static lo a(String param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        String[] var3 = null;
-        String[] var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        lo var7 = null;
-        int var8 = 0;
-        lo stackIn_3_0 = null;
-        lo stackIn_7_0 = null;
-        lo stackIn_10_0 = null;
-        lo stackIn_15_0 = null;
-        lo stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    final static LegacyEmailValidationError validateEmailDomain(String domain, int firstLabelIndex) {
+        int domainLength = 0;
+        RuntimeException failure = null;
+        String[] labels = null;
+        String[] labelsToValidate = null;
+        int labelIndex = 0;
+        String label = null;
+        LegacyEmailValidationError labelError = null;
+        int gameFlag = 0;
+        LegacyEmailValidationError missingDomainError = null;
+        LegacyEmailValidationError lengthError = null;
+        LegacyEmailValidationError missingLabelsError = null;
+        LegacyEmailValidationError returnedLabelError = null;
+        LegacyEmailValidationError suffixError = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String domainSummary = null;
+        RuntimeException caughtFailure = null;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param0.length();
-          if (var2_int == 0) {
-            stackIn_3_0 = RasterEffectHelpers.field_a;
-            return stackIn_3_0;
+          domainLength = domain.length();
+          if (domainLength == 0) {
+            missingDomainError = RasterEffectHelpers.missingEmailPart;
+            return missingDomainError;
           }
-          if (255 < var2_int) {
-            stackIn_7_0 = BitPacketBuffer.field_r;
-            return stackIn_7_0;
+          if (255 < domainLength) {
+            lengthError = BitPacketBuffer.emailPartTooLong;
+            return lengthError;
           }
-          var3 = FarmBackground.a((byte) -11, param0, '.');
-          if (2 > var3.length) {
-            stackIn_10_0 = RasterEffectHelpers.field_a;
-            return stackIn_10_0;
+          labels = FarmBackground.splitPreservingEmptyParts((byte) -11, domain, '.');
+          if (2 > labels.length) {
+            missingLabelsError = RasterEffectHelpers.missingEmailPart;
+            return missingLabelsError;
           }
-          var4 = var3;
-          var5 = param1;
+          labelsToValidate = labels;
+          labelIndex = firstLabelIndex;
           while (true) {
-            if (var4.length <= var5) {
-              stackIn_18_0 = ResourceArchive.a((byte) -95, var3[var3.length - 1]);
-              return stackIn_18_0;
+            if (labelsToValidate.length <= labelIndex) {
+              suffixError = ResourceArchive.rejectNumericEmailSuffix((byte) -95, labels[labels.length - 1]);
+              return suffixError;
             }
-            var6 = var4[var5];
-            var7 = QuickChatHelpDialog.a(param1 ^ 95, var6);
-            if (var7 == null) {
-              var5++;
+            label = labelsToValidate[labelIndex];
+            labelError = QuickChatHelpDialog.validateEmailDomainLabel(firstLabelIndex ^ 95, label);
+            if (labelError == null) {
+              labelIndex++;
               continue;
             }
             break;
           }
-          stackIn_15_0 = var7;
-          return stackIn_15_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_21_0 = var2;
-          stackIn_21_1 = new StringBuilder().append("ji.A(");
-          if (param0 == null) {
-            stackIn_22_2 = "null";
+          returnedLabelError = labelError;
+          return returnedLabelError;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ji.A(");
+          if (domain == null) {
+            domainSummary = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            domainSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(domainSummary).append(',').append(firstLabelIndex).append(')').toString());
         }
     }
 

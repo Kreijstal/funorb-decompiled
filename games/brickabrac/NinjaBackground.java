@@ -8,7 +8,7 @@ final class NinjaBackground extends BackgroundScene {
     static UiComponent field_w;
     static RgbSprite parisNearSprite;
     static boolean frameFocus;
-    static String field_v;
+    static String emailLocalAtomCharacters;
     static boolean uiHoverClaimed;
 
     final RgbSprite c(byte param0) {
@@ -61,7 +61,7 @@ final class NinjaBackground extends BackgroundScene {
 
     public static void d(byte param0) {
         field_s = null;
-        field_v = null;
+        emailLocalAtomCharacters = null;
         mouseWheelSource = null;
         int var1 = -103 % ((-61 - param0) / 57);
         pendingLevelResults = null;
@@ -221,6 +221,6 @@ final class NinjaBackground extends BackgroundScene {
     static {
         field_s = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         pendingLevelResults = new NodeDeque();
-        field_v = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
+        emailLocalAtomCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!#$%&'*+-/=?^_{}~";
     }
 }

@@ -247,7 +247,7 @@ final class GameRenderAudioHelpers {
             }
             alpha256 = alpha256 * 128 / 50;
             ContextActionController.field_g.drawCenteredAlpha(message, x + boardWidth / (2 * scaleDivisor), ContextActionController.field_g.capHeight + (boardHeight / (2 * scaleDivisor) + (y - 100 / scaleDivisor)), 0, -1, alpha256);
-            lo.drawBoardResultWord(boardWidth, alpha256, 60, x, scaleDivisor, y, boardHeight, board);
+            LegacyEmailValidationError.drawBoardResultWord(boardWidth, alpha256, 60, x, scaleDivisor, y, boardHeight, board);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameter) {

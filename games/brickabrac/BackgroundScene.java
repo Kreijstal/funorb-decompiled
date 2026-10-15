@@ -181,7 +181,7 @@ abstract class BackgroundScene {
                 BackgroundScene.a((byte) 0);
               }
               var3 = (String) (ne.a("getcookies", -127, param0));
-              var4 = FarmBackground.a((byte) 122, var3, ';');
+              var4 = FarmBackground.splitPreservingEmptyParts((byte) 122, var3, ';');
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

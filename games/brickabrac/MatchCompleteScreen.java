@@ -90,7 +90,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
     }
 
     MatchCompleteScreen() {
-        super(20, lo.field_a);
+        super(20, LegacyEmailValidationError.field_a);
     }
 
     final static boolean containsNonAlphanumeric(String text, int startOffset) {

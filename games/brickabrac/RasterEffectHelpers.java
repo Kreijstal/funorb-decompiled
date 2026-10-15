@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RasterEffectHelpers {
-    static lo field_a;
+    static LegacyEmailValidationError missingEmailPart;
     static UiComponent field_b;
     static boolean viewKeyWasHeld;
 
@@ -408,7 +408,7 @@ final class RasterEffectHelpers {
     }
 
     public static void a(byte param0) {
-        field_a = null;
+        missingEmailPart = null;
         field_b = null;
         if (param0 >= -59) {
           int[] var2 = (int[]) null;
@@ -554,6 +554,6 @@ final class RasterEffectHelpers {
     }
 
     static {
-        field_a = new lo();
+        missingEmailPart = new LegacyEmailValidationError();
     }
 }

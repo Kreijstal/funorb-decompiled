@@ -126,53 +126,53 @@ final class FarmBackground extends BackgroundScene {
         int var5 = -18 / ((-28 - obfuscationGuard) / 43);
     }
 
-    final static String[] a(byte param0, String param1, char param2) {
-        int var8 = 0;
-        int incrementValue$1 = 0;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        CharSequence var11 = null;
-        String[] stackIn_8_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var10 = BrickABrac.field_J ? 1 : 0;
+    final static String[] splitPreservingEmptyParts(byte obfuscationGuard, String text, char delimiter) {
+        int partIndex = 0;
+        int writtenPartIndex = 0;
+        int delimiterCount = 0;
+        RuntimeException failure = null;
+        String[] parts = null;
+        int nextPartIndex = 0;
+        int guardCalculation = 0;
+        int partStart = 0;
+        int delimiterIndex = 0;
+        int gameFlag = 0;
+        CharSequence textSequence = null;
+        String[] resultParts = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var11 = (CharSequence) ((Object) param1);
-          var3_int = pp.a((byte) 120, param2, var11);
-          var4 = new String[1 + var3_int];
-          var5 = 0;
-          var6 = -40 % ((param0 - 61) / 61);
-          var7 = 0;
-          for (var8 = 0; var8 < var3_int; var8++) {
-            for (var9 = var7; param2 != param1.charAt(var9); var9++) {
+          textSequence = (CharSequence) ((Object) text);
+          delimiterCount = pp.countCharacter((byte) 120, delimiter, textSequence);
+          parts = new String[1 + delimiterCount];
+          nextPartIndex = 0;
+          guardCalculation = -40 % ((obfuscationGuard - 61) / 61);
+          partStart = 0;
+          for (partIndex = 0; partIndex < delimiterCount; partIndex++) {
+            for (delimiterIndex = partStart; delimiter != text.charAt(delimiterIndex); delimiterIndex++) {
             }
-            incrementValue$1 = var5;
-            var5++;
-            var4[incrementValue$1] = param1.substring(var7, var9);
-            var7 = var9 + 1;
+            writtenPartIndex = nextPartIndex;
+            nextPartIndex++;
+            parts[writtenPartIndex] = text.substring(partStart, delimiterIndex);
+            partStart = delimiterIndex + 1;
           }
-          var4[var3_int] = param1.substring(var7);
-          stackIn_8_0 = var4;
-          return stackIn_8_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("qb.Q(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_12_2 = "null";
+          parts[delimiterCount] = text.substring(partStart);
+          resultParts = parts;
+          return resultParts;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("qb.Q(").append(obfuscationGuard).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(',').append(delimiter).append(')').toString());
         }
     }
 

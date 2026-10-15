@@ -14,7 +14,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         field_F = null;
         if (param0 > -82) {
           String var2 = (String) null;
-          SingleChildWidget.a((String) null, false);
+          SingleChildWidget.validateEmailLocalPart((String) null, false);
         }
         field_D = null;
     }
@@ -531,96 +531,96 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         return null != this.h((byte) 25) ? true : false;
     }
 
-    final static lo a(String param0, boolean param1) {
-        lo stackIn_3_0 = null;
-        lo stackIn_6_0 = null;
-        lo stackIn_11_0 = null;
-        int stackIn_20_0 = 0;
-        lo stackIn_24_0 = null;
-        lo stackIn_37_0 = null;
-        lo stackIn_42_0 = null;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
-        String stackIn_49_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        var6 = BrickABrac.field_J ? 1 : 0;
+    final static LegacyEmailValidationError validateEmailLocalPart(String localPart, boolean initialPreviousDot) {
+        LegacyEmailValidationError missingPartError = null;
+        LegacyEmailValidationError lengthError = null;
+        LegacyEmailValidationError closingQuoteError = null;
+        int toggledEscapeFlag = 0;
+        LegacyEmailValidationError unescapedQuoteError = null;
+        LegacyEmailValidationError dotPlacementError = null;
+        LegacyEmailValidationError characterError = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String localPartSummary = null;
+        RuntimeException caughtFailure = null;
+        int localPartLength = 0;
+        RuntimeException failure = null;
+        int escapeFlag = 0;
+        int quotedIndex = 0;
+        int quotedCharacter = 0;
+        int gameFlag = 0;
+        int previousDotFlag;
+        int atomIndex;
+        int atomCharacter;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param0.length();
-          if (var2_int == 0) {
-            stackIn_3_0 = RasterEffectHelpers.field_a;
-            return stackIn_3_0;
+          localPartLength = localPart.length();
+          if (localPartLength == 0) {
+            missingPartError = RasterEffectHelpers.missingEmailPart;
+            return missingPartError;
           }
-          if (var2_int > 64) {
-            stackIn_6_0 = BitPacketBuffer.field_r;
-            return stackIn_6_0;
+          if (localPartLength > 64) {
+            lengthError = BitPacketBuffer.emailPartTooLong;
+            return lengthError;
           }
-          if (param0.charAt(0) == 34) {
-            if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_11_0 = GameCanvas.field_c;
-              return stackIn_11_0;
+          if (localPart.charAt(0) == 34) {
+            if (localPart.charAt(localPartLength - 1) != 34) {
+              closingQuoteError = GameCanvas.invalidEmailSyntax;
+              return closingQuoteError;
             }
-            var3 = 0;
-            for (var4 = 1; -1 + var2_int > var4; var4++) {
-              var5 = param0.charAt(var4);
-              if (92 == var5) {
-                stackIn_20_0 = (var3 != 0) ? 0 : 1;
-                var3 = stackIn_20_0;
+            escapeFlag = 0;
+            for (quotedIndex = 1; -1 + localPartLength > quotedIndex; quotedIndex++) {
+              quotedCharacter = localPart.charAt(quotedIndex);
+              if (92 == quotedCharacter) {
+                toggledEscapeFlag = (escapeFlag != 0) ? 0 : 1;
+                escapeFlag = toggledEscapeFlag;
               } else {
-                if (var5 == 34 &&
-                  var3 == 0) {
-                  stackIn_24_0 = GameCanvas.field_c;
-                  return stackIn_24_0;
+                if (quotedCharacter == 34 &&
+                  escapeFlag == 0) {
+                  unescapedQuoteError = GameCanvas.invalidEmailSyntax;
+                  return unescapedQuoteError;
                 }
-                var3 = 0;
+                escapeFlag = 0;
               }
             }
             return null;
           }
-          var3Lifetime1 = param1 ? 1 : 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < var2_int; var4Lifetime1++) {
-            boolean decompiledFrameRemainder0 = true;
-            var5Lifetime1 = param0.charAt(var4Lifetime1);
-            if (var5Lifetime1 == 46) {
-              if (var4Lifetime1 != 0 &&
-                -1 + var2_int != var4Lifetime1 &&
-                var3Lifetime1 == 0) {
-                var3Lifetime1 = 1;
-                decompiledFrameRemainder0 = false;
+          previousDotFlag = initialPreviousDot ? 1 : 0;
+          for (atomIndex = 0; atomIndex < localPartLength; atomIndex++) {
+            boolean checkAtomCharacter = true;
+            atomCharacter = localPart.charAt(atomIndex);
+            if (atomCharacter == 46) {
+              if (atomIndex != 0 &&
+                -1 + localPartLength != atomIndex &&
+                previousDotFlag == 0) {
+                previousDotFlag = 1;
+                checkAtomCharacter = false;
               }
               else {
-                stackIn_37_0 = GameCanvas.field_c;
-                return stackIn_37_0;
+                dotPlacementError = GameCanvas.invalidEmailSyntax;
+                return dotPlacementError;
               }
             }
-            if (decompiledFrameRemainder0) {
-              if (-1 == NinjaBackground.field_v.indexOf(var5Lifetime1)) {
-                stackIn_42_0 = GameCanvas.field_c;
-                return stackIn_42_0;
+            if (checkAtomCharacter) {
+              if (-1 == NinjaBackground.emailLocalAtomCharacters.indexOf(atomCharacter)) {
+                characterError = GameCanvas.invalidEmailSyntax;
+                return characterError;
               }
-              var3Lifetime1 = 0;
+              previousDotFlag = 0;
             }
           }
           return null;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_48_0 = var2;
-          stackIn_48_1 = new StringBuilder().append("h.W(");
-          if (param0 == null) {
-            stackIn_49_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("h.W(");
+          if (localPart == null) {
+            localPartSummary = "null";
           } else {
-            stackIn_49_2 = "{...}";
+            localPartSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_48_1).append(stackIn_49_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(localPartSummary).append(',').append(initialPreviousDot).append(')').toString());
         }
     }
 

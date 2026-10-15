@@ -8,7 +8,7 @@ final class BitPacketBuffer extends PacketBuffer {
     static String field_s;
     private int bitPosition;
     static int[] field_o;
-    static lo field_r;
+    static LegacyEmailValidationError emailPartTooLong;
     static ConnectionPhase readyToSendHandshake;
     static int field_q;
 
@@ -39,7 +39,7 @@ final class BitPacketBuffer extends PacketBuffer {
         if (obfuscationGuard != 60) {
           field_s = (String) null;
         }
-        field_r = null;
+        emailPartTooLong = null;
         readyToSendHandshake = null;
         field_s = null;
     }
@@ -272,7 +272,7 @@ final class BitPacketBuffer extends PacketBuffer {
 
     final int readCipheredOpcode(boolean obfuscationGuard) {
         if (!obfuscationGuard) {
-          field_r = (lo) null;
+          emailPartTooLong = (LegacyEmailValidationError) null;
         }
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
@@ -389,7 +389,7 @@ final class BitPacketBuffer extends PacketBuffer {
 
     static {
         field_s = "Unpacking sound effects";
-        field_r = new lo();
+        emailPartTooLong = new LegacyEmailValidationError();
         readyToSendHandshake = new ConnectionPhase();
     }
 }

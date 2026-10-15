@@ -1784,7 +1784,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_alert_invalidemail", (byte) -120);
                 if (var2 != null) {
-                  ValidationIconWidget.field_O = MenuButton.a(var2, (byte) 100);
+                  ValidationIconWidget.invalidEmailMessage = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("create_alert_email_unavailable", (byte) -124);
                 if (var2 != null) {
@@ -1812,7 +1812,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_emailvalid", (byte) -108);
                 if (null != var2) {
-                  WeightedLruCache.field_l = MenuButton.a(var2, (byte) 92);
+                  WeightedLruCache.validEmailMessage = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("create_account_success", (byte) -126);
                 if (var2 != null) {

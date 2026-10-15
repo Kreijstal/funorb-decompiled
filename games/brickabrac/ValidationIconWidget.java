@@ -7,7 +7,7 @@ final class ValidationIconWidget extends FocusableWidget {
     static String field_L;
     static int[] worldDirectionX;
     static boolean field_N;
-    static String field_O;
+    static String invalidEmailMessage;
     static ResourceArchive field_K;
     static String field_Q;
 
@@ -421,7 +421,7 @@ final class ValidationIconWidget extends FocusableWidget {
         field_L = null;
         worldDirectionX = null;
         field_Q = null;
-        field_O = null;
+        invalidEmailMessage = null;
         if (param0 != 2) {
           LobbyPlayer var2 = (LobbyPlayer) null;
           ValidationIconWidget.insertSortedLobbyPlayer((LobbyPlayer) null, -2);
@@ -493,7 +493,7 @@ final class ValidationIconWidget extends FocusableWidget {
     static {
         worldDirectionX = new int[8192];
         field_L = "Cancel";
-        field_O = "Please check if address is correct";
+        invalidEmailMessage = "Please check if address is correct";
         field_Q = "Loading sound effects";
     }
 }

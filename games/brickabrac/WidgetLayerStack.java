@@ -118,56 +118,56 @@ final class WidgetLayerStack extends SingleChildWidget {
         this.layers = new NodeDeque();
     }
 
-    final static lo a(String param0, byte param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        String var3 = null;
-        String var4 = null;
-        lo var5 = null;
-        lo stackIn_4_0 = null;
-        lo stackIn_7_0 = null;
-        lo stackIn_10_0 = null;
-        lo stackIn_13_0 = null;
-        lo stackIn_15_0 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static LegacyEmailValidationError validateLegacyEmailAddress(String address, byte obfuscationGuard) {
+        int atIndex = 0;
+        RuntimeException failure = null;
+        String localPart = null;
+        String domain = null;
+        LegacyEmailValidationError localPartError = null;
+        LegacyEmailValidationError missingAddressError = null;
+        LegacyEmailValidationError missingAtError = null;
+        LegacyEmailValidationError guardSuccessValue = null;
+        LegacyEmailValidationError returnedLocalPartError = null;
+        LegacyEmailValidationError domainError = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String addressSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 != null &&
-            param0.length() != 0) {
-            var2_int = param0.indexOf('@');
-            if (-1 == var2_int) {
-              stackIn_7_0 = RasterEffectHelpers.field_a;
-              return stackIn_7_0;
+          if (address != null &&
+            address.length() != 0) {
+            atIndex = address.indexOf('@');
+            if (-1 == atIndex) {
+              missingAtError = RasterEffectHelpers.missingEmailPart;
+              return missingAtError;
             }
-            var3 = param0.substring(0, var2_int);
-            var4 = param0.substring(var2_int + 1);
-            if (param1 >= -16) {
-              stackIn_10_0 = (lo) null;
-              return stackIn_10_0;
+            localPart = address.substring(0, atIndex);
+            domain = address.substring(atIndex + 1);
+            if (obfuscationGuard >= -16) {
+              guardSuccessValue = (LegacyEmailValidationError) null;
+              return guardSuccessValue;
             }
-            var5 = SingleChildWidget.a(var3, false);
-            if (var5 == null) {
-              stackIn_15_0 = IterableIntrusiveHashTable.a(var4, 0);
-              return stackIn_15_0;
+            localPartError = SingleChildWidget.validateEmailLocalPart(localPart, false);
+            if (localPartError == null) {
+              domainError = IterableIntrusiveHashTable.validateEmailDomain(domain, 0);
+              return domainError;
             }
-            stackIn_13_0 = var5;
-            return stackIn_13_0;
+            returnedLocalPartError = localPartError;
+            return returnedLocalPartError;
           }
-          stackIn_4_0 = ByteStorage.field_b;
-          return stackIn_4_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_18_0 = var2;
-          stackIn_18_1 = new StringBuilder().append("cp.L(");
-          if (param0 == null) {
-            stackIn_19_2 = "null";
+          missingAddressError = ByteStorage.missingEmailAddress;
+          return missingAddressError;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("cp.L(");
+          if (address == null) {
+            addressSummary = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            addressSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(addressSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             var8Lifetime1 = 256 * var8Lifetime1 / 50;
             var9 = ArchiveNetworkClient.field_s[param4.resultCode - 1];
             var9.b(param0 + (param1 - param6 * var9.canvasWidth) / (param6 * 2), param5 + (param2 - var9.canvasHeight * param6) / (param6 * 2), var8Lifetime1);
-            lo.drawBoardResultWord(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
+            LegacyEmailValidationError.drawBoardResultWord(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
           }
           if (param3 < 118) {
             WidgetLayerStack.a(true, 86);

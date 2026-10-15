@@ -6,7 +6,7 @@ final class WeightedLruCache {
     static java.math.BigInteger field_g;
     static int privateChatFilter;
     private int remainingCapacity;
-    static String field_l;
+    static String validEmailMessage;
     private IterableIntrusiveHashTable index;
     static RgbSprite field_e;
     private DualLinkDeque lruEntries;
@@ -81,7 +81,7 @@ final class WeightedLruCache {
         field_e = null;
         primaryActivityLoop = null;
         int var1 = 77 / ((-29 - param0) / 44);
-        field_l = null;
+        validEmailMessage = null;
         field_h = null;
         powerUpDropPeriods = null;
         field_g = null;
@@ -163,7 +163,7 @@ final class WeightedLruCache {
         privateChatFilter = 2;
         field_g = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
         field_h = "<%0> is not on your ignore list.";
-        field_l = "Email is valid";
+        validEmailMessage = "Email is valid";
         powerUpDropPeriods = new int[29];
         powerUpDropPeriods[3] = 5;
         powerUpDropPeriods[15] = 2;

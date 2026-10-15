@@ -21,7 +21,7 @@ final class ResourceArchive {
         field_a = null;
         if (param0) {
           String var2 = (String) null;
-          ResourceArchive.a((byte) -93, (String) null);
+          ResourceArchive.rejectNumericEmailSuffix((byte) -93, (String) null);
         }
         pendingReflectionChecks = null;
         field_d = null;
@@ -585,53 +585,53 @@ final class ResourceArchive {
         }
     }
 
-    final static lo a(byte param0, String param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_7_0 = null;
-        lo stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = BrickABrac.field_J ? 1 : 0;
+    final static LegacyEmailValidationError rejectNumericEmailSuffix(byte obfuscationGuard, String suffix) {
+        int suffixLength = 0;
+        RuntimeException failure = null;
+        int characterIndex = 0;
+        int character = 0;
+        int gameFlag = 0;
+        Object successValue = null;
+        LegacyEmailValidationError numericSuffixError = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String suffixSummary = null;
+        RuntimeException caughtFailure = null;
+        gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param1.length();
-          var3 = 0;
+          suffixLength = suffix.length();
+          characterIndex = 0;
           while (true) {
-            if (var3 >= var2_int) {
-              if (param0 > -58) {
+            if (characterIndex >= suffixLength) {
+              if (obfuscationGuard > -58) {
                 ResourceArchive.a(false);
               }
-              stackIn_12_0 = GameCanvas.field_c;
-              return stackIn_12_0;
+              numericSuffixError = GameCanvas.invalidEmailSyntax;
+              return numericSuffixError;
             }
-            var4 = param1.charAt(var3);
-            if (var4 < 48) {
+            character = suffix.charAt(characterIndex);
+            if (character < 48) {
               return null;
             }
-            if (var4 <= 57) {
-              var3++;
+            if (character <= 57) {
+              characterIndex++;
               continue;
             }
             break;
           }
-          stackIn_7_0 = null;
-          return (lo) (stackIn_7_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("mf.G(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_16_2 = "null";
+          successValue = null;
+          return (LegacyEmailValidationError) (successValue);
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("mf.G(").append(obfuscationGuard).append(',');
+          if (suffix == null) {
+            suffixSummary = "null";
           } else {
-            stackIn_16_2 = "{...}";
+            suffixSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(suffixSummary).append(')').toString());
         }
     }
 

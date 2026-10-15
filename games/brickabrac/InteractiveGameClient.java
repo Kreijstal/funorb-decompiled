@@ -414,9 +414,9 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         if (obfuscationGuard >= -34) {
           field_E = false;
         }
-        if (lo.field_d) {
+        if (LegacyEmailValidationError.field_d) {
           AchievementMaskRequest.uiLifecycle.prepareUiAssets(true);
-          lo.field_d = false;
+          LegacyEmailValidationError.field_d = false;
         }
         if (TextFieldRenderer.c((byte) -87)) {
           this.g(false);
