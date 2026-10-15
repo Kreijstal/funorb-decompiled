@@ -30,7 +30,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             var2 = 3;
           } else {
             var2 = 2;
-            ap.a((byte) 117, GameplayRenderHelpers.fullscreenCanvas);
+            CanvasInputHelpers.attachCanvasInput((byte) 117, GameplayRenderHelpers.fullscreenCanvas);
           }
         }
         if (null == jj.canvasResizeController &&
@@ -296,13 +296,13 @@ final class WidgetLayerStack extends SingleChildWidget {
               }
               frame = selectedFrame;
               if (frame != null) {
-                frame.paintFrame((GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1) + textWidth, b.fullscreenDialogButtonLineHeight + (DropTargetWidget.fullscreenDialogButtonPaddingY << 1), -GameOverlayHelpers.fullscreenDialogButtonPaddingX + textX, false, rowY);
+                frame.paintFrame((GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1) + textWidth, MouseInputCleanup.fullscreenDialogButtonLineHeight + (DropTargetWidget.fullscreenDialogButtonPaddingY << 1), -GameOverlayHelpers.fullscreenDialogButtonPaddingX + textX, false, rowY);
               }
               rowY = rowY + DropTargetWidget.fullscreenDialogButtonPaddingY;
             }
             if (buttonIndex >= 0) {
               kp.fullscreenDialogButtonFont.drawLeft(text, textX, rowY + QuickChatCategoryRegistry.fullscreenDialogButtonBaseline, paint, -1);
-              rowY = rowY + (DropTargetWidget.fullscreenDialogButtonPaddingY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + b.fullscreenDialogButtonLineHeight));
+              rowY = rowY + (DropTargetWidget.fullscreenDialogButtonPaddingY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + MouseInputCleanup.fullscreenDialogButtonLineHeight));
             } else {
               StateIconLabel.fullscreenDialogBodyFont.drawLeft(text, textX, rowY + DualLinkIterator.fullscreenDialogBodyBaseline, paint, -1);
               rowY = rowY + IntArrayRequest.fullscreenDialogBodyLineHeight;

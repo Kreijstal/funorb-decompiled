@@ -94,7 +94,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             measureGuard = 0;
             textForMeasurement = QuickChatCategoryDefinition.textChoiceLines[measureLineIndex];
             isButtonLine = !(0 > MenuSelection.textChoiceLineActions[measureLineIndex]);
-            lineWidth = pl.measureTextChoiceLine(measureGuard, textForMeasurement, isButtonLine);
+            lineWidth = SpriteInputHelpers.measureTextChoiceLine(measureGuard, textForMeasurement, isButtonLine);
             if (MenuSelection.textChoiceLineActions[measureLineIndex] != -1) {
               lineWidth = lineWidth + FullscreenFailureDialog.textChoiceButtonPaddingX * 2;
             }

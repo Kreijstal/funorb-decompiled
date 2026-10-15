@@ -335,7 +335,7 @@ final class NameEntryPopup extends UiComponent {
           for (var3 = 0; 8 > var3; var3++) {
             var5[var3] = LevelSelectScreen.d(var12[var3], var16[var3]);
           }
-          var13 = pl.pendingAchievementMask;
+          var13 = SpriteInputHelpers.pendingAchievementMask;
           var11 = var13;
           var7 = var11;
           var1Lifetime1 = var7;

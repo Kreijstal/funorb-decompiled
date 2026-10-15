@@ -69,7 +69,7 @@ final class Mesh3D {
         UiComponent friendsViewportAlias = null;
         UiComponent ignoreViewport = null;
         try {
-          ok.displayNameChangedSprite = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, archive);
+          ok.displayNameChangedSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, archive);
           GameScreen.friendsListPane = new ScrollPaneWithFooter(0L, rq.field_b, LoginPanel.field_J, ChocolateBackground.field_y);
           f.ignoreListPane = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ScreenNavigationHelpers.field_e);
           QuickChatPhraseRegistry.friendsPanel = new UiComponent(0L, (UiComponent) null);

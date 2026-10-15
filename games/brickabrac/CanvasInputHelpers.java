@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ap {
+final class CanvasInputHelpers {
     static UiComponent field_e;
     static RgbSprite[] halloweenCentreSprites;
     static RgbSprite field_a;
@@ -27,7 +27,7 @@ final class ap {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            ap.a(-35, 121, (byte) -8);
+            CanvasInputHelpers.a(-35, 121, (byte) -8);
           }
           var2 = GameplayAudioEvent.a(HighscoresScreen.a(!param0, param1), (byte) 3);
           if (var2 == null) {
@@ -102,38 +102,38 @@ final class ap {
         field_d = null;
         field_b = null;
         if (param0) {
-          ap.a(true);
+          CanvasInputHelpers.a(true);
         }
     }
 
-    final static void a(byte param0, java.awt.Canvas param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void attachCanvasInput(byte obfuscationGuard, java.awt.Canvas canvas) {
+        RuntimeException failure = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String canvasSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param0 != 117) {
-            ap.a(32, 14);
+          if (obfuscationGuard != 117) {
+            CanvasInputHelpers.a(32, 14);
           }
-          InstructionsScreen.attachKeyboardInput(-118, (java.awt.Component) ((Object) param1));
-          pl.a((java.awt.Component) ((Object) param1), 7282);
+          InstructionsScreen.attachKeyboardInput(-118, (java.awt.Component) ((Object) canvas));
+          SpriteInputHelpers.attachMouseInput((java.awt.Component) ((Object) canvas), 7282);
           if (null == NinjaBackground.mouseWheelSource) {
             return;
           }
-          NinjaBackground.mouseWheelSource.attach((byte) 44, (java.awt.Component) ((Object) param1));
+          NinjaBackground.mouseWheelSource.attach((byte) 44, (java.awt.Component) ((Object) canvas));
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("ap.D(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ap.D(").append(obfuscationGuard).append(',');
+          if (canvas == null) {
+            canvasSummary = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            canvasSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(canvasSummary).append(')').toString());
         }
     }
 

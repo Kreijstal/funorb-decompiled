@@ -296,7 +296,7 @@ final class ScreenshotViewer {
             ContentTransitionLayer.field_jb.ensureGroupAvailableByName("arialish12", -28138) &&
             ContentTransitionLayer.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
             AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
-            ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
+            ll.field_c = SpriteInputHelpers.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
             ch.field_c = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
             ArchiveSourceManager.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
             MainMenuScreen.field_u = TextWidgetRenderer.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);

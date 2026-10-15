@@ -275,7 +275,7 @@ public final class BrickABrac extends InteractiveGameClient {
             for (var7 = 0; var7 < 8; var7++) {
               var21[var7] = LevelSelectScreen.d(var36[var7], var47[var7]);
             }
-            var37 = pl.pendingAchievementMask;
+            var37 = SpriteInputHelpers.pendingAchievementMask;
             var29 = var37;
             var23 = var29;
             var5_arrayLifetime3 = var23;
@@ -463,7 +463,7 @@ public final class BrickABrac extends InteractiveGameClient {
           return;
         }
         if (AccountMessageDialog.currentScreen.screenId == 9 &&
-          !WidgetGroup.a(pl.pendingAchievementMask, -1)) {
+          !WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1)) {
           ScreenNavigationHelpers.requestScreen(false, 69, 5);
         } else {
           if (CacheEntry.field_z != 2147483647) {
@@ -557,7 +557,7 @@ public final class BrickABrac extends InteractiveGameClient {
     final void clearClientResources(boolean obfuscationGuard) {
         BrickABrac.s(-65);
         ea.a((byte) -42);
-        b.a(true);
+        MouseInputCleanup.a(true);
         BackgroundRegistry.a(0);
         LevelSequence.a((byte) 70);
         MenuScreen.b(-107);
@@ -573,7 +573,7 @@ public final class BrickABrac extends InteractiveGameClient {
         sc.a(81);
         MonotonicTime.a((byte) -114);
         BitPacketBuffer.clearStaticReferences(60);
-        ap.a(!obfuscationGuard ? true : false);
+        CanvasInputHelpers.a(!obfuscationGuard ? true : false);
         LobbyUiHelpers.clearSharedReferences(120);
         GameConnectionShell.k(-113);
         nk.a((byte) 121);
@@ -596,7 +596,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MouseInput.a((byte) 24);
         MouseWheelSource.a(102);
         ResourceArchive.a(false);
-        t.a(-11470);
+        CanvasInputCleanup.a(-11470);
         wm.a(108);
         PacketBuffer.clearStaticStrings(0);
         FriendListUi.c((byte) -41);
@@ -774,7 +774,7 @@ public final class BrickABrac extends InteractiveGameClient {
         NodeDequeCursor.c(117);
         SingleChildWidget.f((byte) -102);
         BrowserResizeNotificationHelpers.a((byte) -120);
-        pl.a(0);
+        SpriteInputHelpers.a(0);
         DelegatingCanvas.a(!obfuscationGuard ? true : false);
         nd.a((byte) 121);
         IntKeyIndex.a(true);
@@ -825,7 +825,7 @@ public final class BrickABrac extends InteractiveGameClient {
         TextFieldValidator.c((byte) -109);
         ResourceArchiveFactory.a(-7393);
         Under13RegistrationNoticePanel.a(12127);
-        uf.a((byte) 85);
+        KeyDispatchHelpers.a((byte) 85);
         LevelDecoder.a((byte) 89);
         ArchiveNetworkClient.h((byte) -128);
         SecondaryNodeQueue.b(true);

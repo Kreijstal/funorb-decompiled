@@ -237,75 +237,75 @@ class RgbSprite extends SpriteGeometry {
         return;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int dupTemp$0 = 0;
-        int dupTemp$1 = 0;
-        int dupTemp$2 = 0;
-        int dupTemp$3 = 0;
-        int incrementValue$4 = 0;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var10Lifetime1;
-        int var10Lifetime2;
-        int var10Lifetime3;
-        var8 = 0;
-        while (var8 < param7) {
-          var9 = 0;
-          while (var9 < param6) {
-            var11 = Rasterizer2D.pixels[param2] & 16711935;
-            var12 = Rasterizer2D.pixels[param2] & 65280;
-            var13 = 0;
-            var14 = 0;
-            dupTemp$0 = param0[param1];
-            var10 = dupTemp$0;
-            if (dupTemp$0 != 0) {
-              var13 = var13 + (var10 & 16711935);
-              var14 = var14 + (var10 & 65280);
+    private final static void drawHalfSizePixels(int[] source, int sourceOffset, int destinationOffset, int sourceRowSkip, int destinationRowSkip, int sourceWidth, int destinationWidth, int destinationHeight) {
+        int topLeftLoad = 0;
+        int topRightLoad = 0;
+        int bottomLeftLoad = 0;
+        int bottomRightLoad = 0;
+        int destinationIndexBeforeIncrement = 0;
+        int row;
+        int column;
+        int topLeftPixel;
+        int backgroundRedBlue;
+        int backgroundGreen;
+        int redBlueSum;
+        int greenSum;
+        int topRightPixel;
+        int bottomLeftPixel;
+        int bottomRightPixel;
+        row = 0;
+        while (row < destinationHeight) {
+          column = 0;
+          while (column < destinationWidth) {
+            backgroundRedBlue = Rasterizer2D.pixels[destinationOffset] & 16711935;
+            backgroundGreen = Rasterizer2D.pixels[destinationOffset] & 65280;
+            redBlueSum = 0;
+            greenSum = 0;
+            topLeftLoad = source[sourceOffset];
+            topLeftPixel = topLeftLoad;
+            if (topLeftLoad != 0) {
+              redBlueSum = redBlueSum + (topLeftPixel & 16711935);
+              greenSum = greenSum + (topLeftPixel & 65280);
             } else {
-              var13 = var13 + var11;
-              var14 = var14 + var12;
+              redBlueSum = redBlueSum + backgroundRedBlue;
+              greenSum = greenSum + backgroundGreen;
             }
-            dupTemp$1 = param0[param1 + 1];
-            var10Lifetime1 = dupTemp$1;
-            if (dupTemp$1 != 0) {
-              var13 = var13 + (var10Lifetime1 & 16711935);
-              var14 = var14 + (var10Lifetime1 & 65280);
+            topRightLoad = source[sourceOffset + 1];
+            topRightPixel = topRightLoad;
+            if (topRightLoad != 0) {
+              redBlueSum = redBlueSum + (topRightPixel & 16711935);
+              greenSum = greenSum + (topRightPixel & 65280);
             } else {
-              var13 = var13 + var11;
-              var14 = var14 + var12;
+              redBlueSum = redBlueSum + backgroundRedBlue;
+              greenSum = greenSum + backgroundGreen;
             }
-            dupTemp$2 = param0[param1 + param5];
-            var10Lifetime2 = dupTemp$2;
-            if (dupTemp$2 != 0) {
-              var13 = var13 + (var10Lifetime2 & 16711935);
-              var14 = var14 + (var10Lifetime2 & 65280);
+            bottomLeftLoad = source[sourceOffset + sourceWidth];
+            bottomLeftPixel = bottomLeftLoad;
+            if (bottomLeftLoad != 0) {
+              redBlueSum = redBlueSum + (bottomLeftPixel & 16711935);
+              greenSum = greenSum + (bottomLeftPixel & 65280);
             } else {
-              var13 = var13 + var11;
-              var14 = var14 + var12;
+              redBlueSum = redBlueSum + backgroundRedBlue;
+              greenSum = greenSum + backgroundGreen;
             }
-            dupTemp$3 = param0[param1 + param5 + 1];
-            var10Lifetime3 = dupTemp$3;
-            if (dupTemp$3 != 0) {
-              var13 = var13 + (var10Lifetime3 & 16711935);
-              var14 = var14 + (var10Lifetime3 & 65280);
+            bottomRightLoad = source[sourceOffset + sourceWidth + 1];
+            bottomRightPixel = bottomRightLoad;
+            if (bottomRightLoad != 0) {
+              redBlueSum = redBlueSum + (bottomRightPixel & 16711935);
+              greenSum = greenSum + (bottomRightPixel & 65280);
             } else {
-              var13 = var13 + var11;
-              var14 = var14 + var12;
+              redBlueSum = redBlueSum + backgroundRedBlue;
+              greenSum = greenSum + backgroundGreen;
             }
-            incrementValue$4 = param2;
-            param2++;
-            Rasterizer2D.pixels[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
-            var9++;
-            param1 += 2;
+            destinationIndexBeforeIncrement = destinationOffset;
+            destinationOffset++;
+            Rasterizer2D.pixels[destinationIndexBeforeIncrement] = (redBlueSum & 66847740 | greenSum & 261120) >> 2;
+            column++;
+            sourceOffset += 2;
           }
-          var8++;
-          param1 = param1 + param3;
-          param2 = param2 + param4;
+          row++;
+          sourceOffset = sourceOffset + sourceRowSkip;
+          destinationOffset = destinationOffset + destinationRowSkip;
         }
     }
 
@@ -1417,14 +1417,14 @@ class RgbSprite extends SpriteGeometry {
         }
     }
 
-    void a(int param0, int param1) {
-        param0 = param0 + (this.offsetX >> 1);
-        param1 = param1 + (this.offsetY >> 1);
-        int var3 = param0 < Rasterizer2D.clipLeft ? Rasterizer2D.clipLeft - param0 << 1 : 0;
-        int var4 = param0 + (this.width >> 1) > Rasterizer2D.clipRight ? Rasterizer2D.clipRight - param0 << 1 : this.width;
-        int var5 = param1 < Rasterizer2D.clipTop ? Rasterizer2D.clipTop - param1 << 1 : 0;
-        int var6 = param1 + (this.height >> 1) > Rasterizer2D.clipBottom ? Rasterizer2D.clipBottom - param1 << 1 : this.height;
-        RgbSprite.a(this.pixels, var5 * this.width + var3, (param1 + (var5 >> 1)) * Rasterizer2D.width + (param0 + (var3 >> 1)), (this.width << 1) - (var4 - var3) + (this.width & 1), Rasterizer2D.width - (var4 - var3 >> 1), this.width, var4 - var3 >> 1, var6 - var5 >> 1);
+    void drawHalfSize(int x, int y) {
+        x = x + (this.offsetX >> 1);
+        y = y + (this.offsetY >> 1);
+        int firstSourceColumn = x < Rasterizer2D.clipLeft ? Rasterizer2D.clipLeft - x << 1 : 0;
+        int lastSourceColumn = x + (this.width >> 1) > Rasterizer2D.clipRight ? Rasterizer2D.clipRight - x << 1 : this.width;
+        int firstSourceRow = y < Rasterizer2D.clipTop ? Rasterizer2D.clipTop - y << 1 : 0;
+        int lastSourceRow = y + (this.height >> 1) > Rasterizer2D.clipBottom ? Rasterizer2D.clipBottom - y << 1 : this.height;
+        RgbSprite.drawHalfSizePixels(this.pixels, firstSourceRow * this.width + firstSourceColumn, (y + (firstSourceRow >> 1)) * Rasterizer2D.width + (x + (firstSourceColumn >> 1)), (this.width << 1) - (lastSourceColumn - firstSourceColumn) + (this.width & 1), Rasterizer2D.width - (lastSourceColumn - firstSourceColumn >> 1), this.width, lastSourceColumn - firstSourceColumn >> 1, lastSourceRow - firstSourceRow >> 1);
     }
 
     void f(int param0, int param1) {

@@ -49,7 +49,7 @@ final class SoundCache {
                 var6Lifetime1 = LoginMethodPreference.requestAddIgnoredPlayer(var5, param1, 2);
               }
               if (GameUiController.field_d == 3) {
-                var6Lifetime1 = uf.requestRemoveIgnoredPlayer(var5, param1, var5, -45);
+                var6Lifetime1 = KeyDispatchHelpers.requestRemoveIgnoredPlayer(var5, param1, var5, -45);
               }
               if (var6Lifetime1 != null) {
                 var7 = (String) null;
@@ -599,7 +599,7 @@ final class SoundCache {
         try {
           previousCount = SocketConnector.activeFireworkCount;
           if (0 == previousCount) {
-            uf.spawnFireworkBursts(3, 0);
+            KeyDispatchHelpers.spawnFireworkBursts(3, 0);
           }
           burst = (FireworkBurst) (PasswordFieldRenderer.fireworkBursts.first(-31));
           while (burst != null) {
@@ -607,7 +607,7 @@ final class SoundCache {
             burst = (FireworkBurst) (PasswordFieldRenderer.fireworkBursts.next((byte) 116));
           }
           if (replaceFinishedBursts) {
-            uf.spawnFireworkBursts(previousCount - SocketConnector.activeFireworkCount, 0);
+            KeyDispatchHelpers.spawnFireworkBursts(previousCount - SocketConnector.activeFireworkCount, 0);
           }
           if (obfuscationGuard >= -30) {
             field_f = (NodeDeque) null;

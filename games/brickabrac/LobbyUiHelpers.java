@@ -375,14 +375,14 @@ final class LobbyUiHelpers {
                 RadialSelectorRenderer.field_h.enabled = true;
               }
               RadialSelectorRenderer.field_h.frameSprites = fm.field_b.frameSprites;
-              if (uf.pendingJoinRequestCount > 0) {
-                boolean usePluralRequestCaption = (uf.pendingJoinRequestCount != 1);
+              if (KeyDispatchHelpers.pendingJoinRequestCount > 0) {
+                boolean usePluralRequestCaption = (KeyDispatchHelpers.pendingJoinRequestCount != 1);
                 if (!usePluralRequestCaption) {
                   pendingRequestCaption = LabeledToggleRenderer.field_g;
                   usePluralRequestCaption = (clientBranchFlag != 0);
                 }
                 if (usePluralRequestCaption) {
-                  pendingRequestCaption = GamePresentationHelpers.formatIndexedText(LevelPackLoader.field_h, new String[]{Integer.toString(uf.pendingJoinRequestCount)}, (byte) 103);
+                  pendingRequestCaption = GamePresentationHelpers.formatIndexedText(LevelPackLoader.field_h, new String[]{Integer.toString(KeyDispatchHelpers.pendingJoinRequestCount)}, (byte) 103);
                 }
                 RadialSelectorRenderer.field_h.text = RadialSelectorRenderer.field_h.text + "<br>" + pendingRequestCaption;
                 if ((BirthDateValidator.field_h & 16) == 0 &&

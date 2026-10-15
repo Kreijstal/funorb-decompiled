@@ -12,7 +12,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         LevelCompleteScreen.field_J = null;
         ResourceArchiveFactory.field_e = 0;
         QuickChatParameterType.field_h = false;
-        b.field_a = -1;
+        MouseInputCleanup.field_a = -1;
         CappedUrlRequest.field_j = -1;
     }
 
@@ -35,7 +35,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             Rasterizer2D.e(4, 4, 0, 0, 540, 140);
           }
           aa.field_b.bindRasterTarget();
-          var1.a(0, 0);
+          var1.drawHalfSize(0, 0);
           sc.popRaster(-123);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fl.Q(" + param0 + ')');

@@ -71,7 +71,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         ActivityIndicatorWidget.a(param7, LoginCredentialKind.field_e, param0 + 3, this.gamePortOne, AccountMessageDialog.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
         BoundedFile.patchJavaKeyCodeMap(59);
         NinjaBackground.mouseWheelSource = ea.createMouseWheelSource(60);
-        ap.a((byte) 117, CacheIoRequest.field_D);
+        CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.field_D);
         nd.field_c = param4;
         LevelPackCard.field_i = param5;
         PacketBuffer.field_j = param1;
@@ -242,7 +242,7 @@ abstract class GameConnectionShell extends AppletGameShell {
     }
 
     final void enablePacketOne(int obfuscationGuard) {
-        uf.enabledCommonPackets[1] = true;
+        KeyDispatchHelpers.enabledCommonPackets[1] = true;
         if (obfuscationGuard != 12) {
           this.affiliateId = 30;
         }
@@ -252,25 +252,25 @@ abstract class GameConnectionShell extends AppletGameShell {
         int var2 = this.n(-1);
         if (var2 == 0 ||
           var2 == 1) {
-          if (uf.enabledCommonPackets[1]) {
+          if (KeyDispatchHelpers.enabledCommonPackets[1]) {
             MidiSynthesizer.a(2, (byte) -46);
           }
-          if (uf.enabledCommonPackets[2]) {
+          if (KeyDispatchHelpers.enabledCommonPackets[2]) {
             LoginCredentials.a((byte) -61, 3);
           }
-          if (uf.enabledCommonPackets[3]) {
+          if (KeyDispatchHelpers.enabledCommonPackets[3]) {
             TooltipSprite.resendPendingAchievements(4, 13330);
           }
-          if (uf.enabledCommonPackets[4]) {
+          if (KeyDispatchHelpers.enabledCommonPackets[4]) {
             ui.a(5, (byte) 115);
           }
-          if (uf.enabledCommonPackets[5]) {
+          if (KeyDispatchHelpers.enabledCommonPackets[5]) {
             ScrollPaneWithFooter.resendBytePayloadOperations(6, 0);
           }
-          if (uf.enabledCommonPackets[6]) {
+          if (KeyDispatchHelpers.enabledCommonPackets[6]) {
             CanvasResizeController.resendPendingRankingsRequests((byte) 119, 7);
           }
-          if (uf.enabledCommonPackets[8]) {
+          if (KeyDispatchHelpers.enabledCommonPackets[8]) {
             we.a((byte) -46);
           }
         }
@@ -289,16 +289,16 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (obfuscationGuard <= 28) {
           this.initializePacketLengths(-5);
         }
-        uf.enabledCommonPackets[6] = true;
+        KeyDispatchHelpers.enabledCommonPackets[6] = true;
     }
 
     final void enablePacketsElevenToThirteen(byte obfuscationGuard) {
-        uf.enabledCommonPackets[12] = true;
-        uf.enabledCommonPackets[11] = true;
+        KeyDispatchHelpers.enabledCommonPackets[12] = true;
+        KeyDispatchHelpers.enabledCommonPackets[11] = true;
         if (obfuscationGuard != -19) {
           return;
         }
-        uf.enabledCommonPackets[13] = true;
+        KeyDispatchHelpers.enabledCommonPackets[13] = true;
     }
 
     final static void setTextChoiceCenter(int x, int y, byte obfuscationGuard) {
@@ -310,7 +310,7 @@ abstract class GameConnectionShell extends AppletGameShell {
     }
 
     final void enablePacketFive(boolean enabled) {
-        uf.enabledCommonPackets[5] = enabled;
+        KeyDispatchHelpers.enabledCommonPackets[5] = enabled;
     }
 
     private final int a(boolean param0, byte param1, boolean param2) {
@@ -497,7 +497,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         var4 = BrickABrac.field_J ? 1 : 0;
         var2 = IntrusiveHashTable.currentPacketOpcode;
         if (var2 < 64 &&
-          uf.enabledCommonPackets[var2]) {
+          KeyDispatchHelpers.enabledCommonPackets[var2]) {
           if (obfuscationGuard) {
             return;
           }
@@ -639,13 +639,13 @@ abstract class GameConnectionShell extends AppletGameShell {
     }
 
     final void configureCommonPackets(int opcode, boolean enabled) {
-        uf.enabledCommonPackets[16] = true;
-        uf.enabledCommonPackets[opcode] = enabled;
-        uf.enabledCommonPackets[7] = true;
-        uf.enabledCommonPackets[0] = true;
-        uf.enabledCommonPackets[3] = true;
-        uf.enabledCommonPackets[18] = true;
-        uf.enabledCommonPackets[17] = true;
+        KeyDispatchHelpers.enabledCommonPackets[16] = true;
+        KeyDispatchHelpers.enabledCommonPackets[opcode] = enabled;
+        KeyDispatchHelpers.enabledCommonPackets[7] = true;
+        KeyDispatchHelpers.enabledCommonPackets[0] = true;
+        KeyDispatchHelpers.enabledCommonPackets[3] = true;
+        KeyDispatchHelpers.enabledCommonPackets[18] = true;
+        KeyDispatchHelpers.enabledCommonPackets[17] = true;
     }
 
     final static RgbSprite[] a(RgbSprite[] param0, byte param1) {
@@ -903,11 +903,11 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (!obfuscationGuard &&
           MusicCrossfadeStream.field_A) {
-          t.a(false, CacheIoRequest.field_D);
+          CanvasInputCleanup.detachCanvasInput(false, CacheIoRequest.field_D);
           this.c(false);
-          ap.a((byte) 117, CacheIoRequest.field_D);
+          CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.field_D);
         }
-        if (uf.enabledCommonPackets[8]) {
+        if (KeyDispatchHelpers.enabledCommonPackets[8]) {
           HuffmanCodec.a(14114);
         }
     }
@@ -916,11 +916,11 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (obfuscationGuard != -67) {
           return;
         }
-        uf.enabledCommonPackets[4] = true;
+        KeyDispatchHelpers.enabledCommonPackets[4] = true;
     }
 
     final void enableCommonPacket(int opcode) {
-        uf.enabledCommonPackets[opcode] = true;
+        KeyDispatchHelpers.enabledCommonPackets[opcode] = true;
     }
 
     private final void handleBrowserPayload(byte obfuscationGuard) {

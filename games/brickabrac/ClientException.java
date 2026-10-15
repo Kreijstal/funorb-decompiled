@@ -49,7 +49,7 @@ final class ClientException extends RuntimeException {
         int var9 = 0;
         var9 = BrickABrac.field_J ? 1 : 0;
         try {
-          KeyboardInput.a(param0 + 6, t.field_d, 294, 6, param1, 64, 3 + param5);
+          KeyboardInput.a(param0 + 6, CanvasInputCleanup.field_d, 294, 6, param1, 64, 3 + param5);
           for (var6_int = 0; param3.playerCount > var6_int; var6_int++) {
             if (0 == (1 << var6_int & (param3.playerMaskTwo | param3.playerMaskOne | param3.playerMaskThree))) {
               var7 = param3.playerBoards[var6_int];

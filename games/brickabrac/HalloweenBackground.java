@@ -68,22 +68,22 @@ final class HalloweenBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("halloween", -28138)) {
           return false;
         }
-        ValidationMessageWidget.halloweenNearSprite = pl.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.backgroundSpriteArchive);
-        StateIconLabel.halloweenMidSprite = pl.loadRgbSpriteByName("halloween", "halloween_mid", (byte) 116, AchievementIcon.backgroundSpriteArchive);
-        GameClock.halloweenFarSprite = pl.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.backgroundSpriteArchive);
-        LevelPackLoader.halloweenSmallSprite = pl.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.backgroundSpriteArchive);
-        MotionWaypoint.halloweenMoonSprite = pl.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.backgroundSpriteArchive);
+        ValidationMessageWidget.halloweenNearSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_near", (byte) -116, AchievementIcon.backgroundSpriteArchive);
+        StateIconLabel.halloweenMidSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_mid", (byte) 116, AchievementIcon.backgroundSpriteArchive);
+        GameClock.halloweenFarSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.backgroundSpriteArchive);
+        LevelPackLoader.halloweenSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.backgroundSpriteArchive);
+        MotionWaypoint.halloweenMoonSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.backgroundSpriteArchive);
         va.field_b = jh.a(0, ValidationMessageWidget.halloweenNearSprite);
         field_u = jh.a(0, StateIconLabel.halloweenMidSprite);
         ch.field_m = jh.a(0, GameClock.halloweenFarSprite);
         QuickChatParameterType.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
-        ba.halloweenCharacterSprite = pl.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.backgroundSpriteArchive);
+        ba.halloweenCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.backgroundSpriteArchive);
         StrongCacheEntry.halloweenCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_caps", 2);
         GameConnectionShell.halloweenSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_segs", 2);
-        ap.halloweenCentreSprites[0] = pl.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.backgroundSpriteArchive);
+        CanvasInputHelpers.halloweenCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.backgroundSpriteArchive);
         StrongCacheEntry.halloweenCapsSprites[1] = Under13RegistrationNoticePanel.a(StrongCacheEntry.halloweenCapsSprites[0], obfuscationGuard);
         GameConnectionShell.halloweenSegsSprites[1] = Under13RegistrationNoticePanel.a(GameConnectionShell.halloweenSegsSprites[0], obfuscationGuard);
-        ap.halloweenCentreSprites[1] = pl.a(-16371, ap.halloweenCentreSprites[0]);
+        CanvasInputHelpers.halloweenCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, CanvasInputHelpers.halloweenCentreSprites[0]);
         return true;
     }
 
@@ -139,7 +139,7 @@ final class HalloweenBackground extends BackgroundScene {
           if (null == GameConnectionShell.halloweenSegsSprites) {
             return false;
           }
-          stackIn_40_0 = (ap.halloweenCentreSprites != null);
+          stackIn_40_0 = (CanvasInputHelpers.halloweenCentreSprites != null);
           return stackIn_40_0;
         }
         var3 = (RasterCacheSurface) null;
@@ -168,7 +168,7 @@ final class HalloweenBackground extends BackgroundScene {
         if (null == GameConnectionShell.halloweenSegsSprites) {
           return false;
         }
-        stackIn_19_0 = (ap.halloweenCentreSprites != null);
+        stackIn_19_0 = (CanvasInputHelpers.halloweenCentreSprites != null);
         return stackIn_19_0;
     }
 
@@ -177,7 +177,7 @@ final class HalloweenBackground extends BackgroundScene {
         try {
           GameConnectionShell.halloweenSegsSprites = new RgbSprite[2][];
           StrongCacheEntry.halloweenCapsSprites = new RgbSprite[2][];
-          ap.halloweenCentreSprites = new RgbSprite[2];
+          CanvasInputHelpers.halloweenCentreSprites = new RgbSprite[2];
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dp.<init>(" + sceneId + ',' + (musicName != null ? "{...}" : "null") + ',' + (soundEffectPrefix != null ? "{...}" : "null") + ',' + soundEffectCount + ')');
         }
@@ -218,9 +218,9 @@ final class HalloweenBackground extends BackgroundScene {
     final RgbSprite a(boolean param0, int param1) {
         if (!param0) {
           field_u = (RgbSprite) null;
-          return ap.halloweenCentreSprites[-1 + param1];
+          return CanvasInputHelpers.halloweenCentreSprites[-1 + param1];
         }
-        return ap.halloweenCentreSprites[-1 + param1];
+        return CanvasInputHelpers.halloweenCentreSprites[-1 + param1];
     }
 
     final RgbSprite c(byte param0) {

@@ -112,8 +112,8 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           var5 = Rasterizer2D.width;
           var6 = Rasterizer2D.height;
           var14 = Rasterizer2D.pixels;
-          uf.field_e = new RgbSprite(10, 14);
-          uf.field_e.bindRasterTarget();
+          KeyDispatchHelpers.field_e = new RgbSprite(10, 14);
+          KeyDispatchHelpers.field_e.bindRasterTarget();
           for (var8 = 2; 7 > var8; var8++) {
             Rasterizer2D.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }

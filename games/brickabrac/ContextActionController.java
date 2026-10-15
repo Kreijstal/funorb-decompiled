@@ -294,7 +294,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_ignore", (byte) -115);
                 if (var2 != null) {
-                  pl.ignoreTabLabel = MenuButton.a(var2, (byte) 110);
+                  SpriteInputHelpers.ignoreTabLabel = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("mu_chat_tips", (byte) 35);
                 if (var2 != null) {
@@ -834,7 +834,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("multiconst_clan", (byte) 60);
                 if (var2 != null) {
-                  t.field_e = MenuButton.a(var2, (byte) 115);
+                  CanvasInputCleanup.field_e = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("multiconst_friends", (byte) 56);
                 if (var2 != null) {
@@ -1856,7 +1856,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ignorelistfull", (byte) 40);
                 if (null != var2) {
-                  ap.field_d = MenuButton.a(var2, (byte) 98);
+                  CanvasInputHelpers.field_d = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = nk.a("ignorelistdupe", (byte) 73);
                 if (var2 != null) {
@@ -2226,7 +2226,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("offerdraw", (byte) 117);
                 if (null != var2) {
-                  t.field_b = MenuButton.a(var2, (byte) 115);
+                  CanvasInputCleanup.field_b = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = nk.a("canceldraw", (byte) -106);
                 if (null != var2) {
@@ -2912,15 +2912,15 @@ final class ContextActionController {
                 }
                 var2 = nk.a("hs_mode_name,0", (byte) 45);
                 if (null != var2) {
-                  pl.field_c[0] = MenuButton.a(var2, (byte) 83);
+                  SpriteInputHelpers.field_c[0] = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = nk.a("hs_mode_name,1", (byte) 73);
                 if (null != var2) {
-                  pl.field_c[1] = MenuButton.a(var2, (byte) 110);
+                  SpriteInputHelpers.field_c[1] = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("hs_mode_name,2", (byte) -14);
                 if (null != var2) {
-                  pl.field_c[2] = MenuButton.a(var2, (byte) 111);
+                  SpriteInputHelpers.field_c[2] = MenuButton.a(var2, (byte) 111);
                 }
                 var2 = nk.a("rating_mode_name,0", (byte) -112);
                 if (null != var2) {
@@ -3418,7 +3418,7 @@ final class ContextActionController {
                 if (7 != actionId) {
                   return false;
                 }
-                errorMessage = uf.requestRemoveIgnoredPlayer(this.targetName, opcode, this.targetDisplayName, -66);
+                errorMessage = KeyDispatchHelpers.requestRemoveIgnoredPlayer(this.targetName, opcode, this.targetDisplayName, -66);
               }
             }
           }

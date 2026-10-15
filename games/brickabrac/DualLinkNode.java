@@ -217,7 +217,7 @@ class DualLinkNode extends IntrusiveNode {
         ProxySocketConnector.rankingRowCount = 0;
         ba.field_w = 2147483647;
         IntArrayRequest.field_u = 2147483647;
-        uf.field_b = -2147483648;
+        KeyDispatchHelpers.field_b = -2147483648;
     }
 
     final static boolean isValidSocialName(CharSequence name, boolean obfuscationGuard) {

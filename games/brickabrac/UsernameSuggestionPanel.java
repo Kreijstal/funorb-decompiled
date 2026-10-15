@@ -74,7 +74,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
             suggestionCount = suggestions.length;
             this.suggestions = new String[suggestionCount];
             for (suggestionIndex = 0; suggestionCount > suggestionIndex; suggestionIndex++) {
-              this.suggestions[suggestionIndex] = ap.a(true, (CharSequence) ((Object) suggestions[suggestionIndex])).replace(' ', ' ');
+              this.suggestions[suggestionIndex] = CanvasInputHelpers.a(true, (CharSequence) ((Object) suggestions[suggestionIndex])).replace(' ', ' ');
             }
             rowRenderer = new LinkWidgetRenderer(ArchiveNetworkClient.field_u, 0, 1);
             this.buttons = new FocusableWidget[suggestionCount + 1];

@@ -80,7 +80,7 @@ final class CachedArchiveSource extends ArchiveSource {
             measureGuard = 0;
             textForMeasurement = text;
             isButtonLine = !(actionIndex < 0);
-            textWidth = pl.measureTextChoiceLine(measureGuard, textForMeasurement, isButtonLine);
+            textWidth = SpriteInputHelpers.measureTextChoiceLine(measureGuard, textForMeasurement, isButtonLine);
             textLeft = NewAchievementsScreen.textChoiceCenterX - (textWidth >> 1);
             if (actionIndex >= 0) {
               lineTop = lineTop + GameClock.textChoiceButtonGapY;

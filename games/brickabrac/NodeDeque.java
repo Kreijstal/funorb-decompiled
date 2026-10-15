@@ -192,7 +192,7 @@ final class NodeDeque {
     }
 
     final static void a(boolean param0, int param1) {
-        BrickGameLayerController.field_c = !param0 ? new SocialTabbedPanel(UiComponent.field_Z, IterableIntrusiveHashTable.field_b) : new SocialTabbedPanel(MidiSynthesizer.field_u, t.field_f);
+        BrickGameLayerController.field_c = !param0 ? new SocialTabbedPanel(UiComponent.field_Z, IterableIntrusiveHashTable.field_b) : new SocialTabbedPanel(MidiSynthesizer.field_u, CanvasInputCleanup.field_f);
         NinjaBackground.field_w = new UiComponent(0L, (UiComponent) null);
         NinjaBackground.field_w.addChild(BrickGameLayerController.field_c.tabs, 0);
         NinjaBackground.field_w.addChild(GameUiController.field_e, 0);

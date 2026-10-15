@@ -147,7 +147,7 @@ final class GameUiController implements GameUiLifecycle {
           GameplayAudioEvent.field_k = null;
           hc.b(2);
         }
-        uf.field_a = TextChoiceDialogHitTest.a(3, true);
+        KeyDispatchHelpers.field_a = TextChoiceDialogHitTest.a(3, true);
         BackgroundScene.field_f = FullscreenDialogHelpers.createConfiguredArchive(-6, 0, false, 5, true);
         ScorePopup.field_l = TextChoiceDialogHitTest.a(6, true);
         FarmBackground.field_r = TextChoiceDialogHitTest.a(7, true);
@@ -173,7 +173,7 @@ final class GameUiController implements GameUiLifecycle {
         AccountContentTransitionLayer.startupResources.addArchive(IncomingPacketHelpers.field_a, false, fa.field_j, uo.field_a);
         AccountContentTransitionLayer.startupResources.addArchive(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
         AccountContentTransitionLayer.startupResources.addArchive(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, BrowserResizeNotificationHelpers.field_e);
-        AccountContentTransitionLayer.startupResources.addArchive(uf.field_a, false, IntHistoryBuffer.field_k, BrowserResizeNotificationHelpers.field_e);
+        AccountContentTransitionLayer.startupResources.addArchive(KeyDispatchHelpers.field_a, false, IntHistoryBuffer.field_k, BrowserResizeNotificationHelpers.field_e);
     }
 
     public final boolean pollUiBootstrap(byte obfuscationGuard) {
@@ -195,8 +195,8 @@ final class GameUiController implements GameUiLifecycle {
                   if (var3 != 5) {
                     return true;
                   }
-                  rj.installTextHuffman(new HuffmanCodec(uf.field_a.takeFileByName(121, "", "huffman")), false);
-                  uf.field_a = null;
+                  rj.installTextHuffman(new HuffmanCodec(KeyDispatchHelpers.field_a.takeFileByName(121, "", "huffman")), false);
+                  KeyDispatchHelpers.field_a = null;
                 }
               } else {
                 ParisBackground.a((byte) 24, 90.0f, MessageScreen.field_u);

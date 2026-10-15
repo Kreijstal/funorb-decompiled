@@ -461,7 +461,7 @@ final class QuickChatMenu extends UiComponent {
               branchSprite = null;
               if (null != this.submenus[itemIndex] ||
                 this.messageIds[itemIndex] == -1) {
-                branchSprite = uf.field_e;
+                branchSprite = KeyDispatchHelpers.field_e;
               }
               this.items[itemIndex] = new AlignedIconLabel(0L, itemStyle, (UiComponent) null, labelStyle, (RgbSprite) (branchSprite), labels[itemIndex]);
               this.addChild(this.items[itemIndex], 0);
@@ -475,7 +475,7 @@ final class QuickChatMenu extends UiComponent {
             break;
           }
           if (finishedRowCreation) {
-            this.contentWidth = this.contentWidth + (10 + uf.field_e.canvasWidth);
+            this.contentWidth = this.contentWidth + (10 + KeyDispatchHelpers.field_e.canvasWidth);
           }
           this.setExpansionTicks(12, (byte) -81);
           return;
@@ -1130,7 +1130,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime102 = gr.a(true, "resigned");
           if (var2Lifetime102 != null) {
-            t.field_h = MenuButton.a(var2Lifetime102, (byte) 107);
+            CanvasInputCleanup.field_h = MenuButton.a(var2Lifetime102, (byte) 107);
           }
           var2Lifetime103 = gr.a(!param0, "blank_colon_blank");
           if (null != var2Lifetime103) {
@@ -1234,7 +1234,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime128 = gr.a(true, "continue_label");
           if (var2Lifetime128 != null) {
-            t.field_c = MenuButton.a(var2Lifetime128, (byte) 94);
+            CanvasInputCleanup.field_c = MenuButton.a(var2Lifetime128, (byte) 94);
           }
           var2Lifetime129 = gr.a(true, "level_select_label");
           if (var2Lifetime129 != null) {
@@ -1503,7 +1503,7 @@ final class QuickChatMenu extends UiComponent {
           }
           LevelPack.b(124);
           if (null != CacheIoRequest.field_D) {
-            t.a(false, CacheIoRequest.field_D);
+            CanvasInputCleanup.detachCanvasInput(false, CacheIoRequest.field_D);
           }
           ic.disableKeyboardInput((byte) -79);
           FileCacheStore.a(5);

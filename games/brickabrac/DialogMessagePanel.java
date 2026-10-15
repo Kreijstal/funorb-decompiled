@@ -233,7 +233,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
                 var27 = var25 + var8_int;
                 if (var24 != 0) {
                   if (var24 < var18) {
-                    var28 = ap.a(var24 << 12, -55);
+                    var28 = CanvasInputHelpers.a(var24 << 12, -55);
                     var29 = (param1 << 6) - var28;
                     var30 = var28 - ((-BrickABrac.cosine8192(2048, (var29 << 7) / param1) + 65536) * param5 >> 11);
                     var26 = var21 * var30 / var28 + param4;
@@ -259,7 +259,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
                       var24 = var24 + (-1 + var23 * 2);
                       continue;
                     }
-                    var28 = ap.a(var24 << 12, -100);
+                    var28 = CanvasInputHelpers.a(var24 << 12, -100);
                     var29 = -(param1 << 6) + var28;
                     var30 = var28 - (param5 * (-BrickABrac.cosine8192(2048, (var29 << 7) / param7) + 65536) >> 11);
                     var27 = param2 + var23 * var30 / var28;

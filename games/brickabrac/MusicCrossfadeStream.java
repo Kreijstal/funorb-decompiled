@@ -388,7 +388,7 @@ final class MusicCrossfadeStream extends AudioStream {
     }
 
     final static void configureFullscreenDialogMetrics(int buttonBaseline, int buttonLineHeight, int obfuscationGuard, int bodyBaseline, int bodyLineHeight) {
-        b.fullscreenDialogButtonLineHeight = buttonLineHeight;
+        MouseInputCleanup.fullscreenDialogButtonLineHeight = buttonLineHeight;
         if (obfuscationGuard != 256) {
           return;
         }

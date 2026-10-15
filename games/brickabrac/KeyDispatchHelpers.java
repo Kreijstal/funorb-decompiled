@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uf {
+final class KeyDispatchHelpers {
     static int pendingJoinRequestCount;
     static ResourceArchive field_a;
     static boolean[] enabledCommonPackets;
@@ -17,17 +17,17 @@ final class uf {
         enabledCommonPackets = null;
     }
 
-    final static boolean b(int param0, int param1) {
-        boolean stackIn_26_0 = false;
-        boolean stackIn_44_0 = false;
-        boolean stackIn_64_0 = false;
-        boolean stackIn_77_0 = false;
-        boolean stackIn_88_0 = false;
-        boolean stackIn_103_0 = false;
-        boolean stackIn_114_0 = false;
-        boolean stackIn_127_0 = false;
-        boolean stackIn_138_0 = false;
-        if (param0 > -84) {
+    final static boolean shouldPairKeyWithCharacter(int obfuscationGuard, int keyCode) {
+        boolean postDigitRangeAccepted = false;
+        boolean mainRangeAccepted = false;
+        boolean letterOrSpecialAccepted = false;
+        boolean upperSpecialAccepted = false;
+        boolean lowSpecialAccepted = false;
+        boolean tailSpecialAccepted = false;
+        boolean tailRangeAccepted = false;
+        boolean fallbackSpecialAccepted = false;
+        boolean fallbackAccepted = false;
+        if (obfuscationGuard > -84) {
           return true;
         }
         if (IntArrayRequest.heldKeys[82]) {
@@ -36,176 +36,176 @@ final class uf {
         if (IntArrayRequest.heldKeys[86]) {
           return false;
         }
-        if (param1 >= 16) {
-          if (param1 <= 27) {
+        if (keyCode >= 16) {
+          if (keyCode <= 27) {
             return true;
           }
-          if (param1 < 32) {
-            stackIn_26_0 = ((!(param1 < 48) &&
-              !(58 < param1)) ||
-              (!(param1 < 64) &&
-              !(73 < param1)) ||
-              (param1 == 80 ||
-              param1 == 83 ||
-              param1 == 84 ||
-              85 == param1 ||
-              param1 == 59 ||
-              74 == param1 ||
-              28 == param1));
-            return stackIn_26_0;
+          if (keyCode < 32) {
+            postDigitRangeAccepted = ((!(keyCode < 48) &&
+              !(58 < keyCode)) ||
+              (!(keyCode < 64) &&
+              !(73 < keyCode)) ||
+              (keyCode == 80 ||
+              keyCode == 83 ||
+              keyCode == 84 ||
+              85 == keyCode ||
+              keyCode == 59 ||
+              74 == keyCode ||
+              28 == keyCode));
+            return postDigitRangeAccepted;
           }
-          boolean decompiledFrameRemainder3 = true;
-          if (param1 > 43 && ((param1 < 48 ||
-            58 < param1) &&
-            (param1 < 64 ||
-            73 < param1)) && (param1 != 80 &&
-            param1 != 83 &&
-            param1 != 84 &&
-            85 != param1 &&
-            param1 != 59 &&
-            74 != param1 &&
-            28 != param1)) {
-            stackIn_44_0 = false;
-            decompiledFrameRemainder3 = false;
+          boolean unusedMainRangeGate = true;
+          if (keyCode > 43 && ((keyCode < 48 ||
+            58 < keyCode) &&
+            (keyCode < 64 ||
+            73 < keyCode)) && (keyCode != 80 &&
+            keyCode != 83 &&
+            keyCode != 84 &&
+            85 != keyCode &&
+            keyCode != 59 &&
+            74 != keyCode &&
+            28 != keyCode)) {
+            mainRangeAccepted = false;
+            unusedMainRangeGate = false;
           }
           else {
-            stackIn_44_0 = true;
+            mainRangeAccepted = true;
           }
-          return stackIn_44_0;
+          return mainRangeAccepted;
         }
-        if (param1 >= 32) {
-          if (param1 <= 43) {
+        if (keyCode >= 32) {
+          if (keyCode <= 43) {
             return true;
           }
-          if (param1 >= 48) {
-            if (58 >= param1) {
+          if (keyCode >= 48) {
+            if (58 >= keyCode) {
               return true;
             }
-            stackIn_64_0 = ((!(param1 < 64) &&
-              !(73 < param1)) ||
-              (param1 == 80 ||
-              param1 == 83 ||
-              param1 == 84 ||
-              85 == param1 ||
-              param1 == 59 ||
-              74 == param1 ||
-              28 == param1));
-            return stackIn_64_0;
+            letterOrSpecialAccepted = ((!(keyCode < 64) &&
+              !(73 < keyCode)) ||
+              (keyCode == 80 ||
+              keyCode == 83 ||
+              keyCode == 84 ||
+              85 == keyCode ||
+              keyCode == 59 ||
+              74 == keyCode ||
+              28 == keyCode));
+            return letterOrSpecialAccepted;
           }
-          boolean decompiledFrameRemainder2 = true;
-          if (param1 < 64) {
-            if (param1 != 80 &&
-              param1 != 83 &&
-              param1 != 84 &&
-              85 != param1 &&
-              param1 != 59 &&
-              74 != param1) {
-              if (28 == param1) {
+          boolean continueUpperSpecialCheck = true;
+          if (keyCode < 64) {
+            if (keyCode != 80 &&
+              keyCode != 83 &&
+              keyCode != 84 &&
+              85 != keyCode &&
+              keyCode != 59 &&
+              74 != keyCode) {
+              if (28 == keyCode) {
                 return true;
               }
-              stackIn_88_0 = false;
-              decompiledFrameRemainder2 = false;
+              lowSpecialAccepted = false;
+              continueUpperSpecialCheck = false;
             }
           } else {
-            if (73 < param1) {
-              if (param1 != 80 &&
-                param1 != 83 &&
-                param1 != 84 &&
-                85 != param1 &&
-                param1 != 59 &&
-                74 != param1) {
-                if (28 == param1) {
+            if (73 < keyCode) {
+              if (keyCode != 80 &&
+                keyCode != 83 &&
+                keyCode != 84 &&
+                85 != keyCode &&
+                keyCode != 59 &&
+                74 != keyCode) {
+                if (28 == keyCode) {
                   return true;
                 }
-                stackIn_77_0 = false;
+                upperSpecialAccepted = false;
               } else {
-                stackIn_77_0 = true;
+                upperSpecialAccepted = true;
               }
-              return stackIn_77_0;
+              return upperSpecialAccepted;
             }
           }
-          if (decompiledFrameRemainder2) {
-            stackIn_88_0 = true;
+          if (continueUpperSpecialCheck) {
+            lowSpecialAccepted = true;
           }
-          return stackIn_88_0;
+          return lowSpecialAccepted;
         }
-        boolean decompiledFrameRemainder1 = true;
-        if (param1 < 48) {
-          if (param1 < 64) {
-            if (param1 != 80 &&
-              param1 != 83 &&
-              param1 != 84 &&
-              85 != param1 &&
-              param1 != 59 &&
-              74 != param1) {
-              if (28 == param1) {
+        boolean continueFallbackCheck = true;
+        if (keyCode < 48) {
+          if (keyCode < 64) {
+            if (keyCode != 80 &&
+              keyCode != 83 &&
+              keyCode != 84 &&
+              85 != keyCode &&
+              keyCode != 59 &&
+              74 != keyCode) {
+              if (28 == keyCode) {
                 return true;
               }
-              stackIn_138_0 = false;
-              decompiledFrameRemainder1 = false;
+              fallbackAccepted = false;
+              continueFallbackCheck = false;
             }
           } else {
-            if (73 < param1) {
-              if (param1 != 80 &&
-                param1 != 83 &&
-                param1 != 84 &&
-                85 != param1 &&
-                param1 != 59 &&
-                74 != param1) {
-                if (28 == param1) {
+            if (73 < keyCode) {
+              if (keyCode != 80 &&
+                keyCode != 83 &&
+                keyCode != 84 &&
+                85 != keyCode &&
+                keyCode != 59 &&
+                74 != keyCode) {
+                if (28 == keyCode) {
                   return true;
                 }
-                stackIn_127_0 = false;
+                fallbackSpecialAccepted = false;
               } else {
-                stackIn_127_0 = true;
+                fallbackSpecialAccepted = true;
               }
-              return stackIn_127_0;
+              return fallbackSpecialAccepted;
             }
           }
         } else {
-          if (58 < param1) {
-            boolean decompiledFrameRemainder0 = true;
-            if (param1 < 64) {
-              if (param1 != 80 &&
-                param1 != 83 &&
-                param1 != 84 &&
-                85 != param1 &&
-                param1 != 59 &&
-                74 != param1) {
-                if (28 == param1) {
+          if (58 < keyCode) {
+            boolean continueTailRangeCheck = true;
+            if (keyCode < 64) {
+              if (keyCode != 80 &&
+                keyCode != 83 &&
+                keyCode != 84 &&
+                85 != keyCode &&
+                keyCode != 59 &&
+                74 != keyCode) {
+                if (28 == keyCode) {
                   return true;
                 }
-                stackIn_114_0 = false;
-                decompiledFrameRemainder0 = false;
+                tailRangeAccepted = false;
+                continueTailRangeCheck = false;
               }
             } else {
-              if (73 < param1) {
-                if (param1 != 80 &&
-                  param1 != 83 &&
-                  param1 != 84 &&
-                  85 != param1 &&
-                  param1 != 59 &&
-                  74 != param1) {
-                  if (28 == param1) {
+              if (73 < keyCode) {
+                if (keyCode != 80 &&
+                  keyCode != 83 &&
+                  keyCode != 84 &&
+                  85 != keyCode &&
+                  keyCode != 59 &&
+                  74 != keyCode) {
+                  if (28 == keyCode) {
                     return true;
                   }
-                  stackIn_103_0 = false;
+                  tailSpecialAccepted = false;
                 } else {
-                  stackIn_103_0 = true;
+                  tailSpecialAccepted = true;
                 }
-                return stackIn_103_0;
+                return tailSpecialAccepted;
               }
             }
-            if (decompiledFrameRemainder0) {
-              stackIn_114_0 = true;
+            if (continueTailRangeCheck) {
+              tailRangeAccepted = true;
             }
-            return stackIn_114_0;
+            return tailRangeAccepted;
           }
         }
-        if (decompiledFrameRemainder1) {
-          stackIn_138_0 = true;
+        if (continueFallbackCheck) {
+          fallbackAccepted = true;
         }
-        return stackIn_138_0;
+        return fallbackAccepted;
     }
 
     final static void spawnFireworkBursts(int endIndex, int firstIndex) {

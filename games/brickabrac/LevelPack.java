@@ -57,7 +57,7 @@ final class LevelPack {
         if (null == GameplayRenderHelpers.fullscreenCanvas) {
           return;
         }
-        t.a(false, GameplayRenderHelpers.fullscreenCanvas);
+        CanvasInputCleanup.detachCanvasInput(false, GameplayRenderHelpers.fullscreenCanvas);
         GameplayRenderHelpers.fullscreenCanvas.a(AccountMessageDialog.field_ub, 121);
         GameplayRenderHelpers.fullscreenCanvas = null;
         if (param0 <= 49) {

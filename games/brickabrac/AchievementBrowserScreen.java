@@ -118,7 +118,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var11Lifetime1 = PasswordFieldRenderer.field_D.measureText(UsernameAvailabilityValidator.field_m) + 209;
           var12 = -(FireworkBurst.achievementOrbCoinSprite.canvasHeight / 2) + var9;
           for (var13 = 0; HorizontalFrameHelpers.field_e[var3] > var13; var13++) {
-            FireworkBurst.achievementOrbCoinSprite.a(var11Lifetime1, var12);
+            FireworkBurst.achievementOrbCoinSprite.drawHalfSize(var11Lifetime1, var12);
             var11Lifetime1 = var11Lifetime1 + FireworkBurst.achievementOrbCoinSprite.width / 3;
           }
         } else {

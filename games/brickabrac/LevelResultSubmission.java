@@ -89,7 +89,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             if (2 == var6) {
               var4 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
               var8 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var3}, (byte) 103);
-              var7 = -485 + PasswordValidator.field_n.width + ap.field_e.width - (-CachedArchiveSource.chatFont.measureText(var8) + CachedArchiveSource.chatFont.measureText(var4));
+              var7 = -485 + PasswordValidator.field_n.width + CanvasInputHelpers.field_e.width - (-CachedArchiveSource.chatFont.measureText(var8) + CachedArchiveSource.chatFont.measureText(var4));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -151,9 +151,9 @@ final class LevelResultSubmission extends IntrusiveNode {
             }
             DateFieldsWidget.a(param0 + 9132, var5, var4 + TextFont.escapeAngles(OptionsScreen.field_A.toString()), var7, BackgroundScene.field_i[var6]);
             if (!MatchResultScreen.field_s) {
-              ap.field_e.activeInside = false;
+              CanvasInputHelpers.field_e.activeInside = false;
             }
-            if (ap.field_e.activeInside) {
+            if (CanvasInputHelpers.field_e.activeInside) {
               var1 = GamePresentationHelpers.formatIndexedText(AccountDateHelpers.field_b, new String[]{var3, DualLinkNode.quickChatRecipient}, (byte) 103);
             }
           }

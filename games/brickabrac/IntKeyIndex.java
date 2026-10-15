@@ -59,7 +59,7 @@ final class IntKeyIndex {
     }
 
     final static void a(int param0) {
-        t.field_g = false;
+        CanvasInputCleanup.field_g = false;
         NanoGameClock.field_l = false;
         CheckboxWidgetRenderer.a(param0, true);
         MusicVoice.field_l = StrongCacheEntry.field_P;

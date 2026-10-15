@@ -252,12 +252,12 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             } else {
               mappedKeyCode = -1;
             }
-            if (pl.keyChangeWriteIndex >= 0 &&
+            if (SpriteInputHelpers.keyChangeWriteIndex >= 0 &&
               mappedKeyCode >= 0) {
-              LegacyEmailValidationError.keyChangeQueue[pl.keyChangeWriteIndex] = ~mappedKeyCode;
-              pl.keyChangeWriteIndex = 1 + pl.keyChangeWriteIndex & 127;
-              if (FullscreenFailureDialog.keyChangeReadIndex == pl.keyChangeWriteIndex) {
-                pl.keyChangeWriteIndex = -1;
+              LegacyEmailValidationError.keyChangeQueue[SpriteInputHelpers.keyChangeWriteIndex] = ~mappedKeyCode;
+              SpriteInputHelpers.keyChangeWriteIndex = 1 + SpriteInputHelpers.keyChangeWriteIndex & 127;
+              if (FullscreenFailureDialog.keyChangeReadIndex == SpriteInputHelpers.keyChangeWriteIndex) {
+                SpriteInputHelpers.keyChangeWriteIndex = -1;
               }
             }
           }
@@ -299,12 +299,12 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             } else {
               mappedKeyCode = -1;
             }
-            if (pl.keyChangeWriteIndex >= 0 &&
+            if (SpriteInputHelpers.keyChangeWriteIndex >= 0 &&
               mappedKeyCode >= 0) {
-              LegacyEmailValidationError.keyChangeQueue[pl.keyChangeWriteIndex] = mappedKeyCode;
-              pl.keyChangeWriteIndex = 127 & 1 + pl.keyChangeWriteIndex;
-              if (pl.keyChangeWriteIndex == FullscreenFailureDialog.keyChangeReadIndex) {
-                pl.keyChangeWriteIndex = -1;
+              LegacyEmailValidationError.keyChangeQueue[SpriteInputHelpers.keyChangeWriteIndex] = mappedKeyCode;
+              SpriteInputHelpers.keyChangeWriteIndex = 127 & 1 + SpriteInputHelpers.keyChangeWriteIndex;
+              if (SpriteInputHelpers.keyChangeWriteIndex == FullscreenFailureDialog.keyChangeReadIndex) {
+                SpriteInputHelpers.keyChangeWriteIndex = -1;
               }
             }
             if (mappedKeyCode >= 0) {
@@ -414,7 +414,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
     public final synchronized void focusLost(java.awt.event.FocusEvent event) {
         try {
           if (DualLinkDeque.keyboardInput != null) {
-            pl.keyChangeWriteIndex = -1;
+            SpriteInputHelpers.keyChangeWriteIndex = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "op.focusLost(" + (event != null ? "{...}" : "null") + ')');

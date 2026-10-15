@@ -10,7 +10,7 @@ final class NewAchievementsScreen extends AchievementBrowserScreen {
 
     NewAchievementsScreen() {
         super(9, Widget.field_y);
-        this.achievementMask = pl.pendingAchievementMask;
+        this.achievementMask = SpriteInputHelpers.pendingAchievementMask;
     }
 
     final static void f(int param0) {

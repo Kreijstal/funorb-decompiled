@@ -121,7 +121,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           }
           sc.popRaster(-96);
           if (MatchResultScreen.logoAnimationTicks < 150) {
-            LoginMethodPreference.field_b.a(var3, var4);
+            LoginMethodPreference.field_b.drawHalfSize(var3, var4);
           } else {
             LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
           }
@@ -158,7 +158,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         }
         sc.popRaster(-96);
         if (MatchResultScreen.logoAnimationTicks < 150) {
-          LoginMethodPreference.field_b.a(var3, var4);
+          LoginMethodPreference.field_b.drawHalfSize(var3, var4);
         } else {
           LevelCompleteScreen.field_I.b(var3 + 15, 10 + var4, var5);
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl {
+final class SpriteInputHelpers {
     static IndexedSprite[] field_f;
     static int[] pendingAchievementMask;
     static String ignoreTabLabel;
@@ -9,37 +9,37 @@ final class pl {
     static RgbSprite parisSmallSprite;
     static int keyChangeWriteIndex;
 
-    final static RgbSprite a(int param0, RgbSprite param1) {
-        RgbSprite var2 = null;
-        RuntimeException var2_ref = null;
-        byte[] var3 = null;
-        RgbSprite stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static RgbSprite createHalfSizeSprite(int obfuscationGuard, RgbSprite sprite) {
+        RgbSprite halfSprite = null;
+        RuntimeException failure = null;
+        byte[] unusedBytes = null;
+        RgbSprite result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String spriteSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          var2 = new RgbSprite(param1.canvasWidth / 2, param1.canvasHeight / 2);
-          if (param0 != -16371) {
-            var3 = (byte[]) null;
-            pl.requestCreateGame(-81, (byte[]) null, 117, false, 81, (byte) 40);
+          halfSprite = new RgbSprite(sprite.canvasWidth / 2, sprite.canvasHeight / 2);
+          if (obfuscationGuard != -16371) {
+            unusedBytes = (byte[]) null;
+            SpriteInputHelpers.requestCreateGame(-81, (byte[]) null, 117, false, 81, (byte) 40);
           }
-          var2.bindRasterTarget();
-          param1.a(0, 0);
+          halfSprite.bindRasterTarget();
+          sprite.drawHalfSize(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 103);
-          stackIn_3_0 = var2;
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_6_0 = var2_ref;
-          stackIn_6_1 = new StringBuilder().append("pl.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_7_2 = "null";
+          result = halfSprite;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("pl.F(").append(obfuscationGuard).append(',');
+          if (sprite == null) {
+            spriteSummary = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            spriteSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(spriteSummary).append(')').toString());
         }
     }
 
@@ -73,7 +73,7 @@ final class pl {
         field_f = null;
         if (param0 != 0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          pl.loadRgbSpriteByName((String) null, (String) null, (byte) -53, (ResourceArchive) null);
+          SpriteInputHelpers.loadRgbSpriteByName((String) null, (String) null, (byte) -53, (ResourceArchive) null);
         }
         field_c = null;
         parisSmallSprite = null;
@@ -81,104 +81,104 @@ final class pl {
         pendingAchievementMask = null;
     }
 
-    final static void a(RgbSprite param0, int param1) {
-        int var5_int = 0;
-        int var8 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
-        int[] var13 = null;
-        int var3Lifetime1;
-        int var6Lifetime1;
-        int var6Lifetime2;
-        var10 = BrickABrac.field_J ? 1 : 0;
+    final static void encodeBinaryMaskRuns(RgbSprite sprite, int firstOffsetRow) {
+        int offsetRow = 0;
+        int column = 0;
+        int sourceIndexBeforeIncrement = 0;
+        int offsetIndexBeforeIncrement = 0;
+        int runIndexBeforeIncrement = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String spriteSummary = null;
+        RuntimeException caughtFailure = null;
+        int[] offsetsAlias = null;
+        RuntimeException failure = null;
+        int sourceIndex = 0;
+        int runCount = 0;
+        int[] encodedPixels = null;
+        int opaqueRunLength = 0;
+        int transparentRunLength = 0;
+        int sourcePixel = 0;
+        int unusedGameFlag = 0;
+        int[] offsetsInitialAlias = null;
+        int[] offsetsAllocatedAlias = null;
+        int[] rowOffsets = null;
+        int encodedIndex;
+        int offsetCopyIndex;
+        int runCopyIndex;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var13 = new int[param0.height];
-          var12 = var13;
-          var11 = var12;
-          var2 = var11;
-          var3 = 0;
-          var4 = 0;
-          for (var5_int = param1; var5_int < param0.height; var5_int++) {
-            var11[var5_int] = var4 + param0.height;
-            var6 = 0;
-            var7 = 0;
-            for (var8 = 0; param0.width > var8; var8++) {
-              incrementValue$2 = var3;
-              var3++;
-              var9 = param0.pixels[incrementValue$2];
-              if (var9 == 0) {
-                if (0 < var6) {
-                  var6 = 0;
-                  var4++;
+          rowOffsets = new int[sprite.height];
+          offsetsAllocatedAlias = rowOffsets;
+          offsetsInitialAlias = offsetsAllocatedAlias;
+          offsetsAlias = offsetsInitialAlias;
+          sourceIndex = 0;
+          runCount = 0;
+          for (offsetRow = firstOffsetRow; offsetRow < sprite.height; offsetRow++) {
+            offsetsInitialAlias[offsetRow] = runCount + sprite.height;
+            opaqueRunLength = 0;
+            transparentRunLength = 0;
+            for (column = 0; sprite.width > column; column++) {
+              sourceIndexBeforeIncrement = sourceIndex;
+              sourceIndex++;
+              sourcePixel = sprite.pixels[sourceIndexBeforeIncrement];
+              if (sourcePixel == 0) {
+                if (0 < opaqueRunLength) {
+                  opaqueRunLength = 0;
+                  runCount++;
                 }
-                var7++;
-                param0.pixels[var4] = -var7;
+                transparentRunLength++;
+                sprite.pixels[runCount] = -transparentRunLength;
               } else {
-                if (0 < var7) {
-                  var4++;
-                  var7 = 0;
+                if (0 < transparentRunLength) {
+                  runCount++;
+                  transparentRunLength = 0;
                 }
-                var6++;
-                param0.pixels[var4] = var6;
+                opaqueRunLength++;
+                sprite.pixels[runCount] = opaqueRunLength;
               }
             }
-            var4++;
+            runCount++;
           }
-          var3Lifetime1 = 0;
-          var5 = new int[var4 + param0.height];
-          for (var6Lifetime1 = 0; param0.height > var6Lifetime1; var6Lifetime1++) {
-            incrementValue$1 = var3Lifetime1;
-            var3Lifetime1++;
-            var5[incrementValue$1] = var13[var6Lifetime1];
+          encodedIndex = 0;
+          encodedPixels = new int[runCount + sprite.height];
+          for (offsetCopyIndex = 0; sprite.height > offsetCopyIndex; offsetCopyIndex++) {
+            offsetIndexBeforeIncrement = encodedIndex;
+            encodedIndex++;
+            encodedPixels[offsetIndexBeforeIncrement] = rowOffsets[offsetCopyIndex];
           }
-          for (var6Lifetime2 = 0; var4 > var6Lifetime2; var6Lifetime2++) {
-            incrementValue$0 = var3Lifetime1;
-            var3Lifetime1++;
-            var5[incrementValue$0] = param0.pixels[var6Lifetime2];
+          for (runCopyIndex = 0; runCount > runCopyIndex; runCopyIndex++) {
+            runIndexBeforeIncrement = encodedIndex;
+            encodedIndex++;
+            encodedPixels[runIndexBeforeIncrement] = sprite.pixels[runCopyIndex];
           }
-          param0.pixels = var5;
+          sprite.pixels = encodedPixels;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_24_0 = var2_ref;
-          stackIn_24_1 = new StringBuilder().append("pl.A(");
-          if (param0 == null) {
-            stackIn_25_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("pl.A(");
+          if (sprite == null) {
+            spriteSummary = "null";
           } else {
-            stackIn_25_2 = "{...}";
+            spriteSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(spriteSummary).append(',').append(firstOffsetRow).append(')').toString());
         }
     }
 
-    final static void a(java.awt.Component param0, int param1) {
+    final static void attachMouseInput(java.awt.Component component, int obfuscationGuard) {
         try {
-          param0.addMouseListener(PowerUpWarning.mouseInput);
-          param0.addMouseMotionListener(PowerUpWarning.mouseInput);
-          if (param1 != 7282) {
-            ResourceArchive var3 = (ResourceArchive) null;
-            pl.loadRgbSpriteByName((String) null, (String) null, (byte) 8, (ResourceArchive) null);
+          component.addMouseListener(PowerUpWarning.mouseInput);
+          component.addMouseMotionListener(PowerUpWarning.mouseInput);
+          if (obfuscationGuard != 7282) {
+            ResourceArchive unusedArchive = (ResourceArchive) null;
+            SpriteInputHelpers.loadRgbSpriteByName((String) null, (String) null, (byte) 8, (ResourceArchive) null);
           }
-          param0.addFocusListener(PowerUpWarning.mouseInput);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pl.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          component.addFocusListener(PowerUpWarning.mouseInput);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "pl.E(" + (component != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class pl {
         RuntimeException caughtFailure = null;
         try {
           if (obfuscationGuard != 0) {
-            pl.a(-94);
+            SpriteInputHelpers.a(-94);
           }
           if (!buttonLine) {
             bodyWidth = Widget.textChoiceBodyFont.measureText(text);

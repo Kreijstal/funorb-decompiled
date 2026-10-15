@@ -87,7 +87,7 @@ final class GameplayScreen extends GameScreen {
         int[] var3 = var5;
         int var4 = achievementId;
         var5[var4 >> 5] = LevelSelectScreen.d(var5[var4 >> 5], 1 << IntrusiveHashIterator.a(31, var4));
-        int[] var6 = pl.pendingAchievementMask;
+        int[] var6 = SpriteInputHelpers.pendingAchievementMask;
         var3 = var6;
         var4 = achievementId;
         var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], pendingBit << IntrusiveHashIterator.a(var4, 31));
@@ -640,14 +640,14 @@ final class GameplayScreen extends GameScreen {
           return;
         }
         if (QuickChatMenu.h(-26090)) {
-          if (!WidgetGroup.a(pl.pendingAchievementMask, -1) &&
+          if (!WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1) &&
             VerticalScrollbar.field_Ub == null) {
             ScreenNavigationHelpers.requestScreen(usePointer, 121, 0);
           } else {
             ScreenNavigationHelpers.requestScreen(usePointer, 68, 10);
           }
         } else {
-          if (!WidgetGroup.a(pl.pendingAchievementMask, -1)) {
+          if (!WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1)) {
             if (VerticalScrollbar.field_Ub != null) {
               ScreenNavigationHelpers.requestScreen(usePointer, 68, 5);
             } else {
@@ -1827,7 +1827,7 @@ final class GameplayScreen extends GameScreen {
           this.localPlayerId = localPlayerId;
           stackIn_10_1 = !(QuickChatHelpDialog.field_Yb < 2);
           this.debugControlsEnabled = stackIn_10_1;
-          achievementMask = pl.pendingAchievementMask;
+          achievementMask = SpriteInputHelpers.pendingAchievementMask;
           achievementMaskReference = achievementMask;
           achievementMaskStorage = achievementMaskReference;
           achievementMaskAlias = achievementMaskStorage;

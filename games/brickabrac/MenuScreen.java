@@ -499,7 +499,7 @@ abstract class MenuScreen extends GameScreen {
                   } else {
                     var12 = (String) null;
                     AccountIntroductionPanel.a((String) null, true, (byte) 123);
-                    if (WidgetGroup.a(pl.pendingAchievementMask, -1)) {
+                    if (WidgetGroup.a(SpriteInputHelpers.pendingAchievementMask, -1)) {
                       CacheEntry.field_z = 9;
                     } else {
                       stackIn_143_0 = (null != VerticalScrollbar.field_Ub) ? 5 : 0;

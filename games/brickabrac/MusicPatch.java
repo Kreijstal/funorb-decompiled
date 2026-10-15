@@ -186,7 +186,7 @@ final class MusicPatch extends IntrusiveNode {
           if (param0 != 0) {
             pointerX = 121;
           }
-          t.field_g = true;
+          CanvasInputCleanup.field_g = true;
           StrongCacheEntry.field_I = new AccountMessageDialog(ResourceArchive.field_f, wm.field_a, param1, NanoGameClock.field_l, BytePayloadSubmission.field_l);
           ResourceArchive.field_f.pushLayer(-80, StrongCacheEntry.field_I);
         } catch (RuntimeException runtimeException) {

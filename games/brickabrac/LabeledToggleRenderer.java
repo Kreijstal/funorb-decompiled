@@ -83,7 +83,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
           return;
         }
         AppletGameShell.field_b = null;
-        t.field_g = false;
+        CanvasInputCleanup.field_g = false;
         if (NanoGameClock.field_l) {
           StrongCacheEntry.field_I.showPendingMessage((byte) -104);
         } else {

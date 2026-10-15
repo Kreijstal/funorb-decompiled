@@ -20,7 +20,7 @@ final class ParisBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 7829367, 928072);
           }
           if (this.hasSprites((byte) -105)) {
-            pl.parisSmallSprite.drawTransparent(destinationX, destinationY);
+            SpriteInputHelpers.parisSmallSprite.drawTransparent(destinationX, destinationY);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,11 +113,11 @@ final class ParisBackground extends BackgroundScene {
           if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("paris", -28138)) {
             return false;
           }
-          NinjaBackground.parisNearSprite = pl.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.backgroundSpriteArchive);
-          QuickChatParameterType.parisMidSprite = pl.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.backgroundSpriteArchive);
-          ToggleButtonWidget.parisFarSprite = pl.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.backgroundSpriteArchive);
-          pl.parisSmallSprite = pl.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.backgroundSpriteArchive);
-          BallPulseEffect.parisCharacterSprite = pl.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
+          NinjaBackground.parisNearSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_near", (byte) -51, AchievementIcon.backgroundSpriteArchive);
+          QuickChatParameterType.parisMidSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_mid", (byte) 98, AchievementIcon.backgroundSpriteArchive);
+          ToggleButtonWidget.parisFarSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.backgroundSpriteArchive);
+          SpriteInputHelpers.parisSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.backgroundSpriteArchive);
+          BallPulseEffect.parisCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
           IntrusiveHashTable.field_i = jh.a(0, NinjaBackground.parisNearSprite);
           if (obfuscationGuard) {
             ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
@@ -177,7 +177,7 @@ final class ParisBackground extends BackgroundScene {
           if (obfuscationGuard >= -91) {
             this.drawFullBackground(false, 87, -76, -86, -25);
           }
-          stackIn_19_0 = (NinjaBackground.parisNearSprite != null) && (null != QuickChatParameterType.parisMidSprite) && (ToggleButtonWidget.parisFarSprite != null) && (pl.parisSmallSprite != null) && (null != BallPulseEffect.parisCharacterSprite);
+          stackIn_19_0 = (NinjaBackground.parisNearSprite != null) && (null != QuickChatParameterType.parisMidSprite) && (ToggleButtonWidget.parisFarSprite != null) && (SpriteInputHelpers.parisSmallSprite != null) && (null != BallPulseEffect.parisCharacterSprite);
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,9 +275,9 @@ final class ParisBackground extends BackgroundScene {
           PasswordValidator.field_n.font = CachedArchiveSource.chatFont;
           BallPulseEffect.field_n.addChild(PasswordValidator.field_n, 0);
           BallPulseEffect.field_n.markDescendantsToInheritVisualState(true);
-          ap.field_e = new UiComponent(0L, (UiComponent) null);
-          ap.field_e.frameSprites = var16;
-          BallPulseEffect.field_n.addChild(ap.field_e, 0);
+          CanvasInputHelpers.field_e = new UiComponent(0L, (UiComponent) null);
+          CanvasInputHelpers.field_e.frameSprites = var16;
+          BallPulseEffect.field_n.addChild(CanvasInputHelpers.field_e, 0);
           HalloweenBackground.field_w = new UiComponent[5];
           SocialTabbedPanel.field_a = new UiComponent[5];
           QuickChatPhraseDefinition.field_F = new UiComponent[5];

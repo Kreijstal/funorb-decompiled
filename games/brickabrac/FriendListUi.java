@@ -225,7 +225,7 @@ final class FriendListUi {
             boolean decompiledFrameRemainder0 = true;
             IntrusiveHashTable.keyEventReadIndex = fm.keyEventFrameEnd;
             PowerUp.keyboardIdleTicks = PowerUp.keyboardIdleTicks + 1;
-            if (pl.keyChangeWriteIndex < 0) {
+            if (SpriteInputHelpers.keyChangeWriteIndex < 0) {
               keyIndex = 0;
               while (true) {
                 if (112 > keyIndex) {
@@ -235,7 +235,7 @@ final class FriendListUi {
                     continue;
                   }
                 } else {
-                  pl.keyChangeWriteIndex = FullscreenFailureDialog.keyChangeReadIndex;
+                  SpriteInputHelpers.keyChangeWriteIndex = FullscreenFailureDialog.keyChangeReadIndex;
                 }
                 break;
               }
@@ -243,7 +243,7 @@ final class FriendListUi {
             }
             if (decompiledFrameRemainder0) {
               while (true) {
-                if (~pl.keyChangeWriteIndex == ~FullscreenFailureDialog.keyChangeReadIndex) {
+                if (~SpriteInputHelpers.keyChangeWriteIndex == ~FullscreenFailureDialog.keyChangeReadIndex) {
                   break;
                 }
                 keyChange = LegacyEmailValidationError.keyChangeQueue[FullscreenFailureDialog.keyChangeReadIndex];

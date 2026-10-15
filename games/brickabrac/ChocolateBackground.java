@@ -72,22 +72,22 @@ final class ChocolateBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("chocolate", -28138)) {
           return false;
         }
-        IncomingPacketHelpers.chocolateNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.backgroundSpriteArchive);
-        chocolateMidSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.backgroundSpriteArchive);
-        CappedUrlRequest.chocolateSpiresSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.backgroundSpriteArchive);
-        QuickChatPhraseRegistry.chocolateFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
+        IncomingPacketHelpers.chocolateNearSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.backgroundSpriteArchive);
+        chocolateMidSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.backgroundSpriteArchive);
+        CappedUrlRequest.chocolateSpiresSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.backgroundSpriteArchive);
+        QuickChatPhraseRegistry.chocolateFarSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
         QuickChatParameterType.field_i = jh.a(0, IncomingPacketHelpers.chocolateNearSprite);
         FullscreenFailureDialog.field_hb = jh.a(0, chocolateMidSprite);
         StatefulWidgetRenderer.field_w = jh.a(0, CappedUrlRequest.chocolateSpiresSprite);
-        u.chocolateSmallFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.backgroundSpriteArchive);
-        GameClock.chocolateSmallNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.backgroundSpriteArchive);
-        MeshAttributeRecord.chocolateCharacterSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.backgroundSpriteArchive);
+        u.chocolateSmallFarSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.backgroundSpriteArchive);
+        GameClock.chocolateSmallNearSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.backgroundSpriteArchive);
+        MeshAttributeRecord.chocolateCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.backgroundSpriteArchive);
         Brick.chocCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_caps", 2);
         TextChoiceDialogHitTest.chocSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_segs", 2);
-        IntKeyIndex.chocCentreSprites[0] = pl.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.backgroundSpriteArchive);
+        IntKeyIndex.chocCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "choc_centre", (byte) -126, AchievementIcon.backgroundSpriteArchive);
         Brick.chocCapsSprites[1] = Under13RegistrationNoticePanel.a(Brick.chocCapsSprites[0], obfuscationGuard);
         TextChoiceDialogHitTest.chocSegsSprites[1] = Under13RegistrationNoticePanel.a(TextChoiceDialogHitTest.chocSegsSprites[0], obfuscationGuard);
-        IntKeyIndex.chocCentreSprites[1] = pl.a(-16371, IntKeyIndex.chocCentreSprites[0]);
+        IntKeyIndex.chocCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, IntKeyIndex.chocCentreSprites[0]);
         NameEntryPopup.chocLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("chocolate", AchievementIcon.backgroundSpriteArchive, "choc_lever", 2);
         return true;
     }

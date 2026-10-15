@@ -301,7 +301,7 @@ final class FullscreenDialogHelpers {
           for (heightRowIndex = 0; ValidationStatus.fullscreenDialogRows.length > heightRowIndex; heightRowIndex++) {
             heightSoFar = jj.fullscreenDialogHeight;
             if (BrickABrac.fullscreenDialogRowButtons[heightRowIndex] >= 0) {
-              rowHeight = b.fullscreenDialogButtonLineHeight;
+              rowHeight = MouseInputCleanup.fullscreenDialogButtonLineHeight;
             } else {
               rowHeight = IntArrayRequest.fullscreenDialogBodyLineHeight;
             }
@@ -321,8 +321,8 @@ final class FullscreenDialogHelpers {
               ce.fullscreenDialogButtonBounds[boundsRowIndex][0] = -GameOverlayHelpers.fullscreenDialogButtonPaddingX + buttonLeft;
               ce.fullscreenDialogButtonBounds[boundsRowIndex][1] = rowY;
               ce.fullscreenDialogButtonBounds[boundsRowIndex][2] = (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1) + buttonTextWidth;
-              rowY = rowY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight));
-              ce.fullscreenDialogButtonBounds[boundsRowIndex][3] = (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight;
+              rowY = rowY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight));
+              ce.fullscreenDialogButtonBounds[boundsRowIndex][3] = (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight;
             } else {
               rowY = rowY + IntArrayRequest.fullscreenDialogBodyLineHeight;
             }

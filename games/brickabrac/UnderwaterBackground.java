@@ -58,12 +58,12 @@ final class UnderwaterBackground extends BackgroundScene {
           return true;
         }
         if (AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("water", -28138)) {
-          ResourceArchiveFactory.waterRaysSprite = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.backgroundSpriteArchive);
-          wm.waterNearSprite = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.backgroundSpriteArchive);
-          LoginPanel.waterMidSprite = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.backgroundSpriteArchive);
-          ConnectionPhase.waterFarSprite = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.backgroundSpriteArchive);
-          TableNameEntry.waterSmallSprite = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.backgroundSpriteArchive);
-          ConstructionBackground.waterCharacterSprite = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
+          ResourceArchiveFactory.waterRaysSprite = SpriteInputHelpers.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.backgroundSpriteArchive);
+          wm.waterNearSprite = SpriteInputHelpers.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.backgroundSpriteArchive);
+          LoginPanel.waterMidSprite = SpriteInputHelpers.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.backgroundSpriteArchive);
+          ConnectionPhase.waterFarSprite = SpriteInputHelpers.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.backgroundSpriteArchive);
+          TableNameEntry.waterSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.backgroundSpriteArchive);
+          ConstructionBackground.waterCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
           SocialTabbedPanel.field_b = new RgbSprite(ConnectionPhase.waterFarSprite.canvasWidth, ConnectionPhase.waterFarSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-49, SocialTabbedPanel.field_b);
           ConnectionPhase.waterFarSprite.drawVerticallyFlipped(0, 0);
@@ -76,12 +76,12 @@ final class UnderwaterBackground extends BackgroundScene {
           IndexedSpriteGeometry.pushSpriteRaster(-83, uo.field_d);
           ResourceArchiveFactory.waterRaysSprite.a(0, 0, ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           sc.popRaster(-114);
-          pl.a(ConnectionPhase.waterFarSprite, 0);
-          pl.a(SocialTabbedPanel.field_b, 0);
-          pl.a(BufferedFile.field_a, 0);
-          pl.a(Under13RegistrationNoticePanel.field_P, 0);
-          pl.a(ResourceArchiveFactory.waterRaysSprite, 0);
-          pl.a(uo.field_d, 0);
+          SpriteInputHelpers.encodeBinaryMaskRuns(ConnectionPhase.waterFarSprite, 0);
+          SpriteInputHelpers.encodeBinaryMaskRuns(SocialTabbedPanel.field_b, 0);
+          SpriteInputHelpers.encodeBinaryMaskRuns(BufferedFile.field_a, 0);
+          SpriteInputHelpers.encodeBinaryMaskRuns(Under13RegistrationNoticePanel.field_P, 0);
+          SpriteInputHelpers.encodeBinaryMaskRuns(ResourceArchiveFactory.waterRaysSprite, 0);
+          SpriteInputHelpers.encodeBinaryMaskRuns(uo.field_d, 0);
           return true;
         }
         return false;

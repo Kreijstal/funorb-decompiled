@@ -55,7 +55,7 @@ final class TextChoiceDialogHitTest {
             if (0 > actionIndex) {
               lineTop = lineTop + BufferedSocket.textChoiceBodyLineHeight;
             } else {
-              textWidth = pl.measureTextChoiceLine(0, QuickChatCategoryDefinition.textChoiceLines[lineIndex], true);
+              textWidth = SpriteInputHelpers.measureTextChoiceLine(0, QuickChatCategoryDefinition.textChoiceLines[lineIndex], true);
               textLeft = -(textWidth >> 1) + NewAchievementsScreen.textChoiceCenterX;
               lineTop = lineTop + GameClock.textChoiceButtonGapY;
               if (ReflectionCheck.containsRectanglePoint(-FullscreenFailureDialog.textChoiceButtonPaddingX + textLeft, (GameCanvas.textChoiceButtonPaddingY << 1) + TooltipSprite.textChoiceButtonLineHeight, (FullscreenFailureDialog.textChoiceButtonPaddingX << 1) + textWidth, (byte) 80, pointerY, pointerX, lineTop)) {

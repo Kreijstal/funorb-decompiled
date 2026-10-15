@@ -143,7 +143,7 @@ final class QuickChatCategoryRegistry {
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           RankingsScreen.field_t = uo.loadIndexedSpriteByName((byte) 29, param0, "splash", "basic");
-          er.field_b = pl.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
+          er.field_b = SpriteInputHelpers.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
           var21 = param2.takeFileByName(-86, "basic", "gamefont");
           var15 = var21;
           var13 = var15;
@@ -172,18 +172,18 @@ final class QuickChatCategoryRegistry {
             }
           }
           LoginCredentialKind.field_h = AgeValidator.a("frame", "basic", param0, -122);
-          t.field_d = AgeValidator.a("frame_track", "basic", param0, -128);
-          t.field_d[4] = null;
+          CanvasInputCleanup.field_d = AgeValidator.a("frame_track", "basic", param0, -128);
+          CanvasInputCleanup.field_d[4] = null;
           var7 = LoginCredentialKind.field_h;
           var7[4] = null;
-          pl.loadRgbSpriteByName("basic", "frame_bracket", (byte) 106, param0);
+          SpriteInputHelpers.loadRgbSpriteByName("basic", "frame_bracket", (byte) 106, param0);
           AchievementBrowserScreen.field_A = AgeValidator.a("button_frame", "basic", param0, -91);
           Ball.field_G = AgeValidator.a("button_raised", "basic", param0, 103);
           IntArrayRequest.field_k = AgeValidator.a("button_depressed", "basic", param0, -104);
           IntrusiveHashTable.achievementSourceIcons = PacketBuffer.a("basic", param0, "achievements_large", -946715356);
-          LevelCompleteScreen.field_F = pl.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
-          DelayedPacket.field_p = pl.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
-          pl.loadRgbSpriteByName("basic", "locked", (byte) -45, param1);
+          LevelCompleteScreen.field_F = SpriteInputHelpers.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
+          DelayedPacket.field_p = SpriteInputHelpers.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
+          SpriteInputHelpers.loadRgbSpriteByName("basic", "locked", (byte) -45, param1);
           FireworkBurst.achievementOrbCoinSprite = new RgbSprite(32, 32);
           FireworkBurst.achievementOrbCoinSprite.bindRasterTarget();
           DelayedPacket.field_p.c(0, 0, 32, 32);
@@ -212,15 +212,15 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime1 = 0; LegacyEmailValidationError.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
             CircleBody.field_t[var10_intLifetime1] = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, LegacyEmailValidationError.field_c[var10_intLifetime1], 2);
           }
-          MenuSelection.field_k = pl.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
-          Ball.field_D = pl.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
+          MenuSelection.field_k = SpriteInputHelpers.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
+          Ball.field_D = SpriteInputHelpers.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
           SingleChildWidget.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
           MultiValueSliderRenderer.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
           GameConnectionShell.field_D = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
-          AccountRegistrationPanel.field_R = pl.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
+          AccountRegistrationPanel.field_R = SpriteInputHelpers.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
           TextHotspotRegion.powerUpMeterIcons = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "powerup", 2);
-          LevelPackSelectScreen.powerUpMeterBarSprite = pl.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
-          ch.field_l = pl.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
+          LevelPackSelectScreen.powerUpMeterBarSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
+          ch.field_l = SpriteInputHelpers.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
           QuickChatHelpDialog.field_Ub = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
           GzipInflater.field_a = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
           IntrusiveNode.gameEyeSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
@@ -231,11 +231,11 @@ final class QuickChatCategoryRegistry {
           ScorePopup.chocolateSmallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_choc", 2);
           AccountMessageDialog.spaceSmallLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_small_space", param3 ^ 29139);
           MultiValueSliderWidget.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
-          ap.field_a = pl.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
+          CanvasInputHelpers.field_a = SpriteInputHelpers.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           BytePayloadSubmission.smallRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
           IntHistoryBuffer.field_l = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
           LoginMethodPreference.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
-          pl.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
+          SpriteInputHelpers.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
           ValidationStatus.field_e = TextWidgetRenderer.a("basic", "congratulations", 1593955777, param0);
@@ -249,29 +249,29 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime3 = 0; var10_intLifetime3 < TranslucentNineSliceFrame.field_m.length; var10_intLifetime3++) {
             ResourceArchive.field_a[var10_intLifetime3] = new RgbSprite(TranslucentNineSliceFrame.field_m[var10_intLifetime3].canvasWidth / 2, TranslucentNineSliceFrame.field_m[var10_intLifetime3].canvasHeight / 2);
             ResourceArchive.field_a[var10_intLifetime3].bindRasterTarget();
-            TranslucentNineSliceFrame.field_m[var10_intLifetime3 % 29].a(0, 0);
+            TranslucentNineSliceFrame.field_m[var10_intLifetime3 % 29].drawHalfSize(0, 0);
           }
           kp.field_e = new RgbSprite[MultiValueSliderRenderer.field_b.length];
           for (var10_intLifetime4 = 0; MultiValueSliderRenderer.field_b.length > var10_intLifetime4; var10_intLifetime4++) {
             kp.field_e[var10_intLifetime4] = new RgbSprite(MultiValueSliderRenderer.field_b[var10_intLifetime4].canvasWidth / 2, MultiValueSliderRenderer.field_b[var10_intLifetime4].canvasHeight / 2);
             kp.field_e[var10_intLifetime4].bindRasterTarget();
-            MultiValueSliderRenderer.field_b[var10_intLifetime4].a(0, 0);
+            MultiValueSliderRenderer.field_b[var10_intLifetime4].drawHalfSize(0, 0);
           }
           LevelPackSelectScreen.field_z = new RgbSprite[GameConnectionShell.field_D.length];
           for (var10_intLifetime5 = 0; GameConnectionShell.field_D.length > var10_intLifetime5; var10_intLifetime5++) {
             LevelPackSelectScreen.field_z[var10_intLifetime5] = new RgbSprite(GameConnectionShell.field_D[var10_intLifetime5].canvasWidth / 2, GameConnectionShell.field_D[var10_intLifetime5].canvasHeight / 2);
             LevelPackSelectScreen.field_z[var10_intLifetime5].bindRasterTarget();
-            GameConnectionShell.field_D[var10_intLifetime5].a(0, 0);
+            GameConnectionShell.field_D[var10_intLifetime5].drawHalfSize(0, 0);
           }
           WidgetTextLayout.field_j = new RgbSprite(AccountRegistrationPanel.field_R.canvasWidth / 2, AccountRegistrationPanel.field_R.canvasHeight / 2);
           WidgetTextLayout.field_j.bindRasterTarget();
-          AccountRegistrationPanel.field_R.a(0, 0);
+          AccountRegistrationPanel.field_R.drawHalfSize(0, 0);
           PlayerInputBatch.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
           PlayerInputBatch.field_i.bindRasterTarget();
-          MenuSelection.field_k.a(0, 0);
+          MenuSelection.field_k.drawHalfSize(0, 0);
           UiComponent.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
           UiComponent.field_ib.bindRasterTarget();
-          Ball.field_D.a(0, 0);
+          Ball.field_D.drawHalfSize(0, 0);
           ch.field_k = new RgbSprite[TextHotspotRegion.powerUpMeterIcons.length];
           if (param3 != 29137) {
             QuickChatCategoryRegistry.a((byte) -25);
@@ -279,7 +279,7 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime6 = 0; ch.field_k.length > var10_intLifetime6; var10_intLifetime6++) {
             ch.field_k[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasHeight / 2);
             ch.field_k[var10_intLifetime6].bindRasterTarget();
-            TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].a(0, 0);
+            TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].drawHalfSize(0, 0);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 79);
           for (var10_intLifetime7 = 0; var10_intLifetime7 < BytePayloadSubmission.smallRosetteSprites.length; var10_intLifetime7++) {
@@ -288,8 +288,8 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime8 = 0; IntHistoryBuffer.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
             IntHistoryBuffer.field_l[var10_intLifetime8].trimTransparentBorders();
           }
-          TextWidgetRenderer.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
-          TranslucentNineSliceFrame.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
+          TextWidgetRenderer.field_p = SpriteInputHelpers.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
+          TranslucentNineSliceFrame.field_j = SpriteInputHelpers.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
           gr.field_d = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
           IncomingPacketHelpers.gameLogoSprite = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
           PasswordValidator.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "sliders", 2);
@@ -327,14 +327,14 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime13 = 0; var10_intLifetime13 < MusicVoiceMixer.field_n.length; var10_intLifetime13++) {
             MusicVoiceMixer.field_n[var10_intLifetime13] = DelayedPacket.a(FullscreenFailureKind.trackHeads[var10_intLifetime13], 20, LevelResultSubmission.a(param3, -13351));
           }
-          AlignedIconLabel.field_Sb = ap.field_a.copy();
+          AlignedIconLabel.field_Sb = CanvasInputHelpers.field_a.copy();
           AlignedIconLabel.field_Sb.rotateCounterclockwise();
-          MultiValueSliderRenderer.field_e = pl.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
+          MultiValueSliderRenderer.field_e = SpriteInputHelpers.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
           RankingsRequest.field_o = new RgbSprite(MultiValueSliderRenderer.field_e.canvasWidth / 2, MultiValueSliderRenderer.field_e.canvasHeight / 2);
           RankingsRequest.field_o.bindRasterTarget();
-          MultiValueSliderRenderer.field_e.a(0, 0);
+          MultiValueSliderRenderer.field_e.drawHalfSize(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 118);
-          var10 = pl.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
+          var10 = SpriteInputHelpers.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
           hc.field_a = new RgbSprite[2][4];
           JungleBackground.field_v = new RgbSprite[2][4];
           for (var11 = 0; var11 < 4; var11++) {
@@ -353,7 +353,7 @@ final class QuickChatCategoryRegistry {
           for (var11Lifetime1 = 0; var11Lifetime1 < SaveResultsPromptScreen.packCardIcons.length; var11Lifetime1++) {
             ArchiveNetworkRequest.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);
             IndexedSpriteGeometry.pushSpriteRaster(-59, ArchiveNetworkRequest.packSelectorIcons[var11Lifetime1]);
-            SaveResultsPromptScreen.packCardIcons[var11Lifetime1].a(0, 0);
+            SaveResultsPromptScreen.packCardIcons[var11Lifetime1].drawHalfSize(0, 0);
             sc.popRaster(-89);
           }
           AlternateNumericLoginCredentials.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];

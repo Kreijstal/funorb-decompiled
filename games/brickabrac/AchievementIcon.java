@@ -204,7 +204,7 @@ final class AchievementIcon extends IntrusiveNode {
             }
             return;
           }
-          ArrayWidgetGroup.buttonLabels[10] = t.field_b;
+          ArrayWidgetGroup.buttonLabels[10] = CanvasInputCleanup.field_b;
           if (obfuscationGuard != 32) {
             field_o = (String) null;
             return;

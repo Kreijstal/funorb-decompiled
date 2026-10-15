@@ -223,7 +223,7 @@ final class BitPacketBuffer extends PacketBuffer {
             GameRenderAudioHelpers.drawBoardMaskOverlay(destinationX, destinationY, var9, var24, var8, scaleDivisor, SpaceBackground.field_s.toLowerCase(), (byte) 123);
           }
           if ((match.playerMaskOne & 1 << playerId) != 0) {
-            GameRenderAudioHelpers.drawBoardMaskOverlay(destinationX, destinationY, var9, var24, var8, scaleDivisor, t.field_h.toLowerCase(), (byte) 76);
+            GameRenderAudioHelpers.drawBoardMaskOverlay(destinationX, destinationY, var9, var24, var8, scaleDivisor, CanvasInputCleanup.field_h.toLowerCase(), (byte) 76);
           }
           Rasterizer2D.resetClip();
           return;

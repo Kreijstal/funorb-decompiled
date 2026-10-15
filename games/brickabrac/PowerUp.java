@@ -18,7 +18,7 @@ final class PowerUp extends CircleBody {
           if (obfuscationGuard != -2846) {
             PowerUp.c(91);
           }
-          pl.keyChangeWriteIndex = -1;
+          SpriteInputHelpers.keyChangeWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ge.F(" + obfuscationGuard + ',' + (component != null ? "{...}" : "null") + ')');
         }

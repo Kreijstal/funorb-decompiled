@@ -15,7 +15,7 @@ final class FullscreenFailureKind {
     final static void a(String param0, byte param1, int param2) {
         int var3_int = 0;
         try {
-          t.field_g = false;
+          CanvasInputCleanup.field_g = false;
           InteractiveGameClient.field_E = false;
           if (param1 >= -43) {
             field_c = (RgbSprite[]) null;

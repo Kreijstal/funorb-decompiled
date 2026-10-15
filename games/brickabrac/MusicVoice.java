@@ -83,13 +83,13 @@ final class MusicVoice extends IntrusiveNode {
             } else {
               QuickChatParameterType.field_h = false;
             }
-            b.field_a = ChocolateBackground.field_v;
+            MouseInputCleanup.field_a = ChocolateBackground.field_v;
           }
           LevelCompleteScreen.field_J = param0;
           if (!QuickChatParameterType.field_h &&
             ResourceArchiveFactory.field_e < MonotonicTime.field_e &&
             QuickChatHelpDialog.pointerChanged) {
-            b.field_a = ChocolateBackground.field_v;
+            MouseInputCleanup.field_a = ChocolateBackground.field_v;
             ResourceArchiveFactory.field_e = 0;
             CappedUrlRequest.field_j = ll.field_b;
           }

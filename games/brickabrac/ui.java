@@ -65,7 +65,7 @@ final class ui {
             param8 = var14;
           }
           LobbyUiHelpers.paintNineSliceFrame(param8 + 18, param4 + 18, -40, -9 + (param5 - param8), MultiValueSliderWidget.field_K, -param4 - 9 + param7);
-          ap.field_a.drawTransparent(-(param8 * 0) + (param5 - 30), 6 + (param4 + (param7 - param4)));
+          CanvasInputHelpers.field_a.drawTransparent(-(param8 * 0) + (param5 - 30), 6 + (param4 + (param7 - param4)));
           var16Lifetime1 = param7 + (-(var12 * var13) + param4 + 18) / 2;
           for (var17 = 0; var12 > var17; var17++) {
             if (param9 == 0) {

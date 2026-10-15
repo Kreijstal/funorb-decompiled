@@ -281,7 +281,7 @@ final class ChatLobbyUiHelpers {
                 removedLobbyPlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, playerId);
                 if ((removedLobbyPlayer != null)) {
                   if (removedLobbyPlayer.joinRequestPending) {
-                    uf.pendingJoinRequestCount = uf.pendingJoinRequestCount - 1;
+                    KeyDispatchHelpers.pendingJoinRequestCount = KeyDispatchHelpers.pendingJoinRequestCount - 1;
                     removedLobbyPlayer.joinRequestPending = false;
                   }
                   if (playerStatus == 0) {
@@ -300,7 +300,7 @@ final class ChatLobbyUiHelpers {
                     clearedLobbyPlayer.unlinkSecondary(3);
                     clearedLobbyPlayer = (LobbyPlayer) (GameplayRenderHelpers.lobbyPlayers.next((byte) 116));
                   }
-                  uf.pendingJoinRequestCount = 0;
+                  KeyDispatchHelpers.pendingJoinRequestCount = 0;
                 } else {
                   if (responseKind == 8) {
                     var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
@@ -426,7 +426,7 @@ final class ChatLobbyUiHelpers {
                                 if (15 != responseKind) {
                                   if (requestPlayerAlias.joinRequestPending) {
                                     requestPlayerAlias.joinRequestPending = false;
-                                    uf.pendingJoinRequestCount = uf.pendingJoinRequestCount - 1;
+                                    KeyDispatchHelpers.pendingJoinRequestCount = KeyDispatchHelpers.pendingJoinRequestCount - 1;
                                   }
                                 } else {
                                   requestPlayer.invitationPending = false;
@@ -443,7 +443,7 @@ final class ChatLobbyUiHelpers {
                               if ((pendingPlayer != null)) {
                                 if (responseKind != 14) {
                                   if (!pendingPlayer.joinRequestPending) {
-                                    uf.pendingJoinRequestCount = uf.pendingJoinRequestCount + 1;
+                                    KeyDispatchHelpers.pendingJoinRequestCount = KeyDispatchHelpers.pendingJoinRequestCount + 1;
                                     pendingPlayer.joinRequestPending = true;
                                   }
                                 } else {
@@ -485,7 +485,7 @@ final class ChatLobbyUiHelpers {
                 resetPlayer.joinRequestPending) {
                 resetPlayer.invitationPending = false;
                 if (resetPlayer.joinRequestPending) {
-                  uf.pendingJoinRequestCount = uf.pendingJoinRequestCount - 1;
+                  KeyDispatchHelpers.pendingJoinRequestCount = KeyDispatchHelpers.pendingJoinRequestCount - 1;
                   resetPlayer.joinRequestPending = false;
                 }
                 ValidationIconWidget.insertSortedLobbyPlayer(resetPlayer, 17574);

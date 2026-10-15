@@ -89,7 +89,7 @@ final class SocialTabbedPanel {
         String[] tabLabels = null;
         UiComponent[] panels = null;
         try {
-          tabLabels = new String[]{primaryTabLabel, AchievementSubmission.friendsTabLabel, pl.ignoreTabLabel};
+          tabLabels = new String[]{primaryTabLabel, AchievementSubmission.friendsTabLabel, SpriteInputHelpers.ignoreTabLabel};
           panels = new UiComponent[]{primaryPanel, QuickChatPhraseRegistry.friendsPanel, (UiComponent) ((Object) f.ignoreListPane)};
           this.tabs = new TabbedPane(0L, WidgetTheme.field_n, tabLabels, hd.field_c, panels, 0);
         } catch (RuntimeException constructionFailure) {

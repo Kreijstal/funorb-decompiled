@@ -163,19 +163,19 @@ final class ArcticBackground extends BackgroundScene {
 
     final boolean loadSprites(boolean obfuscationGuard) {
         if (AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("arctic", -28138)) {
-          ResourcePreparationQueue.arcticNearSprite = pl.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.backgroundSpriteArchive);
-          BallPulseEffect.arcticMidSprite = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.backgroundSpriteArchive);
-          LoginPanel.arcticFarSprite = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.backgroundSpriteArchive);
-          WidgetPaintStyle.arcticSmallSprite = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.backgroundSpriteArchive);
+          ResourcePreparationQueue.arcticNearSprite = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_near", (byte) 117, AchievementIcon.backgroundSpriteArchive);
+          BallPulseEffect.arcticMidSprite = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.backgroundSpriteArchive);
+          LoginPanel.arcticFarSprite = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.backgroundSpriteArchive);
+          WidgetPaintStyle.arcticSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.backgroundSpriteArchive);
           CalendarRankingHelpers.field_d = jh.a(0, ResourcePreparationQueue.arcticNearSprite);
           LogoRenderHelpers.field_d = jh.a(0, BallPulseEffect.arcticMidSprite);
           Brick.field_K = jh.a(0, LoginPanel.arcticFarSprite);
           ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_caps", 2);
           BoardPresentationHelpers.arcticSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_segs", 2);
-          ga.arcticCentreSprites[0] = pl.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.backgroundSpriteArchive);
+          ga.arcticCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.backgroundSpriteArchive);
           ObjectHistoryBuffer.arcticCapsSprites[1] = Under13RegistrationNoticePanel.a(ObjectHistoryBuffer.arcticCapsSprites[0], obfuscationGuard);
           BoardPresentationHelpers.arcticSegsSprites[1] = Under13RegistrationNoticePanel.a(BoardPresentationHelpers.arcticSegsSprites[0], false);
-          ga.arcticCentreSprites[1] = pl.a(-16371, ga.arcticCentreSprites[0]);
+          ga.arcticCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, ga.arcticCentreSprites[0]);
           return true;
         }
         return false;

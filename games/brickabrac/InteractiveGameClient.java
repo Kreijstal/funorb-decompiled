@@ -262,7 +262,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                           var3 = -1;
                         }
                       } else {
-                        if (uf.b(-102, MeshAttributeRecord.currentKeyCode)) {
+                        if (KeyDispatchHelpers.shouldPairKeyWithCharacter(-102, MeshAttributeRecord.currentKeyCode)) {
                           var3 = MeshAttributeRecord.currentKeyCode;
                           continue;
                         }

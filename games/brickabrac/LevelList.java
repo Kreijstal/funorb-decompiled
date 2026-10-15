@@ -66,7 +66,7 @@ final class LevelList {
         CacheEntry.field_A[6] = ch.field_i;
         CacheEntry.field_A[9] = SecondaryHashTable.field_a;
         CacheEntry.field_A[4] = OutgoingPacketHelpers.field_d;
-        ArrayWidgetGroup.buttonLabels[14] = pl.field_c[0];
+        ArrayWidgetGroup.buttonLabels[14] = SpriteInputHelpers.field_c[0];
         CacheEntry.field_A[3] = ChatLobbyUiHelpers.field_e;
         ArrayWidgetGroup.buttonLabels[39] = BackgroundScene.field_o;
         ArrayWidgetGroup.buttonLabels[23] = UiComponent.field_mb;
@@ -81,7 +81,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[19] = HighscorePackSelector.field_g;
         ArrayWidgetGroup.buttonLabels[35] = LevelPackLoader.field_d;
         ArrayWidgetGroup.buttonLabels[20] = LevelResultSubmission.field_q;
-        ArrayWidgetGroup.buttonLabels[33] = t.field_c;
+        ArrayWidgetGroup.buttonLabels[33] = CanvasInputCleanup.field_c;
         ArrayWidgetGroup.buttonLabels[32] = LoginPanel.field_L;
         ArrayWidgetGroup.buttonLabels[25] = DiagnosticTextLine.field_i;
         ArrayWidgetGroup.buttonLabels[24] = DesertBackground.field_r;
@@ -89,8 +89,8 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[37] = LevelPackLoader.field_i;
         CacheEntry.field_A[7] = AppletGameShell.field_f;
         CacheEntry.field_A[8] = PauseMenuScreen.field_v;
-        ArrayWidgetGroup.buttonLabels[15] = pl.field_c[1];
-        ArrayWidgetGroup.buttonLabels[16] = pl.field_c[2];
+        ArrayWidgetGroup.buttonLabels[15] = SpriteInputHelpers.field_c[1];
+        ArrayWidgetGroup.buttonLabels[16] = SpriteInputHelpers.field_c[2];
         CacheEntry.field_A[12] = uo.field_b;
         CacheEntry.field_A[10] = WidgetTheme.field_d;
         ArrayWidgetGroup.buttonLabels[18] = LevelCompleteScreen.field_E[1];

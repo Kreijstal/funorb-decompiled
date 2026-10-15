@@ -81,7 +81,7 @@ final class ConstructionBackground extends BackgroundScene {
             FullscreenFailureKind.a(-10, colorIndex, var6, 2, -119, DisplayModeInfo.field_g);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ConstructionBackground.a(t.field_a, 2, scroll16, 306, -10, IntrusiveNode.field_d, destinationX, 5, destinationY, 480, er.field_d, colorIndex, var6.sprite);
+          ConstructionBackground.a(CanvasInputCleanup.field_a, 2, scroll16, 306, -10, IntrusiveNode.field_d, destinationX, 5, destinationY, 480, er.field_d, colorIndex, var6.sprite);
         } else {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
         }
@@ -111,23 +111,23 @@ final class ConstructionBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("construct", -28138)) {
           return false;
         }
-        ValidatedTextFieldWidget.constructionNearSprite = pl.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.backgroundSpriteArchive);
-        AchievementBrowserScreen.constructionMidSprite = pl.loadRgbSpriteByName("construct", "construction_mid", (byte) 102, AchievementIcon.backgroundSpriteArchive);
-        ValidatedTextFieldWidget.constructionFarSprite = pl.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.backgroundSpriteArchive);
-        IntNode.constructionSmokeSprite = pl.loadRgbSpriteByName("construct", "construction_smoke", (byte) -128, AchievementIcon.backgroundSpriteArchive);
-        MenuSelection.constructionSmallSprite = pl.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.backgroundSpriteArchive);
-        t.field_a = jh.a(0, ValidatedTextFieldWidget.constructionNearSprite);
+        ValidatedTextFieldWidget.constructionNearSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_near", (byte) 124, AchievementIcon.backgroundSpriteArchive);
+        AchievementBrowserScreen.constructionMidSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_mid", (byte) 102, AchievementIcon.backgroundSpriteArchive);
+        ValidatedTextFieldWidget.constructionFarSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.backgroundSpriteArchive);
+        IntNode.constructionSmokeSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_smoke", (byte) -128, AchievementIcon.backgroundSpriteArchive);
+        MenuSelection.constructionSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.backgroundSpriteArchive);
+        CanvasInputCleanup.field_a = jh.a(0, ValidatedTextFieldWidget.constructionNearSprite);
         IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.constructionMidSprite);
         DisplayModeInfo.field_g = jh.a(0, ValidatedTextFieldWidget.constructionFarSprite);
         er.field_d = jh.a(0, IntNode.constructionSmokeSprite);
         GamePresentationHelpers.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_caps", 2);
         NodeDequeCursor.constructionSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_segs", 2);
-        OpacityWidget.constructionCentreSprites[0] = pl.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.backgroundSpriteArchive);
+        OpacityWidget.constructionCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.backgroundSpriteArchive);
         GamePresentationHelpers.constructionCapsSprites[1] = Under13RegistrationNoticePanel.a(GamePresentationHelpers.constructionCapsSprites[0], false);
         NodeDequeCursor.constructionSegsSprites[1] = Under13RegistrationNoticePanel.a(NodeDequeCursor.constructionSegsSprites[0], obfuscationGuard);
-        OpacityWidget.constructionCentreSprites[1] = pl.a(-16371, OpacityWidget.constructionCentreSprites[0]);
-        pl.a(IntNode.constructionSmokeSprite, 0);
-        pl.a(er.field_d, 0);
+        OpacityWidget.constructionCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, OpacityWidget.constructionCentreSprites[0]);
+        SpriteInputHelpers.encodeBinaryMaskRuns(IntNode.constructionSmokeSprite, 0);
+        SpriteInputHelpers.encodeBinaryMaskRuns(er.field_d, 0);
         return true;
     }
 

@@ -38,9 +38,9 @@ final class SpaceBackground extends BackgroundScene {
     final RgbSprite[] b(int param0) {
         if (param0 > -12) {
           this.hasSprites((byte) 4);
-          return b.spaceLeverSprites;
+          return MouseInputCleanup.spaceLeverSprites;
         }
-        return b.spaceLeverSprites;
+        return MouseInputCleanup.spaceLeverSprites;
     }
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
@@ -94,19 +94,19 @@ final class SpaceBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("space", -28138)) {
           return false;
         }
-        LobbyGame.spaceNearSprite = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.backgroundSpriteArchive);
-        LevelResultSubmission.spaceMidSprite = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.backgroundSpriteArchive);
-        ScreenNavigationHelpers.spaceFarSprite = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.backgroundSpriteArchive);
-        GameConnectionHelpers.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.backgroundSpriteArchive);
+        LobbyGame.spaceNearSprite = SpriteInputHelpers.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.backgroundSpriteArchive);
+        LevelResultSubmission.spaceMidSprite = SpriteInputHelpers.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.backgroundSpriteArchive);
+        ScreenNavigationHelpers.spaceFarSprite = SpriteInputHelpers.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.backgroundSpriteArchive);
+        GameConnectionHelpers.spaceSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.backgroundSpriteArchive);
         ScreenNavigationHelpers.spaceFarSprite.bindRasterTarget();
         Rasterizer2D.drawRadialGlow(7136, 6592, 1600, 128, IntegerParsingHelpers.field_b);
         if (!obfuscationGuard) {
           BallPulseEffect.framebuffer.bindRaster((byte) 100);
-          TableNameEntry.spaceCharacterSprite = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.backgroundSpriteArchive);
+          TableNameEntry.spaceCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.backgroundSpriteArchive);
           jh.field_d = jh.a(0, LobbyGame.spaceNearSprite);
           MusicVoiceMixer.field_t = jh.a(0, LevelResultSubmission.spaceMidSprite);
           NodeDequeCursor.field_b = jh.a(0, ScreenNavigationHelpers.spaceFarSprite);
-          b.spaceLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("space", AchievementIcon.backgroundSpriteArchive, "space_lever", 2);
+          MouseInputCleanup.spaceLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("space", AchievementIcon.backgroundSpriteArchive, "space_lever", 2);
           return true;
         }
         return false;

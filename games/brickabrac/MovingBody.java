@@ -154,7 +154,7 @@ abstract class MovingBody extends IntrusiveNode {
             explicitDialogResult = dialogResult;
             return explicitDialogResult;
           }
-          if (t.field_g) {
+          if (CanvasInputCleanup.field_g) {
             messageDialogResult = 3;
             return messageDialogResult;
           }

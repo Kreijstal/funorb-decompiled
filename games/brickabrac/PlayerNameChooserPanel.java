@@ -85,11 +85,11 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
               textWidth = hm.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[rowIndex], 0);
               rowY = rowY + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
               textX = ProxySocketConnector.fullscreenDialogCenterX - (textWidth >> 1);
-              if (ReflectionCheck.containsRectanglePoint(textX - GameOverlayHelpers.fullscreenDialogButtonPaddingX, (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight, textWidth + (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1), (byte) 65, y, x, rowY)) {
+              if (ReflectionCheck.containsRectanglePoint(textX - GameOverlayHelpers.fullscreenDialogButtonPaddingX, (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight, textWidth + (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1), (byte) 65, y, x, rowY)) {
                 hitButton = buttonIndex;
                 return hitButton;
               }
-              rowY = rowY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + b.fullscreenDialogButtonLineHeight));
+              rowY = rowY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + ((DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight));
             }
             rowIndex++;
           }

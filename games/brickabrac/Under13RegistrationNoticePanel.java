@@ -196,7 +196,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
             return stackIn_3_0;
           }
           for (var3 = 0; param0.length > var3; var3++) {
-            var5[var3] = pl.a(-16371, param0[var3]);
+            var5[var3] = SpriteInputHelpers.createHalfSizeSprite(-16371, param0[var3]);
           }
           stackIn_8_0 = var2;
           return stackIn_8_0;

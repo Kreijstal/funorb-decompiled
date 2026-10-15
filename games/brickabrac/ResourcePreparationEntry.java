@@ -185,7 +185,7 @@ final class ResourcePreparationEntry {
           if (OpacityWidget.field_I == 2) {
             stackIn_28_0 = LoginMethodPreference.field_a;
           } else {
-            stackIn_28_0 = pl.field_f;
+            stackIn_28_0 = SpriteInputHelpers.field_f;
           }
           qp.field_e = stackIn_28_0;
           return;

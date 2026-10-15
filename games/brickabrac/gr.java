@@ -57,7 +57,7 @@ final class gr {
           for (var2_int = 0; var2_int < ProxySocketConnector.rankingRowCount; var2_int++) {
             VerticalScrollbar.rankingSortIndices[var2_int + rowLimit] = var2_int;
           }
-          ti.sortRankingIndexRange(uf.field_b, ba.field_w, rowLimit + ProxySocketConnector.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
+          ti.sortRankingIndexRange(KeyDispatchHelpers.field_b, ba.field_w, rowLimit + ProxySocketConnector.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
           if (rowLimit < ProxySocketConnector.rankingRowCount) {
             ProxySocketConnector.rankingRowCount = rowLimit;
           }

@@ -99,7 +99,7 @@ abstract class CacheEntry extends DualLinkNode {
           Ball.field_K = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param7, "allowspectators", 2);
           AchievementsScreen.field_H = new String[5];
           AchievementsScreen.field_H[3] = AlternateNumericLoginCredentials.field_u;
-          AchievementsScreen.field_H[1] = t.field_e;
+          AchievementsScreen.field_H[1] = CanvasInputCleanup.field_e;
           AchievementsScreen.field_H[2] = IterableIntrusiveHashTable.field_g;
           AchievementsScreen.field_H[4] = FullscreenDialogHelpers.field_a;
           AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
@@ -171,10 +171,10 @@ abstract class CacheEntry extends DualLinkNode {
           qp.field_f = new UiComponent(0L, MenuSelection.field_m);
           qp.field_f.addChild(Brick.field_A, 0);
           qp.field_f.addChild(LobbyUiHelpers.cancelCreateGameButton, 0);
-          t.field_f = new UiComponent(0L, ReportAbuseDialog.field_Qb);
-          t.field_f.copyStyle((byte) -83, CappedUrlRequest.field_l);
-          t.field_f.verticalAlignment = 1;
-          var16 = t.field_f;
+          CanvasInputCleanup.field_f = new UiComponent(0L, ReportAbuseDialog.field_Qb);
+          CanvasInputCleanup.field_f.copyStyle((byte) -83, CappedUrlRequest.field_l);
+          CanvasInputCleanup.field_f.verticalAlignment = 1;
+          var16 = CanvasInputCleanup.field_f;
           var16.horizontalAlignment = 1;
           IterableIntrusiveHashTable.field_b = new UiComponent(0L, (UiComponent) null);
           TextWidgetRenderer.field_b = new UiComponent(0L, CappedUrlRequest.field_l);

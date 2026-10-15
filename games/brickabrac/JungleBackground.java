@@ -925,20 +925,20 @@ final class JungleBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("jungle", -28138)) {
           return false;
         }
-        ch.jungleNearSprite = pl.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.backgroundSpriteArchive);
-        MultiValueSliderRenderer.jungleMidSprite = pl.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.backgroundSpriteArchive);
-        np.jungleFarSprite = pl.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.backgroundSpriteArchive);
-        Brick.jungleSmallSprite = pl.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.backgroundSpriteArchive);
+        ch.jungleNearSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.backgroundSpriteArchive);
+        MultiValueSliderRenderer.jungleMidSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.backgroundSpriteArchive);
+        np.jungleFarSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.backgroundSpriteArchive);
+        Brick.jungleSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.backgroundSpriteArchive);
         CacheEntry.field_D = jh.a(0, ch.jungleNearSprite);
         HuffmanCodec.field_e = jh.a(0, MultiValueSliderRenderer.jungleMidSprite);
         WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
-        WidgetTextLayout.jungleCharacterSprite = pl.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.backgroundSpriteArchive);
+        WidgetTextLayout.jungleCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.backgroundSpriteArchive);
         DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_caps", 2);
         DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_segs", 2);
-        StatefulWidgetRenderer.jungleCentreSprites[0] = pl.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.backgroundSpriteArchive);
+        StatefulWidgetRenderer.jungleCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_centre", (byte) -110, AchievementIcon.backgroundSpriteArchive);
         DualLinkNode.jungleCapsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkNode.jungleCapsSprites[0], false);
         DualLinkIterator.jungleSegsSprites[1] = Under13RegistrationNoticePanel.a(DualLinkIterator.jungleSegsSprites[0], obfuscationGuard);
-        StatefulWidgetRenderer.jungleCentreSprites[1] = pl.a(-16371, StatefulWidgetRenderer.jungleCentreSprites[0]);
+        StatefulWidgetRenderer.jungleCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, StatefulWidgetRenderer.jungleCentreSprites[0]);
         return true;
     }
 

@@ -317,7 +317,7 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void drawHalfSize(int x, int y) {
         int var9 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
@@ -349,35 +349,35 @@ final class ArgbSprite extends RgbSprite {
         int var19Lifetime1;
         var3 = this.width >> 1;
         var4 = this.height >> 1;
-        param0 = param0 + this.offsetX / 2;
-        param1 = param1 + this.offsetY / 2;
-        if (param0 >= Rasterizer2D.clipLeft) {
+        x = x + this.offsetX / 2;
+        y = y + this.offsetY / 2;
+        if (x >= Rasterizer2D.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = Rasterizer2D.clipLeft - param0 << 1;
+          stackIn_3_0 = Rasterizer2D.clipLeft - x << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= Rasterizer2D.clipRight) {
+        if (x + var3 <= Rasterizer2D.clipRight) {
           stackIn_6_0 = this.width - 2;
         } else {
-          stackIn_6_0 = (Rasterizer2D.clipRight - param0 << 1) - 2;
+          stackIn_6_0 = (Rasterizer2D.clipRight - x << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= Rasterizer2D.clipTop) {
+        if (y >= Rasterizer2D.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = Rasterizer2D.clipTop - param1 << 1;
+          stackIn_9_0 = Rasterizer2D.clipTop - y << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= Rasterizer2D.clipBottom) {
+        if (y + var4 <= Rasterizer2D.clipBottom) {
           stackIn_12_0 = this.height - 2;
         } else {
-          stackIn_12_0 = (Rasterizer2D.clipBottom - param1 << 1) - 2;
+          stackIn_12_0 = (Rasterizer2D.clipBottom - y << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
           var10 = var9 * this.width + var5;
-          var11 = (param1 + (var9 >> 1)) * Rasterizer2D.width + (param0 + (var5 >> 1));
+          var11 = (y + (var9 >> 1)) * Rasterizer2D.width + (x + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
             var13 = 0;

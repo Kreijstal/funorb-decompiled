@@ -230,7 +230,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_358_0 = ap.field_a;
+                  stackIn_358_0 = CanvasInputHelpers.field_a;
                   stackIn_358_1 = 10;
                   stackIn_358_2 = -8 + var3;
                   stackIn_359_3 = (var5 != 0) ? 256 : 128;
@@ -246,7 +246,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_319_0 = ap.field_a;
+                  stackIn_319_0 = CanvasInputHelpers.field_a;
                   stackIn_319_1 = 10;
                   stackIn_319_2 = -8 + var3;
                   stackIn_320_3 = (var5Lifetime8 != 0) ? 256 : 128;
@@ -261,7 +261,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_329_0 = ap.field_a;
+                  stackIn_329_0 = CanvasInputHelpers.field_a;
                   stackIn_329_1 = 10;
                   stackIn_329_2 = -8 + var3;
                   stackIn_330_3 = (var5Lifetime9 != 0) ? 256 : 128;
@@ -276,7 +276,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_348_0 = ap.field_a;
+                  stackIn_348_0 = CanvasInputHelpers.field_a;
                   stackIn_348_1 = 10;
                   stackIn_348_2 = -8 + var3;
                   stackIn_349_3 = (var5Lifetime10 != 0) ? 256 : 128;
@@ -290,7 +290,7 @@ final class BrickGameLayerController implements GameLayerController {
               }
               TableDataRequest.a(var2 != 0, 24);
               if (this.d(101)) {
-                stackIn_339_0 = ap.field_a;
+                stackIn_339_0 = CanvasInputHelpers.field_a;
                 stackIn_339_1 = 10;
                 stackIn_339_2 = -8 + var3;
                 stackIn_340_3 = (var5Lifetime11 != 0) ? 256 : 128;
@@ -313,7 +313,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_378_0 = ap.field_a;
+                  stackIn_378_0 = CanvasInputHelpers.field_a;
                   stackIn_378_1 = 10;
                   stackIn_378_2 = -8 + var3;
                   stackIn_379_3 = (var5Lifetime7 != 0) ? 256 : 128;
@@ -335,7 +335,7 @@ final class BrickGameLayerController implements GameLayerController {
           }
           TableDataRequest.a(var2 != 0, 24);
           if (this.d(101)) {
-            stackIn_389_0 = ap.field_a;
+            stackIn_389_0 = CanvasInputHelpers.field_a;
             stackIn_389_1 = 10;
             stackIn_389_2 = -8 + var3;
             stackIn_390_3 = (var5Lifetime7 != 0) ? 256 : 128;
@@ -376,7 +376,7 @@ final class BrickGameLayerController implements GameLayerController {
           }
           TableDataRequest.a(var2Lifetime1 != 0, 24);
           if (this.d(101)) {
-            stackIn_26_0 = ap.field_a;
+            stackIn_26_0 = CanvasInputHelpers.field_a;
             stackIn_26_1 = 10;
             stackIn_26_2 = -8 + var3Lifetime1;
             stackIn_27_3 = (var5Lifetime1 != 0) ? 256 : 128;
@@ -410,7 +410,7 @@ final class BrickGameLayerController implements GameLayerController {
               }
               TableDataRequest.a(var2Lifetime2 != 0, 24);
               if (this.d(101)) {
-                stackIn_52_0 = ap.field_a;
+                stackIn_52_0 = CanvasInputHelpers.field_a;
                 stackIn_52_1 = 10;
                 stackIn_52_2 = -8 + var3Lifetime2;
                 stackIn_53_3 = (var5Lifetime2 != 0) ? 256 : 128;
@@ -431,7 +431,7 @@ final class BrickGameLayerController implements GameLayerController {
             }
             TableDataRequest.a(var2Lifetime2 != 0, 24);
             if (this.d(101)) {
-              stackIn_108_0 = ap.field_a;
+              stackIn_108_0 = CanvasInputHelpers.field_a;
               stackIn_108_1 = 10;
               stackIn_108_2 = -8 + var3Lifetime2;
               stackIn_109_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
@@ -446,7 +446,7 @@ final class BrickGameLayerController implements GameLayerController {
               }
               TableDataRequest.a(var2Lifetime2 != 0, 24);
               if (this.d(101)) {
-                stackIn_69_0 = ap.field_a;
+                stackIn_69_0 = CanvasInputHelpers.field_a;
                 stackIn_69_1 = 10;
                 stackIn_69_2 = -8 + var3Lifetime2;
                 stackIn_70_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
@@ -460,7 +460,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2Lifetime2 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_79_0 = ap.field_a;
+                  stackIn_79_0 = CanvasInputHelpers.field_a;
                   stackIn_79_1 = 10;
                   stackIn_79_2 = -8 + var3Lifetime2;
                   stackIn_80_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
@@ -474,7 +474,7 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                   TableDataRequest.a(var2Lifetime2 != 0, 24);
                   if (this.d(101)) {
-                    stackIn_98_0 = ap.field_a;
+                    stackIn_98_0 = CanvasInputHelpers.field_a;
                     stackIn_98_1 = 10;
                     stackIn_98_2 = -8 + var3Lifetime2;
                     stackIn_99_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
@@ -487,7 +487,7 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                   TableDataRequest.a(var2Lifetime2 != 0, 24);
                   if (this.d(101)) {
-                    stackIn_89_0 = ap.field_a;
+                    stackIn_89_0 = CanvasInputHelpers.field_a;
                     stackIn_89_1 = 10;
                     stackIn_89_2 = -8 + var3Lifetime2;
                     stackIn_90_3 = (var5Lifetime2Lifetime1 != 0) ? 256 : 128;
@@ -511,7 +511,7 @@ final class BrickGameLayerController implements GameLayerController {
             }
             TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
-              stackIn_292_0 = ap.field_a;
+              stackIn_292_0 = CanvasInputHelpers.field_a;
               stackIn_292_1 = 10;
               stackIn_292_2 = -8 + var3Lifetime3;
               stackIn_293_3 = (var5Lifetime3 != 0) ? 256 : 128;
@@ -526,7 +526,7 @@ final class BrickGameLayerController implements GameLayerController {
               }
               TableDataRequest.a(var2Lifetime3 != 0, 24);
               if (this.d(101)) {
-                stackIn_253_0 = ap.field_a;
+                stackIn_253_0 = CanvasInputHelpers.field_a;
                 stackIn_253_1 = 10;
                 stackIn_253_2 = -8 + var3Lifetime3;
                 stackIn_254_3 = (var5Lifetime3 != 0) ? 256 : 128;
@@ -540,7 +540,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2Lifetime3 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_263_0 = ap.field_a;
+                  stackIn_263_0 = CanvasInputHelpers.field_a;
                   stackIn_263_1 = 10;
                   stackIn_263_2 = -8 + var3Lifetime3;
                   stackIn_264_3 = (var5Lifetime3 != 0) ? 256 : 128;
@@ -554,7 +554,7 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                   TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
-                    stackIn_282_0 = ap.field_a;
+                    stackIn_282_0 = CanvasInputHelpers.field_a;
                     stackIn_282_1 = 10;
                     stackIn_282_2 = -8 + var3Lifetime3;
                     stackIn_283_3 = (var5Lifetime3 != 0) ? 256 : 128;
@@ -567,7 +567,7 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                   TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
-                    stackIn_273_0 = ap.field_a;
+                    stackIn_273_0 = CanvasInputHelpers.field_a;
                     stackIn_273_1 = 10;
                     stackIn_273_2 = -8 + var3Lifetime3;
                     stackIn_274_3 = (var5Lifetime3 != 0) ? 256 : 128;
@@ -589,7 +589,7 @@ final class BrickGameLayerController implements GameLayerController {
             }
             TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
-              stackIn_165_0 = ap.field_a;
+              stackIn_165_0 = CanvasInputHelpers.field_a;
               stackIn_165_1 = 10;
               stackIn_165_2 = -8 + var3Lifetime3;
               stackIn_166_3 = (var5Lifetime4 != 0) ? 256 : 128;
@@ -604,7 +604,7 @@ final class BrickGameLayerController implements GameLayerController {
               }
               TableDataRequest.a(var2Lifetime3 != 0, 24);
               if (this.d(101)) {
-                stackIn_126_0 = ap.field_a;
+                stackIn_126_0 = CanvasInputHelpers.field_a;
                 stackIn_126_1 = 10;
                 stackIn_126_2 = -8 + var3Lifetime3;
                 stackIn_127_3 = (var5Lifetime4 != 0) ? 256 : 128;
@@ -618,7 +618,7 @@ final class BrickGameLayerController implements GameLayerController {
                 }
                 TableDataRequest.a(var2Lifetime3 != 0, 24);
                 if (this.d(101)) {
-                  stackIn_136_0 = ap.field_a;
+                  stackIn_136_0 = CanvasInputHelpers.field_a;
                   stackIn_136_1 = 10;
                   stackIn_136_2 = -8 + var3Lifetime3;
                   stackIn_137_3 = (var5Lifetime4 != 0) ? 256 : 128;
@@ -632,7 +632,7 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                   TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
-                    stackIn_155_0 = ap.field_a;
+                    stackIn_155_0 = CanvasInputHelpers.field_a;
                     stackIn_155_1 = 10;
                     stackIn_155_2 = -8 + var3Lifetime3;
                     stackIn_156_3 = (var5Lifetime4 != 0) ? 256 : 128;
@@ -645,7 +645,7 @@ final class BrickGameLayerController implements GameLayerController {
                   }
                   TableDataRequest.a(var2Lifetime3 != 0, 24);
                   if (this.d(101)) {
-                    stackIn_146_0 = ap.field_a;
+                    stackIn_146_0 = CanvasInputHelpers.field_a;
                     stackIn_146_1 = 10;
                     stackIn_146_2 = -8 + var3Lifetime3;
                     stackIn_147_3 = (var5Lifetime4 != 0) ? 256 : 128;
@@ -679,7 +679,7 @@ final class BrickGameLayerController implements GameLayerController {
           }
           TableDataRequest.a(var2Lifetime3 != 0, 24);
           if (this.d(101)) {
-            stackIn_188_0 = ap.field_a;
+            stackIn_188_0 = CanvasInputHelpers.field_a;
             stackIn_188_1 = 10;
             stackIn_188_2 = -8 + var3Lifetime3;
             stackIn_189_3 = (var5Lifetime5 != 0) ? 256 : 128;
@@ -697,7 +697,7 @@ final class BrickGameLayerController implements GameLayerController {
             }
             TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
-              stackIn_204_0 = ap.field_a;
+              stackIn_204_0 = CanvasInputHelpers.field_a;
               stackIn_204_1 = 10;
               stackIn_204_2 = -8 + var3Lifetime3;
               stackIn_205_3 = (var5Lifetime6 != 0) ? 256 : 128;
@@ -712,7 +712,7 @@ final class BrickGameLayerController implements GameLayerController {
             }
             TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
-              stackIn_214_0 = ap.field_a;
+              stackIn_214_0 = CanvasInputHelpers.field_a;
               stackIn_214_1 = 10;
               stackIn_214_2 = -8 + var3Lifetime3;
               stackIn_215_3 = (var5Lifetime6 != 0) ? 256 : 128;
@@ -727,7 +727,7 @@ final class BrickGameLayerController implements GameLayerController {
             }
             TableDataRequest.a(var2Lifetime3 != 0, 24);
             if (this.d(101)) {
-              stackIn_225_0 = ap.field_a;
+              stackIn_225_0 = CanvasInputHelpers.field_a;
               stackIn_225_1 = 10;
               stackIn_225_2 = -8 + var3Lifetime3;
               stackIn_226_3 = (var5Lifetime6 != 0) ? 256 : 128;
@@ -746,7 +746,7 @@ final class BrickGameLayerController implements GameLayerController {
         }
         TableDataRequest.a(var2Lifetime3 != 0, 24);
         if (this.d(101)) {
-          stackIn_236_0 = ap.field_a;
+          stackIn_236_0 = CanvasInputHelpers.field_a;
           stackIn_236_1 = 10;
           stackIn_236_2 = -8 + var3Lifetime3;
           stackIn_237_3 = (var5Lifetime6 != 0) ? 256 : 128;

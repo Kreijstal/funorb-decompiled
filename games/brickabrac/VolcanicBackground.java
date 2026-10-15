@@ -50,19 +50,19 @@ final class VolcanicBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("volcanic", -28138)) {
           return false;
         }
-        RasterCacheSurface.volcanicNearSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.backgroundSpriteArchive);
-        WidgetLayerStack.volcanicMidSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.backgroundSpriteArchive);
-        ByteArrayNode.volcanicFarSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.backgroundSpriteArchive);
-        mc.volcanicSmallSprite = pl.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.backgroundSpriteArchive);
+        RasterCacheSurface.volcanicNearSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_near", (byte) -127, AchievementIcon.backgroundSpriteArchive);
+        WidgetLayerStack.volcanicMidSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.backgroundSpriteArchive);
+        ByteArrayNode.volcanicFarSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.backgroundSpriteArchive);
+        mc.volcanicSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.backgroundSpriteArchive);
         NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
         NameEntryPopup.field_Sb = jh.a(0, WidgetLayerStack.volcanicMidSprite);
         RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
         CacheIoWorker.volcanicCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_caps", 2);
         np.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_segs", 2);
-        LevelList.volcanicCentreSprites[0] = pl.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.backgroundSpriteArchive);
+        LevelList.volcanicCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.backgroundSpriteArchive);
         CacheIoWorker.volcanicCapsSprites[1] = Under13RegistrationNoticePanel.a(CacheIoWorker.volcanicCapsSprites[0], false);
         np.volcanicSegsSprites[1] = Under13RegistrationNoticePanel.a(np.volcanicSegsSprites[0], obfuscationGuard);
-        LevelList.volcanicCentreSprites[1] = pl.a(-16371, LevelList.volcanicCentreSprites[0]);
+        LevelList.volcanicCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, LevelList.volcanicCentreSprites[0]);
         return true;
     }
 

@@ -54,7 +54,7 @@ final class hm {
           WhirlpoolHasher.lobbyPlayerIndex = new SecondaryHashTable(lobbyPlayerBuckets);
           ConditionalTextValue.field_h = -1;
           MenuSelection.previewGameId = 0;
-          uf.pendingJoinRequestCount = 0;
+          KeyDispatchHelpers.pendingJoinRequestCount = 0;
           ArchiveIndex.field_s = -1;
           if (lobbyGameContent.children == null) {
             lobbyGameContent.children = new NodeDeque();

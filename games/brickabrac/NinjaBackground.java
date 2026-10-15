@@ -23,17 +23,17 @@ final class NinjaBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("ninja", -28138)) {
           return false;
         }
-        LegacyUtf8Decoder.ninjaNearSprite = pl.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.backgroundSpriteArchive);
-        ap.ninjaMidSprite = pl.loadRgbSpriteByName("ninja", "ninja_mid", (byte) -128, AchievementIcon.backgroundSpriteArchive);
-        hn.ninjaFarSprite = pl.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
-        hc.ninjaSmallSprite = pl.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
-        ObjectHistoryBuffer.ninjaCharacterSprite = pl.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.backgroundSpriteArchive);
+        LegacyUtf8Decoder.ninjaNearSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.backgroundSpriteArchive);
+        CanvasInputHelpers.ninjaMidSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_mid", (byte) -128, AchievementIcon.backgroundSpriteArchive);
+        hn.ninjaFarSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
+        hc.ninjaSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
+        ObjectHistoryBuffer.ninjaCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.backgroundSpriteArchive);
         nk.field_h = jh.a(0, LegacyUtf8Decoder.ninjaNearSprite);
-        SocialListEntry.field_Zb = jh.a(0, ap.ninjaMidSprite);
+        SocialListEntry.field_Zb = jh.a(0, CanvasInputHelpers.ninjaMidSprite);
         CalendarMatchmakingState.field_c = jh.a(0, hn.ninjaFarSprite);
-        pl.a(hn.ninjaFarSprite, 0);
+        SpriteInputHelpers.encodeBinaryMaskRuns(hn.ninjaFarSprite, 0);
         if (!obfuscationGuard) {
-          pl.a(CalendarMatchmakingState.field_c, 0);
+          SpriteInputHelpers.encodeBinaryMaskRuns(CalendarMatchmakingState.field_c, 0);
           return true;
         }
         return false;
@@ -52,7 +52,7 @@ final class NinjaBackground extends BackgroundScene {
           aa.a(0, hn.ninjaFarSprite, true, colorIndex, var6, 1);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        ByteStorage.a(var6.sprite, (byte) -78, destinationY, 640, LegacyUtf8Decoder.ninjaNearSprite, ap.ninjaMidSprite, scroll16, 0, colorIndex, destinationX, 1);
+        ByteStorage.a(var6.sprite, (byte) -78, destinationY, 640, LegacyUtf8Decoder.ninjaNearSprite, CanvasInputHelpers.ninjaMidSprite, scroll16, 0, colorIndex, destinationX, 1);
     }
 
     NinjaBackground(int sceneId, String musicName, String soundEffectPrefix, int soundEffectCount) {
@@ -75,7 +75,7 @@ final class NinjaBackground extends BackgroundScene {
           if (null == LegacyUtf8Decoder.ninjaNearSprite) {
             return false;
           }
-          if (ap.ninjaMidSprite == null) {
+          if (CanvasInputHelpers.ninjaMidSprite == null) {
             return false;
           }
           if (null == hn.ninjaFarSprite) {
@@ -89,7 +89,7 @@ final class NinjaBackground extends BackgroundScene {
         if (null == LegacyUtf8Decoder.ninjaNearSprite) {
           return false;
         }
-        if (ap.ninjaMidSprite == null) {
+        if (CanvasInputHelpers.ninjaMidSprite == null) {
           return false;
         }
         if (null == hn.ninjaFarSprite) {

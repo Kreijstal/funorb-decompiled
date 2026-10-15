@@ -71,7 +71,7 @@ final class LoginMethodPreference {
             return stackIn_12_0;
           }
           if (IsaacGenerator.ignoreCount >= 100) {
-            stackIn_15_0 = ap.field_d;
+            stackIn_15_0 = CanvasInputHelpers.field_d;
             return stackIn_15_0;
           }
           if (LevelPack.isFriend(expectedLoginStage - 2, name)) {

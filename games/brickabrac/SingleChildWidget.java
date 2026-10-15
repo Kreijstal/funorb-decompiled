@@ -633,9 +633,9 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
           RectangleBody.field_q.addChild(DraggableWidget.field_N, 0);
         }
         RectangleBody.field_q.addChild(Ball.field_A, 0);
-        ap.field_b = new SocialTabbedPanel(ArcticBackground.field_u, RectangleBody.field_q);
+        CanvasInputHelpers.field_b = new SocialTabbedPanel(ArcticBackground.field_u, RectangleBody.field_q);
         ContentTransitionLayer.field_gb = new UiComponent(0L, (UiComponent) null);
-        ContentTransitionLayer.field_gb.addChild(ap.field_b.tabs, 0);
+        ContentTransitionLayer.field_gb.addChild(CanvasInputHelpers.field_b.tabs, 0);
         ContentTransitionLayer.field_gb.addChild(HighscorePackSelector.field_k, 0);
         NanoGameClock.b(param0 + 44);
     }

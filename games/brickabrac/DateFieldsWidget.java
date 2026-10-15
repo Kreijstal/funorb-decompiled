@@ -188,14 +188,14 @@ final class DateFieldsWidget extends DateInputWidget {
           PasswordValidator.field_n.textColor = param4;
           PasswordValidator.field_n.textSuffix = param1;
           PasswordValidator.field_n.text = param2;
-          PasswordValidator.field_n.width = PasswordValidator.field_n.width + ap.field_e.width;
-          ap.field_e.localX = ap.field_e.localX + ap.field_e.width;
-          ap.field_e.width = param3;
+          PasswordValidator.field_n.width = PasswordValidator.field_n.width + CanvasInputHelpers.field_e.width;
+          CanvasInputHelpers.field_e.localX = CanvasInputHelpers.field_e.localX + CanvasInputHelpers.field_e.width;
+          CanvasInputHelpers.field_e.width = param3;
           if (param0 >= -72) {
             DateFieldsWidget.a(true, true, 77, -47);
           }
-          PasswordValidator.field_n.width = PasswordValidator.field_n.width - ap.field_e.width;
-          ap.field_e.localX = ap.field_e.localX - ap.field_e.width;
+          PasswordValidator.field_n.width = PasswordValidator.field_n.width - CanvasInputHelpers.field_e.width;
+          CanvasInputHelpers.field_e.localX = CanvasInputHelpers.field_e.localX - CanvasInputHelpers.field_e.width;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "na.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -241,7 +241,7 @@ final class DateFieldsWidget extends DateInputWidget {
           stackIn_20_1 = (param0) && (!param1) && (sc.field_c);
           ((UiComponent) (Object) stackIn_19_0).updateRoot(stackIn_20_1, -15211);
         }
-        ap.field_b.tabs.processTabPresses(0);
+        CanvasInputHelpers.field_b.tabs.processTabPresses(0);
         if (HighscorePackSelector.field_k.pressedButton != 0) {
           MeshAudioHelpers.field_c = true;
         }
@@ -264,7 +264,7 @@ final class DateFieldsWidget extends DateInputWidget {
             RadialSelectorRenderer.field_i != ScreenshotViewer.field_n[0]) {
             RadialSelectorRenderer.field_i = ScreenshotViewer.field_n[0];
           }
-          pl.requestCreateGame(param3, Brick.field_O, RadialSelectorRenderer.field_i, true, 0, (byte) -102);
+          SpriteInputHelpers.requestCreateGame(param3, Brick.field_O, RadialSelectorRenderer.field_i, true, 0, (byte) -102);
         }
         if (0 != LobbyUiHelpers.cancelCreateGameButton.pressedButton) {
           sc.field_c = false;

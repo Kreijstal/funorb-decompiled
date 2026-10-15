@@ -49,8 +49,8 @@ final class MessageScreen extends MenuScreen {
             }
             var7 = stackIn_54_0;
             DebouncedValidationSource.rankingWinRateThousandths[ProxySocketConnector.rankingRowCount] = var7;
-            if (uf.field_b < var7) {
-              uf.field_b = var7;
+            if (KeyDispatchHelpers.field_b < var7) {
+              KeyDispatchHelpers.field_b = var7;
             }
             if (ba.field_w > var7) {
               ba.field_w = var7;
@@ -58,7 +58,7 @@ final class MessageScreen extends MenuScreen {
             ProxySocketConnector.rankingRowCount = ProxySocketConnector.rankingRowCount + 1;
             return;
           }
-          uf.field_b = rating;
+          KeyDispatchHelpers.field_b = rating;
           if (IntArrayRequest.field_u > rating) {
             ba.field_w = rating;
           }
@@ -73,8 +73,8 @@ final class MessageScreen extends MenuScreen {
           }
           var7Lifetime2 = stackIn_39_0;
           DebouncedValidationSource.rankingWinRateThousandths[ProxySocketConnector.rankingRowCount] = var7Lifetime2;
-          if (uf.field_b < var7Lifetime2) {
-            uf.field_b = var7Lifetime2;
+          if (KeyDispatchHelpers.field_b < var7Lifetime2) {
+            KeyDispatchHelpers.field_b = var7Lifetime2;
           }
           if (ba.field_w > var7Lifetime2) {
             ba.field_w = var7Lifetime2;
@@ -102,7 +102,7 @@ final class MessageScreen extends MenuScreen {
           }
           var7Lifetime1 = stackIn_8_0;
         } else {
-          uf.field_b = rating;
+          KeyDispatchHelpers.field_b = rating;
           if (IntArrayRequest.field_u > rating) {
             ba.field_w = rating;
           }
@@ -118,8 +118,8 @@ final class MessageScreen extends MenuScreen {
           var7Lifetime1 = stackIn_23_0;
         }
         DebouncedValidationSource.rankingWinRateThousandths[ProxySocketConnector.rankingRowCount] = var7Lifetime1;
-        if (uf.field_b < var7Lifetime1) {
-          uf.field_b = var7Lifetime1;
+        if (KeyDispatchHelpers.field_b < var7Lifetime1) {
+          KeyDispatchHelpers.field_b = var7Lifetime1;
         }
         if (ba.field_w > var7Lifetime1) {
           ba.field_w = var7Lifetime1;

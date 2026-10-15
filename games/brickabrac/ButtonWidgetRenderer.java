@@ -197,7 +197,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             var5Lifetime4 = var5Lifetime4 - CachedArchiveSource.chatFont.measureText(var20);
           } else {
             var24 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-            var18 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
+            var18 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.a(true, var24)}, (byte) 103);
             var7Lifetime15 = var18;
             var7Lifetime15 = var18;
             var8 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
@@ -304,7 +304,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - CachedArchiveSource.chatFont.measureText(var20Lifetime1);
               } else {
                 var25 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-                var18Lifetime1 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
+                var18Lifetime1 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.a(true, var25)}, (byte) 103);
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var7Lifetime1Lifetime6 = var18Lifetime1;
                 var8Lifetime1 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
@@ -442,7 +442,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime4);
         } else {
           var26 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
-          var18Lifetime2 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
+          var18Lifetime2 = GamePresentationHelpers.formatIndexedText(SaveResultsPromptScreen.field_x, new String[]{CanvasInputHelpers.a(true, var26)}, (byte) 103);
           var7Lifetime9 = var18Lifetime2;
           var7Lifetime9 = var18Lifetime2;
           var8Lifetime2 = GamePresentationHelpers.formatIndexedText(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);

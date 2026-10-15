@@ -217,7 +217,7 @@ final class ConnectionPhase {
             DraggableWidget.field_K.enabled = true;
             if (fh.pendingGameOptionsReceived) {
               GameUiController.field_e.enabled = false;
-              t.field_f.text = TextChoiceDialogStyles.field_a;
+              CanvasInputCleanup.field_f.text = TextChoiceDialogStyles.field_a;
               if (alternateSearchCaption != 0) {
                 searchStatusCaption = FireworkBurst.matchmakingStatusText;
               } else {
@@ -249,7 +249,7 @@ final class ConnectionPhase {
                 searchButtonCaption = ArrayWidgetGroup.field_J;
               }
               searchButtonForText.text = ((String) (Object) searchButtonCaption).toUpperCase();
-              messagePanelForText = t.field_f;
+              messagePanelForText = CanvasInputCleanup.field_f;
               if (alternateSearchCaption == 0) {
                 messagePanelCaption = ResourceArchiveFactory.field_f;
               } else {
