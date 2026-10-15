@@ -6,7 +6,7 @@ final class ArcticBackground extends BackgroundScene {
     static String field_u;
     static int[] faceDepthBucketCounts;
     static UiComponent field_s;
-    static int field_t;
+    static int archiveHandshakeWord;
     static String field_v;
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {

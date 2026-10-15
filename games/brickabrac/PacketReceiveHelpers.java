@@ -9,7 +9,7 @@ final class PacketReceiveHelpers {
     static boolean field_e;
     static BirthDateEntryPanel field_a;
     static int field_c;
-    static ArchiveFetchClient field_f;
+    static ArchiveFetchClient archiveFetchClient;
 
     final static boolean ensureGamePacketBytes(int obfuscationGuard, int length) {
         try {
@@ -70,7 +70,7 @@ final class PacketReceiveHelpers {
     }
 
     public static void a(boolean param0) {
-        field_f = null;
+        archiveFetchClient = null;
         field_a = null;
         if (!param0) {
           return;

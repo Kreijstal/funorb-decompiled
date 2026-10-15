@@ -30,20 +30,20 @@ final class ActivityIndicatorWidget extends Widget {
 
     final static void a(int param0, int param1, int param2, int param3, PlatformServices param4, String param5, int param6, int param7, int param8) {
         DialogMessagePanel.field_P = param4;
-        ArcticBackground.field_t = param7;
-        TextFieldWidget.field_S = param0;
-        LevelMetadata.field_k = param5;
+        ArcticBackground.archiveHandshakeWord = param7;
+        TextFieldWidget.serviceHeaderWordOne = param0;
+        LevelMetadata.archiveHost = param5;
         if (param2 <= 17) {
           return;
         }
         try {
-          StatefulWidgetRenderer.field_z = param6;
-          ByteArrayPoolHelpers.field_a = param3;
-          CanvasViewGlobals.field_g = param1;
-          SoftwareFramebuffer.field_a = param8;
-          PacketReceiveHelpers.field_f = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
+          StatefulWidgetRenderer.alternateArchivePort = param6;
+          ByteArrayPoolHelpers.archiveConnectPort = param3;
+          CanvasViewGlobals.serviceHeaderByte = param1;
+          SoftwareFramebuffer.serviceHeaderWordTwo = param8;
+          PacketReceiveHelpers.archiveFetchClient = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
           Brick.field_x = new CacheIoWorker(param4);
-          HalloweenBackground.archiveSourceManager = new ArchiveSourceManager(PacketReceiveHelpers.field_f, Brick.field_x);
+          HalloweenBackground.archiveSourceManager = new ArchiveSourceManager(PacketReceiveHelpers.archiveFetchClient, Brick.field_x);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cr.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

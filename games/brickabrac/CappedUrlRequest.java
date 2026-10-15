@@ -58,7 +58,7 @@ final class CappedUrlRequest implements Runnable {
             CappedUrlRequest.b(46);
           }
           if (null == BrowserResizeNotificationHelpers.field_d) {
-            BrowserResizeNotificationHelpers.field_d = FramedMenuScreen.field_s.a(MeshAudioHelpers.field_h, (byte) 120, SocketConnector.field_b);
+            BrowserResizeNotificationHelpers.field_d = FramedMenuScreen.field_s.requestSocketConnection(MeshAudioHelpers.field_h, (byte) 120, SocketConnector.field_b);
           }
           if (BrowserResizeNotificationHelpers.field_d.status == 0) {
             return false;
@@ -80,7 +80,7 @@ final class CappedUrlRequest implements Runnable {
               UiComponent.previousPacketOpcode = stackIn_11_0;
               GameConnectionHelpers.connectionPhase = BitPacketBuffer.readyToSendHandshake;
               var5.position = 0;
-              GrowableIntList.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, ContentTransitionLayer.field_ob, TextFieldValidator.outgoingPackets);
+              GrowableIntList.writeServiceHeader(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, ContentTransitionLayer.field_ob, TextFieldValidator.outgoingPackets);
               ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class CappedUrlRequest implements Runnable {
         }
         if (this.phase == 1) {
           if (null == this.socketTask) {
-            this.socketTask = this.services.a(this.url.getHost(), (byte) 120, 443);
+            this.socketTask = this.services.requestSocketConnection(this.url.getHost(), (byte) 120, 443);
           }
           if (0 == this.socketTask.status) {
             return false;

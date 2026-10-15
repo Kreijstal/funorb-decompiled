@@ -5,7 +5,7 @@ final class ByteArrayPoolHelpers {
     static DraggableWidget draggedWidget;
     static String field_e;
     static String field_b;
-    static int field_a;
+    static int archiveConnectPort;
     static String receivedChatText;
 
     public static void a(boolean param0) {

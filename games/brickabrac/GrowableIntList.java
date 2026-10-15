@@ -28,7 +28,7 @@ final class GrowableIntList {
         field_c = null;
         if (!param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          GrowableIntList.a(6, -63, 125, -38, (PacketBuffer) null);
+          GrowableIntList.writeServiceHeader(6, -63, 125, -38, (PacketBuffer) null);
           return;
         }
     }
@@ -323,15 +323,15 @@ final class GrowableIntList {
         BirthDateValidator.field_h = BirthDateValidator.field_h + 1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, PacketBuffer param4) {
+    final static void writeServiceHeader(int headerWordOne, int serviceCode, int headerWordTwo, int headerByte, PacketBuffer packet) {
         try {
-          param4.writeByte(33, param1);
-          param4.writeShort((byte) 115, 17);
-          param4.writeShort((byte) 120, param0);
-          param4.writeShort((byte) 107, param2);
-          param4.writeByte(5, param3);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "c.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          packet.writeByte(33, serviceCode);
+          packet.writeShort((byte) 115, 17);
+          packet.writeShort((byte) 120, headerWordOne);
+          packet.writeShort((byte) 107, headerWordTwo);
+          packet.writeByte(5, headerByte);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "c.H(" + headerWordOne + ',' + serviceCode + ',' + headerWordTwo + ',' + headerByte + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

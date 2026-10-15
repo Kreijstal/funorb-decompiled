@@ -6548,6 +6548,14 @@
       "renamedSymbol": "F:SocketConnector.activeFireworkCount:I"
     },
     {
+      "symbol": "F:dm.field_d:Lwh;",
+      "originalName": "field_d",
+      "to": "pendingArchiveTransport",
+      "evidence": "dm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MouseInput.pendingArchiveTransport:LBufferedSocket;"
+    },
+    {
       "symbol": "F:dm.field_e:Lmi;",
       "originalName": "field_e",
       "to": "contentResizing",
@@ -7388,6 +7396,14 @@
       "renamedSymbol": "F:IndexedSpriteGeometry.width:I"
     },
     {
+      "symbol": "F:fc.field_e:Lql;",
+      "originalName": "field_e",
+      "to": "archiveSocketTask",
+      "evidence": "fc.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IndexedSpriteGeometry.archiveSocketTask:LPlatformTask;"
+    },
+    {
       "symbol": "F:fc.field_f:I",
       "originalName": "field_f",
       "to": "canvasWidth",
@@ -7490,6 +7506,14 @@
       "evidence": "fe.java: Null idle, or fade-out/resize/fade-in token.",
       "confidence": "reviewed",
       "renamedSymbol": "F:ContentTransitionLayer.transitionPhase:LContentTransitionPhase;"
+    },
+    {
+      "symbol": "F:ff.field_b:J",
+      "originalName": "field_b",
+      "to": "archiveReplyDeadlineMillis",
+      "evidence": "ff.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:LoginCredentials.archiveReplyDeadlineMillis:J"
     },
     {
       "symbol": "F:ff.field_d:Lvl;",
@@ -7634,6 +7658,14 @@
       "evidence": "fi.java: Traced centered text-choice dialog configuration through layout, drawing, hit testing and result handling; body and button font roles are kept distinct.",
       "confidence": "reviewed",
       "renamedSymbol": "F:ArcticBackground.textChoiceSelection:LMenuSelection;"
+    },
+    {
+      "symbol": "F:fi.field_t:I",
+      "originalName": "field_t",
+      "to": "archiveHandshakeWord",
+      "evidence": "fi.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArcticBackground.archiveHandshakeWord:I"
     },
     {
       "symbol": "F:fi.field_w:[I",
@@ -8362,6 +8394,14 @@
       "evidence": "gb.java: Displayed name decorated with badge by prefix formatter.",
       "confidence": "reviewed",
       "renamedSymbol": "F:ChatMessage.senderDisplayName:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:gd.field_a:I",
+      "originalName": "field_a",
+      "to": "archiveConnectPort",
+      "evidence": "gd.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ByteArrayPoolHelpers.archiveConnectPort:I"
     },
     {
       "symbol": "F:gd.field_c:Ldn;",
@@ -13916,6 +13956,14 @@
       "renamedSymbol": "F:DateFieldsWidget.dayField:LTextFieldWidget;"
     },
     {
+      "symbol": "F:nb.field_a:I",
+      "originalName": "field_a",
+      "to": "serviceHeaderWordTwo",
+      "evidence": "nb.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SoftwareFramebuffer.serviceHeaderWordTwo:I"
+    },
+    {
       "symbol": "F:nb.field_b:[Lpk;",
       "originalName": "field_b",
       "to": "tableNameScratch",
@@ -16772,6 +16820,14 @@
       "renamedSymbol": "F:GameplayScreen.lastReportedLevel:I"
     },
     {
+      "symbol": "F:qj.field_j:I",
+      "originalName": "field_j",
+      "to": "archiveConnectionPhase",
+      "evidence": "qj.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameplayScreen.archiveConnectionPhase:I"
+    },
+    {
       "symbol": "F:qj.field_k:I",
       "originalName": "field_k",
       "to": "localPlayerId",
@@ -19276,6 +19332,14 @@
       "renamedSymbol": "F:CanvasViewGlobals.chocolateSmallFarSprite:LRgbSprite;"
     },
     {
+      "symbol": "F:u.field_g:I",
+      "originalName": "field_g",
+      "to": "serviceHeaderByte",
+      "evidence": "u.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:CanvasViewGlobals.serviceHeaderByte:I"
+    },
+    {
       "symbol": "F:ua.field_c:Lvl;",
       "originalName": "field_c",
       "to": "lobbyPlayers",
@@ -19868,6 +19932,14 @@
       "renamedSymbol": "F:StatefulWidgetRenderer.stylesByState:[LWidgetPaintStyle;"
     },
     {
+      "symbol": "F:up.field_z:I",
+      "originalName": "field_z",
+      "to": "alternateArchivePort",
+      "evidence": "up.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:StatefulWidgetRenderer.alternateArchivePort:I"
+    },
+    {
       "symbol": "F:v.field_a:[I",
       "originalName": "field_a",
       "to": "meshHighlightTable",
@@ -19972,6 +20044,14 @@
       "renamedSymbol": "F:TextFieldWidget.wordSelectionEnd:I"
     },
     {
+      "symbol": "F:vb.field_S:I",
+      "originalName": "field_S",
+      "to": "serviceHeaderWordOne",
+      "evidence": "vb.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:TextFieldWidget.serviceHeaderWordOne:I"
+    },
+    {
       "symbol": "F:vb.field_T:I",
       "originalName": "field_T",
       "to": "caretIndex",
@@ -19986,6 +20066,14 @@
       "evidence": "vd.java: Transformed third auxiliary point X.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PacketReceiveHelpers.viewFacePointThreeX:[I"
+    },
+    {
+      "symbol": "F:vd.field_f:Lih;",
+      "originalName": "field_f",
+      "to": "archiveFetchClient",
+      "evidence": "vd.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PacketReceiveHelpers.archiveFetchClient:LArchiveFetchClient;"
     },
     {
       "symbol": "F:ve.field_a:Ljg;",
@@ -20818,6 +20906,14 @@
       "evidence": "wk.java: Length-delimited legacy UTF-8 title, returned by sequence title lookup.",
       "confidence": "reviewed",
       "renamedSymbol": "F:LevelMetadata.title:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:wk.field_k:Ljava/lang/String;",
+      "originalName": "field_k",
+      "to": "archiveHost",
+      "evidence": "wk.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:LevelMetadata.archiveHost:Ljava/lang/String;"
     },
     {
       "symbol": "F:wk.field_l:I",
@@ -26578,6 +26674,14 @@
       "evidence": "br.java: Reviewed popup input/layout declaration and consumers; exact ordinal/spelling checked; mixed roles remain qualified.",
       "confidence": "reviewed",
       "renamedSymbol": "L:ContextMenu.handleCancelKey(I)Z#1"
+    },
+    {
+      "symbol": "L:c.a(IIIILwq;)V#0",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "c.java: The fixed original gamepack passes 527249 independent standard-stream assertions: service byte, fixed big-endian word17, first word, second word and final byte. Both 16-bit word domains and both 8-bit domains, signed truncation, append offsets, cursor overflow, caller-array retention and partial/null failures are covered. Corrected raw Java has the same trace; a swapped-word negative control fails. Word/byte labels describe wire positions without assigning unverified application meanings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#0"
     },
     {
       "symbol": "L:c.a(ILjava/lang/String;BIILjava/lang/String;)V#0",
@@ -48052,6 +48156,30 @@
       "renamedSymbol": "L:LobbyGame.drawMultiplayerBoardHud(ZBIZLPlayerBoard;IIZLMultiplayerMatch;)V#9"
     },
     {
+      "symbol": "L:on.a(BI)I#0",
+      "originalName": "var4",
+      "to": "unusedGameFlag",
+      "evidence": "on.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Brick.handleArchiveConnectionFailure(BI)I#0"
+    },
+    {
+      "symbol": "L:on.a(BI)I#1",
+      "originalName": "var2",
+      "to": "previousArchivePort",
+      "evidence": "on.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Brick.handleArchiveConnectionFailure(BI)I#1"
+    },
+    {
+      "symbol": "L:on.a(BI)I#2",
+      "originalName": "var3",
+      "to": "guardCalculation",
+      "evidence": "on.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:Brick.handleArchiveConnectionFailure(BI)I#2"
+    },
+    {
       "symbol": "L:on.a(BZ)V#0",
       "originalName": "var6",
       "to": "sourceWaypoint",
@@ -53434,6 +53562,102 @@
       "evidence": "sk.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
       "confidence": "reviewed",
       "renamedSymbol": "L:OpacityWidget.startLocalGame([Ljava/lang/String;ILLevelSequence;IZI)V#16"
+    },
+    {
+      "symbol": "L:sm.b(I)I#0",
+      "originalName": "stackIn_15_0",
+      "to": "connectionFailureStatus",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#0"
+    },
+    {
+      "symbol": "L:sm.b(I)I#1",
+      "originalName": "stackIn_27_0",
+      "to": "timeoutFailureStatus",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#1"
+    },
+    {
+      "symbol": "L:sm.b(I)I#10",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedFailure",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#10"
+    },
+    {
+      "symbol": "L:sm.b(I)I#11",
+      "originalName": "decompiledCheckedException",
+      "to": "checkedFailure",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#11"
+    },
+    {
+      "symbol": "L:sm.b(I)I#2",
+      "originalName": "stackIn_31_0",
+      "to": "rejectedReplyStatus",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#2"
+    },
+    {
+      "symbol": "L:sm.b(I)I#3",
+      "originalName": "stackIn_35_0",
+      "to": "connectedStatus",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#3"
+    },
+    {
+      "symbol": "L:sm.b(I)I#4",
+      "originalName": "stackIn_37_0",
+      "to": "pendingStatus",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#4"
+    },
+    {
+      "symbol": "L:sm.b(I)I#5",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtIoFailure",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#5"
+    },
+    {
+      "symbol": "L:sm.b(I)I#6",
+      "originalName": "var1_int",
+      "to": "replyCode",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#6"
+    },
+    {
+      "symbol": "L:sm.b(I)I#7",
+      "originalName": "var1",
+      "to": "ioFailure",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#7"
+    },
+    {
+      "symbol": "L:sm.b(I)I#8",
+      "originalName": "var2",
+      "to": "handshake",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#8"
+    },
+    {
+      "symbol": "L:sm.b(I)I#9",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#9"
     },
     {
       "symbol": "L:so.<init>(ILmf;Lmf;)V#0",
@@ -62180,6 +62404,14 @@
       "renamedSymbol": "M:GrowableIntList.setAt(III)V"
     },
     {
+      "symbol": "M:c.a(IIIILwq;)V",
+      "originalName": "a",
+      "to": "writeServiceHeader",
+      "evidence": "c.java: The fixed original gamepack passes 527249 independent standard-stream assertions: service byte, fixed big-endian word17, first word, second word and final byte. Both 16-bit word domains and both 8-bit domains, signed truncation, append offsets, cursor overflow, caller-array retention and partial/null failures are covered. Corrected raw Java has the same trace; a swapped-word negative control fails. Word/byte labels describe wire positions without assigning unverified application meanings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V"
+    },
+    {
       "symbol": "M:c.a(ILjava/lang/String;BIILjava/lang/String;)V",
       "originalName": "a",
       "to": "writeChatMessage",
@@ -70220,6 +70452,14 @@
       "renamedSymbol": "M:LobbyGame.isUnindexed(I)Z"
     },
     {
+      "symbol": "M:on.a(BI)I",
+      "originalName": "a",
+      "to": "handleArchiveConnectionFailure",
+      "evidence": "on.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Brick.handleArchiveConnectionFailure(BI)I"
+    },
+    {
       "symbol": "M:on.a(BLj;Lno;)V",
       "originalName": "a",
       "to": "onCircleContact",
@@ -72556,6 +72796,14 @@
       "renamedSymbol": "M:CacheEntry.getValue(I)Ljava/lang/Object;"
     },
     {
+      "symbol": "M:sm.b(I)I",
+      "originalName": "b",
+      "to": "pollArchiveConnection",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveConnectionHelpers.pollArchiveConnection(I)I"
+    },
+    {
       "symbol": "M:sn.a(BIII)V",
       "originalName": "a",
       "to": "drawPreview",
@@ -72890,6 +73138,14 @@
       "evidence": "tg.java: Enqueues operation2: daemon thread started then priority assigned; guard below -68.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PlatformServices.startThread(ILjava/lang/Runnable;B)LPlatformTask;"
+    },
+    {
+      "symbol": "M:tg.a(Ljava/lang/String;BI)Lql;",
+      "originalName": "a",
+      "to": "requestSocketConnection",
+      "evidence": "tg.java: Queues the ordinary socket-connection task with the supplied host/port; canonical guard 120 selects the existing path.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;"
     },
     {
       "symbol": "M:tg.a(Z)V",
@@ -74746,6 +75002,14 @@
       "evidence": "wg.java: Installs menu by screenId if within registry bounds; guard at most -53.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameCanvas.registerMenuScreen(ILMenuScreen;)V"
+    },
+    {
+      "symbol": "M:wg.a(Z)I",
+      "originalName": "a",
+      "to": "pollArchiveSources",
+      "evidence": "wg.java: Maintains archive sources, polls the current archive transport and enters the archive-connection poller when needed. The noncanonical true guard retains its menu-registration side effect.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameCanvas.pollArchiveSources(Z)I"
     },
     {
       "symbol": "M:wh.a(B)V",
@@ -79562,6 +79826,46 @@
       "evidence": "c.java: Writes indexed value and extends lastIndex/capacity; guard0.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GrowableIntList.setAt(III)V#2"
+    },
+    {
+      "symbol": "P:c.a(IIIILwq;)V#0",
+      "originalName": "param0",
+      "to": "headerWordOne",
+      "evidence": "c.java: The fixed original gamepack passes 527249 independent standard-stream assertions: service byte, fixed big-endian word17, first word, second word and final byte. Both 16-bit word domains and both 8-bit domains, signed truncation, append offsets, cursor overflow, caller-array retention and partial/null failures are covered. Corrected raw Java has the same trace; a swapped-word negative control fails. Word/byte labels describe wire positions without assigning unverified application meanings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#0"
+    },
+    {
+      "symbol": "P:c.a(IIIILwq;)V#1",
+      "originalName": "param1",
+      "to": "serviceCode",
+      "evidence": "c.java: The fixed original gamepack passes 527249 independent standard-stream assertions: service byte, fixed big-endian word17, first word, second word and final byte. Both 16-bit word domains and both 8-bit domains, signed truncation, append offsets, cursor overflow, caller-array retention and partial/null failures are covered. Corrected raw Java has the same trace; a swapped-word negative control fails. Word/byte labels describe wire positions without assigning unverified application meanings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#1"
+    },
+    {
+      "symbol": "P:c.a(IIIILwq;)V#2",
+      "originalName": "param2",
+      "to": "headerWordTwo",
+      "evidence": "c.java: The fixed original gamepack passes 527249 independent standard-stream assertions: service byte, fixed big-endian word17, first word, second word and final byte. Both 16-bit word domains and both 8-bit domains, signed truncation, append offsets, cursor overflow, caller-array retention and partial/null failures are covered. Corrected raw Java has the same trace; a swapped-word negative control fails. Word/byte labels describe wire positions without assigning unverified application meanings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#2"
+    },
+    {
+      "symbol": "P:c.a(IIIILwq;)V#3",
+      "originalName": "param3",
+      "to": "headerByte",
+      "evidence": "c.java: The fixed original gamepack passes 527249 independent standard-stream assertions: service byte, fixed big-endian word17, first word, second word and final byte. Both 16-bit word domains and both 8-bit domains, signed truncation, append offsets, cursor overflow, caller-array retention and partial/null failures are covered. Corrected raw Java has the same trace; a swapped-word negative control fails. Word/byte labels describe wire positions without assigning unverified application meanings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#3"
+    },
+    {
+      "symbol": "P:c.a(IIIILwq;)V#4",
+      "originalName": "param4",
+      "to": "packet",
+      "evidence": "c.java: The fixed original gamepack passes 527249 independent standard-stream assertions: service byte, fixed big-endian word17, first word, second word and final byte. Both 16-bit word domains and both 8-bit domains, signed truncation, append offsets, cursor overflow, caller-array retention and partial/null failures are covered. Corrected raw Java has the same trace; a swapped-word negative control fails. Word/byte labels describe wire positions without assigning unverified application meanings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#4"
     },
     {
       "symbol": "P:c.a(ILjava/lang/String;BIILjava/lang/String;)V#0",
@@ -105388,6 +105692,22 @@
       "renamedSymbol": "P:Brick.<init>(IIIIIIII)V#7"
     },
     {
+      "symbol": "P:on.a(BI)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "on.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Brick.handleArchiveConnectionFailure(BI)I#0"
+    },
+    {
+      "symbol": "P:on.a(BI)I#1",
+      "originalName": "param1",
+      "to": "responseCode",
+      "evidence": "on.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:Brick.handleArchiveConnectionFailure(BI)I#1"
+    },
+    {
       "symbol": "P:on.a(BLj;Lno;)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -111556,6 +111876,14 @@
       "renamedSymbol": "P:CacheEntry.getValue(I)Ljava/lang/Object;#0"
     },
     {
+      "symbol": "P:sm.b(I)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "sm.java: Archive setup polls a socket task through phases 0..4, writes the eight-byte service header with code 12 followed by opcode 15 and a 32-bit handshake word, waits up to 30000ms for a zero reply, and transfers the socket to ArchiveFetchClient. Failure handling clears phase/task/socket, swaps active/alternate ports and updates counters/status codes. Existing guard and exception order is retained; this source review does not establish complete live-server behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveConnectionHelpers.pollArchiveConnection(I)I#0"
+    },
+    {
       "symbol": "P:sn.<init>(ILjava/lang/String;Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "to": "sceneId",
@@ -112610,6 +112938,30 @@
       "evidence": "tg.java: Enqueues operation2: daemon thread started then priority assigned; guard below -68.",
       "confidence": "reviewed",
       "renamedSymbol": "P:PlatformServices.startThread(ILjava/lang/Runnable;B)LPlatformTask;#2"
+    },
+    {
+      "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#0",
+      "originalName": "param0",
+      "to": "host",
+      "evidence": "tg.java: Queues the ordinary socket-connection task with the supplied host/port; canonical guard 120 selects the existing path.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#0"
+    },
+    {
+      "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "tg.java: Queues the ordinary socket-connection task with the supplied host/port; canonical guard 120 selects the existing path.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#1"
+    },
+    {
+      "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#2",
+      "originalName": "param2",
+      "to": "port",
+      "evidence": "tg.java: Queues the ordinary socket-connection task with the supplied host/port; canonical guard 120 selects the existing path.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#2"
     },
     {
       "symbol": "P:tg.a(Z)V#0",
@@ -117594,6 +117946,14 @@
       "evidence": "wg.java: Installs menu by screenId if within registry bounds; guard at most -53.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GameCanvas.registerMenuScreen(ILMenuScreen;)V#1"
+    },
+    {
+      "symbol": "P:wg.a(Z)I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "wg.java: Maintains archive sources, polls the current archive transport and enters the archive-connection poller when needed. The noncanonical true guard retains its menu-registration side effect.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameCanvas.pollArchiveSources(Z)I#0"
     },
     {
       "symbol": "P:wh.<init>(Ljava/net/Socket;Ltg;)V#0",
@@ -130189,9 +130549,9 @@
     },
     {
       "symbol": "F:dm.field_d:Lwh;",
-      "renamedSymbol": "F:MouseInput.field_d:LBufferedSocket;",
+      "renamedSymbol": "F:MouseInput.pendingArchiveTransport:LBufferedSocket;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "pendingArchiveTransport",
       "declaration": {
         "file": "dm.java",
         "start": 248,
@@ -132334,9 +132694,9 @@
     },
     {
       "symbol": "F:fc.field_e:Lql;",
-      "renamedSymbol": "F:IndexedSpriteGeometry.field_e:LPlatformTask;",
+      "renamedSymbol": "F:IndexedSpriteGeometry.archiveSocketTask:LPlatformTask;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "archiveSocketTask",
       "declaration": {
         "file": "fc.java",
         "start": 89,
@@ -132620,9 +132980,9 @@
     },
     {
       "symbol": "F:ff.field_b:J",
-      "renamedSymbol": "F:LoginCredentials.field_b:J",
+      "renamedSymbol": "F:LoginCredentials.archiveReplyDeadlineMillis:J",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "archiveReplyDeadlineMillis",
       "declaration": {
         "file": "ff.java",
         "start": 207,
@@ -132972,9 +133332,9 @@
     },
     {
       "symbol": "F:fi.field_t:I",
-      "renamedSymbol": "F:ArcticBackground.field_t:I",
+      "renamedSymbol": "F:ArcticBackground.archiveHandshakeWord:I",
       "originalName": "field_t",
-      "renamedName": "field_t",
+      "renamedName": "archiveHandshakeWord",
       "declaration": {
         "file": "fi.java",
         "start": 180,
@@ -134479,9 +134839,9 @@
     },
     {
       "symbol": "F:gd.field_a:I",
-      "renamedSymbol": "F:ByteArrayPoolHelpers.field_a:I",
+      "renamedSymbol": "F:ByteArrayPoolHelpers.archiveConnectPort:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "archiveConnectPort",
       "declaration": {
         "file": "gd.java",
         "start": 147,
@@ -146106,9 +146466,9 @@
     },
     {
       "symbol": "F:nb.field_a:I",
-      "renamedSymbol": "F:SoftwareFramebuffer.field_a:I",
+      "renamedSymbol": "F:SoftwareFramebuffer.serviceHeaderWordTwo:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "serviceHeaderWordTwo",
       "declaration": {
         "file": "nb.java",
         "start": 149,
@@ -152332,9 +152692,9 @@
     },
     {
       "symbol": "F:qj.field_j:I",
-      "renamedSymbol": "F:GameplayScreen.field_j:I",
+      "renamedSymbol": "F:GameplayScreen.archiveConnectionPhase:I",
       "originalName": "field_j",
-      "renamedName": "field_j",
+      "renamedName": "archiveConnectionPhase",
       "declaration": {
         "file": "qj.java",
         "start": 285,
@@ -158151,9 +158511,9 @@
     },
     {
       "symbol": "F:u.field_g:I",
-      "renamedSymbol": "F:CanvasViewGlobals.field_g:I",
+      "renamedSymbol": "F:CanvasViewGlobals.serviceHeaderByte:I",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "serviceHeaderByte",
       "declaration": {
         "file": "u.java",
         "start": 69,
@@ -159504,9 +159864,9 @@
     },
     {
       "symbol": "F:up.field_z:I",
-      "renamedSymbol": "F:StatefulWidgetRenderer.field_z:I",
+      "renamedSymbol": "F:StatefulWidgetRenderer.alternateArchivePort:I",
       "originalName": "field_z",
-      "renamedName": "field_z",
+      "renamedName": "alternateArchivePort",
       "declaration": {
         "file": "up.java",
         "start": 229,
@@ -159746,9 +160106,9 @@
     },
     {
       "symbol": "F:vb.field_S:I",
-      "renamedSymbol": "F:TextFieldWidget.field_S:I",
+      "renamedSymbol": "F:TextFieldWidget.serviceHeaderWordOne:I",
       "originalName": "field_S",
-      "renamedName": "field_S",
+      "renamedName": "serviceHeaderWordOne",
       "declaration": {
         "file": "vb.java",
         "start": 179,
@@ -159823,9 +160183,9 @@
     },
     {
       "symbol": "F:vd.field_f:Lih;",
-      "renamedSymbol": "F:PacketReceiveHelpers.field_f:LArchiveFetchClient;",
+      "renamedSymbol": "F:PacketReceiveHelpers.archiveFetchClient:LArchiveFetchClient;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "archiveFetchClient",
       "declaration": {
         "file": "vd.java",
         "start": 216,
@@ -161671,9 +162031,9 @@
     },
     {
       "symbol": "F:wk.field_k:Ljava/lang/String;",
-      "renamedSymbol": "F:LevelMetadata.field_k:Ljava/lang/String;",
+      "renamedSymbol": "F:LevelMetadata.archiveHost:Ljava/lang/String;",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "archiveHost",
       "declaration": {
         "file": "wk.java",
         "start": 244,
@@ -182109,9 +182469,9 @@
     },
     {
       "symbol": "L:c.a(IIIILwq;)V#0",
-      "renamedSymbol": "L:GrowableIntList.a(IIIILPacketBuffer;)V#0",
+      "renamedSymbol": "L:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#0",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "c.java",
         "start": 12192,
@@ -286268,9 +286628,9 @@
     },
     {
       "symbol": "L:on.a(BI)I#0",
-      "renamedSymbol": "L:Brick.a(BI)I#0",
+      "renamedSymbol": "L:Brick.handleArchiveConnectionFailure(BI)I#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "on.java",
         "start": 15028,
@@ -286279,9 +286639,9 @@
     },
     {
       "symbol": "L:on.a(BI)I#1",
-      "renamedSymbol": "L:Brick.a(BI)I#1",
+      "renamedSymbol": "L:Brick.handleArchiveConnectionFailure(BI)I#1",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "previousArchivePort",
       "declaration": {
         "file": "on.java",
         "start": 15153,
@@ -286290,9 +286650,9 @@
     },
     {
       "symbol": "L:on.a(BI)I#2",
-      "renamedSymbol": "L:Brick.a(BI)I#2",
+      "renamedSymbol": "L:Brick.handleArchiveConnectionFailure(BI)I#2",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "guardCalculation",
       "declaration": {
         "file": "on.java",
         "start": 15217,
@@ -314153,9 +314513,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#0",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#0",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#0",
       "originalName": "stackIn_15_0",
-      "renamedName": "stackIn_15_0",
+      "renamedName": "connectionFailureStatus",
       "declaration": {
         "file": "sm.java",
         "start": 346,
@@ -314164,9 +314524,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#1",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#1",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#1",
       "originalName": "stackIn_27_0",
-      "renamedName": "stackIn_27_0",
+      "renamedName": "timeoutFailureStatus",
       "declaration": {
         "file": "sm.java",
         "start": 378,
@@ -314175,9 +314535,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#10",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#10",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#10",
       "originalName": "decompiledUncheckedException",
-      "renamedName": "decompiledUncheckedException",
+      "renamedName": "uncheckedFailure",
       "declaration": {
         "file": "sm.java",
         "start": 2998,
@@ -314186,9 +314546,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#11",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#11",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#11",
       "originalName": "decompiledCheckedException",
-      "renamedName": "decompiledCheckedException",
+      "renamedName": "checkedFailure",
       "declaration": {
         "file": "sm.java",
         "start": 3103,
@@ -314197,9 +314557,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#2",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#2",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#2",
       "originalName": "stackIn_31_0",
-      "renamedName": "stackIn_31_0",
+      "renamedName": "rejectedReplyStatus",
       "declaration": {
         "file": "sm.java",
         "start": 410,
@@ -314208,9 +314568,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#3",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#3",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#3",
       "originalName": "stackIn_35_0",
-      "renamedName": "stackIn_35_0",
+      "renamedName": "connectedStatus",
       "declaration": {
         "file": "sm.java",
         "start": 442,
@@ -314219,9 +314579,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#4",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#4",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#4",
       "originalName": "stackIn_37_0",
-      "renamedName": "stackIn_37_0",
+      "renamedName": "pendingStatus",
       "declaration": {
         "file": "sm.java",
         "start": 474,
@@ -314230,9 +314590,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#5",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#5",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#5",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtIoFailure",
       "declaration": {
         "file": "sm.java",
         "start": 512,
@@ -314241,9 +314601,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#6",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#6",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#6",
       "originalName": "var1_int",
-      "renamedName": "var1_int",
+      "renamedName": "replyCode",
       "declaration": {
         "file": "sm.java",
         "start": 560,
@@ -314252,9 +314612,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#7",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#7",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#7",
       "originalName": "var1",
-      "renamedName": "var1",
+      "renamedName": "ioFailure",
       "declaration": {
         "file": "sm.java",
         "start": 596,
@@ -314263,9 +314623,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#8",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#8",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#8",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "handshake",
       "declaration": {
         "file": "sm.java",
         "start": 622,
@@ -314274,9 +314634,9 @@
     },
     {
       "symbol": "L:sm.b(I)I#9",
-      "renamedSymbol": "L:ArchiveConnectionHelpers.b(I)I#9",
+      "renamedSymbol": "L:ArchiveConnectionHelpers.pollArchiveConnection(I)I#9",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "sm.java",
         "start": 2735,
@@ -319026,7 +319386,7 @@
     },
     {
       "symbol": "L:tg.a(Ljava/lang/String;BI)Lql;#0",
-      "renamedSymbol": "L:PlatformServices.a(Ljava/lang/String;BI)LPlatformTask;#0",
+      "renamedSymbol": "L:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -319037,7 +319397,7 @@
     },
     {
       "symbol": "L:tg.a(Ljava/lang/String;BI)Lql;#1",
-      "renamedSymbol": "L:PlatformServices.a(Ljava/lang/String;BI)LPlatformTask;#1",
+      "renamedSymbol": "L:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -340663,7 +341023,7 @@
     },
     {
       "symbol": "L:wg.a(Z)I#0",
-      "renamedSymbol": "L:GameCanvas.a(Z)I#0",
+      "renamedSymbol": "L:GameCanvas.pollArchiveSources(Z)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -351300,9 +351660,9 @@
     },
     {
       "symbol": "M:c.a(IIIILwq;)V",
-      "renamedSymbol": "M:GrowableIntList.a(IIIILPacketBuffer;)V",
+      "renamedSymbol": "M:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeServiceHeader",
       "declaration": {
         "file": "c.java",
         "start": 11902,
@@ -372233,9 +372593,9 @@
     },
     {
       "symbol": "M:on.a(BI)I",
-      "renamedSymbol": "M:Brick.a(BI)I",
+      "renamedSymbol": "M:Brick.handleArchiveConnectionFailure(BI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleArchiveConnectionFailure",
       "declaration": {
         "file": "on.java",
         "start": 14987,
@@ -377832,9 +378192,9 @@
     },
     {
       "symbol": "M:sm.b(I)I",
-      "renamedSymbol": "M:ArchiveConnectionHelpers.b(I)I",
+      "renamedSymbol": "M:ArchiveConnectionHelpers.pollArchiveConnection(I)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "pollArchiveConnection",
       "declaration": {
         "file": "sm.java",
         "start": 302,
@@ -378756,9 +379116,9 @@
     },
     {
       "symbol": "M:tg.a(Ljava/lang/String;BI)Lql;",
-      "renamedSymbol": "M:PlatformServices.a(Ljava/lang/String;BI)LPlatformTask;",
+      "renamedSymbol": "M:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSocketConnection",
       "declaration": {
         "file": "tg.java",
         "start": 1966,
@@ -383046,9 +383406,9 @@
     },
     {
       "symbol": "M:wg.a(Z)I",
-      "renamedSymbol": "M:GameCanvas.a(Z)I",
+      "renamedSymbol": "M:GameCanvas.pollArchiveSources(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollArchiveSources",
       "declaration": {
         "file": "wg.java",
         "start": 2591,
@@ -392495,9 +392855,9 @@
     },
     {
       "symbol": "P:c.a(IIIILwq;)V#0",
-      "renamedSymbol": "P:GrowableIntList.a(IIIILPacketBuffer;)V#0",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "headerWordOne",
       "declaration": {
         "file": "c.java",
         "start": 11908,
@@ -392506,9 +392866,9 @@
     },
     {
       "symbol": "P:c.a(IIIILwq;)V#1",
-      "renamedSymbol": "P:GrowableIntList.a(IIIILPacketBuffer;)V#1",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "serviceCode",
       "declaration": {
         "file": "c.java",
         "start": 11920,
@@ -392517,9 +392877,9 @@
     },
     {
       "symbol": "P:c.a(IIIILwq;)V#2",
-      "renamedSymbol": "P:GrowableIntList.a(IIIILPacketBuffer;)V#2",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "headerWordTwo",
       "declaration": {
         "file": "c.java",
         "start": 11932,
@@ -392528,9 +392888,9 @@
     },
     {
       "symbol": "P:c.a(IIIILwq;)V#3",
-      "renamedSymbol": "P:GrowableIntList.a(IIIILPacketBuffer;)V#3",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "headerByte",
       "declaration": {
         "file": "c.java",
         "start": 11944,
@@ -392539,9 +392899,9 @@
     },
     {
       "symbol": "P:c.a(IIIILwq;)V#4",
-      "renamedSymbol": "P:GrowableIntList.a(IIIILPacketBuffer;)V#4",
+      "renamedSymbol": "P:GrowableIntList.writeServiceHeader(IIIILPacketBuffer;)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "packet",
       "declaration": {
         "file": "c.java",
         "start": 11955,
@@ -449673,9 +450033,9 @@
     },
     {
       "symbol": "P:on.a(BI)I#0",
-      "renamedSymbol": "P:Brick.a(BI)I#0",
+      "renamedSymbol": "P:Brick.handleArchiveConnectionFailure(BI)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "on.java",
         "start": 14994,
@@ -449684,9 +450044,9 @@
     },
     {
       "symbol": "P:on.a(BI)I#1",
-      "renamedSymbol": "P:Brick.a(BI)I#1",
+      "renamedSymbol": "P:Brick.handleArchiveConnectionFailure(BI)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "responseCode",
       "declaration": {
         "file": "on.java",
         "start": 15006,
@@ -461773,9 +462133,9 @@
     },
     {
       "symbol": "P:sm.b(I)I#0",
-      "renamedSymbol": "P:ArchiveConnectionHelpers.b(I)I#0",
+      "renamedSymbol": "P:ArchiveConnectionHelpers.pollArchiveConnection(I)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "sm.java",
         "start": 308,
@@ -464215,9 +464575,9 @@
     },
     {
       "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#0",
-      "renamedSymbol": "P:PlatformServices.a(Ljava/lang/String;BI)LPlatformTask;#0",
+      "renamedSymbol": "P:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "host",
       "declaration": {
         "file": "tg.java",
         "start": 1975,
@@ -464226,9 +464586,9 @@
     },
     {
       "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#1",
-      "renamedSymbol": "P:PlatformServices.a(Ljava/lang/String;BI)LPlatformTask;#1",
+      "renamedSymbol": "P:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "tg.java",
         "start": 1988,
@@ -464237,9 +464597,9 @@
     },
     {
       "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#2",
-      "renamedSymbol": "P:PlatformServices.a(Ljava/lang/String;BI)LPlatformTask;#2",
+      "renamedSymbol": "P:PlatformServices.requestSocketConnection(Ljava/lang/String;BI)LPlatformTask;#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "port",
       "declaration": {
         "file": "tg.java",
         "start": 2000,
@@ -474423,9 +474783,9 @@
     },
     {
       "symbol": "P:wg.a(Z)I#0",
-      "renamedSymbol": "P:GameCanvas.a(Z)I#0",
+      "renamedSymbol": "P:GameCanvas.pollArchiveSources(Z)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "wg.java",
         "start": 2601,
@@ -490020,7 +490380,7 @@
       "original": "ad.java",
       "renamed": "CappedUrlRequest.java",
       "inputSha256": "7fb7dc99d93b013df130c503d7a3c4b16a52a7ea9fadeb9d1d00dde398e5148b",
-      "outputSha256": "d44b16c700b006a60e91dfe9143421e67d9dca5764071c1751f70d4f75042a4f",
+      "outputSha256": "bc0166f802d5cb3d107a5f84676efec86fb61936c145cc80fe79f89ea9ba8beb",
       "edits": [
         {
           "start": 69,
@@ -490310,6 +490670,13 @@
           "renamed": "FramedMenuScreen"
         },
         {
+          "start": 1627,
+          "end": 1628,
+          "symbol": "M:tg.a(Ljava/lang/String;BI)Lql;",
+          "original": "a",
+          "renamed": "requestSocketConnection"
+        },
+        {
           "start": 1629,
           "end": 1631,
           "symbol": "C:tq",
@@ -490581,6 +490948,13 @@
           "symbol": "C:c",
           "original": "c",
           "renamed": "GrowableIntList"
+        },
+        {
+          "start": 2419,
+          "end": 2420,
+          "symbol": "M:c.a(IIIILwq;)V",
+          "original": "a",
+          "renamed": "writeServiceHeader"
         },
         {
           "start": 2421,
@@ -491050,6 +491424,13 @@
           "symbol": "F:ad.field_g:Ltg;",
           "original": "field_g",
           "renamed": "services"
+        },
+        {
+          "start": 5736,
+          "end": 5737,
+          "symbol": "M:tg.a(Ljava/lang/String;BI)Lql;",
+          "original": "a",
+          "renamed": "requestSocketConnection"
         },
         {
           "start": 5743,
@@ -566379,7 +566760,7 @@
       "original": "c.java",
       "renamed": "GrowableIntList.java",
       "inputSha256": "cee84cc17c49661059f7a36d8297b8b4d3911d0885adeaede78f12ffd4b73da9",
-      "outputSha256": "2f4e55c7a1be5ec8c69e40b8df2eaa1bec7fdc2ed913def6615e2483a8f437f7",
+      "outputSha256": "2e7f75a6eab8138184105feb5b4518274c7f99cda11f86f9f6b8755de6304fd5",
       "edits": [
         {
           "start": 50,
@@ -566506,6 +566887,13 @@
           "symbol": "C:c",
           "original": "c",
           "renamed": "GrowableIntList"
+        },
+        {
+          "start": 708,
+          "end": 709,
+          "symbol": "M:c.a(IIIILwq;)V",
+          "original": "a",
+          "renamed": "writeServiceHeader"
         },
         {
           "start": 729,
@@ -569833,11 +570221,60 @@
           "renamed": "BirthDateValidator"
         },
         {
+          "start": 11902,
+          "end": 11903,
+          "symbol": "M:c.a(IIIILwq;)V",
+          "original": "a",
+          "renamed": "writeServiceHeader"
+        },
+        {
+          "start": 11908,
+          "end": 11914,
+          "symbol": "P:c.a(IIIILwq;)V#0",
+          "original": "param0",
+          "renamed": "headerWordOne"
+        },
+        {
+          "start": 11920,
+          "end": 11926,
+          "symbol": "P:c.a(IIIILwq;)V#1",
+          "original": "param1",
+          "renamed": "serviceCode"
+        },
+        {
+          "start": 11932,
+          "end": 11938,
+          "symbol": "P:c.a(IIIILwq;)V#2",
+          "original": "param2",
+          "renamed": "headerWordTwo"
+        },
+        {
+          "start": 11944,
+          "end": 11950,
+          "symbol": "P:c.a(IIIILwq;)V#3",
+          "original": "param3",
+          "renamed": "headerByte"
+        },
+        {
           "start": 11952,
           "end": 11954,
           "symbol": "C:wq",
           "original": "wq",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 11955,
+          "end": 11961,
+          "symbol": "P:c.a(IIIILwq;)V#4",
+          "original": "param4",
+          "renamed": "packet"
+        },
+        {
+          "start": 11989,
+          "end": 11995,
+          "symbol": "P:c.a(IIIILwq;)V#4",
+          "original": "param4",
+          "renamed": "packet"
         },
         {
           "start": 11996,
@@ -569847,11 +570284,32 @@
           "renamed": "writeByte"
         },
         {
+          "start": 12002,
+          "end": 12008,
+          "symbol": "P:c.a(IIIILwq;)V#1",
+          "original": "param1",
+          "renamed": "serviceCode"
+        },
+        {
+          "start": 12021,
+          "end": 12027,
+          "symbol": "P:c.a(IIIILwq;)V#4",
+          "original": "param4",
+          "renamed": "packet"
+        },
+        {
           "start": 12028,
           "end": 12029,
           "symbol": "M:wq.b(BI)V",
           "original": "b",
           "renamed": "writeShort"
+        },
+        {
+          "start": 12057,
+          "end": 12063,
+          "symbol": "P:c.a(IIIILwq;)V#4",
+          "original": "param4",
+          "renamed": "packet"
         },
         {
           "start": 12064,
@@ -569861,6 +570319,20 @@
           "renamed": "writeShort"
         },
         {
+          "start": 12078,
+          "end": 12084,
+          "symbol": "P:c.a(IIIILwq;)V#0",
+          "original": "param0",
+          "renamed": "headerWordOne"
+        },
+        {
+          "start": 12097,
+          "end": 12103,
+          "symbol": "P:c.a(IIIILwq;)V#4",
+          "original": "param4",
+          "renamed": "packet"
+        },
+        {
           "start": 12104,
           "end": 12105,
           "symbol": "M:wq.b(BI)V",
@@ -569868,11 +570340,39 @@
           "renamed": "writeShort"
         },
         {
+          "start": 12118,
+          "end": 12124,
+          "symbol": "P:c.a(IIIILwq;)V#2",
+          "original": "param2",
+          "renamed": "headerWordTwo"
+        },
+        {
+          "start": 12137,
+          "end": 12143,
+          "symbol": "P:c.a(IIIILwq;)V#4",
+          "original": "param4",
+          "renamed": "packet"
+        },
+        {
           "start": 12144,
           "end": 12145,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 12149,
+          "end": 12155,
+          "symbol": "P:c.a(IIIILwq;)V#3",
+          "original": "param3",
+          "renamed": "headerByte"
+        },
+        {
+          "start": 12192,
+          "end": 12208,
+          "symbol": "L:c.a(IIIILwq;)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 12228,
@@ -569887,6 +570387,48 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 12255,
+          "end": 12271,
+          "symbol": "L:c.a(IIIILwq;)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 12283,
+          "end": 12289,
+          "symbol": "P:c.a(IIIILwq;)V#0",
+          "original": "param0",
+          "renamed": "headerWordOne"
+        },
+        {
+          "start": 12298,
+          "end": 12304,
+          "symbol": "P:c.a(IIIILwq;)V#1",
+          "original": "param1",
+          "renamed": "serviceCode"
+        },
+        {
+          "start": 12313,
+          "end": 12319,
+          "symbol": "P:c.a(IIIILwq;)V#2",
+          "original": "param2",
+          "renamed": "headerWordTwo"
+        },
+        {
+          "start": 12328,
+          "end": 12334,
+          "symbol": "P:c.a(IIIILwq;)V#3",
+          "original": "param3",
+          "renamed": "headerByte"
+        },
+        {
+          "start": 12344,
+          "end": 12350,
+          "symbol": "P:c.a(IIIILwq;)V#4",
+          "original": "param4",
+          "renamed": "packet"
         },
         {
           "start": 12426,
@@ -590295,7 +590837,7 @@
       "original": "cr.java",
       "renamed": "ActivityIndicatorWidget.java",
       "inputSha256": "cd09fe2ed0378fa9d92efa295b2bad2bb050d9ae887d034b0cce0d5c7daae5f8",
-      "outputSha256": "452c21790da7c31c7ffd8d12412b672173827ff37b3e9acdd906346d875225ae",
+      "outputSha256": "a652c0dae5dccfe3bf7c91a17fc725858ad241473fdea402a25a6050df8c0923",
       "edits": [
         {
           "start": 69,
@@ -590676,11 +591218,25 @@
           "renamed": "ArcticBackground"
         },
         {
+          "start": 986,
+          "end": 993,
+          "symbol": "F:fi.field_t:I",
+          "original": "field_t",
+          "renamed": "archiveHandshakeWord"
+        },
+        {
           "start": 1012,
           "end": 1014,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 1015,
+          "end": 1022,
+          "symbol": "F:vb.field_S:I",
+          "original": "field_S",
+          "renamed": "serviceHeaderWordOne"
         },
         {
           "start": 1041,
@@ -590690,11 +591246,25 @@
           "renamed": "LevelMetadata"
         },
         {
+          "start": 1044,
+          "end": 1051,
+          "symbol": "F:wk.field_k:Ljava/lang/String;",
+          "original": "field_k",
+          "renamed": "archiveHost"
+        },
+        {
           "start": 1142,
           "end": 1144,
           "symbol": "C:up",
           "original": "up",
           "renamed": "StatefulWidgetRenderer"
+        },
+        {
+          "start": 1145,
+          "end": 1152,
+          "symbol": "F:up.field_z:I",
+          "original": "field_z",
+          "renamed": "alternateArchivePort"
         },
         {
           "start": 1173,
@@ -590704,11 +591274,25 @@
           "renamed": "ByteArrayPoolHelpers"
         },
         {
+          "start": 1176,
+          "end": 1183,
+          "symbol": "F:gd.field_a:I",
+          "original": "field_a",
+          "renamed": "archiveConnectPort"
+        },
+        {
           "start": 1204,
           "end": 1205,
           "symbol": "C:u",
           "original": "u",
           "renamed": "CanvasViewGlobals"
+        },
+        {
+          "start": 1206,
+          "end": 1213,
+          "symbol": "F:u.field_g:I",
+          "original": "field_g",
+          "renamed": "serviceHeaderByte"
         },
         {
           "start": 1234,
@@ -590718,11 +591302,25 @@
           "renamed": "SoftwareFramebuffer"
         },
         {
+          "start": 1237,
+          "end": 1244,
+          "symbol": "F:nb.field_a:I",
+          "original": "field_a",
+          "renamed": "serviceHeaderWordTwo"
+        },
+        {
           "start": 1265,
           "end": 1267,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 1268,
+          "end": 1275,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 1279,
@@ -590779,6 +591377,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 1375,
+          "end": 1382,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 1384,
@@ -620430,7 +621035,7 @@
       "original": "dm.java",
       "renamed": "MouseInput.java",
       "inputSha256": "f4f6eeb0c33ba35d32dfc95dffd58ec72ffffdcf1c3d5c786026d46557276184",
-      "outputSha256": "8b715d2ca51904dd11de4bed09cca06e614d08c745fcf7716f359d1ad1e63ec9",
+      "outputSha256": "c8548c05e25cd7e159a17de41dd4342a6262156eb81494c55fd75acb76bc8534",
       "edits": [
         {
           "start": 50,
@@ -620473,6 +621078,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 248,
+          "end": 255,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
         },
         {
           "start": 268,
@@ -620881,11 +621493,25 @@
           "renamed": "contentResizing"
         },
         {
+          "start": 4258,
+          "end": 4265,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
+        },
+        {
           "start": 4306,
           "end": 4313,
           "symbol": "F:dm.field_f:Ljp;",
           "original": "field_f",
           "renamed": "farmFarSprite"
+        },
+        {
+          "start": 4360,
+          "end": 4367,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
         },
         {
           "start": 4371,
@@ -655276,7 +655902,7 @@
       "original": "fc.java",
       "renamed": "IndexedSpriteGeometry.java",
       "inputSha256": "bb35d3f93541c87498ebd8245b64ada1b1e10cf55cfc2deace4918b8fd79a601",
-      "outputSha256": "05d7665ec2571f1e5ee620498faa4916cda9625df77cc7aac8d9024312d8408c",
+      "outputSha256": "e378b37780ae22b785b23f3bd13388696ad4f2eca3a369e565080fbb09c943b0",
       "edits": [
         {
           "start": 53,
@@ -655298,6 +655924,13 @@
           "symbol": "C:ql",
           "original": "ql",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 89,
+          "end": 96,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
         },
         {
           "start": 133,
@@ -655494,6 +656127,13 @@
           "symbol": "P:fc.a(ILjp;)V#1",
           "original": "param1",
           "renamed": "sprite"
+        },
+        {
+          "start": 752,
+          "end": 759,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
         },
         {
           "start": 996,
@@ -657967,7 +658607,7 @@
       "original": "ff.java",
       "renamed": "LoginCredentials.java",
       "inputSha256": "df3e5479c4475539127133b126341182d1b9108a17436c41b222d528772aa18f",
-      "outputSha256": "fcb7eda3bf76e2649643481db149be0a9cc5feb57a3b21ed63ce44ac3e5502b5",
+      "outputSha256": "dab88e6d112613936887df3700d013c9c7e0cb2d35eb4ee58c53cbaab92bdf77",
       "edits": [
         {
           "start": 53,
@@ -657989,6 +658629,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "ScreenshotViewer"
+        },
+        {
+          "start": 207,
+          "end": 214,
+          "symbol": "F:ff.field_b:J",
+          "original": "field_b",
+          "renamed": "archiveReplyDeadlineMillis"
         },
         {
           "start": 280,
@@ -663493,7 +664140,7 @@
       "original": "fi.java",
       "renamed": "ArcticBackground.java",
       "inputSha256": "2f434dee13d670122728b8f655c8b88e2e583bb8e8346518397e000d20aa28d3",
-      "outputSha256": "980ed03063868def3ffd35d43d8e8ebe156c401bc2efea76677aa9244d23a5fe",
+      "outputSha256": "22e5995c11a828368199f64603215988482258400a9088f6d78dc47067c4515b",
       "edits": [
         {
           "start": 50,
@@ -663536,6 +664183,13 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 180,
+          "end": 187,
+          "symbol": "F:fi.field_t:I",
+          "original": "field_t",
+          "renamed": "archiveHandshakeWord"
         },
         {
           "start": 232,
@@ -685893,7 +686547,7 @@
       "original": "gd.java",
       "renamed": "ByteArrayPoolHelpers.java",
       "inputSha256": "7cf40d499512597cef1f74101a220b66460b475cc68338704e809cf32d030c65",
-      "outputSha256": "3c0c5847be4eca04ebd140193e762368a5ec0fcf9b3590846bcc5932ede8af4a",
+      "outputSha256": "8f17e96c3614392611c701e640bf828a6c9ece6e53be4f3ae3fd25804e644e54",
       "edits": [
         {
           "start": 50,
@@ -685915,6 +686569,13 @@
           "symbol": "F:gd.field_c:Ldn;",
           "original": "field_c",
           "renamed": "draggedWidget"
+        },
+        {
+          "start": 147,
+          "end": 154,
+          "symbol": "F:gd.field_a:I",
+          "original": "field_a",
+          "renamed": "archiveConnectPort"
         },
         {
           "start": 174,
@@ -933614,7 +934275,7 @@
       "original": "nb.java",
       "renamed": "SoftwareFramebuffer.java",
       "inputSha256": "9d07081adad7ce7034e564f2a30bc149d4dc495baf6a364c79e6205578ae802b",
-      "outputSha256": "a49c32de0ce3389e7cb7f830ebe831269ff1626c89aefe38fb5a34a6fed90498",
+      "outputSha256": "e07c53204ffaefd89f86a595e1918620e81fd8cac0325536e48bccee5ef70c84",
       "edits": [
         {
           "start": 53,
@@ -933650,6 +934311,13 @@
           "symbol": "F:nb.field_f:I",
           "original": "field_f",
           "renamed": "height"
+        },
+        {
+          "start": 149,
+          "end": 156,
+          "symbol": "F:nb.field_a:I",
+          "original": "field_a",
+          "renamed": "serviceHeaderWordTwo"
         },
         {
           "start": 177,
@@ -1011726,7 +1012394,7 @@
       "original": "on.java",
       "renamed": "Brick.java",
       "inputSha256": "e2ea06abf1d907ffb3f1df2b918920b6464709bc1e74174e0fbf95abf27c359f",
-      "outputSha256": "72ed9fd1c8c8fd6fe7672bfb000e3d519eae2b97122023db272b1f253e6c80d3",
+      "outputSha256": "088c2c0113b2b03d4c71c5b046bc5968fa16378606f73220fca0be0fa7405b2c",
       "edits": [
         {
           "start": 50,
@@ -1012959,6 +1013627,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 5773,
+          "end": 5774,
+          "symbol": "M:on.a(BI)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionFailure"
         },
         {
           "start": 5876,
@@ -1014634,11 +1015309,46 @@
           "renamed": "segmentElapsedTicks"
         },
         {
+          "start": 14987,
+          "end": 14988,
+          "symbol": "M:on.a(BI)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionFailure"
+        },
+        {
+          "start": 14994,
+          "end": 15000,
+          "symbol": "P:on.a(BI)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 15006,
+          "end": 15012,
+          "symbol": "P:on.a(BI)I#1",
+          "original": "param1",
+          "renamed": "responseCode"
+        },
+        {
+          "start": 15028,
+          "end": 15032,
+          "symbol": "L:on.a(BI)I#0",
+          "original": "var4",
+          "renamed": "unusedGameFlag"
+        },
+        {
           "start": 15071,
           "end": 15073,
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 15074,
+          "end": 15081,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
         },
         {
           "start": 15095,
@@ -1014648,11 +1015358,32 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 15098,
+          "end": 15105,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
+        },
+        {
           "start": 15122,
           "end": 15124,
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IndexedSpriteGeometry"
+        },
+        {
+          "start": 15125,
+          "end": 15132,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
+        },
+        {
+          "start": 15153,
+          "end": 15157,
+          "symbol": "L:on.a(BI)I#1",
+          "original": "var2",
+          "renamed": "previousArchivePort"
         },
         {
           "start": 15160,
@@ -1014662,11 +1015393,25 @@
           "renamed": "ByteArrayPoolHelpers"
         },
         {
+          "start": 15163,
+          "end": 15170,
+          "symbol": "F:gd.field_a:I",
+          "original": "field_a",
+          "renamed": "archiveConnectPort"
+        },
+        {
           "start": 15180,
           "end": 15182,
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "ByteArrayPoolHelpers"
+        },
+        {
+          "start": 15183,
+          "end": 15190,
+          "symbol": "F:gd.field_a:I",
+          "original": "field_a",
+          "renamed": "archiveConnectPort"
         },
         {
           "start": 15193,
@@ -1014676,11 +1015421,46 @@
           "renamed": "StatefulWidgetRenderer"
         },
         {
+          "start": 15196,
+          "end": 15203,
+          "symbol": "F:up.field_z:I",
+          "original": "field_z",
+          "renamed": "alternateArchivePort"
+        },
+        {
+          "start": 15217,
+          "end": 15221,
+          "symbol": "L:on.a(BI)I#2",
+          "original": "var3",
+          "renamed": "guardCalculation"
+        },
+        {
+          "start": 15232,
+          "end": 15238,
+          "symbol": "P:on.a(BI)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 15264,
+          "end": 15270,
+          "symbol": "P:on.a(BI)I#1",
+          "original": "param1",
+          "renamed": "responseCode"
+        },
+        {
           "start": 15290,
           "end": 15292,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 15293,
+          "end": 15300,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 15301,
@@ -1014690,11 +1015470,25 @@
           "renamed": "lastError"
         },
         {
+          "start": 15345,
+          "end": 15351,
+          "symbol": "P:on.a(BI)I#1",
+          "original": "param1",
+          "renamed": "responseCode"
+        },
+        {
           "start": 15373,
           "end": 15375,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 15376,
+          "end": 15383,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 15384,
@@ -1014711,6 +1015505,13 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 15431,
+          "end": 15438,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 15439,
           "end": 15446,
           "symbol": "F:ih.field_f:I",
@@ -1014725,11 +1015526,32 @@
           "renamed": "StatefulWidgetRenderer"
         },
         {
+          "start": 15485,
+          "end": 15492,
+          "symbol": "F:up.field_z:I",
+          "original": "field_z",
+          "renamed": "alternateArchivePort"
+        },
+        {
+          "start": 15495,
+          "end": 15499,
+          "symbol": "L:on.a(BI)I#1",
+          "original": "var2",
+          "renamed": "previousArchivePort"
+        },
+        {
           "start": 15509,
           "end": 15511,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 15512,
+          "end": 15519,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 15520,
@@ -1014746,6 +1015568,13 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 15533,
+          "end": 15540,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 15541,
           "end": 15548,
           "symbol": "F:ih.field_i:I",
@@ -1014760,11 +1015589,25 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 15574,
+          "end": 15581,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 15582,
           "end": 15589,
           "symbol": "F:ih.field_i:I",
           "original": "field_i",
           "renamed": "failureCount"
+        },
+        {
+          "start": 15603,
+          "end": 15609,
+          "symbol": "P:on.a(BI)I#1",
+          "original": "param1",
+          "renamed": "responseCode"
         },
         {
           "start": 15661,
@@ -1014774,6 +1015617,13 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 15664,
+          "end": 15671,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 15672,
           "end": 15679,
           "symbol": "F:ih.field_i:I",
@@ -1014781,11 +1015631,25 @@
           "renamed": "failureCount"
         },
         {
+          "start": 15698,
+          "end": 15704,
+          "symbol": "P:on.a(BI)I#1",
+          "original": "param1",
+          "renamed": "responseCode"
+        },
+        {
           "start": 15758,
           "end": 15760,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 15761,
+          "end": 15768,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 15769,
@@ -1039942,7 +1040806,7 @@
       "original": "pp.java",
       "renamed": "TextValidationHelpers.java",
       "inputSha256": "6301880b795aac533eaa3f1a770084e0604d795b8ac0ead864920eeb17dfb199",
-      "outputSha256": "480a9806614c5d9e1a5ca62dd65f51f498ed7c094f2489588a438a5e4d237ec3",
+      "outputSha256": "0c821bbeafca803ea9aeb07d61e501390e633a1d37e6001c4ef51207cd6e77ce",
       "edits": [
         {
           "start": 69,
@@ -1040344,6 +1041208,13 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 5486,
+          "end": 5493,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 5494,
           "end": 5501,
           "symbol": "F:ih.field_i:I",
@@ -1040356,6 +1041227,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 5518,
+          "end": 5525,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 5526,
@@ -1049026,7 +1049904,7 @@
       "original": "qc.java",
       "renamed": "GameplayAudioEvent.java",
       "inputSha256": "42327dfa6bd1205330f6d623380519d502a554817c94c4b85bb78c6790201bf8",
-      "outputSha256": "e42df36c48482aa8018ea260bfb151ed2708b8e8ed77a4cc64dff45c95ea51d5",
+      "outputSha256": "0e99147d6494e911b4c4a2e1f107e58873831981e6bcb0db61eb0071e788e92b",
       "edits": [
         {
           "start": 69,
@@ -1049302,11 +1050180,25 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 2329,
+          "end": 2336,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 2354,
           "end": 2356,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 2357,
+          "end": 2364,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 2365,
@@ -1051571,7 +1052463,7 @@
       "original": "qg.java",
       "renamed": "GameConnectionShell.java",
       "inputSha256": "f0f96ff4267e2ff560eb4272327a49af02204398e19363a87a54075043f5c452",
-      "outputSha256": "b877988ab96b1136b186e18874ff5a3c650b634229a14006c4067d5c7c5f765b",
+      "outputSha256": "ab3e4cdc7fcfa2ffc224ac4f471eb8509d0ba8d5069f2ef192cc6af5a8841eb1",
       "edits": [
         {
           "start": 53,
@@ -1055166,6 +1056058,13 @@
           "renamed": "GameCanvas"
         },
         {
+          "start": 23992,
+          "end": 23993,
+          "symbol": "M:wg.a(Z)I",
+          "original": "a",
+          "renamed": "pollArchiveSources"
+        },
+        {
           "start": 24050,
           "end": 24052,
           "symbol": "C:tm",
@@ -1058204,7 +1059103,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "f00ab36e5c9e5a98a15d5fcc872866e4eb5f93120a33864a8b18ea1c9e9e5b83",
+      "outputSha256": "db5ef0c793e72f44fc7c0bac69ef28ecd3812cea107477676ce5d9a6e3e31c03",
       "edits": [
         {
           "start": 50,
@@ -1058296,6 +1059195,13 @@
           "symbol": "F:qj.field_n:Z",
           "original": "field_n",
           "renamed": "resultWordMode"
+        },
+        {
+          "start": 285,
+          "end": 292,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
         },
         {
           "start": 302,
@@ -1131883,7 +1132789,7 @@
       "original": "sm.java",
       "renamed": "ArchiveConnectionHelpers.java",
       "inputSha256": "bb4f3af06b7605526ccc68f8b658e47c3babd08b1a42d51ea0a3f0871617ea9d",
-      "outputSha256": "27a0f4780ca7a9235db2ad93a729ac43c39cdc307ec488c2fece48c4a96399e1",
+      "outputSha256": "a3ffafb2fb719486d950fc116bd1fc7c4dad8cd0bd03e4f5892edc620d54bddb",
       "edits": [
         {
           "start": 69,
@@ -1131914,6 +1132820,76 @@
           "renamed": "ArchiveConnectionHelpers"
         },
         {
+          "start": 302,
+          "end": 303,
+          "symbol": "M:sm.b(I)I",
+          "original": "b",
+          "renamed": "pollArchiveConnection"
+        },
+        {
+          "start": 308,
+          "end": 314,
+          "symbol": "P:sm.b(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 346,
+          "end": 358,
+          "symbol": "L:sm.b(I)I#0",
+          "original": "stackIn_15_0",
+          "renamed": "connectionFailureStatus"
+        },
+        {
+          "start": 378,
+          "end": 390,
+          "symbol": "L:sm.b(I)I#1",
+          "original": "stackIn_27_0",
+          "renamed": "timeoutFailureStatus"
+        },
+        {
+          "start": 410,
+          "end": 422,
+          "symbol": "L:sm.b(I)I#2",
+          "original": "stackIn_31_0",
+          "renamed": "rejectedReplyStatus"
+        },
+        {
+          "start": 442,
+          "end": 454,
+          "symbol": "L:sm.b(I)I#3",
+          "original": "stackIn_35_0",
+          "renamed": "connectedStatus"
+        },
+        {
+          "start": 474,
+          "end": 486,
+          "symbol": "L:sm.b(I)I#4",
+          "original": "stackIn_37_0",
+          "renamed": "pendingStatus"
+        },
+        {
+          "start": 512,
+          "end": 537,
+          "symbol": "L:sm.b(I)I#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtIoFailure"
+        },
+        {
+          "start": 560,
+          "end": 568,
+          "symbol": "L:sm.b(I)I#6",
+          "original": "var1_int",
+          "renamed": "replyCode"
+        },
+        {
+          "start": 596,
+          "end": 600,
+          "symbol": "L:sm.b(I)I#7",
+          "original": "var1",
+          "renamed": "ioFailure"
+        },
+        {
           "start": 619,
           "end": 621,
           "symbol": "C:wq",
@@ -1131921,11 +1132897,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 622,
+          "end": 626,
+          "symbol": "L:sm.b(I)I#8",
+          "original": "var2",
+          "renamed": "handshake"
+        },
+        {
           "start": 649,
           "end": 651,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 652,
+          "end": 659,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 660,
@@ -1131942,6 +1132932,13 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 701,
+          "end": 708,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 709,
           "end": 716,
           "symbol": "F:ih.field_f:I",
@@ -1131956,11 +1132953,25 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 777,
+          "end": 784,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 785,
           "end": 792,
           "symbol": "F:ih.field_f:I",
           "original": "field_f",
           "renamed": "lastError"
+        },
+        {
+          "start": 906,
+          "end": 912,
+          "symbol": "P:sm.b(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 917,
@@ -1131970,11 +1132981,25 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 920,
+          "end": 927,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 945,
           "end": 947,
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IndexedSpriteGeometry"
+        },
+        {
+          "start": 948,
+          "end": 955,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
         },
         {
           "start": 958,
@@ -1131984,11 +1133009,25 @@
           "renamed": "DialogMessagePanel"
         },
         {
+          "start": 969,
+          "end": 970,
+          "symbol": "M:tg.a(Ljava/lang/String;BI)Lql;",
+          "original": "a",
+          "renamed": "requestSocketConnection"
+        },
+        {
           "start": 971,
           "end": 973,
           "symbol": "C:wk",
           "original": "wk",
           "renamed": "LevelMetadata"
+        },
+        {
+          "start": 974,
+          "end": 981,
+          "symbol": "F:wk.field_k:Ljava/lang/String;",
+          "original": "field_k",
+          "renamed": "archiveHost"
         },
         {
           "start": 995,
@@ -1131998,11 +1133037,25 @@
           "renamed": "ByteArrayPoolHelpers"
         },
         {
+          "start": 998,
+          "end": 1005,
+          "symbol": "F:gd.field_a:I",
+          "original": "field_a",
+          "renamed": "archiveConnectPort"
+        },
+        {
           "start": 1022,
           "end": 1024,
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 1025,
+          "end": 1032,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
         },
         {
           "start": 1035,
@@ -1132012,11 +1133065,25 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 1038,
+          "end": 1045,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 1086,
           "end": 1088,
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 1089,
+          "end": 1096,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
         },
         {
           "start": 1118,
@@ -1132026,11 +1133093,25 @@
           "renamed": "IndexedSpriteGeometry"
         },
         {
+          "start": 1121,
+          "end": 1128,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
+        },
+        {
           "start": 1129,
           "end": 1136,
           "symbol": "F:ql.field_f:I",
           "original": "field_f",
           "renamed": "status"
+        },
+        {
+          "start": 1161,
+          "end": 1173,
+          "symbol": "L:sm.b(I)I#0",
+          "original": "stackIn_15_0",
+          "renamed": "connectionFailureStatus"
         },
         {
           "start": 1176,
@@ -1132040,11 +1133121,32 @@
           "renamed": "Brick"
         },
         {
+          "start": 1179,
+          "end": 1180,
+          "symbol": "M:on.a(BI)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionFailure"
+        },
+        {
+          "start": 1220,
+          "end": 1232,
+          "symbol": "L:sm.b(I)I#0",
+          "original": "stackIn_15_0",
+          "renamed": "connectionFailureStatus"
+        },
+        {
           "start": 1268,
           "end": 1270,
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IndexedSpriteGeometry"
+        },
+        {
+          "start": 1271,
+          "end": 1278,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
         },
         {
           "start": 1279,
@@ -1132061,11 +1133163,25 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 1314,
+          "end": 1321,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 1324,
           "end": 1326,
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 1327,
+          "end": 1334,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
         },
         {
           "start": 1386,
@@ -1132075,11 +1133191,25 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 1389,
+          "end": 1396,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 1419,
           "end": 1421,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 1422,
+          "end": 1429,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
         },
         {
           "start": 1436,
@@ -1132096,6 +1133226,13 @@
           "renamed": "IndexedSpriteGeometry"
         },
         {
+          "start": 1461,
+          "end": 1468,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
+        },
+        {
           "start": 1469,
           "end": 1476,
           "symbol": "F:ql.field_e:Ljava/lang/Object;",
@@ -1132108,6 +1133245,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "DialogMessagePanel"
+        },
+        {
+          "start": 1506,
+          "end": 1510,
+          "symbol": "L:sm.b(I)I#8",
+          "original": "var2",
+          "renamed": "handshake"
         },
         {
           "start": 1517,
@@ -1132124,11 +1133268,25 @@
           "renamed": "GrowableIntList"
         },
         {
+          "start": 1541,
+          "end": 1542,
+          "symbol": "M:c.a(IIIILwq;)V",
+          "original": "a",
+          "renamed": "writeServiceHeader"
+        },
+        {
           "start": 1543,
           "end": 1545,
           "symbol": "C:vb",
           "original": "vb",
           "renamed": "TextFieldWidget"
+        },
+        {
+          "start": 1546,
+          "end": 1553,
+          "symbol": "F:vb.field_S:I",
+          "original": "field_S",
+          "renamed": "serviceHeaderWordOne"
         },
         {
           "start": 1559,
@@ -1132138,6 +1133296,13 @@
           "renamed": "SoftwareFramebuffer"
         },
         {
+          "start": 1562,
+          "end": 1569,
+          "symbol": "F:nb.field_a:I",
+          "original": "field_a",
+          "renamed": "serviceHeaderWordTwo"
+        },
+        {
           "start": 1571,
           "end": 1572,
           "symbol": "C:u",
@@ -1132145,11 +1133310,46 @@
           "renamed": "CanvasViewGlobals"
         },
         {
+          "start": 1573,
+          "end": 1580,
+          "symbol": "F:u.field_g:I",
+          "original": "field_g",
+          "renamed": "serviceHeaderByte"
+        },
+        {
+          "start": 1582,
+          "end": 1586,
+          "symbol": "L:sm.b(I)I#8",
+          "original": "var2",
+          "renamed": "handshake"
+        },
+        {
+          "start": 1603,
+          "end": 1607,
+          "symbol": "L:sm.b(I)I#8",
+          "original": "var2",
+          "renamed": "handshake"
+        },
+        {
           "start": 1608,
           "end": 1609,
           "symbol": "M:wq.a(II)V",
           "original": "a",
           "renamed": "writeByte"
+        },
+        {
+          "start": 1610,
+          "end": 1616,
+          "symbol": "P:sm.b(I)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1643,
+          "end": 1647,
+          "symbol": "L:sm.b(I)I#8",
+          "original": "var2",
+          "renamed": "handshake"
         },
         {
           "start": 1648,
@@ -1132166,6 +1133366,13 @@
           "renamed": "ArcticBackground"
         },
         {
+          "start": 1653,
+          "end": 1660,
+          "symbol": "F:fi.field_t:I",
+          "original": "field_t",
+          "renamed": "archiveHandshakeWord"
+        },
+        {
           "start": 1689,
           "end": 1691,
           "symbol": "C:dm",
@@ -1132173,11 +1133380,25 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 1692,
+          "end": 1699,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
+        },
+        {
           "start": 1700,
           "end": 1701,
           "symbol": "M:wh.a([BZII)V",
           "original": "a",
           "renamed": "write"
+        },
+        {
+          "start": 1702,
+          "end": 1706,
+          "symbol": "L:sm.b(I)I#8",
+          "original": "var2",
+          "renamed": "handshake"
         },
         {
           "start": 1707,
@@ -1132194,6 +1133415,13 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 1747,
+          "end": 1754,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 1757,
           "end": 1759,
           "symbol": "C:qj",
@@ -1132201,11 +1133429,25 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 1760,
+          "end": 1767,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 1787,
           "end": 1789,
           "symbol": "C:ff",
           "original": "ff",
           "renamed": "LoginCredentials"
+        },
+        {
+          "start": 1790,
+          "end": 1797,
+          "symbol": "F:ff.field_b:J",
+          "original": "field_b",
+          "renamed": "archiveReplyDeadlineMillis"
         },
         {
           "start": 1800,
@@ -1132229,11 +1133471,25 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 1855,
+          "end": 1862,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 1889,
           "end": 1891,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 1892,
+          "end": 1899,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
         },
         {
           "start": 1900,
@@ -1132243,11 +1133499,25 @@
           "renamed": "available"
         },
         {
+          "start": 1932,
+          "end": 1940,
+          "symbol": "L:sm.b(I)I#6",
+          "original": "var1_int",
+          "renamed": "replyCode"
+        },
+        {
           "start": 1943,
           "end": 1945,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 1946,
+          "end": 1953,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
         },
         {
           "start": 1954,
@@ -1132257,11 +1133527,46 @@
           "renamed": "readByte"
         },
         {
+          "start": 1980,
+          "end": 1988,
+          "symbol": "L:sm.b(I)I#6",
+          "original": "var1_int",
+          "renamed": "replyCode"
+        },
+        {
+          "start": 2015,
+          "end": 2027,
+          "symbol": "L:sm.b(I)I#2",
+          "original": "stackIn_31_0",
+          "renamed": "rejectedReplyStatus"
+        },
+        {
           "start": 2030,
           "end": 2032,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 2033,
+          "end": 2034,
+          "symbol": "M:on.a(BI)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionFailure"
+        },
+        {
+          "start": 2046,
+          "end": 2054,
+          "symbol": "L:sm.b(I)I#6",
+          "original": "var1_int",
+          "renamed": "replyCode"
+        },
+        {
+          "start": 2082,
+          "end": 2094,
+          "symbol": "L:sm.b(I)I#2",
+          "original": "stackIn_31_0",
+          "renamed": "rejectedReplyStatus"
         },
         {
           "start": 2130,
@@ -1132271,6 +1133576,13 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 2133,
+          "end": 2140,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 2143,
           "end": 2145,
           "symbol": "C:qj",
@@ -1132278,11 +1133590,25 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 2146,
+          "end": 2153,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
           "start": 2202,
           "end": 2204,
           "symbol": "C:ff",
           "original": "ff",
           "renamed": "LoginCredentials"
+        },
+        {
+          "start": 2205,
+          "end": 2212,
+          "symbol": "F:ff.field_b:J",
+          "original": "field_b",
+          "renamed": "archiveReplyDeadlineMillis"
         },
         {
           "start": 2215,
@@ -1132299,11 +1133625,32 @@
           "renamed": "nowMillis"
         },
         {
+          "start": 2248,
+          "end": 2260,
+          "symbol": "L:sm.b(I)I#1",
+          "original": "stackIn_27_0",
+          "renamed": "timeoutFailureStatus"
+        },
+        {
           "start": 2263,
           "end": 2265,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 2266,
+          "end": 2267,
+          "symbol": "M:on.a(BI)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionFailure"
+        },
+        {
+          "start": 2310,
+          "end": 2322,
+          "symbol": "L:sm.b(I)I#1",
+          "original": "stackIn_27_0",
+          "renamed": "timeoutFailureStatus"
         },
         {
           "start": 2388,
@@ -1132313,11 +1133660,39 @@
           "renamed": "GameplayScreen"
         },
         {
+          "start": 2391,
+          "end": 2398,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
+        },
+        {
+          "start": 2421,
+          "end": 2433,
+          "symbol": "L:sm.b(I)I#4",
+          "original": "stackIn_37_0",
+          "renamed": "pendingStatus"
+        },
+        {
+          "start": 2461,
+          "end": 2473,
+          "symbol": "L:sm.b(I)I#4",
+          "original": "stackIn_37_0",
+          "renamed": "pendingStatus"
+        },
+        {
           "start": 2501,
           "end": 2503,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 2504,
+          "end": 2511,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 2512,
@@ -1132334,6 +1133709,13 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 2517,
+          "end": 2524,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
+        },
+        {
           "start": 2526,
           "end": 2528,
           "symbol": "C:rd",
@@ -1132348,11 +1133730,25 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 2558,
+          "end": 2565,
+          "symbol": "F:dm.field_d:Lwh;",
+          "original": "field_d",
+          "renamed": "pendingArchiveTransport"
+        },
+        {
           "start": 2586,
           "end": 2588,
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 2589,
+          "end": 2596,
+          "symbol": "F:qj.field_j:I",
+          "original": "field_j",
+          "renamed": "archiveConnectionPhase"
         },
         {
           "start": 2614,
@@ -1132362,11 +1133758,102 @@
           "renamed": "IndexedSpriteGeometry"
         },
         {
+          "start": 2617,
+          "end": 2624,
+          "symbol": "F:fc.field_e:Lql;",
+          "original": "field_e",
+          "renamed": "archiveSocketTask"
+        },
+        {
+          "start": 2645,
+          "end": 2657,
+          "symbol": "L:sm.b(I)I#3",
+          "original": "stackIn_35_0",
+          "renamed": "connectedStatus"
+        },
+        {
+          "start": 2682,
+          "end": 2694,
+          "symbol": "L:sm.b(I)I#3",
+          "original": "stackIn_35_0",
+          "renamed": "connectedStatus"
+        },
+        {
+          "start": 2735,
+          "end": 2761,
+          "symbol": "L:sm.b(I)I#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 2777,
+          "end": 2802,
+          "symbol": "L:sm.b(I)I#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtIoFailure"
+        },
+        {
+          "start": 2805,
+          "end": 2831,
+          "symbol": "L:sm.b(I)I#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 2845,
+          "end": 2849,
+          "symbol": "L:sm.b(I)I#7",
+          "original": "var1",
+          "renamed": "ioFailure"
+        },
+        {
+          "start": 2875,
+          "end": 2900,
+          "symbol": "L:sm.b(I)I#5",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtIoFailure"
+        },
+        {
           "start": 2921,
           "end": 2923,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 2924,
+          "end": 2925,
+          "symbol": "M:on.a(BI)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionFailure"
+        },
+        {
+          "start": 2998,
+          "end": 3026,
+          "symbol": "L:sm.b(I)I#10",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 3046,
+          "end": 3074,
+          "symbol": "L:sm.b(I)I#10",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 3103,
+          "end": 3129,
+          "symbol": "L:sm.b(I)I#11",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
+        },
+        {
+          "start": 3170,
+          "end": 3196,
+          "symbol": "L:sm.b(I)I#11",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
         },
         {
           "start": 3285,
@@ -1160906,7 +1162393,7 @@
       "original": "tg.java",
       "renamed": "PlatformServices.java",
       "inputSha256": "0da0d4db936e4a03910b5bc134333fd73e0c85c67580c6a3f1ce6d08ff7043c3",
-      "outputSha256": "ffae32f3aa5ac014e855432956226a8be2d561da2ee4e8809fc104e672e436e1",
+      "outputSha256": "95f44a12a7b4aa85f1b924927b9a64bb2649c1414f0a31608bb47acb4a4005c9",
       "edits": [
         {
           "start": 69,
@@ -1161378,6 +1162865,34 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 1966,
+          "end": 1967,
+          "symbol": "M:tg.a(Ljava/lang/String;BI)Lql;",
+          "original": "a",
+          "renamed": "requestSocketConnection"
+        },
+        {
+          "start": 1975,
+          "end": 1981,
+          "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#0",
+          "original": "param0",
+          "renamed": "host"
+        },
+        {
+          "start": 1988,
+          "end": 1994,
+          "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2000,
+          "end": 2006,
+          "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#2",
+          "original": "param2",
+          "renamed": "port"
+        },
+        {
           "start": 2018,
           "end": 2020,
           "symbol": "C:ql",
@@ -1161385,11 +1162900,32 @@
           "renamed": "PlatformTask"
         },
         {
+          "start": 2053,
+          "end": 2059,
+          "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 2138,
           "end": 2139,
           "symbol": "M:tg.a(ZILjava/lang/Object;II)Lql;",
           "original": "a",
           "renamed": "enqueue"
+        },
+        {
+          "start": 2209,
+          "end": 2215,
+          "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#0",
+          "original": "param0",
+          "renamed": "host"
+        },
+        {
+          "start": 2217,
+          "end": 2223,
+          "symbol": "P:tg.a(Ljava/lang/String;BI)Lql;#2",
+          "original": "param2",
+          "renamed": "port"
         },
         {
           "start": 2656,
@@ -1162663,6 +1164199,13 @@
           "symbol": "P:tg.a(ZILjava/lang/Object;II)Lql;#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 20282,
+          "end": 20283,
+          "symbol": "M:tg.a(Ljava/lang/String;BI)Lql;",
+          "original": "a",
+          "renamed": "requestSocketConnection"
         },
         {
           "start": 20340,
@@ -1182075,7 +1183618,7 @@
       "original": "u.java",
       "renamed": "CanvasViewGlobals.java",
       "inputSha256": "7a81dbe6ca8ee9430fede5512b0aaaac391dc9a1946a3c4ee7029ead08bc1626",
-      "outputSha256": "2c36779d16ae6b8ea419fd3c20511ca23ff53a191174b2f633a00f871b2bbf8b",
+      "outputSha256": "2e37fcd2ba65e09755461fb15b73e1ca8ce85e92845f399b0541511744e98dc6",
       "edits": [
         {
           "start": 50,
@@ -1182083,6 +1183626,13 @@
           "symbol": "C:u",
           "original": "u",
           "renamed": "CanvasViewGlobals"
+        },
+        {
+          "start": 69,
+          "end": 76,
+          "symbol": "F:u.field_g:I",
+          "original": "field_g",
+          "renamed": "serviceHeaderByte"
         },
         {
           "start": 194,
@@ -1210385,7 +1211935,7 @@
       "original": "up.java",
       "renamed": "StatefulWidgetRenderer.java",
       "inputSha256": "b6ba923dc036763f7640446ea363c983180d520119dcd3f943d18ffc2da468ce",
-      "outputSha256": "717495fb9e15115b60b379d7a71307ecbb8b7de614cffa0765f507d5af2dc869",
+      "outputSha256": "32620a4249bd563ea192a9c561a0ac7b890bed70d9bef9a5da752f3e0f92460d",
       "edits": [
         {
           "start": 50,
@@ -1210456,6 +1212006,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 229,
+          "end": 236,
+          "symbol": "F:up.field_z:I",
+          "original": "field_z",
+          "renamed": "alternateArchivePort"
         },
         {
           "start": 254,
@@ -1215093,7 +1216650,7 @@
       "original": "vb.java",
       "renamed": "TextFieldWidget.java",
       "inputSha256": "96f7813af935be1697132c1ff27db7a487c15be5ffcbfcbeead19391f1e77679",
-      "outputSha256": "dbbfbed90edba3a73ad1863a619b00776ccc158a1eaf14f9754f98fa6825b992",
+      "outputSha256": "89940bd108dd9dc67059a64210a6d41dcd3acff02359afa2c2ee90c0ee8e094a",
       "edits": [
         {
           "start": 44,
@@ -1215136,6 +1216693,13 @@
           "symbol": "F:vb.field_L:I",
           "original": "field_L",
           "renamed": "selectionAnchor"
+        },
+        {
+          "start": 179,
+          "end": 186,
+          "symbol": "F:vb.field_S:I",
+          "original": "field_S",
+          "renamed": "serviceHeaderWordOne"
         },
         {
           "start": 204,
@@ -1215220,6 +1216784,13 @@
           "symbol": "P:vb.c(Z)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 484,
+          "end": 491,
+          "symbol": "F:vb.field_S:I",
+          "original": "field_S",
+          "renamed": "serviceHeaderWordOne"
         },
         {
           "start": 663,
@@ -1216314,6 +1217885,13 @@
           "renamed": "parentY"
         },
         {
+          "start": 7172,
+          "end": 7179,
+          "symbol": "F:vb.field_S:I",
+          "original": "field_S",
+          "renamed": "serviceHeaderWordOne"
+        },
+        {
           "start": 7410,
           "end": 7411,
           "symbol": "M:vb.h(I)V",
@@ -1217166,6 +1218744,13 @@
           "symbol": "P:vb.a(IBLoc;C)Z#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 12759,
+          "end": 12766,
+          "symbol": "F:vb.field_S:I",
+          "original": "field_S",
+          "renamed": "serviceHeaderWordOne"
         },
         {
           "start": 12799,
@@ -1218259,7 +1219844,7 @@
       "original": "vd.java",
       "renamed": "PacketReceiveHelpers.java",
       "inputSha256": "d4d1e6abdf40b29da06d887f2fd4651057ca8a3918cb1e8a27694d426b3de24e",
-      "outputSha256": "1ae94f9318c3ea529e28e6b92bc10c6f013385353cfafed50dad412fed95287d",
+      "outputSha256": "5129a0f5b11046dba49f0e975d4a133470b4b783b2fa67297be24b3f3cdd3f3c",
       "edits": [
         {
           "start": 69,
@@ -1218288,6 +1219873,13 @@
           "symbol": "C:ih",
           "original": "ih",
           "renamed": "ArchiveFetchClient"
+        },
+        {
+          "start": 216,
+          "end": 223,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 251,
@@ -1218841,6 +1220433,13 @@
           "symbol": "C:mo",
           "original": "mo",
           "renamed": "BirthDateEntryPanel"
+        },
+        {
+          "start": 2204,
+          "end": 2211,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 2303,
@@ -1241537,7 +1243136,7 @@
       "original": "wg.java",
       "renamed": "GameCanvas.java",
       "inputSha256": "4aea8b7448b078fa853e324a40fe6adccac0769e0efa6ccd69573ef9e24b1382",
-      "outputSha256": "a1d1a60412d052f761b970b58489189d6f1965fbfdb2fd3afb9e4ba5d757f247",
+      "outputSha256": "5e32bacb93254ad73bed96ad7c59a78b1c8d1ecb75a54235c346df703a830fc3",
       "edits": [
         {
           "start": 50,
@@ -1241666,6 +1243265,20 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 2591,
+          "end": 2592,
+          "symbol": "M:wg.a(Z)I",
+          "original": "a",
+          "renamed": "pollArchiveSources"
+        },
+        {
+          "start": 2601,
+          "end": 2607,
+          "symbol": "P:wg.a(Z)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 2619,
           "end": 2621,
           "symbol": "C:dp",
@@ -1241685,6 +1243298,13 @@
           "symbol": "M:co.a(I)V",
           "original": "a",
           "renamed": "maintainArchiveSources"
+        },
+        {
+          "start": 2649,
+          "end": 2655,
+          "symbol": "P:wg.a(Z)I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 2669,
@@ -1241729,6 +1243349,13 @@
           "renamed": "PacketReceiveHelpers"
         },
         {
+          "start": 2738,
+          "end": 2745,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
+        },
+        {
           "start": 2746,
           "end": 2747,
           "symbol": "M:ih.b(I)Z",
@@ -1241743,11 +1243370,25 @@
           "renamed": "ArchiveConnectionHelpers"
         },
         {
+          "start": 2809,
+          "end": 2810,
+          "symbol": "M:sm.b(I)I",
+          "original": "b",
+          "renamed": "pollArchiveConnection"
+        },
+        {
           "start": 2838,
           "end": 2840,
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 2841,
+          "end": 2848,
+          "symbol": "F:vd.field_f:Lih;",
+          "original": "field_f",
+          "renamed": "archiveFetchClient"
         },
         {
           "start": 2849,
@@ -1241762,6 +1243403,13 @@
           "symbol": "C:sm",
           "original": "sm",
           "renamed": "ArchiveConnectionHelpers"
+        },
+        {
+          "start": 2906,
+          "end": 2907,
+          "symbol": "M:sm.b(I)I",
+          "original": "b",
+          "renamed": "pollArchiveConnection"
         },
         {
           "start": 2996,
@@ -1247673,7 +1249321,7 @@
       "original": "wk.java",
       "renamed": "LevelMetadata.java",
       "inputSha256": "f6592373c7930d52d19ff2474ee4e4b5e7726461b68cb77289e285940a8001a8",
-      "outputSha256": "8d97ad4d75c257e56c4b41a9562494f48ef9edf4b406144c632ff79f9970abcd",
+      "outputSha256": "b57aa1150ac04c384f5e02bcadffadbdf4cf66c425665a7c52222750065d4e5a",
       "edits": [
         {
           "start": 50,
@@ -1247730,6 +1249378,20 @@
           "symbol": "F:wk.field_i:I",
           "original": "field_i",
           "renamed": "attributeWord"
+        },
+        {
+          "start": 244,
+          "end": 251,
+          "symbol": "F:wk.field_k:Ljava/lang/String;",
+          "original": "field_k",
+          "renamed": "archiveHost"
+        },
+        {
+          "start": 302,
+          "end": 309,
+          "symbol": "F:wk.field_k:Ljava/lang/String;",
+          "original": "field_k",
+          "renamed": "archiveHost"
         },
         {
           "start": 356,
@@ -1269623,10 +1271285,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "f922ca9f0310e4982a9b47db3d7ab7d7daf028713e83e36a0513793716031c20",
+    "rulesSha256": "9f33718892e85af87344ddd4135f3dc39e234855c1b079258616aae2334d12ab",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "b311823d420163cc3b341fbb5941fd5751d13640f7968cf2e271b5d05f936e15",
+    "outputTreeSha256": "f5ba8660331dac3f0c6903d6a8162a31928002cfe64a0a7676035b3f432f215b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1269650,6 +1271312,14 @@
         "traceSha256": "d1a566b581ae402aa19bf3eaf421fb58eb31ca591f7d54708b3d9e0956c97364",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "serviceHeader": {
+          "checks": 527249,
+          "traceSha256": "a6e42900659658b7a4fb8bd47cbdf682722e49913aa07ebdced06edf9db8142c",
+          "independentExpectations": true,
+          "wireBytes": 8,
+          "fixedWord": 17,
+          "rawNamedIdentical": true
+        },
         "tooltipTransitionTableFixtures": true,
         "tooltipDelayBoundaryFixtures": true,
         "tooltipSuppressionFixtures": true,

@@ -12,7 +12,7 @@ final class GameplayScreen extends GameScreen {
     int loadedBoardSnapshots;
     static UiComponent friendLocationHeading;
     boolean resultWordMode;
-    static int field_j;
+    static int archiveConnectionPhase;
     int localPlayerId;
     boolean suppressResultSubmission;
     private int viewedPlayerId;

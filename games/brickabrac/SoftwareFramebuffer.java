@@ -6,7 +6,7 @@ abstract class SoftwareFramebuffer {
     int width;
     static UiComponent field_e;
     int height;
-    static int field_a;
+    static int serviceHeaderWordTwo;
     java.awt.Image image;
     static TableNameEntry[] tableNameScratch;
 

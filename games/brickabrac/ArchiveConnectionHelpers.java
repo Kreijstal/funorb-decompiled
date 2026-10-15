@@ -15,84 +15,84 @@ final class ArchiveConnectionHelpers {
         }
     }
 
-    final static int b(int param0) {
+    final static int pollArchiveConnection(int obfuscationGuard) {
         try {
-          int stackIn_15_0 = 0;
-          int stackIn_27_0 = 0;
-          int stackIn_31_0 = 0;
-          int stackIn_35_0 = 0;
-          int stackIn_37_0 = 0;
-          Throwable decompiledCaughtException = null;
-          int var1_int = 0;
-          IOException var1 = null;
-          PacketBuffer var2 = null;
-          if (PacketReceiveHelpers.field_f.failureCount >= 4) {
-            if (-1 == PacketReceiveHelpers.field_f.lastError) {
+          int connectionFailureStatus = 0;
+          int timeoutFailureStatus = 0;
+          int rejectedReplyStatus = 0;
+          int connectedStatus = 0;
+          int pendingStatus = 0;
+          Throwable caughtIoFailure = null;
+          int replyCode = 0;
+          IOException ioFailure = null;
+          PacketBuffer handshake = null;
+          if (PacketReceiveHelpers.archiveFetchClient.failureCount >= 4) {
+            if (-1 == PacketReceiveHelpers.archiveFetchClient.lastError) {
               return 3;
             }
-            if (PacketReceiveHelpers.field_f.lastError != -2) {
+            if (PacketReceiveHelpers.archiveFetchClient.lastError != -2) {
               return 1;
             }
             return 4;
           }
           try {
-            if (param0 == ~GameplayScreen.field_j) {
-              IndexedSpriteGeometry.field_e = DialogMessagePanel.field_P.a(LevelMetadata.field_k, (byte) 120, ByteArrayPoolHelpers.field_a);
-              GameplayScreen.field_j = GameplayScreen.field_j + 1;
+            if (obfuscationGuard == ~GameplayScreen.archiveConnectionPhase) {
+              IndexedSpriteGeometry.archiveSocketTask = DialogMessagePanel.field_P.requestSocketConnection(LevelMetadata.archiveHost, (byte) 120, ByteArrayPoolHelpers.archiveConnectPort);
+              GameplayScreen.archiveConnectionPhase = GameplayScreen.archiveConnectionPhase + 1;
             }
-            if (1 == GameplayScreen.field_j) {
-              if (IndexedSpriteGeometry.field_e.status == 2) {
-                stackIn_15_0 = Brick.a((byte) 41, -1);
-                return stackIn_15_0;
+            if (1 == GameplayScreen.archiveConnectionPhase) {
+              if (IndexedSpriteGeometry.archiveSocketTask.status == 2) {
+                connectionFailureStatus = Brick.handleArchiveConnectionFailure((byte) 41, -1);
+                return connectionFailureStatus;
               }
-              if (IndexedSpriteGeometry.field_e.status == 1) {
-                GameplayScreen.field_j = GameplayScreen.field_j + 1;
+              if (IndexedSpriteGeometry.archiveSocketTask.status == 1) {
+                GameplayScreen.archiveConnectionPhase = GameplayScreen.archiveConnectionPhase + 1;
               }
             }
-            if (GameplayScreen.field_j == 2) {
-              MouseInput.field_d = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.field_e.result), DialogMessagePanel.field_P);
-              var2 = new PacketBuffer(13);
-              GrowableIntList.a(TextFieldWidget.field_S, 12, SoftwareFramebuffer.field_a, CanvasViewGlobals.field_g, var2);
-              var2.writeByte(param0 ^ 119, 15);
-              var2.writeInt(ArcticBackground.field_t, (byte) -79);
-              MouseInput.field_d.write(var2.data, true, 13, 0);
-              GameplayScreen.field_j = GameplayScreen.field_j + 1;
-              LoginCredentials.field_b = MonotonicTime.nowMillis(false) + 30000L;
+            if (GameplayScreen.archiveConnectionPhase == 2) {
+              MouseInput.pendingArchiveTransport = new BufferedSocket((java.net.Socket) (IndexedSpriteGeometry.archiveSocketTask.result), DialogMessagePanel.field_P);
+              handshake = new PacketBuffer(13);
+              GrowableIntList.writeServiceHeader(TextFieldWidget.serviceHeaderWordOne, 12, SoftwareFramebuffer.serviceHeaderWordTwo, CanvasViewGlobals.serviceHeaderByte, handshake);
+              handshake.writeByte(obfuscationGuard ^ 119, 15);
+              handshake.writeInt(ArcticBackground.archiveHandshakeWord, (byte) -79);
+              MouseInput.pendingArchiveTransport.write(handshake.data, true, 13, 0);
+              GameplayScreen.archiveConnectionPhase = GameplayScreen.archiveConnectionPhase + 1;
+              LoginCredentials.archiveReplyDeadlineMillis = MonotonicTime.nowMillis(false) + 30000L;
             }
-            if (GameplayScreen.field_j == 3) {
-              if (MouseInput.field_d.available(10434) > 0) {
-                var1_int = MouseInput.field_d.readByte(0);
-                if (var1_int != 0) {
-                  stackIn_31_0 = Brick.a((byte) 90, var1_int);
-                  return stackIn_31_0;
+            if (GameplayScreen.archiveConnectionPhase == 3) {
+              if (MouseInput.pendingArchiveTransport.available(10434) > 0) {
+                replyCode = MouseInput.pendingArchiveTransport.readByte(0);
+                if (replyCode != 0) {
+                  rejectedReplyStatus = Brick.handleArchiveConnectionFailure((byte) 90, replyCode);
+                  return rejectedReplyStatus;
                 }
-                GameplayScreen.field_j = GameplayScreen.field_j + 1;
+                GameplayScreen.archiveConnectionPhase = GameplayScreen.archiveConnectionPhase + 1;
               } else {
-                if (LoginCredentials.field_b < MonotonicTime.nowMillis(false)) {
-                  stackIn_27_0 = Brick.a((byte) -85, -2);
-                  return stackIn_27_0;
+                if (LoginCredentials.archiveReplyDeadlineMillis < MonotonicTime.nowMillis(false)) {
+                  timeoutFailureStatus = Brick.handleArchiveConnectionFailure((byte) -85, -2);
+                  return timeoutFailureStatus;
                 }
               }
             }
-            if (GameplayScreen.field_j != 4) {
-              stackIn_37_0 = -1;
-              return stackIn_37_0;
+            if (GameplayScreen.archiveConnectionPhase != 4) {
+              pendingStatus = -1;
+              return pendingStatus;
             }
-            PacketReceiveHelpers.field_f.attachTransport(MouseInput.field_d, GamePresentationHelpers.field_a, 12);
-            MouseInput.field_d = null;
-            GameplayScreen.field_j = 0;
-            IndexedSpriteGeometry.field_e = null;
-            stackIn_35_0 = 0;
-            return stackIn_35_0;
-          } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var1 = (IOException) (Object) decompiledCaughtException;
-            return Brick.a((byte) -111, -3);
+            PacketReceiveHelpers.archiveFetchClient.attachTransport(MouseInput.pendingArchiveTransport, GamePresentationHelpers.field_a, 12);
+            MouseInput.pendingArchiveTransport = null;
+            GameplayScreen.archiveConnectionPhase = 0;
+            IndexedSpriteGeometry.archiveSocketTask = null;
+            connectedStatus = 0;
+            return connectedStatus;
+          } catch (java.io.IOException caughtParameter) {
+            caughtIoFailure = caughtParameter;
+            ioFailure = (IOException) (Object) caughtIoFailure;
+            return Brick.handleArchiveConnectionFailure((byte) -111, -3);
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

@@ -736,7 +736,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           OutgoingPacketHelpers.field_a == 0) {
           stackIn_23_0 = (OutgoingPacketHelpers.field_a != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          OutgoingPacketHelpers.field_a = GameCanvas.a(false);
+          OutgoingPacketHelpers.field_a = GameCanvas.pollArchiveSources(false);
           if (var3Lifetime1 != 0 &&
             OutgoingPacketHelpers.field_a == 0 &&
             AchievementIcon.field_j == 11 &&

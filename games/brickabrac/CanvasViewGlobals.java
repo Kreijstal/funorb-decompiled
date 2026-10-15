@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CanvasViewGlobals {
-    static int field_g;
+    static int serviceHeaderByte;
     static String field_b;
     static String field_f;
     static int field_d;

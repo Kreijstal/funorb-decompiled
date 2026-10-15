@@ -8,7 +8,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
     private WidgetPaintStyle[] stylesByState;
     static String field_x;
     static RgbSprite field_w;
-    static int field_z;
+    static int alternateArchivePort;
 
     final void setStateFrameSprites(boolean obfuscationGuard, int stateIndex, RgbSprite[] sprites) {
         int slotIndex = 0;

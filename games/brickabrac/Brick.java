@@ -156,7 +156,7 @@ final class Brick extends RectangleBody {
           this.attachMotionPath(path, (byte) -105);
           this.interpolateMotion((byte) 36, includeVelocity);
           if (obfuscationGuard != 4) {
-            Brick.a((byte) -120, -81);
+            Brick.handleArchiveConnectionFailure((byte) -120, -81);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "on.P(" + (path != null ? "{...}" : "null") + ',' + includeVelocity + ',' + obfuscationGuard + ')');
@@ -418,34 +418,34 @@ final class Brick extends RectangleBody {
         this.segmentElapsedTicks = 0;
     }
 
-    final static int a(byte param0, int param1) {
-        int var4 = BrickABrac.field_J ? 1 : 0;
-        GameplayScreen.field_j = 0;
-        MouseInput.field_d = null;
-        IndexedSpriteGeometry.field_e = null;
-        int var2 = ByteArrayPoolHelpers.field_a;
-        ByteArrayPoolHelpers.field_a = StatefulWidgetRenderer.field_z;
-        int var3 = -47 / ((param0 + 22) / 61);
-        if (param1 == 51) {
-          PacketReceiveHelpers.field_f.lastError = 2;
+    final static int handleArchiveConnectionFailure(byte obfuscationGuard, int responseCode) {
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        GameplayScreen.archiveConnectionPhase = 0;
+        MouseInput.pendingArchiveTransport = null;
+        IndexedSpriteGeometry.archiveSocketTask = null;
+        int previousArchivePort = ByteArrayPoolHelpers.archiveConnectPort;
+        ByteArrayPoolHelpers.archiveConnectPort = StatefulWidgetRenderer.alternateArchivePort;
+        int guardCalculation = -47 / ((obfuscationGuard + 22) / 61);
+        if (responseCode == 51) {
+          PacketReceiveHelpers.archiveFetchClient.lastError = 2;
         } else {
-          if (param1 != 50) {
-            PacketReceiveHelpers.field_f.lastError = 1;
+          if (responseCode != 50) {
+            PacketReceiveHelpers.archiveFetchClient.lastError = 1;
           } else {
-            PacketReceiveHelpers.field_f.lastError = 5;
+            PacketReceiveHelpers.archiveFetchClient.lastError = 5;
           }
         }
-        StatefulWidgetRenderer.field_z = var2;
-        PacketReceiveHelpers.field_f.failureCount = PacketReceiveHelpers.field_f.failureCount + 1;
-        if (2 <= PacketReceiveHelpers.field_f.failureCount &&
-          param1 == 51) {
+        StatefulWidgetRenderer.alternateArchivePort = previousArchivePort;
+        PacketReceiveHelpers.archiveFetchClient.failureCount = PacketReceiveHelpers.archiveFetchClient.failureCount + 1;
+        if (2 <= PacketReceiveHelpers.archiveFetchClient.failureCount &&
+          responseCode == 51) {
           return 2;
         }
-        if (PacketReceiveHelpers.field_f.failureCount >= 2 &&
-          param1 == 50) {
+        if (PacketReceiveHelpers.archiveFetchClient.failureCount >= 2 &&
+          responseCode == 50) {
           return 5;
         }
-        if (!(PacketReceiveHelpers.field_f.failureCount < 4)) {
+        if (!(PacketReceiveHelpers.archiveFetchClient.failureCount < 4)) {
           return 1;
         }
         return -1;

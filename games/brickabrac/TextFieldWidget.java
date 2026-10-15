@@ -6,7 +6,7 @@ class TextFieldWidget extends FocusableWidget {
     private int maxLength;
     private boolean doubleClickSelection;
     private int selectionAnchor;
-    static int field_S;
+    static int serviceHeaderWordOne;
     private int caretIndex;
     static UiComponent field_K;
     private boolean autoScrollCaret;
@@ -19,7 +19,7 @@ class TextFieldWidget extends FocusableWidget {
         this.caretIndex = 0;
         this.notifyTextChanged(122);
         if (obfuscationGuard) {
-          field_S = 97;
+          serviceHeaderWordOne = 97;
         }
     }
 
@@ -222,7 +222,7 @@ class TextFieldWidget extends FocusableWidget {
           String var2 = null;
           Exception var2_ref = null;
           if (param0 != 32) {
-            field_S = 68;
+            serviceHeaderWordOne = 68;
           }
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
@@ -386,7 +386,7 @@ class TextFieldWidget extends FocusableWidget {
         try {
           this.caretBlinkStartMillis = MonotonicTime.nowMillis(false);
           if (obfuscationGuard != 110) {
-            field_S = 20;
+            serviceHeaderWordOne = 20;
           }
           if (character != 60 &&
             62 != character) {

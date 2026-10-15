@@ -5,7 +5,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     static ContentTransitionPhase contentResizing;
     static RgbSprite farmFarSprite;
     static String field_a;
-    static BufferedSocket field_d;
+    static BufferedSocket pendingArchiveTransport;
     static WidgetTheme sharedWidgetTheme;
     static int field_b;
     static byte[] field_c;
@@ -117,11 +117,11 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         sharedWidgetTheme = null;
         contentResizing = null;
         field_c = null;
-        field_d = null;
+        pendingArchiveTransport = null;
         field_a = null;
         farmFarSprite = null;
         if (param0 != 24) {
-          field_d = (BufferedSocket) null;
+          pendingArchiveTransport = (BufferedSocket) null;
         }
     }
 

@@ -67,13 +67,13 @@ final class PlatformServices implements Runnable {
         return this.enqueue(true, refreshRate + (bitDepth << 16), (Object) null, 6, (width << 16) + height);
     }
 
-    final PlatformTask a(String param0, byte param1, int param2) {
+    final PlatformTask requestSocketConnection(String host, byte obfuscationGuard, int port) {
         PlatformTask discarded$0 = null;
-        if (param1 != 120) {
+        if (obfuscationGuard != 120) {
           Object var5 = (Object) null;
           discarded$0 = this.enqueue(false, -76, (Object) null, 124, 36);
         }
-        return this.a(param0, param2, false, -31592);
+        return this.a(host, port, false, -31592);
     }
 
     public final void run() {
@@ -472,7 +472,7 @@ final class PlatformServices implements Runnable {
         var6.payload = payload;
         if (!obfuscationGuard) {
           var9 = (String) null;
-          this.a((String) null, (byte) -43, 124);
+          this.requestSocketConnection((String) null, (byte) -43, 124);
         }
         var6.argumentTwo = argumentTwo;
         var6.operation = operation;

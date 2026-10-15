@@ -7,7 +7,7 @@ abstract class LoginCredentials {
     static String field_j;
     static String[][] field_i;
     static ScreenshotViewer field_c;
-    static long field_b;
+    static long archiveReplyDeadlineMillis;
     static String field_a;
     static int[] field_h;
     static NodeDeque diagnosticLines;

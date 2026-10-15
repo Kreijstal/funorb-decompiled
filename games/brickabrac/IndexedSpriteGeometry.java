@@ -3,7 +3,7 @@
  */
 abstract class IndexedSpriteGeometry {
     int height;
-    static PlatformTask field_e;
+    static PlatformTask archiveSocketTask;
     static String field_c;
     int canvasHeight;
     int offsetX;
@@ -25,7 +25,7 @@ abstract class IndexedSpriteGeometry {
     }
 
     public static void b(int param0) {
-        field_e = null;
+        archiveSocketTask = null;
         field_c = null;
         if (param0 != 31797) {
           field_c = (String) null;

@@ -10,10 +10,10 @@ final class LevelMetadata extends IntrusiveNode {
     String title;
     int attributeWord;
     static boolean field_p;
-    static String field_k;
+    static String archiveHost;
 
     public static void a(byte param0) {
-        field_k = null;
+        archiveHost = null;
         if (param0 <= 90) {
           LevelMetadata.a((byte) -14);
         }

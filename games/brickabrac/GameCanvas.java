@@ -64,20 +64,20 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         }
     }
 
-    final static int a(boolean param0) {
+    final static int pollArchiveSources(boolean obfuscationGuard) {
         HalloweenBackground.archiveSourceManager.maintainArchiveSources(77);
-        if (param0) {
+        if (obfuscationGuard) {
           MenuScreen var2 = (MenuScreen) null;
           GameCanvas.registerMenuScreen(43, (MenuScreen) null);
-          if (PacketReceiveHelpers.field_f.pollTransport(72)) {
+          if (PacketReceiveHelpers.archiveFetchClient.pollTransport(72)) {
             return 0;
           }
-          return ArchiveConnectionHelpers.b(-1);
+          return ArchiveConnectionHelpers.pollArchiveConnection(-1);
         }
-        if (PacketReceiveHelpers.field_f.pollTransport(72)) {
+        if (PacketReceiveHelpers.archiveFetchClient.pollTransport(72)) {
           return 0;
         }
-        return ArchiveConnectionHelpers.b(-1);
+        return ArchiveConnectionHelpers.pollArchiveConnection(-1);
     }
 
     public static void a(int param0) {
