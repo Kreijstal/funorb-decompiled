@@ -212,7 +212,7 @@ final class LevelList {
           }
           break;
         }
-        sc.popRaster(-106);
+        RasterStackHelpers.popRaster(-106);
         return;
     }
 

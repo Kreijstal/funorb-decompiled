@@ -118,7 +118,7 @@ final class PasswordValidator extends TextFieldValidator {
           }
           var6 = var4;
           if (pp.hasInvalidPasswordLength(var6, true)) {
-            stackIn_6_0 = sc.field_a;
+            stackIn_6_0 = RasterStackHelpers.field_a;
             return stackIn_6_0;
           }
           if (MatchCompleteScreen.containsNonAlphanumeric(var6, 0)) {
@@ -146,7 +146,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_27_0;
           }
           if (!WidgetTextLayout.a(var6, (byte) 73, var7)) {
-            return sc.field_a;
+            return RasterStackHelpers.field_a;
           }
           stackIn_31_0 = BackgroundRegistry.field_b;
           return stackIn_31_0;

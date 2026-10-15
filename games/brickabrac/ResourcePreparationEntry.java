@@ -187,7 +187,7 @@ final class ResourcePreparationEntry {
           } else {
             stackIn_28_0 = SpriteInputHelpers.field_f;
           }
-          qp.field_e = stackIn_28_0;
+          PlayerBadgeHelpers.field_e = stackIn_28_0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

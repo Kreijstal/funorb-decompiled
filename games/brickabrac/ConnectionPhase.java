@@ -106,7 +106,7 @@ final class ConnectionPhase {
         byte[] var2 = GameOverlayHelpers.decodedSpriteIndices[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
-          var3[var4_int] = qp.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var2[var4_int])];
+          var3[var4_int] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var2[var4_int])];
         }
         RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
@@ -273,7 +273,7 @@ final class ConnectionPhase {
                   settingIndex++;
                 }
                 ar.a(true, IncomingPacketHelpers.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
-                if (!(QuickChatHelpDialog.field_Yb < 2) &&
+                if (!(QuickChatHelpDialog.loginPrivilegeByteOne < 2) &&
                   IntArrayRequest.heldKeys[12]) {
                   MeshAttributeRecord.field_g = true;
                 }

@@ -171,7 +171,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var17 = LoadingProgressDialog.field_cb;
           var7 = var17;
           var7Lifetime10 = var17;
-          var16 = TextFieldRenderer.a((byte) 104, var17);
+          var16 = TextFieldRenderer.prefixLocalPlayerBadge((byte) 104, var17);
           var7Lifetime11 = var16;
           var7Lifetime12 = var16;
           var19 = var16;
@@ -276,7 +276,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               var17Lifetime1 = LoadingProgressDialog.field_cb;
               var7Lifetime1 = var17Lifetime1;
               var7Lifetime1Lifetime1 = var17Lifetime1;
-              var16 = TextFieldRenderer.a((byte) 104, var17Lifetime1);
+              var16 = TextFieldRenderer.prefixLocalPlayerBadge((byte) 104, var17Lifetime1);
               var7Lifetime1Lifetime2 = var16;
               var7Lifetime1Lifetime3 = var16;
               var19Lifetime1 = var16;
@@ -389,7 +389,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         var17Lifetime2 = LoadingProgressDialog.field_cb;
         var7Lifetime3 = var17Lifetime2;
         var7Lifetime4 = var17Lifetime2;
-        var16 = TextFieldRenderer.a((byte) 104, var17Lifetime2);
+        var16 = TextFieldRenderer.prefixLocalPlayerBadge((byte) 104, var17Lifetime2);
         var7Lifetime5 = var16;
         var7Lifetime6 = var16;
         var19Lifetime2 = var16;

@@ -10,7 +10,7 @@ final class QuickChatHelpDialog extends UiComponent {
     static boolean field_Sb;
     static String field_Tb;
     static RgbSprite[] field_Ub;
-    static int field_Yb;
+    static int loginPrivilegeByteOne;
     static UiComponent field_Vb;
     static long field_Zb;
     static String field_Qb;
@@ -95,7 +95,7 @@ final class QuickChatHelpDialog extends UiComponent {
           field_Vb = null;
           return;
         }
-        field_Yb = -55;
+        loginPrivilegeByteOne = -55;
         field_Ub = null;
         field_Tb = null;
         field_Rb = null;

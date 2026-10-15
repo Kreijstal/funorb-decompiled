@@ -104,7 +104,7 @@ final class HalloweenBackground extends BackgroundScene {
             RasterCacheSurface var7 = (RasterCacheSurface) null;
             HalloweenBackground.a(82, 29, true, -26, (RgbSprite) null, (RasterCacheSurface) null);
           }
-          sc.popRaster(-80);
+          RasterStackHelpers.popRaster(-80);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dp.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

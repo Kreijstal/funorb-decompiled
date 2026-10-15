@@ -15,7 +15,7 @@ final class kk {
         int var3 = BrickABrac.field_J ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[IncomingPacketHelpers.decodedSpriteCount];
         for (var2 = 0; IncomingPacketHelpers.decodedSpriteCount > var2; var2++) {
-          var1[var2] = new IndexedSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], GameOverlayHelpers.decodedSpriteIndices[var2], qp.decodedSpritePalette);
+          var1[var2] = new IndexedSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], GameOverlayHelpers.decodedSpriteIndices[var2], PlayerBadgeHelpers.decodedSpritePalette);
         }
         if (obfuscationGuard == -2) {
           MotionWaypoint.clearDecodedSpriteData((byte) 96);

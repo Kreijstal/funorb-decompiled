@@ -31,7 +31,7 @@ class NineSliceFrame {
         if (!OutgoingPacketHelpers.decodedSpriteHasAlpha[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {
-            var8[var5_int] = qp.decodedSpritePalette[IntrusiveHashIterator.a((int) var16[var5_int], 255)];
+            var8[var5_int] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a((int) var16[var5_int], 255)];
           }
           var3 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var8);
         } else {
@@ -40,7 +40,7 @@ class NineSliceFrame {
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = LevelSelectScreen.d(qp.decodedSpritePalette[IntrusiveHashIterator.a((int) var16[var6], 255)], IntrusiveHashIterator.a(-16777216, var17[var6] << 24));
+            var5[var6] = LevelSelectScreen.d(PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a((int) var16[var6], 255)], IntrusiveHashIterator.a(-16777216, var17[var6] << 24));
           }
           var3 = new ArgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], jh.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var13);
         }

@@ -186,7 +186,7 @@ final class AchievementSubmission extends IntrusiveNode {
           BitPacketBuffer.field_t.bindRasterTarget();
           var2.drawAt(0, -LevelCompleteScreen.field_I.height);
           BitPacketBuffer.field_t.offsetY = LevelCompleteScreen.field_I.height;
-          sc.popRaster(-104);
+          RasterStackHelpers.popRaster(-104);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "e.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

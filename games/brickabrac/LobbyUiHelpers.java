@@ -489,7 +489,7 @@ final class LobbyUiHelpers {
                   overrideGateValue = 2;
                   break;
                 }
-                if (!(overrideGateValue > QuickChatHelpDialog.field_Yb) &&
+                if (!(overrideGateValue > QuickChatHelpDialog.loginPrivilegeByteOne) &&
                   IntArrayRequest.heldKeys[12]) {
                   restrictionPass = 2;
                 }
@@ -652,7 +652,7 @@ final class LobbyUiHelpers {
                   playerOverrideGateValue = 2;
                   break;
                 }
-                if (playerOverrideGateValue <= QuickChatHelpDialog.field_Yb &&
+                if (playerOverrideGateValue <= QuickChatHelpDialog.loginPrivilegeByteOne &&
                   IntArrayRequest.heldKeys[12]) {
                   settingCursorOrIneligiblePlayer = 0;
                 }

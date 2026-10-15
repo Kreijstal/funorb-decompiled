@@ -76,7 +76,7 @@ final class CappedUrlRequest implements Runnable {
               var5 = var4;
               stackIn_11_0 = (!param0) ? -1 : -2;
               TextFieldRenderer.thirdPreviousPacketOpcode = stackIn_11_0;
-              we.secondPreviousPacketOpcode = stackIn_11_0;
+              ReflectionCheckHelpers.secondPreviousPacketOpcode = stackIn_11_0;
               UiComponent.previousPacketOpcode = stackIn_11_0;
               GameConnectionHelpers.connectionPhase = BitPacketBuffer.readyToSendHandshake;
               var5.position = 0;

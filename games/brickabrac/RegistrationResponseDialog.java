@@ -15,7 +15,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
           IndexedSpriteGeometry.pushSpriteRaster(-77, param1.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, FontRequestHelpers.farmBackgroundColors[param0], 22953);
           param3.b((-param3.canvasWidth + param1.width) / 2 - 80 / param2, -param3.canvasHeight + (param1.height + param4 - 201 / param2), 41, 110);
-          sc.popRaster(-107);
+          RasterStackHelpers.popRaster(-107);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qf.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

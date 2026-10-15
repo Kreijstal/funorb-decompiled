@@ -48,7 +48,7 @@ final class NodeDeque {
             return stackIn_2_0;
           }
           if (param0 == 6) {
-            stackIn_5_0 = qp.field_b;
+            stackIn_5_0 = PlayerBadgeHelpers.gameFullText;
             return stackIn_5_0;
           }
           if (param0 == 7) {

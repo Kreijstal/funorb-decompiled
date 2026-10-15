@@ -220,25 +220,25 @@ final class DateFieldsWidget extends DateInputWidget {
           DraggableWidget.field_N.text = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_c, new String[]{Integer.toString(ConditionalTextValue.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_48_0 = ContentTransitionLayer.field_gb;
-          stackIn_49_1 = (param0) && (!param1) && (!sc.field_c) && (null == ClientResourceHelpers.currentLobbyGame) && (IncomingPacketHelpers.pendingLobbyGame == null);
+          stackIn_49_1 = (param0) && (!param1) && (!RasterStackHelpers.field_c) && (null == ClientResourceHelpers.currentLobbyGame) && (IncomingPacketHelpers.pendingLobbyGame == null);
           ((UiComponent) (Object) stackIn_48_0).updateRoot(stackIn_49_1, -15211);
           stackIn_55_0 = FontRequestHelpers.field_a;
-          stackIn_56_1 = (param0) && (!param1) && (!sc.field_c) && (ClientResourceHelpers.currentLobbyGame == null) && (null == IncomingPacketHelpers.pendingLobbyGame);
+          stackIn_56_1 = (param0) && (!param1) && (!RasterStackHelpers.field_c) && (ClientResourceHelpers.currentLobbyGame == null) && (null == IncomingPacketHelpers.pendingLobbyGame);
           ((UiComponent) (Object) stackIn_55_0).updateRoot(stackIn_56_1, -15211);
-          stackIn_60_0 = qp.field_f;
-          stackIn_61_1 = (param0) && (!param1) && (sc.field_c);
+          stackIn_60_0 = PlayerBadgeHelpers.field_f;
+          stackIn_61_1 = (param0) && (!param1) && (RasterStackHelpers.field_c);
           ((UiComponent) (Object) stackIn_60_0).updateRoot(stackIn_61_1, -15211);
         } else {
           DraggableWidget.field_N.text = null;
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_7_0 = ContentTransitionLayer.field_gb;
-          stackIn_8_1 = (param0) && (!param1) && (!sc.field_c) && (null == ClientResourceHelpers.currentLobbyGame) && (IncomingPacketHelpers.pendingLobbyGame == null);
+          stackIn_8_1 = (param0) && (!param1) && (!RasterStackHelpers.field_c) && (null == ClientResourceHelpers.currentLobbyGame) && (IncomingPacketHelpers.pendingLobbyGame == null);
           ((UiComponent) (Object) stackIn_7_0).updateRoot(stackIn_8_1, -15211);
           stackIn_14_0 = FontRequestHelpers.field_a;
-          stackIn_15_1 = (param0) && (!param1) && (!sc.field_c) && (ClientResourceHelpers.currentLobbyGame == null) && (null == IncomingPacketHelpers.pendingLobbyGame);
+          stackIn_15_1 = (param0) && (!param1) && (!RasterStackHelpers.field_c) && (ClientResourceHelpers.currentLobbyGame == null) && (null == IncomingPacketHelpers.pendingLobbyGame);
           ((UiComponent) (Object) stackIn_14_0).updateRoot(stackIn_15_1, -15211);
-          stackIn_19_0 = qp.field_f;
-          stackIn_20_1 = (param0) && (!param1) && (sc.field_c);
+          stackIn_19_0 = PlayerBadgeHelpers.field_f;
+          stackIn_20_1 = (param0) && (!param1) && (RasterStackHelpers.field_c);
           ((UiComponent) (Object) stackIn_19_0).updateRoot(stackIn_20_1, -15211);
         }
         CanvasInputHelpers.field_b.tabs.processTabPresses(0);
@@ -252,7 +252,7 @@ final class DateFieldsWidget extends DateInputWidget {
             if (ResourceArchiveFactory.windowModeCapabilityWord > 0) {
               TextLineLayout.requestMatchmakingOptions(param3, -1);
             } else {
-              if (QuickChatHelpDialog.field_Yb >= 2 &&
+              if (QuickChatHelpDialog.loginPrivilegeByteOne >= 2 &&
                 IntArrayRequest.heldKeys[12]) {
                 TextLineLayout.requestMatchmakingOptions(param3, -1);
               }
@@ -267,7 +267,7 @@ final class DateFieldsWidget extends DateInputWidget {
           SpriteInputHelpers.requestCreateGame(param3, Brick.field_O, RadialSelectorRenderer.field_i, true, 0, (byte) -102);
         }
         if (0 != LobbyUiHelpers.cancelCreateGameButton.pressedButton) {
-          sc.field_c = false;
+          RasterStackHelpers.field_c = false;
         }
     }
 

@@ -83,7 +83,7 @@ final class TooltipSprite extends IntrusiveNode {
           var12 = new RgbSprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
           var12.bindRasterTarget();
           var17.drawAt(-var9Lifetime1, 0);
-          sc.popRaster(-81);
+          RasterStackHelpers.popRaster(-81);
           ValidatedTextFieldWidget.field_U = new RgbSprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "nq.G(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

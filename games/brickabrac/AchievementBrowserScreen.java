@@ -75,7 +75,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           var15.draw((byte) 107);
           var15 = (AchievementIcon) (this.departingIcons.next((byte) 116));
         }
-        sc.popRaster(-81);
+        RasterStackHelpers.popRaster(-81);
         GzipInflater.a(146, 5, 146, 5, 233, (byte) -87, 45);
         GzipInflater.a(399, 5, 146, 5, 233, (byte) -107, 196);
         if (ValidationMessageWidget.selectedAchievementId != -1) {

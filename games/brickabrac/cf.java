@@ -93,10 +93,10 @@ final class cf {
 
     final static boolean a(byte param0) {
         if (param0 == 62) {
-          return 2 <= QuickChatHelpDialog.field_Yb ? true : false;
+          return 2 <= QuickChatHelpDialog.loginPrivilegeByteOne ? true : false;
         }
         cf.a((byte) 59);
-        return 2 <= QuickChatHelpDialog.field_Yb ? true : false;
+        return 2 <= QuickChatHelpDialog.loginPrivilegeByteOne ? true : false;
     }
 
     public static void a(int param0) {

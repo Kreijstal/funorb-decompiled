@@ -81,17 +81,17 @@ abstract class MatchResultScreen extends MenuScreen {
           var12 = ValidationStatus.field_e;
           var12.drawTransparent((640 - var12.canvasWidth) / 2, 20);
         }
-        var2 = -qp.field_e[0].canvasHeight + 480;
+        var2 = -PlayerBadgeHelpers.field_e[0].canvasHeight + 480;
         var3 = this.getResultBottom(-6);
         for (var4 = 0; var4 < 3; var4++) {
-          var5_ref_tp = qp.field_e[var4];
+          var5_ref_tp = PlayerBadgeHelpers.field_e[var4];
           var5_ref_tp.drawTransparent((640 - var5_ref_tp.canvasWidth) / 2, -((-var3 + 480) / ((1 + var4) * 2)) + var2);
         }
         if (obfuscationGuard > -14) {
           field_s = false;
         }
         var2 = var2 - (-var3 + 480) / 2;
-        var4 = qp.field_e[0].canvasWidth;
+        var4 = PlayerBadgeHelpers.field_e[0].canvasWidth;
         var5 = 0;
         var6 = 0;
         scanLoop1: while (true) {

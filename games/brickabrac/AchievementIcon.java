@@ -285,7 +285,7 @@ final class AchievementIcon extends IntrusiveNode {
               this.cachedThumbnail = new RgbSprite(var12.canvasWidth / 4, var12.canvasHeight / 4);
               IndexedSpriteGeometry.pushSpriteRaster(-119, this.cachedThumbnail);
               var12.drawQuarter(0, 0);
-              sc.popRaster(-89);
+              RasterStackHelpers.popRaster(-89);
               this.thumbnailIsPlaceholder = false;
             }
           } else {
@@ -297,7 +297,7 @@ final class AchievementIcon extends IntrusiveNode {
                 this.cachedThumbnail = new RgbSprite(var11.canvasWidth / 4, var11.canvasHeight / 4);
                 IndexedSpriteGeometry.pushSpriteRaster(-119, this.cachedThumbnail);
                 var11.drawQuarter(0, 0);
-                sc.popRaster(-89);
+                RasterStackHelpers.popRaster(-89);
                 this.thumbnailIsPlaceholder = false;
               }
             } else {
@@ -307,7 +307,7 @@ final class AchievementIcon extends IntrusiveNode {
                 this.cachedThumbnail = new RgbSprite(var13.canvasWidth / 4, var13.canvasHeight / 4);
                 IndexedSpriteGeometry.pushSpriteRaster(-119, this.cachedThumbnail);
                 var13.drawQuarter(0, 0);
-                sc.popRaster(-89);
+                RasterStackHelpers.popRaster(-89);
                 this.thumbnailIsPlaceholder = false;
               }
             }
@@ -320,7 +320,7 @@ final class AchievementIcon extends IntrusiveNode {
                 this.cachedThumbnail = new RgbSprite(var6.canvasWidth / 4, var6.canvasHeight / 4);
                 IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
                 var6.e(0, 0);
-                sc.popRaster(-110);
+                RasterStackHelpers.popRaster(-110);
                 this.thumbnailIsPlaceholder = true;
               } else {
                 if (!this.thumbnailIsPlaceholder) {
@@ -328,7 +328,7 @@ final class AchievementIcon extends IntrusiveNode {
                   this.cachedThumbnail = new RgbSprite(var7.canvasWidth / 4, var7.canvasHeight / 4);
                   IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
                   var7.e(0, 0);
-                  sc.popRaster(-110);
+                  RasterStackHelpers.popRaster(-110);
                   this.thumbnailIsPlaceholder = true;
                 }
               }
@@ -347,7 +347,7 @@ final class AchievementIcon extends IntrusiveNode {
             this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
             IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
             var10.e(0, 0);
-            sc.popRaster(-110);
+            RasterStackHelpers.popRaster(-110);
             this.thumbnailIsPlaceholder = true;
           } else {
             if (!this.thumbnailIsPlaceholder) {
@@ -355,7 +355,7 @@ final class AchievementIcon extends IntrusiveNode {
               this.cachedThumbnail = new RgbSprite(var10.canvasWidth / 4, var10.canvasHeight / 4);
               IndexedSpriteGeometry.pushSpriteRaster(-76, this.cachedThumbnail);
               var10.e(0, 0);
-              sc.popRaster(-110);
+              RasterStackHelpers.popRaster(-110);
               this.thumbnailIsPlaceholder = true;
             }
           }

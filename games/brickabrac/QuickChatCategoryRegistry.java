@@ -354,7 +354,7 @@ final class QuickChatCategoryRegistry {
             ArchiveNetworkRequest.packSelectorIcons[var11Lifetime1] = new RgbSprite(SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasWidth / 2, SaveResultsPromptScreen.packCardIcons[var11Lifetime1].canvasHeight / 2);
             IndexedSpriteGeometry.pushSpriteRaster(-59, ArchiveNetworkRequest.packSelectorIcons[var11Lifetime1]);
             SaveResultsPromptScreen.packCardIcons[var11Lifetime1].drawHalfSize(0, 0);
-            sc.popRaster(-89);
+            RasterStackHelpers.popRaster(-89);
           }
           AlternateNumericLoginCredentials.field_r = new RgbSprite[SaveResultsPromptScreen.packCardIcons.length];
           for (var11Lifetime2 = 0; SaveResultsPromptScreen.packCardIcons.length > var11Lifetime2; var11Lifetime2++) {

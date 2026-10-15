@@ -570,7 +570,7 @@ public final class BrickABrac extends InteractiveGameClient {
         IntNode.a((byte) -115);
         NodeDeque.b((byte) 100);
         IsaacGenerator.a(2);
-        sc.a(81);
+        RasterStackHelpers.a(81);
         MonotonicTime.a((byte) -114);
         BitPacketBuffer.clearStaticReferences(60);
         CanvasInputHelpers.a(!obfuscationGuard ? true : false);
@@ -643,7 +643,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MenuSelection.b((byte) -60);
         ed.a(-104);
         BackgroundScene.a((byte) 7);
-        rb.a((byte) -116);
+        BrickHitTransitionTable.clearTransitionCodes((byte) -116);
         BufferedFile.a(-54);
         MeshLobbyUiHelpers.a(-61);
         ConditionalTextValue.c(2);
@@ -652,7 +652,7 @@ public final class BrickABrac extends InteractiveGameClient {
         LoginCredentialKind.a((byte) 65);
         LoginCredentials.a((byte) 114);
         BufferedSocket.b(119);
-        we.a(-8495);
+        ReflectionCheckHelpers.a(-8495);
         sm.a(30000);
         fh.a(-29988);
         StateIconLabel.d(true);
@@ -690,7 +690,7 @@ public final class BrickABrac extends InteractiveGameClient {
         TabbedPane.h(47);
         NameEntryPopup.d(false);
         BrickGameLayerController.a((byte) -102);
-        qp.a(false);
+        PlayerBadgeHelpers.a(false);
         ClientResourceHelpers.b(31583);
         ok.b(-116);
         BirthDateEntryPanel.d(false);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sc {
+final class RasterStackHelpers {
     static UiComponent field_b;
     static String field_a;
     static boolean field_c;

@@ -91,7 +91,7 @@ abstract class WidgetLayer extends WidgetGroup {
           Rasterizer2D.clear();
           this.paintLayerFrame(0, obfuscationGuard ^ -281, 0);
           super.drawLayer(-parentY - this.y, -parentX - this.x, layer, obfuscationGuard);
-          sc.popRaster(-117);
+          RasterStackHelpers.popRaster(-117);
           IncomingPacketHelpers.field_e.b(parentX + this.x, parentY + this.y, this.opacity256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

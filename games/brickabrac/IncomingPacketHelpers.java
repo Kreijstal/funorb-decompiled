@@ -55,8 +55,8 @@ final class IncomingPacketHelpers {
               for (queuedByteIndex = 0; ga.incomingPacketLength > queuedByteIndex; queuedByteIndex++) {
                 LogoRenderHelpers.incomingPackets.data[queuedByteIndex] = queuedPacket.data[queuedByteIndex];
               }
-              TextFieldRenderer.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
-              we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
+              TextFieldRenderer.thirdPreviousPacketOpcode = ReflectionCheckHelpers.secondPreviousPacketOpcode;
+              ReflectionCheckHelpers.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
               UiComponent.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
               IntrusiveHashTable.currentPacketOpcode = queuedPacket.opcodeOrByteCount;
               return true;
@@ -76,8 +76,8 @@ final class IncomingPacketHelpers {
               return false;
             }
             if (MonotonicTime.packetDelayMillis == 0) {
-              TextFieldRenderer.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
-              we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
+              TextFieldRenderer.thirdPreviousPacketOpcode = ReflectionCheckHelpers.secondPreviousPacketOpcode;
+              ReflectionCheckHelpers.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
               UiComponent.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
               IntrusiveHashTable.currentPacketOpcode = PasswordFieldRenderer.pendingPacketOpcode;
               PasswordFieldRenderer.pendingPacketOpcode = -1;

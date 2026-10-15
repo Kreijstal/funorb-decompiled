@@ -225,7 +225,7 @@ final class ScreenshotViewer {
             var3 = 10068666;
             var16 = MusicVoiceMixer.a(param0 - 580, var2_int, var3);
             this.a(47, 0, this.title, var16, ArchiveSourceManager.field_j, 622, 0, 0);
-            sc.popRaster(param0 - 592);
+            RasterStackHelpers.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
             this.a(ArchiveSourceManager.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
             var17 = MusicVoiceMixer.a(-124, 526344, 526344);
@@ -238,11 +238,11 @@ final class ScreenshotViewer {
             this.a(ArchiveSourceManager.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
             this.a(ArchiveSourceManager.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
             this.a(ArchiveSourceManager.field_j, -ArchiveSourceManager.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, AppletResourceHelpers.field_e[this.field_c], var17, var5.height / 3, var5, 0);
-            sc.popRaster(-119);
+            RasterStackHelpers.popRaster(-119);
             this.field_p = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(-115, this.field_p);
             var5.e(this.field_p.width / 2, this.field_p.height / 2, -2048, 4096);
-            sc.popRaster(-108);
+            RasterStackHelpers.popRaster(-108);
             return;
           }
           return;
@@ -449,10 +449,10 @@ final class ScreenshotViewer {
           IndexedSpriteGeometry.pushSpriteRaster(-116, var13);
           param8.a((int)((float)(-param9) / param2), (int)((float)(-param1) / param2), (int)((float)param8.width / param2), (int)((float)param8.height / param2));
           this.a(var12, 0, param5, param6, param0, var11_int, 0, 0);
-          sc.popRaster(-104);
+          RasterStackHelpers.popRaster(-104);
           IndexedSpriteGeometry.pushSpriteRaster(-126, param8);
           var13.c(param9, param1, param4, param7);
-          sc.popRaster(-93);
+          RasterStackHelpers.popRaster(-93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -696,7 +696,7 @@ final class ScreenshotViewer {
             var11 = param3[param3.length - (var10 + 1)];
             param4.drawParagraph(param2, param1, param6, param5, param0, var11, -1, 1, 1, 0);
           }
-          sc.popRaster(-102);
+          RasterStackHelpers.popRaster(-102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

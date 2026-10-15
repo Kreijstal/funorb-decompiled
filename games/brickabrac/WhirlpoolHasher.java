@@ -57,7 +57,7 @@ final class WhirlpoolHasher {
         if (param0 >= -58) {
           WhirlpoolHasher.c((byte) -29);
         }
-        var6 = "(" + TextFieldRenderer.thirdPreviousPacketOpcode + " " + we.secondPreviousPacketOpcode + " " + UiComponent.previousPacketOpcode + ") " + IntrusiveHashTable.currentPacketOpcode;
+        var6 = "(" + TextFieldRenderer.thirdPreviousPacketOpcode + " " + ReflectionCheckHelpers.secondPreviousPacketOpcode + " " + UiComponent.previousPacketOpcode + ") " + IntrusiveHashTable.currentPacketOpcode;
         var1 = var6;
         if (ga.incomingPacketLength > 0) {
           var1 = var6 + ":";

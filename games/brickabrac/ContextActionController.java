@@ -103,7 +103,7 @@ final class ContextActionController {
                 if (!var2.directJoinAvailable) {
                   if ((!var2.joinRequestPending) && (var2.protocolFlag8) && (!var2.started ||
                     var2.directJoinAvailable)) {
-                    this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(qp.field_a, new String[]{var3}, (byte) 103), 2, (byte) 105);
+                    this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(PlayerBadgeHelpers.askToJoinGameText, new String[]{var3}, (byte) 103), 2, (byte) 105);
                     if (var4 != 0) {
                       this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(FocusableWidget.field_G, new String[]{var3}, (byte) 103), 2, (byte) 126);
                     }
@@ -358,7 +358,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_game_is_full", (byte) 60);
                 if (var2 != null) {
-                  qp.field_b = MenuButton.a(var2, (byte) 83);
+                  PlayerBadgeHelpers.gameFullText = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("mu_game_has_started", (byte) 25);
                 if (var2 != null) {
@@ -530,7 +530,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("join_request_xs_game", (byte) 24);
                 if (null != var2) {
-                  qp.field_a = MenuButton.a(var2, (byte) 91);
+                  PlayerBadgeHelpers.askToJoinGameText = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("join_withdraw_request_xs_game", (byte) 71);
                 if (null != var2) {
@@ -606,7 +606,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_pm_friends_only", (byte) -123);
                 if (null != var2) {
-                  qp.field_d = MenuButton.a(var2, (byte) 73);
+                  PlayerBadgeHelpers.friendsAndOpponentsPrivateChatText = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = AppletFlowHelpers.a("mu_chat_pm_friends", (byte) -109);
                 if (var2 != null) {
@@ -1764,7 +1764,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passlength", (byte) 29);
                 if (null != var2) {
-                  sc.field_a = MenuButton.a(var2, (byte) 86);
+                  RasterStackHelpers.field_a = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("create_alert_passcontainsname", (byte) -107);
                 if (null != var2) {
@@ -3605,7 +3605,7 @@ final class ContextActionController {
           }
           if (message.channel == 2) {
             if (WeightedLruCache.privateChatFilter == 0) {
-              this.contextMenu.addAction(qp.field_d, 12, (byte) 121);
+              this.contextMenu.addAction(PlayerBadgeHelpers.friendsAndOpponentsPrivateChatText, 12, (byte) 121);
             }
             this.contextMenu.addAction(EmailAvailabilityRequest.field_b, 13, (byte) 118);
           }

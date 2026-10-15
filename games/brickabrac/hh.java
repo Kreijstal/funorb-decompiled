@@ -43,7 +43,7 @@ final class hh {
             return;
           }
           QuickChatMenu.a(-113, 8, 128, param6, 16777215, (param3.width - param0.canvasWidth) / 2, 480 + param1 + (-param0.canvasHeight + 60 / param2));
-          sc.popRaster(-90);
+          RasterStackHelpers.popRaster(-90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

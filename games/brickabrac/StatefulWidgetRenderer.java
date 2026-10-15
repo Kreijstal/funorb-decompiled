@@ -192,7 +192,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
             }
           }
           this.mergedStyle.paintStyle(parentY, this, widget, (byte) -109, parentX);
-          sc.popRaster(callbackGuard ^ 20704);
+          RasterStackHelpers.popRaster(callbackGuard ^ 20704);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

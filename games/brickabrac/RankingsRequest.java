@@ -99,7 +99,7 @@ final class RankingsRequest extends IntrusiveNode {
           stackIn_2_1 = array$0;
           stackIn_2_2 = 0;
           if (LoadingProgressDialog.field_cb == null) {
-            stackIn_3_3 = we.field_c;
+            stackIn_3_3 = ReflectionCheckHelpers.playerOneLabel;
           } else {
             stackIn_3_3 = LoadingProgressDialog.field_cb;
           }

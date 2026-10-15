@@ -2484,6 +2484,14 @@
       "renamedSymbol": "C:PlayerNameChooserPanel"
     },
     {
+      "symbol": "C:qp",
+      "originalName": "qp",
+      "to": "PlayerBadgeHelpers",
+      "evidence": "qp.java: Selects the local player badge kind from two decoded login privilege bytes; unrelated sprite-palette and UI globals retain separate roles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PlayerBadgeHelpers"
+    },
+    {
       "symbol": "C:qq",
       "originalName": "qq",
       "to": "SoundTone",
@@ -2506,6 +2514,14 @@
       "evidence": "ra.java: Mixes child streams, skips them and maintains sample-counted listener queue.",
       "confidence": "reviewed",
       "renamedSymbol": "C:AudioMixer"
+    },
+    {
+      "symbol": "C:rb",
+      "originalName": "rb",
+      "to": "BrickHitTransitionTable",
+      "evidence": "rb.java: Per-brick-type transition codes assigned by direct ball contact and multiplayer brick attacks; pending replacement types remain in their original separate owner.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BrickHitTransitionTable"
     },
     {
       "symbol": "C:rc",
@@ -2626,6 +2642,14 @@
       "evidence": "sb.java: Concrete Brick rendering/input/update coordination across menus, gameplay and multiplayer status. Static helpers remain separate.",
       "confidence": "reviewed",
       "renamedSymbol": "C:BrickGameLayerController"
+    },
+    {
+      "symbol": "C:sc",
+      "originalName": "sc",
+      "to": "RasterStackHelpers",
+      "evidence": "sc.java: Restores and pools the most recent raster snapshot; unrelated account-widget globals retain separate roles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:RasterStackHelpers"
     },
     {
       "symbol": "C:sd",
@@ -3170,6 +3194,14 @@
       "evidence": "wd.java: Tagged phrase fragments, linked phrase IDs and parameter-command words; preview joins fragments with ellipses. Unrelated static UI/audio helpers remain separate.",
       "confidence": "reviewed",
       "renamedSymbol": "C:QuickChatPhraseDefinition"
+    },
+    {
+      "symbol": "C:we",
+      "originalName": "we",
+      "to": "ReflectionCheckHelpers",
+      "evidence": "we.java: Replaces the pending reflection-check deque during connection setup; unrelated packet-history, artwork and player-label globals retain separate roles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ReflectionCheckHelpers"
     },
     {
       "symbol": "C:wf",
@@ -8124,6 +8156,14 @@
       "renamedSymbol": "F:TextChoiceDialogStyles.diagnosticDecimalScratch:Ljava/lang/StringBuilder;"
     },
     {
+      "symbol": "F:gh.field_f:I",
+      "originalName": "field_f",
+      "to": "loginPrivilegeByteTwo",
+      "evidence": "gh.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:TextChoiceDialogStyles.loginPrivilegeByteTwo:I"
+    },
+    {
       "symbol": "F:gj.field_a:I",
       "originalName": "field_a",
       "to": "receivedChatChannel",
@@ -11026,6 +11066,14 @@
       "evidence": "kb.java: Frame snapshot of pointer-change latch.",
       "confidence": "reviewed",
       "renamedSymbol": "F:QuickChatHelpDialog.pointerChanged:Z"
+    },
+    {
+      "symbol": "F:kb.field_Yb:I",
+      "originalName": "field_Yb",
+      "to": "loginPrivilegeByteOne",
+      "evidence": "kb.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:QuickChatHelpDialog.loginPrivilegeByteOne:I"
     },
     {
       "symbol": "F:kb.field_ac:Lmh;",
@@ -16716,12 +16764,36 @@
       "renamedSymbol": "F:PlayerNameChooserPanel.suggestionPanel:LUsernameSuggestionPanel;"
     },
     {
+      "symbol": "F:qp.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "to": "askToJoinGameText",
+      "evidence": "qp.java: Literal invitation-action template Ask to join <player> game.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBadgeHelpers.askToJoinGameText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:qp.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "to": "gameFullText",
+      "evidence": "qp.java: Literal This game is full message.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBadgeHelpers.gameFullText:Ljava/lang/String;"
+    },
+    {
       "symbol": "F:qp.field_c:[I",
       "originalName": "field_c",
       "to": "decodedSpritePalette",
       "evidence": "qp.java: Shared RGB palette; entries beyond0 whose encoded color is0 become1.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:qp.decodedSpritePalette:[I"
+      "renamedSymbol": "F:PlayerBadgeHelpers.decodedSpritePalette:[I"
+    },
+    {
+      "symbol": "F:qp.field_d:Ljava/lang/String;",
+      "originalName": "field_d",
+      "to": "friendsAndOpponentsPrivateChatText",
+      "evidence": "qp.java: Literal private-chat filter caption naming friends and opponents.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBadgeHelpers.friendsAndOpponentsPrivateChatText:Ljava/lang/String;"
     },
     {
       "symbol": "F:qq.field_a:[I",
@@ -16962,6 +17034,14 @@
       "evidence": "ra.java: Samples accumulated since listener countdown normalization.",
       "confidence": "reviewed",
       "renamedSymbol": "F:AudioMixer.processedSamples:I"
+    },
+    {
+      "symbol": "F:rb.field_a:[I",
+      "originalName": "field_a",
+      "to": "codesByBrickType",
+      "evidence": "rb.java: Brick ball-contact handling and MultiplayerMatch brick attacks index the same 29-entry array by typeId, assign its value to transitionCode, and separately index MonotonicTime for pendingTypeId. The table is a gameplay transition code table, not a packet-length table.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:BrickHitTransitionTable.codesByBrickType:[I"
     },
     {
       "symbol": "F:rd.field_d:[[Ljp;",
@@ -18972,6 +19052,14 @@
       "renamedSymbol": "F:LevelSelectScreen.previewPaths:LNodeDeque;"
     },
     {
+      "symbol": "F:ue.field_b:[I",
+      "originalName": "field_b",
+      "to": "brickHitPendingTypes",
+      "evidence": "ue.java: Brick ball-contact handling and MultiplayerMatch brick attacks index the same 29-entry array by typeId, assign its value to transitionCode, and separately index MonotonicTime for pendingTypeId. The table is a gameplay transition code table, not a packet-length table.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MonotonicTime.brickHitPendingTypes:[I"
+    },
+    {
       "symbol": "F:ue.field_d:I",
       "originalName": "field_d",
       "to": "packetDelayMillis",
@@ -20153,7 +20241,7 @@
       "to": "secondPreviousPacketOpcode",
       "evidence": "we.java: Second prior delivered opcode.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:we.secondPreviousPacketOpcode:I"
+      "renamedSymbol": "F:ReflectionCheckHelpers.secondPreviousPacketOpcode:I"
     },
     {
       "symbol": "F:we.field_b:[Ljp;",
@@ -20161,7 +20249,15 @@
       "to": "activePowerUpSprites",
       "evidence": "we.java: Asset archive names, half-size construction and ball/paddle draw sites identify full/half and active sprite roles. Identity fixtures verify scale selection, null/shared/empty arrays, source retention and guard effects; normal/steel ball pixels verify draw-site use. Independent trigonometric references verify atan table rounding, piecewise Q16 quantization, reciprocal boundaries, sine accuracy and wrapped custom-table lookup. Real intrusive quick-chat fixtures verify installation/reparenting, default activation, recursive close/reset and partial failure state.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:we.activePowerUpSprites:[LRgbSprite;"
+      "renamedSymbol": "F:ReflectionCheckHelpers.activePowerUpSprites:[LRgbSprite;"
+    },
+    {
+      "symbol": "F:we.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "to": "playerOneLabel",
+      "evidence": "we.java: Literal Player One label retained in this shared helper owner.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ReflectionCheckHelpers.playerOneLabel:Ljava/lang/String;"
     },
     {
       "symbol": "F:wf.field_i:I",
@@ -51817,7 +51913,7 @@
       "to": "snapshot",
       "evidence": "sc.java: Most recent raster state restored and returned to pool.",
       "confidence": "reviewed",
-      "renamedSymbol": "L:sc.popRaster(I)V#0"
+      "renamedSymbol": "L:RasterStackHelpers.popRaster(I)V#0"
     },
     {
       "symbol": "L:sg.a(ILjava/lang/String;)Ljava/lang/String;#0",
@@ -71004,6 +71100,14 @@
       "renamedSymbol": "M:PlayerNameChooserPanel.canSubmitPlayerName(B)Z"
     },
     {
+      "symbol": "M:qp.a(IIB)I",
+      "originalName": "a",
+      "to": "selectPlayerBadgeKind",
+      "evidence": "qp.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I"
+    },
+    {
       "symbol": "M:qq.a()V",
       "originalName": "a",
       "to": "releaseScratch",
@@ -71034,6 +71138,14 @@
       "evidence": "qq.java: Decodes mandatory/optional envelopes, up to ten encoded oscillator records into five slots, echo/duration/offset/filter. Original overflow behavior retained.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SoundTone.decode(LPacketBuffer;)V"
+    },
+    {
+      "symbol": "M:r.a(BLjava/lang/String;)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "prefixLocalPlayerBadge",
+      "evidence": "r.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;"
     },
     {
       "symbol": "M:r.a(ZIILoc;I)V",
@@ -71138,6 +71250,14 @@
       "evidence": "ra.java: Subtracts accumulated sample count from listener countdowns and resets accumulator.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AudioMixer.normalizeListenerTimes()V"
+    },
+    {
+      "symbol": "M:rb.a(B)V",
+      "originalName": "a",
+      "to": "clearTransitionCodes",
+      "evidence": "rb.java: Releases the transition array before evaluating the retained arithmetic guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BrickHitTransitionTable.clearTransitionCodes(B)V"
     },
     {
       "symbol": "M:rc.a(III)V",
@@ -71689,7 +71809,7 @@
       "to": "popRaster",
       "evidence": "sc.java: Restores last snapshot, releases pixels and pools it; empty stack throws; guard at most -75.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:sc.popRaster(I)V"
+      "renamedSymbol": "M:RasterStackHelpers.popRaster(I)V"
     },
     {
       "symbol": "M:sf.a(I)Lia;",
@@ -74042,6 +74162,14 @@
       "evidence": "wd.java: Returns empty without fragments or concatenates fragments separated by literal ellipses; guard -3.",
       "confidence": "reviewed",
       "renamedSymbol": "M:QuickChatPhraseDefinition.getPreview(I)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:we.a(B)V",
+      "originalName": "a",
+      "to": "resetPendingReflectionChecks",
+      "evidence": "we.java: Connection setup calls with -46 and replaces ResourceArchive.pendingReflectionChecks with a new empty NodeDeque; the previous queue object is not cleared.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ReflectionCheckHelpers.resetPendingReflectionChecks(B)V"
     },
     {
       "symbol": "M:wf.a()V",
@@ -108548,6 +108676,30 @@
       "renamedSymbol": "P:PlayerNameChooserPanel.canSubmitPlayerName(B)Z#0"
     },
     {
+      "symbol": "P:qp.a(IIB)I#0",
+      "originalName": "param0",
+      "to": "privilegeByteOne",
+      "evidence": "qp.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I#0"
+    },
+    {
+      "symbol": "P:qp.a(IIB)I#1",
+      "originalName": "param1",
+      "to": "privilegeByteTwo",
+      "evidence": "qp.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I#1"
+    },
+    {
+      "symbol": "P:qp.a(IIB)I#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "qp.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I#2"
+    },
+    {
       "symbol": "P:qq.a(II)[I#0",
       "originalName": "param0",
       "to": "sampleCount",
@@ -108618,6 +108770,22 @@
       "evidence": "r.java: Uses supplied font and text color with editable-field frame/style.",
       "confidence": "reviewed",
       "renamedSymbol": "P:TextFieldRenderer.<init>(LTextFont;I)V#1"
+    },
+    {
+      "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "r.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#0"
+    },
+    {
+      "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+      "originalName": "param1",
+      "to": "text",
+      "evidence": "r.java: Login-success decoding reads these unsigned bytes consecutively. The first also gates privileged overrides and mute controls. Badge selection returns2 when the first is at least2, otherwise1 when the second is at least5, otherwise0. TextFieldRenderer prefixes image1 for kind2 and image0 for kind1. Exact server role labels are not inferred.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#1"
     },
     {
       "symbol": "P:r.a(ZIILoc;I)V#0",
@@ -108762,6 +108930,14 @@
       "evidence": "ra.java: Calls enabled-aware process on every child stream.",
       "confidence": "reviewed",
       "renamedSymbol": "P:AudioMixer.processStreams([III)V#2"
+    },
+    {
+      "symbol": "P:rb.a(B)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "rb.java: Releases the transition array before evaluating the retained arithmetic guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:BrickHitTransitionTable.clearTransitionCodes(B)V#0"
     },
     {
       "symbol": "P:rc.a(III)V#0",
@@ -110249,7 +110425,7 @@
       "to": "obfuscationGuard",
       "evidence": "sc.java: Restores last snapshot, releases pixels and pools it; empty stack throws; guard at most -75.",
       "confidence": "reviewed",
-      "renamedSymbol": "P:sc.popRaster(I)V#0"
+      "renamedSymbol": "P:RasterStackHelpers.popRaster(I)V#0"
     },
     {
       "symbol": "P:se.<init>([B)V#0",
@@ -116740,6 +116916,14 @@
       "renamedSymbol": "P:QuickChatPhraseDefinition.getPreview(I)Ljava/lang/String;#0"
     },
     {
+      "symbol": "P:we.a(B)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "we.java: Connection setup calls with -46 and replaces ResourceArchive.pendingReflectionChecks with a new empty NodeDeque; the previous queue object is not cleared.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ReflectionCheckHelpers.resetPendingReflectionChecks(B)V#0"
+    },
+    {
       "symbol": "P:wf.a(Lra;)I#0",
       "originalName": "param0",
       "to": "mixer",
@@ -121998,9 +122182,9 @@
     },
     {
       "symbol": "C:qp",
-      "renamedSymbol": "C:qp",
+      "renamedSymbol": "C:PlayerBadgeHelpers",
       "originalName": "qp",
-      "renamedName": "qp",
+      "renamedName": "PlayerBadgeHelpers",
       "declaration": {
         "file": "qp.java",
         "start": 50,
@@ -122042,9 +122226,9 @@
     },
     {
       "symbol": "C:rb",
-      "renamedSymbol": "C:rb",
+      "renamedSymbol": "C:BrickHitTransitionTable",
       "originalName": "rb",
-      "renamedName": "rb",
+      "renamedName": "BrickHitTransitionTable",
       "declaration": {
         "file": "rb.java",
         "start": 50,
@@ -122251,9 +122435,9 @@
     },
     {
       "symbol": "C:sc",
-      "renamedSymbol": "C:sc",
+      "renamedSymbol": "C:RasterStackHelpers",
       "originalName": "sc",
-      "renamedName": "sc",
+      "renamedName": "RasterStackHelpers",
       "declaration": {
         "file": "sc.java",
         "start": 50,
@@ -123065,9 +123249,9 @@
     },
     {
       "symbol": "C:we",
-      "renamedSymbol": "C:we",
+      "renamedSymbol": "C:ReflectionCheckHelpers",
       "originalName": "we",
-      "renamedName": "we",
+      "renamedName": "ReflectionCheckHelpers",
       "declaration": {
         "file": "we.java",
         "start": 50,
@@ -134021,9 +134205,9 @@
     },
     {
       "symbol": "F:gh.field_f:I",
-      "renamedSymbol": "F:TextChoiceDialogStyles.field_f:I",
+      "renamedSymbol": "F:TextChoiceDialogStyles.loginPrivilegeByteTwo:I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "loginPrivilegeByteTwo",
       "declaration": {
         "file": "gh.java",
         "start": 187,
@@ -140071,9 +140255,9 @@
     },
     {
       "symbol": "F:kb.field_Yb:I",
-      "renamedSymbol": "F:QuickChatHelpDialog.field_Yb:I",
+      "renamedSymbol": "F:QuickChatHelpDialog.loginPrivilegeByteOne:I",
       "originalName": "field_Yb",
-      "renamedName": "field_Yb",
+      "renamedName": "loginPrivilegeByteOne",
       "declaration": {
         "file": "kb.java",
         "start": 308,
@@ -152204,9 +152388,9 @@
     },
     {
       "symbol": "F:qp.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:qp.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:PlayerBadgeHelpers.askToJoinGameText:Ljava/lang/String;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "askToJoinGameText",
       "declaration": {
         "file": "qp.java",
         "start": 73,
@@ -152215,9 +152399,9 @@
     },
     {
       "symbol": "F:qp.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:qp.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:PlayerBadgeHelpers.gameFullText:Ljava/lang/String;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "gameFullText",
       "declaration": {
         "file": "qp.java",
         "start": 174,
@@ -152226,7 +152410,7 @@
     },
     {
       "symbol": "F:qp.field_c:[I",
-      "renamedSymbol": "F:qp.decodedSpritePalette:[I",
+      "renamedSymbol": "F:PlayerBadgeHelpers.decodedSpritePalette:[I",
       "originalName": "field_c",
       "renamedName": "decodedSpritePalette",
       "declaration": {
@@ -152237,9 +152421,9 @@
     },
     {
       "symbol": "F:qp.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:qp.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:PlayerBadgeHelpers.friendsAndOpponentsPrivateChatText:Ljava/lang/String;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "friendsAndOpponentsPrivateChatText",
       "declaration": {
         "file": "qp.java",
         "start": 201,
@@ -152248,7 +152432,7 @@
     },
     {
       "symbol": "F:qp.field_e:[Ltp;",
-      "renamedSymbol": "F:qp.field_e:[LIndexedSprite;",
+      "renamedSymbol": "F:PlayerBadgeHelpers.field_e:[LIndexedSprite;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -152259,7 +152443,7 @@
     },
     {
       "symbol": "F:qp.field_f:Lmh;",
-      "renamedSymbol": "F:qp.field_f:LUiComponent;",
+      "renamedSymbol": "F:PlayerBadgeHelpers.field_f:LUiComponent;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -152677,9 +152861,9 @@
     },
     {
       "symbol": "F:rb.field_a:[I",
-      "renamedSymbol": "F:rb.field_a:[I",
+      "renamedSymbol": "F:BrickHitTransitionTable.codesByBrickType:[I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "codesByBrickType",
       "declaration": {
         "file": "rb.java",
         "start": 72,
@@ -152688,7 +152872,7 @@
     },
     {
       "symbol": "F:rb.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:rb.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:BrickHitTransitionTable.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -154415,7 +154599,7 @@
     },
     {
       "symbol": "F:sc.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:sc.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:RasterStackHelpers.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -154426,7 +154610,7 @@
     },
     {
       "symbol": "F:sc.field_b:Lmh;",
-      "renamedSymbol": "F:sc.field_b:LUiComponent;",
+      "renamedSymbol": "F:RasterStackHelpers.field_b:LUiComponent;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -154437,7 +154621,7 @@
     },
     {
       "symbol": "F:sc.field_c:Z",
-      "renamedSymbol": "F:sc.field_c:Z",
+      "renamedSymbol": "F:RasterStackHelpers.field_c:Z",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -157693,9 +157877,9 @@
     },
     {
       "symbol": "F:ue.field_b:[I",
-      "renamedSymbol": "F:MonotonicTime.field_b:[I",
+      "renamedSymbol": "F:MonotonicTime.brickHitPendingTypes:[I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "brickHitPendingTypes",
       "declaration": {
         "file": "ue.java",
         "start": 96,
@@ -160476,7 +160660,7 @@
     },
     {
       "symbol": "F:we.field_a:I",
-      "renamedSymbol": "F:we.secondPreviousPacketOpcode:I",
+      "renamedSymbol": "F:ReflectionCheckHelpers.secondPreviousPacketOpcode:I",
       "originalName": "field_a",
       "renamedName": "secondPreviousPacketOpcode",
       "declaration": {
@@ -160487,7 +160671,7 @@
     },
     {
       "symbol": "F:we.field_b:[Ljp;",
-      "renamedSymbol": "F:we.activePowerUpSprites:[LRgbSprite;",
+      "renamedSymbol": "F:ReflectionCheckHelpers.activePowerUpSprites:[LRgbSprite;",
       "originalName": "field_b",
       "renamedName": "activePowerUpSprites",
       "declaration": {
@@ -160498,9 +160682,9 @@
     },
     {
       "symbol": "F:we.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:we.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:ReflectionCheckHelpers.playerOneLabel:Ljava/lang/String;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "playerOneLabel",
       "declaration": {
         "file": "we.java",
         "start": 73,
@@ -302057,7 +302241,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -302068,7 +302252,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -302079,7 +302263,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#2",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -302090,7 +302274,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#3",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -302101,7 +302285,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#4",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -302112,7 +302296,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#5",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -302123,7 +302307,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -302134,7 +302318,7 @@
     },
     {
       "symbol": "L:r.a(BLjava/lang/String;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -302310,7 +302494,7 @@
     },
     {
       "symbol": "L:rb.a(B)V#0",
-      "renamedSymbol": "L:rb.a(B)V#0",
+      "renamedSymbol": "L:BrickHitTransitionTable.clearTransitionCodes(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -310098,7 +310282,7 @@
     },
     {
       "symbol": "L:sc.b(I)V#0",
-      "renamedSymbol": "L:sc.popRaster(I)V#0",
+      "renamedSymbol": "L:RasterStackHelpers.popRaster(I)V#0",
       "originalName": "var1",
       "renamedName": "snapshot",
       "declaration": {
@@ -374822,9 +375006,9 @@
     },
     {
       "symbol": "M:qp.a(IIB)I",
-      "renamedSymbol": "M:qp.a(IIB)I",
+      "renamedSymbol": "M:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "selectPlayerBadgeKind",
       "declaration": {
         "file": "qp.java",
         "start": 592,
@@ -374833,7 +375017,7 @@
     },
     {
       "symbol": "M:qp.a(Z)V",
-      "renamedSymbol": "M:qp.a(Z)V",
+      "renamedSymbol": "M:PlayerBadgeHelpers.a(Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -374932,9 +375116,9 @@
     },
     {
       "symbol": "M:r.a(BLjava/lang/String;)Ljava/lang/String;",
-      "renamedSymbol": "M:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;",
+      "renamedSymbol": "M:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "prefixLocalPlayerBadge",
       "declaration": {
         "file": "r.java",
         "start": 506,
@@ -375119,9 +375303,9 @@
     },
     {
       "symbol": "M:rb.a(B)V",
-      "renamedSymbol": "M:rb.a(B)V",
+      "renamedSymbol": "M:BrickHitTransitionTable.clearTransitionCodes(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearTransitionCodes",
       "declaration": {
         "file": "rb.java",
         "start": 140,
@@ -376472,7 +376656,7 @@
     },
     {
       "symbol": "M:sc.a(I)V",
-      "renamedSymbol": "M:sc.a(I)V",
+      "renamedSymbol": "M:RasterStackHelpers.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -376483,7 +376667,7 @@
     },
     {
       "symbol": "M:sc.b(I)V",
-      "renamedSymbol": "M:sc.popRaster(I)V",
+      "renamedSymbol": "M:RasterStackHelpers.popRaster(I)V",
       "originalName": "b",
       "renamedName": "popRaster",
       "declaration": {
@@ -382093,9 +382277,9 @@
     },
     {
       "symbol": "M:we.a(B)V",
-      "renamedSymbol": "M:we.a(B)V",
+      "renamedSymbol": "M:ReflectionCheckHelpers.resetPendingReflectionChecks(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetPendingReflectionChecks",
       "declaration": {
         "file": "we.java",
         "start": 154,
@@ -382104,7 +382288,7 @@
     },
     {
       "symbol": "M:we.a(I)V",
-      "renamedSymbol": "M:we.a(I)V",
+      "renamedSymbol": "M:ReflectionCheckHelpers.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -456574,9 +456758,9 @@
     },
     {
       "symbol": "P:qp.a(IIB)I#0",
-      "renamedSymbol": "P:qp.a(IIB)I#0",
+      "renamedSymbol": "P:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "privilegeByteOne",
       "declaration": {
         "file": "qp.java",
         "start": 598,
@@ -456585,9 +456769,9 @@
     },
     {
       "symbol": "P:qp.a(IIB)I#1",
-      "renamedSymbol": "P:qp.a(IIB)I#1",
+      "renamedSymbol": "P:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "privilegeByteTwo",
       "declaration": {
         "file": "qp.java",
         "start": 610,
@@ -456596,9 +456780,9 @@
     },
     {
       "symbol": "P:qp.a(IIB)I#2",
-      "renamedSymbol": "P:qp.a(IIB)I#2",
+      "renamedSymbol": "P:PlayerBadgeHelpers.selectPlayerBadgeKind(IIB)I#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qp.java",
         "start": 623,
@@ -456607,7 +456791,7 @@
     },
     {
       "symbol": "P:qp.a(Z)V#0",
-      "renamedSymbol": "P:qp.a(Z)V#0",
+      "renamedSymbol": "P:PlayerBadgeHelpers.a(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -456739,9 +456923,9 @@
     },
     {
       "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "r.java",
         "start": 513,
@@ -456750,9 +456934,9 @@
     },
     {
       "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "P:TextFieldRenderer.a(BLjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "P:TextFieldRenderer.prefixLocalPlayerBadge(BLjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "text",
       "declaration": {
         "file": "r.java",
         "start": 528,
@@ -456981,9 +457165,9 @@
     },
     {
       "symbol": "P:rb.a(B)V#0",
-      "renamedSymbol": "P:rb.a(B)V#0",
+      "renamedSymbol": "P:BrickHitTransitionTable.clearTransitionCodes(B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "rb.java",
         "start": 147,
@@ -459819,7 +460003,7 @@
     },
     {
       "symbol": "P:sc.a(I)V#0",
-      "renamedSymbol": "P:sc.a(I)V#0",
+      "renamedSymbol": "P:RasterStackHelpers.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -459830,7 +460014,7 @@
     },
     {
       "symbol": "P:sc.b(I)V#0",
-      "renamedSymbol": "P:sc.popRaster(I)V#0",
+      "renamedSymbol": "P:RasterStackHelpers.popRaster(I)V#0",
       "originalName": "param0",
       "renamedName": "obfuscationGuard",
       "declaration": {
@@ -473382,9 +473566,9 @@
     },
     {
       "symbol": "P:we.a(B)V#0",
-      "renamedSymbol": "P:we.a(B)V#0",
+      "renamedSymbol": "P:ReflectionCheckHelpers.resetPendingReflectionChecks(B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "we.java",
         "start": 161,
@@ -473393,7 +473577,7 @@
     },
     {
       "symbol": "P:we.a(I)V#0",
-      "renamedSymbol": "P:we.a(I)V#0",
+      "renamedSymbol": "P:ReflectionCheckHelpers.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -476191,7 +476375,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "6e47e5d05d031501da283be3e900e69e09c3f089ec217cddec4b11a92e631768",
+      "outputSha256": "6f6b1481f6eb47179aa4d3a65c207c5f7f024a1932300f671326bf223754310f",
       "edits": [
         {
           "start": 76,
@@ -480723,6 +480907,13 @@
           "renamed": "IsaacGenerator"
         },
         {
+          "start": 17824,
+          "end": 17826,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 17842,
           "end": 17844,
           "symbol": "C:ue",
@@ -481192,6 +481383,20 @@
           "renamed": "BackgroundScene"
         },
         {
+          "start": 19393,
+          "end": 19395,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "BrickHitTransitionTable"
+        },
+        {
+          "start": 19396,
+          "end": 19397,
+          "symbol": "M:rb.a(B)V",
+          "original": "a",
+          "renamed": "clearTransitionCodes"
+        },
+        {
           "start": 19420,
           "end": 19422,
           "symbol": "C:jg",
@@ -481232,6 +481437,13 @@
           "symbol": "C:wh",
           "original": "wh",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 19578,
+          "end": 19580,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
         },
         {
           "start": 19642,
@@ -481442,6 +481654,13 @@
           "symbol": "C:sb",
           "original": "sb",
           "renamed": "BrickGameLayerController"
+        },
+        {
+          "start": 20364,
+          "end": 20366,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 20385,
@@ -486672,7 +486891,7 @@
       "original": "aa.java",
       "renamed": "aa.java",
       "inputSha256": "2c5f1ce2b2502e0905c3f4b658aa5b8c1997ec7e3ae9b57201abac445b37f8a0",
-      "outputSha256": "2d8764067a920f1455b0598fe9d509ea06fe162e2f9eb68b324bdb33c4ccf3c4",
+      "outputSha256": "ec6e31b9a4baa6b0bccc1efea78cdcec6cf29940769fde57a9483b7c3e4e6eb4",
       "edits": [
         {
           "start": 87,
@@ -486820,6 +487039,13 @@
           "symbol": "F:mn.field_z:I",
           "original": "field_z",
           "renamed": "canvasHeight"
+        },
+        {
+          "start": 1590,
+          "end": 1592,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 1593,
@@ -488572,7 +488798,7 @@
       "original": "ad.java",
       "renamed": "CappedUrlRequest.java",
       "inputSha256": "7fb7dc99d93b013df130c503d7a3c4b16a52a7ea9fadeb9d1d00dde398e5148b",
-      "outputSha256": "814a2bcd8e82920df52c89847de343cb811563949cb3dc1c0a7d81a2135f9536",
+      "outputSha256": "d44b16c700b006a60e91dfe9143421e67d9dca5764071c1751f70d4f75042a4f",
       "edits": [
         {
           "start": 69,
@@ -489063,6 +489289,13 @@
           "symbol": "F:r.field_z:I",
           "original": "field_z",
           "renamed": "thirdPreviousPacketOpcode"
+        },
+        {
+          "start": 2263,
+          "end": 2265,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
         },
         {
           "start": 2266,
@@ -490744,7 +490977,7 @@
       "original": "af.java",
       "renamed": "AchievementBrowserScreen.java",
       "inputSha256": "4d0e91ed351977d2a7e2515b1d056d31c61b2c735fb9a8732ff814f378140f11",
-      "outputSha256": "3765b69436097430993ec3e0596604314f4263221209633ab6cf7a19b03699e0",
+      "outputSha256": "221b62e54548090ffa871d37bd44a46fd1ac2cc34e2c1a7c4f38fce08e745980",
       "edits": [
         {
           "start": 53,
@@ -491207,6 +491440,13 @@
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 2060,
+          "end": 2062,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 2063,
@@ -494329,7 +494569,7 @@
       "original": "ag.java",
       "renamed": "ArrayWidgetGroup.java",
       "inputSha256": "3cf79c1f5f309468c4b43ae87288fe455bfc7548e800066c85d5ad0ef60b6b51",
-      "outputSha256": "f650d892fa296561015ab4abd64928f4ffb969cdabf17090eca629d4ae556983",
+      "outputSha256": "c2ec99c8dd2d0815fbfab9250a3dfd44cd2bacb0b551ccc710c6d5a3da3096f0",
       "edits": [
         {
           "start": 74,
@@ -496103,6 +496343,13 @@
           "renamed": "text"
         },
         {
+          "start": 18674,
+          "end": 18676,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 18716,
           "end": 18718,
           "symbol": "C:kc",
@@ -496180,11 +496427,25 @@
           "renamed": "lineSpacing"
         },
         {
+          "start": 18973,
+          "end": 18975,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 18984,
           "end": 18985,
           "symbol": "M:mh.a(IIIIB)V",
           "original": "a",
           "renamed": "setBounds"
+        },
+        {
+          "start": 19070,
+          "end": 19072,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 19081,
@@ -496199,6 +496460,13 @@
           "symbol": "C:na",
           "original": "na",
           "renamed": "DateFieldsWidget"
+        },
+        {
+          "start": 19126,
+          "end": 19128,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 19137,
@@ -496222,11 +496490,25 @@
           "renamed": "setBounds"
         },
         {
+          "start": 19187,
+          "end": 19189,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 19198,
           "end": 19206,
           "symbol": "F:mh.field_cb:I",
           "original": "field_cb",
           "renamed": "height"
+        },
+        {
+          "start": 19235,
+          "end": 19237,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 19246,
@@ -496255,6 +496537,13 @@
           "symbol": "M:mh.a(IIIIB)V",
           "original": "a",
           "renamed": "setBounds"
+        },
+        {
+          "start": 19309,
+          "end": 19311,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 19320,
@@ -505092,7 +505381,7 @@
       "original": "ak.java",
       "renamed": "MultiplayerMatch.java",
       "inputSha256": "44ef57260a869da05db5b717d65518d04318fe4b8ac90975756f82aa77d07565",
-      "outputSha256": "acda8a2d59ffcceebd86d02d6ac5f7a1e13d973ed009c2b8423904fa2ed5dd06",
+      "outputSha256": "a8231cd220ca3a17c1e897eb6f7ed3f4f9320953e3c6bb0f082e83d4084356d7",
       "edits": [
         {
           "start": 50,
@@ -507335,6 +507624,13 @@
           "renamed": "MonotonicTime"
         },
         {
+          "start": 10786,
+          "end": 10793,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
           "start": 10794,
           "end": 10799,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#65",
@@ -507361,6 +507657,20 @@
           "symbol": "F:on.field_B:I",
           "original": "field_B",
           "renamed": "transitionCode"
+        },
+        {
+          "start": 10854,
+          "end": 10856,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "BrickHitTransitionTable"
+        },
+        {
+          "start": 10857,
+          "end": 10864,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
         },
         {
           "start": 10865,
@@ -515968,7 +516278,7 @@
       "original": "am.java",
       "renamed": "ReportAbuseDialog.java",
       "inputSha256": "312fdc8013e8a19398e8aeb77d11a03a2366db6fafa2eb3f23e54168b61455a7",
-      "outputSha256": "e3c6c5efbf78bd86ac16ea3cd874803b7215cae096a3be1e77a70460f7589dfb",
+      "outputSha256": "f06de3a000e02ec10601ef576439eea88210d8166eae5577d00ef3df3e705a27",
       "edits": [
         {
           "start": 50,
@@ -517735,11 +518045,25 @@
           "renamed": "TextChoiceDialogStyles"
         },
         {
+          "start": 8340,
+          "end": 8347,
+          "symbol": "F:gh.field_f:I",
+          "original": "field_f",
+          "renamed": "loginPrivilegeByteTwo"
+        },
+        {
           "start": 8372,
           "end": 8374,
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 8375,
+          "end": 8383,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 8406,
@@ -517785,11 +518109,25 @@
           "renamed": "TextChoiceDialogStyles"
         },
         {
+          "start": 8622,
+          "end": 8629,
+          "symbol": "F:gh.field_f:I",
+          "original": "field_f",
+          "renamed": "loginPrivilegeByteTwo"
+        },
+        {
           "start": 8804,
           "end": 8806,
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 8807,
+          "end": 8815,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 8959,
@@ -571629,7 +571967,7 @@
       "original": "cf.java",
       "renamed": "cf.java",
       "inputSha256": "e792aa11d04bfe0a67746014d62b33b2ecaf4aa9f5d21d862a661c0dd202ab6a",
-      "outputSha256": "6bdd86028efd1911151503f9be0143c2bfe98fcb6ed4036628782d4e6ca1f589",
+      "outputSha256": "e467af1ea5718dbe9264ccbaada35d4ea4aaa6b9d750e0aa8bb8b88cdb33f869",
       "edits": [
         {
           "start": 75,
@@ -571884,11 +572222,25 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 3163,
+          "end": 3171,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
+        },
+        {
           "start": 3243,
           "end": 3245,
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 3246,
+          "end": 3254,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 3325,
@@ -571924,7 +572276,7 @@
       "original": "cg.java",
       "renamed": "NanoGameClock.java",
       "inputSha256": "5115ebd3a6fb414d6e298e2e330d8fa86e71161f40d62d329f44a56ebd212998",
-      "outputSha256": "ccf778f8f8aef87d609aadffea8a010f32728111d0ee9f8fbcac9889e92d4d61",
+      "outputSha256": "594fad654fcc06ae8070dfb7dd5028ff0db99e216433e8fb8708928f63c6dfe1",
       "edits": [
         {
           "start": 50,
@@ -572464,6 +572816,13 @@
           "symbol": "F:mh.field_Ib:I",
           "original": "field_Ib",
           "renamed": "width"
+        },
+        {
+          "start": 1704,
+          "end": 1706,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 1715,
@@ -586599,7 +586958,7 @@
       "original": "cq.java",
       "renamed": "RankingsRequest.java",
       "inputSha256": "64596c3152f369f509e45c4bbe8b2b5690555ea78844e8108a52ebb4e437d5aa",
-      "outputSha256": "fa600d3eeea213355add328acd9acd1d9a67b9931bca3272e1f83146408b2006",
+      "outputSha256": "9caf04f966eb3c984f799fbe5ef40ce55be53a5aa56d6c228c5d8f1bcac175ff",
       "edits": [
         {
           "start": 50,
@@ -587120,6 +587479,20 @@
           "renamed": "LoadingProgressDialog"
         },
         {
+          "start": 2665,
+          "end": 2667,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
+          "start": 2668,
+          "end": 2675,
+          "symbol": "F:we.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "playerOneLabel"
+        },
+        {
           "start": 2722,
           "end": 2724,
           "symbol": "C:tb",
@@ -587370,7 +587743,7 @@
       "original": "cr.java",
       "renamed": "ActivityIndicatorWidget.java",
       "inputSha256": "cd09fe2ed0378fa9d92efa295b2bad2bb050d9ae887d034b0cce0d5c7daae5f8",
-      "outputSha256": "ba3b616bd41d4ab664896d286d7af726754927e2fa8bb20b90c9c4b46d345834",
+      "outputSha256": "e9e91d2e6253ed9111792cc6efa3b8120fdf55ecaef339e4c38ed41d64c5a7db",
       "edits": [
         {
           "start": 69,
@@ -588185,6 +588558,13 @@
           "renamed": "width"
         },
         {
+          "start": 2601,
+          "end": 2603,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 2604,
           "end": 2605,
           "symbol": "M:sc.b(I)V",
@@ -588302,6 +588682,13 @@
           "symbol": "F:cr.field_O:Ljp;",
           "original": "field_O",
           "renamed": "leftCapMask"
+        },
+        {
+          "start": 2856,
+          "end": 2858,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 2859,
@@ -588519,6 +588906,13 @@
           "symbol": "F:cr.field_G:Ljp;",
           "original": "field_G",
           "renamed": "rightCapMask"
+        },
+        {
+          "start": 3302,
+          "end": 3304,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 3305,
@@ -589683,6 +590077,13 @@
           "renamed": "intensity"
         },
         {
+          "start": 7357,
+          "end": 7359,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 7360,
           "end": 7361,
           "symbol": "M:sc.b(I)V",
@@ -590369,6 +590770,13 @@
           "renamed": "litBackground"
         },
         {
+          "start": 8888,
+          "end": 8890,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 8891,
           "end": 8892,
           "symbol": "M:sc.b(I)V",
@@ -590969,6 +591377,13 @@
           "symbol": "P:cr.a(IIIB)V#3",
           "original": "param3",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 11645,
+          "end": 11647,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 11648,
@@ -598536,7 +598951,7 @@
       "original": "dg.java",
       "renamed": "MultiValueSliderRenderer.java",
       "inputSha256": "6ab9da018bcdaef11bdd8efc2def161a41602a7158f684263dde0ed380190a72",
-      "outputSha256": "51a8b59178fe60f64fb2dc057d8ef204f304da1fa48fcf92cb9a222387de55eb",
+      "outputSha256": "358bf32dd131220a65ddd8383d466ea66f0a80e95a51784c86ab667220041e6a",
       "edits": [
         {
           "start": 50,
@@ -599316,6 +599731,13 @@
           "renamed": "height"
         },
         {
+          "start": 3917,
+          "end": 3919,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 3920,
           "end": 3921,
           "symbol": "M:sc.b(I)V",
@@ -599468,6 +599890,13 @@
           "symbol": "F:lb.field_d:I",
           "original": "field_d",
           "renamed": "height"
+        },
+        {
+          "start": 5043,
+          "end": 5045,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 5046,
@@ -611700,7 +612129,7 @@
       "original": "dk.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "dc50c13154cfd195cf3a3180a08754eff1a3451b2e6ce48c0ea42829bbc86078",
-      "outputSha256": "08626cb0b553702c1f0dd187db94293bec0df4c3048cc338c6e6358fe11b889f",
+      "outputSha256": "466e5f53b1f1b25105b240ca6139d3001fa690e3845b575ce54ebf8452161279",
       "edits": [
         {
           "start": 50,
@@ -614956,6 +615385,13 @@
           "symbol": "F:pb.field_q:I",
           "original": "field_q",
           "renamed": "height"
+        },
+        {
+          "start": 18074,
+          "end": 18076,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 18077,
@@ -619985,7 +620421,7 @@
       "original": "dp.java",
       "renamed": "HalloweenBackground.java",
       "inputSha256": "510137ab99fc63903b8321f8800db51a0b5683d0299e33fd07844c56fcd77327",
-      "outputSha256": "9cae41ce077305fdfeab917f39605eb3ac6683088dfa42f1fa5ddc363c0a5771",
+      "outputSha256": "1c994485d63e05161eeb83fbc919ee8aa0544b2333658db892a20e561d6ef87d",
       "edits": [
         {
           "start": 50,
@@ -621519,6 +621955,13 @@
           "symbol": "C:pb",
           "original": "pb",
           "renamed": "RasterCacheSurface"
+        },
+        {
+          "start": 4036,
+          "end": 4038,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 4039,
@@ -624909,7 +625352,7 @@
       "original": "e.java",
       "renamed": "AchievementSubmission.java",
       "inputSha256": "3abf71015a9114dac9efae98c942db2a2425929ecc46d5ad3b09bafaed462fad",
-      "outputSha256": "0e38e2507b0c8582bab25ea13065425fed1c35368f8a5b5593d75e8c848c0aa6",
+      "outputSha256": "f978e4b665e0b84ed84b478ddf567cc5aa18d794ccd86d091abdc8d7ee24d4e6",
       "edits": [
         {
           "start": 50,
@@ -627248,6 +627691,13 @@
           "symbol": "F:mn.field_C:I",
           "original": "field_C",
           "renamed": "height"
+        },
+        {
+          "start": 6801,
+          "end": 6803,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 6804,
@@ -631908,7 +632358,7 @@
       "original": "ee.java",
       "renamed": "MotionWaypoint.java",
       "inputSha256": "02b7eb5f4397985173ace5d19cd2eb1f0d9f5c8f0c12206353af20d32c4ec07e",
-      "outputSha256": "ecf82b8f83561733c6ef5173eddebf2e005e067623ad0f87a65b9faf2bbae42f",
+      "outputSha256": "8f7fa3bd30a46bdb786f59cadba45bdacafb1dc1788516f0f76a22d6233588ee",
       "edits": [
         {
           "start": 50,
@@ -632149,6 +632599,13 @@
           "renamed": "decodedSpriteWidths"
         },
         {
+          "start": 885,
+          "end": 887,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 888,
           "end": 895,
           "symbol": "F:qp.field_c:[I",
@@ -632203,6 +632660,13 @@
           "symbol": "F:jh.field_b:[I",
           "original": "field_b",
           "renamed": "decodedSpriteWidths"
+        },
+        {
+          "start": 1063,
+          "end": 1065,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 1066,
@@ -633325,7 +633789,7 @@
       "original": "eh.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "46347787c4695ab28b218fc6aa8835d2524e4f8783004fa1ca030c837423e483",
-      "outputSha256": "f60e54d91badb622e770b3746b28204aa743207223f8eb5e4cb93e8da20c74ca",
+      "outputSha256": "826b5239585b36e4f43a86484263062c7661a88ee631ce850e0f84e84b5fff20",
       "edits": [
         {
           "start": 50,
@@ -635078,6 +635542,13 @@
           "renamed": "data"
         },
         {
+          "start": 7660,
+          "end": 7662,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 7663,
           "end": 7670,
           "symbol": "F:qp.field_c:[I",
@@ -635120,6 +635591,13 @@
           "renamed": "paletteIndex"
         },
         {
+          "start": 7775,
+          "end": 7777,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 7778,
           "end": 7785,
           "symbol": "F:qp.field_c:[I",
@@ -635148,6 +635626,13 @@
           "renamed": "readUnsignedMedium"
         },
         {
+          "start": 7845,
+          "end": 7847,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 7848,
           "end": 7855,
           "symbol": "F:qp.field_c:[I",
@@ -635160,6 +635645,13 @@
           "symbol": "L:eh.a([BZ)V#45",
           "original": "var4Lifetime4",
           "renamed": "paletteIndex"
+        },
+        {
+          "start": 7888,
+          "end": 7890,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 7891,
@@ -638514,7 +639006,7 @@
       "original": "ej.java",
       "renamed": "StrongCacheEntry.java",
       "inputSha256": "e22388549df924e1a9e05f1db44dd07701f50f931d48b2ef999d5889c91faaa1",
-      "outputSha256": "85a3a770b0e892487eda3d24bdd8731858a0776be6adebca4bc7bca1f3a5c954",
+      "outputSha256": "cc6a47bd3309ca8585f75b06a16eb01f65e60b8af45f318ccbbdb70afb55513d",
       "edits": [
         {
           "start": 50,
@@ -638690,6 +639182,13 @@
           "symbol": "F:pb.field_q:I",
           "original": "field_q",
           "renamed": "height"
+        },
+        {
+          "start": 739,
+          "end": 741,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 742,
@@ -641979,7 +642478,7 @@
       "original": "eq.java",
       "renamed": "WhirlpoolHasher.java",
       "inputSha256": "7255b76874aaf0c027308c76613aebab11215fe8bdc066b8c81e9cd994ea065e",
-      "outputSha256": "28c52c6a30c7b7ddec8f0c3257d2445e6a8be9874a8e56ffa8ab5692fce25130",
+      "outputSha256": "ee7fc8bb28f60c42a7f7d823b2404dd1c67bc117de0e26b63683be04f3fe4898",
       "edits": [
         {
           "start": 50,
@@ -642218,6 +642717,13 @@
           "symbol": "F:r.field_z:I",
           "original": "field_z",
           "renamed": "thirdPreviousPacketOpcode"
+        },
+        {
+          "start": 1487,
+          "end": 1489,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
         },
         {
           "start": 1490,
@@ -669490,7 +669996,7 @@
       "original": "fl.java",
       "renamed": "UsernameAvailabilityValidator.java",
       "inputSha256": "b32305d0ebb1363762119167728dbda0b5905ce8c9e41935359d4ff7536ce5a4",
-      "outputSha256": "3091ef908b421d817ffc394d3966733db3ad22107064ac5b11077e0c0aece87c",
+      "outputSha256": "8a850e3700946dc7c415c24a318c638b408bb594e7f43c74dcae17690da945f7",
       "edits": [
         {
           "start": 50,
@@ -669736,6 +670242,13 @@
           "symbol": "M:jp.a(II)V",
           "original": "a",
           "renamed": "drawHalfSize"
+        },
+        {
+          "start": 980,
+          "end": 982,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 983,
@@ -678800,7 +679313,7 @@
       "original": "g.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "6aac3d224e93763ca21de1f19d8fa37ae7502536de5edc3e1cac726a6821e808",
-      "outputSha256": "516fde868a99940739f90128a40a2091acb76675a1119bb711a4ffcf379a6882",
+      "outputSha256": "44627dedae5806d8d70c68f270b00b00fde69705643a03d652f3dfe9f6c5f7fc",
       "edits": [
         {
           "start": 50,
@@ -679363,6 +679876,13 @@
           "renamed": "hasInvalidPasswordLength"
         },
         {
+          "start": 3928,
+          "end": 3930,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 3998,
           "end": 4000,
           "symbol": "C:ab",
@@ -679473,6 +679993,13 @@
           "symbol": "C:ep",
           "original": "ep",
           "renamed": "WidgetTextLayout"
+        },
+        {
+          "start": 4776,
+          "end": 4778,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 4825,
@@ -679879,7 +680406,7 @@
       "original": "ga.java",
       "renamed": "ga.java",
       "inputSha256": "1562fff70217631bd432dca978ac324233bced99561c37c57cc6830be48beef4",
-      "outputSha256": "097bb53fcf63b6561da2d955fd9ec477a0840a5d5fce660ee138099059d0d6c8",
+      "outputSha256": "06c9a7af050a636589f5d6cfdc54f173fd74ae33af16a48c08ea9635472d5ee6",
       "edits": [
         {
           "start": 61,
@@ -680001,6 +680528,13 @@
           "renamed": "drawRoot"
         },
         {
+          "start": 746,
+          "end": 748,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 772,
           "end": 774,
           "symbol": "C:lb",
@@ -680041,6 +680575,13 @@
           "symbol": "F:mh.field_db:I",
           "original": "field_db",
           "renamed": "screenY"
+        },
+        {
+          "start": 829,
+          "end": 831,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 840,
@@ -687508,7 +688049,7 @@
       "original": "gh.java",
       "renamed": "TextChoiceDialogStyles.java",
       "inputSha256": "f7ca1829b62cb9a64efe843bc934077620cc9258066816474b56b2c0cdd4ea66",
-      "outputSha256": "969443572b5f4007ba010212bab07540642c5aedf10848294278fec898bdea45",
+      "outputSha256": "836d13e2a632cabc3505c3276c35f526f645ebc0910b057f4291794616e1cf49",
       "edits": [
         {
           "start": 50,
@@ -687523,6 +688064,13 @@
           "symbol": "F:gh.field_e:Ljava/lang/StringBuilder;",
           "original": "field_e",
           "renamed": "diagnosticDecimalScratch"
+        },
+        {
+          "start": 187,
+          "end": 194,
+          "symbol": "F:gh.field_f:I",
+          "original": "field_f",
+          "renamed": "loginPrivilegeByteTwo"
         },
         {
           "start": 296,
@@ -697717,7 +698265,7 @@
       "original": "gr.java",
       "renamed": "GameplaySpriteHelpers.java",
       "inputSha256": "8b580622a2caf7ec3973efac040572bb795a35ddd17f8f9964d3180b7b54eb71",
-      "outputSha256": "920d28984d5dc8f33962c169970c82578809148224506d3a749cfd453841b8f5",
+      "outputSha256": "579caf9981711cab71918074619d2e2d901282457d631c456f0046c590d7bfae",
       "edits": [
         {
           "start": 50,
@@ -698259,6 +698807,13 @@
           "renamed": "halfBoardMaskSprite"
         },
         {
+          "start": 2728,
+          "end": 2730,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
           "start": 2731,
           "end": 2738,
           "symbol": "F:we.field_b:[Ljp;",
@@ -698607,6 +699162,13 @@
           "symbol": "F:qg.field_D:[Ljp;",
           "original": "field_D",
           "renamed": "fullPaddleSegmentSprites"
+        },
+        {
+          "start": 3199,
+          "end": 3201,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
         },
         {
           "start": 3202,
@@ -710921,7 +711483,7 @@
       "original": "hh.java",
       "renamed": "hh.java",
       "inputSha256": "2b1504c44202dae4cb6c58791e19fe68abb0ae023bc46df9cec977342685bf9b",
-      "outputSha256": "c5a6307ff04f41c8bbdaa7b2b7fe47a7b298c7760787184784e6c9c92a59799a",
+      "outputSha256": "4888d5f3e961015c0bc9bd8a99d8ff30a5d26ca8e28dd48e83e6231c179cb32f",
       "edits": [
         {
           "start": 72,
@@ -711125,6 +711687,13 @@
           "symbol": "F:mn.field_z:I",
           "original": "field_z",
           "renamed": "canvasHeight"
+        },
+        {
+          "start": 1518,
+          "end": 1520,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 1521,
@@ -711489,7 +712058,7 @@
       "original": "hi.java",
       "renamed": "ButtonWidgetRenderer.java",
       "inputSha256": "3c964aad048467b618861975bfed483ce6dc41f9c44ef8f88e6f3e418cc9d3ec",
-      "outputSha256": "36d5b45e343143e73a9c10730bfc8115bacba633f80b4618a600d8f24ec18f2b",
+      "outputSha256": "d488ace028b92c05a95a8e6ad2a0bb326d59462ce08a529a80df2fb9de34bd3d",
       "edits": [
         {
           "start": 50,
@@ -711945,6 +712514,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "TextFieldRenderer"
+        },
+        {
+          "start": 5267,
+          "end": 5268,
+          "symbol": "M:r.a(BLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "prefixLocalPlayerBadge"
         },
         {
           "start": 5464,
@@ -712605,6 +713181,13 @@
           "renamed": "TextFieldRenderer"
         },
         {
+          "start": 9382,
+          "end": 9383,
+          "symbol": "M:r.a(BLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "prefixLocalPlayerBadge"
+        },
+        {
           "start": 9671,
           "end": 9673,
           "symbol": "C:ng",
@@ -713219,6 +713802,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "TextFieldRenderer"
+        },
+        {
+          "start": 14004,
+          "end": 14005,
+          "symbol": "M:r.a(BLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "prefixLocalPlayerBadge"
         },
         {
           "start": 14221,
@@ -731225,7 +731815,7 @@
       "original": "i.java",
       "renamed": "AchievementIcon.java",
       "inputSha256": "9e1806d5b6283651f87e1e1570bf1b830f27f797ab0b33b41cc15d247fbbcaa5",
-      "outputSha256": "24bda6494c903bfbc5dc6229bec679cd13fbf4cdc01468b5d6311e15e86c2b64",
+      "outputSha256": "c0f2c1dcf2f8613eda1fcadb06dbd84118874b78d9281f8f33236ac4afa4f894",
       "edits": [
         {
           "start": 50,
@@ -733531,6 +734121,13 @@
           "renamed": "drawQuarter"
         },
         {
+          "start": 9884,
+          "end": 9886,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 9887,
           "end": 9888,
           "symbol": "M:sc.b(I)V",
@@ -733685,6 +734282,13 @@
           "renamed": "drawQuarter"
         },
         {
+          "start": 10374,
+          "end": 10376,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 10377,
           "end": 10378,
           "symbol": "M:sc.b(I)V",
@@ -733788,6 +734392,13 @@
           "symbol": "M:tp.c(II)V",
           "original": "c",
           "renamed": "drawQuarter"
+        },
+        {
+          "start": 10750,
+          "end": 10752,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 10753,
@@ -733909,6 +734520,13 @@
           "renamed": "cachedThumbnail"
         },
         {
+          "start": 11187,
+          "end": 11189,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 11190,
           "end": 11191,
           "symbol": "M:sc.b(I)V",
@@ -733984,6 +734602,13 @@
           "symbol": "F:i.field_k:Ljp;",
           "original": "field_k",
           "renamed": "cachedThumbnail"
+        },
+        {
+          "start": 11503,
+          "end": 11505,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 11506,
@@ -734140,6 +734765,13 @@
           "renamed": "cachedThumbnail"
         },
         {
+          "start": 12123,
+          "end": 12125,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 12126,
           "end": 12127,
           "symbol": "M:sc.b(I)V",
@@ -734215,6 +734847,13 @@
           "symbol": "F:i.field_k:Ljp;",
           "original": "field_k",
           "renamed": "cachedThumbnail"
+        },
+        {
+          "start": 12411,
+          "end": 12413,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 12414,
@@ -746415,7 +747054,7 @@
       "original": "ih.java",
       "renamed": "ArchiveFetchClient.java",
       "inputSha256": "ea24702700b66aaac84eaab7978b4c6a1b9d48a28af39a4d7e02319e10006e05",
-      "outputSha256": "18e122ed320b57d0af0e30af787a13310b430b17ab96042d903e029cfa1c2efa",
+      "outputSha256": "89b96a119f1cb8ad4fcd8debb3ae502d5d3b4580fdde47946b771185289e0a6d",
       "edits": [
         {
           "start": 53,
@@ -747116,6 +747755,13 @@
           "symbol": "F:pb.field_q:I",
           "original": "field_q",
           "renamed": "height"
+        },
+        {
+          "start": 3600,
+          "end": 3602,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 3603,
@@ -756447,7 +757093,7 @@
       "original": "ip.java",
       "renamed": "JungleBackground.java",
       "inputSha256": "fda3621e32924036def33b6bfe07ca8973e98afaba868384ede85499d943a5e8",
-      "outputSha256": "63804826d52136a38fa51558ced1704adbbd9d10fcc4b34c77aaa6bfe42226fc",
+      "outputSha256": "b88f27e4c690a47452ab7f1769683c8df90fe261b756e294d538ba47b6313d32",
       "edits": [
         {
           "start": 50,
@@ -758167,6 +758813,13 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 18265,
+          "end": 18273,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
+        },
+        {
           "start": 18300,
           "end": 18302,
           "symbol": "C:pe",
@@ -758277,6 +758930,13 @@
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 19607,
+          "end": 19615,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 19641,
@@ -770476,7 +771136,7 @@
       "original": "jc.java",
       "renamed": "WidgetLayer.java",
       "inputSha256": "4878767cce3a518f6698a7e222c7ce8da24c3be24cf951c4093f2d5d1eadd938",
-      "outputSha256": "927c8ab46e9e30f4fd194d325b4b0fcb521426cfacc646952dfe61520200b9f7",
+      "outputSha256": "0595b2f329641687aa5eacca7dbc2716fb76c376c89661d5b6c7a7a4305d17b7",
       "edits": [
         {
           "start": 53,
@@ -770995,6 +771655,13 @@
           "symbol": "P:jc.a(IIIB)V#3",
           "original": "param3",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3127,
+          "end": 3129,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 3130,
@@ -781124,7 +781791,7 @@
       "original": "jk.java",
       "renamed": "UnderwaterBackground.java",
       "inputSha256": "35762eb76ee99358bb4274275df2c3913132b2ceb7a3f7d85d158625a76e7cc0",
-      "outputSha256": "868f65f28edeab3238aeeadf8d5dd9c20ab2b8222a073248fabc3de6c3052e60",
+      "outputSha256": "3ef0de2b7bc181d01081f72a797e1a77d1d0f716e6873e65249471fc18e3f6da",
       "edits": [
         {
           "start": 50,
@@ -781757,6 +782424,13 @@
           "renamed": "drawVerticallyFlipped"
         },
         {
+          "start": 1954,
+          "end": 1956,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 1957,
           "end": 1958,
           "symbol": "M:sc.b(I)V",
@@ -781965,6 +782639,13 @@
           "symbol": "F:mn.field_z:I",
           "original": "field_z",
           "renamed": "canvasHeight"
+        },
+        {
+          "start": 2332,
+          "end": 2334,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 2335,
@@ -786453,7 +787134,7 @@
       "original": "jm.java",
       "renamed": "MusicEnvelope.java",
       "inputSha256": "bdfa640c0c45b21622b62a66791cd8b0d34b64f18abbd70550b92e80c0c8209b",
-      "outputSha256": "ffb9b972eddb3a264fa01f506077652087108189716072123904cc922647b85e",
+      "outputSha256": "49b8595fd5e87d3050ccb5a5b5853344a4fb4a8c77b3513638a5c70bb1a8ede5",
       "edits": [
         {
           "start": 50,
@@ -789101,6 +789782,13 @@
           "symbol": "F:gg.field_t:[I",
           "original": "field_t",
           "renamed": "decodedSpriteHeights"
+        },
+        {
+          "start": 8489,
+          "end": 8491,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 8492,
@@ -817189,7 +817877,7 @@
       "original": "kb.java",
       "renamed": "QuickChatHelpDialog.java",
       "inputSha256": "602e497a9a1fbd28fc369511a313aec06f25dcb9001abb20b4ea9a943a6e14ed",
-      "outputSha256": "530f12298ef7c16aec781c50e2e51fccc69cbd47beb7975ab26229ae3bc9dd8d",
+      "outputSha256": "1ec7fd7aa4f15b366ae4762475fb3d5ffff3b9002d04b8e9bc7512a56007a0ae",
       "edits": [
         {
           "start": 50,
@@ -817239,6 +817927,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 308,
+          "end": 316,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 329,
@@ -817456,6 +818151,13 @@
           "symbol": "F:mh.field_L:I",
           "original": "field_L",
           "renamed": "pressedButton"
+        },
+        {
+          "start": 3152,
+          "end": 3160,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 3342,
@@ -832017,7 +832719,7 @@
       "original": "kk.java",
       "renamed": "kk.java",
       "inputSha256": "92008650e75bb900f89313d37d3d5098ca455565ff3b7daf929f11542c66379a",
-      "outputSha256": "16db63f4afeff4c3d0031a8f46f307be2341d5865bd87bbab438c95e912a3eeb",
+      "outputSha256": "27b01acf23697a5bde39bbf122124a49b4442906ab4194287599f764be929087",
       "edits": [
         {
           "start": 72,
@@ -832193,6 +832895,13 @@
           "symbol": "F:cn.field_a:[[B",
           "original": "field_a",
           "renamed": "decodedSpriteIndices"
+        },
+        {
+          "start": 584,
+          "end": 586,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 587,
@@ -850177,7 +850886,7 @@
       "original": "l.java",
       "renamed": "SoundPlayback.java",
       "inputSha256": "f75fc3ce478a63b0affd6ff08f23e491d6750ec5aefc833359b4769db4b1029a",
-      "outputSha256": "414aa351c09c9d6bc5452a580ed3f692371d5a0f214573de6817787c5b3c6a0c",
+      "outputSha256": "04ccfa6a61c997bdec1eb2e9e962688451e8afd35fe97e0774037cbb24cc673a",
       "edits": [
         {
           "start": 50,
@@ -850332,6 +851041,13 @@
           "symbol": "C:ab",
           "original": "ab",
           "renamed": "MatchCompleteScreen"
+        },
+        {
+          "start": 484,
+          "end": 486,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 487,
@@ -868913,7 +869629,7 @@
       "original": "ld.java",
       "renamed": "MatchResultScreen.java",
       "inputSha256": "b41adab2cdecf4b36d4df4214f3574dff5bbd2c55dee7093f9d8bf4d9f697a33",
-      "outputSha256": "d43e00c54c4c226c0b17458bc0ff0b1eba1779294ae3139f03a0348c7e8a1ea8",
+      "outputSha256": "f0a7b57f8286d5e2b203b8e31ecf482c3e8ce69164f245a667707270ed112920",
       "edits": [
         {
           "start": 53,
@@ -869259,6 +869975,13 @@
           "renamed": "canvasWidth"
         },
         {
+          "start": 2157,
+          "end": 2159,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 2171,
           "end": 2178,
           "symbol": "F:fc.field_h:I",
@@ -869271,6 +869994,13 @@
           "symbol": "M:ld.f(I)I",
           "original": "f",
           "renamed": "getResultBottom"
+        },
+        {
+          "start": 2280,
+          "end": 2282,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 2320,
@@ -869292,6 +870022,13 @@
           "symbol": "P:ld.b(B)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2531,
+          "end": 2533,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 2545,
@@ -870065,7 +870802,7 @@
       "original": "lf.java",
       "renamed": "RankingsScreen.java",
       "inputSha256": "382137f391155959bf86a26589d210aa52243f53c359c2b8f6fa630d308bad14",
-      "outputSha256": "79ebd2f6a6b599140ad6af31164599248827bad11119277cf62e94489285f31d",
+      "outputSha256": "19264308d2b9109fa42aa183f9cdcfd6bb53d7ef4b5e1491ae529801c15c1632",
       "edits": [
         {
           "start": 50,
@@ -870675,6 +871412,13 @@
           "symbol": "F:pb.field_q:I",
           "original": "field_q",
           "renamed": "height"
+        },
+        {
+          "start": 3011,
+          "end": 3013,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 3014,
@@ -919340,7 +920084,7 @@
       "original": "n.java",
       "renamed": "ConnectionPhase.java",
       "inputSha256": "57ffbc609c7e96db9f2eef78c7891cd0d26578906ecf226e6a621834d09bfd2a",
-      "outputSha256": "d43fd832d6a4344b3ffb462bc41f302c449ee46dc62e0a27f534fedc5c6ca8df",
+      "outputSha256": "fdc3603ca94340c675d7569ed5bcf94c5c232f5fafe300ae1c519f4297b60237",
       "edits": [
         {
           "start": 50,
@@ -920013,6 +920757,13 @@
           "symbol": "F:cn.field_a:[[B",
           "original": "field_a",
           "renamed": "decodedSpriteIndices"
+        },
+        {
+          "start": 3910,
+          "end": 3912,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 3913,
@@ -921765,6 +922516,13 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 9731,
+          "end": 9739,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
+        },
+        {
           "start": 9766,
           "end": 9768,
           "symbol": "C:pe",
@@ -922568,7 +923326,7 @@
       "original": "na.java",
       "renamed": "DateFieldsWidget.java",
       "inputSha256": "5a8704376de500d107a61d89176da08c7c0961b70356626dc95f6f8cecbcbc74",
-      "outputSha256": "9b03fa4bb90c57e14f26ff639e126a708fb9834b4ca1bd4b25883ce90e51ed4a",
+      "outputSha256": "ff90534a6b0f444049bfe2ac7aaa9a723d337b225169bdfbb5a56ebe7fda4d2d",
       "edits": [
         {
           "start": 50,
@@ -924524,6 +925282,13 @@
           "renamed": "ContentTransitionLayer"
         },
         {
+          "start": 8006,
+          "end": 8008,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 8030,
           "end": 8031,
           "symbol": "C:o",
@@ -924573,6 +925338,13 @@
           "renamed": "FontRequestHelpers"
         },
         {
+          "start": 8219,
+          "end": 8221,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 8235,
           "end": 8236,
           "symbol": "C:o",
@@ -924615,6 +925387,20 @@
           "renamed": "updateRoot"
         },
         {
+          "start": 8368,
+          "end": 8370,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 8431,
+          "end": 8433,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 8456,
           "end": 8458,
           "symbol": "C:mh",
@@ -924648,6 +925434,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "ContentTransitionLayer"
+        },
+        {
+          "start": 8696,
+          "end": 8698,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 8720,
@@ -924699,6 +925492,13 @@
           "renamed": "FontRequestHelpers"
         },
         {
+          "start": 8907,
+          "end": 8909,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 8923,
           "end": 8924,
           "symbol": "C:o",
@@ -924739,6 +925539,20 @@
           "symbol": "M:mh.a(ZI)V",
           "original": "a",
           "renamed": "updateRoot"
+        },
+        {
+          "start": 9056,
+          "end": 9058,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 9119,
+          "end": 9121,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 9144,
@@ -924851,6 +925665,13 @@
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 9541,
+          "end": 9549,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 9574,
@@ -924977,6 +925798,13 @@
           "symbol": "F:mh.field_L:I",
           "original": "field_L",
           "renamed": "pressedButton"
+        },
+        {
+          "start": 9978,
+          "end": 9980,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 10030,
@@ -928215,7 +929043,7 @@
       "original": "nf.java",
       "renamed": "ValidationMessageWidget.java",
       "inputSha256": "026c9059c9217c4c511351ee754fdc7cc0cd96a424e039714346dc14c697af00",
-      "outputSha256": "634006c9c8759e3e906332a0dcfb7d35558334ad7af7d150942a34d8eca134f1",
+      "outputSha256": "9ac1d0c349ec7713e6b9effc64f310e6a5c2a3d1f69f55ba0d5cea53d10f64d7",
       "edits": [
         {
           "start": 50,
@@ -929324,6 +930152,13 @@
           "renamed": "spinnerTicks"
         },
         {
+          "start": 6125,
+          "end": 6127,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 6128,
           "end": 6129,
           "symbol": "M:sc.b(I)V",
@@ -929779,6 +930614,13 @@
           "renamed": "spinnerTicks"
         },
         {
+          "start": 7946,
+          "end": 7948,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 7949,
           "end": 7950,
           "symbol": "M:sc.b(I)V",
@@ -930211,6 +931053,13 @@
           "symbol": "F:nf.field_Q:I",
           "original": "field_Q",
           "renamed": "spinnerTicks"
+        },
+        {
+          "start": 9710,
+          "end": 9712,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 9713,
@@ -930668,6 +931517,13 @@
           "renamed": "spinnerTicks"
         },
         {
+          "start": 11693,
+          "end": 11695,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 11696,
           "end": 11697,
           "symbol": "M:sc.b(I)V",
@@ -931072,6 +931928,13 @@
           "symbol": "F:nf.field_Q:I",
           "original": "field_Q",
           "renamed": "spinnerTicks"
+        },
+        {
+          "start": 13452,
+          "end": 13454,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 13455,
@@ -931550,6 +932413,13 @@
           "renamed": "spinnerTicks"
         },
         {
+          "start": 15612,
+          "end": 15614,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 15615,
           "end": 15616,
           "symbol": "M:sc.b(I)V",
@@ -931968,6 +932838,13 @@
           "symbol": "F:nf.field_Q:I",
           "original": "field_Q",
           "renamed": "spinnerTicks"
+        },
+        {
+          "start": 17364,
+          "end": 17366,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 17367,
@@ -932423,6 +933300,13 @@
           "symbol": "F:nf.field_Q:I",
           "original": "field_Q",
           "renamed": "spinnerTicks"
+        },
+        {
+          "start": 19159,
+          "end": 19161,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 19162,
@@ -933047,7 +933931,7 @@
       "original": "nh.java",
       "renamed": "LobbyUiHelpers.java",
       "inputSha256": "14d571abf3fef6acc8f8b558e6b385e71c591c87c3f53dd16cb95bc1a5325f34",
-      "outputSha256": "e01edd63a1bb089ae3887821b0b5587f6fdfeda0a9acec7aa70d455ff1465f24",
+      "outputSha256": "195aedc0d1591984923fe4e18d62da751d36178e4138d8831504cc5c70cbfc58",
       "edits": [
         {
           "start": 50,
@@ -938795,6 +939679,13 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 19048,
+          "end": 19056,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
+        },
+        {
           "start": 19079,
           "end": 19081,
           "symbol": "C:pe",
@@ -940153,6 +941044,13 @@
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 25886,
+          "end": 25894,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 25916,
@@ -946701,7 +947599,7 @@
       "original": "nl.java",
       "renamed": "IncomingPacketHelpers.java",
       "inputSha256": "63d78661f3f9c7281b3162e439b53290bf2c792d7c77d4e4c9bb0a24896aacdb",
-      "outputSha256": "08e0358a8bdd57ce4af5d242ab6553cd854df070b8e53f514fc1522029e90ad2",
+      "outputSha256": "cc1fe344c60160b3141b1ea3a8282593fafe0af8faf27d2f4bf584d8a138bef8",
       "edits": [
         {
           "start": 50,
@@ -947243,11 +948141,25 @@
           "renamed": "thirdPreviousPacketOpcode"
         },
         {
+          "start": 1724,
+          "end": 1726,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
           "start": 1727,
           "end": 1734,
           "symbol": "F:we.field_a:I",
           "original": "field_a",
           "renamed": "secondPreviousPacketOpcode"
+        },
+        {
+          "start": 1750,
+          "end": 1752,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
         },
         {
           "start": 1753,
@@ -947502,11 +948414,25 @@
           "renamed": "thirdPreviousPacketOpcode"
         },
         {
+          "start": 2381,
+          "end": 2383,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
           "start": 2384,
           "end": 2391,
           "symbol": "F:we.field_a:I",
           "original": "field_a",
           "renamed": "secondPreviousPacketOpcode"
+        },
+        {
+          "start": 2407,
+          "end": 2409,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
         },
         {
           "start": 2410,
@@ -949188,7 +950114,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "663fefff3d030d912d7e0f2d6c67aa99120551f4bc59e1e137d97f57936a3e0b",
+      "outputSha256": "8d6a4e1a2542fe2dffbcd36c8043127730b3542cbee7af67db4e8d80e9f2d5d2",
       "edits": [
         {
           "start": 50,
@@ -949952,6 +950878,20 @@
           "symbol": "M:rd.a(Ljava/lang/String;[Ljava/lang/String;B)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatIndexedText"
+        },
+        {
+          "start": 3850,
+          "end": 3852,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 3853,
+          "end": 3860,
+          "symbol": "F:qp.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "askToJoinGameText"
         },
         {
           "start": 3975,
@@ -951165,6 +952105,20 @@
           "renamed": "AppletFlowHelpers"
         },
         {
+          "start": 14051,
+          "end": 14053,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 14054,
+          "end": 14061,
+          "symbol": "F:qp.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "gameFullText"
+        },
+        {
           "start": 14064,
           "end": 14065,
           "symbol": "C:q",
@@ -952019,6 +952973,20 @@
           "renamed": "AppletFlowHelpers"
         },
         {
+          "start": 21307,
+          "end": 21309,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 21310,
+          "end": 21317,
+          "symbol": "F:qp.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "askToJoinGameText"
+        },
+        {
           "start": 21320,
           "end": 21321,
           "symbol": "C:q",
@@ -952402,6 +953370,20 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "AppletFlowHelpers"
+        },
+        {
+          "start": 24681,
+          "end": 24683,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 24684,
+          "end": 24691,
+          "symbol": "F:qp.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "friendsAndOpponentsPrivateChatText"
         },
         {
           "start": 24694,
@@ -957750,6 +958732,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "AppletFlowHelpers"
+        },
+        {
+          "start": 73123,
+          "end": 73125,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 73136,
@@ -967440,6 +968429,20 @@
           "renamed": "addAction"
         },
         {
+          "start": 148004,
+          "end": 148006,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 148007,
+          "end": 148014,
+          "symbol": "F:qp.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "friendsAndOpponentsPrivateChatText"
+        },
+        {
           "start": 148064,
           "end": 148071,
           "symbol": "F:nn.field_d:Lbr;",
@@ -967909,7 +968912,7 @@
       "original": "nq.java",
       "renamed": "TooltipSprite.java",
       "inputSha256": "b8e7cc64c3c2c07651445f6cd39e83043d3d5006fff67a7251da4238a82822b5",
-      "outputSha256": "04e50507342ffdc069ea994178e1cb75b62b8ba75d0b87a8952bcfc05f9b8b19",
+      "outputSha256": "344b41d0dbbfce6099e3b947fbc753e6d46671f658248ab80e6ded6c3f665bd9",
       "edits": [
         {
           "start": 50,
@@ -968533,6 +969536,13 @@
           "symbol": "M:jp.d(II)V",
           "original": "d",
           "renamed": "drawAt"
+        },
+        {
+          "start": 3304,
+          "end": 3306,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 3307,
@@ -982743,7 +983753,7 @@
       "original": "og.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "71899f71a52c83eb6ccb0dee0cc74938ae731561777c8a4d21529059d9abf91c",
-      "outputSha256": "aaacf32002b1eb2a2711cce124ca70be7ab8a0ed471f42fe437faaa099c72482",
+      "outputSha256": "1c4d94d602b5552da580fa504d2c7caafcee458aaec10f4fc1459a53015754d7",
       "edits": [
         {
           "start": 50,
@@ -987944,6 +988954,20 @@
           "renamed": "GameplaySpriteHelpers"
         },
         {
+          "start": 43055,
+          "end": 43057,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
+          "start": 43058,
+          "end": 43065,
+          "symbol": "F:we.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "playerOneLabel"
+        },
+        {
           "start": 43068,
           "end": 43069,
           "symbol": "C:q",
@@ -992214,7 +993238,7 @@
       "original": "oj.java",
       "renamed": "RichTextLayout.java",
       "inputSha256": "7b805a50e785f8de8547520c3786dc544d9d1a5c8c3f2ed1356432ae8b39c367",
-      "outputSha256": "f026cffeda638eb27248ab7e3698f69fd560e72e12549c72afa8cc5209eccd4d",
+      "outputSha256": "cc04a14d496c0d8bb6ec4148b971e725602d19243b744e5e2f044dcf5611e406",
       "edits": [
         {
           "start": 50,
@@ -993176,6 +994200,13 @@
           "renamed": "drawRoot"
         },
         {
+          "start": 5786,
+          "end": 5788,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 5789,
           "end": 5790,
           "symbol": "M:sc.b(I)V",
@@ -993225,6 +994256,13 @@
           "renamed": "ContentTransitionLayer"
         },
         {
+          "start": 6060,
+          "end": 6062,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 6083,
           "end": 6085,
           "symbol": "C:mh",
@@ -993244,6 +994282,13 @@
           "symbol": "C:rm",
           "original": "rm",
           "renamed": "FontRequestHelpers"
+        },
+        {
+          "start": 6239,
+          "end": 6241,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 6262,
@@ -993442,6 +994487,13 @@
           "renamed": "drawRoot"
         },
         {
+          "start": 7266,
+          "end": 7268,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 7269,
           "end": 7270,
           "symbol": "M:sc.b(I)V",
@@ -993454,6 +994506,13 @@
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "TableDataRequest"
+        },
+        {
+          "start": 7401,
+          "end": 7403,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 7404,
@@ -993538,6 +994597,13 @@
           "symbol": "M:mh.a(ZZ)V",
           "original": "a",
           "renamed": "drawRoot"
+        },
+        {
+          "start": 7918,
+          "end": 7920,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 7921,
@@ -993643,6 +994709,13 @@
           "symbol": "M:mh.a(ZZ)V",
           "original": "a",
           "renamed": "drawRoot"
+        },
+        {
+          "start": 8428,
+          "end": 8430,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 8431,
@@ -1002095,7 +1003168,7 @@
       "original": "on.java",
       "renamed": "Brick.java",
       "inputSha256": "e2ea06abf1d907ffb3f1df2b918920b6464709bc1e74174e0fbf95abf27c359f",
-      "outputSha256": "dde29709bd4f96ae5c9709f2d571a13d23813b233c943cc903ade0ef30e04c7b",
+      "outputSha256": "5309d77689bb00d8e5ad837c2502064ea44e399308d5d2bb64b0db2f80cf7680",
       "edits": [
         {
           "start": 50,
@@ -1004282,11 +1005355,32 @@
           "renamed": "MonotonicTime"
         },
         {
+          "start": 10272,
+          "end": 10279,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
           "start": 10285,
           "end": 10292,
           "symbol": "F:vi.field_i:I",
           "original": "field_i",
           "renamed": "typeId"
+        },
+        {
+          "start": 10323,
+          "end": 10325,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "BrickHitTransitionTable"
+        },
+        {
+          "start": 10326,
+          "end": 10333,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
         },
         {
           "start": 10339,
@@ -1016472,7 +1017566,7 @@
       "original": "pi.java",
       "renamed": "BitPacketBuffer.java",
       "inputSha256": "7f34e817951c67a65bc292ed9fc6c7d8b9c737d80457a48c52f07021a3daba72",
-      "outputSha256": "aa1036045d086441d5731f5fe79809e9128a58b963d283d2ac6e909baa4f50e0",
+      "outputSha256": "d66d90cb93f9841d8540234f8efb5beb864bb9ef830a90ffe5b2562d22188ea0",
       "edits": [
         {
           "start": 50,
@@ -1017796,6 +1018890,13 @@
           "symbol": "M:vl.d(I)Lnm;",
           "original": "d",
           "renamed": "first"
+        },
+        {
+          "start": 5896,
+          "end": 5898,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
         },
         {
           "start": 5899,
@@ -1019441,6 +1020542,13 @@
           "symbol": "F:pb.field_q:I",
           "original": "field_q",
           "renamed": "height"
+        },
+        {
+          "start": 12817,
+          "end": 12819,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 12820,
@@ -1027950,7 +1029058,7 @@
       "original": "pn.java",
       "renamed": "LevelResultSubmission.java",
       "inputSha256": "50598b427ddf4fde357a704ea7a7059ceb35787617bc8d814a58fc954e479ebc",
-      "outputSha256": "a832a6a74574406c99dd89b1e1d1f23e047fae08035ef22b5cfc20d2c5825ac0",
+      "outputSha256": "823c5edc7cbd75b918524fd7f2d81c39dd80ac16cea4729bc95bf84c627be23d",
       "edits": [
         {
           "start": 50,
@@ -1028273,6 +1029381,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "TextFieldRenderer"
+        },
+        {
+          "start": 2614,
+          "end": 2615,
+          "symbol": "M:r.a(BLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "prefixLocalPlayerBadge"
         },
         {
           "start": 2700,
@@ -1029092,7 +1030207,7 @@
       "original": "po.java",
       "renamed": "ResourcePreparationEntry.java",
       "inputSha256": "645ae79ba708ad156bc7e39b943e4b1d16b5bef39a22c15070b29dc74b8500a6",
-      "outputSha256": "c980c97e9b1ebd81684fe74cf739b449750e5b6f4a668437dbd4845414643ac0",
+      "outputSha256": "87df8b44c8d3bae4f65e2abbb3955e2cde7c23be55d29732e3572a9414a17a14",
       "edits": [
         {
           "start": 50,
@@ -1029919,6 +1031034,13 @@
           "symbol": "C:pl",
           "original": "pl",
           "renamed": "SpriteInputHelpers"
+        },
+        {
+          "start": 7315,
+          "end": 7317,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 7560,
@@ -1040112,7 +1041234,7 @@
       "original": "qf.java",
       "renamed": "RegistrationResponseDialog.java",
       "inputSha256": "77cf3477a19b72905ba69769e92d27a2e69f4eb5d0911100ee1c69e397d990fc",
-      "outputSha256": "eef25521f322f4a2ce797565673faaa2a27426ab6c3afa7852482004a87f6a22",
+      "outputSha256": "f13acc2d43b15a440d671dc077bea843c17376b6ee4636d597131fc9c89faa67",
       "edits": [
         {
           "start": 50,
@@ -1040281,6 +1041403,13 @@
           "symbol": "F:pb.field_q:I",
           "original": "field_q",
           "renamed": "height"
+        },
+        {
+          "start": 640,
+          "end": 642,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 643,
@@ -1041338,7 +1042467,7 @@
       "original": "qg.java",
       "renamed": "GameConnectionShell.java",
       "inputSha256": "f0f96ff4267e2ff560eb4272327a49af02204398e19363a87a54075043f5c452",
-      "outputSha256": "b6e751f90a8f7ffe31e01eb94d986733a39d453d9d45f4b6e5be8028c3e3aab2",
+      "outputSha256": "94b48c8d6fea66b435163c70402794cf3bf0a74737a372599b141f85a7b5bbf3",
       "edits": [
         {
           "start": 53,
@@ -1042509,6 +1043638,20 @@
           "symbol": "F:uf.field_d:[Z",
           "original": "field_d",
           "renamed": "enabledCommonPackets"
+        },
+        {
+          "start": 8398,
+          "end": 8400,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
+          "start": 8401,
+          "end": 8402,
+          "symbol": "M:we.a(B)V",
+          "original": "a",
+          "renamed": "resetPendingReflectionChecks"
         },
         {
           "start": 8694,
@@ -1047642,7 +1048785,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "526e3932ff49dca1b95e0874dbf5a4b1e1b1ad2d51921e051c4afd43578f7a71",
+      "outputSha256": "13050c4f2e05c3b472ef6af8b8710d8026bc2502453b8c4a6443e1c6d91f2cae",
       "edits": [
         {
           "start": 50,
@@ -1056829,6 +1057972,20 @@
           "renamed": "LoadingProgressDialog"
         },
         {
+          "start": 36749,
+          "end": 36751,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
+          "start": 36752,
+          "end": 36759,
+          "symbol": "F:we.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "playerOneLabel"
+        },
+        {
           "start": 36762,
           "end": 36764,
           "symbol": "C:tb",
@@ -1062072,6 +1063229,13 @@
           "renamed": "backgroundSlot"
         },
         {
+          "start": 57306,
+          "end": 57308,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 57309,
           "end": 57310,
           "symbol": "M:sc.b(I)V",
@@ -1062238,6 +1063402,13 @@
           "symbol": "L:qj.g(I)V#58",
           "original": "var9Lifetime3",
           "renamed": "splitBoardScroll"
+        },
+        {
+          "start": 57638,
+          "end": 57640,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 57641,
@@ -1065010,6 +1066181,13 @@
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 65557,
+          "end": 65565,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 65587,
@@ -1071201,10 +1072379,24 @@
     },
     {
       "original": "qp.java",
-      "renamed": "qp.java",
+      "renamed": "PlayerBadgeHelpers.java",
       "inputSha256": "3038f2248dbed595970cf3f1baa88cac7b39984b42a4eb79b9068220def56dc2",
-      "outputSha256": "a8a659e5dd223446ddf7537bda0d6ca96ea1f604ab30bb8d97160f5d42aebab8",
+      "outputSha256": "427145226d2003469971b258ee6495baf2f3560ba454c330a532e1cf6d03a141",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 73,
+          "end": 80,
+          "symbol": "F:qp.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "askToJoinGameText"
+        },
         {
           "start": 93,
           "end": 95,
@@ -1071227,11 +1072419,137 @@
           "renamed": "decodedSpritePalette"
         },
         {
+          "start": 174,
+          "end": 181,
+          "symbol": "F:qp.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "gameFullText"
+        },
+        {
+          "start": 201,
+          "end": 208,
+          "symbol": "F:qp.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "friendsAndOpponentsPrivateChatText"
+        },
+        {
           "start": 262,
           "end": 269,
           "symbol": "F:qp.field_c:[I",
           "original": "field_c",
           "renamed": "decodedSpritePalette"
+        },
+        {
+          "start": 286,
+          "end": 293,
+          "symbol": "F:qp.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "gameFullText"
+        },
+        {
+          "start": 310,
+          "end": 317,
+          "symbol": "F:qp.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "askToJoinGameText"
+        },
+        {
+          "start": 385,
+          "end": 392,
+          "symbol": "F:qp.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "friendsAndOpponentsPrivateChatText"
+        },
+        {
+          "start": 463,
+          "end": 465,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 466,
+          "end": 467,
+          "symbol": "M:qp.a(IIB)I",
+          "original": "a",
+          "renamed": "selectPlayerBadgeKind"
+        },
+        {
+          "start": 524,
+          "end": 531,
+          "symbol": "F:qp.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "friendsAndOpponentsPrivateChatText"
+        },
+        {
+          "start": 592,
+          "end": 593,
+          "symbol": "M:qp.a(IIB)I",
+          "original": "a",
+          "renamed": "selectPlayerBadgeKind"
+        },
+        {
+          "start": 598,
+          "end": 604,
+          "symbol": "P:qp.a(IIB)I#0",
+          "original": "param0",
+          "renamed": "privilegeByteOne"
+        },
+        {
+          "start": 610,
+          "end": 616,
+          "symbol": "P:qp.a(IIB)I#1",
+          "original": "param1",
+          "renamed": "privilegeByteTwo"
+        },
+        {
+          "start": 623,
+          "end": 629,
+          "symbol": "P:qp.a(IIB)I#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 645,
+          "end": 651,
+          "symbol": "P:qp.a(IIB)I#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 706,
+          "end": 712,
+          "symbol": "P:qp.a(IIB)I#0",
+          "original": "param0",
+          "renamed": "privilegeByteOne"
+        },
+        {
+          "start": 763,
+          "end": 769,
+          "symbol": "P:qp.a(IIB)I#1",
+          "original": "param1",
+          "renamed": "privilegeByteTwo"
+        },
+        {
+          "start": 853,
+          "end": 860,
+          "symbol": "F:qp.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "askToJoinGameText"
+        },
+        {
+          "start": 898,
+          "end": 905,
+          "symbol": "F:qp.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "gameFullText"
+        },
+        {
+          "start": 938,
+          "end": 945,
+          "symbol": "F:qp.field_d:Ljava/lang/String;",
+          "original": "field_d",
+          "renamed": "friendsAndOpponentsPrivateChatText"
         }
       ]
     },
@@ -1075888,7 +1077206,7 @@
       "original": "r.java",
       "renamed": "TextFieldRenderer.java",
       "inputSha256": "2878a54e4c3ae414e36c1e0c87b8eccd92bd95454925c5ca3c44e2639772749f",
-      "outputSha256": "f6b99a4417417a8f1acb84c11b9b0113066ab5b4b4923ecbf0ad7743e24c5c19",
+      "outputSha256": "4e267d10a456b6bea775dc13e1276527eefd1128b9c9735b3dff7ee72749ee4f",
       "edits": [
         {
           "start": 44,
@@ -1075912,11 +1077230,53 @@
           "renamed": "thirdPreviousPacketOpcode"
         },
         {
+          "start": 506,
+          "end": 507,
+          "symbol": "M:r.a(BLjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "prefixLocalPlayerBadge"
+        },
+        {
+          "start": 513,
+          "end": 519,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 528,
+          "end": 534,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 849,
+          "end": 855,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 876,
           "end": 877,
           "symbol": "C:r",
           "original": "r",
           "renamed": "TextFieldRenderer"
+        },
+        {
+          "start": 929,
+          "end": 931,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 932,
+          "end": 933,
+          "symbol": "M:qp.a(IIB)I",
+          "original": "a",
+          "renamed": "selectPlayerBadgeKind"
         },
         {
           "start": 934,
@@ -1075926,11 +1077286,74 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 937,
+          "end": 945,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
+        },
+        {
           "start": 947,
           "end": 949,
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "TextChoiceDialogStyles"
+        },
+        {
+          "start": 950,
+          "end": 957,
+          "symbol": "F:gh.field_f:I",
+          "original": "field_f",
+          "renamed": "loginPrivilegeByteTwo"
+        },
+        {
+          "start": 1015,
+          "end": 1021,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 1036,
+          "end": 1042,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 1099,
+          "end": 1105,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 1120,
+          "end": 1126,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 1174,
+          "end": 1180,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 1496,
+          "end": 1502,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1531,
+          "end": 1537,
+          "symbol": "P:r.a(BLjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
         },
         {
           "start": 1667,
@@ -1077855,10 +1079278,256 @@
     },
     {
       "original": "rb.java",
-      "renamed": "rb.java",
+      "renamed": "BrickHitTransitionTable.java",
       "inputSha256": "2a58b03b473371ed1f48bf9382a4f599223f031927804c73b34ca46798c25159",
-      "outputSha256": "2a58b03b473371ed1f48bf9382a4f599223f031927804c73b34ca46798c25159",
-      "edits": []
+      "outputSha256": "2752ff306dac2a131b72e56ce9ebc3c9e300caff173babc019db285653c338bf",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:rb",
+          "original": "rb",
+          "renamed": "BrickHitTransitionTable"
+        },
+        {
+          "start": 72,
+          "end": 79,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 140,
+          "end": 141,
+          "symbol": "M:rb.a(B)V",
+          "original": "a",
+          "renamed": "clearTransitionCodes"
+        },
+        {
+          "start": 147,
+          "end": 153,
+          "symbol": "P:rb.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 165,
+          "end": 172,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 207,
+          "end": 213,
+          "symbol": "P:rb.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 282,
+          "end": 289,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 313,
+          "end": 320,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 339,
+          "end": 346,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 364,
+          "end": 371,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 390,
+          "end": 397,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 416,
+          "end": 423,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 441,
+          "end": 448,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 466,
+          "end": 473,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 492,
+          "end": 499,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 517,
+          "end": 524,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 542,
+          "end": 549,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 566,
+          "end": 573,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 590,
+          "end": 597,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 614,
+          "end": 621,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 638,
+          "end": 645,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 663,
+          "end": 670,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 688,
+          "end": 695,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 713,
+          "end": 720,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 738,
+          "end": 745,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 763,
+          "end": 770,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 787,
+          "end": 794,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 812,
+          "end": 819,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 837,
+          "end": 844,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 863,
+          "end": 870,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 888,
+          "end": 895,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 913,
+          "end": 920,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 938,
+          "end": 945,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 962,
+          "end": 969,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        },
+        {
+          "start": 986,
+          "end": 993,
+          "symbol": "F:rb.field_a:[I",
+          "original": "field_a",
+          "renamed": "codesByBrickType"
+        }
+      ]
     },
     {
       "original": "rc.java",
@@ -1077907,7 +1079576,7 @@
       "original": "rd.java",
       "renamed": "GamePresentationHelpers.java",
       "inputSha256": "8b4b7ec675fa9da26786c4f897c8e0610c044da7ebf606535ed4a1b6ccf79b9f",
-      "outputSha256": "4bbd5cee147fd96d55e65d0df0b4e6a5da11a24b462331fbc21b38cc06d404d7",
+      "outputSha256": "ecac05436d964cc7d7c3bcb0ffe3459fce46d878f227bb014b1ed1109e210ec6",
       "edits": [
         {
           "start": 50,
@@ -1080470,6 +1082139,13 @@
           "symbol": "L:rd.c(I)[Ljp;#4",
           "original": "var6",
           "renamed": "pixelIndex"
+        },
+        {
+          "start": 8307,
+          "end": 8309,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 8310,
@@ -1092087,7 +1093763,7 @@
       "original": "rp.java",
       "renamed": "MainMenuScreen.java",
       "inputSha256": "3153c1e392569e4cbd5637b399348102353ba5b4435ca222eafefb9782e82c23",
-      "outputSha256": "9ccead23a293c923dee6023b1a52b4d37885cd4b75e3b72a547b3d636dff2f07",
+      "outputSha256": "1685e8073d0b13c7ff4030f1446d9eb3b017188af2d9b99b2afa8d2fe55e82e3",
       "edits": [
         {
           "start": 50,
@@ -1092830,6 +1094506,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "TranslucentNineSliceFrame"
+        },
+        {
+          "start": 3746,
+          "end": 3748,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 3749,
@@ -1094007,7 +1095690,7 @@
       "original": "s.java",
       "renamed": "ResourcePreparationQueue.java",
       "inputSha256": "a11e1d275a3ed66eb10f910974110b894bff963263b3496032066004ae72c2c8",
-      "outputSha256": "a82372170fbd59dd386d7742f8d5bd800bc676c4973c4681472202f98fc6c2df",
+      "outputSha256": "ee09c41eea19b8e4bd2258b9ec697acd67f75d3621aa91d47a474c147c689cf5",
       "edits": [
         {
           "start": 50,
@@ -1095758,6 +1097441,13 @@
           "symbol": "F:mn.field_z:I",
           "original": "field_z",
           "renamed": "canvasHeight"
+        },
+        {
+          "start": 5683,
+          "end": 5685,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 5686,
@@ -1103040,10 +1104730,17 @@
     },
     {
       "original": "sc.java",
-      "renamed": "sc.java",
+      "renamed": "RasterStackHelpers.java",
       "inputSha256": "00a3e26f017a15a025b73c1b2d6d344f505da07e2156759273d3f9189efa8cca",
-      "outputSha256": "7502841565455cf408cdbbc8a5be3756abab730d50152b7fe9e338f3dd40bcc0",
+      "outputSha256": "124f790db4a99edfeb1c34a48773b75e509e8966e2bd8609a832f9acfe2c0bed",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
         {
           "start": 66,
           "end": 68,
@@ -1115291,7 +1116988,7 @@
       "original": "sk.java",
       "renamed": "OpacityWidget.java",
       "inputSha256": "287e4e7d36c1e90c404ba2f2e99e925d84b2c85234a884114ea8cecff4676c71",
-      "outputSha256": "e5962c8c2cadc5a5bfda2e4a096b3a5f36da689d7d079fb1e7ca990e48a9587b",
+      "outputSha256": "fd79b9a2ed9e5ad387c1f73d36c5b4873596b766ace3c15fd32ddb2a21c21f1c",
       "edits": [
         {
           "start": 50,
@@ -1115887,6 +1117584,13 @@
           "symbol": "C:kb",
           "original": "kb",
           "renamed": "QuickChatHelpDialog"
+        },
+        {
+          "start": 1920,
+          "end": 1928,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
         },
         {
           "start": 1939,
@@ -1116498,6 +1118202,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 5557,
+          "end": 5559,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 5560,
           "end": 5561,
           "symbol": "M:sc.b(I)V",
@@ -1116888,7 +1118599,7 @@
       "original": "sl.java",
       "renamed": "CacheEntry.java",
       "inputSha256": "39de8a1c790e82bdf37a36715a04f2d9b74aab323b69a00586cb7f12eb46ed0f",
-      "outputSha256": "0041330d9da752e17b7959d7c87188d94c34c4099fccf7d74605be110bcfad74",
+      "outputSha256": "d7e3a148f7a0c9555af81835bc7371e052634f13cada6211f8d9ef00d11f1d56",
       "edits": [
         {
           "start": 53,
@@ -1117654,6 +1119365,13 @@
           "renamed": "VerticalScrollbar"
         },
         {
+          "start": 4487,
+          "end": 4489,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 4504,
           "end": 4506,
           "symbol": "C:mh",
@@ -1117969,6 +1119687,13 @@
           "renamed": "addChild"
         },
         {
+          "start": 5710,
+          "end": 5712,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 5736,
           "end": 5738,
           "symbol": "C:rm",
@@ -1118256,6 +1119981,13 @@
           "renamed": "TextFieldValidator"
         },
         {
+          "start": 6458,
+          "end": 6460,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 6475,
           "end": 6477,
           "symbol": "C:mh",
@@ -1118270,6 +1120002,13 @@
           "renamed": "MenuSelection"
         },
         {
+          "start": 6505,
+          "end": 6507,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 6516,
           "end": 6517,
           "symbol": "M:mh.a(Lmh;I)V",
@@ -1118282,6 +1120021,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 6544,
+          "end": 6546,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 6555,
@@ -1122456,7 +1124202,7 @@
       "original": "so.java",
       "renamed": "QuickChatCategoryRegistry.java",
       "inputSha256": "7a871da7f6968a595499d6b7cfa90debd8b7460c269a74d1db04db3b23128dad",
-      "outputSha256": "1a64e1cec610f99a0a897baadabb3ed41e8a42b20681ba1ed94d4ac3667ba6bf",
+      "outputSha256": "c111e35f563b2b8f3ed0798a04096b6cc19ee35b14a0a154cd77dbe69a00e720",
       "edits": [
         {
           "start": 50,
@@ -1127315,6 +1129061,13 @@
           "symbol": "M:jp.a(II)V",
           "original": "a",
           "renamed": "drawHalfSize"
+        },
+        {
+          "start": 16593,
+          "end": 16595,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 16596,
@@ -1132477,7 +1134230,7 @@
       "original": "ta.java",
       "renamed": "NineSliceFrame.java",
       "inputSha256": "bb88543bc5f7e2c804bd94f7ebc2a8d2a917dfad8d1b964061b1eefb5ca0d179",
-      "outputSha256": "edb86fafcb2a472a7f922d1767c3472c6f6600ad37d78507e6716b84a3416943",
+      "outputSha256": "090bd06c89caf8bd2d580bd11e8fff71bf612ac38c6ef6e2978048966731f707",
       "edits": [
         {
           "start": 44,
@@ -1132583,6 +1134336,13 @@
           "symbol": "F:tm.field_b:[Z",
           "original": "field_b",
           "renamed": "decodedSpriteHasAlpha"
+        },
+        {
+          "start": 829,
+          "end": 831,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 832,
@@ -1132695,6 +1134455,13 @@
           "symbol": "C:ud",
           "original": "ud",
           "renamed": "LevelSelectScreen"
+        },
+        {
+          "start": 1213,
+          "end": 1215,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 1216,
@@ -1147633,7 +1149400,7 @@
       "original": "tf.java",
       "renamed": "FullscreenFailureKind.java",
       "inputSha256": "6f434ed9856c9dbcccf04d2d6924d1e68750d68ea8128049834926bb58ad1d8e",
-      "outputSha256": "2b63eae0c1b2ea501e74fa7e9100cccb7c6408438ed9358c5b57b09de16956f1",
+      "outputSha256": "252c74ba8c8361cd398a2d722eb8d43f47724fff559664bc9041fd097e7c6c98",
       "edits": [
         {
           "start": 50,
@@ -1148042,6 +1149809,13 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 3333,
+          "end": 3341,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
+        },
+        {
           "start": 3370,
           "end": 3372,
           "symbol": "C:bm",
@@ -1148446,6 +1150220,13 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 5492,
+          "end": 5494,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 5495,
@@ -1171488,7 +1173269,7 @@
       "original": "ud.java",
       "renamed": "LevelSelectScreen.java",
       "inputSha256": "528e70959ad168e813399e0e8aa96ac356b4053f331d0db992f1243750412512",
-      "outputSha256": "4d9cbebb53e9fec69a8e84306988d28c33d21a05c1c9173f0e576db93c06cc2d",
+      "outputSha256": "e85fd16035f4050ac6ce97409543c673ae24502d3b1c1f98f8fcedafdcc62866",
       "edits": [
         {
           "start": 50,
@@ -1173584,6 +1175365,13 @@
           "renamed": "decodedSpriteIndices"
         },
         {
+          "start": 8788,
+          "end": 8790,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 8791,
           "end": 8798,
           "symbol": "F:qp.field_c:[I",
@@ -1175388,7 +1177176,7 @@
       "original": "ue.java",
       "renamed": "MonotonicTime.java",
       "inputSha256": "a3a9ad943f99b632c2e38704f550a83fdfabab6bce73d7e0ca730bbd367306c9",
-      "outputSha256": "dd65d968262d4a6bb26ce6870288ac75126260ada36948425041787c7644fd65",
+      "outputSha256": "f78f4de7c284a0bb043ba3f14f25bc9132e20067da89eaeb57e71d96e2da0cd2",
       "edits": [
         {
           "start": 50,
@@ -1175405,11 +1177193,25 @@
           "renamed": "packetDelayMillis"
         },
         {
+          "start": 96,
+          "end": 103,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
           "start": 174,
           "end": 181,
           "symbol": "F:ue.field_e:I",
           "original": "field_e",
           "renamed": "tooltipDelayTicks"
+        },
+        {
+          "start": 260,
+          "end": 267,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
         },
         {
           "start": 424,
@@ -1175573,11 +1177375,221 @@
           "renamed": "packetDelayMillis"
         },
         {
+          "start": 761,
+          "end": 768,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
           "start": 831,
           "end": 838,
           "symbol": "F:ue.field_e:I",
           "original": "field_e",
           "renamed": "tooltipDelayTicks"
+        },
+        {
+          "start": 853,
+          "end": 860,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 879,
+          "end": 886,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 904,
+          "end": 911,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 929,
+          "end": 936,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 954,
+          "end": 961,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 979,
+          "end": 986,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1004,
+          "end": 1011,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1029,
+          "end": 1036,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1054,
+          "end": 1061,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1078,
+          "end": 1085,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1102,
+          "end": 1109,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1126,
+          "end": 1133,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1151,
+          "end": 1158,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1176,
+          "end": 1183,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1200,
+          "end": 1207,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1224,
+          "end": 1231,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1248,
+          "end": 1255,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1272,
+          "end": 1279,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1298,
+          "end": 1305,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1323,
+          "end": 1330,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1347,
+          "end": 1354,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1371,
+          "end": 1378,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1395,
+          "end": 1402,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1420,
+          "end": 1427,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1445,
+          "end": 1452,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1471,
+          "end": 1478,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1496,
+          "end": 1503,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1522,
+          "end": 1529,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
+        },
+        {
+          "start": 1547,
+          "end": 1554,
+          "symbol": "F:ue.field_b:[I",
+          "original": "field_b",
+          "renamed": "brickHitPendingTypes"
         }
       ]
     },
@@ -1178725,7 +1180737,7 @@
       "original": "uj.java",
       "renamed": "LevelList.java",
       "inputSha256": "24f3c828504851d3fa276e35f7adecb4bb8180253d852a801475f7acdb396f53",
-      "outputSha256": "0426fdd6a76cb969cbd26681becb955da930439b9647c260cb2ac8b82154a6b2",
+      "outputSha256": "5105a9c29b2b9633eeb67f0f4124edeb3357858bd45aa4a28f7eb2491af6c473",
       "edits": [
         {
           "start": 50,
@@ -1181323,6 +1183335,13 @@
           "symbol": "L:uj.c(B)V#1",
           "original": "var2",
           "renamed": "levelIndex"
+        },
+        {
+          "start": 7471,
+          "end": 7473,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 7474,
@@ -1184643,7 +1186662,7 @@
       "original": "um.java",
       "renamed": "TextWidgetRenderer.java",
       "inputSha256": "2891bb96e2938f1651ad43f68d9e1d9b6f546660da1ba0bbc819d1f31a21a74b",
-      "outputSha256": "c79b6deb532c27e3246fdb395c17d762673095231ed41a69c665ab626643fd6f",
+      "outputSha256": "d7c3d2575e4ccd2e3e76c173bb9605812fde5a96339750d5c2a5853bc4d06e6e",
       "edits": [
         {
           "start": 44,
@@ -1187649,6 +1189668,13 @@
           "renamed": "caretColor"
         },
         {
+          "start": 11776,
+          "end": 11778,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 11779,
           "end": 11780,
           "symbol": "M:sc.b(I)V",
@@ -1190041,6 +1192067,13 @@
           "symbol": "F:ml.field_a:I",
           "original": "field_a",
           "renamed": "bottom"
+        },
+        {
+          "start": 26487,
+          "end": 26489,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 26490,
@@ -1194579,6 +1196612,13 @@
           "renamed": "shadowColor"
         },
         {
+          "start": 57048,
+          "end": 57050,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 57051,
           "end": 57052,
           "symbol": "M:sc.b(I)V",
@@ -1196980,7 +1199020,7 @@
       "original": "up.java",
       "renamed": "StatefulWidgetRenderer.java",
       "inputSha256": "b6ba923dc036763f7640446ea363c983180d520119dcd3f943d18ffc2da468ce",
-      "outputSha256": "9ea3a313acfca7e52949b8f3a4d2e7e0ea292ec239f4bb83c3c19a00de6c6f52",
+      "outputSha256": "717495fb9e15115b60b379d7a71307ecbb8b7de614cffa0765f507d5af2dc869",
       "edits": [
         {
           "start": 50,
@@ -1198521,6 +1200561,13 @@
           "symbol": "P:up.a(ZIILoc;I)V#2",
           "original": "param2",
           "renamed": "parentX"
+        },
+        {
+          "start": 6887,
+          "end": 6889,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 6890,
@@ -1200930,7 +1202977,7 @@
       "original": "v.java",
       "renamed": "ClientException.java",
       "inputSha256": "494ea99ed54aa1f995de1da5c1a72c4f56f7c1fbe10a1dddf4a21f7af4b2ab4d",
-      "outputSha256": "da87615395b6f2b193a55c72bc331d229f5fbbefb9f6c5cdf27e8814cb71d7fa",
+      "outputSha256": "01a710b1399a9ebc40048ca07ab24f7c3672dc7fae2dafe1d67e55d9a55b74ea",
       "edits": [
         {
           "start": 50,
@@ -1201332,6 +1203379,13 @@
           "renamed": "decodedSpriteHasAlpha"
         },
         {
+          "start": 3619,
+          "end": 3621,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
           "start": 3622,
           "end": 3629,
           "symbol": "F:qp.field_c:[I",
@@ -1201449,6 +1203503,13 @@
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "IntrusiveHashIterator"
+        },
+        {
+          "start": 4173,
+          "end": 4175,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
         },
         {
           "start": 4176,
@@ -1212747,7 +1214808,7 @@
       "original": "vl.java",
       "renamed": "NodeDeque.java",
       "inputSha256": "8efe3919961493ae6bf0783b56622334b560940cdab70dbddb989eff904cac17",
-      "outputSha256": "6694b7e1de328272d228285cc9788d0ce747fcea0c7f0693a65aed6bd1b365d1",
+      "outputSha256": "a7fbb3c6a7b44ef78422821ca5bf4b191bf84c4ea215c1af7cc416daf0abd4db",
       "edits": [
         {
           "start": 50,
@@ -1212888,6 +1214949,20 @@
           "symbol": "C:n",
           "original": "n",
           "renamed": "ConnectionPhase"
+        },
+        {
+          "start": 1395,
+          "end": 1397,
+          "symbol": "C:qp",
+          "original": "qp",
+          "renamed": "PlayerBadgeHelpers"
+        },
+        {
+          "start": 1398,
+          "end": 1405,
+          "symbol": "F:qp.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "gameFullText"
         },
         {
           "start": 1506,
@@ -1221615,7 +1223690,7 @@
       "original": "w.java",
       "renamed": "ScreenshotViewer.java",
       "inputSha256": "ab1a43a9c1637cb4b966b968d0afaa046a56ac5eb15d5fc304855e89893c8e66",
-      "outputSha256": "ec1455daada7100cfb3567554a4dc658454f0f99a001b32a53ef2bf5316df7cf",
+      "outputSha256": "593d854424e4ec2383c6cf1236d775164c55ca3299710216b5dcad3cbe606bcd",
       "edits": [
         {
           "start": 50,
@@ -1222493,6 +1224568,13 @@
           "renamed": "ArchiveSourceManager"
         },
         {
+          "start": 7545,
+          "end": 7547,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 7548,
           "end": 7549,
           "symbol": "M:sc.b(I)V",
@@ -1222710,6 +1224792,13 @@
           "renamed": "height"
         },
         {
+          "start": 8466,
+          "end": 8468,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 8469,
           "end": 8470,
           "symbol": "M:sc.b(I)V",
@@ -1222750,6 +1224839,13 @@
           "symbol": "F:mn.field_C:I",
           "original": "field_C",
           "renamed": "height"
+        },
+        {
+          "start": 8658,
+          "end": 8660,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 8661,
@@ -1223760,6 +1225856,13 @@
           "renamed": "height"
         },
         {
+          "start": 17031,
+          "end": 17033,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
+        },
+        {
           "start": 17034,
           "end": 17035,
           "symbol": "M:sc.b(I)V",
@@ -1223779,6 +1225882,13 @@
           "symbol": "M:fc.a(ILjp;)V",
           "original": "a",
           "renamed": "pushSpriteRaster"
+        },
+        {
+          "start": 17134,
+          "end": 17136,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 17137,
@@ -1224458,6 +1226568,13 @@
           "symbol": "M:dh.a(Ljava/lang/String;IIIIIIIII)I",
           "original": "a",
           "renamed": "drawParagraph"
+        },
+        {
+          "start": 26589,
+          "end": 26591,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 26592,
@@ -1227596,10 +1229713,24 @@
     },
     {
       "original": "we.java",
-      "renamed": "we.java",
+      "renamed": "ReflectionCheckHelpers.java",
       "inputSha256": "d8891ecae934941752d023c2d33cf0f0085f55d570b1ed818424493174302be6",
-      "outputSha256": "fb542278fc1062cf83e22a6f95650aff78c5a09843ce24c5acf7f91798091e35",
+      "outputSha256": "605fb3e0bb6cc057608744c2ae48701e6a90307475718029def2558a2ee399ed",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
+          "start": 73,
+          "end": 80,
+          "symbol": "F:we.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "playerOneLabel"
+        },
         {
           "start": 97,
           "end": 104,
@@ -1227620,6 +1229751,20 @@
           "symbol": "F:we.field_b:[Ljp;",
           "original": "field_b",
           "renamed": "activePowerUpSprites"
+        },
+        {
+          "start": 154,
+          "end": 155,
+          "symbol": "M:we.a(B)V",
+          "original": "a",
+          "renamed": "resetPendingReflectionChecks"
+        },
+        {
+          "start": 161,
+          "end": 167,
+          "symbol": "P:we.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 179,
@@ -1227643,6 +1229788,41 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 214,
+          "end": 220,
+          "symbol": "P:we.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 241,
+          "end": 243,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
+          "start": 315,
+          "end": 322,
+          "symbol": "F:we.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "playerOneLabel"
+        },
+        {
+          "start": 372,
+          "end": 374,
+          "symbol": "C:we",
+          "original": "we",
+          "renamed": "ReflectionCheckHelpers"
+        },
+        {
+          "start": 375,
+          "end": 376,
+          "symbol": "M:we.a(B)V",
+          "original": "a",
+          "renamed": "resetPendingReflectionChecks"
+        },
+        {
           "start": 400,
           "end": 407,
           "symbol": "F:we.field_b:[Ljp;",
@@ -1227662,6 +1229842,13 @@
           "symbol": "F:we.field_a:I",
           "original": "field_a",
           "renamed": "secondPreviousPacketOpcode"
+        },
+        {
+          "start": 518,
+          "end": 525,
+          "symbol": "F:we.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "playerOneLabel"
         }
       ]
     },
@@ -1234136,7 +1236323,7 @@
       "original": "wl.java",
       "renamed": "ValidationIconWidget.java",
       "inputSha256": "24a43275120b7bdceaea7c1dcf33cf764c755ecbf7c963efca422cbff7076c81",
-      "outputSha256": "57d5a400672ba4489ce973abfd6d6b139bcccbdaf26d3866fdfdabc1bcc05c17",
+      "outputSha256": "627c7d146ef07a45b2dda1ac5e9b66a40404aa7dbf7f0d2d163d544b4c239286",
       "edits": [
         {
           "start": 50,
@@ -1234599,6 +1236786,13 @@
           "symbol": "F:wl.field_P:I",
           "original": "field_P",
           "renamed": "spinnerTicks"
+        },
+        {
+          "start": 1737,
+          "end": 1739,
+          "symbol": "C:sc",
+          "original": "sc",
+          "renamed": "RasterStackHelpers"
         },
         {
           "start": 1740,
@@ -1245522,7 +1247716,7 @@
       "original": "wp.java",
       "renamed": "SoundCache.java",
       "inputSha256": "e64dd26300416712ce6cf148e8f1c4cf620baa69fa3c6ca3450519ae31fa3db1",
-      "outputSha256": "641d7387a6c5392101614764fe7abfd89afdaac424640f585bc2e0fce48f446a",
+      "outputSha256": "624cc91b126bce61a8a938457c5d951e2d91d1be5fb135ef894c8f3322883a2e",
       "edits": [
         {
           "start": 50,
@@ -1247254,6 +1249448,13 @@
           "renamed": "QuickChatHelpDialog"
         },
         {
+          "start": 10604,
+          "end": 10612,
+          "symbol": "F:kb.field_Yb:I",
+          "original": "field_Yb",
+          "renamed": "loginPrivilegeByteOne"
+        },
+        {
           "start": 10615,
           "end": 10617,
           "symbol": "C:jl",
@@ -1247280,6 +1249481,13 @@
           "symbol": "C:gh",
           "original": "gh",
           "renamed": "TextChoiceDialogStyles"
+        },
+        {
+          "start": 10651,
+          "end": 10658,
+          "symbol": "F:gh.field_f:I",
+          "original": "field_f",
+          "renamed": "loginPrivilegeByteTwo"
         },
         {
           "start": 10661,
@@ -1255483,10 +1257691,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "5cab303f734f249c82edbfb1e5822f20d36c3ed35fed1ec5a1bd766af8545e4d",
+    "rulesSha256": "47021f48539a75ed13ede4ab40a92f927095608c9e28bbe608a7ceb8896b2764",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "8ecec3903d32262fee2259f1fe8639d404df471123b21f226f52c7f0ff3e8658",
+    "outputTreeSha256": "fecbb30c74a021eaaae394bed5aeaeb04236efced54a93cf1ffccae9f5f78398",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

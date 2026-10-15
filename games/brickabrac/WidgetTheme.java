@@ -205,11 +205,11 @@ final class WidgetTheme {
             TextHotspotRegion.decodedSpriteHeights[heightIndex] = metadataPacket.readUnsignedShort(65280);
           }
           metadataPacket.position = -(3 * (paletteSize - 1)) + (-(IncomingPacketHelpers.decodedSpriteCount * 8) + data.length - 7);
-          qp.decodedSpritePalette = new int[paletteSize];
+          PlayerBadgeHelpers.decodedSpritePalette = new int[paletteSize];
           for (paletteIndex = 1; paletteSize > paletteIndex; paletteIndex++) {
-            qp.decodedSpritePalette[paletteIndex] = metadataPacket.readUnsignedMedium((byte) -34);
-            if (0 == qp.decodedSpritePalette[paletteIndex]) {
-              qp.decodedSpritePalette[paletteIndex] = 1;
+            PlayerBadgeHelpers.decodedSpritePalette[paletteIndex] = metadataPacket.readUnsignedMedium((byte) -34);
+            if (0 == PlayerBadgeHelpers.decodedSpritePalette[paletteIndex]) {
+              PlayerBadgeHelpers.decodedSpritePalette[paletteIndex] = 1;
             }
           }
           if (obfuscationGuard) {

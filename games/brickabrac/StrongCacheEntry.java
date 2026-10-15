@@ -19,7 +19,7 @@ final class StrongCacheEntry extends CacheEntry {
           IndexedSpriteGeometry.pushSpriteRaster(-53, param5.sprite);
           Rasterizer2D.fillVerticalGradient(param0, 0, param5.width, param5.height, ReflectionCheck.parisBackgroundColors[param4], 928072);
           param1.b(-(30 / param2) + (param5.width - param1.canvasWidth) / 2, -(66 / param2) + (-param1.canvasHeight + param3 + param5.height), 0, 208);
-          sc.popRaster(-101);
+          RasterStackHelpers.popRaster(-101);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ej.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

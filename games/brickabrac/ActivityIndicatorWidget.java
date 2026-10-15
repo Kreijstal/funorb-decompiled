@@ -71,13 +71,13 @@ final class ActivityIndicatorWidget extends Widget {
             stripes.drawTransparent(tileX, y);
             tileX = tileX + stripes.width;
           }
-          sc.popRaster(-103);
+          RasterStackHelpers.popRaster(-103);
           if (x + this.rightCapMask.width >= Rasterizer2D.clipLeft) {
             IndexedSpriteGeometry.pushSpriteRaster(-112, this.capWorkSurface);
             stripes.drawTransparent(-this.phaseTick, 0);
             stripes.drawTransparent(this.phaseSpan * 2 - this.phaseTick, 0);
             this.leftCapMask.b(0, 0);
-            sc.popRaster(-109);
+            RasterStackHelpers.popRaster(-109);
             this.capWorkSurface.drawTransparent(x, y);
           }
           if (Rasterizer2D.clipRight >= rightEdge - this.rightCapMask.width) {
@@ -87,7 +87,7 @@ final class ActivityIndicatorWidget extends Widget {
             stripes.drawTransparent(-rightCapPhase, 0);
             stripes.drawTransparent(-rightCapPhase + 2 * this.phaseSpan, 0);
             this.rightCapMask.b(0, 0);
-            sc.popRaster(-117);
+            RasterStackHelpers.popRaster(-117);
             this.capWorkSurface.drawTransparent(rightEdge - this.rightCapMask.width, y);
             return;
           }
@@ -202,7 +202,7 @@ final class ActivityIndicatorWidget extends Widget {
             Rasterizer2D.setPixel(column, row, intensity << 16 | (intensity << 8 | intensity));
           }
         }
-        sc.popRaster(-111);
+        RasterStackHelpers.popRaster(-111);
         return mask;
     }
 
@@ -237,7 +237,7 @@ final class ActivityIndicatorWidget extends Widget {
           Rasterizer2D.drawHorizontalLine(this.phaseSpan + stripeOffset, row, this.phaseSpan, litBackground);
           Rasterizer2D.drawHorizontalLine(stripeOffset - this.phaseSpan, row, this.phaseSpan, litBackground);
         }
-        sc.popRaster(-110);
+        RasterStackHelpers.popRaster(-110);
         return stripes;
     }
 
@@ -307,7 +307,7 @@ final class ActivityIndicatorWidget extends Widget {
         if (65536 > this.progressFraction65536) {
           MovingBody.a((byte) 118, this.width + destinationX, destinationX + (this.progressFraction65536 * this.width >> 16), destinationY, this.height + destinationY);
           this.drawStripedBar(destinationX, destinationY, this.stripeSprites[1], obfuscationGuard ^ 92);
-          sc.popRaster(-102);
+          RasterStackHelpers.popRaster(-102);
         }
         if (obfuscationGuard != -11) {
           this.animated = true;

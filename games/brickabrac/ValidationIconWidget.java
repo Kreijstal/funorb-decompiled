@@ -52,7 +52,7 @@ final class ValidationIconWidget extends FocusableWidget {
             IndexedSpriteGeometry.pushSpriteRaster(-87, IntrusiveHashIterator.field_c);
           }
           var12.a(112, 144, var12.canvasWidth << 4, var12.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-          sc.popRaster(-104);
+          RasterStackHelpers.popRaster(-104);
           IntrusiveHashIterator.field_c.f(-var12.canvasWidth + var5, -var12.canvasHeight + var6, 256);
         }
     }

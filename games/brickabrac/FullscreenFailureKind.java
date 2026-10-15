@@ -110,7 +110,7 @@ final class FullscreenFailureKind {
           var4_int = 47 / ((param2 + 13) / 51);
           SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.getGameId((byte) -14), (byte) -58, 0L, (String) null);
           if (param0.started && (param0.spectatorMode == 2 ||
-            !(QuickChatHelpDialog.field_Yb < 2))) {
+            !(QuickChatHelpDialog.loginPrivilegeByteOne < 2))) {
             var9 = GameRenderAudioHelpers.contextActions;
             var10 = GamePresentationHelpers.formatIndexedText(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);
             var9.contextMenu.addAction(var10, 10, (byte) 91);
@@ -159,7 +159,7 @@ final class FullscreenFailureKind {
           int var6_int = -110 / ((param4 - 62) / 39);
           param5.drawTransparent((-param5.canvasWidth + param2.width) / 2, param2.height + (param0 - (param5.canvasHeight - 5 / param3)));
           RasterEffectHelpers.fillVerticalGradientAlpha255(0, 0, param2.width, param2.height, IntrusiveNode.field_h[param1], 11970969, 152);
-          sc.popRaster(-112);
+          RasterStackHelpers.popRaster(-112);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "tf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

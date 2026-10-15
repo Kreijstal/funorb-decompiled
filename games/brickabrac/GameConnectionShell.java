@@ -271,7 +271,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             CanvasResizeController.resendPendingRankingsRequests((byte) 119, 7);
           }
           if (KeyDispatchHelpers.enabledCommonPackets[8]) {
-            we.a((byte) -46);
+            ReflectionCheckHelpers.resetPendingReflectionChecks((byte) -46);
           }
         }
         int var3 = -122 % ((-43 - param0) / 60);

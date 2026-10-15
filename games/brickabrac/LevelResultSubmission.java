@@ -81,7 +81,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             DateFieldsWidget.a(-115, (String) null, (String) (var2), 0, GameOverlayHelpers.field_d);
           } else {
             var3 = LoadingProgressDialog.field_cb;
-            var3 = TextFieldRenderer.a((byte) 82, var3);
+            var3 = TextFieldRenderer.prefixLocalPlayerBadge((byte) 82, var3);
             var4 = "";
             var5 = "|";
             var6 = ScreenNavigationHelpers.quickChatChannel;

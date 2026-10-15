@@ -281,7 +281,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             MovingBody.a((byte) 125, widget.width + parentX + widget.x, widget.x + parentX, parentY + widget.y, widget.height + parentY + widget.y);
             PopupWidgetLayer.widgetTheme.a(this.caretColor, var10, var11, 91, var12, var10);
-            sc.popRaster(-94);
+            RasterStackHelpers.popRaster(-94);
           }
           if (obfuscationGuard <= 118) {
             this.leftInset = -19;
@@ -655,7 +655,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               var15 = stackIn_21_0;
               PopupWidgetLayer.widgetTheme.a(var13.top + this.topInset + (widget.y + (parentY + widget.textOffsetY)), this.selectionArgb >>> 24, this.selectionArgb, this.computeTextX(var14, widget, 65263, parentX), var13.bottom, (byte) 55, var15 - var14);
             }
-            sc.popRaster(-98);
+            RasterStackHelpers.popRaster(-98);
             return;
           }
           return;
@@ -1397,7 +1397,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               this.font.drawLeft(this.getDisplayText(widget, true), this.computeTextX(localX, widget, 65263, parentX), this.computeTextY((byte) 105, parentY, localY, widget) + var11, textColor, shadowColor);
             }
           }
-          sc.popRaster(-103);
+          RasterStackHelpers.popRaster(-103);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

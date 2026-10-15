@@ -53,7 +53,7 @@ final class aa {
             stackIn_6_2 = 20;
           }
           QuickChatMenu.a(stackIn_2_0, stackIn_3_1, stackIn_6_2, param1, 16777215, (param4.width - param1.canvasWidth) / 2, 10 / param5 - param1.canvasHeight + (480 + param0));
-          sc.popRaster(-86);
+          RasterStackHelpers.popRaster(-86);
           if (param2) {
             return;
           }

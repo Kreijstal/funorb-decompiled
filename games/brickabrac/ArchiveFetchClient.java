@@ -107,7 +107,7 @@ abstract class ArchiveFetchClient {
           IndexedSpriteGeometry.pushSpriteRaster(-77, param0.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, Bzip2State.jungleBackgroundColors[param2], 16777215);
           param1.b((-param1.canvasWidth + param0.width) / 2 - 30 / param3, -param1.canvasHeight + param4 + (param0.height - 200 / param3), 55, 110);
-          sc.popRaster(-117);
+          RasterStackHelpers.popRaster(-117);
           if (!param5) {
             RgbSprite var7 = (RgbSprite) null;
             ArchiveFetchClient.a((RasterCacheSurface) null, (RgbSprite) null, 100, 125, 72, false);

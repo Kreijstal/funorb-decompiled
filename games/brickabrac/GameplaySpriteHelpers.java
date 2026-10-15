@@ -77,7 +77,7 @@ final class GameplaySpriteHelpers {
           FullscreenFailureKind.activePaddleCapSprites = kp.halfPaddleCapSprites;
           activeBallSprite = PlayerInputBatch.halfBallSprite;
           Ball.activeBoardMaskSprite = RankingsRequest.halfBoardMaskSprite;
-          we.activePowerUpSprites = ch.halfPowerUpSprites;
+          ReflectionCheckHelpers.activePowerUpSprites = ch.halfPowerUpSprites;
           FullscreenDialogHelpers.activePaddleFlameSprites = MeshLobbyUiHelpers.halfPaddleFlameSprites;
           TextHotspotRegion.activePaddleCenterSprite = WidgetTextLayout.halfPaddleCenterSprite;
           FireworkBurst.activeBrickSprites = ResourceArchive.halfBrickSprites;
@@ -91,7 +91,7 @@ final class GameplaySpriteHelpers {
           TextHotspotRegion.activePaddleCenterSprite = AccountRegistrationPanel.fullPaddleCenterSprite;
           FireworkBurst.activeBrickSprites = TranslucentNineSliceFrame.fullBrickSprites;
           HorizontalFrameHelpers.activePaddleSegmentSprites = GameConnectionShell.fullPaddleSegmentSprites;
-          we.activePowerUpSprites = TextHotspotRegion.powerUpMeterIcons;
+          ReflectionCheckHelpers.activePowerUpSprites = TextHotspotRegion.powerUpMeterIcons;
           activeBallSprite = MenuSelection.fullBallSprite;
         }
         if (obfuscationGuard != -28463) {

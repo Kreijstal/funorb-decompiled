@@ -58,7 +58,7 @@ final class OpacityWidget extends SingleChildWidget {
           IntArrayRequest.gameplayScreen.snapshotsReady = true;
           stackIn_10_0 = IntArrayRequest.gameplayScreen;
           stackIn_10_1 = IntArrayRequest.gameplayScreen.suppressResultSubmission;
-          stackIn_11_2 = (QuickChatHelpDialog.field_Yb >= 2) && (localPlayerCount == 1) && (GameConnectionShell.field_t);
+          stackIn_11_2 = (QuickChatHelpDialog.loginPrivilegeByteOne >= 2) && (localPlayerCount == 1) && (GameConnectionShell.field_t);
           stackIn_10_0.suppressResultSubmission = stackIn_10_1 | stackIn_11_2;
           ScreenNavigationHelpers.requestScreen(inputFlag, 103, -1);
           return;
@@ -168,7 +168,7 @@ final class OpacityWidget extends SingleChildWidget {
         RgbSprite var6 = new RgbSprite(this.child.width, this.child.height);
         IndexedSpriteGeometry.pushSpriteRaster(-113, var6);
         this.child.drawLayer(0, 0, layer, obfuscationGuard);
-        sc.popRaster(obfuscationGuard ^ 119);
+        RasterStackHelpers.popRaster(obfuscationGuard ^ 119);
         var6.b(parentX + this.x, parentY + this.y, this.opacity256);
     }
 

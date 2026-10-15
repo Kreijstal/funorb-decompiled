@@ -1110,7 +1110,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime97 = GameplaySpriteHelpers.a(true, "player_one");
           if (null != var2Lifetime97) {
-            we.field_c = MenuButton.a(var2Lifetime97, (byte) 74);
+            ReflectionCheckHelpers.playerOneLabel = MenuButton.a(var2Lifetime97, (byte) 74);
           }
           var2Lifetime98 = GameplaySpriteHelpers.a(true, "player_two");
           if (null != var2Lifetime98) {

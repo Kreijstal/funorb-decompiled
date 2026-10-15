@@ -119,7 +119,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           if (256 > var5) {
             Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
           }
-          sc.popRaster(-96);
+          RasterStackHelpers.popRaster(-96);
           if (MatchResultScreen.logoAnimationTicks < 150) {
             LoginMethodPreference.field_b.drawHalfSize(var3, var4);
           } else {
@@ -156,7 +156,7 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
         if (256 > var5) {
           Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 256 - var5);
         }
-        sc.popRaster(-96);
+        RasterStackHelpers.popRaster(-96);
         if (MatchResultScreen.logoAnimationTicks < 150) {
           LoginMethodPreference.field_b.drawHalfSize(var3, var4);
         } else {

@@ -120,7 +120,7 @@ abstract class CacheEntry extends DualLinkNode {
           DraggableWidget.field_N = new UiComponent(0L, CappedUrlRequest.field_l);
           DraggableWidget.field_N.horizontalAlignment = 1;
           HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, VerticalScrollbar.field_Rb.toUpperCase());
-          sc.field_b = new UiComponent(0L, ValidationStatus.field_j, rl.field_c.toUpperCase());
+          RasterStackHelpers.field_b = new UiComponent(0L, ValidationStatus.field_j, rl.field_c.toUpperCase());
           PasswordTooltipHelpers.field_e = new UiComponent(0L, FarmBackground.field_x);
           AppletFlowHelpers.field_g = new UiComponent(0L, MainMenuScreen.field_t, AppletFlowHelpers.field_b);
           AppletFlowHelpers.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
@@ -146,7 +146,7 @@ abstract class CacheEntry extends DualLinkNode {
           }
           VolcanicBackground.field_v = new UiComponent(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           FontRequestHelpers.field_a = new UiComponent(0L, (UiComponent) null);
-          FontRequestHelpers.field_a.addChild(sc.field_b, 0);
+          FontRequestHelpers.field_a.addChild(RasterStackHelpers.field_b, 0);
           FontRequestHelpers.field_a.addChild(PasswordTooltipHelpers.field_e, 0);
           PasswordTooltipHelpers.field_e.addChild(AppletFlowHelpers.field_g, 0);
           if (param2 < 13) {
@@ -168,9 +168,9 @@ abstract class CacheEntry extends DualLinkNode {
           Brick.field_A.horizontalAlignment = 1;
           Brick.field_A.verticalAlignment = 0;
           LobbyUiHelpers.cancelCreateGameButton = new UiComponent(0L, GameUiController.field_b, TextFieldValidator.field_j.toUpperCase());
-          qp.field_f = new UiComponent(0L, MenuSelection.field_m);
-          qp.field_f.addChild(Brick.field_A, 0);
-          qp.field_f.addChild(LobbyUiHelpers.cancelCreateGameButton, 0);
+          PlayerBadgeHelpers.field_f = new UiComponent(0L, MenuSelection.field_m);
+          PlayerBadgeHelpers.field_f.addChild(Brick.field_A, 0);
+          PlayerBadgeHelpers.field_f.addChild(LobbyUiHelpers.cancelCreateGameButton, 0);
           CanvasInputCleanup.field_f = new UiComponent(0L, ReportAbuseDialog.field_Qb);
           CanvasInputCleanup.field_f.copyStyle((byte) -83, CappedUrlRequest.field_l);
           CanvasInputCleanup.field_f.verticalAlignment = 1;

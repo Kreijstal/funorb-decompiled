@@ -238,7 +238,7 @@ final class GamePresentationHelpers {
           indices = GameOverlayHelpers.decodedSpriteIndices[spriteIndex];
           pixels = new int[pixelCount];
           for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
-            pixels[pixelIndex] = qp.decodedSpritePalette[IntrusiveHashIterator.a((int) indices[pixelIndex], 255)];
+            pixels[pixelIndex] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a((int) indices[pixelIndex], 255)];
           }
           sprites[spriteIndex] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[spriteIndex], SocketConnector.decodedSpriteOffsetY[spriteIndex], jh.decodedSpriteWidths[spriteIndex], TextHotspotRegion.decodedSpriteHeights[spriteIndex], pixels);
         }

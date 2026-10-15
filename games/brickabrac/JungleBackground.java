@@ -507,7 +507,7 @@ final class JungleBackground extends BackgroundScene {
                   }
                   var13 = stackIn_248_0;
                 }
-                if (QuickChatHelpDialog.field_Yb >= 2 &&
+                if (QuickChatHelpDialog.loginPrivilegeByteOne >= 2 &&
                   IntArrayRequest.heldKeys[12]) {
                   var11 = 0;
                   var12 = 0;
@@ -544,7 +544,7 @@ final class JungleBackground extends BackgroundScene {
                       continue;
                     }
                     ar.a(param2, param1, var9, -1, -1, 0, var7, 0);
-                    if (2 <= QuickChatHelpDialog.field_Yb &&
+                    if (2 <= QuickChatHelpDialog.loginPrivilegeByteOne &&
                       IntArrayRequest.heldKeys[12]) {
                       MeshAttributeRecord.field_g = true;
                     }

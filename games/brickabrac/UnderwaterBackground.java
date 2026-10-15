@@ -67,7 +67,7 @@ final class UnderwaterBackground extends BackgroundScene {
           SocialTabbedPanel.field_b = new RgbSprite(ConnectionPhase.waterFarSprite.canvasWidth, ConnectionPhase.waterFarSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-49, SocialTabbedPanel.field_b);
           ConnectionPhase.waterFarSprite.drawVerticallyFlipped(0, 0);
-          sc.popRaster(-81);
+          RasterStackHelpers.popRaster(-81);
           WeightedLruCache.field_e = jh.a(0, wm.waterNearSprite);
           GameplayScreen.field_l = jh.a(0, LoginPanel.waterMidSprite);
           BufferedFile.field_a = jh.a(0, ConnectionPhase.waterFarSprite);
@@ -75,7 +75,7 @@ final class UnderwaterBackground extends BackgroundScene {
           AppletResourceHelpers.field_d = new RgbSprite(ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-83, AppletResourceHelpers.field_d);
           ResourceArchiveFactory.waterRaysSprite.a(0, 0, ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
-          sc.popRaster(-114);
+          RasterStackHelpers.popRaster(-114);
           SpriteInputHelpers.encodeBinaryMaskRuns(ConnectionPhase.waterFarSprite, 0);
           SpriteInputHelpers.encodeBinaryMaskRuns(SocialTabbedPanel.field_b, 0);
           SpriteInputHelpers.encodeBinaryMaskRuns(BufferedFile.field_a, 0);

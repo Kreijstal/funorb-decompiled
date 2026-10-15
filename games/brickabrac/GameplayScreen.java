@@ -1094,7 +1094,7 @@ final class GameplayScreen extends GameScreen {
 
     final static void b(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
-        String[] var3 = new String[]{LoadingProgressDialog.field_cb == null ? we.field_c : LoadingProgressDialog.field_cb, DelayedPacket.field_q};
+        String[] var3 = new String[]{LoadingProgressDialog.field_cb == null ? ReflectionCheckHelpers.playerOneLabel : LoadingProgressDialog.field_cb, DelayedPacket.field_q};
         LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, kk.createIndexOrder(false, ValidationStatus.field_b.levelCount, ButtonWidgetRenderer.field_w), 3);
         TextFieldRenderer.field_A = false;
         TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(0, (byte) 19);
@@ -1643,12 +1643,12 @@ final class GameplayScreen extends GameScreen {
               layoutYAlias = layoutY;
               MovingBody.a((byte) 124, 153 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], 233 + layoutYAlias[backgroundSlot]);
               TabbedPane.currentBackground.drawPreview((byte) -102, backgroundPlayerId, layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot]);
-              sc.popRaster(-79);
+              RasterStackHelpers.popRaster(-79);
             } else {
               MovingBody.a((byte) 76, 306 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], layoutYAlias[backgroundSlot] + 480);
               splitBoardScroll = (-(2 * (paddle.x256 + paddle.width256 / 2 << 8)) + 20054016) / 306;
               TabbedPane.currentBackground.drawSplitBackground(layoutYAlias[backgroundSlot], (byte) -107, layoutXAlias[backgroundSlot], backgroundPlayerId, splitBoardScroll / 2);
-              sc.popRaster(-122);
+              RasterStackHelpers.popRaster(-122);
             }
             backgroundPlayerId++;
             backgroundPlayerId = backgroundPlayerId % this.match.playerCount;
@@ -1825,7 +1825,7 @@ final class GameplayScreen extends GameScreen {
           this.networkedMatch = stackIn_7_1;
           this.localPlayerMask = localPlayerMask;
           this.localPlayerId = localPlayerId;
-          stackIn_10_1 = !(QuickChatHelpDialog.field_Yb < 2);
+          stackIn_10_1 = !(QuickChatHelpDialog.loginPrivilegeByteOne < 2);
           this.debugControlsEnabled = stackIn_10_1;
           achievementMask = SpriteInputHelpers.pendingAchievementMask;
           achievementMaskReference = achievementMask;

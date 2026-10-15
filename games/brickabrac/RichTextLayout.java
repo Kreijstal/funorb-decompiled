@@ -152,7 +152,7 @@ final class RichTextLayout extends WidgetTextLayout {
               }
             }
           }
-          sc.popRaster(-123);
+          RasterStackHelpers.popRaster(-123);
           var2 = -63 / ((70 - param1) / 49);
           return;
         }
@@ -161,11 +161,11 @@ final class RichTextLayout extends WidgetTextLayout {
         }
         stackIn_7_0 = ContentTransitionLayer.field_gb;
         stackIn_7_1 = true;
-        stackIn_8_2 = (param0) && (!sc.field_c);
+        stackIn_8_2 = (param0) && (!RasterStackHelpers.field_c);
         ((UiComponent) (Object) stackIn_7_0).drawRoot(stackIn_7_1, stackIn_8_2);
         stackIn_11_0 = FontRequestHelpers.field_a;
         stackIn_11_1 = true;
-        stackIn_12_2 = (param0) && (!sc.field_c);
+        stackIn_12_2 = (param0) && (!RasterStackHelpers.field_c);
         ((UiComponent) (Object) stackIn_11_0).drawRoot(stackIn_11_1, stackIn_12_2);
         if (IntArrayRequest.field_j > 0) {
           if (null == GrowableIntList.field_e) {
@@ -188,12 +188,12 @@ final class RichTextLayout extends WidgetTextLayout {
             stackIn_31_2 = (param0) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
             ((UiComponent) (Object) stackIn_30_0).drawRoot(stackIn_30_1, stackIn_31_2);
           }
-          sc.popRaster(-123);
+          RasterStackHelpers.popRaster(-123);
           var2Lifetime1 = -63 / ((70 - param1) / 49);
           return;
         }
         if (TableDataRequest.field_m <= 0) {
-          sc.popRaster(-123);
+          RasterStackHelpers.popRaster(-123);
           var2Lifetime2 = -63 / ((70 - param1) / 49);
           return;
         }
@@ -206,7 +206,7 @@ final class RichTextLayout extends WidgetTextLayout {
           stackIn_43_1 = true;
           stackIn_44_2 = (param0) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
           ((UiComponent) (Object) stackIn_43_0).drawRoot(stackIn_43_1, stackIn_44_2);
-          sc.popRaster(-123);
+          RasterStackHelpers.popRaster(-123);
           var2Lifetime3 = -63 / ((70 - param1) / 49);
           return;
         }
@@ -219,7 +219,7 @@ final class RichTextLayout extends WidgetTextLayout {
         stackIn_52_1 = true;
         stackIn_53_2 = (param0) && (!MeshLobbyUiHelpers.joinRequestsPanelOpen);
         ((UiComponent) (Object) stackIn_52_0).drawRoot(stackIn_52_1, stackIn_53_2);
-        sc.popRaster(-123);
+        RasterStackHelpers.popRaster(-123);
         var2Lifetime4 = -63 / ((70 - param1) / 49);
         return;
     }

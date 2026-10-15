@@ -99,7 +99,7 @@ final class RankingsScreen extends MenuScreen {
           }
           Rasterizer2D.fillVerticalGradient(0, 0, param0.width, param0.height, CacheIoWorker.desertBackgroundColors[param4], 16777215);
           param3.b((-param3.canvasWidth + param0.width) / 2 - 50 / param1, -(189 / param1) + (-param3.canvasHeight + param0.height) + param2, 55, 83);
-          sc.popRaster(-94);
+          RasterStackHelpers.popRaster(-94);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lf.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

@@ -241,19 +241,19 @@ final class ReportAbuseDialog extends UiComponent {
             this.nameDisplay.textColor = 16764006;
             this.body.addChild(this.nameDisplay, 0);
             this.nameDisplay.textSuffix = "|";
-            if (!(TextChoiceDialogStyles.field_f < 5) ||
-              !(QuickChatHelpDialog.field_Yb < 2)) {
+            if (!(TextChoiceDialogStyles.loginPrivilegeByteTwo < 5) ||
+              !(QuickChatHelpDialog.loginPrivilegeByteOne < 2)) {
               regionExit1: {
                 stackIn_8_0 = this;
                 stackIn_8_1 = null;
                 stackIn_8_2 = null;
                 muteControlId = 0L;
                 muteStyleTemplate = (StateIconLabel) (muteStyle);
-                if (TextChoiceDialogStyles.field_f < 7) {
+                if (TextChoiceDialogStyles.loginPrivilegeByteTwo < 7) {
                   stackIn_8_0Lifetime1 = this;
                   stackIn_8_1Lifetime1 = null;
                   stackIn_8_2Lifetime1 = null;
-                  if (2 > QuickChatHelpDialog.field_Yb) {
+                  if (2 > QuickChatHelpDialog.loginPrivilegeByteOne) {
                     stackIn_9_0 = this;
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;

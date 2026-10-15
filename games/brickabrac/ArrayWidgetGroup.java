@@ -534,7 +534,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
         int var4 = 0;
         int var5 = 0;
         Brick.field_A.text = param1;
-        sc.field_c = true;
+        RasterStackHelpers.field_c = true;
         int var2_int = BallPulseEffect.framebuffer.width;
         if (param0 != -83) {
           return;
@@ -543,10 +543,10 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           var3 = BallPulseEffect.framebuffer.height;
           var4 = Brick.field_A.font.measureWrappedHeight(param1, 272, Brick.field_A.lineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
-          qp.field_f.setBounds(-(2 * var5) + (-120 + var3), var5, (var2_int - 320) / 2, 320, (byte) 64);
-          qp.field_f.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, qp.field_f.height, 2105376);
-          Brick.field_A.setBounds(-24 + (qp.field_f.height - 20), 16, 24, -24 + (-24 + qp.field_f.width), (byte) 64);
-          LobbyUiHelpers.cancelCreateGameButton.setBounds(24, -24 + (-20 + qp.field_f.height), 120, 80, (byte) 64);
+          PlayerBadgeHelpers.field_f.setBounds(-(2 * var5) + (-120 + var3), var5, (var2_int - 320) / 2, 320, (byte) 64);
+          PlayerBadgeHelpers.field_f.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, PlayerBadgeHelpers.field_f.height, 2105376);
+          Brick.field_A.setBounds(-24 + (PlayerBadgeHelpers.field_f.height - 20), 16, 24, -24 + (-24 + PlayerBadgeHelpers.field_f.width), (byte) 64);
+          LobbyUiHelpers.cancelCreateGameButton.setBounds(24, -24 + (-20 + PlayerBadgeHelpers.field_f.height), 120, 80, (byte) 64);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ag.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

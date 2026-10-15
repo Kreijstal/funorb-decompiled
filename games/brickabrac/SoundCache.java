@@ -298,8 +298,8 @@ final class SoundCache {
               TextWidgetRenderer.ensureGamePacketBody((byte) -80)) {
               CacheEntry.field_v = LogoRenderHelpers.incomingPackets.readLong(-32768);
               ByteArrayPoolHelpers.field_b = param5;
-              QuickChatHelpDialog.field_Yb = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
-              TextChoiceDialogStyles.field_f = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+              QuickChatHelpDialog.loginPrivilegeByteOne = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+              TextChoiceDialogStyles.loginPrivilegeByteTwo = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               ResourceArchiveFactory.windowModeCapabilityWord = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
               var11 = LogoRenderHelpers.incomingPackets.readNullableCp1252String(0);
               var7 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);

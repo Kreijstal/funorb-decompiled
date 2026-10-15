@@ -6,7 +6,7 @@ final class TextChoiceDialogStyles {
     static String[] field_b;
     static StringBuilder diagnosticDecimalScratch;
     static String field_d;
-    static int field_f;
+    static int loginPrivilegeByteTwo;
     static boolean field_c;
 
     public static void a(int param0) {

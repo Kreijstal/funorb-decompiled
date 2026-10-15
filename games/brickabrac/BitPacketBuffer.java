@@ -162,7 +162,7 @@ final class BitPacketBuffer extends PacketBuffer {
             }
             var12_ref_ge = (PowerUp) (var24.fallingPowerUps.first(-113));
             while (var12_ref_ge != null) {
-              we.activePowerUpSprites[var12_ref_ge.typeId].drawTransparent(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
+              ReflectionCheckHelpers.activePowerUpSprites[var12_ref_ge.typeId].drawTransparent(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
               var12_ref_ge = (PowerUp) (var24.fallingPowerUps.next((byte) 116));
             }
             var12_ref_il = (BubbleDistortion) (var24.bubbles.first(-20));
@@ -330,7 +330,7 @@ final class BitPacketBuffer extends PacketBuffer {
           IndexedSpriteGeometry.pushSpriteRaster(-102, param1.sprite);
           Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, hh.volcanicBackgroundColors[param2], 10792131);
           param0.drawTransparent((param1.width - param0.canvasWidth) / 2, -(75 / param3) - param0.canvasHeight + (param5 + param1.height));
-          sc.popRaster(-102);
+          RasterStackHelpers.popRaster(-102);
           if (param4 < 6) {
             BitPacketBuffer.clearStaticReferences(102);
           }

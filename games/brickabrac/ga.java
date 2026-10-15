@@ -24,9 +24,9 @@ final class ga extends IntrusiveNode {
           return;
         }
         if (decompiledFrameRemainder0) {
-          if (sc.field_c) {
+          if (RasterStackHelpers.field_c) {
             Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.screenY);
-            qp.field_f.drawRoot(true, param0);
+            PlayerBadgeHelpers.field_f.drawRoot(true, param0);
             if ((!(IntArrayRequest.field_j <= 0) ||
               !(0 >= TableDataRequest.field_m)) &&
               MeshLobbyUiHelpers.joinRequestsPanelOpen) {

@@ -315,8 +315,8 @@ final class MultiplayerMatch {
                           if (var15 != 0) {
                             stackIn_142_0 = (contactBrick.pendingTypeId != 0) ? 0 : 1;
                             var16 = stackIn_142_0;
-                            contactBrick.pendingTypeId = MonotonicTime.field_b[contactBrick.typeId];
-                            contactBrick.transitionCode = rb.field_a[contactBrick.typeId];
+                            contactBrick.pendingTypeId = MonotonicTime.brickHitPendingTypes[contactBrick.typeId];
+                            contactBrick.transitionCode = BrickHitTransitionTable.codesByBrickType[contactBrick.typeId];
                             contactBrick.stateWord = 0;
                             if (19 == contactBrick.typeId ||
                               contactBrick.typeId == 20) {

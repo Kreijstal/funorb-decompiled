@@ -464,7 +464,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         }
         try {
           param5.b((-param5.canvasWidth + param2.width) / 2, -(342 / param0) + (-param5.canvasHeight + param2.height), 55, 83);
-          sc.popRaster(-84);
+          RasterStackHelpers.popRaster(-84);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dk.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

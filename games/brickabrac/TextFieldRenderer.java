@@ -21,7 +21,7 @@ class TextFieldRenderer extends TextWidgetRenderer {
         }
     }
 
-    final static String a(byte param0, String param1) {
+    final static String prefixLocalPlayerBadge(byte obfuscationGuard, String text) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_8_0 = null;
@@ -30,24 +30,24 @@ class TextFieldRenderer extends TextWidgetRenderer {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 72) {
+          if (obfuscationGuard < 72) {
             TextFieldRenderer.a((byte) 33, 79);
           }
-          var2_int = qp.a(QuickChatHelpDialog.field_Yb, TextChoiceDialogStyles.field_f, (byte) -22);
+          var2_int = PlayerBadgeHelpers.selectPlayerBadgeKind(QuickChatHelpDialog.loginPrivilegeByteOne, TextChoiceDialogStyles.loginPrivilegeByteTwo, (byte) -22);
           if (var2_int == 1) {
-            param1 = "<img=0>" + param1;
+            text = "<img=0>" + text;
           }
           if (var2_int == 2) {
-            param1 = "<img=1>" + param1;
+            text = "<img=1>" + text;
           }
-          stackIn_8_0 = (String) (param1);
+          stackIn_8_0 = (String) (text);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_11_0 = var2;
-          stackIn_11_1 = new StringBuilder().append("r.EA(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("r.EA(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";

@@ -36,7 +36,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           }
           aa.field_b.bindRasterTarget();
           var1.drawHalfSize(0, 0);
-          sc.popRaster(-123);
+          RasterStackHelpers.popRaster(-123);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fl.Q(" + param0 + ')');
         }

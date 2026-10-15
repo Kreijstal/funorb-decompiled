@@ -204,7 +204,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             }
             var21.a(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-            sc.popRaster(-111);
+            RasterStackHelpers.popRaster(-111);
             this.spinnerSurface.f(-(var21.canvasWidth >> 1) + var9, -var21.canvasHeight + var10, 256);
             return;
           }
@@ -248,7 +248,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
           var25.a(112, 144, var25.canvasWidth << 4, var25.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-          sc.popRaster(-111);
+          RasterStackHelpers.popRaster(-111);
           this.spinnerSurface.f(-(var25.canvasWidth >> 1) + var9Lifetime5, -var25.canvasHeight + var10Lifetime5, 256);
           return;
         }
@@ -289,7 +289,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             }
             var30.a(112, 144, var30.canvasWidth << 4, var30.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-            sc.popRaster(-111);
+            RasterStackHelpers.popRaster(-111);
             this.spinnerSurface.f(-(var30.canvasWidth >> 1) + var9Lifetime1, -var30.canvasHeight + var10Lifetime1, 256);
             return;
           }
@@ -333,7 +333,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
           var34.a(112, 144, var34.canvasWidth << 4, var34.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-          sc.popRaster(-111);
+          RasterStackHelpers.popRaster(-111);
           this.spinnerSurface.f(-(var34.canvasWidth >> 1) + var9Lifetime1Lifetime1, -var34.canvasHeight + var10Lifetime1Lifetime1, 256);
           return;
         }
@@ -372,7 +372,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
               IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
             }
             var53.a(112, 144, var53.canvasWidth << 4, var53.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-            sc.popRaster(-111);
+            RasterStackHelpers.popRaster(-111);
             this.spinnerSurface.f(-(var53.canvasWidth >> 1) + var9Lifetime2, -var53.canvasHeight + var10Lifetime2, 256);
             return;
           }
@@ -419,7 +419,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             }
           }
           var47.a(112, 144, var47.canvasWidth << 4, var47.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-          sc.popRaster(-111);
+          RasterStackHelpers.popRaster(-111);
           this.spinnerSurface.f(-(var47.canvasWidth >> 1) + var9Lifetime2Lifetime1, -var47.canvasHeight + var10Lifetime2Lifetime1, 256);
           return;
         }
@@ -460,7 +460,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             IndexedSpriteGeometry.pushSpriteRaster(-86, this.spinnerSurface);
           }
           var39.a(112, 144, var39.canvasWidth << 4, var39.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-          sc.popRaster(-111);
+          RasterStackHelpers.popRaster(-111);
           this.spinnerSurface.f(-(var39.canvasWidth >> 1) + var9Lifetime3, -var39.canvasHeight + var10Lifetime3, 256);
           return;
         }
@@ -504,7 +504,7 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           }
         }
         var43.a(112, 144, var43.canvasWidth << 4, var43.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
-        sc.popRaster(-111);
+        RasterStackHelpers.popRaster(-111);
         this.spinnerSurface.f(-(var43.canvasWidth >> 1) + var9Lifetime4, -var43.canvasHeight + var10Lifetime4, 256);
         return;
     }
