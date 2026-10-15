@@ -9,10 +9,10 @@ final class CanvasInputHelpers {
     static String field_d;
     static SocialTabbedPanel field_b;
 
-    final static void a(int param0, int param1, byte param2) {
-        ll.field_b = param1;
-        ChocolateBackground.field_v = param0;
-        if (param2 < 72) {
+    final static void setPendingTooltipAnchor(int x, int y, byte obfuscationGuard) {
+        PasswordTooltipHelpers.pendingTooltipY = y;
+        ChocolateBackground.pendingTooltipX = x;
+        if (obfuscationGuard < 72) {
           field_e = (UiComponent) null;
         }
     }
@@ -27,7 +27,7 @@ final class CanvasInputHelpers {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            CanvasInputHelpers.a(-35, 121, (byte) -8);
+            CanvasInputHelpers.setPendingTooltipAnchor(-35, 121, (byte) -8);
           }
           var2 = GameplayAudioEvent.a(HighscoresScreen.a(!param0, param1), (byte) 3);
           if (var2 == null) {

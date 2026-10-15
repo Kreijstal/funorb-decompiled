@@ -53,7 +53,7 @@ final class NanoGameClock extends GameClock {
         ResourcePreparationQueue.b(124);
         HighscorePackSelector.field_k.setBounds(40, ContentTransitionLayer.field_gb.height - 40, 0, ContentTransitionLayer.field_gb.width, (byte) 64);
         sc.field_b.setBounds(30, 0, 0, FontRequestHelpers.field_a.width, (byte) 64);
-        ll.field_e.setBounds(-72 + FontRequestHelpers.field_a.height, 30, 0, FontRequestHelpers.field_a.width, (byte) 64);
+        PasswordTooltipHelpers.field_e.setBounds(-72 + FontRequestHelpers.field_a.height, 30, 0, FontRequestHelpers.field_a.width, (byte) 64);
         AppletFlowHelpers.field_g.setBounds(30, 5, 5, 68, (byte) 64);
         AppletFlowHelpers.field_a.setBounds(30, 5, 75, 78, (byte) 64);
         kk.field_b.setBounds(30, 5, 155, 48, (byte) 64);
@@ -61,7 +61,7 @@ final class NanoGameClock extends GameClock {
         int var2 = PacketReceiveHelpers.field_e ? 250 : 200;
         BufferedSocket.field_h.setBounds(30, 5, 5 + var2, -var2 + 363, (byte) 64);
         HalloweenBackground.field_x.setBounds(30, 5, 370, FontRequestHelpers.field_a.width - 10 - 365, (byte) 64);
-        rl.field_e.setScrollPaneBounds(2, (byte) -128, -5 + (ll.field_e.width - 5), 5, 37, DialogMessagePanel.uiScrollbarWidth, -5 + (-5 + ll.field_e.height - 32));
+        rl.field_e.setScrollPaneBounds(2, (byte) -128, -5 + (PasswordTooltipHelpers.field_e.width - 5), 5, 37, DialogMessagePanel.uiScrollbarWidth, -5 + (-5 + PasswordTooltipHelpers.field_e.height - 32));
         int var3 = (FontRequestHelpers.field_a.width + 2) / 2;
         gj.field_b.setBounds(40, -40 + FontRequestHelpers.field_a.height, 0, var3 - 2, (byte) 64);
         if (!PacketReceiveHelpers.field_e) {

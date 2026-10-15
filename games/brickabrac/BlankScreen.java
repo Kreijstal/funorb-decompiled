@@ -37,7 +37,7 @@ final class BlankScreen extends GameScreen {
     final static void appendQuickChatSubmenu(int obfuscationGuard, QuickChatMenu submenu) {
         try {
           if (obfuscationGuard != -2) {
-            BlankScreen.d((byte) 104);
+            BlankScreen.getVisibleTooltipText((byte) 104);
           }
           QuickChatPhraseDefinition.quickChatMenuRoot.addChild(submenu, 0);
         } catch (RuntimeException failure) {
@@ -53,17 +53,17 @@ final class BlankScreen extends GameScreen {
         return false;
     }
 
-    final static String d(byte param0) {
-        if (param0 != 63) {
+    final static String getVisibleTooltipText(byte obfuscationGuard) {
+        if (obfuscationGuard != 63) {
           return (String) null;
         }
         if (QuickChatParameterType.tooltipSuppressed) {
           return null;
         }
-        if (MonotonicTime.field_e > ResourceArchiveFactory.tooltipTicks) {
+        if (MonotonicTime.tooltipDelayTicks > ResourceArchiveFactory.tooltipTicks) {
           return null;
         }
-        if (ResourceArchiveFactory.tooltipTicks < jh.field_a + MonotonicTime.field_e) {
+        if (ResourceArchiveFactory.tooltipTicks < jh.tooltipDisplayDurationTicks + MonotonicTime.tooltipDelayTicks) {
           return LevelCompleteScreen.tooltipText;
         }
         return null;

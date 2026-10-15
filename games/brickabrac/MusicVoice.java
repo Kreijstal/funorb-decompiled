@@ -28,90 +28,90 @@ final class MusicVoice extends IntrusiveNode {
     int field_j;
     int channel;
 
-    final static void a(String param0, int param1) {
-        int stackIn_28_0 = 0;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
-        String stackIn_73_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        var3 = BrickABrac.field_J ? 1 : 0;
+    final static void updateTooltipState(String text, int obfuscationGuard) {
+        int displayWindowFlag = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
+        int wasWithinDisplayWindow = 0;
+        RuntimeException failure = null;
+        int clientBranchFlag = 0;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           ResourceArchiveFactory.tooltipTicks = ResourceArchiveFactory.tooltipTicks + 1;
-          if (-1 == ChocolateBackground.field_v &&
-            ll.field_b == -1) {
-            ChocolateBackground.field_v = MusicPatch.pointerX;
-            ll.field_b = ResourcePreparationEntry.pointerY;
+          if (-1 == ChocolateBackground.pendingTooltipX &&
+            PasswordTooltipHelpers.pendingTooltipY == -1) {
+            ChocolateBackground.pendingTooltipX = MusicPatch.pointerX;
+            PasswordTooltipHelpers.pendingTooltipY = ResourcePreparationEntry.pointerY;
           }
-          if (param1 != 22546) {
+          if (obfuscationGuard != 22546) {
             return;
           }
-          boolean decompiledFrameRemainder0 = true;
-          if (param0 == null) {
-            decompiledFrameRemainder0 = (null == LevelCompleteScreen.tooltipText);
+          boolean reanchorRequested = true;
+          if (text == null) {
+            reanchorRequested = (null == LevelCompleteScreen.tooltipText);
           } else {
-            decompiledFrameRemainder0 = !(param0.equals(LevelCompleteScreen.tooltipText));
+            reanchorRequested = !(text.equals(LevelCompleteScreen.tooltipText));
           }
-          if (decompiledFrameRemainder0) {
+          if (reanchorRequested) {
             if (!QuickChatParameterType.tooltipSuppressed &&
-              ResourceArchiveFactory.tooltipTicks >= MonotonicTime.field_e &&
-              MonotonicTime.field_e + jh.field_a > ResourceArchiveFactory.tooltipTicks) {
-              stackIn_28_0 = 1;
+              ResourceArchiveFactory.tooltipTicks >= MonotonicTime.tooltipDelayTicks &&
+              MonotonicTime.tooltipDelayTicks + jh.tooltipDisplayDurationTicks > ResourceArchiveFactory.tooltipTicks) {
+              displayWindowFlag = 1;
             } else {
-              stackIn_28_0 = 0;
+              displayWindowFlag = 0;
             }
-            var2_int = stackIn_28_0;
-            if (param0 != null && (QuickChatParameterType.tooltipSuppressed ||
-              var2_int != 0)) {
-              ResourceArchiveFactory.tooltipTicks = MonotonicTime.field_e;
-              if (var3 != 0) {
+            wasWithinDisplayWindow = displayWindowFlag;
+            if (text != null && (QuickChatParameterType.tooltipSuppressed ||
+              wasWithinDisplayWindow != 0)) {
+              ResourceArchiveFactory.tooltipTicks = MonotonicTime.tooltipDelayTicks;
+              if (clientBranchFlag != 0) {
                 ResourceArchiveFactory.tooltipTicks = 0;
               }
             } else {
               ResourceArchiveFactory.tooltipTicks = 0;
             }
-            CappedUrlRequest.tooltipAnchorY = ll.field_b;
-            if (null == param0) {
-              if (var2_int != 0) {
+            CappedUrlRequest.tooltipAnchorY = PasswordTooltipHelpers.pendingTooltipY;
+            if (null == text) {
+              if (wasWithinDisplayWindow != 0) {
                 QuickChatParameterType.tooltipSuppressed = true;
-                if (var3 != 0) {
+                if (clientBranchFlag != 0) {
                   QuickChatParameterType.tooltipSuppressed = false;
                 }
               }
             } else {
               QuickChatParameterType.tooltipSuppressed = false;
             }
-            MouseInputCleanup.tooltipAnchorX = ChocolateBackground.field_v;
+            MouseInputCleanup.tooltipAnchorX = ChocolateBackground.pendingTooltipX;
           }
-          LevelCompleteScreen.tooltipText = param0;
+          LevelCompleteScreen.tooltipText = text;
           if (!QuickChatParameterType.tooltipSuppressed &&
-            ResourceArchiveFactory.tooltipTicks < MonotonicTime.field_e &&
+            ResourceArchiveFactory.tooltipTicks < MonotonicTime.tooltipDelayTicks &&
             QuickChatHelpDialog.pointerChanged) {
-            MouseInputCleanup.tooltipAnchorX = ChocolateBackground.field_v;
+            MouseInputCleanup.tooltipAnchorX = ChocolateBackground.pendingTooltipX;
             ResourceArchiveFactory.tooltipTicks = 0;
-            CappedUrlRequest.tooltipAnchorY = ll.field_b;
+            CappedUrlRequest.tooltipAnchorY = PasswordTooltipHelpers.pendingTooltipY;
           }
           if (QuickChatParameterType.tooltipSuppressed &&
-            ResourceArchiveFactory.tooltipTicks == LevelPackSelectScreen.field_y) {
+            ResourceArchiveFactory.tooltipTicks == LevelPackSelectScreen.tooltipSuppressionDurationTicks) {
             QuickChatParameterType.tooltipSuppressed = false;
             ResourceArchiveFactory.tooltipTicks = 0;
           }
-          ll.field_b = -1;
-          ChocolateBackground.field_v = -1;
+          PasswordTooltipHelpers.pendingTooltipY = -1;
+          ChocolateBackground.pendingTooltipX = -1;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_72_0 = var2;
-          stackIn_72_1 = new StringBuilder().append("ka.G(");
-          if (param0 == null) {
-            stackIn_73_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ka.G(");
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_73_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -336,7 +336,7 @@ final class MusicVoice extends IntrusiveNode {
                   var13.actionLabel.text = NameEntryPopup.field_Wb;
                 }
               } else {
-                var13.nameLabel.text = GamePresentationHelpers.formatIndexedText(ll.field_a, new String[]{var21}, (byte) 103);
+                var13.nameLabel.text = GamePresentationHelpers.formatIndexedText(PasswordTooltipHelpers.field_a, new String[]{var21}, (byte) 103);
                 var13.actionLabel.text = ValidationIconWidget.field_L;
               }
               var26_int = 0;

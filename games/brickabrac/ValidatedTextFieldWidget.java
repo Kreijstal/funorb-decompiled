@@ -66,11 +66,11 @@ final class ValidatedTextFieldWidget extends TextFieldWidget implements Validata
           return null;
         }
         if (obfuscationGuard >= 6) {
-          CanvasInputHelpers.a(-this.field_ab - (-this.width - MusicPatch.pointerX), ResourcePreparationEntry.pointerY, (byte) 79);
+          CanvasInputHelpers.setPendingTooltipAnchor(-this.field_ab - (-this.width - MusicPatch.pointerX), ResourcePreparationEntry.pointerY, (byte) 79);
           return this.tooltip;
         }
         this.field_ab = -5;
-        CanvasInputHelpers.a(-this.field_ab - (-this.width - MusicPatch.pointerX), ResourcePreparationEntry.pointerY, (byte) 79);
+        CanvasInputHelpers.setPendingTooltipAnchor(-this.field_ab - (-this.width - MusicPatch.pointerX), ResourcePreparationEntry.pointerY, (byte) 79);
         return this.tooltip;
     }
 

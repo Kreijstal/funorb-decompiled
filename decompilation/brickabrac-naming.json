@@ -1764,6 +1764,14 @@
       "renamedSymbol": "C:MusicVoiceMixer"
     },
     {
+      "symbol": "C:ll",
+      "originalName": "ll",
+      "to": "PasswordTooltipHelpers",
+      "evidence": "ll.java: Username substring checks for a password or its raw UTF16 reversal, plus pending tooltip Y and independently retained login/UI globals.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PasswordTooltipHelpers"
+    },
+    {
       "symbol": "C:lm",
       "originalName": "lm",
       "to": "IntKeyIndex",
@@ -10452,6 +10460,14 @@
       "renamedSymbol": "F:BufferedFile.writeBufferStart:J"
     },
     {
+      "symbol": "F:jh.field_a:I",
+      "originalName": "field_a",
+      "to": "tooltipDisplayDurationTicks",
+      "evidence": "jh.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:jh.tooltipDisplayDurationTicks:I"
+    },
+    {
       "symbol": "F:jh.field_b:[I",
       "originalName": "field_b",
       "to": "decodedSpriteWidths",
@@ -12154,6 +12170,14 @@
       "evidence": "lk.java: Intrusive active/held/releasing voices.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MusicVoiceMixer.voices:LNodeDeque;"
+    },
+    {
+      "symbol": "F:ll.field_b:I",
+      "originalName": "field_b",
+      "to": "pendingTooltipY",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PasswordTooltipHelpers.pendingTooltipY:I"
     },
     {
       "symbol": "F:lm.field_c:Lta;",
@@ -14884,6 +14908,14 @@
       "renamedSymbol": "F:LevelPackSelectScreen.friendCount:I"
     },
     {
+      "symbol": "F:ol.field_y:I",
+      "originalName": "field_y",
+      "to": "tooltipSuppressionDurationTicks",
+      "evidence": "ol.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:LevelPackSelectScreen.tooltipSuppressionDurationTicks:I"
+    },
+    {
       "symbol": "F:ol.field_z:[Ljp;",
       "originalName": "field_z",
       "to": "halfPaddleSegmentSprites",
@@ -15186,6 +15218,14 @@
       "evidence": "ip.java: Literal sprite resource jungle/jungle_small assigned to this resolved field.",
       "confidence": "reviewed",
       "renamedSymbol": "F:Brick.jungleSmallSprite:LRgbSprite;"
+    },
+    {
+      "symbol": "F:oo.field_v:I",
+      "originalName": "field_v",
+      "to": "pendingTooltipX",
+      "evidence": "oo.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ChocolateBackground.pendingTooltipX:I"
     },
     {
       "symbol": "F:oo.field_x:Ljp;",
@@ -18938,6 +18978,14 @@
       "evidence": "ue.java: Artificial incoming packet delay;0 immediate delivery.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MonotonicTime.packetDelayMillis:I"
+    },
+    {
+      "symbol": "F:ue.field_e:I",
+      "originalName": "field_e",
+      "to": "tooltipDelayTicks",
+      "evidence": "ue.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MonotonicTime.tooltipDelayTicks:I"
     },
     {
       "symbol": "F:uf.field_c:I",
@@ -38132,6 +38180,86 @@
       "renamedSymbol": "L:MusicVoice.configureTextChoiceOuterFrame(IIILNineSliceFrame;)V#5"
     },
     {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#0",
+      "originalName": "stackIn_28_0",
+      "to": "displayWindowFlag",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#0"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#1",
+      "originalName": "stackIn_72_0",
+      "to": "failureContext",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#1"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#2",
+      "originalName": "stackIn_72_1",
+      "to": "contextBuilder",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#2"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#3",
+      "originalName": "stackIn_73_2",
+      "to": "textSummary",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#3"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#4",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#4"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#5",
+      "originalName": "var2_int",
+      "to": "wasWithinDisplayWindow",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#5"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#6",
+      "originalName": "var2",
+      "to": "failure",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#6"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#7",
+      "originalName": "var3",
+      "to": "clientBranchFlag",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#7"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#8",
+      "originalName": "decompiledFrameRemainder0",
+      "to": "reanchorRequested",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#8"
+    },
+    {
+      "symbol": "L:ka.a(Ljava/lang/String;I)V#9",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#9"
+    },
+    {
       "symbol": "L:ka.a([II[IZZLfr;Z)V#0",
       "originalName": "stackIn_65_0",
       "to": "branchOrCullValue",
@@ -41386,6 +41514,86 @@
       "evidence": "lj.java: Reviewed canvas sizing, fullscreen/display enumeration or heap-reporting declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:PowerUpWarning.listDisplayModes(ZLPlatformServices;)[LDisplayModeInfo;#9"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "originalName": "var3",
+      "to": "reversedPassword",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#0"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "originalName": "stackIn_7_0",
+      "to": "containsPassword",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#1"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "originalName": "stackIn_10_0",
+      "to": "failureContext",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#2"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
+      "originalName": "stackIn_10_1",
+      "to": "contextBuilder",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#3"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+      "originalName": "stackIn_11_2",
+      "to": "passwordSummary",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#4"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
+      "originalName": "stackIn_13_1",
+      "to": "usernameContextBuilder",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#5"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+      "originalName": "stackIn_14_2",
+      "to": "usernameSummary",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#6"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#7"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
+      "originalName": "var3_ref",
+      "to": "failure",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#8"
+    },
+    {
+      "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#9"
     },
     {
       "symbol": "L:lm.a(IB)I#0",
@@ -57628,6 +57836,94 @@
       "renamedSymbol": "L:LevelCompleteScreen.spawnFireworkBurst(III)V#1"
     },
     {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+      "originalName": "var4",
+      "to": "characterIndex",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#0"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+      "originalName": "var2_int",
+      "to": "length",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#1"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#10",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#10"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#2",
+      "originalName": "var2",
+      "to": "failure",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#2"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#3",
+      "originalName": "var3",
+      "to": "reversedUnits",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#3"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#4",
+      "originalName": "var5",
+      "to": "unusedGameFlag",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#4"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#5",
+      "originalName": "stackIn_7_0",
+      "to": "result",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#5"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#6",
+      "originalName": "stackIn_11_0",
+      "to": "failureContext",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#6"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#7",
+      "originalName": "stackIn_11_1",
+      "to": "contextBuilder",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#7"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#8",
+      "originalName": "stackIn_12_2",
+      "to": "textSummary",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#8"
+    },
+    {
+      "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#9",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#9"
+    },
+    {
       "symbol": "L:w.c(B)V#0",
       "originalName": "runtimeException",
       "to": "failure",
@@ -60666,6 +60962,14 @@
       "evidence": "ap.java: Key-pairing fixtures exhaust code ranges and Ctrl/Alt/Shift combinations against an independent whitelist, including guard short-circuiting and held-array failures. A recording Canvas verifies listener order, preservation/removal, partial failures and contextual exception boundaries with real AWT listener lists. Sprite references verify half-size pixels and framebuffer restoration, and binary-mask row offsets/signed run lengths plus original-array mutation. No native display or full client dispatch loop is exercised.",
       "confidence": "reviewed",
       "renamedSymbol": "M:CanvasInputHelpers.attachCanvasInput(BLjava/awt/Canvas;)V"
+    },
+    {
+      "symbol": "M:ap.a(IIB)V",
+      "originalName": "a",
+      "to": "setPendingTooltipAnchor",
+      "evidence": "ap.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V"
     },
     {
       "symbol": "M:b.a(ILjava/awt/Component;)V",
@@ -65924,6 +66228,14 @@
       "renamedSymbol": "M:MusicVoice.configureTextChoiceOuterFrame(IIILNineSliceFrame;)V"
     },
     {
+      "symbol": "M:ka.a(Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "updateTooltipState",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MusicVoice.updateTooltipState(Ljava/lang/String;I)V"
+    },
+    {
       "symbol": "M:ka.a([II[IZZLfr;Z)V",
       "originalName": "a",
       "to": "transformAndProjectMesh",
@@ -67410,6 +67722,14 @@
       "evidence": "qd.java: Returns next child stream for player traversal. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MusicVoiceMixer.nextSubStream()LAudioStream;"
+    },
+    {
+      "symbol": "M:ll.a(Ljava/lang/String;BLjava/lang/String;)Z",
+      "originalName": "a",
+      "to": "usernameContainsPasswordOrReverse",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z"
     },
     {
       "symbol": "M:lm.a(IB)I",
@@ -69018,6 +69338,14 @@
       "evidence": "gf.java: Screen rendering callback invoked by the applet render path. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BlankScreen.drawScreen(B)V"
+    },
+    {
+      "symbol": "M:of.d(B)Ljava/lang/String;",
+      "originalName": "d",
+      "to": "getVisibleTooltipText",
+      "evidence": "of.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BlankScreen.getVisibleTooltipText(B)Ljava/lang/String;"
     },
     {
       "symbol": "M:og.a(IB)V",
@@ -73596,6 +73924,14 @@
       "renamedSymbol": "M:LevelCompleteScreen.navigateBack(I)V"
     },
     {
+      "symbol": "M:w.a(ILjava/lang/String;)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "reverseUtf16CodeUnits",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;"
+    },
+    {
       "symbol": "M:w.c(B)V",
       "originalName": "c",
       "to": "closeFullscreenDialog",
@@ -76386,6 +76722,30 @@
       "evidence": "ap.java: Key-pairing fixtures exhaust code ranges and Ctrl/Alt/Shift combinations against an independent whitelist, including guard short-circuiting and held-array failures. A recording Canvas verifies listener order, preservation/removal, partial failures and contextual exception boundaries with real AWT listener lists. Sprite references verify half-size pixels and framebuffer restoration, and binary-mask row offsets/signed run lengths plus original-array mutation. No native display or full client dispatch loop is exercised.",
       "confidence": "reviewed",
       "renamedSymbol": "P:CanvasInputHelpers.attachCanvasInput(BLjava/awt/Canvas;)V#1"
+    },
+    {
+      "symbol": "P:ap.a(IIB)V#0",
+      "originalName": "param0",
+      "to": "x",
+      "evidence": "ap.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V#0"
+    },
+    {
+      "symbol": "P:ap.a(IIB)V#1",
+      "originalName": "param1",
+      "to": "y",
+      "evidence": "ap.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V#1"
+    },
+    {
+      "symbol": "P:ap.a(IIB)V#2",
+      "originalName": "param2",
+      "to": "obfuscationGuard",
+      "evidence": "ap.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V#2"
     },
     {
       "symbol": "P:b.a(ILjava/awt/Component;)V#0",
@@ -93164,6 +93524,22 @@
       "renamedSymbol": "P:MusicVoice.configureTextChoiceOuterFrame(IIILNineSliceFrame;)V#3"
     },
     {
+      "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+      "originalName": "param0",
+      "to": "text",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#0"
+    },
+    {
+      "symbol": "P:ka.a(Ljava/lang/String;I)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "ka.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#1"
+    },
+    {
       "symbol": "P:ka.a([II[IZZLfr;Z)V#0",
       "originalName": "param0",
       "to": "cameraPose",
@@ -97474,6 +97850,30 @@
       "evidence": "qd.java: Mixes requested frames into caller output buffer. Resolved override parameter.",
       "confidence": "reviewed",
       "renamedSymbol": "P:MusicVoiceMixer.fill([III)V#2"
+    },
+    {
+      "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "originalName": "param0",
+      "to": "password",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#0"
+    },
+    {
+      "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#1"
+    },
+    {
+      "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "originalName": "param2",
+      "to": "username",
+      "evidence": "ll.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#2"
     },
     {
       "symbol": "P:lm.<init>([I)V#0",
@@ -103274,6 +103674,14 @@
       "evidence": "gf.java: Screen rendering callback invoked by the applet render path. Resolved override parameter.",
       "confidence": "reviewed",
       "renamedSymbol": "P:BlankScreen.drawScreen(B)V#0"
+    },
+    {
+      "symbol": "P:of.d(B)Ljava/lang/String;#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "of.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:BlankScreen.getVisibleTooltipText(B)Ljava/lang/String;#0"
     },
     {
       "symbol": "P:og.<init>(JLmh;Lmh;Lmh;[Log;[I[Ljava/lang/String;[C)V#0",
@@ -116156,6 +116564,22 @@
       "renamedSymbol": "P:ScreenshotViewer.<init>(Ljava/applet/Applet;Ljava/lang/String;[LIndexedSprite;Z[Ljava/lang/String;)V#4"
     },
     {
+      "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#0"
+    },
+    {
+      "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+      "originalName": "param1",
+      "to": "text",
+      "evidence": "w.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#1"
+    },
+    {
       "symbol": "P:w.c(B)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -120529,9 +120953,9 @@
     },
     {
       "symbol": "C:ll",
-      "renamedSymbol": "C:ll",
+      "renamedSymbol": "C:PasswordTooltipHelpers",
       "originalName": "ll",
-      "renamedName": "ll",
+      "renamedName": "PasswordTooltipHelpers",
       "declaration": {
         "file": "ll.java",
         "start": 50,
@@ -138459,9 +138883,9 @@
     },
     {
       "symbol": "F:jh.field_a:I",
-      "renamedSymbol": "F:jh.field_a:I",
+      "renamedSymbol": "F:jh.tooltipDisplayDurationTicks:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "tooltipDisplayDurationTicks",
       "declaration": {
         "file": "jh.java",
         "start": 99,
@@ -142089,7 +142513,7 @@
     },
     {
       "symbol": "F:ll.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ll.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:PasswordTooltipHelpers.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -142100,9 +142524,9 @@
     },
     {
       "symbol": "F:ll.field_b:I",
-      "renamedSymbol": "F:ll.field_b:I",
+      "renamedSymbol": "F:PasswordTooltipHelpers.pendingTooltipY:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "pendingTooltipY",
       "declaration": {
         "file": "ll.java",
         "start": 120,
@@ -142111,7 +142535,7 @@
     },
     {
       "symbol": "F:ll.field_c:Ljp;",
-      "renamedSymbol": "F:ll.field_c:LRgbSprite;",
+      "renamedSymbol": "F:PasswordTooltipHelpers.field_c:LRgbSprite;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -142122,7 +142546,7 @@
     },
     {
       "symbol": "F:ll.field_d:Lme;",
-      "renamedSymbol": "F:ll.field_d:LLoginMethodPreference;",
+      "renamedSymbol": "F:PasswordTooltipHelpers.field_d:LLoginMethodPreference;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -142133,7 +142557,7 @@
     },
     {
       "symbol": "F:ll.field_e:Lmh;",
-      "renamedSymbol": "F:ll.field_e:LUiComponent;",
+      "renamedSymbol": "F:PasswordTooltipHelpers.field_e:LUiComponent;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -147842,9 +148266,9 @@
     },
     {
       "symbol": "F:ol.field_y:I",
-      "renamedSymbol": "F:LevelPackSelectScreen.field_y:I",
+      "renamedSymbol": "F:LevelPackSelectScreen.tooltipSuppressionDurationTicks:I",
       "originalName": "field_y",
-      "renamedName": "field_y",
+      "renamedName": "tooltipSuppressionDurationTicks",
       "declaration": {
         "file": "ol.java",
         "start": 230,
@@ -148634,9 +149058,9 @@
     },
     {
       "symbol": "F:oo.field_v:I",
-      "renamedSymbol": "F:ChocolateBackground.field_v:I",
+      "renamedSymbol": "F:ChocolateBackground.pendingTooltipX:I",
       "originalName": "field_v",
-      "renamedName": "field_v",
+      "renamedName": "pendingTooltipX",
       "declaration": {
         "file": "oo.java",
         "start": 267,
@@ -157302,9 +157726,9 @@
     },
     {
       "symbol": "F:ue.field_e:I",
-      "renamedSymbol": "F:MonotonicTime.field_e:I",
+      "renamedSymbol": "F:MonotonicTime.tooltipDelayTicks:I",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "tooltipDelayTicks",
       "declaration": {
         "file": "ue.java",
         "start": 174,
@@ -238812,9 +239236,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#0",
       "originalName": "stackIn_28_0",
-      "renamedName": "stackIn_28_0",
+      "renamedName": "displayWindowFlag",
       "declaration": {
         "file": "ka.java",
         "start": 582,
@@ -238823,9 +239247,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#1",
       "originalName": "stackIn_72_0",
-      "renamedName": "stackIn_72_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "ka.java",
         "start": 625,
@@ -238834,9 +239258,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#2",
       "originalName": "stackIn_72_1",
-      "renamedName": "stackIn_72_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "ka.java",
         "start": 668,
@@ -238845,9 +239269,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#3",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#3",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#3",
       "originalName": "stackIn_73_2",
-      "renamedName": "stackIn_73_2",
+      "renamedName": "textSummary",
       "declaration": {
         "file": "ka.java",
         "start": 704,
@@ -238856,9 +239280,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#4",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#4",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#4",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "ka.java",
         "start": 750,
@@ -238867,9 +239291,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#5",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#5",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#5",
       "originalName": "var2_int",
-      "renamedName": "var2_int",
+      "renamedName": "wasWithinDisplayWindow",
       "declaration": {
         "file": "ka.java",
         "start": 796,
@@ -238878,9 +239302,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#6",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#6",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#6",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "failure",
       "declaration": {
         "file": "ka.java",
         "start": 835,
@@ -238889,9 +239313,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#7",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#7",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#7",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "clientBranchFlag",
       "declaration": {
         "file": "ka.java",
         "start": 860,
@@ -238900,9 +239324,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#8",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#8",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#8",
       "originalName": "decompiledFrameRemainder0",
-      "renamedName": "decompiledFrameRemainder0",
+      "renamedName": "reanchorRequested",
       "declaration": {
         "file": "ka.java",
         "start": 1201,
@@ -238911,9 +239335,9 @@
     },
     {
       "symbol": "L:ka.a(Ljava/lang/String;I)V#9",
-      "renamedSymbol": "L:MusicVoice.a(Ljava/lang/String;I)V#9",
+      "renamedSymbol": "L:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#9",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "ka.java",
         "start": 2858,
@@ -259459,9 +259883,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "reversedPassword",
       "declaration": {
         "file": "ll.java",
         "start": 263,
@@ -259470,9 +259894,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#1",
       "originalName": "stackIn_7_0",
-      "renamedName": "stackIn_7_0",
+      "renamedName": "containsPassword",
       "declaration": {
         "file": "ll.java",
         "start": 292,
@@ -259481,9 +259905,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#2",
       "originalName": "stackIn_10_0",
-      "renamedName": "stackIn_10_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "ll.java",
         "start": 338,
@@ -259492,9 +259916,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#3",
       "originalName": "stackIn_10_1",
-      "renamedName": "stackIn_10_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "ll.java",
         "start": 381,
@@ -259503,9 +259927,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#4",
       "originalName": "stackIn_11_2",
-      "renamedName": "stackIn_11_2",
+      "renamedName": "passwordSummary",
       "declaration": {
         "file": "ll.java",
         "start": 417,
@@ -259514,9 +259938,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#5",
       "originalName": "stackIn_13_1",
-      "renamedName": "stackIn_13_1",
+      "renamedName": "usernameContextBuilder",
       "declaration": {
         "file": "ll.java",
         "start": 460,
@@ -259525,9 +259949,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#6",
       "originalName": "stackIn_14_2",
-      "renamedName": "stackIn_14_2",
+      "renamedName": "usernameSummary",
       "declaration": {
         "file": "ll.java",
         "start": 496,
@@ -259536,9 +259960,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#7",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "ll.java",
         "start": 542,
@@ -259547,9 +259971,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#8",
       "originalName": "var3_ref",
-      "renamedName": "var3_ref",
+      "renamedName": "failure",
       "declaration": {
         "file": "ll.java",
         "start": 601,
@@ -259558,9 +259982,9 @@
     },
     {
       "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
-      "renamedSymbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
+      "renamedSymbol": "L:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#9",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "ll.java",
         "start": 950,
@@ -259569,7 +259993,7 @@
     },
     {
       "symbol": "L:ll.a(Z)V#0",
-      "renamedSymbol": "L:ll.a(Z)V#0",
+      "renamedSymbol": "L:PasswordTooltipHelpers.a(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -337108,9 +337532,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "characterIndex",
       "declaration": {
         "file": "w.java",
         "start": 23975,
@@ -337119,9 +337543,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "var2_int",
-      "renamedName": "var2_int",
+      "renamedName": "length",
       "declaration": {
         "file": "w.java",
         "start": 23997,
@@ -337130,9 +337554,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#10",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#10",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#10",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "w.java",
         "start": 24768,
@@ -337141,9 +337565,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#2",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#2",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "failure",
       "declaration": {
         "file": "w.java",
         "start": 24036,
@@ -337152,9 +337576,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#3",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#3",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "reversedUnits",
       "declaration": {
         "file": "w.java",
         "start": 24064,
@@ -337163,9 +337587,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#4",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#4",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "w.java",
         "start": 24089,
@@ -337174,9 +337598,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#5",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#5",
       "originalName": "stackIn_7_0",
-      "renamedName": "stackIn_7_0",
+      "renamedName": "result",
       "declaration": {
         "file": "w.java",
         "start": 24114,
@@ -337185,9 +337609,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#6",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#6",
       "originalName": "stackIn_11_0",
-      "renamedName": "stackIn_11_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "w.java",
         "start": 24159,
@@ -337196,9 +337620,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#7",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#7",
       "originalName": "stackIn_11_1",
-      "renamedName": "stackIn_11_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "w.java",
         "start": 24202,
@@ -337207,9 +337631,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#8",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#8",
       "originalName": "stackIn_12_2",
-      "renamedName": "stackIn_12_2",
+      "renamedName": "textSummary",
       "declaration": {
         "file": "w.java",
         "start": 24238,
@@ -337218,9 +337642,9 @@
     },
     {
       "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#9",
-      "renamedSymbol": "L:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#9",
+      "renamedSymbol": "L:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#9",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "w.java",
         "start": 24284,
@@ -348537,9 +348961,9 @@
     },
     {
       "symbol": "M:ap.a(IIB)V",
-      "renamedSymbol": "M:CanvasInputHelpers.a(IIB)V",
+      "renamedSymbol": "M:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setPendingTooltipAnchor",
       "declaration": {
         "file": "ap.java",
         "start": 222,
@@ -362452,9 +362876,9 @@
     },
     {
       "symbol": "M:ka.a(Ljava/lang/String;I)V",
-      "renamedSymbol": "M:MusicVoice.a(Ljava/lang/String;I)V",
+      "renamedSymbol": "M:MusicVoice.updateTooltipState(Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateTooltipState",
       "declaration": {
         "file": "ka.java",
         "start": 539,
@@ -366269,9 +366693,9 @@
     },
     {
       "symbol": "M:ll.a(Ljava/lang/String;BLjava/lang/String;)Z",
-      "renamedSymbol": "M:ll.a(Ljava/lang/String;BLjava/lang/String;)Z",
+      "renamedSymbol": "M:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "usernameContainsPasswordOrReverse",
       "declaration": {
         "file": "ll.java",
         "start": 201,
@@ -366280,7 +366704,7 @@
     },
     {
       "symbol": "M:ll.a(Z)V",
-      "renamedSymbol": "M:ll.a(Z)V",
+      "renamedSymbol": "M:PasswordTooltipHelpers.a(Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -370317,9 +370741,9 @@
     },
     {
       "symbol": "M:of.d(B)Ljava/lang/String;",
-      "renamedSymbol": "M:BlankScreen.d(B)Ljava/lang/String;",
+      "renamedSymbol": "M:BlankScreen.getVisibleTooltipText(B)Ljava/lang/String;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "getVisibleTooltipText",
       "declaration": {
         "file": "of.java",
         "start": 1240,
@@ -381350,9 +381774,9 @@
     },
     {
       "symbol": "M:w.a(ILjava/lang/String;)Ljava/lang/String;",
-      "renamedSymbol": "M:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;",
+      "renamedSymbol": "M:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "reverseUtf16CodeUnits",
       "declaration": {
         "file": "w.java",
         "start": 23932,
@@ -387477,9 +387901,9 @@
     },
     {
       "symbol": "P:ap.a(IIB)V#0",
-      "renamedSymbol": "P:CanvasInputHelpers.a(IIB)V#0",
+      "renamedSymbol": "P:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "x",
       "declaration": {
         "file": "ap.java",
         "start": 228,
@@ -387488,9 +387912,9 @@
     },
     {
       "symbol": "P:ap.a(IIB)V#1",
-      "renamedSymbol": "P:CanvasInputHelpers.a(IIB)V#1",
+      "renamedSymbol": "P:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "y",
       "declaration": {
         "file": "ap.java",
         "start": 240,
@@ -387499,9 +387923,9 @@
     },
     {
       "symbol": "P:ap.a(IIB)V#2",
-      "renamedSymbol": "P:CanvasInputHelpers.a(IIB)V#2",
+      "renamedSymbol": "P:CanvasInputHelpers.setPendingTooltipAnchor(IIB)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ap.java",
         "start": 253,
@@ -424129,9 +424553,9 @@
     },
     {
       "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:MusicVoice.a(Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "text",
       "declaration": {
         "file": "ka.java",
         "start": 548,
@@ -424140,9 +424564,9 @@
     },
     {
       "symbol": "P:ka.a(Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:MusicVoice.a(Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:MusicVoice.updateTooltipState(Ljava/lang/String;I)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ka.java",
         "start": 560,
@@ -435723,9 +436147,9 @@
     },
     {
       "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
-      "renamedSymbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+      "renamedSymbol": "P:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "password",
       "declaration": {
         "file": "ll.java",
         "start": 210,
@@ -435734,9 +436158,9 @@
     },
     {
       "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
-      "renamedSymbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+      "renamedSymbol": "P:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ll.java",
         "start": 223,
@@ -435745,9 +436169,9 @@
     },
     {
       "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
-      "renamedSymbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+      "renamedSymbol": "P:PasswordTooltipHelpers.usernameContainsPasswordOrReverse(Ljava/lang/String;BLjava/lang/String;)Z#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "username",
       "declaration": {
         "file": "ll.java",
         "start": 238,
@@ -435756,7 +436180,7 @@
     },
     {
       "symbol": "P:ll.a(Z)V#0",
-      "renamedSymbol": "P:ll.a(Z)V#0",
+      "renamedSymbol": "P:PasswordTooltipHelpers.a(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -446393,9 +446817,9 @@
     },
     {
       "symbol": "P:of.d(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:BlankScreen.d(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:BlankScreen.getVisibleTooltipText(B)Ljava/lang/String;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "of.java",
         "start": 1247,
@@ -472364,9 +472788,9 @@
     },
     {
       "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "w.java",
         "start": 23938,
@@ -472375,9 +472799,9 @@
     },
     {
       "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ScreenshotViewer.a(ILjava/lang/String;)Ljava/lang/String;#1",
+      "renamedSymbol": "P:ScreenshotViewer.reverseUtf16CodeUnits(ILjava/lang/String;)Ljava/lang/String;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "text",
       "declaration": {
         "file": "w.java",
         "start": 23953,
@@ -475767,7 +476191,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "183fcd31c97bced0f23e6f2a083bc3d3c64059c193ff96bd0640b285be1ac30e",
+      "outputSha256": "6e47e5d05d031501da283be3e900e69e09c3f089ec217cddec4b11a92e631768",
       "edits": [
         {
           "start": 76,
@@ -481354,6 +481778,13 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "GameplayRenderHelpers"
+        },
+        {
+          "start": 21426,
+          "end": 21428,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 21432,
@@ -487089,7 +487520,7 @@
       "original": "ab.java",
       "renamed": "MatchCompleteScreen.java",
       "inputSha256": "6b2384c8eb74dec01701eb1749fe3e2d6dadc2e50ff89a3b6ff8eee32747ee5a",
-      "outputSha256": "0385ce4ae696601ad86b9f51f7af9a032f70bc55542f0dff78e2d171ac3a0302",
+      "outputSha256": "d5d1e5622a2a7371df995e2510eb2ee68835135b3e347181dec9a5a74a7fb813",
       "edits": [
         {
           "start": 50,
@@ -487335,6 +487766,20 @@
           "symbol": "P:ab.a(BLjava/lang/String;Ljava/lang/String;)Z#2",
           "original": "param2",
           "renamed": "username"
+        },
+        {
+          "start": 1688,
+          "end": 1690,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 1691,
+          "end": 1692,
+          "symbol": "M:ll.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "usernameContainsPasswordOrReverse"
         },
         {
           "start": 1693,
@@ -522367,7 +522812,7 @@
       "original": "ap.java",
       "renamed": "CanvasInputHelpers.java",
       "inputSha256": "bb691a6c3684e084d27fe02f174817fa43e26b0fe18412970f7ba2a5c0824f89",
-      "outputSha256": "14d137eedee10c6dae56ce3771f862e2d42b9b2c1ba30328effce5440d3775fa",
+      "outputSha256": "7cbf138220d18cbe38c73e778ccf2f343fe7374b64f636f3489396e29581522b",
       "edits": [
         {
           "start": 50,
@@ -522426,11 +522871,81 @@
           "renamed": "SocialTabbedPanel"
         },
         {
+          "start": 222,
+          "end": 223,
+          "symbol": "M:ap.a(IIB)V",
+          "original": "a",
+          "renamed": "setPendingTooltipAnchor"
+        },
+        {
+          "start": 228,
+          "end": 234,
+          "symbol": "P:ap.a(IIB)V#0",
+          "original": "param0",
+          "renamed": "x"
+        },
+        {
+          "start": 240,
+          "end": 246,
+          "symbol": "P:ap.a(IIB)V#1",
+          "original": "param1",
+          "renamed": "y"
+        },
+        {
+          "start": 253,
+          "end": 259,
+          "symbol": "P:ap.a(IIB)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 271,
+          "end": 273,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 274,
+          "end": 281,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
+        },
+        {
+          "start": 284,
+          "end": 290,
+          "symbol": "P:ap.a(IIB)V#1",
+          "original": "param1",
+          "renamed": "y"
+        },
+        {
           "start": 300,
           "end": 302,
           "symbol": "C:oo",
           "original": "oo",
           "renamed": "ChocolateBackground"
+        },
+        {
+          "start": 303,
+          "end": 310,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
+        },
+        {
+          "start": 313,
+          "end": 319,
+          "symbol": "P:ap.a(IIB)V#0",
+          "original": "param0",
+          "renamed": "x"
+        },
+        {
+          "start": 333,
+          "end": 339,
+          "symbol": "P:ap.a(IIB)V#2",
+          "original": "param2",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 369,
@@ -522445,6 +522960,13 @@
           "symbol": "C:ap",
           "original": "ap",
           "renamed": "CanvasInputHelpers"
+        },
+        {
+          "start": 804,
+          "end": 805,
+          "symbol": "M:ap.a(IIB)V",
+          "original": "a",
+          "renamed": "setPendingTooltipAnchor"
         },
         {
           "start": 857,
@@ -554269,7 +554791,7 @@
       "original": "bo.java",
       "renamed": "NumericLoginCredentials.java",
       "inputSha256": "9c4f12da0847534f16af56d1de643b08d9ca029a8bacb0485c2b6e81bb731933",
-      "outputSha256": "6c670bebc53e9e79639d9bfb049ba7655ee565eca9fb9b0a0e65bab65ff79320",
+      "outputSha256": "53e45153cd1cf92685b77fb1138e87e437fba3e6675261eb5e64b2a10c062c80",
       "edits": [
         {
           "start": 44,
@@ -554326,6 +554848,13 @@
           "symbol": "C:uc",
           "original": "uc",
           "renamed": "EmailConfirmationValidator"
+        },
+        {
+          "start": 248,
+          "end": 250,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 260,
@@ -571395,7 +571924,7 @@
       "original": "cg.java",
       "renamed": "NanoGameClock.java",
       "inputSha256": "5115ebd3a6fb414d6e298e2e330d8fa86e71161f40d62d329f44a56ebd212998",
-      "outputSha256": "7a0e68d56ac9a677f0e5bb7c7aaa2a7a4948edfa701fade6cc6fed072350d623",
+      "outputSha256": "ccf778f8f8aef87d609aadffea8a010f32728111d0ee9f8fbcac9889e92d4d61",
       "edits": [
         {
           "start": 50,
@@ -571958,6 +572487,13 @@
           "renamed": "width"
         },
         {
+          "start": 1768,
+          "end": 1770,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 1779,
           "end": 1780,
           "symbol": "M:mh.a(IIIIB)V",
@@ -572098,6 +572634,13 @@
           "renamed": "setScrollPaneBounds"
         },
         {
+          "start": 2267,
+          "end": 2269,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 2278,
           "end": 2286,
           "symbol": "F:mh.field_Ib:I",
@@ -572117,6 +572660,13 @@
           "symbol": "F:ec.field_J:I",
           "original": "field_J",
           "renamed": "uiScrollbarWidth"
+        },
+        {
+          "start": 2323,
+          "end": 2325,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 2334,
@@ -640182,7 +640732,7 @@
       "original": "ep.java",
       "renamed": "WidgetTextLayout.java",
       "inputSha256": "d6ffe27af3bbb12904b1754b4ebcec6f08fb6564775219e4203a67234d0d9553",
-      "outputSha256": "c3b23a758e3e3829ea8d2161173e657896fffdac7248c8f10df161f0e1bcf190",
+      "outputSha256": "dc8fc656ec548d109f08f0ec42a27a93515714097c48a01f87868c581ef9eb47",
       "edits": [
         {
           "start": 53,
@@ -641366,6 +641916,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "ScreenshotViewer"
+        },
+        {
+          "start": 4323,
+          "end": 4324,
+          "symbol": "M:w.a(ILjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseUtf16CodeUnits"
         },
         {
           "start": 5151,
@@ -678243,7 +678800,7 @@
       "original": "g.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "6aac3d224e93763ca21de1f19d8fa37ae7502536de5edc3e1cac726a6821e808",
-      "outputSha256": "9f6062922cd81de7d17a3de9e617d84a6a902a701424ccd5fca10373d12151cc",
+      "outputSha256": "516fde868a99940739f90128a40a2091acb76675a1119bb711a4ffcf379a6882",
       "edits": [
         {
           "start": 50,
@@ -678888,6 +679445,20 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "BackgroundRegistry"
+        },
+        {
+          "start": 4595,
+          "end": 4597,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 4598,
+          "end": 4599,
+          "symbol": "M:ll.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "usernameContainsPasswordOrReverse"
         },
         {
           "start": 4654,
@@ -716905,7 +717476,7 @@
       "original": "hk.java",
       "renamed": "LoginPanel.java",
       "inputSha256": "f4d81ec9d202ff695813ca35852fed8756fde17ce2042c0bb6ce121e34719928",
-      "outputSha256": "d6d32f10e203f8981c2464c9fc311fc53f18a7823631eeb267f40e1f14487f94",
+      "outputSha256": "3865bed78662dc52717fe9cf01a5b49bcc4a7b39e904706964354df9bea2fd87",
       "edits": [
         {
           "start": 50,
@@ -719972,6 +720543,13 @@
           "symbol": "C:sq",
           "original": "sq",
           "renamed": "IntegerParsingHelpers"
+        },
+        {
+          "start": 14657,
+          "end": 14659,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 14700,
@@ -777722,8 +778300,15 @@
       "original": "jh.java",
       "renamed": "jh.java",
       "inputSha256": "72f43d99798a9e36d81c4650f5c5bf70c979da08f7f20365731a2e46b8f5af6a",
-      "outputSha256": "e2194b51eef019397a2c90bc3901f565ca64bde964f8488a780fefea11e23649",
+      "outputSha256": "8551a024cc37ed780029443c69cb92c6e7a15176776e33de47bfeebb8713094f",
       "edits": [
+        {
+          "start": 99,
+          "end": 106,
+          "symbol": "F:jh.field_a:I",
+          "original": "field_a",
+          "renamed": "tooltipDisplayDurationTicks"
+        },
         {
           "start": 125,
           "end": 132,
@@ -777989,6 +778574,13 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 2581,
+          "end": 2588,
+          "symbol": "F:jh.field_a:I",
+          "original": "field_a",
+          "renamed": "tooltipDisplayDurationTicks"
         }
       ]
     },
@@ -808726,7 +809318,7 @@
       "original": "ka.java",
       "renamed": "MusicVoice.java",
       "inputSha256": "1979628dd155157bc15d179cf5d12821bf889151c6ec1a630671076a9f3c328d",
-      "outputSha256": "7de2173fb3f86e03c5e31d94b7d5716fb51b522acace89d454b2a0bfa9ece453",
+      "outputSha256": "4a15704464450df9c73c45fe5977af581a4c6f90c577e38c8c51b4157443e9cb",
       "edits": [
         {
           "start": 50,
@@ -808932,6 +809524,90 @@
           "renamed": "channel"
         },
         {
+          "start": 539,
+          "end": 540,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
+          "start": 548,
+          "end": 554,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "text"
+        },
+        {
+          "start": 560,
+          "end": 566,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 582,
+          "end": 594,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#0",
+          "original": "stackIn_28_0",
+          "renamed": "displayWindowFlag"
+        },
+        {
+          "start": 625,
+          "end": 637,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#1",
+          "original": "stackIn_72_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 668,
+          "end": 680,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#2",
+          "original": "stackIn_72_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 704,
+          "end": 716,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#3",
+          "original": "stackIn_73_2",
+          "renamed": "textSummary"
+        },
+        {
+          "start": 750,
+          "end": 775,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 796,
+          "end": 804,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#5",
+          "original": "var2_int",
+          "renamed": "wasWithinDisplayWindow"
+        },
+        {
+          "start": 835,
+          "end": 839,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#6",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 860,
+          "end": 864,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#7",
+          "original": "var3",
+          "renamed": "clientBranchFlag"
+        },
+        {
+          "start": 878,
+          "end": 882,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#7",
+          "original": "var3",
+          "renamed": "clientBranchFlag"
+        },
+        {
           "start": 937,
           "end": 939,
           "symbol": "C:go",
@@ -808967,11 +809643,39 @@
           "renamed": "ChocolateBackground"
         },
         {
+          "start": 989,
+          "end": 996,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
+        },
+        {
+          "start": 1012,
+          "end": 1014,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 1015,
+          "end": 1022,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
+        },
+        {
           "start": 1044,
           "end": 1046,
           "symbol": "C:oo",
           "original": "oo",
           "renamed": "ChocolateBackground"
+        },
+        {
+          "start": 1047,
+          "end": 1054,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
         },
         {
           "start": 1057,
@@ -808988,6 +809692,20 @@
           "renamed": "pointerX"
         },
         {
+          "start": 1081,
+          "end": 1083,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 1084,
+          "end": 1091,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
+        },
+        {
           "start": 1094,
           "end": 1096,
           "symbol": "C:po",
@@ -809000,6 +809718,34 @@
           "symbol": "F:po.field_a:I",
           "original": "field_a",
           "renamed": "pointerY"
+        },
+        {
+          "start": 1132,
+          "end": 1138,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1201,
+          "end": 1226,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#8",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "reanchorRequested"
+        },
+        {
+          "start": 1249,
+          "end": 1255,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "text"
+        },
+        {
+          "start": 1279,
+          "end": 1304,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#8",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "reanchorRequested"
         },
         {
           "start": 1316,
@@ -809016,6 +809762,20 @@
           "renamed": "tooltipText"
         },
         {
+          "start": 1360,
+          "end": 1385,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#8",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "reanchorRequested"
+        },
+        {
+          "start": 1390,
+          "end": 1396,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "text"
+        },
+        {
           "start": 1404,
           "end": 1406,
           "symbol": "C:vq",
@@ -809028,6 +809788,13 @@
           "symbol": "F:vq.field_J:Ljava/lang/String;",
           "original": "field_J",
           "renamed": "tooltipText"
+        },
+        {
+          "start": 1444,
+          "end": 1469,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#8",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "reanchorRequested"
         },
         {
           "start": 1490,
@@ -809065,11 +809832,32 @@
           "renamed": "MonotonicTime"
         },
         {
+          "start": 1535,
+          "end": 1542,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
+        },
+        {
           "start": 1560,
           "end": 1562,
           "symbol": "C:ue",
           "original": "ue",
           "renamed": "MonotonicTime"
+        },
+        {
+          "start": 1563,
+          "end": 1570,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
+        },
+        {
+          "start": 1576,
+          "end": 1583,
+          "symbol": "F:jh.field_a:I",
+          "original": "field_a",
+          "renamed": "tooltipDisplayDurationTicks"
         },
         {
           "start": 1586,
@@ -809086,6 +809874,41 @@
           "renamed": "tooltipTicks"
         },
         {
+          "start": 1614,
+          "end": 1626,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#0",
+          "original": "stackIn_28_0",
+          "renamed": "displayWindowFlag"
+        },
+        {
+          "start": 1667,
+          "end": 1679,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#0",
+          "original": "stackIn_28_0",
+          "renamed": "displayWindowFlag"
+        },
+        {
+          "start": 1711,
+          "end": 1719,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#5",
+          "original": "var2_int",
+          "renamed": "wasWithinDisplayWindow"
+        },
+        {
+          "start": 1722,
+          "end": 1734,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#0",
+          "original": "stackIn_28_0",
+          "renamed": "displayWindowFlag"
+        },
+        {
+          "start": 1752,
+          "end": 1758,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "text"
+        },
+        {
           "start": 1771,
           "end": 1773,
           "symbol": "C:th",
@@ -809098,6 +809921,13 @@
           "symbol": "F:th.field_h:Z",
           "original": "field_h",
           "renamed": "tooltipSuppressed"
+        },
+        {
+          "start": 1799,
+          "end": 1807,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#5",
+          "original": "var2_int",
+          "renamed": "wasWithinDisplayWindow"
         },
         {
           "start": 1831,
@@ -809119,6 +809949,20 @@
           "symbol": "C:ue",
           "original": "ue",
           "renamed": "MonotonicTime"
+        },
+        {
+          "start": 1847,
+          "end": 1854,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
+        },
+        {
+          "start": 1874,
+          "end": 1878,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#7",
+          "original": "var3",
+          "renamed": "clientBranchFlag"
         },
         {
           "start": 1903,
@@ -809163,6 +810007,34 @@
           "renamed": "tooltipAnchorY"
         },
         {
+          "start": 2025,
+          "end": 2027,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 2028,
+          "end": 2035,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
+        },
+        {
+          "start": 2061,
+          "end": 2067,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "text"
+        },
+        {
+          "start": 2089,
+          "end": 2097,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#5",
+          "original": "var2_int",
+          "renamed": "wasWithinDisplayWindow"
+        },
+        {
           "start": 2122,
           "end": 2124,
           "symbol": "C:th",
@@ -809175,6 +810047,13 @@
           "symbol": "F:th.field_h:Z",
           "original": "field_h",
           "renamed": "tooltipSuppressed"
+        },
+        {
+          "start": 2161,
+          "end": 2165,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#7",
+          "original": "var3",
+          "renamed": "clientBranchFlag"
         },
         {
           "start": 2192,
@@ -809226,6 +810105,13 @@
           "renamed": "ChocolateBackground"
         },
         {
+          "start": 2342,
+          "end": 2349,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
+        },
+        {
           "start": 2373,
           "end": 2375,
           "symbol": "C:vq",
@@ -809238,6 +810124,13 @@
           "symbol": "F:vq.field_J:Ljava/lang/String;",
           "original": "field_J",
           "renamed": "tooltipText"
+        },
+        {
+          "start": 2386,
+          "end": 2392,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "text"
         },
         {
           "start": 2409,
@@ -809275,6 +810168,13 @@
           "renamed": "MonotonicTime"
         },
         {
+          "start": 2451,
+          "end": 2458,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
+        },
+        {
           "start": 2474,
           "end": 2476,
           "symbol": "C:kb",
@@ -809310,6 +810210,13 @@
           "renamed": "ChocolateBackground"
         },
         {
+          "start": 2516,
+          "end": 2523,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
+        },
+        {
           "start": 2537,
           "end": 2539,
           "symbol": "C:go",
@@ -809336,6 +810243,20 @@
           "symbol": "F:ad.field_j:I",
           "original": "field_j",
           "renamed": "tooltipAnchorY"
+        },
+        {
+          "start": 2578,
+          "end": 2580,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 2581,
+          "end": 2588,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
         },
         {
           "start": 2616,
@@ -809373,6 +810294,13 @@
           "renamed": "LevelPackSelectScreen"
         },
         {
+          "start": 2659,
+          "end": 2666,
+          "symbol": "F:ol.field_y:I",
+          "original": "field_y",
+          "renamed": "tooltipSuppressionDurationTicks"
+        },
+        {
           "start": 2682,
           "end": 2684,
           "symbol": "C:th",
@@ -809401,11 +810329,109 @@
           "renamed": "tooltipTicks"
         },
         {
+          "start": 2752,
+          "end": 2754,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 2755,
+          "end": 2762,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
+        },
+        {
           "start": 2779,
           "end": 2781,
           "symbol": "C:oo",
           "original": "oo",
           "renamed": "ChocolateBackground"
+        },
+        {
+          "start": 2782,
+          "end": 2789,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
+        },
+        {
+          "start": 2858,
+          "end": 2884,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 2898,
+          "end": 2923,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 2926,
+          "end": 2952,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 2964,
+          "end": 2968,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#6",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 2971,
+          "end": 2996,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 3008,
+          "end": 3020,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#1",
+          "original": "stackIn_72_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 3023,
+          "end": 3027,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#6",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 3039,
+          "end": 3051,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#2",
+          "original": "stackIn_72_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 3105,
+          "end": 3111,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#0",
+          "original": "param0",
+          "renamed": "text"
+        },
+        {
+          "start": 3135,
+          "end": 3147,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#3",
+          "original": "stackIn_73_2",
+          "renamed": "textSummary"
+        },
+        {
+          "start": 3189,
+          "end": 3201,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#3",
+          "original": "stackIn_73_2",
+          "renamed": "textSummary"
         },
         {
           "start": 3241,
@@ -809420,6 +810446,34 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 3268,
+          "end": 3280,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#1",
+          "original": "stackIn_72_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 3309,
+          "end": 3321,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#2",
+          "original": "stackIn_72_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 3330,
+          "end": 3342,
+          "symbol": "L:ka.a(Ljava/lang/String;I)V#3",
+          "original": "stackIn_73_2",
+          "renamed": "textSummary"
+        },
+        {
+          "start": 3363,
+          "end": 3369,
+          "symbol": "P:ka.a(Ljava/lang/String;I)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 3453,
@@ -810603,6 +811657,13 @@
           "symbol": "M:rd.a(Ljava/lang/String;[Ljava/lang/String;B)Ljava/lang/String;",
           "original": "a",
           "renamed": "formatIndexedText"
+        },
+        {
+          "start": 11427,
+          "end": 11429,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 11495,
@@ -878325,16 +879386,30 @@
     },
     {
       "original": "ll.java",
-      "renamed": "ll.java",
+      "renamed": "PasswordTooltipHelpers.java",
       "inputSha256": "00ff723865722d372e927cda114e13cef3c8b847c2ab71017dabebdb9ada2f25",
-      "outputSha256": "7d537c8d913bb35435163d4648c15bd465bd9c107f57b11e10731f1f22302fae",
+      "outputSha256": "20d8a70721a84f2f2bbfd5e271639e9c6db9d306739d233a36759d3b567ecb07",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
         {
           "start": 93,
           "end": 95,
           "symbol": "C:me",
           "original": "me",
           "renamed": "LoginMethodPreference"
+        },
+        {
+          "start": 120,
+          "end": 127,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
         },
         {
           "start": 140,
@@ -878351,6 +879426,104 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 201,
+          "end": 202,
+          "symbol": "M:ll.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "usernameContainsPasswordOrReverse"
+        },
+        {
+          "start": 210,
+          "end": 216,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+          "original": "param0",
+          "renamed": "password"
+        },
+        {
+          "start": 223,
+          "end": 229,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 238,
+          "end": 244,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "param2",
+          "renamed": "username"
+        },
+        {
+          "start": 263,
+          "end": 267,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+          "original": "var3",
+          "renamed": "reversedPassword"
+        },
+        {
+          "start": 292,
+          "end": 303,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+          "original": "stackIn_7_0",
+          "renamed": "containsPassword"
+        },
+        {
+          "start": 338,
+          "end": 350,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "stackIn_10_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 381,
+          "end": 393,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
+          "original": "stackIn_10_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 417,
+          "end": 429,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+          "original": "stackIn_11_2",
+          "renamed": "passwordSummary"
+        },
+        {
+          "start": 460,
+          "end": 472,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
+          "original": "stackIn_13_1",
+          "renamed": "usernameContextBuilder"
+        },
+        {
+          "start": 496,
+          "end": 508,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+          "original": "stackIn_14_2",
+          "renamed": "usernameSummary"
+        },
+        {
+          "start": 542,
+          "end": 567,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 601,
+          "end": 609,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
+          "original": "var3_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 642,
+          "end": 648,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "param2",
+          "renamed": "username"
+        },
+        {
           "start": 651,
           "end": 653,
           "symbol": "C:wj",
@@ -878365,6 +879538,20 @@
           "renamed": "replaceCharacter"
         },
         {
+          "start": 660,
+          "end": 666,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "param2",
+          "renamed": "username"
+        },
+        {
+          "start": 688,
+          "end": 692,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+          "original": "var3",
+          "renamed": "reversedPassword"
+        },
+        {
           "start": 695,
           "end": 696,
           "symbol": "C:w",
@@ -878372,11 +879559,200 @@
           "renamed": "ScreenshotViewer"
         },
         {
+          "start": 697,
+          "end": 698,
+          "symbol": "M:w.a(ILjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseUtf16CodeUnits"
+        },
+        {
+          "start": 703,
+          "end": 709,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+          "original": "param0",
+          "renamed": "password"
+        },
+        {
+          "start": 726,
+          "end": 732,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 766,
           "end": 768,
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 798,
+          "end": 809,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+          "original": "stackIn_7_0",
+          "renamed": "containsPassword"
+        },
+        {
+          "start": 819,
+          "end": 825,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "param2",
+          "renamed": "username"
+        },
+        {
+          "start": 834,
+          "end": 840,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+          "original": "param0",
+          "renamed": "password"
+        },
+        {
+          "start": 847,
+          "end": 853,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "param2",
+          "renamed": "username"
+        },
+        {
+          "start": 862,
+          "end": 866,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+          "original": "var3",
+          "renamed": "reversedPassword"
+        },
+        {
+          "start": 893,
+          "end": 904,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+          "original": "stackIn_7_0",
+          "renamed": "containsPassword"
+        },
+        {
+          "start": 950,
+          "end": 976,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 990,
+          "end": 1015,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 1018,
+          "end": 1044,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#9",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 1056,
+          "end": 1064,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
+          "original": "var3_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 1067,
+          "end": 1092,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 1104,
+          "end": 1116,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "stackIn_10_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 1119,
+          "end": 1127,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#8",
+          "original": "var3_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 1139,
+          "end": 1151,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
+          "original": "stackIn_10_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 1205,
+          "end": 1211,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#0",
+          "original": "param0",
+          "renamed": "password"
+        },
+        {
+          "start": 1235,
+          "end": 1247,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+          "original": "stackIn_11_2",
+          "renamed": "passwordSummary"
+        },
+        {
+          "start": 1289,
+          "end": 1301,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+          "original": "stackIn_11_2",
+          "renamed": "passwordSummary"
+        },
+        {
+          "start": 1335,
+          "end": 1347,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
+          "original": "stackIn_13_1",
+          "renamed": "usernameContextBuilder"
+        },
+        {
+          "start": 1376,
+          "end": 1388,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#3",
+          "original": "stackIn_10_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 1397,
+          "end": 1409,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#4",
+          "original": "stackIn_11_2",
+          "renamed": "passwordSummary"
+        },
+        {
+          "start": 1430,
+          "end": 1436,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1465,
+          "end": 1471,
+          "symbol": "P:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "param2",
+          "renamed": "username"
+        },
+        {
+          "start": 1495,
+          "end": 1507,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+          "original": "stackIn_14_2",
+          "renamed": "usernameSummary"
+        },
+        {
+          "start": 1549,
+          "end": 1561,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+          "original": "stackIn_14_2",
+          "renamed": "usernameSummary"
         },
         {
           "start": 1601,
@@ -878391,6 +879767,48 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 1628,
+          "end": 1640,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#2",
+          "original": "stackIn_10_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 1669,
+          "end": 1681,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#5",
+          "original": "stackIn_13_1",
+          "renamed": "usernameContextBuilder"
+        },
+        {
+          "start": 1690,
+          "end": 1702,
+          "symbol": "L:ll.a(Ljava/lang/String;BLjava/lang/String;)Z#6",
+          "original": "stackIn_14_2",
+          "renamed": "usernameSummary"
+        },
+        {
+          "start": 1956,
+          "end": 1958,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 1959,
+          "end": 1960,
+          "symbol": "M:ll.a(Ljava/lang/String;BLjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "usernameContainsPasswordOrReverse"
+        },
+        {
+          "start": 2076,
+          "end": 2083,
+          "symbol": "F:ll.field_b:I",
+          "original": "field_b",
+          "renamed": "pendingTooltipY"
         },
         {
           "start": 2112,
@@ -947770,7 +949188,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "5d8951c3d8865895a1caa8280a57193f23b3b77cedacdab0722a45f47b37ce20",
+      "outputSha256": "663fefff3d030d912d7e0f2d6c67aa99120551f4bc59e1e137d97f57936a3e0b",
       "edits": [
         {
           "start": 50,
@@ -951579,6 +952997,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "AppletFlowHelpers"
+        },
+        {
+          "start": 29797,
+          "end": 29799,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 29810,
@@ -973481,7 +974906,7 @@
       "original": "oc.java",
       "renamed": "Widget.java",
       "inputSha256": "76acdc8390b5b1b074b42067d1978f78555e930de06880dd56cd9223a1016ef1",
-      "outputSha256": "a2ceceb9cb296e29ee73d5a5536de86c5a7faf3ad1822c65268e1ab21732e55a",
+      "outputSha256": "8c806ee4422cab570a0b31334d38bdde56c57cbbff11ca51ef1070c921e36469",
       "edits": [
         {
           "start": 65,
@@ -973986,6 +975411,13 @@
           "symbol": "C:of",
           "original": "of",
           "renamed": "BlankScreen"
+        },
+        {
+          "start": 1999,
+          "end": 2000,
+          "symbol": "M:of.d(B)Ljava/lang/String;",
+          "original": "d",
+          "renamed": "getVisibleTooltipText"
         },
         {
           "start": 2077,
@@ -975507,6 +976939,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 7650,
+          "end": 7651,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 7657,
           "end": 7658,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -975556,6 +976995,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 7853,
+          "end": 7854,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 7860,
           "end": 7861,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -975596,6 +977042,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 8075,
+          "end": 8076,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 8082,
@@ -975773,6 +977226,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 8636,
+          "end": 8637,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 8643,
           "end": 8644,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -975813,6 +977273,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 8840,
+          "end": 8841,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 8847,
@@ -975953,6 +977420,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 9302,
+          "end": 9303,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 9309,
@@ -976223,6 +977697,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 10353,
+          "end": 10354,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 10360,
           "end": 10361,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -976272,6 +977753,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 10595,
+          "end": 10596,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 10602,
           "end": 10603,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -976312,6 +977800,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 10820,
+          "end": 10821,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 10827,
@@ -976452,6 +977947,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 11321,
+          "end": 11322,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 11328,
@@ -976624,6 +978126,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 11913,
+          "end": 11914,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 11920,
           "end": 11921,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -976664,6 +978173,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 12150,
+          "end": 12151,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 12157,
@@ -976750,6 +978266,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 12493,
+          "end": 12494,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 12500,
           "end": 12501,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -976811,6 +978334,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 12779,
+          "end": 12780,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 12786,
@@ -976890,6 +978420,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 13071,
+          "end": 13072,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 13078,
           "end": 13079,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -976946,6 +978483,13 @@
           "renamed": "MusicVoice"
         },
         {
+          "start": 13319,
+          "end": 13320,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
+        },
+        {
           "start": 13326,
           "end": 13327,
           "symbol": "M:oc.d(I)Ljava/lang/String;",
@@ -976986,6 +978530,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 13511,
+          "end": 13512,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 13518,
@@ -977126,6 +978677,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicVoice"
+        },
+        {
+          "start": 13951,
+          "end": 13952,
+          "symbol": "M:ka.a(Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "updateTooltipState"
         },
         {
           "start": 13958,
@@ -980778,7 +982336,7 @@
       "original": "of.java",
       "renamed": "BlankScreen.java",
       "inputSha256": "4b09eb220d7a6d1b268d2316aac7c343e668063a171a4d79176fa4035310c2bb",
-      "outputSha256": "1b4ffa4c7358602375f7165d6cd0e665d62bb62c725634189ec2ebfe2ac82298",
+      "outputSha256": "710faa36390f9efcdcea36b11b35c345048ebe20914f2172804a7d80a484ed38",
       "edits": [
         {
           "start": 50,
@@ -980956,6 +982514,13 @@
           "renamed": "BlankScreen"
         },
         {
+          "start": 768,
+          "end": 769,
+          "symbol": "M:of.d(B)Ljava/lang/String;",
+          "original": "d",
+          "renamed": "getVisibleTooltipText"
+        },
+        {
           "start": 805,
           "end": 807,
           "symbol": "C:wd",
@@ -981061,6 +982626,27 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 1240,
+          "end": 1241,
+          "symbol": "M:of.d(B)Ljava/lang/String;",
+          "original": "d",
+          "renamed": "getVisibleTooltipText"
+        },
+        {
+          "start": 1247,
+          "end": 1253,
+          "symbol": "P:of.d(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1269,
+          "end": 1275,
+          "symbol": "P:of.d(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 1339,
           "end": 1341,
           "symbol": "C:th",
@@ -981080,6 +982666,13 @@
           "symbol": "C:ue",
           "original": "ue",
           "renamed": "MonotonicTime"
+        },
+        {
+          "start": 1401,
+          "end": 1408,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
         },
         {
           "start": 1411,
@@ -981110,11 +982703,25 @@
           "renamed": "tooltipTicks"
         },
         {
+          "start": 1486,
+          "end": 1493,
+          "symbol": "F:jh.field_a:I",
+          "original": "field_a",
+          "renamed": "tooltipDisplayDurationTicks"
+        },
+        {
           "start": 1496,
           "end": 1498,
           "symbol": "C:ue",
           "original": "ue",
           "renamed": "MonotonicTime"
+        },
+        {
+          "start": 1499,
+          "end": 1506,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
         },
         {
           "start": 1527,
@@ -994578,7 +996185,7 @@
       "original": "ol.java",
       "renamed": "LevelPackSelectScreen.java",
       "inputSha256": "a00770d28543ab9dd26fd7541a31af7fd3e6b1fdf99516e6c4cd8d65b2b6bf7c",
-      "outputSha256": "8a33e519732c26548414ca7cd19d69791abdef0b1291ec4f427ad29f8cf15f72",
+      "outputSha256": "6353b5cd8659e4b2135430ecf25ef365bfb24215ec0516fb02376c736058f3a9",
       "edits": [
         {
           "start": 50,
@@ -994649,6 +996256,13 @@
           "symbol": "F:ol.field_t:Llc;",
           "original": "field_t",
           "renamed": "secondPackCard"
+        },
+        {
+          "start": 230,
+          "end": 237,
+          "symbol": "F:ol.field_y:I",
+          "original": "field_y",
+          "renamed": "tooltipSuppressionDurationTicks"
         },
         {
           "start": 254,
@@ -995643,6 +997257,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 5061,
+          "end": 5068,
+          "symbol": "F:ol.field_y:I",
+          "original": "field_y",
+          "renamed": "tooltipSuppressionDurationTicks"
         }
       ]
     },
@@ -1003758,7 +1005379,7 @@
       "original": "oo.java",
       "renamed": "ChocolateBackground.java",
       "inputSha256": "c2fe483625346c9e2434b280ab2b2ca9b5fb395c6079531fb1bd97514303e210",
-      "outputSha256": "214025731cb5a798ff7bca0df8443d4ee39e8daa182d9412ae82876a5fcee49f",
+      "outputSha256": "7114358764d71bc2d876969eaeadc7ed1ea44eb0633df2c46be7befe4fad3c08",
       "edits": [
         {
           "start": 50,
@@ -1003801,6 +1005422,13 @@
           "symbol": "F:oo.field_x:Ljp;",
           "original": "field_x",
           "renamed": "chocolateMidSprite"
+        },
+        {
+          "start": 267,
+          "end": 274,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
         },
         {
           "start": 292,
@@ -1006230,6 +1007858,13 @@
           "symbol": "F:oo.field_x:Ljp;",
           "original": "field_x",
           "renamed": "chocolateMidSprite"
+        },
+        {
+          "start": 9985,
+          "end": 9992,
+          "symbol": "F:oo.field_v:I",
+          "original": "field_v",
+          "renamed": "pendingTooltipX"
         }
       ]
     },
@@ -1030764,7 +1032399,7 @@
       "original": "q.java",
       "renamed": "MenuButton.java",
       "inputSha256": "2cd96d5c1abb70834952d32e37ce6d86998b34eebff3da49a62fb72b7e247d25",
-      "outputSha256": "597ce3999fb79efcf250a052e19b4c9a0c0971d6be2787533f93a45d5cd18e84",
+      "outputSha256": "be4bf734fc539c0206142d844d8e6b279ad859d51410d9a61e40eb8b6cab0f66",
       "edits": [
         {
           "start": 50,
@@ -1031892,6 +1033527,13 @@
           "symbol": "C:w",
           "original": "w",
           "renamed": "ScreenshotViewer"
+        },
+        {
+          "start": 6239,
+          "end": 6240,
+          "symbol": "M:w.a(ILjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseUtf16CodeUnits"
         },
         {
           "start": 6339,
@@ -1101802,7 +1103444,7 @@
       "original": "sf.java",
       "renamed": "ValidatedTextFieldWidget.java",
       "inputSha256": "fa26ecd243659468647d2b3c5001ca3b2fdbfdc1416890297311b93d1e65efec",
-      "outputSha256": "2fb6f10e5c7bf6d38d0104a5aef99058341fc392c812d4ed7e9a91d6c206fd57",
+      "outputSha256": "8056a9ceb44b321c524a1b538fd66b1d5cf43ec31b4532d232e53a381c6cc79e",
       "edits": [
         {
           "start": 50,
@@ -1102344,6 +1103986,13 @@
           "renamed": "CanvasInputHelpers"
         },
         {
+          "start": 1852,
+          "end": 1853,
+          "symbol": "M:ap.a(IIB)V",
+          "original": "a",
+          "renamed": "setPendingTooltipAnchor"
+        },
+        {
           "start": 1878,
           "end": 1885,
           "symbol": "F:oc.field_t:I",
@@ -1102391,6 +1104040,13 @@
           "symbol": "C:ap",
           "original": "ap",
           "renamed": "CanvasInputHelpers"
+        },
+        {
+          "start": 2005,
+          "end": 2006,
+          "symbol": "M:ap.a(IIB)V",
+          "original": "a",
+          "renamed": "setPendingTooltipAnchor"
         },
         {
           "start": 2031,
@@ -1115232,7 +1116888,7 @@
       "original": "sl.java",
       "renamed": "CacheEntry.java",
       "inputSha256": "39de8a1c790e82bdf37a36715a04f2d9b74aab323b69a00586cb7f12eb46ed0f",
-      "outputSha256": "0ed84b0bbde91e1982e5a3107dae15331a429e83705c0b9be1c7b41e62e5abdd",
+      "outputSha256": "0041330d9da752e17b7959d7c87188d94c34c4099fccf7d74605be110bcfad74",
       "edits": [
         {
           "start": 53,
@@ -1116012,6 +1117668,13 @@
           "renamed": "ValidationStatus"
         },
         {
+          "start": 4560,
+          "end": 4562,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 4577,
           "end": 4579,
           "symbol": "C:mh",
@@ -1116320,6 +1117983,20 @@
           "renamed": "addChild"
         },
         {
+          "start": 5749,
+          "end": 5751,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 5775,
+          "end": 5777,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 5786,
           "end": 5787,
           "symbol": "M:mh.a(Lmh;I)V",
@@ -1116332,6 +1118009,13 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "AppletFlowHelpers"
+        },
+        {
+          "start": 5875,
+          "end": 5877,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 5886,
@@ -1116348,6 +1118032,13 @@
           "renamed": "AppletFlowHelpers"
         },
         {
+          "start": 5914,
+          "end": 5916,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 5925,
           "end": 5926,
           "symbol": "M:mh.a(Lmh;I)V",
@@ -1116360,6 +1118051,13 @@
           "symbol": "C:vd",
           "original": "vd",
           "renamed": "PacketReceiveHelpers"
+        },
+        {
+          "start": 5983,
+          "end": 5985,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 5994,
@@ -1116376,6 +1118074,13 @@
           "renamed": "RasterEffectHelpers"
         },
         {
+          "start": 6034,
+          "end": 6036,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 6045,
           "end": 6046,
           "symbol": "M:mh.a(Lmh;I)V",
@@ -1116390,6 +1118095,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 6073,
+          "end": 6075,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 6084,
           "end": 6085,
           "symbol": "M:mh.a(Lmh;I)V",
@@ -1116402,6 +1118114,13 @@
           "symbol": "C:dp",
           "original": "dp",
           "renamed": "HalloweenBackground"
+        },
+        {
+          "start": 6112,
+          "end": 6114,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 6123,
@@ -1173669,7 +1175388,7 @@
       "original": "ue.java",
       "renamed": "MonotonicTime.java",
       "inputSha256": "a3a9ad943f99b632c2e38704f550a83fdfabab6bce73d7e0ca730bbd367306c9",
-      "outputSha256": "d9e10c2a088c4e5125e011f1b807b6fbce3b3d9a1969fb394077ff9a6dc3aa0f",
+      "outputSha256": "dd65d968262d4a6bb26ce6870288ac75126260ada36948425041787c7644fd65",
       "edits": [
         {
           "start": 50,
@@ -1173684,6 +1175403,13 @@
           "symbol": "F:ue.field_d:I",
           "original": "field_d",
           "renamed": "packetDelayMillis"
+        },
+        {
+          "start": 174,
+          "end": 181,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
         },
         {
           "start": 424,
@@ -1173845,6 +1175571,13 @@
           "symbol": "F:ue.field_d:I",
           "original": "field_d",
           "renamed": "packetDelayMillis"
+        },
+        {
+          "start": 831,
+          "end": 838,
+          "symbol": "F:ue.field_e:I",
+          "original": "field_e",
+          "renamed": "tooltipDelayTicks"
         }
       ]
     },
@@ -1219882,7 +1221615,7 @@
       "original": "w.java",
       "renamed": "ScreenshotViewer.java",
       "inputSha256": "ab1a43a9c1637cb4b966b968d0afaa046a56ac5eb15d5fc304855e89893c8e66",
-      "outputSha256": "26933070dc076aed36c0ccc8faa20c0ec4804f222a75b8e3aabe8c16bc70d943",
+      "outputSha256": "ec1455daada7100cfb3567554a4dc658454f0f99a001b32a53ef2bf5316df7cf",
       "edits": [
         {
           "start": 50,
@@ -1220163,6 +1221896,13 @@
           "symbol": "C:fo",
           "original": "fo",
           "renamed": "IsaacGenerator"
+        },
+        {
+          "start": 2780,
+          "end": 2782,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 2840,
@@ -1221257,6 +1222997,13 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 10605,
+          "end": 10607,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 10618,
           "end": 10620,
           "symbol": "C:pl",
@@ -1221453,11 +1223200,32 @@
           "renamed": "drawTransparent"
         },
         {
+          "start": 11440,
+          "end": 11442,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 11466,
+          "end": 11468,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 11477,
           "end": 11478,
           "symbol": "M:jp.c(II)V",
           "original": "c",
           "renamed": "drawTransparent"
+        },
+        {
+          "start": 11500,
+          "end": 11502,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 11540,
@@ -1221530,6 +1223298,34 @@
           "renamed": "pointerX"
         },
         {
+          "start": 11819,
+          "end": 11821,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 11878,
+          "end": 11880,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 11938,
+          "end": 11940,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 11997,
+          "end": 11999,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 12092,
           "end": 12094,
           "symbol": "C:pq",
@@ -1221558,11 +1223354,53 @@
           "renamed": "pointerX"
         },
         {
+          "start": 12166,
+          "end": 12168,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
           "start": 12177,
           "end": 12178,
           "symbol": "M:jp.a()V",
           "original": "a",
           "renamed": "flipHorizontal"
+        },
+        {
+          "start": 12202,
+          "end": 12204,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 12265,
+          "end": 12267,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 12328,
+          "end": 12330,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 12391,
+          "end": 12393,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
+        },
+        {
+          "start": 12454,
+          "end": 12456,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 12465,
@@ -1222237,11 +1224075,312 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 23932,
+          "end": 23933,
+          "symbol": "M:w.a(ILjava/lang/String;)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "reverseUtf16CodeUnits"
+        },
+        {
+          "start": 23938,
+          "end": 23944,
+          "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 23953,
+          "end": 23959,
+          "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 23975,
+          "end": 23979,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "var4",
+          "renamed": "characterIndex"
+        },
+        {
+          "start": 23997,
+          "end": 24005,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "var2_int",
+          "renamed": "length"
+        },
+        {
+          "start": 24036,
+          "end": 24040,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#2",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 24064,
+          "end": 24068,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#3",
+          "original": "var3",
+          "renamed": "reversedUnits"
+        },
+        {
+          "start": 24089,
+          "end": 24093,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#4",
+          "original": "var5",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 24114,
+          "end": 24125,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#5",
+          "original": "stackIn_7_0",
+          "renamed": "result"
+        },
+        {
+          "start": 24159,
+          "end": 24171,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#6",
+          "original": "stackIn_11_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 24202,
+          "end": 24214,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#7",
+          "original": "stackIn_11_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 24238,
+          "end": 24250,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#8",
+          "original": "stackIn_12_2",
+          "renamed": "textSummary"
+        },
+        {
+          "start": 24284,
+          "end": 24309,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#9",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 24326,
+          "end": 24330,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#4",
+          "original": "var5",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 24385,
+          "end": 24393,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "var2_int",
+          "renamed": "length"
+        },
+        {
+          "start": 24396,
+          "end": 24402,
+          "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 24423,
+          "end": 24427,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#3",
+          "original": "var3",
+          "renamed": "reversedUnits"
+        },
+        {
+          "start": 24439,
+          "end": 24447,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "var2_int",
+          "renamed": "length"
+        },
+        {
+          "start": 24464,
+          "end": 24470,
+          "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 24502,
           "end": 24504,
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 24539,
+          "end": 24543,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "var4",
+          "renamed": "characterIndex"
+        },
+        {
+          "start": 24549,
+          "end": 24557,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "var2_int",
+          "renamed": "length"
+        },
+        {
+          "start": 24560,
+          "end": 24564,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "var4",
+          "renamed": "characterIndex"
+        },
+        {
+          "start": 24566,
+          "end": 24570,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "var4",
+          "renamed": "characterIndex"
+        },
+        {
+          "start": 24588,
+          "end": 24592,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#3",
+          "original": "var3",
+          "renamed": "reversedUnits"
+        },
+        {
+          "start": 24599,
+          "end": 24607,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "var2_int",
+          "renamed": "length"
+        },
+        {
+          "start": 24610,
+          "end": 24614,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "var4",
+          "renamed": "characterIndex"
+        },
+        {
+          "start": 24619,
+          "end": 24625,
+          "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 24633,
+          "end": 24637,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "var4",
+          "renamed": "characterIndex"
+        },
+        {
+          "start": 24662,
+          "end": 24673,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#5",
+          "original": "stackIn_7_0",
+          "renamed": "result"
+        },
+        {
+          "start": 24687,
+          "end": 24691,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#3",
+          "original": "var3",
+          "renamed": "reversedUnits"
+        },
+        {
+          "start": 24711,
+          "end": 24722,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#5",
+          "original": "stackIn_7_0",
+          "renamed": "result"
+        },
+        {
+          "start": 24768,
+          "end": 24794,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 24808,
+          "end": 24833,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#9",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 24836,
+          "end": 24862,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#10",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 24874,
+          "end": 24878,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#2",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 24881,
+          "end": 24906,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#9",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 24918,
+          "end": 24930,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#6",
+          "original": "stackIn_11_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 24933,
+          "end": 24937,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#2",
+          "original": "var2",
+          "renamed": "failure"
+        },
+        {
+          "start": 24949,
+          "end": 24961,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#7",
+          "original": "stackIn_11_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 25006,
+          "end": 25012,
+          "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 25041,
+          "end": 25047,
+          "symbol": "P:w.a(ILjava/lang/String;)Ljava/lang/String;#1",
+          "original": "param1",
+          "renamed": "text"
+        },
+        {
+          "start": 25071,
+          "end": 25083,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#8",
+          "original": "stackIn_12_2",
+          "renamed": "textSummary"
+        },
+        {
+          "start": 25125,
+          "end": 25137,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#8",
+          "original": "stackIn_12_2",
+          "renamed": "textSummary"
         },
         {
           "start": 25177,
@@ -1222256,6 +1224395,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 25204,
+          "end": 25216,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#6",
+          "original": "stackIn_11_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 25245,
+          "end": 25257,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#7",
+          "original": "stackIn_11_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 25266,
+          "end": 25278,
+          "symbol": "L:w.a(ILjava/lang/String;)Ljava/lang/String;#8",
+          "original": "stackIn_12_2",
+          "renamed": "textSummary"
         },
         {
           "start": 25400,
@@ -1243362,7 +1245522,7 @@
       "original": "wp.java",
       "renamed": "SoundCache.java",
       "inputSha256": "e64dd26300416712ce6cf148e8f1c4cf620baa69fa3c6ca3450519ae31fa3db1",
-      "outputSha256": "402979e5941075a2ed2cea0bed222edf5c65dfd3f7a90f7e50547c01405ca936",
+      "outputSha256": "641d7387a6c5392101614764fe7abfd89afdaac424640f585bc2e0fce48f446a",
       "edits": [
         {
           "start": 50,
@@ -1245610,6 +1247770,13 @@
           "symbol": "F:de.field_v:Lcd;",
           "original": "field_v",
           "renamed": "numericLoginKind"
+        },
+        {
+          "start": 12212,
+          "end": 12214,
+          "symbol": "C:ll",
+          "original": "ll",
+          "renamed": "PasswordTooltipHelpers"
         },
         {
           "start": 12223,
@@ -1253316,10 +1255483,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "9e22c738a68d53861901c2b132b00608b4a3de62464f3153d33b4931ef26ac8c",
+    "rulesSha256": "59a7cb9753cd8ecb0ebf79f32675f00d35a4e8fc0234c83b7bb6e133c0348d31",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "7e10177c9e5b0270585a4cd2d87e72e40399484d6e63205ee887a9fdf2f81296",
+    "outputTreeSha256": "8ecec3903d32262fee2259f1fe8639d404df471123b21f226f52c7f0ff3e8658",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1253339,10 +1255506,22 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 2589874,
-        "traceSha256": "e250d6bf06e36e5717d0a0ee2168fbb47a7128fc17e763be5e0582f37c8ff517",
+        "checks": 3454982,
+        "traceSha256": "d1a566b581ae402aa19bf3eaf421fb58eb31ca591f7d54708b3d9e0956c97364",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "tooltipTransitionTableFixtures": true,
+        "tooltipDelayBoundaryFixtures": true,
+        "tooltipSuppressionFixtures": true,
+        "tooltipNullBranchFixtures": true,
+        "tooltipAnchorCaptureFixtures": true,
+        "tooltipPartialGuardFixtures": true,
+        "tooltipOverflowFixtures": true,
+        "tooltipTimelineFixtures": true,
+        "utf16ReverseFixtures": true,
+        "passwordSubstringFixtures": true,
+        "passwordSubstringGuardFixtures": true,
+        "passwordSubstringNullFixtures": true,
         "quickChatControllerFixtures": true,
         "quickChatPanBoundaryFixtures": true,
         "quickChatRootUpdateFixtures": true,

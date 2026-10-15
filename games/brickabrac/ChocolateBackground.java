@@ -9,7 +9,7 @@ final class ChocolateBackground extends BackgroundScene {
     static String field_s;
     static boolean field_r;
     private static RgbSprite chocolateMidSprite;
-    static int field_v;
+    static int pendingTooltipX;
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         int var5;
@@ -285,7 +285,7 @@ final class ChocolateBackground extends BackgroundScene {
     static {
         field_t = "This is <%0>'s RuneScape clan if they have one.";
         field_s = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
-        field_v = -1;
+        pendingTooltipX = -1;
         field_y = "Remove friend";
     }
 }

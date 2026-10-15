@@ -73,7 +73,7 @@ class Widget extends IntrusiveNode {
           }
           break;
         }
-        var5 = BlankScreen.d((byte) 63);
+        var5 = BlankScreen.getVisibleTooltipText((byte) 63);
         if (var5 == null) {
           return;
         }
@@ -238,20 +238,20 @@ class Widget extends IntrusiveNode {
           if (var5 == 0) {
             var6 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-            MusicVoice.a(this.getTooltip(15), 22546);
+            MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
             return param3;
           }
           if (BackgroundScene.pressedButton == 0) {
             var6Lifetime6 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-            MusicVoice.a(this.getTooltip(15), 22546);
+            MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
             return param3;
           }
           this.clearFocus(false);
           if (var7 == 0) {
             var6Lifetime7 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-            MusicVoice.a(this.getTooltip(15), 22546);
+            MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
             return param3;
           }
           if (0 != GameplayAudioEvent.mouseWheelDelta &&
@@ -267,13 +267,13 @@ class Widget extends IntrusiveNode {
           if (0 != MatchingTextValidator.heldButton) {
             var6Lifetime8 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-            MusicVoice.a(this.getTooltip(15), 22546);
+            MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
             return param3;
           }
           if (ScrollPaneWithFooter.field_Pb == 0) {
             var6Lifetime9 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-            MusicVoice.a(this.getTooltip(15), 22546);
+            MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
             return param3;
           }
           this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
@@ -286,7 +286,7 @@ class Widget extends IntrusiveNode {
           }
           var6Lifetime10 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-          MusicVoice.a(this.getTooltip(15), 22546);
+          MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
           return param3;
         }
         if (0 != GameplayAudioEvent.mouseWheelDelta) {
@@ -314,20 +314,20 @@ class Widget extends IntrusiveNode {
                 }
                 var6Lifetime1 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-                MusicVoice.a(this.getTooltip(15), 22546);
+                MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
                 return param3;
               }
             }
             if (0 != MatchingTextValidator.heldButton) {
               var6Lifetime1Lifetime1 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-              MusicVoice.a(this.getTooltip(15), 22546);
+              MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
               return param3;
             }
             if (ScrollPaneWithFooter.field_Pb == 0) {
               var6Lifetime1Lifetime2 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-              MusicVoice.a(this.getTooltip(15), 22546);
+              MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
               return param3;
             }
             this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
@@ -340,7 +340,7 @@ class Widget extends IntrusiveNode {
             }
             var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-            MusicVoice.a(this.getTooltip(15), 22546);
+            MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
             return param3;
           }
           this.a(GameplayAudioEvent.mouseWheelDelta, MusicPatch.pointerX, param0, -127, ResourcePreparationEntry.pointerY, this, param1);
@@ -357,13 +357,13 @@ class Widget extends IntrusiveNode {
               if (0 != MatchingTextValidator.heldButton) {
                 var6Lifetime2 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-                MusicVoice.a(this.getTooltip(15), 22546);
+                MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
                 return param3;
               }
               if (ScrollPaneWithFooter.field_Pb == 0) {
                 var6Lifetime2Lifetime1 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-                MusicVoice.a(this.getTooltip(15), 22546);
+                MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
                 return param3;
               }
               this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
@@ -371,21 +371,21 @@ class Widget extends IntrusiveNode {
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-                MusicVoice.a(this.getTooltip(15), 22546);
+                MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
                 return param3;
               }
               if (!(var11.listener instanceof WidgetDropListener)) {
                 ByteArrayPoolHelpers.draggedWidget = null;
                 var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-                MusicVoice.a(this.getTooltip(15), 22546);
+                MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
                 return param3;
               }
               ((WidgetDropListener) (var11.listener)).onDrop(-24178, var11, (DropTargetWidget) null);
               ByteArrayPoolHelpers.draggedWidget = null;
               var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-              MusicVoice.a(this.getTooltip(15), 22546);
+              MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
               return param3;
             }
             this.clearFocus(false);
@@ -394,13 +394,13 @@ class Widget extends IntrusiveNode {
         if (0 != MatchingTextValidator.heldButton) {
           var6Lifetime3 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-          MusicVoice.a(this.getTooltip(15), 22546);
+          MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
           return param3;
         }
         if (ScrollPaneWithFooter.field_Pb == 0) {
           var6Lifetime4 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-          MusicVoice.a(this.getTooltip(15), 22546);
+          MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
           return param3;
         }
         this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
@@ -413,7 +413,7 @@ class Widget extends IntrusiveNode {
         }
         var6Lifetime5 = -57 % ((56 - param2) / 43);
         ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
-        MusicVoice.a(this.getTooltip(15), 22546);
+        MusicVoice.updateTooltipState(this.getTooltip(15), 22546);
         return param3;
     }
 

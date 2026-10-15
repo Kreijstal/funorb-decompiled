@@ -338,7 +338,7 @@ final class SoundCache {
                 EmailConfirmationValidator.field_k.persistLoginMethod(100, EmailConfirmationValidator.e((byte) -66));
               } else {
                 if (NanoGameClock.field_s.getCredentialKind(13) == MembershipBenefitsScreen.numericLoginKind) {
-                  ll.field_d.persistLoginMethod(112, EmailConfirmationValidator.e((byte) -81));
+                  PasswordTooltipHelpers.field_d.persistLoginMethod(112, EmailConfirmationValidator.e((byte) -81));
                 }
               }
               RadialSelectorRenderer.field_d = false;

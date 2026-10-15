@@ -141,7 +141,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_23_0 = BackgroundRegistry.field_b;
             return stackIn_23_0;
           }
-          if (ll.a(var6, (byte) 125, var7)) {
+          if (PasswordTooltipHelpers.usernameContainsPasswordOrReverse(var6, (byte) 125, var7)) {
             stackIn_27_0 = GameUiController.field_f;
             return stackIn_27_0;
           }

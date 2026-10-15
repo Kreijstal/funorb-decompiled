@@ -8,7 +8,7 @@ class NumericLoginCredentials extends LoginCredentials {
 
     final static LoginMethodPreference[] b(int param0) {
         if (param0 == 140) {
-          return new LoginMethodPreference[]{EmailConfirmationValidator.field_k, ll.field_d, LinkWidgetRenderer.field_c};
+          return new LoginMethodPreference[]{EmailConfirmationValidator.field_k, PasswordTooltipHelpers.field_d, LinkWidgetRenderer.field_c};
         }
         return (LoginMethodPreference[]) null;
     }

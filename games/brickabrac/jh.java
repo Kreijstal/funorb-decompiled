@@ -3,7 +3,7 @@
  */
 final class jh {
     static String[] field_e;
-    static int field_a;
+    static int tooltipDisplayDurationTicks;
     static int[] decodedSpriteWidths;
     static RgbSprite field_d;
     static String field_c;
@@ -75,6 +75,6 @@ final class jh {
     static {
         field_e = new String[]{"Showing by rating", "Showing by win percentage"};
         field_c = "Good grief!";
-        field_a = 250;
+        tooltipDisplayDurationTicks = 250;
     }
 }

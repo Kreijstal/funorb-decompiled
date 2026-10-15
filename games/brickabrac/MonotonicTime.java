@@ -6,7 +6,7 @@ final class MonotonicTime {
     static int[] field_b;
     static String field_f;
     static String field_a;
-    static int field_e;
+    static int tooltipDelayTicks;
     static boolean field_c;
 
     public static void a(byte param0) {
@@ -34,7 +34,7 @@ final class MonotonicTime {
         packetDelayMillis = 0;
         field_b = new int[29];
         field_f = "Play free version";
-        field_e = 50;
+        tooltipDelayTicks = 50;
         field_b[22] = 23;
         field_b[13] = 0;
         field_b[11] = 0;

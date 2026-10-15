@@ -404,7 +404,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           if (EmailConfirmationValidator.field_k == var9) {
             var8 = IntegerParsingHelpers.field_a;
           } else {
-            if (ll.field_d == var9) {
+            if (PasswordTooltipHelpers.field_d == var9) {
               var8 = IndexedSpriteGeometry.field_c;
             }
           }

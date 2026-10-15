@@ -172,7 +172,7 @@ final class MenuButton {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = ScreenshotViewer.a(param1 + 121, param2);
+          var3 = ScreenshotViewer.reverseUtf16CodeUnits(param1 + 121, param2);
           if (param1 != 0) {
             var4 = (String) null;
             MenuButton.a((String) null, 78, (String) null);

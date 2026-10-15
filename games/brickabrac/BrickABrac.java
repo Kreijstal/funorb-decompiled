@@ -739,7 +739,7 @@ public final class BrickABrac extends InteractiveGameClient {
         PlayerNameChooserPanel.h(-106);
         WidgetTheme.a(-31063);
         GameplayRenderHelpers.a(2);
-        ll.a(!obfuscationGuard ? true : false);
+        PasswordTooltipHelpers.a(!obfuscationGuard ? true : false);
         FullscreenFailureDialog.c(obfuscationGuard);
         kp.a(-68);
         ArchiveFetchClient.c(-12200);

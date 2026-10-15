@@ -726,7 +726,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("inviting_x", (byte) 101);
                 if (var2 != null) {
-                  ll.field_a = MenuButton.a(var2, (byte) 116);
+                  PasswordTooltipHelpers.field_a = MenuButton.a(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("x_wants_to_join", (byte) 63);
                 if (var2 != null) {

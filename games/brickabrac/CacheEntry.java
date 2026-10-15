@@ -121,7 +121,7 @@ abstract class CacheEntry extends DualLinkNode {
           DraggableWidget.field_N.horizontalAlignment = 1;
           HighscorePackSelector.field_k = new UiComponent(0L, MatchCompleteScreen.field_x, VerticalScrollbar.field_Rb.toUpperCase());
           sc.field_b = new UiComponent(0L, ValidationStatus.field_j, rl.field_c.toUpperCase());
-          ll.field_e = new UiComponent(0L, FarmBackground.field_x);
+          PasswordTooltipHelpers.field_e = new UiComponent(0L, FarmBackground.field_x);
           AppletFlowHelpers.field_g = new UiComponent(0L, MainMenuScreen.field_t, AppletFlowHelpers.field_b);
           AppletFlowHelpers.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
           kk.field_b = new UiComponent(0L, LoginCredentialKind.field_d, ch.field_d);
@@ -147,19 +147,19 @@ abstract class CacheEntry extends DualLinkNode {
           VolcanicBackground.field_v = new UiComponent(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           FontRequestHelpers.field_a = new UiComponent(0L, (UiComponent) null);
           FontRequestHelpers.field_a.addChild(sc.field_b, 0);
-          FontRequestHelpers.field_a.addChild(ll.field_e, 0);
-          ll.field_e.addChild(AppletFlowHelpers.field_g, 0);
+          FontRequestHelpers.field_a.addChild(PasswordTooltipHelpers.field_e, 0);
+          PasswordTooltipHelpers.field_e.addChild(AppletFlowHelpers.field_g, 0);
           if (param2 < 13) {
             return;
           }
-          ll.field_e.addChild(AppletFlowHelpers.field_a, 0);
-          ll.field_e.addChild(kk.field_b, 0);
+          PasswordTooltipHelpers.field_e.addChild(AppletFlowHelpers.field_a, 0);
+          PasswordTooltipHelpers.field_e.addChild(kk.field_b, 0);
           if (PacketReceiveHelpers.field_e) {
-            ll.field_e.addChild(RasterEffectHelpers.field_b, 0);
+            PasswordTooltipHelpers.field_e.addChild(RasterEffectHelpers.field_b, 0);
           }
-          ll.field_e.addChild(BufferedSocket.field_h, 0);
-          ll.field_e.addChild(HalloweenBackground.field_x, 0);
-          ll.field_e.addChild(rl.field_e, 0);
+          PasswordTooltipHelpers.field_e.addChild(BufferedSocket.field_h, 0);
+          PasswordTooltipHelpers.field_e.addChild(HalloweenBackground.field_x, 0);
+          PasswordTooltipHelpers.field_e.addChild(rl.field_e, 0);
           if (PacketReceiveHelpers.field_e) {
             FontRequestHelpers.field_a.addChild(gj.field_b, 0);
           }

@@ -8,7 +8,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     static RgbSprite powerUpMeterBarSprite;
     static int[] field_v;
     private LevelPackCard secondPackCard;
-    static int field_y;
+    static int tooltipSuppressionDurationTicks;
     static int friendCount;
     static boolean field_s;
 
@@ -182,7 +182,7 @@ final class LevelPackSelectScreen extends MenuScreen {
     static {
         field_x = "Message lobby";
         field_v = new int[4];
-        field_y = 10;
+        tooltipSuppressionDurationTicks = 10;
         field_s = true;
     }
 }

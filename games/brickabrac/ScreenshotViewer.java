@@ -84,7 +84,7 @@ final class ScreenshotViewer {
               this.field_a = true;
             }
           }
-          if (ll.field_c != null) {
+          if (PasswordTooltipHelpers.field_c != null) {
             var4 = 0;
             if (BackgroundScene.pressedButton != 0 &&
               PlayerNameChooserPanel.pressY > 257 &&
@@ -296,7 +296,7 @@ final class ScreenshotViewer {
             ContentTransitionLayer.field_jb.ensureGroupAvailableByName("arialish12", -28138) &&
             ContentTransitionLayer.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
             AchievementsScreen.field_J = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
-            ll.field_c = SpriteInputHelpers.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
+            PasswordTooltipHelpers.field_c = SpriteInputHelpers.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
             ch.field_c = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
             ArchiveSourceManager.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
             MainMenuScreen.field_u = TextWidgetRenderer.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
@@ -312,28 +312,28 @@ final class ScreenshotViewer {
           this.field_p.drawTransparent(376, 339);
           this.field_l.drawTransparent(9, 9);
           AchievementsScreen.field_J.drawTransparent(0, 0);
-          if (null != ll.field_c) {
-            ll.field_c.drawTransparent(9, 257);
-            ll.field_c.f(558, 257);
+          if (null != PasswordTooltipHelpers.field_c) {
+            PasswordTooltipHelpers.field_c.drawTransparent(9, 257);
+            PasswordTooltipHelpers.field_c.f(558, 257);
             if (ResourcePreparationEntry.pointerY > 257 &&
               ResourcePreparationEntry.pointerY < 290) {
               var2_intLifetime2 = 40 + (QuickChatSineHelpers.lookupSine2048Q16((byte) 124, this.field_i << 4) * 40 >> 16);
               if (0 < var2_intLifetime2) {
                 if (9 < MusicPatch.pointerX &&
                   MusicPatch.pointerX < 82) {
-                  ll.field_c.f(8, 256, var2_intLifetime2);
-                  ll.field_c.f(10, 256, var2_intLifetime2);
-                  ll.field_c.f(8, 258, var2_intLifetime2);
-                  ll.field_c.f(10, 258, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.f(8, 256, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.f(10, 256, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.f(8, 258, var2_intLifetime2);
+                  PasswordTooltipHelpers.field_c.f(10, 258, var2_intLifetime2);
                 } else {
                   if (558 < MusicPatch.pointerX &&
                     MusicPatch.pointerX < 631) {
-                    ll.field_c.flipHorizontal();
-                    ll.field_c.f(557, 256, var2_intLifetime2);
-                    ll.field_c.f(559, 256, var2_intLifetime2);
-                    ll.field_c.f(557, 258, var2_intLifetime2);
-                    ll.field_c.f(559, 258, var2_intLifetime2);
-                    ll.field_c.flipHorizontal();
+                    PasswordTooltipHelpers.field_c.flipHorizontal();
+                    PasswordTooltipHelpers.field_c.f(557, 256, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.f(559, 256, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.f(557, 258, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.f(559, 258, var2_intLifetime2);
+                    PasswordTooltipHelpers.field_c.flipHorizontal();
                   }
                 }
               }
@@ -629,40 +629,40 @@ final class ScreenshotViewer {
         }
     }
 
-    final static String a(int param0, String param1) {
-        int var4 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        char[] var3 = null;
-        int var5 = 0;
-        String stackIn_7_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = BrickABrac.field_J ? 1 : 0;
+    final static String reverseUtf16CodeUnits(int obfuscationGuard, String text) {
+        int characterIndex = 0;
+        int length = 0;
+        RuntimeException failure = null;
+        char[] reversedUnits = null;
+        int unusedGameFlag = 0;
+        String result = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = param1.length();
-          var3 = new char[var2_int];
-          if (param0 <= 4) {
+          length = text.length();
+          reversedUnits = new char[length];
+          if (obfuscationGuard <= 4) {
             field_r = (RgbSprite) null;
           }
-          for (var4 = 0; var2_int > var4; var4++) {
-            var3[-1 + (var2_int - var4)] = param1.charAt(var4);
+          for (characterIndex = 0; length > characterIndex; characterIndex++) {
+            reversedUnits[-1 + (length - characterIndex)] = text.charAt(characterIndex);
           }
-          stackIn_7_0 = new String(var3);
-          return stackIn_7_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_11_0 = var2;
-          stackIn_11_1 = new StringBuilder().append("w.J(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_12_2 = "null";
+          result = new String(reversedUnits);
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("w.J(").append(obfuscationGuard).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(')').toString());
         }
     }
 
