@@ -141,7 +141,7 @@ final class ActivityIndicatorWidget extends Widget {
           GameRenderAudioHelpers.contextActions.anchorComponent.selected = false;
         }
         if (param0 >= -39) {
-          ActivityIndicatorWidget.a(0, 110);
+          ActivityIndicatorWidget.flushTransportPackets(0, 110);
         }
         ClientResourceHelpers.field_b = null;
         GameRenderAudioHelpers.contextActions = null;
@@ -314,36 +314,36 @@ final class ActivityIndicatorWidget extends Widget {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void flushTransportPackets(int keepaliveOpcode, int obfuscationGuard) {
         try {
-          Throwable decompiledCaughtException = null;
-          IOException var2 = null;
-          boolean decompiledFrameRemainder0 = true;
+          Throwable caughtFailure = null;
+          IOException writeFailure = null;
+          boolean phaseAllowsWrite = true;
           if (WhirlpoolHasher.gameTransport != null) {
-            if (0 <= param0) {
-              decompiledFrameRemainder0 = (MenuButton.loggedInConnection == rf.connectionPhase);
-              if ((decompiledFrameRemainder0) && (TextFieldValidator.outgoingPackets.position == 0 &&
-                BrickMotionPath.field_q + 10000L < MonotonicTime.nowMillis(false))) {
-                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, param0);
+            if (0 <= keepaliveOpcode) {
+              phaseAllowsWrite = (MenuButton.loggedInConnection == rf.connectionPhase);
+              if ((phaseAllowsWrite) && (TextFieldValidator.outgoingPackets.position == 0 &&
+                BrickMotionPath.lastGameWriteMillis + 10000L < MonotonicTime.nowMillis(false))) {
+                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, keepaliveOpcode);
               }
             } else {
               if (TextFieldValidator.outgoingPackets.position == 0 &&
-                BrickMotionPath.field_q + 10000L < MonotonicTime.nowMillis(false)) {
-                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, param0);
+                BrickMotionPath.lastGameWriteMillis + 10000L < MonotonicTime.nowMillis(false)) {
+                TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, keepaliveOpcode);
               }
             }
-            if (decompiledFrameRemainder0) {
-              if (param1 != 10000) {
+            if (phaseAllowsWrite) {
+              if (obfuscationGuard != 10000) {
                 return;
               }
               if (0 < TextFieldValidator.outgoingPackets.position) {
                 try {
                   WhirlpoolHasher.gameTransport.write(TextFieldValidator.outgoingPackets.data, true, TextFieldValidator.outgoingPackets.position, 0);
-                  BrickMotionPath.field_q = MonotonicTime.nowMillis(false);
-                } catch (java.io.IOException decompiledCaughtParameter0) {
-                  decompiledCaughtException = decompiledCaughtParameter0;
-                  var2 = (IOException) (Object) decompiledCaughtException;
-                  hn.a((byte) 92);
+                  BrickMotionPath.lastGameWriteMillis = MonotonicTime.nowMillis(false);
+                } catch (java.io.IOException caughtWriteFailure) {
+                  caughtFailure = caughtWriteFailure;
+                  writeFailure = (IOException) (Object) caughtFailure;
+                  hn.closeGameTransport((byte) 92);
                 }
                 TextFieldValidator.outgoingPackets.position = 0;
               }
@@ -351,10 +351,10 @@ final class ActivityIndicatorWidget extends Widget {
             }
           }
           TextFieldValidator.outgoingPackets.position = 0;
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

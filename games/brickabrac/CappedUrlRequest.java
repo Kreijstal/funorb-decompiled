@@ -64,7 +64,7 @@ final class CappedUrlRequest implements Runnable {
             return false;
           }
           dupTemp$1 = MonotonicTime.nowMillis(false);
-          BrickMotionPath.field_q = dupTemp$1;
+          BrickMotionPath.lastGameWriteMillis = dupTemp$1;
           RichTextLayout.lastGameReadMillis = dupTemp$1;
           if (qm.field_d.status != 1) {
             rf.connectionPhase = mc.connectionFailed;
@@ -81,7 +81,7 @@ final class CappedUrlRequest implements Runnable {
               rf.connectionPhase = BitPacketBuffer.readyToSendHandshake;
               var5.position = 0;
               GrowableIntList.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, ContentTransitionLayer.field_ob, TextFieldValidator.outgoingPackets);
-              ActivityIndicatorWidget.a(-1, 10000);
+              ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;

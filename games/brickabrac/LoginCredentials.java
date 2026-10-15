@@ -81,10 +81,10 @@ abstract class LoginCredentials {
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          var4 = (TableRowSubmission) (tm.pendingTableSubmissions.first(-84));
+          var4 = (TableRowSubmission) (OutgoingPacketHelpers.pendingTableSubmissions.first(-84));
           while (var4 != null) {
             AppletGameShell.sendTableRow(param1, var4, 14989);
-            var4 = (TableRowSubmission) (tm.pendingTableSubmissions.next((byte) 116));
+            var4 = (TableRowSubmission) (OutgoingPacketHelpers.pendingTableSubmissions.next((byte) 116));
           }
           if (param0 > -34) {
             return;

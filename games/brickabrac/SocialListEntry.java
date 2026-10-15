@@ -287,9 +287,9 @@ final class SocialListEntry extends UiComponent {
           if (null != ParisBackground.field_t) {
             TextFieldValidator.outgoingPackets.writePrefixedCp1252String(0, ParisBackground.field_t);
           }
-          LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
+          LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
           TextFieldValidator.outgoingPackets.backfillShortLength(TextFieldValidator.outgoingPackets.position - var5_int, 255);
-          ActivityIndicatorWidget.a(-1, 10000);
+          ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

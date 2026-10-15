@@ -361,7 +361,7 @@ final class QuickChatMenu extends UiComponent {
                   ClientResourceHelpers.currentLobbyGame != null) {
                   effectiveChannel = 1;
                 }
-                if (tm.getChatFilter(effectiveChannel, (byte) 18) == 2) {
+                if (OutgoingPacketHelpers.getChatFilter(effectiveChannel, (byte) 18) == 2) {
                   DirectByteStorage.updateChatFilter(0, filterOpcode, 1, effectiveChannel);
                 }
                 GrowableIntList.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ScreenNavigationHelpers.quickChatChannel, messageOpcode, (String) null);
@@ -1186,7 +1186,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime116 = gr.a(true, "ninja_skills");
           if (var2Lifetime116 != null) {
-            tm.field_h = MenuButton.a(var2Lifetime116, (byte) 123);
+            OutgoingPacketHelpers.field_h = MenuButton.a(var2Lifetime116, (byte) 123);
           }
           var2Lifetime117 = gr.a(true, "oh_no");
           if (null != var2Lifetime117) {
@@ -1350,7 +1350,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime157 = gr.a(true, "explain_super");
           if (var2Lifetime157 != null) {
-            tm.field_d = MenuButton.a(var2Lifetime157, (byte) 100);
+            OutgoingPacketHelpers.field_d = MenuButton.a(var2Lifetime157, (byte) 100);
           }
           var2Lifetime158 = gr.a(true, "explain_extra");
           if (var2Lifetime158 != null) {
@@ -1510,9 +1510,9 @@ final class QuickChatMenu extends UiComponent {
           GameplayAudioEvent.a(param0 + 14569);
           if (GameTransportActions.canUseGameTransport(param0 - 104)) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 1);
-            ActivityIndicatorWidget.a(0, 10000);
+            ActivityIndicatorWidget.flushTransportPackets(0, 10000);
           }
-          hn.a((byte) 53);
+          hn.closeGameTransport((byte) 53);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

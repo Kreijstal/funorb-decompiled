@@ -185,7 +185,7 @@ final class WidgetTheme {
           jh.decodedSpriteWidths = new int[nl.decodedSpriteCount];
           SocketConnector.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
           TextHotspotRegion.decodedSpriteHeights = new int[nl.decodedSpriteCount];
-          tm.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
+          OutgoingPacketHelpers.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
           PopupWidgetLayer.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
           ArrayWidgetGroup.decodedSpriteOffsetX = new int[nl.decodedSpriteCount];
           metadataPacket.position = -(8 * nl.decodedSpriteCount) + (-7 + data.length);
@@ -283,7 +283,7 @@ final class WidgetTheme {
                 }
               }
             }
-            tm.decodedSpriteHasAlpha[spriteIndex] = hasNonopaqueAlpha != 0;
+            OutgoingPacketHelpers.decodedSpriteHasAlpha[spriteIndex] = hasNonopaqueAlpha != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

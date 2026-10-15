@@ -77,89 +77,89 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final void applyRsa(java.math.BigInteger exponent, java.math.BigInteger modulus, int obfuscationGuard) {
-        int var4_int = 0;
-        byte[] var5 = null;
-        java.math.BigInteger var6 = null;
-        java.math.BigInteger var7 = null;
-        byte[] var8 = null;
+        int inputLength = 0;
+        byte[] inputBytes = null;
+        java.math.BigInteger plaintext = null;
+        java.math.BigInteger ciphertext = null;
+        byte[] outputBytes = null;
         try {
-          var4_int = this.position;
+          inputLength = this.position;
           this.position = 0;
-          var5 = new byte[var4_int];
-          this.readBytes(0, var5, 110, var4_int);
-          var6 = new java.math.BigInteger(var5);
-          var7 = var6.modPow(exponent, modulus);
-          var8 = var7.toByteArray();
+          inputBytes = new byte[inputLength];
+          this.readBytes(0, inputBytes, 110, inputLength);
+          plaintext = new java.math.BigInteger(inputBytes);
+          ciphertext = plaintext.modPow(exponent, modulus);
+          outputBytes = ciphertext.toByteArray();
           this.position = 0;
-          this.writeShort((byte) 126, var8.length);
+          this.writeShort((byte) 126, outputBytes.length);
           if (obfuscationGuard != 19775) {
             this.position = -13;
           }
-          this.writeBytes(var8, obfuscationGuard - 19776, 0, var8.length);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wq.FA(" + (exponent != null ? "{...}" : "null") + ',' + (modulus != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+          this.writeBytes(outputBytes, obfuscationGuard - 19776, 0, outputBytes.length);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "wq.FA(" + (exponent != null ? "{...}" : "null") + ',' + (modulus != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
     final void encryptBlocks(int obfuscationGuard, int[] key) {
-        int incrementValue$0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = BrickABrac.field_J ? 1 : 0;
+        int roundsBeforeDecrement = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String keySummary = null;
+        RuntimeException caughtFailure = null;
+        int blockCount = 0;
+        RuntimeException failure = null;
+        int blockIndex = 0;
+        int leftWord = 0;
+        int rightWord = 0;
+        int roundSum = 0;
+        int roundDelta = 0;
+        int roundsRemaining = 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var3_int = this.position / 8;
+          blockCount = this.position / 8;
           this.position = 0;
-          var4 = 0;
+          blockIndex = 0;
           while (true) {
-            if (var4 >= var3_int) {
+            if (blockIndex >= blockCount) {
               if (obfuscationGuard != 18146) {
                 this.readUnsignedSmart(-91);
               }
               return;
             }
-            var5 = this.readInt(255);
-            var6 = this.readInt(255);
-            var7 = 0;
-            var8 = -1640531527;
-            var9 = 32;
+            leftWord = this.readInt(255);
+            rightWord = this.readInt(255);
+            roundSum = 0;
+            roundDelta = -1640531527;
+            roundsRemaining = 32;
             while (true) {
-              incrementValue$0 = var9;
-              var9--;
-              if (incrementValue$0 > 0) {
-                var5 = var5 + (var6 + (var6 << 4 ^ var6 >>> 5) ^ var7 + key[3 & var7]);
-                var7 = var7 + var8;
-                var6 = var6 + (key[(var7 & 6958) >>> 11] + var7 ^ (var5 >>> 5 ^ var5 << 4) + var5);
+              roundsBeforeDecrement = roundsRemaining;
+              roundsRemaining--;
+              if (roundsBeforeDecrement > 0) {
+                leftWord = leftWord + (rightWord + (rightWord << 4 ^ rightWord >>> 5) ^ roundSum + key[3 & roundSum]);
+                roundSum = roundSum + roundDelta;
+                rightWord = rightWord + (key[(roundSum & 6958) >>> 11] + roundSum ^ (leftWord >>> 5 ^ leftWord << 4) + leftWord);
                 continue;
               }
               break;
             }
             this.position = this.position - 8;
-            this.writeInt(var5, (byte) -79);
-            this.writeInt(var6, (byte) -79);
-            var4++;
+            this.writeInt(leftWord, (byte) -79);
+            this.writeInt(rightWord, (byte) -79);
+            blockIndex++;
           }
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("wq.HA(").append(obfuscationGuard).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("wq.HA(").append(obfuscationGuard).append(',');
           if (key == null) {
-            stackIn_13_2 = "null";
+            keySummary = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            keySummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(keySummary).append(')').toString());
         }
     }
 
@@ -328,16 +328,16 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final void padToPosition(byte obfuscationGuard, int endPosition) {
-        int fieldTemp$0 = 0;
-        int var4;
-        var4 = BrickABrac.field_J ? 1 : 0;
+        int paddingIndex = 0;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         if (obfuscationGuard != -74) {
           this.readUnsignedByte(-125);
         }
         while (endPosition > this.position) {
-          fieldTemp$0 = this.position;
+          paddingIndex = this.position;
           this.position = this.position + 1;
-          this.data[fieldTemp$0] = (byte) 0;
+          this.data[paddingIndex] = (byte) 0;
         }
     }
 

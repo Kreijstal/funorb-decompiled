@@ -122,7 +122,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           return (String) null;
         }
         if (!LabeledWidget.field_P.ensureIndex((byte) -127)) {
-          return tm.field_e;
+          return OutgoingPacketHelpers.field_e;
         }
         if (!LabeledWidget.field_P.ensureGroupAvailableByName("commonui", -28138)) {
           return WidgetGroup.field_F + " - " + LabeledWidget.field_P.getGroupProgressByName(0, "commonui") + "%";

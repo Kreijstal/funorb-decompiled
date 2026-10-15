@@ -6,7 +6,7 @@ final class RadialSelectorWidget extends FocusableWidget {
     int sectorCount;
     int radius;
     static String field_V;
-    static PacketBuffer field_N;
+    static PacketBuffer encryptedPayloadScratch;
     static boolean field_L;
     int markedSector;
     static LoginCredentialKind emailLoginKind;
@@ -22,7 +22,7 @@ final class RadialSelectorWidget extends FocusableWidget {
     public static void a(int param0) {
         field_V = null;
         field_M = null;
-        field_N = null;
+        encryptedPayloadScratch = null;
         field_P = null;
         field_S = null;
         if (param0 >= 89) {

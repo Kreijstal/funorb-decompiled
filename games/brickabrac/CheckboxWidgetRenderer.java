@@ -27,7 +27,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
 
     final static void submitTableRow(int opcode, byte obfuscationGuard, TableRowSubmission submission) {
         try {
-          tm.pendingTableSubmissions.addLast(submission, (byte) 3);
+          OutgoingPacketHelpers.pendingTableSubmissions.addLast(submission, (byte) 3);
           if (obfuscationGuard != 25) {
             CheckboxWidgetRenderer.a(20, false);
           }

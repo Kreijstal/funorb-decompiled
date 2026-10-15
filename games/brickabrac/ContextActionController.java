@@ -1914,7 +1914,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("waitingfor_graphics", (byte) -128);
                 if (null != var2) {
-                  tm.field_e = MenuButton.a(var2, (byte) 118);
+                  OutgoingPacketHelpers.field_e = MenuButton.a(var2, (byte) 118);
                 }
                 var2 = nk.a("waitingfor_models", (byte) -122);
                 if (var2 != null) {

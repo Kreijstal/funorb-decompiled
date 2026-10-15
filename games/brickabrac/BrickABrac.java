@@ -589,7 +589,7 @@ public final class BrickABrac extends InteractiveGameClient {
         hm.a(8);
         Rasterizer2D.clearStaticReferences();
         mc.a(-128);
-        tm.a(obfuscationGuard);
+        OutgoingPacketHelpers.a(obfuscationGuard);
         ParallaxMusicHelpers.b(78);
         AppletGameShell.d(19254);
         CappedUrlRequest.b(-16637);

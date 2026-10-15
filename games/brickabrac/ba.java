@@ -59,7 +59,7 @@ class ba extends DualLinkNode {
     final static void f(int param0) {
         fa var1 = (fa) (SoundCache.field_f.first(-39));
         if (var1 == null) {
-          hn.a((byte) 106);
+          hn.closeGameTransport((byte) 106);
           return;
         }
         BitPacketBuffer var2 = jl.incomingPackets;

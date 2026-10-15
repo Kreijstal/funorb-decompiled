@@ -104,7 +104,7 @@ final class ClientException extends RuntimeException {
         for (var2 = 0; var2 < nl.decodedSpriteCount; var2++) {
           var3 = TextHotspotRegion.decodedSpriteHeights[var2] * jh.decodedSpriteWidths[var2];
           var21 = GameOverlayHelpers.decodedSpriteIndices[var2];
-          if (!tm.decodedSpriteHasAlpha[var2]) {
+          if (!OutgoingPacketHelpers.decodedSpriteHasAlpha[var2]) {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var6 < var3; var6++) {

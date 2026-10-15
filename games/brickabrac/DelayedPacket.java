@@ -6,7 +6,7 @@ final class DelayedPacket extends IntrusiveNode {
     static String field_i;
     static String field_q;
     static String field_n;
-    int opcode;
+    int opcodeOrByteCount;
     static int field_m;
     static String field_o;
     byte[] data;
@@ -92,13 +92,13 @@ final class DelayedPacket extends IntrusiveNode {
         LobbyUiHelpers.paintNineSliceFrame(642, 482, -40, -1, LoginCredentialKind.field_h, -1);
     }
 
-    DelayedPacket(long deliverAfterMillis, int opcode, byte[] data) {
+    DelayedPacket(long deliverAfterMillis, int opcodeOrByteCount, byte[] data) {
         try {
-          this.opcode = opcode;
+          this.opcodeOrByteCount = opcodeOrByteCount;
           this.data = data;
           this.deliverAfterMillis = deliverAfterMillis;
         } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pg.<init>(" + deliverAfterMillis + ',' + opcode + ',' + (data != null ? "{...}" : "null") + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pg.<init>(" + deliverAfterMillis + ',' + opcodeOrByteCount + ',' + (data != null ? "{...}" : "null") + ')');
         }
     }
 

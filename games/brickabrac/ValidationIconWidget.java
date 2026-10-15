@@ -127,7 +127,7 @@ final class ValidationIconWidget extends FocusableWidget {
             break;
           }
           if (request == null) {
-            hn.a((byte) 64);
+            hn.closeGameTransport((byte) 64);
             return;
           }
           recordCount = packet.readUnsignedByte(255);
@@ -278,7 +278,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 var11_ref_String = "";
               }
               TextFieldValidator.outgoingPackets.writeCp1252String(var11_ref_String, -1);
-              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
+              LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
               TextFieldValidator.outgoingPackets.backfillShortLength(-var10 + TextFieldValidator.outgoingPackets.position, 255);
             } else {
               tq.field_f.position = 0;
@@ -303,10 +303,10 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.writeByte(-10, 16);
               TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 1;
               var9 = TextFieldValidator.outgoingPackets.position;
-              LevelDecoder.a(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
+              LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
               TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
-            ActivityIndicatorWidget.a(-1, 10000);
+            ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
             rf.connectionPhase = DiagnosticTextLine.awaitingValidationReply;
           }
           if (DiagnosticTextLine.awaitingValidationReply == rf.connectionPhase &&
@@ -321,7 +321,7 @@ final class ValidationIconWidget extends FocusableWidget {
               if (var9Lifetime1 == 248) {
                 MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -108), param6 + 5);
                 DirectByteStorage.field_e = ConditionalTextValue.field_d;
-                hn.a((byte) 96);
+                hn.closeGameTransport((byte) 96);
                 RadialSelectorRenderer.field_d = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -347,7 +347,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 for (var12 = 0; var11 > var12; var12++) {
                   ArchiveSourceManager.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
                 }
-                hn.a((byte) 79);
+                hn.closeGameTransport((byte) 79);
                 RadialSelectorRenderer.field_d = false;
                 stackIn_43_0 = 100 + var11;
                 return stackIn_43_0;
@@ -364,7 +364,7 @@ final class ValidationIconWidget extends FocusableWidget {
             } else {
               DirectByteStorage.field_e = jl.incomingPackets.readCp1252String(-1);
             }
-            hn.a((byte) 106);
+            hn.closeGameTransport((byte) 106);
             RadialSelectorRenderer.field_d = false;
             stackIn_51_0 = IntrusiveHashTable.currentPacketOpcode;
             return stackIn_51_0;

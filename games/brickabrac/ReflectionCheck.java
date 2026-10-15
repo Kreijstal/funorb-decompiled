@@ -4,7 +4,7 @@
 final class ReflectionCheck extends IntrusiveNode {
     byte[][][] serializedArguments;
     int operationCount;
-    static java.security.SecureRandom field_p;
+    static java.security.SecureRandom payloadKeyRandom;
     PlatformTask[] fieldTasks;
     int[] fieldSetValues;
     static int[] parisBackgroundColors;
@@ -43,7 +43,7 @@ final class ReflectionCheck extends IntrusiveNode {
         field_n = (int[][]) null;
         field_o = null;
         parisBackgroundColors = null;
-        field_p = null;
+        payloadKeyRandom = null;
     }
 
     final static boolean containsRectanglePoint(int left, int rectangleHeight, int rectangleWidth, byte obfuscationGuard, int pointY, int pointX, int top) {

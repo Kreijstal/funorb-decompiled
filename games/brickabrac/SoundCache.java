@@ -246,7 +246,7 @@ final class SoundCache {
               TextFieldValidator.outgoingPackets.position = 0;
               TextFieldValidator.outgoingPackets.writeByte(28, 14);
               TextFieldValidator.outgoingPackets.writeByte(107, NanoGameClock.field_s.getCredentialKind(13).wireCode);
-              ActivityIndicatorWidget.a(-1, 10000);
+              ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
               rf.connectionPhase = GameScreen.awaitingLoginPreludeReply;
             }
             if (rf.connectionPhase == GameScreen.awaitingLoginPreludeReply &&
@@ -283,7 +283,7 @@ final class SoundCache {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  hn.a((byte) 52);
+                  hn.closeGameTransport((byte) 52);
                   RadialSelectorRenderer.field_d = false;
                   stackIn_29_0 = var6_intLifetime1;
                   return stackIn_29_0;
@@ -377,7 +377,7 @@ final class SoundCache {
             }
             if (rf.connectionPhase == MenuScreen.awaitingLoginErrorBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -41)) {
-              hn.a((byte) 58);
+              hn.closeGameTransport((byte) 58);
               if (IntrusiveHashTable.currentPacketOpcode == 7 &&
                 !RadialSelectorRenderer.field_d) {
                 RadialSelectorRenderer.field_d = true;

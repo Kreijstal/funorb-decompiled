@@ -226,7 +226,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (var2 == 0 ||
           var2 == 1) {
           if (AchievementIcon.field_j == 11 &&
-            tm.field_a == 0) {
+            OutgoingPacketHelpers.field_a == 0) {
             LabeledToggleRenderer.b(~param0);
           }
           return var2;
@@ -352,9 +352,9 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
           }
           if (var4 == 3) {
-            if (tm.field_a != -1 &&
-              0 != tm.field_a) {
-              tm.field_a = -1;
+            if (OutgoingPacketHelpers.field_a != -1 &&
+              0 != OutgoingPacketHelpers.field_a) {
+              OutgoingPacketHelpers.field_a = -1;
               pp.a((byte) 79);
             }
             if (!param2) {
@@ -534,7 +534,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                                 return;
                               }
                               AlignedIconLabel.a("MGS1: " + WhirlpoolHasher.c((byte) -71), (Throwable) null, 119);
-                              hn.a((byte) 101);
+                              hn.closeGameTransport((byte) 101);
                               return;
                             }
                             stackIn_31_0 = 67;
@@ -566,7 +566,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           return;
         }
         AlignedIconLabel.a("MGS2: " + WhirlpoolHasher.c((byte) -66), (Throwable) null, 89);
-        hn.a((byte) 71);
+        hn.closeGameTransport((byte) 71);
     }
 
     private final void loadAppletParameters(int obfuscationGuard, String gameName, int gameVersion, int width, int height) {
@@ -724,7 +724,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             !(ProxySocketConnector.c(1) <= var3) &&
             !(var3 >= QuickChatCategoryRegistry.a((byte) -35))) {
             this.reconnectRequested = false;
-            hn.a((byte) 91);
+            hn.closeGameTransport((byte) 91);
             FarmBackground.g(120);
             FullscreenFailureKind.a(NinjaBackground.field_s, (byte) -113, 2);
             rj.b(guardCode ^ -111);
@@ -732,33 +732,33 @@ abstract class GameConnectionShell extends AppletGameShell {
             NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
           }
         }
-        if (tm.field_a == -1 ||
-          tm.field_a == 0) {
-          stackIn_23_0 = (tm.field_a != -1) ? 0 : 1;
+        if (OutgoingPacketHelpers.field_a == -1 ||
+          OutgoingPacketHelpers.field_a == 0) {
+          stackIn_23_0 = (OutgoingPacketHelpers.field_a != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          tm.field_a = GameCanvas.a(false);
+          OutgoingPacketHelpers.field_a = GameCanvas.a(false);
           if (var3Lifetime1 != 0 &&
-            tm.field_a == 0 &&
+            OutgoingPacketHelpers.field_a == 0 &&
             AchievementIcon.field_j == 11 &&
             !ui.a(false)) {
             LabeledToggleRenderer.b(0);
           }
-          if (-1 != tm.field_a &&
-            tm.field_a != 0) {
+          if (-1 != OutgoingPacketHelpers.field_a &&
+            OutgoingPacketHelpers.field_a != 0) {
             NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
           }
         }
-        if (tm.field_a != -1 &&
-          tm.field_a != 0) {
+        if (OutgoingPacketHelpers.field_a != -1 &&
+          OutgoingPacketHelpers.field_a != 0) {
           if (10 <= clientStage) {
             if (10 <= AchievementIcon.field_j) {
               FarmBackground.g(114);
-              if (tm.field_a == 3) {
+              if (OutgoingPacketHelpers.field_a == 3) {
                 FullscreenFailureKind.a(nk.field_d, (byte) -49, 256);
               } else {
-                if (tm.field_a != 4) {
-                  if (tm.field_a != 2) {
-                    if (5 == tm.field_a) {
+                if (OutgoingPacketHelpers.field_a != 4) {
+                  if (OutgoingPacketHelpers.field_a != 2) {
+                    if (5 == OutgoingPacketHelpers.field_a) {
                       FullscreenFailureKind.a(u.field_b, (byte) -48, 5);
                     } else {
                       FullscreenFailureKind.a(np.field_e, (byte) -55, 256);
@@ -773,10 +773,10 @@ abstract class GameConnectionShell extends AppletGameShell {
               ConnectionPhase.field_e = true;
             }
           } else {
-            if (tm.field_a != 3) {
-              if (4 != tm.field_a) {
-                if (tm.field_a != 2) {
-                  if (5 != tm.field_a) {
+            if (OutgoingPacketHelpers.field_a != 3) {
+              if (4 != OutgoingPacketHelpers.field_a) {
+                if (OutgoingPacketHelpers.field_a != 2) {
+                  if (5 != OutgoingPacketHelpers.field_a) {
                     this.a("js5connect", 4000);
                   } else {
                     this.a("outofdate", 4000);
@@ -792,18 +792,18 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
           }
         }
-        if ((tm.field_a != -1 &&
-          0 != tm.field_a ||
+        if ((OutgoingPacketHelpers.field_a != -1 &&
+          0 != OutgoingPacketHelpers.field_a ||
           ui.a(false)) &&
           NanoGameClock.field_i <= MonotonicTime.nowMillis(false)) {
           ConnectionPhase.field_e = false;
-          if (tm.field_a != -1 &&
-            0 != tm.field_a) {
-            tm.field_a = -1;
+          if (OutgoingPacketHelpers.field_a != -1 &&
+            0 != OutgoingPacketHelpers.field_a) {
+            OutgoingPacketHelpers.field_a = -1;
             pp.a((byte) -101);
           }
         }
-        if (tm.field_a == 0 &&
+        if (OutgoingPacketHelpers.field_a == 0 &&
           !ui.a(false)) {
           LevelCompleteScreen.field_C = false;
         }

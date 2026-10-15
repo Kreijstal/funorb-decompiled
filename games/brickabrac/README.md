@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 344 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 345 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -409,5 +409,9 @@ Native fixtures compare row glyph events and frame geometry against independent 
 Integer helpers now name signed ASCII validation/parsing for bases 2 through 36, decimal/radix wrappers, and their digit/sign/overflow locals. Independent ASCII grammar and BigInteger bounds check signed limits, long inputs, leading zeroes, optional plus signs, mixed case, invalid radices and null precedence. Every UTF-16 code unit is checked against decimal validation; StringBuilder and a CharSequence that rejects toString verify direct character access. Raw/named traces retain contextual exception causes.
 
 The shared widget-theme cache, fullscreen frame disposal and social-list panel dispatcher are named from their direct contracts. Fixtures verify an already installed theme is returned by identity. Theme construction, real OS fullscreen disposal, live social-panel dispatch and original-JAR equivalence remain unverified.
+
+OutgoingPacketHelpers exposes encrypted-payload construction and delayed flushing. RSA wraps marker10, four generated key words and the original 16-bit payload length; payload bytes are zero-padded to eight-byte blocks and encrypted with 32 XTEA rounds. Names now identify key randomness, both reusable scratch packets, delay/jitter settings, the outgoing FIFO and the last write time. DelayedPacket.opcodeOrByteCount explicitly covers incoming opcodes and outgoing byte counts. Packet encryption/RSA/padding locals and the packet-content wrapper are named as well.
+
+Deterministic key fixtures compare complete wire bytes against a separate unsigned-word XTEA model and BigInteger RSA framing, including zero-block known output, signed keys, input offsets, zero/unaligned lengths, 65535/65536 length truncation, untouched source bytes and scratch reuse/replacement. Additional checks cover random-generator initialization, contextual null failures and all 256 reflected CRC64 table entries. Controlled in-memory socket rings verify keepalive phase gates, unavailable transports, guarded writes, error closure, copied delayed payloads, future-head FIFO blocking, one-entry delivery, strict deadlines, jitter/clamping and disabled-delay behavior. No writer threads or real sockets are started. Live authentication/server interoperability and original-JAR equivalence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

@@ -29,13 +29,13 @@ final class vd {
             availableBytes = WhirlpoolHasher.gameTransport.available(10434);
             if (0 >= availableBytes) {
               if (availableBytes < 0) {
-                hn.a((byte) 123);
+                hn.closeGameTransport((byte) 123);
                 return false;
               }
               if (MembershipBenefitsScreen.f(obfuscationGuard - 6812) <= 30000L) {
                 return false;
               }
-              hn.a((byte) 123);
+              hn.closeGameTransport((byte) 123);
               return false;
             }
             if (availableBytes > length - jl.incomingPackets.position) {
@@ -52,7 +52,7 @@ final class vd {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            hn.a((byte) 111);
+            hn.closeGameTransport((byte) 111);
             return false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

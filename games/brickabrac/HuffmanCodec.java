@@ -7,7 +7,7 @@ final class HuffmanCodec {
     private int[] decodeTrie;
     static NodeDeque pendingRankingsRequests;
     static int field_g;
-    static double field_b;
+    static double outgoingDelayJitterMillis;
     static String field_c;
     private int[] codewords;
     static RgbSprite field_e;
@@ -669,7 +669,7 @@ final class HuffmanCodec {
     static {
         pendingRankingsRequests = new NodeDeque();
         field_c = "Passwords can only contain letters and numbers";
-        field_b = 0.0;
+        outgoingDelayJitterMillis = 0.0;
         field_d = "Age:";
     }
 }

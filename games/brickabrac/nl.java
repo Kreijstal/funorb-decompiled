@@ -58,7 +58,7 @@ final class nl {
               TextFieldRenderer.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
               we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
               UiComponent.previousPacketOpcode = IntrusiveHashTable.currentPacketOpcode;
-              IntrusiveHashTable.currentPacketOpcode = queuedPacket.opcode;
+              IntrusiveHashTable.currentPacketOpcode = queuedPacket.opcodeOrByteCount;
               return true;
             }
           }

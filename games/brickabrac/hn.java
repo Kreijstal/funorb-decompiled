@@ -47,12 +47,12 @@ final class hn {
         return var4Lifetime1;
     }
 
-    final static void a(byte param0) {
+    final static void closeGameTransport(byte obfuscationGuard) {
         if (WhirlpoolHasher.gameTransport != null) {
           WhirlpoolHasher.gameTransport.close((byte) 113);
           WhirlpoolHasher.gameTransport = null;
         }
-        if (param0 < 49) {
+        if (obfuscationGuard < 49) {
           ninjaFarSprite = (RgbSprite) null;
           return;
         }

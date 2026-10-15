@@ -269,7 +269,7 @@ final class MusicEnvelope {
           if (var2 == 0) {
             var4_ref_pe = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.first(-37));
             if (var4_ref_pe == null) {
-              hn.a((byte) 57);
+              hn.closeGameTransport((byte) 57);
               return;
             }
             var5_int = ga.incomingPacketLength - var10.position;
@@ -301,11 +301,11 @@ final class MusicEnvelope {
               levelResult.unlink((byte) 111);
               return;
             }
-            hn.a((byte) 110);
+            hn.closeGameTransport((byte) 110);
             return;
           }
           AlignedIconLabel.a("LR1: " + WhirlpoolHasher.c((byte) -96), (Throwable) null, 53);
-          hn.a((byte) 52);
+          hn.closeGameTransport((byte) 52);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

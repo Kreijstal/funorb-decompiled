@@ -44,7 +44,7 @@ final class OpacityWidget extends SingleChildWidget {
           DisplayModeInfo.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(102) << 16);
           FullscreenFailureDialog.field_kb = 72;
           qm.field_a = 40;
-          tm.field_g = 11;
+          OutgoingPacketHelpers.field_g = 11;
           localPlayerMask = (1 << localPlayerCount) - 1;
           randomSeeds = new int[localPlayerCount];
           seedStorage = randomSeeds;

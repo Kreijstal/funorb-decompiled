@@ -110,7 +110,7 @@ final class RankingsRequest extends IntrusiveNode {
           QuickChatMenu.field_Wb = 3;
           WidgetTextLayout.resultCounterTwo = 23;
           DisplayModeInfo.field_e = 51550 + (ButtonWidgetRenderer.field_w.nextInt(92) << 16);
-          tm.field_g = 11;
+          OutgoingPacketHelpers.field_g = 11;
           qm.field_a = 40;
           FullscreenFailureDialog.field_kb = 72;
           DiagnosticTextLine.a((byte) 66);

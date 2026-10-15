@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BrickMotionPath extends MovingBody {
-    static long field_q;
+    static long lastGameWriteMillis;
     static RgbSprite[] field_r;
     private int waypointCount;
     NodeDeque waypoints;

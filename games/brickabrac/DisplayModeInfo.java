@@ -6,7 +6,7 @@ final class DisplayModeInfo {
     int height;
     static String field_b;
     int refreshRate;
-    static NodeDeque field_a;
+    static NodeDeque delayedOutgoingPackets;
     int width;
     int bitDepth;
     static int field_e;
@@ -96,11 +96,11 @@ final class DisplayModeInfo {
         field_g = null;
         if (param0 != 19) {
           field_b = (String) null;
-          field_a = null;
+          delayedOutgoingPackets = null;
           field_b = null;
           return;
         }
-        field_a = null;
+        delayedOutgoingPackets = null;
         field_b = null;
     }
 

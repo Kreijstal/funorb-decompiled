@@ -138,7 +138,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                     null != ClientResourceHelpers.currentLobbyGame) {
                     var5 = 1;
                   }
-                  if (tm.getChatFilter(var5, (byte) 18) == 2) {
+                  if (OutgoingPacketHelpers.getChatFilter(var5, (byte) 18) == 2) {
                     DirectByteStorage.updateChatFilter(0, param2, 1, var5);
                   }
                   GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_String);
@@ -245,7 +245,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                       null != ClientResourceHelpers.currentLobbyGame) {
                       var5Lifetime1 = 1;
                     }
-                    if (tm.getChatFilter(var5Lifetime1, (byte) 18) == 2) {
+                    if (OutgoingPacketHelpers.getChatFilter(var5Lifetime1, (byte) 18) == 2) {
                       DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime1);
                     }
                     GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_StringLifetime1);
@@ -353,7 +353,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                   null != ClientResourceHelpers.currentLobbyGame) {
                   var5Lifetime2 = 1;
                 }
-                if (tm.getChatFilter(var5Lifetime2, (byte) 18) == 2) {
+                if (OutgoingPacketHelpers.getChatFilter(var5Lifetime2, (byte) 18) == 2) {
                   DirectByteStorage.updateChatFilter(0, param2, 1, var5Lifetime2);
                 }
                 GrowableIntList.writeChatMessage(-1, DualLinkNode.quickChatRecipient, (byte) -106, ScreenNavigationHelpers.quickChatChannel, param1, var4_ref_StringLifetime2);

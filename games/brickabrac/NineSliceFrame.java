@@ -28,7 +28,7 @@ class NineSliceFrame {
         }
         var1 = jh.decodedSpriteWidths[0] * TextHotspotRegion.decodedSpriteHeights[0];
         var16 = GameOverlayHelpers.decodedSpriteIndices[0];
-        if (!tm.decodedSpriteHasAlpha[0]) {
+        if (!OutgoingPacketHelpers.decodedSpriteHasAlpha[0]) {
           var8 = new int[var1];
           for (var5_int = 0; var5_int < var1; var5_int++) {
             var8[var5_int] = qp.decodedSpritePalette[IntrusiveHashIterator.a((int) var16[var5_int], 255)];

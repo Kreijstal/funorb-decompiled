@@ -9,7 +9,7 @@ final class TabbedPane extends UiComponent {
     private UiComponent[] tabButtons;
     private UiComponent[] panels;
     static String field_Pb;
-    static int field_Ub;
+    static int outgoingDelayMillis;
     static BackgroundScene currentBackground;
     static String field_Tb;
 
@@ -362,7 +362,7 @@ final class TabbedPane extends UiComponent {
             whirlpoolRoundConstants[var0] = RegistrationResponseDialog.a(ch.a(255L, whirlpoolRoundTables[7][7 + var1]), RegistrationResponseDialog.a(ch.a(65280L, whirlpoolRoundTables[6][var1 + 6]), RegistrationResponseDialog.a(ch.a(16711680L, whirlpoolRoundTables[5][var1 + 5]), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(whirlpoolRoundTables[3][var1 + 3], 1095216660480L), RegistrationResponseDialog.a(RegistrationResponseDialog.a(ch.a(71776119061217280L, whirlpoolRoundTables[1][var1 + 1]), ch.a(whirlpoolRoundTables[0][var1], -72057594037927936L)), ch.a(whirlpoolRoundTables[2][var1 + 2], 280375465082880L))), ch.a(whirlpoolRoundTables[4][4 + var1], 4278190080L)))));
         }
         field_Pb = "Set up new unrated game";
-        field_Ub = 0;
+        outgoingDelayMillis = 0;
         field_Tb = "Retry";
     }
 }

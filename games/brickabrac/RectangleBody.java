@@ -7,7 +7,7 @@ class RectangleBody extends MovingBody {
     static RgbSprite field_p;
     int width256;
     static UiComponent field_q;
-    static PacketBuffer field_r;
+    static PacketBuffer encryptedKeyHeaderScratch;
 
     boolean resolveCircleCollision(CircleBody circle, byte obfuscationGuard) {
         RuntimeException failureContext = null;
@@ -341,7 +341,7 @@ class RectangleBody extends MovingBody {
 
     public static void d(byte param0) {
         field_p = null;
-        field_r = null;
+        encryptedKeyHeaderScratch = null;
         field_q = null;
         int var1 = 51 / ((-46 - param0) / 34);
         field_t = null;

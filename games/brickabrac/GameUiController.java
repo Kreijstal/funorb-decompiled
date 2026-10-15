@@ -159,11 +159,11 @@ final class GameUiController implements GameUiLifecycle {
         QuickChatPhraseDefinition.field_C = TextChoiceDialogHitTest.a(13, true);
         FriendListUi.a(NameEntryPopup.field_Rb, FriendListUi.field_c, 0);
         AccountContentTransitionLayer.startupResources = new ResourcePreparationQueue(82);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 126, WidgetGroup.field_F, NameEntryPopup.field_Rb);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 124, WidgetGroup.field_F, FriendListUi.field_c);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "lobby", 126, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "lobby", 124, WidgetGroup.field_F, FriendListUi.field_c);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(OutgoingPacketHelpers.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
         AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "basic", -126, ConditionalTextValue.field_k, ScorePopup.field_l);
         AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "kartika13", 127, ConditionalTextValue.field_k, FriendListUi.field_c);
         AccountContentTransitionLayer.startupResources.addArchive(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);

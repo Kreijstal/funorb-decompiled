@@ -165,7 +165,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
             }
             maskRequest = (AchievementMaskRequest) (StrongCacheEntry.pendingAchievementMaskRequests.first(obfuscationGuard - 84));
             if (maskRequest == null) {
-              hn.a((byte) 102);
+              hn.closeGameTransport((byte) 102);
               return;
             }
             maskRequest.complete = true;
@@ -176,7 +176,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
           if (1 == responseType) {
             submission = (AchievementSubmission) (DateFieldsWidget.pendingAchievementSubmissions.first(obfuscationGuard ^ 86));
             if (submission == null) {
-              hn.a((byte) 103);
+              hn.closeGameTransport((byte) 103);
               return;
             }
             submission.unlink((byte) 111);
@@ -184,12 +184,12 @@ final class MultiValueSliderWidget extends FocusableWidget {
           }
           if (responseType != 2) {
             AlignedIconLabel.a("A1: " + WhirlpoolHasher.c((byte) -92), (Throwable) null, 88);
-            hn.a((byte) 52);
+            hn.closeGameTransport((byte) 52);
             return;
           }
           emptyMaskRequest = (AchievementMaskRequest) (StrongCacheEntry.pendingAchievementMaskRequests.first(-42));
           if (emptyMaskRequest == null) {
-            hn.a((byte) 119);
+            hn.closeGameTransport((byte) 119);
             return;
           }
           emptyMaskRequest.achievementMask = Ball.createAchievementMask(8);

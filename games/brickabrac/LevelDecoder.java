@@ -6,14 +6,14 @@ final class LevelDecoder {
     static String field_c;
     static int field_b;
 
-    final static void a(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, byte param3, java.math.BigInteger param4) {
+    final static void writeEncryptedPacketContents(PacketBuffer destination, PacketBuffer sourcePacket, java.math.BigInteger rsaExponent, byte obfuscationGuard, java.math.BigInteger rsaModulus) {
         try {
-          tm.a(param0, param1.position, (byte) 126, param2, 0, param1.data, param4);
-          if (param3 != -72) {
+          OutgoingPacketHelpers.writeEncryptedPayload(destination, sourcePacket.position, (byte) 126, rsaExponent, 0, sourcePacket.data, rsaModulus);
+          if (obfuscationGuard != -72) {
             LevelDecoder.a((byte) -97);
           }
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "dq.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "dq.B(" + (destination != null ? "{...}" : "null") + ',' + (sourcePacket != null ? "{...}" : "null") + ',' + (rsaExponent != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (rsaModulus != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -66,7 +66,7 @@ final class LevelDecoder {
           }
           if (!obfuscationGuard) {
             var14 = (java.math.BigInteger) null;
-            LevelDecoder.a((PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null, (byte) 57, (java.math.BigInteger) null);
+            LevelDecoder.writeEncryptedPacketContents((PacketBuffer) null, (PacketBuffer) null, (java.math.BigInteger) null, (byte) 57, (java.math.BigInteger) null);
           }
           if (!motionPaths.isEmpty(false)) {
             throw new IllegalArgumentException();

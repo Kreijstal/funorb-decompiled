@@ -273,18 +273,18 @@ final class MenuSelection {
                 break;
               }
               if (submission == null) {
-                hn.a((byte) 104);
+                hn.closeGameTransport((byte) 104);
                 return;
               }
               submission.unlink((byte) 111);
               return;
             }
             AlignedIconLabel.a("A1: " + WhirlpoolHasher.c((byte) -101), (Throwable) null, 123);
-            hn.a((byte) 60);
+            hn.closeGameTransport((byte) 60);
           } else {
             pendingRequest = (BytePayloadRequest) (EmailConfirmationValidator.pendingBytePayloadRequests.first(-110));
             if (pendingRequest == null) {
-              hn.a((byte) 76);
+              hn.closeGameTransport((byte) 76);
               return;
             }
             replyPayloadLength = incoming.readUnsignedByte(255);
@@ -296,7 +296,7 @@ final class MenuSelection {
             }
             incoming.position = incoming.position + 4;
             if (!incoming.verifyCrc32((byte) -27)) {
-              hn.a((byte) 86);
+              hn.closeGameTransport((byte) 86);
               return;
             }
             pendingRequest.unlink((byte) 111);

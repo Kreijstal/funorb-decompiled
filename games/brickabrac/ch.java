@@ -104,7 +104,7 @@ final class ch {
               return;
             }
             AlignedIconLabel.a("F1: " + WhirlpoolHasher.c((byte) -104), (Throwable) null, 58);
-            hn.a((byte) 98);
+            hn.closeGameTransport((byte) 98);
             if (obfuscationGuard < 52) {
               ch.handleSocialListResponse((byte) -91);
             }

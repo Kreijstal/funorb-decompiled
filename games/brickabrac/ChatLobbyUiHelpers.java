@@ -40,7 +40,7 @@ final class ChatLobbyUiHelpers {
           visible = 0;
           if (!TextWidgetRenderer.field_e &&
             visibleCount < WidgetTheme.chatHistoryCategoryLimit) {
-            filterLevel = tm.getChatFilter(candidateMessage.channel, (byte) 18);
+            filterLevel = OutgoingPacketHelpers.getChatFilter(candidateMessage.channel, (byte) 18);
             if (filterLevel <= candidateMessage.getRetentionCategory(true) && (candidateMessage.systemMessage ||
               !AchievementBrowserScreen.isIgnoredPlayer(125, candidateMessage.senderName))) {
               visible = 1;
@@ -414,7 +414,7 @@ final class ChatLobbyUiHelpers {
                                     break regionExit1;
                                   default:
                                     AlignedIconLabel.a("L1: " + WhirlpoolHasher.c((byte) -121), (Throwable) null, 108);
-                                    hn.a((byte) 84);
+                                    hn.closeGameTransport((byte) 84);
                                     break regionExit1;
                                 }
                               }

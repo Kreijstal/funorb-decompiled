@@ -462,7 +462,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           } while (var4 == 0);
         }
         HuffmanCodec.a(14114);
-        tm.a((byte) 110, 0);
+        OutgoingPacketHelpers.flushGamePackets((byte) 110, 0);
         if (ui.a(false)) {
           var2 = this.o(-105);
           if (0 == var2 ||
