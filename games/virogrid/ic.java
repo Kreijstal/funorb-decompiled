@@ -868,11 +868,9 @@ final class ic {
         int var12;
         int var13;
         String var14;
+        String var15;
         String var16;
         String var17;
-        String var18;
-        String var19;
-        String var20;
         var13 = Virogrid.field_F ? 1 : 0;
         ah.a(400, 100, 39, 1141646, 120);
         ah.a(400, 100, 40, 1141646, 120);
@@ -920,10 +918,10 @@ final class ic {
         } else {
           pe.a(10, 1141646, 319, (byte) 99, 25);
           pe.a(10, 1141646, 320, (byte) -124, 25);
-          var17 = Integer.toString(this.field_C.field_z[0]);
-          var18 = Integer.toString(this.field_C.field_z[1]);
-          hd.field_b.a(var17, 316, 30, 30136, -1);
-          hd.field_b.b(var18, 326, 30, 16777215, -1);
+          var16 = Integer.toString(this.field_C.field_z[0]);
+          var17 = Integer.toString(this.field_C.field_z[1]);
+          hd.field_b.a(var16, 316, 30, 30136, -1);
+          hd.field_b.b(var17, 326, 30, 16777215, -1);
           if (this.field_C.field_A >= 0) {
             var5 = oi.a(new String[]{Integer.toString((-1 + (this.field_w + 50)) / 50)}, ej.field_O, 2);
             stackIn_5_0 = (this.field_C.field_A == 0) ? 30136 : 16777215;
@@ -943,14 +941,13 @@ final class ic {
               mc.field_b.a(var5, 516, 30, 16777215, -1);
             } else {
               var14 = this.field_C.field_c[this.field_C.field_A];
-              var19 = var14;
-              var7_ref_String = var19;
-              var8 = -hd.field_b.a(var18) + 268;
+              var7_ref_String = var14;
+              var8 = -hd.field_b.a(var17) + 268;
               var9_ref_String = oi.a(new String[]{var14}, ec.field_y, 2);
               while (var8 < hd.field_b.a(var9_ref_String)) {
-                var16 = var7_ref_String.substring(0, var19.length() - 1);
-                var20 = var16;
-                var9_ref_String = oi.a(new String[]{var20 + "..."}, ec.field_y, 2);
+                var15 = var7_ref_String.substring(0, var7_ref_String.length() - 1);
+                var7_ref_String = var15;
+                var9_ref_String = oi.a(new String[]{var15 + "..."}, ec.field_y, 2);
               }
               stackIn_16_0 = mc.field_b;
               stackIn_16_1 = var9_ref_String;

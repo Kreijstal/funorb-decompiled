@@ -225,7 +225,6 @@ final class nn implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(byte param0, sna param1) {
-        sna var5 = null;
         int var3 = BachelorFridge.field_y;
         sna var4 = (sna) (param1.field_z.b((byte) 90));
         sna var2 = var4;
@@ -234,8 +233,8 @@ final class nn implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           var4.field_p = 0;
           var4.field_I = 0;
           var4.field_rb = 0;
-          var5 = (sna) (param1.field_z.c(param0 ^ -126));
-          var5 = var5;
+          var4 = (sna) (param1.field_z.c(param0 ^ -126));
+          var2 = var4;
         }
         if (param0 != -126) {
           return;

@@ -1117,22 +1117,13 @@ public final class TetraLink extends ph {
     private final void s(int param0) {
         int stackIn_26_0 = 0;
         int stackIn_32_0 = 0;
-        int[] stackIn_58_0 = null;
-        int stackIn_58_1 = 0;
         int[] stackIn_59_0 = null;
         int stackIn_59_1 = 0;
-        int[] stackIn_60_0 = null;
-        int stackIn_60_1 = 0;
         int stackIn_60_2 = 0;
         int stackIn_64_0 = 0;
         int stackIn_64_1 = 0;
-        int stackIn_68_0 = 0;
-        int stackIn_68_1 = 0;
         int stackIn_74_0 = 0;
         int stackIn_74_1 = 0;
-        int stackIn_76_0 = 0;
-        int stackIn_76_1 = 0;
-        int statePc = 0;
         int var2 = 0;
         int var3 = 0;
         ob var4 = null;
@@ -1147,8 +1138,8 @@ public final class TetraLink extends ph {
         int var10 = 0;
         int[] var10_ref_int__ = null;
         int var11 = 0;
-        int[] var11_ref_int__ = null;
         ko var11_ref_ko = null;
+        int[] var11_ref_int__ = null;
         int var12 = 0;
         ko var12_ref_ko = null;
         int var13 = 0;
@@ -1173,1091 +1164,453 @@ public final class TetraLink extends ph {
         int[] var30 = null;
         int[] var31 = null;
         int[] var32 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var18 = null;
-                    var16 = field_J;
-                    var3 = 72 / ((param0 - 23) / 54);
-                    var2 = 1;
-                    if (~kb.field_t != ~ed.field_O) {
-                        statePc = 3;
-                    } else {
-                        statePc = 1;
+        ko var12_ref_koLifetime1;
+        int stackIn_64_0Lifetime1;
+        int stackIn_64_1Lifetime1;
+        int stackIn_74_0Lifetime1;
+        int stackIn_74_1Lifetime1;
+        int var5Lifetime1;
+        int var11Lifetime1;
+        int var11Lifetime2;
+        int var12Lifetime1;
+        int var13Lifetime1;
+        int var14Lifetime1;
+        int var15_intLifetime1;
+        int var11Lifetime1Lifetime1;
+        var18 = null;
+        var16 = field_J;
+        var3 = 72 / ((param0 - 23) / 54);
+        var2 = 1;
+        if (~kb.field_t == ~ed.field_O &&
+          af.field_h == hm.field_a) {
+          if (kb.field_t != -2) {
+            qk.a(7230, -1, hm.field_a, true, kb.field_t);
+          } else {
+            var2 = 0;
+            qf.a(1, false);
+          }
+        } else {
+          if (kb.field_t != -2) {
+            if (ed.field_O != -2) {
+              if (hd.field_v < 16) {
+                qk.a(7230, hd.field_v + 1, hm.field_a, false, kb.field_t);
+              } else {
+                qk.a(7230, -hd.field_v + 32 + 1, af.field_h, false, ed.field_O);
+              }
+            } else {
+              if (16 > hd.field_v) {
+                qk.a(7230, -1, hm.field_a, false, kb.field_t);
+              } else {
+                var2 = 0;
+                qf.a(1, false);
+              }
+            }
+          } else {
+            if (16 <= hd.field_v) {
+              qk.a(7230, -1, af.field_h, false, ed.field_O);
+            } else {
+              var2 = 0;
+              qf.a(1, false);
+            }
+          }
+        }
+        var4 = mf.field_w;
+        if (cf.a(0, (byte) 110)) {
+          var5 = bl.field_Xb >> 3;
+          var6 = le.d(var5, -28583);
+          var7_int = ua.a(82, var5);
+          var8_int = var6 * 300 >> 16;
+          var9_int = var7_int * 300 >> 16;
+          var10 = 210;
+          if (!jo.field_a) {
+            var5 = var5 - (il.field_S << 6);
+          } else {
+            var5 = var5 + (il.field_S << 6);
+          }
+          var6 = le.d(var5, -28583);
+          var7_int = ua.a(-122, var5);
+          ng.field_s = new int[]{var8_int, var10, var9_int, var7_int, 0, -var6, 0, 65536, 0, var6, 0, var7_int};
+          var18_ref = (ob) (ac.field_a.a(false, -37, ec.field_l, true));
+          var18_ref.a(ng.field_s);
+          var4 = new ob(new ob[]{var4, var18_ref}, 2);
+        }
+        lh.field_t = new ob();
+        la.field_g = new ob();
+        ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> 10, 100, var4, bd.field_b[11] >> 10, bd.field_b[9] >> 10);
+        if (var2 != 0) {
+          ra.c(0, 0, 640, 480, 3158064);
+          var5Lifetime1 = (dh.field_e % 20480 << 12) % 83886080;
+          ta.a(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var5Lifetime1, 59918628 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
+          ta.a(ka.field_h, new double[]{-768.0 + 400.0 * vh.field_b, 20.0, 400.0 * vh.field_b + 600.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1 + 59918628, 83820544 + var5Lifetime1, 0, 16711680, wk.field_i.field_g);
+          ta.a(ka.field_h, new double[]{400.0 * vh.field_b - 768.0, 20.0, -(600.0 + vh.field_b * 400.0)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5Lifetime1, var5Lifetime1 + 23967451, 0, 16711680, wk.field_i.field_g);
+          hg.a(kn.field_d, (byte) -121);
+          ta.a(ka.field_h, new double[]{420.0, 20.0, 0.0}, new double[]{0.0, 0.0, -1.0}, 100.0, 200.0, kn.field_d, 2621440, 10420224, 10485760, 26148864, wk.field_i.field_g);
+          lh.field_t.a(bd.field_b, ti.field_d);
+          var6 = dh.field_e % 64;
+          if (var6 >= 32) {
+            stackIn_26_0 = 48 - var6;
+          } else {
+            stackIn_26_0 = var6 - 16;
+          }
+          var6 = stackIn_26_0;
+          var6 = var6 << 2;
+          if (wk.field_i.field_n) {
+            var6 = 0;
+          }
+          var28 = new int[3];
+          var21 = var28;
+          var7 = var21;
+          var26 = new int[3];
+          var19 = var26;
+          var8 = var19;
+          var7[0] = (int)s.field_c << 4;
+          var27 = new int[3];
+          var20 = var27;
+          var9 = var20;
+          var26[0] = 800;
+          var27[0] = var6;
+          var7[1] = -(int)s.field_c << 4;
+          var26[1] = 800;
+          var27[1] = var6;
+          var28[2] = 0;
+          var26[2] = 1280;
+          var27[2] = 0;
+          ta.a(bd.field_b, var28, var26, var27);
+          if (wk.field_i.field_j) {
+            var10 = dh.field_e % 128;
+            if (var10 < 64) {
+              stackIn_32_0 = var10;
+            } else {
+              stackIn_32_0 = 128 - var10;
+            }
+            var10 = stackIn_32_0;
+            var11 = var10 * 2 + 38784;
+            mj.a(240, 0, 0, var28, var26, var27, var11, var11, var11);
+            var6 = var28[0];
+            var7[0] = var28[1];
+            var28[1] = var6;
+            var6 = var26[0];
+            var8[0] = var26[1];
+            var26[1] = var6;
+            var6 = var27[0];
+            var9[0] = var27[1];
+            var27[1] = var6;
+            mj.a(240, 0, 0, var28, var26, var27, var11, var11, var11);
+          }
+          if (wk.field_i.field_n) {
+            var31 = bl.field_Lb.field_C;
+            var24 = var31;
+            var17 = var24;
+            var32 = var17;
+            var25 = var32;
+            var10_ref_int__ = var25;
+            if (sk.field_c > 0) {
+              var14 = -sk.field_c + 256;
+              var13 = 256000;
+              while (var13 > 0) {
+                var13--;
+                var12 = var31[var13];
+                var11Lifetime1 = var12 & 16711935;
+                var12 = var12 & 65280;
+                var11Lifetime1 = var11Lifetime1 * var14;
+                var12 = var12 * var14;
+                var11Lifetime1 = var11Lifetime1 & -16711936;
+                var12 = var12 & 16711680;
+                var11Lifetime1 = var11Lifetime1 + (16711935 * sk.field_c & -16711936);
+                var12 = var12 + (16711680 & sk.field_c * 65280);
+                var17[var13] = mc.a(var12, var11Lifetime1) >>> 8;
+              }
+            }
+            boolean decompiledFrameRemainder0 = true;
+            if (128.0f >= rn.field_d) {
+              var12 = 200;
+              while (0 < var12) {
+                var12--;
+                var13 = var12 * 1280;
+                var11Lifetime1Lifetime1 = 640;
+                while (true) {
+                  var11Lifetime1Lifetime1--;
+                  if (0 >= var11Lifetime1Lifetime1) {
+                    break;
+                  }
+                  var10_ref_int__[var13] = pl.a(var32[var13], 16711422);
+                  var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
+                  var13++;
+                }
+              }
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              if (!(256.0f >= rn.field_d)) {
+                var11Lifetime1Lifetime1 = 256000;
+                while (var11Lifetime1Lifetime1 > 0) {
+                  var11Lifetime1Lifetime1--;
+                  var10_ref_int__[var11Lifetime1Lifetime1] = pl.a(var32[var11Lifetime1Lifetime1], 16579836);
+                  var10_ref_int__[var11Lifetime1Lifetime1] = var10_ref_int__[var11Lifetime1Lifetime1] >> 2;
+                  var10_ref_int__[var11Lifetime1Lifetime1] = var10_ref_int__[var11Lifetime1Lifetime1] * 3;
+                }
+              } else {
+                var12 = 100;
+                while (var12 > 0) {
+                  var12--;
+                  var13 = var12 * 2560;
+                  var11Lifetime1Lifetime1 = 1280;
+                  while (true) {
+                    var11Lifetime1Lifetime1--;
+                    if (var11Lifetime1Lifetime1 <= 0) {
+                      break;
                     }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (af.field_h == hm.field_a) {
-                        /* Inlined CFG state: 14. */
-                        {
-                            if (kb.field_t == -2) {
-                                /* Inlined CFG state: 16. */
-                                {
-                                    var2 = 0;
-                                    qf.a(1, false);
-                                    statePc = 17;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 15. */
-                                {
-                                    qk.a(7230, -1, hm.field_a, true, kb.field_t);
-                                    statePc = 17;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        statePc = 3;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    if (kb.field_t != -2) {
-                        /* Inlined CFG state: 7. */
-                        {
-                            if (ed.field_O != -2) {
-                                /* Inlined CFG state: 11. */
-                                {
-                                    if (hd.field_v < 16) {
-                                        /* Inlined CFG state: 13. */
-                                        {
-                                            qk.a(7230, hd.field_v + 1, hm.field_a, false, kb.field_t);
-                                            statePc = 17;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        /* Inlined CFG state: 12. */
-                                        {
-                                            qk.a(7230, -hd.field_v + 32 + 1, af.field_h, false, ed.field_O);
-                                            statePc = 17;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            } else {
-                                /* Inlined CFG state: 8. */
-                                {
-                                    if (16 > hd.field_v) {
-                                        /* Inlined CFG state: 10. */
-                                        {
-                                            qk.a(7230, -1, hm.field_a, false, kb.field_t);
-                                            statePc = 17;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        /* Inlined CFG state: 9. */
-                                        {
-                                            var2 = 0;
-                                            qf.a(1, false);
-                                            statePc = 17;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 4. */
-                        {
-                            if (16 <= hd.field_v) {
-                                /* Inlined CFG state: 6. */
-                                {
-                                    qk.a(7230, -1, af.field_h, false, ed.field_O);
-                                    statePc = 17;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 5. */
-                                {
-                                    var2 = 0;
-                                    qf.a(1, false);
-                                    statePc = 17;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 17: {
-                    var4 = mf.field_w;
-                    if (!cf.a(0, (byte) 110)) {
-                        statePc = 22;
-                    } else {
-                        statePc = 18;
-                    }
-                    continue stateLoop;
-                }
-                case 18: {
-                    var5 = bl.field_Xb >> 3;
-                    var6 = le.d(var5, -28583);
-                    var7_int = ua.a(82, var5);
-                    var8_int = var6 * 300 >> 16;
-                    var9_int = var7_int * 300 >> 16;
-                    var10 = 210;
-                    if (!jo.field_a) {
-                        statePc = 20;
-                    } else {
-                        statePc = 19;
-                    }
-                    continue stateLoop;
-                }
-                case 19: {
-                    var5 = var5 + (il.field_S << 6);
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 20: {
-                    var5 = var5 - (il.field_S << 6);
-                    statePc = 21;
-                    continue stateLoop;
-                }
-                case 21: {
-                    var6 = le.d(var5, -28583);
-                    var7_int = ua.a(-122, var5);
-                    ng.field_s = new int[]{var8_int, var10, var9_int, var7_int, 0, -var6, 0, 65536, 0, var6, 0, var7_int};
-                    var18_ref = (ob) (ac.field_a.a(false, -37, ec.field_l, true));
-                    var18_ref.a(ng.field_s);
-                    var4 = new ob(new ob[]{var4, var18_ref}, 2);
-                    statePc = 22;
-                    continue stateLoop;
-                }
-                case 22: {
-                    lh.field_t = new ob();
-                    la.field_g = new ob();
-                    ui.a(la.field_g, 0, 0, lh.field_t, 0, bd.field_b[10] >> 10, 100, var4, bd.field_b[11] >> 10, bd.field_b[9] >> 10);
-                    if (var2 == 0) {
-                        statePc = 155;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 23. */
-                        {
-                            ra.c(0, 0, 640, 480, 3158064);
-                            var5 = (dh.field_e % 20480 << 12) % 83886080;
-                            ta.a(ka.field_h, new double[]{-768.0, 20.0, 0.0}, new double[]{0.0, 0.0, 1.0}, 600.0, 200.0, ja.field_i, 23967451 + var5, 59918628 + var5, 0, 16711680, wk.field_i.field_g);
-                            ta.a(ka.field_h, new double[]{-768.0 + 400.0 * vh.field_b, 20.0, 400.0 * vh.field_b + 600.0}, new double[]{vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5 + 59918628, 83820544 + var5, 0, 16711680, wk.field_i.field_g);
-                            ta.a(ka.field_h, new double[]{400.0 * vh.field_b - 768.0, 20.0, -(600.0 + vh.field_b * 400.0)}, new double[]{-vh.field_b, 0.0, vh.field_b}, 400.0, 200.0, ja.field_i, var5, var5 + 23967451, 0, 16711680, wk.field_i.field_g);
-                            hg.a(kn.field_d, (byte) -121);
-                            ta.a(ka.field_h, new double[]{420.0, 20.0, 0.0}, new double[]{0.0, 0.0, -1.0}, 100.0, 200.0, kn.field_d, 2621440, 10420224, 10485760, 26148864, wk.field_i.field_g);
-                            lh.field_t.a(bd.field_b, ti.field_d);
-                            var6 = dh.field_e % 64;
-                            if (var6 >= 32) {
-                                /* Inlined CFG state: 25. */
-                                {
-                                    stackIn_26_0 = 48 - var6;
-                                    statePc = 26;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 24. */
-                                {
-                                    stackIn_26_0 = var6 - 16;
-                                    statePc = 26;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 26: {
-                    var6 = stackIn_26_0;
-                    var6 = var6 << 2;
-                    if (!wk.field_i.field_n) {
-                        statePc = 28;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 27. */
-                        {
-                            var6 = 0;
-                            statePc = 28;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 28: {
-                    var28 = new int[3];
-                    var21 = var28;
-                    var7 = var21;
-                    var26 = new int[3];
-                    var19 = var26;
-                    var8 = var19;
-                    var7[0] = (int)s.field_c << 4;
-                    var27 = new int[3];
-                    var20 = var27;
-                    var9 = var20;
-                    var26[0] = 800;
-                    var27[0] = var6;
-                    var7[1] = -(int)s.field_c << 4;
-                    var26[1] = 800;
-                    var27[1] = var6;
-                    var28[2] = 0;
-                    var26[2] = 1280;
-                    var27[2] = 0;
-                    ta.a(bd.field_b, var28, var26, var27);
-                    if (!wk.field_i.field_j) {
-                        statePc = 33;
-                    } else {
-                        statePc = 29;
-                    }
-                    continue stateLoop;
-                }
-                case 29: {
-                    var10 = dh.field_e % 128;
-                    if (var10 < 64) {
-                        /* Inlined CFG state: 31. */
-                        {
-                            stackIn_32_0 = var10;
-                            statePc = 32;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 30. */
-                        {
-                            stackIn_32_0 = 128 - var10;
-                            statePc = 32;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 32: {
-                    var10 = stackIn_32_0;
-                    var11 = var10 * 2 + 38784;
-                    mj.a(240, 0, 0, var28, var26, var27, var11, var11, var11);
-                    var6 = var28[0];
-                    var7[0] = var28[1];
-                    var28[1] = var6;
-                    var6 = var26[0];
-                    var8[0] = var26[1];
-                    var26[1] = var6;
-                    var6 = var27[0];
-                    var9[0] = var27[1];
-                    var27[1] = var6;
-                    mj.a(240, 0, 0, var28, var26, var27, var11, var11, var11);
-                    statePc = 33;
-                    continue stateLoop;
-                }
-                case 33: {
-                    if (wk.field_i.field_n) {
-                        /* Inlined CFG state: 111. */
-                        {
-                            var31 = bl.field_Lb.field_C;
-                            var24 = var31;
-                            var17 = var24;
-                            var32 = var17;
-                            var25 = var32;
-                            var10_ref_int__ = var25;
-                            if (sk.field_c > 0) {
-                                statePc = 113;
-                            } else {
-                                statePc = 116;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 34. */
-                        {
-                            var29 = bl.field_Lb.field_C;
-                            var22 = var29;
-                            var10_ref_int__ = var22;
-                            var30 = rh.field_M.field_C;
-                            var23 = var30;
-                            var11_ref_int__ = var23;
-                            if (sk.field_c > 0) {
-                                statePc = 36;
-                            } else {
-                                statePc = 42;
-                            }
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 36: {
-                    var12 = 256 - sk.field_c;
-                    var15_int = 256000;
-                    statePc = 37;
-                    continue stateLoop;
-                }
-                case 37: {
-                    if (var15_int <= 0) {
-                        /* Inlined CFG state: 39. */
-                        {
-                            var15_int = 256000;
-                            statePc = 40;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 38. */
-                        {
-                            var15_int--;
-                            var14 = bl.field_Lb.field_C[var15_int];
-                            var13 = 16711935 & var14;
-                            var14 = 65280 & var14;
-                            var13 = var13 * var12;
-                            var14 = var14 * var12;
-                            var13 = var13 & -16711936;
-                            var13 = var13 + (sk.field_c * 16711935 & -16711936);
-                            var14 = var14 & 16711680;
-                            var14 = var14 + (16711680 & 65280 * sk.field_c);
-                            bl.field_Lb.field_C[var15_int] = mc.a(var14, var13) >>> 8;
-                            statePc = 37;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 40: {
-                    if (var15_int <= 0) {
-                        statePc = 42;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 41. */
-                        {
-                            var15_int--;
-                            var14 = rh.field_M.field_C[var15_int];
-                            var13 = var14 & 16711935;
-                            var13 = var13 * var12;
-                            var14 = var14 & 65280;
-                            var13 = var13 & -16711936;
-                            var14 = var14 * var12;
-                            var13 = var13 + (sk.field_c * 16711935 & -16711936);
-                            var14 = var14 & 16711680;
-                            var14 = var14 + (sk.field_c * 65280 & 16711680);
-                            rh.field_M.field_C[var15_int] = mc.a(var13, var14) >>> 8;
-                            statePc = 40;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 42: {
-                    if (!(rn.field_d <= 128.0f)) {
-                        /* Inlined CFG state: 52. */
-                        {
-                            if (256.0f >= rn.field_d) {
-                                /* Inlined CFG state: 62. */
-                                {
-                                    var13 = 110;
-                                    var14 = -100;
-                                    statePc = 63;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 53. */
-                                {
-                                    var12 = 255890;
-                                    var13 = 400;
-                                    statePc = 54;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 43. */
-                        {
-                            var13 = 110;
-                            var14 = -200;
-                            statePc = 44;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 44: {
-                    if (var14 >= 0) {
-                        statePc = 81;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 45. */
-                        {
-                            var12 = 420;
-                            statePc = 46;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 46: {
-                    var12--;
-                    if (var12 < 0) {
-                        /* Inlined CFG state: 51. */
-                        {
-                            var13 += 860;
-                            var14++;
-                            statePc = 44;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 47. */
-                        {
-                            var10_ref_int__[var13] = pl.a(var29[var13], 16711422);
-                            var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
-                            if (var30[var13] != 16777215) {
-                                /* Inlined CFG state: 49. */
-                                {
-                                    var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
-                                    var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
-                                    statePc = 50;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 48. */
-                                {
-                                    var11_ref_int__[var13] = 13619151;
-                                    statePc = 50;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 50: {
+                    var10_ref_int__[var13] = pl.a(var32[var13], 16711422);
+                    var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
                     var13++;
-                    statePc = 46;
-                    continue stateLoop;
+                  }
                 }
-                case 54: {
-                    var13--;
-                    if (0 >= var13) {
-                        statePc = 81;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 55. */
-                        {
-                            var14 = 421;
-                            statePc = 56;
-                            continue stateLoop;
-                        }
-                    }
+              }
+            }
+            bd.a(bl.field_Lb, 6);
+            var11_ref_ko = (ko) (eg.field_J.c(false));
+            while (var11_ref_ko != null) {
+              rf.a(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << 3, 10000);
+              var11_ref_ko = (ko) (eg.field_J.a((byte) -70));
+            }
+            if (10 == kb.field_t) {
+              this.f((byte) 85);
+            }
+            fh.a(true);
+            if (10 != kb.field_t) {
+              if (ka.field_h[11] < 0.0) {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, true);
+              } else {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
+              }
+              if (!(0 >= wk.field_i.field_l)) {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+              }
+            } else {
+              if (ka.field_h[11] < 0.0) {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(s.field_c * 22.0f / 21.0f), (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, true);
+              } else {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
+              }
+              if (!(wk.field_i.field_l <= 0)) {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+              }
+            }
+          } else {
+            var29 = bl.field_Lb.field_C;
+            var22 = var29;
+            var10_ref_int__ = var22;
+            var30 = rh.field_M.field_C;
+            var23 = var30;
+            var11_ref_int__ = var23;
+            if (sk.field_c > 0) {
+              var12 = 256 - sk.field_c;
+              var15_int = 256000;
+              while (var15_int > 0) {
+                var15_int--;
+                var14 = bl.field_Lb.field_C[var15_int];
+                var13 = 16711935 & var14;
+                var14 = 65280 & var14;
+                var13 = var13 * var12;
+                var14 = var14 * var12;
+                var13 = var13 & -16711936;
+                var13 = var13 + (sk.field_c * 16711935 & -16711936);
+                var14 = var14 & 16711680;
+                var14 = var14 + (16711680 & 65280 * sk.field_c);
+                bl.field_Lb.field_C[var15_int] = mc.a(var14, var13) >>> 8;
+              }
+              var15_intLifetime1 = 256000;
+              while (var15_intLifetime1 > 0) {
+                var15_intLifetime1--;
+                var14 = rh.field_M.field_C[var15_intLifetime1];
+                var13 = var14 & 16711935;
+                var13 = var13 * var12;
+                var14 = var14 & 65280;
+                var13 = var13 & -16711936;
+                var14 = var14 * var12;
+                var13 = var13 + (sk.field_c * 16711935 & -16711936);
+                var14 = var14 & 16711680;
+                var14 = var14 + (sk.field_c * 65280 & 16711680);
+                rh.field_M.field_C[var15_intLifetime1] = mc.a(var13, var14) >>> 8;
+              }
+            }
+            boolean decompiledFrameCompleted0 = true;
+            if (rn.field_d <= 128.0f) {
+              var13 = 110;
+              var14 = -200;
+              while (var14 < 0) {
+                var12 = 420;
+                while (true) {
+                  var12--;
+                  if (var12 < 0) {
+                    var13 += 860;
+                    var14++;
+                    break;
+                  }
+                  var10_ref_int__[var13] = pl.a(var29[var13], 16711422);
+                  var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
+                  if (var30[var13] != 16777215) {
+                    var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
+                    var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
+                  } else {
+                    var11_ref_int__[var13] = 13619151;
+                  }
+                  var13++;
                 }
-                case 56: {
+              }
+            } else {
+              if (!(256.0f >= rn.field_d)) {
+                var12 = 255890;
+                var13 = 400;
+                while (true) {
+                  var13--;
+                  if (0 >= var13) {
+                    decompiledFrameCompleted0 = false;
+                    break;
+                  }
+                  var14 = 421;
+                  while (true) {
                     var14--;
                     if (var14 <= 0) {
-                        /* Inlined CFG state: 61. */
-                        {
-                            var12 -= 220;
-                            statePc = 54;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 57. */
-                        {
-                            var12--;
-                            var10_ref_int__[var12] = (pl.a(16579836, var29[var12]) >> 2) * 3;
-                            stackIn_59_0 = (int[]) (var11_ref_int__);
-                            stackIn_58_0 = stackIn_59_0;
-                            stackIn_59_1 = var12;
-                            stackIn_58_1 = stackIn_59_1;
-                            if (var30[var12] == 16777215) {
-                                /* Inlined CFG state: 59. */
-                                {
-                                    stackIn_60_0 = stackIn_59_0;
-                                    stackIn_60_1 = stackIn_59_1;
-                                    stackIn_60_2 = 15263976;
-                                    statePc = 60;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 58. */
-                                {
-                                    stackIn_60_0 = stackIn_58_0;
-                                    stackIn_60_1 = stackIn_58_1;
-                                    stackIn_60_2 = 3 * (pl.a(16579836, var30[var12]) >> 2);
-                                    statePc = 60;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
+                      var12 -= 220;
+                      break;
                     }
-                }
-                case 60: {
-                    stackIn_60_0[stackIn_60_1] = stackIn_60_2;
-                    statePc = 56;
-                    continue stateLoop;
-                }
-                case 63: {
-                    stackIn_64_0 = -1;
-                    stackIn_64_1 = ~var14;
-                    statePc = 64;
-                    continue stateLoop;
-                }
-                case 64: {
-                    if (stackIn_64_0 >= stackIn_64_1) {
-                        statePc = 81;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 65. */
-                        {
-                            var12 = 420;
-                            statePc = 66;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 66: {
                     var12--;
-                    if (var12 < 0) {
-                        /* Inlined CFG state: 72. */
-                        {
-                            var12 = 420;
-                            var13 += 220;
-                            statePc = 73;
-                            continue stateLoop;
-                        }
+                    var10_ref_int__[var12] = (pl.a(16579836, var29[var12]) >> 2) * 3;
+                    stackIn_59_0 = var11_ref_int__;
+                    stackIn_59_1 = var12;
+                    if (var30[var12] == 16777215) {
+                      stackIn_60_2 = 15263976;
                     } else {
-                        /* Inlined CFG state: 67. */
-                        {
-                            var10_ref_int__[var13] = pl.a(var29[var13] >> 1, 8355711);
-                            stackIn_74_0 = 16777215;
-                            stackIn_68_0 = stackIn_74_0;
-                            stackIn_74_1 = var30[var13];
-                            stackIn_68_1 = stackIn_74_1;
-                            if (false) {
-                                statePc = 74;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 68. */
-                                {
-                                    if (stackIn_68_0 != stackIn_68_1) {
-                                        /* Inlined CFG state: 70. */
-                                        {
-                                            var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
-                                            var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
-                                            statePc = 71;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        /* Inlined CFG state: 69. */
-                                        {
-                                            var11_ref_int__[var13] = 13619151;
-                                            statePc = 71;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                      stackIn_60_2 = 3 * (pl.a(16579836, var30[var12]) >> 2);
                     }
+                    stackIn_59_0[stackIn_59_1] = stackIn_60_2;
+                  }
                 }
-                case 71: {
-                    var13++;
-                    statePc = 66;
-                    continue stateLoop;
-                }
-                case 73: {
+              }
+              if (decompiledFrameCompleted0) {
+                var13 = 110;
+                var14 = -100;
+                while (true) {
+                  stackIn_64_0 = -1;
+                  stackIn_64_1 = ~var14;
+                  if (stackIn_64_0 >= stackIn_64_1) {
+                    break;
+                  }
+                  var12 = 420;
+                  while (true) {
                     var12--;
-                    stackIn_74_0 = ~var12;
-                    stackIn_74_1 = -1;
-                    statePc = 74;
-                    continue stateLoop;
-                }
-                case 74: {
-                    if (stackIn_74_0 > stackIn_74_1) {
-                        /* Inlined CFG state: 80. */
-                        {
-                            var13 += 1500;
-                            var14++;
-                            statePc = 63;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 75. */
-                        {
-                            var10_ref_int__[var13] = pl.a(8355711, var29[var13] >> 1);
-                            stackIn_64_0 = -16777216;
-                            stackIn_76_0 = stackIn_64_0;
-                            stackIn_64_1 = ~var30[var13];
-                            stackIn_76_1 = stackIn_64_1;
-                            if (false) {
-                                statePc = 64;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 76. */
-                                {
-                                    if (stackIn_76_0 == stackIn_76_1) {
-                                        /* Inlined CFG state: 78. */
-                                        {
-                                            var11_ref_int__[var13] = 13619151;
-                                            statePc = 79;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        /* Inlined CFG state: 77. */
-                                        {
-                                            var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
-                                            var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
-                                            statePc = 79;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
+                    if (var12 >= 0) {
+                      var10_ref_int__[var13] = pl.a(var29[var13] >> 1, 8355711);
+                      stackIn_74_0 = 16777215;
+                      stackIn_74_1 = var30[var13];
+                      if (stackIn_74_0 != stackIn_74_1) {
+                        var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
+                        var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
+                      } else {
+                        var11_ref_int__[var13] = 13619151;
+                      }
+                      var13++;
+                      continue;
                     }
-                }
-                case 79: {
+                    break;
+                  }
+                  var12 = 420;
+                  var13 += 220;
+                  while (true) {
+                    var12--;
+                    stackIn_74_0Lifetime1 = ~var12;
+                    stackIn_74_1Lifetime1 = -1;
+                    if (stackIn_74_0Lifetime1 > stackIn_74_1Lifetime1) {
+                      break;
+                    }
+                    var10_ref_int__[var13] = pl.a(8355711, var29[var13] >> 1);
+                    stackIn_64_0Lifetime1 = -16777216;
+                    stackIn_64_1Lifetime1 = ~var30[var13];
+                    if (stackIn_64_0Lifetime1 == stackIn_64_1Lifetime1) {
+                      var11_ref_int__[var13] = 13619151;
+                    } else {
+                      var11_ref_int__[var13] = pl.a(var30[var13], 16711422);
+                      var11_ref_int__[var13] = var11_ref_int__[var13] >> 1;
+                    }
                     var13++;
-                    statePc = 73;
-                    continue stateLoop;
+                  }
+                  var13 += 1500;
+                  var14++;
                 }
-                case 81: {
-                    bd.a(bl.field_Lb, 6);
-                    var12_ref_ko = (ko) (eg.field_J.c(false));
-                    statePc = 82;
-                    continue stateLoop;
-                }
-                case 82: {
-                    if (var12_ref_ko == null) {
-                        /* Inlined CFG state: 84. */
-                        {
-                            if (kb.field_t != 10) {
-                                statePc = 86;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 85. */
-                                {
-                                    this.f((byte) 122);
-                                    statePc = 86;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 83. */
-                        {
-                            rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
-                            var12_ref_ko = (ko) (eg.field_J.a((byte) -70));
-                            statePc = 82;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 86: {
-                    rh.field_M.c();
-                    var12_ref_ko = (ko) (eg.field_J.c(false));
-                    statePc = 87;
-                    continue stateLoop;
-                }
-                case 87: {
-                    if (var12_ref_ko == null) {
-                        /* Inlined CFG state: 89. */
-                        {
-                            if (kb.field_t != 10) {
-                                statePc = 91;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 90. */
-                                {
-                                    this.f((byte) 99);
-                                    statePc = 91;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 88. */
-                        {
-                            rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
-                            var12_ref_ko = (ko) (eg.field_J.a((byte) -70));
-                            statePc = 87;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 91: {
-                    fh.a(true);
-                    if (10 != kb.field_t) {
-                        /* Inlined CFG state: 100. */
-                        {
-                            if (ka.field_h[11] < 0.0) {
-                                /* Inlined CFG state: 105. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, false);
-                                    if (wk.field_i.field_l > 0) {
-                                        /* Inlined CFG state: 107. */
-                                        {
-                                            ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
-                                            statePc = 108;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        statePc = 108;
-                                        continue stateLoop;
-                                    }
-                                }
-                            } else {
-                                /* Inlined CFG state: 101. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, false);
-                                    if (wk.field_i.field_l > 0) {
-                                        /* Inlined CFG state: 103. */
-                                        {
-                                            ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
-                                            statePc = 104;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        statePc = 104;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 92. */
-                        {
-                            if (!(ka.field_h[11] < 0.0)) {
-                                /* Inlined CFG state: 96. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 100, 539, 0, 399, wk.field_i.field_g, false);
-                                    if (wk.field_i.field_l > 0) {
-                                        /* Inlined CFG state: 98. */
-                                        {
-                                            ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
-                                            statePc = 99;
-                                            continue stateLoop;
-                                        }
-                                    } else {
-                                        statePc = 99;
-                                        continue stateLoop;
-                                    }
-                                }
-                            } else {
-                                /* Inlined CFG state: 93. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 539, 100, 0, 399, wk.field_i.field_g, false);
-                                    if (0 >= wk.field_i.field_l) {
-                                        statePc = 95;
-                                        continue stateLoop;
-                                    } else {
-                                        /* Inlined CFG state: 94. */
-                                        {
-                                            ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
-                                            statePc = 95;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                case 95: {
-                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
-                    statePc = 109;
-                    continue stateLoop;
-                }
-                case 99: {
-                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
-                    statePc = 109;
-                    continue stateLoop;
-                }
-                case 104: {
-                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
-                    statePc = 109;
-                    continue stateLoop;
-                }
-                case 108: {
-                    ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
-                    statePc = 109;
-                    continue stateLoop;
-                }
-                case 109: {
-                    if (var27[2] <= 0) {
-                        statePc = 149;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 110. */
-                        {
-                            ra.a((md.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (ik.field_a << 4), 65536 / var27[2], 255, oi.field_n);
-                            statePc = 149;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 113: {
-                    var14 = -sk.field_c + 256;
-                    var13 = 256000;
-                    statePc = 114;
-                    continue stateLoop;
-                }
-                case 114: {
-                    if (var13 <= 0) {
-                        statePc = 116;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 115. */
-                        {
-                            var13--;
-                            var12 = var31[var13];
-                            var11 = var12 & 16711935;
-                            var12 = var12 & 65280;
-                            var11 = var11 * var14;
-                            var12 = var12 * var14;
-                            var11 = var11 & -16711936;
-                            var12 = var12 & 16711680;
-                            var11 = var11 + (16711935 * sk.field_c & -16711936);
-                            var12 = var12 + (16711680 & sk.field_c * 65280);
-                            var17[var13] = mc.a(var12, var11) >>> 8;
-                            statePc = 114;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 116: {
-                    if (!(128.0f >= rn.field_d)) {
-                        /* Inlined CFG state: 122. */
-                        {
-                            if (!(256.0f >= rn.field_d)) {
-                                /* Inlined CFG state: 128. */
-                                {
-                                    var11 = 256000;
-                                    statePc = 129;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 123. */
-                                {
-                                    var12 = 100;
-                                    statePc = 124;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 117. */
-                        {
-                            var12 = 200;
-                            statePc = 118;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 118: {
-                    if (0 >= var12) {
-                        statePc = 131;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 119. */
-                        {
-                            var12--;
-                            var13 = var12 * 1280;
-                            var11 = 640;
-                            statePc = 120;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 120: {
-                    var11--;
-                    if (0 >= var11) {
-                        statePc = 118;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 121. */
-                        {
-                            var10_ref_int__[var13] = pl.a(var32[var13], 16711422);
-                            var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
-                            var13++;
-                            statePc = 120;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 124: {
-                    if (var12 <= 0) {
-                        statePc = 131;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 125. */
-                        {
-                            var12--;
-                            var13 = var12 * 2560;
-                            var11 = 1280;
-                            statePc = 126;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 126: {
-                    var11--;
-                    if (var11 <= 0) {
-                        statePc = 124;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 127. */
-                        {
-                            var10_ref_int__[var13] = pl.a(var32[var13], 16711422);
-                            var10_ref_int__[var13] = var10_ref_int__[var13] >> 1;
-                            var13++;
-                            statePc = 126;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 129: {
-                    if (var11 <= 0) {
-                        statePc = 131;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 130. */
-                        {
-                            var11--;
-                            var10_ref_int__[var11] = pl.a(var32[var11], 16579836);
-                            var10_ref_int__[var11] = var10_ref_int__[var11] >> 2;
-                            var10_ref_int__[var11] = var10_ref_int__[var11] * 3;
-                            statePc = 129;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 131: {
-                    bd.a(bl.field_Lb, 6);
-                    var11_ref_ko = (ko) (eg.field_J.c(false));
-                    statePc = 132;
-                    continue stateLoop;
-                }
-                case 132: {
-                    if (var11_ref_ko == null) {
-                        /* Inlined CFG state: 134. */
-                        {
-                            if (10 == kb.field_t) {
-                                /* Inlined CFG state: 136. */
-                                {
-                                    this.f((byte) 85);
-                                    statePc = 137;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 137;
-                                continue stateLoop;
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 133. */
-                        {
-                            rf.a(var11_ref_ko.field_r, var11_ref_ko.field_p, var11_ref_ko.field_n << 3, 10000);
-                            var11_ref_ko = (ko) (eg.field_J.a((byte) -70));
-                            statePc = 132;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 137: {
-                    fh.a(true);
-                    if (10 != kb.field_t) {
-                        /* Inlined CFG state: 143. */
-                        {
-                            if (ka.field_h[11] < 0.0) {
-                                /* Inlined CFG state: 145. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, true);
-                                    statePc = 146;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 144. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
-                                    statePc = 146;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 138. */
-                        {
-                            if (ka.field_h[11] < 0.0) {
-                                /* Inlined CFG state: 140. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(s.field_c * 22.0f / 21.0f), (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, true);
-                                    statePc = 141;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 139. */
-                                {
-                                    ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, true);
-                                    statePc = 141;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 141: {
-                    if (wk.field_i.field_l <= 0) {
-                        statePc = 149;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 142. */
-                        {
-                            ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
-                            statePc = 149;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 146: {
-                    if (0 < wk.field_i.field_l) {
-                        /* Inlined CFG state: 148. */
-                        {
-                            ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
-                            statePc = 149;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 149;
-                        continue stateLoop;
-                    }
-                }
-                case 149: {
-                    var15 = (qi) (nd.field_Sb.c(false));
-                    statePc = 150;
-                    continue stateLoop;
-                }
-                case 150: {
-                    if (var15 == null) {
-                        /* Inlined CFG state: 154. */
-                        {
-                            la.field_g.a(bd.field_b, ti.field_d);
-                            statePc = 155;
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 151. */
-                        {
-                            var6 = (var15.field_y >> 8) - (bd.field_b[2] << 6);
-                            var10 = (var15.field_t >> 8) - (bd.field_b[0] << 6);
-                            var11 = -(bd.field_b[1] << 6) + (var15.field_v >> 8);
-                            var14 = bd.field_b[9] * var10 + (bd.field_b[10] * var11 + bd.field_b[11] * var6);
-                            var13 = var6 * bd.field_b[8] + var11 * bd.field_b[7] + bd.field_b[6] * var10;
-                            var12 = bd.field_b[5] * var6 + var10 * bd.field_b[3] + bd.field_b[4] * var11;
-                            var6 = var14 >> 22;
-                            if (var14 <= 0) {
-                                statePc = 153;
-                                continue stateLoop;
-                            } else {
-                                /* Inlined CFG state: 152. */
-                                {
-                                    ra.a((md.field_G << 4) + (var12 >> 9) / var6, (ik.field_a << 4) + (var13 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
-                                    statePc = 153;
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    }
-                }
-                case 153: {
-                    var15 = (qi) (nd.field_Sb.a((byte) -70));
-                    statePc = 150;
-                    continue stateLoop;
-                }
-                case 155: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
             }
+            bd.a(bl.field_Lb, 6);
+            var12_ref_ko = (ko) (eg.field_J.c(false));
+            while (var12_ref_ko != null) {
+              rf.a(var12_ref_ko.field_r, var12_ref_ko.field_p, var12_ref_ko.field_n << 3, 10000);
+              var12_ref_ko = (ko) (eg.field_J.a((byte) -70));
+            }
+            if (kb.field_t == 10) {
+              this.f((byte) 122);
+            }
+            rh.field_M.c();
+            var12_ref_koLifetime1 = (ko) (eg.field_J.c(false));
+            while (var12_ref_koLifetime1 != null) {
+              rf.a(var12_ref_koLifetime1.field_r, var12_ref_koLifetime1.field_p, var12_ref_koLifetime1.field_n << 3, 10000);
+              var12_ref_koLifetime1 = (ko) (eg.field_J.a((byte) -70));
+            }
+            if (kb.field_t == 10) {
+              this.f((byte) 99);
+            }
+            fh.a(true);
+            if (10 != kb.field_t) {
+              if (ka.field_h[11] < 0.0) {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 529, 110, 0, 399, wk.field_i.field_g, false);
+                if (wk.field_i.field_l > 0) {
+                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+                }
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 529, 110, 0, 399, wk.field_i.field_g, false);
+              } else {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, bl.field_Lb, 110, 529, 0, 399, wk.field_i.field_g, false);
+                if (wk.field_i.field_l > 0) {
+                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 40, wk.field_i.field_l);
+                }
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)s.field_c, (double)bo.field_y, rh.field_M, 110, 529, 0, 399, wk.field_i.field_g, false);
+              }
+            } else {
+              if (!(ka.field_h[11] < 0.0)) {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 100, 539, 0, 399, wk.field_i.field_g, false);
+                if (wk.field_i.field_l > 0) {
+                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+                }
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 100, 539, 0, 399, wk.field_i.field_g, false);
+              } else {
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(-jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
+                ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, bl.field_Lb, 539, 100, 0, 399, wk.field_i.field_g, false);
+                if (0 < wk.field_i.field_l) {
+                  ta.a(ka.field_h, new double[]{0.0, 0.0, 0.0}, hi.field_d, (double)s.field_c, (double)bo.field_y, oi.field_n, 1 + (int)(s.field_c / 1.3125f), (int)(s.field_c / 1.100000023841858f));
+                }
+                ta.a(ka.field_h, new double[]{0.0, 0.0, (double)(jl.field_e >> 16)}, hi.field_d, (double)(22.0f * s.field_c / 21.0f), (double)bo.field_y, rh.field_M, 539, 100, 0, 399, wk.field_i.field_g, false);
+              }
+            }
+            if (var27[2] > 0) {
+              ra.a((md.field_G << 4) + (var28[2] << 11) / var27[2], (var26[2] << 13) / var27[2] + (ik.field_a << 4), 65536 / var27[2], 255, oi.field_n);
+            }
+          }
+          var15 = (qi) (nd.field_Sb.c(false));
+          while (var15 != null) {
+            var6 = (var15.field_y >> 8) - (bd.field_b[2] << 6);
+            var10 = (var15.field_t >> 8) - (bd.field_b[0] << 6);
+            var11Lifetime2 = -(bd.field_b[1] << 6) + (var15.field_v >> 8);
+            var14Lifetime1 = bd.field_b[9] * var10 + (bd.field_b[10] * var11Lifetime2 + bd.field_b[11] * var6);
+            var13Lifetime1 = var6 * bd.field_b[8] + var11Lifetime2 * bd.field_b[7] + bd.field_b[6] * var10;
+            var12Lifetime1 = bd.field_b[5] * var6 + var10 * bd.field_b[3] + bd.field_b[4] * var11Lifetime2;
+            var6 = var14Lifetime1 >> 22;
+            if (var14Lifetime1 > 0) {
+              ra.a((md.field_G << 4) + (var12Lifetime1 >> 9) / var6, (ik.field_a << 4) + (var13Lifetime1 >> 9) / var6, 16384 / var6, 5 * var15.field_s / 3, oi.field_n);
+            }
+            var15 = (qi) (nd.field_Sb.a((byte) -70));
+          }
+          la.field_g.a(bd.field_b, ti.field_d);
         }
     }
 

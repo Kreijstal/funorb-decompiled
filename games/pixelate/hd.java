@@ -243,29 +243,25 @@ final class hd {
         int var3Lifetime1;
         int var3Lifetime2;
         int var4Lifetime1;
-        boolean decompiledFrameRemainder0 = true;
-        boolean decompiledFrameCompleted0 = true;
-        var6 = Pixelate.field_H ? 1 : 0;
-        var2 = 0;
-        if (oa.field_j != 1) {
-          this.field_u = this.field_u + 1;
-          var3 = ok.a(this.field_t, -119, 100);
-          var4 = 0;
-          for (var5 = 0; var5 < 6; var5++) {
-            var4 = var4 + ak.field_db[var5];
-            if (var3 < var4) {
-              var2 = var5;
-              decompiledFrameCompleted0 = false;
-              break;
+        {
+          var6 = Pixelate.field_H ? 1 : 0;
+          var2 = 0;
+          if (oa.field_j != 1) {
+            this.field_u = this.field_u + 1;
+            var3 = ok.a(this.field_t, -119, 100);
+            var4 = 0;
+            for (var5 = 0; var5 < 6; var5++) {
+              var4 = var4 + ak.field_db[var5];
+              if (var3 < var4) {
+                var2 = var5;
+                break;
+              }
             }
-          }
-          decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
-        }
-        if ((decompiledFrameRemainder0) &&
-          (decompiledFrameCompleted0)) {
-          var2 = un.field_j.a(0);
-          if (-1 == var2) {
-            return;
+          } else {
+            var2 = un.field_j.a(0);
+            if (-1 == var2) {
+              return;
+            }
           }
         }
         if (param0 >= -72) {

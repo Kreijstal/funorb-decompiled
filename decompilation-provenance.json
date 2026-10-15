@@ -1,17 +1,17 @@
 {
   "formatVersion": 1,
-  "capturedAt": "2026-10-11T08:52:39.612Z",
+  "capturedAt": "2026-10-15T07:40:32.716Z",
   "generators": {
     "dekoblokoWork": {
-      "commit": "3ca5318cf9852723bca4ff37712194947c0ec118",
+      "commit": "ccd66572a50ccae3a81e8fd9ac15fd671824ad81",
       "trackedClean": true
     },
     "javaTools": {
-      "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff",
+      "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7",
       "trackedClean": true,
       "sourceArchive": {
-        "sha256": "7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd",
-        "reproduce": "git archive --format=tar 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff | sha256sum",
+        "sha256": "34c1e50357f69cafd0c4550a63beeb07a8b56c8c891bdb31e4fc49a652509613",
+        "reproduce": "git archive --format=tar 00c1c12fb58cdbd6be065e604ee5e9acbcebeff7 | sha256sum",
         "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
       }
     }
@@ -19,7 +19,7 @@
   "invocation": {
     "script": "scripts/decompile-all-games.sh",
     "arguments": [
-      "/tmp/funorb-catalog-rebuild.0TkGOS",
+      "/tmp/funorb-readable-refresh",
       "--jobs",
       "6"
     ],
@@ -34,2473 +34,6 @@
     "runtimeSafetyRetry": "removed-runtime-handlers-with-observable-call-duplication",
     "environment": {
       "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-    }
-  },
-  "publication": {
-    "syncedGames": [
-      "36cardtrick",
-      "aceofskies",
-      "arcanistsmulti",
-      "armiesofgielinor",
-      "bachelorfridge",
-      "bouncedown",
-      "brickabrac",
-      "chess",
-      "confined",
-      "crazycrystals",
-      "dekobloko",
-      "drphlogistonsavestheearth",
-      "dungeonassault",
-      "escapevector",
-      "fleacircus",
-      "geoblox",
-      "holdtheline",
-      "hostilespawn_vengeance",
-      "kickabout",
-      "lexicominos",
-      "minerdisturbance",
-      "monkeypuzzle2",
-      "orbdefence",
-      "pixelate",
-      "pool",
-      "shatteredplans",
-      "solknight",
-      "starcannon",
-      "steelsentinels",
-      "stellarshard",
-      "sumoblitz",
-      "terraphoenix",
-      "tetralink",
-      "tombracer",
-      "torchallenge",
-      "torquing",
-      "trackcontroller",
-      "transmogrify",
-      "vertigo2",
-      "virogrid",
-      "voidhunters",
-      "wizardrun",
-      "zombiedawn",
-      "zombiedawnmulti"
-    ],
-    "contentIdentityAlgorithm": "SHA-256 of JSON-encoded sorted [relative path, file SHA-256] pairs",
-    "compilerReadability": "automatic defaults; no CFR_JS transformation flags",
-    "stubJarSha256": "fdc752a9656edd87de8abe521b79abc3b08b2ef435d6af4a0cecc5333a813170",
-    "publisher": {
-      "repository": "Kreijstal/dekobloko-work",
-      "commit": "868cc3f2408da5569986830fc4c8ab391548101b",
-      "sourceSha256": "6cf4f9ad6465539aa7c161c70b60b159811c06ad86f31b06ac8070dd1ddc145d"
-    },
-    "readableExports": "Named Java is published directly in games/; pinned input and reverse dictionaries are recorded in namedExports.",
-    "games": {
-      "36cardtrick": {
-        "originalClasses": {
-          "files": 295,
-          "sha256": "000b74e17537f5fbbb402fe81c8f701f5f7388b55d6f415f80a7acec355508ca"
-        },
-        "transformedClasses": {
-          "files": 295,
-          "sha256": "b5cacc9871e8e6ccc10012c644a401846b343725ed3321448eaa6fb839f68543"
-        },
-        "sources": {
-          "files": 295,
-          "sha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5"
-        },
-        "pipelineFingerprint": "4a34b002e8b3faae653097ac68ec38fd3dabf25e276bbb5ee6750ad583cffc22",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "aceofskies": {
-        "originalClasses": {
-          "files": 545,
-          "sha256": "9f0daf3471d01ae2de9a8a71504d0bf94fb751c66e0b5c3553477eb22b9c7f15"
-        },
-        "transformedClasses": {
-          "files": 545,
-          "sha256": "41d03ecbda64f8ee2ac154f68dcb4938a27a3e137b911f0bdb2d4df5e7b2c9a3"
-        },
-        "sources": {
-          "files": 545,
-          "sha256": "6970e622cf32e951bf0ea34d6533895fe4b6deb822bebcf37852a6ff76aa90b9"
-        },
-        "pipelineFingerprint": "21bf78618cc0223b7171ce469ec931c2e544a5491215e088d7636b084b9d6d0a",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 2,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 2
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "arcanistsmulti": {
-        "originalClasses": {
-          "files": 363,
-          "sha256": "5082b1c06f7fdf3c520103d187f90d5d472b26ececd2d147edd42e4a3e5d71c0"
-        },
-        "transformedClasses": {
-          "files": 363,
-          "sha256": "a5eec6edd9ea257aa7119d59fbc69f8b7ad7127523c86b12cccb7cc04c0de7c1"
-        },
-        "sources": {
-          "files": 363,
-          "sha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0"
-        },
-        "pipelineFingerprint": "df0e311f51cbf5c948d975326848df4872dc5f7ae5296c8ced412bd2e0d572c0",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1",
-          "PIPELINE_TIMEOUT_SECONDS": "7200"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "armiesofgielinor": {
-        "originalClasses": {
-          "files": 542,
-          "sha256": "99e72a1f84cc36cdb3e78e9100d55077fe57bf4735bee923d7dcdef456b8d444"
-        },
-        "transformedClasses": {
-          "files": 542,
-          "sha256": "e85e17bfa81c859e973427b53083553b59aabbe27319c2174ef0baeb723f0886"
-        },
-        "sources": {
-          "files": 542,
-          "sha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637"
-        },
-        "pipelineFingerprint": "19e050a31e64006d000166781d27a1358ab030210ec6946d9d890e4bf1fb0a5f",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "a335a5dc8ceefc629e9ddd18c57c3ce19734ff22b3026833869d1fd193ad0637",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 3,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 3
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        },
-        "publishedSources": {
-          "files": 542,
-          "sha256": "747867218906ce338aab81aa8c8f581710adf2acf8d29498f1fa73611d30df8e"
-        }
-      },
-      "bachelorfridge": {
-        "originalClasses": {
-          "files": 865,
-          "sha256": "bcc8001970816cbce5de5e278d7044e36088cbc552a49079f1c32c4545a3dc2c"
-        },
-        "transformedClasses": {
-          "files": 865,
-          "sha256": "2189e0d5a5306dc833ea82ccde8c9cdc0da2585120b83ab1505556d361028cd2"
-        },
-        "sources": {
-          "files": 865,
-          "sha256": "248f241b76a2c5893a6238c68b8ff8f72ad81c0bf14bcfe1bab53cd06d8c8d3b"
-        },
-        "pipelineFingerprint": "5fd80aeac4a6720813d3dda7d120e8d6c7c0e7b05eab71e1fb5e5ea6e3fcbc17",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "248f241b76a2c5893a6238c68b8ff8f72ad81c0bf14bcfe1bab53cd06d8c8d3b",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "bouncedown": {
-        "originalClasses": {
-          "files": 289,
-          "sha256": "73299a5f79c50cc5aad2eda81a5844bdceaa697d20a417d68ef360d2a794abc3"
-        },
-        "transformedClasses": {
-          "files": 289,
-          "sha256": "eec85d99cb06185766e203bc6304cf9e683181091891d6dbd14ea042cb21e6cc"
-        },
-        "sources": {
-          "files": 289,
-          "sha256": "5fd91505782985406423f9c7bb29faa6c242756cda6970512fc9617c205dc92f"
-        },
-        "pipelineFingerprint": "9cb5f5fb449f628813610bfefbbf63e0239cb9cbb8a621a2fee243b047f3cff5",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "brickabrac": {
-        "originalClasses": {
-          "files": 420,
-          "sha256": "8dddab0c1e03e5a401a9c38e7c2d05f01bb6d9fb731a2be3ce3e8f9689fa3973"
-        },
-        "transformedClasses": {
-          "files": 420,
-          "sha256": "5bb7df7db3504b74078df116a9bc94093b10a075e9dec0ddf3d2ff553907b6f9"
-        },
-        "sources": {
-          "files": 420,
-          "sha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6"
-        },
-        "pipelineFingerprint": "9523775a601ac5cb363766e19d3694ec7ccc6a7c7a3896dbff12fdc9275d6428",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        },
-        "publishedSources": {
-          "files": 420,
-          "sha256": "4bd05d9fccc4aa8e5fba8f4788d277290f76f8c009f7403cff4a52a6e8c5c48c"
-        }
-      },
-      "chess": {
-        "originalClasses": {
-          "files": 346,
-          "sha256": "cb11a7585f65041308a97b4da97aa8063b00846504e6adcbecebed5e76548035"
-        },
-        "transformedClasses": {
-          "files": 346,
-          "sha256": "0b95facc4bf3eb489fcc1ca1be17e737c363bd1e7ae868493dfdf210aabdd02d"
-        },
-        "sources": {
-          "files": 346,
-          "sha256": "21d956492a0a0757ca1a16c1eae50359303f3ed9169f238aeb488bf62e7eda73"
-        },
-        "pipelineFingerprint": "ed681414ebde27cce41acfe59605ad581cdf2ca8b2ee0658782f7a319ae91af8",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "21d956492a0a0757ca1a16c1eae50359303f3ed9169f238aeb488bf62e7eda73",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "confined": {
-        "originalClasses": {
-          "files": 341,
-          "sha256": "2c380221b9a5bfdd91a6cd04ea5e45ce5b9958a3e672bf89a056bbf85021ffea"
-        },
-        "transformedClasses": {
-          "files": 341,
-          "sha256": "4fc53c8c9b808e6a3d76c69f328aa87da7479d19d045d50e72726d7236d3a098"
-        },
-        "sources": {
-          "files": 341,
-          "sha256": "8eda1113653009cd287a41cc8ecb4d1cd4a8f394c848a0f3e4396e2d2e5a61f5"
-        },
-        "pipelineFingerprint": "24dee14ef832e3eb0a994fe681eab2e25f6eeeb986ed4dc97dc43ea9b131e296",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "crazycrystals": {
-        "originalClasses": {
-          "files": 394,
-          "sha256": "27b17435d1b5af1b9f8115d57a0ea8c6ec1aa7fe4467be597156ac42024dc7b0"
-        },
-        "transformedClasses": {
-          "files": 394,
-          "sha256": "f94c77cc1d22aea91d5462d0267c928f00f58c53adc736308ff720fe1ab0924c"
-        },
-        "sources": {
-          "files": 394,
-          "sha256": "0f22263f8c559eecc171a6e8967677866730824356e6a49d276bc0551f05dcc6"
-        },
-        "pipelineFingerprint": "41af88a851edccab03747d644f358e98ecc139a614f60e899e1911ea4e091c00",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 3,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 3
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "dekobloko": {
-        "originalClasses": {
-          "files": 343,
-          "sha256": "b65010e65fceee143e1f9385d1c4ee245f6dd83dbf36e635c2e89476b7fd1c21"
-        },
-        "transformedClasses": {
-          "files": 343,
-          "sha256": "70ee67c1dffe2e9d0aa830abaad2fe3d0935146812ce2d09cde0f2c2166cc929"
-        },
-        "sources": {
-          "files": 343,
-          "sha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8"
-        },
-        "pipelineFingerprint": "b483c7762450f0f9b39ba12659c9b43b47e0dcda35d08acef145038d68b05dd9",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        },
-        "publishedSources": {
-          "files": 343,
-          "sha256": "7de0cb791d322688e79042bb6bfa19b286c201251a02f023ec72d0b2dfcf2d1f"
-        }
-      },
-      "drphlogistonsavestheearth": {
-        "originalClasses": {
-          "files": 306,
-          "sha256": "f7f36429dc87b62c5d352c5f4b54291003418acdc937b2f52d531319e0fa24a3"
-        },
-        "transformedClasses": {
-          "files": 306,
-          "sha256": "5fd956c6891271bdf7acddd1ca82e7209cbc2a1313dbd9acf34021e2e57f3335"
-        },
-        "sources": {
-          "files": 306,
-          "sha256": "589b39701d1699b248c655935c4ffefa2dfb12984c3d5e9d58b09a0213f88c4b"
-        },
-        "pipelineFingerprint": "40ef7f350119d5c0d6d601f63bb9ea0d423609771820c1fe2964eb53b77cc4ea",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "589b39701d1699b248c655935c4ffefa2dfb12984c3d5e9d58b09a0213f88c4b",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "dungeonassault": {
-        "originalClasses": {
-          "files": 387,
-          "sha256": "2a91b371cf2a4f49e020c7b1271113fca3becae8f10b6b5ad5e0bf0b41499a51"
-        },
-        "transformedClasses": {
-          "files": 387,
-          "sha256": "91e0b4fe51e672f67c341c2e84f73ba4a7e774cda3e5a1a463c3a598f84102c5"
-        },
-        "sources": {
-          "files": 387,
-          "sha256": "bb9c3eb5d4c6d2d99e0882b0bf1256e94b7078ca124734fa3e0cb5a1faab0cb5"
-        },
-        "pipelineFingerprint": "7a6f79cad33a26bb0fcdcaf7bbb37211bd31a6531fc4abb1404dc69137565f87",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "escapevector": {
-        "originalClasses": {
-          "files": 348,
-          "sha256": "6b3ffcea748a6f4764d57e8e8f178879900895eeddc6085c6ab780139e931209"
-        },
-        "transformedClasses": {
-          "files": 348,
-          "sha256": "e7ec6281b3d2e429eb9145c5aa4634a2e84f94a18ee3340daf1679b1721475be"
-        },
-        "sources": {
-          "files": 348,
-          "sha256": "2cc37d0f5048419ad927da559793354378cc61fa51073e332a51d9df91fd1e73"
-        },
-        "pipelineFingerprint": "07b538350ef6c23e3975dfcd1eb5a0984e9209e468d9d9f8a12e1589aea6a9df",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "fleacircus": {
-        "originalClasses": {
-          "files": 306,
-          "sha256": "99b4793e516f4e65ac9c2aae06eca18a843675ef2248c87a479f07cba9477495"
-        },
-        "transformedClasses": {
-          "files": 306,
-          "sha256": "99d1e572e13979cb1508d1680cc91f5dafdcc9df824b9e70acbd615704958ae8"
-        },
-        "sources": {
-          "files": 306,
-          "sha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8"
-        },
-        "pipelineFingerprint": "39eb25ff94bbac1edd8f4910aa7d37cdf1698442be4afdd4c8df163d1893ede3",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "geoblox": {
-        "originalClasses": {
-          "files": 303,
-          "sha256": "af786e6f03ed62250d289ef37613c6c3f46b4747b7dd2d78c83a2b02adb348b3"
-        },
-        "transformedClasses": {
-          "files": 303,
-          "sha256": "9a8077824a266c9410580a71eff341032cf9087d2a36d6c654c746e2bedc7465"
-        },
-        "sources": {
-          "files": 303,
-          "sha256": "4b94661b7bb87264c5331dda174649145742c64d4cace2d59c88e1b220d8e05d"
-        },
-        "pipelineFingerprint": "a604b74e883460cec58b1b1059143ff0426f09532d1f1ad7d49ce019ef4bec8f",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        },
-        "publishedSources": {
-          "files": 303,
-          "sha256": "e9234157c5106f14405291578674b14151ef2c73d2614d499c12d1d6a584e6d0"
-        }
-      },
-      "holdtheline": {
-        "originalClasses": {
-          "files": 356,
-          "sha256": "713a627c40d8982c0e7b8cc0defe8f59271f6a5e3ac68399cf9e744453169747"
-        },
-        "transformedClasses": {
-          "files": 356,
-          "sha256": "5583f2c11894bcfafa01876c8751bde771981e0527afb826e1d43f47bea1d7d3"
-        },
-        "sources": {
-          "files": 356,
-          "sha256": "441bb34e6eedfe35fdfa1e973e1e58c222bab2930234cb835b96ae38efcf0b12"
-        },
-        "pipelineFingerprint": "43072c48ef640cf7fe864590e9cbb43a42ba27b3226baf887b18a54b6b33dae9",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "61bcbf2a6d42b8b2cb75aa0d474eb3caeafa4bdb",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "cc46e5c0b0d01c6b07fc640789c88cb5b6b415fbf6eae20eaee54e2a9a39cf09",
-            "reproduce": "git archive --format=tar 61bcbf2a6d42b8b2cb75aa0d474eb3caeafa4bdb | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "441bb34e6eedfe35fdfa1e973e1e58c222bab2930234cb835b96ae38efcf0b12",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 2,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 2
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "hostilespawn_vengeance": {
-        "originalClasses": {
-          "files": 335,
-          "sha256": "28551dc203d81266f1057c365bf8b8d93b42cdc5b8e41175273b1d23e96c79c1"
-        },
-        "transformedClasses": {
-          "files": 335,
-          "sha256": "c7a153e2b4c64ade03233fb010ec1a6898ba5f2da30ad2a6c4e314eeb9e5f218"
-        },
-        "sources": {
-          "files": 335,
-          "sha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0"
-        },
-        "pipelineFingerprint": "c7c1c4241e61da9cc692be96058c08c04f08bb70e979b6e3c292e83498497949",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 3,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 3
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "kickabout": {
-        "originalClasses": {
-          "files": 543,
-          "sha256": "6863230ea410c0fad06ff599899702fd3b89133ea63db2d61efe6ee9fbef7066"
-        },
-        "transformedClasses": {
-          "files": 543,
-          "sha256": "3d7cb9e6455f1161555471b8710753c169546d98bc75e547e5b75c2ae3f0ab32"
-        },
-        "sources": {
-          "files": 543,
-          "sha256": "bed35583c9abf3a334ed7ee49fc4d302b76f9ee59cbe29094a1a3a63e8f12f8e"
-        },
-        "pipelineFingerprint": "004a3f3be73c4177c881a35c1cb434977f219366f5c697b5c3dccc82bc7e833a",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "2511faae780ef1fa5fc80f245ddec9167fc0ece9",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "03a4218f8ec33facea7f00218cbdd0c5d5dbe440401f81f599d4234622042efc",
-            "reproduce": "git archive --format=tar 2511faae780ef1fa5fc80f245ddec9167fc0ece9 | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "bed35583c9abf3a334ed7ee49fc4d302b76f9ee59cbe29094a1a3a63e8f12f8e",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "lexicominos": {
-        "originalClasses": {
-          "files": 297,
-          "sha256": "138ef9b23dc8fadb0378cb5c10a5dcf9025ee91ccbc53a334dfbde0607640340"
-        },
-        "transformedClasses": {
-          "files": 297,
-          "sha256": "05c8188e63198f04779d6ca6baedde5445820ea9bbc14d2a6dea9c4308a17490"
-        },
-        "sources": {
-          "files": 297,
-          "sha256": "7a907ae93f6bb9b3e2746af1fcbe18859b8b96e0ddfa937285275f4d9f4d8659"
-        },
-        "pipelineFingerprint": "c7aa70eb1c7af9df0f05015a31b946274340834c60d8ba75fcb876d6a02dc284",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "minerdisturbance": {
-        "originalClasses": {
-          "files": 341,
-          "sha256": "aa0811f876a9c760200f0d043cf5a695cfe6b6550cc07d20f9fee0e740d7cfa7"
-        },
-        "transformedClasses": {
-          "files": 341,
-          "sha256": "a41ca21b0bb944bdc31b292b2b50b5f9ee879e26ba9f2a47faa040a68d449a78"
-        },
-        "sources": {
-          "files": 341,
-          "sha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf"
-        },
-        "pipelineFingerprint": "41c04a50dfb59987927f6e11311a72acdf9e5f49ef985760e0dee8fcfa9a371d",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "monkeypuzzle2": {
-        "originalClasses": {
-          "files": 303,
-          "sha256": "4251108feea2394e10b6c3a746e78eca5315362094f6565fe5d0ddaed9f779a8"
-        },
-        "transformedClasses": {
-          "files": 303,
-          "sha256": "d62be59fc3198e8b996e462327dd4065af1e483ddd787a3e970cbcd21fa562bb"
-        },
-        "sources": {
-          "files": 303,
-          "sha256": "cb4bf35408730067eab1be71bf5fe4a90db7b8c913b112dcadac7b16c5f396f7"
-        },
-        "pipelineFingerprint": "510d2667b15f2a21e18f6d27bedcbaff412773aaae2891da0b616012195ed33a",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "orbdefence": {
-        "originalClasses": {
-          "files": 311,
-          "sha256": "6a0425e7b7e3e1d5f02765198ef28cba0bd5ee8edb44396cb0ea6dce2aba5533"
-        },
-        "transformedClasses": {
-          "files": 311,
-          "sha256": "33d850096dc90e2eff43ca90dee906e9e9830661076563a7655f05a68d7a8c47"
-        },
-        "sources": {
-          "files": 311,
-          "sha256": "e3bfc367b5ea5a23b2e1c054741add7fe4ad7d766d2894095f8b176fff61de16"
-        },
-        "pipelineFingerprint": "71f1f1df920fb0d8052b7a1a7d117af65607619a8206cedba5327068eb05e13c",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "pixelate": {
-        "originalClasses": {
-          "files": 397,
-          "sha256": "e9b79ac272f0dcb6f5370753248284f2d455a0b80f19d360cbd45a200c23b863"
-        },
-        "transformedClasses": {
-          "files": 397,
-          "sha256": "39ea03c897fac8ea644acbdcd84095a8cf97f8f0041e7e060542963cf3be9d09"
-        },
-        "sources": {
-          "files": 397,
-          "sha256": "d1c1fdbe1357973d0bdcdf60e030c2f7d1b71d3eaa197d81d925b2ad58985a74"
-        },
-        "pipelineFingerprint": "3a90167d6cb585d1d4978c4dd925d63776e33f4986582d7b5e7fa337e7c4c1d7",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "pool": {
-        "originalClasses": {
-          "files": 429,
-          "sha256": "97bed9471ac99a26b63cdad9fef3f49cf8e370b93709810fbb36a744ddc9f4ec"
-        },
-        "transformedClasses": {
-          "files": 429,
-          "sha256": "713f8a2c981c83b6ea0f5164eb9de33eb9b28e68303599c8fc2a9338b4e6d357"
-        },
-        "sources": {
-          "files": 429,
-          "sha256": "87135b224043762922b9407ed178ebb9919600a5865dcf7759e900c346a5c6dd"
-        },
-        "pipelineFingerprint": "afb2873eb1ba4407b85cbf2e408c62a0b40b6d9a3d7312b9ba00c168aece2d5f",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "87135b224043762922b9407ed178ebb9919600a5865dcf7759e900c346a5c6dd",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 4,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 4
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "shatteredplans": {
-        "originalClasses": {
-          "files": 457,
-          "sha256": "9ddd56cba16f749816fbe954b1077e07ef011e48bc1b6748912e58accfc1d49d"
-        },
-        "transformedClasses": {
-          "files": 457,
-          "sha256": "7aacd0f3754326a27c4d2e97ed40f402b881ed38da8e9c012f9f72e7c3d66c9b"
-        },
-        "sources": {
-          "files": 457,
-          "sha256": "1924a220327affd9eeb325b1870e1342af09f66fa2beb02ea33f3accdac4a1a9"
-        },
-        "pipelineFingerprint": "8296880a4a055c86f4c4540d4a4b7ddedeccec523528753d6c40643668e198e9",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "1924a220327affd9eeb325b1870e1342af09f66fa2beb02ea33f3accdac4a1a9",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "solknight": {
-        "originalClasses": {
-          "files": 294,
-          "sha256": "1dcf9d168071243acdef99e094593764931603ec0a7e05382865a5664eaac5b2"
-        },
-        "transformedClasses": {
-          "files": 294,
-          "sha256": "e27707fb2b5d190b1d125ddbc21b0e011eb5b8e643bdc79f114d70790d221068"
-        },
-        "sources": {
-          "files": 294,
-          "sha256": "bd5fc879f7a8e73a5e2b514bb3f4d80596994f37d08fc5f83a137dccb3c6ba31"
-        },
-        "pipelineFingerprint": "3a3fb2d68f1f0daa56b45f87edef4e228961b106af6019a19e05ca460cbc653a",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "starcannon": {
-        "originalClasses": {
-          "files": 287,
-          "sha256": "81485bd229b129b829615d43d18f9a5263f1f5fbd5f2553c99764f5dd13ff8b2"
-        },
-        "transformedClasses": {
-          "files": 287,
-          "sha256": "cdc1bc13d852e8f3be5007c0e98f817222bb457d96d5ea7984e4d85afaedde0e"
-        },
-        "sources": {
-          "files": 287,
-          "sha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c"
-        },
-        "pipelineFingerprint": "457955998c68cb5051a2ba8e197cdf1956dfad48b3ba1c9ea78fbd02896727a2",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 2,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 2
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "steelsentinels": {
-        "originalClasses": {
-          "files": 347,
-          "sha256": "adb8b4ce755eb9ef7347a404c866c7d87b866ca13a7175908c2d8f15027a5e90"
-        },
-        "transformedClasses": {
-          "files": 347,
-          "sha256": "73c5ce3191038cd4472776e90ab73049ba41ca39bea2d34b97b61f815333b353"
-        },
-        "sources": {
-          "files": 347,
-          "sha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399"
-        },
-        "pipelineFingerprint": "17791bca80b240215dcfd2b4eebd67b715196bcb48ba621cb5a968666ffa18e4",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "2713f45b1bf8186a4a2e4c283f1b1cca876716cb17a00318e3d87ceaa13e5399",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 3,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 3
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        },
-        "publishedSources": {
-          "files": 347,
-          "sha256": "58b8cf63e55bde2b4704304041b4129add4387cfa86e6aee03f9480cb477d303"
-        }
-      },
-      "stellarshard": {
-        "originalClasses": {
-          "files": 301,
-          "sha256": "ad3479accadda7c81d109575905c7b028fd9e09fea010956e31174f63e5bb211"
-        },
-        "transformedClasses": {
-          "files": 301,
-          "sha256": "215422fbd026c68c0e4105e8f942509d54b563a658b721836af48da0c89f3d79"
-        },
-        "sources": {
-          "files": 301,
-          "sha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a"
-        },
-        "pipelineFingerprint": "30b2925be6be0feb8de72cf9b8d9c26d3239512815e892965bedd218930a674b",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "sumoblitz": {
-        "originalClasses": {
-          "files": 586,
-          "sha256": "c166d559d1ef382ae5f351208abeee867efea281829ea5d07bf294a5e756e8fa"
-        },
-        "transformedClasses": {
-          "files": 586,
-          "sha256": "c77a2faa3bdf6236fa6c982bec90101a9474677bd2ccb33209ac241688a984b7"
-        },
-        "sources": {
-          "files": 586,
-          "sha256": "6e24ea48a87ccf33ae76144388434c7a4c85a881682f20847bbea4c2101c90c7"
-        },
-        "pipelineFingerprint": "ae2f558b16cd123f2c60f1fee65e4c8515ff8522cdf71945d205f266ad8b45a7",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "terraphoenix": {
-        "originalClasses": {
-          "files": 311,
-          "sha256": "222bff63941f45a07571deedfdae97ff71996994ba22c433c1478a68aefc1de9"
-        },
-        "transformedClasses": {
-          "files": 311,
-          "sha256": "4286d121fcbb5fcde23e543aa9c3314cc0e766a1319e63d727cea35c932a2004"
-        },
-        "sources": {
-          "files": 311,
-          "sha256": "67aa2ba924c03d9023c183c9b54af4de73565345d6e41744346b0e0a0e9ac554"
-        },
-        "pipelineFingerprint": "5666090963ce2a21aa2b71f47a94f0ae66876131c33e84e8f079d694a9c7810f",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "67aa2ba924c03d9023c183c9b54af4de73565345d6e41744346b0e0a0e9ac554",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 2,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 2
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "tetralink": {
-        "originalClasses": {
-          "files": 355,
-          "sha256": "0e05e498a290c93bedc2723a97251f2905cf98b7d19340cc236100d4be6e3118"
-        },
-        "transformedClasses": {
-          "files": 355,
-          "sha256": "a171fa28c9da107d127c734352a84fe282905d6e4e23c16fd11737dbd40e4559"
-        },
-        "sources": {
-          "files": 355,
-          "sha256": "f055d898a4a1a6fabfa989e64c05d20dd25ca6e6b0dd7d54e4b4561ee0154c01"
-        },
-        "pipelineFingerprint": "0b7f74f97554f9b7564f3ccc65ddd5c4a14ffaf7389025c0eb7d06377dd4eb05",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "tombracer": {
-        "originalClasses": {
-          "files": 1090,
-          "sha256": "25009d8fa57609f8a7d99f7149885d817fe130c1ff728cf82fe64c7f72f78ac3"
-        },
-        "transformedClasses": {
-          "files": 1090,
-          "sha256": "191c7b7b99c8d11f6bf4a932269c9a0bb2c6b891f0708a443a1a5bafbdccb12d"
-        },
-        "sources": {
-          "files": 1090,
-          "sha256": "83dc624e1146124626daeeeb5c288892a9e91fceeacfe09675997af8bbfedc6b"
-        },
-        "pipelineFingerprint": "393e9a3a583bb1e1ca88eef8eaddd6de4717bdca9661e49d619f9d5f26660270",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1",
-          "PIPELINE_TIMEOUT_SECONDS": "7200"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "84d45e31f50510c59e1283b5833aeee3130b3397",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "6c7e8706c8b227a4cc117db10b8de528d3f46126f2d1e657be59b00d261b89de",
-            "reproduce": "git archive --format=tar 84d45e31f50510c59e1283b5833aeee3130b3397 | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "83dc624e1146124626daeeeb5c288892a9e91fceeacfe09675997af8bbfedc6b",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "torchallenge": {
-        "originalClasses": {
-          "files": 300,
-          "sha256": "618a03092858d3ef29977616671f90807656d3b5bf26b52bda3dc87fc0646796"
-        },
-        "transformedClasses": {
-          "files": 300,
-          "sha256": "7792820afec56be0d141b35499c14eff8235cb246f18c76361051c08f52aaf44"
-        },
-        "sources": {
-          "files": 300,
-          "sha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65"
-        },
-        "pipelineFingerprint": "6ed9b70a375925bd00523b6e9f0deb3b1801cdc7d87070f1b0b129ac707a0376",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 1,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "torquing": {
-        "originalClasses": {
-          "files": 396,
-          "sha256": "1b99c510a68a3d84fa9d36c409e2476aecb693d1d1453ecc51d804606b399e41"
-        },
-        "transformedClasses": {
-          "files": 396,
-          "sha256": "4c581f498d90f46d1f67eba4cc7a8490d505a299f75d82f9fb8db013bc21c829"
-        },
-        "sources": {
-          "files": 396,
-          "sha256": "dc3b8197e55f0719f8402727d956662eb401bd95e31e6d5d3d70af3a184d213b"
-        },
-        "pipelineFingerprint": "73dcdec45b1e5fae3ac9f6ddce03a0d0ac2bb7887d00de27e327eb984e400661",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "dc3b8197e55f0719f8402727d956662eb401bd95e31e6d5d3d70af3a184d213b",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 2,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 2
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "trackcontroller": {
-        "originalClasses": {
-          "files": 298,
-          "sha256": "8511cb084c216cf5ff512a67c50c3542c496a5fdc02cae80b7dddec375d4a2f3"
-        },
-        "transformedClasses": {
-          "files": 298,
-          "sha256": "47140e8386c01f8ba201df7617d1fefbcaf8a647fa53582ed3518be5755c9e8a"
-        },
-        "sources": {
-          "files": 298,
-          "sha256": "3cd95cd2bf684da442fd3cf0bc2434c1dbe2c1a086972b6c6501508359cb1882"
-        },
-        "pipelineFingerprint": "230db93221eb8e08f51678aa744f9b773957da1b9e389bc09161b26e5d4ca324",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "transmogrify": {
-        "originalClasses": {
-          "files": 299,
-          "sha256": "e4633c7e7b2763a4bbef3ecb2074f84b678a4b2f3b80cad443832151cc954c28"
-        },
-        "transformedClasses": {
-          "files": 299,
-          "sha256": "f50750d4e08e48fc09baba1049cb4c8d2d40f905b8b7d0cf3811cac26f04ef47"
-        },
-        "sources": {
-          "files": 299,
-          "sha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d"
-        },
-        "pipelineFingerprint": "2a460b0f286b76974fdc03d21ab330e5aa0356c6ec01bcba735aee5d533a5fd3",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "vertigo2": {
-        "originalClasses": {
-          "files": 437,
-          "sha256": "a371a1697fc699a0ab261738b4f164a6b9f755ba870f9a0e1c5b6db1a4d4b9cc"
-        },
-        "transformedClasses": {
-          "files": 437,
-          "sha256": "c25b807844df618dca83635971a9b09959d88b61873aa83304283d01bed80182"
-        },
-        "sources": {
-          "files": 437,
-          "sha256": "36d9e353bc07fb436e9b4322143729e24c4b90c733889f308079edc41be9a819"
-        },
-        "pipelineFingerprint": "eeb2659dfe41df1844a5027e3a1fe4b68362bd9101f2f814dda2fe49bb2795d8",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "92e6a69ec0692bf9e6b1f63a30406bfc5455e86c",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "f268ab42f8acb99fe87c86e38819a820ce801510a2a388972021d2d046522775",
-            "reproduce": "git archive --format=tar 92e6a69ec0692bf9e6b1f63a30406bfc5455e86c | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "36d9e353bc07fb436e9b4322143729e24c4b90c733889f308079edc41be9a819",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "virogrid": {
-        "originalClasses": {
-          "files": 347,
-          "sha256": "ada01bc8ed58843a72721497e6b4288e7ebe5b7c4c6dda09835f5ff12bf14b3a"
-        },
-        "transformedClasses": {
-          "files": 347,
-          "sha256": "0cae90dc455f6a098e0863fa644041577b0bbe47c78dd1b32fe129f86568b063"
-        },
-        "sources": {
-          "files": 347,
-          "sha256": "aac2018fd5a5dcf9fedaa69abfba89a08b78b211ac18bc1dbdde442834d086cb"
-        },
-        "pipelineFingerprint": "652935a55bded772fcd09864a83af75b5e80566abe137c578d9af648dccca01b",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 3,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 3
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "voidhunters": {
-        "originalClasses": {
-          "files": 1570,
-          "sha256": "c7d40654bb2b8269ed52e2fc7ce815bee70efbf2313d49f7c9aac1afd0dc46c1"
-        },
-        "transformedClasses": {
-          "files": 1570,
-          "sha256": "ab628820d193d6b9b6ec323567c7fb0aeadc1fbfd63167bb90744adb06b1b323"
-        },
-        "sources": {
-          "files": 1570,
-          "sha256": "bd2a40abbc52db0e629b01f3f6eed12083171e0670269a312adf2381baa90845"
-        },
-        "pipelineFingerprint": "2a8cfa80869d125cb6431b2c478ec058deaf7319963759793663a646c347353c",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1",
-          "PIPELINE_TIMEOUT_SECONDS": "14400"
-        },
-        "sourceGenerator": {
-          "repository": "Kreijstal/java-tools",
-          "commit": "84d45e31f50510c59e1283b5833aeee3130b3397",
-          "trackedClean": true,
-          "sourceArchive": {
-            "sha256": "6c7e8706c8b227a4cc117db10b8de528d3f46126f2d1e657be59b00d261b89de",
-            "reproduce": "git archive --format=tar 84d45e31f50510c59e1283b5833aeee3130b3397 | sha256sum",
-            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
-          },
-          "sourceTreeSha256": "bd2a40abbc52db0e629b01f3f6eed12083171e0670269a312adf2381baa90845",
-          "correctedFailures": {
-            "pipeline": 0,
-            "cli": 0,
-            "verify": 0,
-            "javac": 1
-          },
-          "runner": {
-            "repository": "Kreijstal/dekobloko-work",
-            "commit": "c1ee9703d1fe3c1e6d1c8f2503496ff59f72de7d",
-            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
-          }
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 1,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 1
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "wizardrun": {
-        "originalClasses": {
-          "files": 298,
-          "sha256": "67581548be031952a7a0c7fbb38ddac304d849a184653c8bf80868075f7150a9"
-        },
-        "transformedClasses": {
-          "files": 298,
-          "sha256": "3239bd0020381c008aa873e640d358fb5109a61ecd8a07b227922e1cee31720d"
-        },
-        "sources": {
-          "files": 298,
-          "sha256": "406bf9907f9831ad64979443e80026a12b5c67265331f523cdf3a0c306376f63"
-        },
-        "pipelineFingerprint": "2196d59a7a8bf9ff3363405f8ab490cd2c4ee02b5d32fe0c40d00979e5dba00c",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 3,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 3
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "zombiedawn": {
-        "originalClasses": {
-          "files": 386,
-          "sha256": "3289a32d3ed3c29878300fede6d05b041f433531c1a35506f9e9a1e5fdb15a12"
-        },
-        "transformedClasses": {
-          "files": 386,
-          "sha256": "02ed5f93b0abe739cefba966780f3a1d164f50eced86832f7d4b0815ec4aa539"
-        },
-        "sources": {
-          "files": 386,
-          "sha256": "24c601f41499c4927359bf70b61eea85671ac110b52dcf8a31246a7e10338ffc"
-        },
-        "pipelineFingerprint": "36f0acb1b2ad332d7443b0422cc5e8b38436bf26cf42be8fc779b5e355f6026e",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 0,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 0
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      },
-      "zombiedawnmulti": {
-        "originalClasses": {
-          "files": 417,
-          "sha256": "488eb0ee6ff1e44cbbc984a4fa91bb0d09d984de7ec09c4a6c1d7fb3d03d789b"
-        },
-        "transformedClasses": {
-          "files": 417,
-          "sha256": "ad23e9d4de90dd6ce30246a061b073afd4b9508768e542bfd5e5415ef938dd92"
-        },
-        "sources": {
-          "files": 417,
-          "sha256": "bda3394026012149b80b641b8eed39b92941d79d19997e771dd1100b3a8cd254"
-        },
-        "pipelineFingerprint": "eacb16dcf23b71b51188ff3d06df0b1994b9c49ad67474cb7c111920d5b8df8a",
-        "pipelineEnvironment": {
-          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
-        },
-        "sourceGenerator": {
-          "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff"
-        },
-        "diagnostics": {
-          "hardFailures": 0,
-          "validFallbacks": 2,
-          "totals": {
-            "stackUnderflow": 0,
-            "rawControlFlow": 0,
-            "placeholders": 0,
-            "stateMachineFallback": 2
-          }
-        },
-        "validation": {
-          "bytecodeVerifier": "pass",
-          "javac": "pass",
-          "javacArguments": [
-            "--release",
-            "8",
-            "-proc:none",
-            "-encoding",
-            "UTF-8",
-            "-sourcepath",
-            "",
-            "-classpath",
-            "batch-stubs"
-          ]
-        }
-      }
     }
   },
   "namedExports": {
@@ -2872,6 +405,2147 @@
       "compiler": {
         "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff",
         "trackedSourceTarSha256": "7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd"
+      }
+    }
+  },
+  "publication": {
+    "syncedGames": [
+      "36cardtrick",
+      "aceofskies",
+      "arcanistsmulti",
+      "armiesofgielinor",
+      "bachelorfridge",
+      "bouncedown",
+      "brickabrac",
+      "chess",
+      "confined",
+      "crazycrystals",
+      "dekobloko",
+      "drphlogistonsavestheearth",
+      "dungeonassault",
+      "escapevector",
+      "fleacircus",
+      "geoblox",
+      "holdtheline",
+      "hostilespawn_vengeance",
+      "kickabout",
+      "lexicominos",
+      "minerdisturbance",
+      "monkeypuzzle2",
+      "orbdefence",
+      "pixelate",
+      "pool",
+      "shatteredplans",
+      "solknight",
+      "starcannon",
+      "steelsentinels",
+      "stellarshard",
+      "sumoblitz",
+      "terraphoenix",
+      "tetralink",
+      "tombracer",
+      "torchallenge",
+      "torquing",
+      "trackcontroller",
+      "transmogrify",
+      "vertigo2",
+      "virogrid",
+      "voidhunters",
+      "wizardrun",
+      "zombiedawn",
+      "zombiedawnmulti"
+    ],
+    "contentIdentityAlgorithm": "SHA-256 of JSON-encoded sorted [relative path, file SHA-256] pairs",
+    "compilerReadability": "automatic defaults; no CFR_JS transformation flags",
+    "stubJarSha256": "0e5238addcb2ad5edb1a0a28bd86bcf0dff26532a67c9d773e25213144218794",
+    "publisher": {
+      "repository": "Kreijstal/dekobloko-work",
+      "commit": "ccd66572a50ccae3a81e8fd9ac15fd671824ad81",
+      "sourceSha256": "1097158e5d3d57561dc4d77e66b883f51de0d413795270914b1dd424d280deea"
+    },
+    "readableExports": "Named Java is published directly in games/; pinned input and reverse dictionaries are recorded in namedExports.",
+    "games": {
+      "36cardtrick": {
+        "originalClasses": {
+          "files": 295,
+          "sha256": "000b74e17537f5fbbb402fe81c8f701f5f7388b55d6f415f80a7acec355508ca"
+        },
+        "transformedClasses": {
+          "files": 295,
+          "sha256": "b5cacc9871e8e6ccc10012c644a401846b343725ed3321448eaa6fb839f68543"
+        },
+        "sources": {
+          "files": 295,
+          "sha256": "9b00eb3e786cad9d1609bd25c61e0bf6f08b492948e98a2e3642c56f4b17def5"
+        },
+        "pipelineFingerprint": "1aff87ac42395be567ce5594d37ec56251ab9374b57754361020c3faf10aa006",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "aceofskies": {
+        "originalClasses": {
+          "files": 545,
+          "sha256": "9f0daf3471d01ae2de9a8a71504d0bf94fb751c66e0b5c3553477eb22b9c7f15"
+        },
+        "transformedClasses": {
+          "files": 545,
+          "sha256": "41d03ecbda64f8ee2ac154f68dcb4938a27a3e137b911f0bdb2d4df5e7b2c9a3"
+        },
+        "sources": {
+          "files": 545,
+          "sha256": "a52334680405315c555ca4db143723b8fbb0cda0101e89d5ab7fa743466537b7"
+        },
+        "pipelineFingerprint": "09a847e8b8216de5ef510f8e342dbace685c6922b81d31043e0864cc0a7c6d7a",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "arcanistsmulti": {
+        "originalClasses": {
+          "files": 363,
+          "sha256": "5082b1c06f7fdf3c520103d187f90d5d472b26ececd2d147edd42e4a3e5d71c0"
+        },
+        "transformedClasses": {
+          "files": 363,
+          "sha256": "a5eec6edd9ea257aa7119d59fbc69f8b7ad7127523c86b12cccb7cc04c0de7c1"
+        },
+        "sources": {
+          "files": 363,
+          "sha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0"
+        },
+        "pipelineFingerprint": "6b8dde08b93b2e6c0b85ec79a2e3c47179c172de8cec0cb8045e61ccb20ad29a",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "repository": "Kreijstal/java-tools",
+          "commit": "d88bc5ce810baed642d8cb3fd7a6cd8953baac3d",
+          "trackedClean": true,
+          "sourceArchive": {
+            "sha256": "3210cfac245b602d71ecd007f672cbc92d0038a74b73d9ab29895ddf383358cb",
+            "reproduce": "git archive --format=tar d88bc5ce810baed642d8cb3fd7a6cd8953baac3d | sha256sum",
+            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+          },
+          "sourceTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
+          "correctedFailures": {
+            "pipeline": 0,
+            "cli": 1,
+            "verify": 0,
+            "javac": 1
+          },
+          "runner": {
+            "repository": "Kreijstal/dekobloko-work",
+            "commit": "f83a1da5b2d201554bcd1c741c83c4f32139f047",
+            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
+          }
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "armiesofgielinor": {
+        "originalClasses": {
+          "files": 542,
+          "sha256": "99e72a1f84cc36cdb3e78e9100d55077fe57bf4735bee923d7dcdef456b8d444"
+        },
+        "transformedClasses": {
+          "files": 542,
+          "sha256": "9b2b76c2e1049cd32d7c9043ee6887cadaada63b4e52e1210c36da356c79d020"
+        },
+        "sources": {
+          "files": 542,
+          "sha256": "743844724f84572f07158b1b8d319cab66a86df0f51166bc16340401d348b537"
+        },
+        "pipelineFingerprint": "ce18244d949f2f1c8abce1b7350891387aba4a4fb4b75f7f9cae19316f694b70",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        },
+        "publishedSources": {
+          "files": 542,
+          "sha256": "747867218906ce338aab81aa8c8f581710adf2acf8d29498f1fa73611d30df8e"
+        }
+      },
+      "bachelorfridge": {
+        "originalClasses": {
+          "files": 865,
+          "sha256": "bcc8001970816cbce5de5e278d7044e36088cbc552a49079f1c32c4545a3dc2c"
+        },
+        "transformedClasses": {
+          "files": 865,
+          "sha256": "3d7323f5eeb359c6512ef180fc85d908e083aaca8d3a5133f0862ef440154004"
+        },
+        "sources": {
+          "files": 865,
+          "sha256": "586536b61048e998648f845ea39178275d77af8a6d8e1437c000bdea32f7f42d"
+        },
+        "pipelineFingerprint": "17a548524a7a1fb40c8bdc611bc556d2412597d1f6aa0eee9d2847e1d262f716",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "bouncedown": {
+        "originalClasses": {
+          "files": 289,
+          "sha256": "73299a5f79c50cc5aad2eda81a5844bdceaa697d20a417d68ef360d2a794abc3"
+        },
+        "transformedClasses": {
+          "files": 289,
+          "sha256": "eec85d99cb06185766e203bc6304cf9e683181091891d6dbd14ea042cb21e6cc"
+        },
+        "sources": {
+          "files": 289,
+          "sha256": "c6fd77ce09bb6ecadc8d53036ad88fae8b835c4f3993f27cf6ecd238fa706eff"
+        },
+        "pipelineFingerprint": "4c53b312907a74d6dc11ef6e1f346ed5a47ced240b6200c3dca974c3e2d732ce",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "brickabrac": {
+        "originalClasses": {
+          "files": 420,
+          "sha256": "8dddab0c1e03e5a401a9c38e7c2d05f01bb6d9fb731a2be3ce3e8f9689fa3973"
+        },
+        "transformedClasses": {
+          "files": 420,
+          "sha256": "f607194dfe92cb88cdf7e5f30d136a42e23b02adf5934d0bb376d42ac247bde6"
+        },
+        "sources": {
+          "files": 420,
+          "sha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df"
+        },
+        "pipelineFingerprint": "8eeaf87845443ce3f730dc5eacd20a1d5121a46d0d527aaed7ed4c2fc2f5fdb9",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        },
+        "publishedSources": {
+          "files": 420,
+          "sha256": "4bd05d9fccc4aa8e5fba8f4788d277290f76f8c009f7403cff4a52a6e8c5c48c"
+        }
+      },
+      "chess": {
+        "originalClasses": {
+          "files": 346,
+          "sha256": "cb11a7585f65041308a97b4da97aa8063b00846504e6adcbecebed5e76548035"
+        },
+        "transformedClasses": {
+          "files": 346,
+          "sha256": "d0d927901f57d85f8def03a6e85079694c2042bdc46766770f776cd08ff74741"
+        },
+        "sources": {
+          "files": 346,
+          "sha256": "5a55523b5fe369605ee71ac95590ed6ba3be73f5726fddf8dc9d044a752bb4c1"
+        },
+        "pipelineFingerprint": "9f029eb77fe58426e51109fce2a03f5d0c74fc171cbccc207986f8a7740d8ffa",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "confined": {
+        "originalClasses": {
+          "files": 341,
+          "sha256": "2c380221b9a5bfdd91a6cd04ea5e45ce5b9958a3e672bf89a056bbf85021ffea"
+        },
+        "transformedClasses": {
+          "files": 341,
+          "sha256": "4fc53c8c9b808e6a3d76c69f328aa87da7479d19d045d50e72726d7236d3a098"
+        },
+        "sources": {
+          "files": 341,
+          "sha256": "3283895f8dc052748cf3c652a9fec0add07959ff5988d73f8f930e4917db949c"
+        },
+        "pipelineFingerprint": "1d254c312af28a3143e9a00823d9e8aba9fb3e66b2b9ad0226d256847f556881",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "crazycrystals": {
+        "originalClasses": {
+          "files": 394,
+          "sha256": "27b17435d1b5af1b9f8115d57a0ea8c6ec1aa7fe4467be597156ac42024dc7b0"
+        },
+        "transformedClasses": {
+          "files": 394,
+          "sha256": "f94c77cc1d22aea91d5462d0267c928f00f58c53adc736308ff720fe1ab0924c"
+        },
+        "sources": {
+          "files": 394,
+          "sha256": "c4a9de6b68d19ad0c441027083fcbb2078e0fa00013f1b1c46169002fef73404"
+        },
+        "pipelineFingerprint": "cc7e02ef28e9d2ab7f6555b7da1c155de7643794a63ff5624e3a00bbccaf2647",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "dekobloko": {
+        "originalClasses": {
+          "files": 343,
+          "sha256": "b65010e65fceee143e1f9385d1c4ee245f6dd83dbf36e635c2e89476b7fd1c21"
+        },
+        "transformedClasses": {
+          "files": 343,
+          "sha256": "310828a5186830914ad0fabcf214583ea869e56e399e8c117d911c7d9c9ab305"
+        },
+        "sources": {
+          "files": 343,
+          "sha256": "b61f6ae91242fb70737075916d198d187bfa4446b161ae34882a29d786a1a9e5"
+        },
+        "pipelineFingerprint": "00cba5a9d1f7e1f34e7280ce5dfb79e3ffd87333cd0cb788852f814c36149d63",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        },
+        "publishedSources": {
+          "files": 343,
+          "sha256": "7de0cb791d322688e79042bb6bfa19b286c201251a02f023ec72d0b2dfcf2d1f"
+        }
+      },
+      "drphlogistonsavestheearth": {
+        "originalClasses": {
+          "files": 306,
+          "sha256": "f7f36429dc87b62c5d352c5f4b54291003418acdc937b2f52d531319e0fa24a3"
+        },
+        "transformedClasses": {
+          "files": 306,
+          "sha256": "5fd956c6891271bdf7acddd1ca82e7209cbc2a1313dbd9acf34021e2e57f3335"
+        },
+        "sources": {
+          "files": 306,
+          "sha256": "589b39701d1699b248c655935c4ffefa2dfb12984c3d5e9d58b09a0213f88c4b"
+        },
+        "pipelineFingerprint": "cb2feb0a192fb072b10d69e9fa2a48cec5bbdedb7c9a25a25a34689bf3158213",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "dungeonassault": {
+        "originalClasses": {
+          "files": 387,
+          "sha256": "2a91b371cf2a4f49e020c7b1271113fca3becae8f10b6b5ad5e0bf0b41499a51"
+        },
+        "transformedClasses": {
+          "files": 387,
+          "sha256": "91e0b4fe51e672f67c341c2e84f73ba4a7e774cda3e5a1a463c3a598f84102c5"
+        },
+        "sources": {
+          "files": 387,
+          "sha256": "a6866d170544a3b4d483af393ac4c47c7809a1595df38d037ce257334e659b17"
+        },
+        "pipelineFingerprint": "4f4fd88bd844385b0a057ffb1f4493f32f7cfdb78ac2a77357d0800115ac00c6",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "escapevector": {
+        "originalClasses": {
+          "files": 348,
+          "sha256": "6b3ffcea748a6f4764d57e8e8f178879900895eeddc6085c6ab780139e931209"
+        },
+        "transformedClasses": {
+          "files": 348,
+          "sha256": "e7ec6281b3d2e429eb9145c5aa4634a2e84f94a18ee3340daf1679b1721475be"
+        },
+        "sources": {
+          "files": 348,
+          "sha256": "23257c3ae01c481534ab9bcddd463e6824acc0fd4b3c33c067fe1d2326bdd3c0"
+        },
+        "pipelineFingerprint": "c6bf1461d67f1feba0c27f958d57478b8f53f7ce3830ce91c9418e3662b8f871",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "fleacircus": {
+        "originalClasses": {
+          "files": 306,
+          "sha256": "99b4793e516f4e65ac9c2aae06eca18a843675ef2248c87a479f07cba9477495"
+        },
+        "transformedClasses": {
+          "files": 306,
+          "sha256": "99d1e572e13979cb1508d1680cc91f5dafdcc9df824b9e70acbd615704958ae8"
+        },
+        "sources": {
+          "files": 306,
+          "sha256": "029c16636c824d03651e357ffda43e5067bb8e254335ed518d08b6ab20edaae8"
+        },
+        "pipelineFingerprint": "0866472990e3a1242de8abdf60308f3c674a2723820ee91ddadcc3cc0c835fdf",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "geoblox": {
+        "originalClasses": {
+          "files": 303,
+          "sha256": "af786e6f03ed62250d289ef37613c6c3f46b4747b7dd2d78c83a2b02adb348b3"
+        },
+        "transformedClasses": {
+          "files": 303,
+          "sha256": "9a8077824a266c9410580a71eff341032cf9087d2a36d6c654c746e2bedc7465"
+        },
+        "sources": {
+          "files": 303,
+          "sha256": "4b94661b7bb87264c5331dda174649145742c64d4cace2d59c88e1b220d8e05d"
+        },
+        "pipelineFingerprint": "9bc43b9819d8e6463831f744fb6c7a6bf13630482c8a7c81589b304589bc575b",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        },
+        "publishedSources": {
+          "files": 303,
+          "sha256": "e9234157c5106f14405291578674b14151ef2c73d2614d499c12d1d6a584e6d0"
+        }
+      },
+      "holdtheline": {
+        "originalClasses": {
+          "files": 356,
+          "sha256": "713a627c40d8982c0e7b8cc0defe8f59271f6a5e3ac68399cf9e744453169747"
+        },
+        "transformedClasses": {
+          "files": 356,
+          "sha256": "5583f2c11894bcfafa01876c8751bde771981e0527afb826e1d43f47bea1d7d3"
+        },
+        "sources": {
+          "files": 356,
+          "sha256": "441bb34e6eedfe35fdfa1e973e1e58c222bab2930234cb835b96ae38efcf0b12"
+        },
+        "pipelineFingerprint": "3c32b3a6ae5792dd50e8ba4d5516de0171d0cf857bd2b93d951eb24182c1abb1",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 2,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 2
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "hostilespawn_vengeance": {
+        "originalClasses": {
+          "files": 335,
+          "sha256": "28551dc203d81266f1057c365bf8b8d93b42cdc5b8e41175273b1d23e96c79c1"
+        },
+        "transformedClasses": {
+          "files": 335,
+          "sha256": "c7a153e2b4c64ade03233fb010ec1a6898ba5f2da30ad2a6c4e314eeb9e5f218"
+        },
+        "sources": {
+          "files": 335,
+          "sha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0"
+        },
+        "pipelineFingerprint": "0b15a6140670ba176e15987a69ed843ae947980160ad3640e5ada8367944a797",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 3,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 3
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "kickabout": {
+        "originalClasses": {
+          "files": 543,
+          "sha256": "6863230ea410c0fad06ff599899702fd3b89133ea63db2d61efe6ee9fbef7066"
+        },
+        "transformedClasses": {
+          "files": 543,
+          "sha256": "5a28430046589d7bb0ef071fc728f4dba52f55d1c8697364e0cdd0d1b361959e"
+        },
+        "sources": {
+          "files": 543,
+          "sha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f"
+        },
+        "pipelineFingerprint": "2c1e7a13e8d7c77d3c491f3db80139650dffa053a98244292f624833c7f1de0c",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "lexicominos": {
+        "originalClasses": {
+          "files": 297,
+          "sha256": "138ef9b23dc8fadb0378cb5c10a5dcf9025ee91ccbc53a334dfbde0607640340"
+        },
+        "transformedClasses": {
+          "files": 297,
+          "sha256": "05c8188e63198f04779d6ca6baedde5445820ea9bbc14d2a6dea9c4308a17490"
+        },
+        "sources": {
+          "files": 297,
+          "sha256": "22949af4d35aeb01947ba88fae8abd75fe844e3600f8cbc9d8c2d882e5f86ef0"
+        },
+        "pipelineFingerprint": "5f7c10febcdd3fefa8b396ff74ca10fc5bb99e4e2dd02e204c2616fce1ee6ffd",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "minerdisturbance": {
+        "originalClasses": {
+          "files": 341,
+          "sha256": "aa0811f876a9c760200f0d043cf5a695cfe6b6550cc07d20f9fee0e740d7cfa7"
+        },
+        "transformedClasses": {
+          "files": 341,
+          "sha256": "a41ca21b0bb944bdc31b292b2b50b5f9ee879e26ba9f2a47faa040a68d449a78"
+        },
+        "sources": {
+          "files": 341,
+          "sha256": "ff6d9362791f2ad19a9e37d017e10388ebbd0b667d416d672c04c59a0a462cbf"
+        },
+        "pipelineFingerprint": "c456df624b5d4942a67d8e2eac2dd56ba2c428a1ed19eb146b236ec84fc2c4d9",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "monkeypuzzle2": {
+        "originalClasses": {
+          "files": 303,
+          "sha256": "4251108feea2394e10b6c3a746e78eca5315362094f6565fe5d0ddaed9f779a8"
+        },
+        "transformedClasses": {
+          "files": 303,
+          "sha256": "d62be59fc3198e8b996e462327dd4065af1e483ddd787a3e970cbcd21fa562bb"
+        },
+        "sources": {
+          "files": 303,
+          "sha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680"
+        },
+        "pipelineFingerprint": "9366cfafa2bcdaccd02c04ef3325205a780533a2ebad5586b127148983ff2ff6",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "orbdefence": {
+        "originalClasses": {
+          "files": 311,
+          "sha256": "6a0425e7b7e3e1d5f02765198ef28cba0bd5ee8edb44396cb0ea6dce2aba5533"
+        },
+        "transformedClasses": {
+          "files": 311,
+          "sha256": "33d850096dc90e2eff43ca90dee906e9e9830661076563a7655f05a68d7a8c47"
+        },
+        "sources": {
+          "files": 311,
+          "sha256": "e3bfc367b5ea5a23b2e1c054741add7fe4ad7d766d2894095f8b176fff61de16"
+        },
+        "pipelineFingerprint": "c248a8d5a3241d423ecca99164fc98235c3ee640d8ffba642e671c35b95cc438",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "pixelate": {
+        "originalClasses": {
+          "files": 397,
+          "sha256": "e9b79ac272f0dcb6f5370753248284f2d455a0b80f19d360cbd45a200c23b863"
+        },
+        "transformedClasses": {
+          "files": 397,
+          "sha256": "b91610b2e950635bc055187bc4f58f5375c2248cdc61f170e05b11c88fb57aec"
+        },
+        "sources": {
+          "files": 397,
+          "sha256": "bbe81e06d5b464eab92a6b6bf59f014012750ba4b945989ca378209286aa16a7"
+        },
+        "pipelineFingerprint": "e26fbc18a3c42496ad8677674893f9b68263fcadf1b11884268648b88755674c",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "pool": {
+        "originalClasses": {
+          "files": 429,
+          "sha256": "97bed9471ac99a26b63cdad9fef3f49cf8e370b93709810fbb36a744ddc9f4ec"
+        },
+        "transformedClasses": {
+          "files": 429,
+          "sha256": "a7b5050ed6ff6613ecab789782af905d0b57aec101f1ab3707f54ef1904eea04"
+        },
+        "sources": {
+          "files": 429,
+          "sha256": "65ca5eebdd8552ccbd86cc55f34b6fce02c4599831c581d38731a88a55795e47"
+        },
+        "pipelineFingerprint": "762305cfad535a059fc84653073eff0f79e2b11c70d0dac1f2d93c6ecfc75610",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 2,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 2
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "shatteredplans": {
+        "originalClasses": {
+          "files": 457,
+          "sha256": "9ddd56cba16f749816fbe954b1077e07ef011e48bc1b6748912e58accfc1d49d"
+        },
+        "transformedClasses": {
+          "files": 457,
+          "sha256": "2c89916e89100f55e4f68b42aba6c83f227fe0f3a8d717c1bb91d403ffcb2665"
+        },
+        "sources": {
+          "files": 457,
+          "sha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2"
+        },
+        "pipelineFingerprint": "a8d690b831fb4b981cd7a855b551266f8ec09ec75f28833bf6e9c45735a8df16",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "solknight": {
+        "originalClasses": {
+          "files": 294,
+          "sha256": "1dcf9d168071243acdef99e094593764931603ec0a7e05382865a5664eaac5b2"
+        },
+        "transformedClasses": {
+          "files": 294,
+          "sha256": "e27707fb2b5d190b1d125ddbc21b0e011eb5b8e643bdc79f114d70790d221068"
+        },
+        "sources": {
+          "files": 294,
+          "sha256": "ae5b664ddf5bd1b4183b790eaf00a0a79094cc42c115d74a46be3e1fd330195e"
+        },
+        "pipelineFingerprint": "75c0782f1d50b51d5295f5a1f8fe19e578211c073514871c9a482413624c2c19",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "starcannon": {
+        "originalClasses": {
+          "files": 287,
+          "sha256": "81485bd229b129b829615d43d18f9a5263f1f5fbd5f2553c99764f5dd13ff8b2"
+        },
+        "transformedClasses": {
+          "files": 287,
+          "sha256": "cdc1bc13d852e8f3be5007c0e98f817222bb457d96d5ea7984e4d85afaedde0e"
+        },
+        "sources": {
+          "files": 287,
+          "sha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c"
+        },
+        "pipelineFingerprint": "bec361c56ece8aa1d658768d6623bafeb97cb6956aa1e5a766d71d9daa706c09",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 2,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 2
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "steelsentinels": {
+        "originalClasses": {
+          "files": 347,
+          "sha256": "adb8b4ce755eb9ef7347a404c866c7d87b866ca13a7175908c2d8f15027a5e90"
+        },
+        "transformedClasses": {
+          "files": 347,
+          "sha256": "038c1092944f780da01a59d620d6b222c00271e8999178f056138a43ee885bab"
+        },
+        "sources": {
+          "files": 347,
+          "sha256": "f10daaa9cd9467b9655b920c116eec6088b16ab23ca54c46a0898ce0dc6d64f2"
+        },
+        "pipelineFingerprint": "16cc876dd57a5291198b5ed14a2b31a89f7cff120f4cc3cece683c22081dbea4",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "repository": "Kreijstal/java-tools",
+          "commit": "d88bc5ce810baed642d8cb3fd7a6cd8953baac3d",
+          "trackedClean": true,
+          "sourceArchive": {
+            "sha256": "3210cfac245b602d71ecd007f672cbc92d0038a74b73d9ab29895ddf383358cb",
+            "reproduce": "git archive --format=tar d88bc5ce810baed642d8cb3fd7a6cd8953baac3d | sha256sum",
+            "format": "Git-generated tar archive of all tracked decompiler repository files; excludes build caches and dependencies"
+          },
+          "sourceTreeSha256": "f10daaa9cd9467b9655b920c116eec6088b16ab23ca54c46a0898ce0dc6d64f2",
+          "correctedFailures": {
+            "pipeline": 0,
+            "cli": 1,
+            "verify": 0,
+            "javac": 1
+          },
+          "runner": {
+            "repository": "Kreijstal/dekobloko-work",
+            "commit": "ccd66572a50ccae3a81e8fd9ac15fd671824ad81",
+            "sourceSha256": "6f2fefbeb420abd0c0c80a286b676b55130acd3e8f83383085aaf50f83fd3880"
+          }
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        },
+        "publishedSources": {
+          "files": 347,
+          "sha256": "58b8cf63e55bde2b4704304041b4129add4387cfa86e6aee03f9480cb477d303"
+        }
+      },
+      "stellarshard": {
+        "originalClasses": {
+          "files": 301,
+          "sha256": "ad3479accadda7c81d109575905c7b028fd9e09fea010956e31174f63e5bb211"
+        },
+        "transformedClasses": {
+          "files": 301,
+          "sha256": "215422fbd026c68c0e4105e8f942509d54b563a658b721836af48da0c89f3d79"
+        },
+        "sources": {
+          "files": 301,
+          "sha256": "9d9c98a5028d8eddcf415fce59efe128ac35f26d7fbc0a1a9625a14d0c67274a"
+        },
+        "pipelineFingerprint": "c7b127de5fe9821ecd3d40009896bc4e33c71866d80766a510a205011c7e33c8",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "sumoblitz": {
+        "originalClasses": {
+          "files": 586,
+          "sha256": "c166d559d1ef382ae5f351208abeee867efea281829ea5d07bf294a5e756e8fa"
+        },
+        "transformedClasses": {
+          "files": 586,
+          "sha256": "c77a2faa3bdf6236fa6c982bec90101a9474677bd2ccb33209ac241688a984b7"
+        },
+        "sources": {
+          "files": 586,
+          "sha256": "dfdbde2d64759f8dd722b88882ac48873a91678b6b97428875939f419d9e9bcc"
+        },
+        "pipelineFingerprint": "7fdc738810da65adfd77fa9b0a6590b63465c0eb16b92f2387a3b889de5ac90a",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "terraphoenix": {
+        "originalClasses": {
+          "files": 311,
+          "sha256": "222bff63941f45a07571deedfdae97ff71996994ba22c433c1478a68aefc1de9"
+        },
+        "transformedClasses": {
+          "files": 311,
+          "sha256": "4286d121fcbb5fcde23e543aa9c3314cc0e766a1319e63d727cea35c932a2004"
+        },
+        "sources": {
+          "files": 311,
+          "sha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00"
+        },
+        "pipelineFingerprint": "5d0d9e5dcec92cbb8d1081c80b27f6436b0e2d2736109df26f2a6cb0ed054195",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "tetralink": {
+        "originalClasses": {
+          "files": 355,
+          "sha256": "0e05e498a290c93bedc2723a97251f2905cf98b7d19340cc236100d4be6e3118"
+        },
+        "transformedClasses": {
+          "files": 355,
+          "sha256": "a543716d2ad90e80fba107d6a4f669c2c3b9d52e69cdf93be3b8a470451a0a21"
+        },
+        "sources": {
+          "files": 355,
+          "sha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9"
+        },
+        "pipelineFingerprint": "68e7e47bf1051b891dde874c9ce6f64b03c40b6cc405d0986f3cef8f897d2973",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "tombracer": {
+        "originalClasses": {
+          "files": 1090,
+          "sha256": "25009d8fa57609f8a7d99f7149885d817fe130c1ff728cf82fe64c7f72f78ac3"
+        },
+        "transformedClasses": {
+          "files": 1090,
+          "sha256": "099e50cff45e21caff008bc5671cca1592a1731e40654137a877de6c6ede52c2"
+        },
+        "sources": {
+          "files": 1090,
+          "sha256": "145b13bc847895948659831ff292c85bf8487ab5cdb2b9615b317b54baf77e7d"
+        },
+        "pipelineFingerprint": "38e489eb11c6cbdab6fce032e26d18f36563fdaec4276e9e72154a1a591f76b3",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "torchallenge": {
+        "originalClasses": {
+          "files": 300,
+          "sha256": "618a03092858d3ef29977616671f90807656d3b5bf26b52bda3dc87fc0646796"
+        },
+        "transformedClasses": {
+          "files": 300,
+          "sha256": "7792820afec56be0d141b35499c14eff8235cb246f18c76361051c08f52aaf44"
+        },
+        "sources": {
+          "files": 300,
+          "sha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65"
+        },
+        "pipelineFingerprint": "55c3ec3330eedb856e7cac5e2da6bf8fe4269d391b45ffe0ccf4cbf3be9fda2f",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "torquing": {
+        "originalClasses": {
+          "files": 396,
+          "sha256": "1b99c510a68a3d84fa9d36c409e2476aecb693d1d1453ecc51d804606b399e41"
+        },
+        "transformedClasses": {
+          "files": 396,
+          "sha256": "4c581f498d90f46d1f67eba4cc7a8490d505a299f75d82f9fb8db013bc21c829"
+        },
+        "sources": {
+          "files": 396,
+          "sha256": "d5b607927334e94f96a23b7311ef60890204fe2a23d66a0571322079a17eec67"
+        },
+        "pipelineFingerprint": "505f95fbddd939d2a9e5fa5369cb20e23abb723e75c13230545f2b679d4aa732",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "trackcontroller": {
+        "originalClasses": {
+          "files": 298,
+          "sha256": "8511cb084c216cf5ff512a67c50c3542c496a5fdc02cae80b7dddec375d4a2f3"
+        },
+        "transformedClasses": {
+          "files": 298,
+          "sha256": "47140e8386c01f8ba201df7617d1fefbcaf8a647fa53582ed3518be5755c9e8a"
+        },
+        "sources": {
+          "files": 298,
+          "sha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74"
+        },
+        "pipelineFingerprint": "38f43b828ece7bdcd79197b34d16106d17bbf2c30193cb7d7f7d9e4c86830575",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "transmogrify": {
+        "originalClasses": {
+          "files": 299,
+          "sha256": "e4633c7e7b2763a4bbef3ecb2074f84b678a4b2f3b80cad443832151cc954c28"
+        },
+        "transformedClasses": {
+          "files": 299,
+          "sha256": "f50750d4e08e48fc09baba1049cb4c8d2d40f905b8b7d0cf3811cac26f04ef47"
+        },
+        "sources": {
+          "files": 299,
+          "sha256": "faa6d117084c568bd9d39988182d22f1769d14a933f457095f67da827eb4807d"
+        },
+        "pipelineFingerprint": "734d758546adf4bdf9bd398aee0437741eb117bd7133b2b478275cb5f6b7eaba",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "vertigo2": {
+        "originalClasses": {
+          "files": 437,
+          "sha256": "a371a1697fc699a0ab261738b4f164a6b9f755ba870f9a0e1c5b6db1a4d4b9cc"
+        },
+        "transformedClasses": {
+          "files": 437,
+          "sha256": "5c4b7f112f69796778633216cafdc6246d48106e391652319bd8b0cb072f2603"
+        },
+        "sources": {
+          "files": 437,
+          "sha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7"
+        },
+        "pipelineFingerprint": "beecf4df97812bbc7f844e33149663d66ace09965c0f815ff2fe6a26da732f93",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "virogrid": {
+        "originalClasses": {
+          "files": 347,
+          "sha256": "ada01bc8ed58843a72721497e6b4288e7ebe5b7c4c6dda09835f5ff12bf14b3a"
+        },
+        "transformedClasses": {
+          "files": 347,
+          "sha256": "20ed4307d3bed28d4fd3bff88a28f822914163d9e140a2e445352bd9f75aa2cc"
+        },
+        "sources": {
+          "files": 347,
+          "sha256": "73369b22d01d3ca4afc8a1bb025a3f1d85920183905582e40ec4c7859f2e1c78"
+        },
+        "pipelineFingerprint": "0ad074c301599d40ccb7f4fe0943e3cd7755603612ca52da97ca23e34eb1f468",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "voidhunters": {
+        "originalClasses": {
+          "files": 1570,
+          "sha256": "c7d40654bb2b8269ed52e2fc7ce815bee70efbf2313d49f7c9aac1afd0dc46c1"
+        },
+        "transformedClasses": {
+          "files": 1570,
+          "sha256": "975bcaec5ae82a205e212803a4e5667395da3fc76a1c2e127be8c01758ab0139"
+        },
+        "sources": {
+          "files": 1570,
+          "sha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c"
+        },
+        "pipelineFingerprint": "c7e5b3845a3553ffc8f201a92606e5a9861cbe3ea5b4e6bc9fac108fd9762bc5",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 1,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 1
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "wizardrun": {
+        "originalClasses": {
+          "files": 298,
+          "sha256": "67581548be031952a7a0c7fbb38ddac304d849a184653c8bf80868075f7150a9"
+        },
+        "transformedClasses": {
+          "files": 298,
+          "sha256": "3239bd0020381c008aa873e640d358fb5109a61ecd8a07b227922e1cee31720d"
+        },
+        "sources": {
+          "files": 298,
+          "sha256": "afac4540005f24ce5d2bf2eb36ddf3038dab1c3099a63da88e9df330365ae2e3"
+        },
+        "pipelineFingerprint": "cade65719d210551cac2dcc809d3d5b841b28218f9001e2ef4d40efaa7003168",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "zombiedawn": {
+        "originalClasses": {
+          "files": 386,
+          "sha256": "3289a32d3ed3c29878300fede6d05b041f433531c1a35506f9e9a1e5fdb15a12"
+        },
+        "transformedClasses": {
+          "files": 386,
+          "sha256": "02ed5f93b0abe739cefba966780f3a1d164f50eced86832f7d4b0815ec4aa539"
+        },
+        "sources": {
+          "files": 386,
+          "sha256": "24c601f41499c4927359bf70b61eea85671ac110b52dcf8a31246a7e10338ffc"
+        },
+        "pipelineFingerprint": "e4be4fa4a5307df63e9a90a9286e9a343e82fd72c2235f3ad89bccf99bca79e7",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
+      },
+      "zombiedawnmulti": {
+        "originalClasses": {
+          "files": 417,
+          "sha256": "488eb0ee6ff1e44cbbc984a4fa91bb0d09d984de7ec09c4a6c1d7fb3d03d789b"
+        },
+        "transformedClasses": {
+          "files": 417,
+          "sha256": "52d6654328d2bee9ab2c9f37ecc4c45311807d0ba882c5c56ba1805c5b9c15fc"
+        },
+        "sources": {
+          "files": 417,
+          "sha256": "854791338433f981516fd30d1a51754afb38d4c6601cefbf0b63c6c391ee05db"
+        },
+        "pipelineFingerprint": "8c4d668f26d254bb8803de566415be53229efbe780d5641beb1dfbbea854f799",
+        "pipelineEnvironment": {
+          "PIPELINE_ALLOW_MUTUALLY_GUARDED_FALSE_CYCLES": "1"
+        },
+        "sourceGenerator": {
+          "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+        },
+        "diagnostics": {
+          "hardFailures": 0,
+          "validFallbacks": 0,
+          "totals": {
+            "stackUnderflow": 0,
+            "rawControlFlow": 0,
+            "placeholders": 0,
+            "stateMachineFallback": 0
+          }
+        },
+        "validation": {
+          "bytecodeVerifier": "pass",
+          "javac": "pass",
+          "javacArguments": [
+            "--release",
+            "8",
+            "-proc:none",
+            "-encoding",
+            "UTF-8",
+            "-sourcepath",
+            "",
+            "-classpath",
+            "batch-stubs"
+          ]
+        }
       }
     }
   }

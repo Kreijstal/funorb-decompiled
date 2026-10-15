@@ -361,34 +361,32 @@ final class hk extends rf {
         int var10;
         ml var11;
         ml var12;
-        boolean decompiledFrameCompleted0 = true;
-        var10 = AceOfSkies.field_G ? 1 : 0;
-        this.a(64, param2, 0, param3);
-        if (0 != (2 & this.field_G[param3])) {
-          var5 = (ft) (this.field_L.field_k.a((byte) -70));
-          while (var5 != null) {
-            stackOut_4_0 = var5;
-            stackIn_10_0 = stackOut_4_0;
-            stackIn_5_0 = stackOut_4_0;
-            if (var10 != 0) {
-              decompiledFrameCompleted0 = false;
-              break;
+        L0: {
+          var10 = AceOfSkies.field_G ? 1 : 0;
+          this.a(64, param2, 0, param3);
+          if (0 != (2 & this.field_G[param3])) {
+            var5 = (ft) (this.field_L.field_k.a((byte) -70));
+            while (var5 != null) {
+              stackOut_4_0 = var5;
+              stackIn_10_0 = stackOut_4_0;
+              stackIn_5_0 = stackOut_4_0;
+              if (var10 != 0) {
+                break L0;
+              }
+              if (~stackIn_5_0.field_m == ~param3 &&
+                0 > var5.field_p) {
+                this.field_E[param3][var5.field_n] = null;
+                this.field_E[param3][param2] = var5;
+                var6_int = var5.field_w + (var5.field_q * var5.field_u >> 12);
+                var5.field_w = var5.field_w + (-var5.field_n + param2 << 8);
+                var5.field_q = 4096;
+                var5.field_n = param2;
+                var5.field_u = -var5.field_w + var6_int;
+                return;
+              }
+              var5 = (ft) (this.field_L.field_k.a(110));
             }
-            if (~stackIn_5_0.field_m == ~param3 &&
-              0 > var5.field_p) {
-              this.field_E[param3][var5.field_n] = null;
-              this.field_E[param3][param2] = var5;
-              var6_int = var5.field_w + (var5.field_q * var5.field_u >> 12);
-              var5.field_w = var5.field_w + (-var5.field_n + param2 << 8);
-              var5.field_q = 4096;
-              var5.field_n = param2;
-              var5.field_u = -var5.field_w + var6_int;
-              return;
-            }
-            var5 = (ft) (this.field_L.field_k.a(110));
           }
-        }
-        if (decompiledFrameCompleted0) {
           stackIn_10_0 = this.field_n.a((byte) 106, (long)this.field_I[param3]);
         }
         var11 = (ml) (stackIn_10_0);

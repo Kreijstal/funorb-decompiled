@@ -19,188 +19,49 @@ final class rb {
         String[] stackIn_6_0 = null;
         int stackIn_11_0 = 0;
         int stackIn_17_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var8 = wizardrun.field_H;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var3_int = 0;
-                        var4 = pf.field_f;
-                        if (param0 == -578629823) {
-                            statePc = 4;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                stackIn_3_0 = -85;
-                                statePc = 3;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
-                        }
-                        caughtException = stateCaught_1;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0;
-                }
-                case 4: {
-                    stackIn_6_0 = a.field_b;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        stackIn_6_0 = a.field_b;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
-                        }
-                        caughtException = stateCaught_5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (stackIn_6_0.length <= var3_int) {
-                            /* Inlined CFG state: 16. */
-                            {
-                                stackIn_17_0 = -1;
-                                statePc = 17;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 7. */
-                            {
-                                var5 = ec.field_g[var3_int];
-                                if (0 > var5) {
-                                    statePc = 13;
-                                } else {
-                                    statePc = 8;
-                                }
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_6) {
-                        statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
-                        }
-                        caughtException = stateCaught_6;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    try {
-                        var6 = sf.a(true, 110, a.field_b[var3_int]);
-                        var7 = -(var6 >> 1) + id.field_c;
-                        var4 = var4 + na.field_e;
-                        if (ih.a(-vl.field_h + var7, (vl.field_h << 1) + var6, ec.field_c + (e.field_d << 1), var4, true, param1, param2)) {
-                            statePc = 10;
-                        } else {
-                            statePc = 9;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_8) {
-                        statePc = ((Object) stateCaught_8 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_8);
-                        }
-                        caughtException = stateCaught_8;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    try {
-                        /* Sequential CFG blocks: 9, 12. */
-                        {
-                        }
-                        {
-                            var4 = var4 + (ec.field_c + (na.field_e + (e.field_d << 1)));
-                            statePc = 14;
-                            continue stateLoop;
-                        }
-                    } catch (Throwable stateCaught_9) {
-                        statePc = ((Object) stateCaught_9 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
-                        }
-                        caughtException = stateCaught_9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        stackIn_11_0 = var5;
-                        statePc = 11;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_10) {
-                        statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
-                        }
-                        caughtException = stateCaught_10;
-                        continue stateLoop;
-                    }
-                }
-                case 11: {
-                    return stackIn_11_0;
-                }
-                case 13: {
-                    try {
-                        var4 = var4 + si.field_f;
-                        statePc = 14;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_13) {
-                        statePc = ((Object) stateCaught_13 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
-                        }
-                        caughtException = stateCaught_13;
-                        continue stateLoop;
-                    }
-                }
-                case 14: {
-                    try {
-                        var3_int++;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_14) {
-                        statePc = ((Object) stateCaught_14 instanceof RuntimeException ? 18 : -1);
-                        if (statePc == -1) {
-                            throw rb.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
-                        }
-                        caughtException = stateCaught_14;
-                        continue stateLoop;
-                    }
-                }
-                case 17: {
-                    return stackIn_17_0;
-                }
-                case 18: {
-                    var3 = (RuntimeException) ((Object) caughtException);
-                    throw bd.a((Throwable) ((Object) var3), "rb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var8 = wizardrun.field_H;
+        try {
+          var3_int = 0;
+          var4 = pf.field_f;
+          if (param0 != -578629823) {
+            stackIn_3_0 = -85;
+            return stackIn_3_0;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw bd.a((Throwable) ((Object) var3), "rb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+        stackIn_6_0 = a.field_b;
+        try {
+          while (stackIn_6_0.length > var3_int) {
+            var5 = ec.field_g[var3_int];
+            if (0 > var5) {
+              var4 = var4 + si.field_f;
+            } else {
+              var6 = sf.a(true, 110, a.field_b[var3_int]);
+              var7 = -(var6 >> 1) + id.field_c;
+              var4 = var4 + na.field_e;
+              if (ih.a(-vl.field_h + var7, (vl.field_h << 1) + var6, ec.field_c + (e.field_d << 1), var4, true, param1, param2)) {
+                stackIn_11_0 = var5;
+                return stackIn_11_0;
+              }
+              var4 = var4 + (ec.field_c + (na.field_e + (e.field_d << 1)));
             }
+            var3_int++;
+            stackIn_6_0 = a.field_b;
+          }
+          stackIn_17_0 = -1;
+          return stackIn_17_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var3 = decompiledCaughtException;
+          throw bd.a((Throwable) ((Object) var3), "rb.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -288,10 +149,5 @@ final class rb {
 
     static {
         field_b = "Achievements This Game";
-    }
-
-    @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
-        throw (T) throwable;
     }
 }

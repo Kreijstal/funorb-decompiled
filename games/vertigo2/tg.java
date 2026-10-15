@@ -35,18 +35,19 @@ final class tg extends java.awt.Canvas {
 
     final static void a(int param0, cr param1) {
         cr var4 = null;
-        cr var5 = null;
+        cr var2 = null;
         int var3 = Vertigo2.field_L ? 1 : 0;
+        cr var2Lifetime1;
         try {
           var4 = (cr) (param1.field_M.a((byte) 100));
-          cr var2 = var4;
+          var2 = var4;
           while (var4 != null) {
             var4.field_kb = 0;
             var4.field_N = 0;
             var4.field_L = 0;
             var4.field_db = 0;
-            var5 = (cr) (param1.field_M.b(95));
-            var5 = var5;
+            var4 = (cr) (param1.field_M.b(95));
+            var2Lifetime1 = var4;
           }
           param1.field_kb = 0;
           param1.field_L = 0;

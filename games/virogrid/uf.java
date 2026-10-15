@@ -163,324 +163,167 @@ final class uf {
     }
 
     private final int a(boolean param0, int param1, byte param2, int param3, int param4, boolean param5, int param6, int param7) {
-        int statePc = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var17 = Virogrid.field_F ? 1 : 0;
-                    var9 = this.a(param1, param7, (byte) 99, param6, param3);
-                    var10 = 0;
-                    if (var9 == 0) {
-                        statePc = 23;
-                    } else {
-                        statePc = 1;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        int var14;
+        int var15;
+        int var16;
+        int var17;
+        L0: {
+          L1: {
+            var17 = Virogrid.field_F ? 1 : 0;
+            var9 = this.a(param1, param7, (byte) 99, param6, param3);
+            var10 = 0;
+            if (var9 == 0) {
+              var10++;
+              if (param0) {
+                this.field_C[param6][param1] = (byte)param2;
+              }
+            } else {
+              if (1 != var9) {
+                return -1;
+              }
+              if (!param0) {
+                var11 = -1 + param6;
+                if (var11 < 0) {
+                  var11 = 0;
+                }
+                if (param4 <= 38) {
+                  this.a((byte) 123);
+                }
+                var12 = 1 + param6;
+                if (var12 >= this.field_C.length) {
+                  var12 = -1 + this.field_C.length;
+                }
+                var13 = -1 + param1;
+                if (var13 < 0) {
+                  var13 = 0;
+                }
+                var14 = param1 + 1;
+                if (var14 >= this.field_C[0].length) {
+                  var14 = this.field_C[0].length - 1;
+                }
+                var15 = var11;
+                if (var12 < var15) {
+                  break L0;
+                }
+                var16 = var13;
+                if (var16 > var14) {
+                  var15++;
+                  break L1;
+                }
+                if (this.field_C[var15][var16] != -param2 + 1) {
+                  var16++;
+                  while (true) {
+                    if (var16 > var14) {
+                      var15++;
+                      if (var12 < var15) {
+                        break L0;
+                      }
+                      var16 = var13;
+                      continue;
                     }
-                    continue stateLoop;
-                }
-                case 1: {
-                    if (1 == var9) {
-                        /* Inlined CFG state: 3. */
-                        {
-                            if (param0) {
-                                /* Inlined CFG state: 22. */
-                                {
-                                    this.field_C[param7][param3] = (byte)-1;
-                                    this.field_C[param6][param1] = (byte)param2;
-                                    statePc = 25;
-                                    continue stateLoop;
-                                }
-                            } else {
-                                /* Inlined CFG state: 4. */
-                                {
-                                    var11 = -1 + param6;
-                                    if (var11 >= 0) {
-                                        statePc = 6;
-                                    } else {
-                                        statePc = 5;
-                                    }
-                                    continue stateLoop;
-                                }
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 2. */
-                        {
-                            return -1;
-                        }
-                    }
-                }
-                case 5: {
-                    var11 = 0;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 6: {
-                    if (param4 > 38) {
-                        statePc = 8;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 7. */
-                        {
-                            this.a((byte) 123);
-                            statePc = 8;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 8: {
-                    var12 = 1 + param6;
-                    if (var12 < this.field_C.length) {
-                        statePc = 10;
-                    } else {
-                        statePc = 9;
-                    }
-                    continue stateLoop;
-                }
-                case 9: {
-                    var12 = -1 + this.field_C.length;
-                    statePc = 10;
-                    continue stateLoop;
-                }
-                case 10: {
-                    var13 = -1 + param1;
-                    if (var13 >= 0) {
-                        statePc = 12;
-                    } else {
-                        statePc = 11;
-                    }
-                    continue stateLoop;
-                }
-                case 11: {
-                    var13 = 0;
-                    statePc = 12;
-                    continue stateLoop;
-                }
-                case 12: {
-                    var14 = param1 + 1;
-                    if (var14 >= this.field_C[0].length) {
-                        statePc = 14;
-                    } else {
-                        statePc = 15;
-                    }
-                    continue stateLoop;
-                }
-                case 14: {
-                    var14 = this.field_C[0].length - 1;
-                    statePc = 15;
-                    continue stateLoop;
-                }
-                case 15: {
-                    var15 = var11;
-                    if (var12 < var15) {
-                        statePc = 53;
-                    } else {
-                        statePc = 16;
-                    }
-                    continue stateLoop;
-                }
-                case 16: {
-                    var16 = var13;
-                    if (var16 <= var14) {
-                        statePc = 18;
-                    } else {
-                        statePc = 17;
-                    }
-                    continue stateLoop;
-                }
-                case 17: {
-                    var15++;
-                    statePc = 37;
-                    continue stateLoop;
-                }
-                case 18: {
                     if (this.field_C[var15][var16] == -param2 + 1) {
-                        /* Inlined CFG state: 20. */
-                        {
-                            var10++;
-                            if (param0) {
-                                statePc = 46;
-                            } else {
-                                statePc = 47;
-                            }
-                            continue stateLoop;
-                        }
-                    } else {
-                        /* Inlined CFG state: 19. */
-                        {
-                            var16++;
-                            statePc = 39;
-                            continue stateLoop;
-                        }
+                      var10++;
+                      if (param0) {
+                        this.field_C[var15][var16] = (byte)param2;
+                      }
+                      if (param5) {
+                        var10++;
+                      }
                     }
+                    var16++;
+                  }
                 }
-                case 23: {
+                var10++;
+                if (!param0) {
+                  L13: while (true) {
+                    if (param5) {
+                      var10++;
+                    }
+                    do {
+                      var16++;
+                      while (var16 > var14) {
+                        var15++;
+                        if (var12 < var15) {
+                          break L0;
+                        }
+                        var16 = var13;
+                      }
+                    } while (this.field_C[var15][var16] != -param2 + 1);
                     var10++;
                     if (!param0) {
-                        statePc = 25;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 24. */
-                        {
-                            this.field_C[param6][param1] = (byte)param2;
-                            statePc = 25;
-                            continue stateLoop;
-                        }
+                      continue L13;
                     }
-                }
-                case 25: {
-                    var11 = -1 + param6;
-                    if (var11 >= 0) {
-                        statePc = 27;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 26. */
-                        {
-                            var11 = 0;
-                            statePc = 27;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 27: {
-                    if (param4 > 38) {
-                        statePc = 29;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 28. */
-                        {
-                            this.a((byte) 123);
-                            statePc = 29;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 29: {
-                    var12 = 1 + param6;
-                    if (var12 < this.field_C.length) {
-                        statePc = 31;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 30. */
-                        {
-                            var12 = -1 + this.field_C.length;
-                            statePc = 31;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 31: {
-                    var13 = -1 + param1;
-                    if (var13 >= 0) {
-                        statePc = 33;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 32. */
-                        {
-                            var13 = 0;
-                            statePc = 33;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 33: {
-                    var14 = param1 + 1;
-                    if (var14 >= this.field_C[0].length) {
-                        /* Inlined CFG state: 35. */
-                        {
-                            var14 = this.field_C[0].length - 1;
-                            statePc = 36;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 36;
-                        continue stateLoop;
-                    }
-                }
-                case 36: {
-                    var15 = var11;
-                    statePc = 37;
-                    continue stateLoop;
-                }
-                case 37: {
-                    if (var12 < var15) {
-                        statePc = 53;
-                        continue stateLoop;
-                    } else {
-                        /* Inlined CFG state: 38. */
-                        {
-                            var16 = var13;
-                            statePc = 39;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 39: {
-                    if (var16 <= var14) {
-                        /* Inlined CFG state: 41. */
-                        {
-                            if (this.field_C[var15][var16] == -param2 + 1) {
-                                /* Inlined CFG state: 44. */
-                                {
-                                    var10++;
-                                    if (param0) {
-                                        statePc = 46;
-                                    } else {
-                                        statePc = 47;
-                                    }
-                                    continue stateLoop;
-                                }
-                            } else {
-                                statePc = 51;
-                                continue stateLoop;
-                            }
-                        }
-                    } else {
-                        /* Inlined CFG state: 40. */
-                        {
-                            var15++;
-                            statePc = 37;
-                            continue stateLoop;
-                        }
-                    }
-                }
-                case 46: {
                     this.field_C[var15][var16] = (byte)param2;
-                    statePc = 47;
-                    continue stateLoop;
+                  }
                 }
-                case 47: {
+                while (true) {
+                  this.field_C[var15][var16] = (byte)param2;
+                  while (true) {
                     if (param5) {
-                        /* Inlined CFG state: 50. */
-                        {
-                            var10++;
-                            statePc = 51;
-                            continue stateLoop;
-                        }
-                    } else {
-                        statePc = 51;
-                        continue stateLoop;
+                      var10++;
                     }
+                    do {
+                      var16++;
+                      while (var16 > var14) {
+                        var15++;
+                        if (var12 < var15) {
+                          break L0;
+                        }
+                        var16 = var13;
+                      }
+                    } while (this.field_C[var15][var16] != -param2 + 1);
+                    var10++;
+                    if (param0) {
+                      break;
+                    }
+                  }
                 }
-                case 51: {
-                    var16++;
-                    statePc = 39;
-                    continue stateLoop;
-                }
-                case 53: {
-                    return var10;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              }
+              this.field_C[param7][param3] = (byte)-1;
+              this.field_C[param6][param1] = (byte)param2;
             }
+            var11 = -1 + param6;
+            if (var11 < 0) {
+              var11 = 0;
+            }
+            if (param4 <= 38) {
+              this.a((byte) 123);
+            }
+            var12 = 1 + param6;
+            if (var12 >= this.field_C.length) {
+              var12 = -1 + this.field_C.length;
+            }
+            var13 = -1 + param1;
+            if (var13 < 0) {
+              var13 = 0;
+            }
+            var14 = param1 + 1;
+            if (var14 >= this.field_C[0].length) {
+              var14 = this.field_C[0].length - 1;
+            }
+            var15 = var11;
+          }
+          while (var12 >= var15) {
+            for (var16 = var13; var16 <= var14; var16++) {
+              if (this.field_C[var15][var16] == -param2 + 1) {
+                var10++;
+                if (param0) {
+                  this.field_C[var15][var16] = (byte)param2;
+                }
+                if (param5) {
+                  var10++;
+                }
+              }
+            }
+            var15++;
+          }
         }
+        return var10;
     }
 
     private final boolean a(int param0, int param1) {

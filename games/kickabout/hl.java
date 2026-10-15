@@ -9,18 +9,19 @@ final class hl extends lg implements sv, ft {
 
     final static void a(boolean param0, hd param1) {
         hd var4 = null;
-        hd var5 = null;
+        hd var2 = null;
         int var3 = Kickabout.field_G;
+        hd var2Lifetime1;
         try {
           var4 = (hd) (param1.field_jb.g(24009));
-          hd var2 = var4;
+          var2 = var4;
           while (var4 != null) {
             var4.field_J = 0;
             var4.field_mb = 0;
             var4.field_L = 0;
             var4.field_v = 0;
-            var5 = (hd) (param1.field_jb.c(33));
-            var5 = var5;
+            var4 = (hd) (param1.field_jb.c(33));
+            var2Lifetime1 = var4;
           }
           if (!param0) {
             field_e = (kg[]) null;

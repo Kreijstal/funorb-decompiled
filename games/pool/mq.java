@@ -14,20 +14,21 @@ final class mq implements Runnable {
 
     final static void a(vh param0, byte param1) {
         vh var3 = null;
-        vh var4 = null;
+        vh var2 = null;
+        vh var2Lifetime1;
         try {
           if (param1 != 109) {
             field_f = 43;
           }
           var3 = (vh) (param0.field_T.c((byte) -74));
-          vh var2 = var3;
+          var2 = var3;
           while (var3 != null) {
             var3.field_Db = 0;
             var3.field_Cb = 0;
             var3.field_eb = 0;
             var3.field_E = 0;
-            var4 = (vh) (param0.field_T.f((byte) -5));
-            var4 = var4;
+            var3 = (vh) (param0.field_T.f((byte) -5));
+            var2Lifetime1 = var3;
           }
           param0.field_Db = 0;
           param0.field_eb = 0;

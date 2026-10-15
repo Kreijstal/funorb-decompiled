@@ -262,35 +262,33 @@ final class ug extends qb {
         int var10;
         kk var11;
         kk var12;
-        boolean decompiledFrameCompleted0 = true;
-        var10 = DungeonAssault.field_K;
-        this.a(true, param2, param3, 64);
-        var5 = 109 / ((57 - param1) / 44);
-        if (0 != (2 & this.field_G[param3])) {
-          var6 = (lp) (this.field_R.field_q.d(-14205));
-          while (var6 != null) {
-            stackOut_3_0 = var6;
-            stackIn_9_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
-            if (var10 != 0) {
-              decompiledFrameCompleted0 = false;
-              break;
+        L0: {
+          var10 = DungeonAssault.field_K;
+          this.a(true, param2, param3, 64);
+          var5 = 109 / ((57 - param1) / 44);
+          if (0 != (2 & this.field_G[param3])) {
+            var6 = (lp) (this.field_R.field_q.d(-14205));
+            while (var6 != null) {
+              stackOut_3_0 = var6;
+              stackIn_9_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (var10 != 0) {
+                break L0;
+              }
+              if (stackIn_4_0.field_p == param3 &&
+                var6.field_r < 0) {
+                this.field_u[param3][var6.field_y] = null;
+                this.field_u[param3][param2] = var6;
+                var7_int = var6.field_s + (var6.field_w * var6.field_J >> 12);
+                var6.field_s = var6.field_s + (param2 - var6.field_y << 8);
+                var6.field_y = param2;
+                var6.field_J = var7_int - var6.field_s;
+                var6.field_w = 4096;
+                return;
+              }
+              var6 = (lp) (this.field_R.field_q.g(20));
             }
-            if (stackIn_4_0.field_p == param3 &&
-              var6.field_r < 0) {
-              this.field_u[param3][var6.field_y] = null;
-              this.field_u[param3][param2] = var6;
-              var7_int = var6.field_s + (var6.field_w * var6.field_J >> 12);
-              var6.field_s = var6.field_s + (param2 - var6.field_y << 8);
-              var6.field_y = param2;
-              var6.field_J = var7_int - var6.field_s;
-              var6.field_w = 4096;
-              return;
-            }
-            var6 = (lp) (this.field_R.field_q.g(20));
           }
-        }
-        if (decompiledFrameCompleted0) {
           stackIn_9_0 = this.field_W.a((long)this.field_P[param3], 8);
         }
         var11 = (kk) (stackIn_9_0);

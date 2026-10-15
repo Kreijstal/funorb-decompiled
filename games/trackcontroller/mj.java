@@ -25,96 +25,36 @@ final class mj {
         int var3 = 0;
         int var4 = 0;
         qj[] stackIn_5_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var4 = TrackController.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var1 = ii.field_r[39];
-                        var2 = 40;
-                        var3 = 0;
-                        if (param0 == 208) {
-                            statePc = 3;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_1) {
-                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 9 : -1);
-                        if (statePc == -1) {
-                            throw mj.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
-                        }
-                        caughtException = stateCaught_1;
-                        continue stateLoop;
-                    }
-                }
-                case 2: {
-                    return;
-                }
-                case 3: {
-                    stackIn_5_0 = mb.field_d;
-                    statePc = 5;
-                    continue stateLoop;
-                }
-                case 4: {
-                    try {
-                        stackIn_5_0 = mb.field_d;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_4) {
-                        statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 9 : -1);
-                        if (statePc == -1) {
-                            throw mj.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
-                        }
-                        caughtException = stateCaught_4;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    try {
-                        if (stackIn_5_0.length <= var3) {
-                            /* Inlined CFG state: 7. */
-                            {
-                                ia.field_b.a(-91);
-                                statePc = 10;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 6. */
-                            {
-                                mb.field_d[var3] = new qj(var2, var2);
-                                mb.field_d[var3].a();
-                                var1.a(208, 208, var2 << 3, var2 << 3, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
-                                var3++;
-                                statePc = 4;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_5) {
-                        statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 9 : -1);
-                        if (statePc == -1) {
-                            throw mj.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
-                        }
-                        caughtException = stateCaught_5;
-                        continue stateLoop;
-                    }
-                }
-                case 9: {
-                    var1_ref = (RuntimeException) ((Object) caughtException);
-                    throw sl.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
-                }
-                case 10: {
-                    return;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
-            }
+        var4 = TrackController.field_F ? 1 : 0;
+        try {
+          var1 = ii.field_r[39];
+          var2 = 40;
+          var3 = 0;
+          if (param0 != 208) {
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1_ref = decompiledCaughtException;
+          throw sl.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
+        }
+        stackIn_5_0 = mb.field_d;
+        try {
+          while (stackIn_5_0.length > var3) {
+            mb.field_d[var3] = new qj(var2, var2);
+            mb.field_d[var3].a();
+            var1.a(208, 208, var2 << 3, var2 << 3, (int)(0.5 + 16384.0 * (double)var3 / 26.0), 4096);
+            var3++;
+            stackIn_5_0 = mb.field_d;
+          }
+          ia.field_b.a(-91);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var1_ref = decompiledCaughtException;
+          throw sl.a((Throwable) ((Object) var1_ref), "mj.A(" + param0 + ')');
         }
     }
 
@@ -123,10 +63,5 @@ final class mj {
         field_f = "All";
         field_c = false;
         field_e = new aa(1, 2, 2, 0);
-    }
-
-    @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
-        throw (T) throwable;
     }
 }

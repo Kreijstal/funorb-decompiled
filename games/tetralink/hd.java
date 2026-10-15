@@ -90,21 +90,22 @@ final class hd extends um {
 
     final static void a(hl param0, byte param1) {
         hl var4 = null;
-        hl var5 = null;
+        hl var2 = null;
         int var3 = TetraLink.field_J;
+        hl var2Lifetime1;
         try {
           if (param1 != -104) {
             field_x = (vl) null;
           }
           var4 = (hl) (param0.field_fb.c(false));
-          hl var2 = var4;
+          var2 = var4;
           while (var4 != null) {
             var4.field_mb = 0;
             var4.field_Db = 0;
             var4.field_yb = 0;
             var4.field_R = 0;
-            var5 = (hl) (param0.field_fb.a((byte) -70));
-            var5 = var5;
+            var4 = (hl) (param0.field_fb.a((byte) -70));
+            var2Lifetime1 = var4;
           }
           param0.field_R = 0;
           param0.field_Db = 0;

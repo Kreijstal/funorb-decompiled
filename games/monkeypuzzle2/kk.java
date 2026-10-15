@@ -786,10 +786,15 @@ final class kk {
           }
           stackIn_6_1[stackIn_6_2] = stackIn_7_3;
           var7 = gg.a(stackIn_6_0, var7, true);
-        }
-        if ((var6 != 16 || var14 != 0) && (var6 == 5 &&
-          this.field_g == 2)) {
-          var7 = pl.field_c;
+          if ((var14 != 0) && (var6 == 5 &&
+            this.field_g == 2)) {
+            var7 = pl.field_c;
+          }
+        } else {
+          if (var6 == 5 &&
+            this.field_g == 2) {
+            var7 = pl.field_c;
+          }
         }
         var8 = this.field_f[param1].field_m;
         if (param0 != -1) {
@@ -816,9 +821,10 @@ final class kk {
           }
           var13 = stackIn_25_0;
           de.field_f.c(146 * var13 / 256 - 2 + var12, 14);
-        }
-        if (var6 != 11 &&
-          var6 != 12 || var14 != 0) {
+          if (var14 != 0) {
+            var10.a(var7, var8 >> 1, var10.field_C, var9, -1);
+          }
+        } else {
           var10.a(var7, var8 >> 1, var10.field_C, var9, -1);
         }
         ac.field_a.a((byte) 114);

@@ -151,402 +151,109 @@ final class kd extends qe {
     }
 
     final static boolean a(int param0, int[] param1) {
-        int stackIn_5_0 = 0;
-        int stackIn_16_0 = 0;
+        int var5_int = 0;
+        int var6 = 0;
         int stackIn_20_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_27_0 = 0;
-        int stackIn_38_0 = 0;
-        RuntimeException stackIn_40_0 = null;
-        StringBuilder stackIn_40_1 = null;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
         String stackIn_42_2 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
         bj var4_ref_bj = null;
         int var4 = 0;
-        int var5_int = 0;
         bj var5 = null;
-        int var6 = 0;
         int var7 = 0;
         mg[] var8 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var7 = Virogrid.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        if (param0 <= -117) {
-                            statePc = 3;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                var8 = (mg[]) null;
-                                kd.a((mg[]) null, -48, false, 30, 95, 36);
-                                statePc = 3;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
-                        }
-                        caughtException = stateCaught_1;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    try {
-                        if (ug.field_a == kh.field_c) {
-                            /* Inlined CFG state: 6. */
-                            {
-                                var2_long = hc.a(-9986);
-                                if (kg.field_e == 0) {
-                                    statePc = 17;
-                                } else {
-                                    statePc = 7;
-                                }
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 4. */
-                            {
-                                stackIn_5_0 = 0;
-                                statePc = 5;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_3) {
-                        statePc = ((Object) stateCaught_3 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_3);
-                        }
-                        caughtException = stateCaught_3;
-                        continue stateLoop;
-                    }
-                }
-                case 5: {
-                    return stackIn_5_0 != 0;
-                }
-                case 7: {
-                    try {
-                        if (0 > s.field_g) {
-                            /* Inlined CFG state: 9. */
-                            {
-                                var4_ref_bj = (bj) (ac.field_d.a((byte) -120));
-                                if (var4_ref_bj == null) {
-                                    statePc = 18;
-                                } else {
-                                    statePc = 10;
-                                }
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 8. */
-                            {
-                                statePc = 17;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_7) {
-                        statePc = ((Object) stateCaught_7 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_7);
-                        }
-                        caughtException = stateCaught_7;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (~var2_long < ~var4_ref_bj.field_p) {
-                            /* Inlined CFG state: 12. */
-                            {
-                                var4_ref_bj.a(false);
-                                ba.field_a = var4_ref_bj.field_l.length;
-                                sh.field_qb.field_l = 0;
-                                var5_int = 0;
-                                statePc = 13;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 11. */
-                            {
-                                statePc = 18;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_10) {
-                        statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
-                        }
-                        caughtException = stateCaught_10;
-                        continue stateLoop;
-                    }
-                }
-                case 13: {
-                    try {
-                        if (ba.field_a <= var5_int) {
-                            /* Inlined CFG state: 15. */
-                            {
-                                ah.field_e = pl.field_c;
-                                pl.field_c = md.field_b;
-                                md.field_b = ci.field_q;
-                                ci.field_q = var4_ref_bj.field_i;
-                                stackIn_16_0 = 1;
-                                statePc = 16;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 14. */
-                            {
-                                sh.field_qb.field_g[var5_int] = var4_ref_bj.field_l[var5_int];
-                                var5_int++;
-                                statePc = 13;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_13) {
-                        statePc = ((Object) stateCaught_13 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_13);
-                        }
-                        caughtException = stateCaught_13;
-                        continue stateLoop;
-                    }
-                }
-                case 16: {
-                    return stackIn_16_0 != 0;
-                }
-                case 17: {
-                    stackIn_20_0 = s.field_g;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 18: {
-                    stackIn_20_0 = s.field_g;
-                    statePc = 20;
-                    continue stateLoop;
-                }
-                case 19: {
-                    try {
-                        stackIn_20_0 = s.field_g;
-                        statePc = 20;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_19) {
-                        statePc = ((Object) stateCaught_19 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_19);
-                        }
-                        caughtException = stateCaught_19;
-                        continue stateLoop;
-                    }
-                }
-                case 20: {
-                    try {
-                        if (stackIn_20_0 >= 0) {
-                            statePc = 25;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 21. */
-                            {
-                                sh.field_qb.field_l = 0;
-                                if (wg.a(1, 0)) {
-                                    /* Inlined CFG state: 24. */
-                                    {
-                                        s.field_g = sh.field_qb.e(false);
-                                        sh.field_qb.field_l = 0;
-                                        ba.field_a = param1[s.field_g];
-                                        statePc = 25;
-                                        continue stateLoop;
-                                    }
-                                } else {
-                                    /* Inlined CFG state: 22. */
-                                    {
-                                        stackIn_23_0 = 0;
-                                        statePc = 23;
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_20) {
-                        statePc = ((Object) stateCaught_20 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_20);
-                        }
-                        caughtException = stateCaught_20;
-                        continue stateLoop;
-                    }
-                }
-                case 23: {
-                    return stackIn_23_0 != 0;
-                }
-                case 25: {
-                    try {
-                        if (ic.c((byte) 48)) {
-                            /* Inlined CFG state: 28. */
-                            {
-                                if (kg.field_e == 0) {
-                                    /* Inlined CFG state: 37. */
-                                    {
-                                        ah.field_e = pl.field_c;
-                                        pl.field_c = md.field_b;
-                                        md.field_b = ci.field_q;
-                                        ci.field_q = s.field_g;
-                                        s.field_g = -1;
-                                        stackIn_38_0 = 1;
-                                        statePc = 38;
-                                        continue stateLoop;
-                                    }
-                                } else {
-                                    /* Inlined CFG state: 29. */
-                                    {
-                                        var4 = kg.field_e;
-                                        if (0.0 == qa.field_b) {
-                                            statePc = 33;
-                                        } else {
-                                            statePc = 30;
-                                        }
-                                        continue stateLoop;
-                                    }
-                                }
-                            }
-                        } else {
-                            /* Inlined CFG state: 26. */
-                            {
-                                stackIn_27_0 = 0;
-                                statePc = 27;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_25) {
-                        statePc = ((Object) stateCaught_25 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_25);
-                        }
-                        caughtException = stateCaught_25;
-                        continue stateLoop;
-                    }
-                }
-                case 27: {
-                    return stackIn_27_0 != 0;
-                }
-                case 30: {
-                    try {
-                        var4 = (int)((double)var4 + mc.field_c.nextGaussian() * qa.field_b);
-                        if (var4 < 0) {
-                            /* Inlined CFG state: 32. */
-                            {
-                                var4 = 0;
-                                statePc = 33;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 31. */
-                            {
-                                statePc = 33;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_30) {
-                        statePc = ((Object) stateCaught_30 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_30);
-                        }
-                        caughtException = stateCaught_30;
-                        continue stateLoop;
-                    }
-                }
-                case 33: {
-                    try {
-                        var5 = new bj((long)var4 + var2_long, s.field_g, new byte[ba.field_a]);
-                        var6 = 0;
-                        statePc = 34;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_33) {
-                        statePc = ((Object) stateCaught_33 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
-                        }
-                        caughtException = stateCaught_33;
-                        continue stateLoop;
-                    }
-                }
-                case 34: {
-                    try {
-                        if (ba.field_a <= var6) {
-                            /* Inlined CFG state: 36. */
-                            {
-                                ac.field_d.a(var5, (byte) -68);
-                                s.field_g = -1;
-                                statePc = 19;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 35. */
-                            {
-                                var5.field_l[var6] = sh.field_qb.field_g[var6];
-                                var6++;
-                                statePc = 34;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_34) {
-                        statePc = ((Object) stateCaught_34 instanceof RuntimeException ? 39 : -1);
-                        if (statePc == -1) {
-                            throw kd.<RuntimeException>$cfr$sneakyThrow(stateCaught_34);
-                        }
-                        caughtException = stateCaught_34;
-                        continue stateLoop;
-                    }
-                }
-                case 38: {
-                    return stackIn_38_0 != 0;
-                }
-                case 39: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    stackIn_41_0 = (RuntimeException) (var2);
-                    stackIn_40_0 = stackIn_41_0;
-                    stackIn_41_1 = new StringBuilder().append("kd.J(").append(param0).append(',');
-                    stackIn_40_1 = stackIn_41_1;
-                    if (param1 == null) {
-                        statePc = 41;
-                    } else {
-                        statePc = 40;
-                    }
-                    continue stateLoop;
-                }
-                case 40: {
-                    stackIn_42_0 = stackIn_40_0;
-                    stackIn_42_1 = stackIn_40_1;
-                    stackIn_42_2 = "{...}";
-                    statePc = 42;
-                    continue stateLoop;
-                }
-                case 41: {
-                    stackIn_42_0 = stackIn_41_0;
-                    stackIn_42_1 = stackIn_41_1;
-                    stackIn_42_2 = "null";
-                    statePc = 42;
-                    continue stateLoop;
-                }
-                case 42: {
-                    throw kg.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_42_2).append(')').toString());
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var7 = Virogrid.field_F ? 1 : 0;
+        try {
+          if (param0 > -117) {
+            var8 = (mg[]) null;
+            kd.a((mg[]) null, -48, false, 30, 95, 36);
+          }
+          if (ug.field_a != kh.field_c) {
+            return false;
+          }
+          var2_long = hc.a(-9986);
+          if (kg.field_e != 0 &&
+            0 > s.field_g) {
+            var4_ref_bj = (bj) (ac.field_d.a((byte) -120));
+            if (var4_ref_bj != null &&
+              var2_long > var4_ref_bj.field_p) {
+              var4_ref_bj.a(false);
+              ba.field_a = var4_ref_bj.field_l.length;
+              sh.field_qb.field_l = 0;
+              for (var5_int = 0; ba.field_a > var5_int; var5_int++) {
+                sh.field_qb.field_g[var5_int] = var4_ref_bj.field_l[var5_int];
+              }
+              ah.field_e = pl.field_c;
+              pl.field_c = md.field_b;
+              md.field_b = ci.field_q;
+              ci.field_q = var4_ref_bj.field_i;
+              return true;
             }
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_41_0 = var2;
+          stackIn_41_1 = new StringBuilder().append("kd.J(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_42_2 = "null";
+          } else {
+            stackIn_42_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+        }
+        stackIn_20_0 = s.field_g;
+        try {
+          while (true) {
+            if (stackIn_20_0 < 0) {
+              sh.field_qb.field_l = 0;
+              if (!wg.a(1, 0)) {
+                return false;
+              }
+              s.field_g = sh.field_qb.e(false);
+              sh.field_qb.field_l = 0;
+              ba.field_a = param1[s.field_g];
+            }
+            if (!ic.c((byte) 48)) {
+              return false;
+            }
+            if (kg.field_e == 0) {
+              ah.field_e = pl.field_c;
+              pl.field_c = md.field_b;
+              md.field_b = ci.field_q;
+              ci.field_q = s.field_g;
+              s.field_g = -1;
+              return true;
+            }
+            var4 = kg.field_e;
+            if (0.0 != qa.field_b) {
+              var4 = (int)((double)var4 + mc.field_c.nextGaussian() * qa.field_b);
+              if (var4 < 0) {
+                var4 = 0;
+              }
+            }
+            var5 = new bj((long)var4 + var2_long, s.field_g, new byte[ba.field_a]);
+            for (var6 = 0; ba.field_a > var6; var6++) {
+              var5.field_l[var6] = sh.field_qb.field_g[var6];
+            }
+            ac.field_d.a(var5, (byte) -68);
+            s.field_g = -1;
+            stackIn_20_0 = s.field_g;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var2 = decompiledCaughtException;
+          stackIn_41_0 = var2;
+          stackIn_41_1 = new StringBuilder().append("kd.J(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_42_2 = "null";
+          } else {
+            stackIn_42_2 = "{...}";
+          }
+          throw kg.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 
@@ -597,10 +304,5 @@ final class kd extends qe {
     static {
         field_r = "Reject";
         field_n = "Macroing or use of bots";
-    }
-
-    @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
-        throw (T) throwable;
     }
 }

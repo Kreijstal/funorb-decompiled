@@ -198,15 +198,16 @@ class kb {
         int var8 = 0;
         int var9 = 0;
         wb var10 = null;
+        gm var11 = null;
+        jj var12 = null;
         cg var13 = null;
         int var14 = 0;
         int var15 = 0;
         Object var16 = null;
         int var17 = 0;
         String var18 = null;
-        gm var19 = null;
-        jj var20 = null;
-        ce var21 = null;
+        ce var19 = null;
+        Object var4Lifetime1;
         int var3_intLifetime1;
         var16 = null;
         var17 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -251,12 +252,12 @@ class kb {
               var8 = var8 & 1073741823;
               var10 = new wb(var6, var7, var8);
               var10.field_Lb = var9;
-              var4 = var10;
+              var4Lifetime1 = var10;
               this.field_m[var9] = this.field_m[var9] + 1;
             } else {
               if (var14 == 2) {
-                var19 = pg.a(var6, (byte) -83, var8, var7);
-                var19 = var19;
+                var11 = pg.a(var6, (byte) -83, var8, var7);
+                var4Lifetime1 = var11;
               } else {
                 if (3 == var14) {
                   stackIn_21_0 = null;
@@ -274,33 +275,33 @@ class kb {
                     stackIn_22_1 = null;
                     stackIn_22_6 = true;
                   }
-                  var20 = new jj(stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_22_6);
-                  var20 = var20;
+                  var12 = new jj(stackIn_21_2, stackIn_21_3, stackIn_21_4, stackIn_21_5, stackIn_22_6);
+                  var4Lifetime1 = var12;
                 } else {
                   if (var14 != 4) {
                     if (var14 != 5) {
                       throw new IllegalArgumentException("invalid actor type: " + var3_intLifetime1);
                     }
-                    var4 = null;
+                    var4Lifetime1 = null;
                     var14 = var5;
                     var15 = var8 & 255 | var8 >> 16;
                     this.a(var6, var14, 117, var7, var15, (fh) null);
-                    var21 = (ce) (this.field_s.a((byte) -127));
-                    var21.field_l = var15 * 2;
+                    var19 = (ce) (this.field_s.a((byte) -127));
+                    var19.field_l = var15 * 2;
                   } else {
                     var13 = new cg((var8 & -1073741824) >>> 30, var6, var7);
                     this.field_A.a(var13, false);
-                    var4 = null;
+                    var4Lifetime1 = null;
                   }
                 }
               }
             }
-            if (var4 == null) {
+            if (var4Lifetime1 == null) {
               continue;
             }
-            ((id) (var4)).field_y = var5;
+            ((id) (var4Lifetime1)).field_y = var5;
             this.field_f = 1 + var5;
-            this.field_K.a((br) (var4), false);
+            this.field_K.a((br) (var4Lifetime1), false);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

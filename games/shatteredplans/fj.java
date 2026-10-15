@@ -21,18 +21,19 @@ final class fj extends ml {
 
     final static void a(boolean param0, qr param1) {
         qr var4 = null;
-        qr var5 = null;
+        qr var2 = null;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
+        qr var2Lifetime1;
         try {
           var4 = (qr) (param1.field_M.d(0));
-          qr var2 = var4;
+          var2 = var4;
           while (var4 != null) {
             var4.field_mb = 0;
             var4.field_gb = 0;
             var4.field_w = 0;
             var4.field_db = 0;
-            var5 = (qr) (param1.field_M.a((byte) -71));
-            var5 = var5;
+            var4 = (qr) (param1.field_M.a((byte) -71));
+            var2Lifetime1 = var4;
           }
           if (param0) {
             fj.d(-29);

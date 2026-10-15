@@ -1929,100 +1929,97 @@ class ak {
         if (2 == gu.field_j) {
           var5 = jm.field_c;
         }
-        boolean decompiledFrameCompleted0 = true;
-        L5: {
-          this.a(var5, param0, param1 + 29227);
-          if (vs.b((byte) 9)) {
-            var6 = ng.field_e;
-            if (var19 == 0) {
-              break L5;
-            }
-          }
-          if (mr.field_f == null) {
-            mr.field_f = of.a(2, 1, mk.field_a, 3, 10);
-          }
-          var7_ref_of = mr.field_f;
-          if (var7_ref_of.field_q) {
-            if (var7_ref_of.field_o == null) {
-              var6 = wl.field_b;
+        L4: {
+          L5: {
+            this.a(var5, param0, param1 + 29227);
+            if (vs.b((byte) 9)) {
+              var6 = ng.field_e;
               if (var19 == 0) {
                 break L5;
               }
             }
-            var6 = ng.field_e;
-            var8 = var7_ref_of.field_o[gu.field_j];
-            var9 = var7_ref_of.field_m[gu.field_j];
-            var10 = kp.a(var7_ref_of, param1 - 2, hb.field_a, gu.field_j);
-            g.field_a.a("10. ", param1 - 1);
-            var11 = qr.field_a.field_i + 140;
-            var11 -= 20;
-            var12 = 128;
-            var13 = 512;
-            var14 = 28900 - (qr.field_a.field_i / 2 - var11 + 240) * (-var11 + (240 + qr.field_a.field_i / 2));
-            if (var14 > 0) {
-              Math.sqrt((double)var14);
+            if (mr.field_f == null) {
+              mr.field_f = of.a(2, 1, mk.field_a, 3, 10);
             }
-            var15 = param0 << 24 | 16777215;
-            qv.field_k.a(var11, var12, 5023231 | param0 << 24, pd.field_r, (byte) -30, -1);
-            if (~var10 == ~var4) {
-              var15 = -17409;
-            }
-            uq.field_a.a(var11, var12, var15, pd.field_r, (byte) -71, -1);
-            qv.field_k.a(-1, var13, se.field_a, var11, 5023231 | param0 << 24, 72);
-            uq.field_a.a(-1, var13, se.field_a, var11, var15, 59);
-            var11 += 20;
-            var4 = 0;
-            while (10 > var4) {
-              var12Lifetime1 = 128;
-              var13Lifetime1 = 512;
-              var14Lifetime1 = 28900 - (240 - var11 + qr.field_a.field_i / 2) * (qr.field_a.field_i / 2 + (-var11 + 240));
-              stackIn_34_0 = var14Lifetime1;
-              if (var19 != 0) {
-                decompiledFrameCompleted0 = false;
-                break;
-              }
-              if (stackIn_34_0 > 0) {
-                Math.sqrt((double)var14Lifetime1);
-              }
-              if (var8[var4] != null) {
-                var15Lifetime1 = -1;
-                var16 = var9[var4 * 2];
-                var17 = var8[var4];
-                if (var10 == var4) {
-                  var20.a((byte) -59, 60 + (var13Lifetime1 - var12Lifetime1), var11 - 12, 16759807 | (param0 & 772132860) << 22, var12Lifetime1 - 30, 16);
-                  var15Lifetime1 = -17409;
+            var7_ref_of = mr.field_f;
+            if (var7_ref_of.field_q) {
+              if (var7_ref_of.field_o == null) {
+                var6 = wl.field_b;
+                if (var19 == 0) {
+                  break L5;
                 }
-                gt.field_db.a(0, var12Lifetime1 - 1, 1 + var4 + ". ", var11, param0 << 24 | 5023231, param1 ^ 64);
-                gt.field_db.a(var11, var12Lifetime1 - 1, 5023231 | param0 << 24, var17, (byte) -54, 0);
-                gt.field_db.a(0, var12Lifetime1, 1 + var4 + ". ", -1 + var11, param0 << 24 | 5023231, 96);
-                gt.field_db.a(var11 - 1, var12Lifetime1, 5023231 | param0 << 24, var17, (byte) -41, 0);
-                gt.field_db.a(-1, var12Lifetime1, var4 + 1 + ". ", var11, param0 << 24 | 5023231, param1 ^ 80);
-                gt.field_db.a(var11, var12Lifetime1, param0 << 24 | 5023231, var17, (byte) -119, -1);
-                bq.field_c.a(0, -1 + var12Lifetime1, 1 + var4 + ". ", var11, 0, 80);
-                bq.field_c.a(var11, var12Lifetime1 - 1, 0, var17, (byte) -110, 0);
-                bq.field_c.a(0, var12Lifetime1, var4 + 1 + ". ", var11 - 1, 0, 82);
-                bq.field_c.a(-1 + var11, var12Lifetime1, 0, var17, (byte) -92, 0);
-                bq.field_c.a(-1, var12Lifetime1, 1 + var4 + ". ", var11, var15Lifetime1, 84);
-                bq.field_c.a(var11, var12Lifetime1, var15Lifetime1, var17, (byte) -116, -1);
-                var18 = this.a(var16, (byte) -81);
-                gt.field_db.a(-1, -1 + var13Lifetime1, var18, var11, 5023231 | param0 << 24, 124);
-                gt.field_db.a(-1, var13Lifetime1, var18, var11 - 1, param0 << 24 | 5023231, 124);
-                gt.field_db.a(-1, var13Lifetime1, var18, var11, 5023231 | param0 << 24, 43);
-                bq.field_c.a(-1, var13Lifetime1, var18, var11, param0 << 24 | var15Lifetime1, 116);
-                var6 = "";
               }
+              var6 = ng.field_e;
+              var8 = var7_ref_of.field_o[gu.field_j];
+              var9 = var7_ref_of.field_m[gu.field_j];
+              var10 = kp.a(var7_ref_of, param1 - 2, hb.field_a, gu.field_j);
+              g.field_a.a("10. ", param1 - 1);
+              var11 = qr.field_a.field_i + 140;
+              var11 -= 20;
+              var12 = 128;
+              var13 = 512;
+              var14 = 28900 - (qr.field_a.field_i / 2 - var11 + 240) * (-var11 + (240 + qr.field_a.field_i / 2));
+              if (var14 > 0) {
+                Math.sqrt((double)var14);
+              }
+              var15 = param0 << 24 | 16777215;
+              qv.field_k.a(var11, var12, 5023231 | param0 << 24, pd.field_r, (byte) -30, -1);
+              if (~var10 == ~var4) {
+                var15 = -17409;
+              }
+              uq.field_a.a(var11, var12, var15, pd.field_r, (byte) -71, -1);
+              qv.field_k.a(-1, var13, se.field_a, var11, 5023231 | param0 << 24, 72);
+              uq.field_a.a(-1, var13, se.field_a, var11, var15, 59);
               var11 += 20;
-              var4++;
-            }
-            if ((decompiledFrameCompleted0) &&
-              (var19 != 0)) {
+              var4 = 0;
+              while (10 > var4) {
+                var12Lifetime1 = 128;
+                var13Lifetime1 = 512;
+                var14Lifetime1 = 28900 - (240 - var11 + qr.field_a.field_i / 2) * (qr.field_a.field_i / 2 + (-var11 + 240));
+                stackIn_34_0 = var14Lifetime1;
+                if (var19 != 0) {
+                  break L4;
+                }
+                if (stackIn_34_0 > 0) {
+                  Math.sqrt((double)var14Lifetime1);
+                }
+                if (var8[var4] != null) {
+                  var15Lifetime1 = -1;
+                  var16 = var9[var4 * 2];
+                  var17 = var8[var4];
+                  if (var10 == var4) {
+                    var20.a((byte) -59, 60 + (var13Lifetime1 - var12Lifetime1), var11 - 12, 16759807 | (param0 & 772132860) << 22, var12Lifetime1 - 30, 16);
+                    var15Lifetime1 = -17409;
+                  }
+                  gt.field_db.a(0, var12Lifetime1 - 1, 1 + var4 + ". ", var11, param0 << 24 | 5023231, param1 ^ 64);
+                  gt.field_db.a(var11, var12Lifetime1 - 1, 5023231 | param0 << 24, var17, (byte) -54, 0);
+                  gt.field_db.a(0, var12Lifetime1, 1 + var4 + ". ", -1 + var11, param0 << 24 | 5023231, 96);
+                  gt.field_db.a(var11 - 1, var12Lifetime1, 5023231 | param0 << 24, var17, (byte) -41, 0);
+                  gt.field_db.a(-1, var12Lifetime1, var4 + 1 + ". ", var11, param0 << 24 | 5023231, param1 ^ 80);
+                  gt.field_db.a(var11, var12Lifetime1, param0 << 24 | 5023231, var17, (byte) -119, -1);
+                  bq.field_c.a(0, -1 + var12Lifetime1, 1 + var4 + ". ", var11, 0, 80);
+                  bq.field_c.a(var11, var12Lifetime1 - 1, 0, var17, (byte) -110, 0);
+                  bq.field_c.a(0, var12Lifetime1, var4 + 1 + ". ", var11 - 1, 0, 82);
+                  bq.field_c.a(-1 + var11, var12Lifetime1, 0, var17, (byte) -92, 0);
+                  bq.field_c.a(-1, var12Lifetime1, 1 + var4 + ". ", var11, var15Lifetime1, 84);
+                  bq.field_c.a(var11, var12Lifetime1, var15Lifetime1, var17, (byte) -116, -1);
+                  var18 = this.a(var16, (byte) -81);
+                  gt.field_db.a(-1, -1 + var13Lifetime1, var18, var11, 5023231 | param0 << 24, 124);
+                  gt.field_db.a(-1, var13Lifetime1, var18, var11 - 1, param0 << 24 | 5023231, 124);
+                  gt.field_db.a(-1, var13Lifetime1, var18, var11, 5023231 | param0 << 24, 43);
+                  bq.field_c.a(-1, var13Lifetime1, var18, var11, param0 << 24 | var15Lifetime1, 116);
+                  var6 = "";
+                }
+                var11 += 20;
+                var4++;
+              }
+              if (var19 != 0) {
+                var6 = mm.field_b;
+              }
+            } else {
               var6 = mm.field_b;
             }
-          } else {
-            var6 = mm.field_b;
           }
-        }
-        if (decompiledFrameCompleted0) {
           stackIn_34_0 = 100 + (140 + g.field_a.field_i);
         }
         var7 = stackIn_34_0;

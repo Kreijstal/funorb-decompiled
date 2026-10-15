@@ -4074,8 +4074,10 @@ final class pe implements ntb, utb {
         int var9 = 0;
         int var10 = 0;
         Object var11 = null;
+        sg var11_ref = null;
         int var12 = 0;
-        boolean[] var13 = null;
+        sg var13 = null;
+        boolean[] var13_array = null;
         ml[] var14 = null;
         ml[] var15_ref_ml__ = null;
         int var15 = 0;
@@ -4092,8 +4094,7 @@ final class pe implements ntb, utb {
         int var23 = 0;
         int var25 = 0;
         sg var26 = null;
-        sg var27 = null;
-        String var28 = null;
+        String var27 = null;
         int var8Lifetime1;
         int var16Lifetime1;
         var23 = VoidHunters.field_G;
@@ -4151,10 +4152,10 @@ final class pe implements ntb, utb {
                         cg.a((byte) -104, this.d(false)) ||
                         qrb.field_a == 1 &&
                         param2[var5_int].field_g.field_k.k(0) == var10)) {
-                        var27 = new sg();
-                        var27 = var27;
-                        var11 = var27;
-                        param2[var5_int].field_g.b((byte) 74, var27);
+                        var26 = new sg();
+                        var26 = var26;
+                        var11_ref = var26;
+                        param2[var5_int].field_g.b((byte) 74, var26);
                         var12 = 1;
                         if (((param3.c((byte) -42) ||
                           cg.a((byte) -95, this.d(false)))) && ((qrb.field_a == 0))) {
@@ -4163,27 +4164,27 @@ final class pe implements ntb, utb {
                         decompiledFrameRemainder0 = false;
                       }
                       else {
-                        var26 = t.a(var10, (byte) 36);
-                        var26 = var26;
+                        var13 = t.a(var10, (byte) 36);
+                        var11_ref = var13;
                       }
-                      if (null != var11) {
+                      if (null != var11_ref) {
                         if (vpa.a((byte) -100) &&
                           !param3.c((byte) 112)) {
-                          var28 = obb.field_o[((sg) (var11)).field_k.k(0)];
+                          var27 = obb.field_o[var11_ref.field_k.k(0)];
                           if (var12 != 0) {
-                            qa.a(202, "spawns_as_saved_" + var28, 1);
+                            qa.a(202, "spawns_as_saved_" + var27, 1);
                           } else {
-                            qa.a(202, "spawns_as_new_" + var28, 1);
+                            qa.a(202, "spawns_as_new_" + var27, 1);
                           }
                         }
-                        this.a(-200000, var5_int, param3.c((byte) 116), var7, param2.length, (sg) (var11));
+                        this.a(-200000, var5_int, param3.c((byte) 116), var7, param2.length, var11_ref);
                       }
                       if (param3.e(8) != 5) {
                         param2[var5_int].field_k = null;
                       }
                       if (null != param2[var5_int].field_k) {
-                        var13 = new boolean[param2[var5_int].field_k.length];
-                        var14 = ((sg) (var11)).field_k.a((ml[]) null, (byte) 124);
+                        var13_array = new boolean[param2[var5_int].field_k.length];
+                        var14 = var11_ref.field_k.a((ml[]) null, (byte) 124);
                         if (var14 != null) {
                           var15_ref_ml__ = var14;
                           var16 = 0;
@@ -4192,9 +4193,9 @@ final class pe implements ntb, utb {
                             var18_int = var17_ref_ml.field_j;
                             var19_int = 0;
                             while (param2[var5_int].field_k.length > var19_int) {
-                              if (!var13[var19_int] &&
+                              if (!var13_array[var19_int] &&
                                 param2[var5_int].field_k[var19_int] == var18_int) {
-                                var13[var19_int] = true;
+                                var13_array[var19_int] = true;
                               } else {
                                 var19_int++;
                                 continue;
@@ -4204,18 +4205,18 @@ final class pe implements ntb, utb {
                             var16++;
                           }
                         }
-                        var15 = ((sg) (var11)).g(-40) * 2;
+                        var15 = var11_ref.g(-40) * 2;
                         var25 = 0;
                         var16Lifetime1 = var25;
                         while (param2[var5_int].field_k.length > var25) {
-                          if (!var13[var25]) {
+                          if (!var13_array[var25]) {
                             var17 = param2[var5_int].field_k[var25];
                             var18 = new ml(var17);
                             var19 = new nbb(var18, false);
                             var20 = hob.a(vg.field_o, 8192, 122);
                             var21 = (fc.a(var20, (byte) -115) >> 8) * (var15 >> 8);
                             var22 = (eu.a(var20, 107) >> 8) * (var15 >> 8);
-                            var19.a(((sg) (var11)).d(false) + var21, ((sg) (var11)).g((byte) 118) + var22, (byte) -70);
+                            var19.a(var11_ref.d(false) + var21, var11_ref.g((byte) 118) + var22, (byte) -70);
                             var19.a(hob.a(vg.field_o, 8192, 124), -66);
                             this.a(var19, (byte) 90);
                           }

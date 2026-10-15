@@ -787,8 +787,9 @@ final class up implements lv {
     }
 
     public final String toString() {
-        String var5 = null;
+        String var4 = null;
         String var1 = null;
+        String var5 = null;
         String var6 = null;
         String var7 = null;
         String var8 = null;
@@ -796,7 +797,6 @@ final class up implements lv {
         String var10 = null;
         String var11 = null;
         String var12 = null;
-        String var13 = null;
         int var2 = 0;
         int var3 = Kickabout.field_G;
         String var1Lifetime1;
@@ -817,45 +817,46 @@ final class up implements lv {
         String var1Lifetime16;
         String var1Lifetime17;
         String var1Lifetime18;
+        String var1Lifetime19;
         if (!this.c(-2)) {
-          var5 = "Type: " + uf.field_e[this.field_q] + "\n";
-          var1 = var5;
-          var1Lifetime1 = var5;
-          var6 = var5;
-          var1Lifetime2 = var6;
-          var1Lifetime3 = var6;
+          var4 = "Type: " + uf.field_e[this.field_q] + "\n";
+          var1 = var4;
+          var1Lifetime1 = var4;
+          var5 = var4;
+          var1Lifetime2 = var5;
+          var1Lifetime3 = var5;
           if (this.field_q != -1) {
-            var1Lifetime3 = var6 + "Name: " + td.field_a[this.field_e] + ". " + ce.field_G[this.field_q][this.field_l] + "\n";
+            var1Lifetime4 = var4 + "Name: " + td.field_a[this.field_e] + ". " + ce.field_G[this.field_q][this.field_l] + "\n";
           } else {
-            var1Lifetime3 = var1Lifetime3 + "Name: N/A\n";
+            var1Lifetime4 = var5 + "Name: N/A\n";
           }
-          var7 = var1Lifetime3 + "Stats:\n";
-          var1Lifetime4 = var7;
-          var1Lifetime5 = var7;
-          var8 = var7 + "POW: " + this.field_n + "\n";
-          var1Lifetime6 = var8;
-          var1Lifetime7 = var8;
-          var9 = var8 + "TCK: " + this.field_o + "\n";
-          var1Lifetime8 = var9;
-          var1Lifetime9 = var9;
-          var10 = var9 + "SPD: " + this.field_g + "\n";
-          var1Lifetime10 = var10;
-          var1Lifetime11 = var10;
-          var11 = var10 + "EXP: " + this.field_r + "\n";
-          var1Lifetime12 = var11;
-          var1Lifetime13 = var11;
-          var12 = var11 + "Num Trinkets: " + this.field_h.length + "\n";
-          var1Lifetime14 = var12;
-          var1Lifetime15 = var12;
-          var13 = var12 + "Appearance: " + this.field_j + "\n";
-          var1Lifetime16 = var13;
-          var1Lifetime17 = var13;
-          var1Lifetime18 = var13 + "Trinkets: ";
+          var6 = var1Lifetime4 + "Stats:\n";
+          var1Lifetime5 = var6;
+          var1Lifetime6 = var6;
+          var7 = var6 + "POW: " + this.field_n + "\n";
+          var1Lifetime7 = var7;
+          var1Lifetime8 = var7;
+          var8 = var7 + "TCK: " + this.field_o + "\n";
+          var1Lifetime9 = var8;
+          var1Lifetime10 = var8;
+          var9 = var8 + "SPD: " + this.field_g + "\n";
+          var1Lifetime11 = var9;
+          var1Lifetime12 = var9;
+          var10 = var9 + "EXP: " + this.field_r + "\n";
+          var1Lifetime13 = var10;
+          var1Lifetime14 = var10;
+          var11 = var10 + "Num Trinkets: " + this.field_h.length + "\n";
+          var1Lifetime15 = var11;
+          var1Lifetime16 = var11;
+          var12 = var11 + "Appearance: " + this.field_j + "\n";
+          var1Lifetime17 = var12;
+          var1Lifetime18 = var12;
+          var1Lifetime19 = var12 + "Trinkets: ";
           for (var2 = 0; var2 < this.field_h.length; var2++) {
-            var1Lifetime18 = var1Lifetime18 + "\t" + this.field_h[var2] + "\n";
+            var1Lifetime19 = var1Lifetime19 + "\t" + this.field_h[var2] + "\n";
           }
-          var1Lifetime18 = var1Lifetime18 + "\n";
-          return var1Lifetime18;
+          var1Lifetime19 = var1Lifetime19 + "\n";
+          return var1Lifetime19;
         }
         return "Empty PlayerStats";
     }

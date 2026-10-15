@@ -159,18 +159,19 @@ final class wd {
 
     final static void a(ak param0, boolean param1) {
         ak var4 = null;
-        ak var5 = null;
+        ak var2 = null;
         int var3 = Pixelate.field_H ? 1 : 0;
+        ak var2Lifetime1;
         try {
           var4 = (ak) (param0.field_L.c(1504642273));
-          ak var2 = var4;
+          var2 = var4;
           while (var4 != null) {
             var4.field_Z = 0;
             var4.field_wb = 0;
             var4.field_nb = 0;
             var4.field_S = 0;
-            var5 = (ak) (param0.field_L.f(1504642273));
-            var5 = var5;
+            var4 = (ak) (param0.field_L.f(1504642273));
+            var2Lifetime1 = var4;
           }
           param0.field_wb = 0;
           if (param1) {

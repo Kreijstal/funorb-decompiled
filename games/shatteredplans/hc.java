@@ -12,117 +12,36 @@ final class hc {
         si stackIn_3_0 = null;
         jo stackIn_6_0 = null;
         si stackIn_8_0 = null;
-        int statePc = 0;
-        Throwable caughtException = null;
+        Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         si var2 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = ShatteredPlansClient.field_F ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var1_int = 0;
-                        if (!param0) {
-                            statePc = 4;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                stackIn_3_0 = (si) null;
-                                statePc = 3;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        statePc = ((Object) stateCaught_1 instanceof IllegalArgumentException ? 10 : -1);
-                        if (statePc == -1) {
-                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
-                        }
-                        caughtException = stateCaught_1;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0;
-                }
-                case 4: {
-                    stackIn_6_0 = kq.field_A;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        stackIn_6_0 = kq.field_A;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        statePc = ((Object) stateCaught_5 instanceof IllegalArgumentException ? 10 : -1);
-                        if (statePc == -1) {
-                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
-                        }
-                        caughtException = stateCaught_5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        var2 = ((jo) (Object) stackIn_6_0).a(var1_int, (byte) 100);
-                        if (!var2.field_y) {
-                            statePc = 9;
-                        } else {
-                            statePc = 7;
-                        }
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_6) {
-                        statePc = ((Object) stateCaught_6 instanceof IllegalArgumentException ? 10 : -1);
-                        if (statePc == -1) {
-                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
-                        }
-                        caughtException = stateCaught_6;
-                        continue stateLoop;
-                    }
-                }
-                case 7: {
-                    try {
-                        stackIn_8_0 = (si) (var2);
-                        statePc = 8;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_7) {
-                        statePc = ((Object) stateCaught_7 instanceof IllegalArgumentException ? 10 : -1);
-                        if (statePc == -1) {
-                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_7);
-                        }
-                        caughtException = stateCaught_7;
-                        continue stateLoop;
-                    }
-                }
-                case 8: {
-                    return stackIn_8_0;
-                }
-                case 9: {
-                    try {
-                        var1_int++;
-                        statePc = 5;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_9) {
-                        statePc = ((Object) stateCaught_9 instanceof IllegalArgumentException ? 10 : -1);
-                        if (statePc == -1) {
-                            throw hc.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
-                        }
-                        caughtException = stateCaught_9;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    var1 = (IllegalArgumentException) ((Object) caughtException);
-                    return null;
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var3 = ShatteredPlansClient.field_F ? 1 : 0;
+        try {
+          var1_int = 0;
+          if (param0) {
+            stackIn_3_0 = (si) null;
+            return stackIn_3_0;
+          }
+        } catch (java.lang.IllegalArgumentException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+          return null;
+        }
+        stackIn_6_0 = kq.field_A;
+        try {
+          while (true) {
+            var2 = ((jo) (Object) stackIn_6_0).a(var1_int, (byte) 100);
+            if (var2.field_y) {
+              stackIn_8_0 = var2;
+              return stackIn_8_0;
             }
+            var1_int++;
+            stackIn_6_0 = kq.field_A;
+          }
+        } catch (java.lang.IllegalArgumentException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var1 = (IllegalArgumentException) (Object) decompiledCaughtException;
+          return null;
         }
     }
 
@@ -157,10 +76,5 @@ final class hc {
     static {
         field_b = "Loading music";
         field_c = "Lost";
-    }
-
-    @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
-        throw (T) throwable;
     }
 }

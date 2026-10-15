@@ -662,18 +662,19 @@ final class vsa extends dg {
 
     final static void a(int param0, jea param1) {
         jea var4 = null;
-        jea var5 = null;
+        jea var2 = null;
         int var3 = TombRacer.field_G ? 1 : 0;
+        jea var2Lifetime1;
         try {
           var4 = (jea) (param1.field_J.f(-80));
-          jea var2 = var4;
+          var2 = var4;
           while (var4 != null) {
             var4.field_K = 0;
             var4.field_O = 0;
             var4.field_T = 0;
             var4.field_t = 0;
-            var5 = (jea) (param1.field_J.e(112));
-            var5 = var5;
+            var4 = (jea) (param1.field_J.e(112));
+            var2Lifetime1 = var4;
           }
           param1.field_t = 0;
           if (param0 > -86) {

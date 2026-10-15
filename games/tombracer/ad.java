@@ -98,120 +98,34 @@ final class ad extends vg {
     final static boolean a(int param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
-        int stackIn_3_0 = 0;
         int[] stackIn_6_0 = null;
-        int stackIn_10_0 = 0;
-        int stackIn_13_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
+        RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        stateLoop: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var3 = TombRacer.field_G ? 1 : 0;
-                    statePc = 1;
-                    continue stateLoop;
-                }
-                case 1: {
-                    try {
-                        var2_int = 0;
-                        if (param0 == -13545) {
-                            statePc = 4;
-                            continue stateLoop;
-                        } else {
-                            /* Inlined CFG state: 2. */
-                            {
-                                stackIn_3_0 = 0;
-                                statePc = 3;
-                                continue stateLoop;
-                            }
-                        }
-                    } catch (Throwable stateCaught_1) {
-                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 14 : -1);
-                        if (statePc == -1) {
-                            throw ad.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
-                        }
-                        caughtException = stateCaught_1;
-                        continue stateLoop;
-                    }
-                }
-                case 3: {
-                    return stackIn_3_0 != 0;
-                }
-                case 4: {
-                    stackIn_6_0 = bca.field_a;
-                    statePc = 6;
-                    continue stateLoop;
-                }
-                case 5: {
-                    try {
-                        stackIn_6_0 = bca.field_a;
-                        statePc = 6;
-                        continue stateLoop;
-                    } catch (Throwable stateCaught_5) {
-                        statePc = ((Object) stateCaught_5 instanceof RuntimeException ? 14 : -1);
-                        if (statePc == -1) {
-                            throw ad.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
-                        }
-                        caughtException = stateCaught_5;
-                        continue stateLoop;
-                    }
-                }
-                case 6: {
-                    try {
-                        if (stackIn_6_0.length <= var2_int) {
-                            /* Inlined CFG state: 12. */
-                            {
-                                stackIn_13_0 = 0;
-                                statePc = 13;
-                                continue stateLoop;
-                            }
-                        } else {
-                            /* Inlined CFG state: 7. */
-                            {
-                                if (param1 == bca.field_a[var2_int]) {
-                                    /* Inlined CFG state: 9. */
-                                    {
-                                        stackIn_10_0 = 1;
-                                        statePc = 10;
-                                        continue stateLoop;
-                                    }
-                                } else {
-                                    /* Inlined CFG state: 8. */
-                                    {
-                                        /* Sequential CFG blocks: 8, 11. */
-                                        {
-                                        }
-                                        {
-                                            var2_int++;
-                                            statePc = 5;
-                                            continue stateLoop;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_6) {
-                        statePc = ((Object) stateCaught_6 instanceof RuntimeException ? 14 : -1);
-                        if (statePc == -1) {
-                            throw ad.<RuntimeException>$cfr$sneakyThrow(stateCaught_6);
-                        }
-                        caughtException = stateCaught_6;
-                        continue stateLoop;
-                    }
-                }
-                case 10: {
-                    return stackIn_10_0 != 0;
-                }
-                case 13: {
-                    return stackIn_13_0 != 0;
-                }
-                case 14: {
-                    var2 = (RuntimeException) ((Object) caughtException);
-                    throw tba.a((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+        var3 = TombRacer.field_G ? 1 : 0;
+        try {
+          var2_int = 0;
+          if (param0 != -13545) {
+            return false;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw tba.a((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
+        }
+        stackIn_6_0 = bca.field_a;
+        try {
+          while (stackIn_6_0.length > var2_int) {
+            if (param1 == bca.field_a[var2_int]) {
+              return true;
             }
+            var2_int++;
+            stackIn_6_0 = bca.field_a;
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+          decompiledCaughtException = decompiledCaughtParameter1;
+          var2 = decompiledCaughtException;
+          throw tba.a((Throwable) ((Object) var2), "ad.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -260,10 +174,5 @@ final class ad extends vg {
     static {
         field_i = "Completed";
         field_h = "<%0> wants to draw.";
-    }
-
-    @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
-        throw (T) throwable;
     }
 }

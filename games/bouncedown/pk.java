@@ -800,34 +800,32 @@ final class pk extends wf {
         int var9;
         rj var10;
         rj var11;
-        boolean decompiledFrameCompleted0 = true;
-        var9 = Bounce.field_N;
-        this.b(param3, param2, 64, 0);
-        if ((this.field_l[param3] & 2) != 0) {
-          var5 = (kl) (this.field_o.field_m.b((byte) 60));
-          while (var5 != null) {
-            stackOut_3_0 = var5;
-            stackIn_9_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
-            if (var9 != 0) {
-              decompiledFrameCompleted0 = false;
-              break;
+        L0: {
+          var9 = Bounce.field_N;
+          this.b(param3, param2, 64, 0);
+          if ((this.field_l[param3] & 2) != 0) {
+            var5 = (kl) (this.field_o.field_m.b((byte) 60));
+            while (var5 != null) {
+              stackOut_3_0 = var5;
+              stackIn_9_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (var9 != 0) {
+                break L0;
+              }
+              if (stackIn_4_0.field_E == param3 &&
+                var5.field_C < 0) {
+                this.field_C[param3][var5.field_r] = null;
+                this.field_C[param3][param2] = var5;
+                var6_int = var5.field_l + (var5.field_h * var5.field_x >> 12);
+                var5.field_l = var5.field_l + (-var5.field_r + param2 << 8);
+                var5.field_x = 4096;
+                var5.field_r = param2;
+                var5.field_h = var6_int - var5.field_l;
+                return;
+              }
+              var5 = (kl) (this.field_o.field_m.a(-18158));
             }
-            if (stackIn_4_0.field_E == param3 &&
-              var5.field_C < 0) {
-              this.field_C[param3][var5.field_r] = null;
-              this.field_C[param3][param2] = var5;
-              var6_int = var5.field_l + (var5.field_h * var5.field_x >> 12);
-              var5.field_l = var5.field_l + (-var5.field_r + param2 << 8);
-              var5.field_x = 4096;
-              var5.field_r = param2;
-              var5.field_h = var6_int - var5.field_l;
-              return;
-            }
-            var5 = (kl) (this.field_o.field_m.a(-18158));
           }
-        }
-        if (decompiledFrameCompleted0) {
           stackIn_9_0 = this.field_u.a(48, (long)this.field_z[param3]);
         }
         var10 = (rj) (stackIn_9_0);

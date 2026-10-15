@@ -1476,34 +1476,32 @@ final class hl extends lk {
         int var9;
         wj var10;
         wj var11;
-        boolean decompiledFrameCompleted0 = true;
-        var9 = Lexicominos.field_L ? 1 : 0;
-        this.a(64, param3, param0, 0);
-        if ((this.field_q[param0] & 2) != 0) {
-          var5 = (cb) (this.field_y.field_n.c(2));
-          while (var5 != null) {
-            stackOut_3_0 = var5;
-            stackIn_9_0 = stackOut_3_0;
-            stackIn_4_0 = stackOut_3_0;
-            if (var9 != 0) {
-              decompiledFrameCompleted0 = false;
-              break;
+        L0: {
+          var9 = Lexicominos.field_L ? 1 : 0;
+          this.a(64, param3, param0, 0);
+          if ((this.field_q[param0] & 2) != 0) {
+            var5 = (cb) (this.field_y.field_n.c(2));
+            while (var5 != null) {
+              stackOut_3_0 = var5;
+              stackIn_9_0 = stackOut_3_0;
+              stackIn_4_0 = stackOut_3_0;
+              if (var9 != 0) {
+                break L0;
+              }
+              if (stackIn_4_0.field_z == param0 &&
+                var5.field_h < 0) {
+                this.field_R[param0][var5.field_q] = null;
+                this.field_R[param0][param3] = var5;
+                var6_int = var5.field_o + (var5.field_l * var5.field_v >> 12);
+                var5.field_o = var5.field_o + (param3 - var5.field_q << 8);
+                var5.field_q = param3;
+                var5.field_v = 4096;
+                var5.field_l = var6_int - var5.field_o;
+                return;
+              }
+              var5 = (cb) (this.field_y.field_n.d(0));
             }
-            if (stackIn_4_0.field_z == param0 &&
-              var5.field_h < 0) {
-              this.field_R[param0][var5.field_q] = null;
-              this.field_R[param0][param3] = var5;
-              var6_int = var5.field_o + (var5.field_l * var5.field_v >> 12);
-              var5.field_o = var5.field_o + (param3 - var5.field_q << 8);
-              var5.field_q = param3;
-              var5.field_v = 4096;
-              var5.field_l = var6_int - var5.field_o;
-              return;
-            }
-            var5 = (cb) (this.field_y.field_n.d(0));
           }
-        }
-        if (decompiledFrameCompleted0) {
           stackIn_9_0 = this.field_A.a((long)this.field_E[param0], (byte) 118);
         }
         var10 = (wj) (stackIn_9_0);

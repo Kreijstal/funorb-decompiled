@@ -133,21 +133,22 @@ final class fm extends kn {
 
     final static void a(ci param0, int param1) {
         ci var4 = null;
-        ci var5 = null;
+        ci var2 = null;
         int var3 = Chess.field_G;
+        ci var2Lifetime1;
         if (param1 >= -59) {
           return;
         }
         try {
           var4 = (ci) (param0.field_I.g(-18110));
-          ci var2 = var4;
+          var2 = var4;
           while (var4 != null) {
             var4.field_pb = 0;
             var4.field_vb = 0;
             var4.field_N = 0;
             var4.field_V = 0;
-            var5 = (ci) (param0.field_I.a((byte) -102));
-            var5 = var5;
+            var4 = (ci) (param0.field_I.a((byte) -102));
+            var2Lifetime1 = var4;
           }
           param0.field_N = 0;
           param0.field_vb = 0;
