@@ -21,62 +21,62 @@ final class GameplayScreen extends GameScreen {
     int localPlayerMask;
     private int progressBaseLevel;
 
-    private final void a(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_11_1 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_17_1 = 0;
-        boolean stackIn_30_0 = false;
-        int var2;
-        PlayerBoard var3;
-        int var2Lifetime1;
-        int var2Lifetime2;
+    private final void updateViewedPlayerSelection(int obfuscationGuard) {
+        int previousViewedPlayer = 0;
+        int nextViewedPlayer = 0;
+        int freshKeyValue = 0;
+        int freshKeyAlias = 0;
+        int allLocalPlayersMasked = 0;
+        int maskedEligibilityValue = 0;
+        int spectatingAllowedValue = 0;
+        boolean viewKeyHeld = false;
+        int freshKey;
+        PlayerBoard unusedBoard;
+        int maskedEligibility;
+        int canCycleView;
         if (!RadialSelectorRenderer.field_p) {
-          stackIn_6_0 = (!la.field_c) ? 1 : 0;
+          freshKeyValue = (!la.field_c) ? 1 : 0;
         } else {
-          stackIn_6_0 = 0;
+          freshKeyValue = 0;
         }
-        var2 = stackIn_6_0;
-        if (param0 != -1) {
-          var3 = (PlayerBoard) null;
+        freshKey = freshKeyValue;
+        if (obfuscationGuard != -1) {
+          unusedBoard = (PlayerBoard) null;
           this.readLocalControls((byte) -2, (PlayerBoard) null);
         }
-        stackIn_10_0 = var2;
-        stackIn_11_1 = ((this.localPlayerMask & (this.match.playerMaskOne | this.match.playerMaskTwo | this.match.playerMaskThree)) != this.localPlayerMask) ? 0 : 1;
-        boolean decompiledFrameRemainder0 = true;
-        var2Lifetime1 = stackIn_10_0 & stackIn_11_1;
-        stackIn_16_0 = var2Lifetime1;
+        freshKeyAlias = freshKey;
+        allLocalPlayersMasked = ((this.localPlayerMask & (this.match.playerMaskOne | this.match.playerMaskTwo | this.match.playerMaskThree)) != this.localPlayerMask) ? 0 : 1;
+        boolean unusedEligibilityRemainder = true;
+        maskedEligibility = freshKeyAlias & allLocalPlayersMasked;
+        maskedEligibilityValue = maskedEligibility;
         if (2 < this.match.playerCount && (this.localPlayerId < 0 ||
           !(this.match.playerBoards[this.localPlayerId].maskedTicks < 50))) {
-          stackIn_17_1 = 1;
-          decompiledFrameRemainder0 = false;
+          spectatingAllowedValue = 1;
+          unusedEligibilityRemainder = false;
         }
         else {
-          stackIn_17_1 = 0;
+          spectatingAllowedValue = 0;
         }
-        boolean decompiledFrameRemainder1 = true;
-        var2Lifetime2 = stackIn_16_0 & stackIn_17_1;
-        if (var2Lifetime2 != 0) {
+        boolean unusedDirectionRemainder = true;
+        canCycleView = maskedEligibilityValue & spectatingAllowedValue;
+        if (canCycleView != 0) {
           if (!IntArrayRequest.heldKeys[fq.field_b] &&
             !IntArrayRequest.heldKeys[VolcanicBackground.field_u]) {
             if (!(!IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f])) {
-              fieldTemp$0 = this.viewedPlayerId - 1;
+              previousViewedPlayer = this.viewedPlayerId - 1;
               this.viewedPlayerId = this.viewedPlayerId - 1;
-              this.viewedPlayerId = (this.match.playerCount + fieldTemp$0) % this.match.playerCount;
+              this.viewedPlayerId = (this.match.playerCount + previousViewedPlayer) % this.match.playerCount;
             }
-            decompiledFrameRemainder1 = false;
+            unusedDirectionRemainder = false;
           }
           else {
-            fieldTemp$1 = this.viewedPlayerId + 1;
+            nextViewedPlayer = this.viewedPlayerId + 1;
             this.viewedPlayerId = this.viewedPlayerId + 1;
-            this.viewedPlayerId = fieldTemp$1 % this.match.playerCount;
+            this.viewedPlayerId = nextViewedPlayer % this.match.playerCount;
           }
         }
-        stackIn_30_0 = (IntArrayRequest.heldKeys[fq.field_b]) || (IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f]) || (IntArrayRequest.heldKeys[VolcanicBackground.field_u]);
-        la.field_c = stackIn_30_0;
+        viewKeyHeld = (IntArrayRequest.heldKeys[fq.field_b]) || (IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f]) || (IntArrayRequest.heldKeys[VolcanicBackground.field_u]);
+        la.field_c = viewKeyHeld;
     }
 
     private final boolean recordAchievement(int achievementId, int pendingBit) {
@@ -103,7 +103,7 @@ final class GameplayScreen extends GameScreen {
         if (obfuscationGuard > -14) {
           this.setStartingLevel((byte) -47, -81);
         }
-        this.g(41);
+        this.drawMatchFrame(41);
     }
 
     final void readMaskedPlayerResult(BitPacketBuffer packet, boolean maskThree, int obfuscationGuard) {
@@ -378,7 +378,7 @@ final class GameplayScreen extends GameScreen {
           }
         }
         if (inputEnabled) {
-          this.a(-1);
+          this.updateViewedPlayerSelection(-1);
         }
         for (var5Lifetime3 = 0; var5Lifetime3 < this.match.playerCount; var5Lifetime3++) {
           if ((this.localPlayerMask & 1 << var5Lifetime3) != 0) {
@@ -419,7 +419,7 @@ final class GameplayScreen extends GameScreen {
           var20 = this.match.playerBoards[0];
           if (var20.levelIndex > this.lastReportedLevel) {
             var9_long = MonotonicTime.nowMillis(false);
-            this.a(NameEntryPopup.field_Yb, this.lastReportedLevel, var9_long - UsernameAvailabilityValidator.field_l, true, 1000);
+            this.sendProgressUpdate(NameEntryPopup.field_Yb, this.lastReportedLevel, var9_long - UsernameAvailabilityValidator.field_l, true, 1000);
             UsernameAvailabilityValidator.field_l = var9_long;
             this.lastReportedLevel = var20.levelIndex;
             this.queueLevelResult(this.match.configuration.pack, var20.score, (byte) -125, var20.levelIndex);
@@ -577,13 +577,13 @@ final class GameplayScreen extends GameScreen {
 
     final boolean isSpectator(int obfuscationGuard) {
         if (obfuscationGuard < 93) {
-          this.a(false, (byte) -87);
+          this.showPostMatchScreen(false, (byte) -87);
         }
         return this.localPlayerId == -2 ? true : false;
     }
 
-    private final void e(int param0) {
-        if (param0 != 0) {
+    private final void queueScoreTableSubmission(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           this.snapshotsReady = true;
         }
         if (this.suppressResultSubmission) {
@@ -598,33 +598,33 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    final void a(byte param0, boolean param1) {
+    final void finishOfflineMatch(byte obfuscationGuard, boolean usePointer) {
         boolean stackIn_8_0 = false;
         if (!this.networkedMatch) {
           if (1 == this.match.playerCount &&
             !this.suppressResultSubmission) {
             this.setResultLevel(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
-            this.e(0);
-            this.a(NameEntryPopup.field_Yb, this.resultLevel, -UsernameAvailabilityValidator.field_l + MonotonicTime.nowMillis(false), false, 1000);
+            this.queueScoreTableSubmission(0);
+            this.sendProgressUpdate(NameEntryPopup.field_Yb, this.resultLevel, -UsernameAvailabilityValidator.field_l + MonotonicTime.nowMillis(false), false, 1000);
             jj.field_d = jj.field_d | ja.a(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
             stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
             WidgetPaintStyle.field_a = stackIn_8_0;
           }
           if (this.match.playerCount == 1 &&
             this.match.playerBoards[0].boardState == 8) {
-            ng.requestScreen(param1, 107, 18);
+            ng.requestScreen(usePointer, 107, 18);
             IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
           } else {
-            this.a(param1, (byte) 69);
+            this.showPostMatchScreen(usePointer, (byte) 69);
           }
         }
-        if (param0 != 40) {
+        if (obfuscationGuard != 40) {
           return;
         }
         IntArrayRequest.lastBackgroundId = IntrusiveHashTable.field_k.sceneId;
     }
 
-    final void a(boolean param0, byte param1) {
+    final void showPostMatchScreen(boolean usePointer, byte obfuscationGuard) {
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
         rj.a((byte) 80, WeightedLruCache.primaryActivityLoop);
@@ -636,25 +636,25 @@ final class GameplayScreen extends GameScreen {
         if (this.networkedMatch) {
           return;
         }
-        if (param1 != 69) {
+        if (obfuscationGuard != 69) {
           return;
         }
         if (QuickChatMenu.h(-26090)) {
           if (!WidgetGroup.a(pl.pendingAchievementMask, -1) &&
             VerticalScrollbar.field_Ub == null) {
-            ng.requestScreen(param0, 121, 0);
+            ng.requestScreen(usePointer, 121, 0);
           } else {
-            ng.requestScreen(param0, 68, 10);
+            ng.requestScreen(usePointer, 68, 10);
           }
         } else {
           if (!WidgetGroup.a(pl.pendingAchievementMask, -1)) {
             if (VerticalScrollbar.field_Ub != null) {
-              ng.requestScreen(param0, 68, 5);
+              ng.requestScreen(usePointer, 68, 5);
             } else {
-              ng.requestScreen(param0, 100, 0);
+              ng.requestScreen(usePointer, 100, 0);
             }
           } else {
-            ng.requestScreen(param0, 60, 9);
+            ng.requestScreen(usePointer, 60, 9);
           }
         }
     }
@@ -1031,25 +1031,25 @@ final class GameplayScreen extends GameScreen {
         return stackIn_152_0;
     }
 
-    private final void a(int param0, int param1, long param2, boolean param3, int param4) {
-        int var7 = 0;
+    private final void sendProgressUpdate(int packId, int levelIndex, long elapsedMillis, boolean intermediate, int timeDivisor) {
+        int intermediateFlag = 0;
         if (!this.suppressResultSubmission) {
           if (QuickChatMenu.h(-26090)) {
             return;
           }
-          param1 = param1 + param0 * 1000;
-          var7 = param3 ? 1 : 0;
-          SaveResultsPromptScreen.a(param1, var7, param4 - 468, ((int)param2 + 500) / param4);
+          levelIndex = levelIndex + packId * 1000;
+          intermediateFlag = intermediate ? 1 : 0;
+          SaveResultsPromptScreen.a(levelIndex, intermediateFlag, timeDivisor - 468, ((int)elapsedMillis + 500) / timeDivisor);
           return;
         }
     }
 
-    final void b(int param0) {
+    final void requestLeaveMatch(int obfuscationGuard) {
         if (!this.networkedMatch) {
           throw new IllegalStateException();
         }
         this.match.playerMaskOne = this.match.playerMaskOne | 1 << this.localPlayerId;
-        int var2 = 116 % ((param0 + 55) / 62);
+        int unusedGuardRemainder = 116 % ((obfuscationGuard + 55) / 62);
         TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 66);
     }
 
@@ -1396,7 +1396,7 @@ final class GameplayScreen extends GameScreen {
               var6 = this.match.playerBoards[0];
               if (var6.boardState == 8 ||
                 var6.boardState == 9) {
-                this.a((byte) 40, false);
+                this.finishOfflineMatch((byte) 40, false);
                 if (8 != var6.boardState) {
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
@@ -1520,7 +1520,7 @@ final class GameplayScreen extends GameScreen {
             board.controlMask = board.controlMask | 4;
           }
           if (obfuscationGuard <= 50) {
-            this.b(60);
+            this.requestLeaveMatch(60);
           }
           if (this.match.playerCount == 1 ||
             this.networkedMatch) {
@@ -1550,233 +1550,233 @@ final class GameplayScreen extends GameScreen {
         }
     }
 
-    private final void g(int param0) {
-        int stackIn_44_0 = 0;
-        int stackIn_50_0 = 0;
-        int stackIn_53_0 = 0;
-        int stackIn_56_0 = 0;
-        boolean stackIn_59_0 = false;
-        int stackIn_59_1 = 0;
-        int stackIn_59_2 = 0;
-        boolean stackIn_61_3 = false;
-        PlayerBoard stackIn_64_4;
-        int stackIn_64_5;
-        int stackIn_64_6;
-        boolean stackIn_66_7 = false;
-        int stackIn_69_0 = 0;
-        boolean stackIn_72_0 = false;
-        int stackIn_72_1 = 0;
-        int stackIn_72_2 = 0;
-        boolean stackIn_74_3 = false;
-        PlayerBoard stackIn_77_4;
-        int stackIn_77_5;
-        int stackIn_77_6;
-        boolean stackIn_79_7;
-        int stackIn_83_0 = 0;
-        boolean stackIn_86_0 = false;
-        int stackIn_86_1 = 0;
-        int stackIn_86_2 = 0;
-        boolean stackIn_88_3;
-        int[] var2;
-        int[] var3;
-        int var4;
-        int[] var5;
-        int var6;
-        int var7;
-        PlayerBoard var7_ref_j;
-        int var8_int;
-        RgbSprite var8;
-        int var9;
-        int var10;
-        int var11;
-        IndexedSprite[] var12;
-        Paddle var13;
-        int[] var14;
-        int[] var15;
-        int[] var16;
-        int[] var17;
-        int[] var18;
-        int[] var19;
-        RgbSprite var20;
-        int[] var21;
-        int[] var22;
-        int var6Lifetime1;
-        int var6Lifetime2;
-        int var7Lifetime1;
-        int var7Lifetime2;
-        int var7Lifetime3;
-        int var7Lifetime4;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        int var10Lifetime1;
-        int var9Lifetime3;
-        int var10Lifetime1Lifetime1;
-        var11 = BrickABrac.field_J ? 1 : 0;
-        var4 = -76 / ((-79 - param0) / 35);
-        var14 = NodeDequeCursor.field_c[this.match.playerCount - 1];
-        var2 = var14;
-        var15 = NodeDequeCursor.field_e[this.match.playerCount - 1];
-        var3 = var15;
-        var5 = NodeDequeCursor.field_h[-1 + this.match.playerCount];
-        var6 = this.viewedPlayerId;
+    private final void drawMatchFrame(int obfuscationGuard) {
+        int offlineValue = 0;
+        int showAllDetailsValue = 0;
+        int firstHudPlayerValue = 0;
+        int firstHudLocalValue = 0;
+        boolean firstHudResultMode = false;
+        int firstHudGuard = 0;
+        int firstHudX = 0;
+        boolean showFirstHudDetails = false;
+        PlayerBoard firstHudBoard;
+        int firstHudY;
+        int firstHudPlayerId;
+        boolean firstHudLocalOrOffline = false;
+        int secondHudLocalValue = 0;
+        boolean secondHudResultMode = false;
+        int secondHudGuard = 0;
+        int secondHudX = 0;
+        boolean showSecondHudDetails = false;
+        PlayerBoard secondHudBoard;
+        int secondHudY;
+        int secondHudPlayerId;
+        boolean secondHudLocalOrOffline;
+        int viewedLocalValue = 0;
+        boolean viewedHudResultMode = false;
+        int viewedHudGuard = 0;
+        int viewedHudX = 0;
+        boolean showViewedHudDetails;
+        int[] layoutX;
+        int[] layoutY;
+        int unusedGuardQuotient;
+        int[] layoutModes;
+        int backgroundPlayerId;
+        int backgroundSlot;
+        PlayerBoard singleBoard;
+        int showAllPlayerDetails;
+        RgbSprite headSpriteAlias;
+        int singleBoardScroll;
+        int backgroundFadeAlpha;
+        int unusedClientFlag;
+        IndexedSprite[] unusedInlineSprites;
+        Paddle paddle;
+        int[] layoutXAlias;
+        int[] layoutYAlias;
+        int[] fixedLayoutXAlias;
+        int[] fixedLayoutYAlias;
+        int[] portraitLayoutX;
+        int[] portraitLayoutY;
+        RgbSprite headSprite;
+        int[] fixedLayoutX;
+        int[] fixedLayoutY;
+        int boardPlayerId;
+        int portraitPlayerId;
+        int unusedPreviewSlot;
+        int boardSlot;
+        int localOrOfflineFlag;
+        int portraitSlot;
+        int hudPlayerId;
+        int nameStripHeight;
+        int firstHudLocalFlag;
+        int splitBoardScroll;
+        int secondHudLocalFlag;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
+        unusedGuardQuotient = -76 / ((-79 - obfuscationGuard) / 35);
+        layoutXAlias = NodeDequeCursor.field_c[this.match.playerCount - 1];
+        layoutX = layoutXAlias;
+        layoutYAlias = NodeDequeCursor.field_e[this.match.playerCount - 1];
+        layoutY = layoutYAlias;
+        layoutModes = NodeDequeCursor.field_h[-1 + this.match.playerCount];
+        backgroundPlayerId = this.viewedPlayerId;
         if (null != TabbedPane.currentBackground) {
-          for (var7 = 0; var7 < this.match.playerCount; var7++) {
-            var13 = this.match.playerBoards[var6].paddle;
+          for (backgroundSlot = 0; backgroundSlot < this.match.playerCount; backgroundSlot++) {
+            paddle = this.match.playerBoards[backgroundPlayerId].paddle;
             if (1 == this.match.playerCount) {
-              var9 = (-((var13.x256 + var13.width256 / 2 << 8) * 2) + 33423360) / 510;
-              TabbedPane.currentBackground.drawFullBackground(true, var9, 0, 0, 0);
+              singleBoardScroll = (-((paddle.x256 + paddle.width256 / 2 << 8) * 2) + 33423360) / 510;
+              TabbedPane.currentBackground.drawFullBackground(true, singleBoardScroll, 0, 0, 0);
               if (TabbedPane.currentBackground.sceneId == 7 ||
-                this.match.playerBoards[var6].boardState == 5) {
+                this.match.playerBoards[backgroundPlayerId].boardState == 5) {
                 gh.a(121, true);
               }
               if (MenuScreen.field_i <= 0) {
                 break;
               }
-              var10 = MenuScreen.field_i * 256 / 32;
-              nk.field_c.b(0, 0, var10);
+              backgroundFadeAlpha = MenuScreen.field_i * 256 / 32;
+              nk.field_c.b(0, 0, backgroundFadeAlpha);
               break;
             }
-            var14 = var2;
-            var15 = var3;
-            if (var5[var7] != 1) {
-              var14 = var2;
-              var15 = var3;
-              MovingBody.a((byte) 124, 153 + var14[var7], var14[var7], var15[var7], 233 + var15[var7]);
-              TabbedPane.currentBackground.drawPreview((byte) -102, var6, var14[var7], var15[var7]);
+            layoutXAlias = layoutX;
+            layoutYAlias = layoutY;
+            if (layoutModes[backgroundSlot] != 1) {
+              layoutXAlias = layoutX;
+              layoutYAlias = layoutY;
+              MovingBody.a((byte) 124, 153 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], 233 + layoutYAlias[backgroundSlot]);
+              TabbedPane.currentBackground.drawPreview((byte) -102, backgroundPlayerId, layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot]);
               sc.popRaster(-79);
             } else {
-              MovingBody.a((byte) 76, 306 + var14[var7], var14[var7], var15[var7], var15[var7] + 480);
-              var9Lifetime3 = (-(2 * (var13.x256 + var13.width256 / 2 << 8)) + 20054016) / 306;
-              TabbedPane.currentBackground.drawSplitBackground(var15[var7], (byte) -107, var14[var7], var6, var9Lifetime3 / 2);
+              MovingBody.a((byte) 76, 306 + layoutXAlias[backgroundSlot], layoutXAlias[backgroundSlot], layoutYAlias[backgroundSlot], layoutYAlias[backgroundSlot] + 480);
+              splitBoardScroll = (-(2 * (paddle.x256 + paddle.width256 / 2 << 8)) + 20054016) / 306;
+              TabbedPane.currentBackground.drawSplitBackground(layoutYAlias[backgroundSlot], (byte) -107, layoutXAlias[backgroundSlot], backgroundPlayerId, splitBoardScroll / 2);
               sc.popRaster(-122);
             }
-            var6++;
-            var6 = var6 % this.match.playerCount;
+            backgroundPlayerId++;
+            backgroundPlayerId = backgroundPlayerId % this.match.playerCount;
           }
         }
         if (TabbedPane.currentBackground != null) {
-          var14 = var2;
-          var15 = var3;
+          layoutXAlias = layoutX;
+          layoutYAlias = layoutY;
           if (this.match.playerCount > 2) {
-            for (var7Lifetime1 = this.match.playerCount; var7Lifetime1 < 5; var7Lifetime1++) {
-              TabbedPane.currentBackground.drawPreview((byte) -79, -1, var14[var7Lifetime1], var15[var7Lifetime1]);
-              Rasterizer2D.fillRectangleAlpha(var14[var7Lifetime1], var15[var7Lifetime1], 153, 233, 0, 160);
+            for (unusedPreviewSlot = this.match.playerCount; unusedPreviewSlot < 5; unusedPreviewSlot++) {
+              TabbedPane.currentBackground.drawPreview((byte) -79, -1, layoutXAlias[unusedPreviewSlot], layoutYAlias[unusedPreviewSlot]);
+              Rasterizer2D.fillRectangleAlpha(layoutXAlias[unusedPreviewSlot], layoutYAlias[unusedPreviewSlot], 153, 233, 0, 160);
             }
           }
         }
-        var6Lifetime1 = this.viewedPlayerId;
-        for (var7Lifetime2 = 0; var7Lifetime2 < this.match.playerCount; var7Lifetime2++) {
-          if (~MusicCrossfadeStream.field_C != ~var5[var7Lifetime2]) {
-            gr.b(var5[var7Lifetime2], -28463);
+        boardPlayerId = this.viewedPlayerId;
+        for (boardSlot = 0; boardSlot < this.match.playerCount; boardSlot++) {
+          if (~MusicCrossfadeStream.field_C != ~layoutModes[boardSlot]) {
+            gr.b(layoutModes[boardSlot], -28463);
           }
-          BitPacketBuffer.drawBoard((byte) 90, var6Lifetime1, var5[var7Lifetime2], var15[var7Lifetime2], this.match, var14[var7Lifetime2]);
-          var6Lifetime1++;
-          var6Lifetime1 = var6Lifetime1 % this.match.playerCount;
+          BitPacketBuffer.drawBoard((byte) 90, boardPlayerId, layoutModes[boardSlot], layoutYAlias[boardSlot], this.match, layoutXAlias[boardSlot]);
+          boardPlayerId++;
+          boardPlayerId = boardPlayerId % this.match.playerCount;
         }
         if (this.match.playerCount != 1) {
           if (2 != this.match.playerCount) {
-            var22 = NodeDequeCursor.field_e[4];
-            var17 = var22;
-            var3 = var17;
-            var21 = NodeDequeCursor.field_c[4];
-            var16 = var21;
-            var2 = var16;
+            fixedLayoutY = NodeDequeCursor.field_e[4];
+            fixedLayoutYAlias = fixedLayoutY;
+            layoutY = fixedLayoutYAlias;
+            fixedLayoutX = NodeDequeCursor.field_c[4];
+            fixedLayoutXAlias = fixedLayoutX;
+            layoutX = fixedLayoutXAlias;
             nh.paintNineSliceFrame(169, 482, -40, -1, LoginCredentialKind.field_h, -1);
             nh.paintNineSliceFrame(169, 482, -40, 472, LoginCredentialKind.field_h, -1);
-            stackIn_83_0 = ((this.localPlayerMask & 1 << this.viewedPlayerId) == 0) ? 0 : 1;
-            var7Lifetime3 = stackIn_83_0;
-            stackIn_86_0 = this.resultWordMode;
-            stackIn_86_1 = -103;
-            stackIn_86_2 = var21[0];
-            stackIn_88_3 = (var7Lifetime3 != 0) || (0 == this.localPlayerMask);
-            LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_86_0, stackIn_86_1, stackIn_86_2, stackIn_88_3, this.match.playerBoards[this.viewedPlayerId], var22[0], this.viewedPlayerId, var7Lifetime3 != 0, this.match);
-            nh.paintNineSliceFrame(169, 9, -40, -1, LoginCredentialKind.field_h, 0 + (var22[2] - 3));
-            nh.paintNineSliceFrame(169, 9, -40, 472, LoginCredentialKind.field_h, -3 + var22[2] - 0);
+            viewedLocalValue = ((this.localPlayerMask & 1 << this.viewedPlayerId) == 0) ? 0 : 1;
+            localOrOfflineFlag = viewedLocalValue;
+            viewedHudResultMode = this.resultWordMode;
+            viewedHudGuard = -103;
+            viewedHudX = fixedLayoutX[0];
+            showViewedHudDetails = (localOrOfflineFlag != 0) || (0 == this.localPlayerMask);
+            LobbyGame.$cfr$intArgs$a$687785aae666(viewedHudResultMode, viewedHudGuard, viewedHudX, showViewedHudDetails, this.match.playerBoards[this.viewedPlayerId], fixedLayoutY[0], this.viewedPlayerId, localOrOfflineFlag != 0, this.match);
+            nh.paintNineSliceFrame(169, 9, -40, -1, LoginCredentialKind.field_h, 0 + (fixedLayoutY[2] - 3));
+            nh.paintNineSliceFrame(169, 9, -40, 472, LoginCredentialKind.field_h, -3 + fixedLayoutY[2] - 0);
           } else {
-            stackIn_44_0 = (this.networkedMatch) ? 0 : 1;
-            var7Lifetime3 = stackIn_44_0;
+            offlineValue = (this.networkedMatch) ? 0 : 1;
+            localOrOfflineFlag = offlineValue;
             if (this.networkedMatch) {
-              stackIn_50_0 = (this.localPlayerMask == 0) ? 1 : 0;
+              showAllDetailsValue = (this.localPlayerMask == 0) ? 1 : 0;
             } else {
-              stackIn_50_0 = 1;
+              showAllDetailsValue = 1;
             }
-            var8_int = stackIn_50_0;
+            showAllPlayerDetails = showAllDetailsValue;
             if (this.networkedMatch) {
-              stackIn_53_0 = this.viewedPlayerId;
+              firstHudPlayerValue = this.viewedPlayerId;
             } else {
-              stackIn_53_0 = 1;
+              firstHudPlayerValue = 1;
             }
-            var9Lifetime1 = stackIn_53_0;
-            stackIn_56_0 = ((this.localPlayerMask & 1 << var9Lifetime1) == 0) ? 0 : 1;
-            var10Lifetime1 = stackIn_56_0;
-            stackIn_59_0 = this.resultWordMode;
-            stackIn_59_1 = -103;
-            stackIn_59_2 = var14[0];
-            stackIn_61_3 = (var8_int != 0) || (var10Lifetime1 != 0);
-            stackIn_64_4 = this.match.playerBoards[var9Lifetime1];
-            stackIn_64_5 = var15[0];
-            stackIn_64_6 = var9Lifetime1;
-            stackIn_66_7 = (var7Lifetime3 != 0) || (var10Lifetime1 != 0);
-            LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_59_0, stackIn_59_1, stackIn_59_2, stackIn_61_3, stackIn_64_4, stackIn_64_5, stackIn_64_6, stackIn_66_7, this.match);
-            var9Lifetime1 = 1 - var9Lifetime1;
-            stackIn_69_0 = (0 == (1 << var9Lifetime1 & this.localPlayerMask)) ? 0 : 1;
-            var10Lifetime1Lifetime1 = stackIn_69_0;
-            stackIn_72_0 = this.resultWordMode;
-            stackIn_72_1 = -103;
-            stackIn_72_2 = var14[1];
-            stackIn_74_3 = (var8_int != 0) || (var10Lifetime1Lifetime1 != 0);
-            stackIn_77_4 = this.match.playerBoards[var9Lifetime1];
-            stackIn_77_5 = var15[1];
-            stackIn_77_6 = var9Lifetime1;
-            stackIn_79_7 = (var7Lifetime3 != 0) || (var10Lifetime1Lifetime1 != 0);
-            LobbyGame.$cfr$intArgs$a$687785aae666(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_74_3, stackIn_77_4, stackIn_77_5, stackIn_77_6, stackIn_79_7, this.match);
+            hudPlayerId = firstHudPlayerValue;
+            firstHudLocalValue = ((this.localPlayerMask & 1 << hudPlayerId) == 0) ? 0 : 1;
+            firstHudLocalFlag = firstHudLocalValue;
+            firstHudResultMode = this.resultWordMode;
+            firstHudGuard = -103;
+            firstHudX = layoutXAlias[0];
+            showFirstHudDetails = (showAllPlayerDetails != 0) || (firstHudLocalFlag != 0);
+            firstHudBoard = this.match.playerBoards[hudPlayerId];
+            firstHudY = layoutYAlias[0];
+            firstHudPlayerId = hudPlayerId;
+            firstHudLocalOrOffline = (localOrOfflineFlag != 0) || (firstHudLocalFlag != 0);
+            LobbyGame.$cfr$intArgs$a$687785aae666(firstHudResultMode, firstHudGuard, firstHudX, showFirstHudDetails, firstHudBoard, firstHudY, firstHudPlayerId, firstHudLocalOrOffline, this.match);
+            hudPlayerId = 1 - hudPlayerId;
+            secondHudLocalValue = (0 == (1 << hudPlayerId & this.localPlayerMask)) ? 0 : 1;
+            secondHudLocalFlag = secondHudLocalValue;
+            secondHudResultMode = this.resultWordMode;
+            secondHudGuard = -103;
+            secondHudX = layoutXAlias[1];
+            showSecondHudDetails = (showAllPlayerDetails != 0) || (secondHudLocalFlag != 0);
+            secondHudBoard = this.match.playerBoards[hudPlayerId];
+            secondHudY = layoutYAlias[1];
+            secondHudPlayerId = hudPlayerId;
+            secondHudLocalOrOffline = (localOrOfflineFlag != 0) || (secondHudLocalFlag != 0);
+            LobbyGame.$cfr$intArgs$a$687785aae666(secondHudResultMode, secondHudGuard, secondHudX, showSecondHudDetails, secondHudBoard, secondHudY, secondHudPlayerId, secondHudLocalOrOffline, this.match);
           }
         } else {
-          var7_ref_j = this.match.playerBoards[0];
+          singleBoard = this.match.playerBoards[0];
           nh.paintNineSliceFrame(526, 482, -40, -1, LoginCredentialKind.field_h, -1);
           Rasterizer2D.fillRectangleAlpha(7, 473, 510, 7, 0, 96);
           Rasterizer2D.fillRectangleAlpha(524, 0, 116, 480, 0, 96);
           nh.paintNineSliceFrame(125, 482, -40, 516, LoginCredentialKind.field_h, -1);
-          DualLinkNode.a(130, this.match, ContextActionController.field_g, var7_ref_j, (byte) -104, 527, 10, 85);
+          DualLinkNode.a(130, this.match, ContextActionController.field_g, singleBoard, (byte) -104, 527, 10, 85);
           nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 137);
           if (!TextFieldRenderer.field_A ||
             wc.field_b) {
-            ua.a(var7_ref_j, 524, 85, -68, 147, 81, this.match);
+            ua.a(singleBoard, 524, 85, -68, 147, 81, this.match);
           }
           nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 229);
-          ArchiveNetworkClient.a(640, this.match, var7_ref_j);
+          ArchiveNetworkClient.a(640, this.match, singleBoard);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {
             ui.a(LoadingProgressDialog.field_eb + Bzip2State.field_v, PasswordFieldRenderer.field_D, 6, GrowableIntList.field_i, 100, 621, 1729, 340, 230, 0);
           } else {
-            if (null != var7_ref_j.displayedMessage) {
-              var12 = (IndexedSprite[]) null;
-              ui.a(var7_ref_j.displayedMessage, ContextActionController.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
+            if (null != singleBoard.displayedMessage) {
+              unusedInlineSprites = (IndexedSprite[]) null;
+              ui.a(singleBoard.displayedMessage, ContextActionController.field_g, 0, (IndexedSprite[]) null, 80, 621, 1729, 340, 85, -1);
             }
           }
         }
         if (this.match.playerCount > 1 &&
           ((this.match.playerMaskTwo | this.match.playerMaskOne) & 1 << this.viewedPlayerId) == 0) {
-          ClientException.a(var2[0], 424, false, this.match, this.viewedPlayerId, var3[0]);
+          ClientException.a(layoutX[0], 424, false, this.match, this.viewedPlayerId, layoutY[0]);
         }
         if (this.match.playerCount == 2 &&
           0 == (1 << 1 - this.viewedPlayerId & (this.match.playerMaskTwo | this.match.playerMaskOne))) {
-          ClientException.a(var2[1], 424, false, this.match, 1 - this.viewedPlayerId, var3[1]);
+          ClientException.a(layoutX[1], 424, false, this.match, 1 - this.viewedPlayerId, layoutY[1]);
         }
-        var19 = NodeDequeCursor.field_e[this.match.playerCount - 1];
-        var6Lifetime2 = this.viewedPlayerId;
-        var18 = NodeDequeCursor.field_c[this.match.playerCount - 1];
-        for (var7Lifetime4 = 0; this.match.playerCount > var7Lifetime4; var7Lifetime4++) {
-          if (var5[var7Lifetime4] == 2) {
-            var20 = ScorePopup.characterHeads[this.match.playerBoards[var6Lifetime2].characterIndex];
-            var8 = var20;
-            var9Lifetime2 = PasswordFieldRenderer.field_D.ascent + PasswordFieldRenderer.field_D.descent;
-            Rasterizer2D.fillRectangleAlpha(var18[var7Lifetime4], 235 + var19[var7Lifetime4] - 23, 153, var9Lifetime2, 0, 141);
-            var8.drawTransparent(-var20.canvasWidth + (153 + var18[var7Lifetime4]), 0 + (-var20.canvasHeight + var19[var7Lifetime4]) + 233);
-            ce.field_e.drawLeft(this.match.playerNames[var6Lifetime2], var18[var7Lifetime4] + 4, 2 + var19[var7Lifetime4] + 223, 2, -1);
+        portraitLayoutY = NodeDequeCursor.field_e[this.match.playerCount - 1];
+        portraitPlayerId = this.viewedPlayerId;
+        portraitLayoutX = NodeDequeCursor.field_c[this.match.playerCount - 1];
+        for (portraitSlot = 0; this.match.playerCount > portraitSlot; portraitSlot++) {
+          if (layoutModes[portraitSlot] == 2) {
+            headSprite = ScorePopup.characterHeads[this.match.playerBoards[portraitPlayerId].characterIndex];
+            headSpriteAlias = headSprite;
+            nameStripHeight = PasswordFieldRenderer.field_D.ascent + PasswordFieldRenderer.field_D.descent;
+            Rasterizer2D.fillRectangleAlpha(portraitLayoutX[portraitSlot], 235 + portraitLayoutY[portraitSlot] - 23, 153, nameStripHeight, 0, 141);
+            headSpriteAlias.drawTransparent(-headSprite.canvasWidth + (153 + portraitLayoutX[portraitSlot]), 0 + (-headSprite.canvasHeight + portraitLayoutY[portraitSlot]) + 233);
+            ce.field_e.drawLeft(this.match.playerNames[portraitPlayerId], portraitLayoutX[portraitSlot] + 4, 2 + portraitLayoutY[portraitSlot] + 223, 2, -1);
           }
-          var6Lifetime2++;
-          var6Lifetime2 = var6Lifetime2 % this.match.playerCount;
+          portraitPlayerId++;
+          portraitPlayerId = portraitPlayerId % this.match.playerCount;
         }
     }
 

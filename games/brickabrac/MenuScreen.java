@@ -467,14 +467,14 @@ abstract class MenuScreen extends GameScreen {
               }
               if (var8 == 9) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  IntArrayRequest.gameplayScreen.a((byte) 40, inputFlag);
+                  IntArrayRequest.gameplayScreen.finishOfflineMatch((byte) 40, inputFlag);
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                 }
                 break regionExit1;
               }
               if (var8 == 11) {
                 if (!(!this.selection.isActivated((byte) 113))) {
-                  IntArrayRequest.gameplayScreen.b(29);
+                  IntArrayRequest.gameplayScreen.requestLeaveMatch(29);
                   ng.requestScreen(inputFlag, 73, -1);
                 }
                 break regionExit1;
@@ -544,7 +544,7 @@ abstract class MenuScreen extends GameScreen {
                   if (!this.selection.isActivated((byte) 113)) {
                     break regionExit1;
                   }
-                  IntArrayRequest.gameplayScreen.a(inputFlag, (byte) 69);
+                  IntArrayRequest.gameplayScreen.showPostMatchScreen(inputFlag, (byte) 69);
                   NewAchievementsScreen.discardGameplayOnTransition = true;
                   break regionExit1;
                 default:

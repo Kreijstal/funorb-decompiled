@@ -322,4 +322,8 @@ Controlled axis fixtures verify top/bottom/right/left faces 1/2/4/8 and inward-p
 
 Tutorial mode is disabled in these native fixtures. Static collision/UI state is restored. General corner/diagonal sweep correctness, all special brick responses, tutorial callbacks, full-frame substep scheduling, live gameplay and original-JAR equivalence remain unverified.
 
+GameplayScreen now names its remaining instance methods: updateViewedPlayerSelection, queueScoreTableSubmission, finishOfflineMatch, showPostMatchScreen, sendProgressUpdate, requestLeaveMatch and drawMatchFrame. Frame locals describe cyclic player/slot selection, player-count layouts, background scroll/fade, HUD arguments and portrait strips. These are binding-aware naming changes; full asset-dependent frame painting is not exercised by this pass.
+
+Spectator fixtures verify count/local-player/masked-tick/overlay eligibility, edge-triggered key latching, direction precedence and wraparound. Progress fixtures check opcode16, pack*1000+level packing, intermediate flag, int-before-rounding overflow and short truncation, plus both suppression paths. Network-leave fixtures verify opcode66, mask mutation and offline rejection before mutation/output. Deferred score-table fixtures verify positive-score gating, existing-row preservation and packed start/end range. Canonical guards and divisor1000 are used. Static state is restored. Complete post-match screen/audio routing, live network/server interpretation, asset rendering and original-JAR equivalence remain unverified.
+
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

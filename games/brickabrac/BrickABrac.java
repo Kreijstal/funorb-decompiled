@@ -313,9 +313,9 @@ public final class BrickABrac extends InteractiveGameClient {
               if (IntArrayRequest.gameplayScreen != null) {
                 OpacityWidget.finishScreenTransition((byte) -123);
                 if (!IntArrayRequest.gameplayScreen.isSpectator(123)) {
-                  IntArrayRequest.gameplayScreen.a((byte) 40, false);
+                  IntArrayRequest.gameplayScreen.finishOfflineMatch((byte) 40, false);
                 }
-                IntArrayRequest.gameplayScreen.a(false, (byte) 69);
+                IntArrayRequest.gameplayScreen.showPostMatchScreen(false, (byte) 69);
                 NewAchievementsScreen.discardGameplayOnTransition = true;
                 RadialSelectorRenderer.field_p = true;
                 Brick.field_E = 0;

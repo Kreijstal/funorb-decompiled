@@ -33964,6 +33964,126 @@
       "renamedSymbol": "L:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#9"
     },
     {
+      "symbol": "L:qj.a(I)V#0",
+      "originalName": "fieldTemp$0",
+      "to": "previousViewedPlayer",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#0"
+    },
+    {
+      "symbol": "L:qj.a(I)V#1",
+      "originalName": "fieldTemp$1",
+      "to": "nextViewedPlayer",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#1"
+    },
+    {
+      "symbol": "L:qj.a(I)V#10",
+      "originalName": "var2Lifetime1",
+      "to": "maskedEligibility",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#10"
+    },
+    {
+      "symbol": "L:qj.a(I)V#11",
+      "originalName": "var2Lifetime2",
+      "to": "canCycleView",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#11"
+    },
+    {
+      "symbol": "L:qj.a(I)V#12",
+      "originalName": "decompiledFrameRemainder0",
+      "to": "unusedEligibilityRemainder",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#12"
+    },
+    {
+      "symbol": "L:qj.a(I)V#13",
+      "originalName": "decompiledFrameRemainder1",
+      "to": "unusedDirectionRemainder",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#13"
+    },
+    {
+      "symbol": "L:qj.a(I)V#2",
+      "originalName": "stackIn_6_0",
+      "to": "freshKeyValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#2"
+    },
+    {
+      "symbol": "L:qj.a(I)V#3",
+      "originalName": "stackIn_10_0",
+      "to": "freshKeyAlias",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#3"
+    },
+    {
+      "symbol": "L:qj.a(I)V#4",
+      "originalName": "stackIn_11_1",
+      "to": "allLocalPlayersMasked",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#4"
+    },
+    {
+      "symbol": "L:qj.a(I)V#5",
+      "originalName": "stackIn_16_0",
+      "to": "maskedEligibilityValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#5"
+    },
+    {
+      "symbol": "L:qj.a(I)V#6",
+      "originalName": "stackIn_17_1",
+      "to": "spectatingAllowedValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#6"
+    },
+    {
+      "symbol": "L:qj.a(I)V#7",
+      "originalName": "stackIn_30_0",
+      "to": "viewKeyHeld",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#7"
+    },
+    {
+      "symbol": "L:qj.a(I)V#8",
+      "originalName": "var2",
+      "to": "freshKey",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#8"
+    },
+    {
+      "symbol": "L:qj.a(I)V#9",
+      "originalName": "var3",
+      "to": "unusedBoard",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#9"
+    },
+    {
+      "symbol": "L:qj.a(IIJZI)V#0",
+      "originalName": "var7",
+      "to": "intermediateFlag",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.sendProgressUpdate(IIJZI)V#0"
+    },
+    {
       "symbol": "L:qj.a(IZ)V#0",
       "originalName": "var3",
       "to": "counterLevelAdjustment",
@@ -34068,12 +34188,500 @@
       "renamedSymbol": "L:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#8"
     },
     {
+      "symbol": "L:qj.b(I)V#0",
+      "originalName": "var2",
+      "to": "unusedGuardRemainder",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.requestLeaveMatch(I)V#0"
+    },
+    {
       "symbol": "L:qj.f(I)V#0",
       "originalName": "var2",
       "to": "guardArithmetic",
       "evidence": "qj.java: Scoped gameplay startup/level-selection/completion variable verified against local-mask, seeded-board and result consumers.",
       "confidence": "reviewed",
       "renamedSymbol": "L:GameplayScreen.requestRematchAction(I)V#0"
+    },
+    {
+      "symbol": "L:qj.g(I)V#0",
+      "originalName": "stackIn_44_0",
+      "to": "offlineValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#0"
+    },
+    {
+      "symbol": "L:qj.g(I)V#1",
+      "originalName": "stackIn_50_0",
+      "to": "showAllDetailsValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#1"
+    },
+    {
+      "symbol": "L:qj.g(I)V#10",
+      "originalName": "stackIn_64_6",
+      "to": "firstHudPlayerId",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#10"
+    },
+    {
+      "symbol": "L:qj.g(I)V#11",
+      "originalName": "stackIn_66_7",
+      "to": "firstHudLocalOrOffline",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#11"
+    },
+    {
+      "symbol": "L:qj.g(I)V#12",
+      "originalName": "stackIn_69_0",
+      "to": "secondHudLocalValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#12"
+    },
+    {
+      "symbol": "L:qj.g(I)V#13",
+      "originalName": "stackIn_72_0",
+      "to": "secondHudResultMode",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#13"
+    },
+    {
+      "symbol": "L:qj.g(I)V#14",
+      "originalName": "stackIn_72_1",
+      "to": "secondHudGuard",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#14"
+    },
+    {
+      "symbol": "L:qj.g(I)V#15",
+      "originalName": "stackIn_72_2",
+      "to": "secondHudX",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#15"
+    },
+    {
+      "symbol": "L:qj.g(I)V#16",
+      "originalName": "stackIn_74_3",
+      "to": "showSecondHudDetails",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#16"
+    },
+    {
+      "symbol": "L:qj.g(I)V#17",
+      "originalName": "stackIn_77_4",
+      "to": "secondHudBoard",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#17"
+    },
+    {
+      "symbol": "L:qj.g(I)V#18",
+      "originalName": "stackIn_77_5",
+      "to": "secondHudY",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#18"
+    },
+    {
+      "symbol": "L:qj.g(I)V#19",
+      "originalName": "stackIn_77_6",
+      "to": "secondHudPlayerId",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#19"
+    },
+    {
+      "symbol": "L:qj.g(I)V#2",
+      "originalName": "stackIn_53_0",
+      "to": "firstHudPlayerValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#2"
+    },
+    {
+      "symbol": "L:qj.g(I)V#20",
+      "originalName": "stackIn_79_7",
+      "to": "secondHudLocalOrOffline",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#20"
+    },
+    {
+      "symbol": "L:qj.g(I)V#21",
+      "originalName": "stackIn_83_0",
+      "to": "viewedLocalValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#21"
+    },
+    {
+      "symbol": "L:qj.g(I)V#22",
+      "originalName": "stackIn_86_0",
+      "to": "viewedHudResultMode",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#22"
+    },
+    {
+      "symbol": "L:qj.g(I)V#23",
+      "originalName": "stackIn_86_1",
+      "to": "viewedHudGuard",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#23"
+    },
+    {
+      "symbol": "L:qj.g(I)V#24",
+      "originalName": "stackIn_86_2",
+      "to": "viewedHudX",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#24"
+    },
+    {
+      "symbol": "L:qj.g(I)V#25",
+      "originalName": "stackIn_88_3",
+      "to": "showViewedHudDetails",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#25"
+    },
+    {
+      "symbol": "L:qj.g(I)V#26",
+      "originalName": "var2",
+      "to": "layoutX",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#26"
+    },
+    {
+      "symbol": "L:qj.g(I)V#27",
+      "originalName": "var3",
+      "to": "layoutY",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#27"
+    },
+    {
+      "symbol": "L:qj.g(I)V#28",
+      "originalName": "var4",
+      "to": "unusedGuardQuotient",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#28"
+    },
+    {
+      "symbol": "L:qj.g(I)V#29",
+      "originalName": "var5",
+      "to": "layoutModes",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#29"
+    },
+    {
+      "symbol": "L:qj.g(I)V#3",
+      "originalName": "stackIn_56_0",
+      "to": "firstHudLocalValue",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#3"
+    },
+    {
+      "symbol": "L:qj.g(I)V#30",
+      "originalName": "var6",
+      "to": "backgroundPlayerId",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#30"
+    },
+    {
+      "symbol": "L:qj.g(I)V#31",
+      "originalName": "var7",
+      "to": "backgroundSlot",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#31"
+    },
+    {
+      "symbol": "L:qj.g(I)V#32",
+      "originalName": "var7_ref_j",
+      "to": "singleBoard",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#32"
+    },
+    {
+      "symbol": "L:qj.g(I)V#33",
+      "originalName": "var8_int",
+      "to": "showAllPlayerDetails",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#33"
+    },
+    {
+      "symbol": "L:qj.g(I)V#34",
+      "originalName": "var8",
+      "to": "headSpriteAlias",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#34"
+    },
+    {
+      "symbol": "L:qj.g(I)V#35",
+      "originalName": "var9",
+      "to": "singleBoardScroll",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#35"
+    },
+    {
+      "symbol": "L:qj.g(I)V#36",
+      "originalName": "var10",
+      "to": "backgroundFadeAlpha",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#36"
+    },
+    {
+      "symbol": "L:qj.g(I)V#37",
+      "originalName": "var11",
+      "to": "unusedClientFlag",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#37"
+    },
+    {
+      "symbol": "L:qj.g(I)V#38",
+      "originalName": "var12",
+      "to": "unusedInlineSprites",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#38"
+    },
+    {
+      "symbol": "L:qj.g(I)V#39",
+      "originalName": "var13",
+      "to": "paddle",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#39"
+    },
+    {
+      "symbol": "L:qj.g(I)V#4",
+      "originalName": "stackIn_59_0",
+      "to": "firstHudResultMode",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#4"
+    },
+    {
+      "symbol": "L:qj.g(I)V#40",
+      "originalName": "var14",
+      "to": "layoutXAlias",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#40"
+    },
+    {
+      "symbol": "L:qj.g(I)V#41",
+      "originalName": "var15",
+      "to": "layoutYAlias",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#41"
+    },
+    {
+      "symbol": "L:qj.g(I)V#42",
+      "originalName": "var16",
+      "to": "fixedLayoutXAlias",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#42"
+    },
+    {
+      "symbol": "L:qj.g(I)V#43",
+      "originalName": "var17",
+      "to": "fixedLayoutYAlias",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#43"
+    },
+    {
+      "symbol": "L:qj.g(I)V#44",
+      "originalName": "var18",
+      "to": "portraitLayoutX",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#44"
+    },
+    {
+      "symbol": "L:qj.g(I)V#45",
+      "originalName": "var19",
+      "to": "portraitLayoutY",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#45"
+    },
+    {
+      "symbol": "L:qj.g(I)V#46",
+      "originalName": "var20",
+      "to": "headSprite",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#46"
+    },
+    {
+      "symbol": "L:qj.g(I)V#47",
+      "originalName": "var21",
+      "to": "fixedLayoutX",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#47"
+    },
+    {
+      "symbol": "L:qj.g(I)V#48",
+      "originalName": "var22",
+      "to": "fixedLayoutY",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#48"
+    },
+    {
+      "symbol": "L:qj.g(I)V#49",
+      "originalName": "var6Lifetime1",
+      "to": "boardPlayerId",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#49"
+    },
+    {
+      "symbol": "L:qj.g(I)V#5",
+      "originalName": "stackIn_59_1",
+      "to": "firstHudGuard",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#5"
+    },
+    {
+      "symbol": "L:qj.g(I)V#50",
+      "originalName": "var6Lifetime2",
+      "to": "portraitPlayerId",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#50"
+    },
+    {
+      "symbol": "L:qj.g(I)V#51",
+      "originalName": "var7Lifetime1",
+      "to": "unusedPreviewSlot",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#51"
+    },
+    {
+      "symbol": "L:qj.g(I)V#52",
+      "originalName": "var7Lifetime2",
+      "to": "boardSlot",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#52"
+    },
+    {
+      "symbol": "L:qj.g(I)V#53",
+      "originalName": "var7Lifetime3",
+      "to": "localOrOfflineFlag",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#53"
+    },
+    {
+      "symbol": "L:qj.g(I)V#54",
+      "originalName": "var7Lifetime4",
+      "to": "portraitSlot",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#54"
+    },
+    {
+      "symbol": "L:qj.g(I)V#55",
+      "originalName": "var9Lifetime1",
+      "to": "hudPlayerId",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#55"
+    },
+    {
+      "symbol": "L:qj.g(I)V#56",
+      "originalName": "var9Lifetime2",
+      "to": "nameStripHeight",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#56"
+    },
+    {
+      "symbol": "L:qj.g(I)V#57",
+      "originalName": "var10Lifetime1",
+      "to": "firstHudLocalFlag",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#57"
+    },
+    {
+      "symbol": "L:qj.g(I)V#58",
+      "originalName": "var9Lifetime3",
+      "to": "splitBoardScroll",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#58"
+    },
+    {
+      "symbol": "L:qj.g(I)V#59",
+      "originalName": "var10Lifetime1Lifetime1",
+      "to": "secondHudLocalFlag",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#59"
+    },
+    {
+      "symbol": "L:qj.g(I)V#6",
+      "originalName": "stackIn_59_2",
+      "to": "firstHudX",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#6"
+    },
+    {
+      "symbol": "L:qj.g(I)V#7",
+      "originalName": "stackIn_61_3",
+      "to": "showFirstHudDetails",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#7"
+    },
+    {
+      "symbol": "L:qj.g(I)V#8",
+      "originalName": "stackIn_64_4",
+      "to": "firstHudBoard",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#8"
+    },
+    {
+      "symbol": "L:qj.g(I)V#9",
+      "originalName": "stackIn_64_5",
+      "to": "firstHudY",
+      "evidence": "qj.java: Reviewed gameplay controller declaration and its call/field data flow; no source transformation beyond binding-aware naming.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#9"
     },
     {
       "symbol": "L:qo.a(ILje;)Z#0",
@@ -48852,12 +49460,28 @@
       "renamedSymbol": "M:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V"
     },
     {
+      "symbol": "M:qj.a(BZ)V",
+      "originalName": "a",
+      "to": "finishOfflineMatch",
+      "evidence": "qj.java: Captures single-player results and sends progress, then selects completion or post-match screen; guard40 also retains background ID.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.finishOfflineMatch(BZ)V"
+    },
+    {
       "symbol": "M:qj.a(CII)Z",
       "originalName": "a",
       "to": "handleKey",
       "evidence": "gf.java: Screen key callback: original order character/guard/key code, including menu Escape13 and client guard106. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameplayScreen.handleKey(CII)Z"
+    },
+    {
+      "symbol": "M:qj.a(I)V",
+      "originalName": "a",
+      "to": "updateViewedPlayerSelection",
+      "evidence": "qj.java: Cycles the viewed board once per held-key press when overlays, local masks and maskedTicks permit; forward takes precedence; guard -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.updateViewedPlayerSelection(I)V"
     },
     {
       "symbol": "M:qj.a(II)Z",
@@ -48874,6 +49498,14 @@
       "evidence": "qj.java: Records award then captures counter words between score/base and level adjustments; guard67.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameplayScreen.queueScoreAchievement(III)V"
+    },
+    {
+      "symbol": "M:qj.a(IIJZI)V",
+      "originalName": "a",
+      "to": "sendProgressUpdate",
+      "evidence": "qj.java: Sends opcode16 with packed pack/level, intermediate flag and rounded elapsed time unless suppressed or mode flag set; caller divisor1000.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.sendProgressUpdate(IIJZI)V"
     },
     {
       "symbol": "M:qj.a(ILpi;)V",
@@ -48932,6 +49564,14 @@
       "renamedSymbol": "M:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z"
     },
     {
+      "symbol": "M:qj.a(ZB)V",
+      "originalName": "a",
+      "to": "showPostMatchScreen",
+      "evidence": "qj.java: Stops activity loops and selects menu0, table5, awards9 or combined10 from mode, pending awards and table row; guard69.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.showPostMatchScreen(ZB)V"
+    },
+    {
       "symbol": "M:qj.a(ZII)V",
       "originalName": "a",
       "to": "queueProgressAchievement",
@@ -48956,6 +49596,14 @@
       "renamedSymbol": "M:GameplayScreen.drawScreen(B)V"
     },
     {
+      "symbol": "M:qj.b(I)V",
+      "originalName": "b",
+      "to": "requestLeaveMatch",
+      "evidence": "qj.java: Requires networked match, sets local player bit in maskOne and writes ciphered opcode66 without a body; guard60.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.requestLeaveMatch(I)V"
+    },
+    {
       "symbol": "M:qj.b(III)V",
       "originalName": "b",
       "to": "queueMappedBitAchievement",
@@ -48972,12 +49620,28 @@
       "renamedSymbol": "M:GameplayScreen.isSpectator(I)Z"
     },
     {
+      "symbol": "M:qj.e(I)V",
+      "originalName": "e",
+      "to": "queueScoreTableSubmission",
+      "evidence": "qj.java: Captures positive board-zero score and packed progress range once unless suppressed; mode flag defers immediate submission; guard0.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.queueScoreTableSubmission(I)V"
+    },
+    {
       "symbol": "M:qj.f(I)V",
       "originalName": "f",
       "to": "requestRematchAction",
       "evidence": "qj.java: Post-result button12 and automated repeat path write ciphered opcode67 with no body; offline screen throws before output; guard69/87.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GameplayScreen.requestRematchAction(I)V"
+    },
+    {
+      "symbol": "M:qj.g(I)V",
+      "originalName": "g",
+      "to": "drawMatchFrame",
+      "evidence": "qj.java: Draws selected/cyclic board views, backgrounds, HUDs, messages and preview portraits from player-count layout; guard41.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameplayScreen.drawMatchFrame(I)V"
     },
     {
       "symbol": "M:qk.a(BLjava/awt/Component;)V",
@@ -80172,6 +80836,22 @@
       "renamedSymbol": "P:GameplayScreen.readInputBatch(BLBitPacketBuffer;Z)V#2"
     },
     {
+      "symbol": "P:qj.a(BZ)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Captures single-player results and sends progress, then selects completion or post-match screen; guard40 also retains background ID.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.finishOfflineMatch(BZ)V#0"
+    },
+    {
+      "symbol": "P:qj.a(BZ)V#1",
+      "originalName": "param1",
+      "to": "usePointer",
+      "evidence": "qj.java: Captures single-player results and sends progress, then selects completion or post-match screen; guard40 also retains background ID.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.finishOfflineMatch(BZ)V#1"
+    },
+    {
       "symbol": "P:qj.a(CII)Z#0",
       "originalName": "param0",
       "to": "character",
@@ -80194,6 +80874,14 @@
       "evidence": "gf.java: Screen key callback: original order character/guard/key code, including menu Escape13 and client guard106. Resolved override parameter.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GameplayScreen.handleKey(CII)Z#2"
+    },
+    {
+      "symbol": "P:qj.a(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Cycles the viewed board once per held-key press when overlays, local masks and maskedTicks permit; forward takes precedence; guard -1.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.updateViewedPlayerSelection(I)V#0"
     },
     {
       "symbol": "P:qj.a(II)Z#0",
@@ -80234,6 +80922,46 @@
       "evidence": "qj.java: Records award then captures counter words between score/base and level adjustments; guard67.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GameplayScreen.queueScoreAchievement(III)V#2"
+    },
+    {
+      "symbol": "P:qj.a(IIJZI)V#0",
+      "originalName": "param0",
+      "to": "packId",
+      "evidence": "qj.java: Sends opcode16 with packed pack/level, intermediate flag and rounded elapsed time unless suppressed or mode flag set; caller divisor1000.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#0"
+    },
+    {
+      "symbol": "P:qj.a(IIJZI)V#1",
+      "originalName": "param1",
+      "to": "levelIndex",
+      "evidence": "qj.java: Sends opcode16 with packed pack/level, intermediate flag and rounded elapsed time unless suppressed or mode flag set; caller divisor1000.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#1"
+    },
+    {
+      "symbol": "P:qj.a(IIJZI)V#2",
+      "originalName": "param2",
+      "to": "elapsedMillis",
+      "evidence": "qj.java: Sends opcode16 with packed pack/level, intermediate flag and rounded elapsed time unless suppressed or mode flag set; caller divisor1000.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#2"
+    },
+    {
+      "symbol": "P:qj.a(IIJZI)V#3",
+      "originalName": "param3",
+      "to": "intermediate",
+      "evidence": "qj.java: Sends opcode16 with packed pack/level, intermediate flag and rounded elapsed time unless suppressed or mode flag set; caller divisor1000.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#3"
+    },
+    {
+      "symbol": "P:qj.a(IIJZI)V#4",
+      "originalName": "param4",
+      "to": "timeDivisor",
+      "evidence": "qj.java: Sends opcode16 with packed pack/level, intermediate flag and rounded elapsed time unless suppressed or mode flag set; caller divisor1000.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#4"
     },
     {
       "symbol": "P:qj.a(ILpi;)V#0",
@@ -80380,6 +81108,22 @@
       "renamedSymbol": "P:GameplayScreen.advanceMatch(LNodeDeque;ZLNodeDeque;)Z#2"
     },
     {
+      "symbol": "P:qj.a(ZB)V#0",
+      "originalName": "param0",
+      "to": "usePointer",
+      "evidence": "qj.java: Stops activity loops and selects menu0, table5, awards9 or combined10 from mode, pending awards and table row; guard69.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.showPostMatchScreen(ZB)V#0"
+    },
+    {
+      "symbol": "P:qj.a(ZB)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Stops activity loops and selects menu0, table5, awards9 or combined10 from mode, pending awards and table row; guard69.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.showPostMatchScreen(ZB)V#1"
+    },
+    {
       "symbol": "P:qj.a(ZII)V#0",
       "originalName": "param0",
       "to": "markSnapshotsReady",
@@ -80436,6 +81180,14 @@
       "renamedSymbol": "P:GameplayScreen.drawScreen(B)V#0"
     },
     {
+      "symbol": "P:qj.b(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Requires networked match, sets local player bit in maskOne and writes ciphered opcode66 without a body; guard60.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.requestLeaveMatch(I)V#0"
+    },
+    {
       "symbol": "P:qj.b(III)V#0",
       "originalName": "param0",
       "to": "achievementId",
@@ -80468,12 +81220,28 @@
       "renamedSymbol": "P:GameplayScreen.isSpectator(I)Z#0"
     },
     {
+      "symbol": "P:qj.e(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Captures positive board-zero score and packed progress range once unless suppressed; mode flag defers immediate submission; guard0.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.queueScoreTableSubmission(I)V#0"
+    },
+    {
       "symbol": "P:qj.f(I)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
       "evidence": "qj.java: Post-result button12 and automated repeat path write ciphered opcode67 with no body; offline screen throws before output; guard69/87.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GameplayScreen.requestRematchAction(I)V#0"
+    },
+    {
+      "symbol": "P:qj.g(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "qj.java: Draws selected/cyclic board views, backgrounds, HUDs, messages and preview portraits from player-count layout; guard41.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:GameplayScreen.drawMatchFrame(I)V#0"
     },
     {
       "symbol": "P:qk.a(BLjava/awt/Component;)V#0",
@@ -268771,7 +269539,7 @@
     },
     {
       "symbol": "L:qj.a(BZ)V#0",
-      "renamedSymbol": "L:GameplayScreen.a(BZ)V#0",
+      "renamedSymbol": "L:GameplayScreen.finishOfflineMatch(BZ)V#0",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -268947,9 +269715,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#0",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#0",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#0",
       "originalName": "fieldTemp$0",
-      "renamedName": "fieldTemp$0",
+      "renamedName": "previousViewedPlayer",
       "declaration": {
         "file": "qj.java",
         "start": 501,
@@ -268958,9 +269726,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#1",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#1",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#1",
       "originalName": "fieldTemp$1",
-      "renamedName": "fieldTemp$1",
+      "renamedName": "nextViewedPlayer",
       "declaration": {
         "file": "qj.java",
         "start": 530,
@@ -268969,9 +269737,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#10",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#10",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#10",
       "originalName": "var2Lifetime1",
-      "renamedName": "var2Lifetime1",
+      "renamedName": "maskedEligibility",
       "declaration": {
         "file": "qj.java",
         "start": 780,
@@ -268980,9 +269748,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#11",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#11",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#11",
       "originalName": "var2Lifetime2",
-      "renamedName": "var2Lifetime2",
+      "renamedName": "canCycleView",
       "declaration": {
         "file": "qj.java",
         "start": 807,
@@ -268991,9 +269759,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#12",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#12",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#12",
       "originalName": "decompiledFrameRemainder0",
-      "renamedName": "decompiledFrameRemainder0",
+      "renamedName": "unusedEligibilityRemainder",
       "declaration": {
         "file": "qj.java",
         "start": 1263,
@@ -269002,9 +269770,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#13",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#13",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#13",
       "originalName": "decompiledFrameRemainder1",
-      "renamedName": "decompiledFrameRemainder1",
+      "renamedName": "unusedDirectionRemainder",
       "declaration": {
         "file": "qj.java",
         "start": 1666,
@@ -269013,9 +269781,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#2",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#2",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#2",
       "originalName": "stackIn_6_0",
-      "renamedName": "stackIn_6_0",
+      "renamedName": "freshKeyValue",
       "declaration": {
         "file": "qj.java",
         "start": 559,
@@ -269024,9 +269792,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#3",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#3",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#3",
       "originalName": "stackIn_10_0",
-      "renamedName": "stackIn_10_0",
+      "renamedName": "freshKeyAlias",
       "declaration": {
         "file": "qj.java",
         "start": 588,
@@ -269035,9 +269803,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#4",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#4",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#4",
       "originalName": "stackIn_11_1",
-      "renamedName": "stackIn_11_1",
+      "renamedName": "allLocalPlayersMasked",
       "declaration": {
         "file": "qj.java",
         "start": 618,
@@ -269046,9 +269814,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#5",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#5",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#5",
       "originalName": "stackIn_16_0",
-      "renamedName": "stackIn_16_0",
+      "renamedName": "maskedEligibilityValue",
       "declaration": {
         "file": "qj.java",
         "start": 648,
@@ -269057,9 +269825,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#6",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#6",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#6",
       "originalName": "stackIn_17_1",
-      "renamedName": "stackIn_17_1",
+      "renamedName": "spectatingAllowedValue",
       "declaration": {
         "file": "qj.java",
         "start": 678,
@@ -269068,9 +269836,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#7",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#7",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#7",
       "originalName": "stackIn_30_0",
-      "renamedName": "stackIn_30_0",
+      "renamedName": "viewKeyHeld",
       "declaration": {
         "file": "qj.java",
         "start": 712,
@@ -269079,9 +269847,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#8",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#8",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#8",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "freshKey",
       "declaration": {
         "file": "qj.java",
         "start": 746,
@@ -269090,9 +269858,9 @@
     },
     {
       "symbol": "L:qj.a(I)V#9",
-      "renamedSymbol": "L:GameplayScreen.a(I)V#9",
+      "renamedSymbol": "L:GameplayScreen.updateViewedPlayerSelection(I)V#9",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "unusedBoard",
       "declaration": {
         "file": "qj.java",
         "start": 762,
@@ -269167,9 +269935,9 @@
     },
     {
       "symbol": "L:qj.a(IIJZI)V#0",
-      "renamedSymbol": "L:GameplayScreen.a(IIJZI)V#0",
+      "renamedSymbol": "L:GameplayScreen.sendProgressUpdate(IIJZI)V#0",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "intermediateFlag",
       "declaration": {
         "file": "qj.java",
         "start": 34674,
@@ -270025,7 +270793,7 @@
     },
     {
       "symbol": "L:qj.a(ZB)V#0",
-      "renamedSymbol": "L:GameplayScreen.a(ZB)V#0",
+      "renamedSymbol": "L:GameplayScreen.showPostMatchScreen(ZB)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -270531,9 +271299,9 @@
     },
     {
       "symbol": "L:qj.b(I)V#0",
-      "renamedSymbol": "L:GameplayScreen.b(I)V#0",
+      "renamedSymbol": "L:GameplayScreen.requestLeaveMatch(I)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "unusedGuardRemainder",
       "declaration": {
         "file": "qj.java",
         "start": 35160,
@@ -270619,9 +271387,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#0",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#0",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#0",
       "originalName": "stackIn_44_0",
-      "renamedName": "stackIn_44_0",
+      "renamedName": "offlineValue",
       "declaration": {
         "file": "qj.java",
         "start": 54414,
@@ -270630,9 +271398,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#1",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#1",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#1",
       "originalName": "stackIn_50_0",
-      "renamedName": "stackIn_50_0",
+      "renamedName": "showAllDetailsValue",
       "declaration": {
         "file": "qj.java",
         "start": 54444,
@@ -270641,9 +271409,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#10",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#10",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#10",
       "originalName": "stackIn_64_6",
-      "renamedName": "stackIn_64_6",
+      "renamedName": "firstHudPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 54720,
@@ -270652,9 +271420,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#11",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#11",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#11",
       "originalName": "stackIn_66_7",
-      "renamedName": "stackIn_66_7",
+      "renamedName": "firstHudLocalOrOffline",
       "declaration": {
         "file": "qj.java",
         "start": 54750,
@@ -270663,9 +271431,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#12",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#12",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#12",
       "originalName": "stackIn_69_0",
-      "renamedName": "stackIn_69_0",
+      "renamedName": "secondHudLocalValue",
       "declaration": {
         "file": "qj.java",
         "start": 54784,
@@ -270674,9 +271442,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#13",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#13",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#13",
       "originalName": "stackIn_72_0",
-      "renamedName": "stackIn_72_0",
+      "renamedName": "secondHudResultMode",
       "declaration": {
         "file": "qj.java",
         "start": 54818,
@@ -270685,9 +271453,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#14",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#14",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#14",
       "originalName": "stackIn_72_1",
-      "renamedName": "stackIn_72_1",
+      "renamedName": "secondHudGuard",
       "declaration": {
         "file": "qj.java",
         "start": 54852,
@@ -270696,9 +271464,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#15",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#15",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#15",
       "originalName": "stackIn_72_2",
-      "renamedName": "stackIn_72_2",
+      "renamedName": "secondHudX",
       "declaration": {
         "file": "qj.java",
         "start": 54882,
@@ -270707,9 +271475,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#16",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#16",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#16",
       "originalName": "stackIn_74_3",
-      "renamedName": "stackIn_74_3",
+      "renamedName": "showSecondHudDetails",
       "declaration": {
         "file": "qj.java",
         "start": 54916,
@@ -270718,9 +271486,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#17",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#17",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#17",
       "originalName": "stackIn_77_4",
-      "renamedName": "stackIn_77_4",
+      "renamedName": "secondHudBoard",
       "declaration": {
         "file": "qj.java",
         "start": 54948,
@@ -270729,9 +271497,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#18",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#18",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#18",
       "originalName": "stackIn_77_5",
-      "renamedName": "stackIn_77_5",
+      "renamedName": "secondHudY",
       "declaration": {
         "file": "qj.java",
         "start": 54974,
@@ -270740,9 +271508,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#19",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#19",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#19",
       "originalName": "stackIn_77_6",
-      "renamedName": "stackIn_77_6",
+      "renamedName": "secondHudPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 55000,
@@ -270751,9 +271519,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#2",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#2",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#2",
       "originalName": "stackIn_53_0",
-      "renamedName": "stackIn_53_0",
+      "renamedName": "firstHudPlayerValue",
       "declaration": {
         "file": "qj.java",
         "start": 54474,
@@ -270762,9 +271530,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#20",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#20",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#20",
       "originalName": "stackIn_79_7",
-      "renamedName": "stackIn_79_7",
+      "renamedName": "secondHudLocalOrOffline",
       "declaration": {
         "file": "qj.java",
         "start": 55030,
@@ -270773,9 +271541,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#21",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#21",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#21",
       "originalName": "stackIn_83_0",
-      "renamedName": "stackIn_83_0",
+      "renamedName": "viewedLocalValue",
       "declaration": {
         "file": "qj.java",
         "start": 55056,
@@ -270784,9 +271552,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#22",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#22",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#22",
       "originalName": "stackIn_86_0",
-      "renamedName": "stackIn_86_0",
+      "renamedName": "viewedHudResultMode",
       "declaration": {
         "file": "qj.java",
         "start": 55090,
@@ -270795,9 +271563,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#23",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#23",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#23",
       "originalName": "stackIn_86_1",
-      "renamedName": "stackIn_86_1",
+      "renamedName": "viewedHudGuard",
       "declaration": {
         "file": "qj.java",
         "start": 55124,
@@ -270806,9 +271574,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#24",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#24",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#24",
       "originalName": "stackIn_86_2",
-      "renamedName": "stackIn_86_2",
+      "renamedName": "viewedHudX",
       "declaration": {
         "file": "qj.java",
         "start": 55154,
@@ -270817,9 +271585,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#25",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#25",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#25",
       "originalName": "stackIn_88_3",
-      "renamedName": "stackIn_88_3",
+      "renamedName": "showViewedHudDetails",
       "declaration": {
         "file": "qj.java",
         "start": 55188,
@@ -270828,9 +271596,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#26",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#26",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#26",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "layoutX",
       "declaration": {
         "file": "qj.java",
         "start": 55216,
@@ -270839,9 +271607,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#27",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#27",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#27",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "layoutY",
       "declaration": {
         "file": "qj.java",
         "start": 55236,
@@ -270850,9 +271618,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#28",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#28",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#28",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "unusedGuardQuotient",
       "declaration": {
         "file": "qj.java",
         "start": 55254,
@@ -270861,9 +271629,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#29",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#29",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#29",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "layoutModes",
       "declaration": {
         "file": "qj.java",
         "start": 55274,
@@ -270872,9 +271640,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#3",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#3",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#3",
       "originalName": "stackIn_56_0",
-      "renamedName": "stackIn_56_0",
+      "renamedName": "firstHudLocalValue",
       "declaration": {
         "file": "qj.java",
         "start": 54504,
@@ -270883,9 +271651,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#30",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#30",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#30",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "backgroundPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 55292,
@@ -270894,9 +271662,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#31",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#31",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#31",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "backgroundSlot",
       "declaration": {
         "file": "qj.java",
         "start": 55310,
@@ -270905,9 +271673,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#32",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#32",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#32",
       "originalName": "var7_ref_j",
-      "renamedName": "var7_ref_j",
+      "renamedName": "singleBoard",
       "declaration": {
         "file": "qj.java",
         "start": 55326,
@@ -270916,9 +271684,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#33",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#33",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#33",
       "originalName": "var8_int",
-      "renamedName": "var8_int",
+      "renamedName": "showAllPlayerDetails",
       "declaration": {
         "file": "qj.java",
         "start": 55350,
@@ -270927,9 +271695,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#34",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#34",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#34",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "headSpriteAlias",
       "declaration": {
         "file": "qj.java",
         "start": 55371,
@@ -270938,9 +271706,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#35",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#35",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#35",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "singleBoardScroll",
       "declaration": {
         "file": "qj.java",
         "start": 55389,
@@ -270949,9 +271717,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#36",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#36",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#36",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "backgroundFadeAlpha",
       "declaration": {
         "file": "qj.java",
         "start": 55407,
@@ -270960,9 +271728,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#37",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#37",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#37",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "unusedClientFlag",
       "declaration": {
         "file": "qj.java",
         "start": 55426,
@@ -270971,9 +271739,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#38",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#38",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#38",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "unusedInlineSprites",
       "declaration": {
         "file": "qj.java",
         "start": 55446,
@@ -270982,9 +271750,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#39",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#39",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#39",
       "originalName": "var13",
-      "renamedName": "var13",
+      "renamedName": "paddle",
       "declaration": {
         "file": "qj.java",
         "start": 55464,
@@ -270993,9 +271761,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#4",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#4",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#4",
       "originalName": "stackIn_59_0",
-      "renamedName": "stackIn_59_0",
+      "renamedName": "firstHudResultMode",
       "declaration": {
         "file": "qj.java",
         "start": 54538,
@@ -271004,9 +271772,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#40",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#40",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#40",
       "originalName": "var14",
-      "renamedName": "var14",
+      "renamedName": "layoutXAlias",
       "declaration": {
         "file": "qj.java",
         "start": 55485,
@@ -271015,9 +271783,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#41",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#41",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#41",
       "originalName": "var15",
-      "renamedName": "var15",
+      "renamedName": "layoutYAlias",
       "declaration": {
         "file": "qj.java",
         "start": 55506,
@@ -271026,9 +271794,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#42",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#42",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#42",
       "originalName": "var16",
-      "renamedName": "var16",
+      "renamedName": "fixedLayoutXAlias",
       "declaration": {
         "file": "qj.java",
         "start": 55527,
@@ -271037,9 +271805,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#43",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#43",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#43",
       "originalName": "var17",
-      "renamedName": "var17",
+      "renamedName": "fixedLayoutYAlias",
       "declaration": {
         "file": "qj.java",
         "start": 55548,
@@ -271048,9 +271816,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#44",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#44",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#44",
       "originalName": "var18",
-      "renamedName": "var18",
+      "renamedName": "portraitLayoutX",
       "declaration": {
         "file": "qj.java",
         "start": 55569,
@@ -271059,9 +271827,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#45",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#45",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#45",
       "originalName": "var19",
-      "renamedName": "var19",
+      "renamedName": "portraitLayoutY",
       "declaration": {
         "file": "qj.java",
         "start": 55590,
@@ -271070,9 +271838,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#46",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#46",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#46",
       "originalName": "var20",
-      "renamedName": "var20",
+      "renamedName": "headSprite",
       "declaration": {
         "file": "qj.java",
         "start": 55608,
@@ -271081,9 +271849,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#47",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#47",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#47",
       "originalName": "var21",
-      "renamedName": "var21",
+      "renamedName": "fixedLayoutX",
       "declaration": {
         "file": "qj.java",
         "start": 55629,
@@ -271092,9 +271860,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#48",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#48",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#48",
       "originalName": "var22",
-      "renamedName": "var22",
+      "renamedName": "fixedLayoutY",
       "declaration": {
         "file": "qj.java",
         "start": 55650,
@@ -271103,9 +271871,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#49",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#49",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#49",
       "originalName": "var6Lifetime1",
-      "renamedName": "var6Lifetime1",
+      "renamedName": "boardPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 55669,
@@ -271114,9 +271882,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#5",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#5",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#5",
       "originalName": "stackIn_59_1",
-      "renamedName": "stackIn_59_1",
+      "renamedName": "firstHudGuard",
       "declaration": {
         "file": "qj.java",
         "start": 54572,
@@ -271125,9 +271893,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#50",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#50",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#50",
       "originalName": "var6Lifetime2",
-      "renamedName": "var6Lifetime2",
+      "renamedName": "portraitPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 55696,
@@ -271136,9 +271904,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#51",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#51",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#51",
       "originalName": "var7Lifetime1",
-      "renamedName": "var7Lifetime1",
+      "renamedName": "unusedPreviewSlot",
       "declaration": {
         "file": "qj.java",
         "start": 55723,
@@ -271147,9 +271915,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#52",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#52",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#52",
       "originalName": "var7Lifetime2",
-      "renamedName": "var7Lifetime2",
+      "renamedName": "boardSlot",
       "declaration": {
         "file": "qj.java",
         "start": 55750,
@@ -271158,9 +271926,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#53",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#53",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#53",
       "originalName": "var7Lifetime3",
-      "renamedName": "var7Lifetime3",
+      "renamedName": "localOrOfflineFlag",
       "declaration": {
         "file": "qj.java",
         "start": 55777,
@@ -271169,9 +271937,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#54",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#54",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#54",
       "originalName": "var7Lifetime4",
-      "renamedName": "var7Lifetime4",
+      "renamedName": "portraitSlot",
       "declaration": {
         "file": "qj.java",
         "start": 55804,
@@ -271180,9 +271948,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#55",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#55",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#55",
       "originalName": "var9Lifetime1",
-      "renamedName": "var9Lifetime1",
+      "renamedName": "hudPlayerId",
       "declaration": {
         "file": "qj.java",
         "start": 55831,
@@ -271191,9 +271959,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#56",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#56",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#56",
       "originalName": "var9Lifetime2",
-      "renamedName": "var9Lifetime2",
+      "renamedName": "nameStripHeight",
       "declaration": {
         "file": "qj.java",
         "start": 55858,
@@ -271202,9 +271970,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#57",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#57",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#57",
       "originalName": "var10Lifetime1",
-      "renamedName": "var10Lifetime1",
+      "renamedName": "firstHudLocalFlag",
       "declaration": {
         "file": "qj.java",
         "start": 55885,
@@ -271213,9 +271981,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#58",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#58",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#58",
       "originalName": "var9Lifetime3",
-      "renamedName": "var9Lifetime3",
+      "renamedName": "splitBoardScroll",
       "declaration": {
         "file": "qj.java",
         "start": 55913,
@@ -271224,9 +271992,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#59",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#59",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#59",
       "originalName": "var10Lifetime1Lifetime1",
-      "renamedName": "var10Lifetime1Lifetime1",
+      "renamedName": "secondHudLocalFlag",
       "declaration": {
         "file": "qj.java",
         "start": 55940,
@@ -271235,9 +272003,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#6",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#6",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#6",
       "originalName": "stackIn_59_2",
-      "renamedName": "stackIn_59_2",
+      "renamedName": "firstHudX",
       "declaration": {
         "file": "qj.java",
         "start": 54602,
@@ -271246,9 +272014,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#7",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#7",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#7",
       "originalName": "stackIn_61_3",
-      "renamedName": "stackIn_61_3",
+      "renamedName": "showFirstHudDetails",
       "declaration": {
         "file": "qj.java",
         "start": 54636,
@@ -271257,9 +272025,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#8",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#8",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#8",
       "originalName": "stackIn_64_4",
-      "renamedName": "stackIn_64_4",
+      "renamedName": "firstHudBoard",
       "declaration": {
         "file": "qj.java",
         "start": 54668,
@@ -271268,9 +272036,9 @@
     },
     {
       "symbol": "L:qj.g(I)V#9",
-      "renamedSymbol": "L:GameplayScreen.g(I)V#9",
+      "renamedSymbol": "L:GameplayScreen.drawMatchFrame(I)V#9",
       "originalName": "stackIn_64_5",
-      "renamedName": "stackIn_64_5",
+      "renamedName": "firstHudY",
       "declaration": {
         "file": "qj.java",
         "start": 54694,
@@ -345067,9 +345835,9 @@
     },
     {
       "symbol": "M:qj.a(BZ)V",
-      "renamedSymbol": "M:GameplayScreen.a(BZ)V",
+      "renamedSymbol": "M:GameplayScreen.finishOfflineMatch(BZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "finishOfflineMatch",
       "declaration": {
         "file": "qj.java",
         "start": 20341,
@@ -345089,9 +345857,9 @@
     },
     {
       "symbol": "M:qj.a(I)V",
-      "renamedSymbol": "M:GameplayScreen.a(I)V",
+      "renamedSymbol": "M:GameplayScreen.updateViewedPlayerSelection(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateViewedPlayerSelection",
       "declaration": {
         "file": "qj.java",
         "start": 473,
@@ -345122,9 +345890,9 @@
     },
     {
       "symbol": "M:qj.a(IIJZI)V",
-      "renamedSymbol": "M:GameplayScreen.a(IIJZI)V",
+      "renamedSymbol": "M:GameplayScreen.sendProgressUpdate(IIJZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendProgressUpdate",
       "declaration": {
         "file": "qj.java",
         "start": 34593,
@@ -345210,9 +345978,9 @@
     },
     {
       "symbol": "M:qj.a(ZB)V",
-      "renamedSymbol": "M:GameplayScreen.a(ZB)V",
+      "renamedSymbol": "M:GameplayScreen.showPostMatchScreen(ZB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "showPostMatchScreen",
       "declaration": {
         "file": "qj.java",
         "start": 21293,
@@ -345265,9 +346033,9 @@
     },
     {
       "symbol": "M:qj.b(I)V",
-      "renamedSymbol": "M:GameplayScreen.b(I)V",
+      "renamedSymbol": "M:GameplayScreen.requestLeaveMatch(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "requestLeaveMatch",
       "declaration": {
         "file": "qj.java",
         "start": 34975,
@@ -345309,9 +346077,9 @@
     },
     {
       "symbol": "M:qj.e(I)V",
-      "renamedSymbol": "M:GameplayScreen.e(I)V",
+      "renamedSymbol": "M:GameplayScreen.queueScoreTableSubmission(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "queueScoreTableSubmission",
       "declaration": {
         "file": "qj.java",
         "start": 19747,
@@ -345331,9 +346099,9 @@
     },
     {
       "symbol": "M:qj.g(I)V",
-      "renamedSymbol": "M:GameplayScreen.g(I)V",
+      "renamedSymbol": "M:GameplayScreen.drawMatchFrame(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "drawMatchFrame",
       "declaration": {
         "file": "qj.java",
         "start": 54386,
@@ -426148,9 +426916,9 @@
     },
     {
       "symbol": "P:qj.a(BZ)V#0",
-      "renamedSymbol": "P:GameplayScreen.a(BZ)V#0",
+      "renamedSymbol": "P:GameplayScreen.finishOfflineMatch(BZ)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 20348,
@@ -426159,9 +426927,9 @@
     },
     {
       "symbol": "P:qj.a(BZ)V#1",
-      "renamedSymbol": "P:GameplayScreen.a(BZ)V#1",
+      "renamedSymbol": "P:GameplayScreen.finishOfflineMatch(BZ)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "usePointer",
       "declaration": {
         "file": "qj.java",
         "start": 20364,
@@ -426203,9 +426971,9 @@
     },
     {
       "symbol": "P:qj.a(I)V#0",
-      "renamedSymbol": "P:GameplayScreen.a(I)V#0",
+      "renamedSymbol": "P:GameplayScreen.updateViewedPlayerSelection(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 479,
@@ -426269,9 +427037,9 @@
     },
     {
       "symbol": "P:qj.a(IIJZI)V#0",
-      "renamedSymbol": "P:GameplayScreen.a(IIJZI)V#0",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "packId",
       "declaration": {
         "file": "qj.java",
         "start": 34599,
@@ -426280,9 +427048,9 @@
     },
     {
       "symbol": "P:qj.a(IIJZI)V#1",
-      "renamedSymbol": "P:GameplayScreen.a(IIJZI)V#1",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "levelIndex",
       "declaration": {
         "file": "qj.java",
         "start": 34611,
@@ -426291,9 +427059,9 @@
     },
     {
       "symbol": "P:qj.a(IIJZI)V#2",
-      "renamedSymbol": "P:GameplayScreen.a(IIJZI)V#2",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "elapsedMillis",
       "declaration": {
         "file": "qj.java",
         "start": 34624,
@@ -426302,9 +427070,9 @@
     },
     {
       "symbol": "P:qj.a(IIJZI)V#3",
-      "renamedSymbol": "P:GameplayScreen.a(IIJZI)V#3",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "intermediate",
       "declaration": {
         "file": "qj.java",
         "start": 34640,
@@ -426313,9 +427081,9 @@
     },
     {
       "symbol": "P:qj.a(IIJZI)V#4",
-      "renamedSymbol": "P:GameplayScreen.a(IIJZI)V#4",
+      "renamedSymbol": "P:GameplayScreen.sendProgressUpdate(IIJZI)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "timeDivisor",
       "declaration": {
         "file": "qj.java",
         "start": 34652,
@@ -426522,9 +427290,9 @@
     },
     {
       "symbol": "P:qj.a(ZB)V#0",
-      "renamedSymbol": "P:GameplayScreen.a(ZB)V#0",
+      "renamedSymbol": "P:GameplayScreen.showPostMatchScreen(ZB)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "usePointer",
       "declaration": {
         "file": "qj.java",
         "start": 21303,
@@ -426533,9 +427301,9 @@
     },
     {
       "symbol": "P:qj.a(ZB)V#1",
-      "renamedSymbol": "P:GameplayScreen.a(ZB)V#1",
+      "renamedSymbol": "P:GameplayScreen.showPostMatchScreen(ZB)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 21316,
@@ -426643,9 +427411,9 @@
     },
     {
       "symbol": "P:qj.b(I)V#0",
-      "renamedSymbol": "P:GameplayScreen.b(I)V#0",
+      "renamedSymbol": "P:GameplayScreen.requestLeaveMatch(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 34981,
@@ -426709,9 +427477,9 @@
     },
     {
       "symbol": "P:qj.e(I)V#0",
-      "renamedSymbol": "P:GameplayScreen.e(I)V#0",
+      "renamedSymbol": "P:GameplayScreen.queueScoreTableSubmission(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 19753,
@@ -426731,9 +427499,9 @@
     },
     {
       "symbol": "P:qj.g(I)V#0",
-      "renamedSymbol": "P:GameplayScreen.g(I)V#0",
+      "renamedSymbol": "P:GameplayScreen.drawMatchFrame(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "qj.java",
         "start": 54392,
@@ -447063,7 +447831,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "f2230f00e02ac4bc167635b5e079ec9b2debee1931819217197ddae0d021d31b",
+      "outputSha256": "6e312f95ce8cf05593489bf15995d86afcb6c552d39bbe5f210415e6ae49583a",
       "edits": [
         {
           "start": 76,
@@ -449397,6 +450165,13 @@
           "renamed": "gameplayScreen"
         },
         {
+          "start": 9856,
+          "end": 9857,
+          "symbol": "M:qj.a(BZ)V",
+          "original": "a",
+          "renamed": "finishOfflineMatch"
+        },
+        {
           "start": 9911,
           "end": 9913,
           "symbol": "C:pe",
@@ -449409,6 +450184,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 9922,
+          "end": 9923,
+          "symbol": "M:qj.a(ZB)V",
+          "original": "a",
+          "renamed": "showPostMatchScreen"
         },
         {
           "start": 9959,
@@ -759624,7 +760406,7 @@
       "original": "km.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "f22df0331a8e5d5b77576f2d37f0ff72e55b9b32052f7e538627c9b5c74e5335",
-      "outputSha256": "b5c6672a4c37d7f3583d7b83b64f4c14b7524fd428835b96001a8661bcbbfd31",
+      "outputSha256": "5677179d1ed05757a754bbfc970e8a9773f3ced32eee1b1dc6eab6a36ec2d7f4",
       "edits": [
         {
           "start": 53,
@@ -762217,6 +762999,13 @@
           "renamed": "gameplayScreen"
         },
         {
+          "start": 14421,
+          "end": 14422,
+          "symbol": "M:qj.a(BZ)V",
+          "original": "a",
+          "renamed": "finishOfflineMatch"
+        },
+        {
           "start": 14434,
           "end": 14440,
           "symbol": "P:km.a(IZB)Z#1",
@@ -762272,6 +763061,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 14655,
+          "end": 14656,
+          "symbol": "M:qj.b(I)V",
+          "original": "b",
+          "renamed": "requestLeaveMatch"
         },
         {
           "start": 14683,
@@ -762708,6 +763504,13 @@
           "symbol": "F:pe.field_o:Lqj;",
           "original": "field_o",
           "renamed": "gameplayScreen"
+        },
+        {
+          "start": 17006,
+          "end": 17007,
+          "symbol": "M:qj.a(ZB)V",
+          "original": "a",
+          "renamed": "showPostMatchScreen"
         },
         {
           "start": 17008,
@@ -916304,7 +917107,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "217d13b60f3d1a553f136ccd1e0366b3be3e39e3d7fa5833297c452a82270e6b",
+      "outputSha256": "5cbf6154acffa52729ff643352856883e10094573eb0429254cd980d5a308b4f",
       "edits": [
         {
           "start": 50,
@@ -916440,6 +917243,83 @@
           "renamed": "progressBaseLevel"
         },
         {
+          "start": 473,
+          "end": 474,
+          "symbol": "M:qj.a(I)V",
+          "original": "a",
+          "renamed": "updateViewedPlayerSelection"
+        },
+        {
+          "start": 479,
+          "end": 485,
+          "symbol": "P:qj.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 501,
+          "end": 512,
+          "symbol": "L:qj.a(I)V#0",
+          "original": "fieldTemp$0",
+          "renamed": "previousViewedPlayer"
+        },
+        {
+          "start": 530,
+          "end": 541,
+          "symbol": "L:qj.a(I)V#1",
+          "original": "fieldTemp$1",
+          "renamed": "nextViewedPlayer"
+        },
+        {
+          "start": 559,
+          "end": 570,
+          "symbol": "L:qj.a(I)V#2",
+          "original": "stackIn_6_0",
+          "renamed": "freshKeyValue"
+        },
+        {
+          "start": 588,
+          "end": 600,
+          "symbol": "L:qj.a(I)V#3",
+          "original": "stackIn_10_0",
+          "renamed": "freshKeyAlias"
+        },
+        {
+          "start": 618,
+          "end": 630,
+          "symbol": "L:qj.a(I)V#4",
+          "original": "stackIn_11_1",
+          "renamed": "allLocalPlayersMasked"
+        },
+        {
+          "start": 648,
+          "end": 660,
+          "symbol": "L:qj.a(I)V#5",
+          "original": "stackIn_16_0",
+          "renamed": "maskedEligibilityValue"
+        },
+        {
+          "start": 678,
+          "end": 690,
+          "symbol": "L:qj.a(I)V#6",
+          "original": "stackIn_17_1",
+          "renamed": "spectatingAllowedValue"
+        },
+        {
+          "start": 712,
+          "end": 724,
+          "symbol": "L:qj.a(I)V#7",
+          "original": "stackIn_30_0",
+          "renamed": "viewKeyHeld"
+        },
+        {
+          "start": 746,
+          "end": 750,
+          "symbol": "L:qj.a(I)V#8",
+          "original": "var2",
+          "renamed": "freshKey"
+        },
+        {
           "start": 760,
           "end": 761,
           "symbol": "C:j",
@@ -916447,11 +917327,74 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 762,
+          "end": 766,
+          "symbol": "L:qj.a(I)V#9",
+          "original": "var3",
+          "renamed": "unusedBoard"
+        },
+        {
+          "start": 780,
+          "end": 793,
+          "symbol": "L:qj.a(I)V#10",
+          "original": "var2Lifetime1",
+          "renamed": "maskedEligibility"
+        },
+        {
+          "start": 807,
+          "end": 820,
+          "symbol": "L:qj.a(I)V#11",
+          "original": "var2Lifetime2",
+          "renamed": "canCycleView"
+        },
+        {
           "start": 835,
           "end": 837,
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "RadialSelectorRenderer"
+        },
+        {
+          "start": 859,
+          "end": 870,
+          "symbol": "L:qj.a(I)V#2",
+          "original": "stackIn_6_0",
+          "renamed": "freshKeyValue"
+        },
+        {
+          "start": 923,
+          "end": 934,
+          "symbol": "L:qj.a(I)V#2",
+          "original": "stackIn_6_0",
+          "renamed": "freshKeyValue"
+        },
+        {
+          "start": 958,
+          "end": 962,
+          "symbol": "L:qj.a(I)V#8",
+          "original": "var2",
+          "renamed": "freshKey"
+        },
+        {
+          "start": 965,
+          "end": 976,
+          "symbol": "L:qj.a(I)V#2",
+          "original": "stackIn_6_0",
+          "renamed": "freshKeyValue"
+        },
+        {
+          "start": 990,
+          "end": 996,
+          "symbol": "P:qj.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1016,
+          "end": 1020,
+          "symbol": "L:qj.a(I)V#9",
+          "original": "var3",
+          "renamed": "unusedBoard"
         },
         {
           "start": 1024,
@@ -916473,6 +917416,27 @@
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 1090,
+          "end": 1102,
+          "symbol": "L:qj.a(I)V#3",
+          "original": "stackIn_10_0",
+          "renamed": "freshKeyAlias"
+        },
+        {
+          "start": 1105,
+          "end": 1109,
+          "symbol": "L:qj.a(I)V#8",
+          "original": "var2",
+          "renamed": "freshKey"
+        },
+        {
+          "start": 1119,
+          "end": 1131,
+          "symbol": "L:qj.a(I)V#4",
+          "original": "stackIn_11_1",
+          "renamed": "allLocalPlayersMasked"
         },
         {
           "start": 1141,
@@ -916531,6 +917495,48 @@
           "renamed": "localPlayerMask"
         },
         {
+          "start": 1263,
+          "end": 1288,
+          "symbol": "L:qj.a(I)V#12",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "unusedEligibilityRemainder"
+        },
+        {
+          "start": 1305,
+          "end": 1318,
+          "symbol": "L:qj.a(I)V#10",
+          "original": "var2Lifetime1",
+          "renamed": "maskedEligibility"
+        },
+        {
+          "start": 1321,
+          "end": 1333,
+          "symbol": "L:qj.a(I)V#3",
+          "original": "stackIn_10_0",
+          "renamed": "freshKeyAlias"
+        },
+        {
+          "start": 1336,
+          "end": 1348,
+          "symbol": "L:qj.a(I)V#4",
+          "original": "stackIn_11_1",
+          "renamed": "allLocalPlayersMasked"
+        },
+        {
+          "start": 1358,
+          "end": 1370,
+          "symbol": "L:qj.a(I)V#5",
+          "original": "stackIn_16_0",
+          "renamed": "maskedEligibilityValue"
+        },
+        {
+          "start": 1373,
+          "end": 1386,
+          "symbol": "L:qj.a(I)V#10",
+          "original": "var2Lifetime1",
+          "renamed": "maskedEligibility"
+        },
+        {
           "start": 1409,
           "end": 1416,
           "symbol": "F:qj.field_w:Lak;",
@@ -916578,6 +917584,62 @@
           "symbol": "F:j.field_U:I",
           "original": "field_U",
           "renamed": "maskedTicks"
+        },
+        {
+          "start": 1524,
+          "end": 1536,
+          "symbol": "L:qj.a(I)V#6",
+          "original": "stackIn_17_1",
+          "renamed": "spectatingAllowedValue"
+        },
+        {
+          "start": 1552,
+          "end": 1577,
+          "symbol": "L:qj.a(I)V#12",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "unusedEligibilityRemainder"
+        },
+        {
+          "start": 1622,
+          "end": 1634,
+          "symbol": "L:qj.a(I)V#6",
+          "original": "stackIn_17_1",
+          "renamed": "spectatingAllowedValue"
+        },
+        {
+          "start": 1666,
+          "end": 1691,
+          "symbol": "L:qj.a(I)V#13",
+          "original": "decompiledFrameRemainder1",
+          "renamed": "unusedDirectionRemainder"
+        },
+        {
+          "start": 1708,
+          "end": 1721,
+          "symbol": "L:qj.a(I)V#11",
+          "original": "var2Lifetime2",
+          "renamed": "canCycleView"
+        },
+        {
+          "start": 1724,
+          "end": 1736,
+          "symbol": "L:qj.a(I)V#5",
+          "original": "stackIn_16_0",
+          "renamed": "maskedEligibilityValue"
+        },
+        {
+          "start": 1739,
+          "end": 1751,
+          "symbol": "L:qj.a(I)V#6",
+          "original": "stackIn_17_1",
+          "renamed": "spectatingAllowedValue"
+        },
+        {
+          "start": 1765,
+          "end": 1778,
+          "symbol": "L:qj.a(I)V#11",
+          "original": "var2Lifetime2",
+          "renamed": "canCycleView"
         },
         {
           "start": 1802,
@@ -916636,6 +917698,13 @@
           "renamed": "EmailAvailabilityRequest"
         },
         {
+          "start": 1927,
+          "end": 1938,
+          "symbol": "L:qj.a(I)V#0",
+          "original": "fieldTemp$0",
+          "renamed": "previousViewedPlayer"
+        },
+        {
           "start": 1946,
           "end": 1953,
           "symbol": "F:qj.field_m:I",
@@ -916678,6 +917747,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 2059,
+          "end": 2070,
+          "symbol": "L:qj.a(I)V#0",
+          "original": "fieldTemp$0",
+          "renamed": "previousViewedPlayer"
+        },
+        {
           "start": 2079,
           "end": 2086,
           "symbol": "F:qj.field_w:Lak;",
@@ -916690,6 +917766,20 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 2122,
+          "end": 2147,
+          "symbol": "L:qj.a(I)V#13",
+          "original": "decompiledFrameRemainder1",
+          "renamed": "unusedDirectionRemainder"
+        },
+        {
+          "start": 2198,
+          "end": 2209,
+          "symbol": "L:qj.a(I)V#1",
+          "original": "fieldTemp$1",
+          "renamed": "nextViewedPlayer"
         },
         {
           "start": 2217,
@@ -916720,6 +917810,13 @@
           "renamed": "viewedPlayerId"
         },
         {
+          "start": 2302,
+          "end": 2313,
+          "symbol": "L:qj.a(I)V#1",
+          "original": "fieldTemp$1",
+          "renamed": "nextViewedPlayer"
+        },
+        {
           "start": 2321,
           "end": 2328,
           "symbol": "F:qj.field_w:Lak;",
@@ -916732,6 +917829,13 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 2368,
+          "end": 2380,
+          "symbol": "L:qj.a(I)V#7",
+          "original": "stackIn_30_0",
+          "renamed": "viewKeyHeld"
         },
         {
           "start": 2384,
@@ -916788,6 +917892,13 @@
           "symbol": "C:td",
           "original": "td",
           "renamed": "VolcanicBackground"
+        },
+        {
+          "start": 2486,
+          "end": 2498,
+          "symbol": "L:qj.a(I)V#7",
+          "original": "stackIn_30_0",
+          "renamed": "viewKeyHeld"
         },
         {
           "start": 2533,
@@ -916991,6 +918102,13 @@
           "symbol": "M:qj.a(BI)V",
           "original": "a",
           "renamed": "setStartingLevel"
+        },
+        {
+          "start": 3223,
+          "end": 3224,
+          "symbol": "M:qj.g(I)V",
+          "original": "g",
+          "renamed": "drawMatchFrame"
         },
         {
           "start": 3252,
@@ -919114,6 +920232,13 @@
           "renamed": "inputEnabled"
         },
         {
+          "start": 12324,
+          "end": 12325,
+          "symbol": "M:qj.a(I)V",
+          "original": "a",
+          "renamed": "updateViewedPlayerSelection"
+        },
+        {
           "start": 12394,
           "end": 12401,
           "symbol": "F:qj.field_w:Lak;",
@@ -919364,6 +920489,13 @@
           "symbol": "M:ue.a(Z)J",
           "original": "a",
           "renamed": "nowMillis"
+        },
+        {
+          "start": 13796,
+          "end": 13797,
+          "symbol": "M:qj.a(IIJZI)V",
+          "original": "a",
+          "renamed": "sendProgressUpdate"
         },
         {
           "start": 13798,
@@ -920556,11 +921688,39 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 19635,
+          "end": 19636,
+          "symbol": "M:qj.a(ZB)V",
+          "original": "a",
+          "renamed": "showPostMatchScreen"
+        },
+        {
           "start": 19687,
           "end": 19694,
           "symbol": "F:qj.field_k:I",
           "original": "field_k",
           "renamed": "localPlayerId"
+        },
+        {
+          "start": 19747,
+          "end": 19748,
+          "symbol": "M:qj.e(I)V",
+          "original": "e",
+          "renamed": "queueScoreTableSubmission"
+        },
+        {
+          "start": 19753,
+          "end": 19759,
+          "symbol": "P:qj.e(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 19775,
+          "end": 19781,
+          "symbol": "P:qj.e(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 19805,
@@ -920780,6 +921940,27 @@
           "renamed": "VerticalScrollbar"
         },
         {
+          "start": 20341,
+          "end": 20342,
+          "symbol": "M:qj.a(BZ)V",
+          "original": "a",
+          "renamed": "finishOfflineMatch"
+        },
+        {
+          "start": 20348,
+          "end": 20354,
+          "symbol": "P:qj.a(BZ)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 20364,
+          "end": 20370,
+          "symbol": "P:qj.a(BZ)V#1",
+          "original": "param1",
+          "renamed": "usePointer"
+        },
+        {
           "start": 20429,
           "end": 20436,
           "symbol": "F:qj.field_p:Z",
@@ -920834,6 +922015,20 @@
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 20613,
+          "end": 20614,
+          "symbol": "M:qj.e(I)V",
+          "original": "e",
+          "renamed": "queueScoreTableSubmission"
+        },
+        {
+          "start": 20636,
+          "end": 20637,
+          "symbol": "M:qj.a(IIJZI)V",
+          "original": "a",
+          "renamed": "sendProgressUpdate"
         },
         {
           "start": 20638,
@@ -920955,6 +922150,13 @@
           "renamed": "requestScreen"
         },
         {
+          "start": 21021,
+          "end": 21027,
+          "symbol": "P:qj.a(BZ)V#1",
+          "original": "param1",
+          "renamed": "usePointer"
+        },
+        {
           "start": 21051,
           "end": 21053,
           "symbol": "C:ji",
@@ -920967,6 +922169,27 @@
           "symbol": "C:cd",
           "original": "cd",
           "renamed": "LoginCredentialKind"
+        },
+        {
+          "start": 21130,
+          "end": 21131,
+          "symbol": "M:qj.a(ZB)V",
+          "original": "a",
+          "renamed": "showPostMatchScreen"
+        },
+        {
+          "start": 21132,
+          "end": 21138,
+          "symbol": "P:qj.a(BZ)V#1",
+          "original": "param1",
+          "renamed": "usePointer"
+        },
+        {
+          "start": 21186,
+          "end": 21192,
+          "symbol": "P:qj.a(BZ)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 21238,
@@ -920995,6 +922218,27 @@
           "symbol": "F:ki.field_m:I",
           "original": "field_m",
           "renamed": "sceneId"
+        },
+        {
+          "start": 21293,
+          "end": 21294,
+          "symbol": "M:qj.a(ZB)V",
+          "original": "a",
+          "renamed": "showPostMatchScreen"
+        },
+        {
+          "start": 21303,
+          "end": 21309,
+          "symbol": "P:qj.a(ZB)V#0",
+          "original": "param0",
+          "renamed": "usePointer"
+        },
+        {
+          "start": 21316,
+          "end": 21322,
+          "symbol": "P:qj.a(ZB)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 21411,
@@ -921081,6 +922325,13 @@
           "renamed": "networkedMatch"
         },
         {
+          "start": 21686,
+          "end": 21692,
+          "symbol": "P:qj.a(ZB)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 21742,
           "end": 21744,
           "symbol": "C:og",
@@ -921116,11 +922367,25 @@
           "renamed": "requestScreen"
         },
         {
+          "start": 21849,
+          "end": 21855,
+          "symbol": "P:qj.a(ZB)V#0",
+          "original": "param0",
+          "renamed": "usePointer"
+        },
+        {
           "start": 21900,
           "end": 21901,
           "symbol": "M:ng.a(ZII)V",
           "original": "a",
           "renamed": "requestScreen"
+        },
+        {
+          "start": 21902,
+          "end": 21908,
+          "symbol": "P:qj.a(ZB)V#0",
+          "original": "param0",
+          "renamed": "usePointer"
         },
         {
           "start": 21963,
@@ -921151,6 +922416,13 @@
           "renamed": "requestScreen"
         },
         {
+          "start": 22045,
+          "end": 22051,
+          "symbol": "P:qj.a(ZB)V#0",
+          "original": "param0",
+          "renamed": "usePointer"
+        },
+        {
           "start": 22099,
           "end": 22100,
           "symbol": "M:ng.a(ZII)V",
@@ -921158,11 +922430,25 @@
           "renamed": "requestScreen"
         },
         {
+          "start": 22101,
+          "end": 22107,
+          "symbol": "P:qj.a(ZB)V#0",
+          "original": "param0",
+          "renamed": "usePointer"
+        },
+        {
           "start": 22166,
           "end": 22167,
           "symbol": "M:ng.a(ZII)V",
           "original": "a",
           "renamed": "requestScreen"
+        },
+        {
+          "start": 22168,
+          "end": 22174,
+          "symbol": "P:qj.a(ZB)V#0",
+          "original": "param0",
+          "renamed": "usePointer"
         },
         {
           "start": 22228,
@@ -923685,6 +924971,55 @@
           "renamed": "RadialSelectorRenderer"
         },
         {
+          "start": 34593,
+          "end": 34594,
+          "symbol": "M:qj.a(IIJZI)V",
+          "original": "a",
+          "renamed": "sendProgressUpdate"
+        },
+        {
+          "start": 34599,
+          "end": 34605,
+          "symbol": "P:qj.a(IIJZI)V#0",
+          "original": "param0",
+          "renamed": "packId"
+        },
+        {
+          "start": 34611,
+          "end": 34617,
+          "symbol": "P:qj.a(IIJZI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 34624,
+          "end": 34630,
+          "symbol": "P:qj.a(IIJZI)V#2",
+          "original": "param2",
+          "renamed": "elapsedMillis"
+        },
+        {
+          "start": 34640,
+          "end": 34646,
+          "symbol": "P:qj.a(IIJZI)V#3",
+          "original": "param3",
+          "renamed": "intermediate"
+        },
+        {
+          "start": 34652,
+          "end": 34658,
+          "symbol": "P:qj.a(IIJZI)V#4",
+          "original": "param4",
+          "renamed": "timeDivisor"
+        },
+        {
+          "start": 34674,
+          "end": 34678,
+          "symbol": "L:qj.a(IIJZI)V#0",
+          "original": "var7",
+          "renamed": "intermediateFlag"
+        },
+        {
           "start": 34702,
           "end": 34709,
           "symbol": "F:qj.field_s:Z",
@@ -923699,11 +925034,95 @@
           "renamed": "QuickChatMenu"
         },
         {
+          "start": 34785,
+          "end": 34791,
+          "symbol": "P:qj.a(IIJZI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 34794,
+          "end": 34800,
+          "symbol": "P:qj.a(IIJZI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 34803,
+          "end": 34809,
+          "symbol": "P:qj.a(IIJZI)V#0",
+          "original": "param0",
+          "renamed": "packId"
+        },
+        {
+          "start": 34828,
+          "end": 34832,
+          "symbol": "L:qj.a(IIJZI)V#0",
+          "original": "var7",
+          "renamed": "intermediateFlag"
+        },
+        {
+          "start": 34835,
+          "end": 34841,
+          "symbol": "P:qj.a(IIJZI)V#3",
+          "original": "param3",
+          "renamed": "intermediate"
+        },
+        {
           "start": 34861,
           "end": 34863,
           "symbol": "C:hq",
           "original": "hq",
           "renamed": "SaveResultsPromptScreen"
+        },
+        {
+          "start": 34866,
+          "end": 34872,
+          "symbol": "P:qj.a(IIJZI)V#1",
+          "original": "param1",
+          "renamed": "levelIndex"
+        },
+        {
+          "start": 34874,
+          "end": 34878,
+          "symbol": "L:qj.a(IIJZI)V#0",
+          "original": "var7",
+          "renamed": "intermediateFlag"
+        },
+        {
+          "start": 34880,
+          "end": 34886,
+          "symbol": "P:qj.a(IIJZI)V#4",
+          "original": "param4",
+          "renamed": "timeDivisor"
+        },
+        {
+          "start": 34900,
+          "end": 34906,
+          "symbol": "P:qj.a(IIJZI)V#2",
+          "original": "param2",
+          "renamed": "elapsedMillis"
+        },
+        {
+          "start": 34916,
+          "end": 34922,
+          "symbol": "P:qj.a(IIJZI)V#4",
+          "original": "param4",
+          "renamed": "timeDivisor"
+        },
+        {
+          "start": 34975,
+          "end": 34976,
+          "symbol": "M:qj.b(I)V",
+          "original": "b",
+          "renamed": "requestLeaveMatch"
+        },
+        {
+          "start": 34981,
+          "end": 34987,
+          "symbol": "P:qj.b(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 35009,
@@ -923746,6 +925165,20 @@
           "symbol": "F:qj.field_k:I",
           "original": "field_k",
           "renamed": "localPlayerId"
+        },
+        {
+          "start": 35160,
+          "end": 35164,
+          "symbol": "L:qj.b(I)V#0",
+          "original": "var2",
+          "renamed": "unusedGuardRemainder"
+        },
+        {
+          "start": 35175,
+          "end": 35181,
+          "symbol": "P:qj.b(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 35203,
@@ -926954,6 +928387,13 @@
           "renamed": "boardState"
         },
         {
+          "start": 48158,
+          "end": 48159,
+          "symbol": "M:qj.a(BZ)V",
+          "original": "a",
+          "renamed": "finishOfflineMatch"
+        },
+        {
           "start": 48209,
           "end": 48216,
           "symbol": "F:j.field_Z:I",
@@ -928109,6 +929549,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 53277,
+          "end": 53278,
+          "symbol": "M:qj.b(I)V",
+          "original": "b",
+          "renamed": "requestLeaveMatch"
+        },
+        {
           "start": 53315,
           "end": 53322,
           "symbol": "F:qj.field_w:Lak;",
@@ -928305,11 +929752,144 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 54386,
+          "end": 54387,
+          "symbol": "M:qj.g(I)V",
+          "original": "g",
+          "renamed": "drawMatchFrame"
+        },
+        {
+          "start": 54392,
+          "end": 54398,
+          "symbol": "P:qj.g(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 54414,
+          "end": 54426,
+          "symbol": "L:qj.g(I)V#0",
+          "original": "stackIn_44_0",
+          "renamed": "offlineValue"
+        },
+        {
+          "start": 54444,
+          "end": 54456,
+          "symbol": "L:qj.g(I)V#1",
+          "original": "stackIn_50_0",
+          "renamed": "showAllDetailsValue"
+        },
+        {
+          "start": 54474,
+          "end": 54486,
+          "symbol": "L:qj.g(I)V#2",
+          "original": "stackIn_53_0",
+          "renamed": "firstHudPlayerValue"
+        },
+        {
+          "start": 54504,
+          "end": 54516,
+          "symbol": "L:qj.g(I)V#3",
+          "original": "stackIn_56_0",
+          "renamed": "firstHudLocalValue"
+        },
+        {
+          "start": 54538,
+          "end": 54550,
+          "symbol": "L:qj.g(I)V#4",
+          "original": "stackIn_59_0",
+          "renamed": "firstHudResultMode"
+        },
+        {
+          "start": 54572,
+          "end": 54584,
+          "symbol": "L:qj.g(I)V#5",
+          "original": "stackIn_59_1",
+          "renamed": "firstHudGuard"
+        },
+        {
+          "start": 54602,
+          "end": 54614,
+          "symbol": "L:qj.g(I)V#6",
+          "original": "stackIn_59_2",
+          "renamed": "firstHudX"
+        },
+        {
+          "start": 54636,
+          "end": 54648,
+          "symbol": "L:qj.g(I)V#7",
+          "original": "stackIn_61_3",
+          "renamed": "showFirstHudDetails"
+        },
+        {
           "start": 54666,
           "end": 54667,
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 54668,
+          "end": 54680,
+          "symbol": "L:qj.g(I)V#8",
+          "original": "stackIn_64_4",
+          "renamed": "firstHudBoard"
+        },
+        {
+          "start": 54694,
+          "end": 54706,
+          "symbol": "L:qj.g(I)V#9",
+          "original": "stackIn_64_5",
+          "renamed": "firstHudY"
+        },
+        {
+          "start": 54720,
+          "end": 54732,
+          "symbol": "L:qj.g(I)V#10",
+          "original": "stackIn_64_6",
+          "renamed": "firstHudPlayerId"
+        },
+        {
+          "start": 54750,
+          "end": 54762,
+          "symbol": "L:qj.g(I)V#11",
+          "original": "stackIn_66_7",
+          "renamed": "firstHudLocalOrOffline"
+        },
+        {
+          "start": 54784,
+          "end": 54796,
+          "symbol": "L:qj.g(I)V#12",
+          "original": "stackIn_69_0",
+          "renamed": "secondHudLocalValue"
+        },
+        {
+          "start": 54818,
+          "end": 54830,
+          "symbol": "L:qj.g(I)V#13",
+          "original": "stackIn_72_0",
+          "renamed": "secondHudResultMode"
+        },
+        {
+          "start": 54852,
+          "end": 54864,
+          "symbol": "L:qj.g(I)V#14",
+          "original": "stackIn_72_1",
+          "renamed": "secondHudGuard"
+        },
+        {
+          "start": 54882,
+          "end": 54894,
+          "symbol": "L:qj.g(I)V#15",
+          "original": "stackIn_72_2",
+          "renamed": "secondHudX"
+        },
+        {
+          "start": 54916,
+          "end": 54928,
+          "symbol": "L:qj.g(I)V#16",
+          "original": "stackIn_74_3",
+          "renamed": "showSecondHudDetails"
         },
         {
           "start": 54946,
@@ -928319,11 +929899,130 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 54948,
+          "end": 54960,
+          "symbol": "L:qj.g(I)V#17",
+          "original": "stackIn_77_4",
+          "renamed": "secondHudBoard"
+        },
+        {
+          "start": 54974,
+          "end": 54986,
+          "symbol": "L:qj.g(I)V#18",
+          "original": "stackIn_77_5",
+          "renamed": "secondHudY"
+        },
+        {
+          "start": 55000,
+          "end": 55012,
+          "symbol": "L:qj.g(I)V#19",
+          "original": "stackIn_77_6",
+          "renamed": "secondHudPlayerId"
+        },
+        {
+          "start": 55030,
+          "end": 55042,
+          "symbol": "L:qj.g(I)V#20",
+          "original": "stackIn_79_7",
+          "renamed": "secondHudLocalOrOffline"
+        },
+        {
+          "start": 55056,
+          "end": 55068,
+          "symbol": "L:qj.g(I)V#21",
+          "original": "stackIn_83_0",
+          "renamed": "viewedLocalValue"
+        },
+        {
+          "start": 55090,
+          "end": 55102,
+          "symbol": "L:qj.g(I)V#22",
+          "original": "stackIn_86_0",
+          "renamed": "viewedHudResultMode"
+        },
+        {
+          "start": 55124,
+          "end": 55136,
+          "symbol": "L:qj.g(I)V#23",
+          "original": "stackIn_86_1",
+          "renamed": "viewedHudGuard"
+        },
+        {
+          "start": 55154,
+          "end": 55166,
+          "symbol": "L:qj.g(I)V#24",
+          "original": "stackIn_86_2",
+          "renamed": "viewedHudX"
+        },
+        {
+          "start": 55188,
+          "end": 55200,
+          "symbol": "L:qj.g(I)V#25",
+          "original": "stackIn_88_3",
+          "renamed": "showViewedHudDetails"
+        },
+        {
+          "start": 55216,
+          "end": 55220,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
+          "start": 55236,
+          "end": 55240,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
+        },
+        {
+          "start": 55254,
+          "end": 55258,
+          "symbol": "L:qj.g(I)V#28",
+          "original": "var4",
+          "renamed": "unusedGuardQuotient"
+        },
+        {
+          "start": 55274,
+          "end": 55278,
+          "symbol": "L:qj.g(I)V#29",
+          "original": "var5",
+          "renamed": "layoutModes"
+        },
+        {
+          "start": 55292,
+          "end": 55296,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
+        },
+        {
+          "start": 55310,
+          "end": 55314,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
           "start": 55324,
           "end": 55325,
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 55326,
+          "end": 55336,
+          "symbol": "L:qj.g(I)V#32",
+          "original": "var7_ref_j",
+          "renamed": "singleBoard"
+        },
+        {
+          "start": 55350,
+          "end": 55358,
+          "symbol": "L:qj.g(I)V#33",
+          "original": "var8_int",
+          "renamed": "showAllPlayerDetails"
         },
         {
           "start": 55368,
@@ -928333,11 +930032,46 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 55371,
+          "end": 55375,
+          "symbol": "L:qj.g(I)V#34",
+          "original": "var8",
+          "renamed": "headSpriteAlias"
+        },
+        {
+          "start": 55389,
+          "end": 55393,
+          "symbol": "L:qj.g(I)V#35",
+          "original": "var9",
+          "renamed": "singleBoardScroll"
+        },
+        {
+          "start": 55407,
+          "end": 55412,
+          "symbol": "L:qj.g(I)V#36",
+          "original": "var10",
+          "renamed": "backgroundFadeAlpha"
+        },
+        {
+          "start": 55426,
+          "end": 55431,
+          "symbol": "L:qj.g(I)V#37",
+          "original": "var11",
+          "renamed": "unusedClientFlag"
+        },
+        {
           "start": 55441,
           "end": 55443,
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 55446,
+          "end": 55451,
+          "symbol": "L:qj.g(I)V#38",
+          "original": "var12",
+          "renamed": "unusedInlineSprites"
         },
         {
           "start": 55461,
@@ -928347,11 +930081,186 @@
           "renamed": "Paddle"
         },
         {
+          "start": 55464,
+          "end": 55469,
+          "symbol": "L:qj.g(I)V#39",
+          "original": "var13",
+          "renamed": "paddle"
+        },
+        {
+          "start": 55485,
+          "end": 55490,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 55506,
+          "end": 55511,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 55527,
+          "end": 55532,
+          "symbol": "L:qj.g(I)V#42",
+          "original": "var16",
+          "renamed": "fixedLayoutXAlias"
+        },
+        {
+          "start": 55548,
+          "end": 55553,
+          "symbol": "L:qj.g(I)V#43",
+          "original": "var17",
+          "renamed": "fixedLayoutYAlias"
+        },
+        {
+          "start": 55569,
+          "end": 55574,
+          "symbol": "L:qj.g(I)V#44",
+          "original": "var18",
+          "renamed": "portraitLayoutX"
+        },
+        {
+          "start": 55590,
+          "end": 55595,
+          "symbol": "L:qj.g(I)V#45",
+          "original": "var19",
+          "renamed": "portraitLayoutY"
+        },
+        {
           "start": 55605,
           "end": 55607,
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 55608,
+          "end": 55613,
+          "symbol": "L:qj.g(I)V#46",
+          "original": "var20",
+          "renamed": "headSprite"
+        },
+        {
+          "start": 55629,
+          "end": 55634,
+          "symbol": "L:qj.g(I)V#47",
+          "original": "var21",
+          "renamed": "fixedLayoutX"
+        },
+        {
+          "start": 55650,
+          "end": 55655,
+          "symbol": "L:qj.g(I)V#48",
+          "original": "var22",
+          "renamed": "fixedLayoutY"
+        },
+        {
+          "start": 55669,
+          "end": 55682,
+          "symbol": "L:qj.g(I)V#49",
+          "original": "var6Lifetime1",
+          "renamed": "boardPlayerId"
+        },
+        {
+          "start": 55696,
+          "end": 55709,
+          "symbol": "L:qj.g(I)V#50",
+          "original": "var6Lifetime2",
+          "renamed": "portraitPlayerId"
+        },
+        {
+          "start": 55723,
+          "end": 55736,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
+        },
+        {
+          "start": 55750,
+          "end": 55763,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
+        },
+        {
+          "start": 55777,
+          "end": 55790,
+          "symbol": "L:qj.g(I)V#53",
+          "original": "var7Lifetime3",
+          "renamed": "localOrOfflineFlag"
+        },
+        {
+          "start": 55804,
+          "end": 55817,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 55831,
+          "end": 55844,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 55858,
+          "end": 55871,
+          "symbol": "L:qj.g(I)V#56",
+          "original": "var9Lifetime2",
+          "renamed": "nameStripHeight"
+        },
+        {
+          "start": 55885,
+          "end": 55899,
+          "symbol": "L:qj.g(I)V#57",
+          "original": "var10Lifetime1",
+          "renamed": "firstHudLocalFlag"
+        },
+        {
+          "start": 55913,
+          "end": 55926,
+          "symbol": "L:qj.g(I)V#58",
+          "original": "var9Lifetime3",
+          "renamed": "splitBoardScroll"
+        },
+        {
+          "start": 55940,
+          "end": 55963,
+          "symbol": "L:qj.g(I)V#59",
+          "original": "var10Lifetime1Lifetime1",
+          "renamed": "secondHudLocalFlag"
+        },
+        {
+          "start": 55973,
+          "end": 55978,
+          "symbol": "L:qj.g(I)V#37",
+          "original": "var11",
+          "renamed": "unusedClientFlag"
+        },
+        {
+          "start": 56017,
+          "end": 56021,
+          "symbol": "L:qj.g(I)V#28",
+          "original": "var4",
+          "renamed": "unusedGuardQuotient"
+        },
+        {
+          "start": 56038,
+          "end": 56044,
+          "symbol": "P:qj.g(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 56061,
+          "end": 56066,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
         },
         {
           "start": 56069,
@@ -928375,6 +930284,27 @@
           "renamed": "playerCount"
         },
         {
+          "start": 56115,
+          "end": 56119,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
+          "start": 56122,
+          "end": 56127,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 56137,
+          "end": 56142,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
           "start": 56145,
           "end": 56147,
           "symbol": "C:kh",
@@ -928394,6 +930324,27 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 56191,
+          "end": 56195,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
+        },
+        {
+          "start": 56198,
+          "end": 56203,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 56213,
+          "end": 56217,
+          "symbol": "L:qj.g(I)V#29",
+          "original": "var5",
+          "renamed": "layoutModes"
         },
         {
           "start": 56220,
@@ -928417,6 +930368,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 56267,
+          "end": 56271,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
+        },
+        {
           "start": 56279,
           "end": 56286,
           "symbol": "F:qj.field_m:I",
@@ -928438,6 +930396,20 @@
           "renamed": "currentBackground"
         },
         {
+          "start": 56338,
+          "end": 56342,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 56348,
+          "end": 56352,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
           "start": 56360,
           "end": 56367,
           "symbol": "F:qj.field_w:Lak;",
@@ -928452,6 +930424,20 @@
           "renamed": "playerCount"
         },
         {
+          "start": 56377,
+          "end": 56381,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 56399,
+          "end": 56404,
+          "symbol": "L:qj.g(I)V#39",
+          "original": "var13",
+          "renamed": "paddle"
+        },
+        {
           "start": 56412,
           "end": 56419,
           "symbol": "F:qj.field_w:Lak;",
@@ -928464,6 +930450,13 @@
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 56428,
+          "end": 56432,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
         },
         {
           "start": 56434,
@@ -928487,11 +930480,32 @@
           "renamed": "playerCount"
         },
         {
+          "start": 56503,
+          "end": 56507,
+          "symbol": "L:qj.g(I)V#35",
+          "original": "var9",
+          "renamed": "singleBoardScroll"
+        },
+        {
+          "start": 56514,
+          "end": 56519,
+          "symbol": "L:qj.g(I)V#39",
+          "original": "var13",
+          "renamed": "paddle"
+        },
+        {
           "start": 56520,
           "end": 56527,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 56530,
+          "end": 56535,
+          "symbol": "L:qj.g(I)V#39",
+          "original": "var13",
+          "renamed": "paddle"
         },
         {
           "start": 56536,
@@ -928520,6 +930534,13 @@
           "symbol": "M:ki.a(ZIIII)V",
           "original": "a",
           "renamed": "drawFullBackground"
+        },
+        {
+          "start": 56612,
+          "end": 56616,
+          "symbol": "L:qj.g(I)V#35",
+          "original": "var9",
+          "renamed": "singleBoardScroll"
         },
         {
           "start": 56646,
@@ -928557,6 +930578,13 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 56711,
+          "end": 56715,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
+        },
+        {
           "start": 56717,
           "end": 56724,
           "symbol": "F:j.field_Z:I",
@@ -928571,6 +930599,13 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 56872,
+          "end": 56877,
+          "symbol": "L:qj.g(I)V#36",
+          "original": "var10",
+          "renamed": "backgroundFadeAlpha"
+        },
+        {
           "start": 56880,
           "end": 56882,
           "symbol": "C:km",
@@ -928578,11 +930613,144 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 56936,
+          "end": 56941,
+          "symbol": "L:qj.g(I)V#36",
+          "original": "var10",
+          "renamed": "backgroundFadeAlpha"
+        },
+        {
+          "start": 56991,
+          "end": 56996,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 56999,
+          "end": 57003,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
+          "start": 57017,
+          "end": 57022,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57025,
+          "end": 57029,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
+        },
+        {
+          "start": 57047,
+          "end": 57051,
+          "symbol": "L:qj.g(I)V#29",
+          "original": "var5",
+          "renamed": "layoutModes"
+        },
+        {
+          "start": 57052,
+          "end": 57056,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57080,
+          "end": 57085,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57088,
+          "end": 57092,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
+          "start": 57108,
+          "end": 57113,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57116,
+          "end": 57120,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
+        },
+        {
           "start": 57136,
           "end": 57138,
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "MovingBody"
+        },
+        {
+          "start": 57159,
+          "end": 57164,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57165,
+          "end": 57169,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57172,
+          "end": 57177,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57178,
+          "end": 57182,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57185,
+          "end": 57190,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57191,
+          "end": 57195,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57204,
+          "end": 57209,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57210,
+          "end": 57214,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
         },
         {
           "start": 57232,
@@ -928606,6 +930774,41 @@
           "renamed": "drawPreview"
         },
         {
+          "start": 57259,
+          "end": 57263,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
+        },
+        {
+          "start": 57265,
+          "end": 57270,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57271,
+          "end": 57275,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57278,
+          "end": 57283,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57284,
+          "end": 57288,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
           "start": 57309,
           "end": 57310,
           "symbol": "M:sc.b(I)V",
@@ -928620,11 +930823,88 @@
           "renamed": "MovingBody"
         },
         {
+          "start": 57374,
+          "end": 57379,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57380,
+          "end": 57384,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57387,
+          "end": 57392,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57393,
+          "end": 57397,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57400,
+          "end": 57405,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57406,
+          "end": 57410,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57413,
+          "end": 57418,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57419,
+          "end": 57423,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57447,
+          "end": 57460,
+          "symbol": "L:qj.g(I)V#58",
+          "original": "var9Lifetime3",
+          "renamed": "splitBoardScroll"
+        },
+        {
+          "start": 57471,
+          "end": 57476,
+          "symbol": "L:qj.g(I)V#39",
+          "original": "var13",
+          "renamed": "paddle"
+        },
+        {
           "start": 57477,
           "end": 57484,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 57487,
+          "end": 57492,
+          "symbol": "L:qj.g(I)V#39",
+          "original": "var13",
+          "renamed": "paddle"
         },
         {
           "start": 57493,
@@ -928655,11 +930935,74 @@
           "renamed": "drawSplitBackground"
         },
         {
+          "start": 57559,
+          "end": 57564,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57565,
+          "end": 57569,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57585,
+          "end": 57590,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57591,
+          "end": 57595,
+          "symbol": "L:qj.g(I)V#31",
+          "original": "var7",
+          "renamed": "backgroundSlot"
+        },
+        {
+          "start": 57598,
+          "end": 57602,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
+        },
+        {
+          "start": 57604,
+          "end": 57617,
+          "symbol": "L:qj.g(I)V#58",
+          "original": "var9Lifetime3",
+          "renamed": "splitBoardScroll"
+        },
+        {
           "start": 57641,
           "end": 57642,
           "symbol": "M:sc.b(I)V",
           "original": "b",
           "renamed": "popRaster"
+        },
+        {
+          "start": 57676,
+          "end": 57680,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
+        },
+        {
+          "start": 57696,
+          "end": 57700,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
+        },
+        {
+          "start": 57703,
+          "end": 57707,
+          "symbol": "L:qj.g(I)V#30",
+          "original": "var6",
+          "renamed": "backgroundPlayerId"
         },
         {
           "start": 57715,
@@ -928690,6 +931033,34 @@
           "renamed": "currentBackground"
         },
         {
+          "start": 57799,
+          "end": 57804,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 57807,
+          "end": 57811,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
+          "start": 57823,
+          "end": 57828,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 57831,
+          "end": 57835,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
+        },
+        {
           "start": 57856,
           "end": 57863,
           "symbol": "F:qj.field_w:Lak;",
@@ -928704,6 +931075,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 57896,
+          "end": 57909,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
+        },
+        {
           "start": 57917,
           "end": 57924,
           "symbol": "F:qj.field_w:Lak;",
@@ -928716,6 +931094,20 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 57934,
+          "end": 57947,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
+        },
+        {
+          "start": 57953,
+          "end": 57966,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
         },
         {
           "start": 57986,
@@ -928739,6 +931131,34 @@
           "renamed": "drawPreview"
         },
         {
+          "start": 58016,
+          "end": 58021,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 58022,
+          "end": 58035,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
+        },
+        {
+          "start": 58038,
+          "end": 58043,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 58044,
+          "end": 58057,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
+        },
+        {
           "start": 58075,
           "end": 58077,
           "symbol": "C:lb",
@@ -928753,11 +931173,60 @@
           "renamed": "fillRectangleAlpha"
         },
         {
+          "start": 58080,
+          "end": 58085,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 58086,
+          "end": 58099,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
+        },
+        {
+          "start": 58102,
+          "end": 58107,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 58108,
+          "end": 58121,
+          "symbol": "L:qj.g(I)V#51",
+          "original": "var7Lifetime1",
+          "renamed": "unusedPreviewSlot"
+        },
+        {
+          "start": 58187,
+          "end": 58200,
+          "symbol": "L:qj.g(I)V#49",
+          "original": "var6Lifetime1",
+          "renamed": "boardPlayerId"
+        },
+        {
           "start": 58208,
           "end": 58215,
           "symbol": "F:qj.field_m:I",
           "original": "field_m",
           "renamed": "viewedPlayerId"
+        },
+        {
+          "start": 58230,
+          "end": 58243,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
+        },
+        {
+          "start": 58249,
+          "end": 58262,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
         },
         {
           "start": 58270,
@@ -928774,11 +931243,46 @@
           "renamed": "playerCount"
         },
         {
+          "start": 58287,
+          "end": 58300,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
+        },
+        {
           "start": 58321,
           "end": 58323,
           "symbol": "C:tn",
           "original": "tn",
           "renamed": "MusicCrossfadeStream"
+        },
+        {
+          "start": 58336,
+          "end": 58340,
+          "symbol": "L:qj.g(I)V#29",
+          "original": "var5",
+          "renamed": "layoutModes"
+        },
+        {
+          "start": 58341,
+          "end": 58354,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
+        },
+        {
+          "start": 58376,
+          "end": 58380,
+          "symbol": "L:qj.g(I)V#29",
+          "original": "var5",
+          "renamed": "layoutModes"
+        },
+        {
+          "start": 58381,
+          "end": 58394,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
         },
         {
           "start": 58428,
@@ -928795,11 +931299,81 @@
           "renamed": "drawBoard"
         },
         {
+          "start": 58444,
+          "end": 58457,
+          "symbol": "L:qj.g(I)V#49",
+          "original": "var6Lifetime1",
+          "renamed": "boardPlayerId"
+        },
+        {
+          "start": 58459,
+          "end": 58463,
+          "symbol": "L:qj.g(I)V#29",
+          "original": "var5",
+          "renamed": "layoutModes"
+        },
+        {
+          "start": 58464,
+          "end": 58477,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
+        },
+        {
+          "start": 58480,
+          "end": 58485,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 58486,
+          "end": 58499,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
+        },
+        {
           "start": 58507,
           "end": 58514,
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 58516,
+          "end": 58521,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 58522,
+          "end": 58535,
+          "symbol": "L:qj.g(I)V#52",
+          "original": "var7Lifetime2",
+          "renamed": "boardSlot"
+        },
+        {
+          "start": 58549,
+          "end": 58562,
+          "symbol": "L:qj.g(I)V#49",
+          "original": "var6Lifetime1",
+          "renamed": "boardPlayerId"
+        },
+        {
+          "start": 58576,
+          "end": 58589,
+          "symbol": "L:qj.g(I)V#49",
+          "original": "var6Lifetime1",
+          "renamed": "boardPlayerId"
+        },
+        {
+          "start": 58592,
+          "end": 58605,
+          "symbol": "L:qj.g(I)V#49",
+          "original": "var6Lifetime1",
+          "renamed": "boardPlayerId"
         },
         {
           "start": 58613,
@@ -928844,6 +931418,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 58736,
+          "end": 58741,
+          "symbol": "L:qj.g(I)V#48",
+          "original": "var22",
+          "renamed": "fixedLayoutY"
+        },
+        {
           "start": 58744,
           "end": 58746,
           "symbol": "C:kh",
@@ -928851,11 +931432,74 @@
           "renamed": "NodeDequeCursor"
         },
         {
+          "start": 58771,
+          "end": 58776,
+          "symbol": "L:qj.g(I)V#43",
+          "original": "var17",
+          "renamed": "fixedLayoutYAlias"
+        },
+        {
+          "start": 58779,
+          "end": 58784,
+          "symbol": "L:qj.g(I)V#48",
+          "original": "var22",
+          "renamed": "fixedLayoutY"
+        },
+        {
+          "start": 58798,
+          "end": 58802,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
+        },
+        {
+          "start": 58805,
+          "end": 58810,
+          "symbol": "L:qj.g(I)V#43",
+          "original": "var17",
+          "renamed": "fixedLayoutYAlias"
+        },
+        {
+          "start": 58824,
+          "end": 58829,
+          "symbol": "L:qj.g(I)V#47",
+          "original": "var21",
+          "renamed": "fixedLayoutX"
+        },
+        {
           "start": 58832,
           "end": 58834,
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "NodeDequeCursor"
+        },
+        {
+          "start": 58859,
+          "end": 58864,
+          "symbol": "L:qj.g(I)V#42",
+          "original": "var16",
+          "renamed": "fixedLayoutXAlias"
+        },
+        {
+          "start": 58867,
+          "end": 58872,
+          "symbol": "L:qj.g(I)V#47",
+          "original": "var21",
+          "renamed": "fixedLayoutX"
+        },
+        {
+          "start": 58886,
+          "end": 58890,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
+          "start": 58893,
+          "end": 58898,
+          "symbol": "L:qj.g(I)V#42",
+          "original": "var16",
+          "renamed": "fixedLayoutXAlias"
         },
         {
           "start": 58915,
@@ -928886,6 +931530,13 @@
           "renamed": "LoginCredentialKind"
         },
         {
+          "start": 59019,
+          "end": 59031,
+          "symbol": "L:qj.g(I)V#21",
+          "original": "stackIn_83_0",
+          "renamed": "viewedLocalValue"
+        },
+        {
           "start": 59041,
           "end": 59048,
           "symbol": "F:qj.field_o:I",
@@ -928900,11 +931551,67 @@
           "renamed": "viewedPlayerId"
         },
         {
+          "start": 59097,
+          "end": 59110,
+          "symbol": "L:qj.g(I)V#53",
+          "original": "var7Lifetime3",
+          "renamed": "localOrOfflineFlag"
+        },
+        {
+          "start": 59113,
+          "end": 59125,
+          "symbol": "L:qj.g(I)V#21",
+          "original": "stackIn_83_0",
+          "renamed": "viewedLocalValue"
+        },
+        {
+          "start": 59139,
+          "end": 59151,
+          "symbol": "L:qj.g(I)V#22",
+          "original": "stackIn_86_0",
+          "renamed": "viewedHudResultMode"
+        },
+        {
           "start": 59159,
           "end": 59166,
           "symbol": "F:qj.field_n:Z",
           "original": "field_n",
           "renamed": "resultWordMode"
+        },
+        {
+          "start": 59180,
+          "end": 59192,
+          "symbol": "L:qj.g(I)V#23",
+          "original": "stackIn_86_1",
+          "renamed": "viewedHudGuard"
+        },
+        {
+          "start": 59213,
+          "end": 59225,
+          "symbol": "L:qj.g(I)V#24",
+          "original": "stackIn_86_2",
+          "renamed": "viewedHudX"
+        },
+        {
+          "start": 59228,
+          "end": 59233,
+          "symbol": "L:qj.g(I)V#47",
+          "original": "var21",
+          "renamed": "fixedLayoutX"
+        },
+        {
+          "start": 59250,
+          "end": 59262,
+          "symbol": "L:qj.g(I)V#25",
+          "original": "stackIn_88_3",
+          "renamed": "showViewedHudDetails"
+        },
+        {
+          "start": 59266,
+          "end": 59279,
+          "symbol": "L:qj.g(I)V#53",
+          "original": "var7Lifetime3",
+          "renamed": "localOrOfflineFlag"
         },
         {
           "start": 59300,
@@ -928919,6 +931626,34 @@
           "symbol": "C:om",
           "original": "om",
           "renamed": "LobbyGame"
+        },
+        {
+          "start": 59353,
+          "end": 59365,
+          "symbol": "L:qj.g(I)V#22",
+          "original": "stackIn_86_0",
+          "renamed": "viewedHudResultMode"
+        },
+        {
+          "start": 59367,
+          "end": 59379,
+          "symbol": "L:qj.g(I)V#23",
+          "original": "stackIn_86_1",
+          "renamed": "viewedHudGuard"
+        },
+        {
+          "start": 59381,
+          "end": 59393,
+          "symbol": "L:qj.g(I)V#24",
+          "original": "stackIn_86_2",
+          "renamed": "viewedHudX"
+        },
+        {
+          "start": 59395,
+          "end": 59407,
+          "symbol": "L:qj.g(I)V#25",
+          "original": "stackIn_88_3",
+          "renamed": "showViewedHudDetails"
         },
         {
           "start": 59414,
@@ -928942,11 +931677,25 @@
           "renamed": "viewedPlayerId"
         },
         {
+          "start": 59445,
+          "end": 59450,
+          "symbol": "L:qj.g(I)V#48",
+          "original": "var22",
+          "renamed": "fixedLayoutY"
+        },
+        {
           "start": 59460,
           "end": 59467,
           "symbol": "F:qj.field_m:I",
           "original": "field_m",
           "renamed": "viewedPlayerId"
+        },
+        {
+          "start": 59469,
+          "end": 59482,
+          "symbol": "L:qj.g(I)V#53",
+          "original": "var7Lifetime3",
+          "renamed": "localOrOfflineFlag"
         },
         {
           "start": 59494,
@@ -928970,6 +931719,13 @@
           "renamed": "LoginCredentialKind"
         },
         {
+          "start": 59555,
+          "end": 59560,
+          "symbol": "L:qj.g(I)V#48",
+          "original": "var22",
+          "renamed": "fixedLayoutY"
+        },
+        {
           "start": 59586,
           "end": 59587,
           "symbol": "M:nh.a(IIII[Ljp;I)V",
@@ -928984,11 +931740,39 @@
           "renamed": "LoginCredentialKind"
         },
         {
+          "start": 59623,
+          "end": 59628,
+          "symbol": "L:qj.g(I)V#48",
+          "original": "var22",
+          "renamed": "fixedLayoutY"
+        },
+        {
+          "start": 59669,
+          "end": 59681,
+          "symbol": "L:qj.g(I)V#0",
+          "original": "stackIn_44_0",
+          "renamed": "offlineValue"
+        },
+        {
           "start": 59690,
           "end": 59697,
           "symbol": "F:qj.field_p:Z",
           "original": "field_p",
           "renamed": "networkedMatch"
+        },
+        {
+          "start": 59720,
+          "end": 59733,
+          "symbol": "L:qj.g(I)V#53",
+          "original": "var7Lifetime3",
+          "renamed": "localOrOfflineFlag"
+        },
+        {
+          "start": 59736,
+          "end": 59748,
+          "symbol": "L:qj.g(I)V#0",
+          "original": "stackIn_44_0",
+          "renamed": "offlineValue"
         },
         {
           "start": 59771,
@@ -928998,11 +931782,39 @@
           "renamed": "networkedMatch"
         },
         {
+          "start": 59796,
+          "end": 59808,
+          "symbol": "L:qj.g(I)V#1",
+          "original": "stackIn_50_0",
+          "renamed": "showAllDetailsValue"
+        },
+        {
           "start": 59817,
           "end": 59824,
           "symbol": "F:qj.field_o:I",
           "original": "field_o",
           "renamed": "localPlayerMask"
+        },
+        {
+          "start": 59875,
+          "end": 59887,
+          "symbol": "L:qj.g(I)V#1",
+          "original": "stackIn_50_0",
+          "renamed": "showAllDetailsValue"
+        },
+        {
+          "start": 59919,
+          "end": 59927,
+          "symbol": "L:qj.g(I)V#33",
+          "original": "var8_int",
+          "renamed": "showAllPlayerDetails"
+        },
+        {
+          "start": 59930,
+          "end": 59942,
+          "symbol": "L:qj.g(I)V#1",
+          "original": "stackIn_50_0",
+          "renamed": "showAllDetailsValue"
         },
         {
           "start": 59965,
@@ -929012,11 +931824,46 @@
           "renamed": "networkedMatch"
         },
         {
+          "start": 59990,
+          "end": 60002,
+          "symbol": "L:qj.g(I)V#2",
+          "original": "stackIn_53_0",
+          "renamed": "firstHudPlayerValue"
+        },
+        {
           "start": 60010,
           "end": 60017,
           "symbol": "F:qj.field_m:I",
           "original": "field_m",
           "renamed": "viewedPlayerId"
+        },
+        {
+          "start": 60054,
+          "end": 60066,
+          "symbol": "L:qj.g(I)V#2",
+          "original": "stackIn_53_0",
+          "renamed": "firstHudPlayerValue"
+        },
+        {
+          "start": 60098,
+          "end": 60111,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 60114,
+          "end": 60126,
+          "symbol": "L:qj.g(I)V#2",
+          "original": "stackIn_53_0",
+          "renamed": "firstHudPlayerValue"
+        },
+        {
+          "start": 60140,
+          "end": 60152,
+          "symbol": "L:qj.g(I)V#3",
+          "original": "stackIn_56_0",
+          "renamed": "firstHudLocalValue"
         },
         {
           "start": 60162,
@@ -929026,11 +931873,88 @@
           "renamed": "localPlayerMask"
         },
         {
+          "start": 60177,
+          "end": 60190,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 60219,
+          "end": 60233,
+          "symbol": "L:qj.g(I)V#57",
+          "original": "var10Lifetime1",
+          "renamed": "firstHudLocalFlag"
+        },
+        {
+          "start": 60236,
+          "end": 60248,
+          "symbol": "L:qj.g(I)V#3",
+          "original": "stackIn_56_0",
+          "renamed": "firstHudLocalValue"
+        },
+        {
+          "start": 60262,
+          "end": 60274,
+          "symbol": "L:qj.g(I)V#4",
+          "original": "stackIn_59_0",
+          "renamed": "firstHudResultMode"
+        },
+        {
           "start": 60282,
           "end": 60289,
           "symbol": "F:qj.field_n:Z",
           "original": "field_n",
           "renamed": "resultWordMode"
+        },
+        {
+          "start": 60303,
+          "end": 60315,
+          "symbol": "L:qj.g(I)V#5",
+          "original": "stackIn_59_1",
+          "renamed": "firstHudGuard"
+        },
+        {
+          "start": 60336,
+          "end": 60348,
+          "symbol": "L:qj.g(I)V#6",
+          "original": "stackIn_59_2",
+          "renamed": "firstHudX"
+        },
+        {
+          "start": 60351,
+          "end": 60356,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 60373,
+          "end": 60385,
+          "symbol": "L:qj.g(I)V#7",
+          "original": "stackIn_61_3",
+          "renamed": "showFirstHudDetails"
+        },
+        {
+          "start": 60389,
+          "end": 60397,
+          "symbol": "L:qj.g(I)V#33",
+          "original": "var8_int",
+          "renamed": "showAllPlayerDetails"
+        },
+        {
+          "start": 60408,
+          "end": 60422,
+          "symbol": "L:qj.g(I)V#57",
+          "original": "var10Lifetime1",
+          "renamed": "firstHudLocalFlag"
+        },
+        {
+          "start": 60442,
+          "end": 60454,
+          "symbol": "L:qj.g(I)V#8",
+          "original": "stackIn_64_4",
+          "renamed": "firstHudBoard"
         },
         {
           "start": 60462,
@@ -929047,11 +931971,123 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 60478,
+          "end": 60491,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 60506,
+          "end": 60518,
+          "symbol": "L:qj.g(I)V#9",
+          "original": "stackIn_64_5",
+          "renamed": "firstHudY"
+        },
+        {
+          "start": 60521,
+          "end": 60526,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 60543,
+          "end": 60555,
+          "symbol": "L:qj.g(I)V#10",
+          "original": "stackIn_64_6",
+          "renamed": "firstHudPlayerId"
+        },
+        {
+          "start": 60558,
+          "end": 60571,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 60585,
+          "end": 60597,
+          "symbol": "L:qj.g(I)V#11",
+          "original": "stackIn_66_7",
+          "renamed": "firstHudLocalOrOffline"
+        },
+        {
+          "start": 60601,
+          "end": 60614,
+          "symbol": "L:qj.g(I)V#53",
+          "original": "var7Lifetime3",
+          "renamed": "localOrOfflineFlag"
+        },
+        {
+          "start": 60625,
+          "end": 60639,
+          "symbol": "L:qj.g(I)V#57",
+          "original": "var10Lifetime1",
+          "renamed": "firstHudLocalFlag"
+        },
+        {
           "start": 60659,
           "end": 60661,
           "symbol": "C:om",
           "original": "om",
           "renamed": "LobbyGame"
+        },
+        {
+          "start": 60690,
+          "end": 60702,
+          "symbol": "L:qj.g(I)V#4",
+          "original": "stackIn_59_0",
+          "renamed": "firstHudResultMode"
+        },
+        {
+          "start": 60704,
+          "end": 60716,
+          "symbol": "L:qj.g(I)V#5",
+          "original": "stackIn_59_1",
+          "renamed": "firstHudGuard"
+        },
+        {
+          "start": 60718,
+          "end": 60730,
+          "symbol": "L:qj.g(I)V#6",
+          "original": "stackIn_59_2",
+          "renamed": "firstHudX"
+        },
+        {
+          "start": 60732,
+          "end": 60744,
+          "symbol": "L:qj.g(I)V#7",
+          "original": "stackIn_61_3",
+          "renamed": "showFirstHudDetails"
+        },
+        {
+          "start": 60746,
+          "end": 60758,
+          "symbol": "L:qj.g(I)V#8",
+          "original": "stackIn_64_4",
+          "renamed": "firstHudBoard"
+        },
+        {
+          "start": 60760,
+          "end": 60772,
+          "symbol": "L:qj.g(I)V#9",
+          "original": "stackIn_64_5",
+          "renamed": "firstHudY"
+        },
+        {
+          "start": 60774,
+          "end": 60786,
+          "symbol": "L:qj.g(I)V#10",
+          "original": "stackIn_64_6",
+          "renamed": "firstHudPlayerId"
+        },
+        {
+          "start": 60788,
+          "end": 60800,
+          "symbol": "L:qj.g(I)V#11",
+          "original": "stackIn_66_7",
+          "renamed": "firstHudLocalOrOffline"
         },
         {
           "start": 60807,
@@ -929061,6 +932097,34 @@
           "renamed": "match"
         },
         {
+          "start": 60829,
+          "end": 60842,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 60849,
+          "end": 60862,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 60876,
+          "end": 60888,
+          "symbol": "L:qj.g(I)V#12",
+          "original": "stackIn_69_0",
+          "renamed": "secondHudLocalValue"
+        },
+        {
+          "start": 60903,
+          "end": 60916,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
           "start": 60924,
           "end": 60931,
           "symbol": "F:qj.field_o:I",
@@ -929068,11 +932132,81 @@
           "renamed": "localPlayerMask"
         },
         {
+          "start": 60955,
+          "end": 60978,
+          "symbol": "L:qj.g(I)V#59",
+          "original": "var10Lifetime1Lifetime1",
+          "renamed": "secondHudLocalFlag"
+        },
+        {
+          "start": 60981,
+          "end": 60993,
+          "symbol": "L:qj.g(I)V#12",
+          "original": "stackIn_69_0",
+          "renamed": "secondHudLocalValue"
+        },
+        {
+          "start": 61007,
+          "end": 61019,
+          "symbol": "L:qj.g(I)V#13",
+          "original": "stackIn_72_0",
+          "renamed": "secondHudResultMode"
+        },
+        {
           "start": 61027,
           "end": 61034,
           "symbol": "F:qj.field_n:Z",
           "original": "field_n",
           "renamed": "resultWordMode"
+        },
+        {
+          "start": 61048,
+          "end": 61060,
+          "symbol": "L:qj.g(I)V#14",
+          "original": "stackIn_72_1",
+          "renamed": "secondHudGuard"
+        },
+        {
+          "start": 61081,
+          "end": 61093,
+          "symbol": "L:qj.g(I)V#15",
+          "original": "stackIn_72_2",
+          "renamed": "secondHudX"
+        },
+        {
+          "start": 61096,
+          "end": 61101,
+          "symbol": "L:qj.g(I)V#40",
+          "original": "var14",
+          "renamed": "layoutXAlias"
+        },
+        {
+          "start": 61118,
+          "end": 61130,
+          "symbol": "L:qj.g(I)V#16",
+          "original": "stackIn_74_3",
+          "renamed": "showSecondHudDetails"
+        },
+        {
+          "start": 61134,
+          "end": 61142,
+          "symbol": "L:qj.g(I)V#33",
+          "original": "var8_int",
+          "renamed": "showAllPlayerDetails"
+        },
+        {
+          "start": 61153,
+          "end": 61176,
+          "symbol": "L:qj.g(I)V#59",
+          "original": "var10Lifetime1Lifetime1",
+          "renamed": "secondHudLocalFlag"
+        },
+        {
+          "start": 61196,
+          "end": 61208,
+          "symbol": "L:qj.g(I)V#17",
+          "original": "stackIn_77_4",
+          "renamed": "secondHudBoard"
         },
         {
           "start": 61216,
@@ -929089,6 +932223,62 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 61232,
+          "end": 61245,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 61260,
+          "end": 61272,
+          "symbol": "L:qj.g(I)V#18",
+          "original": "stackIn_77_5",
+          "renamed": "secondHudY"
+        },
+        {
+          "start": 61275,
+          "end": 61280,
+          "symbol": "L:qj.g(I)V#41",
+          "original": "var15",
+          "renamed": "layoutYAlias"
+        },
+        {
+          "start": 61297,
+          "end": 61309,
+          "symbol": "L:qj.g(I)V#19",
+          "original": "stackIn_77_6",
+          "renamed": "secondHudPlayerId"
+        },
+        {
+          "start": 61312,
+          "end": 61325,
+          "symbol": "L:qj.g(I)V#55",
+          "original": "var9Lifetime1",
+          "renamed": "hudPlayerId"
+        },
+        {
+          "start": 61339,
+          "end": 61351,
+          "symbol": "L:qj.g(I)V#20",
+          "original": "stackIn_79_7",
+          "renamed": "secondHudLocalOrOffline"
+        },
+        {
+          "start": 61355,
+          "end": 61368,
+          "symbol": "L:qj.g(I)V#53",
+          "original": "var7Lifetime3",
+          "renamed": "localOrOfflineFlag"
+        },
+        {
+          "start": 61379,
+          "end": 61402,
+          "symbol": "L:qj.g(I)V#59",
+          "original": "var10Lifetime1Lifetime1",
+          "renamed": "secondHudLocalFlag"
+        },
+        {
           "start": 61422,
           "end": 61424,
           "symbol": "C:om",
@@ -929096,11 +932286,74 @@
           "renamed": "LobbyGame"
         },
         {
+          "start": 61453,
+          "end": 61465,
+          "symbol": "L:qj.g(I)V#13",
+          "original": "stackIn_72_0",
+          "renamed": "secondHudResultMode"
+        },
+        {
+          "start": 61467,
+          "end": 61479,
+          "symbol": "L:qj.g(I)V#14",
+          "original": "stackIn_72_1",
+          "renamed": "secondHudGuard"
+        },
+        {
+          "start": 61481,
+          "end": 61493,
+          "symbol": "L:qj.g(I)V#15",
+          "original": "stackIn_72_2",
+          "renamed": "secondHudX"
+        },
+        {
+          "start": 61495,
+          "end": 61507,
+          "symbol": "L:qj.g(I)V#16",
+          "original": "stackIn_74_3",
+          "renamed": "showSecondHudDetails"
+        },
+        {
+          "start": 61509,
+          "end": 61521,
+          "symbol": "L:qj.g(I)V#17",
+          "original": "stackIn_77_4",
+          "renamed": "secondHudBoard"
+        },
+        {
+          "start": 61523,
+          "end": 61535,
+          "symbol": "L:qj.g(I)V#18",
+          "original": "stackIn_77_5",
+          "renamed": "secondHudY"
+        },
+        {
+          "start": 61537,
+          "end": 61549,
+          "symbol": "L:qj.g(I)V#19",
+          "original": "stackIn_77_6",
+          "renamed": "secondHudPlayerId"
+        },
+        {
+          "start": 61551,
+          "end": 61563,
+          "symbol": "L:qj.g(I)V#20",
+          "original": "stackIn_79_7",
+          "renamed": "secondHudLocalOrOffline"
+        },
+        {
           "start": 61570,
           "end": 61577,
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 61619,
+          "end": 61629,
+          "symbol": "L:qj.g(I)V#32",
+          "original": "var7_ref_j",
+          "renamed": "singleBoard"
         },
         {
           "start": 61637,
@@ -929194,6 +932447,13 @@
           "renamed": "ContextActionController"
         },
         {
+          "start": 61886,
+          "end": 61896,
+          "symbol": "L:qj.g(I)V#32",
+          "original": "var7_ref_j",
+          "renamed": "singleBoard"
+        },
+        {
           "start": 61938,
           "end": 61939,
           "symbol": "M:nh.a(IIII[Ljp;I)V",
@@ -929213,6 +932473,13 @@
           "symbol": "C:r",
           "original": "r",
           "renamed": "TextFieldRenderer"
+        },
+        {
+          "start": 62047,
+          "end": 62057,
+          "symbol": "L:qj.g(I)V#32",
+          "original": "var7_ref_j",
+          "renamed": "singleBoard"
         },
         {
           "start": 62087,
@@ -929248,6 +932515,13 @@
           "symbol": "F:qj.field_w:Lak;",
           "original": "field_w",
           "renamed": "match"
+        },
+        {
+          "start": 62193,
+          "end": 62203,
+          "symbol": "L:qj.g(I)V#32",
+          "original": "var7_ref_j",
+          "renamed": "singleBoard"
         },
         {
           "start": 62220,
@@ -929292,6 +932566,13 @@
           "renamed": "GrowableIntList"
         },
         {
+          "start": 62407,
+          "end": 62417,
+          "symbol": "L:qj.g(I)V#32",
+          "original": "var7_ref_j",
+          "renamed": "singleBoard"
+        },
+        {
           "start": 62418,
           "end": 62426,
           "symbol": "F:j.field_fb:Ljava/lang/String;",
@@ -929299,11 +932580,25 @@
           "renamed": "displayedMessage"
         },
         {
+          "start": 62444,
+          "end": 62449,
+          "symbol": "L:qj.g(I)V#38",
+          "original": "var12",
+          "renamed": "unusedInlineSprites"
+        },
+        {
           "start": 62453,
           "end": 62455,
           "symbol": "C:tp",
           "original": "tp",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 62484,
+          "end": 62494,
+          "symbol": "L:qj.g(I)V#32",
+          "original": "var7_ref_j",
+          "renamed": "singleBoard"
         },
         {
           "start": 62495,
@@ -929383,6 +932678,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 62738,
+          "end": 62742,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
           "start": 62764,
           "end": 62771,
           "symbol": "F:qj.field_w:Lak;",
@@ -929395,6 +932697,13 @@
           "symbol": "F:qj.field_m:I",
           "original": "field_m",
           "renamed": "viewedPlayerId"
+        },
+        {
+          "start": 62787,
+          "end": 62791,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
         },
         {
           "start": 62824,
@@ -929453,6 +932762,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 62952,
+          "end": 62956,
+          "symbol": "L:qj.g(I)V#26",
+          "original": "var2",
+          "renamed": "layoutX"
+        },
+        {
           "start": 62978,
           "end": 62985,
           "symbol": "F:qj.field_w:Lak;",
@@ -929465,6 +932781,20 @@
           "symbol": "F:qj.field_m:I",
           "original": "field_m",
           "renamed": "viewedPlayerId"
+        },
+        {
+          "start": 63005,
+          "end": 63009,
+          "symbol": "L:qj.g(I)V#27",
+          "original": "var3",
+          "renamed": "layoutY"
+        },
+        {
+          "start": 63033,
+          "end": 63038,
+          "symbol": "L:qj.g(I)V#45",
+          "original": "var19",
+          "renamed": "portraitLayoutY"
         },
         {
           "start": 63041,
@@ -929488,11 +932818,25 @@
           "renamed": "playerCount"
         },
         {
+          "start": 63087,
+          "end": 63100,
+          "symbol": "L:qj.g(I)V#50",
+          "original": "var6Lifetime2",
+          "renamed": "portraitPlayerId"
+        },
+        {
           "start": 63108,
           "end": 63115,
           "symbol": "F:qj.field_m:I",
           "original": "field_m",
           "renamed": "viewedPlayerId"
+        },
+        {
+          "start": 63125,
+          "end": 63130,
+          "symbol": "L:qj.g(I)V#44",
+          "original": "var18",
+          "renamed": "portraitLayoutX"
         },
         {
           "start": 63133,
@@ -929516,6 +932860,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 63184,
+          "end": 63197,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
           "start": 63208,
           "end": 63215,
           "symbol": "F:qj.field_w:Lak;",
@@ -929528,6 +932879,41 @@
           "symbol": "F:ak.field_k:I",
           "original": "field_k",
           "renamed": "playerCount"
+        },
+        {
+          "start": 63226,
+          "end": 63239,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63241,
+          "end": 63254,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63274,
+          "end": 63278,
+          "symbol": "L:qj.g(I)V#29",
+          "original": "var5",
+          "renamed": "layoutModes"
+        },
+        {
+          "start": 63279,
+          "end": 63292,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63314,
+          "end": 63319,
+          "symbol": "L:qj.g(I)V#46",
+          "original": "var20",
+          "renamed": "headSprite"
         },
         {
           "start": 63322,
@@ -929558,11 +932944,39 @@
           "renamed": "playerBoards"
         },
         {
+          "start": 63354,
+          "end": 63367,
+          "symbol": "L:qj.g(I)V#50",
+          "original": "var6Lifetime2",
+          "renamed": "portraitPlayerId"
+        },
+        {
           "start": 63369,
           "end": 63376,
           "symbol": "F:j.field_H:I",
           "original": "field_H",
           "renamed": "characterIndex"
+        },
+        {
+          "start": 63391,
+          "end": 63395,
+          "symbol": "L:qj.g(I)V#34",
+          "original": "var8",
+          "renamed": "headSpriteAlias"
+        },
+        {
+          "start": 63398,
+          "end": 63403,
+          "symbol": "L:qj.g(I)V#46",
+          "original": "var20",
+          "renamed": "headSprite"
+        },
+        {
+          "start": 63417,
+          "end": 63430,
+          "symbol": "L:qj.g(I)V#56",
+          "original": "var9Lifetime2",
+          "renamed": "nameStripHeight"
         },
         {
           "start": 63433,
@@ -929607,11 +933021,60 @@
           "renamed": "fillRectangleAlpha"
         },
         {
+          "start": 63491,
+          "end": 63496,
+          "symbol": "L:qj.g(I)V#44",
+          "original": "var18",
+          "renamed": "portraitLayoutX"
+        },
+        {
+          "start": 63497,
+          "end": 63510,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63519,
+          "end": 63524,
+          "symbol": "L:qj.g(I)V#45",
+          "original": "var19",
+          "renamed": "portraitLayoutY"
+        },
+        {
+          "start": 63525,
+          "end": 63538,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63551,
+          "end": 63564,
+          "symbol": "L:qj.g(I)V#56",
+          "original": "var9Lifetime2",
+          "renamed": "nameStripHeight"
+        },
+        {
+          "start": 63587,
+          "end": 63591,
+          "symbol": "L:qj.g(I)V#34",
+          "original": "var8",
+          "renamed": "headSpriteAlias"
+        },
+        {
           "start": 63592,
           "end": 63593,
           "symbol": "M:jp.c(II)V",
           "original": "c",
           "renamed": "drawTransparent"
+        },
+        {
+          "start": 63595,
+          "end": 63600,
+          "symbol": "L:qj.g(I)V#46",
+          "original": "var20",
+          "renamed": "headSprite"
         },
         {
           "start": 63601,
@@ -929621,11 +933084,46 @@
           "renamed": "canvasWidth"
         },
         {
+          "start": 63618,
+          "end": 63623,
+          "symbol": "L:qj.g(I)V#44",
+          "original": "var18",
+          "renamed": "portraitLayoutX"
+        },
+        {
+          "start": 63624,
+          "end": 63637,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63647,
+          "end": 63652,
+          "symbol": "L:qj.g(I)V#46",
+          "original": "var20",
+          "renamed": "headSprite"
+        },
+        {
           "start": 63653,
           "end": 63660,
           "symbol": "F:mn.field_z:I",
           "original": "field_z",
           "renamed": "canvasHeight"
+        },
+        {
+          "start": 63663,
+          "end": 63668,
+          "symbol": "L:qj.g(I)V#45",
+          "original": "var19",
+          "renamed": "portraitLayoutY"
+        },
+        {
+          "start": 63669,
+          "end": 63682,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
         },
         {
           "start": 63716,
@@ -929647,6 +933145,62 @@
           "symbol": "F:ak.field_f:[Ljava/lang/String;",
           "original": "field_f",
           "renamed": "playerNames"
+        },
+        {
+          "start": 63739,
+          "end": 63752,
+          "symbol": "L:qj.g(I)V#50",
+          "original": "var6Lifetime2",
+          "renamed": "portraitPlayerId"
+        },
+        {
+          "start": 63755,
+          "end": 63760,
+          "symbol": "L:qj.g(I)V#44",
+          "original": "var18",
+          "renamed": "portraitLayoutX"
+        },
+        {
+          "start": 63761,
+          "end": 63774,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63785,
+          "end": 63790,
+          "symbol": "L:qj.g(I)V#45",
+          "original": "var19",
+          "renamed": "portraitLayoutY"
+        },
+        {
+          "start": 63791,
+          "end": 63804,
+          "symbol": "L:qj.g(I)V#54",
+          "original": "var7Lifetime4",
+          "renamed": "portraitSlot"
+        },
+        {
+          "start": 63843,
+          "end": 63856,
+          "symbol": "L:qj.g(I)V#50",
+          "original": "var6Lifetime2",
+          "renamed": "portraitPlayerId"
+        },
+        {
+          "start": 63870,
+          "end": 63883,
+          "symbol": "L:qj.g(I)V#50",
+          "original": "var6Lifetime2",
+          "renamed": "portraitPlayerId"
+        },
+        {
+          "start": 63886,
+          "end": 63899,
+          "symbol": "L:qj.g(I)V#50",
+          "original": "var6Lifetime2",
+          "renamed": "portraitPlayerId"
         },
         {
           "start": 63907,
@@ -1085670,10 +1089224,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "ca7baf2c423c9908ac79b0e2e8f14aea03556c9b9e8f16d669c6fff1d681e128",
+    "rulesSha256": "01ba434f5eee3fd960098d948ddf9053bb74922c11b7f35bada675e9849933e6",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "05c9b19e461604e3051bd4b73dec7f196797c3687b0dc78d1d0a74e2a82bb121",
+    "outputTreeSha256": "f8512cb0262a59ebf2fd9cd047d0ef9128bc84f2455833c3ad37b858a739a1f3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1085693,10 +1089247,14 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 1025518,
-        "traceSha256": "7c0b739e6633ba7aec49dbd96ff7467ddf54d0f1977ab658bba9d61b7d7e5fd4",
+        "checks": 1038982,
+        "traceSha256": "e63466325e3f2a5026073495be7f1b04b66023f10f259e9094bc24b3a1c940c7",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "spectatorSelectionFixtures": true,
+        "progressUpdateFixtures": true,
+        "leaveMatchFixtures": true,
+        "deferredScoreTableFixtures": true,
         "collisionSelectionFixtures": true,
         "ballSubstepFixtures": true,
         "ballLossFixtures": true,
