@@ -72,11 +72,11 @@ final class ChocolateBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("chocolate", -28138)) {
           return false;
         }
-        nl.chocolateNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.backgroundSpriteArchive);
+        IncomingPacketHelpers.chocolateNearSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_near", (byte) 114, AchievementIcon.backgroundSpriteArchive);
         chocolateMidSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.backgroundSpriteArchive);
         CappedUrlRequest.chocolateSpiresSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.backgroundSpriteArchive);
         QuickChatPhraseRegistry.chocolateFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
-        QuickChatParameterType.field_i = jh.a(0, nl.chocolateNearSprite);
+        QuickChatParameterType.field_i = jh.a(0, IncomingPacketHelpers.chocolateNearSprite);
         FullscreenFailureDialog.field_hb = jh.a(0, chocolateMidSprite);
         StatefulWidgetRenderer.field_w = jh.a(0, CappedUrlRequest.chocolateSpiresSprite);
         u.chocolateSmallFarSprite = pl.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.backgroundSpriteArchive);
@@ -146,7 +146,7 @@ final class ChocolateBackground extends BackgroundScene {
             SoundPlayback.a(0, 26746, var6, colorIndex, 1, QuickChatPhraseRegistry.chocolateFarSprite);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          GameplayRenderHelpers.drawOffsetParallaxLayers(nl.chocolateNearSprite, destinationX, 640, destinationY, chocolateMidSprite, 95, var6.sprite, scroll16, colorIndex, 1, CappedUrlRequest.chocolateSpiresSprite, 0);
+          GameplayRenderHelpers.drawOffsetParallaxLayers(IncomingPacketHelpers.chocolateNearSprite, destinationX, 640, destinationY, chocolateMidSprite, 95, var6.sprite, scroll16, colorIndex, 1, CappedUrlRequest.chocolateSpiresSprite, 0);
           if (!obfuscationGuard) {
             field_t = (String) null;
             return;
@@ -179,7 +179,7 @@ final class ChocolateBackground extends BackgroundScene {
     final boolean hasSprites(byte obfuscationGuard) {
         if (obfuscationGuard > -91) {
           field_y = (String) null;
-          if (nl.chocolateNearSprite == null) {
+          if (IncomingPacketHelpers.chocolateNearSprite == null) {
             return false;
           }
           if (null == chocolateMidSprite) {
@@ -199,7 +199,7 @@ final class ChocolateBackground extends BackgroundScene {
           }
           return false;
         }
-        if (nl.chocolateNearSprite == null) {
+        if (IncomingPacketHelpers.chocolateNearSprite == null) {
           return false;
         }
         if (null == chocolateMidSprite) {

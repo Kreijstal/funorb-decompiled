@@ -252,7 +252,7 @@ final class ValidationIconWidget extends FocusableWidget {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (rf.connectionPhase == BitPacketBuffer.readyToSendHandshake) {
+          if (GameConnectionHelpers.connectionPhase == BitPacketBuffer.readyToSendHandshake) {
             TextFieldValidator.outgoingPackets.position = 0;
             AchievementBrowserScreen.field_r = null;
             if (param0 != null) {
@@ -307,15 +307,15 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
             ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
-            rf.connectionPhase = DiagnosticTextLine.awaitingValidationReply;
+            GameConnectionHelpers.connectionPhase = DiagnosticTextLine.awaitingValidationReply;
           }
-          if (DiagnosticTextLine.awaitingValidationReply == rf.connectionPhase &&
-            vd.ensureGamePacketBytes(20, 1)) {
+          if (DiagnosticTextLine.awaitingValidationReply == GameConnectionHelpers.connectionPhase &&
+            PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
             var9Lifetime1 = jl.incomingPackets.readUnsignedByte(255);
             jl.incomingPackets.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              rf.connectionPhase = ClientResourceHelpers.awaitingValidationStrings;
+              GameConnectionHelpers.connectionPhase = ClientResourceHelpers.awaitingValidationStrings;
               ArchiveSourceManager.field_f = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -327,22 +327,22 @@ final class ValidationIconWidget extends FocusableWidget {
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                vd.ensureGamePacketBytes(20, Widget.d((byte) -59));
+                PacketReceiveHelpers.ensureGamePacketBytes(20, Widget.d((byte) -59));
                 AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, jl.incomingPackets));
                 jl.incomingPackets.position = 0;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
-                rf.connectionPhase = SocialTabbedPanel.awaitingValidationBody;
+                GameConnectionHelpers.connectionPhase = SocialTabbedPanel.awaitingValidationBody;
                 ga.incomingPacketLength = -1;
               }
             }
           }
-          if (rf.connectionPhase == ClientResourceHelpers.awaitingValidationStrings) {
+          if (GameConnectionHelpers.connectionPhase == ClientResourceHelpers.awaitingValidationStrings) {
             var9Lifetime2 = 2;
-            if (vd.ensureGamePacketBytes(20, var9Lifetime2)) {
+            if (PacketReceiveHelpers.ensureGamePacketBytes(20, var9Lifetime2)) {
               var10Lifetime1 = jl.incomingPackets.readUnsignedShort(65280);
               jl.incomingPackets.position = 0;
-              if (vd.ensureGamePacketBytes(20, var10Lifetime1)) {
+              if (PacketReceiveHelpers.ensureGamePacketBytes(20, var10Lifetime1)) {
                 var11 = ArchiveSourceManager.field_f.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   ArchiveSourceManager.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
@@ -354,7 +354,7 @@ final class ValidationIconWidget extends FocusableWidget {
               }
             }
           }
-          if (SocialTabbedPanel.awaitingValidationBody == rf.connectionPhase &&
+          if (SocialTabbedPanel.awaitingValidationBody == GameConnectionHelpers.connectionPhase &&
             TextWidgetRenderer.ensureGamePacketBody((byte) -92)) {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
               var9_ref_String = jl.incomingPackets.readNullableCp1252String(param6 - 4);
@@ -374,7 +374,7 @@ final class ValidationIconWidget extends FocusableWidget {
           }
           if (null == WhirlpoolHasher.gameTransport) {
             if (RadialSelectorRenderer.field_d) {
-              if (MembershipBenefitsScreen.f(param6 ^ -6788) > 30000L) {
+              if (MembershipBenefitsScreen.getMillisSinceGameRead(param6 ^ -6788) > 30000L) {
                 DirectByteStorage.field_e = DisplayModeInfo.field_b;
               } else {
                 DirectByteStorage.field_e = gd.field_e;

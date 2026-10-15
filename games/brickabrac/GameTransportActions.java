@@ -13,7 +13,7 @@ final class GameTransportActions {
         if (WhirlpoolHasher.gameTransport == null) {
           return false;
         }
-        if (!rf.connectionPhase.allowsGameTransport(-26774)) {
+        if (!GameConnectionHelpers.connectionPhase.allowsGameTransport(-26774)) {
           return false;
         }
         return true;

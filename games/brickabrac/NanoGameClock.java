@@ -49,7 +49,7 @@ final class NanoGameClock extends GameClock {
           field_l = true;
         }
         int var1 = np.uiRowHeight + 2;
-        Ball.field_A.setBounds(-(!vd.field_e ? 0 : var1) + RectangleBody.field_q.height, !vd.field_e ? 0 : var1, 0, RectangleBody.field_q.width, (byte) 64);
+        Ball.field_A.setBounds(-(!PacketReceiveHelpers.field_e ? 0 : var1) + RectangleBody.field_q.height, !PacketReceiveHelpers.field_e ? 0 : var1, 0, RectangleBody.field_q.width, (byte) 64);
         ResourcePreparationQueue.b(124);
         HighscorePackSelector.field_k.setBounds(40, ContentTransitionLayer.field_gb.height - 40, 0, ContentTransitionLayer.field_gb.width, (byte) 64);
         sc.field_b.setBounds(30, 0, 0, rm.field_a.width, (byte) 64);
@@ -58,13 +58,13 @@ final class NanoGameClock extends GameClock {
         nk.field_a.setBounds(30, 5, 75, 78, (byte) 64);
         kk.field_b.setBounds(30, 5, 155, 48, (byte) 64);
         RasterEffectHelpers.field_b.setBounds(30, 5, 205, 48, (byte) 64);
-        int var2 = vd.field_e ? 250 : 200;
+        int var2 = PacketReceiveHelpers.field_e ? 250 : 200;
         BufferedSocket.field_h.setBounds(30, 5, 5 + var2, -var2 + 363, (byte) 64);
         HalloweenBackground.field_x.setBounds(30, 5, 370, rm.field_a.width - 10 - 365, (byte) 64);
         rl.field_e.setScrollPaneBounds(2, (byte) -128, -5 + (ll.field_e.width - 5), 5, 37, DialogMessagePanel.uiScrollbarWidth, -5 + (-5 + ll.field_e.height - 32));
         int var3 = (rm.field_a.width + 2) / 2;
         gj.field_b.setBounds(40, -40 + rm.field_a.height, 0, var3 - 2, (byte) 64);
-        if (!vd.field_e) {
+        if (!PacketReceiveHelpers.field_e) {
           var3 = 0;
         }
         VolcanicBackground.field_v.setBounds(40, rm.field_a.height - 40, var3, -var3 + rm.field_a.width, (byte) 64);

@@ -180,31 +180,31 @@ final class WidgetTheme {
           packet = new PacketBuffer(data);
           metadataPacket = packet;
           metadataPacket.position = -2 + data.length;
-          nl.decodedSpriteCount = metadataPacket.readUnsignedShort(65280);
-          GameOverlayHelpers.decodedSpriteIndices = new byte[nl.decodedSpriteCount][];
-          jh.decodedSpriteWidths = new int[nl.decodedSpriteCount];
-          SocketConnector.decodedSpriteOffsetY = new int[nl.decodedSpriteCount];
-          TextHotspotRegion.decodedSpriteHeights = new int[nl.decodedSpriteCount];
-          OutgoingPacketHelpers.decodedSpriteHasAlpha = new boolean[nl.decodedSpriteCount];
-          PopupWidgetLayer.decodedSpriteAlpha = new byte[nl.decodedSpriteCount][];
-          ArrayWidgetGroup.decodedSpriteOffsetX = new int[nl.decodedSpriteCount];
-          metadataPacket.position = -(8 * nl.decodedSpriteCount) + (-7 + data.length);
+          IncomingPacketHelpers.decodedSpriteCount = metadataPacket.readUnsignedShort(65280);
+          GameOverlayHelpers.decodedSpriteIndices = new byte[IncomingPacketHelpers.decodedSpriteCount][];
+          jh.decodedSpriteWidths = new int[IncomingPacketHelpers.decodedSpriteCount];
+          SocketConnector.decodedSpriteOffsetY = new int[IncomingPacketHelpers.decodedSpriteCount];
+          TextHotspotRegion.decodedSpriteHeights = new int[IncomingPacketHelpers.decodedSpriteCount];
+          OutgoingPacketHelpers.decodedSpriteHasAlpha = new boolean[IncomingPacketHelpers.decodedSpriteCount];
+          PopupWidgetLayer.decodedSpriteAlpha = new byte[IncomingPacketHelpers.decodedSpriteCount][];
+          ArrayWidgetGroup.decodedSpriteOffsetX = new int[IncomingPacketHelpers.decodedSpriteCount];
+          metadataPacket.position = -(8 * IncomingPacketHelpers.decodedSpriteCount) + (-7 + data.length);
           cf.decodedCanvasWidth = metadataPacket.readUnsignedShort(65280);
           FullscreenFailureDialog.decodedCanvasHeight = metadataPacket.readUnsignedShort(65280);
           paletteSize = 1 + (metadataPacket.readUnsignedByte(255) & 255);
-          for (var4 = 0; nl.decodedSpriteCount > var4; var4++) {
+          for (var4 = 0; IncomingPacketHelpers.decodedSpriteCount > var4; var4++) {
             ArrayWidgetGroup.decodedSpriteOffsetX[var4] = packet.readUnsignedShort(65280);
           }
-          for (offsetYIndex = 0; nl.decodedSpriteCount > offsetYIndex; offsetYIndex++) {
+          for (offsetYIndex = 0; IncomingPacketHelpers.decodedSpriteCount > offsetYIndex; offsetYIndex++) {
             SocketConnector.decodedSpriteOffsetY[offsetYIndex] = metadataPacket.readUnsignedShort(65280);
           }
-          for (widthIndex = 0; nl.decodedSpriteCount > widthIndex; widthIndex++) {
+          for (widthIndex = 0; IncomingPacketHelpers.decodedSpriteCount > widthIndex; widthIndex++) {
             jh.decodedSpriteWidths[widthIndex] = metadataPacket.readUnsignedShort(65280);
           }
-          for (heightIndex = 0; heightIndex < nl.decodedSpriteCount; heightIndex++) {
+          for (heightIndex = 0; heightIndex < IncomingPacketHelpers.decodedSpriteCount; heightIndex++) {
             TextHotspotRegion.decodedSpriteHeights[heightIndex] = metadataPacket.readUnsignedShort(65280);
           }
-          metadataPacket.position = -(3 * (paletteSize - 1)) + (-(nl.decodedSpriteCount * 8) + data.length - 7);
+          metadataPacket.position = -(3 * (paletteSize - 1)) + (-(IncomingPacketHelpers.decodedSpriteCount * 8) + data.length - 7);
           qp.decodedSpritePalette = new int[paletteSize];
           for (paletteIndex = 1; paletteSize > paletteIndex; paletteIndex++) {
             qp.decodedSpritePalette[paletteIndex] = metadataPacket.readUnsignedMedium((byte) -34);
@@ -216,7 +216,7 @@ final class WidgetTheme {
             field_d = (String) null;
           }
           metadataPacket.position = 0;
-          for (spriteIndex = 0; spriteIndex < nl.decodedSpriteCount; spriteIndex++) {
+          for (spriteIndex = 0; spriteIndex < IncomingPacketHelpers.decodedSpriteCount; spriteIndex++) {
             spriteWidth = jh.decodedSpriteWidths[spriteIndex];
             spriteHeight = TextHotspotRegion.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteWidth * spriteHeight;

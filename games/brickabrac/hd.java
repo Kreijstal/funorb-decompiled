@@ -59,7 +59,7 @@ final class hd {
         ga.field_i = 12;
         AlternateNumericLoginCredentials.field_s = param0 ? true : false;
         LoadingProgressDialog.field_eb = null;
-        rf.field_f = true;
+        GameConnectionHelpers.field_f = true;
         pp.field_a = 12;
         QuickChatHelpDialog.field_Sb = true;
         ValidationIconWidget.field_N = true;

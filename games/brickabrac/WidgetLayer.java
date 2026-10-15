@@ -82,17 +82,17 @@ abstract class WidgetLayer extends WidgetGroup {
             super.drawLayer(parentY, parentX, layer, (byte) -11);
             return;
           }
-          if (nl.field_e == null ||
-            !(this.width <= nl.field_e.width) ||
-            !(this.height <= nl.field_e.height)) {
-            nl.field_e = new RgbSprite(this.width, this.height);
+          if (IncomingPacketHelpers.field_e == null ||
+            !(this.width <= IncomingPacketHelpers.field_e.width) ||
+            !(this.height <= IncomingPacketHelpers.field_e.height)) {
+            IncomingPacketHelpers.field_e = new RgbSprite(this.width, this.height);
           }
-          IndexedSpriteGeometry.pushSpriteRaster(-109, nl.field_e);
+          IndexedSpriteGeometry.pushSpriteRaster(-109, IncomingPacketHelpers.field_e);
           Rasterizer2D.clear();
           this.paintLayerFrame(0, obfuscationGuard ^ -281, 0);
           super.drawLayer(-parentY - this.y, -parentX - this.x, layer, obfuscationGuard);
           sc.popRaster(-117);
-          nl.field_e.b(parentX + this.x, parentY + this.y, this.opacity256);
+          IncomingPacketHelpers.field_e.b(parentX + this.x, parentY + this.y, this.opacity256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -345,13 +345,13 @@ abstract class WidgetLayer extends WidgetGroup {
                 wc.field_b = true;
                 return;
               }
-              if (!rf.field_f) {
+              if (!GameConnectionHelpers.field_f) {
                 if (ValidationIconWidget.field_N) {
                   return;
                 }
                 ArchiveNetworkRequest.field_G = pp.field_a;
                 ga.field_i = 10;
-                rf.field_f = true;
+                GameConnectionHelpers.field_f = true;
                 LoadingProgressDialog.field_eb = QuickChatHelpDialog.field_Tb;
                 pp.field_a = -1;
                 return;

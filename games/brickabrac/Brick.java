@@ -427,25 +427,25 @@ final class Brick extends RectangleBody {
         gd.field_a = StatefulWidgetRenderer.field_z;
         int var3 = -47 / ((param0 + 22) / 61);
         if (param1 == 51) {
-          vd.field_f.lastError = 2;
+          PacketReceiveHelpers.field_f.lastError = 2;
         } else {
           if (param1 != 50) {
-            vd.field_f.lastError = 1;
+            PacketReceiveHelpers.field_f.lastError = 1;
           } else {
-            vd.field_f.lastError = 5;
+            PacketReceiveHelpers.field_f.lastError = 5;
           }
         }
         StatefulWidgetRenderer.field_z = var2;
-        vd.field_f.failureCount = vd.field_f.failureCount + 1;
-        if (2 <= vd.field_f.failureCount &&
+        PacketReceiveHelpers.field_f.failureCount = PacketReceiveHelpers.field_f.failureCount + 1;
+        if (2 <= PacketReceiveHelpers.field_f.failureCount &&
           param1 == 51) {
           return 2;
         }
-        if (vd.field_f.failureCount >= 2 &&
+        if (PacketReceiveHelpers.field_f.failureCount >= 2 &&
           param1 == 50) {
           return 5;
         }
-        if (!(vd.field_f.failureCount < 4)) {
+        if (!(PacketReceiveHelpers.field_f.failureCount < 4)) {
           return 1;
         }
         return -1;

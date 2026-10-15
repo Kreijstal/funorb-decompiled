@@ -78,14 +78,14 @@ final class SpaceBackground extends BackgroundScene {
         if (colorIndex <= -1) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, 7829367, 11184810);
           if (this.hasSprites((byte) -103)) {
-            rf.spaceSmallSprite.drawTransparent(destinationX, destinationY);
+            GameConnectionHelpers.spaceSmallSprite.drawTransparent(destinationX, destinationY);
           }
           var5 = -77 % ((-28 - obfuscationGuard) / 43);
           return;
         }
         RasterEffectHelpers.fillVerticalGradientAlpha255(destinationX, destinationY, 153, 238, 0, FireworkBurst.backgroundTintColors[colorIndex], 96);
         if (this.hasSprites((byte) -103)) {
-          rf.spaceSmallSprite.drawTransparent(destinationX, destinationY);
+          GameConnectionHelpers.spaceSmallSprite.drawTransparent(destinationX, destinationY);
         }
         var5Lifetime1 = -77 % ((-28 - obfuscationGuard) / 43);
     }
@@ -97,7 +97,7 @@ final class SpaceBackground extends BackgroundScene {
         LobbyGame.spaceNearSprite = pl.loadRgbSpriteByName("space", "space_near", (byte) -91, AchievementIcon.backgroundSpriteArchive);
         LevelResultSubmission.spaceMidSprite = pl.loadRgbSpriteByName("space", "space_mid", (byte) 115, AchievementIcon.backgroundSpriteArchive);
         ScreenNavigationHelpers.spaceFarSprite = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.backgroundSpriteArchive);
-        rf.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.backgroundSpriteArchive);
+        GameConnectionHelpers.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.backgroundSpriteArchive);
         ScreenNavigationHelpers.spaceFarSprite.bindRasterTarget();
         Rasterizer2D.drawRadialGlow(7136, 6592, 1600, 128, IntegerParsingHelpers.field_b);
         if (!obfuscationGuard) {
@@ -137,7 +137,7 @@ final class SpaceBackground extends BackgroundScene {
           if (null == ScreenNavigationHelpers.spaceFarSprite) {
             return false;
           }
-          if (rf.spaceSmallSprite != null) {
+          if (GameConnectionHelpers.spaceSmallSprite != null) {
             return null != TableNameEntry.spaceCharacterSprite ? true : false;
           }
           return false;
@@ -151,7 +151,7 @@ final class SpaceBackground extends BackgroundScene {
         if (null == ScreenNavigationHelpers.spaceFarSprite) {
           return false;
         }
-        if (rf.spaceSmallSprite != null) {
+        if (GameConnectionHelpers.spaceSmallSprite != null) {
           return null != TableNameEntry.spaceCharacterSprite ? true : false;
         }
         return false;

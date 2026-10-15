@@ -335,7 +335,7 @@ final class ParisBackground extends BackgroundScene {
             !TextWidgetRenderer.field_e) {
             return;
           }
-          vd.field_a = new BirthDateEntryPanel(0, 0, 0, 0);
+          PacketReceiveHelpers.field_a = new BirthDateEntryPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

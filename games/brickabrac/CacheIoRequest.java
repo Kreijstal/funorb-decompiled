@@ -140,7 +140,7 @@ final class CacheIoRequest extends ResourceRequest {
           stackIn_6_2 = np.uiRowHeight + 2;
           stackIn_6_3 = 0;
           stackIn_6_4 = IterableIntrusiveHashTable.field_b.width;
-          if (!vd.field_e) {
+          if (!PacketReceiveHelpers.field_e) {
             stackIn_7_5 = 0;
           } else {
             stackIn_7_5 = 4 + (DialogMessagePanel.uiScrollbarWidth + 40);

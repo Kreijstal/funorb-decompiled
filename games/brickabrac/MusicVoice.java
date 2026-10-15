@@ -249,7 +249,7 @@ final class MusicVoice extends IntrusiveNode {
               var13.nameLabel = new UiComponent(0L, TextFieldWidget.field_K);
               var13.addChild(var13.nameLabel, 0);
               var13.ratingLabel = new UiComponent(0L, OptionsScreen.field_v);
-              if (vd.field_e) {
+              if (PacketReceiveHelpers.field_e) {
                 var13.addChild(var13.ratingLabel, 0);
               }
               var13.ratingLabel.horizontalAlignment = 2;
@@ -362,7 +362,7 @@ final class MusicVoice extends IntrusiveNode {
               stackIn_155_1 = np.uiRowHeight;
               stackIn_155_2 = var20;
               stackIn_155_3 = var26_int;
-              if (vd.field_e) {
+              if (PacketReceiveHelpers.field_e) {
                 stackIn_156_4 = 42;
               } else {
                 stackIn_156_4 = 0;
@@ -405,7 +405,7 @@ final class MusicVoice extends IntrusiveNode {
               !var13.isUnindexed(0)) {
               if (0 == var13.statusLabel.pressedButton) {
                 if (var13.actionLabel.pressedButton != 0) {
-                  rf.requestRemoveOrRejectPlayer(param2, var13.playerId, true);
+                  GameConnectionHelpers.requestRemoveOrRejectPlayer(param2, var13.playerId, true);
                 } else {
                   SpriteGeometry.a(0, PlayerNameChooserPanel.pressY, var13, param1, (byte) 58, LoadingProgressDialog.pressX, 0);
                 }
@@ -791,7 +791,7 @@ final class MusicVoice extends IntrusiveNode {
                   pointX = mesh.facePointThreeX[vertexOrFace];
                   pointY = mesh.facePointThreeY[vertexOrFace];
                   pointZ = mesh.facePointThreeZ[vertexOrFace];
-                  vd.viewFacePointThreeX[vertexOrFace] = cameraXOrWorldXX + (pointY * relativeXYOrWorldXZ + (pointX * relativeXXOrWorldXY + pointZ * relativeXZOrDirectionIndex) >> 16);
+                  PacketReceiveHelpers.viewFacePointThreeX[vertexOrFace] = cameraXOrWorldXX + (pointY * relativeXYOrWorldXZ + (pointX * relativeXXOrWorldXY + pointZ * relativeXZOrDirectionIndex) >> 16);
                   NewAchievementsScreen.viewFacePointThreeY[vertexOrFace] = cameraYOrWorldYX + (relativeYZOrDirectionX * pointZ + relativeYXOrWorldYY * pointX + relativeYYOrWorldYZ * pointY >> 16);
                   BubbleDistortion.viewFacePointThreeZ[vertexOrFace] = (relativeZXOrWorldZY * pointX - (-(relativeZYOrWorldZZ * pointY) - pointZ * relativeZZOrDirectionY) >> 16) + cameraZOrWorldZX;
                   vertexOrFace++;

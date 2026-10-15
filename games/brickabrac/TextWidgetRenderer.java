@@ -406,7 +406,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
 
     final static boolean ensureGamePacketBody(byte obfuscationGuard) {
         if (ga.incomingPacketLength == -1) {
-          if (!vd.ensureGamePacketBytes(20, 1)) {
+          if (!PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
             return false;
           }
           ga.incomingPacketLength = jl.incomingPackets.readUnsignedByte(255);
@@ -416,13 +416,13 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
           desertCentreSprites = (RgbSprite[]) null;
         }
         if (-2 == ga.incomingPacketLength) {
-          if (!vd.ensureGamePacketBytes(20, 2)) {
+          if (!PacketReceiveHelpers.ensureGamePacketBytes(20, 2)) {
             return false;
           }
           ga.incomingPacketLength = jl.incomingPackets.readUnsignedShort(65280);
           jl.incomingPackets.position = 0;
         }
-        return vd.ensureGamePacketBytes(20, ga.incomingPacketLength);
+        return PacketReceiveHelpers.ensureGamePacketBytes(20, ga.incomingPacketLength);
     }
 
     public final int getPreferredWidth(Widget widget, int obfuscationGuard) {
@@ -898,7 +898,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               stackIn_10_1 = null;
               stackIn_10_2 = null;
               stackIn_10_3 = 0L;
-              if (vd.field_e) {
+              if (PacketReceiveHelpers.field_e) {
                 stackIn_11_1 = null;
                 stackIn_11_2 = null;
                 stackIn_11_4 = OptionsScreen.field_v;
@@ -944,7 +944,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               stackIn_27_1 = null;
               stackIn_27_2 = null;
               stackIn_27_3 = 0L;
-              if (vd.field_e) {
+              if (PacketReceiveHelpers.field_e) {
                 stackIn_28_1 = null;
                 stackIn_28_2 = null;
                 stackIn_28_4 = TextFieldWidget.field_K;
@@ -1101,7 +1101,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
               }
               var13.field_mc.text = Integer.toString(var13.protocolWord16);
               var13.field_mc.setBounds(np.uiRowHeight, var32, 200, 48, (byte) 64);
-              stackIn_66_0 = (!vd.field_e) ? 200 : 250;
+              stackIn_66_0 = (!PacketReceiveHelpers.field_e) ? 200 : 250;
               var34_intLifetime1 = stackIn_66_0;
               var13.field_ec.setBounds(np.uiRowHeight, var32, var34_intLifetime1, -2 + (365 - var34_intLifetime1), (byte) 64);
               var35_int = QuickChatCategoryDefinition.field_z;

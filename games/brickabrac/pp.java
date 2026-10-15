@@ -161,8 +161,8 @@ final class pp {
     }
 
     final static void a(byte param0) {
-        vd.field_f.failureCount = 0;
-        vd.field_f.lastError = 0;
+        PacketReceiveHelpers.field_f.failureCount = 0;
+        PacketReceiveHelpers.field_f.lastError = 0;
         int var1 = -90 % ((-32 - param0) / 62);
     }
 

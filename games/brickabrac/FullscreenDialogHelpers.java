@@ -235,7 +235,7 @@ final class FullscreenDialogHelpers {
             UsernameSuggestionPanel.fullscreenDialogButtonActions[1] = 2;
             ValidationStatus.fullscreenDialogRows[4] = u.field_f;
             UsernameSuggestionPanel.fullscreenDialogButtonActions[0] = 5;
-            ValidationStatus.fullscreenDialogRows[2] = rf.field_e;
+            ValidationStatus.fullscreenDialogRows[2] = GameConnectionHelpers.field_e;
             ValidationStatus.fullscreenDialogRows[5] = "";
             ValidationStatus.fullscreenDialogRows[3] = di.field_c;
             for (prefixFillIndex = 0; prefixFillIndex < rowIndexOrPrefixCount; prefixFillIndex++) {

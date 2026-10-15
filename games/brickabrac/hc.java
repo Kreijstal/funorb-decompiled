@@ -239,8 +239,8 @@ final class hc {
           var12 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);
           var13 = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "button", 2);
           var14 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_active", 2), (byte) -110);
-          rf.field_c = new UiComponent(0L, var8);
-          rf.field_c.frameSprites = var14;
+          GameConnectionHelpers.field_c = new UiComponent(0L, var8);
+          GameConnectionHelpers.field_c.frameSprites = var14;
           ReportAbuseDialog.field_Zb = new UiComponent(0L, (UiComponent) null);
           ReportAbuseDialog.field_Zb.sprite = pl.loadRgbSpriteByName("lobby", "closebutton", (byte) -90, param3);
           ReportAbuseDialog.field_Zb.activeSprite = pl.loadRgbSpriteByName("lobby", "closebutton_mouseover", (byte) 119, param3);

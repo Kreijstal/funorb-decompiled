@@ -507,10 +507,10 @@ final class ChatLobbyUiHelpers {
             }
             if (responseKind != 2 &&
               3 != responseKind) {
-              nl.pendingLobbyGame = null;
+              IncomingPacketHelpers.pendingLobbyGame = null;
             } else {
-              if (null == nl.pendingLobbyGame) {
-                nl.pendingLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
+              if (null == IncomingPacketHelpers.pendingLobbyGame) {
+                IncomingPacketHelpers.pendingLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
               }
             }
             if (responseKind != 3) {

@@ -41,9 +41,9 @@ final class ActivityIndicatorWidget extends Widget {
           gd.field_a = param3;
           u.field_g = param1;
           SoftwareFramebuffer.field_a = param8;
-          vd.field_f = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
+          PacketReceiveHelpers.field_f = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
           Brick.field_x = new CacheIoWorker(param4);
-          HalloweenBackground.archiveSourceManager = new ArchiveSourceManager(vd.field_f, Brick.field_x);
+          HalloweenBackground.archiveSourceManager = new ArchiveSourceManager(PacketReceiveHelpers.field_f, Brick.field_x);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cr.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -321,7 +321,7 @@ final class ActivityIndicatorWidget extends Widget {
           boolean phaseAllowsWrite = true;
           if (WhirlpoolHasher.gameTransport != null) {
             if (0 <= keepaliveOpcode) {
-              phaseAllowsWrite = (MenuButton.loggedInConnection == rf.connectionPhase);
+              phaseAllowsWrite = (MenuButton.loggedInConnection == GameConnectionHelpers.connectionPhase);
               if ((phaseAllowsWrite) && (TextFieldValidator.outgoingPackets.position == 0 &&
                 BrickMotionPath.lastGameWriteMillis + 10000L < MonotonicTime.nowMillis(false))) {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, keepaliveOpcode);

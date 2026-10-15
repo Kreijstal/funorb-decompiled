@@ -81,7 +81,7 @@ final class IntrusiveHashIterator implements Iterator {
         if (param0) {
           field_g = (tq) null;
         }
-        stackIn_6_0 = (null != WhirlpoolHasher.gameTransport) && (MenuButton.loggedInConnection == rf.connectionPhase);
+        stackIn_6_0 = (null != WhirlpoolHasher.gameTransport) && (MenuButton.loggedInConnection == GameConnectionHelpers.connectionPhase);
         return stackIn_6_0;
     }
 

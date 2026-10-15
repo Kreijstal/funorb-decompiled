@@ -58,7 +58,7 @@ class DualLinkNode extends IntrusiveNode {
           drawY = drawY + lineHeight;
           font.drawLeft(LoginCredentials.field_j, drawX, drawY, 2, -1);
           drawY = drawY + lineHeight;
-          font.drawLeft(vd.field_d, drawX, drawY, 0, -1);
+          font.drawLeft(PacketReceiveHelpers.field_d, drawX, drawY, 0, -1);
           if (obfuscationGuard >= -96) {
             return;
           }

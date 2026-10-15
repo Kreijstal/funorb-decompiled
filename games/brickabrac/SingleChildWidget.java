@@ -629,7 +629,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         if (param0 != -24) {
           return;
         }
-        if (vd.field_e) {
+        if (PacketReceiveHelpers.field_e) {
           RectangleBody.field_q.addChild(DraggableWidget.field_N, 0);
         }
         RectangleBody.field_q.addChild(Ball.field_A, 0);

@@ -54,7 +54,7 @@ final class LevelResultSubmission extends IntrusiveNode {
           var1 = null;
           var2 = null;
           if (ScreenNavigationHelpers.quickChatChannel == 0 &&
-            null != nl.pendingLobbyGame) {
+            null != IncomingPacketHelpers.pendingLobbyGame) {
             var2 = rl.field_a;
           }
           if (2 == ScreenNavigationHelpers.quickChatChannel &&

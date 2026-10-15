@@ -10,17 +10,17 @@ final class GameUiController implements GameUiLifecycle {
     static UiComponent field_a;
 
     private final boolean pollRequiredData(boolean obfuscationGuard) {
-        if (rf.field_g == null) {
-          rf.field_g = WidgetLayerStack.requestTableData(-2, 0, 2, 10, 3);
+        if (GameConnectionHelpers.field_g == null) {
+          GameConnectionHelpers.field_g = WidgetLayerStack.requestTableData(-2, 0, 2, 10, 3);
         }
         if (!obfuscationGuard) {
           return false;
         }
-        if (rf.field_g.complete) {
+        if (GameConnectionHelpers.field_g.complete) {
           WidgetPaintStyle.field_a = true;
           TextFieldRenderer.field_A = true;
-          if (null != rf.field_g.names &&
-            null != rf.field_g.names[1][0]) {
+          if (null != GameConnectionHelpers.field_g.names &&
+            null != GameConnectionHelpers.field_g.names[1][0]) {
             TextFieldRenderer.field_A = false;
             WidgetPaintStyle.field_a = false;
             return true;
@@ -154,7 +154,7 @@ final class GameUiController implements GameUiLifecycle {
         AchievementIcon.field_s = TextChoiceDialogHitTest.a(8, obfuscationGuard);
         LevelList.field_o = TextChoiceDialogHitTest.a(9, true);
         NodeDequeCursor.field_i = TextChoiceDialogHitTest.a(10, true);
-        nl.field_a = TextChoiceDialogHitTest.a(11, true);
+        IncomingPacketHelpers.field_a = TextChoiceDialogHitTest.a(11, true);
         IntHistoryBuffer.field_i = TextChoiceDialogHitTest.a(12, true);
         QuickChatPhraseDefinition.field_C = TextChoiceDialogHitTest.a(13, true);
         FriendListUi.a(NameEntryPopup.field_Rb, FriendListUi.field_c, 0);
@@ -170,7 +170,7 @@ final class GameUiController implements GameUiLifecycle {
         AccountContentTransitionLayer.startupResources.addArchive(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         AccountContentTransitionLayer.startupResources.addArchive(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
         AccountContentTransitionLayer.startupResources.addArchive(NodeDequeCursor.field_i, false, AlternateNumericLoginCredentials.field_n, LinkWidgetRenderer.field_a);
-        AccountContentTransitionLayer.startupResources.addArchive(nl.field_a, false, fa.field_j, uo.field_a);
+        AccountContentTransitionLayer.startupResources.addArchive(IncomingPacketHelpers.field_a, false, fa.field_j, uo.field_a);
         AccountContentTransitionLayer.startupResources.addArchive(IntHistoryBuffer.field_i, false, fa.field_j, uo.field_a);
         AccountContentTransitionLayer.startupResources.addArchive(QuickChatPhraseDefinition.field_C, !obfuscationGuard ? true : false, IntHistoryBuffer.field_k, qm.field_e);
         AccountContentTransitionLayer.startupResources.addArchive(uf.field_a, false, IntHistoryBuffer.field_k, qm.field_e);
@@ -190,7 +190,7 @@ final class GameUiController implements GameUiLifecycle {
                 if (4 == var3) {
                   ParisBackground.a((byte) 24, 92.0f, Ball.field_x);
                   CacheEntry.field_C.renderClient(121);
-                  BrickGameLayerController.a(nl.field_a, IntHistoryBuffer.field_i, 2);
+                  BrickGameLayerController.a(IncomingPacketHelpers.field_a, IntHistoryBuffer.field_i, 2);
                 } else {
                   if (var3 != 5) {
                     return true;

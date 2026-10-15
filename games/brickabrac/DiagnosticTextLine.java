@@ -93,7 +93,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
         jl.field_a = 1;
         if (param0 > 27) {
           ValidationIconWidget.field_N = false;
-          rf.field_f = false;
+          GameConnectionHelpers.field_f = false;
           pp.field_a = 13;
           return;
         }

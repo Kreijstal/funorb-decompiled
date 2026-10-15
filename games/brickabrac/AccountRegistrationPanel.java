@@ -592,7 +592,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         this.registerButton = new FocusableWidget(GrowableIntList.field_d, (WidgetListener) null);
         this.backButton = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
         this.usernameField.tooltip = hh.field_a;
-        this.emailField.tooltip = rf.field_d;
+        this.emailField.tooltip = GameConnectionHelpers.field_d;
         this.emailConfirmationField.tooltip = ResourceArchive.field_e;
         this.passwordField.tooltip = IntKeyIndex.field_a;
         this.passwordConfirmationField.tooltip = BoundedFile.field_b;

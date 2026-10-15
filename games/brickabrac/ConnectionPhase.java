@@ -170,7 +170,7 @@ final class ConnectionPhase {
             return;
           }
           ArchiveSourceManager.layoutLobbyTransition(IntArrayRequest.field_j, false);
-          if (nl.pendingLobbyGame != null) {
+          if (IncomingPacketHelpers.pendingLobbyGame != null) {
             requestsButtonForCollapse = RadialSelectorRenderer.field_h;
             requestsButtonAlias = requestsButtonForCollapse;
             RadialSelectorRenderer.field_h.height = 0;
@@ -272,7 +272,7 @@ final class ConnectionPhase {
                   SingleChildWidget.field_D[settingIndex] = false;
                   settingIndex++;
                 }
-                ar.a(true, nl.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
+                ar.a(true, IncomingPacketHelpers.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
                 if (!(QuickChatHelpDialog.field_Yb < 2) &&
                   IntArrayRequest.heldKeys[12]) {
                   MeshAttributeRecord.field_g = true;
@@ -316,7 +316,7 @@ final class ConnectionPhase {
           requestsInputEnabled = (inputEnabled) && (!suppressInput) && (hc.joinRequestsPanelOpen);
           ((UiComponent) (Object) requestsRoot).updateRoot(requestsInputEnabled, -15211);
           BrickGameLayerController.field_c.tabs.processTabPresses(0);
-          if (nl.pendingLobbyGame != null) {
+          if (IncomingPacketHelpers.pendingLobbyGame != null) {
             if (GameUiController.field_e.pressedButton != 0) {
               ProxyAuthenticationRequiredException.requestReturnToLobby(-22809, gameActionOpcode);
             }
@@ -327,7 +327,7 @@ final class ConnectionPhase {
                 TextWidgetRenderer.requestCancelOpponentSearch(obfuscationGuard + 276, gameActionOpcode);
               }
             }
-            JungleBackground.a(gameActionOpcode, nl.pendingLobbyGame, true, false);
+            JungleBackground.a(gameActionOpcode, IncomingPacketHelpers.pendingLobbyGame, true, false);
           }
           return;
         } catch (java.lang.RuntimeException caughtUpdateFailure) {

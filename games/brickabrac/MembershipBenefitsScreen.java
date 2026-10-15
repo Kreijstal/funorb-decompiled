@@ -42,14 +42,14 @@ final class MembershipBenefitsScreen extends MenuScreen {
           }
           return;
         }
-        MembershipBenefitsScreen.f(-8);
+        MembershipBenefitsScreen.getMillisSinceGameRead(-8);
         if (null != MusicCrossfadeStream.nameEntryPopup) {
           MusicCrossfadeStream.nameEntryPopup.drawRoot(true, param0);
         }
     }
 
-    final static long f(int param0) {
-        if (param0 != -6792) {
+    final static long getMillisSinceGameRead(int obfuscationGuard) {
+        if (obfuscationGuard != -6792) {
           field_s = (RgbSprite) null;
           return MonotonicTime.nowMillis(false) - RichTextLayout.lastGameReadMillis;
         }

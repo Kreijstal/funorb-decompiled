@@ -204,7 +204,7 @@ final class JungleBackground extends BackgroundScene {
                   stackIn_28_0 = MatchCompleteScreen.field_A[0][var6 + 1];
                   stackIn_29_1 = (var4_int != 0);
                   stackIn_28_0.enabled = stackIn_29_1;
-                  if (!vd.field_e &&
+                  if (!PacketReceiveHelpers.field_e &&
                     var6 == 3) {
                     MatchCompleteScreen.field_A[0][var6 + 1].enabled = false;
                   }

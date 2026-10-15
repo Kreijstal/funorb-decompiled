@@ -39,7 +39,7 @@ final class hm {
           fh.pendingGameOptionsReceived = false;
           rh.matchmakingChoiceMask = new byte[(wc.field_e + 7) / 8];
           ClientResourceHelpers.currentLobbyGame = null;
-          nl.pendingLobbyGame = null;
+          IncomingPacketHelpers.pendingLobbyGame = null;
           var10_int = 0;
           for (var11 = 0; BufferedFile.gameSettingBitWidths.length > var11; var11++) {
             var10_int = var10_int + (BufferedFile.gameSettingBitWidths[var11] & 255);

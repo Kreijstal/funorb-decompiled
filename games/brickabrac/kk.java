@@ -13,8 +13,8 @@ final class kk {
     final static IndexedSprite[] buildIndexedSprites(byte obfuscationGuard) {
         int var2 = 0;
         int var3 = BrickABrac.field_J ? 1 : 0;
-        IndexedSprite[] var1 = new IndexedSprite[nl.decodedSpriteCount];
-        for (var2 = 0; nl.decodedSpriteCount > var2; var2++) {
+        IndexedSprite[] var1 = new IndexedSprite[IncomingPacketHelpers.decodedSpriteCount];
+        for (var2 = 0; IncomingPacketHelpers.decodedSpriteCount > var2; var2++) {
           var1[var2] = new IndexedSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], jh.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], GameOverlayHelpers.decodedSpriteIndices[var2], qp.decodedSpritePalette);
         }
         if (obfuscationGuard == -2) {

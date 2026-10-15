@@ -86,14 +86,14 @@ final class BufferedSocket implements Runnable {
     }
 
     final void readFully(int obfuscationGuard, byte[] data, int length, int offset) throws IOException {
-        int var5_int = 0;
-        int var6 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+        int readCount = 0;
+        int unusedGameFlag = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String targetSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (this.closed) {
             return;
@@ -102,25 +102,25 @@ final class BufferedSocket implements Runnable {
             return;
           }
           while (0 < length) {
-            var5_int = this.input.read(data, offset, length);
-            if (var5_int <= 0) {
+            readCount = this.input.read(data, offset, length);
+            if (readCount <= 0) {
               throw new EOFException();
             }
-            length = length - var5_int;
-            offset = offset + var5_int;
+            length = length - readCount;
+            offset = offset + readCount;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("wh.E(").append(obfuscationGuard).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("wh.E(").append(obfuscationGuard).append(',');
           if (data == null) {
-            stackIn_13_2 = "null";
+            targetSummary = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            targetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(length).append(',').append(offset).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(targetSummary).append(',').append(length).append(',').append(offset).append(')').toString());
         }
     }
 

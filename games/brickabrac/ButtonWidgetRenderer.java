@@ -110,7 +110,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         if (param0) {
           rasterStack = (NodeDeque) null;
           if (ScreenNavigationHelpers.quickChatChannel == 0 &&
-            null != nl.pendingLobbyGame) {
+            null != IncomingPacketHelpers.pendingLobbyGame) {
             var3 = 0;
           }
           if (ScreenNavigationHelpers.quickChatChannel == 2 &&
@@ -218,7 +218,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           return true;
         }
         if (ScreenNavigationHelpers.quickChatChannel == 0) {
-          if (null == nl.pendingLobbyGame) {
+          if (null == IncomingPacketHelpers.pendingLobbyGame) {
             if (ScreenNavigationHelpers.quickChatChannel == 2 &&
               !FileCacheStore.b(-21835160)) {
               var3 = 0;

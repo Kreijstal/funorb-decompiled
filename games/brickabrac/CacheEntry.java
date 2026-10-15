@@ -108,7 +108,7 @@ abstract class CacheEntry extends DualLinkNode {
           GameUiController.field_a = new UiComponent(0L, IntrusiveHashIterator.field_a, RadialSelectorRenderer.field_c);
           IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           Ball.field_A.addChild(FarmBackground.field_v, 0);
-          if (vd.field_e) {
+          if (PacketReceiveHelpers.field_e) {
             Ball.field_A.addChild(GameUiController.field_a, 0);
           }
           Ball.field_A.addChild(IsaacGenerator.field_b, 0);
@@ -130,12 +130,12 @@ abstract class CacheEntry extends DualLinkNode {
           HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
           rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           gj.field_b = new UiComponent(0L, fm.field_b, GameplayRenderHelpers.field_e.toUpperCase());
-          gj.field_b.enabled = vd.field_e;
+          gj.field_b.enabled = PacketReceiveHelpers.field_e;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
           stackIn_6_3 = fm.field_b;
-          if (vd.field_e) {
+          if (PacketReceiveHelpers.field_e) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
             stackIn_7_4 = MultiplayerMatch.field_e;
@@ -154,13 +154,13 @@ abstract class CacheEntry extends DualLinkNode {
           }
           ll.field_e.addChild(nk.field_a, 0);
           ll.field_e.addChild(kk.field_b, 0);
-          if (vd.field_e) {
+          if (PacketReceiveHelpers.field_e) {
             ll.field_e.addChild(RasterEffectHelpers.field_b, 0);
           }
           ll.field_e.addChild(BufferedSocket.field_h, 0);
           ll.field_e.addChild(HalloweenBackground.field_x, 0);
           ll.field_e.addChild(rl.field_e, 0);
-          if (vd.field_e) {
+          if (PacketReceiveHelpers.field_e) {
             rm.field_a.addChild(gj.field_b, 0);
           }
           rm.field_a.addChild(VolcanicBackground.field_v, 0);
@@ -184,7 +184,7 @@ abstract class CacheEntry extends DualLinkNode {
           TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           IterableIntrusiveHashTable.field_b.addChild(TextWidgetRenderer.field_b, 0);
           IterableIntrusiveHashTable.field_b.addChild(BoundedFile.field_g, 0);
-          if (vd.field_e) {
+          if (PacketReceiveHelpers.field_e) {
             IterableIntrusiveHashTable.field_b.addChild(QuickChatPhraseDefinition.field_E, 0);
           }
           IterableIntrusiveHashTable.field_b.addChild(TimedSplashScreen.field_u, 0);
@@ -285,7 +285,7 @@ abstract class CacheEntry extends DualLinkNode {
           MultiplayerMatch.field_d.addChild(RadialSelectorRenderer.field_h, 0);
           MultiplayerMatch.field_d.addChild(DraggableWidget.field_K, 0);
           MultiplayerMatch.field_d.addChild(AppletGameShell.field_e, 0);
-          TableNameEntry.field_h = new UiComponent(0L, rf.field_c, SecondaryNodeQueue.field_a.toUpperCase());
+          TableNameEntry.field_h = new UiComponent(0L, GameConnectionHelpers.field_c, SecondaryNodeQueue.field_a.toUpperCase());
           nd.field_a = new UiComponent(0L, GameUiController.field_b, fh.field_e.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -163,7 +163,7 @@ final class BytePayloadSubmission extends IntrusiveNode {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        int var3 = null != nl.pendingLobbyGame ? 1 : 0;
+        int var3 = null != IncomingPacketHelpers.pendingLobbyGame ? 1 : 0;
         if (MeshAttributeRecord.currentKeyCode == 9 &&
           QuickChatHelpDialog.a(QuickChatHelpDialog.field_Zb, -3, Under13RegistrationNoticePanel.field_K, ResourceRequest.field_z, TextFieldRenderer.field_x)) {
           if (TextFieldRenderer.field_x != 2 &&

@@ -180,7 +180,7 @@ final class IntrusiveHashTable {
         if (param0 != 7070) {
           return;
         }
-        BirthDateEntryPanel var2 = vd.field_a;
+        BirthDateEntryPanel var2 = PacketReceiveHelpers.field_a;
         if (var2 == null) {
           return;
         }

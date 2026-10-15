@@ -15,7 +15,7 @@ final class ResourcePreparationEntry {
         if (!param0) {
           return;
         }
-        IntegerParsingHelpers.quickChatHelpDialog = new QuickChatHelpDialog(MenuSelection.field_m, rf.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
+        IntegerParsingHelpers.quickChatHelpDialog = new QuickChatHelpDialog(MenuSelection.field_m, GameConnectionHelpers.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t);
     }
 
     public static void b(int param0) {

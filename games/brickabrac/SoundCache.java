@@ -236,7 +236,7 @@ final class SoundCache {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (BitPacketBuffer.readyToSendHandshake == rf.connectionPhase) {
+            if (BitPacketBuffer.readyToSendHandshake == GameConnectionHelpers.connectionPhase) {
               if (param1) {
                 var10 = (String) null;
                 NanoGameClock.field_s = AccountIntroductionPanel.createLoginCredentials(CacheEntry.field_v, 20, false, param5, (String) null);
@@ -247,30 +247,30 @@ final class SoundCache {
               TextFieldValidator.outgoingPackets.writeByte(28, 14);
               TextFieldValidator.outgoingPackets.writeByte(107, NanoGameClock.field_s.getCredentialKind(13).wireCode);
               ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
-              rf.connectionPhase = GameScreen.awaitingLoginPreludeReply;
+              GameConnectionHelpers.connectionPhase = GameScreen.awaitingLoginPreludeReply;
             }
-            if (rf.connectionPhase == GameScreen.awaitingLoginPreludeReply &&
-              vd.ensureGamePacketBytes(20, 1)) {
+            if (GameConnectionHelpers.connectionPhase == GameScreen.awaitingLoginPreludeReply &&
+              PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
               var6_int = jl.incomingPackets.readUnsignedByte(255);
               jl.incomingPackets.position = 0;
               if (var6_int == 0) {
-                rf.connectionPhase = MeshAttributeRecord.awaitingLoginSeed;
+                GameConnectionHelpers.connectionPhase = MeshAttributeRecord.awaitingLoginSeed;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var6_int;
                 ga.incomingPacketLength = -1;
-                rf.connectionPhase = MenuScreen.awaitingLoginErrorBody;
+                GameConnectionHelpers.connectionPhase = MenuScreen.awaitingLoginErrorBody;
               }
             }
-            if (rf.connectionPhase == MeshAttributeRecord.awaitingLoginSeed &&
-              vd.ensureGamePacketBytes(20, 8)) {
+            if (GameConnectionHelpers.connectionPhase == MeshAttributeRecord.awaitingLoginSeed &&
+              PacketReceiveHelpers.ensureGamePacketBytes(20, 8)) {
               PopupWidgetLayer.field_ab = jl.incomingPackets.readLong(-32768);
               jl.incomingPackets.position = 0;
               SocialListEntry.a(param4, NanoGameClock.field_s, param1, param3, false);
-              rf.connectionPhase = rq.awaitingLoginReply;
+              GameConnectionHelpers.connectionPhase = rq.awaitingLoginReply;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (rf.connectionPhase == rq.awaitingLoginReply &&
-              vd.ensureGamePacketBytes(20, 1)) {
+            if (GameConnectionHelpers.connectionPhase == rq.awaitingLoginReply &&
+              PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
               var6_intLifetime1 = jl.incomingPackets.readUnsignedByte(255);
               ParisBackground.field_t = null;
               IntrusiveHashTable.currentPacketOpcode = var6_intLifetime1;
@@ -279,7 +279,7 @@ final class SoundCache {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   ga.incomingPacketLength = -1;
-                  rf.connectionPhase = MenuScreen.awaitingLoginErrorBody;
+                  GameConnectionHelpers.connectionPhase = MenuScreen.awaitingLoginErrorBody;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -291,10 +291,10 @@ final class SoundCache {
               }
               if (decompiledFrameRemainder0) {
                 ga.incomingPacketLength = -1;
-                rf.connectionPhase = IsaacGenerator.awaitingLoginSuccessBody;
+                GameConnectionHelpers.connectionPhase = IsaacGenerator.awaitingLoginSuccessBody;
               }
             }
-            if (rf.connectionPhase == IsaacGenerator.awaitingLoginSuccessBody &&
+            if (GameConnectionHelpers.connectionPhase == IsaacGenerator.awaitingLoginSuccessBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -80)) {
               CacheEntry.field_v = jl.incomingPackets.readLong(-32768);
               gd.field_b = param5;
@@ -333,7 +333,7 @@ final class SoundCache {
               var12 = (CharSequence) ((Object) LoadingProgressDialog.field_cb);
               ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var12, 65);
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
-              rf.connectionPhase = MenuButton.loggedInConnection;
+              GameConnectionHelpers.connectionPhase = MenuButton.loggedInConnection;
               if (NanoGameClock.field_s.getCredentialKind(13) == RadialSelectorWidget.emailLoginKind) {
                 EmailConfirmationValidator.field_k.persistLoginMethod(100, EmailConfirmationValidator.e((byte) -66));
               } else {
@@ -375,7 +375,7 @@ final class SoundCache {
             if (!param2) {
               field_h = 'ﾢ';
             }
-            if (rf.connectionPhase == MenuScreen.awaitingLoginErrorBody &&
+            if (GameConnectionHelpers.connectionPhase == MenuScreen.awaitingLoginErrorBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -41)) {
               hn.closeGameTransport((byte) 58);
               if (IntrusiveHashTable.currentPacketOpcode == 7 &&
@@ -394,7 +394,7 @@ final class SoundCache {
             }
             if (WhirlpoolHasher.gameTransport == null) {
               if (RadialSelectorRenderer.field_d) {
-                if (30000L >= MembershipBenefitsScreen.f(-6792)) {
+                if (30000L >= MembershipBenefitsScreen.getMillisSinceGameRead(-6792)) {
                   DirectByteStorage.field_e = gd.field_e;
                 } else {
                   DirectByteStorage.field_e = DisplayModeInfo.field_b;

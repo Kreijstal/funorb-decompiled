@@ -97,11 +97,11 @@ final class ClientException extends RuntimeException {
         byte[] var21;
         int[] var22;
         var8 = BrickABrac.field_J ? 1 : 0;
-        var1 = new RgbSprite[nl.decodedSpriteCount];
+        var1 = new RgbSprite[IncomingPacketHelpers.decodedSpriteCount];
         if (obfuscationGuard != -835) {
           ClientException.a(false);
         }
-        for (var2 = 0; var2 < nl.decodedSpriteCount; var2++) {
+        for (var2 = 0; var2 < IncomingPacketHelpers.decodedSpriteCount; var2++) {
           var3 = TextHotspotRegion.decodedSpriteHeights[var2] * jh.decodedSpriteWidths[var2];
           var21 = GameOverlayHelpers.decodedSpriteIndices[var2];
           if (!OutgoingPacketHelpers.decodedSpriteHasAlpha[var2]) {

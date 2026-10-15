@@ -330,7 +330,7 @@ final class MenuSelection {
           this.pressCode = -88;
           this.activationCode = 0;
           if (BackgroundScene.pressedButton != 0) {
-            this.field_o = vd.field_c;
+            this.field_o = PacketReceiveHelpers.field_c;
             this.selectedIndex = pressedIndex;
             this.pressCode = BackgroundScene.pressedButton;
             this.activationCode = BackgroundScene.pressedButton;
@@ -421,7 +421,7 @@ final class MenuSelection {
         }
         this.activationCode = 0;
         if (BackgroundScene.pressedButton != 0) {
-          this.field_o = vd.field_c;
+          this.field_o = PacketReceiveHelpers.field_c;
           this.selectedIndex = pressedIndex;
           this.pressCode = BackgroundScene.pressedButton;
           this.activationCode = BackgroundScene.pressedButton;

@@ -93,7 +93,7 @@ final class ToggleButtonWidget extends FocusableWidget {
         int var2 = BrickABrac.field_J ? 1 : 0;
         ClientResourceHelpers.currentLobbyGame = null;
         fh.pendingGameOptionsReceived = false;
-        nl.pendingLobbyGame = null;
+        IncomingPacketHelpers.pendingLobbyGame = null;
         if (GameplayRenderHelpers.lobbyPlayers != null) {
           GameplayRenderHelpers.lobbyPlayers.clear((byte) -57);
           GameplayRenderHelpers.lobbyPlayers = null;

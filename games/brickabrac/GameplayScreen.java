@@ -537,7 +537,7 @@ final class GameplayScreen extends GameScreen {
           }
           if (GameClock.field_b != var20.score) {
             GameClock.field_b = var20.score;
-            vd.field_d = Integer.toString(GameClock.field_b);
+            PacketReceiveHelpers.field_d = Integer.toString(GameClock.field_b);
           }
           if (DelayedPacket.field_m != 1 + pp.a(var20, (byte) 59, this.match)) {
             DelayedPacket.field_m = pp.a(var20, (byte) -100, this.match) + 1;

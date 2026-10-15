@@ -107,7 +107,7 @@ final class ja {
           if (var5_int >= 110) {
             var7 = 0.0;
           }
-          var9 = nl.field_b;
+          var9 = IncomingPacketHelpers.field_b;
           var9.drawTransparent((-var9.canvasWidth + param2) / 2 + 7, -(int)var7 + 125);
           if (var5_int > 95) {
             var10 = -95 + var5_int;

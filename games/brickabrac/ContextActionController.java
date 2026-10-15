@@ -1692,7 +1692,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_email_tooltip", (byte) 119);
                 if (null != var2) {
-                  rf.field_d = MenuButton.a(var2, (byte) 108);
+                  GameConnectionHelpers.field_d = MenuButton.a(var2, (byte) 108);
                 }
                 var2 = nk.a("create_email_confirm_tooltip", (byte) -113);
                 if (var2 != null) {
@@ -2806,7 +2806,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_accept_afteraccept", (byte) -115);
                 if (var2 != null) {
-                  rf.field_e = MenuButton.a(var2, (byte) 121);
+                  GameConnectionHelpers.field_e = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = nk.a("fs_button_cancel", (byte) 41);
             }
@@ -3467,16 +3467,16 @@ final class ContextActionController {
                       ContextMenu.requestGamePlayerPreview(opcode, (byte) 120, 0);
                       if (unusedGameFlag != 0) {
                         DropTargetWidget.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
-                        rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
+                        GameConnectionHelpers.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
                       }
                     }}}} else {
                 DropTargetWidget.requestJoinGame(this.gameId, opcode, obfuscationGuard + 11815);
                 if (unusedGameFlag != 0) {
-                  rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
+                  GameConnectionHelpers.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
                 }
               }
             } else {
-              rf.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
+              GameConnectionHelpers.requestRemoveOrRejectPlayer(opcode, this.targetId, true);
             }
           }
           if (obfuscationGuard != 97) {
@@ -3508,7 +3508,7 @@ final class ContextActionController {
         RuntimeException decompiledCaughtException = null;
         try {
           if (actionId == 17) {
-            CircleBody.reportAbuseDialog = new ReportAbuseDialog(this.anchorComponent.screenX, this.anchorComponent.screenY, this.anchorComponent.width, this.anchorComponent.height, unusedReportOption, MenuSelection.field_m, rf.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.targetName, this.targetId);
+            CircleBody.reportAbuseDialog = new ReportAbuseDialog(this.anchorComponent.screenX, this.anchorComponent.screenY, this.anchorComponent.width, this.anchorComponent.height, unusedReportOption, MenuSelection.field_m, GameConnectionHelpers.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, this.targetName, this.targetId);
             return true;
           }
           if (obfuscationGuard < 121) {

@@ -14,7 +14,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         boolean stackIn_11_0 = false;
         var3 = BrickABrac.field_J ? 1 : 0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!nl.readNextGamePacket(ch.incomingPacketLengths, (byte) 64)))) {
+        while (!(decompiledNaturalLoopExit0 = (!IncomingPacketHelpers.readNextGamePacket(ch.incomingPacketLengths, (byte) 64)))) {
           stackIn_11_0 = this.handleGamePacket(jl.incomingPackets, (byte) 47, IntrusiveHashTable.currentPacketOpcode);
           if (var3 == 0) {
             if (stackIn_11_0) {

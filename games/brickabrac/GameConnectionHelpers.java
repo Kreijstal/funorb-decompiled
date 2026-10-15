@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf {
+final class GameConnectionHelpers {
     static String field_d;
     static UiComponent field_c;
     static boolean field_f;
@@ -21,7 +21,7 @@ final class rf {
         if (obfuscationGuard) {
           return;
         }
-        rf.a((byte) 102);
+        GameConnectionHelpers.a((byte) 102);
     }
 
     public static void a(byte param0) {

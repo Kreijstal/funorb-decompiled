@@ -73,7 +73,7 @@ final class ScrollPaneWithFooter extends UiComponent {
           if (param1.channel == 0 &&
             !MatchingTextValidator.e(-91) &&
             null == ClientResourceHelpers.currentLobbyGame &&
-            nl.pendingLobbyGame == null) {
+            IncomingPacketHelpers.pendingLobbyGame == null) {
             if (!PlayerNameChooserPanel.field_I) {
               var5 = GameRenderAudioHelpers.contextActions;
               var6 = LevelPackSelectScreen.field_x;

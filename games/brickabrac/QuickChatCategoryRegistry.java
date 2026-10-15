@@ -291,7 +291,7 @@ final class QuickChatCategoryRegistry {
           TextWidgetRenderer.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
           TranslucentNineSliceFrame.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
           gr.field_d = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
-          nl.field_b = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
+          IncomingPacketHelpers.field_b = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
           PasswordValidator.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "sliders", 2);
           SocialListEntry.field_Vb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
           TranslucentNineSliceFrame.field_l = new RgbSprite[SocialListEntry.field_Vb.length];

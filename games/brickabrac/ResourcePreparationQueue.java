@@ -105,7 +105,7 @@ final class ResourcePreparationQueue {
     }
 
     final static void b(int param0) {
-        FarmBackground.field_v.setBounds(18, 0, 0, -(!vd.field_e ? 0 : 2 + (DialogMessagePanel.uiScrollbarWidth + 2) + 40) + Ball.field_A.width, (byte) 64);
+        FarmBackground.field_v.setBounds(18, 0, 0, -(!PacketReceiveHelpers.field_e ? 0 : 2 + (DialogMessagePanel.uiScrollbarWidth + 2) + 40) + Ball.field_A.width, (byte) 64);
         GameUiController.field_a.setBounds(18, 0, -42 + Ball.field_A.width - DialogMessagePanel.uiScrollbarWidth, 42 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
         if (param0 >= 122) {
           IsaacGenerator.field_b.setScrollPaneBounds(2, (byte) -118, Ball.field_A.width, 0, 20, DialogMessagePanel.uiScrollbarWidth, Ball.field_A.height - 20);

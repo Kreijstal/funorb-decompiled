@@ -26,11 +26,11 @@ final class sm {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (vd.field_f.failureCount >= 4) {
-            if (-1 == vd.field_f.lastError) {
+          if (PacketReceiveHelpers.field_f.failureCount >= 4) {
+            if (-1 == PacketReceiveHelpers.field_f.lastError) {
               return 3;
             }
-            if (vd.field_f.lastError != -2) {
+            if (PacketReceiveHelpers.field_f.lastError != -2) {
               return 1;
             }
             return 4;
@@ -78,7 +78,7 @@ final class sm {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            vd.field_f.attachTransport(MouseInput.field_d, GamePresentationHelpers.field_a, 12);
+            PacketReceiveHelpers.field_f.attachTransport(MouseInput.field_d, GamePresentationHelpers.field_a, 12);
             MouseInput.field_d = null;
             GameplayScreen.field_j = 0;
             IndexedSpriteGeometry.field_e = null;

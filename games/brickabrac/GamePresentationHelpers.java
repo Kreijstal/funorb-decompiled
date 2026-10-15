@@ -232,8 +232,8 @@ final class GamePresentationHelpers {
         int[] pixels = null;
         int pixelIndex = 0;
         int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
-        RgbSprite[] sprites = new RgbSprite[nl.decodedSpriteCount];
-        for (spriteIndex = 0; spriteIndex < nl.decodedSpriteCount; spriteIndex++) {
+        RgbSprite[] sprites = new RgbSprite[IncomingPacketHelpers.decodedSpriteCount];
+        for (spriteIndex = 0; spriteIndex < IncomingPacketHelpers.decodedSpriteCount; spriteIndex++) {
           pixelCount = jh.decodedSpriteWidths[spriteIndex] * TextHotspotRegion.decodedSpriteHeights[spriteIndex];
           indices = GameOverlayHelpers.decodedSpriteIndices[spriteIndex];
           pixels = new int[pixelCount];

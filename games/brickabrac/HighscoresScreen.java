@@ -17,7 +17,7 @@ final class HighscoresScreen extends MenuScreen {
           return;
         }
         super.onEnter(usePointer, initialSelection, 101);
-        rf.field_g = null;
+        GameConnectionHelpers.field_g = null;
         this.packIndex = 0;
         if (IntArrayRequest.gameplayScreen != null &&
           !IntArrayRequest.gameplayScreen.networkedMatch) {
@@ -41,7 +41,7 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     final void onExit(byte obfuscationGuard) {
-        rf.field_g = null;
+        GameConnectionHelpers.field_g = null;
         if (obfuscationGuard != 79) {
           this.packIndex = -114;
         }
@@ -530,7 +530,7 @@ final class HighscoresScreen extends MenuScreen {
               }
               if (this.selection.isActivated((byte) 113) &&
                 this.packSelector.selectedPackIndex != -1) {
-                rf.field_g = null;
+                GameConnectionHelpers.field_g = null;
                 var4 = 1;
                 this.packIndex = this.packSelector.selectedPackIndex;
               }
@@ -675,15 +675,15 @@ final class HighscoresScreen extends MenuScreen {
         ContextActionController.field_g.drawRight(DebouncedValidationSource.field_d, SecondaryNodeQueue.field_b[3], var2, var3, -1);
         var2Lifetime1 = 5 * (ContextActionController.field_g.descent + ContextActionController.field_g.capHeight) / 2 + 187;
         var4 = null;
-        if (rf.field_g != null &&
-          rf.field_g.complete) {
-          if (null == rf.field_g.names) {
+        if (GameConnectionHelpers.field_g != null &&
+          GameConnectionHelpers.field_g.complete) {
+          if (null == GameConnectionHelpers.field_g.names) {
             var4_ref = BoundedFile.field_d;
           } else {
             var4_ref = ArchiveNetworkRequest.field_J;
-            var5 = rf.field_g.names[this.scoreFilterIndex];
-            var13 = rf.field_g.values[this.scoreFilterIndex];
-            var7 = gj.findTableRow(rf.field_g, VerticalScrollbar.field_Ub, -87, this.scoreFilterIndex);
+            var5 = GameConnectionHelpers.field_g.names[this.scoreFilterIndex];
+            var13 = GameConnectionHelpers.field_g.values[this.scoreFilterIndex];
+            var7 = gj.findTableRow(GameConnectionHelpers.field_g, VerticalScrollbar.field_Ub, -87, this.scoreFilterIndex);
             for (var8 = 0; 10 > var8; var8++) {
               if (var5[var8] != null) {
                 stackIn_17_0 = (var7 == var8) ? 1 : 2;
@@ -725,8 +725,8 @@ final class HighscoresScreen extends MenuScreen {
         if (QuickChatMenu.h(-26090)) {
           return;
         }
-        if (rf.field_g == null) {
-          rf.field_g = WidgetLayerStack.requestTableData(-2, this.packIndex, 2, 10, 3);
+        if (GameConnectionHelpers.field_g == null) {
+          GameConnectionHelpers.field_g = WidgetLayerStack.requestTableData(-2, this.packIndex, 2, 10, 3);
         }
         this.packSelector.updatePointerSelection(111);
     }

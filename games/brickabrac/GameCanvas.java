@@ -69,12 +69,12 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         if (param0) {
           MenuScreen var2 = (MenuScreen) null;
           GameCanvas.registerMenuScreen(43, (MenuScreen) null);
-          if (vd.field_f.pollTransport(72)) {
+          if (PacketReceiveHelpers.field_f.pollTransport(72)) {
             return 0;
           }
           return sm.b(-1);
         }
-        if (vd.field_f.pollTransport(72)) {
+        if (PacketReceiveHelpers.field_f.pollTransport(72)) {
           return 0;
         }
         return sm.b(-1);
@@ -144,11 +144,11 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           }
           ProxyAuthenticationRequiredException.a(param2 - 123);
           DualLinkDeque.field_d.updateRoot(param3, -15211);
-          if (null != vd.field_a) {
+          if (null != PacketReceiveHelpers.field_a) {
             if (TextWidgetRenderer.field_e) {
-              vd.field_a.a(DualLinkDeque.field_d.screenY, DualLinkDeque.field_d.screenX, 116, param3);
+              PacketReceiveHelpers.field_a.a(DualLinkDeque.field_d.screenY, DualLinkDeque.field_d.screenX, 116, param3);
             } else {
-              vd.field_a = null;
+              PacketReceiveHelpers.field_a = null;
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
@@ -163,7 +163,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
             }
           }
           if (LegacyUtf8Decoder.field_c.pressedButton != 0) {
-            CircleBody.reportAbuseDialog = new ReportAbuseDialog(LegacyUtf8Decoder.field_c.screenX, LegacyUtf8Decoder.field_c.screenY, LegacyUtf8Decoder.field_c.width, LegacyUtf8Decoder.field_c.height, param1, MenuSelection.field_m, rf.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, (String) null, 0L);
+            CircleBody.reportAbuseDialog = new ReportAbuseDialog(LegacyUtf8Decoder.field_c.screenX, LegacyUtf8Decoder.field_c.screenY, LegacyUtf8Decoder.field_c.width, LegacyUtf8Decoder.field_c.height, param1, MenuSelection.field_m, GameConnectionHelpers.field_c, ReportAbuseDialog.field_Zb, CappedUrlRequest.field_l, BlankScreen.field_k, DualLinkNode.field_t, (String) null, 0L);
           }
           var9 = ChatLobbyUiHelpers.rebuildChatHistoryRows(LobbyGame.field_oc, np.uiRowHeight, -13294, param0);
           if (var9 != null) {

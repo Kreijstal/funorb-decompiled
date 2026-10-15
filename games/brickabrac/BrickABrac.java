@@ -68,7 +68,7 @@ public final class BrickABrac extends InteractiveGameClient {
         int clientBranchFlag;
         LevelResultSubmission var6;
         clientBranchFlag = field_J ? 1 : 0;
-        vd.a(-127);
+        PacketReceiveHelpers.a(-127);
         MembershipBenefitsScreen.clientTick = MembershipBenefitsScreen.clientTick + 1;
         if (!QuickChatMenu.h(-26090)) {
           while (true) {
@@ -639,7 +639,7 @@ public final class BrickABrac extends InteractiveGameClient {
         HuffmanCodec.a((byte) -94);
         jj.a(true);
         IntegerParsingHelpers.a((byte) -11);
-        nl.a(-106);
+        IncomingPacketHelpers.a(-106);
         MenuSelection.b((byte) -60);
         ed.a(-104);
         BackgroundScene.a((byte) 7);
@@ -678,9 +678,9 @@ public final class BrickABrac extends InteractiveGameClient {
         ScorePopup.a((byte) -73);
         MultiplayerMatch.d(-19537);
         PlayerInputBatch.b(false);
-        vd.a(true);
+        PacketReceiveHelpers.a(true);
         TextFont.clearTextScratchBuffers();
-        rf.a((byte) 98);
+        GameConnectionHelpers.a((byte) 98);
         ObjectHistoryBuffer.a(81);
         aa.b(118);
         ic.a(false);

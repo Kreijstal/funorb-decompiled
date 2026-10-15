@@ -119,7 +119,7 @@ final class MusicPatch extends IntrusiveNode {
           }
         } else {
           if (null == ClientResourceHelpers.currentLobbyGame) {
-            if (nl.pendingLobbyGame == null) {
+            if (IncomingPacketHelpers.pendingLobbyGame == null) {
               hc.joinRequestsPanelOpen = false;
               if (IntArrayRequest.field_j > 0) {
                 IntArrayRequest.field_j = IntArrayRequest.field_j - 1;

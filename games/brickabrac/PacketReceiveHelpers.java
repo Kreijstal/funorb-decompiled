@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vd {
+final class PacketReceiveHelpers {
     static int[] viewFacePointThreeX;
     static String field_d;
     static boolean field_e;
@@ -14,10 +14,10 @@ final class vd {
     final static boolean ensureGamePacketBytes(int obfuscationGuard, int length) {
         try {
           int availableBytes = 0;
-          IOException var2 = null;
-          Throwable decompiledCaughtException = null;
+          IOException readFailure = null;
+          Throwable caughtFailure = null;
           if (obfuscationGuard != 20) {
-            vd.a(-79);
+            PacketReceiveHelpers.a(-79);
           }
           if (length <= jl.incomingPackets.position) {
             return true;
@@ -32,7 +32,7 @@ final class vd {
                 hn.closeGameTransport((byte) 123);
                 return false;
               }
-              if (MembershipBenefitsScreen.f(obfuscationGuard - 6812) <= 30000L) {
+              if (MembershipBenefitsScreen.getMillisSinceGameRead(obfuscationGuard - 6812) <= 30000L) {
                 return false;
               }
               hn.closeGameTransport((byte) 123);
@@ -49,16 +49,16 @@ final class vd {
             }
             jl.incomingPackets.position = 0;
             return true;
-          } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var2 = (IOException) (Object) decompiledCaughtException;
+          } catch (java.io.IOException caughtReadFailure) {
+            caughtFailure = caughtReadFailure;
+            readFailure = (IOException) (Object) caughtFailure;
             hn.closeGameTransport((byte) 111);
             return false;
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 
