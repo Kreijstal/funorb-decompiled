@@ -10,7 +10,7 @@ final class WidgetTheme {
     WidgetRenderer defaultFocusableRenderer;
     int field_p;
     private int field_c;
-    static String[] field_e;
+    static String[] lostBallMessages;
     int field_f;
     int field_j;
     static int chatHistoryCategoryLimit;
@@ -23,11 +23,11 @@ final class WidgetTheme {
     private boolean field_s;
 
     public static void a(int param0) {
-        field_e = null;
+        lostBallMessages = null;
         field_d = null;
         field_n = null;
         if (param0 != -31063) {
-          field_e = (String[]) null;
+          lostBallMessages = (String[]) null;
         }
     }
 

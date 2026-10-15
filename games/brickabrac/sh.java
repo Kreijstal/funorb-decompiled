@@ -4,7 +4,7 @@
 final class sh {
     static String field_b;
     static String field_c;
-    static int field_a;
+    static int collisionFace;
     static UiComponent field_d;
 
     final static WidgetTheme a(byte param0) {

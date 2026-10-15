@@ -8,7 +8,7 @@ abstract class GameClock {
     static RgbSprite halloweenFarSprite;
     static RgbSprite chocolateSmallNearSprite;
     static int field_g;
-    static RectangleBody field_c;
+    static RectangleBody collisionBody;
     static int field_b;
 
     final int waitAndAdvance(long tickDurationNanos, byte obfuscationGuard) {
@@ -92,7 +92,7 @@ abstract class GameClock {
     public static void a(byte param0) {
         chocolateSmallNearSprite = null;
         field_f = null;
-        field_c = null;
+        collisionBody = null;
         field_h = null;
         halloweenFarSprite = null;
         int var1 = 25 % ((param0 + 34) / 58);

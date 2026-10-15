@@ -5,7 +5,7 @@ final class EmailValidator extends TextFieldValidator {
     static AudioMixer field_l;
     static String field_m;
     static String field_k;
-    static int field_n;
+    static int alwaysSolidBrickTypeMask;
 
     EmailValidator(TextFieldWidget textField) {
         super(textField);
@@ -53,7 +53,7 @@ final class EmailValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 106) {
-            field_n = 85;
+            alwaysSolidBrickTypeMask = 85;
           }
           stackIn_5_0 = (null != WidgetLayerStack.a(text, (byte) -24)) ? 0 : 1;
           var3_int = stackIn_5_0;
@@ -110,13 +110,13 @@ final class EmailValidator extends TextFieldValidator {
     static {
         field_m = "Loading music";
         field_k = "Sorry, you were removed from the game you were in. This can happen if you are disconnected for too long or if the server is updated.";
-        field_n = field_n | 2;
-        field_n = field_n | 524288;
-        field_n = field_n | 1048576;
-        field_n = field_n | 33554432;
-        field_n = field_n | 67108864;
-        field_n = field_n | 268435456;
-        field_n = field_n | 2097152;
-        field_n = field_n | 4194304;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 2;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 524288;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 1048576;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 33554432;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 67108864;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 268435456;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 2097152;
+        alwaysSolidBrickTypeMask = alwaysSolidBrickTypeMask | 4194304;
     }
 }

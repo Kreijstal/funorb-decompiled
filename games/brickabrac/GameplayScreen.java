@@ -242,12 +242,12 @@ final class GameplayScreen extends GameScreen {
             }
           }
         }
-        stackIn_15_0 = (this.match.playerBoards[this.viewedPlayerId].field_M == -1) ? 0 : 1;
+        stackIn_15_0 = (this.match.playerBoards[this.viewedPlayerId].positionOrderTicks == -1) ? 0 : 1;
         var4 = stackIn_15_0;
         stackIn_19_0 = var4;
         if (!this.networkedMatch &&
           this.match.playerCount == 2 &&
-          -1 != this.match.playerBoards[-this.viewedPlayerId + 1].field_M) {
+          -1 != this.match.playerBoards[-this.viewedPlayerId + 1].positionOrderTicks) {
           stackIn_20_1 = 1;
         } else {
           stackIn_20_1 = 0;
@@ -1379,15 +1379,15 @@ final class GameplayScreen extends GameScreen {
             }
           }
           if (this.match.playerCount > 1) {
-            var6_intLifetime3 = this.match.a(125);
+            var6_intLifetime3 = this.match.getWrappedPositionInversionMask(125);
             for (var7 = 0; this.match.playerCount > var7; var7++) {
               var8 = this.match.playerBoards[var7];
               if ((1 << var7 & var6_intLifetime3) != 0) {
-                if (var8.field_M == -1) {
-                  var8.field_M = 500;
+                if (var8.positionOrderTicks == -1) {
+                  var8.positionOrderTicks = 500;
                 }
               } else {
-                var8.field_M = -1;
+                var8.positionOrderTicks = -1;
               }
             }
           }

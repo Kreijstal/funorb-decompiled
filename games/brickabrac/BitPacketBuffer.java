@@ -111,8 +111,8 @@ final class BitPacketBuffer extends PacketBuffer {
           if (var24.brickGroups != null) {
             ProducerFramebuffer.a(scaleDivisor, var24, playerId, match, destinationX, 30, destinationY);
           }
-          if (var24.field_M != -1) {
-            var10_double = (double)(500 - var24.field_M);
+          if (var24.positionOrderTicks != -1) {
+            var10_double = (double)(500 - var24.positionOrderTicks);
             var10_double = (var10_double / 666.0 + 1.0) * (var10_double / 10.0);
             var10_double = 30.0 * Math.sin(var10_double) + 60.0;
             Rasterizer2D.fillRectangleAlpha(destinationX, destinationY, var8 / scaleDivisor, var9 - scaleDivisor, 16724787, (int)var10_double);

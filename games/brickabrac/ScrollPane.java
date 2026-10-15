@@ -7,7 +7,7 @@ final class ScrollPane extends UiComponent {
     UiComponent viewport;
     VerticalScrollbar scrollbar;
     static int chatHistorySize;
-    static int field_Tb;
+    static int collisionY256;
 
     final void updateScroll(boolean obfuscationGuard, int lineStep, boolean clampMinimumFirst, int wheelDisplacement) {
         boolean discarded$0 = false;

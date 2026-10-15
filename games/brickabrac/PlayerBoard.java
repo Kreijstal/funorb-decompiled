@@ -69,7 +69,7 @@ final class PlayerBoard extends IntrusiveNode {
     int field_t;
     int field_n;
     int field_l;
-    int field_M;
+    int positionOrderTicks;
     String displayedMessage;
     int[] field_xb;
     int resultWord;
@@ -593,7 +593,7 @@ final class PlayerBoard extends IntrusiveNode {
             this.powerUpDropCounters[var10Lifetime1] = (byte)packet.readUnsignedByte(255);
           }
           this.field_r = packet.readUnsignedShort(65280);
-          this.field_M = packet.readUnsignedShort(65280);
+          this.positionOrderTicks = packet.readUnsignedShort(65280);
           this.positionWord = packet.readInt(255);
           this.field_G = this.positionWord + this.boardOffset << 8;
           stackIn_30_0 = (1 == boardMode) ? 15 : 9;
@@ -923,7 +923,7 @@ final class PlayerBoard extends IntrusiveNode {
         this.field_G = -1;
         this.powerUpDropCounters = new byte[29];
         this.messageRandom = new Random();
-        this.field_M = -1;
+        this.positionOrderTicks = -1;
         this.bubbleTick = -1;
         this.field_wb = 466;
         this.boardWidth = boardWidth;

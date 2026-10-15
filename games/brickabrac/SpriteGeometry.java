@@ -10,7 +10,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     static String field_u;
     int offsetX;
     static String field_B;
-    static int field_A;
+    static int collisionNormalX256;
     int canvasHeight;
     static String field_w;
     static int field_y;

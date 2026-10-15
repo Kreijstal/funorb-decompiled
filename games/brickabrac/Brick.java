@@ -227,21 +227,21 @@ final class Brick extends RectangleBody {
             board.teleportBall((byte) -63, this, var7);
             return;
           }
-          if ((EmailValidator.field_n & 1 << this.typeId) != 0 ||
+          if ((EmailValidator.alwaysSolidBrickTypeMask & 1 << this.typeId) != 0 ||
             var7.penetrationTicks == 0 &&
             var7.phaseTicks == 0) {
             super.onCircleContact((byte) 53, board, circle);
             var7.brickBounceCount = var7.brickBounceCount + 1;
-            if (sh.field_a != 8 &&
-              sh.field_a != 4) {
+            if (sh.collisionFace != 8 &&
+              sh.collisionFace != 4) {
               var7.velocityY256 = -var7.velocityY256;
-              var5 = DualLinkIterator.field_b * (this.velocityY256 - var7.velocityY256);
+              var5 = DualLinkIterator.collisionNormalY256 * (this.velocityY256 - var7.velocityY256);
               if (var5 < 0) {
                 var7.velocityY256 = this.velocityY256;
               }
             } else {
               var7.velocityX256 = -var7.velocityX256;
-              var5 = SpriteGeometry.field_A * (this.velocityX256 - var7.velocityX256);
+              var5 = SpriteGeometry.collisionNormalX256 * (this.velocityX256 - var7.velocityX256);
               if (0 > var5) {
                 var7.velocityX256 = this.velocityX256;
               }
@@ -256,7 +256,7 @@ final class Brick extends RectangleBody {
           var5Lifetime1 = stackIn_21_0;
           stackIn_24_0 = var5Lifetime1;
           if (this.typeId == 19 &&
-            sh.field_a != 1) {
+            sh.collisionFace != 1) {
             stackIn_26_1 = 0;
           } else {
             stackIn_26_1 = 1;
@@ -264,7 +264,7 @@ final class Brick extends RectangleBody {
           var5Lifetime2 = stackIn_24_0 & stackIn_26_1;
           stackIn_29_0 = var5Lifetime2;
           if (20 == this.typeId &&
-            sh.field_a != 2) {
+            sh.collisionFace != 2) {
             stackIn_31_1 = 0;
           } else {
             stackIn_31_1 = 1;
@@ -294,11 +294,11 @@ final class Brick extends RectangleBody {
                 this.transitionCode = dupTemp$0;
                 if (dupTemp$0 < 0) {
                   if (board.nextRandomBoundedInt(100, (byte) 62) > 65) {
-                    if (sh.field_a != 1) {
-                      if (sh.field_a == 2) {
+                    if (sh.collisionFace != 1) {
+                      if (sh.collisionFace == 2) {
                         this.transitionCode = 7;
                       } else {
-                        if (sh.field_a != 8) {
+                        if (sh.collisionFace != 8) {
                           this.transitionCode = 9;
                         } else {
                           this.transitionCode = 8;
@@ -364,7 +364,7 @@ final class Brick extends RectangleBody {
             0 == this.segmentElapsedTicks) {
             return false;
           }
-          if ((1 << this.typeId & EmailValidator.field_n) == 0 &&
+          if ((1 << this.typeId & EmailValidator.alwaysSolidBrickTypeMask) == 0 &&
             0 != ((Ball) (circle)).phaseTicks) {
             return false;
           }

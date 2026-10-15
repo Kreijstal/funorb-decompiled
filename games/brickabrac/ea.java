@@ -3,7 +3,7 @@
  */
 final class ea {
     static int field_e;
-    static int field_b;
+    static int collisionTime256;
     static int field_d;
     static String field_f;
     static int field_c;
@@ -111,7 +111,7 @@ final class ea {
           Throwable decompiledCaughtException = null;
           try {
             if (obfuscationGuard <= 59) {
-              field_b = -61;
+              collisionTime256 = -61;
             }
             stackIn_3_0 = (MouseWheelSource) (Class.forName("MouseWheelInput").newInstance());
             return stackIn_3_0;

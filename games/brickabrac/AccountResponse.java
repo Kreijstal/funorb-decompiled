@@ -8,12 +8,12 @@ final class AccountResponse {
     boolean success;
     String[] suggestedUsernames;
     boolean underThirteen;
-    static int field_f;
+    static int collisionX256;
     int responseCode;
 
     final static String b(byte param0) {
         if (param0 != -49) {
-          field_f = 94;
+          collisionX256 = 94;
           return PasswordValidator.field_m;
         }
         return PasswordValidator.field_m;
@@ -38,7 +38,7 @@ final class AccountResponse {
           if (param1 >= 0 &&
             param1 < param5.height) {
             if (param2 != -24) {
-              field_f = 13;
+              collisionX256 = 13;
             }
             param4 = param5.pixels[param0 + param5.width * param1];
             stackIn_16_0 = (param4 != 0) && ((-16777216 & param4) != 0);

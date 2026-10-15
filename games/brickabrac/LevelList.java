@@ -100,7 +100,7 @@ final class LevelList {
         hm.field_b = new String[]{ContentTransitionPhase.field_a, qm.field_c, TabbedPane.field_Pb, ResourcePreparationQueue.field_a};
         CacheEntry.field_A[16] = MeshAttributeRecord.field_d;
         qn.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
-        WidgetTheme.field_e = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, bq.field_f, jh.field_c};
+        WidgetTheme.lostBallMessages = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, bm.field_b, RectangleBody.field_t};

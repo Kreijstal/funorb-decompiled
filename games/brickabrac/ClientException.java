@@ -58,7 +58,7 @@ final class ClientException extends RuntimeException {
               var8 = var8 >> 8;
               stackIn_7_0 = var7.characterIndex;
               stackIn_7_1 = false;
-              stackIn_7_2 = var7.field_M;
+              stackIn_7_2 = var7.positionOrderTicks;
               stackIn_7_3 = var8;
               stackIn_8_4 = (var6_int == param4);
               WidgetGroup.a(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, param5, param0);

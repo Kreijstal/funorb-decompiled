@@ -104,15 +104,15 @@ final class hg {
         field_b = null;
     }
 
-    final static void a(int param0) {
-        if (param0 != -1) {
+    final static void resetCollisionSelection(int obfuscationGuard) {
+        if (obfuscationGuard != -1) {
           return;
         }
-        SpriteGeometry.field_A = 0;
-        GameClock.field_c = null;
-        ea.field_b = 0;
-        DualLinkIterator.field_b = 0;
-        sh.field_a = 0;
+        SpriteGeometry.collisionNormalX256 = 0;
+        GameClock.collisionBody = null;
+        ea.collisionTime256 = 0;
+        DualLinkIterator.collisionNormalY256 = 0;
+        sh.collisionFace = 0;
     }
 
     static {

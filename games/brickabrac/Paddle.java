@@ -141,13 +141,13 @@ final class Paddle extends RectangleBody {
           var14 = (Ball) (circle);
           var14.brickBounceCount = 0;
           var14.contactCount = var14.contactCount + 1;
-          if (sh.field_a != 1) {
-            if (sh.field_a == 2) {
+          if (sh.collisionFace != 1) {
+            if (sh.collisionFace == 2) {
               circle.velocityY256 = -circle.velocityY256;
               return;
             }
             circle.velocityX256 = -circle.velocityX256;
-            var5 = (this.velocityX256 - circle.velocityX256) * SpriteGeometry.field_A;
+            var5 = (this.velocityX256 - circle.velocityX256) * SpriteGeometry.collisionNormalX256;
             if (var5 >= 0) {
               return;
             }

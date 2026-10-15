@@ -75,11 +75,11 @@ final class MultiplayerMatch {
         var2 = 0;
         if (obfuscationGuard != -92) {
           var5 = (Ball) null;
-          discarded$1 = this.a((PlayerBoard) null, (NodeDeque) null, -18, 53, (Ball) null);
+          discarded$1 = this.advanceBallSubstep((PlayerBoard) null, (NodeDeque) null, -18, 53, (Ball) null);
         }
         for (var3 = 0; var3 < this.playerCount; var3++) {
           if (((this.playerMaskOne | (this.playerMaskThree | this.playerMaskTwo)) & 1 << var3) == 0 &&
-            this.playerBoards[var3].field_M == 0) {
+            this.playerBoards[var3].positionOrderTicks == 0) {
             var2 = var2 | 1 << var3;
           }
         }
@@ -225,8 +225,8 @@ final class MultiplayerMatch {
             }
             board.pendingMessage = null;
           }
-          if (board.field_M > 0) {
-            board.field_M = board.field_M - 1;
+          if (board.positionOrderTicks > 0) {
+            board.positionOrderTicks = board.positionOrderTicks - 1;
           }
           if (board.eyeExpressionTicks > 0) {
             fieldTemp$1 = board.eyeExpressionTicks - 1;
@@ -346,7 +346,7 @@ final class MultiplayerMatch {
                     if (var11 > 0) {
                       stackIn_159_1 = TextLineLayout.field_e;
                     } else {
-                      stackIn_159_1 = WidgetTheme.field_e;
+                      stackIn_159_1 = WidgetTheme.lostBallMessages;
                     }
                     ((PlayerBoard) (Object) stackIn_158_0).choosePendingMessage(stackIn_159_1, (byte) 75);
                   }
@@ -641,7 +641,7 @@ final class MultiplayerMatch {
                     if (1 >= this.playerCount &&
                       fallingPowerUp.typeId != 13 &&
                       var11 == 0) {
-                      stackIn_302_1 = WidgetTheme.field_e;
+                      stackIn_302_1 = WidgetTheme.lostBallMessages;
                     } else {
                       stackIn_302_1 = TextLineLayout.field_e;
                     }
@@ -689,7 +689,7 @@ final class MultiplayerMatch {
               collidingBall = (Ball) (board.activeBalls.first(-122));
               while (collidingBall != null) {
                 for (var11 = 0; var11 < 5; var11++) {
-                  if (this.a(board, audioEvents, 8, -128, collidingBall)) {
+                  if (this.advanceBallSubstep(board, audioEvents, 8, -128, collidingBall)) {
                     continue;
                   }
                   break;
@@ -877,70 +877,70 @@ final class MultiplayerMatch {
         }
     }
 
-    private final void a(Ball param0, int param1, PlayerBoard param2) {
-        int var4_int = 0;
-        NodeDeque var5 = null;
-        Brick var6 = null;
-        int var7 = BrickABrac.field_J ? 1 : 0;
+    private final void scanBallCollisions(Ball ball, int obfuscationGuard, PlayerBoard board) {
+        int groupIndex = 0;
+        NodeDeque bricks = null;
+        Brick brick = null;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          hg.a(param1);
-          for (var4_int = -1 + param2.brickGroups.length; var4_int > -1; var4_int--) {
-            var5 = param2.brickGroups[var4_int];
-            var6 = (Brick) (var5.last(~param1));
-            while (var6 != null) {
-              var6.resolveCircleCollision(param0, (byte) 119);
-              var6 = (Brick) (var5.previous(-126));
+          hg.resetCollisionSelection(obfuscationGuard);
+          for (groupIndex = -1 + board.brickGroups.length; groupIndex > -1; groupIndex--) {
+            bricks = board.brickGroups[groupIndex];
+            brick = (Brick) (bricks.last(~obfuscationGuard));
+            while (brick != null) {
+              brick.resolveCircleCollision(ball, (byte) 119);
+              brick = (Brick) (bricks.previous(-126));
             }
-            if (GameClock.field_c != null) {
+            if (GameClock.collisionBody != null) {
               break;
             }
           }
-          param2.paddle.resolveCircleCollision(param0, (byte) 110);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ak.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          board.paddle.resolveCircleCollision(ball, (byte) 110);
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "ak.J(" + (ball != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (board != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int a(int param0) {
-        int var4 = 0;
-        int var2;
-        int var3;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        var9 = BrickABrac.field_J ? 1 : 0;
-        var2 = 0;
-        var3 = 30 * this.playerCount;
-        if (param0 <= 120) {
+    final int getWrappedPositionInversionMask(int obfuscationGuard) {
+        int playerIndex = 0;
+        int inversionMask;
+        int wrapSpan;
+        int position;
+        int neighborsVisited;
+        int nextPlayer;
+        int nextPosition;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        inversionMask = 0;
+        wrapSpan = 30 * this.playerCount;
+        if (obfuscationGuard <= 120) {
           return -109;
         }
-        for (var4 = 0; var4 < this.playerCount; var4++) {
-          if (((this.playerMaskOne | (this.playerMaskThree | this.playerMaskTwo)) & 1 << var4) == 0) {
-            var5 = this.playerBoards[var4].positionWord + this.playerBoards[var4].boardOffset;
-            var6 = 0;
-            var7 = (var4 + 1) % this.playerCount;
-            while (this.playerCount - 1 > var6) {
-              if ((1 << var7 & (this.playerMaskThree | this.playerMaskTwo | this.playerMaskOne)) != 0) {
-                var7++;
-                var7 = var7 % this.playerCount;
-                var6++;
+        for (playerIndex = 0; playerIndex < this.playerCount; playerIndex++) {
+          if (((this.playerMaskOne | (this.playerMaskThree | this.playerMaskTwo)) & 1 << playerIndex) == 0) {
+            position = this.playerBoards[playerIndex].positionWord + this.playerBoards[playerIndex].boardOffset;
+            neighborsVisited = 0;
+            nextPlayer = (playerIndex + 1) % this.playerCount;
+            while (this.playerCount - 1 > neighborsVisited) {
+              if ((1 << nextPlayer & (this.playerMaskThree | this.playerMaskTwo | this.playerMaskOne)) != 0) {
+                nextPlayer++;
+                nextPlayer = nextPlayer % this.playerCount;
+                neighborsVisited++;
                 continue;
               }
-              var8 = this.playerBoards[var7].boardOffset + this.playerBoards[var7].positionWord;
-              if (var7 < var4) {
-                var8 = var8 + var3;
+              nextPosition = this.playerBoards[nextPlayer].boardOffset + this.playerBoards[nextPlayer].positionWord;
+              if (nextPlayer < playerIndex) {
+                nextPosition = nextPosition + wrapSpan;
               }
-              if (var8 >= var5) {
+              if (nextPosition >= position) {
                 break;
               }
-              var2 = var2 | 1 << var7;
+              inversionMask = inversionMask | 1 << nextPlayer;
               break;
             }
           }
         }
-        return var2;
+        return inversionMask;
     }
 
     final void applyPendingPowerUps(byte obfuscationGuard, int playerId) {
@@ -963,194 +963,194 @@ final class MultiplayerMatch {
         }
     }
 
-    private final boolean a(PlayerBoard param0, NodeDeque param1, int param2, int param3, Ball param4) {
-        boolean stackIn_99_0 = false;
-        RuntimeException stackIn_104_0 = null;
-        StringBuilder stackIn_104_1 = null;
-        String stackIn_105_2 = null;
-        StringBuilder stackIn_107_1 = null;
-        String stackIn_108_2 = null;
-        StringBuilder stackIn_110_1 = null;
-        String stackIn_111_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        Brick var9 = null;
-        Brick var10 = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+    private final boolean advanceBallSubstep(PlayerBoard board, NodeDeque audioEvents, int substepDivisor, int obfuscationGuard, Ball ball) {
+        boolean remainingFlagOneContact = false;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        StringBuilder audioContextBuilder = null;
+        String audioSummary = null;
+        StringBuilder ballContextBuilder = null;
+        String ballSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int soundCode = 0;
+        int unusedGameFlag = 0;
+        Brick contactBrick = null;
+        Brick remainingBrick = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          param4.x256 = param4.x256 + param4.velocityX256 / param2;
-          param4.y256 = param4.y256 + param4.velocityY256 / param2;
-          if (122880 < param4.y256) {
-            param4.unlink((byte) 111);
-            if (param1 != null) {
-              param1.addLast(new GameplayAudioEvent(7), (byte) 3);
+          ball.x256 = ball.x256 + ball.velocityX256 / substepDivisor;
+          ball.y256 = ball.y256 + ball.velocityY256 / substepDivisor;
+          if (122880 < ball.y256) {
+            ball.unlink((byte) 111);
+            if (audioEvents != null) {
+              audioEvents.addLast(new GameplayAudioEvent(7), (byte) 3);
             }
-            if (param0.activeBalls.isEmpty(false) &&
-              param0.queuedBalls.isEmpty(false)) {
+            if (board.activeBalls.isEmpty(false) &&
+              board.queuedBalls.isEmpty(false)) {
               if (1 == this.playerCount && (!TextFieldRenderer.field_A ||
                 0 != this.configuration.pack.packId ||
-                !(0 >= param0.levelIndex))) {
-                param0.lives = param0.lives - 1;
+                !(0 >= board.levelIndex))) {
+                board.lives = board.lives - 1;
               }
-              if (param0.lives <= 0) {
-                param0.setBriefEyeExpression(16387, 3);
-                param0.beginDefeatTransition((byte) 22);
+              if (board.lives <= 0) {
+                board.setBriefEyeExpression(16387, 3);
+                board.beginDefeatTransition((byte) 22);
               } else {
-                if (3 != param0.eyeExpression) {
-                  if (param0.eyeExpression == 6) {
-                    param0.setEyeExpression(7, true, 150);
+                if (3 != board.eyeExpression) {
+                  if (board.eyeExpression == 6) {
+                    board.setEyeExpression(7, true, 150);
                   } else {
-                    param0.setEyeExpression(3, true, 150);
+                    board.setEyeExpression(3, true, 150);
                   }
                 } else {
-                  param0.setEyeExpression(6, true, 150);
+                  board.setEyeExpression(6, true, 150);
                 }
                 if (TextFieldRenderer.field_A) {
                   WidgetLayer.a(0, 5, (byte) -124);
                 }
-                param0.resetServeWithRandomAngle(26496, true);
-                param0.stateTicks = 0;
-                param0.boardState = 4;
+                board.resetServeWithRandomAngle(26496, true);
+                board.stateTicks = 0;
+                board.boardState = 4;
               }
-              param0.choosePendingMessage(WidgetTheme.field_e, (byte) 75);
+              board.choosePendingMessage(WidgetTheme.lostBallMessages, (byte) 75);
               return false;
             }
-            param0.setBriefEyeExpression(16387, 2);
+            board.setBriefEyeExpression(16387, 2);
             return false;
           }
-          this.a(param4, -1, param0);
-          if (param3 > -125) {
+          this.scanBallCollisions(ball, -1, board);
+          if (obfuscationGuard > -125) {
             return false;
           }
-          if (null != GameClock.field_c) {
+          if (null != GameClock.collisionBody) {
             if (TextFieldRenderer.field_A) {
               if (ValidationIconWidget.field_N) {
                 if (!AlternateNumericLoginCredentials.field_s &&
-                  param4.contactCount == 39) {
+                  ball.contactCount == 39) {
                   WidgetLayer.a(0, 6, (byte) -108);
                 }
               } else {
-                param4.contactCount = 0;
+                ball.contactCount = 0;
               }
             }
-            if (39 == param4.contactCount &&
-              param1 != null) {
-              param1.addLast(new GameplayAudioEvent(5), (byte) 3);
+            if (39 == ball.contactCount &&
+              audioEvents != null) {
+              audioEvents.addLast(new GameplayAudioEvent(5), (byte) 3);
             }
-            if (param0.paddle == GameClock.field_c) {
-              if (param0.paddle.catchTicks > 0) {
-                if (param1 != null) {
-                  param1.addLast(new GameplayAudioEvent(10), (byte) 3);
+            if (board.paddle == GameClock.collisionBody) {
+              if (board.paddle.catchTicks > 0) {
+                if (audioEvents != null) {
+                  audioEvents.addLast(new GameplayAudioEvent(10), (byte) 3);
                 }
-                param0.paddle.onCircleContact((byte) 53, param0, param4);
-                param4.centerXHistory256.latestIndex = -1;
-                param4.contactCount = 0;
-                param4.centerYHistory256.latestIndex = -1;
-                param0.queuedBalls.addLast(param4, (byte) 3);
+                board.paddle.onCircleContact((byte) 53, board, ball);
+                ball.centerXHistory256.latestIndex = -1;
+                ball.contactCount = 0;
+                ball.centerYHistory256.latestIndex = -1;
+                board.queuedBalls.addLast(ball, (byte) 3);
                 return false;
               }
-              if (param1 != null) {
-                param1.addLast(new GameplayAudioEvent(0), (byte) 3);
+              if (audioEvents != null) {
+                audioEvents.addLast(new GameplayAudioEvent(0), (byte) 3);
               }
-              param0.paddle.onCircleContact((byte) 53, param0, param4);
-              param4.destroyedBrickStreak = 0;
+              board.paddle.onCircleContact((byte) 53, board, ball);
+              ball.destroyedBrickStreak = 0;
             } else {
-              GameClock.field_c.onCircleContact((byte) 53, param0, param4);
-              var9 = (Brick) (GameClock.field_c);
-              if (param1 != null) {
-                boolean decompiledFrameRemainder0 = true;
-                var7 = 1;
-                if ((var9.flags & 1) == 0) {
-                  if (var9.typeId != 28) {
-                    if (var9.typeId != 25) {
-                      if (var9.typeId != 1 &&
-                        var9.typeId != 21 &&
-                        22 != var9.typeId) {
-                        if (26 == var9.typeId &&
-                          var9.pendingTypeId != 27) {
-                          var7 = 11;
+              GameClock.collisionBody.onCircleContact((byte) 53, board, ball);
+              contactBrick = (Brick) (GameClock.collisionBody);
+              if (audioEvents != null) {
+                boolean unusedSoundBranchRemainder = true;
+                soundCode = 1;
+                if ((contactBrick.flags & 1) == 0) {
+                  if (contactBrick.typeId != 28) {
+                    if (contactBrick.typeId != 25) {
+                      if (contactBrick.typeId != 1 &&
+                        contactBrick.typeId != 21 &&
+                        22 != contactBrick.typeId) {
+                        if (26 == contactBrick.typeId &&
+                          contactBrick.pendingTypeId != 27) {
+                          soundCode = 11;
                         } else {
-                          if (19 == var9.typeId &&
-                            sh.field_a != 1) {
-                            var7 = 11;
+                          if (19 == contactBrick.typeId &&
+                            sh.collisionFace != 1) {
+                            soundCode = 11;
                           } else {
-                            if (var9.typeId == 20 &&
-                              sh.field_a != 2) {
-                              var7 = 11;
+                            if (contactBrick.typeId == 20 &&
+                              sh.collisionFace != 2) {
+                              soundCode = 11;
                             } else {
-                              if (((var9.typeId == 27)) &&
-                                ((var9.pendingTypeId != 26))) {
-                                var7 = 12;
+                              if (((contactBrick.typeId == 27)) &&
+                                ((contactBrick.pendingTypeId != 26))) {
+                                soundCode = 12;
                               }
                             }
                           }
                         }
-                        decompiledFrameRemainder0 = false;
+                        unusedSoundBranchRemainder = false;
                       }
                       else {
-                        var7 = 11;
+                        soundCode = 11;
                       }
                     } else {
-                      var7 = 9;
+                      soundCode = 9;
                     }
                   } else {
-                    var7 = 8;
+                    soundCode = 8;
                   }
                 } else {
-                  var7 = 2;
+                  soundCode = 2;
                 }
-                if (0 == param4.phaseTicks ||
-                  0 != (1 << var9.typeId & EmailValidator.field_n)) {
-                  param1.addLast(new GameplayAudioEvent(var7), (byte) 3);
+                if (0 == ball.phaseTicks ||
+                  0 != (1 << contactBrick.typeId & EmailValidator.alwaysSolidBrickTypeMask)) {
+                  audioEvents.addLast(new GameplayAudioEvent(soundCode), (byte) 3);
                 }
               }
-              if (param4.phaseTicks == 0 &&
-                var9.pendingTypeId == 0) {
+              if (ball.phaseTicks == 0 &&
+                contactBrick.pendingTypeId == 0) {
                 if (1 == this.playerCount) {
-                  param0.addBrickScore(10 + param4.destroyedBrickStreak, var9, 2);
+                  board.addBrickScore(10 + ball.destroyedBrickStreak, contactBrick, 2);
                 }
-                param4.destroyedBrickStreak = param4.destroyedBrickStreak + 1;
+                ball.destroyedBrickStreak = ball.destroyedBrickStreak + 1;
               }
             }
           }
-          this.a(param4, -1, param0);
-          if (GameClock.field_c == null) {
+          this.scanBallCollisions(ball, -1, board);
+          if (GameClock.collisionBody == null) {
             return false;
           }
-          if (param4.phaseTicks == 0) {
+          if (ball.phaseTicks == 0) {
             return true;
           }
-          if (GameClock.field_c == param0.paddle) {
+          if (GameClock.collisionBody == board.paddle) {
             return true;
           }
-          var10 = (Brick) (GameClock.field_c);
-          stackIn_99_0 = ((1 & var10.flags) != 0);
-          return stackIn_99_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_104_0 = var6;
-          stackIn_104_1 = new StringBuilder().append("ak.B(");
-          if (param0 == null) {
-            stackIn_105_2 = "null";
+          remainingBrick = (Brick) (GameClock.collisionBody);
+          remainingFlagOneContact = ((1 & remainingBrick.flags) != 0);
+          return remainingFlagOneContact;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ak.B(");
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_105_2 = "{...}";
+            boardSummary = "{...}";
           }
-          stackIn_107_1 = ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',');
-          if (param1 == null) {
-            stackIn_108_2 = "null";
+          audioContextBuilder = ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(',');
+          if (audioEvents == null) {
+            audioSummary = "null";
           } else {
-            stackIn_108_2 = "{...}";
+            audioSummary = "{...}";
           }
-          stackIn_110_1 = ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(',').append(param2).append(',').append(param3).append(',');
-          if (param4 == null) {
-            stackIn_111_2 = "null";
+          ballContextBuilder = ((StringBuilder) (Object) audioContextBuilder).append(audioSummary).append(',').append(substepDivisor).append(',').append(obfuscationGuard).append(',');
+          if (ball == null) {
+            ballSummary = "null";
           } else {
-            stackIn_111_2 = "{...}";
+            ballSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_104_0), ((StringBuilder) (Object) stackIn_110_1).append(stackIn_111_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) ballContextBuilder).append(ballSummary).append(')').toString());
         }
     }
 

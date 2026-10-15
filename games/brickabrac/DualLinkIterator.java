@@ -5,7 +5,7 @@ import java.util.*;
 
 final class DualLinkIterator implements Iterator {
     private DualLinkNode nextNode;
-    static int field_b;
+    static int collisionNormalY256;
     static GzipInflater archiveGzipInflater;
     private DualLinkDeque owner;
     static String field_i;
