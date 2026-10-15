@@ -2932,11 +2932,11 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("rating_mode_long_name,0", (byte) -122);
                 if (null != var2) {
-                  jh.field_e[0] = MenuButton.a(var2, (byte) 92);
+                  UiGeometryHelpers.rankingSortModeLabels[0] = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = AppletFlowHelpers.a("rating_mode_long_name,1", (byte) -112);
                 if (var2 != null) {
-                  jh.field_e[1] = MenuButton.a(var2, (byte) 71);
+                  UiGeometryHelpers.rankingSortModeLabels[1] = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = AppletFlowHelpers.a("graphics_config_fixed_size", (byte) -117);
                 if (var2 != null) {

@@ -54,9 +54,9 @@ final class VolcanicBackground extends BackgroundScene {
         WidgetLayerStack.volcanicMidSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_mid", (byte) -73, AchievementIcon.backgroundSpriteArchive);
         ByteArrayNode.volcanicFarSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_far", (byte) -125, AchievementIcon.backgroundSpriteArchive);
         UiCleanupHelpers.volcanicSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_small", (byte) -77, AchievementIcon.backgroundSpriteArchive);
-        NanoGameClock.field_q = jh.a(0, RasterCacheSurface.volcanicNearSprite);
-        NameEntryPopup.field_Sb = jh.a(0, WidgetLayerStack.volcanicMidSprite);
-        RectangleBody.field_p = jh.a(0, ByteArrayNode.volcanicFarSprite);
+        NanoGameClock.field_q = UiGeometryHelpers.createScaledHalfSizeSprite(0, RasterCacheSurface.volcanicNearSprite);
+        NameEntryPopup.field_Sb = UiGeometryHelpers.createScaledHalfSizeSprite(0, WidgetLayerStack.volcanicMidSprite);
+        RectangleBody.field_p = UiGeometryHelpers.createScaledHalfSizeSprite(0, ByteArrayNode.volcanicFarSprite);
         CacheIoWorker.volcanicCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_caps", 2);
         np.volcanicSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("volcanic", AchievementIcon.backgroundSpriteArchive, "volcanic_segs", 2);
         LevelList.volcanicCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("volcanic", "volcanic_centre", (byte) -67, AchievementIcon.backgroundSpriteArchive);

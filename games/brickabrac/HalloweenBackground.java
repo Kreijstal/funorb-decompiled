@@ -73,10 +73,10 @@ final class HalloweenBackground extends BackgroundScene {
         GameClock.halloweenFarSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_far", (byte) 120, AchievementIcon.backgroundSpriteArchive);
         LevelPackLoader.halloweenSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_small", (byte) 105, AchievementIcon.backgroundSpriteArchive);
         MotionWaypoint.halloweenMoonSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_moon", (byte) 102, AchievementIcon.backgroundSpriteArchive);
-        va.field_b = jh.a(0, ValidationMessageWidget.halloweenNearSprite);
-        field_u = jh.a(0, StateIconLabel.halloweenMidSprite);
-        ch.field_m = jh.a(0, GameClock.halloweenFarSprite);
-        QuickChatParameterType.field_j = jh.a(0, MotionWaypoint.halloweenMoonSprite);
+        va.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, ValidationMessageWidget.halloweenNearSprite);
+        field_u = UiGeometryHelpers.createScaledHalfSizeSprite(0, StateIconLabel.halloweenMidSprite);
+        ch.field_m = UiGeometryHelpers.createScaledHalfSizeSprite(0, GameClock.halloweenFarSprite);
+        QuickChatParameterType.field_j = UiGeometryHelpers.createScaledHalfSizeSprite(0, MotionWaypoint.halloweenMoonSprite);
         ba.halloweenCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.backgroundSpriteArchive);
         StrongCacheEntry.halloweenCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_caps", 2);
         GameConnectionShell.halloweenSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_segs", 2);

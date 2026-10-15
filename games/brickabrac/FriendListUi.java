@@ -193,7 +193,7 @@ final class FriendListUi {
             } else {
               GameScreen.friendsListPane.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
             }
-            jh.a(true, GameScreen.friendsListPane.content);
+            UiGeometryHelpers.resetListVerticalBounds(true, GameScreen.friendsListPane.content);
           }
           if (processFooterActions) {
             returnedEntry = pressedEntry;

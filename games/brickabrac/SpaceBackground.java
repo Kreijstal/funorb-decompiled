@@ -55,7 +55,7 @@ final class SpaceBackground extends BackgroundScene {
               HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            AchievementBrowserScreen.a(jh.field_d, destinationX, scroll16, colorIndex, 306, 0, 0, var8.sprite, 2, MusicVoiceMixer.field_t, destinationY);
+            AchievementBrowserScreen.a(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var8.sprite, 2, MusicVoiceMixer.field_t, destinationY);
           }
           return;
         }
@@ -68,7 +68,7 @@ final class SpaceBackground extends BackgroundScene {
             HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var7);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          AchievementBrowserScreen.a(jh.field_d, destinationX, scroll16, colorIndex, 306, 0, 0, var7.sprite, 2, MusicVoiceMixer.field_t, destinationY);
+          AchievementBrowserScreen.a(UiGeometryHelpers.spaceNearHalfSprite, destinationX, scroll16, colorIndex, 306, 0, 0, var7.sprite, 2, MusicVoiceMixer.field_t, destinationY);
         }
     }
 
@@ -103,9 +103,9 @@ final class SpaceBackground extends BackgroundScene {
         if (!obfuscationGuard) {
           BallPulseEffect.framebuffer.bindRaster((byte) 100);
           TableNameEntry.spaceCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.backgroundSpriteArchive);
-          jh.field_d = jh.a(0, LobbyGame.spaceNearSprite);
-          MusicVoiceMixer.field_t = jh.a(0, LevelResultSubmission.spaceMidSprite);
-          NodeDequeCursor.field_b = jh.a(0, ScreenNavigationHelpers.spaceFarSprite);
+          UiGeometryHelpers.spaceNearHalfSprite = UiGeometryHelpers.createScaledHalfSizeSprite(0, LobbyGame.spaceNearSprite);
+          MusicVoiceMixer.field_t = UiGeometryHelpers.createScaledHalfSizeSprite(0, LevelResultSubmission.spaceMidSprite);
+          NodeDequeCursor.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, ScreenNavigationHelpers.spaceFarSprite);
           MouseInputCleanup.spaceLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("space", AchievementIcon.backgroundSpriteArchive, "space_lever", 2);
           return true;
         }

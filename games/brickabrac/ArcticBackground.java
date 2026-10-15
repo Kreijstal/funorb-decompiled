@@ -167,9 +167,9 @@ final class ArcticBackground extends BackgroundScene {
           BallPulseEffect.arcticMidSprite = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.backgroundSpriteArchive);
           LoginPanel.arcticFarSprite = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.backgroundSpriteArchive);
           WidgetPaintStyle.arcticSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.backgroundSpriteArchive);
-          CalendarRankingHelpers.field_d = jh.a(0, ResourcePreparationQueue.arcticNearSprite);
-          LogoRenderHelpers.field_d = jh.a(0, BallPulseEffect.arcticMidSprite);
-          Brick.field_K = jh.a(0, LoginPanel.arcticFarSprite);
+          CalendarRankingHelpers.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, ResourcePreparationQueue.arcticNearSprite);
+          LogoRenderHelpers.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, BallPulseEffect.arcticMidSprite);
+          Brick.field_K = UiGeometryHelpers.createScaledHalfSizeSprite(0, LoginPanel.arcticFarSprite);
           ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_caps", 2);
           BoardPresentationHelpers.arcticSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_segs", 2);
           ga.arcticCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("arctic", "arctic_centre", (byte) -115, AchievementIcon.backgroundSpriteArchive);

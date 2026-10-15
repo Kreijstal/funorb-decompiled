@@ -1206,7 +1206,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime121 = GameplaySpriteHelpers.a(!param0, "good_grief");
           if (var2Lifetime121 != null) {
-            jh.field_c = MenuButton.a(var2Lifetime121, (byte) 82);
+            UiGeometryHelpers.goodGriefText = MenuButton.a(var2Lifetime121, (byte) 82);
           }
           var2Lifetime122 = GameplaySpriteHelpers.a(true, "instructions_pages,0");
           if (null != var2Lifetime122) {

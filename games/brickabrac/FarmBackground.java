@@ -108,9 +108,9 @@ final class FarmBackground extends BackgroundScene {
         if (obfuscationGuard) {
           FarmBackground.g(-29);
         }
-        ActivityIndicatorWidget.field_D = jh.a(0, LevelPackCard.farmNearSprite);
-        WidgetTextLayout.field_b = jh.a(0, FontRequestHelpers.farmMidSprite);
-        MainMenuScreen.field_w = jh.a(0, MouseInput.farmFarSprite);
+        ActivityIndicatorWidget.field_D = UiGeometryHelpers.createScaledHalfSizeSprite(0, LevelPackCard.farmNearSprite);
+        WidgetTextLayout.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, FontRequestHelpers.farmMidSprite);
+        MainMenuScreen.field_w = UiGeometryHelpers.createScaledHalfSizeSprite(0, MouseInput.farmFarSprite);
         return true;
     }
 

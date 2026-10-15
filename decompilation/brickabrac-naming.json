@@ -1484,6 +1484,14 @@
       "renamedSymbol": "C:BufferedFile"
     },
     {
+      "symbol": "C:jh",
+      "originalName": "jh",
+      "to": "UiGeometryHelpers",
+      "evidence": "jh.java: Half-size sprite scaling and direct-child list-bound reset helpers; decoded sprite widths, tooltip timing and localized labels retain their independently named roles.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:UiGeometryHelpers"
+    },
+    {
       "symbol": "C:ji",
       "originalName": "ji",
       "to": "IterableIntrusiveHashTable",
@@ -10505,7 +10513,7 @@
       "to": "tooltipDisplayDurationTicks",
       "evidence": "jh.java: A table-driven tooltip model checks all null/equal/different text transitions, delay/display/suppression boundaries, pending-pointer capture, movement, noncanonical partial updates, signed overflow and both client branch-flag values. Multi-frame traces verify getters and anchor setters. Independent code-unit swaps and substring references verify raw UTF16 reversal, underscore removal, case sensitivity, empty strings, guard side effects and null-failure order.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:jh.tooltipDisplayDurationTicks:I"
+      "renamedSymbol": "F:UiGeometryHelpers.tooltipDisplayDurationTicks:I"
     },
     {
       "symbol": "F:jh.field_b:[I",
@@ -10513,7 +10521,31 @@
       "to": "decodedSpriteWidths",
       "evidence": "jh.java: Per-sprite cropped index row widths.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:jh.decodedSpriteWidths:[I"
+      "renamedSymbol": "F:UiGeometryHelpers.decodedSpriteWidths:[I"
+    },
+    {
+      "symbol": "F:jh.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "to": "goodGriefText",
+      "evidence": "jh.java: Literal Good grief! text, retained in the localized Quick Chat exclamation list.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:UiGeometryHelpers.goodGriefText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:jh.field_d:Ljp;",
+      "originalName": "field_d",
+      "to": "spaceNearHalfSprite",
+      "evidence": "jh.java: Space scene setup assigns the half-size scaling result of the space_near sprite; rendering retains the separate full-size source.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:UiGeometryHelpers.spaceNearHalfSprite:LRgbSprite;"
+    },
+    {
+      "symbol": "F:jh.field_e:[Ljava/lang/String;",
+      "originalName": "field_e",
+      "to": "rankingSortModeLabels",
+      "evidence": "jh.java: Literal Showing by rating and Showing by win percentage labels, with existing per-entry localization writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:UiGeometryHelpers.rankingSortModeLabels:[Ljava/lang/String;"
     },
     {
       "symbol": "F:ji.field_a:Lmf;",
@@ -36666,6 +36698,70 @@
       "evidence": "jg.java: Reviewed flush read-cache overlap declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:BufferedFile.flush(I)V#3"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#0",
+      "originalName": "var2",
+      "to": "halfSizeSprite",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#0"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#1",
+      "originalName": "var2_ref",
+      "to": "failure",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#1"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#2",
+      "originalName": "stackIn_1_0",
+      "to": "result",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#2"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#3",
+      "originalName": "stackIn_4_0",
+      "to": "failureContext",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#3"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#4",
+      "originalName": "stackIn_4_1",
+      "to": "contextBuilder",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#4"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#5",
+      "originalName": "stackIn_5_2",
+      "to": "sourceSummary",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#5"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#6",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#6"
+    },
+    {
+      "symbol": "L:jh.a(ILjp;)Ljp;#7",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#7"
     },
     {
       "symbol": "L:ji.a(JI)Lnm;#0",
@@ -65916,6 +66012,30 @@
       "renamedSymbol": "M:BufferedFile.flush(I)V"
     },
     {
+      "symbol": "M:jh.a(B)V",
+      "originalName": "a",
+      "to": "clearSharedReferences",
+      "evidence": "jh.java: Evaluates the retained arithmetic guard before nulling sprite, decoded-width, text and sort-label references; tooltipDisplayDurationTicks is retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiGeometryHelpers.clearSharedReferences(B)V"
+    },
+    {
+      "symbol": "M:jh.a(ILjp;)Ljp;",
+      "originalName": "a",
+      "to": "createScaledHalfSizeSprite",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;"
+    },
+    {
+      "symbol": "M:jh.a(ZLmh;)V",
+      "originalName": "a",
+      "to": "resetListVerticalBounds",
+      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The frozen input has the documented non-advancing child defect; naming does not repair it. The false guard calls arithmetic cleanup before the parent reset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V"
+    },
+    {
       "symbol": "M:ji.a(BJLnm;)V",
       "originalName": "a",
       "to": "put",
@@ -92586,6 +92706,46 @@
       "evidence": "jg.java: Writes pending bytes and refreshes read-cache overlap; guard -1.",
       "confidence": "reviewed",
       "renamedSymbol": "P:BufferedFile.flush(I)V#0"
+    },
+    {
+      "symbol": "P:jh.a(B)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "jh.java: Evaluates the retained arithmetic guard before nulling sprite, decoded-width, text and sort-label references; tooltipDisplayDurationTicks is retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:UiGeometryHelpers.clearSharedReferences(B)V#0"
+    },
+    {
+      "symbol": "P:jh.a(ILjp;)Ljp;#0",
+      "originalName": "param0",
+      "to": "destinationX",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#0"
+    },
+    {
+      "symbol": "P:jh.a(ILjp;)Ljp;#1",
+      "originalName": "param1",
+      "to": "source",
+      "evidence": "jh.java: Allocates half the source canvas dimensions, binds the new sprite as raster target, invokes the source scaling routine at destinationX and y0 with those dimensions, then restores the software framebuffer. Scene setup passes destinationX0. The separate SpriteInputHelpers half-size routine retains its distinct implementation; this helper has no new pixel-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#1"
+    },
+    {
+      "symbol": "P:jh.a(ZLmh;)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The frozen input has the documented non-advancing child defect; naming does not repair it. The false guard calls arithmetic cleanup before the parent reset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#0"
+    },
+    {
+      "symbol": "P:jh.a(ZLmh;)V#1",
+      "originalName": "param1",
+      "to": "list",
+      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The frozen input has the documented non-advancing child defect; naming does not repair it. The false guard calls arithmetic cleanup before the parent reset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#1"
     },
     {
       "symbol": "P:ji.<init>(I)V#0",
@@ -120697,9 +120857,9 @@
     },
     {
       "symbol": "C:jh",
-      "renamedSymbol": "C:jh",
+      "renamedSymbol": "C:UiGeometryHelpers",
       "originalName": "jh",
-      "renamedName": "jh",
+      "renamedName": "UiGeometryHelpers",
       "declaration": {
         "file": "jh.java",
         "start": 50,
@@ -139067,7 +139227,7 @@
     },
     {
       "symbol": "F:jh.field_a:I",
-      "renamedSymbol": "F:jh.tooltipDisplayDurationTicks:I",
+      "renamedSymbol": "F:UiGeometryHelpers.tooltipDisplayDurationTicks:I",
       "originalName": "field_a",
       "renamedName": "tooltipDisplayDurationTicks",
       "declaration": {
@@ -139078,7 +139238,7 @@
     },
     {
       "symbol": "F:jh.field_b:[I",
-      "renamedSymbol": "F:jh.decodedSpriteWidths:[I",
+      "renamedSymbol": "F:UiGeometryHelpers.decodedSpriteWidths:[I",
       "originalName": "field_b",
       "renamedName": "decodedSpriteWidths",
       "declaration": {
@@ -139089,9 +139249,9 @@
     },
     {
       "symbol": "F:jh.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:jh.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:UiGeometryHelpers.goodGriefText:Ljava/lang/String;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "goodGriefText",
       "declaration": {
         "file": "jh.java",
         "start": 175,
@@ -139100,9 +139260,9 @@
     },
     {
       "symbol": "F:jh.field_d:Ljp;",
-      "renamedSymbol": "F:jh.field_d:LRgbSprite;",
+      "renamedSymbol": "F:UiGeometryHelpers.spaceNearHalfSprite:LRgbSprite;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "spaceNearHalfSprite",
       "declaration": {
         "file": "jh.java",
         "start": 148,
@@ -139111,9 +139271,9 @@
     },
     {
       "symbol": "F:jh.field_e:[Ljava/lang/String;",
-      "renamedSymbol": "F:jh.field_e:[Ljava/lang/String;",
+      "renamedSymbol": "F:UiGeometryHelpers.rankingSortModeLabels:[Ljava/lang/String;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "rankingSortModeLabels",
       "declaration": {
         "file": "jh.java",
         "start": 75,
@@ -230631,7 +230791,7 @@
     },
     {
       "symbol": "L:jh.a(B)V#0",
-      "renamedSymbol": "L:jh.a(B)V#0",
+      "renamedSymbol": "L:UiGeometryHelpers.clearSharedReferences(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -230642,9 +230802,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#0",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#0",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "halfSizeSprite",
       "declaration": {
         "file": "jh.java",
         "start": 243,
@@ -230653,9 +230813,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#1",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#1",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#1",
       "originalName": "var2_ref",
-      "renamedName": "var2_ref",
+      "renamedName": "failure",
       "declaration": {
         "file": "jh.java",
         "start": 281,
@@ -230664,9 +230824,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#2",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#2",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#2",
       "originalName": "stackIn_1_0",
-      "renamedName": "stackIn_1_0",
+      "renamedName": "result",
       "declaration": {
         "file": "jh.java",
         "start": 309,
@@ -230675,9 +230835,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#3",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#3",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#3",
       "originalName": "stackIn_4_0",
-      "renamedName": "stackIn_4_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "jh.java",
         "start": 354,
@@ -230686,9 +230846,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#4",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#4",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#4",
       "originalName": "stackIn_4_1",
-      "renamedName": "stackIn_4_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "jh.java",
         "start": 396,
@@ -230697,9 +230857,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#5",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#5",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#5",
       "originalName": "stackIn_5_2",
-      "renamedName": "stackIn_5_2",
+      "renamedName": "sourceSummary",
       "declaration": {
         "file": "jh.java",
         "start": 431,
@@ -230708,9 +230868,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#6",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#6",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#6",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "jh.java",
         "start": 476,
@@ -230719,9 +230879,9 @@
     },
     {
       "symbol": "L:jh.a(ILjp;)Ljp;#7",
-      "renamedSymbol": "L:jh.a(ILRgbSprite;)LRgbSprite;#7",
+      "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#7",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "jh.java",
         "start": 820,
@@ -230730,7 +230890,7 @@
     },
     {
       "symbol": "L:jh.a(ZLmh;)V#0",
-      "renamedSymbol": "L:jh.a(ZLUiComponent;)V#0",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -230741,7 +230901,7 @@
     },
     {
       "symbol": "L:jh.a(ZLmh;)V#1",
-      "renamedSymbol": "L:jh.a(ZLUiComponent;)V#1",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -230752,7 +230912,7 @@
     },
     {
       "symbol": "L:jh.a(ZLmh;)V#2",
-      "renamedSymbol": "L:jh.a(ZLUiComponent;)V#2",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -230763,7 +230923,7 @@
     },
     {
       "symbol": "L:jh.a(ZLmh;)V#3",
-      "renamedSymbol": "L:jh.a(ZLUiComponent;)V#3",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -230774,7 +230934,7 @@
     },
     {
       "symbol": "L:jh.a(ZLmh;)V#4",
-      "renamedSymbol": "L:jh.a(ZLUiComponent;)V#4",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#4",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -361773,9 +361933,9 @@
     },
     {
       "symbol": "M:jh.a(B)V",
-      "renamedSymbol": "M:jh.a(B)V",
+      "renamedSymbol": "M:UiGeometryHelpers.clearSharedReferences(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearSharedReferences",
       "declaration": {
         "file": "jh.java",
         "start": 1399,
@@ -361784,9 +361944,9 @@
     },
     {
       "symbol": "M:jh.a(ILjp;)Ljp;",
-      "renamedSymbol": "M:jh.a(ILRgbSprite;)LRgbSprite;",
+      "renamedSymbol": "M:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createScaledHalfSizeSprite",
       "declaration": {
         "file": "jh.java",
         "start": 205,
@@ -361795,9 +361955,9 @@
     },
     {
       "symbol": "M:jh.a(ZLmh;)V",
-      "renamedSymbol": "M:jh.a(ZLUiComponent;)V",
+      "renamedSymbol": "M:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetListVerticalBounds",
       "declaration": {
         "file": "jh.java",
         "start": 1588,
@@ -420568,9 +420728,9 @@
     },
     {
       "symbol": "P:jh.a(B)V#0",
-      "renamedSymbol": "P:jh.a(B)V#0",
+      "renamedSymbol": "P:UiGeometryHelpers.clearSharedReferences(B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "jh.java",
         "start": 1406,
@@ -420579,9 +420739,9 @@
     },
     {
       "symbol": "P:jh.a(ILjp;)Ljp;#0",
-      "renamedSymbol": "P:jh.a(ILRgbSprite;)LRgbSprite;#0",
+      "renamedSymbol": "P:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "destinationX",
       "declaration": {
         "file": "jh.java",
         "start": 211,
@@ -420590,9 +420750,9 @@
     },
     {
       "symbol": "P:jh.a(ILjp;)Ljp;#1",
-      "renamedSymbol": "P:jh.a(ILRgbSprite;)LRgbSprite;#1",
+      "renamedSymbol": "P:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "source",
       "declaration": {
         "file": "jh.java",
         "start": 222,
@@ -420601,9 +420761,9 @@
     },
     {
       "symbol": "P:jh.a(ZLmh;)V#0",
-      "renamedSymbol": "P:jh.a(ZLUiComponent;)V#0",
+      "renamedSymbol": "P:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "jh.java",
         "start": 1598,
@@ -420612,9 +420772,9 @@
     },
     {
       "symbol": "P:jh.a(ZLmh;)V#1",
-      "renamedSymbol": "P:jh.a(ZLUiComponent;)V#1",
+      "renamedSymbol": "P:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "list",
       "declaration": {
         "file": "jh.java",
         "start": 1609,
@@ -476375,7 +476535,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "6f6b1481f6eb47179aa4d3a65c207c5f7f024a1932300f671326bf223754310f",
+      "outputSha256": "c3cdf7ac1b0ff3e36ba7018f9ad0328495686d9dc1f8188a6d816bad742bc518",
       "edits": [
         {
           "start": 76,
@@ -482473,6 +482633,20 @@
           "symbol": "C:hp",
           "original": "hp",
           "renamed": "IntHistoryBuffer"
+        },
+        {
+          "start": 22885,
+          "end": 22887,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 22888,
+          "end": 22889,
+          "symbol": "M:jh.a(B)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
         },
         {
           "start": 22912,
@@ -501732,7 +501906,7 @@
       "original": "ai.java",
       "renamed": "ParisBackground.java",
       "inputSha256": "c979355cd91cb67bf404900b319b4a914464eaa212063deae368f7db6b292f74",
-      "outputSha256": "89839a8eb99d448782089501703580a58e0eeffc4f9b821c0ceef6f77a724915",
+      "outputSha256": "865c3174233f134341e16d8d91918a6357055809e8ad650eb5503b5fd3c4eb47",
       "edits": [
         {
           "start": 50,
@@ -502449,6 +502623,20 @@
           "renamed": "IntrusiveHashTable"
         },
         {
+          "start": 4675,
+          "end": 4677,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4678,
+          "end": 4679,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 4683,
           "end": 4685,
           "symbol": "C:qa",
@@ -502554,6 +502742,20 @@
           "renamed": "UnderwaterBackground"
         },
         {
+          "start": 4901,
+          "end": 4903,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4904,
+          "end": 4905,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 4909,
           "end": 4911,
           "symbol": "C:th",
@@ -502573,6 +502775,20 @@
           "symbol": "C:de",
           "original": "de",
           "renamed": "MembershipBenefitsScreen"
+        },
+        {
+          "start": 4945,
+          "end": 4947,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4948,
+          "end": 4949,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 4953,
@@ -564639,7 +564855,7 @@
       "original": "c.java",
       "renamed": "GrowableIntList.java",
       "inputSha256": "cee84cc17c49661059f7a36d8297b8b4d3911d0885adeaede78f12ffd4b73da9",
-      "outputSha256": "cd49955733bf7553e7ab7afa32b9494ebd6d7ce612e0a795852c1283834fb191",
+      "outputSha256": "aa89746945c0614fa56365a34c850e0224afc85348cbee7b124579d5aa094eae",
       "edits": [
         {
           "start": 50,
@@ -565566,6 +565782,20 @@
           "renamed": "enabled"
         },
         {
+          "start": 3363,
+          "end": 3365,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 3366,
+          "end": 3367,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
+        },
+        {
           "start": 3374,
           "end": 3376,
           "symbol": "C:fo",
@@ -565837,6 +566067,20 @@
           "symbol": "F:mh.field_eb:Z",
           "original": "field_eb",
           "renamed": "enabled"
+        },
+        {
+          "start": 4295,
+          "end": 4297,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4298,
+          "end": 4299,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
         },
         {
           "start": 4306,
@@ -566180,6 +566424,20 @@
           "symbol": "F:mh.field_eb:Z",
           "original": "field_eb",
           "renamed": "enabled"
+        },
+        {
+          "start": 5461,
+          "end": 5463,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 5464,
+          "end": 5465,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
         },
         {
           "start": 5472,
@@ -566567,6 +566825,20 @@
           "renamed": "enabled"
         },
         {
+          "start": 6762,
+          "end": 6764,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 6765,
+          "end": 6766,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
+        },
+        {
           "start": 6773,
           "end": 6775,
           "symbol": "C:fo",
@@ -566938,6 +567210,20 @@
           "renamed": "enabled"
         },
         {
+          "start": 8116,
+          "end": 8118,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 8119,
+          "end": 8120,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
+        },
+        {
           "start": 8127,
           "end": 8129,
           "symbol": "C:fo",
@@ -567288,6 +567574,20 @@
           "renamed": "enabled"
         },
         {
+          "start": 9323,
+          "end": 9325,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 9326,
+          "end": 9327,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
+        },
+        {
           "start": 9334,
           "end": 9336,
           "symbol": "C:fo",
@@ -567559,6 +567859,20 @@
           "symbol": "F:mh.field_eb:Z",
           "original": "field_eb",
           "renamed": "enabled"
+        },
+        {
+          "start": 10301,
+          "end": 10303,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 10304,
+          "end": 10305,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
         },
         {
           "start": 10312,
@@ -567902,6 +568216,20 @@
           "symbol": "F:mh.field_eb:Z",
           "original": "field_eb",
           "renamed": "enabled"
+        },
+        {
+          "start": 11521,
+          "end": 11523,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 11524,
+          "end": 11525,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
         },
         {
           "start": 11532,
@@ -575778,7 +576106,7 @@
       "original": "ci.java",
       "renamed": "SpaceBackground.java",
       "inputSha256": "bee280085454415ef92adfc767b96e9a6afedede32309406d18d50a3452829a1",
-      "outputSha256": "eb1f7da11b9fb5bee84182b4d7dd9488ca0c3bf84c1bea5c367e35afe94447a5",
+      "outputSha256": "587b2e60b974953a352d42ac9c99655030f5f5f2dc51459212a1d2b057edf023",
       "edits": [
         {
           "start": 50,
@@ -576516,6 +576844,20 @@
           "renamed": "AchievementBrowserScreen"
         },
         {
+          "start": 1981,
+          "end": 1983,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 1984,
+          "end": 1991,
+          "symbol": "F:jh.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "spaceNearHalfSprite"
+        },
+        {
           "start": 1993,
           "end": 1999,
           "symbol": "P:ci.a(IBIII)V#2",
@@ -576682,6 +577024,20 @@
           "symbol": "C:af",
           "original": "af",
           "renamed": "AchievementBrowserScreen"
+        },
+        {
+          "start": 2490,
+          "end": 2492,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2493,
+          "end": 2500,
+          "symbol": "F:jh.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "spaceNearHalfSprite"
         },
         {
           "start": 2502,
@@ -577258,6 +577614,34 @@
           "renamed": "backgroundSpriteArchive"
         },
         {
+          "start": 3806,
+          "end": 3808,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 3809,
+          "end": 3816,
+          "symbol": "F:jh.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "spaceNearHalfSprite"
+        },
+        {
+          "start": 3819,
+          "end": 3821,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 3822,
+          "end": 3823,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 3827,
           "end": 3829,
           "symbol": "C:om",
@@ -577279,6 +577663,20 @@
           "renamed": "MusicVoiceMixer"
         },
         {
+          "start": 3864,
+          "end": 3866,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 3867,
+          "end": 3868,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 3872,
           "end": 3874,
           "symbol": "C:pn",
@@ -577298,6 +577696,20 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "NodeDequeCursor"
+        },
+        {
+          "start": 3908,
+          "end": 3910,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 3911,
+          "end": 3912,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 3916,
@@ -620421,7 +620833,7 @@
       "original": "dp.java",
       "renamed": "HalloweenBackground.java",
       "inputSha256": "510137ab99fc63903b8321f8800db51a0b5683d0299e33fd07844c56fcd77327",
-      "outputSha256": "1c994485d63e05161eeb83fbc919ee8aa0544b2333658db892a20e561d6ef87d",
+      "outputSha256": "6f44e4ad401b7255997a14e9d4bb016d062ffbddab4bbaef34eb8b6e05e26c7f",
       "edits": [
         {
           "start": 50,
@@ -621453,6 +621865,20 @@
           "renamed": "backgroundSpriteArchive"
         },
         {
+          "start": 2730,
+          "end": 2732,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2733,
+          "end": 2734,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 2738,
           "end": 2740,
           "symbol": "C:nf",
@@ -621467,6 +621893,20 @@
           "renamed": "halloweenNearSprite"
         },
         {
+          "start": 2769,
+          "end": 2771,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2772,
+          "end": 2773,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 2777,
           "end": 2779,
           "symbol": "C:ni",
@@ -621479,6 +621919,20 @@
           "symbol": "F:ni.field_Ub:Ljp;",
           "original": "field_Ub",
           "renamed": "halloweenMidSprite"
+        },
+        {
+          "start": 2812,
+          "end": 2814,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2815,
+          "end": 2816,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 2820,
@@ -621500,6 +621954,20 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "QuickChatParameterType"
+        },
+        {
+          "start": 2854,
+          "end": 2856,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2857,
+          "end": 2858,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 2862,
@@ -632358,7 +632826,7 @@
       "original": "ee.java",
       "renamed": "MotionWaypoint.java",
       "inputSha256": "02b7eb5f4397985173ace5d19cd2eb1f0d9f5c8f0c12206353af20d32c4ec07e",
-      "outputSha256": "8f7fa3bd30a46bdb786f59cadba45bdacafb1dc1788516f0f76a22d6233588ee",
+      "outputSha256": "facbe5ef230ee305a110f6a14e89f51dd5c0fb3aa9a856f9d22a5524122b4bcc",
       "edits": [
         {
           "start": 50,
@@ -632592,6 +633060,13 @@
           "renamed": "decodedSpriteIndices"
         },
         {
+          "start": 856,
+          "end": 858,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 859,
           "end": 866,
           "symbol": "F:jh.field_b:[I",
@@ -632653,6 +633128,13 @@
           "symbol": "F:cn.field_a:[[B",
           "original": "field_a",
           "renamed": "decodedSpriteIndices"
+        },
+        {
+          "start": 1036,
+          "end": 1038,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 1039,
@@ -633789,7 +634271,7 @@
       "original": "eh.java",
       "renamed": "WidgetTheme.java",
       "inputSha256": "46347787c4695ab28b218fc6aa8835d2524e4f8783004fa1ca030c837423e483",
-      "outputSha256": "826b5239585b36e4f43a86484263062c7661a88ee631ce850e0f84e84b5fff20",
+      "outputSha256": "54d7fb1918c63a467583c58db0624a85f0424d89683f2b94bc5fb9ae41f211f8",
       "edits": [
         {
           "start": 50,
@@ -634989,6 +635471,13 @@
           "renamed": "decodedSpriteCount"
         },
         {
+          "start": 6552,
+          "end": 6554,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 6555,
           "end": 6562,
           "symbol": "F:jh.field_b:[I",
@@ -635402,6 +635891,13 @@
           "renamed": "widthIndex"
         },
         {
+          "start": 7358,
+          "end": 7360,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 7361,
           "end": 7368,
           "symbol": "F:jh.field_b:[I",
@@ -635729,6 +636225,13 @@
           "symbol": "L:eh.a([BZ)V#25",
           "original": "var5",
           "renamed": "spriteWidth"
+        },
+        {
+          "start": 8147,
+          "end": 8149,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 8150,
@@ -660059,7 +660562,7 @@
       "original": "fi.java",
       "renamed": "ArcticBackground.java",
       "inputSha256": "2f434dee13d670122728b8f655c8b88e2e583bb8e8346518397e000d20aa28d3",
-      "outputSha256": "b22b745e3afb443d65bcb09cc3d3b9ad30c7e22eb29671eebdda411c73e7c383",
+      "outputSha256": "c46d33d163a8a9e052671ab964ad900566f3202ae1fe62a9d549bd11ac4b63ac",
       "edits": [
         {
           "start": 50,
@@ -661875,6 +662378,20 @@
           "renamed": "CalendarRankingHelpers"
         },
         {
+          "start": 5471,
+          "end": 5473,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 5474,
+          "end": 5475,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 5479,
           "end": 5480,
           "symbol": "C:s",
@@ -661896,6 +662413,20 @@
           "renamed": "LogoRenderHelpers"
         },
         {
+          "start": 5514,
+          "end": 5516,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 5517,
+          "end": 5518,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 5522,
           "end": 5524,
           "symbol": "C:kc",
@@ -661915,6 +662446,20 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 5558,
+          "end": 5560,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 5561,
+          "end": 5562,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 5566,
@@ -689065,7 +689610,7 @@
       "original": "gi.java",
       "renamed": "DesertBackground.java",
       "inputSha256": "902fb2d9e57550a0263449a7daa63901064ec79d7347c0dbe99e9b493f4b0213",
-      "outputSha256": "aea9cb197ea210b4efc2148ceae09871795381b5ee595b776c68c29626b221b0",
+      "outputSha256": "5d8d2fed2646ffeccc5aeedb08bf68d43d252d72460bfcc62dd7fca777bf62b2",
       "edits": [
         {
           "start": 50,
@@ -689873,6 +690418,20 @@
           "renamed": "SecondaryNodeQueue"
         },
         {
+          "start": 2191,
+          "end": 2193,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2194,
+          "end": 2195,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 2199,
           "end": 2201,
           "symbol": "C:wn",
@@ -689894,6 +690453,20 @@
           "renamed": "Widget"
         },
         {
+          "start": 2235,
+          "end": 2237,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2238,
+          "end": 2239,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 2243,
           "end": 2245,
           "symbol": "C:lj",
@@ -689906,6 +690479,20 @@
           "symbol": "F:lj.field_q:Ljp;",
           "original": "field_q",
           "renamed": "desertMidSprite"
+        },
+        {
+          "start": 2279,
+          "end": 2281,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2282,
+          "end": 2283,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 2287,
@@ -757093,7 +757680,7 @@
       "original": "ip.java",
       "renamed": "JungleBackground.java",
       "inputSha256": "fda3621e32924036def33b6bfe07ca8973e98afaba868384ede85499d943a5e8",
-      "outputSha256": "b88f27e4c690a47452ab7f1769683c8df90fe261b756e294d538ba47b6313d32",
+      "outputSha256": "c9b2b106cfd2e1aa8c4caa14b6951be2f48cacb6baf032b033c87eba04367a9a",
       "edits": [
         {
           "start": 50,
@@ -760655,6 +761242,20 @@
           "renamed": "CacheEntry"
         },
         {
+          "start": 35514,
+          "end": 35516,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 35517,
+          "end": 35518,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 35525,
           "end": 35532,
           "symbol": "F:ch.field_f:Ljp;",
@@ -760667,6 +761268,20 @@
           "symbol": "C:fk",
           "original": "fk",
           "renamed": "HuffmanCodec"
+        },
+        {
+          "start": 35556,
+          "end": 35558,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 35559,
+          "end": 35560,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 35564,
@@ -760688,6 +761303,20 @@
           "symbol": "C:ib",
           "original": "ib",
           "renamed": "WidgetGroup"
+        },
+        {
+          "start": 35598,
+          "end": 35600,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 35601,
+          "end": 35602,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 35609,
@@ -778965,10 +779594,24 @@
     },
     {
       "original": "jh.java",
-      "renamed": "jh.java",
+      "renamed": "UiGeometryHelpers.java",
       "inputSha256": "72f43d99798a9e36d81c4650f5c5bf70c979da08f7f20365731a2e46b8f5af6a",
-      "outputSha256": "8551a024cc37ed780029443c69cb92c6e7a15176776e33de47bfeebb8713094f",
+      "outputSha256": "0fd52ef8ee47d7582c891d31d322218a87b837018ff5d3d7a77d00d1083597ee",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 75,
+          "end": 82,
+          "symbol": "F:jh.field_e:[Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "rankingSortModeLabels"
+        },
         {
           "start": 99,
           "end": 106,
@@ -778991,11 +779634,39 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 148,
+          "end": 155,
+          "symbol": "F:jh.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "spaceNearHalfSprite"
+        },
+        {
+          "start": 175,
+          "end": 182,
+          "symbol": "F:jh.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "goodGriefText"
+        },
+        {
           "start": 202,
           "end": 204,
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 205,
+          "end": 206,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
+          "start": 211,
+          "end": 217,
+          "symbol": "P:jh.a(ILjp;)Ljp;#0",
+          "original": "param0",
+          "renamed": "destinationX"
         },
         {
           "start": 219,
@@ -779005,11 +779676,32 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 222,
+          "end": 228,
+          "symbol": "P:jh.a(ILjp;)Ljp;#1",
+          "original": "param1",
+          "renamed": "source"
+        },
+        {
           "start": 240,
           "end": 242,
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 243,
+          "end": 247,
+          "symbol": "L:jh.a(ILjp;)Ljp;#0",
+          "original": "var2",
+          "renamed": "halfSizeSprite"
+        },
+        {
+          "start": 281,
+          "end": 289,
+          "symbol": "L:jh.a(ILjp;)Ljp;#1",
+          "original": "var2_ref",
+          "renamed": "failure"
         },
         {
           "start": 306,
@@ -779019,11 +779711,60 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 309,
+          "end": 320,
+          "symbol": "L:jh.a(ILjp;)Ljp;#2",
+          "original": "stackIn_1_0",
+          "renamed": "result"
+        },
+        {
+          "start": 354,
+          "end": 365,
+          "symbol": "L:jh.a(ILjp;)Ljp;#3",
+          "original": "stackIn_4_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 396,
+          "end": 407,
+          "symbol": "L:jh.a(ILjp;)Ljp;#4",
+          "original": "stackIn_4_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 431,
+          "end": 442,
+          "symbol": "L:jh.a(ILjp;)Ljp;#5",
+          "original": "stackIn_5_2",
+          "renamed": "sourceSummary"
+        },
+        {
+          "start": 476,
+          "end": 501,
+          "symbol": "L:jh.a(ILjp;)Ljp;#6",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 534,
+          "end": 538,
+          "symbol": "L:jh.a(ILjp;)Ljp;#0",
+          "original": "var2",
+          "renamed": "halfSizeSprite"
+        },
+        {
           "start": 545,
           "end": 547,
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 548,
+          "end": 554,
+          "symbol": "P:jh.a(ILjp;)Ljp;#1",
+          "original": "param1",
+          "renamed": "source"
         },
         {
           "start": 555,
@@ -779033,11 +779774,25 @@
           "renamed": "canvasWidth"
         },
         {
+          "start": 568,
+          "end": 574,
+          "symbol": "P:jh.a(ILjp;)Ljp;#1",
+          "original": "param1",
+          "renamed": "source"
+        },
+        {
           "start": 575,
           "end": 582,
           "symbol": "F:mn.field_z:I",
           "original": "field_z",
           "renamed": "canvasHeight"
+        },
+        {
+          "start": 599,
+          "end": 603,
+          "symbol": "L:jh.a(ILjp;)Ljp;#0",
+          "original": "var2",
+          "renamed": "halfSizeSprite"
         },
         {
           "start": 604,
@@ -779047,11 +779802,39 @@
           "renamed": "bindRasterTarget"
         },
         {
+          "start": 619,
+          "end": 625,
+          "symbol": "P:jh.a(ILjp;)Ljp;#1",
+          "original": "param1",
+          "renamed": "source"
+        },
+        {
+          "start": 628,
+          "end": 634,
+          "symbol": "P:jh.a(ILjp;)Ljp;#0",
+          "original": "param0",
+          "renamed": "destinationX"
+        },
+        {
+          "start": 639,
+          "end": 645,
+          "symbol": "P:jh.a(ILjp;)Ljp;#1",
+          "original": "param1",
+          "renamed": "source"
+        },
+        {
           "start": 646,
           "end": 653,
           "symbol": "F:mn.field_x:I",
           "original": "field_x",
           "renamed": "canvasWidth"
+        },
+        {
+          "start": 659,
+          "end": 665,
+          "symbol": "P:jh.a(ILjp;)Ljp;#1",
+          "original": "param1",
+          "renamed": "source"
         },
         {
           "start": 666,
@@ -779082,6 +779865,111 @@
           "renamed": "bindRaster"
         },
         {
+          "start": 726,
+          "end": 737,
+          "symbol": "L:jh.a(ILjp;)Ljp;#2",
+          "original": "stackIn_1_0",
+          "renamed": "result"
+        },
+        {
+          "start": 740,
+          "end": 744,
+          "symbol": "L:jh.a(ILjp;)Ljp;#0",
+          "original": "var2",
+          "renamed": "halfSizeSprite"
+        },
+        {
+          "start": 763,
+          "end": 774,
+          "symbol": "L:jh.a(ILjp;)Ljp;#2",
+          "original": "stackIn_1_0",
+          "renamed": "result"
+        },
+        {
+          "start": 820,
+          "end": 846,
+          "symbol": "L:jh.a(ILjp;)Ljp;#7",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 860,
+          "end": 885,
+          "symbol": "L:jh.a(ILjp;)Ljp;#6",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 888,
+          "end": 914,
+          "symbol": "L:jh.a(ILjp;)Ljp;#7",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 926,
+          "end": 934,
+          "symbol": "L:jh.a(ILjp;)Ljp;#1",
+          "original": "var2_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 937,
+          "end": 962,
+          "symbol": "L:jh.a(ILjp;)Ljp;#6",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 974,
+          "end": 985,
+          "symbol": "L:jh.a(ILjp;)Ljp;#3",
+          "original": "stackIn_4_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 988,
+          "end": 996,
+          "symbol": "L:jh.a(ILjp;)Ljp;#1",
+          "original": "var2_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 1008,
+          "end": 1019,
+          "symbol": "L:jh.a(ILjp;)Ljp;#4",
+          "original": "stackIn_4_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 1065,
+          "end": 1071,
+          "symbol": "P:jh.a(ILjp;)Ljp;#0",
+          "original": "param0",
+          "renamed": "destinationX"
+        },
+        {
+          "start": 1100,
+          "end": 1106,
+          "symbol": "P:jh.a(ILjp;)Ljp;#1",
+          "original": "param1",
+          "renamed": "source"
+        },
+        {
+          "start": 1130,
+          "end": 1141,
+          "symbol": "L:jh.a(ILjp;)Ljp;#5",
+          "original": "stackIn_5_2",
+          "renamed": "sourceSummary"
+        },
+        {
+          "start": 1183,
+          "end": 1194,
+          "symbol": "L:jh.a(ILjp;)Ljp;#5",
+          "original": "stackIn_5_2",
+          "renamed": "sourceSummary"
+        },
+        {
           "start": 1234,
           "end": 1236,
           "symbol": "C:qb",
@@ -779096,6 +779984,55 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 1261,
+          "end": 1272,
+          "symbol": "L:jh.a(ILjp;)Ljp;#3",
+          "original": "stackIn_4_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 1301,
+          "end": 1312,
+          "symbol": "L:jh.a(ILjp;)Ljp;#4",
+          "original": "stackIn_4_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 1321,
+          "end": 1332,
+          "symbol": "L:jh.a(ILjp;)Ljp;#5",
+          "original": "stackIn_5_2",
+          "renamed": "sourceSummary"
+        },
+        {
+          "start": 1399,
+          "end": 1400,
+          "symbol": "M:jh.a(B)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 1406,
+          "end": 1412,
+          "symbol": "P:jh.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1448,
+          "end": 1454,
+          "symbol": "P:jh.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1471,
+          "end": 1478,
+          "symbol": "F:jh.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "spaceNearHalfSprite"
+        },
+        {
           "start": 1495,
           "end": 1502,
           "symbol": "F:jh.field_b:[I",
@@ -779103,11 +780040,46 @@
           "renamed": "decodedSpriteWidths"
         },
         {
+          "start": 1519,
+          "end": 1526,
+          "symbol": "F:jh.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "goodGriefText"
+        },
+        {
+          "start": 1543,
+          "end": 1550,
+          "symbol": "F:jh.field_e:[Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "rankingSortModeLabels"
+        },
+        {
+          "start": 1588,
+          "end": 1589,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
+        },
+        {
+          "start": 1598,
+          "end": 1604,
+          "symbol": "P:jh.a(ZLmh;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 1606,
           "end": 1608,
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 1609,
+          "end": 1615,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
         },
         {
           "start": 1627,
@@ -779129,6 +780101,13 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 1751,
+          "end": 1757,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
         },
         {
           "start": 1758,
@@ -779187,6 +780166,13 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 1984,
+          "end": 1990,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
+        },
+        {
           "start": 1991,
           "end": 1999,
           "symbol": "F:mh.field_bb:Lvl;",
@@ -779201,11 +780187,46 @@
           "renamed": "next"
         },
         {
+          "start": 2068,
+          "end": 2074,
+          "symbol": "P:jh.a(ZLmh;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2090,
+          "end": 2092,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2093,
+          "end": 2094,
+          "symbol": "M:jh.a(B)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 2130,
+          "end": 2136,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
+        },
+        {
           "start": 2137,
           "end": 2145,
           "symbol": "F:mh.field_zb:I",
           "original": "field_zb",
           "renamed": "localY"
+        },
+        {
+          "start": 2161,
+          "end": 2167,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
         },
         {
           "start": 2168,
@@ -779215,11 +780236,25 @@
           "renamed": "remainingY"
         },
         {
+          "start": 2192,
+          "end": 2198,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
+        },
+        {
           "start": 2199,
           "end": 2207,
           "symbol": "F:mh.field_cb:I",
           "original": "field_cb",
           "renamed": "height"
+        },
+        {
+          "start": 2223,
+          "end": 2229,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
         },
         {
           "start": 2230,
@@ -779241,6 +780276,34 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 2369,
+          "end": 2375,
+          "symbol": "P:jh.a(ZLmh;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2385,
+          "end": 2391,
+          "symbol": "P:jh.a(ZLmh;)V#1",
+          "original": "param1",
+          "renamed": "list"
+        },
+        {
+          "start": 2466,
+          "end": 2473,
+          "symbol": "F:jh.field_e:[Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "rankingSortModeLabels"
+        },
+        {
+          "start": 2548,
+          "end": 2555,
+          "symbol": "F:jh.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "goodGriefText"
         },
         {
           "start": 2581,
@@ -781791,7 +782854,7 @@
       "original": "jk.java",
       "renamed": "UnderwaterBackground.java",
       "inputSha256": "35762eb76ee99358bb4274275df2c3913132b2ceb7a3f7d85d158625a76e7cc0",
-      "outputSha256": "3ef0de2b7bc181d01081f72a797e1a77d1d0f716e6873e65249471fc18e3f6da",
+      "outputSha256": "4f0b0c1b813402a1a35ec326014cf0f559e4ac60edfb4fe70a27cef7ce3280ef",
       "edits": [
         {
           "start": 50,
@@ -782445,6 +783508,20 @@
           "renamed": "WeightedLruCache"
         },
         {
+          "start": 1988,
+          "end": 1990,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 1991,
+          "end": 1992,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 1999,
           "end": 2006,
           "symbol": "F:wm.field_b:Ljp;",
@@ -782457,6 +783534,20 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "GameplayScreen"
+        },
+        {
+          "start": 2032,
+          "end": 2034,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2035,
+          "end": 2036,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 2040,
@@ -782480,6 +783571,20 @@
           "renamed": "BufferedFile"
         },
         {
+          "start": 2076,
+          "end": 2078,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2079,
+          "end": 2080,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 2084,
           "end": 2085,
           "symbol": "C:n",
@@ -782499,6 +783604,20 @@
           "symbol": "C:ig",
           "original": "ig",
           "renamed": "Under13RegistrationNoticePanel"
+        },
+        {
+          "start": 2119,
+          "end": 2121,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2122,
+          "end": 2123,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 2127,
@@ -787134,7 +788253,7 @@
       "original": "jm.java",
       "renamed": "MusicEnvelope.java",
       "inputSha256": "bdfa640c0c45b21622b62a66791cd8b0d34b64f18abbd70550b92e80c0c8209b",
-      "outputSha256": "49b8595fd5e87d3050ccb5a5b5853344a4fb4a8c77b3513638a5c70bb1a8ede5",
+      "outputSha256": "4727356c05c6d03cdb3203276de07f7955bf642beda7a5cd4caabaa168fa2f73",
       "edits": [
         {
           "start": 50,
@@ -788039,6 +789158,20 @@
           "symbol": "C:cm",
           "original": "cm",
           "renamed": "AlternateNumericLoginCredentials"
+        },
+        {
+          "start": 4211,
+          "end": 4213,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4214,
+          "end": 4215,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
         },
         {
           "start": 4216,
@@ -789761,6 +790894,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 8465,
+          "end": 8467,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 8468,
@@ -810006,7 +811146,7 @@
       "original": "ka.java",
       "renamed": "MusicVoice.java",
       "inputSha256": "1979628dd155157bc15d179cf5d12821bf889151c6ec1a630671076a9f3c328d",
-      "outputSha256": "4a15704464450df9c73c45fe5977af581a4c6f90c577e38c8c51b4157443e9cb",
+      "outputSha256": "bd5f3ba8970774db5713d997abfa25c7eeea1545314eb263344df1c1175f4248",
       "edits": [
         {
           "start": 50,
@@ -810539,6 +811679,13 @@
           "symbol": "F:ue.field_e:I",
           "original": "field_e",
           "renamed": "tooltipDelayTicks"
+        },
+        {
+          "start": 1573,
+          "end": 1575,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 1576,
@@ -832719,7 +833866,7 @@
       "original": "kk.java",
       "renamed": "kk.java",
       "inputSha256": "92008650e75bb900f89313d37d3d5098ca455565ff3b7daf929f11542c66379a",
-      "outputSha256": "27b01acf23697a5bde39bbf122124a49b4442906ab4194287599f764be929087",
+      "outputSha256": "92c0ff32d18f0b73f1db15f958d5cea6c81bb3b29e49b71ddea160f07418ee62",
       "edits": [
         {
           "start": 72,
@@ -832860,6 +834007,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 530,
+          "end": 532,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 533,
@@ -920084,7 +921238,7 @@
       "original": "n.java",
       "renamed": "ConnectionPhase.java",
       "inputSha256": "57ffbc609c7e96db9f2eef78c7891cd0d26578906ecf226e6a621834d09bfd2a",
-      "outputSha256": "fdc3603ca94340c675d7569ed5bcf94c5c232f5fafe300ae1c519f4297b60237",
+      "outputSha256": "07cdf5124b234ca9cf3334cacb6c68f0bcf5f36ab739a9ed1822bb5ae8b7b596",
       "edits": [
         {
           "start": 50,
@@ -920710,6 +921864,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 3663,
+          "end": 3665,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 3666,
           "end": 3673,
           "symbol": "F:jh.field_b:[I",
@@ -920841,6 +922002,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 4045,
+          "end": 4047,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 4048,
@@ -950114,7 +951282,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "8d6a4e1a2542fe2dffbcd36c8043127730b3542cbee7af67db4e8d80e9f2d5d2",
+      "outputSha256": "ff433e6ca32a4f26ae5d17334de35b3281b03203346fceddedb3c38fd6d22ea0",
       "edits": [
         {
           "start": 50,
@@ -963844,6 +965012,20 @@
           "renamed": "AppletFlowHelpers"
         },
         {
+          "start": 120883,
+          "end": 120885,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 120886,
+          "end": 120893,
+          "symbol": "F:jh.field_e:[Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "rankingSortModeLabels"
+        },
+        {
           "start": 120899,
           "end": 120900,
           "symbol": "C:q",
@@ -963856,6 +965038,20 @@
           "symbol": "C:nk",
           "original": "nk",
           "renamed": "AppletFlowHelpers"
+        },
+        {
+          "start": 121062,
+          "end": 121064,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 121065,
+          "end": 121072,
+          "symbol": "F:jh.field_e:[Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "rankingSortModeLabels"
         },
         {
           "start": 121078,
@@ -983346,7 +984542,7 @@
       "original": "of.java",
       "renamed": "BlankScreen.java",
       "inputSha256": "4b09eb220d7a6d1b268d2316aac7c343e668063a171a4d79176fa4035310c2bb",
-      "outputSha256": "710faa36390f9efcdcea36b11b35c345048ebe20914f2172804a7d80a484ed38",
+      "outputSha256": "d49697cc98c5f01dfe7bd8863352184e94e541ed3a21b7dfd4406d68c3b00fdc",
       "edits": [
         {
           "start": 50,
@@ -983713,6 +984909,13 @@
           "renamed": "tooltipTicks"
         },
         {
+          "start": 1483,
+          "end": 1485,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 1486,
           "end": 1493,
           "symbol": "F:jh.field_a:I",
@@ -983753,7 +984956,7 @@
       "original": "og.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "71899f71a52c83eb6ccb0dee0cc74938ae731561777c8a4d21529059d9abf91c",
-      "outputSha256": "1c4d94d602b5552da580fa504d2c7caafcee458aaec10f4fc1459a53015754d7",
+      "outputSha256": "b99319558cc1d4c4fc4cff9ce60798699ed47e63e3d29682fb1a174a1108dd76",
       "edits": [
         {
           "start": 50,
@@ -989428,6 +990631,20 @@
           "symbol": "C:gr",
           "original": "gr",
           "renamed": "GameplaySpriteHelpers"
+        },
+        {
+          "start": 46972,
+          "end": 46974,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 46975,
+          "end": 46982,
+          "symbol": "F:jh.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "goodGriefText"
         },
         {
           "start": 46985,
@@ -1006473,7 +1007690,7 @@
       "original": "oo.java",
       "renamed": "ChocolateBackground.java",
       "inputSha256": "c2fe483625346c9e2434b280ab2b2ca9b5fb395c6079531fb1bd97514303e210",
-      "outputSha256": "7114358764d71bc2d876969eaeadc7ed1ea44eb0633df2c46be7befe4fad3c08",
+      "outputSha256": "8a8053bde2909ea2ac17cb868aa1892a5bd44e86b267c278299afe0b041e39a7",
       "edits": [
         {
           "start": 50,
@@ -1007533,6 +1008750,20 @@
           "renamed": "QuickChatParameterType"
         },
         {
+          "start": 2844,
+          "end": 2846,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2847,
+          "end": 2848,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 2852,
           "end": 2854,
           "symbol": "C:nl",
@@ -1007554,6 +1008785,20 @@
           "renamed": "FullscreenFailureDialog"
         },
         {
+          "start": 2887,
+          "end": 2889,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2890,
+          "end": 2891,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 2895,
           "end": 2902,
           "symbol": "F:oo.field_x:Ljp;",
@@ -1007566,6 +1008811,20 @@
           "symbol": "C:up",
           "original": "up",
           "renamed": "StatefulWidgetRenderer"
+        },
+        {
+          "start": 2926,
+          "end": 2928,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 2929,
+          "end": 2930,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 2934,
@@ -1034929,7 +1036188,7 @@
       "original": "qa.java",
       "renamed": "NinjaBackground.java",
       "inputSha256": "9245a4c1967ad84bcf1efdc1a8188cfecaad0585c02781fc24d4c9b37110d7ce",
-      "outputSha256": "edf08c3b4a0ef8d1750ad00d45b6f6d1cb83799f6dba8be93ede8e84d9e02c7d",
+      "outputSha256": "042739f8acb26479c55b56eea2449cf519af279275de0d3976deb64aa275803b",
       "edits": [
         {
           "start": 50,
@@ -1035303,6 +1036562,20 @@
           "renamed": "AppletFlowHelpers"
         },
         {
+          "start": 952,
+          "end": 954,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 955,
+          "end": 956,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 960,
           "end": 962,
           "symbol": "C:mj",
@@ -1035324,6 +1036597,20 @@
           "renamed": "SocialListEntry"
         },
         {
+          "start": 995,
+          "end": 997,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 998,
+          "end": 999,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 1003,
           "end": 1005,
           "symbol": "C:ap",
@@ -1035343,6 +1036630,20 @@
           "symbol": "C:rh",
           "original": "rh",
           "renamed": "CalendarMatchmakingState"
+        },
+        {
+          "start": 1037,
+          "end": 1039,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 1040,
+          "end": 1041,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 1048,
@@ -1036995,7 +1038296,7 @@
       "original": "qb.java",
       "renamed": "FarmBackground.java",
       "inputSha256": "a98512afbda00437b5a429b569469317260dff4b25290584c968fc576e126e6a",
-      "outputSha256": "79f3ab1989e609cb7288c97a288cc1a774b0b94a3708237c445af7dd7fc4c505",
+      "outputSha256": "c77dbe6ba26e4a7c5b5a7418a1497da05830cb1b2d679d66a3fa169cda90b17b",
       "edits": [
         {
           "start": 50,
@@ -1038062,6 +1039363,20 @@
           "renamed": "ActivityIndicatorWidget"
         },
         {
+          "start": 3981,
+          "end": 3983,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 3984,
+          "end": 3985,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 3989,
           "end": 3991,
           "symbol": "C:lc",
@@ -1038083,6 +1039398,20 @@
           "renamed": "WidgetTextLayout"
         },
         {
+          "start": 4023,
+          "end": 4025,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4026,
+          "end": 4027,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 4031,
           "end": 4033,
           "symbol": "C:rm",
@@ -1038102,6 +1039431,20 @@
           "symbol": "C:rp",
           "original": "rp",
           "renamed": "MainMenuScreen"
+        },
+        {
+          "start": 4065,
+          "end": 4067,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4068,
+          "end": 4069,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 4073,
@@ -1079576,7 +1080919,7 @@
       "original": "rd.java",
       "renamed": "GamePresentationHelpers.java",
       "inputSha256": "8b4b7ec675fa9da26786c4f897c8e0610c044da7ebf606535ed4a1b6ccf79b9f",
-      "outputSha256": "ecac05436d964cc7d7c3bcb0ffe3459fce46d878f227bb014b1ed1109e210ec6",
+      "outputSha256": "9687f9a4578ef755eecacad3c2633db8d5d5c1d7bdf1a28ca8c9b7fe22f3e046",
       "edits": [
         {
           "start": 50,
@@ -1082022,6 +1083365,13 @@
           "renamed": "pixelCount"
         },
         {
+          "start": 8130,
+          "end": 8132,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 8133,
           "end": 8140,
           "symbol": "F:jh.field_b:[I",
@@ -1082258,6 +1083608,13 @@
           "symbol": "L:rd.c(I)[Ljp;#0",
           "original": "var2",
           "renamed": "spriteIndex"
+        },
+        {
+          "start": 8451,
+          "end": 8453,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 8454,
@@ -1091702,7 +1093059,7 @@
       "original": "rm.java",
       "renamed": "FontRequestHelpers.java",
       "inputSha256": "b7d7c1701eeb700132fac23eb4bf976c13b2a69f106fc287ae4916c4c558cf4b",
-      "outputSha256": "b2a117b54b35375f2b7c6d0f1fccf147a772d93b237047a9b1ccf220f335a8d7",
+      "outputSha256": "29f1ff4d40548723fcb15424d091102250acfee6444b495cbdf4dda182cc5b4c",
       "edits": [
         {
           "start": 50,
@@ -1091976,6 +1093333,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 1227,
+          "end": 1229,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 1230,
@@ -1122213,7 +1123577,7 @@
       "original": "sn.java",
       "renamed": "ConstructionBackground.java",
       "inputSha256": "eca4ce142aa0dfd9cb4418af392006a39b78410cfc62d48ab78af8e8f7076bf2",
-      "outputSha256": "2a745a11f1c99b1bbab2dd25497bdd65f6d69367748a756150493413f6fecd41",
+      "outputSha256": "6ef26e83cdc91f550bd91bc6135cf5fc37915850203466427c04c5c990ea68a2",
       "edits": [
         {
           "start": 50,
@@ -1123574,6 +1124938,20 @@
           "renamed": "CanvasInputCleanup"
         },
         {
+          "start": 4925,
+          "end": 4927,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4928,
+          "end": 4929,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 4933,
           "end": 4935,
           "symbol": "C:sf",
@@ -1123593,6 +1124971,20 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 4967,
+          "end": 4969,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 4970,
+          "end": 4971,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 4975,
@@ -1123616,6 +1125008,20 @@
           "renamed": "DisplayModeInfo"
         },
         {
+          "start": 5009,
+          "end": 5011,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 5012,
+          "end": 5013,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 5017,
           "end": 5019,
           "symbol": "C:sf",
@@ -1123628,6 +1125034,20 @@
           "symbol": "F:sf.field_cb:Ljp;",
           "original": "field_cb",
           "renamed": "constructionFarSprite"
+        },
+        {
+          "start": 5052,
+          "end": 5054,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 5055,
+          "end": 5056,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 5060,
@@ -1134230,7 +1135650,7 @@
       "original": "ta.java",
       "renamed": "NineSliceFrame.java",
       "inputSha256": "bb88543bc5f7e2c804bd94f7ebc2a8d2a917dfad8d1b964061b1eefb5ca0d179",
-      "outputSha256": "090bd06c89caf8bd2d580bd11e8fff71bf612ac38c6ef6e2978048966731f707",
+      "outputSha256": "d345376cd2bb3a365de317eb5a5bb56dd86da002e323ae96e9747cfd4a51e2c2",
       "edits": [
         {
           "start": 44,
@@ -1134287,6 +1135707,13 @@
           "symbol": "C:ta",
           "original": "ta",
           "renamed": "NineSliceFrame"
+        },
+        {
+          "start": 616,
+          "end": 618,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 619,
@@ -1134415,6 +1135842,13 @@
           "renamed": "decodedSpriteOffsetY"
         },
         {
+          "start": 966,
+          "end": 968,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 969,
           "end": 976,
           "symbol": "F:jh.field_b:[I",
@@ -1134539,6 +1135973,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 1383,
+          "end": 1385,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 1386,
@@ -1144470,7 +1145911,7 @@
       "original": "td.java",
       "renamed": "VolcanicBackground.java",
       "inputSha256": "b940369342ab048f199607a9b518a3765bbd0286b1592243640d7e6d7f4bf34d",
-      "outputSha256": "3f7c23519c3e3f29e9292b8001f2b386d92b94399089a36ad52e76e684f4fe54",
+      "outputSha256": "75d38fa5541824c7b9904ccd8a5fcd0e19ebfa0e49ebcc77e3bedc6d10745a15",
       "edits": [
         {
           "start": 50,
@@ -1144977,6 +1146418,20 @@
           "renamed": "NanoGameClock"
         },
         {
+          "start": 1720,
+          "end": 1722,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 1723,
+          "end": 1724,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 1728,
           "end": 1730,
           "symbol": "C:pb",
@@ -1144998,6 +1146453,20 @@
           "renamed": "NameEntryPopup"
         },
         {
+          "start": 1763,
+          "end": 1765,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 1766,
+          "end": 1767,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
+        },
+        {
           "start": 1771,
           "end": 1773,
           "symbol": "C:cp",
@@ -1145017,6 +1146486,20 @@
           "symbol": "C:bn",
           "original": "bn",
           "renamed": "RectangleBody"
+        },
+        {
+          "start": 1805,
+          "end": 1807,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 1808,
+          "end": 1809,
+          "symbol": "M:jh.a(ILjp;)Ljp;",
+          "original": "a",
+          "renamed": "createScaledHalfSizeSprite"
         },
         {
           "start": 1813,
@@ -1173269,7 +1174752,7 @@
       "original": "ud.java",
       "renamed": "LevelSelectScreen.java",
       "inputSha256": "528e70959ad168e813399e0e8aa96ac356b4053f331d0db992f1243750412512",
-      "outputSha256": "e85fd16035f4050ac6ce97409543c673ae24502d3b1c1f98f8fcedafdcc62866",
+      "outputSha256": "6a47c27759bf1f22a1b994ec92ba01eac104e135088376b7b735a9a6e179a523",
       "edits": [
         {
           "start": 50,
@@ -1175328,6 +1176811,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 8743,
+          "end": 8745,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 8746,
@@ -1180737,7 +1182227,7 @@
       "original": "uj.java",
       "renamed": "LevelList.java",
       "inputSha256": "24f3c828504851d3fa276e35f7adecb4bb8180253d852a801475f7acdb396f53",
-      "outputSha256": "5105a9c29b2b9633eeb67f0f4124edeb3357858bd45aa4a28f7eb2491af6c473",
+      "outputSha256": "3088f32dfd9438e9e36b281c9dfa02bc394aa1fcbe7a96f48db6edc4ea8fde21",
       "edits": [
         {
           "start": 50,
@@ -1181991,6 +1183481,20 @@
           "symbol": "C:bq",
           "original": "bq",
           "renamed": "FullscreenDialogHelpers"
+        },
+        {
+          "start": 3173,
+          "end": 3175,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 3176,
+          "end": 3183,
+          "symbol": "F:jh.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "goodGriefText"
         },
         {
           "start": 3241,
@@ -1202977,7 +1204481,7 @@
       "original": "v.java",
       "renamed": "ClientException.java",
       "inputSha256": "494ea99ed54aa1f995de1da5c1a72c4f56f7c1fbe10a1dddf4a21f7af4b2ab4d",
-      "outputSha256": "01a710b1399a9ebc40048ca07ab24f7c3672dc7fae2dafe1d67e55d9a55b74ea",
+      "outputSha256": "21a92bd9329304660898dee488a8fa3863915e0afc7dff05205f55ad4df681ed",
       "edits": [
         {
           "start": 50,
@@ -1203344,6 +1204848,13 @@
           "renamed": "decodedSpriteHeights"
         },
         {
+          "start": 3390,
+          "end": 3392,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
           "start": 3393,
           "end": 3400,
           "symbol": "F:jh.field_b:[I",
@@ -1203454,6 +1204965,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 3768,
+          "end": 3770,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 3771,
@@ -1203587,6 +1205105,13 @@
           "symbol": "F:dl.field_d:[I",
           "original": "field_d",
           "renamed": "decodedSpriteOffsetY"
+        },
+        {
+          "start": 4338,
+          "end": 4340,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
         },
         {
           "start": 4341,
@@ -1240959,7 +1242484,7 @@
       "original": "wn.java",
       "renamed": "FriendListUi.java",
       "inputSha256": "c68136e5d30cb8f3326c449a7e49ac2114736f5ac370fe7cc899eea056918bac",
-      "outputSha256": "cf651edc490873ece9fa5133750f41ae814d1f25335eae8dccdaf49455cf574e",
+      "outputSha256": "922f35f4d50fa5c6fb1f40fc6a9fb4c20e0c531bc0cb913e75fd78218224db9b",
       "edits": [
         {
           "start": 50,
@@ -1244173,6 +1245698,20 @@
           "symbol": "C:cm",
           "original": "cm",
           "renamed": "AlternateNumericLoginCredentials"
+        },
+        {
+          "start": 7709,
+          "end": 7711,
+          "symbol": "C:jh",
+          "original": "jh",
+          "renamed": "UiGeometryHelpers"
+        },
+        {
+          "start": 7712,
+          "end": 7713,
+          "symbol": "M:jh.a(ZLmh;)V",
+          "original": "a",
+          "renamed": "resetListVerticalBounds"
         },
         {
           "start": 7720,
@@ -1257691,10 +1259230,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "47021f48539a75ed13ede4ab40a92f927095608c9e28bbe608a7ceb8896b2764",
+    "rulesSha256": "146391253aa3571153f13406852972c8ac6258c73325534c3fb2c0fef5af8ff7",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "fecbb30c74a021eaaae394bed5aeaeb04236efced54a93cf1ffccae9f5f78398",
+    "outputTreeSha256": "017f6b325c41a6e346b7510e6c6aed35f783bd70fa7f77a4442cc085234252b3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -234,13 +234,13 @@ final class GamePresentationHelpers {
         int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         RgbSprite[] sprites = new RgbSprite[IncomingPacketHelpers.decodedSpriteCount];
         for (spriteIndex = 0; spriteIndex < IncomingPacketHelpers.decodedSpriteCount; spriteIndex++) {
-          pixelCount = jh.decodedSpriteWidths[spriteIndex] * TextHotspotRegion.decodedSpriteHeights[spriteIndex];
+          pixelCount = UiGeometryHelpers.decodedSpriteWidths[spriteIndex] * TextHotspotRegion.decodedSpriteHeights[spriteIndex];
           indices = GameOverlayHelpers.decodedSpriteIndices[spriteIndex];
           pixels = new int[pixelCount];
           for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
             pixels[pixelIndex] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a((int) indices[pixelIndex], 255)];
           }
-          sprites[spriteIndex] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[spriteIndex], SocketConnector.decodedSpriteOffsetY[spriteIndex], jh.decodedSpriteWidths[spriteIndex], TextHotspotRegion.decodedSpriteHeights[spriteIndex], pixels);
+          sprites[spriteIndex] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[spriteIndex], SocketConnector.decodedSpriteOffsetY[spriteIndex], UiGeometryHelpers.decodedSpriteWidths[spriteIndex], TextHotspotRegion.decodedSpriteHeights[spriteIndex], pixels);
         }
         if (obfuscationGuard < 93) {
           return (RgbSprite[]) null;

@@ -42,7 +42,7 @@ final class FontRequestHelpers implements QuickChatContextMarker {
             missingMetricsFont = null;
             return (BinaryMaskFont) (missingMetricsFont);
           }
-          font = new BinaryMaskFont(metrics, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, GameOverlayHelpers.decodedSpriteIndices);
+          font = new BinaryMaskFont(metrics, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, UiGeometryHelpers.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, GameOverlayHelpers.decodedSpriteIndices);
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           result = font;
           return result;

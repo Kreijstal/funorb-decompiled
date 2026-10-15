@@ -182,7 +182,7 @@ final class WidgetTheme {
           metadataPacket.position = -2 + data.length;
           IncomingPacketHelpers.decodedSpriteCount = metadataPacket.readUnsignedShort(65280);
           GameOverlayHelpers.decodedSpriteIndices = new byte[IncomingPacketHelpers.decodedSpriteCount][];
-          jh.decodedSpriteWidths = new int[IncomingPacketHelpers.decodedSpriteCount];
+          UiGeometryHelpers.decodedSpriteWidths = new int[IncomingPacketHelpers.decodedSpriteCount];
           SocketConnector.decodedSpriteOffsetY = new int[IncomingPacketHelpers.decodedSpriteCount];
           TextHotspotRegion.decodedSpriteHeights = new int[IncomingPacketHelpers.decodedSpriteCount];
           OutgoingPacketHelpers.decodedSpriteHasAlpha = new boolean[IncomingPacketHelpers.decodedSpriteCount];
@@ -199,7 +199,7 @@ final class WidgetTheme {
             SocketConnector.decodedSpriteOffsetY[offsetYIndex] = metadataPacket.readUnsignedShort(65280);
           }
           for (widthIndex = 0; IncomingPacketHelpers.decodedSpriteCount > widthIndex; widthIndex++) {
-            jh.decodedSpriteWidths[widthIndex] = metadataPacket.readUnsignedShort(65280);
+            UiGeometryHelpers.decodedSpriteWidths[widthIndex] = metadataPacket.readUnsignedShort(65280);
           }
           for (heightIndex = 0; heightIndex < IncomingPacketHelpers.decodedSpriteCount; heightIndex++) {
             TextHotspotRegion.decodedSpriteHeights[heightIndex] = metadataPacket.readUnsignedShort(65280);
@@ -217,7 +217,7 @@ final class WidgetTheme {
           }
           metadataPacket.position = 0;
           for (spriteIndex = 0; spriteIndex < IncomingPacketHelpers.decodedSpriteCount; spriteIndex++) {
-            spriteWidth = jh.decodedSpriteWidths[spriteIndex];
+            spriteWidth = UiGeometryHelpers.decodedSpriteWidths[spriteIndex];
             spriteHeight = TextHotspotRegion.decodedSpriteHeights[spriteIndex];
             pixelCount = spriteWidth * spriteHeight;
             var20 = new byte[pixelCount];

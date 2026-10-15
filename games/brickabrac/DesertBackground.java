@@ -61,9 +61,9 @@ final class DesertBackground extends BackgroundScene {
           PowerUpWarning.desertMidSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.backgroundSpriteArchive);
           OptionsScreen.desertFarSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.backgroundSpriteArchive);
           QuickChatPopupHelpers.desertSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.backgroundSpriteArchive);
-          SecondaryNodeQueue.field_d = jh.a(0, FriendListUi.desertNearSprite);
-          Widget.field_x = jh.a(0, PowerUpWarning.desertMidSprite);
-          pp.field_b = jh.a(0, OptionsScreen.desertFarSprite);
+          SecondaryNodeQueue.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, FriendListUi.desertNearSprite);
+          Widget.field_x = UiGeometryHelpers.createScaledHalfSizeSprite(0, PowerUpWarning.desertMidSprite);
+          pp.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, OptionsScreen.desertFarSprite);
           GzipInflater.desertCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_caps", 2);
           TableNameEntry.desertSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_segs", 2);
           TextWidgetRenderer.desertCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.backgroundSpriteArchive);

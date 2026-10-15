@@ -28,9 +28,9 @@ final class NinjaBackground extends BackgroundScene {
         hn.ninjaFarSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
         MeshLobbyUiHelpers.ninjaSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
         ObjectHistoryBuffer.ninjaCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.backgroundSpriteArchive);
-        AppletFlowHelpers.field_h = jh.a(0, LegacyUtf8Decoder.ninjaNearSprite);
-        SocialListEntry.field_Zb = jh.a(0, CanvasInputHelpers.ninjaMidSprite);
-        CalendarMatchmakingState.field_c = jh.a(0, hn.ninjaFarSprite);
+        AppletFlowHelpers.field_h = UiGeometryHelpers.createScaledHalfSizeSprite(0, LegacyUtf8Decoder.ninjaNearSprite);
+        SocialListEntry.field_Zb = UiGeometryHelpers.createScaledHalfSizeSprite(0, CanvasInputHelpers.ninjaMidSprite);
+        CalendarMatchmakingState.field_c = UiGeometryHelpers.createScaledHalfSizeSprite(0, hn.ninjaFarSprite);
         SpriteInputHelpers.encodeBinaryMaskRuns(hn.ninjaFarSprite, 0);
         if (!obfuscationGuard) {
           SpriteInputHelpers.encodeBinaryMaskRuns(CalendarMatchmakingState.field_c, 0);

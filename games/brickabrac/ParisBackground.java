@@ -118,12 +118,12 @@ final class ParisBackground extends BackgroundScene {
           ToggleButtonWidget.parisFarSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_far", (byte) -100, AchievementIcon.backgroundSpriteArchive);
           SpriteInputHelpers.parisSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_small", (byte) 108, AchievementIcon.backgroundSpriteArchive);
           BallPulseEffect.parisCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("paris", "paris_character", (byte) -43, AchievementIcon.backgroundSpriteArchive);
-          IntrusiveHashTable.field_i = jh.a(0, NinjaBackground.parisNearSprite);
+          IntrusiveHashTable.field_i = UiGeometryHelpers.createScaledHalfSizeSprite(0, NinjaBackground.parisNearSprite);
           if (obfuscationGuard) {
             ParisBackground.a((UiComponent) null, (TextFont) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (UiComponent) null, (byte) 19, false, (VerticalScrollbar) null, (UiComponent) null);
           }
-          UnderwaterBackground.field_t = jh.a(0, QuickChatParameterType.parisMidSprite);
-          MembershipBenefitsScreen.field_s = jh.a(0, ToggleButtonWidget.parisFarSprite);
+          UnderwaterBackground.field_t = UiGeometryHelpers.createScaledHalfSizeSprite(0, QuickChatParameterType.parisMidSprite);
+          MembershipBenefitsScreen.field_s = UiGeometryHelpers.createScaledHalfSizeSprite(0, ToggleButtonWidget.parisFarSprite);
           RunLengthSpriteCodec.encodeSprite(QuickChatParameterType.parisMidSprite);
           RunLengthSpriteCodec.encodeSprite(UnderwaterBackground.field_t);
           RunLengthSpriteCodec.encodeSprite(NinjaBackground.parisNearSprite);

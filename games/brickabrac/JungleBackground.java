@@ -929,9 +929,9 @@ final class JungleBackground extends BackgroundScene {
         MultiValueSliderRenderer.jungleMidSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.backgroundSpriteArchive);
         np.jungleFarSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.backgroundSpriteArchive);
         Brick.jungleSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.backgroundSpriteArchive);
-        CacheEntry.field_D = jh.a(0, ch.jungleNearSprite);
-        HuffmanCodec.field_e = jh.a(0, MultiValueSliderRenderer.jungleMidSprite);
-        WidgetGroup.field_E = jh.a(0, np.jungleFarSprite);
+        CacheEntry.field_D = UiGeometryHelpers.createScaledHalfSizeSprite(0, ch.jungleNearSprite);
+        HuffmanCodec.field_e = UiGeometryHelpers.createScaledHalfSizeSprite(0, MultiValueSliderRenderer.jungleMidSprite);
+        WidgetGroup.field_E = UiGeometryHelpers.createScaledHalfSizeSprite(0, np.jungleFarSprite);
         WidgetTextLayout.jungleCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.backgroundSpriteArchive);
         DualLinkNode.jungleCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_caps", 2);
         DualLinkIterator.jungleSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("jungle", AchievementIcon.backgroundSpriteArchive, "jungle_segs", 2);

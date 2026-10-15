@@ -103,7 +103,7 @@ final class GrowableIntList {
               ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
               IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
               Ball.field_A.enabled = false;
-              jh.a(true, IsaacGenerator.field_b.content);
+              UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
             } else {
               IsaacGenerator.field_b.viewport.text = null;
               Ball.field_A.enabled = true;
@@ -126,7 +126,7 @@ final class GrowableIntList {
                 ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
-                jh.a(true, IsaacGenerator.field_b.content);
+                UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
               } else {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
@@ -153,7 +153,7 @@ final class GrowableIntList {
                 } else {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
-                  jh.a(true, IsaacGenerator.field_b.content);
+                  UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
                 }
               }
             }
@@ -191,7 +191,7 @@ final class GrowableIntList {
                 ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
-                jh.a(true, IsaacGenerator.field_b.content);
+                UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
               } else {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
@@ -223,7 +223,7 @@ final class GrowableIntList {
                 } else {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
-                  jh.a(true, IsaacGenerator.field_b.content);
+                  UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
                 }
               }
             }
@@ -258,7 +258,7 @@ final class GrowableIntList {
                 ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
-                jh.a(true, IsaacGenerator.field_b.content);
+                UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
               } else {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
@@ -281,7 +281,7 @@ final class GrowableIntList {
                   ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
-                  jh.a(true, IsaacGenerator.field_b.content);
+                  UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
                 } else {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
@@ -308,7 +308,7 @@ final class GrowableIntList {
                   } else {
                     IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                     Ball.field_A.enabled = false;
-                    jh.a(true, IsaacGenerator.field_b.content);
+                    UiGeometryHelpers.resetListVerticalBounds(true, IsaacGenerator.field_b.content);
                   }
                 }
               }

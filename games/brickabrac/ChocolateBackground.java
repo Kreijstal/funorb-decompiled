@@ -76,9 +76,9 @@ final class ChocolateBackground extends BackgroundScene {
         chocolateMidSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_mid", (byte) 123, AchievementIcon.backgroundSpriteArchive);
         CappedUrlRequest.chocolateSpiresSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_spires", (byte) -53, AchievementIcon.backgroundSpriteArchive);
         QuickChatPhraseRegistry.chocolateFarSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
-        QuickChatParameterType.field_i = jh.a(0, IncomingPacketHelpers.chocolateNearSprite);
-        FullscreenFailureDialog.field_hb = jh.a(0, chocolateMidSprite);
-        StatefulWidgetRenderer.field_w = jh.a(0, CappedUrlRequest.chocolateSpiresSprite);
+        QuickChatParameterType.field_i = UiGeometryHelpers.createScaledHalfSizeSprite(0, IncomingPacketHelpers.chocolateNearSprite);
+        FullscreenFailureDialog.field_hb = UiGeometryHelpers.createScaledHalfSizeSprite(0, chocolateMidSprite);
+        StatefulWidgetRenderer.field_w = UiGeometryHelpers.createScaledHalfSizeSprite(0, CappedUrlRequest.chocolateSpiresSprite);
         u.chocolateSmallFarSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_small_far", (byte) -36, AchievementIcon.backgroundSpriteArchive);
         GameClock.chocolateSmallNearSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_small_near", (byte) -69, AchievementIcon.backgroundSpriteArchive);
         MeshAttributeRecord.chocolateCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("chocolate", "chocolate_character", (byte) 101, AchievementIcon.backgroundSpriteArchive);

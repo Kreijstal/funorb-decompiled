@@ -57,7 +57,7 @@ final class MusicVoice extends IntrusiveNode {
           if (reanchorRequested) {
             if (!QuickChatParameterType.tooltipSuppressed &&
               ResourceArchiveFactory.tooltipTicks >= MonotonicTime.tooltipDelayTicks &&
-              MonotonicTime.tooltipDelayTicks + jh.tooltipDisplayDurationTicks > ResourceArchiveFactory.tooltipTicks) {
+              MonotonicTime.tooltipDelayTicks + UiGeometryHelpers.tooltipDisplayDurationTicks > ResourceArchiveFactory.tooltipTicks) {
               displayWindowFlag = 1;
             } else {
               displayWindowFlag = 0;

@@ -63,7 +63,7 @@ final class BlankScreen extends GameScreen {
         if (MonotonicTime.tooltipDelayTicks > ResourceArchiveFactory.tooltipTicks) {
           return null;
         }
-        if (ResourceArchiveFactory.tooltipTicks < jh.tooltipDisplayDurationTicks + MonotonicTime.tooltipDelayTicks) {
+        if (ResourceArchiveFactory.tooltipTicks < UiGeometryHelpers.tooltipDisplayDurationTicks + MonotonicTime.tooltipDelayTicks) {
           return LevelCompleteScreen.tooltipText;
         }
         return null;

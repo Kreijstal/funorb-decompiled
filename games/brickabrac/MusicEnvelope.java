@@ -113,7 +113,7 @@ final class MusicEnvelope {
             LevelMetadata.field_m != 1) {
             f.ignoreListPane.enabled = false;
             f.ignoreListPane.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
-            jh.a(obfuscationGuard, f.ignoreListPane.content);
+            UiGeometryHelpers.resetListVerticalBounds(obfuscationGuard, f.ignoreListPane.content);
             return;
           }
           f.ignoreListPane.enabled = true;
@@ -218,7 +218,7 @@ final class MusicEnvelope {
             stackIn_5_0 = (AlphaFont) null;
             return stackIn_5_0;
           }
-          var2 = new AlphaFont(param0, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, jh.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, PlayerBadgeHelpers.decodedSpritePalette, GameOverlayHelpers.decodedSpriteIndices);
+          var2 = new AlphaFont(param0, ArrayWidgetGroup.decodedSpriteOffsetX, SocketConnector.decodedSpriteOffsetY, UiGeometryHelpers.decodedSpriteWidths, TextHotspotRegion.decodedSpriteHeights, PlayerBadgeHelpers.decodedSpritePalette, GameOverlayHelpers.decodedSpriteIndices);
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -805,7 +805,7 @@ public final class BrickABrac extends InteractiveGameClient {
         DisplayModeInfo.a((byte) 19);
         IntHistoryBuffer.a(67108864);
         va.a(-15504);
-        jh.a((byte) -123);
+        UiGeometryHelpers.clearSharedReferences((byte) -123);
         ByteArrayNode.a(84);
         MusicPatch.a((byte) 118);
         MusicEnvelope.b((byte) 31);

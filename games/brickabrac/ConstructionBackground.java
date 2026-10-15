@@ -116,10 +116,10 @@ final class ConstructionBackground extends BackgroundScene {
         ValidatedTextFieldWidget.constructionFarSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_far", (byte) -93, AchievementIcon.backgroundSpriteArchive);
         IntNode.constructionSmokeSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_smoke", (byte) -128, AchievementIcon.backgroundSpriteArchive);
         MenuSelection.constructionSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.backgroundSpriteArchive);
-        CanvasInputCleanup.field_a = jh.a(0, ValidatedTextFieldWidget.constructionNearSprite);
-        IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.constructionMidSprite);
-        DisplayModeInfo.field_g = jh.a(0, ValidatedTextFieldWidget.constructionFarSprite);
-        er.field_d = jh.a(0, IntNode.constructionSmokeSprite);
+        CanvasInputCleanup.field_a = UiGeometryHelpers.createScaledHalfSizeSprite(0, ValidatedTextFieldWidget.constructionNearSprite);
+        IntrusiveNode.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, AchievementBrowserScreen.constructionMidSprite);
+        DisplayModeInfo.field_g = UiGeometryHelpers.createScaledHalfSizeSprite(0, ValidatedTextFieldWidget.constructionFarSprite);
+        er.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, IntNode.constructionSmokeSprite);
         GamePresentationHelpers.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_caps", 2);
         NodeDequeCursor.constructionSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_segs", 2);
         OpacityWidget.constructionCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.backgroundSpriteArchive);
