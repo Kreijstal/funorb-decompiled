@@ -22620,6 +22620,302 @@
       "renamedSymbol": "L:MultiplayerMatch.advanceBallSubstep(LPlayerBoard;LNodeDeque;IILBall;)Z#9"
     },
     {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#0",
+      "originalName": "fieldTemp$0",
+      "to": "remainingMessageTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#0"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#1",
+      "originalName": "fieldTemp$1",
+      "to": "remainingEyeTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#1"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#10",
+      "originalName": "fieldTemp$9",
+      "to": "nextDefeatTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#10"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#11",
+      "originalName": "fieldTemp$10",
+      "to": "nextVictoryTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#11"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#12",
+      "originalName": "stackIn_55_0",
+      "to": "messageBoard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#12"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#13",
+      "originalName": "stackIn_56_1",
+      "to": "clippedMessageTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#13"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+      "originalName": "stackIn_132_0",
+      "to": "chargeHitEligibility",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#14"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#15",
+      "originalName": "stackIn_142_0",
+      "to": "pendingRemovalValue",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#15"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#16",
+      "originalName": "stackIn_155_0",
+      "to": "chargeExpressionBoard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#16"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#17",
+      "originalName": "stackIn_155_1",
+      "to": "chargeExpressionGuard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#17"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#18",
+      "originalName": "stackIn_156_2",
+      "to": "chargeExpression",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#18"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#19",
+      "originalName": "stackIn_158_0",
+      "to": "chargeMessageBoard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#19"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#2",
+      "originalName": "fieldTemp$2",
+      "to": "nextChargedActivationCount",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#2"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#20",
+      "originalName": "stackIn_159_1",
+      "to": "chargeMessages",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#20"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#21",
+      "originalName": "stackIn_245_0",
+      "to": "buildRowColumns",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#21"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#22",
+      "originalName": "stackIn_270_0",
+      "to": "missedPowerUpBoard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#22"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#23",
+      "originalName": "stackIn_270_1",
+      "to": "missedPowerUpExpressionGuard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#23"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#24",
+      "originalName": "stackIn_271_2",
+      "to": "missedPowerUpExpression",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#24"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#25",
+      "originalName": "stackIn_279_0",
+      "to": "selfTargetedValue",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#25"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#26",
+      "originalName": "stackIn_284_0",
+      "to": "beneficialBaseValue",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#26"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#27",
+      "originalName": "stackIn_285_1",
+      "to": "slowDownValue",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#27"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#28",
+      "originalName": "stackIn_287_0",
+      "to": "pickupScoreBoard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#28"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#29",
+      "originalName": "stackIn_288_1",
+      "to": "pickupPoints",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#29"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#3",
+      "originalName": "fieldTemp$6",
+      "to": "nextTransitionTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#3"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#30",
+      "originalName": "stackIn_300_0",
+      "to": "pickupMessageBoard",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#30"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#31",
+      "originalName": "stackIn_302_1",
+      "to": "pickupMessages",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#31"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#32",
+      "originalName": "stackIn_388_0",
+      "to": "failureContext",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#32"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#33",
+      "originalName": "stackIn_388_1",
+      "to": "contextBuilder",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#33"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#34",
+      "originalName": "stackIn_389_2",
+      "to": "boardSummary",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#34"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#35",
+      "originalName": "stackIn_391_1",
+      "to": "audioContextBuilder",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#35"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#36",
+      "originalName": "stackIn_392_2",
+      "to": "audioSummary",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#36"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#37",
+      "originalName": "stackIn_394_1",
+      "to": "collectedContextBuilder",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#37"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#38",
+      "originalName": "stackIn_395_2",
+      "to": "collectedSummary",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#38"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#39",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#39"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#4",
+      "originalName": "fieldTemp$3",
+      "to": "remainingBuildTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#4"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
+      "originalName": "var5",
+      "to": "pulse",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#40"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#41",
+      "originalName": "var5_ref",
+      "to": "failure",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#41"
+    },
+    {
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#42",
       "originalName": "var6",
       "to": "scorePopup",
@@ -22644,12 +22940,68 @@
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#45"
     },
     {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+      "originalName": "var9",
+      "to": "chargeCandidate",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#46"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#48",
+      "originalName": "var9_ref",
+      "to": "shiftedPath",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#48"
+    },
+    {
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#49",
       "originalName": "var9_ref2",
       "to": "bubble",
       "evidence": "ak.java: Reviewed main board tick body/collection role; original control flow retained.",
       "confidence": "reviewed",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#49"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#5",
+      "originalName": "dupTemp$4",
+      "to": "newRowBrick",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#5"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#50",
+      "originalName": "var9_ref3",
+      "to": "stoppedPaddle",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#50"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+      "originalName": "var9_ref4",
+      "to": "introBrick",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#51"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#52",
+      "originalName": "var10_ref",
+      "to": "unusedBuildReference",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#52"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#53",
+      "originalName": "var10_ref_on",
+      "to": "builtBrick",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#53"
     },
     {
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#55",
@@ -22668,12 +23020,52 @@
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#56"
     },
     {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#57",
+      "originalName": "var11_ref",
+      "to": "unusedReferenceOne",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#57"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
+      "originalName": "var11_ref_on",
+      "to": "clearanceBrick",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#59"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#6",
+      "originalName": "fieldTemp$5",
+      "to": "nextLevelIndex",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#6"
+    },
+    {
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#60",
       "originalName": "var11_ref_ee",
       "to": "waypoint",
       "evidence": "ak.java: Reviewed main board tick body/collection role; original control flow retained.",
       "confidence": "reviewed",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#60"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#61",
+      "originalName": "var12_ref",
+      "to": "unusedReferenceTwo",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#61"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#62",
+      "originalName": "var12",
+      "to": "chargeGroupIndex",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#62"
     },
     {
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#63",
@@ -22700,6 +23092,22 @@
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#65"
     },
     {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#66",
+      "originalName": "var15",
+      "to": "chargeHitEligible",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#66"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#67",
+      "originalName": "var16",
+      "to": "wasPendingRemoval",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#67"
+    },
+    {
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#68",
       "originalName": "var17",
       "to": "clientBranchFlag",
@@ -22716,6 +23124,110 @@
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#69"
     },
     {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#7",
+      "originalName": "fieldTemp$7",
+      "to": "nextIntroTransitionTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#7"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
+      "originalName": "var19",
+      "to": "chargeGroup",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#70"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#71",
+      "originalName": "var20",
+      "to": "chargeArea",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#71"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#72",
+      "originalName": "var21",
+      "to": "unusedChargeGroupAlias",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#72"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#73",
+      "originalName": "var22",
+      "to": "unusedChargeGroupReference",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#73"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#74",
+      "originalName": "var23",
+      "to": "transitionGroup",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#74"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#75",
+      "originalName": "var24",
+      "to": "destinationWaypoint",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#75"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
+      "originalName": "var25",
+      "to": "overflowGroup",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#76"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#77",
+      "originalName": "var26",
+      "to": "unusedOverflowGroupAlias",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#77"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+      "originalName": "var9Lifetime1",
+      "to": "queuedEffectBall",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#78"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+      "originalName": "var9Lifetime2",
+      "to": "activeEffectBall",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#79"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#8",
+      "originalName": "fieldTemp$8",
+      "to": "nextIntroTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#8"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+      "originalName": "var10_ref_onLifetime1",
+      "to": "overflowBrick",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#80"
+    },
+    {
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#81",
       "originalName": "var10_ref_vnLifetime1",
       "to": "collidingBall",
@@ -22730,6 +23242,126 @@
       "evidence": "ak.java: Reviewed main board tick body/collection role; original control flow retained.",
       "confidence": "reviewed",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#82"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+      "originalName": "var11_ref_onLifetime1",
+      "to": "transitionBrick",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#83"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
+      "originalName": "var11_ref_onLifetime2",
+      "to": "interpolatedBrick",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#84"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
+      "originalName": "var21Lifetime1",
+      "to": "clearanceGroup",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#85"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#86",
+      "originalName": "var22Lifetime1",
+      "to": "unusedClearanceGroupAlias",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#86"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#87",
+      "originalName": "var22Lifetime2",
+      "to": "pathWaypoints",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#87"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#88",
+      "originalName": "var26Lifetime1",
+      "to": "movingGroup",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#88"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#89",
+      "originalName": "var21Lifetime2",
+      "to": "unusedChargeGroupLifetimeAlias",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#89"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#9",
+      "originalName": "fieldTemp$11",
+      "to": "nextServeDelayTicks",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#9"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#90",
+      "originalName": "var26Lifetime2",
+      "to": "unusedOverflowGroupReference",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#90"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#91",
+      "originalName": "var22Lifetime1Lifetime1",
+      "to": "unusedClearanceGroupReference",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#91"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#92",
+      "originalName": "var12Lifetime1",
+      "to": "unusedStatisticValue",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#92"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#93",
+      "originalName": "var12Lifetime1Lifetime1",
+      "to": "ballStatistic",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#93"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#94",
+      "originalName": "decompiledSharedTail0",
+      "to": "promotePendingMessage",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#94"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#95",
+      "originalName": "decompiledFrameRemainder0",
+      "to": "unusedLevelCompletionFlag",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#95"
+    },
+    {
+      "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#96",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtParameter",
+      "evidence": "ak.java: Reviewed board advancement separates message/eye/lifecycle counter values, charged activation and hit selection, build clearance/rows, brick transitions, effect timers, pickup scoring/messages, collision and interpolation scans, and exception context. Retained unused references are labeled explicitly. Four shared integer slots still span unrelated phases and remain pending generic lifetime reconstruction.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#96"
     },
     {
       "symbol": "L:ak.a(Lvn;ILj;)V#0",
@@ -172802,7 +173434,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#0",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#0",
       "originalName": "fieldTemp$0",
-      "renamedName": "fieldTemp$0",
+      "renamedName": "remainingMessageTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3566,
@@ -172813,7 +173445,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#1",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#1",
       "originalName": "fieldTemp$1",
-      "renamedName": "fieldTemp$1",
+      "renamedName": "remainingEyeTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3595,
@@ -172824,7 +173456,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#10",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#10",
       "originalName": "fieldTemp$9",
-      "renamedName": "fieldTemp$9",
+      "renamedName": "nextDefeatTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3857,
@@ -172835,7 +173467,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#11",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#11",
       "originalName": "fieldTemp$10",
-      "renamedName": "fieldTemp$10",
+      "renamedName": "nextVictoryTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3886,
@@ -172846,7 +173478,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#12",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#12",
       "originalName": "stackIn_55_0",
-      "renamedName": "stackIn_55_0",
+      "renamedName": "messageBoard",
       "declaration": {
         "file": "ak.java",
         "start": 3914,
@@ -172857,7 +173489,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#13",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#13",
       "originalName": "stackIn_56_1",
-      "renamedName": "stackIn_56_1",
+      "renamedName": "clippedMessageTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3947,
@@ -172868,7 +173500,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#14",
       "originalName": "stackIn_132_0",
-      "renamedName": "stackIn_132_0",
+      "renamedName": "chargeHitEligibility",
       "declaration": {
         "file": "ak.java",
         "start": 3977,
@@ -172879,7 +173511,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#15",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#15",
       "originalName": "stackIn_142_0",
-      "renamedName": "stackIn_142_0",
+      "renamedName": "pendingRemovalValue",
       "declaration": {
         "file": "ak.java",
         "start": 4008,
@@ -172890,7 +173522,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#16",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#16",
       "originalName": "stackIn_155_0",
-      "renamedName": "stackIn_155_0",
+      "renamedName": "chargeExpressionBoard",
       "declaration": {
         "file": "ak.java",
         "start": 4037,
@@ -172901,7 +173533,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#17",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#17",
       "originalName": "stackIn_155_1",
-      "renamedName": "stackIn_155_1",
+      "renamedName": "chargeExpressionGuard",
       "declaration": {
         "file": "ak.java",
         "start": 4071,
@@ -172912,7 +173544,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#18",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#18",
       "originalName": "stackIn_156_2",
-      "renamedName": "stackIn_156_2",
+      "renamedName": "chargeExpression",
       "declaration": {
         "file": "ak.java",
         "start": 4102,
@@ -172923,7 +173555,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#19",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#19",
       "originalName": "stackIn_158_0",
-      "renamedName": "stackIn_158_0",
+      "renamedName": "chargeMessageBoard",
       "declaration": {
         "file": "ak.java",
         "start": 4131,
@@ -172934,7 +173566,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#2",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#2",
       "originalName": "fieldTemp$2",
-      "renamedName": "fieldTemp$2",
+      "renamedName": "nextChargedActivationCount",
       "declaration": {
         "file": "ak.java",
         "start": 3624,
@@ -172945,7 +173577,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#20",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#20",
       "originalName": "stackIn_159_1",
-      "renamedName": "stackIn_159_1",
+      "renamedName": "chargeMessages",
       "declaration": {
         "file": "ak.java",
         "start": 4170,
@@ -172956,7 +173588,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#21",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#21",
       "originalName": "stackIn_245_0",
-      "renamedName": "stackIn_245_0",
+      "renamedName": "buildRowColumns",
       "declaration": {
         "file": "ak.java",
         "start": 4204,
@@ -172967,7 +173599,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#22",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#22",
       "originalName": "stackIn_270_0",
-      "renamedName": "stackIn_270_0",
+      "renamedName": "missedPowerUpBoard",
       "declaration": {
         "file": "ak.java",
         "start": 4233,
@@ -172978,7 +173610,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#23",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#23",
       "originalName": "stackIn_270_1",
-      "renamedName": "stackIn_270_1",
+      "renamedName": "missedPowerUpExpressionGuard",
       "declaration": {
         "file": "ak.java",
         "start": 4267,
@@ -172989,7 +173621,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#24",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#24",
       "originalName": "stackIn_271_2",
-      "renamedName": "stackIn_271_2",
+      "renamedName": "missedPowerUpExpression",
       "declaration": {
         "file": "ak.java",
         "start": 4298,
@@ -173000,7 +173632,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#25",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#25",
       "originalName": "stackIn_279_0",
-      "renamedName": "stackIn_279_0",
+      "renamedName": "selfTargetedValue",
       "declaration": {
         "file": "ak.java",
         "start": 4329,
@@ -173011,7 +173643,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#26",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#26",
       "originalName": "stackIn_284_0",
-      "renamedName": "stackIn_284_0",
+      "renamedName": "beneficialBaseValue",
       "declaration": {
         "file": "ak.java",
         "start": 4360,
@@ -173022,7 +173654,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#27",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#27",
       "originalName": "stackIn_285_1",
-      "renamedName": "stackIn_285_1",
+      "renamedName": "slowDownValue",
       "declaration": {
         "file": "ak.java",
         "start": 4391,
@@ -173033,7 +173665,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#28",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#28",
       "originalName": "stackIn_287_0",
-      "renamedName": "stackIn_287_0",
+      "renamedName": "pickupScoreBoard",
       "declaration": {
         "file": "ak.java",
         "start": 4420,
@@ -173044,7 +173676,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#29",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#29",
       "originalName": "stackIn_288_1",
-      "renamedName": "stackIn_288_1",
+      "renamedName": "pickupPoints",
       "declaration": {
         "file": "ak.java",
         "start": 4454,
@@ -173055,7 +173687,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#3",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#3",
       "originalName": "fieldTemp$6",
-      "renamedName": "fieldTemp$6",
+      "renamedName": "nextTransitionTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3653,
@@ -173066,7 +173698,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#30",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#30",
       "originalName": "stackIn_300_0",
-      "renamedName": "stackIn_300_0",
+      "renamedName": "pickupMessageBoard",
       "declaration": {
         "file": "ak.java",
         "start": 4483,
@@ -173077,7 +173709,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#31",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#31",
       "originalName": "stackIn_302_1",
-      "renamedName": "stackIn_302_1",
+      "renamedName": "pickupMessages",
       "declaration": {
         "file": "ak.java",
         "start": 4522,
@@ -173088,7 +173720,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#32",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#32",
       "originalName": "stackIn_388_0",
-      "renamedName": "stackIn_388_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "ak.java",
         "start": 4569,
@@ -173099,7 +173731,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#33",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#33",
       "originalName": "stackIn_388_1",
-      "renamedName": "stackIn_388_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "ak.java",
         "start": 4613,
@@ -173110,7 +173742,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#34",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#34",
       "originalName": "stackIn_389_2",
-      "renamedName": "stackIn_389_2",
+      "renamedName": "boardSummary",
       "declaration": {
         "file": "ak.java",
         "start": 4650,
@@ -173121,7 +173753,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#35",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#35",
       "originalName": "stackIn_391_1",
-      "renamedName": "stackIn_391_1",
+      "renamedName": "audioContextBuilder",
       "declaration": {
         "file": "ak.java",
         "start": 4694,
@@ -173132,7 +173764,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#36",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#36",
       "originalName": "stackIn_392_2",
-      "renamedName": "stackIn_392_2",
+      "renamedName": "audioSummary",
       "declaration": {
         "file": "ak.java",
         "start": 4731,
@@ -173143,7 +173775,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#37",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#37",
       "originalName": "stackIn_394_1",
-      "renamedName": "stackIn_394_1",
+      "renamedName": "collectedContextBuilder",
       "declaration": {
         "file": "ak.java",
         "start": 4775,
@@ -173154,7 +173786,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#38",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#38",
       "originalName": "stackIn_395_2",
-      "renamedName": "stackIn_395_2",
+      "renamedName": "collectedSummary",
       "declaration": {
         "file": "ak.java",
         "start": 4812,
@@ -173165,7 +173797,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#39",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#39",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "ak.java",
         "start": 4859,
@@ -173176,7 +173808,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#4",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#4",
       "originalName": "fieldTemp$3",
-      "renamedName": "fieldTemp$3",
+      "renamedName": "remainingBuildTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3682,
@@ -173187,7 +173819,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#40",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "pulse",
       "declaration": {
         "file": "ak.java",
         "start": 4904,
@@ -173198,7 +173830,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#41",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#41",
       "originalName": "var5_ref",
-      "renamedName": "var5_ref",
+      "renamedName": "failure",
       "declaration": {
         "file": "ak.java",
         "start": 4942,
@@ -173253,7 +173885,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#46",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "chargeCandidate",
       "declaration": {
         "file": "ak.java",
         "start": 5075,
@@ -173275,7 +173907,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#48",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#48",
       "originalName": "var9_ref",
-      "renamedName": "var9_ref",
+      "renamedName": "shiftedPath",
       "declaration": {
         "file": "ak.java",
         "start": 5125,
@@ -173297,7 +173929,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#5",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#5",
       "originalName": "dupTemp$4",
-      "renamedName": "dupTemp$4",
+      "renamedName": "newRowBrick",
       "declaration": {
         "file": "ak.java",
         "start": 3710,
@@ -173308,7 +173940,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#50",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#50",
       "originalName": "var9_ref3",
-      "renamedName": "var9_ref3",
+      "renamedName": "stoppedPaddle",
       "declaration": {
         "file": "ak.java",
         "start": 5182,
@@ -173319,7 +173951,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#51",
       "originalName": "var9_ref4",
-      "renamedName": "var9_ref4",
+      "renamedName": "introBrick",
       "declaration": {
         "file": "ak.java",
         "start": 5211,
@@ -173330,7 +173962,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#52",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#52",
       "originalName": "var10_ref",
-      "renamedName": "var10_ref",
+      "renamedName": "unusedBuildReference",
       "declaration": {
         "file": "ak.java",
         "start": 5244,
@@ -173341,7 +173973,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#53",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#53",
       "originalName": "var10_ref_on",
-      "renamedName": "var10_ref_on",
+      "renamedName": "builtBrick",
       "declaration": {
         "file": "ak.java",
         "start": 5273,
@@ -173385,7 +174017,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#57",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#57",
       "originalName": "var11_ref",
-      "renamedName": "var11_ref",
+      "renamedName": "unusedReferenceOne",
       "declaration": {
         "file": "ak.java",
         "start": 5396,
@@ -173407,7 +174039,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#59",
       "originalName": "var11_ref_on",
-      "renamedName": "var11_ref_on",
+      "renamedName": "clearanceBrick",
       "declaration": {
         "file": "ak.java",
         "start": 5448,
@@ -173418,7 +174050,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#6",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#6",
       "originalName": "fieldTemp$5",
-      "renamedName": "fieldTemp$5",
+      "renamedName": "nextLevelIndex",
       "declaration": {
         "file": "ak.java",
         "start": 3740,
@@ -173440,7 +174072,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#61",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#61",
       "originalName": "var12_ref",
-      "renamedName": "var12_ref",
+      "renamedName": "unusedReferenceTwo",
       "declaration": {
         "file": "ak.java",
         "start": 5516,
@@ -173451,7 +174083,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#62",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#62",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "chargeGroupIndex",
       "declaration": {
         "file": "ak.java",
         "start": 5546,
@@ -173495,7 +174127,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#66",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#66",
       "originalName": "var15",
-      "renamedName": "var15",
+      "renamedName": "chargeHitEligible",
       "declaration": {
         "file": "ak.java",
         "start": 5651,
@@ -173506,7 +174138,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#67",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#67",
       "originalName": "var16",
-      "renamedName": "var16",
+      "renamedName": "wasPendingRemoval",
       "declaration": {
         "file": "ak.java",
         "start": 5674,
@@ -173539,7 +174171,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#7",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#7",
       "originalName": "fieldTemp$7",
-      "renamedName": "fieldTemp$7",
+      "renamedName": "nextIntroTransitionTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3769,
@@ -173550,7 +174182,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#70",
       "originalName": "var19",
-      "renamedName": "var19",
+      "renamedName": "chargeGroup",
       "declaration": {
         "file": "ak.java",
         "start": 5744,
@@ -173561,7 +174193,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#71",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#71",
       "originalName": "var20",
-      "renamedName": "var20",
+      "renamedName": "chargeArea",
       "declaration": {
         "file": "ak.java",
         "start": 5769,
@@ -173572,7 +174204,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#72",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#72",
       "originalName": "var21",
-      "renamedName": "var21",
+      "renamedName": "unusedChargeGroupAlias",
       "declaration": {
         "file": "ak.java",
         "start": 5794,
@@ -173583,7 +174215,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#73",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#73",
       "originalName": "var22",
-      "renamedName": "var22",
+      "renamedName": "unusedChargeGroupReference",
       "declaration": {
         "file": "ak.java",
         "start": 5819,
@@ -173594,7 +174226,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#74",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#74",
       "originalName": "var23",
-      "renamedName": "var23",
+      "renamedName": "transitionGroup",
       "declaration": {
         "file": "ak.java",
         "start": 5844,
@@ -173605,7 +174237,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#75",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#75",
       "originalName": "var24",
-      "renamedName": "var24",
+      "renamedName": "destinationWaypoint",
       "declaration": {
         "file": "ak.java",
         "start": 5869,
@@ -173616,7 +174248,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#76",
       "originalName": "var25",
-      "renamedName": "var25",
+      "renamedName": "overflowGroup",
       "declaration": {
         "file": "ak.java",
         "start": 5894,
@@ -173627,7 +174259,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#77",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#77",
       "originalName": "var26",
-      "renamedName": "var26",
+      "renamedName": "unusedOverflowGroupAlias",
       "declaration": {
         "file": "ak.java",
         "start": 5919,
@@ -173638,7 +174270,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#78",
       "originalName": "var9Lifetime1",
-      "renamedName": "var9Lifetime1",
+      "renamedName": "queuedEffectBall",
       "declaration": {
         "file": "ak.java",
         "start": 5944,
@@ -173649,7 +174281,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#79",
       "originalName": "var9Lifetime2",
-      "renamedName": "var9Lifetime2",
+      "renamedName": "activeEffectBall",
       "declaration": {
         "file": "ak.java",
         "start": 5970,
@@ -173660,7 +174292,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#8",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#8",
       "originalName": "fieldTemp$8",
-      "renamedName": "fieldTemp$8",
+      "renamedName": "nextIntroTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3798,
@@ -173671,7 +174303,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#80",
       "originalName": "var10_ref_onLifetime1",
-      "renamedName": "var10_ref_onLifetime1",
+      "renamedName": "overflowBrick",
       "declaration": {
         "file": "ak.java",
         "start": 5996,
@@ -173704,7 +174336,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#83",
       "originalName": "var11_ref_onLifetime1",
-      "renamedName": "var11_ref_onLifetime1",
+      "renamedName": "transitionBrick",
       "declaration": {
         "file": "ak.java",
         "start": 6098,
@@ -173715,7 +174347,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#84",
       "originalName": "var11_ref_onLifetime2",
-      "renamedName": "var11_ref_onLifetime2",
+      "renamedName": "interpolatedBrick",
       "declaration": {
         "file": "ak.java",
         "start": 6132,
@@ -173726,7 +174358,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#85",
       "originalName": "var21Lifetime1",
-      "renamedName": "var21Lifetime1",
+      "renamedName": "clearanceGroup",
       "declaration": {
         "file": "ak.java",
         "start": 6166,
@@ -173737,7 +174369,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#86",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#86",
       "originalName": "var22Lifetime1",
-      "renamedName": "var22Lifetime1",
+      "renamedName": "unusedClearanceGroupAlias",
       "declaration": {
         "file": "ak.java",
         "start": 6193,
@@ -173748,7 +174380,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#87",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#87",
       "originalName": "var22Lifetime2",
-      "renamedName": "var22Lifetime2",
+      "renamedName": "pathWaypoints",
       "declaration": {
         "file": "ak.java",
         "start": 6220,
@@ -173759,7 +174391,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#88",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#88",
       "originalName": "var26Lifetime1",
-      "renamedName": "var26Lifetime1",
+      "renamedName": "movingGroup",
       "declaration": {
         "file": "ak.java",
         "start": 6247,
@@ -173770,7 +174402,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#89",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#89",
       "originalName": "var21Lifetime2",
-      "renamedName": "var21Lifetime2",
+      "renamedName": "unusedChargeGroupLifetimeAlias",
       "declaration": {
         "file": "ak.java",
         "start": 6274,
@@ -173781,7 +174413,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#9",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#9",
       "originalName": "fieldTemp$11",
-      "renamedName": "fieldTemp$11",
+      "renamedName": "nextServeDelayTicks",
       "declaration": {
         "file": "ak.java",
         "start": 3827,
@@ -173792,7 +174424,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#90",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#90",
       "originalName": "var26Lifetime2",
-      "renamedName": "var26Lifetime2",
+      "renamedName": "unusedOverflowGroupReference",
       "declaration": {
         "file": "ak.java",
         "start": 6301,
@@ -173803,7 +174435,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#91",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#91",
       "originalName": "var22Lifetime1Lifetime1",
-      "renamedName": "var22Lifetime1Lifetime1",
+      "renamedName": "unusedClearanceGroupReference",
       "declaration": {
         "file": "ak.java",
         "start": 6328,
@@ -173814,7 +174446,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#92",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#92",
       "originalName": "var12Lifetime1",
-      "renamedName": "var12Lifetime1",
+      "renamedName": "unusedStatisticValue",
       "declaration": {
         "file": "ak.java",
         "start": 6365,
@@ -173825,7 +174457,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#93",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#93",
       "originalName": "var12Lifetime1Lifetime1",
-      "renamedName": "var12Lifetime1Lifetime1",
+      "renamedName": "ballStatistic",
       "declaration": {
         "file": "ak.java",
         "start": 6393,
@@ -173836,7 +174468,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#94",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#94",
       "originalName": "decompiledSharedTail0",
-      "renamedName": "decompiledSharedTail0",
+      "renamedName": "promotePendingMessage",
       "declaration": {
         "file": "ak.java",
         "start": 6546,
@@ -173847,7 +174479,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#95",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#95",
       "originalName": "decompiledFrameRemainder0",
-      "renamedName": "decompiledFrameRemainder0",
+      "renamedName": "unusedLevelCompletionFlag",
       "declaration": {
         "file": "ak.java",
         "start": 20512,
@@ -173858,7 +174490,7 @@
       "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#96",
       "renamedSymbol": "L:MultiplayerMatch.advanceBoard(LPlayerBoard;LNodeDeque;LNodeDeque;I)V#96",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtParameter",
       "declaration": {
         "file": "ak.java",
         "start": 33582,
@@ -508782,7 +509414,7 @@
       "original": "ak.java",
       "renamed": "MultiplayerMatch.java",
       "inputSha256": "44ef57260a869da05db5b717d65518d04318fe4b8ac90975756f82aa77d07565",
-      "outputSha256": "603e7dd684afbb65c226ee3b4fd081b7d9aac6a22a4f73f953d98fd8a1f275c9",
+      "outputSha256": "d3d04f2e44684da5115ca22d239fe2ddea06b8497b755877a536d4e0d8ab2d01",
       "edits": [
         {
           "start": 50,
@@ -509961,11 +510593,95 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 3566,
+          "end": 3577,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#0",
+          "original": "fieldTemp$0",
+          "renamed": "remainingMessageTicks"
+        },
+        {
+          "start": 3595,
+          "end": 3606,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#1",
+          "original": "fieldTemp$1",
+          "renamed": "remainingEyeTicks"
+        },
+        {
+          "start": 3624,
+          "end": 3635,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#2",
+          "original": "fieldTemp$2",
+          "renamed": "nextChargedActivationCount"
+        },
+        {
+          "start": 3653,
+          "end": 3664,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#3",
+          "original": "fieldTemp$6",
+          "renamed": "nextTransitionTicks"
+        },
+        {
+          "start": 3682,
+          "end": 3693,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#4",
+          "original": "fieldTemp$3",
+          "renamed": "remainingBuildTicks"
+        },
+        {
           "start": 3707,
           "end": 3709,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 3710,
+          "end": 3719,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#5",
+          "original": "dupTemp$4",
+          "renamed": "newRowBrick"
+        },
+        {
+          "start": 3740,
+          "end": 3751,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#6",
+          "original": "fieldTemp$5",
+          "renamed": "nextLevelIndex"
+        },
+        {
+          "start": 3769,
+          "end": 3780,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#7",
+          "original": "fieldTemp$7",
+          "renamed": "nextIntroTransitionTicks"
+        },
+        {
+          "start": 3798,
+          "end": 3809,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#8",
+          "original": "fieldTemp$8",
+          "renamed": "nextIntroTicks"
+        },
+        {
+          "start": 3827,
+          "end": 3839,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#9",
+          "original": "fieldTemp$11",
+          "renamed": "nextServeDelayTicks"
+        },
+        {
+          "start": 3857,
+          "end": 3868,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#10",
+          "original": "fieldTemp$9",
+          "renamed": "nextDefeatTicks"
+        },
+        {
+          "start": 3886,
+          "end": 3898,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#11",
+          "original": "fieldTemp$10",
+          "renamed": "nextVictoryTicks"
         },
         {
           "start": 3912,
@@ -509975,11 +510691,60 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 3914,
+          "end": 3926,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#12",
+          "original": "stackIn_55_0",
+          "renamed": "messageBoard"
+        },
+        {
+          "start": 3947,
+          "end": 3959,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#13",
+          "original": "stackIn_56_1",
+          "renamed": "clippedMessageTicks"
+        },
+        {
+          "start": 3977,
+          "end": 3990,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+          "original": "stackIn_132_0",
+          "renamed": "chargeHitEligibility"
+        },
+        {
+          "start": 4008,
+          "end": 4021,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#15",
+          "original": "stackIn_142_0",
+          "renamed": "pendingRemovalValue"
+        },
+        {
           "start": 4035,
           "end": 4036,
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 4037,
+          "end": 4050,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#16",
+          "original": "stackIn_155_0",
+          "renamed": "chargeExpressionBoard"
+        },
+        {
+          "start": 4071,
+          "end": 4084,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#17",
+          "original": "stackIn_155_1",
+          "renamed": "chargeExpressionGuard"
+        },
+        {
+          "start": 4102,
+          "end": 4115,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#18",
+          "original": "stackIn_156_2",
+          "renamed": "chargeExpression"
         },
         {
           "start": 4129,
@@ -509989,11 +510754,74 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 4131,
+          "end": 4144,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#19",
+          "original": "stackIn_158_0",
+          "renamed": "chargeMessageBoard"
+        },
+        {
+          "start": 4170,
+          "end": 4183,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#20",
+          "original": "stackIn_159_1",
+          "renamed": "chargeMessages"
+        },
+        {
+          "start": 4204,
+          "end": 4217,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#21",
+          "original": "stackIn_245_0",
+          "renamed": "buildRowColumns"
+        },
+        {
           "start": 4231,
           "end": 4232,
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 4233,
+          "end": 4246,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#22",
+          "original": "stackIn_270_0",
+          "renamed": "missedPowerUpBoard"
+        },
+        {
+          "start": 4267,
+          "end": 4280,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#23",
+          "original": "stackIn_270_1",
+          "renamed": "missedPowerUpExpressionGuard"
+        },
+        {
+          "start": 4298,
+          "end": 4311,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#24",
+          "original": "stackIn_271_2",
+          "renamed": "missedPowerUpExpression"
+        },
+        {
+          "start": 4329,
+          "end": 4342,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#25",
+          "original": "stackIn_279_0",
+          "renamed": "selfTargetedValue"
+        },
+        {
+          "start": 4360,
+          "end": 4373,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#26",
+          "original": "stackIn_284_0",
+          "renamed": "beneficialBaseValue"
+        },
+        {
+          "start": 4391,
+          "end": 4404,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#27",
+          "original": "stackIn_285_1",
+          "renamed": "slowDownValue"
         },
         {
           "start": 4418,
@@ -510003,6 +510831,20 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 4420,
+          "end": 4433,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#28",
+          "original": "stackIn_287_0",
+          "renamed": "pickupScoreBoard"
+        },
+        {
+          "start": 4454,
+          "end": 4467,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#29",
+          "original": "stackIn_288_1",
+          "renamed": "pickupPoints"
+        },
+        {
           "start": 4481,
           "end": 4482,
           "symbol": "C:j",
@@ -510010,11 +510852,95 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 4483,
+          "end": 4496,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#30",
+          "original": "stackIn_300_0",
+          "renamed": "pickupMessageBoard"
+        },
+        {
+          "start": 4522,
+          "end": 4535,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#31",
+          "original": "stackIn_302_1",
+          "renamed": "pickupMessages"
+        },
+        {
+          "start": 4569,
+          "end": 4582,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#32",
+          "original": "stackIn_388_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 4613,
+          "end": 4626,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#33",
+          "original": "stackIn_388_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 4650,
+          "end": 4663,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#34",
+          "original": "stackIn_389_2",
+          "renamed": "boardSummary"
+        },
+        {
+          "start": 4694,
+          "end": 4707,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#35",
+          "original": "stackIn_391_1",
+          "renamed": "audioContextBuilder"
+        },
+        {
+          "start": 4731,
+          "end": 4744,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#36",
+          "original": "stackIn_392_2",
+          "renamed": "audioSummary"
+        },
+        {
+          "start": 4775,
+          "end": 4788,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#37",
+          "original": "stackIn_394_1",
+          "renamed": "collectedContextBuilder"
+        },
+        {
+          "start": 4812,
+          "end": 4825,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#38",
+          "original": "stackIn_395_2",
+          "renamed": "collectedSummary"
+        },
+        {
+          "start": 4859,
+          "end": 4884,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#39",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
           "start": 4901,
           "end": 4903,
           "symbol": "C:kc",
           "original": "kc",
           "renamed": "BallPulseEffect"
+        },
+        {
+          "start": 4904,
+          "end": 4908,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
+          "original": "var5",
+          "renamed": "pulse"
+        },
+        {
+          "start": 4942,
+          "end": 4950,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#41",
+          "original": "var5_ref",
+          "renamed": "failure"
         },
         {
           "start": 4967,
@@ -510066,11 +510992,25 @@
           "renamed": "Ball"
         },
         {
+          "start": 5075,
+          "end": 5079,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
+        },
+        {
           "start": 5122,
           "end": 5124,
           "symbol": "C:cl",
           "original": "cl",
           "renamed": "BrickMotionPath"
+        },
+        {
+          "start": 5125,
+          "end": 5133,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#48",
+          "original": "var9_ref",
+          "renamed": "shiftedPath"
         },
         {
           "start": 5150,
@@ -510094,6 +511034,13 @@
           "renamed": "Paddle"
         },
         {
+          "start": 5182,
+          "end": 5191,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#50",
+          "original": "var9_ref3",
+          "renamed": "stoppedPaddle"
+        },
+        {
           "start": 5208,
           "end": 5210,
           "symbol": "C:on",
@@ -510101,11 +511048,32 @@
           "renamed": "Brick"
         },
         {
+          "start": 5211,
+          "end": 5220,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
+        },
+        {
+          "start": 5244,
+          "end": 5253,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#52",
+          "original": "var10_ref",
+          "renamed": "unusedBuildReference"
+        },
+        {
           "start": 5270,
           "end": 5272,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 5273,
+          "end": 5285,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#53",
+          "original": "var10_ref_on",
+          "renamed": "builtBrick"
         },
         {
           "start": 5325,
@@ -510136,11 +511104,25 @@
           "renamed": "redirectedBall"
         },
         {
+          "start": 5396,
+          "end": 5405,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#57",
+          "original": "var11_ref",
+          "renamed": "unusedReferenceOne"
+        },
+        {
           "start": 5445,
           "end": 5447,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 5448,
+          "end": 5460,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
+          "original": "var11_ref_on",
+          "renamed": "clearanceBrick"
         },
         {
           "start": 5477,
@@ -510155,6 +511137,20 @@
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#60",
           "original": "var11_ref_ee",
           "renamed": "waypoint"
+        },
+        {
+          "start": 5516,
+          "end": 5525,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#61",
+          "original": "var12_ref",
+          "renamed": "unusedReferenceTwo"
+        },
+        {
+          "start": 5546,
+          "end": 5551,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#62",
+          "original": "var12",
+          "renamed": "chargeGroupIndex"
         },
         {
           "start": 5565,
@@ -510199,6 +511195,20 @@
           "renamed": "contactBrick"
         },
         {
+          "start": 5651,
+          "end": 5656,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#66",
+          "original": "var15",
+          "renamed": "chargeHitEligible"
+        },
+        {
+          "start": 5674,
+          "end": 5679,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#67",
+          "original": "var16",
+          "renamed": "wasPendingRemoval"
+        },
+        {
           "start": 5697,
           "end": 5702,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#68",
@@ -510227,11 +511237,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 5744,
+          "end": 5749,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
+          "original": "var19",
+          "renamed": "chargeGroup"
+        },
+        {
           "start": 5766,
           "end": 5768,
           "symbol": "C:no",
           "original": "no",
           "renamed": "CircleBody"
+        },
+        {
+          "start": 5769,
+          "end": 5774,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#71",
+          "original": "var20",
+          "renamed": "chargeArea"
         },
         {
           "start": 5791,
@@ -510241,11 +511265,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 5794,
+          "end": 5799,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#72",
+          "original": "var21",
+          "renamed": "unusedChargeGroupAlias"
+        },
+        {
           "start": 5816,
           "end": 5818,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 5819,
+          "end": 5824,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#73",
+          "original": "var22",
+          "renamed": "unusedChargeGroupReference"
         },
         {
           "start": 5841,
@@ -510255,11 +511293,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 5844,
+          "end": 5849,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#74",
+          "original": "var23",
+          "renamed": "transitionGroup"
+        },
+        {
           "start": 5866,
           "end": 5868,
           "symbol": "C:ee",
           "original": "ee",
           "renamed": "MotionWaypoint"
+        },
+        {
+          "start": 5869,
+          "end": 5874,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#75",
+          "original": "var24",
+          "renamed": "destinationWaypoint"
         },
         {
           "start": 5891,
@@ -510269,11 +511321,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 5894,
+          "end": 5899,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
+          "original": "var25",
+          "renamed": "overflowGroup"
+        },
+        {
           "start": 5916,
           "end": 5918,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 5919,
+          "end": 5924,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#77",
+          "original": "var26",
+          "renamed": "unusedOverflowGroupAlias"
         },
         {
           "start": 5941,
@@ -510283,6 +511349,13 @@
           "renamed": "Ball"
         },
         {
+          "start": 5944,
+          "end": 5957,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
+        },
+        {
           "start": 5967,
           "end": 5969,
           "symbol": "C:vn",
@@ -510290,11 +511363,25 @@
           "renamed": "Ball"
         },
         {
+          "start": 5970,
+          "end": 5983,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 5993,
           "end": 5995,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 5996,
+          "end": 6017,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
         },
         {
           "start": 6027,
@@ -510332,11 +511419,25 @@
           "renamed": "Brick"
         },
         {
+          "start": 6098,
+          "end": 6119,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 6129,
           "end": 6131,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 6132,
+          "end": 6153,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
+          "original": "var11_ref_onLifetime2",
+          "renamed": "interpolatedBrick"
         },
         {
           "start": 6163,
@@ -510346,11 +511447,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 6166,
+          "end": 6180,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
+          "original": "var21Lifetime1",
+          "renamed": "clearanceGroup"
+        },
+        {
           "start": 6190,
           "end": 6192,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 6193,
+          "end": 6207,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#86",
+          "original": "var22Lifetime1",
+          "renamed": "unusedClearanceGroupAlias"
         },
         {
           "start": 6217,
@@ -510360,11 +511475,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 6220,
+          "end": 6234,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#87",
+          "original": "var22Lifetime2",
+          "renamed": "pathWaypoints"
+        },
+        {
           "start": 6244,
           "end": 6246,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 6247,
+          "end": 6261,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#88",
+          "original": "var26Lifetime1",
+          "renamed": "movingGroup"
         },
         {
           "start": 6271,
@@ -510374,11 +511503,25 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 6274,
+          "end": 6288,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#89",
+          "original": "var21Lifetime2",
+          "renamed": "unusedChargeGroupLifetimeAlias"
+        },
+        {
           "start": 6298,
           "end": 6300,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "NodeDeque"
+        },
+        {
+          "start": 6301,
+          "end": 6315,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#90",
+          "original": "var26Lifetime2",
+          "renamed": "unusedOverflowGroupReference"
         },
         {
           "start": 6325,
@@ -510388,11 +511531,53 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 6328,
+          "end": 6351,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#91",
+          "original": "var22Lifetime1Lifetime1",
+          "renamed": "unusedClearanceGroupReference"
+        },
+        {
+          "start": 6365,
+          "end": 6379,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#92",
+          "original": "var12Lifetime1",
+          "renamed": "unusedStatisticValue"
+        },
+        {
+          "start": 6393,
+          "end": 6416,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#93",
+          "original": "var12Lifetime1Lifetime1",
+          "renamed": "ballStatistic"
+        },
+        {
+          "start": 6426,
+          "end": 6435,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#61",
+          "original": "var12_ref",
+          "renamed": "unusedReferenceTwo"
+        },
+        {
+          "start": 6452,
+          "end": 6461,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#57",
+          "original": "var11_ref",
+          "renamed": "unusedReferenceOne"
+        },
+        {
           "start": 6478,
           "end": 6483,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#68",
           "original": "var17",
           "renamed": "clientBranchFlag"
+        },
+        {
+          "start": 6546,
+          "end": 6567,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#94",
+          "original": "decompiledSharedTail0",
+          "renamed": "promotePendingMessage"
         },
         {
           "start": 6572,
@@ -510414,6 +511599,20 @@
           "symbol": "F:j.field_i:I",
           "original": "field_i",
           "renamed": "messageTicks"
+        },
+        {
+          "start": 6613,
+          "end": 6634,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#94",
+          "original": "decompiledSharedTail0",
+          "renamed": "promotePendingMessage"
+        },
+        {
+          "start": 6650,
+          "end": 6661,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#0",
+          "original": "fieldTemp$0",
+          "renamed": "remainingMessageTicks"
         },
         {
           "start": 6664,
@@ -510456,6 +511655,27 @@
           "symbol": "F:j.field_i:I",
           "original": "field_i",
           "renamed": "messageTicks"
+        },
+        {
+          "start": 6745,
+          "end": 6766,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#94",
+          "original": "decompiledSharedTail0",
+          "renamed": "promotePendingMessage"
+        },
+        {
+          "start": 6772,
+          "end": 6783,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#0",
+          "original": "fieldTemp$0",
+          "renamed": "remainingMessageTicks"
+        },
+        {
+          "start": 6817,
+          "end": 6838,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#94",
+          "original": "decompiledSharedTail0",
+          "renamed": "promotePendingMessage"
         },
         {
           "start": 6854,
@@ -510584,6 +511804,13 @@
           "renamed": "eyeExpressionTicks"
         },
         {
+          "start": 7176,
+          "end": 7187,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#1",
+          "original": "fieldTemp$1",
+          "renamed": "remainingEyeTicks"
+        },
+        {
           "start": 7190,
           "end": 7196,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -510626,6 +511853,13 @@
           "renamed": "eyeExpressionTicks"
         },
         {
+          "start": 7283,
+          "end": 7294,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#1",
+          "original": "fieldTemp$1",
+          "renamed": "remainingEyeTicks"
+        },
+        {
           "start": 7312,
           "end": 7318,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -510638,6 +511872,13 @@
           "symbol": "M:j.b(II)V",
           "original": "b",
           "renamed": "setBriefEyeExpression"
+        },
+        {
+          "start": 7368,
+          "end": 7372,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
+          "original": "var5",
+          "renamed": "pulse"
         },
         {
           "start": 7376,
@@ -510668,6 +511909,20 @@
           "renamed": "first"
         },
         {
+          "start": 7422,
+          "end": 7426,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
+          "original": "var5",
+          "renamed": "pulse"
+        },
+        {
+          "start": 7455,
+          "end": 7459,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
+          "original": "var5",
+          "renamed": "pulse"
+        },
+        {
           "start": 7460,
           "end": 7461,
           "symbol": "M:kc.c(B)Z",
@@ -510675,11 +511930,25 @@
           "renamed": "advance"
         },
         {
+          "start": 7490,
+          "end": 7494,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
+          "original": "var5",
+          "renamed": "pulse"
+        },
+        {
           "start": 7495,
           "end": 7496,
           "symbol": "M:nm.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 7536,
+          "end": 7540,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#40",
+          "original": "var5",
+          "renamed": "pulse"
         },
         {
           "start": 7544,
@@ -511053,6 +512322,13 @@
           "renamed": "isEmpty"
         },
         {
+          "start": 8511,
+          "end": 8515,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
+        },
+        {
           "start": 8519,
           "end": 8521,
           "symbol": "C:vn",
@@ -511079,6 +512355,20 @@
           "symbol": "M:vl.d(I)Lnm;",
           "original": "d",
           "renamed": "first"
+        },
+        {
+          "start": 8572,
+          "end": 8576,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
+        },
+        {
+          "start": 8616,
+          "end": 8620,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
         },
         {
           "start": 8621,
@@ -511116,6 +512406,13 @@
           "renamed": "GameplayAudioEvent"
         },
         {
+          "start": 8799,
+          "end": 8803,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
+        },
+        {
           "start": 8804,
           "end": 8811,
           "symbol": "F:vn.field_C:I",
@@ -511151,11 +512448,25 @@
           "renamed": "BallPulseEffect"
         },
         {
+          "start": 8861,
+          "end": 8865,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
+        },
+        {
           "start": 8866,
           "end": 8873,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 8875,
+          "end": 8879,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
         },
         {
           "start": 8880,
@@ -511179,11 +512490,25 @@
           "renamed": "brickSequenceStep"
         },
         {
+          "start": 8961,
+          "end": 8966,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#71",
+          "original": "var20",
+          "renamed": "chargeArea"
+        },
+        {
           "start": 8973,
           "end": 8975,
           "symbol": "C:no",
           "original": "no",
           "renamed": "CircleBody"
+        },
+        {
+          "start": 8976,
+          "end": 8980,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
         },
         {
           "start": 8981,
@@ -511193,11 +512518,25 @@
           "renamed": "radius256"
         },
         {
+          "start": 8991,
+          "end": 8995,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
+        },
+        {
           "start": 8996,
           "end": 9003,
           "symbol": "F:vi.field_j:I",
           "original": "field_j",
           "renamed": "x256"
+        },
+        {
+          "start": 9005,
+          "end": 9009,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
         },
         {
           "start": 9010,
@@ -511207,11 +512546,25 @@
           "renamed": "radius256"
         },
         {
+          "start": 9020,
+          "end": 9024,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
+        },
+        {
           "start": 9025,
           "end": 9032,
           "symbol": "F:vi.field_m:I",
           "original": "field_m",
           "renamed": "y256"
+        },
+        {
+          "start": 9107,
+          "end": 9112,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#62",
+          "original": "var12",
+          "renamed": "chargeGroupIndex"
         },
         {
           "start": 9118,
@@ -511228,6 +512581,27 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 9142,
+          "end": 9147,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#62",
+          "original": "var12",
+          "renamed": "chargeGroupIndex"
+        },
+        {
+          "start": 9149,
+          "end": 9154,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#62",
+          "original": "var12",
+          "renamed": "chargeGroupIndex"
+        },
+        {
+          "start": 9182,
+          "end": 9187,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
+          "original": "var19",
+          "renamed": "chargeGroup"
+        },
+        {
           "start": 9190,
           "end": 9196,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -511242,6 +512616,55 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 9205,
+          "end": 9210,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#62",
+          "original": "var12",
+          "renamed": "chargeGroupIndex"
+        },
+        {
+          "start": 9235,
+          "end": 9240,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#72",
+          "original": "var21",
+          "renamed": "unusedChargeGroupAlias"
+        },
+        {
+          "start": 9243,
+          "end": 9248,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
+          "original": "var19",
+          "renamed": "chargeGroup"
+        },
+        {
+          "start": 9272,
+          "end": 9277,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#73",
+          "original": "var22",
+          "renamed": "unusedChargeGroupReference"
+        },
+        {
+          "start": 9280,
+          "end": 9285,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#72",
+          "original": "var21",
+          "renamed": "unusedChargeGroupAlias"
+        },
+        {
+          "start": 9309,
+          "end": 9323,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#89",
+          "original": "var21Lifetime2",
+          "renamed": "unusedChargeGroupLifetimeAlias"
+        },
+        {
+          "start": 9326,
+          "end": 9331,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
+          "original": "var19",
+          "renamed": "chargeGroup"
+        },
+        {
           "start": 9355,
           "end": 9360,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#65",
@@ -511254,6 +512677,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 9369,
+          "end": 9374,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
+          "original": "var19",
+          "renamed": "chargeGroup"
         },
         {
           "start": 9375,
@@ -511282,6 +512712,13 @@
           "symbol": "M:bn.a(Lno;Z)Z",
           "original": "a",
           "renamed": "overlapsCircle"
+        },
+        {
+          "start": 9466,
+          "end": 9471,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#71",
+          "original": "var20",
+          "renamed": "chargeArea"
         },
         {
           "start": 9513,
@@ -511340,6 +512777,13 @@
           "renamed": "typeId"
         },
         {
+          "start": 9740,
+          "end": 9753,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+          "original": "stackIn_132_0",
+          "renamed": "chargeHitEligibility"
+        },
+        {
           "start": 9757,
           "end": 9762,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#65",
@@ -511352,6 +512796,48 @@
           "symbol": "F:vi.field_i:I",
           "original": "field_i",
           "renamed": "typeId"
+        },
+        {
+          "start": 9862,
+          "end": 9875,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+          "original": "stackIn_132_0",
+          "renamed": "chargeHitEligibility"
+        },
+        {
+          "start": 9986,
+          "end": 9999,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+          "original": "stackIn_132_0",
+          "renamed": "chargeHitEligibility"
+        },
+        {
+          "start": 10104,
+          "end": 10117,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+          "original": "stackIn_132_0",
+          "renamed": "chargeHitEligibility"
+        },
+        {
+          "start": 10216,
+          "end": 10229,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+          "original": "stackIn_132_0",
+          "renamed": "chargeHitEligibility"
+        },
+        {
+          "start": 10289,
+          "end": 10294,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#66",
+          "original": "var15",
+          "renamed": "chargeHitEligible"
+        },
+        {
+          "start": 10297,
+          "end": 10310,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#14",
+          "original": "stackIn_132_0",
+          "renamed": "chargeHitEligibility"
         },
         {
           "start": 10342,
@@ -511410,6 +512896,20 @@
           "renamed": "typeId"
         },
         {
+          "start": 10600,
+          "end": 10605,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#66",
+          "original": "var15",
+          "renamed": "chargeHitEligible"
+        },
+        {
+          "start": 10642,
+          "end": 10655,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#15",
+          "original": "stackIn_142_0",
+          "renamed": "pendingRemovalValue"
+        },
+        {
           "start": 10659,
           "end": 10664,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#65",
@@ -511422,6 +512922,20 @@
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 10716,
+          "end": 10721,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#67",
+          "original": "var16",
+          "renamed": "wasPendingRemoval"
+        },
+        {
+          "start": 10724,
+          "end": 10737,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#15",
+          "original": "stackIn_142_0",
+          "renamed": "pendingRemovalValue"
         },
         {
           "start": 10767,
@@ -511599,6 +513113,13 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 11299,
+          "end": 11304,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#67",
+          "original": "var16",
+          "renamed": "wasPendingRemoval"
+        },
+        {
           "start": 11343,
           "end": 11349,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -511611,6 +513132,13 @@
           "symbol": "M:j.a(ILon;I)V",
           "original": "a",
           "renamed": "addBrickScore"
+        },
+        {
+          "start": 11356,
+          "end": 11360,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
         },
         {
           "start": 11361,
@@ -511641,11 +513169,25 @@
           "renamed": "Brick"
         },
         {
+          "start": 11547,
+          "end": 11552,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#70",
+          "original": "var19",
+          "renamed": "chargeGroup"
+        },
+        {
           "start": 11553,
           "end": 11554,
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 11635,
+          "end": 11648,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#16",
+          "original": "stackIn_155_0",
+          "renamed": "chargeExpressionBoard"
         },
         {
           "start": 11652,
@@ -511662,6 +513204,27 @@
           "renamed": "board"
         },
         {
+          "start": 11685,
+          "end": 11698,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#17",
+          "original": "stackIn_155_1",
+          "renamed": "chargeExpressionGuard"
+        },
+        {
+          "start": 11767,
+          "end": 11780,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#18",
+          "original": "stackIn_156_2",
+          "renamed": "chargeExpression"
+        },
+        {
+          "start": 11837,
+          "end": 11850,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#18",
+          "original": "stackIn_156_2",
+          "renamed": "chargeExpression"
+        },
+        {
           "start": 11900,
           "end": 11901,
           "symbol": "C:j",
@@ -511669,11 +513232,39 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 11912,
+          "end": 11925,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#16",
+          "original": "stackIn_155_0",
+          "renamed": "chargeExpressionBoard"
+        },
+        {
           "start": 11927,
           "end": 11928,
           "symbol": "M:j.b(II)V",
           "original": "b",
           "renamed": "setBriefEyeExpression"
+        },
+        {
+          "start": 11929,
+          "end": 11942,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#17",
+          "original": "stackIn_155_1",
+          "renamed": "chargeExpressionGuard"
+        },
+        {
+          "start": 11944,
+          "end": 11957,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#18",
+          "original": "stackIn_156_2",
+          "renamed": "chargeExpression"
+        },
+        {
+          "start": 11980,
+          "end": 11993,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#19",
+          "original": "stackIn_158_0",
+          "renamed": "chargeMessageBoard"
         },
         {
           "start": 11997,
@@ -511690,11 +513281,25 @@
           "renamed": "board"
         },
         {
+          "start": 12069,
+          "end": 12082,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#20",
+          "original": "stackIn_159_1",
+          "renamed": "chargeMessages"
+        },
+        {
           "start": 12085,
           "end": 12087,
           "symbol": "C:ml",
           "original": "ml",
           "renamed": "TextLineLayout"
+        },
+        {
+          "start": 12148,
+          "end": 12161,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#20",
+          "original": "stackIn_159_1",
+          "renamed": "chargeMessages"
         },
         {
           "start": 12164,
@@ -511718,11 +513323,32 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 12232,
+          "end": 12245,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#19",
+          "original": "stackIn_158_0",
+          "renamed": "chargeMessageBoard"
+        },
+        {
           "start": 12247,
           "end": 12248,
           "symbol": "M:j.a([Ljava/lang/String;B)V",
           "original": "a",
           "renamed": "choosePendingMessage"
+        },
+        {
+          "start": 12249,
+          "end": 12262,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#20",
+          "original": "stackIn_159_1",
+          "renamed": "chargeMessages"
+        },
+        {
+          "start": 12314,
+          "end": 12318,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#46",
+          "original": "var9",
+          "renamed": "chargeCandidate"
         },
         {
           "start": 12322,
@@ -511816,6 +513442,13 @@
           "renamed": "removeFirst"
         },
         {
+          "start": 12597,
+          "end": 12608,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#2",
+          "original": "fieldTemp$2",
+          "renamed": "nextChargedActivationCount"
+        },
+        {
           "start": 12611,
           "end": 12617,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -511856,6 +513489,13 @@
           "symbol": "F:j.field_A:I",
           "original": "field_A",
           "renamed": "chargedActivationCount"
+        },
+        {
+          "start": 12709,
+          "end": 12720,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#2",
+          "original": "fieldTemp$2",
+          "renamed": "nextChargedActivationCount"
         },
         {
           "start": 12784,
@@ -511901,6 +513541,13 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 13051,
+          "end": 13065,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
+          "original": "var21Lifetime1",
+          "renamed": "clearanceGroup"
+        },
+        {
           "start": 13068,
           "end": 13074,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -511915,11 +513562,53 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 13114,
+          "end": 13128,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#86",
+          "original": "var22Lifetime1",
+          "renamed": "unusedClearanceGroupAlias"
+        },
+        {
+          "start": 13131,
+          "end": 13145,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
+          "original": "var21Lifetime1",
+          "renamed": "clearanceGroup"
+        },
+        {
+          "start": 13167,
+          "end": 13190,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#91",
+          "original": "var22Lifetime1Lifetime1",
+          "renamed": "unusedClearanceGroupReference"
+        },
+        {
+          "start": 13193,
+          "end": 13207,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
+          "original": "var21Lifetime1",
+          "renamed": "clearanceGroup"
+        },
+        {
+          "start": 13229,
+          "end": 13241,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
+          "original": "var11_ref_on",
+          "renamed": "clearanceBrick"
+        },
+        {
           "start": 13245,
           "end": 13247,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 13250,
+          "end": 13264,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
+          "original": "var21Lifetime1",
+          "renamed": "clearanceGroup"
         },
         {
           "start": 13265,
@@ -511936,6 +513625,20 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 13309,
+          "end": 13321,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
+          "original": "var11_ref_on",
+          "renamed": "clearanceBrick"
+        },
+        {
+          "start": 13365,
+          "end": 13377,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
+          "original": "var11_ref_on",
+          "renamed": "clearanceBrick"
+        },
+        {
           "start": 13378,
           "end": 13385,
           "symbol": "F:vi.field_i:I",
@@ -511948,6 +513651,13 @@
           "symbol": "C:hp",
           "original": "hp",
           "renamed": "IntHistoryBuffer"
+        },
+        {
+          "start": 13441,
+          "end": 13453,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
+          "original": "var11_ref_on",
+          "renamed": "clearanceBrick"
         },
         {
           "start": 13454,
@@ -511965,11 +513675,25 @@
           "kind": "label"
         },
         {
+          "start": 13580,
+          "end": 13592,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#59",
+          "original": "var11_ref_on",
+          "renamed": "clearanceBrick"
+        },
+        {
           "start": 13596,
           "end": 13598,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 13601,
+          "end": 13615,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#85",
+          "original": "var21Lifetime1",
+          "renamed": "clearanceGroup"
         },
         {
           "start": 13616,
@@ -511985,6 +513709,13 @@
           "original": "L30",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 13820,
+          "end": 13828,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#48",
+          "original": "var9_ref",
+          "renamed": "shiftedPath"
         },
         {
           "start": 13832,
@@ -512015,6 +513746,27 @@
           "renamed": "first"
         },
         {
+          "start": 13883,
+          "end": 13891,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#48",
+          "original": "var9_ref",
+          "renamed": "shiftedPath"
+        },
+        {
+          "start": 13919,
+          "end": 13933,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#87",
+          "original": "var22Lifetime2",
+          "renamed": "pathWaypoints"
+        },
+        {
+          "start": 13936,
+          "end": 13944,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#48",
+          "original": "var9_ref",
+          "renamed": "shiftedPath"
+        },
+        {
           "start": 13945,
           "end": 13952,
           "symbol": "F:cl.field_p:Lvl;",
@@ -512034,6 +513786,13 @@
           "symbol": "C:ee",
           "original": "ee",
           "renamed": "MotionWaypoint"
+        },
+        {
+          "start": 13991,
+          "end": 14005,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#87",
+          "original": "var22Lifetime2",
+          "renamed": "pathWaypoints"
         },
         {
           "start": 14006,
@@ -512092,11 +513851,25 @@
           "renamed": "MotionWaypoint"
         },
         {
+          "start": 14171,
+          "end": 14185,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#87",
+          "original": "var22Lifetime2",
+          "renamed": "pathWaypoints"
+        },
+        {
           "start": 14186,
           "end": 14187,
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 14236,
+          "end": 14244,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#48",
+          "original": "var9_ref",
+          "renamed": "shiftedPath"
         },
         {
           "start": 14248,
@@ -512141,6 +513914,13 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 14407,
+          "end": 14412,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#74",
+          "original": "var23",
+          "renamed": "transitionGroup"
+        },
+        {
           "start": 14415,
           "end": 14421,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -512155,11 +513935,25 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 14455,
+          "end": 14476,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 14480,
           "end": 14482,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 14485,
+          "end": 14490,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#74",
+          "original": "var23",
+          "renamed": "transitionGroup"
         },
         {
           "start": 14491,
@@ -512176,11 +513970,32 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 14530,
+          "end": 14551,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
+          "start": 14619,
+          "end": 14640,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 14641,
           "end": 14648,
           "symbol": "F:on.field_N:I",
           "original": "field_N",
           "renamed": "flags"
+        },
+        {
+          "start": 14676,
+          "end": 14697,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 14698,
@@ -512190,11 +514005,25 @@
           "renamed": "y256"
         },
         {
+          "start": 14708,
+          "end": 14729,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 14730,
           "end": 14737,
           "symbol": "F:vi.field_m:I",
           "original": "field_m",
           "renamed": "y256"
+        },
+        {
+          "start": 14788,
+          "end": 14809,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 14810,
@@ -512204,11 +514033,32 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 14839,
+          "end": 14850,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#3",
+          "original": "fieldTemp$6",
+          "renamed": "nextTransitionTicks"
+        },
+        {
+          "start": 14853,
+          "end": 14874,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 14875,
           "end": 14882,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 14906,
+          "end": 14927,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 14928,
@@ -512218,11 +514068,32 @@
           "renamed": "stateWord"
         },
         {
+          "start": 14938,
+          "end": 14959,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 14960,
           "end": 14967,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 14995,
+          "end": 15006,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#3",
+          "original": "fieldTemp$6",
+          "renamed": "nextTransitionTicks"
+        },
+        {
+          "start": 15036,
+          "end": 15057,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 15058,
@@ -512232,11 +514103,25 @@
           "renamed": "transitionCode"
         },
         {
+          "start": 15091,
+          "end": 15112,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 15113,
           "end": 15120,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 15155,
+          "end": 15176,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 15177,
@@ -512246,11 +514131,25 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 15210,
+          "end": 15231,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 15232,
           "end": 15233,
           "symbol": "M:nm.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 15279,
+          "end": 15300,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 15301,
@@ -512365,11 +514264,25 @@
           "renamed": "WidgetLayer"
         },
         {
+          "start": 15606,
+          "end": 15627,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 15628,
           "end": 15635,
           "symbol": "F:on.field_N:I",
           "original": "field_N",
           "renamed": "flags"
+        },
+        {
+          "start": 15732,
+          "end": 15753,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 15754,
@@ -512407,11 +514320,25 @@
           "renamed": "countedBricks"
         },
         {
+          "start": 15877,
+          "end": 15898,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 15899,
           "end": 15906,
           "symbol": "F:vi.field_i:I",
           "original": "field_i",
           "renamed": "typeId"
+        },
+        {
+          "start": 15909,
+          "end": 15930,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 15931,
@@ -512421,11 +514348,25 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 15962,
+          "end": 15983,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 15984,
           "end": 15991,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 16083,
+          "end": 16104,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 16105,
@@ -512435,11 +514376,25 @@
           "renamed": "flags"
         },
         {
+          "start": 16140,
+          "end": 16161,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 16162,
           "end": 16163,
           "symbol": "M:on.a(BZ)V",
           "original": "a",
           "renamed": "interpolateMotion"
+        },
+        {
+          "start": 16200,
+          "end": 16221,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 16222,
@@ -512449,11 +514404,25 @@
           "renamed": "segmentElapsedTicks"
         },
         {
+          "start": 16232,
+          "end": 16253,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 16254,
           "end": 16261,
           "symbol": "F:on.field_S:I",
           "original": "field_S",
           "renamed": "segmentElapsedTicks"
+        },
+        {
+          "start": 16285,
+          "end": 16306,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 16307,
@@ -512463,11 +514432,32 @@
           "renamed": "motionElapsedTicks"
         },
         {
+          "start": 16317,
+          "end": 16338,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 16339,
           "end": 16346,
           "symbol": "F:on.field_J:I",
           "original": "field_J",
           "renamed": "motionElapsedTicks"
+        },
+        {
+          "start": 16370,
+          "end": 16375,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#75",
+          "original": "var24",
+          "renamed": "destinationWaypoint"
+        },
+        {
+          "start": 16378,
+          "end": 16399,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 16400,
@@ -512477,11 +514467,25 @@
           "renamed": "waypoints"
         },
         {
+          "start": 16408,
+          "end": 16429,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 16430,
           "end": 16437,
           "symbol": "F:on.field_C:I",
           "original": "field_C",
           "renamed": "destinationWaypointIndex"
+        },
+        {
+          "start": 16462,
+          "end": 16467,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#75",
+          "original": "var24",
+          "renamed": "destinationWaypoint"
         },
         {
           "start": 16468,
@@ -512491,11 +514495,25 @@
           "renamed": "durationTicks"
         },
         {
+          "start": 16479,
+          "end": 16500,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 16501,
           "end": 16508,
           "symbol": "F:on.field_S:I",
           "original": "field_S",
           "renamed": "segmentElapsedTicks"
+        },
+        {
+          "start": 16532,
+          "end": 16553,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
         },
         {
           "start": 16554,
@@ -512505,6 +514523,13 @@
           "renamed": "advanceMotionSegment"
         },
         {
+          "start": 16616,
+          "end": 16637,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#83",
+          "original": "var11_ref_onLifetime1",
+          "renamed": "transitionBrick"
+        },
+        {
           "start": 16641,
           "end": 16643,
           "symbol": "C:on",
@@ -512512,11 +514537,25 @@
           "renamed": "Brick"
         },
         {
+          "start": 16646,
+          "end": 16651,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#74",
+          "original": "var23",
+          "renamed": "transitionGroup"
+        },
+        {
           "start": 16652,
           "end": 16653,
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 16710,
+          "end": 16723,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
         },
         {
           "start": 16727,
@@ -512547,11 +514586,32 @@
           "renamed": "first"
         },
         {
+          "start": 16776,
+          "end": 16789,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
+        },
+        {
+          "start": 16819,
+          "end": 16832,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
+        },
+        {
           "start": 16833,
           "end": 16840,
           "symbol": "F:vn.field_J:I",
           "original": "field_J",
           "renamed": "phaseTicks"
+        },
+        {
+          "start": 16864,
+          "end": 16877,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
         },
         {
           "start": 16878,
@@ -512561,11 +514621,25 @@
           "renamed": "phaseTicks"
         },
         {
+          "start": 16888,
+          "end": 16901,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
+        },
+        {
           "start": 16902,
           "end": 16909,
           "symbol": "F:vn.field_J:I",
           "original": "field_J",
           "renamed": "phaseTicks"
+        },
+        {
+          "start": 16949,
+          "end": 16962,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
         },
         {
           "start": 16963,
@@ -512575,6 +514649,13 @@
           "renamed": "penetrationTicks"
         },
         {
+          "start": 16994,
+          "end": 17007,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
+        },
+        {
           "start": 17008,
           "end": 17015,
           "symbol": "F:vn.field_v:I",
@@ -512582,11 +514663,25 @@
           "renamed": "penetrationTicks"
         },
         {
+          "start": 17018,
+          "end": 17031,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
+        },
+        {
           "start": 17032,
           "end": 17039,
           "symbol": "F:vn.field_v:I",
           "original": "field_v",
           "renamed": "penetrationTicks"
+        },
+        {
+          "start": 17075,
+          "end": 17088,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#78",
+          "original": "var9Lifetime1",
+          "renamed": "queuedEffectBall"
         },
         {
           "start": 17092,
@@ -512615,6 +514710,13 @@
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 17154,
+          "end": 17167,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
         },
         {
           "start": 17171,
@@ -512652,6 +514754,20 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 17228,
+          "end": 17241,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
+          "start": 17267,
+          "end": 17280,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17281,
           "end": 17288,
           "symbol": "F:vn.field_E:Lhp;",
@@ -512666,6 +514782,13 @@
           "renamed": "append"
         },
         {
+          "start": 17298,
+          "end": 17311,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17312,
           "end": 17319,
           "symbol": "F:vi.field_j:I",
@@ -512673,11 +514796,25 @@
           "renamed": "x256"
         },
         {
+          "start": 17322,
+          "end": 17335,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17336,
           "end": 17343,
           "symbol": "F:no.field_u:I",
           "original": "field_u",
           "renamed": "radius256"
+        },
+        {
+          "start": 17360,
+          "end": 17373,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
         },
         {
           "start": 17374,
@@ -512694,11 +514831,25 @@
           "renamed": "append"
         },
         {
+          "start": 17391,
+          "end": 17404,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17405,
           "end": 17412,
           "symbol": "F:vi.field_m:I",
           "original": "field_m",
           "renamed": "y256"
+        },
+        {
+          "start": 17415,
+          "end": 17428,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
         },
         {
           "start": 17429,
@@ -512708,11 +514859,25 @@
           "renamed": "radius256"
         },
         {
+          "start": 17457,
+          "end": 17470,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17471,
           "end": 17478,
           "symbol": "F:vn.field_J:I",
           "original": "field_J",
           "renamed": "phaseTicks"
+        },
+        {
+          "start": 17502,
+          "end": 17515,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
         },
         {
           "start": 17516,
@@ -512722,11 +514887,25 @@
           "renamed": "phaseTicks"
         },
         {
+          "start": 17526,
+          "end": 17539,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17540,
           "end": 17547,
           "symbol": "F:vn.field_J:I",
           "original": "field_J",
           "renamed": "phaseTicks"
+        },
+        {
+          "start": 17587,
+          "end": 17600,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
         },
         {
           "start": 17601,
@@ -512736,6 +514915,13 @@
           "renamed": "penetrationTicks"
         },
         {
+          "start": 17632,
+          "end": 17645,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17646,
           "end": 17653,
           "symbol": "F:vn.field_v:I",
@@ -512743,11 +514929,25 @@
           "renamed": "penetrationTicks"
         },
         {
+          "start": 17656,
+          "end": 17669,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
+        },
+        {
           "start": 17670,
           "end": 17677,
           "symbol": "F:vn.field_v:I",
           "original": "field_v",
           "renamed": "penetrationTicks"
+        },
+        {
+          "start": 17713,
+          "end": 17726,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#79",
+          "original": "var9Lifetime2",
+          "renamed": "activeEffectBall"
         },
         {
           "start": 17730,
@@ -512904,6 +515104,13 @@
           "renamed": "catchTicks"
         },
         {
+          "start": 18115,
+          "end": 18126,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#4",
+          "original": "fieldTemp$3",
+          "renamed": "remainingBuildTicks"
+        },
+        {
           "start": 18129,
           "end": 18135,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -512946,6 +515153,20 @@
           "renamed": "buildTicks"
         },
         {
+          "start": 18218,
+          "end": 18229,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#4",
+          "original": "fieldTemp$3",
+          "renamed": "remainingBuildTicks"
+        },
+        {
+          "start": 18259,
+          "end": 18272,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#21",
+          "original": "stackIn_245_0",
+          "renamed": "buildRowColumns"
+        },
+        {
           "start": 18286,
           "end": 18293,
           "symbol": "F:ak.field_k:I",
@@ -512953,11 +515174,46 @@
           "renamed": "playerCount"
         },
         {
+          "start": 18332,
+          "end": 18345,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#21",
+          "original": "stackIn_245_0",
+          "renamed": "buildRowColumns"
+        },
+        {
+          "start": 18363,
+          "end": 18372,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#52",
+          "original": "var10_ref",
+          "renamed": "unusedBuildReference"
+        },
+        {
+          "start": 18461,
+          "end": 18470,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#5",
+          "original": "dupTemp$4",
+          "renamed": "newRowBrick"
+        },
+        {
           "start": 18477,
           "end": 18479,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 18531,
+          "end": 18543,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#53",
+          "original": "var10_ref_on",
+          "renamed": "builtBrick"
+        },
+        {
+          "start": 18546,
+          "end": 18555,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#5",
+          "original": "dupTemp$4",
+          "renamed": "newRowBrick"
         },
         {
           "start": 18575,
@@ -512981,6 +515237,20 @@
           "renamed": "addLast"
         },
         {
+          "start": 18595,
+          "end": 18604,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#5",
+          "original": "dupTemp$4",
+          "renamed": "newRowBrick"
+        },
+        {
+          "start": 18635,
+          "end": 18647,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#53",
+          "original": "var10_ref_on",
+          "renamed": "builtBrick"
+        },
+        {
           "start": 18648,
           "end": 18655,
           "symbol": "F:on.field_R:I",
@@ -512988,11 +515258,25 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 18679,
+          "end": 18691,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#53",
+          "original": "var10_ref_on",
+          "renamed": "builtBrick"
+        },
+        {
           "start": 18692,
           "end": 18699,
           "symbol": "F:on.field_B:I",
           "original": "field_B",
           "renamed": "transitionCode"
+        },
+        {
+          "start": 18796,
+          "end": 18801,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
+          "original": "var25",
+          "renamed": "overflowGroup"
         },
         {
           "start": 18804,
@@ -513009,11 +515293,53 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 18845,
+          "end": 18850,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#77",
+          "original": "var26",
+          "renamed": "unusedOverflowGroupAlias"
+        },
+        {
+          "start": 18853,
+          "end": 18858,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
+          "original": "var25",
+          "renamed": "overflowGroup"
+        },
+        {
+          "start": 18878,
+          "end": 18892,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#90",
+          "original": "var26Lifetime2",
+          "renamed": "unusedOverflowGroupReference"
+        },
+        {
+          "start": 18895,
+          "end": 18900,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
+          "original": "var25",
+          "renamed": "overflowGroup"
+        },
+        {
+          "start": 18920,
+          "end": 18941,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
+        },
+        {
           "start": 18945,
           "end": 18947,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 18950,
+          "end": 18955,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
+          "original": "var25",
+          "renamed": "overflowGroup"
         },
         {
           "start": 18956,
@@ -513023,11 +515349,32 @@
           "renamed": "first"
         },
         {
+          "start": 18990,
+          "end": 19011,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
+        },
+        {
+          "start": 19052,
+          "end": 19073,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
+        },
+        {
           "start": 19074,
           "end": 19081,
           "symbol": "F:on.field_N:I",
           "original": "field_N",
           "renamed": "flags"
+        },
+        {
+          "start": 19121,
+          "end": 19142,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
         },
         {
           "start": 19143,
@@ -513037,11 +515384,25 @@
           "renamed": "y256"
         },
         {
+          "start": 19176,
+          "end": 19197,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
+        },
+        {
           "start": 19198,
           "end": 19205,
           "symbol": "F:on.field_B:I",
           "original": "field_B",
           "renamed": "transitionCode"
+        },
+        {
+          "start": 19233,
+          "end": 19254,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
         },
         {
           "start": 19255,
@@ -513051,6 +515412,13 @@
           "renamed": "pendingTypeId"
         },
         {
+          "start": 19290,
+          "end": 19311,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
+        },
+        {
           "start": 19312,
           "end": 19319,
           "symbol": "F:vi.field_l:I",
@@ -513058,11 +515426,25 @@
           "renamed": "stateWord"
         },
         {
+          "start": 19367,
+          "end": 19388,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#80",
+          "original": "var10_ref_onLifetime1",
+          "renamed": "overflowBrick"
+        },
+        {
           "start": 19392,
           "end": 19394,
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 19397,
+          "end": 19402,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#76",
+          "original": "var25",
+          "renamed": "overflowGroup"
         },
         {
           "start": 19403,
@@ -513212,6 +515594,13 @@
           "renamed": "bubbleTick"
         },
         {
+          "start": 19925,
+          "end": 19934,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#50",
+          "original": "var9_ref3",
+          "renamed": "stoppedPaddle"
+        },
+        {
           "start": 19937,
           "end": 19941,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#43",
@@ -513233,11 +515622,25 @@
           "renamed": "velocityY256"
         },
         {
+          "start": 19993,
+          "end": 20002,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#50",
+          "original": "var9_ref3",
+          "renamed": "stoppedPaddle"
+        },
+        {
           "start": 20003,
           "end": 20010,
           "symbol": "F:vi.field_k:I",
           "original": "field_k",
           "renamed": "velocityX256"
+        },
+        {
+          "start": 20088,
+          "end": 20109,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
+          "original": "var11_ref_onLifetime2",
+          "renamed": "interpolatedBrick"
         },
         {
           "start": 20113,
@@ -513268,6 +515671,20 @@
           "renamed": "first"
         },
         {
+          "start": 20174,
+          "end": 20195,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
+          "original": "var11_ref_onLifetime2",
+          "renamed": "interpolatedBrick"
+        },
+        {
+          "start": 20232,
+          "end": 20253,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
+          "original": "var11_ref_onLifetime2",
+          "renamed": "interpolatedBrick"
+        },
+        {
           "start": 20254,
           "end": 20261,
           "symbol": "F:on.field_N:I",
@@ -513275,11 +515692,25 @@
           "renamed": "flags"
         },
         {
+          "start": 20297,
+          "end": 20318,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
+          "original": "var11_ref_onLifetime2",
+          "renamed": "interpolatedBrick"
+        },
+        {
           "start": 20319,
           "end": 20320,
           "symbol": "M:on.a(BZ)V",
           "original": "a",
           "renamed": "interpolateMotion"
+        },
+        {
+          "start": 20382,
+          "end": 20403,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#84",
+          "original": "var11_ref_onLifetime2",
+          "renamed": "interpolatedBrick"
         },
         {
           "start": 20407,
@@ -513308,6 +515739,13 @@
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
+        },
+        {
+          "start": 20512,
+          "end": 20537,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#95",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "unusedLevelCompletionFlag"
         },
         {
           "start": 20566,
@@ -513471,6 +515909,13 @@
           "renamed": "y256"
         },
         {
+          "start": 20987,
+          "end": 20998,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#6",
+          "original": "fieldTemp$5",
+          "renamed": "nextLevelIndex"
+        },
+        {
           "start": 21001,
           "end": 21007,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -513511,6 +515956,13 @@
           "symbol": "F:j.field_qb:I",
           "original": "field_qb",
           "renamed": "levelIndex"
+        },
+        {
+          "start": 21101,
+          "end": 21112,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#6",
+          "original": "fieldTemp$5",
+          "renamed": "nextLevelIndex"
         },
         {
           "start": 21121,
@@ -513583,6 +516035,13 @@
           "renamed": "boardState"
         },
         {
+          "start": 21393,
+          "end": 21418,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#95",
+          "original": "decompiledFrameRemainder0",
+          "renamed": "unusedLevelCompletionFlag"
+        },
+        {
           "start": 21493,
           "end": 21499,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -513623,6 +516082,13 @@
           "symbol": "F:j.field_lb:Ljava/lang/String;",
           "original": "field_lb",
           "renamed": "pendingMessage"
+        },
+        {
+          "start": 21752,
+          "end": 21766,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#92",
+          "original": "var12Lifetime1",
+          "renamed": "unusedStatisticValue"
         },
         {
           "start": 21788,
@@ -513667,6 +516133,13 @@
           "renamed": "contactBall"
         },
         {
+          "start": 21885,
+          "end": 21908,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#93",
+          "original": "var12Lifetime1Lifetime1",
+          "renamed": "ballStatistic"
+        },
+        {
           "start": 21911,
           "end": 21916,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#64",
@@ -513695,6 +516168,20 @@
           "renamed": "brickBounceCount"
         },
         {
+          "start": 22001,
+          "end": 22024,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#93",
+          "original": "var12Lifetime1Lifetime1",
+          "renamed": "ballStatistic"
+        },
+        {
+          "start": 22064,
+          "end": 22087,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#93",
+          "original": "var12Lifetime1Lifetime1",
+          "renamed": "ballStatistic"
+        },
+        {
           "start": 22090,
           "end": 22095,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#64",
@@ -513721,6 +516208,13 @@
           "symbol": "F:vn.field_B:I",
           "original": "field_B",
           "renamed": "destroyedBrickStreak"
+        },
+        {
+          "start": 22180,
+          "end": 22203,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#93",
+          "original": "var12Lifetime1Lifetime1",
+          "renamed": "ballStatistic"
         },
         {
           "start": 22243,
@@ -513919,6 +516413,13 @@
           "renamed": "y256"
         },
         {
+          "start": 22861,
+          "end": 22874,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#22",
+          "original": "stackIn_270_0",
+          "renamed": "missedPowerUpBoard"
+        },
+        {
           "start": 22878,
           "end": 22879,
           "symbol": "C:j",
@@ -513931,6 +516432,13 @@
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 22909,
+          "end": 22922,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#23",
+          "original": "stackIn_270_1",
+          "renamed": "missedPowerUpExpressionGuard"
         },
         {
           "start": 22954,
@@ -513947,6 +516455,20 @@
           "renamed": "nextRandomBoundedInt"
         },
         {
+          "start": 23007,
+          "end": 23020,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#24",
+          "original": "stackIn_271_2",
+          "renamed": "missedPowerUpExpression"
+        },
+        {
+          "start": 23073,
+          "end": 23086,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#24",
+          "original": "stackIn_271_2",
+          "renamed": "missedPowerUpExpression"
+        },
+        {
           "start": 23132,
           "end": 23133,
           "symbol": "C:j",
@@ -513954,11 +516476,32 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 23144,
+          "end": 23157,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#22",
+          "original": "stackIn_270_0",
+          "renamed": "missedPowerUpBoard"
+        },
+        {
           "start": 23159,
           "end": 23160,
           "symbol": "M:j.b(II)V",
           "original": "b",
           "renamed": "setBriefEyeExpression"
+        },
+        {
+          "start": 23161,
+          "end": 23174,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#23",
+          "original": "stackIn_270_1",
+          "renamed": "missedPowerUpExpressionGuard"
+        },
+        {
+          "start": 23176,
+          "end": 23189,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#24",
+          "original": "stackIn_271_2",
+          "renamed": "missedPowerUpExpression"
         },
         {
           "start": 23214,
@@ -514038,6 +516581,13 @@
           "renamed": "unlink"
         },
         {
+          "start": 23507,
+          "end": 23520,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#25",
+          "original": "stackIn_279_0",
+          "renamed": "selfTargetedValue"
+        },
+        {
           "start": 23525,
           "end": 23537,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#55",
@@ -514050,6 +516600,13 @@
           "symbol": "M:ge.b(Z)Z",
           "original": "b",
           "renamed": "isSelfTargeted"
+        },
+        {
+          "start": 23585,
+          "end": 23598,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#25",
+          "original": "stackIn_279_0",
+          "renamed": "selfTargetedValue"
         },
         {
           "start": 23624,
@@ -514087,6 +516644,13 @@
           "renamed": "playerCount"
         },
         {
+          "start": 23787,
+          "end": 23800,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#26",
+          "original": "stackIn_284_0",
+          "renamed": "beneficialBaseValue"
+        },
+        {
           "start": 23836,
           "end": 23848,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#55",
@@ -514099,6 +516663,41 @@
           "symbol": "F:vi.field_i:I",
           "original": "field_i",
           "renamed": "typeId"
+        },
+        {
+          "start": 23890,
+          "end": 23903,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#27",
+          "original": "stackIn_285_1",
+          "renamed": "slowDownValue"
+        },
+        {
+          "start": 23964,
+          "end": 23977,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#27",
+          "original": "stackIn_285_1",
+          "renamed": "slowDownValue"
+        },
+        {
+          "start": 24037,
+          "end": 24050,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#26",
+          "original": "stackIn_284_0",
+          "renamed": "beneficialBaseValue"
+        },
+        {
+          "start": 24053,
+          "end": 24066,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#27",
+          "original": "stackIn_285_1",
+          "renamed": "slowDownValue"
+        },
+        {
+          "start": 24090,
+          "end": 24103,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#28",
+          "original": "stackIn_287_0",
+          "renamed": "pickupScoreBoard"
         },
         {
           "start": 24107,
@@ -514115,6 +516714,20 @@
           "renamed": "board"
         },
         {
+          "start": 24184,
+          "end": 24197,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#29",
+          "original": "stackIn_288_1",
+          "renamed": "pickupPoints"
+        },
+        {
+          "start": 24260,
+          "end": 24273,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#29",
+          "original": "stackIn_288_1",
+          "renamed": "pickupPoints"
+        },
+        {
           "start": 24329,
           "end": 24330,
           "symbol": "C:j",
@@ -514122,11 +516735,25 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 24341,
+          "end": 24354,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#28",
+          "original": "stackIn_287_0",
+          "renamed": "pickupScoreBoard"
+        },
+        {
           "start": 24356,
           "end": 24357,
           "symbol": "M:j.a(ILvo;I)V",
           "original": "a",
           "renamed": "addPaddleScore"
+        },
+        {
+          "start": 24358,
+          "end": 24371,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#29",
+          "original": "stackIn_288_1",
+          "renamed": "pickupPoints"
         },
         {
           "start": 24373,
@@ -514311,6 +516938,13 @@
           "renamed": "typeId"
         },
         {
+          "start": 25048,
+          "end": 25061,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#30",
+          "original": "stackIn_300_0",
+          "renamed": "pickupMessageBoard"
+        },
+        {
           "start": 25065,
           "end": 25066,
           "symbol": "C:j",
@@ -514346,6 +516980,13 @@
           "renamed": "typeId"
         },
         {
+          "start": 25233,
+          "end": 25246,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#31",
+          "original": "stackIn_302_1",
+          "renamed": "pickupMessages"
+        },
+        {
           "start": 25249,
           "end": 25251,
           "symbol": "C:eh",
@@ -514358,6 +516999,13 @@
           "symbol": "F:eh.field_e:[Ljava/lang/String;",
           "original": "field_e",
           "renamed": "lostBallMessages"
+        },
+        {
+          "start": 25312,
+          "end": 25325,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#31",
+          "original": "stackIn_302_1",
+          "renamed": "pickupMessages"
         },
         {
           "start": 25328,
@@ -514374,11 +517022,25 @@
           "renamed": "PlayerBoard"
         },
         {
+          "start": 25396,
+          "end": 25409,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#30",
+          "original": "stackIn_300_0",
+          "renamed": "pickupMessageBoard"
+        },
+        {
           "start": 25411,
           "end": 25412,
           "symbol": "M:j.a([Ljava/lang/String;B)V",
           "original": "a",
           "renamed": "choosePendingMessage"
+        },
+        {
+          "start": 25413,
+          "end": 25426,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#31",
+          "original": "stackIn_302_1",
+          "renamed": "pickupMessages"
         },
         {
           "start": 25494,
@@ -514878,6 +517540,13 @@
           "renamed": "brickGroups"
         },
         {
+          "start": 26762,
+          "end": 26776,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#88",
+          "original": "var26Lifetime1",
+          "renamed": "movingGroup"
+        },
+        {
           "start": 26779,
           "end": 26785,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -514904,6 +517573,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 26839,
+          "end": 26853,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#88",
+          "original": "var26Lifetime1",
+          "renamed": "movingGroup"
         },
         {
           "start": 26854,
@@ -515065,6 +517741,13 @@
           "symbol": "C:on",
           "original": "on",
           "renamed": "Brick"
+        },
+        {
+          "start": 27288,
+          "end": 27302,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#88",
+          "original": "var26Lifetime1",
+          "renamed": "movingGroup"
         },
         {
           "start": 27303,
@@ -516103,6 +518786,13 @@
           "renamed": "levelsCleared"
         },
         {
+          "start": 30859,
+          "end": 30868,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
+        },
+        {
           "start": 30872,
           "end": 30874,
           "symbol": "C:on",
@@ -516131,11 +518821,39 @@
           "renamed": "first"
         },
         {
+          "start": 30932,
+          "end": 30941,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
+        },
+        {
+          "start": 30977,
+          "end": 30986,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
+        },
+        {
           "start": 30987,
           "end": 30994,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 31025,
+          "end": 31036,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#7",
+          "original": "fieldTemp$7",
+          "renamed": "nextIntroTransitionTicks"
+        },
+        {
+          "start": 31039,
+          "end": 31048,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
         },
         {
           "start": 31049,
@@ -516145,11 +518863,25 @@
           "renamed": "stateWord"
         },
         {
+          "start": 31084,
+          "end": 31093,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
+        },
+        {
           "start": 31094,
           "end": 31101,
           "symbol": "F:vi.field_l:I",
           "original": "field_l",
           "renamed": "stateWord"
+        },
+        {
+          "start": 31104,
+          "end": 31113,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
         },
         {
           "start": 31114,
@@ -516159,11 +518891,32 @@
           "renamed": "stateWord"
         },
         {
+          "start": 31153,
+          "end": 31164,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#7",
+          "original": "fieldTemp$7",
+          "renamed": "nextIntroTransitionTicks"
+        },
+        {
+          "start": 31198,
+          "end": 31207,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
+        },
+        {
           "start": 31208,
           "end": 31215,
           "symbol": "F:on.field_B:I",
           "original": "field_B",
           "renamed": "transitionCode"
+        },
+        {
+          "start": 31245,
+          "end": 31254,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
         },
         {
           "start": 31255,
@@ -516173,11 +518926,25 @@
           "renamed": "stateWord"
         },
         {
+          "start": 31292,
+          "end": 31301,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
+        },
+        {
           "start": 31302,
           "end": 31309,
           "symbol": "F:on.field_R:I",
           "original": "field_R",
           "renamed": "pendingTypeId"
+        },
+        {
+          "start": 31382,
+          "end": 31391,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#51",
+          "original": "var9_ref4",
+          "renamed": "introBrick"
         },
         {
           "start": 31395,
@@ -516229,6 +518996,13 @@
           "renamed": "levelsCleared"
         },
         {
+          "start": 31691,
+          "end": 31702,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#8",
+          "original": "fieldTemp$8",
+          "renamed": "nextIntroTicks"
+        },
+        {
           "start": 31705,
           "end": 31711,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -516269,6 +519043,13 @@
           "symbol": "F:j.field_P:I",
           "original": "field_P",
           "renamed": "stateTicks"
+        },
+        {
+          "start": 31794,
+          "end": 31805,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#8",
+          "original": "fieldTemp$8",
+          "renamed": "nextIntroTicks"
         },
         {
           "start": 31871,
@@ -516355,6 +519136,13 @@
           "renamed": "GameplayAudioEvent"
         },
         {
+          "start": 32153,
+          "end": 32165,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#9",
+          "original": "fieldTemp$11",
+          "renamed": "nextServeDelayTicks"
+        },
+        {
           "start": 32168,
           "end": 32174,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -516395,6 +519183,13 @@
           "symbol": "F:j.field_P:I",
           "original": "field_P",
           "renamed": "stateTicks"
+        },
+        {
+          "start": 32257,
+          "end": 32269,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#9",
+          "original": "fieldTemp$11",
+          "renamed": "nextServeDelayTicks"
         },
         {
           "start": 32304,
@@ -516439,6 +519234,13 @@
           "renamed": "SecondaryNodeQueue"
         },
         {
+          "start": 32526,
+          "end": 32538,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#12",
+          "original": "stackIn_55_0",
+          "renamed": "messageBoard"
+        },
+        {
           "start": 32542,
           "end": 32543,
           "symbol": "C:j",
@@ -516467,6 +519269,20 @@
           "renamed": "messageTicks"
         },
         {
+          "start": 32612,
+          "end": 32624,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#13",
+          "original": "stackIn_56_1",
+          "renamed": "clippedMessageTicks"
+        },
+        {
+          "start": 32670,
+          "end": 32682,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#13",
+          "original": "stackIn_56_1",
+          "renamed": "clippedMessageTicks"
+        },
+        {
           "start": 32685,
           "end": 32691,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -516481,11 +519297,25 @@
           "renamed": "messageTicks"
         },
         {
+          "start": 32731,
+          "end": 32743,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#12",
+          "original": "stackIn_55_0",
+          "renamed": "messageBoard"
+        },
+        {
           "start": 32744,
           "end": 32751,
           "symbol": "F:j.field_i:I",
           "original": "field_i",
           "renamed": "messageTicks"
+        },
+        {
+          "start": 32754,
+          "end": 32766,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#13",
+          "original": "stackIn_56_1",
+          "renamed": "clippedMessageTicks"
         },
         {
           "start": 32782,
@@ -516530,6 +519360,13 @@
           "renamed": "boardState"
         },
         {
+          "start": 32925,
+          "end": 32936,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#10",
+          "original": "fieldTemp$9",
+          "renamed": "nextDefeatTicks"
+        },
+        {
           "start": 32939,
           "end": 32945,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -516570,6 +519407,13 @@
           "symbol": "F:j.field_P:I",
           "original": "field_P",
           "renamed": "stateTicks"
+        },
+        {
+          "start": 33028,
+          "end": 33039,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#10",
+          "original": "fieldTemp$9",
+          "renamed": "nextDefeatTicks"
         },
         {
           "start": 33104,
@@ -516614,6 +519458,13 @@
           "renamed": "boardState"
         },
         {
+          "start": 33281,
+          "end": 33293,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#11",
+          "original": "fieldTemp$10",
+          "renamed": "nextVictoryTicks"
+        },
+        {
           "start": 33296,
           "end": 33302,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -516656,6 +519507,13 @@
           "renamed": "stateTicks"
         },
         {
+          "start": 33381,
+          "end": 33393,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#11",
+          "original": "fieldTemp$10",
+          "renamed": "nextVictoryTicks"
+        },
+        {
           "start": 33418,
           "end": 33424,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -516684,11 +519542,102 @@
           "renamed": "boardState"
         },
         {
+          "start": 33582,
+          "end": 33608,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#96",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 33622,
+          "end": 33647,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#39",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 33650,
+          "end": 33676,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#96",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtParameter"
+        },
+        {
+          "start": 33688,
+          "end": 33696,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#41",
+          "original": "var5_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 33699,
+          "end": 33724,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#39",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 33736,
+          "end": 33749,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#32",
+          "original": "stackIn_388_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 33752,
+          "end": 33760,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#41",
+          "original": "var5_ref",
+          "renamed": "failure"
+        },
+        {
+          "start": 33772,
+          "end": 33785,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#33",
+          "original": "stackIn_388_1",
+          "renamed": "contextBuilder"
+        },
+        {
           "start": 33839,
           "end": 33845,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 33869,
+          "end": 33882,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#34",
+          "original": "stackIn_389_2",
+          "renamed": "boardSummary"
+        },
+        {
+          "start": 33924,
+          "end": 33937,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#34",
+          "original": "stackIn_389_2",
+          "renamed": "boardSummary"
+        },
+        {
+          "start": 33971,
+          "end": 33984,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#35",
+          "original": "stackIn_391_1",
+          "renamed": "audioContextBuilder"
+        },
+        {
+          "start": 34013,
+          "end": 34026,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#33",
+          "original": "stackIn_388_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 34035,
+          "end": 34048,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#34",
+          "original": "stackIn_389_2",
+          "renamed": "boardSummary"
         },
         {
           "start": 34077,
@@ -516698,11 +519647,60 @@
           "renamed": "audioEvents"
         },
         {
+          "start": 34107,
+          "end": 34120,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#36",
+          "original": "stackIn_392_2",
+          "renamed": "audioSummary"
+        },
+        {
+          "start": 34162,
+          "end": 34175,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#36",
+          "original": "stackIn_392_2",
+          "renamed": "audioSummary"
+        },
+        {
+          "start": 34209,
+          "end": 34222,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#37",
+          "original": "stackIn_394_1",
+          "renamed": "collectedContextBuilder"
+        },
+        {
+          "start": 34251,
+          "end": 34264,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#35",
+          "original": "stackIn_391_1",
+          "renamed": "audioContextBuilder"
+        },
+        {
+          "start": 34273,
+          "end": 34286,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#36",
+          "original": "stackIn_392_2",
+          "renamed": "audioSummary"
+        },
+        {
           "start": 34315,
           "end": 34321,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#2",
           "original": "param2",
           "renamed": "collectedPowerUps"
+        },
+        {
+          "start": 34345,
+          "end": 34358,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#38",
+          "original": "stackIn_395_2",
+          "renamed": "collectedSummary"
+        },
+        {
+          "start": 34400,
+          "end": 34413,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#38",
+          "original": "stackIn_395_2",
+          "renamed": "collectedSummary"
         },
         {
           "start": 34453,
@@ -516717,6 +519715,27 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 34480,
+          "end": 34493,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#32",
+          "original": "stackIn_388_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 34522,
+          "end": 34535,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#37",
+          "original": "stackIn_394_1",
+          "renamed": "collectedContextBuilder"
+        },
+        {
+          "start": 34544,
+          "end": 34557,
+          "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#38",
+          "original": "stackIn_395_2",
+          "renamed": "collectedSummary"
         },
         {
           "start": 34578,
@@ -1279229,10 +1282248,10 @@
       "commit": "9159750b0604b9082db8b91fe73a0a0b119c7f22",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "796241a0e1b814be5b2b6f6e407aa5381773408910770eca457a96a0dd72037e",
+    "rulesSha256": "ac31e2448d367f5a36f27f5b82a3a77fec3a37cebe2029732ca24dc6caca4d5a",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
-    "outputTreeSha256": "0bc0ff6e6e4b9e266700356eab639697b91fcbfd2b8313aacdfd17a4be933d98",
+    "outputTreeSha256": "ee35c0288e61277176f1372e2e30fad084c3afda24b201a2f54fb2baf627f9af",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

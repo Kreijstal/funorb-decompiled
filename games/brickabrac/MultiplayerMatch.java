@@ -114,111 +114,111 @@ final class MultiplayerMatch {
     }
 
     final void advanceBoard(PlayerBoard board, NodeDeque audioEvents, NodeDeque collectedPowerUps, int obfuscationGuard) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$6 = 0;
-        int fieldTemp$3 = 0;
-        Brick dupTemp$4 = null;
-        int fieldTemp$5 = 0;
-        int fieldTemp$7 = 0;
-        int fieldTemp$8 = 0;
-        int fieldTemp$11 = 0;
-        int fieldTemp$9 = 0;
-        int fieldTemp$10 = 0;
-        PlayerBoard stackIn_55_0 = null;
-        int stackIn_56_1 = 0;
-        int stackIn_132_0 = 0;
-        int stackIn_142_0 = 0;
-        PlayerBoard stackIn_155_0 = null;
-        int stackIn_155_1 = 0;
-        int stackIn_156_2 = 0;
-        PlayerBoard stackIn_158_0 = null;
-        String[] stackIn_159_1 = null;
-        int stackIn_245_0 = 0;
-        PlayerBoard stackIn_270_0 = null;
-        int stackIn_270_1 = 0;
-        int stackIn_271_2 = 0;
-        int stackIn_279_0 = 0;
-        int stackIn_284_0 = 0;
-        int stackIn_285_1 = 0;
-        PlayerBoard stackIn_287_0 = null;
-        int stackIn_288_1 = 0;
-        PlayerBoard stackIn_300_0 = null;
-        String[] stackIn_302_1 = null;
-        RuntimeException stackIn_388_0 = null;
-        StringBuilder stackIn_388_1 = null;
-        String stackIn_389_2 = null;
-        StringBuilder stackIn_391_1 = null;
-        String stackIn_392_2 = null;
-        StringBuilder stackIn_394_1 = null;
-        String stackIn_395_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        BallPulseEffect var5 = null;
-        RuntimeException var5_ref = null;
+        int remainingMessageTicks = 0;
+        int remainingEyeTicks = 0;
+        int nextChargedActivationCount = 0;
+        int nextTransitionTicks = 0;
+        int remainingBuildTicks = 0;
+        Brick newRowBrick = null;
+        int nextLevelIndex = 0;
+        int nextIntroTransitionTicks = 0;
+        int nextIntroTicks = 0;
+        int nextServeDelayTicks = 0;
+        int nextDefeatTicks = 0;
+        int nextVictoryTicks = 0;
+        PlayerBoard messageBoard = null;
+        int clippedMessageTicks = 0;
+        int chargeHitEligibility = 0;
+        int pendingRemovalValue = 0;
+        PlayerBoard chargeExpressionBoard = null;
+        int chargeExpressionGuard = 0;
+        int chargeExpression = 0;
+        PlayerBoard chargeMessageBoard = null;
+        String[] chargeMessages = null;
+        int buildRowColumns = 0;
+        PlayerBoard missedPowerUpBoard = null;
+        int missedPowerUpExpressionGuard = 0;
+        int missedPowerUpExpression = 0;
+        int selfTargetedValue = 0;
+        int beneficialBaseValue = 0;
+        int slowDownValue = 0;
+        PlayerBoard pickupScoreBoard = null;
+        int pickupPoints = 0;
+        PlayerBoard pickupMessageBoard = null;
+        String[] pickupMessages = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        StringBuilder audioContextBuilder = null;
+        String audioSummary = null;
+        StringBuilder collectedContextBuilder = null;
+        String collectedSummary = null;
+        RuntimeException caughtFailure = null;
+        BallPulseEffect pulse = null;
+        RuntimeException failure = null;
         ScorePopup scorePopup = null;
         Paddle paddle = null;
         int var8 = 0;
         NodeDeque[] decodedGroups = null;
-        Ball var9 = null;
+        Ball chargeCandidate = null;
         int var9_int = 0;
-        BrickMotionPath var9_ref = null;
+        BrickMotionPath shiftedPath = null;
         BubbleDistortion bubble = null;
-        Paddle var9_ref3 = null;
-        Brick var9_ref4 = null;
-        Object var10_ref = null;
-        Brick var10_ref_on = null;
+        Paddle stoppedPaddle = null;
+        Brick introBrick = null;
+        Object unusedBuildReference = null;
+        Brick builtBrick = null;
         int var10 = 0;
         PowerUp fallingPowerUp = null;
         Ball redirectedBall = null;
-        Object var11_ref = null;
+        Object unusedReferenceOne = null;
         int var11 = 0;
-        Brick var11_ref_on = null;
+        Brick clearanceBrick = null;
         MotionWaypoint waypoint = null;
-        Object var12_ref = null;
-        int var12 = 0;
+        Object unusedReferenceTwo = null;
+        int chargeGroupIndex = 0;
         Brick movingBrick = null;
         Ball contactBall = null;
         Brick contactBrick = null;
-        int var15 = 0;
-        int var16 = 0;
+        int chargeHitEligible = 0;
+        int wasPendingRemoval = 0;
         int clientBranchFlag = 0;
         NodeDeque decodedPaths = null;
-        NodeDeque var19 = null;
-        CircleBody var20 = null;
-        NodeDeque var21 = null;
-        NodeDeque var22 = null;
-        NodeDeque var23 = null;
-        MotionWaypoint var24 = null;
-        NodeDeque var25 = null;
-        NodeDeque var26 = null;
-        Ball var9Lifetime1;
-        Ball var9Lifetime2;
-        Brick var10_ref_onLifetime1;
+        NodeDeque chargeGroup = null;
+        CircleBody chargeArea = null;
+        NodeDeque unusedChargeGroupAlias = null;
+        NodeDeque unusedChargeGroupReference = null;
+        NodeDeque transitionGroup = null;
+        MotionWaypoint destinationWaypoint = null;
+        NodeDeque overflowGroup = null;
+        NodeDeque unusedOverflowGroupAlias = null;
+        Ball queuedEffectBall;
+        Ball activeEffectBall;
+        Brick overflowBrick;
         Ball collidingBall;
         Ball queuedBall;
-        Brick var11_ref_onLifetime1;
-        Brick var11_ref_onLifetime2;
-        NodeDeque var21Lifetime1;
-        NodeDeque var22Lifetime1;
-        NodeDeque var22Lifetime2;
-        NodeDeque var26Lifetime1;
-        NodeDeque var21Lifetime2;
-        NodeDeque var26Lifetime2;
-        NodeDeque var22Lifetime1Lifetime1;
-        int var12Lifetime1;
-        int var12Lifetime1Lifetime1;
-        var12_ref = null;
-        var11_ref = null;
+        Brick transitionBrick;
+        Brick interpolatedBrick;
+        NodeDeque clearanceGroup;
+        NodeDeque unusedClearanceGroupAlias;
+        NodeDeque pathWaypoints;
+        NodeDeque movingGroup;
+        NodeDeque unusedChargeGroupLifetimeAlias;
+        NodeDeque unusedOverflowGroupReference;
+        NodeDeque unusedClearanceGroupReference;
+        int unusedStatisticValue;
+        int ballStatistic;
+        unusedReferenceTwo = null;
+        unusedReferenceOne = null;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          boolean decompiledSharedTail0 = !(obfuscationGuard < board.messageTicks);
-          if (!decompiledSharedTail0) {
-            fieldTemp$0 = board.messageTicks - 1;
+          boolean promotePendingMessage = !(obfuscationGuard < board.messageTicks);
+          if (!promotePendingMessage) {
+            remainingMessageTicks = board.messageTicks - 1;
             board.messageTicks = board.messageTicks - 1;
-            decompiledSharedTail0 = (!(fieldTemp$0 > 0));
+            promotePendingMessage = (!(remainingMessageTicks > 0));
           }
-          if (decompiledSharedTail0) {
+          if (promotePendingMessage) {
             board.displayedMessage = board.pendingMessage;
             if (null != board.displayedMessage) {
               board.messageTicks = 100;
@@ -229,18 +229,18 @@ final class MultiplayerMatch {
             board.positionOrderTicks = board.positionOrderTicks - 1;
           }
           if (board.eyeExpressionTicks > 0) {
-            fieldTemp$1 = board.eyeExpressionTicks - 1;
+            remainingEyeTicks = board.eyeExpressionTicks - 1;
             board.eyeExpressionTicks = board.eyeExpressionTicks - 1;
-            if (0 == fieldTemp$1) {
+            if (0 == remainingEyeTicks) {
               board.setBriefEyeExpression(16387, 0);
             }
           }
-          var5 = (BallPulseEffect) (board.ballPulses.first(-58));
-          while (var5 != null) {
-            if (!var5.advance((byte) 69)) {
-              var5.unlink((byte) 111);
+          pulse = (BallPulseEffect) (board.ballPulses.first(-58));
+          while (pulse != null) {
+            if (!pulse.advance((byte) 69)) {
+              pulse.unlink((byte) 111);
             }
-            var5 = (BallPulseEffect) (board.ballPulses.next((byte) 116));
+            pulse = (BallPulseEffect) (board.ballPulses.next((byte) 116));
           }
           scorePopup = (ScorePopup) (board.scorePopups.first(-85));
           while (scorePopup != null) {
@@ -268,53 +268,53 @@ final class MultiplayerMatch {
             if ((board.controlMask & 4) != 0) {
               var8 = 0;
               if (!board.activeBalls.isEmpty(false)) {
-                var9 = (Ball) (board.activeBalls.first(-76));
-                while (var9 != null) {
-                  if (40 <= var9.contactCount) {
+                chargeCandidate = (Ball) (board.activeBalls.first(-76));
+                while (chargeCandidate != null) {
+                  if (40 <= chargeCandidate.contactCount) {
                     if (audioEvents != null) {
                       audioEvents.addLast(new GameplayAudioEvent(6), (byte) 3);
                     }
                     var8 = 1;
-                    var9.contactCount = 0;
-                    board.ballPulses.addLast(new BallPulseEffect(var9.x256, var9.y256), (byte) 3);
+                    chargeCandidate.contactCount = 0;
+                    board.ballPulses.addLast(new BallPulseEffect(chargeCandidate.x256, chargeCandidate.y256), (byte) 3);
                     board.brickSequenceStep = 0;
-                    var20 = new CircleBody(var9.radius256 + var9.x256, var9.radius256 + var9.y256, 0, 0, 15360, 0);
+                    chargeArea = new CircleBody(chargeCandidate.radius256 + chargeCandidate.x256, chargeCandidate.radius256 + chargeCandidate.y256, 0, 0, 15360, 0);
                     var11 = 0;
-                    for (var12 = 0; board.brickGroups.length > var12; var12++) {
-                      var19 = board.brickGroups[var12];
-                      var21 = var19;
-                      var22 = var21;
-                      var21Lifetime2 = var19;
-                      contactBrick = (Brick) (var19.first(-78));
+                    for (chargeGroupIndex = 0; board.brickGroups.length > chargeGroupIndex; chargeGroupIndex++) {
+                      chargeGroup = board.brickGroups[chargeGroupIndex];
+                      unusedChargeGroupAlias = chargeGroup;
+                      unusedChargeGroupReference = unusedChargeGroupAlias;
+                      unusedChargeGroupLifetimeAlias = chargeGroup;
+                      contactBrick = (Brick) (chargeGroup.first(-78));
                       while (contactBrick != null) {
-                        if (contactBrick.overlapsCircle(var20, false)) {
+                        if (contactBrick.overlapsCircle(chargeArea, false)) {
                           if (contactBrick.typeId <= 0) {
                             if (contactBrick.typeId != 19) {
                               if (contactBrick.typeId != 20) {
                                 if (21 != contactBrick.typeId) {
-                                  stackIn_132_0 = (contactBrick.typeId == 22) ? 1 : 0;
+                                  chargeHitEligibility = (contactBrick.typeId == 22) ? 1 : 0;
                                 } else {
-                                  stackIn_132_0 = 1;
+                                  chargeHitEligibility = 1;
                                 }
                               } else {
-                                stackIn_132_0 = 1;
+                                chargeHitEligibility = 1;
                               }
                             } else {
-                              stackIn_132_0 = 1;
+                              chargeHitEligibility = 1;
                             }
                           } else {
-                            stackIn_132_0 = 1;
+                            chargeHitEligibility = 1;
                           }
-                          var15 = stackIn_132_0;
+                          chargeHitEligible = chargeHitEligibility;
                           if (contactBrick.typeId == 22) {
                             contactBrick.typeId = 23;
                           }
                           if (contactBrick.typeId == 21) {
                             contactBrick.typeId = 22;
                           }
-                          if (var15 != 0) {
-                            stackIn_142_0 = (contactBrick.pendingTypeId != 0) ? 0 : 1;
-                            var16 = stackIn_142_0;
+                          if (chargeHitEligible != 0) {
+                            pendingRemovalValue = (contactBrick.pendingTypeId != 0) ? 0 : 1;
+                            wasPendingRemoval = pendingRemovalValue;
                             contactBrick.pendingTypeId = MonotonicTime.brickHitPendingTypes[contactBrick.typeId];
                             contactBrick.transitionCode = BrickHitTransitionTable.codesByBrickType[contactBrick.typeId];
                             contactBrick.stateWord = 0;
@@ -325,32 +325,32 @@ final class MultiplayerMatch {
                             }
                             if (1 == this.playerCount &&
                               contactBrick.pendingTypeId == 0 &&
-                              var16 == 0) {
-                              board.addBrickScore(2 * var9.destroyedBrickStreak + 10, contactBrick, 2);
+                              wasPendingRemoval == 0) {
+                              board.addBrickScore(2 * chargeCandidate.destroyedBrickStreak + 10, contactBrick, 2);
                               var11++;
                             }
                           }
                         }
-                        contactBrick = (Brick) (var19.next((byte) 116));
+                        contactBrick = (Brick) (chargeGroup.next((byte) 116));
                       }
                     }
-                    stackIn_155_0 = (PlayerBoard) (board);
-                    stackIn_155_1 = 16387;
+                    chargeExpressionBoard = (PlayerBoard) (board);
+                    chargeExpressionGuard = 16387;
                     if (var11 > 0) {
-                      stackIn_156_2 = 1;
+                      chargeExpression = 1;
                     } else {
-                      stackIn_156_2 = 6;
+                      chargeExpression = 6;
                     }
-                    ((PlayerBoard) (Object) stackIn_155_0).setBriefEyeExpression(stackIn_155_1, stackIn_156_2);
-                    stackIn_158_0 = (PlayerBoard) (board);
+                    ((PlayerBoard) (Object) chargeExpressionBoard).setBriefEyeExpression(chargeExpressionGuard, chargeExpression);
+                    chargeMessageBoard = (PlayerBoard) (board);
                     if (var11 > 0) {
-                      stackIn_159_1 = TextLineLayout.field_e;
+                      chargeMessages = TextLineLayout.field_e;
                     } else {
-                      stackIn_159_1 = WidgetTheme.lostBallMessages;
+                      chargeMessages = WidgetTheme.lostBallMessages;
                     }
-                    ((PlayerBoard) (Object) stackIn_158_0).choosePendingMessage(stackIn_159_1, (byte) 75);
+                    ((PlayerBoard) (Object) chargeMessageBoard).choosePendingMessage(chargeMessages, (byte) 75);
                   }
-                  var9 = (Ball) (board.activeBalls.next((byte) 116));
+                  chargeCandidate = (Ball) (board.activeBalls.next((byte) 116));
                 }
               }
               if (var8 == 0 &&
@@ -358,9 +358,9 @@ final class MultiplayerMatch {
                 board.activeBalls.addLast(board.queuedBalls.removeFirst(3), (byte) 3);
               }
               if (var8 != 0) {
-                fieldTemp$2 = board.chargedActivationCount + 1;
+                nextChargedActivationCount = board.chargedActivationCount + 1;
                 board.chargedActivationCount = board.chargedActivationCount + 1;
-                if (1 == fieldTemp$2) {
+                if (1 == nextChargedActivationCount) {
                 }
               }
             }
@@ -371,17 +371,17 @@ final class MultiplayerMatch {
               } else {
                 if (this.playerCount != 1) {
                   for (var9_int = 0; board.brickGroups.length > var9_int; var9_int++) {
-                    var21Lifetime1 = board.brickGroups[var9_int];
-                    var22Lifetime1 = var21Lifetime1;
-                    var22Lifetime1Lifetime1 = var21Lifetime1;
-                    var11_ref_on = (Brick) (var21Lifetime1.first(obfuscationGuard - 91));
-                    while (var11_ref_on != null) {
-                      if ((1 << var11_ref_on.typeId & IntHistoryBuffer.field_m) != 0 &&
-                        81920 <= var11_ref_on.y256) {
+                    clearanceGroup = board.brickGroups[var9_int];
+                    unusedClearanceGroupAlias = clearanceGroup;
+                    unusedClearanceGroupReference = clearanceGroup;
+                    clearanceBrick = (Brick) (clearanceGroup.first(obfuscationGuard - 91));
+                    while (clearanceBrick != null) {
+                      if ((1 << clearanceBrick.typeId & IntHistoryBuffer.field_m) != 0 &&
+                        81920 <= clearanceBrick.y256) {
                         var8 = 0;
                         break regionExit1;
                       }
-                      var11_ref_on = (Brick) (var21Lifetime1.next((byte) 116));
+                      clearanceBrick = (Brick) (clearanceGroup.next((byte) 116));
                     }
                   }
                   break regionExit1;
@@ -390,83 +390,83 @@ final class MultiplayerMatch {
               }
             }
             if (var8 != 0) {
-              var9_ref = (BrickMotionPath) (board.motionPaths.first(-120));
-              while (var9_ref != null) {
-                var22Lifetime2 = var9_ref.waypoints;
-                waypoint = (MotionWaypoint) (var22Lifetime2.first(-125));
+              shiftedPath = (BrickMotionPath) (board.motionPaths.first(-120));
+              while (shiftedPath != null) {
+                pathWaypoints = shiftedPath.waypoints;
+                waypoint = (MotionWaypoint) (pathWaypoints.first(-125));
                 while (waypoint != null) {
                   waypoint.y256 = waypoint.y256 + 256;
-                  waypoint = (MotionWaypoint) (var22Lifetime2.next((byte) 116));
+                  waypoint = (MotionWaypoint) (pathWaypoints.next((byte) 116));
                 }
-                var9_ref = (BrickMotionPath) (board.motionPaths.next((byte) 116));
+                shiftedPath = (BrickMotionPath) (board.motionPaths.next((byte) 116));
               }
             }
             for (var9_int = 0; board.brickGroups.length > var9_int; var9_int++) {
-              var23 = board.brickGroups[var9_int];
-              var11_ref_onLifetime1 = (Brick) (var23.first(obfuscationGuard ^ -42));
-              while (var11_ref_onLifetime1 != null) {
+              transitionGroup = board.brickGroups[var9_int];
+              transitionBrick = (Brick) (transitionGroup.first(obfuscationGuard ^ -42));
+              while (transitionBrick != null) {
                 if (var8 != 0 &&
-                  (5 & var11_ref_onLifetime1.flags) == 0) {
-                  var11_ref_onLifetime1.y256 = var11_ref_onLifetime1.y256 + 256;
+                  (5 & transitionBrick.flags) == 0) {
+                  transitionBrick.y256 = transitionBrick.y256 + 256;
                 }
-                if (0 <= var11_ref_onLifetime1.pendingTypeId) {
-                  fieldTemp$6 = var11_ref_onLifetime1.stateWord + 1;
-                  var11_ref_onLifetime1.stateWord = var11_ref_onLifetime1.stateWord + 1;
-                  if (fieldTemp$6 == 16) {
-                    var11_ref_onLifetime1.transitionCode = 0;
-                    var11_ref_onLifetime1.stateWord = 0;
-                    if (0 == var11_ref_onLifetime1.pendingTypeId) {
-                      var11_ref_onLifetime1.unlink((byte) 111);
-                      if ((1 << var11_ref_onLifetime1.typeId & IntHistoryBuffer.field_m) != 0) {
+                if (0 <= transitionBrick.pendingTypeId) {
+                  nextTransitionTicks = transitionBrick.stateWord + 1;
+                  transitionBrick.stateWord = transitionBrick.stateWord + 1;
+                  if (nextTransitionTicks == 16) {
+                    transitionBrick.transitionCode = 0;
+                    transitionBrick.stateWord = 0;
+                    if (0 == transitionBrick.pendingTypeId) {
+                      transitionBrick.unlink((byte) 111);
+                      if ((1 << transitionBrick.typeId & IntHistoryBuffer.field_m) != 0) {
                         board.countedBricks = board.countedBricks - 1;
                         board.lifeBrickClears = board.lifeBrickClears + 1;
                         board.progressBrickClears = board.progressBrickClears + 1;
                       }
                       if (TextFieldRenderer.field_A) {
-                        WidgetLayer.a(var11_ref_onLifetime1.flags, 1, (byte) -95);
+                        WidgetLayer.a(transitionBrick.flags, 1, (byte) -95);
                       }
                     } else {
-                      if (var11_ref_onLifetime1.typeId == 0) {
+                      if (transitionBrick.typeId == 0) {
                         board.countedBricks = board.countedBricks + 1;
                       }
-                      var11_ref_onLifetime1.typeId = var11_ref_onLifetime1.pendingTypeId;
-                      var11_ref_onLifetime1.pendingTypeId = -1;
+                      transitionBrick.typeId = transitionBrick.pendingTypeId;
+                      transitionBrick.pendingTypeId = -1;
                     }
                   }
                 }
-                if ((4 & var11_ref_onLifetime1.flags) != 0) {
-                  var11_ref_onLifetime1.interpolateMotion((byte) 58, true);
-                  var11_ref_onLifetime1.segmentElapsedTicks = var11_ref_onLifetime1.segmentElapsedTicks + 1;
-                  var11_ref_onLifetime1.motionElapsedTicks = var11_ref_onLifetime1.motionElapsedTicks + 1;
-                  var24 = var11_ref_onLifetime1.waypoints[var11_ref_onLifetime1.destinationWaypointIndex];
-                  if (var24.durationTicks == var11_ref_onLifetime1.segmentElapsedTicks) {
-                    var11_ref_onLifetime1.advanceMotionSegment(105);
+                if ((4 & transitionBrick.flags) != 0) {
+                  transitionBrick.interpolateMotion((byte) 58, true);
+                  transitionBrick.segmentElapsedTicks = transitionBrick.segmentElapsedTicks + 1;
+                  transitionBrick.motionElapsedTicks = transitionBrick.motionElapsedTicks + 1;
+                  destinationWaypoint = transitionBrick.waypoints[transitionBrick.destinationWaypointIndex];
+                  if (destinationWaypoint.durationTicks == transitionBrick.segmentElapsedTicks) {
+                    transitionBrick.advanceMotionSegment(105);
                   }
                 }
-                var11_ref_onLifetime1 = (Brick) (var23.next((byte) 116));
+                transitionBrick = (Brick) (transitionGroup.next((byte) 116));
               }
             }
-            var9Lifetime1 = (Ball) (board.queuedBalls.first(-105));
-            while (var9Lifetime1 != null) {
-              if (var9Lifetime1.phaseTicks > 0) {
-                var9Lifetime1.phaseTicks = var9Lifetime1.phaseTicks - 1;
+            queuedEffectBall = (Ball) (board.queuedBalls.first(-105));
+            while (queuedEffectBall != null) {
+              if (queuedEffectBall.phaseTicks > 0) {
+                queuedEffectBall.phaseTicks = queuedEffectBall.phaseTicks - 1;
               }
-              if (var9Lifetime1.penetrationTicks > 0) {
-                var9Lifetime1.penetrationTicks = var9Lifetime1.penetrationTicks - 1;
+              if (queuedEffectBall.penetrationTicks > 0) {
+                queuedEffectBall.penetrationTicks = queuedEffectBall.penetrationTicks - 1;
               }
-              var9Lifetime1 = (Ball) (board.queuedBalls.next((byte) 116));
+              queuedEffectBall = (Ball) (board.queuedBalls.next((byte) 116));
             }
-            var9Lifetime2 = (Ball) (board.activeBalls.first(obfuscationGuard - 13));
-            while (var9Lifetime2 != null) {
-              var9Lifetime2.centerXHistory256.append(-7255, var9Lifetime2.x256 + var9Lifetime2.radius256);
-              var9Lifetime2.centerYHistory256.append(-7255, var9Lifetime2.y256 + var9Lifetime2.radius256);
-              if (var9Lifetime2.phaseTicks > 0) {
-                var9Lifetime2.phaseTicks = var9Lifetime2.phaseTicks - 1;
+            activeEffectBall = (Ball) (board.activeBalls.first(obfuscationGuard - 13));
+            while (activeEffectBall != null) {
+              activeEffectBall.centerXHistory256.append(-7255, activeEffectBall.x256 + activeEffectBall.radius256);
+              activeEffectBall.centerYHistory256.append(-7255, activeEffectBall.y256 + activeEffectBall.radius256);
+              if (activeEffectBall.phaseTicks > 0) {
+                activeEffectBall.phaseTicks = activeEffectBall.phaseTicks - 1;
               }
-              if (var9Lifetime2.penetrationTicks > 0) {
-                var9Lifetime2.penetrationTicks = var9Lifetime2.penetrationTicks - 1;
+              if (activeEffectBall.penetrationTicks > 0) {
+                activeEffectBall.penetrationTicks = activeEffectBall.penetrationTicks - 1;
               }
-              var9Lifetime2 = (Ball) (board.activeBalls.next((byte) 116));
+              activeEffectBall = (Ball) (board.activeBalls.next((byte) 116));
             }
             if (paddle.reversedControlTicks > 0) {
               paddle.reversedControlTicks = paddle.reversedControlTicks - 1;
@@ -478,32 +478,32 @@ final class MultiplayerMatch {
               paddle.catchTicks = paddle.catchTicks - 1;
             }
             if (var8 != 0) {
-              fieldTemp$3 = board.buildTicks - 1;
+              remainingBuildTicks = board.buildTicks - 1;
               board.buildTicks = board.buildTicks - 1;
-              if (fieldTemp$3 % 16 == 0) {
-                stackIn_245_0 = (1 == this.playerCount) ? 13 : 7;
-                var9_int = stackIn_245_0;
-                var10_ref = null;
+              if (remainingBuildTicks % 16 == 0) {
+                buildRowColumns = (1 == this.playerCount) ? 13 : 7;
+                var9_int = buildRowColumns;
+                unusedBuildReference = null;
                 for (var11 = 1; var11 <= var9_int; var11++) {
-                  dupTemp$4 = new Brick(34 * var11 << 8, 4096, 0, 0, 0);
-                  var10_ref_on = dupTemp$4;
-                  board.brickGroups[2].addLast(dupTemp$4, (byte) 3);
-                  var10_ref_on.pendingTypeId = 2;
-                  var10_ref_on.transitionCode = 10;
+                  newRowBrick = new Brick(34 * var11 << 8, 4096, 0, 0, 0);
+                  builtBrick = newRowBrick;
+                  board.brickGroups[2].addLast(newRowBrick, (byte) 3);
+                  builtBrick.pendingTypeId = 2;
+                  builtBrick.transitionCode = 10;
                 }
                 for (var11 = 0; var11 < 3; var11++) {
-                  var25 = board.brickGroups[var11];
-                  var26 = var25;
-                  var26Lifetime2 = var25;
-                  var10_ref_onLifetime1 = (Brick) (var25.first(-44));
-                  while (var10_ref_onLifetime1 != null) {
-                    if ((1 & var10_ref_onLifetime1.flags) == 0 &&
-                      81920 < var10_ref_onLifetime1.y256) {
-                      var10_ref_onLifetime1.transitionCode = 7;
-                      var10_ref_onLifetime1.pendingTypeId = 0;
-                      var10_ref_onLifetime1.stateWord = 0;
+                  overflowGroup = board.brickGroups[var11];
+                  unusedOverflowGroupAlias = overflowGroup;
+                  unusedOverflowGroupReference = overflowGroup;
+                  overflowBrick = (Brick) (overflowGroup.first(-44));
+                  while (overflowBrick != null) {
+                    if ((1 & overflowBrick.flags) == 0 &&
+                      81920 < overflowBrick.y256) {
+                      overflowBrick.transitionCode = 7;
+                      overflowBrick.pendingTypeId = 0;
+                      overflowBrick.stateWord = 0;
                     }
-                    var10_ref_onLifetime1 = (Brick) (var25.next((byte) 116));
+                    overflowBrick = (Brick) (overflowGroup.next((byte) 116));
                   }
                 }
               }
@@ -519,19 +519,19 @@ final class MultiplayerMatch {
             var9_int = 0;
             while (true) {
               if (var9_int >= 8) {
-                var9_ref3 = paddle;
+                stoppedPaddle = paddle;
                 paddle.velocityY256 = 0;
-                var9_ref3.velocityX256 = 0;
+                stoppedPaddle.velocityX256 = 0;
                 for (var10 = 0; var10 < 3; var10++) {
-                  var11_ref_onLifetime2 = (Brick) (board.brickGroups[var10].first(-49));
-                  while (var11_ref_onLifetime2 != null) {
-                    if ((var11_ref_onLifetime2.flags & 4) != 0) {
-                      var11_ref_onLifetime2.interpolateMotion((byte) 119, true);
+                  interpolatedBrick = (Brick) (board.brickGroups[var10].first(-49));
+                  while (interpolatedBrick != null) {
+                    if ((interpolatedBrick.flags & 4) != 0) {
+                      interpolatedBrick.interpolateMotion((byte) 119, true);
                     }
-                    var11_ref_onLifetime2 = (Brick) (board.brickGroups[var10].next((byte) 116));
+                    interpolatedBrick = (Brick) (board.brickGroups[var10].next((byte) 116));
                   }
                 }
-                boolean decompiledFrameRemainder0 = true;
+                boolean unusedLevelCompletionFlag = true;
                 if (board.countedBricks == 0 &&
                   board.buildTicks == 0) {
                   board.stateTicks = 0;
@@ -541,16 +541,16 @@ final class MultiplayerMatch {
                   if (1 == this.playerCount) {
                     board.addScore(250, false, 65280, paddle.y256 - 12800);
                   }
-                  fieldTemp$5 = board.levelIndex + 1;
+                  nextLevelIndex = board.levelIndex + 1;
                   board.levelIndex = board.levelIndex + 1;
-                  if (fieldTemp$5 >= this.configuration.getPeriod(obfuscationGuard - 125) &&
+                  if (nextLevelIndex >= this.configuration.getPeriod(obfuscationGuard - 125) &&
                     !this.configuration.repeats) {
                     if (this.playerCount != 1) {
                       board.boardState = 7;
                     } else {
                       board.boardState = 5;
                     }
-                    decompiledFrameRemainder0 = false;
+                    unusedLevelCompletionFlag = false;
                   }
                   else {
                     board.boardState = 0;
@@ -562,16 +562,16 @@ final class MultiplayerMatch {
                 }
                 var10 = 0;
                 var11 = 0;
-                var12Lifetime1 = 0;
+                unusedStatisticValue = 0;
                 contactBall = (Ball) (board.activeBalls.first(-26));
                 while (contactBall != null) {
-                  var12Lifetime1Lifetime1 = contactBall.brickBounceCount;
+                  ballStatistic = contactBall.brickBounceCount;
                   if (contactBall.brickBounceCount > var10) {
-                    var10 = var12Lifetime1Lifetime1;
+                    var10 = ballStatistic;
                   }
-                  var12Lifetime1Lifetime1 = contactBall.destroyedBrickStreak;
+                  ballStatistic = contactBall.destroyedBrickStreak;
                   if (var11 < contactBall.destroyedBrickStreak) {
-                    var11 = var12Lifetime1Lifetime1;
+                    var11 = ballStatistic;
                   }
                   contactBall = (Ball) (board.activeBalls.next((byte) 116));
                 }
@@ -587,14 +587,14 @@ final class MultiplayerMatch {
                 fallingPowerUp.x256 = fallingPowerUp.x256 + fallingPowerUp.velocityX256 / 8;
                 fallingPowerUp.y256 = fallingPowerUp.y256 + fallingPowerUp.velocityY256 / 8;
                 if (fallingPowerUp.y256 > 122880) {
-                  stackIn_270_0 = (PlayerBoard) (board);
-                  stackIn_270_1 = 16387;
+                  missedPowerUpBoard = (PlayerBoard) (board);
+                  missedPowerUpExpressionGuard = 16387;
                   if (board.nextRandomBoundedInt(100, (byte) 62) > 50) {
-                    stackIn_271_2 = 4;
+                    missedPowerUpExpression = 4;
                   } else {
-                    stackIn_271_2 = 5;
+                    missedPowerUpExpression = 5;
                   }
-                  ((PlayerBoard) (Object) stackIn_270_0).setBriefEyeExpression(stackIn_270_1, stackIn_271_2);
+                  ((PlayerBoard) (Object) missedPowerUpBoard).setBriefEyeExpression(missedPowerUpExpressionGuard, missedPowerUpExpression);
                   if (TextFieldRenderer.field_A) {
                     WidgetLayer.a(fallingPowerUp.typeId, 4, (byte) -110);
                   }
@@ -602,26 +602,26 @@ final class MultiplayerMatch {
                 } else {
                   if (paddle.resolveCircleCollision(fallingPowerUp, (byte) 25)) {
                     fallingPowerUp.unlink((byte) 111);
-                    stackIn_279_0 = (!fallingPowerUp.isSelfTargeted(false)) ? 0 : 1;
-                    var11 = stackIn_279_0;
+                    selfTargetedValue = (!fallingPowerUp.isSelfTargeted(false)) ? 0 : 1;
+                    var11 = selfTargetedValue;
                     if (collectedPowerUps != null) {
                       collectedPowerUps.addLast(fallingPowerUp, (byte) 3);
                     }
                     if (this.playerCount == 1) {
-                      stackIn_284_0 = var11;
+                      beneficialBaseValue = var11;
                       if (fallingPowerUp.typeId != 13) {
-                        stackIn_285_1 = 0;
+                        slowDownValue = 0;
                       } else {
-                        stackIn_285_1 = 1;
+                        slowDownValue = 1;
                       }
-                      var11 = stackIn_284_0 | stackIn_285_1;
-                      stackIn_287_0 = (PlayerBoard) (board);
+                      var11 = beneficialBaseValue | slowDownValue;
+                      pickupScoreBoard = (PlayerBoard) (board);
                       if (var11 != 0) {
-                        stackIn_288_1 = 100;
+                        pickupPoints = 100;
                       } else {
-                        stackIn_288_1 = 500;
+                        pickupPoints = 500;
                       }
-                      ((PlayerBoard) (Object) stackIn_287_0).addPaddleScore(stackIn_288_1, paddle, obfuscationGuard + 2);
+                      ((PlayerBoard) (Object) pickupScoreBoard).addPaddleScore(pickupPoints, paddle, obfuscationGuard + 2);
                       if (var11 != 0) {
                         board.harmfulPowerUpStreak = 0;
                         board.levelsSinceBeneficialPickup = 0;
@@ -637,15 +637,15 @@ final class MultiplayerMatch {
                     if (audioEvents != null) {
                       audioEvents.addLast(new GameplayAudioEvent(3, fallingPowerUp.typeId), (byte) 3);
                     }
-                    stackIn_300_0 = (PlayerBoard) (board);
+                    pickupMessageBoard = (PlayerBoard) (board);
                     if (1 >= this.playerCount &&
                       fallingPowerUp.typeId != 13 &&
                       var11 == 0) {
-                      stackIn_302_1 = WidgetTheme.lostBallMessages;
+                      pickupMessages = WidgetTheme.lostBallMessages;
                     } else {
-                      stackIn_302_1 = TextLineLayout.field_e;
+                      pickupMessages = TextLineLayout.field_e;
                     }
-                    ((PlayerBoard) (Object) stackIn_300_0).choosePendingMessage(stackIn_302_1, (byte) 75);
+                    ((PlayerBoard) (Object) pickupMessageBoard).choosePendingMessage(pickupMessages, (byte) 75);
                   }
                 }
                 fallingPowerUp = (PowerUp) (board.fallingPowerUps.next((byte) 116));
@@ -675,15 +675,15 @@ final class MultiplayerMatch {
                 }
               }
               for (var10 = 0; board.brickGroups.length > var10; var10++) {
-                var26Lifetime1 = board.brickGroups[var10];
-                movingBrick = (Brick) (var26Lifetime1.first(-38));
+                movingGroup = board.brickGroups[var10];
+                movingBrick = (Brick) (movingGroup.first(-38));
                 while (movingBrick != null) {
                   if (0 != (movingBrick.flags & 4) &&
                     1 < movingBrick.waypoints[movingBrick.destinationWaypointIndex].durationTicks) {
                     movingBrick.x256 = movingBrick.x256 + movingBrick.velocityX256 / 8;
                     movingBrick.y256 = movingBrick.y256 + movingBrick.velocityY256 / 8;
                   }
-                  movingBrick = (Brick) (var26Lifetime1.next((byte) 116));
+                  movingBrick = (Brick) (movingGroup.next((byte) 116));
                 }
               }
               collidingBall = (Ball) (board.activeBalls.first(-122));
@@ -764,18 +764,18 @@ final class MultiplayerMatch {
               }
               if (board.levelsCleared != 0) {
                 for (var8 = 0; var8 < 3; var8++) {
-                  var9_ref4 = (Brick) (board.brickGroups[var8].first(-30));
-                  while (var9_ref4 != null) {
-                    if (var9_ref4.pendingTypeId >= 0) {
-                      fieldTemp$7 = var9_ref4.stateWord + 1;
-                      var9_ref4.stateWord = var9_ref4.stateWord + 1;
-                      if (fieldTemp$7 == 16) {
-                        var9_ref4.transitionCode = 0;
-                        var9_ref4.stateWord = 0;
-                        var9_ref4.pendingTypeId = -1;
+                  introBrick = (Brick) (board.brickGroups[var8].first(-30));
+                  while (introBrick != null) {
+                    if (introBrick.pendingTypeId >= 0) {
+                      nextIntroTransitionTicks = introBrick.stateWord + 1;
+                      introBrick.stateWord = introBrick.stateWord + 1;
+                      if (nextIntroTransitionTicks == 16) {
+                        introBrick.transitionCode = 0;
+                        introBrick.stateWord = 0;
+                        introBrick.pendingTypeId = -1;
                       }
                     }
-                    var9_ref4 = (Brick) (board.brickGroups[var8].next((byte) 116));
+                    introBrick = (Brick) (board.brickGroups[var8].next((byte) 116));
                   }
                 }
               }
@@ -785,9 +785,9 @@ final class MultiplayerMatch {
               } else {
                 var8 = (board.levelsCleared == 0) ? 75 : 40;
               }
-              fieldTemp$8 = board.stateTicks + 1;
+              nextIntroTicks = board.stateTicks + 1;
               board.stateTicks = board.stateTicks + 1;
-              if (fieldTemp$8 != var8) {
+              if (nextIntroTicks != var8) {
                 return;
               }
               board.stateTicks = 0;
@@ -799,9 +799,9 @@ final class MultiplayerMatch {
                 audioEvents != null) {
                 audioEvents.addLast(new GameplayAudioEvent(13), (byte) 3);
               }
-              fieldTemp$11 = board.stateTicks + 1;
+              nextServeDelayTicks = board.stateTicks + 1;
               board.stateTicks = board.stateTicks + 1;
-              if (fieldTemp$11 != 75) {
+              if (nextServeDelayTicks != 75) {
                 if (this.playerCount != 1) {
                   return;
                 }
@@ -810,21 +810,21 @@ final class MultiplayerMatch {
                 }
               }
               board.pendingMessage = SecondaryNodeQueue.field_c;
-              stackIn_55_0 = (PlayerBoard) (board);
+              messageBoard = (PlayerBoard) (board);
               if (board.messageTicks > 25) {
-                stackIn_56_1 = 25;
+                clippedMessageTicks = 25;
               } else {
-                stackIn_56_1 = board.messageTicks;
+                clippedMessageTicks = board.messageTicks;
               }
-              stackIn_55_0.messageTicks = stackIn_56_1;
+              messageBoard.messageTicks = clippedMessageTicks;
               board.boardState = 2;
               board.stateTicks = 0;
               return;
             }
             if (board.boardState == 3) {
-              fieldTemp$9 = board.stateTicks + 1;
+              nextDefeatTicks = board.stateTicks + 1;
               board.stateTicks = board.stateTicks + 1;
-              if (fieldTemp$9 != 350) {
+              if (nextDefeatTicks != 350) {
                 return;
               }
               board.stateTicks = 0;
@@ -834,38 +834,38 @@ final class MultiplayerMatch {
             if (board.boardState != 5) {
               return;
             }
-            fieldTemp$10 = board.stateTicks + 1;
+            nextVictoryTicks = board.stateTicks + 1;
             board.stateTicks = board.stateTicks + 1;
-            if (fieldTemp$10 == 350) {
+            if (nextVictoryTicks == 350) {
               board.stateTicks = 0;
               board.boardState = 9;
               return;
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_388_0 = var5_ref;
-          stackIn_388_1 = new StringBuilder().append("ak.F(");
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ak.F(");
           if (board == null) {
-            stackIn_389_2 = "null";
+            boardSummary = "null";
           } else {
-            stackIn_389_2 = "{...}";
+            boardSummary = "{...}";
           }
-          stackIn_391_1 = ((StringBuilder) (Object) stackIn_388_1).append(stackIn_389_2).append(',');
+          audioContextBuilder = ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(',');
           if (audioEvents == null) {
-            stackIn_392_2 = "null";
+            audioSummary = "null";
           } else {
-            stackIn_392_2 = "{...}";
+            audioSummary = "{...}";
           }
-          stackIn_394_1 = ((StringBuilder) (Object) stackIn_391_1).append(stackIn_392_2).append(',');
+          collectedContextBuilder = ((StringBuilder) (Object) audioContextBuilder).append(audioSummary).append(',');
           if (collectedPowerUps == null) {
-            stackIn_395_2 = "null";
+            collectedSummary = "null";
           } else {
-            stackIn_395_2 = "{...}";
+            collectedSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_388_0), ((StringBuilder) (Object) stackIn_394_1).append(stackIn_395_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) collectedContextBuilder).append(collectedSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
