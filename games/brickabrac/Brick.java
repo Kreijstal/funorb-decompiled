@@ -423,8 +423,8 @@ final class Brick extends RectangleBody {
         GameplayScreen.field_j = 0;
         MouseInput.field_d = null;
         IndexedSpriteGeometry.field_e = null;
-        int var2 = gd.field_a;
-        gd.field_a = StatefulWidgetRenderer.field_z;
+        int var2 = ByteArrayPoolHelpers.field_a;
+        ByteArrayPoolHelpers.field_a = StatefulWidgetRenderer.field_z;
         int var3 = -47 / ((param0 + 22) / 61);
         if (param1 == 51) {
           PacketReceiveHelpers.field_f.lastError = 2;

@@ -144,7 +144,7 @@ final class ChatMessage {
         this.senderId = BirthDateValidator.receivedChatSenderId;
         this.senderName = nd.receivedChatSenderName;
         this.systemMessage = IterableIntrusiveHashTable.receivedChatSystem;
-        this.text = gd.receivedChatText;
+        this.text = ByteArrayPoolHelpers.receivedChatText;
         this.channel = gj.receivedChatChannel;
         this.messageKeyLow24 = LevelCompleteScreen.receivedChatKeyLow24;
     }

@@ -3,7 +3,7 @@
  */
 final class GameRenderAudioHelpers {
     static String field_b;
-    static byte[][][] field_a;
+    static byte[][][] customBytePools;
     static int[] field_f;
     static ContextActionController contextActions;
     static String field_e;
@@ -500,7 +500,7 @@ final class GameRenderAudioHelpers {
           field_b = null;
           field_f = null;
           int var1_int = -21 / ((param0 + 44) / 60);
-          field_a = (byte[][][]) null;
+          customBytePools = (byte[][][]) null;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bm.F(" + param0 + ')');
         }

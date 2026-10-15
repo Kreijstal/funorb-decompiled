@@ -10,17 +10,17 @@ final class DropTargetWidget extends SingleChildWidget {
         DraggableWidget var7 = null;
         try {
           super.handlePointerRelease(pointerY, pointerX, parentY, focusRoot, obfuscationGuard, parentX);
-          var7 = gd.draggedWidget;
+          var7 = ByteArrayPoolHelpers.draggedWidget;
           if (var7 != null &&
             this.containsPoint(pointerY, parentY, parentX, 3, pointerX)) {
             if (this.listener instanceof WidgetDropListener) {
               ((WidgetDropListener) (this.listener)).onDrop(-24178, var7, this);
-              gd.draggedWidget = null;
+              ByteArrayPoolHelpers.draggedWidget = null;
               return;
             }
             if (var7.listener instanceof WidgetDropListener) {
               ((WidgetDropListener) (var7.listener)).onDrop(-24178, var7, this);
-              gd.draggedWidget = null;
+              ByteArrayPoolHelpers.draggedWidget = null;
               return;
             }
           }

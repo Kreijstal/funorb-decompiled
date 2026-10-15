@@ -131,7 +131,7 @@ public final class BrickABrac extends InteractiveGameClient {
         this.a((byte) 39, 0, 2, obfuscationGuard, 1, 4, 14, 65);
         ButtonWidgetRenderer.field_w = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
         nk.field_c = new RgbSprite(640, 480);
-        Widget.a(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.field_D);
+        Widget.a(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.windowCanvas);
         this.registerUiLifecycle(3160, new GameUiController());
         ReportAbuseDialog.a(ch.incomingPacketLengths, 1);
     }
@@ -782,7 +782,7 @@ public final class BrickABrac extends InteractiveGameClient {
         Bzip2Decoder.releaseSharedState();
         Bzip2State.a((byte) -102);
         ReflectionCheck.a(6);
-        gd.a(!obfuscationGuard ? true : false);
+        ByteArrayPoolHelpers.a(!obfuscationGuard ? true : false);
         rl.a(-18657);
         LabeledToggleRenderer.a(1);
         StatefulWidgetRenderer.b(3);

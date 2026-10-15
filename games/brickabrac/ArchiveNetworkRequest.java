@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArchiveNetworkRequest extends ResourceRequest {
-    static byte[][] field_L;
+    static byte[][] bytePool5000;
     PacketBuffer packet;
     static int field_G;
     static RgbSprite[] packSelectorIcons;
@@ -105,7 +105,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         int var1 = -85 / ((4 - param0) / 55);
         field_H = null;
         packSelectorIcons = null;
-        field_L = (byte[][]) null;
+        bytePool5000 = (byte[][]) null;
     }
 
     final static String d(byte param0) {
@@ -160,7 +160,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
     }
 
     static {
-        field_L = new byte[250][];
+        bytePool5000 = new byte[250][];
         projectedVertexX = new int[8192];
         field_H = "Enter multiplayer lobby";
         field_J = "No highscores";

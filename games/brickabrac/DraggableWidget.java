@@ -37,7 +37,7 @@ final class DraggableWidget extends SingleChildWidget {
             return true;
           }
           this.dragOffsetY = -parentY + (-this.y + pointerY);
-          gd.draggedWidget = this;
+          ByteArrayPoolHelpers.draggedWidget = this;
           this.dragOffsetX = -parentX - this.x + pointerX;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

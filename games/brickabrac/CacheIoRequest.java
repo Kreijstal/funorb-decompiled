@@ -3,7 +3,7 @@
  */
 final class CacheIoRequest extends ResourceRequest {
     FileCacheStore store;
-    static java.awt.Canvas field_D;
+    static java.awt.Canvas windowCanvas;
     int operation;
     byte[] data;
 
@@ -19,7 +19,7 @@ final class CacheIoRequest extends ResourceRequest {
           throw new IllegalArgumentException("");
         }
         if (obfuscationGuard != 2) {
-          field_D = (java.awt.Canvas) null;
+          windowCanvas = (java.awt.Canvas) null;
         }
         if (value >= 32768) {
           if (value < 131072) {
@@ -67,9 +67,9 @@ final class CacheIoRequest extends ResourceRequest {
 
     public static void h(int param0) {
         if (param0 > -17) {
-          field_D = (java.awt.Canvas) null;
+          windowCanvas = (java.awt.Canvas) null;
         }
-        field_D = null;
+        windowCanvas = null;
     }
 
     final byte[] getData(byte obfuscationGuard) {
@@ -147,7 +147,7 @@ final class CacheIoRequest extends ResourceRequest {
           }
           ((UiComponent) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, (byte) 64);
           if (!param0) {
-            field_D = (java.awt.Canvas) null;
+            windowCanvas = (java.awt.Canvas) null;
           }
           QuickChatPhraseDefinition.field_E.setBounds(18, np.uiRowHeight + 2, -40 + (-2 + IterableIntrusiveHashTable.field_b.width) - DialogMessagePanel.uiScrollbarWidth, 42 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
           TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, IterableIntrusiveHashTable.field_b.width, 0, np.uiRowHeight + 2 + 20, DialogMessagePanel.uiScrollbarWidth, -2 + IterableIntrusiveHashTable.field_b.height - (np.uiRowHeight + 20));
@@ -285,7 +285,7 @@ final class CacheIoRequest extends ResourceRequest {
         try {
           var3_int = -1;
           if (obfuscationGuard != 16) {
-            field_D = (java.awt.Canvas) null;
+            windowCanvas = (java.awt.Canvas) null;
           }
           while (var3_int < columns + 1) {
             for (var4 = -1; 31 > var4; var4++) {

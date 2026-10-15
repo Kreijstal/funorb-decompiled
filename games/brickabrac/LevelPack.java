@@ -66,7 +66,7 @@ final class LevelPack {
         if (null != jj.canvasResizeController) {
           jj.canvasResizeController.restoreSavedCanvasSize(-33);
         }
-        CacheIoRequest.field_D.requestFocus();
+        CacheIoRequest.windowCanvas.requestFocus();
     }
 
     final static UiComponent c(int param0) {

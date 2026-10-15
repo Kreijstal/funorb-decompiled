@@ -3,7 +3,7 @@
  */
 final class EmailAvailabilityRequest {
     private String email;
-    static int field_e;
+    static int bytePool30000Count;
     static int field_f;
     static String field_b;
     private boolean completed;
@@ -20,7 +20,7 @@ final class EmailAvailabilityRequest {
 
     final boolean isCompleted(int obfuscationGuard) {
         if (obfuscationGuard != 96) {
-          field_e = -42;
+          bytePool30000Count = -42;
           return this.completed;
         }
         return this.completed;
@@ -128,7 +128,7 @@ final class EmailAvailabilityRequest {
     }
 
     static {
-        field_e = 0;
+        bytePool30000Count = 0;
         field_f = 96;
         field_b = "Hide private chat and appear offline to friends";
         field_d = "You need to choose a name before you can log in. This is the name that will be displayed to other players.";

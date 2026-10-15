@@ -5,7 +5,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
     private FocusableWidget continueButton;
     private RegistrationResponseDialog registrationDialog;
     static long[] renderTimes;
-    static int field_N;
+    static int bytePool100Count;
     private HotspotTextWidget noticeLinks;
     static String field_K;
     static RgbSprite field_P;
@@ -250,7 +250,7 @@ final class Under13RegistrationNoticePanel extends WidgetGroup implements TextHo
     }
 
     static {
-        field_N = 0;
+        bytePool100Count = 0;
         renderTimes = new long[32];
         field_J = "Please enter a year between <%0> and <%1>";
     }

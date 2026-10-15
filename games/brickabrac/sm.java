@@ -37,7 +37,7 @@ final class sm {
           }
           try {
             if (param0 == ~GameplayScreen.field_j) {
-              IndexedSpriteGeometry.field_e = DialogMessagePanel.field_P.a(LevelMetadata.field_k, (byte) 120, gd.field_a);
+              IndexedSpriteGeometry.field_e = DialogMessagePanel.field_P.a(LevelMetadata.field_k, (byte) 120, ByteArrayPoolHelpers.field_a);
               GameplayScreen.field_j = GameplayScreen.field_j + 1;
             }
             if (1 == GameplayScreen.field_j) {

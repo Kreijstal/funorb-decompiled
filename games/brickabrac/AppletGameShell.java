@@ -408,7 +408,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 }
                 IntegerValidationHelpers.refreshReportedHeapLimit(1);
                 this.c(false);
-                BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.field_D), WeightedLruCache.canvasWidth, -2414, WidgetPaintStyle.canvasHeight);
+                BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.windowCanvas), WeightedLruCache.canvasWidth, -2414, WidgetPaintStyle.canvasHeight);
                 this.initializeClient(false);
                 MenuSelection.gameClock = BoardPresentationHelpers.createGameClock((byte) 123);
                 do {
@@ -429,7 +429,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                   do {
                     if (!(GrowableIntList.cyclesDue > var3)) {
                       this.runRenderFrame(0);
-                      IntNode.pumpPlatformEvents(-4317, AccountMessageDialog.field_ub, CacheIoRequest.field_D);
+                      IntNode.pumpPlatformEvents(-4317, AccountMessageDialog.field_ub, CacheIoRequest.windowCanvas);
                       break;
                     }
                     this.runClientTick(26573);
@@ -480,17 +480,17 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           if (50 < fieldTemp$1) {
             GameplayAudioEvent.redrawRequested = true;
             MouseWheelSource.resizeFrameCounter = MouseWheelSource.resizeFrameCounter - 50;
-            CacheIoRequest.field_D.setSize(WeightedLruCache.canvasWidth, WidgetPaintStyle.canvasHeight);
-            CacheIoRequest.field_D.setVisible(true);
+            CacheIoRequest.windowCanvas.setSize(WeightedLruCache.canvasWidth, WidgetPaintStyle.canvasHeight);
+            CacheIoRequest.windowCanvas.setVisible(true);
             if (null != MatchingTextValidator.field_o &&
               null == BackgroundRegistry.field_e) {
               insets = MatchingTextValidator.field_o.getInsets();
-              CacheIoRequest.field_D.setLocation(insets.left + WeightedLruCache.canvasOffsetX, insets.top + LoginPanel.field_W);
+              CacheIoRequest.windowCanvas.setLocation(insets.left + WeightedLruCache.canvasOffsetX, insets.top + LoginPanel.field_W);
               if (BrickABrac.field_J) {
-                CacheIoRequest.field_D.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
+                CacheIoRequest.windowCanvas.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
               }
             } else {
-              CacheIoRequest.field_D.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
+              CacheIoRequest.windowCanvas.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
             }
           }
           this.renderClient(obfuscationGuard + 102);
@@ -591,10 +591,10 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             exception = (Exception) (Object) decompiledCaughtException;
           }
           var3_int = -40 % ((-22 - obfuscationGuard) / 54);
-          if (CacheIoRequest.field_D != null) {
+          if (CacheIoRequest.windowCanvas != null) {
             try {
-              CacheIoRequest.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
-              CacheIoRequest.field_D.getParent().remove((java.awt.Component) ((Object) CacheIoRequest.field_D));
+              CacheIoRequest.windowCanvas.removeFocusListener((java.awt.event.FocusListener) (this));
+              CacheIoRequest.windowCanvas.getParent().remove((java.awt.Component) ((Object) CacheIoRequest.windowCanvas));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4_ref = (Exception) (Object) decompiledCaughtException;
@@ -633,10 +633,10 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (CacheIoRequest.field_D != null) {
-            CacheIoRequest.field_D.removeFocusListener((java.awt.event.FocusListener) (this));
-            CacheIoRequest.field_D.getParent().setBackground(java.awt.Color.black);
-            CacheIoRequest.field_D.getParent().remove((java.awt.Component) ((Object) CacheIoRequest.field_D));
+          if (CacheIoRequest.windowCanvas != null) {
+            CacheIoRequest.windowCanvas.removeFocusListener((java.awt.event.FocusListener) (this));
+            CacheIoRequest.windowCanvas.getParent().setBackground(java.awt.Color.black);
+            CacheIoRequest.windowCanvas.getParent().remove((java.awt.Component) ((Object) CacheIoRequest.windowCanvas));
           }
           boolean decompiledFrameRemainder0 = true;
           if (BackgroundRegistry.field_e == null) {
@@ -662,21 +662,21 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             var2 = BackgroundRegistry.field_e;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          CacheIoRequest.field_D = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) CacheIoRequest.field_D));
-          CacheIoRequest.field_D.setSize(WeightedLruCache.canvasWidth, WidgetPaintStyle.canvasHeight);
-          CacheIoRequest.field_D.setVisible(true);
+          CacheIoRequest.windowCanvas = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) CacheIoRequest.windowCanvas));
+          CacheIoRequest.windowCanvas.setSize(WeightedLruCache.canvasWidth, WidgetPaintStyle.canvasHeight);
+          CacheIoRequest.windowCanvas.setVisible(true);
           if (MatchingTextValidator.field_o == var2) {
             var3 = MatchingTextValidator.field_o.getInsets();
-            CacheIoRequest.field_D.setLocation(var3.left + WeightedLruCache.canvasOffsetX, var3.top + LoginPanel.field_W);
+            CacheIoRequest.windowCanvas.setLocation(var3.left + WeightedLruCache.canvasOffsetX, var3.top + LoginPanel.field_W);
             if (var4 != 0) {
-              CacheIoRequest.field_D.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
+              CacheIoRequest.windowCanvas.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
             }
           } else {
-            CacheIoRequest.field_D.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
+            CacheIoRequest.windowCanvas.setLocation(WeightedLruCache.canvasOffsetX, LoginPanel.field_W);
           }
-          CacheIoRequest.field_D.addFocusListener((java.awt.event.FocusListener) (this));
-          CacheIoRequest.field_D.requestFocus();
+          CacheIoRequest.windowCanvas.addFocusListener((java.awt.event.FocusListener) (this));
+          CacheIoRequest.windowCanvas.requestFocus();
           CircleBody.liveFocus = true;
           NinjaBackground.frameFocus = true;
           GameplayAudioEvent.redrawRequested = true;

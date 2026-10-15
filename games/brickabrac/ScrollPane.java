@@ -26,11 +26,11 @@ final class ScrollPane extends UiComponent {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null == gd.field_b) {
+          if (null == ByteArrayPoolHelpers.field_b) {
             return false;
           }
           var2_int = -66 / ((30 - param1) / 42);
-          stackIn_6_0 = !(param0.toLowerCase().indexOf(gd.field_b.toLowerCase()) < 0);
+          stackIn_6_0 = !(param0.toLowerCase().indexOf(ByteArrayPoolHelpers.field_b.toLowerCase()) < 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

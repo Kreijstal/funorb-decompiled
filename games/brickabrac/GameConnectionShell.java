@@ -71,7 +71,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         ActivityIndicatorWidget.a(param7, LoginCredentialKind.field_e, param0 + 3, this.gamePortOne, AccountMessageDialog.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
         BoundedFile.patchJavaKeyCodeMap(59);
         NinjaBackground.mouseWheelSource = ea.createMouseWheelSource(60);
-        CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.field_D);
+        CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.windowCanvas);
         nd.field_c = param4;
         LevelPackCard.field_i = param5;
         PacketBuffer.field_j = param1;
@@ -903,9 +903,9 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         if (!obfuscationGuard &&
           MusicCrossfadeStream.field_A) {
-          CanvasInputCleanup.detachCanvasInput(false, CacheIoRequest.field_D);
+          CanvasInputCleanup.detachCanvasInput(false, CacheIoRequest.windowCanvas);
           this.c(false);
-          CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.field_D);
+          CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.windowCanvas);
         }
         if (KeyDispatchHelpers.enabledCommonPackets[8]) {
           HuffmanCodec.a(14114);

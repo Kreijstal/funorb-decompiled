@@ -813,7 +813,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int capacity) {
         this.position = 0;
-        this.data = gd.a(capacity, (byte) 113);
+        this.data = ByteArrayPoolHelpers.acquireByteArray(capacity, (byte) 113);
     }
 
     PacketBuffer(byte[] data) {

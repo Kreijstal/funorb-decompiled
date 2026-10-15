@@ -377,7 +377,7 @@ final class ValidationIconWidget extends FocusableWidget {
               if (MembershipBenefitsScreen.getMillisSinceGameRead(param6 ^ -6788) > 30000L) {
                 DirectByteStorage.field_e = DisplayModeInfo.field_b;
               } else {
-                DirectByteStorage.field_e = gd.field_e;
+                DirectByteStorage.field_e = ByteArrayPoolHelpers.field_e;
               }
               RadialSelectorRenderer.field_d = false;
               stackIn_62_0 = 249;

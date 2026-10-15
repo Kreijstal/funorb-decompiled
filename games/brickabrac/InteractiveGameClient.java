@@ -74,7 +74,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         int var3 = 0;
         int var4 = 0;
         var4 = BrickABrac.field_J ? 1 : 0;
-        var2 = gd.a((byte) 0);
+        var2 = ByteArrayPoolHelpers.getActiveCanvas((byte) 0);
         if (TextFieldRenderer.c((byte) -84)) {
           TableNameEntry.a((byte) 68, var2, LegacyUtf8Decoder.a((byte) -81));
           return;

@@ -3,7 +3,7 @@
  */
 final class MultiplayerExitScreen extends MatchResultScreen {
     static long wallRollbackMillis;
-    static int[] field_x;
+    static int[] customBytePoolSizes;
     static String field_A;
     static RgbSprite farmSmallSprite;
     static String[] savePrompts;
@@ -14,7 +14,7 @@ final class MultiplayerExitScreen extends MatchResultScreen {
         field_y = null;
         int var1 = 63 % ((-67 - param0) / 54);
         field_A = null;
-        field_x = null;
+        customBytePoolSizes = null;
         farmSmallSprite = null;
         savePrompts = null;
     }

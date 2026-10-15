@@ -277,12 +277,12 @@ class Widget extends IntrusiveNode {
             return param3;
           }
           this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-          var8 = gd.draggedWidget;
+          var8 = ByteArrayPoolHelpers.draggedWidget;
           if (var8 != null) {
             if (var8.listener instanceof WidgetDropListener) {
               ((WidgetDropListener) (var8.listener)).onDrop(-24178, var8, (DropTargetWidget) null);
             }
-            gd.draggedWidget = null;
+            ByteArrayPoolHelpers.draggedWidget = null;
           }
           var6Lifetime10 = -57 % ((56 - param2) / 43);
           ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
@@ -302,13 +302,13 @@ class Widget extends IntrusiveNode {
                 if (0 == MatchingTextValidator.heldButton &&
                   ScrollPaneWithFooter.field_Pb != 0) {
                   this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-                  var9 = gd.draggedWidget;
+                  var9 = ByteArrayPoolHelpers.draggedWidget;
                   if (var9 != null) {
                     if (!(var9.listener instanceof WidgetDropListener)) {
-                      gd.draggedWidget = null;
+                      ByteArrayPoolHelpers.draggedWidget = null;
                     } else {
                       ((WidgetDropListener) (var9.listener)).onDrop(-24178, var9, (DropTargetWidget) null);
-                      gd.draggedWidget = null;
+                      ByteArrayPoolHelpers.draggedWidget = null;
                     }
                   }
                 }
@@ -331,12 +331,12 @@ class Widget extends IntrusiveNode {
               return param3;
             }
             this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-            var10 = gd.draggedWidget;
+            var10 = ByteArrayPoolHelpers.draggedWidget;
             if (var10 != null) {
               if (var10.listener instanceof WidgetDropListener) {
                 ((WidgetDropListener) (var10.listener)).onDrop(-24178, var10, (DropTargetWidget) null);
               }
-              gd.draggedWidget = null;
+              ByteArrayPoolHelpers.draggedWidget = null;
             }
             var6Lifetime1Lifetime3 = -57 % ((56 - param2) / 43);
             ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
@@ -367,7 +367,7 @@ class Widget extends IntrusiveNode {
                 return param3;
               }
               this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-              var11 = gd.draggedWidget;
+              var11 = ByteArrayPoolHelpers.draggedWidget;
               if (var11 == null) {
                 var6Lifetime2Lifetime2 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
@@ -375,14 +375,14 @@ class Widget extends IntrusiveNode {
                 return param3;
               }
               if (!(var11.listener instanceof WidgetDropListener)) {
-                gd.draggedWidget = null;
+                ByteArrayPoolHelpers.draggedWidget = null;
                 var6Lifetime2Lifetime3 = -57 % ((56 - param2) / 43);
                 ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
                 MusicVoice.a(this.getTooltip(15), 22546);
                 return param3;
               }
               ((WidgetDropListener) (var11.listener)).onDrop(-24178, var11, (DropTargetWidget) null);
-              gd.draggedWidget = null;
+              ByteArrayPoolHelpers.draggedWidget = null;
               var6Lifetime2Lifetime4 = -57 % ((56 - param2) / 43);
               ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;
               MusicVoice.a(this.getTooltip(15), 22546);
@@ -404,12 +404,12 @@ class Widget extends IntrusiveNode {
           return param3;
         }
         this.handlePointerRelease(ResourcePreparationEntry.pointerY, MusicPatch.pointerX, param0, this, 19223, param1);
-        var12 = gd.draggedWidget;
+        var12 = ByteArrayPoolHelpers.draggedWidget;
         if (var12 != null) {
           if (var12.listener instanceof WidgetDropListener) {
             ((WidgetDropListener) (var12.listener)).onDrop(-24178, var12, (DropTargetWidget) null);
           }
-          gd.draggedWidget = null;
+          ByteArrayPoolHelpers.draggedWidget = null;
         }
         var6Lifetime5 = -57 % ((56 - param2) / 43);
         ScrollPaneWithFooter.field_Pb = MatchingTextValidator.heldButton;

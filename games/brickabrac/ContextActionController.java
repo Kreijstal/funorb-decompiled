@@ -198,7 +198,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("loginm2", (byte) -110);
                 if (var2 != null) {
-                  gd.field_e = MenuButton.a(var2, (byte) 91);
+                  ByteArrayPoolHelpers.field_e = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = nk.a("loginm1", (byte) -124);
                 if (null != var2) {

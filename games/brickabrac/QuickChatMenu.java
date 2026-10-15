@@ -1502,8 +1502,8 @@ final class QuickChatMenu extends UiComponent {
             backgroundMusicSampleArchive = (ResourceArchive) null;
           }
           LevelPack.b(124);
-          if (null != CacheIoRequest.field_D) {
-            CanvasInputCleanup.detachCanvasInput(false, CacheIoRequest.field_D);
+          if (null != CacheIoRequest.windowCanvas) {
+            CanvasInputCleanup.detachCanvasInput(false, CacheIoRequest.windowCanvas);
           }
           ic.disableKeyboardInput((byte) -79);
           FileCacheStore.a(5);

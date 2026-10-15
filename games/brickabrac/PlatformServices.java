@@ -573,14 +573,14 @@ final class PlatformServices implements Runnable {
             exception = (Exception) (Object) decompiledCaughtException;
           }
         }
-        gl.a(98, field_c, field_t);
+        LauncherCacheFiles.initializeCache(98, field_c, field_t);
         if (this.privilegedMode) {
-          this.field_k = new BoundedFile(gl.a(-1, "random.dat", (String) null, field_c), "rw", 25L);
-          this.field_q = new BoundedFile(gl.a("main_file_cache.dat2", -1), "rw", 314572800L);
-          this.field_m = new BoundedFile(gl.a("main_file_cache.idx255", -1), "rw", 1048576L);
+          this.field_k = new BoundedFile(LauncherCacheFiles.redirectCacheFile(-1, "random.dat", (String) null, field_c), "rw", 25L);
+          this.field_q = new BoundedFile(LauncherCacheFiles.resolveCacheFile("main_file_cache.dat2", -1), "rw", 314572800L);
+          this.field_m = new BoundedFile(LauncherCacheFiles.resolveCacheFile("main_file_cache.idx255", -1), "rw", 1048576L);
           this.field_s = new BoundedFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_s[var5_int] = new BoundedFile(gl.a("main_file_cache.idx" + var5_int, -1), "rw", 1048576L);
+            this.field_s[var5_int] = new BoundedFile(LauncherCacheFiles.resolveCacheFile("main_file_cache.idx" + var5_int, -1), "rw", 1048576L);
           }
           if (this.microsoftJvm) {
             try {

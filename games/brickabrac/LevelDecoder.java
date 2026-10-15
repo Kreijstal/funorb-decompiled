@@ -4,7 +4,7 @@
 final class LevelDecoder {
     static String field_a;
     static String field_c;
-    static int field_b;
+    static int bytePool5000Count;
 
     final static void writeEncryptedPacketContents(PacketBuffer destination, PacketBuffer sourcePacket, java.math.BigInteger rsaExponent, byte obfuscationGuard, java.math.BigInteger rsaModulus) {
         try {
@@ -174,6 +174,6 @@ final class LevelDecoder {
 
     static {
         field_c = "You are on <%0>";
-        field_b = 0;
+        bytePool5000Count = 0;
     }
 }

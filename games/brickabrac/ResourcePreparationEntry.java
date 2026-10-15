@@ -53,7 +53,7 @@ final class ResourcePreparationEntry {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = CacheIoRequest.field_D.getGraphics();
+            var9 = CacheIoRequest.windowCanvas.getGraphics();
             if (DirectByteStorage.field_g == null) {
               DirectByteStorage.field_g = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -66,7 +66,7 @@ final class ResourcePreparationEntry {
             }
             try {
               if (null == RichTextLayout.field_r) {
-                RichTextLayout.field_r = CacheIoRequest.field_D.createImage(304, 34);
+                RichTextLayout.field_r = CacheIoRequest.windowCanvas.createImage(304, 34);
               }
               var10 = RichTextLayout.field_r.getGraphics();
               var10.setColor(param1);
@@ -102,7 +102,7 @@ final class ResourcePreparationEntry {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            CacheIoRequest.field_D.repaint();
+            CacheIoRequest.windowCanvas.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

@@ -9,7 +9,7 @@ final class MusicVoiceMixer extends AudioStream {
     static int textChoiceRight;
     static boolean field_s;
     static RgbSprite[] field_n;
-    static int[] field_u;
+    static int[] customBytePoolCounts;
     static String field_q;
     AudioMixer fadingStreams;
 
@@ -276,7 +276,7 @@ final class MusicVoiceMixer extends AudioStream {
     }
 
     public static void c(int param0) {
-        field_u = null;
+        customBytePoolCounts = null;
         field_q = null;
         field_o = null;
         field_n = null;

@@ -131,14 +131,14 @@ final class BallPulseEffect extends IntrusiveNode {
           CacheEntry.receivedChatContextLabel = var8.readCp1252String(-1);
         }
         if (!quickChat) {
-          gd.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);
+          ByteArrayPoolHelpers.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);
           BoundedFile.receivedChatSuggestions = null;
           return new ChatMessage(quickChat);
         }
         var5 = var8.readUnsignedShort(65280);
         try {
           var9 = LobbyUiHelpers.quickChatPhrases.getDefinition(var5, true);
-          gd.receivedChatText = var9.getPreview(-3);
+          ByteArrayPoolHelpers.receivedChatText = var9.getPreview(-3);
           if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;
           } else {
@@ -150,7 +150,7 @@ final class BallPulseEffect extends IntrusiveNode {
           var6 = (Exception) (Object) decompiledCaughtException;
           AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), obfuscationGuard ^ 16);
           BoundedFile.receivedChatSuggestions = null;
-          gd.receivedChatText = null;
+          ByteArrayPoolHelpers.receivedChatText = null;
           return new ChatMessage(quickChat);
         }
         return new ChatMessage(quickChat);
@@ -216,14 +216,14 @@ final class BallPulseEffect extends IntrusiveNode {
           CacheEntry.receivedChatContextLabel = var8.readCp1252String(-1);
         }
         if (!param1) {
-          gd.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);
+          ByteArrayPoolHelpers.receivedChatText = PopupWidgetLayer.readCompressedString(80, (byte) 76, var8);
           BoundedFile.receivedChatSuggestions = null;
           return new ChatMessage(param1);
         }
         var5 = var8.readUnsignedShort(65280);
         try {
           var9 = LobbyUiHelpers.quickChatPhrases.getDefinition(var5, true);
-          gd.receivedChatText = var9.getPreview(-3);
+          ByteArrayPoolHelpers.receivedChatText = var9.getPreview(-3);
           if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;
           } else {
@@ -235,7 +235,7 @@ final class BallPulseEffect extends IntrusiveNode {
           var6 = (Exception) (Object) decompiledCaughtException;
           AlignedIconLabel.a("CC1", (Throwable) ((Object) var6), param0 ^ 16);
           BoundedFile.receivedChatSuggestions = null;
-          gd.receivedChatText = null;
+          ByteArrayPoolHelpers.receivedChatText = null;
           return new ChatMessage(param1);
         }
         return new ChatMessage(param1);

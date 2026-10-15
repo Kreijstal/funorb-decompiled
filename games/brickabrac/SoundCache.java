@@ -297,7 +297,7 @@ final class SoundCache {
             if (GameConnectionHelpers.connectionPhase == IsaacGenerator.awaitingLoginSuccessBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -80)) {
               CacheEntry.field_v = LogoRenderHelpers.incomingPackets.readLong(-32768);
-              gd.field_b = param5;
+              ByteArrayPoolHelpers.field_b = param5;
               QuickChatHelpDialog.field_Yb = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               TextChoiceDialogStyles.field_f = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               ResourceArchiveFactory.windowModeCapabilityWord = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
@@ -395,7 +395,7 @@ final class SoundCache {
             if (WhirlpoolHasher.gameTransport == null) {
               if (RadialSelectorRenderer.field_d) {
                 if (30000L >= MembershipBenefitsScreen.getMillisSinceGameRead(-6792)) {
-                  DirectByteStorage.field_e = gd.field_e;
+                  DirectByteStorage.field_e = ByteArrayPoolHelpers.field_e;
                 } else {
                   DirectByteStorage.field_e = DisplayModeInfo.field_b;
                 }

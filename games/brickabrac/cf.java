@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cf {
-    static byte[][] field_b;
+    static byte[][] bytePool100;
     static int decodedCanvasWidth;
     static int checksumMismatchCount;
     static int[] rankingSourceIndices;
@@ -100,7 +100,7 @@ final class cf {
     }
 
     public static void a(int param0) {
-        field_b = (byte[][]) null;
+        bytePool100 = (byte[][]) null;
         if (param0 != -12251) {
           cf.a((byte) -13);
           rankingSourceIndices = null;
@@ -110,6 +110,6 @@ final class cf {
     }
 
     static {
-        field_b = new byte[1000][];
+        bytePool100 = new byte[1000][];
     }
 }
