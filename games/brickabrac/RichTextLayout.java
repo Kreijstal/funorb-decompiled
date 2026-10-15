@@ -8,7 +8,7 @@ final class RichTextLayout extends WidgetTextLayout {
     private int wrapWidth;
     private int horizontalAlignment;
     static java.awt.Image field_r;
-    static MusicTrack field_q;
+    static MusicTrack podiumMusicTrack;
     static String field_o;
     private boolean singleLine;
     static long lastGameReadMillis;
@@ -402,14 +402,14 @@ final class RichTextLayout extends WidgetTextLayout {
 
     public static void a(byte param0) {
         if (param0 == -51) {
-          field_q = null;
+          podiumMusicTrack = null;
           field_r = null;
           field_s = null;
           field_o = null;
           return;
         }
         lastGameReadMillis = -70L;
-        field_q = null;
+        podiumMusicTrack = null;
         field_r = null;
         field_s = null;
         field_o = null;

@@ -3,7 +3,7 @@
  */
 final class ic {
     static long optionChangeDeadlineMillis;
-    static ResourceArchive field_a;
+    static ResourceArchive specialMusicPatchArchive;
     static VerticalScrollbar field_c;
 
     final static void insertSortedLobbyGame(boolean obfuscationGuard, LobbyGame game) {
@@ -49,7 +49,7 @@ final class ic {
     }
 
     public static void a(boolean param0) {
-        field_a = null;
+        specialMusicPatchArchive = null;
         if (param0) {
           return;
         }

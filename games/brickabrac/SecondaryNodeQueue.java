@@ -119,9 +119,9 @@ final class SecondaryNodeQueue {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3, ResourceArchive param4) {
         try {
-          BallPulseEffect.field_j = param1;
+          BallPulseEffect.specialMusicTrackArchive = param1;
           NineSliceFrame.field_g = param3;
-          ic.field_a = param0;
+          ic.specialMusicPatchArchive = param0;
           ArrayWidgetGroup.field_G = param4;
           GameScreen.field_e = new SoundCache(ArrayWidgetGroup.field_G, NineSliceFrame.field_g);
           if (param2 != -38) {

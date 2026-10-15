@@ -5,10 +5,10 @@ final class MessageScreen extends MenuScreen {
     static UiComponent field_r;
     static String field_u;
     static UiComponent field_s;
-    static MusicTrack field_t;
+    static MusicTrack panicMusicTrack;
 
     public static void f(byte param0) {
-        field_t = null;
+        panicMusicTrack = null;
         field_r = null;
         field_u = null;
         field_s = null;

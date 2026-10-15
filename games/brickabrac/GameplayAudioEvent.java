@@ -126,17 +126,17 @@ final class GameplayAudioEvent extends IntrusiveNode {
             if (null != GameplayRenderHelpers.fullscreenCanvas &&
               GameplayRenderHelpers.fullscreenCanvas.focusLossPending) {
               LevelPack.b(109);
-              wo.field_b.pushLayer(-80, new FullscreenFailureDialog(wo.field_b, ch.fullscreenFocusProblem));
+              ParallaxMusicHelpers.field_b.pushLayer(-80, new FullscreenFailureDialog(ParallaxMusicHelpers.field_b, ch.fullscreenFocusProblem));
             }
             return;
           }
-          wo.field_b.a(rj.field_b, fh.field_g, param0 - 27268, true);
+          ParallaxMusicHelpers.field_b.a(rj.field_b, fh.field_g, param0 - 27268, true);
           if (param0 != 27144) {
             return;
           }
-          wo.field_b.i(82);
+          ParallaxMusicHelpers.field_b.i(82);
           while (jl.pollKeyEvent((byte) 5)) {
-            wo.field_b.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
+            ParallaxMusicHelpers.field_b.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

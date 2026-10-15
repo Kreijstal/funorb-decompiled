@@ -255,21 +255,21 @@ final class GameplayScreen extends GameScreen {
         var4Lifetime1 = stackIn_19_0 | stackIn_20_1;
         if (1 == this.match.playerCount &&
           this.match.playerBoards[0].boardState == 5) {
-          IterableIntrusiveHashTable.a(25459, true, GrowableIntList.field_j, 1, 1, true);
+          IterableIntrusiveHashTable.a(25459, true, GrowableIntList.completionMusicTrack, 1, 1, true);
         } else {
           if (!this.match.resultsReady) {
             if (var4Lifetime1 != 0) {
-              IterableIntrusiveHashTable.a(25459, true, MessageScreen.field_t, 1, 1, true);
+              IterableIntrusiveHashTable.a(25459, true, MessageScreen.panicMusicTrack, 1, 1, true);
             } else {
               if (TabbedPane.currentBackground != null &&
                 TabbedPane.currentBackground.musicReady) {
                 BytePayloadRequest.a(1, true, TabbedPane.currentBackground.c(-109), false, 1, TabbedPane.currentBackground.musicData, true);
               } else {
-                IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
+                IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
               }
             }
           } else {
-            IterableIntrusiveHashTable.a(25459, true, RichTextLayout.field_q, 1, 1, true);
+            IterableIntrusiveHashTable.a(25459, true, RichTextLayout.podiumMusicTrack, 1, 1, true);
           }
         }
         if (this.match.resultsReady &&
@@ -613,7 +613,7 @@ final class GameplayScreen extends GameScreen {
           if (this.match.playerCount == 1 &&
             this.match.playerBoards[0].boardState == 8) {
             ng.requestScreen(usePointer, 107, 18);
-            IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
+            IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
           } else {
             this.showPostMatchScreen(usePointer, (byte) 69);
           }
@@ -631,7 +631,7 @@ final class GameplayScreen extends GameScreen {
         rj.a((byte) 80, LoginMethodPreference.alternateActivityLoop);
         if (!(this.match.playerCount <= 1) ||
           9 != this.match.playerBoards[0].boardState) {
-          IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.field_g, 1, 1, true);
+          IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
         }
         if (this.networkedMatch) {
           return;

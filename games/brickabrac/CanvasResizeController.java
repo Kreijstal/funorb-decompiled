@@ -140,17 +140,17 @@ final class CanvasResizeController {
         if (obfuscationGuard == -6532) {
           Mesh3D.fireworkSpawnMinY = minY;
           HotspotTextWidget.fireworkSpawnMaxX = maxX;
-          wo.fireworkSpawnMaxY = maxY;
+          ParallaxMusicHelpers.fireworkSpawnMaxY = maxY;
           FarmBackground.fireworkSpawnWidth = HotspotTextWidget.fireworkSpawnMaxX - PauseMenuScreen.fireworkSpawnMinX;
-          ArrayWidgetGroup.fireworkSpawnHeight = -Mesh3D.fireworkSpawnMinY + wo.fireworkSpawnMaxY;
+          ArrayWidgetGroup.fireworkSpawnHeight = -Mesh3D.fireworkSpawnMinY + ParallaxMusicHelpers.fireworkSpawnMaxY;
           return;
         }
         CanvasResizeController.b(109);
         Mesh3D.fireworkSpawnMinY = minY;
         HotspotTextWidget.fireworkSpawnMaxX = maxX;
-        wo.fireworkSpawnMaxY = maxY;
+        ParallaxMusicHelpers.fireworkSpawnMaxY = maxY;
         FarmBackground.fireworkSpawnWidth = HotspotTextWidget.fireworkSpawnMaxX - PauseMenuScreen.fireworkSpawnMinX;
-        ArrayWidgetGroup.fireworkSpawnHeight = -Mesh3D.fireworkSpawnMinY + wo.fireworkSpawnMaxY;
+        ArrayWidgetGroup.fireworkSpawnHeight = -Mesh3D.fireworkSpawnMinY + ParallaxMusicHelpers.fireworkSpawnMaxY;
     }
 
     final GameCanvas openFullscreenCanvas(boolean obfuscationGuard) {

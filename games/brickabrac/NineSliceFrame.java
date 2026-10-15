@@ -76,7 +76,7 @@ class NineSliceFrame {
         if (param0) {
           Rasterizer2D.fillRectangleAlpha(0, 0, Rasterizer2D.width, Rasterizer2D.height, 0, 192);
         }
-        wo.field_b.a(0, 0, 0);
+        ParallaxMusicHelpers.field_b.a(0, 0, 0);
     }
 
     NineSliceFrame(RgbSprite[] sprites) {

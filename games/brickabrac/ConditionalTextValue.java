@@ -6,7 +6,7 @@ final class ConditionalTextValue {
     static boolean field_a;
     static int field_j;
     static String field_k;
-    static int field_i;
+    static int specialMusicPreparationStage;
     static int field_b;
     static int field_h;
     private boolean included;
@@ -18,18 +18,18 @@ final class ConditionalTextValue {
     final static boolean a(int param0) {
         if (param0 != 2) {
           field_h = 108;
-          if (wo.field_b == null) {
+          if (ParallaxMusicHelpers.field_b == null) {
             return false;
           }
-          if (null != wo.field_b.getTopVisibleLayer(-113)) {
+          if (null != ParallaxMusicHelpers.field_b.getTopVisibleLayer(-113)) {
             return true;
           }
           return false;
         }
-        if (wo.field_b == null) {
+        if (ParallaxMusicHelpers.field_b == null) {
           return false;
         }
-        if (null != wo.field_b.getTopVisibleLayer(-113)) {
+        if (null != ParallaxMusicHelpers.field_b.getTopVisibleLayer(-113)) {
           return true;
         }
         return false;
@@ -192,7 +192,7 @@ final class ConditionalTextValue {
     }
 
     static {
-        field_i = 0;
+        specialMusicPreparationStage = 0;
         field_k = "Loading fonts";
         field_d = "Unfortunately we are unable to create an account for you at this time.";
         field_e = "Visit the Account Management section on the main site to view.";

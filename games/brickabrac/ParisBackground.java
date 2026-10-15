@@ -124,10 +124,10 @@ final class ParisBackground extends BackgroundScene {
           }
           UnderwaterBackground.field_t = jh.a(0, QuickChatParameterType.parisMidSprite);
           MembershipBenefitsScreen.field_s = jh.a(0, ToggleButtonWidget.parisFarSprite);
-          uq.b(QuickChatParameterType.parisMidSprite);
-          uq.b(UnderwaterBackground.field_t);
-          uq.b(NinjaBackground.parisNearSprite);
-          uq.b(IntrusiveHashTable.field_i);
+          RunLengthSpriteCodec.encodeSprite(QuickChatParameterType.parisMidSprite);
+          RunLengthSpriteCodec.encodeSprite(UnderwaterBackground.field_t);
+          RunLengthSpriteCodec.encodeSprite(NinjaBackground.parisNearSprite);
+          RunLengthSpriteCodec.encodeSprite(IntrusiveHashTable.field_i);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ final class ParisBackground extends BackgroundScene {
               StrongCacheEntry.a(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
               var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            wo.a(destinationY, scroll16, UnderwaterBackground.field_t, 118, 306, 0, destinationX, 2, IntrusiveHashTable.field_i, var6.sprite, colorIndex);
+            ParallaxMusicHelpers.drawParisParallaxLayers(destinationY, scroll16, UnderwaterBackground.field_t, 118, 306, 0, destinationX, 2, IntrusiveHashTable.field_i, var6.sprite, colorIndex);
           }
           if (obfuscationGuard >= -84) {
             ParisBackground.a((byte) -61, -0.03386414423584938f, (String) null);
@@ -424,7 +424,7 @@ final class ParisBackground extends BackgroundScene {
             StrongCacheEntry.a(0, ToggleButtonWidget.parisFarSprite, 1, 0, colorIndex, var6);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          wo.a(destinationY, scroll16, QuickChatParameterType.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);
+          ParallaxMusicHelpers.drawParisParallaxLayers(destinationY, scroll16, QuickChatParameterType.parisMidSprite, 127, 640, 0, destinationX, 1, NinjaBackground.parisNearSprite, var6.sprite, colorIndex);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

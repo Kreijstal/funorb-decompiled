@@ -9,7 +9,7 @@ final class GrowableIntList {
     static NineSliceFrame field_l;
     private int lastIndex;
     private int[] values;
-    static MusicTrack field_j;
+    static MusicTrack completionMusicTrack;
     static QuickChatParameterType field_m;
     private int growthStep;
     static int cyclesDue;
@@ -18,7 +18,7 @@ final class GrowableIntList {
     static String field_n;
 
     public static void a(boolean param0) {
-        field_j = null;
+        completionMusicTrack = null;
         field_d = null;
         field_m = null;
         field_n = null;

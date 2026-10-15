@@ -55,7 +55,7 @@ final class GameUiController implements GameUiLifecycle {
         LoginPanel.h((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         AccountMessageDialog.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
-        ArchiveSourceManager.a((byte) -79, LoginCredentialKind.field_g);
+        ArchiveSourceManager.a((byte) -79, LoginCredentialKind.titleMusicTrack);
     }
 
     final static GameScreen getScreen(int screenId, byte obfuscationGuard) {
@@ -206,7 +206,7 @@ final class GameUiController implements GameUiLifecycle {
             } else {
               ParisBackground.a((byte) 24, 88.0f, ValidatedTextFieldWidget.field_bb);
               CacheEntry.field_C.renderClient(124);
-              var2 = var2 != 0 & wo.a(2) ? 1 : 0;
+              var2 = var2 != 0 & ParallaxMusicHelpers.pollSpecialMusicPreparation(2) ? 1 : 0;
             }
           } else {
             ParisBackground.a((byte) 24, 82.0f, BitPacketBuffer.field_s);

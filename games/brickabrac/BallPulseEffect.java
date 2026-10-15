@@ -8,7 +8,7 @@ final class BallPulseEffect extends IntrusiveNode {
     static RgbSprite arcticMidSprite;
     static RgbSprite parisCharacterSprite;
     static SoftwareFramebuffer framebuffer;
-    static ResourceArchive field_j;
+    static ResourceArchive specialMusicTrackArchive;
     static UiComponent field_n;
     private int x256;
     static String field_o;
@@ -20,7 +20,7 @@ final class BallPulseEffect extends IntrusiveNode {
         int var1 = 82 % ((param0 - 35) / 55);
         arcticMidSprite = null;
         field_i = null;
-        field_j = null;
+        specialMusicTrackArchive = null;
         framebuffer = null;
     }
 

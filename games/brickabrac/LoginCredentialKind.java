@@ -4,7 +4,7 @@
 final class LoginCredentialKind {
     static NineSliceFrame field_c;
     static UiComponent field_d;
-    static MusicTrack field_g;
+    static MusicTrack titleMusicTrack;
     static String field_f;
     static IndexedSprite[] field_b;
     int wireCode;
@@ -88,7 +88,7 @@ final class LoginCredentialKind {
         int var1 = 123 / ((param0 + 23) / 38);
         field_f = null;
         field_b = null;
-        field_g = null;
+        titleMusicTrack = null;
     }
 
     public final String toString() {
