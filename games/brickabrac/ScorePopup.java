@@ -77,7 +77,7 @@ final class ScorePopup extends IntrusiveNode {
         if (param0 != 255) {
           characterHeads = (RgbSprite[]) null;
         }
-        return la.a(param1, 255, 255);
+        return RasterEffectHelpers.hsvFixed8ToRgb(param1, 255, 255);
     }
 
     final boolean advance(boolean obfuscationGuard) {

@@ -125,7 +125,7 @@ abstract class CacheEntry extends DualLinkNode {
           nk.field_g = new UiComponent(0L, MainMenuScreen.field_t, nk.field_b);
           nk.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
           kk.field_b = new UiComponent(0L, LoginCredentialKind.field_d, ch.field_d);
-          la.field_b = new UiComponent(0L, LoginCredentialKind.field_d, BallPulseEffect.field_o);
+          RasterEffectHelpers.field_b = new UiComponent(0L, LoginCredentialKind.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, LoginCredentialKind.field_d, TextFieldRenderer.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
           rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
@@ -155,7 +155,7 @@ abstract class CacheEntry extends DualLinkNode {
           ll.field_e.addChild(nk.field_a, 0);
           ll.field_e.addChild(kk.field_b, 0);
           if (vd.field_e) {
-            ll.field_e.addChild(la.field_b, 0);
+            ll.field_e.addChild(RasterEffectHelpers.field_b, 0);
           }
           ll.field_e.addChild(BufferedSocket.field_h, 0);
           ll.field_e.addChild(HalloweenBackground.field_x, 0);

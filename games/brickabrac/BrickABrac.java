@@ -564,7 +564,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MessageScreen.f((byte) 88);
         LevelSelectScreen.f((byte) -115);
         MatchResultScreen.g(-25617);
-        la.a((byte) -75);
+        RasterEffectHelpers.a((byte) -75);
         ClientException.a(false);
         KeyboardInput.a((byte) -42);
         IntNode.a((byte) -115);

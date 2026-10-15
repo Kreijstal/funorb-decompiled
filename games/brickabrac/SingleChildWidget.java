@@ -556,7 +556,7 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = la.field_a;
+            stackIn_3_0 = RasterEffectHelpers.field_a;
             return stackIn_3_0;
           }
           if (var2_int > 64) {

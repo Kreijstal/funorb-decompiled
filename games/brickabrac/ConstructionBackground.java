@@ -66,7 +66,7 @@ final class ConstructionBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 240, 16777215, 11184810);
         }
         if (colorIndex > -1) {
-          la.a(destinationX, destinationY, 153, 240, IntrusiveNode.field_h[colorIndex], 11970969, 152);
+          RasterEffectHelpers.fillVerticalGradientAlpha255(destinationX, destinationY, 153, 240, IntrusiveNode.field_h[colorIndex], 11970969, 152);
         }
         if (this.hasSprites((byte) -112)) {
           MenuSelection.constructionSmallSprite.drawTransparent(destinationX, destinationY);

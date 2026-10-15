@@ -153,7 +153,7 @@ final class IterableIntrusiveHashTable implements Iterable {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = la.field_a;
+            stackIn_3_0 = RasterEffectHelpers.field_a;
             return stackIn_3_0;
           }
           if (255 < var2_int) {
@@ -162,7 +162,7 @@ final class IterableIntrusiveHashTable implements Iterable {
           }
           var3 = FarmBackground.a((byte) -11, param0, '.');
           if (2 > var3.length) {
-            stackIn_10_0 = la.field_a;
+            stackIn_10_0 = RasterEffectHelpers.field_a;
             return stackIn_10_0;
           }
           var4 = var3;

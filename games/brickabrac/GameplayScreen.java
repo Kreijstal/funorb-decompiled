@@ -35,7 +35,7 @@ final class GameplayScreen extends GameScreen {
         int maskedEligibility;
         int canCycleView;
         if (!RadialSelectorRenderer.field_p) {
-          freshKeyValue = (!la.field_c) ? 1 : 0;
+          freshKeyValue = (!RasterEffectHelpers.viewKeyWasHeld) ? 1 : 0;
         } else {
           freshKeyValue = 0;
         }
@@ -76,7 +76,7 @@ final class GameplayScreen extends GameScreen {
           }
         }
         viewKeyHeld = (IntArrayRequest.heldKeys[HorizontalFrameHelpers.field_b]) || (IntArrayRequest.heldKeys[EmailAvailabilityRequest.field_f]) || (IntArrayRequest.heldKeys[VolcanicBackground.field_u]);
-        la.field_c = viewKeyHeld;
+        RasterEffectHelpers.viewKeyWasHeld = viewKeyHeld;
     }
 
     private final boolean recordAchievement(int achievementId, int pendingBit) {

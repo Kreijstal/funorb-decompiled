@@ -138,7 +138,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_7_0 = la.field_a;
+              stackIn_7_0 = RasterEffectHelpers.field_a;
               return stackIn_7_0;
             }
             var3 = param0.substring(0, var2_int);

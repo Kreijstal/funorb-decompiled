@@ -40,7 +40,7 @@ class UiComponent extends ba {
     int activeTextColor;
     int screenX;
     int pressedButton;
-    static int[] field_F;
+    static int[] glowSequenceWords;
     boolean draggable;
     static int previousPacketOpcode;
     RgbSprite[] disabledFrameSprites;
@@ -524,7 +524,7 @@ class UiComponent extends ba {
         field_ob = null;
         field_ib = null;
         field_H = null;
-        field_F = null;
+        glowSequenceWords = null;
         if (param0 > 60) {
           field_mb = null;
           field_lb = null;
@@ -823,7 +823,7 @@ class UiComponent extends ba {
         field_Z = "Game";
         previousPacketOpcode = -1;
         field_mb = "Log in / Create account";
-        field_F = new int[9000];
+        glowSequenceWords = new int[9000];
         field_ob = new PcmSound[8];
         fullscreenUnsupported = new FullscreenFailureKind();
     }

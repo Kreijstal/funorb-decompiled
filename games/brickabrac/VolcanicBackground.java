@@ -214,8 +214,8 @@ final class VolcanicBackground extends BackgroundScene {
         try {
           var4 = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
           var1 = var4;
-          for (var2 = param0; var2 < UiComponent.field_F.length; var2++) {
-            UiComponent.field_F[var2] = var4.nextInt(101);
+          for (var2 = param0; var2 < UiComponent.glowSequenceWords.length; var2++) {
+            UiComponent.glowSequenceWords[var2] = var4.nextInt(101);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

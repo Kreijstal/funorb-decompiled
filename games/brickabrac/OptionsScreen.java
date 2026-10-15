@@ -39,7 +39,7 @@ final class OptionsScreen extends FramedMenuScreen {
           var7 = new RgbSprite(var4_int * param1, var5 * param1);
           var7.bindRasterTarget();
           var6.a(0, 0, param1 * var4_int, param1 * var5);
-          DualLinkDeque.a(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
+          DualLinkDeque.outlineRasterRegion(var5 * param1, 0, param1 * var4_int, param0 ^ 2, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 126);
           if (param3) {
             var8 = var7.width;

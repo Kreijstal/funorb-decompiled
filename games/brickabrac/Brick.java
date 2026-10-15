@@ -9,7 +9,7 @@ final class Brick extends RectangleBody {
     static int[] field_D;
     private int sourceWaypointIndex;
     private static int[] field_y;
-    static int[] field_L;
+    static int[] bubbleDistortionFalloff;
     int motionPathIndex;
     MotionWaypoint[] waypoints;
     static RgbSprite field_K;
@@ -192,7 +192,7 @@ final class Brick extends RectangleBody {
         if (param0 != 4641) {
           field_x = (CacheIoWorker) null;
         }
-        field_L = null;
+        bubbleDistortionFalloff = null;
         field_y = null;
         field_x = null;
         field_K = null;
@@ -494,12 +494,12 @@ final class Brick extends RectangleBody {
         int var0Lifetime1;
         double var1Lifetime1;
         field_y = new int[65536];
-        field_L = new int[65536];
+        bubbleDistortionFalloff = new int[65536];
         field_D = new int[]{100, 200, 300, 300, 500, 100, 300, 300, 500, 200, 500, 500, 500, 1000, 300, 1000, 100, 300, 500, 300, 500, 1000, 500, 300, 500, 1000, 300, 200, 500, 200, 100, 200, 100, 200, 100, 100, 100, 100, 100, 500, 1000, 200};
         field_F = "You must play <%1> more rated games before playing with the current options.";
         for (var0 = 0; var0 < 65536; var0++) {
           var1 = 256.0 - Math.sqrt((double)var0);
-          field_L[var0] = (int)(var1 * var1 + 0.5);
+          bubbleDistortionFalloff[var0] = (int)(var1 * var1 + 0.5);
         }
         for (var0Lifetime1 = 0; var0Lifetime1 < 65536; var0Lifetime1++) {
           var1Lifetime1 = Math.sqrt((double)var0Lifetime1);

@@ -83,7 +83,7 @@ final class SpaceBackground extends BackgroundScene {
           var5 = -77 % ((-28 - obfuscationGuard) / 43);
           return;
         }
-        la.a(destinationX, destinationY, 153, 238, 0, FireworkBurst.backgroundTintColors[colorIndex], 96);
+        RasterEffectHelpers.fillVerticalGradientAlpha255(destinationX, destinationY, 153, 238, 0, FireworkBurst.backgroundTintColors[colorIndex], 96);
         if (this.hasSprites((byte) -103)) {
           rf.spaceSmallSprite.drawTransparent(destinationX, destinationY);
         }

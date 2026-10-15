@@ -57,7 +57,7 @@ final class NanoGameClock extends GameClock {
         nk.field_g.setBounds(30, 5, 5, 68, (byte) 64);
         nk.field_a.setBounds(30, 5, 75, 78, (byte) 64);
         kk.field_b.setBounds(30, 5, 155, 48, (byte) 64);
-        la.field_b.setBounds(30, 5, 205, 48, (byte) 64);
+        RasterEffectHelpers.field_b.setBounds(30, 5, 205, 48, (byte) 64);
         int var2 = vd.field_e ? 250 : 200;
         BufferedSocket.field_h.setBounds(30, 5, 5 + var2, -var2 + 363, (byte) 64);
         HalloweenBackground.field_x.setBounds(30, 5, 370, rm.field_a.width - 10 - 365, (byte) 64);

@@ -158,7 +158,7 @@ final class FullscreenFailureKind {
           Rasterizer2D.fillRectangle(0, 0, param2.width, param2.height, 16777215);
           int var6_int = -110 / ((param4 - 62) / 39);
           param5.drawTransparent((-param5.canvasWidth + param2.width) / 2, param2.height + (param0 - (param5.canvasHeight - 5 / param3)));
-          la.a(0, 0, param2.width, param2.height, IntrusiveNode.field_h[param1], 11970969, 152);
+          RasterEffectHelpers.fillVerticalGradientAlpha255(0, 0, param2.width, param2.height, IntrusiveNode.field_h[param1], 11970969, 152);
           sc.popRaster(-112);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "tf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

@@ -46,7 +46,7 @@ final class DualLinkDeque implements Iterable {
 
     final static boolean a(int param0) {
         if (param0 != -4858) {
-          DualLinkDeque.a(-58, 65, -66, 54, -73);
+          DualLinkDeque.outlineRasterRegion(-58, 65, -66, 54, -73);
           if (null != bm.contextActions) {
             return true;
           }
@@ -76,14 +76,14 @@ final class DualLinkDeque implements Iterable {
         return true;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        param2 -= 4;
-        param4 += 2;
-        param1 += 2;
-        param0 -= 4;
-        int var5 = Rasterizer2D.width * param1 + param4;
-        int var6 = Rasterizer2D.width - param2;
-        la.a(Rasterizer2D.pixels, var5, 0, 0, 0, param3, param2, param0, var6);
+    final static void outlineRasterRegion(int height, int y, int width, int unusedBelowIndex, int x) {
+        width -= 4;
+        x += 2;
+        y += 2;
+        height -= 4;
+        int offset = Rasterizer2D.width * y + x;
+        int rowSkip = Rasterizer2D.width - width;
+        RasterEffectHelpers.markOutlineNeighbors(Rasterizer2D.pixels, offset, 0, 0, 0, unusedBelowIndex, width, height, rowSkip);
     }
 
     final void addLast(DualLinkNode node, byte obfuscationGuard) {
@@ -117,7 +117,7 @@ final class DualLinkDeque implements Iterable {
         field_d = null;
         keyboardInput = null;
         if (param0 != 2) {
-          DualLinkDeque.a(-125, -106, -42, 126, 57);
+          DualLinkDeque.outlineRasterRegion(-125, -106, -42, 126, 57);
         }
     }
 
@@ -130,7 +130,7 @@ final class DualLinkDeque implements Iterable {
         if (!obfuscationGuard) {
           return node;
         }
-        DualLinkDeque.a(-105, -93, 51, -34, -59);
+        DualLinkDeque.outlineRasterRegion(-105, -93, 51, -34, -59);
         return node;
     }
 

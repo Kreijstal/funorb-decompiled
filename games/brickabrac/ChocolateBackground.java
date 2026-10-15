@@ -20,7 +20,7 @@ final class ChocolateBackground extends BackgroundScene {
         if (-1 >= colorIndex) {
           u.chocolateSmallFarSprite.drawTransparent(destinationX, destinationY);
         } else {
-          la.a(u.chocolateSmallFarSprite, destinationX, destinationY, MatchCompleteScreen.field_C[colorIndex]);
+          RasterEffectHelpers.drawGrayscalePaletteSprite(u.chocolateSmallFarSprite, destinationX, destinationY, MatchCompleteScreen.field_C[colorIndex]);
         }
         GameClock.chocolateSmallNearSprite.drawTransparent(destinationX, destinationY);
     }
@@ -116,18 +116,18 @@ final class ChocolateBackground extends BackgroundScene {
             if (!(0 > var1.indexOf('@'))) {
               var1 = "";
             }
-            return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
+            return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
           }
-          return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
         }
         if (var1 == null) {
-          return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
         }
         if (0 <= var1.indexOf('@')) {
           var1 = "";
-          return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
         }
-        return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
+        return new ConditionalTextValue(LevelSelectScreen.d(true), RasterEffectHelpers.b((byte) 118));
     }
 
     final RgbSprite[] b(int param0) {

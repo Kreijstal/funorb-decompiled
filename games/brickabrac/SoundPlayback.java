@@ -12,7 +12,7 @@ final class SoundPlayback extends IntrusiveNode {
     final static void a(int param0, int param1, RasterCacheSurface param2, int param3, int param4, RgbSprite param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-89, param2.sprite);
-          la.a(param5, (-param5.canvasWidth + param2.width) / 2, -param5.canvasHeight + (param0 + param2.height), MatchCompleteScreen.field_C[param3]);
+          RasterEffectHelpers.drawGrayscalePaletteSprite(param5, (-param5.canvasWidth + param2.width) / 2, -param5.canvasHeight + (param0 + param2.height), MatchCompleteScreen.field_C[param3]);
           sc.popRaster(-95);
           if (param1 != 26746) {
             RgbSprite var7 = (RgbSprite) null;
