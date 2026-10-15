@@ -108,12 +108,12 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           syntaxInput = (CharSequence) ((Object) text);
-          if (!MeshAttributeRecord.a(syntaxInput, -125)) {
+          if (!MeshAttributeRecord.isDecimalInt(syntaxInput, -125)) {
             stackIn_2_0 = AccountMessageDialog.validationInvalid;
             return stackIn_2_0;
           }
           parseInput = (CharSequence) ((Object) text);
-          age = UsernameAvailabilityValidator.a(parseInput, -28734);
+          age = UsernameAvailabilityValidator.parseDecimalInt(parseInput, -28734);
           if (obfuscationGuard != 106) {
             var4 = (ResourceArchive) null;
             AgeValidator.a((String) null, (String) null, (ResourceArchive) null, -17);

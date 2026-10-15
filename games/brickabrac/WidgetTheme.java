@@ -403,9 +403,9 @@ final class WidgetTheme {
     }
 
     final static void a(boolean param0, boolean param1) {
-        if (sq.quickChatHelpDialog != null) {
+        if (IntegerParsingHelpers.quickChatHelpDialog != null) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, Rasterizer2D.clipRight - Rasterizer2D.clipLeft, Rasterizer2D.clipBottom - Rasterizer2D.clipTop);
-          sq.quickChatHelpDialog.drawRoot(true, param0);
+          IntegerParsingHelpers.quickChatHelpDialog.drawRoot(true, param0);
         }
         if (!param1) {
           chatHistoryCategoryLimit = -26;
@@ -470,7 +470,7 @@ final class WidgetTheme {
             frameResult = frame;
             return frameResult;
           }
-          sq.a(platform, -20954, frame);
+          IntegerParsingHelpers.closeFullscreenFrame(platform, -20954, frame);
           failedFrameResult = null;
           return (java.awt.Frame) (failedFrameResult);
         } catch (java.lang.RuntimeException caughtException) {

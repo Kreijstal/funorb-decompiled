@@ -175,7 +175,7 @@ abstract class GameClock {
         kd.field_d[21] = ContextMenu.field_Rb;
         kd.field_d[5] = TextFieldValidator.field_i;
         kd.field_d[15] = DualLinkNode.field_i;
-        kd.field_d[9] = sh.field_b;
+        kd.field_d[9] = IntegerValidationHelpers.field_b;
         kd.field_d[6] = DelayedPacket.field_i;
         kd.field_d[20] = GrowableIntList.field_n;
         kd.field_d[7] = nk.field_i;

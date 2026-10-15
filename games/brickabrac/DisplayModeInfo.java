@@ -112,7 +112,7 @@ final class DisplayModeInfo {
         GameClock.collisionBody = null;
         ea.collisionTime256 = 0;
         DualLinkIterator.collisionNormalY256 = 0;
-        sh.collisionFace = 0;
+        IntegerValidationHelpers.collisionFace = 0;
     }
 
     static {

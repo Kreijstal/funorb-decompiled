@@ -114,8 +114,8 @@ final class CacheIoWorker implements Runnable {
         var15 = BrickABrac.field_J ? 1 : 0;
         try {
           var6_int = 485 + param1 + 8 - (-2 - param4) + 8;
-          sh.field_d.setBounds(-6 + DualLinkDeque.field_d.height, 3, 3, -6 + var6_int, (byte) 64);
-          var7 = -5 + sh.field_d.height;
+          IntegerValidationHelpers.field_d.setBounds(-6 + DualLinkDeque.field_d.height, 3, 3, -6 + var6_int, (byte) 64);
+          var7 = -5 + IntegerValidationHelpers.field_d.height;
           BallPulseEffect.field_n.setBounds(param3, -param3 + var7, 5, param4 + 485 + param1 + 2, (byte) 64);
           PasswordValidator.field_n.setBounds(param3, 0, param1, -ap.field_e.width - param1 + BallPulseEffect.field_n.width, (byte) 64);
           var8 = 3 / ((49 - param0) / 40);

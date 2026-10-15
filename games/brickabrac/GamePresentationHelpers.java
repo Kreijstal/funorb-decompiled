@@ -157,7 +157,7 @@ final class GamePresentationHelpers {
                 break;
               }
               indexDigits = template.substring(2 + tokenStart, scanIndex);
-              if (!MeshAttributeRecord.a((CharSequence) ((Object) indexDigits), -43)) {
+              if (!MeshAttributeRecord.isDecimalInt((CharSequence) ((Object) indexDigits), -43)) {
                 continue;
               }
               if (scanIndex >= templateLength) {
@@ -167,7 +167,7 @@ final class GamePresentationHelpers {
                 continue;
               }
               scanIndex++;
-              replacementIndex = UsernameAvailabilityValidator.a((CharSequence) ((Object) indexDigits), -28734);
+              replacementIndex = UsernameAvailabilityValidator.parseDecimalInt((CharSequence) ((Object) indexDigits), -28734);
               outputCapacity = outputCapacity + (tokenStart - scanIndex + replacements[replacementIndex].length());
               continue;
             }
@@ -190,7 +190,7 @@ final class GamePresentationHelpers {
               break;
             }
             copyIndexDigits = template.substring(2 + copyTokenStart, copyScanIndex);
-            if (!MeshAttributeRecord.a((CharSequence) ((Object) copyIndexDigits), obfuscationGuard ^ -23)) {
+            if (!MeshAttributeRecord.isDecimalInt((CharSequence) ((Object) copyIndexDigits), obfuscationGuard ^ -23)) {
               continue;
             }
             if (templateLength <= copyScanIndex) {
@@ -200,7 +200,7 @@ final class GamePresentationHelpers {
               continue;
             }
             copyScanIndex++;
-            copyReplacementIndex = UsernameAvailabilityValidator.a((CharSequence) ((Object) copyIndexDigits), -28734);
+            copyReplacementIndex = UsernameAvailabilityValidator.parseDecimalInt((CharSequence) ((Object) copyIndexDigits), -28734);
             literalAppendResult = resultBuilder.append(template.substring(literalStart, copyTokenStart));
             literalStart = copyScanIndex;
             replacementAppendResult = resultBuilder.append(replacements[copyReplacementIndex]);

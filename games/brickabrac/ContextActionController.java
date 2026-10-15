@@ -1096,7 +1096,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rule_0_1", (byte) -114);
                 if (var2 != null) {
-                  sh.field_b = MenuButton.a(var2, (byte) 73);
+                  IntegerValidationHelpers.field_b = MenuButton.a(var2, (byte) 73);
                 }
                 var2 = nk.a("rule_0_2", (byte) -106);
                 if (var2 != null) {
@@ -1604,7 +1604,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_more_suggestions", (byte) -119);
                 if (var2 != null) {
-                  sh.field_c = MenuButton.a(var2, (byte) 126);
+                  IntegerValidationHelpers.field_c = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = nk.a("create_select_alternative", (byte) -117);
                 if (var2 != null) {
@@ -1632,7 +1632,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("login_email", (byte) 34);
                 if (null != var2) {
-                  sq.field_a = MenuButton.a(var2, (byte) 91);
+                  IntegerParsingHelpers.field_a = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = nk.a("login_username_tooltip", (byte) -127);
                 if (null != var2) {

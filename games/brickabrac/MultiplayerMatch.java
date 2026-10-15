@@ -1073,11 +1073,11 @@ final class MultiplayerMatch {
                           soundCode = 11;
                         } else {
                           if (19 == contactBrick.typeId &&
-                            sh.collisionFace != 1) {
+                            IntegerValidationHelpers.collisionFace != 1) {
                             soundCode = 11;
                           } else {
                             if (contactBrick.typeId == 20 &&
-                              sh.collisionFace != 2) {
+                              IntegerValidationHelpers.collisionFace != 2) {
                               soundCode = 11;
                             } else {
                               if (((contactBrick.typeId == 27)) &&

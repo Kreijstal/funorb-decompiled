@@ -63,7 +63,7 @@ abstract class TextFont extends DualLinkNode {
                                 }
                               } else {
                                 shadowText = (CharSequence) ((Object) tag.substring(5));
-                                currentShadow = DualLinkNode.a(16, (byte) -55, shadowText);
+                                currentShadow = DualLinkNode.parseRadixInt(16, (byte) -55, shadowText);
                               }
                             } else {
                               underlineColor = -1;
@@ -73,7 +73,7 @@ abstract class TextFont extends DualLinkNode {
                           }
                         } else {
                           underlineText = (CharSequence) ((Object) tag.substring(2));
-                          underlineColor = DualLinkNode.a(16, (byte) -55, underlineText);
+                          underlineColor = DualLinkNode.parseRadixInt(16, (byte) -55, underlineText);
                         }
                       } else {
                         strikeColor = -1;
@@ -83,21 +83,21 @@ abstract class TextFont extends DualLinkNode {
                     }
                   } else {
                     strikeText = (CharSequence) ((Object) tag.substring(4));
-                    strikeColor = DualLinkNode.a(16, (byte) -55, strikeText);
+                    strikeColor = DualLinkNode.parseRadixInt(16, (byte) -55, strikeText);
                   }
                 } else {
                   currentAlpha = defaultAlpha;
                 }
               } else {
                 alphaText = (CharSequence) ((Object) tag.substring(6));
-                currentAlpha = UsernameAvailabilityValidator.a(alphaText, -28734);
+                currentAlpha = UsernameAvailabilityValidator.parseDecimalInt(alphaText, -28734);
               }
             } else {
               currentPaint = defaultPaint;
             }
           } else {
             paintText = (CharSequence) ((Object) tag.substring(4));
-            currentPaint = DualLinkNode.a(16, (byte) -55, paintText);
+            currentPaint = DualLinkNode.parseRadixInt(16, (byte) -55, paintText);
           }
         } catch (java.lang.Exception caughtParameter) {
           caughtTagFailure = caughtParameter;
@@ -399,7 +399,7 @@ abstract class TextFont extends DualLinkNode {
                               } else {
                                 try {
                                   imageIndexText = (CharSequence) ((Object) tag.substring(4));
-                                  imageIndexOrGlyphHeight = UsernameAvailabilityValidator.a(imageIndexText, -28734);
+                                  imageIndexOrGlyphHeight = UsernameAvailabilityValidator.parseDecimalInt(imageIndexText, -28734);
                                   inlineSprite = this.inlineSprites[imageIndexOrGlyphHeight];
                                   if (this.inlineSpriteBaselines == null) {
                                     selectedSpriteBaseline = inlineSprite.canvasHeight;
@@ -613,7 +613,7 @@ abstract class TextFont extends DualLinkNode {
                                 if (tag.startsWith("img=")) {
                                   try {
                                     imageIndexText = (CharSequence) ((Object) tag.substring(4));
-                                    imageIndex = UsernameAvailabilityValidator.a(imageIndexText, -28734);
+                                    imageIndex = UsernameAvailabilityValidator.parseDecimalInt(imageIndexText, -28734);
                                     lineWidth = lineWidth + this.inlineSprites[imageIndex].canvasWidth;
                                     previousCode = 0;
                                   } catch (java.lang.Exception caughtParameter) {
@@ -784,7 +784,7 @@ abstract class TextFont extends DualLinkNode {
                               if (!(!tag.startsWith("img="))) {
                                 try {
                                   imageIndexText = (CharSequence) ((Object) tag.substring(4));
-                                  imageIndex = UsernameAvailabilityValidator.a(imageIndexText, -28734);
+                                  imageIndex = UsernameAvailabilityValidator.parseDecimalInt(imageIndexText, -28734);
                                   width = width + this.inlineSprites[imageIndex].canvasWidth;
                                   previousGlyph = 0;
                                 } catch (java.lang.Exception caughtParameter) {

@@ -26,30 +26,30 @@ final class MeshAttributeRecord {
         EmailAvailabilityRequest.a(param10, param7, param11, param9, param6, param5, param1, param4, param0, (byte) -113, param8, param2, 16777215, param3);
     }
 
-    final static boolean a(CharSequence param0, int param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_4_0 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
-        String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static boolean isDecimalInt(CharSequence text, int obfuscationGuard) {
+        RuntimeException failure = null;
+        boolean validResult = false;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param1 < -35) {
-            stackIn_4_0 = sh.a(true, 104, param0, 10);
-            return stackIn_4_0;
+          if (obfuscationGuard < -35) {
+            validResult = IntegerValidationHelpers.isAsciiInt(true, 104, text, 10);
+            return validResult;
           }
           return false;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("dc.B(");
-          if (param0 == null) {
-            stackIn_8_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("dc.B(");
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_8_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

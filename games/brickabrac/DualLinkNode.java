@@ -123,30 +123,30 @@ class DualLinkNode extends IntrusiveNode {
         field_t = null;
     }
 
-    final static int a(int param0, byte param1, CharSequence param2) {
-        RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static int parseRadixInt(int radix, byte obfuscationGuard, CharSequence text) {
+        RuntimeException failure = null;
+        int parsedValue = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          if (param1 != -55) {
+          if (obfuscationGuard != -55) {
             field_k = (byte[]) null;
           }
-          stackIn_3_0 = sq.a((byte) -32, param0, true, param2);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("tk.QB(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_7_2 = "null";
+          parsedValue = IntegerParsingHelpers.parseAsciiInt((byte) -32, radix, true, text);
+          return parsedValue;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("tk.QB(").append(radix).append(',').append(obfuscationGuard).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_7_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(')').toString());
         }
     }
 

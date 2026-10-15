@@ -232,8 +232,8 @@ final class Brick extends RectangleBody {
             var7.phaseTicks == 0) {
             super.onCircleContact((byte) 53, board, circle);
             var7.brickBounceCount = var7.brickBounceCount + 1;
-            if (sh.collisionFace != 8 &&
-              sh.collisionFace != 4) {
+            if (IntegerValidationHelpers.collisionFace != 8 &&
+              IntegerValidationHelpers.collisionFace != 4) {
               var7.velocityY256 = -var7.velocityY256;
               var5 = DualLinkIterator.collisionNormalY256 * (this.velocityY256 - var7.velocityY256);
               if (var5 < 0) {
@@ -256,7 +256,7 @@ final class Brick extends RectangleBody {
           var5Lifetime1 = stackIn_21_0;
           stackIn_24_0 = var5Lifetime1;
           if (this.typeId == 19 &&
-            sh.collisionFace != 1) {
+            IntegerValidationHelpers.collisionFace != 1) {
             stackIn_26_1 = 0;
           } else {
             stackIn_26_1 = 1;
@@ -264,7 +264,7 @@ final class Brick extends RectangleBody {
           var5Lifetime2 = stackIn_24_0 & stackIn_26_1;
           stackIn_29_0 = var5Lifetime2;
           if (20 == this.typeId &&
-            sh.collisionFace != 2) {
+            IntegerValidationHelpers.collisionFace != 2) {
             stackIn_31_1 = 0;
           } else {
             stackIn_31_1 = 1;
@@ -294,11 +294,11 @@ final class Brick extends RectangleBody {
                 this.transitionCode = dupTemp$0;
                 if (dupTemp$0 < 0) {
                   if (board.nextRandomBoundedInt(100, (byte) 62) > 65) {
-                    if (sh.collisionFace != 1) {
-                      if (sh.collisionFace == 2) {
+                    if (IntegerValidationHelpers.collisionFace != 1) {
+                      if (IntegerValidationHelpers.collisionFace == 2) {
                         this.transitionCode = 7;
                       } else {
-                        if (sh.collisionFace != 8) {
+                        if (IntegerValidationHelpers.collisionFace != 8) {
                           this.transitionCode = 9;
                         } else {
                           this.transitionCode = 8;

@@ -10,7 +10,7 @@ final class np {
     static int uiRowHeight;
 
     final static void b(boolean param0) {
-        PopupWidgetLayer.widgetTheme = sh.a((byte) 84);
+        PopupWidgetLayer.widgetTheme = IntegerValidationHelpers.getSharedWidgetTheme((byte) 84);
         if (!param0) {
           ResourceArchive.field_f = new WidgetLayerStack();
           ArrayWidgetGroup.a((byte) -16, true, true);

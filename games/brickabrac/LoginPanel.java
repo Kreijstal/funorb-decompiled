@@ -402,7 +402,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           var8 = PlayerInputBatch.field_p;
           var9 = MultiValueSliderWidget.a(EmailConfirmationValidator.e((byte) -115), -28432);
           if (EmailConfirmationValidator.field_k == var9) {
-            var8 = sq.field_a;
+            var8 = IntegerParsingHelpers.field_a;
           } else {
             if (ll.field_d == var9) {
               var8 = IndexedSpriteGeometry.field_c;

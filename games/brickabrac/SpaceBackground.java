@@ -99,7 +99,7 @@ final class SpaceBackground extends BackgroundScene {
         ScreenNavigationHelpers.spaceFarSprite = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.backgroundSpriteArchive);
         rf.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.backgroundSpriteArchive);
         ScreenNavigationHelpers.spaceFarSprite.bindRasterTarget();
-        Rasterizer2D.drawRadialGlow(7136, 6592, 1600, 128, sq.field_b);
+        Rasterizer2D.drawRadialGlow(7136, 6592, 1600, 128, IntegerParsingHelpers.field_b);
         if (!obfuscationGuard) {
           BallPulseEffect.framebuffer.bindRaster((byte) 100);
           TableNameEntry.spaceCharacterSprite = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.backgroundSpriteArchive);

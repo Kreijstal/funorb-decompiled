@@ -263,14 +263,14 @@ final class ParisBackground extends BackgroundScene {
           var16 = new RgbSprite[9];
           var16[4] = var12;
           DualLinkDeque.field_d = new UiComponent(0L, param0);
-          sh.field_d = new UiComponent(0L, param2);
-          DualLinkDeque.field_d.addChild(sh.field_d, 0);
+          IntegerValidationHelpers.field_d = new UiComponent(0L, param2);
+          DualLinkDeque.field_d.addChild(IntegerValidationHelpers.field_d, 0);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.children = new NodeDeque();
           AchievementIcon.chatHistoryPane = new ScrollPane(0L, var17, param5, param10);
-          sh.field_d.addChild(AchievementIcon.chatHistoryPane, param8 - 61);
+          IntegerValidationHelpers.field_d.addChild(AchievementIcon.chatHistoryPane, param8 - 61);
           BallPulseEffect.field_n = new UiComponent(0L, param3);
-          sh.field_d.addChild(BallPulseEffect.field_n, 0);
+          IntegerValidationHelpers.field_d.addChild(BallPulseEffect.field_n, 0);
           PasswordValidator.field_n = new UiComponent(0L, param7);
           PasswordValidator.field_n.font = CachedArchiveSource.chatFont;
           BallPulseEffect.field_n.addChild(PasswordValidator.field_n, 0);

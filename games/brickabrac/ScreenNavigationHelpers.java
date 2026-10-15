@@ -44,20 +44,20 @@ final class ScreenNavigationHelpers {
     final static void pollQuickChatHelpDialog(byte obfuscationGuard, boolean inputEnabled) {
         if (obfuscationGuard > -64) {
           ScreenNavigationHelpers.a((byte) -25);
-          if (null == sq.quickChatHelpDialog) {
+          if (null == IntegerParsingHelpers.quickChatHelpDialog) {
             return;
           }
-          if (sq.quickChatHelpDialog.updateAndPollDismissal((byte) 79, inputEnabled)) {
-            sq.quickChatHelpDialog = null;
+          if (IntegerParsingHelpers.quickChatHelpDialog.updateAndPollDismissal((byte) 79, inputEnabled)) {
+            IntegerParsingHelpers.quickChatHelpDialog = null;
             return;
           }
           return;
         }
-        if (null == sq.quickChatHelpDialog) {
+        if (null == IntegerParsingHelpers.quickChatHelpDialog) {
           return;
         }
-        if (sq.quickChatHelpDialog.updateAndPollDismissal((byte) 79, inputEnabled)) {
-          sq.quickChatHelpDialog = null;
+        if (IntegerParsingHelpers.quickChatHelpDialog.updateAndPollDismissal((byte) 79, inputEnabled)) {
+          IntegerParsingHelpers.quickChatHelpDialog = null;
           return;
         }
     }

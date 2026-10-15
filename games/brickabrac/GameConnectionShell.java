@@ -332,7 +332,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = FullscreenFailureDialog.a(ChocolateBackground.f(param1 ^ 67), sq.a(64), (byte) -16);
+            var5_int = FullscreenFailureDialog.a(ChocolateBackground.f(param1 ^ 67), IntegerParsingHelpers.a(64), (byte) -16);
             if (var5_int != -1) {
               ProxyAuthenticationRequiredException.a(DirectByteStorage.field_e, -106, var5_int, ArchiveSourceManager.field_f);
               DirectByteStorage.field_e = null;

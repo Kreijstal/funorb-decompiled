@@ -274,11 +274,11 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         try {
           param7.drawAt((5 * param2 >> 16) + param1 + (param4 - param7.canvasWidth) / 2, param10);
           if (param8 == 1) {
-            Rasterizer2D.drawRadialGlow(100 / param8 << 4, 1600, 64, 128, sq.field_b);
-            Rasterizer2D.drawRadialGlow(200 / param8 << 4, 800, 48, 192, sq.field_b);
-            Rasterizer2D.drawRadialGlow(300 / param8 << 4, 1920, 64, 128, sq.field_b);
-            Rasterizer2D.drawRadialGlow(370 / param8 << 4, 2720, 48, 128, sq.field_b);
-            Rasterizer2D.drawRadialGlow(480 / param8 << 4, 1120, 48, 192, sq.field_b);
+            Rasterizer2D.drawRadialGlow(100 / param8 << 4, 1600, 64, 128, IntegerParsingHelpers.field_b);
+            Rasterizer2D.drawRadialGlow(200 / param8 << 4, 800, 48, 192, IntegerParsingHelpers.field_b);
+            Rasterizer2D.drawRadialGlow(300 / param8 << 4, 1920, 64, 128, IntegerParsingHelpers.field_b);
+            Rasterizer2D.drawRadialGlow(370 / param8 << 4, 2720, 48, 128, IntegerParsingHelpers.field_b);
+            Rasterizer2D.drawRadialGlow(480 / param8 << 4, 1120, 48, 192, IntegerParsingHelpers.field_b);
           }
           param9.drawTransparent(-(220 / param8) + (10 * param2 >> 16) + (param1 + (param4 - param9.canvasWidth) / 2), -param9.canvasHeight + (480 + 37 / param8));
           param0.drawTransparent(param1 + ((param4 - param0.canvasWidth) / 2 + (20 * param2 >> 16)) - 5 / param8, 480 - param0.canvasHeight);

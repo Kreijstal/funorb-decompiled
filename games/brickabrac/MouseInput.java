@@ -6,7 +6,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     static RgbSprite farmFarSprite;
     static String field_a;
     static BufferedSocket field_d;
-    static WidgetTheme field_g;
+    static WidgetTheme sharedWidgetTheme;
     static int field_b;
     static byte[] field_c;
 
@@ -114,7 +114,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     }
 
     public static void a(byte param0) {
-        field_g = null;
+        sharedWidgetTheme = null;
         contentResizing = null;
         field_c = null;
         field_d = null;

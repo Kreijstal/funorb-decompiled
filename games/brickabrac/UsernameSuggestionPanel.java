@@ -85,7 +85,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
               this.buttons[buttonIndex].setBounds(15, 0, buttonIndex * 16 + 20, (byte) -119, 80);
               this.addChild(this.buttons[buttonIndex], true);
             }
-            this.buttons[suggestionCount] = new FocusableWidget(sh.field_c, (WidgetListener) (this));
+            this.buttons[suggestionCount] = new FocusableWidget(IntegerValidationHelpers.field_c, (WidgetListener) (this));
             guardComputation = 52 / ((-9 - obfuscationGuard) / 59);
             this.buttons[suggestionCount].renderer = (WidgetRenderer) ((Object) rowRenderer);
             this.buttons[suggestionCount].setBounds(15, 0, 16 * (suggestionCount + 1) + 20, (byte) -119, 100);

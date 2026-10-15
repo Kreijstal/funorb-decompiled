@@ -96,7 +96,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
 
     final void a(PlatformServices param0, int param1) {
         try {
-          sq.a(param0, -20954, this.window);
+          IntegerParsingHelpers.closeFullscreenFrame(param0, -20954, this.window);
           int var3_int = -13 / ((param1 - 82) / 32);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

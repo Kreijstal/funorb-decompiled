@@ -517,8 +517,8 @@ final class ScreenshotViewer {
         try {
           var7 = param5.getParameter("currency");
           if (var7 != null &&
-            MeshAttributeRecord.a((CharSequence) ((Object) var7), -53)) {
-            this.field_c = UsernameAvailabilityValidator.a((CharSequence) ((Object) var7), -28734);
+            MeshAttributeRecord.isDecimalInt((CharSequence) ((Object) var7), -53)) {
+            this.field_c = UsernameAvailabilityValidator.parseDecimalInt((CharSequence) ((Object) var7), -28734);
           } else {
             this.field_c = 2;
           }

@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 342 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 344 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -405,5 +405,9 @@ Independent fixtures check all six prompt kinds with privileged/unprivileged pla
 ClientResourceHelpers names the mixed archive polling, gameplay sound setup and fullscreen-frame drawing helper bag. ScreenNavigationHelpers names screen requests and quick-chat help polling. Fullscreen row/frame drawing, live button hit testing, input action polling, close cleanup, font/metric/frame/center configuration and size accessors now have descriptive methods and locals. Reviewed fields identify paints, selected/normal frames, baselines and outer padding.
 
 Native fixtures compare row glyph events and frame geometry against independent controlled-font models, including singular/plural countdown alignment, selection paints and absent button frames. Clock bounds allow deterministic assertions across countdown boundaries. A coordinate-grid oracle checks hit rectangles; keyboard and pointer fixtures cover action IDs0 through5, Escape handling, timeout rebuilding prompt5 with action2, and explicit countdown-array cleanup. Closing retains row data. Font/frame configuration and size getters are exercised. Quick-chat help polling covers retained/dismissed/null dialogs. Original static references are restored. Actual OS fullscreen changes, caller action dispatch, sound asset loading/playback, malformed guards and original-JAR equivalence remain unverified.
+
+Integer helpers now name signed ASCII validation/parsing for bases 2 through 36, decimal/radix wrappers, and their digit/sign/overflow locals. Independent ASCII grammar and BigInteger bounds check signed limits, long inputs, leading zeroes, optional plus signs, mixed case, invalid radices and null precedence. Every UTF-16 code unit is checked against decimal validation; StringBuilder and a CharSequence that rejects toString verify direct character access. Raw/named traces retain contextual exception causes.
+
+The shared widget-theme cache, fullscreen frame disposal and social-list panel dispatcher are named from their direct contracts. Fixtures verify an already installed theme is returned by identity. Theme construction, real OS fullscreen disposal, live social-panel dispatch and original-JAR equivalence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

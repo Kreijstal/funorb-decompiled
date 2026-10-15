@@ -1,141 +1,141 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sq {
+final class IntegerParsingHelpers {
     static int[] field_b;
     static String field_a;
     static QuickChatHelpDialog quickChatHelpDialog;
 
-    final static void a(PlatformServices param0, int param1, java.awt.Frame param2) {
-        PlatformTask var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+    final static void closeFullscreenFrame(PlatformServices platform, int obfuscationGuard, java.awt.Frame frame) {
+        PlatformTask exitTask = null;
+        int unusedGameFlag = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String platformSummary = null;
+        StringBuilder frameContextBuilder = null;
+        String frameSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           while (true) {
-            var3 = param0.a(10, param2);
-            while (var3.status == 0) {
-              BytePayloadRequest.sleepMillis(param1 ^ 20898, 10L);
+            exitTask = platform.a(10, frame);
+            while (exitTask.status == 0) {
+              BytePayloadRequest.sleepMillis(obfuscationGuard ^ 20898, 10L);
             }
-            if (var3.status != 1) {
+            if (exitTask.status != 1) {
               BytePayloadRequest.sleepMillis(-128, 100L);
               continue;
             }
             break;
           }
-          param2.setVisible(false);
-          param2.dispose();
-          if (param1 == -20954) {
+          frame.setVisible(false);
+          frame.dispose();
+          if (obfuscationGuard == -20954) {
             return;
           }
           quickChatHelpDialog = (QuickChatHelpDialog) null;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_11_0 = var3_ref;
-          stackIn_11_1 = new StringBuilder().append("sq.F(");
-          if (param0 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("sq.F(");
+          if (platform == null) {
+            platformSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            platformSummary = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_15_2 = "null";
+          frameContextBuilder = ((StringBuilder) (Object) contextBuilder).append(platformSummary).append(',').append(obfuscationGuard).append(',');
+          if (frame == null) {
+            frameSummary = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            frameSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) frameContextBuilder).append(frameSummary).append(')').toString());
         }
     }
 
-    final static int a(byte param0, int param1, boolean param2, CharSequence param3) {
-        int var8 = 0;
-        int stackIn_39_0 = 0;
-        RuntimeException stackIn_42_0 = null;
-        StringBuilder stackIn_42_1 = null;
-        String stackIn_43_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = BrickABrac.field_J ? 1 : 0;
+    final static int parseAsciiInt(byte obfuscationGuard, int radix, boolean allowLeadingPlus, CharSequence text) {
+        int characterIndex = 0;
+        int parsedValue = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String textSummary = null;
+        RuntimeException caughtFailure = null;
+        int negativeFlag = 0;
+        RuntimeException failure = null;
+        int hasDigitFlag = 0;
+        int value = 0;
+        int length = 0;
+        int digit = 0;
+        int nextValue = 0;
+        int unusedGameFlag = 0;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param1 >= 2 &&
-            param1 <= 36) {
-            var4_int = 0;
-            if (param0 != -32) {
+          if (radix >= 2 &&
+            radix <= 36) {
+            negativeFlag = 0;
+            if (obfuscationGuard != -32) {
               field_a = (String) null;
             }
-            var5 = 0;
-            var6 = 0;
-            var7 = param3.length();
-            for (var8 = 0; var7 > var8; var8++) {
-              boolean decompiledFrameRemainder0 = true;
-              var9 = param3.charAt(var8);
-              if ((var8 == 0) &&
-                (var9 == 45)) {
-                var4_int = 1;
-                decompiledFrameRemainder0 = false;
+            hasDigitFlag = 0;
+            value = 0;
+            length = text.length();
+            for (characterIndex = 0; length > characterIndex; characterIndex++) {
+              boolean processDigit = true;
+              digit = text.charAt(characterIndex);
+              if ((characterIndex == 0) &&
+                (digit == 45)) {
+                negativeFlag = 1;
+                processDigit = false;
               }
-              if ((decompiledFrameRemainder0) && (var8 != 0 || (var9 != 43 ||
-                !param2))) {
-                if (var9 >= 48 &&
-                  57 >= var9) {
-                  var9 -= 48;
-                } else if (var9 >= 65 &&
-                  var9 <= 90) {
-                  var9 -= 55;
-                } else if (var9 >= 97 &&
-                  var9 <= 122) {
-                  var9 -= 87;
+              if ((processDigit) && (characterIndex != 0 || (digit != 43 ||
+                !allowLeadingPlus))) {
+                if (digit >= 48 &&
+                  57 >= digit) {
+                  digit -= 48;
+                } else if (digit >= 65 &&
+                  digit <= 90) {
+                  digit -= 55;
+                } else if (digit >= 97 &&
+                  digit <= 122) {
+                  digit -= 87;
                 } else {
                   throw new NumberFormatException();
                 }
-                if (param1 <= var9) {
+                if (radix <= digit) {
                   throw new NumberFormatException();
                 }
-                if (var4_int != 0) {
-                  var9 = -var9;
+                if (negativeFlag != 0) {
+                  digit = -digit;
                 }
-                var10 = var6 * param1 + var9;
-                if (var6 != var10 / param1) {
+                nextValue = value * radix + digit;
+                if (value != nextValue / radix) {
                   throw new NumberFormatException();
                 }
-                var5 = 1;
-                var6 = var10;
+                hasDigitFlag = 1;
+                value = nextValue;
               }
             }
-            if (var5 == 0) {
+            if (hasDigitFlag == 0) {
               throw new NumberFormatException();
             }
-            stackIn_39_0 = var6;
-            return stackIn_39_0;
+            parsedValue = value;
+            return parsedValue;
           }
-          throw new IllegalArgumentException("" + param1);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_42_0 = var4;
-          stackIn_42_1 = new StringBuilder().append("sq.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_43_2 = "null";
+          throw new IllegalArgumentException("" + radix);
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("sq.B(").append(obfuscationGuard).append(',').append(radix).append(',').append(allowLeadingPlus).append(',');
+          if (text == null) {
+            textSummary = "null";
           } else {
-            stackIn_43_2 = "{...}";
+            textSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(textSummary).append(')').toString());
         }
     }
 
@@ -160,25 +160,25 @@ final class sq {
         field_b = null;
     }
 
-    final static void a(boolean param0, int param1, int param2) {
-        ContextActionController var4_ref_nn = null;
-        String var5_ref_String = null;
-        int var5 = 0;
-        int var6 = 0;
-        SocialListEntry var3 = FriendListUi.updateFriendsList(param0, param1, -16);
-        ContextActionController var4_ref_nnLifetime1;
-        if (var3 != null) {
+    final static void updateSocialListPanels(boolean inputEnabled, int opcode, int obfuscationGuard) {
+        ContextActionController contextController = null;
+        String actionLabel = null;
+        int anchorX = 0;
+        int anchorY = 0;
+        SocialListEntry pressedFriend = FriendListUi.updateFriendsList(inputEnabled, opcode, -16);
+        ContextActionController contextControllerAlias;
+        if (pressedFriend != null) {
           GameRenderAudioHelpers.contextActions.addPlayerGameActions(true, false);
-          var4_ref_nn = GameRenderAudioHelpers.contextActions;
-          var5_ref_String = ChocolateBackground.field_y;
-          var4_ref_nn.contextMenu.addAction(var5_ref_String, 5, (byte) 104);
-          var4_ref_nnLifetime1 = GameRenderAudioHelpers.contextActions;
-          var5 = LoadingProgressDialog.pressX;
-          var6 = PlayerNameChooserPanel.pressY;
-          var4_ref_nnLifetime1.contextMenu.layoutAtAnchor(var6, -98, 0, 0, var5);
+          contextController = GameRenderAudioHelpers.contextActions;
+          actionLabel = ChocolateBackground.field_y;
+          contextController.contextMenu.addAction(actionLabel, 5, (byte) 104);
+          contextControllerAlias = GameRenderAudioHelpers.contextActions;
+          anchorX = LoadingProgressDialog.pressX;
+          anchorY = PlayerNameChooserPanel.pressY;
+          contextControllerAlias.contextMenu.layoutAtAnchor(anchorY, -98, 0, 0, anchorX);
         }
-        int var4 = -44 % ((-3 - param2) / 50);
-        MusicEnvelope.updateIgnoreList(param0, true, param1);
+        int guardCalculation = -44 % ((-3 - obfuscationGuard) / 50);
+        MusicEnvelope.updateIgnoreList(inputEnabled, true, opcode);
     }
 
     final static void updateDiagnosticOverlay(boolean obfuscationGuard) {
@@ -210,7 +210,7 @@ final class sq {
               LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
-            sq.a(15);
+            IntegerParsingHelpers.a(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
                 FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
@@ -248,7 +248,7 @@ final class sq {
               LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
-            sq.a(15);
+            IntegerParsingHelpers.a(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
                 FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
@@ -274,7 +274,7 @@ final class sq {
               LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
-            sq.a(15);
+            IntegerParsingHelpers.a(15);
             if (GzipInflater.showRenderRateDiagnostic) {
               if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
                 FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);
@@ -306,7 +306,7 @@ final class sq {
             LoginCredentials.diagnosticLines.addLast(FullscreenDialogHelpers.renderRateDiagnosticLine, (byte) 3);
           }
         } else {
-          sq.a(15);
+          IntegerParsingHelpers.a(15);
           if (GzipInflater.showRenderRateDiagnostic) {
             if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
               FullscreenDialogHelpers.renderRateDiagnosticLine.text.setLength(0);

@@ -122,7 +122,7 @@ public final class BrickABrac extends InteractiveGameClient {
           SoundCache.playUiSound(8, NineSliceFrame.uiSounds[9]);
         }
         if (cf.a((byte) 62)) {
-          sq.updateDiagnosticOverlay(false);
+          IntegerParsingHelpers.updateDiagnosticOverlay(false);
         }
         var4 = 46 / ((-61 - obfuscationGuard) / 47);
     }
@@ -638,7 +638,7 @@ public final class BrickABrac extends InteractiveGameClient {
         FullscreenDialogHelpers.a(true);
         HuffmanCodec.a((byte) -94);
         jj.a(true);
-        sq.a((byte) -11);
+        IntegerParsingHelpers.a((byte) -11);
         nl.a(-106);
         MenuSelection.b((byte) -60);
         ed.a(-104);
@@ -750,7 +750,7 @@ public final class BrickABrac extends InteractiveGameClient {
         VorbisSample.releaseScratch();
         MeshAttributeRecord.a(-9669);
         Mesh3D.b((byte) -52);
-        sh.a(125);
+        IntegerValidationHelpers.a(125);
         fm.a((byte) 68);
         gj.a(-27956);
         LevelPackLoader.b(-30593);

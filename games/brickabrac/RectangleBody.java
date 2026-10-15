@@ -195,7 +195,7 @@ class RectangleBody extends MovingBody {
           SpriteGeometry.collisionNormalX256 = normalX256;
           DualLinkIterator.collisionNormalY256 = normalY256;
           GameClock.collisionBody = this;
-          sh.collisionFace = face;
+          IntegerValidationHelpers.collisionFace = face;
           ScrollPane.collisionY256 = -circle.radius256 + contactCenterY;
           return true;
         } catch (java.lang.RuntimeException caughtParameter) {

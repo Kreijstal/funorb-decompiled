@@ -349,8 +349,8 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (MeshAttributeRecord.a((CharSequence) ((Object) var4), -102) &&
-                        !(UsernameAvailabilityValidator.a((CharSequence) ((Object) var4), -28734) >= 10)) {
+                      if (MeshAttributeRecord.isDecimalInt((CharSequence) ((Object) var4), -102) &&
+                        !(UsernameAvailabilityValidator.parseDecimalInt((CharSequence) ((Object) var4), -28734) >= 10)) {
                         this.a("wrongjava", 4000);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -406,7 +406,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                sh.refreshReportedHeapLimit(1);
+                IntegerValidationHelpers.refreshReportedHeapLimit(1);
                 this.c(false);
                 BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.field_D), WeightedLruCache.canvasWidth, -2414, WidgetPaintStyle.canvasHeight);
                 this.initializeClient(false);
