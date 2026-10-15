@@ -90,7 +90,7 @@ final class SoundPlayback extends IntrusiveNode {
             return stackIn_20_0;
           }
           if (param2 == 7) {
-            stackIn_23_0 = rd.a(bm.field_e, new String[]{param1}, (byte) 103);
+            stackIn_23_0 = rd.a(GameRenderAudioHelpers.field_e, new String[]{param1}, (byte) 103);
             return stackIn_23_0;
           }
           if (8 == param2) {

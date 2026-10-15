@@ -396,7 +396,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (obfuscationGuard > -60) {
           field_t = (String) null;
         }
-        this.initializeButtons(bm.field_f, 0);
+        this.initializeButtons(GameRenderAudioHelpers.field_f, 0);
     }
 
     private final void a(int param0, int param1, int param2, int param3, byte param4) {

@@ -103,7 +103,7 @@ final class LevelList {
         WidgetTheme.lostBallMessages = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;
-        ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, bm.field_b, RectangleBody.field_t};
+        ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, GameRenderAudioHelpers.field_b, RectangleBody.field_t};
         TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, ch.field_j, GameTransportActions.field_a, nk.field_f, tm.field_h};
         CacheEntry.field_A[17] = MusicPatch.field_q;
         CacheEntry.field_A[14] = RadialSelectorWidget.field_V;

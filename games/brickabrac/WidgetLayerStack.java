@@ -358,7 +358,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             var8Lifetime1 = 256 * var8Lifetime1 / 50;
             var9 = ArchiveNetworkClient.field_s[param4.resultCode - 1];
             var9.b(param0 + (param1 - param6 * var9.canvasWidth) / (param6 * 2), param5 + (param2 - var9.canvasHeight * param6) / (param6 * 2), var8Lifetime1);
-            lo.a(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
+            lo.drawBoardResultWord(param1, var8Lifetime1, 60, param0, param6, param5, param2, param4);
           }
           if (param3 < 118) {
             WidgetLayerStack.a(true, 86);

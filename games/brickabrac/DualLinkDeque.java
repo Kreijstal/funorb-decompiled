@@ -47,7 +47,7 @@ final class DualLinkDeque implements Iterable {
     final static boolean a(int param0) {
         if (param0 != -4858) {
           DualLinkDeque.outlineRasterRegion(-58, 65, -66, 54, -73);
-          if (null != bm.contextActions) {
+          if (null != GameRenderAudioHelpers.contextActions) {
             return true;
           }
           if (ResourcePreparationQueue.a(-121)) {
@@ -61,7 +61,7 @@ final class DualLinkDeque implements Iterable {
           }
           return true;
         }
-        if (null != bm.contextActions) {
+        if (null != GameRenderAudioHelpers.contextActions) {
           return true;
         }
         if (ResourcePreparationQueue.a(-121)) {

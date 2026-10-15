@@ -210,9 +210,9 @@ final class ScrollPane extends UiComponent {
             ScrollPane.a((String) null, (byte) 116);
           }
           UnderwaterBackground.field_w.pump();
-          bm.field_c = bm.field_c - 1;
-          if (bm.field_c == 0) {
-            bm.field_c = 200;
+          GameRenderAudioHelpers.field_c = GameRenderAudioHelpers.field_c - 1;
+          if (GameRenderAudioHelpers.field_c == 0) {
+            GameRenderAudioHelpers.field_c = 200;
             var1 = (SoundPlayback) (QuickChatPhraseDefinition.soundPlaybacks.first(-110));
             while (var1 != null) {
               if (!var1.sourceNode.isLinked(0)) {

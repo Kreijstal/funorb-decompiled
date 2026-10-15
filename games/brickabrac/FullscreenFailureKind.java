@@ -111,23 +111,23 @@ final class FullscreenFailureKind {
           SpriteGeometry.a(-1, param0, rl.field_e, (int[]) null, (String) null, param0.getGameId((byte) -14), (byte) -58, 0L, (String) null);
           if (param0.started && (param0.spectatorMode == 2 ||
             !(QuickChatHelpDialog.field_Yb < 2))) {
-            var9 = bm.contextActions;
+            var9 = GameRenderAudioHelpers.contextActions;
             var10 = rd.a(LevelResultSubmission.field_s, new String[]{param3}, (byte) 103);
             var9.contextMenu.addAction(var10, 10, (byte) 91);
           }
-          bm.contextActions.addGameActions(true);
+          GameRenderAudioHelpers.contextActions.addGameActions(true);
           if (param1) {
-            if (bm.contextActions.gameId == MenuSelection.previewGameId) {
-              var13 = bm.contextActions;
+            if (GameRenderAudioHelpers.contextActions.gameId == MenuSelection.previewGameId) {
+              var13 = GameRenderAudioHelpers.contextActions;
               var14 = rd.a(ArchiveSourceManager.field_d, new String[]{param3}, (byte) 103);
               var13.contextMenu.addAction(var14, 16, (byte) 90);
             } else {
-              var11 = bm.contextActions;
+              var11 = GameRenderAudioHelpers.contextActions;
               var12 = rd.a(Paddle.field_G, new String[]{param3}, (byte) 103);
               var11.contextMenu.addAction(var12, 15, (byte) 116);
             }
           }
-          var15 = bm.contextActions;
+          var15 = GameRenderAudioHelpers.contextActions;
           var6 = LoadingProgressDialog.pressX;
           var7 = PlayerNameChooserPanel.pressY;
           var15.contextMenu.layoutAtAnchor(var7, -102, 0, 0, var6);

@@ -65,39 +65,39 @@ final class ArgbSprite extends RgbSprite {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void drawVerticallyFlipped(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.offsetX;
-        param1 = param1 + (this.canvasHeight - this.height - this.offsetY);
-        int var3 = param0 + (param1 + this.height - 1) * Rasterizer2D.width;
+        x = x + this.offsetX;
+        y = y + (this.canvasHeight - this.height - this.offsetY);
+        int var3 = x + (y + this.height - 1) * Rasterizer2D.width;
         int var4 = 0;
         int var5 = this.height;
         int var6 = this.width;
         int var7 = -Rasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < Rasterizer2D.clipTop) {
-          var5 = var5 - (Rasterizer2D.clipTop - param1);
-          param1 = Rasterizer2D.clipTop;
+        if (y < Rasterizer2D.clipTop) {
+          var5 = var5 - (Rasterizer2D.clipTop - y);
+          y = Rasterizer2D.clipTop;
         }
-        if (param1 + var5 > Rasterizer2D.clipBottom) {
-          var9 = param1 + var5 - Rasterizer2D.clipBottom;
+        if (y + var5 > Rasterizer2D.clipBottom) {
+          var9 = y + var5 - Rasterizer2D.clipBottom;
           var5 = var5 - var9;
           var3 = var3 - var9 * Rasterizer2D.width;
           var4 = var4 + var9 * var6;
         }
-        if (param0 < Rasterizer2D.clipLeft) {
-          var9Lifetime1 = Rasterizer2D.clipLeft - param0;
+        if (x < Rasterizer2D.clipLeft) {
+          var9Lifetime1 = Rasterizer2D.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = Rasterizer2D.clipLeft;
+          x = Rasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > Rasterizer2D.clipRight) {
-          var9Lifetime2 = param0 + var6 - Rasterizer2D.clipRight;
+        if (x + var6 > Rasterizer2D.clipRight) {
+          var9Lifetime2 = x + var6 - Rasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;

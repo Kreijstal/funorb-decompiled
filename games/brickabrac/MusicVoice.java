@@ -834,7 +834,7 @@ final class MusicVoice extends IntrusiveNode {
             }
             break;
           }
-          bm.sortMeshFaces(branchOrCullValue != 0, boundOrMinimumDepth, maximumDepth, false, mesh);
+          GameRenderAudioHelpers.sortMeshFaces(branchOrCullValue != 0, boundOrMinimumDepth, maximumDepth, false, mesh);
           return;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

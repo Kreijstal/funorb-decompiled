@@ -220,10 +220,10 @@ final class BitPacketBuffer extends PacketBuffer {
             WidgetLayerStack.a(destinationX, var8, var9, (byte) 126, var24, destinationY, scaleDivisor);
           }
           if (0 != (1 << playerId & match.playerMaskTwo)) {
-            bm.a(destinationX, destinationY, var9, var24, var8, scaleDivisor, SpaceBackground.field_s.toLowerCase(), (byte) 123);
+            GameRenderAudioHelpers.drawBoardMaskOverlay(destinationX, destinationY, var9, var24, var8, scaleDivisor, SpaceBackground.field_s.toLowerCase(), (byte) 123);
           }
           if ((match.playerMaskOne & 1 << playerId) != 0) {
-            bm.a(destinationX, destinationY, var9, var24, var8, scaleDivisor, t.field_h.toLowerCase(), (byte) 76);
+            GameRenderAudioHelpers.drawBoardMaskOverlay(destinationX, destinationY, var9, var24, var8, scaleDivisor, t.field_h.toLowerCase(), (byte) 76);
           }
           Rasterizer2D.resetClip();
           return;

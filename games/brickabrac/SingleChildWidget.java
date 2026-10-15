@@ -449,8 +449,8 @@ abstract class SingleChildWidget extends Widget implements WidgetContainer {
         }
         if (DualLinkDeque.a(-4858)) {
           hc.a(param5, -7812, param4, param1);
-          if (bm.contextActions != null &&
-            bm.contextActions.pollAndDispatchAction(-2, param1, param6, param0, param5)) {
+          if (GameRenderAudioHelpers.contextActions != null &&
+            GameRenderAudioHelpers.contextActions.pollAndDispatchAction(-2, param1, param6, param0, param5)) {
             ActivityIndicatorWidget.f((byte) -124);
             param5 = false;
           }

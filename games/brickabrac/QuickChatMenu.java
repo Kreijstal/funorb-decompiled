@@ -1146,7 +1146,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime106 = gr.a(!param0, "plus_something");
           if (var2Lifetime106 != null) {
-            hh.field_e = MenuButton.a(var2Lifetime106, (byte) 84);
+            hh.positiveBoardResultFormat = MenuButton.a(var2Lifetime106, (byte) 84);
           }
           var2Lifetime107 = gr.a(true, "ellipsis");
           if (var2Lifetime107 != null) {

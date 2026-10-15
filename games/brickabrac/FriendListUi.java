@@ -157,14 +157,14 @@ final class FriendListUi {
                 pressedName = entry.name;
                 SpriteGeometry.a(-1, entry, GameScreen.friendsListPane.scrollPane, (int[]) null, pressedName, -1, (byte) -58, 0L, (String) null);
                 if (null != entry.serverName &&
-                  !ConditionalTextValue.a(13134, bm.contextActions.targetName) &&
+                  !ConditionalTextValue.a(13134, GameRenderAudioHelpers.contextActions.targetName) &&
                   !TextWidgetRenderer.field_e) {
                   if (!PlayerNameChooserPanel.field_I) {
-                    contextForMessage = bm.contextActions;
+                    contextForMessage = GameRenderAudioHelpers.contextActions;
                     messageCaption = rd.a(ClientException.field_c, new String[]{pressedName}, (byte) 103);
                     contextForMessage.contextMenu.addAction(messageCaption, 8, (byte) 84);
                   }
-                  contextForSpectate = bm.contextActions;
+                  contextForSpectate = GameRenderAudioHelpers.contextActions;
                   spectateCaption = rd.a(qm.field_b, new String[]{pressedName}, (byte) 103);
                   contextForSpectate.contextMenu.addAction(spectateCaption, 18, (byte) 97);
                 }

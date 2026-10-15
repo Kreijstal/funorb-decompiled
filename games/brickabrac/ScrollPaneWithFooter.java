@@ -75,11 +75,11 @@ final class ScrollPaneWithFooter extends UiComponent {
             null == o.currentLobbyGame &&
             nl.pendingLobbyGame == null) {
             if (!PlayerNameChooserPanel.field_I) {
-              var5 = bm.contextActions;
+              var5 = GameRenderAudioHelpers.contextActions;
               var6 = LevelPackSelectScreen.field_x;
               var5.contextMenu.addAction(var6, 14, (byte) 84);
             }
-            var7 = bm.contextActions;
+            var7 = GameRenderAudioHelpers.contextActions;
             var8 = tq.field_b;
             var7.contextMenu.addAction(var8, 20, (byte) 118);
           }
@@ -88,20 +88,20 @@ final class ScrollPaneWithFooter extends UiComponent {
             null != o.currentLobbyGame &&
             param1.contextId == o.currentLobbyGame.getGameId((byte) 118)) {
             if (!PlayerNameChooserPanel.field_I) {
-              var9 = bm.contextActions;
+              var9 = GameRenderAudioHelpers.contextActions;
               var10 = hc.field_b;
               var9.contextMenu.addAction(var10, 14, (byte) 120);
             }
-            var11 = bm.contextActions;
+            var11 = GameRenderAudioHelpers.contextActions;
             var12 = MultiplayerExitScreen.field_y;
             var11.contextMenu.addAction(var12, 20, (byte) 103);
           }
-          bm.contextActions.addGameActions(true);
-          bm.contextActions.addPlayerGameActions(true, false);
-          bm.contextActions.addSocialActions(param1.suggestedPhraseIds, (byte) -79, param1.channel);
-          bm.contextActions.addReportAction((byte) -126);
-          bm.contextActions.addMessageFilterActions(param1, -96);
-          var13 = bm.contextActions;
+          GameRenderAudioHelpers.contextActions.addGameActions(true);
+          GameRenderAudioHelpers.contextActions.addPlayerGameActions(true, false);
+          GameRenderAudioHelpers.contextActions.addSocialActions(param1.suggestedPhraseIds, (byte) -79, param1.channel);
+          GameRenderAudioHelpers.contextActions.addReportAction((byte) -126);
+          GameRenderAudioHelpers.contextActions.addMessageFilterActions(param1, -96);
+          var13 = GameRenderAudioHelpers.contextActions;
           var3 = LoadingProgressDialog.pressX;
           var4 = PlayerNameChooserPanel.pressY;
           var13.contextMenu.layoutAtAnchor(var4, -101, 0, param0, var3);

@@ -3,7 +3,7 @@
  */
 final class hh {
     static int[] volcanicBackgroundColors;
-    static String field_e;
+    static String positiveBoardResultFormat;
     static double field_d;
     static String field_f;
     static int[] unlockedLevelCounts;
@@ -13,14 +13,14 @@ final class hh {
         volcanicBackgroundColors = null;
         if (param0) {
           field_a = null;
-          field_e = null;
+          positiveBoardResultFormat = null;
           field_f = null;
           unlockedLevelCounts = null;
           return;
         }
         unlockedLevelCounts = (int[]) null;
         field_a = null;
-        field_e = null;
+        positiveBoardResultFormat = null;
         field_f = null;
         unlockedLevelCounts = null;
     }
@@ -107,7 +107,7 @@ final class hh {
     }
 
     static {
-        field_e = "+<%0>";
+        positiveBoardResultFormat = "+<%0>";
         field_f = "Yes";
         volcanicBackgroundColors = new int[]{12658477, 3952770, 16494651, 26679, 16711935};
         field_d = Math.atan2(1.0, 0.0);

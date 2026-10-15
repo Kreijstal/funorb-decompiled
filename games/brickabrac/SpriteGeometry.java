@@ -31,10 +31,10 @@ abstract class SpriteGeometry extends DualLinkNode {
         int var10 = 0;
         int var11 = 0;
         SpriteGeometry.a(-1, param2, param3, (int[]) null, param2.accountName, -1, (byte) -58, param2.playerId, param2.displayName);
-        bm.contextActions.addPlayerGameActions(true, true);
-        bm.contextActions.addSocialActions((int[]) null, (byte) -120, 0);
-        bm.contextActions.addReportAction((byte) -93);
-        ContextActionController var12 = bm.contextActions;
+        GameRenderAudioHelpers.contextActions.addPlayerGameActions(true, true);
+        GameRenderAudioHelpers.contextActions.addSocialActions((int[]) null, (byte) -120, 0);
+        GameRenderAudioHelpers.contextActions.addReportAction((byte) -93);
+        ContextActionController var12 = GameRenderAudioHelpers.contextActions;
         if (param4 < 48) {
           return;
         }
@@ -99,7 +99,7 @@ abstract class SpriteGeometry extends DualLinkNode {
           if (param6 != -58) {
             field_u = (String) null;
           }
-          bm.contextActions = new ContextActionController(param1, param7, param4, param8, param5, param0, param3);
+          GameRenderAudioHelpers.contextActions = new ContextActionController(param1, param7, param4, param8, param5, param0, param3);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "mn.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }

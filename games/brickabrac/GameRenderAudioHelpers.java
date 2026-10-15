@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bm {
+final class GameRenderAudioHelpers {
     static String field_b;
     static byte[][][] field_a;
     static int[] field_f;
@@ -214,59 +214,59 @@ final class bm {
         }
     }
 
-    final static void a(int param0, int param1, int param2, PlayerBoard param3, int param4, int param5, String param6, byte param7) {
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        StringBuilder stackIn_22_1 = null;
-        String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        double var9 = 0.0;
-        int var11 = 0;
+    final static void drawBoardMaskOverlay(int x, int y, int boardHeight, PlayerBoard board, int boardWidth, int scaleDivisor, String message, byte obfuscationGuard) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        StringBuilder messageContextBuilder = null;
+        String messageSummary = null;
+        RuntimeException caughtFailure = null;
+        int elapsedTicks = 0;
+        RuntimeException failure = null;
+        double bounceDistance = 0.0;
+        int alpha256 = 0;
         try {
-          if (param3.maskedTicks < 50) {
+          if (board.maskedTicks < 50) {
             return;
           }
-          var8_int = -50 + param3.maskedTicks;
-          var9 = 250.0 * Math.abs(Math.cos(0.1 * (double)var8_int)) * Math.exp((double)(-var8_int) / 40.0);
-          if (param7 < 69) {
+          elapsedTicks = -50 + board.maskedTicks;
+          bounceDistance = 250.0 * Math.abs(Math.cos(0.1 * (double)elapsedTicks)) * Math.exp((double)(-elapsedTicks) / 40.0);
+          if (obfuscationGuard < 69) {
             field_c = -9;
           }
-          if (var8_int >= 110) {
-            var9 = 0.0;
+          if (elapsedTicks >= 110) {
+            bounceDistance = 0.0;
           }
-          var9 = var9 / (double)param5;
-          Ball.field_w.drawAt(param0 - 7 / param5, -(7 / param5) + (param1 - (int)var9));
-          Ball.field_w.g(-(7 / param5) + param0, (int)var9 - 7 / param5 + (param1 + Ball.field_w.canvasHeight));
-          if (var8_int >= 130) {
-            var11 = var8_int - 130;
-            if (var11 > 100) {
-              var11 = 100;
+          bounceDistance = bounceDistance / (double)scaleDivisor;
+          Ball.activeBoardMaskSprite.drawAt(x - 7 / scaleDivisor, -(7 / scaleDivisor) + (y - (int)bounceDistance));
+          Ball.activeBoardMaskSprite.drawVerticallyFlipped(-(7 / scaleDivisor) + x, (int)bounceDistance - 7 / scaleDivisor + (y + Ball.activeBoardMaskSprite.canvasHeight));
+          if (elapsedTicks >= 130) {
+            alpha256 = elapsedTicks - 130;
+            if (alpha256 > 100) {
+              alpha256 = 100;
             }
-            var11 = var11 * 128 / 50;
-            ContextActionController.field_g.drawCenteredAlpha(param6, param0 + param4 / (2 * param5), ContextActionController.field_g.capHeight + (param2 / (2 * param5) + (param1 - 100 / param5)), 0, -1, var11);
-            lo.a(param4, var11, 60, param0, param5, param1, param2, param3);
+            alpha256 = alpha256 * 128 / 50;
+            ContextActionController.field_g.drawCenteredAlpha(message, x + boardWidth / (2 * scaleDivisor), ContextActionController.field_g.capHeight + (boardHeight / (2 * scaleDivisor) + (y - 100 / scaleDivisor)), 0, -1, alpha256);
+            lo.drawBoardResultWord(boardWidth, alpha256, 60, x, scaleDivisor, y, boardHeight, board);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_18_0 = var8;
-          stackIn_18_1 = new StringBuilder().append("bm.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_19_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("bm.C(").append(x).append(',').append(y).append(',').append(boardHeight).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            boardSummary = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
-            stackIn_23_2 = "null";
+          messageContextBuilder = ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(',').append(boardWidth).append(',').append(scaleDivisor).append(',');
+          if (message == null) {
+            messageSummary = "null";
           } else {
-            stackIn_23_2 = "{...}";
+            messageSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param7).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) messageContextBuilder).append(messageSummary).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -291,7 +291,7 @@ final class bm {
         try {
           activityEvents = 0;
           if (obfuscationGuard != -30791) {
-            bm.playGameplayAudioEvents(98, -116, false, -50, (NodeDeque) null);
+            GameRenderAudioHelpers.playGameplayAudioEvents(98, -116, false, -50, (NodeDeque) null);
           }
           event = (GameplayAudioEvent) (events.first(-65));
           boolean eventsExhausted = false;
@@ -444,7 +444,7 @@ final class bm {
             BackgroundRegistry.scenes[5] = (BackgroundScene) ((Object) new HalloweenBackground(5, "BaB_halloween", "BaB_block_halloween", 8));
           }
           if (param2 != 24876) {
-            bm.a((byte) 96);
+            GameRenderAudioHelpers.a((byte) 96);
           }
           BackgroundRegistry.scenes[11] = (BackgroundScene) ((Object) new NinjaBackground(11, "BAB_ninja", "BaB_block_ninja", 7));
           OpacityWidget.pendingMusicLoads = 11;

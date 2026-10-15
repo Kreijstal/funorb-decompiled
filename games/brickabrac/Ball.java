@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Ball extends CircleBody {
-    static RgbSprite field_w;
+    static RgbSprite activeBoardMaskSprite;
     static UiComponent field_A;
     static String field_H;
     int brickBounceCount;
@@ -86,7 +86,7 @@ final class Ball extends CircleBody {
 
     public static void c(int param0) {
         field_F = null;
-        field_w = null;
+        activeBoardMaskSprite = null;
         field_G = null;
         field_x = null;
         field_A = null;

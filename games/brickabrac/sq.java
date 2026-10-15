@@ -168,11 +168,11 @@ final class sq {
         SocialListEntry var3 = FriendListUi.updateFriendsList(param0, param1, -16);
         ContextActionController var4_ref_nnLifetime1;
         if (var3 != null) {
-          bm.contextActions.addPlayerGameActions(true, false);
-          var4_ref_nn = bm.contextActions;
+          GameRenderAudioHelpers.contextActions.addPlayerGameActions(true, false);
+          var4_ref_nn = GameRenderAudioHelpers.contextActions;
           var5_ref_String = ChocolateBackground.field_y;
           var4_ref_nn.contextMenu.addAction(var5_ref_String, 5, (byte) 104);
-          var4_ref_nnLifetime1 = bm.contextActions;
+          var4_ref_nnLifetime1 = GameRenderAudioHelpers.contextActions;
           var5 = LoadingProgressDialog.pressX;
           var6 = PlayerNameChooserPanel.pressY;
           var4_ref_nnLifetime1.contextMenu.layoutAtAnchor(var6, -98, 0, 0, var5);

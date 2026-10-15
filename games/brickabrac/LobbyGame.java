@@ -232,7 +232,7 @@ final class LobbyGame extends UiComponent {
               if (board.resultWord < 0) {
                 statusText = Integer.toString(board.resultWord);
               } else {
-                statusText = rd.a(hh.field_e, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
+                statusText = rd.a(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
               if (!match.configuration.repeats) {
@@ -381,7 +381,7 @@ final class LobbyGame extends UiComponent {
               if (board.resultWord < 0) {
                 statusText = Integer.toString(board.resultWord);
               } else {
-                statusText = rd.a(hh.field_e, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
+                statusText = rd.a(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
               if (!match.configuration.repeats) {

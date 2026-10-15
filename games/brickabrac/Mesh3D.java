@@ -176,7 +176,7 @@ final class Mesh3D {
               if ((IntArrayRequest.gameplayScreen.rematchSetupPlayerMask | 1 << IntArrayRequest.gameplayScreen.localPlayerId) != -1 + (1 << IntArrayRequest.gameplayScreen.match.playerCount)) {
                 ArrayWidgetGroup.buttonLabels[12] = RectangleBody.field_t;
               } else {
-                ArrayWidgetGroup.buttonLabels[12] = bm.field_b;
+                ArrayWidgetGroup.buttonLabels[12] = GameRenderAudioHelpers.field_b;
               }
             } else {
               ArrayWidgetGroup.buttonLabels[12] = MusicPatch.field_m;

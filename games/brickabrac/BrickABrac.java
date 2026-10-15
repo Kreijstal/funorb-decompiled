@@ -810,7 +810,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MusicPatch.a((byte) 118);
         MusicEnvelope.b((byte) 31);
         SoundTone.releaseScratch();
-        bm.a((byte) -116);
+        GameRenderAudioHelpers.a((byte) -116);
         ar.a(-1);
         LabeledWidget.c(false);
         ValidatedTextFieldWidget.o(-16124);

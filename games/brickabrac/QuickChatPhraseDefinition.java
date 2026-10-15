@@ -197,19 +197,19 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         RgbSprite var29Lifetime6;
         SpriteGeometry.a(param1, param2, (ScrollPane) null, (int[]) null, (String) null, -1, (byte) -58, 0L, (String) null);
         if (param1 == 0) {
-          var9 = bm.contextActions;
+          var9 = GameRenderAudioHelpers.contextActions;
           var11 = ProxyAuthenticationRequiredException.field_b[0];
           var29 = var11;
           var29Lifetime2 = var11;
           var10 = Bzip2State.field_m;
           var9.contextMenu.addIconAction(var10, 108, 11, var11);
-          var12 = bm.contextActions;
+          var12 = GameRenderAudioHelpers.contextActions;
           var14 = ProxyAuthenticationRequiredException.field_b[1];
           var29Lifetime3 = var14;
           var29Lifetime4 = var14;
           var13 = DirectByteStorage.field_l;
           var12.contextMenu.addIconAction(var13, 105, 12, var14);
-          var15 = bm.contextActions;
+          var15 = GameRenderAudioHelpers.contextActions;
           var17 = ProxyAuthenticationRequiredException.field_b[2];
           var29Lifetime5 = var17;
           var29Lifetime6 = var17;
@@ -217,34 +217,34 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var15.contextMenu.addIconAction(var16, 112, 13, var17);
         }
         if (1 == param1) {
-          var18 = bm.contextActions;
+          var18 = GameRenderAudioHelpers.contextActions;
           var20 = ProxyAuthenticationRequiredException.field_b[0];
           var19 = LegacyUtf8Decoder.field_a;
           var18.contextMenu.addIconAction(var19, param0 ^ 864, 11, var20);
-          var21 = bm.contextActions;
+          var21 = GameRenderAudioHelpers.contextActions;
           var23 = ProxyAuthenticationRequiredException.field_b[1];
           var22 = DualLinkNode.field_m;
           var21.contextMenu.addIconAction(var22, 123, 12, var23);
-          var24 = bm.contextActions;
+          var24 = GameRenderAudioHelpers.contextActions;
           var26 = ProxyAuthenticationRequiredException.field_b[2];
           var25 = CacheIoWorker.field_b;
           var24.contextMenu.addIconAction(var25, param0 ^ 843, 13, var26);
         }
         if (param1 == 2) {
-          var27 = bm.contextActions;
+          var27 = GameRenderAudioHelpers.contextActions;
           var29Lifetime1 = ProxyAuthenticationRequiredException.field_b[0];
           var28 = ObjectHistoryBuffer.field_l;
           var27.contextMenu.addIconAction(var28, param0 - 686, 11, var29Lifetime1);
-          var30 = bm.contextActions;
+          var30 = GameRenderAudioHelpers.contextActions;
           var32 = ProxyAuthenticationRequiredException.field_b[1];
           var31 = HotspotTextWidget.field_M;
           var30.contextMenu.addIconAction(var31, param0 - 720, 12, var32);
-          var33 = bm.contextActions;
+          var33 = GameRenderAudioHelpers.contextActions;
           var35 = ProxyAuthenticationRequiredException.field_b[2];
           var34 = EmailAvailabilityRequest.field_b;
           var33.contextMenu.addIconAction(var34, param0 - 708, 13, var35);
         }
-        ContextActionController var36 = bm.contextActions;
+        ContextActionController var36 = GameRenderAudioHelpers.contextActions;
         int var4 = param2.screenX;
         int var5 = param2.screenY;
         if (param0 != 784) {

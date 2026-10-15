@@ -50,7 +50,7 @@ final class GameUiController implements GameUiLifecycle {
         KeyboardInput.a(new BrickGameLayerController(), 0);
         VolcanicBackground.g(0);
         CanvasResizeController.initializeFireworkSpawnArea(240, 0, 640, 0, -6532);
-        bm.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
+        GameRenderAudioHelpers.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
         Widget.initializeDiagnosticOverlay(1, PasswordFieldRenderer.field_D);
         LoginPanel.h((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);

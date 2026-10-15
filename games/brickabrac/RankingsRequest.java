@@ -55,8 +55,8 @@ final class RankingsRequest extends IntrusiveNode {
           if (null != WidgetTextLayout.field_e) {
             DelayedPacket.a(false, WidgetTextLayout.field_e);
           }
-          if (bm.contextActions != null) {
-            bm.contextActions.drawContextMenu((byte) -126, param0);
+          if (GameRenderAudioHelpers.contextActions != null) {
+            GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, param0);
           }
           MembershipBenefitsScreen.a(param0, false);
           if (null != CircleBody.reportAbuseDialog) {
@@ -70,8 +70,8 @@ final class RankingsRequest extends IntrusiveNode {
         if (null != WidgetTextLayout.field_e) {
           DelayedPacket.a(false, WidgetTextLayout.field_e);
         }
-        if (bm.contextActions != null) {
-          bm.contextActions.drawContextMenu((byte) -126, param0);
+        if (GameRenderAudioHelpers.contextActions != null) {
+          GameRenderAudioHelpers.contextActions.drawContextMenu((byte) -126, param0);
         }
         MembershipBenefitsScreen.a(param0, false);
         if (null != CircleBody.reportAbuseDialog) {

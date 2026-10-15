@@ -413,8 +413,8 @@ final class GameplayScreen extends GameScreen {
             }
           }
         }
-        bm.playGameplayAudioEvents(96, 96, false, -30791, var19);
-        bm.playGameplayAudioEvents(48, 48, true, -30791, var7);
+        GameRenderAudioHelpers.playGameplayAudioEvents(96, 96, false, -30791, var19);
+        GameRenderAudioHelpers.playGameplayAudioEvents(48, 48, true, -30791, var7);
         if (this.match.playerCount == 1) {
           var20 = this.match.playerBoards[0];
           if (var20.levelIndex > this.lastReportedLevel) {

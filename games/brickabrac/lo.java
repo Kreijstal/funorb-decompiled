@@ -20,43 +20,43 @@ final class lo {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, PlayerBoard param7) {
-        Object var8 = null;
-        String var8_ref = null;
-        RuntimeException var8_ref2 = null;
-        String stackIn_6_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static void drawBoardResultWord(int boardWidth, int alpha256, int obfuscationGuard, int x, int scaleDivisor, int y, int boardHeight, PlayerBoard board) {
+        Object unusedTextSlot = null;
+        String resultText = null;
+        RuntimeException failure = null;
+        String formattedResult = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          var8 = null;
-          if (param7.resultWord != 0 &&
-            1 != param4) {
-            if (param7.resultWord < 0) {
-              stackIn_6_0 = Integer.toString(param7.resultWord);
+          unusedTextSlot = null;
+          if (board.resultWord != 0 &&
+            1 != scaleDivisor) {
+            if (board.resultWord < 0) {
+              formattedResult = Integer.toString(board.resultWord);
             } else {
-              stackIn_6_0 = rd.a(hh.field_e, new String[]{Integer.toString(param7.resultWord)}, (byte) 103);
+              formattedResult = rd.a(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
             }
-            var8_ref = stackIn_6_0;
-            ce.field_e.drawCenteredAlpha(var8_ref, param3 + param0 / (param4 * 2), 60 / param4 + (param5 + (param6 / (param4 * 2) + ce.field_e.ascent)), 2, -1, param1);
+            resultText = formattedResult;
+            ce.field_e.drawCenteredAlpha(resultText, x + boardWidth / (scaleDivisor * 2), 60 / scaleDivisor + (y + (boardHeight / (scaleDivisor * 2) + ce.field_e.ascent)), 2, -1, alpha256);
           }
-          if (param2 == 60) {
+          if (obfuscationGuard == 60) {
             return;
           }
           lo.a((byte) 126);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref2 = decompiledCaughtException;
-          stackIn_12_0 = var8_ref2;
-          stackIn_12_1 = new StringBuilder().append("lo.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("lo.A(").append(boardWidth).append(',').append(alpha256).append(',').append(obfuscationGuard).append(',').append(x).append(',').append(scaleDivisor).append(',').append(y).append(',').append(boardHeight).append(',');
+          if (board == null) {
+            boardSummary = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            boardSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(')').toString());
         }
     }
 

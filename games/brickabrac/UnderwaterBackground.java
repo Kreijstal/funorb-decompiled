@@ -66,7 +66,7 @@ final class UnderwaterBackground extends BackgroundScene {
           ConstructionBackground.waterCharacterSprite = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.field_m);
           SocialTabbedPanel.field_b = new RgbSprite(ConnectionPhase.waterFarSprite.canvasWidth, ConnectionPhase.waterFarSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-49, SocialTabbedPanel.field_b);
-          ConnectionPhase.waterFarSprite.g(0, 0);
+          ConnectionPhase.waterFarSprite.drawVerticallyFlipped(0, 0);
           sc.popRaster(-81);
           WeightedLruCache.field_e = jh.a(0, wm.waterNearSprite);
           GameplayScreen.field_l = jh.a(0, LoginPanel.waterMidSprite);

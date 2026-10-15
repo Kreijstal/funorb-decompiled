@@ -48,8 +48,8 @@ final class LevelSequence {
         if (param1 != -1) {
           return true;
         }
-        if (null != bm.contextActions &&
-          bm.contextActions.handleContextCancelKey(param1 ^ -2100)) {
+        if (null != GameRenderAudioHelpers.contextActions &&
+          GameRenderAudioHelpers.contextActions.handleContextCancelKey(param1 ^ -2100)) {
           ActivityIndicatorWidget.f((byte) -123);
           return true;
         }

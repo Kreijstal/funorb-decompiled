@@ -76,7 +76,7 @@ final class gr {
           WidgetLayer.field_J = UiComponent.field_ib;
           FullscreenFailureKind.field_c = kp.field_e;
           field_c = PlayerInputBatch.field_i;
-          Ball.field_w = RankingsRequest.field_o;
+          Ball.activeBoardMaskSprite = RankingsRequest.field_o;
           we.field_b = ch.field_k;
           bq.field_e = hc.field_a;
           TextHotspotRegion.field_o = WidgetTextLayout.field_j;
@@ -86,7 +86,7 @@ final class gr {
           bq.field_e = JungleBackground.field_v;
           ArchiveNetworkClient.field_s = IntHistoryBuffer.field_l;
           FullscreenFailureKind.field_c = MultiValueSliderRenderer.field_b;
-          Ball.field_w = MultiValueSliderRenderer.field_e;
+          Ball.activeBoardMaskSprite = MultiValueSliderRenderer.field_e;
           WidgetLayer.field_J = Ball.field_D;
           TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;
           FireworkBurst.activeBrickSprites = TranslucentNineSliceFrame.field_m;

@@ -71,15 +71,15 @@ final class gd {
             if (param1 < 99) {
               return (byte[]) null;
             }
-            if (bm.field_a != null) {
+            if (GameRenderAudioHelpers.field_a != null) {
               for (var2 = 0; MultiplayerExitScreen.field_x.length > var2; var2++) {
                 if (MultiplayerExitScreen.field_x[var2] == param0 &&
                   MusicVoiceMixer.field_u[var2] > 0) {
                   dupTemp$3 = MusicVoiceMixer.field_u[var2] - 1;
-                  arrayValue$4 = bm.field_a[var2];
+                  arrayValue$4 = GameRenderAudioHelpers.field_a[var2];
                   MusicVoiceMixer.field_u[var2] = dupTemp$3;
                   var3 = arrayValue$4[dupTemp$3];
-                  bm.field_a[var2][MusicVoiceMixer.field_u[var2]] = null;
+                  GameRenderAudioHelpers.field_a[var2][MusicVoiceMixer.field_u[var2]] = null;
                   return var3;
                 }
               }
@@ -96,15 +96,15 @@ final class gd {
           if (param1 < 99) {
             return (byte[]) null;
           }
-          if (bm.field_a != null) {
+          if (GameRenderAudioHelpers.field_a != null) {
             for (var2Lifetime4 = 0; MultiplayerExitScreen.field_x.length > var2Lifetime4; var2Lifetime4++) {
               if (MultiplayerExitScreen.field_x[var2Lifetime4] == param0 &&
                 MusicVoiceMixer.field_u[var2Lifetime4] > 0) {
                 dupTemp$6 = MusicVoiceMixer.field_u[var2Lifetime4] - 1;
-                arrayValue$7 = bm.field_a[var2Lifetime4];
+                arrayValue$7 = GameRenderAudioHelpers.field_a[var2Lifetime4];
                 MusicVoiceMixer.field_u[var2Lifetime4] = dupTemp$6;
                 var3Lifetime4 = arrayValue$7[dupTemp$6];
-                bm.field_a[var2Lifetime4][MusicVoiceMixer.field_u[var2Lifetime4]] = null;
+                GameRenderAudioHelpers.field_a[var2Lifetime4][MusicVoiceMixer.field_u[var2Lifetime4]] = null;
                 return var3Lifetime4;
               }
             }
@@ -130,17 +130,17 @@ final class gd {
           if (param1 < 99) {
             return (byte[]) null;
           }
-          if (bm.field_a == null) {
+          if (GameRenderAudioHelpers.field_a == null) {
             return new byte[param0];
           }
           for (var2Lifetime1 = 0; MultiplayerExitScreen.field_x.length > var2Lifetime1; var2Lifetime1++) {
             if (MultiplayerExitScreen.field_x[var2Lifetime1] == param0 &&
               MusicVoiceMixer.field_u[var2Lifetime1] > 0) {
               dupTemp$15 = MusicVoiceMixer.field_u[var2Lifetime1] - 1;
-              arrayValue$16 = bm.field_a[var2Lifetime1];
+              arrayValue$16 = GameRenderAudioHelpers.field_a[var2Lifetime1];
               MusicVoiceMixer.field_u[var2Lifetime1] = dupTemp$15;
               var3Lifetime1 = arrayValue$16[dupTemp$15];
-              bm.field_a[var2Lifetime1][MusicVoiceMixer.field_u[var2Lifetime1]] = null;
+              GameRenderAudioHelpers.field_a[var2Lifetime1][MusicVoiceMixer.field_u[var2Lifetime1]] = null;
               return var3Lifetime1;
             }
           }
@@ -157,17 +157,17 @@ final class gd {
           if (param1 < 99) {
             return (byte[]) null;
           }
-          if (bm.field_a == null) {
+          if (GameRenderAudioHelpers.field_a == null) {
             return new byte[param0];
           }
           for (var2Lifetime2 = 0; MultiplayerExitScreen.field_x.length > var2Lifetime2; var2Lifetime2++) {
             if (MultiplayerExitScreen.field_x[var2Lifetime2] == param0 &&
               MusicVoiceMixer.field_u[var2Lifetime2] > 0) {
               dupTemp$8 = MusicVoiceMixer.field_u[var2Lifetime2] - 1;
-              arrayValue$9 = bm.field_a[var2Lifetime2];
+              arrayValue$9 = GameRenderAudioHelpers.field_a[var2Lifetime2];
               MusicVoiceMixer.field_u[var2Lifetime2] = dupTemp$8;
               var3Lifetime2 = arrayValue$9[dupTemp$8];
-              bm.field_a[var2Lifetime2][MusicVoiceMixer.field_u[var2Lifetime2]] = null;
+              GameRenderAudioHelpers.field_a[var2Lifetime2][MusicVoiceMixer.field_u[var2Lifetime2]] = null;
               return var3Lifetime2;
             }
           }
@@ -183,17 +183,17 @@ final class gd {
         if (param1 < 99) {
           return (byte[]) null;
         }
-        if (bm.field_a == null) {
+        if (GameRenderAudioHelpers.field_a == null) {
           return new byte[param0];
         }
         for (var2Lifetime3 = 0; MultiplayerExitScreen.field_x.length > var2Lifetime3; var2Lifetime3++) {
           if (MultiplayerExitScreen.field_x[var2Lifetime3] == param0 &&
             MusicVoiceMixer.field_u[var2Lifetime3] > 0) {
             dupTemp$10 = MusicVoiceMixer.field_u[var2Lifetime3] - 1;
-            arrayValue$11 = bm.field_a[var2Lifetime3];
+            arrayValue$11 = GameRenderAudioHelpers.field_a[var2Lifetime3];
             MusicVoiceMixer.field_u[var2Lifetime3] = dupTemp$10;
             var3Lifetime3 = arrayValue$11[dupTemp$10];
-            bm.field_a[var2Lifetime3][MusicVoiceMixer.field_u[var2Lifetime3]] = null;
+            GameRenderAudioHelpers.field_a[var2Lifetime3][MusicVoiceMixer.field_u[var2Lifetime3]] = null;
             return var3Lifetime3;
           }
         }

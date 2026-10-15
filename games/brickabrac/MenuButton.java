@@ -154,7 +154,7 @@ final class MenuButton {
           if (this.actionId == 29) {
             var4_refLifetime1.drawTransparent(this.x + (this.width - var11.canvasWidth) / 2, this.y + (-var11.canvasHeight + this.height) / 2);
           } else {
-            var4_refLifetime1.g((-var11.canvasWidth + this.width) / 2 + this.x, this.y + (-var11.canvasHeight + this.height) / 2);
+            var4_refLifetime1.drawVerticallyFlipped((-var11.canvasWidth + this.width) / 2 + this.x, this.y + (-var11.canvasHeight + this.height) / 2);
           }
           return;
         }

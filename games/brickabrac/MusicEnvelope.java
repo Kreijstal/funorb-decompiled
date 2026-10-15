@@ -173,10 +173,10 @@ final class MusicEnvelope {
             }
             if (entry.pressedButton != 0) {
               SpriteGeometry.a(-1, entry, f.ignoreListPane.scrollPane, (int[]) null, entry.actionName, -1, (byte) -58, 0L, entry.name);
-              contextForRemove = bm.contextActions;
+              contextForRemove = GameRenderAudioHelpers.contextActions;
               removeIgnoreCaption = ng.field_e;
               contextForRemove.contextMenu.addAction(removeIgnoreCaption, 7, (byte) 126);
-              contextForLayout = bm.contextActions;
+              contextForLayout = GameRenderAudioHelpers.contextActions;
               pressX = LoadingProgressDialog.pressX;
               pressY = PlayerNameChooserPanel.pressY;
               contextForLayout.contextMenu.layoutAtAnchor(pressY, -126, 0, 0, pressX);

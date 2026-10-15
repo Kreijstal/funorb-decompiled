@@ -334,7 +334,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_x_cannot_join_inprogress", (byte) 102);
                 if (var2 != null) {
-                  bm.field_e = MenuButton.a(var2, (byte) 122);
+                  GameRenderAudioHelpers.field_e = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = nk.a("mu_x_declined_invite", (byte) 112);
                 if (var2 != null) {
@@ -2510,7 +2510,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mp_rematchnewgame", (byte) -110);
                 if (null != var2) {
-                  bm.field_b = MenuButton.a(var2, (byte) 71);
+                  GameRenderAudioHelpers.field_b = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("mp_rematchnewgame_unrated", (byte) -116);
                 if (null != var2) {

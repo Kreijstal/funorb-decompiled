@@ -136,15 +136,15 @@ final class ActivityIndicatorWidget extends Widget {
     }
 
     final static void f(byte param0) {
-        if (null != bm.contextActions &&
-          bm.contextActions.anchorComponent != null) {
-          bm.contextActions.anchorComponent.selected = false;
+        if (null != GameRenderAudioHelpers.contextActions &&
+          GameRenderAudioHelpers.contextActions.anchorComponent != null) {
+          GameRenderAudioHelpers.contextActions.anchorComponent.selected = false;
         }
         if (param0 >= -39) {
           ActivityIndicatorWidget.a(0, 110);
         }
         o.field_b = null;
-        bm.contextActions = null;
+        GameRenderAudioHelpers.contextActions = null;
     }
 
     final void updatePointer(Widget focusRoot, byte obfuscationGuard, int parentX, int parentY) {
