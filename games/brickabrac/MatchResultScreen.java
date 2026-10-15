@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MatchResultScreen extends MenuScreen {
-    static int[] field_w;
+    static int[] logoPiecePose;
     static String field_r;
     static boolean field_u;
-    static int field_t;
+    static int logoAnimationTicks;
     static boolean field_s;
     static int[][] field_v;
 
@@ -162,7 +162,7 @@ abstract class MatchResultScreen extends MenuScreen {
 
     void handleNavigationKey(int obfuscationGuard, int keyCode, char character) {
         if (obfuscationGuard != -120) {
-          field_w = (int[]) null;
+          logoPiecePose = (int[]) null;
         }
         this.selection.navigateHorizontal(0, -1);
     }
@@ -192,7 +192,7 @@ abstract class MatchResultScreen extends MenuScreen {
           return;
         }
         field_r = null;
-        field_w = null;
+        logoPiecePose = null;
         field_v = (int[][]) null;
     }
 

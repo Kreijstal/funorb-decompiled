@@ -5,7 +5,7 @@ final class ClientException extends RuntimeException {
     static BufferedFile[] field_g;
     Throwable originalCause;
     String context;
-    static RgbSprite field_b;
+    static RgbSprite gameOverMessageSprite;
     static int field_e;
     static String field_c;
     static int[] meshHighlightTable;
@@ -22,7 +22,7 @@ final class ClientException extends RuntimeException {
           ClientException.buildRgbSprites(-93);
         }
         field_g = null;
-        field_b = null;
+        gameOverMessageSprite = null;
         field_c = null;
         meshHighlightTable = null;
     }

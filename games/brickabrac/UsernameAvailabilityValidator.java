@@ -27,8 +27,8 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           IndexedSpriteGeometry.pushSpriteRaster(-89, var1);
           MeshRasterState.syncRasterClip();
           Rasterizer2D.clear();
-          MatchResultScreen.field_t = 0;
-          jl.b(-115);
+          MatchResultScreen.logoAnimationTicks = 0;
+          LogoRenderHelpers.drawLogoPieces(-115);
           var3 = var1.copy();
           for (var4 = 0; 15 > var4; var4++) {
             var3.d(-2, -2, 16777215);

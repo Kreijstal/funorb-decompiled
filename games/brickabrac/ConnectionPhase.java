@@ -77,14 +77,14 @@ final class ConnectionPhase {
           if (ResourceArchiveFactory.field_a != null) {
             try {
               ResourceArchiveFactory.field_a.seek(0, 0L);
-              ResourceArchiveFactory.field_a.write(jl.incomingPackets.data, jl.incomingPackets.position, 24, -1);
+              ResourceArchiveFactory.field_a.write(LogoRenderHelpers.incomingPackets.data, LogoRenderHelpers.incomingPackets.position, 24, -1);
             } catch (Exception exception) {
             }
           }
           if (param0 != -1) {
             nameColumnHeadingText = (String) null;
           }
-          jl.incomingPackets.position = jl.incomingPackets.position + 24;
+          LogoRenderHelpers.incomingPackets.position = LogoRenderHelpers.incomingPackets.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

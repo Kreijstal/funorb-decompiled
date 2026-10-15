@@ -15,7 +15,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         var3 = BrickABrac.field_J ? 1 : 0;
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (!IncomingPacketHelpers.readNextGamePacket(ch.incomingPacketLengths, (byte) 64)))) {
-          stackIn_11_0 = this.handleGamePacket(jl.incomingPackets, (byte) 47, IntrusiveHashTable.currentPacketOpcode);
+          stackIn_11_0 = this.handleGamePacket(LogoRenderHelpers.incomingPackets, (byte) 47, IntrusiveHashTable.currentPacketOpcode);
           if (var3 == 0) {
             if (stackIn_11_0) {
               continue;
@@ -241,7 +241,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                   var2 = 1;
                   var3 = -1;
                   while (true) {
-                    stackIn_39_0 = jl.pollKeyEvent((byte) 5);
+                    stackIn_39_0 = LogoRenderHelpers.pollKeyEvent((byte) 5);
                     if (stackIn_39_0) {
                       stackIn_76_0 = MeshAttributeRecord.currentKeyCode;
                       stackIn_76_1 = -1;

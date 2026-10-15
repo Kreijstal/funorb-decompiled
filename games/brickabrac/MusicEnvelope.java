@@ -260,7 +260,7 @@ final class MusicEnvelope {
         int[] var12 = null;
         var8 = BrickABrac.field_J ? 1 : 0;
         try {
-          var10 = jl.incomingPackets;
+          var10 = LogoRenderHelpers.incomingPackets;
           if (obfuscationGuard != 22) {
             field_l = (String) null;
           }

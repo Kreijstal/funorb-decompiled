@@ -169,7 +169,7 @@ final class FullscreenDialogHelpers {
                 ValidationStatus.fullscreenDialogRows[rowIndexOrPrefixCount] = CacheIoWorker.fullscreenDialogWrapScratch[rowIndexOrPrefixCount];
               }
               ValidationStatus.fullscreenDialogRows[rowCountOrMarkerIndex - 3] = "";
-              ValidationStatus.fullscreenDialogRows[rowCountOrMarkerIndex - 2] = ja.field_b;
+              ValidationStatus.fullscreenDialogRows[rowCountOrMarkerIndex - 2] = BoardPresentationHelpers.field_b;
               BrickABrac.fullscreenDialogRowButtons[rowCountOrMarkerIndex - 2] = 0;
               UsernameSuggestionPanel.fullscreenDialogButtonActions[0] = 3;
               ValidationStatus.fullscreenDialogRows[rowCountOrMarkerIndex - 1] = LevelSequence.field_a;

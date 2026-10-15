@@ -7,14 +7,14 @@ final class IncomingPacketHelpers {
     static ResourceArchive field_a;
     static LobbyGame pendingLobbyGame;
     static RgbSprite field_e;
-    static RgbSprite field_b;
+    static RgbSprite gameLogoSprite;
 
     public static void a(int param0) {
         field_a = null;
         chocolateNearSprite = null;
         pendingLobbyGame = null;
         field_e = null;
-        field_b = null;
+        gameLogoSprite = null;
         if (param0 > -68) {
           int[] var2 = (int[]) null;
           IncomingPacketHelpers.readNextGamePacket((int[]) null, (byte) -73);
@@ -51,9 +51,9 @@ final class IncomingPacketHelpers {
               nowMillis > queuedPacket.deliverAfterMillis) {
               queuedPacket.unlink((byte) 111);
               ga.incomingPacketLength = queuedPacket.data.length;
-              jl.incomingPackets.position = 0;
+              LogoRenderHelpers.incomingPackets.position = 0;
               for (queuedByteIndex = 0; ga.incomingPacketLength > queuedByteIndex; queuedByteIndex++) {
-                jl.incomingPackets.data[queuedByteIndex] = queuedPacket.data[queuedByteIndex];
+                LogoRenderHelpers.incomingPackets.data[queuedByteIndex] = queuedPacket.data[queuedByteIndex];
               }
               TextFieldRenderer.thirdPreviousPacketOpcode = we.secondPreviousPacketOpcode;
               we.secondPreviousPacketOpcode = UiComponent.previousPacketOpcode;
@@ -64,12 +64,12 @@ final class IncomingPacketHelpers {
           }
           while (true) {
             if (0 > PasswordFieldRenderer.pendingPacketOpcode) {
-              jl.incomingPackets.position = 0;
+              LogoRenderHelpers.incomingPackets.position = 0;
               if (!PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
                 return false;
               }
-              PasswordFieldRenderer.pendingPacketOpcode = jl.incomingPackets.readCipheredOpcode(true);
-              jl.incomingPackets.position = 0;
+              PasswordFieldRenderer.pendingPacketOpcode = LogoRenderHelpers.incomingPackets.readCipheredOpcode(true);
+              LogoRenderHelpers.incomingPackets.position = 0;
               ga.incomingPacketLength = packetLengths[PasswordFieldRenderer.pendingPacketOpcode];
             }
             if (!TextWidgetRenderer.ensureGamePacketBody((byte) -104)) {
@@ -92,7 +92,7 @@ final class IncomingPacketHelpers {
             }
             delayedPacket = new DelayedPacket(nowMillis + (long)delayMillis, PasswordFieldRenderer.pendingPacketOpcode, new byte[ga.incomingPacketLength]);
             for (receivedByteIndex = 0; ga.incomingPacketLength > receivedByteIndex; receivedByteIndex++) {
-              delayedPacket.data[receivedByteIndex] = jl.incomingPackets.data[receivedByteIndex];
+              delayedPacket.data[receivedByteIndex] = LogoRenderHelpers.incomingPackets.data[receivedByteIndex];
             }
             AchievementMaskRequest.delayedPackets.addLast(delayedPacket, (byte) 3);
             PasswordFieldRenderer.pendingPacketOpcode = -1;

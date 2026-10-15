@@ -19,7 +19,7 @@ final class PacketReceiveHelpers {
           if (obfuscationGuard != 20) {
             PacketReceiveHelpers.a(-79);
           }
-          if (length <= jl.incomingPackets.position) {
+          if (length <= LogoRenderHelpers.incomingPackets.position) {
             return true;
           }
           if (null == WhirlpoolHasher.gameTransport) {
@@ -38,16 +38,16 @@ final class PacketReceiveHelpers {
               hn.closeGameTransport((byte) 123);
               return false;
             }
-            if (availableBytes > length - jl.incomingPackets.position) {
-              availableBytes = -jl.incomingPackets.position + length;
+            if (availableBytes > length - LogoRenderHelpers.incomingPackets.position) {
+              availableBytes = -LogoRenderHelpers.incomingPackets.position + length;
             }
-            WhirlpoolHasher.gameTransport.readFully(obfuscationGuard + 25806, jl.incomingPackets.data, availableBytes, jl.incomingPackets.position);
+            WhirlpoolHasher.gameTransport.readFully(obfuscationGuard + 25806, LogoRenderHelpers.incomingPackets.data, availableBytes, LogoRenderHelpers.incomingPackets.position);
             RichTextLayout.lastGameReadMillis = MonotonicTime.nowMillis(false);
-            jl.incomingPackets.position = jl.incomingPackets.position + availableBytes;
-            if (length > jl.incomingPackets.position) {
+            LogoRenderHelpers.incomingPackets.position = LogoRenderHelpers.incomingPackets.position + availableBytes;
+            if (length > LogoRenderHelpers.incomingPackets.position) {
               return false;
             }
-            jl.incomingPackets.position = 0;
+            LogoRenderHelpers.incomingPackets.position = 0;
             return true;
           } catch (java.io.IOException caughtReadFailure) {
             caughtFailure = caughtReadFailure;

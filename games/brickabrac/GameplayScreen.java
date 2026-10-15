@@ -606,7 +606,7 @@ final class GameplayScreen extends GameScreen {
             this.setResultLevel(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.queueScoreTableSubmission(0);
             this.sendProgressUpdate(NameEntryPopup.field_Yb, this.resultLevel, -UsernameAvailabilityValidator.field_l + MonotonicTime.nowMillis(false), false, 1000);
-            jj.field_d = jj.field_d | ja.a(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
+            jj.field_d = jj.field_d | BoardPresentationHelpers.combineSequenceLevelAttributes(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
             stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
             WidgetPaintStyle.field_a = stackIn_8_0;
           }

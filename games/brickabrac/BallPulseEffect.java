@@ -49,7 +49,7 @@ final class BallPulseEffect extends IntrusiveNode {
           AchievementSubmission.a(param0, 115);
           ScorePopup.initializeMeshLighting(-37);
           UsernameAvailabilityValidator.e(-41);
-          MatchResultScreen.field_t = -BoundedFile.field_i + 0;
+          MatchResultScreen.logoAnimationTicks = -BoundedFile.field_i + 0;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -96,7 +96,7 @@ final class BallPulseEffect extends IntrusiveNode {
         BitPacketBuffer var8 = null;
         QuickChatPhraseDefinition var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
-        var8 = jl.incomingPackets;
+        var8 = LogoRenderHelpers.incomingPackets;
         var2 = var8;
         var3 = var8.readUnsignedByte(obfuscationGuard + 188);
         gj.receivedChatChannel = 127 & var3;
@@ -181,7 +181,7 @@ final class BallPulseEffect extends IntrusiveNode {
         BitPacketBuffer var8 = null;
         QuickChatPhraseDefinition var9 = null;
         var7 = BrickABrac.field_J ? 1 : 0;
-        var8 = jl.incomingPackets;
+        var8 = LogoRenderHelpers.incomingPackets;
         var2 = var8;
         var3 = var8.readUnsignedByte(param0 + 188);
         gj.receivedChatChannel = 127 & var3;

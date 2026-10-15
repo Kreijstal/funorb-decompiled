@@ -63,7 +63,7 @@ final class WhirlpoolHasher {
           var1 = var6 + ":";
           for (var2 = 0; var2 < ga.incomingPacketLength; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & jl.incomingPackets.data[var2];
+            var3 = 255 & LogoRenderHelpers.incomingPackets.data[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {

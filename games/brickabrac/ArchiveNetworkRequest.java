@@ -133,11 +133,11 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         if (!RadialSelectorWidget.field_S.ensureGroupAvailableByName("commonui", -28138)) {
           return ConditionalTextValue.field_k + " - " + RadialSelectorWidget.field_S.getGroupProgressByName(0, "commonui") + "%";
         }
-        if (!ja.field_c.ensureIndex((byte) -127)) {
+        if (!BoardPresentationHelpers.field_c.ensureIndex((byte) -127)) {
           return IntHistoryBuffer.field_k;
         }
-        if (!ja.field_c.ensureAllGroupsAvailable(param0 ^ 12)) {
-          return BrowserResizeNotificationHelpers.field_e + " - " + ja.field_c.getProgress(-4126) + "%";
+        if (!BoardPresentationHelpers.field_c.ensureAllGroupsAvailable(param0 ^ 12)) {
+          return BrowserResizeNotificationHelpers.field_e + " - " + BoardPresentationHelpers.field_c.getProgress(-4126) + "%";
         }
         return kd.field_a;
     }

@@ -132,7 +132,7 @@ final class ScreenshotViewer {
             }
           }
           if (ea.field_a) {
-            while (jl.pollKeyEvent((byte) 5)) {
+            while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
               var5 = this.a((byte) -120);
               if (var5 == 0) {
                 continue;

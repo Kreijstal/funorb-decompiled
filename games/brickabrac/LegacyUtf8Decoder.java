@@ -153,12 +153,12 @@ final class LegacyUtf8Decoder {
         return null == GameplayRenderHelpers.fullscreenCanvas ? NinjaBackground.frameFocus : true;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3) {
-        EmailLoginCredentials.fullscreenDialogButtonPaint = param0;
-        LevelCompleteScreen.fullscreenDialogSelectedPaint = param1;
-        NewAchievementsScreen.fullscreenDialogBodyPaint = param3;
-        if (param2) {
-          byte[] var5 = (byte[]) null;
+    final static void configureFullscreenDialogPaints(int buttonPaint, int selectedPaint, boolean obfuscationGuard, int bodyPaint) {
+        EmailLoginCredentials.fullscreenDialogButtonPaint = buttonPaint;
+        LevelCompleteScreen.fullscreenDialogSelectedPaint = selectedPaint;
+        NewAchievementsScreen.fullscreenDialogBodyPaint = bodyPaint;
+        if (obfuscationGuard) {
+          byte[] unusedBytes = (byte[]) null;
           LegacyUtf8Decoder.decode((byte) 117, 3, -87, (byte[]) null);
         }
     }

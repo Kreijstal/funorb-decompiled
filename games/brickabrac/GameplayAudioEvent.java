@@ -135,7 +135,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
             return;
           }
           ParallaxMusicHelpers.field_b.i(82);
-          while (jl.pollKeyEvent((byte) 5)) {
+          while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
             ParallaxMusicHelpers.field_b.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
           return;

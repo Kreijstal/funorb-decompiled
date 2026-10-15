@@ -1361,7 +1361,7 @@ final class MidiSynthesizer extends AudioStream {
           }
           var15_int = param7.descent + param7.capHeight;
           var16 = param7.capHeight;
-          ja.a(param12, param9, var15_int, param3, param7, param13, var15_int, -111, param5, var16, param1, param7, param8, 480, param0, param6, var16, param11, param14, param2, param4);
+          BoardPresentationHelpers.configureFullscreenDialogFromSprites(param12, param9, var15_int, param3, param7, param13, var15_int, -111, param5, var16, param1, param7, param8, 480, param0, param6, var16, param11, param14, param2, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

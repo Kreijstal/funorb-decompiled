@@ -33,27 +33,27 @@ final class DelegatingCanvas extends java.awt.Canvas {
           var2 = BrickABrac.field_J ? 1 : 0;
           if (13 != pp.field_a) {
             if (pp.field_a == 14) {
-              if (0 < jl.field_a) {
-                fieldTemp$0 = jl.field_a - 1;
-                jl.field_a = jl.field_a - 1;
+              if (0 < LogoRenderHelpers.field_a) {
+                fieldTemp$0 = LogoRenderHelpers.field_a - 1;
+                LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                 if (0 == fieldTemp$0) {
                   SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                   LoadingProgressDialog.field_eb = SaveResultsPromptScreen.field_y;
                   pp.field_a = -1;
-                  jl.field_a = 250;
+                  LogoRenderHelpers.field_a = 250;
                   ga.field_i = 0;
                   GrowableIntList.field_i = un.field_e;
                 }
               }
             } else {
               if (pp.field_a == 0) {
-                if (0 < jl.field_a) {
-                  fieldTemp$1 = jl.field_a - 1;
-                  jl.field_a = jl.field_a - 1;
+                if (0 < LogoRenderHelpers.field_a) {
+                  fieldTemp$1 = LogoRenderHelpers.field_a - 1;
+                  LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                   if (0 == fieldTemp$1) {
                     pp.field_a = -1;
                     ga.field_i = 1;
-                    jl.field_a = 250;
+                    LogoRenderHelpers.field_a = 250;
                     GrowableIntList.field_i = un.field_e;
                     SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                     LoadingProgressDialog.field_eb = va.field_d;
@@ -62,9 +62,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
               } else {
                 if (pp.field_a != 1) {
                   if (2 == pp.field_a) {
-                    if (0 < jl.field_a) {
-                      fieldTemp$2 = jl.field_a - 1;
-                      jl.field_a = jl.field_a - 1;
+                    if (0 < LogoRenderHelpers.field_a) {
+                      fieldTemp$2 = LogoRenderHelpers.field_a - 1;
+                      LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                       if (0 == fieldTemp$2) {
                         LoadingProgressDialog.field_eb = KeyboardInput.field_b;
                         pp.field_a = -1;
@@ -92,9 +92,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
                           }
                           break regionExit1;
                         }
-                        if (jl.field_a > 0) {
-                          fieldTemp$3 = jl.field_a - 1;
-                          jl.field_a = jl.field_a - 1;
+                        if (LogoRenderHelpers.field_a > 0) {
+                          fieldTemp$3 = LogoRenderHelpers.field_a - 1;
+                          LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                           if (fieldTemp$3 == 0) {
                             ga.field_i = 11;
                             pp.field_a = -1;
@@ -109,15 +109,15 @@ final class DelegatingCanvas extends java.awt.Canvas {
               }
             }
           } else {
-            if (0 < jl.field_a) {
-              fieldTemp$4 = jl.field_a - 1;
-              jl.field_a = jl.field_a - 1;
+            if (0 < LogoRenderHelpers.field_a) {
+              fieldTemp$4 = LogoRenderHelpers.field_a - 1;
+              LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
               if (0 == fieldTemp$4) {
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 pp.field_a = -1;
                 GrowableIntList.field_i = un.field_e;
                 LoadingProgressDialog.field_eb = BrickGameLayerController.field_d;
-                jl.field_a = 250;
+                LogoRenderHelpers.field_a = 250;
                 ga.field_i = 14;
               }
             }

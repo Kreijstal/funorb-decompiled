@@ -197,10 +197,10 @@ final class BitPacketBuffer extends PacketBuffer {
             ScreenshotViewer.field_r.b(7 + (-ScreenshotViewer.field_r.width + 510) / 2, 260, var12);
           }
           if (3 == var24.boardState) {
-            ja.a((byte) -113, ClientException.field_b, var8, var9, var24);
+            BoardPresentationHelpers.drawBoardEndOverlay((byte) -113, ClientException.gameOverMessageSprite, var8, var9, var24);
           }
           if (var24.boardState == 5) {
-            ja.a((byte) -104, UnderwaterBackground.field_u, var8, var9, var24);
+            BoardPresentationHelpers.drawBoardEndOverlay((byte) -104, UnderwaterBackground.gameCompletedMessageSprite, var8, var9, var24);
           }
           if (null != var24.displayedWarning) {
             BufferedFile.drawPowerUpWarning(destinationX, var24, var24.displayedWarning, scaleDivisor, 25, destinationY);

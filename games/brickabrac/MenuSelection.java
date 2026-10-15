@@ -259,7 +259,7 @@ final class MenuSelection {
           if (obfuscationGuard != -71) {
             return;
           }
-          incoming = jl.incomingPackets;
+          incoming = LogoRenderHelpers.incomingPackets;
           replyKind = incoming.readUnsignedByte(255);
           if (0 != replyKind) {
             if (replyKind == 1) {

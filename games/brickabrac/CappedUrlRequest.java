@@ -72,7 +72,7 @@ final class CappedUrlRequest implements Runnable {
             try {
               WhirlpoolHasher.gameTransport = new BufferedSocket((java.net.Socket) (BrowserResizeNotificationHelpers.field_d.result), FramedMenuScreen.field_s);
               TextFieldValidator.outgoingPackets.position = 0;
-              var4 = jl.incomingPackets;
+              var4 = LogoRenderHelpers.incomingPackets;
               var5 = var4;
               stackIn_11_0 = (!param0) ? -1 : -2;
               TextFieldRenderer.thirdPreviousPacketOpcode = stackIn_11_0;

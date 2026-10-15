@@ -22,7 +22,7 @@ final class ResourceArchiveFactory {
 
     final static String readIncomingString(byte obfuscationGuard) {
         int var1 = -46 % ((53 - obfuscationGuard) / 63);
-        return jl.incomingPackets.readCp1252String(-1);
+        return LogoRenderHelpers.incomingPackets.readCp1252String(-1);
     }
 
     final static ResourceArchive createResourceArchive(boolean prefetch, int archiveId, boolean cleanupEnabled, int decodedFilePolicy, boolean discardPackedGroups, boolean obfuscationGuard) {

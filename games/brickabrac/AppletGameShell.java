@@ -410,7 +410,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
                 this.c(false);
                 BallPulseEffect.framebuffer = MusicEnvelope.createFramebuffer((java.awt.Component) ((Object) CacheIoRequest.field_D), WeightedLruCache.canvasWidth, -2414, WidgetPaintStyle.canvasHeight);
                 this.initializeClient(false);
-                MenuSelection.gameClock = ja.createGameClock((byte) 123);
+                MenuSelection.gameClock = BoardPresentationHelpers.createGameClock((byte) 123);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != BufferedFile.shutdownDeadlineMillis) {

@@ -767,7 +767,7 @@ public final class BrickABrac extends InteractiveGameClient {
         Widget.c(-14711);
         WidgetTextLayout.a(obfuscationGuard);
         QuickChatHelpDialog.d((byte) 98);
-        jl.a(31186);
+        LogoRenderHelpers.a(31186);
         PopupWidgetLayer.i(111);
         WidgetLayer.a((byte) -17);
         WidgetGroup.f((byte) -67);
@@ -850,7 +850,7 @@ public final class BrickABrac extends InteractiveGameClient {
         StrongCacheEntry.h(928072);
         ProxySocketConnector.b((byte) -54);
         AudioFilter.releaseScratch();
-        ja.a(2);
+        BoardPresentationHelpers.a(2);
         IntrusiveHashIterator.c(-93);
         DualLinkIterator.a((byte) 84);
         LevelMetadata.a((byte) 127);

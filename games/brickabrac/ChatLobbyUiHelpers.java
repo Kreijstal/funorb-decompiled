@@ -239,7 +239,7 @@ final class ChatLobbyUiHelpers {
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           regionExit1: {
-            packet = jl.incomingPackets;
+            packet = LogoRenderHelpers.incomingPackets;
             responseKind = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
             if (responseKind != 0 &&
               responseKind != 1 &&

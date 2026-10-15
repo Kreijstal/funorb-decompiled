@@ -51,7 +51,7 @@ final class f {
           if (obfuscationGuard != 7) {
             f.a(-30);
           }
-          packet = jl.incomingPackets;
+          packet = LogoRenderHelpers.incomingPackets;
           responseType = packet.readUnsignedByte(255);
           if (0 == responseType) {
             tableId = packet.readUnsignedShort(65280);

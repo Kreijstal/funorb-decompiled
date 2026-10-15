@@ -300,11 +300,11 @@ final class BubbleDistortion extends CircleBody {
 
     final static boolean e(byte param0) {
         if (param0 < -77) {
-          return MatchResultScreen.field_t > 250 ? true : false;
+          return MatchResultScreen.logoAnimationTicks > 250 ? true : false;
         }
         RgbSprite var2 = (RgbSprite) null;
         BubbleDistortion.a(-62, (RgbSprite) null, (RgbSprite) null, 105, -38, (RgbSprite) null, 49, -61, 61, -69, (RgbSprite) null, 126);
-        return MatchResultScreen.field_t > 250 ? true : false;
+        return MatchResultScreen.logoAnimationTicks > 250 ? true : false;
     }
 
     static {

@@ -543,7 +543,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             PowerUpWarning.acceptChatMessage(var3, 79);
                           }
                         } else {
-                          TextWidgetRenderer.readReflectionCheckRequest(ga.incomingPacketLength, jl.incomingPackets, (byte) 107, AccountMessageDialog.field_ub);
+                          TextWidgetRenderer.readReflectionCheckRequest(ga.incomingPacketLength, LogoRenderHelpers.incomingPackets, (byte) 107, AccountMessageDialog.field_ub);
                         }
                       } else {
                         stackIn_22_1 = !(obfuscationGuard);
@@ -817,7 +817,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           LabeledWidget.field_P = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, nd.field_c, false);
           RadialSelectorWidget.field_S = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ea.field_c, false);
-          ja.field_c = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ClientResourceHelpers.field_f, false);
+          BoardPresentationHelpers.field_c = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ClientResourceHelpers.field_f, false);
           FriendListUi.field_c = RadialSelectorWidget.field_S;
           clientStage = 2;
           NameEntryPopup.field_Rb = LabeledWidget.field_P;
@@ -840,13 +840,13 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
         }
         if (3 == clientStage &&
-          HuffmanCodec.a(RadialSelectorWidget.field_S, LabeledWidget.field_P, ja.field_c, -111) &&
-          QuickChatPhraseRegistry.a(ja.field_c, (byte) 101)) {
+          HuffmanCodec.a(RadialSelectorWidget.field_S, LabeledWidget.field_P, BoardPresentationHelpers.field_c, -111) &&
+          QuickChatPhraseRegistry.a(BoardPresentationHelpers.field_c, (byte) 101)) {
           ui.a(384920353);
           CacheIoWorker.a(guardCode + 21677);
           SpaceBackground.field_t = false;
           UsernameSuggestionPanel.field_N = AlternateNumericLoginCredentials.field_t;
-          MultiplayerExitScreen.a(FarmBackground.field_u, ja.field_c, LabeledWidget.field_P, RadialSelectorWidget.field_S, guardCode ^ 23);
+          MultiplayerExitScreen.a(FarmBackground.field_u, BoardPresentationHelpers.field_c, LabeledWidget.field_P, RadialSelectorWidget.field_S, guardCode ^ 23);
           if (MatchingTextValidator.field_k ||
             null != LevelDecoder.field_a) {
             stackIn_99_0 = !(MatchingTextValidator.field_k);
@@ -860,10 +860,10 @@ abstract class GameConnectionShell extends AppletGameShell {
             EmailValidator.field_l = StateIconLabel.h(114);
             UsernameSuggestionPanel.field_M = ar.a((byte) 120);
           }
-          BallPulseEffect.a(ja.field_c, EmailValidator.field_l, UsernameSuggestionPanel.field_M, 107);
+          BallPulseEffect.a(BoardPresentationHelpers.field_c, EmailValidator.field_l, UsernameSuggestionPanel.field_M, 107);
           RadialSelectorWidget.field_S = null;
           LabeledWidget.field_P = null;
-          ja.field_c = null;
+          BoardPresentationHelpers.field_c = null;
           MenuScreen.a((java.applet.Applet) (this), -90);
           hc.b(2);
           clientStage = 10;
@@ -924,14 +924,14 @@ abstract class GameConnectionShell extends AppletGameShell {
     }
 
     private final void handleBrowserPayload(byte obfuscationGuard) {
-        int var2 = jl.incomingPackets.readUnsignedByte(255);
+        int var2 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = -1 + ga.incomingPacketLength;
         byte[] var5 = new byte[var4];
         if (obfuscationGuard != 120) {
           return;
         }
-        jl.incomingPackets.readCipheredBytes(false, 0, var4, var5);
+        LogoRenderHelpers.incomingPackets.readCipheredBytes(false, 0, var4, var5);
         HuffmanCodec.a((byte) 114, EmailConfirmationValidator.e((byte) -73), MenuButton.a(var5, (byte) 70), var3 != 0);
     }
 

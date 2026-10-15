@@ -99,13 +99,13 @@ abstract class ArchiveSource {
     final static void a(int param0) {
         CharSequence var3 = null;
         if (param0 == 27423) {
-          LoadingProgressDialog.field_cb = jl.incomingPackets.readCp1252String(-1);
+          LoadingProgressDialog.field_cb = LogoRenderHelpers.incomingPackets.readCp1252String(-1);
           var3 = (CharSequence) ((Object) LoadingProgressDialog.field_cb);
           ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var3, 71);
           return;
         }
         ArchiveSource.sleepOnce(49, -113L);
-        LoadingProgressDialog.field_cb = jl.incomingPackets.readCp1252String(-1);
+        LoadingProgressDialog.field_cb = LogoRenderHelpers.incomingPackets.readCp1252String(-1);
         CharSequence var2 = (CharSequence) ((Object) LoadingProgressDialog.field_cb);
         ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var2, 71);
     }

@@ -25,7 +25,7 @@ final class InstructionsScreen extends MenuScreen {
         try {
           activatedFlag = 0;
           escapeFlag = 0;
-          while (jl.pollKeyEvent((byte) 5)) {
+          while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
             UiComponent.fullscreenDialogSelection.navigateVertical(-1);
             if (UiComponent.fullscreenDialogSelection.isActivated((byte) 113)) {
               activatedFlag = 1;

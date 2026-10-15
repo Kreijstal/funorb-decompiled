@@ -7,7 +7,7 @@ final class UnderwaterBackground extends BackgroundScene {
     static RgbSprite field_t;
     static PcmPlayer field_w;
     static ChatMessage[] chatHistory;
-    static RgbSprite field_u;
+    static RgbSprite gameCompletedMessageSprite;
 
     final boolean hasSprites(byte obfuscationGuard) {
         if (obfuscationGuard > -91) {
@@ -199,7 +199,7 @@ final class UnderwaterBackground extends BackgroundScene {
     }
 
     public static void d(byte param0) {
-        field_u = null;
+        gameCompletedMessageSprite = null;
         field_v = null;
         if (param0 == -46) {
           viewFacePointOneZ = null;

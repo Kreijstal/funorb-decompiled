@@ -10,66 +10,66 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
     static RgbSprite field_j;
     static int field_n;
 
-    final static void a(int param0, int param1, int param2, TextFont param3, int param4, int param5, int param6, NineSliceFrame param7, int param8, int param9, int param10, int param11, int param12, NineSliceFrame param13, int param14, int param15, TextFont param16, NineSliceFrame param17, int param18, int param19, int param20) {
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
-        String stackIn_6_2 = null;
-        StringBuilder stackIn_8_1 = null;
-        String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
-        String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
-        String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var21 = null;
+    final static void configureFullscreenDialog(int bodyLineHeight, int outerPaddingY, int buttonGapY, TextFont bodyFont, int centerY, int centerX, int maximumWrapWidth, NineSliceFrame outerFrame, int bodyPaint, int selectedPaint, int outerPaddingX, int buttonBaseline, int buttonPaint, NineSliceFrame selectedFrame, int buttonLineHeight, int buttonPaddingY, TextFont buttonFont, NineSliceFrame normalFrame, int bodyBaseline, int buttonPaddingX, int obfuscationGuard) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String bodyFontSummary = null;
+        StringBuilder outerFrameContextBuilder = null;
+        String outerFrameSummary = null;
+        StringBuilder selectedFrameContextBuilder = null;
+        String selectedFrameSummary = null;
+        StringBuilder buttonFontContextBuilder = null;
+        String buttonFontSummary = null;
+        StringBuilder normalFrameContextBuilder = null;
+        String normalFrameSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
-          Mesh3D.configureFullscreenDialogFonts(param6, param16, param3, true);
-          MusicCrossfadeStream.configureFullscreenDialogMetrics(param11, param14, 256, param18, param0);
-          pp.setFullscreenDialogCenter(param5, param4, (byte) 19);
-          WidgetLayerStack.configureFullscreenDialogButtons(param15, param2, param13, 73, param17, param19);
-          hd.configureFullscreenDialogFrame(117, param7, param10, param1);
-          LegacyUtf8Decoder.a(param12, param9, false, param8);
-          if (param20 != 10) {
+          Mesh3D.configureFullscreenDialogFonts(maximumWrapWidth, buttonFont, bodyFont, true);
+          MusicCrossfadeStream.configureFullscreenDialogMetrics(buttonBaseline, buttonLineHeight, 256, bodyBaseline, bodyLineHeight);
+          pp.setFullscreenDialogCenter(centerX, centerY, (byte) 19);
+          WidgetLayerStack.configureFullscreenDialogButtons(buttonPaddingY, buttonGapY, selectedFrame, 73, normalFrame, buttonPaddingX);
+          hd.configureFullscreenDialogFrame(117, outerFrame, outerPaddingX, outerPaddingY);
+          LegacyUtf8Decoder.configureFullscreenDialogPaints(buttonPaint, selectedPaint, false, bodyPaint);
+          if (obfuscationGuard != 10) {
             TranslucentNineSliceFrame.a(true);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var21 = decompiledCaughtException;
-          stackIn_5_0 = var21;
-          stackIn_5_1 = new StringBuilder().append("pa.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_6_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("pa.D(").append(bodyLineHeight).append(',').append(outerPaddingY).append(',').append(buttonGapY).append(',');
+          if (bodyFont == null) {
+            bodyFontSummary = "null";
           } else {
-            stackIn_6_2 = "{...}";
+            bodyFontSummary = "{...}";
           }
-          stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
-          if (param7 == null) {
-            stackIn_9_2 = "null";
+          outerFrameContextBuilder = ((StringBuilder) (Object) contextBuilder).append(bodyFontSummary).append(',').append(centerY).append(',').append(centerX).append(',').append(maximumWrapWidth).append(',');
+          if (outerFrame == null) {
+            outerFrameSummary = "null";
           } else {
-            stackIn_9_2 = "{...}";
+            outerFrameSummary = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',');
-          if (param13 == null) {
-            stackIn_12_2 = "null";
+          selectedFrameContextBuilder = ((StringBuilder) (Object) outerFrameContextBuilder).append(outerFrameSummary).append(',').append(bodyPaint).append(',').append(selectedPaint).append(',').append(outerPaddingX).append(',').append(buttonBaseline).append(',').append(buttonPaint).append(',');
+          if (selectedFrame == null) {
+            selectedFrameSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            selectedFrameSummary = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param14).append(',').append(param15).append(',');
-          if (param16 == null) {
-            stackIn_15_2 = "null";
+          buttonFontContextBuilder = ((StringBuilder) (Object) selectedFrameContextBuilder).append(selectedFrameSummary).append(',').append(buttonLineHeight).append(',').append(buttonPaddingY).append(',');
+          if (buttonFont == null) {
+            buttonFontSummary = "null";
           } else {
-            stackIn_15_2 = "{...}";
+            buttonFontSummary = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-          if (param17 == null) {
-            stackIn_18_2 = "null";
+          normalFrameContextBuilder = ((StringBuilder) (Object) buttonFontContextBuilder).append(buttonFontSummary).append(',');
+          if (normalFrame == null) {
+            normalFrameSummary = "null";
           } else {
-            stackIn_18_2 = "{...}";
+            normalFrameSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) normalFrameContextBuilder).append(normalFrameSummary).append(',').append(bodyBaseline).append(',').append(buttonPaddingX).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
           return;
         }
         NineSliceFrame var2 = (NineSliceFrame) null;
-        TranslucentNineSliceFrame.a(-2, -34, -105, (TextFont) null, -37, -46, -79, (NineSliceFrame) null, 96, 79, -47, -14, 91, (NineSliceFrame) null, -22, -64, (TextFont) null, (NineSliceFrame) null, 77, -115, -55);
+        TranslucentNineSliceFrame.configureFullscreenDialog(-2, -34, -105, (TextFont) null, -37, -46, -79, (NineSliceFrame) null, 96, 79, -47, -14, 91, (NineSliceFrame) null, -22, -64, (TextFont) null, (NineSliceFrame) null, 77, -115, -55);
         ed.a(0, 0);
     }
 

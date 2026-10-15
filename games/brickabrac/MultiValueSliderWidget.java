@@ -151,7 +151,7 @@ final class MultiValueSliderWidget extends FocusableWidget {
         AchievementMaskRequest emptyMaskRequest = null;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          packet = jl.incomingPackets;
+          packet = LogoRenderHelpers.incomingPackets;
           responseType = packet.readUnsignedByte(255);
           if (obfuscationGuard == ~responseType) {
             var11 = Ball.createAchievementMask(8);

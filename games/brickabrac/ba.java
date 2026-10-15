@@ -62,7 +62,7 @@ class ba extends DualLinkNode {
           hn.closeGameTransport((byte) 106);
           return;
         }
-        BitPacketBuffer var2 = jl.incomingPackets;
+        BitPacketBuffer var2 = LogoRenderHelpers.incomingPackets;
         var2.readInt(255);
         var2.readInt(255);
         var2.readInt(255);

@@ -1422,7 +1422,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime175 = gr.a(!param0, "keycode_player1_left");
           if (null != var2Lifetime175) {
-            jl.field_b = 255 & var2Lifetime175[0];
+            LogoRenderHelpers.field_b = 255 & var2Lifetime175[0];
           }
           var2Lifetime176 = gr.a(true, "keycode_player1_right");
           if (null != var2Lifetime176) {

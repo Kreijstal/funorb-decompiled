@@ -5,7 +5,7 @@ final class kk {
     static int[] bitMasks;
     static String field_a;
     static UiComponent field_b;
-    static int[] field_e;
+    static int[] logoCameraPose;
     static String field_c;
     static String field_d;
     static String field_f;
@@ -35,7 +35,7 @@ final class kk {
         if (param0 != 0) {
           return;
         }
-        field_e = null;
+        logoCameraPose = null;
         bitMasks = null;
     }
 
@@ -74,7 +74,7 @@ final class kk {
             return stackIn_7_0;
           }
           if (obfuscationGuard) {
-            field_e = (int[]) null;
+            logoCameraPose = (int[]) null;
           }
           AppletGameShell.shuffleFivePasses(var3, (byte) 39, random);
           stackIn_11_0 = var3;
@@ -95,7 +95,7 @@ final class kk {
 
     static {
         bitMasks = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
-        field_e = new int[12];
+        logoCameraPose = new int[12];
         field_d = "Accept invitation to <%0>'s game";
         field_c = "You cannot chat to <%0> because <%0> is not in your friend list.";
         field_a = "Rematch";

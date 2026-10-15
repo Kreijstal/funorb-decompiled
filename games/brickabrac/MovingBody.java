@@ -144,7 +144,7 @@ abstract class MovingBody extends IntrusiveNode {
         try {
           ResourceArchive.field_f.a(ClientException.field_e, DualLinkNode.field_r, -114, true);
           ResourceArchive.field_f.i(79);
-          while (jl.pollKeyEvent((byte) 5)) {
+          while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
             ResourceArchive.field_f.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
           var1_int = -30 % ((55 - param0) / 43);
@@ -183,7 +183,7 @@ abstract class MovingBody extends IntrusiveNode {
         if (param0 >= -81) {
           field_n = (String) null;
         }
-        IncomingPacketHelpers.field_b.drawTransparent((640 - IncomingPacketHelpers.field_b.canvasWidth) / 2, 19);
+        IncomingPacketHelpers.gameLogoSprite.drawTransparent((640 - IncomingPacketHelpers.gameLogoSprite.canvasWidth) / 2, 19);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {

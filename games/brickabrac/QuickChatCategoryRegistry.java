@@ -291,7 +291,7 @@ final class QuickChatCategoryRegistry {
           TextWidgetRenderer.field_p = pl.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
           TranslucentNineSliceFrame.field_j = pl.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
           gr.field_d = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
-          IncomingPacketHelpers.field_b = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
+          IncomingPacketHelpers.gameLogoSprite = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
           PasswordValidator.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "sliders", 2);
           SocialListEntry.field_Vb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
           TranslucentNineSliceFrame.field_l = new RgbSprite[SocialListEntry.field_Vb.length];
@@ -313,8 +313,8 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime10 = 0; nd.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
             nd.field_f[var10_intLifetime10] = 14;
           }
-          UnderwaterBackground.field_u = HotspotTextWidget.a(2, BirthDateEntryPanel.field_N, -1);
-          ClientException.field_b = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
+          UnderwaterBackground.gameCompletedMessageSprite = HotspotTextWidget.a(2, BirthDateEntryPanel.field_N, -1);
+          ClientException.gameOverMessageSprite = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
           ed.countdownSprites = new RgbSprite[3];
           for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.countdownSprites.length; var10_intLifetime11++) {
             ed.countdownSprites[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);

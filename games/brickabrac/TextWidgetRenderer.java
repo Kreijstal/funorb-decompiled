@@ -409,8 +409,8 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
           if (!PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
             return false;
           }
-          ga.incomingPacketLength = jl.incomingPackets.readUnsignedByte(255);
-          jl.incomingPackets.position = 0;
+          ga.incomingPacketLength = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+          LogoRenderHelpers.incomingPackets.position = 0;
         }
         if (obfuscationGuard > -40) {
           desertCentreSprites = (RgbSprite[]) null;
@@ -419,8 +419,8 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
           if (!PacketReceiveHelpers.ensureGamePacketBytes(20, 2)) {
             return false;
           }
-          ga.incomingPacketLength = jl.incomingPackets.readUnsignedShort(65280);
-          jl.incomingPackets.position = 0;
+          ga.incomingPacketLength = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
+          LogoRenderHelpers.incomingPackets.position = 0;
         }
         return PacketReceiveHelpers.ensureGamePacketBytes(20, ga.incomingPacketLength);
     }

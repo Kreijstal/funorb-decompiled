@@ -2860,7 +2860,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_button_tryagain", (byte) -118);
                 if (null != var2) {
-                  ja.field_b = MenuButton.a(var2, (byte) 71);
+                  BoardPresentationHelpers.field_b = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("graphics_ui_fs_countdown", (byte) 8);
                 if (null != var2) {
@@ -3407,7 +3407,7 @@ final class ContextActionController {
           }
           unusedError = null;
           if (actionId == 4) {
-            errorMessage = jl.requestAddFriend(obfuscationGuard ^ -24878, this.targetName, opcode);
+            errorMessage = LogoRenderHelpers.requestAddFriend(obfuscationGuard ^ -24878, this.targetName, opcode);
           } else {
             if (actionId == 5) {
               errorMessage = KeyboardInput.requestRemoveFriend(opcode, false, this.targetName);

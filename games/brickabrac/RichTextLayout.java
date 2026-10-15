@@ -462,10 +462,10 @@ final class RichTextLayout extends WidgetTextLayout {
           if (!RadialSelectorWidget.field_S.ensureGroupAvailableByName("commonui", -28138)) {
             return 60;
           }
-          if (!ja.field_c.ensureIndex((byte) -127)) {
+          if (!BoardPresentationHelpers.field_c.ensureIndex((byte) -127)) {
             return 70;
           }
-          if (!ja.field_c.ensureAllGroupsAvailable(117)) {
+          if (!BoardPresentationHelpers.field_c.ensureAllGroupsAvailable(117)) {
             return 80;
           }
         } else {
@@ -492,10 +492,10 @@ final class RichTextLayout extends WidgetTextLayout {
           if (!RadialSelectorWidget.field_S.ensureGroupAvailableByName("commonui", -28138)) {
             return 80;
           }
-          if (!ja.field_c.ensureIndex((byte) -127)) {
+          if (!BoardPresentationHelpers.field_c.ensureIndex((byte) -127)) {
             return 82;
           }
-          if (!ja.field_c.ensureAllGroupsAvailable(110)) {
+          if (!BoardPresentationHelpers.field_c.ensureAllGroupsAvailable(110)) {
             return 86;
           }
         }

@@ -34,7 +34,7 @@ final class NameEntryPopup extends UiComponent {
           return this.completionState;
         }
         while (true) {
-          if (!jl.pollKeyEvent((byte) 5)) {
+          if (!LogoRenderHelpers.pollKeyEvent((byte) 5)) {
             this.inputText.text = this.nameBuffer.toString();
             if (!inputEnabled) {
               return this.completionState;

@@ -40,7 +40,7 @@ final class ch {
         SocialListEntry friendEntry;
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          packet = jl.incomingPackets;
+          packet = LogoRenderHelpers.incomingPackets;
           responseKind = packet.readUnsignedByte(255);
           if (0 == responseKind) {
             if (null == FullscreenFailureKind.ignoreIndex) {

@@ -40,7 +40,7 @@ final class GzipInflater {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            jl.incomingPackets = new BitPacketBuffer(param4);
+            LogoRenderHelpers.incomingPackets = new BitPacketBuffer(param4);
             TextFieldValidator.outgoingPackets = new BitPacketBuffer(param5);
             ContentTransitionLayer.field_ob = param6;
             tq.field_h = param1;

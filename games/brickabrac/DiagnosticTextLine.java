@@ -90,7 +90,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
         BitPacketBuffer.field_q = 0;
         AlternateNumericLoginCredentials.field_s = false;
         QuickChatHelpDialog.field_Sb = false;
-        jl.field_a = 1;
+        LogoRenderHelpers.field_a = 1;
         if (param0 > 27) {
           ValidationIconWidget.field_N = false;
           GameConnectionHelpers.field_f = false;

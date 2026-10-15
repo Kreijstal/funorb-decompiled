@@ -946,7 +946,7 @@ final class PlayerBoard extends IntrusiveNode {
           HighscoresScreen.field_w[0][1] = HorizontalFrameHelpers.field_b;
           HighscoresScreen.field_w[1][2] = VolcanicBackground.field_u;
           HighscoresScreen.field_w[1][1] = ce.field_d;
-          HighscoresScreen.field_w[1][0] = jl.field_b;
+          HighscoresScreen.field_w[1][0] = LogoRenderHelpers.field_b;
         }
         this.leftKeyCode = HighscoresScreen.field_w[controlSet][0];
         this.rightKeyCode = HighscoresScreen.field_w[controlSet][1];

@@ -217,7 +217,7 @@ abstract class WidgetLayer extends WidgetGroup {
             if (pp.field_a == 14) {
               if (0 != (3 & param0)) {
                 pp.field_a = 0;
-                jl.field_a = 250;
+                LogoRenderHelpers.field_a = 250;
                 ga.field_i = 0;
               }
               if ((param0 & 4) == 0) {
@@ -225,7 +225,7 @@ abstract class WidgetLayer extends WidgetGroup {
               }
               pp.field_a = 2;
               ga.field_i = 2;
-              jl.field_a = 25;
+              LogoRenderHelpers.field_a = 25;
               return;
             }
             if (pp.field_a != 0 &&
@@ -239,7 +239,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 }
                 if ((param0 & 4) != 0) {
                   pp.field_a = 2;
-                  jl.field_a = 25;
+                  LogoRenderHelpers.field_a = 25;
                   ga.field_i = 2;
                 }
                 GzipInflater.b(-8);
@@ -260,7 +260,7 @@ abstract class WidgetLayer extends WidgetGroup {
             }
             ga.field_i = 2;
             pp.field_a = 2;
-            jl.field_a = 25;
+            LogoRenderHelpers.field_a = 25;
             return;
           }
           if (1 == param1) {
@@ -304,7 +304,7 @@ abstract class WidgetLayer extends WidgetGroup {
           if (param1 == 3) {
             if (pp.field_a == 5) {
               ga.field_i = 8;
-              jl.field_a = 250;
+              LogoRenderHelpers.field_a = 250;
               pp.field_a = -1;
               LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(IntNode.field_n, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
@@ -317,7 +317,7 @@ abstract class WidgetLayer extends WidgetGroup {
               }
               ga.field_i = 9;
               pp.field_a = -1;
-              jl.field_a = 250;
+              LogoRenderHelpers.field_a = 250;
               LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
               wc.field_b = true;
               return;
@@ -339,7 +339,7 @@ abstract class WidgetLayer extends WidgetGroup {
             } else {
               if (pp.field_a == 5) {
                 ga.field_i = 9;
-                jl.field_a = 250;
+                LogoRenderHelpers.field_a = 250;
                 pp.field_a = -1;
                 LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{ui.field_b}, (byte) 103);
                 wc.field_b = true;

@@ -97,7 +97,7 @@ final class RadialSelectorWidget extends FocusableWidget {
         unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
           activated = 0;
-          while (jl.pollKeyEvent((byte) 5)) {
+          while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
             ArcticBackground.textChoiceSelection.navigateVertical(obfuscationGuard - 1);
             if (!ArcticBackground.textChoiceSelection.isActivated((byte) 113)) {
               continue;

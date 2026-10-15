@@ -68,75 +68,75 @@ final class HuffmanCodec {
         }
     }
 
-    final static void a(int param0, byte param1) {
-        int var2;
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        var6 = BrickABrac.field_J ? 1 : 0;
-        var2 = 0;
-        var3 = MatchResultScreen.field_t;
-        if (param1 != 77) {
+    final static void updateLogoPiecePose(int pieceIndex, byte obfuscationGuard) {
+        int rotationAngle8192;
+        int animationTicks;
+        int pitchSign;
+        int yawSign;
+        int unusedGameFlag;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        rotationAngle8192 = 0;
+        animationTicks = MatchResultScreen.logoAnimationTicks;
+        if (obfuscationGuard != 77) {
           return;
         }
-        if (var3 >= 5) {
-          if (105 > var3) {
-            var2 = (-40960 + var3 * 16384) / 220;
+        if (animationTicks >= 5) {
+          if (105 > animationTicks) {
+            rotationAngle8192 = (-40960 + animationTicks * 16384) / 220;
           } else {
-            if (120 > var3) {
-              var3 = 120 - var3;
-              var2 = -(var3 * (var3 * 8192) / 3300) + 8192;
+            if (120 > animationTicks) {
+              animationTicks = 120 - animationTicks;
+              rotationAngle8192 = -(animationTicks * (animationTicks * 8192) / 3300) + 8192;
             }
           }
         } else {
-          var2 = var3 * (var3 * 8192) / 1100;
+          rotationAngle8192 = animationTicks * (animationTicks * 8192) / 1100;
         }
-        var4 = 1;
-        var5 = 0;
-        if (param0 == 3) {
-          var4 = -1;
+        pitchSign = 1;
+        yawSign = 0;
+        if (pieceIndex == 3) {
+          pitchSign = -1;
         }
-        if (param0 == 1) {
-          var5 = 1;
+        if (pieceIndex == 1) {
+          yawSign = 1;
         }
-        if (4 == param0) {
-          var5 = 1;
-          var4 = 1;
+        if (4 == pieceIndex) {
+          yawSign = 1;
+          pitchSign = 1;
         }
-        if (param0 == 5) {
-          var4 = -1;
-          var5 = 1;
+        if (pieceIndex == 5) {
+          pitchSign = -1;
+          yawSign = 1;
         }
-        if (param0 == 6) {
-          var4 = 1;
-          var5 = -1;
+        if (pieceIndex == 6) {
+          pitchSign = 1;
+          yawSign = -1;
         }
-        if (param0 == 7 ||
-          param0 == 8) {
-          var4 = -1;
-          var5 = -1;
+        if (pieceIndex == 7 ||
+          pieceIndex == 8) {
+          pitchSign = -1;
+          yawSign = -1;
         }
-        if (param0 == 11) {
-          var4 = -1;
+        if (pieceIndex == 11) {
+          pitchSign = -1;
         }
-        if (param0 == 12) {
-          var5 = -1;
-          var4 = -1;
+        if (pieceIndex == 12) {
+          yawSign = -1;
+          pitchSign = -1;
         }
-        if (13 == param0) {
-          var5 = -1;
-          var4 = 1;
+        if (13 == pieceIndex) {
+          yawSign = -1;
+          pitchSign = 1;
         }
-        if (param0 == 14) {
-          var5 = 1;
-          var4 = -1;
+        if (pieceIndex == 14) {
+          yawSign = 1;
+          pitchSign = -1;
         }
-        if (param0 == 15) {
-          var4 = 1;
-          var5 = 1;
+        if (pieceIndex == 15) {
+          pitchSign = 1;
+          yawSign = 1;
         }
-        MatchResultScreen.field_w = AchievementSubmission.createPitchYawPose(var4 * var2, 0, var2 * var5);
+        MatchResultScreen.logoPiecePose = AchievementSubmission.createPitchYawPose(pitchSign * rotationAngle8192, 0, rotationAngle8192 * yawSign);
         return;
     }
 
@@ -185,7 +185,7 @@ final class HuffmanCodec {
           while (true) {
             if (inputOffset >= length) {
               if (obfuscationGuard >= -91) {
-                HuffmanCodec.a(-104, (byte) 88);
+                HuffmanCodec.updateLogoPiecePose(-104, (byte) 88);
               }
               stackIn_22_0 = (7 + bitPosition >> 3) - outputOffset;
               return stackIn_22_0;
@@ -288,7 +288,7 @@ final class HuffmanCodec {
         field_e = null;
         pendingRankingsRequests = null;
         if (param0 != -94) {
-          HuffmanCodec.a(119, (byte) 34);
+          HuffmanCodec.updateLogoPiecePose(119, (byte) 34);
         }
         field_d = null;
     }

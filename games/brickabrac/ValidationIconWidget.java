@@ -116,7 +116,7 @@ final class ValidationIconWidget extends FocusableWidget {
         int winRateSourceIndex;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          packet = jl.incomingPackets;
+          packet = LogoRenderHelpers.incomingPackets;
           rankingKind = packet.readUnsignedByte(255);
           request = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.first(-7));
           while (request != null) {
@@ -311,8 +311,8 @@ final class ValidationIconWidget extends FocusableWidget {
           }
           if (DiagnosticTextLine.awaitingValidationReply == GameConnectionHelpers.connectionPhase &&
             PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
-            var9Lifetime1 = jl.incomingPackets.readUnsignedByte(255);
-            jl.incomingPackets.position = 0;
+            var9Lifetime1 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+            LogoRenderHelpers.incomingPackets.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               GameConnectionHelpers.connectionPhase = ClientResourceHelpers.awaitingValidationStrings;
@@ -328,8 +328,8 @@ final class ValidationIconWidget extends FocusableWidget {
               }
               if (var9Lifetime1 == 99) {
                 PacketReceiveHelpers.ensureGamePacketBytes(20, Widget.d((byte) -59));
-                AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, jl.incomingPackets));
-                jl.incomingPackets.position = 0;
+                AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, LogoRenderHelpers.incomingPackets));
+                LogoRenderHelpers.incomingPackets.position = 0;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
                 GameConnectionHelpers.connectionPhase = SocialTabbedPanel.awaitingValidationBody;
@@ -340,12 +340,12 @@ final class ValidationIconWidget extends FocusableWidget {
           if (GameConnectionHelpers.connectionPhase == ClientResourceHelpers.awaitingValidationStrings) {
             var9Lifetime2 = 2;
             if (PacketReceiveHelpers.ensureGamePacketBytes(20, var9Lifetime2)) {
-              var10Lifetime1 = jl.incomingPackets.readUnsignedShort(65280);
-              jl.incomingPackets.position = 0;
+              var10Lifetime1 = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
+              LogoRenderHelpers.incomingPackets.position = 0;
               if (PacketReceiveHelpers.ensureGamePacketBytes(20, var10Lifetime1)) {
                 var11 = ArchiveSourceManager.field_f.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  ArchiveSourceManager.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
+                  ArchiveSourceManager.field_f[var12] = LogoRenderHelpers.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
                 }
                 hn.closeGameTransport((byte) 79);
                 RadialSelectorRenderer.field_d = false;
@@ -357,12 +357,12 @@ final class ValidationIconWidget extends FocusableWidget {
           if (SocialTabbedPanel.awaitingValidationBody == GameConnectionHelpers.connectionPhase &&
             TextWidgetRenderer.ensureGamePacketBody((byte) -92)) {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
-              var9_ref_String = jl.incomingPackets.readNullableCp1252String(param6 - 4);
+              var9_ref_String = LogoRenderHelpers.incomingPackets.readNullableCp1252String(param6 - 4);
               if (var9_ref_String != null) {
                 ui.a(param6 ^ -55, EmailConfirmationValidator.e((byte) -120), var9_ref_String);
               }
             } else {
-              DirectByteStorage.field_e = jl.incomingPackets.readCp1252String(-1);
+              DirectByteStorage.field_e = LogoRenderHelpers.incomingPackets.readCp1252String(-1);
             }
             hn.closeGameTransport((byte) 106);
             RadialSelectorRenderer.field_d = false;

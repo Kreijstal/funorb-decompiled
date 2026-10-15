@@ -20,10 +20,10 @@ final class MonotonicTime {
 
     final synchronized static long nowMillis(boolean obfuscationGuard) {
         long wallMillis = System.currentTimeMillis();
-        if (!(jl.lastWallMillis <= wallMillis)) {
-          MultiplayerExitScreen.wallRollbackMillis = MultiplayerExitScreen.wallRollbackMillis + (jl.lastWallMillis - wallMillis);
+        if (!(LogoRenderHelpers.lastWallMillis <= wallMillis)) {
+          MultiplayerExitScreen.wallRollbackMillis = MultiplayerExitScreen.wallRollbackMillis + (LogoRenderHelpers.lastWallMillis - wallMillis);
         }
-        jl.lastWallMillis = wallMillis;
+        LogoRenderHelpers.lastWallMillis = wallMillis;
         if (obfuscationGuard) {
           MonotonicTime.nowMillis(false);
         }

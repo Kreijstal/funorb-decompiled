@@ -40,7 +40,7 @@ final class SoundCache {
               }
               var6Lifetime1 = null;
               if (GameUiController.field_d == 0) {
-                var6Lifetime1 = jl.requestAddFriend(24943, var5, param1);
+                var6Lifetime1 = LogoRenderHelpers.requestAddFriend(24943, var5, param1);
               }
               if (GameUiController.field_d == 1) {
                 var6Lifetime1 = KeyboardInput.requestRemoveFriend(param1, false, var5);
@@ -251,8 +251,8 @@ final class SoundCache {
             }
             if (GameConnectionHelpers.connectionPhase == GameScreen.awaitingLoginPreludeReply &&
               PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
-              var6_int = jl.incomingPackets.readUnsignedByte(255);
-              jl.incomingPackets.position = 0;
+              var6_int = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+              LogoRenderHelpers.incomingPackets.position = 0;
               if (var6_int == 0) {
                 GameConnectionHelpers.connectionPhase = MeshAttributeRecord.awaitingLoginSeed;
               } else {
@@ -263,18 +263,18 @@ final class SoundCache {
             }
             if (GameConnectionHelpers.connectionPhase == MeshAttributeRecord.awaitingLoginSeed &&
               PacketReceiveHelpers.ensureGamePacketBytes(20, 8)) {
-              PopupWidgetLayer.field_ab = jl.incomingPackets.readLong(-32768);
-              jl.incomingPackets.position = 0;
+              PopupWidgetLayer.field_ab = LogoRenderHelpers.incomingPackets.readLong(-32768);
+              LogoRenderHelpers.incomingPackets.position = 0;
               SocialListEntry.a(param4, NanoGameClock.field_s, param1, param3, false);
               GameConnectionHelpers.connectionPhase = rq.awaitingLoginReply;
             }
             boolean decompiledFrameRemainder0 = true;
             if (GameConnectionHelpers.connectionPhase == rq.awaitingLoginReply &&
               PacketReceiveHelpers.ensureGamePacketBytes(20, 1)) {
-              var6_intLifetime1 = jl.incomingPackets.readUnsignedByte(255);
+              var6_intLifetime1 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               ParisBackground.field_t = null;
               IntrusiveHashTable.currentPacketOpcode = var6_intLifetime1;
-              jl.incomingPackets.position = 0;
+              LogoRenderHelpers.incomingPackets.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -296,13 +296,13 @@ final class SoundCache {
             }
             if (GameConnectionHelpers.connectionPhase == IsaacGenerator.awaitingLoginSuccessBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -80)) {
-              CacheEntry.field_v = jl.incomingPackets.readLong(-32768);
+              CacheEntry.field_v = LogoRenderHelpers.incomingPackets.readLong(-32768);
               gd.field_b = param5;
-              QuickChatHelpDialog.field_Yb = jl.incomingPackets.readUnsignedByte(255);
-              TextChoiceDialogStyles.field_f = jl.incomingPackets.readUnsignedByte(255);
-              ResourceArchiveFactory.windowModeCapabilityWord = jl.incomingPackets.readUnsignedShort(65280);
-              var11 = jl.incomingPackets.readNullableCp1252String(0);
-              var7 = jl.incomingPackets.readUnsignedByte(255);
+              QuickChatHelpDialog.field_Yb = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+              TextChoiceDialogStyles.field_f = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+              ResourceArchiveFactory.windowModeCapabilityWord = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
+              var11 = LogoRenderHelpers.incomingPackets.readNullableCp1252String(0);
+              var7 = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
                 ConnectionPhase.a(-1);
               }
@@ -320,19 +320,19 @@ final class SoundCache {
               stackIn_53_0 = ((16 & var7) != 0);
               RasterSnapshot.field_j = stackIn_53_0;
               if (DialogMessagePanel.field_O) {
-                jl.incomingPackets.readUnsignedByte(255);
-                jl.incomingPackets.readUnsignedByte(255);
-                jl.incomingPackets.readInt(255);
-                NineSliceFrame.field_f = jl.incomingPackets.readUnsignedShort(65280);
+                LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+                LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
+                LogoRenderHelpers.incomingPackets.readInt(255);
+                NineSliceFrame.field_f = LogoRenderHelpers.incomingPackets.readUnsignedShort(65280);
                 TextHotspotRegion.field_q = new byte[NineSliceFrame.field_f];
                 for (var8 = 0; NineSliceFrame.field_f > var8; var8++) {
-                  TextHotspotRegion.field_q[var8] = jl.incomingPackets.readByte(true);
+                  TextHotspotRegion.field_q[var8] = LogoRenderHelpers.incomingPackets.readByte(true);
                 }
               }
-              LoadingProgressDialog.field_cb = jl.incomingPackets.readCp1252String(-1);
+              LoadingProgressDialog.field_cb = LogoRenderHelpers.incomingPackets.readCp1252String(-1);
               var12 = (CharSequence) ((Object) LoadingProgressDialog.field_cb);
               ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var12, 65);
-              OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
+              OptionsScreen.field_x = LogoRenderHelpers.incomingPackets.readUnsignedByte(255);
               GameConnectionHelpers.connectionPhase = MenuButton.loggedInConnection;
               if (NanoGameClock.field_s.getCredentialKind(13) == RadialSelectorWidget.emailLoginKind) {
                 EmailConfirmationValidator.field_k.persistLoginMethod(100, EmailConfirmationValidator.e((byte) -66));
@@ -368,7 +368,7 @@ final class SoundCache {
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 LevelPackCard.field_a[var8Lifetime1] = LevelPackCard.field_a[var8Lifetime1] + 50;
               }
-              jl.incomingPackets.initializeOpcodeCipher(LevelPackCard.field_a, -62);
+              LogoRenderHelpers.incomingPackets.initializeOpcodeCipher(LevelPackCard.field_a, -62);
               stackIn_81_0 = IntrusiveHashTable.currentPacketOpcode;
               return stackIn_81_0;
             }
@@ -387,7 +387,7 @@ final class SoundCache {
               if (IntrusiveHashTable.currentPacketOpcode == 7) {
                 IntrusiveHashTable.currentPacketOpcode = 3;
               }
-              DirectByteStorage.field_e = jl.incomingPackets.readCp1252String(-1);
+              DirectByteStorage.field_e = LogoRenderHelpers.incomingPackets.readCp1252String(-1);
               RadialSelectorRenderer.field_d = false;
               stackIn_95_0 = IntrusiveHashTable.currentPacketOpcode;
               return stackIn_95_0;
