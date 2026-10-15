@@ -2862,13 +2862,13 @@
       },
       "dictionary": {
         "path": "decompilation/brickabrac-naming.json",
-        "sha256": "89b35f6534a063fdb0de41f93e36f491f4ce7af3d169e6a937c2bd3bbcd7776b"
+        "sha256": "5e117385b668fa0fecdc73e23f41cba00978b8d960f196f68c9cbb3354772603"
       },
       "readingGuide": {
         "path": "games/brickabrac/README.md",
-        "sha256": "79d31a1f0c4e0c8e8ef6c390e0b08f1f9e00160963403d53e2d6c8e7adedf0cc"
+        "sha256": "19400d80fa7f9edc511e7a9e3f79525d054e883c8d31065a2b6c46390108d961"
       },
-      "rulesSha256": "59a7cb9753cd8ecb0ebf79f32675f00d35a4e8fc0234c83b7bb6e133c0348d31",
+      "rulesSha256": "5cab303f734f249c82edbfb1e5822f20d36c3ed35fed1ec5a1bd766af8545e4d",
       "compiler": {
         "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff",
         "trackedSourceTarSha256": "7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd"
