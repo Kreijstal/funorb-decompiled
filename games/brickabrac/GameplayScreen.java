@@ -91,7 +91,7 @@ final class GameplayScreen extends GameScreen {
         var3 = var6;
         var4 = achievementId;
         var6[var4 >> 5] = LevelSelectScreen.d(var6[var4 >> 5], pendingBit << IntrusiveHashIterator.a(var4, 31));
-        kp.achievementNotifications.addLast(new IntNode(achievementId), (byte) 3);
+        LevelResultWireHelpers.achievementNotifications.addLast(new IntNode(achievementId), (byte) 3);
         return false;
     }
 

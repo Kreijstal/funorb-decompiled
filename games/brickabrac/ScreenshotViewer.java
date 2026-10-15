@@ -167,16 +167,16 @@ final class ScreenshotViewer {
         var5 = BrickABrac.field_J ? 1 : 0;
         try {
           if (this.screenshots == null) {
-            if (null != ch.field_c) {
-              ch.field_c.drawParagraph(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            if (null != SocialListResponseHelpers.field_c) {
+              SocialListResponseHelpers.field_c.drawParagraph(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
             return;
           }
           var6 = this.screenshots[this.selectedScreenshot];
           var2 = var6;
           if (var2 == null) {
-            if (null != ch.field_c) {
-              ch.field_c.drawParagraph(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
+            if (null != SocialListResponseHelpers.field_c) {
+              SocialListResponseHelpers.field_c.drawParagraph(AlternateNumericLoginCredentials.field_t, 9, 58, 622, 196, 16754688, -1, 1, 1, 0);
             }
           } else {
             var6.drawTransparent(9, 58);
@@ -297,7 +297,7 @@ final class ScreenshotViewer {
             ContentTransitionLayer.field_jb.ensureGroupAvailableByName("pump32", -28138)) {
             AchievementsScreen.field_J = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
             PasswordTooltipHelpers.field_c = SpriteInputHelpers.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
-            ch.field_c = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
+            SocialListResponseHelpers.field_c = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
             ArchiveSourceManager.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
             MainMenuScreen.field_u = TextWidgetRenderer.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
             LevelPack.field_e = TextWidgetRenderer.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
@@ -340,11 +340,11 @@ final class ScreenshotViewer {
             }
           }
           this.field_e.drawTransparent(16, 302);
-          ch.field_c.drawParagraph(this.captions[this.selectedScreenshot], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
+          SocialListResponseHelpers.field_c.drawParagraph(this.captions[this.selectedScreenshot], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
           MainMenuScreen.field_u.drawTransparent(30, 330);
-          ch.field_c.drawParagraph(MatchCompleteScreen.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ch.field_c.drawParagraph(MatchCompleteScreen.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-          ch.field_c.drawParagraph(MatchCompleteScreen.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          SocialListResponseHelpers.field_c.drawParagraph(MatchCompleteScreen.field_y[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          SocialListResponseHelpers.field_c.drawParagraph(MatchCompleteScreen.field_y[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+          SocialListResponseHelpers.field_c.drawParagraph(MatchCompleteScreen.field_y[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
           LevelPack.field_e.drawTransparent((-LevelPack.field_e.canvasWidth + 127) / 2 + 508, 315);
           if (0 == this.selection.selectedIndex) {
             ValidatedTextFieldWidget.field_V[0].drawTransparent(508, 299);

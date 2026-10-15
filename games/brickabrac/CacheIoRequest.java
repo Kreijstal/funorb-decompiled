@@ -125,7 +125,7 @@ final class CacheIoRequest extends ResourceRequest {
         UiComponent var14 = null;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          kp.field_a = Rasterizer2D.width;
+          LevelResultWireHelpers.field_a = Rasterizer2D.width;
           IsaacGenerator.field_i = Rasterizer2D.height;
           if (!param1) {
             stackIn_4_0 = TableDataRequest.field_m;
@@ -260,7 +260,7 @@ final class CacheIoRequest extends ResourceRequest {
           stackIn_79_1 = !(param0);
           stackIn_78_0.frameSprites = DateFieldsWidget.a(stackIn_79_1, 8421504, 3, 11579568, MembershipBenefitsScreen.field_t.height, 1);
           Ball.field_A.setBounds(MembershipBenefitsScreen.field_t.height - 10 - 26, 5, 5, -10 + MembershipBenefitsScreen.field_t.width, (byte) 64);
-          nd.field_a.setBounds(24, -29 + MembershipBenefitsScreen.field_t.height, (MembershipBenefitsScreen.field_t.width - 80) / 2, 80, (byte) 64);
+          RankingSocketHelpers.field_a.setBounds(24, -29 + MembershipBenefitsScreen.field_t.height, (MembershipBenefitsScreen.field_t.width - 80) / 2, 80, (byte) 64);
           ResourcePreparationQueue.b(125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

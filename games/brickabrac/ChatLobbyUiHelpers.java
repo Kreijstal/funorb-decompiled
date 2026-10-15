@@ -89,7 +89,7 @@ final class ChatLobbyUiHelpers {
         if (LevelSequence.chatFiltersChanged) {
           LevelSequence.chatFiltersChanged = false;
           AchievementIcon.chatHistoryPane.content.localY = AchievementIcon.chatHistoryPane.viewport.height - AchievementIcon.chatHistoryPane.content.height;
-          nd.chatPinnedToBottom = true;
+          RankingSocketHelpers.chatPinnedToBottom = true;
           AchievementIcon.chatHistoryPane.content.remainingY = 0;
         }
         if (obfuscationGuard != -13294) {
@@ -99,16 +99,16 @@ final class ChatLobbyUiHelpers {
           nullFocusMarker = null;
           chatFocusMarker = SoundCache.field_k;
           if (nullFocusMarker != chatFocusMarker) {
-            nd.chatPinnedToBottom = true;
+            RankingSocketHelpers.chatPinnedToBottom = true;
           }
         }
         bottomScrollY = AchievementIcon.chatHistoryPane.viewport.height - (AchievementIcon.chatHistoryPane.content.height + AchievementIcon.chatHistoryPane.content.remainingHeight);
-        if (nd.chatPinnedToBottom) {
+        if (RankingSocketHelpers.chatPinnedToBottom) {
           AchievementIcon.chatHistoryPane.content.remainingY = bottomScrollY - AchievementIcon.chatHistoryPane.content.localY;
         }
         AchievementIcon.chatHistoryPane.updateScroll(true, rowHeight, true, 2 * (rowHeight * wheelTurns));
         isPinned = (bottomScrollY == AchievementIcon.chatHistoryPane.content.remainingY + AchievementIcon.chatHistoryPane.content.localY);
-        nd.chatPinnedToBottom = isPinned;
+        RankingSocketHelpers.chatPinnedToBottom = isPinned;
         return (ChatMessage) (pressedMessage);
     }
 

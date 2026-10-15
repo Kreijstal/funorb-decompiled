@@ -112,7 +112,7 @@ final class AppletSettingsUiHelpers {
         try {
           var4 = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.first(-14));
           while (var4 != null) {
-            kp.sendLevelResult(param0, (byte) 112, var4);
+            LevelResultWireHelpers.sendLevelResult(param0, (byte) 112, var4);
             var4 = (LevelResultSubmission) (NinjaBackground.pendingLevelResults.next((byte) 116));
           }
           var5 = (IntArrayRequest) (PasswordFieldRenderer.pendingIntArrayRequests.first(-61));

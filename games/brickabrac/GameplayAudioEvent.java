@@ -126,7 +126,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
             if (null != GameplayRenderHelpers.fullscreenCanvas &&
               GameplayRenderHelpers.fullscreenCanvas.focusLossPending) {
               LevelPack.b(109);
-              ParallaxMusicHelpers.field_b.pushLayer(-80, new FullscreenFailureDialog(ParallaxMusicHelpers.field_b, ch.fullscreenFocusProblem));
+              ParallaxMusicHelpers.field_b.pushLayer(-80, new FullscreenFailureDialog(ParallaxMusicHelpers.field_b, SocialListResponseHelpers.fullscreenFocusProblem));
             }
             return;
           }

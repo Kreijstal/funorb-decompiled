@@ -118,9 +118,9 @@ final class BallPulseEffect extends IntrusiveNode {
         var4 = stackIn_11_0;
         HalloweenBackground.receivedChatDisplayName = var8.readCp1252String(-1);
         if (var4 != 0) {
-          nd.receivedChatSenderName = var8.readCp1252String(-1);
+          RankingSocketHelpers.receivedChatSenderName = var8.readCp1252String(-1);
         } else {
-          nd.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
+          RankingSocketHelpers.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
         }
         if (1 != gj.receivedChatChannel &&
           4 != gj.receivedChatChannel) {
@@ -139,7 +139,7 @@ final class BallPulseEffect extends IntrusiveNode {
         try {
           var9 = LobbyUiHelpers.quickChatPhrases.getDefinition(var5, true);
           ByteArrayPoolHelpers.receivedChatText = var9.getPreview(-3);
-          if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
+          if (RankingSocketHelpers.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.linkedPhraseIds;
@@ -203,9 +203,9 @@ final class BallPulseEffect extends IntrusiveNode {
         var4 = stackIn_11_0;
         HalloweenBackground.receivedChatDisplayName = var8.readCp1252String(-1);
         if (var4 != 0) {
-          nd.receivedChatSenderName = var8.readCp1252String(-1);
+          RankingSocketHelpers.receivedChatSenderName = var8.readCp1252String(-1);
         } else {
-          nd.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
+          RankingSocketHelpers.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
         }
         if (1 != gj.receivedChatChannel &&
           4 != gj.receivedChatChannel) {
@@ -224,7 +224,7 @@ final class BallPulseEffect extends IntrusiveNode {
         try {
           var9 = LobbyUiHelpers.quickChatPhrases.getDefinition(var5, true);
           ByteArrayPoolHelpers.receivedChatText = var9.getPreview(-3);
-          if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
+          if (RankingSocketHelpers.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.linkedPhraseIds;

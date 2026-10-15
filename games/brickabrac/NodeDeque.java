@@ -202,7 +202,7 @@ final class NodeDeque {
         ProxySocketConnector.field_j.addChild(MembershipBenefitsScreen.field_t, 0);
         int var2 = -67 / ((1 - param1) / 63);
         MembershipBenefitsScreen.field_t.addChild(Ball.field_A, 0);
-        MembershipBenefitsScreen.field_t.addChild(nd.field_a, 0);
+        MembershipBenefitsScreen.field_t.addChild(RankingSocketHelpers.field_a, 0);
         CacheIoRequest.a(true, param0);
     }
 

@@ -73,7 +73,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             }
           }
           if (null == var2 &&
-            !nd.chatPinnedToBottom &&
+            !RankingSocketHelpers.chatPinnedToBottom &&
             null == SoundCache.field_k) {
             var2 = CalendarRankingHelpers.field_h;
           }

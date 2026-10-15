@@ -97,27 +97,27 @@ final class MusicEnvelope {
         ContextActionController contextForLayout = null;
         unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          scrollPaneForLayout = f.ignoreListPane.scrollPane;
+          scrollPaneForLayout = TableResponseHelpers.ignoreListPane.scrollPane;
           rowGapForLayout = 2;
           wheelPixels = wheelTurns * (np.uiRowHeight * 3 + 6);
           lineStep = np.uiRowHeight + 2;
           layoutGuard = 22676;
           activeRelayout = allowActiveRelayout;
-          keepChildLayout = (ClientResourceHelpers.field_b == f.ignoreListPane.scrollPane);
+          keepChildLayout = (ClientResourceHelpers.field_b == TableResponseHelpers.ignoreListPane.scrollPane);
           layoutRetained = ((ScrollPane) (Object) scrollPaneForLayout).updateContentLayout(rowGapForLayout, wheelPixels, lineStep, layoutGuard, activeRelayout, keepChildLayout) ? 1 : 0;
-          entries = f.ignoreListPane.content.children;
+          entries = TableResponseHelpers.ignoreListPane.content.children;
           if (!obfuscationGuard) {
             return;
           }
           if (LevelMetadata.field_m != 2 &&
             LevelMetadata.field_m != 1) {
-            f.ignoreListPane.enabled = false;
-            f.ignoreListPane.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
-            UiGeometryHelpers.resetListVerticalBounds(obfuscationGuard, f.ignoreListPane.content);
+            TableResponseHelpers.ignoreListPane.enabled = false;
+            TableResponseHelpers.ignoreListPane.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
+            UiGeometryHelpers.resetListVerticalBounds(obfuscationGuard, TableResponseHelpers.ignoreListPane.content);
             return;
           }
-          f.ignoreListPane.enabled = true;
-          f.ignoreListPane.scrollPane.viewport.text = null;
+          TableResponseHelpers.ignoreListPane.enabled = true;
+          TableResponseHelpers.ignoreListPane.scrollPane.viewport.text = null;
           previousEntry = null;
           entry = (SocialListEntry) (entries.first(-57));
           while (entry != null) {
@@ -130,7 +130,7 @@ final class MusicEnvelope {
               entry.markDescendantsToInheritVisualState(obfuscationGuard);
               createdLabels = 1;
             }
-            entry.width = f.ignoreListPane.content.width;
+            entry.width = TableResponseHelpers.ignoreListPane.content.width;
             entry.nameLabel.setBounds(np.uiRowHeight, 0, 0, entry.width, (byte) 64);
             hasPreviousName = 0;
             if (null != entry.previousName &&
@@ -160,7 +160,7 @@ final class MusicEnvelope {
               entry.remainingHeight = np.uiRowHeight - entry.height;
             }
             if (createdLabels != 0) {
-              f.ignoreListPane.content.placeBelow((UiComponent) (previousEntry), 2, entry, 17290);
+              TableResponseHelpers.ignoreListPane.content.placeBelow((UiComponent) (previousEntry), 2, entry, 17290);
             }
             if (null != entry.renameIndicator &&
               entry.renameIndicator.activeInside) {
@@ -172,7 +172,7 @@ final class MusicEnvelope {
               }
             }
             if (entry.pressedButton != 0) {
-              SpriteGeometry.a(-1, entry, f.ignoreListPane.scrollPane, (int[]) null, entry.actionName, -1, (byte) -58, 0L, entry.name);
+              SpriteGeometry.a(-1, entry, TableResponseHelpers.ignoreListPane.scrollPane, (int[]) null, entry.actionName, -1, (byte) -58, 0L, entry.name);
               contextForRemove = GameRenderAudioHelpers.contextActions;
               removeIgnoreCaption = ScreenNavigationHelpers.field_e;
               contextForRemove.contextMenu.addAction(removeIgnoreCaption, 7, (byte) 126);
@@ -184,14 +184,14 @@ final class MusicEnvelope {
             previousEntry = entry;
             entry = (SocialListEntry) (entries.next((byte) 116));
           }
-          if (f.ignoreListPane.leftFooter.pressedButton != 0) {
-            MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.ignoreListPane.leftFooter.screenX, f.ignoreListPane.leftFooter.screenY, f.ignoreListPane.leftFooter.width, f.ignoreListPane.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          if (TableResponseHelpers.ignoreListPane.leftFooter.pressedButton != 0) {
+            MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(TableResponseHelpers.ignoreListPane.leftFooter.screenX, TableResponseHelpers.ignoreListPane.leftFooter.screenY, TableResponseHelpers.ignoreListPane.leftFooter.width, TableResponseHelpers.ignoreListPane.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
             GameUiController.field_d = 2;
           }
-          if (0 == f.ignoreListPane.rightFooter.pressedButton) {
+          if (0 == TableResponseHelpers.ignoreListPane.rightFooter.pressedButton) {
             return;
           }
-          MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.ignoreListPane.rightFooter.screenX, f.ignoreListPane.rightFooter.screenY, f.ignoreListPane.rightFooter.width, f.ignoreListPane.rightFooter.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(TableResponseHelpers.ignoreListPane.rightFooter.screenX, TableResponseHelpers.ignoreListPane.rightFooter.screenY, TableResponseHelpers.ignoreListPane.rightFooter.width, TableResponseHelpers.ignoreListPane.rightFooter.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
           GameUiController.field_d = 3;
           return;
         } catch (java.lang.RuntimeException caughtUpdateFailure) {

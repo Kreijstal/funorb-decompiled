@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ch {
+final class SocialListResponseHelpers {
     static int field_b;
     static RgbSprite field_m;
     static RgbSprite[] halfPowerUpSprites;
@@ -10,11 +10,11 @@ final class ch {
     static RgbSprite jungleNearSprite;
     static BinaryMaskFont field_c;
     static int[] incomingPacketLengths;
-    static String field_j;
-    static String field_e;
+    static String geniusText;
+    static String createAccountConsentText;
     static RankingsRequest screenRankingsRequest;
-    static String field_d;
-    static String field_i;
+    static String playersLabel;
+    static String blindPowerUpDescription;
 
     final static void handleSocialListResponse(byte obfuscationGuard) {
         int ignoreInsertionIndex = 0;
@@ -106,7 +106,7 @@ final class ch {
             AlignedIconLabel.a("F1: " + WhirlpoolHasher.c((byte) -104), (Throwable) null, 58);
             hn.closeGameTransport((byte) 98);
             if (obfuscationGuard < 52) {
-              ch.handleSocialListResponse((byte) -91);
+              SocialListResponseHelpers.handleSocialListResponse((byte) -91);
             }
             return;
           }
@@ -167,19 +167,19 @@ final class ch {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          field_j = null;
-          field_i = null;
+          geniusText = null;
+          blindPowerUpDescription = null;
           field_c = null;
-          field_d = null;
-          field_e = null;
+          playersLabel = null;
+          createAccountConsentText = null;
           fullscreenFocusProblem = null;
           halfPowerUpSprites = null;
           incomingPacketLengths = null;
-          if (param0 != 20623) {
+          if (obfuscationGuard != 20623) {
             field_b = -11;
           }
           field_l = null;
@@ -190,21 +190,21 @@ final class ch {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ch.B(" + param0 + ')');
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "ch.B(" + obfuscationGuard + ')');
         }
     }
 
-    static long a(long param0, long param1) {
-        long stackIn_1_0 = 0L;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
+    static long bitwiseAnd(long left, long right) {
+        long result = 0L;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
         try {
-          stackIn_1_0 = param0 & param1;
-          return stackIn_1_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "ch.A(" + param0 + ',' + param1 + ')');
+          result = left & right;
+          return result;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "ch.A(" + left + ',' + right + ')');
         }
     }
 
@@ -212,10 +212,10 @@ final class ch {
         field_b = -1;
         fullscreenFocusProblem = new FullscreenFailureKind();
         incomingPacketLengths = new int[256];
-        field_j = "Genius!";
-        field_e = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
-        field_d = "Players";
+        geniusText = "Genius!";
+        createAccountConsentText = "By clicking Create, you agree to the <%0><hotspot=0>Terms of Use</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
+        playersLabel = "Players";
         screenRankingsRequest = null;
-        field_i = "Blind: distorts your screen";
+        blindPowerUpDescription = "Blind: distorts your screen";
     }
 }

@@ -146,7 +146,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
         }
     }
 
-    final static void a(fa param0, int param1, int param2) {
+    final static void a(IntArrayRequestHelpers param0, int param1, int param2) {
         BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -217,8 +217,8 @@ final class SaveResultsPromptScreen extends MenuScreen {
 
     final void navigateBack(int obfuscationGuard) {
         if (obfuscationGuard != -1) {
-          fa var3 = (fa) null;
-          SaveResultsPromptScreen.a((fa) null, -66, -20);
+          IntArrayRequestHelpers var3 = (IntArrayRequestHelpers) null;
+          SaveResultsPromptScreen.a((IntArrayRequestHelpers) null, -66, -20);
         }
     }
 

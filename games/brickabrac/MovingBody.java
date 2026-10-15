@@ -148,8 +148,8 @@ abstract class MovingBody extends IntrusiveNode {
             ResourceArchive.field_f.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
           guardCalculation = -30 % ((55 - obfuscationGuard) / 43);
-          if (ch.field_b != -1) {
-            dialogResult = ch.field_b;
+          if (SocialListResponseHelpers.field_b != -1) {
+            dialogResult = SocialListResponseHelpers.field_b;
             CheckboxWidgetRenderer.a(-1, true);
             explicitDialogResult = dialogResult;
             return explicitDialogResult;

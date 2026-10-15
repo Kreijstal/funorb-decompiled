@@ -359,7 +359,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = nd.field_d;
+              stackIn_19_3 = RankingSocketHelpers.justPlayText;
             }
             this.backOrGuestButton = new FocusableWidget(stackIn_19_3, (WidgetListener) null);
             if (this.showCreateAccountButton) {

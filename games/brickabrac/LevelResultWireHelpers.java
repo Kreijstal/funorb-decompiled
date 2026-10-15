@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class kp {
+final class LevelResultWireHelpers {
     static NodeDeque achievementNotifications;
     static TextFont fullscreenDialogButtonFont;
     static RgbSprite[] halfPaddleCapSprites;
@@ -33,8 +33,8 @@ final class kp {
         }
     }
 
-    public static void a(int param0) {
-        int var1 = 10 % ((param0 + 8) / 43);
+    public static void clearSharedReferences(int obfuscationGuard) {
+        int var1 = 10 % ((obfuscationGuard + 8) / 43);
         achievementNotifications = null;
         halfPaddleCapSprites = null;
         field_d = null;

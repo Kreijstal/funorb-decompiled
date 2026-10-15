@@ -280,7 +280,7 @@ final class InstructionsScreen extends MenuScreen {
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -101, 45);
         AchievementMaskRequest.a(this.screenId, 19);
         if (this.pageIndex != 0) {
-          PasswordFieldRenderer.field_D.setInlineSprites(SingleChildWidget.field_C, nd.field_f);
+          PasswordFieldRenderer.field_D.setInlineSprites(SingleChildWidget.field_C, RankingSocketHelpers.field_f);
         } else {
           PasswordFieldRenderer.field_D.setInlineSprites(CalendarRankingHelpers.field_e, SocialTabbedPanel.field_f);
         }

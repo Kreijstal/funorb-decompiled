@@ -426,7 +426,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_players", (byte) 76);
                 if (var2 != null) {
-                  ch.field_d = MenuButton.a(var2, (byte) 115);
+                  SocialListResponseHelpers.playersLabel = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("mu_gamelist_avg_rating", (byte) 125);
                 if (var2 != null) {
@@ -1212,7 +1212,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("justplay", (byte) -116);
                 if (var2 != null) {
-                  nd.field_d = MenuButton.a(var2, (byte) 119);
+                  RankingSocketHelpers.justPlayText = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = AppletFlowHelpers.a("justplay_excl", (byte) 119);
                 if (var2 != null) {
@@ -1616,7 +1616,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_agreeterms", (byte) -120);
                 if (null != var2) {
-                  ch.field_e = MenuButton.a(var2, (byte) 91);
+                  SocialListResponseHelpers.createAccountConsentText = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("create_u13terms", (byte) 43);
                 if (var2 != null) {
@@ -1938,7 +1938,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_levels", (byte) -117);
                 if (var2 != null) {
-                  fa.field_j = MenuButton.a(var2, (byte) 99);
+                  IntArrayRequestHelpers.waitingForLevelsText = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = AppletFlowHelpers.a("waitingfor_extradata", (byte) 5);
                 if (null != var2) {

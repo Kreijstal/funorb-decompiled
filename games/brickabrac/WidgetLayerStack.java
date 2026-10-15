@@ -301,7 +301,7 @@ final class WidgetLayerStack extends SingleChildWidget {
               rowY = rowY + DropTargetWidget.fullscreenDialogButtonPaddingY;
             }
             if (buttonIndex >= 0) {
-              kp.fullscreenDialogButtonFont.drawLeft(text, textX, rowY + QuickChatCategoryRegistry.fullscreenDialogButtonBaseline, paint, -1);
+              LevelResultWireHelpers.fullscreenDialogButtonFont.drawLeft(text, textX, rowY + QuickChatCategoryRegistry.fullscreenDialogButtonBaseline, paint, -1);
               rowY = rowY + (DropTargetWidget.fullscreenDialogButtonPaddingY + (QuickChatCategoryDefinition.fullscreenDialogButtonGapY + MouseInputCleanup.fullscreenDialogButtonLineHeight));
             } else {
               StateIconLabel.fullscreenDialogBodyFont.drawLeft(text, textX, rowY + DualLinkIterator.fullscreenDialogBodyBaseline, paint, -1);

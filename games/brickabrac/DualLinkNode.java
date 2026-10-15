@@ -70,16 +70,16 @@ class DualLinkNode extends IntrusiveNode {
           drawY = drawY + (font.descent + 4);
           for (lifeIndex = 0; lifeIndex < -1 + board.lives; lifeIndex++) {
             if (lifeIndex < -2 + board.lives) {
-              ch.field_l.a(drawX, drawY, 196);
+              SocialListResponseHelpers.field_l.a(drawX, drawY, 196);
             } else {
-              ch.field_l.e(ch.field_l.canvasWidth / 2 + drawX, drawY + ch.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.cosine8192(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
+              SocialListResponseHelpers.field_l.e(SocialListResponseHelpers.field_l.canvasWidth / 2 + drawX, drawY + SocialListResponseHelpers.field_l.canvasHeight / 2, 0, 4480 + (BrickABrac.cosine8192(2048, 200 * MembershipBenefitsScreen.clientTick) * 384 >> 16));
             }
-            drawX = drawX + ch.field_l.width / 2;
-            if (x + width < drawX + ch.field_l.width) {
-              drawY = drawY + (ch.field_l.height + 2);
+            drawX = drawX + SocialListResponseHelpers.field_l.width / 2;
+            if (x + width < drawX + SocialListResponseHelpers.field_l.width) {
+              drawY = drawY + (SocialListResponseHelpers.field_l.height + 2);
               drawX = x + insetX - 2;
             }
-            if (drawY + ch.field_l.height > y - (-height + insetY)) {
+            if (drawY + SocialListResponseHelpers.field_l.height > y - (-height + insetY)) {
               return;
             }
           }

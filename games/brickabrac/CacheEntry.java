@@ -124,7 +124,7 @@ abstract class CacheEntry extends DualLinkNode {
           PasswordTooltipHelpers.field_e = new UiComponent(0L, FarmBackground.field_x);
           AppletFlowHelpers.field_g = new UiComponent(0L, MainMenuScreen.field_t, AppletFlowHelpers.field_b);
           AppletFlowHelpers.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
-          kk.field_b = new UiComponent(0L, LoginCredentialKind.field_d, ch.field_d);
+          kk.field_b = new UiComponent(0L, LoginCredentialKind.field_d, SocialListResponseHelpers.playersLabel);
           RasterEffectHelpers.field_b = new UiComponent(0L, LoginCredentialKind.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, LoginCredentialKind.field_d, TextFieldRenderer.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
@@ -286,7 +286,7 @@ abstract class CacheEntry extends DualLinkNode {
           MultiplayerMatch.field_d.addChild(DraggableWidget.field_K, 0);
           MultiplayerMatch.field_d.addChild(AppletGameShell.field_e, 0);
           TableNameEntry.field_h = new UiComponent(0L, GameConnectionHelpers.field_c, SecondaryNodeQueue.field_a.toUpperCase());
-          nd.field_a = new UiComponent(0L, GameUiController.field_b, fh.field_e.toUpperCase());
+          RankingSocketHelpers.field_a = new UiComponent(0L, GameUiController.field_b, fh.field_e.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -38,9 +38,9 @@ class FramedMenuScreen extends MenuScreen {
     final static UiComponent f(int param0) {
         if (param0 <= 94) {
           field_t = (String) null;
-          return f.ignoreListPane.content;
+          return TableResponseHelpers.ignoreListPane.content;
         }
-        return f.ignoreListPane.content;
+        return TableResponseHelpers.ignoreListPane.content;
     }
 
     final static java.net.URL rewriteAppletPath(String settingsOverride, byte obfuscationGuard, String sessionOverride, int languageOverride, java.net.URL url) {

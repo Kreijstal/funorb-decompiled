@@ -75,7 +75,7 @@ final class RankingsScreen extends MenuScreen {
         if (obfuscationGuard <= 96) {
           return;
         }
-        ch.screenRankingsRequest = null;
+        SocialListResponseHelpers.screenRankingsRequest = null;
     }
 
     final void advanceScreen(boolean updateFlag, boolean inputEnabled, int obfuscationGuard) {
@@ -86,8 +86,8 @@ final class RankingsScreen extends MenuScreen {
         if (obfuscationGuard >= -52) {
           return;
         }
-        if (ch.screenRankingsRequest == null) {
-          ch.screenRankingsRequest = GameScreen.getOrRequestRankings(7, 0, 10, (byte) -114);
+        if (SocialListResponseHelpers.screenRankingsRequest == null) {
+          SocialListResponseHelpers.screenRankingsRequest = GameScreen.getOrRequestRankings(7, 0, 10, (byte) -114);
         }
     }
 
@@ -106,7 +106,7 @@ final class RankingsScreen extends MenuScreen {
     }
 
     final void onExit(byte obfuscationGuard) {
-        ch.screenRankingsRequest = null;
+        SocialListResponseHelpers.screenRankingsRequest = null;
         if (obfuscationGuard != 79) {
           field_s = (UiComponent) null;
         }
@@ -239,14 +239,14 @@ final class RankingsScreen extends MenuScreen {
         ContextActionController.field_g.drawRight(BufferedFile.field_p, ResourceArchive.field_d[4], var2, var3, -1);
         var2Lifetime1 = 149 + (ContextActionController.field_g.capHeight + ContextActionController.field_g.descent) * 5 / 2;
         var4 = null;
-        if (ch.screenRankingsRequest != null &&
-          ch.screenRankingsRequest.complete) {
-          if (null == ch.screenRankingsRequest.namesBySort) {
+        if (SocialListResponseHelpers.screenRankingsRequest != null &&
+          SocialListResponseHelpers.screenRankingsRequest.complete) {
+          if (null == SocialListResponseHelpers.screenRankingsRequest.namesBySort) {
             var4Lifetime1 = BoundedFile.field_d;
           } else {
             var4Lifetime1 = ProxyAuthenticationRequiredException.field_f;
-            var5 = ch.screenRankingsRequest.namesBySort[this.sortIndex];
-            var6 = ch.screenRankingsRequest.statisticsBySort[this.sortIndex];
+            var5 = SocialListResponseHelpers.screenRankingsRequest.namesBySort[this.sortIndex];
+            var6 = SocialListResponseHelpers.screenRankingsRequest.statisticsBySort[this.sortIndex];
             var7 = 0;
             for (var8 = 0; var8 < 10; var8++) {
               if (var5[var8] != null) {
@@ -264,7 +264,7 @@ final class RankingsScreen extends MenuScreen {
               var2Lifetime1 += 18;
             }
             if (var7 == 0) {
-              AchievementIcon.drawRankingRow(ch.screenRankingsRequest.localLosses, var2Lifetime1, LoadingProgressDialog.field_cb, ch.screenRankingsRequest.localWins, ch.screenRankingsRequest.localRating, 1, -1, ch.screenRankingsRequest.localDraws, -1);
+              AchievementIcon.drawRankingRow(SocialListResponseHelpers.screenRankingsRequest.localLosses, var2Lifetime1, LoadingProgressDialog.field_cb, SocialListResponseHelpers.screenRankingsRequest.localWins, SocialListResponseHelpers.screenRankingsRequest.localRating, 1, -1, SocialListResponseHelpers.screenRankingsRequest.localDraws, -1);
             }
           }
         } else {

@@ -616,7 +616,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         PasswordFieldRenderer dupTemp$1 = new PasswordFieldRenderer(10000536);
         this.passwordConfirmationField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
         this.passwordField.renderer = (WidgetRenderer) ((Object) dupTemp$1);
-        String var2 = GamePresentationHelpers.formatIndexedText(ch.field_e, new String[]{this.c(true), this.j(-987472479)}, (byte) 103);
+        String var2 = GamePresentationHelpers.formatIndexedText(SocialListResponseHelpers.createAccountConsentText, new String[]{this.c(true), this.j(-987472479)}, (byte) 103);
         int var3 = 20;
         var3 = var3 + this.a(IntNode.field_l, this.emailField, var3, 37, 170);
         var3 = var3 + (this.a(this.emailConfirmationField, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);

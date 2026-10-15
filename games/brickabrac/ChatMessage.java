@@ -142,7 +142,7 @@ final class ChatMessage {
         this.contextLabel = CacheEntry.receivedChatContextLabel;
         this.badgeId = LobbyUiHelpers.receivedChatBadge;
         this.senderId = BirthDateValidator.receivedChatSenderId;
-        this.senderName = nd.receivedChatSenderName;
+        this.senderName = RankingSocketHelpers.receivedChatSenderName;
         this.systemMessage = IterableIntrusiveHashTable.receivedChatSystem;
         this.text = ByteArrayPoolHelpers.receivedChatText;
         this.channel = gj.receivedChatChannel;

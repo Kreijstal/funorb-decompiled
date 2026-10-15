@@ -21,7 +21,7 @@ final class JungleBackground extends BackgroundScene {
               ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
             }
-            ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
+            ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
           }
         } else {
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
@@ -29,7 +29,7 @@ final class JungleBackground extends BackgroundScene {
             ArchiveFetchClient.a(var7, np.jungleFarSprite, colorIndex, 1, 0, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, ch.jungleNearSprite);
+          ProxyAuthenticationRequiredException.a(var7.sprite, MultiValueSliderRenderer.jungleMidSprite, destinationX, false, scroll16, destinationY, 0, colorIndex, 1, 640, SocialListResponseHelpers.jungleNearSprite);
         }
     }
 
@@ -813,7 +813,7 @@ final class JungleBackground extends BackgroundScene {
           var3 = (LobbyGame) null;
           JungleBackground.a(81, (LobbyGame) null, true, true);
         }
-        stackIn_13_0 = (null != ch.jungleNearSprite) && (null != MultiValueSliderRenderer.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != StatefulWidgetRenderer.jungleCentreSprites);
+        stackIn_13_0 = (null != SocialListResponseHelpers.jungleNearSprite) && (null != MultiValueSliderRenderer.jungleMidSprite) && (np.jungleFarSprite != null) && (null != Brick.jungleSmallSprite) && (null != WidgetTextLayout.jungleCharacterSprite) && (DualLinkNode.jungleCapsSprites != null) && (DualLinkIterator.jungleSegsSprites != null) && (null != StatefulWidgetRenderer.jungleCentreSprites);
         return stackIn_13_0;
     }
 
@@ -925,11 +925,11 @@ final class JungleBackground extends BackgroundScene {
         if (!AchievementIcon.backgroundSpriteArchive.ensureGroupAvailableByName("jungle", -28138)) {
           return false;
         }
-        ch.jungleNearSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.backgroundSpriteArchive);
+        SocialListResponseHelpers.jungleNearSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_near", (byte) -39, AchievementIcon.backgroundSpriteArchive);
         MultiValueSliderRenderer.jungleMidSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_mid", (byte) -67, AchievementIcon.backgroundSpriteArchive);
         np.jungleFarSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_far", (byte) -46, AchievementIcon.backgroundSpriteArchive);
         Brick.jungleSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_small", (byte) -109, AchievementIcon.backgroundSpriteArchive);
-        CacheEntry.field_D = UiGeometryHelpers.createScaledHalfSizeSprite(0, ch.jungleNearSprite);
+        CacheEntry.field_D = UiGeometryHelpers.createScaledHalfSizeSprite(0, SocialListResponseHelpers.jungleNearSprite);
         HuffmanCodec.field_e = UiGeometryHelpers.createScaledHalfSizeSprite(0, MultiValueSliderRenderer.jungleMidSprite);
         WidgetGroup.field_E = UiGeometryHelpers.createScaledHalfSizeSprite(0, np.jungleFarSprite);
         WidgetTextLayout.jungleCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("jungle", "jungle_character", (byte) -119, AchievementIcon.backgroundSpriteArchive);

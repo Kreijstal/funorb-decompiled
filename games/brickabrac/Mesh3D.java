@@ -71,7 +71,7 @@ final class Mesh3D {
         try {
           ok.displayNameChangedSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, archive);
           GameScreen.friendsListPane = new ScrollPaneWithFooter(0L, rq.field_b, LoginPanel.field_J, ChocolateBackground.field_y);
-          f.ignoreListPane = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ScreenNavigationHelpers.field_e);
+          TableResponseHelpers.ignoreListPane = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ScreenNavigationHelpers.field_e);
           QuickChatPhraseRegistry.friendsPanel = new UiComponent(0L, (UiComponent) null);
           ChatLobbyUiHelpers.friendsStatusLabel = new UiComponent(0L, CappedUrlRequest.field_l);
           ChatLobbyUiHelpers.friendsStatusLabel.horizontalAlignment = 1;
@@ -91,9 +91,9 @@ final class Mesh3D {
             fireworkSpawnMinY = 109;
           }
           friendsViewportAlias.horizontalAlignment = 1;
-          f.ignoreListPane.scrollPane.viewport.copyStyle((byte) -115, CappedUrlRequest.field_l);
-          ignoreViewport = f.ignoreListPane.scrollPane.viewport;
-          f.ignoreListPane.scrollPane.viewport.verticalAlignment = 1;
+          TableResponseHelpers.ignoreListPane.scrollPane.viewport.copyStyle((byte) -115, CappedUrlRequest.field_l);
+          ignoreViewport = TableResponseHelpers.ignoreListPane.scrollPane.viewport;
+          TableResponseHelpers.ignoreListPane.scrollPane.viewport.verticalAlignment = 1;
           ignoreViewport.horizontalAlignment = 1;
         } catch (RuntimeException initializationFailure) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) initializationFailure), "fr.I(" + (archive != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -103,7 +103,7 @@ final class Mesh3D {
     final static void configureFullscreenDialogFonts(int maximumWrapWidth, TextFont buttonFont, TextFont bodyFont, boolean obfuscationGuard) {
         try {
           ConditionalTextValue.fullscreenDialogWrapWidth = maximumWrapWidth;
-          kp.fullscreenDialogButtonFont = buttonFont;
+          LevelResultWireHelpers.fullscreenDialogButtonFont = buttonFont;
           StateIconLabel.fullscreenDialogBodyFont = bodyFont;
           pp.setFullscreenDialogCenter(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
           if (!obfuscationGuard) {

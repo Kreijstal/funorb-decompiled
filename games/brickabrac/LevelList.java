@@ -63,7 +63,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[2] = DebouncedValidationSource.field_e;
         CacheEntry.field_A[11] = MusicCrossfadeStream.field_w;
         CacheEntry.field_A[5] = ProxyAuthenticationRequiredException.field_c;
-        CacheEntry.field_A[6] = ch.field_i;
+        CacheEntry.field_A[6] = SocialListResponseHelpers.blindPowerUpDescription;
         CacheEntry.field_A[9] = SecondaryHashTable.field_a;
         CacheEntry.field_A[4] = OutgoingPacketHelpers.field_d;
         ArrayWidgetGroup.buttonLabels[14] = SpriteInputHelpers.field_c[0];
@@ -76,7 +76,7 @@ final class LevelList {
         if (param0 != -1) {
           return;
         }
-        ArrayWidgetGroup.buttonLabels[34] = f.field_b;
+        ArrayWidgetGroup.buttonLabels[34] = TableResponseHelpers.levelSelectText;
         ArrayWidgetGroup.buttonLabels[28] = ConstructionBackground.field_r;
         ArrayWidgetGroup.buttonLabels[19] = HighscorePackSelector.field_g;
         ArrayWidgetGroup.buttonLabels[35] = LevelPackLoader.field_d;
@@ -104,7 +104,7 @@ final class LevelList {
         ar.field_a = new String[]{kk.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, GameRenderAudioHelpers.field_b, RectangleBody.field_t};
-        TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, ch.field_j, GameTransportActions.field_a, AppletFlowHelpers.field_f, OutgoingPacketHelpers.field_h};
+        TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, SocialListResponseHelpers.geniusText, GameTransportActions.field_a, AppletFlowHelpers.field_f, OutgoingPacketHelpers.field_h};
         CacheEntry.field_A[17] = MusicPatch.field_q;
         CacheEntry.field_A[14] = RadialSelectorWidget.field_V;
         CacheEntry.field_A[18] = GameScreen.field_g;

@@ -780,7 +780,7 @@ final class MusicVoice extends IntrusiveNode {
                   pointY = mesh.facePointOneY[vertexOrFace];
                   pointZ = mesh.facePointOneZ[vertexOrFace];
                   FireworkBurst.viewFacePointOneX[vertexOrFace] = (relativeXYOrWorldXZ * pointY + (relativeXXOrWorldXY * pointX + relativeXZOrDirectionIndex * pointZ) >> 16) + cameraXOrWorldXX;
-                  nd.viewFacePointOneY[vertexOrFace] = cameraYOrWorldYX + (relativeYYOrWorldYZ * pointY + (pointX * relativeYXOrWorldYY + pointZ * relativeYZOrDirectionX) >> 16);
+                  RankingSocketHelpers.viewFacePointOneY[vertexOrFace] = cameraYOrWorldYX + (relativeYYOrWorldYZ * pointY + (pointX * relativeYXOrWorldYY + pointZ * relativeYZOrDirectionX) >> 16);
                   UnderwaterBackground.viewFacePointOneZ[vertexOrFace] = (relativeZXOrWorldZY * pointX - (-(pointY * relativeZYOrWorldZZ) - relativeZZOrDirectionY * pointZ) >> 16) + cameraZOrWorldZX;
                   pointX = mesh.facePointTwoX[vertexOrFace];
                   pointY = mesh.facePointTwoY[vertexOrFace];

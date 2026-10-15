@@ -62,7 +62,7 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.createAccountButton = new FocusableWidget(CheckboxWidgetRenderer.field_a, (WidgetListener) null);
         this.backButton = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
-        this.guestPlayButton = new FocusableWidget(nd.field_d, (WidgetListener) null);
+        this.guestPlayButton = new FocusableWidget(RankingSocketHelpers.justPlayText, (WidgetListener) null);
         ButtonWidgetRenderer var1 = new ButtonWidgetRenderer();
         this.createAccountButton.renderer = (WidgetRenderer) ((Object) var1);
         this.backButton.renderer = (WidgetRenderer) ((Object) var1);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti {
+final class RankingSortHelpers {
     private static String field_z;
 
     final static void sortRankingIndexRange(int upperBound, int lowerBound, int end, boolean sortByRating, int obfuscationGuard, int retainedEnd, int start) {
@@ -60,15 +60,15 @@ final class ti {
                 }
               }
             }
-            ti.sortRankingIndexRange(upperBound, var9, var8, sortByRating, 125, retainedEnd, start);
-            ti.sortRankingIndexRange(var10, lowerBound, end, sortByRating, 99, retainedEnd, var8);
+            RankingSortHelpers.sortRankingIndexRange(upperBound, var9, var8, sortByRating, 125, retainedEnd, start);
+            RankingSortHelpers.sortRankingIndexRange(var10, lowerBound, end, sortByRating, 99, retainedEnd, var8);
             return;
           }
           for (var7_intLifetime1 = -1 + end; var7_intLifetime1 > start; var7_intLifetime1--) {
             for (var8Lifetime1 = start; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = VerticalScrollbar.rankingSortIndices[var8Lifetime1];
               var10Lifetime1 = VerticalScrollbar.rankingSortIndices[var8Lifetime1 + 1];
-              if (nd.comesBeforeRankingRow(true, var10Lifetime1, var9Lifetime1, sortByRating)) {
+              if (RankingSocketHelpers.comesBeforeRankingRow(true, var10Lifetime1, var9Lifetime1, sortByRating)) {
                 VerticalScrollbar.rankingSortIndices[var8Lifetime1] = var10Lifetime1;
                 VerticalScrollbar.rankingSortIndices[1 + var8Lifetime1] = var9Lifetime1;
               }

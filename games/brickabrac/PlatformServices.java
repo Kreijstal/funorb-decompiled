@@ -288,7 +288,7 @@ final class PlatformServices implements Runnable {
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = nd.createSocketConnector(60, var8.argumentOne, (String) (var8.payload)).connect(0);
+                      var8.result = RankingSocketHelpers.createSocketConnector(60, var8.argumentOne, (String) (var8.payload)).connect(0);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;

@@ -28,25 +28,25 @@ abstract class GameConnectionShell extends AppletGameShell {
     }
 
     private final void initializePacketLengths(int obfuscationGuard) {
-        ch.incomingPacketLengths[6] = -2;
+        SocialListResponseHelpers.incomingPacketLengths[6] = -2;
         if (obfuscationGuard <= 116) {
           return;
         }
-        ch.incomingPacketLengths[1] = 16;
-        ch.incomingPacketLengths[18] = 1;
-        ch.incomingPacketLengths[11] = -1;
-        ch.incomingPacketLengths[9] = -1;
-        ch.incomingPacketLengths[2] = -2;
-        ch.incomingPacketLengths[5] = -1;
-        ch.incomingPacketLengths[10] = -1;
-        ch.incomingPacketLengths[7] = -1;
-        ch.incomingPacketLengths[12] = -1;
-        ch.incomingPacketLengths[13] = -1;
-        ch.incomingPacketLengths[17] = -1;
-        ch.incomingPacketLengths[8] = -2;
-        ch.incomingPacketLengths[4] = -1;
-        ch.incomingPacketLengths[3] = -1;
-        ch.incomingPacketLengths[16] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[1] = 16;
+        SocialListResponseHelpers.incomingPacketLengths[18] = 1;
+        SocialListResponseHelpers.incomingPacketLengths[11] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[9] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[2] = -2;
+        SocialListResponseHelpers.incomingPacketLengths[5] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[10] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[7] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[12] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[13] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[17] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[8] = -2;
+        SocialListResponseHelpers.incomingPacketLengths[4] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[3] = -1;
+        SocialListResponseHelpers.incomingPacketLengths[16] = -1;
     }
 
     final void initializeApplet(String gameName, int gameVersion, int obfuscationGuard) {
@@ -72,7 +72,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         BoundedFile.patchJavaKeyCodeMap(59);
         NinjaBackground.mouseWheelSource = ea.createMouseWheelSource(60);
         CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.windowCanvas);
-        nd.field_c = param4;
+        RankingSocketHelpers.field_c = param4;
         LevelPackCard.field_i = param5;
         PacketBuffer.field_j = param1;
         ClientResourceHelpers.field_f = param6;
@@ -522,7 +522,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                ch.handleSocialListResponse((byte) 63);
+                                SocialListResponseHelpers.handleSocialListResponse((byte) 63);
                                 return;
                               }
                               if (var2 == 17) {
@@ -560,7 +560,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                 MultiValueSliderWidget.handleAchievementResponse(-1);
               }
             } else {
-              f.handleTableResponse((byte) 7);
+              TableResponseHelpers.handleTableResponse((byte) 7);
             }
           }
           return;
@@ -815,7 +815,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (LoginCredentialKind.field_e != 0) {
             ValidationIconWidget.field_K = TextChoiceDialogHitTest.a(PacketBuffer.field_j, true);
           }
-          LabeledWidget.field_P = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, nd.field_c, false);
+          LabeledWidget.field_P = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, RankingSocketHelpers.field_c, false);
           RadialSelectorWidget.field_S = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ea.field_c, false);
           BoardPresentationHelpers.field_c = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ClientResourceHelpers.field_f, false);
           FriendListUi.field_c = RadialSelectorWidget.field_S;

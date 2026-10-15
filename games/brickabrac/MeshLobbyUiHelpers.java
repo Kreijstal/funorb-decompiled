@@ -232,8 +232,8 @@ final class MeshLobbyUiHelpers {
           ValidationStatus.field_j.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "heading", 2), (byte) -117);
           AccountMessageDialog.field_Ab = new UiComponent(0L, (UiComponent) null);
           AccountMessageDialog.field_Ab.frameSprites = TimedSplashScreen.a(false, (byte) 83, 8421504, 120, 4210752, false);
-          f.field_a = new UiComponent(0L, (UiComponent) null);
-          f.field_a.frameSprites = DateFieldsWidget.a(false, 6316128, 3, 6316128, 114, 1);
+          TableResponseHelpers.field_a = new UiComponent(0L, (UiComponent) null);
+          TableResponseHelpers.field_a.frameSprites = DateFieldsWidget.a(false, 6316128, 3, 6316128, 114, 1);
           GameUiController.field_c = new UiComponent(0L, (UiComponent) null);
           GameUiController.field_c.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup", 2), (byte) -114);
           var12 = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "popup_mouseover", 2), (byte) -117);

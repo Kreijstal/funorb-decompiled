@@ -220,7 +220,7 @@ final class QuickChatCategoryRegistry {
           AccountRegistrationPanel.fullPaddleCenterSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
           TextHotspotRegion.powerUpMeterIcons = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "powerup", 2);
           LevelPackSelectScreen.powerUpMeterBarSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
-          ch.field_l = SpriteInputHelpers.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
+          SocialListResponseHelpers.field_l = SpriteInputHelpers.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
           QuickChatHelpDialog.field_Ub = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "characters_fm", 2);
           GzipInflater.field_a = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_game", param3 - 29135);
           IntrusiveNode.gameEyeSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "eyes_game", 2);
@@ -251,10 +251,10 @@ final class QuickChatCategoryRegistry {
             ResourceArchive.halfBrickSprites[var10_intLifetime3].bindRasterTarget();
             TranslucentNineSliceFrame.fullBrickSprites[var10_intLifetime3 % 29].drawHalfSize(0, 0);
           }
-          kp.halfPaddleCapSprites = new RgbSprite[MultiValueSliderRenderer.fullPaddleCapSprites.length];
+          LevelResultWireHelpers.halfPaddleCapSprites = new RgbSprite[MultiValueSliderRenderer.fullPaddleCapSprites.length];
           for (var10_intLifetime4 = 0; MultiValueSliderRenderer.fullPaddleCapSprites.length > var10_intLifetime4; var10_intLifetime4++) {
-            kp.halfPaddleCapSprites[var10_intLifetime4] = new RgbSprite(MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].canvasWidth / 2, MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].canvasHeight / 2);
-            kp.halfPaddleCapSprites[var10_intLifetime4].bindRasterTarget();
+            LevelResultWireHelpers.halfPaddleCapSprites[var10_intLifetime4] = new RgbSprite(MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].canvasWidth / 2, MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].canvasHeight / 2);
+            LevelResultWireHelpers.halfPaddleCapSprites[var10_intLifetime4].bindRasterTarget();
             MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].drawHalfSize(0, 0);
           }
           LevelPackSelectScreen.halfPaddleSegmentSprites = new RgbSprite[GameConnectionShell.fullPaddleSegmentSprites.length];
@@ -272,13 +272,13 @@ final class QuickChatCategoryRegistry {
           UiComponent.halfSteelBallSprite = new RgbSprite(Ball.fullSteelBallSprite.canvasWidth / 2, Ball.fullSteelBallSprite.canvasHeight / 2);
           UiComponent.halfSteelBallSprite.bindRasterTarget();
           Ball.fullSteelBallSprite.drawHalfSize(0, 0);
-          ch.halfPowerUpSprites = new RgbSprite[TextHotspotRegion.powerUpMeterIcons.length];
+          SocialListResponseHelpers.halfPowerUpSprites = new RgbSprite[TextHotspotRegion.powerUpMeterIcons.length];
           if (param3 != 29137) {
             QuickChatCategoryRegistry.a((byte) -25);
           }
-          for (var10_intLifetime6 = 0; ch.halfPowerUpSprites.length > var10_intLifetime6; var10_intLifetime6++) {
-            ch.halfPowerUpSprites[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasHeight / 2);
-            ch.halfPowerUpSprites[var10_intLifetime6].bindRasterTarget();
+          for (var10_intLifetime6 = 0; SocialListResponseHelpers.halfPowerUpSprites.length > var10_intLifetime6; var10_intLifetime6++) {
+            SocialListResponseHelpers.halfPowerUpSprites[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasHeight / 2);
+            SocialListResponseHelpers.halfPowerUpSprites[var10_intLifetime6].bindRasterTarget();
             TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].drawHalfSize(0, 0);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 79);
@@ -309,9 +309,9 @@ final class QuickChatCategoryRegistry {
           CalendarRankingHelpers.field_e[4] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p2_key_left", "basic");
           CalendarRankingHelpers.field_e[5] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "p2_key_launch", "basic");
           CalendarRankingHelpers.field_e[6] = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "key_enter", "basic");
-          nd.field_f = new int[58];
-          for (var10_intLifetime10 = 0; nd.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
-            nd.field_f[var10_intLifetime10] = 14;
+          RankingSocketHelpers.field_f = new int[58];
+          for (var10_intLifetime10 = 0; RankingSocketHelpers.field_f.length > var10_intLifetime10; var10_intLifetime10++) {
+            RankingSocketHelpers.field_f[var10_intLifetime10] = 14;
           }
           UnderwaterBackground.gameCompletedMessageSprite = HotspotTextWidget.a(2, BirthDateEntryPanel.field_N, -1);
           ClientException.gameOverMessageSprite = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);

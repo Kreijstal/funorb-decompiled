@@ -84,7 +84,7 @@ final class PasswordValidator extends TextFieldValidator {
     final static void submitLevelResult(LevelResultSubmission result, int opcode, byte obfuscationGuard) {
         try {
           NinjaBackground.pendingLevelResults.addLast(result, (byte) 3);
-          kp.sendLevelResult(opcode, (byte) -99, result);
+          LevelResultWireHelpers.sendLevelResult(opcode, (byte) -99, result);
           int var3_int = -88 % ((obfuscationGuard + 37) / 48);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "g.D(" + (result != null ? "{...}" : "null") + ',' + opcode + ',' + obfuscationGuard + ')');

@@ -705,7 +705,7 @@ final class LobbyUiHelpers {
             if (DraggableWidget.field_K.pressedButton != 0) {
               CacheEntry.field_w = true;
             }
-            if (0 != nd.field_a.pressedButton) {
+            if (0 != RankingSocketHelpers.field_a.pressedButton) {
               MeshLobbyUiHelpers.joinRequestsPanelOpen = false;
             }
             JungleBackground.a(gameActionOpcode, ClientResourceHelpers.currentLobbyGame, false, false);

@@ -14,7 +14,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         boolean stackIn_11_0 = false;
         var3 = BrickABrac.field_J ? 1 : 0;
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!IncomingPacketHelpers.readNextGamePacket(ch.incomingPacketLengths, (byte) 64)))) {
+        while (!(decompiledNaturalLoopExit0 = (!IncomingPacketHelpers.readNextGamePacket(SocialListResponseHelpers.incomingPacketLengths, (byte) 64)))) {
           stackIn_11_0 = this.handleGamePacket(LogoRenderHelpers.incomingPackets, (byte) 47, IntrusiveHashTable.currentPacketOpcode);
           if (var3 == 0) {
             if (stackIn_11_0) {
@@ -90,7 +90,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           return;
         }
         IntArrayRequest.field_i = true;
-        var3 = kp.field_d.size() - 1;
+        var3 = LevelResultWireHelpers.field_d.size() - 1;
         do {
           if (var3 < 0) {
             if (obfuscationGuard <= 93) {
@@ -98,7 +98,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
             }
             break;
           }
-          ((GameLayerController) (kp.field_d.elementAt(var3))).renderGameLayer(16769381);
+          ((GameLayerController) (LevelResultWireHelpers.field_d.elementAt(var3))).renderGameLayer(16769381);
           var3--;
         } while (var4 == 0);
         if (IntArrayRequest.field_i) {
@@ -129,9 +129,9 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           try {
             this.enablePacketSix(64);
             this.enablePacketsElevenToThirteen((byte) -19);
-            ch.incomingPacketLengths[9] = -1;
-            ch.incomingPacketLengths[10] = -1;
-            kp.field_d = new Vector();
+            SocialListResponseHelpers.incomingPacketLengths[9] = -1;
+            SocialListResponseHelpers.incomingPacketLengths[10] = -1;
+            LevelResultWireHelpers.field_d = new Vector();
             KeyboardInput.a((GameLayerController) (this), 0);
           } catch (RuntimeException runtimeException) {
             throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "sa.HB(" + obfuscationGuard + ',' + (lifecycle != null ? "{...}" : "null") + ')');
@@ -247,7 +247,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                       stackIn_76_1 = -1;
                       if (var5 != 0) {
                         if (stackIn_76_0 < stackIn_76_1) {
-                          var6 = (GameLayerController) (kp.field_d.elementAt(var3));
+                          var6 = (GameLayerController) (LevelResultWireHelpers.field_d.elementAt(var3));
                           var6.updateGameLayer(var2 != 0, (byte) -126);
                           decompiledFrameCompleted1 = false;
                           break;
@@ -268,8 +268,8 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                         }
                       }
                       var4 = 0;
-                      while (var4 < kp.field_d.size()) {
-                        stackIn_39_0 = ((GameLayerController) (kp.field_d.elementAt(var4))).handleGameKey(MeshAttributeRecord.currentKeyCode, ResourceArchiveFactory.currentKeyCharacter, -81);
+                      while (var4 < LevelResultWireHelpers.field_d.size()) {
+                        stackIn_39_0 = ((GameLayerController) (LevelResultWireHelpers.field_d.elementAt(var4))).handleGameKey(MeshAttributeRecord.currentKeyCode, ResourceArchiveFactory.currentKeyCharacter, -81);
                         if (!stackIn_39_0) {
                           var4++;
                           continue;
@@ -301,8 +301,8 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         if ((decompiledFrameCompleted1) &&
           (decompiledFrameCompleted0)) {
           var3 = 0;
-          while (!(var3 >= kp.field_d.size())) {
-            var6 = (GameLayerController) (kp.field_d.elementAt(var3));
+          while (!(var3 >= LevelResultWireHelpers.field_d.size())) {
+            var6 = (GameLayerController) (LevelResultWireHelpers.field_d.elementAt(var3));
             var6.updateGameLayer(var2 != 0, (byte) -126);
             if (var5 != 0) {
               break;

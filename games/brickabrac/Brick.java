@@ -389,7 +389,7 @@ final class Brick extends RectangleBody {
     }
 
     final static void e(int param0) {
-        int var1 = (-640 + kp.field_a) / 2;
+        int var1 = (-640 + LevelResultWireHelpers.field_a) / 2;
         int var2 = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
         int var3 = var2 - TextLineLayout.field_b * TextLineLayout.field_b;
         ContentTransitionLayer.field_gb.setBounds(-124 + (Rasterizer2D.height - 90), 90, -(199 * var3 / var2) + var1, 199, (byte) 64);

@@ -8,10 +8,10 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
     final static void a(int param0, boolean param1) {
         if (!param1) {
           CheckboxWidgetRenderer.sendBytePayloadRequest(-34, 70);
-          ch.field_b = param0;
+          SocialListResponseHelpers.field_b = param0;
           return;
         }
-        ch.field_b = param0;
+        SocialListResponseHelpers.field_b = param0;
     }
 
     public static void a(boolean param0) {

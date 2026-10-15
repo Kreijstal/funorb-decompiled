@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class f {
-    static String field_b;
+final class TableResponseHelpers {
+    static String levelSelectText;
     static UiComponent field_a;
     static ScrollPaneWithFooter ignoreListPane;
 
@@ -49,7 +49,7 @@ final class f {
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard != 7) {
-            f.a(-30);
+            TableResponseHelpers.clearSharedReferences(-30);
           }
           packet = LogoRenderHelpers.incomingPackets;
           responseType = packet.readUnsignedByte(255);
@@ -180,16 +180,16 @@ final class f {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int obfuscationGuard) {
         ignoreListPane = null;
-        if (param0 != 1) {
-          f.handleTableResponse((byte) 116);
+        if (obfuscationGuard != 1) {
+          TableResponseHelpers.handleTableResponse((byte) 116);
         }
         field_a = null;
-        field_b = null;
+        levelSelectText = null;
     }
 
     static {
-        field_b = "Level Select";
+        levelSelectText = "Level Select";
     }
 }

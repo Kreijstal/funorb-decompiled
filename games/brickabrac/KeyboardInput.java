@@ -340,7 +340,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
 
     final static void a(GameLayerController param0, int param1) {
         try {
-          kp.field_d.insertElementAt(param0, param1);
+          LevelResultWireHelpers.field_d.insertElementAt(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "op.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

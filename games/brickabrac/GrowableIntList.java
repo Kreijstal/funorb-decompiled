@@ -110,7 +110,7 @@ final class GrowableIntList {
               MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
             }
           } else {
-            ValidationStatus.field_f = (kp.field_a - 640) / 2;
+            ValidationStatus.field_f = (LevelResultWireHelpers.field_a - 640) / 2;
             MusicPatch.a(-128, param3);
             if (TextLineLayout.field_b > 0) {
               DateFieldsWidget.a(param8, param3, -94, param2);
@@ -159,7 +159,7 @@ final class GrowableIntList {
             }
           }
         } else {
-          if (Rasterizer2D.width == kp.field_a) {
+          if (Rasterizer2D.width == LevelResultWireHelpers.field_a) {
             if (Rasterizer2D.height != IsaacGenerator.field_i &&
               Rasterizer2D.height == BallPulseEffect.framebuffer.height &&
               Rasterizer2D.width == BallPulseEffect.framebuffer.width) {
@@ -198,7 +198,7 @@ final class GrowableIntList {
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
-              ValidationStatus.field_f = (kp.field_a - 640) / 2;
+              ValidationStatus.field_f = (LevelResultWireHelpers.field_a - 640) / 2;
               MusicPatch.a(-128, param3);
               if (TextLineLayout.field_b > 0) {
                 DateFieldsWidget.a(param8, param3, -94, param2);
@@ -265,7 +265,7 @@ final class GrowableIntList {
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
               }
             } else {
-              ValidationStatus.field_f = (kp.field_a - 640) / 2;
+              ValidationStatus.field_f = (LevelResultWireHelpers.field_a - 640) / 2;
               MusicPatch.a(-128, param3);
               if (TextLineLayout.field_b > 0) {
                 DateFieldsWidget.a(param8, param3, -94, param2);

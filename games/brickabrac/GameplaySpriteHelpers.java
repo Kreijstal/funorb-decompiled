@@ -50,14 +50,14 @@ final class GameplaySpriteHelpers {
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          ti.sortRankingIndexRange(BoundedFile.field_l, IntArrayRequest.field_u, ProxySocketConnector.rankingRowCount, true, 97, rowLimit, 0);
+          RankingSortHelpers.sortRankingIndexRange(BoundedFile.field_l, IntArrayRequest.field_u, ProxySocketConnector.rankingRowCount, true, 97, rowLimit, 0);
           if (obfuscationGuard != 12429) {
             GameplaySpriteHelpers.sortRankingViews(22, -5);
           }
           for (var2_int = 0; var2_int < ProxySocketConnector.rankingRowCount; var2_int++) {
             VerticalScrollbar.rankingSortIndices[var2_int + rowLimit] = var2_int;
           }
-          ti.sortRankingIndexRange(KeyDispatchHelpers.field_b, ba.field_w, rowLimit + ProxySocketConnector.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
+          RankingSortHelpers.sortRankingIndexRange(KeyDispatchHelpers.field_b, ba.field_w, rowLimit + ProxySocketConnector.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
           if (rowLimit < ProxySocketConnector.rankingRowCount) {
             ProxySocketConnector.rankingRowCount = rowLimit;
           }
@@ -74,10 +74,10 @@ final class GameplaySpriteHelpers {
         if (MusicCrossfadeStream.activeGameplayScaleDivisor != 1) {
           ArchiveNetworkClient.activeRosetteSprites = BytePayloadSubmission.smallRosetteSprites;
           WidgetLayer.activeSteelBallSprite = UiComponent.halfSteelBallSprite;
-          FullscreenFailureKind.activePaddleCapSprites = kp.halfPaddleCapSprites;
+          FullscreenFailureKind.activePaddleCapSprites = LevelResultWireHelpers.halfPaddleCapSprites;
           activeBallSprite = PlayerInputBatch.halfBallSprite;
           Ball.activeBoardMaskSprite = RankingsRequest.halfBoardMaskSprite;
-          ReflectionCheckHelpers.activePowerUpSprites = ch.halfPowerUpSprites;
+          ReflectionCheckHelpers.activePowerUpSprites = SocialListResponseHelpers.halfPowerUpSprites;
           FullscreenDialogHelpers.activePaddleFlameSprites = MeshLobbyUiHelpers.halfPaddleFlameSprites;
           TextHotspotRegion.activePaddleCenterSprite = WidgetTextLayout.halfPaddleCenterSprite;
           FireworkBurst.activeBrickSprites = ResourceArchive.halfBrickSprites;

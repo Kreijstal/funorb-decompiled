@@ -238,7 +238,7 @@ final class MidiSynthesizer extends AudioStream {
 
     final static void a(int param0, byte param1) {
         int var3 = 0;
-        fa var4 = null;
+        IntArrayRequestHelpers var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = BrickABrac.field_J ? 1 : 0;
@@ -246,10 +246,10 @@ final class MidiSynthesizer extends AudioStream {
           if (param1 != -46) {
             return;
           }
-          var4 = (fa) (SoundCache.field_f.first(-33));
+          var4 = (IntArrayRequestHelpers) (SoundCache.field_f.first(-33));
           while (var4 != null) {
             SaveResultsPromptScreen.a(var4, param0, 49);
-            var4 = (fa) (SoundCache.field_f.next((byte) 116));
+            var4 = (IntArrayRequestHelpers) (SoundCache.field_f.next((byte) 116));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

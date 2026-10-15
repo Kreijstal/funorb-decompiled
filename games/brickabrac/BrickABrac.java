@@ -34,7 +34,7 @@ public final class BrickABrac extends InteractiveGameClient {
         } else {
           AccountMessageDialog.currentScreen.drawScreen((byte) -63);
         }
-        notification = (IntNode) (kp.achievementNotifications.first(-123));
+        notification = (IntNode) (LevelResultWireHelpers.achievementNotifications.first(-123));
         if (obfuscationGuard != 16769381) {
           backgroundSoundEffectArchive = (ResourceArchive) null;
         }
@@ -110,12 +110,12 @@ public final class BrickABrac extends InteractiveGameClient {
             IntArrayRequest.gameplayScreen.advanceScreen(false, false, -81);
           }
         }
-        if (null != kp.achievementNotifications.first(-8)) {
+        if (null != LevelResultWireHelpers.achievementNotifications.first(-8)) {
           fieldTemp$0 = ok.achievementNotificationTick + 1;
           ok.achievementNotificationTick = ok.achievementNotificationTick + 1;
           if (fieldTemp$0 == 335) {
             ok.achievementNotificationTick = 0;
-            kp.achievementNotifications.removeFirst(3);
+            LevelResultWireHelpers.achievementNotifications.removeFirst(3);
           }
         }
         if (ok.achievementNotificationTick == 50) {
@@ -133,7 +133,7 @@ public final class BrickABrac extends InteractiveGameClient {
         AppletFlowHelpers.field_c = new RgbSprite(640, 480);
         Widget.a(AccountMessageDialog.field_ub, (byte) 60, CacheIoRequest.windowCanvas);
         this.registerUiLifecycle(3160, new GameUiController());
-        ReportAbuseDialog.a(ch.incomingPacketLengths, 1);
+        ReportAbuseDialog.a(SocialListResponseHelpers.incomingPacketLengths, 1);
     }
 
     final boolean q(int param0) {
@@ -263,7 +263,7 @@ public final class BrickABrac extends InteractiveGameClient {
               var5_int = ea.a(true, var35);
               for (var6 = 0; var6 <= var5_int; var6++) {
                 if (DirectByteStorage.isBitSet(var35, var6, (byte) -75)) {
-                  kp.achievementNotifications.addLast(new IntNode(var6), (byte) 3);
+                  LevelResultWireHelpers.achievementNotifications.addLast(new IntNode(var6), (byte) 3);
                 }
               }
             }
@@ -582,7 +582,7 @@ public final class BrickABrac extends InteractiveGameClient {
         pp.a(0);
         jd.a(0);
         wc.a(100);
-        ch.a(20623);
+        SocialListResponseHelpers.clearSharedReferences(20623);
         AccountDateHelpers.a((byte) 108);
         TextChoiceDialogStyles.a(-21727);
         SocialTabbedPanel.a(true);
@@ -647,7 +647,7 @@ public final class BrickABrac extends InteractiveGameClient {
         BufferedFile.a(-54);
         MeshLobbyUiHelpers.a(-61);
         ConditionalTextValue.c(2);
-        f.a(1);
+        TableResponseHelpers.clearSharedReferences(1);
         hd.a(12);
         LoginCredentialKind.a((byte) 65);
         LoginCredentials.a((byte) 114);
@@ -741,7 +741,7 @@ public final class BrickABrac extends InteractiveGameClient {
         GameplayRenderHelpers.a(2);
         PasswordTooltipHelpers.a(!obfuscationGuard ? true : false);
         FullscreenFailureDialog.c(obfuscationGuard);
-        kp.a(-68);
+        LevelResultWireHelpers.clearSharedReferences(-68);
         ArchiveFetchClient.c(-12200);
         CacheIoWorker.b(26679);
         ArchiveSourceManager.b(-70);
@@ -776,7 +776,7 @@ public final class BrickABrac extends InteractiveGameClient {
         BrowserResizeNotificationHelpers.a((byte) -120);
         SpriteInputHelpers.a(0);
         DelegatingCanvas.a(!obfuscationGuard ? true : false);
-        nd.a((byte) 121);
+        RankingSocketHelpers.clearSharedReferences((byte) 121);
         IntKeyIndex.a(true);
         ByteStorage.a(10);
         Bzip2Decoder.releaseSharedState();
@@ -881,7 +881,7 @@ public final class BrickABrac extends InteractiveGameClient {
         TranslucentNineSliceFrame.c(5);
         MeshAudioHelpers.a(1024);
         AccountResponse.a((byte) 83);
-        fa.a((byte) -102);
+        IntArrayRequestHelpers.clearWaitingForLevelsText((byte) -102);
         FireworkBurst.a(0);
         RasterCacheSurface.a((byte) 121);
         LoginMethodPreference.a(100);

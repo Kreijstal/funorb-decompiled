@@ -102,7 +102,7 @@ final class ArchiveSourceManager {
     }
 
     final static void layoutLobbyTransition(int transitionTick, boolean obfuscationGuard) {
-        int centerOffsetX = (-640 + kp.field_a) / 2;
+        int centerOffsetX = (-640 + LevelResultWireHelpers.field_a) / 2;
         int transitionSpanSquared = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
         int remainingTransitionSquared = -(transitionTick * transitionTick) + transitionSpanSquared;
         NinjaBackground.field_w.setBounds(Rasterizer2D.height - 120 - 4 - 90, 90, centerOffsetX - remainingTransitionSquared * 199 / transitionSpanSquared, 199, (byte) 64);

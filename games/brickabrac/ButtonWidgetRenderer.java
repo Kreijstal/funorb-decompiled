@@ -103,7 +103,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         var23 = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         var3 = 1;
-        if (!nd.chatPinnedToBottom &&
+        if (!RankingSocketHelpers.chatPinnedToBottom &&
           null == SoundCache.field_k) {
           var3 = 0;
         }

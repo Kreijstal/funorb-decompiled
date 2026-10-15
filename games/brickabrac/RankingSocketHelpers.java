@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd {
+final class RankingSocketHelpers {
     static int[] field_f;
     static int[] viewFacePointOneY;
-    static String field_d;
+    static String justPlayText;
     static boolean chatPinnedToBottom;
     static int field_c;
     static UiComponent field_a;
     static String receivedChatSenderName;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte obfuscationGuard) {
         receivedChatSenderName = null;
         field_a = null;
-        if (param0 != 121) {
+        if (obfuscationGuard != 121) {
           return;
         }
         viewFacePointOneY = null;
         field_f = null;
-        field_d = null;
+        justPlayText = null;
     }
 
     final static SocketConnector createSocketConnector(int obfuscationGuard, int port, String host) {
@@ -34,7 +34,7 @@ final class nd {
           connector = new ProxySocketConnector();
           if (obfuscationGuard < 17) {
             unusedHost = (String) null;
-            nd.createSocketConnector(19, -8, (String) null);
+            RankingSocketHelpers.createSocketConnector(19, -8, (String) null);
           }
           ((SocketConnector) ((Object) connector)).targetPort = port;
           ((SocketConnector) ((Object) connector)).targetHost = host;
@@ -139,6 +139,6 @@ final class nd {
     static {
         chatPinnedToBottom = true;
         viewFacePointOneY = new int[8192];
-        field_d = "Just play";
+        justPlayText = "Just play";
     }
 }

@@ -121,7 +121,7 @@ final class hm {
             hm.playSoundAtVolume(-91, (PcmSound) null, 44);
           }
           if (buttonText) {
-            buttonWidth = kp.fullscreenDialogButtonFont.measureText(text);
+            buttonWidth = LevelResultWireHelpers.fullscreenDialogButtonFont.measureText(text);
             return buttonWidth;
           }
           bodyWidth = StateIconLabel.fullscreenDialogBodyFont.measureText(text);

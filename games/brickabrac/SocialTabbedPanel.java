@@ -20,7 +20,7 @@ final class SocialTabbedPanel {
           MouseWheelSource.friendNameHeading.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.friendsPanel.width - DialogMessagePanel.uiScrollbarWidth - 2), (byte) 64);
           GameplayScreen.friendLocationHeading.setBounds(18, 2 + np.uiRowHeight, -2 + (-DialogMessagePanel.uiScrollbarWidth + (QuickChatPhraseRegistry.friendsPanel.width - 80)), 82 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
           GameScreen.friendsListPane.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.friendsPanel.width, 0, 20 + (np.uiRowHeight + 2), DialogMessagePanel.uiScrollbarWidth, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.friendsPanel.height) - 20);
-          f.ignoreListPane.layoutPaneFooter(20, -779, DialogMessagePanel.uiScrollbarWidth, 2);
+          TableResponseHelpers.ignoreListPane.layoutPaneFooter(20, -779, DialogMessagePanel.uiScrollbarWidth, 2);
           return;
         }
     }
@@ -90,7 +90,7 @@ final class SocialTabbedPanel {
         UiComponent[] panels = null;
         try {
           tabLabels = new String[]{primaryTabLabel, AchievementSubmission.friendsTabLabel, SpriteInputHelpers.ignoreTabLabel};
-          panels = new UiComponent[]{primaryPanel, QuickChatPhraseRegistry.friendsPanel, (UiComponent) ((Object) f.ignoreListPane)};
+          panels = new UiComponent[]{primaryPanel, QuickChatPhraseRegistry.friendsPanel, (UiComponent) ((Object) TableResponseHelpers.ignoreListPane)};
           this.tabs = new TabbedPane(0L, WidgetTheme.field_n, tabLabels, hd.field_c, panels, 0);
         } catch (RuntimeException constructionFailure) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) constructionFailure), "vj.<init>(" + (primaryTabLabel != null ? "{...}" : "null") + ',' + (primaryPanel != null ? "{...}" : "null") + ')');

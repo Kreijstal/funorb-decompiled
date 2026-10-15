@@ -1174,7 +1174,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime113 = GameplaySpriteHelpers.a(true, "genius");
           if (var2Lifetime113 != null) {
-            ch.field_j = MenuButton.a(var2Lifetime113, (byte) 123);
+            SocialListResponseHelpers.geniusText = MenuButton.a(var2Lifetime113, (byte) 123);
           }
           var2Lifetime114 = GameplaySpriteHelpers.a(true, "well_done");
           if (var2Lifetime114 != null) {
@@ -1238,7 +1238,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime129 = GameplaySpriteHelpers.a(true, "level_select_label");
           if (var2Lifetime129 != null) {
-            f.field_b = MenuButton.a(var2Lifetime129, (byte) 88);
+            TableResponseHelpers.levelSelectText = MenuButton.a(var2Lifetime129, (byte) 88);
           }
           var2Lifetime130 = GameplaySpriteHelpers.a(true, "tutorial_label");
           if (null != var2Lifetime130) {
@@ -1358,7 +1358,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime159 = GameplaySpriteHelpers.a(!param0, "explain_distort");
           if (null != var2Lifetime159) {
-            ch.field_i = MenuButton.a(var2Lifetime159, (byte) 121);
+            SocialListResponseHelpers.blindPowerUpDescription = MenuButton.a(var2Lifetime159, (byte) 121);
           }
           var2Lifetime160 = GameplaySpriteHelpers.a(true, "explain_shrink");
           if (null != var2Lifetime160) {
