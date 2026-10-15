@@ -132,7 +132,7 @@ final class CacheIoRequest extends ResourceRequest {
           } else {
             stackIn_4_0 = IntArrayRequest.field_j;
           }
-          ArchiveSourceManager.a(stackIn_4_0, false);
+          ArchiveSourceManager.layoutLobbyTransition(stackIn_4_0, false);
           BrickGameLayerController.field_c.setBounds(NinjaBackground.field_w.width, 0, 88, 0, -40 + NinjaBackground.field_w.height - 2);
           TextWidgetRenderer.field_b.setBounds(np.uiRowHeight, 0, 0, IterableIntrusiveHashTable.field_b.width, (byte) 64);
           stackIn_6_0 = BoundedFile.field_g;

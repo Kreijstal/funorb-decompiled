@@ -11,7 +11,7 @@ final class QuickChatPhraseRegistry {
     static UiComponent field_e;
     private ResourceArchive standardArchive;
     static RgbSprite chocolateFarSprite;
-    static int[] field_g;
+    static int[] nineSliceClipScratch;
     static UiComponent friendsPanel;
 
     final QuickChatPhraseDefinition getDefinition(int phraseId, boolean obfuscationGuard) {
@@ -74,7 +74,7 @@ final class QuickChatPhraseRegistry {
     }
 
     public static void a(int param0) {
-        field_g = null;
+        nineSliceClipScratch = null;
         fullscreenTimeout = null;
         field_e = null;
         friendsPanel = null;
@@ -137,6 +137,6 @@ final class QuickChatPhraseRegistry {
     static {
         field_a = 22;
         fullscreenTimeout = new FullscreenFailureKind();
-        field_g = new int[4];
+        nineSliceClipScratch = new int[4];
     }
 }

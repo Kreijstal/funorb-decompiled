@@ -97,9 +97,9 @@ final class GrowableIntList {
               n.a(param2, param8, param3, (byte) -76);
             }
             if (TableDataRequest.field_m > 0) {
-              nh.a(true, param3, param8, param2, param7);
+              LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
             }
-            if (hc.field_c &&
+            if (hc.joinRequestsPanelOpen &&
               o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
               IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
               Ball.field_A.enabled = false;
@@ -120,9 +120,9 @@ final class GrowableIntList {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
-                nh.a(true, param3, param8, param2, param7);
+                LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
-              if (hc.field_c &&
+              if (hc.joinRequestsPanelOpen &&
                 o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
@@ -139,9 +139,9 @@ final class GrowableIntList {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
-                nh.a(true, param3, param8, param2, param7);
+                LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
-              if (!hc.field_c) {
+              if (!hc.joinRequestsPanelOpen) {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -185,9 +185,9 @@ final class GrowableIntList {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
-                nh.a(true, param3, param8, param2, param7);
+                LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
-              if (hc.field_c &&
+              if (hc.joinRequestsPanelOpen &&
                 o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
@@ -209,9 +209,9 @@ final class GrowableIntList {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
-                nh.a(true, param3, param8, param2, param7);
+                LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
-              if (!hc.field_c) {
+              if (!hc.joinRequestsPanelOpen) {
                 IsaacGenerator.field_b.viewport.text = null;
                 Ball.field_A.enabled = true;
                 MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);
@@ -252,9 +252,9 @@ final class GrowableIntList {
                 n.a(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
-                nh.a(true, param3, param8, param2, param7);
+                LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
               }
-              if (hc.field_c &&
+              if (hc.joinRequestsPanelOpen &&
                 o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                 IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                 Ball.field_A.enabled = false;
@@ -275,9 +275,9 @@ final class GrowableIntList {
                   n.a(param2, param8, param3, (byte) -76);
                 }
                 if (TableDataRequest.field_m > 0) {
-                  nh.a(true, param3, param8, param2, param7);
+                  LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
                 }
-                if (hc.field_c &&
+                if (hc.joinRequestsPanelOpen &&
                   o.currentLobbyGame.maxPlayers <= o.currentLobbyGame.playerCount) {
                   IsaacGenerator.field_b.viewport.text = GameCanvas.field_d;
                   Ball.field_A.enabled = false;
@@ -294,9 +294,9 @@ final class GrowableIntList {
                   n.a(param2, param8, param3, (byte) -76);
                 }
                 if (TableDataRequest.field_m > 0) {
-                  nh.a(true, param3, param8, param2, param7);
+                  LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
                 }
-                if (!hc.field_c) {
+                if (!hc.joinRequestsPanelOpen) {
                   IsaacGenerator.field_b.viewport.text = null;
                   Ball.field_A.enabled = true;
                   MusicVoice.a(param4, IsaacGenerator.field_b, param2, param0, -108);

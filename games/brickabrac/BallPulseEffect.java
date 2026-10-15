@@ -105,7 +105,7 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;
-        nh.receivedChatBadge = var8.readUnsignedByte(255);
+        LobbyUiHelpers.receivedChatBadge = var8.readUnsignedByte(255);
         BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
         if (gj.receivedChatChannel == 2) {
           ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
@@ -137,7 +137,7 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         var5 = var8.readUnsignedShort(65280);
         try {
-          var9 = nh.quickChatPhrases.getDefinition(var5, true);
+          var9 = LobbyUiHelpers.quickChatPhrases.getDefinition(var5, true);
           gd.receivedChatText = var9.getPreview(-3);
           if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;
@@ -190,7 +190,7 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         stackIn_5_0 = ((var3 & 128) != 0);
         IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;
-        nh.receivedChatBadge = var8.readUnsignedByte(255);
+        LobbyUiHelpers.receivedChatBadge = var8.readUnsignedByte(255);
         BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
         if (gj.receivedChatChannel == 2) {
           ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
@@ -222,7 +222,7 @@ final class BallPulseEffect extends IntrusiveNode {
         }
         var5 = var8.readUnsignedShort(65280);
         try {
-          var9 = nh.quickChatPhrases.getDefinition(var5, true);
+          var9 = LobbyUiHelpers.quickChatPhrases.getDefinition(var5, true);
           gd.receivedChatText = var9.getPreview(-3);
           if (nd.receivedChatSenderName.equals(LoadingProgressDialog.field_cb)) {
             stackIn_24_0 = null;

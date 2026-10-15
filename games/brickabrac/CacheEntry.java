@@ -167,10 +167,10 @@ abstract class CacheEntry extends DualLinkNode {
           Brick.field_A = new UiComponent(0L, CappedUrlRequest.field_l);
           Brick.field_A.horizontalAlignment = 1;
           Brick.field_A.verticalAlignment = 0;
-          nh.field_a = new UiComponent(0L, GameUiController.field_b, TextFieldValidator.field_j.toUpperCase());
+          LobbyUiHelpers.cancelCreateGameButton = new UiComponent(0L, GameUiController.field_b, TextFieldValidator.field_j.toUpperCase());
           qp.field_f = new UiComponent(0L, MenuSelection.field_m);
           qp.field_f.addChild(Brick.field_A, 0);
-          qp.field_f.addChild(nh.field_a, 0);
+          qp.field_f.addChild(LobbyUiHelpers.cancelCreateGameButton, 0);
           t.field_f = new UiComponent(0L, ReportAbuseDialog.field_Qb);
           t.field_f.copyStyle((byte) -83, CappedUrlRequest.field_l);
           t.field_f.verticalAlignment = 1;

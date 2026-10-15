@@ -69,7 +69,7 @@ final class MenuButton {
           } else {
             var3 = IntArrayRequest.field_k;
           }
-          nh.paintNineSliceFrame(this.width, this.height, -40, this.x, var3, this.y);
+          LobbyUiHelpers.paintNineSliceFrame(this.width, this.height, -40, this.x, var3, this.y);
           if (29 != this.actionId &&
             this.actionId != 30) {
             if (44 != this.actionId &&

@@ -97,7 +97,7 @@ final class AchievementSubmission extends IntrusiveNode {
                 shortcuts[phraseIndex + phraseOffset] = category.phraseShortcuts[phraseIndex];
                 messageIds[phraseOffset + phraseIndex] = category.phraseIds[phraseIndex];
               } else {
-                phrase = nh.quickChatPhrases.getDefinition(phraseId, true);
+                phrase = LobbyUiHelpers.quickChatPhrases.getDefinition(phraseId, true);
                 labels[phraseIndex + phraseOffset] = phrase.getPreview(-3);
                 shortcuts[phraseIndex + phraseOffset] = category.phraseShortcuts[phraseIndex];
                 if (shortcuts[phraseOffset + phraseIndex] <= 0) {

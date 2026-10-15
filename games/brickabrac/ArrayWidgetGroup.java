@@ -546,7 +546,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
           qp.field_f.setBounds(-(2 * var5) + (-120 + var3), var5, (var2_int - 320) / 2, 320, (byte) 64);
           qp.field_f.frameSprites = DateFieldsWidget.a(false, 8421504, 3, 11579568, qp.field_f.height, 2105376);
           Brick.field_A.setBounds(-24 + (qp.field_f.height - 20), 16, 24, -24 + (-24 + qp.field_f.width), (byte) 64);
-          nh.field_a.setBounds(24, -24 + (-20 + qp.field_f.height), 120, 80, (byte) 64);
+          LobbyUiHelpers.cancelCreateGameButton.setBounds(24, -24 + (-20 + qp.field_f.height), 120, 80, (byte) 64);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ag.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

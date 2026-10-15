@@ -1681,8 +1681,8 @@ final class GameplayScreen extends GameScreen {
             fixedLayoutX = NodeDequeCursor.boardLayoutXByPlayerCount[4];
             fixedLayoutXAlias = fixedLayoutX;
             layoutX = fixedLayoutXAlias;
-            nh.paintNineSliceFrame(169, 482, -40, -1, LoginCredentialKind.field_h, -1);
-            nh.paintNineSliceFrame(169, 482, -40, 472, LoginCredentialKind.field_h, -1);
+            LobbyUiHelpers.paintNineSliceFrame(169, 482, -40, -1, LoginCredentialKind.field_h, -1);
+            LobbyUiHelpers.paintNineSliceFrame(169, 482, -40, 472, LoginCredentialKind.field_h, -1);
             viewedLocalValue = ((this.localPlayerMask & 1 << this.viewedPlayerId) == 0) ? 0 : 1;
             localOrOfflineFlag = viewedLocalValue;
             viewedHudResultMode = this.resultWordMode;
@@ -1690,8 +1690,8 @@ final class GameplayScreen extends GameScreen {
             viewedHudX = fixedLayoutX[0];
             showViewedHudDetails = (localOrOfflineFlag != 0) || (0 == this.localPlayerMask);
             LobbyGame.drawMultiplayerBoardHud(viewedHudResultMode, viewedHudGuard, viewedHudX, showViewedHudDetails, this.match.playerBoards[this.viewedPlayerId], fixedLayoutY[0], this.viewedPlayerId, localOrOfflineFlag != 0, this.match);
-            nh.paintNineSliceFrame(169, 9, -40, -1, LoginCredentialKind.field_h, 0 + (fixedLayoutY[2] - 3));
-            nh.paintNineSliceFrame(169, 9, -40, 472, LoginCredentialKind.field_h, -3 + fixedLayoutY[2] - 0);
+            LobbyUiHelpers.paintNineSliceFrame(169, 9, -40, -1, LoginCredentialKind.field_h, 0 + (fixedLayoutY[2] - 3));
+            LobbyUiHelpers.paintNineSliceFrame(169, 9, -40, 472, LoginCredentialKind.field_h, -3 + fixedLayoutY[2] - 0);
           } else {
             offlineValue = (this.networkedMatch) ? 0 : 1;
             localOrOfflineFlag = offlineValue;
@@ -1733,17 +1733,17 @@ final class GameplayScreen extends GameScreen {
           }
         } else {
           singleBoard = this.match.playerBoards[0];
-          nh.paintNineSliceFrame(526, 482, -40, -1, LoginCredentialKind.field_h, -1);
+          LobbyUiHelpers.paintNineSliceFrame(526, 482, -40, -1, LoginCredentialKind.field_h, -1);
           Rasterizer2D.fillRectangleAlpha(7, 473, 510, 7, 0, 96);
           Rasterizer2D.fillRectangleAlpha(524, 0, 116, 480, 0, 96);
-          nh.paintNineSliceFrame(125, 482, -40, 516, LoginCredentialKind.field_h, -1);
+          LobbyUiHelpers.paintNineSliceFrame(125, 482, -40, 516, LoginCredentialKind.field_h, -1);
           DualLinkNode.drawSinglePlayerStatus(130, this.match, ContextActionController.field_g, singleBoard, (byte) -104, 527, 10, 85);
-          nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 137);
+          LobbyUiHelpers.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 137);
           if (!TextFieldRenderer.field_A ||
             wc.field_b) {
             GameplayRenderHelpers.drawCenteredPowerUpMeters(singleBoard, 524, 85, -68, 147, 81, this.match);
           }
-          nh.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 229);
+          LobbyUiHelpers.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 229);
           ArchiveNetworkClient.drawSinglePlayerCharacterHud(640, this.match, singleBoard);
           if (TextFieldRenderer.field_A &&
             MusicVoice.a((byte) 124)) {

@@ -63,7 +63,7 @@ class NineSliceFrame {
         if (obfuscationGuard) {
           NineSliceFrame.a(true, false);
         }
-        nh.paintNineSliceFrame(width, height, -40, x, this.sprites, y);
+        LobbyUiHelpers.paintNineSliceFrame(width, height, -40, x, this.sprites, y);
     }
 
     final static void a(boolean param0, boolean param1) {

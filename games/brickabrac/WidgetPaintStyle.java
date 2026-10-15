@@ -133,7 +133,7 @@ final class WidgetPaintStyle {
         int var7 = 0;
         int var7Lifetime1;
         try {
-          nh.paintNineSliceFrame(widget.width, widget.height, -40, widget.x + parentX, this.frameSprites, parentY + widget.y);
+          LobbyUiHelpers.paintNineSliceFrame(widget.width, widget.height, -40, widget.x + parentX, this.frameSprites, parentY + widget.y);
           if (null != this.icon) {
             var6_int = this.offsetX + widget.x + parentX;
             if (renderer.horizontalAlignment == 1) {

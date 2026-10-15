@@ -1140,7 +1140,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rule_pillar_2", (byte) -109);
                 if (null != var2) {
-                  nh.field_d = MenuButton.a(var2, (byte) 92);
+                  LobbyUiHelpers.reportSecurityHeading = MenuButton.a(var2, (byte) 92);
                 }
                 var2 = nk.a("rule_2_0", (byte) -2);
                 if (var2 != null) {

@@ -100,7 +100,7 @@ final class SaveResultsPromptScreen extends MenuScreen {
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = nh.quickChatPhrases.getDefinition(param0[var10_int], true);
+              var11 = LobbyUiHelpers.quickChatPhrases.getDefinition(param0[var10_int], true);
               var6[var10_int] = var11.getPreview(-3);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

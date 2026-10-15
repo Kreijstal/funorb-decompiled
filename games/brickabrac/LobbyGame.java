@@ -200,8 +200,8 @@ final class LobbyGame extends UiComponent {
           y -= 7;
           statusTop = 445 + y;
           Rasterizer2D.fillRectangleAlpha(7 + x, statusTop, 306, 28, 0, 96);
-          nh.paintNineSliceFrame(322, 482, -40, x - 1, LoginCredentialKind.field_h, y - 1);
-          nh.paintNineSliceFrame(322, 44, -40, x - 1, LoginCredentialKind.field_h, -7 + statusTop - 1);
+          LobbyUiHelpers.paintNineSliceFrame(322, 482, -40, x - 1, LoginCredentialKind.field_h, y - 1);
+          LobbyUiHelpers.paintNineSliceFrame(322, 44, -40, x - 1, LoginCredentialKind.field_h, -7 + statusTop - 1);
           x += 7;
           PowerUpWarning.drawPowerUpMeterRow(5 + x, board, match, -34, 4 + statusTop);
           x += 306;
@@ -250,7 +250,7 @@ final class LobbyGame extends UiComponent {
               return;
             }
             messageWidth = ContextActionController.field_g.measureText(board.displayedMessage) + 20;
-            nh.paintNineSliceFrame(messageWidth, 24, obfuscationGuard + 63, x + (-characterSprite.canvasWidth + (-9 - messageWidth)), MultiValueSliderWidget.field_K, 2 + statusTop);
+            LobbyUiHelpers.paintNineSliceFrame(messageWidth, 24, obfuscationGuard + 63, x + (-characterSprite.canvasWidth + (-9 - messageWidth)), MultiValueSliderWidget.field_K, 2 + statusTop);
             AlignedIconLabel.field_Sb.drawTransparent(x - characterSprite.canvasWidth - 13, 6 + statusTop);
             PasswordFieldRenderer.field_D.drawCentered(board.displayedMessage, -(messageWidth / 2) + x + (-characterSprite.canvasWidth - 9), 6 + (statusTop + PasswordFieldRenderer.field_D.ascent), 6, -1);
           }
@@ -349,8 +349,8 @@ final class LobbyGame extends UiComponent {
           y -= 7;
           statusTop = 445 + y;
           Rasterizer2D.fillRectangleAlpha(7 + x, statusTop, 306, 28, 0, 96);
-          nh.paintNineSliceFrame(322, 482, -40, x - 1, LoginCredentialKind.field_h, y - 1);
-          nh.paintNineSliceFrame(322, 44, -40, x - 1, LoginCredentialKind.field_h, -7 + statusTop - 1);
+          LobbyUiHelpers.paintNineSliceFrame(322, 482, -40, x - 1, LoginCredentialKind.field_h, y - 1);
+          LobbyUiHelpers.paintNineSliceFrame(322, 44, -40, x - 1, LoginCredentialKind.field_h, -7 + statusTop - 1);
           x += 7;
           PowerUpWarning.drawPowerUpMeterRow(5 + x, board, match, -34, 4 + statusTop);
           x += 306;
@@ -399,7 +399,7 @@ final class LobbyGame extends UiComponent {
               return;
             }
             messageWidth = ContextActionController.field_g.measureText(board.displayedMessage) + 20;
-            nh.paintNineSliceFrame(messageWidth, 24, obfuscationGuard + 63, x + (-characterSprite.canvasWidth + (-9 - messageWidth)), MultiValueSliderWidget.field_K, 2 + statusTop);
+            LobbyUiHelpers.paintNineSliceFrame(messageWidth, 24, obfuscationGuard + 63, x + (-characterSprite.canvasWidth + (-9 - messageWidth)), MultiValueSliderWidget.field_K, 2 + statusTop);
             AlignedIconLabel.field_Sb.drawTransparent(x - characterSprite.canvasWidth - 13, 6 + statusTop);
             PasswordFieldRenderer.field_D.drawCentered(board.displayedMessage, -(messageWidth / 2) + x + (-characterSprite.canvasWidth - 9), 6 + (statusTop + PasswordFieldRenderer.field_D.ascent), 6, -1);
           }

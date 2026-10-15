@@ -15,7 +15,7 @@ final class ga extends IntrusiveNode {
         if ((TextLineLayout.field_b <= 0) &&
           (decompiledFrameRemainder0 = (!(IntArrayRequest.field_j <= 0) ||
           !(0 >= TableDataRequest.field_m))) &&
-          (decompiledFrameRemainder0 = !(!hc.field_c))) {
+          (decompiledFrameRemainder0 = !(!hc.joinRequestsPanelOpen))) {
           Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.screenY);
           ProxySocketConnector.field_j.drawRoot(true, param0);
           if (param1 >= -106) {
@@ -29,19 +29,19 @@ final class ga extends IntrusiveNode {
             qp.field_f.drawRoot(true, param0);
             if ((!(IntArrayRequest.field_j <= 0) ||
               !(0 >= TableDataRequest.field_m)) &&
-              hc.field_c) {
+              hc.joinRequestsPanelOpen) {
               Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.screenY);
               ProxySocketConnector.field_j.drawRoot(true, param0);
             }
           } else {
             if (IntArrayRequest.field_j > 0) {
-              if (hc.field_c) {
+              if (hc.joinRequestsPanelOpen) {
                 Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.screenY);
                 ProxySocketConnector.field_j.drawRoot(true, param0);
               }
             } else {
               if (0 < TableDataRequest.field_m &&
-                hc.field_c) {
+                hc.joinRequestsPanelOpen) {
                 Rasterizer2D.darkenRectangle(0, 0, Rasterizer2D.width, DualLinkDeque.field_d.screenY);
                 ProxySocketConnector.field_j.drawRoot(true, param0);
               }

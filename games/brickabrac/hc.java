@@ -5,7 +5,7 @@ final class hc {
     static String field_d;
     static RgbSprite[][] field_a;
     static int field_h;
-    static boolean field_c;
+    static boolean joinRequestsPanelOpen;
     static int field_f;
     static RgbSprite ninjaSmallSprite;
     static String field_b;
@@ -98,7 +98,7 @@ final class hc {
         field_d = null;
         field_b = null;
         if (param0 >= -59) {
-          field_c = true;
+          joinRequestsPanelOpen = true;
         }
         ninjaSmallSprite = null;
     }
@@ -116,7 +116,7 @@ final class hc {
             sm.tickTimes[var1_intLifetime1] = 0L;
           }
           if (param0 != 2) {
-            field_c = false;
+            joinRequestsPanelOpen = false;
           }
           GrowableIntList.cyclesDue = 0;
         } catch (RuntimeException runtimeException) {

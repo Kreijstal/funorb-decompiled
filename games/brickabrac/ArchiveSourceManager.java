@@ -101,13 +101,13 @@ final class ArchiveSourceManager {
         return true;
     }
 
-    final static void a(int param0, boolean param1) {
-        int var2 = (-640 + kp.field_a) / 2;
-        int var3 = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
-        int var4 = -(param0 * param0) + var3;
-        NinjaBackground.field_w.setBounds(Rasterizer2D.height - 120 - 4 - 90, 90, var2 - var4 * 199 / var3, 199, (byte) 64);
-        MultiplayerMatch.field_d.setBounds(-4 + (Rasterizer2D.height - 120), 0, 438 * var4 / var3 + (202 + var2), 438, (byte) 64);
-        if (param1) {
+    final static void layoutLobbyTransition(int transitionTick, boolean obfuscationGuard) {
+        int centerOffsetX = (-640 + kp.field_a) / 2;
+        int transitionSpanSquared = ScrollPaneWithFooter.field_Yb * ScrollPaneWithFooter.field_Yb;
+        int remainingTransitionSquared = -(transitionTick * transitionTick) + transitionSpanSquared;
+        NinjaBackground.field_w.setBounds(Rasterizer2D.height - 120 - 4 - 90, 90, centerOffsetX - remainingTransitionSquared * 199 / transitionSpanSquared, 199, (byte) 64);
+        MultiplayerMatch.field_d.setBounds(-4 + (Rasterizer2D.height - 120), 0, 438 * remainingTransitionSquared / transitionSpanSquared + (202 + centerOffsetX), 438, (byte) 64);
+        if (obfuscationGuard) {
           field_e = (String) null;
         }
     }

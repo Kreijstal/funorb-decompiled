@@ -140,7 +140,7 @@ final class ChatMessage {
         }
         this.senderDisplayName = HalloweenBackground.receivedChatDisplayName;
         this.contextLabel = CacheEntry.receivedChatContextLabel;
-        this.badgeId = nh.receivedChatBadge;
+        this.badgeId = LobbyUiHelpers.receivedChatBadge;
         this.senderId = BirthDateValidator.receivedChatSenderId;
         this.senderName = nd.receivedChatSenderName;
         this.systemMessage = IterableIntrusiveHashTable.receivedChatSystem;

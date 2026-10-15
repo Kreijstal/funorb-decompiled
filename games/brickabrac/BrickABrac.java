@@ -574,7 +574,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MonotonicTime.a((byte) -114);
         BitPacketBuffer.clearStaticReferences(60);
         ap.a(!obfuscationGuard ? true : false);
-        nh.b(120);
+        LobbyUiHelpers.clearSharedReferences(120);
         GameConnectionShell.k(-113);
         nk.a((byte) 121);
         aj.b(-789103103);

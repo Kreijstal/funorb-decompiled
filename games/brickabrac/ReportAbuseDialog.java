@@ -301,7 +301,7 @@ final class ReportAbuseDialog extends UiComponent {
             if (columnWidth < secondHeadingWidth) {
               columnWidth = secondHeadingWidth;
             }
-            thirdHeadingWidth = titleStyle.font.measureText(nh.field_d);
+            thirdHeadingWidth = titleStyle.font.measureText(LobbyUiHelpers.reportSecurityHeading);
             if (columnWidth < thirdHeadingWidth) {
               columnWidth = thirdHeadingWidth;
             }
@@ -340,7 +340,7 @@ final class ReportAbuseDialog extends UiComponent {
               columnHeight = secondColumnY;
             }
             thirdColumnY = 0;
-            thirdColumnY = this.appendReasonHeading(thirdColumnY, titleStyle, columnWidth, nh.field_d, reasonColumns[2], (byte) -53);
+            thirdColumnY = this.appendReasonHeading(thirdColumnY, titleStyle, columnWidth, LobbyUiHelpers.reportSecurityHeading, reasonColumns[2], (byte) -53);
             thirdColumnY = this.appendReasonButton(reasonColumns[2], (byte) -127, thirdColumnY, this.reasonButtons[13], columnWidth);
             thirdColumnY = this.appendReasonButton(reasonColumns[2], (byte) -119, thirdColumnY, this.reasonButtons[21], columnWidth);
             thirdColumnY = this.appendReasonButton(reasonColumns[2], (byte) -121, thirdColumnY, this.reasonButtons[11], columnWidth);

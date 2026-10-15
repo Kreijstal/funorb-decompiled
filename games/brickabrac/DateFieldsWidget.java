@@ -266,7 +266,7 @@ final class DateFieldsWidget extends DateInputWidget {
           }
           pl.requestCreateGame(param3, Brick.field_O, RadialSelectorRenderer.field_i, true, 0, (byte) -102);
         }
-        if (0 != nh.field_a.pressedButton) {
+        if (0 != LobbyUiHelpers.cancelCreateGameButton.pressedButton) {
           sc.field_c = false;
         }
     }

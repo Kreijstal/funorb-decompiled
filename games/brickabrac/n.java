@@ -169,7 +169,7 @@ final class n {
           if (param3 != -76) {
             return;
           }
-          ArchiveSourceManager.a(IntArrayRequest.field_j, false);
+          ArchiveSourceManager.layoutLobbyTransition(IntArrayRequest.field_j, false);
           if (nl.pendingLobbyGame != null) {
             var15 = RadialSelectorRenderer.field_h;
             var17 = var15;
@@ -307,13 +307,13 @@ final class n {
             }
           }
           stackIn_73_0 = NinjaBackground.field_w;
-          stackIn_74_1 = (param1) && (!param2) && (!hc.field_c);
+          stackIn_74_1 = (param1) && (!param2) && (!hc.joinRequestsPanelOpen);
           ((UiComponent) (Object) stackIn_73_0).updateRoot(stackIn_74_1, -15211);
           stackIn_78_0 = MultiplayerMatch.field_d;
-          stackIn_79_1 = (param1) && (!param2) && (!hc.field_c);
+          stackIn_79_1 = (param1) && (!param2) && (!hc.joinRequestsPanelOpen);
           ((UiComponent) (Object) stackIn_78_0).updateRoot(stackIn_79_1, -15211);
           stackIn_83_0 = ProxySocketConnector.field_j;
-          stackIn_84_1 = (param1) && (!param2) && (hc.field_c);
+          stackIn_84_1 = (param1) && (!param2) && (hc.joinRequestsPanelOpen);
           ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
           BrickGameLayerController.field_c.tabs.processTabPresses(0);
           if (nl.pendingLobbyGame != null) {

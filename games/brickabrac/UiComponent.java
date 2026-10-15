@@ -299,9 +299,9 @@ class UiComponent extends ba {
         var22 = this.contentOffsetX + var20;
         var23 = this.contentOffsetY + var21;
         if (!this.useParentFrameBounds) {
-          nh.paintNineSliceFrame(this.width, this.height, -40, this.screenX, var17, this.screenY);
+          LobbyUiHelpers.paintNineSliceFrame(this.width, this.height, -40, this.screenX, var17, this.screenY);
         } else {
-          nh.paintNineSliceFrame(parentWidth, parentHeight, -40, parentX, var17, parentY);
+          LobbyUiHelpers.paintNineSliceFrame(parentWidth, parentHeight, -40, parentX, var17, parentY);
         }
         if (var18 != null) {
           var24_int = var22 + this.screenX;
