@@ -197,7 +197,7 @@ final class AchievementIcon extends IntrusiveNode {
         }
         if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask) == 0) {
           if (IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask != 0) {
-            ArrayWidgetGroup.buttonLabels[10] = IntegerRemainderHelpers.field_a;
+            ArrayWidgetGroup.buttonLabels[10] = IntegerRemainderHelpers.acceptDrawText;
             if (obfuscationGuard != 32) {
               field_o = (String) null;
               return;

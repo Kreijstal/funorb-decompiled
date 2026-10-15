@@ -262,7 +262,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
             !ParisBackground.field_s) {
             GameplayAudioEvent.redrawRequested = true;
             if (FullscreenFailureKind.field_h &&
-              -IntegerRemainderHelpers.field_c + MonotonicTime.nowMillis(false) > 1000L) {
+              -IntegerRemainderHelpers.canvasCreatedAtMillis + MonotonicTime.nowMillis(false) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < CanvasViewGlobals.field_d) {
@@ -681,7 +681,7 @@ public abstract class AppletGameShell extends java.applet.Applet implements Runn
           NinjaBackground.frameFocus = true;
           GameplayAudioEvent.redrawRequested = true;
           MusicCrossfadeStream.field_A = param0;
-          IntegerRemainderHelpers.field_c = MonotonicTime.nowMillis(false);
+          IntegerRemainderHelpers.canvasCreatedAtMillis = MonotonicTime.nowMillis(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -4,24 +4,24 @@
 final class IntegerPowerHelpers {
     static int[] volcanicBackgroundColors;
     static String positiveBoardResultFormat;
-    static double field_d;
-    static String field_f;
+    static double quarterTurnRadians;
+    static String yesText;
     static int[] unlockedLevelCounts;
-    static String field_a;
+    static String preferredDisplayNameTooltip;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean obfuscationGuard) {
         volcanicBackgroundColors = null;
-        if (param0) {
-          field_a = null;
+        if (obfuscationGuard) {
+          preferredDisplayNameTooltip = null;
           positiveBoardResultFormat = null;
-          field_f = null;
+          yesText = null;
           unlockedLevelCounts = null;
           return;
         }
         unlockedLevelCounts = (int[]) null;
-        field_a = null;
+        preferredDisplayNameTooltip = null;
         positiveBoardResultFormat = null;
-        field_f = null;
+        yesText = null;
         unlockedLevelCounts = null;
     }
 
@@ -108,10 +108,10 @@ final class IntegerPowerHelpers {
 
     static {
         positiveBoardResultFormat = "+<%0>";
-        field_f = "Yes";
+        yesText = "Yes";
         volcanicBackgroundColors = new int[]{12658477, 3952770, 16494651, 26679, 16711935};
-        field_d = Math.atan2(1.0, 0.0);
-        field_a = "Enter the name you'd prefer. This is the name displayed to other players.";
+        quarterTurnRadians = Math.atan2(1.0, 0.0);
+        preferredDisplayNameTooltip = "Enter the name you'd prefer. This is the name displayed to other players.";
         unlockedLevelCounts = new int[2];
     }
 }

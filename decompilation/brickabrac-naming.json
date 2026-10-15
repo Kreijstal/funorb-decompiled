@@ -6852,6 +6852,14 @@
       "renamedSymbol": "F:DialogMessagePanel.actionIds:[I"
     },
     {
+      "symbol": "F:ed.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "to": "contactInformationReportReason",
+      "evidence": "ed.java: Literal Asking for or providing contact information report reason.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerBitLengthHelpers.contactInformationReportReason:Ljava/lang/String;"
+    },
+    {
       "symbol": "F:ed.field_b:[Ljp;",
       "originalName": "field_b",
       "to": "countdownSprites",
@@ -6860,12 +6868,28 @@
       "renamedSymbol": "F:IntegerBitLengthHelpers.countdownSprites:[LRgbSprite;"
     },
     {
+      "symbol": "F:ed.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "to": "unreadMessagesFormat",
+      "evidence": "ed.java: Literal You have <%0> unread messages! format, substituted with the unread count.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerBitLengthHelpers.unreadMessagesFormat:Ljava/lang/String;"
+    },
+    {
       "symbol": "F:ed.field_e:[I",
       "originalName": "field_e",
       "to": "projectedVertexY",
       "evidence": "ed.java: Screen-center plus scaled view Y divided by visible depth.",
       "confidence": "reviewed",
       "renamedSymbol": "F:IntegerBitLengthHelpers.projectedVertexY:[I"
+    },
+    {
+      "symbol": "F:ed.field_f:[I",
+      "originalName": "field_f",
+      "to": "achievementBitIndices",
+      "evidence": "ed.java: queueMappedBitAchievement indexes this table by achievement ID, rejects negative entries and toggles 1 shifted by the mapped bit index.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerBitLengthHelpers.achievementBitIndices:[I"
     },
     {
       "symbol": "F:ee.field_p:Ljp;",
@@ -7346,6 +7370,46 @@
       "evidence": "eq.java: Secondary index of all lobby players keyed by64-bit player ID.",
       "confidence": "reviewed",
       "renamedSymbol": "F:WhirlpoolHasher.lobbyPlayerIndex:LSecondaryHashTable;"
+    },
+    {
+      "symbol": "F:er.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "to": "acceptDrawText",
+      "evidence": "er.java: Literal Accept draw text used by the draw action.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerRemainderHelpers.acceptDrawText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:er.field_b:Ljp;",
+      "originalName": "field_b",
+      "to": "lobbyGameLogoSprite",
+      "evidence": "er.java: Loaded from basic/lobby_game_logo and installed as the lobby game logo.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerRemainderHelpers.lobbyGameLogoSprite:LRgbSprite;"
+    },
+    {
+      "symbol": "F:er.field_c:J",
+      "originalName": "field_c",
+      "to": "canvasCreatedAtMillis",
+      "evidence": "er.java: Written from MonotonicTime immediately after canvas creation/focus setup; paint compares elapsed time with 1000ms before requesting canvas replacement.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerRemainderHelpers.canvasCreatedAtMillis:J"
+    },
+    {
+      "symbol": "F:er.field_d:Ljp;",
+      "originalName": "field_d",
+      "to": "constructionSmokeHalfSprite",
+      "evidence": "er.java: ConstructionBackground assigns the half-size construction smoke sprite, encodes its runs and uses it in scene rendering.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerRemainderHelpers.constructionSmokeHalfSprite:LRgbSprite;"
+    },
+    {
+      "symbol": "F:er.field_e:Ljava/lang/String;",
+      "originalName": "field_e",
+      "to": "friendListFullText",
+      "evidence": "er.java: Literal full friend-list message with free/member capacity limits, also updated by localization.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerRemainderHelpers.friendListFullText:Ljava/lang/String;"
     },
     {
       "symbol": "F:f.field_b:Ljava/lang/String;",
@@ -8948,6 +9012,14 @@
       "renamedSymbol": "F:DisplayModeInfo.bitDepth:I"
     },
     {
+      "symbol": "F:hh.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "to": "preferredDisplayNameTooltip",
+      "evidence": "hh.java: Literal preferred name tooltip assigned to the username fields in account registration and name selection.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerPowerHelpers.preferredDisplayNameTooltip:Ljava/lang/String;"
+    },
+    {
       "symbol": "F:hh.field_b:[I",
       "originalName": "field_b",
       "to": "unlockedLevelCounts",
@@ -8964,12 +9036,28 @@
       "renamedSymbol": "F:IntegerPowerHelpers.volcanicBackgroundColors:[I"
     },
     {
+      "symbol": "F:hh.field_d:D",
+      "originalName": "field_d",
+      "to": "quarterTurnRadians",
+      "evidence": "hh.java: Initialized by atan2(1,0), then subtracted from the pointer angle before radial-sector selection.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerPowerHelpers.quarterTurnRadians:D"
+    },
+    {
       "symbol": "F:hh.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "to": "positiveBoardResultFormat",
       "evidence": "hh.java: Board-mask callers, sprite canvas reflection and result rendering trace the delayed bounce, vertical mirror, fade, reduced-board geometry and signed numeric text; independent raster fixtures preserve timing, clipping and integer rounding.",
       "confidence": "reviewed",
       "renamedSymbol": "F:IntegerPowerHelpers.positiveBoardResultFormat:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:hh.field_f:Ljava/lang/String;",
+      "originalName": "field_f",
+      "to": "yesText",
+      "evidence": "hh.java: Literal Yes label used by the setting option row.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntegerPowerHelpers.yesText:Ljava/lang/String;"
     },
     {
       "symbol": "F:hi.field_A:[I",
@@ -20644,6 +20732,22 @@
       "renamedSymbol": "F:SoundEnvelope.waveform:I"
     },
     {
+      "symbol": "F:wc.field_a:Ljava/lang/String;",
+      "originalName": "field_a",
+      "to": "quitToWebsiteText",
+      "evidence": "wc.java: Literal Quit to website caption.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:HalfRgbBlendHelpers.quitToWebsiteText:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:wc.field_c:Ljava/lang/String;",
+      "originalName": "field_c",
+      "to": "passwordLabel",
+      "evidence": "wc.java: Literal Password: caption.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:HalfRgbBlendHelpers.passwordLabel:Ljava/lang/String;"
+    },
+    {
       "symbol": "F:wc.field_d:Z",
       "originalName": "field_d",
       "to": "uiPressClaimed",
@@ -31650,6 +31754,14 @@
       "evidence": "eq.java: Reviewed cache ownership, Whirlpool round/bit packing or account conversion local.",
       "confidence": "reviewed",
       "renamedSymbol": "L:WhirlpoolHasher.updateBits([BIJ)V#9"
+    },
+    {
+      "symbol": "L:er.a(III)I#0",
+      "originalName": "var3",
+      "to": "negativeValueAdjustment",
+      "evidence": "er.java: The sign-derived adjustment is (value >> 31) & (divisor - 1), retained with Java overflow and arbitrary divisor behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:IntegerRemainderHelpers.nonnegativeRemainder(III)I#0"
     },
     {
       "symbol": "L:f.a(B)V#0",
@@ -50204,6 +50316,46 @@
       "renamedSymbol": "L:GameplayScreen.requestLeaveMatch(I)V#0"
     },
     {
+      "symbol": "L:qj.b(III)V#0",
+      "originalName": "var5",
+      "to": "validatedSubmissionByte",
+      "evidence": "qj.java: The mapped-bit achievement path validates the submission complement, rejects negative table entries, forms one shifted bit and captures the existing adjusted result words. These local names do not assign unverified meanings to other result words.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#0"
+    },
+    {
+      "symbol": "L:qj.b(III)V#1",
+      "originalName": "var6",
+      "to": "achievementBitIndex",
+      "evidence": "qj.java: The mapped-bit achievement path validates the submission complement, rejects negative table entries, forms one shifted bit and captures the existing adjusted result words. These local names do not assign unverified meanings to other result words.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#1"
+    },
+    {
+      "symbol": "L:qj.b(III)V#2",
+      "originalName": "var7",
+      "to": "achievementBitMask",
+      "evidence": "qj.java: The mapped-bit achievement path validates the submission complement, rejects negative table entries, forms one shifted bit and captures the existing adjusted result words. These local names do not assign unverified meanings to other result words.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#2"
+    },
+    {
+      "symbol": "L:qj.b(III)V#3",
+      "originalName": "var4",
+      "to": "validatedAchievementId",
+      "evidence": "qj.java: The mapped-bit achievement path validates the submission complement, rejects negative table entries, forms one shifted bit and captures the existing adjusted result words. These local names do not assign unverified meanings to other result words.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#3"
+    },
+    {
+      "symbol": "L:qj.b(III)V#4",
+      "originalName": "var4Lifetime1",
+      "to": "guardCalculation",
+      "evidence": "qj.java: The mapped-bit achievement path validates the submission complement, rejects negative table entries, forms one shifted bit and captures the existing adjusted result words. These local names do not assign unverified meanings to other result words.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#4"
+    },
+    {
       "symbol": "L:qj.f(I)V#0",
       "originalName": "var2",
       "to": "guardArithmetic",
@@ -63684,6 +63836,22 @@
       "renamedSymbol": "M:DialogMessagePanel.addAction(ZLjava/lang/String;I)V"
     },
     {
+      "symbol": "M:ed.a(I)V",
+      "originalName": "a",
+      "to": "clearSharedReferences",
+      "evidence": "ed.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Clears contactInformationReportReason and achievementBitIndices first; guards greater than -61 return before releasing the other text, projection and countdown arrays.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntegerBitLengthHelpers.clearSharedReferences(I)V"
+    },
+    {
+      "symbol": "M:ed.a(II)V",
+      "originalName": "a",
+      "to": "drawMenuBackground",
+      "evidence": "ed.java: Draws the selected background at destinationX with the supplied color index and current scroll; scene 7 also advances/draws fireworks with the same horizontal offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntegerBitLengthHelpers.drawMenuBackground(II)V"
+    },
+    {
       "symbol": "M:ed.b(II)I",
       "originalName": "b",
       "to": "unsignedBitLength",
@@ -63930,6 +64098,14 @@
       "evidence": "eq.java: Clears bit length, hash and buffer cursors; guard99.",
       "confidence": "reviewed",
       "renamedSymbol": "M:WhirlpoolHasher.reset(B)V"
+    },
+    {
+      "symbol": "M:er.a(B)V",
+      "originalName": "a",
+      "to": "clearSharedReferences",
+      "evidence": "er.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Releases text/sprites; guards other than -121 also call nonnegativeRemainder before clearing friendListFullText.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntegerRemainderHelpers.clearSharedReferences(B)V"
     },
     {
       "symbol": "M:er.a(III)I",
@@ -65114,6 +65290,14 @@
       "evidence": "hh.java: Exponentiation by squaring with signed32 wraparound; nonpositive exponent returns1; canonical guard29605, other guards return -85.",
       "confidence": "reviewed",
       "renamedSymbol": "M:IntegerPowerHelpers.integerPower(III)I"
+    },
+    {
+      "symbol": "M:hh.a(Z)V",
+      "originalName": "a",
+      "to": "clearSharedReferences",
+      "evidence": "hh.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Both guard branches release the same reference set, retaining the original repeated unlockedLevelCounts assignments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IntegerPowerHelpers.clearSharedReferences(Z)V"
     },
     {
       "symbol": "M:hi.a(ZIILoc;I)V",
@@ -74932,6 +75116,14 @@
       "renamedSymbol": "M:GameUiLifecycle.prepareUiAssets(Z)V"
     },
     {
+      "symbol": "M:wc.a(I)V",
+      "originalName": "a",
+      "to": "clearSharedReferences",
+      "evidence": "wc.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Clears both strings; guards at most 62 also write the unrelated field_e integer to 120.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HalfRgbBlendHelpers.clearSharedReferences(I)V"
+    },
+    {
       "symbol": "M:wc.a([IIIII)V",
       "originalName": "a",
       "to": "blendHalfRgbSpan",
@@ -84492,6 +84684,30 @@
       "renamedSymbol": "P:DialogMessagePanel.addAction(ZLjava/lang/String;I)V#2"
     },
     {
+      "symbol": "P:ed.a(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "ed.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Clears contactInformationReportReason and achievementBitIndices first; guards greater than -61 return before releasing the other text, projection and countdown arrays.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IntegerBitLengthHelpers.clearSharedReferences(I)V#0"
+    },
+    {
+      "symbol": "P:ed.a(II)V#0",
+      "originalName": "param0",
+      "to": "destinationX",
+      "evidence": "ed.java: Draws the selected background at destinationX with the supplied color index and current scroll; scene 7 also advances/draws fireworks with the same horizontal offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IntegerBitLengthHelpers.drawMenuBackground(II)V#0"
+    },
+    {
+      "symbol": "P:ed.a(II)V#1",
+      "originalName": "param1",
+      "to": "colorIndex",
+      "evidence": "ed.java: Draws the selected background at destinationX with the supplied color index and current scroll; scene 7 also advances/draws fireworks with the same horizontal offset.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IntegerBitLengthHelpers.drawMenuBackground(II)V#1"
+    },
+    {
       "symbol": "P:ed.b(II)I#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -85242,6 +85458,14 @@
       "evidence": "eq.java: Clears bit length, hash and buffer cursors; guard99.",
       "confidence": "reviewed",
       "renamedSymbol": "P:WhirlpoolHasher.reset(B)V#0"
+    },
+    {
+      "symbol": "P:er.a(B)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "er.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Releases text/sprites; guards other than -121 also call nonnegativeRemainder before clearing friendListFullText.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IntegerRemainderHelpers.clearSharedReferences(B)V#0"
     },
     {
       "symbol": "P:er.a(III)I#0",
@@ -88930,6 +89154,14 @@
       "evidence": "hh.java: Exponentiation by squaring with signed32 wraparound; nonpositive exponent returns1; canonical guard29605, other guards return -85.",
       "confidence": "reviewed",
       "renamedSymbol": "P:IntegerPowerHelpers.integerPower(III)I#2"
+    },
+    {
+      "symbol": "P:hh.a(Z)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "hh.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Both guard branches release the same reference set, retaining the original repeated unlockedLevelCounts assignments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:IntegerPowerHelpers.clearSharedReferences(Z)V#0"
     },
     {
       "symbol": "P:hi.<init>(III)V#0",
@@ -117820,6 +118052,14 @@
       "renamedSymbol": "P:GameUiLifecycle.prepareUiAssets(Z)V#0"
     },
     {
+      "symbol": "P:wc.a(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "wc.java: Reviewed shared numeric owners retain independent static UI/game roles. Literal strings, exact resource assignments and resolved call sites establish these identities; cleanup guard order and unrelated integer writes are preserved. Clears both strings; guards at most 62 also write the unrelated field_e integer to 120.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:HalfRgbBlendHelpers.clearSharedReferences(I)V#0"
+    },
+    {
       "symbol": "P:wc.a([IIIII)V#0",
       "originalName": "param0",
       "to": "target",
@@ -131264,9 +131504,9 @@
     },
     {
       "symbol": "F:ed.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:IntegerBitLengthHelpers.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:IntegerBitLengthHelpers.contactInformationReportReason:Ljava/lang/String;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "contactInformationReportReason",
       "declaration": {
         "file": "ed.java",
         "start": 179,
@@ -131286,9 +131526,9 @@
     },
     {
       "symbol": "F:ed.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:IntegerBitLengthHelpers.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:IntegerBitLengthHelpers.unreadMessagesFormat:Ljava/lang/String;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "unreadMessagesFormat",
       "declaration": {
         "file": "ed.java",
         "start": 98,
@@ -131319,9 +131559,9 @@
     },
     {
       "symbol": "F:ed.field_f:[I",
-      "renamedSymbol": "F:IntegerBitLengthHelpers.field_f:[I",
+      "renamedSymbol": "F:IntegerBitLengthHelpers.achievementBitIndices:[I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "achievementBitIndices",
       "declaration": {
         "file": "ed.java",
         "start": 152,
@@ -132529,9 +132769,9 @@
     },
     {
       "symbol": "F:er.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:IntegerRemainderHelpers.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:IntegerRemainderHelpers.acceptDrawText:Ljava/lang/String;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "acceptDrawText",
       "declaration": {
         "file": "er.java",
         "start": 180,
@@ -132540,9 +132780,9 @@
     },
     {
       "symbol": "F:er.field_b:Ljp;",
-      "renamedSymbol": "F:IntegerRemainderHelpers.field_b:LRgbSprite;",
+      "renamedSymbol": "F:IntegerRemainderHelpers.lobbyGameLogoSprite:LRgbSprite;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "lobbyGameLogoSprite",
       "declaration": {
         "file": "er.java",
         "start": 96,
@@ -132551,9 +132791,9 @@
     },
     {
       "symbol": "F:er.field_c:J",
-      "renamedSymbol": "F:IntegerRemainderHelpers.field_c:J",
+      "renamedSymbol": "F:IntegerRemainderHelpers.canvasCreatedAtMillis:J",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "canvasCreatedAtMillis",
       "declaration": {
         "file": "er.java",
         "start": 153,
@@ -132562,9 +132802,9 @@
     },
     {
       "symbol": "F:er.field_d:Ljp;",
-      "renamedSymbol": "F:IntegerRemainderHelpers.field_d:LRgbSprite;",
+      "renamedSymbol": "F:IntegerRemainderHelpers.constructionSmokeHalfSprite:LRgbSprite;",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "constructionSmokeHalfSprite",
       "declaration": {
         "file": "er.java",
         "start": 119,
@@ -132573,9 +132813,9 @@
     },
     {
       "symbol": "F:er.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:IntegerRemainderHelpers.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:IntegerRemainderHelpers.friendListFullText:Ljava/lang/String;",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "friendListFullText",
       "declaration": {
         "file": "er.java",
         "start": 73,
@@ -136159,9 +136399,9 @@
     },
     {
       "symbol": "F:hh.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:IntegerPowerHelpers.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:IntegerPowerHelpers.preferredDisplayNameTooltip:Ljava/lang/String;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "preferredDisplayNameTooltip",
       "declaration": {
         "file": "hh.java",
         "start": 206,
@@ -136192,9 +136432,9 @@
     },
     {
       "symbol": "F:hh.field_d:D",
-      "renamedSymbol": "F:IntegerPowerHelpers.field_d:D",
+      "renamedSymbol": "F:IntegerPowerHelpers.quarterTurnRadians:D",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "quarterTurnRadians",
       "declaration": {
         "file": "hh.java",
         "start": 126,
@@ -136214,9 +136454,9 @@
     },
     {
       "symbol": "F:hh.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:IntegerPowerHelpers.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:IntegerPowerHelpers.yesText:Ljava/lang/String;",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "yesText",
       "declaration": {
         "file": "hh.java",
         "start": 153,
@@ -161481,9 +161721,9 @@
     },
     {
       "symbol": "F:wc.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:HalfRgbBlendHelpers.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:HalfRgbBlendHelpers.quitToWebsiteText:Ljava/lang/String;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "quitToWebsiteText",
       "declaration": {
         "file": "wc.java",
         "start": 153,
@@ -161503,9 +161743,9 @@
     },
     {
       "symbol": "F:wc.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:HalfRgbBlendHelpers.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:HalfRgbBlendHelpers.passwordLabel:Ljava/lang/String;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "passwordLabel",
       "declaration": {
         "file": "wc.java",
         "start": 180,
@@ -199609,7 +199849,7 @@
       "symbol": "L:er.a(III)I#0",
       "renamedSymbol": "L:IntegerRemainderHelpers.nonnegativeRemainder(III)I#0",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "negativeValueAdjustment",
       "declaration": {
         "file": "er.java",
         "start": 263,
@@ -300864,7 +301104,7 @@
       "symbol": "L:qj.b(III)V#0",
       "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#0",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "validatedSubmissionByte",
       "declaration": {
         "file": "qj.java",
         "start": 38953,
@@ -300875,7 +301115,7 @@
       "symbol": "L:qj.b(III)V#1",
       "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#1",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "achievementBitIndex",
       "declaration": {
         "file": "qj.java",
         "start": 38975,
@@ -300886,7 +301126,7 @@
       "symbol": "L:qj.b(III)V#2",
       "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#2",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "achievementBitMask",
       "declaration": {
         "file": "qj.java",
         "start": 38997,
@@ -300897,7 +301137,7 @@
       "symbol": "L:qj.b(III)V#3",
       "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#3",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "validatedAchievementId",
       "declaration": {
         "file": "qj.java",
         "start": 39019,
@@ -300908,7 +301148,7 @@
       "symbol": "L:qj.b(III)V#4",
       "renamedSymbol": "L:GameplayScreen.queueMappedBitAchievement(III)V#4",
       "originalName": "var4Lifetime1",
-      "renamedName": "var4Lifetime1",
+      "renamedName": "guardCalculation",
       "declaration": {
         "file": "qj.java",
         "start": 39041,
@@ -355004,9 +355244,9 @@
     },
     {
       "symbol": "M:ed.a(I)V",
-      "renamedSymbol": "M:IntegerBitLengthHelpers.a(I)V",
+      "renamedSymbol": "M:IntegerBitLengthHelpers.clearSharedReferences(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearSharedReferences",
       "declaration": {
         "file": "ed.java",
         "start": 2811,
@@ -355015,9 +355255,9 @@
     },
     {
       "symbol": "M:ed.a(II)V",
-      "renamedSymbol": "M:IntegerBitLengthHelpers.a(II)V",
+      "renamedSymbol": "M:IntegerBitLengthHelpers.drawMenuBackground(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawMenuBackground",
       "declaration": {
         "file": "ed.java",
         "start": 237,
@@ -355873,9 +356113,9 @@
     },
     {
       "symbol": "M:er.a(B)V",
-      "renamedSymbol": "M:IntegerRemainderHelpers.a(B)V",
+      "renamedSymbol": "M:IntegerRemainderHelpers.clearSharedReferences(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearSharedReferences",
       "declaration": {
         "file": "er.java",
         "start": 528,
@@ -359074,9 +359314,9 @@
     },
     {
       "symbol": "M:hh.a(Z)V",
-      "renamedSymbol": "M:IntegerPowerHelpers.a(Z)V",
+      "renamedSymbol": "M:IntegerPowerHelpers.clearSharedReferences(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearSharedReferences",
       "declaration": {
         "file": "hh.java",
         "start": 239,
@@ -383175,9 +383415,9 @@
     },
     {
       "symbol": "M:wc.a(I)V",
-      "renamedSymbol": "M:HalfRgbBlendHelpers.a(I)V",
+      "renamedSymbol": "M:HalfRgbBlendHelpers.clearSharedReferences(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearSharedReferences",
       "declaration": {
         "file": "wc.java",
         "start": 2039,
@@ -401589,9 +401829,9 @@
     },
     {
       "symbol": "P:ed.a(I)V#0",
-      "renamedSymbol": "P:IntegerBitLengthHelpers.a(I)V#0",
+      "renamedSymbol": "P:IntegerBitLengthHelpers.clearSharedReferences(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "ed.java",
         "start": 2817,
@@ -401600,9 +401840,9 @@
     },
     {
       "symbol": "P:ed.a(II)V#0",
-      "renamedSymbol": "P:IntegerBitLengthHelpers.a(II)V#0",
+      "renamedSymbol": "P:IntegerBitLengthHelpers.drawMenuBackground(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "destinationX",
       "declaration": {
         "file": "ed.java",
         "start": 243,
@@ -401611,9 +401851,9 @@
     },
     {
       "symbol": "P:ed.a(II)V#1",
-      "renamedSymbol": "P:IntegerBitLengthHelpers.a(II)V#1",
+      "renamedSymbol": "P:IntegerBitLengthHelpers.drawMenuBackground(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "colorIndex",
       "declaration": {
         "file": "ed.java",
         "start": 255,
@@ -403646,9 +403886,9 @@
     },
     {
       "symbol": "P:er.a(B)V#0",
-      "renamedSymbol": "P:IntegerRemainderHelpers.a(B)V#0",
+      "renamedSymbol": "P:IntegerRemainderHelpers.clearSharedReferences(B)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "er.java",
         "start": 535,
@@ -412182,9 +412422,9 @@
     },
     {
       "symbol": "P:hh.a(Z)V#0",
-      "renamedSymbol": "P:IntegerPowerHelpers.a(Z)V#0",
+      "renamedSymbol": "P:IntegerPowerHelpers.clearSharedReferences(Z)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "hh.java",
         "start": 249,
@@ -474365,9 +474605,9 @@
     },
     {
       "symbol": "P:wc.a(I)V#0",
-      "renamedSymbol": "P:HalfRgbBlendHelpers.a(I)V#0",
+      "renamedSymbol": "P:HalfRgbBlendHelpers.clearSharedReferences(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "wc.java",
         "start": 2045,
@@ -477383,7 +477623,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "2d775d6086190e6fd0954fb374a539e8bbf2ea844e746f3de6ccec2372447e90",
+      "outputSha256": "de7864f2a8d15fb4eb13744013cd53db78614ec8b8884054d9eb7ce9590df164",
       "edits": [
         {
           "start": 76,
@@ -482265,6 +482505,13 @@
           "renamed": "HalfRgbBlendHelpers"
         },
         {
+          "start": 18071,
+          "end": 18072,
+          "symbol": "M:wc.a(I)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
           "start": 18087,
           "end": 18089,
           "symbol": "C:ch",
@@ -482657,6 +482904,13 @@
           "renamed": "IntegerPowerHelpers"
         },
         {
+          "start": 19131,
+          "end": 19132,
+          "symbol": "M:hh.a(Z)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
           "start": 19148,
           "end": 19150,
           "symbol": "C:kk",
@@ -482725,6 +482979,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "IntegerBitLengthHelpers"
+        },
+        {
+          "start": 19352,
+          "end": 19353,
+          "symbol": "M:ed.a(I)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
         },
         {
           "start": 19369,
@@ -483152,6 +483413,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 20559,
+          "end": 20560,
+          "symbol": "M:er.a(B)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
         },
         {
           "start": 20583,
@@ -614403,7 +614671,7 @@
       "original": "dj.java",
       "renamed": "GameClock.java",
       "inputSha256": "d6c9c6e04cff6f350c26d619fb265594900adeaeab015206d8e6bf0388e9af34",
-      "outputSha256": "fa306ddc365957965117f934d47598985ac3cab2817e453c746ad7017d828926",
+      "outputSha256": "8f9a5fa3b230cb2ae4d66b728743866f9ba1f216a1aaff069391e8f79c311545",
       "edits": [
         {
           "start": 53,
@@ -615456,6 +615724,13 @@
           "renamed": "IntegerBitLengthHelpers"
         },
         {
+          "start": 5742,
+          "end": 5749,
+          "symbol": "F:ed.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "contactInformationReportReason"
+        },
+        {
           "start": 5759,
           "end": 5761,
           "symbol": "C:kd",
@@ -615475,7 +615750,7 @@
       "original": "dk.java",
       "renamed": "AccountRegistrationPanel.java",
       "inputSha256": "dc50c13154cfd195cf3a3180a08754eff1a3451b2e6ce48c0ea42829bbc86078",
-      "outputSha256": "805108118b16491920d36355d4ec24552d15a3b5242bb004815811de4c1d3d95",
+      "outputSha256": "6368ea10a21d341430595e7641e3e08fa1720e6194851634dd3551b3a333282b",
       "edits": [
         {
           "start": 50,
@@ -619503,6 +619778,13 @@
           "renamed": "IntegerPowerHelpers"
         },
         {
+          "start": 23172,
+          "end": 23179,
+          "symbol": "F:hh.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "preferredDisplayNameTooltip"
+        },
+        {
           "start": 23194,
           "end": 23201,
           "symbol": "F:dk.field_M:Lsf;",
@@ -620152,6 +620434,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "HalfRgbBlendHelpers"
+        },
+        {
+          "start": 24803,
+          "end": 24810,
+          "symbol": "F:wc.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "passwordLabel"
         },
         {
           "start": 24817,
@@ -635262,7 +635551,7 @@
       "original": "ed.java",
       "renamed": "IntegerBitLengthHelpers.java",
       "inputSha256": "0d6bc49df627d4451e1d92b58febf190dd88dee64aabd310c1bd2a65e7a545d8",
-      "outputSha256": "21b6d3fa61ff0b82f6dc4611d493210e06ce601fd5f5b8ade443e028a5757257",
+      "outputSha256": "dda1ad31e3472c20328bfa80c9236063c8c296071b934ada8fa703be656adae5",
       "edits": [
         {
           "start": 50,
@@ -635286,11 +635575,53 @@
           "renamed": "countdownSprites"
         },
         {
+          "start": 98,
+          "end": 105,
+          "symbol": "F:ed.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "unreadMessagesFormat"
+        },
+        {
+          "start": 152,
+          "end": 159,
+          "symbol": "F:ed.field_f:[I",
+          "original": "field_f",
+          "renamed": "achievementBitIndices"
+        },
+        {
+          "start": 179,
+          "end": 186,
+          "symbol": "F:ed.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "contactInformationReportReason"
+        },
+        {
           "start": 205,
           "end": 212,
           "symbol": "F:ed.field_e:[I",
           "original": "field_e",
           "renamed": "projectedVertexY"
+        },
+        {
+          "start": 237,
+          "end": 238,
+          "symbol": "M:ed.a(II)V",
+          "original": "a",
+          "renamed": "drawMenuBackground"
+        },
+        {
+          "start": 243,
+          "end": 249,
+          "symbol": "P:ed.a(II)V#0",
+          "original": "param0",
+          "renamed": "destinationX"
+        },
+        {
+          "start": 255,
+          "end": 261,
+          "symbol": "P:ed.a(II)V#1",
+          "original": "param1",
+          "renamed": "colorIndex"
         },
         {
           "start": 273,
@@ -635312,6 +635643,20 @@
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 307,
+          "end": 313,
+          "symbol": "P:ed.a(II)V#1",
+          "original": "param1",
+          "renamed": "colorIndex"
+        },
+        {
+          "start": 315,
+          "end": 321,
+          "symbol": "P:ed.a(II)V#0",
+          "original": "param0",
+          "renamed": "destinationX"
         },
         {
           "start": 336,
@@ -635340,6 +635685,13 @@
           "symbol": "M:hq.b(ZZI)V",
           "original": "b",
           "renamed": "advanceAndDrawFireworks"
+        },
+        {
+          "start": 390,
+          "end": 396,
+          "symbol": "P:ed.a(II)V#0",
+          "original": "param0",
+          "renamed": "destinationX"
         },
         {
           "start": 456,
@@ -636028,6 +636380,48 @@
           "renamed": "value"
         },
         {
+          "start": 2811,
+          "end": 2812,
+          "symbol": "M:ed.a(I)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 2817,
+          "end": 2823,
+          "symbol": "P:ed.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2835,
+          "end": 2842,
+          "symbol": "F:ed.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "contactInformationReportReason"
+        },
+        {
+          "start": 2859,
+          "end": 2866,
+          "symbol": "F:ed.field_f:[I",
+          "original": "field_f",
+          "renamed": "achievementBitIndices"
+        },
+        {
+          "start": 2887,
+          "end": 2893,
+          "symbol": "P:ed.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2939,
+          "end": 2946,
+          "symbol": "F:ed.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "unreadMessagesFormat"
+        },
+        {
           "start": 2963,
           "end": 2970,
           "symbol": "F:ed.field_e:[I",
@@ -636042,11 +636436,32 @@
           "renamed": "countdownSprites"
         },
         {
+          "start": 3031,
+          "end": 3038,
+          "symbol": "F:ed.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "contactInformationReportReason"
+        },
+        {
           "start": 3096,
           "end": 3103,
           "symbol": "F:ed.field_e:[I",
           "original": "field_e",
           "renamed": "projectedVertexY"
+        },
+        {
+          "start": 3129,
+          "end": 3136,
+          "symbol": "F:ed.field_f:[I",
+          "original": "field_f",
+          "renamed": "achievementBitIndices"
+        },
+        {
+          "start": 3312,
+          "end": 3319,
+          "symbol": "F:ed.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "unreadMessagesFormat"
         }
       ]
     },
@@ -641560,7 +641975,7 @@
       "original": "ei.java",
       "renamed": "LabeledToggleRenderer.java",
       "inputSha256": "002f53033d98a745e1db79b8a2a3fa3406eb5bff349d9f4a7a5812514a240951",
-      "outputSha256": "60fdf5049c94fcb25ab5971d4eadf7fa27d8e8dec4dddf3fef7bbbe1748f955d",
+      "outputSha256": "10750daba5a9b642ff7bac3b2b432c0703eb1feb493bffbffd87714e68c39313",
       "edits": [
         {
           "start": 50,
@@ -642359,6 +642774,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "IntegerBitLengthHelpers"
+        },
+        {
+          "start": 3389,
+          "end": 3396,
+          "symbol": "F:ed.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "unreadMessagesFormat"
         },
         {
           "start": 3484,
@@ -649227,7 +649649,7 @@
       "original": "er.java",
       "renamed": "IntegerRemainderHelpers.java",
       "inputSha256": "a07f16c08911f7ff9f314f5cda607fe132d5050a6da529a73fa3e617c5304b9e",
-      "outputSha256": "550279a99fa1970825800b3bd46cc7c6cb4c8856863fe286c9689bc36069fb91",
+      "outputSha256": "ff92a806d540351ba48d0d18d04362d90138af6b2f79093588daa99dc1fc8901",
       "edits": [
         {
           "start": 50,
@@ -649237,6 +649659,13 @@
           "renamed": "IntegerRemainderHelpers"
         },
         {
+          "start": 73,
+          "end": 80,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
+        },
+        {
           "start": 93,
           "end": 95,
           "symbol": "C:jp",
@@ -649244,11 +649673,39 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 96,
+          "end": 103,
+          "symbol": "F:er.field_b:Ljp;",
+          "original": "field_b",
+          "renamed": "lobbyGameLogoSprite"
+        },
+        {
           "start": 116,
           "end": 118,
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 119,
+          "end": 126,
+          "symbol": "F:er.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "constructionSmokeHalfSprite"
+        },
+        {
+          "start": 153,
+          "end": 160,
+          "symbol": "F:er.field_c:J",
+          "original": "field_c",
+          "renamed": "canvasCreatedAtMillis"
+        },
+        {
+          "start": 180,
+          "end": 187,
+          "symbol": "F:er.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "acceptDrawText"
         },
         {
           "start": 211,
@@ -649279,6 +649736,13 @@
           "renamed": "value"
         },
         {
+          "start": 263,
+          "end": 267,
+          "symbol": "L:er.a(III)I#0",
+          "original": "var3",
+          "renamed": "negativeValueAdjustment"
+        },
+        {
           "start": 270,
           "end": 276,
           "symbol": "P:er.a(III)I#2",
@@ -649298,6 +649762,13 @@
           "symbol": "P:er.a(III)I#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 352,
+          "end": 356,
+          "symbol": "L:er.a(III)I#0",
+          "original": "var3",
+          "renamed": "negativeValueAdjustment"
         },
         {
           "start": 361,
@@ -649321,6 +649792,20 @@
           "renamed": "divisor"
         },
         {
+          "start": 414,
+          "end": 421,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
+        },
+        {
+          "start": 454,
+          "end": 458,
+          "symbol": "L:er.a(III)I#0",
+          "original": "var3",
+          "renamed": "negativeValueAdjustment"
+        },
+        {
           "start": 463,
           "end": 469,
           "symbol": "P:er.a(III)I#2",
@@ -649342,6 +649827,55 @@
           "renamed": "divisor"
         },
         {
+          "start": 528,
+          "end": 529,
+          "symbol": "M:er.a(B)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 535,
+          "end": 541,
+          "symbol": "P:er.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 553,
+          "end": 560,
+          "symbol": "F:er.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "acceptDrawText"
+        },
+        {
+          "start": 577,
+          "end": 584,
+          "symbol": "F:er.field_b:Ljp;",
+          "original": "field_b",
+          "renamed": "lobbyGameLogoSprite"
+        },
+        {
+          "start": 601,
+          "end": 608,
+          "symbol": "F:er.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "constructionSmokeHalfSprite"
+        },
+        {
+          "start": 629,
+          "end": 635,
+          "symbol": "P:er.a(B)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 657,
+          "end": 664,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
+        },
+        {
           "start": 709,
           "end": 711,
           "symbol": "C:er",
@@ -649354,6 +649888,34 @@
           "symbol": "M:er.a(III)I",
           "original": "a",
           "renamed": "nonnegativeRemainder"
+        },
+        {
+          "start": 739,
+          "end": 746,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
+        },
+        {
+          "start": 783,
+          "end": 790,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
+        },
+        {
+          "start": 878,
+          "end": 885,
+          "symbol": "F:er.field_c:J",
+          "original": "field_c",
+          "renamed": "canvasCreatedAtMillis"
+        },
+        {
+          "start": 900,
+          "end": 907,
+          "symbol": "F:er.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "acceptDrawText"
         }
       ]
     },
@@ -716327,7 +716889,7 @@
       "original": "hh.java",
       "renamed": "IntegerPowerHelpers.java",
       "inputSha256": "2b1504c44202dae4cb6c58791e19fe68abb0ae023bc46df9cec977342685bf9b",
-      "outputSha256": "39e6fc404071b71a6f1d07a16555579f02ce5ad087a66130d717a999b3a4d3f5",
+      "outputSha256": "cf5bfd5f89f38d81ca2acb8b4101cb661694e78465f0eec388be1bd70246e281",
       "edits": [
         {
           "start": 50,
@@ -716351,11 +716913,46 @@
           "renamed": "positiveBoardResultFormat"
         },
         {
+          "start": 126,
+          "end": 133,
+          "symbol": "F:hh.field_d:D",
+          "original": "field_d",
+          "renamed": "quarterTurnRadians"
+        },
+        {
+          "start": 153,
+          "end": 160,
+          "symbol": "F:hh.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "yesText"
+        },
+        {
           "start": 179,
           "end": 186,
           "symbol": "F:hh.field_b:[I",
           "original": "field_b",
           "renamed": "unlockedLevelCounts"
+        },
+        {
+          "start": 206,
+          "end": 213,
+          "symbol": "F:hh.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "preferredDisplayNameTooltip"
+        },
+        {
+          "start": 239,
+          "end": 240,
+          "symbol": "M:hh.a(Z)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 249,
+          "end": 255,
+          "symbol": "P:hh.a(Z)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
         },
         {
           "start": 267,
@@ -716365,11 +716962,32 @@
           "renamed": "volcanicBackgroundColors"
         },
         {
+          "start": 295,
+          "end": 301,
+          "symbol": "P:hh.a(Z)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 315,
+          "end": 322,
+          "symbol": "F:hh.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "preferredDisplayNameTooltip"
+        },
+        {
           "start": 341,
           "end": 348,
           "symbol": "F:hh.field_e:Ljava/lang/String;",
           "original": "field_e",
           "renamed": "positiveBoardResultFormat"
+        },
+        {
+          "start": 367,
+          "end": 374,
+          "symbol": "F:hh.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "yesText"
         },
         {
           "start": 393,
@@ -716386,11 +717004,25 @@
           "renamed": "unlockedLevelCounts"
         },
         {
+          "start": 477,
+          "end": 484,
+          "symbol": "F:hh.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "preferredDisplayNameTooltip"
+        },
+        {
           "start": 501,
           "end": 508,
           "symbol": "F:hh.field_e:Ljava/lang/String;",
           "original": "field_e",
           "renamed": "positiveBoardResultFormat"
+        },
+        {
+          "start": 525,
+          "end": 532,
+          "symbol": "F:hh.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "yesText"
         },
         {
           "start": 549,
@@ -716890,11 +717522,32 @@
           "renamed": "positiveBoardResultFormat"
         },
         {
+          "start": 3918,
+          "end": 3925,
+          "symbol": "F:hh.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "yesText"
+        },
+        {
           "start": 3943,
           "end": 3950,
           "symbol": "F:hh.field_c:[I",
           "original": "field_c",
           "renamed": "volcanicBackgroundColors"
+        },
+        {
+          "start": 4018,
+          "end": 4025,
+          "symbol": "F:hh.field_d:D",
+          "original": "field_d",
+          "renamed": "quarterTurnRadians"
+        },
+        {
+          "start": 4058,
+          "end": 4065,
+          "symbol": "F:hh.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "preferredDisplayNameTooltip"
         },
         {
           "start": 4153,
@@ -723022,7 +723675,7 @@
       "original": "hk.java",
       "renamed": "LoginPanel.java",
       "inputSha256": "f4d81ec9d202ff695813ca35852fed8756fde17ce2042c0bb6ce121e34719928",
-      "outputSha256": "61e0a58ef58ec06dee021fd2c92e3a1c4202cfaeb8ce4a7331c63bced2d528ee",
+      "outputSha256": "63341d89b4b9fb0a75bfa9c6926b9ef95de49ef73de37aab5578f41f9df479e1",
       "edits": [
         {
           "start": 50,
@@ -725748,6 +726401,13 @@
           "renamed": "HalfRgbBlendHelpers"
         },
         {
+          "start": 13270,
+          "end": 13277,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
+        },
+        {
           "start": 13280,
           "end": 13282,
           "symbol": "C:uh",
@@ -726278,6 +726938,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "HalfRgbBlendHelpers"
+        },
+        {
+          "start": 15119,
+          "end": 15126,
+          "symbol": "F:wc.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "passwordLabel"
         },
         {
           "start": 15173,
@@ -736988,7 +737655,7 @@
       "original": "i.java",
       "renamed": "AchievementIcon.java",
       "inputSha256": "9e1806d5b6283651f87e1e1570bf1b830f27f797ab0b33b41cc15d247fbbcaa5",
-      "outputSha256": "cc426902ccf7551d0018ef3ea64b61ea8500d21901a4236a5aa954508ea2f766",
+      "outputSha256": "afb1b884d2f00a0836072c75748ce512deb6a83235e6fcb536998b28c4a1808c",
       "edits": [
         {
           "start": 50,
@@ -738781,6 +739448,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 7077,
+          "end": 7084,
+          "symbol": "F:er.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "acceptDrawText"
         },
         {
           "start": 7102,
@@ -753979,7 +754653,7 @@
       "original": "ij.java",
       "renamed": "GameUiController.java",
       "inputSha256": "339c7bc70a1ba21de91fa145135ab1baa57f171c2de6bb0204975e8531f8a5a5",
-      "outputSha256": "902f1ae1765d79fc62d62f1cbc982e4046e0e61cfafb113306d89409c1ebff15",
+      "outputSha256": "538fda0a96d44cb85f5432e6690bce603260b8da969bcbaec4ee18040824bc9d",
       "edits": [
         {
           "start": 50,
@@ -754435,6 +755109,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 1528,
+          "end": 1535,
+          "symbol": "F:er.field_b:Ljp;",
+          "original": "field_b",
+          "renamed": "lobbyGameLogoSprite"
         },
         {
           "start": 1545,
@@ -791081,7 +791762,7 @@
       "original": "jl.java",
       "renamed": "LogoRenderHelpers.java",
       "inputSha256": "7e40faa3ba5d9fb9b42c5bf269553dd150c8c037d67a22f1eaa8e66d6b7c4af2",
-      "outputSha256": "4545f8404c1116f7c021faec7e43c4aca0fbd121da1e5031d85c9179809055c1",
+      "outputSha256": "59b1ab5b4cbcf7113620ab0e7597614e684c492a9cdb88aff1d5427e5f902afc",
       "edits": [
         {
           "start": 50,
@@ -793401,6 +794082,13 @@
           "renamed": "IntegerRemainderHelpers"
         },
         {
+          "start": 6970,
+          "end": 6977,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
+        },
+        {
           "start": 7045,
           "end": 7047,
           "symbol": "C:ol",
@@ -793420,6 +794108,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 7089,
+          "end": 7096,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
         },
         {
           "start": 7157,
@@ -829381,7 +830076,7 @@
       "original": "ke.java",
       "renamed": "AppletGameShell.java",
       "inputSha256": "b309c005eee6446bfca63286a71b6f6abb3f7e0cc019e365ef498c71d8e36450",
-      "outputSha256": "5c9f9a928aaef85b072bbdf95da3d26f26d3fb63e46c7a9217794792558ddf45",
+      "outputSha256": "a688d5048787b93f08e2445e6c53219c89a212c8e03ac59d6731712dd62b0eaf",
       "edits": [
         {
           "start": 81,
@@ -830166,6 +830861,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 9976,
+          "end": 9983,
+          "symbol": "F:er.field_c:J",
+          "original": "field_c",
+          "renamed": "canvasCreatedAtMillis"
         },
         {
           "start": 9986,
@@ -832014,6 +832716,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 26405,
+          "end": 26412,
+          "symbol": "F:er.field_c:J",
+          "original": "field_c",
+          "renamed": "canvasCreatedAtMillis"
         },
         {
           "start": 26415,
@@ -847547,7 +848256,7 @@
       "original": "km.java",
       "renamed": "MenuScreen.java",
       "inputSha256": "f22df0331a8e5d5b77576f2d37f0ff72e55b9b32052f7e538627c9b5c74e5335",
-      "outputSha256": "2b9e7b413a57da37af5c71a8b5ed59189828f5853299a96faef32ad5d24b63e8",
+      "outputSha256": "6a2d9a5812217d82ef160fb8022fca852014828d5e5d2396347b06537e612126",
       "edits": [
         {
           "start": 53,
@@ -847683,6 +848392,13 @@
           "renamed": "IntegerBitLengthHelpers"
         },
         {
+          "start": 542,
+          "end": 543,
+          "symbol": "M:ed.a(II)V",
+          "original": "a",
+          "renamed": "drawMenuBackground"
+        },
+        {
           "start": 573,
           "end": 575,
           "symbol": "C:rp",
@@ -847702,6 +848418,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "IntegerBitLengthHelpers"
+        },
+        {
+          "start": 631,
+          "end": 632,
+          "symbol": "M:ed.a(II)V",
+          "original": "a",
+          "renamed": "drawMenuBackground"
         },
         {
           "start": 661,
@@ -891070,7 +891793,7 @@
       "original": "lp.java",
       "renamed": "AccountMessageDialog.java",
       "inputSha256": "5deea989a0ed344bcf732d2541c859608db1537a4dd336dbc12af658f8adf3d7",
-      "outputSha256": "4fcb1527694c35c1160cf681801c832b6588c2e1f14b5337923eaee98722353a",
+      "outputSha256": "2d7111e11cece8e062671e68878eb15dbd8b7978618650deea794d8ed1fe011a",
       "edits": [
         {
           "start": 44,
@@ -891869,6 +892592,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "HalfRgbBlendHelpers"
+        },
+        {
+          "start": 5146,
+          "end": 5153,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
         },
         {
           "start": 5186,
@@ -958311,7 +959041,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "911e2185733d670e9e8712431f6b4fee3065b4f19dcdc73edb4c83690e9d2377",
+      "outputSha256": "765aff2db49a07e2eeb81aaf08e97a486dfc270a93eac839ea910c088e2c0a7f",
       "edits": [
         {
           "start": 50,
@@ -959833,6 +960563,13 @@
           "renamed": "IntegerBitLengthHelpers"
         },
         {
+          "start": 10001,
+          "end": 10008,
+          "symbol": "F:ed.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "unreadMessagesFormat"
+        },
+        {
           "start": 10011,
           "end": 10012,
           "symbol": "C:q",
@@ -960979,6 +961716,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "IntegerPowerHelpers"
+        },
+        {
+          "start": 18994,
+          "end": 19001,
+          "symbol": "F:hh.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "yesText"
         },
         {
           "start": 19004,
@@ -964460,6 +965204,13 @@
           "renamed": "IntegerBitLengthHelpers"
         },
         {
+          "start": 47595,
+          "end": 47602,
+          "symbol": "F:ed.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "contactInformationReportReason"
+        },
+        {
           "start": 47605,
           "end": 47606,
           "symbol": "C:q",
@@ -965130,6 +965881,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "HalfRgbBlendHelpers"
+        },
+        {
+          "start": 53555,
+          "end": 53562,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
         },
         {
           "start": 53565,
@@ -966231,6 +966989,13 @@
           "renamed": "HalfRgbBlendHelpers"
         },
         {
+          "start": 64326,
+          "end": 64333,
+          "symbol": "F:wc.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "passwordLabel"
+        },
+        {
           "start": 64336,
           "end": 64337,
           "symbol": "C:q",
@@ -966768,6 +967533,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "IntegerPowerHelpers"
+        },
+        {
+          "start": 69149,
+          "end": 69156,
+          "symbol": "F:hh.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "preferredDisplayNameTooltip"
         },
         {
           "start": 69159,
@@ -967636,6 +968408,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 76627,
+          "end": 76634,
+          "symbol": "F:er.field_e:Ljava/lang/String;",
+          "original": "field_e",
+          "renamed": "friendListFullText"
         },
         {
           "start": 76637,
@@ -969407,6 +970186,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 92321,
+          "end": 92328,
+          "symbol": "F:er.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "acceptDrawText"
         },
         {
           "start": 92331,
@@ -1021891,7 +1022677,7 @@
       "original": "pa.java",
       "renamed": "TranslucentNineSliceFrame.java",
       "inputSha256": "e3b7acaa5386868aeeda1b8b3a32139b0048c0c0e35f82a7c26db1ebbfdcb535",
-      "outputSha256": "b39c0fb4dbc7fa1fe0ea2dbbaaf7cb555ef3e4b41f839ae1161cb9f51e05136b",
+      "outputSha256": "0d6fd71518eeae6c390fa2aec49326d75bf77dbd896fa20d1ab7bbfd2f318b0f",
       "edits": [
         {
           "start": 50,
@@ -1023000,6 +1023786,13 @@
           "renamed": "IntegerBitLengthHelpers"
         },
         {
+          "start": 3690,
+          "end": 3691,
+          "symbol": "M:ed.a(II)V",
+          "original": "a",
+          "renamed": "drawMenuBackground"
+        },
+        {
           "start": 3735,
           "end": 3737,
           "symbol": "C:ta",
@@ -1023068,6 +1023861,13 @@
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "IntegerBitLengthHelpers"
+        },
+        {
+          "start": 3913,
+          "end": 3914,
+          "symbol": "M:ed.a(II)V",
+          "original": "a",
+          "renamed": "drawMenuBackground"
         },
         {
           "start": 3933,
@@ -1051209,7 +1052009,7 @@
       "original": "qf.java",
       "renamed": "RegistrationResponseDialog.java",
       "inputSha256": "77cf3477a19b72905ba69769e92d27a2e69f4eb5d0911100ee1c69e397d990fc",
-      "outputSha256": "fa86eaf7d1dbcbb03bfa137dfce5c16d87791b110252cf9b59b69bec1293d282",
+      "outputSha256": "a9ecdecce2f20d8e1613ae14a88930dbe9adcc1d497e84f38ff9f3100c245d07",
       "edits": [
         {
           "start": 50,
@@ -1052316,6 +1053116,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "HalfRgbBlendHelpers"
+        },
+        {
+          "start": 4280,
+          "end": 4287,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
         },
         {
           "start": 4345,
@@ -1059103,7 +1059910,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "db5ef0c793e72f44fc7c0bac69ef28ecd3812cea107477676ce5d9a6e3e31c03",
+      "outputSha256": "0b8b9a3ee5a8fa7209a57a1b258142fc53a032a32e6eb16cc32375b68f3260cb",
       "edits": [
         {
           "start": 50,
@@ -1068822,6 +1069629,41 @@
           "renamed": "submissionByte"
         },
         {
+          "start": 38953,
+          "end": 38957,
+          "symbol": "L:qj.b(III)V#0",
+          "original": "var5",
+          "renamed": "validatedSubmissionByte"
+        },
+        {
+          "start": 38975,
+          "end": 38979,
+          "symbol": "L:qj.b(III)V#1",
+          "original": "var6",
+          "renamed": "achievementBitIndex"
+        },
+        {
+          "start": 38997,
+          "end": 39001,
+          "symbol": "L:qj.b(III)V#2",
+          "original": "var7",
+          "renamed": "achievementBitMask"
+        },
+        {
+          "start": 39019,
+          "end": 39023,
+          "symbol": "L:qj.b(III)V#3",
+          "original": "var4",
+          "renamed": "validatedAchievementId"
+        },
+        {
+          "start": 39041,
+          "end": 39054,
+          "symbol": "L:qj.b(III)V#4",
+          "original": "var4Lifetime1",
+          "renamed": "guardCalculation"
+        },
+        {
           "start": 39073,
           "end": 39074,
           "symbol": "M:qj.a(II)Z",
@@ -1068843,11 +1069685,25 @@
           "renamed": "suppressResultSubmission"
         },
         {
+          "start": 39156,
+          "end": 39160,
+          "symbol": "L:qj.b(III)V#3",
+          "original": "var4",
+          "renamed": "validatedAchievementId"
+        },
+        {
           "start": 39163,
           "end": 39169,
           "symbol": "P:qj.b(III)V#0",
           "original": "param0",
           "renamed": "achievementId"
+        },
+        {
+          "start": 39181,
+          "end": 39185,
+          "symbol": "L:qj.b(III)V#0",
+          "original": "var5",
+          "renamed": "validatedSubmissionByte"
         },
         {
           "start": 39188,
@@ -1068857,11 +1069713,53 @@
           "renamed": "submissionByte"
         },
         {
+          "start": 39217,
+          "end": 39221,
+          "symbol": "L:qj.b(III)V#0",
+          "original": "var5",
+          "renamed": "validatedSubmissionByte"
+        },
+        {
+          "start": 39226,
+          "end": 39230,
+          "symbol": "L:qj.b(III)V#3",
+          "original": "var4",
+          "renamed": "validatedAchievementId"
+        },
+        {
+          "start": 39306,
+          "end": 39310,
+          "symbol": "L:qj.b(III)V#1",
+          "original": "var6",
+          "renamed": "achievementBitIndex"
+        },
+        {
           "start": 39313,
           "end": 39315,
           "symbol": "C:ed",
           "original": "ed",
           "renamed": "IntegerBitLengthHelpers"
+        },
+        {
+          "start": 39316,
+          "end": 39323,
+          "symbol": "F:ed.field_f:[I",
+          "original": "field_f",
+          "renamed": "achievementBitIndices"
+        },
+        {
+          "start": 39324,
+          "end": 39328,
+          "symbol": "L:qj.b(III)V#3",
+          "original": "var4",
+          "renamed": "validatedAchievementId"
+        },
+        {
+          "start": 39349,
+          "end": 39353,
+          "symbol": "L:qj.b(III)V#1",
+          "original": "var6",
+          "renamed": "achievementBitIndex"
         },
         {
           "start": 39429,
@@ -1068885,6 +1069783,20 @@
           "renamed": "DisplayModeInfo"
         },
         {
+          "start": 39479,
+          "end": 39483,
+          "symbol": "L:qj.b(III)V#2",
+          "original": "var7",
+          "renamed": "achievementBitMask"
+        },
+        {
+          "start": 39491,
+          "end": 39495,
+          "symbol": "L:qj.b(III)V#1",
+          "original": "var6",
+          "renamed": "achievementBitIndex"
+        },
+        {
           "start": 39507,
           "end": 39509,
           "symbol": "C:hg",
@@ -1068897,6 +1069809,13 @@
           "symbol": "C:hg",
           "original": "hg",
           "renamed": "DisplayModeInfo"
+        },
+        {
+          "start": 39533,
+          "end": 39537,
+          "symbol": "L:qj.b(III)V#2",
+          "original": "var7",
+          "renamed": "achievementBitMask"
         },
         {
           "start": 39549,
@@ -1068988,6 +1069907,13 @@
           "symbol": "C:qm",
           "original": "qm",
           "renamed": "BrowserResizeNotificationHelpers"
+        },
+        {
+          "start": 39714,
+          "end": 39727,
+          "symbol": "L:qj.b(III)V#4",
+          "original": "var4Lifetime1",
+          "renamed": "guardCalculation"
         },
         {
           "start": 39737,
@@ -1080584,7 +1081510,7 @@
       "original": "qo.java",
       "renamed": "PlayerNameChooserPanel.java",
       "inputSha256": "1626eb5c4d9c864c264c3aa79e61de44b1147a8c5f167d950c181d36c78183d3",
-      "outputSha256": "29022c78e446f0f2bf8676bff622aa1d21d454a9443cdf46e230c546c9b0ce3a",
+      "outputSha256": "c93aec0282524029fa4f78dab06d1655afc1e7acdd83e7965008be001cb06f06",
       "edits": [
         {
           "start": 50,
@@ -1082279,6 +1083205,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "IntegerPowerHelpers"
+        },
+        {
+          "start": 11537,
+          "end": 11544,
+          "symbol": "F:hh.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "preferredDisplayNameTooltip"
         },
         {
           "start": 11559,
@@ -1129484,7 +1130417,7 @@
       "original": "sl.java",
       "renamed": "CacheEntry.java",
       "inputSha256": "39de8a1c790e82bdf37a36715a04f2d9b74aab323b69a00586cb7f12eb46ed0f",
-      "outputSha256": "e330236e7443663402b5e7897309befadbd7c33d300e7ef07bec0da62b7da2cb",
+      "outputSha256": "176d468a578841383b455a9f73045552d9ddbd878b4d599e95743e53554546a2",
       "edits": [
         {
           "start": 53,
@@ -1131902,6 +1132835,13 @@
           "renamed": "IntegerPowerHelpers"
         },
         {
+          "start": 8811,
+          "end": 8818,
+          "symbol": "F:hh.field_f:Ljava/lang/String;",
+          "original": "field_f",
+          "renamed": "yesText"
+        },
+        {
           "start": 8840,
           "end": 8842,
           "symbol": "C:pe",
@@ -1133868,7 +1134808,7 @@
       "original": "sn.java",
       "renamed": "ConstructionBackground.java",
       "inputSha256": "eca4ce142aa0dfd9cb4418af392006a39b78410cfc62d48ab78af8e8f7076bf2",
-      "outputSha256": "a80d9d7c2e4a8f7f77c516badb2930bc875d5efc8e4ce6668663bae41205b5c9",
+      "outputSha256": "c362c069df7a872bfa1456ab8be65ffe229d526ad145740de6f4b3079622bb83",
       "edits": [
         {
           "start": 50,
@@ -1134662,6 +1135602,13 @@
           "renamed": "IntegerRemainderHelpers"
         },
         {
+          "start": 3527,
+          "end": 3534,
+          "symbol": "F:er.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "constructionSmokeHalfSprite"
+        },
+        {
           "start": 3536,
           "end": 3542,
           "symbol": "P:sn.a(IBIII)V#3",
@@ -1135348,6 +1136295,13 @@
           "renamed": "IntegerRemainderHelpers"
         },
         {
+          "start": 5042,
+          "end": 5049,
+          "symbol": "F:er.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "constructionSmokeHalfSprite"
+        },
+        {
           "start": 5052,
           "end": 5054,
           "symbol": "C:jh",
@@ -1135670,6 +1136624,13 @@
           "renamed": "IntegerRemainderHelpers"
         },
         {
+          "start": 5521,
+          "end": 5528,
+          "symbol": "F:er.field_d:Ljp;",
+          "original": "field_d",
+          "renamed": "constructionSmokeHalfSprite"
+        },
+        {
           "start": 5665,
           "end": 5667,
           "symbol": "C:rn",
@@ -1135941,7 +1136902,7 @@
       "original": "so.java",
       "renamed": "QuickChatCategoryRegistry.java",
       "inputSha256": "7a871da7f6968a595499d6b7cfa90debd8b7460c269a74d1db04db3b23128dad",
-      "outputSha256": "9c09e909e4aeb1550906bd33bc336cad559ab953002097646e1e08883e594550",
+      "outputSha256": "2a68594eb84b7aa1d56f995d42e0c9c0f4c91eccbf774833e384f2259bb1f832",
       "edits": [
         {
           "start": 50,
@@ -1136922,6 +1137883,13 @@
           "symbol": "C:er",
           "original": "er",
           "renamed": "IntegerRemainderHelpers"
+        },
+        {
+          "start": 4551,
+          "end": 4558,
+          "symbol": "F:er.field_b:Ljp;",
+          "original": "field_b",
+          "renamed": "lobbyGameLogoSprite"
         },
         {
           "start": 4561,
@@ -1224156,7 +1225124,7 @@
       "original": "vh.java",
       "renamed": "RadialSelectorWidget.java",
       "inputSha256": "a8d2de5bdcc40ffc3f94348576b596e962c6f1d2186af0a821c58fadbd42c658",
-      "outputSha256": "d3a600fbfd9175117503ee85fc244e563e659652afc5890ae7c71bf8f710b67b",
+      "outputSha256": "41f256def234e004164dce8e0a684b078baf2cb11838abfb99ad47d240911ce1",
       "edits": [
         {
           "start": 50,
@@ -1224486,6 +1225454,13 @@
           "symbol": "C:hh",
           "original": "hh",
           "renamed": "IntegerPowerHelpers"
+        },
+        {
+          "start": 1739,
+          "end": 1746,
+          "symbol": "F:hh.field_d:D",
+          "original": "field_d",
+          "renamed": "quarterTurnRadians"
         },
         {
           "start": 1874,
@@ -1240710,7 +1241685,7 @@
       "original": "wc.java",
       "renamed": "HalfRgbBlendHelpers.java",
       "inputSha256": "f39a1e87ef98d6ed196451bc60a2a095c85be9119668045421c6807ba1e1cd96",
-      "outputSha256": "16e18d15e383d9aa3f3519def35b2b718485e1619fe8422949f3acbec929b86f",
+      "outputSha256": "8578a9c72584ab9bb41af547d04a9508a60a9b56b66a1f5c1447aecc473d0aa3",
       "edits": [
         {
           "start": 50,
@@ -1240725,6 +1241700,20 @@
           "symbol": "F:wc.field_d:Z",
           "original": "field_d",
           "renamed": "uiPressClaimed"
+        },
+        {
+          "start": 153,
+          "end": 160,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
+        },
+        {
+          "start": 180,
+          "end": 187,
+          "symbol": "F:wc.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "passwordLabel"
         },
         {
           "start": 212,
@@ -1240865,6 +1241854,13 @@
           "symbol": "P:wc.a([IIIII)V#4",
           "original": "param4",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 843,
+          "end": 850,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
         },
         {
           "start": 916,
@@ -1241131,6 +1242127,62 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 2039,
+          "end": 2040,
+          "symbol": "M:wc.a(I)V",
+          "original": "a",
+          "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 2045,
+          "end": 2051,
+          "symbol": "P:wc.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2063,
+          "end": 2070,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
+        },
+        {
+          "start": 2091,
+          "end": 2097,
+          "symbol": "P:wc.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2142,
+          "end": 2149,
+          "symbol": "F:wc.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "passwordLabel"
+        },
+        {
+          "start": 2194,
+          "end": 2201,
+          "symbol": "F:wc.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "passwordLabel"
+        },
+        {
+          "start": 2238,
+          "end": 2245,
+          "symbol": "F:wc.field_a:Ljava/lang/String;",
+          "original": "field_a",
+          "renamed": "quitToWebsiteText"
+        },
+        {
+          "start": 2275,
+          "end": 2282,
+          "symbol": "F:wc.field_c:Ljava/lang/String;",
+          "original": "field_c",
+          "renamed": "passwordLabel"
         }
       ]
     },
@@ -1271285,10 +1272337,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "9f33718892e85af87344ddd4135f3dc39e234855c1b079258616aae2334d12ab",
+    "rulesSha256": "49859c0104159429b175c72e08f07185676780f2704322751753b1907d79b4e3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "f5ba8660331dac3f0c6903d6a8162a31928002cfe64a0a7676035b3f432f215b",
+    "outputTreeSha256": "4bd05d9fccc4aa8e5fba8f4788d277290f76f8c009f7403cff4a52a6e8c5c48c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

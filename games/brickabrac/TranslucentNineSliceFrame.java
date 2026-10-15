@@ -80,12 +80,12 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
 
     final static void a(boolean param0) {
         if (param0) {
-          IntegerBitLengthHelpers.a(0, 0);
+          IntegerBitLengthHelpers.drawMenuBackground(0, 0);
           return;
         }
         NineSliceFrame var2 = (NineSliceFrame) null;
         TranslucentNineSliceFrame.configureFullscreenDialog(-2, -34, -105, (TextFont) null, -37, -46, -79, (NineSliceFrame) null, 96, 79, -47, -14, 91, (NineSliceFrame) null, -22, -64, (TextFont) null, (NineSliceFrame) null, 77, -115, -55);
-        IntegerBitLengthHelpers.a(0, 0);
+        IntegerBitLengthHelpers.drawMenuBackground(0, 0);
     }
 
     TranslucentNineSliceFrame(RgbSprite[] sprites) {

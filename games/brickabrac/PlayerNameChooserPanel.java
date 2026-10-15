@@ -296,7 +296,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         Widget var2 = new Widget(EmailAvailabilityRequest.field_d, var1, (WidgetListener) null);
         this.submitButton = new FocusableWidget(TextFieldValidator.field_j, (WidgetListener) null);
         this.cancelButton = new FocusableWidget(ValidationIconWidget.field_L, (WidgetListener) null);
-        this.usernameField.tooltip = IntegerPowerHelpers.field_a;
+        this.usernameField.tooltip = IntegerPowerHelpers.preferredDisplayNameTooltip;
         this.usernameField.setValidationSource(new UsernameAvailabilityValidator(this.usernameField), (byte) -68);
         this.submitButton.enabled = false;
         this.submitButton.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());

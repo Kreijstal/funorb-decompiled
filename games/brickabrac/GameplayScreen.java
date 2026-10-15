@@ -1156,31 +1156,31 @@ final class GameplayScreen extends GameScreen {
     }
 
     private final void queueMappedBitAchievement(int achievementId, int obfuscationGuard, int submissionByte) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var4 = 0;
-        int var4Lifetime1;
+        int validatedSubmissionByte = 0;
+        int achievementBitIndex = 0;
+        int achievementBitMask = 0;
+        int validatedAchievementId = 0;
+        int guardCalculation;
         if (this.recordAchievement(achievementId, 1)) {
           return;
         }
         if (!this.suppressResultSubmission) {
-          var4 = achievementId;
-          var5 = submissionByte;
-          if ((255 ^ var5) != var4) {
+          validatedAchievementId = achievementId;
+          validatedSubmissionByte = submissionByte;
+          if ((255 ^ validatedSubmissionByte) != validatedAchievementId) {
             throw new IllegalArgumentException();
           }
-          var6 = IntegerBitLengthHelpers.field_f[var4];
-          if (0 > var6) {
+          achievementBitIndex = IntegerBitLengthHelpers.achievementBitIndices[validatedAchievementId];
+          if (0 > achievementBitIndex) {
             throw new IllegalArgumentException();
           }
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + DisplayModeInfo.field_e;
-          var7 = 1 << var6;
-          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ var7;
+          achievementBitMask = 1 << achievementBitIndex;
+          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ achievementBitMask;
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - DisplayModeInfo.field_e;
           AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, DisplayModeInfo.field_e, FullscreenFailureDialog.field_kb, OutgoingPacketHelpers.field_g, BrowserResizeNotificationHelpers.field_a), (byte) 3);
         }
-        var4Lifetime1 = 90 % ((obfuscationGuard - 36) / 46);
+        guardCalculation = 90 % ((obfuscationGuard - 36) / 46);
     }
 
     private final void queueOffsetAchievement(byte obfuscationGuard, int achievementId, int submissionByte) {

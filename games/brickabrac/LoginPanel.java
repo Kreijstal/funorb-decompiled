@@ -367,7 +367,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             }
           } else {
             this.loginButton = new FocusableWidget(TabbedPane.field_Tb, (WidgetListener) null);
-            this.backOrGuestButton = new FocusableWidget(HalfRgbBlendHelpers.field_a, (WidgetListener) null);
+            this.backOrGuestButton = new FocusableWidget(HalfRgbBlendHelpers.quitToWebsiteText, (WidgetListener) null);
             this.accountField.enabled = false;
           }
           this.accountField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
@@ -412,7 +412,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, true);
           this.y = this.y + (5 + ((Widget) ((Object) var12)).height);
-          dupTemp$1 = new LabeledWidget(10, this.y, this.width - 20, 25, this.passwordField, false, 80, 3, var7, 16777215, HalfRgbBlendHelpers.field_c);
+          dupTemp$1 = new LabeledWidget(10, this.y, this.width - 20, 25, this.passwordField, false, 80, 3, var7, 16777215, HalfRgbBlendHelpers.passwordLabel);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, true);
           this.loginButton.listener = (WidgetListener) (this);

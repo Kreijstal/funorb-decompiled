@@ -262,7 +262,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("ticketing_xunread", (byte) -111);
                 if (null != var2) {
-                  IntegerBitLengthHelpers.field_c = MenuButton.a(var2, (byte) 116);
+                  IntegerBitLengthHelpers.unreadMessagesFormat = MenuButton.a(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_gotowebsite", (byte) -125);
                 if (null != var2) {
@@ -474,7 +474,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("yes", (byte) -119);
                 if (null != var2) {
-                  IntegerPowerHelpers.field_f = MenuButton.a(var2, (byte) 115);
+                  IntegerPowerHelpers.yesText = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("no", (byte) -4);
                 if (var2 != null) {
@@ -1144,7 +1144,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("rule_2_0", (byte) -2);
                 if (var2 != null) {
-                  IntegerBitLengthHelpers.field_a = MenuButton.a(var2, (byte) 122);
+                  IntegerBitLengthHelpers.contactInformationReportReason = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("rule_2_1", (byte) -114);
                 if (var2 != null) {
@@ -1292,7 +1292,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("quittowebsite", (byte) -124);
                 if (var2 != null) {
-                  HalfRgbBlendHelpers.field_a = MenuButton.a(var2, (byte) 80);
+                  HalfRgbBlendHelpers.quitToWebsiteText = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("connectionrestored", (byte) -113);
                 if (null != var2) {
@@ -1556,7 +1556,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_password", (byte) -108);
                 if (var2 != null) {
-                  HalfRgbBlendHelpers.field_c = MenuButton.a(var2, (byte) 106);
+                  HalfRgbBlendHelpers.passwordLabel = MenuButton.a(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("create_password_confirm", (byte) -121);
                 if (null != var2) {
@@ -1672,7 +1672,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_displayname_tooltip", (byte) 124);
                 if (null != var2) {
-                  IntegerPowerHelpers.field_a = MenuButton.a(var2, (byte) 120);
+                  IntegerPowerHelpers.preferredDisplayNameTooltip = MenuButton.a(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("create_displayname_hint", (byte) -119);
                 if (var2 != null) {
@@ -1844,7 +1844,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("friendlistfull", (byte) -112);
                 if (null != var2) {
-                  IntegerRemainderHelpers.field_e = MenuButton.a(var2, (byte) 97);
+                  IntegerRemainderHelpers.friendListFullText = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("friendlistdupe", (byte) 19);
                 if (var2 != null) {
@@ -2234,7 +2234,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("acceptdraw", (byte) -116);
                 if (var2 != null) {
-                  IntegerRemainderHelpers.field_a = MenuButton.a(var2, (byte) 86);
+                  IntegerRemainderHelpers.acceptDrawText = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("resign", (byte) 27);
                 if (var2 != null) {

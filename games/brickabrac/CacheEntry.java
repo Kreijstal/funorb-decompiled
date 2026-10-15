@@ -209,7 +209,7 @@ abstract class CacheEntry extends DualLinkNode {
             }
           }
           ChatMessage.field_l[2] = new UiComponent(0L, ProxySocketConnector.field_n, PlayerInputBatch.field_j);
-          MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], IntegerPowerHelpers.field_f)};
+          MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], IntegerPowerHelpers.yesText)};
           if (1 < IntArrayRequest.field_t) {
             ChatMessage.field_l[3] = new UiComponent(0L, ProxySocketConnector.field_n, EmailConfirmationValidator.field_r);
             array$1 = new AlignedIconLabel[IntArrayRequest.field_t + 1];

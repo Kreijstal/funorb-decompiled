@@ -22,10 +22,10 @@ abstract class MenuScreen extends GameScreen {
         } else {
           var2 = (-50 + GzipInflater.field_e) * 640 / 50;
           if (0 != MeshLobbyUiHelpers.field_h) {
-            IntegerBitLengthHelpers.a(-640 - var2, 0);
+            IntegerBitLengthHelpers.drawMenuBackground(-640 - var2, 0);
             MainMenuScreen.field_s.drawAt(-var2, 0);
           } else {
-            IntegerBitLengthHelpers.a(640 + var2, 0);
+            IntegerBitLengthHelpers.drawMenuBackground(640 + var2, 0);
             MainMenuScreen.field_s.drawAt(var2, 0);
           }
         }

@@ -126,7 +126,7 @@ final class RegistrationResponseDialog extends AccountMessageDialog implements W
                 messagePanel.addAction(false, HalloweenBackground.field_s, -1);
               } else {
                 messagePanel.addAction(false, DialogMessagePanel.field_L, 11);
-                messagePanel.addAction(false, HalfRgbBlendHelpers.field_a, 17);
+                messagePanel.addAction(false, HalfRgbBlendHelpers.quitToWebsiteText, 17);
               }
             }
             if (3 == response.responseCode) {

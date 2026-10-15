@@ -143,7 +143,7 @@ final class QuickChatCategoryRegistry {
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           RankingsScreen.field_t = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "splash", "basic");
-          IntegerRemainderHelpers.field_b = SpriteInputHelpers.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
+          IntegerRemainderHelpers.lobbyGameLogoSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
           var21 = param2.takeFileByName(-86, "basic", "gamefont");
           var15 = var21;
           var13 = var15;

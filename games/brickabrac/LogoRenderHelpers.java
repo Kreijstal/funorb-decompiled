@@ -185,11 +185,11 @@ final class LogoRenderHelpers {
           }
           if (LevelPackSelectScreen.friendCount >= 100 &&
             ResourceArchiveFactory.windowModeCapabilityWord <= 0) {
-            stackIn_18_0 = IntegerRemainderHelpers.field_e;
+            stackIn_18_0 = IntegerRemainderHelpers.friendListFullText;
             return stackIn_18_0;
           }
           if (200 <= LevelPackSelectScreen.friendCount) {
-            stackIn_21_0 = IntegerRemainderHelpers.field_e;
+            stackIn_21_0 = IntegerRemainderHelpers.friendListFullText;
             return stackIn_21_0;
           }
           if (AchievementBrowserScreen.isIgnoredPlayer(121, name)) {

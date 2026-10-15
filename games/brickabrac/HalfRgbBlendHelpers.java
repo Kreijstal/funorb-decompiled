@@ -5,8 +5,8 @@ final class HalfRgbBlendHelpers {
     static boolean uiPressClaimed;
     static int field_e;
     static boolean field_b;
-    static String field_a;
-    static String field_c;
+    static String quitToWebsiteText;
+    static String passwordLabel;
 
     final static void blendHalfRgbSpan(int[] target, int length, int halfRgb, int offset, int obfuscationGuard) {
         int[] targetAlias = null;
@@ -27,7 +27,7 @@ final class HalfRgbBlendHelpers {
               if (obfuscationGuard == -1) {
                 return;
               }
-              field_a = (String) null;
+              quitToWebsiteText = (String) null;
               return;
             }
             targetStorage = target;
@@ -60,18 +60,18 @@ final class HalfRgbBlendHelpers {
         ResourceArchive.field_f.a(0, 0, param1 + 1);
     }
 
-    public static void a(int param0) {
-        field_a = null;
-        if (param0 <= 62) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        quitToWebsiteText = null;
+        if (obfuscationGuard <= 62) {
           field_e = 120;
-          field_c = null;
+          passwordLabel = null;
           return;
         }
-        field_c = null;
+        passwordLabel = null;
     }
 
     static {
-        field_a = "Quit to website";
-        field_c = "Password: ";
+        quitToWebsiteText = "Quit to website";
+        passwordLabel = "Password: ";
     }
 }

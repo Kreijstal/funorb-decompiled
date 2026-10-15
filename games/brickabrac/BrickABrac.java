@@ -581,7 +581,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ChatLobbyUiHelpers.a(11);
         TextValidationHelpers.a(0);
         WhirlpoolDigestHelpers.a(0);
-        HalfRgbBlendHelpers.a(100);
+        HalfRgbBlendHelpers.clearSharedReferences(100);
         SocialListResponseHelpers.clearSharedReferences(20623);
         AccountDateHelpers.a((byte) 108);
         TextChoiceDialogStyles.a(-21727);
@@ -631,7 +631,7 @@ public final class BrickABrac extends InteractiveGameClient {
         GameUiController.c(false);
         PauseMenuHelpers.a(-12251);
         MenuButton.a((byte) -32);
-        IntegerPowerHelpers.a(true);
+        IntegerPowerHelpers.clearSharedReferences(true);
         IndexedSpriteHelpers.a(0);
         ScreenshotViewer.d((byte) 102);
         TextHuffmanHelpers.a(24311);
@@ -641,7 +641,7 @@ public final class BrickABrac extends InteractiveGameClient {
         IntegerParsingHelpers.a((byte) -11);
         IncomingPacketHelpers.a(-106);
         MenuSelection.b((byte) -60);
-        IntegerBitLengthHelpers.a(-104);
+        IntegerBitLengthHelpers.clearSharedReferences(-104);
         BackgroundScene.a((byte) 7);
         BrickHitTransitionTable.clearTransitionCodes((byte) -116);
         BufferedFile.a(-54);
@@ -699,7 +699,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ArcticBackground.d((byte) -31);
         ChocolateBackground.d((byte) -61);
         ConstructionBackground.f(94);
-        IntegerRemainderHelpers.a((byte) -121);
+        IntegerRemainderHelpers.clearSharedReferences((byte) -121);
         DesertBackground.f(-417029247);
         JungleBackground.b(false);
         ParisBackground.f(0);

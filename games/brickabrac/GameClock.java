@@ -181,7 +181,7 @@ abstract class GameClock {
         BackgroundSurfaceHelpers.field_d[7] = AppletFlowHelpers.field_i;
         BackgroundSurfaceHelpers.field_d[17] = RasterCacheSurface.field_l;
         BackgroundSurfaceHelpers.field_d[19] = MeshAudioHelpers.field_g;
-        BackgroundSurfaceHelpers.field_d[param0] = IntegerBitLengthHelpers.field_a;
+        BackgroundSurfaceHelpers.field_d[param0] = IntegerBitLengthHelpers.contactInformationReportReason;
         BackgroundSurfaceHelpers.field_d[11] = AchievementsScreen.field_I;
     }
 

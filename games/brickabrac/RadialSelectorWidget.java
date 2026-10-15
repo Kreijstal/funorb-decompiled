@@ -57,7 +57,7 @@ final class RadialSelectorWidget extends FocusableWidget {
           if (var8_int * var8_int + var9 * var9 >= this.radius * this.radius) {
             return true;
           }
-          var10 = Math.atan2((double)var9, (double)var8_int) - IntegerPowerHelpers.field_d;
+          var10 = Math.atan2((double)var9, (double)var8_int) - IntegerPowerHelpers.quarterTurnRadians;
           if (!(0.0 > var10)) {
             if (0.0 < var10) {
               var10 = var10 + 3.141592653589793 / (double)this.sectorCount;

@@ -3,16 +3,16 @@
  */
 final class IntegerBitLengthHelpers {
     static RgbSprite[] countdownSprites;
-    static String field_c;
+    static String unreadMessagesFormat;
     static boolean field_d;
-    static int[] field_f;
-    static String field_a;
+    static int[] achievementBitIndices;
+    static String contactInformationReportReason;
     static int[] projectedVertexY;
 
-    final static void a(int param0, int param1) {
-        IntrusiveHashTable.field_k.drawFullBackground(true, MouseInput.field_b, 0, param1, param0);
+    final static void drawMenuBackground(int destinationX, int colorIndex) {
+        IntrusiveHashTable.field_k.drawFullBackground(true, MouseInput.field_b, 0, colorIndex, destinationX);
         if (IntrusiveHashTable.field_k.sceneId == 7) {
-          SaveResultsPromptScreen.advanceAndDrawFireworks(true, true, param0);
+          SaveResultsPromptScreen.advanceAndDrawFireworks(true, true, destinationX);
         }
     }
 
@@ -98,21 +98,21 @@ final class IntegerBitLengthHelpers {
         return shiftCount + value;
     }
 
-    public static void a(int param0) {
-        field_a = null;
-        field_f = null;
-        if (param0 > -61) {
+    public static void clearSharedReferences(int obfuscationGuard) {
+        contactInformationReportReason = null;
+        achievementBitIndices = null;
+        if (obfuscationGuard > -61) {
           return;
         }
-        field_c = null;
+        unreadMessagesFormat = null;
         projectedVertexY = null;
         countdownSprites = null;
     }
 
     static {
-        field_a = "Asking for or providing contact information";
+        contactInformationReportReason = "Asking for or providing contact information";
         projectedVertexY = new int[8192];
-        field_f = new int[]{0, 1, 2, 10, 25, -1, -1, -1, -1, 3, 4, -1, -1, -1, -1, -1, -1, -1, -1, 5, 6, 7, 8, -1, -1, -1, -1, -1, -1, 9, 10, 11, 12, 13, -1, -1, -1, -1, -1, 14, -1};
-        field_c = "You have <%0> unread messages!";
+        achievementBitIndices = new int[]{0, 1, 2, 10, 25, -1, -1, -1, -1, 3, 4, -1, -1, -1, -1, -1, -1, -1, -1, 5, 6, 7, 8, -1, -1, -1, -1, -1, -1, 9, 10, 11, 12, 13, -1, -1, -1, -1, -1, 14, -1};
+        unreadMessagesFormat = "You have <%0> unread messages!";
     }
 }

@@ -45,7 +45,7 @@ final class GameUiController implements GameUiLifecycle {
         MusicVoice.configureTextChoiceOuterFrame(20, -97, 20, var2);
         TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, FriendListUi.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
         InputOptionsHelpers.field_g = true;
-        GrowableIntList.field_e = IntegerRemainderHelpers.field_b;
+        GrowableIntList.field_e = IntegerRemainderHelpers.lobbyGameLogoSprite;
         LevelResultSubmission.b(-9, 200);
         KeyboardInput.a(new BrickGameLayerController(), 0);
         VolcanicBackground.g(0);
