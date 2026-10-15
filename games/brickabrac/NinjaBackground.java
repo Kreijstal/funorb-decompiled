@@ -138,12 +138,12 @@ final class NinjaBackground extends BackgroundScene {
     final static void e(byte param0) {
         int var1 = 35 / ((-43 - param0) / 37);
         ResourceArchive.field_f.hideLayers(-125);
-        if (null != sj.loadingProgressDialog) {
-          ResourceArchive.field_f.pushLayer(-76, sj.loadingProgressDialog);
+        if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
+          ResourceArchive.field_f.pushLayer(-76, ChatLobbyUiHelpers.loadingProgressDialog);
           return;
         }
-        sj.loadingProgressDialog = new LoadingProgressDialog(ResourceArchive.field_f, AppletGameShell.field_b);
-        ResourceArchive.field_f.pushLayer(-76, sj.loadingProgressDialog);
+        ChatLobbyUiHelpers.loadingProgressDialog = new LoadingProgressDialog(ResourceArchive.field_f, AppletGameShell.field_b);
+        ResourceArchive.field_f.pushLayer(-76, ChatLobbyUiHelpers.loadingProgressDialog);
     }
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {

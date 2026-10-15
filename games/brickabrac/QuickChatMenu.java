@@ -1178,7 +1178,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime114 = gr.a(true, "well_done");
           if (var2Lifetime114 != null) {
-            vg.field_a = MenuButton.a(var2Lifetime114, (byte) 78);
+            GameTransportActions.field_a = MenuButton.a(var2Lifetime114, (byte) 78);
           }
           var2Lifetime115 = gr.a(!param0, "sweet");
           if (var2Lifetime115 != null) {
@@ -1346,7 +1346,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime156 = gr.a(true, "explain_reverse");
           if (var2Lifetime156 != null) {
-            sj.field_e = MenuButton.a(var2Lifetime156, (byte) 74);
+            ChatLobbyUiHelpers.field_e = MenuButton.a(var2Lifetime156, (byte) 74);
           }
           var2Lifetime157 = gr.a(true, "explain_super");
           if (var2Lifetime157 != null) {
@@ -1508,7 +1508,7 @@ final class QuickChatMenu extends UiComponent {
           ic.disableKeyboardInput((byte) -79);
           FileCacheStore.a(5);
           GameplayAudioEvent.a(param0 + 14569);
-          if (vg.a(param0 - 104)) {
+          if (GameTransportActions.canUseGameTransport(param0 - 104)) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 1);
             ActivityIndicatorWidget.a(0, 10000);
           }

@@ -67,7 +67,7 @@ final class CappedUrlRequest implements Runnable {
           BrickMotionPath.field_q = dupTemp$1;
           RichTextLayout.lastGameReadMillis = dupTemp$1;
           if (qm.field_d.status != 1) {
-            rf.field_b = mc.field_e;
+            rf.connectionPhase = mc.connectionFailed;
           } else {
             try {
               WhirlpoolHasher.gameTransport = new BufferedSocket((java.net.Socket) (qm.field_d.result), FramedMenuScreen.field_s);
@@ -78,14 +78,14 @@ final class CappedUrlRequest implements Runnable {
               TextFieldRenderer.thirdPreviousPacketOpcode = stackIn_11_0;
               we.secondPreviousPacketOpcode = stackIn_11_0;
               UiComponent.previousPacketOpcode = stackIn_11_0;
-              rf.field_b = BitPacketBuffer.field_u;
+              rf.connectionPhase = BitPacketBuffer.readyToSendHandshake;
               var5.position = 0;
               GrowableIntList.a(ArchiveIndex.field_e, 12, IntArrayRequest.field_r, ContentTransitionLayer.field_ob, TextFieldValidator.outgoingPackets);
               ActivityIndicatorWidget.a(-1, 10000);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              rf.field_b = mc.field_e;
+              rf.connectionPhase = mc.connectionFailed;
               qm.field_d = null;
               return true;
             }

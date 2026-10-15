@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MeshAttributeRecord {
-    static n field_f;
+    static ConnectionPhase awaitingLoginSeed;
     int baseRgb;
     static MusicCrossfadeStream musicCrossfadeStream;
     static int currentKeyCode;
@@ -16,10 +16,10 @@ final class MeshAttributeRecord {
         musicCrossfadeStream = null;
         if (param0 != -9669) {
           field_d = (String) null;
-          field_f = null;
+          awaitingLoginSeed = null;
           return;
         }
-        field_f = null;
+        awaitingLoginSeed = null;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, boolean param9, int param10, boolean param11) {
@@ -54,7 +54,7 @@ final class MeshAttributeRecord {
     }
 
     static {
-        field_f = new n();
+        awaitingLoginSeed = new ConnectionPhase();
         field_d = "Build: Adds a row of bricks to the top of the level.";
     }
 }

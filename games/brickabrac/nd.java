@@ -5,7 +5,7 @@ final class nd {
     static int[] field_f;
     static int[] viewFacePointOneY;
     static String field_d;
-    static boolean field_b;
+    static boolean chatPinnedToBottom;
     static int field_c;
     static UiComponent field_a;
     static String receivedChatSenderName;
@@ -137,7 +137,7 @@ final class nd {
     }
 
     static {
-        field_b = true;
+        chatPinnedToBottom = true;
         viewFacePointOneY = new int[8192];
         field_d = "Just play";
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SocialTabbedPanel {
-    static n field_e;
+    static ConnectionPhase awaitingValidationBody;
     TabbedPane tabs;
     static int decodedRankingRating;
     static RgbSprite field_b;
@@ -16,7 +16,7 @@ final class SocialTabbedPanel {
           tabHeight = 24;
           panelInset = 5;
           this.tabs.setTabbedPaneBounds(panelInset, x, width, tabHeight, height, y, 75);
-          sj.friendsStatusLabel.setBounds(np.uiRowHeight, 0, 0, QuickChatPhraseRegistry.friendsPanel.width, (byte) 64);
+          ChatLobbyUiHelpers.friendsStatusLabel.setBounds(np.uiRowHeight, 0, 0, QuickChatPhraseRegistry.friendsPanel.width, (byte) 64);
           MouseWheelSource.friendNameHeading.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.friendsPanel.width - DialogMessagePanel.uiScrollbarWidth - 2), (byte) 64);
           GameplayScreen.friendLocationHeading.setBounds(18, 2 + np.uiRowHeight, -2 + (-DialogMessagePanel.uiScrollbarWidth + (QuickChatPhraseRegistry.friendsPanel.width - 80)), 82 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
           GameScreen.friendsListPane.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.friendsPanel.width, 0, 20 + (np.uiRowHeight + 2), DialogMessagePanel.uiScrollbarWidth, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.friendsPanel.height) - 20);
@@ -26,7 +26,7 @@ final class SocialTabbedPanel {
     }
 
     public static void a(boolean param0) {
-        field_e = null;
+        awaitingValidationBody = null;
         if (param0) {
           field_f = null;
           field_a = null;
@@ -98,7 +98,7 @@ final class SocialTabbedPanel {
     }
 
     static {
-        field_e = new n();
+        awaitingValidationBody = new ConnectionPhase();
         field_f = new int[]{14, 14, 14, 14, 14, 14, 14};
     }
 }

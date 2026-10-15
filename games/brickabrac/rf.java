@@ -8,7 +8,7 @@ final class rf {
     static String field_e;
     static RgbSprite spaceSmallSprite;
     static TableDataRequest field_g;
-    static n field_b;
+    static ConnectionPhase connectionPhase;
 
     final static void requestRemoveOrRejectPlayer(int opcode, long playerId, boolean obfuscationGuard) {
         BitPacketBuffer packet = TextFieldValidator.outgoingPackets;
@@ -33,7 +33,7 @@ final class rf {
         }
         spaceSmallSprite = null;
         field_e = null;
-        field_b = null;
+        connectionPhase = null;
     }
 
     static {

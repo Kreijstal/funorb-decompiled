@@ -44,7 +44,7 @@ final class NodeDeque {
         RuntimeException decompiledCaughtException = null;
         try {
           if (3 == param0) {
-            stackIn_2_0 = n.field_b;
+            stackIn_2_0 = ConnectionPhase.field_b;
             return stackIn_2_0;
           }
           if (param0 == 6) {
@@ -56,7 +56,7 @@ final class NodeDeque {
             return stackIn_9_0;
           }
           if (param0 == 8) {
-            stackIn_12_0 = vg.field_b;
+            stackIn_12_0 = GameTransportActions.field_b;
             return stackIn_12_0;
           }
           if (param0 == 9) {

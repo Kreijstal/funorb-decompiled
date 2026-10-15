@@ -166,7 +166,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          sj.a(param0, (byte) 117, var3, var2, var4);
+          ChatLobbyUiHelpers.setAppletCookie(param0, (byte) 117, var3, var2, var4);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cb.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

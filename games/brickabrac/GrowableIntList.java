@@ -94,7 +94,7 @@ final class GrowableIntList {
             AppletGameShell.field_e.horizontalAlignment = 1;
             AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
             if (0 < IntArrayRequest.field_j) {
-              n.a(param2, param8, param3, (byte) -76);
+              ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
             }
             if (TableDataRequest.field_m > 0) {
               LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
@@ -117,7 +117,7 @@ final class GrowableIntList {
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
-                n.a(param2, param8, param3, (byte) -76);
+                ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
@@ -136,7 +136,7 @@ final class GrowableIntList {
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
-                n.a(param2, param8, param3, (byte) -76);
+                ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
@@ -182,7 +182,7 @@ final class GrowableIntList {
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
-                n.a(param2, param8, param3, (byte) -76);
+                ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
@@ -206,7 +206,7 @@ final class GrowableIntList {
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
-                n.a(param2, param8, param3, (byte) -76);
+                ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
@@ -249,7 +249,7 @@ final class GrowableIntList {
               AppletGameShell.field_e.horizontalAlignment = 1;
               AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
               if (0 < IntArrayRequest.field_j) {
-                n.a(param2, param8, param3, (byte) -76);
+                ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
               }
               if (TableDataRequest.field_m > 0) {
                 LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
@@ -272,7 +272,7 @@ final class GrowableIntList {
                 AppletGameShell.field_e.horizontalAlignment = 1;
                 AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
                 if (0 < IntArrayRequest.field_j) {
-                  n.a(param2, param8, param3, (byte) -76);
+                  ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
                 }
                 if (TableDataRequest.field_m > 0) {
                   LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);
@@ -291,7 +291,7 @@ final class GrowableIntList {
                 AppletGameShell.field_e.horizontalAlignment = 1;
                 AppletGameShell.field_e.textInset = Paddle.field_C.textInset;
                 if (0 < IntArrayRequest.field_j) {
-                  n.a(param2, param8, param3, (byte) -76);
+                  ConnectionPhase.updateOpponentSearchControls(param2, param8, param3, (byte) -76);
                 }
                 if (TableDataRequest.field_m > 0) {
                   LobbyUiHelpers.updateLobbyControls(true, param3, param8, param2, param7);

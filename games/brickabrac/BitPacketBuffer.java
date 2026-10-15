@@ -9,7 +9,7 @@ final class BitPacketBuffer extends PacketBuffer {
     private int bitPosition;
     static int[] field_o;
     static lo field_r;
-    static n field_u;
+    static ConnectionPhase readyToSendHandshake;
     static int field_q;
 
     final void beginBitWrite(int obfuscationGuard) {
@@ -40,7 +40,7 @@ final class BitPacketBuffer extends PacketBuffer {
           field_s = (String) null;
         }
         field_r = null;
-        field_u = null;
+        readyToSendHandshake = null;
         field_s = null;
     }
 
@@ -50,7 +50,7 @@ final class BitPacketBuffer extends PacketBuffer {
 
     final void beginBitRead(int obfuscationGuard) {
         if (obfuscationGuard > -74) {
-          field_u = (n) null;
+          readyToSendHandshake = (ConnectionPhase) null;
         }
         this.bitPosition = 8 * this.position;
     }
@@ -390,6 +390,6 @@ final class BitPacketBuffer extends PacketBuffer {
     static {
         field_s = "Unpacking sound effects";
         field_r = new lo();
-        field_u = new n();
+        readyToSendHandshake = new ConnectionPhase();
     }
 }

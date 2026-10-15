@@ -103,7 +103,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
         var23 = null;
         var11 = BrickABrac.field_J ? 1 : 0;
         var3 = 1;
-        if (!nd.field_b &&
+        if (!nd.chatPinnedToBottom &&
           null == SoundCache.field_k) {
           var3 = 0;
         }
@@ -194,7 +194,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               }
             }
             var20 = var7Lifetime15 + var19 + ": ";
-            var5Lifetime4 = var5Lifetime4 - CachedArchiveSource.field_y.measureText(var20);
+            var5Lifetime4 = var5Lifetime4 - CachedArchiveSource.chatFont.measureText(var20);
           } else {
             var24 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
             var18 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var24)}, (byte) 103);
@@ -203,15 +203,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             var8 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
             var7Lifetime15 = var8;
             var7Lifetime15 = var8;
-            var9 = CachedArchiveSource.field_y.measureText(var18);
-            var10 = CachedArchiveSource.field_y.measureText(var8);
+            var9 = CachedArchiveSource.chatFont.measureText(var18);
+            var10 = CachedArchiveSource.chatFont.measureText(var8);
             if (var9 > var10) {
               var5Lifetime4 = var5Lifetime4 - var9;
             } else {
               var5Lifetime4 = var5Lifetime4 - var10;
             }
           }
-          if (var5Lifetime4 >= CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
+          if (var5Lifetime4 >= CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
             return true;
           }
           MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
@@ -301,7 +301,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 var20Lifetime1 = var7Lifetime1Lifetime6 + var19Lifetime1 + ": ";
                 var7Lifetime1Lifetime6 = var20Lifetime1;
                 var7Lifetime1Lifetime6 = var20Lifetime1;
-                var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - CachedArchiveSource.field_y.measureText(var20Lifetime1);
+                var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - CachedArchiveSource.chatFont.measureText(var20Lifetime1);
               } else {
                 var25 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
                 var18Lifetime1 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var25)}, (byte) 103);
@@ -310,15 +310,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                 var8Lifetime1 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
                 var7Lifetime1Lifetime6 = var8Lifetime1;
                 var7Lifetime1Lifetime6 = var8Lifetime1;
-                var9Lifetime1 = CachedArchiveSource.field_y.measureText(var18Lifetime1);
-                var10Lifetime1 = CachedArchiveSource.field_y.measureText(var8Lifetime1);
+                var9Lifetime1 = CachedArchiveSource.chatFont.measureText(var18Lifetime1);
+                var10Lifetime1 = CachedArchiveSource.chatFont.measureText(var8Lifetime1);
                 if (var9Lifetime1 > var10Lifetime1) {
                   var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - var9Lifetime1;
                 } else {
                   var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - var10Lifetime1;
                 }
               }
-              if (var5Lifetime1Lifetime1 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
+              if (var5Lifetime1Lifetime1 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
                 MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
               }
             }
@@ -401,8 +401,8 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             var20Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
             var7Lifetime9 = var20Lifetime2;
             var7Lifetime9 = var20Lifetime2;
-            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2);
-            if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
+            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2);
+            if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
               MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
@@ -413,8 +413,8 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           }
           if (null == o.currentLobbyGame) {
             var20Lifetime2Lifetime1 = var7Lifetime9 + var19Lifetime2 + ": ";
-            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime1);
-            if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
+            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime1);
+            if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
               MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
@@ -422,8 +422,8 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           if (!PowerUp.field_v) {
             var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime2 = var7Lifetime9 + var19Lifetime2 + ": ";
-            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime2);
-            if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
+            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime2);
+            if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
               MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
@@ -431,15 +431,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           if (null == jd.field_b) {
             var7Lifetime9 = "[" + rd.a(fm.field_a, new String[]{o.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
-            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime3);
-            if (var5Lifetime3 < CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
+            var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime3);
+            if (var5Lifetime3 < CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
               MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
             }
             return true;
           }
           var7Lifetime9 = "[" + jd.field_b + "] ";
           var20Lifetime2Lifetime4 = var7Lifetime9 + var19Lifetime2 + ": ";
-          var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.field_y.measureText(var20Lifetime2Lifetime4);
+          var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime4);
         } else {
           var26 = (CharSequence) ((Object) DualLinkNode.quickChatRecipient);
           var18Lifetime2 = rd.a(SaveResultsPromptScreen.field_x, new String[]{ap.a(true, var26)}, (byte) 103);
@@ -448,15 +448,15 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           var8Lifetime2 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var16}, (byte) 103);
           var7Lifetime9 = var8Lifetime2;
           var7Lifetime9 = var8Lifetime2;
-          var9Lifetime2 = CachedArchiveSource.field_y.measureText(var18Lifetime2);
-          var10Lifetime2 = CachedArchiveSource.field_y.measureText(var8Lifetime2);
+          var9Lifetime2 = CachedArchiveSource.chatFont.measureText(var18Lifetime2);
+          var10Lifetime2 = CachedArchiveSource.chatFont.measureText(var8Lifetime2);
           if (var9Lifetime2 > var10Lifetime2) {
             var5Lifetime3 = var5Lifetime3 - var9Lifetime2;
           } else {
             var5Lifetime3 = var5Lifetime3 - var10Lifetime2;
           }
         }
-        if (var5Lifetime3 >= CachedArchiveSource.field_y.measureText(OptionsScreen.field_A.toString())) {
+        if (var5Lifetime3 >= CachedArchiveSource.chatFont.measureText(OptionsScreen.field_A.toString())) {
           return true;
         }
         MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);

@@ -321,7 +321,7 @@ final class ActivityIndicatorWidget extends Widget {
           boolean decompiledFrameRemainder0 = true;
           if (WhirlpoolHasher.gameTransport != null) {
             if (0 <= param0) {
-              decompiledFrameRemainder0 = (MenuButton.field_i == rf.field_b);
+              decompiledFrameRemainder0 = (MenuButton.loggedInConnection == rf.connectionPhase);
               if ((decompiledFrameRemainder0) && (TextFieldValidator.outgoingPackets.position == 0 &&
                 BrickMotionPath.field_q + 10000L < MonotonicTime.nowMillis(false))) {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, param0);

@@ -61,7 +61,7 @@ final class FriendListUi {
           pressedEntry = null;
           if (LevelMetadata.field_m == 2) {
             QuickChatPhraseRegistry.friendsPanel.enabled = true;
-            sj.friendsStatusLabel.text = rd.a(LevelDecoder.field_c, new String[]{AlignedIconLabel.currentSocialServer}, (byte) 103);
+            ChatLobbyUiHelpers.friendsStatusLabel.text = rd.a(LevelDecoder.field_c, new String[]{AlignedIconLabel.currentSocialServer}, (byte) 103);
             GameScreen.friendsListPane.scrollPane.viewport.text = null;
             previousEntry = null;
             entry = (SocialListEntry) (entries.first(-76));
@@ -183,7 +183,7 @@ final class FriendListUi {
               }
             }
           } else {
-            sj.friendsStatusLabel.text = kd.field_a;
+            ChatLobbyUiHelpers.friendsStatusLabel.text = kd.field_a;
             QuickChatPhraseRegistry.friendsPanel.enabled = false;
             if (LevelMetadata.field_m == 1) {
               GameScreen.friendsListPane.scrollPane.viewport.text = LoginCredentialKind.field_f;

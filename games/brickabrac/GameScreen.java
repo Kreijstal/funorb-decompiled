@@ -5,7 +5,7 @@ abstract class GameScreen {
     static SoundCache field_e;
     int screenId;
     static String field_d;
-    static n field_c;
+    static ConnectionPhase awaitingLoginPreludeReply;
     static String field_b;
     static ScrollPaneWithFooter friendsListPane;
     static String field_g;
@@ -32,7 +32,7 @@ abstract class GameScreen {
         field_b = null;
         field_d = null;
         friendsListPane = null;
-        field_c = null;
+        awaitingLoginPreludeReply = null;
         field_e = null;
         if (param0 != -91) {
           GameScreen.getOrRequestRankings(119, 39, -126, (byte) 48);
@@ -80,7 +80,7 @@ abstract class GameScreen {
     }
 
     static {
-        field_c = new n();
+        awaitingLoginPreludeReply = new ConnectionPhase();
         field_b = "Connection lost - attempting to reconnect";
         field_g = "Charge: instantly charges the ball.";
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiagnosticTextLine extends IntrusiveNode {
-    static n field_k;
+    static ConnectionPhase awaitingValidationReply;
     static String field_i;
     static String field_j;
     static boolean[] field_m;
@@ -63,12 +63,12 @@ final class DiagnosticTextLine extends IntrusiveNode {
         field_m = null;
         field_j = null;
         if (param0 == 30850) {
-          field_k = null;
+          awaitingValidationReply = null;
           field_i = null;
           return;
         }
         field_j = (String) null;
-        field_k = null;
+        awaitingValidationReply = null;
         field_i = null;
     }
 
@@ -119,6 +119,6 @@ final class DiagnosticTextLine extends IntrusiveNode {
         field_m[9] = false;
         field_m[16] = false;
         field_m[4] = true;
-        field_k = new n();
+        awaitingValidationReply = new ConnectionPhase();
     }
 }

@@ -3,7 +3,7 @@
  */
 final class MenuButton {
     int y;
-    static n field_i;
+    static ConnectionPhase loggedInConnection;
     int height;
     int actionId;
     boolean marked;
@@ -205,7 +205,7 @@ final class MenuButton {
 
     public static void a(byte param0) {
         field_g = null;
-        field_i = null;
+        loggedInConnection = null;
         if (param0 != -32) {
           MenuButton.a((byte) 49);
         }
@@ -267,7 +267,7 @@ final class MenuButton {
     }
 
     static {
-        field_i = new n();
+        loggedInConnection = new ConnectionPhase();
         field_g = "Names cannot start or end with space or underscore";
     }
 }

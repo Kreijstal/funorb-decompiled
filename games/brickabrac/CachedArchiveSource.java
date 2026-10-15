@@ -3,7 +3,7 @@
  */
 final class CachedArchiveSource extends ArchiveSource {
     static int[] field_t;
-    static TextFont field_y;
+    static TextFont chatFont;
     private FileCacheStore groupCache;
     private ArchiveFetchClient fetchClient;
     private byte[] expectedIndexDigest;
@@ -574,7 +574,7 @@ final class CachedArchiveSource extends ArchiveSource {
     }
 
     public static void c(byte param0) {
-        field_y = null;
+        chatFont = null;
         field_t = null;
         if (param0 != 56) {
           field_r = 120;

@@ -23,15 +23,15 @@ abstract class MatchResultScreen extends MenuScreen {
         int var4Lifetime1;
         int var5Lifetime1;
         var9 = BrickABrac.field_J ? 1 : 0;
-        if (sj.field_c == null) {
+        if (ChatLobbyUiHelpers.field_c == null) {
           return;
         }
         var2 = 1;
         var3 = ContextActionController.field_g.measureText(ArrayWidgetGroup.buttonLabels[this.buttons[0].actionId]);
         if (this.isButtonEnabled((byte) 110, 1)) {
           var2++;
-          for (var4 = 0; var4 < sj.field_c.length; var4++) {
-            var5 = ContextActionController.field_g.measureText(sj.field_c[var4]);
+          for (var4 = 0; var4 < ChatLobbyUiHelpers.field_c.length; var4++) {
+            var5 = ContextActionController.field_g.measureText(ChatLobbyUiHelpers.field_c[var4]);
             if (var5 > var3) {
               var3 = var5;
             }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mc {
-    static n field_e;
+    static ConnectionPhase connectionFailed;
     static RgbSprite volcanicSmallSprite;
     static int field_d;
     static String field_b;
@@ -12,7 +12,7 @@ final class mc {
     public static void a(int param0) {
         volcanicSmallSprite = null;
         field_a = null;
-        field_e = null;
+        connectionFailed = null;
         if (param0 > -46) {
           mc.a((byte) -35);
           field_b = null;
@@ -27,7 +27,7 @@ final class mc {
     }
 
     static {
-        field_e = new n();
+        connectionFailed = new ConnectionPhase();
         sortedFaceCount = 0;
         field_a = "On";
         field_b = "Accept <%0> into this game";

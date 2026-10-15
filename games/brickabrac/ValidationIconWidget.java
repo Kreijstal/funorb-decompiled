@@ -252,7 +252,7 @@ final class ValidationIconWidget extends FocusableWidget {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (rf.field_b == BitPacketBuffer.field_u) {
+          if (rf.connectionPhase == BitPacketBuffer.readyToSendHandshake) {
             TextFieldValidator.outgoingPackets.position = 0;
             AchievementBrowserScreen.field_r = null;
             if (param0 != null) {
@@ -307,15 +307,15 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
             ActivityIndicatorWidget.a(-1, 10000);
-            rf.field_b = DiagnosticTextLine.field_k;
+            rf.connectionPhase = DiagnosticTextLine.awaitingValidationReply;
           }
-          if (DiagnosticTextLine.field_k == rf.field_b &&
+          if (DiagnosticTextLine.awaitingValidationReply == rf.connectionPhase &&
             vd.ensureGamePacketBytes(20, 1)) {
             var9Lifetime1 = jl.incomingPackets.readUnsignedByte(255);
             jl.incomingPackets.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              rf.field_b = o.field_g;
+              rf.connectionPhase = o.awaitingValidationStrings;
               ArchiveSourceManager.field_f = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
@@ -332,12 +332,12 @@ final class ValidationIconWidget extends FocusableWidget {
                 jl.incomingPackets.position = 0;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
-                rf.field_b = SocialTabbedPanel.field_e;
+                rf.connectionPhase = SocialTabbedPanel.awaitingValidationBody;
                 ga.incomingPacketLength = -1;
               }
             }
           }
-          if (rf.field_b == o.field_g) {
+          if (rf.connectionPhase == o.awaitingValidationStrings) {
             var9Lifetime2 = 2;
             if (vd.ensureGamePacketBytes(20, var9Lifetime2)) {
               var10Lifetime1 = jl.incomingPackets.readUnsignedShort(65280);
@@ -354,7 +354,7 @@ final class ValidationIconWidget extends FocusableWidget {
               }
             }
           }
-          if (SocialTabbedPanel.field_e == rf.field_b &&
+          if (SocialTabbedPanel.awaitingValidationBody == rf.connectionPhase &&
             TextWidgetRenderer.ensureGamePacketBody((byte) -92)) {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
               var9_ref_String = jl.incomingPackets.readNullableCp1252String(param6 - 4);

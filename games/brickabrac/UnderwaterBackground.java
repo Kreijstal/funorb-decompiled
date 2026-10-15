@@ -18,7 +18,7 @@ final class UnderwaterBackground extends BackgroundScene {
           if (null == LoginPanel.waterMidSprite) {
             return false;
           }
-          if (null == n.waterFarSprite) {
+          if (null == ConnectionPhase.waterFarSprite) {
             return false;
           }
           if (null == TableNameEntry.waterSmallSprite) {
@@ -38,7 +38,7 @@ final class UnderwaterBackground extends BackgroundScene {
         if (null == LoginPanel.waterMidSprite) {
           return false;
         }
-        if (null == n.waterFarSprite) {
+        if (null == ConnectionPhase.waterFarSprite) {
           return false;
         }
         if (null == TableNameEntry.waterSmallSprite) {
@@ -61,22 +61,22 @@ final class UnderwaterBackground extends BackgroundScene {
           ResourceArchiveFactory.waterRaysSprite = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.field_m);
           wm.waterNearSprite = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.field_m);
           LoginPanel.waterMidSprite = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
-          n.waterFarSprite = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.field_m);
+          ConnectionPhase.waterFarSprite = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.field_m);
           TableNameEntry.waterSmallSprite = pl.loadRgbSpriteByName("water", "water_small", (byte) 112, AchievementIcon.field_m);
           ConstructionBackground.waterCharacterSprite = pl.loadRgbSpriteByName("water", "water_character", (byte) -43, AchievementIcon.field_m);
-          SocialTabbedPanel.field_b = new RgbSprite(n.waterFarSprite.canvasWidth, n.waterFarSprite.canvasHeight);
+          SocialTabbedPanel.field_b = new RgbSprite(ConnectionPhase.waterFarSprite.canvasWidth, ConnectionPhase.waterFarSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-49, SocialTabbedPanel.field_b);
-          n.waterFarSprite.g(0, 0);
+          ConnectionPhase.waterFarSprite.g(0, 0);
           sc.popRaster(-81);
           WeightedLruCache.field_e = jh.a(0, wm.waterNearSprite);
           GameplayScreen.field_l = jh.a(0, LoginPanel.waterMidSprite);
-          BufferedFile.field_a = jh.a(0, n.waterFarSprite);
+          BufferedFile.field_a = jh.a(0, ConnectionPhase.waterFarSprite);
           Under13RegistrationNoticePanel.field_P = jh.a(0, SocialTabbedPanel.field_b);
           uo.field_d = new RgbSprite(ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-83, uo.field_d);
           ResourceArchiveFactory.waterRaysSprite.a(0, 0, ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           sc.popRaster(-114);
-          pl.a(n.waterFarSprite, 0);
+          pl.a(ConnectionPhase.waterFarSprite, 0);
           pl.a(SocialTabbedPanel.field_b, 0);
           pl.a(BufferedFile.field_a, 0);
           pl.a(Under13RegistrationNoticePanel.field_P, 0);
@@ -156,7 +156,7 @@ final class UnderwaterBackground extends BackgroundScene {
           }
           var7 = PowerUp.a(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            hh.a(n.waterFarSprite, 0, 1, var7, -8562, colorIndex, SocialTabbedPanel.field_b);
+            hh.a(ConnectionPhase.waterFarSprite, 0, 1, var7, -8562, colorIndex, SocialTabbedPanel.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           BubbleDistortion.a(scroll16, wm.waterNearSprite, var7.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
@@ -168,7 +168,7 @@ final class UnderwaterBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = PowerUp.a(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          hh.a(n.waterFarSprite, 0, 1, var8, -8562, colorIndex, SocialTabbedPanel.field_b);
+          hh.a(ConnectionPhase.waterFarSprite, 0, 1, var8, -8562, colorIndex, SocialTabbedPanel.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         BubbleDistortion.a(scroll16, wm.waterNearSprite, var8.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);

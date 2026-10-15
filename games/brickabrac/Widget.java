@@ -609,9 +609,9 @@ class Widget extends IntrusiveNode {
 
     final static void a(PlatformServices param0, byte param1, java.awt.Canvas param2) {
         try {
-          sj.field_f = new MidiSynthesizer();
-          sj.field_f.b(0, 9, 128);
-          tq.a(22050, true, sj.field_f, param0, 1024, (java.awt.Component) ((Object) param2));
+          ChatLobbyUiHelpers.field_f = new MidiSynthesizer();
+          ChatLobbyUiHelpers.field_f.b(0, 9, 128);
+          tq.a(22050, true, ChatLobbyUiHelpers.field_f, param0, 1024, (java.awt.Component) ((Object) param2));
           if (param1 != 60) {
             field_y = (int[]) null;
           }

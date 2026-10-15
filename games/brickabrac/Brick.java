@@ -17,7 +17,7 @@ final class Brick extends RectangleBody {
     int motionElapsedTicks;
     private int pathDurationTicks;
     static RgbSprite[][] chocCapsSprites;
-    static int field_E;
+    static int unreadChatMessageCount;
     static CacheIoWorker field_x;
     static byte[] field_O;
     static UiComponent field_A;

@@ -16,7 +16,7 @@ final class AchievementIcon extends IntrusiveNode {
     static String field_o;
     private boolean thumbnailIsPlaceholder;
     static int field_j;
-    static ScrollPane field_q;
+    static ScrollPane chatHistoryPane;
     int y;
 
     final static void drawRankingRow(int losses, int baselineY, String name, int wins, int rating, int textStyle, int winsShadowColor, int draws, int rankIndex) {
@@ -48,13 +48,13 @@ final class AchievementIcon extends IntrusiveNode {
         field_m = null;
         if (param0 == 0) {
           field_l = null;
-          field_q = null;
+          chatHistoryPane = null;
           return;
         }
         String var2 = (String) null;
         AchievementIcon.a(110, 111, (String) null);
         field_l = null;
-        field_q = null;
+        chatHistoryPane = null;
     }
 
     final static byte[] decompressArchiveContainer(boolean obfuscationGuard, byte[] data) {

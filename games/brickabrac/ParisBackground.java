@@ -236,11 +236,11 @@ final class ParisBackground extends BackgroundScene {
         var20 = BrickABrac.field_J ? 1 : 0;
         try {
           QuickChatParameterType.field_d = param9;
-          sj.field_a = param6;
+          ChatLobbyUiHelpers.chatMessageStyle = param6;
           BackgroundScene.field_i[0] = 16764000;
           BackgroundScene.field_i[3] = 16736511;
           BackgroundScene.field_i[1] = 6356832;
-          CachedArchiveSource.field_y = param1;
+          CachedArchiveSource.chatFont = param1;
           BackgroundScene.field_i[4] = 16711935;
           BackgroundScene.field_i[2] = 9474303;
           TextFieldRenderer.field_C[2] = 16736352;
@@ -267,12 +267,12 @@ final class ParisBackground extends BackgroundScene {
           DualLinkDeque.field_d.addChild(sh.field_d, 0);
           var17 = new UiComponent(0L, (UiComponent) null);
           var17.children = new NodeDeque();
-          AchievementIcon.field_q = new ScrollPane(0L, var17, param5, param10);
-          sh.field_d.addChild(AchievementIcon.field_q, param8 - 61);
+          AchievementIcon.chatHistoryPane = new ScrollPane(0L, var17, param5, param10);
+          sh.field_d.addChild(AchievementIcon.chatHistoryPane, param8 - 61);
           BallPulseEffect.field_n = new UiComponent(0L, param3);
           sh.field_d.addChild(BallPulseEffect.field_n, 0);
           PasswordValidator.field_n = new UiComponent(0L, param7);
-          PasswordValidator.field_n.font = CachedArchiveSource.field_y;
+          PasswordValidator.field_n.font = CachedArchiveSource.chatFont;
           BallPulseEffect.field_n.addChild(PasswordValidator.field_n, 0);
           BallPulseEffect.field_n.markDescendantsToInheritVisualState(true);
           ap.field_e = new UiComponent(0L, (UiComponent) null);
@@ -308,10 +308,10 @@ final class ParisBackground extends BackgroundScene {
               }
               if (decompiledFrameRemainder0) {
                 IntrusiveHashIterator.field_i[var18] = new UiComponent(0L, param11);
-                HalloweenBackground.field_w[var18] = new UiComponent(0L, sj.field_a, var19);
+                HalloweenBackground.field_w[var18] = new UiComponent(0L, ChatLobbyUiHelpers.chatMessageStyle, var19);
                 SocialTabbedPanel.field_a[var18] = new UiComponent(0L, (UiComponent) null);
                 SocialTabbedPanel.field_a[var18].verticalAlignment = 1;
-                QuickChatPhraseDefinition.field_F[var18] = new UiComponent(0L, sj.field_a);
+                QuickChatPhraseDefinition.field_F[var18] = new UiComponent(0L, ChatLobbyUiHelpers.chatMessageStyle);
                 QuickChatPhraseDefinition.field_F[var18].verticalAlignment = 1;
                 IntrusiveHashIterator.field_i[var18].addChild(HalloweenBackground.field_w[var18], 0);
                 IntrusiveHashIterator.field_i[var18].addChild(SocialTabbedPanel.field_a[var18], 0);

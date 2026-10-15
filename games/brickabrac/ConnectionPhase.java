@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n {
+final class ConnectionPhase {
     static boolean field_e;
     static RgbSprite waterFarSprite;
     static boolean field_d;
@@ -101,7 +101,7 @@ final class n {
         int var5 = BrickABrac.field_J ? 1 : 0;
         int var1 = jh.decodedSpriteWidths[0] * TextHotspotRegion.decodedSpriteHeights[0];
         if (obfuscationGuard != 21) {
-          n.b(-24);
+          ConnectionPhase.b(-24);
         }
         byte[] var2 = GameOverlayHelpers.decodedSpriteIndices[0];
         int[] var3 = new int[var1];
@@ -113,13 +113,13 @@ final class n {
         return var4;
     }
 
-    final boolean c(int param0) {
-        boolean stackIn_8_0 = false;
-        if (param0 != -26774) {
+    final boolean allowsGameTransport(int obfuscationGuard) {
+        boolean phaseAllowsTransport = false;
+        if (obfuscationGuard != -26774) {
           return true;
         }
-        stackIn_8_0 = (this == rq.field_c) || (this == IsaacGenerator.field_g) || (this == MenuButton.field_i);
-        return stackIn_8_0;
+        phaseAllowsTransport = (this == rq.awaitingLoginReply) || (this == IsaacGenerator.awaitingLoginSuccessBody) || (this == MenuButton.loggedInConnection);
+        return phaseAllowsTransport;
     }
 
     public static void b(int param0) {
@@ -131,86 +131,86 @@ final class n {
         field_b = null;
     }
 
-    final static void a(int param0, boolean param1, boolean param2, byte param3) {
-        int stackIn_13_0 = 0;
-        UiComponent stackIn_28_0 = null;
-        String stackIn_29_1 = null;
-        UiComponent stackIn_31_0 = null;
-        String stackIn_32_1 = null;
-        String stackIn_61_0 = null;
-        UiComponent stackIn_73_0 = null;
-        boolean stackIn_74_1 = false;
-        UiComponent stackIn_78_0 = null;
-        boolean stackIn_79_1 = false;
-        UiComponent stackIn_83_0 = null;
-        boolean stackIn_84_1 = false;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        UiComponent var5 = null;
-        UiComponent var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        Object var9 = null;
-        int var10 = 0;
-        int var11_int = 0;
-        Object var11 = null;
-        String var11_ref = null;
-        int var12 = 0;
-        int var13 = 0;
-        UiComponent var15 = null;
-        String var16 = null;
-        UiComponent var17 = null;
-        Object var11Lifetime1;
-        int var9_intLifetime1;
-        int var10Lifetime1;
-        var12 = BrickABrac.field_J ? 1 : 0;
+    final static void updateOpponentSearchControls(int gameActionOpcode, boolean inputEnabled, boolean suppressInput, byte obfuscationGuard) {
+        int choiceSelectedValue = 0;
+        UiComponent searchButtonForText = null;
+        String searchButtonCaption = null;
+        UiComponent messagePanelForText = null;
+        String messagePanelCaption = null;
+        String searchStatusCaption = null;
+        UiComponent lobbyRoot = null;
+        boolean lobbyInputEnabled = false;
+        UiComponent gameRoot = null;
+        boolean gameInputEnabled = false;
+        UiComponent requestsRoot = null;
+        boolean requestsInputEnabled = false;
+        RuntimeException caughtFailure = null;
+        RuntimeException updateFailure = null;
+        UiComponent searchButtonForCollapse = null;
+        UiComponent statusLabelForCollapse = null;
+        int buttonSplitX = 0;
+        int alternateSearchCaption = 0;
+        int selectedChoiceCount = 0;
+        Object statusOrRestrictionDetails = null;
+        int choiceIndexOrCaptionWidth = 0;
+        int choiceSelected = 0;
+        Object restrictionDetailsAlias = null;
+        String highlightedSettingName = null;
+        int clientBranchFlag = 0;
+        int settingIndex = 0;
+        UiComponent requestsButtonForCollapse = null;
+        String searchStatusText = null;
+        UiComponent requestsButtonAlias = null;
+        Object restrictionDetailsCopy;
+        int firstSettingIndex;
+        int settingCursorOrCaptionWidth;
+        clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param3 != -76) {
+          if (obfuscationGuard != -76) {
             return;
           }
           ArchiveSourceManager.layoutLobbyTransition(IntArrayRequest.field_j, false);
           if (nl.pendingLobbyGame != null) {
-            var15 = RadialSelectorRenderer.field_h;
-            var17 = var15;
+            requestsButtonForCollapse = RadialSelectorRenderer.field_h;
+            requestsButtonAlias = requestsButtonForCollapse;
             RadialSelectorRenderer.field_h.height = 0;
-            var17.width = 0;
-            var5 = DraggableWidget.field_K;
+            requestsButtonAlias.width = 0;
+            searchButtonForCollapse = DraggableWidget.field_K;
             DraggableWidget.field_K.height = 0;
-            var5.width = 0;
-            var6 = AppletGameShell.field_e;
+            searchButtonForCollapse.width = 0;
+            statusLabelForCollapse = AppletGameShell.field_e;
             AppletGameShell.field_e.height = 0;
-            var6.width = 0;
+            statusLabelForCollapse.width = 0;
             ba.field_v.text = DelayedPacket.field_n.toUpperCase();
-            var7 = (MultiplayerMatch.field_d.width + 2) / 2;
-            AppletGameShell.field_e.setBounds(40, -40 + MultiplayerMatch.field_d.height, 0, var7 - 2, (byte) 64);
-            DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, var7, MultiplayerMatch.field_d.width - var7, (byte) 64);
+            buttonSplitX = (MultiplayerMatch.field_d.width + 2) / 2;
+            AppletGameShell.field_e.setBounds(40, -40 + MultiplayerMatch.field_d.height, 0, buttonSplitX - 2, (byte) 64);
+            DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, buttonSplitX, MultiplayerMatch.field_d.width - buttonSplitX, (byte) 64);
             if (1 == ScreenshotViewer.field_n.length &&
               ScreenshotViewer.field_n[0] == 2) {
-              var8 = 0;
+              alternateSearchCaption = 0;
             } else {
-              var8 = 0;
-              var9_int = 0;
-              var10 = 0;
+              alternateSearchCaption = 0;
+              selectedChoiceCount = 0;
+              choiceIndexOrCaptionWidth = 0;
               while (true) {
-                if (var10 < ScreenshotViewer.field_n.length) {
-                  stackIn_13_0 = ((rh.matchmakingChoiceMask[var10 / 8] & 1 << (7 & var10)) == 0) ? 0 : 1;
-                  var11_int = stackIn_13_0;
-                  if (var11_int != 0) {
-                    var9_int++;
+                if (choiceIndexOrCaptionWidth < ScreenshotViewer.field_n.length) {
+                  choiceSelectedValue = ((rh.matchmakingChoiceMask[choiceIndexOrCaptionWidth / 8] & 1 << (7 & choiceIndexOrCaptionWidth)) == 0) ? 0 : 1;
+                  choiceSelected = choiceSelectedValue;
+                  if (choiceSelected != 0) {
+                    selectedChoiceCount++;
                   }
-                  if (var11_int != 0 &&
-                    ScreenshotViewer.field_n[var10] != 2) {
-                    var8 = 1;
+                  if (choiceSelected != 0 &&
+                    ScreenshotViewer.field_n[choiceIndexOrCaptionWidth] != 2) {
+                    alternateSearchCaption = 1;
                   } else {
-                    var10++;
+                    choiceIndexOrCaptionWidth++;
                     continue;
                   }
                 }
-                if (var9_int != 0) {
+                if (selectedChoiceCount != 0) {
                   break;
                 }
-                var8 = 1;
+                alternateSearchCaption = 1;
                 break;
               }
             }
@@ -218,44 +218,44 @@ final class n {
             if (fh.pendingGameOptionsReceived) {
               GameUiController.field_e.enabled = false;
               t.field_f.text = TextChoiceDialogStyles.field_a;
-              if (var8 != 0) {
-                stackIn_61_0 = FireworkBurst.matchmakingStatusText;
+              if (alternateSearchCaption != 0) {
+                searchStatusCaption = FireworkBurst.matchmakingStatusText;
               } else {
-                stackIn_61_0 = MatchingTextValidator.field_l;
+                searchStatusCaption = MatchingTextValidator.field_l;
               }
-              var16 = stackIn_61_0;
-              var9 = var16;
-              var9 = var16;
-              var9 = var16;
-              var10Lifetime1 = AppletGameShell.field_e.font.measureText(var16) + AppletGameShell.field_e.font.getAdvance('.') * 3;
+              searchStatusText = searchStatusCaption;
+              statusOrRestrictionDetails = searchStatusText;
+              statusOrRestrictionDetails = searchStatusText;
+              statusOrRestrictionDetails = searchStatusText;
+              settingCursorOrCaptionWidth = AppletGameShell.field_e.font.measureText(searchStatusText) + AppletGameShell.field_e.font.getAdvance('.') * 3;
               AppletGameShell.field_e.horizontalAlignment = 0;
               if (16 == (BirthDateValidator.field_h & 48)) {
-                var9 = var16 + ".";
+                statusOrRestrictionDetails = searchStatusText + ".";
               }
-              AppletGameShell.field_e.textInset = (-var10Lifetime1 + AppletGameShell.field_e.width) / 2;
+              AppletGameShell.field_e.textInset = (-settingCursorOrCaptionWidth + AppletGameShell.field_e.width) / 2;
               if ((48 & BirthDateValidator.field_h) == 32) {
-                var9 = (String) (var9) + "..";
+                statusOrRestrictionDetails = (String) (statusOrRestrictionDetails) + "..";
               }
               if ((BirthDateValidator.field_h & 48) == 48) {
-                var9 = (String) (var9) + "...";
+                statusOrRestrictionDetails = (String) (statusOrRestrictionDetails) + "...";
               }
-              AppletGameShell.field_e.text = (String) (var9);
+              AppletGameShell.field_e.text = (String) (statusOrRestrictionDetails);
               DraggableWidget.field_K.text = ValidationIconWidget.field_L.toUpperCase();
             } else {
-              stackIn_28_0 = DraggableWidget.field_K;
-              if (var8 == 0) {
-                stackIn_29_1 = NewAchievementsScreen.field_F;
+              searchButtonForText = DraggableWidget.field_K;
+              if (alternateSearchCaption == 0) {
+                searchButtonCaption = NewAchievementsScreen.field_F;
               } else {
-                stackIn_29_1 = ArrayWidgetGroup.field_J;
+                searchButtonCaption = ArrayWidgetGroup.field_J;
               }
-              stackIn_28_0.text = ((String) (Object) stackIn_29_1).toUpperCase();
-              stackIn_31_0 = t.field_f;
-              if (var8 == 0) {
-                stackIn_32_1 = ResourceArchiveFactory.field_f;
+              searchButtonForText.text = ((String) (Object) searchButtonCaption).toUpperCase();
+              messagePanelForText = t.field_f;
+              if (alternateSearchCaption == 0) {
+                messagePanelCaption = ResourceArchiveFactory.field_f;
               } else {
-                stackIn_32_1 = LabeledWidget.field_G;
+                messagePanelCaption = LabeledWidget.field_G;
               }
-              stackIn_31_0.text = rd.a(stackIn_32_1, new String[]{DraggableWidget.field_K.text}, (byte) 103);
+              messagePanelForText.text = rd.a(messagePanelCaption, new String[]{DraggableWidget.field_K.text}, (byte) 103);
               MeshAttributeRecord.field_g = true;
               AppletGameShell.field_e.text = SocialListEntry.field_Pb;
               GameUiController.field_e.enabled = true;
@@ -266,11 +266,11 @@ final class n {
                 }
                 MusicVoiceMixer.field_s = false;
                 MeshAttributeRecord.field_g = false;
-                var13 = 0;
-                var9_intLifetime1 = var13;
-                while (RankingsRequest.gameSettingCount > var13) {
-                  SingleChildWidget.field_D[var13] = false;
-                  var13++;
+                settingIndex = 0;
+                firstSettingIndex = settingIndex;
+                while (RankingsRequest.gameSettingCount > settingIndex) {
+                  SingleChildWidget.field_D[settingIndex] = false;
+                  settingIndex++;
                 }
                 ar.a(true, nl.pendingLobbyGame, -1, -1, -1, 0, RankingsRequest.gameSettingCount, 0);
                 if (!(QuickChatHelpDialog.field_Yb < 2) &&
@@ -281,59 +281,59 @@ final class n {
               if (!MeshAttributeRecord.field_g) {
                 DraggableWidget.field_K.enabled = false;
                 if (DraggableWidget.field_K.hovered) {
-                  var9 = null;
+                  statusOrRestrictionDetails = null;
                   if (MusicVoiceMixer.field_s) {
-                    var9 = "<col=A00000>" + QuickChatMenu.field_ac + "</col>";
-                    var11 = var9;
-                    var9 = var11;
-                    var11Lifetime1 = var9;
-                    var9 = var11Lifetime1;
+                    statusOrRestrictionDetails = "<col=A00000>" + QuickChatMenu.field_ac + "</col>";
+                    restrictionDetailsAlias = statusOrRestrictionDetails;
+                    statusOrRestrictionDetails = restrictionDetailsAlias;
+                    restrictionDetailsCopy = statusOrRestrictionDetails;
+                    statusOrRestrictionDetails = restrictionDetailsCopy;
                   }
-                  for (var10Lifetime1 = 0; var10Lifetime1 < RankingsRequest.gameSettingCount; var10Lifetime1++) {
-                    if (SingleChildWidget.field_D[var10Lifetime1]) {
-                      var11_ref = "<col=A00000>" + QuickChatPhraseRegistry.field_b[var10Lifetime1] + "</col>";
-                      var9 = var11_ref;
-                      var9 = var11_ref;
-                      if (var9 == null) {
-                        var9 = var11_ref;
+                  for (settingCursorOrCaptionWidth = 0; settingCursorOrCaptionWidth < RankingsRequest.gameSettingCount; settingCursorOrCaptionWidth++) {
+                    if (SingleChildWidget.field_D[settingCursorOrCaptionWidth]) {
+                      highlightedSettingName = "<col=A00000>" + QuickChatPhraseRegistry.field_b[settingCursorOrCaptionWidth] + "</col>";
+                      statusOrRestrictionDetails = highlightedSettingName;
+                      statusOrRestrictionDetails = highlightedSettingName;
+                      if (statusOrRestrictionDetails == null) {
+                        statusOrRestrictionDetails = highlightedSettingName;
                       } else {
-                        var9 = (String) (var9) + ", " + var11_ref;
+                        statusOrRestrictionDetails = (String) (statusOrRestrictionDetails) + ", " + highlightedSettingName;
                       }
                     }
                   }
-                  WidgetTextLayout.field_e = "<col=A00000>" + RadialSelectorRenderer.field_a + "<br>" + AchievementsScreen.field_G + (String) (var9);
+                  WidgetTextLayout.field_e = "<col=A00000>" + RadialSelectorRenderer.field_a + "<br>" + AchievementsScreen.field_G + (String) (statusOrRestrictionDetails);
                 }
               }
             }
           }
-          stackIn_73_0 = NinjaBackground.field_w;
-          stackIn_74_1 = (param1) && (!param2) && (!hc.joinRequestsPanelOpen);
-          ((UiComponent) (Object) stackIn_73_0).updateRoot(stackIn_74_1, -15211);
-          stackIn_78_0 = MultiplayerMatch.field_d;
-          stackIn_79_1 = (param1) && (!param2) && (!hc.joinRequestsPanelOpen);
-          ((UiComponent) (Object) stackIn_78_0).updateRoot(stackIn_79_1, -15211);
-          stackIn_83_0 = ProxySocketConnector.field_j;
-          stackIn_84_1 = (param1) && (!param2) && (hc.joinRequestsPanelOpen);
-          ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
+          lobbyRoot = NinjaBackground.field_w;
+          lobbyInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);
+          ((UiComponent) (Object) lobbyRoot).updateRoot(lobbyInputEnabled, -15211);
+          gameRoot = MultiplayerMatch.field_d;
+          gameInputEnabled = (inputEnabled) && (!suppressInput) && (!hc.joinRequestsPanelOpen);
+          ((UiComponent) (Object) gameRoot).updateRoot(gameInputEnabled, -15211);
+          requestsRoot = ProxySocketConnector.field_j;
+          requestsInputEnabled = (inputEnabled) && (!suppressInput) && (hc.joinRequestsPanelOpen);
+          ((UiComponent) (Object) requestsRoot).updateRoot(requestsInputEnabled, -15211);
           BrickGameLayerController.field_c.tabs.processTabPresses(0);
           if (nl.pendingLobbyGame != null) {
             if (GameUiController.field_e.pressedButton != 0) {
-              ProxyAuthenticationRequiredException.requestReturnToLobby(-22809, param0);
+              ProxyAuthenticationRequiredException.requestReturnToLobby(-22809, gameActionOpcode);
             }
             if (DraggableWidget.field_K.pressedButton != 0) {
               if (!fh.pendingGameOptionsReceived) {
-                UnderwaterBackground.requestFindOpponents(param0, (byte) 98);
+                UnderwaterBackground.requestFindOpponents(gameActionOpcode, (byte) 98);
               } else {
-                TextWidgetRenderer.requestCancelOpponentSearch(param3 + 276, param0);
+                TextWidgetRenderer.requestCancelOpponentSearch(obfuscationGuard + 276, gameActionOpcode);
               }
             }
-            JungleBackground.a(param0, nl.pendingLobbyGame, true, false);
+            JungleBackground.a(gameActionOpcode, nl.pendingLobbyGame, true, false);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var4), "n.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        } catch (java.lang.RuntimeException caughtUpdateFailure) {
+          caughtFailure = caughtUpdateFailure;
+          updateFailure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) updateFailure), "n.D(" + gameActionOpcode + ',' + inputEnabled + ',' + suppressInput + ',' + obfuscationGuard + ')');
         }
     }
 

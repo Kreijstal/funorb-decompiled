@@ -237,7 +237,7 @@ public final class BrickABrac extends InteractiveGameClient {
           }
           if (opcode == 10 &&
             MonotonicTime.field_c) {
-            sj.handleLobbyResponse((byte) 33);
+            ChatLobbyUiHelpers.handleLobbyResponse((byte) 33);
             return true;
           }
           if (opcode == 72) {
@@ -318,7 +318,7 @@ public final class BrickABrac extends InteractiveGameClient {
                 IntArrayRequest.gameplayScreen.showPostMatchScreen(false, (byte) 69);
                 NewAchievementsScreen.discardGameplayOnTransition = true;
                 RadialSelectorRenderer.field_p = true;
-                Brick.field_E = 0;
+                Brick.unreadChatMessageCount = 0;
                 ng.requestScreen(false, 125, -2);
               }
               ed.field_d = false;
@@ -578,7 +578,7 @@ public final class BrickABrac extends InteractiveGameClient {
         GameConnectionShell.k(-113);
         nk.a((byte) 121);
         TextChoiceDialogHitTest.b(-789103103);
-        sj.a(11);
+        ChatLobbyUiHelpers.a(11);
         pp.a(0);
         jd.a(0);
         wc.a(100);
@@ -600,7 +600,7 @@ public final class BrickABrac extends InteractiveGameClient {
         wm.a(108);
         PacketBuffer.clearStaticStrings(0);
         FriendListUi.c((byte) -41);
-        vg.b(13);
+        GameTransportActions.b(13);
         rd.a((byte) 46);
         GameOverlayHelpers.a(117);
         ChatMessage.a(0);
@@ -859,7 +859,7 @@ public final class BrickABrac extends InteractiveGameClient {
         MatchCompleteScreen.f((byte) -112);
         MultiplayerExitScreen.i(61);
         EmailAvailabilityRequest.c(0);
-        n.b(-2);
+        ConnectionPhase.b(-2);
         DelayedPacket.a(-128);
         IntArrayRequest.a(112);
         LevelResultSubmission.a(-17432);

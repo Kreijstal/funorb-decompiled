@@ -6,7 +6,7 @@ final class IsaacGenerator {
     private int accumulator;
     private int[] results;
     private int remaining;
-    static n field_g;
+    static ConnectionPhase awaitingLoginSuccessBody;
     private int blockCounter;
     static int ignoreCount;
     private int[] memory;
@@ -235,7 +235,7 @@ final class IsaacGenerator {
           return;
         }
         field_b = null;
-        field_g = null;
+        awaitingLoginSuccessBody = null;
         field_a = null;
     }
 
@@ -254,7 +254,7 @@ final class IsaacGenerator {
     }
 
     static {
-        field_g = new n();
+        awaitingLoginSuccessBody = new ConnectionPhase();
         PlayerNameChooserPanel.a(150, 50);
     }
 }

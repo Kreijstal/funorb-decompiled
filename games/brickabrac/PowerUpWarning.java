@@ -154,7 +154,7 @@ final class PowerUpWarning extends IntrusiveNode {
             TextFieldRenderer.field_x = message.channel;
             ResourceRequest.field_z = message.suggestedPhraseIds;
           }
-          n.appendChatHistory(0, message);
+          ConnectionPhase.appendChatHistory(0, message);
           var2_intLifetime1 = 85 / ((obfuscationGuard + 11) / 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

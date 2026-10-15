@@ -23,11 +23,11 @@ final class ToggleButtonWidget extends FocusableWidget {
             String var5 = (String) null;
             ToggleButtonWidget.a((String) null, 67, -0.11976710706949234f, true);
           }
-          if (sj.loadingProgressDialog == null) {
-            sj.loadingProgressDialog = new LoadingProgressDialog(ResourceArchive.field_f, AppletGameShell.field_b);
-            ResourceArchive.field_f.pushLayer(param1 - 8287, sj.loadingProgressDialog);
+          if (ChatLobbyUiHelpers.loadingProgressDialog == null) {
+            ChatLobbyUiHelpers.loadingProgressDialog = new LoadingProgressDialog(ResourceArchive.field_f, AppletGameShell.field_b);
+            ResourceArchive.field_f.pushLayer(param1 - 8287, ChatLobbyUiHelpers.loadingProgressDialog);
           }
-          sj.loadingProgressDialog.setProgress(param2, param0, param3, (byte) 86);
+          ChatLobbyUiHelpers.loadingProgressDialog.setProgress(param2, param0, param3, (byte) 86);
           Rasterizer2D.clear();
           wc.a(true, -1);
         } catch (RuntimeException runtimeException) {

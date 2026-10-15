@@ -612,7 +612,7 @@ final class MusicVoice extends IntrusiveNode {
         String frameArgumentSummary = null;
         RuntimeException caughtFailure = null;
         try {
-          vg.textChoiceOuterFrame = frame;
+          GameTransportActions.textChoiceOuterFrame = frame;
           un.textChoiceOuterPaddingX = paddingX;
           Paddle.textChoiceOuterPaddingY = paddingY;
           if (obfuscationGuard >= -25) {

@@ -216,7 +216,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (!ui.a(false)) {
           return -1;
         }
-        if (n.field_e) {
+        if (ConnectionPhase.field_e) {
           return -1;
         }
         int var2 = SoundCache.a(LevelSelectScreen.d(true), true, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
@@ -236,7 +236,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         }
         FarmBackground.g(108);
         FullscreenFailureKind.a(DirectByteStorage.field_e, (byte) -61, var2);
-        n.field_e = true;
+        ConnectionPhase.field_e = true;
         NanoGameClock.field_i = MonotonicTime.nowMillis(false) + 15000L;
         return var2;
     }
@@ -371,7 +371,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                 }
               }
             } else {
-              n.field_e = false;
+              ConnectionPhase.field_e = false;
             }
           }
           if (4 == var4) {
@@ -728,7 +728,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             FarmBackground.g(120);
             FullscreenFailureKind.a(NinjaBackground.field_s, (byte) -113, 2);
             rj.b(guardCode ^ -111);
-            n.field_e = true;
+            ConnectionPhase.field_e = true;
             NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
           }
         }
@@ -770,7 +770,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                   FullscreenFailureKind.a(RadialSelectorWidget.field_M, (byte) -103, 256);
                 }
               }
-              n.field_e = true;
+              ConnectionPhase.field_e = true;
             }
           } else {
             if (tm.field_a != 3) {
@@ -796,7 +796,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           0 != tm.field_a ||
           ui.a(false)) &&
           NanoGameClock.field_i <= MonotonicTime.nowMillis(false)) {
-          n.field_e = false;
+          ConnectionPhase.field_e = false;
           if (tm.field_a != -1 &&
             0 != tm.field_a) {
             tm.field_a = -1;

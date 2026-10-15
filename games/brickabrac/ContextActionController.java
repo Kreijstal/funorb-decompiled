@@ -354,7 +354,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_entered_other_game", (byte) 62);
                 if (null != var2) {
-                  n.field_b = MenuButton.a(var2, (byte) 102);
+                  ConnectionPhase.field_b = MenuButton.a(var2, (byte) 102);
                 }
                 var2 = nk.a("mu_game_is_full", (byte) 60);
                 if (var2 != null) {
@@ -366,7 +366,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_you_declined_invite", (byte) -117);
                 if (var2 != null) {
-                  vg.field_b = MenuButton.a(var2, (byte) 76);
+                  GameTransportActions.field_b = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("mu_invite_withdrawn", (byte) 73);
                 if (var2 != null) {
@@ -386,7 +386,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_lobby_name", (byte) 3);
                 if (null != var2) {
-                  n.nameColumnHeadingText = MenuButton.a(var2, (byte) 87);
+                  ConnectionPhase.nameColumnHeadingText = MenuButton.a(var2, (byte) 87);
                 }
                 var2 = nk.a("mu_lobby_rating", (byte) -116);
                 if (var2 != null) {
@@ -498,7 +498,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rm_x_from_friends", (byte) -111);
                 if (var2 != null) {
-                  sj.field_g = MenuButton.a(var2, (byte) 120);
+                  ChatLobbyUiHelpers.field_g = MenuButton.a(var2, (byte) 120);
                 }
                 var2 = nk.a("rm_x_from_ignore", (byte) -127);
                 if (var2 != null) {
@@ -3251,7 +3251,7 @@ final class ContextActionController {
                   this.contextMenu.addAction(rd.a(GameOverlayHelpers.field_b, new String[]{caption}, (byte) 103), 19, (byte) 72);
                 }
               }
-              this.contextMenu.addAction(rd.a(sj.field_g, new String[]{caption}, (byte) 103), 5, (byte) 106);
+              this.contextMenu.addAction(rd.a(ChatLobbyUiHelpers.field_g, new String[]{caption}, (byte) 103), 5, (byte) 106);
             }
             if (ignoredPlayer != 0) {
               this.contextMenu.addAction(rd.a(UsernameSuggestionPanel.field_O, new String[]{caption}, (byte) 103), 7, (byte) 82);
@@ -3447,7 +3447,7 @@ final class ContextActionController {
             if (actionId != 1) {
               if (actionId != 2) {
                 if (3 == actionId) {
-                  vg.requestLeaveOrDeclineGame(this.gameId, false, opcode);
+                  GameTransportActions.requestLeaveOrDeclineGame(this.gameId, false, opcode);
                 }
                 if (3 != actionId ||
                   unusedGameFlag != 0) {

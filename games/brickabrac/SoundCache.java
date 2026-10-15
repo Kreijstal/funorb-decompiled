@@ -236,7 +236,7 @@ final class SoundCache {
               stackIn_5_0 = -1;
               return stackIn_5_0;
             }
-            if (BitPacketBuffer.field_u == rf.field_b) {
+            if (BitPacketBuffer.readyToSendHandshake == rf.connectionPhase) {
               if (param1) {
                 var10 = (String) null;
                 NanoGameClock.field_s = AccountIntroductionPanel.createLoginCredentials(CacheEntry.field_v, 20, false, param5, (String) null);
@@ -247,29 +247,29 @@ final class SoundCache {
               TextFieldValidator.outgoingPackets.writeByte(28, 14);
               TextFieldValidator.outgoingPackets.writeByte(107, NanoGameClock.field_s.getCredentialKind(13).wireCode);
               ActivityIndicatorWidget.a(-1, 10000);
-              rf.field_b = GameScreen.field_c;
+              rf.connectionPhase = GameScreen.awaitingLoginPreludeReply;
             }
-            if (rf.field_b == GameScreen.field_c &&
+            if (rf.connectionPhase == GameScreen.awaitingLoginPreludeReply &&
               vd.ensureGamePacketBytes(20, 1)) {
               var6_int = jl.incomingPackets.readUnsignedByte(255);
               jl.incomingPackets.position = 0;
               if (var6_int == 0) {
-                rf.field_b = MeshAttributeRecord.field_f;
+                rf.connectionPhase = MeshAttributeRecord.awaitingLoginSeed;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var6_int;
                 ga.incomingPacketLength = -1;
-                rf.field_b = MenuScreen.field_k;
+                rf.connectionPhase = MenuScreen.awaitingLoginErrorBody;
               }
             }
-            if (rf.field_b == MeshAttributeRecord.field_f &&
+            if (rf.connectionPhase == MeshAttributeRecord.awaitingLoginSeed &&
               vd.ensureGamePacketBytes(20, 8)) {
               PopupWidgetLayer.field_ab = jl.incomingPackets.readLong(-32768);
               jl.incomingPackets.position = 0;
               SocialListEntry.a(param4, NanoGameClock.field_s, param1, param3, false);
-              rf.field_b = rq.field_c;
+              rf.connectionPhase = rq.awaitingLoginReply;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (rf.field_b == rq.field_c &&
+            if (rf.connectionPhase == rq.awaitingLoginReply &&
               vd.ensureGamePacketBytes(20, 1)) {
               var6_intLifetime1 = jl.incomingPackets.readUnsignedByte(255);
               ParisBackground.field_t = null;
@@ -279,7 +279,7 @@ final class SoundCache {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   ga.incomingPacketLength = -1;
-                  rf.field_b = MenuScreen.field_k;
+                  rf.connectionPhase = MenuScreen.awaitingLoginErrorBody;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -291,10 +291,10 @@ final class SoundCache {
               }
               if (decompiledFrameRemainder0) {
                 ga.incomingPacketLength = -1;
-                rf.field_b = IsaacGenerator.field_g;
+                rf.connectionPhase = IsaacGenerator.awaitingLoginSuccessBody;
               }
             }
-            if (rf.field_b == IsaacGenerator.field_g &&
+            if (rf.connectionPhase == IsaacGenerator.awaitingLoginSuccessBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -80)) {
               CacheEntry.field_v = jl.incomingPackets.readLong(-32768);
               gd.field_b = param5;
@@ -304,7 +304,7 @@ final class SoundCache {
               var11 = jl.incomingPackets.readNullableCp1252String(0);
               var7 = jl.incomingPackets.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
-                n.a(-1);
+                ConnectionPhase.a(-1);
               }
               if (!param1) {
                 stackIn_41_0 = ((var7 & 2) != 0);
@@ -333,7 +333,7 @@ final class SoundCache {
               var12 = (CharSequence) ((Object) LoadingProgressDialog.field_cb);
               ArchiveFetchClient.localPlayerNameKey = ChatMessage.normalizePlayerName(var12, 65);
               OptionsScreen.field_x = jl.incomingPackets.readUnsignedByte(255);
-              rf.field_b = MenuButton.field_i;
+              rf.connectionPhase = MenuButton.loggedInConnection;
               if (NanoGameClock.field_s.getCredentialKind(13) == RadialSelectorWidget.emailLoginKind) {
                 EmailConfirmationValidator.field_k.persistLoginMethod(100, EmailConfirmationValidator.e((byte) -66));
               } else {
@@ -375,7 +375,7 @@ final class SoundCache {
             if (!param2) {
               field_h = 'ﾢ';
             }
-            if (rf.field_b == MenuScreen.field_k &&
+            if (rf.connectionPhase == MenuScreen.awaitingLoginErrorBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -41)) {
               hn.a((byte) 58);
               if (IntrusiveHashTable.currentPacketOpcode == 7 &&
@@ -442,7 +442,7 @@ final class SoundCache {
             SoundCache.a(100, 53);
           }
           var6 = new ChatMessage(channel, senderName, contextId, contextLabel, text);
-          n.appendChatHistory(0, var6);
+          ConnectionPhase.appendChatHistory(0, var6);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "wp.B(" + obfuscationGuard + ',' + contextId + ',' + (contextLabel != null ? "{...}" : "null") + ',' + (text != null ? "{...}" : "null") + ',' + (senderName != null ? "{...}" : "null") + ',' + channel + ')');
         }

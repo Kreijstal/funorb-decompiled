@@ -5,7 +5,7 @@ final class rq {
     static NodeDeque lobbyGames;
     static ScrollPaneWithFooter field_b;
     static String field_d;
-    static n field_c;
+    static ConnectionPhase awaitingLoginReply;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -13,19 +13,19 @@ final class rq {
           field_d = null;
           lobbyGames = null;
           field_b = null;
-          field_c = null;
+          awaitingLoginReply = null;
           return;
         }
         field_d = (String) null;
         field_d = null;
         lobbyGames = null;
         field_b = null;
-        field_c = null;
+        awaitingLoginReply = null;
     }
 
     static {
         field_z = "rq.A(";
         field_d = "This is your RuneScape clan if you have one.";
-        field_c = new n();
+        awaitingLoginReply = new ConnectionPhase();
     }
 }

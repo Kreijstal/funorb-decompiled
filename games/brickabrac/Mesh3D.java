@@ -73,12 +73,12 @@ final class Mesh3D {
           GameScreen.friendsListPane = new ScrollPaneWithFooter(0L, rq.field_b, LoginPanel.field_J, ChocolateBackground.field_y);
           f.ignoreListPane = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
           QuickChatPhraseRegistry.friendsPanel = new UiComponent(0L, (UiComponent) null);
-          sj.friendsStatusLabel = new UiComponent(0L, CappedUrlRequest.field_l);
-          sj.friendsStatusLabel.horizontalAlignment = 1;
-          MouseWheelSource.friendNameHeading = new UiComponent(0L, MainMenuScreen.field_t, n.nameColumnHeadingText);
+          ChatLobbyUiHelpers.friendsStatusLabel = new UiComponent(0L, CappedUrlRequest.field_l);
+          ChatLobbyUiHelpers.friendsStatusLabel.horizontalAlignment = 1;
+          MouseWheelSource.friendNameHeading = new UiComponent(0L, MainMenuScreen.field_t, ConnectionPhase.nameColumnHeadingText);
           GameplayScreen.friendLocationHeading = new UiComponent(0L, IntrusiveHashIterator.field_a, ArchiveSource.locationColumnHeadingText);
           BirthDateEntryPanel.field_R = new UiComponent(0L, DualLinkNode.field_t);
-          QuickChatPhraseRegistry.friendsPanel.addChild(sj.friendsStatusLabel, 0);
+          QuickChatPhraseRegistry.friendsPanel.addChild(ChatLobbyUiHelpers.friendsStatusLabel, 0);
           QuickChatPhraseRegistry.friendsPanel.addChild(MouseWheelSource.friendNameHeading, 0);
           QuickChatPhraseRegistry.friendsPanel.addChild(GameplayScreen.friendLocationHeading, 0);
           QuickChatPhraseRegistry.friendsPanel.addChild(GameScreen.friendsListPane, 0);

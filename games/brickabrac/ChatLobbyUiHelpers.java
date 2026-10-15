@@ -1,186 +1,186 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj {
+final class ChatLobbyUiHelpers {
     static String field_g;
     static MidiSynthesizer field_f;
     static String field_e;
-    static UiComponent field_a;
+    static UiComponent chatMessageStyle;
     static String[] field_c;
     static UiComponent friendsStatusLabel;
     static LoadingProgressDialog loadingProgressDialog;
 
-    final static ChatMessage a(int param0, int param1, int param2, int param3) {
-        Object stackIn_42_0 = null;
-        UiComponent stackIn_42_1 = null;
-        boolean stackIn_50_0 = false;
-        Object var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        ChatMessage var8_ref_gb;
-        int var9;
-        ChatMessage var9_ref_gb;
-        int var10_int;
-        String var10;
-        String var11;
-        int var12;
-        int var13;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        var13 = BrickABrac.field_J ? 1 : 0;
-        var4 = null;
-        AchievementIcon.field_q.content.children.clear((byte) -61);
-        var5 = 0;
-        var6 = 0;
-        for (var7 = -1 + ScrollPane.chatHistorySize; var7 >= 0; var7--) {
-          var8_ref_gb = UnderwaterBackground.chatHistory[var7];
-          var9 = 0;
+    final static ChatMessage rebuildChatHistoryRows(int rowX, int rowHeight, int obfuscationGuard, int wheelTurns) {
+        Object nullFocusMarker = null;
+        UiComponent chatFocusMarker = null;
+        boolean isPinned = false;
+        Object pressedMessage;
+        int visibleCount;
+        int rebuiltRowsHeight;
+        int reverseHistoryIndex;
+        int forwardHistoryIndex;
+        ChatMessage candidateMessage;
+        int visible;
+        ChatMessage displayedMessage;
+        int filterLevel;
+        String prefix;
+        String escapedText;
+        int messageColor;
+        int unusedClientFlag;
+        int nextRowY;
+        int heightDelta;
+        int bottomScrollY;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
+        pressedMessage = null;
+        AchievementIcon.chatHistoryPane.content.children.clear((byte) -61);
+        visibleCount = 0;
+        rebuiltRowsHeight = 0;
+        for (reverseHistoryIndex = -1 + ScrollPane.chatHistorySize; reverseHistoryIndex >= 0; reverseHistoryIndex--) {
+          candidateMessage = UnderwaterBackground.chatHistory[reverseHistoryIndex];
+          visible = 0;
           if (!TextWidgetRenderer.field_e &&
-            var5 < WidgetTheme.chatHistoryCategoryLimit) {
-            var10_int = tm.getChatFilter(var8_ref_gb.channel, (byte) 18);
-            if (var10_int <= var8_ref_gb.getRetentionCategory(true) && (var8_ref_gb.systemMessage ||
-              !AchievementBrowserScreen.isIgnoredPlayer(125, var8_ref_gb.senderName))) {
-              var9 = 1;
+            visibleCount < WidgetTheme.chatHistoryCategoryLimit) {
+            filterLevel = tm.getChatFilter(candidateMessage.channel, (byte) 18);
+            if (filterLevel <= candidateMessage.getRetentionCategory(true) && (candidateMessage.systemMessage ||
+              !AchievementBrowserScreen.isIgnoredPlayer(125, candidateMessage.senderName))) {
+              visible = 1;
             }
           }
-          if (var9 == 0) {
-            var8_ref_gb.component = null;
+          if (visible == 0) {
+            candidateMessage.component = null;
           } else {
-            var5++;
-            if (var8_ref_gb.component == null ||
+            visibleCount++;
+            if (candidateMessage.component == null ||
               LevelSequence.chatFiltersChanged) {
-              if (null == var8_ref_gb.component) {
-                Brick.field_E = Brick.field_E + 1;
+              if (null == candidateMessage.component) {
+                Brick.unreadChatMessageCount = Brick.unreadChatMessageCount + 1;
               }
-              var10 = IntNode.formatChatPrefix(var8_ref_gb, (byte) 91);
-              var11 = var10 + TextFont.escapeAngles(var8_ref_gb.text);
-              var12 = IntrusiveHashIterator.getChatMessageColor(-31126, var8_ref_gb);
-              var8_ref_gb.component = new UiComponent(0L, field_a, var11);
-              var8_ref_gb.component.capturedTextColor = var12 + (-((var12 & 16711422) >> 1) + (field_a.capturedTextColor >> 1 & 8355711));
-              var8_ref_gb.component.activeTextColor = (field_a.activeTextColor >> 1 & 8355711) - (8355711 & var12 >> 1) + var12;
-              var8_ref_gb.component.textColor = var12;
-              var8_ref_gb.component.font = CachedArchiveSource.field_y;
-              var6 = var6 + param1;
+              prefix = IntNode.formatChatPrefix(candidateMessage, (byte) 91);
+              escapedText = prefix + TextFont.escapeAngles(candidateMessage.text);
+              messageColor = IntrusiveHashIterator.getChatMessageColor(-31126, candidateMessage);
+              candidateMessage.component = new UiComponent(0L, chatMessageStyle, escapedText);
+              candidateMessage.component.capturedTextColor = messageColor + (-((messageColor & 16711422) >> 1) + (chatMessageStyle.capturedTextColor >> 1 & 8355711));
+              candidateMessage.component.activeTextColor = (chatMessageStyle.activeTextColor >> 1 & 8355711) - (8355711 & messageColor >> 1) + messageColor;
+              candidateMessage.component.textColor = messageColor;
+              candidateMessage.component.font = CachedArchiveSource.chatFont;
+              rebuiltRowsHeight = rebuiltRowsHeight + rowHeight;
             }
           }
         }
-        var7Lifetime1 = 0;
-        for (var8 = 0; ScrollPane.chatHistorySize > var8; var8++) {
-          var9_ref_gb = UnderwaterBackground.chatHistory[var8];
-          if (null != var9_ref_gb.component) {
-            AchievementIcon.field_q.content.addChild(var9_ref_gb.component, 0);
-            var9_ref_gb.component.setBounds(param1, var7Lifetime1, param0, var9_ref_gb.component.getContentWidth(87), (byte) 64);
-            if (var9_ref_gb.component.pressedButton != 0) {
-              var4 = var9_ref_gb;
+        nextRowY = 0;
+        for (forwardHistoryIndex = 0; ScrollPane.chatHistorySize > forwardHistoryIndex; forwardHistoryIndex++) {
+          displayedMessage = UnderwaterBackground.chatHistory[forwardHistoryIndex];
+          if (null != displayedMessage.component) {
+            AchievementIcon.chatHistoryPane.content.addChild(displayedMessage.component, 0);
+            displayedMessage.component.setBounds(rowHeight, nextRowY, rowX, displayedMessage.component.getContentWidth(87), (byte) 64);
+            if (displayedMessage.component.pressedButton != 0) {
+              pressedMessage = displayedMessage;
             }
-            var7Lifetime1 = var7Lifetime1 + param1;
+            nextRowY = nextRowY + rowHeight;
           }
         }
-        var8Lifetime1 = AchievementIcon.field_q.content.remainingHeight + AchievementIcon.field_q.content.height - (-var6 + var7Lifetime1);
-        AchievementIcon.field_q.content.height = AchievementIcon.field_q.content.height - var8Lifetime1;
-        AchievementIcon.field_q.content.localY = AchievementIcon.field_q.content.localY + var8Lifetime1;
+        heightDelta = AchievementIcon.chatHistoryPane.content.remainingHeight + AchievementIcon.chatHistoryPane.content.height - (-rebuiltRowsHeight + nextRowY);
+        AchievementIcon.chatHistoryPane.content.height = AchievementIcon.chatHistoryPane.content.height - heightDelta;
+        AchievementIcon.chatHistoryPane.content.localY = AchievementIcon.chatHistoryPane.content.localY + heightDelta;
         if (LevelSequence.chatFiltersChanged) {
-          AchievementIcon.field_q.content.height = var7Lifetime1;
+          AchievementIcon.chatHistoryPane.content.height = nextRowY;
         }
-        AchievementIcon.field_q.content.remainingHeight = var7Lifetime1 - AchievementIcon.field_q.content.height;
+        AchievementIcon.chatHistoryPane.content.remainingHeight = nextRowY - AchievementIcon.chatHistoryPane.content.height;
         if (LevelSequence.chatFiltersChanged) {
           LevelSequence.chatFiltersChanged = false;
-          AchievementIcon.field_q.content.localY = AchievementIcon.field_q.viewport.height - AchievementIcon.field_q.content.height;
-          nd.field_b = true;
-          AchievementIcon.field_q.content.remainingY = 0;
+          AchievementIcon.chatHistoryPane.content.localY = AchievementIcon.chatHistoryPane.viewport.height - AchievementIcon.chatHistoryPane.content.height;
+          nd.chatPinnedToBottom = true;
+          AchievementIcon.chatHistoryPane.content.remainingY = 0;
         }
-        if (param2 != -13294) {
+        if (obfuscationGuard != -13294) {
           friendsStatusLabel = (UiComponent) null;
         }
         if (MatchResultScreen.field_s) {
-          stackIn_42_0 = null;
-          stackIn_42_1 = SoundCache.field_k;
-          if (stackIn_42_0 != stackIn_42_1) {
-            nd.field_b = true;
+          nullFocusMarker = null;
+          chatFocusMarker = SoundCache.field_k;
+          if (nullFocusMarker != chatFocusMarker) {
+            nd.chatPinnedToBottom = true;
           }
         }
-        var9Lifetime1 = AchievementIcon.field_q.viewport.height - (AchievementIcon.field_q.content.height + AchievementIcon.field_q.content.remainingHeight);
-        if (nd.field_b) {
-          AchievementIcon.field_q.content.remainingY = var9Lifetime1 - AchievementIcon.field_q.content.localY;
+        bottomScrollY = AchievementIcon.chatHistoryPane.viewport.height - (AchievementIcon.chatHistoryPane.content.height + AchievementIcon.chatHistoryPane.content.remainingHeight);
+        if (nd.chatPinnedToBottom) {
+          AchievementIcon.chatHistoryPane.content.remainingY = bottomScrollY - AchievementIcon.chatHistoryPane.content.localY;
         }
-        AchievementIcon.field_q.updateScroll(true, param1, true, 2 * (param1 * param3));
-        stackIn_50_0 = (var9Lifetime1 == AchievementIcon.field_q.content.remainingY + AchievementIcon.field_q.content.localY);
-        nd.field_b = stackIn_50_0;
-        return (ChatMessage) (var4);
+        AchievementIcon.chatHistoryPane.updateScroll(true, rowHeight, true, 2 * (rowHeight * wheelTurns));
+        isPinned = (bottomScrollY == AchievementIcon.chatHistoryPane.content.remainingY + AchievementIcon.chatHistoryPane.content.localY);
+        nd.chatPinnedToBottom = isPinned;
+        return (ChatMessage) (pressedMessage);
     }
 
-    final static void a(java.applet.Applet param0, byte param1, String param2, String param3, long param4) {
+    final static void setAppletCookie(java.applet.Applet applet, byte obfuscationGuard, String value, String name, long maxAgeSeconds) {
         try {
-          RuntimeException stackIn_11_0 = null;
-          StringBuilder stackIn_11_1 = null;
-          String stackIn_12_2 = null;
-          StringBuilder stackIn_14_1 = null;
-          String stackIn_15_2 = null;
-          StringBuilder stackIn_17_1 = null;
-          String stackIn_18_2 = null;
-          Throwable decompiledCaughtException = null;
-          Throwable var6 = null;
-          RuntimeException var6_ref = null;
-          String var7 = null;
-          String var8 = null;
-          String var9 = null;
-          String var7Lifetime1;
-          String var7Lifetime2;
-          String var7Lifetime3;
-          String var7Lifetime4;
+          RuntimeException contextFailure = null;
+          StringBuilder contextPrefix = null;
+          String appletSummary = null;
+          StringBuilder valueContextPrefix = null;
+          String valueSummary = null;
+          StringBuilder nameContextPrefix = null;
+          String nameSummary = null;
+          Throwable caughtFailure = null;
+          Throwable ignoredBrowserFailure = null;
+          RuntimeException cookieFailure = null;
+          String unusedHostCopy = null;
+          String cookieHost = null;
+          String cookieAttributes = null;
+          String unusedHostAlias;
+          String unusedCookieCopy;
+          String unusedCookieAlias;
+          String cookieWithLifetime;
           try {
-            if (param1 <= 66) {
-              sj.a(-31, 62, -5, -79);
+            if (obfuscationGuard <= 66) {
+              ChatLobbyUiHelpers.rebuildChatHistoryRows(-31, 62, -5, -79);
             }
             try {
-              var8 = param0.getParameter("cookiehost");
-              var7 = var8;
-              var7Lifetime1 = var8;
-              var9 = param3 + "=" + param2 + "; version=1; path=/; domain=" + var8;
-              var7Lifetime2 = var9;
-              var7Lifetime3 = var9;
-              if (0L > param4) {
-                var7Lifetime4 = var9 + "; Discard;";
+              cookieHost = applet.getParameter("cookiehost");
+              unusedHostCopy = cookieHost;
+              unusedHostAlias = cookieHost;
+              cookieAttributes = name + "=" + value + "; version=1; path=/; domain=" + cookieHost;
+              unusedCookieCopy = cookieAttributes;
+              unusedCookieAlias = cookieAttributes;
+              if (0L > maxAgeSeconds) {
+                cookieWithLifetime = cookieAttributes + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + AppletGameShell.a((byte) -75, MonotonicTime.nowMillis(false) + param4 * 1000L) + "; Max-Age=" + param4;
+                cookieWithLifetime = cookieAttributes + "; Expires=" + AppletGameShell.a((byte) -75, MonotonicTime.nowMillis(false) + maxAgeSeconds * 1000L) + "; Max-Age=" + maxAgeSeconds;
               }
-              ne.a(param0, "document.cookie=\"" + var7Lifetime4 + "\"", 5797);
-            } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = decompiledCaughtException;
+              ne.a(applet, "document.cookie=\"" + cookieWithLifetime + "\"", 5797);
+            } catch (java.lang.Throwable caughtBrowserFailure) {
+              caughtFailure = caughtBrowserFailure;
+              ignoredBrowserFailure = caughtFailure;
             }
             return;
-          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_11_0 = var6_ref;
-            stackIn_11_1 = new StringBuilder().append("sj.C(");
-            if (param0 == null) {
-              stackIn_12_2 = "null";
+          } catch (java.lang.RuntimeException caughtCookieFailure) {
+            caughtFailure = caughtCookieFailure;
+            cookieFailure = (RuntimeException) (Object) caughtFailure;
+            contextFailure = cookieFailure;
+            contextPrefix = new StringBuilder().append("sj.C(");
+            if (applet == null) {
+              appletSummary = "null";
             } else {
-              stackIn_12_2 = "{...}";
+              appletSummary = "{...}";
             }
-            stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
-            if (param2 == null) {
-              stackIn_15_2 = "null";
+            valueContextPrefix = ((StringBuilder) (Object) contextPrefix).append(appletSummary).append(',').append(obfuscationGuard).append(',');
+            if (value == null) {
+              valueSummary = "null";
             } else {
-              stackIn_15_2 = "{...}";
+              valueSummary = "{...}";
             }
-            stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
-            if (param3 == null) {
-              stackIn_18_2 = "null";
+            nameContextPrefix = ((StringBuilder) (Object) valueContextPrefix).append(valueSummary).append(',');
+            if (name == null) {
+              nameSummary = "null";
             } else {
-              stackIn_18_2 = "{...}";
+              nameSummary = "{...}";
             }
-            throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param4).append(')').toString());
+            throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) nameContextPrefix).append(nameSummary).append(',').append(maxAgeSeconds).append(')').toString());
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 
@@ -528,7 +528,7 @@ final class sj {
             }
           }
           if (obfuscationGuard != 33) {
-            sj.a((java.applet.Applet) null, (byte) -55, (String) null, (String) null, -27L);
+            ChatLobbyUiHelpers.setAppletCookie((java.applet.Applet) null, (byte) -55, (String) null, (String) null, -27L);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -540,7 +540,7 @@ final class sj {
 
     public static void a(int param0) {
         field_f = null;
-        field_a = null;
+        chatMessageStyle = null;
         friendsStatusLabel = null;
         field_c = null;
         if (param0 != 11) {

@@ -182,7 +182,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             field_R = (RgbSprite) null;
           }
           if (ln.decodeSpritesFromArchive(-123, fileId, archive, groupId)) {
-            return n.buildRgbSprite((byte) 21);
+            return ConnectionPhase.buildRgbSprite((byte) 21);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

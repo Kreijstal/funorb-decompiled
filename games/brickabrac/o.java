@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class o {
-    static n field_g;
+    static ConnectionPhase awaitingValidationStrings;
     static LobbyGame currentLobbyGame;
     static int field_f;
     static String field_a;
@@ -75,7 +75,7 @@ final class o {
     }
 
     public static void b(int param0) {
-        field_g = null;
+        awaitingValidationStrings = null;
         field_b = null;
         field_a = null;
         if (param0 == 31583) {
@@ -104,7 +104,7 @@ final class o {
 
     static {
         field_a = "Destroy the flashing bricks to get power-ups!";
-        field_g = new n();
+        awaitingValidationStrings = new ConnectionPhase();
         field_h = new QuickChatParameterType(6, 0, 4, 2);
         enabledFeatureMask = 0;
     }

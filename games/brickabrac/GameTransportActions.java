@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg {
+final class GameTransportActions {
     static String field_a;
     static String field_b;
     static NineSliceFrame textChoiceOuterFrame;
 
-    final static boolean a(int param0) {
-        if (param0 != 3) {
+    final static boolean canUseGameTransport(int obfuscationGuard) {
+        if (obfuscationGuard != 3) {
           return true;
         }
         if (WhirlpoolHasher.gameTransport == null) {
           return false;
         }
-        if (!rf.field_b.c(-26774)) {
+        if (!rf.connectionPhase.allowsGameTransport(-26774)) {
           return false;
         }
         return true;

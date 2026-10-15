@@ -218,8 +218,8 @@ final class BrickGameLayerController implements GameLayerController {
           }
           var2 = stackIn_300_0;
           var3 = DualLinkDeque.field_d.screenY;
-          if (!n.field_d) {
-            if (0 < Brick.field_E &&
+          if (!ConnectionPhase.field_d) {
+            if (0 < Brick.unreadChatMessageCount &&
               20 > MembershipBenefitsScreen.clientTick % 40) {
               var4 = 1;
               if (var4 != 0) {
@@ -347,8 +347,8 @@ final class BrickGameLayerController implements GameLayerController {
         if (!LegacyUtf8Decoder.a((byte) 121)) {
           var2Lifetime1 = 0;
           var3Lifetime1 = DualLinkDeque.field_d.screenY;
-          if (!n.field_d) {
-            if (0 < Brick.field_E) {
+          if (!ConnectionPhase.field_d) {
+            if (0 < Brick.unreadChatMessageCount) {
               stackIn_10_0 = (20 > MembershipBenefitsScreen.clientTick % 40) ? 1 : 0;
             } else {
               stackIn_10_0 = 0;
@@ -387,8 +387,8 @@ final class BrickGameLayerController implements GameLayerController {
         if (!AccountMessageDialog.n(obfuscationGuard - 16769386)) {
           var2Lifetime2 = 0;
           var3Lifetime2 = DualLinkDeque.field_d.screenY;
-          if (!n.field_d) {
-            if (0 < Brick.field_E &&
+          if (!ConnectionPhase.field_d) {
+            if (0 < Brick.unreadChatMessageCount &&
               20 > MembershipBenefitsScreen.clientTick % 40) {
               var4Lifetime2 = 1;
               if (var4Lifetime2 != 0) {
@@ -501,7 +501,7 @@ final class BrickGameLayerController implements GameLayerController {
         }
         var2Lifetime3 = 1;
         var3Lifetime3 = DualLinkDeque.field_d.screenY;
-        if (n.field_d) {
+        if (ConnectionPhase.field_d) {
           var4Lifetime3 = 1;
           if (var4Lifetime3 != 0) {
             stackIn_243_0 = 1;
@@ -579,7 +579,7 @@ final class BrickGameLayerController implements GameLayerController {
           }
           return;
         }
-        if (0 >= Brick.field_E) {
+        if (0 >= Brick.unreadChatMessageCount) {
           var4Lifetime4 = 0;
           if (var4Lifetime4 != 0) {
             stackIn_116_0 = 1;
@@ -960,28 +960,28 @@ final class BrickGameLayerController implements GameLayerController {
           if (this.field_a > 0) {
             this.field_a = this.field_a - 1;
           }
-          if (Brick.field_E != 1) {
-            if (1 < Brick.field_E) {
-              ContextActionController.field_f = rd.a(ArchiveSource.field_a, new String[]{Integer.toString(Brick.field_E)}, (byte) 103);
-              var4 = n.field_d ? 1 : 0;
-              n.field_d = false;
+          if (Brick.unreadChatMessageCount != 1) {
+            if (1 < Brick.unreadChatMessageCount) {
+              ContextActionController.field_f = rd.a(ArchiveSource.field_a, new String[]{Integer.toString(Brick.unreadChatMessageCount)}, (byte) 103);
+              var4 = ConnectionPhase.field_d ? 1 : 0;
+              ConnectionPhase.field_d = false;
               if (this.d(76)) {
                 var5 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
                 stackIn_22_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= ResourcePreparationEntry.pointerY) && (DualLinkDeque.field_d.screenY > ResourcePreparationEntry.pointerY);
-                n.field_d = stackIn_22_0;
-                if (n.field_d &&
+                ConnectionPhase.field_d = stackIn_22_0;
+                if (ConnectionPhase.field_d &&
                   BackgroundScene.pressedButton == 1) {
                   stackIn_27_0 = !(RadialSelectorRenderer.field_p);
                   RadialSelectorRenderer.field_p = stackIn_27_0;
                   if (RadialSelectorRenderer.field_p) {
                     this.field_a = 0;
-                    Brick.field_E = 0;
+                    Brick.unreadChatMessageCount = 0;
                   } else {
                     this.field_a = 20;
                   }
                 }
-                if (n.field_d) {
-                  stackIn_33_0 = n.field_d;
+                if (ConnectionPhase.field_d) {
+                  stackIn_33_0 = ConnectionPhase.field_d;
                   stackIn_34_1 = (var4 != 0) ? 0 : 1;
                   if ((stackIn_33_0 ? 1 : 0) == stackIn_34_1) {
                     SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
@@ -1026,10 +1026,10 @@ final class BrickGameLayerController implements GameLayerController {
             ContextActionController.field_f = BirthDateValidator.field_g;
           }
         } else {
-          Brick.field_E = 0;
+          Brick.unreadChatMessageCount = 0;
         }
-        var4Lifetime1 = n.field_d ? 1 : 0;
-        n.field_d = false;
+        var4Lifetime1 = ConnectionPhase.field_d ? 1 : 0;
+        ConnectionPhase.field_d = false;
         if (!this.d(76)) {
           var5Lifetime1 = 400 - this.field_a * this.field_a;
           var6Lifetime1 = var5Lifetime1 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
@@ -1066,9 +1066,9 @@ final class BrickGameLayerController implements GameLayerController {
         }
         var5Lifetime2 = IntrusiveHashTable.field_l + ContextActionController.field_g.measureText(ContextActionController.field_f);
         stackIn_80_0 = (0 <= MusicPatch.pointerX) && (MusicPatch.pointerX < var5Lifetime2) && (DualLinkDeque.field_d.screenY - LevelSelectScreen.field_w <= ResourcePreparationEntry.pointerY) && (DualLinkDeque.field_d.screenY > ResourcePreparationEntry.pointerY);
-        n.field_d = stackIn_80_0;
-        if (!n.field_d) {
-          if (!n.field_d) {
+        ConnectionPhase.field_d = stackIn_80_0;
+        if (!ConnectionPhase.field_d) {
+          if (!ConnectionPhase.field_d) {
             var5Lifetime3 = 400 - this.field_a * this.field_a;
             var6Lifetime2 = var5Lifetime3 * (480 - LevelPack.field_g) / 400 + LevelPack.field_g;
             ConstructionBackground.b((byte) -118, var6Lifetime2);
@@ -1093,7 +1093,7 @@ final class BrickGameLayerController implements GameLayerController {
             stackIn_94_11 = (QuickChatCategoryRegistry.a((byte) -35) <= 50) ? false : true;
             MeshAttributeRecord.a(stackIn_90_0, stackIn_91_1, stackIn_93_2, stackIn_93_3, stackIn_93_4, stackIn_93_5, stackIn_93_6, stackIn_93_7, stackIn_93_8 != 0, stackIn_93_9, stackIn_93_10, stackIn_94_11);
           } else {
-            stackIn_102_0 = n.field_d;
+            stackIn_102_0 = ConnectionPhase.field_d;
             stackIn_103_1 = (var4Lifetime1 != 0) ? 0 : 1;
             if ((stackIn_102_0 ? 1 : 0) != stackIn_103_1) {
               var5Lifetime3 = 400 - this.field_a * this.field_a;
@@ -1158,8 +1158,8 @@ final class BrickGameLayerController implements GameLayerController {
         }
         if (BackgroundScene.pressedButton != 1) {
           regionExit1: {
-            if (n.field_d) {
-              stackIn_231_0 = n.field_d;
+            if (ConnectionPhase.field_d) {
+              stackIn_231_0 = ConnectionPhase.field_d;
               stackIn_232_1 = (var4Lifetime1 != 0) ? 0 : 1;
               if ((stackIn_231_0 ? 1 : 0) != stackIn_232_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
@@ -1218,8 +1218,8 @@ final class BrickGameLayerController implements GameLayerController {
           RadialSelectorRenderer.field_p = stackIn_145_0;
           if (!RadialSelectorRenderer.field_p) {
             this.field_a = 20;
-            if (n.field_d) {
-              stackIn_149_0 = n.field_d;
+            if (ConnectionPhase.field_d) {
+              stackIn_149_0 = ConnectionPhase.field_d;
               stackIn_150_1 = (var4Lifetime1 != 0) ? 0 : 1;
               if ((stackIn_149_0 ? 1 : 0) != stackIn_150_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;
@@ -1282,9 +1282,9 @@ final class BrickGameLayerController implements GameLayerController {
             MeshAttributeRecord.a(stackIn_176_0, stackIn_177_1, stackIn_179_2, stackIn_179_3, stackIn_179_4, stackIn_179_5, stackIn_179_6, stackIn_179_7, stackIn_179_8 != 0, stackIn_179_9, stackIn_179_10, stackIn_180_11);
           } else {
             this.field_a = 0;
-            Brick.field_E = 0;
-            if (n.field_d) {
-              stackIn_190_0 = n.field_d;
+            Brick.unreadChatMessageCount = 0;
+            if (ConnectionPhase.field_d) {
+              stackIn_190_0 = ConnectionPhase.field_d;
               stackIn_191_1 = (var4Lifetime1 != 0) ? 0 : 1;
               if ((stackIn_190_0 ? 1 : 0) != stackIn_191_1) {
                 var5Lifetime4 = 400 - this.field_a * this.field_a;

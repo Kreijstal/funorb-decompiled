@@ -14,7 +14,7 @@ final class LoginMethodPreference {
           if (obfuscationGuard < 92) {
             LoginMethodPreference.b(-113);
           }
-          sj.a(applet, (byte) 122, this.cookieValue, "jagex-last-login-method", 31536000L);
+          ChatLobbyUiHelpers.setAppletCookie(applet, (byte) 122, this.cookieValue, "jagex-last-login-method", 31536000L);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "me.D(" + obfuscationGuard + ',' + (applet != null ? "{...}" : "null") + ')');
         }

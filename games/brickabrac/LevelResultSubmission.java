@@ -73,7 +73,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             }
           }
           if (null == var2 &&
-            !nd.field_b &&
+            !nd.chatPinnedToBottom &&
             null == SoundCache.field_k) {
             var2 = un.field_h;
           }
@@ -89,7 +89,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             if (2 == var6) {
               var4 = rd.a(SaveResultsPromptScreen.field_x, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
               var8 = rd.a(FullscreenFailureDialog.field_fb, new String[]{var3}, (byte) 103);
-              var7 = -485 + PasswordValidator.field_n.width + ap.field_e.width - (-CachedArchiveSource.field_y.measureText(var8) + CachedArchiveSource.field_y.measureText(var4));
+              var7 = -485 + PasswordValidator.field_n.width + ap.field_e.width - (-CachedArchiveSource.chatFont.measureText(var8) + CachedArchiveSource.chatFont.measureText(var4));
               if (0 > var7) {
                 var7 = 0;
               }
@@ -132,7 +132,7 @@ final class LevelResultSubmission extends IntrusiveNode {
                 var4 = "<col=999999>" + var4 + MainMenuScreen.field_y + "</col>";
                 var5 = "";
               }
-              var9 = CachedArchiveSource.field_y.measureText(var4);
+              var9 = CachedArchiveSource.chatFont.measureText(var4);
               if (!UsernameSuggestionPanel.a(-112)) {
                 if (PasswordValidator.field_n.activeInside &&
                   (-PasswordValidator.field_n.screenX + MusicPatch.pointerX) < var9) {

@@ -697,7 +697,7 @@ final class LobbyUiHelpers {
           BrickGameLayerController.field_c.tabs.processTabPresses(0);
           if (null != o.currentLobbyGame) {
             if (GameUiController.field_e.pressedButton != 0) {
-              vg.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 123), false, gameActionOpcode);
+              GameTransportActions.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 123), false, gameActionOpcode);
             }
             if (RadialSelectorRenderer.field_h.pressedButton != 0) {
               hc.joinRequestsPanelOpen = true;

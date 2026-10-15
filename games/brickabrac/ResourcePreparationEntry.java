@@ -180,7 +180,7 @@ final class ResourcePreparationEntry {
           } else {
             stackIn_25_0 = ar.field_a;
           }
-          sj.field_c = stackIn_25_0;
+          ChatLobbyUiHelpers.field_c = stackIn_25_0;
           var2Lifetime4 = 57 % ((-7 - param0) / 42);
           if (OpacityWidget.field_I == 2) {
             stackIn_28_0 = LoginMethodPreference.field_a;

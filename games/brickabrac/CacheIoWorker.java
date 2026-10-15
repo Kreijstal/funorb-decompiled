@@ -121,9 +121,9 @@ final class CacheIoWorker implements Runnable {
           var8 = 3 / ((49 - param0) / 40);
           ap.field_e.setBounds(param3, 0, param1 + PasswordValidator.field_n.width, ap.field_e.width, (byte) 64);
           var7 = var7 - (param3 + 2);
-          AchievementIcon.field_q.setScrollPaneBounds(2, (byte) -110, 2 + (485 + param1) + param4, 5, 5, param4, var7 - 5);
+          AchievementIcon.chatHistoryPane.setScrollPaneBounds(2, (byte) -110, 2 + (485 + param1) + param4, 5, 5, param4, var7 - 5);
           if (null != vd.field_a) {
-            vd.field_a.setBounds(AchievementIcon.field_q.height, AchievementIcon.field_q.localX, AchievementIcon.field_q.localY, (byte) -119, AchievementIcon.field_q.width);
+            vd.field_a.setBounds(AchievementIcon.chatHistoryPane.height, AchievementIcon.chatHistoryPane.localX, AchievementIcon.chatHistoryPane.localY, (byte) -119, AchievementIcon.chatHistoryPane.width);
           }
           var9 = -param1 + (DualLinkDeque.field_d.width - var6_int);
           var10 = var9 / 2;

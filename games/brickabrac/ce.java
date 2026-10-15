@@ -15,28 +15,28 @@ final class ce {
           ResourceArchive.field_f.removeHiddenLayers((byte) -36);
           if (param0 != 224) {
             field_d = -126;
-            if (null != sj.loadingProgressDialog) {
-              sj.loadingProgressDialog.stopActivityAnimation(6457);
+            if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
+              ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
             }
             UsernameAvailabilityValidator.f((byte) -83);
             return;
           }
-          if (null != sj.loadingProgressDialog) {
-            sj.loadingProgressDialog.stopActivityAnimation(6457);
+          if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
+            ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
           }
           UsernameAvailabilityValidator.f((byte) -83);
           return;
         }
         if (param0 == 224) {
-          if (null != sj.loadingProgressDialog) {
-            sj.loadingProgressDialog.stopActivityAnimation(6457);
+          if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
+            ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
           }
           UsernameAvailabilityValidator.f((byte) -83);
           return;
         }
         field_d = -126;
-        if (null != sj.loadingProgressDialog) {
-          sj.loadingProgressDialog.stopActivityAnimation(6457);
+        if (null != ChatLobbyUiHelpers.loadingProgressDialog) {
+          ChatLobbyUiHelpers.loadingProgressDialog.stopActivityAnimation(6457);
         }
         UsernameAvailabilityValidator.f((byte) -83);
     }

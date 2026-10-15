@@ -5,7 +5,7 @@ abstract class MenuScreen extends GameScreen {
     int buttonTop;
     int buttonSpacing;
     int buttonRight;
-    static n field_k;
+    static ConnectionPhase awaitingLoginErrorBody;
     int buttonLeft;
     MenuSelection selection;
     MenuButton[] buttons;
@@ -702,7 +702,7 @@ abstract class MenuScreen extends GameScreen {
           PlayerBoard var2 = (PlayerBoard) null;
           MenuScreen.drawPowerUpMeterGrid((MultiplayerMatch) null, (PlayerBoard) null, 113, 61, false, -53, 18);
         }
-        field_k = null;
+        awaitingLoginErrorBody = null;
     }
 
     void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
@@ -757,7 +757,7 @@ abstract class MenuScreen extends GameScreen {
     }
 
     static {
-        field_k = new n();
+        awaitingLoginErrorBody = new ConnectionPhase();
         field_o = "Names should contain a maximum of 12 characters";
         field_n = "Your request to join has been declined.";
     }

@@ -37,7 +37,7 @@ final class nl {
         int clientBranchFlag = 0;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (MenuButton.field_i != rf.field_b) {
+          if (MenuButton.loggedInConnection != rf.connectionPhase) {
             return false;
           }
           if (obfuscationGuard != 64) {
