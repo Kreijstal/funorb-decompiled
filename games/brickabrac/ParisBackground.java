@@ -151,7 +151,7 @@ final class ParisBackground extends BackgroundScene {
             decompiledSharedTail0 = (BrickABrac.field_J);
           }
           if (decompiledSharedTail0) {
-            var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -34);
+            var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -34);
             if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               StrongCacheEntry.a(0, MembershipBenefitsScreen.field_s, 2, 0, colorIndex, var6);
               var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

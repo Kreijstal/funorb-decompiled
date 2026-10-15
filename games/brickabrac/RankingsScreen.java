@@ -169,7 +169,7 @@ final class RankingsScreen extends MenuScreen {
         } else {
           Rasterizer2D.clear();
         }
-        wc.a(param2, -1);
+        HalfRgbBlendHelpers.a(param2, -1);
     }
 
     final boolean handleMenuAction(int buttonIndex, boolean inputFlag, byte obfuscationGuard) {
@@ -268,7 +268,7 @@ final class RankingsScreen extends MenuScreen {
             }
           }
         } else {
-          var4Lifetime1 = kd.field_a;
+          var4Lifetime1 = BackgroundSurfaceHelpers.field_a;
         }
         if (var4Lifetime1 != null) {
           NumericLoginCredentials.a((byte) 119, (String) (var4Lifetime1));

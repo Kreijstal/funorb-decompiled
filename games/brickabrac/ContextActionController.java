@@ -95,7 +95,7 @@ final class ContextActionController {
             if (var2 != null) {
               var3 = var2.displayName;
               if (var2.invitationPending) {
-                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(kk.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(IndexedSpriteHelpers.field_d, new String[]{var3}, (byte) 103), 2, (byte) 76);
                 this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(np.field_f, new String[]{var3}, (byte) 103), 3, (byte) 107);
                 decompiledFrameRemainder0 = (var4 != 0);
               }
@@ -262,7 +262,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("ticketing_xunread", (byte) -111);
                 if (null != var2) {
-                  ed.field_c = MenuButton.a(var2, (byte) 116);
+                  IntegerBitLengthHelpers.field_c = MenuButton.a(var2, (byte) 116);
                 }
                 var2 = AppletFlowHelpers.a("ticketing_gotowebsite", (byte) -125);
                 if (null != var2) {
@@ -474,7 +474,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("yes", (byte) -119);
                 if (null != var2) {
-                  hh.field_f = MenuButton.a(var2, (byte) 115);
+                  IntegerPowerHelpers.field_f = MenuButton.a(var2, (byte) 115);
                 }
                 var2 = AppletFlowHelpers.a("no", (byte) -4);
                 if (var2 != null) {
@@ -518,7 +518,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("invite_accept_xs_game", (byte) -110);
                 if (var2 != null) {
-                  kk.field_d = MenuButton.a(var2, (byte) 80);
+                  IndexedSpriteHelpers.field_d = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("invite_decline_xs_game", (byte) 54);
                 if (null != var2) {
@@ -542,7 +542,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_withdraw_invite_to_x", (byte) -121);
                 if (null != var2) {
-                  hm.field_c = MenuButton.a(var2, (byte) 91);
+                  LobbySetupHelpers.field_c = MenuButton.a(var2, (byte) 91);
                 }
                 var2 = AppletFlowHelpers.a("mu_gameopt_accept_x_into_game", (byte) -114);
                 if (null != var2) {
@@ -670,7 +670,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("your_game", (byte) -121);
                 if (null != var2) {
-                  ba.field_x = MenuButton.a(var2, (byte) 120);
+                  UiComponentNode.field_x = MenuButton.a(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("game_full", (byte) -127);
                 if (null != var2) {
@@ -742,7 +742,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("invite", (byte) -123);
                 if (null != var2) {
-                  ea.field_f = MenuButton.a(var2, (byte) 97);
+                  InputOptionsHelpers.field_f = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("status_concluded", (byte) -106);
                 if (var2 != null) {
@@ -762,7 +762,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("status_private", (byte) 46);
                 if (var2 != null) {
-                  hm.field_a = MenuButton.a(var2, (byte) 101);
+                  LobbySetupHelpers.field_a = MenuButton.a(var2, (byte) 101);
                 }
                 var2 = AppletFlowHelpers.a("status_full", (byte) 47);
                 if (var2 != null) {
@@ -906,7 +906,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("privatechat_friend_notlisted", (byte) -111);
                 if (null != var2) {
-                  kk.field_c = MenuButton.a(var2, (byte) 112);
+                  IndexedSpriteHelpers.field_c = MenuButton.a(var2, (byte) 112);
                 }
                 var2 = AppletFlowHelpers.a("chatviewscrolledup", (byte) -114);
                 if (var2 != null) {
@@ -974,7 +974,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("gameopt_youneedrating", (byte) 38);
                 if (null != var2) {
-                  ea.field_h = MenuButton.a(var2, (byte) 90);
+                  InputOptionsHelpers.field_h = MenuButton.a(var2, (byte) 90);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playerneedsratedgames", (byte) -125);
                 if (null != var2) {
@@ -1018,7 +1018,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("gameopt_mightchange", (byte) 97);
                 if (var2 != null) {
-                  ba.field_y = MenuButton.a(var2, (byte) 103);
+                  UiComponentNode.field_y = MenuButton.a(var2, (byte) 103);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playersdontqualify", (byte) 20);
                 if (null != var2) {
@@ -1144,7 +1144,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("rule_2_0", (byte) -2);
                 if (var2 != null) {
-                  ed.field_a = MenuButton.a(var2, (byte) 122);
+                  IntegerBitLengthHelpers.field_a = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("rule_2_1", (byte) -114);
                 if (var2 != null) {
@@ -1292,7 +1292,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("quittowebsite", (byte) -124);
                 if (var2 != null) {
-                  wc.field_a = MenuButton.a(var2, (byte) 80);
+                  HalfRgbBlendHelpers.field_a = MenuButton.a(var2, (byte) 80);
                 }
                 var2 = AppletFlowHelpers.a("connectionrestored", (byte) -113);
                 if (null != var2) {
@@ -1484,7 +1484,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("year", (byte) 85);
                 if (null != var2) {
-                  kk.field_f = MenuButton.a(var2, (byte) 84);
+                  IndexedSpriteHelpers.field_f = MenuButton.a(var2, (byte) 84);
                 }
                 var2 = AppletFlowHelpers.a("monthnames,0", (byte) -128);
                 if (null != var2) {
@@ -1556,7 +1556,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_password", (byte) -108);
                 if (var2 != null) {
-                  wc.field_c = MenuButton.a(var2, (byte) 106);
+                  HalfRgbBlendHelpers.field_c = MenuButton.a(var2, (byte) 106);
                 }
                 var2 = AppletFlowHelpers.a("create_password_confirm", (byte) -121);
                 if (null != var2) {
@@ -1608,7 +1608,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_select_alternative", (byte) -117);
                 if (var2 != null) {
-                  aa.field_c = MenuButton.a(var2, (byte) 122);
+                  JavaRandomHelpers.field_c = MenuButton.a(var2, (byte) 122);
                 }
                 var2 = AppletFlowHelpers.a("create_optin_news", (byte) -15);
                 if (var2 != null) {
@@ -1672,7 +1672,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("create_displayname_tooltip", (byte) 124);
                 if (null != var2) {
-                  hh.field_a = MenuButton.a(var2, (byte) 120);
+                  IntegerPowerHelpers.field_a = MenuButton.a(var2, (byte) 120);
                 }
                 var2 = AppletFlowHelpers.a("create_displayname_hint", (byte) -119);
                 if (var2 != null) {
@@ -1824,11 +1824,11 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("cannot_add_yourself", (byte) -128);
                 if (var2 != null) {
-                  rj.field_a = MenuButton.a(var2, (byte) 113);
+                  TextHuffmanHelpers.field_a = MenuButton.a(var2, (byte) 113);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_add_friend", (byte) -114);
                 if (null != var2) {
-                  kd.field_b = MenuButton.a(var2, (byte) 117);
+                  BackgroundSurfaceHelpers.field_b = MenuButton.a(var2, (byte) 117);
                 }
                 var2 = AppletFlowHelpers.a("unable_to_add_ignore", (byte) -110);
                 if (var2 != null) {
@@ -1840,11 +1840,11 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("unable_to_delete_ignore", (byte) 34);
                 if (null != var2) {
-                  hd.field_b = MenuButton.a(var2, (byte) 121);
+                  InvitationDialogHelpers.field_b = MenuButton.a(var2, (byte) 121);
                 }
                 var2 = AppletFlowHelpers.a("friendlistfull", (byte) -112);
                 if (null != var2) {
-                  er.field_e = MenuButton.a(var2, (byte) 97);
+                  IntegerRemainderHelpers.field_e = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("friendlistdupe", (byte) 19);
                 if (var2 != null) {
@@ -2066,7 +2066,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("rankings", (byte) 113);
                 if (var2 != null) {
-                  pp.field_c = MenuButton.a(var2, (byte) 107);
+                  TextValidationHelpers.field_c = MenuButton.a(var2, (byte) 107);
                 }
                 var2 = AppletFlowHelpers.a("achievements", (byte) -116);
                 if (null != var2) {
@@ -2234,7 +2234,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("acceptdraw", (byte) -116);
                 if (var2 != null) {
-                  er.field_a = MenuButton.a(var2, (byte) 86);
+                  IntegerRemainderHelpers.field_a = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = AppletFlowHelpers.a("resign", (byte) 27);
                 if (var2 != null) {
@@ -2972,7 +2972,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("pleasewait_dotdotdot", (byte) -16);
                 if (null != var2) {
-                  kd.field_a = MenuButton.a(var2, (byte) 83);
+                  BackgroundSurfaceHelpers.field_a = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = AppletFlowHelpers.a("serviceunavailable", (byte) 85);
                 if (var2 != null) {
@@ -3290,7 +3290,7 @@ final class ContextActionController {
           if (this.targetName != null &&
             ~Widget.field_p != ~this.targetId &&
             null != ClientResourceHelpers.currentLobbyGame &&
-            hn.b((byte) 7)) {
+            GameTransportHelpers.b((byte) 7)) {
             gamePlayer = MatchCompleteScreen.findLobbyPlayer((byte) 96, this.targetId);
             invitedPlayer = EmailAvailabilityRequest.findGamePlayer(this.targetId, 2);
             caption = this.getTargetCaption(-12688);
@@ -3308,7 +3308,7 @@ final class ContextActionController {
               ClientResourceHelpers.currentLobbyGame.protocolFlag8 &&
               ClientResourceHelpers.currentLobbyGame.maxPlayers > ClientResourceHelpers.currentLobbyGame.playerCount) {
               if (gamePlayer.invitationPending) {
-                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(hm.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
+                this.contextMenu.addAction(GamePresentationHelpers.formatIndexedText(LobbySetupHelpers.field_c, new String[]{caption}, (byte) 103), 1, (byte) 108);
                 if (unusedGameFlag == 0) {
                   return;
                 }
@@ -3440,7 +3440,7 @@ final class ContextActionController {
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           if (actionId == 0) {
-            hd.requestInviteOrAcceptPlayer(this.targetId, 69, opcode);
+            InvitationDialogHelpers.requestInviteOrAcceptPlayer(this.targetId, 69, opcode);
           }
           if (actionId != 0 ||
             unusedGameFlag != 0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class UiComponent extends ba {
+class UiComponent extends UiComponentNode {
     boolean useParentFrameBounds;
     int textColor;
     int selectedOffsetX;
@@ -129,7 +129,7 @@ class UiComponent extends ba {
         savedClipBottom = Rasterizer2D.clipBottom;
         Rasterizer2D.intersectClip(this.screenX, this.screenY, this.width + this.screenX, this.height + this.screenY);
         claimedPress = 0;
-        if (!wc.uiPressClaimed &&
+        if (!HalfRgbBlendHelpers.uiPressClaimed &&
           inputEnabled &&
           BackgroundScene.pressedButton != 0 &&
           Rasterizer2D.clipLeft <= LoadingProgressDialog.pressX &&
@@ -165,7 +165,7 @@ class UiComponent extends ba {
           NinjaBackground.uiHoverClaimed = true;
         }
         if (claimedPress != 0) {
-          wc.uiPressClaimed = true;
+          HalfRgbBlendHelpers.uiPressClaimed = true;
         }
         Rasterizer2D.setClip(savedClipLeft, savedClipTop, savedClipRight, savedClipBottom);
         if (this.capturedButton != 0 &&
@@ -613,7 +613,7 @@ class UiComponent extends ba {
     final void updateRoot(boolean inputEnabled, int obfuscationGuard) {
         NinjaBackground.uiHoverClaimed = !inputEnabled ? true : false;
         if (obfuscationGuard == -15211) {
-          wc.uiPressClaimed = !inputEnabled ? true : false;
+          HalfRgbBlendHelpers.uiPressClaimed = !inputEnabled ? true : false;
           this.updateTree(Rasterizer2D.width, 886229954, 0, Rasterizer2D.height, 0, true);
           return;
         }

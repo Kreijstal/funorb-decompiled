@@ -99,7 +99,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           param2.discardPackedGroups = false;
           DebouncedValidationSource.quickChatCategories = new QuickChatCategoryRegistry(var3_int, param2, param2);
           LobbyUiHelpers.quickChatPhrases = new QuickChatPhraseRegistry(var3_int, param2, param2, new FontRequestHelpers());
-          var4 = gj.findRootQuickChatCategory(0);
+          var4 = TableQuickChatHelpers.findRootQuickChatCategory(0);
           if (var4 == null) {
             AlignedIconLabel.a("QC2", (Throwable) null, param1 - 14);
             return;
@@ -206,10 +206,10 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
         try {
           DelayedPacket.menuScreens = new MenuScreen[22];
           GameCanvas.registerMenuScreen(-74, new MainMenuScreen());
-          GameCanvas.registerMenuScreen(-68, cf.createPauseMenu(1, -2635));
-          GameCanvas.registerMenuScreen(-90, cf.createPauseMenu(2, -2635));
-          GameCanvas.registerMenuScreen(-111, cf.createPauseMenu(3, -2635));
-          GameCanvas.registerMenuScreen(-109, cf.createPauseMenu(4, -2635));
+          GameCanvas.registerMenuScreen(-68, PauseMenuHelpers.createPauseMenu(1, -2635));
+          GameCanvas.registerMenuScreen(-90, PauseMenuHelpers.createPauseMenu(2, -2635));
+          GameCanvas.registerMenuScreen(-111, PauseMenuHelpers.createPauseMenu(3, -2635));
+          GameCanvas.registerMenuScreen(-109, PauseMenuHelpers.createPauseMenu(4, -2635));
           GameCanvas.registerMenuScreen(-93, new HighscoresScreen());
           GameCanvas.registerMenuScreen(-114, new RankingsScreen());
           GameCanvas.registerMenuScreen(-114, new InstructionsScreen());
@@ -222,7 +222,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           GameCanvas.registerMenuScreen(-105, new OptionsScreen());
           GameCanvas.registerMenuScreen(-69, new LevelSelectScreen(15, 1));
           GameCanvas.registerMenuScreen(-71, new LevelPackSelectScreen());
-          GameCanvas.registerMenuScreen(-54, cf.createPauseMenu(17, -2635));
+          GameCanvas.registerMenuScreen(-54, PauseMenuHelpers.createPauseMenu(17, -2635));
           GameCanvas.registerMenuScreen(-70, new LevelCompleteScreen());
           GameCanvas.registerMenuScreen(-63, new MultiplayerExitScreen());
           GameCanvas.registerMenuScreen(-91, new MatchCompleteScreen());
@@ -245,7 +245,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
     }
 
     final static void a(int param0, byte param1) {
-        kd.field_c = FullscreenFailureKind.field_f[param0];
+        BackgroundSurfaceHelpers.field_c = FullscreenFailureKind.field_f[param0];
         int var2 = -14 % ((param1 + 33) / 34);
         FriendListUi.field_a = GameplayRenderHelpers.field_b[param0];
         FocusableWidget.field_C = AccountIntroductionPanel.field_L[param0];
@@ -367,7 +367,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             }
           } else {
             this.loginButton = new FocusableWidget(TabbedPane.field_Tb, (WidgetListener) null);
-            this.backOrGuestButton = new FocusableWidget(wc.field_a, (WidgetListener) null);
+            this.backOrGuestButton = new FocusableWidget(HalfRgbBlendHelpers.field_a, (WidgetListener) null);
             this.accountField.enabled = false;
           }
           this.accountField.renderer = (WidgetRenderer) ((Object) new TextFieldRenderer(10000536));
@@ -412,7 +412,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
           var12 = dupTemp$0;
           this.addChild(dupTemp$0, true);
           this.y = this.y + (5 + ((Widget) ((Object) var12)).height);
-          dupTemp$1 = new LabeledWidget(10, this.y, this.width - 20, 25, this.passwordField, false, 80, 3, var7, 16777215, wc.field_c);
+          dupTemp$1 = new LabeledWidget(10, this.y, this.width - 20, 25, this.passwordField, false, 80, 3, var7, 16777215, HalfRgbBlendHelpers.field_c);
           var13 = dupTemp$1;
           this.addChild(dupTemp$1, true);
           this.loginButton.listener = (WidgetListener) (this);

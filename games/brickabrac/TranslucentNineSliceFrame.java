@@ -27,9 +27,9 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
         try {
           Mesh3D.configureFullscreenDialogFonts(maximumWrapWidth, buttonFont, bodyFont, true);
           MusicCrossfadeStream.configureFullscreenDialogMetrics(buttonBaseline, buttonLineHeight, 256, bodyBaseline, bodyLineHeight);
-          pp.setFullscreenDialogCenter(centerX, centerY, (byte) 19);
+          TextValidationHelpers.setFullscreenDialogCenter(centerX, centerY, (byte) 19);
           WidgetLayerStack.configureFullscreenDialogButtons(buttonPaddingY, buttonGapY, selectedFrame, 73, normalFrame, buttonPaddingX);
-          hd.configureFullscreenDialogFrame(117, outerFrame, outerPaddingX, outerPaddingY);
+          InvitationDialogHelpers.configureFullscreenDialogFrame(117, outerFrame, outerPaddingX, outerPaddingY);
           LegacyUtf8Decoder.configureFullscreenDialogPaints(buttonPaint, selectedPaint, false, bodyPaint);
           if (obfuscationGuard != 10) {
             TranslucentNineSliceFrame.a(true);
@@ -80,12 +80,12 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
 
     final static void a(boolean param0) {
         if (param0) {
-          ed.a(0, 0);
+          IntegerBitLengthHelpers.a(0, 0);
           return;
         }
         NineSliceFrame var2 = (NineSliceFrame) null;
         TranslucentNineSliceFrame.configureFullscreenDialog(-2, -34, -105, (TextFont) null, -37, -46, -79, (NineSliceFrame) null, 96, 79, -47, -14, 91, (NineSliceFrame) null, -22, -64, (TextFont) null, (NineSliceFrame) null, 77, -115, -55);
-        ed.a(0, 0);
+        IntegerBitLengthHelpers.a(0, 0);
     }
 
     TranslucentNineSliceFrame(RgbSprite[] sprites) {

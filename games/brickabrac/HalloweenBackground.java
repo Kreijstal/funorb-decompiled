@@ -77,7 +77,7 @@ final class HalloweenBackground extends BackgroundScene {
         field_u = UiGeometryHelpers.createScaledHalfSizeSprite(0, StateIconLabel.halloweenMidSprite);
         SocialListResponseHelpers.field_m = UiGeometryHelpers.createScaledHalfSizeSprite(0, GameClock.halloweenFarSprite);
         QuickChatParameterType.field_j = UiGeometryHelpers.createScaledHalfSizeSprite(0, MotionWaypoint.halloweenMoonSprite);
-        ba.halloweenCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.backgroundSpriteArchive);
+        UiComponentNode.halloweenCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_character", (byte) -106, AchievementIcon.backgroundSpriteArchive);
         StrongCacheEntry.halloweenCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_caps", 2);
         GameConnectionShell.halloweenSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("halloween", AchievementIcon.backgroundSpriteArchive, "halloween_segs", 2);
         CanvasInputHelpers.halloweenCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("halloween", "halloween_centre", (byte) -118, AchievementIcon.backgroundSpriteArchive);
@@ -130,7 +130,7 @@ final class HalloweenBackground extends BackgroundScene {
           if (null == MotionWaypoint.halloweenMoonSprite) {
             return false;
           }
-          if (null == ba.halloweenCharacterSprite) {
+          if (null == UiComponentNode.halloweenCharacterSprite) {
             return false;
           }
           if (null == StrongCacheEntry.halloweenCapsSprites) {
@@ -159,7 +159,7 @@ final class HalloweenBackground extends BackgroundScene {
         if (null == MotionWaypoint.halloweenMoonSprite) {
           return false;
         }
-        if (null == ba.halloweenCharacterSprite) {
+        if (null == UiComponentNode.halloweenCharacterSprite) {
           return false;
         }
         if (null == StrongCacheEntry.halloweenCapsSprites) {
@@ -191,7 +191,7 @@ final class HalloweenBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
             return;
           }
-          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
+          var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             ResourcePreparationQueue.a(SocialListResponseHelpers.field_m, 2, colorIndex, QuickChatParameterType.field_j, var7, -13, (byte) -96, va.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -205,7 +205,7 @@ final class HalloweenBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.halloweenBackgroundColors[colorIndex], 22953);
           return;
         }
-        RasterCacheSurface var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
+        RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 116);
         if (var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           ValidationStatus.a(2, -13, field_u, scroll16, va.field_b, 62, 306, destinationX, var8.sprite, destinationY);
           return;
@@ -226,9 +226,9 @@ final class HalloweenBackground extends BackgroundScene {
     final RgbSprite c(byte param0) {
         if (param0 > -74) {
           field_y = false;
-          return ba.halloweenCharacterSprite;
+          return UiComponentNode.halloweenCharacterSprite;
         }
-        return ba.halloweenCharacterSprite;
+        return UiComponentNode.halloweenCharacterSprite;
     }
 
     public static void f(int param0) {

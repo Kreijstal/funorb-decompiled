@@ -214,22 +214,22 @@ abstract class WidgetLayer extends WidgetGroup {
             WidgetLayer.a((byte) 8);
           }
           if (0 == param1) {
-            if (pp.field_a == 14) {
+            if (TextValidationHelpers.field_a == 14) {
               if (0 != (3 & param0)) {
-                pp.field_a = 0;
+                TextValidationHelpers.field_a = 0;
                 LogoRenderHelpers.field_a = 250;
                 ga.field_i = 0;
               }
               if ((param0 & 4) == 0) {
                 return;
               }
-              pp.field_a = 2;
+              TextValidationHelpers.field_a = 2;
               ga.field_i = 2;
               LogoRenderHelpers.field_a = 25;
               return;
             }
-            if (pp.field_a != 0 &&
-              pp.field_a != 1) {
+            if (TextValidationHelpers.field_a != 0 &&
+              TextValidationHelpers.field_a != 1) {
               if (!MusicVoice.a((byte) 91)) {
                 return;
               }
@@ -238,7 +238,7 @@ abstract class WidgetLayer extends WidgetGroup {
                   return;
                 }
                 if ((param0 & 4) != 0) {
-                  pp.field_a = 2;
+                  TextValidationHelpers.field_a = 2;
                   LogoRenderHelpers.field_a = 25;
                   ga.field_i = 2;
                 }
@@ -259,7 +259,7 @@ abstract class WidgetLayer extends WidgetGroup {
               return;
             }
             ga.field_i = 2;
-            pp.field_a = 2;
+            TextValidationHelpers.field_a = 2;
             LogoRenderHelpers.field_a = 25;
             return;
           }
@@ -268,7 +268,7 @@ abstract class WidgetLayer extends WidgetGroup {
             if ((param0 & 2) != 0) {
               GameClock.field_d = GameClock.field_d + 1;
             }
-            if (pp.field_a != 3) {
+            if (TextValidationHelpers.field_a != 3) {
               return;
             }
             if (MatchCompleteScreen.field_E <= 2 &&
@@ -278,7 +278,7 @@ abstract class WidgetLayer extends WidgetGroup {
             SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
             ga.field_i = 4;
             LoadingProgressDialog.field_eb = ClientResourceHelpers.field_a;
-            pp.field_a = -1;
+            TextValidationHelpers.field_a = -1;
             return;
           }
           if (param1 == 2) {
@@ -292,68 +292,68 @@ abstract class WidgetLayer extends WidgetGroup {
               ga.field_i = 5;
               LoadingProgressDialog.field_eb = LoadingProgressDialog.field_db + "<br><br>" + CacheEntry.field_A[AgeValidator.field_k];
             } else {
-              ArchiveNetworkRequest.field_G = pp.field_a;
+              ArchiveNetworkRequest.field_G = TextValidationHelpers.field_a;
               LoadingProgressDialog.field_eb = CacheEntry.field_A[AgeValidator.field_k];
             }
-            pp.field_a = -1;
+            TextValidationHelpers.field_a = -1;
             BitPacketBuffer.field_q = BitPacketBuffer.field_q | 1 << param0;
             QuickChatHelpDialog.field_Sb = true;
             SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
             return;
           }
           if (param1 == 3) {
-            if (pp.field_a == 5) {
+            if (TextValidationHelpers.field_a == 5) {
               ga.field_i = 8;
               LogoRenderHelpers.field_a = 250;
-              pp.field_a = -1;
+              TextValidationHelpers.field_a = -1;
               LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(IntNode.field_n, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
-              wc.field_b = true;
+              HalfRgbBlendHelpers.field_b = true;
               return;
             }
           } else {
             if (4 == param1) {
-              if (pp.field_a != 5) {
+              if (TextValidationHelpers.field_a != 5) {
                 return;
               }
               ga.field_i = 9;
-              pp.field_a = -1;
+              TextValidationHelpers.field_a = -1;
               LogoRenderHelpers.field_a = 250;
               LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
-              wc.field_b = true;
+              HalfRgbBlendHelpers.field_b = true;
               return;
             }
             if (5 != param1) {
               if (param1 != 6) {
                 return;
               }
-              if (pp.field_a == 11) {
+              if (TextValidationHelpers.field_a == 11) {
                 if (AlternateNumericLoginCredentials.field_s) {
                   return;
                 }
                 ga.field_i = 12;
-                pp.field_a = -1;
+                TextValidationHelpers.field_a = -1;
                 LoadingProgressDialog.field_eb = CalendarMatchmakingState.field_a;
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 return;
               }
             } else {
-              if (pp.field_a == 5) {
+              if (TextValidationHelpers.field_a == 5) {
                 ga.field_i = 9;
                 LogoRenderHelpers.field_a = 250;
-                pp.field_a = -1;
+                TextValidationHelpers.field_a = -1;
                 LoadingProgressDialog.field_eb = GamePresentationHelpers.formatIndexedText(ByteStorage.field_c, new String[]{AppletSettingsUiHelpers.field_b}, (byte) 103);
-                wc.field_b = true;
+                HalfRgbBlendHelpers.field_b = true;
                 return;
               }
               if (!GameConnectionHelpers.field_f) {
                 if (ValidationIconWidget.field_N) {
                   return;
                 }
-                ArchiveNetworkRequest.field_G = pp.field_a;
+                ArchiveNetworkRequest.field_G = TextValidationHelpers.field_a;
                 ga.field_i = 10;
                 GameConnectionHelpers.field_f = true;
                 LoadingProgressDialog.field_eb = QuickChatHelpDialog.field_Tb;
-                pp.field_a = -1;
+                TextValidationHelpers.field_a = -1;
                 return;
               }
             }

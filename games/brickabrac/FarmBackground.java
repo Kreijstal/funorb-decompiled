@@ -17,7 +17,7 @@ final class FarmBackground extends BackgroundScene {
           field_v = (UiComponent) null;
         }
         if (this.hasSprites((byte) -122)) {
-          var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -36);
+          var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -36);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             RegistrationResponseDialog.a(colorIndex, var6, 2, MainMenuScreen.field_w, -13, false);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -146,7 +146,7 @@ final class FarmBackground extends BackgroundScene {
         gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           textSequence = (CharSequence) ((Object) text);
-          delimiterCount = pp.countCharacter((byte) 120, delimiter, textSequence);
+          delimiterCount = TextValidationHelpers.countCharacter((byte) 120, delimiter, textSequence);
           parts = new String[1 + delimiterCount];
           nextPartIndex = 0;
           guardCalculation = -40 % ((obfuscationGuard - 61) / 61);

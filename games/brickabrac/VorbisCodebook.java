@@ -123,7 +123,7 @@ final class VorbisCodebook {
 
     private final static int lookup1Values(int entries, int dimensions) {
         int values = 0;
-        for (values = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; hh.integerPower(dimensions, 29605, values) > entries; values--) {
+        for (values = (int)Math.pow((double)entries, 1.0 / (double)dimensions) + 1; IntegerPowerHelpers.integerPower(dimensions, 29605, values) > entries; values--) {
         }
         return values;
     }
@@ -163,7 +163,7 @@ final class VorbisCodebook {
           entryOrSparse = 0;
           codeLengthOrUnusedIndex = VorbisSample.readBits(5) + 1;
           while (entryOrSparse < this.entryCount) {
-            runCount = VorbisSample.readBits(ed.unsignedBitLength(9, this.entryCount - entryOrSparse));
+            runCount = VorbisSample.readBits(IntegerBitLengthHelpers.unsignedBitLength(9, this.entryCount - entryOrSparse));
             for (runEntry = 0; runEntry < runCount; runEntry++) {
               orderedEntry = entryOrSparse;
               entryOrSparse++;

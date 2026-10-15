@@ -250,7 +250,7 @@ final class VorbisSample extends IntrusiveNode {
             trigC[2 * trigCIndex + 1] = -(float)Math.sin((double)(4 * trigCIndex + 2) * 3.141592653589793 / (double)blockSize);
           }
           bitReverse = new int[eighthBlock];
-          permutationBits = ed.unsignedBitLength(9, eighthBlock - 1);
+          permutationBits = IntegerBitLengthHelpers.unsignedBitLength(9, eighthBlock - 1);
           for (permutationIndex = 0; permutationIndex < eighthBlock; permutationIndex++) {
             bitReverse[permutationIndex] = KeyboardInput.reverseLowBits(permutationBits, permutationIndex, -1);
           }
@@ -516,7 +516,7 @@ final class VorbisSample extends IntrusiveNode {
         int overlapLength;
         VorbisSample.setBitInput(this.packets[packetIndex], 0);
         VorbisSample.readBit();
-        mode = VorbisSample.readBits(ed.unsignedBitLength(9, modeMappings.length - 1));
+        mode = VorbisSample.readBits(IntegerBitLengthHelpers.unsignedBitLength(9, modeMappings.length - 1));
         longBlock = longBlockModes[mode] ? 1 : 0;
         if (longBlock == 0) {
           selectedBlockSize = shortBlockSize;
@@ -635,7 +635,7 @@ final class VorbisSample extends IntrusiveNode {
             transformBlock[4 * mergeIndex + 3] = (upperOdd3 - lowerOdd3) * mergeCos - (upperOdd1 - lowerOdd1) * mergeNegSin;
             transformBlock[4 * mergeIndex + 1] = (upperOdd1 - lowerOdd1) * mergeCos + (upperOdd3 - lowerOdd3) * mergeNegSin;
           }
-          blockBits = ed.unsignedBitLength(9, blockSize - 1);
+          blockBits = IntegerBitLengthHelpers.unsignedBitLength(9, blockSize - 1);
           for (stage = 0; stage < blockBits - 3; stage++) {
             groupSpan = blockSize >> stage + 2;
             trigStride = 8 << stage;

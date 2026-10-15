@@ -50,10 +50,10 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           return true;
         }
         if (MeshAttributeRecord.currentKeyCode == param1) {
-          hd.quickChatMenu.resetSelection((byte) 41);
+          InvitationDialogHelpers.quickChatMenu.resetSelection((byte) 41);
           return true;
         }
-        stackIn_10_0 = (hd.quickChatMenu != null) && (hd.quickChatMenu.handleShortcutKey(param2, param0, (byte) -126));
+        stackIn_10_0 = (InvitationDialogHelpers.quickChatMenu != null) && (InvitationDialogHelpers.quickChatMenu.handleShortcutKey(param2, param0, (byte) -126));
         return stackIn_10_0;
     }
 

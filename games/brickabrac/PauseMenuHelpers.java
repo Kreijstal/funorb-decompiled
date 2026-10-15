@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf {
+final class PauseMenuHelpers {
     static byte[][] bytePool100;
     static int decodedCanvasWidth;
     static int checksumMismatchCount;
@@ -31,7 +31,7 @@ final class cf {
         Object var5 = null;
         int var4Lifetime1;
         if (obfuscationGuard != -2635) {
-          cf.a(-1);
+          PauseMenuHelpers.a(-1);
           var6 = null;
           var4 = screenId;
           if (var4 == 1) {
@@ -95,14 +95,14 @@ final class cf {
         if (param0 == 62) {
           return 2 <= QuickChatHelpDialog.loginPrivilegeByteOne ? true : false;
         }
-        cf.a((byte) 59);
+        PauseMenuHelpers.a((byte) 59);
         return 2 <= QuickChatHelpDialog.loginPrivilegeByteOne ? true : false;
     }
 
     public static void a(int param0) {
         bytePool100 = (byte[][]) null;
         if (param0 != -12251) {
-          cf.a((byte) -13);
+          PauseMenuHelpers.a((byte) -13);
           rankingSourceIndices = null;
           return;
         }

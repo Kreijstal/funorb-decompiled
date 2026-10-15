@@ -187,11 +187,11 @@ class RectangleBody extends MovingBody {
           if (negativeNormalVelocity > 0) {
             return false;
           }
-          if (contactTime256 > ea.collisionTime256) {
+          if (contactTime256 > InputOptionsHelpers.collisionTime256) {
             return true;
           }
           AccountResponse.collisionX256 = contactCenterX - circle.radius256;
-          ea.collisionTime256 = contactTime256;
+          InputOptionsHelpers.collisionTime256 = contactTime256;
           SpriteGeometry.collisionNormalX256 = normalX256;
           DualLinkIterator.collisionNormalY256 = normalY256;
           GameClock.collisionBody = this;
@@ -309,7 +309,7 @@ class RectangleBody extends MovingBody {
           StrongCacheEntry.field_I.closeDialog(17);
         }
         MusicPatch.field_o = new PlayerNameChooserPanel();
-        rj.accountContentLayer.transitionToContent((byte) 110, MusicPatch.field_o);
+        TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 110, MusicPatch.field_o);
     }
 
     int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {

@@ -31,12 +31,12 @@ final class MessageScreen extends MenuScreen {
         int var6Lifetime2;
         int var7Lifetime2;
         if (obfuscationGuard == -19824) {
-          cf.rankingSourceIndices[ProxySocketConnector.rankingRowCount] = sourceIndex;
+          PauseMenuHelpers.rankingSourceIndices[ProxySocketConnector.rankingRowCount] = sourceIndex;
           VerticalScrollbar.rankingSortIndices[ProxySocketConnector.rankingRowCount] = ProxySocketConnector.rankingRowCount;
           DialogMessagePanel.rankingRatings[ProxySocketConnector.rankingRowCount] = rating;
           if (rating <= BoundedFile.field_l) {
             if (IntArrayRequest.field_u > rating) {
-              ba.field_w = rating;
+              UiComponentNode.field_w = rating;
             }
             RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
             ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
@@ -52,15 +52,15 @@ final class MessageScreen extends MenuScreen {
             if (KeyDispatchHelpers.field_b < var7) {
               KeyDispatchHelpers.field_b = var7;
             }
-            if (ba.field_w > var7) {
-              ba.field_w = var7;
+            if (UiComponentNode.field_w > var7) {
+              UiComponentNode.field_w = var7;
             }
             ProxySocketConnector.rankingRowCount = ProxySocketConnector.rankingRowCount + 1;
             return;
           }
           KeyDispatchHelpers.field_b = rating;
           if (IntArrayRequest.field_u > rating) {
-            ba.field_w = rating;
+            UiComponentNode.field_w = rating;
           }
           RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
           ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
@@ -76,20 +76,20 @@ final class MessageScreen extends MenuScreen {
           if (KeyDispatchHelpers.field_b < var7Lifetime2) {
             KeyDispatchHelpers.field_b = var7Lifetime2;
           }
-          if (ba.field_w > var7Lifetime2) {
-            ba.field_w = var7Lifetime2;
+          if (UiComponentNode.field_w > var7Lifetime2) {
+            UiComponentNode.field_w = var7Lifetime2;
           }
           ProxySocketConnector.rankingRowCount = ProxySocketConnector.rankingRowCount + 1;
           return;
         }
         var8 = (StringBuilder) null;
         MessageScreen.resizeAndFillTextBuffer('￰', (StringBuilder) null, -124, false);
-        cf.rankingSourceIndices[ProxySocketConnector.rankingRowCount] = sourceIndex;
+        PauseMenuHelpers.rankingSourceIndices[ProxySocketConnector.rankingRowCount] = sourceIndex;
         VerticalScrollbar.rankingSortIndices[ProxySocketConnector.rankingRowCount] = ProxySocketConnector.rankingRowCount;
         DialogMessagePanel.rankingRatings[ProxySocketConnector.rankingRowCount] = rating;
         if (rating <= BoundedFile.field_l) {
           if (IntArrayRequest.field_u > rating) {
-            ba.field_w = rating;
+            UiComponentNode.field_w = rating;
           }
           RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
           ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
@@ -104,7 +104,7 @@ final class MessageScreen extends MenuScreen {
         } else {
           KeyDispatchHelpers.field_b = rating;
           if (IntArrayRequest.field_u > rating) {
-            ba.field_w = rating;
+            UiComponentNode.field_w = rating;
           }
           RankingsScreen.rankingWins[ProxySocketConnector.rankingRowCount] = wins;
           ObjectHistoryBuffer.rankingDraws[ProxySocketConnector.rankingRowCount] = draws;
@@ -121,8 +121,8 @@ final class MessageScreen extends MenuScreen {
         if (KeyDispatchHelpers.field_b < var7Lifetime1) {
           KeyDispatchHelpers.field_b = var7Lifetime1;
         }
-        if (ba.field_w > var7Lifetime1) {
-          ba.field_w = var7Lifetime1;
+        if (UiComponentNode.field_w > var7Lifetime1) {
+          UiComponentNode.field_w = var7Lifetime1;
         }
         ProxySocketConnector.rankingRowCount = ProxySocketConnector.rankingRowCount + 1;
         return;

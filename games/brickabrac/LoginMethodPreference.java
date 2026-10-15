@@ -59,7 +59,7 @@ final class LoginMethodPreference {
             return stackIn_2_0;
           }
           if (SpaceBackground.isLocalPlayerName(name, -26)) {
-            stackIn_5_0 = rj.field_a;
+            stackIn_5_0 = TextHuffmanHelpers.field_a;
             return stackIn_5_0;
           }
           if (expectedLoginStage != LevelMetadata.field_m) {

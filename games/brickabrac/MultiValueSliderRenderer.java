@@ -131,13 +131,13 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
             if (20 <= var6) {
               if (30 <= var6) {
                 var7 = (-var6 + 50) * 256 / 20;
-                aa.field_b.f(var3, var4, var7);
+                JavaRandomHelpers.field_b.f(var3, var4, var7);
               } else {
-                aa.field_b.f(var3, var4, 256);
+                JavaRandomHelpers.field_b.f(var3, var4, 256);
               }
             } else {
               var7 = var6 * 256 / 20;
-              aa.field_b.f(var3, var4, var7);
+              JavaRandomHelpers.field_b.f(var3, var4, var7);
             }
           }
           var6Lifetime3 = -140 + MatchResultScreen.logoAnimationTicks;
@@ -167,13 +167,13 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
           var6Lifetime1 < 50) {
           if (20 > var6Lifetime1) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
-            aa.field_b.f(var3, var4, var7Lifetime1);
+            JavaRandomHelpers.field_b.f(var3, var4, var7Lifetime1);
           } else {
             if (30 > var6Lifetime1) {
-              aa.field_b.f(var3, var4, 256);
+              JavaRandomHelpers.field_b.f(var3, var4, 256);
             } else {
               var7Lifetime1 = (-var6Lifetime1 + 50) * 256 / 20;
-              aa.field_b.f(var3, var4, var7Lifetime1);
+              JavaRandomHelpers.field_b.f(var3, var4, var7Lifetime1);
             }
           }
         }

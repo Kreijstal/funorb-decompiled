@@ -81,7 +81,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
             for (buttonIndex = 0; buttonIndex < suggestionCount; buttonIndex++) {
               this.buttons[buttonIndex] = new FocusableWidget(this.suggestions[buttonIndex], (WidgetListener) (this));
               this.buttons[buttonIndex].renderer = (WidgetRenderer) ((Object) rowRenderer);
-              this.buttons[buttonIndex].tooltip = aa.field_c;
+              this.buttons[buttonIndex].tooltip = JavaRandomHelpers.field_c;
               this.buttons[buttonIndex].setBounds(15, 0, buttonIndex * 16 + 20, (byte) -119, 80);
               this.addChild(this.buttons[buttonIndex], true);
             }
@@ -112,7 +112,7 @@ final class UsernameSuggestionPanel extends WidgetGroup implements WidgetActionL
         if (param0 > -41) {
           return;
         }
-        aa.a((byte) 96);
+        JavaRandomHelpers.a((byte) 96);
         ArchiveIndex.a(-32120);
     }
 

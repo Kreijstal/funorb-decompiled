@@ -329,7 +329,7 @@ final class ArchiveIndex {
             if (expectedDigest.length != 64) {
               throw new RuntimeException();
             }
-            this.indexDigest = jd.computeWhirlpoolDigest(data, 0, -14970, data.length);
+            this.indexDigest = WhirlpoolDigestHelpers.computeWhirlpoolDigest(data, 0, -14970, data.length);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.indexDigest[var4_int] != expectedDigest[var4_int]) {
                 throw new RuntimeException();

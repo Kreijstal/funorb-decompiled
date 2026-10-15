@@ -51,7 +51,7 @@ final class QuickChatPopupHelpers {
           return;
         }
         QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(inputEnabled, -15211);
-        anyPressedItem = hd.quickChatMenu.hasPressedItem(28) ? 1 : 0;
+        anyPressedItem = InvitationDialogHelpers.quickChatMenu.hasPressedItem(28) ? 1 : 0;
         if (0 != BackgroundScene.pressedButton) {
           if (anyPressedItem != 0) {
             if (!inputEnabled) {
@@ -59,7 +59,7 @@ final class QuickChatPopupHelpers {
               if (obfuscationGuard < 89) {
                 field_e = (PaletteFont) null;
               }
-              rightEdgeWithInputDisabled = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+              rightEdgeWithInputDisabled = InvitationDialogHelpers.quickChatMenu.getOpenChainWidth((byte) -92) + InvitationDialogHelpers.quickChatMenu.screenX;
               if (rightEdgeWithInputDisabled > 640) {
                 HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
                 return;
@@ -73,10 +73,10 @@ final class QuickChatPopupHelpers {
               HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX - 5;
               return;
             }
-            hd.quickChatMenu.processPressedItems(38, messageOpcode, filterOpcode);
+            InvitationDialogHelpers.quickChatMenu.processPressedItems(38, messageOpcode, filterOpcode);
             QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(inputEnabled, -15211);
             if (obfuscationGuard >= 89) {
-              rightEdgeAfterPress = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+              rightEdgeAfterPress = InvitationDialogHelpers.quickChatMenu.getOpenChainWidth((byte) -92) + InvitationDialogHelpers.quickChatMenu.screenX;
               if (rightEdgeAfterPress > 640) {
                 HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
                 return;
@@ -91,7 +91,7 @@ final class QuickChatPopupHelpers {
               return;
             }
             field_e = (PaletteFont) null;
-            rightEdgeAfterPressWithGuardSideEffect = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+            rightEdgeAfterPressWithGuardSideEffect = InvitationDialogHelpers.quickChatMenu.getOpenChainWidth((byte) -92) + InvitationDialogHelpers.quickChatMenu.screenX;
             if (rightEdgeAfterPressWithGuardSideEffect <= 640) {
               if (635 <= rightEdgeAfterPressWithGuardSideEffect) {
                 return;
@@ -109,7 +109,7 @@ final class QuickChatPopupHelpers {
           inputEnabled = false;
         }
         if (inputEnabled) {
-          hd.quickChatMenu.processPressedItems(38, messageOpcode, filterOpcode);
+          InvitationDialogHelpers.quickChatMenu.processPressedItems(38, messageOpcode, filterOpcode);
         }
         if (anyPressedItem != 0) {
           QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(inputEnabled, -15211);
@@ -117,7 +117,7 @@ final class QuickChatPopupHelpers {
         if (obfuscationGuard < 89) {
           field_e = (PaletteFont) null;
         }
-        rightEdge = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
+        rightEdge = InvitationDialogHelpers.quickChatMenu.getOpenChainWidth((byte) -92) + InvitationDialogHelpers.quickChatMenu.screenX;
         if (rightEdge > 640) {
           HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
           return;

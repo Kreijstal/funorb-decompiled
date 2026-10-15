@@ -17,7 +17,7 @@ final class ArcticBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
             return;
           }
-          var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
+          var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             AccountRegistrationPanel.a(2, colorIndex, var8, -35, 23275, Brick.field_K);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -31,7 +31,7 @@ final class ArcticBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, RadialSelectorRenderer.arcticBackgroundColors[colorIndex], 16777215);
           return;
         }
-        RasterCacheSurface var9 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
+        RasterCacheSurface var9 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
         if (var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
           return;

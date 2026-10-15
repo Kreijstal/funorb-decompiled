@@ -189,7 +189,7 @@ final class WidgetTheme {
           PopupWidgetLayer.decodedSpriteAlpha = new byte[IncomingPacketHelpers.decodedSpriteCount][];
           ArrayWidgetGroup.decodedSpriteOffsetX = new int[IncomingPacketHelpers.decodedSpriteCount];
           metadataPacket.position = -(8 * IncomingPacketHelpers.decodedSpriteCount) + (-7 + data.length);
-          cf.decodedCanvasWidth = metadataPacket.readUnsignedShort(65280);
+          PauseMenuHelpers.decodedCanvasWidth = metadataPacket.readUnsignedShort(65280);
           FullscreenFailureDialog.decodedCanvasHeight = metadataPacket.readUnsignedShort(65280);
           paletteSize = 1 + (metadataPacket.readUnsignedByte(255) & 255);
           for (var4 = 0; IncomingPacketHelpers.decodedSpriteCount > var4; var4++) {

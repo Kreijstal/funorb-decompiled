@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rj {
+final class TextHuffmanHelpers {
     static AccountContentTransitionLayer accountContentLayer;
     static String field_a;
     static int field_b;
@@ -27,7 +27,7 @@ final class rj {
         try {
           QuickChatCategoryRegistry.textHuffman = codec;
           if (obfuscationGuard) {
-            rj.b(-94);
+            TextHuffmanHelpers.b(-94);
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "rj.C(" + (codec != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -41,7 +41,7 @@ final class rj {
           return;
         }
         HuffmanCodec var2 = (HuffmanCodec) null;
-        rj.installTextHuffman((HuffmanCodec) null, true);
+        TextHuffmanHelpers.installTextHuffman((HuffmanCodec) null, true);
         accountContentLayer = null;
         field_a = null;
     }

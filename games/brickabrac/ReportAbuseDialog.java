@@ -279,8 +279,8 @@ final class ReportAbuseDialog extends UiComponent {
             this.body.addChild(reasonColumns[2], 0);
             this.reasonButtons = new UiComponent[QuickChatPhraseRegistry.field_a];
             for (reasonId = 0; reasonId < QuickChatPhraseRegistry.field_a; reasonId++) {
-              if (kd.field_d[reasonId] != null) {
-                this.reasonButtons[reasonId] = new UiComponent(0L, reasonStyle, kd.field_d[reasonId]);
+              if (BackgroundSurfaceHelpers.field_d[reasonId] != null) {
+                this.reasonButtons[reasonId] = new UiComponent(0L, reasonStyle, BackgroundSurfaceHelpers.field_d[reasonId]);
                 this.reasonButtons[reasonId].horizontalAlignment = 0;
                 reasonButton = this.reasonButtons[reasonId];
                 targetKnown = (playerName != null);

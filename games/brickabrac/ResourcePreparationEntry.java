@@ -173,7 +173,7 @@ final class ResourcePreparationEntry {
           }
           if (SpaceBackground.field_r) {
             if (MatchingTextValidator.field_n) {
-              stackIn_25_0 = hm.field_b;
+              stackIn_25_0 = LobbySetupHelpers.field_b;
             } else {
               stackIn_25_0 = ArchiveFetchClient.field_j;
             }

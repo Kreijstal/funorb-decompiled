@@ -168,21 +168,21 @@ abstract class GameClock {
     }
 
     final static void b(byte param0) {
-        kd.field_d = new String[QuickChatPhraseRegistry.field_a];
-        kd.field_d[18] = NineSliceFrame.field_c;
-        kd.field_d[4] = BackgroundRegistry.field_a;
-        kd.field_d[16] = RichTextLayout.field_o;
-        kd.field_d[21] = ContextMenu.field_Rb;
-        kd.field_d[5] = TextFieldValidator.field_i;
-        kd.field_d[15] = DualLinkNode.field_i;
-        kd.field_d[9] = IntegerValidationHelpers.field_b;
-        kd.field_d[6] = DelayedPacket.field_i;
-        kd.field_d[20] = GrowableIntList.field_n;
-        kd.field_d[7] = AppletFlowHelpers.field_i;
-        kd.field_d[17] = RasterCacheSurface.field_l;
-        kd.field_d[19] = MeshAudioHelpers.field_g;
-        kd.field_d[param0] = ed.field_a;
-        kd.field_d[11] = AchievementsScreen.field_I;
+        BackgroundSurfaceHelpers.field_d = new String[QuickChatPhraseRegistry.field_a];
+        BackgroundSurfaceHelpers.field_d[18] = NineSliceFrame.field_c;
+        BackgroundSurfaceHelpers.field_d[4] = BackgroundRegistry.field_a;
+        BackgroundSurfaceHelpers.field_d[16] = RichTextLayout.field_o;
+        BackgroundSurfaceHelpers.field_d[21] = ContextMenu.field_Rb;
+        BackgroundSurfaceHelpers.field_d[5] = TextFieldValidator.field_i;
+        BackgroundSurfaceHelpers.field_d[15] = DualLinkNode.field_i;
+        BackgroundSurfaceHelpers.field_d[9] = IntegerValidationHelpers.field_b;
+        BackgroundSurfaceHelpers.field_d[6] = DelayedPacket.field_i;
+        BackgroundSurfaceHelpers.field_d[20] = GrowableIntList.field_n;
+        BackgroundSurfaceHelpers.field_d[7] = AppletFlowHelpers.field_i;
+        BackgroundSurfaceHelpers.field_d[17] = RasterCacheSurface.field_l;
+        BackgroundSurfaceHelpers.field_d[19] = MeshAudioHelpers.field_g;
+        BackgroundSurfaceHelpers.field_d[param0] = IntegerBitLengthHelpers.field_a;
+        BackgroundSurfaceHelpers.field_d[11] = AchievementsScreen.field_I;
     }
 
     static {

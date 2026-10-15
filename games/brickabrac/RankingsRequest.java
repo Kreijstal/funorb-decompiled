@@ -116,15 +116,15 @@ final class RankingsRequest extends IntrusiveNode {
           DiagnosticTextLine.a((byte) 66);
           TextFieldRenderer.field_A = WidgetPaintStyle.field_a;
           if (!TextFieldRenderer.field_A) {
-            hd.a(true);
+            InvitationDialogHelpers.a(true);
             BitPacketBuffer.field_q = jj.field_d;
           } else {
             if (param3.pack.packId != 0) {
-              hd.a(true);
+              InvitationDialogHelpers.a(true);
               BitPacketBuffer.field_q = jj.field_d;
             } else {
               if (param2 > 0) {
-                hd.a(true);
+                InvitationDialogHelpers.a(true);
                 BitPacketBuffer.field_q = jj.field_d;
               }
             }

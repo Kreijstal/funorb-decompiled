@@ -178,9 +178,9 @@ class DualLinkNode extends IntrusiveNode {
     }
 
     final static void prepareRankingScratch(byte obfuscationGuard, int recordCount, int rowLimit) {
-        if (null == cf.rankingSourceIndices ||
-          !(recordCount <= cf.rankingSourceIndices.length)) {
-          cf.rankingSourceIndices = new int[recordCount * 2];
+        if (null == PauseMenuHelpers.rankingSourceIndices ||
+          !(recordCount <= PauseMenuHelpers.rankingSourceIndices.length)) {
+          PauseMenuHelpers.rankingSourceIndices = new int[recordCount * 2];
         }
         if (DialogMessagePanel.rankingRatings == null ||
           !(DialogMessagePanel.rankingRatings.length >= recordCount)) {
@@ -215,7 +215,7 @@ class DualLinkNode extends IntrusiveNode {
           return;
         }
         ProxySocketConnector.rankingRowCount = 0;
-        ba.field_w = 2147483647;
+        UiComponentNode.field_w = 2147483647;
         IntArrayRequest.field_u = 2147483647;
         KeyDispatchHelpers.field_b = -2147483648;
     }

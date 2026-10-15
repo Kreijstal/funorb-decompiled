@@ -152,7 +152,7 @@ final class CacheIoRequest extends ResourceRequest {
           QuickChatPhraseDefinition.field_E.setBounds(18, np.uiRowHeight + 2, -40 + (-2 + IterableIntrusiveHashTable.field_b.width) - DialogMessagePanel.uiScrollbarWidth, 42 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
           TimedSplashScreen.field_u.setScrollPaneBounds(2, (byte) -109, IterableIntrusiveHashTable.field_b.width, 0, np.uiRowHeight + 2 + 20, DialogMessagePanel.uiScrollbarWidth, -2 + IterableIntrusiveHashTable.field_b.height - (np.uiRowHeight + 20));
           GameUiController.field_e.setBounds(40, -40 + NinjaBackground.field_w.height, 0, NinjaBackground.field_w.width, (byte) 64);
-          ba.field_v.setBounds(30, 0, 0, MultiplayerMatch.field_d.width, (byte) 64);
+          UiComponentNode.field_v.setBounds(30, 0, 0, MultiplayerMatch.field_d.width, (byte) 64);
           QuickChatPhraseRegistry.field_e.setBounds(-2 + (-40 + MultiplayerMatch.field_d.height) - 30, 30, 0, MultiplayerMatch.field_d.width, (byte) 64);
           var2_int = RankingsRequest.gameSettingCount + 3;
           if (ScreenshotViewer.field_n.length < 2) {
@@ -169,7 +169,7 @@ final class CacheIoRequest extends ResourceRequest {
           if (var4 > 40) {
             var4 = 40;
           }
-          jd.field_a.setBounds(var4, 5, 5, -5 + (-5 + QuickChatPhraseRegistry.field_e.width), (byte) 64);
+          WhirlpoolDigestHelpers.field_a.setBounds(var4, 5, 5, -5 + (-5 + QuickChatPhraseRegistry.field_e.width), (byte) 64);
           var5 = 5 + var4 + 2;
           for (var6 = 0; 4 + RankingsRequest.gameSettingCount > var6; var6++) {
             if ((var6 != 1 ||

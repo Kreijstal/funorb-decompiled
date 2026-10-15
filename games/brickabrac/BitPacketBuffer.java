@@ -246,7 +246,7 @@ final class BitPacketBuffer extends PacketBuffer {
         int fieldTemp$0 = 0;
         int var5;
         var5 = BrickABrac.field_J ? 1 : 0;
-        value = value & kk.bitMasks[bitCount];
+        value = value & IndexedSpriteHelpers.bitMasks[bitCount];
         if (obfuscationGuard != -17566) {
           this.finishBitRead((byte) 28);
         }
@@ -328,7 +328,7 @@ final class BitPacketBuffer extends PacketBuffer {
     final static void a(RgbSprite param0, RasterCacheSurface param1, int param2, int param3, byte param4, int param5) {
         try {
           IndexedSpriteGeometry.pushSpriteRaster(-102, param1.sprite);
-          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, hh.volcanicBackgroundColors[param2], 10792131);
+          Rasterizer2D.fillVerticalGradient(0, 0, param1.width, param1.height, IntegerPowerHelpers.volcanicBackgroundColors[param2], 10792131);
           param0.drawTransparent((param1.width - param0.canvasWidth) / 2, -(75 / param3) - param0.canvasHeight + (param5 + param1.height));
           RasterStackHelpers.popRaster(-102);
           if (param4 < 6) {
@@ -350,14 +350,14 @@ final class BitPacketBuffer extends PacketBuffer {
         while (bitCount > availableBits) {
           previousByteIndex = byteIndex;
           byteIndex++;
-          value = value + ((kk.bitMasks[availableBits] & this.data[previousByteIndex]) << bitCount - availableBits);
+          value = value + ((IndexedSpriteHelpers.bitMasks[availableBits] & this.data[previousByteIndex]) << bitCount - availableBits);
           bitCount = bitCount - availableBits;
           availableBits = 8;
         }
         if (availableBits == bitCount) {
-          value = value + (this.data[byteIndex] & kk.bitMasks[availableBits]);
+          value = value + (this.data[byteIndex] & IndexedSpriteHelpers.bitMasks[availableBits]);
         } else {
-          value = value + (this.data[byteIndex] >> -bitCount + availableBits & kk.bitMasks[bitCount]);
+          value = value + (this.data[byteIndex] >> -bitCount + availableBits & IndexedSpriteHelpers.bitMasks[bitCount]);
         }
         return value;
     }

@@ -76,12 +76,12 @@ final class ConstructionBackground extends BackgroundScene {
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var6 = null;
         if (this.hasSprites((byte) -116)) {
-          var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -47);
+          var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -47);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             FullscreenFailureKind.a(-10, colorIndex, var6, 2, -119, DisplayModeInfo.field_g);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          ConstructionBackground.a(CanvasInputCleanup.field_a, 2, scroll16, 306, -10, IntrusiveNode.field_d, destinationX, 5, destinationY, 480, er.field_d, colorIndex, var6.sprite);
+          ConstructionBackground.a(CanvasInputCleanup.field_a, 2, scroll16, 306, -10, IntrusiveNode.field_d, destinationX, 5, destinationY, 480, IntegerRemainderHelpers.field_d, colorIndex, var6.sprite);
         } else {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
         }
@@ -119,7 +119,7 @@ final class ConstructionBackground extends BackgroundScene {
         CanvasInputCleanup.field_a = UiGeometryHelpers.createScaledHalfSizeSprite(0, ValidatedTextFieldWidget.constructionNearSprite);
         IntrusiveNode.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, AchievementBrowserScreen.constructionMidSprite);
         DisplayModeInfo.field_g = UiGeometryHelpers.createScaledHalfSizeSprite(0, ValidatedTextFieldWidget.constructionFarSprite);
-        er.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, IntNode.constructionSmokeSprite);
+        IntegerRemainderHelpers.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, IntNode.constructionSmokeSprite);
         GamePresentationHelpers.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_caps", 2);
         NodeDequeCursor.constructionSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.backgroundSpriteArchive, "construction_segs", 2);
         OpacityWidget.constructionCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("construct", "construction_centre", (byte) 127, AchievementIcon.backgroundSpriteArchive);
@@ -127,7 +127,7 @@ final class ConstructionBackground extends BackgroundScene {
         NodeDequeCursor.constructionSegsSprites[1] = Under13RegistrationNoticePanel.a(NodeDequeCursor.constructionSegsSprites[0], obfuscationGuard);
         OpacityWidget.constructionCentreSprites[1] = SpriteInputHelpers.createHalfSizeSprite(-16371, OpacityWidget.constructionCentreSprites[0]);
         SpriteInputHelpers.encodeBinaryMaskRuns(IntNode.constructionSmokeSprite, 0);
-        SpriteInputHelpers.encodeBinaryMaskRuns(er.field_d, 0);
+        SpriteInputHelpers.encodeBinaryMaskRuns(IntegerRemainderHelpers.field_d, 0);
         return true;
     }
 

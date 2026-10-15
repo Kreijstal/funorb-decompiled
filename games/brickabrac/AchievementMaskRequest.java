@@ -25,7 +25,7 @@ final class AchievementMaskRequest extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1) {
-        gj.field_c[param0].drawTransparent((640 - gj.field_c[param0].canvasWidth) / 2, param1);
+        TableQuickChatHelpers.field_c[param0].drawTransparent((640 - TableQuickChatHelpers.field_c[param0].canvasWidth) / 2, param1);
     }
 
     AchievementMaskRequest() {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc {
+final class HalfRgbBlendHelpers {
     static boolean uiPressClaimed;
     static int field_e;
     static boolean field_b;

@@ -206,7 +206,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
             field_i = 90;
           }
           CacheEntry.a(param17, param11, 45, param10, param13, param1, param3, param7, param18, param6, param14, param0, param16, param8, param15);
-          ed.a(param5, param7, param2, (byte) 104);
+          IntegerBitLengthHelpers.a(param5, param7, param2, (byte) 104);
           GameClock.b((byte) 13);
           SingleChildWidget.g((byte) -24);
           SoftwareFramebuffer.b((byte) 40);
@@ -354,28 +354,28 @@ final class RadialSelectorRenderer implements WidgetRenderer {
     final static boolean a(boolean param0, int param1) {
         ResourceArchive var3;
         if (!param0) {
-          if (null == hd.pendingScreen &&
+          if (null == InvitationDialogHelpers.pendingScreen &&
             param1 == AccountMessageDialog.currentScreen.screenId) {
             return true;
           }
-          if (null == hd.pendingScreen) {
+          if (null == InvitationDialogHelpers.pendingScreen) {
             return false;
           }
-          if (hd.pendingScreen.screenId != param1) {
+          if (InvitationDialogHelpers.pendingScreen.screenId != param1) {
             return false;
           }
           return true;
         }
         var3 = (ResourceArchive) null;
         RadialSelectorRenderer.a(97, (byte[]) null, (ResourceArchive) null, (String[]) null, 18, true, (RgbSprite[][]) null, (ResourceArchive) null, -121, (int[]) null, (String[]) null, (RgbSprite[][]) null, (IndexedSprite[]) null, -69, (byte[]) null, (String[][]) null, (String[]) null, (String[][]) null, (int[]) null, (ResourceArchive) null);
-        if (null == hd.pendingScreen &&
+        if (null == InvitationDialogHelpers.pendingScreen &&
           param1 == AccountMessageDialog.currentScreen.screenId) {
           return true;
         }
-        if (null == hd.pendingScreen) {
+        if (null == InvitationDialogHelpers.pendingScreen) {
           return false;
         }
-        if (hd.pendingScreen.screenId != param1) {
+        if (InvitationDialogHelpers.pendingScreen.screenId != param1) {
           return false;
         }
         return true;

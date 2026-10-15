@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hm {
+final class LobbySetupHelpers {
     static String field_c;
     static String[] field_b;
     static String field_a;
@@ -32,12 +32,12 @@ final class hm {
         int var12 = 0;
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
-          wc.field_e = choiceCount;
+          HalfRgbBlendHelpers.field_e = choiceCount;
           Widget.field_p = -1L;
           BufferedFile.gameSettingBitWidths = settingBitWidths;
           RankingsRequest.gameSettingCount = settingBitWidths.length;
           fh.pendingGameOptionsReceived = false;
-          CalendarMatchmakingState.matchmakingChoiceMask = new byte[(wc.field_e + 7) / 8];
+          CalendarMatchmakingState.matchmakingChoiceMask = new byte[(HalfRgbBlendHelpers.field_e + 7) / 8];
           ClientResourceHelpers.currentLobbyGame = null;
           IncomingPacketHelpers.pendingLobbyGame = null;
           var10_int = 0;
@@ -71,7 +71,7 @@ final class hm {
             return;
           }
           BrickABrac.gamePlayerIndex = new SecondaryHashTable(gamePlayerBuckets);
-          ic.optionChangeDeadlineMillis = 0L;
+          LobbyInputHelpers.optionChangeDeadlineMillis = 0L;
           AlternateNumericLoginCredentials.field_o = initialTick;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ final class hm {
         try {
           if (obfuscationGuard != 0) {
             unusedSound = (PcmSound) null;
-            hm.playSoundAtVolume(-91, (PcmSound) null, 44);
+            LobbySetupHelpers.playSoundAtVolume(-91, (PcmSound) null, 44);
           }
           if (buttonText) {
             buttonWidth = LevelResultWireHelpers.fullscreenDialogButtonFont.measureText(text);

@@ -145,13 +145,13 @@ final class HuffmanCodec {
           return;
         }
         try {
-          hd.quickChatMenu = menu;
+          InvitationDialogHelpers.quickChatMenu = menu;
           if (obfuscationGuard != 105) {
             String unusedCookieValue = (String) null;
             HuffmanCodec.a((byte) 84, (java.applet.Applet) null, (String) null, false);
           }
           QuickChatPhraseDefinition.quickChatMenuRoot.children.clear((byte) -72);
-          QuickChatPhraseDefinition.quickChatMenuRoot.addChild(hd.quickChatMenu, 0);
+          QuickChatPhraseDefinition.quickChatMenuRoot.addChild(InvitationDialogHelpers.quickChatMenu, 0);
           TooltipSprite.quickChatMenuOpen = true;
         } catch (RuntimeException failure) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "fk.C(" + obfuscationGuard + ',' + (menu != null ? "{...}" : "null") + ')');

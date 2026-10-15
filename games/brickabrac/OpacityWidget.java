@@ -99,14 +99,14 @@ final class OpacityWidget extends SingleChildWidget {
         int var2Lifetime1;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (hd.pendingScreen == null) {
+          if (InvitationDialogHelpers.pendingScreen == null) {
             return;
           }
           if (AccountMessageDialog.currentScreen instanceof MenuScreen) {
             ((MenuScreen) (AccountMessageDialog.currentScreen)).onExit((byte) 79);
           }
-          AccountMessageDialog.currentScreen = hd.pendingScreen;
-          hd.pendingScreen = null;
+          AccountMessageDialog.currentScreen = InvitationDialogHelpers.pendingScreen;
+          InvitationDialogHelpers.pendingScreen = null;
           NodeDequeCursor.screenTransitionTick = 0;
           if (NewAchievementsScreen.discardGameplayOnTransition) {
             NewAchievementsScreen.discardGameplayOnTransition = false;

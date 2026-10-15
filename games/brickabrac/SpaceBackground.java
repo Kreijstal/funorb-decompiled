@@ -50,7 +50,7 @@ final class SpaceBackground extends BackgroundScene {
           if (!this.hasSprites((byte) -101)) {
             Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 0);
           } else {
-            var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
+            var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
             if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var8);
               var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -63,7 +63,7 @@ final class SpaceBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -101)) {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 0);
         } else {
-          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
+          var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 125);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             HalloweenBackground.a(2, 0, false, colorIndex, NodeDequeCursor.field_b, var7);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

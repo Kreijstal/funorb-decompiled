@@ -250,7 +250,7 @@ final class KeyDispatchHelpers {
             return stackIn_2_0;
           }
           if (2 != LevelMetadata.field_m) {
-            stackIn_6_0 = hd.field_b;
+            stackIn_6_0 = InvitationDialogHelpers.field_b;
             return stackIn_6_0;
           }
           entry = HighscorePackSelector.findIgnoredPlayer(0, lookupName);

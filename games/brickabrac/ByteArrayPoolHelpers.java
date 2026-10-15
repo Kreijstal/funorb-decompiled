@@ -114,8 +114,8 @@ final class ByteArrayPoolHelpers {
         if (Under13RegistrationNoticePanel.bytePool100Count > 0) {
           smallPoolIndex = Under13RegistrationNoticePanel.bytePool100Count - 1;
           Under13RegistrationNoticePanel.bytePool100Count = Under13RegistrationNoticePanel.bytePool100Count - 1;
-          smallBuffer = cf.bytePool100[smallPoolIndex];
-          cf.bytePool100[Under13RegistrationNoticePanel.bytePool100Count] = null;
+          smallBuffer = PauseMenuHelpers.bytePool100[smallPoolIndex];
+          PauseMenuHelpers.bytePool100[Under13RegistrationNoticePanel.bytePool100Count] = null;
           return smallBuffer;
         }
         if (length != 5000) {

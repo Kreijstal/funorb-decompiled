@@ -108,7 +108,7 @@ final class ConnectionPhase {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], UiGeometryHelpers.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
+        RgbSprite var4 = new RgbSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], UiGeometryHelpers.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], var3);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var4;
     }
@@ -181,7 +181,7 @@ final class ConnectionPhase {
             statusLabelForCollapse = AppletGameShell.field_e;
             AppletGameShell.field_e.height = 0;
             statusLabelForCollapse.width = 0;
-            ba.field_v.text = DelayedPacket.field_n.toUpperCase();
+            UiComponentNode.field_v.text = DelayedPacket.field_n.toUpperCase();
             buttonSplitX = (MultiplayerMatch.field_d.width + 2) / 2;
             AppletGameShell.field_e.setBounds(40, -40 + MultiplayerMatch.field_d.height, 0, buttonSplitX - 2, (byte) 64);
             DraggableWidget.field_K.setBounds(40, MultiplayerMatch.field_d.height - 40, buttonSplitX, MultiplayerMatch.field_d.width - buttonSplitX, (byte) 64);

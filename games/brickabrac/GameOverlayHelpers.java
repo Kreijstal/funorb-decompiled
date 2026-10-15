@@ -17,7 +17,7 @@ final class GameOverlayHelpers {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          icon = (AchievementIcon) (aa.achievementIconPool.removeFirst(3));
+          icon = (AchievementIcon) (JavaRandomHelpers.achievementIconPool.removeFirst(3));
           if (icon == null) {
             icon = new AchievementIcon();
           }

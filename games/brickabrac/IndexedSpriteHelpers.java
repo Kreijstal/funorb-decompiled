@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk {
+final class IndexedSpriteHelpers {
     static int[] bitMasks;
     static String field_a;
     static UiComponent field_b;
@@ -15,13 +15,13 @@ final class kk {
         int var3 = BrickABrac.field_J ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[IncomingPacketHelpers.decodedSpriteCount];
         for (var2 = 0; IncomingPacketHelpers.decodedSpriteCount > var2; var2++) {
-          var1[var2] = new IndexedSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], UiGeometryHelpers.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], GameOverlayHelpers.decodedSpriteIndices[var2], PlayerBadgeHelpers.decodedSpritePalette);
+          var1[var2] = new IndexedSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], UiGeometryHelpers.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], GameOverlayHelpers.decodedSpriteIndices[var2], PlayerBadgeHelpers.decodedSpritePalette);
         }
         if (obfuscationGuard == -2) {
           MotionWaypoint.clearDecodedSpriteData((byte) 96);
           return var1;
         }
-        kk.a(-77);
+        IndexedSpriteHelpers.a(-77);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }

@@ -271,7 +271,7 @@ final class FullscreenDialogHelpers {
           }
           for (measureRowIndex = 0; measureRowIndex < ValidationStatus.fullscreenDialogRows.length; measureRowIndex++) {
             isButtonRow = !(BrickABrac.fullscreenDialogRowButtons[measureRowIndex] < 0);
-            measuredRowWidth = hm.measureFullscreenDialogText(isButtonRow, ValidationStatus.fullscreenDialogRows[measureRowIndex], 0);
+            measuredRowWidth = LobbySetupHelpers.measureFullscreenDialogText(isButtonRow, ValidationStatus.fullscreenDialogRows[measureRowIndex], 0);
             if (measuredRowWidth > maximumTextWidth) {
               maximumTextWidth = measuredRowWidth;
             }
@@ -281,7 +281,7 @@ final class FullscreenDialogHelpers {
             prefixLinesAlias = prefixLines;
             for (prefixMeasureIndex = 0; prefixLines.length > prefixMeasureIndex; prefixMeasureIndex++) {
               prefixLine = prefixLines[prefixMeasureIndex];
-              prefixMeasuredWidth = hm.measureFullscreenDialogText(false, prefixLine, obfuscationGuard - 104);
+              prefixMeasuredWidth = LobbySetupHelpers.measureFullscreenDialogText(false, prefixLine, obfuscationGuard - 104);
               if (prefixMeasuredWidth > maximumTextWidth) {
                 maximumTextWidth = prefixMeasuredWidth;
               }
@@ -289,7 +289,7 @@ final class FullscreenDialogHelpers {
             suffixLinesAlias = SingleChildWidget.fullscreenSingularSuffix;
             for (suffixMeasureIndex = 0; suffixLinesAlias.length > suffixMeasureIndex; suffixMeasureIndex++) {
               suffixLine = suffixLinesAlias[suffixMeasureIndex];
-              suffixMeasuredWidth = hm.measureFullscreenDialogText(false, suffixLine, 0);
+              suffixMeasuredWidth = LobbySetupHelpers.measureFullscreenDialogText(false, suffixLine, 0);
               if (maximumTextWidth < suffixMeasuredWidth) {
                 maximumTextWidth = suffixMeasuredWidth;
               }
@@ -314,7 +314,7 @@ final class FullscreenDialogHelpers {
           while (boundsRowIndex < ValidationStatus.fullscreenDialogRows.length) {
             buttonIndex = BrickABrac.fullscreenDialogRowButtons[boundsRowIndex];
             if (buttonIndex >= 0) {
-              buttonTextWidth = hm.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[boundsRowIndex], obfuscationGuard - 104);
+              buttonTextWidth = LobbySetupHelpers.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[boundsRowIndex], obfuscationGuard - 104);
               buttonLeft = ProxySocketConnector.fullscreenDialogCenterX - (buttonTextWidth >> 1);
               rowY = rowY + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
               QuickChatPopupHelpers.fullscreenDialogButtonBounds[boundsRowIndex] = new int[4];

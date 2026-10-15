@@ -126,9 +126,9 @@ final class UnderwaterBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
             return;
           }
-          var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
+          var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            hh.a(BufferedFile.field_a, -13, 2, var8, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
+            IntegerPowerHelpers.a(BufferedFile.field_a, -13, 2, var8, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           BubbleDistortion.a(scroll16, WeightedLruCache.field_e, var8.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, AppletResourceHelpers.field_d, 306);
@@ -138,9 +138,9 @@ final class UnderwaterBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, TextWidgetRenderer.underwaterBackgroundColors[colorIndex], 928072);
           return;
         }
-        RasterCacheSurface var9 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
+        RasterCacheSurface var9 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 106);
         if (!var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          hh.a(BufferedFile.field_a, -13, 2, var9, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
+          IntegerPowerHelpers.a(BufferedFile.field_a, -13, 2, var9, -8562, colorIndex, Under13RegistrationNoticePanel.field_P);
           var9.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         BubbleDistortion.a(scroll16, WeightedLruCache.field_e, var9.sprite, 2, 2, GameplayScreen.field_l, -13, colorIndex, destinationY, destinationX, AppletResourceHelpers.field_d, 306);
@@ -156,7 +156,7 @@ final class UnderwaterBackground extends BackgroundScene {
           }
           var7 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            hh.a(ConnectionPhase.waterFarSprite, 0, 1, var7, -8562, colorIndex, SocialTabbedPanel.field_b);
+            IntegerPowerHelpers.a(ConnectionPhase.waterFarSprite, 0, 1, var7, -8562, colorIndex, SocialTabbedPanel.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           BubbleDistortion.a(scroll16, wm.waterNearSprite, var7.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
@@ -168,7 +168,7 @@ final class UnderwaterBackground extends BackgroundScene {
         }
         RasterCacheSurface var8 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          hh.a(ConnectionPhase.waterFarSprite, 0, 1, var8, -8562, colorIndex, SocialTabbedPanel.field_b);
+          IntegerPowerHelpers.a(ConnectionPhase.waterFarSprite, 0, 1, var8, -8562, colorIndex, SocialTabbedPanel.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         BubbleDistortion.a(scroll16, wm.waterNearSprite, var8.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);

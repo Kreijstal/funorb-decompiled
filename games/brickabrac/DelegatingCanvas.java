@@ -31,27 +31,27 @@ final class DelegatingCanvas extends java.awt.Canvas {
         int var2;
         regionExit1: {
           var2 = BrickABrac.field_J ? 1 : 0;
-          if (13 != pp.field_a) {
-            if (pp.field_a == 14) {
+          if (13 != TextValidationHelpers.field_a) {
+            if (TextValidationHelpers.field_a == 14) {
               if (0 < LogoRenderHelpers.field_a) {
                 fieldTemp$0 = LogoRenderHelpers.field_a - 1;
                 LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                 if (0 == fieldTemp$0) {
                   SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                   LoadingProgressDialog.field_eb = SaveResultsPromptScreen.field_y;
-                  pp.field_a = -1;
+                  TextValidationHelpers.field_a = -1;
                   LogoRenderHelpers.field_a = 250;
                   ga.field_i = 0;
                   GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                 }
               }
             } else {
-              if (pp.field_a == 0) {
+              if (TextValidationHelpers.field_a == 0) {
                 if (0 < LogoRenderHelpers.field_a) {
                   fieldTemp$1 = LogoRenderHelpers.field_a - 1;
                   LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                   if (0 == fieldTemp$1) {
-                    pp.field_a = -1;
+                    TextValidationHelpers.field_a = -1;
                     ga.field_i = 1;
                     LogoRenderHelpers.field_a = 250;
                     GrowableIntList.field_i = CalendarRankingHelpers.field_e;
@@ -60,33 +60,33 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   }
                 }
               } else {
-                if (pp.field_a != 1) {
-                  if (2 == pp.field_a) {
+                if (TextValidationHelpers.field_a != 1) {
+                  if (2 == TextValidationHelpers.field_a) {
                     if (0 < LogoRenderHelpers.field_a) {
                       fieldTemp$2 = LogoRenderHelpers.field_a - 1;
                       LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                       if (0 == fieldTemp$2) {
                         LoadingProgressDialog.field_eb = KeyboardInput.field_b;
-                        pp.field_a = -1;
+                        TextValidationHelpers.field_a = -1;
                         ga.field_i = 3;
                       }
                     }
                   } else {
-                    if (pp.field_a != 3 &&
-                      pp.field_a != 4 &&
-                      pp.field_a != 5) {
-                      if (pp.field_a == 6) {
-                        pp.field_a = ArchiveNetworkRequest.field_G;
+                    if (TextValidationHelpers.field_a != 3 &&
+                      TextValidationHelpers.field_a != 4 &&
+                      TextValidationHelpers.field_a != 5) {
+                      if (TextValidationHelpers.field_a == 6) {
+                        TextValidationHelpers.field_a = ArchiveNetworkRequest.field_G;
                         ga.field_i = ArchiveNetworkRequest.field_G;
                       } else {
-                        if (pp.field_a != 8 &&
-                          pp.field_a != 9) {
-                          if (pp.field_a == 10) {
+                        if (TextValidationHelpers.field_a != 8 &&
+                          TextValidationHelpers.field_a != 9) {
+                          if (TextValidationHelpers.field_a == 10) {
                             ga.field_i = ArchiveNetworkRequest.field_G;
-                            pp.field_a = ArchiveNetworkRequest.field_G;
+                            TextValidationHelpers.field_a = ArchiveNetworkRequest.field_G;
                           } else {
-                            if (((pp.field_a != 11)) &&
-                              (pp.field_a == 12)) {
+                            if (((TextValidationHelpers.field_a != 11)) &&
+                              (TextValidationHelpers.field_a == 12)) {
                               break regionExit1;
                             }
                           }
@@ -97,7 +97,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                           LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
                           if (fieldTemp$3 == 0) {
                             ga.field_i = 11;
-                            pp.field_a = -1;
+                            TextValidationHelpers.field_a = -1;
                             LoadingProgressDialog.field_eb = PopupWidgetLayer.field_U;
                             ValidationIconWidget.field_N = true;
                           }
@@ -114,7 +114,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               LogoRenderHelpers.field_a = LogoRenderHelpers.field_a - 1;
               if (0 == fieldTemp$4) {
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
-                pp.field_a = -1;
+                TextValidationHelpers.field_a = -1;
                 GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                 LoadingProgressDialog.field_eb = BrickGameLayerController.field_d;
                 LogoRenderHelpers.field_a = 250;

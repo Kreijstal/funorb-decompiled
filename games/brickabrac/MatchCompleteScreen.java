@@ -50,7 +50,7 @@ final class MatchCompleteScreen extends MatchResultScreen {
           if (DualLinkDeque.consistsOfRepeatedCharacter((byte) 54, password)) {
             return false;
           }
-          if (pp.hasInvalidPasswordLength(password, true)) {
+          if (TextValidationHelpers.hasInvalidPasswordLength(password, true)) {
             return false;
           }
           if (obfuscationGuard >= -38) {

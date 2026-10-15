@@ -91,7 +91,7 @@ final class SocialTabbedPanel {
         try {
           tabLabels = new String[]{primaryTabLabel, AchievementSubmission.friendsTabLabel, SpriteInputHelpers.ignoreTabLabel};
           panels = new UiComponent[]{primaryPanel, QuickChatPhraseRegistry.friendsPanel, (UiComponent) ((Object) TableResponseHelpers.ignoreListPane)};
-          this.tabs = new TabbedPane(0L, WidgetTheme.field_n, tabLabels, hd.field_c, panels, 0);
+          this.tabs = new TabbedPane(0L, WidgetTheme.field_n, tabLabels, InvitationDialogHelpers.field_c, panels, 0);
         } catch (RuntimeException constructionFailure) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) constructionFailure), "vj.<init>(" + (primaryTabLabel != null ? "{...}" : "null") + ',' + (primaryPanel != null ? "{...}" : "null") + ')');
         }

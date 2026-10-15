@@ -183,7 +183,7 @@ final class FriendListUi {
               }
             }
           } else {
-            ChatLobbyUiHelpers.friendsStatusLabel.text = kd.field_a;
+            ChatLobbyUiHelpers.friendsStatusLabel.text = BackgroundSurfaceHelpers.field_a;
             QuickChatPhraseRegistry.friendsPanel.enabled = false;
             if (LevelMetadata.field_m == 1) {
               GameScreen.friendsListPane.scrollPane.viewport.text = LoginCredentialKind.field_f;

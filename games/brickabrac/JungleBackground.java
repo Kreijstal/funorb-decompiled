@@ -181,7 +181,7 @@ final class JungleBackground extends BackgroundScene {
           }
           if (!param2 ||
             var26 != 0) {
-            if (!hn.b((byte) 7)) {
+            if (!GameTransportHelpers.b((byte) 7)) {
               stackIn_13_0 = 0;
             } else {
               stackIn_13_0 = (!param1.started) ? 1 : 0;
@@ -220,7 +220,7 @@ final class JungleBackground extends BackgroundScene {
               if (stackIn_40_0 == 0) {
                 break;
               }
-              if (!hn.b((byte) 7)) {
+              if (!GameTransportHelpers.b((byte) 7)) {
                 WidgetTextLayout.field_e = GamePresentationHelpers.formatIndexedText(ChocolateBackground.field_t, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103);
                 if (var26 == 0) {
                   break;
@@ -475,7 +475,7 @@ final class JungleBackground extends BackgroundScene {
                     AchievementsScreen.field_F[var7] != null) {
                     var16 = AchievementsScreen.field_F[var7][var9];
                     if (var16 != 0 &&
-                      !ea.field_g &&
+                      !InputOptionsHelpers.field_g &&
                       ResourceArchiveFactory.windowModeCapabilityWord <= 0) {
                       var10 = 1;
                     }
@@ -492,7 +492,7 @@ final class JungleBackground extends BackgroundScene {
                       var11 = 1;
                     }
                     if (0 != var16Lifetime2 &&
-                      !ea.field_g &&
+                      !InputOptionsHelpers.field_g &&
                       0 >= ResourceArchiveFactory.windowModeCapabilityWord) {
                       var10 = 1;
                     }
@@ -789,7 +789,7 @@ final class JungleBackground extends BackgroundScene {
             if (param2) {
               return;
             }
-            ea.requestUpdateGameOptions(-11008, param0);
+            InputOptionsHelpers.requestUpdateGameOptions(-11008, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -901,7 +901,7 @@ final class JungleBackground extends BackgroundScene {
         if (!this.hasSprites((byte) -95)) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, Bzip2State.jungleBackgroundColors[colorIndex], 16777215);
           if (BrickABrac.field_J) {
-            var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
+            var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
             if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
               ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
               var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -909,7 +909,7 @@ final class JungleBackground extends BackgroundScene {
             ProxyAuthenticationRequiredException.a(var7.sprite, HuffmanCodec.field_e, destinationX, false, scroll16, destinationY, -13, colorIndex, 2, 306, CacheEntry.field_D);
           }
         } else {
-          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
+          var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -121);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             ArchiveFetchClient.a(var7, WidgetGroup.field_E, colorIndex, 2, -13, true);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

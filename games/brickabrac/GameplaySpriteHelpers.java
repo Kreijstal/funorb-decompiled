@@ -57,7 +57,7 @@ final class GameplaySpriteHelpers {
           for (var2_int = 0; var2_int < ProxySocketConnector.rankingRowCount; var2_int++) {
             VerticalScrollbar.rankingSortIndices[var2_int + rowLimit] = var2_int;
           }
-          RankingSortHelpers.sortRankingIndexRange(KeyDispatchHelpers.field_b, ba.field_w, rowLimit + ProxySocketConnector.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
+          RankingSortHelpers.sortRankingIndexRange(KeyDispatchHelpers.field_b, UiComponentNode.field_w, rowLimit + ProxySocketConnector.rankingRowCount, false, 118, rowLimit + rowLimit, rowLimit);
           if (rowLimit < ProxySocketConnector.rankingRowCount) {
             ProxySocketConnector.rankingRowCount = rowLimit;
           }

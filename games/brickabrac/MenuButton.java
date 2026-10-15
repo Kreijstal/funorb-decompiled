@@ -80,7 +80,7 @@ final class MenuButton {
               }
               if (this.actionId == 36) {
                 array$0 = new String[1];
-                stackIn_36_0 = gj.field_d;
+                stackIn_36_0 = TableQuickChatHelpers.field_d;
                 stackIn_36_1 = array$0;
                 stackIn_36_2 = array$0;
                 stackIn_36_3 = 0;

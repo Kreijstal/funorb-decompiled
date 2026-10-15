@@ -46,7 +46,7 @@ final class LogoRenderHelpers {
         int highlightY;
         unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          kk.logoCameraPose = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          IndexedSpriteHelpers.logoCameraPose = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           pieceCount = TextHotspotRegion.logoMeshes.length;
           depthKeys = new int[pieceCount];
           depthKeysInitialAlias = depthKeys;
@@ -58,17 +58,17 @@ final class LogoRenderHelpers {
             centerX = depthMesh.minX + depthMesh.maxX >> 1;
             centerY = depthMesh.maxY + depthMesh.minY >> 1;
             centerZ = depthMesh.maxZ + depthMesh.minZ >> 1;
-            cameraForwardXQ14 = kk.logoCameraPose[9] >> 2;
-            cameraForwardYQ14 = kk.logoCameraPose[10] >> 2;
-            cameraForwardZQ14 = kk.logoCameraPose[11] >> 2;
+            cameraForwardXQ14 = IndexedSpriteHelpers.logoCameraPose[9] >> 2;
+            cameraForwardYQ14 = IndexedSpriteHelpers.logoCameraPose[10] >> 2;
+            cameraForwardZQ14 = IndexedSpriteHelpers.logoCameraPose[11] >> 2;
             localForwardXQ16 = cameraForwardZQ14 * MatchResultScreen.logoPiecePose[5] + (MatchResultScreen.logoPiecePose[4] * cameraForwardYQ14 + MatchResultScreen.logoPiecePose[3] * cameraForwardXQ14) >> 14;
             localForwardYQ16 = cameraForwardXQ14 * MatchResultScreen.logoPiecePose[6] + (cameraForwardYQ14 * MatchResultScreen.logoPiecePose[7] + cameraForwardZQ14 * MatchResultScreen.logoPiecePose[8]) >> 14;
             localForwardZQ16 = cameraForwardYQ14 * MatchResultScreen.logoPiecePose[10] + (cameraForwardXQ14 * MatchResultScreen.logoPiecePose[9] + MatchResultScreen.logoPiecePose[11] * cameraForwardZQ14) >> 14;
             depthKeysAlias[depthPieceIndex] = centerZ * localForwardZQ16 + localForwardYQ16 * centerY + centerX * localForwardXQ16 >> 16;
           }
-          cameraForwardX = kk.logoCameraPose[9] >> 8;
-          cameraForwardY = kk.logoCameraPose[10] >> 8;
-          cameraForwardZ = kk.logoCameraPose[11] >> 8;
+          cameraForwardX = IndexedSpriteHelpers.logoCameraPose[9] >> 8;
+          cameraForwardY = IndexedSpriteHelpers.logoCameraPose[10] >> 8;
+          cameraForwardZ = IndexedSpriteHelpers.logoCameraPose[11] >> 8;
           lightingAngle8192 = MatchResultScreen.logoAnimationTicks << 4;
           diffuseX = 0;
           diffuseY = InteractiveGameClient.sine8192(lightingAngle8192, -4097) >> 8;
@@ -106,7 +106,7 @@ final class LogoRenderHelpers {
             for (centerAxis = 0; centerAxis < 3; centerAxis++) {
               MatchResultScreen.logoPiecePose[centerAxis] = MatchResultScreen.logoPiecePose[centerAxis] + BoundedFile.logoOriginalCenters[drawOrdinal][centerAxis];
             }
-            MusicVoice.transformAndProjectMesh(kk.logoCameraPose, -16283, MatchResultScreen.logoPiecePose, false, true, selectedMesh, false);
+            MusicVoice.transformAndProjectMesh(IndexedSpriteHelpers.logoCameraPose, -16283, MatchResultScreen.logoPiecePose, false, true, selectedMesh, false);
             SocialListEntry.shadeAndDrawMesh(highlightZ, diffuseX, highlightX, diffuseZ, selectedMesh, (byte) -105, highlightY, diffuseY);
           }
           return;
@@ -172,11 +172,11 @@ final class LogoRenderHelpers {
             return stackIn_3_0;
           }
           if (LevelMetadata.field_m != 2) {
-            stackIn_7_0 = kd.field_b;
+            stackIn_7_0 = BackgroundSurfaceHelpers.field_b;
             return stackIn_7_0;
           }
           if (SpaceBackground.isLocalPlayerName(name, -19)) {
-            stackIn_11_0 = rj.field_a;
+            stackIn_11_0 = TextHuffmanHelpers.field_a;
             return stackIn_11_0;
           }
           if (LevelPack.isFriend(0, name)) {
@@ -185,11 +185,11 @@ final class LogoRenderHelpers {
           }
           if (LevelPackSelectScreen.friendCount >= 100 &&
             ResourceArchiveFactory.windowModeCapabilityWord <= 0) {
-            stackIn_18_0 = er.field_e;
+            stackIn_18_0 = IntegerRemainderHelpers.field_e;
             return stackIn_18_0;
           }
           if (200 <= LevelPackSelectScreen.friendCount) {
-            stackIn_21_0 = er.field_e;
+            stackIn_21_0 = IntegerRemainderHelpers.field_e;
             return stackIn_21_0;
           }
           if (AchievementBrowserScreen.isIgnoredPlayer(121, name)) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gj {
+final class TableQuickChatHelpers {
     static int receivedChatChannel;
     static UiComponent field_b;
     static String field_d;

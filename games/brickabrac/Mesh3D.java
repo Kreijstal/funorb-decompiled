@@ -105,7 +105,7 @@ final class Mesh3D {
           ConditionalTextValue.fullscreenDialogWrapWidth = maximumWrapWidth;
           LevelResultWireHelpers.fullscreenDialogButtonFont = buttonFont;
           StateIconLabel.fullscreenDialogBodyFont = bodyFont;
-          pp.setFullscreenDialogCenter(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
+          TextValidationHelpers.setFullscreenDialogCenter(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
           if (!obfuscationGuard) {
             fireworkSpawnMinY = -98;
           }
@@ -248,7 +248,7 @@ final class Mesh3D {
             StrongCacheEntry.field_I.closeDialog(17);
           }
           DirectByteStorage.field_k = new LoginPanel(param2, param1, false, true, param0);
-          rj.accountContentLayer.transitionToContent((byte) 114, DirectByteStorage.field_k);
+          TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 114, DirectByteStorage.field_k);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -259,7 +259,7 @@ final class Mesh3D {
         if (param0 != -1) {
           return;
         }
-        rj.accountContentLayer.transitionToContent((byte) 120, ClientResourceHelpers.field_c);
+        TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 120, ClientResourceHelpers.field_c);
     }
 
     Mesh3D() {

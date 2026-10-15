@@ -97,10 +97,10 @@ final class SecondaryNodeQueue {
 
     final static QuickChatParameterType[] getQuickChatParameterTypes(int obfuscationGuard) {
         if (obfuscationGuard == 0) {
-          return new QuickChatParameterType[]{CalendarRankingHelpers.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, ClientResourceHelpers.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, ba.field_B, TranslucentNineSliceFrame.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
+          return new QuickChatParameterType[]{CalendarRankingHelpers.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, ClientResourceHelpers.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, UiComponentNode.field_B, TranslucentNineSliceFrame.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
         }
         field_e = (String) null;
-        return new QuickChatParameterType[]{CalendarRankingHelpers.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, ClientResourceHelpers.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, ba.field_B, TranslucentNineSliceFrame.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
+        return new QuickChatParameterType[]{CalendarRankingHelpers.field_b, IntrusiveNode.field_c, Bzip2State.field_r, BirthDateValidator.field_i, ClientResourceHelpers.field_h, GrowableIntList.field_m, ProxySocketConnector.field_i, UiComponentNode.field_B, TranslucentNineSliceFrame.field_k, ScrollPaneWithFooter.field_Sb, CacheEntry.field_B, IntrusiveHashTable.field_o, IntNode.field_i, MusicVoiceMixer.field_o};
     }
 
     public static void b(boolean param0) {
@@ -121,7 +121,7 @@ final class SecondaryNodeQueue {
         try {
           BallPulseEffect.specialMusicTrackArchive = param1;
           NineSliceFrame.field_g = param3;
-          ic.specialMusicPatchArchive = param0;
+          LobbyInputHelpers.specialMusicPatchArchive = param0;
           ArrayWidgetGroup.field_G = param4;
           GameScreen.field_e = new SoundCache(ArrayWidgetGroup.field_G, NineSliceFrame.field_g);
           if (param2 != -38) {

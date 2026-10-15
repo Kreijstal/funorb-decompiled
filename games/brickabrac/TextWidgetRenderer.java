@@ -1050,7 +1050,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                 if (!var13.directJoinAvailable &&
                   !var13.invitationPending) {
                   if (!var13.directJoinEnabled) {
-                    var13.field_Ac.text = hm.field_a;
+                    var13.field_Ac.text = LobbySetupHelpers.field_a;
                   } else {
                     var13.field_Ac.text = IntArrayRequest.field_p;
                   }

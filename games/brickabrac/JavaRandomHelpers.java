@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class aa {
+final class JavaRandomHelpers {
     static RgbSprite field_b;
     static NodeDeque achievementIconPool;
     static String field_c;
@@ -11,7 +11,7 @@ final class aa {
     public static void b(int param0) {
         field_b = null;
         if (param0 < 64) {
-          aa.a((byte) 28);
+          JavaRandomHelpers.a((byte) 28);
           achievementIconPool = null;
           field_c = null;
           return;
@@ -95,7 +95,7 @@ final class aa {
           return;
         }
         var2 = (RasterCacheSurface) null;
-        aa.a(90, (RgbSprite) null, false, 114, (RasterCacheSurface) null, 94);
+        JavaRandomHelpers.a(90, (RgbSprite) null, false, 114, (RasterCacheSurface) null, 94);
         if (MeshLobbyUiHelpers.field_f > 0) {
           MeshLobbyUiHelpers.field_f = MeshLobbyUiHelpers.field_f - 1;
         }
@@ -134,7 +134,7 @@ final class aa {
           do {
             word = random.nextInt();
           } while (rejectionThreshold <= word);
-          remainderResult = er.nonnegativeRemainder(-1560508993, bound, word);
+          remainderResult = IntegerRemainderHelpers.nonnegativeRemainder(-1560508993, bound, word);
           return remainderResult;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

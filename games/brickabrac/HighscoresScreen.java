@@ -124,7 +124,7 @@ final class HighscoresScreen extends MenuScreen {
           }
           PasswordFieldRenderer.field_D.drawLeft(param7, SecondaryNodeQueue.field_b[0], param2, param3, -1);
           PasswordFieldRenderer.field_D.drawCentered(Integer.toString(1 + param1), SecondaryNodeQueue.field_b[1] - ContextActionController.field_g.measureText(SpriteGeometry.field_u) / 2, param2, param3, -1);
-          PasswordFieldRenderer.field_D.drawCentered(Integer.toString(1 + param4), SecondaryNodeQueue.field_b[2] - ContextActionController.field_g.measureText(ba.field_u) / 2, param2, param3, -1);
+          PasswordFieldRenderer.field_D.drawCentered(Integer.toString(1 + param4), SecondaryNodeQueue.field_b[2] - ContextActionController.field_g.measureText(UiComponentNode.field_u) / 2, param2, param3, -1);
           PasswordFieldRenderer.field_D.drawRight(Integer.toString(param6), SecondaryNodeQueue.field_b[3], param2, param3, -1);
           int var9_int = 102 % ((param5 + 15) / 45);
         } catch (RuntimeException runtimeException) {
@@ -671,7 +671,7 @@ final class HighscoresScreen extends MenuScreen {
         var3 = 0;
         ContextActionController.field_g.drawLeft(DualLinkIterator.field_i, -HuffmanCodec.field_g + SecondaryNodeQueue.field_b[0] + 12, var2, var3, -1);
         ContextActionController.field_g.drawRight(SpriteGeometry.field_u, SecondaryNodeQueue.field_b[1], var2, var3, -1);
-        ContextActionController.field_g.drawRight(ba.field_u, SecondaryNodeQueue.field_b[2], var2, var3, -1);
+        ContextActionController.field_g.drawRight(UiComponentNode.field_u, SecondaryNodeQueue.field_b[2], var2, var3, -1);
         ContextActionController.field_g.drawRight(DebouncedValidationSource.field_d, SecondaryNodeQueue.field_b[3], var2, var3, -1);
         var2Lifetime1 = 5 * (ContextActionController.field_g.descent + ContextActionController.field_g.capHeight) / 2 + 187;
         var4 = null;
@@ -683,7 +683,7 @@ final class HighscoresScreen extends MenuScreen {
             var4_ref = ArchiveNetworkRequest.field_J;
             var5 = GameConnectionHelpers.field_g.names[this.scoreFilterIndex];
             var13 = GameConnectionHelpers.field_g.values[this.scoreFilterIndex];
-            var7 = gj.findTableRow(GameConnectionHelpers.field_g, VerticalScrollbar.field_Ub, -87, this.scoreFilterIndex);
+            var7 = TableQuickChatHelpers.findTableRow(GameConnectionHelpers.field_g, VerticalScrollbar.field_Ub, -87, this.scoreFilterIndex);
             for (var8 = 0; 10 > var8; var8++) {
               if (var5[var8] != null) {
                 stackIn_17_0 = (var7 == var8) ? 1 : 2;
@@ -709,7 +709,7 @@ final class HighscoresScreen extends MenuScreen {
             }
           }
         } else {
-          var4_ref = kd.field_a;
+          var4_ref = BackgroundSurfaceHelpers.field_a;
         }
         if (var4_ref != null) {
           InteractiveGameClient.a(178, ContextActionController.field_g, var4_ref, 357, 243, 2, 15);

@@ -1146,7 +1146,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime106 = GameplaySpriteHelpers.a(!param0, "plus_something");
           if (var2Lifetime106 != null) {
-            hh.positiveBoardResultFormat = MenuButton.a(var2Lifetime106, (byte) 84);
+            IntegerPowerHelpers.positiveBoardResultFormat = MenuButton.a(var2Lifetime106, (byte) 84);
           }
           var2Lifetime107 = GameplaySpriteHelpers.a(true, "ellipsis");
           if (var2Lifetime107 != null) {
@@ -1242,11 +1242,11 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime130 = GameplaySpriteHelpers.a(true, "tutorial_label");
           if (null != var2Lifetime130) {
-            gj.field_d = MenuButton.a(var2Lifetime130, (byte) 111);
+            TableQuickChatHelpers.field_d = MenuButton.a(var2Lifetime130, (byte) 111);
           }
           var2Lifetime131 = GameplaySpriteHelpers.a(true, "rematch_label");
           if (null != var2Lifetime131) {
-            kk.field_a = MenuButton.a(var2Lifetime131, (byte) 72);
+            IndexedSpriteHelpers.field_a = MenuButton.a(var2Lifetime131, (byte) 72);
           }
           var2Lifetime132 = GameplaySpriteHelpers.a(!param0, "test_error_message");
           if (var2Lifetime132 != null) {
@@ -1262,7 +1262,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime135 = GameplaySpriteHelpers.a(true, "to_level");
           if (null != var2Lifetime135) {
-            ba.field_u = MenuButton.a(var2Lifetime135, (byte) 120);
+            UiComponentNode.field_u = MenuButton.a(var2Lifetime135, (byte) 120);
           }
           var2Lifetime136 = GameplaySpriteHelpers.a(!param0, "score");
           if (null != var2Lifetime136) {
@@ -1505,14 +1505,14 @@ final class QuickChatMenu extends UiComponent {
           if (null != CacheIoRequest.windowCanvas) {
             CanvasInputCleanup.detachCanvasInput(false, CacheIoRequest.windowCanvas);
           }
-          ic.disableKeyboardInput((byte) -79);
+          LobbyInputHelpers.disableKeyboardInput((byte) -79);
           FileCacheStore.a(5);
           GameplayAudioEvent.a(param0 + 14569);
           if (GameTransportActions.canUseGameTransport(param0 - 104)) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 1);
             ActivityIndicatorWidget.flushTransportPackets(0, 10000);
           }
-          hn.closeGameTransport((byte) 53);
+          GameTransportHelpers.closeGameTransport((byte) 53);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1546,7 +1546,7 @@ final class QuickChatMenu extends UiComponent {
             return submenuHandled;
           }
           if (this.openSubmenu == null &&
-            hd.quickChatMenu == this &&
+            InvitationDialogHelpers.quickChatMenu == this &&
             backspace != 0) {
             GamePresentationHelpers.closeQuickChatMenu(-1);
             return true;

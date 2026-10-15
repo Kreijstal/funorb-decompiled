@@ -27,7 +27,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
     final static void f(byte param0) {
         if (!IntArrayRequest.gameplayScreen.isSpectator(95)) {
           GameTransportActions.requestLeaveOrDeclineGame(ClientResourceHelpers.currentLobbyGame.getGameId((byte) 31), false, 11);
-          ed.field_d = true;
+          IntegerBitLengthHelpers.field_d = true;
           if (param0 != 122) {
             packSelectorIcons = (RgbSprite[]) null;
             return;
@@ -110,7 +110,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
 
     final static String d(byte param0) {
         if (!(2 <= GameConnectionShell.clientStage)) {
-          return kd.field_c;
+          return BackgroundSurfaceHelpers.field_c;
         }
         if (null != ValidationIconWidget.field_K) {
           if (!ValidationIconWidget.field_K.ensureIndex((byte) -127)) {
@@ -139,7 +139,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         if (!BoardPresentationHelpers.field_c.ensureAllGroupsAvailable(param0 ^ 12)) {
           return BrowserResizeNotificationHelpers.field_e + " - " + BoardPresentationHelpers.field_c.getProgress(-4126) + "%";
         }
-        return kd.field_a;
+        return BackgroundSurfaceHelpers.field_a;
     }
 
     ArchiveNetworkRequest() {

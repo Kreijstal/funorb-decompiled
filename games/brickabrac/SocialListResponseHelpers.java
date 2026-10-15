@@ -104,7 +104,7 @@ final class SocialListResponseHelpers {
               return;
             }
             AlignedIconLabel.a("F1: " + WhirlpoolHasher.c((byte) -104), (Throwable) null, 58);
-            hn.closeGameTransport((byte) 98);
+            GameTransportHelpers.closeGameTransport((byte) 98);
             if (obfuscationGuard < 52) {
               SocialListResponseHelpers.handleSocialListResponse((byte) -91);
             }

@@ -117,7 +117,7 @@ final class PasswordValidator extends TextFieldValidator {
             return null;
           }
           var6 = var4;
-          if (pp.hasInvalidPasswordLength(var6, true)) {
+          if (TextValidationHelpers.hasInvalidPasswordLength(var6, true)) {
             stackIn_6_0 = RasterStackHelpers.field_a;
             return stackIn_6_0;
           }

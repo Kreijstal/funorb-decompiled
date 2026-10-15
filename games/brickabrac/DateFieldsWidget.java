@@ -245,8 +245,8 @@ final class DateFieldsWidget extends DateInputWidget {
         if (HighscorePackSelector.field_k.pressedButton != 0) {
           MeshAudioHelpers.field_c = true;
         }
-        if (gj.field_b.pressedButton != 0) {
-          if (ea.field_g) {
+        if (TableQuickChatHelpers.field_b.pressedButton != 0) {
+          if (InputOptionsHelpers.field_g) {
             TextLineLayout.requestMatchmakingOptions(param3, -1);
           } else {
             if (ResourceArchiveFactory.windowModeCapabilityWord > 0) {
@@ -278,7 +278,7 @@ final class DateFieldsWidget extends DateInputWidget {
           parentX = parentX + this.x;
           this.a(this.dayField, StrongCacheEntry.field_M, (byte) 127, parentX, parentY);
           this.a(this.monthField, rl.field_f, (byte) 123, parentX, parentY);
-          this.a(this.yearField, kk.field_f, (byte) -86, parentX, parentY);
+          this.a(this.yearField, IndexedSpriteHelpers.field_f, (byte) -86, parentX, parentY);
           return;
         }
     }

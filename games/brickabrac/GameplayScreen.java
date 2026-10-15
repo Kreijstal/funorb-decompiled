@@ -280,7 +280,7 @@ final class GameplayScreen extends GameScreen {
             if (ConditionalTextValue.field_a) {
               fieldTemp$3 = TextLineLayout.field_f + 1;
               TextLineLayout.field_f = TextLineLayout.field_f + 1;
-              System.out.println("Concluded " + fieldTemp$3 + " games (" + cf.checksumMismatchCount + " errors)");
+              System.out.println("Concluded " + fieldTemp$3 + " games (" + PauseMenuHelpers.checksumMismatchCount + " errors)");
               if ((1 << this.localPlayerId & this.match.rematchOfferPlayerMask) == 0) {
                 this.requestRematchAction(87);
               }
@@ -291,8 +291,8 @@ final class GameplayScreen extends GameScreen {
               NewAchievementsScreen.discardGameplayOnTransition = true;
             } else {
               if (KeyboardInput.hasNonnegativeResult) {
-                if (null == hd.pendingScreen ||
-                  hd.pendingScreen.screenId != -2) {
+                if (null == InvitationDialogHelpers.pendingScreen ||
+                  InvitationDialogHelpers.pendingScreen.screenId != -2) {
                   ScreenNavigationHelpers.requestScreen(false, 101, 19);
                 }
               } else {
@@ -539,8 +539,8 @@ final class GameplayScreen extends GameScreen {
             GameClock.field_b = var20.score;
             PacketReceiveHelpers.field_d = Integer.toString(GameClock.field_b);
           }
-          if (DelayedPacket.field_m != 1 + pp.a(var20, (byte) 59, this.match)) {
-            DelayedPacket.field_m = pp.a(var20, (byte) -100, this.match) + 1;
+          if (DelayedPacket.field_m != 1 + TextValidationHelpers.a(var20, (byte) 59, this.match)) {
+            DelayedPacket.field_m = TextValidationHelpers.a(var20, (byte) -100, this.match) + 1;
             if (DelayedPacket.field_m < 10) {
               stackIn_210_0 = "0" + DelayedPacket.field_m;
             } else {
@@ -603,11 +603,11 @@ final class GameplayScreen extends GameScreen {
         if (!this.networkedMatch) {
           if (1 == this.match.playerCount &&
             !this.suppressResultSubmission) {
-            this.setResultLevel(pp.a(this.match.playerBoards[0], (byte) 115, this.match), false);
+            this.setResultLevel(TextValidationHelpers.a(this.match.playerBoards[0], (byte) 115, this.match), false);
             this.queueScoreTableSubmission(0);
             this.sendProgressUpdate(NameEntryPopup.field_Yb, this.resultLevel, -UsernameAvailabilityValidator.field_l + MonotonicTime.nowMillis(false), false, 1000);
             jj.field_d = jj.field_d | BoardPresentationHelpers.combineSequenceLevelAttributes(this.progressBaseLevel, this.match.configuration, -1 + this.resultLevel, true);
-            stackIn_8_0 = (hh.unlockedLevelCounts[0] == 0);
+            stackIn_8_0 = (IntegerPowerHelpers.unlockedLevelCounts[0] == 0);
             WidgetPaintStyle.field_a = stackIn_8_0;
           }
           if (this.match.playerCount == 1 &&
@@ -627,8 +627,8 @@ final class GameplayScreen extends GameScreen {
     final void showPostMatchScreen(boolean usePointer, byte obfuscationGuard) {
         int var4;
         var4 = BrickABrac.field_J ? 1 : 0;
-        rj.a((byte) 80, WeightedLruCache.primaryActivityLoop);
-        rj.a((byte) 80, LoginMethodPreference.alternateActivityLoop);
+        TextHuffmanHelpers.a((byte) 80, WeightedLruCache.primaryActivityLoop);
+        TextHuffmanHelpers.a((byte) 80, LoginMethodPreference.alternateActivityLoop);
         if (!(this.match.playerCount <= 1) ||
           9 != this.match.playerBoards[0].boardState) {
           IterableIntrusiveHashTable.a(25459, true, LoginCredentialKind.titleMusicTrack, 1, 1, true);
@@ -675,7 +675,7 @@ final class GameplayScreen extends GameScreen {
           playerId = packet.readUnsignedByte(255);
           if (this.match.playerCount <= playerId) {
             AlignedIconLabel.a("K1: (" + playerId + "/" + packet.position + ") " + WhirlpoolHasher.c((byte) -110), (Throwable) null, obfuscationGuard + 125);
-            hn.closeGameTransport((byte) 89);
+            GameTransportHelpers.closeGameTransport((byte) 89);
             return;
           }
           batch = new PlayerInputBatch();
@@ -1095,7 +1095,7 @@ final class GameplayScreen extends GameScreen {
     final static void b(byte param0, boolean param1) {
         int var2 = 9 % ((param0 + 73) / 49);
         String[] var3 = new String[]{LoadingProgressDialog.field_cb == null ? ReflectionCheckHelpers.playerOneLabel : LoadingProgressDialog.field_cb, DelayedPacket.field_q};
-        LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, kk.createIndexOrder(false, ValidationStatus.field_b.levelCount, ButtonWidgetRenderer.field_w), 3);
+        LevelSequence var4 = new LevelSequence(ValidationStatus.field_b, IndexedSpriteHelpers.createIndexOrder(false, ValidationStatus.field_b.levelCount, ButtonWidgetRenderer.field_w), 3);
         TextFieldRenderer.field_A = false;
         TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(0, (byte) 19);
         OpacityWidget.startLocalGame(var3, 0, var4, 2, param1, -12665);
@@ -1170,7 +1170,7 @@ final class GameplayScreen extends GameScreen {
           if ((255 ^ var5) != var4) {
             throw new IllegalArgumentException();
           }
-          var6 = ed.field_f[var4];
+          var6 = IntegerBitLengthHelpers.field_f[var4];
           if (0 > var6) {
             throw new IllegalArgumentException();
           }
@@ -1282,9 +1282,9 @@ final class GameplayScreen extends GameScreen {
                       var11 = null;
                       expectedChecksum = inputBoard.computeBoardChecksum(obfuscationGuard, (StringBuilder) (var11)) ^ inputBoard.nextRandomInt(120);
                       if (inputBatch.maskedChecksum != expectedChecksum) {
-                        hn.closeGameTransport((byte) 91);
+                        GameTransportHelpers.closeGameTransport((byte) 91);
                         AlignedIconLabel.a("T2 " + inputBatch.maskedChecksum + " " + expectedChecksum + " ", (Throwable) null, 54);
-                        cf.checksumMismatchCount = cf.checksumMismatchCount + 1;
+                        PauseMenuHelpers.checksumMismatchCount = PauseMenuHelpers.checksumMismatchCount + 1;
                       }
                     }
                     inputBatch = (PlayerInputBatch) (inputBoard.incomingInputBatches.first(-21));
@@ -1466,8 +1466,8 @@ final class GameplayScreen extends GameScreen {
           IntNode.queuedLevelResults.addLast(var5, (byte) 3);
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne - (pack.scoreOffset + levelNumber);
           WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + (resultIncrement + this.progressBaseLevel);
-          if (hh.unlockedLevelCounts[pack.packId] < levelNumber) {
-            hh.unlockedLevelCounts[pack.packId] = levelNumber;
+          if (IntegerPowerHelpers.unlockedLevelCounts[pack.packId] < levelNumber) {
+            IntegerPowerHelpers.unlockedLevelCounts[pack.packId] = levelNumber;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1740,7 +1740,7 @@ final class GameplayScreen extends GameScreen {
           DualLinkNode.drawSinglePlayerStatus(130, this.match, ContextActionController.field_g, singleBoard, (byte) -104, 527, 10, 85);
           LobbyUiHelpers.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 137);
           if (!TextFieldRenderer.field_A ||
-            wc.field_b) {
+            HalfRgbBlendHelpers.field_b) {
             GameplayRenderHelpers.drawCenteredPowerUpMeters(singleBoard, 524, 85, -68, 147, 81, this.match);
           }
           LobbyUiHelpers.paintNineSliceFrame(125, 9, -40, 516, LoginCredentialKind.field_h, 229);

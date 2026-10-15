@@ -156,11 +156,11 @@ final class SocialListEntry extends UiComponent {
             }
             material = materialValue;
             xA = ArchiveNetworkRequest.projectedVertexX[vertexA];
-            yA = ed.projectedVertexY[vertexA];
+            yA = IntegerBitLengthHelpers.projectedVertexY[vertexA];
             xB = ArchiveNetworkRequest.projectedVertexX[vertexB];
-            yB = ed.projectedVertexY[vertexB];
+            yB = IntegerBitLengthHelpers.projectedVertexY[vertexB];
             xC = ArchiveNetworkRequest.projectedVertexX[vertexC];
-            yC = ed.projectedVertexY[vertexC];
+            yC = IntegerBitLengthHelpers.projectedVertexY[vertexC];
             if (directionB == directionA &&
               directionB == directionC) {
               gainA = diffuseGains[directionA];

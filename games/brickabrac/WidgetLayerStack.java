@@ -285,7 +285,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             if (-2 == buttonIndex) {
               text = Integer.toString(secondsRemaining);
             }
-            textWidth = hm.measureFullscreenDialogText(!(0 > buttonIndex), text, 0);
+            textWidth = LobbySetupHelpers.measureFullscreenDialogText(!(0 > buttonIndex), text, 0);
             textX = ProxySocketConnector.fullscreenDialogCenterX - (textWidth >> 1);
             if (buttonIndex >= 0) {
               rowY = rowY + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;

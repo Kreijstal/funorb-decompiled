@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hn {
+final class GameTransportHelpers {
     static int fullscreenDialogPaddingX;
     static RgbSprite ninjaFarSprite;
 
@@ -26,24 +26,24 @@ final class hn {
         RgbSprite[] var4Lifetime1;
         int var5Lifetime1;
         if (param3 != -10) {
-          hn.a(22, -77, 60, 46);
+          GameTransportHelpers.a(22, -77, 60, 46);
         } else {
           var7 = new RgbSprite[9];
           var4 = var7;
-          var7[0] = hd.a(param0, param2, (byte) -6);
+          var7[0] = InvitationDialogHelpers.a(param0, param2, (byte) -6);
           for (var5 = 1; var5 < 9; var5++) {
             var7[var5] = var7[0];
           }
-          var4[4] = hd.a(param1, 64, (byte) -6);
+          var4[4] = InvitationDialogHelpers.a(param1, 64, (byte) -6);
           return var4;
         }
         var7Lifetime1 = new RgbSprite[9];
         var4Lifetime1 = var7Lifetime1;
-        var7Lifetime1[0] = hd.a(param0, param2, (byte) -6);
+        var7Lifetime1[0] = InvitationDialogHelpers.a(param0, param2, (byte) -6);
         for (var5Lifetime1 = 1; var5Lifetime1 < 9; var5Lifetime1++) {
           var7Lifetime1[var5Lifetime1] = var7Lifetime1[0];
         }
-        var4Lifetime1[4] = hd.a(param1, 64, (byte) -6);
+        var4Lifetime1[4] = InvitationDialogHelpers.a(param1, 64, (byte) -6);
         return var4Lifetime1;
     }
 

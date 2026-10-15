@@ -461,7 +461,7 @@ final class PlayerBoard extends IntrusiveNode {
 
     final void choosePendingMessage(String[] messages, byte obfuscationGuard) {
         try {
-          this.pendingMessage = messages[aa.nextBoundedJavaRandom(messages.length, this.messageRandom, true)];
+          this.pendingMessage = messages[JavaRandomHelpers.nextBoundedJavaRandom(messages.length, this.messageRandom, true)];
           if (obfuscationGuard != 75) {
             this.field_hb = -123;
           }
@@ -665,7 +665,7 @@ final class PlayerBoard extends IntrusiveNode {
 
     final static void playGameplaySound(PcmSound sound, int obfuscationGuard, int volume) {
         try {
-          hm.playSoundAtVolume(0, sound, volume);
+          LobbySetupHelpers.playSoundAtVolume(0, sound, volume);
           if (obfuscationGuard > -29) {
             PcmSound var4 = (PcmSound) null;
             PlayerBoard.playGameplaySound((PcmSound) null, -15, 82);

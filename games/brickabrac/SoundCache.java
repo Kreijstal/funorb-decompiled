@@ -283,7 +283,7 @@ final class SoundCache {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  hn.closeGameTransport((byte) 52);
+                  GameTransportHelpers.closeGameTransport((byte) 52);
                   RadialSelectorRenderer.field_d = false;
                   stackIn_29_0 = var6_intLifetime1;
                   return stackIn_29_0;
@@ -377,7 +377,7 @@ final class SoundCache {
             }
             if (GameConnectionHelpers.connectionPhase == MenuScreen.awaitingLoginErrorBody &&
               TextWidgetRenderer.ensureGamePacketBody((byte) -41)) {
-              hn.closeGameTransport((byte) 58);
+              GameTransportHelpers.closeGameTransport((byte) 58);
               if (IntrusiveHashTable.currentPacketOpcode == 7 &&
                 !RadialSelectorRenderer.field_d) {
                 RadialSelectorRenderer.field_d = true;

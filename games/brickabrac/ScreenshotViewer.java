@@ -131,7 +131,7 @@ final class ScreenshotViewer {
               return stackIn_75_0;
             }
           }
-          if (ea.field_a) {
+          if (InputOptionsHelpers.field_a) {
             while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
               var5 = this.a((byte) -120);
               if (var5 == 0) {
@@ -531,7 +531,7 @@ final class ScreenshotViewer {
             if (param1) {
               return;
             }
-            ea.field_a = param2;
+            InputOptionsHelpers.field_a = param2;
             return;
           }
           throw new IllegalArgumentException("");

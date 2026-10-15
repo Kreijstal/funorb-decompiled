@@ -63,7 +63,7 @@ final class DesertBackground extends BackgroundScene {
           QuickChatPopupHelpers.desertSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.backgroundSpriteArchive);
           SecondaryNodeQueue.field_d = UiGeometryHelpers.createScaledHalfSizeSprite(0, FriendListUi.desertNearSprite);
           Widget.field_x = UiGeometryHelpers.createScaledHalfSizeSprite(0, PowerUpWarning.desertMidSprite);
-          pp.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, OptionsScreen.desertFarSprite);
+          TextValidationHelpers.field_b = UiGeometryHelpers.createScaledHalfSizeSprite(0, OptionsScreen.desertFarSprite);
           GzipInflater.desertCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_caps", 2);
           TableNameEntry.desertSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.backgroundSpriteArchive, "desert_segs", 2);
           TextWidgetRenderer.desertCentreSprites[0] = SpriteInputHelpers.loadRgbSpriteByName("desert", "desert_centre", (byte) 110, AchievementIcon.backgroundSpriteArchive);
@@ -114,9 +114,9 @@ final class DesertBackground extends BackgroundScene {
             Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.desertBackgroundColors[colorIndex], 16777215);
             return;
           }
-          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
+          var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            RankingsScreen.a(var7, 2, -13, pp.field_b, colorIndex, 102);
+            RankingsScreen.a(var7, 2, -13, TextValidationHelpers.field_b, colorIndex, 102);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           } else {
             InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var7.sprite, scroll16, 306, -13, destinationX);
@@ -129,9 +129,9 @@ final class DesertBackground extends BackgroundScene {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, CacheIoWorker.desertBackgroundColors[colorIndex], 16777215);
           return;
         }
-        RasterCacheSurface var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
+        RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -74);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          RankingsScreen.a(var8, 2, -13, pp.field_b, colorIndex, 102);
+          RankingsScreen.a(var8, 2, -13, TextValidationHelpers.field_b, colorIndex, 102);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
           InteractiveGameClient.drawParallaxLayers((byte) 86, SecondaryNodeQueue.field_d, destinationY, 2, Widget.field_x, var8.sprite, scroll16, 306, -13, destinationX);
@@ -197,7 +197,7 @@ final class DesertBackground extends BackgroundScene {
 
     final static void drawTextChoiceDialog(int obfuscationGuard) {
         int contentWidth = ArchiveSourceManager.getTextChoiceContentWidth((byte) -53);
-        int contentHeight = ba.getTextChoiceContentHeight(true);
+        int contentHeight = UiComponentNode.getTextChoiceContentHeight(true);
         GameTransportActions.textChoiceOuterFrame.paintFrame(contentWidth + (CalendarRankingHelpers.textChoiceOuterPaddingX << 1), contentHeight + (Paddle.textChoiceOuterPaddingY << 1), LevelPack.textChoiceLeft - CalendarRankingHelpers.textChoiceOuterPaddingX, false, ContentTransitionPhase.textChoiceTop - Paddle.textChoiceOuterPaddingY);
         CachedArchiveSource.drawTextChoiceLines(-16085);
         if (obfuscationGuard == 11184810) {

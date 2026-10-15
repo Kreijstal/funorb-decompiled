@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ba extends DualLinkNode {
+class UiComponentNode extends DualLinkNode {
     static QuickChatParameterType field_B;
     static String field_x;
     static UiComponent field_v;
@@ -11,7 +11,7 @@ class ba extends DualLinkNode {
     static String field_y;
     static String field_u;
 
-    ba() {
+    UiComponentNode() {
     }
 
     final static IndexedSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
@@ -29,7 +29,7 @@ class ba extends DualLinkNode {
             return stackIn_2_0;
           }
           if (BytePayloadSubmission.decodeSpritesFromArchive(-125, param1, param3, param0)) {
-            stackIn_7_0 = kk.buildIndexedSprites((byte) -2);
+            stackIn_7_0 = IndexedSpriteHelpers.buildIndexedSprites((byte) -2);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;
@@ -50,7 +50,7 @@ class ba extends DualLinkNode {
 
     final static int getTextChoiceContentHeight(boolean obfuscationGuard) {
         if (!obfuscationGuard) {
-          ba.f(-108);
+          UiComponentNode.f(-108);
           return ReflectionCheck.textChoiceContentHeight;
         }
         return ReflectionCheck.textChoiceContentHeight;
@@ -59,7 +59,7 @@ class ba extends DualLinkNode {
     final static void f(int param0) {
         IntArrayRequestHelpers var1 = (IntArrayRequestHelpers) (SoundCache.field_f.first(-39));
         if (var1 == null) {
-          hn.closeGameTransport((byte) 106);
+          GameTransportHelpers.closeGameTransport((byte) 106);
           return;
         }
         BitPacketBuffer var2 = LogoRenderHelpers.incomingPackets;
@@ -89,7 +89,7 @@ class ba extends DualLinkNode {
         try {
           crc = -1;
           if (obfuscationGuard != 9) {
-            ba.getTextChoiceContentHeight(false);
+            UiComponentNode.getTextChoiceContentHeight(false);
           }
           for (inputIndex = start; end > inputIndex; inputIndex++) {
             crc = LevelCompleteScreen.crc32Table[(crc ^ input[inputIndex]) & 255] ^ crc >>> 8;
@@ -121,7 +121,7 @@ class ba extends DualLinkNode {
         field_y = null;
         if (param0 > -98) {
           byte[] var2 = (byte[]) null;
-          ba.computeCrc32((byte[]) null, 51, 121, 59);
+          UiComponentNode.computeCrc32((byte[]) null, 51, 121, 59);
         }
     }
 

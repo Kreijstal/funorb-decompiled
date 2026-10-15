@@ -100,7 +100,7 @@ final class AlignedIconLabel extends UiComponent {
             }
             var3 = "";
             if (param1 != null) {
-              var3 = pp.a(22570, param1);
+              var3 = TextValidationHelpers.a(22570, param1);
             }
             if (param0 != null) {
               if (param1 != null) {

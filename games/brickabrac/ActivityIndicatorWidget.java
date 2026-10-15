@@ -343,7 +343,7 @@ final class ActivityIndicatorWidget extends Widget {
                 } catch (java.io.IOException caughtWriteFailure) {
                   caughtFailure = caughtWriteFailure;
                   writeFailure = (IOException) (Object) caughtFailure;
-                  hn.closeGameTransport((byte) 92);
+                  GameTransportHelpers.closeGameTransport((byte) 92);
                 }
                 TextFieldValidator.outgoingPackets.position = 0;
               }

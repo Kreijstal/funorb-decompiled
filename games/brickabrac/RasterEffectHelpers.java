@@ -530,7 +530,7 @@ final class RasterEffectHelpers {
               writeIndex++;
               childrenWordIndex = sequenceSeed;
               sequenceSeed++;
-              TranslucentNineSliceFrame.glowBranchScratch[childrenWriteIndex] = 1 + er.nonnegativeRemainder(-1560508993, maximumChildren, UiComponent.glowSequenceWords[childrenWordIndex]);
+              TranslucentNineSliceFrame.glowBranchScratch[childrenWriteIndex] = 1 + IntegerRemainderHelpers.nonnegativeRemainder(-1560508993, maximumChildren, UiComponent.glowSequenceWords[childrenWordIndex]);
             }
           }
           generationCount = nextGenerationCount;

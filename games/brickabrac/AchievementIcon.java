@@ -197,7 +197,7 @@ final class AchievementIcon extends IntrusiveNode {
         }
         if ((1 << IntArrayRequest.gameplayScreen.localPlayerId & IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask) == 0) {
           if (IntArrayRequest.gameplayScreen.match.drawOfferPlayerMask != 0) {
-            ArrayWidgetGroup.buttonLabels[10] = er.field_a;
+            ArrayWidgetGroup.buttonLabels[10] = IntegerRemainderHelpers.field_a;
             if (obfuscationGuard != 32) {
               field_o = (String) null;
               return;
@@ -253,7 +253,7 @@ final class AchievementIcon extends IntrusiveNode {
 
     final void recycle(int obfuscationGuard) {
         if (obfuscationGuard == 1) {
-          aa.achievementIconPool.addLast((IntrusiveNode) (this), (byte) 3);
+          JavaRandomHelpers.achievementIconPool.addLast((IntrusiveNode) (this), (byte) 3);
           this.thumbnailIsPlaceholder = false;
           this.cachedThumbnail = null;
           this.owner = null;
@@ -261,7 +261,7 @@ final class AchievementIcon extends IntrusiveNode {
         }
         IntArrayRequest var3 = (IntArrayRequest) null;
         AchievementIcon.sendIntArrayRequest(-1, (IntArrayRequest) null, 57);
-        aa.achievementIconPool.addLast((IntrusiveNode) (this), (byte) 3);
+        JavaRandomHelpers.achievementIconPool.addLast((IntrusiveNode) (this), (byte) 3);
         this.thumbnailIsPlaceholder = false;
         this.cachedThumbnail = null;
         this.owner = null;

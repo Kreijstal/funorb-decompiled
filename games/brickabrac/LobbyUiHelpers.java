@@ -351,16 +351,16 @@ final class LobbyUiHelpers {
             waitingMessageForCollapse = AppletGameShell.field_e;
             AppletGameShell.field_e.height = 0;
             waitingMessageForCollapse.width = 0;
-            if (!hn.b((byte) 7)) {
+            if (!GameTransportHelpers.b((byte) 7)) {
               gameDisplayName = ClientResourceHelpers.currentLobbyGame.displayName;
-              ba.field_v.text = GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
+              UiComponentNode.field_v.text = GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{gameDisplayName}, (byte) 103).toUpperCase();
               AppletGameShell.field_e.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, MultiplayerMatch.field_d.width, (byte) 64);
               AppletGameShell.field_e.text = GamePresentationHelpers.formatIndexedText(IntrusiveNode.field_a, new String[]{gameDisplayName}, (byte) 103);
               countdownTarget = AppletGameShell.field_e;
               continueOwnerEligibility = (clientBranchFlag != 0);
             }
             if (continueOwnerEligibility) {
-              ba.field_v.text = ba.field_x.toUpperCase();
+              UiComponentNode.field_v.text = UiComponentNode.field_x.toUpperCase();
               buttonSplitXOrCountdownSeconds = (MultiplayerMatch.field_d.width + 2) / 2;
               RadialSelectorRenderer.field_h.setBounds(40, MultiplayerMatch.field_d.height - 40, 0, -2 + buttonSplitXOrCountdownSeconds, (byte) 64);
               if (ClientResourceHelpers.currentLobbyGame.maxPlayers <= ClientResourceHelpers.currentLobbyGame.playerCount) {
@@ -394,7 +394,7 @@ final class LobbyUiHelpers {
               DraggableWidget.field_K.text = ConstructionBackground.field_r.toUpperCase();
               countdownTarget = DraggableWidget.field_K;
               startButtonForEnable = DraggableWidget.field_K;
-              startAllowedWithoutPendingOptions = (allowStartGame) && (ic.optionChangeDeadlineMillis == 0L);
+              startAllowedWithoutPendingOptions = (allowStartGame) && (LobbyInputHelpers.optionChangeDeadlineMillis == 0L);
               startButtonForEnable.enabled = startAllowedWithoutPendingOptions;
               restrictionPass = 2;
               if (null != ContextMenu.field_bc) {
@@ -571,7 +571,7 @@ final class LobbyUiHelpers {
                       null != AchievementsScreen.field_F[settingCursorOrIneligiblePlayer]) {
                       requiredRatingValue = AchievementsScreen.field_F[settingCursorOrIneligiblePlayer][settingValueOrPlayerCount];
                       if (requiredRatingValue != 0 &&
-                        !ea.field_g) {
+                        !InputOptionsHelpers.field_g) {
                         settingCursorOrRestrictionFlag = 1;
                       }
                       if (requiredRatingValue > minimumRating) {
@@ -582,7 +582,7 @@ final class LobbyUiHelpers {
                       MatchResultScreen.field_v[settingCursorOrIneligiblePlayer] != null) {
                       requiredRatedGamesValue = MatchResultScreen.field_v[settingCursorOrIneligiblePlayer][settingValueOrPlayerCount];
                       if (requiredRatedGamesValue != 0 &&
-                        !ea.field_g) {
+                        !InputOptionsHelpers.field_g) {
                         settingCursorOrRestrictionFlag = 1;
                       }
                       if (pairCursorOrMinimumRatedGames < requiredRatedGamesValue) {
@@ -671,8 +671,8 @@ final class LobbyUiHelpers {
                 }
               }
             }
-            if (0L != ic.optionChangeDeadlineMillis) {
-              buttonSplitXOrCountdownSeconds = (int)(ic.optionChangeDeadlineMillis - MonotonicTime.nowMillis(false));
+            if (0L != LobbyInputHelpers.optionChangeDeadlineMillis) {
+              buttonSplitXOrCountdownSeconds = (int)(LobbyInputHelpers.optionChangeDeadlineMillis - MonotonicTime.nowMillis(false));
               buttonSplitXOrCountdownSeconds = (buttonSplitXOrCountdownSeconds + 999) / 1000;
               if (1 > buttonSplitXOrCountdownSeconds) {
                 buttonSplitXOrCountdownSeconds = 1;

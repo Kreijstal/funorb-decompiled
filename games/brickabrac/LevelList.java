@@ -50,7 +50,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels = new String[46];
         ArrayWidgetGroup.buttonLabels[5] = TextHotspotRegion.field_l;
         ArrayWidgetGroup.buttonLabels[3] = MusicCrossfadeStream.field_B;
-        ArrayWidgetGroup.buttonLabels[4] = pp.field_c;
+        ArrayWidgetGroup.buttonLabels[4] = TextValidationHelpers.field_c;
         ArrayWidgetGroup.buttonLabels[9] = LevelPackLoader.field_d;
         ArrayWidgetGroup.buttonLabels[1] = ArchiveNetworkRequest.field_H;
         ArrayWidgetGroup.buttonLabels[11] = StrongCacheEntry.field_H;
@@ -72,7 +72,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[23] = UiComponent.field_mb;
         ArrayWidgetGroup.buttonLabels[21] = ArchiveNetworkClient.field_r;
         ArrayWidgetGroup.buttonLabels[17] = LevelCompleteScreen.field_E[0];
-        ArrayWidgetGroup.buttonLabels[38] = kk.field_a;
+        ArrayWidgetGroup.buttonLabels[38] = IndexedSpriteHelpers.field_a;
         if (param0 != -1) {
           return;
         }
@@ -97,11 +97,11 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[26] = PauseMenuScreen.field_u;
         ArrayWidgetGroup.buttonLabels[22] = FocusableWidget.field_D;
         CacheEntry.field_A[13] = TimedSplashScreen.field_s;
-        hm.field_b = new String[]{ContentTransitionPhase.field_a, BrowserResizeNotificationHelpers.field_c, TabbedPane.field_Pb, ResourcePreparationQueue.field_a};
+        LobbySetupHelpers.field_b = new String[]{ContentTransitionPhase.field_a, BrowserResizeNotificationHelpers.field_c, TabbedPane.field_Pb, ResourcePreparationQueue.field_a};
         CacheEntry.field_A[16] = MeshAttributeRecord.field_d;
         CanvasResizeController.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
         WidgetTheme.lostBallMessages = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, FullscreenDialogHelpers.field_f, UiGeometryHelpers.goodGriefText};
-        ar.field_a = new String[]{kk.field_a};
+        ar.field_a = new String[]{IndexedSpriteHelpers.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;
         ArchiveFetchClient.field_j = new String[]{LoginCredentials.field_g, MusicPatch.field_m, GameRenderAudioHelpers.field_b, RectangleBody.field_t};
         TextLineLayout.field_e = new String[]{MultiValueSliderWidget.field_N, ReflectionCheck.field_o, MonotonicTime.field_a, EmailLoginCredentials.field_m, SocialListResponseHelpers.geniusText, GameTransportActions.field_a, AppletFlowHelpers.field_f, OutgoingPacketHelpers.field_h};
@@ -198,7 +198,7 @@ final class LevelList {
           if (this.pack.levelCount > levelIndex) {
             if (0 <= levelIndex) {
               labelStyle = 3;
-              if (hh.unlockedLevelCounts[this.pack.packId] < levelIndex) {
+              if (IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId] < levelIndex) {
                 if (this.selectedLevelIndex == levelIndex) {
                   labelStyle = 0;
                 }

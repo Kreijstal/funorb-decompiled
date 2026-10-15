@@ -9,11 +9,11 @@ final class ByteArrayNode extends IntrusiveNode {
 
     final static RgbSprite[] a(int param0, byte param1, int param2) {
         if (param1 == -18) {
-          return hn.a(param2, param0, 1, param1 ^ 24);
+          return GameTransportHelpers.a(param2, param0, 1, param1 ^ 24);
         }
         CharSequence var4 = (CharSequence) null;
         ByteArrayNode.a(21, (CharSequence) null);
-        return hn.a(param2, param0, 1, param1 ^ 24);
+        return GameTransportHelpers.a(param2, param0, 1, param1 ^ 24);
     }
 
     public static void a(int param0) {
@@ -34,7 +34,7 @@ final class ByteArrayNode extends IntrusiveNode {
           if (param0 != 17165) {
             ByteArrayNode.a(-74, (byte) 25, 127);
           }
-          stackIn_3_0 = jd.a((byte) 122, false, param1);
+          stackIn_3_0 = WhirlpoolDigestHelpers.a((byte) 122, false, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

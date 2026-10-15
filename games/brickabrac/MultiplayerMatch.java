@@ -1164,7 +1164,7 @@ final class MultiplayerMatch {
           this.markResultsReady(false);
         } else {
           if (FriendListUi.a(remainingPlayerMask, (byte) -6)) {
-            this.lastRemainingPlayerId = ed.unsignedBitLength(9, remainingPlayerMask - 1);
+            this.lastRemainingPlayerId = IntegerBitLengthHelpers.unsignedBitLength(9, remainingPlayerMask - 1);
             this.playerMaskThree = this.playerMaskThree | 1 << this.lastRemainingPlayerId;
             this.markResultsReady(false);
           }

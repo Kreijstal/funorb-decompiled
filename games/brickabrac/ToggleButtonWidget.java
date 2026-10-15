@@ -29,7 +29,7 @@ final class ToggleButtonWidget extends FocusableWidget {
           }
           ChatLobbyUiHelpers.loadingProgressDialog.setProgress(param2, param0, param3, (byte) 86);
           Rasterizer2D.clear();
-          wc.a(true, -1);
+          HalfRgbBlendHelpers.a(true, -1);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -81,8 +81,8 @@ final class ToggleButtonWidget extends FocusableWidget {
             parisFarSprite = (RgbSprite) null;
           }
           DirectByteStorage.field_k = new LoginPanel(GameScreen.field_d, (String) null, NanoGameClock.field_l, param0, param1);
-          rj.accountContentLayer = new AccountContentTransitionLayer(ResourceArchive.field_f, DirectByteStorage.field_k);
-          ResourceArchive.field_f.pushLayer(-117, rj.accountContentLayer);
+          TextHuffmanHelpers.accountContentLayer = new AccountContentTransitionLayer(ResourceArchive.field_f, DirectByteStorage.field_k);
+          ResourceArchive.field_f.pushLayer(-117, TextHuffmanHelpers.accountContentLayer);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "bf.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -132,8 +132,8 @@ final class IntNode extends IntrusiveNode {
               var4_ref = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{message.contextLabel}, (byte) 103) + "] ";
             }
             if (message.channel == 4 &&
-              jd.field_b != null) {
-              var4_ref = "[" + jd.field_b + "] ";
+              WhirlpoolDigestHelpers.field_b != null) {
+              var4_ref = "[" + WhirlpoolDigestHelpers.field_b + "] ";
             }
             if (message.channel == 3) {
               var4_ref = "[#" + message.contextLabel + "] ";

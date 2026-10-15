@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class pp {
+final class TextValidationHelpers {
     static RgbSprite field_b;
     static String field_c;
     static int field_a;
@@ -221,7 +221,7 @@ final class pp {
         field_c = null;
         if (param0 != 0) {
           CharSequence var2 = (CharSequence) null;
-          pp.countCharacter((byte) -84, 'ﾽ', (CharSequence) null);
+          TextValidationHelpers.countCharacter((byte) -84, 'ﾽ', (CharSequence) null);
           field_b = null;
           return;
         }

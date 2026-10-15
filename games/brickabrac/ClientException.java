@@ -110,7 +110,7 @@ final class ClientException extends RuntimeException {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a((int) var21[var6], 255)];
             }
-            var1[var2] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], UiGeometryHelpers.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var22);
+            var1[var2] = new RgbSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], UiGeometryHelpers.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var22);
           } else {
             var15 = PopupWidgetLayer.decodedSpriteAlpha[var2];
             var11 = var15;
@@ -122,7 +122,7 @@ final class ClientException extends RuntimeException {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = LevelSelectScreen.d(IntrusiveHashIterator.a(255, (int) var15[var7]) << 24, PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], UiGeometryHelpers.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[var2], SocketConnector.decodedSpriteOffsetY[var2], UiGeometryHelpers.decodedSpriteWidths[var2], TextHotspotRegion.decodedSpriteHeights[var2], var17));
           }
         }
         MotionWaypoint.clearDecodedSpriteData((byte) 96);

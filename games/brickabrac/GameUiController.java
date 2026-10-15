@@ -36,7 +36,7 @@ final class GameUiController implements GameUiLifecycle {
         TranslucentNineSliceFrame var2 = new TranslucentNineSliceFrame(LoginCredentialKind.field_h);
         RgbSprite[] var3 = (RgbSprite[]) null;
         MidiSynthesizer.a(1, (RgbSprite[]) null, Ball.field_G, 240, AchievementBrowserScreen.field_A, 8, 2, ContextActionController.field_g, 0, 2, 100, 8, 0, 320, 0);
-        hd.configureFullscreenDialogFrame(93, var2, 20, 20);
+        InvitationDialogHelpers.configureFullscreenDialogFrame(93, var2, 20, 20);
         if (obfuscationGuard) {
           discarded$0 = this.pollSavedProgress((byte) -1);
         }
@@ -44,8 +44,8 @@ final class GameUiController implements GameUiLifecycle {
         LobbyUiHelpers.configureTextChoiceDialogWithFont((RgbSprite[]) null, 240, 8, 320, 0, ContextActionController.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.configureTextChoiceOuterFrame(20, -97, 20, var2);
         TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, FriendListUi.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
-        ea.field_g = true;
-        GrowableIntList.field_e = er.field_b;
+        InputOptionsHelpers.field_g = true;
+        GrowableIntList.field_e = IntegerRemainderHelpers.field_b;
         LevelResultSubmission.b(-9, 200);
         KeyboardInput.a(new BrickGameLayerController(), 0);
         VolcanicBackground.g(0);
@@ -122,14 +122,14 @@ final class GameUiController implements GameUiLifecycle {
             if (!OptionsScreen.progressRequests[var3].complete) {
               var2Lifetime1 = 0;
             } else {
-              if (OptionsScreen.progressRequests[var3].values[0] > hh.unlockedLevelCounts[var3]) {
-                hh.unlockedLevelCounts[var3] = OptionsScreen.progressRequests[var3].values[0];
+              if (OptionsScreen.progressRequests[var3].values[0] > IntegerPowerHelpers.unlockedLevelCounts[var3]) {
+                IntegerPowerHelpers.unlockedLevelCounts[var3] = OptionsScreen.progressRequests[var3].values[0];
               }
-              jj.field_d = jj.field_d | BytePayloadSubmission.combineLevelAttributes(DateFieldsWidget.field_L[var3], 0, true, hh.unlockedLevelCounts[var3]);
+              jj.field_d = jj.field_d | BytePayloadSubmission.combineLevelAttributes(DateFieldsWidget.field_L[var3], 0, true, IntegerPowerHelpers.unlockedLevelCounts[var3]);
               if (!DelayedPacket.c(obfuscationGuard ^ 27)) {
-                hh.unlockedLevelCounts[var3] = 0;
+                IntegerPowerHelpers.unlockedLevelCounts[var3] = 0;
               } else {
-                hh.unlockedLevelCounts[var3] = 0;
+                IntegerPowerHelpers.unlockedLevelCounts[var3] = 0;
               }
             }
           }
@@ -195,7 +195,7 @@ final class GameUiController implements GameUiLifecycle {
                   if (var3 != 5) {
                     return true;
                   }
-                  rj.installTextHuffman(new HuffmanCodec(KeyDispatchHelpers.field_a.takeFileByName(121, "", "huffman")), false);
+                  TextHuffmanHelpers.installTextHuffman(new HuffmanCodec(KeyDispatchHelpers.field_a.takeFileByName(121, "", "huffman")), false);
                   KeyDispatchHelpers.field_a = null;
                 }
               } else {

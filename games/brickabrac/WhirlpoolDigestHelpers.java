@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd {
+final class WhirlpoolDigestHelpers {
     static String field_b;
     static UiComponent field_a;
 
@@ -9,7 +9,7 @@ final class jd {
         field_a = null;
         if (param0 != 0) {
           CharSequence var2 = (CharSequence) null;
-          jd.a((byte) -52, true, (CharSequence) null);
+          WhirlpoolDigestHelpers.a((byte) -52, true, (CharSequence) null);
           field_b = null;
           return;
         }

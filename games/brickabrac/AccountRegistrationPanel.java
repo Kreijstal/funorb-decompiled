@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
             ReflectionCheck.textChoiceContentHeight = contentHeightValue + lineHeight;
             heightLineIndex++;
           }
-          ContentTransitionPhase.textChoiceTop = ea.textChoiceCenterY - (ReflectionCheck.textChoiceContentHeight >> 1);
+          ContentTransitionPhase.textChoiceTop = InputOptionsHelpers.textChoiceCenterY - (ReflectionCheck.textChoiceContentHeight >> 1);
           ArcticBackground.textChoiceSelection.initializeSelection(TextChoiceDialogHitTest.hitTestTextChoiceDialog(obfuscationGuard - 46, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, usePointer, (byte) -127);
           if (obfuscationGuard != 46) {
             fullPaddleCenterSprite = (RgbSprite) null;
@@ -591,7 +591,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         this.newsletterToggle = new ToggleButtonWidget("", (WidgetListener) null, var1 != 0);
         this.registerButton = new FocusableWidget(GrowableIntList.field_d, (WidgetListener) null);
         this.backButton = new FocusableWidget(ByteArrayNode.field_l, (WidgetListener) null);
-        this.usernameField.tooltip = hh.field_a;
+        this.usernameField.tooltip = IntegerPowerHelpers.field_a;
         this.emailField.tooltip = GameConnectionHelpers.field_d;
         this.emailConfirmationField.tooltip = ResourceArchive.field_e;
         this.passwordField.tooltip = IntKeyIndex.field_a;
@@ -620,7 +620,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         int var3 = 20;
         var3 = var3 + this.a(IntNode.field_l, this.emailField, var3, 37, 170);
         var3 = var3 + (this.a(this.emailConfirmationField, var3, "", 20, 170, DelayedPacket.field_o, 170) + 5);
-        var3 = var3 + this.a(wc.field_c, this.passwordField, var3, 84, 170);
+        var3 = var3 + this.a(HalfRgbBlendHelpers.field_c, this.passwordField, var3, 84, 170);
         var3 = var3 + (this.a(170, InstructionsScreen.field_x, WidgetLayerStack.field_G, -3, this.passwordConfirmationField, var3) + 5);
         var3 = var3 + (this.a(170, GameClock.field_h, BlankScreen.field_j, -3, this.usernameField, var3) + 5);
         var3 = var3 + this.a(this.ageField, HuffmanCodec.field_d, 170, 111, var3);

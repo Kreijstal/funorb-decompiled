@@ -106,7 +106,7 @@ abstract class CacheEntry extends DualLinkNode {
           Ball.field_A = new UiComponent(0L, (UiComponent) null);
           FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, ConnectionPhase.nameColumnHeadingText);
           GameUiController.field_a = new UiComponent(0L, IntrusiveHashIterator.field_a, RadialSelectorRenderer.field_c);
-          IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
+          IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c);
           Ball.field_A.addChild(FarmBackground.field_v, 0);
           if (PacketReceiveHelpers.field_e) {
             Ball.field_A.addChild(GameUiController.field_a, 0);
@@ -124,13 +124,13 @@ abstract class CacheEntry extends DualLinkNode {
           PasswordTooltipHelpers.field_e = new UiComponent(0L, FarmBackground.field_x);
           AppletFlowHelpers.field_g = new UiComponent(0L, MainMenuScreen.field_t, AppletFlowHelpers.field_b);
           AppletFlowHelpers.field_a = new UiComponent(0L, LoginCredentialKind.field_d, VolcanicBackground.field_r);
-          kk.field_b = new UiComponent(0L, LoginCredentialKind.field_d, SocialListResponseHelpers.playersLabel);
+          IndexedSpriteHelpers.field_b = new UiComponent(0L, LoginCredentialKind.field_d, SocialListResponseHelpers.playersLabel);
           RasterEffectHelpers.field_b = new UiComponent(0L, LoginCredentialKind.field_d, BallPulseEffect.field_o);
           BufferedSocket.field_h = new UiComponent(0L, LoginCredentialKind.field_d, TextFieldRenderer.field_v);
           HalloweenBackground.field_x = new UiComponent(0L, IntrusiveHashIterator.field_a, ByteStorage.field_d);
-          rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
-          gj.field_b = new UiComponent(0L, fm.field_b, GameplayRenderHelpers.field_e.toUpperCase());
-          gj.field_b.enabled = PacketReceiveHelpers.field_e;
+          rl.field_e = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c);
+          TableQuickChatHelpers.field_b = new UiComponent(0L, fm.field_b, GameplayRenderHelpers.field_e.toUpperCase());
+          TableQuickChatHelpers.field_b.enabled = PacketReceiveHelpers.field_e;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
@@ -153,7 +153,7 @@ abstract class CacheEntry extends DualLinkNode {
             return;
           }
           PasswordTooltipHelpers.field_e.addChild(AppletFlowHelpers.field_a, 0);
-          PasswordTooltipHelpers.field_e.addChild(kk.field_b, 0);
+          PasswordTooltipHelpers.field_e.addChild(IndexedSpriteHelpers.field_b, 0);
           if (PacketReceiveHelpers.field_e) {
             PasswordTooltipHelpers.field_e.addChild(RasterEffectHelpers.field_b, 0);
           }
@@ -161,7 +161,7 @@ abstract class CacheEntry extends DualLinkNode {
           PasswordTooltipHelpers.field_e.addChild(HalloweenBackground.field_x, 0);
           PasswordTooltipHelpers.field_e.addChild(rl.field_e, 0);
           if (PacketReceiveHelpers.field_e) {
-            FontRequestHelpers.field_a.addChild(gj.field_b, 0);
+            FontRequestHelpers.field_a.addChild(TableQuickChatHelpers.field_b, 0);
           }
           FontRequestHelpers.field_a.addChild(VolcanicBackground.field_v, 0);
           Brick.field_A = new UiComponent(0L, CappedUrlRequest.field_l);
@@ -181,7 +181,7 @@ abstract class CacheEntry extends DualLinkNode {
           TextWidgetRenderer.field_b.horizontalAlignment = 1;
           BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, ConnectionPhase.nameColumnHeadingText);
           QuickChatPhraseDefinition.field_E = new UiComponent(0L, IntrusiveHashIterator.field_a, RadialSelectorRenderer.field_c);
-          TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
+          TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c);
           IterableIntrusiveHashTable.field_b.addChild(TextWidgetRenderer.field_b, 0);
           IterableIntrusiveHashTable.field_b.addChild(BoundedFile.field_g, 0);
           if (PacketReceiveHelpers.field_e) {
@@ -189,9 +189,9 @@ abstract class CacheEntry extends DualLinkNode {
           }
           IterableIntrusiveHashTable.field_b.addChild(TimedSplashScreen.field_u, 0);
           GameUiController.field_e = new UiComponent(0L, MatchCompleteScreen.field_x, QuickChatSineHelpers.field_a.toUpperCase());
-          ba.field_v = new UiComponent(0L, ValidationStatus.field_j);
+          UiComponentNode.field_v = new UiComponent(0L, ValidationStatus.field_j);
           QuickChatPhraseRegistry.field_e = new UiComponent(0L, FarmBackground.field_x);
-          jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
+          WhirlpoolDigestHelpers.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());
           ChatMessage.field_l = new UiComponent[4 + param13];
           MatchCompleteScreen.field_A = new AlignedIconLabel[4 + param13][];
           ChatMessage.field_l[0] = new UiComponent(0L, ProxySocketConnector.field_n, Bzip2State.field_H);
@@ -209,7 +209,7 @@ abstract class CacheEntry extends DualLinkNode {
             }
           }
           ChatMessage.field_l[2] = new UiComponent(0L, ProxySocketConnector.field_n, PlayerInputBatch.field_j);
-          MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], hh.field_f)};
+          MatchCompleteScreen.field_A[2] = new AlignedIconLabel[]{new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, (RgbSprite) null, StateIconLabel.field_Pb), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[0], MenuSelection.field_a), new AlignedIconLabel(0L, AchievementMaskRequest.field_n, (UiComponent) null, DualLinkNode.field_t, Ball.field_K[1], IntegerPowerHelpers.field_f)};
           if (1 < IntArrayRequest.field_t) {
             ChatMessage.field_l[3] = new UiComponent(0L, ProxySocketConnector.field_n, EmailConfirmationValidator.field_r);
             array$1 = new AlignedIconLabel[IntArrayRequest.field_t + 1];
@@ -267,9 +267,9 @@ abstract class CacheEntry extends DualLinkNode {
           AppletGameShell.field_e.verticalAlignment = 1;
           var17.horizontalAlignment = 1;
           MultiplayerMatch.field_d = new UiComponent(0L, (UiComponent) null);
-          MultiplayerMatch.field_d.addChild(ba.field_v, 0);
+          MultiplayerMatch.field_d.addChild(UiComponentNode.field_v, 0);
           MultiplayerMatch.field_d.addChild(QuickChatPhraseRegistry.field_e, 0);
-          QuickChatPhraseRegistry.field_e.addChild(jd.field_a, 0);
+          QuickChatPhraseRegistry.field_e.addChild(WhirlpoolDigestHelpers.field_a, 0);
           for (var18Lifetime2 = 0; param13 + 4 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(ScreenshotViewer.field_n.length < 2)) && (var18Lifetime2 != 3 ||

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic {
+final class LobbyInputHelpers {
     static long optionChangeDeadlineMillis;
     static ResourceArchive specialMusicPatchArchive;
     static VerticalScrollbar field_c;
@@ -69,7 +69,7 @@ final class ic {
         }
         if (obfuscationGuard > -63) {
           var3 = (LobbyGame) null;
-          ic.insertSortedLobbyGame(true, (LobbyGame) null);
+          LobbyInputHelpers.insertSortedLobbyGame(true, (LobbyGame) null);
         }
     }
 

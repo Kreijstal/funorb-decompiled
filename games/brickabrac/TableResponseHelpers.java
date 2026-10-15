@@ -64,7 +64,7 @@ final class TableResponseHelpers {
               break;
             }
             if (tableRequest == null) {
-              hn.closeGameTransport((byte) 127);
+              GameTransportHelpers.closeGameTransport((byte) 127);
               return;
             }
             dictionarySize = packet.readUnsignedByte(obfuscationGuard ^ 248);
@@ -163,7 +163,7 @@ final class TableResponseHelpers {
               break;
             }
             if (rowSubmission == null) {
-              hn.closeGameTransport((byte) 53);
+              GameTransportHelpers.closeGameTransport((byte) 53);
               return;
             }
             rowSubmission.rowId = acknowledgedRowId;
@@ -171,7 +171,7 @@ final class TableResponseHelpers {
             return;
           }
           AlignedIconLabel.a("HS1: " + WhirlpoolHasher.c((byte) -96), (Throwable) null, obfuscationGuard ^ 102);
-          hn.closeGameTransport((byte) 70);
+          GameTransportHelpers.closeGameTransport((byte) 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

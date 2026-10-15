@@ -29,13 +29,13 @@ final class PacketReceiveHelpers {
             availableBytes = WhirlpoolHasher.gameTransport.available(10434);
             if (0 >= availableBytes) {
               if (availableBytes < 0) {
-                hn.closeGameTransport((byte) 123);
+                GameTransportHelpers.closeGameTransport((byte) 123);
                 return false;
               }
               if (MembershipBenefitsScreen.getMillisSinceGameRead(obfuscationGuard - 6812) <= 30000L) {
                 return false;
               }
-              hn.closeGameTransport((byte) 123);
+              GameTransportHelpers.closeGameTransport((byte) 123);
               return false;
             }
             if (availableBytes > length - LogoRenderHelpers.incomingPackets.position) {
@@ -52,7 +52,7 @@ final class PacketReceiveHelpers {
           } catch (java.io.IOException caughtReadFailure) {
             caughtFailure = caughtReadFailure;
             readFailure = (IOException) (Object) caughtFailure;
-            hn.closeGameTransport((byte) 111);
+            GameTransportHelpers.closeGameTransport((byte) 111);
             return false;
           }
         } catch (RuntimeException | Error uncheckedFailure) {

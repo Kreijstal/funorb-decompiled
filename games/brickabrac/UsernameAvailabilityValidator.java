@@ -34,7 +34,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             var3.d(-2, -2, 16777215);
             Rasterizer2D.e(4, 4, 0, 0, 540, 140);
           }
-          aa.field_b.bindRasterTarget();
+          JavaRandomHelpers.field_b.bindRasterTarget();
           var1.drawHalfSize(0, 0);
           RasterStackHelpers.popRaster(-123);
         } catch (RuntimeException runtimeException) {

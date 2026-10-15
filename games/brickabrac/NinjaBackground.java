@@ -25,13 +25,13 @@ final class NinjaBackground extends BackgroundScene {
         }
         LegacyUtf8Decoder.ninjaNearSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_near", (byte) -24, AchievementIcon.backgroundSpriteArchive);
         CanvasInputHelpers.ninjaMidSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_mid", (byte) -128, AchievementIcon.backgroundSpriteArchive);
-        hn.ninjaFarSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
+        GameTransportHelpers.ninjaFarSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_far", (byte) 127, AchievementIcon.backgroundSpriteArchive);
         MeshLobbyUiHelpers.ninjaSmallSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_small", (byte) -81, AchievementIcon.backgroundSpriteArchive);
         ObjectHistoryBuffer.ninjaCharacterSprite = SpriteInputHelpers.loadRgbSpriteByName("ninja", "ninja_character", (byte) -105, AchievementIcon.backgroundSpriteArchive);
         AppletFlowHelpers.field_h = UiGeometryHelpers.createScaledHalfSizeSprite(0, LegacyUtf8Decoder.ninjaNearSprite);
         SocialListEntry.field_Zb = UiGeometryHelpers.createScaledHalfSizeSprite(0, CanvasInputHelpers.ninjaMidSprite);
-        CalendarMatchmakingState.field_c = UiGeometryHelpers.createScaledHalfSizeSprite(0, hn.ninjaFarSprite);
-        SpriteInputHelpers.encodeBinaryMaskRuns(hn.ninjaFarSprite, 0);
+        CalendarMatchmakingState.field_c = UiGeometryHelpers.createScaledHalfSizeSprite(0, GameTransportHelpers.ninjaFarSprite);
+        SpriteInputHelpers.encodeBinaryMaskRuns(GameTransportHelpers.ninjaFarSprite, 0);
         if (!obfuscationGuard) {
           SpriteInputHelpers.encodeBinaryMaskRuns(CalendarMatchmakingState.field_c, 0);
           return true;
@@ -49,7 +49,7 @@ final class NinjaBackground extends BackgroundScene {
         }
         RasterCacheSurface var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
         if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          aa.a(0, hn.ninjaFarSprite, true, colorIndex, var6, 1);
+          JavaRandomHelpers.a(0, GameTransportHelpers.ninjaFarSprite, true, colorIndex, var6, 1);
           var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
         ByteStorage.a(var6.sprite, (byte) -78, destinationY, 640, LegacyUtf8Decoder.ninjaNearSprite, CanvasInputHelpers.ninjaMidSprite, scroll16, 0, colorIndex, destinationX, 1);
@@ -78,7 +78,7 @@ final class NinjaBackground extends BackgroundScene {
           if (CanvasInputHelpers.ninjaMidSprite == null) {
             return false;
           }
-          if (null == hn.ninjaFarSprite) {
+          if (null == GameTransportHelpers.ninjaFarSprite) {
             return false;
           }
           if (null != MeshLobbyUiHelpers.ninjaSmallSprite) {
@@ -92,7 +92,7 @@ final class NinjaBackground extends BackgroundScene {
         if (CanvasInputHelpers.ninjaMidSprite == null) {
           return false;
         }
-        if (null == hn.ninjaFarSprite) {
+        if (null == GameTransportHelpers.ninjaFarSprite) {
           return false;
         }
         if (null != MeshLobbyUiHelpers.ninjaSmallSprite) {
@@ -159,9 +159,9 @@ final class NinjaBackground extends BackgroundScene {
           }
           return;
         }
-        RasterCacheSurface var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 120);
+        RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 120);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          aa.a(0, CalendarMatchmakingState.field_c, true, colorIndex, var8, 2);
+          JavaRandomHelpers.a(0, CalendarMatchmakingState.field_c, true, colorIndex, var8, 2);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         } else {
           ByteStorage.a(var8.sprite, (byte) -78, destinationY, 306, AppletFlowHelpers.field_h, SocialListEntry.field_Zb, scroll16, 0, colorIndex, destinationX, 2);

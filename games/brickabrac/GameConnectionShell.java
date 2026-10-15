@@ -70,13 +70,13 @@ abstract class GameConnectionShell extends AppletGameShell {
         GzipInflater.a(param7, this.host, this.memberAccount, this.serverNumber, 5000, 5000, LoginCredentialKind.field_e, this.gameCrc, AccountMessageDialog.field_ub, (byte) 123, param3, this.instanceId, this.gamePortTwo, this.gamePortOne);
         ActivityIndicatorWidget.a(param7, LoginCredentialKind.field_e, param0 + 3, this.gamePortOne, AccountMessageDialog.field_ub, this.host, this.gamePortTwo, this.gameCrc, this.serverNumber);
         BoundedFile.patchJavaKeyCodeMap(59);
-        NinjaBackground.mouseWheelSource = ea.createMouseWheelSource(60);
+        NinjaBackground.mouseWheelSource = InputOptionsHelpers.createMouseWheelSource(60);
         CanvasInputHelpers.attachCanvasInput((byte) 117, CacheIoRequest.windowCanvas);
         RankingSocketHelpers.field_c = param4;
         LevelPackCard.field_i = param5;
         PacketBuffer.field_j = param1;
         ClientResourceHelpers.field_f = param6;
-        ea.field_c = param2;
+        InputOptionsHelpers.field_c = param2;
         if (param0 != 39) {
           this.g(false);
         }
@@ -303,7 +303,7 @@ abstract class GameConnectionShell extends AppletGameShell {
 
     final static void setTextChoiceCenter(int x, int y, byte obfuscationGuard) {
         NewAchievementsScreen.textChoiceCenterX = x;
-        ea.textChoiceCenterY = y;
+        InputOptionsHelpers.textChoiceCenterY = y;
         if (obfuscationGuard > -110) {
           field_z = (String) null;
         }
@@ -344,7 +344,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, WidgetPaintStyle.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.affiliateId);
+            var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, WidgetPaintStyle.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), JavaRandomHelpers.a(480), LevelSelectScreen.d(true), this.affiliateId);
             if (-1 != var5_intLifetime1) {
               RadialSelectorWidget.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, ArchiveSourceManager.field_f);
               DirectByteStorage.field_e = null;
@@ -355,7 +355,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             if (OutgoingPacketHelpers.field_a != -1 &&
               0 != OutgoingPacketHelpers.field_a) {
               OutgoingPacketHelpers.field_a = -1;
-              pp.a((byte) 79);
+              TextValidationHelpers.a((byte) 79);
             }
             if (!param2) {
               var5_intLifetime2 = SoundCache.a(LevelSelectScreen.d(true), false, true, this.jagexHost, this.affiliateId, MotionWaypoint.b(false));
@@ -505,7 +505,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             return;
           }
           if (var2 == 1) {
-            ba.f(-1);
+            UiComponentNode.f(-1);
           } else {
             if (var2 != 2) {
               if (var2 != 3) {
@@ -534,7 +534,7 @@ abstract class GameConnectionShell extends AppletGameShell {
                                 return;
                               }
                               AlignedIconLabel.a("MGS1: " + WhirlpoolHasher.c((byte) -71), (Throwable) null, 119);
-                              hn.closeGameTransport((byte) 101);
+                              GameTransportHelpers.closeGameTransport((byte) 101);
                               return;
                             }
                             stackIn_31_0 = 67;
@@ -566,7 +566,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           return;
         }
         AlignedIconLabel.a("MGS2: " + WhirlpoolHasher.c((byte) -66), (Throwable) null, 89);
-        hn.closeGameTransport((byte) 71);
+        GameTransportHelpers.closeGameTransport((byte) 71);
     }
 
     private final void loadAppletParameters(int obfuscationGuard, String gameName, int gameVersion, int width, int height) {
@@ -703,7 +703,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         var5 = BrickABrac.field_J ? 1 : 0;
         if (jj.canvasResizeController != null) {
           if (null == GameplayRenderHelpers.fullscreenCanvas) {
-            var6 = ea.b(0);
+            var6 = InputOptionsHelpers.b(0);
             var4 = var6.getSize();
             jj.canvasResizeController.setRequestedSize(44, var4.width, var4.height);
           }
@@ -724,10 +724,10 @@ abstract class GameConnectionShell extends AppletGameShell {
             !(ProxySocketConnector.c(1) <= var3) &&
             !(var3 >= QuickChatCategoryRegistry.a((byte) -35))) {
             this.reconnectRequested = false;
-            hn.closeGameTransport((byte) 91);
+            GameTransportHelpers.closeGameTransport((byte) 91);
             FarmBackground.g(120);
             FullscreenFailureKind.a(NinjaBackground.field_s, (byte) -113, 2);
-            rj.b(guardCode ^ -111);
+            TextHuffmanHelpers.b(guardCode ^ -111);
             ConnectionPhase.field_e = true;
             NanoGameClock.field_i = 15000L + MonotonicTime.nowMillis(false);
           }
@@ -800,7 +800,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (OutgoingPacketHelpers.field_a != -1 &&
             0 != OutgoingPacketHelpers.field_a) {
             OutgoingPacketHelpers.field_a = -1;
-            pp.a((byte) -101);
+            TextValidationHelpers.a((byte) -101);
           }
         }
         if (OutgoingPacketHelpers.field_a == 0 &&
@@ -816,7 +816,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             ValidationIconWidget.field_K = TextChoiceDialogHitTest.a(PacketBuffer.field_j, true);
           }
           LabeledWidget.field_P = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, RankingSocketHelpers.field_c, false);
-          RadialSelectorWidget.field_S = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ea.field_c, false);
+          RadialSelectorWidget.field_S = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, InputOptionsHelpers.field_c, false);
           BoardPresentationHelpers.field_c = FullscreenDialogHelpers.createConfiguredArchive(-6, 1, true, ClientResourceHelpers.field_f, false);
           FriendListUi.field_c = RadialSelectorWidget.field_S;
           clientStage = 2;

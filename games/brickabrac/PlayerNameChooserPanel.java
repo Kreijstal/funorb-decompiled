@@ -82,7 +82,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
             if (buttonIndex < 0) {
               rowY = rowY + IntArrayRequest.fullscreenDialogBodyLineHeight;
             } else {
-              textWidth = hm.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[rowIndex], 0);
+              textWidth = LobbySetupHelpers.measureFullscreenDialogText(true, ValidationStatus.fullscreenDialogRows[rowIndex], 0);
               rowY = rowY + QuickChatCategoryDefinition.fullscreenDialogButtonGapY;
               textX = ProxySocketConnector.fullscreenDialogCenterX - (textWidth >> 1);
               if (ReflectionCheck.containsRectanglePoint(textX - GameOverlayHelpers.fullscreenDialogButtonPaddingX, (DropTargetWidget.fullscreenDialogButtonPaddingY << 1) + MouseInputCleanup.fullscreenDialogButtonLineHeight, textWidth + (GameOverlayHelpers.fullscreenDialogButtonPaddingX << 1), (byte) 65, y, x, rowY)) {
@@ -296,7 +296,7 @@ final class PlayerNameChooserPanel extends WidgetGroup implements UsernameSugges
         Widget var2 = new Widget(EmailAvailabilityRequest.field_d, var1, (WidgetListener) null);
         this.submitButton = new FocusableWidget(TextFieldValidator.field_j, (WidgetListener) null);
         this.cancelButton = new FocusableWidget(ValidationIconWidget.field_L, (WidgetListener) null);
-        this.usernameField.tooltip = hh.field_a;
+        this.usernameField.tooltip = IntegerPowerHelpers.field_a;
         this.usernameField.setValidationSource(new UsernameAvailabilityValidator(this.usernameField), (byte) -68);
         this.submitButton.enabled = false;
         this.submitButton.renderer = (WidgetRenderer) ((Object) new ButtonWidgetRenderer());

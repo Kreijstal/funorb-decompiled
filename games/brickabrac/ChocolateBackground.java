@@ -33,7 +33,7 @@ final class ChocolateBackground extends BackgroundScene {
             Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
             return;
           }
-          var7 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
+          var7 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
           if (!var7.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             SoundPlayback.a(-35, 26746, var7, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
@@ -48,7 +48,7 @@ final class ChocolateBackground extends BackgroundScene {
           Rasterizer2D.fillRectangle(destinationX, destinationY, 306, 480, 16777215);
           return;
         }
-        RasterCacheSurface var8 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
+        RasterCacheSurface var8 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -50);
         if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
           SoundPlayback.a(-35, 26746, var8, colorIndex, 2, QuickChatPhraseRegistry.chocolateFarSprite);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

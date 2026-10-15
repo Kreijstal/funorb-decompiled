@@ -184,7 +184,7 @@ final class BytePayloadSubmission extends IntrusiveNode {
             return false;
           }
           if (QuickChatPhraseDefinition.repeatMessageChannel == 2 &&
-            !LevelSelectScreen.a(MultiplayerExitScreen.repeatRecipientId, ba.repeatRecipientName, param1 ^ -106)) {
+            !LevelSelectScreen.a(MultiplayerExitScreen.repeatRecipientId, UiComponentNode.repeatRecipientName, param1 ^ -106)) {
             return false;
           }
           if (QuickChatPhraseDefinition.repeatMessageChannel != 2 &&
@@ -193,7 +193,7 @@ final class BytePayloadSubmission extends IntrusiveNode {
           }
           if (LoginCredentialKind.a(param1 - 138)) {
             String var4 = (String) null;
-            GrowableIntList.writeChatMessage(WidgetTextLayout.repeatMessageId, ba.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
+            GrowableIntList.writeChatMessage(WidgetTextLayout.repeatMessageId, UiComponentNode.repeatRecipientName, (byte) -117, QuickChatPhraseDefinition.repeatMessageChannel, param2, (String) null);
           }
           return true;
         }
@@ -201,7 +201,7 @@ final class BytePayloadSubmission extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        rj.accountContentLayer.transitionToContent((byte) 126, new AccountIntroductionPanel());
+        TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 126, new AccountIntroductionPanel());
         int var1 = 48 % ((param0 - 32) / 62);
     }
 

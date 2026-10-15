@@ -186,7 +186,7 @@ final class LobbyGame extends UiComponent {
             showCountdown &&
             board.simulationTick < 150) {
             countdownIndex = board.simulationTick / 50;
-            countdownSprite = ed.countdownSprites[countdownIndex];
+            countdownSprite = IntegerBitLengthHelpers.countdownSprites[countdownIndex];
             countdownAge = board.simulationTick - 50 * countdownIndex;
             countdownWidth = (50 + countdownAge * 2) * countdownSprite.canvasWidth / 50;
             countdownHeight = countdownSprite.canvasHeight * (50 + countdownAge * 3) / 50;
@@ -232,13 +232,13 @@ final class LobbyGame extends UiComponent {
               if (board.resultWord < 0) {
                 statusText = Integer.toString(board.resultWord);
               } else {
-                statusText = GamePresentationHelpers.formatIndexedText(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(IntegerPowerHelpers.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
               if (!match.configuration.repeats) {
-                statusText = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_e, new String[]{Integer.toString(TextValidationHelpers.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
-                statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + TextValidationHelpers.a(board, (byte) 97, match))}, (byte) 103);
               }
             }
             nameAndStatusText = GamePresentationHelpers.formatIndexedText(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);
@@ -335,7 +335,7 @@ final class LobbyGame extends UiComponent {
             showCountdown &&
             board.simulationTick < 150) {
             countdownIndex = board.simulationTick / 50;
-            countdownSprite = ed.countdownSprites[countdownIndex];
+            countdownSprite = IntegerBitLengthHelpers.countdownSprites[countdownIndex];
             countdownAge = board.simulationTick - 50 * countdownIndex;
             countdownWidth = (50 + countdownAge * 2) * countdownSprite.canvasWidth / 50;
             countdownHeight = countdownSprite.canvasHeight * (50 + countdownAge * 3) / 50;
@@ -381,13 +381,13 @@ final class LobbyGame extends UiComponent {
               if (board.resultWord < 0) {
                 statusText = Integer.toString(board.resultWord);
               } else {
-                statusText = GamePresentationHelpers.formatIndexedText(hh.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(IntegerPowerHelpers.positiveBoardResultFormat, new String[]{Integer.toString(board.resultWord)}, (byte) 103);
               }
             } else {
               if (!match.configuration.repeats) {
-                statusText = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_e, new String[]{Integer.toString(pp.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(FontRequestHelpers.field_e, new String[]{Integer.toString(TextValidationHelpers.a(board, (byte) 66, match) + 1), Integer.toString(match.configuration.getPeriod(-103))}, (byte) 103);
               } else {
-                statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + pp.a(board, (byte) 97, match))}, (byte) 103);
+                statusText = GamePresentationHelpers.formatIndexedText(MouseInput.field_a, new String[]{Integer.toString(1 + TextValidationHelpers.a(board, (byte) 97, match))}, (byte) 103);
               }
             }
             nameAndStatusText = GamePresentationHelpers.formatIndexedText(BrickABrac.field_H, new String[]{truncatedPlayerName, statusText}, (byte) 103);

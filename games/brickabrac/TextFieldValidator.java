@@ -178,16 +178,16 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
                     if (upperSpanLength == 0) {
                       if (upperLeftX >= 0 &&
                         MeshRasterState.viewportWidth > upperLeftX) {
-                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperRowOffset + upperLeftX, -1);
+                        HalfRgbBlendHelpers.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperRowOffset + upperLeftX, -1);
                       }
                     } else {
                       if (MeshRasterState.viewportWidth <= upperLeftX + upperSpanLength) {
                         upperSpanLength = -1 - upperLeftX + MeshRasterState.viewportWidth;
                       }
                       if (upperLeftX < 0) {
-                        wc.blendHalfRgbSpan(target, upperLeftX + upperSpanLength, halfRgb, upperRowOffset, -1);
+                        HalfRgbBlendHelpers.blendHalfRgbSpan(target, upperLeftX + upperSpanLength, halfRgb, upperRowOffset, -1);
                       } else {
-                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperLeftX + upperRowOffset, ~obfuscationGuard);
+                        HalfRgbBlendHelpers.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperLeftX + upperRowOffset, ~obfuscationGuard);
                       }
                     }
                   }
@@ -212,16 +212,16 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
                     if (upperSpanLength == 0) {
                       if (upperLeftX >= 0 &&
                         MeshRasterState.viewportWidth > upperLeftX) {
-                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperRowOffset + upperLeftX, -1);
+                        HalfRgbBlendHelpers.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperRowOffset + upperLeftX, -1);
                       }
                     } else {
                       if (MeshRasterState.viewportWidth <= upperLeftX + upperSpanLength) {
                         upperSpanLength = -1 - upperLeftX + MeshRasterState.viewportWidth;
                       }
                       if (upperLeftX < 0) {
-                        wc.blendHalfRgbSpan(target, upperLeftX + upperSpanLength, halfRgb, upperRowOffset, -1);
+                        HalfRgbBlendHelpers.blendHalfRgbSpan(target, upperLeftX + upperSpanLength, halfRgb, upperRowOffset, -1);
                       } else {
-                        wc.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperLeftX + upperRowOffset, ~obfuscationGuard);
+                        HalfRgbBlendHelpers.blendHalfRgbSpan(target, upperSpanLength, halfRgb, upperLeftX + upperRowOffset, ~obfuscationGuard);
                       }
                     }
                   }
@@ -268,16 +268,16 @@ abstract class TextFieldValidator extends DebouncedValidationSource implements T
                 if (lowerSpanLength == 0) {
                   if (lowerLeftX >= 0 &&
                     lowerLeftX < MeshRasterState.viewportWidth) {
-                    wc.blendHalfRgbSpan(target, lowerSpanLength, halfRgb, lowerLeftX + lowerRowOffset, -1);
+                    HalfRgbBlendHelpers.blendHalfRgbSpan(target, lowerSpanLength, halfRgb, lowerLeftX + lowerRowOffset, -1);
                   }
                 } else {
                   if (MeshRasterState.viewportWidth <= lowerLeftX + lowerSpanLength) {
                     lowerSpanLength = -1 + MeshRasterState.viewportWidth - lowerLeftX;
                   }
                   if (lowerLeftX >= 0) {
-                    wc.blendHalfRgbSpan(target, lowerSpanLength, halfRgb, lowerLeftX + lowerRowOffset, -1);
+                    HalfRgbBlendHelpers.blendHalfRgbSpan(target, lowerSpanLength, halfRgb, lowerLeftX + lowerRowOffset, -1);
                   } else {
-                    wc.blendHalfRgbSpan(target, lowerSpanLength + lowerLeftX, halfRgb, lowerRowOffset, -1);
+                    HalfRgbBlendHelpers.blendHalfRgbSpan(target, lowerSpanLength + lowerLeftX, halfRgb, lowerRowOffset, -1);
                   }
                 }
               }

@@ -145,7 +145,7 @@ final class ChatMessage {
         this.senderName = RankingSocketHelpers.receivedChatSenderName;
         this.systemMessage = IterableIntrusiveHashTable.receivedChatSystem;
         this.text = ByteArrayPoolHelpers.receivedChatText;
-        this.channel = gj.receivedChatChannel;
+        this.channel = TableQuickChatHelpers.receivedChatChannel;
         this.messageKeyLow24 = LevelCompleteScreen.receivedChatKeyLow24;
     }
 

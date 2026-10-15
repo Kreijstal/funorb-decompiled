@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hh {
+final class IntegerPowerHelpers {
     static int[] volcanicBackgroundColors;
     static String positiveBoardResultFormat;
     static double field_d;

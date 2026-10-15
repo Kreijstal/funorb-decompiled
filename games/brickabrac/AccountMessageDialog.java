@@ -150,7 +150,7 @@ class AccountMessageDialog extends ContentTransitionLayer implements WidgetActio
             }
           } else {
             var6.addAction(closeFirst, DialogMessagePanel.field_L, 11);
-            var6.addAction(false, wc.field_a, 17);
+            var6.addAction(false, HalfRgbBlendHelpers.field_a, 17);
           }
           if (responseCode != 3) {
             if (responseCode != 4) {

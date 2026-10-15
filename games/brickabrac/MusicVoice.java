@@ -201,7 +201,7 @@ final class MusicVoice extends IntrusiveNode {
                 AchievementsScreen.field_F[var9] != null) {
                 var11 = AchievementsScreen.field_F[var9][var10_int];
                 if (var11 != 0 &&
-                  !ea.field_g) {
+                  !InputOptionsHelpers.field_g) {
                   var5_int = 1;
                 }
                 if (var11 > var6) {
@@ -216,7 +216,7 @@ final class MusicVoice extends IntrusiveNode {
                 MatchResultScreen.field_v[var9] != null) {
                 var11Lifetime2 = MatchResultScreen.field_v[var9][var10_int];
                 if (var11Lifetime2 != 0 &&
-                  !ea.field_g) {
+                  !InputOptionsHelpers.field_g) {
                   var5_int = 1;
                 }
                 if (var11Lifetime2 > var7) {
@@ -329,7 +329,7 @@ final class MusicVoice extends IntrusiveNode {
                 }
               } else if (!var13.invitationPending) {
                 if (!var13.joinRequestPending) {
-                  var13.statusLabel.text = ea.field_f;
+                  var13.statusLabel.text = InputOptionsHelpers.field_f;
                 } else {
                   var13.nameLabel.text = GamePresentationHelpers.formatIndexedText(QuickChatPopupHelpers.field_g, new String[]{var21}, (byte) 103);
                   var13.statusLabel.text = JungleBackground.field_t;
@@ -341,7 +341,7 @@ final class MusicVoice extends IntrusiveNode {
               }
               var26_int = 0;
               if (null != ClientResourceHelpers.currentLobbyGame &&
-                hn.b((byte) 7) &&
+                GameTransportHelpers.b((byte) 7) &&
                 ~Widget.field_p != ~var13.playerId) {
                 if (null != var13.statusLabel.text) {
                   var27 = var13.statusLabel.getContentWidth(123) + 2 * LobbyGame.field_oc;
@@ -412,7 +412,7 @@ final class MusicVoice extends IntrusiveNode {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                hd.requestInviteOrAcceptPlayer(var13.playerId, 66, param2);
+                InvitationDialogHelpers.requestInviteOrAcceptPlayer(var13.playerId, 66, param2);
               }
             }
             var12 = var13;
@@ -426,7 +426,7 @@ final class MusicVoice extends IntrusiveNode {
                 } else {
                   if (var13.ratedGameCount >= var7) {
                     if (var6 > var13.rating) {
-                      var25 = GamePresentationHelpers.formatIndexedText(ea.field_h, new String[]{null, Integer.toString(var6)}, (byte) 103);
+                      var25 = GamePresentationHelpers.formatIndexedText(InputOptionsHelpers.field_h, new String[]{null, Integer.toString(var6)}, (byte) 103);
                     } else {
                       if ((var8 & ~var13.optionEligibilityMask) != 0) {
                         var26_int = TextFieldRenderer.a((byte) -82, ~var13.optionEligibilityMask & var8);
@@ -495,7 +495,7 @@ final class MusicVoice extends IntrusiveNode {
                       AchievementsScreen.field_F[var28_int] != null) {
                       var31_int = AchievementsScreen.field_F[var28_int][var29];
                       if (var31_int != 0 &&
-                        !ea.field_g &&
+                        !InputOptionsHelpers.field_g &&
                         !var13.member) {
                         var30 = 1;
                       }
@@ -507,7 +507,7 @@ final class MusicVoice extends IntrusiveNode {
                       null != MatchResultScreen.field_v[var28_int]) {
                       var31_intLifetime1 = MatchResultScreen.field_v[var28_int][var29];
                       if (var31_intLifetime1 != 0 &&
-                        !ea.field_g &&
+                        !InputOptionsHelpers.field_g &&
                         !var13.member) {
                         var30 = 1;
                       }
@@ -533,7 +533,7 @@ final class MusicVoice extends IntrusiveNode {
                     continue;
                   }
                   if (param1 != TimedSplashScreen.field_u ||
-                    !hn.b((byte) 7)) {
+                    !GameTransportHelpers.b((byte) 7)) {
                     if (var27Lifetime1 == 0) {
                       var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(ProducerFramebuffer.field_k, new String[]{(String) (var26)}, (byte) 103);
                     } else {
@@ -549,9 +549,9 @@ final class MusicVoice extends IntrusiveNode {
                   break;
                 }
                 if (TimedSplashScreen.field_u == param1 &&
-                  !hn.b((byte) 7)) {
+                  !GameTransportHelpers.b((byte) 7)) {
                   var28 = ClientResourceHelpers.currentLobbyGame.displayName;
-                  var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(ba.field_y, new String[]{var28}, (byte) 103);
+                  var25 = (String) (var25) + "<br>" + GamePresentationHelpers.formatIndexedText(UiComponentNode.field_y, new String[]{var28}, (byte) 103);
                 }
                 WidgetTextLayout.field_e = (String) (var25);
               }
@@ -641,7 +641,7 @@ final class MusicVoice extends IntrusiveNode {
           if (param0 < 60) {
             receivedChatContextId = -98;
           }
-          stackIn_10_0 = (TextFieldRenderer.field_A) && (~ga.field_i != ~pp.field_a);
+          stackIn_10_0 = (TextFieldRenderer.field_A) && (~ga.field_i != ~TextValidationHelpers.field_a);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -745,7 +745,7 @@ final class MusicVoice extends IntrusiveNode {
               if (gameFlag == 0) {
                 if (branchOrCullValue <= boundOrMinimumDepth) {
                   ArchiveNetworkRequest.projectedVertexX[vertexOrFace] = centerXOrDirectionZ + scaledViewX / viewZ;
-                  ed.projectedVertexY[vertexOrFace] = scaledViewY / viewZ + centerY;
+                  IntegerBitLengthHelpers.projectedVertexY[vertexOrFace] = scaledViewY / viewZ + centerY;
                   if (minimumDepth > viewZ) {
                     minimumDepth = viewZ;
                   }

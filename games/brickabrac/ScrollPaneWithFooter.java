@@ -19,18 +19,18 @@ final class ScrollPaneWithFooter extends UiComponent {
         }
         RgbSprite[] var6 = new RgbSprite[9];
         RgbSprite[] var5 = var6;
-        RgbSprite dupTemp$0 = hd.a(param2, param0, (byte) -6);
+        RgbSprite dupTemp$0 = InvitationDialogHelpers.a(param2, param0, (byte) -6);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        RgbSprite dupTemp$1 = hd.a(param4, param0, (byte) -6);
+        RgbSprite dupTemp$1 = InvitationDialogHelpers.a(param4, param0, (byte) -6);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 != 0) {
-          var6[4] = hd.a(param3, 64, (byte) -6);
+          var6[4] = InvitationDialogHelpers.a(param3, 64, (byte) -6);
         }
         return var5;
     }

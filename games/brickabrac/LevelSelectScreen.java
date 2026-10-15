@@ -107,22 +107,22 @@ final class LevelSelectScreen extends MenuScreen {
             this.previewLevelIndex = var3;
           }
           if (GameConnectionShell.field_t ||
-            !(this.previewLevelIndex >= 3 + hh.unlockedLevelCounts[this.pack.packId])) {
+            !(this.previewLevelIndex >= 3 + IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId])) {
             this.a(178, 243 - 2 * var2, 210, 385, (byte) 85);
           }
           if (GameConnectionShell.field_t ||
-            !(hh.unlockedLevelCounts[this.pack.packId] < this.previewLevelIndex)) {
+            !(IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId] < this.previewLevelIndex)) {
             ContextActionController.field_g.drawCentered(this.pack.metadata[this.previewLevelIndex].title, 402, 421 - var2, 0, -1);
           }
           if (!GameConnectionShell.field_t &&
-            !(this.previewLevelIndex <= hh.unlockedLevelCounts[this.pack.packId])) {
-            if (this.previewLevelIndex < 3 + hh.unlockedLevelCounts[this.pack.packId]) {
+            !(this.previewLevelIndex <= IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId])) {
+            if (this.previewLevelIndex < 3 + IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId]) {
               stackIn_17_0 = 210;
               stackIn_17_1 = 178;
               stackIn_17_2 = 385;
               stackIn_17_3 = 233;
               stackIn_17_4 = 0;
-              if (1 != -hh.unlockedLevelCounts[0] + var3) {
+              if (1 != -IntegerPowerHelpers.unlockedLevelCounts[0] + var3) {
                 stackIn_18_5 = 190;
               } else {
                 stackIn_18_5 = 128;
@@ -256,7 +256,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (keyCode != 48) {
           return super.handleKey(character, 100, keyCode);
         }
-        if (cf.a((byte) 62)) {
+        if (PauseMenuHelpers.a((byte) 62)) {
           GameConnectionShell.field_t = true;
           return true;
         }
@@ -267,7 +267,7 @@ final class LevelSelectScreen extends MenuScreen {
         if (obfuscationGuard) {
           return (IndexedSprite) null;
         }
-        IndexedSprite var1 = new IndexedSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], UiGeometryHelpers.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], GameOverlayHelpers.decodedSpriteIndices[0], PlayerBadgeHelpers.decodedSpritePalette);
+        IndexedSprite var1 = new IndexedSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[0], SocketConnector.decodedSpriteOffsetY[0], UiGeometryHelpers.decodedSpriteWidths[0], TextHotspotRegion.decodedSpriteHeights[0], GameOverlayHelpers.decodedSpriteIndices[0], PlayerBadgeHelpers.decodedSpritePalette);
         MotionWaypoint.clearDecodedSpriteData((byte) 96);
         return var1;
     }
@@ -337,7 +337,7 @@ final class LevelSelectScreen extends MenuScreen {
           if (this.selection.isActivated((byte) 113) &&
             0 <= this.levelList.selectedLevelIndex) {
             if (!GameConnectionShell.field_t &&
-              hh.unlockedLevelCounts[this.pack.packId] < this.levelList.selectedLevelIndex) {
+              IntegerPowerHelpers.unlockedLevelCounts[this.pack.packId] < this.levelList.selectedLevelIndex) {
               return false;
             }
             if (this.levelList.selectedLevelIndex < this.pack.levelCount) {

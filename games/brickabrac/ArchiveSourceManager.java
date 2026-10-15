@@ -86,7 +86,7 @@ final class ArchiveSourceManager {
         if (recoveredSignature.length != 65) {
           throw new RuntimeException();
         }
-        masterDigest = jd.computeWhirlpoolDigest(masterPacket.data, 5, -14970, masterPacket.position - signatureBuffer.length - 5);
+        masterDigest = WhirlpoolDigestHelpers.computeWhirlpoolDigest(masterPacket.data, 5, -14970, masterPacket.position - signatureBuffer.length - 5);
         for (digestByteIndex = 0; 64 > digestByteIndex; digestByteIndex++) {
           if (masterDigest[digestByteIndex] != recoveredSignature[digestByteIndex + 1]) {
             throw new RuntimeException();

@@ -186,8 +186,8 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               }
               if (null != ClientResourceHelpers.currentLobbyGame) {
                 if (PowerUp.field_v &&
-                  null != jd.field_b) {
-                  var7Lifetime15 = "[" + jd.field_b + "] ";
+                  null != WhirlpoolDigestHelpers.field_b) {
+                  var7Lifetime15 = "[" + WhirlpoolDigestHelpers.field_b + "] ";
                 } else {
                   var7Lifetime15 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
                 }
@@ -291,8 +291,8 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
                   }
                   if (null != ClientResourceHelpers.currentLobbyGame) {
                     if (PowerUp.field_v &&
-                      null != jd.field_b) {
-                      var7Lifetime1Lifetime6 = "[" + jd.field_b + "] ";
+                      null != WhirlpoolDigestHelpers.field_b) {
+                      var7Lifetime1Lifetime6 = "[" + WhirlpoolDigestHelpers.field_b + "] ";
                     } else {
                       var7Lifetime1Lifetime6 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
                     }
@@ -428,7 +428,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             }
             return true;
           }
-          if (null == jd.field_b) {
+          if (null == WhirlpoolDigestHelpers.field_b) {
             var7Lifetime9 = "[" + GamePresentationHelpers.formatIndexedText(fm.field_a, new String[]{ClientResourceHelpers.currentLobbyGame.displayName}, (byte) 103) + "] ";
             var20Lifetime2Lifetime3 = var7Lifetime9 + var19Lifetime2 + ": ";
             var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime3);
@@ -437,7 +437,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             }
             return true;
           }
-          var7Lifetime9 = "[" + jd.field_b + "] ";
+          var7Lifetime9 = "[" + WhirlpoolDigestHelpers.field_b + "] ";
           var20Lifetime2Lifetime4 = var7Lifetime9 + var19Lifetime2 + ": ";
           var5Lifetime3 = var5Lifetime3 - CachedArchiveSource.chatFont.measureText(var20Lifetime2Lifetime4);
         } else {

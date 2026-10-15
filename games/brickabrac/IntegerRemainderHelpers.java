@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class er {
+final class IntegerRemainderHelpers {
     static String field_e;
     static RgbSprite field_b;
     static RgbSprite field_d;
@@ -25,7 +25,7 @@ final class er {
           field_e = null;
           return;
         }
-        er.nonnegativeRemainder(-124, 122, -66);
+        IntegerRemainderHelpers.nonnegativeRemainder(-124, 122, -66);
         field_e = null;
     }
 

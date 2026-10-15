@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea {
+final class InputOptionsHelpers {
     static int textChoiceCenterY;
     static int collisionTime256;
     static int field_d;
@@ -29,7 +29,7 @@ final class ea {
             if (var2_int < 0) {
               if (!param0) {
                 var4 = (int[]) null;
-                ea.a(true, (int[]) null);
+                InputOptionsHelpers.a(true, (int[]) null);
               }
               stackIn_12_0 = -1;
               return stackIn_12_0;
@@ -40,7 +40,7 @@ final class ea {
             }
             break;
           }
-          stackIn_7_0 = -1 + (ed.unsignedBitLength(9, param1[var2_int]) + (var2_int << 5));
+          stackIn_7_0 = -1 + (IntegerBitLengthHelpers.unsignedBitLength(9, param1[var2_int]) + (var2_int << 5));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -83,7 +83,7 @@ final class ea {
           packet.backfillByteLength((byte) 118, -payloadStart + packet.position);
           return;
         }
-        ea.requestUpdateGameOptions(109, -29);
+        InputOptionsHelpers.requestUpdateGameOptions(109, -29);
         packedModeAfterWrongGuard = ClientResourceHelpers.currentLobbyGame.joinSortPriority + (ClientResourceHelpers.currentLobbyGame.spectatorMode << 6);
         packet.writeByte(15, packedModeAfterWrongGuard);
         packet.writeBytes(ClientResourceHelpers.currentLobbyGame.settings, -1, 0, ClientResourceHelpers.currentLobbyGame.settings.length);

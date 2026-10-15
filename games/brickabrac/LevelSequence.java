@@ -85,7 +85,7 @@ final class LevelSequence {
     }
 
     LevelSequence(LevelPack pack) {
-        this(pack, kk.createIndexOrder(false, pack.levelCount, (IsaacGenerator) null), pack.levelCount);
+        this(pack, IndexedSpriteHelpers.createIndexOrder(false, pack.levelCount, (IsaacGenerator) null), pack.levelCount);
     }
 
     LevelSequence(LevelPack pack, int[] order, int period) {

@@ -143,7 +143,7 @@ final class QuickChatCategoryRegistry {
         var12 = BrickABrac.field_J ? 1 : 0;
         try {
           RankingsScreen.field_t = AppletResourceHelpers.loadIndexedSpriteByName((byte) 29, param0, "splash", "basic");
-          er.field_b = SpriteInputHelpers.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
+          IntegerRemainderHelpers.field_b = SpriteInputHelpers.loadRgbSpriteByName("basic", "lobby_game_logo", (byte) 110, param0);
           var21 = param2.takeFileByName(-86, "basic", "gamefont");
           var15 = var21;
           var13 = var15;
@@ -163,12 +163,12 @@ final class QuickChatCategoryRegistry {
           PasswordFieldRenderer.field_D.palettes = ReflectionCheck.field_n;
           QuickChatPopupHelpers.field_e = IndexedSpriteGeometry.a(1, var22, 0, var18, 0, 1);
           QuickChatPopupHelpers.field_e.palettes = ReflectionCheck.field_n;
-          gj.field_c = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
-          for (var7_int = 0; gj.field_c.length > var7_int; var7_int++) {
-            gj.field_c[var7_int] = GameConnectionShell.a(gj.field_c[var7_int], 1);
-            if (gj.field_c[var7_int].width == 0 ||
-              gj.field_c[var7_int].height == 0) {
-              gj.field_c[var7_int] = null;
+          TableQuickChatHelpers.field_c = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "menu_overlays", param0, (byte) -8);
+          for (var7_int = 0; TableQuickChatHelpers.field_c.length > var7_int; var7_int++) {
+            TableQuickChatHelpers.field_c[var7_int] = GameConnectionShell.a(TableQuickChatHelpers.field_c[var7_int], 1);
+            if (TableQuickChatHelpers.field_c[var7_int].width == 0 ||
+              TableQuickChatHelpers.field_c[var7_int].height == 0) {
+              TableQuickChatHelpers.field_c[var7_int] = null;
             }
           }
           LoginCredentialKind.field_h = AgeValidator.a("frame", "basic", param0, -122);
@@ -315,9 +315,9 @@ final class QuickChatCategoryRegistry {
           }
           UnderwaterBackground.gameCompletedMessageSprite = HotspotTextWidget.a(2, BirthDateEntryPanel.field_N, -1);
           ClientException.gameOverMessageSprite = HotspotTextWidget.a(2, SpaceBackground.field_s.toUpperCase(), -1);
-          ed.countdownSprites = new RgbSprite[3];
-          for (var10_intLifetime11 = 0; var10_intLifetime11 < ed.countdownSprites.length; var10_intLifetime11++) {
-            ed.countdownSprites[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
+          IntegerBitLengthHelpers.countdownSprites = new RgbSprite[3];
+          for (var10_intLifetime11 = 0; var10_intLifetime11 < IntegerBitLengthHelpers.countdownSprites.length; var10_intLifetime11++) {
+            IntegerBitLengthHelpers.countdownSprites[var10_intLifetime11] = OptionsScreen.a(2, 2, Integer.toString(-var10_intLifetime11 + 3), true);
           }
           BoundedFile.field_a = new RgbSprite[FullscreenFailureKind.trackHeads.length];
           for (var10_intLifetime12 = 0; BoundedFile.field_a.length > var10_intLifetime12; var10_intLifetime12++) {

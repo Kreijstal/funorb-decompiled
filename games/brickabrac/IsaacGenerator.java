@@ -84,7 +84,7 @@ final class IsaacGenerator {
             break;
           }
         }
-        return er.nonnegativeRemainder(obfuscationGuard ^ 1598127099, bound, sample);
+        return IntegerRemainderHelpers.nonnegativeRemainder(obfuscationGuard ^ 1598127099, bound, sample);
     }
 
     private final void initialize(boolean obfuscationGuard) {

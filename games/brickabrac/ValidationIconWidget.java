@@ -127,7 +127,7 @@ final class ValidationIconWidget extends FocusableWidget {
             break;
           }
           if (request == null) {
-            hn.closeGameTransport((byte) 64);
+            GameTransportHelpers.closeGameTransport((byte) 64);
             return;
           }
           recordCount = packet.readUnsignedByte(255);
@@ -321,14 +321,14 @@ final class ValidationIconWidget extends FocusableWidget {
               if (var9Lifetime1 == 248) {
                 MatchingTextValidator.setTuhstatbutMarker(EmailConfirmationValidator.e((byte) -108), param6 + 5);
                 DirectByteStorage.field_e = ConditionalTextValue.field_d;
-                hn.closeGameTransport((byte) 96);
+                GameTransportHelpers.closeGameTransport((byte) 96);
                 RadialSelectorRenderer.field_d = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
                 PacketReceiveHelpers.ensureGamePacketBytes(20, Widget.d((byte) -59));
-                AchievementBrowserScreen.pendingEmailAvailabilityReply = new Boolean(kd.a(-2, LogoRenderHelpers.incomingPackets));
+                AchievementBrowserScreen.pendingEmailAvailabilityReply = new Boolean(BackgroundSurfaceHelpers.a(-2, LogoRenderHelpers.incomingPackets));
                 LogoRenderHelpers.incomingPackets.position = 0;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
@@ -347,7 +347,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 for (var12 = 0; var11 > var12; var12++) {
                   ArchiveSourceManager.field_f[var12] = LogoRenderHelpers.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
                 }
-                hn.closeGameTransport((byte) 79);
+                GameTransportHelpers.closeGameTransport((byte) 79);
                 RadialSelectorRenderer.field_d = false;
                 stackIn_43_0 = 100 + var11;
                 return stackIn_43_0;
@@ -364,7 +364,7 @@ final class ValidationIconWidget extends FocusableWidget {
             } else {
               DirectByteStorage.field_e = LogoRenderHelpers.incomingPackets.readCp1252String(-1);
             }
-            hn.closeGameTransport((byte) 106);
+            GameTransportHelpers.closeGameTransport((byte) 106);
             RadialSelectorRenderer.field_d = false;
             stackIn_51_0 = IntrusiveHashTable.currentPacketOpcode;
             return stackIn_51_0;

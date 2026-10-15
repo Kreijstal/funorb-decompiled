@@ -69,7 +69,7 @@ final class VolcanicBackground extends BackgroundScene {
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         int var5 = 9 / ((obfuscationGuard + 28) / 43);
         if (colorIndex > -1) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, hh.volcanicBackgroundColors[colorIndex], 10792131);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 153, 238, IntegerPowerHelpers.volcanicBackgroundColors[colorIndex], 10792131);
           if (this.hasSprites((byte) -125)) {
             UiCleanupHelpers.volcanicSmallSprite.drawTransparent(destinationX, destinationY);
           }
@@ -97,7 +97,7 @@ final class VolcanicBackground extends BackgroundScene {
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var6 = null;
         if (!this.hasSprites((byte) -92)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, hh.volcanicBackgroundColors[colorIndex], 10792131);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, IntegerPowerHelpers.volcanicBackgroundColors[colorIndex], 10792131);
         } else {
           var6 = PowerUp.selectBackgroundSurface960(this.sceneId, colorIndex, -20777);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
@@ -188,9 +188,9 @@ final class VolcanicBackground extends BackgroundScene {
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {
         RasterCacheSurface var6 = null;
         if (!this.hasSprites((byte) -120)) {
-          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, hh.volcanicBackgroundColors[colorIndex], 10792131);
+          Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 306, 480, IntegerPowerHelpers.volcanicBackgroundColors[colorIndex], 10792131);
         } else {
-          var6 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -111);
+          var6 = BackgroundSurfaceHelpers.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) -111);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             BitPacketBuffer.a(RectangleBody.field_p, var6, colorIndex, 2, (byte) 119, -14);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);

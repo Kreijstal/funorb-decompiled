@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd {
+final class InvitationDialogHelpers {
     static GameScreen pendingScreen;
     static UiComponent field_c;
     static QuickChatMenu quickChatMenu;
@@ -11,7 +11,7 @@ final class hd {
         int var4 = 0;
         int var5 = BrickABrac.field_J ? 1 : 0;
         if (param2 != -6) {
-          hd.a(121, -95, (byte) -105);
+          InvitationDialogHelpers.a(121, -95, (byte) -105);
         }
         RgbSprite var6 = new RgbSprite(param1, param1);
         RgbSprite var3 = var6;
@@ -28,7 +28,7 @@ final class hd {
         int payloadStart = packet.position;
         packet.writeByte(-115, 6);
         if (obfuscationGuard <= 35) {
-          hd.a(true);
+          InvitationDialogHelpers.a(true);
         }
         packet.writeLong(-23054, playerId);
         packet.backfillByteLength((byte) 121, -payloadStart + packet.position);
@@ -38,7 +38,7 @@ final class hd {
         try {
           IntKeyIndex.fullscreenDialogFrame = frame;
           int guardCalculation = -108 % ((46 - obfuscationGuard) / 37);
-          hn.fullscreenDialogPaddingX = paddingX;
+          GameTransportHelpers.fullscreenDialogPaddingX = paddingX;
           AccountContentTransitionLayer.fullscreenDialogPaddingY = paddingY;
         } catch (RuntimeException failure) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "hd.C(" + obfuscationGuard + ',' + (frame != null ? "{...}" : "null") + ',' + paddingX + ',' + paddingY + ')');
@@ -60,10 +60,10 @@ final class hd {
         AlternateNumericLoginCredentials.field_s = param0 ? true : false;
         LoadingProgressDialog.field_eb = null;
         GameConnectionHelpers.field_f = true;
-        pp.field_a = 12;
+        TextValidationHelpers.field_a = 12;
         QuickChatHelpDialog.field_Sb = true;
         ValidationIconWidget.field_N = true;
-        wc.field_b = true;
+        HalfRgbBlendHelpers.field_b = true;
         GrowableIntList.field_i = CalendarRankingHelpers.field_e;
     }
 

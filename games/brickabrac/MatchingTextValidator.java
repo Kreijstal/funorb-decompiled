@@ -22,17 +22,17 @@ final class MatchingTextValidator extends TextFieldValidator {
         if (null == StrongCacheEntry.field_I) {
           var1 = PlayerInputBatch.a(-123);
           DirectByteStorage.field_k = new LoginPanel(var1, (String) null, true, false, false);
-          ResourceArchive.field_f.pushLayer(-126, rj.accountContentLayer);
-          rj.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
-          rj.accountContentLayer.finishTransition(20);
+          ResourceArchive.field_f.pushLayer(-126, TextHuffmanHelpers.accountContentLayer);
+          TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
+          TextHuffmanHelpers.accountContentLayer.finishTransition(20);
           return;
         }
         StrongCacheEntry.field_I.closeDialog(17);
         var1Lifetime1 = PlayerInputBatch.a(-123);
         DirectByteStorage.field_k = new LoginPanel(var1Lifetime1, (String) null, true, false, false);
-        ResourceArchive.field_f.pushLayer(-126, rj.accountContentLayer);
-        rj.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
-        rj.accountContentLayer.finishTransition(20);
+        ResourceArchive.field_f.pushLayer(-126, TextHuffmanHelpers.accountContentLayer);
+        TextHuffmanHelpers.accountContentLayer.transitionToContent((byte) 108, DirectByteStorage.field_k);
+        TextHuffmanHelpers.accountContentLayer.finishTransition(20);
     }
 
     final String describeTextValidation(int obfuscationGuard, String text) {

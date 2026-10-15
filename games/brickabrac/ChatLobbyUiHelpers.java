@@ -310,7 +310,7 @@ final class ChatLobbyUiHelpers {
                       LevelResultSubmission.lobbyGameIndex.put((long)var3_int, updatedGame, 47);
                     }
                     EmailLoginCredentials.decodeLobbyGame(updatedGame, packet, 0, true);
-                    ic.insertSortedLobbyGame(true, updatedGame);
+                    LobbyInputHelpers.insertSortedLobbyGame(true, updatedGame);
                   } else {
                     if (9 == responseKind) {
                       var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
@@ -349,7 +349,7 @@ final class ChatLobbyUiHelpers {
                                 requestGame.removalStatus = gameStatus;
                                 requestGame.statusChangeTick = AlternateNumericLoginCredentials.field_o;
                               }
-                              ic.insertSortedLobbyGame(true, requestGame);
+                              LobbyInputHelpers.insertSortedLobbyGame(true, requestGame);
                             }
                           } else {
                             if (responseKind != 14 &&
@@ -400,10 +400,10 @@ final class ChatLobbyUiHelpers {
                                   case 21:
                                     var3_int = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
                                     if (var3_int != 0) {
-                                      ic.optionChangeDeadlineMillis = (long)var3_int + MonotonicTime.nowMillis(false);
+                                      LobbyInputHelpers.optionChangeDeadlineMillis = (long)var3_int + MonotonicTime.nowMillis(false);
                                       break regionExit1;
                                     }
-                                    ic.optionChangeDeadlineMillis = 0L;
+                                    LobbyInputHelpers.optionChangeDeadlineMillis = 0L;
                                     break regionExit1;
                                   case 22:
                                     ConditionalTextValue.field_h = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
@@ -414,7 +414,7 @@ final class ChatLobbyUiHelpers {
                                     break regionExit1;
                                   default:
                                     AlignedIconLabel.a("L1: " + WhirlpoolHasher.c((byte) -121), (Throwable) null, 108);
-                                    hn.closeGameTransport((byte) 84);
+                                    GameTransportHelpers.closeGameTransport((byte) 84);
                                     break regionExit1;
                                 }
                               }
@@ -463,7 +463,7 @@ final class ChatLobbyUiHelpers {
                             } else {
                               invitedGame.invitationPending = true;
                             }
-                            ic.insertSortedLobbyGame(true, invitedGame);
+                            LobbyInputHelpers.insertSortedLobbyGame(true, invitedGame);
                           }
                         }
                       }
@@ -501,7 +501,7 @@ final class ChatLobbyUiHelpers {
               ClientResourceHelpers.currentLobbyGame = new LobbyGame(RankingsRequest.gameSettingCount);
               ClientResourceHelpers.currentLobbyGame.setSecondaryKey((long)var3_int, -105);
               EmailLoginCredentials.decodeLobbyGame(ClientResourceHelpers.currentLobbyGame, packet, 0, false);
-              ic.optionChangeDeadlineMillis = 0L;
+              LobbyInputHelpers.optionChangeDeadlineMillis = 0L;
             } else {
               ClientResourceHelpers.currentLobbyGame = null;
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kd {
+final class BackgroundSurfaceHelpers {
     static String field_c;
     static String field_b;
     static String[] field_d;

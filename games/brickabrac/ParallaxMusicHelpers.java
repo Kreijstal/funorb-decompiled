@@ -60,21 +60,21 @@ final class ParallaxMusicHelpers {
                   advanceFlag = podiumLoaded;
                 } else {
                   if (4 == stage) {
-                    titlePrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.titleMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                    titlePrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.titleMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                     advanceFlag = titlePrepared;
                   } else {
                     if (stage == 5) {
-                      panicPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-112, MessageScreen.panicMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                      panicPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-112, MessageScreen.panicMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                       advanceFlag = panicPrepared;
                     } else {
                       if (6 == stage) {
-                        completionPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-111, GrowableIntList.completionMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                        completionPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-111, GrowableIntList.completionMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                         advanceFlag = completionPrepared;
                       } else {
                         if (7 != stage) {
                           return true;
                         }
-                        podiumPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-123, RichTextLayout.podiumMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                        podiumPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-123, RichTextLayout.podiumMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                         advanceFlag = podiumPrepared;
                       }
                     }
@@ -113,21 +113,21 @@ final class ParallaxMusicHelpers {
                 alternateAdvanceFlag = alternatePodiumLoaded;
               } else {
                 if (4 == alternateStage) {
-                  alternateTitlePrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.titleMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                  alternateTitlePrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.titleMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                   alternateAdvanceFlag = alternateTitlePrepared;
                 } else {
                   if (alternateStage == 5) {
-                    alternatePanicPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-112, MessageScreen.panicMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                    alternatePanicPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-112, MessageScreen.panicMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                     alternateAdvanceFlag = alternatePanicPrepared;
                   } else {
                     if (6 == alternateStage) {
-                      alternateCompletionPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-111, GrowableIntList.completionMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                      alternateCompletionPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-111, GrowableIntList.completionMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                       alternateAdvanceFlag = alternateCompletionPrepared;
                     } else {
                       if (7 != alternateStage) {
                         return true;
                       }
-                      alternatePodiumPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-123, RichTextLayout.podiumMusicTrack, 22050, ic.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
+                      alternatePodiumPrepared = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-123, RichTextLayout.podiumMusicTrack, 22050, LobbyInputHelpers.specialMusicPatchArchive, GameScreen.field_e)) ? 0 : 1;
                       alternateAdvanceFlag = alternatePodiumPrepared;
                     }
                   }

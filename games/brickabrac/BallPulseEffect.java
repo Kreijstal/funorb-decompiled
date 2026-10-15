@@ -69,11 +69,11 @@ final class BallPulseEffect extends IntrusiveNode {
         RgbSprite[] var3 = new RgbSprite[9];
         RgbSprite[] var2 = var3;
         if (!param1) {
-          var3[4] = hd.a(param0, 64, (byte) -6);
+          var3[4] = InvitationDialogHelpers.a(param0, 64, (byte) -6);
           return var2;
         }
         BallPulseEffect.$cfr$intArgs$a$a948187ac0af(-5, false);
-        var3[4] = hd.a(param0, 64, (byte) -6);
+        var3[4] = InvitationDialogHelpers.a(param0, 64, (byte) -6);
         return var2;
     }
 
@@ -99,7 +99,7 @@ final class BallPulseEffect extends IntrusiveNode {
         var8 = LogoRenderHelpers.incomingPackets;
         var2 = var8;
         var3 = var8.readUnsignedByte(obfuscationGuard + 188);
-        gj.receivedChatChannel = 127 & var3;
+        TableQuickChatHelpers.receivedChatChannel = 127 & var3;
         if (obfuscationGuard != 67) {
           BallPulseEffect.a(73, true);
         }
@@ -107,7 +107,7 @@ final class BallPulseEffect extends IntrusiveNode {
         IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;
         LobbyUiHelpers.receivedChatBadge = var8.readUnsignedByte(255);
         BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
-        if (gj.receivedChatChannel == 2) {
+        if (TableQuickChatHelpers.receivedChatChannel == 2) {
           ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
           LevelCompleteScreen.receivedChatKeyLow24 = var8.readUnsignedMedium((byte) -34);
         } else {
@@ -122,8 +122,8 @@ final class BallPulseEffect extends IntrusiveNode {
         } else {
           RankingSocketHelpers.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
         }
-        if (1 != gj.receivedChatChannel &&
-          4 != gj.receivedChatChannel) {
+        if (1 != TableQuickChatHelpers.receivedChatChannel &&
+          4 != TableQuickChatHelpers.receivedChatChannel) {
           MusicVoice.receivedChatContextId = 0;
           CacheEntry.receivedChatContextLabel = null;
         } else {
@@ -184,7 +184,7 @@ final class BallPulseEffect extends IntrusiveNode {
         var8 = LogoRenderHelpers.incomingPackets;
         var2 = var8;
         var3 = var8.readUnsignedByte(param0 + 188);
-        gj.receivedChatChannel = 127 & var3;
+        TableQuickChatHelpers.receivedChatChannel = 127 & var3;
         if (param0 != 67) {
           BallPulseEffect.a(73, true);
         }
@@ -192,7 +192,7 @@ final class BallPulseEffect extends IntrusiveNode {
         IterableIntrusiveHashTable.receivedChatSystem = stackIn_5_0;
         LobbyUiHelpers.receivedChatBadge = var8.readUnsignedByte(255);
         BirthDateValidator.receivedChatSenderId = var8.readLong(-32768);
-        if (gj.receivedChatChannel == 2) {
+        if (TableQuickChatHelpers.receivedChatChannel == 2) {
           ChatMessage.receivedChatKeyHigh16 = var8.readUnsignedShort(65280);
           LevelCompleteScreen.receivedChatKeyLow24 = var8.readUnsignedMedium((byte) -34);
         } else {
@@ -207,8 +207,8 @@ final class BallPulseEffect extends IntrusiveNode {
         } else {
           RankingSocketHelpers.receivedChatSenderName = HalloweenBackground.receivedChatDisplayName;
         }
-        if (1 != gj.receivedChatChannel &&
-          4 != gj.receivedChatChannel) {
+        if (1 != TableQuickChatHelpers.receivedChatChannel &&
+          4 != TableQuickChatHelpers.receivedChatChannel) {
           MusicVoice.receivedChatContextId = 0;
           CacheEntry.receivedChatContextLabel = null;
         } else {

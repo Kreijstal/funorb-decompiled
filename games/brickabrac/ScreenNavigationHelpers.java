@@ -10,15 +10,15 @@ final class ScreenNavigationHelpers {
     static String quickChatHelpTitle;
 
     final static void requestScreen(boolean usePointer, int obfuscationGuard, int screenId) {
-        if (hd.pendingScreen != null) {
+        if (InvitationDialogHelpers.pendingScreen != null) {
           OpacityWidget.finishScreenTransition((byte) -127);
         }
         if (AccountMessageDialog.currentScreen.screenId == screenId) {
           return;
         }
-        hd.pendingScreen = GameUiController.getScreen(screenId, (byte) -128);
-        if (hd.pendingScreen instanceof MenuScreen) {
-          ((MenuScreen) (hd.pendingScreen)).onEnter(usePointer, 0, 125);
+        InvitationDialogHelpers.pendingScreen = GameUiController.getScreen(screenId, (byte) -128);
+        if (InvitationDialogHelpers.pendingScreen instanceof MenuScreen) {
+          ((MenuScreen) (InvitationDialogHelpers.pendingScreen)).onEnter(usePointer, 0, 125);
         }
         if (obfuscationGuard < 52) {
           ScreenNavigationHelpers.requestScreen(true, 107, -22);

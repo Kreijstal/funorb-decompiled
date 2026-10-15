@@ -22,10 +22,10 @@ abstract class MenuScreen extends GameScreen {
         } else {
           var2 = (-50 + GzipInflater.field_e) * 640 / 50;
           if (0 != MeshLobbyUiHelpers.field_h) {
-            ed.a(-640 - var2, 0);
+            IntegerBitLengthHelpers.a(-640 - var2, 0);
             MainMenuScreen.field_s.drawAt(-var2, 0);
           } else {
-            ed.a(640 + var2, 0);
+            IntegerBitLengthHelpers.a(640 + var2, 0);
             MainMenuScreen.field_s.drawAt(var2, 0);
           }
         }
@@ -202,7 +202,7 @@ abstract class MenuScreen extends GameScreen {
         MouseInput.field_b = InteractiveGameClient.sine8192(MembershipBenefitsScreen.clientTick * 20, -4097);
         if (inputEnabled &&
           !RadialSelectorWidget.field_L &&
-          !ed.field_d) {
+          !IntegerBitLengthHelpers.field_d) {
           this.selection.updatePointer(this.findButtonAt(ResourcePreparationEntry.pointerY, (byte) -106, MusicPatch.pointerX), 27479, this.findButtonAt(PlayerNameChooserPanel.pressY, (byte) -80, LoadingProgressDialog.pressX));
           if (this.a(true, (byte) -117)) {
             SoundCache.playUiSound(8, NineSliceFrame.uiSounds[0]);
@@ -419,9 +419,9 @@ abstract class MenuScreen extends GameScreen {
                   var7 = 1;
                 }
                 if (((var7 != 0)) && ((!(this.selection.isHeld(false)) ||
-                  !(MembershipBenefitsScreen.clientTick <= ea.field_d)))) {
+                  !(MembershipBenefitsScreen.clientTick <= InputOptionsHelpers.field_d)))) {
                   SoundCache.playUiSound(8, NineSliceFrame.uiSounds[1]);
-                  ea.field_d = MembershipBenefitsScreen.clientTick + 20;
+                  InputOptionsHelpers.field_d = MembershipBenefitsScreen.clientTick + 20;
                 }
                 break regionExit1;
               }
@@ -565,7 +565,7 @@ abstract class MenuScreen extends GameScreen {
                   TextFieldRenderer.field_A = stackIn_165_0;
                   if (TextFieldRenderer.field_A &&
                     IntArrayRequest.gameplayScreen != null) {
-                    hd.a(true);
+                    InvitationDialogHelpers.a(true);
                   }
                   var4 = 1;
                   break regionExit1;
@@ -686,7 +686,7 @@ abstract class MenuScreen extends GameScreen {
           NumericLoginCredentials.repeatMessageAvailable = true;
           QuickChatPhraseDefinition.repeatMessageChannel = channel;
           MultiplayerExitScreen.repeatRecipientId = recipientId;
-          ba.repeatRecipientName = recipientName;
+          UiComponentNode.repeatRecipientName = recipientName;
           if (obfuscationGuard != 29295) {
             MenuScreen.b(48);
           }

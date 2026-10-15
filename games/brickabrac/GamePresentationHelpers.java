@@ -10,8 +10,8 @@ final class GamePresentationHelpers {
 
     final static void closeQuickChatMenu(int obfuscationGuard) {
         TooltipSprite.quickChatMenuOpen = false;
-        if (null != hd.quickChatMenu) {
-          hd.quickChatMenu.resetSelection((byte) 41);
+        if (null != InvitationDialogHelpers.quickChatMenu) {
+          InvitationDialogHelpers.quickChatMenu.resetSelection((byte) 41);
         }
         if (obfuscationGuard != ~ScreenNavigationHelpers.quickChatChannel) {
           UsernameAvailabilityValidator.b(true);
@@ -240,7 +240,7 @@ final class GamePresentationHelpers {
           for (pixelIndex = 0; pixelIndex < pixelCount; pixelIndex++) {
             pixels[pixelIndex] = PlayerBadgeHelpers.decodedSpritePalette[IntrusiveHashIterator.a((int) indices[pixelIndex], 255)];
           }
-          sprites[spriteIndex] = new RgbSprite(cf.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[spriteIndex], SocketConnector.decodedSpriteOffsetY[spriteIndex], UiGeometryHelpers.decodedSpriteWidths[spriteIndex], TextHotspotRegion.decodedSpriteHeights[spriteIndex], pixels);
+          sprites[spriteIndex] = new RgbSprite(PauseMenuHelpers.decodedCanvasWidth, FullscreenFailureDialog.decodedCanvasHeight, ArrayWidgetGroup.decodedSpriteOffsetX[spriteIndex], SocketConnector.decodedSpriteOffsetY[spriteIndex], UiGeometryHelpers.decodedSpriteWidths[spriteIndex], TextHotspotRegion.decodedSpriteHeights[spriteIndex], pixels);
         }
         if (obfuscationGuard < 93) {
           return (RgbSprite[]) null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed {
+final class IntegerBitLengthHelpers {
     static RgbSprite[] countdownSprites;
     static String field_c;
     static boolean field_d;
@@ -18,9 +18,9 @@ final class ed {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, byte param3) {
         try {
-          ParisBackground.a(AccountMessageDialog.field_Ab, ScorePopup.field_m, TableResponseHelpers.field_a, Paddle.field_C, GzipInflater.field_d, ProxySocketConnector.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, ic.field_c, OptionsScreen.field_u);
+          ParisBackground.a(AccountMessageDialog.field_Ab, ScorePopup.field_m, TableResponseHelpers.field_a, Paddle.field_C, GzipInflater.field_d, ProxySocketConnector.field_n, DualLinkNode.field_t, CappedUrlRequest.field_l, (byte) 61, param0, LobbyInputHelpers.field_c, OptionsScreen.field_u);
           if (param3 < 74) {
-            ed.unsignedBitLength(2, -57);
+            IntegerBitLengthHelpers.unsignedBitLength(2, -57);
           }
           ProxyAuthenticationRequiredException.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param1, "chatfilter", 2);
           CalendarMatchmakingState.field_e[0] = UiCleanupHelpers.field_a;
@@ -35,7 +35,7 @@ final class ed {
     final static int unsignedBitLength(int obfuscationGuard, int value) {
         int shiftCount = 0;
         if (obfuscationGuard != 9) {
-          ed.unsignedBitLength(-83, -74);
+          IntegerBitLengthHelpers.unsignedBitLength(-83, -74);
         }
         if (value < 0) {
           shiftCount += 16;

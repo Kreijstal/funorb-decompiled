@@ -44,7 +44,7 @@ final class GameRenderAudioHelpers {
         int depthB;
         gameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          depthBits = ed.unsignedBitLength(9, 3 * (-minimumDepth + maximumDepth));
+          depthBits = IntegerBitLengthHelpers.unsignedBitLength(9, 3 * (-minimumDepth + maximumDepth));
           minimumDepthTimesThree = minimumDepth * 3;
           PowerUpWarning.clearFaceDepthBuckets(0);
           depthShift = depthBits - 10;
@@ -63,11 +63,11 @@ final class GameRenderAudioHelpers {
             if (gameFlag == 0) {
               if (cullOrGuardFlag) {
                 screenAX = ArchiveNetworkRequest.projectedVertexX[vertexA];
-                screenAY = ed.projectedVertexY[vertexA];
+                screenAY = IntegerBitLengthHelpers.projectedVertexY[vertexA];
                 edgeBXOrDepthC = ArchiveNetworkRequest.projectedVertexX[vertexB] - screenAX;
                 edgeCXOrDepthSum = -screenAX + ArchiveNetworkRequest.projectedVertexX[vertexC];
-                edgeBYOrBucket = ed.projectedVertexY[vertexB] - screenAY;
-                edgeCYOrBucketCount = -screenAY + ed.projectedVertexY[vertexC];
+                edgeBYOrBucket = IntegerBitLengthHelpers.projectedVertexY[vertexB] - screenAY;
+                edgeCYOrBucketCount = -screenAY + IntegerBitLengthHelpers.projectedVertexY[vertexC];
               }
               if (!cullOrGuardFlag ||
                 edgeBXOrDepthC * edgeCYOrBucketCount - edgeCXOrDepthSum * edgeBYOrBucket < 0) {

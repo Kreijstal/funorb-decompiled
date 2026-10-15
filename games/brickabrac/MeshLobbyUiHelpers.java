@@ -298,8 +298,8 @@ final class MeshLobbyUiHelpers {
           WidgetTheme.field_n.frameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_inactive", 2), (byte) -119);
           WidgetTheme.field_n.activeFrameSprites = GameConnectionShell.a(ActivityIndicatorWidget.loadRgbSpritesByName("lobby", param3, "tab_mouseover", 2), (byte) -124);
           WidgetTheme.field_n.selectedFrameSprites = var14;
-          hd.field_c = new UiComponent(0L, (UiComponent) null);
-          hd.field_c.frameSprites = DateFieldsWidget.a(false, 1127256, 3, 1856141, 206, -1);
+          InvitationDialogHelpers.field_c = new UiComponent(0L, (UiComponent) null);
+          InvitationDialogHelpers.field_c.frameSprites = DateFieldsWidget.a(false, 1127256, 3, 1856141, 206, -1);
           FarmBackground.field_x = new UiComponent(0L, (UiComponent) null);
           FarmBackground.field_x.frameSprites = DateFieldsWidget.a(false, 6052956, 3, 11579568, 290, -1);
           fm.field_b = new UiComponent(0L, var15);
@@ -382,8 +382,8 @@ final class MeshLobbyUiHelpers {
           MessageScreen.field_s.activeSprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "downbutton_mouseover", (byte) -109, param3);
           MessageScreen.field_s.capturedSprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "downbutton_mouseheld", (byte) 97, param3);
           MessageScreen.field_s.disabledSprite = SpriteInputHelpers.loadRgbSpriteByName("lobby", "downbutton_disabled", (byte) 104, param3);
-          ic.field_c = new VerticalScrollbar(0L, ChocolateBackground.field_u, MessageScreen.field_s, QuickChatHelpDialog.field_Vb, RankingsScreen.field_s);
-          rq.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, ReportAbuseDialog.field_Qb, ic.field_c, MessageScreen.field_r, (String) null, (String) null);
+          LobbyInputHelpers.field_c = new VerticalScrollbar(0L, ChocolateBackground.field_u, MessageScreen.field_s, QuickChatHelpDialog.field_Vb, RankingsScreen.field_s);
+          rq.field_b = new ScrollPaneWithFooter(0L, (UiComponent) null, ReportAbuseDialog.field_Qb, LobbyInputHelpers.field_c, MessageScreen.field_r, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

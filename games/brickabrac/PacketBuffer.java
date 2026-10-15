@@ -572,7 +572,7 @@ class PacketBuffer extends IntrusiveNode {
           var4_int = param1.getGroupId(param0, false);
           var5 = param1.getFileId(var4_int, -24, param2);
           if (param3 == -946715356) {
-            stackIn_4_0 = ba.a(var4_int, var5, -59, param1);
+            stackIn_4_0 = UiComponentNode.a(var4_int, var5, -59, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (IndexedSprite[]) null;
@@ -727,7 +727,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int appendCrc32(int obfuscationGuard, int startOffset) {
-        int var3 = ba.computeCrc32(this.data, 9, startOffset, this.position);
+        int var3 = UiComponentNode.computeCrc32(this.data, 9, startOffset, this.position);
         if (obfuscationGuard != 3) {
           this.readSignedSmart(46);
         }
@@ -763,7 +763,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(byte obfuscationGuard) {
         this.position = this.position - 4;
-        int var2 = ba.computeCrc32(this.data, obfuscationGuard + 36, 0, this.position);
+        int var2 = UiComponentNode.computeCrc32(this.data, obfuscationGuard + 36, 0, this.position);
         int var3 = this.readInt(255);
         if (var2 == var3) {
           return true;

@@ -65,7 +65,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
-              var2 = GamePresentationHelpers.formatIndexedText(kk.field_c, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
+              var2 = GamePresentationHelpers.formatIndexedText(IndexedSpriteHelpers.field_c, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
             }
             if (TooltipSprite.quickChatMenuOpen) {
               SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
@@ -104,9 +104,9 @@ final class LevelResultSubmission extends IntrusiveNode {
                 if (null != ClientResourceHelpers.currentLobbyGame) {
                   var6 = 1;
                   boolean decompiledSharedTail1 = (!(PowerUp.field_v) ||
-                    null == jd.field_b);
+                    null == WhirlpoolDigestHelpers.field_b);
                   if (!decompiledSharedTail1) {
-                    var4 = "[" + jd.field_b + "] ";
+                    var4 = "[" + WhirlpoolDigestHelpers.field_b + "] ";
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {

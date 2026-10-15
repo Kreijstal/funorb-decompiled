@@ -81,7 +81,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        wc.field_b = false;
+        HalfRgbBlendHelpers.field_b = false;
         ga.field_i = 13;
         MatchCompleteScreen.field_E = 0;
         LoadingProgressDialog.field_eb = null;
@@ -94,7 +94,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
         if (param0 > 27) {
           ValidationIconWidget.field_N = false;
           GameConnectionHelpers.field_f = false;
-          pp.field_a = 13;
+          TextValidationHelpers.field_a = 13;
           return;
         }
     }
