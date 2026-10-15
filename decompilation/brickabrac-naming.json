@@ -628,6 +628,14 @@
       "renamedSymbol": "C:MeshAttributeRecord"
     },
     {
+      "symbol": "C:dd",
+      "originalName": "dd",
+      "to": "AwtPointerController",
+      "evidence": "dd.java: AWT Robot pointer movement, ARGB custom cursor creation and retained hidden-cursor component; reflective public method names remain fixed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AwtPointerController"
+    },
+    {
       "symbol": "C:de",
       "originalName": "de",
       "to": "MembershipBenefitsScreen",
@@ -1258,6 +1266,22 @@
       "evidence": "im.java: Reusable raw DEFLATE inflater assuming fixed10-byte gzip header and8-byte trailer.",
       "confidence": "reviewed",
       "renamedSymbol": "C:GzipInflater"
+    },
+    {
+      "symbol": "C:in",
+      "originalName": "in",
+      "to": "MicrosoftJvmCursorController",
+      "evidence": "in.java: Legacy Microsoft JVM cursor visibility/window-procedure callback adapter; exported peer lookup remains a null placeholder.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MicrosoftJvmCursorController"
+    },
+    {
+      "symbol": "C:io",
+      "originalName": "io",
+      "to": "DirectDrawFullscreenController",
+      "evidence": "io.java: Legacy Microsoft DirectDraw mode enumeration callback and fullscreen cooperative/display-mode adapter; exported enter peer lookup remains a null placeholder.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DirectDrawFullscreenController"
     },
     {
       "symbol": "C:ip",
@@ -4900,6 +4924,22 @@
       "renamedSymbol": "F:MeshAttributeRecord.musicCrossfadeStream:LMusicCrossfadeStream;"
     },
     {
+      "symbol": "F:dd.field_a:Ljava/awt/Robot;",
+      "originalName": "field_a",
+      "to": "robot",
+      "evidence": "dd.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AwtPointerController.robot:Ljava/awt/Robot;"
+    },
+    {
+      "symbol": "F:dd.field_b:Ljava/awt/Component;",
+      "originalName": "field_b",
+      "to": "hiddenCursorComponent",
+      "evidence": "dd.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AwtPointerController.hiddenCursorComponent:Ljava/awt/Component;"
+    },
+    {
       "symbol": "F:de.field_r:[Ltp;",
       "originalName": "field_r",
       "to": "screenshots",
@@ -8498,6 +8538,70 @@
       "evidence": "gi.java: Literal sprite resource desert/desert_caps assigned to this resolved field.",
       "confidence": "reviewed",
       "renamedSymbol": "F:GzipInflater.desertCapsSprites:[[LRgbSprite;"
+    },
+    {
+      "symbol": "F:in.field_a:Z",
+      "originalName": "field_a",
+      "to": "cursorVisible",
+      "evidence": "in.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.cursorVisible:Z"
+    },
+    {
+      "symbol": "F:in.field_b:I",
+      "originalName": "field_b",
+      "to": "previousWindowProcedure",
+      "evidence": "in.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.previousWindowProcedure:I"
+    },
+    {
+      "symbol": "F:in.field_c:Z",
+      "originalName": "field_c",
+      "to": "callbackAllocated",
+      "evidence": "in.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.callbackAllocated:Z"
+    },
+    {
+      "symbol": "F:in.field_d:I",
+      "originalName": "field_d",
+      "to": "arrowCursorHandle",
+      "evidence": "in.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.arrowCursorHandle:I"
+    },
+    {
+      "symbol": "F:in.field_e:I",
+      "originalName": "field_e",
+      "to": "windowHandle",
+      "evidence": "in.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.windowHandle:I"
+    },
+    {
+      "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+      "originalName": "field_a",
+      "to": "directDraw",
+      "evidence": "io.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:DirectDrawFullscreenController.directDraw:Lcom/ms/directX/DirectDraw;"
+    },
+    {
+      "symbol": "F:io.field_b:I",
+      "originalName": "field_b",
+      "to": "enumeratedIntCount",
+      "evidence": "io.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:DirectDrawFullscreenController.enumeratedIntCount:I"
+    },
+    {
+      "symbol": "F:io.field_c:[I",
+      "originalName": "field_c",
+      "to": "modeBuffer",
+      "evidence": "io.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:DirectDrawFullscreenController.modeBuffer:[I"
     },
     {
       "symbol": "F:ip.field_r:Lfo;",
@@ -16052,6 +16156,14 @@
       "renamedSymbol": "F:FullscreenFailureKind.trackHeads:[LRgbSprite;"
     },
     {
+      "symbol": "F:tg.field_a:Ljava/lang/Object;",
+      "originalName": "field_a",
+      "to": "awtFullscreenDriver",
+      "evidence": "tg.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformServices.awtFullscreenDriver:Ljava/lang/Object;"
+    },
+    {
       "symbol": "F:tg.field_b:Ljava/lang/String;",
       "originalName": "field_b",
       "to": "osNameLowercase",
@@ -16116,6 +16228,14 @@
       "renamedSymbol": "F:PlatformServices.shutdownRequested:Z"
     },
     {
+      "symbol": "F:tg.field_n:Ljava/lang/Object;",
+      "originalName": "field_n",
+      "to": "awtPointerDriver",
+      "evidence": "tg.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformServices.awtPointerDriver:Ljava/lang/Object;"
+    },
+    {
       "symbol": "F:tg.field_o:Ljava/lang/String;",
       "originalName": "field_o",
       "to": "javaVersion",
@@ -16140,12 +16260,28 @@
       "renamedSymbol": "F:PlatformServices.microsoftJvm:Z"
     },
     {
+      "symbol": "F:tg.field_u:Lio;",
+      "originalName": "field_u",
+      "to": "directDrawFullscreenDriver",
+      "evidence": "tg.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformServices.directDrawFullscreenDriver:LDirectDrawFullscreenController;"
+    },
+    {
       "symbol": "F:tg.field_v:Lql;",
       "originalName": "field_v",
       "to": "taskHead",
       "evidence": "tg.java: FIFO first pending task.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlatformServices.taskHead:LPlatformTask;"
+    },
+    {
+      "symbol": "F:tg.field_w:Lin;",
+      "originalName": "field_w",
+      "to": "microsoftCursorDriver",
+      "evidence": "tg.java: Reviewed pointer/display adapter state, reflective platform driver assignment or callback enumeration data flow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlatformServices.microsoftCursorDriver:LMicrosoftJvmCursorController;"
     },
     {
       "symbol": "F:th.field_c:Ljp;",
@@ -24068,6 +24204,38 @@
       "renamedSymbol": "L:AwtFullscreenController.listmodes()[I#3"
     },
     {
+      "symbol": "L:dd.<init>()V#0",
+      "originalName": "var2",
+      "to": "robot",
+      "evidence": "dd.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:AwtPointerController.<init>()V#0"
+    },
+    {
+      "symbol": "L:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+      "originalName": "var6",
+      "to": "cursorImage",
+      "evidence": "dd.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0"
+    },
+    {
+      "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#0",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedFailure",
+      "evidence": "dd.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#0"
+    },
+    {
+      "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#1",
+      "originalName": "decompiledCheckedException",
+      "to": "checkedFailure",
+      "evidence": "dd.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#1"
+    },
+    {
       "symbol": "L:dh.<init>([B[I[I[I[I)V#0",
       "originalName": "var8",
       "to": "glyphIndex",
@@ -29882,6 +30050,174 @@
       "evidence": "ik.java: Reviewed reflection request parsing, asynchronous readiness, typed response/error or primitive-type resolution local.",
       "confidence": "reviewed",
       "renamedSymbol": "L:IntrusiveHashIterator.isReflectionCheckReady(I)Z#7"
+    },
+    {
+      "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+      "originalName": "var5",
+      "to": "newWindowHandle",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#0"
+    },
+    {
+      "symbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
+      "originalName": "var6",
+      "to": "callbackLock",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#1"
+    },
+    {
+      "symbol": "L:in.a(Ljava/awt/Component;IZ)V#2",
+      "originalName": "var8",
+      "to": "unusedFailure",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#2"
+    },
+    {
+      "symbol": "L:in.a(Ljava/awt/Component;IZ)V#3",
+      "originalName": "var9",
+      "to": "unsupportedPeer",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#3"
+    },
+    {
+      "symbol": "L:in.a(Ljava/awt/Component;IZ)V#4",
+      "originalName": "stackIn_20_1",
+      "to": "visibleForNewWindow",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#4"
+    },
+    {
+      "symbol": "L:in.a(Ljava/awt/Component;IZ)V#5",
+      "originalName": "stackIn_26_1",
+      "to": "visibleForExistingWindow",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#5"
+    },
+    {
+      "symbol": "L:in.a(Ljava/awt/Component;IZ)V#6",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#6"
+    },
+    {
+      "symbol": "L:in.callback(IIII)I#0",
+      "originalName": "stackIn_8_0",
+      "to": "customMessageCursorHandle",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#0"
+    },
+    {
+      "symbol": "L:in.callback(IIII)I#1",
+      "originalName": "stackIn_17_0",
+      "to": "clientCursorHandle",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#1"
+    },
+    {
+      "symbol": "L:in.callback(IIII)I#2",
+      "originalName": "stackIn_22_0",
+      "to": "fallbackCursorHandle",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#2"
+    },
+    {
+      "symbol": "L:in.callback(IIII)I#3",
+      "originalName": "var5",
+      "to": "foreignWindowProcedure",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#3"
+    },
+    {
+      "symbol": "L:in.callback(IIII)I#4",
+      "originalName": "var5Lifetime1",
+      "to": "hitTestCode",
+      "evidence": "in.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#4"
+    },
+    {
+      "symbol": "L:io.a(B)[I#0",
+      "originalName": "var4",
+      "to": "packedModes",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.listDisplayModes(B)[I#0"
+    },
+    {
+      "symbol": "L:io.a(B)[I#1",
+      "originalName": "var2",
+      "to": "packedModesAlias",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.listDisplayModes(B)[I#1"
+    },
+    {
+      "symbol": "L:io.a(B)[I#2",
+      "originalName": "var3",
+      "to": "unusedContext",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.listDisplayModes(B)[I#2"
+    },
+    {
+      "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#0",
+      "originalName": "var7",
+      "to": "unsupportedPeer",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#0"
+    },
+    {
+      "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#1",
+      "originalName": "var8",
+      "to": "windowHandle",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#1"
+    },
+    {
+      "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "originalName": "fieldTemp$1",
+      "to": "widthOffset",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0"
+    },
+    {
+      "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "originalName": "fieldTemp$2",
+      "to": "heightOffset",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1"
+    },
+    {
+      "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+      "originalName": "fieldTemp$3",
+      "to": "bitDepthOffset",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2"
+    },
+    {
+      "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+      "originalName": "fieldTemp$4",
+      "to": "refreshRateOffset",
+      "evidence": "io.java: Reviewed pointer/cursor image, callback branch or DirectDraw enumeration declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3"
     },
     {
       "symbol": "L:j.a(BLon;Lvn;)V#0",
@@ -48244,6 +48580,46 @@
       "renamedSymbol": "M:GzipInflater.inflateGzip([BILPacketBuffer;)V"
     },
     {
+      "symbol": "M:in.a(III)V",
+      "originalName": "a",
+      "to": "movePointer",
+      "evidence": "in.java: Calls SetCursorPos(x,y); guard -4 preserves callback allocation state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MicrosoftJvmCursorController.movePointer(III)V"
+    },
+    {
+      "symbol": "M:in.a(Ljava/awt/Component;IZ)V",
+      "originalName": "a",
+      "to": "setCursorVisible",
+      "evidence": "in.java: Retained legacy window-procedure installation/visibility path; exported null peer currently fails before mutation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V"
+    },
+    {
+      "symbol": "M:io.a(B)[I",
+      "originalName": "a",
+      "to": "listDisplayModes",
+      "evidence": "io.java: Two enumeration passes count/allocate then write width,height,bitDepth,refresh tuples, clearing static scratch afterward; guard -48.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenController.listDisplayModes(B)[I"
+    },
+    {
+      "symbol": "M:io.a(ILjava/awt/Frame;)V",
+      "originalName": "a",
+      "to": "restoreFullscreen",
+      "evidence": "io.java: Restores display mode and cooperative level8; guard -3887 leaves scratch untouched.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenController.restoreFullscreen(ILjava/awt/Frame;)V"
+    },
+    {
+      "symbol": "M:io.a(Ljava/awt/Frame;IIIII)V",
+      "originalName": "a",
+      "to": "enterFullscreen",
+      "evidence": "io.java: Shows frame then attempts legacy peer/window-style setup and DirectDraw cooperative mode17; exported null peer prevents remaining calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V"
+    },
+    {
       "symbol": "M:ip.a(BIII)V",
       "originalName": "a",
       "to": "drawPreview",
@@ -62188,6 +62564,78 @@
       "renamedSymbol": "P:AwtFullscreenController.enter(Ljava/awt/Frame;IIII)V#4"
     },
     {
+      "symbol": "P:dd.movemouse(II)V#0",
+      "originalName": "param0",
+      "to": "x",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.movemouse(II)V#0"
+    },
+    {
+      "symbol": "P:dd.movemouse(II)V#1",
+      "originalName": "param1",
+      "to": "y",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.movemouse(II)V#1"
+    },
+    {
+      "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+      "originalName": "param0",
+      "to": "component",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0"
+    },
+    {
+      "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1",
+      "originalName": "param1",
+      "to": "argbPixels",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1"
+    },
+    {
+      "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
+      "originalName": "param2",
+      "to": "width",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2"
+    },
+    {
+      "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3",
+      "originalName": "param3",
+      "to": "height",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3"
+    },
+    {
+      "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#4",
+      "originalName": "param4",
+      "to": "hotspot",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#4"
+    },
+    {
+      "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+      "originalName": "param0",
+      "to": "component",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#0"
+    },
+    {
+      "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#1",
+      "originalName": "param1",
+      "to": "visible",
+      "evidence": "dd.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#1"
+    },
+    {
       "symbol": "P:de.<init>(Lmf;)V#0",
       "originalName": "param0",
       "to": "archive",
@@ -71234,6 +71682,174 @@
       "evidence": "im.java: Checks magic and inflates/reset; does not verify trailer or complete output; guard -20555.",
       "confidence": "reviewed",
       "renamedSymbol": "P:GzipInflater.inflateGzip([BILPacketBuffer;)V#2"
+    },
+    {
+      "symbol": "P:in.a(III)V#0",
+      "originalName": "param0",
+      "to": "y",
+      "evidence": "in.java: Calls SetCursorPos(x,y); guard -4 preserves callback allocation state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.movePointer(III)V#0"
+    },
+    {
+      "symbol": "P:in.a(III)V#1",
+      "originalName": "param1",
+      "to": "obfuscationGuard",
+      "evidence": "in.java: Calls SetCursorPos(x,y); guard -4 preserves callback allocation state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.movePointer(III)V#1"
+    },
+    {
+      "symbol": "P:in.a(III)V#2",
+      "originalName": "param2",
+      "to": "x",
+      "evidence": "in.java: Calls SetCursorPos(x,y); guard -4 preserves callback allocation state.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.movePointer(III)V#2"
+    },
+    {
+      "symbol": "P:in.a(Ljava/awt/Component;IZ)V#0",
+      "originalName": "param0",
+      "to": "component",
+      "evidence": "in.java: Retained legacy window-procedure installation/visibility path; exported null peer currently fails before mutation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#0"
+    },
+    {
+      "symbol": "P:in.a(Ljava/awt/Component;IZ)V#1",
+      "originalName": "param1",
+      "to": "messageValue",
+      "evidence": "in.java: Retained legacy window-procedure installation/visibility path; exported null peer currently fails before mutation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#1"
+    },
+    {
+      "symbol": "P:in.a(Ljava/awt/Component;IZ)V#2",
+      "originalName": "param2",
+      "to": "visible",
+      "evidence": "in.java: Retained legacy window-procedure installation/visibility path; exported null peer currently fails before mutation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#2"
+    },
+    {
+      "symbol": "P:in.callback(IIII)I#0",
+      "originalName": "param0",
+      "to": "windowHandle",
+      "evidence": "in.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#0"
+    },
+    {
+      "symbol": "P:in.callback(IIII)I#1",
+      "originalName": "param1",
+      "to": "messageId",
+      "evidence": "in.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#1"
+    },
+    {
+      "symbol": "P:in.callback(IIII)I#2",
+      "originalName": "param2",
+      "to": "wParam",
+      "evidence": "in.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#2"
+    },
+    {
+      "symbol": "P:in.callback(IIII)I#3",
+      "originalName": "param3",
+      "to": "lParam",
+      "evidence": "in.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#3"
+    },
+    {
+      "symbol": "P:io.a(B)[I#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "io.java: Two enumeration passes count/allocate then write width,height,bitDepth,refresh tuples, clearing static scratch afterward; guard -48.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.listDisplayModes(B)[I#0"
+    },
+    {
+      "symbol": "P:io.a(ILjava/awt/Frame;)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "io.java: Restores display mode and cooperative level8; guard -3887 leaves scratch untouched.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.restoreFullscreen(ILjava/awt/Frame;)V#0"
+    },
+    {
+      "symbol": "P:io.a(ILjava/awt/Frame;)V#1",
+      "originalName": "param1",
+      "to": "window",
+      "evidence": "io.java: Restores display mode and cooperative level8; guard -3887 leaves scratch untouched.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.restoreFullscreen(ILjava/awt/Frame;)V#1"
+    },
+    {
+      "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+      "originalName": "param0",
+      "to": "window",
+      "evidence": "io.java: Shows frame then attempts legacy peer/window-style setup and DirectDraw cooperative mode17; exported null peer prevents remaining calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#0"
+    },
+    {
+      "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#1",
+      "originalName": "param1",
+      "to": "height",
+      "evidence": "io.java: Shows frame then attempts legacy peer/window-style setup and DirectDraw cooperative mode17; exported null peer prevents remaining calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#1"
+    },
+    {
+      "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#2",
+      "originalName": "param2",
+      "to": "width",
+      "evidence": "io.java: Shows frame then attempts legacy peer/window-style setup and DirectDraw cooperative mode17; exported null peer prevents remaining calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#2"
+    },
+    {
+      "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#3",
+      "originalName": "param3",
+      "to": "y",
+      "evidence": "io.java: Shows frame then attempts legacy peer/window-style setup and DirectDraw cooperative mode17; exported null peer prevents remaining calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#3"
+    },
+    {
+      "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#4",
+      "originalName": "param4",
+      "to": "refreshRate",
+      "evidence": "io.java: Shows frame then attempts legacy peer/window-style setup and DirectDraw cooperative mode17; exported null peer prevents remaining calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#4"
+    },
+    {
+      "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#5",
+      "originalName": "param5",
+      "to": "bitDepth",
+      "evidence": "io.java: Shows frame then attempts legacy peer/window-style setup and DirectDraw cooperative mode17; exported null peer prevents remaining calls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#5"
+    },
+    {
+      "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "originalName": "param0",
+      "to": "surface",
+      "evidence": "io.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0"
+    },
+    {
+      "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "originalName": "param1",
+      "to": "context",
+      "evidence": "io.java: Reflective/public native callback method name is retained; reviewed argument roles only.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1"
     },
     {
       "symbol": "P:ip.<init>(ILjava/lang/String;Ljava/lang/String;I)V#0",
@@ -96027,9 +96643,9 @@
     },
     {
       "symbol": "C:dd",
-      "renamedSymbol": "C:dd",
+      "renamedSymbol": "C:AwtPointerController",
       "originalName": "dd",
-      "renamedName": "dd",
+      "renamedName": "AwtPointerController",
       "declaration": {
         "file": "dd.java",
         "start": 50,
@@ -97149,9 +97765,9 @@
     },
     {
       "symbol": "C:in",
-      "renamedSymbol": "C:in",
+      "renamedSymbol": "C:MicrosoftJvmCursorController",
       "originalName": "in",
-      "renamedName": "in",
+      "renamedName": "MicrosoftJvmCursorController",
       "declaration": {
         "file": "in.java",
         "start": 50,
@@ -97160,9 +97776,9 @@
     },
     {
       "symbol": "C:io",
-      "renamedSymbol": "C:io",
+      "renamedSymbol": "C:DirectDrawFullscreenController",
       "originalName": "io",
-      "renamedName": "io",
+      "renamedName": "DirectDrawFullscreenController",
       "declaration": {
         "file": "io.java",
         "start": 50,
@@ -105223,9 +105839,9 @@
     },
     {
       "symbol": "F:dd.field_a:Ljava/awt/Robot;",
-      "renamedSymbol": "F:dd.field_a:Ljava/awt/Robot;",
+      "renamedSymbol": "F:AwtPointerController.robot:Ljava/awt/Robot;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "robot",
       "declaration": {
         "file": "dd.java",
         "start": 82,
@@ -105234,9 +105850,9 @@
     },
     {
       "symbol": "F:dd.field_b:Ljava/awt/Component;",
-      "renamedSymbol": "F:dd.field_b:Ljava/awt/Component;",
+      "renamedSymbol": "F:AwtPointerController.hiddenCursorComponent:Ljava/awt/Component;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "hiddenCursorComponent",
       "declaration": {
         "file": "dd.java",
         "start": 122,
@@ -114243,9 +114859,9 @@
     },
     {
       "symbol": "F:in.field_a:Z",
-      "renamedSymbol": "F:in.field_a:Z",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.cursorVisible:Z",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "cursorVisible",
       "declaration": {
         "file": "in.java",
         "start": 112,
@@ -114254,9 +114870,9 @@
     },
     {
       "symbol": "F:in.field_b:I",
-      "renamedSymbol": "F:in.field_b:I",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.previousWindowProcedure:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "previousWindowProcedure",
       "declaration": {
         "file": "in.java",
         "start": 180,
@@ -114265,9 +114881,9 @@
     },
     {
       "symbol": "F:in.field_c:Z",
-      "renamedSymbol": "F:in.field_c:Z",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.callbackAllocated:Z",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "callbackAllocated",
       "declaration": {
         "file": "in.java",
         "start": 209,
@@ -114276,9 +114892,9 @@
     },
     {
       "symbol": "F:in.field_d:I",
-      "renamedSymbol": "F:in.field_d:I",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.arrowCursorHandle:I",
       "originalName": "field_d",
-      "renamedName": "field_d",
+      "renamedName": "arrowCursorHandle",
       "declaration": {
         "file": "in.java",
         "start": 234,
@@ -114287,9 +114903,9 @@
     },
     {
       "symbol": "F:in.field_e:I",
-      "renamedSymbol": "F:in.field_e:I",
+      "renamedSymbol": "F:MicrosoftJvmCursorController.windowHandle:I",
       "originalName": "field_e",
-      "renamedName": "field_e",
+      "renamedName": "windowHandle",
       "declaration": {
         "file": "in.java",
         "start": 146,
@@ -114298,9 +114914,9 @@
     },
     {
       "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
-      "renamedSymbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+      "renamedSymbol": "F:DirectDrawFullscreenController.directDraw:Lcom/ms/directX/DirectDraw;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "directDraw",
       "declaration": {
         "file": "io.java",
         "start": 170,
@@ -114309,9 +114925,9 @@
     },
     {
       "symbol": "F:io.field_b:I",
-      "renamedSymbol": "F:io.field_b:I",
+      "renamedSymbol": "F:DirectDrawFullscreenController.enumeratedIntCount:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "enumeratedIntCount",
       "declaration": {
         "file": "io.java",
         "start": 123,
@@ -114320,9 +114936,9 @@
     },
     {
       "symbol": "F:io.field_c:[I",
-      "renamedSymbol": "F:io.field_c:[I",
+      "renamedSymbol": "F:DirectDrawFullscreenController.modeBuffer:[I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "modeBuffer",
       "declaration": {
         "file": "io.java",
         "start": 204,
@@ -132668,9 +133284,9 @@
     },
     {
       "symbol": "F:tg.field_a:Ljava/lang/Object;",
-      "renamedSymbol": "F:PlatformServices.field_a:Ljava/lang/Object;",
+      "renamedSymbol": "F:PlatformServices.awtFullscreenDriver:Ljava/lang/Object;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "awtFullscreenDriver",
       "declaration": {
         "file": "tg.java",
         "start": 459,
@@ -132811,9 +133427,9 @@
     },
     {
       "symbol": "F:tg.field_n:Ljava/lang/Object;",
-      "renamedSymbol": "F:PlatformServices.field_n:Ljava/lang/Object;",
+      "renamedSymbol": "F:PlatformServices.awtPointerDriver:Ljava/lang/Object;",
       "originalName": "field_n",
-      "renamedName": "field_n",
+      "renamedName": "awtPointerDriver",
       "declaration": {
         "file": "tg.java",
         "start": 652,
@@ -132888,9 +133504,9 @@
     },
     {
       "symbol": "F:tg.field_u:Lio;",
-      "renamedSymbol": "F:PlatformServices.field_u:Lio;",
+      "renamedSymbol": "F:PlatformServices.directDrawFullscreenDriver:LDirectDrawFullscreenController;",
       "originalName": "field_u",
-      "renamedName": "field_u",
+      "renamedName": "directDrawFullscreenDriver",
       "declaration": {
         "file": "tg.java",
         "start": 233,
@@ -132910,9 +133526,9 @@
     },
     {
       "symbol": "F:tg.field_w:Lin;",
-      "renamedSymbol": "F:PlatformServices.field_w:Lin;",
+      "renamedSymbol": "F:PlatformServices.microsoftCursorDriver:LMicrosoftJvmCursorController;",
       "originalName": "field_w",
-      "renamedName": "field_w",
+      "renamedName": "microsoftCursorDriver",
       "declaration": {
         "file": "tg.java",
         "start": 748,
@@ -163490,9 +164106,9 @@
     },
     {
       "symbol": "L:dd.<init>()V#0",
-      "renamedSymbol": "L:dd.<init>()V#0",
+      "renamedSymbol": "L:AwtPointerController.<init>()V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "robot",
       "declaration": {
         "file": "dd.java",
         "start": 1878,
@@ -163501,9 +164117,9 @@
     },
     {
       "symbol": "L:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
-      "renamedSymbol": "L:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+      "renamedSymbol": "L:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "cursorImage",
       "declaration": {
         "file": "dd.java",
         "start": 410,
@@ -163512,9 +164128,9 @@
     },
     {
       "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#0",
-      "renamedSymbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#0",
+      "renamedSymbol": "L:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#0",
       "originalName": "decompiledUncheckedException",
-      "renamedName": "decompiledUncheckedException",
+      "renamedName": "uncheckedFailure",
       "declaration": {
         "file": "dd.java",
         "start": 1602,
@@ -163523,9 +164139,9 @@
     },
     {
       "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#1",
-      "renamedSymbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#1",
+      "renamedSymbol": "L:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#1",
       "originalName": "decompiledCheckedException",
-      "renamedName": "decompiledCheckedException",
+      "renamedName": "checkedFailure",
       "declaration": {
         "file": "dd.java",
         "start": 1707,
@@ -201330,9 +201946,9 @@
     },
     {
       "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
-      "renamedSymbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#0",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "newWindowHandle",
       "declaration": {
         "file": "in.java",
         "start": 598,
@@ -201341,9 +201957,9 @@
     },
     {
       "symbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
-      "renamedSymbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#1",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "callbackLock",
       "declaration": {
         "file": "in.java",
         "start": 623,
@@ -201352,9 +201968,9 @@
     },
     {
       "symbol": "L:in.a(Ljava/awt/Component;IZ)V#2",
-      "renamedSymbol": "L:in.a(Ljava/awt/Component;IZ)V#2",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#2",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "unusedFailure",
       "declaration": {
         "file": "in.java",
         "start": 654,
@@ -201363,9 +201979,9 @@
     },
     {
       "symbol": "L:in.a(Ljava/awt/Component;IZ)V#3",
-      "renamedSymbol": "L:in.a(Ljava/awt/Component;IZ)V#3",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#3",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "unsupportedPeer",
       "declaration": {
         "file": "in.java",
         "start": 701,
@@ -201374,9 +201990,9 @@
     },
     {
       "symbol": "L:in.a(Ljava/awt/Component;IZ)V#4",
-      "renamedSymbol": "L:in.a(Ljava/awt/Component;IZ)V#4",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#4",
       "originalName": "stackIn_20_1",
-      "renamedName": "stackIn_20_1",
+      "renamedName": "visibleForNewWindow",
       "declaration": {
         "file": "in.java",
         "start": 730,
@@ -201385,9 +202001,9 @@
     },
     {
       "symbol": "L:in.a(Ljava/awt/Component;IZ)V#5",
-      "renamedSymbol": "L:in.a(Ljava/awt/Component;IZ)V#5",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#5",
       "originalName": "stackIn_26_1",
-      "renamedName": "stackIn_26_1",
+      "renamedName": "visibleForExistingWindow",
       "declaration": {
         "file": "in.java",
         "start": 768,
@@ -201396,9 +202012,9 @@
     },
     {
       "symbol": "L:in.a(Ljava/awt/Component;IZ)V#6",
-      "renamedSymbol": "L:in.a(Ljava/awt/Component;IZ)V#6",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#6",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "in.java",
         "start": 808,
@@ -201407,9 +202023,9 @@
     },
     {
       "symbol": "L:in.callback(IIII)I#0",
-      "renamedSymbol": "L:in.callback(IIII)I#0",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#0",
       "originalName": "stackIn_8_0",
-      "renamedName": "stackIn_8_0",
+      "renamedName": "customMessageCursorHandle",
       "declaration": {
         "file": "in.java",
         "start": 2115,
@@ -201418,9 +202034,9 @@
     },
     {
       "symbol": "L:in.callback(IIII)I#1",
-      "renamedSymbol": "L:in.callback(IIII)I#1",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#1",
       "originalName": "stackIn_17_0",
-      "renamedName": "stackIn_17_0",
+      "renamedName": "clientCursorHandle",
       "declaration": {
         "file": "in.java",
         "start": 2144,
@@ -201429,9 +202045,9 @@
     },
     {
       "symbol": "L:in.callback(IIII)I#2",
-      "renamedSymbol": "L:in.callback(IIII)I#2",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#2",
       "originalName": "stackIn_22_0",
-      "renamedName": "stackIn_22_0",
+      "renamedName": "fallbackCursorHandle",
       "declaration": {
         "file": "in.java",
         "start": 2174,
@@ -201440,9 +202056,9 @@
     },
     {
       "symbol": "L:in.callback(IIII)I#3",
-      "renamedSymbol": "L:in.callback(IIII)I#3",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#3",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "foreignWindowProcedure",
       "declaration": {
         "file": "in.java",
         "start": 2204,
@@ -201451,9 +202067,9 @@
     },
     {
       "symbol": "L:in.callback(IIII)I#4",
-      "renamedSymbol": "L:in.callback(IIII)I#4",
+      "renamedSymbol": "L:MicrosoftJvmCursorController.callback(IIII)I#4",
       "originalName": "var5Lifetime1",
-      "renamedName": "var5Lifetime1",
+      "renamedName": "hitTestCode",
       "declaration": {
         "file": "in.java",
         "start": 2222,
@@ -201462,9 +202078,9 @@
     },
     {
       "symbol": "L:io.a(B)[I#0",
-      "renamedSymbol": "L:io.a(B)[I#0",
+      "renamedSymbol": "L:DirectDrawFullscreenController.listDisplayModes(B)[I#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "packedModes",
       "declaration": {
         "file": "io.java",
         "start": 1264,
@@ -201473,9 +202089,9 @@
     },
     {
       "symbol": "L:io.a(B)[I#1",
-      "renamedSymbol": "L:io.a(B)[I#1",
+      "renamedSymbol": "L:DirectDrawFullscreenController.listDisplayModes(B)[I#1",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "packedModesAlias",
       "declaration": {
         "file": "io.java",
         "start": 1294,
@@ -201484,9 +202100,9 @@
     },
     {
       "symbol": "L:io.a(B)[I#2",
-      "renamedSymbol": "L:io.a(B)[I#2",
+      "renamedSymbol": "L:DirectDrawFullscreenController.listDisplayModes(B)[I#2",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "unusedContext",
       "declaration": {
         "file": "io.java",
         "start": 1442,
@@ -201495,9 +202111,9 @@
     },
     {
       "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#0",
-      "renamedSymbol": "L:io.a(Ljava/awt/Frame;IIIII)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#0",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "unsupportedPeer",
       "declaration": {
         "file": "io.java",
         "start": 383,
@@ -201506,9 +202122,9 @@
     },
     {
       "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#1",
-      "renamedSymbol": "L:io.a(Ljava/awt/Frame;IIIII)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#1",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "windowHandle",
       "declaration": {
         "file": "io.java",
         "start": 436,
@@ -201517,9 +202133,9 @@
     },
     {
       "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "fieldTemp$1",
-      "renamedName": "fieldTemp$1",
+      "renamedName": "widthOffset",
       "declaration": {
         "file": "io.java",
         "start": 1860,
@@ -201528,9 +202144,9 @@
     },
     {
       "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "fieldTemp$2",
-      "renamedName": "fieldTemp$2",
+      "renamedName": "heightOffset",
       "declaration": {
         "file": "io.java",
         "start": 1889,
@@ -201539,9 +202155,9 @@
     },
     {
       "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
-      "renamedSymbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
       "originalName": "fieldTemp$3",
-      "renamedName": "fieldTemp$3",
+      "renamedName": "bitDepthOffset",
       "declaration": {
         "file": "io.java",
         "start": 1918,
@@ -201550,9 +202166,9 @@
     },
     {
       "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
-      "renamedSymbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+      "renamedSymbol": "L:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
       "originalName": "fieldTemp$4",
-      "renamedName": "fieldTemp$4",
+      "renamedName": "refreshRateOffset",
       "declaration": {
         "file": "io.java",
         "start": 1947,
@@ -328853,9 +329469,9 @@
     },
     {
       "symbol": "M:dd.<init>()V",
-      "renamedSymbol": "M:dd.<init>()V",
+      "renamedSymbol": "M:AwtPointerController.<init>()V",
       "originalName": "dd",
-      "renamedName": "dd",
+      "renamedName": "AwtPointerController",
       "declaration": {
         "file": "dd.java",
         "start": 1831,
@@ -328864,7 +329480,7 @@
     },
     {
       "symbol": "M:dd.movemouse(II)V",
-      "renamedSymbol": "M:dd.movemouse(II)V",
+      "renamedSymbol": "M:AwtPointerController.movemouse(II)V",
       "originalName": "movemouse",
       "renamedName": "movemouse",
       "declaration": {
@@ -328875,7 +329491,7 @@
     },
     {
       "symbol": "M:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V",
-      "renamedSymbol": "M:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V",
+      "renamedSymbol": "M:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V",
       "originalName": "setcustomcursor",
       "renamedName": "setcustomcursor",
       "declaration": {
@@ -328886,7 +329502,7 @@
     },
     {
       "symbol": "M:dd.showcursor(Ljava/awt/Component;Z)V",
-      "renamedSymbol": "M:dd.showcursor(Ljava/awt/Component;Z)V",
+      "renamedSymbol": "M:AwtPointerController.showcursor(Ljava/awt/Component;Z)V",
       "originalName": "showcursor",
       "renamedName": "showcursor",
       "declaration": {
@@ -337345,9 +337961,9 @@
     },
     {
       "symbol": "M:in.<init>()V",
-      "renamedSymbol": "M:in.<init>()V",
+      "renamedSymbol": "M:MicrosoftJvmCursorController.<init>()V",
       "originalName": "in",
-      "renamedName": "in",
+      "renamedName": "MicrosoftJvmCursorController",
       "declaration": {
         "file": "in.java",
         "start": 1974,
@@ -337356,9 +337972,9 @@
     },
     {
       "symbol": "M:in.a(III)V",
-      "renamedSymbol": "M:in.a(III)V",
+      "renamedSymbol": "M:MicrosoftJvmCursorController.movePointer(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "movePointer",
       "declaration": {
         "file": "in.java",
         "start": 259,
@@ -337367,9 +337983,9 @@
     },
     {
       "symbol": "M:in.a(Ljava/awt/Component;IZ)V",
-      "renamedSymbol": "M:in.a(Ljava/awt/Component;IZ)V",
+      "renamedSymbol": "M:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCursorVisible",
       "declaration": {
         "file": "in.java",
         "start": 527,
@@ -337378,7 +337994,7 @@
     },
     {
       "symbol": "M:in.callback(IIII)I",
-      "renamedSymbol": "M:in.callback(IIII)I",
+      "renamedSymbol": "M:MicrosoftJvmCursorController.callback(IIII)I",
       "originalName": "callback",
       "renamedName": "callback",
       "declaration": {
@@ -337389,9 +338005,9 @@
     },
     {
       "symbol": "M:io.<init>()V",
-      "renamedSymbol": "M:io.<init>()V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.<init>()V",
       "originalName": "io",
-      "renamedName": "io",
+      "renamedName": "DirectDrawFullscreenController",
       "declaration": {
         "file": "io.java",
         "start": 1613,
@@ -337400,9 +338016,9 @@
     },
     {
       "symbol": "M:io.a(B)[I",
-      "renamedSymbol": "M:io.a(B)[I",
+      "renamedSymbol": "M:DirectDrawFullscreenController.listDisplayModes(B)[I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "listDisplayModes",
       "declaration": {
         "file": "io.java",
         "start": 874,
@@ -337411,9 +338027,9 @@
     },
     {
       "symbol": "M:io.a(ILjava/awt/Frame;)V",
-      "renamedSymbol": "M:io.a(ILjava/awt/Frame;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.restoreFullscreen(ILjava/awt/Frame;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "restoreFullscreen",
       "declaration": {
         "file": "io.java",
         "start": 2542,
@@ -337422,9 +338038,9 @@
     },
     {
       "symbol": "M:io.a(Ljava/awt/Frame;IIIII)V",
-      "renamedSymbol": "M:io.a(Ljava/awt/Frame;IIIII)V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enterFullscreen",
       "declaration": {
         "file": "io.java",
         "start": 229,
@@ -337433,7 +338049,7 @@
     },
     {
       "symbol": "M:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
-      "renamedSymbol": "M:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
+      "renamedSymbol": "M:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V",
       "originalName": "callbackEnumModes",
       "renamedName": "callbackEnumModes",
       "declaration": {
@@ -372292,9 +372908,9 @@
     },
     {
       "symbol": "P:dd.movemouse(II)V#0",
-      "renamedSymbol": "P:dd.movemouse(II)V#0",
+      "renamedSymbol": "P:AwtPointerController.movemouse(II)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "x",
       "declaration": {
         "file": "dd.java",
         "start": 168,
@@ -372303,9 +372919,9 @@
     },
     {
       "symbol": "P:dd.movemouse(II)V#1",
-      "renamedSymbol": "P:dd.movemouse(II)V#1",
+      "renamedSymbol": "P:AwtPointerController.movemouse(II)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "y",
       "declaration": {
         "file": "dd.java",
         "start": 180,
@@ -372314,9 +372930,9 @@
     },
     {
       "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
-      "renamedSymbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "component",
       "declaration": {
         "file": "dd.java",
         "start": 302,
@@ -372325,9 +372941,9 @@
     },
     {
       "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1",
-      "renamedSymbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "argbPixels",
       "declaration": {
         "file": "dd.java",
         "start": 316,
@@ -372336,9 +372952,9 @@
     },
     {
       "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
-      "renamedSymbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "width",
       "declaration": {
         "file": "dd.java",
         "start": 328,
@@ -372347,9 +372963,9 @@
     },
     {
       "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3",
-      "renamedSymbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "height",
       "declaration": {
         "file": "dd.java",
         "start": 340,
@@ -372358,9 +372974,9 @@
     },
     {
       "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#4",
-      "renamedSymbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#4",
+      "renamedSymbol": "P:AwtPointerController.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "hotspot",
       "declaration": {
         "file": "dd.java",
         "start": 363,
@@ -372369,9 +372985,9 @@
     },
     {
       "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
-      "renamedSymbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+      "renamedSymbol": "P:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "component",
       "declaration": {
         "file": "dd.java",
         "start": 850,
@@ -372380,9 +372996,9 @@
     },
     {
       "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#1",
-      "renamedSymbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#1",
+      "renamedSymbol": "P:AwtPointerController.showcursor(Ljava/awt/Component;Z)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "visible",
       "declaration": {
         "file": "dd.java",
         "start": 866,
@@ -394600,9 +395216,9 @@
     },
     {
       "symbol": "P:in.a(III)V#0",
-      "renamedSymbol": "P:in.a(III)V#0",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.movePointer(III)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "y",
       "declaration": {
         "file": "in.java",
         "start": 265,
@@ -394611,9 +395227,9 @@
     },
     {
       "symbol": "P:in.a(III)V#1",
-      "renamedSymbol": "P:in.a(III)V#1",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.movePointer(III)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "in.java",
         "start": 277,
@@ -394622,9 +395238,9 @@
     },
     {
       "symbol": "P:in.a(III)V#2",
-      "renamedSymbol": "P:in.a(III)V#2",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.movePointer(III)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "x",
       "declaration": {
         "file": "in.java",
         "start": 289,
@@ -394633,9 +395249,9 @@
     },
     {
       "symbol": "P:in.a(Ljava/awt/Component;IZ)V#0",
-      "renamedSymbol": "P:in.a(Ljava/awt/Component;IZ)V#0",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "component",
       "declaration": {
         "file": "in.java",
         "start": 548,
@@ -394644,9 +395260,9 @@
     },
     {
       "symbol": "P:in.a(Ljava/awt/Component;IZ)V#1",
-      "renamedSymbol": "P:in.a(Ljava/awt/Component;IZ)V#1",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "messageValue",
       "declaration": {
         "file": "in.java",
         "start": 560,
@@ -394655,9 +395271,9 @@
     },
     {
       "symbol": "P:in.a(Ljava/awt/Component;IZ)V#2",
-      "renamedSymbol": "P:in.a(Ljava/awt/Component;IZ)V#2",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.setCursorVisible(Ljava/awt/Component;IZ)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "visible",
       "declaration": {
         "file": "in.java",
         "start": 576,
@@ -394666,9 +395282,9 @@
     },
     {
       "symbol": "P:in.callback(IIII)I#0",
-      "renamedSymbol": "P:in.callback(IIII)I#0",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "windowHandle",
       "declaration": {
         "file": "in.java",
         "start": 2057,
@@ -394677,9 +395293,9 @@
     },
     {
       "symbol": "P:in.callback(IIII)I#1",
-      "renamedSymbol": "P:in.callback(IIII)I#1",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "messageId",
       "declaration": {
         "file": "in.java",
         "start": 2069,
@@ -394688,9 +395304,9 @@
     },
     {
       "symbol": "P:in.callback(IIII)I#2",
-      "renamedSymbol": "P:in.callback(IIII)I#2",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "wParam",
       "declaration": {
         "file": "in.java",
         "start": 2081,
@@ -394699,9 +395315,9 @@
     },
     {
       "symbol": "P:in.callback(IIII)I#3",
-      "renamedSymbol": "P:in.callback(IIII)I#3",
+      "renamedSymbol": "P:MicrosoftJvmCursorController.callback(IIII)I#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "lParam",
       "declaration": {
         "file": "in.java",
         "start": 2093,
@@ -394710,9 +395326,9 @@
     },
     {
       "symbol": "P:io.a(B)[I#0",
-      "renamedSymbol": "P:io.a(B)[I#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.listDisplayModes(B)[I#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "io.java",
         "start": 881,
@@ -394721,9 +395337,9 @@
     },
     {
       "symbol": "P:io.a(ILjava/awt/Frame;)V#0",
-      "renamedSymbol": "P:io.a(ILjava/awt/Frame;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.restoreFullscreen(ILjava/awt/Frame;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "io.java",
         "start": 2548,
@@ -394732,9 +395348,9 @@
     },
     {
       "symbol": "P:io.a(ILjava/awt/Frame;)V#1",
-      "renamedSymbol": "P:io.a(ILjava/awt/Frame;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenController.restoreFullscreen(ILjava/awt/Frame;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "window",
       "declaration": {
         "file": "io.java",
         "start": 2571,
@@ -394743,9 +395359,9 @@
     },
     {
       "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
-      "renamedSymbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "window",
       "declaration": {
         "file": "io.java",
         "start": 246,
@@ -394754,9 +395370,9 @@
     },
     {
       "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#1",
-      "renamedSymbol": "P:io.a(Ljava/awt/Frame;IIIII)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "height",
       "declaration": {
         "file": "io.java",
         "start": 258,
@@ -394765,9 +395381,9 @@
     },
     {
       "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#2",
-      "renamedSymbol": "P:io.a(Ljava/awt/Frame;IIIII)V#2",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "width",
       "declaration": {
         "file": "io.java",
         "start": 270,
@@ -394776,9 +395392,9 @@
     },
     {
       "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#3",
-      "renamedSymbol": "P:io.a(Ljava/awt/Frame;IIIII)V#3",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "y",
       "declaration": {
         "file": "io.java",
         "start": 282,
@@ -394787,9 +395403,9 @@
     },
     {
       "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#4",
-      "renamedSymbol": "P:io.a(Ljava/awt/Frame;IIIII)V#4",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "refreshRate",
       "declaration": {
         "file": "io.java",
         "start": 294,
@@ -394798,9 +395414,9 @@
     },
     {
       "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#5",
-      "renamedSymbol": "P:io.a(Ljava/awt/Frame;IIIII)V#5",
+      "renamedSymbol": "P:DirectDrawFullscreenController.enterFullscreen(Ljava/awt/Frame;IIIII)V#5",
       "originalName": "param5",
-      "renamedName": "param5",
+      "renamedName": "bitDepth",
       "declaration": {
         "file": "io.java",
         "start": 306,
@@ -394809,9 +395425,9 @@
     },
     {
       "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
-      "renamedSymbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+      "renamedSymbol": "P:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "surface",
       "declaration": {
         "file": "io.java",
         "start": 1810,
@@ -394820,9 +395436,9 @@
     },
     {
       "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
-      "renamedSymbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+      "renamedSymbol": "P:DirectDrawFullscreenController.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "context",
       "declaration": {
         "file": "io.java",
         "start": 1838,
@@ -558274,10 +558890,368 @@
     },
     {
       "original": "dd.java",
-      "renamed": "dd.java",
+      "renamed": "AwtPointerController.java",
       "inputSha256": "2ed1dadaecab09075d48c1186d79a8e13879f8c9cadfb222362bc95ccdb6f719",
-      "outputSha256": "2ed1dadaecab09075d48c1186d79a8e13879f8c9cadfb222362bc95ccdb6f719",
-      "edits": []
+      "outputSha256": "d84f32cea126a3faaa5f40a93981e935d319297f44d7c52cb41f61134c0cfedd",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:dd",
+          "original": "dd",
+          "renamed": "AwtPointerController"
+        },
+        {
+          "start": 82,
+          "end": 89,
+          "symbol": "F:dd.field_a:Ljava/awt/Robot;",
+          "original": "field_a",
+          "renamed": "robot"
+        },
+        {
+          "start": 122,
+          "end": 129,
+          "symbol": "F:dd.field_b:Ljava/awt/Component;",
+          "original": "field_b",
+          "renamed": "hiddenCursorComponent"
+        },
+        {
+          "start": 168,
+          "end": 174,
+          "symbol": "P:dd.movemouse(II)V#0",
+          "original": "param0",
+          "renamed": "x"
+        },
+        {
+          "start": 180,
+          "end": 186,
+          "symbol": "P:dd.movemouse(II)V#1",
+          "original": "param1",
+          "renamed": "y"
+        },
+        {
+          "start": 203,
+          "end": 210,
+          "symbol": "F:dd.field_a:Ljava/awt/Robot;",
+          "original": "field_a",
+          "renamed": "robot"
+        },
+        {
+          "start": 221,
+          "end": 227,
+          "symbol": "P:dd.movemouse(II)V#0",
+          "original": "param0",
+          "renamed": "x"
+        },
+        {
+          "start": 229,
+          "end": 235,
+          "symbol": "P:dd.movemouse(II)V#1",
+          "original": "param1",
+          "renamed": "y"
+        },
+        {
+          "start": 302,
+          "end": 308,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 316,
+          "end": 322,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1",
+          "original": "param1",
+          "renamed": "argbPixels"
+        },
+        {
+          "start": 328,
+          "end": 334,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
+          "original": "param2",
+          "renamed": "width"
+        },
+        {
+          "start": 340,
+          "end": 346,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3",
+          "original": "param3",
+          "renamed": "height"
+        },
+        {
+          "start": 363,
+          "end": 369,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#4",
+          "original": "param4",
+          "renamed": "hotspot"
+        },
+        {
+          "start": 410,
+          "end": 414,
+          "symbol": "L:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "var6",
+          "renamed": "cursorImage"
+        },
+        {
+          "start": 435,
+          "end": 441,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1",
+          "original": "param1",
+          "renamed": "argbPixels"
+        },
+        {
+          "start": 463,
+          "end": 469,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 532,
+          "end": 536,
+          "symbol": "L:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "var6",
+          "renamed": "cursorImage"
+        },
+        {
+          "start": 572,
+          "end": 578,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
+          "original": "param2",
+          "renamed": "width"
+        },
+        {
+          "start": 580,
+          "end": 586,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3",
+          "original": "param3",
+          "renamed": "height"
+        },
+        {
+          "start": 602,
+          "end": 606,
+          "symbol": "L:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "var6",
+          "renamed": "cursorImage"
+        },
+        {
+          "start": 620,
+          "end": 626,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
+          "original": "param2",
+          "renamed": "width"
+        },
+        {
+          "start": 628,
+          "end": 634,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#3",
+          "original": "param3",
+          "renamed": "height"
+        },
+        {
+          "start": 636,
+          "end": 642,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#1",
+          "original": "param1",
+          "renamed": "argbPixels"
+        },
+        {
+          "start": 647,
+          "end": 653,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#2",
+          "original": "param2",
+          "renamed": "width"
+        },
+        {
+          "start": 666,
+          "end": 672,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 683,
+          "end": 689,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 749,
+          "end": 753,
+          "symbol": "L:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#0",
+          "original": "var6",
+          "renamed": "cursorImage"
+        },
+        {
+          "start": 756,
+          "end": 762,
+          "symbol": "P:dd.setcustomcursor(Ljava/awt/Component;[IIILjava/awt/Point;)V#4",
+          "original": "param4",
+          "renamed": "hotspot"
+        },
+        {
+          "start": 850,
+          "end": 856,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 866,
+          "end": 872,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#1",
+          "original": "param1",
+          "renamed": "visible"
+        },
+        {
+          "start": 904,
+          "end": 910,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#1",
+          "original": "param1",
+          "renamed": "visible"
+        },
+        {
+          "start": 926,
+          "end": 932,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 976,
+          "end": 982,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 1087,
+          "end": 1094,
+          "symbol": "F:dd.field_b:Ljava/awt/Component;",
+          "original": "field_b",
+          "renamed": "hiddenCursorComponent"
+        },
+        {
+          "start": 1098,
+          "end": 1104,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 1159,
+          "end": 1166,
+          "symbol": "F:dd.field_b:Ljava/awt/Component;",
+          "original": "field_b",
+          "renamed": "hiddenCursorComponent"
+        },
+        {
+          "start": 1195,
+          "end": 1202,
+          "symbol": "F:dd.field_b:Ljava/awt/Component;",
+          "original": "field_b",
+          "renamed": "hiddenCursorComponent"
+        },
+        {
+          "start": 1255,
+          "end": 1262,
+          "symbol": "F:dd.field_b:Ljava/awt/Component;",
+          "original": "field_b",
+          "renamed": "hiddenCursorComponent"
+        },
+        {
+          "start": 1297,
+          "end": 1303,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 1357,
+          "end": 1363,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 1374,
+          "end": 1380,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 1542,
+          "end": 1549,
+          "symbol": "F:dd.field_b:Ljava/awt/Component;",
+          "original": "field_b",
+          "renamed": "hiddenCursorComponent"
+        },
+        {
+          "start": 1552,
+          "end": 1558,
+          "symbol": "P:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 1602,
+          "end": 1630,
+          "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 1650,
+          "end": 1678,
+          "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#0",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 1707,
+          "end": 1733,
+          "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#1",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
+        },
+        {
+          "start": 1774,
+          "end": 1800,
+          "symbol": "L:dd.showcursor(Ljava/awt/Component;Z)V#1",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
+        },
+        {
+          "start": 1831,
+          "end": 1833,
+          "symbol": "M:dd.<init>()V",
+          "original": "dd",
+          "renamed": "AwtPointerController"
+        },
+        {
+          "start": 1878,
+          "end": 1882,
+          "symbol": "L:dd.<init>()V#0",
+          "original": "var2",
+          "renamed": "robot"
+        },
+        {
+          "start": 1920,
+          "end": 1927,
+          "symbol": "F:dd.field_a:Ljava/awt/Robot;",
+          "original": "field_a",
+          "renamed": "robot"
+        },
+        {
+          "start": 1930,
+          "end": 1934,
+          "symbol": "L:dd.<init>()V#0",
+          "original": "var2",
+          "renamed": "robot"
+        }
+      ]
     },
     {
       "original": "de.java",
@@ -700756,17 +701730,1608 @@
     },
     {
       "original": "in.java",
-      "renamed": "in.java",
+      "renamed": "MicrosoftJvmCursorController.java",
       "inputSha256": "6b44f906f04ea1d917b31bba2eafd2aef2a48c5f12cf4662e01f383a4632b8ed",
-      "outputSha256": "6b44f906f04ea1d917b31bba2eafd2aef2a48c5f12cf4662e01f383a4632b8ed",
-      "edits": []
+      "outputSha256": "bb1f05025822604aa5ddb5b807731a6b126a02299de3be1e35a979ae9c769d43",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:in",
+          "original": "in",
+          "renamed": "MicrosoftJvmCursorController"
+        },
+        {
+          "start": 112,
+          "end": 119,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 146,
+          "end": 153,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 180,
+          "end": 187,
+          "symbol": "F:in.field_b:I",
+          "original": "field_b",
+          "renamed": "previousWindowProcedure"
+        },
+        {
+          "start": 209,
+          "end": 216,
+          "symbol": "F:in.field_c:Z",
+          "original": "field_c",
+          "renamed": "callbackAllocated"
+        },
+        {
+          "start": 234,
+          "end": 241,
+          "symbol": "F:in.field_d:I",
+          "original": "field_d",
+          "renamed": "arrowCursorHandle"
+        },
+        {
+          "start": 259,
+          "end": 260,
+          "symbol": "M:in.a(III)V",
+          "original": "a",
+          "renamed": "movePointer"
+        },
+        {
+          "start": 265,
+          "end": 271,
+          "symbol": "P:in.a(III)V#0",
+          "original": "param0",
+          "renamed": "y"
+        },
+        {
+          "start": 277,
+          "end": 283,
+          "symbol": "P:in.a(III)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 289,
+          "end": 295,
+          "symbol": "P:in.a(III)V#2",
+          "original": "param2",
+          "renamed": "x"
+        },
+        {
+          "start": 311,
+          "end": 317,
+          "symbol": "P:in.a(III)V#1",
+          "original": "param1",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 342,
+          "end": 349,
+          "symbol": "F:in.field_c:Z",
+          "original": "field_c",
+          "renamed": "callbackAllocated"
+        },
+        {
+          "start": 402,
+          "end": 408,
+          "symbol": "P:in.a(III)V#2",
+          "original": "param2",
+          "renamed": "x"
+        },
+        {
+          "start": 410,
+          "end": 416,
+          "symbol": "P:in.a(III)V#0",
+          "original": "param0",
+          "renamed": "y"
+        },
+        {
+          "start": 488,
+          "end": 494,
+          "symbol": "P:in.a(III)V#2",
+          "original": "param2",
+          "renamed": "x"
+        },
+        {
+          "start": 496,
+          "end": 502,
+          "symbol": "P:in.a(III)V#0",
+          "original": "param0",
+          "renamed": "y"
+        },
+        {
+          "start": 527,
+          "end": 528,
+          "symbol": "M:in.a(Ljava/awt/Component;IZ)V",
+          "original": "a",
+          "renamed": "setCursorVisible"
+        },
+        {
+          "start": 548,
+          "end": 554,
+          "symbol": "P:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "param0",
+          "renamed": "component"
+        },
+        {
+          "start": 560,
+          "end": 566,
+          "symbol": "P:in.a(Ljava/awt/Component;IZ)V#1",
+          "original": "param1",
+          "renamed": "messageValue"
+        },
+        {
+          "start": 576,
+          "end": 582,
+          "symbol": "P:in.a(Ljava/awt/Component;IZ)V#2",
+          "original": "param2",
+          "renamed": "visible"
+        },
+        {
+          "start": 598,
+          "end": 602,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "var5",
+          "renamed": "newWindowHandle"
+        },
+        {
+          "start": 623,
+          "end": 627,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
+          "original": "var6",
+          "renamed": "callbackLock"
+        },
+        {
+          "start": 654,
+          "end": 658,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#2",
+          "original": "var8",
+          "renamed": "unusedFailure"
+        },
+        {
+          "start": 701,
+          "end": 705,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#3",
+          "original": "var9",
+          "renamed": "unsupportedPeer"
+        },
+        {
+          "start": 730,
+          "end": 742,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#4",
+          "original": "stackIn_20_1",
+          "renamed": "visibleForNewWindow"
+        },
+        {
+          "start": 768,
+          "end": 780,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#5",
+          "original": "stackIn_26_1",
+          "renamed": "visibleForExistingWindow"
+        },
+        {
+          "start": 808,
+          "end": 833,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#6",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 850,
+          "end": 854,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#3",
+          "original": "var9",
+          "renamed": "unsupportedPeer"
+        },
+        {
+          "start": 899,
+          "end": 903,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "var5",
+          "renamed": "newWindowHandle"
+        },
+        {
+          "start": 906,
+          "end": 910,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#3",
+          "original": "var9",
+          "renamed": "unsupportedPeer"
+        },
+        {
+          "start": 942,
+          "end": 949,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 953,
+          "end": 957,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "var5",
+          "renamed": "newWindowHandle"
+        },
+        {
+          "start": 976,
+          "end": 983,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 987,
+          "end": 993,
+          "symbol": "P:in.a(Ljava/awt/Component;IZ)V#2",
+          "original": "param2",
+          "renamed": "visible"
+        },
+        {
+          "start": 1043,
+          "end": 1050,
+          "symbol": "F:in.field_c:Z",
+          "original": "field_c",
+          "renamed": "callbackAllocated"
+        },
+        {
+          "start": 1069,
+          "end": 1076,
+          "symbol": "F:in.field_d:I",
+          "original": "field_d",
+          "renamed": "arrowCursorHandle"
+        },
+        {
+          "start": 1175,
+          "end": 1182,
+          "symbol": "F:in.field_c:Z",
+          "original": "field_c",
+          "renamed": "callbackAllocated"
+        },
+        {
+          "start": 1218,
+          "end": 1225,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 1229,
+          "end": 1233,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "var5",
+          "renamed": "newWindowHandle"
+        },
+        {
+          "start": 1247,
+          "end": 1259,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#5",
+          "original": "stackIn_26_1",
+          "renamed": "visibleForExistingWindow"
+        },
+        {
+          "start": 1263,
+          "end": 1269,
+          "symbol": "P:in.a(Ljava/awt/Component;IZ)V#2",
+          "original": "param2",
+          "renamed": "visible"
+        },
+        {
+          "start": 1287,
+          "end": 1294,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 1297,
+          "end": 1309,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#5",
+          "original": "stackIn_26_1",
+          "renamed": "visibleForExistingWindow"
+        },
+        {
+          "start": 1347,
+          "end": 1354,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 1380,
+          "end": 1387,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 1440,
+          "end": 1444,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "var5",
+          "renamed": "newWindowHandle"
+        },
+        {
+          "start": 1473,
+          "end": 1477,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
+          "original": "var6",
+          "renamed": "callbackLock"
+        },
+        {
+          "start": 1512,
+          "end": 1516,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
+          "original": "var6",
+          "renamed": "callbackLock"
+        },
+        {
+          "start": 1573,
+          "end": 1580,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 1591,
+          "end": 1598,
+          "symbol": "F:in.field_b:I",
+          "original": "field_b",
+          "renamed": "previousWindowProcedure"
+        },
+        {
+          "start": 1637,
+          "end": 1641,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
+          "original": "var6",
+          "renamed": "callbackLock"
+        },
+        {
+          "start": 1674,
+          "end": 1678,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#1",
+          "original": "var6",
+          "renamed": "callbackLock"
+        },
+        {
+          "start": 1699,
+          "end": 1706,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 1709,
+          "end": 1713,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "var5",
+          "renamed": "newWindowHandle"
+        },
+        {
+          "start": 1732,
+          "end": 1739,
+          "symbol": "F:in.field_b:I",
+          "original": "field_b",
+          "renamed": "previousWindowProcedure"
+        },
+        {
+          "start": 1781,
+          "end": 1788,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 1823,
+          "end": 1835,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#4",
+          "original": "stackIn_20_1",
+          "renamed": "visibleForNewWindow"
+        },
+        {
+          "start": 1839,
+          "end": 1845,
+          "symbol": "P:in.a(Ljava/awt/Component;IZ)V#2",
+          "original": "param2",
+          "renamed": "visible"
+        },
+        {
+          "start": 1863,
+          "end": 1870,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 1873,
+          "end": 1885,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#4",
+          "original": "stackIn_20_1",
+          "renamed": "visibleForNewWindow"
+        },
+        {
+          "start": 1937,
+          "end": 1941,
+          "symbol": "L:in.a(Ljava/awt/Component;IZ)V#0",
+          "original": "var5",
+          "renamed": "newWindowHandle"
+        },
+        {
+          "start": 1951,
+          "end": 1957,
+          "symbol": "P:in.a(Ljava/awt/Component;IZ)V#1",
+          "original": "param1",
+          "renamed": "messageValue"
+        },
+        {
+          "start": 1974,
+          "end": 1976,
+          "symbol": "M:in.<init>()V",
+          "original": "in",
+          "renamed": "MicrosoftJvmCursorController"
+        },
+        {
+          "start": 1994,
+          "end": 2001,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 2057,
+          "end": 2063,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2069,
+          "end": 2075,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 2081,
+          "end": 2087,
+          "symbol": "P:in.callback(IIII)I#2",
+          "original": "param2",
+          "renamed": "wParam"
+        },
+        {
+          "start": 2093,
+          "end": 2099,
+          "symbol": "P:in.callback(IIII)I#3",
+          "original": "param3",
+          "renamed": "lParam"
+        },
+        {
+          "start": 2115,
+          "end": 2126,
+          "symbol": "L:in.callback(IIII)I#0",
+          "original": "stackIn_8_0",
+          "renamed": "customMessageCursorHandle"
+        },
+        {
+          "start": 2144,
+          "end": 2156,
+          "symbol": "L:in.callback(IIII)I#1",
+          "original": "stackIn_17_0",
+          "renamed": "clientCursorHandle"
+        },
+        {
+          "start": 2174,
+          "end": 2186,
+          "symbol": "L:in.callback(IIII)I#2",
+          "original": "stackIn_22_0",
+          "renamed": "fallbackCursorHandle"
+        },
+        {
+          "start": 2204,
+          "end": 2208,
+          "symbol": "L:in.callback(IIII)I#3",
+          "original": "var5",
+          "renamed": "foreignWindowProcedure"
+        },
+        {
+          "start": 2222,
+          "end": 2235,
+          "symbol": "L:in.callback(IIII)I#4",
+          "original": "var5Lifetime1",
+          "renamed": "hitTestCode"
+        },
+        {
+          "start": 2249,
+          "end": 2255,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2264,
+          "end": 2271,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2285,
+          "end": 2289,
+          "symbol": "L:in.callback(IIII)I#3",
+          "original": "var5",
+          "renamed": "foreignWindowProcedure"
+        },
+        {
+          "start": 2326,
+          "end": 2332,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2391,
+          "end": 2395,
+          "symbol": "L:in.callback(IIII)I#3",
+          "original": "var5",
+          "renamed": "foreignWindowProcedure"
+        },
+        {
+          "start": 2397,
+          "end": 2403,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2405,
+          "end": 2411,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 2413,
+          "end": 2419,
+          "symbol": "P:in.callback(IIII)I#2",
+          "original": "param2",
+          "renamed": "wParam"
+        },
+        {
+          "start": 2421,
+          "end": 2427,
+          "symbol": "P:in.callback(IIII)I#3",
+          "original": "param3",
+          "renamed": "lParam"
+        },
+        {
+          "start": 2452,
+          "end": 2458,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 2482,
+          "end": 2488,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 2518,
+          "end": 2524,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 2594,
+          "end": 2601,
+          "symbol": "F:in.field_b:I",
+          "original": "field_b",
+          "renamed": "previousWindowProcedure"
+        },
+        {
+          "start": 2603,
+          "end": 2609,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2611,
+          "end": 2617,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 2619,
+          "end": 2625,
+          "symbol": "P:in.callback(IIII)I#2",
+          "original": "param2",
+          "renamed": "wParam"
+        },
+        {
+          "start": 2627,
+          "end": 2633,
+          "symbol": "P:in.callback(IIII)I#3",
+          "original": "param3",
+          "renamed": "lParam"
+        },
+        {
+          "start": 2667,
+          "end": 2674,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2697,
+          "end": 2704,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 2772,
+          "end": 2779,
+          "symbol": "F:in.field_b:I",
+          "original": "field_b",
+          "renamed": "previousWindowProcedure"
+        },
+        {
+          "start": 2781,
+          "end": 2787,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 2789,
+          "end": 2795,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 2797,
+          "end": 2803,
+          "symbol": "P:in.callback(IIII)I#2",
+          "original": "param2",
+          "renamed": "wParam"
+        },
+        {
+          "start": 2805,
+          "end": 2811,
+          "symbol": "P:in.callback(IIII)I#3",
+          "original": "param3",
+          "renamed": "lParam"
+        },
+        {
+          "start": 2846,
+          "end": 2853,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 2869,
+          "end": 2880,
+          "symbol": "L:in.callback(IIII)I#0",
+          "original": "stackIn_8_0",
+          "renamed": "customMessageCursorHandle"
+        },
+        {
+          "start": 2917,
+          "end": 2928,
+          "symbol": "L:in.callback(IIII)I#0",
+          "original": "stackIn_8_0",
+          "renamed": "customMessageCursorHandle"
+        },
+        {
+          "start": 2936,
+          "end": 2943,
+          "symbol": "F:in.field_d:I",
+          "original": "field_d",
+          "renamed": "arrowCursorHandle"
+        },
+        {
+          "start": 2997,
+          "end": 3008,
+          "symbol": "L:in.callback(IIII)I#0",
+          "original": "stackIn_8_0",
+          "renamed": "customMessageCursorHandle"
+        },
+        {
+          "start": 3049,
+          "end": 3062,
+          "symbol": "L:in.callback(IIII)I#4",
+          "original": "var5Lifetime1",
+          "renamed": "hitTestCode"
+        },
+        {
+          "start": 3065,
+          "end": 3071,
+          "symbol": "P:in.callback(IIII)I#3",
+          "original": "param3",
+          "renamed": "lParam"
+        },
+        {
+          "start": 3098,
+          "end": 3111,
+          "symbol": "L:in.callback(IIII)I#4",
+          "original": "var5Lifetime1",
+          "renamed": "hitTestCode"
+        },
+        {
+          "start": 3134,
+          "end": 3141,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 3157,
+          "end": 3169,
+          "symbol": "L:in.callback(IIII)I#1",
+          "original": "stackIn_17_0",
+          "renamed": "clientCursorHandle"
+        },
+        {
+          "start": 3177,
+          "end": 3184,
+          "symbol": "F:in.field_d:I",
+          "original": "field_d",
+          "renamed": "arrowCursorHandle"
+        },
+        {
+          "start": 3217,
+          "end": 3229,
+          "symbol": "L:in.callback(IIII)I#1",
+          "original": "stackIn_17_0",
+          "renamed": "clientCursorHandle"
+        },
+        {
+          "start": 3287,
+          "end": 3299,
+          "symbol": "L:in.callback(IIII)I#1",
+          "original": "stackIn_17_0",
+          "renamed": "clientCursorHandle"
+        },
+        {
+          "start": 3344,
+          "end": 3350,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 3378,
+          "end": 3384,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 3452,
+          "end": 3459,
+          "symbol": "F:in.field_b:I",
+          "original": "field_b",
+          "renamed": "previousWindowProcedure"
+        },
+        {
+          "start": 3461,
+          "end": 3467,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 3469,
+          "end": 3475,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 3477,
+          "end": 3483,
+          "symbol": "P:in.callback(IIII)I#2",
+          "original": "param2",
+          "renamed": "wParam"
+        },
+        {
+          "start": 3485,
+          "end": 3491,
+          "symbol": "P:in.callback(IIII)I#3",
+          "original": "param3",
+          "renamed": "lParam"
+        },
+        {
+          "start": 3521,
+          "end": 3528,
+          "symbol": "F:in.field_e:I",
+          "original": "field_e",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 3549,
+          "end": 3556,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 3622,
+          "end": 3629,
+          "symbol": "F:in.field_b:I",
+          "original": "field_b",
+          "renamed": "previousWindowProcedure"
+        },
+        {
+          "start": 3631,
+          "end": 3637,
+          "symbol": "P:in.callback(IIII)I#0",
+          "original": "param0",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 3639,
+          "end": 3645,
+          "symbol": "P:in.callback(IIII)I#1",
+          "original": "param1",
+          "renamed": "messageId"
+        },
+        {
+          "start": 3647,
+          "end": 3653,
+          "symbol": "P:in.callback(IIII)I#2",
+          "original": "param2",
+          "renamed": "wParam"
+        },
+        {
+          "start": 3655,
+          "end": 3661,
+          "symbol": "P:in.callback(IIII)I#3",
+          "original": "param3",
+          "renamed": "lParam"
+        },
+        {
+          "start": 3692,
+          "end": 3699,
+          "symbol": "F:in.field_a:Z",
+          "original": "field_a",
+          "renamed": "cursorVisible"
+        },
+        {
+          "start": 3713,
+          "end": 3725,
+          "symbol": "L:in.callback(IIII)I#2",
+          "original": "stackIn_22_0",
+          "renamed": "fallbackCursorHandle"
+        },
+        {
+          "start": 3758,
+          "end": 3770,
+          "symbol": "L:in.callback(IIII)I#2",
+          "original": "stackIn_22_0",
+          "renamed": "fallbackCursorHandle"
+        },
+        {
+          "start": 3778,
+          "end": 3785,
+          "symbol": "F:in.field_d:I",
+          "original": "field_d",
+          "renamed": "arrowCursorHandle"
+        },
+        {
+          "start": 3835,
+          "end": 3847,
+          "symbol": "L:in.callback(IIII)I#2",
+          "original": "stackIn_22_0",
+          "renamed": "fallbackCursorHandle"
+        }
+      ]
     },
     {
       "original": "io.java",
-      "renamed": "io.java",
+      "renamed": "DirectDrawFullscreenController.java",
       "inputSha256": "364dbea55466f8cc1335fe62e5bbf900709a21aed1fe3cd1c102fc742fc3202b",
-      "outputSha256": "364dbea55466f8cc1335fe62e5bbf900709a21aed1fe3cd1c102fc742fc3202b",
-      "edits": []
+      "outputSha256": "b78c30880d9104a581167023e2972dde7c4473b335d51aa163e019b0595041fe",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:io",
+          "original": "io",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
+          "start": 123,
+          "end": 130,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 170,
+          "end": 177,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 204,
+          "end": 211,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 229,
+          "end": 230,
+          "symbol": "M:io.a(Ljava/awt/Frame;IIIII)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
+        },
+        {
+          "start": 246,
+          "end": 252,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "param0",
+          "renamed": "window"
+        },
+        {
+          "start": 258,
+          "end": 264,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#1",
+          "original": "param1",
+          "renamed": "height"
+        },
+        {
+          "start": 270,
+          "end": 276,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#2",
+          "original": "param2",
+          "renamed": "width"
+        },
+        {
+          "start": 282,
+          "end": 288,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#3",
+          "original": "param3",
+          "renamed": "y"
+        },
+        {
+          "start": 294,
+          "end": 300,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#4",
+          "original": "param4",
+          "renamed": "refreshRate"
+        },
+        {
+          "start": 306,
+          "end": 312,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#5",
+          "original": "param5",
+          "renamed": "bitDepth"
+        },
+        {
+          "start": 324,
+          "end": 330,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "param0",
+          "renamed": "window"
+        },
+        {
+          "start": 383,
+          "end": 387,
+          "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "var7",
+          "renamed": "unsupportedPeer"
+        },
+        {
+          "start": 436,
+          "end": 440,
+          "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#1",
+          "original": "var8",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 443,
+          "end": 447,
+          "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "var7",
+          "renamed": "unsupportedPeer"
+        },
+        {
+          "start": 501,
+          "end": 505,
+          "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#1",
+          "original": "var8",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 568,
+          "end": 572,
+          "symbol": "L:io.a(Ljava/awt/Frame;IIIII)V#1",
+          "original": "var8",
+          "renamed": "windowHandle"
+        },
+        {
+          "start": 596,
+          "end": 603,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 655,
+          "end": 661,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "param0",
+          "renamed": "window"
+        },
+        {
+          "start": 682,
+          "end": 689,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 705,
+          "end": 711,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#2",
+          "original": "param2",
+          "renamed": "width"
+        },
+        {
+          "start": 713,
+          "end": 719,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#1",
+          "original": "param1",
+          "renamed": "height"
+        },
+        {
+          "start": 721,
+          "end": 727,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#5",
+          "original": "param5",
+          "renamed": "bitDepth"
+        },
+        {
+          "start": 729,
+          "end": 735,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#4",
+          "original": "param4",
+          "renamed": "refreshRate"
+        },
+        {
+          "start": 749,
+          "end": 755,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "param0",
+          "renamed": "window"
+        },
+        {
+          "start": 769,
+          "end": 775,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#3",
+          "original": "param3",
+          "renamed": "y"
+        },
+        {
+          "start": 777,
+          "end": 783,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#2",
+          "original": "param2",
+          "renamed": "width"
+        },
+        {
+          "start": 785,
+          "end": 791,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#1",
+          "original": "param1",
+          "renamed": "height"
+        },
+        {
+          "start": 802,
+          "end": 808,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "param0",
+          "renamed": "window"
+        },
+        {
+          "start": 828,
+          "end": 834,
+          "symbol": "P:io.a(Ljava/awt/Frame;IIIII)V#0",
+          "original": "param0",
+          "renamed": "window"
+        },
+        {
+          "start": 874,
+          "end": 875,
+          "symbol": "M:io.a(B)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
+        },
+        {
+          "start": 881,
+          "end": 887,
+          "symbol": "P:io.a(B)[I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 904,
+          "end": 911,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 1050,
+          "end": 1057,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 1068,
+          "end": 1075,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 1086,
+          "end": 1093,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 1112,
+          "end": 1119,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 1264,
+          "end": 1268,
+          "symbol": "L:io.a(B)[I#0",
+          "original": "var4",
+          "renamed": "packedModes"
+        },
+        {
+          "start": 1271,
+          "end": 1278,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 1294,
+          "end": 1298,
+          "symbol": "L:io.a(B)[I#1",
+          "original": "var2",
+          "renamed": "packedModesAlias"
+        },
+        {
+          "start": 1301,
+          "end": 1305,
+          "symbol": "L:io.a(B)[I#0",
+          "original": "var4",
+          "renamed": "packedModes"
+        },
+        {
+          "start": 1315,
+          "end": 1322,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 1336,
+          "end": 1343,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 1364,
+          "end": 1370,
+          "symbol": "P:io.a(B)[I#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1398,
+          "end": 1402,
+          "symbol": "L:io.a(B)[I#0",
+          "original": "var4",
+          "renamed": "packedModes"
+        },
+        {
+          "start": 1442,
+          "end": 1446,
+          "symbol": "L:io.a(B)[I#2",
+          "original": "var3",
+          "renamed": "unusedContext"
+        },
+        {
+          "start": 1589,
+          "end": 1593,
+          "symbol": "L:io.a(B)[I#0",
+          "original": "var4",
+          "renamed": "packedModes"
+        },
+        {
+          "start": 1613,
+          "end": 1615,
+          "symbol": "M:io.<init>()V",
+          "original": "io",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
+          "start": 1633,
+          "end": 1640,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 1689,
+          "end": 1696,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 1810,
+          "end": 1816,
+          "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "param0",
+          "renamed": "surface"
+        },
+        {
+          "start": 1838,
+          "end": 1844,
+          "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+          "original": "param1",
+          "renamed": "context"
+        },
+        {
+          "start": 1860,
+          "end": 1871,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "fieldTemp$1",
+          "renamed": "widthOffset"
+        },
+        {
+          "start": 1889,
+          "end": 1900,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+          "original": "fieldTemp$2",
+          "renamed": "heightOffset"
+        },
+        {
+          "start": 1918,
+          "end": 1929,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+          "original": "fieldTemp$3",
+          "renamed": "bitDepthOffset"
+        },
+        {
+          "start": 1947,
+          "end": 1958,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+          "original": "fieldTemp$4",
+          "renamed": "refreshRateOffset"
+        },
+        {
+          "start": 1976,
+          "end": 1983,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 2005,
+          "end": 2016,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "fieldTemp$1",
+          "renamed": "widthOffset"
+        },
+        {
+          "start": 2019,
+          "end": 2026,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2038,
+          "end": 2045,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2048,
+          "end": 2055,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2071,
+          "end": 2078,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 2079,
+          "end": 2090,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "fieldTemp$1",
+          "renamed": "widthOffset"
+        },
+        {
+          "start": 2094,
+          "end": 2100,
+          "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "param0",
+          "renamed": "surface"
+        },
+        {
+          "start": 2118,
+          "end": 2129,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+          "original": "fieldTemp$2",
+          "renamed": "heightOffset"
+        },
+        {
+          "start": 2132,
+          "end": 2139,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2151,
+          "end": 2158,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2161,
+          "end": 2168,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2184,
+          "end": 2191,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 2192,
+          "end": 2203,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#1",
+          "original": "fieldTemp$2",
+          "renamed": "heightOffset"
+        },
+        {
+          "start": 2207,
+          "end": 2213,
+          "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "param0",
+          "renamed": "surface"
+        },
+        {
+          "start": 2232,
+          "end": 2243,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+          "original": "fieldTemp$3",
+          "renamed": "bitDepthOffset"
+        },
+        {
+          "start": 2246,
+          "end": 2253,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2265,
+          "end": 2272,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2275,
+          "end": 2282,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2298,
+          "end": 2305,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 2306,
+          "end": 2317,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#2",
+          "original": "fieldTemp$3",
+          "renamed": "bitDepthOffset"
+        },
+        {
+          "start": 2321,
+          "end": 2327,
+          "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "param0",
+          "renamed": "surface"
+        },
+        {
+          "start": 2351,
+          "end": 2362,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+          "original": "fieldTemp$4",
+          "renamed": "refreshRateOffset"
+        },
+        {
+          "start": 2365,
+          "end": 2372,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2384,
+          "end": 2391,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2394,
+          "end": 2401,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2417,
+          "end": 2424,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 2425,
+          "end": 2436,
+          "symbol": "L:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#3",
+          "original": "fieldTemp$4",
+          "renamed": "refreshRateOffset"
+        },
+        {
+          "start": 2440,
+          "end": 2446,
+          "symbol": "P:io.callbackEnumModes(Lcom/ms/directX/DDSurfaceDesc;Lcom/ms/com/IUnknown;)V#0",
+          "original": "param0",
+          "renamed": "surface"
+        },
+        {
+          "start": 2487,
+          "end": 2494,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2497,
+          "end": 2504,
+          "symbol": "F:io.field_b:I",
+          "original": "field_b",
+          "renamed": "enumeratedIntCount"
+        },
+        {
+          "start": 2542,
+          "end": 2543,
+          "symbol": "M:io.a(ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "restoreFullscreen"
+        },
+        {
+          "start": 2548,
+          "end": 2554,
+          "symbol": "P:io.a(ILjava/awt/Frame;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2571,
+          "end": 2577,
+          "symbol": "P:io.a(ILjava/awt/Frame;)V#1",
+          "original": "param1",
+          "renamed": "window"
+        },
+        {
+          "start": 2593,
+          "end": 2599,
+          "symbol": "P:io.a(ILjava/awt/Frame;)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2627,
+          "end": 2634,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 2672,
+          "end": 2679,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 2731,
+          "end": 2737,
+          "symbol": "P:io.a(ILjava/awt/Frame;)V#1",
+          "original": "param1",
+          "renamed": "window"
+        },
+        {
+          "start": 2780,
+          "end": 2787,
+          "symbol": "F:io.field_c:[I",
+          "original": "field_c",
+          "renamed": "modeBuffer"
+        },
+        {
+          "start": 2817,
+          "end": 2824,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 2860,
+          "end": 2867,
+          "symbol": "F:io.field_a:Lcom/ms/directX/DirectDraw;",
+          "original": "field_a",
+          "renamed": "directDraw"
+        },
+        {
+          "start": 2919,
+          "end": 2925,
+          "symbol": "P:io.a(ILjava/awt/Frame;)V#1",
+          "original": "param1",
+          "renamed": "window"
+        }
+      ]
     },
     {
       "original": "ip.java",
@@ -1025161,7 +1027726,7 @@
       "original": "tg.java",
       "renamed": "PlatformServices.java",
       "inputSha256": "0da0d4db936e4a03910b5bc134333fd73e0c85c67580c6a3f1ce6d08ff7043c3",
-      "outputSha256": "75d608beb10b20122bc8b88be285a5d782f3d4e3f5ec2764d093cf05badd7326",
+      "outputSha256": "c7f911ef2575f7628a1ad6c718363a0b61df8325ca2b6f983f2cda84e01335db",
       "edits": [
         {
           "start": 69,
@@ -1025197,6 +1027762,20 @@
           "symbol": "F:tg.field_p:Ljava/awt/EventQueue;",
           "original": "field_p",
           "renamed": "eventQueue"
+        },
+        {
+          "start": 230,
+          "end": 232,
+          "symbol": "C:io",
+          "original": "io",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
+          "start": 233,
+          "end": 240,
+          "symbol": "F:tg.field_u:Lio;",
+          "original": "field_u",
+          "renamed": "directDrawFullscreenDriver"
         },
         {
           "start": 261,
@@ -1025239,6 +1027818,13 @@
           "symbol": "F:tg.field_d:Lql;",
           "original": "field_d",
           "renamed": "taskTail"
+        },
+        {
+          "start": 459,
+          "end": 466,
+          "symbol": "F:tg.field_a:Ljava/lang/Object;",
+          "original": "field_a",
+          "renamed": "awtFullscreenDriver"
         },
         {
           "start": 480,
@@ -1025290,11 +1027876,32 @@
           "renamed": "BoundedFile"
         },
         {
+          "start": 652,
+          "end": 659,
+          "symbol": "F:tg.field_n:Ljava/lang/Object;",
+          "original": "field_n",
+          "renamed": "awtPointerDriver"
+        },
+        {
           "start": 724,
           "end": 731,
           "symbol": "F:tg.field_o:Ljava/lang/String;",
           "original": "field_o",
           "renamed": "javaVersion"
+        },
+        {
+          "start": 745,
+          "end": 747,
+          "symbol": "C:in",
+          "original": "in",
+          "renamed": "MicrosoftJvmCursorController"
+        },
+        {
+          "start": 748,
+          "end": 755,
+          "symbol": "F:tg.field_w:Lin;",
+          "original": "field_w",
+          "renamed": "microsoftCursorDriver"
         },
         {
           "start": 776,
@@ -1025421,6 +1028028,20 @@
           "symbol": "F:tg.field_r:Z",
           "original": "field_r",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 1440,
+          "end": 1447,
+          "symbol": "F:tg.field_a:Ljava/lang/Object;",
+          "original": "field_a",
+          "renamed": "awtFullscreenDriver"
+        },
+        {
+          "start": 1510,
+          "end": 1517,
+          "symbol": "F:tg.field_u:Lio;",
+          "original": "field_u",
+          "renamed": "directDrawFullscreenDriver"
         },
         {
           "start": 1551,
@@ -1025822,6 +1028443,35 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 6759,
+          "end": 6766,
+          "symbol": "F:tg.field_w:Lin;",
+          "original": "field_w",
+          "renamed": "microsoftCursorDriver"
+        },
+        {
+          "start": 6767,
+          "end": 6768,
+          "symbol": "M:in.a(III)V",
+          "original": "a",
+          "renamed": "movePointer"
+        },
+        {
+          "start": 6872,
+          "end": 6874,
+          "symbol": "C:dd",
+          "original": "dd",
+          "renamed": "AwtPointerController",
+          "kind": "class-name-literal"
+        },
+        {
+          "start": 6961,
+          "end": 6968,
+          "symbol": "F:tg.field_n:Ljava/lang/Object;",
+          "original": "field_n",
+          "renamed": "awtPointerDriver"
+        },
+        {
           "start": 7151,
           "end": 7158,
           "symbol": "F:tg.field_i:Z",
@@ -1025850,6 +1028500,35 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 7488,
+          "end": 7490,
+          "symbol": "C:dd",
+          "original": "dd",
+          "renamed": "AwtPointerController",
+          "kind": "class-name-literal"
+        },
+        {
+          "start": 7590,
+          "end": 7597,
+          "symbol": "F:tg.field_n:Ljava/lang/Object;",
+          "original": "field_n",
+          "renamed": "awtPointerDriver"
+        },
+        {
+          "start": 7717,
+          "end": 7724,
+          "symbol": "F:tg.field_w:Lin;",
+          "original": "field_w",
+          "renamed": "microsoftCursorDriver"
+        },
+        {
+          "start": 7725,
+          "end": 7726,
+          "symbol": "M:in.a(Ljava/awt/Component;IZ)V",
+          "original": "a",
+          "renamed": "setCursorVisible"
+        },
+        {
           "start": 7874,
           "end": 7881,
           "symbol": "F:tg.field_r:Z",
@@ -1025862,6 +1028541,21 @@
           "symbol": "F:ql.field_b:Ljava/lang/Object;",
           "original": "field_b",
           "renamed": "payload"
+        },
+        {
+          "start": 8031,
+          "end": 8033,
+          "symbol": "C:dd",
+          "original": "dd",
+          "renamed": "AwtPointerController",
+          "kind": "class-name-literal"
+        },
+        {
+          "start": 8187,
+          "end": 8194,
+          "symbol": "F:tg.field_n:Ljava/lang/Object;",
+          "original": "field_n",
+          "renamed": "awtPointerDriver"
         },
         {
           "start": 8246,
@@ -1025990,6 +1028684,20 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 10589,
+          "end": 10596,
+          "symbol": "F:tg.field_u:Lio;",
+          "original": "field_u",
+          "renamed": "directDrawFullscreenDriver"
+        },
+        {
+          "start": 10597,
+          "end": 10598,
+          "symbol": "M:io.a(ILjava/awt/Frame;)V",
+          "original": "a",
+          "renamed": "restoreFullscreen"
+        },
+        {
           "start": 10629,
           "end": 10636,
           "symbol": "F:ql.field_b:Ljava/lang/Object;",
@@ -1026005,6 +1028713,13 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 10764,
+          "end": 10771,
+          "symbol": "F:tg.field_a:Ljava/lang/Object;",
+          "original": "field_a",
+          "renamed": "awtFullscreenDriver"
+        },
+        {
           "start": 10979,
           "end": 10986,
           "symbol": "F:ql.field_e:Ljava/lang/Object;",
@@ -1026017,6 +1028732,20 @@
           "symbol": "F:tg.field_r:Z",
           "original": "field_r",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 11122,
+          "end": 11129,
+          "symbol": "F:tg.field_u:Lio;",
+          "original": "field_u",
+          "renamed": "directDrawFullscreenDriver"
+        },
+        {
+          "start": 11130,
+          "end": 11131,
+          "symbol": "M:io.a(Ljava/awt/Frame;IIIII)V",
+          "original": "a",
+          "renamed": "enterFullscreen"
         },
         {
           "start": 11152,
@@ -1026053,6 +1028782,13 @@
           "original": "db",
           "renamed": "AwtFullscreenController",
           "kind": "class-name-literal"
+        },
+        {
+          "start": 11429,
+          "end": 11436,
+          "symbol": "F:tg.field_a:Ljava/lang/Object;",
+          "original": "field_a",
+          "renamed": "awtFullscreenDriver"
         },
         {
           "start": 11475,
@@ -1026105,11 +1028841,32 @@
           "kind": "class-name-literal"
         },
         {
+          "start": 11840,
+          "end": 11847,
+          "symbol": "F:tg.field_a:Ljava/lang/Object;",
+          "original": "field_a",
+          "renamed": "awtFullscreenDriver"
+        },
+        {
           "start": 11930,
           "end": 11937,
           "symbol": "F:ql.field_e:Ljava/lang/Object;",
           "original": "field_e",
           "renamed": "result"
+        },
+        {
+          "start": 11945,
+          "end": 11952,
+          "symbol": "F:tg.field_u:Lio;",
+          "original": "field_u",
+          "renamed": "directDrawFullscreenDriver"
+        },
+        {
+          "start": 11953,
+          "end": 11954,
+          "symbol": "M:io.a(B)[I",
+          "original": "a",
+          "renamed": "listDisplayModes"
         },
         {
           "start": 12084,
@@ -1026798,6 +1029555,13 @@
           "renamed": "PlatformServices"
         },
         {
+          "start": 20988,
+          "end": 20990,
+          "symbol": "C:io",
+          "original": "io",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
           "start": 21046,
           "end": 21053,
           "symbol": "F:tg.field_v:Lql;",
@@ -1027022,6 +1029786,27 @@
           "renamed": "microsoftJvm"
         },
         {
+          "start": 25193,
+          "end": 25195,
+          "symbol": "C:io",
+          "original": "io",
+          "renamed": "DirectDrawFullscreenController"
+        },
+        {
+          "start": 25218,
+          "end": 25225,
+          "symbol": "F:tg.field_u:Lio;",
+          "original": "field_u",
+          "renamed": "directDrawFullscreenDriver"
+        },
+        {
+          "start": 25274,
+          "end": 25281,
+          "symbol": "F:tg.field_a:Ljava/lang/Object;",
+          "original": "field_a",
+          "renamed": "awtFullscreenDriver"
+        },
+        {
           "start": 25299,
           "end": 25301,
           "symbol": "C:db",
@@ -1027035,6 +1029820,35 @@
           "symbol": "F:tg.field_r:Z",
           "original": "field_r",
           "renamed": "microsoftJvm"
+        },
+        {
+          "start": 25601,
+          "end": 25608,
+          "symbol": "F:tg.field_n:Ljava/lang/Object;",
+          "original": "field_n",
+          "renamed": "awtPointerDriver"
+        },
+        {
+          "start": 25626,
+          "end": 25628,
+          "symbol": "C:dd",
+          "original": "dd",
+          "renamed": "AwtPointerController",
+          "kind": "class-name-literal"
+        },
+        {
+          "start": 25686,
+          "end": 25693,
+          "symbol": "F:tg.field_w:Lin;",
+          "original": "field_w",
+          "renamed": "microsoftCursorDriver"
+        },
+        {
+          "start": 25700,
+          "end": 25702,
+          "symbol": "C:in",
+          "original": "in",
+          "renamed": "MicrosoftJvmCursorController"
         },
         {
           "start": 25945,
@@ -1116548,10 +1119362,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "204d0594c08a4b707a8c9bd16ae253f47da791134b8177dc550e54db8f57247b",
+    "rulesSha256": "74411382221c69e955daa7c4aa749947837320df47b63fdda222db9aac0bbed7",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "8c0c7f67683391658cc17e1efc9afe888a780ad3fb7f5400353be658a7b5552c",
+    "outputTreeSha256": "6a5cb80798e9a28a537b674f8ea5bbbc8addd9f8bc0f37522ff3c54c2c58e6f0",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1116566,15 +1119380,22 @@
       "overrideFamiliesChecked": 690,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
-      "classNameLiteralEdits": 6,
+      "classNameLiteralEdits": 10,
       "labelBindingsCompared": 121,
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 1066750,
-        "traceSha256": "f946cf6ac0dd2c8670a29881f0ee6ee65a1aff849d5f91508ac24d273cb96f48",
+        "checks": 1067023,
+        "traceSha256": "6950e9fb3db2360ee97782ba8eb966f6a0f891274f20fe1282f3c23e0d99b19d",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "awtPointerFixtures": true,
+        "cursorImageFixtures": true,
+        "cursorOwnershipFixtures": true,
+        "pointerReflectionFixtures": true,
+        "microsoftCursorStateFixtures": true,
+        "directDrawEnumerationFixtures": true,
+        "legacyPeerFailureFixtures": true,
         "canvasResizeEligibilityFixtures": true,
         "canvasFitFixtures": true,
         "canvasResizeTickFixtures": true,

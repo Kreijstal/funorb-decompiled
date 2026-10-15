@@ -8,7 +8,7 @@ final class PlatformServices implements Runnable {
     private static String osName;
     private boolean microsoftJvm;
     java.awt.EventQueue eventQueue;
-    private io field_u;
+    private DirectDrawFullscreenController directDrawFullscreenDriver;
     private Thread thread;
     BoundedFile field_k;
     private static String userDirectory;
@@ -16,7 +16,7 @@ final class PlatformServices implements Runnable {
     private static volatile long field_f;
     private static int field_c;
     private PlatformTask taskTail;
-    private Object field_a;
+    private Object awtFullscreenDriver;
     private PlatformTask taskHead;
     private boolean shutdownRequested;
     BoundedFile[] field_s;
@@ -24,10 +24,10 @@ final class PlatformServices implements Runnable {
     BoundedFile field_m;
     BoundedFile field_q;
     private static String field_t;
-    private Object field_n;
+    private Object awtPointerDriver;
     static java.lang.reflect.Method field_x;
     static String javaVersion;
-    private in field_w;
+    private MicrosoftJvmCursorController microsoftCursorDriver;
 
     private final PlatformTask a(String param0, int param1, boolean param2, int param3) {
         if (param3 != -31592) {
@@ -50,9 +50,9 @@ final class PlatformServices implements Runnable {
           return false;
         }
         if (!this.microsoftJvm) {
-          return this.field_a != null ? true : false;
+          return this.awtFullscreenDriver != null ? true : false;
         }
-        return null != this.field_u ? true : false;
+        return null != this.directDrawFullscreenDriver ? true : false;
     }
 
     final PlatformTask openUrl(byte obfuscationGuard, java.net.URL url) {
@@ -184,9 +184,9 @@ final class PlatformServices implements Runnable {
                           var3_int = var8.argumentOne;
                           var4_int = var8.argumentTwo;
                           if (this.microsoftJvm) {
-                            this.field_w.a(var4_int, -4, var3_int);
+                            this.microsoftCursorDriver.movePointer(var4_int, -4, var3_int);
                           } else {
-                            Class.forName("dd").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_n, new Object[]{new Integer(var3_int), new Integer(var4_int)});
+                            Class.forName("AwtPointerController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.awtPointerDriver, new Object[]{new Integer(var3_int), new Integer(var4_int)});
                           }
                           break;
                         }
@@ -196,16 +196,16 @@ final class PlatformServices implements Runnable {
                           var3_int = stackIn_67_0;
                           var11 = (java.awt.Component) (var8.payload);
                           if (!this.microsoftJvm) {
-                            Class.forName("dd").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_n, new Object[]{var11, new Boolean(var3_int != 0)});
+                            Class.forName("AwtPointerController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.awtPointerDriver, new Object[]{var11, new Boolean(var3_int != 0)});
                           } else {
-                            this.field_w.a(var11, 0, var3_int != 0);
+                            this.microsoftCursorDriver.setCursorVisible(var11, 0, var3_int != 0);
                           }
                           break;
                         }
                         if (!this.microsoftJvm &&
                           17 == var2_int) {
                           var12 = (Object[]) (var8.payload);
-                          Class.forName("dd").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_n, new Object[]{var12[0], var12[1], new Integer(var8.argumentOne), new Integer(var8.argumentTwo), var12[2]});
+                          Class.forName("AwtPointerController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.awtPointerDriver, new Object[]{var12[0], var12[1], new Integer(var8.argumentOne), new Integer(var8.argumentTwo), var12[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformServices.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -245,9 +245,9 @@ final class PlatformServices implements Runnable {
                         break;
                       case 7:
                         if (this.microsoftJvm) {
-                          this.field_u.a(-3887, (java.awt.Frame) (var8.payload));
+                          this.directDrawFullscreenDriver.restoreFullscreen(-3887, (java.awt.Frame) (var8.payload));
                         } else {
-                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_a, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.awtFullscreenDriver, new Object[]{});
                         }
                         break;
                       case 6:
@@ -255,16 +255,16 @@ final class PlatformServices implements Runnable {
                         var8.result = var10;
                         var10.setResizable(false);
                         if (this.microsoftJvm) {
-                          this.field_u.a(var10, 65535 & var8.argumentOne, var8.argumentOne >>> 16, 0, var8.argumentTwo & 65535, var8.argumentTwo >> 16);
+                          this.directDrawFullscreenDriver.enterFullscreen(var10, 65535 & var8.argumentOne, var8.argumentOne >>> 16, 0, var8.argumentTwo & 65535, var8.argumentTwo >> 16);
                         } else {
-                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_a, new Object[]{var10, new Integer(var8.argumentOne >>> 16), new Integer(65535 & var8.argumentOne), new Integer(var8.argumentTwo >> 16), new Integer(var8.argumentTwo & 65535)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.awtFullscreenDriver, new Object[]{var10, new Integer(var8.argumentOne >>> 16), new Integer(65535 & var8.argumentOne), new Integer(var8.argumentTwo >> 16), new Integer(var8.argumentTwo & 65535)});
                         }
                         break;
                       case 5:
                         if (!this.microsoftJvm) {
-                          var8.result = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_a, new Object[]{});
+                          var8.result = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.awtFullscreenDriver, new Object[]{});
                         } else {
-                          var8.result = this.field_u.a((byte) -48);
+                          var8.result = this.directDrawFullscreenDriver.listDisplayModes((byte) -48);
                         }
                         break;
                       case 21:
@@ -496,7 +496,7 @@ final class PlatformServices implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        io var7 = null;
+        DirectDrawFullscreenController var7 = null;
         this.field_k = null;
         this.taskHead = null;
         this.taskTail = null;
@@ -592,10 +592,10 @@ final class PlatformServices implements Runnable {
           }
           try {
             if (this.microsoftJvm) {
-              var7 = new io();
-              this.field_u = var7;
+              var7 = new DirectDrawFullscreenController();
+              this.directDrawFullscreenDriver = var7;
             } else {
-              this.field_a = Class.forName("AwtFullscreenController").newInstance();
+              this.awtFullscreenDriver = Class.forName("AwtFullscreenController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
             decompiledCaughtException = decompiledCaughtParameter9;
@@ -603,9 +603,9 @@ final class PlatformServices implements Runnable {
           }
           try {
             if (!this.microsoftJvm) {
-              this.field_n = Class.forName("dd").newInstance();
+              this.awtPointerDriver = Class.forName("AwtPointerController").newInstance();
             } else {
-              this.field_w = new in();
+              this.microsoftCursorDriver = new MicrosoftJvmCursorController();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;
