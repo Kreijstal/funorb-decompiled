@@ -17,14 +17,14 @@ final class DelayedPacket extends IntrusiveNode {
         if (param0 <= 57) {
           field_o = (String) null;
           if (!QuickChatMenu.h(-26090)) {
-            return 0 >= ResourceArchiveFactory.field_c ? true : false;
+            return 0 >= ResourceArchiveFactory.windowModeCapabilityWord ? true : false;
           }
           return true;
         }
         if (QuickChatMenu.h(-26090)) {
           return true;
         }
-        if (0 < ResourceArchiveFactory.field_c) {
+        if (0 < ResourceArchiveFactory.windowModeCapabilityWord) {
           return false;
         }
         return true;

@@ -375,7 +375,7 @@ final class ValidationIconWidget extends FocusableWidget {
           if (null == WhirlpoolHasher.gameTransport) {
             if (RadialSelectorRenderer.field_d) {
               if (MembershipBenefitsScreen.f(param6 ^ -6788) > 30000L) {
-                DirectByteStorage.field_e = hg.field_b;
+                DirectByteStorage.field_e = DisplayModeInfo.field_b;
               } else {
                 DirectByteStorage.field_e = gd.field_e;
               }

@@ -883,7 +883,7 @@ final class MultiplayerMatch {
         Brick brick = null;
         int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          hg.resetCollisionSelection(obfuscationGuard);
+          DisplayModeInfo.resetCollisionSelection(obfuscationGuard);
           for (groupIndex = -1 + board.brickGroups.length; groupIndex > -1; groupIndex--) {
             bricks = board.brickGroups[groupIndex];
             brick = (Brick) (bricks.last(~obfuscationGuard));

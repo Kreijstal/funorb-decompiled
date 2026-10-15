@@ -300,7 +300,7 @@ final class SoundCache {
               gd.field_b = param5;
               QuickChatHelpDialog.field_Yb = jl.incomingPackets.readUnsignedByte(255);
               gh.field_f = jl.incomingPackets.readUnsignedByte(255);
-              ResourceArchiveFactory.field_c = jl.incomingPackets.readUnsignedShort(65280);
+              ResourceArchiveFactory.windowModeCapabilityWord = jl.incomingPackets.readUnsignedShort(65280);
               var11 = jl.incomingPackets.readNullableCp1252String(0);
               var7 = jl.incomingPackets.readUnsignedByte(255);
               if ((var7 & 1) != 0) {
@@ -345,7 +345,7 @@ final class SoundCache {
               if (var11 != null) {
                 ui.a(-70, EmailConfirmationValidator.e((byte) -112), var11);
               }
-              if (0 >= ResourceArchiveFactory.field_c &&
+              if (0 >= ResourceArchiveFactory.windowModeCapabilityWord &&
                 !ChocolateBackground.field_r) {
                 try {
                   ne.a("unzap", -121, EmailConfirmationValidator.e((byte) -100));
@@ -361,7 +361,7 @@ final class SoundCache {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (ResourceArchiveFactory.field_c > 0) {
+              if (ResourceArchiveFactory.windowModeCapabilityWord > 0) {
                 FarmBackground.field_u = true;
               }
               TextFieldValidator.outgoingPackets.initializeOpcodeCipher(LevelPackCard.field_a, -98);
@@ -397,7 +397,7 @@ final class SoundCache {
                 if (30000L >= MembershipBenefitsScreen.f(-6792)) {
                   DirectByteStorage.field_e = gd.field_e;
                 } else {
-                  DirectByteStorage.field_e = hg.field_b;
+                  DirectByteStorage.field_e = DisplayModeInfo.field_b;
                 }
                 RadialSelectorRenderer.field_d = false;
                 stackIn_104_0 = 3;

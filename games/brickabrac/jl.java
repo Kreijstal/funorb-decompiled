@@ -184,7 +184,7 @@ final class jl {
             return stackIn_14_0;
           }
           if (LevelPackSelectScreen.friendCount >= 100 &&
-            ResourceArchiveFactory.field_c <= 0) {
+            ResourceArchiveFactory.windowModeCapabilityWord <= 0) {
             stackIn_18_0 = er.field_e;
             return stackIn_18_0;
           }

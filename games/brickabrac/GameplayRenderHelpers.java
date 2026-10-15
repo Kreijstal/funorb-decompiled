@@ -3,7 +3,7 @@
  */
 final class GameplayRenderHelpers {
     static String[] field_b;
-    static GameCanvas field_d;
+    static GameCanvas fullscreenCanvas;
     static String field_e;
     static NodeDeque lobbyPlayers;
     static String field_a;
@@ -21,7 +21,7 @@ final class GameplayRenderHelpers {
 
     public static void a(int param0) {
         lobbyPlayers = null;
-        field_d = null;
+        fullscreenCanvas = null;
         if (param0 == 2) {
           field_a = null;
           field_b = null;

@@ -96,7 +96,7 @@ final class LevelSelectScreen extends MenuScreen {
         GzipInflater.a(550, 5, 33, 5, 140, (byte) -106, 45);
         GzipInflater.a(160, 5, 243, 5, 178, (byte) -88, 45);
         GzipInflater.a(385, 5, 243, 5, 178, (byte) -124, 210);
-        ContextActionController.field_g.drawCentered(qn.packNames[this.pack.packId], 320, 1 + (178 - ContextActionController.field_g.xHeight), 0, -1);
+        ContextActionController.field_g.drawCentered(CanvasResizeController.packNames[this.pack.packId], 320, 1 + (178 - ContextActionController.field_g.xHeight), 0, -1);
         ArchiveNetworkRequest.packSelectorIcons[this.pack.packId].e(565, 140, -2048, 4096);
         if (this.levelList.selectedLevelIndex >= 0 &&
           this.levelList.selectedLevelIndex < this.pack.levelCount) {

@@ -15,46 +15,46 @@ abstract class LoginCredentials {
 
     abstract void writeCredentials(int obfuscationGuard, PacketBuffer packet);
 
-    final static GameCanvas a(int param0, int param1, int param2, int param3, boolean param4, PlatformServices param5) {
-        java.awt.Frame var6 = null;
-        RuntimeException var6_ref = null;
-        GameCanvas var7 = null;
-        java.awt.Frame var8 = null;
-        Object stackIn_2_0 = null;
-        GameCanvas stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    final static GameCanvas createFullscreenCanvas(int refreshRate, int bitDepth, int width, int height, boolean obfuscationGuard, PlatformServices platform) {
+        java.awt.Frame frameAlias = null;
+        RuntimeException failure = null;
+        GameCanvas canvas = null;
+        java.awt.Frame frame = null;
+        Object unavailableResult = null;
+        GameCanvas canvasResult = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String platformSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          var8 = WidgetTheme.a(param0, param5, param3, 119, param1, param2);
-          var6 = var8;
-          if (var8 == null) {
-            stackIn_2_0 = null;
-            return (GameCanvas) (stackIn_2_0);
+          frame = WidgetTheme.openFullscreenFrame(refreshRate, platform, height, 119, bitDepth, width);
+          frameAlias = frame;
+          if (frame == null) {
+            unavailableResult = null;
+            return (GameCanvas) (unavailableResult);
           }
-          var7 = new GameCanvas();
-          var7.window = var8;
-          var7.window.add((java.awt.Component) ((Object) var7));
-          var7.setBounds(0, 0, param2, param3);
-          var7.addFocusListener(var7);
-          if (!param4) {
+          canvas = new GameCanvas();
+          canvas.window = frame;
+          canvas.window.add((java.awt.Component) ((Object) canvas));
+          canvas.setBounds(0, 0, width, height);
+          canvas.addFocusListener(canvas);
+          if (!obfuscationGuard) {
             LoginCredentials.a((byte) 7, -111);
           }
-          var7.requestFocus();
-          stackIn_6_0 = var7;
-          return stackIn_6_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_9_0 = var6_ref;
-          stackIn_9_1 = new StringBuilder().append("ff.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
-          if (param5 == null) {
-            stackIn_10_2 = "null";
+          canvas.requestFocus();
+          canvasResult = canvas;
+          return canvasResult;
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("ff.H(").append(refreshRate).append(',').append(bitDepth).append(',').append(width).append(',').append(height).append(',').append(obfuscationGuard).append(',');
+          if (platform == null) {
+            platformSummary = "null";
           } else {
-            stackIn_10_2 = "{...}";
+            platformSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(platformSummary).append(')').toString());
         }
     }
 

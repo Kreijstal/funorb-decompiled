@@ -461,13 +461,13 @@ final class JungleBackground extends BackgroundScene {
                   var9 >= 0) {
                   if (null != LoginMethodPreference.field_e &&
                     LoginMethodPreference.field_e[var7] != null &&
-                    0 < (LoginMethodPreference.field_e[var7][var9] & ~qn.field_f)) {
-                    var15 = TextFieldRenderer.a((byte) -82, LoginMethodPreference.field_e[var7][var9] & ~qn.field_f);
+                    0 < (LoginMethodPreference.field_e[var7][var9] & ~CanvasResizeController.field_f)) {
+                    var15 = TextFieldRenderer.a((byte) -82, LoginMethodPreference.field_e[var7][var9] & ~CanvasResizeController.field_f);
                     var14 = 1;
                   }
                   if (null != NodeDeque.field_a &&
                     NodeDeque.field_a[var7] != null &&
-                    0 >= ResourceArchiveFactory.field_c &&
+                    0 >= ResourceArchiveFactory.windowModeCapabilityWord &&
                     NodeDeque.field_a[var7][var9]) {
                     var10 = 1;
                   }
@@ -476,7 +476,7 @@ final class JungleBackground extends BackgroundScene {
                     var16 = AchievementsScreen.field_F[var7][var9];
                     if (var16 != 0 &&
                       !ea.field_g &&
-                      ResourceArchiveFactory.field_c <= 0) {
+                      ResourceArchiveFactory.windowModeCapabilityWord <= 0) {
                       var10 = 1;
                     }
                     if (0 < var16 &&
@@ -493,7 +493,7 @@ final class JungleBackground extends BackgroundScene {
                     }
                     if (0 != var16Lifetime2 &&
                       !ea.field_g &&
-                      0 >= ResourceArchiveFactory.field_c) {
+                      0 >= ResourceArchiveFactory.windowModeCapabilityWord) {
                       var10 = 1;
                     }
                   }

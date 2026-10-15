@@ -661,7 +661,7 @@ final class HighscoresScreen extends MenuScreen {
           return;
         }
         GzipInflater.a(475, 5, 33, 5, 140, (byte) -101, 120);
-        ContextActionController.field_g.drawCentered(qn.packNames[this.packIndex], 357, 1 + (-ContextActionController.field_g.xHeight + 178), 0, -1);
+        ContextActionController.field_g.drawCentered(CanvasResizeController.packNames[this.packIndex], 357, 1 + (-ContextActionController.field_g.xHeight + 178), 0, -1);
         ArchiveNetworkRequest.packSelectorIcons[this.packIndex].e(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
           field_v = -65;

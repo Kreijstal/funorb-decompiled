@@ -412,78 +412,78 @@ final class WidgetTheme {
         }
     }
 
-    final static java.awt.Frame a(int param0, PlatformServices param1, int param2, int param3, int param4, int param5) {
-        int var8 = 0;
-        Object stackIn_7_0 = null;
-        Object stackIn_38_0 = null;
-        java.awt.Frame stackIn_40_0 = null;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
-        String stackIn_44_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        hg[] var6 = null;
-        RuntimeException var6_ref = null;
-        int var7_int = 0;
-        java.awt.Frame var7 = null;
-        int var9 = 0;
-        hg[] var10 = null;
-        PlatformTask var11 = null;
-        var9 = BrickABrac.field_J ? 1 : 0;
+    final static java.awt.Frame openFullscreenFrame(int refreshRate, PlatformServices platform, int height, int obfuscationGuard, int bitDepth, int width) {
+        int modeIndex = 0;
+        Object unavailableResult = null;
+        Object failedFrameResult = null;
+        java.awt.Frame frameResult = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String platformSummary = null;
+        RuntimeException caughtFailure = null;
+        DisplayModeInfo[] modes = null;
+        RuntimeException failure = null;
+        int foundMode = 0;
+        java.awt.Frame frame = null;
+        int unusedClientFlag = 0;
+        DisplayModeInfo[] availableModes = null;
+        PlatformTask task = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!param1.b(-122)) {
+          if (!platform.isFullscreenAvailable(-122)) {
             return null;
           }
-          if (0 == param4) {
-            var10 = PowerUpWarning.a(true, param1);
-            var6 = var10;
-            if (var6 == null) {
-              stackIn_7_0 = null;
-              return (java.awt.Frame) (stackIn_7_0);
+          if (0 == bitDepth) {
+            availableModes = PowerUpWarning.listDisplayModes(true, platform);
+            modes = availableModes;
+            if (modes == null) {
+              unavailableResult = null;
+              return (java.awt.Frame) (unavailableResult);
             }
-            var7_int = 0;
-            for (var8 = 0; var10.length > var8; var8++) {
-              if (var10[var8].field_d == param5 &&
-                var10[var8].field_c == param2 && ((param0 == 0 ||
-                param0 == var10[var8].field_f) &&
-                (var7_int == 0 ||
-                !(var10[var8].field_h <= param4)))) {
-                param4 = var10[var8].field_h;
-                var7_int = 1;
+            foundMode = 0;
+            for (modeIndex = 0; availableModes.length > modeIndex; modeIndex++) {
+              if (availableModes[modeIndex].width == width &&
+                availableModes[modeIndex].height == height && ((refreshRate == 0 ||
+                refreshRate == availableModes[modeIndex].refreshRate) &&
+                (foundMode == 0 ||
+                !(availableModes[modeIndex].bitDepth <= bitDepth)))) {
+                bitDepth = availableModes[modeIndex].bitDepth;
+                foundMode = 1;
               }
             }
-            if (var7_int == 0) {
+            if (foundMode == 0) {
               return null;
             }
           }
-          var11 = param1.a(param0, -35, param2, param4, param5);
-          while (0 == var11.status) {
+          task = platform.requestEnterFullscreen(refreshRate, -35, height, bitDepth, width);
+          while (0 == task.status) {
             wj.sleepMillis(-126, 10L);
           }
-          var7 = (java.awt.Frame) (var11.result);
-          if (param3 <= 80) {
+          frame = (java.awt.Frame) (task.result);
+          if (obfuscationGuard <= 80) {
             WidgetTheme.isAsciiDigit('4', (byte) 78);
           }
-          if (var7 == null) {
+          if (frame == null) {
             return null;
           }
-          if (var11.status != 2) {
-            stackIn_40_0 = var7;
-            return stackIn_40_0;
+          if (task.status != 2) {
+            frameResult = frame;
+            return frameResult;
           }
-          sq.a(param1, -20954, var7);
-          stackIn_38_0 = null;
-          return (java.awt.Frame) (stackIn_38_0);
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_43_0 = var6_ref;
-          stackIn_43_1 = new StringBuilder().append("eh.G(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_44_2 = "null";
+          sq.a(platform, -20954, frame);
+          failedFrameResult = null;
+          return (java.awt.Frame) (failedFrameResult);
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("eh.G(").append(refreshRate).append(',');
+          if (platform == null) {
+            platformSummary = "null";
           } else {
-            stackIn_44_2 = "{...}";
+            platformSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(platformSummary).append(',').append(height).append(',').append(obfuscationGuard).append(',').append(bitDepth).append(',').append(width).append(')').toString());
         }
     }
 

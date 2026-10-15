@@ -365,7 +365,7 @@ final class QuickChatMenu extends UiComponent {
                   DirectByteStorage.updateChatFilter(0, filterOpcode, 1, effectiveChannel);
                 }
                 GrowableIntList.writeChatMessage(encodedMessageId, DualLinkNode.quickChatRecipient, (byte) -113, ng.quickChatChannel, messageOpcode, (String) null);
-                MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, qn.field_n, DualLinkNode.quickChatRecipient, ng.quickChatChannel);
+                MenuScreen.rememberRepeatMessage(encodedMessageId, 29295, CanvasResizeController.field_n, DualLinkNode.quickChatRecipient, ng.quickChatChannel);
                 rd.a(-1);
                 AccountContentTransitionLayer.m(-69);
                 openHelpBranch = (unusedGameFlag != 0);

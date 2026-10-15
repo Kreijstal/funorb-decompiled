@@ -268,7 +268,7 @@ abstract class GameConnectionShell extends AppletGameShell {
             ScrollPaneWithFooter.b(6, 0);
           }
           if (uf.enabledCommonPackets[6]) {
-            qn.resendPendingRankingsRequests((byte) 119, 7);
+            CanvasResizeController.resendPendingRankingsRequests((byte) 119, 7);
           }
           if (uf.enabledCommonPackets[8]) {
             we.a((byte) -46);
@@ -461,7 +461,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           this.serverNumber = -15;
         }
         if (QuickChatHelpDialog.i(7457)) {
-          stackIn_13_1 = (GameplayRenderHelpers.field_d != null);
+          stackIn_13_1 = (GameplayRenderHelpers.fullscreenCanvas != null);
           discarded$1 = this.a(stackIn_13_1, (byte) 46, false);
         } else {
           if (clientStage >= 10) {
@@ -701,13 +701,13 @@ abstract class GameConnectionShell extends AppletGameShell {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = BrickABrac.field_J ? 1 : 0;
-        if (jj.field_a != null) {
-          if (null == GameplayRenderHelpers.field_d) {
+        if (jj.canvasResizeController != null) {
+          if (null == GameplayRenderHelpers.fullscreenCanvas) {
             var6 = ea.b(0);
             var4 = var6.getSize();
-            jj.field_a.a(44, var4.width, var4.height);
+            jj.canvasResizeController.setRequestedSize(44, var4.width, var4.height);
           }
-          jj.field_a.c(guardCode + 118);
+          jj.canvasResizeController.tickResizePolicy(guardCode + 118);
         }
         wn.snapshotKeyboardInput((byte) -97);
         EmailValidator.snapshotMouseInput(70);

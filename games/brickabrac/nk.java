@@ -173,7 +173,7 @@ final class nk {
                 field_b = (String) null;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(hg.a(param1, var2, -1), "_top");
+              param1.getAppletContext().showDocument(DisplayModeInfo.a(param1, var2, -1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

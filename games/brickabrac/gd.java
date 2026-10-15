@@ -22,7 +22,7 @@ final class gd {
 
     final static java.awt.Canvas a(byte param0) {
         int var1 = -97 / ((param0 - 81) / 36);
-        return null == GameplayRenderHelpers.field_d ? CacheIoRequest.field_D : (java.awt.Canvas) ((Object) GameplayRenderHelpers.field_d);
+        return null == GameplayRenderHelpers.fullscreenCanvas ? CacheIoRequest.field_D : (java.awt.Canvas) ((Object) GameplayRenderHelpers.fullscreenCanvas);
     }
 
     final synchronized static byte[] a(int param0, byte param1) {

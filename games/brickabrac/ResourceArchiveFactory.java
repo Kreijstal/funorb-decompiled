@@ -6,7 +6,7 @@ import java.io.*;
 final class ResourceArchiveFactory {
     static char currentKeyCharacter;
     static String field_f;
-    static int field_c;
+    static int windowModeCapabilityWord;
     static int field_e;
     static RgbSprite waterRaysSprite;
     static BufferedFile field_a;

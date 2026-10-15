@@ -135,7 +135,7 @@ final class MessageScreen extends MenuScreen {
           DualLinkNode.quickChatRecipient = param0;
           var5 = (CharSequence) ((Object) param0);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var5, param2 ^ 103);
-          qn.field_n = param1;
+          CanvasResizeController.field_n = param1;
           MatchResultScreen.field_s = true;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "uk.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -199,7 +199,7 @@ final class MessageScreen extends MenuScreen {
     final void drawScreen(byte obfuscationGuard) {
         super.drawScreen((byte) -50);
         GzipInflater.a(550, 5, 243, 5, 140, (byte) -107, 45);
-        ContextActionController.field_g.drawParagraph(qn.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
+        ContextActionController.field_g.drawParagraph(CanvasResizeController.messageText, 54, 149, 532, 225, 2, -1, 1, 1, 22);
         if (obfuscationGuard < -14) {
           this.a(0);
           return;

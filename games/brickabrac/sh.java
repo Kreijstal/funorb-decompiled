@@ -107,40 +107,40 @@ final class sh {
         }
     }
 
-    final static void b(int param0) {
+    final static void refreshReportedHeapLimit(int obfuscationGuard) {
         try {
-          Throwable decompiledCaughtException = null;
-          java.lang.reflect.Method var1 = null;
-          Exception var1_ref = null;
-          Runtime var2 = null;
-          Throwable var2_ref = null;
-          Long var3 = null;
-          Object[] var4 = null;
+          Throwable caughtFailure = null;
+          java.lang.reflect.Method maxMemoryMethod = null;
+          Exception lookupFailure = null;
+          Runtime runtime = null;
+          Throwable invocationFailure = null;
+          Long maxMemoryBytes = null;
+          Object[] unusedArguments = null;
           try {
-            if (param0 != 1) {
+            if (obfuscationGuard != 1) {
               field_b = (String) null;
             }
-            var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
-            if (var1 != null) {
+            maxMemoryMethod = Runtime.class.getMethod("maxMemory", new Class[]{});
+            if (maxMemoryMethod != null) {
               try {
-                var2 = Runtime.getRuntime();
-                var4 = (Object[]) null;
-                var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                ValidationStatus.field_a = 1 + (int)(var3.longValue() / 1048576L);
+                runtime = Runtime.getRuntime();
+                unusedArguments = (Object[]) null;
+                maxMemoryBytes = (Long) (maxMemoryMethod.invoke((Object) (runtime), (Object[]) null));
+                ValidationStatus.reportedHeapLimitMiB = 1 + (int)(maxMemoryBytes.longValue() / 1048576L);
                 return;
-              } catch (java.lang.Throwable decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2_ref = decompiledCaughtException;
+              } catch (java.lang.Throwable caughtInvocationFailure) {
+                caughtFailure = caughtInvocationFailure;
+                invocationFailure = caughtFailure;
               }
             }
-          } catch (java.lang.Exception decompiledCaughtParameter1) {
-            decompiledCaughtException = decompiledCaughtParameter1;
-            var1_ref = (Exception) (Object) decompiledCaughtException;
+          } catch (java.lang.Exception caughtLookupFailure) {
+            caughtFailure = caughtLookupFailure;
+            lookupFailure = (Exception) (Object) caughtFailure;
           }
-        } catch (RuntimeException | Error decompiledUncheckedException) {
-          throw decompiledUncheckedException;
-        } catch (Throwable decompiledCheckedException) {
-          throw new RuntimeException(decompiledCheckedException);
+        } catch (RuntimeException | Error uncheckedFailure) {
+          throw uncheckedFailure;
+        } catch (Throwable checkedFailure) {
+          throw new RuntimeException(checkedFailure);
         }
     }
 

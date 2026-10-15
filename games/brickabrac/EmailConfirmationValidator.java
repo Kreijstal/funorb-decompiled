@@ -37,7 +37,7 @@ final class EmailConfirmationValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!text.equals(this.checkedEmail)) {
-            var3 = hg.pollEmailAvailability(0, text);
+            var3 = DisplayModeInfo.pollEmailAvailability(0, text);
             if (!var3.isCompleted(96)) {
               stackIn_8_0 = SaveResultsPromptScreen.validationPending;
               return stackIn_8_0;

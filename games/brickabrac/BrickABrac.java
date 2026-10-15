@@ -610,7 +610,7 @@ public final class BrickABrac extends InteractiveGameClient {
         SoftwareFramebuffer.a(-125);
         ResourcePreparationQueue.c(4862);
         GameCanvas.a(0);
-        qn.b(0);
+        CanvasResizeController.b(0);
         ng.a((byte) -49);
         GameScreen.c((byte) -91);
         BlankScreen.a(-2);
@@ -802,7 +802,7 @@ public final class BrickABrac extends InteractiveGameClient {
         NanoGameClock.f((byte) -124);
         ProducerFramebuffer.b(11);
         rq.a((byte) -118);
-        hg.a((byte) 19);
+        DisplayModeInfo.a((byte) 19);
         IntHistoryBuffer.a(67108864);
         va.a(-15504);
         jh.a((byte) -123);

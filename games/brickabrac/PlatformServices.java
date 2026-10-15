@@ -44,8 +44,8 @@ final class PlatformServices implements Runnable {
         return this.enqueue(true, 0, runnable, 2, priority);
     }
 
-    final boolean b(int param0) {
-        int var2 = -94 / ((param0 - 4) / 42);
+    final boolean isFullscreenAvailable(int obfuscationGuard) {
+        int var2 = -94 / ((obfuscationGuard - 4) / 42);
         if (!this.privilegedMode) {
           return false;
         }
@@ -60,11 +60,11 @@ final class PlatformServices implements Runnable {
         return this.enqueue(true, 0, url, 4, 0);
     }
 
-    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
-        if (param1 != -35) {
-          this.a(125, -72, 117, -42, -13);
+    final PlatformTask requestEnterFullscreen(int refreshRate, int obfuscationGuard, int height, int bitDepth, int width) {
+        if (obfuscationGuard != -35) {
+          this.requestEnterFullscreen(125, -72, 117, -42, -13);
         }
-        return this.enqueue(true, param0 + (param3 << 16), (Object) null, 6, (param4 << 16) + param2);
+        return this.enqueue(true, refreshRate + (bitDepth << 16), (Object) null, 6, (width << 16) + height);
     }
 
     final PlatformTask a(String param0, byte param1, int param2) {
@@ -247,7 +247,7 @@ final class PlatformServices implements Runnable {
                         if (this.microsoftJvm) {
                           this.field_u.a(-3887, (java.awt.Frame) (var8.payload));
                         } else {
-                          Class.forName("db").getMethod("exit", new Class[]{}).invoke(this.field_a, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_a, new Object[]{});
                         }
                         break;
                       case 6:
@@ -257,12 +257,12 @@ final class PlatformServices implements Runnable {
                         if (this.microsoftJvm) {
                           this.field_u.a(var10, 65535 & var8.argumentOne, var8.argumentOne >>> 16, 0, var8.argumentTwo & 65535, var8.argumentTwo >> 16);
                         } else {
-                          Class.forName("db").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_a, new Object[]{var10, new Integer(var8.argumentOne >>> 16), new Integer(65535 & var8.argumentOne), new Integer(var8.argumentTwo >> 16), new Integer(var8.argumentTwo & 65535)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_a, new Object[]{var10, new Integer(var8.argumentOne >>> 16), new Integer(65535 & var8.argumentOne), new Integer(var8.argumentTwo >> 16), new Integer(var8.argumentTwo & 65535)});
                         }
                         break;
                       case 5:
                         if (!this.microsoftJvm) {
-                          var8.result = Class.forName("db").getMethod("listmodes", new Class[]{}).invoke(this.field_a, new Object[]{});
+                          var8.result = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_a, new Object[]{});
                         } else {
                           var8.result = this.field_u.a((byte) -48);
                         }
@@ -326,9 +326,9 @@ final class PlatformServices implements Runnable {
         }
     }
 
-    final PlatformTask a(int param0) {
-        if (param0 != 0) {
-          this.a(79);
+    final PlatformTask requestDisplayModes(int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
+          this.requestDisplayModes(79);
         }
         return this.enqueue(true, 0, (Object) null, 5, 0);
     }
@@ -595,7 +595,7 @@ final class PlatformServices implements Runnable {
               var7 = new io();
               this.field_u = var7;
             } else {
-              this.field_a = Class.forName("db").newInstance();
+              this.field_a = Class.forName("AwtFullscreenController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
             decompiledCaughtException = decompiledCaughtParameter9;

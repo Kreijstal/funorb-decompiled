@@ -1068,7 +1068,7 @@ class TextWidgetRenderer implements WidgetRenderer, WidgetLayoutProvider {
                   }
                   else {
                     if (var13.spectatorMode != 2) {
-                      var13.field_Ac.text = qn.field_o;
+                      var13.field_Ac.text = CanvasResizeController.field_o;
                     } else {
                       var13.field_nc.text = ArrayWidgetGroup.field_I;
                     }

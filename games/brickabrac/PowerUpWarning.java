@@ -13,67 +13,67 @@ final class PowerUpWarning extends IntrusiveNode {
     static TextFont field_r;
     static int field_i;
 
-    final static hg[] a(boolean param0, PlatformServices param1) {
-        int var5 = 0;
-        hg[] stackIn_4_0 = null;
-        hg[] stackIn_10_0 = null;
-        hg[] stackIn_13_0 = null;
-        hg[] stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int[] var3 = null;
-        hg[] var4 = null;
-        hg var6 = null;
-        int var7 = 0;
-        PlatformTask var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        var7 = BrickABrac.field_J ? 1 : 0;
+    final static DisplayModeInfo[] listDisplayModes(boolean obfuscationGuard, PlatformServices platform) {
+        int modeIndex = 0;
+        DisplayModeInfo[] unsupportedResult = null;
+        DisplayModeInfo[] failedTaskResult = null;
+        DisplayModeInfo[] wrongGuardResult = null;
+        DisplayModeInfo[] modesResult = null;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String platformSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int[] packedModes = null;
+        DisplayModeInfo[] modes = null;
+        DisplayModeInfo mode = null;
+        int unusedClientFlag = 0;
+        PlatformTask task = null;
+        int[] packedModesAlias = null;
+        int[] packedModesStorage = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!param1.b(-125)) {
-            stackIn_4_0 = new hg[]{};
-            return stackIn_4_0;
+          if (!platform.isFullscreenAvailable(-125)) {
+            unsupportedResult = new DisplayModeInfo[]{};
+            return unsupportedResult;
           }
-          var8 = param1.a(0);
-          while (var8.status == 0) {
+          task = platform.requestDisplayModes(0);
+          while (task.status == 0) {
             wj.sleepMillis(-128, 10L);
           }
-          if (var8.status == 2) {
-            stackIn_10_0 = new hg[]{};
-            return stackIn_10_0;
+          if (task.status == 2) {
+            failedTaskResult = new DisplayModeInfo[]{};
+            return failedTaskResult;
           }
-          if (!param0) {
-            stackIn_13_0 = (hg[]) null;
-            return stackIn_13_0;
+          if (!obfuscationGuard) {
+            wrongGuardResult = (DisplayModeInfo[]) null;
+            return wrongGuardResult;
           }
-          var10 = (int[]) (var8.result);
-          var9 = var10;
-          var3 = var9;
-          var4 = new hg[var10.length >> 2];
-          for (var5 = 0; var4.length > var5; var5++) {
-            var6 = new hg();
-            var4[var5] = var6;
-            var6.field_d = var3[var5 << 2];
-            var6.field_c = var3[1 + (var5 << 2)];
-            var6.field_h = var3[2 + (var5 << 2)];
-            var6.field_f = var3[3 + (var5 << 2)];
+          packedModesStorage = (int[]) (task.result);
+          packedModesAlias = packedModesStorage;
+          packedModes = packedModesAlias;
+          modes = new DisplayModeInfo[packedModesStorage.length >> 2];
+          for (modeIndex = 0; modes.length > modeIndex; modeIndex++) {
+            mode = new DisplayModeInfo();
+            modes[modeIndex] = mode;
+            mode.width = packedModes[modeIndex << 2];
+            mode.height = packedModes[1 + (modeIndex << 2)];
+            mode.bitDepth = packedModes[2 + (modeIndex << 2)];
+            mode.refreshRate = packedModes[3 + (modeIndex << 2)];
           }
-          stackIn_18_0 = var4;
-          return stackIn_18_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_21_0 = var2;
-          stackIn_21_1 = new StringBuilder().append("lj.F(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_22_2 = "null";
+          modesResult = modes;
+          return modesResult;
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("lj.F(").append(obfuscationGuard).append(',');
+          if (platform == null) {
+            platformSummary = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            platformSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(platformSummary).append(')').toString());
         }
     }
 
@@ -177,7 +177,7 @@ final class PowerUpWarning extends IntrusiveNode {
         TooltipSprite.field_i = param0;
         if (param3 != 0) {
           PlatformServices var6 = (PlatformServices) null;
-          PowerUpWarning.a(true, (PlatformServices) null);
+          PowerUpWarning.listDisplayModes(true, (PlatformServices) null);
         }
         field_i = param1;
     }

@@ -150,7 +150,7 @@ final class LegacyUtf8Decoder {
 
     final static boolean a(byte param0) {
         int var1 = 5 / ((41 - param0) / 62);
-        return null == GameplayRenderHelpers.field_d ? NinjaBackground.frameFocus : true;
+        return null == GameplayRenderHelpers.fullscreenCanvas ? NinjaBackground.frameFocus : true;
     }
 
     final static void a(int param0, int param1, boolean param2, int param3) {

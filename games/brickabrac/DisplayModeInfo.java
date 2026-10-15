@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg {
+final class DisplayModeInfo {
     static RgbSprite field_g;
-    int field_c;
+    int height;
     static String field_b;
-    int field_f;
+    int refreshRate;
     static NodeDeque field_a;
-    int field_d;
-    int field_h;
+    int width;
+    int bitDepth;
     static int field_e;
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {

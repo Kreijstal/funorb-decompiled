@@ -457,7 +457,7 @@ abstract class MenuScreen extends GameScreen {
               if (var8 == 6) {
                 if (!(!this.selection.isActivated((byte) 113))) {
                   var4 = 1;
-                  if (null == GameplayRenderHelpers.field_d) {
+                  if (null == GameplayRenderHelpers.fullscreenCanvas) {
                     WidgetLayerStack.a(inputFlag, 21543);
                   } else {
                     LevelPack.b(82);

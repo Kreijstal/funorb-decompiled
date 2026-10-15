@@ -219,7 +219,7 @@ final class LevelPackCard {
           this.buttonIndex = buttonIndex;
           this.viewport = viewport;
           this.owner = owner;
-          this.caption = qn.packNames[this.packIndex].toLowerCase();
+          this.caption = CanvasResizeController.packNames[this.packIndex].toLowerCase();
           this.icon = SaveResultsPromptScreen.packCardIcons[this.packIndex];
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "lc.<init>(" + (owner != null ? "{...}" : "null") + ',' + (viewport != null ? "{...}" : "null") + ',' + buttonIndex + ',' + packIndex + ')');

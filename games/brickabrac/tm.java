@@ -139,10 +139,10 @@ final class tm {
                 var8[var6] = TextFieldValidator.outgoingPackets.data[var6];
               }
               var6_ref_pg = new DelayedPacket(var2_long + (long)var4, TextFieldValidator.outgoingPackets.position, var17);
-              hg.field_a.addLast(var6_ref_pg, (byte) 3);
+              DisplayModeInfo.field_a.addLast(var6_ref_pg, (byte) 3);
               TextFieldValidator.outgoingPackets.position = 0;
             }
-            var9 = (DelayedPacket) (hg.field_a.first(-62));
+            var9 = (DelayedPacket) (DisplayModeInfo.field_a.first(-62));
             var13 = var9;
             if (var13 != null &&
               var13.deliverAfterMillis < var2_long) {

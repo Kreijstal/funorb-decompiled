@@ -348,7 +348,7 @@ final class GameplayScreen extends GameScreen {
         }
         var5Lifetime1 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 5);
         if (var5Lifetime1 == 0) {
-          hg.field_e = hg.field_e ^ tm.field_g + qm.field_a << 16;
+          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ tm.field_g + qm.field_a << 16;
         }
         if (var5Lifetime1 == 1) {
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - tm.field_g;
@@ -819,7 +819,7 @@ final class GameplayScreen extends GameScreen {
         }
         var4Lifetime1 = ChocolateBackground.field_w.nextBoundedInt(-37880252, 5);
         if (var4Lifetime1 == 0) {
-          hg.field_e = hg.field_e ^ tm.field_g + qm.field_a << 16;
+          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ tm.field_g + qm.field_a << 16;
         }
         if (var4Lifetime1 == 1) {
           FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - tm.field_g;
@@ -1174,11 +1174,11 @@ final class GameplayScreen extends GameScreen {
           if (0 > var6) {
             throw new IllegalArgumentException();
           }
-          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + hg.field_e;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb + DisplayModeInfo.field_e;
           var7 = 1 << var6;
-          hg.field_e = hg.field_e ^ var7;
-          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - hg.field_e;
-          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, hg.field_e, FullscreenFailureDialog.field_kb, tm.field_g, qm.field_a), (byte) 3);
+          DisplayModeInfo.field_e = DisplayModeInfo.field_e ^ var7;
+          FullscreenFailureDialog.field_kb = FullscreenFailureDialog.field_kb - DisplayModeInfo.field_e;
+          AccountMessageDialog.queuedAchievementSubmissions.addLast(new AchievementSubmission(achievementId, submissionByte, DisplayModeInfo.field_e, FullscreenFailureDialog.field_kb, tm.field_g, qm.field_a), (byte) 3);
         }
         var4Lifetime1 = 90 % ((obfuscationGuard - 36) / 46);
     }

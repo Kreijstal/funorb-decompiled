@@ -188,7 +188,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                 default:
                   break;
                 case 4:
-                  AccountIntroductionPanel.a(qn.field_k, false, (byte) 61);
+                  AccountIntroductionPanel.a(CanvasResizeController.field_k, false, (byte) 61);
                   ProxySocketConnector.field_g = true;
                   if (var5 == 0) {
                     break;
@@ -207,11 +207,11 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           }
           if (decompiledFrameRemainder0) {
             if (GameClock.c((byte) -33)) {
-              stackIn_20_1 = (GameplayRenderHelpers.field_d != null);
+              stackIn_20_1 = (GameplayRenderHelpers.fullscreenCanvas != null);
               var3 = this.b(stackIn_20_1, (byte) -118);
               if (1 == var3 ||
                 var3 == 2) {
-                if (null != GameplayRenderHelpers.field_d) {
+                if (null != GameplayRenderHelpers.fullscreenCanvas) {
                   LevelPack.b(118);
                 }
                 if (var3 == 2) {
@@ -404,12 +404,12 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         int var4 = 0;
         AchievementSubmission var5 = null;
         var4 = BrickABrac.field_J ? 1 : 0;
-        if (null != GameplayRenderHelpers.field_d &&
-          GameplayRenderHelpers.field_d.focusLossPending) {
+        if (null != GameplayRenderHelpers.fullscreenCanvas &&
+          GameplayRenderHelpers.fullscreenCanvas.focusLossPending) {
           LevelPack.b(84);
           MotionWaypoint.c(4);
         }
-        stackIn_7_1 = (GameplayRenderHelpers.field_d != null);
+        stackIn_7_1 = (GameplayRenderHelpers.fullscreenCanvas != null);
         this.updateConnection(stackIn_7_1, 1);
         if (obfuscationGuard >= -34) {
           field_E = false;

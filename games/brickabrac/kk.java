@@ -44,7 +44,7 @@ final class kk {
           if (!obfuscationGuard) {
             field_a = (String) null;
           }
-          qn.messageText = text;
+          CanvasResizeController.messageText = text;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kk.A(" + obfuscationGuard + ',' + (text != null ? "{...}" : "null") + ')');
         }

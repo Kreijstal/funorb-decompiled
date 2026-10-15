@@ -54,17 +54,17 @@ final class LevelPack {
     }
 
     final static void b(int param0) {
-        if (null == GameplayRenderHelpers.field_d) {
+        if (null == GameplayRenderHelpers.fullscreenCanvas) {
           return;
         }
-        t.a(false, GameplayRenderHelpers.field_d);
-        GameplayRenderHelpers.field_d.a(AccountMessageDialog.field_ub, 121);
-        GameplayRenderHelpers.field_d = null;
+        t.a(false, GameplayRenderHelpers.fullscreenCanvas);
+        GameplayRenderHelpers.fullscreenCanvas.a(AccountMessageDialog.field_ub, 121);
+        GameplayRenderHelpers.fullscreenCanvas = null;
         if (param0 <= 49) {
           field_f = (String) null;
         }
-        if (null != jj.field_a) {
-          jj.field_a.a(-33);
+        if (null != jj.canvasResizeController) {
+          jj.canvasResizeController.restoreSavedCanvasSize(-33);
         }
         CacheIoRequest.field_D.requestFocus();
     }

@@ -222,7 +222,7 @@ final class MainMenuScreen extends MenuScreen {
         this.tooltipSprites = new NodeDeque();
         int var1 = 468;
         var1 = var1 - ArchiveNetworkRequest.packSelectorIcons[1].canvasHeight;
-        this.tooltipSprites.addLast(new TooltipSprite(12, var1, ArchiveNetworkRequest.packSelectorIcons[1], rd.a(RasterSnapshot.field_s, new String[]{qn.packNames[1]}, (byte) 103)), (byte) 3);
+        this.tooltipSprites.addLast(new TooltipSprite(12, var1, ArchiveNetworkRequest.packSelectorIcons[1], rd.a(RasterSnapshot.field_s, new String[]{CanvasResizeController.packNames[1]}, (byte) 103)), (byte) 3);
     }
 
     final static void blendInterpolatedHalfRgbSpan(byte obfuscationGuard, int blueQ16, int blueStepQ16, int redStepQ16, int greenStepQ16, int offset, int length, int redQ16, int[] target, int greenQ16) {

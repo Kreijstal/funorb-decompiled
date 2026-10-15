@@ -269,7 +269,7 @@ final class AgeValidator extends TextFieldValidator {
                 return;
               }
               var3 = new java.net.URL(param2.getCodeBase(), param0);
-              var3 = hg.a(param2, var3, -1);
+              var3 = DisplayModeInfo.a(param2, var3, -1);
               HuffmanCodec.a((byte) 94, param2, var3.toString(), true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

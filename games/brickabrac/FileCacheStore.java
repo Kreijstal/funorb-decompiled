@@ -64,7 +64,7 @@ final class FileCacheStore {
         if (param0 != -21835160) {
           FileCacheStore.b(-54);
         }
-        return LevelSelectScreen.a(qn.field_n, QuickChatHelpDialog.field_Qb, 21);
+        return LevelSelectScreen.a(CanvasResizeController.field_n, QuickChatHelpDialog.field_Qb, 21);
     }
 
     final static void a(int param0) {

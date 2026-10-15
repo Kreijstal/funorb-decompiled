@@ -249,7 +249,7 @@ final class DateFieldsWidget extends DateInputWidget {
           if (ea.field_g) {
             TextLineLayout.requestMatchmakingOptions(param3, -1);
           } else {
-            if (ResourceArchiveFactory.field_c > 0) {
+            if (ResourceArchiveFactory.windowModeCapabilityWord > 0) {
               TextLineLayout.requestMatchmakingOptions(param3, -1);
             } else {
               if (QuickChatHelpDialog.field_Yb >= 2 &&

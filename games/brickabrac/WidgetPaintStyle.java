@@ -16,7 +16,7 @@ final class WidgetPaintStyle {
     private int textPaint;
     RgbSprite[] frameSprites;
     RgbSprite icon;
-    static int field_g;
+    static int canvasHeight;
     private int offsetX;
 
     public static void b(int param0) {

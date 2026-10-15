@@ -33,18 +33,18 @@ final class ok {
     final static boolean a(boolean param0) {
         if (!param0) {
           ok.a(true);
-          if (null == jj.field_a) {
+          if (null == jj.canvasResizeController) {
             return false;
           }
-          if (jj.field_a.a((byte) -32)) {
+          if (jj.canvasResizeController.canUseAdaptiveResize((byte) -32)) {
             return true;
           }
           return false;
         }
-        if (null == jj.field_a) {
+        if (null == jj.canvasResizeController) {
           return false;
         }
-        if (jj.field_a.a((byte) -32)) {
+        if (jj.canvasResizeController.canUseAdaptiveResize((byte) -32)) {
           return true;
         }
         return false;

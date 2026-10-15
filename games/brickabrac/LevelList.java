@@ -99,7 +99,7 @@ final class LevelList {
         CacheEntry.field_A[13] = TimedSplashScreen.field_s;
         hm.field_b = new String[]{ContentTransitionPhase.field_a, qm.field_c, TabbedPane.field_Pb, ResourcePreparationQueue.field_a};
         CacheEntry.field_A[16] = MeshAttributeRecord.field_d;
-        qn.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
+        CanvasResizeController.packNames = new String[]{RadialSelectorWidget.field_T, Widget.field_u};
         WidgetTheme.lostBallMessages = new String[]{ArrayWidgetGroup.field_C, AccountContentTransitionLayer.field_ub, PlayerNameChooserPanel.field_P, bq.field_f, jh.field_c};
         ar.field_a = new String[]{kk.field_a};
         CacheEntry.field_A[15] = MatchCompleteScreen.field_F;

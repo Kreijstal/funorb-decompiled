@@ -241,7 +241,7 @@ final class VolcanicBackground extends BackgroundScene {
               if (param0) {
                 VolcanicBackground.g(-95);
               }
-              var3 = hg.a(param1, var4, -1).getFile();
+              var3 = DisplayModeInfo.a(param1, var4, -1).getFile();
               ne.a(new Object[]{"home", var3 + "home.ws"}, 111, param1, "updatelinks");
               ne.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, 76, param1, "updatelinks");
               ne.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, 88, param1, "updatelinks");

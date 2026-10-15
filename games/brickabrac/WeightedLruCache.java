@@ -13,8 +13,8 @@ final class WeightedLruCache {
     static int[] powerUpDropPeriods;
     static PcmStream primaryActivityLoop;
     static String field_h;
-    static int field_b;
-    static int field_i;
+    static int canvasWidth;
+    static int canvasOffsetX;
 
     final Object get(long key, boolean obfuscationGuard) {
         CacheEntry entry = (CacheEntry) (this.index.get(key, 101));
@@ -115,7 +115,7 @@ final class WeightedLruCache {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard) {
-            field_i = -88;
+            canvasOffsetX = -88;
           }
           if (entry == null) {
             return;
@@ -194,6 +194,6 @@ final class WeightedLruCache {
         powerUpDropPeriods[19] = -1;
         powerUpDropPeriods[11] = 2;
         powerUpDropPeriods[5] = 10;
-        field_i = 0;
+        canvasOffsetX = 0;
     }
 }

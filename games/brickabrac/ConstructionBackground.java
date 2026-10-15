@@ -78,7 +78,7 @@ final class ConstructionBackground extends BackgroundScene {
         if (this.hasSprites((byte) -116)) {
           var6 = kd.a(this.sceneId, colorIndex, (byte) -47);
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-            FullscreenFailureKind.a(-10, colorIndex, var6, 2, -119, hg.field_g);
+            FullscreenFailureKind.a(-10, colorIndex, var6, 2, -119, DisplayModeInfo.field_g);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
           ConstructionBackground.a(t.field_a, 2, scroll16, 306, -10, IntrusiveNode.field_d, destinationX, 5, destinationY, 480, er.field_d, colorIndex, var6.sprite);
@@ -118,7 +118,7 @@ final class ConstructionBackground extends BackgroundScene {
         MenuSelection.constructionSmallSprite = pl.loadRgbSpriteByName("construct", "construction_small", (byte) -74, AchievementIcon.field_m);
         t.field_a = jh.a(0, ValidatedTextFieldWidget.constructionNearSprite);
         IntrusiveNode.field_d = jh.a(0, AchievementBrowserScreen.constructionMidSprite);
-        hg.field_g = jh.a(0, ValidatedTextFieldWidget.constructionFarSprite);
+        DisplayModeInfo.field_g = jh.a(0, ValidatedTextFieldWidget.constructionFarSprite);
         er.field_d = jh.a(0, IntNode.constructionSmokeSprite);
         rd.constructionCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_caps", 2);
         NodeDequeCursor.constructionSegsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("construct", AchievementIcon.field_m, "construction_segs", 2);

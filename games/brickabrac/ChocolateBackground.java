@@ -235,7 +235,7 @@ final class ChocolateBackground extends BackgroundScene {
                 chocolateMidSprite = (RgbSprite) null;
               }
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
-              param0.getAppletContext().showDocument(hg.a(param0, var2, -1), "_top");
+              param0.getAppletContext().showDocument(DisplayModeInfo.a(param0, var2, -1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

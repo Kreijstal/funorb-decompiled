@@ -17,23 +17,23 @@ final class WidgetLayerStack extends SingleChildWidget {
           var4 = (PlayerBoard) null;
           WidgetLayerStack.a(103, 104, 91, (byte) -14, (PlayerBoard) null, 105, 90);
         }
-        if (0 >= ResourceArchiveFactory.field_c) {
+        if (0 >= ResourceArchiveFactory.windowModeCapabilityWord) {
           var2 = (QuickChatMenu.h(-26090)) ? 0 : 1;
         } else {
-          if (null == jj.field_a) {
-            GameplayRenderHelpers.field_d = LoginCredentials.a(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
+          if (null == jj.canvasResizeController) {
+            GameplayRenderHelpers.fullscreenCanvas = LoginCredentials.createFullscreenCanvas(0, 0, 640, 480, true, AccountMessageDialog.field_ub);
           } else {
-            GameplayRenderHelpers.field_d = jj.field_a.a(true);
+            GameplayRenderHelpers.fullscreenCanvas = jj.canvasResizeController.openFullscreenCanvas(true);
             qm.a(97, 2);
           }
-          if (GameplayRenderHelpers.field_d == null) {
+          if (GameplayRenderHelpers.fullscreenCanvas == null) {
             var2 = 3;
           } else {
             var2 = 2;
-            ap.a((byte) 117, GameplayRenderHelpers.field_d);
+            ap.a((byte) 117, GameplayRenderHelpers.fullscreenCanvas);
           }
         }
-        if (null == jj.field_a &&
+        if (null == jj.canvasResizeController &&
           gh.field_c) {
           bq.a(param0, var2, (byte) 104);
         }

@@ -5,10 +5,10 @@ final class jj {
     static String field_b;
     static int field_c;
     static int field_d;
-    static qn field_a;
+    static CanvasResizeController canvasResizeController;
 
     public static void a(boolean param0) {
-        field_a = null;
+        canvasResizeController = null;
         field_b = null;
         if (!param0) {
           jj.a(false);
@@ -26,7 +26,7 @@ final class jj {
         int var2Lifetime4;
         int var2Lifetime5;
         if (param0 != -123) {
-          field_a = (qn) null;
+          canvasResizeController = (CanvasResizeController) null;
           if (m.a(2)) {
             var1 = 1;
             IntArrayRequest.c(126);
@@ -42,7 +42,7 @@ final class jj {
             }
             if (!HotspotTextWidget.a(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
+              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
               if (LoginMethodPreference.b(param0 + 39)) {
                 var2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
                 if (var2 > 0) {
@@ -70,7 +70,7 @@ final class jj {
             if (GameClock.c((byte) 119) &&
               !HotspotTextWidget.a(9)) {
               var1 = 1;
-              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
+              ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
             }
             if (LoginMethodPreference.b(param0 + 39)) {
               var2Lifetime4 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -86,7 +86,7 @@ final class jj {
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
           }
           if (LoginMethodPreference.b(param0 + 39)) {
             var2Lifetime5 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -103,7 +103,7 @@ final class jj {
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
           }
           if (LoginMethodPreference.b(param0 + 39)) {
             var2Lifetime1 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -123,7 +123,7 @@ final class jj {
           if (GameClock.c((byte) 119) &&
             !HotspotTextWidget.a(9)) {
             var1 = 1;
-            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
+            ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
           }
           if (LoginMethodPreference.b(param0 + 39)) {
             var2Lifetime2 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -139,7 +139,7 @@ final class jj {
         if (GameClock.c((byte) 119) &&
           !HotspotTextWidget.a(9)) {
           var1Lifetime1 = 1;
-          ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.field_d == null ? NinjaBackground.frameFocus : true);
+          ArchiveFetchClient.a((byte) -118, GameplayRenderHelpers.fullscreenCanvas == null ? NinjaBackground.frameFocus : true);
         }
         if (LoginMethodPreference.b(param0 + 39)) {
           var2Lifetime3 = (CachedArchiveSource.field_p - 1 << 8) / 16;
@@ -153,6 +153,6 @@ final class jj {
 
     static {
         field_b = "Menu";
-        field_a = null;
+        canvasResizeController = null;
     }
 }

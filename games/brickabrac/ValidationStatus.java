@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ValidationStatus {
-    static int field_a;
+    static int reportedHeapLimitMiB;
     static UiComponent field_j;
     static LevelPack field_b;
     static int field_d;
@@ -78,7 +78,7 @@ final class ValidationStatus {
     }
 
     static {
-        field_a = 64;
+        reportedHeapLimitMiB = 64;
         field_h = new byte[]{(byte)4};
         field_f = 0;
         field_g = "<%0> must play <%1> more rated games before playing with the current options.";

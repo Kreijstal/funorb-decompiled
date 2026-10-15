@@ -380,7 +380,7 @@ final class BitPacketBuffer extends PacketBuffer {
           DualLinkNode.quickChatRecipient = param1;
           var5 = (CharSequence) ((Object) param1);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var5, 96);
-          qn.field_n = param2;
+          CanvasResizeController.field_n = param2;
           di.a((byte) -120);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pi.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

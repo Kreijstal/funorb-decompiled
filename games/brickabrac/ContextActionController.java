@@ -194,7 +194,7 @@ final class ContextActionController {
                 HighscorePackSelector.field_c = param0;
                 var2 = nk.a("loginm3", (byte) 107);
                 if (var2 != null) {
-                  hg.field_b = MenuButton.a(var2, (byte) 126);
+                  DisplayModeInfo.field_b = MenuButton.a(var2, (byte) 126);
                 }
                 var2 = nk.a("loginm2", (byte) -110);
                 if (var2 != null) {
@@ -754,7 +754,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("status_playing", (byte) -15);
                 if (null != var2) {
-                  qn.field_o = MenuButton.a(var2, (byte) 79);
+                  CanvasResizeController.field_o = MenuButton.a(var2, (byte) 79);
                 }
                 var2 = nk.a("status_join", (byte) -107);
                 if (var2 != null) {
@@ -1172,7 +1172,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("pleaselogin_member", (byte) 60);
                 if (null != var2) {
-                  qn.field_k = MenuButton.a(var2, (byte) 72);
+                  CanvasResizeController.field_k = MenuButton.a(var2, (byte) 72);
                 }
                 var2 = nk.a("invaliduserorpass", (byte) 42);
                 if (var2 != null) {
