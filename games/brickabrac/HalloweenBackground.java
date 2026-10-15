@@ -9,7 +9,7 @@ final class HalloweenBackground extends BackgroundScene {
     private static RgbSprite field_u;
     static UiComponent[] field_w;
     static boolean field_y;
-    static co field_v;
+    static ArchiveSourceManager archiveSourceManager;
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
         int var5 = 0;
@@ -237,7 +237,7 @@ final class HalloweenBackground extends BackgroundScene {
         field_s = null;
         field_w = null;
         field_u = null;
-        field_v = null;
+        archiveSourceManager = null;
         field_x = null;
         if (param0 != 1) {
           field_w = (UiComponent[]) null;

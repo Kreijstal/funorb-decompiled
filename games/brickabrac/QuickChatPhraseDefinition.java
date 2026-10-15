@@ -213,7 +213,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
           var17 = ProxyAuthenticationRequiredException.field_b[2];
           var29Lifetime5 = var17;
           var29Lifetime6 = var17;
-          var16 = co.field_e;
+          var16 = ArchiveSourceManager.field_e;
           var15.contextMenu.addIconAction(var16, 112, 13, var17);
         }
         if (1 == param1) {

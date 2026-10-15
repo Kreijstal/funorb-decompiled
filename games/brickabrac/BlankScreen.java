@@ -60,10 +60,10 @@ final class BlankScreen extends GameScreen {
         if (QuickChatParameterType.field_h) {
           return null;
         }
-        if (MonotonicTime.field_e > go.field_e) {
+        if (MonotonicTime.field_e > ResourceArchiveFactory.field_e) {
           return null;
         }
-        if (go.field_e < jh.field_a + MonotonicTime.field_e) {
+        if (ResourceArchiveFactory.field_e < jh.field_a + MonotonicTime.field_e) {
           return LevelCompleteScreen.field_J;
         }
         return null;

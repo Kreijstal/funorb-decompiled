@@ -11,11 +11,11 @@ final class o {
     static int enabledFeatureMask;
     static AccountRegistrationPanel field_c;
 
-    final static boolean d(int param0) {
-        if (param0 != -572695519) {
+    final static boolean pollArchiveMasterIndex(int obfuscationGuard) {
+        if (obfuscationGuard != -572695519) {
           return false;
         }
-        return HalloweenBackground.field_v.a(false);
+        return HalloweenBackground.archiveSourceManager.pollMasterIndex(false);
     }
 
     final static void c(int param0) {
@@ -84,7 +84,7 @@ final class o {
           field_h = null;
           return;
         }
-        o.d(-14);
+        o.pollArchiveMasterIndex(-14);
         currentLobbyGame = null;
         field_c = null;
         field_h = null;

@@ -1555,7 +1555,7 @@ final class QuickChatMenu extends UiComponent {
             this.messageIds = (int[]) null;
           }
           boolean finishedShortcutScan = true;
-          shortcutCharacter = go.currentKeyCharacter;
+          shortcutCharacter = ResourceArchiveFactory.currentKeyCharacter;
           if (shortcutCharacter > 0) {
             if (~SoundCache.field_h == ~shortcutCharacter) {
               shortcutCharacter = 63;

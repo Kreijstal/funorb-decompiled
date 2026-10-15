@@ -24,7 +24,7 @@ final class bq {
         if (param0 != -6) {
           field_c = (RgbSprite[]) null;
         }
-        return go.a(param4, param3, false, param1, param2, true);
+        return ResourceArchiveFactory.createResourceArchive(param4, param3, false, param1, param2, true);
     }
 
     final static MenuScreen a(int param0, int param1) {

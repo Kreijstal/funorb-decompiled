@@ -74,10 +74,10 @@ final class n {
 
     final static void a(int param0) {
         try {
-          if (go.field_a != null) {
+          if (ResourceArchiveFactory.field_a != null) {
             try {
-              go.field_a.seek(0, 0L);
-              go.field_a.write(jl.incomingPackets.data, jl.incomingPackets.position, 24, -1);
+              ResourceArchiveFactory.field_a.seek(0, 0L);
+              ResourceArchiveFactory.field_a.write(jl.incomingPackets.data, jl.incomingPackets.position, 24, -1);
             } catch (Exception exception) {
             }
           }
@@ -169,7 +169,7 @@ final class n {
           if (param3 != -76) {
             return;
           }
-          co.a(IntArrayRequest.field_j, false);
+          ArchiveSourceManager.a(IntArrayRequest.field_j, false);
           if (nl.pendingLobbyGame != null) {
             var15 = RadialSelectorRenderer.field_h;
             var17 = var15;
@@ -251,7 +251,7 @@ final class n {
               stackIn_28_0.text = ((String) (Object) stackIn_29_1).toUpperCase();
               stackIn_31_0 = t.field_f;
               if (var8 == 0) {
-                stackIn_32_1 = go.field_f;
+                stackIn_32_1 = ResourceArchiveFactory.field_f;
               } else {
                 stackIn_32_1 = LabeledWidget.field_G;
               }

@@ -129,7 +129,7 @@ final class jl {
             return false;
           }
           MeshAttributeRecord.currentKeyCode = ProxyAuthenticationRequiredException.keyEventCodes[IntrusiveHashTable.keyEventReadIndex];
-          go.currentKeyCharacter = TimedSplashScreen.keyEventCharacters[IntrusiveHashTable.keyEventReadIndex];
+          ResourceArchiveFactory.currentKeyCharacter = TimedSplashScreen.keyEventCharacters[IntrusiveHashTable.keyEventReadIndex];
           if (obfuscationGuard != 5) {
             return true;
           }
@@ -184,7 +184,7 @@ final class jl {
             return stackIn_14_0;
           }
           if (LevelPackSelectScreen.friendCount >= 100 &&
-            go.field_c <= 0) {
+            ResourceArchiveFactory.field_c <= 0) {
             stackIn_18_0 = er.field_e;
             return stackIn_18_0;
           }

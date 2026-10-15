@@ -33,7 +33,7 @@ final class qn {
         if (null != GameplayRenderHelpers.field_d) {
           return;
         }
-        if (go.field_c > 0) {
+        if (ResourceArchiveFactory.field_c > 0) {
           if (this.field_b) {
             fieldTemp$0 = this.field_w - 1;
             this.field_w = this.field_w - 1;
@@ -191,7 +191,7 @@ final class qn {
         if (ValidationStatus.field_a < this.field_c) {
           return false;
         }
-        if (0 >= go.field_c) {
+        if (0 >= ResourceArchiveFactory.field_c) {
           return false;
         }
         return true;

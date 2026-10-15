@@ -21,10 +21,10 @@ final class aj {
 
     final static ResourceArchive a(int param0, boolean param1) {
         if (param1) {
-          return go.a(false, param0, false, 1, true, true);
+          return ResourceArchiveFactory.createResourceArchive(false, param0, false, 1, true, true);
         }
         field_b = (String) null;
-        return go.a(false, param0, false, 1, true, true);
+        return ResourceArchiveFactory.createResourceArchive(false, param0, false, 1, true, true);
     }
 
     final static UiComponent a(int param0) {

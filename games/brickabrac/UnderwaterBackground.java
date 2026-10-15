@@ -24,7 +24,7 @@ final class UnderwaterBackground extends BackgroundScene {
           if (null == TableNameEntry.waterSmallSprite) {
             return false;
           }
-          if (go.waterRaysSprite == null) {
+          if (ResourceArchiveFactory.waterRaysSprite == null) {
             return false;
           }
           if (null != ConstructionBackground.waterCharacterSprite) {
@@ -44,7 +44,7 @@ final class UnderwaterBackground extends BackgroundScene {
         if (null == TableNameEntry.waterSmallSprite) {
           return false;
         }
-        if (go.waterRaysSprite == null) {
+        if (ResourceArchiveFactory.waterRaysSprite == null) {
           return false;
         }
         if (null != ConstructionBackground.waterCharacterSprite) {
@@ -58,7 +58,7 @@ final class UnderwaterBackground extends BackgroundScene {
           return true;
         }
         if (AchievementIcon.field_m.ensureGroupAvailableByName("water", -28138)) {
-          go.waterRaysSprite = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.field_m);
+          ResourceArchiveFactory.waterRaysSprite = pl.loadRgbSpriteByName("water", "water_rays", (byte) 116, AchievementIcon.field_m);
           wm.waterNearSprite = pl.loadRgbSpriteByName("water", "water_near", (byte) 105, AchievementIcon.field_m);
           LoginPanel.waterMidSprite = pl.loadRgbSpriteByName("water", "water_mid", (byte) 109, AchievementIcon.field_m);
           n.waterFarSprite = pl.loadRgbSpriteByName("water", "water_far", (byte) -121, AchievementIcon.field_m);
@@ -72,15 +72,15 @@ final class UnderwaterBackground extends BackgroundScene {
           GameplayScreen.field_l = jh.a(0, LoginPanel.waterMidSprite);
           BufferedFile.field_a = jh.a(0, n.waterFarSprite);
           Under13RegistrationNoticePanel.field_P = jh.a(0, vj.field_b);
-          uo.field_d = new RgbSprite(go.waterRaysSprite.canvasWidth / 2, go.waterRaysSprite.canvasHeight);
+          uo.field_d = new RgbSprite(ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           IndexedSpriteGeometry.pushSpriteRaster(-83, uo.field_d);
-          go.waterRaysSprite.a(0, 0, go.waterRaysSprite.canvasWidth / 2, go.waterRaysSprite.canvasHeight);
+          ResourceArchiveFactory.waterRaysSprite.a(0, 0, ResourceArchiveFactory.waterRaysSprite.canvasWidth / 2, ResourceArchiveFactory.waterRaysSprite.canvasHeight);
           sc.popRaster(-114);
           pl.a(n.waterFarSprite, 0);
           pl.a(vj.field_b, 0);
           pl.a(BufferedFile.field_a, 0);
           pl.a(Under13RegistrationNoticePanel.field_P, 0);
-          pl.a(go.waterRaysSprite, 0);
+          pl.a(ResourceArchiveFactory.waterRaysSprite, 0);
           pl.a(uo.field_d, 0);
           return true;
         }
@@ -159,7 +159,7 @@ final class UnderwaterBackground extends BackgroundScene {
             hh.a(n.waterFarSprite, 0, 1, var7, -8562, colorIndex, vj.field_b);
             var7.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
           }
-          BubbleDistortion.a(scroll16, wm.waterNearSprite, var7.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, go.waterRaysSprite, 640);
+          BubbleDistortion.a(scroll16, wm.waterNearSprite, var7.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
           return;
         }
         if (!this.hasSprites((byte) -112)) {
@@ -171,7 +171,7 @@ final class UnderwaterBackground extends BackgroundScene {
           hh.a(n.waterFarSprite, 0, 1, var8, -8562, colorIndex, vj.field_b);
           var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
         }
-        BubbleDistortion.a(scroll16, wm.waterNearSprite, var8.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, go.waterRaysSprite, 640);
+        BubbleDistortion.a(scroll16, wm.waterNearSprite, var8.sprite, 1, 2, LoginPanel.waterMidSprite, 0, colorIndex, destinationY, destinationX, ResourceArchiveFactory.waterRaysSprite, 640);
     }
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {

@@ -119,7 +119,7 @@ final class FullscreenFailureKind {
           if (param1) {
             if (bm.contextActions.gameId == MenuSelection.previewGameId) {
               var13 = bm.contextActions;
-              var14 = rd.a(co.field_d, new String[]{param3}, (byte) 103);
+              var14 = rd.a(ArchiveSourceManager.field_d, new String[]{param3}, (byte) 103);
               var13.contextMenu.addAction(var14, 16, (byte) 90);
             } else {
               var11 = bm.contextActions;

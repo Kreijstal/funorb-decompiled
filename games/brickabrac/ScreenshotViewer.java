@@ -217,17 +217,17 @@ final class ScreenshotViewer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_l == null &&
-            null != co.field_j) {
+            null != ArchiveSourceManager.field_j) {
             this.field_l = new RgbSprite(622, 47);
             IndexedSpriteGeometry.pushSpriteRaster(-49, this.field_l);
             Rasterizer2D.fillVerticalGradient(0, 0, 622, 47, 4540749, 65793);
             var2_int = 16448250;
             var3 = 10068666;
             var16 = MusicVoiceMixer.a(param0 - 580, var2_int, var3);
-            this.a(47, 0, this.title, var16, co.field_j, 622, 0, 0);
+            this.a(47, 0, this.title, var16, ArchiveSourceManager.field_j, 622, 0, 0);
             sc.popRaster(param0 - 592);
             this.field_e = new RgbSprite(param0, 24);
-            this.a(co.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
+            this.a(ArchiveSourceManager.field_j, -4, 0.75f, (byte) 124, 475, va.field_c, var16, 24, this.field_e, 0);
             var17 = MusicVoiceMixer.a(-124, 526344, 526344);
             var5 = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(param0 ^ -388, var5);
@@ -235,9 +235,9 @@ final class ScreenshotViewer {
             Rasterizer2D.fillVerticalGradient(0, var5.height / 2, var5.width, var5.height, 16306250, 15568919);
             var6 = ByteStorage.field_a;
             var7 = ArchiveIndex.field_q;
-            this.a(co.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
-            this.a(co.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
-            this.a(co.field_j, -co.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
+            this.a(ArchiveSourceManager.field_j, -16, 0.5f, (byte) 118, var5.width, var6, var17, var5.height, var5, 0);
+            this.a(ArchiveSourceManager.field_j, 20, 0.5f, (byte) 105, var5.width, var7, var17, var5.height, var5, 0);
+            this.a(ArchiveSourceManager.field_j, -ArchiveSourceManager.field_j.ascent + (var5.height / 2 + 12), 0.699999988079071f, (byte) 62, var5.width, uo.field_e[this.field_c], var17, var5.height / 3, var5, 0);
             sc.popRaster(-119);
             this.field_p = new RgbSprite(121, 122);
             IndexedSpriteGeometry.pushSpriteRaster(-115, this.field_p);
@@ -298,7 +298,7 @@ final class ScreenshotViewer {
             AchievementsScreen.field_J = uo.loadIndexedSpriteByName((byte) 29, BufferedFile.field_d, "frame", "members_expansion_screen");
             ll.field_c = pl.loadRgbSpriteByName("members_expansion_screen", "arrow", (byte) 111, BufferedFile.field_d);
             ch.field_c = TooltipSprite.loadBinaryMaskFontByName((byte) -37, "arialish12", BufferedFile.field_d, ContentTransitionLayer.field_jb, "");
-            co.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
+            ArchiveSourceManager.field_j = IntrusiveHashTable.a((byte) -107, "pump32", "", BufferedFile.field_d, ContentTransitionLayer.field_jb);
             MainMenuScreen.field_u = TextWidgetRenderer.a("members_expansion_screen", "benefit_orbs", 1593955777, BufferedFile.field_d);
             LevelPack.field_e = TextWidgetRenderer.a("members_expansion_screen", "button_text", 1593955777, BufferedFile.field_d);
             ValidatedTextFieldWidget.field_V = CheckboxWidgetRenderer.loadRgbSpritesByName("members_expansion_screen", "button_highlights", BufferedFile.field_d, (byte) -8);

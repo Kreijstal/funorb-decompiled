@@ -136,7 +136,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
           }
           wo.field_b.i(82);
           while (jl.pollKeyEvent((byte) 5)) {
-            wo.field_b.a(go.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
+            wo.field_b.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

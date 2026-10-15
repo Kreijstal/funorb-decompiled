@@ -564,6 +564,14 @@
       "renamedSymbol": "C:GameOverlayHelpers"
     },
     {
+      "symbol": "C:co",
+      "originalName": "co",
+      "to": "ArchiveSourceManager",
+      "evidence": "co.java: Loads and verifies the archive255/group255 master index with optional RSA and Whirlpool, lazily caches archive sources and advances their work; unrelated static UI/music helpers remain separate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ArchiveSourceManager"
+    },
+    {
       "symbol": "C:cp",
       "originalName": "cp",
       "to": "WidgetLayerStack",
@@ -1010,6 +1018,14 @@
       "evidence": "gn.java: ID19 result/exit menu with return-to-lobby/resign actions; resign availability follows retained match state.",
       "confidence": "reviewed",
       "renamedSymbol": "C:MultiplayerExitScreen"
+    },
+    {
+      "symbol": "C:go",
+      "originalName": "go",
+      "to": "ResourceArchiveFactory",
+      "evidence": "go.java: Creates resource archive wrappers with optional cache-store setup, source reuse/prefetch and decoded-file policy; incoming string/helper globals remain separate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ResourceArchiveFactory"
     },
     {
       "symbol": "C:gp",
@@ -4460,6 +4476,62 @@
       "renamedSymbol": "F:GameOverlayHelpers.smallLeverSprites:[LRgbSprite;"
     },
     {
+      "symbol": "F:co.field_a:Lih;",
+      "originalName": "field_a",
+      "to": "fetchClient",
+      "evidence": "co.java: Queues the priority255/255 master request and is shared by each created cached source.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArchiveSourceManager.fetchClient:LArchiveFetchClient;"
+    },
+    {
+      "symbol": "F:co.field_b:Lwq;",
+      "originalName": "field_b",
+      "to": "masterIndexPacket",
+      "evidence": "co.java: Installed only after digest verification; retains original request data and mutable record cursor.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArchiveSourceManager.masterIndexPacket:LPacketBuffer;"
+    },
+    {
+      "symbol": "F:co.field_c:Lda;",
+      "originalName": "field_c",
+      "to": "masterIndexRequest",
+      "evidence": "co.java: Retained pending/completed master-index request; queue-full startup defers creation.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArchiveSourceManager.masterIndexRequest:LArchiveNetworkRequest;"
+    },
+    {
+      "symbol": "F:co.field_g:Ljava/math/BigInteger;",
+      "originalName": "field_g",
+      "to": "rsaModulus",
+      "evidence": "co.java: Optional modular exponentiation modulus for master-index signature bytes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArchiveSourceManager.rsaModulus:Ljava/math/BigInteger;"
+    },
+    {
+      "symbol": "F:co.field_h:Lkg;",
+      "originalName": "field_h",
+      "to": "cacheIo",
+      "evidence": "co.java: Shared cache I/O worker passed into cached archive sources.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArchiveSourceManager.cacheIo:LCacheIoWorker;"
+    },
+    {
+      "symbol": "F:co.field_i:Ljava/math/BigInteger;",
+      "originalName": "field_i",
+      "to": "rsaExponent",
+      "evidence": "co.java: Optional exponent; both RSA fields must be nonnull to activate signature recovery.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArchiveSourceManager.rsaExponent:Ljava/math/BigInteger;"
+    },
+    {
+      "symbol": "F:co.field_k:[Ljq;",
+      "originalName": "field_k",
+      "to": "archiveSources",
+      "evidence": "co.java: Master record count bounds the lazy source cache; populated source settings are retained on subsequent lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ArchiveSourceManager.archiveSources:[LCachedArchiveSource;"
+    },
+    {
       "symbol": "F:cp.field_I:Ljp;",
       "originalName": "field_I",
       "to": "volcanicMidSprite",
@@ -5290,6 +5362,14 @@
       "evidence": "dp.java: Chat reader scratch display name.",
       "confidence": "reviewed",
       "renamedSymbol": "F:HalloweenBackground.receivedChatDisplayName:Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:dp.field_v:Lco;",
+      "originalName": "field_v",
+      "to": "archiveSourceManager",
+      "evidence": "dp.java: Global startup-created manager polled for readiness and used by archive factory/maintenance.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:HalloweenBackground.archiveSourceManager:LArchiveSourceManager;"
     },
     {
       "symbol": "F:dr.field_a:I",
@@ -7049,7 +7129,7 @@
       "to": "currentKeyCharacter",
       "evidence": "go.java: Character copied from current polled event.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:go.currentKeyCharacter:C"
+      "renamedSymbol": "F:ResourceArchiveFactory.currentKeyCharacter:C"
     },
     {
       "symbol": "F:go.field_d:Ljp;",
@@ -7057,7 +7137,7 @@
       "to": "waterRaysSprite",
       "evidence": "jk.java: Literal sprite resource water/water_rays assigned to this resolved field.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:go.waterRaysSprite:LRgbSprite;"
+      "renamedSymbol": "F:ResourceArchiveFactory.waterRaysSprite:LRgbSprite;"
     },
     {
       "symbol": "F:gp.field_a:Ltk;",
@@ -22996,6 +23076,254 @@
       "renamedSymbol": "L:GameOverlayHelpers.acquireAchievementIcon(IIILAchievementBrowserScreen;IIIII)LAchievementIcon;#0"
     },
     {
+      "symbol": "L:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0"
+    },
+    {
+      "symbol": "L:co.a(I)V#0",
+      "originalName": "var2",
+      "to": "queuedSourceIndex",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.maintainArchiveSources(I)V#0"
+    },
+    {
+      "symbol": "L:co.a(I)V#1",
+      "originalName": "var3",
+      "to": "unusedClientFlag",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.maintainArchiveSources(I)V#1"
+    },
+    {
+      "symbol": "L:co.a(I)V#2",
+      "originalName": "var2Lifetime1",
+      "to": "maintenanceSourceIndex",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.maintainArchiveSources(I)V#2"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#0",
+      "originalName": "stackIn_9_0",
+      "to": "cachedSourceResult",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#0"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#1",
+      "originalName": "stackIn_11_0",
+      "to": "createdSourceResult",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#1"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#10",
+      "originalName": "var7",
+      "to": "indexCrc",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#10"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#11",
+      "originalName": "var8",
+      "to": "indexRevision",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#11"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#12",
+      "originalName": "var10",
+      "to": "source",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#12"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#13",
+      "originalName": "var14",
+      "to": "indexDigest",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#13"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#14",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "caughtException",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#14"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#2",
+      "originalName": "stackIn_14_0",
+      "to": "failureContext",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#2"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#3",
+      "originalName": "stackIn_14_1",
+      "to": "contextBuilder",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#3"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#4",
+      "originalName": "stackIn_15_2",
+      "to": "indexCacheSummary",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#4"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#5",
+      "originalName": "stackIn_17_1",
+      "to": "groupContextBuilder",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#5"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#6",
+      "originalName": "stackIn_18_2",
+      "to": "groupCacheSummary",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#6"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#7",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#7"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#8",
+      "originalName": "var6_int",
+      "to": "unusedGuardQuotient",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#8"
+    },
+    {
+      "symbol": "L:co.a(IZLve;ILve;)Ljq;#9",
+      "originalName": "var6",
+      "to": "failure",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#9"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#0",
+      "originalName": "var7",
+      "to": "digestByteIndex",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#0"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#1",
+      "originalName": "var3",
+      "to": "archiveCount",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#1"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#10",
+      "originalName": "var14",
+      "to": "signatureBuffer",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#10"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#11",
+      "originalName": "var16",
+      "to": "masterDigest",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#11"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#2",
+      "originalName": "var4",
+      "to": "signatureBytes",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#2"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#3",
+      "originalName": "var5",
+      "to": "recoveredSignature",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#3"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#4",
+      "originalName": "var7_ref_java_math_BigInteger",
+      "to": "recoveredInteger",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#4"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#5",
+      "originalName": "var8",
+      "to": "unusedClientFlag",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#5"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#6",
+      "originalName": "var9",
+      "to": "unusedIndexCache",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#6"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#7",
+      "originalName": "var11",
+      "to": "masterPacket",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#7"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#8",
+      "originalName": "var12",
+      "to": "signatureStorage",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#8"
+    },
+    {
+      "symbol": "L:co.a(Z)Z#9",
+      "originalName": "var13",
+      "to": "signatureInteger",
+      "evidence": "co.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#9"
+    },
+    {
       "symbol": "L:cp.b(IIIII)Leg;#0",
       "originalName": "var6",
       "to": "clientBranchFlag",
@@ -27786,6 +28114,70 @@
       "evidence": "gj.java: Reviewed category tag decoding, CP1252 shortcut, archive/cache, root scan or recursive category menu declaration.",
       "confidence": "reviewed",
       "renamedSymbol": "L:gj.findRootQuickChatCategory(I)LQuickChatCategoryDefinition;#6"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
+      "originalName": "var6",
+      "to": "indexCacheOrFailure",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#0"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#1",
+      "originalName": "var7",
+      "to": "groupCache",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#1"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#2",
+      "originalName": "var8",
+      "to": "source",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#2"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#3",
+      "originalName": "stackIn_14_0",
+      "to": "archiveResult",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#3"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#4",
+      "originalName": "decompiledCaughtException",
+      "to": "caughtFailure",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#4"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#5",
+      "originalName": "decompiledCaughtParameter0",
+      "to": "ioFailure",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#5"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#6",
+      "originalName": "decompiledUncheckedException",
+      "to": "uncheckedFailure",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#6"
+    },
+    {
+      "symbol": "L:go.a(ZIZIZZ)Lmf;#7",
+      "originalName": "decompiledCheckedException",
+      "to": "checkedFailure",
+      "evidence": "go.java: Reviewed master-index verification, cached source construction or archive-factory declaration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#7"
     },
     {
       "symbol": "L:gp.a(Z)Ltk;#0",
@@ -43820,6 +44212,30 @@
       "renamedSymbol": "M:GameOverlayHelpers.drawScorePopup(LScorePopup;LPlayerBoard;III)V"
     },
     {
+      "symbol": "M:co.a(I)V",
+      "originalName": "a",
+      "to": "maintainArchiveSources",
+      "evidence": "co.java: Visits all populated sources to process queued groups, then a second pass maintains scans/cleanup; guard77.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.maintainArchiveSources(I)V"
+    },
+    {
+      "symbol": "M:co.a(IZLve;ILve;)Ljq;",
+      "originalName": "a",
+      "to": "getArchiveSource",
+      "evidence": "co.java: Requires verified index and in-range ID; returns existing source or reads CRC/revision/digest record and caches newly constructed source; guard81.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;"
+    },
+    {
+      "symbol": "M:co.a(Z)Z",
+      "originalName": "a",
+      "to": "pollMasterIndex",
+      "evidence": "co.java: Requests255/255 when queue capacity permits, waits for data, verifies65-byte recovered signature against Whirlpool over count plus72-byte records, then allocates source cache; false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveSourceManager.pollMasterIndex(Z)Z"
+    },
+    {
       "symbol": "M:cp.a(I)V",
       "originalName": "a",
       "to": "hideLayers",
@@ -45570,6 +45986,22 @@
       "evidence": "ld.java: Subclass supplies result presentation bottom; guard -6. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MultiplayerExitScreen.getResultBottom(I)I"
+    },
+    {
+      "symbol": "M:go.a(B)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "readIncomingString",
+      "evidence": "go.java: Reads a CP1252 zero-terminated string from shared incoming packet after unused guard arithmetic.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchiveFactory.readIncomingString(B)Ljava/lang/String;"
+    },
+    {
+      "symbol": "M:go.a(ZIZIZZ)Lmf;",
+      "originalName": "a",
+      "to": "createResourceArchive",
+      "evidence": "go.java: Opens optional disk cache stores, obtains manager source, optionally starts prefetch and creates resource wrapper; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;"
     },
     {
       "symbol": "M:gp.a(BLjava/lang/String;)Z",
@@ -50194,6 +50626,14 @@
       "evidence": "nq.java: Replaces hover state using sprite pixel hit testing for current pointer; guard0.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TooltipSprite.updateHover(I)V"
+    },
+    {
+      "symbol": "M:o.d(I)Z",
+      "originalName": "d",
+      "to": "pollArchiveMasterIndex",
+      "evidence": "o.java: Canonical guard -572695519 delegates global manager poll with false; other guard returns false.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:o.pollArchiveMasterIndex(I)Z"
     },
     {
       "symbol": "M:oa.a(III)V",
@@ -59780,6 +60220,110 @@
       "renamedSymbol": "P:GameOverlayHelpers.drawScorePopup(LScorePopup;LPlayerBoard;III)V#4"
     },
     {
+      "symbol": "P:co.<init>(Lih;Lkg;)V#0",
+      "originalName": "param0",
+      "to": "fetchClient",
+      "evidence": "co.java: Delegates to manager with both RSA inputs null.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;)V#0"
+    },
+    {
+      "symbol": "P:co.<init>(Lih;Lkg;)V#1",
+      "originalName": "param1",
+      "to": "cacheIo",
+      "evidence": "co.java: Delegates to manager with both RSA inputs null.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;)V#1"
+    },
+    {
+      "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "originalName": "param0",
+      "to": "fetchClient",
+      "evidence": "co.java: Retains dependencies and optional RSA inputs; requests master index immediately unless priority queue already full.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0"
+    },
+    {
+      "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+      "originalName": "param1",
+      "to": "cacheIo",
+      "evidence": "co.java: Retains dependencies and optional RSA inputs; requests master index immediately unless priority queue already full.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1"
+    },
+    {
+      "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+      "originalName": "param2",
+      "to": "rsaExponent",
+      "evidence": "co.java: Retains dependencies and optional RSA inputs; requests master index immediately unless priority queue already full.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2"
+    },
+    {
+      "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
+      "originalName": "param3",
+      "to": "rsaModulus",
+      "evidence": "co.java: Retains dependencies and optional RSA inputs; requests master index immediately unless priority queue already full.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3"
+    },
+    {
+      "symbol": "P:co.a(I)V#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "co.java: Visits all populated sources to process queued groups, then a second pass maintains scans/cleanup; guard77.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.maintainArchiveSources(I)V#0"
+    },
+    {
+      "symbol": "P:co.a(IZLve;ILve;)Ljq;#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "co.java: Requires verified index and in-range ID; returns existing source or reads CRC/revision/digest record and caches newly constructed source; guard81.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#0"
+    },
+    {
+      "symbol": "P:co.a(IZLve;ILve;)Ljq;#1",
+      "originalName": "param1",
+      "to": "cleanupEnabled",
+      "evidence": "co.java: Requires verified index and in-range ID; returns existing source or reads CRC/revision/digest record and caches newly constructed source; guard81.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#1"
+    },
+    {
+      "symbol": "P:co.a(IZLve;ILve;)Ljq;#2",
+      "originalName": "param2",
+      "to": "indexCache",
+      "evidence": "co.java: Requires verified index and in-range ID; returns existing source or reads CRC/revision/digest record and caches newly constructed source; guard81.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#2"
+    },
+    {
+      "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+      "originalName": "param3",
+      "to": "archiveId",
+      "evidence": "co.java: Requires verified index and in-range ID; returns existing source or reads CRC/revision/digest record and caches newly constructed source; guard81.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#3"
+    },
+    {
+      "symbol": "P:co.a(IZLve;ILve;)Ljq;#4",
+      "originalName": "param4",
+      "to": "groupCache",
+      "evidence": "co.java: Requires verified index and in-range ID; returns existing source or reads CRC/revision/digest record and caches newly constructed source; guard81.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#4"
+    },
+    {
+      "symbol": "P:co.a(Z)Z#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "co.java: Requests255/255 when queue capacity permits, waits for data, verifies65-byte recovered signature against Whirlpool over count plus72-byte records, then allocates source cache; false guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ArchiveSourceManager.pollMasterIndex(Z)Z#0"
+    },
+    {
       "symbol": "P:cp.a(I)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
@@ -65690,6 +66234,62 @@
       "evidence": "ld.java: Subclass supplies result presentation bottom; guard -6. Resolved override parameter.",
       "confidence": "reviewed",
       "renamedSymbol": "P:MultiplayerExitScreen.getResultBottom(I)I#0"
+    },
+    {
+      "symbol": "P:go.a(B)Ljava/lang/String;#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "go.java: Reads a CP1252 zero-terminated string from shared incoming packet after unused guard arithmetic.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchiveFactory.readIncomingString(B)Ljava/lang/String;#0"
+    },
+    {
+      "symbol": "P:go.a(ZIZIZZ)Lmf;#0",
+      "originalName": "param0",
+      "to": "prefetch",
+      "evidence": "go.java: Opens optional disk cache stores, obtains manager source, optionally starts prefetch and creates resource wrapper; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#0"
+    },
+    {
+      "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+      "originalName": "param1",
+      "to": "archiveId",
+      "evidence": "go.java: Opens optional disk cache stores, obtains manager source, optionally starts prefetch and creates resource wrapper; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#1"
+    },
+    {
+      "symbol": "P:go.a(ZIZIZZ)Lmf;#2",
+      "originalName": "param2",
+      "to": "cleanupEnabled",
+      "evidence": "go.java: Opens optional disk cache stores, obtains manager source, optionally starts prefetch and creates resource wrapper; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#2"
+    },
+    {
+      "symbol": "P:go.a(ZIZIZZ)Lmf;#3",
+      "originalName": "param3",
+      "to": "decodedFilePolicy",
+      "evidence": "go.java: Opens optional disk cache stores, obtains manager source, optionally starts prefetch and creates resource wrapper; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#3"
+    },
+    {
+      "symbol": "P:go.a(ZIZIZZ)Lmf;#4",
+      "originalName": "param4",
+      "to": "discardPackedGroups",
+      "evidence": "go.java: Opens optional disk cache stores, obtains manager source, optionally starts prefetch and creates resource wrapper; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#4"
+    },
+    {
+      "symbol": "P:go.a(ZIZIZZ)Lmf;#5",
+      "originalName": "param5",
+      "to": "obfuscationGuard",
+      "evidence": "go.java: Opens optional disk cache stores, obtains manager source, optionally starts prefetch and creates resource wrapper; true guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#5"
     },
     {
       "symbol": "P:gp.a(BLjava/lang/String;)Z#0",
@@ -79146,6 +79746,14 @@
       "evidence": "nq.java: Replaces hover state using sprite pixel hit testing for current pointer; guard0.",
       "confidence": "reviewed",
       "renamedSymbol": "P:TooltipSprite.updateHover(I)V#0"
+    },
+    {
+      "symbol": "P:o.d(I)Z#0",
+      "originalName": "param0",
+      "to": "obfuscationGuard",
+      "evidence": "o.java: Canonical guard -572695519 delegates global manager poll with false; other guard returns false.",
+      "confidence": "reviewed",
+      "renamedSymbol": "P:o.pollArchiveMasterIndex(I)Z#0"
     },
     {
       "symbol": "P:oa.<init>(JLmh;[Ljava/lang/String;Lmh;[Lmh;I)V#0",
@@ -93963,9 +94571,9 @@
     },
     {
       "symbol": "C:co",
-      "renamedSymbol": "C:co",
+      "renamedSymbol": "C:ArchiveSourceManager",
       "originalName": "co",
-      "renamedName": "co",
+      "renamedName": "ArchiveSourceManager",
       "declaration": {
         "file": "co.java",
         "start": 50,
@@ -94777,9 +95385,9 @@
     },
     {
       "symbol": "C:go",
-      "renamedSymbol": "C:go",
+      "renamedSymbol": "C:ResourceArchiveFactory",
       "originalName": "go",
-      "renamedName": "go",
+      "renamedName": "ResourceArchiveFactory",
       "declaration": {
         "file": "go.java",
         "start": 69,
@@ -102466,9 +103074,9 @@
     },
     {
       "symbol": "F:co.field_a:Lih;",
-      "renamedSymbol": "F:co.field_a:LArchiveFetchClient;",
+      "renamedSymbol": "F:ArchiveSourceManager.fetchClient:LArchiveFetchClient;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "fetchClient",
       "declaration": {
         "file": "co.java",
         "start": 287,
@@ -102477,9 +103085,9 @@
     },
     {
       "symbol": "F:co.field_b:Lwq;",
-      "renamedSymbol": "F:co.field_b:LPacketBuffer;",
+      "renamedSymbol": "F:ArchiveSourceManager.masterIndexPacket:LPacketBuffer;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "masterIndexPacket",
       "declaration": {
         "file": "co.java",
         "start": 236,
@@ -102488,9 +103096,9 @@
     },
     {
       "symbol": "F:co.field_c:Lda;",
-      "renamedSymbol": "F:co.field_c:LArchiveNetworkRequest;",
+      "renamedSymbol": "F:ArchiveSourceManager.masterIndexRequest:LArchiveNetworkRequest;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "masterIndexRequest",
       "declaration": {
         "file": "co.java",
         "start": 311,
@@ -102499,7 +103107,7 @@
     },
     {
       "symbol": "F:co.field_d:Ljava/lang/String;",
-      "renamedSymbol": "F:co.field_d:Ljava/lang/String;",
+      "renamedSymbol": "F:ArchiveSourceManager.field_d:Ljava/lang/String;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -102510,7 +103118,7 @@
     },
     {
       "symbol": "F:co.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:co.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:ArchiveSourceManager.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -102521,7 +103129,7 @@
     },
     {
       "symbol": "F:co.field_f:[Ljava/lang/String;",
-      "renamedSymbol": "F:co.field_f:[Ljava/lang/String;",
+      "renamedSymbol": "F:ArchiveSourceManager.field_f:[Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -102532,9 +103140,9 @@
     },
     {
       "symbol": "F:co.field_g:Ljava/math/BigInteger;",
-      "renamedSymbol": "F:co.field_g:Ljava/math/BigInteger;",
+      "renamedSymbol": "F:ArchiveSourceManager.rsaModulus:Ljava/math/BigInteger;",
       "originalName": "field_g",
-      "renamedName": "field_g",
+      "renamedName": "rsaModulus",
       "declaration": {
         "file": "co.java",
         "start": 88,
@@ -102543,9 +103151,9 @@
     },
     {
       "symbol": "F:co.field_h:Lkg;",
-      "renamedSymbol": "F:co.field_h:LCacheIoWorker;",
+      "renamedSymbol": "F:ArchiveSourceManager.cacheIo:LCacheIoWorker;",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "cacheIo",
       "declaration": {
         "file": "co.java",
         "start": 335,
@@ -102554,9 +103162,9 @@
     },
     {
       "symbol": "F:co.field_i:Ljava/math/BigInteger;",
-      "renamedSymbol": "F:co.field_i:Ljava/math/BigInteger;",
+      "renamedSymbol": "F:ArchiveSourceManager.rsaExponent:Ljava/math/BigInteger;",
       "originalName": "field_i",
-      "renamedName": "field_i",
+      "renamedName": "rsaExponent",
       "declaration": {
         "file": "co.java",
         "start": 186,
@@ -102565,7 +103173,7 @@
     },
     {
       "symbol": "F:co.field_j:Lmb;",
-      "renamedSymbol": "F:co.field_j:LAlphaFont;",
+      "renamedSymbol": "F:ArchiveSourceManager.field_j:LAlphaFont;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -102576,9 +103184,9 @@
     },
     {
       "symbol": "F:co.field_k:[Ljq;",
-      "renamedSymbol": "F:co.field_k:[LCachedArchiveSource;",
+      "renamedSymbol": "F:ArchiveSourceManager.archiveSources:[LCachedArchiveSource;",
       "originalName": "field_k",
-      "renamedName": "field_k",
+      "renamedName": "archiveSources",
       "declaration": {
         "file": "co.java",
         "start": 212,
@@ -104336,9 +104944,9 @@
     },
     {
       "symbol": "F:dp.field_v:Lco;",
-      "renamedSymbol": "F:HalloweenBackground.field_v:Lco;",
+      "renamedSymbol": "F:HalloweenBackground.archiveSourceManager:LArchiveSourceManager;",
       "originalName": "field_v",
-      "renamedName": "field_v",
+      "renamedName": "archiveSourceManager",
       "declaration": {
         "file": "dp.java",
         "start": 267,
@@ -109088,7 +109696,7 @@
     },
     {
       "symbol": "F:go.field_a:Ljg;",
-      "renamedSymbol": "F:go.field_a:LBufferedFile;",
+      "renamedSymbol": "F:ResourceArchiveFactory.field_a:LBufferedFile;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -109099,7 +109707,7 @@
     },
     {
       "symbol": "F:go.field_b:C",
-      "renamedSymbol": "F:go.currentKeyCharacter:C",
+      "renamedSymbol": "F:ResourceArchiveFactory.currentKeyCharacter:C",
       "originalName": "field_b",
       "renamedName": "currentKeyCharacter",
       "declaration": {
@@ -109110,7 +109718,7 @@
     },
     {
       "symbol": "F:go.field_c:I",
-      "renamedSymbol": "F:go.field_c:I",
+      "renamedSymbol": "F:ResourceArchiveFactory.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -109121,7 +109729,7 @@
     },
     {
       "symbol": "F:go.field_d:Ljp;",
-      "renamedSymbol": "F:go.waterRaysSprite:LRgbSprite;",
+      "renamedSymbol": "F:ResourceArchiveFactory.waterRaysSprite:LRgbSprite;",
       "originalName": "field_d",
       "renamedName": "waterRaysSprite",
       "declaration": {
@@ -109132,7 +109740,7 @@
     },
     {
       "symbol": "F:go.field_e:I",
-      "renamedSymbol": "F:go.field_e:I",
+      "renamedSymbol": "F:ResourceArchiveFactory.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -109143,7 +109751,7 @@
     },
     {
       "symbol": "F:go.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:go.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:ResourceArchiveFactory.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -158610,9 +159218,9 @@
     },
     {
       "symbol": "L:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
-      "renamedSymbol": "L:co.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "renamedSymbol": "L:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "co.java",
         "start": 6410,
@@ -158621,7 +159229,7 @@
     },
     {
       "symbol": "L:co.a(BLvm;)V#0",
-      "renamedSymbol": "L:co.a(BLMusicTrack;)V#0",
+      "renamedSymbol": "L:ArchiveSourceManager.a(BLMusicTrack;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -158632,9 +159240,9 @@
     },
     {
       "symbol": "L:co.a(I)V#0",
-      "renamedSymbol": "L:co.a(I)V#0",
+      "renamedSymbol": "L:ArchiveSourceManager.maintainArchiveSources(I)V#0",
       "originalName": "var2",
-      "renamedName": "var2",
+      "renamedName": "queuedSourceIndex",
       "declaration": {
         "file": "co.java",
         "start": 411,
@@ -158643,9 +159251,9 @@
     },
     {
       "symbol": "L:co.a(I)V#1",
-      "renamedSymbol": "L:co.a(I)V#1",
+      "renamedSymbol": "L:ArchiveSourceManager.maintainArchiveSources(I)V#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "unusedClientFlag",
       "declaration": {
         "file": "co.java",
         "start": 429,
@@ -158654,9 +159262,9 @@
     },
     {
       "symbol": "L:co.a(I)V#2",
-      "renamedSymbol": "L:co.a(I)V#2",
+      "renamedSymbol": "L:ArchiveSourceManager.maintainArchiveSources(I)V#2",
       "originalName": "var2Lifetime1",
-      "renamedName": "var2Lifetime1",
+      "renamedName": "maintenanceSourceIndex",
       "declaration": {
         "file": "co.java",
         "start": 447,
@@ -158665,7 +159273,7 @@
     },
     {
       "symbol": "L:co.a(IZ)V#0",
-      "renamedSymbol": "L:co.a(IZ)V#0",
+      "renamedSymbol": "L:ArchiveSourceManager.a(IZ)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -158676,7 +159284,7 @@
     },
     {
       "symbol": "L:co.a(IZ)V#1",
-      "renamedSymbol": "L:co.a(IZ)V#1",
+      "renamedSymbol": "L:ArchiveSourceManager.a(IZ)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -158687,7 +159295,7 @@
     },
     {
       "symbol": "L:co.a(IZ)V#2",
-      "renamedSymbol": "L:co.a(IZ)V#2",
+      "renamedSymbol": "L:ArchiveSourceManager.a(IZ)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -158698,9 +159306,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#0",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#0",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#0",
       "originalName": "stackIn_9_0",
-      "renamedName": "stackIn_9_0",
+      "renamedName": "cachedSourceResult",
       "declaration": {
         "file": "co.java",
         "start": 3783,
@@ -158709,9 +159317,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#1",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#1",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#1",
       "originalName": "stackIn_11_0",
-      "renamedName": "stackIn_11_0",
+      "renamedName": "createdSourceResult",
       "declaration": {
         "file": "co.java",
         "start": 3814,
@@ -158720,9 +159328,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#10",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#10",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#10",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "indexCrc",
       "declaration": {
         "file": "co.java",
         "start": 4174,
@@ -158731,9 +159339,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#11",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#11",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#11",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "indexRevision",
       "declaration": {
         "file": "co.java",
         "start": 4196,
@@ -158742,9 +159350,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#12",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#12",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#12",
       "originalName": "var10",
-      "renamedName": "var10",
+      "renamedName": "source",
       "declaration": {
         "file": "co.java",
         "start": 4217,
@@ -158753,9 +159361,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#13",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#13",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#13",
       "originalName": "var14",
-      "renamedName": "var14",
+      "renamedName": "indexDigest",
       "declaration": {
         "file": "co.java",
         "start": 4246,
@@ -158764,9 +159372,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#14",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#14",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#14",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "caughtException",
       "declaration": {
         "file": "co.java",
         "start": 5162,
@@ -158775,9 +159383,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#2",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#2",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#2",
       "originalName": "stackIn_14_0",
-      "renamedName": "stackIn_14_0",
+      "renamedName": "failureContext",
       "declaration": {
         "file": "co.java",
         "start": 3860,
@@ -158786,9 +159394,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#3",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#3",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#3",
       "originalName": "stackIn_14_1",
-      "renamedName": "stackIn_14_1",
+      "renamedName": "contextBuilder",
       "declaration": {
         "file": "co.java",
         "start": 3903,
@@ -158797,9 +159405,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#4",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#4",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#4",
       "originalName": "stackIn_15_2",
-      "renamedName": "stackIn_15_2",
+      "renamedName": "indexCacheSummary",
       "declaration": {
         "file": "co.java",
         "start": 3939,
@@ -158808,9 +159416,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#5",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#5",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#5",
       "originalName": "stackIn_17_1",
-      "renamedName": "stackIn_17_1",
+      "renamedName": "groupContextBuilder",
       "declaration": {
         "file": "co.java",
         "start": 3982,
@@ -158819,9 +159427,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#6",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#6",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#6",
       "originalName": "stackIn_18_2",
-      "renamedName": "stackIn_18_2",
+      "renamedName": "groupCacheSummary",
       "declaration": {
         "file": "co.java",
         "start": 4018,
@@ -158830,9 +159438,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#7",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#7",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#7",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "co.java",
         "start": 4064,
@@ -158841,9 +159449,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#8",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#8",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#8",
       "originalName": "var6_int",
-      "renamedName": "var6_int",
+      "renamedName": "unusedGuardQuotient",
       "declaration": {
         "file": "co.java",
         "start": 4110,
@@ -158852,9 +159460,9 @@
     },
     {
       "symbol": "L:co.a(IZLve;ILve;)Ljq;#9",
-      "renamedSymbol": "L:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#9",
+      "renamedSymbol": "L:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#9",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "failure",
       "declaration": {
         "file": "co.java",
         "start": 4149,
@@ -158863,9 +159471,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#0",
-      "renamedSymbol": "L:co.a(Z)Z#0",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#0",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "digestByteIndex",
       "declaration": {
         "file": "co.java",
         "start": 1221,
@@ -158874,9 +159482,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#1",
-      "renamedSymbol": "L:co.a(Z)Z#1",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#1",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "archiveCount",
       "declaration": {
         "file": "co.java",
         "start": 1243,
@@ -158885,9 +159493,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#10",
-      "renamedSymbol": "L:co.a(Z)Z#10",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#10",
       "originalName": "var14",
-      "renamedName": "var14",
+      "renamedName": "signatureBuffer",
       "declaration": {
         "file": "co.java",
         "start": 1477,
@@ -158896,9 +159504,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#11",
-      "renamedSymbol": "L:co.a(Z)Z#11",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#11",
       "originalName": "var16",
-      "renamedName": "var16",
+      "renamedName": "masterDigest",
       "declaration": {
         "file": "co.java",
         "start": 1499,
@@ -158907,9 +159515,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#2",
-      "renamedSymbol": "L:co.a(Z)Z#2",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#2",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "signatureBytes",
       "declaration": {
         "file": "co.java",
         "start": 1264,
@@ -158918,9 +159526,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#3",
-      "renamedSymbol": "L:co.a(Z)Z#3",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#3",
       "originalName": "var5",
-      "renamedName": "var5",
+      "renamedName": "recoveredSignature",
       "declaration": {
         "file": "co.java",
         "start": 1285,
@@ -158929,9 +159537,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#4",
-      "renamedSymbol": "L:co.a(Z)Z#4",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#4",
       "originalName": "var7_ref_java_math_BigInteger",
-      "renamedName": "var7_ref_java_math_BigInteger",
+      "renamedName": "recoveredInteger",
       "declaration": {
         "file": "co.java",
         "start": 1320,
@@ -158940,9 +159548,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#5",
-      "renamedSymbol": "L:co.a(Z)Z#5",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#5",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "unusedClientFlag",
       "declaration": {
         "file": "co.java",
         "start": 1363,
@@ -158951,9 +159559,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#6",
-      "renamedSymbol": "L:co.a(Z)Z#6",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#6",
       "originalName": "var9",
-      "renamedName": "var9",
+      "renamedName": "unusedIndexCache",
       "declaration": {
         "file": "co.java",
         "start": 1380,
@@ -158962,9 +159570,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#7",
-      "renamedSymbol": "L:co.a(Z)Z#7",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#7",
       "originalName": "var11",
-      "renamedName": "var11",
+      "renamedName": "masterPacket",
       "declaration": {
         "file": "co.java",
         "start": 1397,
@@ -158973,9 +159581,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#8",
-      "renamedSymbol": "L:co.a(Z)Z#8",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#8",
       "originalName": "var12",
-      "renamedName": "var12",
+      "renamedName": "signatureStorage",
       "declaration": {
         "file": "co.java",
         "start": 1419,
@@ -158984,9 +159592,9 @@
     },
     {
       "symbol": "L:co.a(Z)Z#9",
-      "renamedSymbol": "L:co.a(Z)Z#9",
+      "renamedSymbol": "L:ArchiveSourceManager.pollMasterIndex(Z)Z#9",
       "originalName": "var13",
-      "renamedName": "var13",
+      "renamedName": "signatureInteger",
       "declaration": {
         "file": "co.java",
         "start": 1455,
@@ -158995,7 +159603,7 @@
     },
     {
       "symbol": "L:co.b(I)V#0",
-      "renamedSymbol": "L:co.b(I)V#0",
+      "renamedSymbol": "L:ArchiveSourceManager.b(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -183998,7 +184606,7 @@
     },
     {
       "symbol": "L:go.a(B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:go.a(B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:ResourceArchiveFactory.readIncomingString(B)Ljava/lang/String;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -184009,9 +184617,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#0",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#0",
       "originalName": "var6",
-      "renamedName": "var6",
+      "renamedName": "indexCacheOrFailure",
       "declaration": {
         "file": "go.java",
         "start": 676,
@@ -184020,9 +184628,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#1",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#1",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#1",
       "originalName": "var7",
-      "renamedName": "var7",
+      "renamedName": "groupCache",
       "declaration": {
         "file": "go.java",
         "start": 706,
@@ -184031,9 +184639,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#2",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#2",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#2",
       "originalName": "var8",
-      "renamedName": "var8",
+      "renamedName": "source",
       "declaration": {
         "file": "go.java",
         "start": 732,
@@ -184042,9 +184650,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#3",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#3",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#3",
       "originalName": "stackIn_14_0",
-      "renamedName": "stackIn_14_0",
+      "renamedName": "archiveResult",
       "declaration": {
         "file": "go.java",
         "start": 758,
@@ -184053,9 +184661,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#4",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#4",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#4",
       "originalName": "decompiledCaughtException",
-      "renamedName": "decompiledCaughtException",
+      "renamedName": "caughtFailure",
       "declaration": {
         "file": "go.java",
         "start": 799,
@@ -184064,9 +184672,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#5",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#5",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#5",
       "originalName": "decompiledCaughtParameter0",
-      "renamedName": "decompiledCaughtParameter0",
+      "renamedName": "ioFailure",
       "declaration": {
         "file": "go.java",
         "start": 1943,
@@ -184075,9 +184683,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#6",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#6",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#6",
       "originalName": "decompiledUncheckedException",
-      "renamedName": "decompiledUncheckedException",
+      "renamedName": "uncheckedFailure",
       "declaration": {
         "file": "go.java",
         "start": 2239,
@@ -184086,9 +184694,9 @@
     },
     {
       "symbol": "L:go.a(ZIZIZZ)Lmf;#7",
-      "renamedSymbol": "L:go.a(ZIZIZZ)LResourceArchive;#7",
+      "renamedSymbol": "L:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#7",
       "originalName": "decompiledCheckedException",
-      "renamedName": "decompiledCheckedException",
+      "renamedName": "checkedFailure",
       "declaration": {
         "file": "go.java",
         "start": 2344,
@@ -326074,9 +326682,9 @@
     },
     {
       "symbol": "M:co.<init>(Lih;Lkg;)V",
-      "renamedSymbol": "M:co.<init>(LArchiveFetchClient;LCacheIoWorker;)V",
+      "renamedSymbol": "M:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;)V",
       "originalName": "co",
-      "renamedName": "co",
+      "renamedName": "ArchiveSourceManager",
       "declaration": {
         "file": "co.java",
         "start": 1049,
@@ -326085,9 +326693,9 @@
     },
     {
       "symbol": "M:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V",
-      "renamedSymbol": "M:co.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V",
+      "renamedSymbol": "M:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V",
       "originalName": "co",
-      "renamedName": "co",
+      "renamedName": "ArchiveSourceManager",
       "declaration": {
         "file": "co.java",
         "start": 6016,
@@ -326096,7 +326704,7 @@
     },
     {
       "symbol": "M:co.a(B)I",
-      "renamedSymbol": "M:co.a(B)I",
+      "renamedSymbol": "M:ArchiveSourceManager.a(B)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -326107,7 +326715,7 @@
     },
     {
       "symbol": "M:co.a(BLvm;)V",
-      "renamedSymbol": "M:co.a(BLMusicTrack;)V",
+      "renamedSymbol": "M:ArchiveSourceManager.a(BLMusicTrack;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -326118,9 +326726,9 @@
     },
     {
       "symbol": "M:co.a(I)V",
-      "renamedSymbol": "M:co.a(I)V",
+      "renamedSymbol": "M:ArchiveSourceManager.maintainArchiveSources(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "maintainArchiveSources",
       "declaration": {
         "file": "co.java",
         "start": 383,
@@ -326129,7 +326737,7 @@
     },
     {
       "symbol": "M:co.a(IZ)V",
-      "renamedSymbol": "M:co.a(IZ)V",
+      "renamedSymbol": "M:ArchiveSourceManager.a(IZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -326140,9 +326748,9 @@
     },
     {
       "symbol": "M:co.a(IZLve;ILve;)Ljq;",
-      "renamedSymbol": "M:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;",
+      "renamedSymbol": "M:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getArchiveSource",
       "declaration": {
         "file": "co.java",
         "start": 3706,
@@ -326151,9 +326759,9 @@
     },
     {
       "symbol": "M:co.a(Z)Z",
-      "renamedSymbol": "M:co.a(Z)Z",
+      "renamedSymbol": "M:ArchiveSourceManager.pollMasterIndex(Z)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollMasterIndex",
       "declaration": {
         "file": "co.java",
         "start": 1189,
@@ -326162,7 +326770,7 @@
     },
     {
       "symbol": "M:co.b(I)V",
-      "renamedSymbol": "M:co.b(I)V",
+      "renamedSymbol": "M:ArchiveSourceManager.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -331772,9 +332380,9 @@
     },
     {
       "symbol": "M:go.a(B)Ljava/lang/String;",
-      "renamedSymbol": "M:go.a(B)Ljava/lang/String;",
+      "renamedSymbol": "M:ResourceArchiveFactory.readIncomingString(B)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readIncomingString",
       "declaration": {
         "file": "go.java",
         "start": 429,
@@ -331783,7 +332391,7 @@
     },
     {
       "symbol": "M:go.a(I)V",
-      "renamedSymbol": "M:go.a(I)V",
+      "renamedSymbol": "M:ResourceArchiveFactory.a(I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -331794,9 +332402,9 @@
     },
     {
       "symbol": "M:go.a(ZIZIZZ)Lmf;",
-      "renamedSymbol": "M:go.a(ZIZIZZ)LResourceArchive;",
+      "renamedSymbol": "M:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createResourceArchive",
       "declaration": {
         "file": "go.java",
         "start": 553,
@@ -344873,9 +345481,9 @@
     },
     {
       "symbol": "M:o.d(I)Z",
-      "renamedSymbol": "M:o.d(I)Z",
+      "renamedSymbol": "M:o.pollArchiveMasterIndex(I)Z",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "pollArchiveMasterIndex",
       "declaration": {
         "file": "o.java",
         "start": 269,
@@ -368215,9 +368823,9 @@
     },
     {
       "symbol": "P:co.<init>(Lih;Lkg;)V#0",
-      "renamedSymbol": "P:co.<init>(LArchiveFetchClient;LCacheIoWorker;)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "fetchClient",
       "declaration": {
         "file": "co.java",
         "start": 1055,
@@ -368226,9 +368834,9 @@
     },
     {
       "symbol": "P:co.<init>(Lih;Lkg;)V#1",
-      "renamedSymbol": "P:co.<init>(LArchiveFetchClient;LCacheIoWorker;)V#1",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "cacheIo",
       "declaration": {
         "file": "co.java",
         "start": 1066,
@@ -368237,9 +368845,9 @@
     },
     {
       "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
-      "renamedSymbol": "P:co.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "fetchClient",
       "declaration": {
         "file": "co.java",
         "start": 6022,
@@ -368248,9 +368856,9 @@
     },
     {
       "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
-      "renamedSymbol": "P:co.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "cacheIo",
       "declaration": {
         "file": "co.java",
         "start": 6033,
@@ -368259,9 +368867,9 @@
     },
     {
       "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
-      "renamedSymbol": "P:co.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "rsaExponent",
       "declaration": {
         "file": "co.java",
         "start": 6062,
@@ -368270,9 +368878,9 @@
     },
     {
       "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
-      "renamedSymbol": "P:co.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
+      "renamedSymbol": "P:ArchiveSourceManager.<init>(LArchiveFetchClient;LCacheIoWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "rsaModulus",
       "declaration": {
         "file": "co.java",
         "start": 6091,
@@ -368281,7 +368889,7 @@
     },
     {
       "symbol": "P:co.a(B)I#0",
-      "renamedSymbol": "P:co.a(B)I#0",
+      "renamedSymbol": "P:ArchiveSourceManager.a(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -368292,7 +368900,7 @@
     },
     {
       "symbol": "P:co.a(BLvm;)V#0",
-      "renamedSymbol": "P:co.a(BLMusicTrack;)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.a(BLMusicTrack;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -368303,7 +368911,7 @@
     },
     {
       "symbol": "P:co.a(BLvm;)V#1",
-      "renamedSymbol": "P:co.a(BLMusicTrack;)V#1",
+      "renamedSymbol": "P:ArchiveSourceManager.a(BLMusicTrack;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -368314,9 +368922,9 @@
     },
     {
       "symbol": "P:co.a(I)V#0",
-      "renamedSymbol": "P:co.a(I)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.maintainArchiveSources(I)V#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "co.java",
         "start": 389,
@@ -368325,7 +368933,7 @@
     },
     {
       "symbol": "P:co.a(IZ)V#0",
-      "renamedSymbol": "P:co.a(IZ)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.a(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -368336,7 +368944,7 @@
     },
     {
       "symbol": "P:co.a(IZ)V#1",
-      "renamedSymbol": "P:co.a(IZ)V#1",
+      "renamedSymbol": "P:ArchiveSourceManager.a(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -368347,9 +368955,9 @@
     },
     {
       "symbol": "P:co.a(IZLve;ILve;)Ljq;#0",
-      "renamedSymbol": "P:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#0",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "co.java",
         "start": 3712,
@@ -368358,9 +368966,9 @@
     },
     {
       "symbol": "P:co.a(IZLve;ILve;)Ljq;#1",
-      "renamedSymbol": "P:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#1",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "cleanupEnabled",
       "declaration": {
         "file": "co.java",
         "start": 3728,
@@ -368369,9 +368977,9 @@
     },
     {
       "symbol": "P:co.a(IZLve;ILve;)Ljq;#2",
-      "renamedSymbol": "P:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#2",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "indexCache",
       "declaration": {
         "file": "co.java",
         "start": 3739,
@@ -368380,9 +368988,9 @@
     },
     {
       "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
-      "renamedSymbol": "P:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#3",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "archiveId",
       "declaration": {
         "file": "co.java",
         "start": 3751,
@@ -368391,9 +368999,9 @@
     },
     {
       "symbol": "P:co.a(IZLve;ILve;)Ljq;#4",
-      "renamedSymbol": "P:co.a(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#4",
+      "renamedSymbol": "P:ArchiveSourceManager.getArchiveSource(IZLFileCacheStore;ILFileCacheStore;)LCachedArchiveSource;#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "groupCache",
       "declaration": {
         "file": "co.java",
         "start": 3762,
@@ -368402,9 +369010,9 @@
     },
     {
       "symbol": "P:co.a(Z)Z#0",
-      "renamedSymbol": "P:co.a(Z)Z#0",
+      "renamedSymbol": "P:ArchiveSourceManager.pollMasterIndex(Z)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "co.java",
         "start": 1199,
@@ -368413,7 +369021,7 @@
     },
     {
       "symbol": "P:co.b(I)V#0",
-      "renamedSymbol": "P:co.b(I)V#0",
+      "renamedSymbol": "P:ArchiveSourceManager.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -383406,9 +384014,9 @@
     },
     {
       "symbol": "P:go.a(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:go.a(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:ResourceArchiveFactory.readIncomingString(B)Ljava/lang/String;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "go.java",
         "start": 436,
@@ -383417,7 +384025,7 @@
     },
     {
       "symbol": "P:go.a(I)V#0",
-      "renamedSymbol": "P:go.a(I)V#0",
+      "renamedSymbol": "P:ResourceArchiveFactory.a(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -383428,9 +384036,9 @@
     },
     {
       "symbol": "P:go.a(ZIZIZZ)Lmf;#0",
-      "renamedSymbol": "P:go.a(ZIZIZZ)LResourceArchive;#0",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "prefetch",
       "declaration": {
         "file": "go.java",
         "start": 563,
@@ -383439,9 +384047,9 @@
     },
     {
       "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
-      "renamedSymbol": "P:go.a(ZIZIZZ)LResourceArchive;#1",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#1",
       "originalName": "param1",
-      "renamedName": "param1",
+      "renamedName": "archiveId",
       "declaration": {
         "file": "go.java",
         "start": 575,
@@ -383450,9 +384058,9 @@
     },
     {
       "symbol": "P:go.a(ZIZIZZ)Lmf;#2",
-      "renamedSymbol": "P:go.a(ZIZIZZ)LResourceArchive;#2",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#2",
       "originalName": "param2",
-      "renamedName": "param2",
+      "renamedName": "cleanupEnabled",
       "declaration": {
         "file": "go.java",
         "start": 591,
@@ -383461,9 +384069,9 @@
     },
     {
       "symbol": "P:go.a(ZIZIZZ)Lmf;#3",
-      "renamedSymbol": "P:go.a(ZIZIZZ)LResourceArchive;#3",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#3",
       "originalName": "param3",
-      "renamedName": "param3",
+      "renamedName": "decodedFilePolicy",
       "declaration": {
         "file": "go.java",
         "start": 603,
@@ -383472,9 +384080,9 @@
     },
     {
       "symbol": "P:go.a(ZIZIZZ)Lmf;#4",
-      "renamedSymbol": "P:go.a(ZIZIZZ)LResourceArchive;#4",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#4",
       "originalName": "param4",
-      "renamedName": "param4",
+      "renamedName": "discardPackedGroups",
       "declaration": {
         "file": "go.java",
         "start": 619,
@@ -383483,9 +384091,9 @@
     },
     {
       "symbol": "P:go.a(ZIZIZZ)Lmf;#5",
-      "renamedSymbol": "P:go.a(ZIZIZZ)LResourceArchive;#5",
+      "renamedSymbol": "P:ResourceArchiveFactory.createResourceArchive(ZIZIZZ)LResourceArchive;#5",
       "originalName": "param5",
-      "renamedName": "param5",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "go.java",
         "start": 635,
@@ -419486,9 +420094,9 @@
     },
     {
       "symbol": "P:o.d(I)Z#0",
-      "renamedSymbol": "P:o.d(I)Z#0",
+      "renamedSymbol": "P:o.pollArchiveMasterIndex(I)Z#0",
       "originalName": "param0",
-      "renamedName": "param0",
+      "renamedName": "obfuscationGuard",
       "declaration": {
         "file": "o.java",
         "start": 275,
@@ -450983,7 +451591,7 @@
       "original": "BrickABrac.java",
       "renamed": "BrickABrac.java",
       "inputSha256": "dc7532c7689230f46de1b13fc32f60bd99ae9900f3308ebce0e6465a92b26a2f",
-      "outputSha256": "7054f8c35d96ace3d3efccc44a305e0d59245bdd61a6b2152b7c50d92e968e3a",
+      "outputSha256": "2797386cd590193cf2b67007ba3deb265688abdc60f2e17cf1831dbbd7a79469",
       "edits": [
         {
           "start": 76,
@@ -456145,6 +456753,13 @@
           "renamed": "CacheIoWorker"
         },
         {
+          "start": 21548,
+          "end": 21550,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 21567,
           "end": 21569,
           "symbol": "C:um",
@@ -456612,6 +457227,13 @@
           "symbol": "C:k",
           "original": "k",
           "renamed": "TextFieldValidator"
+        },
+        {
+          "start": 23280,
+          "end": 23282,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 23301,
@@ -477538,7 +478160,7 @@
       "original": "aj.java",
       "renamed": "aj.java",
       "inputSha256": "5eb9f625f212302d10fb8c587453ac3d101d27ddecb3e86e2c48a4d1a7d590e5",
-      "outputSha256": "628e7b43e61a632b3d0a9c46e9ca17d619e8e545fc64e6bd3ad8ebc4ead4d9eb",
+      "outputSha256": "ef4b3ecc7ab1b08dd8303e5c5e361c5f1368e0077ddf834496618766f9eec9d9",
       "edits": [
         {
           "start": 66,
@@ -477609,6 +478231,34 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 552,
+          "end": 554,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 555,
+          "end": 556,
+          "symbol": "M:go.a(ZIZIZZ)Lmf;",
+          "original": "a",
+          "renamed": "createResourceArchive"
+        },
+        {
+          "start": 653,
+          "end": 655,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 656,
+          "end": 657,
+          "symbol": "M:go.a(ZIZIZZ)Lmf;",
+          "original": "a",
+          "renamed": "createResourceArchive"
         },
         {
           "start": 720,
@@ -525125,7 +525775,7 @@
       "original": "bq.java",
       "renamed": "bq.java",
       "inputSha256": "455f0b7bcf51a90176a8f10bcdd9aa16041af9df4bfd65738948dac31df676e3",
-      "outputSha256": "6ca6ee694382ce9c87c9c1bb3e3b02308729699f6ccc37ffa02c31c3f3a6558f",
+      "outputSha256": "ee844da59369dcf87322ccadd85bcb5a115bdf091009ad9fb120904cfdd87c1e",
       "edits": [
         {
           "start": 120,
@@ -525168,6 +525818,20 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 638,
+          "end": 640,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 641,
+          "end": 642,
+          "symbol": "M:go.a(ZIZIZZ)Lmf;",
+          "original": "a",
+          "renamed": "createResourceArchive"
         },
         {
           "start": 713,
@@ -544397,16 +545061,44 @@
     },
     {
       "original": "co.java",
-      "renamed": "co.java",
+      "renamed": "ArchiveSourceManager.java",
       "inputSha256": "16db74d91918d302b9e20c5542b58a9a5b2ce0c76edb1b00de4f0751084bd4c6",
-      "outputSha256": "d9b9c07a5c931cfd706869e2c2dab634fca4cd91a7b427a6c9bea30ed5abad31",
+      "outputSha256": "17a96654c050a66f15c46c72ff140e117767ce0195d68b23cac35cd60b7656c8",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 88,
+          "end": 95,
+          "symbol": "F:co.field_g:Ljava/math/BigInteger;",
+          "original": "field_g",
+          "renamed": "rsaModulus"
+        },
+        {
+          "start": 186,
+          "end": 193,
+          "symbol": "F:co.field_i:Ljava/math/BigInteger;",
+          "original": "field_i",
+          "renamed": "rsaExponent"
+        },
         {
           "start": 207,
           "end": 209,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 212,
+          "end": 219,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
         },
         {
           "start": 233,
@@ -544416,11 +545108,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 236,
+          "end": 243,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
+        },
+        {
           "start": 284,
           "end": 286,
           "symbol": "C:ih",
           "original": "ih",
           "renamed": "ArchiveFetchClient"
+        },
+        {
+          "start": 287,
+          "end": 294,
+          "symbol": "F:co.field_a:Lih;",
+          "original": "field_a",
+          "renamed": "fetchClient"
         },
         {
           "start": 308,
@@ -544430,11 +545136,25 @@
           "renamed": "ArchiveNetworkRequest"
         },
         {
+          "start": 311,
+          "end": 318,
+          "symbol": "F:co.field_c:Lda;",
+          "original": "field_c",
+          "renamed": "masterIndexRequest"
+        },
+        {
           "start": 332,
           "end": 334,
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "CacheIoWorker"
+        },
+        {
+          "start": 335,
+          "end": 342,
+          "symbol": "F:co.field_h:Lkg;",
+          "original": "field_h",
+          "renamed": "cacheIo"
         },
         {
           "start": 355,
@@ -544444,11 +545164,186 @@
           "renamed": "AlphaFont"
         },
         {
+          "start": 383,
+          "end": 384,
+          "symbol": "M:co.a(I)V",
+          "original": "a",
+          "renamed": "maintainArchiveSources"
+        },
+        {
+          "start": 389,
+          "end": 395,
+          "symbol": "P:co.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 411,
+          "end": 415,
+          "symbol": "L:co.a(I)V#0",
+          "original": "var2",
+          "renamed": "queuedSourceIndex"
+        },
+        {
+          "start": 429,
+          "end": 433,
+          "symbol": "L:co.a(I)V#1",
+          "original": "var3",
+          "renamed": "unusedClientFlag"
+        },
+        {
+          "start": 447,
+          "end": 460,
+          "symbol": "L:co.a(I)V#2",
+          "original": "var2Lifetime1",
+          "renamed": "maintenanceSourceIndex"
+        },
+        {
+          "start": 470,
+          "end": 474,
+          "symbol": "L:co.a(I)V#1",
+          "original": "var3",
+          "renamed": "unusedClientFlag"
+        },
+        {
+          "start": 530,
+          "end": 537,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 581,
+          "end": 587,
+          "symbol": "P:co.a(I)V#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 612,
+          "end": 619,
+          "symbol": "F:co.field_i:Ljava/math/BigInteger;",
+          "original": "field_i",
+          "renamed": "rsaExponent"
+        },
+        {
+          "start": 674,
+          "end": 678,
+          "symbol": "L:co.a(I)V#0",
+          "original": "var2",
+          "renamed": "queuedSourceIndex"
+        },
+        {
+          "start": 689,
+          "end": 696,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 706,
+          "end": 710,
+          "symbol": "L:co.a(I)V#0",
+          "original": "var2",
+          "renamed": "queuedSourceIndex"
+        },
+        {
+          "start": 712,
+          "end": 716,
+          "symbol": "L:co.a(I)V#0",
+          "original": "var2",
+          "renamed": "queuedSourceIndex"
+        },
+        {
+          "start": 749,
+          "end": 756,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 757,
+          "end": 761,
+          "symbol": "L:co.a(I)V#0",
+          "original": "var2",
+          "renamed": "queuedSourceIndex"
+        },
+        {
+          "start": 783,
+          "end": 790,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 791,
+          "end": 795,
+          "symbol": "L:co.a(I)V#0",
+          "original": "var2",
+          "renamed": "queuedSourceIndex"
+        },
+        {
           "start": 797,
           "end": 798,
           "symbol": "M:jq.b(I)V",
           "original": "b",
           "renamed": "processQueuedGroups"
+        },
+        {
+          "start": 842,
+          "end": 855,
+          "symbol": "L:co.a(I)V#2",
+          "original": "var2Lifetime1",
+          "renamed": "maintenanceSourceIndex"
+        },
+        {
+          "start": 861,
+          "end": 874,
+          "symbol": "L:co.a(I)V#2",
+          "original": "var2Lifetime1",
+          "renamed": "maintenanceSourceIndex"
+        },
+        {
+          "start": 882,
+          "end": 889,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 898,
+          "end": 911,
+          "symbol": "L:co.a(I)V#2",
+          "original": "var2Lifetime1",
+          "renamed": "maintenanceSourceIndex"
+        },
+        {
+          "start": 944,
+          "end": 951,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 952,
+          "end": 965,
+          "symbol": "L:co.a(I)V#2",
+          "original": "var2Lifetime1",
+          "renamed": "maintenanceSourceIndex"
+        },
+        {
+          "start": 987,
+          "end": 994,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 995,
+          "end": 1008,
+          "symbol": "L:co.a(I)V#2",
+          "original": "var2Lifetime1",
+          "renamed": "maintenanceSourceIndex"
         },
         {
           "start": 1010,
@@ -544458,11 +545353,25 @@
           "renamed": "maintainGroups"
         },
         {
+          "start": 1049,
+          "end": 1051,
+          "symbol": "M:co.<init>(Lih;Lkg;)V",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 1052,
           "end": 1054,
           "symbol": "C:ih",
           "original": "ih",
           "renamed": "ArchiveFetchClient"
+        },
+        {
+          "start": 1055,
+          "end": 1061,
+          "symbol": "P:co.<init>(Lih;Lkg;)V#0",
+          "original": "param0",
+          "renamed": "fetchClient"
         },
         {
           "start": 1063,
@@ -544472,11 +545381,95 @@
           "renamed": "CacheIoWorker"
         },
         {
+          "start": 1066,
+          "end": 1072,
+          "symbol": "P:co.<init>(Lih;Lkg;)V#1",
+          "original": "param1",
+          "renamed": "cacheIo"
+        },
+        {
+          "start": 1089,
+          "end": 1095,
+          "symbol": "P:co.<init>(Lih;Lkg;)V#0",
+          "original": "param0",
+          "renamed": "fetchClient"
+        },
+        {
+          "start": 1097,
+          "end": 1103,
+          "symbol": "P:co.<init>(Lih;Lkg;)V#1",
+          "original": "param1",
+          "renamed": "cacheIo"
+        },
+        {
+          "start": 1189,
+          "end": 1190,
+          "symbol": "M:co.a(Z)Z",
+          "original": "a",
+          "renamed": "pollMasterIndex"
+        },
+        {
+          "start": 1199,
+          "end": 1205,
+          "symbol": "P:co.a(Z)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1221,
+          "end": 1225,
+          "symbol": "L:co.a(Z)Z#0",
+          "original": "var7",
+          "renamed": "digestByteIndex"
+        },
+        {
+          "start": 1243,
+          "end": 1247,
+          "symbol": "L:co.a(Z)Z#1",
+          "original": "var3",
+          "renamed": "archiveCount"
+        },
+        {
+          "start": 1264,
+          "end": 1268,
+          "symbol": "L:co.a(Z)Z#2",
+          "original": "var4",
+          "renamed": "signatureBytes"
+        },
+        {
+          "start": 1285,
+          "end": 1289,
+          "symbol": "L:co.a(Z)Z#3",
+          "original": "var5",
+          "renamed": "recoveredSignature"
+        },
+        {
+          "start": 1320,
+          "end": 1349,
+          "symbol": "L:co.a(Z)Z#4",
+          "original": "var7_ref_java_math_BigInteger",
+          "renamed": "recoveredInteger"
+        },
+        {
+          "start": 1363,
+          "end": 1367,
+          "symbol": "L:co.a(Z)Z#5",
+          "original": "var8",
+          "renamed": "unusedClientFlag"
+        },
+        {
           "start": 1377,
           "end": 1379,
           "symbol": "C:ve",
           "original": "ve",
           "renamed": "FileCacheStore"
+        },
+        {
+          "start": 1380,
+          "end": 1384,
+          "symbol": "L:co.a(Z)Z#6",
+          "original": "var9",
+          "renamed": "unusedIndexCache"
         },
         {
           "start": 1394,
@@ -544486,11 +545479,88 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1397,
+          "end": 1402,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
+        },
+        {
+          "start": 1419,
+          "end": 1424,
+          "symbol": "L:co.a(Z)Z#8",
+          "original": "var12",
+          "renamed": "signatureStorage"
+        },
+        {
+          "start": 1455,
+          "end": 1460,
+          "symbol": "L:co.a(Z)Z#9",
+          "original": "var13",
+          "renamed": "signatureInteger"
+        },
+        {
+          "start": 1477,
+          "end": 1482,
+          "symbol": "L:co.a(Z)Z#10",
+          "original": "var14",
+          "renamed": "signatureBuffer"
+        },
+        {
+          "start": 1499,
+          "end": 1504,
+          "symbol": "L:co.a(Z)Z#11",
+          "original": "var16",
+          "renamed": "masterDigest"
+        },
+        {
+          "start": 1514,
+          "end": 1518,
+          "symbol": "L:co.a(Z)Z#5",
+          "original": "var8",
+          "renamed": "unusedClientFlag"
+        },
+        {
+          "start": 1574,
+          "end": 1581,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
+        },
+        {
+          "start": 1643,
+          "end": 1650,
+          "symbol": "F:co.field_c:Lda;",
+          "original": "field_c",
+          "renamed": "masterIndexRequest"
+        },
+        {
+          "start": 1673,
+          "end": 1680,
+          "symbol": "F:co.field_a:Lih;",
+          "original": "field_a",
+          "renamed": "fetchClient"
+        },
+        {
           "start": 1681,
           "end": 1682,
           "symbol": "M:ih.a(I)Z",
           "original": "a",
           "renamed": "isPriorityQueueFull"
+        },
+        {
+          "start": 1742,
+          "end": 1749,
+          "symbol": "F:co.field_c:Lda;",
+          "original": "field_c",
+          "renamed": "masterIndexRequest"
+        },
+        {
+          "start": 1757,
+          "end": 1764,
+          "symbol": "F:co.field_a:Lih;",
+          "original": "field_a",
+          "renamed": "fetchClient"
         },
         {
           "start": 1765,
@@ -544500,11 +545570,25 @@
           "renamed": "request"
         },
         {
+          "start": 1833,
+          "end": 1840,
+          "symbol": "F:co.field_c:Lda;",
+          "original": "field_c",
+          "renamed": "masterIndexRequest"
+        },
+        {
           "start": 1841,
           "end": 1848,
           "symbol": "F:hb.field_u:Z",
           "original": "field_u",
           "renamed": "pending"
+        },
+        {
+          "start": 1894,
+          "end": 1899,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
         },
         {
           "start": 1906,
@@ -544514,11 +545598,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1914,
+          "end": 1921,
+          "symbol": "F:co.field_c:Lda;",
+          "original": "field_c",
+          "renamed": "masterIndexRequest"
+        },
+        {
           "start": 1922,
           "end": 1923,
           "symbol": "M:da.c(B)[B",
           "original": "c",
           "renamed": "getData"
+        },
+        {
+          "start": 1945,
+          "end": 1950,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
         },
         {
           "start": 1951,
@@ -544528,11 +545626,32 @@
           "renamed": "position"
         },
         {
+          "start": 1972,
+          "end": 1976,
+          "symbol": "L:co.a(Z)Z#1",
+          "original": "var3",
+          "renamed": "archiveCount"
+        },
+        {
+          "start": 1979,
+          "end": 1984,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
+        },
+        {
           "start": 1985,
           "end": 1986,
           "symbol": "M:wq.l(I)I",
           "original": "l",
           "renamed": "readUnsignedByte"
+        },
+        {
+          "start": 2001,
+          "end": 2006,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
         },
         {
           "start": 2007,
@@ -544542,11 +545661,39 @@
           "renamed": "position"
         },
         {
+          "start": 2017,
+          "end": 2022,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
+        },
+        {
           "start": 2023,
           "end": 2030,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 2038,
+          "end": 2042,
+          "symbol": "L:co.a(Z)Z#1",
+          "original": "var3",
+          "renamed": "archiveCount"
+        },
+        {
+          "start": 2052,
+          "end": 2057,
+          "symbol": "L:co.a(Z)Z#10",
+          "original": "var14",
+          "renamed": "signatureBuffer"
+        },
+        {
+          "start": 2069,
+          "end": 2074,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
         },
         {
           "start": 2075,
@@ -544556,11 +545703,53 @@
           "renamed": "data"
         },
         {
+          "start": 2092,
+          "end": 2097,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
+        },
+        {
           "start": 2098,
           "end": 2105,
           "symbol": "F:wq.field_l:I",
           "original": "field_l",
           "renamed": "position"
+        },
+        {
+          "start": 2116,
+          "end": 2121,
+          "symbol": "L:co.a(Z)Z#8",
+          "original": "var12",
+          "renamed": "signatureStorage"
+        },
+        {
+          "start": 2124,
+          "end": 2129,
+          "symbol": "L:co.a(Z)Z#10",
+          "original": "var14",
+          "renamed": "signatureBuffer"
+        },
+        {
+          "start": 2139,
+          "end": 2143,
+          "symbol": "L:co.a(Z)Z#2",
+          "original": "var4",
+          "renamed": "signatureBytes"
+        },
+        {
+          "start": 2146,
+          "end": 2151,
+          "symbol": "L:co.a(Z)Z#8",
+          "original": "var12",
+          "renamed": "signatureStorage"
+        },
+        {
+          "start": 2161,
+          "end": 2166,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
         },
         {
           "start": 2167,
@@ -544570,11 +545759,130 @@
           "renamed": "readBytes"
         },
         {
+          "start": 2172,
+          "end": 2176,
+          "symbol": "L:co.a(Z)Z#2",
+          "original": "var4",
+          "renamed": "signatureBytes"
+        },
+        {
+          "start": 2183,
+          "end": 2188,
+          "symbol": "L:co.a(Z)Z#10",
+          "original": "var14",
+          "renamed": "signatureBuffer"
+        },
+        {
+          "start": 2223,
+          "end": 2230,
+          "symbol": "F:co.field_i:Ljava/math/BigInteger;",
+          "original": "field_i",
+          "renamed": "rsaExponent"
+        },
+        {
+          "start": 2257,
+          "end": 2264,
+          "symbol": "F:co.field_g:Ljava/math/BigInteger;",
+          "original": "field_g",
+          "renamed": "rsaModulus"
+        },
+        {
+          "start": 2278,
+          "end": 2283,
+          "symbol": "L:co.a(Z)Z#9",
+          "original": "var13",
+          "renamed": "signatureInteger"
+        },
+        {
+          "start": 2311,
+          "end": 2316,
+          "symbol": "L:co.a(Z)Z#10",
+          "original": "var14",
+          "renamed": "signatureBuffer"
+        },
+        {
+          "start": 2329,
+          "end": 2358,
+          "symbol": "L:co.a(Z)Z#4",
+          "original": "var7_ref_java_math_BigInteger",
+          "renamed": "recoveredInteger"
+        },
+        {
+          "start": 2361,
+          "end": 2366,
+          "symbol": "L:co.a(Z)Z#9",
+          "original": "var13",
+          "renamed": "signatureInteger"
+        },
+        {
+          "start": 2379,
+          "end": 2386,
+          "symbol": "F:co.field_i:Ljava/math/BigInteger;",
+          "original": "field_i",
+          "renamed": "rsaExponent"
+        },
+        {
+          "start": 2393,
+          "end": 2400,
+          "symbol": "F:co.field_g:Ljava/math/BigInteger;",
+          "original": "field_g",
+          "renamed": "rsaModulus"
+        },
+        {
+          "start": 2413,
+          "end": 2417,
+          "symbol": "L:co.a(Z)Z#3",
+          "original": "var5",
+          "renamed": "recoveredSignature"
+        },
+        {
+          "start": 2420,
+          "end": 2449,
+          "symbol": "L:co.a(Z)Z#4",
+          "original": "var7_ref_java_math_BigInteger",
+          "renamed": "recoveredInteger"
+        },
+        {
+          "start": 2492,
+          "end": 2496,
+          "symbol": "L:co.a(Z)Z#3",
+          "original": "var5",
+          "renamed": "recoveredSignature"
+        },
+        {
+          "start": 2499,
+          "end": 2503,
+          "symbol": "L:co.a(Z)Z#2",
+          "original": "var4",
+          "renamed": "signatureBytes"
+        },
+        {
+          "start": 2527,
+          "end": 2531,
+          "symbol": "L:co.a(Z)Z#3",
+          "original": "var5",
+          "renamed": "recoveredSignature"
+        },
+        {
+          "start": 2606,
+          "end": 2611,
+          "symbol": "L:co.a(Z)Z#11",
+          "original": "var16",
+          "renamed": "masterDigest"
+        },
+        {
           "start": 2617,
           "end": 2618,
           "symbol": "M:jd.a([BIII)[B",
           "original": "a",
           "renamed": "computeWhirlpoolDigest"
+        },
+        {
+          "start": 2619,
+          "end": 2624,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
         },
         {
           "start": 2625,
@@ -544584,6 +545892,13 @@
           "renamed": "data"
         },
         {
+          "start": 2645,
+          "end": 2650,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
+        },
+        {
           "start": 2651,
           "end": 2658,
           "symbol": "F:wq.field_l:I",
@@ -544591,11 +545906,102 @@
           "renamed": "position"
         },
         {
+          "start": 2661,
+          "end": 2666,
+          "symbol": "L:co.a(Z)Z#10",
+          "original": "var14",
+          "renamed": "signatureBuffer"
+        },
+        {
+          "start": 2693,
+          "end": 2697,
+          "symbol": "L:co.a(Z)Z#0",
+          "original": "var7",
+          "renamed": "digestByteIndex"
+        },
+        {
+          "start": 2708,
+          "end": 2712,
+          "symbol": "L:co.a(Z)Z#0",
+          "original": "var7",
+          "renamed": "digestByteIndex"
+        },
+        {
+          "start": 2714,
+          "end": 2718,
+          "symbol": "L:co.a(Z)Z#0",
+          "original": "var7",
+          "renamed": "digestByteIndex"
+        },
+        {
+          "start": 2738,
+          "end": 2743,
+          "symbol": "L:co.a(Z)Z#11",
+          "original": "var16",
+          "renamed": "masterDigest"
+        },
+        {
+          "start": 2744,
+          "end": 2748,
+          "symbol": "L:co.a(Z)Z#0",
+          "original": "var7",
+          "renamed": "digestByteIndex"
+        },
+        {
+          "start": 2753,
+          "end": 2757,
+          "symbol": "L:co.a(Z)Z#3",
+          "original": "var5",
+          "renamed": "recoveredSignature"
+        },
+        {
+          "start": 2758,
+          "end": 2762,
+          "symbol": "L:co.a(Z)Z#0",
+          "original": "var7",
+          "renamed": "digestByteIndex"
+        },
+        {
+          "start": 2848,
+          "end": 2855,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
+        },
+        {
+          "start": 2858,
+          "end": 2863,
+          "symbol": "L:co.a(Z)Z#7",
+          "original": "var11",
+          "renamed": "masterPacket"
+        },
+        {
+          "start": 2877,
+          "end": 2883,
+          "symbol": "P:co.a(Z)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2897,
+          "end": 2901,
+          "symbol": "L:co.a(Z)Z#6",
+          "original": "var9",
+          "renamed": "unusedIndexCache"
+        },
+        {
           "start": 2905,
           "end": 2907,
           "symbol": "C:ve",
           "original": "ve",
           "renamed": "FileCacheStore"
+        },
+        {
+          "start": 2930,
+          "end": 2931,
+          "symbol": "M:co.a(IZLve;ILve;)Ljq;",
+          "original": "a",
+          "renamed": "getArchiveSource"
         },
         {
           "start": 2943,
@@ -544612,11 +546018,25 @@
           "renamed": "FileCacheStore"
         },
         {
+          "start": 2993,
+          "end": 3000,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
           "start": 3007,
           "end": 3009,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 3010,
+          "end": 3014,
+          "symbol": "L:co.a(Z)Z#1",
+          "original": "var3",
+          "renamed": "archiveCount"
         },
         {
           "start": 3162,
@@ -544696,11 +546116,46 @@
           "renamed": "CachedArchiveSource"
         },
         {
+          "start": 3706,
+          "end": 3707,
+          "symbol": "M:co.a(IZLve;ILve;)Ljq;",
+          "original": "a",
+          "renamed": "getArchiveSource"
+        },
+        {
+          "start": 3712,
+          "end": 3718,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3728,
+          "end": 3734,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#1",
+          "original": "param1",
+          "renamed": "cleanupEnabled"
+        },
+        {
           "start": 3736,
           "end": 3738,
           "symbol": "C:ve",
           "original": "ve",
           "renamed": "FileCacheStore"
+        },
+        {
+          "start": 3739,
+          "end": 3745,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#2",
+          "original": "param2",
+          "renamed": "indexCache"
+        },
+        {
+          "start": 3751,
+          "end": 3757,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
         },
         {
           "start": 3759,
@@ -544710,11 +546165,25 @@
           "renamed": "FileCacheStore"
         },
         {
+          "start": 3762,
+          "end": 3768,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#4",
+          "original": "param4",
+          "renamed": "groupCache"
+        },
+        {
           "start": 3780,
           "end": 3782,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 3783,
+          "end": 3794,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#0",
+          "original": "stackIn_9_0",
+          "renamed": "cachedSourceResult"
         },
         {
           "start": 3811,
@@ -544724,11 +546193,179 @@
           "renamed": "CachedArchiveSource"
         },
         {
+          "start": 3814,
+          "end": 3826,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#1",
+          "original": "stackIn_11_0",
+          "renamed": "createdSourceResult"
+        },
+        {
+          "start": 3860,
+          "end": 3872,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#2",
+          "original": "stackIn_14_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 3903,
+          "end": 3915,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "stackIn_14_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 3939,
+          "end": 3951,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#4",
+          "original": "stackIn_15_2",
+          "renamed": "indexCacheSummary"
+        },
+        {
+          "start": 3982,
+          "end": 3994,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#5",
+          "original": "stackIn_17_1",
+          "renamed": "groupContextBuilder"
+        },
+        {
+          "start": 4018,
+          "end": 4030,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#6",
+          "original": "stackIn_18_2",
+          "renamed": "groupCacheSummary"
+        },
+        {
+          "start": 4064,
+          "end": 4089,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 4110,
+          "end": 4118,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#8",
+          "original": "var6_int",
+          "renamed": "unusedGuardQuotient"
+        },
+        {
+          "start": 4149,
+          "end": 4153,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#9",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 4174,
+          "end": 4178,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#10",
+          "original": "var7",
+          "renamed": "indexCrc"
+        },
+        {
+          "start": 4196,
+          "end": 4200,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#11",
+          "original": "var8",
+          "renamed": "indexRevision"
+        },
+        {
           "start": 4214,
           "end": 4216,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 4217,
+          "end": 4222,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#12",
+          "original": "var10",
+          "renamed": "source"
+        },
+        {
+          "start": 4246,
+          "end": 4251,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#13",
+          "original": "var14",
+          "renamed": "indexDigest"
+        },
+        {
+          "start": 4301,
+          "end": 4308,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
+        },
+        {
+          "start": 4380,
+          "end": 4386,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 4407,
+          "end": 4413,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 4421,
+          "end": 4428,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 4468,
+          "end": 4475,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 4476,
+          "end": 4482,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 4501,
+          "end": 4512,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#0",
+          "original": "stackIn_9_0",
+          "renamed": "cachedSourceResult"
+        },
+        {
+          "start": 4520,
+          "end": 4527,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 4528,
+          "end": 4534,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 4558,
+          "end": 4569,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#0",
+          "original": "stackIn_9_0",
+          "renamed": "cachedSourceResult"
+        },
+        {
+          "start": 4602,
+          "end": 4609,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
         },
         {
           "start": 4610,
@@ -544738,11 +546375,60 @@
           "renamed": "position"
         },
         {
+          "start": 4620,
+          "end": 4626,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 4649,
+          "end": 4657,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#8",
+          "original": "var6_int",
+          "renamed": "unusedGuardQuotient"
+        },
+        {
+          "start": 4669,
+          "end": 4675,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 4701,
+          "end": 4705,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#10",
+          "original": "var7",
+          "renamed": "indexCrc"
+        },
+        {
+          "start": 4713,
+          "end": 4720,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
+        },
+        {
           "start": 4721,
           "end": 4722,
           "symbol": "M:wq.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 4741,
+          "end": 4745,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#11",
+          "original": "var8",
+          "renamed": "indexRevision"
+        },
+        {
+          "start": 4753,
+          "end": 4760,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
         },
         {
           "start": 4761,
@@ -544752,6 +546438,20 @@
           "renamed": "readInt"
         },
         {
+          "start": 4781,
+          "end": 4786,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#13",
+          "original": "var14",
+          "renamed": "indexDigest"
+        },
+        {
+          "start": 4820,
+          "end": 4827,
+          "symbol": "F:co.field_b:Lwq;",
+          "original": "field_b",
+          "renamed": "masterIndexPacket"
+        },
+        {
           "start": 4828,
           "end": 4829,
           "symbol": "M:wq.a(I[BII)V",
@@ -544759,11 +546459,270 @@
           "renamed": "readBytes"
         },
         {
+          "start": 4833,
+          "end": 4838,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#13",
+          "original": "var14",
+          "renamed": "indexDigest"
+        },
+        {
+          "start": 4862,
+          "end": 4867,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#12",
+          "original": "var10",
+          "renamed": "source"
+        },
+        {
           "start": 4874,
           "end": 4876,
           "symbol": "C:jq",
           "original": "jq",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 4877,
+          "end": 4883,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 4885,
+          "end": 4891,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#4",
+          "original": "param4",
+          "renamed": "groupCache"
+        },
+        {
+          "start": 4893,
+          "end": 4899,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#2",
+          "original": "param2",
+          "renamed": "indexCache"
+        },
+        {
+          "start": 4906,
+          "end": 4913,
+          "symbol": "F:co.field_a:Lih;",
+          "original": "field_a",
+          "renamed": "fetchClient"
+        },
+        {
+          "start": 4920,
+          "end": 4927,
+          "symbol": "F:co.field_h:Lkg;",
+          "original": "field_h",
+          "renamed": "cacheIo"
+        },
+        {
+          "start": 4929,
+          "end": 4933,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#10",
+          "original": "var7",
+          "renamed": "indexCrc"
+        },
+        {
+          "start": 4935,
+          "end": 4940,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#13",
+          "original": "var14",
+          "renamed": "indexDigest"
+        },
+        {
+          "start": 4942,
+          "end": 4946,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#11",
+          "original": "var8",
+          "renamed": "indexRevision"
+        },
+        {
+          "start": 4948,
+          "end": 4954,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#1",
+          "original": "param1",
+          "renamed": "cleanupEnabled"
+        },
+        {
+          "start": 4974,
+          "end": 4981,
+          "symbol": "F:co.field_k:[Ljq;",
+          "original": "field_k",
+          "renamed": "archiveSources"
+        },
+        {
+          "start": 4982,
+          "end": 4988,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 4992,
+          "end": 4997,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#12",
+          "original": "var10",
+          "renamed": "source"
+        },
+        {
+          "start": 5011,
+          "end": 5023,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#1",
+          "original": "stackIn_11_0",
+          "renamed": "createdSourceResult"
+        },
+        {
+          "start": 5026,
+          "end": 5031,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#12",
+          "original": "var10",
+          "renamed": "source"
+        },
+        {
+          "start": 5052,
+          "end": 5064,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#1",
+          "original": "stackIn_11_0",
+          "renamed": "createdSourceResult"
+        },
+        {
+          "start": 5162,
+          "end": 5188,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#14",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtException"
+        },
+        {
+          "start": 5202,
+          "end": 5227,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 5230,
+          "end": 5256,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#14",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "caughtException"
+        },
+        {
+          "start": 5268,
+          "end": 5272,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#9",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 5275,
+          "end": 5300,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#7",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 5312,
+          "end": 5324,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#2",
+          "original": "stackIn_14_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 5327,
+          "end": 5331,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#9",
+          "original": "var6",
+          "renamed": "failure"
+        },
+        {
+          "start": 5343,
+          "end": 5355,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "stackIn_14_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 5401,
+          "end": 5407,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 5428,
+          "end": 5434,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#1",
+          "original": "param1",
+          "renamed": "cleanupEnabled"
+        },
+        {
+          "start": 5463,
+          "end": 5469,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#2",
+          "original": "param2",
+          "renamed": "indexCache"
+        },
+        {
+          "start": 5493,
+          "end": 5505,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#4",
+          "original": "stackIn_15_2",
+          "renamed": "indexCacheSummary"
+        },
+        {
+          "start": 5547,
+          "end": 5559,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#4",
+          "original": "stackIn_15_2",
+          "renamed": "indexCacheSummary"
+        },
+        {
+          "start": 5593,
+          "end": 5605,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#5",
+          "original": "stackIn_17_1",
+          "renamed": "groupContextBuilder"
+        },
+        {
+          "start": 5634,
+          "end": 5646,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "stackIn_14_1",
+          "renamed": "contextBuilder"
+        },
+        {
+          "start": 5655,
+          "end": 5667,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#4",
+          "original": "stackIn_15_2",
+          "renamed": "indexCacheSummary"
+        },
+        {
+          "start": 5688,
+          "end": 5694,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#3",
+          "original": "param3",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 5723,
+          "end": 5729,
+          "symbol": "P:co.a(IZLve;ILve;)Ljq;#4",
+          "original": "param4",
+          "renamed": "groupCache"
+        },
+        {
+          "start": 5753,
+          "end": 5765,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#6",
+          "original": "stackIn_18_2",
+          "renamed": "groupCacheSummary"
+        },
+        {
+          "start": 5807,
+          "end": 5819,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#6",
+          "original": "stackIn_18_2",
+          "renamed": "groupCacheSummary"
         },
         {
           "start": 5859,
@@ -544780,11 +546739,46 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 5886,
+          "end": 5898,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#2",
+          "original": "stackIn_14_0",
+          "renamed": "failureContext"
+        },
+        {
+          "start": 5927,
+          "end": 5939,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#5",
+          "original": "stackIn_17_1",
+          "renamed": "groupContextBuilder"
+        },
+        {
+          "start": 5948,
+          "end": 5960,
+          "symbol": "L:co.a(IZLve;ILve;)Ljq;#6",
+          "original": "stackIn_18_2",
+          "renamed": "groupCacheSummary"
+        },
+        {
+          "start": 6016,
+          "end": 6018,
+          "symbol": "M:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 6019,
           "end": 6021,
           "symbol": "C:ih",
           "original": "ih",
           "renamed": "ArchiveFetchClient"
+        },
+        {
+          "start": 6022,
+          "end": 6028,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+          "original": "param0",
+          "renamed": "fetchClient"
         },
         {
           "start": 6030,
@@ -544794,6 +546788,90 @@
           "renamed": "CacheIoWorker"
         },
         {
+          "start": 6033,
+          "end": 6039,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+          "original": "param1",
+          "renamed": "cacheIo"
+        },
+        {
+          "start": 6062,
+          "end": 6068,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+          "original": "param2",
+          "renamed": "rsaExponent"
+        },
+        {
+          "start": 6091,
+          "end": 6097,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
+          "original": "param3",
+          "renamed": "rsaModulus"
+        },
+        {
+          "start": 6130,
+          "end": 6137,
+          "symbol": "F:co.field_g:Ljava/math/BigInteger;",
+          "original": "field_g",
+          "renamed": "rsaModulus"
+        },
+        {
+          "start": 6140,
+          "end": 6146,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
+          "original": "param3",
+          "renamed": "rsaModulus"
+        },
+        {
+          "start": 6163,
+          "end": 6170,
+          "symbol": "F:co.field_i:Ljava/math/BigInteger;",
+          "original": "field_i",
+          "renamed": "rsaExponent"
+        },
+        {
+          "start": 6173,
+          "end": 6179,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+          "original": "param2",
+          "renamed": "rsaExponent"
+        },
+        {
+          "start": 6196,
+          "end": 6203,
+          "symbol": "F:co.field_h:Lkg;",
+          "original": "field_h",
+          "renamed": "cacheIo"
+        },
+        {
+          "start": 6206,
+          "end": 6212,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+          "original": "param1",
+          "renamed": "cacheIo"
+        },
+        {
+          "start": 6229,
+          "end": 6236,
+          "symbol": "F:co.field_a:Lih;",
+          "original": "field_a",
+          "renamed": "fetchClient"
+        },
+        {
+          "start": 6239,
+          "end": 6245,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+          "original": "param0",
+          "renamed": "fetchClient"
+        },
+        {
+          "start": 6267,
+          "end": 6274,
+          "symbol": "F:co.field_a:Lih;",
+          "original": "field_a",
+          "renamed": "fetchClient"
+        },
+        {
           "start": 6275,
           "end": 6276,
           "symbol": "M:ih.a(I)Z",
@@ -544801,11 +546879,32 @@
           "renamed": "isPriorityQueueFull"
         },
         {
+          "start": 6300,
+          "end": 6307,
+          "symbol": "F:co.field_c:Lda;",
+          "original": "field_c",
+          "renamed": "masterIndexRequest"
+        },
+        {
+          "start": 6315,
+          "end": 6322,
+          "symbol": "F:co.field_a:Lih;",
+          "original": "field_a",
+          "renamed": "fetchClient"
+        },
+        {
           "start": 6323,
           "end": 6324,
           "symbol": "M:ih.a(IIBIZ)Lda;",
           "original": "a",
           "renamed": "request"
+        },
+        {
+          "start": 6410,
+          "end": 6426,
+          "symbol": "L:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
         },
         {
           "start": 6446,
@@ -544820,6 +546919,41 @@
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
+        },
+        {
+          "start": 6473,
+          "end": 6489,
+          "symbol": "L:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 6508,
+          "end": 6514,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+          "original": "param0",
+          "renamed": "fetchClient"
+        },
+        {
+          "start": 6552,
+          "end": 6558,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+          "original": "param1",
+          "renamed": "cacheIo"
+        },
+        {
+          "start": 6596,
+          "end": 6602,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+          "original": "param2",
+          "renamed": "rsaExponent"
+        },
+        {
+          "start": 6640,
+          "end": 6646,
+          "symbol": "P:co.<init>(Lih;Lkg;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
+          "original": "param3",
+          "renamed": "rsaModulus"
         },
         {
           "start": 6737,
@@ -544876,7 +547010,7 @@
       "original": "cp.java",
       "renamed": "WidgetLayerStack.java",
       "inputSha256": "4b704946f7d1a3a12952c7e037a867724d6c2d8ead54ce8763394c76e202a71d",
-      "outputSha256": "f6a4f6c02ac4af531d0637ac432a1d47f99f68c1b94cc3eede029cf3d8b554a2",
+      "outputSha256": "9034ebece61e709cc398af21ad2dc4bde3147cde8890278e390bee6deb484b68",
       "edits": [
         {
           "start": 50,
@@ -544954,6 +547088,13 @@
           "symbol": "C:j",
           "original": "j",
           "renamed": "PlayerBoard"
+        },
+        {
+          "start": 485,
+          "end": 487,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 517,
@@ -547489,7 +549630,7 @@
       "original": "cr.java",
       "renamed": "ActivityIndicatorWidget.java",
       "inputSha256": "cd09fe2ed0378fa9d92efa295b2bad2bb050d9ae887d034b0cce0d5c7daae5f8",
-      "outputSha256": "c548159b2eb3197d0f7bcd826a971d743f67347b11cef34eb66757ac139cb6a0",
+      "outputSha256": "d77c5191ecc99c14dcb1fb1ff118dd1e56d4c1d4e9d810f99005efc0da1c272d",
       "edits": [
         {
           "start": 69,
@@ -547924,6 +550065,20 @@
           "symbol": "C:dp",
           "original": "dp",
           "renamed": "HalloweenBackground"
+        },
+        {
+          "start": 1355,
+          "end": 1362,
+          "symbol": "F:dp.field_v:Lco;",
+          "original": "field_v",
+          "renamed": "archiveSourceManager"
+        },
+        {
+          "start": 1369,
+          "end": 1371,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 1384,
@@ -574250,7 +576405,7 @@
       "original": "dp.java",
       "renamed": "HalloweenBackground.java",
       "inputSha256": "510137ab99fc63903b8321f8800db51a0b5683d0299e33fd07844c56fcd77327",
-      "outputSha256": "0d9db5e609b2aba1ff6704a4ea923058a7d0710551740508a8d1e0293d20da7a",
+      "outputSha256": "053ad2026211b5c3004450cf7de3cd22423b9c743bf45b0bd709c409697167ee",
       "edits": [
         {
           "start": 50,
@@ -574293,6 +576448,20 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 264,
+          "end": 266,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 267,
+          "end": 274,
+          "symbol": "F:dp.field_v:Lco;",
+          "original": "field_v",
+          "renamed": "archiveSourceManager"
         },
         {
           "start": 292,
@@ -576582,6 +578751,13 @@
           "symbol": "F:dp.field_t:Ljava/lang/String;",
           "original": "field_t",
           "renamed": "receivedChatDisplayName"
+        },
+        {
+          "start": 8299,
+          "end": 8306,
+          "symbol": "F:dp.field_v:Lco;",
+          "original": "field_v",
+          "renamed": "archiveSourceManager"
         },
         {
           "start": 8387,
@@ -620423,7 +622599,7 @@
       "original": "fl.java",
       "renamed": "UsernameAvailabilityValidator.java",
       "inputSha256": "b32305d0ebb1363762119167728dbda0b5905ce8c9e41935359d4ff7536ce5a4",
-      "outputSha256": "1d79c50beaecc6a42dcf2dced25a453db3f4d683cb71d34d52ea66501c938f29",
+      "outputSha256": "914b3465fec57e7d7e4fd1e8b0461bcf07e84d6cf1dcbc3d15c2961b62076751",
       "edits": [
         {
           "start": 50,
@@ -620459,6 +622635,13 @@
           "symbol": "C:vq",
           "original": "vq",
           "renamed": "LevelCompleteScreen"
+        },
+        {
+          "start": 295,
+          "end": 297,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 319,
@@ -634718,7 +636901,7 @@
       "original": "gi.java",
       "renamed": "DesertBackground.java",
       "inputSha256": "902fb2d9e57550a0263449a7daa63901064ec79d7347c0dbe99e9b493f4b0213",
-      "outputSha256": "c1e8493a187b69c5d16e606fc6d985aa65761a7765c913db9ec6479fbf21ff11",
+      "outputSha256": "0ccb53af03c54b8adaf63ebbecec26371ea7686f6508dced075b0f96fa6243c9",
       "edits": [
         {
           "start": 50,
@@ -636660,6 +638843,13 @@
           "renamed": "desertCentreSprites"
         },
         {
+          "start": 6562,
+          "end": 6564,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 6630,
           "end": 6631,
           "symbol": "M:ta.a(IIIZI)V",
@@ -638144,10 +640334,17 @@
     },
     {
       "original": "go.java",
-      "renamed": "go.java",
+      "renamed": "ResourceArchiveFactory.java",
       "inputSha256": "ec5046c27529b70c7d4d0f9309070d6db4bdfb27f8712c70e9db5fc05bd5f21c",
-      "outputSha256": "05bb317084d61de9c3d6e47ba98f0eb9452c226aa464cd9f321513d0f75fa538",
+      "outputSha256": "852a0c1ad6e0f964b50f372c2b1715f12ec5d9a641a2478c28204d315a64fef4",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
         {
           "start": 90,
           "end": 97,
@@ -638191,6 +640388,27 @@
           "renamed": "currentKeyCharacter"
         },
         {
+          "start": 429,
+          "end": 430,
+          "symbol": "M:go.a(B)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "readIncomingString"
+        },
+        {
+          "start": 436,
+          "end": 442,
+          "symbol": "P:go.a(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 478,
+          "end": 484,
+          "symbol": "P:go.a(B)Ljava/lang/String;#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 511,
           "end": 518,
           "symbol": "F:jl.field_e:Lpi;",
@@ -638212,6 +640430,69 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 553,
+          "end": 554,
+          "symbol": "M:go.a(ZIZIZZ)Lmf;",
+          "original": "a",
+          "renamed": "createResourceArchive"
+        },
+        {
+          "start": 563,
+          "end": 569,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#0",
+          "original": "param0",
+          "renamed": "prefetch"
+        },
+        {
+          "start": 575,
+          "end": 581,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 591,
+          "end": 597,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#2",
+          "original": "param2",
+          "renamed": "cleanupEnabled"
+        },
+        {
+          "start": 603,
+          "end": 609,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#3",
+          "original": "param3",
+          "renamed": "decodedFilePolicy"
+        },
+        {
+          "start": 619,
+          "end": 625,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#4",
+          "original": "param4",
+          "renamed": "discardPackedGroups"
+        },
+        {
+          "start": 635,
+          "end": 641,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 676,
+          "end": 680,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
+          "original": "var6",
+          "renamed": "indexCacheOrFailure"
+        },
+        {
+          "start": 706,
+          "end": 710,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#1",
+          "original": "var7",
+          "renamed": "groupCache"
+        },
+        {
           "start": 729,
           "end": 731,
           "symbol": "C:jq",
@@ -638219,11 +640500,46 @@
           "renamed": "CachedArchiveSource"
         },
         {
+          "start": 732,
+          "end": 736,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#2",
+          "original": "var8",
+          "renamed": "source"
+        },
+        {
           "start": 755,
           "end": 757,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 758,
+          "end": 770,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#3",
+          "original": "stackIn_14_0",
+          "renamed": "archiveResult"
+        },
+        {
+          "start": 799,
+          "end": 824,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 861,
+          "end": 865,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
+          "original": "var6",
+          "renamed": "indexCacheOrFailure"
+        },
+        {
+          "start": 886,
+          "end": 890,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#1",
+          "original": "var7",
+          "renamed": "groupCache"
         },
         {
           "start": 915,
@@ -638259,6 +640575,13 @@
           "symbol": "C:ec",
           "original": "ec",
           "renamed": "DialogMessagePanel"
+        },
+        {
+          "start": 1064,
+          "end": 1068,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
+          "original": "var6",
+          "renamed": "indexCacheOrFailure"
         },
         {
           "start": 1075,
@@ -638331,11 +640654,25 @@
           "renamed": "ClientException"
         },
         {
+          "start": 1341,
+          "end": 1347,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
+        },
+        {
           "start": 1376,
           "end": 1377,
           "symbol": "C:v",
           "original": "v",
           "renamed": "ClientException"
+        },
+        {
+          "start": 1386,
+          "end": 1392,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
         },
         {
           "start": 1400,
@@ -638352,6 +640689,13 @@
           "renamed": "DialogMessagePanel"
         },
         {
+          "start": 1422,
+          "end": 1428,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
+        },
+        {
           "start": 1458,
           "end": 1460,
           "symbol": "C:ec",
@@ -638359,11 +640703,32 @@
           "renamed": "DialogMessagePanel"
         },
         {
+          "start": 1477,
+          "end": 1483,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 1523,
+          "end": 1527,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#1",
+          "original": "var7",
+          "renamed": "groupCache"
+        },
+        {
           "start": 1534,
           "end": 1536,
           "symbol": "C:ve",
           "original": "ve",
           "renamed": "FileCacheStore"
+        },
+        {
+          "start": 1537,
+          "end": 1543,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
         },
         {
           "start": 1545,
@@ -638380,11 +640745,60 @@
           "renamed": "ClientException"
         },
         {
+          "start": 1567,
+          "end": 1573,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
+        },
+        {
+          "start": 1617,
+          "end": 1623,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#5",
+          "original": "param5",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1641,
+          "end": 1643,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 1677,
+          "end": 1681,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#2",
+          "original": "var8",
+          "renamed": "source"
+        },
+        {
           "start": 1684,
           "end": 1686,
           "symbol": "C:dp",
           "original": "dp",
           "renamed": "HalloweenBackground"
+        },
+        {
+          "start": 1687,
+          "end": 1694,
+          "symbol": "F:dp.field_v:Lco;",
+          "original": "field_v",
+          "renamed": "archiveSourceManager"
+        },
+        {
+          "start": 1695,
+          "end": 1696,
+          "symbol": "M:co.a(IZLve;ILve;)Ljq;",
+          "original": "a",
+          "renamed": "getArchiveSource"
+        },
+        {
+          "start": 1701,
+          "end": 1707,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#2",
+          "original": "param2",
+          "renamed": "cleanupEnabled"
         },
         {
           "start": 1710,
@@ -638394,11 +640808,46 @@
           "renamed": "FileCacheStore"
         },
         {
+          "start": 1715,
+          "end": 1719,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
+          "original": "var6",
+          "renamed": "indexCacheOrFailure"
+        },
+        {
+          "start": 1722,
+          "end": 1728,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#1",
+          "original": "param1",
+          "renamed": "archiveId"
+        },
+        {
           "start": 1731,
           "end": 1733,
           "symbol": "C:ve",
           "original": "ve",
           "renamed": "FileCacheStore"
+        },
+        {
+          "start": 1736,
+          "end": 1740,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#1",
+          "original": "var7",
+          "renamed": "groupCache"
+        },
+        {
+          "start": 1760,
+          "end": 1766,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#0",
+          "original": "param0",
+          "renamed": "prefetch"
+        },
+        {
+          "start": 1784,
+          "end": 1788,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#2",
+          "original": "var8",
+          "renamed": "source"
         },
         {
           "start": 1789,
@@ -638408,11 +640857,116 @@
           "renamed": "startPrefetch"
         },
         {
+          "start": 1826,
+          "end": 1838,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#3",
+          "original": "stackIn_14_0",
+          "renamed": "archiveResult"
+        },
+        {
           "start": 1845,
           "end": 1847,
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 1848,
+          "end": 1852,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#2",
+          "original": "var8",
+          "renamed": "source"
+        },
+        {
+          "start": 1854,
+          "end": 1860,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#4",
+          "original": "param4",
+          "renamed": "discardPackedGroups"
+        },
+        {
+          "start": 1862,
+          "end": 1868,
+          "symbol": "P:go.a(ZIZIZZ)Lmf;#3",
+          "original": "param3",
+          "renamed": "decodedFilePolicy"
+        },
+        {
+          "start": 1890,
+          "end": 1902,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#3",
+          "original": "stackIn_14_0",
+          "renamed": "archiveResult"
+        },
+        {
+          "start": 1943,
+          "end": 1969,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#5",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "ioFailure"
+        },
+        {
+          "start": 1985,
+          "end": 2010,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 2013,
+          "end": 2039,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#5",
+          "original": "decompiledCaughtParameter0",
+          "renamed": "ioFailure"
+        },
+        {
+          "start": 2053,
+          "end": 2057,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
+          "original": "var6",
+          "renamed": "indexCacheOrFailure"
+        },
+        {
+          "start": 2083,
+          "end": 2108,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#4",
+          "original": "decompiledCaughtException",
+          "renamed": "caughtFailure"
+        },
+        {
+          "start": 2165,
+          "end": 2169,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#0",
+          "original": "var6",
+          "renamed": "indexCacheOrFailure"
+        },
+        {
+          "start": 2239,
+          "end": 2267,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#6",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 2287,
+          "end": 2315,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#6",
+          "original": "decompiledUncheckedException",
+          "renamed": "uncheckedFailure"
+        },
+        {
+          "start": 2344,
+          "end": 2370,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#7",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
+        },
+        {
+          "start": 2411,
+          "end": 2437,
+          "symbol": "L:go.a(ZIZIZZ)Lmf;#7",
+          "original": "decompiledCheckedException",
+          "renamed": "checkedFailure"
         }
       ]
     },
@@ -639184,7 +641738,7 @@
       "original": "gq.java",
       "renamed": "NameEntryPopup.java",
       "inputSha256": "4e341dee126fd2f1e5ae0f54ac13f900b45250d2c56ec05b677493e316efd0f3",
-      "outputSha256": "12890c90526b914cf770974832202e130b38adba42a273c32fe8ca36664c5110",
+      "outputSha256": "49250efabfe361175838bf2121cf6d0345db7fc5e8c3fa22f4ab6db2609dc544",
       "edits": [
         {
           "start": 50,
@@ -639586,6 +642140,13 @@
           "renamed": "canAppendNameCharacter"
         },
         {
+          "start": 1579,
+          "end": 1581,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1582,
           "end": 1589,
           "symbol": "F:go.field_b:C",
@@ -639614,6 +642175,13 @@
           "renamed": "nameBuffer"
         },
         {
+          "start": 1689,
+          "end": 1691,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1692,
           "end": 1699,
           "symbol": "F:go.field_b:C",
@@ -639626,6 +642194,13 @@
           "symbol": "F:gq.field_Vb:Ljava/lang/StringBuilder;",
           "original": "field_Vb",
           "renamed": "nameBuffer"
+        },
+        {
+          "start": 1782,
+          "end": 1784,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 1785,
@@ -639649,6 +642224,13 @@
           "renamed": "nameBuffer"
         },
         {
+          "start": 1851,
+          "end": 1853,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1854,
           "end": 1861,
           "symbol": "F:go.field_b:C",
@@ -639661,6 +642243,13 @@
           "symbol": "F:gq.field_Vb:Ljava/lang/StringBuilder;",
           "original": "field_Vb",
           "renamed": "nameBuffer"
+        },
+        {
+          "start": 1950,
+          "end": 1952,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 1953,
@@ -639684,11 +642273,25 @@
           "renamed": "nameBuffer"
         },
         {
+          "start": 2021,
+          "end": 2023,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 2024,
           "end": 2031,
           "symbol": "F:go.field_b:C",
           "original": "field_b",
           "renamed": "currentKeyCharacter"
+        },
+        {
+          "start": 2077,
+          "end": 2079,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2080,
@@ -639710,6 +642313,13 @@
           "symbol": "F:gq.field_Vb:Ljava/lang/StringBuilder;",
           "original": "field_Vb",
           "renamed": "nameBuffer"
+        },
+        {
+          "start": 2150,
+          "end": 2152,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2153,
@@ -639899,6 +642509,13 @@
           "symbol": "L:gq.h(I)Z#9",
           "original": "var2",
           "renamed": "normalizedCharacter"
+        },
+        {
+          "start": 3210,
+          "end": 3212,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 3213,
@@ -640291,6 +642908,13 @@
           "symbol": "L:gq.h(I)Z#10",
           "original": "var2Lifetime1",
           "renamed": "emptyNormalizedCharacter"
+        },
+        {
+          "start": 5031,
+          "end": 5033,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 5034,
@@ -640781,6 +643405,13 @@
           "symbol": "L:gq.h(I)Z#11",
           "original": "var2Lifetime2",
           "renamed": "backspaceNormalizedCharacter"
+        },
+        {
+          "start": 7333,
+          "end": 7335,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 7336,
@@ -651140,7 +653771,7 @@
       "original": "he.java",
       "renamed": "AccountIntroductionPanel.java",
       "inputSha256": "f31c690262dcf092917e4def66e690c58248fcd1c29fece51ea9cf3a05b97938",
-      "outputSha256": "30f3b8196233f70436557f7b34a1ac5302c70e603e778262b80218dc8d7ef076",
+      "outputSha256": "1a45a698b0e41a05126a83f7449b690ec612f63ed6da239f2275db46d6c556b6",
       "edits": [
         {
           "start": 69,
@@ -651864,11 +654495,32 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 4161,
+          "end": 4163,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 4219,
+          "end": 4221,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 4230,
           "end": 4231,
           "symbol": "M:jg.a(IJ)V",
           "original": "a",
           "renamed": "seek"
+        },
+        {
+          "start": 4256,
+          "end": 4258,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 4267,
@@ -653405,7 +656057,7 @@
       "original": "hi.java",
       "renamed": "ButtonWidgetRenderer.java",
       "inputSha256": "3c964aad048467b618861975bfed483ce6dc41f9c44ef8f88e6f3e418cc9d3ec",
-      "outputSha256": "9241ea9977252271f91a21e2c30df8aa68e6bfc7f96dc159278ae26bddf9dca4",
+      "outputSha256": "7d4f77a9621b985562db84babb8788ac1b5a637e431f5bdd98ea5891c999d155",
       "edits": [
         {
           "start": 50,
@@ -653735,6 +656387,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "OptionsScreen"
+        },
+        {
+          "start": 4793,
+          "end": 4795,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 4796,
@@ -654213,6 +656872,13 @@
           "renamed": "OptionsScreen"
         },
         {
+          "start": 8876,
+          "end": 8878,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 8879,
           "end": 8886,
           "symbol": "F:go.field_b:C",
@@ -654659,6 +657325,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "OptionsScreen"
+        },
+        {
+          "start": 13507,
+          "end": 13509,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 13510,
@@ -688298,7 +690971,7 @@
       "original": "ij.java",
       "renamed": "GameUiController.java",
       "inputSha256": "339c7bc70a1ba21de91fa145135ab1baa57f171c2de6bb0204975e8531f8a5a5",
-      "outputSha256": "50aeb18f891c8ae51cd389c7eb76fb3ae24ce9425522bc818c37de2d077366a0",
+      "outputSha256": "08f67c1ac24ff54fe22c354e0c860b50c31a1141f68d89540f518845d684e84a",
       "edits": [
         {
           "start": 50,
@@ -688803,6 +691476,13 @@
           "symbol": "C:gf",
           "original": "gf",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 1888,
+          "end": 1890,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 1905,
@@ -693978,7 +696658,7 @@
       "original": "im.java",
       "renamed": "GzipInflater.java",
       "inputSha256": "9f2e4760111faf10070d96a1a94e8ccc1099837ee4686581ed7e29f20b90af50",
-      "outputSha256": "0ef33ce761e0aee9cf2ccfff949c0a5828c883b807d0187a4654001c530a38b8",
+      "outputSha256": "5d85dc43811541884f8f46dbed29facfbebeb51593f54de9231c06c14196e405",
       "edits": [
         {
           "start": 89,
@@ -694182,6 +696862,13 @@
           "symbol": "C:lh",
           "original": "lh",
           "renamed": "FramedMenuScreen"
+        },
+        {
+          "start": 2017,
+          "end": 2019,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2034,
@@ -694497,7 +697184,7 @@
       "original": "ip.java",
       "renamed": "JungleBackground.java",
       "inputSha256": "fda3621e32924036def33b6bfe07ca8973e98afaba868384ede85499d943a5e8",
-      "outputSha256": "bada1002b1c89d68513e91f1802ef2d7a03d0830a22addbcf0b2e01a3a205e2f",
+      "outputSha256": "4b1cf61ee7d757bf2d91258ef62b92c33b9888e66469e35df733ec363ad08553",
       "edits": [
         {
           "start": 50,
@@ -695937,6 +698624,13 @@
           "renamed": "NodeDeque"
         },
         {
+          "start": 16802,
+          "end": 16804,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 16836,
           "end": 16838,
           "symbol": "C:vl",
@@ -695965,6 +698659,13 @@
           "renamed": "AchievementsScreen"
         },
         {
+          "start": 17154,
+          "end": 17156,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 17413,
           "end": 17415,
           "symbol": "C:ld",
@@ -695991,6 +698692,13 @@
           "symbol": "C:ko",
           "original": "ko",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 17801,
+          "end": 17803,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 17942,
@@ -715967,7 +718675,7 @@
       "original": "jk.java",
       "renamed": "UnderwaterBackground.java",
       "inputSha256": "35762eb76ee99358bb4274275df2c3913132b2ceb7a3f7d85d158625a76e7cc0",
-      "outputSha256": "16ea5d80078d03e5601f938fce01c937f1541f0ee03143d16f235832d683baf8",
+      "outputSha256": "d6fd09cc0104cb09b39e20c8c0da4882a7591040a7c93893b080b7fbcdad0990",
       "edits": [
         {
           "start": 50,
@@ -716096,6 +718804,13 @@
           "renamed": "waterSmallSprite"
         },
         {
+          "start": 620,
+          "end": 622,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 623,
           "end": 630,
           "symbol": "F:go.field_d:Ljp;",
@@ -716159,6 +718874,13 @@
           "renamed": "waterSmallSprite"
         },
         {
+          "start": 1070,
+          "end": 1072,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1073,
           "end": 1080,
           "symbol": "F:go.field_d:Ljp;",
@@ -716213,6 +718935,13 @@
           "symbol": "M:mf.a(Ljava/lang/String;I)Z",
           "original": "a",
           "renamed": "ensureGroupAvailableByName"
+        },
+        {
+          "start": 1369,
+          "end": 1371,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 1372,
@@ -716488,6 +719217,13 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 2170,
+          "end": 2172,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 2173,
           "end": 2180,
           "symbol": "F:go.field_d:Ljp;",
@@ -716500,6 +719236,13 @@
           "symbol": "F:mn.field_x:I",
           "original": "field_x",
           "renamed": "canvasWidth"
+        },
+        {
+          "start": 2194,
+          "end": 2196,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2197,
@@ -716530,11 +719273,25 @@
           "renamed": "pushSpriteRaster"
         },
         {
+          "start": 2258,
+          "end": 2260,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 2261,
           "end": 2268,
           "symbol": "F:go.field_d:Ljp;",
           "original": "field_d",
           "renamed": "waterRaysSprite"
+        },
+        {
+          "start": 2277,
+          "end": 2279,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2280,
@@ -716549,6 +719306,13 @@
           "symbol": "F:mn.field_x:I",
           "original": "field_x",
           "renamed": "canvasWidth"
+        },
+        {
+          "start": 2301,
+          "end": 2303,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2304,
@@ -716591,6 +719355,13 @@
           "symbol": "C:ig",
           "original": "ig",
           "renamed": "Under13RegistrationNoticePanel"
+        },
+        {
+          "start": 2482,
+          "end": 2484,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2485,
@@ -717818,6 +720589,13 @@
           "renamed": "destinationX"
         },
         {
+          "start": 5375,
+          "end": 5377,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 5378,
           "end": 5385,
           "symbol": "F:go.field_d:Ljp;",
@@ -718026,6 +720804,13 @@
           "symbol": "P:jk.a(ZIIII)V#4",
           "original": "param4",
           "renamed": "destinationX"
+        },
+        {
+          "start": 5885,
+          "end": 5887,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 5888,
@@ -718313,7 +721098,7 @@
       "original": "jl.java",
       "renamed": "jl.java",
       "inputSha256": "7e40faa3ba5d9fb9b42c5bf269553dd150c8c037d67a22f1eaa8e66d6b7c4af2",
-      "outputSha256": "9b09c208e22bf1cd1966563b4ef5cb8602295d4893151aa34833b67ccf77c7a1",
+      "outputSha256": "d4fd6078797e5a5d04289b1982a25ec09cd2dbbb9907d808eb512a07116e752b",
       "edits": [
         {
           "start": 71,
@@ -718827,6 +721612,13 @@
           "renamed": "keyEventReadIndex"
         },
         {
+          "start": 5206,
+          "end": 5208,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 5209,
           "end": 5216,
           "symbol": "F:go.field_b:C",
@@ -719077,6 +721869,13 @@
           "symbol": "F:ol.field_w:I",
           "original": "field_w",
           "renamed": "friendCount"
+        },
+        {
+          "start": 6921,
+          "end": 6923,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 7045,
@@ -738393,7 +741192,7 @@
       "original": "ka.java",
       "renamed": "MusicVoice.java",
       "inputSha256": "1979628dd155157bc15d179cf5d12821bf889151c6ec1a630671076a9f3c328d",
-      "outputSha256": "3957f8cbbec4e68365fe794eeb35f0ead55a3a520c633496e301a8ee68b4d144",
+      "outputSha256": "30344b86007417703e9ee912183069836fea885c1bb21d53b2b2401f3c44810a",
       "edits": [
         {
           "start": 50,
@@ -738592,6 +741391,20 @@
           "renamed": "channel"
         },
         {
+          "start": 937,
+          "end": 939,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 950,
+          "end": 952,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 986,
           "end": 988,
           "symbol": "C:oo",
@@ -738655,6 +741468,13 @@
           "renamed": "QuickChatParameterType"
         },
         {
+          "start": 1518,
+          "end": 1520,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1532,
           "end": 1534,
           "symbol": "C:ue",
@@ -738669,6 +741489,13 @@
           "renamed": "MonotonicTime"
         },
         {
+          "start": 1586,
+          "end": 1588,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1771,
           "end": 1773,
           "symbol": "C:th",
@@ -738676,11 +741503,32 @@
           "renamed": "QuickChatParameterType"
         },
         {
+          "start": 1831,
+          "end": 1833,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1844,
           "end": 1846,
           "symbol": "C:ue",
           "original": "ue",
           "renamed": "MonotonicTime"
+        },
+        {
+          "start": 1903,
+          "end": 1905,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 1970,
+          "end": 1972,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2012,
@@ -738732,6 +741580,13 @@
           "renamed": "QuickChatParameterType"
         },
         {
+          "start": 2435,
+          "end": 2437,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 2448,
           "end": 2450,
           "symbol": "C:ue",
@@ -738760,6 +741615,13 @@
           "renamed": "ChocolateBackground"
         },
         {
+          "start": 2537,
+          "end": 2539,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 2565,
           "end": 2567,
           "symbol": "C:ad",
@@ -738774,6 +741636,13 @@
           "renamed": "QuickChatParameterType"
         },
         {
+          "start": 2642,
+          "end": 2644,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 2656,
           "end": 2658,
           "symbol": "C:ol",
@@ -738786,6 +741655,13 @@
           "symbol": "C:th",
           "original": "th",
           "renamed": "QuickChatParameterType"
+        },
+        {
+          "start": 2714,
+          "end": 2716,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2779,
@@ -756842,7 +759718,7 @@
       "original": "kj.java",
       "renamed": "CacheIoRequest.java",
       "inputSha256": "5edb46af88d97c272551f42305792d4ce92abbef28b7cd20bfd37caee71ee761",
-      "outputSha256": "e17b223ca6059166dcdeb4f2eb1da203dc7f5a9563d292b789a448b720fd30a5",
+      "outputSha256": "a27992c4c8e93f691657d45c284d745a18696a028b9b3855a4df0a2868667360",
       "edits": [
         {
           "start": 50,
@@ -757284,6 +760160,13 @@
           "symbol": "C:pe",
           "original": "pe",
           "renamed": "IntArrayRequest"
+        },
+        {
+          "start": 3531,
+          "end": 3533,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 3567,
@@ -771934,7 +774817,7 @@
       "original": "ko.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "cdd42bcbd486d411f5a22d2f12e7450a085c2d7596671f61653c1d2e5f960375",
-      "outputSha256": "0b67aa61981c40b617aeab55b946dfe553a3b250dfef17b3ac09b4e71420ab6f",
+      "outputSha256": "c0646bdfa6c6b376be375d666bf59216b8883c6b694e0f3494900d3b7edd677b",
       "edits": [
         {
           "start": 50,
@@ -774289,6 +777172,13 @@
           "renamed": "IntArrayRequest"
         },
         {
+          "start": 9733,
+          "end": 9735,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 9738,
           "end": 9740,
           "symbol": "C:pe",
@@ -774301,6 +777191,13 @@
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "TableDataRequest"
+        },
+        {
+          "start": 9808,
+          "end": 9810,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 9813,
@@ -831251,7 +834148,7 @@
       "original": "n.java",
       "renamed": "n.java",
       "inputSha256": "57ffbc609c7e96db9f2eef78c7891cd0d26578906ecf226e6a621834d09bfd2a",
-      "outputSha256": "0a5a3884e7bb484566368936ed20c72ed2a260c992c1e133d83eb88dc1ecbc00",
+      "outputSha256": "6f9f70d6b76997ab50be684aff8ee72692eb80634c980b4b1af5790575e9f24c",
       "edits": [
         {
           "start": 93,
@@ -831716,11 +834613,32 @@
           "renamed": "addExceptionContext"
         },
         {
+          "start": 2831,
+          "end": 2833,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 2885,
+          "end": 2887,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 2896,
           "end": 2897,
           "symbol": "M:jg.a(IJ)V",
           "original": "a",
           "renamed": "seek"
+        },
+        {
+          "start": 2920,
+          "end": 2922,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 2931,
@@ -832043,6 +834961,13 @@
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
+        },
+        {
+          "start": 5767,
+          "end": 5769,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 5772,
@@ -832505,6 +835430,13 @@
           "symbol": "F:mh.field_Mb:Ljava/lang/String;",
           "original": "field_Mb",
           "renamed": "text"
+        },
+        {
+          "start": 8828,
+          "end": 8830,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 8894,
@@ -833009,7 +835941,7 @@
       "original": "na.java",
       "renamed": "DateFieldsWidget.java",
       "inputSha256": "5a8704376de500d107a61d89176da08c7c0961b70356626dc95f6f8cecbcbc74",
-      "outputSha256": "91e36b0e77b2f4dbb2c7afe0eb307fe64ea28ed6f4b33a0fffc0034da7c38eba",
+      "outputSha256": "4dc9c8c20e6fbe707b5524266c85769d48451647f6f03af855bb2c085e530503",
       "edits": [
         {
           "start": 50,
@@ -834949,6 +837881,13 @@
           "symbol": "M:ml.a(II)V",
           "original": "a",
           "renamed": "requestMatchmakingOptions"
+        },
+        {
+          "start": 9449,
+          "end": 9451,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 9481,
@@ -842360,7 +845299,7 @@
       "original": "nh.java",
       "renamed": "nh.java",
       "inputSha256": "14d571abf3fef6acc8f8b558e6b385e71c591c87c3f53dd16cb95bc1a5325f34",
-      "outputSha256": "e4fd1f6292be5b1a4e9e8d739ef177c212eadd8fe6a36fd53b818a9a8370839a",
+      "outputSha256": "c1e2ad21c3e3e62620c95afd204c2b1b165a46157d8ec1a0a3ce62258f398c99",
       "edits": [
         {
           "start": 66,
@@ -843691,6 +846630,13 @@
           "symbol": "C:eg",
           "original": "eg",
           "renamed": "TableDataRequest"
+        },
+        {
+          "start": 12398,
+          "end": 12400,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 12446,
@@ -851144,7 +854090,7 @@
       "original": "nn.java",
       "renamed": "ContextActionController.java",
       "inputSha256": "192db0d21879a488999c094fc411260f1f1cd05904bac3ef85db9654b0f08d64",
-      "outputSha256": "5a58863e5f9414c54e3c4a93287e0ed3356649117d4836cdcd5bb806a574aac2",
+      "outputSha256": "ef7adb4f615e848392967135c5ebe189ad1be43003f66420a8d90f53e5f9ae15",
       "edits": [
         {
           "start": 50,
@@ -853282,6 +856228,13 @@
           "renamed": "MenuButton"
         },
         {
+          "start": 23640,
+          "end": 23642,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 23653,
           "end": 23654,
           "symbol": "C:q",
@@ -853518,6 +856471,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 26959,
+          "end": 26961,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 26972,
@@ -853959,6 +856919,13 @@
           "symbol": "C:q",
           "original": "q",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 33321,
+          "end": 33323,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 33334,
@@ -862956,6 +865923,13 @@
           "renamed": "addAction"
         },
         {
+          "start": 147589,
+          "end": 147591,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 147643,
           "end": 147649,
           "symbol": "P:nn.a(Lgb;I)V#1",
@@ -865477,7 +868451,7 @@
       "original": "o.java",
       "renamed": "o.java",
       "inputSha256": "4523e22dfb1c3cc0cf60604931183583c1e071a0437e7ea84cdc4ab2d8732550",
-      "outputSha256": "cdab9cf85ed1607c29b15ce0965b821bdc361ff99b8d3787257f62c5eb092be8",
+      "outputSha256": "1f772e0c1da3094c76fe97b12bbcf36c31a4095cbafdd37e3d29ae0317467d64",
       "edits": [
         {
           "start": 87,
@@ -865522,11 +868496,46 @@
           "renamed": "AccountRegistrationPanel"
         },
         {
+          "start": 269,
+          "end": 270,
+          "symbol": "M:o.d(I)Z",
+          "original": "d",
+          "renamed": "pollArchiveMasterIndex"
+        },
+        {
+          "start": 275,
+          "end": 281,
+          "symbol": "P:o.d(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 297,
+          "end": 303,
+          "symbol": "P:o.d(I)Z#0",
+          "original": "param0",
+          "renamed": "obfuscationGuard"
+        },
+        {
           "start": 370,
           "end": 372,
           "symbol": "C:dp",
           "original": "dp",
           "renamed": "HalloweenBackground"
+        },
+        {
+          "start": 373,
+          "end": 380,
+          "symbol": "F:dp.field_v:Lco;",
+          "original": "field_v",
+          "renamed": "archiveSourceManager"
+        },
+        {
+          "start": 381,
+          "end": 382,
+          "symbol": "M:co.a(Z)Z",
+          "original": "a",
+          "renamed": "pollMasterIndex"
         },
         {
           "start": 444,
@@ -866682,6 +869691,13 @@
           "symbol": "F:o.field_e:Lom;",
           "original": "field_e",
           "renamed": "currentLobbyGame"
+        },
+        {
+          "start": 4788,
+          "end": 4789,
+          "symbol": "M:o.d(I)Z",
+          "original": "d",
+          "renamed": "pollArchiveMasterIndex"
         },
         {
           "start": 4804,
@@ -875759,7 +878775,7 @@
       "original": "of.java",
       "renamed": "BlankScreen.java",
       "inputSha256": "4b09eb220d7a6d1b268d2316aac7c343e668063a171a4d79176fa4035310c2bb",
-      "outputSha256": "4d9f0b61926b0f59dcc1655666b3144bffbcf84ec054b77a09afdefd55281cc1",
+      "outputSha256": "25978b5eca97b87a216dcc7fa56bfc6b4be75fc2c4947e61e941285e7c59d5a6",
       "edits": [
         {
           "start": 50,
@@ -875993,6 +879009,20 @@
           "renamed": "MonotonicTime"
         },
         {
+          "start": 1411,
+          "end": 1413,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 1470,
+          "end": 1472,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 1496,
           "end": 1498,
           "symbol": "C:ue",
@@ -876012,7 +879042,7 @@
       "original": "og.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "71899f71a52c83eb6ccb0dee0cc74938ae731561777c8a4d21529059d9abf91c",
-      "outputSha256": "3811bcbfa34c3276f9d04d3902b0e038da693c19294a0c163472630d1f6177ff",
+      "outputSha256": "06ef7ddddfe24d28faa429cabf7bec638777df2e80c8bde6415bf24a94126fbc",
       "edits": [
         {
           "start": 50,
@@ -882177,6 +885207,13 @@
           "symbol": "L:og.a(IIB)Z#6",
           "original": "var5",
           "renamed": "shortcutCharacter"
+        },
+        {
+          "start": 61216,
+          "end": 61218,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 61219,
@@ -904866,7 +907903,7 @@
       "original": "pg.java",
       "renamed": "DelayedPacket.java",
       "inputSha256": "1c46046e6fc44802333eca3df578d167405d4bae4594eb478c5214805eb91e3e",
-      "outputSha256": "ea1a86c5a34f24c7f1d554b8eadb632c65a4fa678c937d9b2a7ed0f6824eedf2",
+      "outputSha256": "be5fe10a404423a9d540a7581a002cf08e4c5958cdad2962b936b558b790f163",
       "edits": [
         {
           "start": 50,
@@ -904932,11 +907969,25 @@
           "renamed": "QuickChatMenu"
         },
         {
+          "start": 461,
+          "end": 463,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 545,
           "end": 547,
           "symbol": "C:og",
           "original": "og",
           "renamed": "QuickChatMenu"
+        },
+        {
+          "start": 610,
+          "end": 612,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 703,
@@ -920186,7 +923237,7 @@
       "original": "qa.java",
       "renamed": "NinjaBackground.java",
       "inputSha256": "9245a4c1967ad84bcf1efdc1a8188cfecaad0585c02781fc24d4c9b37110d7ce",
-      "outputSha256": "7d5f753ff8cd34ee26cad63606fb0b8ddde2f2489a342d3f54bd01eed18190bc",
+      "outputSha256": "b518dc0910bb73582edce31bec77ab945cccc267e24d0b9357c1b73fc66537f8",
       "edits": [
         {
           "start": 50,
@@ -921848,6 +924899,13 @@
           "renamed": "TextWidgetRenderer"
         },
         {
+          "start": 6533,
+          "end": 6535,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 6536,
           "end": 6543,
           "symbol": "F:go.field_b:C",
@@ -923317,7 +926375,7 @@
       "original": "qc.java",
       "renamed": "GameplayAudioEvent.java",
       "inputSha256": "42327dfa6bd1205330f6d623380519d502a554817c94c4b85bb78c6790201bf8",
-      "outputSha256": "cdc2e5767e82de2e9d7ff9101abf96959b6a24eec5fa14b2c6e7b9c02e081535",
+      "outputSha256": "0b38c5cea273e324b0209fd111a21d696ab72d118dafa6be9f2a42253750ee6f",
       "edits": [
         {
           "start": 69,
@@ -923738,6 +926796,13 @@
           "symbol": "M:jl.a(B)Z",
           "original": "a",
           "renamed": "pollKeyEvent"
+        },
+        {
+          "start": 4735,
+          "end": 4737,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 4738,
@@ -925715,7 +928780,7 @@
       "original": "qg.java",
       "renamed": "GameConnectionShell.java",
       "inputSha256": "f0f96ff4267e2ff560eb4272327a49af02204398e19363a87a54075043f5c452",
-      "outputSha256": "2e83e73c57cad640be9deec3a5942449d5f1060ce31b20bf81c59ac527a51cbc",
+      "outputSha256": "6101c438d5664d58daaae19c4bcbcacd63ac707b9397d3fa7755fd1368af6947",
       "edits": [
         {
           "start": 53,
@@ -925835,6 +928900,20 @@
           "symbol": "F:qg.field_p:I",
           "original": "field_p",
           "renamed": "gamePortTwo"
+        },
+        {
+          "start": 549,
+          "end": 551,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
+          "start": 552,
+          "end": 553,
+          "symbol": "M:go.a(B)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "readIncomingString"
         },
         {
           "start": 575,
@@ -926888,11 +929967,25 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 10077,
+          "end": 10079,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 10104,
           "end": 10106,
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 10137,
+          "end": 10139,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 10246,
@@ -926958,11 +930051,25 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 10577,
+          "end": 10579,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 10604,
           "end": 10606,
           "symbol": "C:eo",
           "original": "eo",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 10637,
+          "end": 10639,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 10915,
@@ -928601,6 +931708,13 @@
           "symbol": "F:qg.field_A:I",
           "original": "field_A",
           "renamed": "clientStage"
+        },
+        {
+          "start": 26124,
+          "end": 26125,
+          "symbol": "M:o.d(I)Z",
+          "original": "d",
+          "renamed": "pollArchiveMasterIndex"
         },
         {
           "start": 26126,
@@ -948627,7 +951741,7 @@
       "original": "qn.java",
       "renamed": "qn.java",
       "inputSha256": "2e492a3c68ea295783e5032fa643397a608d9d3321047cfa9d15df53b72a1b65",
-      "outputSha256": "5bd4623d389024d8a14504edc92fc0f78f54710179b5ca7fbaac51d5dd89f38d",
+      "outputSha256": "ac12537ea1e203528c015383dc728ea3bee299b1cadd26d63b2247a6d5ae4835",
       "edits": [
         {
           "start": 400,
@@ -948649,6 +951763,13 @@
           "symbol": "C:ua",
           "original": "ua",
           "renamed": "GameplayRenderHelpers"
+        },
+        {
+          "start": 833,
+          "end": 835,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 1098,
@@ -949349,6 +952470,13 @@
           "symbol": "C:qh",
           "original": "qh",
           "renamed": "ValidationStatus"
+        },
+        {
+          "start": 5412,
+          "end": 5414,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 6187,
@@ -973085,7 +976213,7 @@
       "original": "sa.java",
       "renamed": "InteractiveGameClient.java",
       "inputSha256": "607c5ab0057640dc6d04019daabb710459c4e76211ce68acac07edf4f7fc977f",
-      "outputSha256": "f295c9adb59246a66e1ecf84516284e91af24f42ce2c18c9ff43e3b3c5b4f4a6",
+      "outputSha256": "bf34492cbfbbc3d0bcb917a3287f8af91d23b6bc1e4a1c7fd60c6c7149f2fca3",
       "edits": [
         {
           "start": 74,
@@ -974122,6 +977250,13 @@
           "symbol": "F:dc.field_b:I",
           "original": "field_b",
           "renamed": "currentKeyCode"
+        },
+        {
+          "start": 8822,
+          "end": 8824,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 8825,
@@ -1014222,7 +1017357,7 @@
       "original": "tf.java",
       "renamed": "FullscreenFailureKind.java",
       "inputSha256": "6f434ed9856c9dbcccf04d2d6924d1e68750d68ea8128049834926bb58ad1d8e",
-      "outputSha256": "73be668e4333a1ca8570ca853d4a2ebf17c37b2af66be173341d67d1d17efd85",
+      "outputSha256": "f535b2070b9749ce7be2519563542c8eb638666e51d4c3869662ce3c3f8b239b",
       "edits": [
         {
           "start": 50,
@@ -1014650,6 +1017785,13 @@
           "symbol": "F:bm.field_d:Lnn;",
           "original": "field_d",
           "renamed": "contextActions"
+        },
+        {
+          "start": 3683,
+          "end": 3685,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 3750,
@@ -1068908,7 +1072050,7 @@
       "original": "vi.java",
       "renamed": "MovingBody.java",
       "inputSha256": "348abddd5c0eee4438c08f883e55256aaa02e4ebe8cf2d01003638c1266596ba",
-      "outputSha256": "cc7efc08ada0284b5b44fa3d40cdcfb62cbdbab12807d3e47081d9b40686e5e4",
+      "outputSha256": "fd894a1caac0119172ccbe4d40d1d243c40ba42f077db3bf018db1594b9737bd",
       "edits": [
         {
           "start": 53,
@@ -1069616,6 +1072758,13 @@
           "symbol": "C:mf",
           "original": "mf",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 4974,
+          "end": 4976,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 4977,
@@ -1079354,7 +1082503,7 @@
       "original": "w.java",
       "renamed": "ScreenshotViewer.java",
       "inputSha256": "ab1a43a9c1637cb4b966b968d0afaa046a56ac5eb15d5fc304855e89893c8e66",
-      "outputSha256": "54617516c764dfe3af3bb77a188f7880d307fc339165d5ce62853a66f752ee8c",
+      "outputSha256": "31515a1786c0745fba1259697d9df2eb57ce319504132cdf8005776237823104",
       "edits": [
         {
           "start": 50,
@@ -1080141,6 +1083290,13 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 7200,
+          "end": 7202,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 7245,
           "end": 7247,
           "symbol": "C:jp",
@@ -1080190,6 +1083346,13 @@
           "renamed": "title"
         },
         {
+          "start": 7509,
+          "end": 7511,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 7548,
           "end": 7549,
           "symbol": "M:sc.b(I)V",
@@ -1080202,6 +1083365,13 @@
           "symbol": "C:jp",
           "original": "jp",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 7631,
+          "end": 7633,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 7732,
@@ -1080309,6 +1083479,13 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 8080,
+          "end": 8082,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 8120,
           "end": 8127,
           "symbol": "F:mn.field_D:I",
@@ -1080323,6 +1083500,13 @@
           "renamed": "height"
         },
         {
+          "start": 8185,
+          "end": 8187,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 8224,
           "end": 8231,
           "symbol": "F:mn.field_D:I",
@@ -1080335,6 +1083519,20 @@
           "symbol": "F:mn.field_C:I",
           "original": "field_C",
           "renamed": "height"
+        },
+        {
+          "start": 8289,
+          "end": 8291,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 8302,
+          "end": 8304,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 8313,
@@ -1080685,6 +1083883,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "ContentTransitionLayer"
+        },
+        {
+          "start": 10783,
+          "end": 10785,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 10796,
@@ -1082900,7 +1086105,7 @@
       "original": "wd.java",
       "renamed": "QuickChatPhraseDefinition.java",
       "inputSha256": "8226ee3f723079b9f17a6ce4eebcbdee058bf3fb1ade6784b7f3d9057dd13e96",
-      "outputSha256": "f0b95aa1b8ac8615eaca71f72b8966753e69f03cf0d1f66713b84b92c88e6d0c",
+      "outputSha256": "f1d7481b91611d150634de60dd9ca09b1b3ad9505f346083533a967f6d36648d",
       "edits": [
         {
           "start": 50,
@@ -1084289,6 +1087494,13 @@
           "renamed": "ProxyAuthenticationRequiredException"
         },
         {
+          "start": 6985,
+          "end": 6987,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 7013,
           "end": 7020,
           "symbol": "F:nn.field_d:Lbr;",
@@ -1084723,7 +1087935,7 @@
       "original": "wg.java",
       "renamed": "GameCanvas.java",
       "inputSha256": "4aea8b7448b078fa853e324a40fe6adccac0769e0efa6ccd69573ef9e24b1382",
-      "outputSha256": "ea6f36575b7a32a5a6af54af56b4e06aab43c6161d4371f1ade27da9fcaaeb90",
+      "outputSha256": "909a443b5881715446212488264a164ca8c7350b219eb05c21c7e31bbd37b79a",
       "edits": [
         {
           "start": 50,
@@ -1084794,6 +1088006,20 @@
           "symbol": "C:dp",
           "original": "dp",
           "renamed": "HalloweenBackground"
+        },
+        {
+          "start": 2622,
+          "end": 2629,
+          "symbol": "F:dp.field_v:Lco;",
+          "original": "field_v",
+          "renamed": "archiveSourceManager"
+        },
+        {
+          "start": 2630,
+          "end": 2631,
+          "symbol": "M:co.a(I)V",
+          "original": "a",
+          "renamed": "maintainArchiveSources"
         },
         {
           "start": 2669,
@@ -1090020,7 +1093246,7 @@
       "original": "wl.java",
       "renamed": "ValidationIconWidget.java",
       "inputSha256": "24a43275120b7bdceaea7c1dcf33cf764c755ecbf7c963efca422cbff7076c81",
-      "outputSha256": "c985d1ac24adfede2a5ccf4c97a429372e242272a790d668d0f7273b957068f0",
+      "outputSha256": "73443b7acd81368b21790ac3696d5a55a1d3d725d779b5e67dbda94493c219ab",
       "edits": [
         {
           "start": 50,
@@ -1092970,6 +1096196,13 @@
           "renamed": "position"
         },
         {
+          "start": 11633,
+          "end": 11635,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
           "start": 11759,
           "end": 11761,
           "symbol": "C:cb",
@@ -1093101,6 +1096334,20 @@
           "symbol": "M:vd.a(II)Z",
           "original": "a",
           "renamed": "ensureGamePacketBytes"
+        },
+        {
+          "start": 12651,
+          "end": 12653,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
+        },
+        {
+          "start": 12746,
+          "end": 12748,
+          "symbol": "C:co",
+          "original": "co",
+          "renamed": "ArchiveSourceManager"
         },
         {
           "start": 12769,
@@ -1097213,7 +1100460,7 @@
       "original": "wp.java",
       "renamed": "SoundCache.java",
       "inputSha256": "e64dd26300416712ce6cf148e8f1c4cf620baa69fa3c6ca3450519ae31fa3db1",
-      "outputSha256": "7d0f78cd641aad0b4c377a2486a309ac340c9b63284322e2aec16064cb0fd0a8",
+      "outputSha256": "71677873c5c01a78113dbacf2f7e5a19306dfb0dfc7141b3bcc169737b369974",
       "edits": [
         {
           "start": 50,
@@ -1098602,6 +1101849,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 10694,
+          "end": 10696,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 10710,
           "end": 10717,
           "symbol": "F:jl.field_e:Lpi;",
@@ -1098987,6 +1102241,13 @@
           "renamed": "EmailConfirmationValidator"
         },
         {
+          "start": 12444,
+          "end": 12446,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
+        },
+        {
           "start": 12475,
           "end": 12477,
           "symbol": "C:oo",
@@ -1099020,6 +1102281,13 @@
           "symbol": "C:uc",
           "original": "uc",
           "renamed": "EmailConfirmationValidator"
+        },
+        {
+          "start": 13210,
+          "end": 13212,
+          "symbol": "C:go",
+          "original": "go",
+          "renamed": "ResourceArchiveFactory"
         },
         {
           "start": 13244,
@@ -1105858,10 +1109126,10 @@
       "commit": "8f15143529e53929d7157a5393487342612a4180",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "8ef5fe63c4ae6cef3902ffb20d54bb8612911accede0f236d64421e864f9b6a4",
+    "rulesSha256": "38256229a5727811684d765b293a2e4d294fa3137c116075a5ca4d395b8b09e3",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "5bb1c5c7641e7a83c08fc313e3bd7edd9164a19015d3462552c3646377bfb6e8",
+    "outputTreeSha256": "5bca0cd013e4e662b5c760f5b0336ee13bd785225eac3477a1559283ab58c2cb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1105881,10 +1109149,15 @@
       "labelEdits": 121,
       "runtimeEquivalenceVerified": false,
       "gameplayCore": {
-        "checks": 1061250,
-        "traceSha256": "c94b2f2174ee7c0b44346165fc964ae5c95c2335dffcc34067aad681d59eb620",
+        "checks": 1064262,
+        "traceSha256": "2b665822974b29e8986cd004dc16de93ceea9268b97504170057db5f46dcc7a1",
         "rawNamedIdentical": true,
         "independentExpectations": true,
+        "masterIndexLoadFixtures": true,
+        "masterIndexIntegrityFixtures": true,
+        "masterIndexRsaFixtures": true,
+        "archiveSourceFactoryFixtures": true,
+        "archiveSourceMaintenanceFixtures": true,
         "fireworkConstructionFixtures": true,
         "fireworkMotionFixtures": true,
         "fireworkTrailFixtures": true,

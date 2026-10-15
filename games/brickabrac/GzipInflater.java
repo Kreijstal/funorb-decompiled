@@ -60,7 +60,7 @@ final class GzipInflater {
               return;
             }
             try {
-              go.field_a = new BufferedFile(FramedMenuScreen.field_s.field_k, 64, 0);
+              ResourceArchiveFactory.field_a = new BufferedFile(FramedMenuScreen.field_s.field_k, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

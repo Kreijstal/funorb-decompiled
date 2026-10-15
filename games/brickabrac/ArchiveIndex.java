@@ -259,10 +259,10 @@ final class ArchiveIndex {
           Brick.e(param0 ^ 32040);
         }
         if (!(IntArrayRequest.field_j <= 0)) {
-          co.a(IntArrayRequest.field_j, false);
+          ArchiveSourceManager.a(IntArrayRequest.field_j, false);
         }
         if (TableDataRequest.field_m > 0) {
-          co.a(TableDataRequest.field_m, false);
+          ArchiveSourceManager.a(TableDataRequest.field_m, false);
         }
     }
 

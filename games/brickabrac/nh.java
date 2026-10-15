@@ -337,7 +337,7 @@ final class nh {
         try {
           stackIn_3_0 = TableDataRequest.field_m;
           stackIn_4_1 = !(param0);
-          co.a(stackIn_3_0, stackIn_4_1);
+          ArchiveSourceManager.a(stackIn_3_0, stackIn_4_1);
           if (o.currentLobbyGame != null) {
             boolean decompiledFrameRemainder1 = true;
             GameUiController.field_e.enabled = true;

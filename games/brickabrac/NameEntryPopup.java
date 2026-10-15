@@ -52,19 +52,19 @@ final class NameEntryPopup extends UiComponent {
             this.nameBuffer.length() > 0) {
             MessageScreen.resizeAndFillTextBuffer(' ', this.nameBuffer, -1 + this.nameBuffer.length(), false);
           }
-          if (nk.canAppendNameCharacter(go.currentKeyCharacter, (CharSequence) ((Object) this.nameBuffer), false)) {
-            ignoredCharacterAppend = this.nameBuffer.append(go.currentKeyCharacter);
+          if (nk.canAppendNameCharacter(ResourceArchiveFactory.currentKeyCharacter, (CharSequence) ((Object) this.nameBuffer), false)) {
+            ignoredCharacterAppend = this.nameBuffer.append(ResourceArchiveFactory.currentKeyCharacter);
           } else {
             if (this.nameBuffer.length() == 0 &&
-              go.currentKeyCharacter == 91) {
-              ignoredOpeningBracketAppend = this.nameBuffer.append(go.currentKeyCharacter);
+              ResourceArchiveFactory.currentKeyCharacter == 91) {
+              ignoredOpeningBracketAppend = this.nameBuffer.append(ResourceArchiveFactory.currentKeyCharacter);
             } else {
               if (this.nameBuffer.length() == 1 &&
-                go.currentKeyCharacter == 35) {
-                ignoredHashAppend = this.nameBuffer.append(go.currentKeyCharacter);
+                ResourceArchiveFactory.currentKeyCharacter == 35) {
+                ignoredHashAppend = this.nameBuffer.append(ResourceArchiveFactory.currentKeyCharacter);
               } else {
-                if (go.currentKeyCharacter == 93) {
-                  ignoredClosingBracketAppend = this.nameBuffer.append(go.currentKeyCharacter);
+                if (ResourceArchiveFactory.currentKeyCharacter == 93) {
+                  ignoredClosingBracketAppend = this.nameBuffer.append(ResourceArchiveFactory.currentKeyCharacter);
                 }
               }
             }
@@ -102,7 +102,7 @@ final class NameEntryPopup extends UiComponent {
         }
         if (MeshAttributeRecord.currentKeyCode != 85) {
           if (12 > this.nameBuffer.length()) {
-            normalizedCharacter = Character.toLowerCase(go.currentKeyCharacter);
+            normalizedCharacter = Character.toLowerCase(ResourceArchiveFactory.currentKeyCharacter);
             if (normalizedCharacter == 32) {
               normalizedCharacter = 95;
             }
@@ -157,7 +157,7 @@ final class NameEntryPopup extends UiComponent {
         }
         if (this.nameBuffer.length() <= 0) {
           if (12 > this.nameBuffer.length()) {
-            emptyNormalizedCharacter = Character.toLowerCase(go.currentKeyCharacter);
+            emptyNormalizedCharacter = Character.toLowerCase(ResourceArchiveFactory.currentKeyCharacter);
             if (emptyNormalizedCharacter == 32) {
               emptyNormalizedCharacter = 95;
             }
@@ -226,7 +226,7 @@ final class NameEntryPopup extends UiComponent {
           this.completionState = 1;
           return true;
         }
-        backspaceNormalizedCharacter = Character.toLowerCase(go.currentKeyCharacter);
+        backspaceNormalizedCharacter = Character.toLowerCase(ResourceArchiveFactory.currentKeyCharacter);
         if (backspaceNormalizedCharacter == 32) {
           backspaceNormalizedCharacter = 95;
         }

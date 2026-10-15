@@ -744,7 +744,7 @@ public final class BrickABrac extends InteractiveGameClient {
         kp.a(-68);
         ArchiveFetchClient.c(-12200);
         CacheIoWorker.b(26679);
-        co.b(-70);
+        ArchiveSourceManager.b(-70);
         TextWidgetRenderer.a(31292);
         MeshRasterState.releaseTables();
         VorbisSample.releaseScratch();
@@ -823,7 +823,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ValidationMessageWidget.f((byte) -42);
         ToggleButtonWidget.a(8192);
         TextFieldValidator.c((byte) -109);
-        go.a(-7393);
+        ResourceArchiveFactory.a(-7393);
         Under13RegistrationNoticePanel.a(12127);
         uf.a((byte) 85);
         LevelDecoder.a((byte) 89);

@@ -108,10 +108,10 @@ final class AccountIntroductionPanel extends WidgetGroup implements WidgetAction
             var10 = var6;
             var8 = var10;
             var2 = var8;
-            if (go.field_a != null) {
+            if (ResourceArchiveFactory.field_a != null) {
               try {
-                go.field_a.seek(0, 0L);
-                go.field_a.readFully(var9, (byte) -29);
+                ResourceArchiveFactory.field_a.seek(0, 0L);
+                ResourceArchiveFactory.field_a.readFully(var9, (byte) -29);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

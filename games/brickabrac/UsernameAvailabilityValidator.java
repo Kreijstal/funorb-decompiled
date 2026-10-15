@@ -10,7 +10,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
     final static void f(byte param0) {
         int var1 = 50 / ((31 - param0) / 52);
         LevelCompleteScreen.field_J = null;
-        go.field_e = 0;
+        ResourceArchiveFactory.field_e = 0;
         QuickChatParameterType.field_h = false;
         b.field_a = -1;
         CappedUrlRequest.field_j = -1;

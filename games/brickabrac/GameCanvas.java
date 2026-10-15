@@ -65,7 +65,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
     }
 
     final static int a(boolean param0) {
-        HalloweenBackground.field_v.a(77);
+        HalloweenBackground.archiveSourceManager.maintainArchiveSources(77);
         if (param0) {
           MenuScreen var2 = (MenuScreen) null;
           GameCanvas.registerMenuScreen(43, (MenuScreen) null);

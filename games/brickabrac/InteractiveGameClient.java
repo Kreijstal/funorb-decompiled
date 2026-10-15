@@ -269,7 +269,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                       }
                       var4 = 0;
                       while (var4 < kp.field_d.size()) {
-                        stackIn_39_0 = ((GameLayerController) (kp.field_d.elementAt(var4))).handleGameKey(MeshAttributeRecord.currentKeyCode, go.currentKeyCharacter, -81);
+                        stackIn_39_0 = ((GameLayerController) (kp.field_d.elementAt(var4))).handleGameKey(MeshAttributeRecord.currentKeyCode, ResourceArchiveFactory.currentKeyCharacter, -81);
                         if (!stackIn_39_0) {
                           var4++;
                           continue;

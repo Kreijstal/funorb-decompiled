@@ -39,7 +39,7 @@ final class MusicVoice extends IntrusiveNode {
         int var3 = 0;
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
-          go.field_e = go.field_e + 1;
+          ResourceArchiveFactory.field_e = ResourceArchiveFactory.field_e + 1;
           if (-1 == ChocolateBackground.field_v &&
             ll.field_b == -1) {
             ChocolateBackground.field_v = MusicPatch.pointerX;
@@ -56,8 +56,8 @@ final class MusicVoice extends IntrusiveNode {
           }
           if (decompiledFrameRemainder0) {
             if (!QuickChatParameterType.field_h &&
-              go.field_e >= MonotonicTime.field_e &&
-              MonotonicTime.field_e + jh.field_a > go.field_e) {
+              ResourceArchiveFactory.field_e >= MonotonicTime.field_e &&
+              MonotonicTime.field_e + jh.field_a > ResourceArchiveFactory.field_e) {
               stackIn_28_0 = 1;
             } else {
               stackIn_28_0 = 0;
@@ -65,12 +65,12 @@ final class MusicVoice extends IntrusiveNode {
             var2_int = stackIn_28_0;
             if (param0 != null && (QuickChatParameterType.field_h ||
               var2_int != 0)) {
-              go.field_e = MonotonicTime.field_e;
+              ResourceArchiveFactory.field_e = MonotonicTime.field_e;
               if (var3 != 0) {
-                go.field_e = 0;
+                ResourceArchiveFactory.field_e = 0;
               }
             } else {
-              go.field_e = 0;
+              ResourceArchiveFactory.field_e = 0;
             }
             CappedUrlRequest.field_j = ll.field_b;
             if (null == param0) {
@@ -87,16 +87,16 @@ final class MusicVoice extends IntrusiveNode {
           }
           LevelCompleteScreen.field_J = param0;
           if (!QuickChatParameterType.field_h &&
-            go.field_e < MonotonicTime.field_e &&
+            ResourceArchiveFactory.field_e < MonotonicTime.field_e &&
             QuickChatHelpDialog.pointerChanged) {
             b.field_a = ChocolateBackground.field_v;
-            go.field_e = 0;
+            ResourceArchiveFactory.field_e = 0;
             CappedUrlRequest.field_j = ll.field_b;
           }
           if (QuickChatParameterType.field_h &&
-            go.field_e == LevelPackSelectScreen.field_y) {
+            ResourceArchiveFactory.field_e == LevelPackSelectScreen.field_y) {
             QuickChatParameterType.field_h = false;
-            go.field_e = 0;
+            ResourceArchiveFactory.field_e = 0;
           }
           ll.field_b = -1;
           ChocolateBackground.field_v = -1;

@@ -467,7 +467,7 @@ final class JungleBackground extends BackgroundScene {
                   }
                   if (null != NodeDeque.field_a &&
                     NodeDeque.field_a[var7] != null &&
-                    0 >= go.field_c &&
+                    0 >= ResourceArchiveFactory.field_c &&
                     NodeDeque.field_a[var7][var9]) {
                     var10 = 1;
                   }
@@ -476,7 +476,7 @@ final class JungleBackground extends BackgroundScene {
                     var16 = AchievementsScreen.field_F[var7][var9];
                     if (var16 != 0 &&
                       !ea.field_g &&
-                      go.field_c <= 0) {
+                      ResourceArchiveFactory.field_c <= 0) {
                       var10 = 1;
                     }
                     if (0 < var16 &&
@@ -493,7 +493,7 @@ final class JungleBackground extends BackgroundScene {
                     }
                     if (0 != var16Lifetime2 &&
                       !ea.field_g &&
-                      0 >= go.field_c) {
+                      0 >= ResourceArchiveFactory.field_c) {
                       var10 = 1;
                     }
                   }

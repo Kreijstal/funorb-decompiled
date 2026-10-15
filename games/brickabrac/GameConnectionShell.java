@@ -20,7 +20,7 @@ abstract class GameConnectionShell extends AppletGameShell {
     private int gamePortTwo;
 
     private final void f(boolean param0) {
-        String var2 = go.a((byte) 120);
+        String var2 = ResourceArchiveFactory.readIncomingString((byte) 120);
         ArchiveNetworkRequest.a(var2, 70, EmailConfirmationValidator.e((byte) -116));
         if (!param0) {
           this.g(false);
@@ -334,9 +334,9 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (var4 == 1) {
             var5_int = FullscreenFailureDialog.a(ChocolateBackground.f(param1 ^ 67), sq.a(64), (byte) -16);
             if (var5_int != -1) {
-              ProxyAuthenticationRequiredException.a(DirectByteStorage.field_e, -106, var5_int, co.field_f);
+              ProxyAuthenticationRequiredException.a(DirectByteStorage.field_e, -106, var5_int, ArchiveSourceManager.field_f);
               DirectByteStorage.field_e = null;
-              co.field_f = null;
+              ArchiveSourceManager.field_f = null;
             }
             var11 = df.a(0);
             if (var11 != null) {
@@ -346,9 +346,9 @@ abstract class GameConnectionShell extends AppletGameShell {
           if (var4 == 2) {
             var5_intLifetime1 = GameCanvas.a(MotionWaypoint.b(false), (byte) -74, WidgetPaintStyle.a((byte) -44), IndexedSpriteGeometry.a(param1 ^ 115), aa.a(480), LevelSelectScreen.d(true), this.affiliateId);
             if (-1 != var5_intLifetime1) {
-              RadialSelectorWidget.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, co.field_f);
+              RadialSelectorWidget.a(var5_intLifetime1, (byte) -123, DirectByteStorage.field_e, ArchiveSourceManager.field_f);
               DirectByteStorage.field_e = null;
-              co.field_f = null;
+              ArchiveSourceManager.field_f = null;
             }
           }
           if (var4 == 3) {
@@ -808,7 +808,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           LevelCompleteScreen.field_C = false;
         }
         if (0 == clientStage &&
-          o.d(guardCode ^ -572695520)) {
+          o.pollArchiveMasterIndex(guardCode ^ -572695520)) {
           clientStage = 1;
         }
         if (clientStage == guardCode) {

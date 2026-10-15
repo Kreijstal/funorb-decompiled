@@ -316,7 +316,7 @@ final class ValidationIconWidget extends FocusableWidget {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               rf.field_b = o.field_g;
-              co.field_f = new String[-100 + var9Lifetime1];
+              ArchiveSourceManager.field_f = new String[-100 + var9Lifetime1];
             } else {
               if (var9Lifetime1 == 248) {
                 MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -108), param6 + 5);
@@ -343,9 +343,9 @@ final class ValidationIconWidget extends FocusableWidget {
               var10Lifetime1 = jl.incomingPackets.readUnsignedShort(65280);
               jl.incomingPackets.position = 0;
               if (vd.ensureGamePacketBytes(20, var10Lifetime1)) {
-                var11 = co.field_f.length;
+                var11 = ArchiveSourceManager.field_f.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  co.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
+                  ArchiveSourceManager.field_f[var12] = jl.incomingPackets.readPrefixedCp1252String(LevelResultSubmission.a(param6, 251));
                 }
                 hn.a((byte) 79);
                 RadialSelectorRenderer.field_d = false;

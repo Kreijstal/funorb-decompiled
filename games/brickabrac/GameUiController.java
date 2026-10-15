@@ -55,7 +55,7 @@ final class GameUiController implements GameUiLifecycle {
         LoginPanel.h((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         AccountMessageDialog.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
-        co.a((byte) -79, LoginCredentialKind.field_g);
+        ArchiveSourceManager.a((byte) -79, LoginCredentialKind.field_g);
     }
 
     final static GameScreen getScreen(int screenId, byte obfuscationGuard) {

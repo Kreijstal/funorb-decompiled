@@ -582,7 +582,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_lobby_hide", (byte) -126);
                 if (null != var2) {
-                  co.field_e = MenuButton.a(var2, (byte) 123);
+                  ArchiveSourceManager.field_e = MenuButton.a(var2, (byte) 123);
                 }
                 var2 = nk.a("mu_chat_game_show_all", (byte) -14);
                 if (null != var2) {
@@ -658,7 +658,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rated_game_tips_setup_singular", (byte) -117);
                 if (null != var2) {
-                  go.field_f = MenuButton.a(var2, (byte) 127);
+                  ResourceArchiveFactory.field_f = MenuButton.a(var2, (byte) 127);
                 }
                 var2 = nk.a("rated_game_tips_setup_plural", (byte) -106);
                 if (null != var2) {
@@ -810,7 +810,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("hide_players_in_xs_game", (byte) 50);
                 if (var2 != null) {
-                  co.field_d = MenuButton.a(var2, (byte) 88);
+                  ArchiveSourceManager.field_d = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("show_players_in_xs_game", (byte) -123);
                 if (null != var2) {
@@ -3592,7 +3592,7 @@ final class ContextActionController {
             if (InstructionsScreen.lobbyChatFilter == 0) {
               this.contextMenu.addAction(RasterSnapshot.field_l, 12, (byte) 81);
             }
-            this.contextMenu.addAction(co.field_e, 13, (byte) 87);
+            this.contextMenu.addAction(ArchiveSourceManager.field_e, 13, (byte) 87);
           }
           if (obfuscationGuard >= -70) {
             return;

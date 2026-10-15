@@ -155,7 +155,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
             }
             return true;
           }
-          var4 = go.currentKeyCharacter;
+          var4 = ResourceArchiveFactory.currentKeyCharacter;
           stackIn_41_0 = !param0;
           if (!RasterSnapshot.a(stackIn_41_0, (char) var4)) {
             return false;
@@ -264,7 +264,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
               }
               return true;
             }
-            var4Lifetime1 = go.currentKeyCharacter;
+            var4Lifetime1 = ResourceArchiveFactory.currentKeyCharacter;
             stackIn_103_0 = !param0;
             if (!RasterSnapshot.a(stackIn_103_0, (char) var4Lifetime1)) {
               return false;
@@ -373,7 +373,7 @@ final class ButtonWidgetRenderer extends TextWidgetRenderer {
           MessageScreen.resizeAndFillTextBuffer(' ', OptionsScreen.field_A, -1 + OptionsScreen.field_A.length(), false);
           return true;
         }
-        var4Lifetime2 = go.currentKeyCharacter;
+        var4Lifetime2 = ResourceArchiveFactory.currentKeyCharacter;
         stackIn_160_0 = !param0;
         if (!RasterSnapshot.a(stackIn_160_0, (char) var4Lifetime2)) {
           return false;

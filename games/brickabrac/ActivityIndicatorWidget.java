@@ -43,7 +43,7 @@ final class ActivityIndicatorWidget extends Widget {
           SoftwareFramebuffer.field_a = param8;
           vd.field_f = (ArchiveFetchClient) ((Object) new ArchiveNetworkClient());
           Brick.field_x = new CacheIoWorker(param4);
-          HalloweenBackground.field_v = new co(vd.field_f, Brick.field_x);
+          HalloweenBackground.archiveSourceManager = new ArchiveSourceManager(vd.field_f, Brick.field_x);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "cr.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
