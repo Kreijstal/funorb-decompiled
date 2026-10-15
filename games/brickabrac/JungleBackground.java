@@ -4,7 +4,7 @@
 final class JungleBackground extends BackgroundScene {
     static RgbSprite[][] field_v;
     static String field_t;
-    static IsaacGenerator field_r;
+    static IsaacGenerator fireworkRandom;
     static NodeDeque field_s;
     static String[] field_u;
 
@@ -893,7 +893,7 @@ final class JungleBackground extends BackgroundScene {
         if (param0) {
           field_v = (RgbSprite[][]) null;
         }
-        field_r = null;
+        fireworkRandom = null;
     }
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {

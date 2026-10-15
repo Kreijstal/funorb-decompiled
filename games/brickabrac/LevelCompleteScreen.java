@@ -28,14 +28,14 @@ final class LevelCompleteScreen extends PauseMenuScreen {
         field_E = null;
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (param1 != 1273378209) {
+    final static void spawnFireworkBurst(int maxRingsExclusive, int obfuscationGuard, int maxParticlesPerRingExclusive) {
+        if (obfuscationGuard != 1273378209) {
           field_E = (String[]) null;
         }
-        int var3 = 4 + JungleBackground.field_r.nextBoundedInt(-37880252, -4 + param0);
-        int var4 = JungleBackground.field_r.nextBoundedInt(-37880252, -8 + param2) + 8;
-        PasswordFieldRenderer.field_E.addLast(new nj(var3, var4, PauseMenuScreen.field_x + JungleBackground.field_r.nextBoundedInt(-37880252, FarmBackground.field_w), Mesh3D.field_k + JungleBackground.field_r.nextBoundedInt(-37880252, ArrayWidgetGroup.field_E)), (byte) 3);
-        SocketConnector.field_f = SocketConnector.field_f + 1;
+        int ringCount = 4 + JungleBackground.fireworkRandom.nextBoundedInt(-37880252, -4 + maxRingsExclusive);
+        int particlesPerRing = JungleBackground.fireworkRandom.nextBoundedInt(-37880252, -8 + maxParticlesPerRingExclusive) + 8;
+        PasswordFieldRenderer.fireworkBursts.addLast(new FireworkBurst(ringCount, particlesPerRing, PauseMenuScreen.fireworkSpawnMinX + JungleBackground.fireworkRandom.nextBoundedInt(-37880252, FarmBackground.fireworkSpawnWidth), Mesh3D.fireworkSpawnMinY + JungleBackground.fireworkRandom.nextBoundedInt(-37880252, ArrayWidgetGroup.fireworkSpawnHeight)), (byte) 3);
+        SocketConnector.activeFireworkCount = SocketConnector.activeFireworkCount + 1;
     }
 
     final void drawScreen(byte obfuscationGuard) {

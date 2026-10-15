@@ -40,7 +40,7 @@ final class Mesh3D {
     static NodeDeque rasterSnapshotPool;
     short[] directionZ;
     short[] faceVertexA;
-    static int field_k;
+    static int fireworkSpawnMinY;
     short[] vertexX;
     static int[] field_l;
     static PcmSound[] field_e;
@@ -88,7 +88,7 @@ final class Mesh3D {
           var6 = var5;
           GameScreen.field_f.scrollPane.viewport.verticalAlignment = 1;
           if (param1 <= 58) {
-            field_k = 109;
+            fireworkSpawnMinY = 109;
           }
           var6.horizontalAlignment = 1;
           f.field_c.scrollPane.viewport.copyStyle((byte) -115, CappedUrlRequest.field_l);
@@ -107,7 +107,7 @@ final class Mesh3D {
           StateIconLabel.field_Wb = param2;
           pp.a(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);
           if (!param3) {
-            field_k = -98;
+            fireworkSpawnMinY = -98;
           }
           MusicCrossfadeStream.a(param1.capHeight, param1.descent + param1.capHeight, 256, param2.capHeight, param2.descent + param2.capHeight);
         } catch (RuntimeException runtimeException) {

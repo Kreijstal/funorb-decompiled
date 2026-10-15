@@ -4,7 +4,7 @@
 class PauseMenuScreen extends FramedMenuScreen {
     private int[] refreshedActionIds;
     static String field_u;
-    static int field_x;
+    static int fireworkSpawnMinX;
     static String field_w;
     static String field_v;
 

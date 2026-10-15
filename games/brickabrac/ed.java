@@ -12,7 +12,7 @@ final class ed {
     final static void a(int param0, int param1) {
         IntrusiveHashTable.field_k.drawFullBackground(true, MouseInput.field_b, 0, param1, param0);
         if (IntrusiveHashTable.field_k.sceneId == 7) {
-          SaveResultsPromptScreen.b(true, true, param0);
+          SaveResultsPromptScreen.advanceAndDrawFireworks(true, true, param0);
         }
     }
 

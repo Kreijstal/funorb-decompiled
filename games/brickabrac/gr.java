@@ -80,7 +80,7 @@ final class gr {
           we.field_b = ch.field_k;
           bq.field_e = hc.field_a;
           TextHotspotRegion.field_o = WidgetTextLayout.field_j;
-          nj.field_l = ResourceArchive.field_a;
+          FireworkBurst.activeBrickSprites = ResourceArchive.field_a;
           fq.field_d = LevelPackSelectScreen.field_z;
         } else {
           bq.field_e = JungleBackground.field_v;
@@ -89,7 +89,7 @@ final class gr {
           Ball.field_w = MultiValueSliderRenderer.field_e;
           WidgetLayer.field_J = Ball.field_D;
           TextHotspotRegion.field_o = AccountRegistrationPanel.field_R;
-          nj.field_l = TranslucentNineSliceFrame.field_m;
+          FireworkBurst.activeBrickSprites = TranslucentNineSliceFrame.field_m;
           fq.field_d = GameConnectionShell.field_D;
           we.field_b = TextHotspotRegion.powerUpMeterIcons;
           field_c = MenuSelection.field_k;

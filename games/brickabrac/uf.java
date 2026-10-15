@@ -208,21 +208,21 @@ final class uf {
         return stackIn_138_0;
     }
 
-    final static void a(int param0, int param1) {
-        int var2_int = 0;
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var3 = BrickABrac.field_J ? 1 : 0;
+    final static void spawnFireworkBursts(int endIndex, int firstIndex) {
+        int burstIndex = 0;
+        int unusedClientFlag = 0;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          for (var2_int = param1; var2_int < param0; var2_int++) {
-            LevelCompleteScreen.a(5 + JungleBackground.field_r.nextBoundedInt(-37880252, 2), 1273378209, JungleBackground.field_r.nextBoundedInt(-37880252, 3) + 9);
+          for (burstIndex = firstIndex; burstIndex < endIndex; burstIndex++) {
+            LevelCompleteScreen.spawnFireworkBurst(5 + JungleBackground.fireworkRandom.nextBoundedInt(-37880252, 2), 1273378209, JungleBackground.fireworkRandom.nextBoundedInt(-37880252, 3) + 9);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "uf.D(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "uf.D(" + endIndex + ',' + firstIndex + ')');
         }
     }
 

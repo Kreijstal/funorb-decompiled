@@ -6,13 +6,13 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
     static AudioMixer soundMixer;
     static String field_H;
     static PaletteFont field_D;
-    static NodeDeque field_E;
+    static NodeDeque fireworkBursts;
     static long field_G;
     static NodeDeque pendingIntArrayRequests;
 
     public static void b(int param0) {
         pendingIntArrayRequests = null;
-        field_E = null;
+        fireworkBursts = null;
         if (param0 >= -55) {
           return;
         }
@@ -79,7 +79,7 @@ final class PasswordFieldRenderer extends TextFieldRenderer {
     static {
         field_H = "Add <%0> to ignore list";
         pendingPacketOpcode = -1;
-        field_E = new NodeDeque();
+        fireworkBursts = new NodeDeque();
         pendingIntArrayRequests = new NodeDeque();
     }
 }

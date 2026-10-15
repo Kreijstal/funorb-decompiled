@@ -15,28 +15,28 @@ final class Rasterizer2D {
     static int[] scanlineMaskOffsets;
     static int width;
 
-    private final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int[] param8, int param9, int[] param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17) {
-        int var18 = 0;
-        while (param17 < 0) {
-          param3 = param14;
-          param4 = param12;
-          for (var18 = param13; var18 < 0; var18++) {
-            if (param3 < param6) {
-              param0 = param10[(param6 - param3) * param9 / param6];
-              param1 = param8[param7];
-              param2 = param0 + param1;
-              param0 = (param0 & 16711935) + (param1 & 16711935);
-              param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-              param8[param7] = param2 - param1 | param1 - (param1 >>> 8);
+    private final static void addRadialGlowScanlines(int sourceColor, int destinationColor, int colorSum, int distanceSquared, int distanceStepX, int distanceSecondDifferenceX, int radiusSquared, int destinationIndex, int[] destination, int peakIntensity, int[] colorRamp, int destinationRowSkip, int initialDistanceStepX, int negativeWidth, int rowDistanceSquared, int distanceStepY, int distanceSecondDifferenceY, int negativeHeight) {
+        int negativeColumn = 0;
+        while (negativeHeight < 0) {
+          distanceSquared = rowDistanceSquared;
+          distanceStepX = initialDistanceStepX;
+          for (negativeColumn = negativeWidth; negativeColumn < 0; negativeColumn++) {
+            if (distanceSquared < radiusSquared) {
+              sourceColor = colorRamp[(radiusSquared - distanceSquared) * peakIntensity / radiusSquared];
+              destinationColor = destination[destinationIndex];
+              colorSum = sourceColor + destinationColor;
+              sourceColor = (sourceColor & 16711935) + (destinationColor & 16711935);
+              destinationColor = (sourceColor & 16777472) + (colorSum - sourceColor & 65536);
+              destination[destinationIndex] = colorSum - destinationColor | destinationColor - (destinationColor >>> 8);
             }
-            param7++;
-            param3 = param3 + param4;
-            param4 = param4 + param5;
+            destinationIndex++;
+            distanceSquared = distanceSquared + distanceStepX;
+            distanceStepX = distanceStepX + distanceSecondDifferenceX;
           }
-          param7 = param7 + param11;
-          param14 = param14 + param15;
-          param15 = param15 + param16;
-          param17++;
+          destinationIndex = destinationIndex + destinationRowSkip;
+          rowDistanceSquared = rowDistanceSquared + distanceStepY;
+          distanceStepY = distanceStepY + distanceSecondDifferenceY;
+          negativeHeight++;
         }
     }
 
@@ -1510,45 +1510,45 @@ final class Rasterizer2D {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
-        int var5 = param2 * param2;
-        int var6 = param0 - param2 >> 4;
-        int var7 = param0 + param2 + 15 >> 4;
-        int var8 = param1 - param2 >> 4;
-        int var9 = param1 + param2 + 15 >> 4;
-        if (var6 < clipLeft) {
-          var6 = clipLeft;
+    final static void drawRadialGlow(int centerX16, int centerY16, int radius16, int peakIntensity, int[] colorRamp) {
+        int radiusSquared = radius16 * radius16;
+        int left = centerX16 - radius16 >> 4;
+        int right = centerX16 + radius16 + 15 >> 4;
+        int top = centerY16 - radius16 >> 4;
+        int bottom = centerY16 + radius16 + 15 >> 4;
+        if (left < clipLeft) {
+          left = clipLeft;
         }
-        if (var7 > clipRight) {
-          var7 = clipRight;
+        if (right > clipRight) {
+          right = clipRight;
         }
-        if (var8 < clipTop) {
-          var8 = clipTop;
+        if (top < clipTop) {
+          top = clipTop;
         }
-        if (var9 > clipBottom) {
-          var9 = clipBottom;
+        if (bottom > clipBottom) {
+          bottom = clipBottom;
         }
-        int var10 = (var6 << 4) - param0;
-        var10 = var10 * var10;
-        int var11 = (var6 + 1 << 4) - param0;
-        var11 = var11 * var11;
-        int var12 = (var6 + 2 << 4) - param0;
-        var12 = var12 * var12;
-        int var13 = var11 - var10;
-        int var14 = var12 - var11;
-        int var15 = var14 - var13;
-        int var16 = (var8 << 4) - param1;
-        var16 = var16 * var16;
-        int var17 = (var8 + 1 << 4) - param1;
-        var17 = var17 * var17;
-        int var18 = (var8 + 2 << 4) - param1;
-        var18 = var18 * var18;
-        int var19 = var17 - var16;
-        int var20 = var18 - var17;
-        int var21 = var20 - var19;
-        int var22 = var6 + var8 * width;
-        int var23 = width + var6 - var7;
-        Rasterizer2D.a(0, 0, 0, 0, 0, var15, var5, var22, pixels, param3, param4, var23, var13, var6 - var7, var16 + var10, var19, var21, var8 - var9);
+        int leftDistanceSquared = (left << 4) - centerX16;
+        leftDistanceSquared = leftDistanceSquared * leftDistanceSquared;
+        int nextXDistanceSquared = (left + 1 << 4) - centerX16;
+        nextXDistanceSquared = nextXDistanceSquared * nextXDistanceSquared;
+        int nextNextXDistanceSquared = (left + 2 << 4) - centerX16;
+        nextNextXDistanceSquared = nextNextXDistanceSquared * nextNextXDistanceSquared;
+        int xDistanceStep = nextXDistanceSquared - leftDistanceSquared;
+        int nextXDistanceStep = nextNextXDistanceSquared - nextXDistanceSquared;
+        int xDistanceSecondDifference = nextXDistanceStep - xDistanceStep;
+        int topDistanceSquared = (top << 4) - centerY16;
+        topDistanceSquared = topDistanceSquared * topDistanceSquared;
+        int nextYDistanceSquared = (top + 1 << 4) - centerY16;
+        nextYDistanceSquared = nextYDistanceSquared * nextYDistanceSquared;
+        int nextNextYDistanceSquared = (top + 2 << 4) - centerY16;
+        nextNextYDistanceSquared = nextNextYDistanceSquared * nextNextYDistanceSquared;
+        int yDistanceStep = nextYDistanceSquared - topDistanceSquared;
+        int nextYDistanceStep = nextNextYDistanceSquared - nextYDistanceSquared;
+        int yDistanceSecondDifference = nextYDistanceStep - yDistanceStep;
+        int destinationIndex = left + top * width;
+        int destinationRowSkip = width + left - right;
+        Rasterizer2D.addRadialGlowScanlines(0, 0, 0, 0, 0, xDistanceSecondDifference, radiusSquared, destinationIndex, pixels, peakIntensity, colorRamp, destinationRowSkip, xDistanceStep, left - right, topDistanceSquared + leftDistanceSquared, yDistanceStep, yDistanceSecondDifference, top - bottom);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

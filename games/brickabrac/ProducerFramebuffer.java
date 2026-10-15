@@ -160,9 +160,9 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
           var8 = 0;
           var24 = new int[4];
           Rasterizer2D.saveClip(var24);
-          var10 = new RgbSprite(nj.field_l[0].canvasWidth, nj.field_l[0].canvasHeight);
+          var10 = new RgbSprite(FireworkBurst.activeBrickSprites[0].canvasWidth, FireworkBurst.activeBrickSprites[0].canvasHeight);
           var10.bindRasterTarget();
-          nj.field_l[24].c(0, 0, ScorePopup.a(255, param1.simulationTick % 360 << 8));
+          FireworkBurst.activeBrickSprites[24].c(0, 0, ScorePopup.a(255, param1.simulationTick % 360 << 8));
           BallPulseEffect.framebuffer.bindRaster((byte) 105);
           Rasterizer2D.restoreClip(var24);
           stackIn_6_0 = ((1 << param2 & (param3.playerMaskThree | (param3.playerMaskOne | param3.playerMaskTwo))) != 0) ? 0 : 1;
@@ -183,7 +183,7 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                 }
                 var15 = stackIn_14_0 + stackIn_15_1;
                 if (var15 != 24) {
-                  stackIn_18_0 = nj.field_l[var15];
+                  stackIn_18_0 = FireworkBurst.activeBrickSprites[var15];
                 } else {
                   stackIn_18_0 = var10;
                 }
@@ -302,11 +302,11 @@ final class ProducerFramebuffer extends SoftwareFramebuffer implements java.awt.
                           var16.a(var14.stateWord * 2 / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
                         } else {
                           var19 = -26 + var14.stateWord * 4;
-                          nj.field_l[var14.pendingTypeId].a((-(2 * var14.stateWord) + 30) / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
+                          FireworkBurst.activeBrickSprites[var14.pendingTypeId].a((-(2 * var14.stateWord) + 30) / param0 + var7_int, var8, var19 / param0, var16.canvasHeight);
                         }
                         break;
                       case 11:
-                        nj.field_l[var14.pendingTypeId].drawTransparent(var7_int, var8);
+                        FireworkBurst.activeBrickSprites[var14.pendingTypeId].drawTransparent(var7_int, var8);
                         var16.b(var7_int, var8, var18);
                         break;
                     }

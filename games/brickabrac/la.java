@@ -494,10 +494,10 @@ final class la {
         int var10 = 254;
         int var11 = param2;
         param6 = 273 * param6 + 36;
-        Rasterizer2D.a(param0, param1, 2 * param2, 254, param5);
+        Rasterizer2D.drawRadialGlow(param0, param1, 2 * param2, 254, param5);
         for (var12 = 0; var12 < param3; var12++) {
-          Rasterizer2D.a(param0, param1, var12 * param2, 254 / (1 + var12), param5);
-          Rasterizer2D.a(param0, param1, var12 * param2, 196 / (1 + var12), param5);
+          Rasterizer2D.drawRadialGlow(param0, param1, var12 * param2, 254 / (1 + var12), param5);
+          Rasterizer2D.drawRadialGlow(param0, param1, var12 * param2, 196 / (1 + var12), param5);
           var13 = 0;
           for (var14 = 0; var14 < var9; var14++) {
             var7 = var7 % TranslucentNineSliceFrame.field_i.length;
@@ -511,8 +511,8 @@ final class la {
             var7++;
             var17 = TranslucentNineSliceFrame.field_i[incrementValue$2];
             var13 = var13 + var17;
-            Rasterizer2D.a(var15, var16, var11, var10, param5);
-            Rasterizer2D.a(var15, var16, var11 >> 1, var10 >> 1, param5);
+            Rasterizer2D.drawRadialGlow(var15, var16, var11, var10, param5);
+            Rasterizer2D.drawRadialGlow(var15, var16, var11 >> 1, var10 >> 1, param5);
             for (var18 = 0; var18 < var17; var18++) {
               var8 = var8 % TranslucentNineSliceFrame.field_i.length;
               param6 = param6 % UiComponent.field_F.length;

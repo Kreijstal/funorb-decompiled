@@ -219,7 +219,7 @@ final class n {
               GameUiController.field_e.enabled = false;
               t.field_f.text = gh.field_a;
               if (var8 != 0) {
-                stackIn_61_0 = nj.field_F;
+                stackIn_61_0 = FireworkBurst.matchmakingStatusText;
               } else {
                 stackIn_61_0 = MatchingTextValidator.field_l;
               }

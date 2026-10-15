@@ -589,34 +589,34 @@ final class SoundCache {
         }
     }
 
-    final static void a(boolean param0, byte param1) {
-        int var2_int = 0;
-        nj var3 = null;
-        int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+    final static void advanceFireworks(boolean replaceFinishedBursts, byte obfuscationGuard) {
+        int previousCount = 0;
+        FireworkBurst burst = null;
+        int unusedClientFlag = 0;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          var2_int = SocketConnector.field_f;
-          if (0 == var2_int) {
-            uf.a(3, 0);
+          previousCount = SocketConnector.activeFireworkCount;
+          if (0 == previousCount) {
+            uf.spawnFireworkBursts(3, 0);
           }
-          var3 = (nj) (PasswordFieldRenderer.field_E.first(-31));
-          while (var3 != null) {
-            var3.c(0);
-            var3 = (nj) (PasswordFieldRenderer.field_E.next((byte) 116));
+          burst = (FireworkBurst) (PasswordFieldRenderer.fireworkBursts.first(-31));
+          while (burst != null) {
+            burst.advanceParticles(0);
+            burst = (FireworkBurst) (PasswordFieldRenderer.fireworkBursts.next((byte) 116));
           }
-          if (param0) {
-            uf.a(var2_int - SocketConnector.field_f, 0);
+          if (replaceFinishedBursts) {
+            uf.spawnFireworkBursts(previousCount - SocketConnector.activeFireworkCount, 0);
           }
-          if (param1 >= -30) {
+          if (obfuscationGuard >= -30) {
             field_f = (NodeDeque) null;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var2), "wp.G(" + param0 + ',' + param1 + ')');
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "wp.G(" + replaceFinishedBursts + ',' + obfuscationGuard + ')');
         }
     }
 

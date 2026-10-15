@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class SocketConnector {
-    static int field_f;
+    static int activeFireworkCount;
     static int[] decodedSpriteOffsetY;
     int targetPort;
     static int field_b;
@@ -30,6 +30,6 @@ abstract class SocketConnector {
     }
 
     static {
-        field_f = 0;
+        activeFireworkCount = 0;
     }
 }

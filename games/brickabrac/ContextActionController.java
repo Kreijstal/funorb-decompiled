@@ -646,7 +646,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("searching_for_opponents_plural", (byte) -112);
                 if (var2 != null) {
-                  nj.field_F = MenuButton.a(var2, (byte) 75);
+                  FireworkBurst.matchmakingStatusText = MenuButton.a(var2, (byte) 75);
                 }
                 var2 = nk.a("find_opponent_singular", (byte) 23);
                 if (null != var2) {

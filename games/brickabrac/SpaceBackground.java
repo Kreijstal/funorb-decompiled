@@ -83,7 +83,7 @@ final class SpaceBackground extends BackgroundScene {
           var5 = -77 % ((-28 - obfuscationGuard) / 43);
           return;
         }
-        la.a(destinationX, destinationY, 153, 238, 0, nj.field_G[colorIndex], 96);
+        la.a(destinationX, destinationY, 153, 238, 0, FireworkBurst.backgroundTintColors[colorIndex], 96);
         if (this.hasSprites((byte) -103)) {
           rf.spaceSmallSprite.drawTransparent(destinationX, destinationY);
         }
@@ -99,7 +99,7 @@ final class SpaceBackground extends BackgroundScene {
         ng.spaceFarSprite = pl.loadRgbSpriteByName("space", "space_far", (byte) -98, AchievementIcon.field_m);
         rf.spaceSmallSprite = pl.loadRgbSpriteByName("space", "space_small", (byte) -90, AchievementIcon.field_m);
         ng.spaceFarSprite.bindRasterTarget();
-        Rasterizer2D.a(7136, 6592, 1600, 128, sq.field_b);
+        Rasterizer2D.drawRadialGlow(7136, 6592, 1600, 128, sq.field_b);
         if (!obfuscationGuard) {
           BallPulseEffect.framebuffer.bindRaster((byte) 100);
           TableNameEntry.spaceCharacterSprite = pl.loadRgbSpriteByName("space", "space_character", (byte) -50, AchievementIcon.field_m);

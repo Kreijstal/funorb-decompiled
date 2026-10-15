@@ -11,7 +11,7 @@ abstract class ArrayWidgetGroup extends Widget implements WidgetContainer {
     static String[] buttonLabels;
     static String field_J;
     static int[] field_L;
-    static int field_E;
+    static int fireworkSpawnHeight;
     static NineSliceFrame field_F;
     static String field_C;
     static int[] decodedSpriteOffsetX;

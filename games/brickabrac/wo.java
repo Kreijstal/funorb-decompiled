@@ -3,7 +3,7 @@
  */
 final class wo {
     static WidgetLayerStack field_b;
-    static int field_a;
+    static int fireworkSpawnMaxY;
 
     public static void b(int param0) {
         int var1 = 32 / ((-29 - param0) / 41);

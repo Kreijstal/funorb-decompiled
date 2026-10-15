@@ -5,7 +5,7 @@ class HotspotTextWidget extends FocusableWidget {
     private String[] hotspotTooltips;
     private NodeDeque hotspotRegions;
     private TextHotspotRegion hoveredHotspot;
-    static int field_L;
+    static int fireworkSpawnMaxX;
     static String field_M;
 
     final void rebuildHotspots(int obfuscationGuard) {
@@ -108,7 +108,7 @@ class HotspotTextWidget extends FocusableWidget {
           if (obfuscationGuard) {
             return false;
           }
-          field_L = 12;
+          fireworkSpawnMaxX = 12;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,7 +194,7 @@ class HotspotTextWidget extends FocusableWidget {
 
     final static boolean a(int param0) {
         if (param0 != 9) {
-          field_L = -88;
+          fireworkSpawnMaxX = -88;
         }
         return IntrusiveHashIterator.field_j;
     }
@@ -208,7 +208,7 @@ class HotspotTextWidget extends FocusableWidget {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -1) {
-            field_L = -26;
+            fireworkSpawnMaxX = -26;
           }
           stackIn_3_0 = OptionsScreen.a(2, param0, param1, false);
           return stackIn_3_0;
@@ -241,9 +241,9 @@ class HotspotTextWidget extends FocusableWidget {
         }
     }
 
-    final static void h(int param0) {
-        PasswordFieldRenderer.field_E.clear((byte) -114);
-        SocketConnector.field_f = param0;
+    final static void clearFireworks(int activeCount) {
+        PasswordFieldRenderer.fireworkBursts.clear((byte) -114);
+        SocketConnector.activeFireworkCount = activeCount;
     }
 
     final void setHotspotTooltip(String tooltip, int hotspotId, byte obfuscationGuard) {

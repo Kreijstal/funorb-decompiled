@@ -191,27 +191,27 @@ final class SaveResultsPromptScreen extends MenuScreen {
         }
     }
 
-    final static void b(boolean param0, boolean param1, int param2) {
-        nj var3 = null;
-        int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var4 = BrickABrac.field_J ? 1 : 0;
+    final static void advanceAndDrawFireworks(boolean obfuscationGuard, boolean replaceFinishedBursts, int horizontalOffset) {
+        FireworkBurst burst = null;
+        int unusedClientFlag = 0;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          SoundCache.a(param1, (byte) -51);
-          if (!param0) {
+          SoundCache.advanceFireworks(replaceFinishedBursts, (byte) -51);
+          if (!obfuscationGuard) {
             field_y = (String) null;
           }
-          var3 = (nj) (PasswordFieldRenderer.field_E.first(-58));
-          while (var3 != null) {
-            var3.a(-1196049244, param2 << 4);
-            var3 = (nj) (PasswordFieldRenderer.field_E.next((byte) 116));
+          burst = (FireworkBurst) (PasswordFieldRenderer.fireworkBursts.first(-58));
+          while (burst != null) {
+            burst.drawParticles(-1196049244, horizontalOffset << 4);
+            burst = (FireworkBurst) (PasswordFieldRenderer.fireworkBursts.next((byte) 116));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3_ref), "hq.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+        } catch (java.lang.RuntimeException caughtException) {
+          caughtFailure = caughtException;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "hq.E(" + obfuscationGuard + ',' + replaceFinishedBursts + ',' + horizontalOffset + ')');
         }
     }
 

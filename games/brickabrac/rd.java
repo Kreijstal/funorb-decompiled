@@ -105,7 +105,7 @@ final class rd {
           selector = var3 + 1;
         }
         if (selector == 7) {
-          HotspotTextWidget.h(0);
+          HotspotTextWidget.clearFireworks(0);
         }
         BackgroundScene var2_ref = BackgroundRegistry.scenes[selector];
         var2_ref.ensureSprites(obfuscationGuard - 18);

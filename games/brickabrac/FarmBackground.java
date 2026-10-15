@@ -8,7 +8,7 @@ final class FarmBackground extends BackgroundScene {
     static UiComponent field_v;
     static String field_y;
     static String field_s;
-    static int field_w;
+    static int fireworkSpawnWidth;
     static String field_t;
 
     final void drawSplitBackground(int destinationY, byte obfuscationGuard, int destinationX, int colorIndex, int scroll16) {

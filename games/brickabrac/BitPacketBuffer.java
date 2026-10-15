@@ -139,7 +139,7 @@ final class BitPacketBuffer extends PacketBuffer {
                 if (var18 < var14) {
                   var19 = var12_ref_vn.centerXHistory256.get(var13, 1);
                   var20 = var12_ref_vn.centerYHistory256.get(var13, 1);
-                  Rasterizer2D.a((destinationX << 4) + (var19 >> 4) / scaleDivisor, (var20 >> 4) / scaleDivisor + (destinationY << 4), var17 / scaleDivisor >> 4, var15, ArrayWidgetGroup.field_M);
+                  Rasterizer2D.drawRadialGlow((destinationX << 4) + (var19 >> 4) / scaleDivisor, (var20 >> 4) / scaleDivisor + (destinationY << 4), var17 / scaleDivisor >> 4, var15, ArrayWidgetGroup.field_M);
                   var15 = var15 - var16;
                   var17 = var17 * 252 >> 8;
                   var13--;

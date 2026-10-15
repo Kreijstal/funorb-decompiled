@@ -108,7 +108,7 @@ final class qn {
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard <= 118) {
-            qn.a(17, -27, -12, -54, -92);
+            qn.initializeFireworkSpawnArea(17, -27, -12, -54, -92);
           }
           var4 = (RankingsRequest) (HuffmanCodec.pendingRankingsRequests.first(-99));
           while (var4 != null) {
@@ -134,23 +134,23 @@ final class qn {
         int var4 = 111 % ((param0 + 47) / 41);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
-        JungleBackground.field_r = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
-        PauseMenuScreen.field_x = param1;
-        if (param4 == -6532) {
-          Mesh3D.field_k = param3;
-          HotspotTextWidget.field_L = param2;
-          wo.field_a = param0;
-          FarmBackground.field_w = HotspotTextWidget.field_L - PauseMenuScreen.field_x;
-          ArrayWidgetGroup.field_E = -Mesh3D.field_k + wo.field_a;
+    final static void initializeFireworkSpawnArea(int maxY, int minX, int maxX, int minY, int obfuscationGuard) {
+        JungleBackground.fireworkRandom = new IsaacGenerator(new int[]{(int)MonotonicTime.nowMillis(false)});
+        PauseMenuScreen.fireworkSpawnMinX = minX;
+        if (obfuscationGuard == -6532) {
+          Mesh3D.fireworkSpawnMinY = minY;
+          HotspotTextWidget.fireworkSpawnMaxX = maxX;
+          wo.fireworkSpawnMaxY = maxY;
+          FarmBackground.fireworkSpawnWidth = HotspotTextWidget.fireworkSpawnMaxX - PauseMenuScreen.fireworkSpawnMinX;
+          ArrayWidgetGroup.fireworkSpawnHeight = -Mesh3D.fireworkSpawnMinY + wo.fireworkSpawnMaxY;
           return;
         }
         qn.b(109);
-        Mesh3D.field_k = param3;
-        HotspotTextWidget.field_L = param2;
-        wo.field_a = param0;
-        FarmBackground.field_w = HotspotTextWidget.field_L - PauseMenuScreen.field_x;
-        ArrayWidgetGroup.field_E = -Mesh3D.field_k + wo.field_a;
+        Mesh3D.fireworkSpawnMinY = minY;
+        HotspotTextWidget.fireworkSpawnMaxX = maxX;
+        wo.fireworkSpawnMaxY = maxY;
+        FarmBackground.fireworkSpawnWidth = HotspotTextWidget.fireworkSpawnMaxX - PauseMenuScreen.fireworkSpawnMinX;
+        ArrayWidgetGroup.fireworkSpawnHeight = -Mesh3D.fireworkSpawnMinY + wo.fireworkSpawnMaxY;
     }
 
     final GameCanvas a(boolean param0) {

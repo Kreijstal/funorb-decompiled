@@ -113,13 +113,13 @@ abstract class AchievementBrowserScreen extends MenuScreen {
             PasswordFieldRenderer.field_D.drawLeft(this.descriptionLines[var11], 209, var8, 2, -1);
             var8 = var8 + var4;
           }
-          PasswordFieldRenderer.field_D.drawLeft(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * PasswordFieldRenderer.field_D.descent) - nj.field_z.height / 2), 2, -1);
+          PasswordFieldRenderer.field_D.drawLeft(LevelPackLoader.field_c + Brick.field_D[var3], 209, var9 + (-(2 * PasswordFieldRenderer.field_D.descent) - FireworkBurst.achievementOrbCoinSprite.height / 2), 2, -1);
           PasswordFieldRenderer.field_D.drawLeft(UsernameAvailabilityValidator.field_m, 209, -ContextActionController.field_g.descent + var9, 2, -1);
           var11Lifetime1 = PasswordFieldRenderer.field_D.measureText(UsernameAvailabilityValidator.field_m) + 209;
-          var12 = -(nj.field_z.canvasHeight / 2) + var9;
+          var12 = -(FireworkBurst.achievementOrbCoinSprite.canvasHeight / 2) + var9;
           for (var13 = 0; fq.field_e[var3] > var13; var13++) {
-            nj.field_z.a(var11Lifetime1, var12);
-            var11Lifetime1 = var11Lifetime1 + nj.field_z.width / 3;
+            FireworkBurst.achievementOrbCoinSprite.a(var11Lifetime1, var12);
+            var11Lifetime1 = var11Lifetime1 + FireworkBurst.achievementOrbCoinSprite.width / 3;
           }
         } else {
           ContextActionController.field_g.drawLeft(ProducerFramebuffer.field_h, 209, 246 + ContextActionController.field_g.capHeight, 2, -1);
@@ -274,11 +274,11 @@ abstract class AchievementBrowserScreen extends MenuScreen {
         try {
           param7.drawAt((5 * param2 >> 16) + param1 + (param4 - param7.canvasWidth) / 2, param10);
           if (param8 == 1) {
-            Rasterizer2D.a(100 / param8 << 4, 1600, 64, 128, sq.field_b);
-            Rasterizer2D.a(200 / param8 << 4, 800, 48, 192, sq.field_b);
-            Rasterizer2D.a(300 / param8 << 4, 1920, 64, 128, sq.field_b);
-            Rasterizer2D.a(370 / param8 << 4, 2720, 48, 128, sq.field_b);
-            Rasterizer2D.a(480 / param8 << 4, 1120, 48, 192, sq.field_b);
+            Rasterizer2D.drawRadialGlow(100 / param8 << 4, 1600, 64, 128, sq.field_b);
+            Rasterizer2D.drawRadialGlow(200 / param8 << 4, 800, 48, 192, sq.field_b);
+            Rasterizer2D.drawRadialGlow(300 / param8 << 4, 1920, 64, 128, sq.field_b);
+            Rasterizer2D.drawRadialGlow(370 / param8 << 4, 2720, 48, 128, sq.field_b);
+            Rasterizer2D.drawRadialGlow(480 / param8 << 4, 1120, 48, 192, sq.field_b);
           }
           param9.drawTransparent(-(220 / param8) + (10 * param2 >> 16) + (param1 + (param4 - param9.canvasWidth) / 2), -param9.canvasHeight + (480 + 37 / param8));
           param0.drawTransparent(param1 + ((param4 - param0.canvasWidth) / 2 + (20 * param2 >> 16)) - 5 / param8, 480 - param0.canvasHeight);

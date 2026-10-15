@@ -184,8 +184,8 @@ final class QuickChatCategoryRegistry {
           LevelCompleteScreen.field_F = pl.loadRgbSpriteByName("basic", "unachieved", (byte) 97, param1);
           DelayedPacket.field_p = pl.loadRgbSpriteByName("basic", "orbcoin", (byte) 122, param1);
           pl.loadRgbSpriteByName("basic", "locked", (byte) -45, param1);
-          nj.field_z = new RgbSprite(32, 32);
-          nj.field_z.bindRasterTarget();
+          FireworkBurst.achievementOrbCoinSprite = new RgbSprite(32, 32);
+          FireworkBurst.achievementOrbCoinSprite.bindRasterTarget();
           DelayedPacket.field_p.c(0, 0, 32, 32);
           BallPulseEffect.framebuffer.bindRaster((byte) 91);
           DelayedPacket.field_p = null;

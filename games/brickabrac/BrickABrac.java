@@ -882,7 +882,7 @@ public final class BrickABrac extends InteractiveGameClient {
         tq.a(1024);
         AccountResponse.a((byte) 83);
         fa.a((byte) -102);
-        nj.a(0);
+        FireworkBurst.a(0);
         RasterCacheSurface.a((byte) 121);
         LoginMethodPreference.a(100);
         AlternateNumericLoginCredentials.b((byte) -121);

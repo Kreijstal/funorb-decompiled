@@ -3,23 +3,23 @@
  */
 final class EmailLoginCredentials extends LoginCredentials {
     private String password;
-    static int[] field_q;
+    static int[] fireworkBaseColors;
     static String field_m;
     private String email;
-    static int[][] field_r;
+    static int[][] fireworkColorRamps;
     static String[][] field_p;
     static int field_n;
     static boolean field_l;
 
     public static void a(boolean param0) {
-        field_r = (int[][]) null;
+        fireworkColorRamps = (int[][]) null;
         if (param0) {
           PacketBuffer var2 = (PacketBuffer) null;
           EmailLoginCredentials.decodeLobbyGame((LobbyGame) null, (PacketBuffer) null, -20, false);
         }
         field_m = null;
         field_p = (String[][]) null;
-        field_q = null;
+        fireworkBaseColors = null;
     }
 
     final LoginCredentialKind getCredentialKind(int obfuscationGuard) {
@@ -157,12 +157,12 @@ final class EmailLoginCredentials extends LoginCredentials {
         int var3 = 0;
         double var4 = 0.0;
         int var6 = 0;
-        field_q = new int[]{16777215, 56780, 7536682, 3359829, 12232538, 10081269};
+        fireworkBaseColors = new int[]{16777215, 56780, 7536682, 3359829, 12232538, 10081269};
         field_m = "Nice!";
-        field_r = new int[field_q.length][256];
-        for (var0 = 0; var0 < field_q.length; var0++) {
-          var1 = 16711935 & field_q[var0];
-          var2 = (field_q[var0] & 65280) >> 8;
+        fireworkColorRamps = new int[fireworkBaseColors.length][256];
+        for (var0 = 0; var0 < fireworkBaseColors.length; var0++) {
+          var1 = 16711935 & fireworkBaseColors[var0];
+          var2 = (fireworkBaseColors[var0] & 65280) >> 8;
           for (var3 = 0; var3 < 256; var3++) {
             var4 = Math.exp((-128.0 + (double)var3) / 32.0);
             var4 = 255.0 * var4 / (var4 + 1.0);
@@ -173,7 +173,7 @@ final class EmailLoginCredentials extends LoginCredentials {
             if (var6 < 0) {
               var6 = 0;
             }
-            field_r[var0][var3] = IntrusiveHashIterator.a(var6 * var2, 65280) + IntrusiveHashIterator.a(var1 * var6 >> 8, 16711934) + 1;
+            fireworkColorRamps[var0][var3] = IntrusiveHashIterator.a(var6 * var2, 65280) + IntrusiveHashIterator.a(var1 * var6 >> 8, 16711934) + 1;
           }
         }
     }

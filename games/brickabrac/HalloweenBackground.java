@@ -99,7 +99,7 @@ final class HalloweenBackground extends BackgroundScene {
           IndexedSpriteGeometry.pushSpriteRaster(-95, param5.sprite);
           Rasterizer2D.clear();
           param4.b(-(60 / param0) + (-param4.canvasWidth + param5.width) / 2, -param4.canvasHeight + param1 - (-param5.height + 130 / param0), 0, 208);
-          la.a(0, 0, param5.width, param5.height, 0, nj.field_G[param3], 96);
+          la.a(0, 0, param5.width, param5.height, 0, FireworkBurst.backgroundTintColors[param3], 96);
           if (param2) {
             RasterCacheSurface var7 = (RasterCacheSurface) null;
             HalloweenBackground.a(82, 29, true, -26, (RgbSprite) null, (RasterCacheSurface) null);
