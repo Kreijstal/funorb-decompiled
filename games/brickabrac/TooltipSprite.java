@@ -175,7 +175,7 @@ final class TooltipSprite extends IntrusiveNode {
           groupId = spriteArchive.getGroupId(groupName, false);
           fileId = spriteArchive.getFileId(groupId, -80, fileName);
           if (obfuscationGuard == -37) {
-            font = wn.loadBinaryMaskFont(groupId, metricsArchive, spriteArchive, fileId, (byte) -112);
+            font = FriendListUi.loadBinaryMaskFont(groupId, metricsArchive, spriteArchive, fileId, (byte) -112);
             return font;
           }
           guardRejectedFont = (BinaryMaskFont) null;

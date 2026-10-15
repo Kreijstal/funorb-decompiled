@@ -241,7 +241,7 @@ final class DateFieldsWidget extends DateInputWidget {
           stackIn_20_1 = (param0) && (!param1) && (sc.field_c);
           ((UiComponent) (Object) stackIn_19_0).updateRoot(stackIn_20_1, -15211);
         }
-        ap.field_b.field_d.processTabPresses(0);
+        ap.field_b.tabs.processTabPresses(0);
         if (HighscorePackSelector.field_k.pressedButton != 0) {
           tq.field_c = true;
         }

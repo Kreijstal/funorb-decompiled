@@ -585,7 +585,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ch.a(20623);
         df.a((byte) 108);
         gh.a(-21727);
-        vj.a(true);
+        SocialTabbedPanel.a(true);
         hm.a(8);
         Rasterizer2D.clearStaticReferences();
         mc.a(-128);
@@ -599,7 +599,7 @@ public final class BrickABrac extends InteractiveGameClient {
         t.a(-11470);
         wm.a(108);
         PacketBuffer.clearStaticStrings(0);
-        wn.c((byte) -41);
+        FriendListUi.c((byte) -41);
         vg.b(13);
         rd.a((byte) 46);
         GameOverlayHelpers.a(117);

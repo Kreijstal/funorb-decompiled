@@ -6,7 +6,7 @@ final class n {
     static RgbSprite waterFarSprite;
     static boolean field_d;
     static String field_b;
-    static String field_a;
+    static String nameColumnHeadingText;
 
     final static void appendChatHistory(int firstOutputIndex, ChatMessage message) {
         int dupTemp$3 = 0;
@@ -82,7 +82,7 @@ final class n {
             }
           }
           if (param0 != -1) {
-            field_a = (String) null;
+            nameColumnHeadingText = (String) null;
           }
           jl.incomingPackets.position = jl.incomingPackets.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -123,7 +123,7 @@ final class n {
     }
 
     public static void b(int param0) {
-        field_a = null;
+        nameColumnHeadingText = null;
         waterFarSprite = null;
         if (param0 != -2) {
           return;
@@ -315,7 +315,7 @@ final class n {
           stackIn_83_0 = ProxySocketConnector.field_j;
           stackIn_84_1 = (param1) && (!param2) && (hc.field_c);
           ((UiComponent) (Object) stackIn_83_0).updateRoot(stackIn_84_1, -15211);
-          BrickGameLayerController.field_c.field_d.processTabPresses(0);
+          BrickGameLayerController.field_c.tabs.processTabPresses(0);
           if (nl.pendingLobbyGame != null) {
             if (GameUiController.field_e.pressedButton != 0) {
               ProxyAuthenticationRequiredException.requestReturnToLobby(-22809, param0);
@@ -339,6 +339,6 @@ final class n {
 
     static {
         field_b = "You have entered another game.";
-        field_a = "Name";
+        nameColumnHeadingText = "Name";
     }
 }

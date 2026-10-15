@@ -67,137 +67,137 @@ final class MusicEnvelope {
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2) {
-        ScrollPane stackIn_3_0;
-        int stackIn_3_1;
-        int stackIn_3_2;
-        int stackIn_3_3;
-        int stackIn_3_4;
-        boolean stackIn_3_5;
-        boolean stackIn_4_6 = false;
-        UiComponent stackIn_20_0 = null;
-        String stackIn_21_1 = null;
-        int stackIn_24_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        NodeDeque var4 = null;
-        Object var5 = null;
-        SocialListEntry var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        String var13_ref_String = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        ContextActionController var16 = null;
-        ContextActionController var17 = null;
-        var15 = BrickABrac.field_J ? 1 : 0;
+    final static void updateIgnoreList(boolean allowActiveRelayout, boolean obfuscationGuard, int wheelTurns) {
+        ScrollPane scrollPaneForLayout;
+        int rowGapForLayout;
+        int wheelPixels;
+        int lineStep;
+        int layoutGuard;
+        boolean activeRelayout;
+        boolean keepChildLayout = false;
+        UiComponent nameLabelForText = null;
+        String displayedName = null;
+        int truncatedValue = 0;
+        RuntimeException caughtFailure = null;
+        int layoutRetained = 0;
+        RuntimeException updateFailure = null;
+        NodeDeque entries = null;
+        Object previousEntry = null;
+        SocialListEntry entry = null;
+        int createdLabels = 0;
+        int hasPreviousName = 0;
+        int nameX = 0;
+        int nameWidth = 0;
+        int isTruncated = 0;
+        String removeIgnoreCaption = null;
+        int pressX = 0;
+        int pressY = 0;
+        int unusedClientFlag = 0;
+        ContextActionController contextForRemove = null;
+        ContextActionController contextForLayout = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          stackIn_3_0 = f.field_c.scrollPane;
-          stackIn_3_1 = 2;
-          stackIn_3_2 = param2 * (np.uiRowHeight * 3 + 6);
-          stackIn_3_3 = np.uiRowHeight + 2;
-          stackIn_3_4 = 22676;
-          stackIn_3_5 = param0;
-          stackIn_4_6 = (o.field_b == f.field_c.scrollPane);
-          var3_int = ((ScrollPane) (Object) stackIn_3_0).updateContentLayout(stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6) ? 1 : 0;
-          var4 = f.field_c.content.children;
-          if (!param1) {
+          scrollPaneForLayout = f.ignoreListPane.scrollPane;
+          rowGapForLayout = 2;
+          wheelPixels = wheelTurns * (np.uiRowHeight * 3 + 6);
+          lineStep = np.uiRowHeight + 2;
+          layoutGuard = 22676;
+          activeRelayout = allowActiveRelayout;
+          keepChildLayout = (o.field_b == f.ignoreListPane.scrollPane);
+          layoutRetained = ((ScrollPane) (Object) scrollPaneForLayout).updateContentLayout(rowGapForLayout, wheelPixels, lineStep, layoutGuard, activeRelayout, keepChildLayout) ? 1 : 0;
+          entries = f.ignoreListPane.content.children;
+          if (!obfuscationGuard) {
             return;
           }
           if (LevelMetadata.field_m != 2 &&
             LevelMetadata.field_m != 1) {
-            f.field_c.enabled = false;
-            f.field_c.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
-            jh.a(param1, f.field_c.content);
+            f.ignoreListPane.enabled = false;
+            f.ignoreListPane.scrollPane.viewport.text = AlternateNumericLoginCredentials.field_t;
+            jh.a(obfuscationGuard, f.ignoreListPane.content);
             return;
           }
-          f.field_c.enabled = true;
-          f.field_c.scrollPane.viewport.text = null;
-          var5 = null;
-          var6 = (SocialListEntry) (var4.first(-57));
-          while (var6 != null) {
-            var7 = 0;
-            if (null == var6.children) {
-              var6.nameLabel = new UiComponent(0L, TextFieldWidget.field_K);
-              var6.addChild(var6.nameLabel, 0);
-              var6.renameIndicator = new UiComponent(0L, TextFieldWidget.field_K);
-              var6.addChild(var6.renameIndicator, 0);
-              var6.markDescendantsToInheritVisualState(param1);
-              var7 = 1;
+          f.ignoreListPane.enabled = true;
+          f.ignoreListPane.scrollPane.viewport.text = null;
+          previousEntry = null;
+          entry = (SocialListEntry) (entries.first(-57));
+          while (entry != null) {
+            createdLabels = 0;
+            if (null == entry.children) {
+              entry.nameLabel = new UiComponent(0L, TextFieldWidget.field_K);
+              entry.addChild(entry.nameLabel, 0);
+              entry.renameIndicator = new UiComponent(0L, TextFieldWidget.field_K);
+              entry.addChild(entry.renameIndicator, 0);
+              entry.markDescendantsToInheritVisualState(obfuscationGuard);
+              createdLabels = 1;
             }
-            var6.width = f.field_c.content.width;
-            var6.nameLabel.setBounds(np.uiRowHeight, 0, 0, var6.width, (byte) 64);
-            var8 = 0;
-            if (null != var6.previousName &&
-              !var6.previousName.equals("")) {
-              var6.renameIndicator.sprite = ok.field_g;
-              var6.renameIndicator.activeTextColor = 16737894;
-              var8 = 1;
-              var6.renameIndicator.setBounds(np.uiRowHeight, 0, 0, ok.field_g.canvasWidth + 3, (byte) 64);
+            entry.width = f.ignoreListPane.content.width;
+            entry.nameLabel.setBounds(np.uiRowHeight, 0, 0, entry.width, (byte) 64);
+            hasPreviousName = 0;
+            if (null != entry.previousName &&
+              !entry.previousName.equals("")) {
+              entry.renameIndicator.sprite = ok.displayNameChangedSprite;
+              entry.renameIndicator.activeTextColor = 16737894;
+              hasPreviousName = 1;
+              entry.renameIndicator.setBounds(np.uiRowHeight, 0, 0, ok.displayNameChangedSprite.canvasWidth + 3, (byte) 64);
             }
-            var9 = 0;
-            var10 = var6.width;
-            if (var8 != 0) {
-              var9 = ok.field_g.canvasWidth + 3;
-              var10 = var10 - var9;
+            nameX = 0;
+            nameWidth = entry.width;
+            if (hasPreviousName != 0) {
+              nameX = ok.displayNameChangedSprite.canvasWidth + 3;
+              nameWidth = nameWidth - nameX;
             }
-            stackIn_20_0 = var6.nameLabel;
-            if (0 < var10) {
-              stackIn_21_1 = TextFont.truncateText(var6.nameLabel.font, var6.name, var10);
+            nameLabelForText = entry.nameLabel;
+            if (0 < nameWidth) {
+              displayedName = TextFont.truncateText(entry.nameLabel.font, entry.name, nameWidth);
             } else {
-              stackIn_21_1 = var6.name;
+              displayedName = entry.name;
             }
-            stackIn_20_0.text = stackIn_21_1;
-            stackIn_24_0 = (var6.nameLabel.text.equals(var6.name)) ? 0 : 1;
-            var11 = stackIn_24_0;
-            var6.nameLabel.setBounds(np.uiRowHeight, 0, var9, var10, (byte) 64);
-            if (var3_int == 0) {
-              var6.remainingHeight = np.uiRowHeight - var6.height;
+            nameLabelForText.text = displayedName;
+            truncatedValue = (entry.nameLabel.text.equals(entry.name)) ? 0 : 1;
+            isTruncated = truncatedValue;
+            entry.nameLabel.setBounds(np.uiRowHeight, 0, nameX, nameWidth, (byte) 64);
+            if (layoutRetained == 0) {
+              entry.remainingHeight = np.uiRowHeight - entry.height;
             }
-            if (var7 != 0) {
-              f.field_c.content.placeBelow((UiComponent) (var5), 2, var6, 17290);
+            if (createdLabels != 0) {
+              f.ignoreListPane.content.placeBelow((UiComponent) (previousEntry), 2, entry, 17290);
             }
-            if (null != var6.renameIndicator &&
-              var6.renameIndicator.activeInside) {
-              WidgetTextLayout.field_e = var6.previousName;
+            if (null != entry.renameIndicator &&
+              entry.renameIndicator.activeInside) {
+              WidgetTextLayout.field_e = entry.previousName;
             } else {
-              if (var6.nameLabel.activeInside &&
-                var11 != 0) {
-                WidgetTextLayout.field_e = var6.name;
+              if (entry.nameLabel.activeInside &&
+                isTruncated != 0) {
+                WidgetTextLayout.field_e = entry.name;
               }
             }
-            if (var6.pressedButton != 0) {
-              SpriteGeometry.a(-1, var6, f.field_c.scrollPane, (int[]) null, var6.actionName, -1, (byte) -58, 0L, var6.name);
-              var16 = bm.contextActions;
-              var13_ref_String = ng.field_e;
-              var16.contextMenu.addAction(var13_ref_String, 7, (byte) 126);
-              var17 = bm.contextActions;
-              var13 = LoadingProgressDialog.pressX;
-              var14 = PlayerNameChooserPanel.pressY;
-              var17.contextMenu.layoutAtAnchor(var14, -126, 0, 0, var13);
+            if (entry.pressedButton != 0) {
+              SpriteGeometry.a(-1, entry, f.ignoreListPane.scrollPane, (int[]) null, entry.actionName, -1, (byte) -58, 0L, entry.name);
+              contextForRemove = bm.contextActions;
+              removeIgnoreCaption = ng.field_e;
+              contextForRemove.contextMenu.addAction(removeIgnoreCaption, 7, (byte) 126);
+              contextForLayout = bm.contextActions;
+              pressX = LoadingProgressDialog.pressX;
+              pressY = PlayerNameChooserPanel.pressY;
+              contextForLayout.contextMenu.layoutAtAnchor(pressY, -126, 0, 0, pressX);
             }
-            var5 = var6;
-            var6 = (SocialListEntry) (var4.next((byte) 116));
+            previousEntry = entry;
+            entry = (SocialListEntry) (entries.next((byte) 116));
           }
-          if (f.field_c.leftFooter.pressedButton != 0) {
-            MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.field_c.leftFooter.screenX, f.field_c.leftFooter.screenY, f.field_c.leftFooter.width, f.field_c.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          if (f.ignoreListPane.leftFooter.pressedButton != 0) {
+            MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.ignoreListPane.leftFooter.screenX, f.ignoreListPane.leftFooter.screenY, f.ignoreListPane.leftFooter.width, f.ignoreListPane.leftFooter.height, CacheIoWorker.field_e, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
             GameUiController.field_d = 2;
           }
-          if (0 == f.field_c.rightFooter.pressedButton) {
+          if (0 == f.ignoreListPane.rightFooter.pressedButton) {
             return;
           }
-          MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.field_c.rightFooter.screenX, f.field_c.rightFooter.screenY, f.field_c.rightFooter.width, f.field_c.rightFooter.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
+          MusicCrossfadeStream.nameEntryPopup = new NameEntryPopup(f.ignoreListPane.rightFooter.screenX, f.ignoreListPane.rightFooter.screenY, f.ignoreListPane.rightFooter.width, f.ignoreListPane.rightFooter.height, MultiplayerExitScreen.field_A, GameUiController.field_c, CappedUrlRequest.field_l, CappedUrlRequest.field_l);
           GameUiController.field_d = 3;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "jm.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+        } catch (java.lang.RuntimeException caughtUpdateFailure) {
+          caughtFailure = caughtUpdateFailure;
+          updateFailure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) updateFailure), "jm.B(" + allowActiveRelayout + ',' + obfuscationGuard + ',' + wheelTurns + ')');
         }
     }
 

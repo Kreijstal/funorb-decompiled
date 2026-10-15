@@ -278,7 +278,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_friends", (byte) -127);
                 if (null != var2) {
-                  AchievementSubmission.field_j = MenuButton.a(var2, (byte) 125);
+                  AchievementSubmission.friendsTabLabel = MenuButton.a(var2, (byte) 125);
                 }
                 var2 = nk.a("mu_chat_off", (byte) -122);
                 if (var2 != null) {
@@ -294,7 +294,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_chat_ignore", (byte) -115);
                 if (var2 != null) {
-                  pl.field_e = MenuButton.a(var2, (byte) 110);
+                  pl.ignoreTabLabel = MenuButton.a(var2, (byte) 110);
                 }
                 var2 = nk.a("mu_chat_tips", (byte) 35);
                 if (var2 != null) {
@@ -386,7 +386,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_lobby_name", (byte) 3);
                 if (null != var2) {
-                  n.field_a = MenuButton.a(var2, (byte) 87);
+                  n.nameColumnHeadingText = MenuButton.a(var2, (byte) 87);
                 }
                 var2 = nk.a("mu_lobby_rating", (byte) -116);
                 if (var2 != null) {
@@ -410,7 +410,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mu_lobby_location", (byte) 8);
                 if (var2 != null) {
-                  ArchiveSource.field_c = MenuButton.a(var2, (byte) 89);
+                  ArchiveSource.locationColumnHeadingText = MenuButton.a(var2, (byte) 89);
                 }
                 var2 = nk.a("mu_gamelist_all_games", (byte) -116);
                 if (null != var2) {

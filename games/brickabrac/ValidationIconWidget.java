@@ -142,12 +142,12 @@ final class ValidationIconWidget extends FocusableWidget {
               un.decodeRankingStatistics((byte) -122, packet);
               if (recordIndex == 0) {
                 request.localDraws = fh.decodedRankingDraws;
-                request.localRating = vj.decodedRankingRating;
+                request.localRating = SocialTabbedPanel.decodedRankingRating;
                 request.localLosses = ValidatedTextFieldWidget.decodedRankingLosses;
                 request.localWins = RadialSelectorWidget.decodedRankingWins;
-                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
+                MessageScreen.appendRankingStatistics(SocialTabbedPanel.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               } else {
-                MessageScreen.appendRankingStatistics(vj.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
+                MessageScreen.appendRankingStatistics(SocialTabbedPanel.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               }
             }
             gr.sortRankingViews(12429, rowLimit);
@@ -332,7 +332,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 jl.incomingPackets.position = 0;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;
-                rf.field_b = vj.field_e;
+                rf.field_b = SocialTabbedPanel.field_e;
                 ga.incomingPacketLength = -1;
               }
             }
@@ -354,7 +354,7 @@ final class ValidationIconWidget extends FocusableWidget {
               }
             }
           }
-          if (vj.field_e == rf.field_b &&
+          if (SocialTabbedPanel.field_e == rf.field_b &&
             TextWidgetRenderer.ensureGamePacketBody((byte) -92)) {
             if (IntrusiveHashTable.currentPacketOpcode == 255) {
               var9_ref_String = jl.incomingPackets.readNullableCp1252String(param6 - 4);

@@ -53,8 +53,8 @@ final class un {
           ValidatedTextFieldWidget.decodedRankingLosses = ValidatedTextFieldWidget.decodedRankingLosses + (packet.readUnsignedByte(255) << 7);
           lossesRatingBoundary = packet.readUnsignedByte(255);
           ValidatedTextFieldWidget.decodedRankingLosses = ValidatedTextFieldWidget.decodedRankingLosses + (lossesRatingBoundary >> 1);
-          vj.decodedRankingRating = 65536 & lossesRatingBoundary << 16;
-          vj.decodedRankingRating = vj.decodedRankingRating + packet.readUnsignedShort(65280);
+          SocialTabbedPanel.decodedRankingRating = 65536 & lossesRatingBoundary << 16;
+          SocialTabbedPanel.decodedRankingRating = SocialTabbedPanel.decodedRankingRating + packet.readUnsignedShort(65280);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "un.C(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }

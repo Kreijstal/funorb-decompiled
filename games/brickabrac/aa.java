@@ -126,7 +126,7 @@ final class aa {
           if (!obfuscationGuard) {
             field_b = (RgbSprite) null;
           }
-          if (wn.a(bound, (byte) -6)) {
+          if (FriendListUi.a(bound, (byte) -6)) {
             powerOfTwoResult = (int)((long)bound * ((long)random.nextInt() & 4294967295L) >> 32);
             return powerOfTwoResult;
           }

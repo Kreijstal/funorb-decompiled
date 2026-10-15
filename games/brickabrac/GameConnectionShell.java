@@ -709,7 +709,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           }
           jj.canvasResizeController.tickResizePolicy(guardCode + 118);
         }
-        wn.snapshotKeyboardInput((byte) -97);
+        FriendListUi.snapshotKeyboardInput((byte) -97);
         EmailValidator.snapshotMouseInput(70);
         if (!TextFieldRenderer.c((byte) -114) &&
           AchievementIcon.field_j != 11) {
@@ -719,7 +719,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           GameplayAudioEvent.mouseWheelDelta = NinjaBackground.mouseWheelSource.pollRotation(500);
         }
         if (IntrusiveHashIterator.a(false)) {
-          var3 = wn.a((byte) -98) * 1200;
+          var3 = FriendListUi.a((byte) -98) * 1200;
           if (this.reconnectRequested ||
             !(ProxySocketConnector.c(1) <= var3) &&
             !(var3 >= QuickChatCategoryRegistry.a((byte) -35))) {
@@ -818,7 +818,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           LabeledWidget.field_P = bq.a(-6, 1, true, nd.field_c, false);
           RadialSelectorWidget.field_S = bq.a(-6, 1, true, ea.field_c, false);
           ja.field_c = bq.a(-6, 1, true, o.field_f, false);
-          wn.field_c = RadialSelectorWidget.field_S;
+          FriendListUi.field_c = RadialSelectorWidget.field_S;
           clientStage = 2;
           NameEntryPopup.field_Rb = LabeledWidget.field_P;
         }
@@ -878,7 +878,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         if (clientStage == 11) {
           if (null != GameplayAudioEvent.field_k && (!GameplayAudioEvent.field_k.ensureIndex((byte) -127) ||
             !GameplayAudioEvent.field_k.ensureAllGroupsAvailable(98))) {
-            ParisBackground.a((byte) 24, 0.0f, WidgetPaintStyle.a(GameplayAudioEvent.field_k, wn.field_a, 125, FocusableWidget.field_C));
+            ParisBackground.a((byte) 24, 0.0f, WidgetPaintStyle.a(GameplayAudioEvent.field_k, FriendListUi.field_a, 125, FocusableWidget.field_C));
             decompiledFrameRemainder0 = false;
           }
           else {

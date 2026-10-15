@@ -39,7 +39,7 @@ final class BallPulseEffect extends IntrusiveNode {
 
     final static void a(ResourceArchive param0, AudioMixer param1, int param2, int param3) {
         try {
-          BoundedFile.field_i = wn.a((byte) -98) * param2 / 1000;
+          BoundedFile.field_i = FriendListUi.a((byte) -98) * param2 / 1000;
           if (param3 < 91) {
             AudioMixer var5 = (AudioMixer) null;
             BallPulseEffect.a((ResourceArchive) null, (AudioMixer) null, -127, -72);

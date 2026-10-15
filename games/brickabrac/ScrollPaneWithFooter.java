@@ -137,7 +137,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         }
     }
 
-    final void setPaneFooterBounds(boolean obfuscationGuard, int scrollbarWidth, int width, int x, int y, int contentRightInset, int footerHeight, int height) {
+    final void setPaneFooterBounds(boolean obfuscationGuard, int contentRightInset, int width, int x, int y, int scrollbarWidth, int footerHeight, int height) {
         if (!obfuscationGuard) {
           return;
         }
@@ -145,7 +145,7 @@ final class ScrollPaneWithFooter extends UiComponent {
         this.height = height;
         this.localX = x;
         this.localY = y;
-        this.layoutPaneFooter(footerHeight, -779, contentRightInset, scrollbarWidth);
+        this.layoutPaneFooter(footerHeight, -779, scrollbarWidth, contentRightInset);
     }
 
     public static void h(int param0) {
@@ -455,13 +455,13 @@ final class ScrollPaneWithFooter extends UiComponent {
         }
     }
 
-    final void layoutPaneFooter(int footerHeight, int obfuscationGuard, int contentRightInset, int scrollbarWidth) {
-        int footerSplitX = (scrollbarWidth + this.width) / 2;
+    final void layoutPaneFooter(int footerHeight, int obfuscationGuard, int scrollbarWidth, int contentRightInset) {
+        int footerSplitX = (contentRightInset + this.width) / 2;
         int footerY = -footerHeight + this.height;
-        this.scrollPane.setScrollPaneBounds(scrollbarWidth, (byte) -111, this.width, 0, 0, contentRightInset, footerY - scrollbarWidth);
+        this.scrollPane.setScrollPaneBounds(contentRightInset, (byte) -111, this.width, 0, 0, scrollbarWidth, footerY - contentRightInset);
         this.leftFooter.height = footerHeight;
         this.leftFooter.localX = 0;
-        this.leftFooter.width = -scrollbarWidth + footerSplitX;
+        this.leftFooter.width = -contentRightInset + footerSplitX;
         this.leftFooter.localY = footerY;
         this.rightFooter.localY = footerY;
         this.rightFooter.width = -footerSplitX + this.width;

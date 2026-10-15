@@ -100,7 +100,7 @@ final class ch {
               serverStateResult = packet.readCp1252String(-1);
               AlignedIconLabel.currentSocialServer = ((String) (serverStateResult)).intern();
               serverStateWord = packet.readUnsignedByte(255);
-              wn.applyChatFilters(2, serverStateWord);
+              FriendListUi.applyChatFilters(2, serverStateWord);
               return;
             }
             AlignedIconLabel.a("F1: " + WhirlpoolHasher.c((byte) -104), (Throwable) null, 58);

@@ -165,7 +165,7 @@ final class sq {
         String var5_ref_String = null;
         int var5 = 0;
         int var6 = 0;
-        SocialListEntry var3 = wn.a(param0, param1, -16);
+        SocialListEntry var3 = FriendListUi.updateFriendsList(param0, param1, -16);
         ContextActionController var4_ref_nnLifetime1;
         if (var3 != null) {
           bm.contextActions.addPlayerGameActions(true, false);
@@ -178,7 +178,7 @@ final class sq {
           var4_ref_nnLifetime1.contextMenu.layoutAtAnchor(var6, -98, 0, 0, var5);
         }
         int var4 = -44 % ((-3 - param2) / 50);
-        MusicEnvelope.a(param0, true, param1);
+        MusicEnvelope.updateIgnoreList(param0, true, param1);
     }
 
     final static void updateDiagnosticOverlay(boolean obfuscationGuard) {

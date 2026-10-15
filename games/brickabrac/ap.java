@@ -7,7 +7,7 @@ final class ap {
     static RgbSprite field_a;
     static RgbSprite ninjaMidSprite;
     static String field_d;
-    static vj field_b;
+    static SocialTabbedPanel field_b;
 
     final static void a(int param0, int param1, byte param2) {
         ll.field_b = param1;

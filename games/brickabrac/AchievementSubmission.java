@@ -4,7 +4,7 @@
 final class AchievementSubmission extends IntrusiveNode {
     int resultWordOne;
     static RgbSprite[] field_l;
-    static String field_j;
+    static String friendsTabLabel;
     int achievementId;
     int resultWordFour;
     int resultWordTwo;
@@ -164,7 +164,7 @@ final class AchievementSubmission extends IntrusiveNode {
 
     public static void a(int param0) {
         field_l = null;
-        field_j = null;
+        friendsTabLabel = null;
         int var1 = -115 % ((5 - param0) / 58);
         field_q = null;
     }
@@ -202,6 +202,6 @@ final class AchievementSubmission extends IntrusiveNode {
     }
 
     static {
-        field_j = "Friends";
+        friendsTabLabel = "Friends";
     }
 }

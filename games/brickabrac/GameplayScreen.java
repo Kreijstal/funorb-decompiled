@@ -10,7 +10,7 @@ final class GameplayScreen extends GameScreen {
     int resultLevel;
     private int lastReportedLevel;
     int loadedBoardSnapshots;
-    static UiComponent field_u;
+    static UiComponent friendLocationHeading;
     boolean resultWordMode;
     static int field_j;
     int localPlayerId;
@@ -723,7 +723,7 @@ final class GameplayScreen extends GameScreen {
           this.match.playerBoards[var3_int].resultWord = packet.readMedium(48);
           this.match.playerMaskOne = this.match.playerMaskOne | 1 << var3_int;
           if (obfuscationGuard != 18504) {
-            field_u = (UiComponent) null;
+            friendLocationHeading = (UiComponent) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1138,7 +1138,7 @@ final class GameplayScreen extends GameScreen {
     }
 
     public static void d(int param0) {
-        field_u = null;
+        friendLocationHeading = null;
         field_l = null;
         int var1 = 47 / ((param0 - 14) / 59);
     }

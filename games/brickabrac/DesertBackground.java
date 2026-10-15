@@ -14,14 +14,14 @@ final class DesertBackground extends BackgroundScene {
           if (!var6.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             RankingsScreen.a(var6, 1, 0, OptionsScreen.desertFarSprite, colorIndex, 100);
             var6.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-            InteractiveGameClient.drawParallaxLayers((byte) 119, wn.desertNearSprite, destinationY, 1, PowerUpWarning.desertMidSprite, var6.sprite, scroll16, 640, 0, destinationX);
+            InteractiveGameClient.drawParallaxLayers((byte) 119, FriendListUi.desertNearSprite, destinationY, 1, PowerUpWarning.desertMidSprite, var6.sprite, scroll16, 640, 0, destinationX);
             if (!obfuscationGuard) {
               field_u = (String) null;
               return;
             }
             return;
           }
-          InteractiveGameClient.drawParallaxLayers((byte) 119, wn.desertNearSprite, destinationY, 1, PowerUpWarning.desertMidSprite, var6.sprite, scroll16, 640, 0, destinationX);
+          InteractiveGameClient.drawParallaxLayers((byte) 119, FriendListUi.desertNearSprite, destinationY, 1, PowerUpWarning.desertMidSprite, var6.sprite, scroll16, 640, 0, destinationX);
           if (!obfuscationGuard) {
             field_u = (String) null;
             return;
@@ -57,11 +57,11 @@ final class DesertBackground extends BackgroundScene {
 
     final boolean loadSprites(boolean obfuscationGuard) {
         if (AchievementIcon.field_m.ensureGroupAvailableByName("desert", -28138)) {
-          wn.desertNearSprite = pl.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.field_m);
+          FriendListUi.desertNearSprite = pl.loadRgbSpriteByName("desert", "desert_near", (byte) 107, AchievementIcon.field_m);
           PowerUpWarning.desertMidSprite = pl.loadRgbSpriteByName("desert", "desert_mid", (byte) -121, AchievementIcon.field_m);
           OptionsScreen.desertFarSprite = pl.loadRgbSpriteByName("desert", "desert_far", (byte) 122, AchievementIcon.field_m);
           ce.desertSmallSprite = pl.loadRgbSpriteByName("desert", "desert_small", (byte) 99, AchievementIcon.field_m);
-          SecondaryNodeQueue.field_d = jh.a(0, wn.desertNearSprite);
+          SecondaryNodeQueue.field_d = jh.a(0, FriendListUi.desertNearSprite);
           Widget.field_x = jh.a(0, PowerUpWarning.desertMidSprite);
           pp.field_b = jh.a(0, OptionsScreen.desertFarSprite);
           GzipInflater.desertCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("desert", AchievementIcon.field_m, "desert_caps", 2);
@@ -154,7 +154,7 @@ final class DesertBackground extends BackgroundScene {
     final boolean hasSprites(byte obfuscationGuard) {
         if (obfuscationGuard >= -91) {
           field_s = (String) null;
-          if (wn.desertNearSprite == null) {
+          if (FriendListUi.desertNearSprite == null) {
             return false;
           }
           if (null == PowerUpWarning.desertMidSprite) {
@@ -174,7 +174,7 @@ final class DesertBackground extends BackgroundScene {
           }
           return false;
         }
-        if (wn.desertNearSprite == null) {
+        if (FriendListUi.desertNearSprite == null) {
           return false;
         }
         if (null == PowerUpWarning.desertMidSprite) {

@@ -140,8 +140,8 @@ final class DualLinkDeque implements Iterable {
         }
         RichTextLayout.a(param0, (byte) 123);
         if (ValidationMessageWidget.field_V) {
-          Rasterizer2D.darkenRectangle(BrickGameLayerController.field_c.field_d.localX, BrickGameLayerController.field_c.field_d.localY, BrickGameLayerController.field_c.field_d.width, BrickGameLayerController.field_c.field_d.height);
-          BrickGameLayerController.field_c.field_d.drawRoot(true, param0);
+          Rasterizer2D.darkenRectangle(BrickGameLayerController.field_c.tabs.localX, BrickGameLayerController.field_c.tabs.localY, BrickGameLayerController.field_c.tabs.width, BrickGameLayerController.field_c.tabs.height);
+          BrickGameLayerController.field_c.tabs.drawRoot(true, param0);
         }
         if (!param1) {
           IntrusiveHashTable.a(7070, param0);

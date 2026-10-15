@@ -64,39 +64,39 @@ final class Mesh3D {
         this.invalidateBounds(-107);
     }
 
-    final static void a(ResourceArchive param0, byte param1) {
-        UiComponent var5 = null;
-        UiComponent var6 = null;
-        UiComponent var3 = null;
+    final static void initializeSocialPanels(ResourceArchive archive, byte obfuscationGuard) {
+        UiComponent friendsViewport = null;
+        UiComponent friendsViewportAlias = null;
+        UiComponent ignoreViewport = null;
         try {
-          ok.field_g = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, param0);
-          GameScreen.field_f = new ScrollPaneWithFooter(0L, rq.field_b, LoginPanel.field_J, ChocolateBackground.field_y);
-          f.field_c = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
-          QuickChatPhraseRegistry.field_c = new UiComponent(0L, (UiComponent) null);
-          sj.field_d = new UiComponent(0L, CappedUrlRequest.field_l);
-          sj.field_d.horizontalAlignment = 1;
-          MouseWheelSource.field_c = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
-          GameplayScreen.field_u = new UiComponent(0L, IntrusiveHashIterator.field_a, ArchiveSource.field_c);
+          ok.displayNameChangedSprite = pl.loadRgbSpriteByName("basic", "display_name_changed", (byte) 109, archive);
+          GameScreen.friendsListPane = new ScrollPaneWithFooter(0L, rq.field_b, LoginPanel.field_J, ChocolateBackground.field_y);
+          f.ignoreListPane = new ScrollPaneWithFooter(0L, rq.field_b, MatchCompleteScreen.field_z, ng.field_e);
+          QuickChatPhraseRegistry.friendsPanel = new UiComponent(0L, (UiComponent) null);
+          sj.friendsStatusLabel = new UiComponent(0L, CappedUrlRequest.field_l);
+          sj.friendsStatusLabel.horizontalAlignment = 1;
+          MouseWheelSource.friendNameHeading = new UiComponent(0L, MainMenuScreen.field_t, n.nameColumnHeadingText);
+          GameplayScreen.friendLocationHeading = new UiComponent(0L, IntrusiveHashIterator.field_a, ArchiveSource.locationColumnHeadingText);
           BirthDateEntryPanel.field_R = new UiComponent(0L, DualLinkNode.field_t);
-          QuickChatPhraseRegistry.field_c.addChild(sj.field_d, 0);
-          QuickChatPhraseRegistry.field_c.addChild(MouseWheelSource.field_c, 0);
-          QuickChatPhraseRegistry.field_c.addChild(GameplayScreen.field_u, 0);
-          QuickChatPhraseRegistry.field_c.addChild(GameScreen.field_f, 0);
-          QuickChatPhraseRegistry.field_c.addChild(BirthDateEntryPanel.field_R, 0);
-          GameScreen.field_f.scrollPane.viewport.copyStyle((byte) -102, CappedUrlRequest.field_l);
-          var5 = GameScreen.field_f.scrollPane.viewport;
-          var6 = var5;
-          GameScreen.field_f.scrollPane.viewport.verticalAlignment = 1;
-          if (param1 <= 58) {
+          QuickChatPhraseRegistry.friendsPanel.addChild(sj.friendsStatusLabel, 0);
+          QuickChatPhraseRegistry.friendsPanel.addChild(MouseWheelSource.friendNameHeading, 0);
+          QuickChatPhraseRegistry.friendsPanel.addChild(GameplayScreen.friendLocationHeading, 0);
+          QuickChatPhraseRegistry.friendsPanel.addChild(GameScreen.friendsListPane, 0);
+          QuickChatPhraseRegistry.friendsPanel.addChild(BirthDateEntryPanel.field_R, 0);
+          GameScreen.friendsListPane.scrollPane.viewport.copyStyle((byte) -102, CappedUrlRequest.field_l);
+          friendsViewport = GameScreen.friendsListPane.scrollPane.viewport;
+          friendsViewportAlias = friendsViewport;
+          GameScreen.friendsListPane.scrollPane.viewport.verticalAlignment = 1;
+          if (obfuscationGuard <= 58) {
             fireworkSpawnMinY = 109;
           }
-          var6.horizontalAlignment = 1;
-          f.field_c.scrollPane.viewport.copyStyle((byte) -115, CappedUrlRequest.field_l);
-          var3 = f.field_c.scrollPane.viewport;
-          f.field_c.scrollPane.viewport.verticalAlignment = 1;
-          var3.horizontalAlignment = 1;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fr.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          friendsViewportAlias.horizontalAlignment = 1;
+          f.ignoreListPane.scrollPane.viewport.copyStyle((byte) -115, CappedUrlRequest.field_l);
+          ignoreViewport = f.ignoreListPane.scrollPane.viewport;
+          f.ignoreListPane.scrollPane.viewport.verticalAlignment = 1;
+          ignoreViewport.horizontalAlignment = 1;
+        } catch (RuntimeException initializationFailure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) initializationFailure), "fr.I(" + (archive != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 

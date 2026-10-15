@@ -659,7 +659,7 @@ final class nh {
                 if (var16 != 0) {
                   DraggableWidget.field_K.enabled = false;
                   if (DraggableWidget.field_K.hovered) {
-                    if (BrickGameLayerController.field_c.field_d.selectedTab != 0) {
+                    if (BrickGameLayerController.field_c.tabs.selectedTab != 0) {
                       WidgetTextLayout.field_e = rd.a(NineSliceFrame.field_d, new String[]{UiComponent.field_Z}, (byte) 103);
                       if (var19 != 0) {
                         WidgetTextLayout.field_e = LabeledToggleRenderer.field_a;
@@ -694,7 +694,7 @@ final class nh {
             var20 = (RgbSprite[]) null;
             nh.paintNineSliceFrame(-9, -55, 119, -100, (RgbSprite[]) null, -102);
           }
-          BrickGameLayerController.field_c.field_d.processTabPresses(0);
+          BrickGameLayerController.field_c.tabs.processTabPresses(0);
           if (null != o.currentLobbyGame) {
             if (GameUiController.field_e.pressedButton != 0) {
               vg.requestLeaveOrDeclineGame(o.currentLobbyGame.getGameId((byte) 123), false, param3);

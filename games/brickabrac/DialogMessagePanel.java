@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DialogMessagePanel extends WidgetGroup implements WidgetActionListener {
-    static int field_J;
+    static int uiScrollbarWidth;
     static String field_L;
     private int[] actionIds;
     private FocusableWidget[] buttons;
@@ -327,7 +327,7 @@ final class DialogMessagePanel extends WidgetGroup implements WidgetActionListen
 
     static {
         field_L = "Reload game";
-        field_J = 15;
+        uiScrollbarWidth = 15;
         field_S = "Offline";
     }
 }

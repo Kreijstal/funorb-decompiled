@@ -4,7 +4,7 @@
 final class pl {
     static IndexedSprite[] field_f;
     static int[] pendingAchievementMask;
-    static String field_e;
+    static String ignoreTabLabel;
     static String[] field_c;
     static RgbSprite parisSmallSprite;
     static int keyChangeWriteIndex;
@@ -77,7 +77,7 @@ final class pl {
         }
         field_c = null;
         parisSmallSprite = null;
-        field_e = null;
+        ignoreTabLabel = null;
         pendingAchievementMask = null;
     }
 
@@ -261,7 +261,7 @@ final class pl {
     }
 
     static {
-        field_e = "Ignore";
+        ignoreTabLabel = "Ignore";
         pendingAchievementMask = Ball.createAchievementMask(8);
         keyChangeWriteIndex = 0;
         field_c = new String[]{"All scores", "My scores", "Best each"};

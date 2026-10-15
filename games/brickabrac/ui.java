@@ -33,7 +33,7 @@ final class ui {
         var18 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param3 != null) {
-            param1.setInlineSprites(param3, vj.field_f);
+            param1.setInlineSprites(param3, SocialTabbedPanel.field_f);
           }
           if (param6 != 1729) {
             field_a = (int[]) null;

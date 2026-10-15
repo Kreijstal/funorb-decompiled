@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vj {
+final class SocialTabbedPanel {
     static n field_e;
-    TabbedPane field_d;
+    TabbedPane tabs;
     static int decodedRankingRating;
     static RgbSprite field_b;
     static UiComponent[] field_a;
     static int[] field_f;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        int var6 = 0;
-        int var7 = 0;
-        if (param2 >= 75) {
-          var6 = 24;
-          var7 = 5;
-          this.field_d.setTabbedPaneBounds(var7, param1, param0, var6, param4, param3, 75);
-          sj.field_d.setBounds(np.uiRowHeight, 0, 0, QuickChatPhraseRegistry.field_c.width, (byte) 64);
-          MouseWheelSource.field_c.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.field_c.width - DialogMessagePanel.field_J - 2), (byte) 64);
-          GameplayScreen.field_u.setBounds(18, 2 + np.uiRowHeight, -2 + (-DialogMessagePanel.field_J + (QuickChatPhraseRegistry.field_c.width - 80)), 82 + DialogMessagePanel.field_J, (byte) 64);
-          GameScreen.field_f.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.field_c.width, 0, 20 + (np.uiRowHeight + 2), DialogMessagePanel.field_J, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.field_c.height) - 20);
-          f.field_c.layoutPaneFooter(20, -779, DialogMessagePanel.field_J, 2);
+    final void setBounds(int width, int x, int obfuscationGuard, int y, int height) {
+        int tabHeight = 0;
+        int panelInset = 0;
+        if (obfuscationGuard >= 75) {
+          tabHeight = 24;
+          panelInset = 5;
+          this.tabs.setTabbedPaneBounds(panelInset, x, width, tabHeight, height, y, 75);
+          sj.friendsStatusLabel.setBounds(np.uiRowHeight, 0, 0, QuickChatPhraseRegistry.friendsPanel.width, (byte) 64);
+          MouseWheelSource.friendNameHeading.setBounds(18, 2 + np.uiRowHeight, 0, -82 + (QuickChatPhraseRegistry.friendsPanel.width - DialogMessagePanel.uiScrollbarWidth - 2), (byte) 64);
+          GameplayScreen.friendLocationHeading.setBounds(18, 2 + np.uiRowHeight, -2 + (-DialogMessagePanel.uiScrollbarWidth + (QuickChatPhraseRegistry.friendsPanel.width - 80)), 82 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
+          GameScreen.friendsListPane.setPaneFooterBounds(true, 2, QuickChatPhraseRegistry.friendsPanel.width, 0, 20 + (np.uiRowHeight + 2), DialogMessagePanel.uiScrollbarWidth, 20, -2 + (-np.uiRowHeight + QuickChatPhraseRegistry.friendsPanel.height) - 20);
+          f.ignoreListPane.layoutPaneFooter(20, -779, DialogMessagePanel.uiScrollbarWidth, 2);
           return;
         }
     }
@@ -34,7 +34,7 @@ final class vj {
           return;
         }
         MusicTrack var2 = (MusicTrack) null;
-        vj.a(true, 99, (byte) -104, (MusicTrack) null);
+        SocialTabbedPanel.a(true, 99, (byte) -104, (MusicTrack) null);
         field_f = null;
         field_a = null;
         field_b = null;
@@ -85,15 +85,15 @@ final class vj {
         }
     }
 
-    vj(String param0, UiComponent param1) {
-        String[] var3 = null;
-        UiComponent[] var4 = null;
+    SocialTabbedPanel(String primaryTabLabel, UiComponent primaryPanel) {
+        String[] tabLabels = null;
+        UiComponent[] panels = null;
         try {
-          var3 = new String[]{param0, AchievementSubmission.field_j, pl.field_e};
-          var4 = new UiComponent[]{param1, QuickChatPhraseRegistry.field_c, (UiComponent) ((Object) f.field_c)};
-          this.field_d = new TabbedPane(0L, WidgetTheme.field_n, var3, hd.field_c, var4, 0);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          tabLabels = new String[]{primaryTabLabel, AchievementSubmission.friendsTabLabel, pl.ignoreTabLabel};
+          panels = new UiComponent[]{primaryPanel, QuickChatPhraseRegistry.friendsPanel, (UiComponent) ((Object) f.ignoreListPane)};
+          this.tabs = new TabbedPane(0L, WidgetTheme.field_n, tabLabels, hd.field_c, panels, 0);
+        } catch (RuntimeException constructionFailure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) constructionFailure), "vj.<init>(" + (primaryTabLabel != null ? "{...}" : "null") + ',' + (primaryPanel != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -43,7 +43,7 @@ final class GameUiController implements GameUiLifecycle {
         RgbSprite[] var4 = (RgbSprite[]) null;
         nh.a((RgbSprite[]) null, 240, 8, 320, 0, ContextActionController.field_g, 2, 0, 1, AchievementBrowserScreen.field_A, 0, Ball.field_G, 2, (byte) -110, 8);
         MusicVoice.a(20, -97, 20, var2);
-        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, wn.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
+        TabbedPane.a(HighscorePackSelector.field_d, CircleBody.field_t, 2, PlayerBoard.field_jb, DualLinkNode.field_k, FriendListUi.field_c, (RgbSprite[][]) null, NameEntryPopup.field_Rb, true, 1, DropTargetWidget.field_I, PlayerBoard.field_jb, QuickChatPhraseDefinition.field_C, ValidationStatus.field_h, 22287);
         ea.field_g = true;
         GrowableIntList.field_e = er.field_b;
         LevelResultSubmission.b(-9, 200);
@@ -157,15 +157,15 @@ final class GameUiController implements GameUiLifecycle {
         nl.field_a = aj.a(11, true);
         IntHistoryBuffer.field_i = aj.a(12, true);
         QuickChatPhraseDefinition.field_C = aj.a(13, true);
-        wn.a(NameEntryPopup.field_Rb, wn.field_c, 0);
+        FriendListUi.a(NameEntryPopup.field_Rb, FriendListUi.field_c, 0);
         AccountContentTransitionLayer.startupResources = new ResourcePreparationQueue(82);
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 126, WidgetGroup.field_F, NameEntryPopup.field_Rb);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 124, WidgetGroup.field_F, wn.field_c);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 124, WidgetGroup.field_F, FriendListUi.field_c);
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
         AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "basic", -126, ConditionalTextValue.field_k, ScorePopup.field_l);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "kartika13", 127, ConditionalTextValue.field_k, wn.field_c);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "kartika13", 127, ConditionalTextValue.field_k, FriendListUi.field_c);
         AccountContentTransitionLayer.startupResources.addArchive(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         AccountContentTransitionLayer.startupResources.addArchive(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         AccountContentTransitionLayer.startupResources.addArchive(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);
@@ -201,7 +201,7 @@ final class GameUiController implements GameUiLifecycle {
               } else {
                 ParisBackground.a((byte) 24, 90.0f, MessageScreen.field_u);
                 CacheEntry.field_C.renderClient(106);
-                QuickChatCategoryRegistry.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, wn.field_c);
+                QuickChatCategoryRegistry.a(BackgroundScene.field_f, NameEntryPopup.field_Rb, ScorePopup.field_l, 29137, FriendListUi.field_c);
               }
             } else {
               ParisBackground.a((byte) 24, 88.0f, ValidatedTextFieldWidget.field_bb);

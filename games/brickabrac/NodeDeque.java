@@ -192,9 +192,9 @@ final class NodeDeque {
     }
 
     final static void a(boolean param0, int param1) {
-        BrickGameLayerController.field_c = !param0 ? new vj(UiComponent.field_Z, IterableIntrusiveHashTable.field_b) : new vj(MidiSynthesizer.field_u, t.field_f);
+        BrickGameLayerController.field_c = !param0 ? new SocialTabbedPanel(UiComponent.field_Z, IterableIntrusiveHashTable.field_b) : new SocialTabbedPanel(MidiSynthesizer.field_u, t.field_f);
         NinjaBackground.field_w = new UiComponent(0L, (UiComponent) null);
-        NinjaBackground.field_w.addChild(BrickGameLayerController.field_c.field_d, 0);
+        NinjaBackground.field_w.addChild(BrickGameLayerController.field_c.tabs, 0);
         NinjaBackground.field_w.addChild(GameUiController.field_e, 0);
         ProxySocketConnector.field_j = new UiComponent(0L, MenuSelection.field_m);
         MembershipBenefitsScreen.field_t = new UiComponent(0L, (UiComponent) null);
@@ -363,7 +363,7 @@ final class NodeDeque {
 
     final static void a(MusicTrack param0, int param1, boolean param2) {
         try {
-          vj.a(param2, 256, (byte) 121, param0);
+          SocialTabbedPanel.a(param2, 256, (byte) 121, param0);
           if (param1 != -27300) {
             field_a = (boolean[][]) null;
           }

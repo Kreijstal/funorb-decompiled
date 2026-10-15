@@ -12,7 +12,7 @@ final class QuickChatPhraseRegistry {
     private ResourceArchive standardArchive;
     static RgbSprite chocolateFarSprite;
     static int[] field_g;
-    static UiComponent field_c;
+    static UiComponent friendsPanel;
 
     final QuickChatPhraseDefinition getDefinition(int phraseId, boolean obfuscationGuard) {
         byte[] data = null;
@@ -77,7 +77,7 @@ final class QuickChatPhraseRegistry {
         field_g = null;
         fullscreenTimeout = null;
         field_e = null;
-        field_c = null;
+        friendsPanel = null;
         chocolateFarSprite = null;
         field_b = null;
         field_k = null;

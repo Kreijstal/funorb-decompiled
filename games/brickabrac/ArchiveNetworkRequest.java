@@ -114,7 +114,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
         }
         if (null != ValidationIconWidget.field_K) {
           if (!ValidationIconWidget.field_K.ensureIndex((byte) -127)) {
-            return wn.field_a;
+            return FriendListUi.field_a;
           }
           return FocusableWidget.field_C;
         }

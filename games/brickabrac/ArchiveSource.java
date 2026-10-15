@@ -5,7 +5,7 @@ abstract class ArchiveSource {
     static String field_a;
     static String field_d;
     static String field_b;
-    static String field_c;
+    static String locationColumnHeadingText;
 
     abstract ArchiveIndex getIndex(byte obfuscationGuard);
 
@@ -118,7 +118,7 @@ abstract class ArchiveSource {
         field_b = null;
         field_a = null;
         field_d = null;
-        field_c = null;
+        locationColumnHeadingText = null;
         if (param0 != -59) {
           ArchiveSource.sleepOnce(-15, -86L);
         }
@@ -128,6 +128,6 @@ abstract class ArchiveSource {
         field_d = "You can join this game";
         field_a = "Show chat (<%0> unread messages)";
         field_b = "Game options";
-        field_c = "Location";
+        locationColumnHeadingText = "Location";
     }
 }

@@ -7,7 +7,7 @@ abstract class GameScreen {
     static String field_d;
     static n field_c;
     static String field_b;
-    static ScrollPaneWithFooter field_f;
+    static ScrollPaneWithFooter friendsListPane;
     static String field_g;
 
     abstract void drawScreen(byte obfuscationGuard);
@@ -31,7 +31,7 @@ abstract class GameScreen {
         field_g = null;
         field_b = null;
         field_d = null;
-        field_f = null;
+        friendsListPane = null;
         field_c = null;
         field_e = null;
         if (param0 != -91) {

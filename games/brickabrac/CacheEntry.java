@@ -104,7 +104,7 @@ abstract class CacheEntry extends DualLinkNode {
           AchievementsScreen.field_H[4] = bq.field_a;
           AchievementsScreen.field_H[0] = MainMenuScreen.field_r;
           Ball.field_A = new UiComponent(0L, (UiComponent) null);
-          FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
+          FarmBackground.field_v = new UiComponent(0L, MainMenuScreen.field_t, n.nameColumnHeadingText);
           GameUiController.field_a = new UiComponent(0L, IntrusiveHashIterator.field_a, RadialSelectorRenderer.field_c);
           IsaacGenerator.field_b = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           Ball.field_A.addChild(FarmBackground.field_v, 0);
@@ -179,7 +179,7 @@ abstract class CacheEntry extends DualLinkNode {
           IterableIntrusiveHashTable.field_b = new UiComponent(0L, (UiComponent) null);
           TextWidgetRenderer.field_b = new UiComponent(0L, CappedUrlRequest.field_l);
           TextWidgetRenderer.field_b.horizontalAlignment = 1;
-          BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.field_a);
+          BoundedFile.field_g = new UiComponent(0L, MainMenuScreen.field_t, n.nameColumnHeadingText);
           QuickChatPhraseDefinition.field_E = new UiComponent(0L, IntrusiveHashIterator.field_a, RadialSelectorRenderer.field_c);
           TimedSplashScreen.field_u = new ScrollPane(0L, new UiComponent(0L, (UiComponent) null), ReportAbuseDialog.field_Qb, ic.field_c);
           IterableIntrusiveHashTable.field_b.addChild(TextWidgetRenderer.field_b, 0);

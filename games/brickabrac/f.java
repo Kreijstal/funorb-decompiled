@@ -4,7 +4,7 @@
 final class f {
     static String field_b;
     static UiComponent field_a;
-    static ScrollPaneWithFooter field_c;
+    static ScrollPaneWithFooter ignoreListPane;
 
     final static void handleTableResponse(byte obfuscationGuard) {
         int dictionaryIndex = 0;
@@ -181,7 +181,7 @@ final class f {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        ignoreListPane = null;
         if (param0 != 1) {
           f.handleTableResponse((byte) 116);
         }

@@ -105,15 +105,15 @@ final class ResourcePreparationQueue {
     }
 
     final static void b(int param0) {
-        FarmBackground.field_v.setBounds(18, 0, 0, -(!vd.field_e ? 0 : 2 + (DialogMessagePanel.field_J + 2) + 40) + Ball.field_A.width, (byte) 64);
-        GameUiController.field_a.setBounds(18, 0, -42 + Ball.field_A.width - DialogMessagePanel.field_J, 42 + DialogMessagePanel.field_J, (byte) 64);
+        FarmBackground.field_v.setBounds(18, 0, 0, -(!vd.field_e ? 0 : 2 + (DialogMessagePanel.uiScrollbarWidth + 2) + 40) + Ball.field_A.width, (byte) 64);
+        GameUiController.field_a.setBounds(18, 0, -42 + Ball.field_A.width - DialogMessagePanel.uiScrollbarWidth, 42 + DialogMessagePanel.uiScrollbarWidth, (byte) 64);
         if (param0 >= 122) {
-          IsaacGenerator.field_b.setScrollPaneBounds(2, (byte) -118, Ball.field_A.width, 0, 20, DialogMessagePanel.field_J, Ball.field_A.height - 20);
+          IsaacGenerator.field_b.setScrollPaneBounds(2, (byte) -118, Ball.field_A.width, 0, 20, DialogMessagePanel.uiScrollbarWidth, Ball.field_A.height - 20);
           return;
         }
         RgbSprite var2 = (RgbSprite) null;
         ResourcePreparationQueue.a((RgbSprite) null, -53, 56, (RgbSprite) null, (RasterCacheSurface) null, -22, (byte) -5, (RgbSprite) null);
-        IsaacGenerator.field_b.setScrollPaneBounds(2, (byte) -118, Ball.field_A.width, 0, 20, DialogMessagePanel.field_J, Ball.field_A.height - 20);
+        IsaacGenerator.field_b.setScrollPaneBounds(2, (byte) -118, Ball.field_A.width, 0, 20, DialogMessagePanel.uiScrollbarWidth, Ball.field_A.height - 20);
     }
 
     final static boolean a(int param0) {

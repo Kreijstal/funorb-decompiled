@@ -279,7 +279,7 @@ final class ParisBackground extends BackgroundScene {
           ap.field_e.frameSprites = var16;
           BallPulseEffect.field_n.addChild(ap.field_e, 0);
           HalloweenBackground.field_w = new UiComponent[5];
-          vj.field_a = new UiComponent[5];
+          SocialTabbedPanel.field_a = new UiComponent[5];
           QuickChatPhraseDefinition.field_F = new UiComponent[5];
           IntrusiveHashIterator.field_i = new UiComponent[5];
           var18 = 0;
@@ -309,12 +309,12 @@ final class ParisBackground extends BackgroundScene {
               if (decompiledFrameRemainder0) {
                 IntrusiveHashIterator.field_i[var18] = new UiComponent(0L, param11);
                 HalloweenBackground.field_w[var18] = new UiComponent(0L, sj.field_a, var19);
-                vj.field_a[var18] = new UiComponent(0L, (UiComponent) null);
-                vj.field_a[var18].verticalAlignment = 1;
+                SocialTabbedPanel.field_a[var18] = new UiComponent(0L, (UiComponent) null);
+                SocialTabbedPanel.field_a[var18].verticalAlignment = 1;
                 QuickChatPhraseDefinition.field_F[var18] = new UiComponent(0L, sj.field_a);
                 QuickChatPhraseDefinition.field_F[var18].verticalAlignment = 1;
                 IntrusiveHashIterator.field_i[var18].addChild(HalloweenBackground.field_w[var18], 0);
-                IntrusiveHashIterator.field_i[var18].addChild(vj.field_a[var18], 0);
+                IntrusiveHashIterator.field_i[var18].addChild(SocialTabbedPanel.field_a[var18], 0);
                 IntrusiveHashIterator.field_i[var18].addChild(QuickChatPhraseDefinition.field_F[var18], 0);
                 IntrusiveHashIterator.field_i[var18].markDescendantsToInheritVisualState(true);
                 DualLinkDeque.field_d.addChild(IntrusiveHashIterator.field_i[var18], 0);

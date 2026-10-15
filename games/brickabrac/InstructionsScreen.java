@@ -282,7 +282,7 @@ final class InstructionsScreen extends MenuScreen {
         if (this.pageIndex != 0) {
           PasswordFieldRenderer.field_D.setInlineSprites(SingleChildWidget.field_C, nd.field_f);
         } else {
-          PasswordFieldRenderer.field_D.setInlineSprites(un.field_e, vj.field_f);
+          PasswordFieldRenderer.field_D.setInlineSprites(un.field_e, SocialTabbedPanel.field_f);
         }
         var2 = PasswordFieldRenderer.field_D.wrapText(gh.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
         var3 = 145 - (-ConditionalTextValue.field_j - 4);

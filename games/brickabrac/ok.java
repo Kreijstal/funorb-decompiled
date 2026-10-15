@@ -5,7 +5,7 @@ final class ok {
     static String field_a;
     static int achievementNotificationTick;
     static String[] field_b;
-    static RgbSprite field_g;
+    static RgbSprite displayNameChangedSprite;
     static String field_e;
     static int field_f;
     static UiComponent field_d;
@@ -21,7 +21,7 @@ final class ok {
 
     public static void b(int param0) {
         field_d = null;
-        field_g = null;
+        displayNameChangedSprite = null;
         field_a = null;
         field_e = null;
         field_b = null;

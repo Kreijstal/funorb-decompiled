@@ -7,7 +7,7 @@ final class sj {
     static String field_e;
     static UiComponent field_a;
     static String[] field_c;
-    static UiComponent field_d;
+    static UiComponent friendsStatusLabel;
     static LoadingProgressDialog loadingProgressDialog;
 
     final static ChatMessage a(int param0, int param1, int param2, int param3) {
@@ -93,7 +93,7 @@ final class sj {
           AchievementIcon.field_q.content.remainingY = 0;
         }
         if (param2 != -13294) {
-          field_d = (UiComponent) null;
+          friendsStatusLabel = (UiComponent) null;
         }
         if (MatchResultScreen.field_s) {
           stackIn_42_0 = null;
@@ -541,10 +541,10 @@ final class sj {
     public static void a(int param0) {
         field_f = null;
         field_a = null;
-        field_d = null;
+        friendsStatusLabel = null;
         field_c = null;
         if (param0 != 11) {
-          field_d = (UiComponent) null;
+          friendsStatusLabel = (UiComponent) null;
         }
         field_g = null;
         loadingProgressDialog = null;

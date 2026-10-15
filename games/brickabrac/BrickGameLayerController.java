@@ -6,7 +6,7 @@ final class BrickGameLayerController implements GameLayerController {
     private int field_a;
     static String field_b;
     static String field_d;
-    static vj field_c;
+    static SocialTabbedPanel field_c;
     static long field_e;
 
     private final boolean d(int param0) {
@@ -1366,7 +1366,7 @@ final class BrickGameLayerController implements GameLayerController {
           field_d = null;
           return;
         }
-        field_c = (vj) null;
+        field_c = (SocialTabbedPanel) null;
         field_c = null;
         field_d = null;
     }

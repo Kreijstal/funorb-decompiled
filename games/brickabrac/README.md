@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 322 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 324 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -357,5 +357,9 @@ Headless Robot/Toolkit/Component probes verify coordinates, ARGB image contents/
 ConditionalTextValue names null-normalized text and its conditional-inclusion flag; empty text forces false and the single-string constructor defaults false. DiagnosticTextLine names mutable heap/render-loop diagnostic lines, with reviewed font, deque, enable flags, cached values and initialization/update/drawing helpers. Unrelated static helpers retain separate roles.
 
 Native fixtures verify text normalization/defaults, decimal append/scratch reuse, line selection/order, render-rate caching and disabled-line removal. Independent decimal expectations preserve negative signed-remainder characters below zero and the omitted scratch minus. Independent overlay pixels/glyph events cover strict next100-pixel rounding, an exact100 boundary, spaces, reversed glyph order, row spacing, empty lists and no-op drawing guards. Heap contents are checked only for format/range and excluded from deterministic traces. Static state and original scratch contents are restored. The displayed fps is a render-loop rate, not presented FPS. Full handshake behavior, arbitrary malformed text/guards, live presentation, memory budgets and original-JAR equivalence remain unverified.
+
+SocialTabbedPanel names the primary/Friends/Ignore wrapper and retained tabs/bounds. FriendListUi names friend-row updates; updateIgnoreList and initializeSocialPanels expose related helpers on their existing owners. Shared panel/pane references, headings, status text, rename sprite and scrollbar width have reviewed names. Four ScrollPaneWithFooter parameter names are corrected: the content gap and actual scrollbar width were previously reversed. Unrelated static helpers retain separate roles.
+
+Native fixtures initialize panels from an in-memory named sprite archive and verify tab identities/labels, initial selection, bounds/guards, row-height and scrollbar variations. Unequal gap/scrollbar geometry checks verify the corrected parameter roles and footer separation. Friend/ignore fixtures cover fresh/reused labels, ordering, retained layout, rename icons/tooltips, truncated-name tooltips, availability states and four footer action modes. Friend location colors preserve server String reference identity, including equal text in a distinct object. Independent fixed-advance truncation expectations retain the extra dropped character before the ellipsis; nonpositive name widths keep the full name. The ignore false guard returns after scroll layout, before availability mutation. Static state is restored. Real assets, live input/servers, friend-row context menus, all narrow positive truncation widths, arbitrary invalid guards and original-JAR equivalence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

@@ -5,13 +5,13 @@ abstract class MouseWheelSource {
     static int resizeFrameCounter;
     static String field_d;
     static String field_b;
-    static UiComponent field_c;
+    static UiComponent friendNameHeading;
 
     abstract void detach(java.awt.Component component, int obfuscationGuard);
 
     public static void a(int param0) {
         field_d = null;
-        field_c = null;
+        friendNameHeading = null;
         field_b = null;
         if (param0 < 72) {
           resizeFrameCounter = 14;
