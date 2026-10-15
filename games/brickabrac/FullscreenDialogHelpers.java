@@ -7,10 +7,10 @@ final class FullscreenDialogHelpers {
     static int maxArchiveContainerBytes;
     static RgbSprite[] field_c;
     static String field_f;
-    static RgbSprite[][] field_e;
+    static RgbSprite[][] activePaddleFlameSprites;
 
     public static void a(boolean param0) {
-        field_e = (RgbSprite[][]) null;
+        activePaddleFlameSprites = (RgbSprite[][]) null;
         field_f = null;
         field_c = null;
         renderRateDiagnosticLine = null;
@@ -237,7 +237,7 @@ final class FullscreenDialogHelpers {
             UsernameSuggestionPanel.fullscreenDialogButtonActions[0] = 5;
             ValidationStatus.fullscreenDialogRows[2] = GameConnectionHelpers.field_e;
             ValidationStatus.fullscreenDialogRows[5] = "";
-            ValidationStatus.fullscreenDialogRows[3] = di.field_c;
+            ValidationStatus.fullscreenDialogRows[3] = QuickChatSineHelpers.field_c;
             for (prefixFillIndex = 0; prefixFillIndex < rowIndexOrPrefixCount; prefixFillIndex++) {
               prefixRowsTarget = ValidationStatus.fullscreenDialogRows;
               prefixRowIndex = 6 + prefixFillIndex;

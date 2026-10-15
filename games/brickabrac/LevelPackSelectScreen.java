@@ -4,7 +4,7 @@
 final class LevelPackSelectScreen extends MenuScreen {
     private LevelPackCard firstPackCard;
     static String field_x;
-    static RgbSprite[] field_z;
+    static RgbSprite[] halfPaddleSegmentSprites;
     static RgbSprite powerUpMeterBarSprite;
     static int[] field_v;
     private LevelPackCard secondPackCard;
@@ -87,9 +87,9 @@ final class LevelPackSelectScreen extends MenuScreen {
         field_v = null;
         field_x = null;
         if (param0 != 14529) {
-          field_z = (RgbSprite[]) null;
+          halfPaddleSegmentSprites = (RgbSprite[]) null;
         }
-        field_z = null;
+        halfPaddleSegmentSprites = null;
     }
 
     final void layoutButtons(boolean obfuscationGuard) {
@@ -166,7 +166,7 @@ final class LevelPackSelectScreen extends MenuScreen {
         this.firstPackCard.draw((byte) 105);
         this.secondPackCard.draw((byte) 116);
         if (obfuscationGuard >= -14) {
-          field_z = (RgbSprite[]) null;
+          halfPaddleSegmentSprites = (RgbSprite[]) null;
         }
     }
 

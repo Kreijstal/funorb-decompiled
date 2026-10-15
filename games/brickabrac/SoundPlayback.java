@@ -111,7 +111,7 @@ final class SoundPlayback extends IntrusiveNode {
           if (param2 != 13) {
             return null;
           }
-          stackIn_40_0 = GamePresentationHelpers.formatIndexedText(gr.field_b, new String[]{param1}, (byte) 103);
+          stackIn_40_0 = GamePresentationHelpers.formatIndexedText(GameplaySpriteHelpers.field_b, new String[]{param1}, (byte) 103);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

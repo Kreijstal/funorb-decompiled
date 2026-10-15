@@ -15,7 +15,7 @@ final class Ball extends CircleBody {
     static String field_x;
     int contactCount;
     int phaseTicks;
-    static RgbSprite field_D;
+    static RgbSprite fullSteelBallSprite;
     int destroyedBrickStreak;
     IntHistoryBuffer centerYHistory256;
 
@@ -91,7 +91,7 @@ final class Ball extends CircleBody {
         field_x = null;
         field_A = null;
         field_H = null;
-        field_D = null;
+        fullSteelBallSprite = null;
         if (param0 >= 91) {
           field_K = null;
           return;

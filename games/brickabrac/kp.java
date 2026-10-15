@@ -6,7 +6,7 @@ import java.util.*;
 final class kp {
     static NodeDeque achievementNotifications;
     static TextFont fullscreenDialogButtonFont;
-    static RgbSprite[] field_e;
+    static RgbSprite[] halfPaddleCapSprites;
     static int field_a;
     static Vector field_d;
 
@@ -36,7 +36,7 @@ final class kp {
     public static void a(int param0) {
         int var1 = 10 % ((param0 + 8) / 43);
         achievementNotifications = null;
-        field_e = null;
+        halfPaddleCapSprites = null;
         field_d = null;
         fullscreenDialogButtonFont = null;
     }

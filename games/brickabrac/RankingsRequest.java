@@ -12,14 +12,14 @@ final class RankingsRequest extends IntrusiveNode {
     static int tickTimeCursor;
     int localLosses;
     int[][] statisticsBySort;
-    static RgbSprite field_o;
+    static RgbSprite halfBoardMaskSprite;
     static int gameSettingCount;
     int rankingKind;
     int localDraws;
 
     public static void a(byte param0) {
         field_q = null;
-        field_o = null;
+        halfBoardMaskSprite = null;
         if (param0 > -52) {
           return;
         }

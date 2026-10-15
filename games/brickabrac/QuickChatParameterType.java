@@ -48,7 +48,7 @@ final class QuickChatParameterType {
           if (param3) {
             field_f = (String) null;
           }
-          HuffmanCodec.a(105, var6);
+          HuffmanCodec.installQuickChatMenu(105, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,14 +110,14 @@ final class QuickChatParameterType {
     final static void b(int param0) {
         if (param0 != 1) {
           QuickChatParameterType.a((byte) 83);
-          if (!TooltipSprite.field_p) {
+          if (!TooltipSprite.quickChatMenuOpen) {
             return;
           }
-          GamePresentationHelpers.a(-1);
+          GamePresentationHelpers.closeQuickChatMenu(-1);
           return;
         }
-        if (TooltipSprite.field_p) {
-          GamePresentationHelpers.a(-1);
+        if (TooltipSprite.quickChatMenuOpen) {
+          GamePresentationHelpers.closeQuickChatMenu(-1);
           return;
         }
     }

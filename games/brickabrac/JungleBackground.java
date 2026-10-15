@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class JungleBackground extends BackgroundScene {
-    static RgbSprite[][] field_v;
+    static RgbSprite[][] fullPaddleFlameSprites;
     static String field_t;
     static IsaacGenerator fireworkRandom;
     static NodeDeque backgroundSurfacePool960;
@@ -11,7 +11,7 @@ final class JungleBackground extends BackgroundScene {
     final void drawFullBackground(boolean obfuscationGuard, int scroll16, int destinationY, int colorIndex, int destinationX) {
         RasterCacheSurface var7;
         if (!obfuscationGuard) {
-          field_v = (RgbSprite[][]) null;
+          fullPaddleFlameSprites = (RgbSprite[][]) null;
         }
         if (!this.hasSprites((byte) -99)) {
           Rasterizer2D.fillVerticalGradient(destinationX, destinationY, 640, 480, Bzip2State.jungleBackgroundColors[colorIndex], 16777215);
@@ -888,10 +888,10 @@ final class JungleBackground extends BackgroundScene {
     public static void b(boolean param0) {
         field_t = null;
         field_u = null;
-        field_v = (RgbSprite[][]) null;
+        fullPaddleFlameSprites = (RgbSprite[][]) null;
         backgroundSurfacePool960 = null;
         if (param0) {
-          field_v = (RgbSprite[][]) null;
+          fullPaddleFlameSprites = (RgbSprite[][]) null;
         }
         fireworkRandom = null;
     }

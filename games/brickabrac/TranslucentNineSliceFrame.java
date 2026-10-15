@@ -5,7 +5,7 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
     static RgbSprite[] field_l;
     static QuickChatParameterType field_k;
     static RgbSprite[] field_h;
-    static RgbSprite[] field_m;
+    static RgbSprite[] fullBrickSprites;
     static int[] glowBranchScratch;
     static RgbSprite field_j;
     static int field_n;
@@ -93,7 +93,7 @@ final class TranslucentNineSliceFrame extends NineSliceFrame {
     }
 
     public static void c(int param0) {
-        field_m = null;
+        fullBrickSprites = null;
         glowBranchScratch = null;
         field_k = null;
         field_h = null;

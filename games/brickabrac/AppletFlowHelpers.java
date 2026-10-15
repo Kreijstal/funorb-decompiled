@@ -71,20 +71,20 @@ final class AppletFlowHelpers {
         return;
     }
 
-    final static int a(int param0, int param1) {
-        if (param1 != 30922) {
+    final static int atan8192FromQ16(int tangentQ16, int obfuscationGuard) {
+        if (obfuscationGuard != 30922) {
           return -40;
         }
-        if (param0 >= 0) {
-          if (param0 > 65536) {
-            return -IntrusiveHashTable.field_d[134217728 / param0] + 2048;
+        if (tangentQ16 >= 0) {
+          if (tangentQ16 > 65536) {
+            return -IntrusiveHashTable.atanRatio2048Table[134217728 / tangentQ16] + 2048;
           }
-          return IntrusiveHashTable.field_d[param0 >> 5];
+          return IntrusiveHashTable.atanRatio2048Table[tangentQ16 >> 5];
         }
-        if (param0 >= -65536) {
-          return -IntrusiveHashTable.field_d[-param0 >> 5];
+        if (tangentQ16 >= -65536) {
+          return -IntrusiveHashTable.atanRatio2048Table[-tangentQ16 >> 5];
         }
-        return -2048 + IntrusiveHashTable.field_d[134217728 / -param0];
+        return -2048 + IntrusiveHashTable.atanRatio2048Table[134217728 / -tangentQ16];
     }
 
     final static void a(byte param0, boolean param1) {

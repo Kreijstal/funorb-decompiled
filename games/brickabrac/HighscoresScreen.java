@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class HighscoresScreen extends MenuScreen {
-    static int field_v;
+    static int quickChatScrollX;
     static int[][] field_w;
     private int packIndex;
     private HighscorePackSelector packSelector;
@@ -51,7 +51,7 @@ final class HighscoresScreen extends MenuScreen {
         try {
           ArchiveFetchClient.a(false, param0, param2, 2);
           if (param1 != 11455) {
-            field_v = -30;
+            quickChatScrollX = -30;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "ah.KA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -239,7 +239,7 @@ final class HighscoresScreen extends MenuScreen {
         int var3Lifetime1;
         var7 = BrickABrac.field_J ? 1 : 0;
         if (!obfuscationGuard) {
-          field_v = -11;
+          quickChatScrollX = -11;
         }
         if (this.buttons.length != 2) {
           var2 = 0;
@@ -664,7 +664,7 @@ final class HighscoresScreen extends MenuScreen {
         ContextActionController.field_g.drawCentered(CanvasResizeController.packNames[this.packIndex], 357, 1 + (-ContextActionController.field_g.xHeight + 178), 0, -1);
         ArchiveNetworkRequest.packSelectorIcons[this.packIndex].e(565, 140, -2048, 4096);
         if (obfuscationGuard >= -14) {
-          field_v = -65;
+          quickChatScrollX = -65;
         }
         GzipInflater.a(475, 5, 243, 5, 178, (byte) -57, 120);
         var2 = 149 + ContextActionController.field_g.capHeight + 38;
@@ -732,6 +732,6 @@ final class HighscoresScreen extends MenuScreen {
     }
 
     static {
-        field_v = 0;
+        quickChatScrollX = 0;
     }
 }

@@ -64,7 +64,7 @@ final class QuickChatCategoryRegistry {
         if (param0 != -35) {
           return 43;
         }
-        return gr.pointerIdleTicks;
+        return GameplaySpriteHelpers.pointerIdleTicks;
     }
 
     final QuickChatCategoryDefinition getDefinition(int categoryId, byte obfuscationGuard) {
@@ -212,12 +212,12 @@ final class QuickChatCategoryRegistry {
           for (var10_intLifetime1 = 0; LegacyEmailValidationError.field_c.length > var10_intLifetime1; var10_intLifetime1++) {
             CircleBody.field_t[var10_intLifetime1] = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, LegacyEmailValidationError.field_c[var10_intLifetime1], 2);
           }
-          MenuSelection.field_k = SpriteInputHelpers.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
-          Ball.field_D = SpriteInputHelpers.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
+          MenuSelection.fullBallSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "ball", (byte) 121, param0);
+          Ball.fullSteelBallSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "steelball", (byte) 98, param0);
           SingleChildWidget.field_C = PacketBuffer.a("basic", param0, "brickset", -946715356);
-          MultiValueSliderRenderer.field_b = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
-          GameConnectionShell.field_D = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
-          AccountRegistrationPanel.field_R = SpriteInputHelpers.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
+          MultiValueSliderRenderer.fullPaddleCapSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddlecaps", param3 - 29135);
+          GameConnectionShell.fullPaddleSegmentSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "paddleseg", 2);
+          AccountRegistrationPanel.fullPaddleCenterSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "paddlecentre", (byte) 100, param0);
           TextHotspotRegion.powerUpMeterIcons = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "powerup", 2);
           LevelPackSelectScreen.powerUpMeterBarSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "powerupbar", (byte) 104, param0);
           ch.field_l = SpriteInputHelpers.loadRgbSpriteByName("basic", "heart", (byte) -108, param0);
@@ -233,64 +233,64 @@ final class QuickChatCategoryRegistry {
           MultiValueSliderWidget.field_K = AgeValidator.a("frame_bubble", "basic", param0, -105);
           CanvasInputHelpers.field_a = SpriteInputHelpers.loadRgbSpriteByName("basic", "frame_bubble_point", (byte) -120, param0);
           BytePayloadSubmission.smallRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_sml", param0, (byte) -8);
-          IntHistoryBuffer.field_l = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
+          IntHistoryBuffer.largeRosetteSprites = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "rosette_lrg", param0, (byte) -8);
           LoginMethodPreference.field_a = PacketBuffer.a("basic", param0, "podium2", -946715356);
           SpriteInputHelpers.field_f = PacketBuffer.a("basic", param0, "podium3", param3 ^ -946719499);
           BrickMotionPath.field_r = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_happy", 2);
           AchievementSubmission.field_q = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "podium_sad", param3 ^ 29139);
           ValidationStatus.field_e = TextWidgetRenderer.a("basic", "congratulations", 1593955777, param0);
-          TranslucentNineSliceFrame.field_m = new RgbSprite[SingleChildWidget.field_C.length];
-          for (var10_intLifetime2 = 0; var10_intLifetime2 < TranslucentNineSliceFrame.field_m.length; var10_intLifetime2++) {
-            TranslucentNineSliceFrame.field_m[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
+          TranslucentNineSliceFrame.fullBrickSprites = new RgbSprite[SingleChildWidget.field_C.length];
+          for (var10_intLifetime2 = 0; var10_intLifetime2 < TranslucentNineSliceFrame.fullBrickSprites.length; var10_intLifetime2++) {
+            TranslucentNineSliceFrame.fullBrickSprites[var10_intLifetime2] = SingleChildWidget.field_C[var10_intLifetime2].toRgbSprite();
           }
-          TranslucentNineSliceFrame.field_m[24].bindRasterTarget();
+          TranslucentNineSliceFrame.fullBrickSprites[24].bindRasterTarget();
           Rasterizer2D.grayscaleRectangle(0, 0, Rasterizer2D.width, Rasterizer2D.height);
-          ResourceArchive.field_a = new RgbSprite[TranslucentNineSliceFrame.field_m.length];
-          for (var10_intLifetime3 = 0; var10_intLifetime3 < TranslucentNineSliceFrame.field_m.length; var10_intLifetime3++) {
-            ResourceArchive.field_a[var10_intLifetime3] = new RgbSprite(TranslucentNineSliceFrame.field_m[var10_intLifetime3].canvasWidth / 2, TranslucentNineSliceFrame.field_m[var10_intLifetime3].canvasHeight / 2);
-            ResourceArchive.field_a[var10_intLifetime3].bindRasterTarget();
-            TranslucentNineSliceFrame.field_m[var10_intLifetime3 % 29].drawHalfSize(0, 0);
+          ResourceArchive.halfBrickSprites = new RgbSprite[TranslucentNineSliceFrame.fullBrickSprites.length];
+          for (var10_intLifetime3 = 0; var10_intLifetime3 < TranslucentNineSliceFrame.fullBrickSprites.length; var10_intLifetime3++) {
+            ResourceArchive.halfBrickSprites[var10_intLifetime3] = new RgbSprite(TranslucentNineSliceFrame.fullBrickSprites[var10_intLifetime3].canvasWidth / 2, TranslucentNineSliceFrame.fullBrickSprites[var10_intLifetime3].canvasHeight / 2);
+            ResourceArchive.halfBrickSprites[var10_intLifetime3].bindRasterTarget();
+            TranslucentNineSliceFrame.fullBrickSprites[var10_intLifetime3 % 29].drawHalfSize(0, 0);
           }
-          kp.field_e = new RgbSprite[MultiValueSliderRenderer.field_b.length];
-          for (var10_intLifetime4 = 0; MultiValueSliderRenderer.field_b.length > var10_intLifetime4; var10_intLifetime4++) {
-            kp.field_e[var10_intLifetime4] = new RgbSprite(MultiValueSliderRenderer.field_b[var10_intLifetime4].canvasWidth / 2, MultiValueSliderRenderer.field_b[var10_intLifetime4].canvasHeight / 2);
-            kp.field_e[var10_intLifetime4].bindRasterTarget();
-            MultiValueSliderRenderer.field_b[var10_intLifetime4].drawHalfSize(0, 0);
+          kp.halfPaddleCapSprites = new RgbSprite[MultiValueSliderRenderer.fullPaddleCapSprites.length];
+          for (var10_intLifetime4 = 0; MultiValueSliderRenderer.fullPaddleCapSprites.length > var10_intLifetime4; var10_intLifetime4++) {
+            kp.halfPaddleCapSprites[var10_intLifetime4] = new RgbSprite(MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].canvasWidth / 2, MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].canvasHeight / 2);
+            kp.halfPaddleCapSprites[var10_intLifetime4].bindRasterTarget();
+            MultiValueSliderRenderer.fullPaddleCapSprites[var10_intLifetime4].drawHalfSize(0, 0);
           }
-          LevelPackSelectScreen.field_z = new RgbSprite[GameConnectionShell.field_D.length];
-          for (var10_intLifetime5 = 0; GameConnectionShell.field_D.length > var10_intLifetime5; var10_intLifetime5++) {
-            LevelPackSelectScreen.field_z[var10_intLifetime5] = new RgbSprite(GameConnectionShell.field_D[var10_intLifetime5].canvasWidth / 2, GameConnectionShell.field_D[var10_intLifetime5].canvasHeight / 2);
-            LevelPackSelectScreen.field_z[var10_intLifetime5].bindRasterTarget();
-            GameConnectionShell.field_D[var10_intLifetime5].drawHalfSize(0, 0);
+          LevelPackSelectScreen.halfPaddleSegmentSprites = new RgbSprite[GameConnectionShell.fullPaddleSegmentSprites.length];
+          for (var10_intLifetime5 = 0; GameConnectionShell.fullPaddleSegmentSprites.length > var10_intLifetime5; var10_intLifetime5++) {
+            LevelPackSelectScreen.halfPaddleSegmentSprites[var10_intLifetime5] = new RgbSprite(GameConnectionShell.fullPaddleSegmentSprites[var10_intLifetime5].canvasWidth / 2, GameConnectionShell.fullPaddleSegmentSprites[var10_intLifetime5].canvasHeight / 2);
+            LevelPackSelectScreen.halfPaddleSegmentSprites[var10_intLifetime5].bindRasterTarget();
+            GameConnectionShell.fullPaddleSegmentSprites[var10_intLifetime5].drawHalfSize(0, 0);
           }
-          WidgetTextLayout.field_j = new RgbSprite(AccountRegistrationPanel.field_R.canvasWidth / 2, AccountRegistrationPanel.field_R.canvasHeight / 2);
-          WidgetTextLayout.field_j.bindRasterTarget();
-          AccountRegistrationPanel.field_R.drawHalfSize(0, 0);
-          PlayerInputBatch.field_i = new RgbSprite(MenuSelection.field_k.canvasWidth / 2, MenuSelection.field_k.canvasHeight / 2);
-          PlayerInputBatch.field_i.bindRasterTarget();
-          MenuSelection.field_k.drawHalfSize(0, 0);
-          UiComponent.field_ib = new RgbSprite(Ball.field_D.canvasWidth / 2, Ball.field_D.canvasHeight / 2);
-          UiComponent.field_ib.bindRasterTarget();
-          Ball.field_D.drawHalfSize(0, 0);
-          ch.field_k = new RgbSprite[TextHotspotRegion.powerUpMeterIcons.length];
+          WidgetTextLayout.halfPaddleCenterSprite = new RgbSprite(AccountRegistrationPanel.fullPaddleCenterSprite.canvasWidth / 2, AccountRegistrationPanel.fullPaddleCenterSprite.canvasHeight / 2);
+          WidgetTextLayout.halfPaddleCenterSprite.bindRasterTarget();
+          AccountRegistrationPanel.fullPaddleCenterSprite.drawHalfSize(0, 0);
+          PlayerInputBatch.halfBallSprite = new RgbSprite(MenuSelection.fullBallSprite.canvasWidth / 2, MenuSelection.fullBallSprite.canvasHeight / 2);
+          PlayerInputBatch.halfBallSprite.bindRasterTarget();
+          MenuSelection.fullBallSprite.drawHalfSize(0, 0);
+          UiComponent.halfSteelBallSprite = new RgbSprite(Ball.fullSteelBallSprite.canvasWidth / 2, Ball.fullSteelBallSprite.canvasHeight / 2);
+          UiComponent.halfSteelBallSprite.bindRasterTarget();
+          Ball.fullSteelBallSprite.drawHalfSize(0, 0);
+          ch.halfPowerUpSprites = new RgbSprite[TextHotspotRegion.powerUpMeterIcons.length];
           if (param3 != 29137) {
             QuickChatCategoryRegistry.a((byte) -25);
           }
-          for (var10_intLifetime6 = 0; ch.field_k.length > var10_intLifetime6; var10_intLifetime6++) {
-            ch.field_k[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasHeight / 2);
-            ch.field_k[var10_intLifetime6].bindRasterTarget();
+          for (var10_intLifetime6 = 0; ch.halfPowerUpSprites.length > var10_intLifetime6; var10_intLifetime6++) {
+            ch.halfPowerUpSprites[var10_intLifetime6] = new RgbSprite(TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasWidth / 2, TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].canvasHeight / 2);
+            ch.halfPowerUpSprites[var10_intLifetime6].bindRasterTarget();
             TextHotspotRegion.powerUpMeterIcons[var10_intLifetime6].drawHalfSize(0, 0);
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 79);
           for (var10_intLifetime7 = 0; var10_intLifetime7 < BytePayloadSubmission.smallRosetteSprites.length; var10_intLifetime7++) {
             BytePayloadSubmission.smallRosetteSprites[var10_intLifetime7].trimTransparentBorders();
           }
-          for (var10_intLifetime8 = 0; IntHistoryBuffer.field_l.length > var10_intLifetime8; var10_intLifetime8++) {
-            IntHistoryBuffer.field_l[var10_intLifetime8].trimTransparentBorders();
+          for (var10_intLifetime8 = 0; IntHistoryBuffer.largeRosetteSprites.length > var10_intLifetime8; var10_intLifetime8++) {
+            IntHistoryBuffer.largeRosetteSprites[var10_intLifetime8].trimTransparentBorders();
           }
           TextWidgetRenderer.field_p = SpriteInputHelpers.loadRgbSpriteByName("basic", "character_menu", (byte) -62, param0);
           TranslucentNineSliceFrame.field_j = SpriteInputHelpers.loadRgbSpriteByName("basic", "character_menu_eyes", (byte) -120, param0);
-          gr.field_d = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
+          GameplaySpriteHelpers.menuLeverSprites = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "lever_menu", 2);
           IncomingPacketHelpers.gameLogoSprite = TextWidgetRenderer.a("basic", "logo", 1593955777, param0);
           PasswordValidator.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "sliders", 2);
           SocialListEntry.field_Vb = ActivityIndicatorWidget.loadRgbSpritesByName("basic", param0, "arrow_level", param3 ^ 29139);
@@ -329,23 +329,23 @@ final class QuickChatCategoryRegistry {
           }
           AlignedIconLabel.field_Sb = CanvasInputHelpers.field_a.copy();
           AlignedIconLabel.field_Sb.rotateCounterclockwise();
-          MultiValueSliderRenderer.field_e = SpriteInputHelpers.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
-          RankingsRequest.field_o = new RgbSprite(MultiValueSliderRenderer.field_e.canvasWidth / 2, MultiValueSliderRenderer.field_e.canvasHeight / 2);
-          RankingsRequest.field_o.bindRasterTarget();
-          MultiValueSliderRenderer.field_e.drawHalfSize(0, 0);
+          MultiValueSliderRenderer.fullBoardMaskSprite = SpriteInputHelpers.loadRgbSpriteByName("basic", "shutter", (byte) 110, param0);
+          RankingsRequest.halfBoardMaskSprite = new RgbSprite(MultiValueSliderRenderer.fullBoardMaskSprite.canvasWidth / 2, MultiValueSliderRenderer.fullBoardMaskSprite.canvasHeight / 2);
+          RankingsRequest.halfBoardMaskSprite.bindRasterTarget();
+          MultiValueSliderRenderer.fullBoardMaskSprite.drawHalfSize(0, 0);
           BallPulseEffect.framebuffer.bindRaster((byte) 118);
           var10 = SpriteInputHelpers.loadRgbSpriteByName("basic", "flame", (byte) 107, param0);
-          hc.field_a = new RgbSprite[2][4];
-          JungleBackground.field_v = new RgbSprite[2][4];
+          hc.halfPaddleFlameSprites = new RgbSprite[2][4];
+          JungleBackground.fullPaddleFlameSprites = new RgbSprite[2][4];
           for (var11 = 0; var11 < 4; var11++) {
-            JungleBackground.field_v[0][var11] = new RgbSprite(var10.canvasWidth - var11, var10.canvasHeight);
-            JungleBackground.field_v[0][var11].bindRasterTarget();
+            JungleBackground.fullPaddleFlameSprites[0][var11] = new RgbSprite(var10.canvasWidth - var11, var10.canvasHeight);
+            JungleBackground.fullPaddleFlameSprites[0][var11].bindRasterTarget();
             var10.a(0, 0, -var11 + var10.canvasWidth, var10.canvasHeight);
-            JungleBackground.field_v[1][var11] = JungleBackground.field_v[0][var11].copyFlippedHorizontal();
-            hc.field_a[0][var11] = new RgbSprite(JungleBackground.field_v[0][var11].canvasWidth / 2, JungleBackground.field_v[0][var11].canvasHeight / 2);
-            hc.field_a[0][var11].bindRasterTarget();
-            var10.a(0, 0, JungleBackground.field_v[0][var11].canvasWidth / 2, JungleBackground.field_v[0][var11].canvasHeight / 2);
-            hc.field_a[1][var11] = hc.field_a[0][var11].copyFlippedHorizontal();
+            JungleBackground.fullPaddleFlameSprites[1][var11] = JungleBackground.fullPaddleFlameSprites[0][var11].copyFlippedHorizontal();
+            hc.halfPaddleFlameSprites[0][var11] = new RgbSprite(JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
+            hc.halfPaddleFlameSprites[0][var11].bindRasterTarget();
+            var10.a(0, 0, JungleBackground.fullPaddleFlameSprites[0][var11].canvasWidth / 2, JungleBackground.fullPaddleFlameSprites[0][var11].canvasHeight / 2);
+            hc.halfPaddleFlameSprites[1][var11] = hc.halfPaddleFlameSprites[0][var11].copyFlippedHorizontal();
           }
           BallPulseEffect.framebuffer.bindRaster((byte) 127);
           SaveResultsPromptScreen.packCardIcons = CheckboxWidgetRenderer.loadRgbSpritesByName("basic", "expansion_icons", param0, (byte) -8);

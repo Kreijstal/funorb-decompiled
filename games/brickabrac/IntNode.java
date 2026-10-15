@@ -158,41 +158,41 @@ final class IntNode extends IntrusiveNode {
         }
     }
 
-    final static void a(Ball param0, byte param1, int param2, int param3, int param4) {
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
-        String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        Object var7 = null;
-        var6 = BrickABrac.field_J ? 1 : 0;
+    final static void drawBall(Ball ball, byte obfuscationGuard, int scaleDivisor, int destinationX, int destinationY) {
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String ballSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int unusedGameFlag = 0;
+        Object unusedEventPayload = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (0 >= param0.penetrationTicks) {
-            if (param0.phaseTicks <= 0) {
-              gr.field_c.drawTransparent(param3 + (param0.x256 >> 8) / param2, (param0.y256 >> 8) / param2 + param4);
+          if (0 >= ball.penetrationTicks) {
+            if (ball.phaseTicks <= 0) {
+              GameplaySpriteHelpers.activeBallSprite.drawTransparent(destinationX + (ball.x256 >> 8) / scaleDivisor, (ball.y256 >> 8) / scaleDivisor + destinationY);
             } else {
-              gr.field_c.b(param3 + (param0.x256 >> 8) / param2, param4 + (param0.y256 >> 8) / param2, 128);
+              GameplaySpriteHelpers.activeBallSprite.b(destinationX + (ball.x256 >> 8) / scaleDivisor, destinationY + (ball.y256 >> 8) / scaleDivisor, 128);
             }
           } else {
-            WidgetLayer.field_J.drawTransparent((param0.x256 >> 8) / param2 + param3, param4 + (param0.y256 >> 8) / param2);
+            WidgetLayer.activeSteelBallSprite.drawTransparent((ball.x256 >> 8) / scaleDivisor + destinationX, destinationY + (ball.y256 >> 8) / scaleDivisor);
           }
-          if (param1 != -119) {
-            var7 = (Object) null;
+          if (obfuscationGuard != -119) {
+            unusedEventPayload = (Object) null;
             IntNode.pumpPlatformEvents(-14, (PlatformServices) null, (Object) null);
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("kq.D(");
-          if (param0 == null) {
-            stackIn_12_2 = "null";
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("kq.D(");
+          if (ball == null) {
+            ballSummary = "null";
           } else {
-            stackIn_12_2 = "{...}";
+            ballSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(ballSummary).append(',').append(obfuscationGuard).append(',').append(scaleDivisor).append(',').append(destinationX).append(',').append(destinationY).append(')').toString());
         }
     }
 

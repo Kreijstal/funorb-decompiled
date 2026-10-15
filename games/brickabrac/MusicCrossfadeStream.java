@@ -5,7 +5,7 @@ final class MusicCrossfadeStream extends AudioStream {
     private int primaryMixQ20;
     static int[] field_n;
     private boolean retainFadedTrack;
-    static int field_C;
+    static int activeGameplayScaleDivisor;
     private int[] primaryScratch;
     private MusicTrack secondaryTrack;
     private int overlayMix256;

@@ -14,7 +14,7 @@ final class MenuSelection {
     static String field_a;
     static int previewGameId;
     private int field_o;
-    static RgbSprite field_k;
+    static RgbSprite fullBallSprite;
     private boolean pointerDriven;
     static String[] field_p;
     static UiComponent field_m;
@@ -29,7 +29,7 @@ final class MenuSelection {
           field_f = null;
           gameClock = null;
           textChoiceLineActions = null;
-          field_k = null;
+          fullBallSprite = null;
           field_p = null;
           return;
         }
@@ -227,7 +227,7 @@ final class MenuSelection {
         this.pointerDriven = usePointer ? true : false;
         this.heldCode = 0;
         if (obfuscationGuard >= -126) {
-          field_k = (RgbSprite) null;
+          fullBallSprite = (RgbSprite) null;
           if (!this.pointerDriven) {
             this.selectedIndex = fallbackIndex;
             return;
@@ -313,7 +313,7 @@ final class MenuSelection {
         if (obfuscationGuard == -98) {
           return this.keyCode == 97 ? true : false;
         }
-        field_k = (RgbSprite) null;
+        fullBallSprite = (RgbSprite) null;
         return this.keyCode == 97 ? true : false;
     }
 

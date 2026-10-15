@@ -150,7 +150,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 MessageScreen.appendRankingStatistics(SocialTabbedPanel.decodedRankingRating, fh.decodedRankingDraws, recordIndex, -19824, ValidatedTextFieldWidget.decodedRankingLosses, RadialSelectorWidget.decodedRankingWins);
               }
             }
-            gr.sortRankingViews(12429, rowLimit);
+            GameplaySpriteHelpers.sortRankingViews(12429, rowLimit);
             dupTemp$0 = new String[2][rowLimit];
             request.namesBySort = dupTemp$0;
             namesBySort = dupTemp$0;

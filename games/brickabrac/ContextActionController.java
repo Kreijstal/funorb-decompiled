@@ -350,7 +350,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("mu_x_dropped_out", (byte) -112);
                 if (null != var2) {
-                  gr.field_b = MenuButton.a(var2, (byte) 97);
+                  GameplaySpriteHelpers.field_b = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("mu_entered_other_game", (byte) 62);
                 if (null != var2) {
@@ -986,7 +986,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("gameopt_playerneeds1ratedgame", (byte) 66);
                 if (null != var2) {
-                  di.field_b = MenuButton.a(var2, (byte) 97);
+                  QuickChatSineHelpers.field_b = MenuButton.a(var2, (byte) 97);
                 }
                 var2 = AppletFlowHelpers.a("gameopt_youneed1ratedgame", (byte) -120);
                 if (var2 != null) {
@@ -2242,7 +2242,7 @@ final class ContextActionController {
                 }
                 var2 = AppletFlowHelpers.a("returntolobby", (byte) -118);
                 if (null != var2) {
-                  di.field_a = MenuButton.a(var2, (byte) 74);
+                  QuickChatSineHelpers.field_a = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("cont", (byte) -117);
                 if (null != var2) {
@@ -2812,7 +2812,7 @@ final class ContextActionController {
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  di.field_c = MenuButton.a(var2, (byte) 74);
+                  QuickChatSineHelpers.field_c = MenuButton.a(var2, (byte) 74);
                 }
                 var2 = AppletFlowHelpers.a("fs_accept_aftercancel", (byte) -127);
                 if (var2 != null) {

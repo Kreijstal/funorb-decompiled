@@ -34,7 +34,7 @@ final class BufferedFile {
         if (!param0) {
           return true;
         }
-        stackIn_7_0 = (null != IntegerParsingHelpers.quickChatHelpDialog) || (TooltipSprite.field_p);
+        stackIn_7_0 = (null != IntegerParsingHelpers.quickChatHelpDialog) || (TooltipSprite.quickChatMenuOpen);
         return stackIn_7_0;
     }
 

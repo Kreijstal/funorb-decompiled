@@ -3,7 +3,7 @@
  */
 final class hc {
     static String field_d;
-    static RgbSprite[][] field_a;
+    static RgbSprite[][] halfPaddleFlameSprites;
     static int field_h;
     static boolean joinRequestsPanelOpen;
     static int field_f;
@@ -94,7 +94,7 @@ final class hc {
 
     public static void a(int param0) {
         field_e = null;
-        field_a = (RgbSprite[][]) null;
+        halfPaddleFlameSprites = (RgbSprite[][]) null;
         field_d = null;
         field_b = null;
         if (param0 >= -59) {

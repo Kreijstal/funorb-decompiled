@@ -58,7 +58,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[0] = BirthDateEntryPanel.field_O;
         ArrayWidgetGroup.buttonLabels[6] = GamePresentationHelpers.field_b;
         ArrayWidgetGroup.buttonLabels[8] = null;
-        ArrayWidgetGroup.buttonLabels[13] = di.field_a;
+        ArrayWidgetGroup.buttonLabels[13] = QuickChatSineHelpers.field_a;
         ArrayWidgetGroup.buttonLabels[27] = MatchResultScreen.field_r;
         ArrayWidgetGroup.buttonLabels[2] = DebouncedValidationSource.field_e;
         CacheEntry.field_A[11] = MusicCrossfadeStream.field_w;

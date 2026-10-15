@@ -19,7 +19,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException decompiledCaughtException = null;
         try {
           if (PowerUpWarning.mouseInput != null) {
-            gr.pointerIdleTicks = 0;
+            GameplaySpriteHelpers.pointerIdleTicks = 0;
             SoundPlayback.livePressX = event.getX();
             va.livePressY = event.getY();
             MonotonicTime.nowMillis(false);
@@ -68,7 +68,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (PowerUpWarning.mouseInput == null) {
             return;
           }
-          gr.pointerIdleTicks = 0;
+          GameplaySpriteHelpers.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
           WidgetTextLayout.livePointerY = event.getY();
           QuickChatCategoryDefinition.livePointerChanged = true;
@@ -128,7 +128,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
     public final synchronized void mouseExited(java.awt.event.MouseEvent event) {
         try {
           if (PowerUpWarning.mouseInput != null) {
-            gr.pointerIdleTicks = 0;
+            GameplaySpriteHelpers.pointerIdleTicks = 0;
             DirectByteStorage.livePointerX = -1;
             WidgetTextLayout.livePointerY = -1;
             QuickChatCategoryDefinition.livePointerChanged = true;
@@ -147,7 +147,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != PowerUpWarning.mouseInput) {
-            gr.pointerIdleTicks = 0;
+            GameplaySpriteHelpers.pointerIdleTicks = 0;
             QuickChatHelpDialog.liveHeldButton = 0;
             QuickChatCategoryDefinition.livePointerChanged = true;
             var2_int = event.getModifiers();
@@ -231,7 +231,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (PowerUpWarning.mouseInput == null) {
             return;
           }
-          gr.pointerIdleTicks = 0;
+          GameplaySpriteHelpers.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
           WidgetTextLayout.livePointerY = event.getY();
           QuickChatCategoryDefinition.livePointerChanged = true;
@@ -260,7 +260,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (null == PowerUpWarning.mouseInput) {
             return;
           }
-          gr.pointerIdleTicks = 0;
+          GameplaySpriteHelpers.pointerIdleTicks = 0;
           DirectByteStorage.livePointerX = event.getX();
           WidgetTextLayout.livePointerY = event.getY();
           QuickChatCategoryDefinition.livePointerChanged = true;

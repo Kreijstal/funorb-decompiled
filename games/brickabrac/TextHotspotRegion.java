@@ -6,7 +6,7 @@ final class TextHotspotRegion extends IntrusiveNode {
     int x;
     int width;
     int y;
-    static RgbSprite field_o;
+    static RgbSprite activePaddleCenterSprite;
     static Mesh3D[] logoMeshes;
     TextHotspotRegion nextSegment;
     static byte[] field_q;
@@ -18,7 +18,7 @@ final class TextHotspotRegion extends IntrusiveNode {
 
     public static void a(byte param0) {
         int var1 = 127 % ((-74 - param0) / 42);
-        field_o = null;
+        activePaddleCenterSprite = null;
         decodedSpriteHeights = null;
         field_q = null;
         field_m = null;

@@ -317,7 +317,7 @@ final class ScreenshotViewer {
             ll.field_c.f(558, 257);
             if (ResourcePreparationEntry.pointerY > 257 &&
               ResourcePreparationEntry.pointerY < 290) {
-              var2_intLifetime2 = 40 + (di.a((byte) 124, this.field_i << 4) * 40 >> 16);
+              var2_intLifetime2 = 40 + (QuickChatSineHelpers.lookupSine2048Q16((byte) 124, this.field_i << 4) * 40 >> 16);
               if (0 < var2_intLifetime2) {
                 if (9 < MusicPatch.pointerX &&
                   MusicPatch.pointerX < 82) {

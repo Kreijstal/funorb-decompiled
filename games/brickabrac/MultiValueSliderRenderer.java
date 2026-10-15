@@ -6,19 +6,19 @@ final class MultiValueSliderRenderer implements WidgetRenderer {
     static String field_k;
     private int backgroundColor;
     private int textPaint;
-    static RgbSprite field_e;
+    static RgbSprite fullBoardMaskSprite;
     private int markerRadius;
     private int markerColor;
     static RgbSprite jungleMidSprite;
-    static RgbSprite[] field_b;
+    static RgbSprite[] fullPaddleCapSprites;
     private int shadowPaint;
     static int field_d;
     private int trackColor;
 
     public static void a(int param0) {
         jungleMidSprite = null;
-        field_b = null;
-        field_e = null;
+        fullPaddleCapSprites = null;
+        fullBoardMaskSprite = null;
         field_k = null;
         if (param0 != -51) {
           field_k = (String) null;

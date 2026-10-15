@@ -140,21 +140,21 @@ final class HuffmanCodec {
         return;
     }
 
-    final static void a(int param0, QuickChatMenu param1) {
-        if (param1 == null) {
+    final static void installQuickChatMenu(int obfuscationGuard, QuickChatMenu menu) {
+        if (menu == null) {
           return;
         }
         try {
-          hd.quickChatMenu = param1;
-          if (param0 != 105) {
-            String var3 = (String) null;
+          hd.quickChatMenu = menu;
+          if (obfuscationGuard != 105) {
+            String unusedCookieValue = (String) null;
             HuffmanCodec.a((byte) 84, (java.applet.Applet) null, (String) null, false);
           }
           QuickChatPhraseDefinition.quickChatMenuRoot.children.clear((byte) -72);
           QuickChatPhraseDefinition.quickChatMenuRoot.addChild(hd.quickChatMenu, 0);
-          TooltipSprite.field_p = true;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "fk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          TooltipSprite.quickChatMenuOpen = true;
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "fk.C(" + obfuscationGuard + ',' + (menu != null ? "{...}" : "null") + ')');
         }
     }
 

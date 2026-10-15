@@ -31,7 +31,7 @@ final class LevelPackLoader {
           return;
         }
         ScreenNavigationHelpers.quickChatChannel = 0;
-        di.a((byte) -114);
+        QuickChatSineHelpers.activateDefaultQuickChatMenu((byte) -114);
     }
 
     final static LevelPack loadLevelPack(byte obfuscationGuard, ResourceArchive archive, PacketBuffer packet, int archiveSelector, int packId, int completionWord, int scoreOffset) {

@@ -202,7 +202,7 @@ final class NinjaBackground extends BackgroundScene {
         if (TextWidgetRenderer.field_e) {
           return PacketReceiveHelpers.field_a.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
         }
-        if (TooltipSprite.field_p) {
+        if (TooltipSprite.quickChatMenuOpen) {
           return InteractiveGameClient.a(param1, 102, param0);
         }
         if (BytePayloadSubmission.a(param1, 11, param0)) {

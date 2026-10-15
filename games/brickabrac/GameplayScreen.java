@@ -1666,8 +1666,8 @@ final class GameplayScreen extends GameScreen {
         }
         boardPlayerId = this.viewedPlayerId;
         for (boardSlot = 0; boardSlot < this.match.playerCount; boardSlot++) {
-          if (~MusicCrossfadeStream.field_C != ~layoutModes[boardSlot]) {
-            gr.b(layoutModes[boardSlot], -28463);
+          if (~MusicCrossfadeStream.activeGameplayScaleDivisor != ~layoutModes[boardSlot]) {
+            GameplaySpriteHelpers.selectGameplaySpriteScale(layoutModes[boardSlot], -28463);
           }
           BitPacketBuffer.drawBoard((byte) 90, boardPlayerId, layoutModes[boardSlot], layoutYAlias[boardSlot], this.match, layoutXAlias[boardSlot]);
           boardPlayerId++;
@@ -1861,8 +1861,8 @@ final class GameplayScreen extends GameScreen {
           LoginMethodPreference.alternateActivityLoop.setLoopCount(-1);
           OpacityWidget.queueSoundPlayback((byte) 125, WeightedLruCache.primaryActivityLoop);
           OpacityWidget.queueSoundPlayback((byte) 5, LoginMethodPreference.alternateActivityLoop);
-          MusicCrossfadeStream.field_C = 1;
-          gr.b(MusicCrossfadeStream.field_C, -28463);
+          MusicCrossfadeStream.activeGameplayScaleDivisor = 1;
+          GameplaySpriteHelpers.selectGameplaySpriteScale(MusicCrossfadeStream.activeGameplayScaleDivisor, -28463);
           DelayedPacket.field_m = -1;
           GameClock.field_b = -1;
           if (ProducerFramebuffer.field_j == null) {

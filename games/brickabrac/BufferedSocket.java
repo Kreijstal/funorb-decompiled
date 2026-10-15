@@ -267,7 +267,7 @@ final class BufferedSocket implements Runnable {
         if (param0 != 21862) {
           return;
         }
-        if (TooltipSprite.field_p) {
+        if (TooltipSprite.quickChatMenuOpen) {
           Rasterizer2D.darkenRectangle(Rasterizer2D.clipLeft, Rasterizer2D.clipTop, -Rasterizer2D.clipLeft + Rasterizer2D.clipRight, -Rasterizer2D.clipTop + Rasterizer2D.clipBottom);
           QuickChatPhraseDefinition.quickChatMenuRoot.drawRoot(true, false);
         }

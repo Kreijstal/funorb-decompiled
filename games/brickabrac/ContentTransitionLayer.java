@@ -10,7 +10,7 @@ abstract class ContentTransitionLayer extends PopupWidgetLayer {
     static ResourceArchive field_jb;
     static String field_ib;
     private Widget pendingContent;
-    static QuickChatMenu field_kb;
+    static QuickChatMenu defaultQuickChatMenu;
     private int headerHeight;
     private int fadeInDuration;
     static int field_pb;
@@ -213,7 +213,7 @@ abstract class ContentTransitionLayer extends PopupWidgetLayer {
         field_ib = null;
         field_hb = null;
         field_jb = null;
-        field_kb = null;
+        defaultQuickChatMenu = null;
         if (param0 <= 78) {
           return;
         }

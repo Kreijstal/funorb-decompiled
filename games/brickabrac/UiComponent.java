@@ -49,7 +49,7 @@ class UiComponent extends ba {
     NodeDeque children;
     static ResourceArchive backgroundMusicTrackArchive;
     static FullscreenFailureKind fullscreenUnsupported;
-    static RgbSprite field_ib;
+    static RgbSprite halfSteelBallSprite;
     int selectedOffsetY;
     String text;
     private int remainingWidth;
@@ -522,7 +522,7 @@ class UiComponent extends ba {
         field_Z = null;
         fullscreenUnsupported = null;
         field_ob = null;
-        field_ib = null;
+        halfSteelBallSprite = null;
         fullscreenDialogSelection = null;
         glowSequenceWords = null;
         if (param0 > 60) {

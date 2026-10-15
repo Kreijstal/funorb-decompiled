@@ -152,17 +152,17 @@ final class BitPacketBuffer extends PacketBuffer {
                 AchievementMaskRequest.a((var12_ref_vn.radius256 >> 8) / scaleDivisor + (destinationY + (var12_ref_vn.y256 >> 8) / scaleDivisor), 40 / scaleDivisor, 256, InteractiveGameClient.sine8192(100 * MembershipBenefitsScreen.clientTick, -4097) * 10 >> 16, 123, 20 / scaleDivisor, (var12_ref_vn.x256 >> 8) / scaleDivisor + destinationX + (var12_ref_vn.radius256 >> 8) / scaleDivisor);
                 RasterEffectHelpers.drawBranchedGlow((var12_ref_vn.x256 + var12_ref_vn.radius256 >> 4) / scaleDivisor + (destinationX << 4), (destinationY << 4) + (var12_ref_vn.y256 + var12_ref_vn.radius256 >> 4) / scaleDivisor, (var12_ref_vn.radius256 >> 3) / scaleDivisor, 4, 3, PowerUpWarning.field_n, var24.simulationTick / 5);
               }
-              IntNode.a(var12_ref_vn, (byte) -119, scaleDivisor, destinationX, destinationY);
+              IntNode.drawBall(var12_ref_vn, (byte) -119, scaleDivisor, destinationX, destinationY);
               var12_ref_vn = (Ball) (var24.activeBalls.next((byte) 116));
             }
             var26 = (Ball) (var24.queuedBalls.first(-76));
             while (var26 != null) {
-              IntNode.a(var26, (byte) -119, scaleDivisor, destinationX, destinationY);
+              IntNode.drawBall(var26, (byte) -119, scaleDivisor, destinationX, destinationY);
               var26 = (Ball) (var24.queuedBalls.next((byte) 116));
             }
             var12_ref_ge = (PowerUp) (var24.fallingPowerUps.first(-113));
             while (var12_ref_ge != null) {
-              we.field_b[var12_ref_ge.typeId].drawTransparent(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
+              we.activePowerUpSprites[var12_ref_ge.typeId].drawTransparent(destinationX + (var12_ref_ge.x256 >> 8) / scaleDivisor, (var12_ref_ge.y256 >> 8) / scaleDivisor + destinationY);
               var12_ref_ge = (PowerUp) (var24.fallingPowerUps.next((byte) 116));
             }
             var12_ref_il = (BubbleDistortion) (var24.bubbles.first(-20));
@@ -381,7 +381,7 @@ final class BitPacketBuffer extends PacketBuffer {
           var5 = (CharSequence) ((Object) param1);
           QuickChatHelpDialog.field_Qb = ChatMessage.normalizePlayerName(var5, 96);
           CanvasResizeController.field_n = param2;
-          di.a((byte) -120);
+          QuickChatSineHelpers.activateDefaultQuickChatMenu((byte) -120);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "pi.JB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

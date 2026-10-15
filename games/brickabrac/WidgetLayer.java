@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class WidgetLayer extends WidgetGroup {
-    static RgbSprite field_J;
+    static RgbSprite activeSteelBallSprite;
     static int field_K;
     static boolean field_H;
     private int opacity256;
@@ -57,7 +57,7 @@ abstract class WidgetLayer extends WidgetGroup {
 
     public static void a(byte param0) {
         try {
-          field_J = null;
+          activeSteelBallSprite = null;
           field_M = null;
           if (param0 != -17) {
             field_M = (NodeDeque) null;

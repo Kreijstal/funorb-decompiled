@@ -8,15 +8,15 @@ final class GamePresentationHelpers {
     static boolean field_a;
     static RgbSprite[][] constructionCapsSprites;
 
-    final static void a(int param0) {
-        TooltipSprite.field_p = false;
+    final static void closeQuickChatMenu(int obfuscationGuard) {
+        TooltipSprite.quickChatMenuOpen = false;
         if (null != hd.quickChatMenu) {
           hd.quickChatMenu.resetSelection((byte) 41);
         }
-        if (param0 != ~ScreenNavigationHelpers.quickChatChannel) {
+        if (obfuscationGuard != ~ScreenNavigationHelpers.quickChatChannel) {
           UsernameAvailabilityValidator.b(true);
         }
-        HighscoresScreen.field_v = 0;
+        HighscoresScreen.quickChatScrollX = 0;
     }
 
     final static void drawDiagnosticOverlay(int obfuscationGuard) {

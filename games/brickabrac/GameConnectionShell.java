@@ -5,7 +5,7 @@ abstract class GameConnectionShell extends AppletGameShell {
     private int gameCrc;
     static RgbSprite[][] halloweenSegsSprites;
     String host;
-    static RgbSprite[] field_D;
+    static RgbSprite[] fullPaddleSegmentSprites;
     private int languageId;
     private int affiliateId;
     static int clientStage;
@@ -53,7 +53,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         try {
           this.loadAppletParameters(103, gameName, gameVersion, 640, 480);
           if (obfuscationGuard != 1686) {
-            field_D = (RgbSprite[]) null;
+            fullPaddleSegmentSprites = (RgbSprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "qg.EA(" + (gameName != null ? "{...}" : "null") + ',' + gameVersion + ',' + obfuscationGuard + ')');
@@ -480,9 +480,9 @@ abstract class GameConnectionShell extends AppletGameShell {
 
     public static void k(int param0) {
         halloweenSegsSprites = (RgbSprite[][]) null;
-        field_D = null;
+        fullPaddleSegmentSprites = null;
         if (param0 > -103) {
-          field_D = (RgbSprite[]) null;
+          fullPaddleSegmentSprites = (RgbSprite[]) null;
         }
         field_z = null;
     }
@@ -661,7 +661,7 @@ abstract class GameConnectionShell extends AppletGameShell {
         var4 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param1 > -101) {
-            field_D = (RgbSprite[]) null;
+            fullPaddleSegmentSprites = (RgbSprite[]) null;
           }
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
             var3 = param0[var2_int];

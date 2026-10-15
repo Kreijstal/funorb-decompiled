@@ -67,7 +67,7 @@ final class LevelResultSubmission extends IntrusiveNode {
             if (decompiledSharedTail2) {
               var2 = GamePresentationHelpers.formatIndexedText(kk.field_c, new String[]{DualLinkNode.quickChatRecipient}, (byte) 103);
             }
-            if (TooltipSprite.field_p) {
+            if (TooltipSprite.quickChatMenuOpen) {
               SoundCache.appendSystemChatMessage((byte) 92, 0, (String) null, (String) (var2), (String) null, 2);
               QuickChatParameterType.b(1);
             }

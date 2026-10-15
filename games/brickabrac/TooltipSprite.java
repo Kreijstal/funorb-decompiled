@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TooltipSprite extends IntrusiveNode {
-    static boolean field_p;
+    static boolean quickChatMenuOpen;
     private int tooltipHeight;
     static String field_k;
     private int y;
@@ -238,6 +238,6 @@ final class TooltipSprite extends IntrusiveNode {
     static {
         field_k = "Join";
         field_n = "Invalid password.";
-        field_p = false;
+        quickChatMenuOpen = false;
     }
 }

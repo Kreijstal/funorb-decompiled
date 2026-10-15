@@ -4,7 +4,7 @@
 final class ch {
     static int field_b;
     static RgbSprite field_m;
-    static RgbSprite[] field_k;
+    static RgbSprite[] halfPowerUpSprites;
     static RgbSprite field_l;
     static FullscreenFailureKind fullscreenFocusProblem;
     static RgbSprite jungleNearSprite;
@@ -177,7 +177,7 @@ final class ch {
           field_d = null;
           field_e = null;
           fullscreenFocusProblem = null;
-          field_k = null;
+          halfPowerUpSprites = null;
           incomingPacketLengths = null;
           if (param0 != 20623) {
             field_b = -11;

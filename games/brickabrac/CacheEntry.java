@@ -188,7 +188,7 @@ abstract class CacheEntry extends DualLinkNode {
             IterableIntrusiveHashTable.field_b.addChild(QuickChatPhraseDefinition.field_E, 0);
           }
           IterableIntrusiveHashTable.field_b.addChild(TimedSplashScreen.field_u, 0);
-          GameUiController.field_e = new UiComponent(0L, MatchCompleteScreen.field_x, di.field_a.toUpperCase());
+          GameUiController.field_e = new UiComponent(0L, MatchCompleteScreen.field_x, QuickChatSineHelpers.field_a.toUpperCase());
           ba.field_v = new UiComponent(0L, ValidationStatus.field_j);
           QuickChatPhraseRegistry.field_e = new UiComponent(0L, FarmBackground.field_x);
           jd.field_a = new UiComponent(0L, PowerUpWarning.field_k, ArchiveSource.field_b.toUpperCase());

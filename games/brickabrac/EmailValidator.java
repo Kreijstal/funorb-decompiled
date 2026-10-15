@@ -18,7 +18,7 @@ final class EmailValidator extends TextFieldValidator {
         var1 = PowerUpWarning.mouseInput;
         synchronized (var1) {
           MatchingTextValidator.heldButton = QuickChatHelpDialog.liveHeldButton;
-          gr.pointerIdleTicks = gr.pointerIdleTicks + 1;
+          GameplaySpriteHelpers.pointerIdleTicks = GameplaySpriteHelpers.pointerIdleTicks + 1;
           MusicPatch.pointerX = DirectByteStorage.livePointerX;
           ResourcePreparationEntry.pointerY = WidgetTextLayout.livePointerY;
           QuickChatHelpDialog.pointerChanged = QuickChatCategoryDefinition.livePointerChanged;

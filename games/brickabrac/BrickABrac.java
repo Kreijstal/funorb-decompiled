@@ -720,7 +720,7 @@ public final class BrickABrac extends InteractiveGameClient {
         RankingsScreen.g(-118);
         InstructionsScreen.g((byte) 121);
         AchievementBrowserScreen.f((byte) -106);
-        di.a(8070);
+        QuickChatSineHelpers.a(8070);
         SaveResultsPromptScreen.f(550);
         MembershipBenefitsScreen.g(2);
         LevelPackSelectScreen.f(14529);
@@ -788,7 +788,7 @@ public final class BrickABrac extends InteractiveGameClient {
         StatefulWidgetRenderer.b(3);
         RadialSelectorRenderer.a(0);
         MultiValueSliderRenderer.a(-51);
-        gr.a((byte) 118);
+        GameplaySpriteHelpers.a((byte) 118);
         VorbisFloor1.releaseScratch();
         AppletSettingsUiHelpers.b(1516);
         QuickChatPhraseDefinition.f(32463);

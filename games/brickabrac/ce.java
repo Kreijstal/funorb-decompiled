@@ -47,7 +47,7 @@ final class ce {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        if (!TooltipSprite.field_p) {
+        if (!TooltipSprite.quickChatMenuOpen) {
           return;
         }
         QuickChatPhraseDefinition.quickChatMenuRoot.updateRoot(param0, -15211);
@@ -61,16 +61,16 @@ final class ce {
               }
               var5 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
               if (var5 > 640) {
-                HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
+                HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
                 return;
               }
               if (635 <= var5) {
                 return;
               }
-              if (HighscoresScreen.field_v <= 0) {
+              if (HighscoresScreen.quickChatScrollX <= 0) {
                 return;
               }
-              HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
+              HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX - 5;
               return;
             }
             hd.quickChatMenu.processPressedItems(38, param3, param1);
@@ -78,16 +78,16 @@ final class ce {
             if (param2 >= 89) {
               var5Lifetime2 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
               if (var5Lifetime2 > 640) {
-                HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
+                HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
                 return;
               }
               if (635 <= var5Lifetime2) {
                 return;
               }
-              if (HighscoresScreen.field_v <= 0) {
+              if (HighscoresScreen.quickChatScrollX <= 0) {
                 return;
               }
-              HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
+              HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX - 5;
               return;
             }
             field_e = (PaletteFont) null;
@@ -96,12 +96,12 @@ final class ce {
               if (635 <= var5Lifetime3) {
                 return;
               }
-              if (HighscoresScreen.field_v <= 0) {
+              if (HighscoresScreen.quickChatScrollX <= 0) {
                 return;
               }
-              HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
+              HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX - 5;
             } else {
-              HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
+              HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
             }
             return;
           }
@@ -119,14 +119,14 @@ final class ce {
         }
         var5Lifetime1 = hd.quickChatMenu.getOpenChainWidth((byte) -92) + hd.quickChatMenu.screenX;
         if (var5Lifetime1 > 640) {
-          HighscoresScreen.field_v = HighscoresScreen.field_v + 5;
+          HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX + 5;
           return;
         }
         if (635 > var5Lifetime1) {
-          if (HighscoresScreen.field_v <= 0) {
+          if (HighscoresScreen.quickChatScrollX <= 0) {
             return;
           }
-          HighscoresScreen.field_v = HighscoresScreen.field_v - 5;
+          HighscoresScreen.quickChatScrollX = HighscoresScreen.quickChatScrollX - 5;
         }
         return;
     }

@@ -470,7 +470,7 @@ final class MusicVoice extends IntrusiveNode {
                   } else {
                     var26_int = var7 - var13.ratedGameCount;
                     if (var26_int == 1) {
-                      var25 = GamePresentationHelpers.formatIndexedText(di.field_b, new String[]{var21}, (byte) 103);
+                      var25 = GamePresentationHelpers.formatIndexedText(QuickChatSineHelpers.field_b, new String[]{var21}, (byte) 103);
                     }
                     var25 = GamePresentationHelpers.formatIndexedText(ValidationStatus.field_g, new String[]{var21, Integer.toString(var26_int)}, (byte) 103);
                   }

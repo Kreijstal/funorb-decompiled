@@ -6,7 +6,7 @@ import java.io.*;
 final class ArchiveNetworkClient extends ArchiveFetchClient {
     static TextFont field_u;
     static String field_t;
-    static RgbSprite[] field_s;
+    static RgbSprite[] activeRosetteSprites;
     private BufferedSocket transport;
     static String field_r;
 
@@ -409,7 +409,7 @@ final class ArchiveNetworkClient extends ArchiveFetchClient {
           ArchiveNetworkClient.h((byte) 64);
         }
         field_u = null;
-        field_s = null;
+        activeRosetteSprites = null;
         field_t = null;
     }
 

@@ -300,39 +300,39 @@ final class RichTextLayout extends WidgetTextLayout {
           var10 = param1.y256 >> 8;
           var11 = param1.x256 >> 8;
           if (param0 == 2) {
-            var15 = FullscreenDialogHelpers.field_e[1][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.field_e[1].length)];
+            var15 = FullscreenDialogHelpers.activePaddleFlameSprites[1][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.activePaddleFlameSprites[1].length)];
             var12 = var15;
             var12.f((var11 + param6 * param2 - var15.canvasWidth * param2 + 3) / param2, (3 + (param2 * param3 + var10)) / param2, 196);
           }
-          FullscreenFailureKind.field_c[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
+          FullscreenFailureKind.activePaddleCapSprites[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
           if (var7 != null) {
             var14[0].drawTransparent(param6 + var11 / param2, param3 + var10 / param2);
           }
           var11 += 16;
           for (var12_int = 0; param1.sizeStage / 2 > var12_int; var12_int++) {
-            HorizontalFrameHelpers.field_d[0].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
+            HorizontalFrameHelpers.activePaddleSegmentSprites[0].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
             if (null != var8) {
               var8[0].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
             }
             var11 += 6;
           }
-          TextHotspotRegion.field_o.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
+          TextHotspotRegion.activePaddleCenterSprite.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           if (var9 != null) {
             var9.drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           }
           var11 += 8;
           for (var12_intLifetime1 = 0; param1.sizeStage / 2 > var12_intLifetime1; var12_intLifetime1++) {
-            HorizontalFrameHelpers.field_d[1].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
+            HorizontalFrameHelpers.activePaddleSegmentSprites[1].drawTransparent(var11 / param2 + param6, var10 / param2 + param3);
             if (null != var8) {
               var8[1].drawTransparent(var11 / param2 + param6, param3 + var10 / param2);
             }
             var11 += 6;
           }
           if (0 == param0) {
-            var12Lifetime1 = FullscreenDialogHelpers.field_e[0][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.field_e[0].length)];
+            var12Lifetime1 = FullscreenDialogHelpers.activePaddleFlameSprites[0][ChocolateBackground.field_w.nextBoundedInt(-37880252, FullscreenDialogHelpers.activePaddleFlameSprites[0].length)];
             var12Lifetime1.f((var11 + (16 + param6 * param2) - 3) / param2, (3 + param2 * param3 + var10) / param2, 196);
           }
-          FullscreenFailureKind.field_c[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
+          FullscreenFailureKind.activePaddleCapSprites[1].drawTransparent(param6 + var11 / param2, var10 / param2 + param3);
           if (var7 == null) {
             return;
           }

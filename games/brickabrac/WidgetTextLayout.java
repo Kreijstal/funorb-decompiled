@@ -8,7 +8,7 @@ abstract class WidgetTextLayout {
     static volatile int livePointerY;
     static String field_e;
     static int resultCounterTwo;
-    static RgbSprite field_j;
+    static RgbSprite halfPaddleCenterSprite;
     static RgbSprite jungleCharacterSprite;
     static float field_a;
     static String field_d;
@@ -109,7 +109,7 @@ abstract class WidgetTextLayout {
         field_b = null;
         field_e = null;
         jungleCharacterSprite = null;
-        field_j = null;
+        halfPaddleCenterSprite = null;
         field_d = null;
     }
 

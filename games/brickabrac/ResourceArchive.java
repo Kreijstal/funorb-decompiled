@@ -12,13 +12,13 @@ final class ResourceArchive {
     static WidgetLayerStack field_f;
     static String field_e;
     boolean discardPackedGroups;
-    static RgbSprite[] field_a;
+    static RgbSprite[] halfBrickSprites;
     static int[] field_d;
 
     public static void a(boolean param0) {
         field_e = null;
         field_f = null;
-        field_a = null;
+        halfBrickSprites = null;
         if (param0) {
           String var2 = (String) null;
           ResourceArchive.rejectNumericEmailSuffix((byte) -93, (String) null);
@@ -131,7 +131,7 @@ final class ResourceArchive {
           }
           groupName = groupName.toLowerCase();
           if (obfuscationGuard != -28138) {
-            field_a = (RgbSprite[]) null;
+            halfBrickSprites = (RgbSprite[]) null;
           }
           var4 = (CharSequence) ((Object) groupName);
           var3_int = this.index.groupNameIndex.findIndex(StateIconLabel.hashArchiveName(obfuscationGuard + 28015, var4), (byte) -85);
@@ -258,7 +258,7 @@ final class ResourceArchive {
           return 0;
         }
         if (obfuscationGuard != -27509) {
-          field_a = (RgbSprite[]) null;
+          halfBrickSprites = (RgbSprite[]) null;
         }
         if (null != this.packedGroups[groupId]) {
           return 100;

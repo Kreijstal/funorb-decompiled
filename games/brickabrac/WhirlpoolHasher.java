@@ -23,7 +23,7 @@ final class WhirlpoolHasher {
         }
         SecondaryNodeQueue.d(125);
         CircleBody.reportAbuseDialog = null;
-        GamePresentationHelpers.a(param0 - 8);
+        GamePresentationHelpers.closeQuickChatMenu(param0 - 8);
     }
 
     final void reset(byte obfuscationGuard) {

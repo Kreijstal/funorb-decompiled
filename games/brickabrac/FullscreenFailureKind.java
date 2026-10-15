@@ -6,7 +6,7 @@ final class FullscreenFailureKind {
     static boolean field_h;
     static RgbSprite[] trackHeads;
     static byte[] cacheSectorScratch;
-    static RgbSprite[] field_c;
+    static RgbSprite[] activePaddleCapSprites;
     static int[] javaKeyCodeMap;
     static SecondaryHashTable ignoreIndex;
     static String[] field_e;
@@ -18,7 +18,7 @@ final class FullscreenFailureKind {
           CanvasInputCleanup.field_g = false;
           InteractiveGameClient.field_E = false;
           if (param1 >= -43) {
-            field_c = (RgbSprite[]) null;
+            activePaddleCapSprites = (RgbSprite[]) null;
           }
           if (null != StrongCacheEntry.field_I) {
             if (!StrongCacheEntry.field_I.visible) {
@@ -74,7 +74,7 @@ final class FullscreenFailureKind {
           trackHeads = null;
           field_e = null;
           ignoreIndex = null;
-          field_c = null;
+          activePaddleCapSprites = null;
           return;
         }
         String var2 = (String) null;
@@ -85,7 +85,7 @@ final class FullscreenFailureKind {
         trackHeads = null;
         field_e = null;
         ignoreIndex = null;
-        field_c = null;
+        activePaddleCapSprites = null;
     }
 
     final static void a(LobbyGame param0, boolean param1, byte param2, String param3) {

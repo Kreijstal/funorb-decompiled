@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotListener, WidgetActionListener, UsernameSuggestionListener {
-    static RgbSprite field_R;
+    static RgbSprite fullPaddleCenterSprite;
     private ToggleButtonWidget newsletterToggle;
     private HotspotTextWidget termsLinks;
     private ValidatedTextFieldWidget emailField;
@@ -120,7 +120,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           ContentTransitionPhase.textChoiceTop = ea.textChoiceCenterY - (ReflectionCheck.textChoiceContentHeight >> 1);
           ArcticBackground.textChoiceSelection.initializeSelection(TextChoiceDialogHitTest.hitTestTextChoiceDialog(obfuscationGuard - 46, ResourcePreparationEntry.pointerY, MusicPatch.pointerX), 0, usePointer, (byte) -127);
           if (obfuscationGuard != 46) {
-            field_R = (RgbSprite) null;
+            fullPaddleCenterSprite = (RgbSprite) null;
             return;
           }
           return;
@@ -139,9 +139,9 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
     }
 
     public static void a(int param0) {
-        field_R = null;
+        fullPaddleCenterSprite = null;
         if (param0 != -11310) {
-          field_R = (RgbSprite) null;
+          fullPaddleCenterSprite = (RgbSprite) null;
         }
     }
 
@@ -179,7 +179,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != -873) {
-            field_R = (RgbSprite) null;
+            fullPaddleCenterSprite = (RgbSprite) null;
           }
           if (BytePayloadSubmission.decodeSpritesFromArchive(-123, fileId, archive, groupId)) {
             return ConnectionPhase.buildRgbSprite((byte) 21);
@@ -409,7 +409,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
         var3 = BrickABrac.field_J ? 1 : 0;
         try {
           if (param0 > -59) {
-            field_R = (RgbSprite) null;
+            fullPaddleCenterSprite = (RgbSprite) null;
           }
           for (var1_int = 0; var1_int < DelayedPacket.menuScreens.length; var1_int++) {
             var2 = DelayedPacket.menuScreens[var1_int];

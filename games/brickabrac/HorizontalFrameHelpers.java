@@ -5,7 +5,7 @@ import java.util.*;
 
 final class HorizontalFrameHelpers {
     static java.util.zip.CRC32 archiveCrc;
-    static RgbSprite[] field_d;
+    static RgbSprite[] activePaddleSegmentSprites;
     static RgbSprite[] field_c;
     static int[] field_e;
     static int field_b;
@@ -72,7 +72,7 @@ final class HorizontalFrameHelpers {
     }
 
     public static void a(byte param0) {
-        field_d = null;
+        activePaddleSegmentSprites = null;
         if (param0 != 15) {
           return;
         }

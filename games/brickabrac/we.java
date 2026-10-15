@@ -4,7 +4,7 @@
 final class we {
     static String field_c;
     static int secondPreviousPacketOpcode;
-    static RgbSprite[] field_b;
+    static RgbSprite[] activePowerUpSprites;
 
     final static void a(byte param0) {
         ResourceArchive.pendingReflectionChecks = new NodeDeque();
@@ -17,10 +17,10 @@ final class we {
         field_c = null;
         if (param0 != -8495) {
           we.a((byte) -45);
-          field_b = null;
+          activePowerUpSprites = null;
           return;
         }
-        field_b = null;
+        activePowerUpSprites = null;
     }
 
     static {

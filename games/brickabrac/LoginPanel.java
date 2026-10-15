@@ -121,7 +121,7 @@ final class LoginPanel extends WidgetGroup implements TextFieldListener, WidgetA
             LoginPanel.i((byte) 86);
           }
           Rasterizer2D.bind(var14, var5, var6);
-          ContentTransitionLayer.field_kb = AchievementSubmission.buildQuickChatCategoryMenu(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
+          ContentTransitionLayer.defaultQuickChatMenu = AchievementSubmission.buildQuickChatCategoryMenu(SoftwareFramebuffer.field_e, ArchiveIndex.field_j, var4, 4, WidgetLayerStack.field_K);
           QuickChatPhraseDefinition.quickChatMenuRoot.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -8,7 +8,7 @@ final class PlayerInputBatch extends IntrusiveNode {
     static String field_j;
     int[] controlMasks;
     int positionWord;
-    static RgbSprite field_i;
+    static RgbSprite halfBallSprite;
     int maskedChecksum;
 
     final boolean isConsumed(int obfuscationGuard) {
@@ -65,7 +65,7 @@ final class PlayerInputBatch extends IntrusiveNode {
           }
           return var1;
         }
-        field_i = (RgbSprite) null;
+        halfBallSprite = (RgbSprite) null;
         if (0 == var1.length()) {
           var1 = MultiValueSliderRenderer.b(100);
         }
@@ -77,7 +77,7 @@ final class PlayerInputBatch extends IntrusiveNode {
 
     public static void b(boolean param0) {
         field_j = null;
-        field_i = null;
+        halfBallSprite = null;
         field_p = null;
         if (param0) {
           PlayerInputBatch.b(true);
