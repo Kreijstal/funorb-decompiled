@@ -3,7 +3,7 @@
  */
 final class WeightedLruCache {
     private int capacity;
-    static java.math.BigInteger field_g;
+    static java.math.BigInteger accountRsaModulus;
     static int privateChatFilter;
     private int remainingCapacity;
     static String validEmailMessage;
@@ -84,7 +84,7 @@ final class WeightedLruCache {
         validEmailMessage = null;
         field_h = null;
         powerUpDropPeriods = null;
-        field_g = null;
+        accountRsaModulus = null;
     }
 
     final void put(int obfuscationGuard, Object value, long key) {
@@ -98,13 +98,13 @@ final class WeightedLruCache {
         }
     }
 
-    final static void a(boolean param0, int param1) {
-        if (param1 > -127) {
+    final static void completeEmailAvailabilityRequest(boolean available, int obfuscationGuard) {
+        if (obfuscationGuard > -127) {
           powerUpDropPeriods = (int[]) null;
-          LabeledWidget.emailAvailabilityRequest.complete(param0, 20892);
+          LabeledWidget.emailAvailabilityRequest.complete(available, 20892);
           return;
         }
-        LabeledWidget.emailAvailabilityRequest.complete(param0, 20892);
+        LabeledWidget.emailAvailabilityRequest.complete(available, 20892);
     }
 
     private final void removeEntry(boolean obfuscationGuard, CacheEntry entry) {
@@ -161,7 +161,7 @@ final class WeightedLruCache {
 
     static {
         privateChatFilter = 2;
-        field_g = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
+        accountRsaModulus = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
         field_h = "<%0> is not on your ignore list.";
         validEmailMessage = "Email is valid";
         powerUpDropPeriods = new int[29];

@@ -21,7 +21,7 @@ abstract class MouseWheelSource {
     abstract int pollRotation(int obfuscationGuard);
 
     final static void a(int param0, byte param1) {
-        MovingBody.c((byte) -109);
+        MovingBody.pollAccountDialogResult((byte) -109);
         if (param1 <= 111) {
           MouseWheelSource.a(-66, (byte) -49);
         }

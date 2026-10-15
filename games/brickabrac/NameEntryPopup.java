@@ -355,20 +355,20 @@ final class NameEntryPopup extends UiComponent {
         }
     }
 
-    final static boolean b(int param0, int param1) {
-        if (~param0 > param1) {
-          return (1 + param0) % 4 == 0 ? true : false;
+    final static boolean isLegacyLeapYear(int year, int obfuscationGuard) {
+        if (~year > obfuscationGuard) {
+          return (1 + year) % 4 == 0 ? true : false;
         }
-        if (param0 < 1582) {
-          return param0 % 4 == 0 ? true : false;
+        if (year < 1582) {
+          return year % 4 == 0 ? true : false;
         }
-        if (param0 % 4 != 0) {
+        if (year % 4 != 0) {
           return false;
         }
-        if (0 != param0 % 100) {
+        if (0 != year % 100) {
           return true;
         }
-        if (param0 % 400 == 0) {
+        if (year % 400 == 0) {
           return true;
         }
         return false;

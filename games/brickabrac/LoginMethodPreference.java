@@ -63,7 +63,7 @@ final class LoginMethodPreference {
             return stackIn_5_0;
           }
           if (expectedLoginStage != LevelMetadata.field_m) {
-            stackIn_9_0 = df.field_c;
+            stackIn_9_0 = AccountDateHelpers.field_c;
             return stackIn_9_0;
           }
           if (AchievementBrowserScreen.isIgnoredPlayer(124, name)) {
@@ -75,7 +75,7 @@ final class LoginMethodPreference {
             return stackIn_15_0;
           }
           if (LevelPack.isFriend(expectedLoginStage - 2, name)) {
-            stackIn_19_0 = GamePresentationHelpers.formatIndexedText(tq.field_a, new String[]{name}, (byte) 103);
+            stackIn_19_0 = GamePresentationHelpers.formatIndexedText(MeshAudioHelpers.field_a, new String[]{name}, (byte) 103);
             return stackIn_19_0;
           }
           packet = TextFieldValidator.outgoingPackets;

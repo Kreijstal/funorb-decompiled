@@ -166,7 +166,7 @@ final class CheckboxWidgetRenderer implements WidgetRenderer {
             field_a = (String) null;
           }
           Under13RegistrationNoticePanel.b(widget.height, var6_int, widget.width, var7, -17634);
-          var8 = df.field_a[1];
+          var8 = AccountDateHelpers.field_a[1];
           if (widget instanceof FocusableWidget &&
             ((FocusableWidget) (widget)).active) {
             var8.f((-var8.canvasWidth + widget.width >> 1) + 1 + var6_int, (-var8.canvasHeight + widget.height >> 1) + 1 + var7, 256);

@@ -31,20 +31,20 @@ final class PlayerInputBatch extends IntrusiveNode {
         return this.controlMasks[fieldTemp$1];
     }
 
-    final static boolean a(byte param0, int param1, int param2, int param3) {
-        if (param3 < 0) {
+    final static boolean isValidLegacyDate(byte obfuscationGuard, int day, int year, int monthIndex) {
+        if (monthIndex < 0) {
           return false;
         }
-        if (param3 > 11) {
+        if (monthIndex > 11) {
           return false;
         }
-        if (param1 < 1) {
+        if (day < 1) {
           return false;
         }
-        if (ReflectionCheck.a(param2, 29, param3) < param1) {
+        if (ReflectionCheck.getLegacyMonthLength(year, 29, monthIndex) < day) {
           return false;
         }
-        if (param0 == -49) {
+        if (obfuscationGuard == -49) {
           return true;
         }
         field_j = (String) null;

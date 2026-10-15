@@ -58,7 +58,7 @@ final class CappedUrlRequest implements Runnable {
             CappedUrlRequest.b(46);
           }
           if (null == BrowserResizeNotificationHelpers.field_d) {
-            BrowserResizeNotificationHelpers.field_d = FramedMenuScreen.field_s.a(tq.field_h, (byte) 120, SocketConnector.field_b);
+            BrowserResizeNotificationHelpers.field_d = FramedMenuScreen.field_s.a(MeshAudioHelpers.field_h, (byte) 120, SocketConnector.field_b);
           }
           if (BrowserResizeNotificationHelpers.field_d.status == 0) {
             return false;

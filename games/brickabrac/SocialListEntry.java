@@ -197,7 +197,7 @@ final class SocialListEntry extends UiComponent {
               rgbB = rgbB + 65793 * greenOrHighlightB;
               rgbA = rgbA + 65793 * redBlueOrHighlightA;
               rgbC = rgbC + 65793 * flatRgbOrHighlightC;
-              tq.drawInterpolatedMeshTriangle(rgbC & 255, 255 & rgbA >> 8, xC, (65445 & rgbB) >> 8, xB, rgbB >> 16, yC, rgbC >> 8 & 255, yA, (byte) -55, rgbB & 255, xA, 255 & rgbA, rgbC >> 16, yB, rgbA >> 16);
+              MeshAudioHelpers.drawInterpolatedMeshTriangle(rgbC & 255, 255 & rgbA >> 8, xC, (65445 & rgbB) >> 8, xB, rgbB >> 16, yC, rgbC >> 8 & 255, yA, (byte) -55, rgbB & 255, xA, 255 & rgbA, rgbC >> 16, yB, rgbA >> 16);
             }
           }
           return;
@@ -240,18 +240,18 @@ final class SocialListEntry extends UiComponent {
         int var6 = 0;
         String var7 = null;
         try {
-          LevelPackCard.field_a[0] = IterableIntrusiveHashTable.packetDelayRandom.nextInt();
-          LevelPackCard.field_a[1] = IterableIntrusiveHashTable.packetDelayRandom.nextInt();
-          tq.field_f.position = 0;
+          LevelPackCard.field_a[0] = IterableIntrusiveHashTable.packetRandom.nextInt();
+          LevelPackCard.field_a[1] = IterableIntrusiveHashTable.packetRandom.nextInt();
+          MeshAudioHelpers.accountPacketScratch.position = 0;
           LevelPackCard.field_a[3] = (int)PopupWidgetLayer.field_ab;
           LevelPackCard.field_a[2] = (int)(PopupWidgetLayer.field_ab >> 32);
-          tq.field_f.writeInt(LevelPackCard.field_a[0], (byte) -79);
-          tq.field_f.writeInt(LevelPackCard.field_a[1], (byte) -79);
-          tq.field_f.writeInt(LevelPackCard.field_a[2], (byte) -79);
-          tq.field_f.writeInt(LevelPackCard.field_a[3], (byte) -79);
-          AccountIntroductionPanel.a(tq.field_f, (byte) -95);
-          tq.field_f.writeShort((byte) 113, param0);
-          param1.writeCredentials(0, tq.field_f);
+          MeshAudioHelpers.accountPacketScratch.writeInt(LevelPackCard.field_a[0], (byte) -79);
+          MeshAudioHelpers.accountPacketScratch.writeInt(LevelPackCard.field_a[1], (byte) -79);
+          MeshAudioHelpers.accountPacketScratch.writeInt(LevelPackCard.field_a[2], (byte) -79);
+          MeshAudioHelpers.accountPacketScratch.writeInt(LevelPackCard.field_a[3], (byte) -79);
+          AccountIntroductionPanel.a(MeshAudioHelpers.accountPacketScratch, (byte) -95);
+          MeshAudioHelpers.accountPacketScratch.writeShort((byte) 113, param0);
+          param1.writeCredentials(0, MeshAudioHelpers.accountPacketScratch);
           TextFieldValidator.outgoingPackets.position = 0;
           if (!param2) {
             TextFieldValidator.outgoingPackets.writeByte(94, 16);
@@ -287,7 +287,7 @@ final class SocialListEntry extends UiComponent {
           if (null != ParisBackground.field_t) {
             TextFieldValidator.outgoingPackets.writePrefixedCp1252String(0, ParisBackground.field_t);
           }
-          LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
+          LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, MeshAudioHelpers.accountPacketScratch, Ball.accountRsaExponent, (byte) -72, WeightedLruCache.accountRsaModulus);
           TextFieldValidator.outgoingPackets.backfillShortLength(TextFieldValidator.outgoingPackets.position - var5_int, 255);
           ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
           return;

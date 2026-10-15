@@ -75,7 +75,7 @@ final class LevelResultSubmission extends IntrusiveNode {
           if (null == var2 &&
             !nd.chatPinnedToBottom &&
             null == SoundCache.field_k) {
-            var2 = un.field_h;
+            var2 = CalendarRankingHelpers.field_h;
           }
           if (null != var2) {
             DateFieldsWidget.a(-115, (String) null, (String) (var2), 0, GameOverlayHelpers.field_d);
@@ -154,7 +154,7 @@ final class LevelResultSubmission extends IntrusiveNode {
               ap.field_e.activeInside = false;
             }
             if (ap.field_e.activeInside) {
-              var1 = GamePresentationHelpers.formatIndexedText(df.field_b, new String[]{var3, DualLinkNode.quickChatRecipient}, (byte) 103);
+              var1 = GamePresentationHelpers.formatIndexedText(AccountDateHelpers.field_b, new String[]{var3, DualLinkNode.quickChatRecipient}, (byte) 103);
             }
           }
           stackIn_96_0 = var1;

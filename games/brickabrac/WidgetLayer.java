@@ -332,7 +332,7 @@ abstract class WidgetLayer extends WidgetGroup {
                 }
                 ga.field_i = 12;
                 pp.field_a = -1;
-                LoadingProgressDialog.field_eb = rh.field_a;
+                LoadingProgressDialog.field_eb = CalendarMatchmakingState.field_a;
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 return;
               }

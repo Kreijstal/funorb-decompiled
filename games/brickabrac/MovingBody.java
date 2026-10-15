@@ -128,54 +128,54 @@ abstract class MovingBody extends IntrusiveNode {
         }
     }
 
-    final static int c(byte param0) {
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_18_0 = 0;
-        int stackIn_21_0 = 0;
-        int stackIn_23_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = BrickABrac.field_J ? 1 : 0;
+    final static int pollAccountDialogResult(byte obfuscationGuard) {
+        int guardCalculation = 0;
+        RuntimeException failure = null;
+        int dialogResult = 0;
+        int unusedGameFlag = 0;
+        int explicitDialogResult = 0;
+        int messageDialogResult = 0;
+        int matchedDialogPhaseResult = 0;
+        int pendingEmailResult = 0;
+        int matchedEmailPhaseResult = 0;
+        int unexpectedPhaseResult = 0;
+        RuntimeException caughtFailure = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           ResourceArchive.field_f.a(ClientException.field_e, DualLinkNode.field_r, -114, true);
           ResourceArchive.field_f.i(79);
           while (LogoRenderHelpers.pollKeyEvent((byte) 5)) {
             ResourceArchive.field_f.a(ResourceArchiveFactory.currentKeyCharacter, MeshAttributeRecord.currentKeyCode, true);
           }
-          var1_int = -30 % ((55 - param0) / 43);
+          guardCalculation = -30 % ((55 - obfuscationGuard) / 43);
           if (ch.field_b != -1) {
-            var2 = ch.field_b;
+            dialogResult = ch.field_b;
             CheckboxWidgetRenderer.a(-1, true);
-            stackIn_7_0 = var2;
-            return stackIn_7_0;
+            explicitDialogResult = dialogResult;
+            return explicitDialogResult;
           }
           if (t.field_g) {
-            stackIn_11_0 = 3;
-            return stackIn_11_0;
+            messageDialogResult = 3;
+            return messageDialogResult;
           }
           if (MusicVoice.field_l == MusicEnvelope.field_f) {
-            stackIn_15_0 = 1;
-            return stackIn_15_0;
+            matchedDialogPhaseResult = 1;
+            return matchedDialogPhaseResult;
           }
           if (!LabeledWidget.emailAvailabilityRequest.isCompleted(96)) {
-            stackIn_18_0 = 1;
-            return stackIn_18_0;
+            pendingEmailResult = 1;
+            return pendingEmailResult;
           }
           if (IntrusiveHashIterator.field_g != MusicEnvelope.field_f) {
-            stackIn_23_0 = -1;
-            return stackIn_23_0;
+            unexpectedPhaseResult = -1;
+            return unexpectedPhaseResult;
           }
-          stackIn_21_0 = 2;
-          return stackIn_21_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "vi.J(" + param0 + ')');
+          matchedEmailPhaseResult = 2;
+          return matchedEmailPhaseResult;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "vi.J(" + obfuscationGuard + ')');
         }
     }
 

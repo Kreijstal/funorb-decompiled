@@ -85,7 +85,7 @@ final class IncomingPacketHelpers {
             }
             delayMillis = MonotonicTime.packetDelayMillis;
             if (0.0 != StrongCacheEntry.packetDelayJitter) {
-              delayMillis = (int)((double)delayMillis + IterableIntrusiveHashTable.packetDelayRandom.nextGaussian() * StrongCacheEntry.packetDelayJitter);
+              delayMillis = (int)((double)delayMillis + IterableIntrusiveHashTable.packetRandom.nextGaussian() * StrongCacheEntry.packetDelayJitter);
               if (0 > delayMillis) {
                 delayMillis = 0;
               }

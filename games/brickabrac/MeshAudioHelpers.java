@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tq {
+final class MeshAudioHelpers {
     static boolean field_c;
-    static PacketBuffer field_f;
+    static PacketBuffer accountPacketScratch;
     static String field_b;
     static String field_a;
     static LevelPack field_d;
@@ -37,7 +37,7 @@ final class tq {
           MovingBody.a(blueC, xA, yC, (byte) -111, xB, greenC, greenB, xC, redA, Rasterizer2D.pixels, redB, blueA, greenA, blueB, yB, yA, redC);
           return;
         }
-        tq.a(82);
+        MeshAudioHelpers.a(82);
         if (yA < yB) {
           if (yB < yC) {
             MovingBody.a(blueA, xC, yA, (byte) -111, xB, greenA, greenB, xA, redC, Rasterizer2D.pixels, redB, blueC, greenC, blueB, yB, yC, redA);
@@ -69,7 +69,7 @@ final class tq {
         field_h = null;
         field_g = null;
         field_b = null;
-        field_f = null;
+        accountPacketScratch = null;
         if (param0 == 1024) {
           field_a = null;
           field_d = null;
@@ -87,7 +87,7 @@ final class tq {
     }
 
     static {
-        field_f = new PacketBuffer(256);
+        accountPacketScratch = new PacketBuffer(256);
         field_b = "Quick Chat lobby";
         field_g = "Offensive account name";
         field_a = "Please remove <%0> from your friend list first.";

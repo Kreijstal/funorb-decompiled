@@ -10,7 +10,7 @@ final class MusicEnvelope {
     int decayRate;
     int field_b;
     int vibratoDepth;
-    static tq field_f;
+    static MeshAudioHelpers field_f;
     byte[] volumeEnvelope;
     static String field_i;
     int field_k;
@@ -325,7 +325,7 @@ final class MusicEnvelope {
 
     static {
         field_l = "The following settings need to be changed:  ";
-        field_f = new tq();
+        field_f = new MeshAudioHelpers();
         field_i = "Please enter your date of birth to enable chat:";
     }
 }

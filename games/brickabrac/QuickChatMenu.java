@@ -1338,7 +1338,7 @@ final class QuickChatMenu extends UiComponent {
           }
           var2Lifetime154 = gr.a(!param0, "explain_ball_charge");
           if (null != var2Lifetime154) {
-            rh.field_a = MenuButton.a(var2Lifetime154, (byte) 126);
+            CalendarMatchmakingState.field_a = MenuButton.a(var2Lifetime154, (byte) 126);
           }
           var2Lifetime155 = gr.a(true, "explain_hearts");
           if (null != var2Lifetime155) {

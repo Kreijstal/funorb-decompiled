@@ -12,16 +12,16 @@ final class DateFieldsWidget extends DateInputWidget {
 
     final void setBounds(int height, int x, int y, byte obfuscationGuard, int width) {
         super.setBounds(height, x, y, (byte) -119, width);
-        int var6 = -130 + width >> 1;
+        int fieldStartX = -130 + width >> 1;
         if (!this.monthFirst) {
-          this.dayField.setBounds(height, var6, 0, (byte) -119, 25);
-          this.monthField.setBounds(height, var6 + 45, 0, (byte) -119, 25);
-          this.yearField.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
+          this.dayField.setBounds(height, fieldStartX, 0, (byte) -119, 25);
+          this.monthField.setBounds(height, fieldStartX + 45, 0, (byte) -119, 25);
+          this.yearField.setBounds(height, 90 + fieldStartX, 0, obfuscationGuard, 40);
           return;
         }
-        this.monthField.setBounds(height, var6, 0, (byte) -119, 25);
-        this.dayField.setBounds(height, 45 + var6, 0, (byte) -119, 25);
-        this.yearField.setBounds(height, 90 + var6, 0, obfuscationGuard, 40);
+        this.monthField.setBounds(height, fieldStartX, 0, (byte) -119, 25);
+        this.dayField.setBounds(height, 45 + fieldStartX, 0, (byte) -119, 25);
+        this.yearField.setBounds(height, 90 + fieldStartX, 0, obfuscationGuard, 40);
     }
 
     final String getTooltip(int obfuscationGuard) {
@@ -54,18 +54,18 @@ final class DateFieldsWidget extends DateInputWidget {
     }
 
     final int getYear(int obfuscationGuard) {
-        NumberFormatException var2 = null;
-        int stackIn_3_0 = 0;
-        Throwable decompiledCaughtException = null;
+        NumberFormatException ignoredInvalidNumber = null;
+        int parsedYear = 0;
+        Throwable caughtFailure = null;
         if (obfuscationGuard != 5390) {
           this.monthField = (TextFieldWidget) null;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.yearField.text);
-          return stackIn_3_0;
-        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          parsedYear = Integer.parseInt(this.yearField.text);
+          return parsedYear;
+        } catch (java.lang.NumberFormatException caughtNumberFailure) {
+          caughtFailure = caughtNumberFailure;
+          ignoredInvalidNumber = (NumberFormatException) (Object) caughtFailure;
           return -1;
         }
     }
@@ -243,7 +243,7 @@ final class DateFieldsWidget extends DateInputWidget {
         }
         ap.field_b.tabs.processTabPresses(0);
         if (HighscorePackSelector.field_k.pressedButton != 0) {
-          tq.field_c = true;
+          MeshAudioHelpers.field_c = true;
         }
         if (gj.field_b.pressedButton != 0) {
           if (ea.field_g) {
@@ -762,35 +762,35 @@ final class DateFieldsWidget extends DateInputWidget {
     }
 
     final int getDay(byte obfuscationGuard) {
-        NumberFormatException var2 = null;
-        int stackIn_3_0 = 0;
-        Throwable decompiledCaughtException = null;
+        NumberFormatException ignoredInvalidNumber = null;
+        int parsedDay = 0;
+        Throwable caughtFailure = null;
         if (obfuscationGuard > -79) {
           this.monthFirst = true;
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.dayField.text);
-          return stackIn_3_0;
-        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          parsedDay = Integer.parseInt(this.dayField.text);
+          return parsedDay;
+        } catch (java.lang.NumberFormatException caughtNumberFailure) {
+          caughtFailure = caughtNumberFailure;
+          ignoredInvalidNumber = (NumberFormatException) (Object) caughtFailure;
           return -1;
         }
     }
 
     final int getMonthIndex(byte obfuscationGuard) {
-        NumberFormatException var2 = null;
-        int stackIn_3_0 = 0;
-        Throwable decompiledCaughtException = null;
+        NumberFormatException ignoredInvalidNumber = null;
+        int parsedMonthIndex = 0;
+        Throwable caughtFailure = null;
         try {
           if (obfuscationGuard != -117) {
             field_N = (String) null;
           }
-          stackIn_3_0 = Integer.parseInt(this.monthField.text) - 1;
-          return stackIn_3_0;
-        } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (NumberFormatException) (Object) decompiledCaughtException;
+          parsedMonthIndex = Integer.parseInt(this.monthField.text) - 1;
+          return parsedMonthIndex;
+        } catch (java.lang.NumberFormatException caughtNumberFailure) {
+          caughtFailure = caughtNumberFailure;
+          ignoredInvalidNumber = (NumberFormatException) (Object) caughtFailure;
           return -1;
         }
     }

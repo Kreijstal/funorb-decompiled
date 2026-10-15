@@ -64,7 +64,7 @@ final class hd {
         QuickChatHelpDialog.field_Sb = true;
         ValidationIconWidget.field_N = true;
         wc.field_b = true;
-        GrowableIntList.field_i = un.field_e;
+        GrowableIntList.field_i = CalendarRankingHelpers.field_e;
     }
 
     static {

@@ -60,7 +60,7 @@ final class InstructionsScreen extends MenuScreen {
           }
           if (action == 0 &&
             ArchiveFetchClient.fullscreenDialogKind == 2) {
-            elapsedMillis = MonotonicTime.nowMillis(false) - un.fullscreenConfirmationStartMillis;
+            elapsedMillis = MonotonicTime.nowMillis(false) - CalendarRankingHelpers.fullscreenConfirmationStartMillis;
             secondsRemaining = (int)((-elapsedMillis + 10999L) / 1000L);
             if (secondsRemaining <= 0) {
               FullscreenDialogHelpers.buildFullscreenDialog(true, 5, (byte) 104);
@@ -282,7 +282,7 @@ final class InstructionsScreen extends MenuScreen {
         if (this.pageIndex != 0) {
           PasswordFieldRenderer.field_D.setInlineSprites(SingleChildWidget.field_C, nd.field_f);
         } else {
-          PasswordFieldRenderer.field_D.setInlineSprites(un.field_e, SocialTabbedPanel.field_f);
+          PasswordFieldRenderer.field_D.setInlineSprites(CalendarRankingHelpers.field_e, SocialTabbedPanel.field_f);
         }
         var2 = PasswordFieldRenderer.field_D.wrapText(TextChoiceDialogStyles.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
         var3 = 145 - (-ConditionalTextValue.field_j - 4);

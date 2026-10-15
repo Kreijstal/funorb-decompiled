@@ -105,7 +105,7 @@ final class UnderwaterBackground extends BackgroundScene {
         packet.position = packet.position + 1;
         int payloadStart = packet.position;
         packet.writeByte(6, 2);
-        packet.writeBytes(rh.matchmakingChoiceMask, obfuscationGuard - 99, 0, rh.matchmakingChoiceMask.length);
+        packet.writeBytes(CalendarMatchmakingState.matchmakingChoiceMask, obfuscationGuard - 99, 0, CalendarMatchmakingState.matchmakingChoiceMask.length);
         packet.writeByte(-125, LinkWidgetRenderer.matchmakingOptionByteOne);
         packet.writeByte(obfuscationGuard ^ -12, ResourceArchive.matchmakingOptionByteTwo);
         if (obfuscationGuard == 98) {

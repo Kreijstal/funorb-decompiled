@@ -402,9 +402,9 @@ public final class BrickABrac extends InteractiveGameClient {
           for (var10 = 0; var10 < playerNames.length; var10++) {
             seedWords[var10] = matchRandom.nextInt(105);
           }
-          levelOrder = kk.createIndexOrder(false, tq.field_d.levelCount, matchRandom);
+          levelOrder = kk.createIndexOrder(false, MeshAudioHelpers.field_d.levelCount, matchRandom);
           repeatMode = packet.readByte(true);
-          configuration = new LevelSequence(tq.field_d, levelOrder, repeatMode);
+          configuration = new LevelSequence(MeshAudioHelpers.field_d, levelOrder, repeatMode);
           backgroundSelector = matchRandom.nextBoundedInt(-37880252, 11);
           TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(backgroundSelector, (byte) 19);
           characterOrder = LobbyPlayer.createCharacterOrder(matchRandom, false);
@@ -583,7 +583,7 @@ public final class BrickABrac extends InteractiveGameClient {
         jd.a(0);
         wc.a(100);
         ch.a(20623);
-        df.a((byte) 108);
+        AccountDateHelpers.a((byte) 108);
         TextChoiceDialogStyles.a(-21727);
         SocialTabbedPanel.a(true);
         hm.a(8);
@@ -619,7 +619,7 @@ public final class BrickABrac extends InteractiveGameClient {
         IntrusiveNode.a(true);
         SpriteGeometry.f(2);
         DualLinkNode.a(-2);
-        un.a(!obfuscationGuard ? true : false);
+        CalendarRankingHelpers.a(!obfuscationGuard ? true : false);
         MidiSynthesizer.c(-1);
         SoundCache.a((byte) -117);
         RectangleBody.d((byte) -106);
@@ -694,7 +694,7 @@ public final class BrickABrac extends InteractiveGameClient {
         ClientResourceHelpers.b(31583);
         ok.b(-116);
         BirthDateEntryPanel.d(false);
-        rh.a(121);
+        CalendarMatchmakingState.a(121);
         IndexedSpriteGeometry.b(31797);
         ArcticBackground.d((byte) -31);
         ChocolateBackground.d((byte) -61);
@@ -879,7 +879,7 @@ public final class BrickABrac extends InteractiveGameClient {
         AchievementMaskRequest.a(28391);
         AchievementSubmission.a(105);
         TranslucentNineSliceFrame.c(5);
-        tq.a(1024);
+        MeshAudioHelpers.a(1024);
         AccountResponse.a((byte) 83);
         fa.a((byte) -102);
         FireworkBurst.a(0);

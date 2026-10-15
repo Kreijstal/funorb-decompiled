@@ -125,7 +125,7 @@ final class OutgoingPacketHelpers {
             nowMillis = MonotonicTime.nowMillis(false);
             delayMillis = TabbedPane.outgoingDelayMillis;
             if (HuffmanCodec.outgoingDelayJitterMillis != 0.0) {
-              delayMillis = (int)((double)delayMillis + IterableIntrusiveHashTable.packetDelayRandom.nextGaussian() * HuffmanCodec.outgoingDelayJitterMillis);
+              delayMillis = (int)((double)delayMillis + IterableIntrusiveHashTable.packetRandom.nextGaussian() * HuffmanCodec.outgoingDelayJitterMillis);
               if (0 > delayMillis) {
                 delayMillis = 0;
               }

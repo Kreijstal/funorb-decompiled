@@ -190,7 +190,7 @@ final class LevelList {
         int clientBranchFlag;
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         MovingBody.a((byte) 70, this.viewport.x + this.viewport.width, this.viewport.x, this.viewport.y, this.viewport.y + this.viewport.height);
-        levelIndex = df.divideFloorPositive(this.rowSpacing, (byte) 15, this.scrollOffset - this.rowGap);
+        levelIndex = AccountDateHelpers.divideFloorPositive(this.rowSpacing, (byte) 15, this.scrollOffset - this.rowGap);
         if (obfuscationGuard != 28) {
           return;
         }
@@ -218,7 +218,7 @@ final class LevelList {
 
     final boolean handleNavigationKey(int obfuscationGuard, int keyCode, int characterCode) {
         int centerLevelIndex;
-        centerLevelIndex = df.divideFloorPositive(this.rowHeight, (byte) 15, this.scrollOffset - this.rowGap) + this.viewport.height / (2 * this.rowSpacing);
+        centerLevelIndex = AccountDateHelpers.divideFloorPositive(this.rowHeight, (byte) 15, this.scrollOffset - this.rowGap) + this.viewport.height / (2 * this.rowSpacing);
         if (obfuscationGuard != -28088) {
           this.contentHeight = -121;
         }
@@ -273,7 +273,7 @@ final class LevelList {
           if (!this.keyboardSelection ||
             MusicPatch.pointerX != this.lastPointerX ||
             this.lastPointerY != ResourcePreparationEntry.pointerY) {
-            this.selectedLevelIndex = df.divideFloorPositive(this.rowSpacing, (byte) 15, ResourcePreparationEntry.pointerY - (this.viewport.y - (-this.rowGap + this.scrollOffset)));
+            this.selectedLevelIndex = AccountDateHelpers.divideFloorPositive(this.rowSpacing, (byte) 15, ResourcePreparationEntry.pointerY - (this.viewport.y - (-this.rowGap + this.scrollOffset)));
             if (this.selectedLevelIndex < 0) {
               this.selectedLevelIndex = 0;
             }

@@ -6,7 +6,7 @@ import java.util.*;
 final class IterableIntrusiveHashTable implements Iterable {
     static boolean receivedChatSystem;
     private IntrusiveNode lookupCursor;
-    static Random packetDelayRandom;
+    static Random packetRandom;
     static String field_g;
     IntrusiveNode[] buckets;
     int bucketCount;
@@ -20,10 +20,10 @@ final class IterableIntrusiveHashTable implements Iterable {
         if (param0 != 24968) {
           MusicTrack var2 = (MusicTrack) null;
           IterableIntrusiveHashTable.a(-14, true, (MusicTrack) null, -51, -100, true);
-          packetDelayRandom = null;
+          packetRandom = null;
           return;
         }
-        packetDelayRandom = null;
+        packetRandom = null;
     }
 
     final IntrusiveNode get(long key, int obfuscationGuard) {
@@ -198,6 +198,6 @@ final class IterableIntrusiveHashTable implements Iterable {
 
     static {
         field_g = "Friends";
-        packetDelayRandom = new Random();
+        packetRandom = new Random();
     }
 }

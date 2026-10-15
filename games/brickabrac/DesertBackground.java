@@ -198,7 +198,7 @@ final class DesertBackground extends BackgroundScene {
     final static void drawTextChoiceDialog(int obfuscationGuard) {
         int contentWidth = ArchiveSourceManager.getTextChoiceContentWidth((byte) -53);
         int contentHeight = ba.getTextChoiceContentHeight(true);
-        GameTransportActions.textChoiceOuterFrame.paintFrame(contentWidth + (un.textChoiceOuterPaddingX << 1), contentHeight + (Paddle.textChoiceOuterPaddingY << 1), LevelPack.textChoiceLeft - un.textChoiceOuterPaddingX, false, ContentTransitionPhase.textChoiceTop - Paddle.textChoiceOuterPaddingY);
+        GameTransportActions.textChoiceOuterFrame.paintFrame(contentWidth + (CalendarRankingHelpers.textChoiceOuterPaddingX << 1), contentHeight + (Paddle.textChoiceOuterPaddingY << 1), LevelPack.textChoiceLeft - CalendarRankingHelpers.textChoiceOuterPaddingX, false, ContentTransitionPhase.textChoiceTop - Paddle.textChoiceOuterPaddingY);
         CachedArchiveSource.drawTextChoiceLines(-16085);
         if (obfuscationGuard == 11184810) {
           return;

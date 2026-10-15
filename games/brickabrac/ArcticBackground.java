@@ -21,10 +21,10 @@ final class ArcticBackground extends BackgroundScene {
           if (!var8.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
             AccountRegistrationPanel.a(2, colorIndex, var8, -35, 23275, Brick.field_K);
             var8.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-            SpriteGeometry.a(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+            SpriteGeometry.a(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
             return;
           }
-          SpriteGeometry.a(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+          SpriteGeometry.a(var8.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
           return;
         }
         if (!this.hasSprites((byte) -111)) {
@@ -33,12 +33,12 @@ final class ArcticBackground extends BackgroundScene {
         }
         RasterCacheSurface var9 = kd.selectBackgroundSurface1280(this.sceneId, colorIndex, (byte) 107);
         if (var9.matchesCacheKeys((byte) -84, colorIndex, this.sceneId)) {
-          SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+          SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
           return;
         }
         AccountRegistrationPanel.a(2, colorIndex, var9, -35, 23275, Brick.field_K);
         var9.setCacheKeys(this.sceneId, colorIndex, (byte) 78);
-        SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, un.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
+        SpriteGeometry.a(var9.sprite, 306, destinationY, destinationX, colorIndex, scroll16, CalendarRankingHelpers.field_d, 2, LogoRenderHelpers.field_d, 1, -35);
     }
 
     final void drawPreview(byte obfuscationGuard, int colorIndex, int destinationX, int destinationY) {
@@ -167,7 +167,7 @@ final class ArcticBackground extends BackgroundScene {
           BallPulseEffect.arcticMidSprite = pl.loadRgbSpriteByName("arctic", "arctic_mid", (byte) -79, AchievementIcon.backgroundSpriteArchive);
           LoginPanel.arcticFarSprite = pl.loadRgbSpriteByName("arctic", "arctic_far", (byte) 112, AchievementIcon.backgroundSpriteArchive);
           WidgetPaintStyle.arcticSmallSprite = pl.loadRgbSpriteByName("arctic", "arctic_small", (byte) -44, AchievementIcon.backgroundSpriteArchive);
-          un.field_d = jh.a(0, ResourcePreparationQueue.arcticNearSprite);
+          CalendarRankingHelpers.field_d = jh.a(0, ResourcePreparationQueue.arcticNearSprite);
           LogoRenderHelpers.field_d = jh.a(0, BallPulseEffect.arcticMidSprite);
           Brick.field_K = jh.a(0, LoginPanel.arcticFarSprite);
           ObjectHistoryBuffer.arcticCapsSprites[0] = ActivityIndicatorWidget.loadRgbSpritesByName("arctic", AchievementIcon.backgroundSpriteArchive, "arctic_caps", 2);

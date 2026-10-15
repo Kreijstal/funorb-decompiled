@@ -706,7 +706,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("quickchat_lobby", (byte) 75);
                 if (null != var2) {
-                  tq.field_b = MenuButton.a(var2, (byte) 112);
+                  MeshAudioHelpers.field_b = MenuButton.a(var2, (byte) 112);
                 }
                 var2 = nk.a("message_game", (byte) 79);
                 if (var2 != null) {
@@ -894,7 +894,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("privatechat_blankarea_explanation", (byte) 122);
                 if (var2 != null) {
-                  df.field_b = MenuButton.a(var2, (byte) 105);
+                  AccountDateHelpers.field_b = MenuButton.a(var2, (byte) 105);
                 }
                 var2 = nk.a("publicchat_unavailable_ratedgame", (byte) -111);
                 if (null != var2) {
@@ -910,7 +910,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("chatviewscrolledup", (byte) -114);
                 if (var2 != null) {
-                  un.field_h = MenuButton.a(var2, (byte) 83);
+                  CalendarRankingHelpers.field_h = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = nk.a("thisisrunescapeclan", (byte) -125);
                 if (var2 != null) {
@@ -938,7 +938,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("gameopt_moreratedgames", (byte) -126);
                 if (null != var2) {
-                  tq.field_e = MenuButton.a(var2, (byte) 119);
+                  MeshAudioHelpers.field_e = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("gameopt_needrating", (byte) -113);
                 if (var2 != null) {
@@ -1132,7 +1132,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("rule_1_3", (byte) -114);
                 if (var2 != null) {
-                  tq.field_g = MenuButton.a(var2, (byte) 83);
+                  MeshAudioHelpers.field_g = MenuButton.a(var2, (byte) 83);
                 }
                 var2 = nk.a("rule_1_4", (byte) -4);
                 if (null != var2) {
@@ -1832,7 +1832,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("unable_to_add_ignore", (byte) -110);
                 if (var2 != null) {
-                  df.field_c = MenuButton.a(var2, (byte) 99);
+                  AccountDateHelpers.field_c = MenuButton.a(var2, (byte) 99);
                 }
                 var2 = nk.a("unable_to_delete_friend", (byte) 35);
                 if (null != var2) {
@@ -1872,7 +1872,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("removefriendfirst", (byte) -111);
                 if (var2 != null) {
-                  tq.field_a = MenuButton.a(var2, (byte) 93);
+                  MeshAudioHelpers.field_a = MenuButton.a(var2, (byte) 93);
                 }
                 var2 = nk.a("enterfriend_add", (byte) -12);
                 if (null != var2) {
@@ -2844,7 +2844,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("fs_unavailable_try_signed_applet", (byte) -108);
                 if (null != var2) {
-                  df.field_d = MenuButton.a(var2, (byte) 76);
+                  AccountDateHelpers.field_d = MenuButton.a(var2, (byte) 76);
                 }
                 var2 = nk.a("fs_focus", (byte) -106);
                 if (null != var2) {
@@ -3060,31 +3060,31 @@ final class ContextActionController {
                 }
                 var2 = nk.a("mustlogin4,1", (byte) -110);
                 if (null != var2) {
-                  un.field_c[1] = MenuButton.a(var2, (byte) 86);
+                  CalendarRankingHelpers.field_c[1] = MenuButton.a(var2, (byte) 86);
                 }
                 var2 = nk.a("mustlogin4,2", (byte) 66);
                 if (null != var2) {
-                  un.field_c[2] = MenuButton.a(var2, (byte) 96);
+                  CalendarRankingHelpers.field_c[2] = MenuButton.a(var2, (byte) 96);
                 }
                 var2 = nk.a("mustlogin4,3", (byte) -108);
                 if (var2 != null) {
-                  un.field_c[3] = MenuButton.a(var2, (byte) 124);
+                  CalendarRankingHelpers.field_c[3] = MenuButton.a(var2, (byte) 124);
                 }
                 var2 = nk.a("mustlogin4,4", (byte) -110);
                 if (var2 != null) {
-                  un.field_c[4] = MenuButton.a(var2, (byte) 100);
+                  CalendarRankingHelpers.field_c[4] = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("mustlogin4,5", (byte) -123);
                 if (null != var2) {
-                  un.field_c[5] = MenuButton.a(var2, (byte) 100);
+                  CalendarRankingHelpers.field_c[5] = MenuButton.a(var2, (byte) 100);
                 }
                 var2 = nk.a("mustlogin4,6", (byte) -122);
                 if (null != var2) {
-                  un.field_c[6] = MenuButton.a(var2, (byte) 98);
+                  CalendarRankingHelpers.field_c[6] = MenuButton.a(var2, (byte) 98);
                 }
                 var2 = nk.a("mustlogin4,7", (byte) 96);
                 if (var2 != null) {
-                  un.field_c[7] = MenuButton.a(var2, (byte) 95);
+                  CalendarRankingHelpers.field_c[7] = MenuButton.a(var2, (byte) 95);
                 }
                 var2 = nk.a("mustlogin_notloggedin", (byte) -119);
                 if (null != var2) {

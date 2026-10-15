@@ -79,7 +79,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
           TableNameEntry.a((byte) 68, var2, LegacyUtf8Decoder.a((byte) -81));
           return;
         }
-        if (!un.field_f) {
+        if (!CalendarRankingHelpers.field_f) {
           QuickChatCategoryDefinition.a(true, var2);
           return;
         }
@@ -426,12 +426,12 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         }
         boolean decompiledFrameRemainder0 = true;
         this.dispatchIncomingPackets(true);
-        if (!un.field_f) {
+        if (!CalendarRankingHelpers.field_f) {
           MouseWheelSource.a(GameplayAudioEvent.mouseWheelDelta, (byte) 112);
           decompiledFrameRemainder0 = !(!AchievementMaskRequest.uiLifecycle.pollUiBootstrap((byte) -54));
           if (decompiledFrameRemainder0) {
             AchievementMaskRequest.uiLifecycle.initializeUi(false);
-            un.field_f = true;
+            CalendarRankingHelpers.field_f = true;
             decompiledFrameRemainder0 = (var4 != 0);
           }
         }
@@ -457,7 +457,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
                 break;
               }
             } else {
-              df.submitAchievement(var5, 4, -161);
+              AccountDateHelpers.submitAchievement(var5, 4, -161);
             }
           } while (var4 == 0);
         }

@@ -8,7 +8,7 @@ final class IntrusiveHashIterator implements Iterator {
     static UiComponent field_a;
     private IterableIntrusiveHashTable table;
     private int bucketIndex;
-    static tq field_g;
+    static MeshAudioHelpers field_g;
     private IntrusiveNode nextNode;
     private IntrusiveNode lastReturned;
     static UiComponent[] field_i;
@@ -79,7 +79,7 @@ final class IntrusiveHashIterator implements Iterator {
     final static boolean a(boolean param0) {
         boolean stackIn_6_0 = false;
         if (param0) {
-          field_g = (tq) null;
+          field_g = (MeshAudioHelpers) null;
         }
         stackIn_6_0 = (null != WhirlpoolHasher.gameTransport) && (MenuButton.loggedInConnection == GameConnectionHelpers.connectionPhase);
         return stackIn_6_0;

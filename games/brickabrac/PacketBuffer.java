@@ -185,7 +185,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.data[fieldTemp$0] != 0);
         var3 = terminatorAdjustment + (this.position - var2);
         if (var3 != 0) {
-          return df.decodeCp1252(var3, -113, this.data, var2);
+          return AccountDateHelpers.decodeCp1252(var3, -113, this.data, var2);
         }
         return "";
     }
@@ -758,7 +758,7 @@ class PacketBuffer extends IntrusiveNode {
         if (0 == var4) {
           return "";
         }
-        return df.decodeCp1252(var4, 34, this.data, var3);
+        return AccountDateHelpers.decodeCp1252(var4, 34, this.data, var3);
     }
 
     final boolean verifyCrc32(byte obfuscationGuard) {

@@ -40,7 +40,7 @@ final class BirthDateEntryPanel extends ArrayWidgetGroup implements WidgetAction
           return;
         }
         try {
-          df.a(this.dateFields.getYear(5390), (byte) 103, this.dateFields.getDay((byte) -125), this.dateFields.getMonthIndex((byte) -117));
+          AccountDateHelpers.sendBirthDate(this.dateFields.getYear(5390), (byte) 103, this.dateFields.getDay((byte) -125), this.dateFields.getMonthIndex((byte) -117));
           if (obfuscationGuard >= -22) {
             BirthDateEntryPanel.d(true);
           }

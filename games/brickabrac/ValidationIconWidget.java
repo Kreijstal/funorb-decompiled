@@ -32,14 +32,14 @@ final class ValidationIconWidget extends FocusableWidget {
         if (var8 != ConditionalTextValue.validationDebouncing &&
           SaveResultsPromptScreen.validationPending != var8) {
           if (AccountMessageDialog.validationInvalid == var8) {
-            var13 = df.field_a[2];
+            var13 = AccountDateHelpers.field_a[2];
             var13.f(-(var13.width >> 1) + var5, -(var13.height >> 1) + var6, 256);
           } else if (DualLinkIterator.validationValid == var8) {
-            var14 = df.field_a[1];
+            var14 = AccountDateHelpers.field_a[1];
             var14.f(var5 - (var14.width >> 1), -(var14.height >> 1) + var6, 256);
           }
         } else {
-          var12 = df.field_a[0];
+          var12 = AccountDateHelpers.field_a[0];
           var9 = var12.canvasWidth << 1;
           var10 = var12.canvasHeight << 1;
           if (IntrusiveHashIterator.field_c != null &&
@@ -139,7 +139,7 @@ final class ValidationIconWidget extends FocusableWidget {
             }
             DualLinkNode.prepareRankingScratch((byte) 75, recordCount, rowLimit);
             for (recordIndex = 0; recordCount > recordIndex; recordIndex++) {
-              un.decodeRankingStatistics((byte) -122, packet);
+              CalendarRankingHelpers.decodeRankingStatistics((byte) -122, packet);
               if (recordIndex == 0) {
                 request.localDraws = fh.decodedRankingDraws;
                 request.localRating = SocialTabbedPanel.decodedRankingRating;
@@ -254,22 +254,22 @@ final class ValidationIconWidget extends FocusableWidget {
           }
           if (GameConnectionHelpers.connectionPhase == BitPacketBuffer.readyToSendHandshake) {
             TextFieldValidator.outgoingPackets.position = 0;
-            AchievementBrowserScreen.field_r = null;
+            AchievementBrowserScreen.pendingEmailAvailabilityReply = null;
             if (param0 != null) {
               var9 = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              tq.field_f.position = 0;
-              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
-              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
-              tq.field_f.writePrefixedCp1252String(param6 ^ 4, var14);
-              tq.field_f.writePrefixedCp1252String(0, var8);
+              MeshAudioHelpers.accountPacketScratch.position = 0;
+              MeshAudioHelpers.accountPacketScratch.writeInt(IterableIntrusiveHashTable.packetRandom.nextInt(), (byte) -79);
+              MeshAudioHelpers.accountPacketScratch.writeInt(IterableIntrusiveHashTable.packetRandom.nextInt(), (byte) -79);
+              MeshAudioHelpers.accountPacketScratch.writePrefixedCp1252String(param6 ^ 4, var14);
+              MeshAudioHelpers.accountPacketScratch.writePrefixedCp1252String(0, var8);
               var15 = (CharSequence) ((Object) param0);
-              tq.field_f.writePrefixedCp1252String(0, AccountIntroductionPanel.a(var15, -58));
-              tq.field_f.writeShort((byte) 113, param4);
-              tq.field_f.writeByte(89, param2);
-              tq.field_f.writeByte(127, var9);
+              MeshAudioHelpers.accountPacketScratch.writePrefixedCp1252String(0, AccountIntroductionPanel.a(var15, -58));
+              MeshAudioHelpers.accountPacketScratch.writeShort((byte) 113, param4);
+              MeshAudioHelpers.accountPacketScratch.writeByte(89, param2);
+              MeshAudioHelpers.accountPacketScratch.writeByte(127, var9);
               TextFieldValidator.outgoingPackets.writeByte(53, 18);
               TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 2;
               var10 = TextFieldValidator.outgoingPackets.position;
@@ -278,13 +278,13 @@ final class ValidationIconWidget extends FocusableWidget {
                 var11_ref_String = "";
               }
               TextFieldValidator.outgoingPackets.writeCp1252String(var11_ref_String, -1);
-              LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
+              LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, MeshAudioHelpers.accountPacketScratch, Ball.accountRsaExponent, (byte) -72, WeightedLruCache.accountRsaModulus);
               TextFieldValidator.outgoingPackets.backfillShortLength(-var10 + TextFieldValidator.outgoingPackets.position, 255);
             } else {
-              tq.field_f.position = 0;
-              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
-              tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
-              stackIn_11_0 = tq.field_f;
+              MeshAudioHelpers.accountPacketScratch.position = 0;
+              MeshAudioHelpers.accountPacketScratch.writeInt(IterableIntrusiveHashTable.packetRandom.nextInt(), (byte) -79);
+              MeshAudioHelpers.accountPacketScratch.writeInt(IterableIntrusiveHashTable.packetRandom.nextInt(), (byte) -79);
+              stackIn_11_0 = MeshAudioHelpers.accountPacketScratch;
               stackIn_11_1 = 0;
               if (!param3.isIncluded((byte) 116)) {
                 stackIn_12_2 = "";
@@ -292,7 +292,7 @@ final class ValidationIconWidget extends FocusableWidget {
                 stackIn_12_2 = var14;
               }
               ((PacketBuffer) (Object) stackIn_11_0).writePrefixedCp1252String(stackIn_11_1, stackIn_12_2);
-              stackIn_14_0 = tq.field_f;
+              stackIn_14_0 = MeshAudioHelpers.accountPacketScratch;
               stackIn_14_1 = param6 - 4;
               if (!param5.isIncluded((byte) 120)) {
                 stackIn_15_2 = "";
@@ -303,7 +303,7 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.writeByte(-10, 16);
               TextFieldValidator.outgoingPackets.position = TextFieldValidator.outgoingPackets.position + 1;
               var9 = TextFieldValidator.outgoingPackets.position;
-              LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, tq.field_f, Ball.field_F, (byte) -72, WeightedLruCache.field_g);
+              LevelDecoder.writeEncryptedPacketContents(TextFieldValidator.outgoingPackets, MeshAudioHelpers.accountPacketScratch, Ball.accountRsaExponent, (byte) -72, WeightedLruCache.accountRsaModulus);
               TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
             ActivityIndicatorWidget.flushTransportPackets(-1, 10000);
@@ -328,7 +328,7 @@ final class ValidationIconWidget extends FocusableWidget {
               }
               if (var9Lifetime1 == 99) {
                 PacketReceiveHelpers.ensureGamePacketBytes(20, Widget.d((byte) -59));
-                AchievementBrowserScreen.field_r = new Boolean(kd.a(-2, LogoRenderHelpers.incomingPackets));
+                AchievementBrowserScreen.pendingEmailAvailabilityReply = new Boolean(kd.a(-2, LogoRenderHelpers.incomingPackets));
                 LogoRenderHelpers.incomingPackets.position = 0;
               } else {
                 IntrusiveHashTable.currentPacketOpcode = var9Lifetime1;

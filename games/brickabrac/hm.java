@@ -37,7 +37,7 @@ final class hm {
           BufferedFile.gameSettingBitWidths = settingBitWidths;
           RankingsRequest.gameSettingCount = settingBitWidths.length;
           fh.pendingGameOptionsReceived = false;
-          rh.matchmakingChoiceMask = new byte[(wc.field_e + 7) / 8];
+          CalendarMatchmakingState.matchmakingChoiceMask = new byte[(wc.field_e + 7) / 8];
           ClientResourceHelpers.currentLobbyGame = null;
           IncomingPacketHelpers.pendingLobbyGame = null;
           var10_int = 0;

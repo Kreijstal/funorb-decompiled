@@ -6,7 +6,7 @@ final class Ball extends CircleBody {
     static UiComponent field_A;
     static String field_H;
     int brickBounceCount;
-    static java.math.BigInteger field_F;
+    static java.math.BigInteger accountRsaExponent;
     static RgbSprite[] field_G;
     private int launchAngle;
     static RgbSprite[] field_K;
@@ -85,7 +85,7 @@ final class Ball extends CircleBody {
     }
 
     public static void c(int param0) {
-        field_F = null;
+        accountRsaExponent = null;
         activeBoardMaskSprite = null;
         field_G = null;
         field_x = null;
@@ -96,7 +96,7 @@ final class Ball extends CircleBody {
           field_K = null;
           return;
         }
-        field_F = (java.math.BigInteger) null;
+        accountRsaExponent = (java.math.BigInteger) null;
         field_K = null;
     }
 
@@ -220,6 +220,6 @@ final class Ball extends CircleBody {
     static {
         field_x = "Unpacking levels";
         field_H = "To server list";
-        field_F = new java.math.BigInteger("65537");
+        accountRsaExponent = new java.math.BigInteger("65537");
     }
 }

@@ -80,7 +80,7 @@ final class ScrollPaneWithFooter extends UiComponent {
               var5.contextMenu.addAction(var6, 14, (byte) 84);
             }
             var7 = GameRenderAudioHelpers.contextActions;
-            var8 = tq.field_b;
+            var8 = MeshAudioHelpers.field_b;
             var7.contextMenu.addAction(var8, 20, (byte) 118);
           }
           if (param1.channel == 1 &&

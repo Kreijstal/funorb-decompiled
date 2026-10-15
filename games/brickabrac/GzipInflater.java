@@ -43,7 +43,7 @@ final class GzipInflater {
             LogoRenderHelpers.incomingPackets = new BitPacketBuffer(param4);
             TextFieldValidator.outgoingPackets = new BitPacketBuffer(param5);
             ContentTransitionLayer.field_ob = param6;
-            tq.field_h = param1;
+            MeshAudioHelpers.field_h = param1;
             FramedMenuScreen.field_s = param8;
             ArchiveIndex.field_e = param0;
             FarmBackground.field_u = param2;

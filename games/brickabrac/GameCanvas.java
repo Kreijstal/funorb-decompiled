@@ -159,7 +159,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
               }
               var6 = OutgoingPacketHelpers.getChatFilter(var4_int, (byte) 18);
               SocialTabbedPanel.field_a[var4_int].sprite = ProxyAuthenticationRequiredException.field_b[var6];
-              QuickChatPhraseDefinition.field_F[var4_int].text = rh.field_e[var6];
+              QuickChatPhraseDefinition.field_F[var4_int].text = CalendarMatchmakingState.field_e[var6];
             }
           }
           if (LegacyUtf8Decoder.field_c.pressedButton != 0) {

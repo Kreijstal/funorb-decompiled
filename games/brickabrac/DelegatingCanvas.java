@@ -42,7 +42,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                   pp.field_a = -1;
                   LogoRenderHelpers.field_a = 250;
                   ga.field_i = 0;
-                  GrowableIntList.field_i = un.field_e;
+                  GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                 }
               }
             } else {
@@ -54,7 +54,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
                     pp.field_a = -1;
                     ga.field_i = 1;
                     LogoRenderHelpers.field_a = 250;
-                    GrowableIntList.field_i = un.field_e;
+                    GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                     SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                     LoadingProgressDialog.field_eb = va.field_d;
                   }
@@ -115,7 +115,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               if (0 == fieldTemp$4) {
                 SpriteGeometry.field_v = MembershipBenefitsScreen.clientTick;
                 pp.field_a = -1;
-                GrowableIntList.field_i = un.field_e;
+                GrowableIntList.field_i = CalendarRankingHelpers.field_e;
                 LoadingProgressDialog.field_eb = BrickGameLayerController.field_d;
                 LogoRenderHelpers.field_a = 250;
                 ga.field_i = 14;

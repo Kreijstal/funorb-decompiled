@@ -1015,9 +1015,9 @@ final class BrickGameLayerController implements GameLayerController {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                 CacheEntry.field_w = false;
               }
-              if (tq.field_c) {
+              if (MeshAudioHelpers.field_c) {
                 TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
-                tq.field_c = false;
+                MeshAudioHelpers.field_c = false;
               }
               return;
             }
@@ -1058,9 +1058,9 @@ final class BrickGameLayerController implements GameLayerController {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
             CacheEntry.field_w = false;
           }
-          if (tq.field_c) {
+          if (MeshAudioHelpers.field_c) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
-            tq.field_c = false;
+            MeshAudioHelpers.field_c = false;
           }
           return;
         }
@@ -1150,9 +1150,9 @@ final class BrickGameLayerController implements GameLayerController {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
             CacheEntry.field_w = false;
           }
-          if (tq.field_c) {
+          if (MeshAudioHelpers.field_c) {
             TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
-            tq.field_c = false;
+            MeshAudioHelpers.field_c = false;
           }
           return;
         }
@@ -1249,9 +1249,9 @@ final class BrickGameLayerController implements GameLayerController {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   CacheEntry.field_w = false;
                 }
-                if (tq.field_c) {
+                if (MeshAudioHelpers.field_c) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
-                  tq.field_c = false;
+                  MeshAudioHelpers.field_c = false;
                 }
                 return;
               }
@@ -1314,9 +1314,9 @@ final class BrickGameLayerController implements GameLayerController {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
                   CacheEntry.field_w = false;
                 }
-                if (tq.field_c) {
+                if (MeshAudioHelpers.field_c) {
                   TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
-                  tq.field_c = false;
+                  MeshAudioHelpers.field_c = false;
                 }
                 return;
               }
@@ -1351,11 +1351,11 @@ final class BrickGameLayerController implements GameLayerController {
           TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 64);
           CacheEntry.field_w = false;
         }
-        if (!tq.field_c) {
+        if (!MeshAudioHelpers.field_c) {
           return;
         }
         TextFieldValidator.outgoingPackets.writeCipheredOpcode(-13413, 10);
-        tq.field_c = false;
+        MeshAudioHelpers.field_c = false;
     }
 
     public static void a(byte param0) {
@@ -1392,8 +1392,8 @@ final class BrickGameLayerController implements GameLayerController {
           var10 = new PacketBuffer(param0.takeFileByName(121, "hotseat", ""));
           ValidationStatus.field_b = LevelPackLoader.loadLevelPack((byte) -115, param0, var10, var3_int, -1, -1, -1);
           var11 = new PacketBuffer(param0.takeFileByName(100, "multiplayer", ""));
-          tq.field_d = LevelPackLoader.loadLevelPack((byte) -97, param0, var11, var3_int, -1, -1, -1);
-          tq.field_d.appendLevelData(ValidationStatus.field_b, false);
+          MeshAudioHelpers.field_d = LevelPackLoader.loadLevelPack((byte) -97, param0, var11, var3_int, -1, -1, -1);
+          MeshAudioHelpers.field_d.appendLevelData(ValidationStatus.field_b, false);
           var3_int = param1.getGroupId("", false);
           var7 = new PacketBuffer(param1.takeFileByName(-88, "single", ""));
           DateFieldsWidget.field_L[1] = LevelPackLoader.loadLevelPack((byte) 94, param1, var7, var3_int, 1, 1, var4);

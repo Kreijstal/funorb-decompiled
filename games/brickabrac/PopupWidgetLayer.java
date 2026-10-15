@@ -89,7 +89,7 @@ abstract class PopupWidgetLayer extends WidgetLayer {
             }
             var4 = new byte[var3_int];
             packet.position = packet.position + QuickChatCategoryRegistry.textHuffman.decompress(var3_int, 0, packet.position, true, var4, packet.data);
-            var5 = df.decodeCp1252(var3_int, -110, var4, 0);
+            var5 = AccountDateHelpers.decodeCp1252(var3_int, -110, var4, 0);
             stackIn_5_0 = var5;
             return stackIn_5_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

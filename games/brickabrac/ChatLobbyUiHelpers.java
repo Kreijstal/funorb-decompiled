@@ -517,8 +517,8 @@ final class ChatLobbyUiHelpers {
               fh.pendingGameOptionsReceived = false;
             } else {
               fh.pendingGameOptionsReceived = true;
-              for (var3_int = 0; var3_int < rh.matchmakingChoiceMask.length; var3_int++) {
-                rh.matchmakingChoiceMask[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
+              for (var3_int = 0; var3_int < CalendarMatchmakingState.matchmakingChoiceMask.length; var3_int++) {
+                CalendarMatchmakingState.matchmakingChoiceMask[var3_int] = ((PacketBuffer) ((Object) packet)).readByte(true);
               }
               LinkWidgetRenderer.matchmakingOptionByteOne = ((PacketBuffer) ((Object) packet)).readUnsignedByte(255);
               ResourceArchive.matchmakingOptionByteTwo = ((PacketBuffer) ((Object) packet)).readUnsignedByte(obfuscationGuard + 222);

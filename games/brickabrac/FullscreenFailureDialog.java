@@ -74,7 +74,7 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         try {
           var3 = null;
           if (UiComponent.fullscreenUnsupported == failureKind) {
-            var3 = df.field_d;
+            var3 = AccountDateHelpers.field_d;
           } else {
             if (ch.fullscreenFocusProblem != failureKind) {
               if (failureKind == QuickChatPhraseRegistry.fullscreenTimeout) {

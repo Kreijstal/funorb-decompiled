@@ -231,7 +231,7 @@ final class WidgetLayerStack extends SingleChildWidget {
             WidgetLayerStack.a(-114, -15, 90, (byte) -109, (PlayerBoard) null, -85, -67);
           }
           if (ArchiveFetchClient.fullscreenDialogKind == 2) {
-            elapsedMillis = -un.fullscreenConfirmationStartMillis + MonotonicTime.nowMillis(false);
+            elapsedMillis = -CalendarRankingHelpers.fullscreenConfirmationStartMillis + MonotonicTime.nowMillis(false);
             secondsRemaining = (int)((-elapsedMillis + 10999L) / 1000L);
             if (0 > secondsRemaining) {
               secondsRemaining = 0;

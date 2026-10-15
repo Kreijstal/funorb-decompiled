@@ -3,7 +3,7 @@
  */
 final class StrongCacheEntry extends CacheEntry {
     private Object value;
-    static tq field_P;
+    static MeshAudioHelpers field_P;
     static String field_M;
     static NodeDeque pendingAchievementMaskRequests;
     static AccountMessageDialog field_I;
@@ -65,7 +65,7 @@ final class StrongCacheEntry extends CacheEntry {
     }
 
     static {
-        field_P = new tq();
+        field_P = new MeshAudioHelpers();
         field_E = new int[29];
         field_M = "Day";
         field_E[7] = 3;

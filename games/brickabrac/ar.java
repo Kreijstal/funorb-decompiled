@@ -118,7 +118,7 @@ final class ar {
             if (param0) {
               if (param4 == -1) {
                 for (var10 = 0; ScreenshotViewer.field_n.length > var10; var10++) {
-                  if ((rh.matchmakingChoiceMask[var10 / 8] & 1 << (var10 & 7)) != 0) {
+                  if ((CalendarMatchmakingState.matchmakingChoiceMask[var10 / 8] & 1 << (var10 & 7)) != 0) {
                     var9 = 0;
                     decompiledFrameCompleted0 = false;
                     break;

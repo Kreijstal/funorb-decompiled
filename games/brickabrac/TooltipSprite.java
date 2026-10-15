@@ -37,7 +37,7 @@ final class TooltipSprite extends IntrusiveNode {
           GameplayAudioEvent.field_l = ActivityIndicatorWidget.loadRgbSpritesByName("commonui", param3, "frame_bottom", 2);
           MusicVoice.field_n = pl.loadRgbSpriteByName("commonui", "jagex_logo_grey", (byte) -110, param3);
           ValidatedTextFieldWidget.field_U = ActivityIndicatorWidget.loadRgbSpritesByName("commonui", param3, "button", 2);
-          df.field_a = CheckboxWidgetRenderer.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
+          AccountDateHelpers.field_a = CheckboxWidgetRenderer.loadRgbSpritesByName("commonui", "validation", param3, (byte) -8);
           QuickChatMenu.field_Yb = (TextFont) ((Object) IntrusiveHashTable.a((byte) -118, "commonui", "arezzo12", param3, param0));
           ArchiveNetworkClient.field_u = (TextFont) ((Object) IntrusiveHashTable.a((byte) -108, "commonui", "arezzo14", param3, param0));
           wm.field_a = (TextFont) ((Object) IntrusiveHashTable.a((byte) -126, "commonui", "arezzo14bold", param3, param0));

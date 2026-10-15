@@ -86,7 +86,7 @@ final class DiagnosticTextLine extends IntrusiveNode {
         MatchCompleteScreen.field_E = 0;
         LoadingProgressDialog.field_eb = null;
         GameClock.field_d = 0;
-        GrowableIntList.field_i = un.field_e;
+        GrowableIntList.field_i = CalendarRankingHelpers.field_e;
         BitPacketBuffer.field_q = 0;
         AlternateNumericLoginCredentials.field_s = false;
         QuickChatHelpDialog.field_Sb = false;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class un {
+final class CalendarRankingHelpers {
     static IndexedSprite[] field_e;
     static int textChoiceOuterPaddingX;
     static String field_h;
@@ -22,17 +22,17 @@ final class un {
           field_c = null;
           return;
         }
-        un.a(true);
+        CalendarRankingHelpers.a(true);
         field_d = null;
         field_e = null;
         field_c = null;
     }
 
-    final static int a(int param0) {
-        if (param0 == 1) {
+    final static int getCurrentLocalYear(int obfuscationGuard) {
+        if (obfuscationGuard == 1) {
           return 1900 + new Date().getYear();
         }
-        un.a(false);
+        CalendarRankingHelpers.a(false);
         return 1900 + new Date().getYear();
     }
 

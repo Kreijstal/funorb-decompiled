@@ -243,8 +243,8 @@ final class JungleBackground extends BackgroundScene {
             if (var6Lifetime1 != 0) {
               var7 = BubbleDistortion.field_z;
               var8_int = 0;
-              while (rh.matchmakingChoiceMask.length > var8_int) {
-                rh.matchmakingChoiceMask[var8_int] = (byte) 0;
+              while (CalendarMatchmakingState.matchmakingChoiceMask.length > var8_int) {
+                CalendarMatchmakingState.matchmakingChoiceMask[var8_int] = (byte) 0;
                 var8_int++;
                 if (var26 != 0) {
                   decompiledFrameCompleted4 = false;
@@ -252,7 +252,7 @@ final class JungleBackground extends BackgroundScene {
                 }
               }
               if (decompiledFrameCompleted4) {
-                rh.matchmakingChoiceMask[var7 / 8] = (byte)LevelSelectScreen.d((int) rh.matchmakingChoiceMask[var7 / 8], 1 << var7 % 8);
+                CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8] = (byte)LevelSelectScreen.d((int) CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8], 1 << var7 % 8);
               }
             }
             stackIn_63_0 = (param2) ? -1 : 0;
@@ -281,11 +281,11 @@ final class JungleBackground extends BackgroundScene {
                 } else {
                   if (var6Lifetime1 == 0) {
                     if (var7 != -1) {
-                      rh.matchmakingChoiceMask[var7 / 8] = (byte)LevelResultSubmission.a((int) rh.matchmakingChoiceMask[var7 / 8], 1 << IntrusiveHashIterator.a(var7, 7));
+                      CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8] = (byte)LevelResultSubmission.a((int) CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8], 1 << IntrusiveHashIterator.a(var7, 7));
                     } else {
                       var9 = 0;
-                      while (!(var9 >= rh.matchmakingChoiceMask.length)) {
-                        rh.matchmakingChoiceMask[var9] = (byte) 0;
+                      while (!(var9 >= CalendarMatchmakingState.matchmakingChoiceMask.length)) {
+                        CalendarMatchmakingState.matchmakingChoiceMask[var9] = (byte) 0;
                         var9++;
                       }
                     }
@@ -306,7 +306,7 @@ final class JungleBackground extends BackgroundScene {
                   stackOut_97_1 = dupTemp$0.selected;
                   stackIn_105_1 = stackOut_97_1 ? 1 : 0;
                   stackIn_98_1 = stackOut_97_1;
-                  stackIn_105_2 = ~(rh.matchmakingChoiceMask[var9 / 8] & 1 << (var9 & 7));
+                  stackIn_105_2 = ~(CalendarMatchmakingState.matchmakingChoiceMask[var9 / 8] & 1 << (var9 & 7));
                   stackIn_105_3 = -1;
                   stackIn_101_0 = stackIn_105_0;
                   stackIn_101_1 = stackIn_98_1;
@@ -325,7 +325,7 @@ final class JungleBackground extends BackgroundScene {
               } else {
                 stackIn_105_0 = MatchCompleteScreen.field_A[1][1 + var7];
                 stackIn_105_1 = 0;
-                stackIn_105_2 = rh.matchmakingChoiceMask[var7 / 8];
+                stackIn_105_2 = CalendarMatchmakingState.matchmakingChoiceMask[var7 / 8];
                 stackIn_105_3 = 1 << (var7 & 7);
                 stackIn_108_0 = stackIn_105_0;
                 if (stackIn_105_1 == (stackIn_105_2 & stackIn_105_3)) {
@@ -614,7 +614,7 @@ final class JungleBackground extends BackgroundScene {
                       if (var11 != 0) {
                         var22_int = MatchResultScreen.field_v[var7][var9] - ArchiveIndex.field_s;
                         if (var22_int != 1) {
-                          var21 = GamePresentationHelpers.formatIndexedText(tq.field_e, new String[]{Integer.toString(var22_int)}, (byte) 103);
+                          var21 = GamePresentationHelpers.formatIndexedText(MeshAudioHelpers.field_e, new String[]{Integer.toString(var22_int)}, (byte) 103);
                         } else {
                           var21 = NineSliceFrame.field_a;
                         }

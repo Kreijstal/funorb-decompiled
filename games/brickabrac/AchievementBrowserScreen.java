@@ -4,7 +4,7 @@
 abstract class AchievementBrowserScreen extends MenuScreen {
     static char[] field_B;
     static int field_u;
-    static Boolean field_r;
+    static Boolean pendingEmailAvailabilityReply;
     static RgbSprite[] field_A;
     private String[] descriptionLines;
     static String[] field_s;
@@ -262,7 +262,7 @@ abstract class AchievementBrowserScreen extends MenuScreen {
           return;
         }
         constructionMidSprite = null;
-        field_r = null;
+        pendingEmailAvailabilityReply = null;
         field_s = null;
         field_B = null;
     }

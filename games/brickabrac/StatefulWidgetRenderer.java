@@ -3,7 +3,7 @@
  */
 final class StatefulWidgetRenderer extends TextWidgetRenderer {
     static RgbSprite[] jungleCentreSprites;
-    static tq field_v;
+    static MeshAudioHelpers field_v;
     private WidgetPaintStyle mergedStyle;
     private WidgetPaintStyle[] stylesByState;
     static String field_x;
@@ -259,7 +259,7 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
         var6 = BrickABrac.field_J ? 1 : 0;
         try {
           if (obfuscationGuard != -1553) {
-            field_v = (tq) null;
+            field_v = (MeshAudioHelpers) null;
           }
           var7 = this.stylesByState;
           var3 = var7;
@@ -286,6 +286,6 @@ final class StatefulWidgetRenderer extends TextWidgetRenderer {
 
     static {
         field_x = "Fullscreen play is an option available to subscribing members only. For more details see the website.";
-        field_v = new tq();
+        field_v = new MeshAudioHelpers();
     }
 }

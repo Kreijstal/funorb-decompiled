@@ -121,7 +121,7 @@ final class FullscreenDialogHelpers {
               if (AccountMessageDialog.field_ub.privilegedMode) {
                 wrappedLineCount = FarmBackground.wrapBalancedDialogText(CacheIoWorker.fullscreenDialogWrapScratch, ConditionalTextValue.fullscreenDialogWrapWidth, -63, StateIconLabel.fullscreenDialogBodyFont, LoginCredentials.field_a);
               } else {
-                wrappedLineCount = FarmBackground.wrapBalancedDialogText(CacheIoWorker.fullscreenDialogWrapScratch, ConditionalTextValue.fullscreenDialogWrapWidth, obfuscationGuard ^ -87, StateIconLabel.fullscreenDialogBodyFont, df.field_d);
+                wrappedLineCount = FarmBackground.wrapBalancedDialogText(CacheIoWorker.fullscreenDialogWrapScratch, ConditionalTextValue.fullscreenDialogWrapWidth, obfuscationGuard ^ -87, StateIconLabel.fullscreenDialogBodyFont, AccountDateHelpers.field_d);
               }
               rowCountOrMarkerIndex = 2 + wrappedLineCount;
               ValidationStatus.fullscreenDialogRows = new String[rowCountOrMarkerIndex];
@@ -262,7 +262,7 @@ final class FullscreenDialogHelpers {
               }
               suffixRowsTarget[suffixRowIndex] = suffixRowText;
             }
-            un.fullscreenConfirmationStartMillis = MonotonicTime.nowMillis(false);
+            CalendarRankingHelpers.fullscreenConfirmationStartMillis = MonotonicTime.nowMillis(false);
           }
           UiComponent.fullscreenDialogSelection.itemCount = UsernameSuggestionPanel.fullscreenDialogButtonActions.length;
           maximumTextWidth = 0;

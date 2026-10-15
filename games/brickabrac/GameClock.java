@@ -180,7 +180,7 @@ abstract class GameClock {
         kd.field_d[20] = GrowableIntList.field_n;
         kd.field_d[7] = nk.field_i;
         kd.field_d[17] = RasterCacheSurface.field_l;
-        kd.field_d[19] = tq.field_g;
+        kd.field_d[19] = MeshAudioHelpers.field_g;
         kd.field_d[param0] = ed.field_a;
         kd.field_d[11] = AchievementsScreen.field_I;
     }

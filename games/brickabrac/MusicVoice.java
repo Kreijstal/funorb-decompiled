@@ -6,7 +6,7 @@ final class MusicVoice extends IntrusiveNode {
     int portamentoDelta;
     int volumeEnvelopeProgress;
     int updateFrames;
-    static tq field_l;
+    static MeshAudioHelpers field_l;
     static RgbSprite field_n;
     int portamentoScale;
     static String field_C;
@@ -613,10 +613,10 @@ final class MusicVoice extends IntrusiveNode {
         RuntimeException caughtFailure = null;
         try {
           GameTransportActions.textChoiceOuterFrame = frame;
-          un.textChoiceOuterPaddingX = paddingX;
+          CalendarRankingHelpers.textChoiceOuterPaddingX = paddingX;
           Paddle.textChoiceOuterPaddingY = paddingY;
           if (obfuscationGuard >= -25) {
-            field_l = (tq) null;
+            field_l = (MeshAudioHelpers) null;
           }
           return;
         } catch (java.lang.RuntimeException caughtConfigurationFailure) {
@@ -706,7 +706,7 @@ final class MusicVoice extends IntrusiveNode {
           cameraXYQ14 = cameraPose[4] >> 2;
           cameraXZQ14 = cameraPose[5] >> 2;
           if (obfuscationGuard != -16283) {
-            field_l = (tq) null;
+            field_l = (MeshAudioHelpers) null;
           }
           cameraYXQ14 = cameraPose[6] >> 2;
           cameraYYQ14 = cameraPose[7] >> 2;

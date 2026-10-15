@@ -180,18 +180,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (var6 != ConditionalTextValue.validationDebouncing &&
               var6 != SaveResultsPromptScreen.validationPending) {
               if (AccountMessageDialog.validationInvalid == var6) {
-                var19 = df.field_a[2];
+                var19 = AccountDateHelpers.field_a[2];
                 var19.f(var9, var10 - (var19.height >> 1), 256);
                 return;
               }
               if (DualLinkIterator.validationValid != var6) {
                 return;
               }
-              var20 = df.field_a[1];
+              var20 = AccountDateHelpers.field_a[1];
               var20.f(var9, -(var20.height >> 1) + var10, 256);
               return;
             }
-            var21 = df.field_a[0];
+            var21 = AccountDateHelpers.field_a[0];
             var11 = var21.canvasWidth << 1;
             var12 = var21.canvasHeight << 1;
             if (this.spinnerSurface != null &&
@@ -216,18 +216,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6 != ConditionalTextValue.validationDebouncing &&
             var6 != SaveResultsPromptScreen.validationPending) {
             if (AccountMessageDialog.validationInvalid == var6) {
-              var23 = df.field_a[2];
+              var23 = AccountDateHelpers.field_a[2];
               var23.f(var9Lifetime5, var10Lifetime5 - (var23.height >> 1), 256);
               return;
             }
             if (DualLinkIterator.validationValid != var6) {
               return;
             }
-            var24 = df.field_a[1];
+            var24 = AccountDateHelpers.field_a[1];
             var24.f(var9Lifetime5, -(var24.height >> 1) + var10Lifetime5, 256);
             return;
           }
-          var25 = df.field_a[0];
+          var25 = AccountDateHelpers.field_a[0];
           var11Lifetime5 = var25.canvasWidth << 1;
           var12Lifetime5 = var25.canvasHeight << 1;
           if (this.spinnerSurface == null) {
@@ -265,18 +265,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (var6 != ConditionalTextValue.validationDebouncing &&
               var6 != SaveResultsPromptScreen.validationPending) {
               if (AccountMessageDialog.validationInvalid == var6) {
-                var28 = df.field_a[2];
+                var28 = AccountDateHelpers.field_a[2];
                 var28.f(var9Lifetime1, var10Lifetime1 - (var28.height >> 1), 256);
                 return;
               }
               if (DualLinkIterator.validationValid != var6) {
                 return;
               }
-              var29 = df.field_a[1];
+              var29 = AccountDateHelpers.field_a[1];
               var29.f(var9Lifetime1, -(var29.height >> 1) + var10Lifetime1, 256);
               return;
             }
-            var30 = df.field_a[0];
+            var30 = AccountDateHelpers.field_a[0];
             var11Lifetime1 = var30.canvasWidth << 1;
             var12Lifetime1 = var30.canvasHeight << 1;
             if (this.spinnerSurface != null &&
@@ -301,18 +301,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6 != ConditionalTextValue.validationDebouncing &&
             var6 != SaveResultsPromptScreen.validationPending) {
             if (AccountMessageDialog.validationInvalid == var6) {
-              var32 = df.field_a[2];
+              var32 = AccountDateHelpers.field_a[2];
               var32.f(var9Lifetime1Lifetime1, var10Lifetime1Lifetime1 - (var32.height >> 1), 256);
               return;
             }
             if (DualLinkIterator.validationValid != var6) {
               return;
             }
-            var33 = df.field_a[1];
+            var33 = AccountDateHelpers.field_a[1];
             var33.f(var9Lifetime1Lifetime1, -(var33.height >> 1) + var10Lifetime1Lifetime1, 256);
             return;
           }
-          var34 = df.field_a[0];
+          var34 = AccountDateHelpers.field_a[0];
           var11Lifetime1Lifetime1 = var34.canvasWidth << 1;
           var12Lifetime1Lifetime1 = var34.canvasHeight << 1;
           if (this.spinnerSurface == null) {
@@ -348,18 +348,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
             if (var6Lifetime1 != ConditionalTextValue.validationDebouncing &&
               var6Lifetime1 != SaveResultsPromptScreen.validationPending) {
               if (AccountMessageDialog.validationInvalid == var6Lifetime1) {
-                var51 = df.field_a[2];
+                var51 = AccountDateHelpers.field_a[2];
                 var51.f(var9Lifetime2, var10Lifetime2 - (var51.height >> 1), 256);
                 return;
               }
               if (DualLinkIterator.validationValid != var6Lifetime1) {
                 return;
               }
-              var52 = df.field_a[1];
+              var52 = AccountDateHelpers.field_a[1];
               var52.f(var9Lifetime2, -(var52.height >> 1) + var10Lifetime2, 256);
               return;
             }
-            var53 = df.field_a[0];
+            var53 = AccountDateHelpers.field_a[0];
             var11Lifetime2 = var53.canvasWidth << 1;
             var12Lifetime2 = var53.canvasHeight << 1;
             if (this.spinnerSurface != null &&
@@ -386,18 +386,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6Lifetime1Lifetime1 != ConditionalTextValue.validationDebouncing &&
             var6Lifetime1Lifetime1 != SaveResultsPromptScreen.validationPending) {
             if (AccountMessageDialog.validationInvalid == var6Lifetime1Lifetime1) {
-              var45 = df.field_a[2];
+              var45 = AccountDateHelpers.field_a[2];
               var45.f(var9Lifetime2Lifetime1, var10Lifetime2Lifetime1 - (var45.height >> 1), 256);
               return;
             }
             if (DualLinkIterator.validationValid != var6Lifetime1Lifetime1) {
               return;
             }
-            var46 = df.field_a[1];
+            var46 = AccountDateHelpers.field_a[1];
             var46.f(var9Lifetime2Lifetime1, -(var46.height >> 1) + var10Lifetime2Lifetime1, 256);
             return;
           }
-          var47 = df.field_a[0];
+          var47 = AccountDateHelpers.field_a[0];
           var16 = var47;
           var11Lifetime2Lifetime1 = var47.canvasWidth << 1;
           var12Lifetime2Lifetime1 = var47.canvasHeight << 1;
@@ -436,18 +436,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
           if (var6Lifetime2 != ConditionalTextValue.validationDebouncing &&
             var6Lifetime2 != SaveResultsPromptScreen.validationPending) {
             if (AccountMessageDialog.validationInvalid == var6Lifetime2) {
-              var37 = df.field_a[2];
+              var37 = AccountDateHelpers.field_a[2];
               var37.f(var9Lifetime3, var10Lifetime3 - (var37.height >> 1), 256);
               return;
             }
             if (DualLinkIterator.validationValid != var6Lifetime2) {
               return;
             }
-            var38 = df.field_a[1];
+            var38 = AccountDateHelpers.field_a[1];
             var38.f(var9Lifetime3, -(var38.height >> 1) + var10Lifetime3, 256);
             return;
           }
-          var39 = df.field_a[0];
+          var39 = AccountDateHelpers.field_a[0];
           var11Lifetime3 = var39.canvasWidth << 1;
           var12Lifetime3 = var39.canvasHeight << 1;
           if (this.spinnerSurface != null &&
@@ -472,18 +472,18 @@ final class ValidationMessageWidget extends HotspotTextWidget {
         if (var6Lifetime3 != ConditionalTextValue.validationDebouncing &&
           var6Lifetime3 != SaveResultsPromptScreen.validationPending) {
           if (AccountMessageDialog.validationInvalid == var6Lifetime3) {
-            var41 = df.field_a[2];
+            var41 = AccountDateHelpers.field_a[2];
             var41.f(var9Lifetime4, var10Lifetime4 - (var41.height >> 1), 256);
             return;
           }
           if (DualLinkIterator.validationValid != var6Lifetime3) {
             return;
           }
-          var42 = df.field_a[1];
+          var42 = AccountDateHelpers.field_a[1];
           var42.f(var9Lifetime4, -(var42.height >> 1) + var10Lifetime4, 256);
           return;
         }
-        var43 = df.field_a[0];
+        var43 = AccountDateHelpers.field_a[0];
         var11Lifetime4 = var43.canvasWidth << 1;
         var12Lifetime4 = var43.canvasHeight << 1;
         if (this.spinnerSurface == null) {

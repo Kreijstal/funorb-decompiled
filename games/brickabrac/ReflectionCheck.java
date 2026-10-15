@@ -16,24 +16,24 @@ final class ReflectionCheck extends IntrusiveNode {
     PlatformTask[] methodTasks;
     int requestId;
 
-    final static int a(int param0, int param1, int param2) {
-        if (param1 != 29) {
+    final static int getLegacyMonthLength(int year, int obfuscationGuard, int monthIndex) {
+        if (obfuscationGuard != 29) {
           ReflectionCheck.a(6);
-          if (param2 != 1) {
-            return rh.field_b[param2];
+          if (monthIndex != 1) {
+            return CalendarMatchmakingState.commonYearMonthLengths[monthIndex];
           }
-          if (NameEntryPopup.b(param0, -1)) {
+          if (NameEntryPopup.isLegacyLeapYear(year, -1)) {
             return 29;
           }
-          return rh.field_b[param2];
+          return CalendarMatchmakingState.commonYearMonthLengths[monthIndex];
         }
-        if (param2 != 1) {
-          return rh.field_b[param2];
+        if (monthIndex != 1) {
+          return CalendarMatchmakingState.commonYearMonthLengths[monthIndex];
         }
-        if (NameEntryPopup.b(param0, -1)) {
+        if (NameEntryPopup.isLegacyLeapYear(year, -1)) {
           return 29;
         }
-        return rh.field_b[param2];
+        return CalendarMatchmakingState.commonYearMonthLengths[monthIndex];
     }
 
     public static void a(int param0) {

@@ -327,7 +327,7 @@ abstract class GameConnectionShell extends AppletGameShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = BrickABrac.field_J ? 1 : 0;
-          var4 = df.a(-27790, GameplayAudioEvent.mouseWheelDelta, LoginCredentialKind.field_e, param0);
+          var4 = AccountDateHelpers.pollAccountDialogResult(-27790, GameplayAudioEvent.mouseWheelDelta, LoginCredentialKind.field_e, param0);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -338,9 +338,9 @@ abstract class GameConnectionShell extends AppletGameShell {
               DirectByteStorage.field_e = null;
               ArchiveSourceManager.field_f = null;
             }
-            var11 = df.a(0);
+            var11 = AccountDateHelpers.takeEmailAvailabilityReply(0);
             if (var11 != null) {
-              WeightedLruCache.a(var11.booleanValue(), -128);
+              WeightedLruCache.completeEmailAvailabilityRequest(var11.booleanValue(), -128);
             }
           }
           if (var4 == 2) {
@@ -418,7 +418,7 @@ abstract class GameConnectionShell extends AppletGameShell {
               if (ResourcePreparationEntry.countryListRequest.poll(1)) {
                 var12 = ResourcePreparationEntry.countryListRequest.getResult((byte) 100);
                 if (var12 != null) {
-                  var7 = df.decodeCp1252(var12.position, 97, var12.data, 0);
+                  var7 = AccountDateHelpers.decodeCp1252(var12.position, 97, var12.data, 0);
                   ButtonWidgetRenderer.a(85, var7);
                 } else {
                   var9 = (String) null;

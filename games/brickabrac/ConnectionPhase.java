@@ -194,7 +194,7 @@ final class ConnectionPhase {
               choiceIndexOrCaptionWidth = 0;
               while (true) {
                 if (choiceIndexOrCaptionWidth < ScreenshotViewer.field_n.length) {
-                  choiceSelectedValue = ((rh.matchmakingChoiceMask[choiceIndexOrCaptionWidth / 8] & 1 << (7 & choiceIndexOrCaptionWidth)) == 0) ? 0 : 1;
+                  choiceSelectedValue = ((CalendarMatchmakingState.matchmakingChoiceMask[choiceIndexOrCaptionWidth / 8] & 1 << (7 & choiceIndexOrCaptionWidth)) == 0) ? 0 : 1;
                   choiceSelected = choiceSelectedValue;
                   if (choiceSelected != 0) {
                     selectedChoiceCount++;

@@ -601,7 +601,7 @@ final class MusicPatch extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = var28 * (-var27Lifetime6Lifetime1 + var30) + (-var27Lifetime6Lifetime1 + var30) / 2;
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = df.divideFloorPositive(var30 - var27Lifetime6Lifetime1, (byte) 15, var32);
+                var34 = AccountDateHelpers.divideFloorPositive(var30 - var27Lifetime6Lifetime1, (byte) 15, var32);
                 var32 = var32 + (var31 - var28);
                 this.volume[var33] = (byte)(this.volume[var33] * var34 + 32 >> 6);
               }
@@ -640,7 +640,7 @@ final class MusicPatch extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = df.divideFloorPositive(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 15, var32Lifetime1);
+                var34Lifetime1 = AccountDateHelpers.divideFloorPositive(var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1, (byte) 15, var32Lifetime1);
                 var35 = (this.pan[var37] & 255) + var34Lifetime1;
                 if (var35 < 0) {
                   var35 = 0;
