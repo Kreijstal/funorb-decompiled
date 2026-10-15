@@ -29,7 +29,7 @@ final class ValidationIconWidget extends FocusableWidget {
         var5 = parentX + (this.x + (this.width >> 1));
         var6 = (this.height >> 1) + (this.y + parentY);
         var8 = this.validationSource.getValidationStatus((byte) -31);
-        if (var8 != m.validationDebouncing &&
+        if (var8 != ConditionalTextValue.validationDebouncing &&
           SaveResultsPromptScreen.validationPending != var8) {
           if (AccountMessageDialog.validationInvalid == var8) {
             var13 = df.field_a[2];
@@ -207,7 +207,7 @@ final class ValidationIconWidget extends FocusableWidget {
         }
     }
 
-    final static int a(String param0, boolean param1, int param2, m param3, int param4, m param5, int param6) {
+    final static int a(String param0, boolean param1, int param2, ConditionalTextValue param3, int param4, ConditionalTextValue param5, int param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_11_0 = null;
@@ -245,8 +245,8 @@ final class ValidationIconWidget extends FocusableWidget {
         int var9Lifetime3;
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
-          var14 = param3.b(2);
-          var8 = param5.b(2);
+          var14 = param3.getText(2);
+          var8 = param5.getText(2);
           if (WhirlpoolHasher.gameTransport == null &&
             !CappedUrlRequest.a(false, param6 ^ 10004)) {
             stackIn_6_0 = -1;
@@ -286,7 +286,7 @@ final class ValidationIconWidget extends FocusableWidget {
               tq.field_f.writeInt(IterableIntrusiveHashTable.packetDelayRandom.nextInt(), (byte) -79);
               stackIn_11_0 = tq.field_f;
               stackIn_11_1 = 0;
-              if (!param3.a((byte) 116)) {
+              if (!param3.isIncluded((byte) 116)) {
                 stackIn_12_2 = "";
               } else {
                 stackIn_12_2 = var14;
@@ -294,7 +294,7 @@ final class ValidationIconWidget extends FocusableWidget {
               ((PacketBuffer) (Object) stackIn_11_0).writePrefixedCp1252String(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = tq.field_f;
               stackIn_14_1 = param6 - 4;
-              if (!param5.a((byte) 120)) {
+              if (!param5.isIncluded((byte) 120)) {
                 stackIn_15_2 = "";
               } else {
                 stackIn_15_2 = var8;
@@ -307,9 +307,9 @@ final class ValidationIconWidget extends FocusableWidget {
               TextFieldValidator.outgoingPackets.backfillByteLength((byte) 119, TextFieldValidator.outgoingPackets.position - var9);
             }
             ActivityIndicatorWidget.a(-1, 10000);
-            rf.field_b = ck.field_k;
+            rf.field_b = DiagnosticTextLine.field_k;
           }
-          if (ck.field_k == rf.field_b &&
+          if (DiagnosticTextLine.field_k == rf.field_b &&
             vd.ensureGamePacketBytes(20, 1)) {
             var9Lifetime1 = jl.incomingPackets.readUnsignedByte(255);
             jl.incomingPackets.position = 0;
@@ -320,7 +320,7 @@ final class ValidationIconWidget extends FocusableWidget {
             } else {
               if (var9Lifetime1 == 248) {
                 MatchingTextValidator.a(EmailConfirmationValidator.e((byte) -108), param6 + 5);
-                DirectByteStorage.field_e = m.field_d;
+                DirectByteStorage.field_e = ConditionalTextValue.field_d;
                 hn.a((byte) 96);
                 RadialSelectorRenderer.field_d = false;
                 stackIn_33_0 = var9Lifetime1;

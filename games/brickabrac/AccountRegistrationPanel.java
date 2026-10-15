@@ -670,7 +670,7 @@ final class AccountRegistrationPanel extends WidgetGroup implements TextHotspotL
           if (obfuscationGuard != 60) {
             this.newsletterToggle = (ToggleButtonWidget) null;
           }
-          if (m.validationDebouncing == status) {
+          if (ConditionalTextValue.validationDebouncing == status) {
             return false;
           }
           if (status != uo.validationEmpty) {

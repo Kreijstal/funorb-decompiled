@@ -47,12 +47,12 @@ abstract class DebouncedValidationSource implements ValidationSource {
           if (MonotonicTime.nowMillis(false) >= this.lastEditMillis + 350L) {
             return this.computeValidationStatus(4);
           }
-          return m.validationDebouncing;
+          return ConditionalTextValue.validationDebouncing;
         }
         if (MonotonicTime.nowMillis(false) >= this.lastEditMillis + 350L) {
           return this.computeValidationStatus(4);
         }
-        return m.validationDebouncing;
+        return ConditionalTextValue.validationDebouncing;
     }
 
     final static Class resolveReflectionType(String typeName, boolean obfuscationGuard) throws ClassNotFoundException {

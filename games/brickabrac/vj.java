@@ -54,20 +54,20 @@ final class vj {
           if (null != MeshAttributeRecord.musicCrossfadeStream) {
             ScorePopup.a(1048576, param3, param1, param0, -104);
           }
-          if (null == m.musicSynthesizer) {
+          if (null == ConditionalTextValue.musicSynthesizer) {
             return;
           }
           var5 = DirectByteStorage.field_f;
           synchronized (var5) {
-            m.musicSynthesizer.setChannelGain(param1, -1, 16);
+            ConditionalTextValue.musicSynthesizer.setChannelGain(param1, -1, 16);
             if (param3 == IsaacGenerator.field_a) {
               return;
             }
-            m.musicSynthesizer.stopTrack(-24774);
+            ConditionalTextValue.musicSynthesizer.stopTrack(-24774);
             DirectByteStorage.field_f.flush();
             IsaacGenerator.field_a = param3;
             if (null != IsaacGenerator.field_a) {
-              m.musicSynthesizer.playTrack(IsaacGenerator.field_a, 127, param0);
+              ConditionalTextValue.musicSynthesizer.playTrack(IsaacGenerator.field_a, 127, param0);
             }
           }
           return;

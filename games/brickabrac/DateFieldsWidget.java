@@ -216,8 +216,8 @@ final class DateFieldsWidget extends DateInputWidget {
         boolean stackIn_61_1 = false;
         int var4;
         Brick.e(-79);
-        if (m.field_h >= 0) {
-          DraggableWidget.field_N.text = rd.a(rm.field_c, new String[]{Integer.toString(m.field_h)}, (byte) 103);
+        if (ConditionalTextValue.field_h >= 0) {
+          DraggableWidget.field_N.text = rd.a(rm.field_c, new String[]{Integer.toString(ConditionalTextValue.field_h)}, (byte) 103);
           var4 = 34 / ((-10 - param2) / 53);
           stackIn_48_0 = ContentTransitionLayer.field_gb;
           stackIn_49_1 = (param0) && (!param1) && (!sc.field_c) && (null == o.currentLobbyGame) && (nl.pendingLobbyGame == null);

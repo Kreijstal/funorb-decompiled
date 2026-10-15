@@ -108,7 +108,7 @@ final class wj extends IntrusiveNode {
         try {
           var7 = DirectByteStorage.field_f;
           synchronized (var7) {
-            m.musicSynthesizer.setChannelGain(param2, -1, 16);
+            ConditionalTextValue.musicSynthesizer.setChannelGain(param2, -1, 16);
             if (param3) {
               return;
             }

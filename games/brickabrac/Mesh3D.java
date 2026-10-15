@@ -102,7 +102,7 @@ final class Mesh3D {
 
     final static void a(int param0, TextFont param1, TextFont param2, boolean param3) {
         try {
-          m.field_b = param0;
+          ConditionalTextValue.field_b = param0;
           kp.field_b = param1;
           StateIconLabel.field_Wb = param2;
           pp.a(Rasterizer2D.width / 2, Rasterizer2D.height / 2, (byte) 19);

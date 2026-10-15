@@ -27,7 +27,7 @@ final class jj {
         int var2Lifetime5;
         if (param0 != -123) {
           canvasResizeController = (CanvasResizeController) null;
-          if (m.a(2)) {
+          if (ConditionalTextValue.a(2)) {
             var1 = 1;
             IntArrayRequest.c(126);
             if (!GameClock.c((byte) 119)) {
@@ -97,7 +97,7 @@ final class jj {
           }
           return var1 != 0;
         }
-        if (m.a(2)) {
+        if (ConditionalTextValue.a(2)) {
           var1 = 1;
           IntArrayRequest.c(126);
           if (GameClock.c((byte) 119) &&

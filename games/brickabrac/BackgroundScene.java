@@ -141,14 +141,14 @@ abstract class BackgroundScene {
             return;
           }
         }
-        if (!m.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, IterableIntrusiveHashTable.field_a, SoundPlayback.soundCache)) {
+        if (!ConditionalTextValue.musicSynthesizer.prepareTrack(obfuscationGuard ^ -74, this.musicData, 22050, IterableIntrusiveHashTable.field_a, SoundPlayback.soundCache)) {
           return;
         }
         if (OpacityWidget.pendingMusicLoads > 0) {
           fieldTemp$1 = OpacityWidget.pendingMusicLoads - 1;
           OpacityWidget.pendingMusicLoads = OpacityWidget.pendingMusicLoads - 1;
           if (0 == fieldTemp$1) {
-            m.musicSynthesizer.a((byte) 118);
+            ConditionalTextValue.musicSynthesizer.a((byte) 118);
           }
         }
         this.musicReady = true;

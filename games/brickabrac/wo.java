@@ -38,7 +38,7 @@ final class wo {
         var3 = BrickABrac.field_J ? 1 : 0;
         if (param0 == 2) {
           var1 = 1;
-          var2 = m.field_i;
+          var2 = ConditionalTextValue.field_i;
           if (var2 == 0) {
             LoginCredentialKind.field_g = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_title_music");
             stackIn_77_0 = (null == LoginCredentialKind.field_g) ? 0 : 1;
@@ -60,21 +60,21 @@ final class wo {
                   var1Lifetime3 = stackIn_95_0;
                 } else {
                   if (4 == var2) {
-                    stackIn_103_0 = (!m.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                    stackIn_103_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                     var1Lifetime3 = stackIn_103_0;
                   } else {
                     if (var2 == 5) {
-                      stackIn_132_0 = (!m.musicSynthesizer.prepareTrack(-112, MessageScreen.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                      stackIn_132_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-112, MessageScreen.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime3 = stackIn_132_0;
                     } else {
                       if (6 == var2) {
-                        stackIn_139_0 = (!m.musicSynthesizer.prepareTrack(-111, GrowableIntList.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                        stackIn_139_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-111, GrowableIntList.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                         var1Lifetime3 = stackIn_139_0;
                       } else {
                         if (7 != var2) {
                           return true;
                         }
-                        stackIn_116_0 = (!m.musicSynthesizer.prepareTrack(-123, RichTextLayout.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                        stackIn_116_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-123, RichTextLayout.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                         var1Lifetime3 = stackIn_116_0;
                       }
                     }
@@ -84,14 +84,14 @@ final class wo {
             }
           }
           if (var1Lifetime3 != 0) {
-            m.field_i = m.field_i + 1;
+            ConditionalTextValue.field_i = ConditionalTextValue.field_i + 1;
           }
           return false;
         }
         var4 = (RgbSprite) null;
         wo.a(-99, -77, (RgbSprite) null, -107, -18, 45, 120, 4, (RgbSprite) null, (RgbSprite) null, 24);
         var1Lifetime1 = 1;
-        var2Lifetime1 = m.field_i;
+        var2Lifetime1 = ConditionalTextValue.field_i;
         if (var2Lifetime1 == 0) {
           LoginCredentialKind.field_g = MusicTrack.load(BallPulseEffect.field_j, "", "BaB_title_music");
           stackIn_5_0 = (null == LoginCredentialKind.field_g) ? 0 : 1;
@@ -113,21 +113,21 @@ final class wo {
                 var1Lifetime2 = stackIn_23_0;
               } else {
                 if (4 == var2Lifetime1) {
-                  stackIn_31_0 = (!m.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                  stackIn_31_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-114, LoginCredentialKind.field_g, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                   var1Lifetime2 = stackIn_31_0;
                 } else {
                   if (var2Lifetime1 == 5) {
-                    stackIn_60_0 = (!m.musicSynthesizer.prepareTrack(-112, MessageScreen.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                    stackIn_60_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-112, MessageScreen.field_t, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                     var1Lifetime2 = stackIn_60_0;
                   } else {
                     if (6 == var2Lifetime1) {
-                      stackIn_68_0 = (!m.musicSynthesizer.prepareTrack(-111, GrowableIntList.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                      stackIn_68_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-111, GrowableIntList.field_j, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime2 = stackIn_68_0;
                     } else {
                       if (7 != var2Lifetime1) {
                         return true;
                       }
-                      stackIn_43_0 = (!m.musicSynthesizer.prepareTrack(-123, RichTextLayout.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
+                      stackIn_43_0 = (!ConditionalTextValue.musicSynthesizer.prepareTrack(-123, RichTextLayout.field_q, 22050, ic.field_a, GameScreen.field_e)) ? 0 : 1;
                       var1Lifetime2 = stackIn_43_0;
                     }
                   }
@@ -137,7 +137,7 @@ final class wo {
           }
         }
         if (var1Lifetime2 != 0) {
-          m.field_i = m.field_i + 1;
+          ConditionalTextValue.field_i = ConditionalTextValue.field_i + 1;
         }
         return false;
     }

@@ -98,7 +98,7 @@ final class IterableIntrusiveHashTable implements Iterable {
             }
             IsaacGenerator.field_a = param2;
             if (IsaacGenerator.field_a != null) {
-              m.musicSynthesizer.a(param4, IsaacGenerator.field_a, param3, param1, param0 - 25460, param5);
+              ConditionalTextValue.musicSynthesizer.a(param4, IsaacGenerator.field_a, param3, param1, param0 - 25460, param5);
             }
           }
           return;

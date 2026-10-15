@@ -51,7 +51,7 @@ final class GameUiController implements GameUiLifecycle {
         VolcanicBackground.g(0);
         CanvasResizeController.initializeFireworkSpawnArea(240, 0, 640, 0, -6532);
         bm.a(NodeDequeCursor.field_i, FarmBackground.field_r, 24876, LevelList.field_o, GameScreen.field_e, BackgroundScene.field_f, AchievementIcon.field_s);
-        Widget.a(1, PasswordFieldRenderer.field_D);
+        Widget.initializeDiagnosticOverlay(1, PasswordFieldRenderer.field_D);
         LoginPanel.h((byte) 55);
         LoginPanel.initializeMenuScreens((byte) 115, BackgroundScene.field_f);
         AccountMessageDialog.currentScreen = (GameScreen) ((Object) bq.a(21, 28472));
@@ -164,8 +164,8 @@ final class GameUiController implements GameUiLifecycle {
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "lobby", 124, WidgetGroup.field_F, wn.field_c);
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "kartika13", 125, WidgetGroup.field_F, NameEntryPopup.field_Rb);
         AccountContentTransitionLayer.startupResources.addNamedGroup(tm.field_e, "basic", 126, WidgetGroup.field_F, BackgroundScene.field_f);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "basic", -126, m.field_k, ScorePopup.field_l);
-        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "kartika13", 127, m.field_k, wn.field_c);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "basic", -126, ConditionalTextValue.field_k, ScorePopup.field_l);
+        AccountContentTransitionLayer.startupResources.addNamedGroup(RadialSelectorWidget.field_P, "kartika13", 127, ConditionalTextValue.field_k, wn.field_c);
         AccountContentTransitionLayer.startupResources.addArchive(FarmBackground.field_r, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         AccountContentTransitionLayer.startupResources.addArchive(AchievementIcon.field_s, false, MovingBody.field_n, ValidationIconWidget.field_Q);
         AccountContentTransitionLayer.startupResources.addArchive(LevelList.field_o, false, BallPulseEffect.field_i, EmailValidator.field_m);

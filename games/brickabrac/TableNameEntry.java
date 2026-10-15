@@ -47,7 +47,7 @@ final class TableNameEntry {
           if (!BubbleDistortion.e((byte) -94)) {
             Rasterizer2D.clear();
             MultiValueSliderRenderer.a(false, 240, 320);
-            ck.a(param1, 0, 14209, 0);
+            DiagnosticTextLine.a(param1, 0, 14209, 0);
             return;
           }
           if (AchievementIcon.field_j != 0) {
@@ -55,7 +55,7 @@ final class TableNameEntry {
             return;
           }
           RankingsScreen.a(param2, -71, false);
-          ck.a(param1, 0, 14209, 0);
+          DiagnosticTextLine.a(param1, 0, 14209, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -210,9 +210,9 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         }
     }
 
-    final static int a(m param0, m param1, byte param2) {
+    final static int a(ConditionalTextValue param0, ConditionalTextValue param1, byte param2) {
         RuntimeException var3 = null;
-        m var4 = null;
+        ConditionalTextValue var4 = null;
         String var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -223,8 +223,8 @@ final class FullscreenFailureDialog extends PopupWidgetLayer implements WidgetAc
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 > 0) {
-            var4 = (m) null;
-            FullscreenFailureDialog.a((m) null, (m) null, (byte) 87);
+            var4 = (ConditionalTextValue) null;
+            FullscreenFailureDialog.a((ConditionalTextValue) null, (ConditionalTextValue) null, (byte) 87);
           }
           var5 = (String) null;
           stackIn_3_0 = ValidationIconWidget.a((String) null, false, 0, param0, 0, param1, 4);

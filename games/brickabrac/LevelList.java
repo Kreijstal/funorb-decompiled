@@ -83,7 +83,7 @@ final class LevelList {
         ArrayWidgetGroup.buttonLabels[20] = LevelResultSubmission.field_q;
         ArrayWidgetGroup.buttonLabels[33] = t.field_c;
         ArrayWidgetGroup.buttonLabels[32] = LoginPanel.field_L;
-        ArrayWidgetGroup.buttonLabels[25] = ck.field_i;
+        ArrayWidgetGroup.buttonLabels[25] = DiagnosticTextLine.field_i;
         ArrayWidgetGroup.buttonLabels[24] = DesertBackground.field_r;
         ArrayWidgetGroup.buttonLabels[42] = Widget.field_u;
         ArrayWidgetGroup.buttonLabels[37] = LevelPackLoader.field_i;

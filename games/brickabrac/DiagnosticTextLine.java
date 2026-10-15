@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends IntrusiveNode {
+final class DiagnosticTextLine extends IntrusiveNode {
     static n field_k;
     static String field_i;
     static String field_j;
     static boolean[] field_m;
-    StringBuilder field_l;
+    StringBuilder text;
 
     final static void a(int param0, ResourceArchive param1) {
         VorbisSample var2 = null;
@@ -33,7 +33,7 @@ final class ck extends IntrusiveNode {
         try {
           try {
             if (param2 != 14209) {
-              ck.a(53);
+              DiagnosticTextLine.a(53);
             }
             var4 = param0.getGraphics();
             BallPulseEffect.framebuffer.draw(param3, param1, -17260, var4);
@@ -72,12 +72,12 @@ final class ck extends IntrusiveNode {
         field_i = null;
     }
 
-    ck() {
+    DiagnosticTextLine() {
         this(30);
     }
 
-    private ck(int param0) {
-        this.field_l = new StringBuilder(param0);
+    private DiagnosticTextLine(int initialCapacity) {
+        this.text = new StringBuilder(initialCapacity);
     }
 
     final static void a(byte param0) {

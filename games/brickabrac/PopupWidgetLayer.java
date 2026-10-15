@@ -14,7 +14,7 @@ abstract class PopupWidgetLayer extends WidgetLayer {
     static WidgetTheme widgetTheme;
     static String field_V;
     static long field_ab;
-    static ck field_P;
+    static DiagnosticTextLine heapDiagnosticLine;
 
     void finishTransition(int obfuscationGuard) {
         if (0 >= this.resizeDuration) {
@@ -235,7 +235,7 @@ abstract class PopupWidgetLayer extends WidgetLayer {
           var8Lifetime1++;
         }
         if (obfuscationGuard != 274) {
-          field_P = (ck) null;
+          heapDiagnosticLine = (DiagnosticTextLine) null;
         }
         MusicVoice.field_n.drawTransparent(x + this.width - 90, 10 + y);
         fq.a(this.width - 10, 35 + y, obfuscationGuard ^ 1013, ValidationMessageWidget.field_W, 5 + x);
@@ -256,7 +256,7 @@ abstract class PopupWidgetLayer extends WidgetLayer {
     }
 
     public static void i(int param0) {
-        field_P = null;
+        heapDiagnosticLine = null;
         if (param0 <= 110) {
           return;
         }

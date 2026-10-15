@@ -185,52 +185,52 @@ final class DelegatingCanvas extends java.awt.Canvas {
         field_b = null;
     }
 
-    final static void a(int param0, long param1, StringBuilder param2) {
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        int var6 = 0;
-        StringBuilder discarded$6 = null;
-        int var4_int = 0;
-        int var5 = 0;
-        int var7 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
-        String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var7 = BrickABrac.field_J ? 1 : 0;
+    final static void appendDiagnosticDecimal(int obfuscationGuard, long value, StringBuilder destination) {
+        StringBuilder discardedDigitAppend = null;
+        StringBuilder discardedSignAppend = null;
+        int digitIndex = 0;
+        StringBuilder discardedDestinationAppend = null;
+        int negativeFlag = 0;
+        int digitCount = 0;
+        int unusedClientFlag = 0;
+        int negativeValue = 0;
+        RuntimeException contextFailure = null;
+        StringBuilder contextPrefix = null;
+        String destinationArgumentSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException appendFailure = null;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          gh.field_e.setLength(0);
-          if (param0 != -9) {
+          gh.diagnosticDecimalScratch.setLength(0);
+          if (obfuscationGuard != -9) {
             field_c = -91;
           }
-          stackIn_6_0 = (param1 >= 0L) ? 0 : 1;
-          var4_int = stackIn_6_0;
-          var5 = 0;
+          negativeValue = (value >= 0L) ? 0 : 1;
+          negativeFlag = negativeValue;
+          digitCount = 0;
           do {
-            discarded$4 = gh.field_e.append((char)(48 + (int)(param1 % 10L)));
-            param1 = param1 / 10L;
-            var5++;
-          } while (0L != param1);
-          if (var4_int != 0) {
-            discarded$5 = gh.field_e.append('-');
+            discardedDigitAppend = gh.diagnosticDecimalScratch.append((char)(48 + (int)(value % 10L)));
+            value = value / 10L;
+            digitCount++;
+          } while (0L != value);
+          if (negativeFlag != 0) {
+            discardedSignAppend = gh.diagnosticDecimalScratch.append('-');
           }
-          for (var6 = var5 - 1; var6 >= 0; var6--) {
-            discarded$6 = param2.append(gh.field_e.charAt(var6));
+          for (digitIndex = digitCount - 1; digitIndex >= 0; digitIndex--) {
+            discardedDestinationAppend = destination.append(gh.diagnosticDecimalScratch.charAt(digitIndex));
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_16_0 = var4;
-          stackIn_16_1 = new StringBuilder().append("od.C(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_17_2 = "null";
+        } catch (java.lang.RuntimeException caughtAppendFailure) {
+          caughtFailure = caughtAppendFailure;
+          appendFailure = caughtFailure;
+          contextFailure = appendFailure;
+          contextPrefix = new StringBuilder().append("od.C(").append(obfuscationGuard).append(',').append(value).append(',');
+          if (destination == null) {
+            destinationArgumentSummary = "null";
           } else {
-            stackIn_17_2 = "{...}";
+            destinationArgumentSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) contextPrefix).append(destinationArgumentSummary).append(')').toString());
         }
     }
 

@@ -70,7 +70,7 @@ class NineSliceFrame {
         if (param1) {
           return;
         }
-        if (!m.a(2)) {
+        if (!ConditionalTextValue.a(2)) {
           return;
         }
         if (param0) {

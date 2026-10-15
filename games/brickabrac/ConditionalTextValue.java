@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class m {
-    private String field_l;
+final class ConditionalTextValue {
+    private String text;
     static boolean field_a;
     static int field_j;
     static String field_k;
     static int field_i;
     static int field_b;
     static int field_h;
-    private boolean field_g;
+    private boolean included;
     static String field_d;
     static ValidationStatus validationDebouncing;
     static MidiSynthesizer musicSynthesizer;
@@ -55,7 +55,7 @@ final class m {
             return true;
           }
           if (!obfuscationGuard) {
-            m.a(-100);
+            ConditionalTextValue.a(-100);
           }
           var6 = ce.nameCharacterExtensions;
           var2 = var6;
@@ -123,8 +123,8 @@ final class m {
         }
     }
 
-    m(String param0) {
-        this(param0, false);
+    ConditionalTextValue(String text) {
+        this(text, false);
     }
 
     public static void c(int param0) {
@@ -136,58 +136,58 @@ final class m {
           validationDebouncing = null;
           return;
         }
-        m.c(1);
+        ConditionalTextValue.c(1);
         musicSynthesizer = null;
         field_e = null;
         validationDebouncing = null;
     }
 
-    final String b(int param0) {
-        if (param0 != 2) {
+    final String getText(int obfuscationGuard) {
+        if (obfuscationGuard != 2) {
           field_k = (String) null;
-          return this.field_l;
+          return this.text;
         }
-        return this.field_l;
+        return this.text;
     }
 
-    final boolean a(byte param0) {
-        if (param0 <= 24) {
+    final boolean isIncluded(byte obfuscationGuard) {
+        if (obfuscationGuard <= 24) {
           field_k = (String) null;
-          return this.field_g;
+          return this.included;
         }
-        return this.field_g;
+        return this.included;
     }
 
-    m(String param0, boolean param1) {
-        RuntimeException var3 = null;
-        boolean stackIn_6_1 = false;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
+    ConditionalTextValue(String text, boolean included) {
+        RuntimeException constructorFailure = null;
+        boolean includedValue = false;
+        RuntimeException contextFailure = null;
+        StringBuilder contextPrefix = null;
+        String textArgumentSummary = null;
+        RuntimeException caughtFailure = null;
         try {
-          this.field_l = param0;
-          if (null == this.field_l) {
-            this.field_l = "";
+          this.text = text;
+          if (null == this.text) {
+            this.text = "";
           }
-          stackIn_6_1 = (param1);
-          this.field_g = stackIn_6_1;
-          if (this.field_l.length() != 0) {
+          includedValue = (included);
+          this.included = includedValue;
+          if (this.text.length() != 0) {
             return;
           }
-          this.field_g = false;
+          this.included = false;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("m.<init>(");
-          if (param0 == null) {
-            stackIn_13_2 = "null";
+        } catch (java.lang.RuntimeException caughtConstructorFailure) {
+          caughtFailure = caughtConstructorFailure;
+          constructorFailure = caughtFailure;
+          contextFailure = constructorFailure;
+          contextPrefix = new StringBuilder().append("m.<init>(");
+          if (text == null) {
+            textArgumentSummary = "null";
           } else {
-            stackIn_13_2 = "{...}";
+            textArgumentSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) contextFailure), ((StringBuilder) (Object) contextPrefix).append(textArgumentSummary).append(',').append(included).append(')').toString());
         }
     }
 

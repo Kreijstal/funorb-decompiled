@@ -3,7 +3,7 @@
  */
 final class bq {
     static String field_a;
-    static ck field_b;
+    static DiagnosticTextLine renderRateDiagnosticLine;
     static int maxArchiveContainerBytes;
     static RgbSprite[] field_c;
     static String field_f;
@@ -13,7 +13,7 @@ final class bq {
         field_e = (RgbSprite[][]) null;
         field_f = null;
         field_c = null;
-        field_b = null;
+        renderRateDiagnosticLine = null;
         field_a = null;
         if (!param0) {
           bq.a(false, 57, (byte) -48);
@@ -82,7 +82,7 @@ final class bq {
           IntrusiveHashIterator.field_j = true;
           ArchiveFetchClient.field_p = param1;
           if (0 == ArchiveFetchClient.field_p) {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, StatefulWidgetRenderer.field_x);
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, -63, StateIconLabel.field_Wb, StatefulWidgetRenderer.field_x);
             var4 = 3 + var3_int;
             BrickABrac.field_K = new int[var4];
             ValidationStatus.field_i = new String[var4];
@@ -101,7 +101,7 @@ final class bq {
             BrickABrac.field_K[-1 + var4] = 1;
             UsernameSuggestionPanel.field_I[1] = 5;
           } else if (1 == ArchiveFetchClient.field_p) {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, StatefulWidgetRenderer.field_x);
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, param2 ^ -87, StateIconLabel.field_Wb, StatefulWidgetRenderer.field_x);
             var4 = 2 + var3_int;
             BrickABrac.field_K = new int[var4];
             ValidationStatus.field_i = new String[var4];
@@ -119,9 +119,9 @@ final class bq {
           } else if (2 != ArchiveFetchClient.field_p) {
             if (3 == ArchiveFetchClient.field_p) {
               if (AccountMessageDialog.field_ub.privilegedMode) {
-                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, LoginCredentials.field_a);
+                var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, -63, StateIconLabel.field_Wb, LoginCredentials.field_a);
               } else {
-                var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, param2 ^ -87, StateIconLabel.field_Wb, df.field_d);
+                var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, param2 ^ -87, StateIconLabel.field_Wb, df.field_d);
               }
               var4 = 2 + var3_int;
               ValidationStatus.field_i = new String[var4];
@@ -138,7 +138,7 @@ final class bq {
               BrickABrac.field_K[-1 + var4] = 0;
               UsernameSuggestionPanel.field_I[0] = 5;
             } else if (ArchiveFetchClient.field_p == 4) {
-              var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, ChocolateBackground.field_s);
+              var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, -63, StateIconLabel.field_Wb, ChocolateBackground.field_s);
               var4 = var3_int + 2;
               ValidationStatus.field_i = new String[var4];
               BrickABrac.field_K = new int[var4];
@@ -157,7 +157,7 @@ final class bq {
               if (ArchiveFetchClient.field_p != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, DirectByteStorage.field_h);
+              var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, -63, StateIconLabel.field_Wb, DirectByteStorage.field_h);
               var4 = 3 + var3_int;
               BrickABrac.field_K = new int[var4];
               ValidationStatus.field_i = new String[var4];
@@ -177,7 +177,7 @@ final class bq {
               UsernameSuggestionPanel.field_I[1] = 5;
             }
           } else {
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, -63, StateIconLabel.field_Wb, rd.a(PowerUp.field_x, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(CacheIoWorker.field_h[var5])) {
@@ -193,7 +193,7 @@ final class bq {
             ArrayOperations.copy(CacheIoWorker.field_h, 0, QuickChatPhraseRegistry.field_k, 0, var4);
             SingleChildWidget.field_F = new String[-1 - var4 + var3_int];
             ArrayOperations.copy(CacheIoWorker.field_h, 1 + var4, SingleChildWidget.field_F, 0, -1 + (-var4 + var3_int));
-            var3_int = FarmBackground.a(CacheIoWorker.field_h, m.field_b, -63, StateIconLabel.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
+            var3_int = FarmBackground.a(CacheIoWorker.field_h, ConditionalTextValue.field_b, -63, StateIconLabel.field_Wb, rd.a(u.field_e, new String[]{"<br><%0><br>"}, (byte) 103));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(CacheIoWorker.field_h[var5])) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class RankingsScreen extends MenuScreen {
-    static long field_u;
+    static long lastDiagnosticAllocatedHeapKiB;
     private int sortIndex;
     static IndexedSprite field_t;
     static int[] rankingWins;
@@ -338,7 +338,7 @@ final class RankingsScreen extends MenuScreen {
         field_t = null;
         field_s = null;
         if (param0 >= -65) {
-          field_u = 26L;
+          lastDiagnosticAllocatedHeapKiB = 26L;
         }
     }
 

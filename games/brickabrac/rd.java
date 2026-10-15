@@ -19,73 +19,73 @@ final class rd {
         HighscoresScreen.field_v = 0;
     }
 
-    final static void b(int param0) {
-        int var8 = 0;
-        char dupTemp$0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        ck var4_ref_ck = null;
-        int var4 = 0;
-        ck var5 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var4Lifetime1;
-        int var5_intLifetime1;
-        int var6Lifetime1;
-        int var7Lifetime1;
-        var9 = BrickABrac.field_J ? 1 : 0;
+    final static void drawDiagnosticOverlay(int obfuscationGuard) {
+        int reverseCharacterIndex = 0;
+        char characterForAdvance = 0;
+        RuntimeException caughtFailure = null;
+        int lineCount = 0;
+        RuntimeException drawingFailure = null;
+        int panelHeight = 0;
+        int panelWidth = 0;
+        DiagnosticTextLine measuredLine = null;
+        int borderInset = 0;
+        DiagnosticTextLine drawnLine = null;
+        int measuredLineWidth = 0;
+        int measureCharacterIndex = 0;
+        int unusedCharacter = 0;
+        int unusedClientFlag = 0;
+        int baselineY;
+        int borderAlpha256;
+        int cursorX;
+        int drawnCharacter;
+        unusedClientFlag = BrickABrac.field_J ? 1 : 0;
         try {
-          if (param0 >= -26) {
+          if (obfuscationGuard >= -26) {
             return;
           }
-          var1_int = LoginCredentials.field_d.size(119);
-          if (var1_int != 0) {
-            var2 = 14 + (18 * var1_int + 9);
-            var3 = 0;
-            var4_ref_ck = (ck) (LoginCredentials.field_d.first(-8));
-            while (var4_ref_ck != null) {
-              var5_int = 0;
-              for (var6 = 0; var4_ref_ck.field_l.length() > var6; var6++) {
-                var5_int = var5_int + SoundCache.field_c.getAdvance(var4_ref_ck.field_l.charAt(var6));
+          lineCount = LoginCredentials.diagnosticLines.size(119);
+          if (lineCount != 0) {
+            panelHeight = 14 + (18 * lineCount + 9);
+            panelWidth = 0;
+            measuredLine = (DiagnosticTextLine) (LoginCredentials.diagnosticLines.first(-8));
+            while (measuredLine != null) {
+              measuredLineWidth = 0;
+              for (measureCharacterIndex = 0; measuredLine.text.length() > measureCharacterIndex; measureCharacterIndex++) {
+                measuredLineWidth = measuredLineWidth + SoundCache.diagnosticFont.getAdvance(measuredLine.text.charAt(measureCharacterIndex));
               }
-              if (var5_int > var3) {
-                var3 = var5_int;
+              if (measuredLineWidth > panelWidth) {
+                panelWidth = measuredLineWidth;
               }
-              var4_ref_ck = (ck) (LoginCredentials.field_d.next((byte) 116));
+              measuredLine = (DiagnosticTextLine) (LoginCredentials.diagnosticLines.next((byte) 116));
             }
-            var3 += 28;
-            var3 = -(var3 % 100) + (100 + var3);
-            Rasterizer2D.fillRectangleAlpha(-var3 + 626, 14, var3, var2, 0, 180);
-            for (var4 = 0; var4 < 12; var4++) {
-              var5_intLifetime1 = (-var4 + 12) * 20;
-              Rasterizer2D.drawRectangleAlpha(626 - var3 + var4, 14 + var4, -var4 - var4 + var3, -var4 - var4 + var2, 0, var5_intLifetime1);
+            panelWidth += 28;
+            panelWidth = -(panelWidth % 100) + (100 + panelWidth);
+            Rasterizer2D.fillRectangleAlpha(-panelWidth + 626, 14, panelWidth, panelHeight, 0, 180);
+            for (borderInset = 0; borderInset < 12; borderInset++) {
+              borderAlpha256 = (-borderInset + 12) * 20;
+              Rasterizer2D.drawRectangleAlpha(626 - panelWidth + borderInset, 14 + borderInset, -borderInset - borderInset + panelWidth, -borderInset - borderInset + panelHeight, 0, borderAlpha256);
             }
-            var4Lifetime1 = 41;
-            var5 = (ck) (LoginCredentials.field_d.first(-80));
-            while (var5 != null) {
-              var6Lifetime1 = 612;
-              var7 = 0;
-              for (var8 = 0; var5.field_l.length() > var8; var8++) {
-                dupTemp$0 = var5.field_l.charAt(var5.field_l.length() + (-var8 - 1));
-                var7Lifetime1 = dupTemp$0;
-                var6Lifetime1 = var6Lifetime1 - SoundCache.field_c.getAdvance(dupTemp$0);
-                SoundCache.field_c.drawCharacter((char) var7Lifetime1, var6Lifetime1, var4Lifetime1, 2);
+            baselineY = 41;
+            drawnLine = (DiagnosticTextLine) (LoginCredentials.diagnosticLines.first(-80));
+            while (drawnLine != null) {
+              cursorX = 612;
+              unusedCharacter = 0;
+              for (reverseCharacterIndex = 0; drawnLine.text.length() > reverseCharacterIndex; reverseCharacterIndex++) {
+                characterForAdvance = drawnLine.text.charAt(drawnLine.text.length() + (-reverseCharacterIndex - 1));
+                drawnCharacter = characterForAdvance;
+                cursorX = cursorX - SoundCache.diagnosticFont.getAdvance(characterForAdvance);
+                SoundCache.diagnosticFont.drawCharacter((char) drawnCharacter, cursorX, baselineY, 2);
               }
-              var4Lifetime1 += 18;
-              var5 = (ck) (LoginCredentials.field_d.next((byte) 116));
+              baselineY += 18;
+              drawnLine = (DiagnosticTextLine) (LoginCredentials.diagnosticLines.next((byte) 116));
             }
             return;
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var1), "rd.E(" + param0 + ')');
+        } catch (java.lang.RuntimeException caughtDrawingFailure) {
+          caughtFailure = caughtDrawingFailure;
+          drawingFailure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) drawingFailure), "rd.E(" + obfuscationGuard + ')');
         }
     }
 

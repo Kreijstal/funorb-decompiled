@@ -7,7 +7,7 @@ import java.util.*;
 final class GzipInflater {
     private java.util.zip.Inflater inflater;
     static RgbSprite[] field_a;
-    static boolean field_g;
+    static boolean showRenderRateDiagnostic;
     static UiComponent field_d;
     static int field_e;
     static RgbSprite[][] desertCapsSprites;
@@ -141,6 +141,6 @@ final class GzipInflater {
     }
 
     static {
-        field_g = false;
+        showRenderRateDiagnostic = false;
     }
 }

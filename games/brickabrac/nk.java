@@ -124,7 +124,7 @@ final class nk {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!m.isNameCharacter(true, character)) {
+          if (!ConditionalTextValue.isNameCharacter(true, character)) {
             return false;
           }
           if (buffer == null) {

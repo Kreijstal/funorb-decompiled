@@ -17,7 +17,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
     static boolean field_d;
     static UiComponent field_h;
     private int labelGap;
-    static boolean field_f;
+    static boolean showHeapDiagnostic;
 
     final static SocialListEntry findFriend(boolean obfuscationGuard, String name) {
         String nameKey = null;
@@ -52,7 +52,7 @@ final class RadialSelectorRenderer implements WidgetRenderer {
           }
           entry = (SocialListEntry) (BlankScreen.friendIndex.get((long)nameKey.hashCode(), -1));
           if (obfuscationGuard) {
-            field_f = false;
+            showHeapDiagnostic = false;
           }
           while (entry != null) {
             entryNameCharacters = (CharSequence) ((Object) entry.name);
@@ -400,6 +400,6 @@ final class RadialSelectorRenderer implements WidgetRenderer {
         field_a = "There are no valid types of game that match your preferences.";
         arcticBackgroundColors = new int[]{25776, 12658477, 16494651, 26679, 16711935};
         field_c = "Rating";
-        field_f = false;
+        showHeapDiagnostic = false;
     }
 }

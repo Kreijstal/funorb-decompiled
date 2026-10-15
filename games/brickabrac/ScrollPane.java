@@ -230,8 +230,8 @@ final class ScrollPane extends UiComponent {
               }
             }
           }
-          if (null != m.musicSynthesizer) {
-            stackIn_20_0 = m.musicSynthesizer.hasMidiData(-1);
+          if (null != ConditionalTextValue.musicSynthesizer) {
+            stackIn_20_0 = ConditionalTextValue.musicSynthesizer.hasMidiData(-1);
             if (!stackIn_20_0) {
               IsaacGenerator.field_a = null;
               return;

@@ -122,7 +122,7 @@ final class GameplayAudioEvent extends IntrusiveNode {
         RuntimeException var1 = null;
         var2 = BrickABrac.field_J ? 1 : 0;
         try {
-          if (!m.a(param0 ^ 27146)) {
+          if (!ConditionalTextValue.a(param0 ^ 27146)) {
             if (null != GameplayRenderHelpers.fullscreenCanvas &&
               GameplayRenderHelpers.fullscreenCanvas.focusLossPending) {
               LevelPack.b(109);

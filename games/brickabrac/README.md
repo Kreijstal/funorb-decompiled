@@ -2,7 +2,7 @@
 
 Java here is the single published version. Rebuild with Deko’s `readable/reproduce-brickabrac.mjs`. The reverse dictionary is `../../decompilation/brickabrac-naming.json`.
 
-This pass reviews 320 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
+This pass reviews 322 class identities across 420 compiled classes. Other names remain unresolved. Numbered state masks/words identify observed storage without guessing server semantics. Identifiers have no opaque suffixes; reversal recovers original bytes.
 
 | Start here | Follow |
 | --- | --- |
@@ -353,5 +353,9 @@ AwtPointerController exposes Robot movement, ARGB custom cursor construction and
 MicrosoftJvmCursorController names visibility, callback allocation, window/procedure and arrow-cursor state, preserving the public callback ABI. DirectDrawFullscreenController names the DirectDraw object and shared enumeration buffer/count; callbacks write width,height,bit-depth,refresh tuples through two passes, then clear scratch state. The exported legacy component/frame peer lookups remain null placeholders: the Microsoft visibility path fails before state mutation; DirectDraw entry makes the frame visible before failing, with no display/cooperative entry calls. These paths are preserved rather than treated as operational desktop support.
 
 Headless Robot/Toolkit/Component probes verify coordinates, ARGB image contents/hotspots, transparent cursor creation, owner transfer/no-op/show/reset and cursor-creation failure state. Real PlatformServices tasks14/15/17 call the reflectively resolved pointer driver and preserve movement/cursor parameters. Legacy fixtures check constructor/callback state using the existing no-op Win32 stubs; a scripted DirectDraw subclass verifies two-pass enumeration/cleanup and restore cooperative level8. Probe compilation now uses the same existing temporary dependency classpath as game compilation/runtime. Static state is restored. Real Robot/cursor appearance, Microsoft JVM native behavior, DirectDraw hardware, concurrent enumeration, arbitrary invalid cursor dimensions/hotspots and original-JAR equivalence remain unverified.
+
+ConditionalTextValue names null-normalized text and its conditional-inclusion flag; empty text forces false and the single-string constructor defaults false. DiagnosticTextLine names mutable heap/render-loop diagnostic lines, with reviewed font, deque, enable flags, cached values and initialization/update/drawing helpers. Unrelated static helpers retain separate roles.
+
+Native fixtures verify text normalization/defaults, decimal append/scratch reuse, line selection/order, render-rate caching and disabled-line removal. Independent decimal expectations preserve negative signed-remainder characters below zero and the omitted scratch minus. Independent overlay pixels/glyph events cover strict next100-pixel rounding, an exact100 boundary, spaces, reversed glyph order, row spacing, empty lists and no-op drawing guards. Heap contents are checked only for format/range and excluded from deterministic traces. Static state and original scratch contents are restored. The displayed fps is a render-loop rate, not presented FPS. Full handshake behavior, arbitrary malformed text/guards, live presentation, memory budgets and original-JAR equivalence remain unverified.
 
 Decompiler source commit: 1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff. Tracked-source Git tar SHA-256: 7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd. This identifies decompiler source, not a gamepack JAR.

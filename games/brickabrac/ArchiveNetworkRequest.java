@@ -131,7 +131,7 @@ final class ArchiveNetworkRequest extends ResourceRequest {
           return RadialSelectorWidget.field_P;
         }
         if (!RadialSelectorWidget.field_S.ensureGroupAvailableByName("commonui", -28138)) {
-          return m.field_k + " - " + RadialSelectorWidget.field_S.getGroupProgressByName(0, "commonui") + "%";
+          return ConditionalTextValue.field_k + " - " + RadialSelectorWidget.field_S.getGroupProgressByName(0, "commonui") + "%";
         }
         if (!ja.field_c.ensureIndex((byte) -127)) {
           return IntHistoryBuffer.field_k;

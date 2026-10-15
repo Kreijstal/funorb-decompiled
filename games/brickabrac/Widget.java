@@ -134,7 +134,7 @@ class Widget extends IntrusiveNode {
           barX = LevelPackSelectScreen.powerUpMeterBarSprite.width + x - 5;
           Rasterizer2D.fillRectangle(barX, y + 1, 4, LevelPackSelectScreen.powerUpMeterBarSprite.height - 2, 16777215);
           if (obfuscationGuard <= 106) {
-            Widget.a(120, (TextFont) null);
+            Widget.initializeDiagnosticOverlay(120, (TextFont) null);
           }
           meterLevel = board.powerUpMeterLevels256[typeId] >> 8;
           barBottom = LevelPackSelectScreen.powerUpMeterBarSprite.height + (y - 1);
@@ -443,17 +443,17 @@ class Widget extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, TextFont param1) {
+    final static void initializeDiagnosticOverlay(int obfuscationGuard, TextFont font) {
         try {
-          SoundCache.field_c = param1;
-          bq.field_b = new ck();
-          PopupWidgetLayer.field_P = new ck();
-          if (param0 != 1) {
+          SoundCache.diagnosticFont = font;
+          bq.renderRateDiagnosticLine = new DiagnosticTextLine();
+          PopupWidgetLayer.heapDiagnosticLine = new DiagnosticTextLine();
+          if (obfuscationGuard != 1) {
             Widget.c(16);
           }
-          LoginCredentials.field_d = new NodeDeque();
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "oc.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          LoginCredentials.diagnosticLines = new NodeDeque();
+        } catch (RuntimeException initializationFailure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) initializationFailure), "oc.BA(" + obfuscationGuard + ',' + (font != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class BoundedFile {
     static int[] receivedChatSuggestions;
     static int[][] logoOriginalCenters;
     private long maxLength;
-    static int field_c;
+    static int lastDiagnosticRenderRate;
     static String field_d;
     static int field_l;
     static UiComponent field_g;

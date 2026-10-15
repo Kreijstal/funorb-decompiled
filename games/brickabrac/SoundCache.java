@@ -4,7 +4,7 @@
 final class SoundCache {
     static String field_i;
     private ResourceArchive soundEffectArchive;
-    static TextFont field_c;
+    static TextFont diagnosticFont;
     static UiComponent field_k;
     private ResourceArchive musicSampleArchive;
     static NodeDeque field_f;
@@ -187,8 +187,8 @@ final class SoundCache {
 
     final static void a(int param0, int param1) {
         ScorePopup.field_p = param1;
-        if (null != m.musicSynthesizer) {
-          m.musicSynthesizer.setMasterGain(param1, false);
+        if (null != ConditionalTextValue.musicSynthesizer) {
+          ConditionalTextValue.musicSynthesizer.setMasterGain(param1, false);
         }
         if (null != MeshAttributeRecord.musicCrossfadeStream) {
           MeshAttributeRecord.musicCrossfadeStream.setMasterGain(true, param1);
@@ -665,7 +665,7 @@ final class SoundCache {
           SoundCache.a((String) null, true, true, true, -106, (String) null);
         }
         field_b = null;
-        field_c = null;
+        diagnosticFont = null;
     }
 
     final PcmSound getMusicSampleByName(byte obfuscationGuard, String fileName, String groupName) {

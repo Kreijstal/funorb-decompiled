@@ -103,7 +103,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         } while (var4 == 0);
         if (IntArrayRequest.field_i) {
           jj.a((byte) -123);
-          ck.a(var2, 0, 14209, 0);
+          DiagnosticTextLine.a(var2, 0, 14209, 0);
           if (var4 == 0) {
             return;
           }
@@ -178,7 +178,7 @@ abstract class InteractiveGameClient extends GameConnectionShell implements Game
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder0 = true;
         var2 = 0;
-        if (!m.a(2)) {
+        if (!ConditionalTextValue.a(2)) {
           if (HotspotTextWidget.a(9)) {
             if (!LoginMethodPreference.b(126)) {
               var3 = InstructionsScreen.f((byte) 124);

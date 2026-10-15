@@ -230,7 +230,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("create_unable", (byte) 91);
                 if (null != var2) {
-                  m.field_d = MenuButton.a(var2, (byte) 71);
+                  ConditionalTextValue.field_d = MenuButton.a(var2, (byte) 71);
                 }
                 var2 = nk.a("create_ineligible", (byte) 28);
                 if (var2 != null) {
@@ -266,7 +266,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("ticketing_gotowebsite", (byte) -125);
                 if (null != var2) {
-                  m.field_e = MenuButton.a(var2, (byte) 88);
+                  ConditionalTextValue.field_e = MenuButton.a(var2, (byte) 88);
                 }
                 var2 = nk.a("ticketing_waitingformessages", (byte) 38);
                 if (var2 != null) {
@@ -562,7 +562,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("unable_to_send_message_password_a", (byte) 64);
                 if (var2 != null) {
-                  ck.field_j = MenuButton.a(var2, (byte) 119);
+                  DiagnosticTextLine.field_j = MenuButton.a(var2, (byte) 119);
                 }
                 var2 = nk.a("unable_to_send_message_password_b", (byte) -128);
                 if (var2 != null) {
@@ -1966,7 +1966,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("loading_fonts", (byte) -107);
                 if (null != var2) {
-                  m.field_k = MenuButton.a(var2, (byte) 105);
+                  ConditionalTextValue.field_k = MenuButton.a(var2, (byte) 105);
                 }
                 var2 = nk.a("loading_soundeffects", (byte) -17);
                 if (var2 != null) {
@@ -2190,7 +2190,7 @@ final class ContextActionController {
                 }
                 var2 = nk.a("previous", (byte) 56);
                 if (null != var2) {
-                  ck.field_i = MenuButton.a(var2, (byte) 104);
+                  DiagnosticTextLine.field_i = MenuButton.a(var2, (byte) 104);
                 }
                 var2 = nk.a("prev", (byte) -122);
                 if (null != var2) {
@@ -3240,7 +3240,7 @@ final class ContextActionController {
               }
             }
             if (null != friend) {
-              if (!m.a(13134, this.targetName) &&
+              if (!ConditionalTextValue.a(13134, this.targetName) &&
                 !TextWidgetRenderer.field_e) {
                 if (!PlayerNameChooserPanel.field_I) {
                   this.contextMenu.addAction(rd.a(ClientException.field_c, new String[]{caption}, (byte) 103), 8, (byte) 80);

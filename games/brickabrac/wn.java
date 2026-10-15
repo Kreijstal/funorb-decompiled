@@ -157,7 +157,7 @@ final class wn {
                 var16 = var7.name;
                 SpriteGeometry.a(-1, var7, GameScreen.field_f.scrollPane, (int[]) null, var16, -1, (byte) -58, 0L, (String) null);
                 if (null != var7.serverName &&
-                  !m.a(13134, bm.contextActions.targetName) &&
+                  !ConditionalTextValue.a(13134, bm.contextActions.targetName) &&
                   !TextWidgetRenderer.field_e) {
                   if (!PlayerNameChooserPanel.field_I) {
                     var17 = bm.contextActions;

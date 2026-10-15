@@ -7,7 +7,7 @@ final class SecondaryHashTable {
     private long lookupKey;
     private int traversalBucket;
     private DualLinkNode[] buckets;
-    static long field_j;
+    static long lastDiagnosticUsedHeapKiB;
     private DualLinkNode lookupCursor;
     static int[] earnedAchievementMask;
     static String[][] field_c;

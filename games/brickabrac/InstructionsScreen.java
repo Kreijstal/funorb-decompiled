@@ -208,7 +208,7 @@ final class InstructionsScreen extends MenuScreen {
 
     InstructionsScreen() {
         super(7, 38, 460, 402, 35, LevelPackCard.field_n);
-        m.field_j = PasswordFieldRenderer.field_D.ascent + PasswordFieldRenderer.field_D.descent + 1;
+        ConditionalTextValue.field_j = PasswordFieldRenderer.field_D.ascent + PasswordFieldRenderer.field_D.descent + 1;
     }
 
     final void onEnter(boolean usePointer, int initialSelection, int obfuscationGuard) {
@@ -285,7 +285,7 @@ final class InstructionsScreen extends MenuScreen {
           PasswordFieldRenderer.field_D.setInlineSprites(un.field_e, vj.field_f);
         }
         var2 = PasswordFieldRenderer.field_D.wrapText(gh.field_b[this.pageIndex], CachedArchiveSource.field_t, ok.field_b);
-        var3 = 145 - (-m.field_j - 4);
+        var3 = 145 - (-ConditionalTextValue.field_j - 4);
         for (var4 = 0; var2 > var4; var4++) {
           var5 = PasswordFieldRenderer.field_D;
           var6 = 2;
@@ -320,7 +320,7 @@ final class InstructionsScreen extends MenuScreen {
             }
           }
           var5.drawLeft(ok.field_b[var4], 60, var3, var6, var7);
-          var3 = var3 + (m.field_j + var8);
+          var3 = var3 + (ConditionalTextValue.field_j + var8);
         }
         if (obfuscationGuard >= -14) {
           InstructionsScreen.g((byte) 61);

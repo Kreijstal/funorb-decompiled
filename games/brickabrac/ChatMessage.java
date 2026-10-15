@@ -75,7 +75,7 @@ final class ChatMessage {
           }
           for (characterIndex = startIndex; characterIndex < endIndex; characterIndex++) {
             character = name.charAt(characterIndex);
-            if (m.isNameCharacter(true, (char) character)) {
+            if (ConditionalTextValue.isNameCharacter(true, (char) character)) {
               foldedCharacter = HighscoresScreen.foldPlayerNameCharacter(207, (char) character);
               if (0 != foldedCharacter) {
                 ignoredCharacterAppend = normalized.append((char) foldedCharacter);

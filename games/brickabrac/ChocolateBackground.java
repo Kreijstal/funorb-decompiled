@@ -108,7 +108,7 @@ final class ChocolateBackground extends BackgroundScene {
         return aj.chocSegsSprites[-1 + param0];
     }
 
-    final static m f(int param0) {
+    final static ConditionalTextValue f(int param0) {
         String var1 = LevelSelectScreen.d(true);
         if (param0 < 68) {
           ChocolateBackground.d((byte) 97);
@@ -116,18 +116,18 @@ final class ChocolateBackground extends BackgroundScene {
             if (!(0 > var1.indexOf('@'))) {
               var1 = "";
             }
-            return new m(LevelSelectScreen.d(true), la.b((byte) 118));
+            return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
           }
-          return new m(LevelSelectScreen.d(true), la.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
         }
         if (var1 == null) {
-          return new m(LevelSelectScreen.d(true), la.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
         }
         if (0 <= var1.indexOf('@')) {
           var1 = "";
-          return new m(LevelSelectScreen.d(true), la.b((byte) 118));
+          return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
         }
-        return new m(LevelSelectScreen.d(true), la.b((byte) 118));
+        return new ConditionalTextValue(LevelSelectScreen.d(true), la.b((byte) 118));
     }
 
     final RgbSprite[] b(int param0) {

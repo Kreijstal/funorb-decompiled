@@ -52,7 +52,7 @@ final class hm {
           GameplayRenderHelpers.lobbyPlayers = lobbyPlayerContent.children;
           GameplayRenderHelpers.lobbyPlayers.clear((byte) -60);
           WhirlpoolHasher.lobbyPlayerIndex = new SecondaryHashTable(lobbyPlayerBuckets);
-          m.field_h = -1;
+          ConditionalTextValue.field_h = -1;
           MenuSelection.previewGameId = 0;
           uf.pendingJoinRequestCount = 0;
           ArchiveIndex.field_s = -1;

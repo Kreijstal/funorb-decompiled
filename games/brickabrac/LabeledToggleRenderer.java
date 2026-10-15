@@ -94,7 +94,7 @@ final class LabeledToggleRenderer implements WidgetRenderer {
             } else {
               AppletGameShell.field_b = WidgetGroup.field_C;
             }
-            AppletGameShell.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) AppletGameShell.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) m.field_e)}, true);
+            AppletGameShell.field_b = IntrusiveNode.a(new CharSequence[]{(CharSequence) ((Object) AppletGameShell.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ConditionalTextValue.field_e)}, true);
           }
           StrongCacheEntry.field_I.closeDialog(param0 + 17);
           NinjaBackground.e((byte) -117);

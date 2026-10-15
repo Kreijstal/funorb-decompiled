@@ -141,7 +141,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
             QuickChatCategoryDefinition.a((byte) -116);
           }
           ToggleButtonWidget.a(UsernameSuggestionPanel.field_N, 8192, WidgetTextLayout.field_a, LevelCompleteScreen.field_C);
-          ck.a(param1, 0, 14209, 0);
+          DiagnosticTextLine.a(param1, 0, 14209, 0);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "kn.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

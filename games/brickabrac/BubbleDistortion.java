@@ -213,9 +213,9 @@ final class BubbleDistortion extends CircleBody {
           PasswordFieldRenderer.soundMixer = new AudioMixer();
           AchievementBrowserScreen.field_u = param5 * param3 / param2;
           UnderwaterBackground.field_w.setRootStream(PasswordFieldRenderer.soundMixer);
-          m.musicSynthesizer = param0;
-          m.musicSynthesizer.setMasterGain(ScorePopup.field_p, false);
-          DirectByteStorage.field_f.setRootStream(m.musicSynthesizer);
+          ConditionalTextValue.musicSynthesizer = param0;
+          ConditionalTextValue.musicSynthesizer.setMasterGain(ScorePopup.field_p, false);
+          DirectByteStorage.field_f.setRootStream(ConditionalTextValue.musicSynthesizer);
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "il.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }

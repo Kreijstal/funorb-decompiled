@@ -53,7 +53,7 @@ public final class BrickABrac extends InteractiveGameClient {
           ContextActionController.field_g.drawLeft(AchievementBrowserScreen.field_s[notification.value], 48, notificationY + ContextActionController.field_g.ascent, 0, -1);
         }
         if (cf.a((byte) 62)) {
-          rd.b(-79);
+          rd.drawDiagnosticOverlay(-79);
         }
     }
 
@@ -122,7 +122,7 @@ public final class BrickABrac extends InteractiveGameClient {
           SoundCache.playUiSound(8, NineSliceFrame.uiSounds[9]);
         }
         if (cf.a((byte) 62)) {
-          sq.a(false);
+          sq.updateDiagnosticOverlay(false);
         }
         var4 = 46 / ((-61 - obfuscationGuard) / 47);
     }
@@ -523,11 +523,11 @@ public final class BrickABrac extends InteractiveGameClient {
     public final boolean handleGameKey(int keyCode, char character, int obfuscationGuard) {
         if (cf.a((byte) 62)) {
           if (keyCode == 5) {
-            GzipInflater.field_g = !GzipInflater.field_g ? true : false;
+            GzipInflater.showRenderRateDiagnostic = !GzipInflater.showRenderRateDiagnostic ? true : false;
             return true;
           }
           if (6 == keyCode) {
-            RadialSelectorRenderer.field_f = !RadialSelectorRenderer.field_f ? true : false;
+            RadialSelectorRenderer.showHeapDiagnostic = !RadialSelectorRenderer.showHeapDiagnostic ? true : false;
             return true;
           }
           if (keyCode == 7) {
@@ -646,7 +646,7 @@ public final class BrickABrac extends InteractiveGameClient {
         rb.a((byte) -116);
         BufferedFile.a(-54);
         hc.a(-61);
-        m.c(2);
+        ConditionalTextValue.c(2);
         f.a(1);
         hd.a(12);
         LoginCredentialKind.a((byte) 65);
@@ -888,7 +888,7 @@ public final class BrickABrac extends InteractiveGameClient {
         AlternateNumericLoginCredentials.b((byte) -121);
         EmailLoginCredentials.a(false);
         RasterSnapshot.a(20888);
-        ck.a(30850);
+        DiagnosticTextLine.a(30850);
         TooltipSprite.a((byte) -77);
         OptionsScreen.c(false);
         LevelCompleteScreen.h(-257);

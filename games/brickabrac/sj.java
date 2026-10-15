@@ -406,7 +406,7 @@ final class sj {
                                     ic.optionChangeDeadlineMillis = 0L;
                                     break regionExit1;
                                   case 22:
-                                    m.field_h = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
+                                    ConditionalTextValue.field_h = ((PacketBuffer) ((Object) packet)).readUnsignedShort(65280);
                                     ArchiveIndex.field_s = ((PacketBuffer) ((Object) packet)).readVarInt((byte) 119);
                                     break regionExit1;
                                   case 23:

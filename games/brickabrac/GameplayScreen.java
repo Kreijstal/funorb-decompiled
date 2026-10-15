@@ -277,7 +277,7 @@ final class GameplayScreen extends GameScreen {
           fieldTemp$2 = WidgetPaintStyle.field_j + 1;
           WidgetPaintStyle.field_j = WidgetPaintStyle.field_j + 1;
           if (fieldTemp$2 == 300) {
-            if (m.field_a) {
+            if (ConditionalTextValue.field_a) {
               fieldTemp$3 = TextLineLayout.field_f + 1;
               TextLineLayout.field_f = TextLineLayout.field_f + 1;
               System.out.println("Concluded " + fieldTemp$3 + " games (" + cf.checksumMismatchCount + " errors)");

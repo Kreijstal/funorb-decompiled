@@ -18,9 +18,9 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
     }
 
     final static int a(String param0, byte param1, boolean param2, String param3, int param4, String param5, int param6) {
-        m var7 = null;
+        ConditionalTextValue var7 = null;
         RuntimeException var7_ref = null;
-        m var8 = null;
+        ConditionalTextValue var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -31,11 +31,11 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new m(param5);
+          var7 = new ConditionalTextValue(param5);
           if (param1 > -45) {
             field_c = (lo) null;
           }
-          var8 = new m(param3);
+          var8 = new ConditionalTextValue(param3);
           stackIn_3_0 = ValidationIconWidget.a(param0, param2, param4, var7, param6, var8, 4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

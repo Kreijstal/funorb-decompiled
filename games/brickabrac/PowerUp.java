@@ -53,7 +53,7 @@ final class PowerUp extends CircleBody {
           StringBuilder var3 = (StringBuilder) null;
           this.computeSyncChecksum(61, (StringBuilder) null);
         }
-        return ck.field_m[this.typeId];
+        return DiagnosticTextLine.field_m[this.typeId];
     }
 
     final int computeSyncChecksum(int obfuscationGuard, StringBuilder diagnostics) {

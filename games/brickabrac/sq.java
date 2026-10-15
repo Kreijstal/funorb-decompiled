@@ -139,12 +139,12 @@ final class sq {
         }
     }
 
-    final static m a(int param0) {
+    final static ConditionalTextValue a(int param0) {
         if (param0 > 31) {
-          return new m(IndexedSpriteGeometry.a(57), ga.c(30794));
+          return new ConditionalTextValue(IndexedSpriteGeometry.a(57), ga.c(30794));
         }
         quickChatHelpDialog = (QuickChatHelpDialog) null;
-        return new m(IndexedSpriteGeometry.a(57), ga.c(30794));
+        return new ConditionalTextValue(IndexedSpriteGeometry.a(57), ga.c(30794));
     }
 
     public static void a(byte param0) {
@@ -181,140 +181,140 @@ final class sq {
         MusicEnvelope.a(param0, true, param1);
     }
 
-    final static void a(boolean param0) {
-        StringBuilder discarded$9 = null;
-        StringBuilder discarded$8 = null;
-        StringBuilder discarded$10 = null;
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder discarded$12 = null;
-        StringBuilder discarded$14 = null;
-        StringBuilder discarded$15 = null;
-        StringBuilder discarded$16 = null;
-        StringBuilder discarded$17 = null;
-        StringBuilder discarded$18 = null;
-        StringBuilder discarded$19 = null;
-        long var1;
-        long var3;
-        long var5;
-        LoginCredentials.field_d.clear((byte) -83);
-        if (!RadialSelectorRenderer.field_f) {
-          if (!param0) {
-            if (GzipInflater.field_g) {
-              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-                bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-                discarded$9 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = FocusableWidget.recentRenderRate;
+    final static void updateDiagnosticOverlay(boolean obfuscationGuard) {
+        StringBuilder discardedRateAppendHeapDisabled = null;
+        StringBuilder discardedRateAppendAlternateGuard = null;
+        StringBuilder discardedUsedHeapAppendAllocationChanged = null;
+        StringBuilder discardedAllocatedHeapAppendAllocationChanged = null;
+        StringBuilder discardedRateAppendAllocationChanged = null;
+        StringBuilder discardedRateAppendAllocationChangedAlternateGuard = null;
+        StringBuilder discardedRateAppendHeapUnchanged = null;
+        StringBuilder discardedRateAppendHeapUnchangedAlternateGuard = null;
+        StringBuilder discardedUsedHeapAppendUsageChanged = null;
+        StringBuilder discardedAllocatedHeapAppendUsageChanged = null;
+        StringBuilder discardedRateAppendUsageChanged = null;
+        StringBuilder discardedRateAppendUsageChangedAlternateGuard = null;
+        long allocatedHeapBytesThenKiB;
+        long freeHeapBytesThenKiB;
+        long usedHeapKiB;
+        LoginCredentials.diagnosticLines.clear((byte) -83);
+        if (!RadialSelectorRenderer.showHeapDiagnostic) {
+          if (!obfuscationGuard) {
+            if (GzipInflater.showRenderRateDiagnostic) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+                bq.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+                discardedRateAppendHeapDisabled = bq.renderRateDiagnosticLine.text.append(" fps");
+                BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
             sq.a(15);
-            if (GzipInflater.field_g) {
-              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-                bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-                discarded$8 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = FocusableWidget.recentRenderRate;
+            if (GzipInflater.showRenderRateDiagnostic) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+                bq.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+                discardedRateAppendAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+                BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
             }
           }
           return;
         }
-        var1 = Runtime.getRuntime().totalMemory();
-        var3 = Runtime.getRuntime().freeMemory();
-        var5 = (-var3 + var1) / 1024L;
-        var3 = var3 / 1024L;
-        var1 = var1 / 1024L;
-        if (~RankingsScreen.field_u != ~var1) {
-          PopupWidgetLayer.field_P.field_l.setLength(0);
-          DelegatingCanvas.a(-9, var5, PopupWidgetLayer.field_P.field_l);
-          discarded$10 = PopupWidgetLayer.field_P.field_l.append(" kB / ");
-          DelegatingCanvas.a(-9, var1, PopupWidgetLayer.field_P.field_l);
-          discarded$11 = PopupWidgetLayer.field_P.field_l.append(" kB");
-          SecondaryHashTable.field_j = var5;
-          RankingsScreen.field_u = var1;
-          LoginCredentials.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
-          if (!param0) {
-            if (GzipInflater.field_g) {
-              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-                bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-                discarded$13 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = FocusableWidget.recentRenderRate;
+        allocatedHeapBytesThenKiB = Runtime.getRuntime().totalMemory();
+        freeHeapBytesThenKiB = Runtime.getRuntime().freeMemory();
+        usedHeapKiB = (-freeHeapBytesThenKiB + allocatedHeapBytesThenKiB) / 1024L;
+        freeHeapBytesThenKiB = freeHeapBytesThenKiB / 1024L;
+        allocatedHeapBytesThenKiB = allocatedHeapBytesThenKiB / 1024L;
+        if (~RankingsScreen.lastDiagnosticAllocatedHeapKiB != ~allocatedHeapBytesThenKiB) {
+          PopupWidgetLayer.heapDiagnosticLine.text.setLength(0);
+          DelegatingCanvas.appendDiagnosticDecimal(-9, usedHeapKiB, PopupWidgetLayer.heapDiagnosticLine.text);
+          discardedUsedHeapAppendAllocationChanged = PopupWidgetLayer.heapDiagnosticLine.text.append(" kB / ");
+          DelegatingCanvas.appendDiagnosticDecimal(-9, allocatedHeapBytesThenKiB, PopupWidgetLayer.heapDiagnosticLine.text);
+          discardedAllocatedHeapAppendAllocationChanged = PopupWidgetLayer.heapDiagnosticLine.text.append(" kB");
+          SecondaryHashTable.lastDiagnosticUsedHeapKiB = usedHeapKiB;
+          RankingsScreen.lastDiagnosticAllocatedHeapKiB = allocatedHeapBytesThenKiB;
+          LoginCredentials.diagnosticLines.addLast(PopupWidgetLayer.heapDiagnosticLine, (byte) 3);
+          if (!obfuscationGuard) {
+            if (GzipInflater.showRenderRateDiagnostic) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+                bq.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+                discardedRateAppendAllocationChanged = bq.renderRateDiagnosticLine.text.append(" fps");
+                BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
             sq.a(15);
-            if (GzipInflater.field_g) {
-              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-                bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-                discarded$12 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = FocusableWidget.recentRenderRate;
+            if (GzipInflater.showRenderRateDiagnostic) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+                bq.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+                discardedRateAppendAllocationChangedAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+                BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
             }
           }
           return;
         }
-        if (SecondaryHashTable.field_j == var5) {
-          LoginCredentials.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
-          if (!param0) {
-            if (GzipInflater.field_g) {
-              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-                bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-                discarded$14 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = FocusableWidget.recentRenderRate;
+        if (SecondaryHashTable.lastDiagnosticUsedHeapKiB == usedHeapKiB) {
+          LoginCredentials.diagnosticLines.addLast(PopupWidgetLayer.heapDiagnosticLine, (byte) 3);
+          if (!obfuscationGuard) {
+            if (GzipInflater.showRenderRateDiagnostic) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+                bq.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+                discardedRateAppendHeapUnchanged = bq.renderRateDiagnosticLine.text.append(" fps");
+                BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
             }
           } else {
             sq.a(15);
-            if (GzipInflater.field_g) {
-              if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-                bq.field_b.field_l.setLength(0);
-                DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-                discarded$15 = bq.field_b.field_l.append(" fps");
-                BoundedFile.field_c = FocusableWidget.recentRenderRate;
+            if (GzipInflater.showRenderRateDiagnostic) {
+              if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+                bq.renderRateDiagnosticLine.text.setLength(0);
+                DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+                discardedRateAppendHeapUnchangedAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+                BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
               }
-              LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+              LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
             }
           }
           return;
         }
-        PopupWidgetLayer.field_P.field_l.setLength(0);
-        DelegatingCanvas.a(-9, var5, PopupWidgetLayer.field_P.field_l);
-        discarded$16 = PopupWidgetLayer.field_P.field_l.append(" kB / ");
-        DelegatingCanvas.a(-9, var1, PopupWidgetLayer.field_P.field_l);
-        discarded$17 = PopupWidgetLayer.field_P.field_l.append(" kB");
-        SecondaryHashTable.field_j = var5;
-        RankingsScreen.field_u = var1;
-        LoginCredentials.field_d.addLast(PopupWidgetLayer.field_P, (byte) 3);
-        if (!param0) {
-          if (GzipInflater.field_g) {
-            if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-              bq.field_b.field_l.setLength(0);
-              DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-              discarded$18 = bq.field_b.field_l.append(" fps");
-              BoundedFile.field_c = FocusableWidget.recentRenderRate;
+        PopupWidgetLayer.heapDiagnosticLine.text.setLength(0);
+        DelegatingCanvas.appendDiagnosticDecimal(-9, usedHeapKiB, PopupWidgetLayer.heapDiagnosticLine.text);
+        discardedUsedHeapAppendUsageChanged = PopupWidgetLayer.heapDiagnosticLine.text.append(" kB / ");
+        DelegatingCanvas.appendDiagnosticDecimal(-9, allocatedHeapBytesThenKiB, PopupWidgetLayer.heapDiagnosticLine.text);
+        discardedAllocatedHeapAppendUsageChanged = PopupWidgetLayer.heapDiagnosticLine.text.append(" kB");
+        SecondaryHashTable.lastDiagnosticUsedHeapKiB = usedHeapKiB;
+        RankingsScreen.lastDiagnosticAllocatedHeapKiB = allocatedHeapBytesThenKiB;
+        LoginCredentials.diagnosticLines.addLast(PopupWidgetLayer.heapDiagnosticLine, (byte) 3);
+        if (!obfuscationGuard) {
+          if (GzipInflater.showRenderRateDiagnostic) {
+            if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+              bq.renderRateDiagnosticLine.text.setLength(0);
+              DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+              discardedRateAppendUsageChanged = bq.renderRateDiagnosticLine.text.append(" fps");
+              BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
             }
-            LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+            LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
           }
         } else {
           sq.a(15);
-          if (GzipInflater.field_g) {
-            if (FocusableWidget.recentRenderRate != BoundedFile.field_c) {
-              bq.field_b.field_l.setLength(0);
-              DelegatingCanvas.a(-9, (long)FocusableWidget.recentRenderRate, bq.field_b.field_l);
-              discarded$19 = bq.field_b.field_l.append(" fps");
-              BoundedFile.field_c = FocusableWidget.recentRenderRate;
+          if (GzipInflater.showRenderRateDiagnostic) {
+            if (FocusableWidget.recentRenderRate != BoundedFile.lastDiagnosticRenderRate) {
+              bq.renderRateDiagnosticLine.text.setLength(0);
+              DelegatingCanvas.appendDiagnosticDecimal(-9, (long)FocusableWidget.recentRenderRate, bq.renderRateDiagnosticLine.text);
+              discardedRateAppendUsageChangedAlternateGuard = bq.renderRateDiagnosticLine.text.append(" fps");
+              BoundedFile.lastDiagnosticRenderRate = FocusableWidget.recentRenderRate;
             }
-            LoginCredentials.field_d.addLast(bq.field_b, (byte) 3);
+            LoginCredentials.diagnosticLines.addLast(bq.renderRateDiagnosticLine, (byte) 3);
           }
         }
         return;

@@ -480,7 +480,7 @@ final class JungleBackground extends BackgroundScene {
                       var10 = 1;
                     }
                     if (0 < var16 &&
-                      var16 > m.field_h) {
+                      var16 > ConditionalTextValue.field_h) {
                       var12 = 1;
                     }
                   }
@@ -620,7 +620,7 @@ final class JungleBackground extends BackgroundScene {
                         }
                       }
                       if (var12 != 0) {
-                        var30 = rd.a(QuickChatPhraseDefinition.field_x, new String[]{Integer.toString(m.field_h), Integer.toString(AchievementsScreen.field_F[var7][var9])}, (byte) 103);
+                        var30 = rd.a(QuickChatPhraseDefinition.field_x, new String[]{Integer.toString(ConditionalTextValue.field_h), Integer.toString(AchievementsScreen.field_F[var7][var9])}, (byte) 103);
                         var21 = var30;
                         var21 = var30;
                         if (null == var21) {

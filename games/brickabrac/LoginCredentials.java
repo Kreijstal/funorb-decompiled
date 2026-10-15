@@ -10,7 +10,7 @@ abstract class LoginCredentials {
     static long field_b;
     static String field_a;
     static int[] field_h;
-    static NodeDeque field_d;
+    static NodeDeque diagnosticLines;
     static String field_e;
 
     abstract void writeCredentials(int obfuscationGuard, PacketBuffer packet);
@@ -63,7 +63,7 @@ abstract class LoginCredentials {
     public static void a(byte param0) {
         field_h = null;
         field_i = (String[][]) null;
-        field_d = null;
+        diagnosticLines = null;
         field_c = null;
         worldDirectionY = null;
         field_a = null;
