@@ -21,35 +21,35 @@ final class PlayerBoard extends IntrusiveNode {
     NodeDeque queuedBalls;
     NodeDeque activeBalls;
     NodeDeque ballPulses;
-    int field_A;
+    int chargedActivationCount;
     NodeDeque fallingPowerUps;
     NodeDeque bubbles;
     ObjectHistoryBuffer powerUpHistory;
-    int field_N;
+    int beneficialPowerUpStreak;
     IntNode levelState;
     int nextPowerUpIndex;
-    int field_hb;
+    int levelsSinceBeneficialPickup;
     NodeDeque[] brickGroups;
     NodeDeque motionPaths;
     int levelIndex;
-    int field_u;
+    int harmfulPowerUpStreak;
     private int randomCallCount;
-    int field_m;
+    int lifeBrickClears;
     int boardOffset;
-    int field_Q;
+    int progressBrickClears;
     int countedBricks;
     int stateTicks;
     byte[] powerUpDropCounters;
     int boardState;
     private int randomSeed;
-    int field_G;
+    int displayedPosition256;
     private Random messageRandom;
     int boardWidth;
     private IsaacGenerator seededRandom;
-    private int field_T;
-    int field_wb;
-    int field_J;
-    boolean field_tb;
+    private int initialPaddleCenterX;
+    int boardHeight;
+    int displayedPositionVelocity256;
+    boolean backgroundChangePending;
     int positionWord;
     int characterIndex;
     int bubbleTick;
@@ -57,7 +57,7 @@ final class PlayerBoard extends IntrusiveNode {
     private Brick[] portalBricks;
     PowerUpWarning pendingWarning;
     int flaggedBrickTypeMask;
-    int field_r;
+    int levelsCleared;
     int receivedInputTick;
     String pendingMessage;
     int[] powerUpMeterLevels256;
@@ -66,9 +66,9 @@ final class PlayerBoard extends IntrusiveNode {
     PowerUpWarning displayedWarning;
     int bubbleSeed;
     int eyeExpression;
-    int field_t;
-    int field_n;
-    int field_l;
+    int lifeLevelClears;
+    int buildTicks;
+    int brickSequenceStep;
     int positionOrderTicks;
     String displayedMessage;
     int[] powerUpMeterVelocities256;
@@ -185,11 +185,11 @@ final class PlayerBoard extends IntrusiveNode {
         clientBranchFlag = BrickABrac.field_J ? 1 : 0;
         typeThreeDelay = this.ticksUntilPendingPowerUp(3, 96, 25);
         if (typeThreeDelay != -1 &&
-          typeThreeDelay > this.paddle.field_w) {
+          typeThreeDelay > this.paddle.reversedControlTicks) {
           return new PowerUpWarning(3);
         }
-        if (this.paddle.field_w > 0 &&
-          this.paddle.field_w < 25 &&
+        if (this.paddle.reversedControlTicks > 0 &&
+          this.paddle.reversedControlTicks < 25 &&
           typeThreeDelay == -1) {
           return new PowerUpWarning(3, false);
         }
@@ -317,10 +317,10 @@ final class PlayerBoard extends IntrusiveNode {
             discarded$4 = diagnostics.append("2. " + Integer.toString(var4, 16) + "\n");
           }
           if (var3_int != 0) {
-            discarded$5 = diagnostics.append("Hit brick info: " + this.countedBricks + " " + this.field_m + " " + this.field_Q + "\n");
+            discarded$5 = diagnostics.append("Hit brick info: " + this.countedBricks + " " + this.lifeBrickClears + " " + this.progressBrickClears + "\n");
           }
-          var4 = var4 ^ this.countedBricks * 11 + (this.field_m * 17 + 14334957);
-          var4 = var4 ^ 13287405 + this.field_Q * 103 << 6;
+          var4 = var4 ^ this.countedBricks * 11 + (this.lifeBrickClears * 17 + 14334957);
+          var4 = var4 ^ 13287405 + this.progressBrickClears * 103 << 6;
           if (var3_int != 0) {
             discarded$6 = diagnostics.append("3. " + Integer.toString(var4, 16) + "\n");
           }
@@ -333,10 +333,10 @@ final class PlayerBoard extends IntrusiveNode {
             discarded$8 = diagnostics.append("4. " + Integer.toString(var4, 16) + "\n");
           }
           var4 = var4 ^ 7 * this.boardWidth + 61453 << 8;
-          var4 = var4 ^ 19 * this.field_T + 17 << 17;
+          var4 = var4 ^ 19 * this.initialPaddleCenterX + 17 << 17;
           var4 = var4 ^ 12648430 + this.boardOffset * 17 << 3;
           if (!obfuscationGuard) {
-            this.field_Q = -85;
+            this.progressBrickClears = -85;
           }
           if (var3_int != 0) {
             discarded$9 = diagnostics.append("5. " + Integer.toString(var4, 16) + "\n");
@@ -432,7 +432,7 @@ final class PlayerBoard extends IntrusiveNode {
           if (var3_int != 0) {
             discarded$23 = diagnostics.append("13. " + Integer.toString(var4, 16) + "\n");
           }
-          var4 = var4 ^ 17 + 3 * this.field_n << 3;
+          var4 = var4 ^ 17 + 3 * this.buildTicks << 3;
           if (var3_int != 0) {
             discarded$24 = diagnostics.append("14. " + Integer.toString(var4, 16) + "\n");
           }
@@ -463,7 +463,7 @@ final class PlayerBoard extends IntrusiveNode {
         try {
           this.pendingMessage = messages[JavaRandomHelpers.nextBoundedJavaRandom(messages.length, this.messageRandom, true)];
           if (obfuscationGuard != 75) {
-            this.field_hb = -123;
+            this.levelsSinceBeneficialPickup = -123;
           }
         } catch (RuntimeException failure) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "j.E(" + (messages != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -529,8 +529,8 @@ final class PlayerBoard extends IntrusiveNode {
           this.score = packet.readUnsignedMedium((byte) -34);
           this.levelIndex = packet.readUnsignedByte(255);
           this.lives = packet.readUnsignedByte(255);
-          this.field_m = packet.readUnsignedShort(65280);
-          this.field_Q = packet.readUnsignedShort(65280);
+          this.lifeBrickClears = packet.readUnsignedShort(65280);
+          this.progressBrickClears = packet.readUnsignedShort(65280);
           this.positionWord = packet.readUnsignedShort(65280);
           this.randomCallCount = 0;
           var4_int = 0;
@@ -539,8 +539,8 @@ final class PlayerBoard extends IntrusiveNode {
             this.nextRandomInt(118);
             var4_int++;
           }
-          this.field_n = packet.readUnsignedShort(65280);
-          var4_intLifetime1 = this.field_n % 16;
+          this.buildTicks = packet.readUnsignedShort(65280);
+          var4_intLifetime1 = this.buildTicks % 16;
           var5 = new NodeDeque[3];
           for (var6_int = 0; var6_int < var5.length; var6_int++) {
             var5[var6_int] = new NodeDeque();
@@ -592,10 +592,10 @@ final class PlayerBoard extends IntrusiveNode {
           for (var10Lifetime1 = 3; var10Lifetime1 < 29; var10Lifetime1++) {
             this.powerUpDropCounters[var10Lifetime1] = (byte)packet.readUnsignedByte(255);
           }
-          this.field_r = packet.readUnsignedShort(65280);
+          this.levelsCleared = packet.readUnsignedShort(65280);
           this.positionOrderTicks = packet.readUnsignedShort(65280);
           this.positionWord = packet.readInt(255);
-          this.field_G = this.positionWord + this.boardOffset << 8;
+          this.displayedPosition256 = this.positionWord + this.boardOffset << 8;
           stackIn_30_0 = (1 == boardMode) ? 15 : 9;
           CacheIoRequest.addBoardBorders(stackIn_30_0, this.brickGroups[2], 16);
           return;
@@ -677,8 +677,8 @@ final class PlayerBoard extends IntrusiveNode {
 
     private final void resetServe(byte obfuscationGuard, boolean resetAccounting, int launchAngle) {
         if (resetAccounting) {
-          this.field_t = 0;
-          this.field_m = 0;
+          this.lifeLevelClears = 0;
+          this.lifeBrickClears = 0;
         }
         this.paddle.resetSize(obfuscationGuard ^ 85);
         this.queuedBalls.clear((byte) -82);
@@ -792,7 +792,7 @@ final class PlayerBoard extends IntrusiveNode {
     final int nextRandomBoundedInt(int bound, byte obfuscationGuard) {
         this.randomCallCount = this.randomCallCount + 1;
         if (obfuscationGuard != 62) {
-          this.field_J = 79;
+          this.displayedPositionVelocity256 = 79;
         }
         return this.seededRandom.nextBoundedInt(-37880252, bound);
     }
@@ -887,7 +887,7 @@ final class PlayerBoard extends IntrusiveNode {
           OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (1 + var6) * var5;
         }
         if (resetStateWord) {
-          this.field_l = 1;
+          this.brickSequenceStep = 1;
         }
         this.score = this.score + points;
         this.scorePopups.addLast(new ScorePopup(points, x256, y256), (byte) 3);
@@ -920,17 +920,17 @@ final class PlayerBoard extends IntrusiveNode {
         this.bubbles = new NodeDeque();
         this.powerUpHistory = new ObjectHistoryBuffer(500);
         this.levelState = new IntNode();
-        this.field_G = -1;
+        this.displayedPosition256 = -1;
         this.powerUpDropCounters = new byte[29];
         this.messageRandom = new Random();
         this.positionOrderTicks = -1;
         this.bubbleTick = -1;
-        this.field_wb = 466;
+        this.boardHeight = 466;
         this.boardWidth = boardWidth;
         this.boardOffset = initialBoardOffset;
-        this.field_G = initialBoardOffset << 8;
-        this.field_T = this.boardWidth / 2;
-        this.paddle = new Paddle(this.field_T << 8, 0, 0, this.boardWidth << 8);
+        this.displayedPosition256 = initialBoardOffset << 8;
+        this.initialPaddleCenterX = this.boardWidth / 2;
+        this.paddle = new Paddle(this.initialPaddleCenterX << 8, 0, 0, this.boardWidth << 8);
         this.randomSeed = randomSeed;
         this.boardState = 0;
         this.seededRandom = new IsaacGenerator(new int[]{this.randomSeed});

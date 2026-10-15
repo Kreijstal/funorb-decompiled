@@ -426,11 +426,11 @@ final class GameplayScreen extends GameScreen {
             if (this.lastReportedLevel == 1 &&
               0 == this.match.configuration.pack.packId) {
               var11 = var20;
-              var20.field_Q = 0;
-              var11.field_m = 0;
-              var20.field_u = 0;
+              var20.progressBrickClears = 0;
+              var11.lifeBrickClears = 0;
+              var20.harmfulPowerUpStreak = 0;
               var12 = var20;
-              var12.field_N = 0;
+              var12.beneficialPowerUpStreak = 0;
               var13 = (Ball) (var20.activeBalls.first(-66));
               while (var13 != null) {
                 var13.brickBounceCount = 0;
@@ -447,7 +447,7 @@ final class GameplayScreen extends GameScreen {
               ScreenshotViewer.field_r = HotspotTextWidget.a(2, this.match.configuration.getLevelTitle(this.lastReportedLevel, (byte) -122), -1);
             }
           }
-          if (var20.field_tb) {
+          if (var20.backgroundChangePending) {
             var9_int = (33423360 - 2 * (var20.paddle.x256 + var20.paddle.width256 / 2 << 8)) / 510;
             AppletFlowHelpers.field_c.bindRasterTarget();
             TabbedPane.currentBackground.drawFullBackground(true, var9_int, 0, 0, 0);
@@ -456,21 +456,21 @@ final class GameplayScreen extends GameScreen {
             HorizontalFrameHelpers.field_c = TabbedPane.currentBackground.b(-102);
             TabbedPane.currentBackground = GamePresentationHelpers.selectBackground(var20.levelState.value, (byte) 19);
             MenuScreen.field_i = 32;
-            var20.field_tb = false;
+            var20.backgroundChangePending = false;
             IntArrayRequest.lastBackgroundId = var20.levelState.value;
           }
           if (!(var20.levelIndex <= 0) ||
             this.match.configuration.pack.packId != 0) {
-            if (HalloweenBackground.field_r[0] <= var20.field_m) {
+            if (HalloweenBackground.field_r[0] <= var20.lifeBrickClears) {
               this.queueMappedBitAchievement(0, -64, 255);
             }
-            if (var20.field_m >= HalloweenBackground.field_r[1]) {
+            if (var20.lifeBrickClears >= HalloweenBackground.field_r[1]) {
               this.queueMappedBitAchievement(1, 119, 254);
             }
-            if (var20.field_m >= HalloweenBackground.field_r[2]) {
+            if (var20.lifeBrickClears >= HalloweenBackground.field_r[2]) {
               this.queueMappedBitAchievement(2, -42, 253);
             }
-            if (HalloweenBackground.field_r[39] <= var20.field_m) {
+            if (HalloweenBackground.field_r[39] <= var20.lifeBrickClears) {
               this.queueMappedBitAchievement(39, 109, 216);
             }
             if (var20.levelIndex - this.progressBaseLevel >= HalloweenBackground.field_r[3]) {
@@ -507,31 +507,31 @@ final class GameplayScreen extends GameScreen {
               this.queueMappedBitAchievement(10, -52, 245);
               break;
             }
-            if (HalloweenBackground.field_r[22] <= var20.field_l) {
+            if (HalloweenBackground.field_r[22] <= var20.brickSequenceStep) {
               this.queueMappedBitAchievement(22, -65, 233);
             }
-            if (var20.field_hb >= HalloweenBackground.field_r[29]) {
+            if (var20.levelsSinceBeneficialPickup >= HalloweenBackground.field_r[29]) {
               this.queueMappedBitAchievement(29, 114, 226);
             }
-            if (HalloweenBackground.field_r[30] <= var20.field_u) {
+            if (HalloweenBackground.field_r[30] <= var20.harmfulPowerUpStreak) {
               this.queueMappedBitAchievement(30, -118, 225);
             }
-            if (HalloweenBackground.field_r[31] <= var20.field_u) {
+            if (HalloweenBackground.field_r[31] <= var20.harmfulPowerUpStreak) {
               this.queueMappedBitAchievement(31, -33, 224);
             }
-            if (var20.field_N >= HalloweenBackground.field_r[32]) {
+            if (var20.beneficialPowerUpStreak >= HalloweenBackground.field_r[32]) {
               this.queueMappedBitAchievement(32, -94, 223);
             }
-            if (var20.field_N >= HalloweenBackground.field_r[33]) {
+            if (var20.beneficialPowerUpStreak >= HalloweenBackground.field_r[33]) {
               this.queueMappedBitAchievement(33, 112, 222);
             }
-            if (var20.field_t >= HalloweenBackground.field_r[19]) {
+            if (var20.lifeLevelClears >= HalloweenBackground.field_r[19]) {
               this.queueMappedBitAchievement(19, 85, 236);
             }
-            if (var20.field_t >= HalloweenBackground.field_r[20]) {
+            if (var20.lifeLevelClears >= HalloweenBackground.field_r[20]) {
               this.queueMappedBitAchievement(20, -128, 235);
             }
-            if (!(var20.field_t < HalloweenBackground.field_r[21])) {
+            if (!(var20.lifeLevelClears < HalloweenBackground.field_r[21])) {
               this.queueMappedBitAchievement(21, 109, 234);
             }
           }
@@ -892,16 +892,16 @@ final class GameplayScreen extends GameScreen {
           var8 = var7;
           if (48 == keyCode) {
             this.suppressResultSubmission = true;
-            var7.field_m = HalloweenBackground.field_r[0] - 5;
+            var7.lifeBrickClears = HalloweenBackground.field_r[0] - 5;
             return true;
           }
           if (keyCode == 68) {
-            var7.field_m = HalloweenBackground.field_r[1] - 5;
+            var7.lifeBrickClears = HalloweenBackground.field_r[1] - 5;
             this.suppressResultSubmission = true;
             return true;
           }
           if (66 == keyCode) {
-            var7.field_m = -5 + HalloweenBackground.field_r[2];
+            var7.lifeBrickClears = -5 + HalloweenBackground.field_r[2];
             this.suppressResultSubmission = true;
             return true;
           }
@@ -981,38 +981,38 @@ final class GameplayScreen extends GameScreen {
             }
           }
           if (70 == keyCode) {
-            var8.field_l = 6;
+            var8.brickSequenceStep = 6;
             this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 69) {
             this.suppressResultSubmission = true;
-            var7.field_hb = -1 + HalloweenBackground.field_r[29];
+            var7.levelsSinceBeneficialPickup = -1 + HalloweenBackground.field_r[29];
             return true;
           }
           if (keyCode == 40) {
-            var7.field_u = -1 + HalloweenBackground.field_r[30];
+            var7.harmfulPowerUpStreak = -1 + HalloweenBackground.field_r[30];
             this.suppressResultSubmission = true;
             return true;
           }
           if (41 == keyCode) {
-            var7.field_u = HalloweenBackground.field_r[31] - 1;
+            var7.harmfulPowerUpStreak = HalloweenBackground.field_r[31] - 1;
             this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 32) {
-            var7.field_N = HalloweenBackground.field_r[32] - 1;
+            var7.beneficialPowerUpStreak = HalloweenBackground.field_r[32] - 1;
             this.suppressResultSubmission = true;
             return true;
           }
           if (keyCode == 35) {
-            var7.field_N = -1 + HalloweenBackground.field_r[33];
+            var7.beneficialPowerUpStreak = -1 + HalloweenBackground.field_r[33];
             this.suppressResultSubmission = true;
             return true;
           }
           if (49 == keyCode) {
             this.suppressResultSubmission = true;
-            var7.field_m = HalloweenBackground.field_r[39] - 5;
+            var7.lifeBrickClears = HalloweenBackground.field_r[39] - 5;
             return true;
           }
           if (keyCode == 36) {
@@ -1310,7 +1310,7 @@ final class GameplayScreen extends GameScreen {
                 this.match.advanceBoard(inputBoard, localAudioEvents, collectedPowerUps, 0);
                 if (!this.networkedMatch) {
                   this.match.distributeQueuedAttacks(playerId, 1, collectedPowerUps, (byte) -122);
-                  inputBoard.positionWord = inputBoard.field_Q;
+                  inputBoard.positionWord = inputBoard.progressBrickClears;
                 }
                 advancedLocalTick = advancedLocalTick | 1;
                 inputBoard.simulationTick = inputBoard.simulationTick + 1;
@@ -1367,14 +1367,14 @@ final class GameplayScreen extends GameScreen {
             for (var6_intLifetime2 = 0; var6_intLifetime2 < this.match.playerCount; var6_intLifetime2++) {
               displayBoard = this.match.playerBoards[var6_intLifetime2];
               var8_intLifetime2 = displayBoard.positionWord + displayBoard.boardOffset << 8;
-              displayBoard.field_J = displayBoard.field_J + (var8_intLifetime2 - displayBoard.field_G) / 100;
-              displayBoard.field_J = 7 * displayBoard.field_J / 8;
-              if (displayBoard.field_J > 1280) {
-                displayBoard.field_J = 1280;
+              displayBoard.displayedPositionVelocity256 = displayBoard.displayedPositionVelocity256 + (var8_intLifetime2 - displayBoard.displayedPosition256) / 100;
+              displayBoard.displayedPositionVelocity256 = 7 * displayBoard.displayedPositionVelocity256 / 8;
+              if (displayBoard.displayedPositionVelocity256 > 1280) {
+                displayBoard.displayedPositionVelocity256 = 1280;
               }
-              displayBoard.field_G = displayBoard.field_G + displayBoard.field_J;
-              if (displayBoard.field_G > var8_intLifetime2) {
-                displayBoard.field_G = var8_intLifetime2;
+              displayBoard.displayedPosition256 = displayBoard.displayedPosition256 + displayBoard.displayedPositionVelocity256;
+              if (displayBoard.displayedPosition256 > var8_intLifetime2) {
+                displayBoard.displayedPosition256 = var8_intLifetime2;
               }
             }
           }

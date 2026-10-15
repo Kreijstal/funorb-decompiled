@@ -437,7 +437,7 @@ final class BufferedFile {
         var13 = BrickABrac.field_J ? 1 : 0;
         try {
           var6_int = board.boardWidth / (scaleDivisor << 1) + destinationX;
-          var7 = board.field_wb / (scaleDivisor << 1) + board.field_wb / (scaleDivisor << 3) + destinationY;
+          var7 = board.boardHeight / (scaleDivisor << 1) + board.boardHeight / (scaleDivisor << 3) + destinationY;
           var8 = TextHotspotRegion.powerUpMeterIcons[warning.typeId];
           var9 = 96;
           var10 = 512;

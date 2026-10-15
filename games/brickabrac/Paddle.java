@@ -4,16 +4,16 @@
 final class Paddle extends RectangleBody {
     int catchTicks;
     private int reboundSpeedStage;
-    int controlMode;
-    int field_w;
-    int boardSpan256;
+    int leftBound256;
+    int reversedControlTicks;
+    int rightBound256;
     static UiComponent field_C;
     static int field_x;
     private int centerX256;
     static int[] projectedVertexDepth;
     static String field_G;
     int sizeStage;
-    int field_H;
+    int aftertouchTicks;
     static int textChoiceOuterPaddingY;
 
     public static void e(int param0) {
@@ -23,12 +23,12 @@ final class Paddle extends RectangleBody {
         projectedVertexDepth = null;
     }
 
-    Paddle(int centerX256, int y256, int controlMode, int boardSpan256) {
+    Paddle(int centerX256, int y256, int leftBound256, int rightBound256) {
         super(0, y256, 0, 0, 22528, 3840, 0);
         this.reboundSpeedStage = 1;
-        this.boardSpan256 = boardSpan256;
+        this.rightBound256 = rightBound256;
         this.centerX256 = centerX256;
-        this.controlMode = controlMode;
+        this.leftBound256 = leftBound256;
         this.resetSize(0);
     }
 
@@ -49,19 +49,19 @@ final class Paddle extends RectangleBody {
           if (diagnostics != null) {
             discarded$4 = diagnostics.append("base checksum for paddle: " + Integer.toString(var3_int, 16) + "\n");
             discarded$5 = diagnostics.append(this.x256 + " " + this.y256 + " " + this.velocityX256 + " " + this.velocityY256 + " " + " " + this.typeId + " " + this.stateWord + "\n");
-            discarded$6 = diagnostics.append(this.controlMode + " " + this.boardSpan256 + " " + this.centerX256 + " " + this.sizeStage + " " + " " + this.field_w + " " + this.catchTicks + "\n");
-            discarded$7 = diagnostics.append(this.reboundSpeedStage + " " + this.field_H + "\n");
+            discarded$6 = diagnostics.append(this.leftBound256 + " " + this.rightBound256 + " " + this.centerX256 + " " + this.sizeStage + " " + " " + this.reversedControlTicks + " " + this.catchTicks + "\n");
+            discarded$7 = diagnostics.append(this.reboundSpeedStage + " " + this.aftertouchTicks + "\n");
           }
-          var3_int = var3_int ^ (this.boardSpan256 * 41 << 5) + (this.controlMode * 37 << 1);
+          var3_int = var3_int ^ (this.rightBound256 * 41 << 5) + (this.leftBound256 * 37 << 1);
           var3_int = var3_int + (64175 + this.centerX256 * 11);
           var3_int = var3_int ^ 51 + this.sizeStage * 31 << 22;
-          var3_int = var3_int ^ 85 + this.field_w * 59 << 11;
+          var3_int = var3_int ^ 85 + this.reversedControlTicks * 59 << 11;
           if (obfuscationGuard <= 79) {
-            this.field_w = 12;
+            this.reversedControlTicks = 12;
           }
           var3_int = var3_int + (this.catchTicks * 29 << 26);
           var3_int = var3_int ^ 10 + 13 * this.reboundSpeedStage << 28;
-          var3_int = var3_int ^ this.field_H * 83 + 45050 << 2;
+          var3_int = var3_int ^ this.aftertouchTicks * 83 + 45050 << 2;
           stackIn_6_0 = var3_int;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,7 +213,7 @@ final class Paddle extends RectangleBody {
         this.x256 = this.centerX256 - 11264;
         this.sizeStage = 8;
         this.width256 = 22528;
-        this.field_H = resetState;
+        this.aftertouchTicks = resetState;
     }
 
     final void grow(int obfuscationGuard) {
@@ -247,9 +247,9 @@ final class Paddle extends RectangleBody {
         try {
           this.reboundSpeedStage = 15 & this.sizeStage >> 4;
           this.sizeStage = this.sizeStage & 15;
-          this.field_w = packet.readUnsignedShort(65280);
+          this.reversedControlTicks = packet.readUnsignedShort(65280);
           this.catchTicks = packet.readUnsignedShort(65280);
-          this.field_H = packet.readUnsignedShort(65280);
+          this.aftertouchTicks = packet.readUnsignedShort(65280);
           this.width256 = 32 + (6 * this.sizeStage + 8) << 8;
         } catch (RuntimeException runtimeException) {
           throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vo.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');

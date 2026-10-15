@@ -7132,6 +7132,14 @@
       "renamedSymbol": "F:LabeledToggleRenderer.font:LTextFont;"
     },
     {
+      "symbol": "F:ej.field_E:[I",
+      "originalName": "field_E",
+      "to": "brickSequenceStepsByType",
+      "evidence": "ej.java: The fixed 29-entry table assigns steps1..7 to the reviewed brick types; Brick.onCircleContact compares its type entry with brickSequenceStep plus1. Cleanup and assignments retain their existing owner.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:StrongCacheEntry.brickSequenceStepsByType:[I"
+    },
+    {
       "symbol": "F:ej.field_F:Lvl;",
       "originalName": "field_F",
       "to": "pendingAchievementMaskRequests",
@@ -10340,6 +10348,14 @@
       "renamedSymbol": "F:MicrosoftDirectSoundInitializer.bufferCursors:[Lcom/ms/directX/DSCursors;"
     },
     {
+      "symbol": "F:j.field_A:I",
+      "originalName": "field_A",
+      "to": "chargedActivationCount",
+      "evidence": "j.java: Counts action updates that detonate at least one charged ball; a single update counts once even when several balls activate. New-level setup clears it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.chargedActivationCount:I"
+    },
+    {
       "symbol": "F:j.field_B:Ljava/util/Random;",
       "originalName": "field_B",
       "to": "messageRandom",
@@ -10380,6 +10396,14 @@
       "renamedSymbol": "F:PlayerBoard.simulationTick:I"
     },
     {
+      "symbol": "F:j.field_G:I",
+      "originalName": "field_G",
+      "to": "displayedPosition256",
+      "evidence": "j.java: Initialized from boardOffset shifted8 and reset from positionWord plus boardOffset shifted8 on snapshots; eased by displayedPositionVelocity256 and read by race-track rendering. The units retain the existing positionWord qualification.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.displayedPosition256:I"
+    },
+    {
       "symbol": "F:j.field_H:I",
       "originalName": "field_H",
       "to": "characterIndex",
@@ -10394,6 +10418,14 @@
       "evidence": "j.java: Primary held-key code mapped to bit4.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlayerBoard.actionKeyCode:I"
+    },
+    {
+      "symbol": "F:j.field_J:I",
+      "originalName": "field_J",
+      "to": "displayedPositionVelocity256",
+      "evidence": "j.java: Display-only position velocity adds target-position error divided by100, damps by7/8, caps only positive velocity at1280 and advances displayedPosition256. The noncanonical random guard still writes79.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.displayedPositionVelocity256:I"
     },
     {
       "symbol": "F:j.field_K:Lvl;",
@@ -10420,6 +10452,14 @@
       "renamedSymbol": "F:PlayerBoard.positionOrderTicks:I"
     },
     {
+      "symbol": "F:j.field_N:I",
+      "originalName": "field_N",
+      "to": "beneficialPowerUpStreak",
+      "evidence": "j.java: The single-player self-targeted or type13 pickup branch increments this and clears harmfulPowerUpStreak; harmful pickups clear this counter.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.beneficialPowerUpStreak:I"
+    },
+    {
       "symbol": "F:j.field_O:[Lon;",
       "originalName": "field_O",
       "to": "portalBricks",
@@ -10436,6 +10476,14 @@
       "renamedSymbol": "F:PlayerBoard.stateTicks:I"
     },
     {
+      "symbol": "F:j.field_Q:I",
+      "originalName": "field_Q",
+      "to": "progressBrickClears",
+      "evidence": "j.java: Qualifying brick removals increment this separate progress counter; local simulation copies it into positionWord. The initial tutorial exclusion clears it; board snapshots and the checksum preserve it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.progressBrickClears:I"
+    },
+    {
       "symbol": "F:j.field_R:I",
       "originalName": "field_R",
       "to": "bubbleSeed",
@@ -10450,6 +10498,14 @@
       "evidence": "j.java: OR of type bits for eligible installed bricks with flag2.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlayerBoard.flaggedBrickTypeMask:I"
+    },
+    {
+      "symbol": "F:j.field_T:I",
+      "originalName": "field_T",
+      "to": "initialPaddleCenterX",
+      "evidence": "j.java: Constructor stores boardWidth/2 in pixels and passes it shifted8 to the initial paddle; the synchronization checksum also includes this retained seed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.initialPaddleCenterX:I"
     },
     {
       "symbol": "F:j.field_U:I",
@@ -10556,6 +10612,14 @@
       "renamedSymbol": "F:PlayerBoard.activeBalls:LNodeDeque;"
     },
     {
+      "symbol": "F:j.field_hb:I",
+      "originalName": "field_hb",
+      "to": "levelsSinceBeneficialPickup",
+      "evidence": "j.java: Counts level-completion events since the last single-player beneficial pickup, including completion of the partly played pickup level. The reset branch includes self-targeted pickups and type13. The message guard retains its noncanonical -123 write.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.levelsSinceBeneficialPickup:I"
+    },
+    {
       "symbol": "F:j.field_i:I",
       "originalName": "field_i",
       "to": "messageTicks",
@@ -10596,6 +10660,14 @@
       "renamedSymbol": "F:PlayerBoard.powerUpHistory:LObjectHistoryBuffer;"
     },
     {
+      "symbol": "F:j.field_l:I",
+      "originalName": "field_l",
+      "to": "brickSequenceStep",
+      "evidence": "j.java: Brick contact advances only when the per-type table equals the next step, otherwise resets for unflagged bricks. Charged activation clears it and guarded score addition can seed1; achievement22 reads the retained step.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.brickSequenceStep:I"
+    },
+    {
       "symbol": "F:j.field_lb:Ljava/lang/String;",
       "originalName": "field_lb",
       "to": "pendingMessage",
@@ -10604,12 +10676,28 @@
       "renamedSymbol": "F:PlayerBoard.pendingMessage:Ljava/lang/String;"
     },
     {
+      "symbol": "F:j.field_m:I",
+      "originalName": "field_m",
+      "to": "lifeBrickClears",
+      "evidence": "j.java: Qualifying completed brick-removal transitions increment this achievement counter. Accounting reset on a new life and the first tutorial-level exclusion clear it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.lifeBrickClears:I"
+    },
+    {
       "symbol": "F:j.field_mb:I",
       "originalName": "field_mb",
       "to": "boardWidth",
       "evidence": "j.java: Player board constructor, queued attack scheduling, brick/ball/paddle geometry and scoring paths; board offset participates in scrolling/progress state; finer meaning remains qualified.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlayerBoard.boardWidth:I"
+    },
+    {
+      "symbol": "F:j.field_n:I",
+      "originalName": "field_n",
+      "to": "buildTicks",
+      "evidence": "j.java: Power-up16 adds16. Eligible updates shift bricks/waypoints by one pixel and decrement this counter, inserting a row at multiples of16. Snapshots undo the partial-row displacement using its remainder.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.buildTicks:I"
     },
     {
       "symbol": "F:j.field_nb:Lvl;",
@@ -10668,6 +10756,14 @@
       "renamedSymbol": "F:PlayerBoard.levelIndex:I"
     },
     {
+      "symbol": "F:j.field_r:I",
+      "originalName": "field_r",
+      "to": "levelsCleared",
+      "evidence": "j.java: Increments at level completion and is restored from the board snapshot; it distinguishes the first level presentation from subsequent levels.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.levelsCleared:I"
+    },
+    {
       "symbol": "F:j.field_rb:I",
       "originalName": "field_rb",
       "to": "lives",
@@ -10690,6 +10786,30 @@
       "evidence": "j.java: Player board constructor, queued attack scheduling, brick/ball/paddle geometry and scoring paths; board offset participates in scrolling/progress state; finer meaning remains qualified.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlayerBoard.randomSeed:I"
+    },
+    {
+      "symbol": "F:j.field_t:I",
+      "originalName": "field_t",
+      "to": "lifeLevelClears",
+      "evidence": "j.java: Level completion increments this achievement counter; resetServe with resetAccounting clears it on a new life.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.lifeLevelClears:I"
+    },
+    {
+      "symbol": "F:j.field_tb:Z",
+      "originalName": "field_tb",
+      "to": "backgroundChangePending",
+      "evidence": "j.java: Set when single-player level setup changes the selected background after at least one clear; GameplayScreen captures the outgoing background, selects the replacement and clears this flag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.backgroundChangePending:Z"
+    },
+    {
+      "symbol": "F:j.field_u:I",
+      "originalName": "field_u",
+      "to": "harmfulPowerUpStreak",
+      "evidence": "j.java: The single-player opponent-targeted/non-type13 pickup branch increments this and clears beneficialPowerUpStreak; beneficial pickups clear this counter.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.harmfulPowerUpStreak:I"
     },
     {
       "symbol": "F:j.field_ub:I",
@@ -10722,6 +10842,14 @@
       "evidence": "j.java: Active warning record aged and rendered independently of pending record.",
       "confidence": "reviewed",
       "renamedSymbol": "F:PlayerBoard.displayedWarning:LPowerUpWarning;"
+    },
+    {
+      "symbol": "F:j.field_wb:I",
+      "originalName": "field_wb",
+      "to": "boardHeight",
+      "evidence": "j.java: Constructor initializes466 pixels; board rendering uses it for the vertical clip and warning placement scales against this height.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:PlayerBoard.boardHeight:I"
     },
     {
       "symbol": "F:j.field_x:Lvl;",
@@ -20478,10 +20606,10 @@
     {
       "symbol": "F:vo.field_B:I",
       "originalName": "field_B",
-      "to": "controlMode",
-      "evidence": "vo.java: Paddle construction/reset and growth/shrink: center remains fixed while width changes in3072-unit increments; control mode retains its numeric encoding.",
+      "to": "leftBound256",
+      "evidence": "vo.java: The constructor retains this lower X edge; advanceBoard clamps paddle.x256 against it in every movement substep. The independent movement contract checks negative/nonzero bounds against the original gamepack and both source variants.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:Paddle.controlMode:I"
+      "renamedSymbol": "F:Paddle.leftBound256:I"
     },
     {
       "symbol": "F:vo.field_D:I",
@@ -20495,7 +20623,7 @@
       "symbol": "F:vo.field_E:I",
       "originalName": "field_E",
       "to": "centerX256",
-      "evidence": "vo.java: Paddle construction/reset and growth/shrink: center remains fixed while width changes in3072-unit increments; control mode retains its numeric encoding.",
+      "evidence": "vo.java: Paddle construction/reset and growth/shrink: center remains fixed while width changes in3072-unit increments.",
       "confidence": "reviewed",
       "renamedSymbol": "F:Paddle.centerX256:I"
     },
@@ -20503,9 +20631,17 @@
       "symbol": "F:vo.field_F:I",
       "originalName": "field_F",
       "to": "sizeStage",
-      "evidence": "vo.java: Paddle construction/reset and growth/shrink: center remains fixed while width changes in3072-unit increments; control mode retains its numeric encoding.",
+      "evidence": "vo.java: Paddle construction/reset and growth/shrink: center remains fixed while width changes in3072-unit increments.",
       "confidence": "reviewed",
       "renamedSymbol": "F:Paddle.sizeStage:I"
+    },
+    {
+      "symbol": "F:vo.field_H:I",
+      "originalName": "field_H",
+      "to": "aftertouchTicks",
+      "evidence": "vo.java: Power-up12 adds300; positive values reverse ball horizontal velocity toward the paddle center during movement substeps. The update decrements this timer; wipe-out and reset clear it. Snapshot/checksum positions are unchanged.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:Paddle.aftertouchTicks:I"
     },
     {
       "symbol": "F:vo.field_v:[I",
@@ -20516,12 +20652,20 @@
       "renamedSymbol": "F:Paddle.projectedVertexDepth:[I"
     },
     {
+      "symbol": "F:vo.field_w:I",
+      "originalName": "field_w",
+      "to": "reversedControlTicks",
+      "evidence": "vo.java: Power-up3 adds250. While positive, advanceBoard flips the low two direction bits before computing paddle velocity, then decrements the timer. Snapshot/checksum and expiry-warning paths retain this same field.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:Paddle.reversedControlTicks:I"
+    },
+    {
       "symbol": "F:vo.field_y:I",
       "originalName": "field_y",
-      "to": "boardSpan256",
-      "evidence": "vo.java: Paddle construction/reset and growth/shrink: center remains fixed while width changes in3072-unit increments; control mode retains its numeric encoding.",
+      "to": "rightBound256",
+      "evidence": "vo.java: The constructor retains this upper right edge; advanceBoard clamps paddle.x256 to rightBound256 minus width256 in every movement substep. This is an edge coordinate, not a movement mode or a span measured from the left bound.",
       "confidence": "reviewed",
-      "renamedSymbol": "F:Paddle.boardSpan256:I"
+      "renamedSymbol": "F:Paddle.rightBound256:I"
     },
     {
       "symbol": "F:vo.field_z:I",
@@ -117743,7 +117887,7 @@
       "symbol": "P:vo.<init>(IIII)V#0",
       "originalName": "param0",
       "to": "centerX256",
-      "evidence": "vo.java: Constructs15-pixel-high paddle and resets its88-pixel width.",
+      "evidence": "vo.java: Constructs15-pixel-high paddle with explicit left/right movement edges and resets its88-pixel width; the original-gamepack motion model verifies the retained bounds.",
       "confidence": "reviewed",
       "renamedSymbol": "P:Paddle.<init>(IIII)V#0"
     },
@@ -117751,23 +117895,23 @@
       "symbol": "P:vo.<init>(IIII)V#1",
       "originalName": "param1",
       "to": "y256",
-      "evidence": "vo.java: Constructs15-pixel-high paddle and resets its88-pixel width.",
+      "evidence": "vo.java: Constructs15-pixel-high paddle with explicit left/right movement edges and resets its88-pixel width; the original-gamepack motion model verifies the retained bounds.",
       "confidence": "reviewed",
       "renamedSymbol": "P:Paddle.<init>(IIII)V#1"
     },
     {
       "symbol": "P:vo.<init>(IIII)V#2",
       "originalName": "param2",
-      "to": "controlMode",
-      "evidence": "vo.java: Constructs15-pixel-high paddle and resets its88-pixel width.",
+      "to": "leftBound256",
+      "evidence": "vo.java: Constructs15-pixel-high paddle with explicit left/right movement edges and resets its88-pixel width; the original-gamepack motion model verifies the retained bounds.",
       "confidence": "reviewed",
       "renamedSymbol": "P:Paddle.<init>(IIII)V#2"
     },
     {
       "symbol": "P:vo.<init>(IIII)V#3",
       "originalName": "param3",
-      "to": "boardSpan256",
-      "evidence": "vo.java: Constructs15-pixel-high paddle and resets its88-pixel width.",
+      "to": "rightBound256",
+      "evidence": "vo.java: Constructs15-pixel-high paddle with explicit left/right movement edges and resets its88-pixel width; the original-gamepack motion model verifies the retained bounds.",
       "confidence": "reviewed",
       "renamedSymbol": "P:Paddle.<init>(IIII)V#3"
     },
@@ -132204,9 +132348,9 @@
     },
     {
       "symbol": "F:ej.field_E:[I",
-      "renamedSymbol": "F:StrongCacheEntry.field_E:[I",
+      "renamedSymbol": "F:StrongCacheEntry.brickSequenceStepsByType:[I",
       "originalName": "field_E",
-      "renamedName": "field_E",
+      "renamedName": "brickSequenceStepsByType",
       "declaration": {
         "file": "ej.java",
         "start": 207,
@@ -139112,9 +139256,9 @@
     },
     {
       "symbol": "F:j.field_A:I",
-      "renamedSymbol": "F:PlayerBoard.field_A:I",
+      "renamedSymbol": "F:PlayerBoard.chargedActivationCount:I",
       "originalName": "field_A",
-      "renamedName": "field_A",
+      "renamedName": "chargedActivationCount",
       "declaration": {
         "file": "j.java",
         "start": 410,
@@ -139178,9 +139322,9 @@
     },
     {
       "symbol": "F:j.field_G:I",
-      "renamedSymbol": "F:PlayerBoard.field_G:I",
+      "renamedSymbol": "F:PlayerBoard.displayedPosition256:I",
       "originalName": "field_G",
-      "renamedName": "field_G",
+      "renamedName": "displayedPosition256",
       "declaration": {
         "file": "j.java",
         "start": 789,
@@ -139211,9 +139355,9 @@
     },
     {
       "symbol": "F:j.field_J:I",
-      "renamedSymbol": "F:PlayerBoard.field_J:I",
+      "renamedSymbol": "F:PlayerBoard.displayedPositionVelocity256:I",
       "originalName": "field_J",
-      "renamedName": "field_J",
+      "renamedName": "displayedPositionVelocity256",
       "declaration": {
         "file": "j.java",
         "start": 919,
@@ -139255,9 +139399,9 @@
     },
     {
       "symbol": "F:j.field_N:I",
-      "renamedSymbol": "F:PlayerBoard.field_N:I",
+      "renamedSymbol": "F:PlayerBoard.beneficialPowerUpStreak:I",
       "originalName": "field_N",
-      "renamedName": "field_N",
+      "renamedName": "beneficialPowerUpStreak",
       "declaration": {
         "file": "j.java",
         "start": 477,
@@ -139288,9 +139432,9 @@
     },
     {
       "symbol": "F:j.field_Q:I",
-      "renamedSymbol": "F:PlayerBoard.field_Q:I",
+      "renamedSymbol": "F:PlayerBoard.progressBrickClears:I",
       "originalName": "field_Q",
-      "renamedName": "field_Q",
+      "renamedName": "progressBrickClears",
       "declaration": {
         "file": "j.java",
         "start": 675,
@@ -139321,9 +139465,9 @@
     },
     {
       "symbol": "F:j.field_T:I",
-      "renamedSymbol": "F:PlayerBoard.field_T:I",
+      "renamedSymbol": "F:PlayerBoard.initialPaddleCenterX:I",
       "originalName": "field_T",
-      "renamedName": "field_T",
+      "renamedName": "initialPaddleCenterX",
       "declaration": {
         "file": "j.java",
         "start": 884,
@@ -139475,9 +139619,9 @@
     },
     {
       "symbol": "F:j.field_hb:I",
-      "renamedSymbol": "F:PlayerBoard.field_hb:I",
+      "renamedSymbol": "F:PlayerBoard.levelsSinceBeneficialPickup:I",
       "originalName": "field_hb",
-      "renamedName": "field_hb",
+      "renamedName": "levelsSinceBeneficialPickup",
       "declaration": {
         "file": "j.java",
         "start": 528,
@@ -139552,9 +139696,9 @@
     },
     {
       "symbol": "F:j.field_l:I",
-      "renamedSymbol": "F:PlayerBoard.field_l:I",
+      "renamedSymbol": "F:PlayerBoard.brickSequenceStep:I",
       "originalName": "field_l",
-      "renamedName": "field_l",
+      "renamedName": "brickSequenceStep",
       "declaration": {
         "file": "j.java",
         "start": 1279,
@@ -139574,9 +139718,9 @@
     },
     {
       "symbol": "F:j.field_m:I",
-      "renamedSymbol": "F:PlayerBoard.field_m:I",
+      "renamedSymbol": "F:PlayerBoard.lifeBrickClears:I",
       "originalName": "field_m",
-      "renamedName": "field_m",
+      "renamedName": "lifeBrickClears",
       "declaration": {
         "file": "j.java",
         "start": 640,
@@ -139596,9 +139740,9 @@
     },
     {
       "symbol": "F:j.field_n:I",
-      "renamedSymbol": "F:PlayerBoard.field_n:I",
+      "renamedSymbol": "F:PlayerBoard.buildTicks:I",
       "originalName": "field_n",
-      "renamedName": "field_n",
+      "renamedName": "buildTicks",
       "declaration": {
         "file": "j.java",
         "start": 1262,
@@ -139684,9 +139828,9 @@
     },
     {
       "symbol": "F:j.field_r:I",
-      "renamedSymbol": "F:PlayerBoard.field_r:I",
+      "renamedSymbol": "F:PlayerBoard.levelsCleared:I",
       "originalName": "field_r",
-      "renamedName": "field_r",
+      "renamedName": "levelsCleared",
       "declaration": {
         "file": "j.java",
         "start": 1085,
@@ -139728,9 +139872,9 @@
     },
     {
       "symbol": "F:j.field_t:I",
-      "renamedSymbol": "F:PlayerBoard.field_t:I",
+      "renamedSymbol": "F:PlayerBoard.lifeLevelClears:I",
       "originalName": "field_t",
-      "renamedName": "field_t",
+      "renamedName": "lifeLevelClears",
       "declaration": {
         "file": "j.java",
         "start": 1245,
@@ -139739,9 +139883,9 @@
     },
     {
       "symbol": "F:j.field_tb:Z",
-      "renamedSymbol": "F:PlayerBoard.field_tb:Z",
+      "renamedSymbol": "F:PlayerBoard.backgroundChangePending:Z",
       "originalName": "field_tb",
-      "renamedName": "field_tb",
+      "renamedName": "backgroundChangePending",
       "declaration": {
         "file": "j.java",
         "start": 940,
@@ -139750,9 +139894,9 @@
     },
     {
       "symbol": "F:j.field_u:I",
-      "renamedSymbol": "F:PlayerBoard.field_u:I",
+      "renamedSymbol": "F:PlayerBoard.harmfulPowerUpStreak:I",
       "originalName": "field_u",
-      "renamedName": "field_u",
+      "renamedName": "harmfulPowerUpStreak",
       "declaration": {
         "file": "j.java",
         "start": 598,
@@ -139805,9 +139949,9 @@
     },
     {
       "symbol": "F:j.field_wb:I",
-      "renamedSymbol": "F:PlayerBoard.field_wb:I",
+      "renamedSymbol": "F:PlayerBoard.boardHeight:I",
       "originalName": "field_wb",
-      "renamedName": "field_wb",
+      "renamedName": "boardHeight",
       "declaration": {
         "file": "j.java",
         "start": 901,
@@ -161145,9 +161289,9 @@
     },
     {
       "symbol": "F:vo.field_B:I",
-      "renamedSymbol": "F:Paddle.controlMode:I",
+      "renamedSymbol": "F:Paddle.leftBound256:I",
       "originalName": "field_B",
-      "renamedName": "controlMode",
+      "renamedName": "leftBound256",
       "declaration": {
         "file": "vo.java",
         "start": 116,
@@ -161211,9 +161355,9 @@
     },
     {
       "symbol": "F:vo.field_H:I",
-      "renamedSymbol": "F:Paddle.field_H:I",
+      "renamedSymbol": "F:Paddle.aftertouchTicks:I",
       "originalName": "field_H",
-      "renamedName": "field_H",
+      "renamedName": "aftertouchTicks",
       "declaration": {
         "file": "vo.java",
         "start": 309,
@@ -161233,9 +161377,9 @@
     },
     {
       "symbol": "F:vo.field_w:I",
-      "renamedSymbol": "F:Paddle.field_w:I",
+      "renamedSymbol": "F:Paddle.reversedControlTicks:I",
       "originalName": "field_w",
-      "renamedName": "field_w",
+      "renamedName": "reversedControlTicks",
       "declaration": {
         "file": "vo.java",
         "start": 133,
@@ -161255,9 +161399,9 @@
     },
     {
       "symbol": "F:vo.field_y:I",
-      "renamedSymbol": "F:Paddle.boardSpan256:I",
+      "renamedSymbol": "F:Paddle.rightBound256:I",
       "originalName": "field_y",
-      "renamedName": "boardSpan256",
+      "renamedName": "rightBound256",
       "declaration": {
         "file": "vo.java",
         "start": 150,
@@ -473624,7 +473768,7 @@
       "symbol": "P:vo.<init>(IIII)V#2",
       "renamedSymbol": "P:Paddle.<init>(IIII)V#2",
       "originalName": "param2",
-      "renamedName": "controlMode",
+      "renamedName": "leftBound256",
       "declaration": {
         "file": "vo.java",
         "start": 541,
@@ -473635,7 +473779,7 @@
       "symbol": "P:vo.<init>(IIII)V#3",
       "renamedSymbol": "P:Paddle.<init>(IIII)V#3",
       "originalName": "param3",
-      "renamedName": "boardSpan256",
+      "renamedName": "rightBound256",
       "declaration": {
         "file": "vo.java",
         "start": 553,
@@ -507390,7 +507534,7 @@
       "original": "ak.java",
       "renamed": "MultiplayerMatch.java",
       "inputSha256": "44ef57260a869da05db5b717d65518d04318fe4b8ac90975756f82aa77d07565",
-      "outputSha256": "c1841c2f587dfa93533fe682dfa777991c77e847e52fd1095a107132b65efa9e",
+      "outputSha256": "aecff863d962fa2135c93ed9f611bdd06f0dfbc5fa0351404e8cc6a22b11c7a6",
       "edits": [
         {
           "start": 50,
@@ -509115,6 +509259,13 @@
           "renamed": "paddle"
         },
         {
+          "start": 8095,
+          "end": 8102,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 8120,
           "end": 8126,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -509365,6 +509516,13 @@
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 8928,
+          "end": 8935,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
         },
         {
           "start": 8973,
@@ -510011,6 +510169,13 @@
           "renamed": "board"
         },
         {
+          "start": 12618,
+          "end": 12625,
+          "symbol": "F:j.field_A:I",
+          "original": "field_A",
+          "renamed": "chargedActivationCount"
+        },
+        {
           "start": 12647,
           "end": 12653,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -510018,11 +510183,25 @@
           "renamed": "board"
         },
         {
+          "start": 12654,
+          "end": 12661,
+          "symbol": "F:j.field_A:I",
+          "original": "field_A",
+          "renamed": "chargedActivationCount"
+        },
+        {
           "start": 12664,
           "end": 12670,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 12671,
+          "end": 12678,
+          "symbol": "F:j.field_A:I",
+          "original": "field_A",
+          "renamed": "chargedActivationCount"
         },
         {
           "start": 12784,
@@ -510038,6 +510217,13 @@
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 12840,
+          "end": 12847,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
         },
         {
           "start": 12930,
@@ -510462,11 +510648,25 @@
           "renamed": "board"
         },
         {
+          "start": 15423,
+          "end": 15430,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
           "start": 15433,
           "end": 15439,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 15440,
+          "end": 15447,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 15477,
@@ -510476,11 +510676,25 @@
           "renamed": "board"
         },
         {
+          "start": 15484,
+          "end": 15491,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
+        },
+        {
           "start": 15494,
           "end": 15500,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 15501,
+          "end": 15508,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
         },
         {
           "start": 15564,
@@ -510917,11 +511131,25 @@
           "renamed": "paddle"
         },
         {
+          "start": 17802,
+          "end": 17809,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 17831,
           "end": 17835,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#43",
           "original": "var7",
           "renamed": "paddle"
+        },
+        {
+          "start": 17836,
+          "end": 17843,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
         },
         {
           "start": 17846,
@@ -510931,11 +511159,25 @@
           "renamed": "paddle"
         },
         {
+          "start": 17851,
+          "end": 17858,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 17894,
           "end": 17898,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#43",
           "original": "var7",
           "renamed": "paddle"
+        },
+        {
+          "start": 17899,
+          "end": 17906,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
         },
         {
           "start": 17928,
@@ -510945,11 +511187,25 @@
           "renamed": "paddle"
         },
         {
+          "start": 17933,
+          "end": 17940,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
+        },
+        {
           "start": 17943,
           "end": 17947,
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#43",
           "original": "var7",
           "renamed": "paddle"
+        },
+        {
+          "start": 17948,
+          "end": 17955,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
         },
         {
           "start": 17995,
@@ -511001,6 +511257,13 @@
           "renamed": "board"
         },
         {
+          "start": 18136,
+          "end": 18143,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
+        },
+        {
           "start": 18163,
           "end": 18169,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -511008,11 +511271,25 @@
           "renamed": "board"
         },
         {
+          "start": 18170,
+          "end": 18177,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
+        },
+        {
           "start": 18180,
           "end": 18186,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 18187,
+          "end": 18194,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
         },
         {
           "start": 18286,
@@ -511400,6 +511677,13 @@
           "renamed": "board"
         },
         {
+          "start": 20614,
+          "end": 20621,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
+        },
+        {
           "start": 20648,
           "end": 20654,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -511421,11 +511705,25 @@
           "renamed": "board"
         },
         {
+          "start": 20693,
+          "end": 20700,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
+        },
+        {
           "start": 20703,
           "end": 20709,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 20710,
+          "end": 20717,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
         },
         {
           "start": 20741,
@@ -511435,11 +511733,25 @@
           "renamed": "board"
         },
         {
+          "start": 20748,
+          "end": 20756,
+          "symbol": "F:j.field_hb:I",
+          "original": "field_hb",
+          "renamed": "levelsSinceBeneficialPickup"
+        },
+        {
           "start": 20759,
           "end": 20765,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 20766,
+          "end": 20774,
+          "symbol": "F:j.field_hb:I",
+          "original": "field_hb",
+          "renamed": "levelsSinceBeneficialPickup"
         },
         {
           "start": 20798,
@@ -511449,11 +511761,25 @@
           "renamed": "board"
         },
         {
+          "start": 20805,
+          "end": 20812,
+          "symbol": "F:j.field_t:I",
+          "original": "field_t",
+          "renamed": "lifeLevelClears"
+        },
+        {
           "start": 20815,
           "end": 20821,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 20822,
+          "end": 20829,
+          "symbol": "F:j.field_t:I",
+          "original": "field_t",
+          "renamed": "lifeLevelClears"
         },
         {
           "start": 20867,
@@ -512170,11 +512496,25 @@
           "renamed": "board"
         },
         {
+          "start": 24463,
+          "end": 24470,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
           "start": 24500,
           "end": 24506,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 24507,
+          "end": 24515,
+          "symbol": "F:j.field_hb:I",
+          "original": "field_hb",
+          "renamed": "levelsSinceBeneficialPickup"
         },
         {
           "start": 24545,
@@ -512184,11 +512524,25 @@
           "renamed": "board"
         },
         {
+          "start": 24552,
+          "end": 24559,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
+        },
+        {
           "start": 24562,
           "end": 24568,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 24569,
+          "end": 24576,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
         },
         {
           "start": 24637,
@@ -512198,6 +512552,13 @@
           "renamed": "board"
         },
         {
+          "start": 24644,
+          "end": 24651,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
           "start": 24654,
           "end": 24660,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -512205,11 +512566,25 @@
           "renamed": "board"
         },
         {
+          "start": 24661,
+          "end": 24668,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
           "start": 24698,
           "end": 24704,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 24705,
+          "end": 24712,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
         },
         {
           "start": 24788,
@@ -512440,7 +512815,7 @@
           "end": 25655,
           "symbol": "F:vo.field_B:I",
           "original": "field_B",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
         },
         {
           "start": 25658,
@@ -512482,7 +512857,7 @@
           "end": 25717,
           "symbol": "F:vo.field_B:I",
           "original": "field_B",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
         },
         {
           "start": 25754,
@@ -512510,7 +512885,7 @@
           "end": 25781,
           "symbol": "F:vo.field_y:I",
           "original": "field_y",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 25784,
@@ -512566,7 +512941,7 @@
           "end": 25859,
           "symbol": "F:vo.field_y:I",
           "original": "field_y",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 25895,
@@ -512574,6 +512949,13 @@
           "symbol": "L:ak.a(Lj;Lvl;Lvl;I)V#43",
           "original": "var7",
           "renamed": "paddle"
+        },
+        {
+          "start": 25900,
+          "end": 25907,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
         },
         {
           "start": 25931,
@@ -513675,6 +514057,13 @@
           "renamed": "board"
         },
         {
+          "start": 29522,
+          "end": 29529,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
+        },
+        {
           "start": 29534,
           "end": 29540,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -513724,11 +514113,25 @@
           "renamed": "board"
         },
         {
+          "start": 29642,
+          "end": 29650,
+          "symbol": "F:j.field_tb:Z",
+          "original": "field_tb",
+          "renamed": "backgroundChangePending"
+        },
+        {
           "start": 29693,
           "end": 29699,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 29700,
+          "end": 29707,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
         },
         {
           "start": 29788,
@@ -513892,6 +514295,13 @@
           "renamed": "board"
         },
         {
+          "start": 30276,
+          "end": 30283,
+          "symbol": "F:j.field_A:I",
+          "original": "field_A",
+          "renamed": "chargedActivationCount"
+        },
+        {
           "start": 30341,
           "end": 30347,
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
@@ -514032,6 +514442,13 @@
           "renamed": "board"
         },
         {
+          "start": 30774,
+          "end": 30781,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
+        },
+        {
           "start": 30872,
           "end": 30874,
           "symbol": "C:on",
@@ -514149,6 +514566,13 @@
           "symbol": "P:ak.a(Lj;Lvl;Lvl;I)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 31636,
+          "end": 31643,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
         },
         {
           "start": 31705,
@@ -643213,7 +643637,7 @@
       "original": "ej.java",
       "renamed": "StrongCacheEntry.java",
       "inputSha256": "e22388549df924e1a9e05f1db44dd07701f50f931d48b2ef999d5889c91faaa1",
-      "outputSha256": "cc6a47bd3309ca8585f75b06a16eb01f65e60b8af45f318ccbbdb70afb55513d",
+      "outputSha256": "6bf9fa1b08b1511b724c2c1f1d53e0d8b64d520c90d690e7246b250f6a35e228",
       "edits": [
         {
           "start": 50,
@@ -643263,6 +643687,13 @@
           "symbol": "C:lp",
           "original": "lp",
           "renamed": "AccountMessageDialog"
+        },
+        {
+          "start": 207,
+          "end": 214,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
         },
         {
           "start": 234,
@@ -643461,6 +643892,13 @@
           "renamed": "pendingAchievementMaskRequests"
         },
         {
+          "start": 1427,
+          "end": 1434,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
           "start": 1482,
           "end": 1484,
           "symbol": "M:ej.<init>(Ljava/lang/Object;I)V",
@@ -643606,6 +644044,76 @@
           "symbol": "C:tq",
           "original": "tq",
           "renamed": "MeshAudioHelpers"
+        },
+        {
+          "start": 2060,
+          "end": 2067,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2116,
+          "end": 2123,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2140,
+          "end": 2147,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2164,
+          "end": 2171,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2189,
+          "end": 2196,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2214,
+          "end": 2221,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2239,
+          "end": 2246,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2263,
+          "end": 2270,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2288,
+          "end": 2295,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
+        },
+        {
+          "start": 2312,
+          "end": 2319,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
         },
         {
           "start": 2337,
@@ -689684,7 +690192,7 @@
       "original": "ge.java",
       "renamed": "PowerUp.java",
       "inputSha256": "3120866ef52ab3e62bd063fa27fab9b151bee495343b5f5142ddeadbab987415",
-      "outputSha256": "cafdfda6393469b90583ea108a64baa94795a3ca8b3d859b1c16efdb9b9a6e5c",
+      "outputSha256": "67eb6634f1e87597e4fcbb05e8b240530d139bf14062f779ee94914819dbb0e7",
       "edits": [
         {
           "start": 50,
@@ -690940,6 +691448,13 @@
           "renamed": "paddle"
         },
         {
+          "start": 6253,
+          "end": 6260,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
+        },
+        {
           "start": 6290,
           "end": 6296,
           "symbol": "P:ge.a(Lj;B)V#0",
@@ -691388,6 +691903,13 @@
           "renamed": "paddle"
         },
         {
+          "start": 8283,
+          "end": 8290,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
+        },
+        {
           "start": 8293,
           "end": 8299,
           "symbol": "P:ge.a(Lj;B)V#0",
@@ -691400,6 +691922,13 @@
           "symbol": "F:j.field_yb:Lvo;",
           "original": "field_yb",
           "renamed": "paddle"
+        },
+        {
+          "start": 8309,
+          "end": 8316,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
         },
         {
           "start": 8400,
@@ -691640,11 +692169,25 @@
           "renamed": "board"
         },
         {
+          "start": 9688,
+          "end": 9695,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
+        },
+        {
           "start": 9698,
           "end": 9704,
           "symbol": "P:ge.a(Lj;B)V#0",
           "original": "param0",
           "renamed": "board"
+        },
+        {
+          "start": 9705,
+          "end": 9712,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
         },
         {
           "start": 9817,
@@ -691920,6 +692463,13 @@
           "renamed": "paddle"
         },
         {
+          "start": 11287,
+          "end": 11294,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 11297,
           "end": 11303,
           "symbol": "P:ge.a(Lj;B)V#0",
@@ -691932,6 +692482,13 @@
           "symbol": "F:j.field_yb:Lvo;",
           "original": "field_yb",
           "renamed": "paddle"
+        },
+        {
+          "start": 11313,
+          "end": 11320,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
         },
         {
           "start": 11354,
@@ -767458,7 +768015,7 @@
       "original": "j.java",
       "renamed": "PlayerBoard.java",
       "inputSha256": "fd17d2e8af703f3b2f6c8a11f25171f5416b9cfb05dbe2f312816f77e79ed9a3",
-      "outputSha256": "3f8b1f38b1e523d2f9890e4ee037fb776faad169806c70d1e66d44e52d020818",
+      "outputSha256": "b55f953cbf649660b7c5f64b643fd8601a4a1dd5a0e3bdd2da0266ff4f4ba38e",
       "edits": [
         {
           "start": 71,
@@ -767636,6 +768193,13 @@
           "renamed": "ballPulses"
         },
         {
+          "start": 410,
+          "end": 417,
+          "symbol": "F:j.field_A:I",
+          "original": "field_A",
+          "renamed": "chargedActivationCount"
+        },
+        {
           "start": 423,
           "end": 425,
           "symbol": "C:vl",
@@ -767678,6 +768242,13 @@
           "renamed": "powerUpHistory"
         },
         {
+          "start": 477,
+          "end": 484,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
+        },
+        {
           "start": 490,
           "end": 492,
           "symbol": "C:kq",
@@ -767697,6 +768268,13 @@
           "symbol": "F:j.field_X:I",
           "original": "field_X",
           "renamed": "nextPowerUpIndex"
+        },
+        {
+          "start": 528,
+          "end": 536,
+          "symbol": "F:j.field_hb:I",
+          "original": "field_hb",
+          "renamed": "levelsSinceBeneficialPickup"
         },
         {
           "start": 542,
@@ -767734,6 +768312,13 @@
           "renamed": "levelIndex"
         },
         {
+          "start": 598,
+          "end": 605,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
           "start": 623,
           "end": 630,
           "symbol": "F:j.field_W:I",
@@ -767741,11 +768326,25 @@
           "renamed": "randomCallCount"
         },
         {
+          "start": 640,
+          "end": 647,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
           "start": 657,
           "end": 665,
           "symbol": "F:j.field_ub:I",
           "original": "field_ub",
           "renamed": "boardOffset"
+        },
+        {
+          "start": 675,
+          "end": 682,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
         },
         {
           "start": 692,
@@ -767783,6 +768382,13 @@
           "renamed": "randomSeed"
         },
         {
+          "start": 789,
+          "end": 796,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
+        },
+        {
           "start": 817,
           "end": 824,
           "symbol": "F:j.field_B:Ljava/util/Random;",
@@ -767809,6 +768415,34 @@
           "symbol": "F:j.field_s:Lfo;",
           "original": "field_s",
           "renamed": "seededRandom"
+        },
+        {
+          "start": 884,
+          "end": 891,
+          "symbol": "F:j.field_T:I",
+          "original": "field_T",
+          "renamed": "initialPaddleCenterX"
+        },
+        {
+          "start": 901,
+          "end": 909,
+          "symbol": "F:j.field_wb:I",
+          "original": "field_wb",
+          "renamed": "boardHeight"
+        },
+        {
+          "start": 919,
+          "end": 926,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
+        },
+        {
+          "start": 940,
+          "end": 948,
+          "symbol": "F:j.field_tb:Z",
+          "original": "field_tb",
+          "renamed": "backgroundChangePending"
         },
         {
           "start": 958,
@@ -767874,6 +768508,13 @@
           "renamed": "flaggedBrickTypeMask"
         },
         {
+          "start": 1085,
+          "end": 1092,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
+        },
+        {
           "start": 1102,
           "end": 1109,
           "symbol": "F:j.field_E:I",
@@ -767935,6 +768576,27 @@
           "symbol": "F:j.field_y:I",
           "original": "field_y",
           "renamed": "eyeExpression"
+        },
+        {
+          "start": 1245,
+          "end": 1252,
+          "symbol": "F:j.field_t:I",
+          "original": "field_t",
+          "renamed": "lifeLevelClears"
+        },
+        {
+          "start": 1262,
+          "end": 1269,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
+        },
+        {
+          "start": 1279,
+          "end": 1286,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
         },
         {
           "start": 1296,
@@ -768511,6 +769173,13 @@
           "renamed": "paddle"
         },
         {
+          "start": 5451,
+          "end": 5458,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 5483,
           "end": 5485,
           "symbol": "C:lj",
@@ -768525,11 +769194,25 @@
           "renamed": "paddle"
         },
         {
+          "start": 5526,
+          "end": 5533,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 5556,
           "end": 5564,
           "symbol": "F:j.field_yb:Lvo;",
           "original": "field_yb",
           "renamed": "paddle"
+        },
+        {
+          "start": 5565,
+          "end": 5572,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
         },
         {
           "start": 5591,
@@ -769071,11 +769754,39 @@
           "renamed": "countedBricks"
         },
         {
+          "start": 10032,
+          "end": 10039,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
+          "start": 10053,
+          "end": 10060,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
+        },
+        {
           "start": 10111,
           "end": 10118,
           "symbol": "F:j.field_L:I",
           "original": "field_L",
           "renamed": "countedBricks"
+        },
+        {
+          "start": 10132,
+          "end": 10139,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
+          "start": 10198,
+          "end": 10205,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
         },
         {
           "start": 10275,
@@ -769134,6 +769845,13 @@
           "renamed": "boardWidth"
         },
         {
+          "start": 10810,
+          "end": 10817,
+          "symbol": "F:j.field_T:I",
+          "original": "field_T",
+          "renamed": "initialPaddleCenterX"
+        },
+        {
           "start": 10870,
           "end": 10878,
           "symbol": "F:j.field_ub:I",
@@ -769146,6 +769864,13 @@
           "symbol": "P:j.a(ZLjava/lang/StringBuilder;)I#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 10932,
+          "end": 10939,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
         },
         {
           "start": 11016,
@@ -769736,6 +770461,13 @@
           "renamed": "diagnostics"
         },
         {
+          "start": 15101,
+          "end": 15108,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
+        },
+        {
           "start": 15173,
           "end": 15179,
           "symbol": "P:j.a(ZLjava/lang/StringBuilder;)I#1",
@@ -769839,6 +770571,13 @@
           "symbol": "P:j.a([Ljava/lang/String;B)V#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 16261,
+          "end": 16269,
+          "symbol": "F:j.field_hb:I",
+          "original": "field_hb",
+          "renamed": "levelsSinceBeneficialPickup"
         },
         {
           "start": 16324,
@@ -770331,6 +771070,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 18363,
+          "end": 18370,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
           "start": 18373,
           "end": 18379,
           "symbol": "P:j.a(ZLwq;I)V#1",
@@ -770343,6 +771089,13 @@
           "symbol": "M:wq.i(I)I",
           "original": "i",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 18405,
+          "end": 18412,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
         },
         {
           "start": 18415,
@@ -770408,6 +771161,13 @@
           "renamed": "nextRandomInt"
         },
         {
+          "start": 18678,
+          "end": 18685,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
+        },
+        {
           "start": 18688,
           "end": 18694,
           "symbol": "P:j.a(ZLwq;I)V#1",
@@ -770420,6 +771180,13 @@
           "symbol": "M:wq.i(I)I",
           "original": "i",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 18740,
+          "end": 18747,
+          "symbol": "F:j.field_n:I",
+          "original": "field_n",
+          "renamed": "buildTicks"
         },
         {
           "start": 18775,
@@ -770849,6 +771616,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 20702,
+          "end": 20709,
+          "symbol": "F:j.field_r:I",
+          "original": "field_r",
+          "renamed": "levelsCleared"
+        },
+        {
           "start": 20712,
           "end": 20718,
           "symbol": "P:j.a(ZLwq;I)V#1",
@@ -770903,6 +771677,13 @@
           "symbol": "M:wq.e(I)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 20826,
+          "end": 20833,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
         },
         {
           "start": 20841,
@@ -771778,6 +772559,20 @@
           "symbol": "P:j.a(BZI)V#1",
           "original": "param1",
           "renamed": "resetAccounting"
+        },
+        {
+          "start": 23712,
+          "end": 23719,
+          "symbol": "F:j.field_t:I",
+          "original": "field_t",
+          "renamed": "lifeLevelClears"
+        },
+        {
+          "start": 23740,
+          "end": 23747,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 23776,
@@ -772891,6 +773686,13 @@
           "symbol": "P:j.a(IB)I#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 27152,
+          "end": 27159,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
         },
         {
           "start": 27196,
@@ -774048,6 +774850,13 @@
           "renamed": "resetStateWord"
         },
         {
+          "start": 30684,
+          "end": 30691,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
+        },
+        {
           "start": 30720,
           "end": 30728,
           "symbol": "F:j.field_ob:I",
@@ -774468,6 +775277,13 @@
           "renamed": "IntNode"
         },
         {
+          "start": 31759,
+          "end": 31766,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
+        },
+        {
           "start": 31786,
           "end": 31793,
           "symbol": "F:j.field_o:[B",
@@ -774494,6 +775310,13 @@
           "symbol": "F:j.field_k:I",
           "original": "field_k",
           "renamed": "bubbleTick"
+        },
+        {
+          "start": 31914,
+          "end": 31922,
+          "symbol": "F:j.field_wb:I",
+          "original": "field_wb",
+          "renamed": "boardHeight"
         },
         {
           "start": 31943,
@@ -774524,11 +775347,25 @@
           "renamed": "initialBoardOffset"
         },
         {
+          "start": 32007,
+          "end": 32014,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
+        },
+        {
           "start": 32017,
           "end": 32023,
           "symbol": "P:j.<init>(IIIII)V#1",
           "original": "param1",
           "renamed": "initialBoardOffset"
+        },
+        {
+          "start": 32043,
+          "end": 32050,
+          "symbol": "F:j.field_T:I",
+          "original": "field_T",
+          "renamed": "initialPaddleCenterX"
         },
         {
           "start": 32058,
@@ -774550,6 +775387,13 @@
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "Paddle"
+        },
+        {
+          "start": 32108,
+          "end": 32115,
+          "symbol": "F:j.field_T:I",
+          "original": "field_T",
+          "renamed": "initialPaddleCenterX"
         },
         {
           "start": 32133,
@@ -781213,7 +782057,7 @@
       "original": "jg.java",
       "renamed": "BufferedFile.java",
       "inputSha256": "ad228da3d749d32b1033acb237f32f40b9e44012fbdea31a351731ab8d66ea7d",
-      "outputSha256": "50450c94840b07da43d5419353a47174d120ae6d4d7fd8e1350512be2988ecc2",
+      "outputSha256": "523abd01fe830c4f55d9687b4f9e3eab48140c6e09dd96863ef7d9500c03a5b4",
       "edits": [
         {
           "start": 69,
@@ -785283,6 +786127,13 @@
           "renamed": "board"
         },
         {
+          "start": 16978,
+          "end": 16986,
+          "symbol": "F:j.field_wb:I",
+          "original": "field_wb",
+          "renamed": "boardHeight"
+        },
+        {
           "start": 16990,
           "end": 16996,
           "symbol": "P:jg.a(ILj;Llj;III)V#3",
@@ -785295,6 +786146,13 @@
           "symbol": "P:jg.a(ILj;Llj;III)V#1",
           "original": "param1",
           "renamed": "board"
+        },
+        {
+          "start": 17012,
+          "end": 17020,
+          "symbol": "F:j.field_wb:I",
+          "original": "field_wb",
+          "renamed": "boardHeight"
         },
         {
           "start": 17024,
@@ -1013339,7 +1014197,7 @@
       "original": "on.java",
       "renamed": "Brick.java",
       "inputSha256": "e2ea06abf1d907ffb3f1df2b918920b6464709bc1e74174e0fbf95abf27c359f",
-      "outputSha256": "088c2c0113b2b03d4c71c5b046bc5968fa16378606f73220fca0be0fa7405b2c",
+      "outputSha256": "a7127f3fee0e25a119e068579d27f25bf8be6e71d6bbccbac08392cf45d05c55",
       "edits": [
         {
           "start": 50,
@@ -1015477,11 +1016335,25 @@
           "renamed": "board"
         },
         {
+          "start": 9988,
+          "end": 9995,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
+        },
+        {
           "start": 10003,
           "end": 10005,
           "symbol": "C:ej",
           "original": "ej",
           "renamed": "StrongCacheEntry"
+        },
+        {
+          "start": 10006,
+          "end": 10013,
+          "symbol": "F:ej.field_E:[I",
+          "original": "field_E",
+          "renamed": "brickSequenceStepsByType"
         },
         {
           "start": 10019,
@@ -1015505,6 +1016377,13 @@
           "renamed": "board"
         },
         {
+          "start": 10107,
+          "end": 10114,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
+        },
+        {
           "start": 10183,
           "end": 10189,
           "symbol": "P:on.a(BLj;Lno;)V#1",
@@ -1015512,11 +1016391,25 @@
           "renamed": "board"
         },
         {
+          "start": 10190,
+          "end": 10197,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
+        },
+        {
           "start": 10200,
           "end": 10206,
           "symbol": "P:on.a(BLj;Lno;)V#1",
           "original": "param1",
           "renamed": "board"
+        },
+        {
+          "start": 10207,
+          "end": 10214,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
         },
         {
           "start": 10259,
@@ -1028157,7 +1029050,7 @@
       "original": "pi.java",
       "renamed": "BitPacketBuffer.java",
       "inputSha256": "7f34e817951c67a65bc292ed9fc6c7d8b9c737d80457a48c52f07021a3daba72",
-      "outputSha256": "35976796236552dc7c1ea890e23974b00d4be909fbfef0b35aa5cee9d40c31da",
+      "outputSha256": "cb5276adb1945073ea08c5882cbd07d345d9a77a006b9d0a9d5d12a3b02d645b",
       "edits": [
         {
           "start": 50,
@@ -1028718,6 +1029611,13 @@
           "symbol": "F:j.field_mb:I",
           "original": "field_mb",
           "renamed": "boardWidth"
+        },
+        {
+          "start": 2876,
+          "end": 2884,
+          "symbol": "F:j.field_wb:I",
+          "original": "field_wb",
+          "renamed": "boardHeight"
         },
         {
           "start": 2896,
@@ -1060069,7 +1060969,7 @@
       "original": "qj.java",
       "renamed": "GameplayScreen.java",
       "inputSha256": "cd7ddc71cbd652ca2c4407821a11b670daadf9677b4089823711c8339efc58db",
-      "outputSha256": "0b8b9a3ee5a8fa7209a57a1b258142fc53a032a32e6eb16cc32375b68f3260cb",
+      "outputSha256": "85f7689cfb54f60c02cc731b32f650bed6760c47163963a66f0071061ede8155",
       "edits": [
         {
           "start": 50,
@@ -1063866,6 +1064766,34 @@
           "renamed": "packId"
         },
         {
+          "start": 14181,
+          "end": 14188,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
+        },
+        {
+          "start": 14214,
+          "end": 14221,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
+          "start": 14247,
+          "end": 14254,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
+          "start": 14309,
+          "end": 14316,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
+        },
+        {
           "start": 14345,
           "end": 14347,
           "symbol": "C:vn",
@@ -1064062,6 +1064990,13 @@
           "renamed": "lastReportedLevel"
         },
         {
+          "start": 14960,
+          "end": 14968,
+          "symbol": "F:j.field_tb:Z",
+          "original": "field_tb",
+          "renamed": "backgroundChangePending"
+        },
+        {
           "start": 15018,
           "end": 15026,
           "symbol": "F:j.field_yb:Lvo;",
@@ -1064237,6 +1065172,13 @@
           "renamed": "MenuScreen"
         },
         {
+          "start": 15408,
+          "end": 15416,
+          "symbol": "F:j.field_tb:Z",
+          "original": "field_tb",
+          "renamed": "backgroundChangePending"
+        },
+        {
           "start": 15438,
           "end": 15440,
           "symbol": "C:pe",
@@ -1064307,11 +1065249,25 @@
           "renamed": "HalloweenBackground"
         },
         {
+          "start": 15623,
+          "end": 15630,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
           "start": 15653,
           "end": 15654,
           "symbol": "M:qj.b(III)V",
           "original": "b",
           "renamed": "queueMappedBitAchievement"
+        },
+        {
+          "start": 15705,
+          "end": 15712,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 15716,
@@ -1064326,6 +1065282,13 @@
           "symbol": "M:qj.b(III)V",
           "original": "b",
           "renamed": "queueMappedBitAchievement"
+        },
+        {
+          "start": 15804,
+          "end": 15811,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 15815,
@@ -1064347,6 +1065310,13 @@
           "symbol": "C:dp",
           "original": "dp",
           "renamed": "HalloweenBackground"
+        },
+        {
+          "start": 15921,
+          "end": 15928,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 15951,
@@ -1064615,11 +1065585,25 @@
           "renamed": "HalloweenBackground"
         },
         {
+          "start": 17232,
+          "end": 17239,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
+        },
+        {
           "start": 17262,
           "end": 17263,
           "symbol": "M:qj.b(III)V",
           "original": "b",
           "renamed": "queueMappedBitAchievement"
+        },
+        {
+          "start": 17315,
+          "end": 17323,
+          "symbol": "F:j.field_hb:I",
+          "original": "field_hb",
+          "renamed": "levelsSinceBeneficialPickup"
         },
         {
           "start": 17327,
@@ -1064643,6 +1065627,13 @@
           "renamed": "HalloweenBackground"
         },
         {
+          "start": 17435,
+          "end": 17442,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
           "start": 17465,
           "end": 17466,
           "symbol": "M:qj.b(III)V",
@@ -1064657,11 +1065648,25 @@
           "renamed": "HalloweenBackground"
         },
         {
+          "start": 17537,
+          "end": 17544,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
           "start": 17567,
           "end": 17568,
           "symbol": "M:qj.b(III)V",
           "original": "b",
           "renamed": "queueMappedBitAchievement"
+        },
+        {
+          "start": 17620,
+          "end": 17627,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
         },
         {
           "start": 17631,
@@ -1064678,6 +1065683,13 @@
           "renamed": "queueMappedBitAchievement"
         },
         {
+          "start": 17721,
+          "end": 17728,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
+        },
+        {
           "start": 17732,
           "end": 17734,
           "symbol": "C:dp",
@@ -1064690,6 +1065702,13 @@
           "symbol": "M:qj.b(III)V",
           "original": "b",
           "renamed": "queueMappedBitAchievement"
+        },
+        {
+          "start": 17822,
+          "end": 17829,
+          "symbol": "F:j.field_t:I",
+          "original": "field_t",
+          "renamed": "lifeLevelClears"
         },
         {
           "start": 17833,
@@ -1064706,6 +1065725,13 @@
           "renamed": "queueMappedBitAchievement"
         },
         {
+          "start": 17922,
+          "end": 17929,
+          "symbol": "F:j.field_t:I",
+          "original": "field_t",
+          "renamed": "lifeLevelClears"
+        },
+        {
           "start": 17933,
           "end": 17935,
           "symbol": "C:dp",
@@ -1064718,6 +1065744,13 @@
           "symbol": "M:qj.b(III)V",
           "original": "b",
           "renamed": "queueMappedBitAchievement"
+        },
+        {
+          "start": 18026,
+          "end": 18033,
+          "symbol": "F:j.field_t:I",
+          "original": "field_t",
+          "renamed": "lifeLevelClears"
         },
         {
           "start": 18036,
@@ -1067814,6 +1068847,13 @@
           "renamed": "suppressResultSubmission"
         },
         {
+          "start": 30253,
+          "end": 30260,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
+        },
+        {
           "start": 30263,
           "end": 30265,
           "symbol": "C:dp",
@@ -1067826,6 +1068866,13 @@
           "symbol": "P:qj.a(CII)Z#2",
           "original": "param2",
           "renamed": "keyCode"
+        },
+        {
+          "start": 30366,
+          "end": 30373,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 30376,
@@ -1067847,6 +1068894,13 @@
           "symbol": "P:qj.a(CII)Z#2",
           "original": "param2",
           "renamed": "keyCode"
+        },
+        {
+          "start": 30512,
+          "end": 30519,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 30527,
@@ -1068339,6 +1069393,13 @@
           "renamed": "keyCode"
         },
         {
+          "start": 33206,
+          "end": 33213,
+          "symbol": "F:j.field_l:I",
+          "original": "field_l",
+          "renamed": "brickSequenceStep"
+        },
+        {
           "start": 33236,
           "end": 33243,
           "symbol": "F:qj.field_s:Z",
@@ -1068360,6 +1069421,13 @@
           "renamed": "suppressResultSubmission"
         },
         {
+          "start": 33369,
+          "end": 33377,
+          "symbol": "F:j.field_hb:I",
+          "original": "field_hb",
+          "renamed": "levelsSinceBeneficialPickup"
+        },
+        {
           "start": 33385,
           "end": 33387,
           "symbol": "C:dp",
@@ -1068372,6 +1069440,13 @@
           "symbol": "P:qj.a(CII)Z#2",
           "original": "param2",
           "renamed": "keyCode"
+        },
+        {
+          "start": 33485,
+          "end": 33492,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
         },
         {
           "start": 33500,
@@ -1068395,6 +1069470,13 @@
           "renamed": "keyCode"
         },
         {
+          "start": 33633,
+          "end": 33640,
+          "symbol": "F:j.field_u:I",
+          "original": "field_u",
+          "renamed": "harmfulPowerUpStreak"
+        },
+        {
           "start": 33643,
           "end": 33645,
           "symbol": "C:dp",
@@ -1068416,6 +1069498,13 @@
           "renamed": "keyCode"
         },
         {
+          "start": 33780,
+          "end": 33787,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
+        },
+        {
           "start": 33790,
           "end": 33792,
           "symbol": "C:dp",
@@ -1068435,6 +1069524,13 @@
           "symbol": "P:qj.a(CII)Z#2",
           "original": "param2",
           "renamed": "keyCode"
+        },
+        {
+          "start": 33927,
+          "end": 33934,
+          "symbol": "F:j.field_N:I",
+          "original": "field_N",
+          "renamed": "beneficialPowerUpStreak"
         },
         {
           "start": 33942,
@@ -1068463,6 +1069559,13 @@
           "symbol": "F:qj.field_s:Z",
           "original": "field_s",
           "renamed": "suppressResultSubmission"
+        },
+        {
+          "start": 34108,
+          "end": 34115,
+          "symbol": "F:j.field_m:I",
+          "original": "field_m",
+          "renamed": "lifeBrickClears"
         },
         {
           "start": 34118,
@@ -1071524,6 +1072627,13 @@
           "renamed": "inputBoard"
         },
         {
+          "start": 44703,
+          "end": 44710,
+          "symbol": "F:j.field_Q:I",
+          "original": "field_Q",
+          "renamed": "progressBrickClears"
+        },
+        {
           "start": 44746,
           "end": 44754,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#8",
@@ -1072105,11 +1073215,25 @@
           "renamed": "displayBoard"
         },
         {
+          "start": 47046,
+          "end": 47053,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
+        },
+        {
           "start": 47056,
           "end": 47061,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#26",
           "original": "var18",
           "renamed": "displayBoard"
+        },
+        {
+          "start": 47062,
+          "end": 47069,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
         },
         {
           "start": 47093,
@@ -1072119,11 +1073243,25 @@
           "renamed": "displayBoard"
         },
         {
+          "start": 47099,
+          "end": 47106,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
+        },
+        {
           "start": 47129,
           "end": 47134,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#26",
           "original": "var18",
           "renamed": "displayBoard"
+        },
+        {
+          "start": 47135,
+          "end": 47142,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
         },
         {
           "start": 47149,
@@ -1072133,11 +1073271,25 @@
           "renamed": "displayBoard"
         },
         {
+          "start": 47155,
+          "end": 47162,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
+        },
+        {
           "start": 47186,
           "end": 47191,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#26",
           "original": "var18",
           "renamed": "displayBoard"
+        },
+        {
+          "start": 47192,
+          "end": 47199,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
         },
         {
           "start": 47226,
@@ -1072147,11 +1073299,25 @@
           "renamed": "displayBoard"
         },
         {
+          "start": 47232,
+          "end": 47239,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
+        },
+        {
           "start": 47278,
           "end": 47283,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#26",
           "original": "var18",
           "renamed": "displayBoard"
+        },
+        {
+          "start": 47284,
+          "end": 47291,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
         },
         {
           "start": 47294,
@@ -1072161,11 +1073327,25 @@
           "renamed": "displayBoard"
         },
         {
+          "start": 47300,
+          "end": 47307,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
+        },
+        {
           "start": 47310,
           "end": 47315,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#26",
           "original": "var18",
           "renamed": "displayBoard"
+        },
+        {
+          "start": 47316,
+          "end": 47323,
+          "symbol": "F:j.field_J:I",
+          "original": "field_J",
+          "renamed": "displayedPositionVelocity256"
         },
         {
           "start": 47343,
@@ -1072175,11 +1073355,25 @@
           "renamed": "displayBoard"
         },
         {
+          "start": 47349,
+          "end": 47356,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
+        },
+        {
           "start": 47396,
           "end": 47401,
           "symbol": "L:qj.a(Lvl;ZLvl;)Z#26",
           "original": "var18",
           "renamed": "displayBoard"
+        },
+        {
+          "start": 47402,
+          "end": 47409,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
         },
         {
           "start": 47492,
@@ -1217026,7 +1218220,7 @@
       "original": "v.java",
       "renamed": "ClientException.java",
       "inputSha256": "494ea99ed54aa1f995de1da5c1a72c4f56f7c1fbe10a1dddf4a21f7af4b2ab4d",
-      "outputSha256": "7ce1c497bc169c77b192c6084f40cf421a790c421f78187d800b7a97028d6262",
+      "outputSha256": "18bb34d7a27166993f6a0c906f7329b56c1c236e2cda27ee88c80f1b1f5104f5",
       "edits": [
         {
           "start": 50,
@@ -1217251,6 +1218445,13 @@
           "symbol": "F:ak.field_l:[Lj;",
           "original": "field_l",
           "renamed": "playerBoards"
+        },
+        {
+          "start": 1609,
+          "end": 1616,
+          "symbol": "F:j.field_G:I",
+          "original": "field_G",
+          "renamed": "displayedPosition256"
         },
         {
           "start": 1632,
@@ -1234656,7 +1235857,7 @@
       "original": "vo.java",
       "renamed": "Paddle.java",
       "inputSha256": "21076384e843c5665ac046b1bdbfdd7207895e246a57e6585ab1b278e9cd42ec",
-      "outputSha256": "cb865e90677b6db9ea86caad923836a0552a163d5352ef9339ac67551f0d98ce",
+      "outputSha256": "3d99dd8d5f06f5638f2d5fa2a20d5c353646be2b1a56447963826e1a22087347",
       "edits": [
         {
           "start": 50,
@@ -1234691,14 +1235892,21 @@
           "end": 123,
           "symbol": "F:vo.field_B:I",
           "original": "field_B",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
+        },
+        {
+          "start": 133,
+          "end": 140,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
         },
         {
           "start": 150,
           "end": 157,
           "symbol": "F:vo.field_y:I",
           "original": "field_y",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 170,
@@ -1234727,6 +1235935,13 @@
           "symbol": "F:vo.field_F:I",
           "original": "field_F",
           "renamed": "sizeStage"
+        },
+        {
+          "start": 309,
+          "end": 316,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
         },
         {
           "start": 333,
@@ -1234768,14 +1235983,14 @@
           "end": 547,
           "symbol": "P:vo.<init>(IIII)V#2",
           "original": "param2",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
         },
         {
           "start": 553,
           "end": 559,
           "symbol": "P:vo.<init>(IIII)V#3",
           "original": "param3",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 580,
@@ -1234796,14 +1236011,14 @@
           "end": 657,
           "symbol": "F:vo.field_y:I",
           "original": "field_y",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 660,
           "end": 666,
           "symbol": "P:vo.<init>(IIII)V#3",
           "original": "param3",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 681,
@@ -1234824,14 +1236039,14 @@
           "end": 719,
           "symbol": "F:vo.field_B:I",
           "original": "field_B",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
         },
         {
           "start": 722,
           "end": 728,
           "symbol": "P:vo.<init>(IIII)V#2",
           "original": "param2",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
         },
         {
           "start": 743,
@@ -1234950,14 +1236165,14 @@
           "end": 1689,
           "symbol": "F:vo.field_B:I",
           "original": "field_B",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
         },
         {
           "start": 1703,
           "end": 1710,
           "symbol": "F:vo.field_y:I",
           "original": "field_y",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 1724,
@@ -1234972,6 +1236187,13 @@
           "symbol": "F:vo.field_F:I",
           "original": "field_F",
           "renamed": "sizeStage"
+        },
+        {
+          "start": 1772,
+          "end": 1779,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
         },
         {
           "start": 1793,
@@ -1234995,18 +1236217,25 @@
           "renamed": "reboundSpeedStage"
         },
         {
+          "start": 1876,
+          "end": 1883,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
+        },
+        {
           "start": 1943,
           "end": 1950,
           "symbol": "F:vo.field_y:I",
           "original": "field_y",
-          "renamed": "boardSpan256"
+          "renamed": "rightBound256"
         },
         {
           "start": 1970,
           "end": 1977,
           "symbol": "F:vo.field_B:I",
           "original": "field_B",
-          "renamed": "controlMode"
+          "renamed": "leftBound256"
         },
         {
           "start": 2036,
@@ -1235023,11 +1236252,25 @@
           "renamed": "sizeStage"
         },
         {
+          "start": 2155,
+          "end": 2162,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 2189,
           "end": 2195,
           "symbol": "P:vo.a(ILjava/lang/StringBuilder;)I#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 2222,
+          "end": 2229,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
         },
         {
           "start": 2286,
@@ -1235042,6 +1236285,13 @@
           "symbol": "F:vo.field_D:I",
           "original": "field_D",
           "renamed": "reboundSpeedStage"
+        },
+        {
+          "start": 2406,
+          "end": 2413,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
         },
         {
           "start": 2778,
@@ -1236108,6 +1237358,13 @@
           "renamed": "width256"
         },
         {
+          "start": 7941,
+          "end": 7948,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
+        },
+        {
           "start": 7951,
           "end": 7957,
           "symbol": "P:vo.f(I)V#0",
@@ -1236353,6 +1237610,13 @@
           "renamed": "sizeStage"
         },
         {
+          "start": 8826,
+          "end": 8833,
+          "symbol": "F:vo.field_w:I",
+          "original": "field_w",
+          "renamed": "reversedControlTicks"
+        },
+        {
           "start": 8836,
           "end": 8842,
           "symbol": "P:vo.a(ILwq;)V#1",
@@ -1236386,6 +1237650,13 @@
           "symbol": "M:wq.i(I)I",
           "original": "i",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 8910,
+          "end": 8917,
+          "symbol": "F:vo.field_H:I",
+          "original": "field_H",
+          "renamed": "aftertouchTicks"
         },
         {
           "start": 8920,
@@ -1272496,10 +1273767,10 @@
       "commit": "9159750b0604b9082db8b91fe73a0a0b119c7f22",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "0a5fa77c9a2cfe14dfa54eb773e90b95cd789049d60be5294c9efa78e3386aa7",
+    "rulesSha256": "8db1324f860476aea702ccea5710037e32222f14d97e330795b91cff7d62c8a5",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
-    "outputTreeSha256": "4101b4c810df8385a6fc9673a6297624ab9f748a9dee20026c51e80a2e6e6c78",
+    "outputTreeSha256": "1181134ca3191d332b3884df3cd8d8ba6cc4a96185afb86d5f56282fc968ccd4",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1272535,6 +1273806,13 @@
           "checks": 5449,
           "traceSha256": "7c82f2de56199b3eb7b567dcb5bfca1414abd16664293b40c1c76231e1a6a729",
           "independentExpectations": true,
+          "rawNamedIdentical": true
+        },
+        "paddleMovement": {
+          "checks": 95040,
+          "traceSha256": "1f6519f1aba1afaab03a41d206db26d14227fb29ab9b8ccfb159e012f054c0a0",
+          "independentExpectations": true,
+          "framesPerCase": 5,
           "rawNamedIdentical": true
         },
         "tooltipTransitionTableFixtures": true,

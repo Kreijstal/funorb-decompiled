@@ -168,7 +168,7 @@ final class PowerUp extends CircleBody {
                         while (board.paddle.sizeStage > 8) {
                           board.paddle.shrink((byte) 126);
                         }
-                        board.paddle.field_H = 0;
+                        board.paddle.aftertouchTicks = 0;
                         board.paddle.catchTicks = 0;
                       } else {
                         if (10 == this.typeId) {
@@ -201,7 +201,7 @@ final class PowerUp extends CircleBody {
                             }
                           } else {
                             if (this.typeId == 12) {
-                              board.paddle.field_H = board.paddle.field_H + 300;
+                              board.paddle.aftertouchTicks = board.paddle.aftertouchTicks + 300;
                             } else {
                               if (this.typeId == 13) {
                                 var13 = (Ball) (board.activeBalls.first(obfuscationGuard - 224));
@@ -224,7 +224,7 @@ final class PowerUp extends CircleBody {
                                     }
                                   } else {
                                     if (16 == this.typeId) {
-                                      board.field_n = board.field_n + 16;
+                                      board.buildTicks = board.buildTicks + 16;
                                     } else {
                                       if (17 != this.typeId) {
                                         if (18 == this.typeId) {
@@ -261,7 +261,7 @@ final class PowerUp extends CircleBody {
               }
             }
           } else {
-            board.paddle.field_w = board.paddle.field_w + 250;
+            board.paddle.reversedControlTicks = board.paddle.reversedControlTicks + 250;
           }
           if (obfuscationGuard != 99) {
             PowerUp.c(-104);

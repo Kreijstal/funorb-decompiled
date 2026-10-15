@@ -7,7 +7,7 @@ final class StrongCacheEntry extends CacheEntry {
     static String field_M;
     static NodeDeque pendingAchievementMaskRequests;
     static AccountMessageDialog field_I;
-    static int[] field_E;
+    static int[] brickSequenceStepsByType;
     static double packetDelayJitter;
     static String field_K;
     static int field_O;
@@ -41,7 +41,7 @@ final class StrongCacheEntry extends CacheEntry {
         if (param0 == 928072) {
           field_K = null;
           field_H = null;
-          field_E = null;
+          brickSequenceStepsByType = null;
           return;
         }
     }
@@ -66,17 +66,17 @@ final class StrongCacheEntry extends CacheEntry {
 
     static {
         field_P = new MeshAudioHelpers();
-        field_E = new int[29];
+        brickSequenceStepsByType = new int[29];
         field_M = "Day";
-        field_E[7] = 3;
-        field_E[8] = 6;
-        field_E[18] = 1;
-        field_E[17] = 3;
-        field_E[15] = 5;
-        field_E[5] = 4;
-        field_E[12] = 7;
-        field_E[4] = 5;
-        field_E[10] = 2;
+        brickSequenceStepsByType[7] = 3;
+        brickSequenceStepsByType[8] = 6;
+        brickSequenceStepsByType[18] = 1;
+        brickSequenceStepsByType[17] = 3;
+        brickSequenceStepsByType[15] = 5;
+        brickSequenceStepsByType[5] = 4;
+        brickSequenceStepsByType[12] = 7;
+        brickSequenceStepsByType[4] = 5;
+        brickSequenceStepsByType[10] = 2;
         packetDelayJitter = 0.0;
         pendingAchievementMaskRequests = new NodeDeque();
         field_K = "Only show game chat from my friends";

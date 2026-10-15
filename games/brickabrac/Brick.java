@@ -282,12 +282,12 @@ final class Brick extends RectangleBody {
                 this.pendingTypeId = 0;
                 this.transitionCode = 1;
               } else {
-                if (board.field_l + 1 != StrongCacheEntry.field_E[this.typeId]) {
+                if (board.brickSequenceStep + 1 != StrongCacheEntry.brickSequenceStepsByType[this.typeId]) {
                   if ((this.flags & 1) == 0) {
-                    board.field_l = 0;
+                    board.brickSequenceStep = 0;
                   }
                 } else {
-                  board.field_l = board.field_l + 1;
+                  board.brickSequenceStep = board.brickSequenceStep + 1;
                 }
                 this.pendingTypeId = MonotonicTime.brickHitPendingTypes[this.typeId];
                 dupTemp$0 = BrickHitTransitionTable.codesByBrickType[this.typeId];
