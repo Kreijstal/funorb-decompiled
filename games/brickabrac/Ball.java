@@ -65,8 +65,8 @@ final class Ball extends CircleBody {
           if (obfuscationGuard != 0) {
             this.centerXHistory256 = (IntHistoryBuffer) null;
           }
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vn.P(" + (paddle != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "vn.P(" + (paddle != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -132,8 +132,8 @@ final class Ball extends CircleBody {
           this.phaseTicks = packet.readShort(126);
           this.launchAngle = packet.readShort(126);
           this.brickBounceCount = packet.readVarInt((byte) -82);
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vn.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "vn.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 

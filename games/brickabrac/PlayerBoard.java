@@ -76,28 +76,28 @@ final class PlayerBoard extends IntrusiveNode {
     int resultCode;
 
     final void installLevelBricks(NodeDeque paths, int obfuscationGuard, NodeDeque[] groups) {
-        int incrementValue$0 = 0;
-        RuntimeException stackIn_37_0 = null;
-        StringBuilder stackIn_37_1 = null;
-        String stackIn_38_2 = null;
-        StringBuilder stackIn_40_1 = null;
-        String stackIn_41_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        Object var7 = null;
-        Brick var7_ref = null;
-        int var8 = 0;
-        NodeDeque var9 = null;
-        NodeDeque var10 = null;
-        Brick var7_refLifetime1;
-        NodeDeque var10Lifetime1;
-        NodeDeque var10Lifetime2;
-        int var5Lifetime1;
-        int var4_intLifetime1;
-        var7 = null;
-        var8 = BrickABrac.field_J ? 1 : 0;
+        int assignedPortalIndex = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String pathsSummary = null;
+        StringBuilder groupsContextBuilder = null;
+        String groupsSummary = null;
+        RuntimeException caughtFailure = null;
+        int portalCount = 0;
+        RuntimeException failure = null;
+        int groupIndex = 0;
+        Object unusedReference = null;
+        Brick scannedBrick = null;
+        int unusedGameFlag = 0;
+        NodeDeque scanGroup = null;
+        NodeDeque unusedGroupAlias = null;
+        Brick portalBrick;
+        NodeDeque portalGroup;
+        NodeDeque unusedGroupLifetimeAlias;
+        int portalGroupIndex;
+        int nextPortalIndex;
+        unusedReference = null;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           this.flaggedBrickTypeMask = 0;
           this.brickGroups = groups;
@@ -112,66 +112,66 @@ final class PlayerBoard extends IntrusiveNode {
           if (obfuscationGuard != 9) {
             return;
           }
-          var4_int = 0;
-          for (var5 = 0; var5 < this.brickGroups.length; var5++) {
-            var9 = this.brickGroups[var5];
-            var10 = var9;
-            var10Lifetime2 = var9;
-            var7_ref = (Brick) (var9.first(-94));
-            while (var7_ref != null) {
-              boolean decompiledFrameRemainder0 = true;
-              if (var7_ref.typeId != 1 &&
-                var7_ref.typeId != 25 &&
-                var7_ref.typeId != 28) {
-                if ((var7_ref.flags & 2) != 0) {
-                  this.flaggedBrickTypeMask = this.flaggedBrickTypeMask | 1 << var7_ref.typeId;
+          portalCount = 0;
+          for (groupIndex = 0; groupIndex < this.brickGroups.length; groupIndex++) {
+            scanGroup = this.brickGroups[groupIndex];
+            unusedGroupAlias = scanGroup;
+            unusedGroupLifetimeAlias = scanGroup;
+            scannedBrick = (Brick) (scanGroup.first(-94));
+            while (scannedBrick != null) {
+              boolean countingBranchEligible = true;
+              if (scannedBrick.typeId != 1 &&
+                scannedBrick.typeId != 25 &&
+                scannedBrick.typeId != 28) {
+                if ((scannedBrick.flags & 2) != 0) {
+                  this.flaggedBrickTypeMask = this.flaggedBrickTypeMask | 1 << scannedBrick.typeId;
                 }
-                decompiledFrameRemainder0 = (var7_ref.typeId != 0 ||
-                  2 != var7_ref.pendingTypeId);
-                if (decompiledFrameRemainder0) {
+                countingBranchEligible = (scannedBrick.typeId != 0 ||
+                  2 != scannedBrick.pendingTypeId);
+                if (countingBranchEligible) {
                   this.countedBricks = this.countedBricks + 1;
                 }
               }
-              if ((decompiledFrameRemainder0) &&
-                (var7_ref.typeId == 28)) {
-                var4_int++;
+              if ((countingBranchEligible) &&
+                (scannedBrick.typeId == 28)) {
+                portalCount++;
               }
-              var7_ref = (Brick) (var9.next((byte) 116));
+              scannedBrick = (Brick) (scanGroup.next((byte) 116));
             }
           }
-          this.portalBricks = new Brick[var4_int];
-          var4_intLifetime1 = 0;
-          for (var5Lifetime1 = 0; this.brickGroups.length > var5Lifetime1; var5Lifetime1++) {
-            var10Lifetime1 = this.brickGroups[var5Lifetime1];
-            var7_refLifetime1 = (Brick) (var10Lifetime1.first(-37));
-            while (var7_refLifetime1 != null) {
-              if (var7_refLifetime1.typeId == 28) {
-                incrementValue$0 = var4_intLifetime1;
-                var4_intLifetime1++;
-                var7_refLifetime1.portalIndex = incrementValue$0;
-                this.portalBricks[var7_refLifetime1.portalIndex] = var7_refLifetime1;
+          this.portalBricks = new Brick[portalCount];
+          nextPortalIndex = 0;
+          for (portalGroupIndex = 0; this.brickGroups.length > portalGroupIndex; portalGroupIndex++) {
+            portalGroup = this.brickGroups[portalGroupIndex];
+            portalBrick = (Brick) (portalGroup.first(-37));
+            while (portalBrick != null) {
+              if (portalBrick.typeId == 28) {
+                assignedPortalIndex = nextPortalIndex;
+                nextPortalIndex++;
+                portalBrick.portalIndex = assignedPortalIndex;
+                this.portalBricks[portalBrick.portalIndex] = portalBrick;
               }
-              var7_refLifetime1 = (Brick) (var10Lifetime1.next((byte) 116));
+              portalBrick = (Brick) (portalGroup.next((byte) 116));
             }
           }
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_37_0 = var4;
-          stackIn_37_1 = new StringBuilder().append("j.G(");
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("j.G(");
           if (paths == null) {
-            stackIn_38_2 = "null";
+            pathsSummary = "null";
           } else {
-            stackIn_38_2 = "{...}";
+            pathsSummary = "{...}";
           }
-          stackIn_40_1 = ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(obfuscationGuard).append(',');
+          groupsContextBuilder = ((StringBuilder) (Object) contextBuilder).append(pathsSummary).append(',').append(obfuscationGuard).append(',');
           if (groups == null) {
-            stackIn_41_2 = "null";
+            groupsSummary = "null";
           } else {
-            stackIn_41_2 = "{...}";
+            groupsSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) groupsContextBuilder).append(groupsSummary).append(')').toString());
         }
     }
 
@@ -491,36 +491,36 @@ final class PlayerBoard extends IntrusiveNode {
     }
 
     final void readBoardSnapshot(boolean skipExtension, PacketBuffer packet, int boardMode) {
-        int var6_int = 0;
-        int stackIn_30_0 = 0;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
-        String stackIn_35_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5_int = 0;
-        NodeDeque[] var5 = null;
-        NodeDeque var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        PowerUp var11 = null;
-        int var12 = 0;
-        Brick var13 = null;
-        BrickMotionPath var14 = null;
-        Ball var15 = null;
-        Ball var16 = null;
-        int var4_intLifetime1;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        int var8Lifetime3;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        int var10Lifetime1;
-        var12 = BrickABrac.field_J ? 1 : 0;
+        int groupIndex = 0;
+        int borderColumns = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String packetSummary = null;
+        RuntimeException caughtFailure = null;
+        int randomCallsReplayed = 0;
+        RuntimeException failure = null;
+        int storedRandomCallCount = 0;
+        NodeDeque[] decodedBrickGroups = null;
+        NodeDeque decodedMotionPaths = null;
+        int brickCount = 0;
+        int brickIndex = 0;
+        int queuedBallIndex = 0;
+        int powerUpIndex = 0;
+        PowerUp powerUp = null;
+        int unusedGameFlag = 0;
+        Brick brick = null;
+        BrickMotionPath motionPath = null;
+        Ball queuedBall = null;
+        Ball activeBall = null;
+        int partialBuildPixels;
+        int motionPathCount;
+        int motionPathIndex;
+        int queuedBallCount;
+        int activeBallCount;
+        int activeBallIndex;
+        int powerUpCount;
+        int powerUpType;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           this.boardState = packet.readUnsignedByte(255);
           this.stateTicks = packet.readUnsignedShort(65280);
@@ -533,53 +533,53 @@ final class PlayerBoard extends IntrusiveNode {
           this.progressBrickClears = packet.readUnsignedShort(65280);
           this.positionWord = packet.readUnsignedShort(65280);
           this.randomCallCount = 0;
-          var4_int = 0;
-          var5_int = packet.readInt(255);
-          while (var4_int < var5_int) {
+          randomCallsReplayed = 0;
+          storedRandomCallCount = packet.readInt(255);
+          while (randomCallsReplayed < storedRandomCallCount) {
             this.nextRandomInt(118);
-            var4_int++;
+            randomCallsReplayed++;
           }
           this.buildTicks = packet.readUnsignedShort(65280);
-          var4_intLifetime1 = this.buildTicks % 16;
-          var5 = new NodeDeque[3];
-          for (var6_int = 0; var6_int < var5.length; var6_int++) {
-            var5[var6_int] = new NodeDeque();
-            var7 = packet.readUnsignedShort(65280);
-            for (var8 = 0; var7 > var8; var8++) {
-              var13 = new Brick();
-              var13.readBodySnapshot(92, packet);
-              var13.y256 = var13.y256 - (var4_intLifetime1 * 1 << 8);
-              var5[var6_int].addLast(var13, (byte) 3);
+          partialBuildPixels = this.buildTicks % 16;
+          decodedBrickGroups = new NodeDeque[3];
+          for (groupIndex = 0; groupIndex < decodedBrickGroups.length; groupIndex++) {
+            decodedBrickGroups[groupIndex] = new NodeDeque();
+            brickCount = packet.readUnsignedShort(65280);
+            for (brickIndex = 0; brickCount > brickIndex; brickIndex++) {
+              brick = new Brick();
+              brick.readBodySnapshot(92, packet);
+              brick.y256 = brick.y256 - (partialBuildPixels * 1 << 8);
+              decodedBrickGroups[groupIndex].addLast(brick, (byte) 3);
             }
           }
-          var6 = new NodeDeque();
-          var7Lifetime1 = packet.readUnsignedShort(65280);
-          for (var8Lifetime1 = 0; var8Lifetime1 < var7Lifetime1; var8Lifetime1++) {
-            var14 = new BrickMotionPath();
-            var14.readBodySnapshot(114, packet);
-            var6.addLast(var14, (byte) 3);
+          decodedMotionPaths = new NodeDeque();
+          motionPathCount = packet.readUnsignedShort(65280);
+          for (motionPathIndex = 0; motionPathIndex < motionPathCount; motionPathIndex++) {
+            motionPath = new BrickMotionPath();
+            motionPath.readBodySnapshot(114, packet);
+            decodedMotionPaths.addLast(motionPath, (byte) 3);
           }
-          this.installLevelBricks(var6, 9, var5);
+          this.installLevelBricks(decodedMotionPaths, 9, decodedBrickGroups);
           this.queuedBalls.clear((byte) -79);
           this.activeBalls.clear((byte) -118);
-          var8Lifetime2 = packet.readUnsignedByte(255);
-          for (var9 = 0; var8Lifetime2 > var9; var9++) {
-            var15 = new Ball();
-            var15.readBodySnapshot(110, packet);
-            this.queuedBalls.addLast(var15, (byte) 3);
+          queuedBallCount = packet.readUnsignedByte(255);
+          for (queuedBallIndex = 0; queuedBallCount > queuedBallIndex; queuedBallIndex++) {
+            queuedBall = new Ball();
+            queuedBall.readBodySnapshot(110, packet);
+            this.queuedBalls.addLast(queuedBall, (byte) 3);
           }
-          var8Lifetime3 = packet.readUnsignedByte(255);
-          for (var9Lifetime1 = 0; var8Lifetime3 > var9Lifetime1; var9Lifetime1++) {
-            var16 = new Ball();
-            var16.readBodySnapshot(107, packet);
-            this.activeBalls.addLast(var16, (byte) 3);
+          activeBallCount = packet.readUnsignedByte(255);
+          for (activeBallIndex = 0; activeBallCount > activeBallIndex; activeBallIndex++) {
+            activeBall = new Ball();
+            activeBall.readBodySnapshot(107, packet);
+            this.activeBalls.addLast(activeBall, (byte) 3);
           }
           this.fallingPowerUps.clear((byte) -63);
-          var9Lifetime2 = packet.readUnsignedByte(255);
-          for (var10 = 0; var9Lifetime2 > var10; var10++) {
-            var11 = new PowerUp();
-            var11.readBodySnapshot(97, packet);
-            this.fallingPowerUps.addLast(var11, (byte) 3);
+          powerUpCount = packet.readUnsignedByte(255);
+          for (powerUpIndex = 0; powerUpCount > powerUpIndex; powerUpIndex++) {
+            powerUp = new PowerUp();
+            powerUp.readBodySnapshot(97, packet);
+            this.fallingPowerUps.addLast(powerUp, (byte) 3);
           }
           this.paddle.readBodySnapshot(100, packet);
           this.bubbles.clear((byte) -83);
@@ -589,27 +589,27 @@ final class PlayerBoard extends IntrusiveNode {
           if (skipExtension) {
             return;
           }
-          for (var10Lifetime1 = 3; var10Lifetime1 < 29; var10Lifetime1++) {
-            this.powerUpDropCounters[var10Lifetime1] = (byte)packet.readUnsignedByte(255);
+          for (powerUpType = 3; powerUpType < 29; powerUpType++) {
+            this.powerUpDropCounters[powerUpType] = (byte)packet.readUnsignedByte(255);
           }
           this.levelsCleared = packet.readUnsignedShort(65280);
           this.positionOrderTicks = packet.readUnsignedShort(65280);
           this.positionWord = packet.readInt(255);
           this.displayedPosition256 = this.positionWord + this.boardOffset << 8;
-          stackIn_30_0 = (1 == boardMode) ? 15 : 9;
-          CacheIoRequest.addBoardBorders(stackIn_30_0, this.brickGroups[2], 16);
+          borderColumns = (1 == boardMode) ? 15 : 9;
+          CacheIoRequest.addBoardBorders(borderColumns, this.brickGroups[2], 16);
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_34_0 = var4;
-          stackIn_34_1 = new StringBuilder().append("j.T(").append(skipExtension).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("j.T(").append(skipExtension).append(',');
           if (packet == null) {
-            stackIn_35_2 = "null";
+            packetSummary = "null";
           } else {
-            stackIn_35_2 = "{...}";
+            packetSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(boardMode).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) contextBuilder).append(packetSummary).append(',').append(boardMode).append(')').toString());
         }
     }
 
@@ -875,16 +875,16 @@ final class PlayerBoard extends IntrusiveNode {
     }
 
     final void addScore(int points, boolean resetStateWord, int x256, int y256) {
-        int var6 = 0;
-        int var5 = 0;
+        int randomCounterWeight = 0;
+        int counterPoints = 0;
         if (100 < this.nextRandomBoundedInt(200, (byte) 62)) {
-          var5 = points;
-          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + var5;
+          counterPoints = points;
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo + counterPoints;
         } else {
-          var5 = points;
-          var6 = this.nextRandomBoundedInt(50, (byte) 62);
-          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - var6 * var5;
-          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (1 + var6) * var5;
+          counterPoints = points;
+          randomCounterWeight = this.nextRandomBoundedInt(50, (byte) 62);
+          WidgetTextLayout.resultCounterTwo = WidgetTextLayout.resultCounterTwo - randomCounterWeight * counterPoints;
+          OptionsScreen.resultCounterOne = OptionsScreen.resultCounterOne + (1 + randomCounterWeight) * counterPoints;
         }
         if (resetStateWord) {
           this.brickSequenceStep = 1;

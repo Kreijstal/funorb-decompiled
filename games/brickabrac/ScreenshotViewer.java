@@ -576,28 +576,28 @@ final class ScreenshotViewer {
         }
     }
 
-    final static int b(int param0, int param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int stackIn_3_0 = 0;
-        RuntimeException decompiledCaughtException = null;
+    final static int multiplyQ8(int left, int right, int obfuscationGuard) {
+        int leftHigh = 0;
+        RuntimeException failure = null;
+        int leftLow = 0;
+        int rightHigh = 0;
+        int rightLow = 0;
+        int product = 0;
+        RuntimeException caughtFailure = null;
         try {
-          var3_int = param0 >> 8;
-          var4 = 255 & param0;
-          if (param2 <= 90) {
+          leftHigh = left >> 8;
+          leftLow = 255 & left;
+          if (obfuscationGuard <= 90) {
             fullscreenDialogCenterY = 6;
           }
-          var5 = param1 >> 8;
-          var6 = 255 & param1;
-          stackIn_3_0 = (var4 * var6 >> 8) + (var3_int * param1 + var5 * var4);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) var3), "w.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          rightHigh = right >> 8;
+          rightLow = 255 & right;
+          product = (leftLow * rightLow >> 8) + (leftHigh * right + rightHigh * leftLow);
+          return product;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "w.F(" + left + ',' + right + ',' + obfuscationGuard + ')');
         }
     }
 

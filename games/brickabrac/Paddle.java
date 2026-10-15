@@ -114,97 +114,97 @@ final class Paddle extends RectangleBody {
     }
 
     final void onCircleContact(byte obfuscationGuard, PlayerBoard board, CircleBody circle) {
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        Ball var14 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_9_1 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
-        String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
-        String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        var13 = BrickABrac.field_J ? 1 : 0;
+        int relativeNormalMotion = 0;
+        int targetSpeed256 = 0;
+        int reboundCurveRadius256 = 0;
+        int reboundX256 = 0;
+        int reboundNormalY256 = 0;
+        int twiceNormalProjection256 = 0;
+        int candidateVelocityX256 = 0;
+        int candidateVelocityY256 = 0;
+        int unusedGameFlag = 0;
+        Ball ball = null;
+        int minimumReboundAngle8192 = 0;
+        int candidateSlopeQ16 = 0;
+        RuntimeException failureContext = null;
+        StringBuilder contextBuilder = null;
+        String boardSummary = null;
+        StringBuilder circleContextBuilder = null;
+        String circleSummary = null;
+        RuntimeException caughtFailure = null;
+        RuntimeException failure = null;
+        int incomingSpeed256;
+        int reflectedSpeed256;
+        unusedGameFlag = BrickABrac.field_J ? 1 : 0;
         try {
           super.onCircleContact(obfuscationGuard, board, circle);
-          var14 = (Ball) (circle);
-          var14.brickBounceCount = 0;
-          var14.contactCount = var14.contactCount + 1;
+          ball = (Ball) (circle);
+          ball.brickBounceCount = 0;
+          ball.contactCount = ball.contactCount + 1;
           if (IntegerValidationHelpers.collisionFace != 1) {
             if (IntegerValidationHelpers.collisionFace == 2) {
               circle.velocityY256 = -circle.velocityY256;
               return;
             }
             circle.velocityX256 = -circle.velocityX256;
-            var5 = (this.velocityX256 - circle.velocityX256) * SpriteGeometry.collisionNormalX256;
-            if (var5 >= 0) {
+            relativeNormalMotion = (this.velocityX256 - circle.velocityX256) * SpriteGeometry.collisionNormalX256;
+            if (relativeNormalMotion >= 0) {
               return;
             }
             circle.velocityX256 = this.velocityX256;
             return;
           }
-          var5Lifetime1 = CacheIoRequest.approximateSqrt256(-ScreenshotViewer.b(circle.velocityX256, -circle.velocityX256, 93) - ScreenshotViewer.b(circle.velocityY256, -circle.velocityY256, 114) << 8, obfuscationGuard - 51) >> 8;
-          var6 = this.reboundSpeedStage * 16 + var5Lifetime1;
-          if (3840 < var6) {
-            var6 = 3840;
+          incomingSpeed256 = CacheIoRequest.approximateSqrt256(-ScreenshotViewer.multiplyQ8(circle.velocityX256, -circle.velocityX256, 93) - ScreenshotViewer.multiplyQ8(circle.velocityY256, -circle.velocityY256, 114) << 8, obfuscationGuard - 51) >> 8;
+          targetSpeed256 = this.reboundSpeedStage * 16 + incomingSpeed256;
+          if (3840 < targetSpeed256) {
+            targetSpeed256 = 3840;
           }
-          var7 = 43520;
-          var8 = circle.x256 + circle.radius256 - (this.x256 + (this.width256 >> 1));
-          var9 = -CacheIoRequest.approximateSqrt256(ScreenshotViewer.b(var8, -var8, 113) - ScreenshotViewer.b(var7, -var7, 111) << 8, 2);
-          var9 = var9 / var7;
-          var8 = (var8 << 8) / var7;
-          var10 = circle.velocityY256 * var9 + var8 * circle.velocityX256 >> 7;
-          var11 = -(var8 * var10 >> 8) + (circle.velocityX256 + 8) - board.nextRandomBoundedInt(16, (byte) 62);
-          var12 = -(var10 * var9 >> 8) + (circle.velocityY256 + (-board.nextRandomBoundedInt(16, (byte) 62) + 8));
-          if (var11 == 0) {
-            circle.velocityY256 = var12;
-            circle.velocityX256 = var11;
+          reboundCurveRadius256 = 43520;
+          reboundX256 = circle.x256 + circle.radius256 - (this.x256 + (this.width256 >> 1));
+          reboundNormalY256 = -CacheIoRequest.approximateSqrt256(ScreenshotViewer.multiplyQ8(reboundX256, -reboundX256, 113) - ScreenshotViewer.multiplyQ8(reboundCurveRadius256, -reboundCurveRadius256, 111) << 8, 2);
+          reboundNormalY256 = reboundNormalY256 / reboundCurveRadius256;
+          reboundX256 = (reboundX256 << 8) / reboundCurveRadius256;
+          twiceNormalProjection256 = circle.velocityY256 * reboundNormalY256 + reboundX256 * circle.velocityX256 >> 7;
+          candidateVelocityX256 = -(reboundX256 * twiceNormalProjection256 >> 8) + (circle.velocityX256 + 8) - board.nextRandomBoundedInt(16, (byte) 62);
+          candidateVelocityY256 = -(twiceNormalProjection256 * reboundNormalY256 >> 8) + (circle.velocityY256 + (-board.nextRandomBoundedInt(16, (byte) 62) + 8));
+          if (candidateVelocityX256 == 0) {
+            circle.velocityY256 = candidateVelocityY256;
+            circle.velocityX256 = candidateVelocityX256;
           } else {
-            stackIn_8_0 = 341;
-            if (var12 * var11 <= 0) {
-              stackIn_9_1 = -((var12 << 8) / var11) << 8;
+            minimumReboundAngle8192 = 341;
+            if (candidateVelocityY256 * candidateVelocityX256 <= 0) {
+              candidateSlopeQ16 = -((candidateVelocityY256 << 8) / candidateVelocityX256) << 8;
             } else {
-              stackIn_9_1 = (var12 << 8) / var11 << 8;
+              candidateSlopeQ16 = (candidateVelocityY256 << 8) / candidateVelocityX256 << 8;
             }
-            if (stackIn_8_0 < AppletFlowHelpers.atan8192FromQ16(stackIn_9_1, 30922)) {
-              circle.velocityY256 = var12;
-              circle.velocityX256 = var11;
+            if (minimumReboundAngle8192 < AppletFlowHelpers.atan8192FromQ16(candidateSlopeQ16, 30922)) {
+              circle.velocityY256 = candidateVelocityY256;
+              circle.velocityX256 = candidateVelocityX256;
             } else {
               circle.velocityY256 = -circle.velocityY256;
             }
           }
-          var5Lifetime2 = CacheIoRequest.approximateSqrt256(-ScreenshotViewer.b(circle.velocityX256, -circle.velocityX256, obfuscationGuard ^ 85) - ScreenshotViewer.b(circle.velocityY256, -circle.velocityY256, 95) << 8, obfuscationGuard ^ 55) >> 8;
-          circle.velocityX256 = var6 * circle.velocityX256 / var5Lifetime2;
-          circle.velocityY256 = circle.velocityY256 * var6 / var5Lifetime2;
+          reflectedSpeed256 = CacheIoRequest.approximateSqrt256(-ScreenshotViewer.multiplyQ8(circle.velocityX256, -circle.velocityX256, obfuscationGuard ^ 85) - ScreenshotViewer.multiplyQ8(circle.velocityY256, -circle.velocityY256, 95) << 8, obfuscationGuard ^ 55) >> 8;
+          circle.velocityX256 = targetSpeed256 * circle.velocityX256 / reflectedSpeed256;
+          circle.velocityY256 = circle.velocityY256 * targetSpeed256 / reflectedSpeed256;
           return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_21_0 = var4;
-          stackIn_21_1 = new StringBuilder().append("vo.E(").append(obfuscationGuard).append(',');
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureContext = failure;
+          contextBuilder = new StringBuilder().append("vo.E(").append(obfuscationGuard).append(',');
           if (board == null) {
-            stackIn_22_2 = "null";
+            boardSummary = "null";
           } else {
-            stackIn_22_2 = "{...}";
+            boardSummary = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',');
+          circleContextBuilder = ((StringBuilder) (Object) contextBuilder).append(boardSummary).append(',');
           if (circle == null) {
-            stackIn_25_2 = "null";
+            circleSummary = "null";
           } else {
-            stackIn_25_2 = "{...}";
+            circleSummary = "{...}";
           }
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failureContext), ((StringBuilder) (Object) circleContextBuilder).append(circleSummary).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class Paddle extends RectangleBody {
         if (this.sizeStage != 0) {
           this.width256 = this.width256 - 3072;
           this.x256 = this.x256 + 1536;
-          int var2 = 27 / ((74 - obfuscationGuard) / 49);
+          int guardCalculation = 27 / ((74 - obfuscationGuard) / 49);
           this.sizeStage = this.sizeStage - 2;
           return;
         }
@@ -251,8 +251,8 @@ final class Paddle extends RectangleBody {
           this.catchTicks = packet.readUnsignedShort(65280);
           this.aftertouchTicks = packet.readUnsignedShort(65280);
           this.width256 = 32 + (6 * this.sizeStage + 8) << 8;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "vo.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "vo.L(" + obfuscationGuard + ',' + (packet != null ? "{...}" : "null") + ')');
         }
     }
 
