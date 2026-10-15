@@ -385,26 +385,26 @@
     "brickabrac": {
       "source": {
         "repository": "Kreijstal/funorb-decompiled",
-        "commit": "8f15143529e53929d7157a5393487342612a4180",
+        "commit": "9159750b0604b9082db8b91fe73a0a0b119c7f22",
         "subdirectory": "games/brickabrac"
       },
-      "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
+      "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
       "sources": {
         "files": 420,
-        "sha256": "4bd05d9fccc4aa8e5fba8f4788d277290f76f8c009f7403cff4a52a6e8c5c48c"
+        "sha256": "4101b4c810df8385a6fc9673a6297624ab9f748a9dee20026c51e80a2e6e6c78"
       },
       "dictionary": {
         "path": "decompilation/brickabrac-naming.json",
-        "sha256": "2831b7f0399ebfc42f79c790740347e9c42d81d00b79b35d3f9993fccba40e1a"
+        "sha256": "418269123edd0ec6f73bbfaed24974f708efd74589f6688edd9ced27b36f5b19"
       },
       "readingGuide": {
         "path": "games/brickabrac/README.md",
-        "sha256": "9be2eb3b7f56c2e25ab5ce800b7db01c88a364d2c995c5303e016828dccd0f7a"
+        "sha256": "689c33b05d343a5955ddcbb447093e313f4f398960cedad1e905a4a6c9d07768"
       },
-      "rulesSha256": "49859c0104159429b175c72e08f07185676780f2704322751753b1907d79b4e3",
+      "rulesSha256": "0a5fa77c9a2cfe14dfa54eb773e90b95cd789049d60be5294c9efa78e3386aa7",
       "compiler": {
-        "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff",
-        "trackedSourceTarSha256": "7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd"
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7",
+        "trackedSourceTarSha256": "34c1e50357f69cafd0c4550a63beeb07a8b56c8c891bdb31e4fc49a652509613"
       }
     }
   },
@@ -811,7 +811,7 @@
         },
         "publishedSources": {
           "files": 420,
-          "sha256": "4bd05d9fccc4aa8e5fba8f4788d277290f76f8c009f7403cff4a52a6e8c5c48c"
+          "sha256": "4101b4c810df8385a6fc9673a6297624ab9f748a9dee20026c51e80a2e6e6c78"
         }
       },
       "chess": {

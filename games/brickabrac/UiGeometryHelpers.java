@@ -46,19 +46,20 @@ final class UiGeometryHelpers {
     }
 
     final static void resetListVerticalBounds(boolean obfuscationGuard, UiComponent list) {
-        UiComponent var4 = null;
-        UiComponent var5 = null;
-        int var3 = BrickABrac.field_J ? 1 : 0;
+        UiComponent currentChild = null;
+        UiComponent firstChildAlias = null;
+        int unusedGameFlag = BrickABrac.field_J ? 1 : 0;
+        UiComponent nextChildAlias;
         try {
-          var4 = (UiComponent) (list.children.first(-104));
-          UiComponent var2 = var4;
-          while (var4 != null) {
-            var4.remainingY = 0;
-            var4.height = 0;
-            var4.remainingHeight = 0;
-            var4.localY = 0;
-            var5 = (UiComponent) (list.children.next((byte) 116));
-            var5 = var5;
+          currentChild = (UiComponent) (list.children.first(-104));
+          firstChildAlias = currentChild;
+          while (currentChild != null) {
+            currentChild.remainingY = 0;
+            currentChild.height = 0;
+            currentChild.remainingHeight = 0;
+            currentChild.localY = 0;
+            currentChild = (UiComponent) (list.children.next((byte) 116));
+            nextChildAlias = currentChild;
           }
           if (!obfuscationGuard) {
             UiGeometryHelpers.clearSharedReferences((byte) -19);
@@ -67,8 +68,8 @@ final class UiGeometryHelpers {
           list.remainingY = 0;
           list.height = 0;
           list.remainingHeight = 0;
-        } catch (RuntimeException runtimeException) {
-          throw FarmBackground.addExceptionContext((Throwable) ((Object) runtimeException), "jh.A(" + obfuscationGuard + ',' + (list != null ? "{...}" : "null") + ')');
+        } catch (RuntimeException failure) {
+          throw FarmBackground.addExceptionContext((Throwable) ((Object) failure), "jh.A(" + obfuscationGuard + ',' + (list != null ? "{...}" : "null") + ')');
         }
     }
 

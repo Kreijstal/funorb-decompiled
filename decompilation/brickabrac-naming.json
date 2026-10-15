@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
+  "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
   "positionUnits": "UTF-16 code units in original source",
   "rules": [
     {
@@ -37364,6 +37364,46 @@
       "renamedSymbol": "L:UiGeometryHelpers.createScaledHalfSizeSprite(ILRgbSprite;)LRgbSprite;#7"
     },
     {
+      "symbol": "L:jh.a(ZLmh;)V#0",
+      "originalName": "var4",
+      "to": "currentChild",
+      "evidence": "jh.java: The corrected raw reset loop advances currentChild; firstChildAlias and nextChildAlias retain the unused initial/next references, the branch-flag read remains unused, and failures retain their existing context wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#0"
+    },
+    {
+      "symbol": "L:jh.a(ZLmh;)V#1",
+      "originalName": "var2",
+      "to": "firstChildAlias",
+      "evidence": "jh.java: The corrected raw reset loop advances currentChild; firstChildAlias and nextChildAlias retain the unused initial/next references, the branch-flag read remains unused, and failures retain their existing context wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#1"
+    },
+    {
+      "symbol": "L:jh.a(ZLmh;)V#2",
+      "originalName": "var3",
+      "to": "unusedGameFlag",
+      "evidence": "jh.java: The corrected raw reset loop advances currentChild; firstChildAlias and nextChildAlias retain the unused initial/next references, the branch-flag read remains unused, and failures retain their existing context wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#2"
+    },
+    {
+      "symbol": "L:jh.a(ZLmh;)V#3",
+      "originalName": "var2Lifetime1",
+      "to": "nextChildAlias",
+      "evidence": "jh.java: The corrected raw reset loop advances currentChild; firstChildAlias and nextChildAlias retain the unused initial/next references, the branch-flag read remains unused, and failures retain their existing context wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#3"
+    },
+    {
+      "symbol": "L:jh.a(ZLmh;)V#4",
+      "originalName": "runtimeException",
+      "to": "failure",
+      "evidence": "jh.java: The corrected raw reset loop advances currentChild; firstChildAlias and nextChildAlias retain the unused initial/next references, the branch-flag read remains unused, and failures retain their existing context wrapper.",
+      "confidence": "reviewed",
+      "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#4"
+    },
+    {
       "symbol": "L:ji.a(JI)Lnm;#0",
       "originalName": "var5",
       "to": "match",
@@ -66863,7 +66903,7 @@
       "symbol": "M:jh.a(ZLmh;)V",
       "originalName": "a",
       "to": "resetListVerticalBounds",
-      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The frozen input has the documented non-advancing child defect; naming does not repair it. The false guard calls arithmetic cleanup before the parent reset.",
+      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The corrected source is pinned through the verified full-catalog workflow; the default raw/named core gate now runs this original-contract model. The false guard calls arithmetic cleanup before the parent reset.",
       "confidence": "reviewed",
       "renamedSymbol": "M:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V"
     },
@@ -93743,7 +93783,7 @@
       "symbol": "P:jh.a(ZLmh;)V#0",
       "originalName": "param0",
       "to": "obfuscationGuard",
-      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The frozen input has the documented non-advancing child defect; naming does not repair it. The false guard calls arithmetic cleanup before the parent reset.",
+      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The corrected source is pinned through the verified full-catalog workflow; the default raw/named core gate now runs this original-contract model. The false guard calls arithmetic cleanup before the parent reset.",
       "confidence": "reviewed",
       "renamedSymbol": "P:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#0"
     },
@@ -93751,7 +93791,7 @@
       "symbol": "P:jh.a(ZLmh;)V#1",
       "originalName": "param1",
       "to": "list",
-      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The frozen input has the documented non-advancing child defect; naming does not repair it. The false guard calls arithmetic cleanup before the parent reset.",
+      "evidence": "jh.java: The original gamepack and corrected raw Java reset localY, height, remainingY and remainingHeight on each direct child and then the parent, preserving horizontal bounds and grandchildren. The independent model has 5449 assertions including cursor and partial failures. The corrected source is pinned through the verified full-catalog workflow; the default raw/named core gate now runs this original-contract model. The false guard calls arithmetic cleanup before the parent reset.",
       "confidence": "reviewed",
       "renamedSymbol": "P:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#1"
     },
@@ -231980,7 +232020,7 @@
       "symbol": "L:jh.a(ZLmh;)V#0",
       "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#0",
       "originalName": "var4",
-      "renamedName": "var4",
+      "renamedName": "currentChild",
       "declaration": {
         "file": "jh.java",
         "start": 1630,
@@ -231990,8 +232030,8 @@
     {
       "symbol": "L:jh.a(ZLmh;)V#1",
       "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#1",
-      "originalName": "var5",
-      "renamedName": "var5",
+      "originalName": "var2",
+      "renamedName": "firstChildAlias",
       "declaration": {
         "file": "jh.java",
         "start": 1654,
@@ -232002,7 +232042,7 @@
       "symbol": "L:jh.a(ZLmh;)V#2",
       "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#2",
       "originalName": "var3",
-      "renamedName": "var3",
+      "renamedName": "unusedGameFlag",
       "declaration": {
         "file": "jh.java",
         "start": 1679,
@@ -232012,23 +232052,23 @@
     {
       "symbol": "L:jh.a(ZLmh;)V#3",
       "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#3",
-      "originalName": "var2",
-      "renamedName": "var2",
+      "originalName": "var2Lifetime1",
+      "renamedName": "nextChildAlias",
       "declaration": {
         "file": "jh.java",
-        "start": 1790,
-        "end": 1794
+        "start": 1725,
+        "end": 1738
       }
     },
     {
       "symbol": "L:jh.a(ZLmh;)V#4",
       "renamedSymbol": "L:UiGeometryHelpers.resetListVerticalBounds(ZLUiComponent;)V#4",
       "originalName": "runtimeException",
-      "renamedName": "runtimeException",
+      "renamedName": "failure",
       "declaration": {
         "file": "jh.java",
-        "start": 2277,
-        "end": 2293
+        "start": 2309,
+        "end": 2325
       }
     },
     {
@@ -785527,8 +785567,8 @@
     {
       "original": "jh.java",
       "renamed": "UiGeometryHelpers.java",
-      "inputSha256": "72f43d99798a9e36d81c4650f5c5bf70c979da08f7f20365731a2e46b8f5af6a",
-      "outputSha256": "0fd52ef8ee47d7582c891d31d322218a87b837018ff5d3d7a77d00d1083597ee",
+      "inputSha256": "407daf7afbda788282d552f5697bc2c0381dc8230f4a1baf2626eaa2f34cf940",
+      "outputSha256": "9aa0b2a71b31a78163d3aeb54ce7292c0aca2d2c09fb36690fb9201ba1378d05",
       "edits": [
         {
           "start": 50,
@@ -786021,6 +786061,13 @@
           "renamed": "UiComponent"
         },
         {
+          "start": 1630,
+          "end": 1634,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
           "start": 1651,
           "end": 1653,
           "symbol": "C:mh",
@@ -786028,218 +786075,330 @@
           "renamed": "UiComponent"
         },
         {
-          "start": 1746,
-          "end": 1748,
+          "start": 1654,
+          "end": 1658,
+          "symbol": "L:jh.a(ZLmh;)V#1",
+          "original": "var2",
+          "renamed": "firstChildAlias"
+        },
+        {
+          "start": 1679,
+          "end": 1683,
+          "symbol": "L:jh.a(ZLmh;)V#2",
+          "original": "var3",
+          "renamed": "unusedGameFlag"
+        },
+        {
+          "start": 1722,
+          "end": 1724,
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
         },
         {
-          "start": 1751,
-          "end": 1757,
+          "start": 1725,
+          "end": 1738,
+          "symbol": "L:jh.a(ZLmh;)V#3",
+          "original": "var2Lifetime1",
+          "renamed": "nextChildAlias"
+        },
+        {
+          "start": 1764,
+          "end": 1768,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 1772,
+          "end": 1774,
+          "symbol": "C:mh",
+          "original": "mh",
+          "renamed": "UiComponent"
+        },
+        {
+          "start": 1777,
+          "end": 1783,
           "symbol": "P:jh.a(ZLmh;)V#1",
           "original": "param1",
           "renamed": "list"
         },
         {
-          "start": 1758,
-          "end": 1766,
+          "start": 1784,
+          "end": 1792,
           "symbol": "F:mh.field_bb:Lvl;",
           "original": "field_bb",
           "renamed": "children"
         },
         {
-          "start": 1767,
-          "end": 1768,
+          "start": 1793,
+          "end": 1794,
           "symbol": "M:vl.d(I)Lnm;",
           "original": "d",
           "renamed": "first"
         },
         {
-          "start": 1787,
-          "end": 1789,
-          "symbol": "C:mh",
-          "original": "mh",
-          "renamed": "UiComponent"
+          "start": 1813,
+          "end": 1817,
+          "symbol": "L:jh.a(ZLmh;)V#1",
+          "original": "var2",
+          "renamed": "firstChildAlias"
         },
         {
-          "start": 1853,
-          "end": 1861,
+          "start": 1820,
+          "end": 1824,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 1843,
+          "end": 1847,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 1871,
+          "end": 1875,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 1876,
+          "end": 1884,
           "symbol": "F:mh.field_Db:I",
           "original": "field_Db",
           "renamed": "remainingY"
         },
         {
-          "start": 1884,
-          "end": 1892,
+          "start": 1902,
+          "end": 1906,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 1907,
+          "end": 1915,
           "symbol": "F:mh.field_cb:I",
           "original": "field_cb",
           "renamed": "height"
         },
         {
-          "start": 1915,
-          "end": 1922,
+          "start": 1933,
+          "end": 1937,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 1938,
+          "end": 1945,
           "symbol": "F:mh.field_C:I",
           "original": "field_C",
           "renamed": "remainingHeight"
         },
         {
-          "start": 1945,
-          "end": 1953,
+          "start": 1963,
+          "end": 1967,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 1968,
+          "end": 1976,
           "symbol": "F:mh.field_zb:I",
           "original": "field_zb",
           "renamed": "localY"
         },
         {
-          "start": 1979,
-          "end": 1981,
+          "start": 1994,
+          "end": 1998,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 2002,
+          "end": 2004,
           "symbol": "C:mh",
           "original": "mh",
           "renamed": "UiComponent"
         },
         {
-          "start": 1984,
-          "end": 1990,
+          "start": 2007,
+          "end": 2013,
           "symbol": "P:jh.a(ZLmh;)V#1",
           "original": "param1",
           "renamed": "list"
         },
         {
-          "start": 1991,
-          "end": 1999,
+          "start": 2014,
+          "end": 2022,
           "symbol": "F:mh.field_bb:Lvl;",
           "original": "field_bb",
           "renamed": "children"
         },
         {
-          "start": 2000,
-          "end": 2001,
+          "start": 2023,
+          "end": 2024,
           "symbol": "M:vl.a(B)Lnm;",
           "original": "a",
           "renamed": "next"
         },
         {
-          "start": 2068,
-          "end": 2074,
+          "start": 2051,
+          "end": 2064,
+          "symbol": "L:jh.a(ZLmh;)V#3",
+          "original": "var2Lifetime1",
+          "renamed": "nextChildAlias"
+        },
+        {
+          "start": 2067,
+          "end": 2071,
+          "symbol": "L:jh.a(ZLmh;)V#0",
+          "original": "var4",
+          "renamed": "currentChild"
+        },
+        {
+          "start": 2100,
+          "end": 2106,
           "symbol": "P:jh.a(ZLmh;)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
         },
         {
-          "start": 2090,
-          "end": 2092,
+          "start": 2122,
+          "end": 2124,
           "symbol": "C:jh",
           "original": "jh",
           "renamed": "UiGeometryHelpers"
         },
         {
-          "start": 2093,
-          "end": 2094,
+          "start": 2125,
+          "end": 2126,
           "symbol": "M:jh.a(B)V",
           "original": "a",
           "renamed": "clearSharedReferences"
         },
         {
-          "start": 2130,
-          "end": 2136,
+          "start": 2162,
+          "end": 2168,
           "symbol": "P:jh.a(ZLmh;)V#1",
           "original": "param1",
           "renamed": "list"
         },
         {
-          "start": 2137,
-          "end": 2145,
+          "start": 2169,
+          "end": 2177,
           "symbol": "F:mh.field_zb:I",
           "original": "field_zb",
           "renamed": "localY"
         },
         {
-          "start": 2161,
-          "end": 2167,
+          "start": 2193,
+          "end": 2199,
           "symbol": "P:jh.a(ZLmh;)V#1",
           "original": "param1",
           "renamed": "list"
         },
         {
-          "start": 2168,
-          "end": 2176,
+          "start": 2200,
+          "end": 2208,
           "symbol": "F:mh.field_Db:I",
           "original": "field_Db",
           "renamed": "remainingY"
         },
         {
-          "start": 2192,
-          "end": 2198,
+          "start": 2224,
+          "end": 2230,
           "symbol": "P:jh.a(ZLmh;)V#1",
           "original": "param1",
           "renamed": "list"
         },
         {
-          "start": 2199,
-          "end": 2207,
+          "start": 2231,
+          "end": 2239,
           "symbol": "F:mh.field_cb:I",
           "original": "field_cb",
           "renamed": "height"
         },
         {
-          "start": 2223,
-          "end": 2229,
+          "start": 2255,
+          "end": 2261,
           "symbol": "P:jh.a(ZLmh;)V#1",
           "original": "param1",
           "renamed": "list"
         },
         {
-          "start": 2230,
-          "end": 2237,
+          "start": 2262,
+          "end": 2269,
           "symbol": "F:mh.field_C:I",
           "original": "field_C",
           "renamed": "remainingHeight"
         },
         {
-          "start": 2313,
-          "end": 2315,
+          "start": 2309,
+          "end": 2325,
+          "symbol": "L:jh.a(ZLmh;)V#4",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 2345,
+          "end": 2347,
           "symbol": "C:qb",
           "original": "qb",
           "renamed": "FarmBackground"
         },
         {
-          "start": 2316,
-          "end": 2317,
+          "start": 2348,
+          "end": 2349,
           "symbol": "M:qb.a(Ljava/lang/Throwable;Ljava/lang/String;)Lv;",
           "original": "a",
           "renamed": "addExceptionContext"
         },
         {
-          "start": 2369,
-          "end": 2375,
+          "start": 2372,
+          "end": 2388,
+          "symbol": "L:jh.a(ZLmh;)V#4",
+          "original": "runtimeException",
+          "renamed": "failure"
+        },
+        {
+          "start": 2401,
+          "end": 2407,
           "symbol": "P:jh.a(ZLmh;)V#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
         },
         {
-          "start": 2385,
-          "end": 2391,
+          "start": 2417,
+          "end": 2423,
           "symbol": "P:jh.a(ZLmh;)V#1",
           "original": "param1",
           "renamed": "list"
         },
         {
-          "start": 2466,
-          "end": 2473,
+          "start": 2498,
+          "end": 2505,
           "symbol": "F:jh.field_e:[Ljava/lang/String;",
           "original": "field_e",
           "renamed": "rankingSortModeLabels"
         },
         {
-          "start": 2548,
-          "end": 2555,
+          "start": 2580,
+          "end": 2587,
           "symbol": "F:jh.field_c:Ljava/lang/String;",
           "original": "field_c",
           "renamed": "goodGriefText"
         },
         {
-          "start": 2581,
-          "end": 2588,
+          "start": 2613,
+          "end": 2620,
           "symbol": "F:jh.field_a:I",
           "original": "field_a",
           "renamed": "tooltipDisplayDurationTicks"
@@ -1272334,13 +1272493,13 @@
     "mode": "readable-source-mirror",
     "source": {
       "repository": "Kreijstal/funorb-decompiled",
-      "commit": "8f15143529e53929d7157a5393487342612a4180",
+      "commit": "9159750b0604b9082db8b91fe73a0a0b119c7f22",
       "subdirectory": "games/brickabrac"
     },
-    "rulesSha256": "49859c0104159429b175c72e08f07185676780f2704322751753b1907d79b4e3",
+    "rulesSha256": "0a5fa77c9a2cfe14dfa54eb773e90b95cd789049d60be5294c9efa78e3386aa7",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
-    "inputTreeSha256": "fac54f0a3858ed2cf55d94450690d9df5c74bc290059131269fce05c5fb8aba6",
-    "outputTreeSha256": "4bd05d9fccc4aa8e5fba8f4788d277290f76f8c009f7403cff4a52a6e8c5c48c",
+    "inputTreeSha256": "29a4eb473e753435cfd6d57bc5c9a77ef3ca9b477d8503c53c321ab55762f7df",
+    "outputTreeSha256": "4101b4c810df8385a6fc9673a6297624ab9f748a9dee20026c51e80a2e6e6c78",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -1272351,7 +1272510,7 @@
     "verification": {
       "originalCompiles": true,
       "renamedCompiles": true,
-      "bindingsCompared": 216408,
+      "bindingsCompared": 216409,
       "overrideFamiliesChecked": 690,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
@@ -1272370,6 +1272529,12 @@
           "independentExpectations": true,
           "wireBytes": 8,
           "fixedWord": 17,
+          "rawNamedIdentical": true
+        },
+        "listReset": {
+          "checks": 5449,
+          "traceSha256": "7c82f2de56199b3eb7b567dcb5bfca1414abd16664293b40c1c76231e1a6a729",
+          "independentExpectations": true,
           "rawNamedIdentical": true
         },
         "tooltipTransitionTableFixtures": true,
@@ -1272889,8 +1273054,8 @@
   },
   "generators": {
     "javaTools": {
-      "commit": "1d183d3ba75fc0a8cd3af1544591b8c463c0e1ff",
-      "trackedSourceTarSha256": "7230d95fc7b957c8c56c76ed8203e42c1808e0084711cfd0495f47d8a692e8cd"
+      "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7",
+      "trackedSourceTarSha256": "34c1e50357f69cafd0c4550a63beeb07a8b56c8c891bdb31e4fc49a652509613"
     },
     "namingTool": {
       "schema": 1,
