@@ -74,7 +74,7 @@ class bm extends mi {
               if (param1 == 96) {
                 if (this.field_B > 0) {
                   stackIn_58_1 = 120;
-                  if (lp.field_a[82]) {
+                  if (lp.heldKeys[82]) {
                     stackIn_59_2 = this.e((byte) 76);
                   } else {
                     stackIn_59_2 = -1 + this.field_B;
@@ -86,7 +86,7 @@ class bm extends mi {
                 if (param1 == 97) {
                   if (this.field_B < this.field_f.length()) {
                     stackIn_52_1 = 53;
-                    if (!lp.field_a[82]) {
+                    if (!lp.heldKeys[82]) {
                       stackIn_53_2 = 1 + this.field_B;
                     } else {
                       stackIn_53_2 = this.k(0);
@@ -107,17 +107,17 @@ class bm extends mi {
                     this.j(-1);
                     return true;
                   }
-                  if (lp.field_a[82] &&
+                  if (lp.heldKeys[82] &&
                     param1 == 65) {
                     this.b(true);
                     return true;
                   }
-                  if (lp.field_a[82] &&
+                  if (lp.heldKeys[82] &&
                     param1 == 66) {
                     this.i(-116);
                     return true;
                   }
-                  if (lp.field_a[82] &&
+                  if (lp.heldKeys[82] &&
                     67 == param1) {
                     this.l(-1);
                     return true;
@@ -443,13 +443,13 @@ class bm extends mi {
     private final void a(byte param0, int param1) {
         this.field_B = param1;
         if (param0 > 30) {
-          if (!lp.field_a[81]) {
+          if (!lp.heldKeys[81]) {
             this.field_D = this.field_B;
           }
           return;
         }
         this.field_F = 35L;
-        if (!lp.field_a[81]) {
+        if (!lp.heldKeys[81]) {
           this.field_D = this.field_B;
         }
     }

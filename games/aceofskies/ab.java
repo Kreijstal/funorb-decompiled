@@ -400,7 +400,7 @@ class ab extends ea implements vm {
           if (80 != var7) {
             return false;
           }
-          if (lp.field_a[81]) {
+          if (lp.heldKeys[81]) {
             stackIn_15_0 = this.b(param3, -107);
           } else {
             stackIn_15_0 = this.a(80, param3);

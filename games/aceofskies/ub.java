@@ -4,7 +4,7 @@
 final class ub extends IntrusiveNode {
     static int field_g;
     static ResourceArchive field_f;
-    static AircraftDefinition field_h;
+    static AircraftDefinition basePlayerDefinition;
     byte[] field_e;
 
     final static void a(String param0, String param1, int param2) {
@@ -21,7 +21,7 @@ final class ub extends IntrusiveNode {
           }
           vr.field_b = new ce(param0, param1, false, true, true);
           if (param2 >= -82) {
-            field_h = (AircraftDefinition) null;
+            basePlayerDefinition = (AircraftDefinition) null;
           }
           ClientException.field_d.d(vr.field_b, -30244);
           return;
@@ -958,7 +958,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "ra_intro_no_name");
                 if (param0 > -7) {
-                  field_h = (AircraftDefinition) null;
+                  basePlayerDefinition = (AircraftDefinition) null;
                 }
                 if (var2 != null) {
                   ea.a(0, var2);
@@ -1615,7 +1615,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_username_unavailable");
                 if (null != var2) {
-                  tb.field_e = ea.a(0, var2);
+                  HudMessage.field_e = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_username_available");
                 if (var2 != null) {
@@ -3115,7 +3115,7 @@ final class ub extends IntrusiveNode {
     public static void a(boolean param0) {
         try {
           field_f = null;
-          field_h = null;
+          basePlayerDefinition = null;
           if (param0) {
             ub.a(true);
           }
@@ -3125,6 +3125,6 @@ final class ub extends IntrusiveNode {
     }
 
     static {
-        field_h = new AircraftDefinition(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
+        basePlayerDefinition = new AircraftDefinition(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
     }
 }

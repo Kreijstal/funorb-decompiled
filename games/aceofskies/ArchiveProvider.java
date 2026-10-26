@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveProvider {
-    static int[][] field_a;
+    static int[][] classicWaveCompositions;
     static ll[] field_c;
     static int[] field_b;
 
@@ -70,12 +70,12 @@ abstract class ArchiveProvider {
         field_b = null;
         if (param0 < -3) {
           field_c = null;
-          field_a = (int[][]) null;
+          classicWaveCompositions = (int[][]) null;
           return;
         }
         field_c = (ll[]) null;
         field_c = null;
-        field_a = (int[][]) null;
+        classicWaveCompositions = (int[][]) null;
     }
 
     abstract ArchiveIndex a(boolean param0);
@@ -84,6 +84,6 @@ abstract class ArchiveProvider {
 
     static {
         field_b = new int[8192];
-        field_a = new int[][]{new int[]{3, 0, 0, 0, 0, 0, 0}, new int[]{4, 0, 0, 0, 0, 0, 1}, new int[]{4, 1, 0, 0, 0, 0, 2}, new int[]{8, 0, 0, 0, 0, 0, 3}, new int[]{6, 0, 1, 0, 0, 0, 2}, new int[]{4, 2, 0, 0, 0, 0, 3}, new int[]{0, 6, 0, 0, 0, 0, 3}, new int[]{2, 4, 0, 0, 0, 0, 3}, new int[]{6, 0, 0, 1, 0, 0, 2}, new int[]{0, 5, 2, 0, 0, 0, 3}, new int[]{0, 6, 0, 1, 0, 0, 3}, new int[]{0, 0, 0, 3, 0, 0, 1}, new int[]{0, 1, 0, 4, 0, 0, 2}, new int[]{6, 2, 0, 0, 1, 0, 3}, new int[]{0, 0, 1, 6, 0, 0, 2}, new int[]{0, 6, 0, 0, 1, 0, 3}, new int[]{0, 6, 0, 0, 2, 0, 3}, new int[]{0, 0, 0, 0, 4, 0, 2}, new int[]{0, 0, 0, 8, 0, 0, 3}, new int[]{0, 0, 2, 6, 0, 0, 3}, new int[]{0, 0, 0, 0, 4, 1, 2}};
+        classicWaveCompositions = new int[][]{new int[]{3, 0, 0, 0, 0, 0, 0}, new int[]{4, 0, 0, 0, 0, 0, 1}, new int[]{4, 1, 0, 0, 0, 0, 2}, new int[]{8, 0, 0, 0, 0, 0, 3}, new int[]{6, 0, 1, 0, 0, 0, 2}, new int[]{4, 2, 0, 0, 0, 0, 3}, new int[]{0, 6, 0, 0, 0, 0, 3}, new int[]{2, 4, 0, 0, 0, 0, 3}, new int[]{6, 0, 0, 1, 0, 0, 2}, new int[]{0, 5, 2, 0, 0, 0, 3}, new int[]{0, 6, 0, 1, 0, 0, 3}, new int[]{0, 0, 0, 3, 0, 0, 1}, new int[]{0, 1, 0, 4, 0, 0, 2}, new int[]{6, 2, 0, 0, 1, 0, 3}, new int[]{0, 0, 1, 6, 0, 0, 2}, new int[]{0, 6, 0, 0, 1, 0, 3}, new int[]{0, 6, 0, 0, 2, 0, 3}, new int[]{0, 0, 0, 0, 4, 0, 2}, new int[]{0, 0, 0, 8, 0, 0, 3}, new int[]{0, 0, 2, 6, 0, 0, 3}, new int[]{0, 0, 0, 0, 4, 1, 2}};
     }
 }

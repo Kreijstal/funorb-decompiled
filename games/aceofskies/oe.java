@@ -3,7 +3,7 @@
  */
 abstract class oe extends IntrusiveNode {
     int[] field_e;
-    static String[] field_f;
+    static String[] classicWaveMessages;
     int field_h;
     int field_g;
 
@@ -25,17 +25,17 @@ abstract class oe extends IntrusiveNode {
 
     public static void a(int param0) {
         if (param0 != 6259) {
-          field_f = (String[]) null;
-          field_f = null;
+          classicWaveMessages = (String[]) null;
+          classicWaveMessages = null;
           return;
         }
-        field_f = null;
+        classicWaveMessages = null;
     }
 
     oe() {
     }
 
     static {
-        field_f = new String[]{"We'll give these rotters what for!", "Nothing you can't deal with, eh?", "Look out - they've sent in one of their hot shots!", "You've made them angry now!", "That's the biggest plane I've ever seen!", "Look sharp - they've sent in some more crack shots.", "They really are going all out...", "I'm sure they'll run out of steam soon...", "My word, that's the fastest plane I've ever seen!", "Looks like they have more of those gunships.", "There's another of those new planes!", "They've got extra munitions from somewhere!", "Looks like they've been busy in the factories.", "There's something squiffy on the radar...", "Look sharp, the big boys are here!", "There's that radar glitch again.", "Something strange is happening on the radar...", "What's going on out there? ", "By crikey they're fast!", "They're sending in the big guns now!", "WHAT IN THE BLUE BLAZES IS THAT?"};
+        classicWaveMessages = new String[]{"We'll give these rotters what for!", "Nothing you can't deal with, eh?", "Look out - they've sent in one of their hot shots!", "You've made them angry now!", "That's the biggest plane I've ever seen!", "Look sharp - they've sent in some more crack shots.", "They really are going all out...", "I'm sure they'll run out of steam soon...", "My word, that's the fastest plane I've ever seen!", "Looks like they have more of those gunships.", "There's another of those new planes!", "They've got extra munitions from somewhere!", "Looks like they've been busy in the factories.", "There's something squiffy on the radar...", "Look sharp, the big boys are here!", "There's that radar glitch again.", "Something strange is happening on the radar...", "What's going on out there? ", "By crikey they're fast!", "They're sending in the big guns now!", "WHAT IN THE BLUE BLAZES IS THAT?"};
     }
 }

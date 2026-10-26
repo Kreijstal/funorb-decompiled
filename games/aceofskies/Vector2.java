@@ -230,7 +230,7 @@ final class Vector2 {
             ch.field_a = lt.field_u;
             if (param0 > fb.field_a) {
               for (var2 = 0; var2 < 112; var2++) {
-                lp.field_a[var2] = false;
+                lp.heldKeys[var2] = false;
               }
               fb.field_a = MenuInputState.field_h;
             } else {
@@ -238,10 +238,10 @@ final class Vector2 {
                 var2 = BitmapFont.field_b[MenuInputState.field_h];
                 MenuInputState.field_h = 127 & MenuInputState.field_h + 1;
                 if (var2 < 0) {
-                  lp.field_a[~var2] = false;
+                  lp.heldKeys[~var2] = false;
                   continue;
                 }
-                lp.field_a[var2] = true;
+                lp.heldKeys[var2] = true;
               }
             }
             lt.field_u = nl.field_w;

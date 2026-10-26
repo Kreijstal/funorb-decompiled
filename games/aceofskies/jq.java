@@ -63,7 +63,7 @@ final class jq extends oo implements dn {
             var4 = aa.field_d;
           } else {
             if (null != param1.field_c) {
-              var4 = tb.field_e;
+              var4 = HudMessage.field_e;
               if (this.field_db != null) {
                 this.field_db.a((byte) -77);
               }

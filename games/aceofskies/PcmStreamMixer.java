@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp extends PcmStream {
+final class PcmStreamMixer extends PcmStream {
     private IntrusiveDeque field_k;
     private IntrusiveDeque field_j;
     private int field_l;
@@ -87,8 +87,8 @@ final class tp extends PcmStream {
         }
     }
 
-    final synchronized void b(PcmStream param0) {
-        this.field_k.addFirst(param0, 25611);
+    final synchronized void addSubstream(PcmStream stream) {
+        this.field_k.addFirst(stream, 25611);
     }
 
     private final void d(int param0) {
@@ -148,8 +148,8 @@ final class tp extends PcmStream {
         return;
     }
 
-    final synchronized void a(PcmStream param0) {
-        param0.unlink(-126);
+    final synchronized void removeSubstream(PcmStream stream) {
+        stream.unlink(-126);
     }
 
     final PcmStream b() {
@@ -160,7 +160,7 @@ final class tp extends PcmStream {
         return 0;
     }
 
-    public tp() {
+    public PcmStreamMixer() {
         this.field_k = new IntrusiveDeque();
         this.field_j = new IntrusiveDeque();
         this.field_i = -1;

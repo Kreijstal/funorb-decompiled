@@ -19,12 +19,12 @@ final class we {
           ad.field_U = ad.field_U - 1;
           if (0 == ad.field_U) {
             ad.field_U = 200;
-            var1 = (SoundPlayback) (di.field_M.first(268435455));
+            var1 = (SoundPlayback) (di.activeSoundPlaybacks.first(268435455));
             while (var1 != null) {
               if (!var1.field_i.isLinked((byte) 93)) {
                 var1.unlink(-128);
               }
-              var1 = (SoundPlayback) (di.field_M.next((byte) 103));
+              var1 = (SoundPlayback) (di.activeSoundPlaybacks.next((byte) 103));
             }
             if (null != ao.field_c) {
               var1Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));

@@ -4,7 +4,7 @@
 final class ae extends sk {
     static boolean field_f;
     static String field_g;
-    static String[] field_h;
+    static String[] upgradeLabels;
 
     final void a(boolean param0) {
         if (!param0) {
@@ -41,7 +41,7 @@ final class ae extends sk {
     }
 
     public static void c(byte param0) {
-        field_h = null;
+        upgradeLabels = null;
         if (param0 != 15) {
           field_g = (String) null;
           field_g = null;
@@ -76,7 +76,7 @@ final class ae extends sk {
 
     final void a(boolean param0, byte param1) {
         if (param1 <= 2) {
-          field_h = (String[]) null;
+          upgradeLabels = (String[]) null;
         }
     }
 
@@ -595,6 +595,6 @@ final class ae extends sk {
     static {
         field_f = false;
         field_g = "The account name you use to access RuneScape and other Jagex.com games";
-        field_h = new String[]{"***Speed Upgraded!***", "***Rate of Fire Upgraded!***", "***Manoeuvrability Upgraded!***", "***Armour Upgraded!***", "***Extra Life!***", "***Backup has arrived!***", "***Score Multiplier!***"};
+        upgradeLabels = new String[]{"***Speed Upgraded!***", "***Rate of Fire Upgraded!***", "***Manoeuvrability Upgraded!***", "***Armour Upgraded!***", "***Extra Life!***", "***Backup has arrived!***", "***Score Multiplier!***"};
     }
 }

@@ -430,87 +430,87 @@ final class wu {
           }
           var2Lifetime24 = im.a(89, "wave_announce,0");
           if (var2Lifetime24 != null) {
-            oe.field_f[0] = ea.a(0, var2Lifetime24);
+            oe.classicWaveMessages[0] = ea.a(0, var2Lifetime24);
           }
           var2Lifetime25 = im.a(110, "wave_announce,1");
           if (var2Lifetime25 != null) {
-            oe.field_f[1] = ea.a(0, var2Lifetime25);
+            oe.classicWaveMessages[1] = ea.a(0, var2Lifetime25);
           }
           var2Lifetime26 = im.a(94, "wave_announce,2");
           if (null != var2Lifetime26) {
-            oe.field_f[2] = ea.a(0, var2Lifetime26);
+            oe.classicWaveMessages[2] = ea.a(0, var2Lifetime26);
           }
           var2Lifetime27 = im.a(75, "wave_announce,3");
           if (null != var2Lifetime27) {
-            oe.field_f[3] = ea.a(0, var2Lifetime27);
+            oe.classicWaveMessages[3] = ea.a(0, var2Lifetime27);
           }
           var2Lifetime28 = im.a(100, "wave_announce,4");
           if (var2Lifetime28 != null) {
-            oe.field_f[4] = ea.a(0, var2Lifetime28);
+            oe.classicWaveMessages[4] = ea.a(0, var2Lifetime28);
           }
           var2Lifetime29 = im.a(75, "wave_announce,5");
           if (null != var2Lifetime29) {
-            oe.field_f[5] = ea.a(0, var2Lifetime29);
+            oe.classicWaveMessages[5] = ea.a(0, var2Lifetime29);
           }
           var2Lifetime30 = im.a(87, "wave_announce,6");
           if (null != var2Lifetime30) {
-            oe.field_f[6] = ea.a(0, var2Lifetime30);
+            oe.classicWaveMessages[6] = ea.a(0, var2Lifetime30);
           }
           var2Lifetime31 = im.a(89, "wave_announce,7");
           if (null != var2Lifetime31) {
-            oe.field_f[7] = ea.a(0, var2Lifetime31);
+            oe.classicWaveMessages[7] = ea.a(0, var2Lifetime31);
           }
           var2Lifetime32 = im.a(118, "wave_announce,8");
           if (null != var2Lifetime32) {
-            oe.field_f[8] = ea.a(0, var2Lifetime32);
+            oe.classicWaveMessages[8] = ea.a(0, var2Lifetime32);
           }
           var2Lifetime33 = im.a(108, "wave_announce,9");
           if (var2Lifetime33 != null) {
-            oe.field_f[9] = ea.a(0, var2Lifetime33);
+            oe.classicWaveMessages[9] = ea.a(0, var2Lifetime33);
           }
           var2Lifetime34 = im.a(127, "wave_announce,10");
           if (var2Lifetime34 != null) {
-            oe.field_f[10] = ea.a(0, var2Lifetime34);
+            oe.classicWaveMessages[10] = ea.a(0, var2Lifetime34);
           }
           var2Lifetime35 = im.a(77, "wave_announce,11");
           if (var2Lifetime35 != null) {
-            oe.field_f[11] = ea.a(0, var2Lifetime35);
+            oe.classicWaveMessages[11] = ea.a(0, var2Lifetime35);
           }
           var2Lifetime36 = im.a(44, "wave_announce,12");
           if (null != var2Lifetime36) {
-            oe.field_f[12] = ea.a(0, var2Lifetime36);
+            oe.classicWaveMessages[12] = ea.a(0, var2Lifetime36);
           }
           var2Lifetime37 = im.a(101, "wave_announce,13");
           if (null != var2Lifetime37) {
-            oe.field_f[13] = ea.a(0, var2Lifetime37);
+            oe.classicWaveMessages[13] = ea.a(0, var2Lifetime37);
           }
           var2Lifetime38 = im.a(70, "wave_announce,14");
           if (var2Lifetime38 != null) {
-            oe.field_f[14] = ea.a(0, var2Lifetime38);
+            oe.classicWaveMessages[14] = ea.a(0, var2Lifetime38);
           }
           var2Lifetime39 = im.a(80, "wave_announce,15");
           if (var2Lifetime39 != null) {
-            oe.field_f[15] = ea.a(0, var2Lifetime39);
+            oe.classicWaveMessages[15] = ea.a(0, var2Lifetime39);
           }
           var2Lifetime40 = im.a(63, "wave_announce,16");
           if (var2Lifetime40 != null) {
-            oe.field_f[16] = ea.a(0, var2Lifetime40);
+            oe.classicWaveMessages[16] = ea.a(0, var2Lifetime40);
           }
           var2Lifetime41 = im.a(105, "wave_announce,17");
           if (var2Lifetime41 != null) {
-            oe.field_f[17] = ea.a(0, var2Lifetime41);
+            oe.classicWaveMessages[17] = ea.a(0, var2Lifetime41);
           }
           var2Lifetime42 = im.a(117, "wave_announce,18");
           if (null != var2Lifetime42) {
-            oe.field_f[18] = ea.a(0, var2Lifetime42);
+            oe.classicWaveMessages[18] = ea.a(0, var2Lifetime42);
           }
           var2Lifetime43 = im.a(59, "wave_announce,19");
           if (var2Lifetime43 != null) {
-            oe.field_f[19] = ea.a(0, var2Lifetime43);
+            oe.classicWaveMessages[19] = ea.a(0, var2Lifetime43);
           }
           var2Lifetime44 = im.a(44, "wave_announce,20");
           if (null != var2Lifetime44) {
-            oe.field_f[20] = ea.a(0, var2Lifetime44);
+            oe.classicWaveMessages[20] = ea.a(0, var2Lifetime44);
           }
           var2Lifetime45 = im.a(112, "powerup_messages,0");
           if (var2Lifetime45 != null) {
@@ -650,34 +650,34 @@ final class wu {
           }
           var2Lifetime79 = im.a(118, "purchasemessages,0");
           if (null != var2Lifetime79) {
-            ae.field_h[0] = ea.a(0, var2Lifetime79);
+            ae.upgradeLabels[0] = ea.a(0, var2Lifetime79);
           }
           var2Lifetime80 = im.a(97, "purchasemessages,1");
           if (var2Lifetime80 != null) {
-            ae.field_h[1] = ea.a(0, var2Lifetime80);
+            ae.upgradeLabels[1] = ea.a(0, var2Lifetime80);
           }
           var2Lifetime81 = im.a(72, "purchasemessages,2");
           if (null != var2Lifetime81) {
-            ae.field_h[2] = ea.a(0, var2Lifetime81);
+            ae.upgradeLabels[2] = ea.a(0, var2Lifetime81);
           }
           if (param0 >= -35) {
             wu.a(true);
           }
           var2Lifetime82 = im.a(80, "purchasemessages,3");
           if (null != var2Lifetime82) {
-            ae.field_h[3] = ea.a(0, var2Lifetime82);
+            ae.upgradeLabels[3] = ea.a(0, var2Lifetime82);
           }
           var2Lifetime83 = im.a(48, "purchasemessages,4");
           if (var2Lifetime83 != null) {
-            ae.field_h[4] = ea.a(0, var2Lifetime83);
+            ae.upgradeLabels[4] = ea.a(0, var2Lifetime83);
           }
           var2Lifetime84 = im.a(122, "purchasemessages,5");
           if (null != var2Lifetime84) {
-            ae.field_h[5] = ea.a(0, var2Lifetime84);
+            ae.upgradeLabels[5] = ea.a(0, var2Lifetime84);
           }
           var2Lifetime85 = im.a(109, "purchasemessages,6");
           if (var2Lifetime85 != null) {
-            ae.field_h[6] = ea.a(0, var2Lifetime85);
+            ae.upgradeLabels[6] = ea.a(0, var2Lifetime85);
           }
           var2Lifetime86 = im.a(85, "arcadeunlocked");
           if (null != var2Lifetime86) {

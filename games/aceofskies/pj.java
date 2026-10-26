@@ -9,12 +9,12 @@ abstract class pj {
     int field_c;
     java.awt.Image field_d;
 
-    final static tp c(byte param0) {
+    final static PcmStreamMixer c(byte param0) {
         if (param0 > -61) {
           pj.a((byte) 38);
-          return qn.field_b;
+          return qn.pcmMixer;
         }
-        return qn.field_b;
+        return qn.pcmMixer;
     }
 
     abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);

@@ -12,7 +12,7 @@ final class uh {
     byte field_n;
     boolean field_l;
     byte field_b;
-    static PcmSample[] field_g;
+    static PcmSample[] upgradeSounds;
     boolean field_i;
     short field_t;
     int field_h;
@@ -24,9 +24,9 @@ final class uh {
     int field_e;
 
     public static void a(int param0) {
-        field_g = null;
+        upgradeSounds = null;
         if (param0 > -72) {
-          field_g = (PcmSample[]) null;
+          upgradeSounds = (PcmSample[]) null;
         }
     }
 
@@ -41,7 +41,7 @@ final class uh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 59) {
-            field_g = (PcmSample[]) null;
+            upgradeSounds = (PcmSample[]) null;
           }
           stackIn_5_0 = !(!(param2 * param2 > lc.a(param3, false, param1)));
           return stackIn_5_0;

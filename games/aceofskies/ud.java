@@ -22,7 +22,7 @@ abstract class ud extends IntrusiveNode {
           return;
         }
         try {
-          qn.field_b.a(param0.field_g);
+          qn.pcmMixer.removeSubstream(param0.field_g);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ud.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

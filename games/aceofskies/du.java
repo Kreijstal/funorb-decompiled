@@ -8,7 +8,7 @@ final class du extends PacketBuffer {
     static vf field_m;
     static String[] menuActionLabels;
 
-    final static void a(int param0, int param1, tp param2, ResourceArchive param3) {
+    final static void a(int param0, int param1, PcmStreamMixer param2, ResourceArchive param3) {
         try {
           la.field_k = bl.a(113) * param0 / 1000;
           op.a(20786, param3);

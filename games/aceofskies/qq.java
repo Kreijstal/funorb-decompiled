@@ -15,9 +15,9 @@ final class qq {
     final static int a(int param0, int param1) {
         if (param0 != 20) {
           field_e = (vd[]) null;
-          return bs.a(-1, ci.field_i, param1);
+          return bs.a(-1, ci.gameRandom, param1);
         }
-        return bs.a(-1, ci.field_i, param1);
+        return bs.a(-1, ci.gameRandom, param1);
     }
 
     public static void b(byte param0) {

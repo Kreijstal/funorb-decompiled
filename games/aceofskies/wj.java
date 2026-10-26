@@ -287,10 +287,10 @@ final class wj implements up {
           tk.a(param3, param4, 10);
           um.field_m = tk.a(param1, param2, 0, param6);
           BitmapFont.field_a = tk.a(param1, param2, 1, param7);
-          qn.field_b = new tp();
+          qn.pcmMixer = new PcmStreamMixer();
           int var8_int = -86 % ((param0 + 12) / 37);
           Vector2.field_c = param7;
-          BitmapFont.field_a.a(qn.field_b);
+          BitmapFont.field_a.a(qn.pcmMixer);
           wt.field_e = param5;
           wt.field_e.a((byte) 125, RendererManager.field_c);
           um.field_m.a(wt.field_e);

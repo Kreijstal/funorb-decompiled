@@ -7,7 +7,7 @@ final class um extends PcmStream {
     static boolean field_j;
     static String field_n;
     private MidiPcmStream field_l;
-    tp field_i;
+    PcmStreamMixer field_i;
 
     final void b(int[] param0, int param1, int param2) {
         boolean stackIn_4_0 = false;
@@ -348,7 +348,7 @@ final class um extends PcmStream {
               if (!var11.j()) {
                 continue;
               }
-              this.field_i.b(var11);
+              this.field_i.addSubstream(var11);
             }
           }
           var7_intLifetime1 = -120 / ((35 - param1) / 48);
@@ -376,7 +376,7 @@ final class um extends PcmStream {
 
     um(MidiPcmStream param0) {
         this.field_k = new IntrusiveDeque();
-        this.field_i = new tp();
+        this.field_i = new PcmStreamMixer();
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

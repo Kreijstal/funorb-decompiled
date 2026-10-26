@@ -7,7 +7,7 @@ final class ci extends hh {
     private boolean field_e;
     private in field_k;
     private boolean field_l;
-    static Random field_i;
+    static Random gameRandom;
     private qe field_h;
     static int nextMenuId;
     static int field_g;
@@ -133,7 +133,7 @@ final class ci extends hh {
     }
 
     public static void c(byte param0) {
-        field_i = null;
+        gameRandom = null;
         field_f = null;
         if (param0 == -47) {
           field_j = null;
@@ -224,7 +224,7 @@ final class ci extends hh {
     }
 
     static {
-        field_i = new Random(2L);
+        gameRandom = new Random(2L);
         field_g = 0;
         field_m = new int[1];
         field_j = new IntrusiveDeque();

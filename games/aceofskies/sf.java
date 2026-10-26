@@ -61,7 +61,7 @@ abstract class sf extends IntrusiveNode {
 
     final static ej[] d(byte param0) {
         if (param0 >= 52) {
-          return new ej[]{gm.field_v, FlightBody.field_c, av.field_a, pg.field_d, qe.field_e, tb.field_g, ej.field_b, kb.field_C, op.field_b, qd.field_n, rc.field_e, NetworkGameClient.field_H, lc.field_b, ml.field_j};
+          return new ej[]{gm.field_v, FlightBody.field_c, av.field_a, pg.field_d, qe.field_e, HudMessage.field_g, ej.field_b, kb.field_C, op.field_b, qd.field_n, rc.field_e, NetworkGameClient.field_H, lc.field_b, ml.field_j};
         }
         return (ej[]) null;
     }

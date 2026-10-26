@@ -8,7 +8,7 @@ final class wd extends ab implements ue, dn, bh {
     ek field_B;
     private kk field_x;
     private kk field_F;
-    static IntrusiveDeque field_t;
+    static IntrusiveDeque hudMessages;
     private kk field_D;
     static String[] field_G;
     private sq field_z;
@@ -226,7 +226,7 @@ final class wd extends ab implements ue, dn, bh {
         try {
           var6 = new bc(20, param0, 120 + param4, 25, param2, false, 120, 3, qo.field_b, 16777215, param1);
           if (param3 != -1) {
-            field_t = (IntrusiveDeque) null;
+            hudMessages = (IntrusiveDeque) null;
           }
           this.a(var6, 1);
           stackIn_3_0 = var6.field_n;
@@ -467,13 +467,13 @@ final class wd extends ab implements ue, dn, bh {
     public static void h(int param0) {
         if (param0 == 11663) {
           field_G = null;
-          field_t = null;
+          hudMessages = null;
           field_v = null;
           return;
         }
         wd.b(53, -86, -124);
         field_G = null;
-        field_t = null;
+        hudMessages = null;
         field_v = null;
     }
 
@@ -518,7 +518,7 @@ final class wd extends ab implements ue, dn, bh {
 
     static {
         field_G = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
-        field_t = new IntrusiveDeque();
+        hudMessages = new IntrusiveDeque();
         field_v = new ll(540, 140);
     }
 }

@@ -9,7 +9,7 @@ abstract class rt implements ws {
     int field_b;
     int field_d;
     static String field_e;
-    static tp field_h;
+    static PcmStreamMixer field_h;
     int field_f;
     static String field_g;
 
@@ -94,7 +94,7 @@ abstract class rt implements ws {
         if (!param1) {
           return;
         }
-        field_h = (tp) null;
+        field_h = (PcmStreamMixer) null;
     }
 
     final static void b(int param0, byte param1) {
@@ -107,14 +107,14 @@ abstract class rt implements ws {
         var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           gn.field_a = param0;
-          var2 = (SoundPlayback) (di.field_M.first(268435455));
+          var2 = (SoundPlayback) (di.activeSoundPlaybacks.first(268435455));
           while (var2 != null) {
             if (!var2.field_i.isLinked((byte) 99)) {
               var2.unlink(-128);
             } else {
               var2.field_g.f(gn.field_a * var2.field_h + 128 >> 8);
             }
-            var2 = (SoundPlayback) (di.field_M.next((byte) 103));
+            var2 = (SoundPlayback) (di.activeSoundPlaybacks.next((byte) 103));
           }
           var3 = -52 % ((-46 - param1) / 52);
           if (null != ao.field_c) {

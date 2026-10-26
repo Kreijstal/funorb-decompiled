@@ -4,7 +4,7 @@
 abstract class va extends IntrusiveNode {
     int field_e;
 
-    abstract int a(tp param0);
+    abstract int a(PcmStreamMixer param0);
 
     abstract void a();
 

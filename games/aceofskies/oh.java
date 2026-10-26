@@ -9,9 +9,9 @@ final class oh extends IntrusiveNode {
 
     final static Vector2 a(double param0, byte param1) {
         double var5 = 0.0;
-        double var3 = (double)bs.a(-1, ci.field_i, (int)(param0 * 20000.0)) - 10000.0 * param0;
+        double var3 = (double)bs.a(-1, ci.gameRandom, (int)(param0 * 20000.0)) - 10000.0 * param0;
         if (param1 == 28) {
-          var5 = -(param0 * 10000.0) + (double)bs.a(-1, ci.field_i, (int)(param0 * 20000.0));
+          var5 = -(param0 * 10000.0) + (double)bs.a(-1, ci.gameRandom, (int)(param0 * 20000.0));
           return new Vector2(var3 / 10000.0, var5 / 10000.0);
         }
         return (Vector2) null;

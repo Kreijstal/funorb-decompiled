@@ -17,7 +17,7 @@ final class gh {
     private int field_a;
     static GameAppletShell field_f;
     private long field_b;
-    static AircraftDefinition field_j;
+    static AircraftDefinition playerDefinition;
     private fs field_m;
 
     private final void a(int param0) throws IOException {
@@ -358,7 +358,7 @@ final class gh {
           field_i = (ia) null;
         }
         field_i = null;
-        field_j = null;
+        playerDefinition = null;
     }
 
     final void a(byte[] param0, int param1) throws IOException {
@@ -452,6 +452,6 @@ final class gh {
         field_o = "Email is valid";
         field_i = new ia();
         field_f = null;
-        field_j = new AircraftDefinition(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
+        playerDefinition = new AircraftDefinition(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
     }
 }

@@ -7,7 +7,7 @@ final class lj implements ir {
     private hc field_l;
     private int field_o;
     private int field_h;
-    static PcmSample[] field_c;
+    static PcmSample[] aircraftEngineSamples;
     private int field_i;
     static String field_e;
     static String field_a;
@@ -105,7 +105,7 @@ final class lj implements ir {
     }
 
     public static void a(boolean param0) {
-        field_c = null;
+        aircraftEngineSamples = null;
         field_a = null;
         field_e = null;
         if (!param0) {

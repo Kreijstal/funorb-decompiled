@@ -2,11 +2,15 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable; the current reverse dictionary is ../../decompilation/aceofskies-naming.json.
 
-This pass names 39 reviewed classes in 545 source files. Unresolved roles keep their original names; renamed names have no opaque suffix.
+This pass names 41 reviewed classes in 545 source files. Unresolved roles keep their original names; renamed names have no opaque suffix.
 
 Start at `AceOfSkies.advanceGame` → `FlightSession.advanceSession`. `startGame` creates the player and pools; its flag selects the literal arcade mode. `renderSession` draws through `GraphicsRenderer`. `Aircraft` retains its definition, target, pursuing aircraft, firing request and temporary weapon. `FlightBody` and `Vector2` expose the flight arithmetic. `Bullet`, `Pickup`, `SmokeParticle` and `ScreenParticle` are distinct pools.
 
 `MenuScreen.open`, `advanceMenu`, `handleNavigationKey`, `handleAction`, `findItemAt` and `drawMenu` expose menu flow. `MenuInputState` distinguishes keyboard selection, pointer selection, press edges, held buttons and countdown state. The registered slots are 0 main menu, 1 pause, 2 highscores, 3 instructions, 4 achievements, 5 achievements this game, 6 logged-out result notice, and 7 settings. Menu action codes remain their original integers; action 0 starts classic play, 19 starts arcade play, 1 resumes, 3 opens instructions, 14 opens achievements, 2 opens highscores, 22 opens settings and 7 ends the game.
+
+`updatePlayerControls` exposes left/right press edges, double-tap braking and the overheat fire latch. The tick counter advances even in attract mode; a second turn press must be strictly fewer than 50 control ticks after the previous press. Releasing fire clears the latch without setting a new fire request. `lifecyclePhase` rises to 92 on living aircraft and falls toward 2 while destroyed aircraft animate; it is distinct from weapon heat.
+
+`startClassicWave` uses `classicWaveIndex` and `classicWaveCompositions`; `startArcadeWave` partitions a doubled wave budget using aircraft costs. Their type order differs, and the early classic type-3 definition changes after wave 10. `purchaseUpgrade` spends baseCost + upgradeCode only after acceptance. A fire-rate upgrade can increment its level and still return false when its fire interval is already 1; that edge behavior remains. `HudMessage` owns the queued text fade/hold/expiry phases.
 
 `HighscoreQuery`, `ScoreSubmission` and `HighscoreNameEntry` share established roles with GeoBlox. `requestHighscores` deduplicates pending queries by queryId. `writeHighscoreQuery` and `writeScoreSubmission` preserve the original packet framing, context values and CRC32. `decodeHighscoreResponse` builds all/my/best-player views, completes and unlinks queries, and matches submission acknowledgements by a wrapping 16-bit ID. `findSubmittedScoreRow` checks the player name, server token and every score value. Ace packs its game score and accuracy as 100 * finalScore + finalAccuracyPercent; the four opaque context integers retain positional names rather than unsupported meanings.
 

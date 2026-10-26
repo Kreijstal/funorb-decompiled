@@ -42,7 +42,7 @@ final class np extends hh {
 
     final static int a(int param0, int param1, byte param2) {
         int var3 = 83 % ((param2 - 18) / 54);
-        return bs.a(-1, ci.field_i, -param0 + param1) + param0;
+        return bs.a(-1, ci.gameRandom, -param0 + param1) + param0;
     }
 
     final boolean a(byte param0) {

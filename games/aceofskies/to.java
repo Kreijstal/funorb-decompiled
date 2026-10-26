@@ -176,7 +176,7 @@ abstract class to extends ea implements vm {
           if (var6 != 80) {
             return false;
           }
-          if (!lp.field_a[81]) {
+          if (!lp.heldKeys[81]) {
             stackIn_11_0 = this.a(-98, param3);
           } else {
             stackIn_11_0 = this.a((byte) -112, param3);

@@ -33,7 +33,7 @@ class di extends ou {
     private boolean field_o;
     private boolean field_q;
     private int field_Y;
-    static IntrusiveDeque field_M;
+    static IntrusiveDeque activeSoundPlaybacks;
     private ll field_G;
     private ll field_N;
     private int field_y;
@@ -180,9 +180,9 @@ class di extends ou {
     }
 
     public static void a(boolean param0) {
-        field_M = null;
+        activeSoundPlaybacks = null;
         if (param0) {
-          field_M = (IntrusiveDeque) null;
+          activeSoundPlaybacks = (IntrusiveDeque) null;
         }
     }
 
@@ -216,6 +216,6 @@ class di extends ou {
     }
 
     static {
-        field_M = new IntrusiveDeque();
+        activeSoundPlaybacks = new IntrusiveDeque();
     }
 }

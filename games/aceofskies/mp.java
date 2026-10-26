@@ -125,7 +125,7 @@ final class mp extends vo {
             stackIn_18_0 = dk.field_k;
             return stackIn_18_0;
           }
-          stackIn_16_0 = tb.field_e;
+          stackIn_16_0 = HudMessage.field_e;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

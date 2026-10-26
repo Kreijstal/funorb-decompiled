@@ -4,7 +4,7 @@
 final class sd extends hh {
     static String[] field_j;
     private qe field_i;
-    static boolean[][] field_d;
+    static boolean[][] musicLayerPresets;
     private boolean field_f;
     private in field_l;
     static RenderSprite[] field_k;
@@ -41,7 +41,7 @@ final class sd extends hh {
 
     public static void b(int param0) {
         field_e = null;
-        field_d = (boolean[][]) null;
+        musicLayerPresets = (boolean[][]) null;
         if (param0 == 0) {
           field_j = null;
           field_m = null;
@@ -166,7 +166,7 @@ final class sd extends hh {
     }
 
     static {
-        field_d = new boolean[][]{new boolean[]{true, true, false, false, false, true, true, false, false, true, false, false, false, false, false, false}, new boolean[]{true, true, true, true, true, true, true, false, false, true, false, false, false, false, false, false}, new boolean[]{true, true, true, true, true, true, true, true, true, false, true, false, false, false, false, false}, new boolean[]{false, true, false, false, false, false, true, true, true, false, false, true, false, false, true, false}, new boolean[]{false, false, false, false, false, false, false, false, false, false, false, true, true, true, false, false}};
+        musicLayerPresets = new boolean[][]{new boolean[]{true, true, false, false, false, true, true, false, false, true, false, false, false, false, false, false}, new boolean[]{true, true, true, true, true, true, true, false, false, true, false, false, false, false, false, false}, new boolean[]{true, true, true, true, true, true, true, true, true, false, true, false, false, false, false, false}, new boolean[]{false, true, false, false, false, false, true, true, true, false, false, true, false, false, true, false}, new boolean[]{false, false, false, false, false, false, false, false, false, false, false, true, true, true, false, false}};
         field_e = "Orb Coins";
         field_m = "SETTINGS";
     }

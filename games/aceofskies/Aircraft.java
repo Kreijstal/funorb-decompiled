@@ -6,20 +6,20 @@ final class Aircraft extends FlightBody {
     static int field_o;
     int fireCooldown;
     int damageSmokeTicks;
-    boolean field_p;
+    boolean braking;
     boolean fireRequested;
     SteeringMode steeringMode;
     SoundPlayback engineSound;
     int temporaryWeapon;
     int bankOffset;
-    private int field_w;
+    private int aimStallTicks;
     static String field_s;
     int hitPoints;
     Aircraft pursuingAircraft;
     AircraftDefinition definition;
     Aircraft targetAircraft;
     int temporaryWeaponTicks;
-    int field_t;
+    int lifecyclePhase;
     int dropPickupCode;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, byte param16) {
@@ -360,14 +360,14 @@ final class Aircraft extends FlightBody {
         try {
           this.position.setFrom(position, true);
           if (obfuscationGuard < 56) {
-            this.field_w = 43;
+            this.aimStallTicks = 43;
           }
           this.definition = definition;
           this.weaponHeat = 0;
           this.fireCooldown = this.definition.fireInterval;
           this.hitPoints = this.definition.maximumHitPoints;
           this.fireRequested = false;
-          this.field_t = 92;
+          this.lifecyclePhase = 92;
           this.steeringMode = qo.field_e;
           this.speed = this.definition.maximumSpeed;
           this.heading = (double)qq.a(20, 256);
@@ -382,7 +382,7 @@ final class Aircraft extends FlightBody {
 
     Aircraft(Vector2 position, AircraftDefinition definition) {
         super(position);
-        this.field_p = false;
+        this.braking = false;
         this.pursuingAircraft = null;
         this.targetAircraft = null;
         this.temporaryWeapon = 0;
@@ -498,8 +498,8 @@ final class Aircraft extends FlightBody {
               if (pd.field_a != this.steeringMode) {
                 this.steeringMode = ht.field_i;
               } else {
-                fieldTemp$0 = this.field_w + 1;
-                this.field_w = this.field_w + 1;
+                fieldTemp$0 = this.aimStallTicks + 1;
+                this.aimStallTicks = this.aimStallTicks + 1;
                 if (0 <= fieldTemp$0) {
                   this.steeringMode = ht.field_i;
                 }
@@ -573,20 +573,20 @@ final class Aircraft extends FlightBody {
                 targetAlignment = IntrusiveDeque.field_a.dot(rc.field_d, (byte) -118) / rc.field_d.length((byte) -74);
                 if (9.5 < targetAlignment) {
                   this.fireRequested = true;
-                  this.field_w = 0;
+                  this.aimStallTicks = 0;
                   if (pd.field_a != this.steeringMode) {
                     return;
                   }
                   this.steeringMode = ht.field_i;
                   return;
                 }
-                fieldTemp$1 = this.field_w + 1;
-                this.field_w = this.field_w + 1;
+                fieldTemp$1 = this.aimStallTicks + 1;
+                this.aimStallTicks = this.aimStallTicks + 1;
                 if (fieldTemp$1 < 150) {
                   return;
                 }
                 this.steeringMode = pd.field_a;
-                this.field_w = 150;
+                this.aimStallTicks = 150;
                 return;
               }
               if (0 != turnDirection) {

@@ -5,11 +5,11 @@ final class qn {
     static java.awt.Image field_d;
     static SoundCache field_c;
     static st field_a;
-    static tp field_b;
+    static PcmStreamMixer pcmMixer;
 
     public static void a(int param0) {
         field_a = null;
-        field_b = null;
+        pcmMixer = null;
         int var1 = -119 % ((param0 + 44) / 62);
         field_d = null;
         field_c = null;

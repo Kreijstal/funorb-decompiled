@@ -15,12 +15,12 @@ final class w {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new SoundPlayback(param1, param1);
-          di.field_M.addLast(param0 ^ -23077, var2);
+          di.activeSoundPlaybacks.addLast(param0 ^ -23077, var2);
           if (param0 != -23159) {
             var3 = (PcmSampleStream) null;
             w.a(117, (PcmSampleStream) null);
           }
-          qn.field_b.b(param1);
+          qn.pcmMixer.addSubstream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

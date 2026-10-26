@@ -1349,7 +1349,7 @@ final class MidiPcmStream extends PcmStream {
             param3.field_e.b(param4, param1, param0);
           }
           if (param3.field_e.j()) {
-            this.field_L.field_i.b(param3.field_e);
+            this.field_L.field_i.addSubstream(param3.field_e);
           }
           param3.a(11821);
           if (param3.field_p >= 0) {
@@ -1425,7 +1425,7 @@ final class MidiPcmStream extends PcmStream {
               if (var3.field_e != null) {
                 var3.field_e.h(tk.field_f / 100);
                 if (var3.field_e.j()) {
-                  this.field_L.field_i.b(var3.field_e);
+                  this.field_L.field_i.addSubstream(var3.field_e);
                 }
                 var3.a(11821);
               }

@@ -526,7 +526,7 @@ final class MenuScreen {
                 if (var5 == 1) {
                   if (this.input.isActivated((byte) 114)) {
                     Bullet.requestMenu((byte) 33, -1, pointerSelection);
-                    sg.flightSession.e(-112);
+                    sg.flightSession.resumeGame(-112);
                     co.returnMenuId = 0;
                   }
                 } else {
@@ -846,7 +846,7 @@ final class MenuScreen {
         }
         while (ek.a((byte) -126)) {
           if (bk.lastKeyCode == 50 &&
-            lp.field_a[81] &&
+            lp.heldKeys[81] &&
             ln.field_d >= 2) {
             mj.field_b = mj.field_b ^ true;
           }
@@ -860,7 +860,7 @@ final class MenuScreen {
           }
           if (1 == this.screenId) {
             Bullet.requestMenu((byte) -126, -1, false);
-            sg.flightSession.e(obfuscationGuard ^ 24995);
+            sg.flightSession.resumeGame(obfuscationGuard ^ 24995);
             co.returnMenuId = 0;
             continue;
           }
@@ -1104,8 +1104,8 @@ final class MenuScreen {
             }
           }
           if (var6 == 0 ||
-            !lp.field_a[70] &&
-            !lp.field_a[69]) {
+            !lp.heldKeys[70] &&
+            !lp.heldKeys[69]) {
             for (var7Lifetime1 = 0; this.input.itemCount > var7Lifetime1; var7Lifetime1++) {
               if (this.isItemEnabled(var7Lifetime1, (byte) -17)) {
                 stackIn_54_0 = this;

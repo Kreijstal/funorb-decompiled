@@ -297,7 +297,7 @@ public final class AceOfSkies extends NetworkGameClient {
         var3 = obfuscationControl ? 1 : 0;
         try {
           if (ln.field_d >= 2 &&
-            lp.field_a[41]) {
+            lp.heldKeys[41]) {
             tt.field_a = true;
             hg.field_D = 16777215;
           }
@@ -730,7 +730,7 @@ public final class AceOfSkies extends NetworkGameClient {
           cl.a((byte) -98);
           ht.a(-91);
           qq.b((byte) 116);
-          tb.a((byte) 117);
+          HudMessage.a((byte) 117);
           oc.a((byte) 121);
           mj.a(3);
           dq.a(122);
@@ -792,7 +792,7 @@ public final class AceOfSkies extends NetworkGameClient {
           if (param0 <= 43) {
             return;
           }
-          ci.field_i = new Random(kh.a(-99));
+          ci.gameRandom = new Random(kh.a(-99));
           FlightSession.field_wb = new RendererManager(11, 12, (d) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

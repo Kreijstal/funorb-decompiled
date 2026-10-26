@@ -19,7 +19,7 @@ final class jf implements ir {
     }
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
-        lj.field_c = nc.a(param1, param0 ^ 102, param2, jb.field_a, (boolean[]) null);
+        lj.aircraftEngineSamples = nc.a(param1, param0 ^ 102, param2, jb.field_a, (boolean[]) null);
         boolean[] var5 = (boolean[]) null;
         kn.field_c = nc.a(param1, -107, param2, s.field_d, (boolean[]) null);
         if (param0 != -4) {
@@ -29,7 +29,7 @@ final class jf implements ir {
           boolean[] var6 = (boolean[]) null;
           lp.field_g = nc.a(param1, -114, param2, iq.field_g, (boolean[]) null);
           fd.field_b = dt.a(param1, 19501, ad.field_T, param2, tt.field_d);
-          uh.field_g = nc.a(param1, -76, param2, wt.field_k, ht.field_j);
+          uh.upgradeSounds = nc.a(param1, -76, param2, wt.field_k, ht.field_j);
           hp.field_i = nc.a(param1, -114, param2, wt.field_g, rj.field_c);
           mh.field_o = bj.a(param2, "", wg.field_c).a();
           gg.field_a = bj.a(param2, "", rg.field_C).a();
