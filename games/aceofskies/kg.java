@@ -92,10 +92,10 @@ final class kg {
           var17 = new ll(param2.a("button.gif", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
           cd.a(param1, "commonui", "dropdown", param0 - 116);
           var5 = iu.a(param1, "commonui", (byte) -86, "screen_options");
-          gr.field_i = new wp[param0];
+          MenuInputState.field_i = new wp[param0];
           dk.field_e = new wp[4];
           sl.field_o = new wp[4];
-          var6 = new wp[][]{sl.field_o, dk.field_e, gr.field_i};
+          var6 = new wp[][]{sl.field_o, dk.field_e, MenuInputState.field_i};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

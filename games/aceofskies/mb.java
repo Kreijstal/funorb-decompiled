@@ -68,7 +68,7 @@ final class mb extends he {
             return;
           }
           while (ek.a((byte) -127)) {
-            hr.field_e.a(108, fr.field_e, bk.field_f);
+            hr.field_e.a(108, fr.field_e, bk.lastKeyCode);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

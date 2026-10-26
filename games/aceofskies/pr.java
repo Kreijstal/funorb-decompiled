@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pr {
-    static gr field_b;
+    static MenuInputState field_b;
     static String field_a;
     private static String field_z;
 
@@ -16,7 +16,7 @@ final class pr {
 
     static {
         field_z = "pr.A(";
-        field_b = new gr(1);
+        field_b = new MenuInputState(1);
         field_a = "Waiting for sound effects";
     }
 }

@@ -99,7 +99,7 @@ final class de implements ir {
           vn.field_f.a(pd.field_b, true, qe.field_k, true);
           vn.field_f.f((byte) -117);
           while (ek.a((byte) -127)) {
-            vn.field_f.a(param0 - 42, fr.field_e, bk.field_f);
+            vn.field_f.a(param0 - 42, fr.field_e, bk.lastKeyCode);
           }
           if (-1 != dh.field_c) {
             var1_int = dh.field_c;

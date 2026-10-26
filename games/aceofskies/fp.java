@@ -16,21 +16,21 @@ final class fp extends IntrusiveNode {
           CipherPacketBuffer var4 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
-          if (null == gr.field_b) {
-            gr.field_b = ii.field_j.a(2, ca.field_g, sg.field_b);
+          if (null == MenuInputState.field_b) {
+            MenuInputState.field_b = ii.field_j.a(2, ca.field_g, sg.field_b);
           }
-          if (gr.field_b.field_a == 0) {
+          if (MenuInputState.field_b.field_a == 0) {
             return false;
           }
           var2 = 72 / ((-10 - param0) / 56);
           dupTemp$1 = kh.a(-114);
           co.field_e = dupTemp$1;
           ff.field_b = dupTemp$1;
-          if (gr.field_b.field_a != 1) {
+          if (MenuInputState.field_b.field_a != 1) {
             ca.field_f = pj.field_f;
           } else {
             try {
-              ft.field_l = new vf((java.net.Socket) (gr.field_b.field_f), ii.field_j);
+              ft.field_l = new vf((java.net.Socket) (MenuInputState.field_b.field_f), ii.field_j);
               var4 = IntKeyLookup.field_c;
               q.field_p.position = 0;
               var4.position = 0;
@@ -45,11 +45,11 @@ final class fp extends IntrusiveNode {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = (IOException) (Object) decompiledCaughtException;
               ca.field_f = pj.field_f;
-              gr.field_b = null;
+              MenuInputState.field_b = null;
               return true;
             }
           }
-          gr.field_b = null;
+          MenuInputState.field_b = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

@@ -413,22 +413,45 @@
         "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
         "subdirectory": "games/aceofskies"
       },
-      "inputTreeSha256": "a52334680405315c555ca4db143723b8fbb0cda0101e89d5ab7fa743466537b7",
+      "inputTreeSha256": "3feb47118078691ab11c03f0cd4a8914b574480aee7df4d375bbd4e273ded155",
       "sources": {
         "files": 545,
-        "sha256": "4da9da9045374c4da7f209226412678320f1564f5fe64afce01c0f77a697fe13"
+        "sha256": "277b01c6f738d3768f881518bb6f726e12ad24d42ea45aa80a21573ed245654a"
       },
       "dictionary": {
         "path": "decompilation/aceofskies-naming.json",
-        "sha256": "62f01af1c690d7703a03d0220ec0ea189c57fbfe91f76de1db089282f7849575"
+        "sha256": "8259a733b404ef98e07b90deaf92e2bb38a9cc18c372c9ef3c231ff335f3e75e"
       },
       "readingGuide": {
         "path": "games/aceofskies/README.md",
-        "sha256": "e6831e9df8dd2190c64886dd40e9ee0dbccd80e6ae4c47ce1270ed7f1a04bf30"
+        "sha256": "51fa15c650388dc1234cfba4d03ad611b28dfcf30b55c49b6849900a74bb1002"
       },
-      "rulesSha256": "48761db6beb58d7d1ea46133bc87e5b3a7687254780dcb4d6b6c4289cbc42aa0",
+      "rulesSha256": "d2388adba1c59c4d7e27815b614f8582766ea4cb68a86b0995123c152cdfeff0",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      },
+      "inputPreparation": {
+        "method": "pk.a(IIIZIIIZI)V",
+        "compiler": {
+          "commit": "c6f6a1e61b0088e882236d732145a84775fd9cb8",
+          "sourceArchiveSha256": "2e63dcc7a33667d65beb99316a9937c1946b16357d343e69c46bd3968d1d2ddd"
+        },
+        "bytecode": {
+          "sourceUrl": "https://static.alterorb.net/launcher/v3/jars/aceofskies.jar",
+          "gamepackSha256": "a594338309702b2dfc1ccdc18e3d9c433250770ae278d4dd7c1e8efa1fef85ec",
+          "files": 545,
+          "originalClassesSha256": "9f0daf3471d01ae2de9a8a71504d0bf94fb751c66e0b5c3553477eb22b9c7f15"
+        },
+        "oldBodySha256": "e40a521669b90ef6ee2e58bed02d71a476f2d45e73c7c62ffaf0cfac050a1f95",
+        "newBodySha256": "c7a113907afe5f5d9b0c12acfb51f58e49459bdfd0f32bac37f7ddef5d10644f",
+        "oldBodyLines": 398,
+        "newBodyLines": 89,
+        "defaultCompilerRecovery": true,
+        "regionExitsVerified": true,
+        "regionSourceFlowVerified": true,
+        "outerRoutingVerified": true,
+        "deterministic": true,
+        "stateMachine": false
       }
     }
   },
@@ -582,7 +605,7 @@
         },
         "publishedSources": {
           "files": 545,
-          "sha256": "4da9da9045374c4da7f209226412678320f1564f5fe64afce01c0f77a697fe13"
+          "sha256": "277b01c6f738d3768f881518bb6f726e12ad24d42ea45aa80a21573ed245654a"
         }
       },
       "arcanistsmulti": {

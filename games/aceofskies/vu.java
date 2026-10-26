@@ -3,7 +3,7 @@
  */
 final class vu {
     GraphicsRenderer field_c;
-    static int field_f;
+    static int heldMouseButton;
     sn field_d;
     private mj field_e;
     long field_a;
@@ -154,7 +154,7 @@ final class vu {
     }
 
     static {
-        field_f = 0;
+        heldMouseButton = 0;
         field_g = new of();
     }
 }

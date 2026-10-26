@@ -9,7 +9,7 @@ final class ci extends hh {
     private boolean field_l;
     static Random field_i;
     private qe field_h;
-    static int field_d;
+    static int nextMenuId;
     static int field_g;
     static IntrusiveDeque field_j;
     static java.awt.Canvas field_f;

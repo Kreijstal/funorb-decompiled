@@ -61,7 +61,7 @@ final class qs {
           }
           if (!ht.field_g &&
             ScreenParticle.field_o < jp.field_b &&
-            uu.field_e) {
+            uu.pointerMoved) {
             we.field_c = ik.field_k;
             nl.field_o = rs.field_v;
             ScreenParticle.field_o = 0;

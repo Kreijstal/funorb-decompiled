@@ -3,7 +3,7 @@
  */
 final class Pickup extends FlightBody {
     static RenderSprite[] field_i;
-    static int field_h;
+    static int menuRepeatDelay;
     int pickupCode;
     private static long[] field_l;
     int remainingTicks;
@@ -40,7 +40,7 @@ final class Pickup extends FlightBody {
         int var2 = 0;
         int var3 = 0;
         long var0;
-        field_h = 4;
+        menuRepeatDelay = 4;
         field_l = new long[256];
         for (var2 = 0; var2 < 256; var2++) {
           var0 = (long)var2;

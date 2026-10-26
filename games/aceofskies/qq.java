@@ -31,42 +31,42 @@ final class qq {
     }
 
     final static void a(byte param0) {
-        if (null != du.field_p) {
+        if (null != du.menuActionLabels) {
           return;
         }
-        du.field_p = new String[23];
-        du.field_p[4] = dk.field_b;
-        du.field_p[11] = ne.field_h;
-        du.field_p[0] = gl.field_c;
-        du.field_p[16] = q.field_l;
-        du.field_p[1] = s.field_h;
-        du.field_p[12] = af.field_a;
-        du.field_p[6] = ef.field_i;
-        du.field_p[5] = ef.field_i;
-        du.field_p[14] = so.field_a;
-        du.field_p[15] = iu.field_e;
-        du.field_p[7] = ic.field_a;
-        du.field_p[3] = me.field_a;
-        du.field_p[13] = NetworkGameClient.field_C;
-        du.field_p[2] = od.field_v;
-        du.field_p[17] = ve.field_a;
-        du.field_p[19] = iu.field_f;
-        du.field_p[8] = tq.field_e[0];
-        du.field_p[20] = wq.field_i;
+        du.menuActionLabels = new String[23];
+        du.menuActionLabels[4] = dk.field_b;
+        du.menuActionLabels[11] = ne.field_h;
+        du.menuActionLabels[0] = gl.field_c;
+        du.menuActionLabels[16] = q.field_l;
+        du.menuActionLabels[1] = s.field_h;
+        du.menuActionLabels[12] = af.field_a;
+        du.menuActionLabels[6] = ef.field_i;
+        du.menuActionLabels[5] = ef.field_i;
+        du.menuActionLabels[14] = so.field_a;
+        du.menuActionLabels[15] = iu.field_e;
+        du.menuActionLabels[7] = ic.field_a;
+        du.menuActionLabels[3] = me.field_a;
+        du.menuActionLabels[13] = NetworkGameClient.field_C;
+        du.menuActionLabels[2] = od.field_v;
+        du.menuActionLabels[17] = ve.field_a;
+        du.menuActionLabels[19] = iu.field_f;
+        du.menuActionLabels[8] = tq.field_e[0];
+        du.menuActionLabels[20] = wq.field_i;
         if (param0 <= -83) {
-          du.field_p[18] = so.field_c;
-          du.field_p[10] = tq.field_e[2];
-          du.field_p[21] = ki.field_c;
-          du.field_p[22] = ii.field_l;
-          du.field_p[9] = tq.field_e[1];
+          du.menuActionLabels[18] = so.field_c;
+          du.menuActionLabels[10] = tq.field_e[2];
+          du.menuActionLabels[21] = ki.field_c;
+          du.menuActionLabels[22] = ii.field_l;
+          du.menuActionLabels[9] = tq.field_e[1];
           return;
         }
         field_e = (vd[]) null;
-        du.field_p[18] = so.field_c;
-        du.field_p[10] = tq.field_e[2];
-        du.field_p[21] = ki.field_c;
-        du.field_p[22] = ii.field_l;
-        du.field_p[9] = tq.field_e[1];
+        du.menuActionLabels[18] = so.field_c;
+        du.menuActionLabels[10] = tq.field_e[2];
+        du.menuActionLabels[21] = ki.field_c;
+        du.menuActionLabels[22] = ii.field_l;
+        du.menuActionLabels[9] = tq.field_e[1];
     }
 
     private qq() throws Throwable {

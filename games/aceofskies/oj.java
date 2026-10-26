@@ -184,11 +184,11 @@ final class oj extends sk {
           var1_int = 0;
           var2 = 0;
           while (ek.a((byte) -127)) {
-            pr.field_b.a(true);
-            if (pr.field_b.e((byte) 115)) {
+            pr.field_b.handleVerticalKey(true);
+            if (pr.field_b.isActivated((byte) 115)) {
               var1_int = 1;
             }
-            if (bk.field_f != 13) {
+            if (bk.lastKeyCode != 13) {
               continue;
             }
             var2 = 1;
@@ -197,14 +197,14 @@ final class oj extends sk {
             stackIn_9_0 = 65;
             return stackIn_9_0;
           }
-          pr.field_b.a(rc.b((byte) -113, ln.field_c, lq.field_a), rc.b((byte) -105, ic.field_b, cf.field_g), -24702);
-          if (pr.field_b.e((byte) 83)) {
+          pr.field_b.updatePointer(rc.b((byte) -113, ln.field_c, lq.field_a), rc.b((byte) -105, ic.field_b, cf.field_g), -24702);
+          if (pr.field_b.isActivated((byte) 83)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            pr.field_b.field_g >= 0) {
-            var3 = rm.field_g[pr.field_b.field_g];
+            pr.field_b.selectedIndex >= 0) {
+            var3 = rm.field_g[pr.field_b.selectedIndex];
             if (var3 == 2 ||
               5 == var3) {
               ld.a(param0 + 14178);

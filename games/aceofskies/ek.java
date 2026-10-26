@@ -41,7 +41,7 @@ final class ek extends ab implements dn {
           if (param0 >= -125) {
             ek.a((byte) 107);
           }
-          bk.field_f = ArchiveIndex.field_e[ch.field_a];
+          bk.lastKeyCode = ArchiveIndex.field_e[ch.field_a];
           fr.field_e = qb.field_o[ch.field_a];
           ch.field_a = ch.field_a + 1 & 127;
           stackIn_8_0 = true;

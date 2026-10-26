@@ -5,22 +5,22 @@ final class bk extends hh {
     private float[] field_k;
     private int field_j;
     private qe field_h;
-    static int field_f;
+    static int lastKeyCode;
     private float field_d;
-    static int[] field_e;
+    static int[] menuTop;
     static String field_g;
     private si field_l;
     private uf field_i;
 
     public static void b(int param0) {
         if (param0 != 66) {
-          field_f = -79;
+          lastKeyCode = -79;
           field_g = null;
-          field_e = null;
+          menuTop = null;
           return;
         }
         field_g = null;
-        field_e = null;
+        menuTop = null;
     }
 
     final void b(byte param0) {
@@ -43,7 +43,7 @@ final class bk extends hh {
           this.field_a.a(param2, 1);
           this.field_a.a(param0, (byte) -39);
           if (param1 != -1486691000) {
-            field_e = (int[]) null;
+            menuTop = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "bk.J(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -320,6 +320,6 @@ final class bk extends hh {
 
     static {
         field_g = "Waiting for fonts";
-        field_e = new int[8];
+        menuTop = new int[8];
     }
 }

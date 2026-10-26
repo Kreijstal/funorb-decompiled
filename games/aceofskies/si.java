@@ -45,8 +45,8 @@ final class si {
 
     final static void c(boolean param0) {
         kh.field_a = param0 ? true : false;
-        za.a(34, new int[]{0, 19, 3, 22, 2, 14, 11}, 220, 210, 0, 430, (byte) -67);
-        aa.field_b[0] = new MenuScreen(0);
+        za.registerMenuLayout(34, new int[]{0, 19, 3, 22, 2, 14, 11}, 220, 210, 0, 430, (byte) -67);
+        aa.menuScreens[0] = new MenuScreen(0);
     }
 
     final void a(byte param0, int param1) {

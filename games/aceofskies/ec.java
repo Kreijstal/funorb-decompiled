@@ -15,7 +15,7 @@ final class ec extends ao {
     private float field_s;
     static String field_o;
     private float field_f;
-    static int field_t;
+    static int menuTransitionTicks;
     private float field_r;
     static RenderSprite[] field_e;
     private float field_n;

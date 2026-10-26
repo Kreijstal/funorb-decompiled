@@ -6,7 +6,7 @@ final class du extends PacketBuffer {
     static String field_n;
     static String[] field_o;
     static vf field_m;
-    static String[] field_p;
+    static String[] menuActionLabels;
 
     final static void a(int param0, int param1, tp param2, ResourceArchive param3) {
         try {
@@ -39,7 +39,7 @@ final class du extends PacketBuffer {
         so.field_d[93] = 43;
         so.field_d[45] = 26;
         if (param0 >= -119) {
-          field_p = (String[]) null;
+          menuActionLabels = (String[]) null;
         }
     }
 
@@ -87,7 +87,7 @@ final class du extends PacketBuffer {
     }
 
     public static void j(int param0) {
-        field_p = null;
+        menuActionLabels = null;
         field_n = null;
         int var1 = -10 % ((8 - param0) / 50);
         field_m = null;

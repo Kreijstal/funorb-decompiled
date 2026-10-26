@@ -253,9 +253,9 @@ class mi extends ea {
           }
           super.a((byte) 115, param1, param2, param3);
           if (this.field_i != 0 &&
-            vu.field_f != this.field_i) {
+            vu.heldMouseButton != this.field_i) {
             if (this.a(cf.field_g, param2, -41, param3, ic.field_b) &&
-              0 == vu.field_f) {
+              0 == vu.heldMouseButton) {
               this.a(0, -param3 + ic.field_b, this.field_i, -param2 + cf.field_g);
             }
             this.a(param3, param2, cf.field_g, ic.field_b, param1, (byte) 91);

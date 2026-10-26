@@ -402,7 +402,7 @@ final class wu {
           }
           var2Lifetime17 = im.a(85, "thousandseperator");
           if (var2Lifetime17 != null) {
-            IntrusiveDeque.field_b = ea.a(0, var2Lifetime17);
+            IntrusiveDeque.thousandsSeparator = ea.a(0, var2Lifetime17);
           }
           var2Lifetime18 = im.a(38, "classicmodeonly");
           if (null != var2Lifetime18) {

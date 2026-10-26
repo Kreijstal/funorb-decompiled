@@ -7,18 +7,18 @@ final class ClientException extends RuntimeException {
     static int[] field_b;
     String field_a;
     static boolean field_e;
-    static int[] field_f;
+    static int[] menuRight;
 
     public static void a(boolean param0) {
         field_d = null;
         field_b = null;
         if (!param0) {
-          field_f = null;
+          menuRight = null;
           return;
         }
         int[] var2 = (int[]) null;
         ClientException.a(-20, (wp) null, (int[]) null);
-        field_f = null;
+        menuRight = null;
     }
 
     final static void a(ga param0, boolean param1, int param2) {
@@ -88,6 +88,6 @@ final class ClientException extends RuntimeException {
     static {
         field_b = new int[1];
         field_e = false;
-        field_f = new int[8];
+        menuRight = new int[8];
     }
 }

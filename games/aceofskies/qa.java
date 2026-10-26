@@ -59,7 +59,7 @@ final class qa {
             if (var4 < 0) {
               var5 = nl.field_t;
             } else {
-              if (var4 != pr.field_b.field_g) {
+              if (var4 != pr.field_b.selectedIndex) {
                 var5 = so.field_b;
               } else {
                 var5 = hn.field_a;
@@ -109,7 +109,7 @@ final class qa {
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ri.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + pp.field_a;
-              if (pr.field_b.field_g != var4) {
+              if (pr.field_b.selectedIndex != var4) {
                 stackIn_47_0 = ej.field_a;
               } else {
                 stackIn_47_0 = u.field_g;

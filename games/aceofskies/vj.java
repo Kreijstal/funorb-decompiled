@@ -4,7 +4,7 @@
 final class vj {
     long field_c;
     static String field_a;
-    static int field_d;
+    static int pressedMouseButton;
     static boolean[] field_f;
     private jc field_e;
     static ia field_g;
@@ -176,7 +176,7 @@ final class vj {
     }
 
     static {
-        field_d = 0;
+        pressedMouseButton = 0;
         field_a = "Player";
         field_f = new boolean[8];
         field_g = new ia();

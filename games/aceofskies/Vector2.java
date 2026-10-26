@@ -232,11 +232,11 @@ final class Vector2 {
               for (var2 = 0; var2 < 112; var2++) {
                 lp.field_a[var2] = false;
               }
-              fb.field_a = gr.field_h;
+              fb.field_a = MenuInputState.field_h;
             } else {
-              while (fb.field_a != gr.field_h) {
-                var2 = BitmapFont.field_b[gr.field_h];
-                gr.field_h = 127 & gr.field_h + 1;
+              while (fb.field_a != MenuInputState.field_h) {
+                var2 = BitmapFont.field_b[MenuInputState.field_h];
+                MenuInputState.field_h = 127 & MenuInputState.field_h + 1;
                 if (var2 < 0) {
                   lp.field_a[~var2] = false;
                   continue;

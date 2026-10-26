@@ -3,7 +3,7 @@
  */
 abstract class or {
     static String[] field_b;
-    static int field_a;
+    static int score;
     static volatile boolean field_c;
 
     protected or() throws Throwable {
@@ -53,7 +53,7 @@ abstract class or {
     }
 
     static {
-        field_a = 0;
+        score = 0;
         field_c = false;
     }
 }

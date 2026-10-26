@@ -14,7 +14,7 @@ abstract class ua implements kt {
     static String field_j;
     private int field_n;
     static bs field_d;
-    static int[][] field_l;
+    static int[][] menuActions;
     static RenderSprite[] field_g;
 
     final jaclib.memory.Buffer a(jaggl.MapBuffer param0, boolean param1, int param2) {
@@ -96,7 +96,7 @@ abstract class ua implements kt {
 
     public static void d(int param0) {
         field_j = null;
-        field_l = (int[][]) null;
+        menuActions = (int[][]) null;
         field_d = null;
         field_h = null;
         field_g = null;
@@ -306,6 +306,6 @@ abstract class ua implements kt {
           field_h[var0] = it.a(var0, -1);
         }
         field_d = new bs();
-        field_l = new int[8][];
+        menuActions = new int[8][];
     }
 }

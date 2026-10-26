@@ -454,22 +454,22 @@ class ea extends IntrusiveNode {
         var5 = this.e(28660) ? 1 : 0;
         if (!param3) {
           if (var5 != 0 &&
-            vj.field_d != 0) {
+            vj.pressedMouseButton != 0) {
             this.d(7398);
           }
-          fp.field_g = vu.field_f;
+          fp.field_g = vu.heldMouseButton;
           qs.a(-6939, this.c((byte) -123));
           return param3;
         }
         if (nh.field_e == 0) {
-          if (vj.field_d == 0) {
-            if (vu.field_f != 0) {
-              fp.field_g = vu.field_f;
+          if (vj.pressedMouseButton == 0) {
+            if (vu.heldMouseButton != 0) {
+              fp.field_g = vu.heldMouseButton;
               qs.a(-6939, this.c((byte) -123));
               return param3;
             }
             if (fp.field_g == 0) {
-              fp.field_g = vu.field_f;
+              fp.field_g = vu.heldMouseButton;
               qs.a(-6939, this.c((byte) -123));
               return param3;
             }
@@ -481,22 +481,22 @@ class ea extends IntrusiveNode {
               }
               mm.field_a = null;
             }
-            fp.field_g = vu.field_f;
+            fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
-          if (this.a(34, param2, ln.field_c, vj.field_d, param0, this, lq.field_a)) {
+          if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
             param3 = false;
           } else {
             if (var5 != 0) {
               this.d(7398);
-              if (vu.field_f != 0) {
-                fp.field_g = vu.field_f;
+              if (vu.heldMouseButton != 0) {
+                fp.field_g = vu.heldMouseButton;
                 qs.a(-6939, this.c((byte) -123));
                 return param3;
               }
               if (fp.field_g == 0) {
-                fp.field_g = vu.field_f;
+                fp.field_g = vu.heldMouseButton;
                 qs.a(-6939, this.c((byte) -123));
                 return param3;
               }
@@ -508,18 +508,18 @@ class ea extends IntrusiveNode {
                 }
                 mm.field_a = null;
               }
-              fp.field_g = vu.field_f;
+              fp.field_g = vu.heldMouseButton;
               qs.a(-6939, this.c((byte) -123));
               return param3;
             }
           }
-          if (vu.field_f != 0) {
-            fp.field_g = vu.field_f;
+          if (vu.heldMouseButton != 0) {
+            fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
           if (fp.field_g == 0) {
-            fp.field_g = vu.field_f;
+            fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
@@ -532,7 +532,7 @@ class ea extends IntrusiveNode {
             }
             mm.field_a = null;
           }
-          fp.field_g = vu.field_f;
+          fp.field_g = vu.heldMouseButton;
           qs.a(-6939, this.c((byte) -123));
           return param3;
         }
@@ -555,14 +555,14 @@ class ea extends IntrusiveNode {
           }
           this.a(stackIn_49_1, stackIn_49_2, stackIn_49_3, stackIn_49_4, stackIn_49_5, this, stackIn_50_7);
         }
-        if (vj.field_d == 0) {
-          if (vu.field_f != 0) {
-            fp.field_g = vu.field_f;
+        if (vj.pressedMouseButton == 0) {
+          if (vu.heldMouseButton != 0) {
+            fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
           if (fp.field_g == 0) {
-            fp.field_g = vu.field_f;
+            fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
@@ -575,22 +575,22 @@ class ea extends IntrusiveNode {
             }
             mm.field_a = null;
           }
-          fp.field_g = vu.field_f;
+          fp.field_g = vu.heldMouseButton;
           qs.a(-6939, this.c((byte) -123));
           return param3;
         }
-        if (this.a(34, param2, ln.field_c, vj.field_d, param0, this, lq.field_a)) {
+        if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
           param3 = false;
         } else {
           if (var5 != 0) {
             this.d(7398);
-            if (vu.field_f != 0) {
-              fp.field_g = vu.field_f;
+            if (vu.heldMouseButton != 0) {
+              fp.field_g = vu.heldMouseButton;
               qs.a(-6939, this.c((byte) -123));
               return param3;
             }
             if (fp.field_g == 0) {
-              fp.field_g = vu.field_f;
+              fp.field_g = vu.heldMouseButton;
               qs.a(-6939, this.c((byte) -123));
               return param3;
             }
@@ -602,18 +602,18 @@ class ea extends IntrusiveNode {
               }
               mm.field_a = null;
             }
-            fp.field_g = vu.field_f;
+            fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
         }
-        if (vu.field_f != 0) {
-          fp.field_g = vu.field_f;
+        if (vu.heldMouseButton != 0) {
+          fp.field_g = vu.heldMouseButton;
           qs.a(-6939, this.c((byte) -123));
           return param3;
         }
         if (fp.field_g == 0) {
-          fp.field_g = vu.field_f;
+          fp.field_g = vu.heldMouseButton;
           qs.a(-6939, this.c((byte) -123));
           return param3;
         }
@@ -625,7 +625,7 @@ class ea extends IntrusiveNode {
           }
           mm.field_a = null;
         }
-        fp.field_g = vu.field_f;
+        fp.field_g = vu.heldMouseButton;
         qs.a(-6939, this.c((byte) -123));
         return param3;
     }

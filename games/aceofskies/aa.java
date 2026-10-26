@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class aa {
-    static MenuScreen[] field_b;
+    static MenuScreen[] menuScreens;
     static int[] field_c;
     static String field_d;
     static RenderSprite[] field_a;
@@ -12,7 +12,7 @@ abstract class aa {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        menuScreens = null;
         if (param0 == 0) {
           field_a = null;
           field_c = null;
@@ -117,7 +117,7 @@ abstract class aa {
     }
 
     static {
-        field_b = new MenuScreen[8];
+        menuScreens = new MenuScreen[8];
         field_d = "Account created successfully!";
     }
 }

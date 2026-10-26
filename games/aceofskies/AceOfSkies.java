@@ -140,13 +140,13 @@ public final class AceOfSkies extends NetworkGameClient {
               var4 = 0;
               while (true) {
                 if (var4 < 8) {
-                  aa.field_b[var4] = new MenuScreen(var4);
+                  aa.menuScreens[var4] = new MenuScreen(var4);
                   var4++;
                   if (var5 == 0) {
                     continue;
                   }
                 } else {
-                  po.field_h = 0;
+                  po.activeMenuId = 0;
                   tm.b(50, -113);
                 }
                 break;
@@ -315,33 +315,33 @@ public final class AceOfSkies extends NetworkGameClient {
           if (bg.field_b == 0) {
             stackIn_23_0 = sg.flightSession;
             stackIn_23_1 = true;
-            stackIn_24_2 = (po.field_h == -1);
+            stackIn_24_2 = (po.activeMenuId == -1);
             ((FlightSession) (Object) stackIn_23_0).advanceSession(stackIn_23_1, stackIn_24_2);
-            if (po.field_h != ci.field_d) {
-              ec.field_t = ec.field_t + 1;
-              if (ec.field_t != 40) {
+            if (po.activeMenuId != ci.nextMenuId) {
+              ec.menuTransitionTicks = ec.menuTransitionTicks + 1;
+              if (ec.menuTransitionTicks != 40) {
                 return;
               }
-              if (po.field_h == 2) {
+              if (po.activeMenuId == 2) {
                 ql.field_r = null;
               }
-              po.field_h = ci.field_d;
-              ec.field_t = 0;
+              po.activeMenuId = ci.nextMenuId;
+              ec.menuTransitionTicks = 0;
               if (var3 == 0) {
                 return;
               }
             }
-            if (-1 == po.field_h) {
+            if (-1 == po.activeMenuId) {
               return;
             }
-            aa.field_b[po.field_h].b(-25039);
+            aa.menuScreens[po.activeMenuId].advanceMenu(-25039);
             if (var3 == 0) {
               return;
             }
           }
           if (bg.field_b == 1) {
-            ec.field_t = ec.field_t + 1;
-            if (40 != ec.field_t) {
+            ec.menuTransitionTicks = ec.menuTransitionTicks + 1;
+            if (40 != ec.menuTransitionTicks) {
               return;
             }
             if (gi.a(true)) {
@@ -358,8 +358,8 @@ public final class AceOfSkies extends NetworkGameClient {
             }
           }
           if (bg.field_b != 2) {
-            ec.field_t = ec.field_t - 1;
-            if (ec.field_t != 0) {
+            ec.menuTransitionTicks = ec.menuTransitionTicks - 1;
+            if (ec.menuTransitionTicks != 0) {
               return;
             }
             bg.field_b = 0;
@@ -372,19 +372,19 @@ public final class AceOfSkies extends NetworkGameClient {
             if (sg.flightSession != null) {
               sg.flightSession.g(-8);
             }
-            po.field_h = qo.field_c;
-            if (po.field_h == -2) {
-              po.field_h = 0;
+            po.activeMenuId = qo.field_c;
+            if (po.activeMenuId == -2) {
+              po.activeMenuId = 0;
               ql.a((byte) -103, false);
               if (var3 != 0) {
-                po.field_h = ru.field_b;
+                po.activeMenuId = ru.field_b;
               }
             }
           } else {
-            po.field_h = ru.field_b;
+            po.activeMenuId = ru.field_b;
           }
-          ec.field_t = 39;
-          ci.field_d = po.field_h;
+          ec.menuTransitionTicks = 39;
+          ci.nextMenuId = po.activeMenuId;
           bg.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -485,7 +485,7 @@ public final class AceOfSkies extends NetworkGameClient {
           um.a((byte) 113);
           tk.a();
           rn.a(false);
-          gr.c(-126);
+          MenuInputState.c(-126);
           ou.e(108);
           mg.a(0);
           mf.a((byte) -56);
@@ -933,26 +933,26 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             var4 = FlightSession.field_wb.a((byte) 127);
             sg.flightSession.renderSession(-16711936, false, var4);
-            if (~po.field_h != ~ci.field_d) {
-              if (po.field_h != -1 &&
-                ec.field_t < 30) {
-                var5_int = ec.field_t;
+            if (~po.activeMenuId != ~ci.nextMenuId) {
+              if (po.activeMenuId != -1 &&
+                ec.menuTransitionTicks < 30) {
+                var5_int = ec.menuTransitionTicks;
                 var5_int = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_int / 2.0 / 30.0));
-                aa.field_b[po.field_h].a(-var5_int + 480, var4, -4);
+                aa.menuScreens[po.activeMenuId].drawMenu(-var5_int + 480, var4, -4);
               }
-              if ((ci.field_d != -1) &&
-                (!(ec.field_t <= 10))) {
-                var5_intLifetime2 = ec.field_t - 40;
+              if ((ci.nextMenuId != -1) &&
+                (!(ec.menuTransitionTicks <= 10))) {
+                var5_intLifetime2 = ec.menuTransitionTicks - 40;
                 var5_intLifetime2 = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_intLifetime2 / 2.0 / 30.0));
-                aa.field_b[ci.field_d].a(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
+                aa.menuScreens[ci.nextMenuId].drawMenu(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
                 if ((var10 != 0) &&
-                  (po.field_h != -1)) {
-                  aa.field_b[po.field_h].a(0, var4, -4);
+                  (po.activeMenuId != -1)) {
+                  aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
                 }
               }
             } else {
-              if (po.field_h != -1) {
-                aa.field_b[po.field_h].a(0, var4, -4);
+              if (po.activeMenuId != -1) {
+                aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
               }
             }
             if (gi.a(true)) {
@@ -962,7 +962,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (0 != bg.field_b) {
               var3 = 1;
-              var5_intLifetime1 = 256 * ec.field_t / 40;
+              var5_intLifetime1 = 256 * ec.menuTransitionTicks / 40;
               if (var5_intLifetime1 > 0) {
                 vp.b(0, 0, vp.field_i, vp.field_c, 0, var5_intLifetime1);
               }
@@ -1123,7 +1123,7 @@ public final class AceOfSkies extends NetworkGameClient {
                       break;
                   }
                   if (!gi.a(true)) {
-                    aa.field_b[po.field_h].a(true, 1);
+                    aa.menuScreens[po.activeMenuId].open(true, 1);
                   }
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
@@ -1159,10 +1159,10 @@ public final class AceOfSkies extends NetworkGameClient {
               if (b.b((byte) -127)) {
                 hl.a(-1889);
                 tq.b(true);
-                if (po.field_h == 5 &&
+                if (po.activeMenuId == 5 &&
                   r.field_n == 0) {
-                  po.field_h = 2;
-                  Bullet.a((byte) -92, 2, false);
+                  po.activeMenuId = 2;
+                  Bullet.requestMenu((byte) -92, 2, false);
                 }
                 if (gi.a(true)) {
                   ql.a((byte) -88, true);

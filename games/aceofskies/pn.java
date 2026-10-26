@@ -3,7 +3,7 @@
  */
 final class pn implements Runnable {
     rk field_f;
-    static int field_d;
+    static int menuInitialRepeatDelay;
     volatile boolean field_e;
     volatile boolean field_a;
     static long[] field_b;
@@ -83,7 +83,7 @@ final class pn implements Runnable {
 
     public static void a(int param0) {
         if (param0 != 9) {
-          field_d = 33;
+          menuInitialRepeatDelay = 33;
         }
         field_b = null;
     }
@@ -168,7 +168,7 @@ final class pn implements Runnable {
     }
 
     static {
-        field_d = 20;
+        menuInitialRepeatDelay = 20;
         field_b = new long[32];
     }
 }

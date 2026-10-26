@@ -34,7 +34,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int >= 0) {
               BitmapFont.field_b[fb.field_a] = var2_int;
               fb.field_a = 127 & fb.field_a + 1;
-              if (fb.field_a == gr.field_h) {
+              if (fb.field_a == MenuInputState.field_h) {
                 fb.field_a = -1;
               }
             }
@@ -101,7 +101,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int >= 0) {
               BitmapFont.field_b[fb.field_a] = ~var2_int;
               fb.field_a = fb.field_a + 1 & 127;
-              if (fb.field_a == gr.field_h) {
+              if (fb.field_a == MenuInputState.field_h) {
                 fb.field_a = -1;
               }
             }

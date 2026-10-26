@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uu extends vo {
-    static boolean field_e;
+    static boolean pointerMoved;
     private bm field_f;
     static String field_g;
     static String field_h;
@@ -172,7 +172,7 @@ final class uu extends vo {
     }
 
     static {
-        field_e = false;
+        pointerMoved = false;
         field_h = "Type your age in years";
         field_g = "Checking";
     }

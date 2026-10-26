@@ -4,7 +4,7 @@
 final class dt {
     static MusicTrack field_c;
     static String field_b;
-    static int[] field_a;
+    static int[] menuLeft;
 
     final static void a(int param0) {
         if (null != um.field_m) {
@@ -97,7 +97,7 @@ final class dt {
         if (param0 != 13748) {
           return;
         }
-        field_a = null;
+        menuLeft = null;
         field_b = null;
     }
 
@@ -137,6 +137,6 @@ final class dt {
     }
 
     static {
-        field_a = new int[8];
+        menuLeft = new int[8];
     }
 }

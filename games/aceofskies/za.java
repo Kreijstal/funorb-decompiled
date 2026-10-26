@@ -37,16 +37,16 @@ abstract class za extends IntrusiveNode {
         return true;
     }
 
-    final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5, byte param6) {
+    final static void registerMenuLayout(int rowSpacing, int[] actions, int top, int left, int screenId, int right, byte obfuscationGuard) {
         try {
-          ua.field_l[param4] = param1;
-          dt.field_a[param4] = param3;
-          int var7_int = -99 % ((24 - param6) / 63);
-          ClientException.field_f[param4] = param5;
-          bk.field_e[param4] = param2;
-          oo.field_Y[param4] = param0;
+          ua.menuActions[screenId] = actions;
+          dt.menuLeft[screenId] = left;
+          int var7_int = -99 % ((24 - obfuscationGuard) / 63);
+          ClientException.menuRight[screenId] = right;
+          bk.menuTop[screenId] = top;
+          oo.menuRowSpacing[screenId] = rowSpacing;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "za.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "za.B(" + rowSpacing + ',' + (actions != null ? "{...}" : "null") + ',' + top + ',' + left + ',' + screenId + ',' + right + ',' + obfuscationGuard + ')');
         }
     }
 

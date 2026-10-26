@@ -15,7 +15,7 @@ final class FlightSession {
     private Aircraft[] aircraft;
     private int field_eb;
     private boolean field_j;
-    int field_b;
+    int finalAccuracyPercent;
     private int field_lb;
     private int field_ub;
     private SmokeParticle[] smokeParticles;
@@ -33,7 +33,7 @@ final class FlightSession {
     private FlightBody[] backgroundBodies;
     private Aircraft playerAircraft;
     private boolean field_m;
-    int field_q;
+    int finalScore;
     private int field_L;
     private ScreenParticle[] screenParticles;
     private int bulletCount;
@@ -51,18 +51,18 @@ final class FlightSession {
     private int[] musicChannelVolumes;
     private double cameraScale;
     private int healthUpgradeLevel;
-    private int field_cb;
+    private int scoreAnimationTicks;
     private boolean field_rb;
-    private int field_tb;
+    private int targetMultiplier;
     private boolean field_Eb;
     private boolean field_ob;
-    private boolean alternateGameMode;
-    private int field_P;
+    private boolean arcadeMode;
+    private int displayedMultiplier;
     private boolean field_B;
     private int field_jb;
     private boolean field_U;
     private boolean paused;
-    private int field_N;
+    private int displayedScore;
     private int field_s;
     private int field_mb;
     private int field_G;
@@ -74,13 +74,13 @@ final class FlightSession {
     private double field_hb;
     private double field_u;
     private int turnRateUpgradeLevel;
-    private int field_nb;
+    private int targetScore;
     private int field_ib;
     private int field_Db;
-    private int field_Q;
+    private int multiplierAnimationTicks;
     private double backgroundPanY;
     private int field_y;
-    private int field_V;
+    private int scoreMultiplier;
     private int field_R;
     private int field_f;
     private double backgroundPanX;
@@ -129,7 +129,7 @@ final class FlightSession {
           if (this.field_R < 200) {
             var3_int = 128 + (int)(128.0 * -Math.cos((double)this.field_R * 3.141592653589793 / 200.0));
             var4_int = var3_int * 140 >> 8;
-            if (!this.alternateGameMode) {
+            if (!this.arcadeMode) {
               var5 = -var4_int + 5;
               var6 = 5;
               var7 = 0;
@@ -206,8 +206,8 @@ final class FlightSession {
                 }
                 jm.field_a[var8].a(var5, var6);
                 if (var7 == 6) {
-                  if (this.field_V <= 50) {
-                    stackIn_90_0 = 16777215 | 255 * this.field_V / 50 << 24;
+                  if (this.scoreMultiplier <= 50) {
+                    stackIn_90_0 = 16777215 | 255 * this.scoreMultiplier / 50 << 24;
                   } else {
                     stackIn_90_0 = -1;
                   }
@@ -254,10 +254,10 @@ final class FlightSession {
               }
               var4_int = var6 + (40 * var3_int >> 8);
               ua.field_g[1].a(-208 + sh.field_u, -var4_int);
-              this.a(this.field_P, 3, -var4_int + 4, true, this.field_Q, this.field_tb, -167 + sh.field_u, true, 10);
+              this.drawRollingDigits(this.displayedMultiplier, 3, -var4_int + 4, true, this.multiplierAnimationTicks, this.targetMultiplier, -167 + sh.field_u, true, 10);
               var4_int = 146 * var3_int >> 8;
               ua.field_g[0].a(sh.field_u - 146 + var4_int, 0);
-              this.a(this.field_N, 8, 4, false, this.field_cb, this.field_nb, -21 + (sh.field_u + var4_int), false, 10);
+              this.drawRollingDigits(this.displayedScore, 8, 4, false, this.scoreAnimationTicks, this.targetScore, -21 + (sh.field_u + var4_int), false, 10);
               var4_int = 130 * var3_int >> 8;
               this.a(param0, var4_int, param1 ^ -16732145);
               var4_int = 35 * var3_int >> 8;
@@ -650,7 +650,7 @@ final class FlightSession {
               }
             }
           }
-          if (this.alternateGameMode) {
+          if (this.arcadeMode) {
             aircraft.targetAircraft = this.playerAircraft;
             return;
           }
@@ -920,7 +920,7 @@ final class FlightSession {
         }
     }
 
-    final void startGame(int obfuscationGuard, boolean alternateGameMode) {
+    final void startGame(int obfuscationGuard, boolean arcadeMode) {
         RuntimeException runtimeException = null;
         Aircraft var3 = null;
         int var4 = 0;
@@ -934,7 +934,7 @@ final class FlightSession {
           this.field_h = 0;
           this.b(11154);
           this.a(true);
-          this.alternateGameMode = alternateGameMode;
+          this.arcadeMode = arcadeMode;
           to.field_r = null;
           this.simulationTick = 0;
           wd.field_t.clear(268435455);
@@ -947,24 +947,24 @@ final class FlightSession {
           this.field_f = 0;
           this.field_G = 200;
           ei.field_a = 0;
-          this.field_nb = 0;
+          this.targetScore = 0;
           this.turnRateUpgradeLevel = 0;
           this.field_p = 0;
-          this.field_V = 1;
+          this.scoreMultiplier = 1;
           this.field_Eb = false;
-          this.field_tb = 1;
+          this.targetMultiplier = 1;
           gh.field_j.turnRate = ub.field_h.turnRate;
-          or.field_a = 0;
+          or.score = 0;
           se.field_b = 0;
           this.healthUpgradeLevel = 0;
           this.field_v = 0;
           NetworkGameClient.field_x = 0;
           gh.field_j.maximumHitPoints = ub.field_h.maximumHitPoints;
-          this.field_N = 0;
+          this.displayedScore = 0;
           gh.field_j.fireInterval = ub.field_h.fireInterval;
           r.field_n = 0;
           this.speedUpgradeLevel = 0;
-          this.field_P = 1;
+          this.displayedMultiplier = 1;
           gh.field_j.heatReduction = ub.field_h.heatReduction;
           var3 = this.playerAircraft;
           this.playerAircraft = new Aircraft(new Vector2(), gh.field_j);
@@ -997,7 +997,7 @@ final class FlightSession {
             this.field_r[var4] = -1;
             var4++;
           } while (var5 == 0);
-          if (!this.alternateGameMode) {
+          if (!this.arcadeMode) {
             this.f(-20416);
             if (var5 != 0) {
               this.a((byte) 28, 1);
@@ -1010,7 +1010,7 @@ final class FlightSession {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "pk.F(" + obfuscationGuard + ',' + alternateGameMode + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "pk.F(" + obfuscationGuard + ',' + arcadeMode + ')');
         }
     }
 
@@ -1120,7 +1120,7 @@ final class FlightSession {
                             } else {
                               stackIn_82_1 = 25;
                             }
-                            this.e(stackIn_82_1 * this.field_V, -54);
+                            this.e(stackIn_82_1 * this.scoreMultiplier, -54);
                             if (var8.hitPoints != 0) {
                               break scanLoop2;
                             }
@@ -1433,402 +1433,93 @@ final class FlightSession {
         }
     }
 
-    private final void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, boolean param7, int param8) {
+    private final void drawRollingDigits(int settledValue, int digitCount, int top, boolean suppressLeadingZeros, int remainingAnimationTicks, int targetValue, int right, boolean alternateGlyphBank, int obfuscationGuard) {
         int stackIn_8_0 = 0;
-        int statePc = 0;
-        Throwable caughtException = null;
-        int var10_int = 0;
-        RuntimeException var10 = null;
-        int var11 = 0;
-        GraphicsRenderer var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        scanLoop1: while (true) {
-            switch (statePc) {
-                case 0: {
-                    var18 = AceOfSkies.obfuscationControl ? 1 : 0;
-                    statePc = 1;
-                    continue scanLoop1;
+        RuntimeException decompiledCaughtException = null;
+        int foldHeight = 0;
+        RuntimeException failure = null;
+        int shadeAlpha = 0;
+        GraphicsRenderer renderer = null;
+        int settledBankPending = 0;
+        int targetBankPending = 0;
+        int skipZeroSuppression = 0;
+        int settledGlyphIndex = 0;
+        int targetGlyphIndex = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        try {
+          foldHeight = (int)(Math.cos(3.141592653589793 * (double)remainingAnimationTicks / 20.0) * 10.0);
+          shadeAlpha = (int)(100.0 * Math.sin(3.141592653589793 * (double)remainingAnimationTicks / 20.0));
+          renderer = field_wb.a((byte) 95);
+          settledBankPending = alternateGlyphBank ? 1 : 0;
+          targetBankPending = alternateGlyphBank ? 1 : 0;
+          if (obfuscationGuard != 10) {
+            this.f(94);
+          }
+          stackIn_8_0 = (alternateGlyphBank) ? 0 : 1;
+          skipZeroSuppression = stackIn_8_0;
+          scanLoop1: while (true) {
+            settledGlyphIndex = settledValue % 10;
+            targetGlyphIndex = targetValue % 10;
+            if (suppressLeadingZeros &&
+              skipZeroSuppression == 0) {
+              if (0 == targetValue) {
+                targetGlyphIndex = 10;
+                if (targetBankPending != 0) {
+                  targetGlyphIndex += 22;
                 }
-                case 1: {
-                    try {
-                        var10_int = (int)(Math.cos(3.141592653589793 * (double)param4 / 20.0) * 10.0);
-                        var11 = (int)(100.0 * Math.sin(3.141592653589793 * (double)param4 / 20.0));
-                        var12 = field_wb.a((byte) 95);
-                        var13 = param7 ? 1 : 0;
-                        var14 = param7 ? 1 : 0;
-                        if (param8 == 10) {
-                            statePc = 4;
-                        } else {
-                            statePc = 2;
-                        }
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_1) {
-                        statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
-                        }
-                        caughtException = stateCaught_1;
-                        continue scanLoop1;
-                    }
+                targetBankPending = 0;
+              }
+              if ((0 != targetValue ||
+                obfuscationControl != 0) &&
+                alternateGlyphBank) {
+                targetGlyphIndex += 22;
+              }
+              if (0 == settledValue) {
+                settledGlyphIndex = 10;
+                if (settledBankPending != 0) {
+                  settledGlyphIndex += 22;
                 }
-                case 2: {
-                    try {
-                        this.f(94);
-                        statePc = 4;
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_2) {
-                        statePc = ((Object) stateCaught_2 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_2);
-                        }
-                        caughtException = stateCaught_2;
-                        continue scanLoop1;
-                    }
+                settledBankPending = 0;
+                if ((obfuscationControl != 0) &&
+                  (alternateGlyphBank)) {
+                  settledGlyphIndex += 22;
                 }
-                case 4: {
-                    try {
-                        if (param7) {
-                            /* Inlined CFG state: 7. */
-                            {
-                                stackIn_8_0 = 0;
-                                statePc = 8;
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 5. */
-                            {
-                                stackIn_8_0 = 1;
-                                statePc = 8;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_4) {
-                        statePc = ((Object) stateCaught_4 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
-                        }
-                        caughtException = stateCaught_4;
-                        continue scanLoop1;
-                    }
-                }
-                case 8: {
-                    try {
-                        var15 = stackIn_8_0;
-                        statePc = 9;
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_8) {
-                        statePc = ((Object) stateCaught_8 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_8);
-                        }
-                        caughtException = stateCaught_8;
-                        continue scanLoop1;
-                    }
-                }
-                case 9: {
-                    try {
-                        var16 = param0 % 10;
-                        var17 = param5 % 10;
-                        if (!param3) {
-                            statePc = 35;
-                        } else {
-                            statePc = 10;
-                        }
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_9) {
-                        statePc = ((Object) stateCaught_9 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_9);
-                        }
-                        caughtException = stateCaught_9;
-                        continue scanLoop1;
-                    }
-                }
-                case 10: {
-                    try {
-                        if (var15 == 0) {
-                            /* Inlined CFG state: 13. */
-                            {
-                                if (0 != param5) {
-                                    statePc = 19;
-                                    continue scanLoop1;
-                                } else {
-                                    /* Inlined CFG state: 14. */
-                                    {
-                                        var17 = 10;
-                                        if (var14 != 0) {
-                                            /* Inlined CFG state: 17. */
-                                            {
-                                                var17 += 22;
-                                                statePc = 18;
-                                                continue scanLoop1;
-                                            }
-                                        } else {
-                                            /* Inlined CFG state: 15. */
-                                            {
-                                                statePc = 18;
-                                                continue scanLoop1;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } else {
-                            /* Inlined CFG state: 11. */
-                            {
-                                statePc = 35;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_10) {
-                        statePc = ((Object) stateCaught_10 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_10);
-                        }
-                        caughtException = stateCaught_10;
-                        continue scanLoop1;
-                    }
-                }
-                case 18: {
-                    try {
-                        var14 = 0;
-                        if (var18 == 0) {
-                            statePc = 24;
-                        } else {
-                            statePc = 19;
-                        }
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_18) {
-                        statePc = ((Object) stateCaught_18 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_18);
-                        }
-                        caughtException = stateCaught_18;
-                        continue scanLoop1;
-                    }
-                }
-                case 19: {
-                    try {
-                        if (!param7) {
-                            statePc = 24;
-                            continue scanLoop1;
-                        } else {
-                            /* Inlined CFG state: 20. */
-                            {
-                                /* Sequential CFG blocks: 20, 22. */
-                                {
-                                }
-                                {
-                                    var17 += 22;
-                                    statePc = 24;
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_19) {
-                        statePc = ((Object) stateCaught_19 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_19);
-                        }
-                        caughtException = stateCaught_19;
-                        continue scanLoop1;
-                    }
-                }
-                case 24: {
-                    try {
-                        if (0 != param0) {
-                            statePc = 29;
-                            continue scanLoop1;
-                        } else {
-                            /* Inlined CFG state: 25. */
-                            {
-                                var16 = 10;
-                                if (var13 == 0) {
-                                    statePc = 28;
-                                    continue scanLoop1;
-                                } else {
-                                    /* Inlined CFG state: 26. */
-                                    {
-                                        var16 += 22;
-                                        statePc = 28;
-                                        continue scanLoop1;
-                                    }
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_24) {
-                        statePc = ((Object) stateCaught_24 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_24);
-                        }
-                        caughtException = stateCaught_24;
-                        continue scanLoop1;
-                    }
-                }
-                case 28: {
-                    try {
-                        var13 = 0;
-                        if (var18 == 0) {
-                            statePc = 35;
-                        } else {
-                            statePc = 29;
-                        }
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_28) {
-                        statePc = ((Object) stateCaught_28 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_28);
-                        }
-                        caughtException = stateCaught_28;
-                        continue scanLoop1;
-                    }
-                }
-                case 29: {
-                    try {
-                        if (param7) {
-                            /* Inlined CFG state: 34. */
-                            {
-                                var16 += 22;
-                                statePc = 35;
-                                continue scanLoop1;
-                            }
-                        } else {
-                            /* Inlined CFG state: 30. */
-                            {
-                                /* Sequential CFG blocks: 30, 32. */
-                                {
-                                }
-                                {
-                                    statePc = 35;
-                                    continue scanLoop1;
-                                }
-                            }
-                        }
-                    } catch (Throwable stateCaught_29) {
-                        statePc = ((Object) stateCaught_29 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_29);
-                        }
-                        caughtException = stateCaught_29;
-                        continue scanLoop1;
-                    }
-                }
-                case 35: {
-                    try {
-                        var15 = 0;
-                        in.field_c[var17].a(param6, param2);
-                        in.field_c[var16 + 11].a(param6, 10 + param2);
-                        statePc = 36;
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_35) {
-                        statePc = ((Object) stateCaught_35 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_35);
-                        }
-                        caughtException = stateCaught_35;
-                        continue scanLoop1;
-                    }
-                }
-                case 36: {
-                    try {
-                        if (~var17 != ~var16) {
-                            /* Inlined CFG state: 38. */
-                            {
-                                if (var10_int < 0) {
-                                    statePc = 42;
-                                    continue scanLoop1;
-                                } else {
-                                    /* Inlined CFG state: 39. */
-                                    {
-                                        in.field_c[11 + var17].b(param6, 10 + param2, 16, var10_int);
-                                        var12.d(var10_int, 16, param2 + 10, -5782, var11 << 24 | 16777215, param6);
-                                        if (var18 == 0) {
-                                            statePc = 44;
-                                            continue scanLoop1;
-                                        } else {
-                                            /* Inlined CFG state: 40. */
-                                            {
-                                                statePc = 42;
-                                                continue scanLoop1;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        } else {
-                            /* Inlined CFG state: 37. */
-                            {
-                                statePc = 44;
-                                continue scanLoop1;
-                            }
-                        }
-                    } catch (Throwable stateCaught_36) {
-                        statePc = ((Object) stateCaught_36 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_36);
-                        }
-                        caughtException = stateCaught_36;
-                        continue scanLoop1;
-                    }
-                }
-                case 42: {
-                    try {
-                        in.field_c[var16].b(param6, var10_int + 10 + param2, 16, -var10_int);
-                        var12.d(-var10_int, 16, param2 + 10 + var10_int, -5782, (var11 | -739482368) << 24, param6);
-                        statePc = 44;
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_42) {
-                        statePc = ((Object) stateCaught_42 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_42);
-                        }
-                        caughtException = stateCaught_42;
-                        continue scanLoop1;
-                    }
-                }
-                case 44: {
-                    try {
-                        param0 = param0 / 10;
-                        param5 = param5 / 10;
-                        param1--;
-                        param6 -= 17;
-                        if (param1 > 0) {
-                            statePc = 9;
-                        } else {
-                            statePc = 45;
-                        }
-                        continue scanLoop1;
-                    } catch (Throwable stateCaught_44) {
-                        statePc = ((Object) stateCaught_44 instanceof RuntimeException ? 47 : -1);
-                        if (statePc == -1) {
-                            throw FlightSession.<RuntimeException>$cfr$sneakyThrow(stateCaught_44);
-                        }
-                        caughtException = stateCaught_44;
-                        continue scanLoop1;
-                    }
-                }
-                case 45: {
-                    if (var18 != 0) {
-                        statePc = 36;
-                        continue scanLoop1;
-                    } else {
-                        /* Inlined CFG state: 48. */
-                        {
-                            return;
-                        }
-                    }
-                }
-                case 47: {
-                    var10 = (RuntimeException) ((Object) caughtException);
-                    throw pn.a((Throwable) ((Object) var10), "pk.HB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
-                }
-                default: throw new IllegalStateException("invalid CFG state " + statePc);
+              } else if (alternateGlyphBank) {
+                settledGlyphIndex += 22;
+              }
             }
+            skipZeroSuppression = 0;
+            in.field_c[targetGlyphIndex].a(right, top);
+            in.field_c[settledGlyphIndex + 11].a(right, 10 + top);
+            do {
+              if (~targetGlyphIndex != ~settledGlyphIndex) {
+                boolean drawSettledFold = !(foldHeight >= 0);
+                if (!drawSettledFold) {
+                  in.field_c[11 + targetGlyphIndex].b(right, 10 + top, 16, foldHeight);
+                  renderer.d(foldHeight, 16, top + 10, -5782, shadeAlpha << 24 | 16777215, right);
+                  drawSettledFold = (obfuscationControl != 0);
+                }
+                if (drawSettledFold) {
+                  in.field_c[settledGlyphIndex].b(right, foldHeight + 10 + top, 16, -foldHeight);
+                  renderer.d(-foldHeight, 16, top + 10 + foldHeight, -5782, (shadeAlpha | -739482368) << 24, right);
+                }
+              }
+              settledValue = settledValue / 10;
+              targetValue = targetValue / 10;
+              digitCount--;
+              right -= 17;
+              if (digitCount > 0) {
+                continue scanLoop1;
+              }
+            } while (obfuscationControl != 0);
+            break;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          failure = decompiledCaughtException;
+          throw pn.a((Throwable) ((Object) failure), "pk.HB(" + settledValue + ',' + digitCount + ',' + top + ',' + suppressLeadingZeros + ',' + remainingAnimationTicks + ',' + targetValue + ',' + right + ',' + alternateGlyphBank + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -1892,11 +1583,11 @@ final class FlightSession {
         ga stackIn_13_1Lifetime1;
         try {
           if (to.field_r == null &&
-            this.field_q > 0 &&
+            this.finalScore > 0 &&
             !tt.field_a) {
             stackIn_12_0 = null;
             stackIn_12_1 = null;
-            if (this.alternateGameMode) {
+            if (this.arcadeMode) {
               stackIn_13_0 = null;
               stackIn_13_1 = null;
               stackIn_13_2 = 1;
@@ -1906,7 +1597,7 @@ final class FlightSession {
               stackIn_13_2 = 0;
             }
             stackIn_15_3 = 65535;
-            if (!this.alternateGameMode) {
+            if (!this.arcadeMode) {
               stackIn_13_0Lifetime1 = null;
               stackIn_13_1Lifetime1 = null;
               stackIn_16_4 = 0;
@@ -1915,7 +1606,7 @@ final class FlightSession {
               stackIn_13_1Lifetime1 = null;
               stackIn_16_4 = 1;
             }
-            to.field_r = new ga(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a, new int[]{100 * this.field_q + this.field_b});
+            to.field_r = new ga(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
             if (!cn.b(true)) {
               ClientException.a(to.field_r, true, 3);
             }
@@ -1948,62 +1639,62 @@ final class FlightSession {
           bo.field_h = bo.field_h - 5;
           NetworkGameClient.field_x = NetworkGameClient.field_x + 10;
           if (!this.attractMode) {
-            if (!this.alternateGameMode &&
-              bk.field_f >= 16 &&
-              22 >= bk.field_f) {
-              this.a(1, bk.field_f - 16);
+            if (!this.arcadeMode &&
+              bk.lastKeyCode >= 16 &&
+              22 >= bk.lastKeyCode) {
+              this.a(1, bk.lastKeyCode - 16);
               return;
             }
-            if (bk.field_f == 13 &&
+            if (bk.lastKeyCode == 13 &&
               !this.paused) {
               this.paused = true;
-              Bullet.a((byte) 111, 1, false);
+              Bullet.requestMenu((byte) 111, 1, false);
               return;
             }
             if (this.field_j &&
               lp.field_a[81]) {
-              if (bk.field_f == 5) {
+              if (bk.lastKeyCode == 5) {
                 tt.field_a = true;
                 this.field_W = false;
               }
-              if (bk.field_f == 7) {
+              if (bk.lastKeyCode == 7) {
                 this.field_W = true;
                 if (this.field_h < -1 + sd.field_d.length) {
                   this.field_h = this.field_h + 1;
                 }
                 tt.field_a = true;
               }
-              if (bk.field_f == 6) {
+              if (bk.lastKeyCode == 6) {
                 this.field_W = true;
                 if (this.field_h > 0) {
                   this.field_h = this.field_h - 1;
                 }
                 tt.field_a = true;
               }
-              if (bk.field_f == 1) {
+              if (bk.lastKeyCode == 1) {
                 this.field_gb = 1;
                 tt.field_a = true;
                 this.playerAircraft.temporaryWeaponTicks = 100;
                 this.playerAircraft.temporaryWeapon = 1;
               }
-              if (bk.field_f == 2) {
+              if (bk.lastKeyCode == 2) {
                 tt.field_a = true;
                 this.field_gb = 2;
                 this.playerAircraft.temporaryWeapon = 2;
                 this.playerAircraft.temporaryWeaponTicks = 100;
               }
-              if (bk.field_f == 3) {
+              if (bk.lastKeyCode == 3) {
                 tt.field_a = true;
                 this.playerAircraft.temporaryWeaponTicks = 100;
                 this.field_gb = 3;
                 this.playerAircraft.temporaryWeapon = 3;
               }
-              if (8 == bk.field_f) {
+              if (8 == bk.lastKeyCode) {
                 this.lives = this.lives + 1;
                 tt.field_a = true;
                 this.playerAircraft.hitPoints = 0;
               }
-              if (bk.field_f == 4) {
+              if (bk.lastKeyCode == 4) {
                 this.playerAircraft.temporaryWeaponTicks = 100;
                 this.field_gb = 4;
                 tt.field_a = true;
@@ -2011,7 +1702,7 @@ final class FlightSession {
               }
               boolean decompiledFrameRemainder1 = true;
               boolean decompiledFrameCompleted1 = true;
-              if (70 == bk.field_f) {
+              if (70 == bk.lastKeyCode) {
                 this.field_p = 400;
                 tt.field_a = true;
                 wd.field_t.clear(268435455);
@@ -2026,31 +1717,31 @@ final class FlightSession {
                 }
               }
               if ((decompiledFrameCompleted1) &&
-                (decompiledFrameRemainder1 = (bk.field_f == 38))) {
+                (decompiledFrameRemainder1 = (bk.lastKeyCode == 38))) {
                 tt.field_a = true;
               }
               if (decompiledFrameRemainder1) {
                 discarded$0 = this.spawnAircraft((byte) 108, ro.field_u, 1, 0);
               }
-              if (bk.field_f == 51) {
+              if (bk.lastKeyCode == 51) {
                 tt.field_a = true;
-                or.field_a = or.field_a + 13;
+                or.score = or.score + 13;
               }
-              if (bk.field_f == 65) {
+              if (bk.lastKeyCode == 65) {
                 tt.field_a = true;
-                this.field_V = this.field_V + 1;
+                this.scoreMultiplier = this.scoreMultiplier + 1;
               }
-              if (bk.field_f == 49) {
+              if (bk.lastKeyCode == 49) {
                 tt.field_a = true;
                 discarded$1 = this.spawnAircraft((byte) -123, ju.field_k, 1, 0);
               }
-              if (bk.field_f == 41) {
+              if (bk.lastKeyCode == 41) {
                 tt.field_a = true;
                 this.a(new Vector2(100.0, 100.0), 32597, 2);
               }
               boolean decompiledFrameRemainder0 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (bk.field_f == 33) {
+              if (bk.lastKeyCode == 33) {
                 tt.field_a = true;
                 var2 = this.aircraft;
                 var3 = 0;
@@ -2069,20 +1760,20 @@ final class FlightSession {
                 }
               }
               if (decompiledFrameCompleted0) {
-                decompiledFrameRemainder0 = (56 == bk.field_f);
+                decompiledFrameRemainder0 = (56 == bk.lastKeyCode);
               }
               if ((decompiledFrameRemainder0) &&
                 (this.field_db > 1)) {
                 this.field_db = 1;
               }
-              if (bk.field_f == 52) {
+              if (bk.lastKeyCode == 52) {
                 this.field_Eb = this.field_Eb ^ true;
                 tt.field_a = true;
               }
-              if (bk.field_f == 50) {
+              if (bk.lastKeyCode == 50) {
                 mj.field_b = mj.field_b ^ true;
               }
-              if (bk.field_f == 65) {
+              if (bk.lastKeyCode == 65) {
                 this.a(0, -14630, 0, 64);
                 tt.field_a = true;
               }
@@ -2354,8 +2045,8 @@ final class FlightSession {
         var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var3_int = or.field_a;
-          or.field_a = or.field_a + param0;
+          var3_int = or.score;
+          or.score = or.score + param0;
           if (qq.a(20, 10) < 5) {
             if (5 > qq.a(20, 10)) {
               se.field_b = se.field_b + param0;
@@ -2383,17 +2074,17 @@ final class FlightSession {
             }
           }
           if (!this.attractMode &&
-            !this.alternateGameMode) {
+            !this.arcadeMode) {
             if (var3_int < 5000 &&
-              or.field_a >= 5000) {
+              or.score >= 5000) {
               fm.a(255, (byte) 111, 0);
             }
             if (var3_int < 30000 &&
-              or.field_a >= 30000) {
+              or.score >= 30000) {
               fm.a(254, (byte) 111, 1);
             }
             if (var3_int < 80000 &&
-              or.field_a >= 80000) {
+              or.score >= 80000) {
               fm.a(253, (byte) 111, 2);
             }
           }
@@ -2765,7 +2456,7 @@ final class FlightSession {
                           this.field_h = 4;
                         }
                       }
-                      if (this.alternateGameMode) {
+                      if (this.arcadeMode) {
                         if (0 < var4) {
                           break scanLoop2;
                         }
@@ -3527,7 +3218,7 @@ final class FlightSession {
               this.a(this.field_D, -param1.definition.collisionRadius * 4, 240, 0, 0);
               if (param1.definition == ro.field_u &&
                 !this.attractMode &&
-                !this.alternateGameMode) {
+                !this.arcadeMode) {
                 fm.a(249, (byte) 111, 6);
               }
               var3_int = this.a(this.playerAircraft.position, 200, param1.position);
@@ -3592,14 +3283,14 @@ final class FlightSession {
         int var5 = 0;
         var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          this.field_q = or.field_a;
+          this.finalScore = or.score;
           if (this.shotsFired > 0) {
             stackIn_5_1 = this.shotsHit * 100 / this.shotsFired;
           } else {
             stackIn_5_1 = 0;
           }
-          this.field_b = stackIn_5_1;
-          if (accuracyTarget == this.field_b &&
+          this.finalAccuracyPercent = stackIn_5_1;
+          if (accuracyTarget == this.finalAccuracyPercent &&
             awardFlag) {
             fm.a(248, (byte) 111, 7);
           }
@@ -3607,31 +3298,31 @@ final class FlightSession {
           if (!cn.b(true)) {
             sg.flightSession.g(-8);
             ql.field_r = null;
-            stackIn_19_0 = (!this.alternateGameMode) ? 0 : 1;
+            stackIn_19_0 = (!this.arcadeMode) ? 0 : 1;
             cs.field_a = stackIn_19_0;
             if (0 == r.field_n) {
-              Bullet.a((byte) -105, 2, screenFlag);
+              Bullet.requestMenu((byte) -105, 2, screenFlag);
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
-              Bullet.a((byte) -102, 5, screenFlag);
+              Bullet.requestMenu((byte) -102, 5, screenFlag);
               if (var5 != 0) {
-                if (0 < or.field_a) {
-                  Bullet.a((byte) -81, 6, screenFlag);
-                  Bullet.a((byte) -86, 0, screenFlag);
+                if (0 < or.score) {
+                  Bullet.requestMenu((byte) -81, 6, screenFlag);
+                  Bullet.requestMenu((byte) -86, 0, screenFlag);
                 } else {
-                  Bullet.a((byte) -86, 0, screenFlag);
+                  Bullet.requestMenu((byte) -86, 0, screenFlag);
                 }
               }
             }
           } else {
-            if (0 < or.field_a) {
-              Bullet.a((byte) -81, 6, screenFlag);
+            if (0 < or.score) {
+              Bullet.requestMenu((byte) -81, 6, screenFlag);
               if (var5 != 0) {
-                Bullet.a((byte) -86, 0, screenFlag);
+                Bullet.requestMenu((byte) -86, 0, screenFlag);
               }
             } else {
-              Bullet.a((byte) -86, 0, screenFlag);
+              Bullet.requestMenu((byte) -86, 0, screenFlag);
             }
           }
           lm.a(40, tg.field_a[0], true, (byte) -84);
@@ -3644,7 +3335,7 @@ final class FlightSession {
             }
           }
           sg.flightSession.c((byte) 50);
-          co.field_b = 0;
+          co.returnMenuId = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4010,10 +3701,10 @@ final class FlightSession {
             this.a(-19054);
           }
           if (upgradeCode == 6) {
-            if (this.field_V == 99) {
+            if (this.scoreMultiplier == 99) {
               return false;
             }
-            this.field_V = this.field_V + 1;
+            this.scoreMultiplier = this.scoreMultiplier + 1;
           }
           if (upgradeCode < 4 &&
             this.healthUpgradeLevel == 12 &&
@@ -4024,7 +3715,7 @@ final class FlightSession {
           }
           boolean decompiledFrameCompleted0 = true;
           this.a(50, (byte) -86, 65280, ae.field_h[upgradeCode]);
-          if (!this.alternateGameMode) {
+          if (!this.arcadeMode) {
             var4Lifetime1 = 0;
             while (var4Lifetime1 < 80) {
               this.a(2560, 5888, np.a(25, 80, (byte) -65) >> 1, 80, 23 + upgradeCode * 38 << 8, 800, (byte) -108);
@@ -4758,7 +4449,7 @@ final class FlightSession {
               stackIn_33_0 = param0;
             }
             if (stackIn_33_0 != 24260) {
-              this.field_V = 9;
+              this.scoreMultiplier = 9;
             }
             return;
           }
@@ -4949,7 +4640,7 @@ final class FlightSession {
               if (stackIn_16_0 > 0) {
                 stackIn_12_0 = var8;
                 stackIn_12_1 = 20;
-                if (!this.alternateGameMode) {
+                if (!this.arcadeMode) {
                   stackIn_13_2 = 4;
                 } else {
                   stackIn_13_2 = 9;
@@ -5069,24 +4760,24 @@ final class FlightSession {
                 continue;
               }
             }
-            stackIn_41_0 = ~this.field_cb;
+            stackIn_41_0 = ~this.scoreAnimationTicks;
             break;
           }
           if (stackIn_41_0 == -1) {
-            if (~this.field_N != ~or.field_a) {
-              this.field_cb = 20;
-              this.field_nb = or.field_a;
+            if (~this.displayedScore != ~or.score) {
+              this.scoreAnimationTicks = 20;
+              this.targetScore = or.score;
               if (var7 != 0) {
-                this.field_cb = this.field_cb - 1;
-                if (this.field_cb == 0) {
-                  this.field_N = this.field_nb;
+                this.scoreAnimationTicks = this.scoreAnimationTicks - 1;
+                if (this.scoreAnimationTicks == 0) {
+                  this.displayedScore = this.targetScore;
                 }
               }
             }
           } else {
-            this.field_cb = this.field_cb - 1;
-            if (this.field_cb == 0) {
-              this.field_N = this.field_nb;
+            this.scoreAnimationTicks = this.scoreAnimationTicks - 1;
+            if (this.scoreAnimationTicks == 0) {
+              this.displayedScore = this.targetScore;
             }
           }
           if (this.field_Db == 0) {
@@ -5107,23 +4798,23 @@ final class FlightSession {
             }
           }
           if (this.field_G > 0 &&
-            this.field_V > 1) {
+            this.scoreMultiplier > 1) {
             this.field_G = this.field_G - 5;
           }
-          if (this.field_Q != 0) {
-            this.field_Q = this.field_Q - 1;
-            if (this.field_Q == 0) {
-              this.field_P = this.field_tb;
+          if (this.multiplierAnimationTicks != 0) {
+            this.multiplierAnimationTicks = this.multiplierAnimationTicks - 1;
+            if (this.multiplierAnimationTicks == 0) {
+              this.displayedMultiplier = this.targetMultiplier;
               if (var7 != 0 &&
-                this.field_V != this.field_P) {
-                this.field_tb = this.field_V;
-                this.field_Q = 20;
+                this.scoreMultiplier != this.displayedMultiplier) {
+                this.targetMultiplier = this.scoreMultiplier;
+                this.multiplierAnimationTicks = 20;
               }
             }
           } else {
-            if (this.field_V != this.field_P) {
-              this.field_tb = this.field_V;
-              this.field_Q = 20;
+            if (this.scoreMultiplier != this.displayedMultiplier) {
+              this.targetMultiplier = this.scoreMultiplier;
+              this.multiplierAnimationTicks = 20;
             }
           }
           var3Lifetime1 = this.field_eb - this.playerAircraft.hitPoints * 100 / gh.field_j.maximumHitPoints;
@@ -5159,9 +4850,9 @@ final class FlightSession {
             }
           }
           if (!this.attractMode &&
-            !this.alternateGameMode &&
+            !this.arcadeMode &&
             !this.paused &&
-            1 == vj.field_d) {
+            1 == vj.pressedMouseButton) {
             var4Lifetime1 = -22 + ln.field_c;
             var5 = -22 + lq.field_a;
             var6 = 0;
@@ -5216,7 +4907,7 @@ final class FlightSession {
         this.field_D = new Vector2(0.0, 0.0);
         this.field_T = -100;
         this.musicChannelVolumes = new int[16];
-        this.field_cb = 0;
+        this.scoreAnimationTicks = 0;
         this.field_G = 200;
         this.healthUpgradeLevel = 0;
         this.field_W = false;
@@ -5227,19 +4918,19 @@ final class FlightSession {
         this.cameraScale = 600.0;
         this.speedUpgradeLevel = 0;
         this.field_mb = 0;
-        this.field_P = 1;
-        this.field_nb = 0;
+        this.displayedMultiplier = 1;
+        this.targetScore = 0;
         this.field_Db = 0;
-        this.field_tb = 1;
+        this.targetMultiplier = 1;
         this.field_Eb = false;
-        this.field_N = 0;
+        this.displayedScore = 0;
         this.field_ib = -100;
-        this.field_Q = 0;
+        this.multiplierAnimationTicks = 0;
         this.turnRateUpgradeLevel = 0;
         this.field_U = false;
         this.fireRateUpgradeLevel = 0;
         this.field_R = 200;
-        this.field_V = 1;
+        this.scoreMultiplier = 1;
         try {
           stackIn_4_1 = !(2 > ln.field_d);
           this.field_j = stackIn_4_1;

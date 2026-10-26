@@ -4,7 +4,7 @@
 class vq extends mi {
     private IntrusiveDeque field_x;
     private jo field_z;
-    static int field_w;
+    static int instructionPage;
     private String[] field_y;
 
     final void a(int param0, String param1, int param2) {
@@ -276,6 +276,6 @@ class vq extends mi {
     }
 
     static {
-        field_w = 0;
+        instructionPage = 0;
     }
 }

@@ -7,7 +7,7 @@ class oo extends dg implements dn {
     private boolean field_cb;
     private hc field_U;
     private boolean field_V;
-    static int[] field_Y;
+    static int[] menuRowSpacing;
     private boolean field_X;
     static IntrusiveDeque field_T;
     static vd[] field_ab;
@@ -80,7 +80,7 @@ class oo extends dg implements dn {
         if (param0 != 105) {
           return;
         }
-        field_Y = null;
+        menuRowSpacing = null;
         field_T = null;
         field_W = null;
         field_ab = null;
@@ -210,6 +210,6 @@ class oo extends dg implements dn {
 
     static {
         field_W = new ll(270, 70);
-        field_Y = new int[8];
+        menuRowSpacing = new int[8];
     }
 }

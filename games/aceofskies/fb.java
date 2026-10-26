@@ -15,12 +15,12 @@ final class fb {
         var1 = ho.field_b;
         synchronized (var1) {
           oj.field_g = oj.field_g + 1;
-          vu.field_f = mp.field_g;
+          vu.heldMouseButton = mp.field_g;
           ic.field_b = sj.field_a;
           cf.field_g = qd.field_m;
-          uu.field_e = si.field_b;
+          uu.pointerMoved = si.field_b;
           si.field_b = false;
-          vj.field_d = me.field_b;
+          vj.pressedMouseButton = me.field_b;
           ln.field_c = kg.field_a;
           lq.field_a = SteeringMode.field_e;
           me.field_b = 0;

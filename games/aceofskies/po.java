@@ -9,7 +9,7 @@ final class po extends ka {
     static RenderSprite[] field_e;
     private int field_d;
     private am field_c;
-    static int field_h;
+    static int activeMenuId;
     static int field_j;
     private ms field_i;
 
@@ -19,7 +19,7 @@ final class po extends ka {
           var3 = q.field_p;
           var3.g(127, param2);
           if (param1 < 19) {
-            field_h = -122;
+            activeMenuId = -122;
           }
           var3.writeByte(-1336879960, param0.field_f);
           var3.writeShort(param0.field_e, 23385);
@@ -198,7 +198,7 @@ final class po extends ka {
     public static void c(int param0) {
         field_e = null;
         if (param0 != -30534) {
-          field_h = 87;
+          activeMenuId = 87;
         }
     }
 

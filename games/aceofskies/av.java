@@ -7,28 +7,28 @@ final class av {
     static ej field_a;
 
     final static boolean a(boolean param0) {
-        if (ua.field_l[0] != null) {
+        if (ua.menuActions[0] != null) {
           return false;
         }
-        za.a(34, new int[]{0, 3, 22, 2, 14, 11}, 220, 210, 0, 430, (byte) -64);
-        za.a(32, new int[]{1, 12, 13, 3, 7}, 160, 170, 1, 470, (byte) 107);
-        za.a(32, new int[]{15, 5}, 400, 200, 2, 440, (byte) 106);
-        za.a(32, new int[]{18, 6, 17}, 430, 170, 3, 470, (byte) -103);
-        za.a(32, new int[]{15, 5}, 400, 260, 4, 512, (byte) -42);
-        za.a(32, new int[]{2, 5}, 400, 260, 5, 498, (byte) -64);
-        za.a(32, new int[]{15, 16}, 200, 110, 6, 530, (byte) -65);
-        za.a(32, new int[]{12, 13, 5}, 240, 170, 7, 470, (byte) 119);
-        oq.field_K = kn.field_b.a((byte) 94, du.field_p[12]);
-        int var1 = kn.field_b.a((byte) 94, du.field_p[13]);
+        za.registerMenuLayout(34, new int[]{0, 3, 22, 2, 14, 11}, 220, 210, 0, 430, (byte) -64);
+        za.registerMenuLayout(32, new int[]{1, 12, 13, 3, 7}, 160, 170, 1, 470, (byte) 107);
+        za.registerMenuLayout(32, new int[]{15, 5}, 400, 200, 2, 440, (byte) 106);
+        za.registerMenuLayout(32, new int[]{18, 6, 17}, 430, 170, 3, 470, (byte) -103);
+        za.registerMenuLayout(32, new int[]{15, 5}, 400, 260, 4, 512, (byte) -42);
+        za.registerMenuLayout(32, new int[]{2, 5}, 400, 260, 5, 498, (byte) -64);
+        za.registerMenuLayout(32, new int[]{15, 16}, 200, 110, 6, 530, (byte) -65);
+        za.registerMenuLayout(32, new int[]{12, 13, 5}, 240, 170, 7, 470, (byte) 119);
+        oq.field_K = kn.field_b.a((byte) 94, du.menuActionLabels[12]);
+        int var1 = kn.field_b.a((byte) 94, du.menuActionLabels[13]);
         if (oq.field_K < var1) {
           oq.field_K = var1;
         }
         int var2 = 4 + dp.field_h.field_a + dp.field_h.field_i;
-        bk.field_e[6] = var2 + 200 + (dp.field_h.field_j + dp.field_h.field_i);
+        bk.menuTop[6] = var2 + 200 + (dp.field_h.field_j + dp.field_h.field_i);
         if (!param0) {
           av.a((byte) -119);
         }
-        oo.field_Y[6] = 30 + 2 * var2;
+        oo.menuRowSpacing[6] = 30 + 2 * var2;
         return true;
     }
 

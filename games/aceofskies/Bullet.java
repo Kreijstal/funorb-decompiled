@@ -52,12 +52,12 @@ final class Bullet extends FlightBody {
         }
     }
 
-    final static void a(byte param0, int param1, boolean param2) {
-        int var3 = -50 % ((-21 - param0) / 51);
-        ec.field_t = 0;
-        ci.field_d = param1;
-        if (!(ci.field_d < 0)) {
-          aa.field_b[ci.field_d].a(param2, 1);
+    final static void requestMenu(byte obfuscationGuard, int screenId, boolean pointerSelection) {
+        int var3 = -50 % ((-21 - obfuscationGuard) / 51);
+        ec.menuTransitionTicks = 0;
+        ci.nextMenuId = screenId;
+        if (!(ci.nextMenuId < 0)) {
+          aa.menuScreens[ci.nextMenuId].open(pointerSelection, 1);
         }
     }
 

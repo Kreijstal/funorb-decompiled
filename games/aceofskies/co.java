@@ -10,7 +10,7 @@ final class co {
     static int field_c;
     static RenderSprite[] field_i;
     static long field_e;
-    static int field_b;
+    static int returnMenuId;
     static String field_a;
     static String field_g;
 
@@ -185,6 +185,6 @@ final class co {
         field_j = "Waiting for graphics";
         field_k = new lh();
         field_a = "Passwords must be between 5 and 20 characters long";
-        field_b = 0;
+        returnMenuId = 0;
     }
 }
