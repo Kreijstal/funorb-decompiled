@@ -201,11 +201,7 @@ abstract class bf extends GraphicsRenderer {
         int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 == this.field_ab) {
           int stackIn_4_0 = (this.field_dc) ? 0 : 1;
-          if (this.field_Bb) {
-            stackIn_7_1 = 0;
-          } else {
-            stackIn_7_1 = 1;
-          }
+          stackIn_7_1 = (this.field_Bb) ? (0) : (1);
           decompiledFrameRemainder0 = (stackIn_4_0 != stackIn_7_1);
         }
         if (decompiledFrameRemainder0) {

@@ -560,11 +560,7 @@ class bm extends mi {
           }
           int var8_int = ((et) ((Object) this.field_e)).a((ea) (this), param1, param4, cf.field_g, param0 - 31, ic.field_b);
           int stackIn_6_1 = 82;
-          if (var8_int == -1) {
-            stackIn_7_2 = 0;
-          } else {
-            stackIn_7_2 = var8_int;
-          }
+          stackIn_7_2 = (var8_int == -1) ? (0) : (var8_int);
           this.a((byte) stackIn_6_1, stackIn_7_2);
           long var8_long = kh.a(param0 - 125);
           boolean stackIn_10_1 = !(var8_long - this.field_E >= 250L);

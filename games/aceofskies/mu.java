@@ -171,11 +171,7 @@ final class mu extends RendererBitmapFont {
                   var15_int++;
                   byte[] stackIn_21_0 = var7_ref_byte__;
                   int stackIn_21_1 = incrementValue$6;
-                  if (var16_ref_byte__[incrementValue$7] != 0) {
-                    stackIn_22_2 = -1;
-                  } else {
-                    stackIn_22_2 = 0;
-                  }
+                  stackIn_22_2 = (var16_ref_byte__[incrementValue$7] != 0) ? (-1) : (0);
                   stackIn_21_0[stackIn_21_1] = (byte)stackIn_22_2;
                 }
                 var14 = var14 + (var6Lifetime1 - var11);

@@ -98,22 +98,10 @@ final class kf extends sk {
             this.field_p = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_unlit"), param0);
             this.field_j = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_lit"), param0);
             int stackIn_7_0 = (null == this.field_p) ? 0 : 1;
-            if (this.field_o == null) {
-              stackIn_10_1 = 0;
-            } else {
-              stackIn_10_1 = 1;
-            }
-            if (this.field_g == null) {
-              stackIn_13_2 = 0;
-            } else {
-              stackIn_13_2 = 1;
-            }
+            stackIn_10_1 = (this.field_o == null) ? (0) : (1);
+            stackIn_13_2 = (this.field_g == null) ? (0) : (1);
             int stackIn_15_0 = stackIn_7_0 & (stackIn_10_1 & stackIn_13_2);
-            if (this.field_j == null) {
-              stackIn_16_1 = 0;
-            } else {
-              stackIn_16_1 = 1;
-            }
+            stackIn_16_1 = (this.field_j == null) ? (0) : (1);
             if ((stackIn_15_0 & stackIn_16_1) == 0) {
               this.field_k = false;
               return;

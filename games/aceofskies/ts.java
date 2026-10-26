@@ -153,11 +153,7 @@ final class ts extends RendererBitmapFont {
             for (int var10 = 0; var10 < var14.length; var10++) {
               byte[] stackIn_8_0 = var9;
               int stackIn_8_1 = var10;
-              if (var14[var10] != 0) {
-                stackIn_9_2 = -1;
-              } else {
-                stackIn_9_2 = 0;
-              }
+              stackIn_9_2 = (var14[var10] != 0) ? (-1) : (0);
               stackIn_8_0[stackIn_8_1] = (byte)stackIn_9_2;
             }
           } else {

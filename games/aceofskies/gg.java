@@ -149,23 +149,11 @@ abstract class gg {
                 var13 = var13 & 255;
                 int var15 = var7 >> 12;
                 int var16 = var15 + 1;
-                if (var16 < var10) {
-                  var16 = var16 & 255;
-                } else {
-                  var16 = 0;
-                }
-                if (var8 > var12) {
-                  var12 = var12 & 255;
-                } else {
-                  var12 = 0;
-                }
+                var16 = (var16 < var10) ? (var16 & 255) : (0);
+                var12 = (var8 > var12) ? (var12 & 255) : (0);
                 var6 = var6 & 4095;
                 var15 = var15 & 255;
-                if (var14 < var9) {
-                  var14 = var14 & 255;
-                } else {
-                  var14 = 0;
-                }
+                var14 = (var14 < var9) ? (var14 & 255) : (0);
                 var5 = var5 & 4095;
                 var7 = var7 & 4095;
                 int var22 = var7 - 4096;

@@ -345,11 +345,7 @@ class tk {
               ug var4 = var5;
               ug stackIn_10_0 = var4;
               int stackIn_10_1 = 256;
-              if (!field_r) {
-                stackIn_11_2 = 1;
-              } else {
-                stackIn_11_2 = 2;
-              }
+              stackIn_11_2 = (!field_r) ? (1) : (2);
               ((tk) ((Object) stackIn_10_0)).field_e = new int[stackIn_10_1 * stackIn_11_2];
               ((tk) ((Object) var4)).field_i = param3;
               ((tk) ((Object) var4)).a(param1);

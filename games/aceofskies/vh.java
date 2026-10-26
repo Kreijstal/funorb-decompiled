@@ -2070,11 +2070,7 @@ final class vh extends mk {
               var8++;
               int[] stackIn_10_0 = this.field_E;
               int stackIn_10_1 = incrementValue$13;
-              if ((var11 & 16777215) != 0) {
-                stackIn_11_2 = var11;
-              } else {
-                stackIn_11_2 = -16777215;
-              }
+              stackIn_11_2 = ((var11 & 16777215) != 0) ? (var11) : (-16777215);
               stackIn_10_0[stackIn_10_1] = stackIn_11_2;
             }
           }

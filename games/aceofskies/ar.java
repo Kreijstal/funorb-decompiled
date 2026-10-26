@@ -110,11 +110,7 @@ final class ar {
             } else {
               int[] stackIn_9_0 = (int[]) (field_c);
               int stackIn_9_1 = var6;
-              if (var11 <= var12) {
-                stackIn_10_2 = var9 - var10 + var11 - 1;
-              } else {
-                stackIn_10_2 = var10 - var12 + var9;
-              }
+              stackIn_10_2 = (var11 <= var12) ? (var9 - var10 + var11 - 1) : (var10 - var12 + var9);
               stackIn_9_0[stackIn_9_1] = stackIn_10_2;
             }
           }

@@ -100,11 +100,7 @@ final class jr extends DualLinkNode {
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   int stackIn_48_0 = var10;
-                  if (var13 == -1) {
-                    stackIn_49_1 = 0;
-                  } else {
-                    stackIn_49_1 = 1;
-                  }
+                  stackIn_49_1 = (var13 == -1) ? (0) : (1);
                   var10 = stackIn_48_0 | stackIn_49_1;
                 }
               }
@@ -121,11 +117,7 @@ final class jr extends DualLinkNode {
                     var9[var5 * var13 + var12] = dupTemp$1;
                     int var14 = dupTemp$1;
                     int stackIn_37_0 = var10;
-                    if (var14 == -1) {
-                      stackIn_38_1 = 0;
-                    } else {
-                      stackIn_38_1 = 1;
-                    }
+                    stackIn_38_1 = (var14 == -1) ? (0) : (1);
                     var10 = stackIn_37_0 | stackIn_38_1;
                   }
                 }

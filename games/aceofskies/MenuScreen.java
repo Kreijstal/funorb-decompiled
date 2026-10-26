@@ -131,11 +131,7 @@ final class MenuScreen {
               int stackIn_18_1 = var10;
               int stackIn_18_2 = var7;
               GraphicsRenderer stackIn_18_3 = (GraphicsRenderer) (renderer);
-              if (var8 != 20) {
-                stackIn_19_4 = 0;
-              } else {
-                stackIn_19_4 = 1;
-              }
+              stackIn_19_4 = (var8 != 20) ? (0) : (1);
               Object stackIn_21_0 = this;
               if (cs.highscoreMode != 0) {
                 stackIn_22_0 = this;
@@ -570,11 +566,7 @@ final class MenuScreen {
                   }
                   int stackIn_127_0 = obfuscationGuard + 25365;
                   int stackIn_127_1 = 6;
-                  if (0 == r.field_n) {
-                    stackIn_128_2 = 2;
-                  } else {
-                    stackIn_128_2 = 5;
-                  }
+                  stackIn_128_2 = (0 == r.field_n) ? (2) : (5);
                   nf.a(stackIn_127_0, stackIn_127_1, stackIn_128_2);
                   break;
                 }
@@ -1210,11 +1202,7 @@ final class MenuScreen {
             int stackIn_19_1 = var4;
             int stackIn_19_2 = 0;
             RenderSprite[] stackIn_19_3 = ac.keySprites;
-            if (vq.instructionPage != 5) {
-              stackIn_20_4 = 0;
-            } else {
-              stackIn_20_4 = 64;
-            }
+            stackIn_20_4 = (vq.instructionPage != 5) ? (0) : (64);
             ((RendererBitmapFont) (Object) stackIn_19_0).drawTextWithImages(stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_20_4 + (12 + var5), 0, var10[var14], var6 + var8 / 2 + var9 * (var14 - var13Lifetime1 / 2), var18);
           } else {
             se.bigGameFont.drawTextWithImages(var4, 0, ac.keySprites, var5 + 12, 0, var10[var14], var9 * (var14 - var13Lifetime1 / 2) + (10 - (-var6 - var8 / 2)), var18);

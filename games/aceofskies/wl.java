@@ -367,11 +367,7 @@ final class wl extends GraphicsRenderer {
             if (var4_int != 0) {
               throw new RuntimeException("");
             }
-            if (!this.field_V) {
-              stackIn_12_1 = 5121;
-            } else {
-              stackIn_12_1 = 33639;
-            }
+            stackIn_12_1 = (!this.field_V) ? (5121) : (33639);
             this.field_tb = stackIn_12_1;
             if (this.field_sb.indexOf("radeon") != -1) {
               int var5_int = 0;
@@ -837,11 +833,7 @@ final class wl extends GraphicsRenderer {
         boolean decompiledFrameRemainder0 = true;
         if (param1 == this.field_kb) {
           int stackIn_6_0 = (this.field_qc) ? 0 : 1;
-          if (this.field_vc) {
-            stackIn_9_1 = 0;
-          } else {
-            stackIn_9_1 = 1;
-          }
+          stackIn_9_1 = (this.field_vc) ? (0) : (1);
           decompiledFrameRemainder0 = (stackIn_6_0 != stackIn_9_1);
         }
         if (decompiledFrameRemainder0) {

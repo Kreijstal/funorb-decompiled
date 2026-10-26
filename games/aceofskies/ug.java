@@ -100,11 +100,7 @@ final class ug extends tk {
         }
         this.field_v = new javax.sound.sampled.AudioFormat(stackIn_16_3, stackIn_16_4, stackIn_17_5, true, false);
         int stackIn_19_1 = 256;
-        if (!field_r) {
-          stackIn_20_2 = 1;
-        } else {
-          stackIn_20_2 = 2;
-        }
+        stackIn_20_2 = (!field_r) ? (1) : (2);
         this.field_y = new byte[stackIn_19_1 << stackIn_20_2];
     }
 

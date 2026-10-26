@@ -266,11 +266,7 @@ final class hg extends to {
             int var14Lifetime2 = stackIn_14_0;
             int var15 = var64[var13] * param0 + var62[var13] * param2 + param3 * var63[var13] >> 8;
             int[] stackIn_16_0 = em.field_b;
-            if (var15 < 0) {
-              stackIn_17_1 = -var15;
-            } else {
-              stackIn_17_1 = var15;
-            }
+            stackIn_17_1 = (var15 < 0) ? (-var15) : (var15);
             int var15Lifetime2 = stackIn_16_0[stackIn_17_1];
             var14Lifetime2 = (256 - var15Lifetime2) * var14Lifetime2 >>> 8;
             var55[var13] = var14Lifetime2;

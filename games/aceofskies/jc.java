@@ -315,11 +315,7 @@ final class jc extends bf {
           jaggl.OpenGL.glTexEnvi(8960, 34184 + param1, ii.a((byte) 79, param0));
           int stackIn_2_0 = 8960;
           int stackIn_2_1 = param1 + 34200;
-          if (!param2) {
-            stackIn_3_2 = 770;
-          } else {
-            stackIn_3_2 = 771;
-          }
+          stackIn_3_2 = (!param2) ? (770) : (771);
           jaggl.OpenGL.glTexEnvi(stackIn_2_0, stackIn_2_1, stackIn_3_2);
           if (param3 < 90) {
             this.field_Wc = (IntrusiveDeque) null;
@@ -485,11 +481,7 @@ final class jc extends bf {
               this.field_Nc = this.field_Ac.a("GL_ARB_fragment_shader");
               this.field_Ac.a("GL_ARB_fragment_program");
               this.field_Hc = new int[this.field_h];
-              if (!jaclib.memory.Stream.b()) {
-                stackIn_21_1 = 5121;
-              } else {
-                stackIn_21_1 = 33639;
-              }
+              stackIn_21_1 = (!jaclib.memory.Stream.b()) ? (5121) : (33639);
               this.field_Bc = stackIn_21_1;
               if (this.field_sc.indexOf("radeon") != -1) {
                 var11_int = 0;
@@ -705,11 +697,7 @@ final class jc extends bf {
             this.field_Oc = stackIn_46_1;
           }
           int stackIn_49_0 = var5;
-          if (this.field_Xc) {
-            stackIn_50_1 = 0;
-          } else {
-            stackIn_50_1 = 1;
-          }
+          stackIn_50_1 = (this.field_Xc) ? (0) : (1);
           if (stackIn_49_0 == stackIn_50_1) {
             if (var5 == 0) {
               jaggl.OpenGL.glDisableClientState(32886);
@@ -1353,20 +1341,12 @@ final class jc extends bf {
           if (param0) {
             int stackIn_7_0 = 8960;
             int stackIn_7_1 = 34192 + param1;
-            if (!param4) {
-              stackIn_8_2 = 770;
-            } else {
-              stackIn_8_2 = 771;
-            }
+            stackIn_8_2 = (!param4) ? (770) : (771);
             jaggl.OpenGL.glTexEnvi(stackIn_7_0, stackIn_7_1, stackIn_8_2);
           } else {
             int stackIn_3_0 = 8960;
             int stackIn_3_1 = param1 + 34192;
-            if (!param4) {
-              stackIn_4_2 = 768;
-            } else {
-              stackIn_4_2 = 769;
-            }
+            stackIn_4_2 = (!param4) ? (768) : (769);
             jaggl.OpenGL.glTexEnvi(stackIn_3_0, stackIn_3_1, stackIn_4_2);
           }
           if (!param2) {

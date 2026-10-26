@@ -235,11 +235,7 @@ class ea extends IntrusiveNode {
             this.a(117, true, 91, true);
           }
           boolean stackIn_4_0 = this.field_g;
-          if (var5_int != 0) {
-            stackIn_5_1 = 0;
-          } else {
-            stackIn_5_1 = 1;
-          }
+          stackIn_5_1 = (var5_int != 0) ? (0) : (1);
           if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {
             boolean stackIn_10_1 = (var5_int != 0);
             this.field_g = stackIn_10_1;

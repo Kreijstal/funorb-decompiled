@@ -78,59 +78,27 @@ final class mq extends IntrusiveNode {
         int var8 = -45 / ((-12 - param0) / 50);
         if (var5 < 4) {
           int var7 = param4;
-          if (0 != (var5 & 2)) {
-            stackIn_7_0 = -var7;
-          } else {
-            stackIn_7_0 = var7;
-          }
-          if ((1 & var5) != 0) {
-            stackIn_10_1 = -var6;
-          } else {
-            stackIn_10_1 = var6;
-          }
+          stackIn_7_0 = (0 != (var5 & 2)) ? (-var7) : (var7);
+          stackIn_10_1 = ((1 & var5) != 0) ? (-var6) : (var6);
           return stackIn_7_0 + stackIn_10_1;
         }
         if (var5 == 12) {
           int stackIn_14_0 = param1;
           int var7Lifetime1 = stackIn_14_0;
-          if (0 != (var5 & 2)) {
-            stackIn_17_0 = -var7Lifetime1;
-          } else {
-            stackIn_17_0 = var7Lifetime1;
-          }
-          if ((1 & var5) != 0) {
-            stackIn_20_1 = -var6;
-          } else {
-            stackIn_20_1 = var6;
-          }
+          stackIn_17_0 = (0 != (var5 & 2)) ? (-var7Lifetime1) : (var7Lifetime1);
+          stackIn_20_1 = ((1 & var5) != 0) ? (-var6) : (var6);
           return stackIn_17_0 + stackIn_20_1;
         }
         if (var5 == 14) {
           int var7Lifetime2 = param1;
-          if (0 != (var5 & 2)) {
-            stackIn_34_0 = -var7Lifetime2;
-          } else {
-            stackIn_34_0 = var7Lifetime2;
-          }
-          if ((1 & var5) != 0) {
-            stackIn_37_1 = -var6;
-          } else {
-            stackIn_37_1 = var6;
-          }
+          stackIn_34_0 = (0 != (var5 & 2)) ? (-var7Lifetime2) : (var7Lifetime2);
+          stackIn_37_1 = ((1 & var5) != 0) ? (-var6) : (var6);
           return stackIn_34_0 + stackIn_37_1;
         }
         int stackIn_24_0 = param2;
         int var7Lifetime3 = stackIn_24_0;
-        if (0 != (var5 & 2)) {
-          stackIn_27_0 = -var7Lifetime3;
-        } else {
-          stackIn_27_0 = var7Lifetime3;
-        }
-        if ((1 & var5) != 0) {
-          stackIn_30_1 = -var6;
-        } else {
-          stackIn_30_1 = var6;
-        }
+        stackIn_27_0 = (0 != (var5 & 2)) ? (-var7Lifetime3) : (var7Lifetime3);
+        stackIn_30_1 = ((1 & var5) != 0) ? (-var6) : (var6);
         return stackIn_27_0 + stackIn_30_1;
     }
 

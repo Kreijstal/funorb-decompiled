@@ -267,11 +267,7 @@ final class MusicTrack extends IntrusiveNode {
         var51.writeInt((byte) 87, 1297377380);
         var51.writeInt((byte) 127, 6);
         PacketBuffer stackIn_84_0 = var51;
-        if (var2 <= 1) {
-          stackIn_85_1 = 0;
-        } else {
-          stackIn_85_1 = 1;
-        }
+        stackIn_85_1 = (var2 <= 1) ? (0) : (1);
         ((PacketBuffer) (Object) stackIn_84_0).writeShort(stackIn_85_1, 23385);
         var51.writeShort(var2, 23385);
         var51.writeShort(var3, 23385);

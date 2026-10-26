@@ -3327,7 +3327,6 @@ final class FlightSession {
         int stackIn_70_0 = 0;
         int stackIn_70_1 = 0;
         int stackIn_105_0 = 0;
-        int stackIn_144_0 = 0;
         int var26 = 0;
         int var23Lifetime2;
         int var23Lifetime3;
@@ -3607,11 +3606,7 @@ final class FlightSession {
                     var23_ref_md.definition.getSprites(-32275)[0].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(var23_ref_md.lifecyclePhase * 32) * var3), 0);
                     var23_ref_md.definition.getSprites(-32275)[1].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(32 * var23_ref_md.lifecyclePhase) * var3), var23_ref_md.bankOffset << 10);
                     int var27Lifetime1Lifetime1 = (var23_ref_md.bankOffset & 536870975) << 3;
-                    if (var27Lifetime1Lifetime1 <= 255) {
-                      stackIn_144_0 = var27Lifetime1Lifetime1;
-                    } else {
-                      stackIn_144_0 = 511 - var27Lifetime1Lifetime1;
-                    }
+                    int stackIn_144_0 = (var27Lifetime1Lifetime1 <= 255) ? (var27Lifetime1Lifetime1) : (511 - var27Lifetime1Lifetime1);
                     var27Lifetime1Lifetime1 = stackIn_144_0;
                     var23_ref_md.definition.getSprites(-32275)[2].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(var23_ref_md.lifecyclePhase * 32) * var3), var23_ref_md.bankOffset << 10, 0, var27Lifetime1Lifetime1 * -16711423, 2);
                     var23_ref_md.definition.getSprites(obfuscationGuard ^ 132651706)[2].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(32 * var23_ref_md.lifecyclePhase) * var3), var23_ref_md.bankOffset << 10, 0, var27Lifetime1Lifetime1 * -16711423, 2);

@@ -23,12 +23,8 @@ final class wg implements ir {
           if (param1 != -7592) {
             wg.a(false);
           }
-          if (!param3.field_g &&
-            !param3.e(28660)) {
-            stackIn_7_0 = 2188450;
-          } else {
-            stackIn_7_0 = 3249872;
-          }
+          stackIn_7_0 = (!param3.field_g &&
+            !param3.e(28660)) ? (2188450) : (3249872);
           int var6_int = stackIn_7_0;
           this.field_a.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_f + "</u>", param3.field_p + param2, param3.field_h + param4, param3.field_q, param3.field_n, var6_int, -1, this.field_e, this.field_d, this.field_a.maxAscent + this.field_a.maxDescent);
           if (!param3.e(param1 + 36252)) {

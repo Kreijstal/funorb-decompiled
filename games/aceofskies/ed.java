@@ -166,19 +166,11 @@ final class ed extends cq implements qi {
           this.field_g.a((jj) (this), -9135);
           int stackIn_6_0 = this.field_e;
           int stackIn_6_1 = 10242;
-          if (!param1) {
-            stackIn_7_2 = 33071;
-          } else {
-            stackIn_7_2 = 10497;
-          }
+          stackIn_7_2 = (!param1) ? (33071) : (10497);
           jaggl.OpenGL.glTexParameteri(stackIn_6_0, stackIn_6_1, stackIn_7_2);
           int stackIn_10_0 = this.field_e;
           int stackIn_10_1 = 10243;
-          if (!param0) {
-            stackIn_11_2 = 33071;
-          } else {
-            stackIn_11_2 = 10497;
-          }
+          stackIn_11_2 = (!param0) ? (33071) : (10497);
           jaggl.OpenGL.glTexParameteri(stackIn_10_0, stackIn_10_1, stackIn_11_2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -379,11 +371,7 @@ final class ed extends cq implements qi {
                       var15 = -var6 + var13Lifetime1 + (var12Lifetime1 + var14);
                       int stackIn_33_0 = -1;
                       int stackIn_33_1 = gi.field_i.length;
-                      if (var7 < 0) {
-                        stackIn_34_2 = var15 << -var7;
-                      } else {
-                        stackIn_34_2 = var15 >> var7;
-                      }
+                      stackIn_34_2 = (var7 < 0) ? (var15 << -var7) : (var15 >> var7);
                       var16 = stackIn_33_0 + (stackIn_33_1 - stackIn_34_2);
                       var17 = gi.field_i[var16];
                       while (true) {

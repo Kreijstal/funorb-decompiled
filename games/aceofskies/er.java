@@ -59,11 +59,7 @@ final class er {
             double var12 = var8;
             double var14 = var8;
             if (0.0 != var6) {
-              if (var8 < 0.5) {
-                var16_double = var8 * (1.0 + var6);
-              } else {
-                var16_double = -(var6 * var8) + (var8 + var6);
-              }
+              var16_double = (var8 < 0.5) ? (var8 * (1.0 + var6)) : (-(var6 * var8) + (var8 + var6));
               double var18_double = 2.0 * var8 - var16_double;
               double var20 = var4 + 0.3333333333333333;
               if (var20 > 1.0) {

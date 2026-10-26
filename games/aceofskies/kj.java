@@ -178,11 +178,7 @@ final class kj extends GraphicsRenderer {
                 int var13 = var3[var4[var11 + var12] & 255];
                 int[] stackIn_26_0 = var15;
                 int stackIn_26_1 = var11 + var12;
-                if (var13 == 0) {
-                  stackIn_27_2 = 0;
-                } else {
-                  stackIn_27_2 = -16777216 | var13;
-                }
+                stackIn_27_2 = (var13 == 0) ? (0) : (-16777216 | var13);
                 stackIn_26_0[stackIn_26_1] = stackIn_27_2;
               }
             }

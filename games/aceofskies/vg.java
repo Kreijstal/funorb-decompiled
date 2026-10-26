@@ -283,11 +283,7 @@ final class vg extends pp {
         for (int var1 = 0; var1 < 256; var1++) {
           int var0 = var1;
           for (int var2 = 0; var2 < 8; var2++) {
-            if ((var0 & 1) == 1) {
-              var0 = -306674912 ^ var0 >>> 1;
-            } else {
-              var0 = var0 >>> 1;
-            }
+            var0 = ((var0 & 1) == 1) ? (-306674912 ^ var0 >>> 1) : (var0 >>> 1);
           }
           field_e[var1] = var0;
         }

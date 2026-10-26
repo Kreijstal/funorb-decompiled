@@ -17,11 +17,7 @@ final class hf extends un {
             this.field_l.position = 0;
             PacketBuffer stackIn_4_0 = this.field_l;
             int stackIn_4_1 = -1336879960;
-            if (param0) {
-              stackIn_5_2 = 2;
-            } else {
-              stackIn_5_2 = 3;
-            }
+            stackIn_5_2 = (param0) ? (2) : (3);
             ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_4_1, stackIn_5_2);
             this.field_l.a((byte) -64, 0L);
             this.field_s.a(this.field_l.payload.length, 0, -104, this.field_l.payload);

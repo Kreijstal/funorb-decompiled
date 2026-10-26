@@ -34,11 +34,7 @@ abstract class ua implements kt {
               int stackIn_8_1 = this.field_i;
               Object stackIn_8_2 = null;
               int stackIn_8_3 = 0;
-              if (this.field_e) {
-                stackIn_9_4 = 35040;
-              } else {
-                stackIn_9_4 = 35044;
-              }
+              stackIn_9_4 = (this.field_e) ? (35040) : (35044);
               jaggl.OpenGL.glBufferDataARBub(stackIn_8_0, stackIn_8_1, (byte[]) (stackIn_8_2), stackIn_8_3, stackIn_9_4);
               if (this.field_n <= this.field_a.field_Q.c) {
                 this.field_m = 1;

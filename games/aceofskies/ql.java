@@ -264,18 +264,10 @@ final class ql extends ud {
         }
         int var14Lifetime3 = this.field_i[param3 + var12] & 3;
         if (var14Lifetime3 > 1) {
-          if (2 != var14Lifetime3) {
-            stackIn_40_0 = -var11 - var10;
-          } else {
-            stackIn_40_0 = -var10 + var11;
-          }
+          stackIn_40_0 = (2 != var14Lifetime3) ? (-var11 - var10) : (-var10 + var11);
           var9Lifetime1 = stackIn_40_0;
         } else {
-          if (var14Lifetime3 == 0) {
-            stackIn_36_0 = var10 + var11;
-          } else {
-            stackIn_36_0 = -var11 + var10;
-          }
+          stackIn_36_0 = (var14Lifetime3 == 0) ? (var10 + var11) : (-var11 + var10);
           var9Lifetime1 = stackIn_36_0;
         }
         int var17 = ((-var8Lifetime1 + var9Lifetime1) * var15 >> 12) + var8Lifetime1;

@@ -88,11 +88,7 @@ final class il {
           } catch (java.lang.Throwable decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6 = decompiledCaughtException;
-            if (var3 != 0) {
-              decompiledRegionSelector0 = 1;
-            } else {
-              decompiledRegionSelector0 = 2;
-            }
+            decompiledRegionSelector0 = (var3 != 0) ? (1) : (2);
           }
           if (decompiledRegionSelector0 == 0) {
             if (var3 != 0) {

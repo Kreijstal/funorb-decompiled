@@ -42,11 +42,7 @@ final class Pickup extends FlightBody {
         for (int var2 = 0; var2 < 256; var2++) {
           long var0 = (long)var2;
           for (int var3 = 0; var3 < 8; var3++) {
-            if ((var0 & 1L) == 1L) {
-              var0 = var0 >>> 1 ^ -3932672073523589310L;
-            } else {
-              var0 = var0 >>> 1;
-            }
+            var0 = ((var0 & 1L) == 1L) ? (var0 >>> 1 ^ -3932672073523589310L) : (var0 >>> 1);
           }
           field_l[var2] = var0;
         }
