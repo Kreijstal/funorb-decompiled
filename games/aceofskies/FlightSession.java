@@ -184,11 +184,7 @@ final class FlightSession {
                     var8 = 6;
                   }
                   stackIn_72_0 = var10;
-                  if (var8 >= 6) {
-                    stackIn_73_1 = 0;
-                  } else {
-                    stackIn_73_1 = 1;
-                  }
+                  stackIn_73_1 = (var8 >= 6) ? 0 : 1;
                   var10 = stackIn_72_0 & stackIn_73_1;
                   var8 += 13;
                 } else {
@@ -196,11 +192,7 @@ final class FlightSession {
                     var8 = 12;
                   }
                   stackIn_81_0 = var10;
-                  if (12 <= var8) {
-                    stackIn_82_1 = 0;
-                  } else {
-                    stackIn_82_1 = 1;
-                  }
+                  stackIn_82_1 = (12 <= var8) ? 0 : 1;
                   var10 = stackIn_81_0 & stackIn_82_1;
                 }
                 jm.levelRingSprites[var8].a(var5, var6);
@@ -307,11 +299,7 @@ final class FlightSession {
               stackIn_135_2 = var7;
               stackIn_135_3 = var8 + 135;
               stackIn_135_4 = 103 + var8 - this.displayedTemporaryWeaponTicks;
-              if (this.displayedTemporaryWeaponTicks >= 99) {
-                stackIn_136_5 = 50;
-              } else {
-                stackIn_136_5 = 0;
-              }
+              stackIn_136_5 = (this.displayedTemporaryWeaponTicks >= 99) ? 50 : 0;
               ((bo) (Object) stackIn_135_0).a(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_135_4 - stackIn_136_5, 100);
               ii.gaugeSprites[2][0].a(var7, var8, 0, 16843009 * var9, 2);
               var5_ref_bo.a(true);
@@ -572,11 +560,7 @@ final class FlightSession {
               }
               stackIn_19_0 = this.musicChannelVolumes;
               stackIn_19_1 = var2_int;
-              if (sd.musicLayerPresets[this.musicLayerPresetIndex][var2_int]) {
-                stackIn_20_2 = 255;
-              } else {
-                stackIn_20_2 = 0;
-              }
+              stackIn_20_2 = (sd.musicLayerPresets[this.musicLayerPresetIndex][var2_int]) ? 255 : 0;
               stackIn_19_0[stackIn_19_1] = stackIn_20_2;
               this.gameMusic.a((byte) -120, this.musicChannelVolumes[var2_int], var2_int);
               var2_int++;
@@ -623,11 +607,7 @@ final class FlightSession {
             var3_int = qq.a(20, this.aircraft.length);
             if (null != this.aircraft[var3_int]) {
               stackIn_19_0 = (gh.playerDefinition != aircraft.definition) ? 0 : 1;
-              if (this.aircraft[var3_int].definition != gh.playerDefinition) {
-                stackIn_23_1 = 0;
-              } else {
-                stackIn_23_1 = 1;
-              }
+              stackIn_23_1 = (this.aircraft[var3_int].definition != gh.playerDefinition) ? 0 : 1;
               if ((stackIn_19_0 ^ stackIn_23_1) != 0) {
                 aircraft.targetAircraft = this.aircraft[var3_int];
               }
@@ -1125,11 +1105,7 @@ final class FlightSession {
                           var8.hitPoints = var8.hitPoints - 1;
                           var5 = 1;
                           var8.damageSmokeTicks = 256;
-                          if (this.playerAircraft == var4.sourceAircraft) {
-                            stackIn_82_1 = 50;
-                          } else {
-                            stackIn_82_1 = 25;
-                          }
+                          stackIn_82_1 = (this.playerAircraft == var4.sourceAircraft) ? 50 : 25;
                           this.addScore(stackIn_82_1 * this.scoreMultiplier, -54);
                           if (var8.hitPoints != 0) {
                             break scanLoop3;
@@ -1302,11 +1278,7 @@ final class FlightSession {
             stackIn_31_0 = var4Lifetime1;
             stackIn_31_1 = aircraft.definition.collisionRadius;
             stackIn_31_2 = 0;
-            if (2 != var3_int) {
-              stackIn_32_3 = 0;
-            } else {
-              stackIn_32_3 = 10;
-            }
+            stackIn_32_3 = (2 != var3_int) ? 0 : 10;
             ((Bullet) (Object) stackIn_31_0).spawn(stackIn_31_1, stackIn_31_2, (double)stackIn_32_3 + var6Lifetime1, aircraft);
             this.bulletCount = this.bulletCount + 1;
             var4Lifetime1Lifetime1 = this.bullets[this.bulletCount];
@@ -1319,11 +1291,7 @@ final class FlightSession {
             stackIn_39_0 = var4Lifetime1Lifetime1;
             stackIn_39_1 = -aircraft.definition.collisionRadius;
             stackIn_39_2 = 0;
-            if (var3_int == 2) {
-              stackIn_40_3 = -10;
-            } else {
-              stackIn_40_3 = 0;
-            }
+            stackIn_40_3 = (var3_int == 2) ? -10 : 0;
             ((Bullet) (Object) stackIn_39_0).spawn(stackIn_39_1, stackIn_39_2, (double)stackIn_40_3 + var6Lifetime1Lifetime1, aircraft);
             if (aircraft == this.playerAircraft) {
               this.shotsFired = this.shotsFired + 2;
@@ -1548,17 +1516,9 @@ final class FlightSession {
           if (to.lastScoreSubmission == null &&
             this.finalScore > 0 &&
             !tt.field_a) {
-            if (this.arcadeMode) {
-              stackIn_13_2 = 1;
-            } else {
-              stackIn_13_2 = 0;
-            }
+            stackIn_13_2 = (this.arcadeMode) ? 1 : 0;
             stackIn_15_3 = 65535;
-            if (!this.arcadeMode) {
-              stackIn_16_4 = 0;
-            } else {
-              stackIn_16_4 = 1;
-            }
+            stackIn_16_4 = (!this.arcadeMode) ? 0 : 1;
             to.lastScoreSubmission = new ScoreSubmission(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
             if (!cn.b(true)) {
               ClientException.queueScoreSubmission(to.lastScoreSubmission, true, 3);
@@ -2264,7 +2224,7 @@ final class FlightSession {
           }
           if (decompiledNaturalLoopExit1) {
             stackIn_38_1 = cameraMovement;
-            stackIn_39_2 = !(obfuscationGuard);
+            stackIn_39_2 = (obfuscationGuard) ? false : true;
             this.advancePickups(stackIn_38_1, stackIn_39_2);
             this.advanceBullets(cameraMovement, (byte) -93);
             this.advanceSmokeParticles(cameraMovement, 4473924);
@@ -3105,7 +3065,7 @@ final class FlightSession {
               } else {
                 stackIn_23_0Lifetime1 = 256;
               }
-              stackIn_27_1Lifetime1 = !(obfuscationGuard);
+              stackIn_27_1Lifetime1 = (obfuscationGuard) ? false : true;
               rg.a(stackIn_23_0Lifetime1, stackIn_27_1Lifetime1, aircraft.engineSound, this.computeSpatialVolume(this.playerAircraft.position, 200, aircraft.position));
               this.scratchPosition.setFrom(aircraft.position, true);
               this.scratchPosition.add((byte) 103, oh.a(5.0, (byte) 28));
@@ -3119,7 +3079,7 @@ final class FlightSession {
                 } else {
                   stackIn_23_0 = 256;
                 }
-                stackIn_27_1 = !(obfuscationGuard);
+                stackIn_27_1 = (obfuscationGuard) ? false : true;
                 rg.a(stackIn_23_0, stackIn_27_1, aircraft.engineSound, this.computeSpatialVolume(this.playerAircraft.position, 200, aircraft.position));
                 this.scratchPosition.setFrom(aircraft.position, true);
                 this.scratchPosition.add((byte) 103, oh.a(5.0, (byte) 28));
@@ -3443,11 +3403,7 @@ final class FlightSession {
               var14Lifetime1 = (var8.remainingTicks & 15) >> 1;
               var12Lifetime1Lifetime1 = 8 - var14Lifetime1;
               stackIn_83_0 = var14Lifetime1 << 29;
-              if (var8.pickupCode < 4) {
-                stackIn_84_1 = 65280;
-              } else {
-                stackIn_84_1 = 16776960;
-              }
+              stackIn_84_1 = (var8.pickupCode < 4) ? 65280 : 16776960;
               var13Lifetime1 = stackIn_83_0 | stackIn_84_1;
               renderer.e(var13Lifetime1, var12Lifetime1Lifetime1, -(var12Lifetime1Lifetime1 >> 1) + var10Lifetime1, var12Lifetime1Lifetime1, -(var12Lifetime1Lifetime1 >> 1) + var9, 3105);
             }
@@ -3717,22 +3673,22 @@ final class FlightSession {
               this.overheatFireLatch = false;
               if (obfuscationControl != 0) {
                 stackIn_67_1 = this.overheatFireLatch;
-                stackIn_68_2 = !(this.playerAircraft.weaponHeat <= 100);
+                stackIn_68_2 = (this.playerAircraft.weaponHeat <= 100) ? false : true;
                 this.overheatFireLatch = stackIn_67_1 | stackIn_68_2;
                 stackIn_71_0 = this.playerAircraft;
-                stackIn_72_1 = !(this.overheatFireLatch);
+                stackIn_72_1 = (this.overheatFireLatch) ? false : true;
                 stackIn_71_0.fireRequested = stackIn_72_1;
               }
             } else {
               stackIn_67_1Lifetime1 = this.overheatFireLatch;
-              stackIn_68_2Lifetime1 = !(this.playerAircraft.weaponHeat <= 100);
+              stackIn_68_2Lifetime1 = (this.playerAircraft.weaponHeat <= 100) ? false : true;
               this.overheatFireLatch = stackIn_67_1Lifetime1 | stackIn_68_2Lifetime1;
               stackIn_71_0 = this.playerAircraft;
-              stackIn_72_1Lifetime1 = !(this.overheatFireLatch);
+              stackIn_72_1Lifetime1 = (this.overheatFireLatch) ? false : true;
               stackIn_71_0.fireRequested = stackIn_72_1Lifetime1;
             }
             stackIn_76_0 = this.playerAircraft;
-            stackIn_77_1 = (this.doubleTapTurnDirection != 0);
+            stackIn_77_1 = (this.doubleTapTurnDirection == 0) ? false : true;
             stackIn_76_0.braking = stackIn_77_1;
           }
           return;
@@ -4537,11 +4493,7 @@ final class FlightSession {
               if (stackIn_16_0 > 0) {
                 stackIn_12_0 = var8;
                 stackIn_12_1 = 20;
-                if (!this.arcadeMode) {
-                  stackIn_13_2 = 4;
-                } else {
-                  stackIn_13_2 = 9;
-                }
+                stackIn_13_2 = (!this.arcadeMode) ? 4 : 9;
                 stackIn_12_0.dropPickupCode = qq.a(stackIn_12_1, stackIn_13_2);
               }
               this.installAircraft((byte) 112, var8);
