@@ -162,36 +162,30 @@ final class hg extends to {
                 ((ih) (this.field_o)).a(this, param2, param3, (byte) -105);
               }
             }
-          } else {
-            if (this.field_w) {
-              if (this.field_p != this.field_u) {
-                var5_int = this.field_u - this.field_p;
-                int stackIn_11_1 = this.field_p;
-                if (Math.abs(var5_int) > 2) {
-                  stackIn_12_2 = var5_int >> 1;
-                } else {
-                  if (var5_int > 0) {
-                    stackIn_12_2 = 1;
-                  } else {
-                    stackIn_12_2 = -1;
-                  }
-                }
-                this.field_p = stackIn_11_1 + stackIn_12_2;
+          } else if (this.field_w) {
+            if (this.field_p != this.field_u) {
+              var5_int = this.field_u - this.field_p;
+              int stackIn_11_1 = this.field_p;
+              if (Math.abs(var5_int) > 2) {
+                stackIn_12_2 = var5_int >> 1;
+              } else if (var5_int > 0) {
+                stackIn_12_2 = 1;
+              } else {
+                stackIn_12_2 = -1;
               }
-              if (this.field_v != this.field_h) {
-                var5_int = -this.field_h + this.field_v;
-                int stackIn_17_1 = this.field_h;
-                if (Math.abs(var5_int) <= 2) {
-                  if (0 >= var5_int) {
-                    stackIn_20_2 = -1;
-                  } else {
-                    stackIn_20_2 = 1;
-                  }
-                } else {
-                  stackIn_20_2 = var5_int >> 1;
-                }
-                this.field_h = stackIn_17_1 + stackIn_20_2;
+              this.field_p = stackIn_11_1 + stackIn_12_2;
+            }
+            if (this.field_v != this.field_h) {
+              var5_int = -this.field_h + this.field_v;
+              int stackIn_17_1 = this.field_h;
+              if (!(Math.abs(var5_int) <= 2)) {
+                stackIn_20_2 = var5_int >> 1;
+              } else if (0 >= var5_int) {
+                stackIn_20_2 = -1;
+              } else {
+                stackIn_20_2 = 1;
               }
+              this.field_h = stackIn_17_1 + stackIn_20_2;
             }
           }
           super.a((byte) 40, param1, param2, param3);
@@ -264,12 +258,10 @@ final class hg extends to {
             }
             if (var14 < 0) {
               stackIn_14_0 = 128;
+            } else if (128 <= var14) {
+              stackIn_14_0 = 256;
             } else {
-              if (128 <= var14) {
-                stackIn_14_0 = 256;
-              } else {
-                stackIn_14_0 = 128 + var14;
-              }
+              stackIn_14_0 = 128 + var14;
             }
             int var14Lifetime2 = stackIn_14_0;
             int var15 = var64[var13] * param0 + var62[var13] * param2 + param3 * var63[var13] >> 8;

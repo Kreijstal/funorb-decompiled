@@ -81,12 +81,10 @@ final class gq {
               var3.unlink(-125);
               var3.unlinkSecondaryNode(-115);
             }
-          } else {
-            if (var3.a((byte) 74) == null) {
-              var3.unlink(-128);
-              var3.unlinkSecondaryNode(-126);
-              this.field_g = this.field_g + var3.field_p;
-            }
+          } else if (var3.a((byte) 74) == null) {
+            var3.unlink(-128);
+            var3.unlinkSecondaryNode(-126);
+            this.field_g = this.field_g + var3.field_p;
           }
           var3 = (he) (this.field_h.a(true));
         }

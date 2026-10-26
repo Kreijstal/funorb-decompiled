@@ -98,67 +98,63 @@ final class BitmapFontMetrics {
                           if (var10.equals("times")) {
                             var9 = 215;
                             decompiledFrameRemainder1 = false;
-                          }
-                          else {
-                            if (var10.equals("euro")) {
-                              var9 = 8364;
-                              decompiledFrameRemainder1 = false;
-                            }
-                            else {
-                              if (!var10.equals("copy")) {
-                                if ((!var10.equals("reg")) &&
-                                  (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
-                                  (decompiledFrameRemainder0 = (inlineImages != null))) {
-                                  try {
-                                    int var11_int = td.a((CharSequence) ((Object) var10.substring(4)), (byte) 38);
-                                    var5 = -1;
-                                    var6 = var6 + inlineImages[var11_int].d();
-                                    decompiledRegionSelector0 = 0;
-                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                    decompiledCaughtException = decompiledCaughtParameter0;
-                                    Exception var11 = (Exception) (Object) decompiledCaughtException;
-                                    decompiledRegionSelector0 = 0;
-                                  }
-                                  decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
+                          } else if (var10.equals("euro")) {
+                            var9 = 8364;
+                            decompiledFrameRemainder1 = false;
+                          } else {
+                            if (!var10.equals("copy")) {
+                              if (!var10.equals("reg") &&
+                                (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
+                                (decompiledFrameRemainder0 = (inlineImages != null))) {
+                                try {
+                                  int var11_int = td.a((CharSequence) ((Object) var10.substring(4)), (byte) 38);
+                                  var5 = -1;
+                                  var6 = var6 + inlineImages[var11_int].d();
+                                  decompiledRegionSelector0 = 0;
+                                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  Exception var11 = (Exception) (Object) decompiledCaughtException;
+                                  decompiledRegionSelector0 = 0;
                                 }
-                                if (decompiledFrameRemainder0) {
-                                  var9 = 174;
-                                  decompiledFrameRemainder1 = false;
-                                }
+                                decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
                               }
-                              if ((decompiledFrameRemainder1) &&
-                                (decompiledFrameRemainder0)) {
-                                var9 = 169;
+                              if (decompiledFrameRemainder0) {
+                                var9 = 174;
                                 decompiledFrameRemainder1 = false;
                               }
                             }
+                            if (decompiledFrameRemainder1 &&
+                              decompiledFrameRemainder0) {
+                              var9 = 169;
+                              decompiledFrameRemainder1 = false;
+                            }
                           }
                         }
-                        if ((decompiledFrameRemainder1) &&
-                          (decompiledFrameRemainder0)) {
+                        if (decompiledFrameRemainder1 &&
+                          decompiledFrameRemainder0) {
                           var9 = 173;
                           decompiledFrameRemainder1 = false;
                         }
                       }
-                      if ((decompiledFrameRemainder1) &&
-                        (decompiledFrameRemainder0)) {
+                      if (decompiledFrameRemainder1 &&
+                        decompiledFrameRemainder0) {
                         var9 = 160;
                         decompiledFrameRemainder1 = false;
                       }
                     }
-                    if ((decompiledFrameRemainder1) &&
-                      (decompiledFrameRemainder0)) {
+                    if (decompiledFrameRemainder1 &&
+                      decompiledFrameRemainder0) {
                       var9 = 62;
                       decompiledFrameRemainder1 = false;
                     }
                   }
-                  if ((decompiledFrameRemainder1) &&
-                    (decompiledFrameRemainder0)) {
+                  if (decompiledFrameRemainder1 &&
+                    decompiledFrameRemainder0) {
                     var9 = 60;
                   }
                 }
-                if ((decompiledFrameRemainder0) &&
-                  (var4_int == -1)) {
+                if (decompiledFrameRemainder0 &&
+                  var4_int == -1) {
                   var6 = var6 + (this.glyphAdvances[255 & ae.a((char) var9, obfuscationGuard ^ 1)] & 255);
                   if (this.pairKerning != null &&
                     var5 != -1) {
@@ -233,74 +229,60 @@ final class BitmapFontMetrics {
                     if (var12_ref_String.equals("gt")) {
                       var11 = 62;
                       decompiledFrameRemainder1 = false;
-                    }
-                    else {
-                      if (var12_ref_String.equals("nbsp")) {
-                        var11 = 160;
-                        decompiledFrameRemainder1 = false;
-                      }
-                      else {
-                        if (var12_ref_String.equals("shy")) {
-                          var11 = 173;
+                    } else if (var12_ref_String.equals("nbsp")) {
+                      var11 = 160;
+                      decompiledFrameRemainder1 = false;
+                    } else if (var12_ref_String.equals("shy")) {
+                      var11 = 173;
+                      decompiledFrameRemainder1 = false;
+                    } else if (var12_ref_String.equals("times")) {
+                      var11 = 215;
+                      decompiledFrameRemainder1 = false;
+                    } else {
+                      if (!var12_ref_String.equals("euro")) {
+                        if (var12_ref_String.equals("copy")) {
+                          var11 = 169;
                           decompiledFrameRemainder1 = false;
-                        }
-                        else {
-                          if (var12_ref_String.equals("times")) {
-                            var11 = 215;
-                            decompiledFrameRemainder1 = false;
-                          }
-                          else {
-                            if (!var12_ref_String.equals("euro")) {
-                              if (var12_ref_String.equals("copy")) {
-                                var11 = 169;
-                                decompiledFrameRemainder1 = false;
+                        } else if (var12_ref_String.equals("reg")) {
+                          var11 = 174;
+                          decompiledFrameRemainder1 = false;
+                        } else {
+                          decompiledFrameRemainder0 = !(!var12_ref_String.startsWith("img="));
+                          if (decompiledFrameRemainder0 &&
+                            (decompiledFrameRemainder0 = (null != param0))) {
+                            try {
+                              int var13_int = td.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 38);
+                              var7 = var7 + param0[var13_int].d();
+                              var6 = -1;
+                              if (param2 < var7) {
+                                String stackIn_55_0 = var9 + "...";
+                                return stackIn_55_0;
                               }
-                              else {
-                                if (var12_ref_String.equals("reg")) {
-                                  var11 = 174;
-                                  decompiledFrameRemainder1 = false;
-                                }
-                                else {
-                                  decompiledFrameRemainder0 = !(!var12_ref_String.startsWith("img="));
-                                  if ((decompiledFrameRemainder0) &&
-                                    (decompiledFrameRemainder0 = (null != param0))) {
-                                    try {
-                                      int var13_int = td.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 38);
-                                      var7 = var7 + param0[var13_int].d();
-                                      var6 = -1;
-                                      if (param2 < var7) {
-                                        String stackIn_55_0 = var9 + "...";
-                                        return stackIn_55_0;
-                                      }
-                                      var9 = param3.substring(0, 1 + var10);
-                                      decompiledRegionSelector0 = 0;
-                                    } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                      decompiledCaughtException = decompiledCaughtParameter0;
-                                      Exception var13 = (Exception) (Object) decompiledCaughtException;
-                                      decompiledRegionSelector0 = 0;
-                                    }
-                                    decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
-                                  }
-                                }
-                              }
+                              var9 = param3.substring(0, 1 + var10);
+                              decompiledRegionSelector0 = 0;
+                            } catch (java.lang.Exception decompiledCaughtParameter0) {
+                              decompiledCaughtException = decompiledCaughtParameter0;
+                              Exception var13 = (Exception) (Object) decompiledCaughtException;
+                              decompiledRegionSelector0 = 0;
                             }
-                            if ((decompiledFrameRemainder1) &&
-                              (decompiledFrameRemainder0)) {
-                              var11 = 8364;
-                              decompiledFrameRemainder1 = false;
-                            }
+                            decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
                           }
                         }
+                      }
+                      if (decompiledFrameRemainder1 &&
+                        decompiledFrameRemainder0) {
+                        var11 = 8364;
+                        decompiledFrameRemainder1 = false;
                       }
                     }
                   }
-                  if ((decompiledFrameRemainder1) &&
-                    (decompiledFrameRemainder0)) {
+                  if (decompiledFrameRemainder1 &&
+                    decompiledFrameRemainder0) {
                     var11 = 60;
                   }
                 }
-                if ((decompiledFrameRemainder0) &&
-                  (var5_int == -1)) {
+                if (decompiledFrameRemainder0 &&
+                  var5_int == -1) {
                   var7 = var7 + (255 & this.glyphAdvances[ae.a((char) var11, -128) & 255]);
                   if (null != this.pairKerning &&
                     var6 != -1) {
@@ -441,70 +423,62 @@ final class BitmapFontMetrics {
                                 var18 = var18 + this.pairKerning[var12][160];
                               }
                               var12 = 160;
-                            } else {
-                              if (!var20.equals("shy")) {
-                                if (var20.equals("times")) {
-                                  var18 = var18 + this.measureCharacterAdvance((byte) 108, 215);
-                                  if (null != this.pairKerning &&
-                                    -1 != var12) {
-                                    var18 = var18 + this.pairKerning[var12][215];
-                                  }
-                                  var12 = 215;
-                                } else {
-                                  if (!var20.equals("euro")) {
-                                    if (var20.equals("copy")) {
-                                      var18 = var18 + this.measureCharacterAdvance((byte) 108, 169);
-                                      if (this.pairKerning != null &&
-                                        var12 != -1) {
-                                        var18 = var18 + this.pairKerning[var12][169];
-                                      }
-                                      var12 = 169;
-                                    } else {
-                                      if (!var20.equals("reg")) {
-                                        if (!var20.startsWith("img=")) {
-                                          break regionExit1;
-                                        }
-                                        if (null == inlineImages) {
-                                          break regionExit1;
-                                        }
-                                        try {
-                                          int var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
-                                          var12 = -1;
-                                          var18 = var18 + inlineImages[var21_int].d();
-                                          decompiledRegionSelector0 = 0;
-                                        } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                          decompiledCaughtException = decompiledCaughtParameter0;
-                                          Exception var21 = (Exception) (Object) decompiledCaughtException;
-                                          decompiledRegionSelector0 = 0;
-                                        }
-                                        if (decompiledRegionSelector0 == 0) {
-                                          break regionExit1;
-                                        }
-                                      }
-                                      var18 = var18 + this.measureCharacterAdvance((byte) 126, 174);
-                                      if (this.pairKerning != null &&
-                                        -1 != var12) {
-                                        var18 = var18 + this.pairKerning[var12][174];
-                                      }
-                                      var12 = 174;
-                                    }
-                                  } else {
-                                    var18 = var18 + this.measureCharacterAdvance((byte) 111, 8364);
-                                    if (this.pairKerning != null &&
-                                      -1 != var12) {
-                                      var18 = var18 + this.pairKerning[var12][8364];
-                                    }
-                                    var12 = 8364;
-                                  }
-                                }
-                              } else {
-                                var18 = var18 + this.measureCharacterAdvance((byte) 110, 173);
-                                if (this.pairKerning != null &&
-                                  var12 != -1) {
-                                  var18 = var18 + this.pairKerning[var12][173];
-                                }
-                                var12 = 173;
+                            } else if (var20.equals("shy")) {
+                              var18 = var18 + this.measureCharacterAdvance((byte) 110, 173);
+                              if (this.pairKerning != null &&
+                                var12 != -1) {
+                                var18 = var18 + this.pairKerning[var12][173];
                               }
+                              var12 = 173;
+                            } else if (var20.equals("times")) {
+                              var18 = var18 + this.measureCharacterAdvance((byte) 108, 215);
+                              if (null != this.pairKerning &&
+                                -1 != var12) {
+                                var18 = var18 + this.pairKerning[var12][215];
+                              }
+                              var12 = 215;
+                            } else if (var20.equals("euro")) {
+                              var18 = var18 + this.measureCharacterAdvance((byte) 111, 8364);
+                              if (this.pairKerning != null &&
+                                -1 != var12) {
+                                var18 = var18 + this.pairKerning[var12][8364];
+                              }
+                              var12 = 8364;
+                            } else if (var20.equals("copy")) {
+                              var18 = var18 + this.measureCharacterAdvance((byte) 108, 169);
+                              if (this.pairKerning != null &&
+                                var12 != -1) {
+                                var18 = var18 + this.pairKerning[var12][169];
+                              }
+                              var12 = 169;
+                            } else {
+                              if (!var20.equals("reg")) {
+                                if (!var20.startsWith("img=")) {
+                                  break regionExit1;
+                                }
+                                if (null == inlineImages) {
+                                  break regionExit1;
+                                }
+                                try {
+                                  int var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
+                                  var12 = -1;
+                                  var18 = var18 + inlineImages[var21_int].d();
+                                  decompiledRegionSelector0 = 0;
+                                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  Exception var21 = (Exception) (Object) decompiledCaughtException;
+                                  decompiledRegionSelector0 = 0;
+                                }
+                                if (decompiledRegionSelector0 == 0) {
+                                  break regionExit1;
+                                }
+                              }
+                              var18 = var18 + this.measureCharacterAdvance((byte) 126, 174);
+                              if (this.pairKerning != null &&
+                                -1 != var12) {
+                                var18 = var18 + this.pairKerning[var12][174];
+                              }
+                              var12 = 174;
                             }
                             break regionExit1;
                           }
@@ -528,8 +502,8 @@ final class BitmapFontMetrics {
                   }
                   var12 = var17;
                 }
-                if ((decompiledFrameRemainder0) &&
-                  (var18 > 0)) {
+                if (decompiledFrameRemainder0 &&
+                  var18 > 0) {
                   var6_int = var6_int + var18;
                   if (lineWidthLimits != null) {
                     if (var17 == 32) {

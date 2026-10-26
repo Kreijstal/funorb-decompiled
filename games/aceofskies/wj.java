@@ -27,14 +27,12 @@ final class wj implements up {
             throw new RuntimeException();
           }
           int var5_int = 1 << param2;
-          if (param0 != (~var5_int & this.field_b)) {
-            if (this.field_h != param3.field_m ||
-              param3.field_k != this.field_f) {
-              throw new RuntimeException();
-            }
-          } else {
+          if (param0 == (~var5_int & this.field_b)) {
             this.field_f = param3.field_k;
             this.field_h = param3.field_m;
+          } else if (this.field_h != param3.field_m ||
+            param3.field_k != this.field_f) {
+            throw new RuntimeException();
           }
           param3.a(fo.field_f[param2], param0 + 0, param1, this.field_c);
           this.field_g[param2] = (ws) ((Object) param3);
@@ -192,14 +190,12 @@ final class wj implements up {
             throw new RuntimeException();
           }
           int var4_int = 1 << param1;
-          if ((this.field_b & ~var4_int) != 0) {
-            if (this.field_h != param0.field_u ||
-              this.field_f != param0.field_v) {
-              throw new RuntimeException();
-            }
-          } else {
+          if ((this.field_b & ~var4_int) == 0) {
             this.field_h = param0.field_u;
             this.field_f = param0.field_v;
+          } else if (this.field_h != param0.field_u ||
+            this.field_f != param0.field_v) {
+            throw new RuntimeException();
           }
           param0.a(this.field_c, -12658, fo.field_f[param1]);
           this.field_g[param1] = (ws) ((Object) param0);

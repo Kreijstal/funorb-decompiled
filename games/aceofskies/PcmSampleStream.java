@@ -567,12 +567,10 @@ final class PcmSampleStream extends PcmStream {
             } else {
               param1 = PcmSampleStream.a(0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_i, this.field_p, this.field_k, this.field_o, 0, var6, param2, this);
             }
+          } else if (!tk.field_r) {
+            param1 = PcmSampleStream.c(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_j, this.field_l, 0, var6, param2, this, this.field_r, param4);
           } else {
-            if (!tk.field_r) {
-              param1 = PcmSampleStream.c(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_j, this.field_l, 0, var6, param2, this, this.field_r, param4);
-            } else {
-              param1 = PcmSampleStream.b(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_i, this.field_p, this.field_k, this.field_o, 0, var6, param2, this, this.field_r, param4);
-            }
+            param1 = PcmSampleStream.b(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_i, this.field_p, this.field_k, this.field_o, 0, var6, param2, this, this.field_r, param4);
           }
           this.field_w = this.field_w - param1;
           if (this.field_w != 0) {
@@ -687,32 +685,28 @@ final class PcmSampleStream extends PcmStream {
           this.unlink(-128);
           return true;
         }
-        if (this.field_j >= var1) {
-          if (this.field_j <= var1) {
-            this.field_l = 0;
-          } else {
-            this.field_l = -1;
-            this.field_w = this.field_j - var1;
-          }
-        } else {
+        if (!(this.field_j >= var1)) {
           this.field_l = 1;
           this.field_w = var1 - this.field_j;
-        }
-        if (this.field_i >= var2) {
-          if (this.field_i <= var2) {
-            this.field_k = 0;
-          } else {
-            this.field_k = -1;
-            if (this.field_w == 0 ||
-              this.field_w > this.field_i - var2) {
-              this.field_w = this.field_i - var2;
-            }
-          }
+        } else if (this.field_j <= var1) {
+          this.field_l = 0;
         } else {
+          this.field_l = -1;
+          this.field_w = this.field_j - var1;
+        }
+        if (!(this.field_i >= var2)) {
           this.field_k = 1;
           if (this.field_w == 0 ||
             this.field_w > var2 - this.field_i) {
             this.field_w = var2 - this.field_i;
+          }
+        } else if (this.field_i <= var2) {
+          this.field_k = 0;
+        } else {
+          this.field_k = -1;
+          if (this.field_w == 0 ||
+            this.field_w > this.field_i - var2) {
+            this.field_w = this.field_i - var2;
           }
         }
         if (this.field_p < var3) {
@@ -1146,12 +1140,10 @@ final class PcmSampleStream extends PcmStream {
             } else {
               param1 = PcmSampleStream.b(0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_i, this.field_p, this.field_k, this.field_o, 0, var6, param2, this);
             }
+          } else if (!tk.field_r) {
+            param1 = PcmSampleStream.d(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_j, this.field_l, 0, var6, param2, this, this.field_r, param4);
           } else {
-            if (!tk.field_r) {
-              param1 = PcmSampleStream.d(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_j, this.field_l, 0, var6, param2, this, this.field_r, param4);
-            } else {
-              param1 = PcmSampleStream.a(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_i, this.field_p, this.field_k, this.field_o, 0, var6, param2, this, this.field_r, param4);
-            }
+            param1 = PcmSampleStream.a(0, 0, ((PcmSample) (this.field_f)).samples, param0, this.field_v, param1, this.field_i, this.field_p, this.field_k, this.field_o, 0, var6, param2, this, this.field_r, param4);
           }
           this.field_w = this.field_w - param1;
           if (this.field_w != 0) {
@@ -1356,10 +1348,8 @@ final class PcmSampleStream extends PcmStream {
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
         if (this.field_n == 0) {
           var1 = var1 - var1 * this.field_v / (((PcmSample) (this.field_f)).samples.length << 8);
-        } else {
-          if (this.field_n >= 0) {
-            var1 = var1 - var1 * this.field_s / ((PcmSample) (this.field_f)).samples.length;
-          }
+        } else if (this.field_n >= 0) {
+          var1 = var1 - var1 * this.field_s / ((PcmSample) (this.field_f)).samples.length;
         }
         return var1 > 255 ? 255 : var1;
     }

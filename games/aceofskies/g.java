@@ -147,15 +147,7 @@ final class g extends hh {
     final void a(int param0, int param1, rt param2) {
         String stackIn_14_2 = null;
         try {
-          if (param2 == null) {
-            if (!this.field_j) {
-              this.field_a.a(this.field_a.field_Vb, 1);
-              this.field_a.a(1, (byte) -39);
-              this.field_a.a(34168, 768, 34176, 0);
-              this.field_a.a(770, 34168, 0, (byte) 80);
-              this.field_j = true;
-            }
-          } else {
+          if (param2 != null) {
             if (this.field_j) {
               this.field_a.a(5890, 768, 34176, 0);
               this.field_a.a(770, 5890, 0, (byte) 79);
@@ -163,6 +155,12 @@ final class g extends hh {
             }
             this.field_a.a(param2, param1 + 1486691001);
             this.field_a.a(param0, (byte) -39);
+          } else if (!this.field_j) {
+            this.field_a.a(this.field_a.field_Vb, 1);
+            this.field_a.a(1, (byte) -39);
+            this.field_a.a(34168, 768, 34176, 0);
+            this.field_a.a(770, 34168, 0, (byte) 80);
+            this.field_j = true;
           }
           if (param1 == -1486691000) {
             return;

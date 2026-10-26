@@ -306,49 +306,7 @@ abstract class cq implements jj {
         if (param0) {
           this.a(true);
         }
-        if (this.field_c != la.field_h) {
-          if (this.field_c == la.field_d) {
-            if (this.field_h == wo.field_n) {
-              return 34843;
-            }
-            if (this.field_h == lc.field_g) {
-              return 34842;
-            }
-            if (this.field_h == ro.field_o) {
-              return 34844;
-            }
-            if (this.field_h == IntrusiveNode.field_d) {
-              return 34846;
-            }
-            if (hh.field_c == this.field_h) {
-              return 34847;
-            }
-            if (this.field_h == aj.field_r) {
-              return 6145;
-            }
-          } else {
-            if (this.field_c == la.field_i) {
-              if (this.field_h == wo.field_n) {
-                return 34837;
-              }
-              if (lc.field_g == this.field_h) {
-                return 34836;
-              }
-              if (ro.field_o == this.field_h) {
-                return 34838;
-              }
-              if (IntrusiveNode.field_d == this.field_h) {
-                return 34840;
-              }
-              if (hh.field_c == this.field_h) {
-                return 34841;
-              }
-              if (this.field_h == aj.field_r) {
-                return 6145;
-              }
-            }
-          }
-        } else {
+        if (this.field_c == la.field_h) {
           if (wo.field_n == this.field_h) {
             return 6407;
           }
@@ -363,6 +321,44 @@ abstract class cq implements jj {
           }
           if (this.field_h == hh.field_c) {
             return 6410;
+          }
+          if (this.field_h == aj.field_r) {
+            return 6145;
+          }
+        } else if (this.field_c == la.field_d) {
+          if (this.field_h == wo.field_n) {
+            return 34843;
+          }
+          if (this.field_h == lc.field_g) {
+            return 34842;
+          }
+          if (this.field_h == ro.field_o) {
+            return 34844;
+          }
+          if (this.field_h == IntrusiveNode.field_d) {
+            return 34846;
+          }
+          if (hh.field_c == this.field_h) {
+            return 34847;
+          }
+          if (this.field_h == aj.field_r) {
+            return 6145;
+          }
+        } else if (this.field_c == la.field_i) {
+          if (this.field_h == wo.field_n) {
+            return 34837;
+          }
+          if (lc.field_g == this.field_h) {
+            return 34836;
+          }
+          if (ro.field_o == this.field_h) {
+            return 34838;
+          }
+          if (IntrusiveNode.field_d == this.field_h) {
+            return 34840;
+          }
+          if (hh.field_c == this.field_h) {
+            return 34841;
           }
           if (this.field_h == aj.field_r) {
             return 6145;

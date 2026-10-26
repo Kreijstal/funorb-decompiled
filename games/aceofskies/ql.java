@@ -315,13 +315,11 @@ final class ql extends ud {
             this.field_k[var2] = (short)(int)(4096.0 * Math.pow((double)((float)this.field_j / 4096.0f), (double)var2));
             this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
           }
-        } else {
-          if (this.field_k != null &&
-            this.field_s == this.field_k.length) {
-            this.field_l = new short[this.field_s];
-            for (var2 = 0; this.field_s > var2; var2++) {
-              this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
-            }
+        } else if (this.field_k != null &&
+          this.field_s == this.field_k.length) {
+          this.field_l = new short[this.field_s];
+          for (var2 = 0; this.field_s > var2; var2++) {
+            this.field_l[var2] = (short)(int)Math.pow(2.0, (double)var2);
           }
         }
     }

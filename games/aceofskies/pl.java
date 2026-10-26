@@ -94,23 +94,17 @@ final class pl {
         if (param1 >= param8) {
           if (param4 > param1) {
             Aircraft.a(param4, param9, param6, param10, param3, SoftwareRasterizer.framebuffer, param0, param11, param2, param12, param14, param5, param13, param7, param1, param8, (byte) -120);
+          } else if (param8 >= param4) {
+            Aircraft.a(param1, param0, param12, param13, param14, SoftwareRasterizer.framebuffer, param11, param9, param3, param5, param2, param6, param7, param10, param8, param4, (byte) -46);
           } else {
-            if (param8 >= param4) {
-              Aircraft.a(param1, param0, param12, param13, param14, SoftwareRasterizer.framebuffer, param11, param9, param3, param5, param2, param6, param7, param10, param8, param4, (byte) -46);
-            } else {
-              Aircraft.a(param1, param0, param6, param7, param3, SoftwareRasterizer.framebuffer, param9, param11, param14, param5, param2, param12, param13, param10, param4, param8, (byte) -24);
-            }
+            Aircraft.a(param1, param0, param6, param7, param3, SoftwareRasterizer.framebuffer, param9, param11, param14, param5, param2, param12, param13, param10, param4, param8, (byte) -24);
           }
+        } else if (param4 > param8) {
+          Aircraft.a(param4, param9, param5, param13, param2, SoftwareRasterizer.framebuffer, param11, param0, param3, param12, param14, param6, param10, param7, param8, param1, (byte) -70);
+        } else if (param1 < param4) {
+          Aircraft.a(param8, param11, param5, param7, param2, SoftwareRasterizer.framebuffer, param9, param0, param14, param6, param3, param12, param10, param13, param4, param1, (byte) -65);
         } else {
-          if (param4 > param8) {
-            Aircraft.a(param4, param9, param5, param13, param2, SoftwareRasterizer.framebuffer, param11, param0, param3, param12, param14, param6, param10, param7, param8, param1, (byte) -70);
-          } else {
-            if (param1 < param4) {
-              Aircraft.a(param8, param11, param5, param7, param2, SoftwareRasterizer.framebuffer, param9, param0, param14, param6, param3, param12, param10, param13, param4, param1, (byte) -65);
-            } else {
-              Aircraft.a(param8, param11, param12, param10, param14, SoftwareRasterizer.framebuffer, param0, param9, param2, param6, param3, param5, param7, param13, param1, param4, (byte) -102);
-            }
-          }
+          Aircraft.a(param8, param11, param12, param10, param14, SoftwareRasterizer.framebuffer, param0, param9, param2, param6, param3, param5, param7, param13, param1, param4, (byte) -102);
         }
         if (!param15) {
           return;

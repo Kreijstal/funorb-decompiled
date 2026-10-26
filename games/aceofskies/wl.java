@@ -208,10 +208,8 @@ final class wl extends GraphicsRenderer {
           this.k(-107);
           if (this.field_N == 3) {
             this.d(5888);
-          } else {
-            if (2 == this.field_N) {
-              this.d((byte) 125);
-            }
+          } else if (2 == this.field_N) {
+            this.d((byte) 125);
           }
         }
     }
@@ -251,11 +249,9 @@ final class wl extends GraphicsRenderer {
             } else {
               if (var3 == null) {
                 jaggl.OpenGL.glEnable(param0.field_f);
-              } else {
-                if (param0.field_f != var3.field_f) {
-                  jaggl.OpenGL.glDisable(var3.field_f);
-                  jaggl.OpenGL.glEnable(param0.field_f);
-                }
+              } else if (param0.field_f != var3.field_f) {
+                jaggl.OpenGL.glDisable(var3.field_f);
+                jaggl.OpenGL.glEnable(param0.field_f);
               }
               jaggl.OpenGL.glBindTexture(param0.field_f, param0.a(125));
             }
@@ -905,26 +901,22 @@ final class wl extends GraphicsRenderer {
         int var5;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_Cb != param1) {
-          if (param1 != 1) {
-            if (2 != param1) {
-              if (param1 == 128) {
-                var4 = 1;
-                var3 = 1;
-                var5 = 3;
-              } else {
-                var3 = 1;
-                var4 = 0;
-                var5 = 0;
-              }
-            } else {
-              var3 = 1;
-              var4 = 0;
-              var5 = 2;
-            }
-          } else {
+          if (param1 == 1) {
             var5 = 1;
             var4 = 1;
             var3 = 1;
+          } else if (2 == param1) {
+            var3 = 1;
+            var4 = 0;
+            var5 = 2;
+          } else if (param1 == 128) {
+            var4 = 1;
+            var3 = 1;
+            var5 = 3;
+          } else {
+            var3 = 1;
+            var4 = 0;
+            var5 = 0;
           }
           int stackIn_10_0 = var3;
           int stackIn_11_1 = (this.field_hc) ? 0 : 1;
@@ -945,21 +937,17 @@ final class wl extends GraphicsRenderer {
             this.field_k = stackIn_27_1;
           }
           if (this.field_z != var5) {
-            if (var5 != 1) {
-              if (2 == var5) {
-                jaggl.OpenGL.glEnable(3042);
-                jaggl.OpenGL.glBlendFunc(1, 1);
-              } else {
-                if (var5 != 3) {
-                  jaggl.OpenGL.glDisable(3042);
-                } else {
-                  jaggl.OpenGL.glEnable(3042);
-                  jaggl.OpenGL.glBlendFunc(774, 1);
-                }
-              }
-            } else {
+            if (var5 == 1) {
               jaggl.OpenGL.glEnable(3042);
               jaggl.OpenGL.glBlendFunc(770, 771);
+            } else if (2 == var5) {
+              jaggl.OpenGL.glEnable(3042);
+              jaggl.OpenGL.glBlendFunc(1, 1);
+            } else if (var5 != 3) {
+              jaggl.OpenGL.glDisable(3042);
+            } else {
+              jaggl.OpenGL.glEnable(3042);
+              jaggl.OpenGL.glBlendFunc(774, 1);
             }
             this.field_z = var5;
           }
@@ -1106,22 +1094,14 @@ final class wl extends GraphicsRenderer {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (1 == param0) {
           this.a(7681, -26625, 7681);
-        } else {
-          if (param0 == 0) {
-            this.a(8448, -26625, 8448);
-          } else {
-            if (param0 == 2) {
-              this.a(34165, -26625, 7681);
-            } else {
-              if (param0 == 3) {
-                this.a(260, -26625, 8448);
-              } else {
-                if (4 == param0) {
-                  this.a(34023, param1 ^ 26662, 34023);
-                }
-              }
-            }
-          }
+        } else if (param0 == 0) {
+          this.a(8448, -26625, 8448);
+        } else if (param0 == 2) {
+          this.a(34165, -26625, 7681);
+        } else if (param0 == 3) {
+          this.a(260, -26625, 8448);
+        } else if (4 == param0) {
+          this.a(34023, param1 ^ 26662, 34023);
         }
         if (param1 != -39) {
           this.a(-44, -126, true);
@@ -1250,10 +1230,8 @@ final class wl extends GraphicsRenderer {
         this.m(5149);
         if (this.field_N == 3) {
           this.d(5888);
-        } else {
-          if (this.field_N == 2) {
-            this.d((byte) 90);
-          }
+        } else if (this.field_N == 2) {
+          this.d((byte) 90);
         }
     }
 
@@ -1839,18 +1817,16 @@ final class wl extends GraphicsRenderer {
               AircraftDefinition.field_j = 30000L + kh.a(-70);
             }
             if (bm.field_z == 3) {
-              if (du.field_m.b(-120) <= 0) {
-                if (kh.a(-116) > AircraftDefinition.field_j) {
-                  int stackIn_34_0 = tj.a(-126, -2);
-                  return stackIn_34_0;
-                }
-              } else {
+              if (!(du.field_m.b(-120) <= 0)) {
                 int var1_int = du.field_m.a((byte) -116);
                 if (var1_int != 0) {
                   int stackIn_29_0 = tj.a(92, var1_int);
                   return stackIn_29_0;
                 }
                 bm.field_z = bm.field_z + 1;
+              } else if (kh.a(-116) > AircraftDefinition.field_j) {
+                int stackIn_34_0 = tj.a(-126, -2);
+                return stackIn_34_0;
               }
             }
             if (4 != bm.field_z) {

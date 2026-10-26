@@ -199,23 +199,19 @@ final class vg extends pp {
             this.field_g = 1;
           }
           this.field_b = new co[var10];
-          if (0 != this.field_g) {
-            if (this.field_g == 1) {
-              var11 = param1.maxAscent + (this.field_k - this.field_c * var10 >> 1);
-            } else {
-              if (this.field_g == 2) {
-                var11 = -(this.field_c * var10) + (-param1.maxDescent + this.field_k);
-              } else {
-                int var12 = (this.field_k - this.field_c * var10) / (var10 + 1);
-                if (var12 < 0) {
-                  var12 = 0;
-                }
-                this.field_c = this.field_c + var12;
-                var11 = param1.maxAscent + var12;
-              }
-            }
-          } else {
+          if (0 == this.field_g) {
             var11 = param1.maxAscent;
+          } else if (this.field_g == 1) {
+            var11 = param1.maxAscent + (this.field_k - this.field_c * var10 >> 1);
+          } else if (this.field_g == 2) {
+            var11 = -(this.field_c * var10) + (-param1.maxDescent + this.field_k);
+          } else {
+            int var12 = (this.field_k - this.field_c * var10) / (var10 + 1);
+            if (var12 < 0) {
+              var12 = 0;
+            }
+            this.field_c = this.field_c + var12;
+            var11 = param1.maxAscent + var12;
           }
           for (int var12Lifetime1 = 0; var12Lifetime1 < var10; var12Lifetime1++) {
             String var13 = var16[var12Lifetime1];

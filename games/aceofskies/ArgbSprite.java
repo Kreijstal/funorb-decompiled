@@ -328,15 +328,13 @@ final class ArgbSprite extends Sprite {
               int var19 = param2 >> 16 & 255;
               int var20 = param2 >> 8 & 255;
               int var21 = param2 & 255;
-              if (var19 == var20 &&
-                var20 == var21) {
-                if (var19 > 128) {
-                  var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
-                } else {
-                  var18 = (var19 * var10 >> 7 << 16) + (var20 * var11 >> 7 << 8) + (var21 * var12 >> 7);
-                }
-              } else {
+              if (var19 != var20 ||
+                var20 != var21) {
                 var18 = param2;
+              } else if (var19 > 128) {
+                var18 = (var10 * (256 - var19) + 255 * (var19 - 128) >> 7 << 16) + (var11 * (256 - var20) + 255 * (var20 - 128) >> 7 << 8) + (var12 * (256 - var21) + 255 * (var21 - 128) >> 7);
+              } else {
+                var18 = (var19 * var10 >> 7 << 16) + (var20 * var11 >> 7 << 8) + (var21 * var12 >> 7);
               }
               int var22 = 256 - var17;
               int var23 = param0[param4];

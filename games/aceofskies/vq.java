@@ -144,14 +144,12 @@ class vq extends mi {
               stackIn_9_0 = var12.field_h[0];
             }
             int var13 = stackIn_9_0;
-            if (var9 != var11) {
-              if (var12 != null) {
-                stackIn_14_0 = var12.field_h[-1 + var12.field_h.length];
-              } else {
-                stackIn_14_0 = 0;
-              }
-            } else {
+            if (var9 == var11) {
               stackIn_14_0 = var4.b(var2, -114);
+            } else if (var12 != null) {
+              stackIn_14_0 = var12.field_h[-1 + var12.field_h.length];
+            } else {
+              stackIn_14_0 = 0;
             }
             int var14 = stackIn_14_0;
             jo var15 = new jo(var7Lifetime1, var13, var12.field_f, -var13 + var14, Math.max(var3.a(-4), var12.field_d - var12.field_f));

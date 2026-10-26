@@ -374,9 +374,9 @@ final class bl {
                         var10 = (s.field_i[6] & 255) + ((s.field_i[4] & 255) << 16) + (65280 & s.field_i[5] << 8);
                         var11 = (65280 & s.field_i[0] << 8) + (s.field_i[1] & 255);
                       }
-                      if ((param0 == var11 &&
+                      if (param0 == var11 &&
                         var9 == var12 &&
-                        var13 == this.field_a) &&
+                        var13 == this.field_a &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
                         !((long)var10 <= this.field_f.c(121) / 520L)))) {
                         return false;

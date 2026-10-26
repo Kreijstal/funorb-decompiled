@@ -21,10 +21,8 @@ final class wd extends ab implements ue, dn, bh {
         try {
           if (param1 == this.field_w) {
             pj.b((byte) -26);
-          } else {
-            if (this.field_A == param1) {
-              boolean discarded$0 = this.k(90);
-            }
+          } else if (this.field_A == param1) {
+            boolean discarded$0 = this.k(90);
           }
           int var6_int = 97 / ((param4 + 27) / 61);
         } catch (RuntimeException runtimeException) {

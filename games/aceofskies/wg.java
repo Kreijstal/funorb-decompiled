@@ -38,19 +38,15 @@ final class wg implements ir {
           int var8 = this.field_a.maxDescent + this.field_a.maxAscent;
           int var9 = param3.field_p + param2;
           int var10 = param3.field_h + param4;
-          if (this.field_e != 2) {
-            if (1 == this.field_e) {
-              var9 = var9 + (-var7 + param3.field_q >> 1);
-            }
-          } else {
+          if (this.field_e == 2) {
             var9 = var9 + (-var7 + param3.field_q);
+          } else if (1 == this.field_e) {
+            var9 = var9 + (-var7 + param3.field_q >> 1);
           }
-          if (this.field_d != 2) {
-            if (1 == this.field_d) {
-              var10 = var10 + (-var8 + param3.field_n >> 1);
-            }
-          } else {
+          if (this.field_d == 2) {
             var10 = var10 + (param3.field_n - var8);
+          } else if (1 == this.field_d) {
+            var10 = var10 + (-var8 + param3.field_n >> 1);
           }
           co.a(2 + var10, var8, 4 + var7, -2 + var9, 119);
           return;

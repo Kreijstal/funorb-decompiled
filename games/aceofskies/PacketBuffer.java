@@ -435,18 +435,14 @@ class PacketBuffer extends IntrusiveNode {
               if (65 <= var9 &&
                 var9 <= 90) {
                 var3_long = var3_long + (long)(-65 + (2 + var9));
+              } else if (var9 >= 97 &&
+                var9 <= 122) {
+                var3_long = var3_long + (long)(-97 + (2 + var9));
+              } else if (48 <= var9 &&
+                57 >= var9) {
+                var3_long = var3_long + (long)(var9 + 28 - 48);
               } else {
-                if (var9 >= 97 &&
-                  var9 <= 122) {
-                  var3_long = var3_long + (long)(-97 + (2 + var9));
-                } else {
-                  if (48 <= var9 &&
-                    57 >= var9) {
-                    var3_long = var3_long + (long)(var9 + 28 - 48);
-                  } else {
-                    var3_long = var3_long + 1L;
-                  }
-                }
+                var3_long = var3_long + 1L;
               }
             }
             if (var8 == 10) {

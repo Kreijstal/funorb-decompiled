@@ -49,12 +49,12 @@ abstract class aa {
             for (int var8 = 0; var7 > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
               int var9 = param2.charAt(var8);
-              if ((var8 == 0) &&
-                (var9 == 45)) {
+              if (var8 == 0 &&
+                var9 == 45) {
                 var4_int = 1;
                 decompiledFrameRemainder0 = false;
               }
-              if ((decompiledFrameRemainder0) && (var8 != 0 || (43 != var9 ||
+              if (decompiledFrameRemainder0 && (var8 != 0 || (43 != var9 ||
                 !param0))) {
                 if (var9 >= 48 &&
                   57 >= var9) {

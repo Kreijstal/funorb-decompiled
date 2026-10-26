@@ -90,23 +90,21 @@ class lg extends gg {
               stackIn_20_1 = -param1;
             }
             this.field_n = -stackIn_20_1 + this.field_m;
-          } else {
-            if (this.field_q <= 4096) {
-              if (param1 >= 0) {
-                stackIn_6_1 = param1;
-              } else {
-                stackIn_6_1 = -param1;
-              }
-              this.field_n = -stackIn_6_1 + this.field_m;
+          } else if (this.field_q <= 4096) {
+            if (param1 >= 0) {
+              stackIn_6_1 = param1;
             } else {
-              this.field_q = 4096;
-              if (param1 >= 0) {
-                stackIn_13_1 = param1;
-              } else {
-                stackIn_13_1 = -param1;
-              }
-              this.field_n = -stackIn_13_1 + this.field_m;
+              stackIn_6_1 = -param1;
             }
+            this.field_n = -stackIn_6_1 + this.field_m;
+          } else {
+            this.field_q = 4096;
+            if (param1 >= 0) {
+              stackIn_13_1 = param1;
+            } else {
+              stackIn_13_1 = -param1;
+            }
+            this.field_n = -stackIn_13_1 + this.field_m;
           }
           this.field_n = this.field_n * this.field_n >> 12;
           this.field_n = this.field_q * this.field_n >> 12;

@@ -94,14 +94,14 @@ final class hb {
                     }
                     boolean decompiledFrameRemainder0 = true;
                     boolean decompiledFrameCompleted0 = true;
-                    if ((3 != var6_int) &&
+                    if (3 != var6_int &&
                       (decompiledFrameRemainder0 = (var6_int == 4))) {
                       var7_ref = (java.lang.reflect.Method) (var2.field_h[var5].field_f);
                       var8_int = var7_ref.getModifiers();
                       param0.writeByte(param1 - 1336904692, 0);
                       param0.writeInt((byte) 65, var8_int);
                     }
-                    if ((decompiledFrameRemainder0) &&
+                    if (decompiledFrameRemainder0 &&
                       (3 == var6_int ||
                       var12 != 0)) {
                       var7_ref = (java.lang.reflect.Method) (var2.field_h[var5].field_f);

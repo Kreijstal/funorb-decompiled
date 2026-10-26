@@ -62,16 +62,12 @@ final class rp extends RenderSprite {
         qi stackIn_4_0 = this.field_g;
         if (this.field_f) {
           ((qi) (Object) stackIn_4_0).a(jp.field_a, -31662);
+        } else if (this.field_i) {
+          ((qi) (Object) stackIn_4_0).a(jp.field_a, -31662);
+        } else if ((1 & param9) != 0) {
+          ((qi) (Object) stackIn_4_0).a(fg.field_A, -31662);
         } else {
-          if (this.field_i) {
-            ((qi) (Object) stackIn_4_0).a(jp.field_a, -31662);
-          } else {
-            if ((1 & param9) != 0) {
-              ((qi) (Object) stackIn_4_0).a(fg.field_A, -31662);
-            } else {
-              ((qi) (Object) stackIn_4_0).a(jp.field_a, -31662);
-            }
-          }
+          ((qi) (Object) stackIn_4_0).a(jp.field_a, -31662);
         }
         this.field_e.r((byte) 112);
         this.field_e.a(this.field_g, -9135);
@@ -189,20 +185,14 @@ final class rp extends RenderSprite {
         this.field_h = param1;
         if (this.field_a != 0) {
           this.field_j = true;
+        } else if (this.field_h != 0) {
+          this.field_j = true;
+        } else if (this.field_d != 0) {
+          this.field_j = true;
+        } else if (this.field_b != 0) {
+          this.field_j = true;
         } else {
-          if (this.field_h != 0) {
-            this.field_j = true;
-          } else {
-            if (this.field_d != 0) {
-              this.field_j = true;
-            } else {
-              if (this.field_b != 0) {
-                this.field_j = true;
-              } else {
-                this.field_j = false;
-              }
-            }
-          }
+          this.field_j = false;
         }
     }
 

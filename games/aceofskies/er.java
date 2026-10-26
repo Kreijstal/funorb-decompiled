@@ -71,47 +71,35 @@ final class er {
               }
               double var22 = var4;
               double var24 = -0.3333333333333333 + var4;
-              if (!(var22 * 6.0 < 1.0)) {
-                if (!(var22 * 2.0 < 1.0)) {
-                  if (3.0 * var22 < 2.0) {
-                    var12 = (-var18_double + var16_double) * (-var22 + 0.6666666666666666) * 6.0 + var18_double;
-                  } else {
-                    var12 = var18_double;
-                  }
-                } else {
-                  var12 = var16_double;
-                }
-              } else {
+              if (var22 * 6.0 < 1.0) {
                 var12 = (-var18_double + var16_double) * 6.0 * var22 + var18_double;
+              } else if (var22 * 2.0 < 1.0) {
+                var12 = var16_double;
+              } else if (3.0 * var22 < 2.0) {
+                var12 = (-var18_double + var16_double) * (-var22 + 0.6666666666666666) * 6.0 + var18_double;
+              } else {
+                var12 = var18_double;
               }
               if (var24 < 0.0) {
                 var24 = var24 + 1.0;
               }
               if (var20 * 6.0 < 1.0) {
                 var10 = var20 * ((-var18_double + var16_double) * 6.0) + var18_double;
+              } else if (2.0 * var20 < 1.0) {
+                var10 = var16_double;
+              } else if (var20 * 3.0 < 2.0) {
+                var10 = 6.0 * ((-var20 + 0.6666666666666666) * (-var18_double + var16_double)) + var18_double;
               } else {
-                if (2.0 * var20 < 1.0) {
-                  var10 = var16_double;
-                } else {
-                  if (var20 * 3.0 < 2.0) {
-                    var10 = 6.0 * ((-var20 + 0.6666666666666666) * (-var18_double + var16_double)) + var18_double;
-                  } else {
-                    var10 = var18_double;
-                  }
-                }
+                var10 = var18_double;
               }
               if (1.0 > var24 * 6.0) {
                 var14 = var18_double + 6.0 * (-var18_double + var16_double) * var24;
+              } else if (var24 * 2.0 < 1.0) {
+                var14 = var16_double;
+              } else if (3.0 * var24 < 2.0) {
+                var14 = var18_double + 6.0 * ((-var24 + 0.6666666666666666) * (-var18_double + var16_double));
               } else {
-                if (!(var24 * 2.0 < 1.0)) {
-                  if (3.0 * var24 < 2.0) {
-                    var14 = var18_double + 6.0 * ((-var24 + 0.6666666666666666) * (-var18_double + var16_double));
-                  } else {
-                    var14 = var18_double;
-                  }
-                } else {
-                  var14 = var16_double;
-                }
+                var14 = var18_double;
               }
               var10 = Math.pow(var10, var1_double);
               var12 = Math.pow(var12, var1_double);

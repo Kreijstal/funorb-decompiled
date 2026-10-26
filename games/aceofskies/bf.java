@@ -296,22 +296,18 @@ abstract class bf extends GraphicsRenderer {
             var5 = 1;
             var4 = 1;
             var3 = pi.field_x;
+          } else if (param1 == 2) {
+            var3 = ne.field_i;
+            var5 = 0;
+            var4 = 1;
+          } else if (param1 == 128) {
+            var3 = HighscoreQuery.field_l;
+            var5 = 1;
+            var4 = 1;
           } else {
-            if (param1 == 2) {
-              var3 = ne.field_i;
-              var5 = 0;
-              var4 = 1;
-            } else {
-              if (param1 == 128) {
-                var3 = HighscoreQuery.field_l;
-                var5 = 1;
-                var4 = 1;
-              } else {
-                var4 = 0;
-                var3 = cg.field_p;
-                var5 = 0;
-              }
-            }
+            var4 = 0;
+            var3 = cg.field_p;
+            var5 = 0;
           }
           if (var5 == (!this.field_Vb ? 1 : 0)) {
             this.field_Vb = var5 != 0 ? true : false;
@@ -409,22 +405,14 @@ abstract class bf extends GraphicsRenderer {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 == 1) {
           this.a(bd.field_C, true, bd.field_C);
-        } else {
-          if (param0 == 0) {
-            this.a(ru.field_a, true, ru.field_a);
-          } else {
-            if (param0 == 2) {
-              this.a(du.field_l, true, bd.field_C);
-            } else {
-              if (param0 == 3) {
-                this.a(lo.field_j, true, ru.field_a);
-              } else {
-                if (4 == param0) {
-                  this.a(fs.field_d, true, fs.field_d);
-                }
-              }
-            }
-          }
+        } else if (param0 == 0) {
+          this.a(ru.field_a, true, ru.field_a);
+        } else if (param0 == 2) {
+          this.a(du.field_l, true, bd.field_C);
+        } else if (param0 == 3) {
+          this.a(lo.field_j, true, ru.field_a);
+        } else if (4 == param0) {
+          this.a(fs.field_d, true, fs.field_d);
         }
         if (param1) {
           this.V(-59);
@@ -504,17 +492,7 @@ abstract class bf extends GraphicsRenderer {
           param1) {
           param4 = param4 | -2147483648;
         }
-        if (param4 == this.field_eb) {
-          if (this.field_eb != 0) {
-            this.field_Ob[2147483647 & this.field_eb].a(false, param1);
-            if (param5 != this.field_Sb ||
-              param2 != this.field_hc) {
-              this.field_Ob[this.field_eb & 2147483647].a(1786747298, param5, param2);
-              this.field_hc = param2;
-              this.field_Sb = param5;
-            }
-          }
-        } else {
+        if (param4 != this.field_eb) {
           if (0 != this.field_eb) {
             this.field_Ob[2147483647 & this.field_eb].a(true);
           }
@@ -529,6 +507,14 @@ abstract class bf extends GraphicsRenderer {
           this.field_eb = param4;
           this.field_hc = param2;
           this.field_Sb = param5;
+        } else if (this.field_eb != 0) {
+          this.field_Ob[2147483647 & this.field_eb].a(false, param1);
+          if (param5 != this.field_Sb ||
+            param2 != this.field_hc) {
+            this.field_Ob[this.field_eb & 2147483647].a(1786747298, param5, param2);
+            this.field_hc = param2;
+            this.field_Sb = param5;
+          }
         }
     }
 

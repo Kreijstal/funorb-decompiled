@@ -143,17 +143,14 @@ final class dk implements Runnable {
             }
             try {
               boolean decompiledFrameRemainder0 = true;
-              if (2 != var7.field_v) {
-                if (var7.field_v == 3) {
-                  var7.field_u = var7.field_x.a((int)var7.secondaryKey, 255);
-                  decompiledRegionSelector1 = 1;
-                  decompiledFrameRemainder0 = false;
-                }
-                else {
-                  var7.field_p = false;
-                }
-              } else {
+              if (2 == var7.field_v) {
                 var7.field_x.a(var7.field_u.length, 255, (int)var7.secondaryKey, var7.field_u);
+                var7.field_p = false;
+              } else if (var7.field_v == 3) {
+                var7.field_u = var7.field_x.a((int)var7.secondaryKey, 255);
+                decompiledRegionSelector1 = 1;
+                decompiledFrameRemainder0 = false;
+              } else {
                 var7.field_p = false;
               }
               if (decompiledFrameRemainder0) {

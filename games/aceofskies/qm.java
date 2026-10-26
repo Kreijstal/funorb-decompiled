@@ -40,27 +40,23 @@ class qm implements ir, et {
             this.field_i.drawParagraph(this.d(param6, param2 + 28524453), this.a(param6, 123, param1, param5), this.a((byte) -24, param3, param0, param6), var9_int, var10, param7, param4, this.field_e, this.field_f, this.field_k);
           } else {
             int var12 = this.field_f;
-            if (0 != var12) {
-              if (2 != var12) {
-                if (var12 != 3 &&
-                  var12 == 1) {
-                }
-                var11 = this.field_i.maxAscent + (var10 + (-this.field_i.maxAscent - this.field_i.maxDescent) >> 1);
-              } else {
-                var11 = -this.field_i.maxDescent + var10;
-              }
-            } else {
+            if (0 == var12) {
               var11 = this.field_i.maxAscent;
+            } else if (2 != var12) {
+              if (var12 != 3 &&
+                var12 == 1) {
+              }
+              var11 = this.field_i.maxAscent + (var10 + (-this.field_i.maxAscent - this.field_i.maxDescent) >> 1);
+            } else {
+              var11 = -this.field_i.maxDescent + var10;
             }
             int var12Lifetime1 = this.field_e;
             if (0 != var12Lifetime1 &&
               3 != var12Lifetime1) {
               if (var12Lifetime1 == 1) {
                 this.field_i.drawCenteredText(this.d(param6, 57), (var9_int >> 1) + this.a(param6, 113, param1, param5), this.a((byte) -24, param3, param0, param6) + var11, param7, param4);
-              } else {
-                if ((var12Lifetime1 == 2)) {
-                  this.field_i.drawRightAlignedText(this.d(param6, -115), this.a(param6, 108, param1, param5) + var9_int, var11 + this.a((byte) -24, param3, param0, param6), param7, param4);
-                }
+              } else if (var12Lifetime1 == 2) {
+                this.field_i.drawRightAlignedText(this.d(param6, -115), this.a(param6, 108, param1, param5) + var9_int, var11 + this.a((byte) -24, param3, param0, param6), param7, param4);
               }
               boolean decompiledFrameRemainder0 = false;
             }
@@ -306,10 +302,8 @@ class qm implements ir, et {
                 if (var9 > var13) {
                   var9 = var13;
                 }
-              } else {
-                if (var13 > var10) {
-                  var10 = var13;
-                }
+              } else if (var13 > var10) {
+                var10 = var13;
               }
             }
             if (param1 > -3) {
@@ -352,17 +346,15 @@ class qm implements ir, et {
           int var3_int = this.b(param0, 117);
           int var4 = this.a(param0, false);
           int var6 = this.field_f;
-          if (var6 != 0) {
-            if (2 != var6) {
-              if (var6 != 3 &&
-                var6 != 1) {
-              }
-              var5 = this.field_i.maxAscent + (-this.field_i.maxDescent + (-this.field_i.maxAscent + var4) >> 1);
-            } else {
-              var5 = -this.field_i.maxDescent + var4;
-            }
-          } else {
+          if (var6 == 0) {
             var5 = this.field_i.maxAscent;
+          } else if (2 != var6) {
+            if (var6 != 3 &&
+              var6 != 1) {
+            }
+            var5 = this.field_i.maxAscent + (-this.field_i.maxDescent + (-this.field_i.maxAscent + var4) >> 1);
+          } else {
+            var5 = -this.field_i.maxDescent + var4;
           }
           int var6Lifetime1 = this.field_e;
           if (var6Lifetime1 != 0 &&
@@ -587,14 +579,12 @@ class qm implements ir, et {
                 stackIn_13_0 = var14.field_h[0];
               }
               int var15 = stackIn_13_0;
-              if (var12 != var13) {
-                if (var14 != null) {
-                  stackIn_18_0 = var14.field_h[var14.field_h.length - 1];
-                } else {
-                  stackIn_18_0 = 0;
-                }
-              } else {
+              if (var12 == var13) {
                 stackIn_18_0 = var8.b(var10, -128);
+              } else if (var14 != null) {
+                stackIn_18_0 = var14.field_h[var14.field_h.length - 1];
+              } else {
+                stackIn_18_0 = 0;
               }
               int var16 = stackIn_18_0;
               ag.field_n.a(var16 - var15, var14.field_f + this.field_a + (param4.field_h + param2 + param4.field_l), this.field_j, this.a(param4, 95, param3, var15), this.field_j >>> 24, (byte) -54, var14.field_d);

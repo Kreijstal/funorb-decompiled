@@ -165,12 +165,10 @@ final class fc {
             } else {
               this.field_c = this.field_c ^ this.field_c << 13;
             }
+          } else if ((1 & var2) == 0) {
+            this.field_c = this.field_c ^ this.field_c << 2;
           } else {
-            if ((1 & var2) == 0) {
-              this.field_c = this.field_c ^ this.field_c << 2;
-            } else {
-              this.field_c = this.field_c ^ this.field_c >>> 16;
-            }
+            this.field_c = this.field_c ^ this.field_c >>> 16;
           }
           this.field_c = this.field_c + this.field_e[255 & var2 + 128];
           int dupTemp$1 = this.field_c + (this.field_e[pg.a(1020, var3) >> 2] + this.field_d);

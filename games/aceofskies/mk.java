@@ -194,37 +194,7 @@ abstract class mk extends RenderSprite {
           this.b(1, 2);
           return;
         }
-        if (param6 != 0) {
-          if (param6 != 3) {
-            if (param6 == 2) {
-              if (param8 == 0) {
-                this.b(2, 0);
-                return;
-              }
-              if (param8 == 1) {
-                this.b(2, 1);
-                return;
-              }
-              if (param8 == 2) {
-                this.b(2, 2);
-                return;
-              }
-            }
-          } else {
-            if (param8 == 0) {
-              this.b(3, 0);
-              return;
-            }
-            if (param8 == 1) {
-              this.b(3, 1);
-              return;
-            }
-            if (param8 == 2) {
-              this.b(3, 2);
-              return;
-            }
-          }
-        } else {
+        if (param6 == 0) {
           if (param8 == 0) {
             this.b(0, 0);
             return;
@@ -235,6 +205,32 @@ abstract class mk extends RenderSprite {
           }
           if (param8 == 2) {
             this.b(0, 2);
+            return;
+          }
+        } else if (param6 == 3) {
+          if (param8 == 0) {
+            this.b(3, 0);
+            return;
+          }
+          if (param8 == 1) {
+            this.b(3, 1);
+            return;
+          }
+          if (param8 == 2) {
+            this.b(3, 2);
+            return;
+          }
+        } else if (param6 == 2) {
+          if (param8 == 0) {
+            this.b(2, 0);
+            return;
+          }
+          if (param8 == 1) {
+            this.b(2, 1);
+            return;
+          }
+          if (param8 == 2) {
+            this.b(2, 2);
             return;
           }
         }
@@ -282,27 +278,25 @@ abstract class mk extends RenderSprite {
           param3 = param3 + (var18 + var14);
           param4 = param4 + (var15 + var19);
           param5 = param5 + (var16 + var20);
-        } else {
-          if (var8 != this.field_p) {
-            var9 = (param2 - param0) / (float)var7;
-            var10 = (param3 - param1) / (float)var7;
-            var11 = (param4 - param0) / (float)var8;
-            var12 = (param5 - param1) / (float)var8;
-            var13 = var11 * (float)this.field_z;
-            var14 = var12 * (float)this.field_z;
-            var15 = var9 * (float)this.field_g;
-            var16 = var10 * (float)this.field_g;
-            var17 = -var9 * (float)this.field_m;
-            var18 = -var10 * (float)this.field_m;
-            var19 = -var11 * (float)this.field_l;
-            var20 = -var12 * (float)this.field_l;
-            param0 = param0 + (var15 + var13);
-            param1 = param1 + (var16 + var14);
-            param2 = param2 + (var17 + var13);
-            param3 = param3 + (var18 + var14);
-            param4 = param4 + (var15 + var19);
-            param5 = param5 + (var16 + var20);
-          }
+        } else if (var8 != this.field_p) {
+          var9 = (param2 - param0) / (float)var7;
+          var10 = (param3 - param1) / (float)var7;
+          var11 = (param4 - param0) / (float)var8;
+          var12 = (param5 - param1) / (float)var8;
+          var13 = var11 * (float)this.field_z;
+          var14 = var12 * (float)this.field_z;
+          var15 = var9 * (float)this.field_g;
+          var16 = var10 * (float)this.field_g;
+          var17 = -var9 * (float)this.field_m;
+          var18 = -var10 * (float)this.field_m;
+          var19 = -var11 * (float)this.field_l;
+          var20 = -var12 * (float)this.field_l;
+          param0 = param0 + (var15 + var13);
+          param1 = param1 + (var16 + var14);
+          param2 = param2 + (var17 + var13);
+          param3 = param3 + (var18 + var14);
+          param4 = param4 + (var15 + var19);
+          param5 = param5 + (var16 + var20);
         }
         float var9Lifetime1 = param4 + (param2 - param0);
         float var10Lifetime1 = param3 + (param5 - param1);

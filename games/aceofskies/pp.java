@@ -82,15 +82,11 @@ abstract class pp {
             int var9 = param2.charAt(var8);
             if (var9 == 60) {
               var6 = 1;
-            } else {
-              if (var9 != 62) {
-                if (var6 == 0 &&
-                  var9 == 32) {
-                  var5_int++;
-                }
-              } else {
-                var6 = 0;
-              }
+            } else if (var9 == 62) {
+              var6 = 0;
+            } else if (var6 == 0 &&
+              var9 == 32) {
+              var5_int++;
             }
           }
           if (~var5_int < param1) {

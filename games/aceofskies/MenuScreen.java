@@ -290,9 +290,9 @@ final class MenuScreen {
                   var17 += 20;
                   var29++;
                 }
-                if (((sg.flightSession != null)) &&
-                  (!(sg.flightSession.finalScore <= 0)) &&
-                  ((var16 == -1))) {
+                if (sg.flightSession != null &&
+                  !(sg.flightSession.finalScore <= 0) &&
+                  var16 == -1) {
                   int var19Lifetime2 = 128;
                   int var20Lifetime2 = 512;
                   var30.d(16, 20 + var20Lifetime2 - var19Lifetime2, var17 - 12, -5782, -7247318, var19Lifetime2 - 10);
@@ -421,255 +421,240 @@ final class MenuScreen {
         int var4 = ua.menuActions[this.screenId][itemIndex];
         if (this.input.isActivated((byte) 125)) {
           bm.a((byte) -70, gg.field_a);
-        } else {
-          if (var4 != this.previousActionId) {
-            this.previousActionId = var4;
-            bm.a((byte) -70, kq.field_b);
-          }
+        } else if (var4 != this.previousActionId) {
+          this.previousActionId = var4;
+          bm.a((byte) -70, kq.field_b);
         }
         if (obfuscationGuard != 3) {
           return;
         }
-        regionExit1: {
+        {
           int var5 = var4;
           if (var5 != 0) {
-            if (var5 != 19) {
-              if (var5 != 22) {
-                if (var5 == 1) {
-                  if (this.input.isActivated((byte) 114)) {
-                    Bullet.requestMenu((byte) 33, -1, pointerSelection);
-                    sg.flightSession.resumeGame(-112);
-                    co.returnMenuId = 0;
-                  }
-                } else {
-                  if (5 != var5) {
-                    if (16 == var5) {
-                      if (!(!this.input.isActivated((byte) 120))) {
-                        Bullet.requestMenu((byte) -117, 0, pointerSelection);
-                        r.field_n = 0;
-                        hg.field_D = 0;
-                        sb.field_c.clear(268435455);
-                      }
-                      break regionExit1;
-                    }
-                    if (14 == var5) {
-                      if (this.input.isActivated((byte) 127)) {
-                        Bullet.requestMenu((byte) 98, 4, pointerSelection);
-                        co.returnMenuId = this.screenId;
-                      }
-                    } else {
-                      if (var5 == 3) {
-                        if (!(!this.input.isActivated((byte) 82))) {
-                          vq.instructionPage = 0;
-                          Bullet.requestMenu((byte) -94, 3, pointerSelection);
-                          co.returnMenuId = this.screenId;
-                        }
-                        break regionExit1;
-                      }
-                      if (6 == var5) {
-                        if (!(!this.input.isActivated((byte) 104))) {
-                          Bullet.requestMenu((byte) -80, co.returnMenuId, pointerSelection);
-                        }
-                        break regionExit1;
-                      }
-                      if (var5 != 2) {
-                        if (12 == var5) {
-                          if (this.input.isHomePressed(55)) {
-                            rt.b(0, (byte) -117);
-                            lq.a(fd.field_b[3], 110);
-                          }
-                          if (this.input.isEndPressed(-99)) {
-                            rt.b(256, (byte) 59);
-                            lq.a(fd.field_b[3], obfuscationGuard ^ -10);
-                          }
-                          if (this.input.isLeftPressed(-78)) {
-                            r.e(obfuscationGuard - 14601);
-                            lq.a(fd.field_b[3], 70);
-                          }
-                          if (this.input.isRightPressed((byte) -102)) {
-                            dq.a((byte) -2);
-                            lq.a(fd.field_b[3], -126);
-                          }
-                          if (!(!this.input.isPointerHeld((byte) 98))) {
-                            var5 = 137 + oq.field_K;
-                            var6 = (this.getItemLeft(itemIndex, obfuscationGuard + 197) + this.getItemRight(obfuscationGuard + 121, itemIndex) - var5 >> 1) + oq.field_K + 8;
-                            var7 = ic.field_b - var6 << 1;
-                            if (var7 <= 0) {
-                              rt.b(0, (byte) 70);
-                            } else {
-                              if (256 <= var7) {
-                                rt.b(256, (byte) -114);
-                              } else {
-                                rt.b(var7, (byte) -123);
-                              }
-                            }
-                            if (!(this.soundPreviewCooldown > 0)) {
-                              lq.a(fd.field_b[3], 81);
-                              this.soundPreviewCooldown = 10;
-                            }
-                          }
-                          break regionExit1;
-                        }
-                        if (var5 == 13) {
-                          if (this.input.isHomePressed(obfuscationGuard + 50)) {
-                            ve.a((byte) 43, 0);
-                          }
-                          if (this.input.isEndPressed(-39)) {
-                            ve.a((byte) 43, 256);
-                          }
-                          if (this.input.isLeftPressed(obfuscationGuard - 11)) {
-                            lj.a(100);
-                          }
-                          if (this.input.isRightPressed((byte) -102)) {
-                            wk.c((byte) -118);
-                          }
-                          if (!(!this.input.isPointerHeld((byte) 119))) {
-                            var5 = 128 + oq.field_K + 9;
-                            var6 = (-var5 + this.getItemLeft(itemIndex, 200) + this.getItemRight(obfuscationGuard ^ 124, itemIndex) >> 1) - (-oq.field_K - 8);
-                            var7 = ic.field_b - var6 << 1;
-                            if (var7 <= 0) {
-                              ve.a((byte) 43, 0);
-                            } else {
-                              if (var7 < 256) {
-                                ve.a((byte) 43, var7);
-                              } else {
-                                ve.a((byte) 43, 256);
-                              }
-                            }
-                          }
-                          break regionExit1;
-                        }
-                        switch (var5) {
-                          case 4:
-                            if (!this.input.isActivated((byte) 126)) {
-                              break;
-                            }
-                            if (jf.field_a != null) {
-                              tt.b(-32546);
-                              break;
-                            }
-                            ql.a((byte) -103, pointerSelection);
-                            break;
-                          case 8:
-                            if (!this.input.isActivated((byte) 124)) {
-                              break;
-                            }
-                            oc.highscoreView = 0;
-                            break;
-                          case 9:
-                            if (!this.input.isActivated((byte) 88)) {
-                              break;
-                            }
-                            oc.highscoreView = 1;
-                            break;
-                          case 10:
-                            if (!this.input.isActivated((byte) 87)) {
-                              break;
-                            }
-                            oc.highscoreView = 2;
-                            break;
-                          case 15:
-                            if (this.input.isActivated((byte) 97)) {
-                              if (this.screenId != 4 &&
-                                this.screenId != 2) {
-                                if (this.screenId != 6) {
-                                  break;
-                                }
-                                int stackIn_127_0 = obfuscationGuard + 25365;
-                                int stackIn_127_1 = 6;
-                                if (0 == r.field_n) {
-                                  stackIn_128_2 = 2;
-                                } else {
-                                  stackIn_128_2 = 5;
-                                }
-                                nf.a(stackIn_127_0, stackIn_127_1, stackIn_128_2);
-                                break;
-                              }
-                              nf.a(25368, this.screenId, this.screenId);
-                            }
-                            break;
-                          case 11:
-                            if (!this.input.isActivated((byte) 113)) {
-                              break;
-                            }
-                            if (jf.field_a != null) {
-                              tt.b(-32546);
-                            }
-                            rr.a((byte) -56, bm.m(obfuscationGuard + 106));
-                            break;
-                          case 20:
-                            if (!this.input.isActivated((byte) 106)) {
-                              break;
-                            }
-                            ql.activeHighscoreQuery = null;
-                            cs.highscoreMode = 1;
-                            break;
-                          default:
-                            break;
-                          case 21:
-                            if (this.input.isActivated((byte) 110)) {
-                              cs.highscoreMode = 0;
-                              ql.activeHighscoreQuery = null;
-                            }
-                            break;
-                          case 17:
-                            if (this.input.isActivated((byte) 112) &&
-                              this.isItemEnabled(itemIndex, (byte) -17)) {
-                              vq.instructionPage = vq.instructionPage + 1;
-                              if (this.isItemEnabled(itemIndex, (byte) -17)) {
-                                break;
-                              }
-                              this.input.selectedIndex = 0;
-                            }
-                            break;
-                          case 18:
-                            if (this.input.isActivated((byte) 101)) {
-                              if (!this.isItemEnabled(itemIndex, (byte) -17)) {
-                                break;
-                              }
-                              vq.instructionPage = vq.instructionPage - 1;
-                              if (!this.isItemEnabled(itemIndex, (byte) -17)) {
-                                this.input.selectedIndex = 2;
-                              }
-                            }
-                            break;
-                          case 7:
-                            if (this.input.isActivated((byte) 82)) {
-                              sg.flightSession.finishGame(pointerSelection, false, 100);
-                            }
-                            break;
-                        }
-                      } else {
-                        if (this.input.isActivated((byte) 98)) {
-                          Bullet.requestMenu((byte) 90, 2, pointerSelection);
-                        }
-                      }
-                    }
+            switch (var5) {
+              case 1:
+                if (this.input.isActivated((byte) 114)) {
+                  Bullet.requestMenu((byte) 33, -1, pointerSelection);
+                  sg.flightSession.resumeGame(-112);
+                  co.returnMenuId = 0;
+                }
+                break;
+              case 16:
+                if (this.input.isActivated((byte) 120)) {
+                  Bullet.requestMenu((byte) -117, 0, pointerSelection);
+                  r.field_n = 0;
+                  hg.field_D = 0;
+                  sb.field_c.clear(268435455);
+                }
+                break;
+              case 14:
+                if (this.input.isActivated((byte) 127)) {
+                  Bullet.requestMenu((byte) 98, 4, pointerSelection);
+                  co.returnMenuId = this.screenId;
+                }
+                break;
+              case 3:
+                if (this.input.isActivated((byte) 82)) {
+                  vq.instructionPage = 0;
+                  Bullet.requestMenu((byte) -94, 3, pointerSelection);
+                  co.returnMenuId = this.screenId;
+                }
+                break;
+              case 6:
+                if (this.input.isActivated((byte) 104)) {
+                  Bullet.requestMenu((byte) -80, co.returnMenuId, pointerSelection);
+                }
+                break;
+              case 12:
+                if (this.input.isHomePressed(55)) {
+                  rt.b(0, (byte) -117);
+                  lq.a(fd.field_b[3], 110);
+                }
+                if (this.input.isEndPressed(-99)) {
+                  rt.b(256, (byte) 59);
+                  lq.a(fd.field_b[3], obfuscationGuard ^ -10);
+                }
+                if (this.input.isLeftPressed(-78)) {
+                  r.e(obfuscationGuard - 14601);
+                  lq.a(fd.field_b[3], 70);
+                }
+                if (this.input.isRightPressed((byte) -102)) {
+                  dq.a((byte) -2);
+                  lq.a(fd.field_b[3], -126);
+                }
+                if (this.input.isPointerHeld((byte) 98)) {
+                  var5 = 137 + oq.field_K;
+                  var6 = (this.getItemLeft(itemIndex, obfuscationGuard + 197) + this.getItemRight(obfuscationGuard + 121, itemIndex) - var5 >> 1) + oq.field_K + 8;
+                  var7 = ic.field_b - var6 << 1;
+                  if (var7 <= 0) {
+                    rt.b(0, (byte) 70);
+                  } else if (256 <= var7) {
+                    rt.b(256, (byte) -114);
                   } else {
-                    if (this.input.isActivated((byte) 86)) {
-                      Bullet.requestMenu((byte) 115, 0, pointerSelection);
-                    }
+                    rt.b(var7, (byte) -123);
+                  }
+                  if (!(this.soundPreviewCooldown > 0)) {
+                    lq.a(fd.field_b[3], 81);
+                    this.soundPreviewCooldown = 10;
                   }
                 }
-              } else {
+                break;
+              case 13:
+                if (this.input.isHomePressed(obfuscationGuard + 50)) {
+                  ve.a((byte) 43, 0);
+                }
+                if (this.input.isEndPressed(-39)) {
+                  ve.a((byte) 43, 256);
+                }
+                if (this.input.isLeftPressed(obfuscationGuard - 11)) {
+                  lj.a(100);
+                }
+                if (this.input.isRightPressed((byte) -102)) {
+                  wk.c((byte) -118);
+                }
+                if (this.input.isPointerHeld((byte) 119)) {
+                  var5 = 128 + oq.field_K + 9;
+                  var6 = (-var5 + this.getItemLeft(itemIndex, 200) + this.getItemRight(obfuscationGuard ^ 124, itemIndex) >> 1) - (-oq.field_K - 8);
+                  var7 = ic.field_b - var6 << 1;
+                  if (var7 <= 0) {
+                    ve.a((byte) 43, 0);
+                  } else if (var7 < 256) {
+                    ve.a((byte) 43, var7);
+                  } else {
+                    ve.a((byte) 43, 256);
+                  }
+                }
+                break;
+              default:
+                switch (var5) {
+                  case 4:
+                    if (!this.input.isActivated((byte) 126)) {
+                      break;
+                    }
+                    if (jf.field_a != null) {
+                      tt.b(-32546);
+                      break;
+                    }
+                    ql.a((byte) -103, pointerSelection);
+                    break;
+                  case 8:
+                    if (!this.input.isActivated((byte) 124)) {
+                      break;
+                    }
+                    oc.highscoreView = 0;
+                    break;
+                  case 9:
+                    if (!this.input.isActivated((byte) 88)) {
+                      break;
+                    }
+                    oc.highscoreView = 1;
+                    break;
+                  case 10:
+                    if (!this.input.isActivated((byte) 87)) {
+                      break;
+                    }
+                    oc.highscoreView = 2;
+                    break;
+                  case 15:
+                    if (this.input.isActivated((byte) 97)) {
+                      if (this.screenId != 4 &&
+                        this.screenId != 2) {
+                        if (this.screenId != 6) {
+                          break;
+                        }
+                        int stackIn_127_0 = obfuscationGuard + 25365;
+                        int stackIn_127_1 = 6;
+                        if (0 == r.field_n) {
+                          stackIn_128_2 = 2;
+                        } else {
+                          stackIn_128_2 = 5;
+                        }
+                        nf.a(stackIn_127_0, stackIn_127_1, stackIn_128_2);
+                        break;
+                      }
+                      nf.a(25368, this.screenId, this.screenId);
+                    }
+                    break;
+                  case 11:
+                    if (!this.input.isActivated((byte) 113)) {
+                      break;
+                    }
+                    if (jf.field_a != null) {
+                      tt.b(-32546);
+                    }
+                    rr.a((byte) -56, bm.m(obfuscationGuard + 106));
+                    break;
+                  case 20:
+                    if (!this.input.isActivated((byte) 106)) {
+                      break;
+                    }
+                    ql.activeHighscoreQuery = null;
+                    cs.highscoreMode = 1;
+                    break;
+                  default:
+                    break;
+                  case 21:
+                    if (this.input.isActivated((byte) 110)) {
+                      cs.highscoreMode = 0;
+                      ql.activeHighscoreQuery = null;
+                    }
+                    break;
+                  case 17:
+                    if (this.input.isActivated((byte) 112) &&
+                      this.isItemEnabled(itemIndex, (byte) -17)) {
+                      vq.instructionPage = vq.instructionPage + 1;
+                      if (this.isItemEnabled(itemIndex, (byte) -17)) {
+                        break;
+                      }
+                      this.input.selectedIndex = 0;
+                    }
+                    break;
+                  case 18:
+                    if (this.input.isActivated((byte) 101)) {
+                      if (!this.isItemEnabled(itemIndex, (byte) -17)) {
+                        break;
+                      }
+                      vq.instructionPage = vq.instructionPage - 1;
+                      if (!this.isItemEnabled(itemIndex, (byte) -17)) {
+                        this.input.selectedIndex = 2;
+                      }
+                    }
+                    break;
+                  case 7:
+                    if (this.input.isActivated((byte) 82)) {
+                      sg.flightSession.finishGame(pointerSelection, false, 100);
+                    }
+                    break;
+                }
+                break;
+              case 2:
+                if (this.input.isActivated((byte) 98)) {
+                  Bullet.requestMenu((byte) 90, 2, pointerSelection);
+                }
+                break;
+              case 5:
+                if (this.input.isActivated((byte) 86)) {
+                  Bullet.requestMenu((byte) 115, 0, pointerSelection);
+                }
+                break;
+              case 22:
                 if (this.input.isActivated((byte) 81)) {
                   Bullet.requestMenu((byte) 122, 7, pointerSelection);
                   co.returnMenuId = 0;
                 }
-              }
-            } else {
-              if (this.input.isActivated((byte) 104)) {
-                sg.flightSession.startGame(61, true);
-                Bullet.requestMenu((byte) 78, -1, pointerSelection);
-                co.returnMenuId = this.screenId;
-              }
+                break;
+              case 19:
+                if (this.input.isActivated((byte) 104)) {
+                  sg.flightSession.startGame(61, true);
+                  Bullet.requestMenu((byte) 78, -1, pointerSelection);
+                  co.returnMenuId = this.screenId;
+                }
+                break;
             }
-          } else {
-            if (this.input.isActivated((byte) 84)) {
-              sg.flightSession.startGame(101, false);
-              Bullet.requestMenu((byte) -96, -1, pointerSelection);
-              co.returnMenuId = this.screenId;
-            }
+          } else if (this.input.isActivated((byte) 84)) {
+            sg.flightSession.startGame(101, false);
+            Bullet.requestMenu((byte) -96, -1, pointerSelection);
+            co.returnMenuId = this.screenId;
           }
         }
     }
@@ -886,64 +871,52 @@ final class MenuScreen {
           }
           if (this.screenId == 1) {
             this.a(verticalOffset, (byte) 81, kg.field_c);
-          } else {
-            if (this.screenId != 7) {
-              if (this.screenId == 2) {
-                this.drawHighscores(-9621, verticalOffset);
-              } else {
-                if (this.screenId == 3) {
-                  this.drawInstructions(197427713, verticalOffset);
-                } else {
-                  if (this.screenId == 4) {
-                    this.drawAchievements(false, verticalOffset, obfuscationGuard - 123);
-                  } else {
-                    if (this.screenId != 5) {
-                      if (this.screenId == 6) {
-                        bk.menuTop[this.screenId] = 230;
-                        int var7 = verticalOffset - 40 + (kn.bigFontMetrics.maxAscent + 200);
-                        int var8 = 255;
-                        int var9 = kn.bigFontMetrics.maxDescent + kn.bigFontMetrics.field_a + 4;
-                        PacketBuffer.gameFont.drawCenteredText(112, var8 << 24 | 16777215, -1, var7, 320, gg.field_i);
-                        RendererBitmapFont stackIn_23_0 = PacketBuffer.gameFont;
-                        int stackIn_23_1 = 126;
-                        int stackIn_23_2 = var8 << 24 | 16777215;
-                        int stackIn_23_3 = -1;
-                        int stackIn_23_4 = var7 + var9;
-                        int stackIn_23_5 = 320;
-                        boolean stackIn_24_6 = (r.field_n != 0);
-                        boolean stackIn_26_7 = true;
-                        boolean stackIn_27_8 = (0 != or.score);
-                        ((RendererBitmapFont) (Object) stackIn_23_0).drawCenteredText(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, st.a(stackIn_24_6, stackIn_26_7, stackIn_27_8, false));
-                        RendererBitmapFont stackIn_29_0 = PacketBuffer.gameFont;
-                        int stackIn_29_1 = obfuscationGuard + 121;
-                        int stackIn_29_2 = 16777215 | var8 << 24;
-                        int stackIn_29_3 = -1;
-                        int stackIn_29_4 = 30 + var7 + var9 * 5;
-                        int stackIn_29_5 = 320;
-                        boolean stackIn_30_6 = (r.field_n != 0);
-                        int stackIn_32_7 = 121;
-                        boolean stackIn_33_8 = (or.score != 0);
-                        ((RendererBitmapFont) (Object) stackIn_29_0).drawCenteredText(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, ci.$cfr$intArgs$a$feb7e63b59d8(stackIn_30_6, stackIn_32_7, stackIn_33_8, false));
-                        RendererBitmapFont stackIn_35_0 = PacketBuffer.gameFont;
-                        int stackIn_35_1 = 119;
-                        int stackIn_35_2 = 16777215 | var8 << 24;
-                        int stackIn_35_3 = -1;
-                        int stackIn_35_4 = 60 + (var9 * 8 + var7);
-                        int stackIn_35_5 = 320;
-                        int stackIn_35_6 = -93;
-                        boolean stackIn_36_7 = (r.field_n != 0);
-                        boolean stackIn_39_8 = (or.score != 0);
-                        ((RendererBitmapFont) (Object) stackIn_35_0).drawCenteredText(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, av.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_6, stackIn_36_7, stackIn_39_8, false));
-                      }
-                    } else {
-                      this.drawAchievements(true, verticalOffset, obfuscationGuard - 120);
-                    }
-                  }
-                }
-              }
-            } else {
-              this.a(verticalOffset, (byte) -89, sd.field_m);
-            }
+          } else if (this.screenId == 7) {
+            this.a(verticalOffset, (byte) -89, sd.field_m);
+          } else if (this.screenId == 2) {
+            this.drawHighscores(-9621, verticalOffset);
+          } else if (this.screenId == 3) {
+            this.drawInstructions(197427713, verticalOffset);
+          } else if (this.screenId == 4) {
+            this.drawAchievements(false, verticalOffset, obfuscationGuard - 123);
+          } else if (this.screenId == 5) {
+            this.drawAchievements(true, verticalOffset, obfuscationGuard - 120);
+          } else if (this.screenId == 6) {
+            bk.menuTop[this.screenId] = 230;
+            int var7 = verticalOffset - 40 + (kn.bigFontMetrics.maxAscent + 200);
+            int var8 = 255;
+            int var9 = kn.bigFontMetrics.maxDescent + kn.bigFontMetrics.field_a + 4;
+            PacketBuffer.gameFont.drawCenteredText(112, var8 << 24 | 16777215, -1, var7, 320, gg.field_i);
+            RendererBitmapFont stackIn_23_0 = PacketBuffer.gameFont;
+            int stackIn_23_1 = 126;
+            int stackIn_23_2 = var8 << 24 | 16777215;
+            int stackIn_23_3 = -1;
+            int stackIn_23_4 = var7 + var9;
+            int stackIn_23_5 = 320;
+            boolean stackIn_24_6 = (r.field_n != 0);
+            boolean stackIn_26_7 = true;
+            boolean stackIn_27_8 = (0 != or.score);
+            ((RendererBitmapFont) (Object) stackIn_23_0).drawCenteredText(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, st.a(stackIn_24_6, stackIn_26_7, stackIn_27_8, false));
+            RendererBitmapFont stackIn_29_0 = PacketBuffer.gameFont;
+            int stackIn_29_1 = obfuscationGuard + 121;
+            int stackIn_29_2 = 16777215 | var8 << 24;
+            int stackIn_29_3 = -1;
+            int stackIn_29_4 = 30 + var7 + var9 * 5;
+            int stackIn_29_5 = 320;
+            boolean stackIn_30_6 = (r.field_n != 0);
+            int stackIn_32_7 = 121;
+            boolean stackIn_33_8 = (or.score != 0);
+            ((RendererBitmapFont) (Object) stackIn_29_0).drawCenteredText(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, ci.$cfr$intArgs$a$feb7e63b59d8(stackIn_30_6, stackIn_32_7, stackIn_33_8, false));
+            RendererBitmapFont stackIn_35_0 = PacketBuffer.gameFont;
+            int stackIn_35_1 = 119;
+            int stackIn_35_2 = 16777215 | var8 << 24;
+            int stackIn_35_3 = -1;
+            int stackIn_35_4 = 60 + (var9 * 8 + var7);
+            int stackIn_35_5 = 320;
+            int stackIn_35_6 = -93;
+            boolean stackIn_36_7 = (r.field_n != 0);
+            boolean stackIn_39_8 = (or.score != 0);
+            ((RendererBitmapFont) (Object) stackIn_35_0).drawCenteredText(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, av.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_6, stackIn_36_7, stackIn_39_8, false));
           }
           if (var6 == 0 ||
             !lp.heldKeys[70] &&
@@ -1059,11 +1032,9 @@ final class MenuScreen {
                 this.selectedAchievementId = -1;
               }
             }
-            if (var14[var18]) {
-              if ((1 << var18 & var16) != 0) {
-                var7Lifetime1 += 55;
-              }
-            } else {
+            if (!var14[var18]) {
+              var7Lifetime1 += 55;
+            } else if ((1 << var18 & var16) != 0) {
               var7Lifetime1 += 55;
             }
           }
@@ -1127,15 +1098,13 @@ final class MenuScreen {
           int var15Lifetime1Lifetime3 = 350 + verticalOffset;
           PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, lb.field_a[var17]);
           int var21Lifetime1 = verticalOffset + 200;
-          if (var19Lifetime1 == 0) {
-            if (qr.field_a <= 0 &&
-              var12[var17]) {
-              ut.lockedSprite.a(256, var21Lifetime1, 0, var5, 1);
-            } else {
-              dh.unachievedSprite.a(256, var21Lifetime1, 0, var5, 1);
-            }
-          } else {
+          if (var19Lifetime1 != 0) {
             aa.achievementSprites[var17].a(256, var21Lifetime1, 0, var5, 1);
+          } else if (qr.field_a <= 0 &&
+            var12[var17]) {
+            ut.lockedSprite.a(256, var21Lifetime1, 0, var5, 1);
+          } else {
+            dh.unachievedSprite.a(256, var21Lifetime1, 0, var5, 1);
           }
           int var22 = 360 + verticalOffset;
           if (cn.b(true) ||
@@ -1580,10 +1549,8 @@ final class MenuScreen {
                 this.input.selectedIndex != 4) {
                 if (this.input.selectedIndex == 0) {
                   this.input.setSelectedIndex((byte) -102, 2);
-                } else {
-                  if ((this.input.selectedIndex != 4)) {
-                    this.input.setSelectedIndex((byte) -125, this.input.selectedIndex - 1);
-                  }
+                } else if (this.input.selectedIndex != 4) {
+                  this.input.setSelectedIndex((byte) -125, this.input.selectedIndex - 1);
                 }
                 boolean decompiledFrameRemainder1 = false;
               }
@@ -1596,10 +1563,8 @@ final class MenuScreen {
                 this.input.selectedIndex != 4) {
                 if (this.input.selectedIndex < 2) {
                   this.input.setSelectedIndex((byte) -100, 1 + this.input.selectedIndex);
-                } else {
-                  if ((this.input.selectedIndex == 2)) {
-                    this.input.setSelectedIndex((byte) -102, 0);
-                  }
+                } else if (this.input.selectedIndex == 2) {
+                  this.input.setSelectedIndex((byte) -102, 0);
                 }
                 boolean decompiledFrameRemainder0 = false;
               }

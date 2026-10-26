@@ -74,47 +74,43 @@ class bm extends mi {
                   this.a((byte) stackIn_58_1, stackIn_59_2);
                   return true;
                 }
-              } else {
-                if (param1 == 97) {
-                  if (this.field_B < this.field_f.length()) {
-                    int stackIn_52_1 = 53;
-                    if (!lp.heldKeys[82]) {
-                      stackIn_53_2 = 1 + this.field_B;
-                    } else {
-                      stackIn_53_2 = this.k(0);
-                    }
-                    this.a((byte) stackIn_52_1, stackIn_53_2);
-                    return true;
-                  }
-                } else {
-                  if (102 == param1) {
-                    this.a((byte) 69, 0);
-                    return true;
-                  }
-                  if (param1 == 103) {
-                    this.a((byte) 59, this.field_f.length());
-                    return true;
-                  }
-                  if (param1 == 84) {
-                    this.j(-1);
-                    return true;
-                  }
-                  if (lp.heldKeys[82] &&
-                    param1 == 65) {
-                    this.b(true);
-                    return true;
-                  }
-                  if (lp.heldKeys[82] &&
-                    param1 == 66) {
-                    this.i(-116);
-                    return true;
-                  }
-                  if (lp.heldKeys[82] &&
-                    67 == param1) {
-                    this.l(-1);
-                    return true;
-                  }
+              } else if (param1 != 97) {
+                if (102 == param1) {
+                  this.a((byte) 69, 0);
+                  return true;
                 }
+                if (param1 == 103) {
+                  this.a((byte) 59, this.field_f.length());
+                  return true;
+                }
+                if (param1 == 84) {
+                  this.j(-1);
+                  return true;
+                }
+                if (lp.heldKeys[82] &&
+                  param1 == 65) {
+                  this.b(true);
+                  return true;
+                }
+                if (lp.heldKeys[82] &&
+                  param1 == 66) {
+                  this.i(-116);
+                  return true;
+                }
+                if (lp.heldKeys[82] &&
+                  67 == param1) {
+                  this.l(-1);
+                  return true;
+                }
+              } else if (this.field_B < this.field_f.length()) {
+                int stackIn_52_1 = 53;
+                if (!lp.heldKeys[82]) {
+                  stackIn_53_2 = 1 + this.field_B;
+                } else {
+                  stackIn_53_2 = this.k(0);
+                }
+                this.a((byte) stackIn_52_1, stackIn_53_2);
+                return true;
               }
             } else {
               if (this.field_D != this.field_B) {
@@ -382,10 +378,8 @@ class bm extends mi {
         int var7 = this.field_j + var3.b(this.field_B, -127);
         if (var5 - var6 < var7) {
           this.field_j = -var7 - var6 + (var5 + this.field_j);
-        } else {
-          if (var6 > var7) {
-            this.field_j = this.field_j + var6 - var7;
-          }
+        } else if (var6 > var7) {
+          this.field_j = this.field_j + var6 - var7;
         }
         if (param0 < this.field_j) {
           this.field_j = 0;

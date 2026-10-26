@@ -86,12 +86,12 @@ final class ro extends ua implements ti {
             for (int var8 = 0; var8 < var7; var8++) {
               boolean decompiledFrameRemainder0 = true;
               int var9 = param3.charAt(var8);
-              if ((0 == var8) &&
-                (var9 == 45)) {
+              if (0 == var8 &&
+                var9 == 45) {
                 var4_int = 1;
                 decompiledFrameRemainder0 = false;
               }
-              if ((decompiledFrameRemainder0) && (0 != var8 || (var9 != 43 ||
+              if (decompiledFrameRemainder0 && (0 != var8 || (var9 != 43 ||
                 !param1))) {
                 if (var9 >= 48 &&
                   var9 <= 57) {

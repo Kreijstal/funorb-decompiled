@@ -158,16 +158,12 @@ final class tn extends ab implements dn {
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var6_int = 77 % ((param4 + 27) / 61);
-          if (param1 != this.field_v) {
-            if (this.field_u != param1) {
-              if (param1 == this.field_x) {
-                of.a(111);
-              }
-            } else {
-              cu.c((byte) 96);
-            }
-          } else {
+          if (param1 == this.field_v) {
             ua.e(4754);
+          } else if (this.field_u == param1) {
+            cu.c((byte) 96);
+          } else if (param1 == this.field_x) {
+            of.a(111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -12,26 +12,22 @@ final class pu {
           if (param0 != 21) {
             field_a = -115;
           }
-          if (bl.field_c >= 10) {
-            if (uk.a((byte) -5)) {
-              if (SoundCache.field_d != 0) {
-                hj.a(param1, -12);
-              } else {
-                ul.a(param2, false, -7395);
-                ArchiveIndex.a(0, false, param1, 0);
-              }
-            } else {
-              SoftwareRasterizer.clearFramebuffer();
-              qa.a(240, (byte) -4, 320);
-              ArchiveIndex.a(0, false, param1, 0);
-            }
-          } else {
+          if (!(bl.field_c >= 10)) {
             int var3_int = 0;
             if (AceOfSkies.field_J) {
               AceOfSkies.field_J = false;
               var3_int = 1;
             }
             oj.a(qn.b(-115), g.field_h, param0 ^ 153, MenuScreen.a((byte) 68), var3_int != 0);
+          } else if (!uk.a((byte) -5)) {
+            SoftwareRasterizer.clearFramebuffer();
+            qa.a(240, (byte) -4, 320);
+            ArchiveIndex.a(0, false, param1, 0);
+          } else if (SoundCache.field_d != 0) {
+            hj.a(param1, -12);
+          } else {
+            ul.a(param2, false, -7395);
+            ArchiveIndex.a(0, false, param1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

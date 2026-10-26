@@ -55,21 +55,19 @@ final class jq extends oo implements dn {
           }
           if (param1.field_b) {
             var4 = aa.field_d;
+          } else if (null != param1.field_c) {
+            var4 = HudMessage.field_e;
+            if (this.field_db != null) {
+              this.field_db.a((byte) -77);
+            }
           } else {
-            if (null != param1.field_c) {
-              var4 = HudMessage.field_e;
-              if (this.field_db != null) {
-                this.field_db.a((byte) -77);
+            var4 = param1.field_f;
+            if (param1.field_a == 248) {
+              if (!param0) {
+                ua.c(0);
               }
-            } else {
-              var4 = param1.field_f;
-              if (param1.field_a == 248) {
-                if (!param0) {
-                  ua.c(0);
-                }
-                var4 = rl.field_i;
-                this.field_eb = true;
-              }
+              var4 = rl.field_i;
+              this.field_eb = true;
             }
           }
           jn var5 = new jn((oo) (this), b.field_c, var4);
@@ -80,22 +78,18 @@ final class jq extends oo implements dn {
             }
             var5.a((no) (this), param2 + 17536, mq.field_i);
           } else {
-            if (!this.field_eb) {
-              if (param1.field_a == 5) {
-                var5.a(11, (byte) 105, ln.field_a);
-                var5.a(17, (byte) -126, mb.field_s);
-              } else {
-                var5.a(-1, (byte) -51, Bullet.field_j);
-              }
-            } else {
+            if (this.field_eb) {
               var5.a((no) (this), param2 ^ 17536, mq.field_i);
-            }
-            if (param1.field_a != 3) {
-              if (param1.field_a == 6) {
-                var5.a(9, (byte) -41, ao.field_d);
-              }
+            } else if (param1.field_a == 5) {
+              var5.a(11, (byte) 105, ln.field_a);
+              var5.a(17, (byte) -126, mb.field_s);
             } else {
+              var5.a(-1, (byte) -51, Bullet.field_j);
+            }
+            if (param1.field_a == 3) {
               var5.a(7, (byte) -103, lu.field_a);
+            } else if (param1.field_a == 6) {
+              var5.a(9, (byte) -41, ao.field_d);
             }
           }
           this.d(var5, -30244);

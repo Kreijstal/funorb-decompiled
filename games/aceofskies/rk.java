@@ -388,12 +388,10 @@ final class rk implements Runnable {
           }
           if (param1 == 33) {
             var4 = "jagex_" + param3 + "_preferences" + param0 + "_rc.dat";
+          } else if (param1 == 34) {
+            var4 = "jagex_" + param3 + "_preferences" + param0 + "_wip.dat";
           } else {
-            if (param1 == 34) {
-              var4 = "jagex_" + param3 + "_preferences" + param0 + "_wip.dat";
-            } else {
-              var4 = "jagex_" + param3 + "_preferences" + param0 + ".dat";
-            }
+            var4 = "jagex_" + param3 + "_preferences" + param0 + ".dat";
           }
           String[] var5 = new String[]{"c:/rscache/", "/rscache/", field_i, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           for (int var6 = 0; var6 < var5.length; var6++) {

@@ -134,38 +134,30 @@ class oo extends dg implements dn {
           int var5 = 85 / ((1 - param0) / 52);
           jn var7 = new jn(this, this.field_U, param2);
           jn var4 = var7;
-          if (param1 != 5) {
-            if (param1 != 256) {
-              jn stackIn_13_0 = var7;
-              int stackIn_13_1 = -1;
-              int stackIn_13_2 = 124;
-              if (this.field_cb) {
-                stackIn_14_3 = hg.field_z;
-              } else {
-                stackIn_14_3 = Bullet.field_j;
-              }
-              ((jn) (Object) stackIn_13_0).a(stackIn_13_1, (byte) stackIn_13_2, stackIn_14_3);
-            } else {
-              var7.a((no) (this), 17547, hg.field_z);
-            }
-          } else {
+          if (param1 == 5) {
             var7.a(11, (byte) 113, ln.field_a);
             var7.a(17, (byte) -120, mb.field_s);
+          } else if (param1 != 256) {
+            jn stackIn_13_0 = var7;
+            int stackIn_13_1 = -1;
+            int stackIn_13_2 = 124;
+            if (this.field_cb) {
+              stackIn_14_3 = hg.field_z;
+            } else {
+              stackIn_14_3 = Bullet.field_j;
+            }
+            ((jn) (Object) stackIn_13_0).a(stackIn_13_1, (byte) stackIn_13_2, stackIn_14_3);
+          } else {
+            var7.a((no) (this), 17547, hg.field_z);
           }
           if (param1 == 3) {
             var7.a(7, (byte) 75, lu.field_a);
-          } else {
-            if (param1 == 4) {
-              var7.a(8, (byte) 101, mh.field_n);
-            } else {
-              if (param1 == 6) {
-                var7.a(9, (byte) -124, ao.field_d);
-              } else {
-                if (param1 == 9) {
-                  var7.a((no) (this), 17547, vn.field_g);
-                }
-              }
-            }
+          } else if (param1 == 4) {
+            var7.a(8, (byte) 101, mh.field_n);
+          } else if (param1 == 6) {
+            var7.a(9, (byte) -124, ao.field_d);
+          } else if (param1 == 9) {
+            var7.a((no) (this), 17547, vn.field_g);
           }
           this.d(var7, -30244);
           return;

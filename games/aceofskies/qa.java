@@ -41,12 +41,10 @@ final class qa {
             int var4 = rn.field_a[var3];
             if (var4 < 0) {
               var5 = SpriteState.field_t;
+            } else if (var4 != pr.field_b.selectedIndex) {
+              var5 = so.field_b;
             } else {
-              if (var4 != pr.field_b.selectedIndex) {
-                var5 = so.field_b;
-              } else {
-                var5 = hn.field_a;
-              }
+              var5 = hn.field_a;
             }
             String var6 = ne.field_g[var3];
             if (ol.field_c == 2 &&
@@ -170,13 +168,11 @@ final class qa {
             if (20 > var6) {
               var7Lifetime10 = var6 * 256 / 20;
               oo.field_W.d(var3, var4, var7Lifetime10);
+            } else if (var6 < 30) {
+              oo.field_W.d(var3, var4, 256);
             } else {
-              if (var6 < 30) {
-                oo.field_W.d(var3, var4, 256);
-              } else {
-                var7Lifetime10 = (12800 - var6 * 256) / 20;
-                oo.field_W.d(var3, var4, var7Lifetime10);
-              }
+              var7Lifetime10 = (12800 - var6 * 256) / 20;
+              oo.field_W.d(var3, var4, var7Lifetime10);
             }
           }
           int var6Lifetime5 = -140 + it.field_c;
@@ -201,13 +197,11 @@ final class qa {
             if (20 > var6Lifetime1) {
               var7Lifetime1 = var6Lifetime1 * 256 / 20;
               oo.field_W.d(var3, var4, var7Lifetime1);
+            } else if (var6Lifetime1 < 30) {
+              oo.field_W.d(var3, var4, 256);
             } else {
-              if (var6Lifetime1 < 30) {
-                oo.field_W.d(var3, var4, 256);
-              } else {
-                var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
-                oo.field_W.d(var3, var4, var7Lifetime1);
-              }
+              var7Lifetime1 = (12800 - var6Lifetime1 * 256) / 20;
+              oo.field_W.d(var3, var4, var7Lifetime1);
             }
           }
           int var6Lifetime1Lifetime1 = -140 + it.field_c;
@@ -238,13 +232,11 @@ final class qa {
             if (20 > var6Lifetime2) {
               var7Lifetime2Lifetime2 = var6Lifetime2 * 256 / 20;
               oo.field_W.d(var3, var4, var7Lifetime2Lifetime2);
+            } else if (var6Lifetime2 < 30) {
+              oo.field_W.d(var3, var4, 256);
             } else {
-              if (var6Lifetime2 < 30) {
-                oo.field_W.d(var3, var4, 256);
-              } else {
-                var7Lifetime2Lifetime2 = (12800 - var6Lifetime2 * 256) / 20;
-                oo.field_W.d(var3, var4, var7Lifetime2Lifetime2);
-              }
+              var7Lifetime2Lifetime2 = (12800 - var6Lifetime2 * 256) / 20;
+              oo.field_W.d(var3, var4, var7Lifetime2Lifetime2);
             }
           }
           int var6Lifetime2Lifetime1 = -140 + it.field_c;

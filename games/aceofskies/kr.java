@@ -571,16 +571,12 @@ public final class kr extends bf {
           return;
         }
         int var3 = 0;
-        if (param0 != rg.field_A) {
-          if (param0 == ij.field_g) {
-            var3 = 131072;
-          } else {
-            if (param0 == ResourceArchive.field_g) {
-              var3 = 196608;
-            }
-          }
-        } else {
+        if (param0 == rg.field_A) {
           var3 = 65536;
+        } else if (param0 == ij.field_g) {
+          var3 = 131072;
+        } else if (param0 == ResourceArchive.field_g) {
+          var3 = 196608;
         }
         this.field_Rc.SetTextureStageState(this.field_F, 11, this.field_F | var3);
     }
@@ -978,16 +974,12 @@ public final class kr extends bf {
         if (this.field_zb == pi.field_x) {
           this.field_Rc.SetRenderState(19, 5);
           this.field_Rc.SetRenderState(20, 6);
-        } else {
-          if (this.field_zb == ne.field_i) {
-            this.field_Rc.SetRenderState(19, 2);
-            this.field_Rc.SetRenderState(20, 2);
-          } else {
-            if (this.field_zb == HighscoreQuery.field_l) {
-              this.field_Rc.SetRenderState(19, 9);
-              this.field_Rc.SetRenderState(20, 2);
-            }
-          }
+        } else if (this.field_zb == ne.field_i) {
+          this.field_Rc.SetRenderState(19, 2);
+          this.field_Rc.SetRenderState(20, 2);
+        } else if (this.field_zb == HighscoreQuery.field_l) {
+          this.field_Rc.SetRenderState(19, 9);
+          this.field_Rc.SetRenderState(20, 2);
         }
     }
 

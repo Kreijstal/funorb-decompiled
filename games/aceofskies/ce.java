@@ -282,26 +282,22 @@ final class ce extends ab implements dr, dn {
         String stackIn_17_2 = null;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (param1 != this.field_D) {
-            if (param1 != this.field_w) {
-              if (this.field_z != param1) {
-                int var6_int = 122 % ((param4 + 27) / 61);
-                return;
-              }
-              if (!this.field_C) {
-                if (this.field_E) {
-                  pj.b((byte) -75);
-                } else {
-                  PacketBuffer.i(-112);
-                }
-              } else {
-                ArchiveIndex.b(17);
-              }
+          if (param1 == this.field_D) {
+            this.d((byte) -84);
+          } else if (param1 != this.field_w) {
+            if (this.field_z != param1) {
+              int var6_int = 122 % ((param4 + 27) / 61);
+              return;
+            }
+            if (this.field_C) {
+              ArchiveIndex.b(17);
+            } else if (this.field_E) {
+              pj.b((byte) -75);
             } else {
-              cu.c((byte) 104);
+              PacketBuffer.i(-112);
             }
           } else {
-            this.d((byte) -84);
+            cu.c((byte) 104);
           }
           int var6_intLifetime1 = 122 % ((param4 + 27) / 61);
           return;
@@ -385,13 +381,11 @@ final class ce extends ab implements dr, dn {
           }
           if (this.field_C) {
             this.field_z.field_k = gq.field_d;
+          } else if (this.field_E) {
+            this.field_z.field_k = td.field_c;
+            this.field_z.field_e = (ir) ((Object) new wg());
           } else {
-            if (this.field_E) {
-              this.field_z.field_k = td.field_c;
-              this.field_z.field_e = (ir) ((Object) new wg());
-            } else {
-              this.field_z.field_e = (ir) ((Object) new wg());
-            }
+            this.field_z.field_e = (ir) ((Object) new wg());
           }
           this.field_h = 15;
           BitmapFont var7 = qo.field_b;
@@ -400,12 +394,10 @@ final class ce extends ab implements dr, dn {
           }
           String var8 = kk.field_J;
           gu var9 = lc.a(17123, bm.m(125));
-          if (ef.field_k != var9) {
-            if (lp.field_f == var9) {
-              var8 = io.field_e;
-            }
-          } else {
+          if (ef.field_k == var9) {
             var8 = hu.field_b;
+          } else if (lp.field_f == var9) {
+            var8 = io.field_e;
           }
           bc dupTemp$0 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_v, false, 80, 3, var7, 16777215, var8);
           bc var12 = dupTemp$0;

@@ -80,8 +80,8 @@ final class bc extends to {
                 decompiledFrameRemainder0 = false;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (decompiledFrameCompleted0)) {
+            if (decompiledFrameRemainder0 &&
+              decompiledFrameCompleted0) {
               var7 = 0;
             }
             try {

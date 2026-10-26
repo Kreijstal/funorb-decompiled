@@ -24,34 +24,28 @@ final class qs {
             decompiledFrameRemainder0 = !(param1.equals(qj.field_s));
           }
           if (decompiledFrameRemainder0) {
-            if (!ht.field_g) {
-              if (ScreenParticle.field_o >= jp.field_b) {
-                stackIn_17_0 = (ScreenParticle.field_o < jp.field_b + NetworkGameClient.field_B) ? 1 : 0;
-              } else {
-                stackIn_17_0 = 0;
-              }
+            if (ht.field_g) {
+              stackIn_17_0 = 0;
+            } else if (ScreenParticle.field_o >= jp.field_b) {
+              stackIn_17_0 = (ScreenParticle.field_o < jp.field_b + NetworkGameClient.field_B) ? 1 : 0;
             } else {
               stackIn_17_0 = 0;
             }
             int var2_int = stackIn_17_0;
             if (param1 == null) {
               ScreenParticle.field_o = 0;
+            } else if (!ht.field_g &&
+              var2_int == 0) {
+              ScreenParticle.field_o = 0;
             } else {
-              if (!ht.field_g &&
-                var2_int == 0) {
-                ScreenParticle.field_o = 0;
-              } else {
-                ScreenParticle.field_o = jp.field_b;
-              }
+              ScreenParticle.field_o = jp.field_b;
             }
             we.field_c = ik.field_k;
             SpriteState.field_o = rs.field_v;
             if (param1 != null) {
               ht.field_g = false;
-            } else {
-              if (var2_int != 0) {
-                ht.field_g = true;
-              }
+            } else if (var2_int != 0) {
+              ht.field_g = true;
             }
           }
           if (!ht.field_g &&

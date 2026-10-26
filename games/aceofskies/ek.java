@@ -172,11 +172,9 @@ final class ek extends ab implements dn {
         if (param1 < 0) {
           var2 += 16;
           param1 = param1 >>> 16;
-        } else {
-          if (65536 <= param1) {
-            var2 += 16;
-            param1 = param1 >>> 16;
-          }
+        } else if (65536 <= param1) {
+          var2 += 16;
+          param1 = param1 >>> 16;
         }
         if (param1 >= 256) {
           var2 += 8;

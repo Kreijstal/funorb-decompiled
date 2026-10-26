@@ -887,20 +887,18 @@ public final class AceOfSkies extends NetworkGameClient {
                 var5_int = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_int / 2.0 / 30.0));
                 aa.menuScreens[po.activeMenuId].drawMenu(-var5_int + 480, var4, -4);
               }
-              if ((ci.nextMenuId != -1) &&
-                (!(ec.menuTransitionTicks <= 10))) {
+              if (ci.nextMenuId != -1 &&
+                !(ec.menuTransitionTicks <= 10)) {
                 int var5_intLifetime2 = ec.menuTransitionTicks - 40;
                 var5_intLifetime2 = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_intLifetime2 / 2.0 / 30.0));
                 aa.menuScreens[ci.nextMenuId].drawMenu(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
-                if ((var10 != 0) &&
-                  (po.activeMenuId != -1)) {
+                if (var10 != 0 &&
+                  po.activeMenuId != -1) {
                   aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
                 }
               }
-            } else {
-              if (po.activeMenuId != -1) {
-                aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
-              }
+            } else if (po.activeMenuId != -1) {
+              aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
             }
             if (gi.a(true)) {
               var3 = 1;
@@ -941,15 +939,13 @@ public final class AceOfSkies extends NetworkGameClient {
                     var6_int = (192 - var7) * 255 / 64;
                   }
                 }
-              } else {
-                if (var7 <= 192) {
-                  var6_int = 255;
-                  if (var10 != 0) {
-                    var6_int = (192 - var7) * 255 / 64;
-                  }
-                } else {
+              } else if (var7 <= 192) {
+                var6_int = 255;
+                if (var10 != 0) {
                   var6_int = (192 - var7) * 255 / 64;
                 }
+              } else {
+                var6_int = (192 - var7) * 255 / 64;
               }
               int var8 = 45;
               boolean decompiledSharedTail0 = !(var5.field_f < 0);
@@ -1093,8 +1089,8 @@ public final class AceOfSkies extends NetworkGameClient {
                 }
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (decompiledSharedTail0)) {
+            if (decompiledFrameRemainder0 &&
+              decompiledSharedTail0) {
               jn.g(4);
               if (b.b((byte) -127)) {
                 hl.a(-1889);
@@ -1113,12 +1109,10 @@ public final class AceOfSkies extends NetworkGameClient {
           if (!cn.b(true)) {
             do {
               oc var2 = (oc) (sb.field_c.removeFirst(121));
-              if (null == var2) {
-                if (var3 == 0) {
-                  break;
-                }
-              } else {
+              if (null != var2) {
                 pn.a(var2, (byte) -117, 4);
+              } else if (var3 == 0) {
+                break;
               }
             } while (var3 == 0);
           }

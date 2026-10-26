@@ -531,25 +531,23 @@ final class ec extends ao {
             field_m = (int[]) null;
           }
           param2[0] = this.field_i * param3 + (param1 * this.field_n + param0 * this.field_l);
-          if (!(0.00390625f < param0) &&
-            !(-0.00390625f > param0)) {
-            if (!(0.00390625f < param1) &&
-              !(param1 < -0.00390625f)) {
-              var10 = -param4 / param3;
-              var8 = this.field_q + this.field_p * var10;
-              var9 = this.field_j * var10 + this.field_h;
-              var7_float = this.field_k + this.field_i * var10;
-            } else {
-              var10 = -param4 / param1;
-              var7_float = this.field_k + var10 * this.field_n;
-              var8 = var10 * this.field_f + this.field_q;
-              var9 = this.field_u * var10 + this.field_h;
-            }
-          } else {
+          if (0.00390625f < param0 ||
+            -0.00390625f > param0) {
             var10 = -param4 / param0;
             var7_float = this.field_k + this.field_l * var10;
             var8 = this.field_q + this.field_s * var10;
             var9 = this.field_h + var10 * this.field_r;
+          } else if (!(0.00390625f < param1) &&
+            !(param1 < -0.00390625f)) {
+            var10 = -param4 / param3;
+            var8 = this.field_q + this.field_p * var10;
+            var9 = this.field_j * var10 + this.field_h;
+            var7_float = this.field_k + this.field_i * var10;
+          } else {
+            var10 = -param4 / param1;
+            var7_float = this.field_k + var10 * this.field_n;
+            var8 = var10 * this.field_f + this.field_q;
+            var9 = this.field_u * var10 + this.field_h;
           }
           param2[1] = this.field_p * param3 + (this.field_s * param0 + this.field_f * param1);
           param2[2] = param0 * this.field_r + this.field_u * param1 + this.field_j * param3;

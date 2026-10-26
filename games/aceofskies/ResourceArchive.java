@@ -273,10 +273,8 @@ final class ResourceArchive {
               if (this.index.field_j[param2] == 1) {
                 this.unpackedFiles[param2] = null;
               }
-            } else {
-              if (this.fileRetentionMode == 2) {
-                this.unpackedFiles[param2] = null;
-              }
+            } else if (this.fileRetentionMode == 2) {
+              this.unpackedFiles[param2] = null;
             }
           }
           Object stackIn_28_0 = var5;
@@ -505,105 +503,7 @@ final class ResourceArchive {
           if (this.discardPackedGroups) {
             this.packedGroups[param2] = null;
           }
-          if (var5_int > 1) {
-            if (this.fileRetentionMode == 2) {
-              var11 = var36.length;
-              var11--;
-              var12 = var23[var11] & 255;
-              var11 = var11 - var12 * (var5_int * 4);
-              PacketBuffer var29 = new PacketBuffer(var43);
-              int var14_int = 0;
-              var15_int = 0;
-              var29.position = var11;
-              for (var16 = 0; var12 > var16; var16++) {
-                var17 = 0;
-                for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var29.readInt((byte) 115);
-                  if (var6 != null) {
-                    var19 = var34[var18];
-                  } else {
-                    var19 = var18;
-                  }
-                  if (param0 == var19) {
-                    var14_int = var14_int + var17;
-                    var15_int = var19;
-                  }
-                }
-              }
-              if (var14_int == 0) {
-                return true;
-              }
-              byte[] var44 = new byte[var14_int];
-              var29.position = var11;
-              int var14_intLifetime1 = 0;
-              var17 = 0;
-              for (var18 = 0; var18 < var12; var18++) {
-                var19 = 0;
-                for (int var20 = 0; var20 < var5_int; var20++) {
-                  var19 = var19 + var29.readInt((byte) 118);
-                  if (var6 == null) {
-                    var21 = var20;
-                  } else {
-                    var21 = var34[var20];
-                  }
-                  if (var21 == param0) {
-                    au.a(var43, var17, var44, var14_intLifetime1, var19);
-                    var14_intLifetime1 = var14_intLifetime1 + var19;
-                  }
-                  var17 = var17 + var19;
-                }
-              }
-              var7[var15_int] = var44;
-            } else {
-              var11 = var36.length;
-              var11--;
-              var12 = var23[var11] & 255;
-              var11 = var11 - var5_int * var12 * 4;
-              PacketBuffer var31 = new PacketBuffer(var43);
-              int[] var39 = new int[var5_int];
-              int[] var32 = var39;
-              int[] var14 = var32;
-              var31.position = var11;
-              for (var15_int = 0; var12 > var15_int; var15_int++) {
-                var16 = 0;
-                for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var31.readInt((byte) 122);
-                  var14[var17] = var14[var17] + var16;
-                }
-              }
-              byte[][] var40 = new byte[var5_int][];
-              byte[][] var33 = var40;
-              byte[][] var15 = var33;
-              for (var16 = 0; var5_int > var16; var16++) {
-                byte[] array$1 = new byte[var39[var16]];
-                var15[var16] = array$1;
-                var39[var16] = 0;
-              }
-              var31.position = var11;
-              var16 = 0;
-              for (var17 = 0; var12 > var17; var17++) {
-                var18 = 0;
-                for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var31.readInt((byte) 109);
-                  au.a(var43, var16, var40[var19], var39[var19], var18);
-                  var16 = var16 + var18;
-                  var14[var19] = var14[var19] + var18;
-                }
-              }
-              for (var17 = 0; var5_int > var17; var17++) {
-                if (var6 == null) {
-                  var18 = var17;
-                } else {
-                  var18 = var34[var17];
-                }
-                if (this.fileRetentionMode == 0) {
-                  var7[var18] = sf.a(false, -137, var40[var17]);
-                } else {
-                  var7[var18] = var40[var17];
-                }
-              }
-            }
-          } else {
+          if (!(var5_int > 1)) {
             if (var6 != null) {
               var11 = var34[0];
             } else {
@@ -614,6 +514,102 @@ final class ResourceArchive {
               return true;
             }
             var7[var11] = var43;
+          } else if (this.fileRetentionMode == 2) {
+            var11 = var36.length;
+            var11--;
+            var12 = var23[var11] & 255;
+            var11 = var11 - var12 * (var5_int * 4);
+            PacketBuffer var29 = new PacketBuffer(var43);
+            int var14_int = 0;
+            var15_int = 0;
+            var29.position = var11;
+            for (var16 = 0; var12 > var16; var16++) {
+              var17 = 0;
+              for (var18 = 0; var18 < var5_int; var18++) {
+                var17 = var17 + var29.readInt((byte) 115);
+                if (var6 != null) {
+                  var19 = var34[var18];
+                } else {
+                  var19 = var18;
+                }
+                if (param0 == var19) {
+                  var14_int = var14_int + var17;
+                  var15_int = var19;
+                }
+              }
+            }
+            if (var14_int == 0) {
+              return true;
+            }
+            byte[] var44 = new byte[var14_int];
+            var29.position = var11;
+            int var14_intLifetime1 = 0;
+            var17 = 0;
+            for (var18 = 0; var18 < var12; var18++) {
+              var19 = 0;
+              for (int var20 = 0; var20 < var5_int; var20++) {
+                var19 = var19 + var29.readInt((byte) 118);
+                if (var6 == null) {
+                  var21 = var20;
+                } else {
+                  var21 = var34[var20];
+                }
+                if (var21 == param0) {
+                  au.a(var43, var17, var44, var14_intLifetime1, var19);
+                  var14_intLifetime1 = var14_intLifetime1 + var19;
+                }
+                var17 = var17 + var19;
+              }
+            }
+            var7[var15_int] = var44;
+          } else {
+            var11 = var36.length;
+            var11--;
+            var12 = var23[var11] & 255;
+            var11 = var11 - var5_int * var12 * 4;
+            PacketBuffer var31 = new PacketBuffer(var43);
+            int[] var39 = new int[var5_int];
+            int[] var32 = var39;
+            int[] var14 = var32;
+            var31.position = var11;
+            for (var15_int = 0; var12 > var15_int; var15_int++) {
+              var16 = 0;
+              for (var17 = 0; var5_int > var17; var17++) {
+                var16 = var16 + var31.readInt((byte) 122);
+                var14[var17] = var14[var17] + var16;
+              }
+            }
+            byte[][] var40 = new byte[var5_int][];
+            byte[][] var33 = var40;
+            byte[][] var15 = var33;
+            for (var16 = 0; var5_int > var16; var16++) {
+              byte[] array$1 = new byte[var39[var16]];
+              var15[var16] = array$1;
+              var39[var16] = 0;
+            }
+            var31.position = var11;
+            var16 = 0;
+            for (var17 = 0; var12 > var17; var17++) {
+              var18 = 0;
+              for (var19 = 0; var19 < var5_int; var19++) {
+                var18 = var18 + var31.readInt((byte) 109);
+                au.a(var43, var16, var40[var19], var39[var19], var18);
+                var16 = var16 + var18;
+                var14[var19] = var14[var19] + var18;
+              }
+            }
+            for (var17 = 0; var5_int > var17; var17++) {
+              if (var6 == null) {
+                var18 = var17;
+              } else {
+                var18 = var34[var17];
+              }
+              if (this.fileRetentionMode == 0) {
+                var7[var18] = sf.a(false, -137, var40[var17]);
+              } else {
+                var7[var18] = var40[var17];
+              }
+            }
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

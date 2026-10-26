@@ -55,28 +55,26 @@ final class dh {
             var16_ref.unlink(-124);
             return;
           }
-          if (var2 != 1) {
-            if (var2 == 2) {
-              eh var14 = (eh) (wu.field_w.first(268435455));
-              if (var14 == null) {
-                te.b(true);
-                return;
-              }
-              var14.field_f = fu.a(true);
-              var14.field_g = true;
-              var14.field_e = var14.field_f[0];
-              var14.unlink(-125);
-            } else {
-              v.a("A1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
-              te.b(true);
-            }
-          } else {
+          if (var2 == 1) {
             oc var12 = (oc) (ci.field_j.first(268435455));
             if (var12 == null) {
               te.b(true);
               return;
             }
             var12.unlink(-123);
+          } else if (var2 == 2) {
+            eh var14 = (eh) (wu.field_w.first(268435455));
+            if (var14 == null) {
+              te.b(true);
+              return;
+            }
+            var14.field_f = fu.a(true);
+            var14.field_g = true;
+            var14.field_e = var14.field_f[0];
+            var14.unlink(-125);
+          } else {
+            v.a("A1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
+            te.b(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

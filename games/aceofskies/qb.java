@@ -27,12 +27,10 @@ final class qb extends qm {
           }
           if (!param0) {
             stackIn_16_0 = this.field_n;
+          } else if (var6_int != 0) {
+            stackIn_16_0 = this.field_p;
           } else {
-            if (var6_int != 0) {
-              stackIn_16_0 = this.field_p;
-            } else {
-              stackIn_16_0 = this.field_q;
-            }
+            stackIn_16_0 = this.field_q;
           }
           int var7 = stackIn_16_0;
           kg.a(107, param2 + param3.field_p, var7, (-this.field_r[0].fullHeight + param3.field_n >> 1) + param3.field_h + param4, param3.field_q, this.field_r);

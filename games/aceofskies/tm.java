@@ -143,20 +143,14 @@ final class tm extends RenderSprite {
         this.field_g.a(this.field_f, 1);
         this.field_g.a(34479, -26625, 7681);
         this.field_g.a(34166, 768, 34176, 1);
-        if (this.field_k != 0) {
-          if (this.field_k != 1) {
-            if (2 == this.field_k) {
-              this.field_g.a(1.0f, 0.5f, 0.5f, 0.0f, (byte) 35);
-            } else {
-              if (3 == this.field_k) {
-                this.field_g.a(128.5f, 128.5f, 128.5f, 0.0f, (byte) 35);
-              }
-            }
-          } else {
-            this.field_g.a(0.5f, 1.0f, 0.5f, 0.0f, (byte) 35);
-          }
-        } else {
+        if (this.field_k == 0) {
           this.field_g.a(0.5f, 0.5f, 1.0f, 0.0f, (byte) 35);
+        } else if (this.field_k == 1) {
+          this.field_g.a(0.5f, 1.0f, 0.5f, 0.0f, (byte) 35);
+        } else if (2 == this.field_k) {
+          this.field_g.a(1.0f, 0.5f, 0.5f, 0.0f, (byte) 35);
+        } else if (3 == this.field_k) {
+          this.field_g.a(128.5f, 128.5f, 128.5f, 0.0f, (byte) 35);
         }
     }
 
@@ -193,40 +187,7 @@ final class tm extends RenderSprite {
         this.field_g.g(1025208104);
         this.field_g.b((byte) -97, param6);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
-        if (!this.field_e) {
-          if (null == this.field_f) {
-            this.field_g.a(this.field_j, 1);
-            this.field_g.a(param4, (byte) -39);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param1 + param3);
-            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
-            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
-            jaggl.OpenGL.glVertex2i(param2 + param0, param1);
-            jaggl.OpenGL.glEnd();
-          } else {
-            this.a(false, param4);
-            this.field_f.a(true, -128);
-            jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_j.field_p);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
-            jaggl.OpenGL.glVertex2i(param0, param1);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-            jaggl.OpenGL.glVertex2i(param0, param1 + param3);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
-            jaggl.OpenGL.glVertex2i(param2 + param0, param1 + param3);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, this.field_j.field_p);
-            jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
-            jaggl.OpenGL.glVertex2i(param0 + param2, param1);
-            jaggl.OpenGL.glEnd();
-            this.b(123);
-          }
-        } else {
+        if (this.field_e) {
           float var9 = (float)param2 / (float)this.d();
           float var10 = (float)param3 / (float)this.c();
           float var11 = (float)this.field_c * var9 + (float)param0;
@@ -265,6 +226,37 @@ final class tm extends RenderSprite {
             jaggl.OpenGL.glVertex2f(var13, var12);
             jaggl.OpenGL.glEnd();
           }
+        } else if (null == this.field_f) {
+          this.field_g.a(this.field_j, 1);
+          this.field_g.a(param4, (byte) -39);
+          jaggl.OpenGL.glBegin(7);
+          jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
+          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+          jaggl.OpenGL.glVertex2i(param0, param1 + param3);
+          jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
+          jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
+          jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
+          jaggl.OpenGL.glVertex2i(param2 + param0, param1);
+          jaggl.OpenGL.glEnd();
+        } else {
+          this.a(false, param4);
+          this.field_f.a(true, -128);
+          jaggl.OpenGL.glBegin(7);
+          jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.field_j.field_p);
+          jaggl.OpenGL.glTexCoord2f(0.0f, this.field_j.field_p);
+          jaggl.OpenGL.glVertex2i(param0, param1);
+          jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
+          jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
+          jaggl.OpenGL.glVertex2i(param0, param1 + param3);
+          jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, 0.0f);
+          jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, 0.0f);
+          jaggl.OpenGL.glVertex2i(param2 + param0, param1 + param3);
+          jaggl.OpenGL.glMultiTexCoord2f(33985, this.field_j.field_r, this.field_j.field_p);
+          jaggl.OpenGL.glTexCoord2f(this.field_j.field_r, this.field_j.field_p);
+          jaggl.OpenGL.glVertex2i(param0 + param2, param1);
+          jaggl.OpenGL.glEnd();
+          this.b(123);
         }
     }
 
@@ -385,12 +377,7 @@ final class tm extends RenderSprite {
                   int var17 = var9_int >> 16;
                   if (re.field_b > var17) {
                     int var18 = -(var9_int >> 16) + (var10 >> 16);
-                    if (var18 == 0) {
-                      if (var17 >= 0 &&
-                        re.field_b > var17) {
-                        ut.a(var18, (byte) -96, param5, param8, var17 + var16Lifetime2);
-                      }
-                    } else {
+                    if (var18 != 0) {
                       if (var18 + var17 >= re.field_b) {
                         var18 = -1 + (re.field_b - var17);
                       }
@@ -399,6 +386,9 @@ final class tm extends RenderSprite {
                       } else {
                         ut.a(var18 + var17, (byte) -96, param5, param8, var16Lifetime2);
                       }
+                    } else if (var17 >= 0 &&
+                      re.field_b > var17) {
+                      ut.a(var18, (byte) -96, param5, param8, var17 + var16Lifetime2);
                     }
                   }
                   param6++;
@@ -436,12 +426,7 @@ final class tm extends RenderSprite {
               int var16Lifetime1 = var9_int >> 16;
               if (var16Lifetime1 < re.field_b) {
                 int var17Lifetime1 = -(var9_int >> 16) + (var10 >> 16);
-                if (var17Lifetime1 == 0) {
-                  if (var16Lifetime1 >= 0 &&
-                    re.field_b > var16Lifetime1) {
-                    ut.a(var17Lifetime1, (byte) -96, param5, param8, var16Lifetime1 + var15Lifetime1);
-                  }
-                } else {
+                if (var17Lifetime1 != 0) {
                   if (var16Lifetime1 + var17Lifetime1 >= re.field_b) {
                     var17Lifetime1 = -1 + (-var16Lifetime1 + re.field_b);
                   }
@@ -450,6 +435,9 @@ final class tm extends RenderSprite {
                   } else {
                     ut.a(var17Lifetime1 + var16Lifetime1, (byte) -96, param5, param8, var15Lifetime1);
                   }
+                } else if (var16Lifetime1 >= 0 &&
+                  re.field_b > var16Lifetime1) {
+                  ut.a(var17Lifetime1, (byte) -96, param5, param8, var16Lifetime1 + var15Lifetime1);
                 }
               }
               param6++;

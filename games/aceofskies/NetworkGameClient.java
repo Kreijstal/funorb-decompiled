@@ -168,22 +168,18 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != 4) {
           return;
         }
-        if (!jr.a((byte) 32)) {
-          if (bl.field_c >= 10) {
-            if (uk.a((byte) -5)) {
-              if (SoundCache.field_d == 0) {
-                int discarded$0 = this.a(8, false, false);
-              } else {
-                ic.a(nh.field_e, false);
-              }
-            } else {
-              rp.b(param0 - 3);
-            }
-          }
-        } else {
+        if (jr.a((byte) 32)) {
           int stackIn_4_1 = 8;
           boolean stackIn_5_2 = (null != jf.field_a);
           int discarded$1 = this.a(stackIn_4_1, stackIn_5_2, false);
+        } else if (bl.field_c >= 10) {
+          if (!uk.a((byte) -5)) {
+            rp.b(param0 - 3);
+          } else if (SoundCache.field_d == 0) {
+            int discarded$0 = this.a(8, false, false);
+          } else {
+            ic.a(nh.field_e, false);
+          }
         }
     }
 
@@ -458,43 +454,29 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (bl.field_c >= 10) {
             if (SoundCache.field_d >= 10) {
               rc.c((byte) 122);
-              if (sk.field_a != 3) {
-                if (sk.field_a != 4) {
-                  if (sk.field_a == 2) {
-                    li.a(116, 256, Bullet.field_k);
-                  } else {
-                    if (sk.field_a == 5) {
-                      li.a(-102, 5, ut.field_b);
-                    } else {
-                      li.a(-71, 256, rt.field_g);
-                    }
-                  }
-                } else {
-                  li.a(6, 256, vi.field_n);
-                }
-              } else {
+              if (sk.field_a == 3) {
                 li.a(122, 256, fh.field_f);
+              } else if (sk.field_a == 4) {
+                li.a(6, 256, vi.field_n);
+              } else if (sk.field_a == 2) {
+                li.a(116, 256, Bullet.field_k);
+              } else if (sk.field_a == 5) {
+                li.a(-102, 5, ut.field_b);
+              } else {
+                li.a(-71, 256, rt.field_g);
               }
               BitmapFontMetrics.field_f = true;
             }
+          } else if (sk.field_a == 3) {
+            this.a(-116, "js5crc");
+          } else if (sk.field_a == 4) {
+            this.a(-109, "js5io");
+          } else if (sk.field_a == 2) {
+            this.a(-109, "js5connect_full");
+          } else if (sk.field_a != 5) {
+            this.a(-109, "js5connect");
           } else {
-            if (sk.field_a != 3) {
-              if (sk.field_a == 4) {
-                this.a(-109, "js5io");
-              } else {
-                if (sk.field_a != 2) {
-                  if (sk.field_a != 5) {
-                    this.a(-109, "js5connect");
-                  } else {
-                    this.a(-109, "outofdate");
-                  }
-                } else {
-                  this.a(-109, "js5connect_full");
-                }
-              }
-            } else {
-              this.a(-116, "js5crc");
-            }
+            this.a(-109, "outofdate");
           }
         }
         if ((sk.field_a != -1 &&
@@ -535,12 +517,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             ij.field_h.b((byte) 104)) {
             if (!ij.field_h.a("", 116)) {
               ij.field_h = null;
-            } else {
-              if (ij.field_h.c("", -14012)) {
-                ub.a((byte) -125, ij.field_h);
-                ij.field_h = null;
-                te.resetFrameTiming(62);
-              }
+            } else if (ij.field_h.c("", -14012)) {
+              ub.a((byte) -125, ij.field_h);
+              ij.field_h = null;
+              te.resetFrameTiming(62);
             }
           }
           if (null == ij.field_h) {
@@ -668,60 +648,44 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (var2 == 1) {
             br.f(113);
+          } else if (2 == var2) {
+            ce.decodeHighscoreResponse((byte) 116);
+          } else if (var2 == 3) {
+            dh.a(120);
+          } else if (var2 == 4) {
+            qo.a((byte) -26);
+          } else if (var2 == 5) {
+            rq.a((byte) 126);
+          } else if (var2 == 6) {
+            gu.a(4);
+          } else if (7 == var2) {
+            this.e((byte) -94);
+          } else if (var2 == 8) {
+            ae.a(ag.field_s, IntKeyLookup.incomingPacket, false, pt.field_b);
+          } else if (var2 == 16) {
+            GameAppletShell.a(true);
           } else {
-            if (2 == var2) {
-              ce.decodeHighscoreResponse((byte) 116);
-            } else {
-              if (var2 != 3) {
-                if (var2 != 4) {
-                  if (var2 != 5) {
-                    if (var2 != 6) {
-                      if (7 != var2) {
-                        if (var2 == 8) {
-                          ae.a(ag.field_s, IntKeyLookup.incomingPacket, false, pt.field_b);
-                        } else {
-                          if (var2 == 16) {
-                            GameAppletShell.a(true);
-                          } else {
-                            if (var2 != 11 &&
-                              12 != var2) {
-                              if (13 == var2) {
-                                se.a(-86);
-                                return;
-                              }
-                              if (17 == var2) {
-                                this.k(-105);
-                                return;
-                              }
-                              if (var2 == 18) {
-                                to.g(0);
-                                return;
-                              }
-                              v.a("MGS1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
-                              te.b(true);
-                              return;
-                            }
-                            boolean stackIn_25_0 = (12 == var2);
-                            s var4 = um.a(stackIn_25_0, 1);
-                            pj.a(0, var4);
-                          }
-                        }
-                      } else {
-                        this.e((byte) -94);
-                      }
-                    } else {
-                      gu.a(4);
-                    }
-                  } else {
-                    rq.a((byte) 126);
-                  }
-                } else {
-                  qo.a((byte) -26);
-                }
-              } else {
-                dh.a(120);
+            if (var2 != 11 &&
+              12 != var2) {
+              if (13 == var2) {
+                se.a(-86);
+                return;
               }
+              if (17 == var2) {
+                this.k(-105);
+                return;
+              }
+              if (var2 == 18) {
+                to.g(0);
+                return;
+              }
+              v.a("MGS1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
+              te.b(true);
+              return;
             }
+            boolean stackIn_25_0 = (12 == var2);
+            s var4 = um.a(stackIn_25_0, 1);
+            pj.a(0, var4);
           }
           return;
         }

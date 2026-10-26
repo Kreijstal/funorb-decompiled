@@ -122,26 +122,18 @@ final class wk extends hh {
                 var11 = var11 * var13;
                 var12 = var12 * var13;
                 for (int var16 = 0; var16 < 6; var16++) {
-                  if (var16 != 0) {
-                    if (var16 != 1) {
-                      if (var16 != 2) {
-                        if (var16 == 3) {
-                          var10 = -var12;
-                        } else {
-                          if (var16 != 4) {
-                            var10 = -var13;
-                          } else {
-                            var10 = var13;
-                          }
-                        }
-                      } else {
-                        var10 = var12;
-                      }
-                    } else {
-                      var10 = var11;
-                    }
-                  } else {
+                  if (var16 == 0) {
                     var10 = -var11;
+                  } else if (var16 == 1) {
+                    var10 = var11;
+                  } else if (var16 == 2) {
+                    var10 = var12;
+                  } else if (var16 == 3) {
+                    var10 = -var12;
+                  } else if (var16 != 4) {
+                    var10 = -var13;
+                  } else {
+                    var10 = var13;
                   }
                   if (0.0f < var10) {
                     var6 = (int)(Math.pow((double)var10, 96.0) * (double)var2_int);

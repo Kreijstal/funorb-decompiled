@@ -214,26 +214,20 @@ final class SoftwareRasterizer {
             int var21Lifetime2 = var27[var20Lifetime2Lifetime1] / var17;
             int var22Lifetime2 = var28[var20Lifetime2Lifetime1] / var17;
             int var23Lifetime2 = var29[var20Lifetime2Lifetime1] / var17;
-            if (var21Lifetime2 >= 0) {
-              if (var21Lifetime2 > 255) {
-                var21Lifetime2 = 255;
-              }
-            } else {
+            if (!(var21Lifetime2 >= 0)) {
               var21Lifetime2 = 0;
+            } else if (var21Lifetime2 > 255) {
+              var21Lifetime2 = 255;
             }
-            if (var22Lifetime2 >= 0) {
-              if (var22Lifetime2 > 255) {
-                var22Lifetime2 = 255;
-              }
-            } else {
+            if (!(var22Lifetime2 >= 0)) {
               var22Lifetime2 = 0;
+            } else if (var22Lifetime2 > 255) {
+              var22Lifetime2 = 255;
             }
-            if (var23Lifetime2 >= 0) {
-              if (var23Lifetime2 > 255) {
-                var23Lifetime2 = 255;
-              }
-            } else {
+            if (!(var23Lifetime2 >= 0)) {
               var23Lifetime2 = 0;
+            } else if (var23Lifetime2 > 255) {
+              var23Lifetime2 = 255;
             }
             int incrementValue$0 = param2;
             param2++;
@@ -749,26 +743,20 @@ final class SoftwareRasterizer {
             int var21Lifetime2 = var14 / var20;
             int var22Lifetime2 = var15 / var20;
             int var23Lifetime2 = var16 / var20;
-            if (var21Lifetime2 >= 0) {
-              if (var21Lifetime2 > 255) {
-                var21Lifetime2 = 255;
-              }
-            } else {
+            if (!(var21Lifetime2 >= 0)) {
               var21Lifetime2 = 0;
+            } else if (var21Lifetime2 > 255) {
+              var21Lifetime2 = 255;
             }
-            if (var22Lifetime2 >= 0) {
-              if (var22Lifetime2 > 255) {
-                var22Lifetime2 = 255;
-              }
-            } else {
+            if (!(var22Lifetime2 >= 0)) {
               var22Lifetime2 = 0;
+            } else if (var22Lifetime2 > 255) {
+              var22Lifetime2 = 255;
             }
-            if (var23Lifetime2 >= 0) {
-              if (var23Lifetime2 > 255) {
-                var23Lifetime2 = 255;
-              }
-            } else {
+            if (!(var23Lifetime2 >= 0)) {
               var23Lifetime2 = 0;
+            } else if (var23Lifetime2 > 255) {
+              var23Lifetime2 = 255;
             }
             int incrementValue$2 = param2;
             param2++;

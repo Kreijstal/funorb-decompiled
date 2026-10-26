@@ -417,24 +417,22 @@ final class vh extends mk {
               int var21Lifetime3 = this.field_E[incrementValue$12];
               if (var21Lifetime3 == 0) {
                 var7++;
+              } else if (var17Lifetime4 == 255) {
+                var22Lifetime2 = (var21Lifetime3 & 16711680) * var14Lifetime5 & -16777216;
+                var23Lifetime1 = (var21Lifetime3 & 65280) * var15Lifetime5 & 16711680;
+                var24Lifetime1 = (var21Lifetime3 & 255) * var16Lifetime5 & 65280;
+                int incrementValue$13 = var7;
+                var7++;
+                var13[incrementValue$13] = (var22Lifetime2 | var23Lifetime1 | var24Lifetime1) >>> 8;
               } else {
-                if (var17Lifetime4 == 255) {
-                  var22Lifetime2 = (var21Lifetime3 & 16711680) * var14Lifetime5 & -16777216;
-                  var23Lifetime1 = (var21Lifetime3 & 65280) * var15Lifetime5 & 16711680;
-                  var24Lifetime1 = (var21Lifetime3 & 255) * var16Lifetime5 & 65280;
-                  int incrementValue$13 = var7;
-                  var7++;
-                  var13[incrementValue$13] = (var22Lifetime2 | var23Lifetime1 | var24Lifetime1) >>> 8;
-                } else {
-                  var22Lifetime2 = (var21Lifetime3 & 16711680) * var14Lifetime5 & -16777216;
-                  var23Lifetime1 = (var21Lifetime3 & 65280) * var15Lifetime5 & 16711680;
-                  var24Lifetime1 = (var21Lifetime3 & 255) * var16Lifetime5 & 65280;
-                  var21Lifetime3 = (var22Lifetime2 | var23Lifetime1 | var24Lifetime1) >>> 8;
-                  int var25Lifetime1 = var27[var7];
-                  int incrementValue$14 = var7;
-                  var7++;
-                  var13[incrementValue$14] = ((var21Lifetime3 & 16711935) * var17Lifetime4 + (var25Lifetime1 & 16711935) * var18Lifetime4 & -16711936) + ((var21Lifetime3 & 65280) * var17Lifetime4 + (var25Lifetime1 & 65280) * var18Lifetime4 & 16711680) >> 8;
-                }
+                var22Lifetime2 = (var21Lifetime3 & 16711680) * var14Lifetime5 & -16777216;
+                var23Lifetime1 = (var21Lifetime3 & 65280) * var15Lifetime5 & 16711680;
+                var24Lifetime1 = (var21Lifetime3 & 255) * var16Lifetime5 & 65280;
+                var21Lifetime3 = (var22Lifetime2 | var23Lifetime1 | var24Lifetime1) >>> 8;
+                int var25Lifetime1 = var27[var7];
+                int incrementValue$14 = var7;
+                var7++;
+                var13[incrementValue$14] = ((var21Lifetime3 & 16711935) * var17Lifetime4 + (var25Lifetime1 & 16711935) * var18Lifetime4 & -16711936) + ((var21Lifetime3 & 65280) * var17Lifetime4 + (var25Lifetime1 & 65280) * var18Lifetime4 & 16711680) >> 8;
               }
             }
             var7 = var7 + var11;
@@ -492,50 +490,7 @@ final class vh extends mk {
                       if (var14 != 2) {
                         throw new IllegalArgumentException();
                       }
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 == 2) {
-                              var15 = this.field_E[var10];
-                              if (var15 != 0) {
-                                var16 = (var15 & 16711935) * field_C & -16711936;
-                                var17 = (var15 & 65280) * field_C & 16711680;
-                                var15 = ((var16 | var17) >>> 8) + field_s;
-                                var18 = var31[var11];
-                                var19 = var15 + var18;
-                                var20 = (var15 & 16711935) + (var18 & 16711935);
-                                var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                                var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                              }
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var15 = var17 - var19 | var19 - (var19 >>> 8);
-                            var19 = var31[var11];
-                            var17 = var15 + var19;
-                            var18 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var15 = (var16 | var17 | var18) >>> 8;
-                            var19 = var31[var11];
-                            var20 = var15 + var19;
-                            var21 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                            var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                          }
-                        }
-                      } else {
+                      if (var13 == 1) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
                           var16 = var31[var11];
@@ -544,102 +499,125 @@ final class vh extends mk {
                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                           var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                         }
-                      }
-                    } else {
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 != 2) {
-                              throw new IllegalArgumentException();
-                            }
-                            var15 = this.field_E[var10];
-                            if (var15 != 0) {
-                              var16 = (var15 & 16711935) * field_C & -16711936;
-                              var17 = (var15 & 65280) * field_C & 16711680;
-                              int incrementValue$33 = var11;
-                              var11++;
-                              var12[incrementValue$33] = ((var16 | var17) >>> 8) + field_s;
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var19 = var17 - var19 | var19 - (var19 >>> 8);
-                            if (var15 == 0 &&
-                              field_C != 255) {
-                              var15 = var19;
-                              var19 = var31[var11];
-                              var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                            }
-                            var31[var11] = var19;
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            if ((field_d & 16777215) != 16777215) {
-                              if (field_C == 255) {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var12[var11] = (var16 | var17 | var18) >>> 8;
-                              } else {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var15 = (var16 | var17 | var18) >>> 8;
-                                var19 = var31[var11];
-                                var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                              }
-                            } else {
-                              var16 = field_d >>> 24;
-                              var17 = 256 - var16;
-                              var18 = var31[var11];
-                              var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                            }
-                          }
-                        }
-                      } else {
+                      } else if (var13 == 0) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
-                          var31[var11] = var15;
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var31[var11];
+                          var20 = var15 + var19;
+                          var21 = (var15 & 16711935) + (var19 & 16711935);
+                          var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                          var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                         }
-                      }
-                    }
-                  } else {
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 != 2) {
-                            throw new IllegalArgumentException();
-                          }
-                          var15 = this.field_E[var10];
+                      } else if (var13 == 3) {
+                        var15 = this.field_E[var10];
+                        var16 = field_d;
+                        var17 = var15 + var16;
+                        var18 = (var15 & 16711935) + (var16 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var15 = var17 - var19 | var19 - (var19 >>> 8);
+                        var19 = var31[var11];
+                        var17 = var15 + var19;
+                        var18 = (var15 & 16711935) + (var19 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                      } else if (var13 == 2) {
+                        var15 = this.field_E[var10];
+                        if (var15 != 0) {
                           var16 = (var15 & 16711935) * field_C & -16711936;
                           var17 = (var15 & 65280) * field_C & 16711680;
-                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                        } else {
-                          int incrementValue$34 = var10;
-                          var10++;
-                          var15 = this.field_E[incrementValue$34];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                          var15 = ((var16 | var17) >>> 8) + field_s;
+                          var18 = var31[var11];
+                          var19 = var15 + var18;
+                          var20 = (var15 & 16711935) + (var18 & 16711935);
+                          var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                          var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                         }
-                      } else {
-                        int incrementValue$35 = var10;
-                        var10++;
-                        var15 = this.field_E[incrementValue$35];
-                        var16 = (var15 & 16711680) * field_n & -16777216;
-                        var17 = (var15 & 65280) * field_e & 16711680;
-                        var18 = (var15 & 255) * field_b & 65280;
-                        var12[var11] = (var16 | var17 | var18) >>> 8;
+                      }
+                    } else if (var13 == 1) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var31[var11] = var15;
+                      }
+                    } else if (var13 == 0) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        if ((field_d & 16777215) == 16777215) {
+                          var16 = field_d >>> 24;
+                          var17 = 256 - var16;
+                          var18 = var31[var11];
+                          var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                        } else if (field_C == 255) {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var12[var11] = (var16 | var17 | var18) >>> 8;
+                        } else {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var31[var11];
+                          var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                        }
+                      }
+                    } else if (var13 != 3) {
+                      if (var13 != 2) {
+                        throw new IllegalArgumentException();
+                      }
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var16 = (var15 & 16711935) * field_C & -16711936;
+                        var17 = (var15 & 65280) * field_C & 16711680;
+                        int incrementValue$33 = var11;
+                        var11++;
+                        var12[incrementValue$33] = ((var16 | var17) >>> 8) + field_s;
                       }
                     } else {
-                      var12[var11] = this.field_E[var10];
+                      var15 = this.field_E[var10];
+                      var16 = field_d;
+                      var17 = var15 + var16;
+                      var18 = (var15 & 16711935) + (var16 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var19 = var17 - var19 | var19 - (var19 >>> 8);
+                      if (var15 == 0 &&
+                        field_C != 255) {
+                        var15 = var19;
+                        var19 = var31[var11];
+                        var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                      }
+                      var31[var11] = var19;
                     }
+                  } else if (var13 == 1) {
+                    var12[var11] = this.field_E[var10];
+                  } else if (var13 == 0) {
+                    int incrementValue$35 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$35];
+                    var16 = (var15 & 16711680) * field_n & -16777216;
+                    var17 = (var15 & 65280) * field_e & 16711680;
+                    var18 = (var15 & 255) * field_b & 65280;
+                    var12[var11] = (var16 | var17 | var18) >>> 8;
+                  } else if (var13 != 3) {
+                    if (var13 != 2) {
+                      throw new IllegalArgumentException();
+                    }
+                    var15 = this.field_E[var10];
+                    var16 = (var15 & 16711935) * field_C & -16711936;
+                    var17 = (var15 & 65280) * field_C & 16711680;
+                    var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                  } else {
+                    int incrementValue$34 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$34];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
                   }
                   var9++;
                 }
@@ -683,50 +661,7 @@ final class vh extends mk {
                       if (var14 != 2) {
                         throw new IllegalArgumentException();
                       }
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 == 2) {
-                              var15 = this.field_E[var10];
-                              if (var15 != 0) {
-                                var16 = (var15 & 16711935) * field_C & -16711936;
-                                var17 = (var15 & 65280) * field_C & 16711680;
-                                var15 = ((var16 | var17) >>> 8) + field_s;
-                                var18 = var33[var11];
-                                var19 = var15 + var18;
-                                var20 = (var15 & 16711935) + (var18 & 16711935);
-                                var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                                var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                              }
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var15 = var17 - var19 | var19 - (var19 >>> 8);
-                            var19 = var33[var11];
-                            var17 = var15 + var19;
-                            var18 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var15 = (var16 | var17 | var18) >>> 8;
-                            var19 = var33[var11];
-                            var20 = var15 + var19;
-                            var21 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                            var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                          }
-                        }
-                      } else {
+                      if (var13 == 1) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
                           var16 = var33[var11];
@@ -735,102 +670,125 @@ final class vh extends mk {
                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                           var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                         }
-                      }
-                    } else {
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 != 2) {
-                              throw new IllegalArgumentException();
-                            }
-                            var15 = this.field_E[var10];
-                            if (var15 != 0) {
-                              var16 = (var15 & 16711935) * field_C & -16711936;
-                              var17 = (var15 & 65280) * field_C & 16711680;
-                              int incrementValue$25 = var11;
-                              var11++;
-                              var12[incrementValue$25] = ((var16 | var17) >>> 8) + field_s;
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var19 = var17 - var19 | var19 - (var19 >>> 8);
-                            if (var15 == 0 &&
-                              field_C != 255) {
-                              var15 = var19;
-                              var19 = var33[var11];
-                              var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                            }
-                            var33[var11] = var19;
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            if ((field_d & 16777215) != 16777215) {
-                              if (field_C == 255) {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var12[var11] = (var16 | var17 | var18) >>> 8;
-                              } else {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var15 = (var16 | var17 | var18) >>> 8;
-                                var19 = var33[var11];
-                                var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                              }
-                            } else {
-                              var16 = field_d >>> 24;
-                              var17 = 256 - var16;
-                              var18 = var33[var11];
-                              var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                            }
-                          }
-                        }
-                      } else {
+                      } else if (var13 == 0) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
-                          var33[var11] = var15;
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var33[var11];
+                          var20 = var15 + var19;
+                          var21 = (var15 & 16711935) + (var19 & 16711935);
+                          var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                          var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                         }
-                      }
-                    }
-                  } else {
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 != 2) {
-                            throw new IllegalArgumentException();
-                          }
-                          var15 = this.field_E[var10];
+                      } else if (var13 == 3) {
+                        var15 = this.field_E[var10];
+                        var16 = field_d;
+                        var17 = var15 + var16;
+                        var18 = (var15 & 16711935) + (var16 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var15 = var17 - var19 | var19 - (var19 >>> 8);
+                        var19 = var33[var11];
+                        var17 = var15 + var19;
+                        var18 = (var15 & 16711935) + (var19 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                      } else if (var13 == 2) {
+                        var15 = this.field_E[var10];
+                        if (var15 != 0) {
                           var16 = (var15 & 16711935) * field_C & -16711936;
                           var17 = (var15 & 65280) * field_C & 16711680;
-                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                        } else {
-                          int incrementValue$26 = var10;
-                          var10++;
-                          var15 = this.field_E[incrementValue$26];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                          var15 = ((var16 | var17) >>> 8) + field_s;
+                          var18 = var33[var11];
+                          var19 = var15 + var18;
+                          var20 = (var15 & 16711935) + (var18 & 16711935);
+                          var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                          var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                         }
-                      } else {
-                        int incrementValue$27 = var10;
-                        var10++;
-                        var15 = this.field_E[incrementValue$27];
-                        var16 = (var15 & 16711680) * field_n & -16777216;
-                        var17 = (var15 & 65280) * field_e & 16711680;
-                        var18 = (var15 & 255) * field_b & 65280;
-                        var12[var11] = (var16 | var17 | var18) >>> 8;
+                      }
+                    } else if (var13 == 1) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var33[var11] = var15;
+                      }
+                    } else if (var13 == 0) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        if ((field_d & 16777215) == 16777215) {
+                          var16 = field_d >>> 24;
+                          var17 = 256 - var16;
+                          var18 = var33[var11];
+                          var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                        } else if (field_C == 255) {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var12[var11] = (var16 | var17 | var18) >>> 8;
+                        } else {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var33[var11];
+                          var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                        }
+                      }
+                    } else if (var13 != 3) {
+                      if (var13 != 2) {
+                        throw new IllegalArgumentException();
+                      }
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var16 = (var15 & 16711935) * field_C & -16711936;
+                        var17 = (var15 & 65280) * field_C & 16711680;
+                        int incrementValue$25 = var11;
+                        var11++;
+                        var12[incrementValue$25] = ((var16 | var17) >>> 8) + field_s;
                       }
                     } else {
-                      var12[var11] = this.field_E[var10];
+                      var15 = this.field_E[var10];
+                      var16 = field_d;
+                      var17 = var15 + var16;
+                      var18 = (var15 & 16711935) + (var16 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var19 = var17 - var19 | var19 - (var19 >>> 8);
+                      if (var15 == 0 &&
+                        field_C != 255) {
+                        var15 = var19;
+                        var19 = var33[var11];
+                        var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                      }
+                      var33[var11] = var19;
                     }
+                  } else if (var13 == 1) {
+                    var12[var11] = this.field_E[var10];
+                  } else if (var13 == 0) {
+                    int incrementValue$27 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$27];
+                    var16 = (var15 & 16711680) * field_n & -16777216;
+                    var17 = (var15 & 65280) * field_e & 16711680;
+                    var18 = (var15 & 255) * field_b & 65280;
+                    var12[var11] = (var16 | var17 | var18) >>> 8;
+                  } else if (var13 != 3) {
+                    if (var13 != 2) {
+                      throw new IllegalArgumentException();
+                    }
+                    var15 = this.field_E[var10];
+                    var16 = (var15 & 16711935) * field_C & -16711936;
+                    var17 = (var15 & 65280) * field_C & 16711680;
+                    var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                  } else {
+                    int incrementValue$26 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$26];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
                   }
                   var8 = var8 + field_f;
                   var9++;
@@ -875,50 +833,7 @@ final class vh extends mk {
                       if (var14 != 2) {
                         throw new IllegalArgumentException();
                       }
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 == 2) {
-                              var15 = this.field_E[var10];
-                              if (var15 != 0) {
-                                var16 = (var15 & 16711935) * field_C & -16711936;
-                                var17 = (var15 & 65280) * field_C & 16711680;
-                                var15 = ((var16 | var17) >>> 8) + field_s;
-                                var18 = var32[var11];
-                                var19 = var15 + var18;
-                                var20 = (var15 & 16711935) + (var18 & 16711935);
-                                var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                                var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                              }
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var15 = var17 - var19 | var19 - (var19 >>> 8);
-                            var19 = var32[var11];
-                            var17 = var15 + var19;
-                            var18 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var15 = (var16 | var17 | var18) >>> 8;
-                            var19 = var32[var11];
-                            var20 = var15 + var19;
-                            var21 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                            var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                          }
-                        }
-                      } else {
+                      if (var13 == 1) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
                           var16 = var32[var11];
@@ -927,102 +842,125 @@ final class vh extends mk {
                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                           var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                         }
-                      }
-                    } else {
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 != 2) {
-                              throw new IllegalArgumentException();
-                            }
-                            var15 = this.field_E[var10];
-                            if (var15 != 0) {
-                              var16 = (var15 & 16711935) * field_C & -16711936;
-                              var17 = (var15 & 65280) * field_C & 16711680;
-                              int incrementValue$29 = var11;
-                              var11++;
-                              var12[incrementValue$29] = ((var16 | var17) >>> 8) + field_s;
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var19 = var17 - var19 | var19 - (var19 >>> 8);
-                            if (var15 == 0 &&
-                              field_C != 255) {
-                              var15 = var19;
-                              var19 = var32[var11];
-                              var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                            }
-                            var32[var11] = var19;
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            if ((field_d & 16777215) != 16777215) {
-                              if (field_C == 255) {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var12[var11] = (var16 | var17 | var18) >>> 8;
-                              } else {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var15 = (var16 | var17 | var18) >>> 8;
-                                var19 = var32[var11];
-                                var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                              }
-                            } else {
-                              var16 = field_d >>> 24;
-                              var17 = 256 - var16;
-                              var18 = var32[var11];
-                              var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                            }
-                          }
-                        }
-                      } else {
+                      } else if (var13 == 0) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
-                          var32[var11] = var15;
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var32[var11];
+                          var20 = var15 + var19;
+                          var21 = (var15 & 16711935) + (var19 & 16711935);
+                          var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                          var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                         }
-                      }
-                    }
-                  } else {
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 != 2) {
-                            throw new IllegalArgumentException();
-                          }
-                          var15 = this.field_E[var10];
+                      } else if (var13 == 3) {
+                        var15 = this.field_E[var10];
+                        var16 = field_d;
+                        var17 = var15 + var16;
+                        var18 = (var15 & 16711935) + (var16 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var15 = var17 - var19 | var19 - (var19 >>> 8);
+                        var19 = var32[var11];
+                        var17 = var15 + var19;
+                        var18 = (var15 & 16711935) + (var19 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                      } else if (var13 == 2) {
+                        var15 = this.field_E[var10];
+                        if (var15 != 0) {
                           var16 = (var15 & 16711935) * field_C & -16711936;
                           var17 = (var15 & 65280) * field_C & 16711680;
-                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                        } else {
-                          int incrementValue$30 = var10;
-                          var10++;
-                          var15 = this.field_E[incrementValue$30];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                          var15 = ((var16 | var17) >>> 8) + field_s;
+                          var18 = var32[var11];
+                          var19 = var15 + var18;
+                          var20 = (var15 & 16711935) + (var18 & 16711935);
+                          var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                          var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                         }
-                      } else {
-                        int incrementValue$31 = var10;
-                        var10++;
-                        var15 = this.field_E[incrementValue$31];
-                        var16 = (var15 & 16711680) * field_n & -16777216;
-                        var17 = (var15 & 65280) * field_e & 16711680;
-                        var18 = (var15 & 255) * field_b & 65280;
-                        var12[var11] = (var16 | var17 | var18) >>> 8;
+                      }
+                    } else if (var13 == 1) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var32[var11] = var15;
+                      }
+                    } else if (var13 == 0) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        if ((field_d & 16777215) == 16777215) {
+                          var16 = field_d >>> 24;
+                          var17 = 256 - var16;
+                          var18 = var32[var11];
+                          var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                        } else if (field_C == 255) {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var12[var11] = (var16 | var17 | var18) >>> 8;
+                        } else {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var32[var11];
+                          var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                        }
+                      }
+                    } else if (var13 != 3) {
+                      if (var13 != 2) {
+                        throw new IllegalArgumentException();
+                      }
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var16 = (var15 & 16711935) * field_C & -16711936;
+                        var17 = (var15 & 65280) * field_C & 16711680;
+                        int incrementValue$29 = var11;
+                        var11++;
+                        var12[incrementValue$29] = ((var16 | var17) >>> 8) + field_s;
                       }
                     } else {
-                      var12[var11] = this.field_E[var10];
+                      var15 = this.field_E[var10];
+                      var16 = field_d;
+                      var17 = var15 + var16;
+                      var18 = (var15 & 16711935) + (var16 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var19 = var17 - var19 | var19 - (var19 >>> 8);
+                      if (var15 == 0 &&
+                        field_C != 255) {
+                        var15 = var19;
+                        var19 = var32[var11];
+                        var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                      }
+                      var32[var11] = var19;
                     }
+                  } else if (var13 == 1) {
+                    var12[var11] = this.field_E[var10];
+                  } else if (var13 == 0) {
+                    int incrementValue$31 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$31];
+                    var16 = (var15 & 16711680) * field_n & -16777216;
+                    var17 = (var15 & 65280) * field_e & 16711680;
+                    var18 = (var15 & 255) * field_b & 65280;
+                    var12[var11] = (var16 | var17 | var18) >>> 8;
+                  } else if (var13 != 3) {
+                    if (var13 != 2) {
+                      throw new IllegalArgumentException();
+                    }
+                    var15 = this.field_E[var10];
+                    var16 = (var15 & 16711935) * field_C & -16711936;
+                    var17 = (var15 & 65280) * field_C & 16711680;
+                    var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                  } else {
+                    int incrementValue$30 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$30];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
                   }
                   var8 = var8 + field_f;
                   var9++;
@@ -1068,50 +1006,7 @@ final class vh extends mk {
                       if (var14 != 2) {
                         throw new IllegalArgumentException();
                       }
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 == 2) {
-                              var15 = this.field_E[var10];
-                              if (var15 != 0) {
-                                var16 = (var15 & 16711935) * field_C & -16711936;
-                                var17 = (var15 & 65280) * field_C & 16711680;
-                                var15 = ((var16 | var17) >>> 8) + field_s;
-                                var18 = var37[var11];
-                                var19 = var15 + var18;
-                                var20 = (var15 & 16711935) + (var18 & 16711935);
-                                var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                                var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                              }
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var15 = var17 - var19 | var19 - (var19 >>> 8);
-                            var19 = var37[var11];
-                            var17 = var15 + var19;
-                            var18 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var15 = (var16 | var17 | var18) >>> 8;
-                            var19 = var37[var11];
-                            var20 = var15 + var19;
-                            var21 = (var15 & 16711935) + (var19 & 16711935);
-                            var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                            var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                          }
-                        }
-                      } else {
+                      if (var13 == 1) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
                           var16 = var37[var11];
@@ -1120,102 +1015,125 @@ final class vh extends mk {
                           var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                           var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                         }
-                      }
-                    } else {
-                      if (var13 != 1) {
-                        if (var13 != 0) {
-                          if (var13 != 3) {
-                            if (var13 != 2) {
-                              throw new IllegalArgumentException();
-                            }
-                            var15 = this.field_E[var10];
-                            if (var15 != 0) {
-                              var16 = (var15 & 16711935) * field_C & -16711936;
-                              var17 = (var15 & 65280) * field_C & 16711680;
-                              int incrementValue$9 = var11;
-                              var11++;
-                              var12[incrementValue$9] = ((var16 | var17) >>> 8) + field_s;
-                            }
-                          } else {
-                            var15 = this.field_E[var10];
-                            var16 = field_d;
-                            var17 = var15 + var16;
-                            var18 = (var15 & 16711935) + (var16 & 16711935);
-                            var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                            var19 = var17 - var19 | var19 - (var19 >>> 8);
-                            if (var15 == 0 &&
-                              field_C != 255) {
-                              var15 = var19;
-                              var19 = var37[var11];
-                              var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                            }
-                            var37[var11] = var19;
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            if ((field_d & 16777215) != 16777215) {
-                              if (field_C == 255) {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var12[var11] = (var16 | var17 | var18) >>> 8;
-                              } else {
-                                var16 = (var15 & 16711680) * field_n & -16777216;
-                                var17 = (var15 & 65280) * field_e & 16711680;
-                                var18 = (var15 & 255) * field_b & 65280;
-                                var15 = (var16 | var17 | var18) >>> 8;
-                                var19 = var37[var11];
-                                var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                              }
-                            } else {
-                              var16 = field_d >>> 24;
-                              var17 = 256 - var16;
-                              var18 = var37[var11];
-                              var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                            }
-                          }
-                        }
-                      } else {
+                      } else if (var13 == 0) {
                         var15 = this.field_E[var10];
                         if (var15 != 0) {
-                          var37[var11] = var15;
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var37[var11];
+                          var20 = var15 + var19;
+                          var21 = (var15 & 16711935) + (var19 & 16711935);
+                          var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                          var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                         }
-                      }
-                    }
-                  } else {
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 != 2) {
-                            throw new IllegalArgumentException();
-                          }
-                          var15 = this.field_E[var10];
+                      } else if (var13 == 3) {
+                        var15 = this.field_E[var10];
+                        var16 = field_d;
+                        var17 = var15 + var16;
+                        var18 = (var15 & 16711935) + (var16 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var15 = var17 - var19 | var19 - (var19 >>> 8);
+                        var19 = var37[var11];
+                        var17 = var15 + var19;
+                        var18 = (var15 & 16711935) + (var19 & 16711935);
+                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                      } else if (var13 == 2) {
+                        var15 = this.field_E[var10];
+                        if (var15 != 0) {
                           var16 = (var15 & 16711935) * field_C & -16711936;
                           var17 = (var15 & 65280) * field_C & 16711680;
-                          var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                        } else {
-                          int incrementValue$10 = var10;
-                          var10++;
-                          var15 = this.field_E[incrementValue$10];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                          var15 = ((var16 | var17) >>> 8) + field_s;
+                          var18 = var37[var11];
+                          var19 = var15 + var18;
+                          var20 = (var15 & 16711935) + (var18 & 16711935);
+                          var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                          var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                         }
-                      } else {
-                        int incrementValue$11 = var10;
-                        var10++;
-                        var15 = this.field_E[incrementValue$11];
-                        var16 = (var15 & 16711680) * field_n & -16777216;
-                        var17 = (var15 & 65280) * field_e & 16711680;
-                        var18 = (var15 & 255) * field_b & 65280;
-                        var12[var11] = (var16 | var17 | var18) >>> 8;
+                      }
+                    } else if (var13 == 1) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var37[var11] = var15;
+                      }
+                    } else if (var13 == 0) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        if ((field_d & 16777215) == 16777215) {
+                          var16 = field_d >>> 24;
+                          var17 = 256 - var16;
+                          var18 = var37[var11];
+                          var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                        } else if (field_C == 255) {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var12[var11] = (var16 | var17 | var18) >>> 8;
+                        } else {
+                          var16 = (var15 & 16711680) * field_n & -16777216;
+                          var17 = (var15 & 65280) * field_e & 16711680;
+                          var18 = (var15 & 255) * field_b & 65280;
+                          var15 = (var16 | var17 | var18) >>> 8;
+                          var19 = var37[var11];
+                          var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                        }
+                      }
+                    } else if (var13 != 3) {
+                      if (var13 != 2) {
+                        throw new IllegalArgumentException();
+                      }
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
+                        var16 = (var15 & 16711935) * field_C & -16711936;
+                        var17 = (var15 & 65280) * field_C & 16711680;
+                        int incrementValue$9 = var11;
+                        var11++;
+                        var12[incrementValue$9] = ((var16 | var17) >>> 8) + field_s;
                       }
                     } else {
-                      var12[var11] = this.field_E[var10];
+                      var15 = this.field_E[var10];
+                      var16 = field_d;
+                      var17 = var15 + var16;
+                      var18 = (var15 & 16711935) + (var16 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var19 = var17 - var19 | var19 - (var19 >>> 8);
+                      if (var15 == 0 &&
+                        field_C != 255) {
+                        var15 = var19;
+                        var19 = var37[var11];
+                        var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                      }
+                      var37[var11] = var19;
                     }
+                  } else if (var13 == 1) {
+                    var12[var11] = this.field_E[var10];
+                  } else if (var13 == 0) {
+                    int incrementValue$11 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$11];
+                    var16 = (var15 & 16711680) * field_n & -16777216;
+                    var17 = (var15 & 65280) * field_e & 16711680;
+                    var18 = (var15 & 255) * field_b & 65280;
+                    var12[var11] = (var16 | var17 | var18) >>> 8;
+                  } else if (var13 != 3) {
+                    if (var13 != 2) {
+                      throw new IllegalArgumentException();
+                    }
+                    var15 = this.field_E[var10];
+                    var16 = (var15 & 16711935) * field_C & -16711936;
+                    var17 = (var15 & 65280) * field_C & 16711680;
+                    var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                  } else {
+                    int incrementValue$10 = var10;
+                    var10++;
+                    var15 = this.field_E[incrementValue$10];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
                   }
                   var7 = var7 + field_A;
                   var9++;
@@ -1269,50 +1187,7 @@ final class vh extends mk {
                     if (var14 != 2) {
                       throw new IllegalArgumentException();
                     }
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 == 2) {
-                            var15 = this.field_E[var10];
-                            if (var15 != 0) {
-                              var16 = (var15 & 16711935) * field_C & -16711936;
-                              var17 = (var15 & 65280) * field_C & 16711680;
-                              var15 = ((var16 | var17) >>> 8) + field_s;
-                              var18 = var39[var11];
-                              var19 = var15 + var18;
-                              var20 = (var15 & 16711935) + (var18 & 16711935);
-                              var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                              var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                            }
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var15 = var17 - var19 | var19 - (var19 >>> 8);
-                          var19 = var39[var11];
-                          var17 = var15 + var19;
-                          var18 = (var15 & 16711935) + (var19 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          var16 = (var15 & 16711680) * field_n & -16777216;
-                          var17 = (var15 & 65280) * field_e & 16711680;
-                          var18 = (var15 & 255) * field_b & 65280;
-                          var15 = (var16 | var17 | var18) >>> 8;
-                          var19 = var39[var11];
-                          var20 = var15 + var19;
-                          var21 = (var15 & 16711935) + (var19 & 16711935);
-                          var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                          var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                        }
-                      }
-                    } else {
+                    if (var13 == 1) {
                       var15 = this.field_E[var10];
                       if (var15 != 0) {
                         var16 = var39[var11];
@@ -1321,102 +1196,125 @@ final class vh extends mk {
                         var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                         var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                       }
-                    }
-                  } else {
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 != 2) {
-                            throw new IllegalArgumentException();
-                          }
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711935) * field_C & -16711936;
-                            var17 = (var15 & 65280) * field_C & 16711680;
-                            int incrementValue$1 = var11;
-                            var11++;
-                            var12[incrementValue$1] = ((var16 | var17) >>> 8) + field_s;
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var19 = var17 - var19 | var19 - (var19 >>> 8);
-                          if (var15 == 0 &&
-                            field_C != 255) {
-                            var15 = var19;
-                            var19 = var39[var11];
-                            var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                          }
-                          var39[var11] = var19;
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          if ((field_d & 16777215) != 16777215) {
-                            if (field_C == 255) {
-                              var16 = (var15 & 16711680) * field_n & -16777216;
-                              var17 = (var15 & 65280) * field_e & 16711680;
-                              var18 = (var15 & 255) * field_b & 65280;
-                              var12[var11] = (var16 | var17 | var18) >>> 8;
-                            } else {
-                              var16 = (var15 & 16711680) * field_n & -16777216;
-                              var17 = (var15 & 65280) * field_e & 16711680;
-                              var18 = (var15 & 255) * field_b & 65280;
-                              var15 = (var16 | var17 | var18) >>> 8;
-                              var19 = var39[var11];
-                              var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                            }
-                          } else {
-                            var16 = field_d >>> 24;
-                            var17 = 256 - var16;
-                            var18 = var39[var11];
-                            var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                          }
-                        }
-                      }
-                    } else {
+                    } else if (var13 == 0) {
                       var15 = this.field_E[var10];
                       if (var15 != 0) {
-                        var39[var11] = var15;
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var15 = (var16 | var17 | var18) >>> 8;
+                        var19 = var39[var11];
+                        var20 = var15 + var19;
+                        var21 = (var15 & 16711935) + (var19 & 16711935);
+                        var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                        var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                       }
-                    }
-                  }
-                } else {
-                  if (var13 != 1) {
-                    if (var13 != 0) {
-                      if (var13 != 3) {
-                        if (var13 != 2) {
-                          throw new IllegalArgumentException();
-                        }
-                        var15 = this.field_E[var10];
+                    } else if (var13 == 3) {
+                      var15 = this.field_E[var10];
+                      var16 = field_d;
+                      var17 = var15 + var16;
+                      var18 = (var15 & 16711935) + (var16 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var15 = var17 - var19 | var19 - (var19 >>> 8);
+                      var19 = var39[var11];
+                      var17 = var15 + var19;
+                      var18 = (var15 & 16711935) + (var19 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                    } else if (var13 == 2) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
                         var16 = (var15 & 16711935) * field_C & -16711936;
                         var17 = (var15 & 65280) * field_C & 16711680;
-                        var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                      } else {
-                        int incrementValue$2 = var10;
-                        var10++;
-                        var15 = this.field_E[incrementValue$2];
-                        var16 = field_d;
-                        var17 = var15 + var16;
-                        var18 = (var15 & 16711935) + (var16 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                        var15 = ((var16 | var17) >>> 8) + field_s;
+                        var18 = var39[var11];
+                        var19 = var15 + var18;
+                        var20 = (var15 & 16711935) + (var18 & 16711935);
+                        var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                        var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                       }
-                    } else {
-                      int incrementValue$3 = var10;
-                      var10++;
-                      var15 = this.field_E[incrementValue$3];
-                      var16 = (var15 & 16711680) * field_n & -16777216;
-                      var17 = (var15 & 65280) * field_e & 16711680;
-                      var18 = (var15 & 255) * field_b & 65280;
-                      var12[var11] = (var16 | var17 | var18) >>> 8;
+                    }
+                  } else if (var13 == 1) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      var39[var11] = var15;
+                    }
+                  } else if (var13 == 0) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      if ((field_d & 16777215) == 16777215) {
+                        var16 = field_d >>> 24;
+                        var17 = 256 - var16;
+                        var18 = var39[var11];
+                        var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                      } else if (field_C == 255) {
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var12[var11] = (var16 | var17 | var18) >>> 8;
+                      } else {
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var15 = (var16 | var17 | var18) >>> 8;
+                        var19 = var39[var11];
+                        var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                      }
+                    }
+                  } else if (var13 != 3) {
+                    if (var13 != 2) {
+                      throw new IllegalArgumentException();
+                    }
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      var16 = (var15 & 16711935) * field_C & -16711936;
+                      var17 = (var15 & 65280) * field_C & 16711680;
+                      int incrementValue$1 = var11;
+                      var11++;
+                      var12[incrementValue$1] = ((var16 | var17) >>> 8) + field_s;
                     }
                   } else {
-                    var12[var11] = this.field_E[var10];
+                    var15 = this.field_E[var10];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var19 = var17 - var19 | var19 - (var19 >>> 8);
+                    if (var15 == 0 &&
+                      field_C != 255) {
+                      var15 = var19;
+                      var19 = var39[var11];
+                      var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                    }
+                    var39[var11] = var19;
                   }
+                } else if (var13 == 1) {
+                  var12[var11] = this.field_E[var10];
+                } else if (var13 == 0) {
+                  int incrementValue$3 = var10;
+                  var10++;
+                  var15 = this.field_E[incrementValue$3];
+                  var16 = (var15 & 16711680) * field_n & -16777216;
+                  var17 = (var15 & 65280) * field_e & 16711680;
+                  var18 = (var15 & 255) * field_b & 65280;
+                  var12[var11] = (var16 | var17 | var18) >>> 8;
+                } else if (var13 != 3) {
+                  if (var13 != 2) {
+                    throw new IllegalArgumentException();
+                  }
+                  var15 = this.field_E[var10];
+                  var16 = (var15 & 16711935) * field_C & -16711936;
+                  var17 = (var15 & 65280) * field_C & 16711680;
+                  var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                } else {
+                  int incrementValue$2 = var10;
+                  var10++;
+                  var15 = this.field_E[incrementValue$2];
+                  var16 = field_d;
+                  var17 = var15 + var16;
+                  var18 = (var15 & 16711935) + (var16 & 16711935);
+                  var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                  var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
                 }
                 var7 = var7 + field_A;
                 var8 = var8 + field_f;
@@ -1470,50 +1368,7 @@ final class vh extends mk {
                     if (var14 != 2) {
                       throw new IllegalArgumentException();
                     }
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 == 2) {
-                            var15 = this.field_E[var10];
-                            if (var15 != 0) {
-                              var16 = (var15 & 16711935) * field_C & -16711936;
-                              var17 = (var15 & 65280) * field_C & 16711680;
-                              var15 = ((var16 | var17) >>> 8) + field_s;
-                              var18 = var38[var11];
-                              var19 = var15 + var18;
-                              var20 = (var15 & 16711935) + (var18 & 16711935);
-                              var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                              var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                            }
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var15 = var17 - var19 | var19 - (var19 >>> 8);
-                          var19 = var38[var11];
-                          var17 = var15 + var19;
-                          var18 = (var15 & 16711935) + (var19 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          var16 = (var15 & 16711680) * field_n & -16777216;
-                          var17 = (var15 & 65280) * field_e & 16711680;
-                          var18 = (var15 & 255) * field_b & 65280;
-                          var15 = (var16 | var17 | var18) >>> 8;
-                          var19 = var38[var11];
-                          var20 = var15 + var19;
-                          var21 = (var15 & 16711935) + (var19 & 16711935);
-                          var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                          var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                        }
-                      }
-                    } else {
+                    if (var13 == 1) {
                       var15 = this.field_E[var10];
                       if (var15 != 0) {
                         var16 = var38[var11];
@@ -1522,102 +1377,125 @@ final class vh extends mk {
                         var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                         var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                       }
-                    }
-                  } else {
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 != 2) {
-                            throw new IllegalArgumentException();
-                          }
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711935) * field_C & -16711936;
-                            var17 = (var15 & 65280) * field_C & 16711680;
-                            int incrementValue$5 = var11;
-                            var11++;
-                            var12[incrementValue$5] = ((var16 | var17) >>> 8) + field_s;
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var19 = var17 - var19 | var19 - (var19 >>> 8);
-                          if (var15 == 0 &&
-                            field_C != 255) {
-                            var15 = var19;
-                            var19 = var38[var11];
-                            var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                          }
-                          var38[var11] = var19;
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          if ((field_d & 16777215) != 16777215) {
-                            if (field_C == 255) {
-                              var16 = (var15 & 16711680) * field_n & -16777216;
-                              var17 = (var15 & 65280) * field_e & 16711680;
-                              var18 = (var15 & 255) * field_b & 65280;
-                              var12[var11] = (var16 | var17 | var18) >>> 8;
-                            } else {
-                              var16 = (var15 & 16711680) * field_n & -16777216;
-                              var17 = (var15 & 65280) * field_e & 16711680;
-                              var18 = (var15 & 255) * field_b & 65280;
-                              var15 = (var16 | var17 | var18) >>> 8;
-                              var19 = var38[var11];
-                              var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                            }
-                          } else {
-                            var16 = field_d >>> 24;
-                            var17 = 256 - var16;
-                            var18 = var38[var11];
-                            var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                          }
-                        }
-                      }
-                    } else {
+                    } else if (var13 == 0) {
                       var15 = this.field_E[var10];
                       if (var15 != 0) {
-                        var38[var11] = var15;
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var15 = (var16 | var17 | var18) >>> 8;
+                        var19 = var38[var11];
+                        var20 = var15 + var19;
+                        var21 = (var15 & 16711935) + (var19 & 16711935);
+                        var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                        var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                       }
-                    }
-                  }
-                } else {
-                  if (var13 != 1) {
-                    if (var13 != 0) {
-                      if (var13 != 3) {
-                        if (var13 != 2) {
-                          throw new IllegalArgumentException();
-                        }
-                        var15 = this.field_E[var10];
+                    } else if (var13 == 3) {
+                      var15 = this.field_E[var10];
+                      var16 = field_d;
+                      var17 = var15 + var16;
+                      var18 = (var15 & 16711935) + (var16 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var15 = var17 - var19 | var19 - (var19 >>> 8);
+                      var19 = var38[var11];
+                      var17 = var15 + var19;
+                      var18 = (var15 & 16711935) + (var19 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                    } else if (var13 == 2) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
                         var16 = (var15 & 16711935) * field_C & -16711936;
                         var17 = (var15 & 65280) * field_C & 16711680;
-                        var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                      } else {
-                        int incrementValue$6 = var10;
-                        var10++;
-                        var15 = this.field_E[incrementValue$6];
-                        var16 = field_d;
-                        var17 = var15 + var16;
-                        var18 = (var15 & 16711935) + (var16 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                        var15 = ((var16 | var17) >>> 8) + field_s;
+                        var18 = var38[var11];
+                        var19 = var15 + var18;
+                        var20 = (var15 & 16711935) + (var18 & 16711935);
+                        var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                        var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                       }
-                    } else {
-                      int incrementValue$7 = var10;
-                      var10++;
-                      var15 = this.field_E[incrementValue$7];
-                      var16 = (var15 & 16711680) * field_n & -16777216;
-                      var17 = (var15 & 65280) * field_e & 16711680;
-                      var18 = (var15 & 255) * field_b & 65280;
-                      var12[var11] = (var16 | var17 | var18) >>> 8;
+                    }
+                  } else if (var13 == 1) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      var38[var11] = var15;
+                    }
+                  } else if (var13 == 0) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      if ((field_d & 16777215) == 16777215) {
+                        var16 = field_d >>> 24;
+                        var17 = 256 - var16;
+                        var18 = var38[var11];
+                        var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                      } else if (field_C == 255) {
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var12[var11] = (var16 | var17 | var18) >>> 8;
+                      } else {
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var15 = (var16 | var17 | var18) >>> 8;
+                        var19 = var38[var11];
+                        var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                      }
+                    }
+                  } else if (var13 != 3) {
+                    if (var13 != 2) {
+                      throw new IllegalArgumentException();
+                    }
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      var16 = (var15 & 16711935) * field_C & -16711936;
+                      var17 = (var15 & 65280) * field_C & 16711680;
+                      int incrementValue$5 = var11;
+                      var11++;
+                      var12[incrementValue$5] = ((var16 | var17) >>> 8) + field_s;
                     }
                   } else {
-                    var12[var11] = this.field_E[var10];
+                    var15 = this.field_E[var10];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var19 = var17 - var19 | var19 - (var19 >>> 8);
+                    if (var15 == 0 &&
+                      field_C != 255) {
+                      var15 = var19;
+                      var19 = var38[var11];
+                      var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                    }
+                    var38[var11] = var19;
                   }
+                } else if (var13 == 1) {
+                  var12[var11] = this.field_E[var10];
+                } else if (var13 == 0) {
+                  int incrementValue$7 = var10;
+                  var10++;
+                  var15 = this.field_E[incrementValue$7];
+                  var16 = (var15 & 16711680) * field_n & -16777216;
+                  var17 = (var15 & 65280) * field_e & 16711680;
+                  var18 = (var15 & 255) * field_b & 65280;
+                  var12[var11] = (var16 | var17 | var18) >>> 8;
+                } else if (var13 != 3) {
+                  if (var13 != 2) {
+                    throw new IllegalArgumentException();
+                  }
+                  var15 = this.field_E[var10];
+                  var16 = (var15 & 16711935) * field_C & -16711936;
+                  var17 = (var15 & 65280) * field_C & 16711680;
+                  var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                } else {
+                  int incrementValue$6 = var10;
+                  var10++;
+                  var15 = this.field_E[incrementValue$6];
+                  var16 = field_d;
+                  var17 = var15 + var16;
+                  var18 = (var15 & 16711935) + (var16 & 16711935);
+                  var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                  var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
                 }
                 var7 = var7 + field_A;
                 var8 = var8 + field_f;
@@ -1663,50 +1541,7 @@ final class vh extends mk {
                     if (var14 != 2) {
                       throw new IllegalArgumentException();
                     }
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 == 2) {
-                            var15 = this.field_E[var10];
-                            if (var15 != 0) {
-                              var16 = (var15 & 16711935) * field_C & -16711936;
-                              var17 = (var15 & 65280) * field_C & 16711680;
-                              var15 = ((var16 | var17) >>> 8) + field_s;
-                              var18 = var34[var11];
-                              var19 = var15 + var18;
-                              var20 = (var15 & 16711935) + (var18 & 16711935);
-                              var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                              var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                            }
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var15 = var17 - var19 | var19 - (var19 >>> 8);
-                          var19 = var34[var11];
-                          var17 = var15 + var19;
-                          var18 = (var15 & 16711935) + (var19 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          var16 = (var15 & 16711680) * field_n & -16777216;
-                          var17 = (var15 & 65280) * field_e & 16711680;
-                          var18 = (var15 & 255) * field_b & 65280;
-                          var15 = (var16 | var17 | var18) >>> 8;
-                          var19 = var34[var11];
-                          var20 = var15 + var19;
-                          var21 = (var15 & 16711935) + (var19 & 16711935);
-                          var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                          var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                        }
-                      }
-                    } else {
+                    if (var13 == 1) {
                       var15 = this.field_E[var10];
                       if (var15 != 0) {
                         var16 = var34[var11];
@@ -1715,102 +1550,125 @@ final class vh extends mk {
                         var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                         var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                       }
-                    }
-                  } else {
-                    if (var13 != 1) {
-                      if (var13 != 0) {
-                        if (var13 != 3) {
-                          if (var13 != 2) {
-                            throw new IllegalArgumentException();
-                          }
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711935) * field_C & -16711936;
-                            var17 = (var15 & 65280) * field_C & 16711680;
-                            int incrementValue$21 = var11;
-                            var11++;
-                            var12[incrementValue$21] = ((var16 | var17) >>> 8) + field_s;
-                          }
-                        } else {
-                          var15 = this.field_E[var10];
-                          var16 = field_d;
-                          var17 = var15 + var16;
-                          var18 = (var15 & 16711935) + (var16 & 16711935);
-                          var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                          var19 = var17 - var19 | var19 - (var19 >>> 8);
-                          if (var15 == 0 &&
-                            field_C != 255) {
-                            var15 = var19;
-                            var19 = var34[var11];
-                            var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                          }
-                          var34[var11] = var19;
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          if ((field_d & 16777215) != 16777215) {
-                            if (field_C == 255) {
-                              var16 = (var15 & 16711680) * field_n & -16777216;
-                              var17 = (var15 & 65280) * field_e & 16711680;
-                              var18 = (var15 & 255) * field_b & 65280;
-                              var12[var11] = (var16 | var17 | var18) >>> 8;
-                            } else {
-                              var16 = (var15 & 16711680) * field_n & -16777216;
-                              var17 = (var15 & 65280) * field_e & 16711680;
-                              var18 = (var15 & 255) * field_b & 65280;
-                              var15 = (var16 | var17 | var18) >>> 8;
-                              var19 = var34[var11];
-                              var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                            }
-                          } else {
-                            var16 = field_d >>> 24;
-                            var17 = 256 - var16;
-                            var18 = var34[var11];
-                            var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                          }
-                        }
-                      }
-                    } else {
+                    } else if (var13 == 0) {
                       var15 = this.field_E[var10];
                       if (var15 != 0) {
-                        var34[var11] = var15;
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var15 = (var16 | var17 | var18) >>> 8;
+                        var19 = var34[var11];
+                        var20 = var15 + var19;
+                        var21 = (var15 & 16711935) + (var19 & 16711935);
+                        var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                        var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                       }
-                    }
-                  }
-                } else {
-                  if (var13 != 1) {
-                    if (var13 != 0) {
-                      if (var13 != 3) {
-                        if (var13 != 2) {
-                          throw new IllegalArgumentException();
-                        }
-                        var15 = this.field_E[var10];
+                    } else if (var13 == 3) {
+                      var15 = this.field_E[var10];
+                      var16 = field_d;
+                      var17 = var15 + var16;
+                      var18 = (var15 & 16711935) + (var16 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var15 = var17 - var19 | var19 - (var19 >>> 8);
+                      var19 = var34[var11];
+                      var17 = var15 + var19;
+                      var18 = (var15 & 16711935) + (var19 & 16711935);
+                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                      var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                    } else if (var13 == 2) {
+                      var15 = this.field_E[var10];
+                      if (var15 != 0) {
                         var16 = (var15 & 16711935) * field_C & -16711936;
                         var17 = (var15 & 65280) * field_C & 16711680;
-                        var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                      } else {
-                        int incrementValue$22 = var10;
-                        var10++;
-                        var15 = this.field_E[incrementValue$22];
-                        var16 = field_d;
-                        var17 = var15 + var16;
-                        var18 = (var15 & 16711935) + (var16 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                        var15 = ((var16 | var17) >>> 8) + field_s;
+                        var18 = var34[var11];
+                        var19 = var15 + var18;
+                        var20 = (var15 & 16711935) + (var18 & 16711935);
+                        var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                        var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                       }
-                    } else {
-                      int incrementValue$23 = var10;
-                      var10++;
-                      var15 = this.field_E[incrementValue$23];
-                      var16 = (var15 & 16711680) * field_n & -16777216;
-                      var17 = (var15 & 65280) * field_e & 16711680;
-                      var18 = (var15 & 255) * field_b & 65280;
-                      var12[var11] = (var16 | var17 | var18) >>> 8;
+                    }
+                  } else if (var13 == 1) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      var34[var11] = var15;
+                    }
+                  } else if (var13 == 0) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      if ((field_d & 16777215) == 16777215) {
+                        var16 = field_d >>> 24;
+                        var17 = 256 - var16;
+                        var18 = var34[var11];
+                        var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                      } else if (field_C == 255) {
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var12[var11] = (var16 | var17 | var18) >>> 8;
+                      } else {
+                        var16 = (var15 & 16711680) * field_n & -16777216;
+                        var17 = (var15 & 65280) * field_e & 16711680;
+                        var18 = (var15 & 255) * field_b & 65280;
+                        var15 = (var16 | var17 | var18) >>> 8;
+                        var19 = var34[var11];
+                        var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                      }
+                    }
+                  } else if (var13 != 3) {
+                    if (var13 != 2) {
+                      throw new IllegalArgumentException();
+                    }
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
+                      var16 = (var15 & 16711935) * field_C & -16711936;
+                      var17 = (var15 & 65280) * field_C & 16711680;
+                      int incrementValue$21 = var11;
+                      var11++;
+                      var12[incrementValue$21] = ((var16 | var17) >>> 8) + field_s;
                     }
                   } else {
-                    var12[var11] = this.field_E[var10];
+                    var15 = this.field_E[var10];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var19 = var17 - var19 | var19 - (var19 >>> 8);
+                    if (var15 == 0 &&
+                      field_C != 255) {
+                      var15 = var19;
+                      var19 = var34[var11];
+                      var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                    }
+                    var34[var11] = var19;
                   }
+                } else if (var13 == 1) {
+                  var12[var11] = this.field_E[var10];
+                } else if (var13 == 0) {
+                  int incrementValue$23 = var10;
+                  var10++;
+                  var15 = this.field_E[incrementValue$23];
+                  var16 = (var15 & 16711680) * field_n & -16777216;
+                  var17 = (var15 & 65280) * field_e & 16711680;
+                  var18 = (var15 & 255) * field_b & 65280;
+                  var12[var11] = (var16 | var17 | var18) >>> 8;
+                } else if (var13 != 3) {
+                  if (var13 != 2) {
+                    throw new IllegalArgumentException();
+                  }
+                  var15 = this.field_E[var10];
+                  var16 = (var15 & 16711935) * field_C & -16711936;
+                  var17 = (var15 & 65280) * field_C & 16711680;
+                  var12[var11] = ((var16 | var17) >>> 8) + field_s;
+                } else {
+                  int incrementValue$22 = var10;
+                  var10++;
+                  var15 = this.field_E[incrementValue$22];
+                  var16 = field_d;
+                  var17 = var15 + var16;
+                  var18 = (var15 & 16711935) + (var16 & 16711935);
+                  var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                  var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
                 }
                 var7 = var7 + field_A;
                 var9++;
@@ -1865,50 +1723,7 @@ final class vh extends mk {
                   if (var14 != 2) {
                     throw new IllegalArgumentException();
                   }
-                  if (var13 != 1) {
-                    if (var13 != 0) {
-                      if (var13 != 3) {
-                        if (var13 == 2) {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711935) * field_C & -16711936;
-                            var17 = (var15 & 65280) * field_C & 16711680;
-                            var15 = ((var16 | var17) >>> 8) + field_s;
-                            var18 = var36[var11];
-                            var19 = var15 + var18;
-                            var20 = (var15 & 16711935) + (var18 & 16711935);
-                            var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                            var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                          }
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        var16 = field_d;
-                        var17 = var15 + var16;
-                        var18 = (var15 & 16711935) + (var16 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var15 = var17 - var19 | var19 - (var19 >>> 8);
-                        var19 = var36[var11];
-                        var17 = var15 + var19;
-                        var18 = (var15 & 16711935) + (var19 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                      }
-                    } else {
-                      var15 = this.field_E[var10];
-                      if (var15 != 0) {
-                        var16 = (var15 & 16711680) * field_n & -16777216;
-                        var17 = (var15 & 65280) * field_e & 16711680;
-                        var18 = (var15 & 255) * field_b & 65280;
-                        var15 = (var16 | var17 | var18) >>> 8;
-                        var19 = var36[var11];
-                        var20 = var15 + var19;
-                        var21 = (var15 & 16711935) + (var19 & 16711935);
-                        var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                        var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                      }
-                    }
-                  } else {
+                  if (var13 == 1) {
                     var15 = this.field_E[var10];
                     if (var15 != 0) {
                       var16 = var36[var11];
@@ -1917,102 +1732,125 @@ final class vh extends mk {
                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                       var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                     }
-                  }
-                } else {
-                  if (var13 != 1) {
-                    if (var13 != 0) {
-                      if (var13 != 3) {
-                        if (var13 != 2) {
-                          throw new IllegalArgumentException();
-                        }
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          var16 = (var15 & 16711935) * field_C & -16711936;
-                          var17 = (var15 & 65280) * field_C & 16711680;
-                          int incrementValue$13 = var11;
-                          var11++;
-                          var12[incrementValue$13] = ((var16 | var17) >>> 8) + field_s;
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        var16 = field_d;
-                        var17 = var15 + var16;
-                        var18 = (var15 & 16711935) + (var16 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var19 = var17 - var19 | var19 - (var19 >>> 8);
-                        if (var15 == 0 &&
-                          field_C != 255) {
-                          var15 = var19;
-                          var19 = var36[var11];
-                          var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                        }
-                        var36[var11] = var19;
-                      }
-                    } else {
-                      var15 = this.field_E[var10];
-                      if (var15 != 0) {
-                        if ((field_d & 16777215) != 16777215) {
-                          if (field_C == 255) {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var12[var11] = (var16 | var17 | var18) >>> 8;
-                          } else {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var15 = (var16 | var17 | var18) >>> 8;
-                            var19 = var36[var11];
-                            var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                          }
-                        } else {
-                          var16 = field_d >>> 24;
-                          var17 = 256 - var16;
-                          var18 = var36[var11];
-                          var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                        }
-                      }
-                    }
-                  } else {
+                  } else if (var13 == 0) {
                     var15 = this.field_E[var10];
                     if (var15 != 0) {
-                      var36[var11] = var15;
+                      var16 = (var15 & 16711680) * field_n & -16777216;
+                      var17 = (var15 & 65280) * field_e & 16711680;
+                      var18 = (var15 & 255) * field_b & 65280;
+                      var15 = (var16 | var17 | var18) >>> 8;
+                      var19 = var36[var11];
+                      var20 = var15 + var19;
+                      var21 = (var15 & 16711935) + (var19 & 16711935);
+                      var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                      var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                     }
-                  }
-                }
-              } else {
-                if (var13 != 1) {
-                  if (var13 != 0) {
-                    if (var13 != 3) {
-                      if (var13 != 2) {
-                        throw new IllegalArgumentException();
-                      }
-                      var15 = this.field_E[var10];
+                  } else if (var13 == 3) {
+                    var15 = this.field_E[var10];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var15 = var17 - var19 | var19 - (var19 >>> 8);
+                    var19 = var36[var11];
+                    var17 = var15 + var19;
+                    var18 = (var15 & 16711935) + (var19 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                  } else if (var13 == 2) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
                       var16 = (var15 & 16711935) * field_C & -16711936;
                       var17 = (var15 & 65280) * field_C & 16711680;
-                      var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                    } else {
-                      int incrementValue$14 = var10;
-                      var10++;
-                      var15 = this.field_E[incrementValue$14];
-                      var16 = field_d;
-                      var17 = var15 + var16;
-                      var18 = (var15 & 16711935) + (var16 & 16711935);
-                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                      var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                      var15 = ((var16 | var17) >>> 8) + field_s;
+                      var18 = var36[var11];
+                      var19 = var15 + var18;
+                      var20 = (var15 & 16711935) + (var18 & 16711935);
+                      var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                      var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                     }
-                  } else {
-                    int incrementValue$15 = var10;
-                    var10++;
-                    var15 = this.field_E[incrementValue$15];
-                    var16 = (var15 & 16711680) * field_n & -16777216;
-                    var17 = (var15 & 65280) * field_e & 16711680;
-                    var18 = (var15 & 255) * field_b & 65280;
-                    var12[var11] = (var16 | var17 | var18) >>> 8;
+                  }
+                } else if (var13 == 1) {
+                  var15 = this.field_E[var10];
+                  if (var15 != 0) {
+                    var36[var11] = var15;
+                  }
+                } else if (var13 == 0) {
+                  var15 = this.field_E[var10];
+                  if (var15 != 0) {
+                    if ((field_d & 16777215) == 16777215) {
+                      var16 = field_d >>> 24;
+                      var17 = 256 - var16;
+                      var18 = var36[var11];
+                      var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                    } else if (field_C == 255) {
+                      var16 = (var15 & 16711680) * field_n & -16777216;
+                      var17 = (var15 & 65280) * field_e & 16711680;
+                      var18 = (var15 & 255) * field_b & 65280;
+                      var12[var11] = (var16 | var17 | var18) >>> 8;
+                    } else {
+                      var16 = (var15 & 16711680) * field_n & -16777216;
+                      var17 = (var15 & 65280) * field_e & 16711680;
+                      var18 = (var15 & 255) * field_b & 65280;
+                      var15 = (var16 | var17 | var18) >>> 8;
+                      var19 = var36[var11];
+                      var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                    }
+                  }
+                } else if (var13 != 3) {
+                  if (var13 != 2) {
+                    throw new IllegalArgumentException();
+                  }
+                  var15 = this.field_E[var10];
+                  if (var15 != 0) {
+                    var16 = (var15 & 16711935) * field_C & -16711936;
+                    var17 = (var15 & 65280) * field_C & 16711680;
+                    int incrementValue$13 = var11;
+                    var11++;
+                    var12[incrementValue$13] = ((var16 | var17) >>> 8) + field_s;
                   }
                 } else {
-                  var12[var11] = this.field_E[var10];
+                  var15 = this.field_E[var10];
+                  var16 = field_d;
+                  var17 = var15 + var16;
+                  var18 = (var15 & 16711935) + (var16 & 16711935);
+                  var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                  var19 = var17 - var19 | var19 - (var19 >>> 8);
+                  if (var15 == 0 &&
+                    field_C != 255) {
+                    var15 = var19;
+                    var19 = var36[var11];
+                    var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                  }
+                  var36[var11] = var19;
                 }
+              } else if (var13 == 1) {
+                var12[var11] = this.field_E[var10];
+              } else if (var13 == 0) {
+                int incrementValue$15 = var10;
+                var10++;
+                var15 = this.field_E[incrementValue$15];
+                var16 = (var15 & 16711680) * field_n & -16777216;
+                var17 = (var15 & 65280) * field_e & 16711680;
+                var18 = (var15 & 255) * field_b & 65280;
+                var12[var11] = (var16 | var17 | var18) >>> 8;
+              } else if (var13 != 3) {
+                if (var13 != 2) {
+                  throw new IllegalArgumentException();
+                }
+                var15 = this.field_E[var10];
+                var16 = (var15 & 16711935) * field_C & -16711936;
+                var17 = (var15 & 65280) * field_C & 16711680;
+                var12[var11] = ((var16 | var17) >>> 8) + field_s;
+              } else {
+                int incrementValue$14 = var10;
+                var10++;
+                var15 = this.field_E[incrementValue$14];
+                var16 = field_d;
+                var17 = var15 + var16;
+                var18 = (var15 & 16711935) + (var16 & 16711935);
+                var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
               }
               var7 = var7 + field_A;
               var8 = var8 + field_f;
@@ -2069,50 +1907,7 @@ final class vh extends mk {
                   if (var14 != 2) {
                     throw new IllegalArgumentException();
                   }
-                  if (var13 != 1) {
-                    if (var13 != 0) {
-                      if (var13 != 3) {
-                        if (var13 == 2) {
-                          var15 = this.field_E[var10];
-                          if (var15 != 0) {
-                            var16 = (var15 & 16711935) * field_C & -16711936;
-                            var17 = (var15 & 65280) * field_C & 16711680;
-                            var15 = ((var16 | var17) >>> 8) + field_s;
-                            var18 = var35[var11];
-                            var19 = var15 + var18;
-                            var20 = (var15 & 16711935) + (var18 & 16711935);
-                            var18 = (var20 & 16777472) + (var19 - var20 & 65536);
-                            var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
-                          }
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        var16 = field_d;
-                        var17 = var15 + var16;
-                        var18 = (var15 & 16711935) + (var16 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var15 = var17 - var19 | var19 - (var19 >>> 8);
-                        var19 = var35[var11];
-                        var17 = var15 + var19;
-                        var18 = (var15 & 16711935) + (var19 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
-                      }
-                    } else {
-                      var15 = this.field_E[var10];
-                      if (var15 != 0) {
-                        var16 = (var15 & 16711680) * field_n & -16777216;
-                        var17 = (var15 & 65280) * field_e & 16711680;
-                        var18 = (var15 & 255) * field_b & 65280;
-                        var15 = (var16 | var17 | var18) >>> 8;
-                        var19 = var35[var11];
-                        var20 = var15 + var19;
-                        var21 = (var15 & 16711935) + (var19 & 16711935);
-                        var19 = (var21 & 16777472) + (var20 - var21 & 65536);
-                        var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
-                      }
-                    }
-                  } else {
+                  if (var13 == 1) {
                     var15 = this.field_E[var10];
                     if (var15 != 0) {
                       var16 = var35[var11];
@@ -2121,102 +1916,125 @@ final class vh extends mk {
                       var16 = (var18 & 16777472) + (var17 - var18 & 65536);
                       var12[var11] = var17 - var16 | var16 - (var16 >>> 8);
                     }
-                  }
-                } else {
-                  if (var13 != 1) {
-                    if (var13 != 0) {
-                      if (var13 != 3) {
-                        if (var13 != 2) {
-                          throw new IllegalArgumentException();
-                        }
-                        var15 = this.field_E[var10];
-                        if (var15 != 0) {
-                          var16 = (var15 & 16711935) * field_C & -16711936;
-                          var17 = (var15 & 65280) * field_C & 16711680;
-                          int incrementValue$17 = var11;
-                          var11++;
-                          var12[incrementValue$17] = ((var16 | var17) >>> 8) + field_s;
-                        }
-                      } else {
-                        var15 = this.field_E[var10];
-                        var16 = field_d;
-                        var17 = var15 + var16;
-                        var18 = (var15 & 16711935) + (var16 & 16711935);
-                        var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                        var19 = var17 - var19 | var19 - (var19 >>> 8);
-                        if (var15 == 0 &&
-                          field_C != 255) {
-                          var15 = var19;
-                          var19 = var35[var11];
-                          var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                        }
-                        var35[var11] = var19;
-                      }
-                    } else {
-                      var15 = this.field_E[var10];
-                      if (var15 != 0) {
-                        if ((field_d & 16777215) != 16777215) {
-                          if (field_C == 255) {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var12[var11] = (var16 | var17 | var18) >>> 8;
-                          } else {
-                            var16 = (var15 & 16711680) * field_n & -16777216;
-                            var17 = (var15 & 65280) * field_e & 16711680;
-                            var18 = (var15 & 255) * field_b & 65280;
-                            var15 = (var16 | var17 | var18) >>> 8;
-                            var19 = var35[var11];
-                            var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
-                          }
-                        } else {
-                          var16 = field_d >>> 24;
-                          var17 = 256 - var16;
-                          var18 = var35[var11];
-                          var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
-                        }
-                      }
-                    }
-                  } else {
+                  } else if (var13 == 0) {
                     var15 = this.field_E[var10];
                     if (var15 != 0) {
-                      var35[var11] = var15;
+                      var16 = (var15 & 16711680) * field_n & -16777216;
+                      var17 = (var15 & 65280) * field_e & 16711680;
+                      var18 = (var15 & 255) * field_b & 65280;
+                      var15 = (var16 | var17 | var18) >>> 8;
+                      var19 = var35[var11];
+                      var20 = var15 + var19;
+                      var21 = (var15 & 16711935) + (var19 & 16711935);
+                      var19 = (var21 & 16777472) + (var20 - var21 & 65536);
+                      var12[var11] = var20 - var19 | var19 - (var19 >>> 8);
                     }
-                  }
-                }
-              } else {
-                if (var13 != 1) {
-                  if (var13 != 0) {
-                    if (var13 != 3) {
-                      if (var13 != 2) {
-                        throw new IllegalArgumentException();
-                      }
-                      var15 = this.field_E[var10];
+                  } else if (var13 == 3) {
+                    var15 = this.field_E[var10];
+                    var16 = field_d;
+                    var17 = var15 + var16;
+                    var18 = (var15 & 16711935) + (var16 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var15 = var17 - var19 | var19 - (var19 >>> 8);
+                    var19 = var35[var11];
+                    var17 = var15 + var19;
+                    var18 = (var15 & 16711935) + (var19 & 16711935);
+                    var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                    var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                  } else if (var13 == 2) {
+                    var15 = this.field_E[var10];
+                    if (var15 != 0) {
                       var16 = (var15 & 16711935) * field_C & -16711936;
                       var17 = (var15 & 65280) * field_C & 16711680;
-                      var12[var11] = ((var16 | var17) >>> 8) + field_s;
-                    } else {
-                      int incrementValue$18 = var10;
-                      var10++;
-                      var15 = this.field_E[incrementValue$18];
-                      var16 = field_d;
-                      var17 = var15 + var16;
-                      var18 = (var15 & 16711935) + (var16 & 16711935);
-                      var19 = (var18 & 16777472) + (var17 - var18 & 65536);
-                      var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
+                      var15 = ((var16 | var17) >>> 8) + field_s;
+                      var18 = var35[var11];
+                      var19 = var15 + var18;
+                      var20 = (var15 & 16711935) + (var18 & 16711935);
+                      var18 = (var20 & 16777472) + (var19 - var20 & 65536);
+                      var12[var11] = var19 - var18 | var18 - (var18 >>> 8);
                     }
-                  } else {
-                    int incrementValue$19 = var10;
-                    var10++;
-                    var15 = this.field_E[incrementValue$19];
-                    var16 = (var15 & 16711680) * field_n & -16777216;
-                    var17 = (var15 & 65280) * field_e & 16711680;
-                    var18 = (var15 & 255) * field_b & 65280;
-                    var12[var11] = (var16 | var17 | var18) >>> 8;
+                  }
+                } else if (var13 == 1) {
+                  var15 = this.field_E[var10];
+                  if (var15 != 0) {
+                    var35[var11] = var15;
+                  }
+                } else if (var13 == 0) {
+                  var15 = this.field_E[var10];
+                  if (var15 != 0) {
+                    if ((field_d & 16777215) == 16777215) {
+                      var16 = field_d >>> 24;
+                      var17 = 256 - var16;
+                      var18 = var35[var11];
+                      var12[var11] = ((var15 & 16711935) * var16 + (var18 & 16711935) * var17 & -16711936) + ((var15 & 65280) * var16 + (var18 & 65280) * var17 & 16711680) >> 8;
+                    } else if (field_C == 255) {
+                      var16 = (var15 & 16711680) * field_n & -16777216;
+                      var17 = (var15 & 65280) * field_e & 16711680;
+                      var18 = (var15 & 255) * field_b & 65280;
+                      var12[var11] = (var16 | var17 | var18) >>> 8;
+                    } else {
+                      var16 = (var15 & 16711680) * field_n & -16777216;
+                      var17 = (var15 & 65280) * field_e & 16711680;
+                      var18 = (var15 & 255) * field_b & 65280;
+                      var15 = (var16 | var17 | var18) >>> 8;
+                      var19 = var35[var11];
+                      var12[var11] = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                    }
+                  }
+                } else if (var13 != 3) {
+                  if (var13 != 2) {
+                    throw new IllegalArgumentException();
+                  }
+                  var15 = this.field_E[var10];
+                  if (var15 != 0) {
+                    var16 = (var15 & 16711935) * field_C & -16711936;
+                    var17 = (var15 & 65280) * field_C & 16711680;
+                    int incrementValue$17 = var11;
+                    var11++;
+                    var12[incrementValue$17] = ((var16 | var17) >>> 8) + field_s;
                   }
                 } else {
-                  var12[var11] = this.field_E[var10];
+                  var15 = this.field_E[var10];
+                  var16 = field_d;
+                  var17 = var15 + var16;
+                  var18 = (var15 & 16711935) + (var16 & 16711935);
+                  var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                  var19 = var17 - var19 | var19 - (var19 >>> 8);
+                  if (var15 == 0 &&
+                    field_C != 255) {
+                    var15 = var19;
+                    var19 = var35[var11];
+                    var19 = ((var15 & 16711935) * field_C + (var19 & 16711935) * field_a & -16711936) + ((var15 & 65280) * field_C + (var19 & 65280) * field_a & 16711680) >> 8;
+                  }
+                  var35[var11] = var19;
                 }
+              } else if (var13 == 1) {
+                var12[var11] = this.field_E[var10];
+              } else if (var13 == 0) {
+                int incrementValue$19 = var10;
+                var10++;
+                var15 = this.field_E[incrementValue$19];
+                var16 = (var15 & 16711680) * field_n & -16777216;
+                var17 = (var15 & 65280) * field_e & 16711680;
+                var18 = (var15 & 255) * field_b & 65280;
+                var12[var11] = (var16 | var17 | var18) >>> 8;
+              } else if (var13 != 3) {
+                if (var13 != 2) {
+                  throw new IllegalArgumentException();
+                }
+                var15 = this.field_E[var10];
+                var16 = (var15 & 16711935) * field_C & -16711936;
+                var17 = (var15 & 65280) * field_C & 16711680;
+                var12[var11] = ((var16 | var17) >>> 8) + field_s;
+              } else {
+                int incrementValue$18 = var10;
+                var10++;
+                var15 = this.field_E[incrementValue$18];
+                var16 = field_d;
+                var17 = var15 + var16;
+                var18 = (var15 & 16711935) + (var16 & 16711935);
+                var19 = (var18 & 16777472) + (var17 - var18 & 65536);
+                var12[var11] = var17 - var19 | var19 - (var19 >>> 8);
               }
               var7 = var7 + field_A;
               var8 = var8 + field_f;
@@ -2650,27 +2468,24 @@ final class vh extends mk {
                 int var28Lifetime3 = this.field_E[(var9 >> 16) + var26Lifetime4];
                 if (var28Lifetime3 == 0) {
                   var16Lifetime2++;
+                } else if (var23Lifetime5 != 255) {
+                  int var29Lifetime2 = (var28Lifetime3 & 16711680) * var20Lifetime5 & -16777216;
+                  int var30Lifetime1 = (var28Lifetime3 & 65280) * var21Lifetime5 & 16711680;
+                  int var31Lifetime1 = (var28Lifetime3 & 255) * var22Lifetime5 & 65280;
+                  var28Lifetime3 = (var29Lifetime2 | var30Lifetime1 | var31Lifetime1) >>> 8;
+                  int var32Lifetime1 = var34[var16Lifetime2];
+                  int incrementValue$7 = var16Lifetime2;
+                  var16Lifetime2++;
+                  var18[incrementValue$7] = ((var28Lifetime3 & 16711935) * var23Lifetime5 + (var32Lifetime1 & 16711935) * var24Lifetime4 & -16711936) + ((var28Lifetime3 & 65280) * var23Lifetime5 + (var32Lifetime1 & 65280) * var24Lifetime4 & 16711680) >> 8;
+                  var9 = var9 + var14;
+                  decompiledFrameRemainder0 = false;
                 } else {
-                  if (var23Lifetime5 != 255) {
-                    int var29Lifetime2 = (var28Lifetime3 & 16711680) * var20Lifetime5 & -16777216;
-                    int var30Lifetime1 = (var28Lifetime3 & 65280) * var21Lifetime5 & 16711680;
-                    int var31Lifetime1 = (var28Lifetime3 & 255) * var22Lifetime5 & 65280;
-                    var28Lifetime3 = (var29Lifetime2 | var30Lifetime1 | var31Lifetime1) >>> 8;
-                    int var32Lifetime1 = var34[var16Lifetime2];
-                    int incrementValue$7 = var16Lifetime2;
-                    var16Lifetime2++;
-                    var18[incrementValue$7] = ((var28Lifetime3 & 16711935) * var23Lifetime5 + (var32Lifetime1 & 16711935) * var24Lifetime4 & -16711936) + ((var28Lifetime3 & 65280) * var23Lifetime5 + (var32Lifetime1 & 65280) * var24Lifetime4 & 16711680) >> 8;
-                    var9 = var9 + var14;
-                    decompiledFrameRemainder0 = false;
-                  }
-                  else {
-                    int var29Lifetime2Lifetime1 = (var28Lifetime3 & 16711680) * var20Lifetime5 & -16777216;
-                    int var30Lifetime1Lifetime1 = (var28Lifetime3 & 65280) * var21Lifetime5 & 16711680;
-                    int var31Lifetime1Lifetime1 = (var28Lifetime3 & 255) * var22Lifetime5 & 65280;
-                    int incrementValue$6 = var16Lifetime2;
-                    var16Lifetime2++;
-                    var18[incrementValue$6] = (var29Lifetime2Lifetime1 | var30Lifetime1Lifetime1 | var31Lifetime1Lifetime1) >>> 8;
-                  }
+                  int var29Lifetime2Lifetime1 = (var28Lifetime3 & 16711680) * var20Lifetime5 & -16777216;
+                  int var30Lifetime1Lifetime1 = (var28Lifetime3 & 65280) * var21Lifetime5 & 16711680;
+                  int var31Lifetime1Lifetime1 = (var28Lifetime3 & 255) * var22Lifetime5 & 65280;
+                  int incrementValue$6 = var16Lifetime2;
+                  var16Lifetime2++;
+                  var18[incrementValue$6] = (var29Lifetime2Lifetime1 | var30Lifetime1Lifetime1 | var31Lifetime1Lifetime1) >>> 8;
                 }
                 if (decompiledFrameRemainder0) {
                   var9 = var9 + var14;

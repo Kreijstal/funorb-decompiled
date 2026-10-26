@@ -70,13 +70,11 @@ abstract class RendererBitmapFont {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
-            if (!tag.startsWith("col=")) {
-              if (tag.equals("/col")) {
-                qg.rendererCurrentTextColor = tf.rendererDefaultTextColor & 16777215 | qg.rendererCurrentTextColor & -16777216;
-              }
-            } else {
+            if (tag.startsWith("col=")) {
               CharSequence var6 = (CharSequence) ((Object) tag.substring(4));
               qg.rendererCurrentTextColor = -16777216 & qg.rendererCurrentTextColor | 16777215 & np.a(var6, 4, 16);
+            } else if (tag.equals("/col")) {
+              qg.rendererCurrentTextColor = tf.rendererDefaultTextColor & 16777215 | qg.rendererCurrentTextColor & -16777216;
             }
             if (obfuscationGuard != -16777216) {
               int[] var5 = (int[]) null;
@@ -85,57 +83,33 @@ abstract class RendererBitmapFont {
             if (tag.startsWith("argb=")) {
               CharSequence var10 = (CharSequence) ((Object) tag.substring(5));
               qg.rendererCurrentTextColor = np.a(var10, 4, 16);
-            } else {
-              if (tag.equals("/argb")) {
-                qg.rendererCurrentTextColor = tf.rendererDefaultTextColor;
-              } else {
-                if (tag.startsWith("str=")) {
-                  CharSequence var9 = (CharSequence) ((Object) tag.substring(4));
-                  rs.rendererStrikethroughColor = qg.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
-                } else {
-                  if (tag.equals("str")) {
-                    rs.rendererStrikethroughColor = -16777216 & qg.rendererCurrentTextColor | 8388608;
-                  } else {
-                    if (tag.equals("/str")) {
-                      rs.rendererStrikethroughColor = -1;
-                    } else {
-                      if (tag.startsWith("u=")) {
-                        CharSequence var8 = (CharSequence) ((Object) tag.substring(2));
-                        PacketBuffer.rendererUnderlineColor = qg.rendererCurrentTextColor & -16777216 | np.a(var8, obfuscationGuard ^ -16777212, 16);
-                      } else {
-                        if (tag.equals("u")) {
-                          PacketBuffer.rendererUnderlineColor = -16777216 & qg.rendererCurrentTextColor;
-                        } else {
-                          if (tag.equals("/u")) {
-                            PacketBuffer.rendererUnderlineColor = -1;
-                          } else {
-                            if (!tag.equalsIgnoreCase("shad=-1")) {
-                              if (tag.startsWith("shad=")) {
-                                CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
-                                es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
-                              } else {
-                                if (!tag.equals("shad")) {
-                                  if (tag.equals("/shad")) {
-                                    es.rendererCurrentShadowColor = em.rendererDefaultShadowColor;
-                                  } else {
-                                    if (tag.equals("br")) {
-                                      this.resetTextStyle(em.rendererDefaultShadowColor, -1, tf.rendererDefaultTextColor);
-                                    }
-                                  }
-                                } else {
-                                  es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216;
-                                }
-                              }
-                            } else {
-                              es.rendererCurrentShadowColor = 0;
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+            } else if (tag.equals("/argb")) {
+              qg.rendererCurrentTextColor = tf.rendererDefaultTextColor;
+            } else if (tag.startsWith("str=")) {
+              CharSequence var9 = (CharSequence) ((Object) tag.substring(4));
+              rs.rendererStrikethroughColor = qg.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
+            } else if (tag.equals("str")) {
+              rs.rendererStrikethroughColor = -16777216 & qg.rendererCurrentTextColor | 8388608;
+            } else if (tag.equals("/str")) {
+              rs.rendererStrikethroughColor = -1;
+            } else if (tag.startsWith("u=")) {
+              CharSequence var8 = (CharSequence) ((Object) tag.substring(2));
+              PacketBuffer.rendererUnderlineColor = qg.rendererCurrentTextColor & -16777216 | np.a(var8, obfuscationGuard ^ -16777212, 16);
+            } else if (tag.equals("u")) {
+              PacketBuffer.rendererUnderlineColor = -16777216 & qg.rendererCurrentTextColor;
+            } else if (tag.equals("/u")) {
+              PacketBuffer.rendererUnderlineColor = -1;
+            } else if (tag.equalsIgnoreCase("shad=-1")) {
+              es.rendererCurrentShadowColor = 0;
+            } else if (tag.startsWith("shad=")) {
+              CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
+              es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
+            } else if (tag.equals("shad")) {
+              es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216;
+            } else if (tag.equals("/shad")) {
+              es.rendererCurrentShadowColor = em.rendererDefaultShadowColor;
+            } else if (tag.equals("br")) {
+              this.resetTextStyle(em.rendererDefaultShadowColor, -1, tf.rendererDefaultTextColor);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,41 +202,31 @@ abstract class RendererBitmapFont {
           }
           if (verticalAlignment == 0) {
             var21 = this.metrics.maxAscent + top;
+          } else if (verticalAlignment == 1) {
+            var21 = (-this.metrics.maxDescent + (-this.metrics.maxAscent + (height - (-1 + var19) * lineSpacing))) / 2 + this.metrics.maxAscent + top;
+          } else if (verticalAlignment == 2) {
+            var21 = -((-1 + var19) * lineSpacing) - this.metrics.maxDescent + (height + top);
           } else {
-            if (verticalAlignment == 1) {
-              var21 = (-this.metrics.maxDescent + (-this.metrics.maxAscent + (height - (-1 + var19) * lineSpacing))) / 2 + this.metrics.maxAscent + top;
-            } else {
-              if (verticalAlignment == 2) {
-                var21 = -((-1 + var19) * lineSpacing) - this.metrics.maxDescent + (height + top);
-              } else {
-                int var22 = (-this.metrics.maxDescent - this.metrics.maxAscent + height - (var19 - 1) * lineSpacing) / (var19 + 1);
-                if (0 > var22) {
-                  var22 = 0;
-                }
-                var21 = this.metrics.maxAscent + (top + var22);
-                lineSpacing = lineSpacing + var22;
-              }
+            int var22 = (-this.metrics.maxDescent - this.metrics.maxAscent + height - (var19 - 1) * lineSpacing) / (var19 + 1);
+            if (0 > var22) {
+              var22 = 0;
             }
+            var21 = this.metrics.maxAscent + (top + var22);
+            lineSpacing = lineSpacing + var22;
           }
           for (int var22Lifetime1 = 0; var22Lifetime1 < var19; var22Lifetime1++) {
             if (horizontalAlignment == 0) {
               this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
+            } else if (horizontalAlignment == 1) {
+              this.drawStyledText(maskX, inlineImages, left + (-this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + width) / 2, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
+            } else if (horizontalAlignment == 2) {
+              this.drawStyledText(maskX, inlineImages, -this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + (left + width), vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
+            } else if (var22Lifetime1 != var19 - 1) {
+              this.prepareJustification(width, (byte) 104, vi.field_p[var22Lifetime1]);
+              this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
+              tm.rendererSpaceExpansionQ8 = 0;
             } else {
-              if (horizontalAlignment == 1) {
-                this.drawStyledText(maskX, inlineImages, left + (-this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + width) / 2, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
-              } else {
-                if (horizontalAlignment != 2) {
-                  if (var22Lifetime1 != var19 - 1) {
-                    this.prepareJustification(width, (byte) 104, vi.field_p[var22Lifetime1]);
-                    this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
-                    tm.rendererSpaceExpansionQ8 = 0;
-                  } else {
-                    this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
-                  }
-                } else {
-                  this.drawStyledText(maskX, inlineImages, -this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + (left + width), vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
-                }
-              }
+              this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
             }
             var21 = var21 + lineSpacing;
           }
@@ -360,66 +324,51 @@ abstract class RendererBitmapFont {
                 var10_int = -1;
                 if (var15_ref_String.equals("lt")) {
                   var14 = 60;
-                } else {
-                  if (!var15_ref_String.equals("gt")) {
-                    if (!var15_ref_String.equals("nbsp")) {
-                      if (var15_ref_String.equals("shy")) {
-                        var14 = 173;
-                      } else {
-                        if (!var15_ref_String.equals("times")) {
-                          if (var15_ref_String.equals("euro")) {
-                            var14 = 8364;
-                          } else {
-                            if (var15_ref_String.equals("copy")) {
-                              var14 = 169;
-                            } else {
-                              if (!var15_ref_String.equals("reg")) {
-                                if (!var15_ref_String.startsWith("img=")) {
-                                  this.applyStyleTag(var15_ref_String, -16777216);
-                                } else {
-                                  try {
-                                    CharSequence var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
-                                    int var16_int = td.a(var21, (byte) 38);
-                                    RenderSprite var17 = inlineImages[var16_int];
-                                    if (inlineImageBaselineOffsets != null) {
-                                      stackIn_26_0 = inlineImageBaselineOffsets[var16_int];
-                                    } else {
-                                      stackIn_26_0 = var17.c();
-                                    }
-                                    int var18 = stackIn_26_0;
-                                    if ((qg.rendererCurrentTextColor & -16777216) != -16777216) {
-                                      var17.a(penX, baselineY + this.metrics.lineAdvance - var18, 0, qg.rendererCurrentTextColor & -16777216 | 16777215, 1);
-                                    } else {
-                                      var17.a(penX, -var18 + this.metrics.lineAdvance + baselineY, 1, 0, 1);
-                                    }
-                                    penX = penX + inlineImages[var16_int].d();
-                                    var11 = -1;
-                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                    decompiledCaughtException = decompiledCaughtParameter0;
-                                    Exception var16 = (Exception) (Object) decompiledCaughtException;
-                                  }
-                                }
-                                decompiledFrameRemainder0 = false;
-                              }
-                              else {
-                                var14 = 174;
-                              }
-                            }
-                          }
-                        } else {
-                          var14 = 215;
-                        }
-                      }
-                    } else {
-                      var14 = 160;
-                    }
+                } else if (var15_ref_String.equals("gt")) {
+                  var14 = 62;
+                } else if (var15_ref_String.equals("nbsp")) {
+                  var14 = 160;
+                } else if (var15_ref_String.equals("shy")) {
+                  var14 = 173;
+                } else if (var15_ref_String.equals("times")) {
+                  var14 = 215;
+                } else if (var15_ref_String.equals("euro")) {
+                  var14 = 8364;
+                } else if (var15_ref_String.equals("copy")) {
+                  var14 = 169;
+                } else if (!var15_ref_String.equals("reg")) {
+                  if (!var15_ref_String.startsWith("img=")) {
+                    this.applyStyleTag(var15_ref_String, -16777216);
                   } else {
-                    var14 = 62;
+                    try {
+                      CharSequence var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
+                      int var16_int = td.a(var21, (byte) 38);
+                      RenderSprite var17 = inlineImages[var16_int];
+                      if (inlineImageBaselineOffsets != null) {
+                        stackIn_26_0 = inlineImageBaselineOffsets[var16_int];
+                      } else {
+                        stackIn_26_0 = var17.c();
+                      }
+                      int var18 = stackIn_26_0;
+                      if ((qg.rendererCurrentTextColor & -16777216) != -16777216) {
+                        var17.a(penX, baselineY + this.metrics.lineAdvance - var18, 0, qg.rendererCurrentTextColor & -16777216 | 16777215, 1);
+                      } else {
+                        var17.a(penX, -var18 + this.metrics.lineAdvance + baselineY, 1, 0, 1);
+                      }
+                      penX = penX + inlineImages[var16_int].d();
+                      var11 = -1;
+                    } catch (java.lang.Exception decompiledCaughtParameter0) {
+                      decompiledCaughtException = decompiledCaughtParameter0;
+                      Exception var16 = (Exception) (Object) decompiledCaughtException;
+                    }
                   }
+                  decompiledFrameRemainder0 = false;
+                } else {
+                  var14 = 174;
                 }
               }
-              if ((decompiledFrameRemainder0) &&
-                (var10_int == -1)) {
+              if (decompiledFrameRemainder0 &&
+                var10_int == -1) {
                 if (var11 != -1) {
                   penX = penX + this.metrics.getPairKerning(0, (char) var14, var11);
                 }
@@ -429,18 +378,16 @@ abstract class RendererBitmapFont {
                     penX = penX + (ed.rendererJustificationRemainderQ8 >> 8);
                     ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 & 255;
                   }
-                } else {
-                  if (mask == null) {
-                    if (0 != (-16777216 & es.rendererCurrentShadowColor)) {
-                      this.drawGlyph((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true);
-                    }
-                    this.drawGlyph((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false);
-                  } else {
-                    if (0 != (es.rendererCurrentShadowColor & -16777216)) {
-                      this.drawGlyphWithMask((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true, mask, maskX, maskY);
-                    }
-                    this.drawGlyphWithMask((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false, mask, maskX, maskY);
+                } else if (mask == null) {
+                  if (0 != (-16777216 & es.rendererCurrentShadowColor)) {
+                    this.drawGlyph((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true);
                   }
+                  this.drawGlyph((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false);
+                } else {
+                  if (0 != (es.rendererCurrentShadowColor & -16777216)) {
+                    this.drawGlyphWithMask((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true, mask, maskX, maskY);
+                  }
+                  this.drawGlyphWithMask((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false, mask, maskX, maskY);
                 }
                 int var15 = this.metrics.measureCharacterAdvance((byte) 109, var14);
                 if (rs.rendererStrikethroughColor != -1) {
@@ -500,17 +447,13 @@ abstract class RendererBitmapFont {
           }
           for (int var6 = 0; text.length() > var6; var6++) {
             int var7 = text.charAt(var6);
-            if (var7 != 60) {
-              if (var7 != 62) {
-                if (var5 == 0 &&
-                  32 == var7) {
-                  var4_int++;
-                }
-              } else {
-                var5 = 0;
-              }
-            } else {
+            if (var7 == 60) {
               var5 = 1;
+            } else if (var7 == 62) {
+              var5 = 0;
+            } else if (var5 == 0 &&
+              32 == var7) {
+              var4_int++;
             }
           }
           if (var4_int > 0) {

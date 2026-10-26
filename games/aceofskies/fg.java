@@ -120,26 +120,22 @@ final class fg extends ArchiveProvider {
         IntrusiveNode var2 = this.field_n.first(param0 ^ -268415203);
         while (var2 != null) {
           int var3 = (int)var2.key;
-          if (var3 >= 0) {
-            if (var3 < this.field_m.field_l) {
-              if (this.field_m.field_k[var3] == 0) {
-                var2.unlink(-124);
-              } else {
-                if (this.field_h[var3] == 0) {
-                  ag discarded$0 = this.a((byte) -37, 1, var3);
-                }
-                if (this.field_h[var3] == -1) {
-                  ag discarded$1 = this.a((byte) -37, 2, var3);
-                }
-                if (this.field_h[var3] == 1) {
-                  var2.unlink(param0 ^ 20327);
-                }
-              }
-            } else {
-              var2.unlink(-124);
-            }
-          } else {
+          if (!(var3 >= 0)) {
             var2.unlink(-124);
+          } else if (!(var3 < this.field_m.field_l)) {
+            var2.unlink(-124);
+          } else if (this.field_m.field_k[var3] == 0) {
+            var2.unlink(-124);
+          } else {
+            if (this.field_h[var3] == 0) {
+              ag discarded$0 = this.a((byte) -37, 1, var3);
+            }
+            if (this.field_h[var3] == -1) {
+              ag discarded$1 = this.a((byte) -37, 2, var3);
+            }
+            if (this.field_h[var3] == 1) {
+              var2.unlink(param0 ^ 20327);
+            }
           }
           var2 = this.field_n.next((byte) 103);
         }
@@ -208,7 +204,7 @@ final class fg extends ArchiveProvider {
               var2_int = 0;
               break;
             }
-            if ((var2_int != 0)) {
+            if (var2_int != 0) {
               this.field_q = false;
               this.field_d = 0;
             }
@@ -262,7 +258,7 @@ final class fg extends ArchiveProvider {
                   this.field_m = (ArchiveIndex) null;
                 }
                 decompiledFrameRemainder0 = (this.field_i);
-                if ((decompiledFrameRemainder0) &&
+                if (decompiledFrameRemainder0 &&
                   (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
                   ag var2 = (ag) (this.field_v.firstForIteration(false));
                   while (var2 != null) {
@@ -282,20 +278,20 @@ final class fg extends ArchiveProvider {
                 }
               }
             }
-            if ((decompiledFrameRemainder2) &&
-              (decompiledFrameRemainder1) &&
-              (decompiledFrameRemainder0)) {
+            if (decompiledFrameRemainder2 &&
+              decompiledFrameRemainder1 &&
+              decompiledFrameRemainder0) {
               this.field_o = null;
             }
           }
         }
-        if ((decompiledFrameRemainder1) &&
-          (decompiledFrameRemainder0)) {
+        if (decompiledFrameRemainder1 &&
+          decompiledFrameRemainder0) {
           if (param0 <= 84) {
             this.field_m = (ArchiveIndex) null;
           }
           decompiledFrameRemainder0 = (this.field_i);
-          if ((decompiledFrameRemainder0) &&
+          if (decompiledFrameRemainder0 &&
             (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
             ag var2Lifetime1 = (ag) (this.field_v.firstForIteration(false));
             while (var2Lifetime1 != null) {
@@ -437,16 +433,14 @@ final class fg extends ArchiveProvider {
               }
               var4 = this.field_g.a(this.field_p, param2, -21, false, (byte) 2);
             }
+          } else if (this.field_l != null &&
+            -1 != this.field_h[param2]) {
+            var4 = this.field_z.a(this.field_l, (byte) 96, param2);
           } else {
-            if (this.field_l != null &&
-              -1 != this.field_h[param2]) {
-              var4 = this.field_z.a(this.field_l, (byte) 96, param2);
-            } else {
-              if (this.field_g.a(false)) {
-                return null;
-              }
-              var4 = this.field_g.a(this.field_p, param2, param0 + 16, true, (byte) 2);
+            if (this.field_g.a(false)) {
+              return null;
             }
+            var4 = this.field_g.a(this.field_p, param2, param0 + 16, true, (byte) 2);
           }
           this.field_v.put(-41, (long)param2, (IntrusiveNode) (var4));
         }

@@ -420,31 +420,29 @@ class ea extends IntrusiveNode {
           }
           if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
             param3 = false;
-          } else {
-            if (var5 != 0) {
-              this.d(7398);
-              if (vu.heldMouseButton != 0) {
-                fp.field_g = vu.heldMouseButton;
-                qs.a(-6939, this.c((byte) -123));
-                return param3;
-              }
-              if (fp.field_g == 0) {
-                fp.field_g = vu.heldMouseButton;
-                qs.a(-6939, this.c((byte) -123));
-                return param3;
-              }
-              this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-              hg var8 = mm.field_a;
-              if (var8 != null) {
-                if (var8.field_o instanceof ma) {
-                  ((ma) (var8.field_o)).a(var8, -16073, (sh) null);
-                }
-                mm.field_a = null;
-              }
+          } else if (var5 != 0) {
+            this.d(7398);
+            if (vu.heldMouseButton != 0) {
               fp.field_g = vu.heldMouseButton;
               qs.a(-6939, this.c((byte) -123));
               return param3;
             }
+            if (fp.field_g == 0) {
+              fp.field_g = vu.heldMouseButton;
+              qs.a(-6939, this.c((byte) -123));
+              return param3;
+            }
+            this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
+            hg var8 = mm.field_a;
+            if (var8 != null) {
+              if (var8.field_o instanceof ma) {
+                ((ma) (var8.field_o)).a(var8, -16073, (sh) null);
+              }
+              mm.field_a = null;
+            }
+            fp.field_g = vu.heldMouseButton;
+            qs.a(-6939, this.c((byte) -123));
+            return param3;
           }
           if (vu.heldMouseButton != 0) {
             fp.field_g = vu.heldMouseButton;
@@ -514,31 +512,29 @@ class ea extends IntrusiveNode {
         }
         if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
           param3 = false;
-        } else {
-          if (var5 != 0) {
-            this.d(7398);
-            if (vu.heldMouseButton != 0) {
-              fp.field_g = vu.heldMouseButton;
-              qs.a(-6939, this.c((byte) -123));
-              return param3;
-            }
-            if (fp.field_g == 0) {
-              fp.field_g = vu.heldMouseButton;
-              qs.a(-6939, this.c((byte) -123));
-              return param3;
-            }
-            this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-            hg var12 = mm.field_a;
-            if (var12 != null) {
-              if (var12.field_o instanceof ma) {
-                ((ma) (var12.field_o)).a(var12, -16073, (sh) null);
-              }
-              mm.field_a = null;
-            }
+        } else if (var5 != 0) {
+          this.d(7398);
+          if (vu.heldMouseButton != 0) {
             fp.field_g = vu.heldMouseButton;
             qs.a(-6939, this.c((byte) -123));
             return param3;
           }
+          if (fp.field_g == 0) {
+            fp.field_g = vu.heldMouseButton;
+            qs.a(-6939, this.c((byte) -123));
+            return param3;
+          }
+          this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
+          hg var12 = mm.field_a;
+          if (var12 != null) {
+            if (var12.field_o instanceof ma) {
+              ((ma) (var12.field_o)).a(var12, -16073, (sh) null);
+            }
+            mm.field_a = null;
+          }
+          fp.field_g = vu.heldMouseButton;
+          qs.a(-6939, this.c((byte) -123));
+          return param3;
         }
         if (vu.heldMouseButton != 0) {
           fp.field_g = vu.heldMouseButton;

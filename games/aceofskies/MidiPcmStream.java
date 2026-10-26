@@ -289,8 +289,8 @@ final class MidiPcmStream extends PcmStream {
             break;
           }
         }
-        if ((decompiledFrameCompleted1) &&
-          (decompiledFrameCompleted0)) {
+        if (decompiledFrameCompleted1 &&
+          decompiledFrameCompleted0) {
           this.field_L.a(param0);
         }
 
@@ -616,8 +616,8 @@ final class MidiPcmStream extends PcmStream {
             }
           }
         }
-        if ((decompiledFrameCompleted0) &&
-          (param1 < 50)) {
+        if (decompiledFrameCompleted0 &&
+          param1 < 50) {
           this.b();
         }
 
@@ -695,8 +695,8 @@ final class MidiPcmStream extends PcmStream {
             }
             break;
           }
-          if ((decompiledNaturalLoopExit0) &&
-            (var6_int != 0)) {
+          if (decompiledNaturalLoopExit0 &&
+            var6_int != 0) {
             param2.a();
           }
           int stackIn_19_0 = var6_int;
@@ -1136,8 +1136,8 @@ final class MidiPcmStream extends PcmStream {
                 stackIn_34_0 = ~((255 & var7.field_g[2 + param3.field_g]) << 8);
                 stackIn_34_1 = ~param3.field_s;
                 decompiledFrameRemainder1 = (var11 == 0);
-                if ((decompiledFrameRemainder1) &&
-                  (stackIn_34_0 > stackIn_34_1)) {
+                if (decompiledFrameRemainder1 &&
+                  stackIn_34_0 > stackIn_34_1) {
                   param3.field_g = param3.field_g + 2;
                   continue;
                 }
@@ -1174,8 +1174,8 @@ final class MidiPcmStream extends PcmStream {
                 stackIn_54_0 = ~param3.field_p;
                 stackIn_54_1 = ~(65280 & var7.field_e[param3.field_k + 2] << 8);
                 decompiledFrameRemainder0 = (var11 == 0);
-                if ((decompiledFrameRemainder0) &&
-                  (stackIn_54_0 < stackIn_54_1)) {
+                if (decompiledFrameRemainder0 &&
+                  stackIn_54_0 < stackIn_54_1) {
                   param3.field_k = param3.field_k + 2;
                   continue;
                 }

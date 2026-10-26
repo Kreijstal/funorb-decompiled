@@ -58,15 +58,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   var2 = hu.field_a;
                 }
               }
-            } else {
-              if (hu.field_a == null) {
-                var2 = gh.field_f;
-                if (var4 != 0) {
-                  var2 = hu.field_a;
-                }
-              } else {
+            } else if (hu.field_a == null) {
+              var2 = gh.field_f;
+              if (var4 != 0) {
                 var2 = hu.field_a;
               }
+            } else {
+              var2 = hu.field_a;
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
@@ -526,8 +524,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     this.a(-119, "wrongjava");
                     decompiledFrameRemainder3 = (var5 != 0);
                   }
-                  if ((decompiledFrameRemainder3) &&
-                    (var2.startsWith("1.6.0_"))) {
+                  if (decompiledFrameRemainder3 &&
+                    var2.startsWith("1.6.0_")) {
                     var3 = 6;
                     while (var3 < var2.length()) {
                       stackIn_68_0 = oj.a(var2.charAt(var3), (byte) -2);
@@ -552,13 +550,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   }
                 }
               }
-              if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
+              if (decompiledFrameRemainder3 && decompiledFrameCompleted0 &&
                 (decompiledFrameRemainder2 = (rk.field_l != null))) {
                 stackIn_68_0 = rk.field_l.startsWith("1.");
               }
-              if ((decompiledFrameRemainder3) &&
-                (decompiledFrameRemainder2) &&
-                (stackIn_68_0)) {
+              if (decompiledFrameRemainder3 &&
+                decompiledFrameRemainder2 &&
+                stackIn_68_0) {
                 int var1_int = 2;
                 int var2_int = 0;
                 while (true) {
@@ -568,7 +566,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     stackIn_81_0 = -49;
                     stackIn_81_1 = ~var3;
                     decompiledFrameRemainder1 = (var5 == 0);
-                    if ((decompiledFrameRemainder1) && (stackIn_81_0 >= stackIn_81_1 &&
+                    if (decompiledFrameRemainder1 && (stackIn_81_0 >= stackIn_81_1 &&
                       57 >= var3)) {
                       var2_int = -48 - (-var3 - var2_int * 10);
                       var1_int++;
@@ -610,8 +608,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   if (lb.field_g != 0L) {
                     stackIn_100_0 = $cfr$lcmp(kh.a(-125), lb.field_g);
                     decompiledFrameRemainder0 = (var5 == 0);
-                    if ((decompiledFrameRemainder0) &&
-                      (stackIn_100_0 >= 0)) {
+                    if (decompiledFrameRemainder0 &&
+                      stackIn_100_0 >= 0) {
                       break;
                     }
                   }

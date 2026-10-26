@@ -54,11 +54,9 @@ final class ic {
                 w stackIn_15_0 = td.field_d;
                 return stackIn_15_0;
               }
-            } else {
-              if (ml.field_l.indexOf(var4) == -1) {
-                w stackIn_18_0 = td.field_d;
-                return stackIn_18_0;
-              }
+            } else if (ml.field_l.indexOf(var4) == -1) {
+              w stackIn_18_0 = td.field_d;
+              return stackIn_18_0;
             }
           }
           if (!param1) {

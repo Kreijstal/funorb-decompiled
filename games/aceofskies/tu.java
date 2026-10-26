@@ -88,10 +88,8 @@ final class tu extends RendererBitmapFont {
         }
         if ((color & -16777216) == -16777216) {
           this.b(this.field_h[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
-        } else {
-          if ((color & -16777216) != 0) {
-            this.a(this.field_h[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
-          }
+        } else if ((color & -16777216) != 0) {
+          this.a(this.field_h[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
         }
     }
 

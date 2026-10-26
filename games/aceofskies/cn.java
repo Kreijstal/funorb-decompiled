@@ -23,12 +23,10 @@ final class cn extends mi {
           int var9 = param6 - (this.field_x + this.field_h) - param4;
           if (this.field_A * this.field_A > var8_int * var8_int + var9 * var9) {
             double var10 = Math.atan2((double)var9, (double)var8_int) - GameCanvas.field_c;
-            if (!(0.0 > var10)) {
-              if (var10 > 0.0) {
-                var10 = var10 + 3.141592653589793 / (double)this.field_w;
-              }
-            } else {
+            if (0.0 > var10) {
               var10 = var10 - 3.141592653589793 / (double)this.field_w;
+            } else if (var10 > 0.0) {
+              var10 = var10 + 3.141592653589793 / (double)this.field_w;
             }
             this.field_y = (int)(var10 * (double)this.field_w / 6.283185307179586);
             while (this.field_y >= this.field_w) {

@@ -83,36 +83,26 @@ final class us implements ir {
                 var10 = var18;
                 var11 = var16;
                 var9 = var8;
-              } else {
-                if (var14 != 1) {
-                  if (var14 != 2) {
-                    if (var14 != 3) {
-                      if (4 == var14) {
-                        var10 = var16;
-                        var11 = var8;
-                        var9 = var18;
-                      } else {
-                        if (5 == var14) {
-                          var11 = var17;
-                          var9 = var8;
-                          var10 = var16;
-                        }
-                      }
-                    } else {
-                      var10 = var17;
-                      var11 = var8;
-                      var9 = var16;
-                    }
-                  } else {
-                    var11 = var18;
-                    var10 = var8;
-                    var9 = var16;
-                  }
-                } else {
-                  var9 = var17;
-                  var10 = var8;
-                  var11 = var16;
-                }
+              } else if (var14 == 1) {
+                var9 = var17;
+                var10 = var8;
+                var11 = var16;
+              } else if (var14 == 2) {
+                var11 = var18;
+                var10 = var8;
+                var9 = var16;
+              } else if (var14 == 3) {
+                var10 = var17;
+                var11 = var8;
+                var9 = var16;
+              } else if (4 == var14) {
+                var10 = var16;
+                var11 = var8;
+                var9 = var18;
+              } else if (5 == var14) {
+                var11 = var17;
+                var9 = var8;
+                var10 = var16;
               }
               var9 = (float)Math.pow((double)var9, var1_double);
               var10 = (float)Math.pow((double)var10, var1_double);

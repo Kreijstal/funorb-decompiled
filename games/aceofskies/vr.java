@@ -79,17 +79,15 @@ final class vr {
                 this.field_f = param3;
                 this.field_a = param5;
                 this.field_i = param0;
-              } else {
-                if (0 != this.field_i) {
-                  this.field_d[this.field_i & 2147483647].a(4096, param1);
-                  if (this.field_a == param5 &&
-                    param3 == this.field_f) {
-                    return;
-                  }
-                  this.field_d[this.field_i & 2147483647].a((byte) -65, param5, param3);
-                  this.field_f = param3;
-                  this.field_a = param5;
+              } else if (0 != this.field_i) {
+                this.field_d[this.field_i & 2147483647].a(4096, param1);
+                if (this.field_a == param5 &&
+                  param3 == this.field_f) {
+                  return;
                 }
+                this.field_d[this.field_i & 2147483647].a((byte) -65, param5, param3);
+                this.field_f = param3;
+                this.field_a = param5;
               }
               return;
             }
@@ -112,17 +110,15 @@ final class vr {
                 this.field_f = param3;
                 this.field_a = param5;
                 this.field_i = param0;
-              } else {
-                if (0 != this.field_i) {
-                  this.field_d[this.field_i & 2147483647].a(4096, param1);
-                  if (this.field_a == param5 &&
-                    param3 == this.field_f) {
-                    return;
-                  }
-                  this.field_d[this.field_i & 2147483647].a((byte) -65, param5, param3);
-                  this.field_f = param3;
-                  this.field_a = param5;
+              } else if (0 != this.field_i) {
+                this.field_d[this.field_i & 2147483647].a(4096, param1);
+                if (this.field_a == param5 &&
+                  param3 == this.field_f) {
+                  return;
                 }
+                this.field_d[this.field_i & 2147483647].a((byte) -65, param5, param3);
+                this.field_f = param3;
+                this.field_a = param5;
               }
               return;
             }
@@ -176,17 +172,15 @@ final class vr {
                   this.field_f = param3;
                   this.field_a = param5;
                   this.field_i = param0;
-                } else {
-                  if (0 != this.field_i) {
-                    this.field_d[this.field_i & 2147483647].a(4096, param1);
-                    if (this.field_a == param5 &&
-                      param3 == this.field_f) {
-                      return;
-                    }
-                    this.field_d[this.field_i & 2147483647].a((byte) -65, param5, param3);
-                    this.field_f = param3;
-                    this.field_a = param5;
+                } else if (0 != this.field_i) {
+                  this.field_d[this.field_i & 2147483647].a(4096, param1);
+                  if (this.field_a == param5 &&
+                    param3 == this.field_f) {
+                    return;
                   }
+                  this.field_d[this.field_i & 2147483647].a((byte) -65, param5, param3);
+                  this.field_f = param3;
+                  this.field_a = param5;
                 }
                 return;
               }

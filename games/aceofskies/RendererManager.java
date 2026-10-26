@@ -161,101 +161,85 @@ final class RendererManager {
                       if (var9 == -1) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
-                      }
-                      else {
-                        if (var9 < 100) {
-                          return;
-                        }
+                      } else if (var9 < 100) {
+                        return;
                       }
                     }
                   }
-                } else {
-                  if (var7_int != 1) {
-                    if (var7_int == 3) {
-                      if (!oi.field_d.b((byte) 116)) {
-                        return;
-                      }
-                      var7_int = bc.a("jaclib", (byte) 12);
-                      if (var7_int == -1) {
-                        var6.field_b = false;
-                        decompiledFrameRemainder0 = false;
-                      }
-                      else {
-                        if (var7_int < 100) {
-                          return;
-                        }
-                        var8_int = bc.a("jagdx", (byte) 47);
-                        if (var8_int == -1) {
-                          var6.field_b = false;
-                          decompiledFrameRemainder0 = false;
-                        }
-                        else {
-                          if (var8_int < 100) {
-                            return;
-                          }
-                          var9 = bc.a("hw3d", (byte) 1);
-                          if (var9 == -1) {
-                            var6.field_b = false;
-                            decompiledFrameRemainder0 = false;
-                          }
-                          else {
-                            if (var9 < 100) {
-                              return;
-                            }
-                          }
-                        }
-                      }
-                    } else {
-                      if (var7_int != 2) {
-                        throw new IllegalStateException("UT" + var6.field_d);
-                      }
-                      if (!oi.field_d.b((byte) -39)) {
-                        return;
-                      }
-                      var7_int = bc.a("jaclib", (byte) 74);
-                      if (var7_int == -1) {
-                        var6.field_b = false;
-                        decompiledFrameRemainder0 = false;
-                      }
-                      else {
-                        if (100 > var7_int) {
-                          return;
-                        }
-                        var8_int = bc.a("sw3d", (byte) 41);
-                        if (var8_int == -1) {
-                          var6.field_b = false;
-                          decompiledFrameRemainder0 = false;
-                        }
-                        else {
-                          if (var8_int < 100) {
-                            return;
-                          }
-                        }
-                      }
-                    }
-                  } else {
-                    if (!oi.field_d.b((byte) -44)) {
+                } else if (var7_int == 1) {
+                  if (!oi.field_d.b((byte) -44)) {
+                    return;
+                  }
+                  var7_int = bc.a("jaclib", (byte) -120);
+                  if (var7_int == -1) {
+                    var6.field_b = false;
+                    decompiledFrameRemainder0 = false;
+                  }
+                  else {
+                    if (var7_int < 100) {
                       return;
                     }
-                    var7_int = bc.a("jaclib", (byte) -120);
-                    if (var7_int == -1) {
+                    var8_int = bc.a("jaggl", (byte) -80);
+                    if (var8_int == -1) {
+                      var6.field_b = false;
+                      decompiledFrameRemainder0 = false;
+                    } else if (var8_int < 100) {
+                      return;
+                    }
+                  }
+                } else if (var7_int == 3) {
+                  if (!oi.field_d.b((byte) 116)) {
+                    return;
+                  }
+                  var7_int = bc.a("jaclib", (byte) 12);
+                  if (var7_int == -1) {
+                    var6.field_b = false;
+                    decompiledFrameRemainder0 = false;
+                  }
+                  else {
+                    if (var7_int < 100) {
+                      return;
+                    }
+                    var8_int = bc.a("jagdx", (byte) 47);
+                    if (var8_int == -1) {
                       var6.field_b = false;
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      if (var7_int < 100) {
+                      if (var8_int < 100) {
                         return;
                       }
-                      var8_int = bc.a("jaggl", (byte) -80);
-                      if (var8_int == -1) {
+                      var9 = bc.a("hw3d", (byte) 1);
+                      if (var9 == -1) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
+                      } else if (var9 < 100) {
+                        return;
                       }
-                      else {
-                        if (var8_int < 100) {
-                          return;
-                        }
-                      }
+                    }
+                  }
+                } else {
+                  if (var7_int != 2) {
+                    throw new IllegalStateException("UT" + var6.field_d);
+                  }
+                  if (!oi.field_d.b((byte) -39)) {
+                    return;
+                  }
+                  var7_int = bc.a("jaclib", (byte) 74);
+                  if (var7_int == -1) {
+                    var6.field_b = false;
+                    decompiledFrameRemainder0 = false;
+                  }
+                  else {
+                    if (100 > var7_int) {
+                      return;
+                    }
+                    var8_int = bc.a("sw3d", (byte) 41);
+                    if (var8_int == -1) {
+                      var6.field_b = false;
+                      decompiledFrameRemainder0 = false;
+                    } else if (var8_int < 100) {
+                      return;
                     }
                   }
                 }

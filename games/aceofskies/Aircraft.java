@@ -123,12 +123,7 @@ final class Aircraft extends FlightBody {
                   int var37 = var17_int >> 16;
                   if (var37 < re.field_b) {
                     int var38 = -(var17_int >> 16) + (var18 >> 16);
-                    if (var38 == 0) {
-                      if (var37 >= 0 &&
-                        re.field_b > var37) {
-                        s.a((byte) 118, var21, var29, param5, 0, 0, var38, var37 + var36Lifetime2, 0, var25);
-                      }
-                    } else {
+                    if (var38 != 0) {
                       int var39 = (var22 - var21) / var38;
                       int var40 = (-var25 + var26) / var38;
                       int var41 = (-var29 + var30) / var38;
@@ -140,6 +135,9 @@ final class Aircraft extends FlightBody {
                       } else {
                         s.a((byte) 118, var21, var29, param5, var41, var40, var38, var37 + var36Lifetime2, var39, var25);
                       }
+                    } else if (var37 >= 0 &&
+                      re.field_b > var37) {
+                      s.a((byte) 118, var21, var29, param5, 0, 0, var38, var37 + var36Lifetime2, 0, var25);
                     }
                   }
                   param15++;
@@ -294,11 +292,9 @@ final class Aircraft extends FlightBody {
                   } else {
                     s.a((byte) 118, var21, var29, param5, var40Lifetime1, var39Lifetime1, var37Lifetime1, var36Lifetime1 + var35Lifetime1, var38Lifetime1, var25);
                   }
-                } else {
-                  if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < re.field_b) {
-                    s.a((byte) 118, var21, var29, param5, 0, 0, var37Lifetime1, var36Lifetime1 + var35Lifetime1, 0, var25);
-                  }
+                } else if (var36Lifetime1 >= 0 &&
+                  var36Lifetime1 < re.field_b) {
+                  s.a((byte) 118, var21, var29, param5, 0, 0, var37Lifetime1, var36Lifetime1 + var35Lifetime1, 0, var25);
                 }
               }
               param15++;
@@ -442,15 +438,13 @@ final class Aircraft extends FlightBody {
                 stackIn_16_1 = pd.field_a;
               }
               this.steeringMode = stackIn_16_1;
+            } else if (pd.field_a != this.steeringMode) {
+              this.steeringMode = ht.field_i;
             } else {
-              if (pd.field_a != this.steeringMode) {
+              int fieldTemp$0 = this.aimStallTicks + 1;
+              this.aimStallTicks = this.aimStallTicks + 1;
+              if (0 <= fieldTemp$0) {
                 this.steeringMode = ht.field_i;
-              } else {
-                int fieldTemp$0 = this.aimStallTicks + 1;
-                this.aimStallTicks = this.aimStallTicks + 1;
-                if (0 <= fieldTemp$0) {
-                  this.steeringMode = ht.field_i;
-                }
               }
             }
             int targetLeadDistance = 15 * aimLead - 128;
@@ -480,14 +474,12 @@ final class Aircraft extends FlightBody {
                 int stackIn_34_0 = (!(forwardDistanceSquared < rightDistanceSquared)) ? 0 : 1;
                 turnDirection = stackIn_34_0;
               }
+            } else if (rightDistanceSquared > leftDistanceSquared) {
+              int stackIn_29_0 = (!(leftDistanceSquared < forwardDistanceSquared)) ? 0 : -1;
+              turnDirection = stackIn_29_0;
             } else {
-              if (rightDistanceSquared > leftDistanceSquared) {
-                int stackIn_29_0 = (!(leftDistanceSquared < forwardDistanceSquared)) ? 0 : -1;
-                turnDirection = stackIn_29_0;
-              } else {
-                int stackIn_25_0 = (!(rightDistanceSquared < forwardDistanceSquared)) ? 0 : 1;
-                turnDirection = stackIn_25_0;
-              }
+              int stackIn_25_0 = (!(rightDistanceSquared < forwardDistanceSquared)) ? 0 : 1;
+              turnDirection = stackIn_25_0;
             }
             this.turn((double)turnDirection * turnRate, (byte) 25);
             if (obfuscationGuard != 75) {
@@ -495,17 +487,15 @@ final class Aircraft extends FlightBody {
             }
             if (this.definition != ro.field_u) {
               int var14_int = turnDirection;
-              if (var14_int != 1) {
-                if (var14_int == -1) {
-                  this.bankOffset = this.bankOffset - 2;
-                  if (-16 > this.bankOffset) {
-                    this.bankOffset = -16;
-                  }
-                }
-              } else {
+              if (var14_int == 1) {
                 this.bankOffset = this.bankOffset + 2;
                 if (this.bankOffset > 16) {
                   this.bankOffset = 16;
+                }
+              } else if (var14_int == -1) {
+                this.bankOffset = this.bankOffset - 2;
+                if (-16 > this.bankOffset) {
+                  this.bankOffset = -16;
                 }
               }
             }

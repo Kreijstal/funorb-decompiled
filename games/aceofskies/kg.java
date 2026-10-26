@@ -112,17 +112,13 @@ final class kg {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = param0;
         int var3 = it.field_c;
-        if (var3 >= 5) {
-          if (var3 < 105) {
-            var2 = (-40960 + var3 * 16384) / 220;
-          } else {
-            if (var3 < 120) {
-              var3 = -var3 + 120;
-              var2 = 8192 - var3 * var3 * 8192 / 3300;
-            }
-          }
-        } else {
+        if (!(var3 >= 5)) {
           var2 = var3 * (var3 * 8192) / 1100;
+        } else if (var3 < 105) {
+          var2 = (-40960 + var3 * 16384) / 220;
+        } else if (var3 < 120) {
+          var3 = -var3 + 120;
+          var2 = 8192 - var3 * var3 * 8192 / 3300;
         }
         int var4 = 1;
         int var5 = 0;

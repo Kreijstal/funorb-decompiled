@@ -44,65 +44,39 @@ abstract class BitmapFont extends DualLinkNode {
 
     private final void applyStyleTag(String tag) {
         try {
-          if (!tag.startsWith("col=")) {
-            if (!tag.equals("/col")) {
-              if (!tag.startsWith("trans=")) {
-                if (!tag.equals("/trans")) {
-                  if (!tag.startsWith("str=")) {
-                    if (!tag.equals("str")) {
-                      if (!tag.equals("/str")) {
-                        if (!tag.startsWith("u=")) {
-                          if (!tag.equals("u")) {
-                            if (!tag.equals("/u")) {
-                              if (!tag.startsWith("shad=")) {
-                                if (!tag.equals("shad")) {
-                                  if (!tag.equals("/shad")) {
-                                    if (tag.equals("br")) {
-                                      this.resetTextStyle(defaultTextColor, defaultShadowColor, defaultAlpha256);
-                                    }
-                                  } else {
-                                    currentShadowColor = defaultShadowColor;
-                                  }
-                                } else {
-                                  currentShadowColor = 0;
-                                }
-                              } else {
-                                CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
-                                currentShadowColor = np.a(var7, 4, 16);
-                              }
-                            } else {
-                              underlineColor = -1;
-                            }
-                          } else {
-                            underlineColor = 0;
-                          }
-                        } else {
-                          CharSequence var6 = (CharSequence) ((Object) tag.substring(2));
-                          underlineColor = np.a(var6, 4, 16);
-                        }
-                      } else {
-                        strikethroughColor = -1;
-                      }
-                    } else {
-                      strikethroughColor = 8388608;
-                    }
-                  } else {
-                    CharSequence var5 = (CharSequence) ((Object) tag.substring(4));
-                    strikethroughColor = np.a(var5, 4, 16);
-                  }
-                } else {
-                  currentAlpha256 = defaultAlpha256;
-                }
-              } else {
-                CharSequence var4 = (CharSequence) ((Object) tag.substring(6));
-                currentAlpha256 = td.a(var4, (byte) 38);
-              }
-            } else {
-              currentTextColor = defaultTextColor;
-            }
-          } else {
+          if (tag.startsWith("col=")) {
             CharSequence var3 = (CharSequence) ((Object) tag.substring(4));
             currentTextColor = np.a(var3, 4, 16);
+          } else if (tag.equals("/col")) {
+            currentTextColor = defaultTextColor;
+          } else if (tag.startsWith("trans=")) {
+            CharSequence var4 = (CharSequence) ((Object) tag.substring(6));
+            currentAlpha256 = td.a(var4, (byte) 38);
+          } else if (tag.equals("/trans")) {
+            currentAlpha256 = defaultAlpha256;
+          } else if (tag.startsWith("str=")) {
+            CharSequence var5 = (CharSequence) ((Object) tag.substring(4));
+            strikethroughColor = np.a(var5, 4, 16);
+          } else if (tag.equals("str")) {
+            strikethroughColor = 8388608;
+          } else if (tag.equals("/str")) {
+            strikethroughColor = -1;
+          } else if (tag.startsWith("u=")) {
+            CharSequence var6 = (CharSequence) ((Object) tag.substring(2));
+            underlineColor = np.a(var6, 4, 16);
+          } else if (tag.equals("u")) {
+            underlineColor = 0;
+          } else if (tag.equals("/u")) {
+            underlineColor = -1;
+          } else if (tag.startsWith("shad=")) {
+            CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
+            currentShadowColor = np.a(var7, 4, 16);
+          } else if (tag.equals("shad")) {
+            currentShadowColor = 0;
+          } else if (tag.equals("/shad")) {
+            currentShadowColor = defaultShadowColor;
+          } else if (tag.equals("br")) {
+            this.resetTextStyle(defaultTextColor, defaultShadowColor, defaultAlpha256);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,46 +118,38 @@ abstract class BitmapFont extends DualLinkNode {
           var13 == 1) {
           verticalAlignment = 1;
         }
-        if (verticalAlignment != 0) {
-          if (verticalAlignment != 1) {
-            if (verticalAlignment != 2) {
-              int var15 = (height - this.maxAscent - this.maxDescent - (var13 - 1) * lineSpacing) / (var13 + 1);
-              if (var15 < 0) {
-                var15 = 0;
-              }
-              var14 = top + this.maxAscent + var15;
-              lineSpacing = lineSpacing + var15;
-            } else {
-              var14 = top + height - this.maxDescent - (var13 - 1) * lineSpacing;
-            }
-          } else {
-            var14 = top + this.maxAscent + (height - this.maxAscent - this.maxDescent - (var13 - 1) * lineSpacing) / 2;
-          }
-        } else {
+        if (verticalAlignment == 0) {
           var14 = top + this.maxAscent;
+        } else if (verticalAlignment == 1) {
+          var14 = top + this.maxAscent + (height - this.maxAscent - this.maxDescent - (var13 - 1) * lineSpacing) / 2;
+        } else if (verticalAlignment != 2) {
+          int var15 = (height - this.maxAscent - this.maxDescent - (var13 - 1) * lineSpacing) / (var13 + 1);
+          if (var15 < 0) {
+            var15 = 0;
+          }
+          var14 = top + this.maxAscent + var15;
+          lineSpacing = lineSpacing + var15;
+        } else {
+          var14 = top + height - this.maxDescent - (var13 - 1) * lineSpacing;
         }
         for (int var15Lifetime1 = 0; var15Lifetime1 < var13; var15Lifetime1++) {
-          if (horizontalAlignment != 0) {
-            if (horizontalAlignment != 1) {
-              if (horizontalAlignment != 2) {
-                if (var15Lifetime1 != var13 - 1) {
-                  this.prepareJustification(wrappedLines[var15Lifetime1], width);
-                  this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
-                  spaceExpansionQ8 = 0;
-                } else {
-                  this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
-                }
-                var14 = var14 + lineSpacing;
-              } else {
-                this.drawStyledText(wrappedLines[var15Lifetime1], left + width - this.measureTextWidth(wrappedLines[var15Lifetime1]), var14);
-                var14 = var14 + lineSpacing;
-              }
-            } else {
-              this.drawStyledText(wrappedLines[var15Lifetime1], left + (width - this.measureTextWidth(wrappedLines[var15Lifetime1])) / 2, var14);
-              var14 = var14 + lineSpacing;
-            }
-          } else {
+          if (horizontalAlignment == 0) {
             this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
+            var14 = var14 + lineSpacing;
+          } else if (horizontalAlignment == 1) {
+            this.drawStyledText(wrappedLines[var15Lifetime1], left + (width - this.measureTextWidth(wrappedLines[var15Lifetime1])) / 2, var14);
+            var14 = var14 + lineSpacing;
+          } else if (horizontalAlignment != 2) {
+            if (var15Lifetime1 != var13 - 1) {
+              this.prepareJustification(wrappedLines[var15Lifetime1], width);
+              this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
+              spaceExpansionQ8 = 0;
+            } else {
+              this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
+            }
+            var14 = var14 + lineSpacing;
+          } else {
+            this.drawStyledText(wrappedLines[var15Lifetime1], left + width - this.measureTextWidth(wrappedLines[var15Lifetime1]), var14);
             var14 = var14 + lineSpacing;
           }
         }
@@ -299,97 +265,79 @@ abstract class BitmapFont extends DualLinkNode {
               StringBuilder discarded$0 = wrappingBuffer.append('<');
               StringBuilder discarded$1 = wrappingBuffer.append(var15);
               StringBuilder discarded$2 = wrappingBuffer.append('>');
-              if (!var15.equals("br")) {
-                if (!var15.equals("lt")) {
-                  if (!var15.equals("gt")) {
-                    if (!var15.equals("nbsp")) {
-                      if (!var15.equals("shy")) {
-                        if (!var15.equals("times")) {
-                          if (!var15.equals("euro")) {
-                            if (!var15.equals("copy")) {
-                              if (!var15.equals("reg")) {
-                                if (var15.startsWith("img=")) {
-                                  try {
-                                    CharSequence var18 = (CharSequence) ((Object) var15.substring(4));
-                                    int var16_int = td.a(var18, (byte) 38);
-                                    var4 = var4 + this.inlineImages[var16_int].fullWidth;
-                                    var10 = 0;
-                                  } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                    Throwable decompiledCaughtException = decompiledCaughtParameter0;
-                                    Exception var16 = (Exception) (Object) decompiledCaughtException;
-                                  }
-                                }
-                              } else {
-                                var4 = var4 + this.measureCharacterAdvance('®');
-                                if (this.pairKerning != null &&
-                                  var10 != 0) {
-                                  var4 = var4 + this.pairKerning[(var10 << 8) + 174];
-                                }
-                                var10 = 174;
-                              }
-                            } else {
-                              var4 = var4 + this.measureCharacterAdvance('©');
-                              if (this.pairKerning != null &&
-                                var10 != 0) {
-                                var4 = var4 + this.pairKerning[(var10 << 8) + 169];
-                              }
-                              var10 = 169;
-                            }
-                          } else {
-                            var4 = var4 + this.measureCharacterAdvance('€');
-                            if (this.pairKerning != null &&
-                              var10 != 0) {
-                              var4 = var4 + this.pairKerning[(var10 << 8) + 128];
-                            }
-                            var10 = 8364;
-                          }
-                        } else {
-                          var4 = var4 + this.measureCharacterAdvance('×');
-                          if (this.pairKerning != null &&
-                            var10 != 0) {
-                            var4 = var4 + this.pairKerning[(var10 << 8) + 215];
-                          }
-                          var10 = 215;
-                        }
-                      } else {
-                        var4 = var4 + this.measureCharacterAdvance('­');
-                        if (this.pairKerning != null &&
-                          var10 != 0) {
-                          var4 = var4 + this.pairKerning[(var10 << 8) + 173];
-                        }
-                        var10 = 173;
-                      }
-                    } else {
-                      var4 = var4 + this.measureCharacterAdvance(' ');
-                      if (this.pairKerning != null &&
-                        var10 != 0) {
-                        var4 = var4 + this.pairKerning[(var10 << 8) + 160];
-                      }
-                      var10 = 160;
-                    }
-                  } else {
-                    var4 = var4 + this.measureCharacterAdvance('>');
-                    if (this.pairKerning != null &&
-                      var10 != 0) {
-                      var4 = var4 + this.pairKerning[(var10 << 8) + 62];
-                    }
-                    var10 = 62;
-                  }
-                } else {
-                  var4 = var4 + this.measureCharacterAdvance('<');
-                  if (this.pairKerning != null &&
-                    var10 != 0) {
-                    var4 = var4 + this.pairKerning[(var10 << 8) + 60];
-                  }
-                  var10 = 60;
-                }
-              } else {
+              if (var15.equals("br")) {
                 outputLines[var11] = wrappingBuffer.toString().substring(var5, wrappingBuffer.length());
                 var11++;
                 var5 = wrappingBuffer.length();
                 var4 = 0;
                 var6 = -1;
                 var10 = 0;
+              } else if (var15.equals("lt")) {
+                var4 = var4 + this.measureCharacterAdvance('<');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 60];
+                }
+                var10 = 60;
+              } else if (var15.equals("gt")) {
+                var4 = var4 + this.measureCharacterAdvance('>');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 62];
+                }
+                var10 = 62;
+              } else if (var15.equals("nbsp")) {
+                var4 = var4 + this.measureCharacterAdvance(' ');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 160];
+                }
+                var10 = 160;
+              } else if (var15.equals("shy")) {
+                var4 = var4 + this.measureCharacterAdvance('­');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 173];
+                }
+                var10 = 173;
+              } else if (var15.equals("times")) {
+                var4 = var4 + this.measureCharacterAdvance('×');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 215];
+                }
+                var10 = 215;
+              } else if (var15.equals("euro")) {
+                var4 = var4 + this.measureCharacterAdvance('€');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 128];
+                }
+                var10 = 8364;
+              } else if (var15.equals("copy")) {
+                var4 = var4 + this.measureCharacterAdvance('©');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 169];
+                }
+                var10 = 169;
+              } else if (var15.equals("reg")) {
+                var4 = var4 + this.measureCharacterAdvance('®');
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + 174];
+                }
+                var10 = 174;
+              } else if (var15.startsWith("img=")) {
+                try {
+                  CharSequence var18 = (CharSequence) ((Object) var15.substring(4));
+                  int var16_int = td.a(var18, (byte) 38);
+                  var4 = var4 + this.inlineImages[var16_int].fullWidth;
+                  var10 = 0;
+                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                  Throwable decompiledCaughtException = decompiledCaughtParameter0;
+                  Exception var16 = (Exception) (Object) decompiledCaughtException;
+                }
               }
               var14 = 0;
             }
@@ -497,17 +445,13 @@ abstract class BitmapFont extends DualLinkNode {
         int var5 = text.length();
         for (int var6 = 0; var6 < var5; var6++) {
           int var7 = text.charAt(var6);
-          if (var7 != 60) {
-            if (var7 != 62) {
-              if (var4 == 0 &&
-                var7 == 32) {
-                var3++;
-              }
-            } else {
-              var4 = 0;
-            }
-          } else {
+          if (var7 == 60) {
             var4 = 1;
+          } else if (var7 == 62) {
+            var4 = 0;
+          } else if (var4 == 0 &&
+            var7 == 32) {
+            var3++;
           }
         }
         if (var3 > 0) {
@@ -531,54 +475,39 @@ abstract class BitmapFont extends DualLinkNode {
               var2 != -1) {
               String var8 = text.substring(var2 + 1, var6).toLowerCase();
               var2 = -1;
-              if (!var8.equals("lt")) {
-                if (!var8.equals("gt")) {
-                  if (!var8.equals("nbsp")) {
-                    if (!var8.equals("shy")) {
-                      if (!var8.equals("times")) {
-                        if (!var8.equals("euro")) {
-                          if (!var8.equals("copy")) {
-                            if (!var8.equals("reg")) {
-                              if (!(!var8.startsWith("img="))) {
-                                try {
-                                  CharSequence var10 = (CharSequence) ((Object) var8.substring(4));
-                                  int var9_int = td.a(var10, (byte) 38);
-                                  var4 = var4 + this.inlineImages[var9_int].fullWidth;
-                                  var3 = 0;
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  Throwable decompiledCaughtException = decompiledCaughtParameter0;
-                                  Exception var9 = (Exception) (Object) decompiledCaughtException;
-                                }
-                              }
-                              decompiledFrameRemainder0 = false;
-                            }
-                            else {
-                              var7 = 174;
-                            }
-                          } else {
-                            var7 = 169;
-                          }
-                        } else {
-                          var7 = 8364;
-                        }
-                      } else {
-                        var7 = 215;
-                      }
-                    } else {
-                      var7 = 173;
-                    }
-                  } else {
-                    var7 = 160;
-                  }
-                } else {
-                  var7 = 62;
-                }
-              } else {
+              if (var8.equals("lt")) {
                 var7 = 60;
+              } else if (var8.equals("gt")) {
+                var7 = 62;
+              } else if (var8.equals("nbsp")) {
+                var7 = 160;
+              } else if (var8.equals("shy")) {
+                var7 = 173;
+              } else if (var8.equals("times")) {
+                var7 = 215;
+              } else if (var8.equals("euro")) {
+                var7 = 8364;
+              } else if (var8.equals("copy")) {
+                var7 = 169;
+              } else if (!var8.equals("reg")) {
+                if (var8.startsWith("img=")) {
+                  try {
+                    CharSequence var10 = (CharSequence) ((Object) var8.substring(4));
+                    int var9_int = td.a(var10, (byte) 38);
+                    var4 = var4 + this.inlineImages[var9_int].fullWidth;
+                    var3 = 0;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    Throwable decompiledCaughtException = decompiledCaughtParameter0;
+                    Exception var9 = (Exception) (Object) decompiledCaughtException;
+                  }
+                }
+                decompiledFrameRemainder0 = false;
+              } else {
+                var7 = 174;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (var2 == -1)) {
+            if (decompiledFrameRemainder0 &&
+              var2 == -1) {
               var7 = (char)(ae.a((char) var7, -110) & 255);
               var4 = var4 + this.glyphAdvances[var7];
               if (this.pairKerning != null &&
@@ -617,68 +546,53 @@ abstract class BitmapFont extends DualLinkNode {
               var4 != -1) {
               String var9_ref_String = text.substring(var4 + 1, var7).toLowerCase();
               var4 = -1;
-              if (!var9_ref_String.equals("lt")) {
-                if (!var9_ref_String.equals("gt")) {
-                  if (!var9_ref_String.equals("nbsp")) {
-                    if (!var9_ref_String.equals("shy")) {
-                      if (!var9_ref_String.equals("times")) {
-                        if (!var9_ref_String.equals("euro")) {
-                          if (!var9_ref_String.equals("copy")) {
-                            if (!var9_ref_String.equals("reg")) {
-                              if (!var9_ref_String.startsWith("img=")) {
-                                this.applyStyleTag(var9_ref_String);
-                              } else {
-                                try {
-                                  CharSequence var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = td.a(var13, (byte) 38);
-                                  IndexedSpriteState var11_ref_df = this.inlineImages[var10];
-                                  if (this.inlineImageBaselineOffsets == null) {
-                                    stackIn_27_0 = var11_ref_df.fullHeight;
-                                  } else {
-                                    stackIn_27_0 = this.inlineImageBaselineOffsets[var10];
-                                  }
-                                  int var12 = stackIn_27_0;
-                                  if (currentAlpha256 != 256) {
-                                    var11_ref_df.drawAlpha(penX, baselineY + this.lineAdvance - var12, currentAlpha256);
-                                  } else {
-                                    var11_ref_df.draw(penX, baselineY + this.lineAdvance - var12);
-                                  }
-                                  penX = penX + var11_ref_df.fullWidth;
-                                  var5 = 0;
-                                } catch (java.lang.Exception decompiledCaughtParameter0) {
-                                  Throwable decompiledCaughtException = decompiledCaughtParameter0;
-                                  Exception var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
-                                }
-                              }
-                              decompiledFrameRemainder0 = false;
-                            }
-                            else {
-                              var8 = 174;
-                            }
-                          } else {
-                            var8 = 169;
-                          }
-                        } else {
-                          var8 = 8364;
-                        }
-                      } else {
-                        var8 = 215;
-                      }
-                    } else {
-                      var8 = 173;
-                    }
-                  } else {
-                    var8 = 160;
-                  }
-                } else {
-                  var8 = 62;
-                }
-              } else {
+              if (var9_ref_String.equals("lt")) {
                 var8 = 60;
+              } else if (var9_ref_String.equals("gt")) {
+                var8 = 62;
+              } else if (var9_ref_String.equals("nbsp")) {
+                var8 = 160;
+              } else if (var9_ref_String.equals("shy")) {
+                var8 = 173;
+              } else if (var9_ref_String.equals("times")) {
+                var8 = 215;
+              } else if (var9_ref_String.equals("euro")) {
+                var8 = 8364;
+              } else if (var9_ref_String.equals("copy")) {
+                var8 = 169;
+              } else if (!var9_ref_String.equals("reg")) {
+                if (!var9_ref_String.startsWith("img=")) {
+                  this.applyStyleTag(var9_ref_String);
+                } else {
+                  try {
+                    CharSequence var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
+                    var10 = td.a(var13, (byte) 38);
+                    IndexedSpriteState var11_ref_df = this.inlineImages[var10];
+                    if (this.inlineImageBaselineOffsets == null) {
+                      stackIn_27_0 = var11_ref_df.fullHeight;
+                    } else {
+                      stackIn_27_0 = this.inlineImageBaselineOffsets[var10];
+                    }
+                    int var12 = stackIn_27_0;
+                    if (currentAlpha256 != 256) {
+                      var11_ref_df.drawAlpha(penX, baselineY + this.lineAdvance - var12, currentAlpha256);
+                    } else {
+                      var11_ref_df.draw(penX, baselineY + this.lineAdvance - var12);
+                    }
+                    penX = penX + var11_ref_df.fullWidth;
+                    var5 = 0;
+                  } catch (java.lang.Exception decompiledCaughtParameter0) {
+                    Throwable decompiledCaughtException = decompiledCaughtParameter0;
+                    Exception var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                  }
+                }
+                decompiledFrameRemainder0 = false;
+              } else {
+                var8 = 174;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (var4 == -1)) {
+            if (decompiledFrameRemainder0 &&
+              var4 == -1) {
               var8 = (char)(ae.a((char) var8, -107) & 255);
               if (this.pairKerning != null &&
                 var5 != 0) {
@@ -693,18 +607,16 @@ abstract class BitmapFont extends DualLinkNode {
                   penX = penX + (justificationRemainderQ8 >> 8);
                   justificationRemainderQ8 = justificationRemainderQ8 & 255;
                 }
-              } else {
-                if (currentAlpha256 != 256) {
-                  if (currentShadowColor != -1) {
-                    this.drawGlyphAlpha(var8, penX + this.glyphXOffsets[var8] + 1, baselineY + this.glyphYOffsets[var8] + 1, var9, var10, currentShadowColor, currentAlpha256, true);
-                  }
-                  this.drawGlyphAlpha(var8, penX + this.glyphXOffsets[var8], baselineY + this.glyphYOffsets[var8], var9, var10, currentTextColor, currentAlpha256, false);
-                } else {
-                  if (currentShadowColor != -1) {
-                    this.drawGlyph(var8, penX + this.glyphXOffsets[var8] + 1, baselineY + this.glyphYOffsets[var8] + 1, var9, var10, currentShadowColor, true);
-                  }
-                  this.drawGlyph(var8, penX + this.glyphXOffsets[var8], baselineY + this.glyphYOffsets[var8], var9, var10, currentTextColor, false);
+              } else if (currentAlpha256 != 256) {
+                if (currentShadowColor != -1) {
+                  this.drawGlyphAlpha(var8, penX + this.glyphXOffsets[var8] + 1, baselineY + this.glyphYOffsets[var8] + 1, var9, var10, currentShadowColor, currentAlpha256, true);
                 }
+                this.drawGlyphAlpha(var8, penX + this.glyphXOffsets[var8], baselineY + this.glyphYOffsets[var8], var9, var10, currentTextColor, currentAlpha256, false);
+              } else {
+                if (currentShadowColor != -1) {
+                  this.drawGlyph(var8, penX + this.glyphXOffsets[var8] + 1, baselineY + this.glyphYOffsets[var8] + 1, var9, var10, currentShadowColor, true);
+                }
+                this.drawGlyph(var8, penX + this.glyphXOffsets[var8], baselineY + this.glyphYOffsets[var8], var9, var10, currentTextColor, false);
               }
               penX = penX + this.glyphAdvances[var8];
               if (strikethroughColor != -1) {

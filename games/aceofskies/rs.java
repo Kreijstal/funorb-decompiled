@@ -17,16 +17,12 @@ final class rs extends ab implements ue, dn {
         String stackIn_14_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (param3 != 0) {
-            if (1 != param3) {
-              if (param3 == 2) {
-                qk.a("conduct.ws", false);
-              }
-            } else {
-              qk.a("privacy.ws", false);
-            }
-          } else {
+          if (param3 == 0) {
             qk.a("terms.ws", false);
+          } else if (1 == param3) {
+            qk.a("privacy.ws", false);
+          } else if (param3 == 2) {
+            qk.a("conduct.ws", false);
           }
           if (param0 < -59) {
             return;

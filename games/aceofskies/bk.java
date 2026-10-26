@@ -77,12 +77,10 @@ final class bk extends hh {
               int var4Lifetime4 = param1 & 3;
               if (2 == var4Lifetime4) {
                 jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
+              } else if (var4Lifetime4 != 3) {
+                jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
               } else {
-                if (var4Lifetime4 != 3) {
-                  jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
-                } else {
-                  jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
-                }
+                jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
               }
               return;
             }
@@ -95,12 +93,10 @@ final class bk extends hh {
                 int var4Lifetime2 = param1 & 3;
                 if (2 == var4Lifetime2) {
                   jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
+                } else if (var4Lifetime2 != 3) {
+                  jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
                 } else {
-                  if (var4Lifetime2 != 3) {
-                    jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
-                  } else {
-                    jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
-                  }
+                  jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
                 }
                 return;
               }
@@ -123,12 +119,10 @@ final class bk extends hh {
             int var4Lifetime3 = param1 & 3;
             if (2 == var4Lifetime3) {
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
+            } else if (var4Lifetime3 == 3) {
+              jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
             } else {
-              if (var4Lifetime3 == 3) {
-                jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
-              } else {
-                jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
-              }
+              jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
             }
             return;
           }
@@ -156,12 +150,10 @@ final class bk extends hh {
         int var4Lifetime1 = param1 & 3;
         if (2 == var4Lifetime1) {
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
+        } else if (var4Lifetime1 == 3) {
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
         } else {
-          if (var4Lifetime1 == 3) {
-            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.10000000149011612f, 1.0f, 1.0f, 1.0f);
-          } else {
-            jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
-          }
+          jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.02500000037252903f, 1.0f, 1.0f, 1.0f);
         }
     }
 

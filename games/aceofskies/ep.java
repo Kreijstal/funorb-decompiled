@@ -257,10 +257,8 @@ final class ep extends ab implements bh, dn {
         try {
           if (param1 == this.field_y) {
             ua.e(4754);
-          } else {
-            if (this.field_v == param1) {
-              this.d((byte) -128);
-            }
+          } else if (this.field_v == param1) {
+            this.d((byte) -128);
           }
           int var6_int = 96 % ((param4 + 27) / 61);
         } catch (RuntimeException runtimeException) {

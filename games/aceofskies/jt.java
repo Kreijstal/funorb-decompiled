@@ -44,31 +44,16 @@ final class jt extends PcmStream {
             this.field_u = -this.field_u;
             this.field_m = false;
             this.field_v = null;
-          } else {
-            if (this.field_u < 0 &&
-              !this.field_p.f(32119)) {
-              this.field_u = -this.field_u;
-              this.field_r = null;
-              this.field_m = false;
-            }
+          } else if (this.field_u < 0 &&
+            !this.field_p.f(32119)) {
+            this.field_u = -this.field_u;
+            this.field_r = null;
+            this.field_m = false;
           }
         }
         if (this.field_u != 0) {
           this.field_l = this.field_l + param0 * this.field_u;
-          if (this.field_l < 1048576) {
-            if (this.field_l <= 0) {
-              this.field_l = 0;
-              if (!this.field_m) {
-                this.field_u = 0;
-                if (!this.field_w) {
-                  if (null != this.field_v) {
-                    this.field_n.d(-127);
-                  }
-                  this.field_v = null;
-                }
-              }
-            }
-          } else {
+          if (!(this.field_l < 1048576)) {
             this.field_l = 1048576;
             if (!this.field_m) {
               this.field_u = 0;
@@ -77,6 +62,17 @@ final class jt extends PcmStream {
                   this.field_p.d(-127);
                 }
                 this.field_r = null;
+              }
+            }
+          } else if (this.field_l <= 0) {
+            this.field_l = 0;
+            if (!this.field_m) {
+              this.field_u = 0;
+              if (!this.field_w) {
+                if (null != this.field_v) {
+                  this.field_n.d(-127);
+                }
+                this.field_v = null;
               }
             }
           }
@@ -128,33 +124,18 @@ final class jt extends PcmStream {
               this.field_m = false;
               this.field_u = -this.field_u;
               this.field_v = null;
-            } else {
-              if (0 > this.field_u &&
-                !this.field_p.f(32119)) {
-                this.field_r = null;
-                this.field_m = false;
-                this.field_u = -this.field_u;
-              }
+            } else if (0 > this.field_u &&
+              !this.field_p.f(32119)) {
+              this.field_r = null;
+              this.field_m = false;
+              this.field_u = -this.field_u;
             }
           }
           int var4_int = this.field_q * (this.field_l >> 12) / 256;
           int var5 = this.field_q - var4_int;
           if (this.field_u != 0) {
             this.field_l = this.field_l + this.field_u * param2;
-            if (this.field_l < 1048576) {
-              if (this.field_l <= 0) {
-                this.field_l = 0;
-                if (!this.field_m) {
-                  this.field_u = 0;
-                  if (!this.field_w) {
-                    if (null != this.field_v) {
-                      this.field_n.d(-128);
-                    }
-                    this.field_v = null;
-                  }
-                }
-              }
-            } else {
+            if (!(this.field_l < 1048576)) {
               this.field_l = 1048576;
               if (!this.field_m) {
                 this.field_u = 0;
@@ -163,6 +144,17 @@ final class jt extends PcmStream {
                     this.field_p.d(-127);
                   }
                   this.field_r = null;
+                }
+              }
+            } else if (this.field_l <= 0) {
+              this.field_l = 0;
+              if (!this.field_m) {
+                this.field_u = 0;
+                if (!this.field_w) {
+                  if (null != this.field_v) {
+                    this.field_n.d(-128);
+                  }
+                  this.field_v = null;
                 }
               }
             }
@@ -177,32 +169,30 @@ final class jt extends PcmStream {
             null != this.field_r)) {
             if (var4_int == 256) {
               this.field_n.b(param0, param1, param2);
-            } else {
-              if (var5 != 256) {
-                if (null != this.field_i &&
-                  this.field_i.length >= var6) {
-                  au.a(this.field_i, 0, var6);
-                  au.a(this.field_o, 0, var6);
-                } else {
-                  this.field_i = new int[var6];
-                  this.field_o = new int[var6];
-                }
-                this.field_n.b(this.field_i, 0, param2);
-                this.field_p.b(this.field_o, 0, param2);
-                if (tk.field_r) {
-                  int localTemp$0 = param1 << 1;
-                  param1 = localTemp$0;
-                  stackIn_49_0 = localTemp$0;
-                } else {
-                  stackIn_49_0 = param1;
-                }
-                int var7 = stackIn_49_0;
-                for (int var8 = 0; var8 < var6; var8++) {
-                  param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_i[var8] + var5 * this.field_o[var8] >> 8);
-                }
+            } else if (var5 != 256) {
+              if (null != this.field_i &&
+                this.field_i.length >= var6) {
+                au.a(this.field_i, 0, var6);
+                au.a(this.field_o, 0, var6);
               } else {
-                this.field_p.b(param0, param1, param2);
+                this.field_i = new int[var6];
+                this.field_o = new int[var6];
               }
+              this.field_n.b(this.field_i, 0, param2);
+              this.field_p.b(this.field_o, 0, param2);
+              if (tk.field_r) {
+                int localTemp$0 = param1 << 1;
+                param1 = localTemp$0;
+                stackIn_49_0 = localTemp$0;
+              } else {
+                stackIn_49_0 = param1;
+              }
+              int var7 = stackIn_49_0;
+              for (int var8 = 0; var8 < var6; var8++) {
+                param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_i[var8] + var5 * this.field_o[var8] >> 8);
+              }
+            } else {
+              this.field_p.b(param0, param1, param2);
             }
           }
           if (this.field_k != null) {
@@ -350,15 +340,13 @@ final class jt extends PcmStream {
             this.a(param5, this.field_p, param3, 30121);
             return;
           }
-          if (this.field_v != null) {
-            if (this.field_r == null) {
-              var7_int = 0;
-            } else {
-              int stackIn_33_0 = (this.field_l >= 524288) ? 0 : 1;
-              var7_int = stackIn_33_0;
-            }
-          } else {
+          if (this.field_v == null) {
             var7_int = 1;
+          } else if (this.field_r == null) {
+            var7_int = 0;
+          } else {
+            int stackIn_33_0 = (this.field_l >= 524288) ? 0 : 1;
+            var7_int = stackIn_33_0;
           }
           if (var7_int != 0) {
             if (this.field_v != null) {

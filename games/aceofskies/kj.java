@@ -381,48 +381,46 @@ final class kj extends GraphicsRenderer {
             param3 = this.field_D - 1;
           }
           int var8 = param4 >>> 24;
-          if (param5 != 0 && (param5 != 1 ||
-            var8 != 255)) {
-            if (param5 == 1) {
-              param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
-              int var9 = 256 - var8;
-              while (param1 <= param3) {
-                int var10 = param0 >> 16;
-                if (var10 >= this.field_z &&
-                  var10 < this.field_k) {
-                  int var11 = var10 + param1 * this.field_f;
-                  int var12 = this.field_E[var11];
-                  var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
-                  this.field_E[var10 + param1 * this.field_f] = param4 + var12;
-                }
-                param0 = param0 + var7;
-                param1++;
-              }
-            } else {
-              if (param5 != 2) {
-                throw new IllegalArgumentException();
-              }
-              while (param1 <= param3) {
-                int var9Lifetime4 = param0 >> 16;
-                if (var9Lifetime4 >= this.field_z &&
-                  var9Lifetime4 < this.field_k) {
-                  int var10Lifetime2 = var9Lifetime4 + param1 * this.field_f;
-                  int var11Lifetime2 = this.field_E[var10Lifetime2];
-                  int var12Lifetime2 = param4 + var11Lifetime2;
-                  int var13 = (param4 & 16711935) + (var11Lifetime2 & 16711935);
-                  int var11Lifetime2Lifetime1 = (var13 & 16777472) + (var12Lifetime2 - var13 & 65536);
-                  this.field_E[var10Lifetime2] = var12Lifetime2 - var11Lifetime2Lifetime1 | var11Lifetime2Lifetime1 - (var11Lifetime2Lifetime1 >>> 8);
-                }
-                param0 = param0 + var7;
-                param1++;
-              }
-            }
-          } else {
+          if (param5 == 0 || param5 == 1 &&
+            var8 == 255) {
             while (param1 <= param3) {
               int var9Lifetime3 = param0 >> 16;
               if (var9Lifetime3 >= this.field_z &&
                 var9Lifetime3 < this.field_k) {
                 this.field_E[var9Lifetime3 + param1 * this.field_f] = param4;
+              }
+              param0 = param0 + var7;
+              param1++;
+            }
+          } else if (param5 == 1) {
+            param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
+            int var9 = 256 - var8;
+            while (param1 <= param3) {
+              int var10 = param0 >> 16;
+              if (var10 >= this.field_z &&
+                var10 < this.field_k) {
+                int var11 = var10 + param1 * this.field_f;
+                int var12 = this.field_E[var11];
+                var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
+                this.field_E[var10 + param1 * this.field_f] = param4 + var12;
+              }
+              param0 = param0 + var7;
+              param1++;
+            }
+          } else {
+            if (param5 != 2) {
+              throw new IllegalArgumentException();
+            }
+            while (param1 <= param3) {
+              int var9Lifetime4 = param0 >> 16;
+              if (var9Lifetime4 >= this.field_z &&
+                var9Lifetime4 < this.field_k) {
+                int var10Lifetime2 = var9Lifetime4 + param1 * this.field_f;
+                int var11Lifetime2 = this.field_E[var10Lifetime2];
+                int var12Lifetime2 = param4 + var11Lifetime2;
+                int var13 = (param4 & 16711935) + (var11Lifetime2 & 16711935);
+                int var11Lifetime2Lifetime1 = (var13 & 16777472) + (var12Lifetime2 - var13 & 65536);
+                this.field_E[var10Lifetime2] = var12Lifetime2 - var11Lifetime2Lifetime1 | var11Lifetime2Lifetime1 - (var11Lifetime2Lifetime1 >>> 8);
               }
               param0 = param0 + var7;
               param1++;

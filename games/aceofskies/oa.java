@@ -154,11 +154,9 @@ final class oa extends GraphicsRenderer implements e {
             }
             var4 = new p(this, param0, param1, param2);
             this.field_h.put(-125, (long)param0.hashCode(), var4);
-          } else {
-            if (var4.field_h != param1 ||
-              var4.field_g != param2) {
-              var4.a(param0, param1, param2);
-            }
+          } else if (var4.field_h != param1 ||
+            var4.field_g != param2) {
+            var4.a(param0, param1, param2);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

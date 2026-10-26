@@ -56,25 +56,23 @@ final class tj extends ao {
           if (param4 > -21) {
             this.field_i = 1.9943350553512573f;
           }
-          if (!(0.00390625f < param5) &&
-            !(param5 < -0.00390625f)) {
-            if (!(param3 > 0.00390625f) &&
-              !(-0.00390625f > param3)) {
-              var10 = -param0 / param1;
-              var9 = this.field_e + var10 * this.field_r;
-              var7_float = this.field_g + this.field_s * var10;
-              var8 = this.field_k + var10 * this.field_p;
-            } else {
-              var10 = -param0 / param3;
-              var9 = this.field_e + this.field_q * var10;
-              var8 = this.field_j * var10 + this.field_k;
-              var7_float = var10 * this.field_l + this.field_g;
-            }
-          } else {
+          if (0.00390625f < param5 ||
+            param5 < -0.00390625f) {
             var10 = -param0 / param5;
             var8 = this.field_k + this.field_h * var10;
             var9 = this.field_f * var10 + this.field_e;
             var7_float = this.field_g + var10 * this.field_i;
+          } else if (!(param3 > 0.00390625f) &&
+            !(-0.00390625f > param3)) {
+            var10 = -param0 / param1;
+            var9 = this.field_e + var10 * this.field_r;
+            var7_float = this.field_g + this.field_s * var10;
+            var8 = this.field_k + var10 * this.field_p;
+          } else {
+            var10 = -param0 / param3;
+            var9 = this.field_e + this.field_q * var10;
+            var8 = this.field_j * var10 + this.field_k;
+            var7_float = var10 * this.field_l + this.field_g;
           }
           param2[2] = param3 * this.field_q + this.field_f * param5 + param1 * this.field_r;
           param2[0] = this.field_s * param1 + (this.field_i * param5 + this.field_l * param3);

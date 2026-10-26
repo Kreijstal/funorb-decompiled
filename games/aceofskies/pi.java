@@ -210,10 +210,8 @@ final class pi extends mi {
               ca.field_f = wq.field_e;
               if (dq.field_a.a(-78) == SteeringMode.field_a) {
                 ef.field_k.a(bm.m(param2 + 113), (byte) 125);
-              } else {
-                if (dq.field_a.a(-87) == ds.field_e) {
-                  lp.field_f.a(bm.m(111), (byte) 8);
-                }
+              } else if (dq.field_a.a(-87) == ds.field_e) {
+                lp.field_f.a(bm.m(111), (byte) 8);
               }
               ld.field_d = false;
               if (var11 != null) {

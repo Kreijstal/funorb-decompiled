@@ -23,10 +23,8 @@ final class wr {
         try {
           if (param1) {
             param0 = null;
-          } else {
-            if (param0 == null) {
-              throw new NullPointerException();
-            }
+          } else if (param0 == null) {
+            throw new NullPointerException();
           }
           if (this.field_a == param0) {
             return;

@@ -494,12 +494,10 @@ final class on {
             int var15 = -1;
             int var16 = 1;
             do {
-              if (var13 != 0) {
-                if (var13 == 1) {
-                  var15 = var15 + 2 * var16;
-                }
-              } else {
+              if (var13 == 0) {
                 var15 = var15 + 1 * var16;
+              } else if (var13 == 1) {
+                var15 = var15 + 2 * var16;
               }
               var16 = var16 * 2;
               if (var12 == 0) {

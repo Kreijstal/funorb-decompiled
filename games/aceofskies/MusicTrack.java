@@ -181,74 +181,42 @@ final class MusicTrack extends IntrusiveNode {
         int var28 = 0;
         for (int var29 = 0; var29 < var6; var29++) {
           var28 = var28 + param0.readUnsignedByte(67) & 127;
-          if (var28 != 0) {
-            if (var28 != 32) {
-              if (var28 != 1) {
-                if (var28 != 33) {
-                  if (var28 != 7) {
-                    if (var28 != 39) {
-                      if (var28 != 10) {
-                        if (var28 != 42) {
-                          if (var28 != 99) {
-                            if (var28 != 98) {
-                              if (var28 != 101) {
-                                if (var28 != 100) {
-                                  if (var28 != 64) {
-                                    if (var28 != 65) {
-                                      if (var28 != 120) {
-                                        if (var28 != 121) {
-                                          if (var28 != 123) {
-                                            var27++;
-                                          } else {
-                                            var26++;
-                                          }
-                                        } else {
-                                          var26++;
-                                        }
-                                      } else {
-                                        var26++;
-                                      }
-                                    } else {
-                                      var26++;
-                                    }
-                                  } else {
-                                    var26++;
-                                  }
-                                } else {
-                                  var25++;
-                                }
-                              } else {
-                                var24++;
-                              }
-                            } else {
-                              var23++;
-                            }
-                          } else {
-                            var22++;
-                          }
-                        } else {
-                          var21++;
-                        }
-                      } else {
-                        var20++;
-                      }
-                    } else {
-                      var19++;
-                    }
-                  } else {
-                    var18++;
-                  }
-                } else {
-                  var17++;
-                }
-              } else {
-                var16++;
-              }
-            } else {
-              var12++;
-            }
-          } else {
+          if (var28 == 0) {
             var12++;
+          } else if (var28 == 32) {
+            var12++;
+          } else if (var28 == 1) {
+            var16++;
+          } else if (var28 == 33) {
+            var17++;
+          } else if (var28 == 7) {
+            var18++;
+          } else if (var28 == 39) {
+            var19++;
+          } else if (var28 == 10) {
+            var20++;
+          } else if (var28 == 42) {
+            var21++;
+          } else if (var28 == 99) {
+            var22++;
+          } else if (var28 == 98) {
+            var23++;
+          } else if (var28 == 101) {
+            var24++;
+          } else if (var28 == 100) {
+            var25++;
+          } else if (var28 == 64) {
+            var26++;
+          } else if (var28 == 65) {
+            var26++;
+          } else if (var28 == 120) {
+            var26++;
+          } else if (var28 == 121) {
+            var26++;
+          } else if (var28 != 123) {
+            var27++;
+          } else {
+            var26++;
           }
         }
         int var29Lifetime1 = 0;

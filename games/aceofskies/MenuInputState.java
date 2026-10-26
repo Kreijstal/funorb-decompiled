@@ -43,11 +43,7 @@ final class MenuInputState {
         }
         this.handleVerticalKey(true);
         this.pressedButton = 0;
-        if (this.heldButton != 0) {
-          if (this.heldButton == 0) {
-            this.keyCode = bk.lastKeyCode;
-          }
-        } else {
+        if (this.heldButton == 0) {
           if (98 == bk.lastKeyCode) {
             if (this.selectedIndex <= 0) {
               this.selectedIndex = this.itemCount;
@@ -70,6 +66,8 @@ final class MenuInputState {
             }
             return;
           }
+        } else if (this.heldButton == 0) {
+          this.keyCode = bk.lastKeyCode;
         }
         if (0 != this.heldButton) {
           return;
@@ -241,14 +239,12 @@ final class MenuInputState {
                   if (this.pointerSelection) {
                     this.selectedIndex = -1;
                   }
+                } else if (this.selectedIndex == hoveredItemIndex) {
+                  this.selectedIndex = hoveredItemIndex;
+                  this.pointerSelection = true;
                 } else {
-                  if (this.selectedIndex == hoveredItemIndex) {
-                    this.selectedIndex = hoveredItemIndex;
-                    this.pointerSelection = true;
-                  } else {
-                    this.selectedIndex = hoveredItemIndex;
-                    this.pointerSelection = true;
-                  }
+                  this.selectedIndex = hoveredItemIndex;
+                  this.pointerSelection = true;
                 }
               }
               return;

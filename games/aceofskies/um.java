@@ -125,11 +125,9 @@ final class um extends PcmStream {
         if (1 == m.field_f) {
           var8.readUnsignedShort((byte) 0);
           var8.readNullTerminatedText(-17883);
-        } else {
-          if (m.field_f == 4) {
-            var8.readUnsignedShort((byte) 0);
-            var8.readNullTerminatedText(-17883);
-          }
+        } else if (m.field_f == 4) {
+          var8.readUnsignedShort((byte) 0);
+          var8.readNullTerminatedText(-17883);
         }
         if (!param0) {
           ep.field_x = ko.a(var8, 80, (byte) -114);

@@ -33,26 +33,18 @@ final class oj extends sk {
                 var11 = var11 * var13;
                 var12 = var12 * var13;
                 for (int var16 = 0; var16 < 6; var16++) {
-                  if (var16 != 0) {
-                    if (var16 != 1) {
-                      if (var16 != 2) {
-                        if (var16 != 3) {
-                          if (var16 == 4) {
-                            var10 = var13;
-                          } else {
-                            var10 = -var13;
-                          }
-                        } else {
-                          var10 = -var12;
-                        }
-                      } else {
-                        var10 = var12;
-                      }
-                    } else {
-                      var10 = var11;
-                    }
-                  } else {
+                  if (var16 == 0) {
                     var10 = -var11;
+                  } else if (var16 == 1) {
+                    var10 = var11;
+                  } else if (var16 == 2) {
+                    var10 = var12;
+                  } else if (var16 == 3) {
+                    var10 = -var12;
+                  } else if (var16 == 4) {
+                    var10 = var13;
+                  } else {
+                    var10 = -var13;
                   }
                   if (!(0.0f < var10)) {
                     var6 = 0;
@@ -99,32 +91,30 @@ final class oj extends sk {
         }
         if (null == this.field_h) {
           this.field_b.a(ac.field_b, 0, 0);
+        } else if (!param0) {
+          this.field_b.a(ac.field_b, 0, 0);
         } else {
-          if (!param0) {
+          this.field_b.a(1, (byte) 78);
+          this.field_b.a(rg.field_A, false);
+          ec var6 = this.field_b.d(12343);
+          var6.a(1024, 1);
+          this.field_b.a(qn.field_a, (byte) -127);
+          if (this.field_i) {
+            this.field_b.a(lo.field_j, true, bd.field_C);
+            this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
             this.field_b.a(ac.field_b, 0, 0);
           } else {
-            this.field_b.a(1, (byte) 78);
-            this.field_b.a(rg.field_A, false);
-            ec var6 = this.field_b.d(12343);
-            var6.a(1024, 1);
-            this.field_b.a(qn.field_a, (byte) -127);
-            if (this.field_i) {
-              this.field_b.a(lo.field_j, true, bd.field_C);
-              this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
-              this.field_b.a(ac.field_b, 0, 0);
-            } else {
-              this.field_b.a(bd.field_C, true, ru.field_a);
-              this.field_b.a((byte) 119, 0, un.field_i);
-              this.field_b.a(2, (byte) 79);
-              this.field_b.a(lo.field_j, true, bd.field_C);
-              this.field_b.a((byte) 120, 0, un.field_i);
-              this.field_b.a(true, 1, true, un.field_i, false);
-              this.field_b.a(ac.field_b, 0, 0);
-              this.field_b.a(this.field_b.field_Kb, -9135);
-            }
-            this.field_b.a(0, (byte) 40);
-            this.field_f = true;
+            this.field_b.a(bd.field_C, true, ru.field_a);
+            this.field_b.a((byte) 119, 0, un.field_i);
+            this.field_b.a(2, (byte) 79);
+            this.field_b.a(lo.field_j, true, bd.field_C);
+            this.field_b.a((byte) 120, 0, un.field_i);
+            this.field_b.a(true, 1, true, un.field_i, false);
+            this.field_b.a(ac.field_b, 0, 0);
+            this.field_b.a(this.field_b.field_Kb, -9135);
           }
+          this.field_b.a(0, (byte) 40);
+          this.field_f = true;
         }
     }
 
@@ -177,11 +167,9 @@ final class oj extends sk {
               5 == var3) {
               ld.a(param0 + 14178);
             }
-          } else {
-            if (var2 != 0 &&
-              2 != ol.field_c) {
-              ld.a(14183);
-            }
+          } else if (var2 != 0 &&
+            2 != ol.field_c) {
+            ld.a(14183);
           }
           if (var3 == 0 &&
             ol.field_c == 2) {

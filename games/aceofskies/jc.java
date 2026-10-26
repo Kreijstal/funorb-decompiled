@@ -651,47 +651,35 @@ final class jc extends bf {
             var10.b(-17310);
             for (int var15 = 0; var9.a((byte) 90) > var15; var15++) {
               rl var16 = var9.b(var15, 121);
-              if (rl.field_b != var16) {
-                if (var16 == rl.field_m) {
-                  var6 = 1;
-                  jaggl.OpenGL.glNormalPointer(5126, var12, (long)var11 + var13);
-                } else {
-                  if (var16 == rl.field_c) {
-                    var5 = 1;
-                    jaggl.OpenGL.glColorPointer(4, 5121, var12, var13 + (long)var11);
-                  } else {
-                    if (rl.field_k == var16) {
-                      int incrementValue$0 = var4;
-                      var4++;
-                      jaggl.OpenGL.glClientActiveTexture(incrementValue$0 + 33984);
-                      jaggl.OpenGL.glTexCoordPointer(1, 5126, var12, var13 + (long)var11);
-                    } else {
-                      if (rl.field_j == var16) {
-                        int incrementValue$1 = var4;
-                        var4++;
-                        jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$1);
-                        jaggl.OpenGL.glTexCoordPointer(2, 5126, var12, (long)var11 + var13);
-                      } else {
-                        if (rl.field_g == var16) {
-                          int incrementValue$2 = var4;
-                          var4++;
-                          jaggl.OpenGL.glClientActiveTexture(incrementValue$2 + 33984);
-                          jaggl.OpenGL.glTexCoordPointer(3, 5126, var12, (long)var11 + var13);
-                        } else {
-                          if (var16 == rl.field_n) {
-                            int incrementValue$3 = var4;
-                            var4++;
-                            jaggl.OpenGL.glClientActiveTexture(incrementValue$3 + 33984);
-                            jaggl.OpenGL.glTexCoordPointer(4, 5126, var12, var13 + (long)var11);
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              } else {
+              if (rl.field_b == var16) {
                 jaggl.OpenGL.glVertexPointer(3, 5126, var12, var13 + (long)var11);
                 var7 = 1;
+              } else if (var16 == rl.field_m) {
+                var6 = 1;
+                jaggl.OpenGL.glNormalPointer(5126, var12, (long)var11 + var13);
+              } else if (var16 == rl.field_c) {
+                var5 = 1;
+                jaggl.OpenGL.glColorPointer(4, 5121, var12, var13 + (long)var11);
+              } else if (rl.field_k == var16) {
+                int incrementValue$0 = var4;
+                var4++;
+                jaggl.OpenGL.glClientActiveTexture(incrementValue$0 + 33984);
+                jaggl.OpenGL.glTexCoordPointer(1, 5126, var12, var13 + (long)var11);
+              } else if (rl.field_j == var16) {
+                int incrementValue$1 = var4;
+                var4++;
+                jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$1);
+                jaggl.OpenGL.glTexCoordPointer(2, 5126, var12, (long)var11 + var13);
+              } else if (rl.field_g == var16) {
+                int incrementValue$2 = var4;
+                var4++;
+                jaggl.OpenGL.glClientActiveTexture(incrementValue$2 + 33984);
+                jaggl.OpenGL.glTexCoordPointer(3, 5126, var12, (long)var11 + var13);
+              } else if (var16 == rl.field_n) {
+                int incrementValue$3 = var4;
+                var4++;
+                jaggl.OpenGL.glClientActiveTexture(incrementValue$3 + 33984);
+                jaggl.OpenGL.glTexCoordPointer(4, 5126, var12, var13 + (long)var11);
               }
               var11 = var11 + var16.field_l;
             }
@@ -973,14 +961,10 @@ final class jc extends bf {
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (pi.field_x == this.field_zb) {
           jaggl.OpenGL.glBlendFunc(770, 771);
-        } else {
-          if (ne.field_i == this.field_zb) {
-            jaggl.OpenGL.glBlendFunc(1, 1);
-          } else {
-            if (this.field_zb == HighscoreQuery.field_l) {
-              jaggl.OpenGL.glBlendFunc(774, 1);
-            }
-          }
+        } else if (ne.field_i == this.field_zb) {
+          jaggl.OpenGL.glBlendFunc(1, 1);
+        } else if (this.field_zb == HighscoreQuery.field_l) {
+          jaggl.OpenGL.glBlendFunc(774, 1);
         }
         if (param0 < 39) {
           this.p(127);
@@ -1415,32 +1399,24 @@ final class jc extends bf {
           if (!param0) {
             return;
           }
-          if (param1 != DualLinkNode.field_m) {
-            if (param1 == bm.field_x) {
-              var5_int = 3;
-              var6 = 1 + param2;
-            } else {
-              if (tm.field_h == param1) {
-                var5_int = 4;
-                var6 = 3 * param2;
-              } else {
-                if (qp.field_j != param1) {
-                  if (gh.field_i != param1) {
-                    var6 = param2;
-                    var5_int = 0;
-                  } else {
-                    var6 = param2 + 2;
-                    var5_int = 5;
-                  }
-                } else {
-                  var5_int = 6;
-                  var6 = param2 + 2;
-                }
-              }
-            }
-          } else {
+          if (param1 == DualLinkNode.field_m) {
             var5_int = 1;
             var6 = 2 * param2;
+          } else if (param1 == bm.field_x) {
+            var5_int = 3;
+            var6 = 1 + param2;
+          } else if (tm.field_h == param1) {
+            var5_int = 4;
+            var6 = 3 * param2;
+          } else if (qp.field_j == param1) {
+            var5_int = 6;
+            var6 = param2 + 2;
+          } else if (gh.field_i != param1) {
+            var6 = param2;
+            var5_int = 0;
+          } else {
+            var6 = param2 + 2;
+            var5_int = 5;
           }
           jaggl.OpenGL.glDrawArrays(var5_int, param3, var6);
           return;

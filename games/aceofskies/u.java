@@ -59,22 +59,18 @@ final class u extends sk {
         this.field_b.a(1, (byte) 111);
         if ((128 & param1) != 0) {
           this.field_b.a((jj) null, -9135);
-        } else {
-          if ((1 & param2) != 1) {
-            if (!this.field_f.field_e) {
-              this.field_b.a(this.field_f.field_i[0], -9135);
-            } else {
-              this.field_b.a(this.field_f.field_f, -9135);
-            }
+        } else if ((1 & param2) != 1) {
+          if (!this.field_f.field_e) {
+            this.field_b.a(this.field_f.field_i[0], -9135);
           } else {
-            if (this.field_f.field_e) {
-              this.field_h = (float)(this.field_b.field_r % 4000) / 4000.0f;
-              this.field_b.a(this.field_f.field_f, -9135);
-            } else {
-              int var4 = this.field_b.field_r % 4000 * 16 / 4000;
-              this.field_b.a(this.field_f.field_i[var4], -9135);
-            }
+            this.field_b.a(this.field_f.field_f, -9135);
           }
+        } else if (this.field_f.field_e) {
+          this.field_h = (float)(this.field_b.field_r % 4000) / 4000.0f;
+          this.field_b.a(this.field_f.field_f, -9135);
+        } else {
+          int var4 = this.field_b.field_r % 4000 * 16 / 4000;
+          this.field_b.a(this.field_f.field_i[var4], -9135);
         }
         this.field_b.a(0, (byte) 44);
     }

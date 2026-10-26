@@ -142,22 +142,18 @@ final class cs {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var3_int = param2.field_cb - param0.field_cb;
-          if (ul.field_s != param2.field_bb) {
-            if (null == param2.field_bb) {
-              var3_int += 200;
-            }
-          } else {
+          if (ul.field_s == param2.field_bb) {
             var3_int -= 200;
+          } else if (null == param2.field_bb) {
+            var3_int += 200;
           }
           if (param1 >= -50) {
             highscoreMode = -104;
           }
           if (ul.field_s == param0.field_bb) {
             var3_int += 200;
-          } else {
-            if (param0.field_bb == null) {
-              var3_int -= 200;
-            }
+          } else if (param0.field_bb == null) {
+            var3_int -= 200;
           }
           return !(var3_int <= 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

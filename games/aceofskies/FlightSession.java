@@ -713,8 +713,8 @@ final class FlightSession {
                 decompiledFrameCompleted1 = false;
               }
             }
-            if ((decompiledFrameCompleted1) &&
-              (decompiledFrameCompleted0)) {
+            if (decompiledFrameCompleted1 &&
+              decompiledFrameCompleted0) {
               if (aircraft.targetAircraft != null) {
                 aircraft.targetAircraft.pursuingAircraft = null;
               }
@@ -1048,9 +1048,9 @@ final class FlightSession {
                 }
               }
             }
-            if ((decompiledFrameRemainder1) &&
-              (decompiledFrameRemainder0) &&
-              (decompiledFrameCompleted1)) {
+            if (decompiledFrameRemainder1 &&
+              decompiledFrameRemainder0 &&
+              decompiledFrameCompleted1) {
               while (true) {
                 this.removeBullet(73, var3_int);
                 var3_int--;
@@ -1058,9 +1058,9 @@ final class FlightSession {
                 break;
               }
             }
-            if ((decompiledFrameRemainder0) &&
-              (decompiledFrameCompleted0) &&
-              (var5 != 0)) {
+            if (decompiledFrameRemainder0 &&
+              decompiledFrameCompleted0 &&
+              var5 != 0) {
               var4.advance(2);
               this.emitSmoke(80, var4.position, (byte) -74, -20);
               int var6 = this.computeSpatialVolume(this.playerAircraft.position, obfuscationGuard + 293, var4.position);
@@ -1275,8 +1275,8 @@ final class FlightSession {
                   settledGlyphIndex += 22;
                 }
                 settledBankPending = 0;
-                if ((obfuscationControl != 0) &&
-                  (alternateGlyphBank)) {
+                if (obfuscationControl != 0 &&
+                  alternateGlyphBank) {
                   settledGlyphIndex += 22;
                 }
               } else if (alternateGlyphBank) {
@@ -1463,7 +1463,7 @@ final class FlightSession {
                   }
                 }
               }
-              if ((decompiledFrameCompleted1) &&
+              if (decompiledFrameCompleted1 &&
                 (decompiledFrameRemainder1 = (bk.lastKeyCode == 38))) {
                 tt.field_a = true;
               }
@@ -1509,8 +1509,8 @@ final class FlightSession {
               if (decompiledFrameCompleted0) {
                 decompiledFrameRemainder0 = (56 == bk.lastKeyCode);
               }
-              if ((decompiledFrameRemainder0) &&
-                (this.backgroundTintBlendTicks > 1)) {
+              if (decompiledFrameRemainder0 &&
+                this.backgroundTintBlendTicks > 1) {
                 this.backgroundTintBlendTicks = 1;
               }
               if (bk.lastKeyCode == 52) {
@@ -1799,8 +1799,8 @@ final class FlightSession {
           if (this.upgradeFlashTicks[upgradeCode] > 0) {
             if (this.upgradeFlashTicks[upgradeCode] > 448) {
               this.upgradeFlashTicks[upgradeCode] = 512 - this.upgradeFlashTicks[upgradeCode];
-              if ((AceOfSkies.obfuscationControl) &&
-                (this.upgradeFlashTicks[upgradeCode] > 64)) {
+              if (AceOfSkies.obfuscationControl &&
+                this.upgradeFlashTicks[upgradeCode] > 64) {
                 this.upgradeFlashTicks[upgradeCode] = 64;
               }
             } else if (this.upgradeFlashTicks[upgradeCode] > 64) {
@@ -1913,14 +1913,14 @@ final class FlightSession {
               }
             }
           }
-          if (((decompiledFrameCompleted6) && (!this.paused &&
-            !this.attractMode)) &&
+          if (decompiledFrameCompleted6 && (!this.paused &&
+            !this.attractMode) &&
             (decompiledFrameRemainder2 = !(this.hudHidePhase <= 0))) {
             this.hudHidePhase = this.hudHidePhase - 5;
             decompiledFrameRemainder2 = (obfuscationControl != 0);
           }
-          if ((decompiledFrameRemainder2) &&
-            (this.hudHidePhase < 200)) {
+          if (decompiledFrameRemainder2 &&
+            this.hudHidePhase < 200) {
             this.hudHidePhase = this.hudHidePhase + 5;
           }
           this.advanceScreenParticles(-115);
@@ -2028,7 +2028,7 @@ final class FlightSession {
                           }
                           decompiledFrameRemainder0 = !(decompiledFrameCompleted5);
                         }
-                        if ((decompiledFrameRemainder0) && (decompiledFrameCompleted5) && (var9 == 0 &&
+                        if (decompiledFrameRemainder0 && decompiledFrameCompleted5 && (var9 == 0 &&
                           this.alternateMusicActive)) {
                           this.alternateMusicActive = false;
                           lm.a(20, tg.musicTracks[1], true, (byte) 115);
@@ -2349,11 +2349,11 @@ final class FlightSession {
                 }
               }
             }
-            if ((decompiledFrameCompleted4) &&
-              (decompiledFrameCompleted3) &&
-              (decompiledFrameCompleted2) &&
-              (decompiledFrameCompleted1) &&
-              (decompiledFrameCompleted0)) {
+            if (decompiledFrameCompleted4 &&
+              decompiledFrameCompleted3 &&
+              decompiledFrameCompleted2 &&
+              decompiledFrameCompleted1 &&
+              decompiledFrameCompleted0) {
               this.updatePlayerControls((byte) -13);
             }
             stackIn_371_0 = ~this.lives;
@@ -2549,8 +2549,8 @@ final class FlightSession {
                 aircraft.weaponHeat = aircraft.weaponHeat + aircraft.definition.fireInterval;
                 decompiledFrameRemainder0 = (var5 != 0);
               }
-              if ((decompiledFrameRemainder0) &&
-                (!(aircraft.weaponHeat >= 100))) {
+              if (decompiledFrameRemainder0 &&
+                !(aircraft.weaponHeat >= 100)) {
                 this.fireBullets((byte) 115, aircraft);
                 aircraft.weaponHeat = aircraft.weaponHeat + (-aircraft.definition.heatReduction + aircraft.definition.fireInterval + 22);
                 aircraft.fireCooldown = aircraft.fireCooldown + aircraft.definition.fireInterval;
@@ -2559,8 +2559,8 @@ final class FlightSession {
                 }
                 if (!(aircraft.weaponHeat < 100)) {
                   aircraft.weaponHeat = 200;
-                  if ((this.playerAircraft == aircraft) &&
-                    (!this.attractMode)) {
+                  if (this.playerAircraft == aircraft &&
+                    !this.attractMode) {
                     bm.a((byte) -70, mh.field_o);
                     if (var5 != 0) {
                       this.fireBullets((byte) 60, aircraft);
@@ -2995,8 +2995,8 @@ final class FlightSession {
                         }
                       }
                     }
-                    if ((decompiledFrameRemainder1) &&
-                      (decompiledFrameRemainder0)) {
+                    if (decompiledFrameRemainder1 &&
+                      decompiledFrameRemainder0) {
                       var15 = 16777215 | var12 << 24;
                       if (var18 != 0) {
                         var15 = var12 << 24 | 16711935;
@@ -3504,8 +3504,8 @@ final class FlightSession {
                 continue;
               }
             }
-            if ((decompiledFrameRemainder1) &&
-              (var2_int != 0)) {
+            if (decompiledFrameRemainder1 &&
+              var2_int != 0) {
               var21Lifetime2 = 0;
               while (true) {
                 int stackIn_91_0Lifetime1 = ~var21Lifetime2;

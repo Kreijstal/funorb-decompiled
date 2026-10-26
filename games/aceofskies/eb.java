@@ -43,12 +43,10 @@ final class eb {
           if (!var12.field_i) {
             if (var12.field_q == 2) {
               var7 = this.field_d.a(param0, -10805, var6, false, 0.699999988079071f, var6);
+            } else if (sj.a((int) var12.field_c, (byte) -125)) {
+              var7 = this.field_d.a(var6, param0, (byte) -18, true, var6, 0.699999988079071f);
             } else {
-              if (sj.a((int) var12.field_c, (byte) -125)) {
-                var7 = this.field_d.a(var6, param0, (byte) -18, true, var6, 0.699999988079071f);
-              } else {
-                var7 = this.field_d.a(param0, -10805, var6, false, 0.699999988079071f, var6);
-              }
+              var7 = this.field_d.a(param0, -10805, var6, false, 0.699999988079071f, var6);
             }
             nr stackIn_17_0 = null;
             nr stackIn_17_1 = null;
@@ -95,12 +93,10 @@ final class eb {
           }
           if (var12.field_q == 2) {
             var7Lifetime1 = this.field_d.a(param0, -10805, var6, false, 0.699999988079071f, var6);
+          } else if (sj.a((int) var12.field_c, (byte) -125)) {
+            var7Lifetime1 = this.field_d.a(var6, param0, (byte) -18, true, var6, 0.699999988079071f);
           } else {
-            if (sj.a((int) var12.field_c, (byte) -125)) {
-              var7Lifetime1 = this.field_d.a(var6, param0, (byte) -18, true, var6, 0.699999988079071f);
-            } else {
-              var7Lifetime1 = this.field_d.a(param0, -10805, var6, false, 0.699999988079071f, var6);
-            }
+            var7Lifetime1 = this.field_d.a(param0, -10805, var6, false, 0.699999988079071f, var6);
           }
           nr stackIn_32_0 = null;
           nr stackIn_32_1 = null;

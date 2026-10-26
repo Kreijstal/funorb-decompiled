@@ -253,10 +253,8 @@ final class hf extends un {
                 var4 = 0;
                 if (this.field_a == null) {
                   var4 = 10;
-                } else {
-                  if (this.field_a.field_x == 0) {
-                    var4 = 1;
-                  }
+                } else if (this.field_a.field_x == 0) {
+                  var4 = 1;
                 }
                 if (var4 > 0) {
                   var5 = var4 - this.field_h.position;
@@ -305,8 +303,8 @@ final class hf extends un {
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
-                      if ((decompiledFrameRemainder0) &&
-                        (decompiledFrameCompleted0)) {
+                      if (decompiledFrameRemainder0 &&
+                        decompiledFrameCompleted0) {
                         var14_ref = (gp) (this.field_g.b((byte) 81));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
@@ -349,10 +347,8 @@ final class hf extends un {
                     this.field_a.unlinkSecondaryNode(-125);
                     this.field_a.field_p = false;
                     this.field_a = null;
-                  } else {
-                    if (this.field_a.field_x == 512) {
-                      this.field_a.field_x = 0;
-                    }
+                  } else if (this.field_a.field_x == 512) {
+                    this.field_a.field_x = 0;
                   }
                 }
                 continue;
