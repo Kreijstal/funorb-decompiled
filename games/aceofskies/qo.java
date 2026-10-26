@@ -94,7 +94,7 @@ final class qo {
         int[] var12 = null;
         var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var10 = IntKeyLookup.field_c;
+          var10 = IntKeyLookup.incomingPacket;
           if (param0 != -26) {
             return;
           }

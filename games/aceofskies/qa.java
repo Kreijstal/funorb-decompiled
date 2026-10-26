@@ -190,7 +190,7 @@ final class qa {
           if (it.field_c < 150) {
             wd.field_v.d(var3, var4);
           } else {
-            gl.field_d.a(var3 + 15, var4 + 10, var5);
+            HighscoreNameEntry.field_d.a(var3 + 15, var4 + 10, var5);
           }
           if (param1 != -4) {
             qa.b(109);
@@ -232,7 +232,7 @@ final class qa {
         }
         sl.c(2765);
         if (it.field_c >= 150) {
-          gl.field_d.a(var3 + 15, var4 + 10, var5);
+          HighscoreNameEntry.field_d.a(var3 + 15, var4 + 10, var5);
           if (param1 != -4) {
             qa.b(109);
           }

@@ -37,7 +37,7 @@ final class qq {
         du.menuActionLabels = new String[23];
         du.menuActionLabels[4] = dk.field_b;
         du.menuActionLabels[11] = ne.field_h;
-        du.menuActionLabels[0] = gl.field_c;
+        du.menuActionLabels[0] = HighscoreNameEntry.field_c;
         du.menuActionLabels[16] = q.field_l;
         du.menuActionLabels[1] = s.field_h;
         du.menuActionLabels[12] = af.field_a;

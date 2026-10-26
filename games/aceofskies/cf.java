@@ -3,12 +3,12 @@
  */
 final class cf extends sk {
     static int field_g;
-    static String field_h;
+    static String normalizedPlayerName;
     static ResourceArchive field_f;
 
     public static void f(int param0) {
         field_f = null;
-        field_h = null;
+        normalizedPlayerName = null;
         int var1 = -94 % ((-48 - param0) / 41);
     }
 
@@ -87,7 +87,7 @@ final class cf extends sk {
         if (param0 == 1786747298) {
           return;
         }
-        field_h = (String) null;
+        normalizedPlayerName = (String) null;
     }
 
     final void a(boolean param0, byte param1) {

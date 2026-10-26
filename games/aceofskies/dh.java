@@ -48,7 +48,7 @@ final class dh {
           if (param0 <= 39) {
             field_k = (RenderSprite) null;
           }
-          var13 = IntKeyLookup.field_c;
+          var13 = IntKeyLookup.incomingPacket;
           var2 = var13.readUnsignedByte(121);
           if (var2 == 0) {
             var11 = fu.a(true);

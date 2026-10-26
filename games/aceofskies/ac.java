@@ -11,8 +11,8 @@ final class ac implements gd {
     static RenderSprite[] field_f;
 
     final static void a(int param0, int param1, oc param2) {
-        CipherPacketBuffer var5 = q.field_p;
-        var5.g(43, param0);
+        CipherPacketBuffer var5 = q.outgoingPacket;
+        var5.writeCipheredOpcode(43, param0);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte(-1336879960, 1);
@@ -26,8 +26,8 @@ final class ac implements gd {
         try {
           var5.writeInt((byte) 90, param2.field_h);
           var5.writeInt((byte) 75, param2.field_f);
-          var5.e(var4, 45);
-          var5.b(-var4 + var5.position, (byte) 76);
+          var5.appendCrc32(var4, 45);
+          var5.patchByteLength(-var4 + var5.position, (byte) 76);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ac.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -100,34 +100,34 @@ final class ac implements gd {
         this.field_a = param0;
     }
 
-    final static void a(int param0, int param1, ga param2) {
-        CipherPacketBuffer var7 = null;
-        CipherPacketBuffer var8 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+    final static void writeScoreSubmission(int firstScoreIndex, int opcode, ScoreSubmission submission) {
+        CipherPacketBuffer packet = null;
+        CipherPacketBuffer packetAlias = null;
+        int payloadStartPosition = 0;
+        int scoreIndex = 0;
+        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var7 = q.field_p;
-          var8 = var7;
-          var8.g(52, param1);
-          var8.position = var8.position + 1;
-          var4 = var8.position;
-          var8.writeByte(-1336879960, 1);
-          var8.writeShort(param2.field_m, 23385);
-          var8.writeShort(param2.field_e, 23385);
-          var8.writeShort(param2.field_k, 23385);
-          var8.writeInt((byte) 34, param2.field_i);
-          var8.writeInt((byte) 80, param2.field_g);
-          var8.writeInt((byte) 93, param2.field_n);
-          var8.writeInt((byte) 113, param2.field_f);
-          var8.writeByte(-1336879960, param2.field_h.length);
-          for (var5 = param0; param2.field_h.length > var5; var5++) {
-            var7.writeInt((byte) 92, param2.field_h[var5]);
+          packet = q.outgoingPacket;
+          packetAlias = packet;
+          packetAlias.writeCipheredOpcode(52, opcode);
+          packetAlias.position = packetAlias.position + 1;
+          payloadStartPosition = packetAlias.position;
+          packetAlias.writeByte(-1336879960, 1);
+          packetAlias.writeShort(submission.submissionId, 23385);
+          packetAlias.writeShort(submission.firstShortValue, 23385);
+          packetAlias.writeShort(submission.secondShortValue, 23385);
+          packetAlias.writeInt((byte) 34, submission.firstContextValue);
+          packetAlias.writeInt((byte) 80, submission.secondContextValue);
+          packetAlias.writeInt((byte) 93, submission.thirdContextValue);
+          packetAlias.writeInt((byte) 113, submission.fourthContextValue);
+          packetAlias.writeByte(-1336879960, submission.scores.length);
+          for (scoreIndex = firstScoreIndex; submission.scores.length > scoreIndex; scoreIndex++) {
+            packet.writeInt((byte) 92, submission.scores[scoreIndex]);
           }
-          var8.e(var4, param0 + 108);
-          var8.b(var8.position - var4, (byte) 93);
+          packetAlias.appendCrc32(payloadStartPosition, firstScoreIndex + 108);
+          packetAlias.patchByteLength(packetAlias.position - payloadStartPosition, (byte) 93);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ac.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "ac.C(" + firstScoreIndex + ',' + opcode + ',' + (submission != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -129,7 +129,7 @@ final class u extends sk {
             return stackIn_5_0;
           }
           if (ca.field_f == qa.field_b) {
-            q.field_p.position = 0;
+            q.outgoingPacket.position = 0;
             qj.field_r = null;
             if (param2 != null) {
               var9 = 0;
@@ -146,16 +146,16 @@ final class u extends sk {
               fa.field_c.writeShort(param1, 23385);
               fa.field_c.writeByte(-1336879960, param5);
               fa.field_c.writeByte(-1336879960, var9);
-              q.field_p.writeByte(-1336879960, 18);
-              q.field_p.position = q.field_p.position + 2;
-              var10 = q.field_p.position;
+              q.outgoingPacket.writeByte(-1336879960, 18);
+              q.outgoingPacket.position = q.outgoingPacket.position + 2;
+              var10 = q.outgoingPacket.position;
               var11_ref_String = ao.a(bm.m(108), false);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              q.field_p.a(-117, var11_ref_String);
-              gn.a(hp.field_j, pb.field_a, q.field_p, fa.field_c, 92);
-              q.field_p.a(false, q.field_p.position - var10);
+              q.outgoingPacket.a(-117, var11_ref_String);
+              gn.a(hp.field_j, pb.field_a, q.outgoingPacket, fa.field_c, 92);
+              q.outgoingPacket.a(false, q.outgoingPacket.position - var10);
             } else {
               fa.field_c.position = 0;
               fa.field_c.writeInt((byte) 88, vr.field_h.nextInt());
@@ -176,19 +176,19 @@ final class u extends sk {
                 stackIn_15_2 = var8;
               }
               ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
-              q.field_p.writeByte(-1336879960, 16);
-              q.field_p.position = q.field_p.position + 1;
-              var9 = q.field_p.position;
-              gn.a(hp.field_j, pb.field_a, q.field_p, fa.field_c, 78);
-              q.field_p.b(q.field_p.position - var9, (byte) 85);
+              q.outgoingPacket.writeByte(-1336879960, 16);
+              q.outgoingPacket.position = q.outgoingPacket.position + 1;
+              var9 = q.outgoingPacket.position;
+              gn.a(hp.field_j, pb.field_a, q.outgoingPacket, fa.field_c, 78);
+              q.outgoingPacket.patchByteLength(q.outgoingPacket.position - var9, (byte) 85);
             }
             fr.a(-37, -1);
             ca.field_f = mq.field_h;
           }
           if (mq.field_h == ca.field_f &&
             wo.a(1, true)) {
-            var9Lifetime1 = IntKeyLookup.field_c.readUnsignedByte(78);
-            IntKeyLookup.field_c.position = 0;
+            var9Lifetime1 = IntKeyLookup.incomingPacket.readUnsignedByte(78);
+            IntKeyLookup.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ca.field_f = kf.field_m;
@@ -204,8 +204,8 @@ final class u extends sk {
               }
               if (var9Lifetime1 == 99) {
                 wo.a(km.a(1), true);
-                qj.field_r = new Boolean(b.a(true, IntKeyLookup.field_c));
-                IntKeyLookup.field_c.position = 0;
+                qj.field_r = new Boolean(b.a(true, IntKeyLookup.incomingPacket));
+                IntKeyLookup.incomingPacket.position = 0;
               } else {
                 ag.field_s = -1;
                 ca.field_f = cd.field_a;
@@ -216,12 +216,12 @@ final class u extends sk {
           if (ca.field_f == kf.field_m) {
             var9Lifetime2 = 2;
             if (wo.a(var9Lifetime2, true)) {
-              var10Lifetime1 = IntKeyLookup.field_c.readUnsignedShort((byte) 0);
-              IntKeyLookup.field_c.position = 0;
+              var10Lifetime1 = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
+              IntKeyLookup.incomingPacket.position = 0;
               if (wo.a(var10Lifetime1, true)) {
                 var11 = sd.field_j.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  sd.field_j[var12] = IntKeyLookup.field_c.d((byte) 77);
+                  sd.field_j[var12] = IntKeyLookup.incomingPacket.d((byte) 77);
                 }
                 te.b(true);
                 ld.field_d = false;
@@ -233,12 +233,12 @@ final class u extends sk {
           if (cd.field_a == ca.field_f &&
             rm.a(0)) {
             if (qs.field_b == 255) {
-              var9_ref_String = IntKeyLookup.field_c.e((byte) -109);
+              var9_ref_String = IntKeyLookup.incomingPacket.e((byte) -109);
               if (var9_ref_String != null) {
                 sf.a((byte) -125, bm.m(118), var9_ref_String);
               }
             } else {
-              rp.field_m = IntKeyLookup.field_c.h(-17883);
+              rp.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
             }
             te.b(true);
             ld.field_d = false;

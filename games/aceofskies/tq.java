@@ -4,7 +4,7 @@
 final class tq extends fa {
     pl[] field_g;
     static byte[][] field_f;
-    static IntrusiveDeque field_d;
+    static IntrusiveDeque pendingScoreSubmissions;
     static kq field_i;
     static vd[] field_h;
     static String[] field_e;
@@ -16,14 +16,14 @@ final class tq extends fa {
         if (param0) {
           return ei.a("hw3d", (byte) -16);
         }
-        field_d = (IntrusiveDeque) null;
+        pendingScoreSubmissions = (IntrusiveDeque) null;
         return ei.a("hw3d", (byte) -16);
     }
 
     public static void b(int param0) {
         field_f = (byte[][]) null;
         field_h = null;
-        field_d = null;
+        pendingScoreSubmissions = null;
         field_e = null;
         field_i = null;
         if (param0 != 400) {
@@ -78,7 +78,7 @@ final class tq extends fa {
 
     static {
         field_f = new byte[250][];
-        field_d = new IntrusiveDeque();
+        pendingScoreSubmissions = new IntrusiveDeque();
         field_e = new String[]{"All scores", "My scores", "Best each"};
     }
 }

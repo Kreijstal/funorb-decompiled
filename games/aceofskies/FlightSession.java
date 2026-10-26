@@ -216,7 +216,7 @@ final class FlightSession {
                 }
                 bs.field_b[var7].a(var5, var6);
                 if (var10 != 0) {
-                  uc.field_o[1].a(var5 - 9, -12 + var6, 0, var9 * 16843009, 2);
+                  HighscoreQuery.field_o[1].a(var5 - 9, -12 + var6, 0, var9 * 16843009, 2);
                 }
                 if (this.field_r[var7] > 0) {
                   var9 = this.field_r[var7];
@@ -935,7 +935,7 @@ final class FlightSession {
           this.b(11154);
           this.a(true);
           this.arcadeMode = arcadeMode;
-          to.field_r = null;
+          to.lastScoreSubmission = null;
           this.simulationTick = 0;
           wd.field_t.clear(268435455);
           if (obfuscationGuard <= 59) {
@@ -1569,20 +1569,20 @@ final class FlightSession {
         }
     }
 
-    final void g(int param0) {
-        ga stackIn_12_0 = null;
-        ga stackIn_12_1 = null;
-        ga stackIn_13_0 = null;
-        ga stackIn_13_1 = null;
+    final void submitFinalScore(int obfuscationGuard) {
+        ScoreSubmission stackIn_12_0 = null;
+        ScoreSubmission stackIn_12_1 = null;
+        ScoreSubmission stackIn_13_0 = null;
+        ScoreSubmission stackIn_13_1 = null;
         int stackIn_13_2 = 0;
         int stackIn_15_3;
         int stackIn_16_4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ga stackIn_13_0Lifetime1;
-        ga stackIn_13_1Lifetime1;
+        ScoreSubmission stackIn_13_0Lifetime1;
+        ScoreSubmission stackIn_13_1Lifetime1;
         try {
-          if (to.field_r == null &&
+          if (to.lastScoreSubmission == null &&
             this.finalScore > 0 &&
             !tt.field_a) {
             stackIn_12_0 = null;
@@ -1606,19 +1606,19 @@ final class FlightSession {
               stackIn_13_1Lifetime1 = null;
               stackIn_16_4 = 1;
             }
-            to.field_r = new ga(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
+            to.lastScoreSubmission = new ScoreSubmission(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
             if (!cn.b(true)) {
-              ClientException.a(to.field_r, true, 3);
+              ClientException.queueScoreSubmission(to.lastScoreSubmission, true, 3);
             }
           }
-          if (param0 != -8) {
+          if (obfuscationGuard != -8) {
             this.musicChannelVolumes = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "pk.GA(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var2), "pk.GA(" + obfuscationGuard + ')');
         }
     }
 
@@ -3296,10 +3296,10 @@ final class FlightSession {
           }
           boolean decompiledFrameRemainder0 = true;
           if (!cn.b(true)) {
-            sg.flightSession.g(-8);
-            ql.field_r = null;
+            sg.flightSession.submitFinalScore(-8);
+            ql.activeHighscoreQuery = null;
             stackIn_19_0 = (!this.arcadeMode) ? 0 : 1;
-            cs.field_a = stackIn_19_0;
+            cs.highscoreMode = stackIn_19_0;
             if (0 == r.field_n) {
               Bullet.requestMenu((byte) -105, 2, screenFlag);
               decompiledFrameRemainder0 = (var5 != 0);

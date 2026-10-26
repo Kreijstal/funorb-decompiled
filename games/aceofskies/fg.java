@@ -81,14 +81,14 @@ final class fg extends ArchiveProvider {
             fg.b((byte) -26);
           }
           var5 = (CharSequence) ((Object) param0);
-          var2 = vu.a(param1 ^ 17773, var5);
+          var2 = vu.normalizePlayerName(param1 ^ 17773, var5);
           if (var2 == null) {
             var2 = param0;
           }
           var3 = (cl) (gi.field_g.a(param1 - 17556, (long)var2.hashCode()));
           while (var3 != null) {
             var6 = (CharSequence) ((Object) var3.field_I);
-            var4 = vu.a(125, var6);
+            var4 = vu.normalizePlayerName(125, var6);
             if (var4 == null) {
               var4 = var3.field_I;
             }

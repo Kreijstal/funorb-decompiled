@@ -82,7 +82,7 @@ final class kg {
         int var9Lifetime1;
         try {
           ArchiveProvider.field_c = qg.a((byte) 3, param1, "commonui", "frame_top");
-          uc.field_k = qg.a((byte) 3, param1, "commonui", "frame_bottom");
+          HighscoreQuery.field_k = qg.a((byte) 3, param1, "commonui", "frame_bottom");
           eo.field_b = ij.a(param1, "jagex_logo_grey", "commonui", 1);
           u.field_i = qg.a((byte) 3, param1, "commonui", "button");
           gu.field_c = tj.a("validation", "commonui", 1, param1);
@@ -287,7 +287,7 @@ final class kg {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = vu.a(param1 ^ 64, var6);
+          var2 = vu.normalizePlayerName(param1 ^ 64, var6);
           if (var2 == null) {
             return null;
           }
@@ -301,7 +301,7 @@ final class kg {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_I);
-            var4 = vu.a(param1 + 63, var7);
+            var4 = vu.normalizePlayerName(param1 + 63, var7);
             if (!var4.equals(var2)) {
               var3 = (cl) (pj.field_a.a(false));
               continue;

@@ -195,13 +195,13 @@ final class ec extends ao {
     }
 
     final static String b(byte param0) {
-        if (fj.field_a == null) {
+        if (fj.playerDisplayName == null) {
           return "";
         }
         if (param0 > -116) {
           return (String) null;
         }
-        return fj.field_a;
+        return fj.playerDisplayName;
     }
 
     final float[] b(float[] param0, int param1) {

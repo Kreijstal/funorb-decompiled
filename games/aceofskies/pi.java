@@ -160,15 +160,15 @@ final class pi extends mi {
                 var10 = (String) null;
                 dq.field_a = wb.a(false, (String) null, param4, as.field_b, true);
               }
-              q.field_p.position = 0;
-              q.field_p.writeByte(param2 - 1336879960, 14);
-              q.field_p.writeByte(-1336879960, dq.field_a.a(param2 ^ -69).field_c);
+              q.outgoingPacket.position = 0;
+              q.outgoingPacket.writeByte(param2 - 1336879960, 14);
+              q.outgoingPacket.writeByte(-1336879960, dq.field_a.a(param2 ^ -69).field_c);
               fr.a(param2 - 21, -1);
               ca.field_f = pg.field_a;
             }
             if (ca.field_f == pg.field_a &&
               wo.a(1, true)) {
-              var6_int = IntKeyLookup.field_c.readUnsignedByte(117);
+              var6_int = IntKeyLookup.incomingPacket.readUnsignedByte(117);
               if (0 == var6_int) {
                 ca.field_f = qo.field_a;
               } else {
@@ -176,22 +176,22 @@ final class pi extends mi {
                 qs.field_b = var6_int;
                 ag.field_s = -1;
               }
-              IntKeyLookup.field_c.position = 0;
+              IntKeyLookup.incomingPacket.position = 0;
             }
             if (qo.field_a == ca.field_f &&
               wo.a(8, true)) {
-              of.field_a = IntKeyLookup.field_c.readLong((byte) 90);
-              IntKeyLookup.field_c.position = 0;
+              of.field_a = IntKeyLookup.incomingPacket.readLong((byte) 90);
+              IntKeyLookup.incomingPacket.position = 0;
               AceOfSkies.a(param0, param5, dq.field_a, param3, -12209);
               ca.field_f = he.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ca.field_f == he.field_o &&
               wo.a(1, true)) {
-              var6_intLifetime1 = IntKeyLookup.field_c.readUnsignedByte(param2 ^ 63);
+              var6_intLifetime1 = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ 63);
               fb.field_b = null;
               qs.field_b = var6_intLifetime1;
-              IntKeyLookup.field_c.position = 0;
+              IntKeyLookup.incomingPacket.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
@@ -213,12 +213,12 @@ final class pi extends mi {
             }
             if (TimedSpriteEffect.field_a == ca.field_f &&
               rm.a(0)) {
-              as.field_b = IntKeyLookup.field_c.readLong((byte) -87);
-              ln.field_d = IntKeyLookup.field_c.readUnsignedByte(37);
-              IntKeyLookup.field_c.readUnsignedByte(param2 ^ 103);
-              qr.field_a = IntKeyLookup.field_c.readUnsignedShort((byte) 0);
-              var11 = IntKeyLookup.field_c.e((byte) -122);
-              var7 = IntKeyLookup.field_c.readUnsignedByte(118);
+              as.field_b = IntKeyLookup.incomingPacket.readLong((byte) -87);
+              ln.field_d = IntKeyLookup.incomingPacket.readUnsignedByte(37);
+              IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ 103);
+              qr.field_a = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
+              var11 = IntKeyLookup.incomingPacket.e((byte) -122);
+              var7 = IntKeyLookup.incomingPacket.readUnsignedByte(118);
               if (0 != (1 & var7)) {
                 Bullet.b(param2 + 0);
               }
@@ -230,20 +230,20 @@ final class pi extends mi {
                 if (!um.field_j) {
                 }
               }
-              if (gl.field_a) {
-                IntKeyLookup.field_c.readUnsignedByte(-83);
-                IntKeyLookup.field_c.readUnsignedByte(105);
-                IntKeyLookup.field_c.readInt((byte) 123);
-                ag.field_r = IntKeyLookup.field_c.readUnsignedShort((byte) 0);
+              if (HighscoreNameEntry.field_a) {
+                IntKeyLookup.incomingPacket.readUnsignedByte(-83);
+                IntKeyLookup.incomingPacket.readUnsignedByte(105);
+                IntKeyLookup.incomingPacket.readInt((byte) 123);
+                ag.field_r = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
                 nc.field_c = new byte[ag.field_r];
                 for (var8 = 0; ag.field_r > var8; var8++) {
-                  nc.field_c[var8] = IntKeyLookup.field_c.readByte(0);
+                  nc.field_c[var8] = IntKeyLookup.incomingPacket.readByte(0);
                 }
               }
-              fj.field_a = IntKeyLookup.field_c.h(-17883);
-              var12 = (CharSequence) ((Object) fj.field_a);
-              cf.field_h = vu.a(param2 ^ 127, var12);
-              un.field_c = IntKeyLookup.field_c.readUnsignedByte(param2 ^ -95);
+              fj.playerDisplayName = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
+              var12 = (CharSequence) ((Object) fj.playerDisplayName);
+              cf.normalizedPlayerName = vu.normalizePlayerName(param2 ^ 127, var12);
+              un.field_c = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ -95);
               ca.field_f = wq.field_e;
               if (dq.field_a.a(-78) == SteeringMode.field_a) {
                 ef.field_k.a(bm.m(param2 + 113), (byte) 125);
@@ -275,11 +275,11 @@ final class pi extends mi {
               if (qr.field_a > 0) {
                 te.field_h = true;
               }
-              q.field_p.a(true, bm.field_w);
+              q.outgoingPacket.initializeOpcodeCipher(true, bm.field_w);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 bm.field_w[var8Lifetime1] = bm.field_w[var8Lifetime1] + 50;
               }
-              IntKeyLookup.field_c.a(true, bm.field_w);
+              IntKeyLookup.incomingPacket.initializeOpcodeCipher(true, bm.field_w);
               stackIn_70_0 = qs.field_b;
               return stackIn_70_0;
             }
@@ -298,7 +298,7 @@ final class pi extends mi {
               if (7 == qs.field_b) {
                 qs.field_b = 3;
               }
-              rp.field_m = IntKeyLookup.field_c.h(-17883);
+              rp.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
               ld.field_d = false;
               stackIn_82_0 = qs.field_b;
               return stackIn_82_0;

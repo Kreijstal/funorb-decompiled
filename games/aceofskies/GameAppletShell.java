@@ -228,8 +228,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (!param0) {
             field_o = (pt) null;
           }
-          fj.field_a = IntKeyLookup.field_c.h(-17883);
-          cf.field_h = vu.a(125, (CharSequence) ((Object) fj.field_a));
+          fj.playerDisplayName = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
+          cf.normalizedPlayerName = vu.normalizePlayerName(125, (CharSequence) ((Object) fj.playerDisplayName));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

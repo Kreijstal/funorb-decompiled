@@ -20,14 +20,14 @@ final class ei {
         var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var1_int = -36 % ((-50 - param0) / 48);
-          var2 = q.field_p;
+          var2 = q.outgoingPacket;
           while (sa.a(true)) {
-            var2.g(65, 8);
+            var2.writeCipheredOpcode(65, 8);
             fieldTemp$0 = var2.position + 1;
             var2.position = var2.position + 1;
             var3 = fieldTemp$0;
             hb.a(var2, 24732);
-            q.field_p.b(var2.position - var3, (byte) 118);
+            q.outgoingPacket.patchByteLength(var2.position - var3, (byte) 118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

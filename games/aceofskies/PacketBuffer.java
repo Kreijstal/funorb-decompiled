@@ -20,9 +20,9 @@ class PacketBuffer extends IntrusiveNode {
         this.payload[this.position + (-param0 - 1)] = (byte)param0;
     }
 
-    final void b(int param0, byte param1) {
-        this.payload[-param0 + this.position - 1] = (byte)param0;
-        if (param1 <= 57) {
+    final void patchByteLength(int payloadLength, byte obfuscationGuard) {
+        this.payload[-payloadLength + this.position - 1] = (byte)payloadLength;
+        if (obfuscationGuard <= 57) {
           field_j = (BitmapFont) null;
         }
     }
@@ -158,7 +158,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           return null;
         }
-        return this.h(-17883);
+        return this.readNullTerminatedText(-17883);
     }
 
     final void a(int param0, java.math.BigInteger param1, java.math.BigInteger param2) {
@@ -183,10 +183,10 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final int e(int param0, int param1) {
-        int var3 = cl.a(param0, this.payload, this.position, (byte) -105);
+    final int appendCrc32(int startPosition, int obfuscationGuard) {
+        int var3 = cl.a(startPosition, this.payload, this.position, (byte) -105);
         this.writeInt((byte) 67, var3);
-        if (param1 <= 10) {
+        if (obfuscationGuard <= 10) {
           field_k = (int[]) null;
         }
         return var3;
@@ -687,12 +687,12 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    final String h(int param0) {
+    final String readNullTerminatedText(int obfuscationGuard) {
         int fieldTemp$0 = 0;
         int var2;
         int var3;
         rk var4;
-        if (param0 != -17883) {
+        if (obfuscationGuard != -17883) {
           var4 = (rk) null;
           PacketBuffer.a(-24, (Object) null, (rk) null);
         }
@@ -824,7 +824,7 @@ class PacketBuffer extends IntrusiveNode {
     final int readUnsignedMedium(byte obfuscationGuard) {
         this.position = this.position + 3;
         if (obfuscationGuard >= -66) {
-          this.e(127, -15);
+          this.appendCrc32(127, -15);
         }
         return (255 & this.payload[this.position - 1]) + (((255 & this.payload[-2 + this.position]) << 8) + (this.payload[-3 + this.position] << 16 & 16711680));
     }

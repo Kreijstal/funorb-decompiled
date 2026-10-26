@@ -21,15 +21,15 @@ final class ClientException extends RuntimeException {
         menuRight = null;
     }
 
-    final static void a(ga param0, boolean param1, int param2) {
+    final static void queueScoreSubmission(ScoreSubmission submission, boolean obfuscationGuard, int opcode) {
         try {
-          tq.field_d.addLast(84, param0);
-          ac.a(0, param2, param0);
-          if (!param1) {
+          tq.pendingScoreSubmissions.addLast(84, submission);
+          ac.writeScoreSubmission(0, opcode, submission);
+          if (!obfuscationGuard) {
             field_e = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ak.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "ak.C(" + (submission != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + opcode + ')');
         }
     }
 

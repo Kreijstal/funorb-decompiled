@@ -3,7 +3,7 @@
  */
 final class q extends rt {
     private int field_m;
-    static CipherPacketBuffer field_p;
+    static CipherPacketBuffer outgoingPacket;
     static String field_l;
     static boolean[] field_k;
     static ResourceArchive field_q;
@@ -20,7 +20,7 @@ final class q extends rt {
     }
 
     public static void d(int param0) {
-        field_p = null;
+        outgoingPacket = null;
         int var1 = -126 / ((-5 - param0) / 53);
         field_o = null;
         field_k = null;

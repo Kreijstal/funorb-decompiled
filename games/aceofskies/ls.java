@@ -43,7 +43,7 @@ final class ls extends IOException {
           var3_int = param0.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = vu.a(param2 + 104, param0);
+            var4 = vu.normalizePlayerName(param2 + 104, param0);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!za.a((byte) 117, var4.charAt(0)) &&

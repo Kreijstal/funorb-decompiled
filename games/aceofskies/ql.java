@@ -10,13 +10,13 @@ final class ql extends ud {
     int field_j;
     int field_h;
     static int[] field_o;
-    static uc field_r;
+    static HighscoreQuery activeHighscoreQuery;
     int field_q;
     boolean field_n;
     private byte[] field_i;
 
     public static void a(byte param0) {
-        field_r = null;
+        activeHighscoreQuery = null;
         field_p = (byte[][]) null;
         if (param0 >= -11) {
           field_o = (int[]) null;
@@ -393,6 +393,6 @@ final class ql extends ud {
 
     static {
         field_o = new int[8192];
-        field_r = null;
+        activeHighscoreQuery = null;
     }
 }

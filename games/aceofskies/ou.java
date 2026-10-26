@@ -31,7 +31,7 @@ class ou extends wt {
           if (var3_int > 12) {
             return false;
           }
-          var4 = vu.a(127, param1);
+          var4 = vu.normalizePlayerName(127, param1);
           if (var4 != null &&
             1 <= var4.length()) {
             if (!za.a((byte) 117, var4.charAt(0)) &&

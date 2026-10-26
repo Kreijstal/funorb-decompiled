@@ -112,9 +112,9 @@ final class ju extends rt {
           fs.field_c = fs.field_c + (var2_intLifetime1 >> 6);
           tj.field_o = tj.field_o + (param1.readUnsignedByte(-81) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(-56);
-          gl.field_b = 65536 & var2_intLifetime2 << 16;
+          HighscoreNameEntry.field_b = 65536 & var2_intLifetime2 << 16;
           tj.field_o = tj.field_o + (var2_intLifetime2 >> 1);
-          gl.field_b = gl.field_b + param1.readUnsignedShort((byte) 0);
+          HighscoreNameEntry.field_b = HighscoreNameEntry.field_b + param1.readUnsignedShort((byte) 0);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ju.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

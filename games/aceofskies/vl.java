@@ -17,7 +17,7 @@ final class vl {
           to.h(param0 ^ -26318);
           bl.c(-18535);
           if (je.a(false)) {
-            q.field_p.g(54, 1);
+            q.outgoingPacket.writeCipheredOpcode(54, 1);
             fr.a(param0 + 26270, 0);
             te.b(true);
             return;
@@ -32,7 +32,7 @@ final class vl {
           te.b(true);
           return;
         }
-        q.field_p.g(54, 1);
+        q.outgoingPacket.writeCipheredOpcode(54, 1);
         fr.a(param0 + 26270, 0);
         te.b(true);
     }

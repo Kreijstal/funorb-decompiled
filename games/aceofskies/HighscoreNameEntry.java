@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl {
-    String field_e;
+final class HighscoreNameEntry {
+    String primaryName;
     static int field_b;
     static String field_c;
-    boolean field_g;
+    boolean usedInUniqueView;
     static boolean field_a;
     static ll field_d;
-    String field_f;
+    String alternateName;
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 != 544) {
@@ -21,7 +21,7 @@ final class gl {
         field_c = null;
         field_d = null;
         if (param0 != -11760) {
-          gl.a(20);
+          HighscoreNameEntry.a(20);
         }
     }
 
@@ -42,7 +42,7 @@ final class gl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 24) {
-            gl.a(-112);
+            HighscoreNameEntry.a(-112);
           }
           var5_int = param0.b(param2, 0);
           var6 = param0.a(-79, var5_int, param1);

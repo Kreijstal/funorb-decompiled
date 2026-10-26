@@ -12,8 +12,8 @@ final class sg {
           if (param1 != -92) {
             sg.a((byte) -18);
           }
-          var3 = q.field_p;
-          var3.g(param1 ^ -33, param0);
+          var3 = q.outgoingPacket;
+          var3.writeCipheredOpcode(param1 ^ -33, param0);
           var3.writeByte(param1 - 1336879868, param2.field_l);
           var3.writeByte(-1336879960, param2.field_f);
         } catch (RuntimeException runtimeException) {

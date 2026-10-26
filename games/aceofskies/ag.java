@@ -12,18 +12,18 @@ abstract class ag extends wt {
 
     abstract byte[] a(boolean param0);
 
-    final static void a(int param0, int param1, uc param2) {
-        CipherPacketBuffer var3 = null;
+    final static void writeHighscoreQuery(int opcode, int payloadLength, HighscoreQuery query) {
+        CipherPacketBuffer packet = null;
         try {
-          var3 = q.field_p;
-          var3.g(64, param0);
-          var3.writeByte(-1336879960, param1);
-          var3.writeByte(-1336879960, 0);
-          var3.writeShort(param2.field_n, param1 ^ 23388);
-          var3.writeByte(-1336879960, param2.field_j);
-          var3.writeByte(-1336879960, param2.field_m);
+          packet = q.outgoingPacket;
+          packet.writeCipheredOpcode(64, opcode);
+          packet.writeByte(-1336879960, payloadLength);
+          packet.writeByte(-1336879960, 0);
+          packet.writeShort(query.queryId, payloadLength ^ 23388);
+          packet.writeByte(-1336879960, query.entryLimit);
+          packet.writeByte(-1336879960, query.valuesPerEntry);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ag.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "ag.E(" + opcode + ',' + payloadLength + ',' + (query != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -3,8 +3,8 @@
  */
 final class nn {
     final static void a(ds param0, int param1, byte param2) {
-        CipherPacketBuffer var5 = q.field_p;
-        var5.g(109, param1);
+        CipherPacketBuffer var5 = q.outgoingPacket;
+        var5.writeCipheredOpcode(109, param1);
         var5.position = var5.position + 1;
         int var4 = var5.position;
         var5.writeByte(-1336879960, 1);
@@ -14,14 +14,14 @@ final class nn {
           var5.writeByte(-1336879960, param0.field_f.length);
           var5.a(true, param0.field_f.length, 0, param0.field_f);
         }
-        var5.e(var4, 16);
+        var5.appendCrc32(var4, 16);
         var5.position = var5.position - 4;
         param0.field_g = var5.readInt((byte) 121);
         if (param2 < 27) {
           return;
         }
         try {
-          var5.b(-var4 + var5.position, (byte) 124);
+          var5.patchByteLength(-var4 + var5.position, (byte) 124);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "nn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

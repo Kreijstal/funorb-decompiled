@@ -18,7 +18,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         byte[] var13 = null;
         var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var9 = IntKeyLookup.field_c;
+          var9 = IntKeyLookup.incomingPacket;
           if (param0 <= 15) {
             field_a = (String) null;
           }

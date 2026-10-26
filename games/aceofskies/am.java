@@ -3,7 +3,7 @@
  */
 final class am {
     private tl field_b;
-    static int field_a;
+    static int nextScoreSubmissionId;
 
     final static SoundPlayback a(PcmSample param0, boolean param1) {
         RuntimeException var2 = null;
@@ -14,7 +14,7 @@ final class am {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            field_a = -84;
+            nextScoreSubmissionId = -84;
           }
           stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, 96));
           return stackIn_3_0;

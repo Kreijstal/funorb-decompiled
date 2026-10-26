@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class to extends ea implements vm {
     ea field_s;
-    static ga field_r;
+    static ScoreSubmission lastScoreSubmission;
     static int field_t;
 
     final static boolean b(int param0, int param1, int param2) {
@@ -153,7 +153,7 @@ abstract class to extends ea implements vm {
         if (param0 != 0) {
           field_t = -91;
         }
-        IntKeyLookup.field_c.readUnsignedByte(param0 - 43);
+        IntKeyLookup.incomingPacket.readUnsignedByte(param0 - 43);
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
@@ -311,7 +311,7 @@ abstract class to extends ea implements vm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -37) {
-            field_r = (ga) null;
+            lastScoreSubmission = (ScoreSubmission) null;
           }
           stackIn_7_0 = (null != this.field_s) && (!this.field_s.e(28660)) && (this.field_s.a(param1, (byte) -42));
           return stackIn_7_0;
@@ -365,7 +365,7 @@ abstract class to extends ea implements vm {
     }
 
     public static void a(int param0) {
-        field_r = null;
+        lastScoreSubmission = null;
         if (param0 != 0) {
           field_t = -14;
         }
@@ -493,6 +493,6 @@ abstract class to extends ea implements vm {
     }
 
     static {
-        field_r = null;
+        lastScoreSubmission = null;
     }
 }

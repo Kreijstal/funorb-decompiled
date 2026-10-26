@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class pe implements Iterator {
-    static gl[] field_b;
+    static HighscoreNameEntry[] highscoreNameEntries;
     private lc field_e;
     private IntrusiveNode field_f;
     private IntrusiveNode field_d;
@@ -166,7 +166,7 @@ final class pe implements Iterator {
           af.field_c = vd.a(param3, "", "medals");
           vl.field_c = vd.b(param2, "basic", "orbcoin");
           es.field_i = vd.b(param2, "basic", "locked");
-          uc.field_g = vd.b(param2, "basic", "unachieved");
+          HighscoreQuery.field_g = vd.b(param2, "basic", "unachieved");
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -217,7 +217,7 @@ final class pe implements Iterator {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        highscoreNameEntries = null;
         if (param0 != 19592) {
           return;
         }
@@ -234,9 +234,9 @@ final class pe implements Iterator {
 
     static {
         int var0 = 0;
-        field_b = new gl[255];
-        for (var0 = 0; field_b.length > var0; var0++) {
-          field_b[var0] = new gl();
+        highscoreNameEntries = new HighscoreNameEntry[255];
+        for (var0 = 0; highscoreNameEntries.length > var0; var0++) {
+          highscoreNameEntries[var0] = new HighscoreNameEntry();
         }
         field_c = "This is a hidden Achievement";
     }

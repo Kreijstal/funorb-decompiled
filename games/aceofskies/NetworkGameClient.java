@@ -108,7 +108,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             lb.a(61, bm.m(param0 + 119));
           }
           if (var4 == 10) {
-            q.field_p.g(100, 17);
+            q.outgoingPacket.writeCipheredOpcode(100, 17);
           }
           if (var4 == 11) {
             jn.a((byte) 124, bm.m(107));
@@ -308,7 +308,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             io.a((byte) -117, 2);
           }
           if (fh.field_e[2]) {
-            pl.c(3, 0);
+            pl.resendPendingHighscores(3, 0);
           }
           if (fh.field_e[3]) {
             so.a(4, (byte) -39);
@@ -340,14 +340,14 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void k(int param0) {
-        int var2 = IntKeyLookup.field_c.readUnsignedByte(-53);
+        int var2 = IntKeyLookup.incomingPacket.readUnsignedByte(-53);
         if (param0 > -75) {
           this.m(-11);
         }
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + ag.field_s;
         byte[] var5 = new byte[var4];
-        IntKeyLookup.field_c.a(var5, var4, 0, false);
+        IntKeyLookup.incomingPacket.a(var5, var4, 0, false);
         wc.a(ea.a(0, var5), bm.m(125), 14301, var3 != 0);
     }
 
@@ -716,7 +716,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             br.f(113);
           } else {
             if (2 == var2) {
-              ce.a((byte) 116);
+              ce.decodeHighscoreResponse((byte) 116);
             } else {
               if (var2 != 3) {
                 if (var2 != 4) {
@@ -724,7 +724,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                     if (var2 != 6) {
                       if (7 != var2) {
                         if (var2 == 8) {
-                          ae.a(ag.field_s, IntKeyLookup.field_c, false, pt.field_b);
+                          ae.a(ag.field_s, IntKeyLookup.incomingPacket, false, pt.field_b);
                         } else {
                           if (var2 == 16) {
                             GameAppletShell.a(true);

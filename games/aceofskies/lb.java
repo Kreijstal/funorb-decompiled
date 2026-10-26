@@ -127,15 +127,15 @@ final class lb implements sm {
         CipherPacketBuffer var2 = null;
         CipherPacketBuffer var2Lifetime1;
         if (param1 == 0) {
-          var2 = q.field_p;
-          var2.g(109, param0);
+          var2 = q.outgoingPacket;
+          var2.writeCipheredOpcode(109, param0);
           var2.writeByte(param1 - 1336879960, 1);
           var2.writeByte(-1336879960, 2);
           return;
         }
         field_e = true;
-        var2Lifetime1 = q.field_p;
-        var2Lifetime1.g(109, param0);
+        var2Lifetime1 = q.outgoingPacket;
+        var2Lifetime1.writeCipheredOpcode(109, param0);
         var2Lifetime1.writeByte(param1 - 1336879960, 1);
         var2Lifetime1.writeByte(-1336879960, 2);
     }

@@ -3,7 +3,7 @@
  */
 final class oc extends IntrusiveNode {
     int field_j;
-    static int field_e;
+    static int highscoreView;
     int field_f;
     int field_k;
     int field_l;

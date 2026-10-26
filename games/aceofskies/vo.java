@@ -5,38 +5,38 @@ abstract class vo extends li implements dr {
     static int[] field_d;
     private bm field_c;
 
-    final static uc a(byte param0, int param1, int param2, int param3, int param4) {
+    final static HighscoreQuery requestHighscores(byte obfuscationGuard, int opcode, int entryLimit, int valuesPerEntry, int queryId) {
         Object var5;
-        uc var5_ref;
-        int var6;
-        uc var5_refLifetime1;
+        HighscoreQuery existingQuery;
+        int obfuscationControl;
+        HighscoreQuery newQuery;
         var5 = null;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
-        if (param0 >= 120) {
-          var5_ref = (uc) (nh.field_g.first(268435455));
-          while (var5_ref != null) {
-            if (~param4 == ~var5_ref.field_n) {
-              return var5_ref;
+        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        if (obfuscationGuard >= 120) {
+          existingQuery = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
+          while (existingQuery != null) {
+            if (~queryId == ~existingQuery.queryId) {
+              return existingQuery;
             }
-            var5_ref = (uc) (nh.field_g.next((byte) 103));
+            existingQuery = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
           }
         } else {
           field_d = (int[]) null;
-          var5_ref = (uc) (nh.field_g.first(268435455));
-          while (var5_ref != null) {
-            if (~param4 == ~var5_ref.field_n) {
-              return var5_ref;
+          existingQuery = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
+          while (existingQuery != null) {
+            if (~queryId == ~existingQuery.queryId) {
+              return existingQuery;
             }
-            var5_ref = (uc) (nh.field_g.next((byte) 103));
+            existingQuery = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
           }
         }
-        var5_refLifetime1 = new uc();
-        var5_refLifetime1.field_n = param4;
-        var5_refLifetime1.field_j = param2;
-        var5_refLifetime1.field_m = param3;
-        nh.field_g.addLast(81, var5_refLifetime1);
-        ag.a(param1, 5, var5_refLifetime1);
-        return var5_refLifetime1;
+        newQuery = new HighscoreQuery();
+        newQuery.queryId = queryId;
+        newQuery.entryLimit = entryLimit;
+        newQuery.valuesPerEntry = valuesPerEntry;
+        nh.pendingHighscoreQueries.addLast(81, newQuery);
+        ag.writeHighscoreQuery(opcode, 5, newQuery);
+        return newQuery;
     }
 
     public final boolean a(int param0) {

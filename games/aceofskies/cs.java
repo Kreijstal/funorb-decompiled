@@ -4,7 +4,7 @@
 final class cs {
     private wl field_c;
     static rk field_d;
-    static int field_a;
+    static int highscoreMode;
     private in field_b;
 
     final boolean a(byte param0, sr param1, sr param2, float param3) {
@@ -178,7 +178,7 @@ final class cs {
             var3_int -= 200;
           }
           if (param1 >= -50) {
-            field_a = -104;
+            highscoreMode = -104;
           }
           if (ul.field_s == param0.field_bb) {
             var3_int += 200;
@@ -224,6 +224,6 @@ final class cs {
     }
 
     static {
-        field_a = 0;
+        highscoreMode = 0;
     }
 }

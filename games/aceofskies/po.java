@@ -16,8 +16,8 @@ final class po extends ka {
     final static void a(fp param0, byte param1, int param2) {
         CipherPacketBuffer var3 = null;
         try {
-          var3 = q.field_p;
-          var3.g(127, param2);
+          var3 = q.outgoingPacket;
+          var3.writeCipheredOpcode(127, param2);
           if (param1 < 19) {
             activeMenuId = -122;
           }
@@ -224,7 +224,7 @@ final class po extends ka {
             this.field_k = new am(hi.c(14834, this.field_g, this.field_d));
           }
           if (param3 ||
-            ga.a(0, this.field_d, this.field_g)) {
+            ScoreSubmission.a(0, this.field_d, this.field_g)) {
             this.field_f = new am(ln.a(17, this.field_g, this.field_d));
           }
           if (!param3 &&

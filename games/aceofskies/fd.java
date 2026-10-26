@@ -46,7 +46,7 @@ final class fd {
         }
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isCurrentPlayerName(String displayName, byte obfuscationGuard) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;
@@ -55,23 +55,23 @@ final class fd {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 != -6) {
+          if (obfuscationGuard != -6) {
             field_c = (String) null;
           }
-          var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = cf.field_h.equals(vu.a(127, var3));
+          var3 = (CharSequence) ((Object) displayName);
+          stackIn_3_0 = cf.normalizedPlayerName.equals(vu.normalizePlayerName(127, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_6_0 = var2;
           stackIn_6_1 = new StringBuilder().append("fd.A(");
-          if (param0 == null) {
+          if (displayName == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

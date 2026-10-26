@@ -128,7 +128,7 @@ final class um extends PcmStream {
         CipherPacketBuffer var8 = null;
         jr var9 = null;
         var7 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var8 = IntKeyLookup.field_c;
+        var8 = IntKeyLookup.incomingPacket;
         var2 = var8;
         var3 = var8.readUnsignedByte(39);
         m.field_f = 127 & var3;
@@ -145,19 +145,19 @@ final class um extends PcmStream {
         }
         stackIn_9_0 = (param1 != var8.readUnsignedByte(-89)) ? 0 : 1;
         var4 = stackIn_9_0;
-        ku.field_g = var8.h(param1 - 17884);
+        ku.field_g = var8.readNullTerminatedText(param1 - 17884);
         if (var4 != 0) {
-          tn.field_t = var8.h(-17883);
+          tn.field_t = var8.readNullTerminatedText(-17883);
         } else {
           tn.field_t = ku.field_g;
         }
         if (1 == m.field_f) {
           var8.readUnsignedShort((byte) 0);
-          var8.h(-17883);
+          var8.readNullTerminatedText(-17883);
         } else {
           if (m.field_f == 4) {
             var8.readUnsignedShort((byte) 0);
-            var8.h(-17883);
+            var8.readNullTerminatedText(-17883);
           }
         }
         if (!param0) {
@@ -169,7 +169,7 @@ final class um extends PcmStream {
         try {
           var9 = uk.field_f.a(var5, -43);
           ep.field_x = var9.c((byte) 1);
-          if (!tn.field_t.equals(fj.field_a)) {
+          if (!tn.field_t.equals(fj.playerDisplayName)) {
             stackIn_23_0 = var9.field_t;
           } else {
             stackIn_23_0 = null;

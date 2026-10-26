@@ -92,7 +92,7 @@ final class eo {
             return (vt) (stackIn_2_0);
           }
           var5_int = 53 / ((param2 + 57) / 33);
-          stackIn_4_0 = gl.a(param4.a(param3, -10470, param1), 544);
+          stackIn_4_0 = HighscoreNameEntry.a(param4.a(param3, -10470, param1), 544);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -416,7 +416,7 @@ final class Aircraft extends FlightBody {
           mb.a(param8, param15, (byte) 121);
           var21_int = -4 / ((46 - param10) / 53);
           ef.a(119, param17, param4, param16, param13, param0);
-          uc.a(param11, 25345, param3, param19);
+          HighscoreQuery.a(param11, 25345, param3, param19);
           ql.a(param12, 2048, param14, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

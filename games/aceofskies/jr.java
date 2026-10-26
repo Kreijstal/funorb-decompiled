@@ -234,7 +234,7 @@ final class jr extends wt {
             this.field_t = (int[]) null;
           }
           if (param2 == 1) {
-            this.field_q = ee.a((byte) 10, '<', param0.h(-17883));
+            this.field_q = ee.a((byte) 10, '<', param0.readNullTerminatedText(-17883));
           } else {
             if (param2 == 2) {
               var4_int = param0.readUnsignedByte(-61);

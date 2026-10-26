@@ -80,9 +80,9 @@ final class ca {
         }
     }
 
-    final static int a(uc param0, byte param1, int param2, ga param3) {
-        int var6 = 0;
-        int var7 = 0;
+    final static int findSubmittedScoreRow(HighscoreQuery query, byte obfuscationGuard, int viewIndex, ScoreSubmission submission) {
+        int rowIndex = 0;
+        int valueIndex = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_21_0 = 0;
@@ -93,34 +93,34 @@ final class ca {
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
+        int valuesPerEntry = 0;
         RuntimeException var4 = null;
-        int var5 = 0;
-        int var8 = 0;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int rowCount = 0;
+        int obfuscationControl = 0;
+        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (param0 != null &&
-            param0.field_h != null &&
-            param3 != null &&
-            param3.field_e == param0.field_n) {
-            var4_int = param3.field_h.length;
-            var5 = param0.field_h[param2].length / var4_int;
-            if (param1 <= 101) {
+          if (query != null &&
+            query.valuesByView != null &&
+            submission != null &&
+            submission.firstShortValue == query.queryId) {
+            valuesPerEntry = submission.scores.length;
+            rowCount = query.valuesByView[viewIndex].length / valuesPerEntry;
+            if (obfuscationGuard <= 101) {
               stackIn_10_0 = 94;
               return stackIn_10_0;
             }
-            for (var6 = 0; var6 < var5; var6++) {
-              boolean decompiledFrameCompleted0 = true;
-              if (~param3.field_j == ~param0.field_f[param2][var6] &&
-                fd.a(param0.field_e[param2][var6], (byte) -6)) {
-                for (var7 = 0; var7 < var4_int; var7++) {
-                  if (param3.field_h[var7] != param0.field_h[param2][var7 + var6 * var4_int]) {
-                    decompiledFrameCompleted0 = false;
+            for (rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+              boolean allValuesMatch = true;
+              if (~submission.submissionToken == ~query.submissionTokensByView[viewIndex][rowIndex] &&
+                fd.isCurrentPlayerName(query.namesByView[viewIndex][rowIndex], (byte) -6)) {
+                for (valueIndex = 0; valueIndex < valuesPerEntry; valueIndex++) {
+                  if (submission.scores[valueIndex] != query.valuesByView[viewIndex][valueIndex + rowIndex * valuesPerEntry]) {
+                    allValuesMatch = false;
                     break;
                   }
                 }
-                if (decompiledFrameCompleted0) {
-                  stackIn_21_0 = var6;
+                if (allValuesMatch) {
+                  stackIn_21_0 = rowIndex;
                   return stackIn_21_0;
                 }
               }
@@ -135,13 +135,13 @@ final class ca {
           var4 = decompiledCaughtException;
           stackIn_27_0 = var4;
           stackIn_27_1 = new StringBuilder().append("ca.A(");
-          if (param0 == null) {
+          if (query == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(obfuscationGuard).append(',').append(viewIndex).append(',');
+          if (submission == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";

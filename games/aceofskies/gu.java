@@ -52,7 +52,7 @@ final class gu {
         var3 = null;
         var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var15 = IntKeyLookup.field_c;
+          var15 = IntKeyLookup.incomingPacket;
           var2 = var15.readUnsignedByte(param0 - 90);
           var3_ref = (ht) (an.field_b.first(268435455));
           while (var3_ref != null) {
@@ -73,17 +73,17 @@ final class gu {
           var4 = var15.readUnsignedByte(param0 + 117);
           if (var4 != 0) {
             var5 = var3_ref.field_f;
-            mb.field_t[0] = fj.field_a;
+            mb.field_t[0] = fj.playerDisplayName;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              mb.field_t[var6_int] = var15.h(-17883);
+              mb.field_t[var6_int] = var15.readNullTerminatedText(-17883);
             }
             ud.a(var4, var5, 2);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ju.a(965924047, var15);
               if (var6_intLifetime1 != 0) {
-                FlightBody.a(fs.field_c, var6_intLifetime1, 54, tj.field_o, ld.field_a, gl.field_b);
+                FlightBody.a(fs.field_c, var6_intLifetime1, 54, tj.field_o, ld.field_a, HighscoreNameEntry.field_b);
               } else {
-                FlightBody.a(fs.field_c, var6_intLifetime1, 56, tj.field_o, ld.field_a, gl.field_b);
+                FlightBody.a(fs.field_c, var6_intLifetime1, 56, tj.field_o, ld.field_a, HighscoreNameEntry.field_b);
               }
             }
             Bullet.a(var5, true);
@@ -99,7 +99,7 @@ final class gu {
               var19[0][1 + var10 * 4] = hg.field_C[var11];
               var19[0][var10 * 4 + 2] = qd.field_p[var11];
               var19[0][3 + 4 * var10] = dd.field_c[var11];
-              if (fd.a(mb.field_t[var11], (byte) -6) &&
+              if (fd.isCurrentPlayerName(mb.field_t[var11], (byte) -6) &&
                 qd.field_p[var11] + (hg.field_C[var11] + dd.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -117,7 +117,7 @@ final class gu {
               var19[1][var14 * 4 + 1] = hg.field_C[var11Lifetime1];
               var19[1][2 + var14 * 4] = qd.field_p[var11Lifetime1];
               var19[1][3 + var14 * 4] = dd.field_c[var11Lifetime1];
-              if (fd.a(mb.field_t[var11Lifetime1], (byte) -6) &&
+              if (fd.isCurrentPlayerName(mb.field_t[var11Lifetime1], (byte) -6) &&
                 hg.field_C[var11Lifetime1] + qd.field_p[var11Lifetime1] + dd.field_c[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;

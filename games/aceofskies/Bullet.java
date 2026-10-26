@@ -38,13 +38,13 @@ final class Bullet extends FlightBody {
           if (null != vs.field_g) {
             try {
               vs.field_g.a(true, 0L);
-              vs.field_g.a(24, IntKeyLookup.field_c.payload, IntKeyLookup.field_c.position, -105);
+              vs.field_g.a(24, IntKeyLookup.incomingPacket.payload, IntKeyLookup.incomingPacket.position, -105);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          IntKeyLookup.field_c.position = IntKeyLookup.field_c.position + 24;
+          IntKeyLookup.incomingPacket.position = IntKeyLookup.incomingPacket.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

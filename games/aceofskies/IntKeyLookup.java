@@ -5,7 +5,7 @@ import java.io.*;
 
 final class IntKeyLookup {
     static int field_b;
-    static CipherPacketBuffer field_c;
+    static CipherPacketBuffer incomingPacket;
     static boolean field_a;
     private int[] field_d;
 
@@ -67,7 +67,7 @@ final class IntKeyLookup {
     }
 
     public static void a(int param0) {
-        field_c = null;
+        incomingPacket = null;
         if (param0 > 39) {
           return;
         }
@@ -95,7 +95,7 @@ final class IntKeyLookup {
             var4 = 1 + var4 & var3;
           }
         }
-        field_c = (CipherPacketBuffer) null;
+        incomingPacket = (CipherPacketBuffer) null;
         var3Lifetime1 = -1 + (this.field_d.length >> 1);
         var4Lifetime1 = param1 & var3Lifetime1;
         while (true) {

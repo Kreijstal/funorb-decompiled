@@ -111,7 +111,7 @@ abstract class rg extends gm {
         }
         eo.field_b.b(-90 + (param1 + this.field_q), param2 + 10);
         cf.a(ArchiveProvider.field_c, param1 + 5, (byte) -121, 35 + param2, this.field_q - 10);
-        cf.a(uc.field_k, param1, (byte) -114, this.field_n + param2 - 22, this.field_q);
+        cf.a(HighscoreQuery.field_k, param1, (byte) -114, this.field_n + param2 - 22, this.field_q);
         var4Lifetime2 = this.field_n - 79;
         var6Lifetime2 = 127;
         var5Lifetime2 = 169;

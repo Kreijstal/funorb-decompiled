@@ -10,7 +10,7 @@ final class vu {
     java.awt.Canvas field_b;
     static of field_g;
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizePlayerName(int obfuscationGuard, CharSequence displayName) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         Object stackIn_2_0 = null;
@@ -27,21 +27,21 @@ final class vu {
         int var7 = 0;
         int var8 = 0;
         try {
-          if (param1 == null) {
+          if (displayName == null) {
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
           var2_int = 0;
-          var3 = param1.length();
+          var3 = displayName.length();
           while (var3 > var2_int) {
-            if (za.a((byte) 117, param1.charAt(var2_int))) {
+            if (za.a((byte) 117, displayName.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (za.a((byte) 117, param1.charAt(var3 - 1))) {
+            if (za.a((byte) 117, displayName.charAt(var3 - 1))) {
               var3--;
               continue;
             }
@@ -54,13 +54,13 @@ final class vu {
           if (var4 > 12) {
             return null;
           }
-          if (param0 < 122) {
+          if (obfuscationGuard < 122) {
             stackIn_18_0 = (String) null;
             return stackIn_18_0;
           }
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
-            var7 = param1.charAt(var6);
+            var7 = displayName.charAt(var6);
             if (jk.a((char) var7, -26024)) {
               var8 = rr.a((char) var7, (byte) -70);
               if (var8 != 0) {
@@ -76,8 +76,8 @@ final class vu {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
           stackIn_32_0 = var2;
-          stackIn_32_1 = new StringBuilder().append("vu.B(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_32_1 = new StringBuilder().append("vu.B(").append(obfuscationGuard).append(',');
+          if (displayName == null) {
             stackIn_33_2 = "null";
           } else {
             stackIn_33_2 = "{...}";

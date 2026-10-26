@@ -13,8 +13,8 @@ final class ae extends sk {
     }
 
     final static void a(oh param0, int param1, byte param2) {
-        CipherPacketBuffer var3 = q.field_p;
-        var3.g(84, param1);
+        CipherPacketBuffer var3 = q.outgoingPacket;
+        var3.writeCipheredOpcode(84, param1);
         var3.writeByte(param2 - 1336879945, 2);
         var3.writeByte(-1336879960, 0);
         if (param2 != -15) {
@@ -501,12 +501,12 @@ final class ae extends sk {
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param1.h(-17883);
-                    var21 = param1.h(-17883);
+                    var20 = param1.readNullTerminatedText(-17883);
+                    var21 = param1.readNullTerminatedText(-17883);
                     var9 = param1.readUnsignedByte(-60);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param1.h(-17883);
+                      var10[var11_int] = param1.readNullTerminatedText(-17883);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -531,9 +531,9 @@ final class ae extends sk {
                     var18.field_k[var5] = var22;
                   }
                 } else {
-                  var16 = param1.h(-17883);
+                  var16 = param1.readNullTerminatedText(-17883);
                   var7 = var16;
-                  var15 = param1.h(-17883);
+                  var15 = param1.readNullTerminatedText(-17883);
                   var8 = var15;
                   var9 = 0;
                   if (var6_int == 1) {

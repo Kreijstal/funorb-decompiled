@@ -317,7 +317,7 @@ abstract class bf extends GraphicsRenderer {
               var4 = 1;
             } else {
               if (param1 == 128) {
-                var3 = uc.field_l;
+                var3 = HighscoreQuery.field_l;
                 var5 = 1;
                 var4 = 1;
               } else {

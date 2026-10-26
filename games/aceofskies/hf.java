@@ -493,7 +493,7 @@ final class hf extends un {
           if (!tn.a(param1, (byte) -127, param3, param2)) {
             return null;
           }
-          stackIn_6_0 = gl.a(param0 ^ 1);
+          stackIn_6_0 = HighscoreNameEntry.a(param0 ^ 1);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

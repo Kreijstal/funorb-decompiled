@@ -18,12 +18,12 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    final void g(int param0, int param1) {
+    final void writeCipheredOpcode(int obfuscationGuard, int opcode) {
         int fieldTemp$0 = 0;
-        if (param0 >= 35) {
+        if (obfuscationGuard >= 35) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(this.field_l.b(256) + param1);
+          this.payload[fieldTemp$0] = (byte)(this.field_l.b(256) + opcode);
           return;
         }
     }
@@ -89,7 +89,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         String var8;
         String var1Lifetime1;
         var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var6 = "(" + ga.field_l + " " + kg.field_b + " " + hi.field_w + ") " + qs.field_b;
+        var6 = "(" + ScoreSubmission.field_l + " " + kg.field_b + " " + hi.field_w + ") " + qs.field_b;
         var1 = var6;
         if (ag.field_s <= 0) {
           if (param0 == 65) {
@@ -102,7 +102,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         for (var2 = 0; ag.field_s > var2; var2++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
-          var3 = IntKeyLookup.field_c.payload[var2] & 255;
+          var3 = IntKeyLookup.incomingPacket.payload[var2] & 255;
           var4 = var3 >> 4;
           if (var4 >= 10) {
             var4 += 55;
@@ -125,15 +125,15 @@ final class CipherPacketBuffer extends PacketBuffer {
         return var1Lifetime1;
     }
 
-    final void a(boolean param0, int[] param1) {
+    final void initializeOpcodeCipher(boolean obfuscationGuard, int[] seed) {
         try {
-          if (!param0) {
+          if (!obfuscationGuard) {
             int[] var4 = (int[]) null;
-            this.a(true, (int[]) null);
+            this.initializeOpcodeCipher(true, (int[]) null);
           }
-          this.field_l = new fc(param1);
+          this.field_l = new fc(seed);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "dl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "dl.F(" + obfuscationGuard + ',' + (seed != null ? "{...}" : "null") + ')');
         }
     }
 

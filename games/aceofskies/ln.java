@@ -9,10 +9,10 @@ final class ln {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 > 16) {
-          return ga.a(0, param2, param1) & (gl.a(param1, 544, param2) | ((param1 & 8192) != 0 ? true : false) | gh.a(param2, false, param1));
+          return ScoreSubmission.a(0, param2, param1) & (HighscoreNameEntry.a(param1, 544, param2) | ((param1 & 8192) != 0 ? true : false) | gh.a(param2, false, param1));
         }
         field_a = (String) null;
-        return ga.a(0, param2, param1) & (gl.a(param1, 544, param2) | ((param1 & 8192) != 0 ? true : false) | gh.a(param2, false, param1));
+        return ScoreSubmission.a(0, param2, param1) & (HighscoreNameEntry.a(param1, 544, param2) | ((param1 & 8192) != 0 ? true : false) | gh.a(param2, false, param1));
     }
 
     public static void a(byte param0) {

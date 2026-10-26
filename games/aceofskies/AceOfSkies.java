@@ -157,7 +157,7 @@ public final class AceOfSkies extends NetworkGameClient {
               FlightSession.field_wb.a(-23);
               return false;
             }
-            ga.a(118);
+            ScoreSubmission.a(118);
             sg.flightSession = new FlightSession();
             m.a(tg.field_a[0], 27966, true);
             return true;
@@ -234,23 +234,23 @@ public final class AceOfSkies extends NetworkGameClient {
           vi.a((byte) -1, fa.field_c);
           fa.field_c.writeShort(param0, 23385);
           param2.a(fa.field_c, true);
-          q.field_p.position = 0;
+          q.outgoingPacket.position = 0;
           if (param1) {
-            q.field_p.writeByte(-1336879960, 18);
+            q.outgoingPacket.writeByte(-1336879960, 18);
           }
           if (!param1 ||
             obfuscationControl) {
-            q.field_p.writeByte(-1336879960, 16);
+            q.outgoingPacket.writeByte(-1336879960, 16);
           }
-          q.field_p.position = q.field_p.position + 2;
-          var5_int = q.field_p.position;
-          q.field_p.writeInt((byte) 126, ub.field_g);
-          q.field_p.writeLong((byte) -102, fs.field_a);
+          q.outgoingPacket.position = q.outgoingPacket.position + 2;
+          var5_int = q.outgoingPacket.position;
+          q.outgoingPacket.writeInt((byte) 126, ub.field_g);
+          q.outgoingPacket.writeLong((byte) -102, fs.field_a);
           var6 = 0;
           if (te.field_h) {
             var6 = var6 | 1;
           }
-          if (gl.field_a) {
+          if (HighscoreNameEntry.field_a) {
             var6 = var6 | 4;
           }
           if (param3) {
@@ -259,17 +259,17 @@ public final class AceOfSkies extends NetworkGameClient {
           if (fb.field_b != null) {
             var6 = var6 | 16;
           }
-          q.field_p.writeByte(-1336879960, var6);
+          q.outgoingPacket.writeByte(-1336879960, var6);
           var7 = ao.a(bm.m(114), false);
           if (null == var7) {
             var7 = "";
           }
-          q.field_p.a(param4 ^ 12191, var7);
+          q.outgoingPacket.a(param4 ^ 12191, var7);
           if (fb.field_b != null) {
-            q.field_p.a(false, fb.field_b);
+            q.outgoingPacket.a(false, fb.field_b);
           }
-          gn.a(hp.field_j, pb.field_a, q.field_p, fa.field_c, param4 + 12313);
-          q.field_p.a(false, q.field_p.position - var5_int);
+          gn.a(hp.field_j, pb.field_a, q.outgoingPacket, fa.field_c, param4 + 12313);
+          q.outgoingPacket.a(false, q.outgoingPacket.position - var5_int);
           fr.a(param4 + 12171, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,7 +323,7 @@ public final class AceOfSkies extends NetworkGameClient {
                 return;
               }
               if (po.activeMenuId == 2) {
-                ql.field_r = null;
+                ql.activeHighscoreQuery = null;
               }
               po.activeMenuId = ci.nextMenuId;
               ec.menuTransitionTicks = 0;
@@ -370,7 +370,7 @@ public final class AceOfSkies extends NetworkGameClient {
           if (!cn.b(true)) {
             fa.field_b = sc.a(false, 4);
             if (sg.flightSession != null) {
-              sg.flightSession.g(-8);
+              sg.flightSession.submitFinalScore(-8);
             }
             po.activeMenuId = qo.field_c;
             if (po.activeMenuId == -2) {
@@ -718,8 +718,8 @@ public final class AceOfSkies extends NetworkGameClient {
           vj.a(1);
           mq.a(20370);
           fo.a(25613);
-          uc.a((byte) 35);
-          gl.b(-11760);
+          HighscoreQuery.a((byte) 35);
+          HighscoreNameEntry.b(-11760);
           SoundPlayback.a(32081);
           qb.a(true);
           wg.a(true);
@@ -929,7 +929,7 @@ public final class AceOfSkies extends NetworkGameClient {
               return;
             }
             if (FlightSession.field_wb.a(122)) {
-              ga.a(39);
+              ScoreSubmission.a(39);
             }
             var4 = FlightSession.field_wb.a((byte) 127);
             sg.flightSession.renderSession(-16711936, false, var4);

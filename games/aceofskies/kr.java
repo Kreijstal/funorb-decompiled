@@ -1057,7 +1057,7 @@ public final class kr extends bf {
             this.field_Rc.SetRenderState(19, 2);
             this.field_Rc.SetRenderState(20, 2);
           } else {
-            if (this.field_zb == uc.field_l) {
+            if (this.field_zb == HighscoreQuery.field_l) {
               this.field_Rc.SetRenderState(19, 9);
               this.field_Rc.SetRenderState(20, 2);
             }

@@ -306,7 +306,7 @@ final class br extends oe implements java.awt.image.ImageProducer {
         if (param0 <= 88) {
           return;
         }
-        CipherPacketBuffer var2 = IntKeyLookup.field_c;
+        CipherPacketBuffer var2 = IntKeyLookup.incomingPacket;
         var2.readInt((byte) 115);
         var2.readInt((byte) 107);
         var2.readInt((byte) 113);

@@ -31,15 +31,15 @@ final class fp extends IntrusiveNode {
           } else {
             try {
               ft.field_l = new vf((java.net.Socket) (MenuInputState.field_b.field_f), ii.field_j);
-              var4 = IntKeyLookup.field_c;
-              q.field_p.position = 0;
+              var4 = IntKeyLookup.incomingPacket;
+              q.outgoingPacket.position = 0;
               var4.position = 0;
               stackIn_11_0 = (!param1) ? -1 : -2;
-              ga.field_l = stackIn_11_0;
+              ScoreSubmission.field_l = stackIn_11_0;
               kg.field_b = stackIn_11_0;
               hi.field_w = stackIn_11_0;
               ca.field_f = qa.field_b;
-              tr.a(q.field_p, ut.field_a, id.field_d, ko.field_f, 0);
+              tr.a(q.outgoingPacket, ut.field_a, id.field_d, ko.field_f, 0);
               fr.a(-34, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

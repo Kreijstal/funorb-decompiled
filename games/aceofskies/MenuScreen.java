@@ -168,7 +168,7 @@ final class MenuScreen {
                 stackIn_19_4 = 1;
               }
               stackIn_21_0 = this;
-              if (cs.field_a != 0) {
+              if (cs.highscoreMode != 0) {
                 stackIn_22_0 = this;
                 stackIn_22_5 = 0;
               } else {
@@ -242,7 +242,7 @@ final class MenuScreen {
         int var10;
         String var11;
         String var12;
-        uc var13_ref_uc;
+        HighscoreQuery var13_ref_uc;
         String[] var14;
         int var16;
         int var17;
@@ -298,10 +298,10 @@ final class MenuScreen {
         }
         this.a(40 + var10, (byte) 86, var7 - 20, 40 + var9, var30, -20 + var8);
         var11 = mf.field_a;
-        if (oc.field_e == 1) {
+        if (oc.highscoreView == 1) {
           var11 = wl.field_zc;
         }
-        if (2 == oc.field_e) {
+        if (2 == oc.highscoreView) {
           var11 = jo.field_l;
           var12 = var11;
           var12Lifetime3 = var11;
@@ -309,16 +309,16 @@ final class MenuScreen {
         regionExit1: {
           this.a(verticalOffset, (byte) -122, var11);
           if (!cn.b(true)) {
-            if (null == ql.field_r) {
-              ql.field_r = vo.a((byte) 127, 3, 10, 1, cs.field_a);
+            if (null == ql.activeHighscoreQuery) {
+              ql.activeHighscoreQuery = vo.requestHighscores((byte) 127, 3, 10, 1, cs.highscoreMode);
             }
-            var13_ref_uc = ql.field_r;
-            if (var13_ref_uc.field_i) {
-              if (null != var13_ref_uc.field_e) {
+            var13_ref_uc = ql.activeHighscoreQuery;
+            if (var13_ref_uc.completed) {
+              if (null != var13_ref_uc.namesByView) {
                 var12Lifetime1 = df.field_g;
-                var14 = var13_ref_uc.field_e[oc.field_e];
-                var35 = var13_ref_uc.field_h[oc.field_e];
-                var16 = ca.a(var13_ref_uc, (byte) 113, oc.field_e, to.field_r);
+                var14 = var13_ref_uc.namesByView[oc.highscoreView];
+                var35 = var13_ref_uc.valuesByView[oc.highscoreView];
+                var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, oc.highscoreView, to.lastScoreSubmission);
                 kn.field_b.a((byte) 94, "10. ");
                 var17 = verticalOffset + (hi.field_v.field_j + 140);
                 var18 = 310;
@@ -372,9 +372,9 @@ final class MenuScreen {
                   var20Lifetime2 = 512;
                   var30.d(16, 20 + var20Lifetime2 - var19Lifetime2, var17 - 12, -5782, -7247318, var19Lifetime2 - 10);
                   var21Lifetime2 = -256;
-                  PacketBuffer.field_j.a(var5, var5, 19 + var19Lifetime2, fj.field_a, 18731, var17);
-                  PacketBuffer.field_j.a(var6, var6, 20 + var19Lifetime2, fj.field_a, 18731, -1 + var17);
-                  PacketBuffer.field_j.a(var21Lifetime2, -1, 20 + var19Lifetime2, fj.field_a, 18731, var17);
+                  PacketBuffer.field_j.a(var5, var5, 19 + var19Lifetime2, fj.playerDisplayName, 18731, var17);
+                  PacketBuffer.field_j.a(var6, var6, 20 + var19Lifetime2, fj.playerDisplayName, 18731, -1 + var17);
+                  PacketBuffer.field_j.a(var21Lifetime2, -1, 20 + var19Lifetime2, fj.playerDisplayName, 18731, var17);
                   var22 = this.formatGroupedInteger(sg.flightSession.finalScore, true);
                   PacketBuffer.field_j.a(var22, var5, var5, -1 + var20Lifetime2, var17, (byte) 92);
                   PacketBuffer.field_j.a(var22, var6, var6, var20Lifetime2, -1 + var17, (byte) 92);
@@ -642,19 +642,19 @@ final class MenuScreen {
                             if (!this.input.isActivated((byte) 124)) {
                               break;
                             }
-                            oc.field_e = 0;
+                            oc.highscoreView = 0;
                             break;
                           case 9:
                             if (!this.input.isActivated((byte) 88)) {
                               break;
                             }
-                            oc.field_e = 1;
+                            oc.highscoreView = 1;
                             break;
                           case 10:
                             if (!this.input.isActivated((byte) 87)) {
                               break;
                             }
-                            oc.field_e = 2;
+                            oc.highscoreView = 2;
                             break;
                           case 15:
                             if (this.input.isActivated((byte) 97)) {
@@ -689,15 +689,15 @@ final class MenuScreen {
                             if (!this.input.isActivated((byte) 106)) {
                               break;
                             }
-                            ql.field_r = null;
-                            cs.field_a = 1;
+                            ql.activeHighscoreQuery = null;
+                            cs.highscoreMode = 1;
                             break;
                           default:
                             break;
                           case 21:
                             if (this.input.isActivated((byte) 110)) {
-                              cs.field_a = 0;
-                              ql.field_r = null;
+                              cs.highscoreMode = 0;
+                              ql.activeHighscoreQuery = null;
                             }
                             break;
                           case 17:
@@ -814,11 +814,11 @@ final class MenuScreen {
           var12.a(true);
           jm.field_a[21].b(param1 + 3, 9 + param4, 16, 16);
           jm.field_a[21].b(-param0 + (20 + param1), 9 + param4, 16, 16);
-          uc.field_o[0].b(param1 + 3, 9 + param4, 16, 16);
-          uc.field_o[0].b(-param0 + param1 + 20, 9 + param4, 16, 16);
+          HighscoreQuery.field_o[0].b(param1 + 3, 9 + param4, 16, 16);
+          HighscoreQuery.field_o[0].b(-param0 + param1 + 20, 9 + param4, 16, 16);
           if (param3) {
-            uc.field_o[1].a(-15 + param1, -12 + param4, 1, 0, 2);
-            uc.field_o[1].a(-param0 + param1 + 1, -12 + param4, 1, 0, 2);
+            HighscoreQuery.field_o[1].a(-15 + param1, -12 + param4, 1, 0, 2);
+            HighscoreQuery.field_o[1].a(-param0 + param1 + 1, -12 + param4, 1, 0, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -941,7 +941,7 @@ final class MenuScreen {
           ka.field_a = qg.a((byte) 3, param1, "", "frame");
           rg.field_F = qg.a((byte) 3, param1, "", "button_raised");
           wt.field_h = qg.a((byte) 3, param1, "", "button_frame");
-          bo.field_a = (hc) ((Object) gl.a(param1, "b12", "", param2, param0 ^ -48));
+          bo.field_a = (hc) ((Object) HighscoreNameEntry.a(param1, "b12", "", param2, param0 ^ -48));
           if (param0 != -56) {
             field_g = (IntrusiveDeque) null;
           }
@@ -1237,11 +1237,11 @@ final class MenuScreen {
               var20 + 48 >= ic.field_b &&
               cf.field_g >= var21 &&
               cf.field_g <= var21 + 48) {
-              uc.field_o[1].a(-28 + var20, var21 - 30, 108, 108, 0, 2004318071, 2);
+              HighscoreQuery.field_o[1].a(-28 + var20, var21 - 30, 108, 108, 0, 2004318071, 2);
               var17 = var18;
             }
             if (this.selectedAchievementId == var18) {
-              uc.field_o[1].a(-28 + var20, -30 + var21, 108, 108, 1, 0, 2);
+              HighscoreQuery.field_o[1].a(-28 + var20, -30 + var21, 108, 108, 1, 0, 2);
             }
             var19_ref_pa.a(var20, var21, 48, 48, 0, var5, 1);
             if (this.pendingClickX >= var20 &&
@@ -1872,12 +1872,12 @@ final class MenuScreen {
                 this.input.selectedIndex <= 2) {
                 this.input.setSelectedIndex((byte) -119, 4);
               } else {
-                this.input.setSelectedIndex((byte) -122, oc.field_e);
+                this.input.setSelectedIndex((byte) -122, oc.highscoreView);
               }
             }
             if (bk.lastKeyCode == 98) {
               if (this.input.selectedIndex == 4) {
-                this.input.setSelectedIndex((byte) -108, oc.field_e);
+                this.input.setSelectedIndex((byte) -108, oc.highscoreView);
               } else {
                 this.input.setSelectedIndex((byte) -100, 4);
               }

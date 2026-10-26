@@ -19,7 +19,7 @@ final class wo extends IntrusiveNode {
 
     final static boolean a(int param0, boolean param1) {
         try {
-          if (IntKeyLookup.field_c.position >= param0) {
+          if (IntKeyLookup.incomingPacket.position >= param0) {
             return true;
           }
           if (null == ft.field_l) {
@@ -30,16 +30,16 @@ final class wo extends IntrusiveNode {
           }
           int var2_int = ft.field_l.b(-118);
           if (var2_int > 0) {
-            if (!(var2_int <= param0 - IntKeyLookup.field_c.position)) {
-              var2_int = param0 - IntKeyLookup.field_c.position;
+            if (!(var2_int <= param0 - IntKeyLookup.incomingPacket.position)) {
+              var2_int = param0 - IntKeyLookup.incomingPacket.position;
             }
-            ft.field_l.a(IntKeyLookup.field_c.position, var2_int, IntKeyLookup.field_c.payload, true);
+            ft.field_l.a(IntKeyLookup.incomingPacket.position, var2_int, IntKeyLookup.incomingPacket.payload, true);
             ff.field_b = kh.a(-127);
-            IntKeyLookup.field_c.position = IntKeyLookup.field_c.position + var2_int;
-            if (!(IntKeyLookup.field_c.position >= param0)) {
+            IntKeyLookup.incomingPacket.position = IntKeyLookup.incomingPacket.position + var2_int;
+            if (!(IntKeyLookup.incomingPacket.position >= param0)) {
               return false;
             }
-            IntKeyLookup.field_c.position = 0;
+            IntKeyLookup.incomingPacket.position = 0;
             return true;
           }
           try {

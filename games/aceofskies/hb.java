@@ -231,7 +231,7 @@ final class hb {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              stackIn_101_0 = param0.e(var4, 56);
+              stackIn_101_0 = param0.appendCrc32(var4, 56);
             }
             var2.unlink(-125);
             return;

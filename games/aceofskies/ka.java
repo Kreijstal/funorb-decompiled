@@ -66,11 +66,11 @@ abstract class ka {
               var2_long > var4_ref_m.field_e) {
               var4_ref_m.unlink(-123);
               ag.field_s = var4_ref_m.field_h.length;
-              IntKeyLookup.field_c.position = 0;
+              IntKeyLookup.incomingPacket.position = 0;
               for (var5_int = 0; ag.field_s > var5_int; var5_int++) {
-                IntKeyLookup.field_c.payload[var5_int] = var4_ref_m.field_h[var5_int];
+                IntKeyLookup.incomingPacket.payload[var5_int] = var4_ref_m.field_h[var5_int];
               }
-              ga.field_l = kg.field_b;
+              ScoreSubmission.field_l = kg.field_b;
               kg.field_b = hi.field_w;
               hi.field_w = qs.field_b;
               qs.field_b = var4_ref_m.field_i;
@@ -93,19 +93,19 @@ abstract class ka {
         try {
           while (true) {
             if (stackIn_19_0 < 0) {
-              IntKeyLookup.field_c.position = 0;
+              IntKeyLookup.incomingPacket.position = 0;
               if (!wo.a(1, true)) {
                 return false;
               }
-              ec.field_g = IntKeyLookup.field_c.j((byte) -53);
-              IntKeyLookup.field_c.position = 0;
+              ec.field_g = IntKeyLookup.incomingPacket.j((byte) -53);
+              IntKeyLookup.incomingPacket.position = 0;
               ag.field_s = param1[ec.field_g];
             }
             if (!rm.a(0)) {
               return false;
             }
             if (tj.field_m == 0) {
-              ga.field_l = kg.field_b;
+              ScoreSubmission.field_l = kg.field_b;
               kg.field_b = hi.field_w;
               hi.field_w = qs.field_b;
               qs.field_b = ec.field_g;
@@ -121,7 +121,7 @@ abstract class ka {
             }
             var5 = new m((long)var4 + var2_long, ec.field_g, new byte[ag.field_s]);
             for (var6 = 0; ag.field_s > var6; var6++) {
-              var5.field_h[var6] = IntKeyLookup.field_c.payload[var6];
+              var5.field_h[var6] = IntKeyLookup.incomingPacket.payload[var6];
             }
             oo.field_T.addLast(88, var5);
             ec.field_g = -1;
@@ -152,14 +152,14 @@ abstract class ka {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            IntKeyLookup.field_c = new CipherPacketBuffer(param7);
+            IntKeyLookup.incomingPacket = new CipherPacketBuffer(param7);
             if (param0 != -31808) {
               return;
             }
-            q.field_p = new CipherPacketBuffer(param3);
+            q.outgoingPacket = new CipherPacketBuffer(param3);
             ca.field_h = param4;
             ub.field_g = param11;
-            gl.field_a = param5;
+            HighscoreNameEntry.field_a = param5;
             ca.field_g = param2;
             ii.field_j = param12;
             sg.field_b = param10;

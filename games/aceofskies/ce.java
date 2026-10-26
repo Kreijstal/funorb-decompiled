@@ -107,168 +107,168 @@ final class ce extends ab implements dr, dn {
         return this.field_v.field_f;
     }
 
-    final static void a(byte param0) {
-        int var8_int = 0;
+    final static void decodeHighscoreResponse(byte obfuscationGuard) {
+        int nameEntryIndex = 0;
         String[][] dupTemp$0 = null;
         long[][] dupTemp$1 = null;
         int[][] dupTemp$2 = null;
-        int var19 = 0;
+        int rowIndex = 0;
         int incrementValue$3 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        uc var4 = null;
-        long var4_long = 0L;
-        int var5 = 0;
-        int var6 = 0;
-        ga var6_ref_ga = null;
-        int var7 = 0;
-        String[][] var8 = null;
-        String[][] var9 = null;
-        long[][] var10 = null;
-        int[][] var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var20 = 0;
-        String var21 = null;
-        long var22 = 0L;
-        int var24 = 0;
-        int var25 = 0;
-        int var26 = 0;
-        CipherPacketBuffer var28 = null;
-        int var3Lifetime1;
-        int var25Lifetime1;
-        int var25Lifetime2;
-        var26 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int responseKind = 0;
+        int queryId = 0;
+        HighscoreQuery query = null;
+        long acknowledgementToken = 0L;
+        int nameEntryCount = 0;
+        int entryLimit = 0;
+        ScoreSubmission submission = null;
+        int valuesPerEntry = 0;
+        String[][] namesByView = null;
+        String[][] alternateNamesByView = null;
+        long[][] submissionTokensByView = null;
+        int[][] valuesByView = null;
+        int allRowCount = 0;
+        int ownRowCount = 0;
+        int uniqueRowCount = 0;
+        int allValueOffset = 0;
+        int ownValueOffset = 0;
+        int uniqueValueOffset = 0;
+        int rowCount = 0;
+        int nameIndex = 0;
+        String displayName = null;
+        long submissionToken = 0L;
+        int valuesStartPosition = 0;
+        int allValueIndex = 0;
+        int obfuscationControl = 0;
+        CipherPacketBuffer packet = null;
+        int submissionId;
+        int ownValueIndex;
+        int uniqueValueIndex;
+        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (param0 != 116) {
+          if (obfuscationGuard != 116) {
             field_A = -61;
           }
-          var28 = IntKeyLookup.field_c;
-          var2 = var28.readUnsignedByte(-85);
-          if (var2 == 0) {
-            var3 = var28.readUnsignedShort((byte) 0);
-            var4 = (uc) (nh.field_g.first(268435455));
-            while (var4 != null) {
-              if (var3 != var4.field_n) {
-                var4 = (uc) (nh.field_g.next((byte) 103));
+          packet = IntKeyLookup.incomingPacket;
+          responseKind = packet.readUnsignedByte(-85);
+          if (responseKind == 0) {
+            queryId = packet.readUnsignedShort((byte) 0);
+            query = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
+            while (query != null) {
+              if (queryId != query.queryId) {
+                query = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
                 continue;
               }
               break;
             }
-            if (var4 == null) {
+            if (query == null) {
               te.b(true);
               return;
             }
-            var5 = var28.readUnsignedByte(param0 - 167);
-            if (var5 != 0) {
-              var6 = var4.field_j;
-              pe.field_b[0].field_f = null;
-              var7 = var4.field_m;
-              pe.field_b[0].field_e = fj.field_a;
-              pe.field_b[0].field_g = false;
-              for (var8_int = 1; var8_int < var5; var8_int++) {
-                pe.field_b[var8_int].field_e = var28.h(-17883);
-                pe.field_b[var8_int].field_g = false;
-                if (var28.readUnsignedByte(-47) != 1) {
-                  pe.field_b[var8_int].field_f = null;
+            nameEntryCount = packet.readUnsignedByte(obfuscationGuard - 167);
+            if (nameEntryCount != 0) {
+              entryLimit = query.entryLimit;
+              pe.highscoreNameEntries[0].alternateName = null;
+              valuesPerEntry = query.valuesPerEntry;
+              pe.highscoreNameEntries[0].primaryName = fj.playerDisplayName;
+              pe.highscoreNameEntries[0].usedInUniqueView = false;
+              for (nameEntryIndex = 1; nameEntryIndex < nameEntryCount; nameEntryIndex++) {
+                pe.highscoreNameEntries[nameEntryIndex].primaryName = packet.readNullTerminatedText(-17883);
+                pe.highscoreNameEntries[nameEntryIndex].usedInUniqueView = false;
+                if (packet.readUnsignedByte(-47) != 1) {
+                  pe.highscoreNameEntries[nameEntryIndex].alternateName = null;
                 } else {
-                  pe.field_b[var8_int].field_f = var28.h(param0 ^ -17839);
+                  pe.highscoreNameEntries[nameEntryIndex].alternateName = packet.readNullTerminatedText(obfuscationGuard ^ -17839);
                 }
               }
-              dupTemp$0 = new String[3][var6];
-              var4.field_e = dupTemp$0;
-              var8 = dupTemp$0;
-              var9 = new String[3][var6];
-              dupTemp$1 = new long[3][var6];
-              var4.field_f = dupTemp$1;
-              var10 = dupTemp$1;
-              dupTemp$2 = new int[3][var6 * var7];
-              var4.field_h = dupTemp$2;
-              var11 = dupTemp$2;
-              var12 = 0;
-              var13 = 0;
-              var14 = 0;
-              var15 = 0;
-              var16 = 0;
-              var17 = 0;
-              var18 = var28.readUnsignedByte(-119);
-              if (var18 > 0) {
-                for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var28.readUnsignedByte(param0 ^ 69);
-                  var21 = pe.field_b[var20].field_e;
-                  var22 = var28.readLong((byte) -32);
-                  var24 = var28.position;
-                  if (var6 > var19) {
-                    var8[0][var12] = var21;
-                    var9[0][var12] = pe.field_b[var20].field_f;
-                    var10[0][var12] = var22;
-                    var12++;
-                    for (var25 = 0; var7 > var25; var25++) {
-                      incrementValue$3 = var15;
-                      var15++;
-                      var11[0][incrementValue$3] = var28.readInt((byte) 124);
+              dupTemp$0 = new String[3][entryLimit];
+              query.namesByView = dupTemp$0;
+              namesByView = dupTemp$0;
+              alternateNamesByView = new String[3][entryLimit];
+              dupTemp$1 = new long[3][entryLimit];
+              query.submissionTokensByView = dupTemp$1;
+              submissionTokensByView = dupTemp$1;
+              dupTemp$2 = new int[3][entryLimit * valuesPerEntry];
+              query.valuesByView = dupTemp$2;
+              valuesByView = dupTemp$2;
+              allRowCount = 0;
+              ownRowCount = 0;
+              uniqueRowCount = 0;
+              allValueOffset = 0;
+              ownValueOffset = 0;
+              uniqueValueOffset = 0;
+              rowCount = packet.readUnsignedByte(-119);
+              if (rowCount > 0) {
+                for (rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+                  nameIndex = packet.readUnsignedByte(obfuscationGuard ^ 69);
+                  displayName = pe.highscoreNameEntries[nameIndex].primaryName;
+                  submissionToken = packet.readLong((byte) -32);
+                  valuesStartPosition = packet.position;
+                  if (entryLimit > rowIndex) {
+                    namesByView[0][allRowCount] = displayName;
+                    alternateNamesByView[0][allRowCount] = pe.highscoreNameEntries[nameIndex].alternateName;
+                    submissionTokensByView[0][allRowCount] = submissionToken;
+                    allRowCount++;
+                    for (allValueIndex = 0; valuesPerEntry > allValueIndex; allValueIndex++) {
+                      incrementValue$3 = allValueOffset;
+                      allValueOffset++;
+                      valuesByView[0][incrementValue$3] = packet.readInt((byte) 124);
                     }
                   }
-                  if (var21 != null &&
-                    fd.a(var21, (byte) -6)) {
-                    var8[1][var13] = fj.field_a;
-                    var9[1][var13] = null;
-                    var10[1][var13] = var22;
-                    var13++;
-                    var28.position = var24;
-                    for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
-                      incrementValue$4 = var16;
-                      var16++;
-                      var11[1][incrementValue$4] = var28.readInt((byte) 114);
+                  if (displayName != null &&
+                    fd.isCurrentPlayerName(displayName, (byte) -6)) {
+                    namesByView[1][ownRowCount] = fj.playerDisplayName;
+                    alternateNamesByView[1][ownRowCount] = null;
+                    submissionTokensByView[1][ownRowCount] = submissionToken;
+                    ownRowCount++;
+                    packet.position = valuesStartPosition;
+                    for (ownValueIndex = 0; valuesPerEntry > ownValueIndex; ownValueIndex++) {
+                      incrementValue$4 = ownValueOffset;
+                      ownValueOffset++;
+                      valuesByView[1][incrementValue$4] = packet.readInt((byte) 114);
                     }
                   }
-                  if (var6 > var14 &&
-                    !pe.field_b[var20].field_g) {
-                    pe.field_b[var20].field_g = true;
-                    var8[2][var14] = var21;
-                    var9[2][var14] = pe.field_b[var20].field_f;
-                    var10[2][var14] = var22;
-                    var14++;
-                    var28.position = var24;
-                    for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
-                      incrementValue$5 = var17;
-                      var17++;
-                      var11[2][incrementValue$5] = var28.readInt((byte) 113);
+                  if (entryLimit > uniqueRowCount &&
+                    !pe.highscoreNameEntries[nameIndex].usedInUniqueView) {
+                    pe.highscoreNameEntries[nameIndex].usedInUniqueView = true;
+                    namesByView[2][uniqueRowCount] = displayName;
+                    alternateNamesByView[2][uniqueRowCount] = pe.highscoreNameEntries[nameIndex].alternateName;
+                    submissionTokensByView[2][uniqueRowCount] = submissionToken;
+                    uniqueRowCount++;
+                    packet.position = valuesStartPosition;
+                    for (uniqueValueIndex = 0; valuesPerEntry > uniqueValueIndex; uniqueValueIndex++) {
+                      incrementValue$5 = uniqueValueOffset;
+                      uniqueValueOffset++;
+                      valuesByView[2][incrementValue$5] = packet.readInt((byte) 113);
                     }
                   }
                 }
               }
             }
-            var4.field_i = true;
-            var4.unlink(param0 ^ -16);
+            query.completed = true;
+            query.unlink(obfuscationGuard ^ -16);
             return;
           }
-          if (var2 == 1) {
-            var3Lifetime1 = var28.readUnsignedShort((byte) 0);
-            var4_long = var28.readLong((byte) 64);
-            var6_ref_ga = (ga) (tq.field_d.first(268435455));
-            while (var6_ref_ga != null) {
-              if (var6_ref_ga.field_m != var3Lifetime1) {
-                var6_ref_ga = (ga) (tq.field_d.next((byte) 103));
+          if (responseKind == 1) {
+            submissionId = packet.readUnsignedShort((byte) 0);
+            acknowledgementToken = packet.readLong((byte) 64);
+            submission = (ScoreSubmission) (tq.pendingScoreSubmissions.first(268435455));
+            while (submission != null) {
+              if (submission.submissionId != submissionId) {
+                submission = (ScoreSubmission) (tq.pendingScoreSubmissions.next((byte) 103));
                 continue;
               }
               break;
             }
-            if (var6_ref_ga == null) {
+            if (submission == null) {
               te.b(true);
               return;
             }
-            var6_ref_ga.field_j = var4_long;
-            var6_ref_ga.unlink(-127);
+            submission.submissionToken = acknowledgementToken;
+            submission.unlink(-127);
             return;
           }
           v.a("HS1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
@@ -277,7 +277,7 @@ final class ce extends ab implements dr, dn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "ce.JA(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var1), "ce.JA(" + obfuscationGuard + ')');
         }
     }
 

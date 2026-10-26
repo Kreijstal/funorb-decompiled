@@ -1106,7 +1106,7 @@ final class jc extends bf {
           if (ne.field_i == this.field_zb) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
-            if (this.field_zb == uc.field_l) {
+            if (this.field_zb == HighscoreQuery.field_l) {
               jaggl.OpenGL.glBlendFunc(774, 1);
             }
           }

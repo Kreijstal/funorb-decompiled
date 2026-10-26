@@ -45,7 +45,7 @@ final class se {
           if (param0 > -64) {
             se.a((byte) -70);
           }
-          var1 = IntKeyLookup.field_c;
+          var1 = IntKeyLookup.incomingPacket;
           var2 = var1.readUnsignedByte(-58);
           if (var2 == 0) {
             if (gi.field_g == null) {
@@ -54,13 +54,13 @@ final class se {
             }
             stackIn_15_0 = (1 != var1.readUnsignedByte(-60)) ? 0 : 1;
             var3_int = stackIn_15_0;
-            var4_ref_String = var1.h(-17883);
+            var4_ref_String = var1.readNullTerminatedText(-17883);
             if (var3_int != 0) {
-              var1.h(-17883);
+              var1.readNullTerminatedText(-17883);
             }
             var5 = fg.a(var4_ref_String, 17680);
-            var6 = var1.h(-17883);
-            var7 = vu.a(125, (CharSequence) ((Object) var4_ref_String));
+            var6 = var1.readNullTerminatedText(-17883);
+            var7 = vu.normalizePlayerName(125, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
             }
@@ -100,7 +100,7 @@ final class se {
               return;
             }
             eo.field_a = 1;
-            var3 = var1.h(-17883);
+            var3 = var1.readNullTerminatedText(-17883);
             ul.field_s = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-46);
             lg.a(var4, 2);
@@ -110,22 +110,22 @@ final class se {
             pj.field_a = new es(128);
             wo.field_o = 0;
           }
-          var3Lifetime1 = var1.h(-17883);
+          var3Lifetime1 = var1.readNullTerminatedText(-17883);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h(-17883);
-          var5_ref = var1.h(-17883);
+          var4_ref_StringLifetime1 = var1.readNullTerminatedText(-17883);
+          var5_ref = var1.readNullTerminatedText(-17883);
           var6_ref = kg.a(var4_ref_StringLifetime1, (byte) 61);
           if (null == var6_ref) {
             var6_ref = kg.a(var5_ref, (byte) 61);
             if (var6_ref != null) {
-              pj.field_a.a(var6_ref, (long)vu.a(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
+              pj.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
             }
           }
           if (var6_ref == null) {
             var6_ref = new cl();
-            pj.field_a.a(var6_ref, (long)vu.a(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
+            pj.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
             fieldTemp$1 = wo.field_o;
             wo.field_o = wo.field_o + 1;
             var6_ref.field_cb = fieldTemp$1;

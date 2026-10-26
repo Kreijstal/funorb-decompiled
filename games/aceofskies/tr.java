@@ -83,13 +83,13 @@ final class tr {
         int var3 = var2.field_r;
         int var4 = var2.field_n;
         qk.a((byte) -92);
-        gl.field_d = new ll(var3, 3 * var4 / 4);
-        gl.field_d.b();
+        HighscoreNameEntry.field_d = new ll(var3, 3 * var4 / 4);
+        HighscoreNameEntry.field_d.b();
         var2.c(0, 0);
-        gt.field_o = new ll(var3, var4 - gl.field_d.field_n);
+        gt.field_o = new ll(var3, var4 - HighscoreNameEntry.field_d.field_n);
         gt.field_o.b();
-        var2.c(0, -gl.field_d.field_n);
-        gt.field_o.field_p = gl.field_d.field_n;
+        var2.c(0, -HighscoreNameEntry.field_d.field_n);
+        gt.field_o.field_p = HighscoreNameEntry.field_d.field_n;
         if (param1 > -64) {
           return;
         }

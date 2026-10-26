@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends IntrusiveNode {
-    boolean field_i;
-    int[][] field_h;
+final class HighscoreQuery extends IntrusiveNode {
+    boolean completed;
+    int[][] valuesByView;
     static qr field_l;
-    int field_n;
-    int field_j;
+    int queryId;
+    int entryLimit;
     static ll[] field_k;
-    String[][] field_e;
+    String[][] namesByView;
     static vd field_g;
     static RenderSprite[] field_o;
-    int field_m;
-    long[][] field_f;
+    int valuesPerEntry;
+    long[][] submissionTokensByView;
 
     public static void a(byte param0) {
         field_o = null;
@@ -76,7 +76,7 @@ final class uc extends IntrusiveNode {
         }
     }
 
-    uc() {
+    HighscoreQuery() {
     }
 
     static {

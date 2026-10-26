@@ -3,7 +3,7 @@
  */
 final class nh {
     static w field_f;
-    static IntrusiveDeque field_g;
+    static IntrusiveDeque pendingHighscoreQueries;
     static hc field_c;
     static int field_e;
     static IntrusiveDeque field_d;
@@ -12,7 +12,7 @@ final class nh {
     private static String field_z;
 
     public static void a(int param0) {
-        field_g = null;
+        pendingHighscoreQueries = null;
         field_b = null;
         field_d = null;
         field_f = null;
@@ -25,6 +25,6 @@ final class nh {
     static {
         field_z = "nh.A(";
         field_f = new w();
-        field_g = new IntrusiveDeque();
+        pendingHighscoreQueries = new IntrusiveDeque();
     }
 }

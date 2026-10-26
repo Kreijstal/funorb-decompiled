@@ -60,8 +60,8 @@ final class hn {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = q.field_p;
-        var2.g(111, param1);
+        CipherPacketBuffer var2 = q.outgoingPacket;
+        var2.writeCipheredOpcode(111, param1);
         var2.writeByte(-1336879960, 1);
         var2.writeByte(-1336879960, param0);
     }

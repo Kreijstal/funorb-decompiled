@@ -65,32 +65,32 @@ final class pl {
         }
     }
 
-    final static void c(int param0, int param1) {
-        int var3 = 0;
-        ga var4 = null;
-        uc var5 = null;
+    final static void resendPendingHighscores(int opcode, int obfuscationGuard) {
+        int obfuscationControl = 0;
+        ScoreSubmission submission = null;
+        HighscoreQuery query = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var4 = (ga) (tq.field_d.first(268435455));
-          while (var4 != null) {
-            ac.a(0, param0, var4);
-            var4 = (ga) (tq.field_d.next((byte) 103));
+          submission = (ScoreSubmission) (tq.pendingScoreSubmissions.first(268435455));
+          while (submission != null) {
+            ac.writeScoreSubmission(0, opcode, submission);
+            submission = (ScoreSubmission) (tq.pendingScoreSubmissions.next((byte) 103));
           }
-          if (param1 != 0) {
+          if (obfuscationGuard != 0) {
             return;
           }
-          var5 = (uc) (nh.field_g.first(268435455));
-          while (var5 != null) {
-            ag.a(param0, 5, var5);
-            var5 = (uc) (nh.field_g.next((byte) 103));
+          query = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
+          while (query != null) {
+            ag.writeHighscoreQuery(opcode, 5, query);
+            query = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "pl.F(" + param0 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) var2), "pl.F(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class pl {
         if (!param15) {
           return;
         }
-        pl.c(70, -13);
+        pl.resendPendingHighscores(70, -13);
     }
 
     pl(rl[] param0) {
@@ -169,7 +169,7 @@ final class pl {
 
     final static String b(int param0) {
         int var1 = 123 % ((param0 + 43) / 56);
-        return IntKeyLookup.field_c.h(-17883);
+        return IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
     }
 
     static {

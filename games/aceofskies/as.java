@@ -31,7 +31,7 @@ final class as {
           }
           var5_int = param2.b(param4, 0);
           var6 = param2.a(-110, var5_int, param3);
-          stackIn_3_0 = uc.a(121, param0, var6, param2, var5_int);
+          stackIn_3_0 = HighscoreQuery.a(121, param0, var6, param2, var5_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

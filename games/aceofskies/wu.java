@@ -410,7 +410,7 @@ final class wu {
           }
           var2Lifetime19 = im.a(104, "startgame");
           if (var2Lifetime19 != null) {
-            gl.field_c = ea.a(0, var2Lifetime19);
+            HighscoreNameEntry.field_c = ea.a(0, var2Lifetime19);
           }
           var2Lifetime20 = im.a(102, "startarcadegame");
           if (var2Lifetime20 != null) {
