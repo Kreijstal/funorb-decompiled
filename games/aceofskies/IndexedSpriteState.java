@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class df {
+abstract class IndexedSpriteState {
     static int field_f;
-    int field_e;
-    int field_d;
-    int field_a;
-    int field_h;
+    int trimX;
+    int height;
+    int fullHeight;
+    int fullWidth;
     static String field_g;
-    int field_b;
-    int field_c;
+    int width;
+    int trimY;
 
     final static boolean a(char param0, int param1) {
         int var2 = -120 / ((param1 - 22) / 39);
@@ -34,9 +34,9 @@ abstract class df {
         return true;
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawAlpha(int x, int y, int alpha256);
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int x, int y);
 
     public static void a(int param0) {
         int var1 = 20 / ((param0 + 5) / 46);

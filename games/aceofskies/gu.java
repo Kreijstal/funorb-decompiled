@@ -3,11 +3,11 @@
  */
 final class gu {
     private String field_b;
-    static vd[] field_a;
-    static ll[] field_c;
+    static SpriteData[] brassFrameSpriteData;
+    static Sprite[] field_c;
 
     public static void a(boolean param0) {
-        field_a = null;
+        brassFrameSpriteData = null;
         if (param0) {
           gu.a(false);
         }
@@ -144,7 +144,7 @@ final class gu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4) {
-            field_c = (ll[]) null;
+            field_c = (Sprite[]) null;
           }
           stackIn_3_0 = this.field_b.equals(param1);
           return stackIn_3_0;
@@ -180,7 +180,7 @@ final class gu {
             return (ml) (stackIn_2_0);
           }
           if (param2 != 16652) {
-            field_a = (vd[]) null;
+            brassFrameSpriteData = (SpriteData[]) null;
           }
           stackIn_6_0 = new ml(var4);
           return stackIn_6_0;

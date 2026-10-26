@@ -3,18 +3,18 @@
  */
 final class ut {
     static int field_a;
-    static RenderSprite field_c;
+    static RenderSprite lockedSprite;
     static String field_b;
 
     public static void a(byte param0) {
         if (param0 <= 104) {
-          field_c = (RenderSprite) null;
+          lockedSprite = (RenderSprite) null;
           field_b = null;
-          field_c = null;
+          lockedSprite = null;
           return;
         }
         field_b = null;
-        field_c = null;
+        lockedSprite = null;
     }
 
     final static void a(int param0, byte param1, int[] param2, int param3, int param4) {

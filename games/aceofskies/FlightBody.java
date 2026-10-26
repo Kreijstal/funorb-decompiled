@@ -7,7 +7,7 @@ class FlightBody {
     double heading;
     int headingOffset;
     double speed;
-    static vd[] field_a;
+    static SpriteData[] radarSpriteData;
 
     final void advance(int obfuscationGuard) {
         if (obfuscationGuard == 2) {
@@ -19,7 +19,7 @@ class FlightBody {
     }
 
     public static void a(boolean param0) {
-        field_a = null;
+        radarSpriteData = null;
         field_c = null;
         if (!param0) {
           FlightBody.a(-30, 98, 16, -74, 112, -14);
@@ -29,7 +29,7 @@ class FlightBody {
     final void wrapSquare(double halfExtent, int obfuscationGuard) {
         this.wrapWorld(halfExtent, (byte) 49, halfExtent);
         if (obfuscationGuard >= -77) {
-          field_a = (vd[]) null;
+          radarSpriteData = (SpriteData[]) null;
         }
     }
 
@@ -226,7 +226,7 @@ class FlightBody {
           fj.field_d = var7;
           return;
         }
-        field_a = (vd[]) null;
+        radarSpriteData = (SpriteData[]) null;
         if (op.field_a > param5) {
           nh.field_a = param5;
         }

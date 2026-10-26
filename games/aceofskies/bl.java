@@ -263,11 +263,11 @@ final class bl {
         }
     }
 
-    final static ll[] b(int param0) {
+    final static Sprite[] b(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        ll[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -281,7 +281,7 @@ final class bl {
         byte[] var21;
         int[] var22;
         var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var1 = new ll[to.field_t];
+        var1 = new Sprite[to.field_t];
         for (var2 = 0; to.field_t > var2; var2++) {
           var3 = ji.field_b[var2] * ee.field_e[var2];
           var21 = fk.field_a[var2];
@@ -291,7 +291,7 @@ final class bl {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = ud.field_e[pg.a((int) var21[var6], 255)];
             }
-            var1[var2] = new ll(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var22);
+            var1[var2] = new Sprite(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var22);
           } else {
             var15 = ql.field_p[var2];
             var11 = var15;
@@ -303,17 +303,17 @@ final class bl {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = vo.a(pg.a(-16777216, var15[var7] << 24), ud.field_e[pg.a(255, (int) var21[var7])]);
             }
-            var1[var2] = (ll) ((Object) new rd(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var17));
           }
         }
         if (param0 > -79) {
-          return (ll[]) null;
+          return (Sprite[]) null;
         }
         kf.f(1);
         return var1;
     }
 
-    final static wp a(byte param0, int param1, ResourceArchive param2, int param3) {
+    final static IndexedSprite a(byte param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

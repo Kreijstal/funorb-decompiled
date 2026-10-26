@@ -141,9 +141,9 @@ final class oa extends GraphicsRenderer implements e {
         return true;
     }
 
-    final RenderSprite a(vd param0, boolean param1) {
-        j var3 = new j(this, param0.field_f, param0.field_d, param0.field_e, 0, param0.field_h, param0.field_h, param0.field_c);
-        ((RenderSprite) ((Object) var3)).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
+    final RenderSprite createSprite(SpriteData data, boolean preferIndexed) {
+        j var3 = new j(this, data.palette, data.indices, data.alpha, 0, data.width, data.width, data.height);
+        ((RenderSprite) ((Object) var3)).a(data.padLeft, data.padTop, data.padRight, data.padBottom);
         return (RenderSprite) ((Object) var3);
     }
 
@@ -268,7 +268,7 @@ final class oa extends GraphicsRenderer implements e {
         return false;
     }
 
-    final RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2) {
+    final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -277,9 +277,9 @@ final class oa extends GraphicsRenderer implements e {
         var5 = new int[param1.length];
         var6 = 0;
         for (var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].field_h;
-          var5[var7] = param1[var7].field_c;
-          if (param1[var7].field_e != null) {
+          var4[var7] = param1[var7].width;
+          var5[var7] = param1[var7].height;
+          if (param1[var7].alpha != null) {
             var6 = 1;
           }
         }

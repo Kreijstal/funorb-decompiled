@@ -3,14 +3,14 @@
  */
 final class se {
     static String field_a;
-    static RendererBitmapFont field_c;
+    static RendererBitmapFont bigGameFont;
     static int field_b;
 
     public static void a(byte param0) {
         try {
           int var1_int = -15 / ((param0 - 79) / 44);
           field_a = null;
-          field_c = null;
+          bigGameFont = null;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "se.A(" + param0 + ')');
         }

@@ -19,7 +19,7 @@ final class ul extends sl {
         try {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);
-            if (!df.a((char) var3, 63) &&
+            if (!IndexedSpriteState.a((char) var3, 63) &&
               !oj.a((char) var3, (byte) -15)) {
               return true;
             }

@@ -316,7 +316,7 @@ final class ce extends ab implements dr, dn {
         if (param0 != -3) {
           return false;
         }
-        return nl.field_s;
+        return SpriteState.field_s;
     }
 
     private final void d(byte param0) {
@@ -553,7 +553,7 @@ final class ce extends ab implements dr, dn {
         }
     }
 
-    final static ll[] b(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] b(int param0, int param1, int param2, int param3, int param4) {
         if (param2 != -29003) {
           field_t = (pt) null;
         }

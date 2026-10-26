@@ -4,14 +4,14 @@
 final class SteeringMode {
     static qg field_c;
     static eo field_a;
-    static vd[][] field_d;
+    static SpriteData[][] aircraftSpriteData;
     static volatile int field_e;
     static String field_b;
 
     public static void a(boolean param0) {
         field_c = null;
         field_a = null;
-        field_d = (vd[][]) null;
+        aircraftSpriteData = (SpriteData[][]) null;
         if (param0) {
           return;
         }

@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nl extends DualLinkNode {
-    int field_v;
+abstract class SpriteState extends DualLinkNode {
+    int fullWidth;
     static int field_t;
-    int field_u;
-    int field_q;
+    int trimX;
+    int fullHeight;
     static int field_w;
-    int field_n;
-    int field_p;
+    int height;
+    int trimY;
     static boolean field_s;
-    int field_r;
+    int width;
     static int field_o;
     private static String field_z;
 
-    nl() {
+    SpriteState() {
     }
 
-    final static ll[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         int var4 = -46 / ((53 - param0) / 49);
         return or.a((byte) -101, 1, param1, param3, param2);
     }

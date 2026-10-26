@@ -7,10 +7,10 @@ final class ig extends RendererBitmapFont {
     private bf field_f;
     private qi field_e;
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
     }
 
-    ig(bf param0, BitmapFontMetrics param1, vd[] param2, boolean param3) {
+    ig(bf param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -38,7 +38,7 @@ final class ig extends RendererBitmapFont {
         byte[] var12_ref_byte__;
         int var12;
         int var13_int;
-        vd var13;
+        SpriteData var13;
         int var14;
         int var15;
         int var16;
@@ -55,11 +55,11 @@ final class ig extends RendererBitmapFont {
         float var22;
         float var23;
         int var24;
-        vd var25;
-        vd var26;
+        SpriteData var25;
+        SpriteData var26;
         byte[] var27;
         int[] var28;
-        vd var29;
+        SpriteData var29;
         byte[] var30;
         byte[] var31;
         int[] var32;
@@ -80,11 +80,11 @@ final class ig extends RendererBitmapFont {
         var5 = 0;
         for (var6 = 0; var6 < 256; var6++) {
           var25 = param2[var6];
-          if (var25.field_c > var5) {
-            var5 = var25.field_c;
+          if (var25.height > var5) {
+            var5 = var25.height;
           }
-          if (var25.field_h > var5) {
-            var5 = var25.field_h;
+          if (var25.width > var5) {
+            var5 = var25.width;
           }
         }
         var6Lifetime1 = var5 * 16;
@@ -94,15 +94,15 @@ final class ig extends RendererBitmapFont {
           var7_ref_int__ = var32;
           for (var8 = 0; var8 < 256; var8++) {
             var29 = param2[var8];
-            var10_ref_int__ = var29.field_f;
-            var37 = var29.field_e;
+            var10_ref_int__ = var29.palette;
+            var37 = var29.alpha;
             var30 = var37;
             var11_ref_byte__ = var30;
-            var38 = var29.field_d;
+            var38 = var29.indices;
             var31 = var38;
             var12_ref_byte__ = var31;
-            var13_int = var29.field_c;
-            var14 = var29.field_h;
+            var13_int = var29.height;
+            var14 = var29.width;
             var15 = var8 % 16 * var5;
             var16 = var8 / 16 * var5;
             var17 = var16 * var6Lifetime1 + var15;
@@ -144,14 +144,14 @@ final class ig extends RendererBitmapFont {
           var7_ref_byte__ = var27;
           for (var8 = 0; var8 < 256; var8++) {
             var26 = param2[var8];
-            var10_int = var26.field_c;
-            var11_int = var26.field_h;
+            var10_int = var26.height;
+            var11_int = var26.width;
             var12 = var8 % 16 * var5;
             var13_int = var8 / 16 * var5;
             var14 = var13_int * var6Lifetime1 + var12;
             var15 = 0;
-            if (var26.field_e != null) {
-              var16_ref_byte__ = var26.field_e;
+            if (var26.alpha != null) {
+              var16_ref_byte__ = var26.alpha;
               for (var17 = 0; var17 < var10_int; var17++) {
                 for (var18_int = 0; var18_int < var11_int; var18_int++) {
                   var7_ref_byte__[var14++] = var16_ref_byte__[var15++];
@@ -159,7 +159,7 @@ final class ig extends RendererBitmapFont {
                 var14 = var14 + (var6Lifetime1 - var11_int);
               }
             } else {
-              var16_ref_byte__ = var26.field_d;
+              var16_ref_byte__ = var26.indices;
               for (var17 = 0; var17 < var10_int; var17++) {
                 for (var18_int = 0; var18_int < var11_int; var18_int++) {
                   incrementValue$6 = var14;
@@ -206,10 +206,10 @@ final class ig extends RendererBitmapFont {
             var12Lifetime1 = var24;
             while (var24 < 256) {
               var13 = param2[var24];
-              var14Lifetime1 = var13.field_c;
-              var15Lifetime1 = var13.field_h;
-              var16Lifetime1 = var13.field_i;
-              var17Lifetime1 = var13.field_a;
+              var14Lifetime1 = var13.height;
+              var15Lifetime1 = var13.width;
+              var16Lifetime1 = var13.padTop;
+              var17Lifetime1 = var13.padLeft;
               var18 = (float)(var24 % 16 * var5);
               var19 = (float)(var24 / 16 * var5);
               var20 = var18 * var10;
@@ -271,26 +271,26 @@ final class ig extends RendererBitmapFont {
         return;
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass) {
         ec var6;
         this.field_f.x(-23608);
         this.field_f.a(this.field_e, -9135);
         if (!this.field_g &&
-          !param4) {
+          !shadowPass) {
           this.field_f.a(bd.field_C, true, bd.field_C);
         } else {
           this.field_f.a(bd.field_C, true, ru.field_a);
           this.field_f.a((byte) 122, 0, bs.field_a);
-          this.field_f.a((byte) -74, param3);
+          this.field_f.a((byte) -74, color);
         }
         var6 = this.field_f.y(-108);
-        var6.a(0, (byte) 106, param1, param2);
+        var6.a(0, (byte) 106, x, y);
         this.field_f.q((byte) 57);
         this.field_f.a(1, this.field_h, 0);
         this.field_f.a(this.field_f.field_Eb, (byte) 75);
-        this.field_f.a(true, qp.field_j, 2, param0 * 4);
+        this.field_f.a(true, qp.field_j, 2, glyph * 4);
         if (this.field_g ||
-          param4) {
+          shadowPass) {
           this.field_f.a((byte) 118, 0, CipherPacketBuffer.field_p);
         }
     }

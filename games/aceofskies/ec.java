@@ -17,10 +17,10 @@ final class ec extends ao {
     private float field_f;
     static int menuTransitionTicks;
     private float field_r;
-    static RenderSprite[] field_e;
+    static RenderSprite[] radarSprites;
     private float field_n;
 
-    final static void a(int param0, int param1, ll[] param2, int param3, int param4, BitmapFont param5, int param6, ll[] param7, ll[] param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, BitmapFont param5, int param6, Sprite[] param7, Sprite[] param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -620,7 +620,7 @@ final class ec extends ao {
     }
 
     public static void b(int param0) {
-        field_e = null;
+        radarSprites = null;
         if (param0 != 0) {
           return;
         }

@@ -140,7 +140,7 @@ final class wl extends GraphicsRenderer {
     private int field_Ob;
     private String field_B;
 
-    final RenderSprite a(vd param0, boolean param1) {
+    final RenderSprite createSprite(SpriteData data, boolean preferIndexed) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -166,27 +166,27 @@ final class wl extends GraphicsRenderer {
         int[] var12 = null;
         var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var10 = new int[param0.field_h * param0.field_c];
+          var10 = new int[data.width * data.height];
           var12 = var10;
           var11 = var12;
           var3 = var11;
           var4 = 0;
           var5 = 0;
-          if (param0.field_e != null) {
-            for (var6_int = 0; var6_int < param0.field_c; var6_int++) {
-              for (var7 = 0; param0.field_h > var7; var7++) {
+          if (data.alpha != null) {
+            for (var6_int = 0; var6_int < data.height; var6_int++) {
+              for (var7 = 0; data.width > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = vo.a(param0.field_f[pg.a(255, (int) param0.field_d[var4])], param0.field_e[var4] << 24);
+                var3[incrementValue$0] = vo.a(data.palette[pg.a(255, (int) data.indices[var4])], data.alpha[var4] << 24);
                 var4++;
               }
             }
           } else {
-            for (var6_int = 0; var6_int < param0.field_c; var6_int++) {
-              for (var7 = 0; param0.field_h > var7; var7++) {
+            for (var6_int = 0; var6_int < data.height; var6_int++) {
+              for (var7 = 0; data.width > var7; var7++) {
                 incrementValue$1 = var4;
                 var4++;
-                var8 = param0.field_f[param0.field_d[incrementValue$1] & 255];
+                var8 = data.palette[data.indices[incrementValue$1] & 255];
                 incrementValue$2 = var5;
                 var5++;
                 stackIn_8_0 = var10;
@@ -200,8 +200,8 @@ final class wl extends GraphicsRenderer {
               }
             }
           }
-          var6 = this.a(97, param0.field_c, var12, 0, param0.field_h, param0.field_h);
-          var6.a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
+          var6 = this.a(97, data.height, var12, 0, data.width, data.width);
+          var6.a(data.padLeft, data.padTop, data.padRight, data.padBottom);
           stackIn_18_0 = var6;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -209,12 +209,12 @@ final class wl extends GraphicsRenderer {
           var3_ref = decompiledCaughtException;
           stackIn_21_0 = var3_ref;
           stackIn_21_1 = new StringBuilder().append("wl.HA(");
-          if (param0 == null) {
+          if (data == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(preferIndexed).append(')').toString());
         }
     }
 
@@ -2327,7 +2327,7 @@ final class wl extends GraphicsRenderer {
     final void a(sm param0) {
     }
 
-    final RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2) {
+    final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
         mu stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;

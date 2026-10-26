@@ -14,7 +14,7 @@ final class kg {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ll[] param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -31,13 +31,13 @@ final class kg {
         try {
           if (param5 != null &&
             param4 > 0) {
-            var6_int = param5[0].field_v;
-            var7 = param5[2].field_v;
-            var8 = param5[1].field_v;
+            var6_int = param5[0].fullWidth;
+            var7 = param5[2].fullWidth;
+            var8 = param5[1].fullWidth;
             param5[0].b(param1, param3, param2);
             param5[2].b(param4 + (param1 - var7), param3, param2);
             SoftwareRasterizer.saveClip(rl.field_a);
-            SoftwareRasterizer.intersectClip(var6_int + param1, param3, param4 + (param1 - var7), param5[1].field_q + param3);
+            SoftwareRasterizer.intersectClip(var6_int + param1, param3, param4 + (param1 - var7), param5[1].fullHeight + param3);
             var9 = param1 + var6_int;
             var10 = -var7 + (param1 + param4);
             for (param1 = var9; param1 < var10; param1 = param1 + var8) {
@@ -63,18 +63,18 @@ final class kg {
     }
 
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
-        ll var17 = null;
-        wp[] var5 = null;
-        wp[][] var6 = null;
+        Sprite var17 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        wp[] var14 = null;
+        IndexedSprite[] var14 = null;
         int var11_int = 0;
-        ll var15 = null;
-        ll var18 = null;
-        ll var11 = null;
-        ll var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -89,47 +89,47 @@ final class kg {
           oi.field_c = (BitmapFont) ((Object) as.a(param3, -119, param1, "arezzo12", "commonui"));
           qo.field_b = (BitmapFont) ((Object) as.a(param3, -104, param1, "arezzo14", "commonui"));
           b.field_c = (BitmapFont) ((Object) as.a(param3, param0 ^ -112, param1, "arezzo14bold", "commonui"));
-          var17 = new ll(param2.a("button.gif", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
+          var17 = new Sprite(param2.a("button.gif", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
           cd.a(param1, "commonui", "dropdown", param0 - 116);
           var5 = iu.a(param1, "commonui", (byte) -86, "screen_options");
-          MenuInputState.field_i = new wp[param0];
-          dk.field_e = new wp[4];
-          sl.field_o = new wp[4];
-          var6 = new wp[][]{sl.field_o, dk.field_e, MenuInputState.field_i};
+          MenuInputState.field_i = new IndexedSprite[param0];
+          dk.field_e = new IndexedSprite[4];
+          sl.field_o = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{sl.field_o, dk.field_e, MenuInputState.field_i};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
-          var7[0] = var5[0].field_i;
+          var7[0] = var5[0].palette;
           for (var8 = 1; var8 < var19.length; var8++) {
             var7[var8] = (int[]) ((Object) var19[0].clone());
           }
-          var8Lifetime1 = var5[0].field_j[0];
+          var8Lifetime1 = var5[0].indices[0];
           var19[2][var8Lifetime1] = 16777215;
           var19[1][var8Lifetime1] = 2394342;
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; var9 < 3; var9++) {
             var14 = var6[var9];
-            wp[] var10 = var14;
+            IndexedSprite[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = ClientException.a(15810, var5[var9], var19[var11_int]);
             }
           }
-          var9Lifetime1 = var17.field_n;
+          var9Lifetime1 = var17.height;
           qk.a((byte) -92);
-          var17.b();
+          var17.makeRasterTarget();
           SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
-          var15 = new ll(var9Lifetime1, var9Lifetime1);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.b();
+          var18.makeRasterTarget();
           var17.c(0, 0);
-          var11 = new ll(var9Lifetime1, var9Lifetime1);
-          var11.b();
-          var17.c(var9Lifetime1 - var17.field_r, 0);
-          var12 = new ll(-(var9Lifetime1 * 2) + var17.field_r, var9Lifetime1);
-          var12.b();
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
+          var11.makeRasterTarget();
+          var17.c(var9Lifetime1 - var17.width, 0);
+          var12 = new Sprite(-(var9Lifetime1 * 2) + var17.width, var9Lifetime1);
+          var12.makeRasterTarget();
           var17.c(-var9Lifetime1, 0);
           sl.c(param0 + 2761);
-          u.field_i = new ll[]{var15, var12, var11};
+          u.field_i = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "kg.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

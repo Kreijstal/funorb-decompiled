@@ -224,7 +224,7 @@ class ea extends IntrusiveNode {
         }
         var5 = fh.c((byte) -125);
         if (var5 != null) {
-          ag.field_n.a(10066329, var5, nl.field_o, we.field_c);
+          ag.field_n.a(10066329, var5, SpriteState.field_o, we.field_c);
         }
     }
 

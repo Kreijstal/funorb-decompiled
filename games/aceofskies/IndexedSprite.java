@@ -1,43 +1,43 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wp extends df {
-    int[] field_i;
-    byte[] field_j;
+final class IndexedSprite extends IndexedSpriteState {
+    int[] palette;
+    byte[] indices;
 
-    final void a(int param0, int param1) {
+    final void draw(int x, int y) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_e;
-        param1 = param1 + this.field_c;
-        int var3 = param0 + param1 * SoftwareRasterizer.stride;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int var3 = x + y * SoftwareRasterizer.stride;
         int var4 = 0;
-        int var5 = this.field_d;
-        int var6 = this.field_b;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          var9 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - y;
           var5 = var5 - var9;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
           var3 = var3 + var9 * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
-          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
+        if (y + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (y + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var6 = var6 - var9Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+        if (x + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = x + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -46,7 +46,7 @@ final class wp extends df {
           var5 <= 0) {
           return;
         }
-        wp.a(SoftwareRasterizer.framebuffer, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.a(SoftwareRasterizer.framebuffer, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -137,39 +137,39 @@ final class wp extends df {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawAlpha(int x, int y, int alpha256) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_e;
-        param1 = param1 + this.field_c;
-        int var4 = param0 + param1 * SoftwareRasterizer.stride;
+        x = x + this.trimX;
+        y = y + this.trimY;
+        int var4 = x + y * SoftwareRasterizer.stride;
         int var5 = 0;
-        int var6 = this.field_d;
-        int var7 = this.field_b;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
-        if (param1 < SoftwareRasterizer.clipTop) {
-          var10 = SoftwareRasterizer.clipTop - param1;
+        if (y < SoftwareRasterizer.clipTop) {
+          var10 = SoftwareRasterizer.clipTop - y;
           var6 = var6 - var10;
-          param1 = SoftwareRasterizer.clipTop;
+          y = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
           var4 = var4 + var10 * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
-          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
+        if (y + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (y + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < SoftwareRasterizer.clipLeft) {
-          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+        if (x < SoftwareRasterizer.clipLeft) {
+          var10Lifetime1 = SoftwareRasterizer.clipLeft - x;
           var7 = var7 - var10Lifetime1;
-          param0 = SoftwareRasterizer.clipLeft;
+          x = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+        if (x + var7 > SoftwareRasterizer.clipRight) {
+          var10Lifetime2 = x + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -178,28 +178,28 @@ final class wp extends df {
           var6 <= 0) {
           return;
         }
-        wp.b(SoftwareRasterizer.framebuffer, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
+        IndexedSprite.b(SoftwareRasterizer.framebuffer, this.indices, this.palette, var5, var4, var7, var6, var8, var9, alpha256);
     }
 
-    wp(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        this.field_h = param0;
-        this.field_a = param1;
-        this.field_e = param2;
-        this.field_c = param3;
-        this.field_b = param4;
-        this.field_d = param5;
-        this.field_j = param6;
-        this.field_i = param7;
+    IndexedSprite(int fullWidth, int fullHeight, int trimX, int trimY, int width, int height, byte[] indices, int[] palette) {
+        this.fullWidth = fullWidth;
+        this.fullHeight = fullHeight;
+        this.trimX = trimX;
+        this.trimY = trimY;
+        this.width = width;
+        this.height = height;
+        this.indices = indices;
+        this.palette = palette;
     }
 
-    wp(int param0, int param1, int param2) {
-        this.field_b = param0;
-        this.field_h = param0;
-        this.field_d = param1;
-        this.field_a = param1;
-        this.field_c = 0;
-        this.field_e = 0;
-        this.field_j = new byte[param0 * param1];
-        this.field_i = new int[param2];
+    IndexedSprite(int width, int height, int paletteSize) {
+        this.width = width;
+        this.fullWidth = width;
+        this.height = height;
+        this.fullHeight = height;
+        this.trimY = 0;
+        this.trimX = 0;
+        this.indices = new byte[width * height];
+        this.palette = new int[paletteSize];
     }
 }

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ol extends ai {
     static String field_f;
-    static vd[] field_e;
+    static SpriteData[] powerchuteSpriteData;
     static int field_c;
     private int[] field_d;
 
@@ -114,7 +114,7 @@ final class ol extends ai {
     }
 
     public static void b(int param0) {
-        field_e = null;
+        powerchuteSpriteData = null;
         if (param0 < 88) {
           return;
         }

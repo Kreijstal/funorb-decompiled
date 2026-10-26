@@ -8,7 +8,7 @@ final class dk implements Runnable {
     static String field_b;
     static dq field_h;
     static String field_i;
-    static wp[] field_e;
+    static IndexedSprite[] field_e;
     private boolean field_j;
     int field_d;
     static int[] field_g;

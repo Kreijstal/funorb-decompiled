@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nc {
-    static vd[] field_a;
+    static SpriteData[] titleFontSpriteData;
     static int field_d;
     static String field_b;
     static byte[] field_c;
@@ -12,7 +12,7 @@ final class nc {
           return;
         }
         field_c = null;
-        field_a = null;
+        titleFontSpriteData = null;
         field_b = null;
     }
 
@@ -44,7 +44,7 @@ final class nc {
             }
           }
           if (param1 >= -72) {
-            field_a = (vd[]) null;
+            titleFontSpriteData = (SpriteData[]) null;
           }
           stackIn_11_0 = var5;
           return stackIn_11_0;

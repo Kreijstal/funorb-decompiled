@@ -5,7 +5,7 @@ final class mg {
     static volatile long field_b;
     static String field_a;
     static MidiPcmStream field_d;
-    private ll[] field_c;
+    private Sprite[] field_c;
 
     public static void a(int param0) {
         field_a = null;
@@ -51,7 +51,7 @@ final class mg {
         }
     }
 
-    mg(ll[] param0) {
+    mg(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

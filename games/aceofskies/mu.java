@@ -7,17 +7,17 @@ final class mu extends RendererBitmapFont {
     private boolean field_e;
     private el field_h;
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
         dc var9;
         el var10;
         float var11;
         float var12;
-        var9 = (dc) (param5);
+        var9 = (dc) (mask);
         var10 = var9.field_e;
         this.field_f.a((byte) 10);
         this.field_f.a(this.field_h, 1);
         if (!this.field_e &&
-          !param4) {
+          !shadowPass) {
           this.field_f.a(7681, -26625, 7681);
         } else {
           this.field_f.a(7681, -26625, 8448);
@@ -31,13 +31,13 @@ final class mu extends RendererBitmapFont {
         jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
         var11 = var10.field_r / (float)var10.field_q;
         var12 = var10.field_p / (float)var10.field_o;
-        jaggl.OpenGL.glTexGenfv(8192, 9474, new float[]{var11, 0.0f, 0.0f, (float)(-param6) * var11}, 0);
-        jaggl.OpenGL.glTexGenfv(8193, 9474, new float[]{0.0f, var12, 0.0f, (float)(-param7) * var12}, 0);
+        jaggl.OpenGL.glTexGenfv(8192, 9474, new float[]{var11, 0.0f, 0.0f, (float)(-maskX) * var11}, 0);
+        jaggl.OpenGL.glTexGenfv(8193, 9474, new float[]{0.0f, var12, 0.0f, (float)(-maskY) * var12}, 0);
         jaggl.OpenGL.glEnable(3168);
         jaggl.OpenGL.glEnable(3169);
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
-        jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_g.a(-23085, param0);
+        jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
+        jaggl.OpenGL.glTranslatef((float)x, (float)y, 0.0f);
+        this.field_g.a(-23085, glyph);
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
@@ -46,32 +46,32 @@ final class mu extends RendererBitmapFont {
         this.field_f.a((rt) null, 1);
         this.field_f.a(false, 0);
         if (this.field_e ||
-          param4) {
+          shadowPass) {
           this.field_f.a(5890, 768, 34176, 0);
         }
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass) {
         this.field_f.a((byte) 10);
         this.field_f.a(this.field_h, 1);
         if (!this.field_e &&
-          !param4) {
+          !shadowPass) {
           this.field_f.a(7681, -26625, 7681);
         } else {
           this.field_f.a(7681, -26625, 8448);
           this.field_f.a(34168, 768, 34176, 0);
         }
-        jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
-        jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
-        this.field_g.a(-23085, param0);
+        jaggl.OpenGL.glColor4ub((byte)(color >> 16), (byte)(color >> 8), (byte)color, (byte)(color >> 24));
+        jaggl.OpenGL.glTranslatef((float)x, (float)y, 0.0f);
+        this.field_g.a(-23085, glyph);
         jaggl.OpenGL.glLoadIdentity();
         if (this.field_e ||
-          param4) {
+          shadowPass) {
           this.field_f.a(5890, 768, 34176, 0);
         }
     }
 
-    mu(wl param0, BitmapFontMetrics param1, vd[] param2, boolean param3) {
+    mu(wl param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -112,14 +112,14 @@ final class mu extends RendererBitmapFont {
         int var20_int;
         float var20;
         int var21;
-        vd var22;
-        vd var23;
+        SpriteData var22;
+        SpriteData var23;
         byte[] var24;
-        vd var25;
+        SpriteData var25;
         byte[] var26;
         byte[] var27;
         int[] var28;
-        vd var29;
+        SpriteData var29;
         byte[] var30;
         byte[] var31;
         byte[] var32;
@@ -133,11 +133,11 @@ final class mu extends RendererBitmapFont {
         var5 = 0;
         for (var6 = 0; var6 < 256; var6++) {
           var22 = param2[var6];
-          if (var22.field_c > var5) {
-            var5 = var22.field_c;
+          if (var22.height > var5) {
+            var5 = var22.height;
           }
-          if (var22.field_h > var5) {
-            var5 = var22.field_h;
+          if (var22.width > var5) {
+            var5 = var22.width;
           }
         }
         var6Lifetime1 = var5 * 16;
@@ -147,15 +147,15 @@ final class mu extends RendererBitmapFont {
           var7_ref_int__ = var28;
           for (var8_int = 0; var8_int < 256; var8_int++) {
             var25 = param2[var8_int];
-            var10 = var25.field_f;
-            var31 = var25.field_e;
+            var10 = var25.palette;
+            var31 = var25.alpha;
             var26 = var31;
             var11_ref_byte__ = var26;
-            var32 = var25.field_d;
+            var32 = var25.indices;
             var27 = var32;
             var12_ref_byte__ = var27;
-            var13 = var25.field_c;
-            var14 = var25.field_h;
+            var13 = var25.height;
+            var14 = var25.width;
             var15_int = var8_int % 16 * var5;
             var16_int = var8_int / 16 * var5;
             var17_int = var16_int * var6Lifetime1 + var15_int;
@@ -197,14 +197,14 @@ final class mu extends RendererBitmapFont {
           var7_ref_byte__ = var24;
           for (var8_int = 0; var8_int < 256; var8_int++) {
             var23 = param2[var8_int];
-            var10_int = var23.field_c;
-            var11 = var23.field_h;
+            var10_int = var23.height;
+            var11 = var23.width;
             var12 = var8_int % 16 * var5;
             var13 = var8_int / 16 * var5;
             var14 = var13 * var6Lifetime1 + var12;
             var15_int = 0;
-            if (var23.field_e != null) {
-              var16_ref_byte__ = var23.field_e;
+            if (var23.alpha != null) {
+              var16_ref_byte__ = var23.alpha;
               for (var17_int = 0; var17_int < var10_int; var17_int++) {
                 for (var18_int = 0; var18_int < var11; var18_int++) {
                   var7_ref_byte__[var14++] = var16_ref_byte__[var15_int++];
@@ -212,7 +212,7 @@ final class mu extends RendererBitmapFont {
                 var14 = var14 + (var6Lifetime1 - var11);
               }
             } else {
-              var16_ref_byte__ = var23.field_d;
+              var16_ref_byte__ = var23.indices;
               for (var17_int = 0; var17_int < var10_int; var17_int++) {
                 for (var18_int = 0; var18_int < var11; var18_int++) {
                   incrementValue$6 = var14;
@@ -241,10 +241,10 @@ final class mu extends RendererBitmapFont {
         var8 = this.field_h.field_p / (float)this.field_h.field_o;
         for (var9 = 0; var9 < 256; var9++) {
           var29 = param2[var9];
-          var11Lifetime1 = var29.field_c;
-          var12Lifetime1 = var29.field_h;
-          var13Lifetime1 = var29.field_i;
-          var14Lifetime1 = var29.field_a;
+          var11Lifetime1 = var29.height;
+          var12Lifetime1 = var29.width;
+          var13Lifetime1 = var29.padTop;
+          var14Lifetime1 = var29.padLeft;
           var15 = (float)(var9 % 16 * var5);
           var16 = (float)(var9 / 16 * var5);
           var17 = var15 * var7;

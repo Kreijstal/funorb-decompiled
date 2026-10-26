@@ -7,7 +7,7 @@ final class q extends rt {
     static String field_l;
     static boolean[] field_k;
     static ResourceArchive field_q;
-    static vd[] field_o;
+    static SpriteData[] bigFontSpriteData;
     private int field_n;
 
     public final void a(byte param0) {
@@ -22,7 +22,7 @@ final class q extends rt {
     public static void d(int param0) {
         outgoingPacket = null;
         int var1 = -126 / ((-5 - param0) / 53);
-        field_o = null;
+        bigFontSpriteData = null;
         field_k = null;
         field_q = null;
         field_l = null;

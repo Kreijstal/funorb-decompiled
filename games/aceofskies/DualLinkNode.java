@@ -10,7 +10,7 @@ class DualLinkNode extends IntrusiveNode {
     static PacketBuffer field_l;
     static jt field_e;
     static String[] field_k;
-    static ll[] field_h;
+    static Sprite[] field_h;
 
     public static void a(int param0) {
         field_e = null;

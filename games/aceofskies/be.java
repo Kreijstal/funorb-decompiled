@@ -10,44 +10,44 @@ final class be extends RendererBitmapFont {
     private kj field_h;
     private int[] field_j;
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
         int var16 = 0;
         int var16Lifetime1;
         int var16Lifetime2;
-        if (param5 == null) {
-          this.fa(param0, param1, param2, param3, param4);
+        if (mask == null) {
+          this.drawGlyph(glyph, x, y, color, shadowPass);
           return;
         }
-        param1 = param1 + this.field_e[param0];
-        param2 = param2 + this.field_f[param0];
-        int var9 = this.field_j[param0];
-        int var10 = this.field_g[param0];
+        x = x + this.field_e[glyph];
+        y = y + this.field_f[glyph];
+        int var9 = this.field_j[glyph];
+        int var10 = this.field_g[glyph];
         int var11 = this.field_h.field_f;
-        int var12 = param1 + param2 * var11;
+        int var12 = x + y * var11;
         int var13 = var11 - var9;
         int var14 = 0;
         int var15 = 0;
-        if (param2 < this.field_h.field_w) {
-          var16 = this.field_h.field_w - param2;
+        if (y < this.field_h.field_w) {
+          var16 = this.field_h.field_w - y;
           var10 = var10 - var16;
-          param2 = this.field_h.field_w;
+          y = this.field_h.field_w;
           var15 = var15 + var16 * var9;
           var12 = var12 + var16 * var11;
         }
-        if (param2 + var10 > this.field_h.field_D) {
-          var10 = var10 - (param2 + var10 - this.field_h.field_D);
+        if (y + var10 > this.field_h.field_D) {
+          var10 = var10 - (y + var10 - this.field_h.field_D);
         }
-        if (param1 < this.field_h.field_z) {
-          var16Lifetime1 = this.field_h.field_z - param1;
+        if (x < this.field_h.field_z) {
+          var16Lifetime1 = this.field_h.field_z - x;
           var9 = var9 - var16Lifetime1;
-          param1 = this.field_h.field_z;
+          x = this.field_h.field_z;
           var15 = var15 + var16Lifetime1;
           var12 = var12 + var16Lifetime1;
           var14 = var14 + var16Lifetime1;
           var13 = var13 + var16Lifetime1;
         }
-        if (param1 + var9 > this.field_h.field_k) {
-          var16Lifetime2 = param1 + var9 - this.field_h.field_k;
+        if (x + var9 > this.field_h.field_k) {
+          var16Lifetime2 = x + var9 - this.field_h.field_k;
           var9 = var9 - var16Lifetime2;
           var14 = var14 + var16Lifetime2;
           var13 = var13 + var16Lifetime2;
@@ -56,10 +56,10 @@ final class be extends RendererBitmapFont {
           var10 <= 0) {
           return;
         }
-        if (param4) {
-          this.a(this.field_k[param0], this.field_h.field_E, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_j[param0], param5, param6, param7);
+        if (shadowPass) {
+          this.a(this.field_k[glyph], this.field_h.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_j[glyph], mask, maskX, maskY);
         } else {
-          this.a(this.field_k[param0], this.field_h.field_E, this.field_i, param3, var15, var12, var9, var10, var13, var14, param1, param2, this.field_j[param0], param5, param6, param7);
+          this.a(this.field_k[glyph], this.field_h.field_E, this.field_i, color, var15, var12, var9, var10, var13, var14, x, y, this.field_j[glyph], mask, maskX, maskY);
         }
     }
 
@@ -199,7 +199,7 @@ final class be extends RendererBitmapFont {
         }
     }
 
-    be(kj param0, BitmapFontMetrics param1, vd[] param2, int[] param3, int[] param4) {
+    be(kj param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_h = param0;
@@ -210,11 +210,11 @@ final class be extends RendererBitmapFont {
         this.field_f = new int[param2.length];
         this.field_e = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
-          this.field_k[var6] = param2[var6].field_d;
-          this.field_f[var6] = param2[var6].field_i;
-          this.field_e[var6] = param2[var6].field_a;
+          this.field_k[var6] = param2[var6].indices;
+          this.field_f[var6] = param2[var6].padTop;
+          this.field_e[var6] = param2[var6].padLeft;
         }
-        this.field_i = param2[0].field_f;
+        this.field_i = param2[0].palette;
     }
 
     private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
@@ -399,40 +399,40 @@ final class be extends RendererBitmapFont {
         }
     }
 
-    final void fa(char param0, int param1, int param2, int param3, boolean param4) {
+    final void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass) {
         int var13 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        param1 = param1 + this.field_e[param0];
-        param2 = param2 + this.field_f[param0];
-        int var6 = this.field_j[param0];
-        int var7 = this.field_g[param0];
+        x = x + this.field_e[glyph];
+        y = y + this.field_f[glyph];
+        int var6 = this.field_j[glyph];
+        int var7 = this.field_g[glyph];
         int var8 = this.field_h.field_f;
-        int var9 = param1 + param2 * var8;
+        int var9 = x + y * var8;
         int var10 = var8 - var6;
         int var11 = 0;
         int var12 = 0;
-        if (param2 < this.field_h.field_w) {
-          var13 = this.field_h.field_w - param2;
+        if (y < this.field_h.field_w) {
+          var13 = this.field_h.field_w - y;
           var7 = var7 - var13;
-          param2 = this.field_h.field_w;
+          y = this.field_h.field_w;
           var12 = var12 + var13 * var6;
           var9 = var9 + var13 * var8;
         }
-        if (param2 + var7 > this.field_h.field_D) {
-          var7 = var7 - (param2 + var7 - this.field_h.field_D);
+        if (y + var7 > this.field_h.field_D) {
+          var7 = var7 - (y + var7 - this.field_h.field_D);
         }
-        if (param1 < this.field_h.field_z) {
-          var13Lifetime1 = this.field_h.field_z - param1;
+        if (x < this.field_h.field_z) {
+          var13Lifetime1 = this.field_h.field_z - x;
           var6 = var6 - var13Lifetime1;
-          param1 = this.field_h.field_z;
+          x = this.field_h.field_z;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + var6 > this.field_h.field_k) {
-          var13Lifetime2 = param1 + var6 - this.field_h.field_k;
+        if (x + var6 > this.field_h.field_k) {
+          var13Lifetime2 = x + var6 - this.field_h.field_k;
           var6 = var6 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -441,10 +441,10 @@ final class be extends RendererBitmapFont {
           var7 <= 0) {
           return;
         }
-        if (param4) {
-          this.a(this.field_k[param0], this.field_h.field_E, param3, var12, var9, var6, var7, var10, var11);
+        if (shadowPass) {
+          this.a(this.field_k[glyph], this.field_h.field_E, color, var12, var9, var6, var7, var10, var11);
         } else {
-          this.a(this.field_k[param0], this.field_h.field_E, this.field_i, var12, var9, var6, var7, var10, var11);
+          this.a(this.field_k[glyph], this.field_h.field_E, this.field_i, var12, var9, var6, var7, var10, var11);
         }
     }
 }

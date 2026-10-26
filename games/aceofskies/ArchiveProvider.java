@@ -3,7 +3,7 @@
  */
 abstract class ArchiveProvider {
     static int[][] classicWaveCompositions;
-    static ll[] field_c;
+    static Sprite[] field_c;
     static int[] field_b;
 
     final static String a(byte param0, CharSequence param1) {
@@ -73,7 +73,7 @@ abstract class ArchiveProvider {
           classicWaveCompositions = (int[][]) null;
           return;
         }
-        field_c = (ll[]) null;
+        field_c = (Sprite[]) null;
         field_c = null;
         classicWaveCompositions = (int[][]) null;
     }

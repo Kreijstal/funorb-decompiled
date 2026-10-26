@@ -13,7 +13,7 @@ final class tm extends RenderSprite {
     private int field_d;
     static ia field_h;
     static int[] field_l;
-    static int field_i;
+    static int rendererSpaceExpansionQ8;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         this.field_j.a(false, -128);
@@ -542,6 +542,6 @@ final class tm extends RenderSprite {
     static {
         field_h = new ia();
         field_l = new int[8192];
-        field_i = 0;
+        rendererSpaceExpansionQ8 = 0;
     }
 }

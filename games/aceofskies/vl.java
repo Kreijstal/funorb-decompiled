@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vl {
-    static vd[] field_b;
+    static SpriteData[] brassButtonSpriteData;
     static String field_a;
-    static vd field_c;
+    static SpriteData coinSpriteData;
 
     final static void a(int param0) {
         if (param0 != -26317) {
@@ -65,12 +65,12 @@ final class vl {
     }
 
     public static void b(int param0) {
-        field_b = null;
+        brassButtonSpriteData = null;
         if (param0 != 8664) {
           return;
         }
         field_a = null;
-        field_c = null;
+        coinSpriteData = null;
     }
 
     static {

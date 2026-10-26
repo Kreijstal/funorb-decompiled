@@ -7,7 +7,7 @@ final class dh {
     int field_a;
     static String field_d;
     int field_f;
-    static RenderSprite field_k;
+    static RenderSprite unachievedSprite;
     int field_l;
     byte[] field_e;
     int field_h;
@@ -16,7 +16,7 @@ final class dh {
     byte[] field_g;
 
     public static void a(byte param0) {
-        field_k = null;
+        unachievedSprite = null;
         if (param0 >= -69) {
           return;
         }
@@ -46,7 +46,7 @@ final class dh {
         var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 <= 39) {
-            field_k = (RenderSprite) null;
+            unachievedSprite = (RenderSprite) null;
           }
           var13 = IntKeyLookup.incomingPacket;
           var2 = var13.readUnsignedByte(121);

@@ -10,7 +10,7 @@ abstract class rg extends gm {
     static String field_C;
     private int field_G;
     private int field_D;
-    static ll[] field_F;
+    static Sprite[] field_F;
 
     void a(boolean param0, int param1, int param2) {
         int var4;

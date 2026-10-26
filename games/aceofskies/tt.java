@@ -4,7 +4,7 @@
 final class tt {
     static String[][] field_d;
     static String field_b;
-    static vd[] field_c;
+    static SpriteData[] powerBulbSpriteData;
     static boolean field_a;
 
     public static void a(int param0) {
@@ -13,7 +13,7 @@ final class tt {
         }
         field_d = (String[][]) null;
         field_b = null;
-        field_c = null;
+        powerBulbSpriteData = null;
     }
 
     final static void a(int param0, int param1) {
@@ -55,7 +55,7 @@ final class tt {
         if (null != aj.field_s) {
           aj.field_s.c(1);
           if (param0 != -32546) {
-            field_c = (vd[]) null;
+            powerBulbSpriteData = (SpriteData[]) null;
             ci.field_f.requestFocus();
             return;
           }
@@ -66,7 +66,7 @@ final class tt {
           ci.field_f.requestFocus();
           return;
         }
-        field_c = (vd[]) null;
+        powerBulbSpriteData = (SpriteData[]) null;
         ci.field_f.requestFocus();
     }
 

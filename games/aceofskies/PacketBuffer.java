@@ -4,10 +4,10 @@
 class PacketBuffer extends IntrusiveNode {
     byte[] payload;
     static long field_e;
-    static int field_h;
+    static int rendererUnderlineColor;
     static int[] field_k;
     static String[] field_i;
-    static RendererBitmapFont field_j;
+    static RendererBitmapFont gameFont;
     int position;
 
     final void f(int param0, int param1) {
@@ -23,7 +23,7 @@ class PacketBuffer extends IntrusiveNode {
     final void patchByteLength(int payloadLength, byte obfuscationGuard) {
         this.payload[-payloadLength + this.position - 1] = (byte)payloadLength;
         if (obfuscationGuard <= 57) {
-          field_j = (RendererBitmapFont) null;
+          gameFont = (RendererBitmapFont) null;
         }
     }
 
@@ -144,7 +144,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final void a(boolean param0, int param1) {
         if (param0) {
-          field_h = -82;
+          rendererUnderlineColor = -82;
         }
         this.payload[-2 + (this.position - param1)] = (byte)(param1 >> 8);
         this.payload[-param1 + (this.position - 1)] = (byte)param1;
@@ -152,7 +152,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final String e(byte param0) {
         if (param0 > -90) {
-          field_h = 72;
+          rendererUnderlineColor = 72;
         }
         if (this.payload[this.position] == 0) {
           this.position = this.position + 1;
@@ -399,7 +399,7 @@ class PacketBuffer extends IntrusiveNode {
         }
         field_i = null;
         field_k = null;
-        field_j = null;
+        gameFont = null;
     }
 
     final boolean e(int param0) {
@@ -846,6 +846,6 @@ class PacketBuffer extends IntrusiveNode {
 
     static {
         field_i = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
-        field_h = -1;
+        rendererUnderlineColor = -1;
     }
 }

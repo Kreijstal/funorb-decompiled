@@ -6,7 +6,7 @@ final class tq extends fa {
     static byte[][] field_f;
     static IntrusiveDeque pendingScoreSubmissions;
     static kq field_i;
-    static vd[] field_h;
+    static SpriteData[] smokeSpriteData;
     static String[] field_e;
 
     final static boolean c(boolean param0) {
@@ -22,7 +22,7 @@ final class tq extends fa {
 
     public static void b(int param0) {
         field_f = (byte[][]) null;
-        field_h = null;
+        smokeSpriteData = null;
         pendingScoreSubmissions = null;
         field_e = null;
         field_i = null;

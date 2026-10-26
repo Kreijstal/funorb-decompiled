@@ -5,7 +5,7 @@ final class em {
     static String[] field_c;
     private qi[] field_h;
     static int[] field_b;
-    static int field_d;
+    static int rendererDefaultShadowColor;
     boolean field_e;
     bp field_f;
     bp field_a;
@@ -167,7 +167,7 @@ final class em {
     }
 
     static {
-        field_d = 0;
+        rendererDefaultShadowColor = 0;
         field_c = new String[]{"Move back to the previous menu level.", "Return to the top level of the menu.", "Auto-respond to the last thing in your chat window.", "Open the Quick Chat menu.", "Repeat the last thing you said.", "Close the Quick Chat menu."};
     }
 }

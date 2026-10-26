@@ -5,20 +5,20 @@ final class mb extends he {
     static String[] field_t;
     static String field_s;
     static int field_q;
-    static RenderSprite[] field_u;
+    static RenderSprite[] brassButtonSprites;
     private java.lang.ref.SoftReference field_r;
 
     public static void g(int param0) {
         if (param0 == 255) {
           field_t = null;
           field_s = null;
-          field_u = null;
+          brassButtonSprites = null;
           return;
         }
-        field_u = (RenderSprite[]) null;
+        brassButtonSprites = (RenderSprite[]) null;
         field_t = null;
         field_s = null;
-        field_u = null;
+        brassButtonSprites = null;
     }
 
     final static void a(int param0, int param1, byte param2) {

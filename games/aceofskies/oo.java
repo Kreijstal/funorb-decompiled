@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class oo extends dg implements dn {
-    static ll field_W;
+    static Sprite field_W;
     private ss field_bb;
     private boolean field_cb;
     private BitmapFont field_U;
@@ -10,7 +10,7 @@ class oo extends dg implements dn {
     static int[] menuRowSpacing;
     private boolean field_X;
     static IntrusiveDeque field_T;
-    static vd[] field_ab;
+    static SpriteData[] backgroundSpriteData;
     private boolean field_Z;
 
     final void l(int param0) {
@@ -83,7 +83,7 @@ class oo extends dg implements dn {
         menuRowSpacing = null;
         field_T = null;
         field_W = null;
-        field_ab = null;
+        backgroundSpriteData = null;
     }
 
     oo(lt param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
@@ -209,7 +209,7 @@ class oo extends dg implements dn {
     }
 
     static {
-        field_W = new ll(270, 70);
+        field_W = new Sprite(270, 70);
         menuRowSpacing = new int[8];
     }
 }

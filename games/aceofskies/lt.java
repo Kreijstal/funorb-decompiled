@@ -4,11 +4,11 @@
 final class lt extends to {
     static int field_u;
     private IntrusiveDeque field_w;
-    static vd field_v;
+    static SpriteData woodenTileSpriteData;
 
     public static void k(int param0) {
         int var1 = -1 / ((param0 - 25) / 48);
-        field_v = null;
+        woodenTileSpriteData = null;
     }
 
     public lt() {

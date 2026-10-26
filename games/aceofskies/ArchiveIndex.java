@@ -19,7 +19,7 @@ final class ArchiveIndex {
     IntKeyLookup[] field_r;
     int field_t;
     int field_m;
-    static vd[][] field_f;
+    static SpriteData[][] gaugeSpriteData;
     private int field_s;
     int[] field_a;
 
@@ -323,7 +323,7 @@ final class ArchiveIndex {
         if (param0 != 0) {
           field_d = (qo) null;
         }
-        field_f = (vd[][]) null;
+        gaugeSpriteData = (SpriteData[][]) null;
     }
 
     ArchiveIndex(byte[] param0, int param1, byte[] param2) {

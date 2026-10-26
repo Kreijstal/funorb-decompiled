@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd {
-    int field_i;
-    int[] field_f;
-    int field_h;
-    int field_g;
-    int field_b;
-    int field_c;
-    int field_a;
-    byte[] field_e;
-    byte[] field_d;
+final class SpriteData {
+    int padTop;
+    int[] palette;
+    int width;
+    int padRight;
+    int padBottom;
+    int height;
+    int padLeft;
+    byte[] alpha;
+    byte[] indices;
 
-    private final static vd[] a(byte[] param0) {
+    private final static SpriteData[] decodeFrames(byte[] encodedFrames) {
         byte dupTemp$1 = 0;
         byte dupTemp$0 = 0;
         int stackIn_53_0 = 0;
@@ -21,15 +21,15 @@ final class vd {
         int stackIn_68_1 = 0;
         PacketBuffer var1;
         int var2;
-        vd[] var3;
+        SpriteData[] var3;
         int var4;
         int var5;
         int var6;
         int var7_int;
         int[] var7;
         int var8;
-        vd var8_ref_vd;
-        vd var9;
+        SpriteData var8_ref_vd;
+        SpriteData var9;
         int var10;
         int var11;
         int var12;
@@ -45,35 +45,35 @@ final class vd {
         int var7_intLifetime4;
         int var8Lifetime1;
         int var8Lifetime2;
-        var1 = new PacketBuffer(param0);
-        var1.position = param0.length - 2;
+        var1 = new PacketBuffer(encodedFrames);
+        var1.position = encodedFrames.length - 2;
         var2 = var1.readUnsignedShort((byte) 0);
-        var3 = new vd[var2];
+        var3 = new SpriteData[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var3[var4] = new vd();
+          var3[var4] = new SpriteData();
         }
-        var1.position = param0.length - 7 - var2 * 8;
+        var1.position = encodedFrames.length - 7 - var2 * 8;
         var4Lifetime1 = var1.readUnsignedShort((byte) 0);
         var5 = var1.readUnsignedShort((byte) 0);
         var6 = (var1.readUnsignedByte(-52) & 255) + 1;
         for (var7_int = 0; var7_int < var2; var7_int++) {
-          var3[var7_int].field_a = var1.readUnsignedShort((byte) 0);
+          var3[var7_int].padLeft = var1.readUnsignedShort((byte) 0);
         }
         for (var7_intLifetime1 = 0; var7_intLifetime1 < var2; var7_intLifetime1++) {
-          var3[var7_intLifetime1].field_i = var1.readUnsignedShort((byte) 0);
+          var3[var7_intLifetime1].padTop = var1.readUnsignedShort((byte) 0);
         }
         for (var7_intLifetime2 = 0; var7_intLifetime2 < var2; var7_intLifetime2++) {
-          var3[var7_intLifetime2].field_h = var1.readUnsignedShort((byte) 0);
+          var3[var7_intLifetime2].width = var1.readUnsignedShort((byte) 0);
         }
         for (var7_intLifetime3 = 0; var7_intLifetime3 < var2; var7_intLifetime3++) {
-          var3[var7_intLifetime3].field_c = var1.readUnsignedShort((byte) 0);
+          var3[var7_intLifetime3].height = var1.readUnsignedShort((byte) 0);
         }
         for (var7_intLifetime4 = 0; var7_intLifetime4 < var2; var7_intLifetime4++) {
           var8_ref_vd = var3[var7_intLifetime4];
-          var8_ref_vd.field_g = var4Lifetime1 - var8_ref_vd.field_h - var8_ref_vd.field_a;
-          var8_ref_vd.field_b = var5 - var8_ref_vd.field_c - var8_ref_vd.field_i;
+          var8_ref_vd.padRight = var4Lifetime1 - var8_ref_vd.width - var8_ref_vd.padLeft;
+          var8_ref_vd.padBottom = var5 - var8_ref_vd.height - var8_ref_vd.padTop;
         }
-        var1.position = param0.length - 7 - var2 * 8 - (var6 - 1) * 3;
+        var1.position = encodedFrames.length - 7 - var2 * 8 - (var6 - 1) * 3;
         var17 = new int[var6];
         var16 = var17;
         var7 = var16;
@@ -84,36 +84,36 @@ final class vd {
           }
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < var2; var8Lifetime1++) {
-          var3[var8Lifetime1].field_f = var7;
+          var3[var8Lifetime1].palette = var7;
         }
         var1.position = 0;
         for (var8Lifetime2 = 0; var8Lifetime2 < var2; var8Lifetime2++) {
           var9 = var3[var8Lifetime2];
-          var10 = var9.field_h * var9.field_c;
-          var9.field_d = new byte[var10];
+          var10 = var9.width * var9.height;
+          var9.indices = new byte[var10];
           var11 = var1.readUnsignedByte(29);
           if ((var11 & 2) == 0) {
             if ((var11 & 1) == 0) {
               for (var12 = 0; var12 < var10; var12++) {
-                var9.field_d[var12] = var1.readByte(0);
+                var9.indices[var12] = var1.readByte(0);
               }
             } else {
-              for (var12 = 0; var12 < var9.field_h; var12++) {
-                for (var13 = 0; var13 < var9.field_c; var13++) {
-                  var9.field_d[var12 + var13 * var9.field_h] = var1.readByte(0);
+              for (var12 = 0; var12 < var9.width; var12++) {
+                for (var13 = 0; var13 < var9.height; var13++) {
+                  var9.indices[var12 + var13 * var9.width] = var1.readByte(0);
                 }
               }
             }
           } else {
             var12 = 0;
-            var9.field_e = new byte[var10];
+            var9.alpha = new byte[var10];
             if ((var11 & 1) == 0) {
               for (var13 = 0; var13 < var10; var13++) {
-                var9.field_d[var13] = var1.readByte(0);
+                var9.indices[var13] = var1.readByte(0);
               }
               for (var13 = 0; var13 < var10; var13++) {
                 dupTemp$1 = var1.readByte(0);
-                var9.field_e[var13] = dupTemp$1;
+                var9.alpha[var13] = dupTemp$1;
                 var14 = dupTemp$1;
                 stackIn_53_0 = var12;
                 if (var14 == -1) {
@@ -124,15 +124,15 @@ final class vd {
                 var12 = stackIn_53_0 | stackIn_54_1;
               }
             } else {
-              for (var13 = 0; var13 < var9.field_h; var13++) {
-                for (var14 = 0; var14 < var9.field_c; var14++) {
-                  var9.field_d[var13 + var14 * var9.field_h] = var1.readByte(0);
+              for (var13 = 0; var13 < var9.width; var13++) {
+                for (var14 = 0; var14 < var9.height; var14++) {
+                  var9.indices[var13 + var14 * var9.width] = var1.readByte(0);
                 }
               }
-              for (var13 = 0; var13 < var9.field_h; var13++) {
-                for (var14 = 0; var14 < var9.field_c; var14++) {
+              for (var13 = 0; var13 < var9.width; var13++) {
+                for (var14 = 0; var14 < var9.height; var14++) {
                   dupTemp$0 = var1.readByte(0);
-                  var9.field_e[var13 + var14 * var9.field_h] = dupTemp$0;
+                  var9.alpha[var13 + var14 * var9.width] = dupTemp$0;
                   var15 = dupTemp$0;
                   stackIn_67_0 = var12;
                   if (var15 == -1) {
@@ -145,26 +145,26 @@ final class vd {
               }
             }
             if (var12 == 0) {
-              var9.field_e = null;
+              var9.alpha = null;
             }
           }
         }
         return var3;
     }
 
-    final static vd[] a(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, (byte) -71, param2);
+    final static SpriteData[] loadFrames(ResourceArchive archive, String groupName, String fileName) {
+        byte[] var3 = archive.a(groupName, (byte) -71, fileName);
         if (var3 == null) {
           return null;
         }
-        return vd.a(var3);
+        return SpriteData.decodeFrames(var3);
     }
 
-    final static vd b(ResourceArchive param0, String param1, String param2) {
-        byte[] var3 = param0.a(param1, (byte) -71, param2);
+    final static SpriteData loadFirstFrame(ResourceArchive archive, String groupName, String fileName) {
+        byte[] var3 = archive.a(groupName, (byte) -71, fileName);
         if (var3 == null) {
           return null;
         }
-        return vd.a(var3)[0];
+        return SpriteData.decodeFrames(var3)[0];
     }
 }

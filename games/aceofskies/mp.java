@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mp extends vo {
-    static RenderSprite field_h;
+    static RenderSprite titleImage;
     static String field_e;
     private boolean field_f;
     static volatile int field_g;
@@ -70,11 +70,11 @@ final class mp extends vo {
         if (param0 != -11) {
           mp.c((byte) -28);
           field_e = null;
-          field_h = null;
+          titleImage = null;
           return;
         }
         field_e = null;
-        field_h = null;
+        titleImage = null;
     }
 
     final void e(int param0) {

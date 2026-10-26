@@ -11,7 +11,7 @@ final class la {
     static la field_f;
     static la field_d;
     static la field_i;
-    static vd[] field_g;
+    static SpriteData[] achievementSpriteData;
     static int field_k;
 
     final static boolean a(int param0, int param1, byte param2) {
@@ -21,7 +21,7 @@ final class la {
 
     public static void a(byte param0) {
         field_d = null;
-        field_g = null;
+        achievementSpriteData = null;
         field_f = null;
         field_i = null;
         field_e = null;

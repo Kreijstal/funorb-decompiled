@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kn {
-    static RendererBitmapFont field_a;
+    static RendererBitmapFont titleFont;
     static PcmSample[] field_c;
-    static BitmapFontMetrics field_b;
+    static BitmapFontMetrics bigFontMetrics;
 
     final static java.awt.Frame a(rk param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
@@ -87,20 +87,20 @@ final class kn {
 
     public static void b(int param0) {
         if (param0 != -1) {
-          field_b = (BitmapFontMetrics) null;
+          bigFontMetrics = (BitmapFontMetrics) null;
         }
-        field_a = null;
+        titleFont = null;
         field_c = null;
-        field_b = null;
+        bigFontMetrics = null;
     }
 
-    final static wp[] a(int param0) {
+    final static IndexedSprite[] a(int param0) {
         int var3 = 0;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var1 = -37 / ((19 - param0) / 57);
-        wp[] var2 = new wp[to.field_t];
+        IndexedSprite[] var2 = new IndexedSprite[to.field_t];
         for (var3 = 0; var3 < to.field_t; var3++) {
-          var2[var3] = new wp(pu.field_a, cc.field_i, lh.field_a[var3], lg.field_j[var3], ji.field_b[var3], ee.field_e[var3], fk.field_a[var3], ud.field_e);
+          var2[var3] = new IndexedSprite(pu.field_a, cc.field_i, lh.field_a[var3], lg.field_j[var3], ji.field_b[var3], ee.field_e[var3], fk.field_a[var3], ud.field_e);
         }
         kf.f(1);
         return var2;

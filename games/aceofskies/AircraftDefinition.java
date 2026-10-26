@@ -52,47 +52,47 @@ final class AircraftDefinition {
 
     final RenderSprite[] getSprites(int obfuscationGuard) {
         if (gh.playerDefinition == this) {
-          return hr.field_d[0];
+          return hr.aircraftSprites[0];
         }
         if (this == kk.field_N) {
-          return hr.field_d[1];
+          return hr.aircraftSprites[1];
         }
         if (this == sl.field_p) {
-          return hr.field_d[2];
+          return hr.aircraftSprites[2];
         }
         if (obfuscationGuard != -32275) {
           this.toString();
           if (gm.field_y == this) {
-            return hr.field_d[3];
+            return hr.aircraftSprites[3];
           }
           if (this == qq.field_g) {
-            return hr.field_d[4];
+            return hr.aircraftSprites[4];
           }
           if (id.field_f == this) {
-            return hr.field_d[7];
+            return hr.aircraftSprites[7];
           }
           if (ju.field_k == this) {
-            return hr.field_d[5];
+            return hr.aircraftSprites[5];
           }
           if (this == ro.field_u) {
-            return hr.field_d[6];
+            return hr.aircraftSprites[6];
           }
           throw new RuntimeException();
         }
         if (gm.field_y == this) {
-          return hr.field_d[3];
+          return hr.aircraftSprites[3];
         }
         if (this == qq.field_g) {
-          return hr.field_d[4];
+          return hr.aircraftSprites[4];
         }
         if (id.field_f == this) {
-          return hr.field_d[7];
+          return hr.aircraftSprites[7];
         }
         if (ju.field_k == this) {
-          return hr.field_d[5];
+          return hr.aircraftSprites[5];
         }
         if (this == ro.field_u) {
-          return hr.field_d[6];
+          return hr.aircraftSprites[6];
         }
         throw new RuntimeException();
     }

@@ -10,23 +10,23 @@ final class aq {
     private wl field_c;
 
     final static void b(int param0) {
-        ll var1 = null;
-        ll var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var1 = new ll(param0, 140);
+          var1 = new Sprite(param0, 140);
           cm.a(var1, param0 - 15032);
           re.a();
           SoftwareRasterizer.clearFramebuffer();
           it.field_c = 0;
           wj.e((byte) -128);
-          var2 = var1.d();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
             SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
-          oo.field_W.b();
+          oo.field_W.makeRasterTarget();
           var1.d(0, 0);
           sl.c(2765);
         } catch (RuntimeException runtimeException) {

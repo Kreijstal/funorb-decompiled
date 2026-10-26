@@ -145,7 +145,7 @@ abstract class GraphicsRenderer {
         this.c(param1, param0, param2, param4, param3, param5);
     }
 
-    abstract RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2);
+    abstract RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2);
 
     abstract void DA(int param0, int param1, int param2, int param3);
 
@@ -276,7 +276,7 @@ abstract class GraphicsRenderer {
         }
     }
 
-    abstract RenderSprite a(vd param0, boolean param1);
+    abstract RenderSprite createSprite(SpriteData data, boolean preferIndexed);
 
     abstract boolean d();
 

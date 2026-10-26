@@ -9,7 +9,7 @@ final class MenuInputState {
     private boolean pointerSelection;
     static en field_b;
     static int field_h;
-    static wp[] field_i;
+    static IndexedSprite[] field_i;
     private int pressedButton;
     int itemCount;
 

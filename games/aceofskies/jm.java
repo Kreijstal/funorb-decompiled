@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class jm {
-    static RenderSprite[] field_a;
+    static RenderSprite[] levelRingSprites;
     int field_f;
     static String field_b;
     static String field_c;
@@ -14,13 +14,13 @@ abstract class jm {
     public static void a(int param0) {
         if (param0 >= 21) {
           field_b = null;
-          field_a = null;
+          levelRingSprites = null;
           field_c = null;
           return;
         }
         jm.a(-62);
         field_b = null;
-        field_a = null;
+        levelRingSprites = null;
         field_c = null;
     }
 

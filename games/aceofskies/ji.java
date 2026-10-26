@@ -32,7 +32,7 @@ final class ji {
             }
             ms.field_d = param1;
           }
-          if (df.field_f != param0) {
+          if (IndexedSpriteState.field_f != param0) {
             if (ms.field_d != param0) {
               mo.field_c = new int[param0];
               var5 = 0;
@@ -44,7 +44,7 @@ final class ji {
             } else {
               mo.field_c = NetworkGameClient.field_v;
             }
-            df.field_f = param0;
+            IndexedSpriteState.field_f = param0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

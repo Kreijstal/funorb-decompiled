@@ -12,7 +12,7 @@ final class cf extends sk {
         int var1 = -94 % ((-48 - param0) / 41);
     }
 
-    final static void a(ll[] param0, int param1, byte param2, int param3, int param4) {
+    final static void a(Sprite[] param0, int param1, byte param2, int param3, int param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -28,13 +28,13 @@ final class cf extends sk {
         try {
           if (param0 != null &&
             0 < param4) {
-            var5_int = param0[0].field_v;
-            var6 = param0[2].field_v;
-            var7 = param0[1].field_v;
+            var5_int = param0[0].fullWidth;
+            var6 = param0[2].fullWidth;
+            var7 = param0[1].fullWidth;
             param0[0].b(param1, param3);
             param0[2].b(param1 + param4 - var6, param3);
             SoftwareRasterizer.saveClip(rl.field_a);
-            SoftwareRasterizer.intersectClip(param1 + var5_int, param3, param4 + (param1 - var6), param0[1].field_q + param3);
+            SoftwareRasterizer.intersectClip(param1 + var5_int, param3, param4 + (param1 - var6), param0[1].fullHeight + param3);
             var8 = param1 + var5_int;
             var9 = -var6 + param1 + param4;
             param1 = var8;
@@ -74,8 +74,8 @@ final class cf extends sk {
         try {
           this.field_b.a(param2, -9135);
           if (param1 <= 66) {
-            ll[] var5 = (ll[]) null;
-            cf.a((ll[]) null, -3, (byte) -124, 39, -48);
+            Sprite[] var5 = (Sprite[]) null;
+            cf.a((Sprite[]) null, -3, (byte) -124, 39, -48);
           }
           this.field_b.b(param0, false);
         } catch (RuntimeException runtimeException) {
@@ -112,8 +112,8 @@ final class cf extends sk {
     final void a(boolean param0) {
         this.field_b.a(false, -26973);
         if (!param0) {
-          ll[] var3 = (ll[]) null;
-          cf.a((ll[]) null, 33, (byte) -18, -72, -45);
+          Sprite[] var3 = (Sprite[]) null;
+          cf.a((Sprite[]) null, 33, (byte) -18, -72, -45);
           return;
         }
     }

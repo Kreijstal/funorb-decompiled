@@ -4,9 +4,9 @@
 final class n extends RendererBitmapFont implements e {
     long field_nativeid;
 
-    final native void fa(char param0, int param1, int param2, int param3, boolean param4);
+    final native void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass);
 
-    n(oa param0, ya param1, BitmapFontMetrics param2, vd[] param3, RenderSprite[] param4) {
+    n(oa param0, ya param1, BitmapFontMetrics param2, SpriteData[] param3, RenderSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
@@ -15,19 +15,19 @@ final class n extends RendererBitmapFont implements e {
         int[] var9 = new int[param3.length];
         int[] var10 = new int[param3.length];
         for (var11 = 0; var11 < param3.length; var11++) {
-          var6[var11] = param3[var11].field_d;
-          var7[var11] = param3[var11].field_h;
-          var8[var11] = param3[var11].field_c;
-          var9[var11] = param3[var11].field_a;
-          var10[var11] = param3[var11].field_i;
+          var6[var11] = param3[var11].indices;
+          var7[var11] = param3[var11].width;
+          var8[var11] = param3[var11].height;
+          var9[var11] = param3[var11].padLeft;
+          var10[var11] = param3[var11].padTop;
         }
-        this.S(param0, param1, var6, param3[0].field_f, var7, var8, var9, var10);
+        this.S(param0, param1, var6, param3[0].palette, var7, var8, var9, var10);
     }
 
     private final native void PA(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
 
-    final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
-        this.PA(param0, param1, param2, param3, param4, param5, param6, param7);
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
+        this.PA(glyph, x, y, color, shadowPass, mask, maskX, maskY);
     }
 
     private final native void S(oa param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6, int[] param7);

@@ -5,13 +5,13 @@ final class CipherPacketBuffer extends PacketBuffer {
     static jb field_p;
     private int field_q;
     private fc field_l;
-    static RenderSprite[] field_n;
+    static RenderSprite[] brassSliderSprites;
     static long field_o;
-    static vd[] field_m;
+    static SpriteData[] fontSpriteData;
 
     public static void l(byte param0) {
-        field_m = null;
-        field_n = null;
+        fontSpriteData = null;
+        brassSliderSprites = null;
         field_p = null;
         if (param0 <= 91) {
           CipherPacketBuffer.l((byte) -94);
@@ -70,7 +70,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     final void m(byte param0) {
         this.position = (this.field_q + 7) / 8;
         if (param0 <= 33) {
-          field_n = (RenderSprite[]) null;
+          brassSliderSprites = (RenderSprite[]) null;
         }
     }
 

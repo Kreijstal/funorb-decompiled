@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gn {
-    static vd[] scorchSpriteData;
+    static SpriteData[] scorchSpriteData;
     static int field_a;
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, PacketBuffer param2, PacketBuffer param3, int param4) {

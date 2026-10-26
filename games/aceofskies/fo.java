@@ -18,7 +18,7 @@ final class fo {
     }
 
     final static void b(int param0) {
-        nl.field_o = -1;
+        SpriteState.field_o = -1;
         ht.field_g = false;
         ScreenParticle.field_o = param0;
         we.field_c = -1;

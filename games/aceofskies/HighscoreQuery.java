@@ -7,20 +7,20 @@ final class HighscoreQuery extends IntrusiveNode {
     static qr field_l;
     int queryId;
     int entryLimit;
-    static ll[] field_k;
+    static Sprite[] field_k;
     String[][] namesByView;
-    static vd field_g;
-    static RenderSprite[] field_o;
+    static SpriteData unachievedSpriteData;
+    static RenderSprite[] powerBulbSprites;
     int valuesPerEntry;
     long[][] submissionTokensByView;
 
     public static void a(byte param0) {
-        field_o = null;
-        field_g = null;
+        powerBulbSprites = null;
+        unachievedSpriteData = null;
         field_k = null;
         field_l = null;
         if (param0 != 35) {
-          field_g = (vd) null;
+          unachievedSpriteData = (SpriteData) null;
         }
     }
 

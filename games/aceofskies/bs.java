@@ -5,7 +5,7 @@ import java.util.*;
 
 final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_c;
-    static RenderSprite[] field_b;
+    static RenderSprite[] upgradeSprites;
     static jb field_a;
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
@@ -39,11 +39,11 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
             if (var2_int >= 0) {
-              var3 = 127 & 1 + nl.field_w;
+              var3 = 127 & 1 + SpriteState.field_w;
               if (var3 != ch.field_a) {
-                ArchiveIndex.field_e[nl.field_w] = var2_int;
-                qb.field_o[nl.field_w] = (char)0;
-                nl.field_w = var3;
+                ArchiveIndex.field_e[SpriteState.field_w] = var2_int;
+                qb.field_o[SpriteState.field_w] = (char)0;
+                SpriteState.field_w = var3;
               }
             }
             var3Lifetime1 = param0.getModifiers();
@@ -69,14 +69,14 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
         }
     }
 
-    final static ll[] a(int param0, boolean param1) {
-        ll[] var3 = new ll[9];
-        ll[] var2 = var3;
+    final static Sprite[] a(int param0, boolean param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = tn.a(param0, 64, true);
         if (!param1) {
           return var2;
         }
-        field_b = (RenderSprite[]) null;
+        upgradeSprites = (RenderSprite[]) null;
         return var2;
     }
 
@@ -123,7 +123,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public static void a(int param0) {
-        field_b = null;
+        upgradeSprites = null;
         field_a = null;
         if (param0 != 127) {
           field_a = (jb) null;
@@ -190,11 +190,11 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (0 != var2_int &&
               var2_int != 65535 &&
               mr.a((char) var2_int, 2004352972)) {
-              var3 = 1 + nl.field_w & 127;
+              var3 = 1 + SpriteState.field_w & 127;
               if (var3 != ch.field_a) {
-                ArchiveIndex.field_e[nl.field_w] = -1;
-                qb.field_o[nl.field_w] = (char)var2_int;
-                nl.field_w = var3;
+                ArchiveIndex.field_e[SpriteState.field_w] = -1;
+                qb.field_o[SpriteState.field_w] = (char)var2_int;
+                SpriteState.field_w = var3;
               }
             }
           }

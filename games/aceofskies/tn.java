@@ -122,16 +122,16 @@ final class tn extends ab implements dn {
         }
     }
 
-    final static ll a(int param0, int param1, boolean param2) {
+    final static Sprite a(int param0, int param1, boolean param2) {
         int var4 = 0;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!param2) {
-          return (ll) null;
+          return (Sprite) null;
         }
-        ll var6 = new ll(param1, param1);
-        ll var3 = var6;
-        for (var4 = 0; var4 < var3.field_x.length; var4++) {
-          var6.field_x[var4] = param0;
+        Sprite var6 = new Sprite(param1, param1);
+        Sprite var3 = var6;
+        for (var4 = 0; var4 < var3.pixels.length; var4++) {
+          var6.pixels[var4] = param0;
         }
         return var3;
     }

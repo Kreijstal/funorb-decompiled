@@ -4,7 +4,7 @@
 final class qb extends qm {
     private int field_q;
     private int field_p;
-    private ll[] field_r;
+    private Sprite[] field_r;
     static char[] field_o;
     private int field_n;
 
@@ -43,7 +43,7 @@ final class qb extends qm {
             }
           }
           var7 = stackIn_16_0;
-          kg.a(107, param2 + param3.field_p, var7, (-this.field_r[0].field_q + param3.field_n >> 1) + param3.field_h + param4, param3.field_q, this.field_r);
+          kg.a(107, param2 + param3.field_p, var7, (-this.field_r[0].fullHeight + param3.field_n >> 1) + param3.field_h + param4, param3.field_q, this.field_r);
           stackIn_19_0 = (param0) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.field_i.drawParagraph(param3.field_f, param2 + param3.field_p, -2 + (param3.field_h + param4), param3.field_q, param3.field_n, var8, -1, 1, 1, this.field_i.maxAscent);

@@ -244,7 +244,7 @@ final class Vector2 {
                 lp.heldKeys[var2] = true;
               }
             }
-            lt.field_u = nl.field_w;
+            lt.field_u = SpriteState.field_w;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,16 +3,16 @@
  */
 final class ss extends ea {
     private int field_y;
-    private ll field_A;
+    private Sprite field_A;
     private int field_B;
     private int field_x;
-    private ll field_D;
+    private Sprite field_D;
     private int field_s;
-    private ll field_C;
+    private Sprite field_C;
     int field_z;
     private int field_v;
     private int field_r;
-    private ll[] field_w;
+    private Sprite[] field_w;
     boolean field_u;
     static boolean field_t;
 
@@ -24,7 +24,7 @@ final class ss extends ea {
         this.a(-104);
     }
 
-    private final ll b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -32,7 +32,7 @@ final class ss extends ea {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ll var13 = new ll(this.field_y * 2, this.field_n);
+        Sprite var13 = new Sprite(this.field_y * 2, this.field_n);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
@@ -61,11 +61,11 @@ final class ss extends ea {
     }
 
     private final void a(int param0) {
-        this.field_w = new ll[]{this.b(this.field_v, 128, this.field_B), this.b(this.field_x, 128, this.field_s)};
+        this.field_w = new Sprite[]{this.b(this.field_v, 128, this.field_B), this.b(this.field_x, 128, this.field_s)};
         int var2 = 64 % ((param0 + 63) / 35);
         this.field_D = this.b(true);
-        this.field_C = this.field_D.a();
-        this.field_A = new ll(this.field_n >> 1, this.field_n);
+        this.field_C = this.field_D.copyMirroredHorizontally();
+        this.field_A = new Sprite(this.field_n >> 1, this.field_n);
     }
 
     ss(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -98,7 +98,7 @@ final class ss extends ea {
         this.a(-116);
     }
 
-    private final ll b(boolean param0) {
+    private final Sprite b(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -107,7 +107,7 @@ final class ss extends ea {
           this.field_v = -80;
         }
         int var2 = this.field_n >> 1;
-        ll var3 = new ll(var2, this.field_n);
+        Sprite var3 = new Sprite(var2, this.field_n);
         cm.a(var3, -14492);
         for (var4 = 0; var4 < this.field_n; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -155,7 +155,7 @@ final class ss extends ea {
         }
     }
 
-    private final void a(int param0, int param1, int param2, ll param3) {
+    private final void a(int param0, int param1, int param2, Sprite param3) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -169,13 +169,13 @@ final class ss extends ea {
         var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = this.field_q + param0;
-          fp.a((byte) 44, param2, param2 + this.field_n, -this.field_D.field_r + var5_int, param0 + this.field_D.field_r);
+          fp.a((byte) 44, param2, param2 + this.field_n, -this.field_D.width + var5_int, param0 + this.field_D.width);
           var6 = -13 / ((-39 - param1) / 58);
-          for (var7 = -this.field_r + param0; var5_int > var7; var7 = var7 + param3.field_r) {
+          for (var7 = -this.field_r + param0; var5_int > var7; var7 = var7 + param3.width) {
             param3.b(var7, param2);
           }
           sl.c(2765);
-          if (this.field_D.field_r + param0 >= SoftwareRasterizer.clipLeft) {
+          if (this.field_D.width + param0 >= SoftwareRasterizer.clipLeft) {
             cm.a(this.field_A, -14492);
             param3.b(-this.field_r, 0);
             param3.b(2 * this.field_y - this.field_r, 0);
@@ -183,15 +183,15 @@ final class ss extends ea {
             sl.c(2765);
             this.field_A.b(param0, param2);
           }
-          if (SoftwareRasterizer.clipRight >= var5_int - this.field_D.field_r) {
+          if (SoftwareRasterizer.clipRight >= var5_int - this.field_D.width) {
             cm.a(this.field_A, -14492);
-            for (var8 = this.field_r + this.field_q - this.field_D.field_r; 2 * this.field_y < var8; var8 = var8 - 2 * this.field_y) {
+            for (var8 = this.field_r + this.field_q - this.field_D.width; 2 * this.field_y < var8; var8 = var8 - 2 * this.field_y) {
             }
             param3.b(-var8, 0);
             param3.b(this.field_y * 2 - var8, 0);
             this.field_D.a(0, 0);
             sl.c(2765);
-            this.field_A.b(var5_int - this.field_D.field_r, param2);
+            this.field_A.b(var5_int - this.field_D.width, param2);
             return;
           }
           return;

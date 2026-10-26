@@ -132,7 +132,7 @@ public final class AceOfSkies extends NetworkGameClient {
               iq.gameFontMetricsArchive = null;
               hg.sharedSpriteArchive = null;
               wi.gameSpriteArchive = null;
-              ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.menuBitmapFont, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, nl.field_t, 10, 20);
+              ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.menuBitmapFont, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, SpriteState.field_t, 10, 20);
               te.resetFrameTiming(62);
               return false;
             }
@@ -411,7 +411,7 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           so.field_b = 16777215;
           hn.field_a = 15632639;
-          nl.field_t = 16777215;
+          SpriteState.field_t = 16777215;
           this.a((byte) 62, false, true, true, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -539,7 +539,7 @@ public final class AceOfSkies extends NetworkGameClient {
           th.a();
           ar.b();
           DualLinkNode.a(14349);
-          df.a(-103);
+          IndexedSpriteState.a(-103);
           er.d(-61);
           gp.c((byte) 78);
           bl.d(-126);
@@ -979,7 +979,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (ln.field_d >= 2 &&
               lb.field_e) {
-              PacketBuffer.field_j.a(16777215, 1, 20, Integer.toString(wk.field_f), obfuscationGuard ^ 18877, 20);
+              PacketBuffer.gameFont.drawText(16777215, 1, 20, Integer.toString(wk.field_f), obfuscationGuard ^ 18877, 20);
             }
             var5 = (iq) (MenuScreen.field_g.first(268435455));
             if (null != var5) {
@@ -1012,12 +1012,12 @@ public final class AceOfSkies extends NetworkGameClient {
               }
               if (decompiledSharedTail0) {
                 var9 = lb.field_a[var5.field_f];
-                aa.field_a[var5.field_f].a(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                aa.achievementSprites[var5.field_f].a(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                 var8 += 65;
               }
-              PacketBuffer.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-              PacketBuffer.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-              PacketBuffer.field_j.a(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
             }
             if (var3 != 0) {
               if (0 == bg.field_b && (!jf.a(15000) ||
@@ -1033,8 +1033,8 @@ public final class AceOfSkies extends NetworkGameClient {
             if (mj.field_b &&
               ln.field_d >= 2) {
               var6 = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kb/" + Runtime.getRuntime().totalMemory() / 1024L + "kb";
-              PacketBuffer.field_j.a(var6, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
-              PacketBuffer.field_j.a(Integer.toString(wk.field_f), -1, -16777216, sh.field_u - 10, 60, (byte) 92);
+              PacketBuffer.gameFont.drawRightAlignedText(var6, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
+              PacketBuffer.gameFont.drawRightAlignedText(Integer.toString(wk.field_f), -1, -16777216, sh.field_u - 10, 60, (byte) 92);
             }
             if (obfuscationGuard != 150) {
               field_J = false;

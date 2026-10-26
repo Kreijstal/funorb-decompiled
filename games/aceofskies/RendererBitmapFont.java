@@ -7,7 +7,7 @@ abstract class RendererBitmapFont {
     private BitmapFontMetrics metrics;
     static tk field_a;
 
-    final int a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, RenderSprite[] param9, aa param10, int param11, int[] param12, int param13, int param14, String param15) {
+    final int drawParagraph(int maskY, int left, int textColor, boolean obfuscationGuard, int shadowColor, int horizontalAlignment, int top, int lineSpacing, int maskX, RenderSprite[] inlineImages, aa mask, int verticalAlignment, int[] inlineImageBaselineOffsets, int width, int height, String text) {
         RuntimeException var17 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -21,35 +21,35 @@ abstract class RendererBitmapFont {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param3) {
+          if (!obfuscationGuard) {
             this.renderer = (GraphicsRenderer) null;
           }
-          stackIn_3_0 = this.a(param14, param4, 0, param10, param11, param2, param15, param13, param5, param6, param0, param7, param9, -2, param12, param1, param8);
+          stackIn_3_0 = this.drawParagraphInternal(height, shadowColor, 0, mask, verticalAlignment, textColor, text, width, horizontalAlignment, top, maskY, lineSpacing, inlineImages, -2, inlineImageBaselineOffsets, left, maskX);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var17 = decompiledCaughtException;
           stackIn_6_0 = var17;
-          stackIn_6_1 = new StringBuilder().append("da.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
+          stackIn_6_1 = new StringBuilder().append("da.I(").append(maskY).append(',').append(left).append(',').append(textColor).append(',').append(obfuscationGuard).append(',').append(shadowColor).append(',').append(horizontalAlignment).append(',').append(top).append(',').append(lineSpacing).append(',').append(maskX).append(',');
+          if (inlineImages == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
           stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param10 == null) {
+          if (mask == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param11).append(',');
-          if (param12 == null) {
+          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(verticalAlignment).append(',');
+          if (inlineImageBaselineOffsets == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param13).append(',').append(param14).append(',');
-          if (param15 == null) {
+          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(width).append(',').append(height).append(',');
+          if (text == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -72,7 +72,7 @@ abstract class RendererBitmapFont {
         return stackIn_6_0;
     }
 
-    private final void a(String param0, int param1) {
+    private final void applyStyleTag(String tag, int obfuscationGuard) {
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
@@ -89,64 +89,64 @@ abstract class RendererBitmapFont {
         var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
-            if (!param0.startsWith("col=")) {
-              if (param0.equals("/col")) {
-                qg.field_c = tf.field_a & 16777215 | qg.field_c & -16777216;
+            if (!tag.startsWith("col=")) {
+              if (tag.equals("/col")) {
+                qg.rendererCurrentTextColor = tf.rendererDefaultTextColor & 16777215 | qg.rendererCurrentTextColor & -16777216;
               }
             } else {
-              var6 = (CharSequence) ((Object) param0.substring(4));
-              qg.field_c = -16777216 & qg.field_c | 16777215 & np.a(var6, 4, 16);
+              var6 = (CharSequence) ((Object) tag.substring(4));
+              qg.rendererCurrentTextColor = -16777216 & qg.rendererCurrentTextColor | 16777215 & np.a(var6, 4, 16);
             }
-            if (param1 != -16777216) {
+            if (obfuscationGuard != -16777216) {
               var5 = (int[]) null;
-              this.a(119, 96, (RenderSprite[]) null, 57, -108, (String) null, -122, (int[]) null);
+              this.drawTextWithImages(119, 96, (RenderSprite[]) null, 57, -108, (String) null, -122, (int[]) null);
             }
-            if (param0.startsWith("argb=")) {
-              var10 = (CharSequence) ((Object) param0.substring(5));
-              qg.field_c = np.a(var10, 4, 16);
+            if (tag.startsWith("argb=")) {
+              var10 = (CharSequence) ((Object) tag.substring(5));
+              qg.rendererCurrentTextColor = np.a(var10, 4, 16);
             } else {
-              if (param0.equals("/argb")) {
-                qg.field_c = tf.field_a;
+              if (tag.equals("/argb")) {
+                qg.rendererCurrentTextColor = tf.rendererDefaultTextColor;
               } else {
-                if (param0.startsWith("str=")) {
-                  var9 = (CharSequence) ((Object) param0.substring(4));
-                  rs.field_t = qg.field_c & -16777216 | np.a(var9, 4, 16);
+                if (tag.startsWith("str=")) {
+                  var9 = (CharSequence) ((Object) tag.substring(4));
+                  rs.rendererStrikethroughColor = qg.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
                 } else {
-                  if (param0.equals("str")) {
-                    rs.field_t = -16777216 & qg.field_c | 8388608;
+                  if (tag.equals("str")) {
+                    rs.rendererStrikethroughColor = -16777216 & qg.rendererCurrentTextColor | 8388608;
                   } else {
-                    if (param0.equals("/str")) {
-                      rs.field_t = -1;
+                    if (tag.equals("/str")) {
+                      rs.rendererStrikethroughColor = -1;
                     } else {
-                      if (param0.startsWith("u=")) {
-                        var8 = (CharSequence) ((Object) param0.substring(2));
-                        PacketBuffer.field_h = qg.field_c & -16777216 | np.a(var8, param1 ^ -16777212, 16);
+                      if (tag.startsWith("u=")) {
+                        var8 = (CharSequence) ((Object) tag.substring(2));
+                        PacketBuffer.rendererUnderlineColor = qg.rendererCurrentTextColor & -16777216 | np.a(var8, obfuscationGuard ^ -16777212, 16);
                       } else {
-                        if (param0.equals("u")) {
-                          PacketBuffer.field_h = -16777216 & qg.field_c;
+                        if (tag.equals("u")) {
+                          PacketBuffer.rendererUnderlineColor = -16777216 & qg.rendererCurrentTextColor;
                         } else {
-                          if (param0.equals("/u")) {
-                            PacketBuffer.field_h = -1;
+                          if (tag.equals("/u")) {
+                            PacketBuffer.rendererUnderlineColor = -1;
                           } else {
-                            if (!param0.equalsIgnoreCase("shad=-1")) {
-                              if (param0.startsWith("shad=")) {
-                                var7 = (CharSequence) ((Object) param0.substring(5));
-                                es.field_c = qg.field_c & -16777216 | np.a(var7, 4, 16);
+                            if (!tag.equalsIgnoreCase("shad=-1")) {
+                              if (tag.startsWith("shad=")) {
+                                var7 = (CharSequence) ((Object) tag.substring(5));
+                                es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
                               } else {
-                                if (!param0.equals("shad")) {
-                                  if (param0.equals("/shad")) {
-                                    es.field_c = em.field_d;
+                                if (!tag.equals("shad")) {
+                                  if (tag.equals("/shad")) {
+                                    es.rendererCurrentShadowColor = em.rendererDefaultShadowColor;
                                   } else {
-                                    if (param0.equals("br")) {
-                                      this.a(em.field_d, -1, tf.field_a);
+                                    if (tag.equals("br")) {
+                                      this.resetTextStyle(em.rendererDefaultShadowColor, -1, tf.rendererDefaultTextColor);
                                     }
                                   }
                                 } else {
-                                  es.field_c = qg.field_c & -16777216;
+                                  es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216;
                                 }
                               }
                             } else {
-                              es.field_c = 0;
+                              es.rendererCurrentShadowColor = 0;
                             }
                           }
                         }
@@ -166,12 +166,12 @@ abstract class RendererBitmapFont {
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_38_0 = var3_ref;
           stackIn_38_1 = new StringBuilder().append("da.P(");
-          if (param0 == null) {
+          if (tag == null) {
             stackIn_39_2 = "null";
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -193,19 +193,19 @@ abstract class RendererBitmapFont {
         }
     }
 
-    final void a(int param0, int param1, RenderSprite[] param2, int param3, int param4, String param5, int param6, int[] param7) {
-        if (param5 == null) {
+    final void drawTextWithImages(int textColor, int shadowColor, RenderSprite[] inlineImages, int leftX, int maskY, String text, int baselineY, int[] inlineImageBaselineOffsets) {
+        if (text == null) {
           return;
         }
         try {
-          this.a(param1, -1, param0);
-          this.a(0, param2, param3, param5, (byte) 5, param7, param6, (aa) null, param4);
+          this.resetTextStyle(shadowColor, -1, textColor);
+          this.drawStyledText(0, inlineImages, leftX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (aa) null, maskY);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "da.O(" + textColor + ',' + shadowColor + ',' + (inlineImages != null ? "{...}" : "null") + ',' + leftX + ',' + maskY + ',' + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(int param0, int param1, int param2, aa param3, int param4, int param5, String param6, int param7, int param8, int param9, int param10, int param11, RenderSprite[] param12, int param13, int[] param14, int param15, int param16) {
+    private final int drawParagraphInternal(int height, int shadowColor, int maximumLines, aa mask, int verticalAlignment, int textColor, String text, int width, int horizontalAlignment, int top, int maskY, int lineSpacing, RenderSprite[] inlineImages, int obfuscationGuard, int[] inlineImageBaselineOffsets, int left, int maskX) {
         int stackIn_4_0 = 0;
         int stackIn_46_0 = 0;
         Object stackIn_49_0 = null;
@@ -227,76 +227,76 @@ abstract class RendererBitmapFont {
         int var22Lifetime1;
         var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (param6 == null) {
+          if (text == null) {
             stackIn_4_0 = 0;
             return stackIn_4_0;
           }
-          this.a(param1, -1, param5);
-          if (param11 == 0) {
-            param11 = this.metrics.lineAdvance;
+          this.resetTextStyle(shadowColor, -1, textColor);
+          if (lineSpacing == 0) {
+            lineSpacing = this.metrics.lineAdvance;
           }
-          if (param11 + this.metrics.maxDescent + this.metrics.maxAscent > param0 &&
-            param0 < param11 + param11) {
+          if (lineSpacing + this.metrics.maxDescent + this.metrics.maxAscent > height &&
+            height < lineSpacing + lineSpacing) {
             var18 = null;
           } else {
-            var18 = new int[]{param7};
+            var18 = new int[]{width};
           }
-          var20 = 109 / ((param13 - 48) / 39);
-          if (-1 == param2) {
-            param2 = param0 / param11;
-            if (0 >= param2) {
-              param2 = 1;
+          var20 = 109 / ((obfuscationGuard - 48) / 39);
+          if (-1 == maximumLines) {
+            maximumLines = height / lineSpacing;
+            if (0 >= maximumLines) {
+              maximumLines = 1;
             }
           }
-          var19 = this.metrics.wrapText(-121, param12, (int[]) (var18), vi.field_p, param6);
-          if (0 < param2 &&
-            var19 >= param2) {
-            var19 = param2;
-            vi.field_p[param2 - 1] = this.metrics.a(param12, 0, param7, vi.field_p[-1 + param2]);
+          var19 = this.metrics.wrapText(-121, inlineImages, (int[]) (var18), vi.field_p, text);
+          if (0 < maximumLines &&
+            var19 >= maximumLines) {
+            var19 = maximumLines;
+            vi.field_p[maximumLines - 1] = this.metrics.a(inlineImages, 0, width, vi.field_p[-1 + maximumLines]);
           }
-          if (3 == param4 &&
+          if (3 == verticalAlignment &&
             var19 == 1) {
-            param4 = 1;
+            verticalAlignment = 1;
           }
-          if (param4 == 0) {
-            var21 = this.metrics.maxAscent + param9;
+          if (verticalAlignment == 0) {
+            var21 = this.metrics.maxAscent + top;
           } else {
-            if (param4 == 1) {
-              var21 = (-this.metrics.maxDescent + (-this.metrics.maxAscent + (param0 - (-1 + var19) * param11))) / 2 + this.metrics.maxAscent + param9;
+            if (verticalAlignment == 1) {
+              var21 = (-this.metrics.maxDescent + (-this.metrics.maxAscent + (height - (-1 + var19) * lineSpacing))) / 2 + this.metrics.maxAscent + top;
             } else {
-              if (param4 == 2) {
-                var21 = -((-1 + var19) * param11) - this.metrics.maxDescent + (param0 + param9);
+              if (verticalAlignment == 2) {
+                var21 = -((-1 + var19) * lineSpacing) - this.metrics.maxDescent + (height + top);
               } else {
-                var22 = (-this.metrics.maxDescent - this.metrics.maxAscent + param0 - (var19 - 1) * param11) / (var19 + 1);
+                var22 = (-this.metrics.maxDescent - this.metrics.maxAscent + height - (var19 - 1) * lineSpacing) / (var19 + 1);
                 if (0 > var22) {
                   var22 = 0;
                 }
-                var21 = this.metrics.maxAscent + (param9 + var22);
-                param11 = param11 + var22;
+                var21 = this.metrics.maxAscent + (top + var22);
+                lineSpacing = lineSpacing + var22;
               }
             }
           }
           for (var22Lifetime1 = 0; var22Lifetime1 < var19; var22Lifetime1++) {
-            if (param8 == 0) {
-              this.a(param16, param12, param15, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
+            if (horizontalAlignment == 0) {
+              this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
             } else {
-              if (param8 == 1) {
-                this.a(param16, param12, param15 + (-this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + param7) / 2, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
+              if (horizontalAlignment == 1) {
+                this.drawStyledText(maskX, inlineImages, left + (-this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + width) / 2, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
               } else {
-                if (param8 != 2) {
+                if (horizontalAlignment != 2) {
                   if (var22Lifetime1 != var19 - 1) {
-                    this.a(param7, (byte) 104, vi.field_p[var22Lifetime1]);
-                    this.a(param16, param12, param15, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
-                    tm.field_i = 0;
+                    this.prepareJustification(width, (byte) 104, vi.field_p[var22Lifetime1]);
+                    this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
+                    tm.rendererSpaceExpansionQ8 = 0;
                   } else {
-                    this.a(param16, param12, param15, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
+                    this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
                   }
                 } else {
-                  this.a(param16, param12, -this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + (param15 + param7), vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
+                  this.drawStyledText(maskX, inlineImages, -this.metrics.measureTextWidth((byte) 94, vi.field_p[var22Lifetime1]) + (left + width), vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
                 }
               }
             }
-            var21 = var21 + param11;
+            var21 = var21 + lineSpacing;
           }
           stackIn_46_0 = var19;
           return stackIn_46_0;
@@ -304,31 +304,31 @@ abstract class RendererBitmapFont {
           decompiledCaughtException = decompiledCaughtParameter0;
           var18 = decompiledCaughtException;
           stackIn_49_0 = var18;
-          stackIn_49_1 = new StringBuilder().append("da.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_49_1 = new StringBuilder().append("da.T(").append(height).append(',').append(shadowColor).append(',').append(maximumLines).append(',');
+          if (mask == null) {
             stackIn_50_2 = "null";
           } else {
             stackIn_50_2 = "{...}";
           }
-          stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
+          stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(verticalAlignment).append(',').append(textColor).append(',');
+          if (text == null) {
             stackIn_53_2 = "null";
           } else {
             stackIn_53_2 = "{...}";
           }
-          stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
-          if (param12 == null) {
+          stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(width).append(',').append(horizontalAlignment).append(',').append(top).append(',').append(maskY).append(',').append(lineSpacing).append(',');
+          if (inlineImages == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";
           }
-          stackIn_58_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param13).append(',');
-          if (param14 == null) {
+          stackIn_58_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(obfuscationGuard).append(',');
+          if (inlineImageBaselineOffsets == null) {
             stackIn_59_2 = "null";
           } else {
             stackIn_59_2 = "{...}";
           }
-          throw pn.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw pn.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(left).append(',').append(maskX).append(')').toString());
         }
     }
 
@@ -349,23 +349,23 @@ abstract class RendererBitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, int param4, int param5) {
-        if (param3 == null) {
+    final void drawText(int textColor, int shadowColor, int leftX, String text, int obfuscationGuard, int baselineY) {
+        if (text == null) {
           return;
         }
         try {
-          if (param4 != 18731) {
+          if (obfuscationGuard != 18731) {
             String var8 = (String) null;
-            this.a((String) null, -14, 82, 83, -17, (byte) 19);
+            this.drawRightAlignedText((String) null, -14, 82, 83, -17, (byte) 19);
           }
-          this.a(param1, param4 - 18732, param0);
-          this.a(0, (RenderSprite[]) null, param2, param3, (byte) 5, (int[]) null, param5, (aa) null, 0);
+          this.resetTextStyle(shadowColor, obfuscationGuard - 18732, textColor);
+          this.drawStyledText(0, (RenderSprite[]) null, leftX, text, (byte) 5, (int[]) null, baselineY, (aa) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "da.F(" + textColor + ',' + shadowColor + ',' + leftX + ',' + (text != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ')');
         }
     }
 
-    private final void a(int param0, RenderSprite[] param1, int param2, String param3, byte param4, int[] param5, int param6, aa param7, int param8) {
+    private final void drawStyledText(int maskX, RenderSprite[] inlineImages, int penX, String text, byte obfuscationGuard, int[] inlineImageBaselineOffsets, int baselineY, aa mask, int maskY) {
         int var13 = 0;
         int stackIn_26_0 = 0;
         RuntimeException stackIn_64_0 = null;
@@ -395,20 +395,20 @@ abstract class RendererBitmapFont {
         var20 = null;
         var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          param6 = param6 - this.metrics.lineAdvance;
-          if (param4 != 5) {
+          baselineY = baselineY - this.metrics.lineAdvance;
+          if (obfuscationGuard != 5) {
             this.renderer = (GraphicsRenderer) null;
           }
           var10_int = -1;
           var11 = -1;
-          var12 = param3.length();
+          var12 = text.length();
           for (var13 = 0; var13 < var12; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(255 & ae.a(param3.charAt(var13), 56));
+            var14 = (char)(255 & ae.a(text.charAt(var13), 56));
             if (var14 != 60) {
               if (var14 == 62 &&
                 -1 != var10_int) {
-                var15_ref_String = param3.substring(var10_int + 1, var13);
+                var15_ref_String = text.substring(var10_int + 1, var13);
                 var10_int = -1;
                 if (var15_ref_String.equals("lt")) {
                   var14 = 60;
@@ -427,24 +427,24 @@ abstract class RendererBitmapFont {
                             } else {
                               if (!var15_ref_String.equals("reg")) {
                                 if (!var15_ref_String.startsWith("img=")) {
-                                  this.a(var15_ref_String, -16777216);
+                                  this.applyStyleTag(var15_ref_String, -16777216);
                                 } else {
                                   try {
                                     var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
                                     var16_int = td.a(var21, (byte) 38);
-                                    var17 = param1[var16_int];
-                                    if (param5 != null) {
-                                      stackIn_26_0 = param5[var16_int];
+                                    var17 = inlineImages[var16_int];
+                                    if (inlineImageBaselineOffsets != null) {
+                                      stackIn_26_0 = inlineImageBaselineOffsets[var16_int];
                                     } else {
                                       stackIn_26_0 = var17.c();
                                     }
                                     var18 = stackIn_26_0;
-                                    if ((qg.field_c & -16777216) != -16777216) {
-                                      var17.a(param2, param6 + this.metrics.lineAdvance - var18, 0, qg.field_c & -16777216 | 16777215, 1);
+                                    if ((qg.rendererCurrentTextColor & -16777216) != -16777216) {
+                                      var17.a(penX, baselineY + this.metrics.lineAdvance - var18, 0, qg.rendererCurrentTextColor & -16777216 | 16777215, 1);
                                     } else {
-                                      var17.a(param2, -var18 + this.metrics.lineAdvance + param6, 1, 0, 1);
+                                      var17.a(penX, -var18 + this.metrics.lineAdvance + baselineY, 1, 0, 1);
                                     }
-                                    param2 = param2 + param1[var16_int].d();
+                                    penX = penX + inlineImages[var16_int].d();
                                     var11 = -1;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -473,35 +473,35 @@ abstract class RendererBitmapFont {
               if ((decompiledFrameRemainder0) &&
                 (var10_int == -1)) {
                 if (var11 != -1) {
-                  param2 = param2 + this.metrics.getPairKerning(0, (char) var14, var11);
+                  penX = penX + this.metrics.getPairKerning(0, (char) var14, var11);
                 }
                 if (var14 == 32) {
-                  if (tm.field_i > 0) {
-                    ed.field_i = ed.field_i + tm.field_i;
-                    param2 = param2 + (ed.field_i >> 8);
-                    ed.field_i = ed.field_i & 255;
+                  if (tm.rendererSpaceExpansionQ8 > 0) {
+                    ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 + tm.rendererSpaceExpansionQ8;
+                    penX = penX + (ed.rendererJustificationRemainderQ8 >> 8);
+                    ed.rendererJustificationRemainderQ8 = ed.rendererJustificationRemainderQ8 & 255;
                   }
                 } else {
-                  if (param7 == null) {
-                    if (0 != (-16777216 & es.field_c)) {
-                      this.fa((char) var14, 1 + param2, param6 + 1, es.field_c, true);
+                  if (mask == null) {
+                    if (0 != (-16777216 & es.rendererCurrentShadowColor)) {
+                      this.drawGlyph((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true);
                     }
-                    this.fa((char) var14, param2, param6, qg.field_c, false);
+                    this.drawGlyph((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false);
                   } else {
-                    if (0 != (es.field_c & -16777216)) {
-                      this.a((char) var14, 1 + param2, param6 + 1, es.field_c, true, param7, param0, param8);
+                    if (0 != (es.rendererCurrentShadowColor & -16777216)) {
+                      this.drawGlyphWithMask((char) var14, 1 + penX, baselineY + 1, es.rendererCurrentShadowColor, true, mask, maskX, maskY);
                     }
-                    this.a((char) var14, param2, param6, qg.field_c, false, param7, param0, param8);
+                    this.drawGlyphWithMask((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false, mask, maskX, maskY);
                   }
                 }
                 var15 = this.metrics.measureCharacterAdvance((byte) 109, var14);
-                if (rs.field_t != -1) {
-                  this.renderer.a(param6 + (int)(0.7 * (double)this.metrics.lineAdvance), rs.field_t, 28321, param2, var15);
+                if (rs.rendererStrikethroughColor != -1) {
+                  this.renderer.a(baselineY + (int)(0.7 * (double)this.metrics.lineAdvance), rs.rendererStrikethroughColor, 28321, penX, var15);
                 }
-                if (PacketBuffer.field_h != -1) {
-                  this.renderer.a(1 + (param6 + this.metrics.lineAdvance), PacketBuffer.field_h, 28321, param2, var15);
+                if (PacketBuffer.rendererUnderlineColor != -1) {
+                  this.renderer.a(1 + (baselineY + this.metrics.lineAdvance), PacketBuffer.rendererUnderlineColor, 28321, penX, var15);
                 }
-                param2 = param2 + var15;
+                penX = penX + var15;
                 var11 = var14;
               }
             } else {
@@ -513,35 +513,35 @@ abstract class RendererBitmapFont {
           decompiledCaughtException = decompiledCaughtParameter1;
           var10 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_64_0 = var10;
-          stackIn_64_1 = new StringBuilder().append("da.G(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_64_1 = new StringBuilder().append("da.G(").append(maskX).append(',');
+          if (inlineImages == null) {
             stackIn_65_2 = "null";
           } else {
             stackIn_65_2 = "{...}";
           }
-          stackIn_67_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_67_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(penX).append(',');
+          if (text == null) {
             stackIn_68_2 = "null";
           } else {
             stackIn_68_2 = "{...}";
           }
-          stackIn_70_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param4).append(',');
-          if (param5 == null) {
+          stackIn_70_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(obfuscationGuard).append(',');
+          if (inlineImageBaselineOffsets == null) {
             stackIn_71_2 = "null";
           } else {
             stackIn_71_2 = "{...}";
           }
-          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param6).append(',');
-          if (param7 == null) {
+          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(baselineY).append(',');
+          if (mask == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param8).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(maskY).append(')').toString());
         }
     }
 
-    private final void a(int param0, byte param1, String param2) {
+    private final void prepareJustification(int targetWidth, byte obfuscationGuard, String text) {
         int var6 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -556,11 +556,11 @@ abstract class RendererBitmapFont {
         try {
           var4_int = 0;
           var5 = 0;
-          if (param1 <= 98) {
+          if (obfuscationGuard <= 98) {
             return;
           }
-          for (var6 = 0; param2.length() > var6; var6++) {
-            var7 = param2.charAt(var6);
+          for (var6 = 0; text.length() > var6; var6++) {
+            var7 = text.charAt(var6);
             if (var7 != 60) {
               if (var7 != 62) {
                 if (var5 == 0 &&
@@ -575,15 +575,15 @@ abstract class RendererBitmapFont {
             }
           }
           if (var4_int > 0) {
-            tm.field_i = (param0 - this.metrics.measureTextWidth((byte) 94, param2) << 8) / var4_int;
+            tm.rendererSpaceExpansionQ8 = (targetWidth - this.metrics.measureTextWidth((byte) 94, text) << 8) / var4_int;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("da.N(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_18_1 = new StringBuilder().append("da.N(").append(targetWidth).append(',').append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
@@ -592,69 +592,69 @@ abstract class RendererBitmapFont {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, byte param5) {
-        if (param0 == null) {
+    final void drawRightAlignedText(String text, int textColor, int shadowColor, int rightX, int baselineY, byte obfuscationGuard) {
+        if (text == null) {
           return;
         }
         try {
-          this.a(param2, -1, param1);
-          if (param5 != 92) {
+          this.resetTextStyle(shadowColor, -1, textColor);
+          if (obfuscationGuard != 92) {
             this.renderer = (GraphicsRenderer) null;
           }
-          this.a(0, (RenderSprite[]) null, param3 - this.metrics.measureTextWidth((byte) 94, param0), param0, (byte) 5, (int[]) null, param4, (aa) null, 0);
+          this.drawStyledText(0, (RenderSprite[]) null, rightX - this.metrics.measureTextWidth((byte) 94, text), text, (byte) 5, (int[]) null, baselineY, (aa) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "da.J(" + (text != null ? "{...}" : "null") + ',' + textColor + ',' + shadowColor + ',' + rightX + ',' + baselineY + ',' + obfuscationGuard + ')');
         }
     }
 
-    abstract void fa(char param0, int param1, int param2, int param3, boolean param4);
+    abstract void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass);
 
-    private final void a(int param0, int param1, int param2) {
-        rs.field_t = -1;
-        tf.field_a = param2;
-        qg.field_c = param2;
-        tm.field_i = 0;
-        PacketBuffer.field_h = param1;
-        ed.field_i = 0;
-        if (param0 == -1) {
-          param0 = 0;
+    private final void resetTextStyle(int shadowColor, int underlineColor, int textColor) {
+        rs.rendererStrikethroughColor = -1;
+        tf.rendererDefaultTextColor = textColor;
+        qg.rendererCurrentTextColor = textColor;
+        tm.rendererSpaceExpansionQ8 = 0;
+        PacketBuffer.rendererUnderlineColor = underlineColor;
+        ed.rendererJustificationRemainderQ8 = 0;
+        if (shadowColor == -1) {
+          shadowColor = 0;
         }
-        em.field_d = param0;
-        es.field_c = param0;
+        em.rendererDefaultShadowColor = shadowColor;
+        es.rendererCurrentShadowColor = shadowColor;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
-        if (param5 == null) {
+    final void drawCenteredText(int obfuscationGuard, int textColor, int shadowColor, int baselineY, int centerX, String text) {
+        if (text == null) {
           return;
         }
         try {
-          this.a(param2, -1, param1);
-          this.a(0, (RenderSprite[]) null, -(this.metrics.measureTextWidth((byte) 94, param5) / 2) + param4, param5, (byte) 5, (int[]) null, param3, (aa) null, 0);
-          if (param0 < 95) {
+          this.resetTextStyle(shadowColor, -1, textColor);
+          this.drawStyledText(0, (RenderSprite[]) null, -(this.metrics.measureTextWidth((byte) 94, text) / 2) + centerX, text, (byte) 5, (int[]) null, baselineY, (aa) null, 0);
+          if (obfuscationGuard < 95) {
             String var8 = (String) null;
-            this.a((String) null, 1, -72, -15, 80, (byte) -125);
+            this.drawRightAlignedText((String) null, 1, -72, -15, 80, (byte) -125);
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "da.Q(" + obfuscationGuard + ',' + textColor + ',' + shadowColor + ',' + baselineY + ',' + centerX + ',' + (text != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int[] param2, byte param3, int param4, String param5, int param6, RenderSprite[] param7) {
-        if (param5 == null) {
+    final void drawRightAlignedTextWithImages(int shadowColor, int textColor, int[] inlineImageBaselineOffsets, byte obfuscationGuard, int baselineY, String text, int rightX, RenderSprite[] inlineImages) {
+        if (text == null) {
           return;
         }
         try {
-          this.a(param0, -1, param1);
-          if (param3 > -93) {
+          this.resetTextStyle(shadowColor, -1, textColor);
+          if (obfuscationGuard > -93) {
             RendererBitmapFont.a(126, -64);
           }
-          this.a(0, param7, -this.metrics.measureTextWidth((byte) 94, param5) + param6, param5, (byte) 5, param2, param4, (aa) null, 0);
+          this.drawStyledText(0, inlineImages, -this.metrics.measureTextWidth((byte) 94, text) + rightX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (aa) null, 0);
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "da.M(" + shadowColor + ',' + textColor + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ',' + (text != null ? "{...}" : "null") + ',' + rightX + ',' + (inlineImages != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
+    abstract void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY);
 
     static {
         field_b = new int[128];

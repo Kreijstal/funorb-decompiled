@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eo {
-    static ll field_b;
+    static Sprite field_b;
     static int field_a;
     int field_c;
 
     public static void a(byte param0) {
         if (param0 != 50) {
-          field_b = (ll) null;
+          field_b = (Sprite) null;
           field_b = null;
           return;
         }

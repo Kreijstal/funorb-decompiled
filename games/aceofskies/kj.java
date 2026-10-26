@@ -139,7 +139,7 @@ final class kj extends GraphicsRenderer {
         this.g();
     }
 
-    final RenderSprite a(vd param0, boolean param1) {
+    final RenderSprite createSprite(SpriteData data, boolean preferIndexed) {
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
@@ -164,14 +164,14 @@ final class kj extends GraphicsRenderer {
         byte[] var21;
         int[] var22;
         int[] var23;
-        var20 = param0.field_f;
+        var20 = data.palette;
         var16 = var20;
         var3 = var16;
-        var4 = param0.field_d;
-        var5 = param0.field_h;
-        var6 = param0.field_c;
-        if (param1 &&
-          param0.field_e == null) {
+        var4 = data.indices;
+        var5 = data.width;
+        var6 = data.height;
+        if (preferIndexed &&
+          data.alpha == null) {
           var22 = new int[var20.length];
           var18 = var22;
           var8 = var18;
@@ -193,7 +193,7 @@ final class kj extends GraphicsRenderer {
           var23 = new int[var5 * var6];
           var19 = var23;
           var15 = var19;
-          var9 = param0.field_e;
+          var9 = data.alpha;
           if (var9 != null) {
             for (var10 = 0; var10 < var6; var10++) {
               var11 = var10 * var5;
@@ -220,7 +220,7 @@ final class kj extends GraphicsRenderer {
             var7 = new vh(this, var23, var5, var6);
           }
         }
-        ((RenderSprite) (var7)).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
+        ((RenderSprite) (var7)).a(data.padLeft, data.padTop, data.padRight, data.padBottom);
         return (RenderSprite) (var7);
     }
 
@@ -555,7 +555,7 @@ final class kj extends GraphicsRenderer {
 
     }
 
-    final RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2) {
+    final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -564,9 +564,9 @@ final class kj extends GraphicsRenderer {
         var5 = new int[param1.length];
         var6 = 0;
         for (var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].field_h;
-          var5[var7] = param1[var7].field_c;
-          if (param1[var7].field_e != null) {
+          var4[var7] = param1[var7].width;
+          var5[var7] = param1[var7].height;
+          if (param1[var7].alpha != null) {
             var6 = 1;
           }
         }

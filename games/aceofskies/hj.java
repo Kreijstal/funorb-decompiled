@@ -46,16 +46,16 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static ll a(boolean param0, int param1, int param2, ResourceArchive param3) {
+    final static Sprite a(boolean param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        ll stackIn_2_0 = null;
+        Sprite stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (ll) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (tn.a(param3, (byte) -127, param1, param2)) {

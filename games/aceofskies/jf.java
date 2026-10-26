@@ -48,7 +48,7 @@ final class jf implements ir {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ll var8 = null;
+        Sprite var8 = null;
         try {
           if (param1 != -7592) {
             field_b = (String) null;
@@ -59,7 +59,7 @@ final class jf implements ir {
           var8 = gu.field_c[1];
           if (param3 instanceof mi &&
             ((mi) (param3)).field_s) {
-            var8.d(var6_int + (1 + (param3.field_q - var8.field_v >> 1)), (param3.field_n - var8.field_q >> 1) + var7 + 1, 256);
+            var8.d(var6_int + (1 + (param3.field_q - var8.fullWidth >> 1)), (param3.field_n - var8.fullHeight >> 1) + var7 + 1, 256);
           }
           if (!param3.e(28660)) {
             return;

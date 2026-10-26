@@ -34,14 +34,14 @@ final class sq extends mi {
         }
     }
 
-    final static wp a(int param0) {
-        wp var1 = null;
+    final static IndexedSprite a(int param0) {
+        IndexedSprite var1 = null;
         if (param0 == 15636) {
-          var1 = new wp(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], fk.field_a[0], ud.field_e);
+          var1 = new IndexedSprite(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], fk.field_a[0], ud.field_e);
           kf.f(1);
           return var1;
         }
-        return (wp) null;
+        return (IndexedSprite) null;
     }
 
     static {

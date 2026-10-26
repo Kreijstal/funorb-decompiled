@@ -351,7 +351,7 @@ final class ql extends ud {
         if (param1 != 2048) {
           return;
         }
-        nl.field_t = param0;
+        SpriteState.field_t = param0;
         hn.field_a = param3;
     }
 

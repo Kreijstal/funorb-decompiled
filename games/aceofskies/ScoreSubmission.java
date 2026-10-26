@@ -58,122 +58,122 @@ final class ScoreSubmission extends IntrusiveNode {
         var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var6 = FlightSession.rendererManager.a((byte) 100);
-          if (hr.field_d == null) {
-            hr.field_d = new RenderSprite[SteeringMode.field_d.length][];
-            is.backgroundSprites = new RenderSprite[oo.field_ab.length];
-            sd.cloudSprites = new RenderSprite[na.field_c.length];
-            es.smokeSprites = new RenderSprite[tq.field_h.length];
-            bl.explosionSprites = new RenderSprite[ud.field_f.length];
-            ac.field_f = new RenderSprite[qa.field_a.length];
-            jm.field_a = new RenderSprite[hq.field_a.length];
-            aa.field_a = new RenderSprite[la.field_g.length];
-            rs.field_u = new RenderSprite[af.field_c.length];
-            bs.field_b = new RenderSprite[qq.field_e.length];
-            HighscoreQuery.field_o = new RenderSprite[tt.field_c.length];
-            ua.field_g = new RenderSprite[eb.field_c.length];
-            in.field_c = new RenderSprite[kb.field_D.length];
-            ii.field_k = new RenderSprite[ArchiveIndex.field_f.length][];
-            Pickup.field_i = new RenderSprite[ol.field_e.length];
-            po.field_e = new RenderSprite[nu.field_b.length];
+          if (hr.aircraftSprites == null) {
+            hr.aircraftSprites = new RenderSprite[SteeringMode.aircraftSpriteData.length][];
+            is.backgroundSprites = new RenderSprite[oo.backgroundSpriteData.length];
+            sd.cloudSprites = new RenderSprite[na.cloudSpriteData.length];
+            es.smokeSprites = new RenderSprite[tq.smokeSpriteData.length];
+            bl.explosionSprites = new RenderSprite[ud.explosionSpriteData.length];
+            ac.keySprites = new RenderSprite[qa.keySpriteData.length];
+            jm.levelRingSprites = new RenderSprite[hq.levelRingSpriteData.length];
+            aa.achievementSprites = new RenderSprite[la.achievementSpriteData.length];
+            rs.medalSprites = new RenderSprite[af.medalSpriteData.length];
+            bs.upgradeSprites = new RenderSprite[qq.upgradeSpriteData.length];
+            HighscoreQuery.powerBulbSprites = new RenderSprite[tt.powerBulbSpriteData.length];
+            ua.counterPanelSprites = new RenderSprite[eb.counterPanelSpriteData.length];
+            in.scoreDigitSprites = new RenderSprite[kb.scoreDigitSpriteData.length];
+            ii.gaugeSprites = new RenderSprite[ArchiveIndex.gaugeSpriteData.length][];
+            Pickup.powerchuteSprites = new RenderSprite[ol.powerchuteSpriteData.length];
+            po.powerIconSprites = new RenderSprite[nu.powerIconSpriteData.length];
             co.scorchSprites = new RenderSprite[gn.scorchSpriteData.length];
-            ec.field_e = new RenderSprite[FlightBody.field_a.length];
-            mb.field_u = new RenderSprite[vl.field_b.length];
-            CipherPacketBuffer.field_n = new RenderSprite[qk.field_a.length];
-            ko.field_g = new RenderSprite[gu.field_a.length];
-            for (var2 = 0; ii.field_k.length > var2; var2++) {
-              array$0 = new RenderSprite[ArchiveIndex.field_f[var2].length];
-              ii.field_k[var2] = array$0;
+            ec.radarSprites = new RenderSprite[FlightBody.radarSpriteData.length];
+            mb.brassButtonSprites = new RenderSprite[vl.brassButtonSpriteData.length];
+            CipherPacketBuffer.brassSliderSprites = new RenderSprite[qk.brassSliderSpriteData.length];
+            ko.brassFrameSprites = new RenderSprite[gu.brassFrameSpriteData.length];
+            for (var2 = 0; ii.gaugeSprites.length > var2; var2++) {
+              array$0 = new RenderSprite[ArchiveIndex.gaugeSpriteData[var2].length];
+              ii.gaugeSprites[var2] = array$0;
             }
           }
-          for (var2Lifetime1 = 0; var2Lifetime1 < SteeringMode.field_d.length; var2Lifetime1++) {
-            if (hr.field_d[var2Lifetime1] == null) {
-              array$1 = new RenderSprite[SteeringMode.field_d[var2Lifetime1].length];
-              hr.field_d[var2Lifetime1] = array$1;
+          for (var2Lifetime1 = 0; var2Lifetime1 < SteeringMode.aircraftSpriteData.length; var2Lifetime1++) {
+            if (hr.aircraftSprites[var2Lifetime1] == null) {
+              array$1 = new RenderSprite[SteeringMode.aircraftSpriteData[var2Lifetime1].length];
+              hr.aircraftSprites[var2Lifetime1] = array$1;
             }
-            for (var3 = 0; var3 < SteeringMode.field_d[var2Lifetime1].length; var3++) {
-              hr.field_d[var2Lifetime1][var3] = var6.a(SteeringMode.field_d[var2Lifetime1][var3], false);
+            for (var3 = 0; var3 < SteeringMode.aircraftSpriteData[var2Lifetime1].length; var3++) {
+              hr.aircraftSprites[var2Lifetime1][var3] = var6.createSprite(SteeringMode.aircraftSpriteData[var2Lifetime1][var3], false);
             }
           }
-          for (var2Lifetime2 = 0; var2Lifetime2 < oo.field_ab.length; var2Lifetime2++) {
-            is.backgroundSprites[var2Lifetime2] = var6.a(oo.field_ab[var2Lifetime2], false);
+          for (var2Lifetime2 = 0; var2Lifetime2 < oo.backgroundSpriteData.length; var2Lifetime2++) {
+            is.backgroundSprites[var2Lifetime2] = var6.createSprite(oo.backgroundSpriteData[var2Lifetime2], false);
           }
-          for (var2Lifetime3 = 0; na.field_c.length > var2Lifetime3; var2Lifetime3++) {
-            sd.cloudSprites[var2Lifetime3] = var6.a(na.field_c[var2Lifetime3], false);
+          for (var2Lifetime3 = 0; na.cloudSpriteData.length > var2Lifetime3; var2Lifetime3++) {
+            sd.cloudSprites[var2Lifetime3] = var6.createSprite(na.cloudSpriteData[var2Lifetime3], false);
           }
-          for (var2Lifetime4 = 0; tq.field_h.length > var2Lifetime4; var2Lifetime4++) {
-            es.smokeSprites[var2Lifetime4] = var6.a(tq.field_h[var2Lifetime4], false);
+          for (var2Lifetime4 = 0; tq.smokeSpriteData.length > var2Lifetime4; var2Lifetime4++) {
+            es.smokeSprites[var2Lifetime4] = var6.createSprite(tq.smokeSpriteData[var2Lifetime4], false);
           }
-          for (var2Lifetime5 = 0; ud.field_f.length > var2Lifetime5; var2Lifetime5++) {
-            bl.explosionSprites[var2Lifetime5] = var6.a(ud.field_f[var2Lifetime5], false);
+          for (var2Lifetime5 = 0; ud.explosionSpriteData.length > var2Lifetime5; var2Lifetime5++) {
+            bl.explosionSprites[var2Lifetime5] = var6.createSprite(ud.explosionSpriteData[var2Lifetime5], false);
           }
-          for (var2Lifetime6 = 0; ol.field_e.length > var2Lifetime6; var2Lifetime6++) {
-            Pickup.field_i[var2Lifetime6] = var6.a(ol.field_e[var2Lifetime6], false);
+          for (var2Lifetime6 = 0; ol.powerchuteSpriteData.length > var2Lifetime6; var2Lifetime6++) {
+            Pickup.powerchuteSprites[var2Lifetime6] = var6.createSprite(ol.powerchuteSpriteData[var2Lifetime6], false);
           }
-          for (var2Lifetime7 = 0; nu.field_b.length > var2Lifetime7; var2Lifetime7++) {
-            po.field_e[var2Lifetime7] = var6.a(nu.field_b[var2Lifetime7], false);
+          for (var2Lifetime7 = 0; nu.powerIconSpriteData.length > var2Lifetime7; var2Lifetime7++) {
+            po.powerIconSprites[var2Lifetime7] = var6.createSprite(nu.powerIconSpriteData[var2Lifetime7], false);
           }
           for (var2Lifetime8 = 0; gn.scorchSpriteData.length > var2Lifetime8; var2Lifetime8++) {
-            co.scorchSprites[var2Lifetime8] = var6.a(gn.scorchSpriteData[var2Lifetime8], false);
+            co.scorchSprites[var2Lifetime8] = var6.createSprite(gn.scorchSpriteData[var2Lifetime8], false);
           }
-          for (var2Lifetime9 = 0; FlightBody.field_a.length > var2Lifetime9; var2Lifetime9++) {
-            ec.field_e[var2Lifetime9] = var6.a(FlightBody.field_a[var2Lifetime9], false);
+          for (var2Lifetime9 = 0; FlightBody.radarSpriteData.length > var2Lifetime9; var2Lifetime9++) {
+            ec.radarSprites[var2Lifetime9] = var6.createSprite(FlightBody.radarSpriteData[var2Lifetime9], false);
           }
           var2Lifetime10 = 0;
           if (obfuscationGuard <= 38) {
             ScoreSubmission.createRendererResources(65);
           }
-          while (var2Lifetime10 < gu.field_a.length) {
-            ko.field_g[var2Lifetime10] = var6.a(gu.field_a[var2Lifetime10], false);
+          while (var2Lifetime10 < gu.brassFrameSpriteData.length) {
+            ko.brassFrameSprites[var2Lifetime10] = var6.createSprite(gu.brassFrameSpriteData[var2Lifetime10], false);
             var2Lifetime10++;
           }
-          for (var2Lifetime11 = 0; var2Lifetime11 < vl.field_b.length; var2Lifetime11++) {
-            mb.field_u[var2Lifetime11] = var6.a(vl.field_b[var2Lifetime11], false);
+          for (var2Lifetime11 = 0; var2Lifetime11 < vl.brassButtonSpriteData.length; var2Lifetime11++) {
+            mb.brassButtonSprites[var2Lifetime11] = var6.createSprite(vl.brassButtonSpriteData[var2Lifetime11], false);
           }
-          for (var2Lifetime12 = 0; qk.field_a.length > var2Lifetime12; var2Lifetime12++) {
-            CipherPacketBuffer.field_n[var2Lifetime12] = var6.a(qk.field_a[var2Lifetime12], false);
+          for (var2Lifetime12 = 0; qk.brassSliderSpriteData.length > var2Lifetime12; var2Lifetime12++) {
+            CipherPacketBuffer.brassSliderSprites[var2Lifetime12] = var6.createSprite(qk.brassSliderSpriteData[var2Lifetime12], false);
           }
-          qk.field_i = var6.a(lt.field_v, false);
-          for (var2Lifetime13 = 0; var2Lifetime13 < qa.field_a.length; var2Lifetime13++) {
-            ac.field_f[var2Lifetime13] = var6.a(qa.field_a[var2Lifetime13], false);
+          qk.woodenTileSprite = var6.createSprite(lt.woodenTileSpriteData, false);
+          for (var2Lifetime13 = 0; var2Lifetime13 < qa.keySpriteData.length; var2Lifetime13++) {
+            ac.keySprites[var2Lifetime13] = var6.createSprite(qa.keySpriteData[var2Lifetime13], false);
           }
-          for (var2Lifetime14 = 0; var2Lifetime14 < ArchiveIndex.field_f.length; var2Lifetime14++) {
+          for (var2Lifetime14 = 0; var2Lifetime14 < ArchiveIndex.gaugeSpriteData.length; var2Lifetime14++) {
             var5 = 0;
             var3Lifetime1 = var5;
-            while (var5 < ArchiveIndex.field_f[var2Lifetime14].length) {
-              ii.field_k[var2Lifetime14][var5] = var6.a(ArchiveIndex.field_f[var2Lifetime14][var5], false);
+            while (var5 < ArchiveIndex.gaugeSpriteData[var2Lifetime14].length) {
+              ii.gaugeSprites[var2Lifetime14][var5] = var6.createSprite(ArchiveIndex.gaugeSpriteData[var2Lifetime14][var5], false);
               var5++;
             }
           }
-          for (var2Lifetime15 = 0; qq.field_e.length > var2Lifetime15; var2Lifetime15++) {
-            bs.field_b[var2Lifetime15] = var6.a(qq.field_e[var2Lifetime15], false);
+          for (var2Lifetime15 = 0; qq.upgradeSpriteData.length > var2Lifetime15; var2Lifetime15++) {
+            bs.upgradeSprites[var2Lifetime15] = var6.createSprite(qq.upgradeSpriteData[var2Lifetime15], false);
           }
-          for (var2Lifetime16 = 0; var2Lifetime16 < tt.field_c.length; var2Lifetime16++) {
-            HighscoreQuery.field_o[var2Lifetime16] = var6.a(tt.field_c[var2Lifetime16], false);
+          for (var2Lifetime16 = 0; var2Lifetime16 < tt.powerBulbSpriteData.length; var2Lifetime16++) {
+            HighscoreQuery.powerBulbSprites[var2Lifetime16] = var6.createSprite(tt.powerBulbSpriteData[var2Lifetime16], false);
           }
-          for (var2Lifetime17 = 0; hq.field_a.length > var2Lifetime17; var2Lifetime17++) {
-            jm.field_a[var2Lifetime17] = var6.a(hq.field_a[var2Lifetime17], false);
+          for (var2Lifetime17 = 0; hq.levelRingSpriteData.length > var2Lifetime17; var2Lifetime17++) {
+            jm.levelRingSprites[var2Lifetime17] = var6.createSprite(hq.levelRingSpriteData[var2Lifetime17], false);
           }
-          for (var2Lifetime18 = 0; var2Lifetime18 < eb.field_c.length; var2Lifetime18++) {
-            ua.field_g[var2Lifetime18] = var6.a(eb.field_c[var2Lifetime18], false);
+          for (var2Lifetime18 = 0; var2Lifetime18 < eb.counterPanelSpriteData.length; var2Lifetime18++) {
+            ua.counterPanelSprites[var2Lifetime18] = var6.createSprite(eb.counterPanelSpriteData[var2Lifetime18], false);
           }
-          for (var2Lifetime19 = 0; var2Lifetime19 < kb.field_D.length; var2Lifetime19++) {
-            in.field_c[var2Lifetime19] = var6.a(kb.field_D[var2Lifetime19], false);
+          for (var2Lifetime19 = 0; var2Lifetime19 < kb.scoreDigitSpriteData.length; var2Lifetime19++) {
+            in.scoreDigitSprites[var2Lifetime19] = var6.createSprite(kb.scoreDigitSpriteData[var2Lifetime19], false);
           }
-          mp.field_h = var6.a(fs.field_e, false);
-          dc.field_g = var6.a(RendererManager.field_a, false);
-          se.field_c = var6.a(kn.field_b, q.field_o, true);
-          kn.field_a = var6.a(dp.field_h, nc.field_a, true);
-          PacketBuffer.field_j = var6.a(hi.field_v, CipherPacketBuffer.field_m, true);
-          for (var2Lifetime20 = 0; la.field_g.length > var2Lifetime20; var2Lifetime20++) {
-            aa.field_a[var2Lifetime20] = var6.a(la.field_g[var2Lifetime20], false);
+          mp.titleImage = var6.createSprite(fs.titleImageData, false);
+          dc.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);
+          se.bigGameFont = var6.a(kn.bigFontMetrics, q.bigFontSpriteData, true);
+          kn.titleFont = var6.a(dp.titleFontMetrics, nc.titleFontSpriteData, true);
+          PacketBuffer.gameFont = var6.a(hi.gameFontMetrics, CipherPacketBuffer.fontSpriteData, true);
+          for (var2Lifetime20 = 0; la.achievementSpriteData.length > var2Lifetime20; var2Lifetime20++) {
+            aa.achievementSprites[var2Lifetime20] = var6.createSprite(la.achievementSpriteData[var2Lifetime20], false);
           }
-          for (var2Lifetime21 = 0; var2Lifetime21 < af.field_c.length; var2Lifetime21++) {
-            stackIn_78_0 = rs.field_u;
-            stackIn_78_0[var2Lifetime21] = var6.a(af.field_c[var2Lifetime21], false);
+          for (var2Lifetime21 = 0; var2Lifetime21 < af.medalSpriteData.length; var2Lifetime21++) {
+            stackIn_78_0 = rs.medalSprites;
+            stackIn_78_0[var2Lifetime21] = var6.createSprite(af.medalSpriteData[var2Lifetime21], false);
           }
-          lg.field_k = var6.a(vl.field_c, false);
-          ut.field_c = var6.a(es.field_i, false);
-          dh.field_k = var6.a(HighscoreQuery.field_g, false);
+          lg.coinSprite = var6.createSprite(vl.coinSpriteData, false);
+          ut.lockedSprite = var6.createSprite(es.lockedSpriteData, false);
+          dh.unachievedSprite = var6.createSprite(HighscoreQuery.unachievedSpriteData, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

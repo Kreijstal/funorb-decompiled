@@ -6,13 +6,13 @@ import java.io.*;
 final class es {
     static String[] field_a;
     private DualLinkNode field_d;
-    static int field_c;
+    static int rendererCurrentShadowColor;
     private int field_f;
     static RenderSprite[] smokeSprites;
     static String field_g;
     private DualLinkNode[] field_e;
     private long field_h;
-    static vd field_i;
+    static SpriteData lockedSpriteData;
 
     final DualLinkNode a(boolean param0) {
         DualLinkNode var2;
@@ -211,19 +211,19 @@ final class es {
         if (param0 == 1020) {
           smokeSprites = null;
           field_g = null;
-          field_i = null;
+          lockedSpriteData = null;
           field_a = null;
           return;
         }
         field_g = (String) null;
         smokeSprites = null;
         field_g = null;
-        field_i = null;
+        lockedSpriteData = null;
         field_a = null;
     }
 
     static {
-        field_c = 0;
+        rendererCurrentShadowColor = 0;
         field_g = "Player Name: ";
     }
 }

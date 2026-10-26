@@ -3,7 +3,7 @@
  */
 final class RendererManager {
     private boolean field_d;
-    static vd field_a;
+    static SpriteData bulletSpriteData;
     private vu field_e;
     static int field_f;
     static int field_c;
@@ -11,7 +11,7 @@ final class RendererManager {
     private sn[] field_g;
 
     public static void a(boolean param0) {
-        field_a = null;
+        bulletSpriteData = null;
         if (!param0) {
           RendererManager.a(false);
         }

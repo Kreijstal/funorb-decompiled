@@ -209,11 +209,11 @@ final class tj extends ao {
         return ml.field_h;
     }
 
-    final static ll[] a(String param0, String param1, int param2, ResourceArchive param3) {
+    final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ll[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

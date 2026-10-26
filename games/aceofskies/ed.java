@@ -4,7 +4,7 @@
 final class ed extends cq implements qi {
     private int field_j;
     private int field_k;
-    static int field_i;
+    static int rendererJustificationRemainderQ8;
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7) {
         RuntimeException runtimeException = null;
@@ -615,6 +615,6 @@ final class ed extends cq implements qi {
     }
 
     static {
-        field_i = 0;
+        rendererJustificationRemainderQ8 = 0;
     }
 }

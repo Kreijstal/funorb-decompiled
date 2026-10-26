@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qa {
-    static vd[] field_a;
+    static SpriteData[] keySpriteData;
     static eg field_b;
     static String field_c;
 
@@ -10,13 +10,13 @@ final class qa {
         if (param0 == -7) {
           field_c = null;
           field_b = null;
-          field_a = null;
+          keySpriteData = null;
           return;
         }
-        field_a = (vd[]) null;
+        keySpriteData = (SpriteData[]) null;
         field_c = null;
         field_b = null;
-        field_a = null;
+        keySpriteData = null;
     }
 
     final static void b(int param0) {
@@ -57,7 +57,7 @@ final class qa {
           for (var3 = 0; ne.field_g.length > var3; var3++) {
             var4 = rn.field_a[var3];
             if (var4 < 0) {
-              var5 = nl.field_t;
+              var5 = SpriteState.field_t;
             } else {
               if (var4 != pr.field_b.selectedIndex) {
                 var5 = so.field_b;

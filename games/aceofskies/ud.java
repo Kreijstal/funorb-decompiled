@@ -4,17 +4,17 @@
 abstract class ud extends IntrusiveNode {
     static int field_g;
     static int[] field_e;
-    static vd[] field_f;
+    static SpriteData[] explosionSpriteData;
 
     public static void a(boolean param0) {
         if (param0) {
           field_e = (int[]) null;
           field_e = null;
-          field_f = null;
+          explosionSpriteData = null;
           return;
         }
         field_e = null;
-        field_f = null;
+        explosionSpriteData = null;
     }
 
     final static void a(SoundPlayback param0, int param1) {

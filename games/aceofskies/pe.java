@@ -115,58 +115,58 @@ final class pe implements Iterator {
         int var4_intLifetime1;
         int var4_intLifetime2;
         try {
-          oo.field_ab = new vd[2];
-          for (var4_int = 0; oo.field_ab.length > var4_int; var4_int++) {
-            oo.field_ab[var4_int] = vd.b(gameSpriteArchive, "aceofskies", "background" + var4_int);
+          oo.backgroundSpriteData = new SpriteData[2];
+          for (var4_int = 0; oo.backgroundSpriteData.length > var4_int; var4_int++) {
+            oo.backgroundSpriteData[var4_int] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "background" + var4_int);
           }
-          SteeringMode.field_d = new vd[8][];
+          SteeringMode.aircraftSpriteData = new SpriteData[8][];
           for (var4_intLifetime1 = 0; var4_intLifetime1 < 8; var4_intLifetime1++) {
-            SteeringMode.field_d[var4_intLifetime1] = vd.a(gameSpriteArchive, "aceofskies", "plane" + var4_intLifetime1);
+            SteeringMode.aircraftSpriteData[var4_intLifetime1] = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "plane" + var4_intLifetime1);
           }
           if (obfuscationGuard <= 22) {
             field_c = (String) null;
           }
-          na.field_c = new vd[1];
+          na.cloudSpriteData = new SpriteData[1];
           for (var4_intLifetime2 = 0; var4_intLifetime2 < 1; var4_intLifetime2++) {
-            na.field_c[var4_intLifetime2] = vd.b(gameSpriteArchive, "aceofskies", "cloud" + var4_intLifetime2);
+            na.cloudSpriteData[var4_intLifetime2] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "cloud" + var4_intLifetime2);
           }
-          RendererManager.field_a = vd.b(gameSpriteArchive, "aceofskies", "bullet");
-          tq.field_h = vd.a(gameSpriteArchive, "aceofskies", "smoke");
-          ud.field_f = vd.a(gameSpriteArchive, "aceofskies", "explosion");
-          gn.scorchSpriteData = vd.a(gameSpriteArchive, "aceofskies", "scorch");
-          fs.field_e = vd.b(gameSpriteArchive, "", "titleimage");
-          ArchiveIndex.field_f = new vd[3][];
-          ArchiveIndex.field_f[0] = vd.a(gameSpriteArchive, "aceofskies", "oilgauge");
-          ArchiveIndex.field_f[1] = vd.a(gameSpriteArchive, "aceofskies", "heatgauge");
-          ArchiveIndex.field_f[2] = vd.a(gameSpriteArchive, "aceofskies", "supergauge");
-          qq.field_e = vd.a(gameSpriteArchive, "aceofskies", "upgrades");
-          FlightBody.field_a = vd.a(gameSpriteArchive, "aceofskies", "radar");
-          eb.field_c = new vd[2];
-          eb.field_c[0] = vd.b(gameSpriteArchive, "aceofskies", "scorecounter");
-          eb.field_c[1] = vd.b(gameSpriteArchive, "aceofskies", "multiplier");
-          kb.field_D = vd.a(gameSpriteArchive, "aceofskies", "scorenumbers");
-          hq.field_a = vd.a(gameSpriteArchive, "aceofskies", "levelring");
-          qa.field_a = vd.a(gameSpriteArchive, "", "keys");
-          CipherPacketBuffer.field_m = vd.a(gameSpriteArchive, "", "fontalpha");
-          hi.field_v = tg.a(fontMetricsArchive, 8191, "", "font");
-          q.field_o = vd.a(gameSpriteArchive, "", "bigfontalpha");
-          kn.field_b = tg.a(fontMetricsArchive, 8191, "", "bigfont");
-          nc.field_a = vd.a(gameSpriteArchive, "", "titlefontalpha");
-          dp.field_h = tg.a(fontMetricsArchive, 8191, "", "titlefont");
-          lt.field_v = vd.b(gameSpriteArchive, "", "woodentile");
-          gu.field_a = vd.a(gameSpriteArchive, "", "brassframe");
-          vl.field_b = vd.a(gameSpriteArchive, "", "brassbutton");
-          qk.field_a = vd.a(gameSpriteArchive, "", "brassslider");
-          ol.field_e = vd.a(gameSpriteArchive, "aceofskies", "powerchutes");
-          nu.field_b = vd.a(gameSpriteArchive, "aceofskies", "powericons");
-          tt.field_c = new vd[2];
-          tt.field_c[0] = vd.b(gameSpriteArchive, "aceofskies", "glassbulb");
-          tt.field_c[1] = vd.b(gameSpriteArchive, "aceofskies", "bulblight");
-          la.field_g = vd.a(gameSpriteArchive, "", "achievements");
-          af.field_c = vd.a(gameSpriteArchive, "", "medals");
-          vl.field_c = vd.b(sharedSpriteArchive, "basic", "orbcoin");
-          es.field_i = vd.b(sharedSpriteArchive, "basic", "locked");
-          HighscoreQuery.field_g = vd.b(sharedSpriteArchive, "basic", "unachieved");
+          RendererManager.bulletSpriteData = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "bullet");
+          tq.smokeSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "smoke");
+          ud.explosionSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "explosion");
+          gn.scorchSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "scorch");
+          fs.titleImageData = SpriteData.loadFirstFrame(gameSpriteArchive, "", "titleimage");
+          ArchiveIndex.gaugeSpriteData = new SpriteData[3][];
+          ArchiveIndex.gaugeSpriteData[0] = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "oilgauge");
+          ArchiveIndex.gaugeSpriteData[1] = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "heatgauge");
+          ArchiveIndex.gaugeSpriteData[2] = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "supergauge");
+          qq.upgradeSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "upgrades");
+          FlightBody.radarSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "radar");
+          eb.counterPanelSpriteData = new SpriteData[2];
+          eb.counterPanelSpriteData[0] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "scorecounter");
+          eb.counterPanelSpriteData[1] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "multiplier");
+          kb.scoreDigitSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "scorenumbers");
+          hq.levelRingSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "levelring");
+          qa.keySpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "keys");
+          CipherPacketBuffer.fontSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "fontalpha");
+          hi.gameFontMetrics = tg.a(fontMetricsArchive, 8191, "", "font");
+          q.bigFontSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "bigfontalpha");
+          kn.bigFontMetrics = tg.a(fontMetricsArchive, 8191, "", "bigfont");
+          nc.titleFontSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "titlefontalpha");
+          dp.titleFontMetrics = tg.a(fontMetricsArchive, 8191, "", "titlefont");
+          lt.woodenTileSpriteData = SpriteData.loadFirstFrame(gameSpriteArchive, "", "woodentile");
+          gu.brassFrameSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "brassframe");
+          vl.brassButtonSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "brassbutton");
+          qk.brassSliderSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "brassslider");
+          ol.powerchuteSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "powerchutes");
+          nu.powerIconSpriteData = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "powericons");
+          tt.powerBulbSpriteData = new SpriteData[2];
+          tt.powerBulbSpriteData[0] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "glassbulb");
+          tt.powerBulbSpriteData[1] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "bulblight");
+          la.achievementSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "achievements");
+          af.medalSpriteData = SpriteData.loadFrames(gameSpriteArchive, "", "medals");
+          vl.coinSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "orbcoin");
+          es.lockedSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "locked");
+          HighscoreQuery.unachievedSpriteData = SpriteData.loadFirstFrame(sharedSpriteArchive, "basic", "unachieved");
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "pe.D(" + (fontMetricsArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (sharedSpriteArchive != null ? "{...}" : "null") + ',' + (gameSpriteArchive != null ? "{...}" : "null") + ')');
         }

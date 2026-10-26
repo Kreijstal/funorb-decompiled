@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lg extends gg {
-    static RenderSprite field_k;
+    static RenderSprite coinSprite;
     private int field_o;
     private int field_r;
     private int field_t;
@@ -21,7 +21,7 @@ class lg extends gg {
         }
         field_l = null;
         field_j = null;
-        field_k = null;
+        coinSprite = null;
     }
 
     final void a(int param0) {

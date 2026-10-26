@@ -65,7 +65,7 @@ final class wk extends hh {
             return true;
           }
           sd.field_h = param1;
-          nl.field_s = param6;
+          SpriteState.field_s = param6;
           ld.field_c = null;
           rt.field_e = param3;
           fs.field_g = param0;

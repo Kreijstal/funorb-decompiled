@@ -58,9 +58,9 @@ abstract class gm extends ab {
           return;
         }
         if (null == na.field_b ||
-          !(na.field_b.field_r >= this.field_q) ||
-          !(na.field_b.field_n >= this.field_n)) {
-          na.field_b = new ll(this.field_q, this.field_n);
+          !(na.field_b.width >= this.field_q) ||
+          !(na.field_b.height >= this.field_n)) {
+          na.field_b = new Sprite(this.field_q, this.field_n);
         }
         cm.a(na.field_b, -14492);
         SoftwareRasterizer.clearFramebuffer();

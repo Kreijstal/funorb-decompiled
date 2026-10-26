@@ -9,8 +9,8 @@ final class sc {
     static String field_b;
     private int field_a;
     private int field_e;
-    ll field_f;
-    ll[] field_d;
+    Sprite field_f;
+    Sprite[] field_d;
 
     final sc a(int param0, int param1) {
         if (param1 != -2) {
@@ -124,17 +124,17 @@ final class sc {
           if (this.field_f != null) {
             var6_int = this.field_e + param0.field_p + param2;
             if (param3.field_e == 1) {
-              var6_int = var6_int + (param0.field_q - this.field_f.field_v) / 2;
+              var6_int = var6_int + (param0.field_q - this.field_f.fullWidth) / 2;
             }
             var7 = this.field_i + param0.field_h + param4;
             if (param3.field_f == 1) {
-              var7 = var7 + (-this.field_f.field_q + param0.field_n) / 2;
+              var7 = var7 + (-this.field_f.fullHeight + param0.field_n) / 2;
             }
             if (param3.field_e == 2) {
-              var6_int = var6_int + (param0.field_q - this.field_f.field_v);
+              var6_int = var6_int + (param0.field_q - this.field_f.fullWidth);
             }
             if (param3.field_f == 2) {
-              var7 = var7 + (-this.field_f.field_q + param0.field_n);
+              var7 = var7 + (-this.field_f.fullHeight + param0.field_n);
             }
             this.field_f.b(var6_int, var7);
           }
@@ -261,7 +261,7 @@ final class sc {
         }
     }
 
-    final sc a(ll[] param0, boolean param1) {
+    final sc a(Sprite[] param0, boolean param1) {
         RuntimeException var3 = null;
         sc stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;

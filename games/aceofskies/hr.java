@@ -3,14 +3,14 @@
  */
 abstract class hr extends or {
     static lt field_e;
-    static RenderSprite[][] field_d;
+    static RenderSprite[][] aircraftSprites;
 
     private hr() throws Throwable {
         throw new Error();
     }
 
     public static void a(boolean param0) {
-        field_d = (RenderSprite[][]) null;
+        aircraftSprites = (RenderSprite[][]) null;
         if (!param0) {
           return;
         }

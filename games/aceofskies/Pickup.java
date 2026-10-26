@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Pickup extends FlightBody {
-    static RenderSprite[] field_i;
+    static RenderSprite[] powerchuteSprites;
     static int menuRepeatDelay;
     int pickupCode;
     private static long[] field_l;
@@ -10,7 +10,7 @@ final class Pickup extends FlightBody {
     static int field_j;
 
     public static void b(int param0) {
-        field_i = null;
+        powerchuteSprites = null;
         if (param0 != 256) {
           field_l = (long[]) null;
         }

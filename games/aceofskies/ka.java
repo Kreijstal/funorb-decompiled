@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class ka {
-    static ll[] field_a;
+    static Sprite[] field_a;
 
     final static String a(int param0) {
         String var1 = null;
@@ -22,7 +22,7 @@ abstract class ka {
           }
           return var1;
         }
-        field_a = (ll[]) null;
+        field_a = (Sprite[]) null;
         var1Lifetime1 = "";
         if (vr.field_b != null) {
           var1Lifetime1 = vr.field_b.d(false);
@@ -56,7 +56,7 @@ abstract class ka {
             return false;
           }
           if (param0 <= 75) {
-            field_a = (ll[]) null;
+            field_a = (Sprite[]) null;
           }
           var2_long = kh.a(-125);
           if (tj.field_m != 0 &&
@@ -209,7 +209,7 @@ abstract class ka {
         if (param0 == -126) {
           return;
         }
-        field_a = (ll[]) null;
+        field_a = (Sprite[]) null;
     }
 
     final static sa b(byte param0) {

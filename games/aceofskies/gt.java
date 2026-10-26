@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gt extends DualLinkNode {
-    static ll field_o;
+    static Sprite field_o;
     private long field_p;
     int field_n;
     static String field_r;
@@ -107,7 +107,7 @@ final class gt extends DualLinkNode {
         try {
           nb.field_c = uk.field_j;
           if (param0 <= 119) {
-            field_o = (ll) null;
+            field_o = (Sprite) null;
           }
           if (param2 != 255) {
             if (param2 < 100) {

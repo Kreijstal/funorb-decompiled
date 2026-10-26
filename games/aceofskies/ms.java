@@ -4,7 +4,7 @@
 final class ms {
     static String field_a;
     private ti field_b;
-    static ll field_c;
+    static Sprite field_c;
     static int field_d;
 
     final void b(byte param0) {

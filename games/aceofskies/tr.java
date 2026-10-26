@@ -79,17 +79,17 @@ final class tr {
     }
 
     final static void a(ResourceArchive param0, byte param1) {
-        ll var2 = new ll(param0.a("final_frame.jpg", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
-        int var3 = var2.field_r;
-        int var4 = var2.field_n;
+        Sprite var2 = new Sprite(param0.a("final_frame.jpg", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
+        int var3 = var2.width;
+        int var4 = var2.height;
         qk.a((byte) -92);
-        HighscoreNameEntry.field_d = new ll(var3, 3 * var4 / 4);
-        HighscoreNameEntry.field_d.b();
+        HighscoreNameEntry.field_d = new Sprite(var3, 3 * var4 / 4);
+        HighscoreNameEntry.field_d.makeRasterTarget();
         var2.c(0, 0);
-        gt.field_o = new ll(var3, var4 - HighscoreNameEntry.field_d.field_n);
-        gt.field_o.b();
-        var2.c(0, -HighscoreNameEntry.field_d.field_n);
-        gt.field_o.field_p = HighscoreNameEntry.field_d.field_n;
+        gt.field_o = new Sprite(var3, var4 - HighscoreNameEntry.field_d.height);
+        gt.field_o.makeRasterTarget();
+        var2.c(0, -HighscoreNameEntry.field_d.height);
+        gt.field_o.trimY = HighscoreNameEntry.field_d.height;
         if (param1 > -64) {
           return;
         }

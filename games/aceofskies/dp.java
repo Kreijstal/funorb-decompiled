@@ -6,7 +6,7 @@ import java.util.*;
 final class dp extends pj implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ImageConsumer field_j;
     private java.awt.image.ColorModel field_g;
-    static BitmapFontMetrics field_h;
+    static BitmapFontMetrics titleFontMetrics;
     static String field_i;
 
     private final synchronized void b(int param0) {
@@ -69,11 +69,11 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
         if (param0 != -55) {
           dp.d((byte) 111);
           field_i = null;
-          field_h = null;
+          titleFontMetrics = null;
           return;
         }
         field_i = null;
-        field_h = null;
+        titleFontMetrics = null;
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {

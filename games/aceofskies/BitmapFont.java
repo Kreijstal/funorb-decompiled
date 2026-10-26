@@ -13,7 +13,7 @@ abstract class BitmapFont extends DualLinkNode {
     private int[] glyphYOffsets;
     private int[] glyphWidths;
     private byte[] pairKerning;
-    private df[] inlineImages;
+    private IndexedSpriteState[] inlineImages;
     private static StringBuilder wrappingBuffer;
     private static int strikethroughColor;
     private static int spaceExpansionQ8;
@@ -376,7 +376,7 @@ abstract class BitmapFont extends DualLinkNode {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
                                     var16_int = td.a(var18, (byte) 38);
-                                    var4 = var4 + this.inlineImages[var16_int].field_h;
+                                    var4 = var4 + this.inlineImages[var16_int].fullWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -638,7 +638,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
                                   var9_int = td.a(var10, (byte) 38);
-                                  var4 = var4 + this.inlineImages[var9_int].field_h;
+                                  var4 = var4 + this.inlineImages[var9_int].fullWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -709,7 +709,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        df var11_ref_df = null;
+        IndexedSpriteState var11_ref_df = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -741,17 +741,17 @@ abstract class BitmapFont extends DualLinkNode {
                                   var10 = td.a(var13, (byte) 38);
                                   var11_ref_df = this.inlineImages[var10];
                                   if (this.inlineImageBaselineOffsets == null) {
-                                    stackIn_27_0 = var11_ref_df.field_a;
+                                    stackIn_27_0 = var11_ref_df.fullHeight;
                                   } else {
                                     stackIn_27_0 = this.inlineImageBaselineOffsets[var10];
                                   }
                                   var12 = stackIn_27_0;
                                   if (currentAlpha256 != 256) {
-                                    var11_ref_df.a(penX, baselineY + this.lineAdvance - var12, currentAlpha256);
+                                    var11_ref_df.drawAlpha(penX, baselineY + this.lineAdvance - var12, currentAlpha256);
                                   } else {
-                                    var11_ref_df.a(penX, baselineY + this.lineAdvance - var12);
+                                    var11_ref_df.draw(penX, baselineY + this.lineAdvance - var12);
                                   }
-                                  penX = penX + var11_ref_df.field_h;
+                                  penX = penX + var11_ref_df.fullWidth;
                                   var5 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;

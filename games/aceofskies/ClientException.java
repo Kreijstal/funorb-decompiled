@@ -17,7 +17,7 @@ final class ClientException extends RuntimeException {
           return;
         }
         int[] var2 = (int[]) null;
-        ClientException.a(-20, (wp) null, (int[]) null);
+        ClientException.a(-20, (IndexedSprite) null, (int[]) null);
         menuRight = null;
     }
 
@@ -33,11 +33,11 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    final static wp a(int param0, wp param1, int[] param2) {
-        wp var3 = null;
+    final static IndexedSprite a(int param0, IndexedSprite param1, int[] param2) {
+        IndexedSprite var3 = null;
         RuntimeException var3_ref = null;
-        wp stackIn_2_0 = null;
-        wp stackIn_4_0 = null;
+        IndexedSprite stackIn_2_0 = null;
+        IndexedSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -45,19 +45,19 @@ final class ClientException extends RuntimeException {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new wp(0, 0, 0);
-          var3.field_c = param1.field_c;
-          var3.field_i = param2;
-          var3.field_h = param1.field_h;
-          var3.field_j = param1.field_j;
-          var3.field_a = param1.field_a;
+          var3 = new IndexedSprite(0, 0, 0);
+          var3.trimY = param1.trimY;
+          var3.palette = param2;
+          var3.fullWidth = param1.fullWidth;
+          var3.indices = param1.indices;
+          var3.fullHeight = param1.fullHeight;
           if (param0 != 15810) {
-            stackIn_2_0 = (wp) null;
+            stackIn_2_0 = (IndexedSprite) null;
             return stackIn_2_0;
           }
-          var3.field_b = param1.field_b;
-          var3.field_d = param1.field_d;
-          var3.field_e = param1.field_e;
+          var3.width = param1.width;
+          var3.height = param1.height;
+          var3.trimX = param1.trimX;
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

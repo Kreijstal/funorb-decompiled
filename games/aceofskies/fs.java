@@ -9,14 +9,14 @@ final class fs {
     static long field_a;
     static as field_d;
     private RandomAccessFile field_h;
-    static vd field_e;
+    static SpriteData titleImageData;
     static String field_f;
     static int field_c;
     static String field_g;
 
     public static void a(byte param0) {
         field_f = null;
-        field_e = null;
+        titleImageData = null;
         field_g = null;
         field_d = null;
         if (param0 <= 104) {

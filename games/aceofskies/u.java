@@ -4,7 +4,7 @@
 final class u extends sk {
     private float field_h;
     static mg field_g;
-    static ll[] field_i;
+    static Sprite[] field_i;
     private em field_f;
 
     final void a(boolean param0) {

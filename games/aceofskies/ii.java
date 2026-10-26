@@ -3,7 +3,7 @@
  */
 final class ii extends vo {
     private String field_f;
-    static RenderSprite[][] field_k;
+    static RenderSprite[][] gaugeSprites;
     static String[] field_e;
     private uu field_h;
     static dk field_m;
@@ -26,7 +26,7 @@ final class ii extends vo {
     public static void c(byte param0) {
         field_m = null;
         field_l = null;
-        field_k = (RenderSprite[][]) null;
+        gaugeSprites = (RenderSprite[][]) null;
         field_j = null;
         if (param0 == -22) {
           field_e = null;

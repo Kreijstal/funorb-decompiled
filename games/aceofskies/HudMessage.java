@@ -19,10 +19,10 @@ final class HudMessage extends IntrusiveNode {
 
     final boolean c(byte param0) {
         if (param0 == 47) {
-          return this.ageTicks < this.holdTicks + (kn.field_b.lineAdvance - this.fadeInTicks) ? true : false;
+          return this.ageTicks < this.holdTicks + (kn.bigFontMetrics.lineAdvance - this.fadeInTicks) ? true : false;
         }
         this.colour = -72;
-        return this.ageTicks < this.holdTicks + (kn.field_b.lineAdvance - this.fadeInTicks) ? true : false;
+        return this.ageTicks < this.holdTicks + (kn.bigFontMetrics.lineAdvance - this.fadeInTicks) ? true : false;
     }
 
     final boolean advanceAndIsExpired(int obfuscationGuard) {
@@ -40,11 +40,11 @@ final class HudMessage extends IntrusiveNode {
         if (this.fadeInTicks > this.ageTicks) {
           var2 = (this.ageTicks << 8) / this.fadeInTicks;
           var3 = (-this.ageTicks + this.fadeInTicks) * 80 / this.fadeInTicks;
-          PacketBuffer.field_j.a(122, var2 << 24 | this.colour, -1, var3 + (-50 + gp.field_w), 320, this.text);
+          PacketBuffer.gameFont.drawCenteredText(122, var2 << 24 | this.colour, -1, var3 + (-50 + gp.field_w), 320, this.text);
           return;
         }
         if (this.ageTicks < this.fadeInTicks + this.holdTicks) {
-          PacketBuffer.field_j.a(102, this.colour | -16777216, -1, gp.field_w - 50, 320, this.text);
+          PacketBuffer.gameFont.drawCenteredText(102, this.colour | -16777216, -1, gp.field_w - 50, 320, this.text);
           return;
         }
         var2Lifetime1 = this.ageTicks - this.fadeInTicks - this.holdTicks;
@@ -53,7 +53,7 @@ final class HudMessage extends IntrusiveNode {
           return;
         }
         int var4 = 80 * var2Lifetime1 / this.fadeOutTicks;
-        PacketBuffer.field_j.a(99, this.colour | var3Lifetime1 << 24, -1, exitBottomOffset + (gp.field_w - var4), sh.field_u >> 1, this.text);
+        PacketBuffer.gameFont.drawCenteredText(99, this.colour | var3Lifetime1 << 24, -1, exitBottomOffset + (gp.field_w - var4), sh.field_u >> 1, this.text);
     }
 
     HudMessage(String text, int colour) {

@@ -47,9 +47,9 @@ final class pi extends mi {
         int var10;
         int var11;
         ea var12;
-        ll var13;
-        ll var14;
-        ll var15;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
         var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         super.a((byte) 125, param1, param2, param3);
         if (param1 != 0) {
@@ -66,31 +66,31 @@ final class pi extends mi {
           ce.field_t != var8) {
           if (var8 == bt.field_a) {
             var13 = gu.field_c[2];
-            var13.d(var5 - (var13.field_r >> 1), -(var13.field_n >> 1) + var6, 256);
+            var13.d(var5 - (var13.width >> 1), -(var13.height >> 1) + var6, 256);
             return;
           }
           if (fd.field_a != var8) {
             return;
           }
           var14 = gu.field_c[1];
-          var14.d(-(var14.field_r >> 1) + var5, var6 - (var14.field_n >> 1), 256);
+          var14.d(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
           return;
         }
         var15 = gu.field_c[0];
-        var9 = var15.field_v << 1;
-        var10 = var15.field_q << 1;
+        var9 = var15.fullWidth << 1;
+        var10 = var15.fullHeight << 1;
         if (ms.field_c != null &&
-          ms.field_c.field_r >= var9 &&
-          var10 <= ms.field_c.field_n) {
+          ms.field_c.width >= var9 &&
+          var10 <= ms.field_c.height) {
           cm.a(ms.field_c, -14492);
           SoftwareRasterizer.clearFramebuffer();
         } else {
-          ms.field_c = new ll(var9, var10);
+          ms.field_c = new Sprite(var9, var10);
           cm.a(ms.field_c, -14492);
         }
-        var15.a(112, 144, var15.field_v << 4, var15.field_q << 4, -this.field_y << 10, 4096);
+        var15.a(112, 144, var15.fullWidth << 4, var15.fullHeight << 4, -this.field_y << 10, 4096);
         sl.c(2765);
-        ms.field_c.d(var5 - var15.field_v, -var15.field_q + var6, 256);
+        ms.field_c.d(var5 - var15.fullWidth, -var15.fullHeight + var6, 256);
         return;
     }
 

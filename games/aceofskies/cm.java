@@ -92,13 +92,13 @@ final class cm extends jm {
         }
     }
 
-    final static void a(ll param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         qk.a((byte) -92);
         if (param1 != -14492) {
           return;
         }
         try {
-          SoftwareRasterizer.setRasterTarget(param0.field_x, param0.field_v, param0.field_q);
+          SoftwareRasterizer.setRasterTarget(param0.pixels, param0.fullWidth, param0.fullHeight);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "cm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

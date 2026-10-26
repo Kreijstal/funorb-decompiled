@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rs extends ab implements ue, dn {
-    static int field_t;
+    static int rendererStrikethroughColor;
     static int[] field_B;
     private jq field_y;
     private vq field_A;
@@ -11,7 +11,7 @@ final class rs extends ab implements ue, dn {
     static String field_x;
     static boolean field_C;
     private mi field_z;
-    static RenderSprite[] field_u;
+    static RenderSprite[] medalSprites;
 
     public final void a(byte param0, int param1, vq param2, int param3) {
         RuntimeException var5 = null;
@@ -93,7 +93,7 @@ final class rs extends ab implements ue, dn {
         field_B = null;
         field_w = null;
         field_x = null;
-        field_u = null;
+        medalSprites = null;
         if (param0 != 105) {
           rs.d((byte) -82);
         }
@@ -164,7 +164,7 @@ final class rs extends ab implements ue, dn {
 
     private final String e(byte param0) {
         if (param0 <= 87) {
-          field_t = 19;
+          rendererStrikethroughColor = 19;
           return "</col></u>";
         }
         return "</col></u>";
@@ -179,7 +179,7 @@ final class rs extends ab implements ue, dn {
 
     static {
         field_w = new int[1];
-        field_t = -1;
+        rendererStrikethroughColor = -1;
         field_x = null;
         field_B = new int[8192];
         field_v = -1;

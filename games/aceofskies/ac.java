@@ -8,7 +8,7 @@ final class ac implements gd {
     static String field_d;
     int field_g;
     static jb field_b;
-    static RenderSprite[] field_f;
+    static RenderSprite[] keySprites;
 
     final static void a(int param0, int param1, oc param2) {
         CipherPacketBuffer var5 = q.outgoingPacket;
@@ -34,7 +34,7 @@ final class ac implements gd {
     }
 
     public static void a(int param0) {
-        field_f = null;
+        keySprites = null;
         field_e = null;
         field_b = null;
         field_d = null;

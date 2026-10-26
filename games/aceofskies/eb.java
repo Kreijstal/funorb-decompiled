@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eb {
-    static vd[] field_c;
+    static SpriteData[] counterPanelSpriteData;
     private d field_d;
     private gq field_a;
     private wl field_b;
@@ -432,10 +432,10 @@ final class eb {
     public static void b(int param0) {
         if (param0 != 64) {
           eb.b(-61);
-          field_c = null;
+          counterPanelSpriteData = null;
           return;
         }
-        field_c = null;
+        counterPanelSpriteData = null;
     }
 
     final void a(int param0) {

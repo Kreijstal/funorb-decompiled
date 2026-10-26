@@ -203,7 +203,7 @@ final class FlightSession {
                   }
                   var10 = stackIn_81_0 & stackIn_82_1;
                 }
-                jm.field_a[var8].a(var5, var6);
+                jm.levelRingSprites[var8].a(var5, var6);
                 if (var7 == 6) {
                   if (this.scoreMultiplier <= 50) {
                     stackIn_90_0 = 16777215 | 255 * this.scoreMultiplier / 50 << 24;
@@ -211,11 +211,11 @@ final class FlightSession {
                     stackIn_90_0 = -1;
                   }
                   var11Lifetime1 = stackIn_90_0;
-                  jm.field_a[1 + var8].a(var5, var6, 0, var11Lifetime1, 1);
+                  jm.levelRingSprites[1 + var8].a(var5, var6, 0, var11Lifetime1, 1);
                 }
-                bs.field_b[var7].a(var5, var6);
+                bs.upgradeSprites[var7].a(var5, var6);
                 if (var10 != 0) {
-                  HighscoreQuery.field_o[1].a(var5 - 9, -12 + var6, 0, var9 * 16843009, 2);
+                  HighscoreQuery.powerBulbSprites[1].a(var5 - 9, -12 + var6, 0, var9 * 16843009, 2);
                 }
                 if (this.upgradeFlashTicks[var7] > 0) {
                   var9 = this.upgradeFlashTicks[var7];
@@ -229,7 +229,7 @@ final class FlightSession {
                   var9 = stackIn_104_0;
                   var9 = (-var3_int + 256) * var9 >> 8;
                   if (var9 > 0) {
-                    PacketBuffer.field_j.a(16777215 | var9 << 24, -1, var5 + 55, ii.field_e[var7], obfuscationGuard ^ -1573, 24 + var6);
+                    PacketBuffer.gameFont.drawText(16777215 | var9 << 24, -1, var5 + 55, ii.field_e[var7], obfuscationGuard ^ -1573, 24 + var6);
                   }
                 }
                 var6 += 38;
@@ -250,10 +250,10 @@ final class FlightSession {
                 renderer.d(33, 213, 0, -5782, -65281, -149 + sh.field_u + var4_int);
               }
               var4_int = var6 + (40 * var3_int >> 8);
-              ua.field_g[1].a(-208 + sh.field_u, -var4_int);
+              ua.counterPanelSprites[1].a(-208 + sh.field_u, -var4_int);
               this.drawRollingDigits(this.displayedMultiplier, 3, -var4_int + 4, true, this.multiplierAnimationTicks, this.targetMultiplier, -167 + sh.field_u, true, 10);
               var4_int = 146 * var3_int >> 8;
-              ua.field_g[0].a(sh.field_u - 146 + var4_int, 0);
+              ua.counterPanelSprites[0].a(sh.field_u - 146 + var4_int, 0);
               this.drawRollingDigits(this.displayedScore, 8, 4, false, this.scoreAnimationTicks, this.targetScore, -21 + (sh.field_u + var4_int), false, 10);
               var4_int = 130 * var3_int >> 8;
               this.drawRadar(renderer, var4_int, obfuscationGuard ^ -16732145);
@@ -266,18 +266,18 @@ final class FlightSession {
                   var4_int = var3_int * 80 >> 8;
                   var8 = gp.field_w - 150;
                   var7 = -25 + (sh.field_u + var4_int);
-                  ii.field_k[1][2].a(var7, var8);
+                  ii.gaugeSprites[1][2].a(var7, var8);
                   var5_ref_bo.a(var7 + 20, var7, 124 + var8, -this.displayedWeaponHeat + var8 + 104, 82);
-                  ii.field_k[1][1].a(var7, var8);
+                  ii.gaugeSprites[1][1].a(var7, var8);
                   var5_ref_bo.a(true);
-                  ii.field_k[1][0].a(var7, var8);
+                  ii.gaugeSprites[1][0].a(var7, var8);
                   var7 = var4_int + (sh.field_u - 50);
                   var8 = -150 + gp.field_w;
-                  ii.field_k[0][2].a(var7, var8);
+                  ii.gaugeSprites[0][2].a(var7, var8);
                   var5_ref_bo.a(var7 + 20, var7, var8 + 124, -this.displayedHealthPercent + var8 + 101, -92);
-                  ii.field_k[0][1].a(var7, var8);
+                  ii.gaugeSprites[0][1].a(var7, var8);
                   var5_ref_bo.a(true);
-                  ii.field_k[0][0].a(var7, var8);
+                  ii.gaugeSprites[0][0].a(var7, var8);
                   break;
                 }
                 this.playerAircraft.definition.getSprites(-32275)[4].b(var7, var8, 20, 20);
@@ -289,11 +289,11 @@ final class FlightSession {
                 if (!(var9 < gh.playerDefinition.maximumHitPoints)) {
                   var7 = var4_int + (-80 + sh.field_u);
                   var8 = -151 + gp.field_w;
-                  ii.field_k[2][3].a(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
+                  ii.gaugeSprites[2][3].a(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
                   var5_ref_bo.a(30 + var7, var7, 135 + var8, -this.displayedTemporaryWeaponTicks + (103 + var8), obfuscationGuard + 20115);
-                  ii.field_k[2][2].a(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
+                  ii.gaugeSprites[2][2].a(var7, var8, 0, 16777215 | this.temporaryWeaponOpacity << 24, 1);
                   var5_ref_bo.a(true);
-                  ii.field_k[2][1].a(var7, var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
+                  ii.gaugeSprites[2][1].a(var7, var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
                   var9 = (int)((1.0 + Math.sin((double)this.simulationTick * 3.141592653589793 / 20.0)) * (double)this.temporaryWeaponOpacity / 2.0);
                   break;
                 }
@@ -313,10 +313,10 @@ final class FlightSession {
                 stackIn_136_5 = 0;
               }
               ((bo) (Object) stackIn_135_0).a(stackIn_135_1, stackIn_135_2, stackIn_135_3, stackIn_135_4 - stackIn_136_5, 100);
-              ii.field_k[2][0].a(var7, var8, 0, 16843009 * var9, 2);
+              ii.gaugeSprites[2][0].a(var7, var8, 0, 16843009 * var9, 2);
               var5_ref_bo.a(true);
               if (this.displayedTemporaryWeaponType > 0) {
-                po.field_e[-1 + this.displayedTemporaryWeaponType].a(var7 + 7, 104 + var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
+                po.powerIconSprites[-1 + this.displayedTemporaryWeaponType].a(var7 + 7, 104 + var8, 0, this.temporaryWeaponOpacity << 24 | 16777215, 1);
               }
             }
           }
@@ -368,7 +368,7 @@ final class FlightSession {
           }
           if (stackIn_173_0 != 0 &&
             this.manualMusicLayers) {
-            PacketBuffer.field_j.a(119, -16711936, -16777216, 50, sh.field_u - 20, Integer.toString(this.musicLayerPresetIndex));
+            PacketBuffer.gameFont.drawCenteredText(119, -16711936, -16777216, 50, sh.field_u - 20, Integer.toString(this.musicLayerPresetIndex));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1463,18 +1463,18 @@ final class FlightSession {
               }
             }
             skipZeroSuppression = 0;
-            in.field_c[targetGlyphIndex].a(right, top);
-            in.field_c[settledGlyphIndex + 11].a(right, 10 + top);
+            in.scoreDigitSprites[targetGlyphIndex].a(right, top);
+            in.scoreDigitSprites[settledGlyphIndex + 11].a(right, 10 + top);
             do {
               if (~targetGlyphIndex != ~settledGlyphIndex) {
                 boolean drawSettledFold = !(foldHeight >= 0);
                 if (!drawSettledFold) {
-                  in.field_c[11 + targetGlyphIndex].b(right, 10 + top, 16, foldHeight);
+                  in.scoreDigitSprites[11 + targetGlyphIndex].b(right, 10 + top, 16, foldHeight);
                   renderer.d(foldHeight, 16, top + 10, -5782, shadeAlpha << 24 | 16777215, right);
                   drawSettledFold = (obfuscationControl != 0);
                 }
                 if (drawSettledFold) {
-                  in.field_c[settledGlyphIndex].b(right, foldHeight + 10 + top, 16, -foldHeight);
+                  in.scoreDigitSprites[settledGlyphIndex].b(right, foldHeight + 10 + top, 16, -foldHeight);
                   renderer.d(-foldHeight, 16, top + 10 + foldHeight, -5782, (shadeAlpha | -739482368) << 24, right);
                 }
               }
@@ -3296,9 +3296,9 @@ final class FlightSession {
         try {
           var4_int = -insetOffset + 64;
           var5 = -64 + gp.field_w + insetOffset;
-          ec.field_e[0].a(3 - insetOffset, insetOffset + (-126 + gp.field_w));
+          ec.radarSprites[0].a(3 - insetOffset, insetOffset + (-126 + gp.field_w));
           var6 = 7 * -this.simulationTick & 511;
-          ec.field_e[1].a((float)var4_int, (float)var5, 4096, 65536 * var6 / 511);
+          ec.radarSprites[1].a((float)var4_int, (float)var5, 4096, 65536 * var6 / 511);
           if (obfuscationGuard != 16711935) {
             return;
           }
@@ -4033,7 +4033,7 @@ final class FlightSession {
                   var22_ref4 = this.bullets[var21Lifetime2];
                   var23Lifetime3 = (int)(var13 + (var22_ref4.position.x + this.cameraLookAheadX) * var3);
                   var24Lifetime2 = (int)(var3 * (var22_ref4.position.y + this.cameraLookAheadY) + var15);
-                  dc.field_g.a((float)var23Lifetime3, (float)var24Lifetime2, (int)((double)(var22_ref4.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4.heading));
+                  dc.bulletSprite.a((float)var23Lifetime3, (float)var24Lifetime2, (int)((double)(var22_ref4.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4.heading));
                   var21Lifetime2++;
                   break scanLoop4;
                 }
@@ -4053,9 +4053,9 @@ final class FlightSession {
                   var26Lifetime1 = var26Lifetime1 * (-var22_ref3.remainingTicks + 400) / 15;
                 }
                 if (0 > var22_ref3.remainingTicks) {
-                  Pickup.field_i[var22_ref3.pickupCode].a((float)var24Lifetime2, (float)var25Lifetime2, var26Lifetime1, var22_ref3.remainingTicks * 20, 0, -16777216 | 190 * var23Lifetime3 / 92 * 65793, 1);
+                  Pickup.powerchuteSprites[var22_ref3.pickupCode].a((float)var24Lifetime2, (float)var25Lifetime2, var26Lifetime1, var22_ref3.remainingTicks * 20, 0, -16777216 | 190 * var23Lifetime3 / 92 * 65793, 1);
                 } else {
-                  Pickup.field_i[var22_ref3.pickupCode].a((float)var24Lifetime2, (float)var25Lifetime2, var26Lifetime1, 20 * var22_ref3.remainingTicks);
+                  Pickup.powerchuteSprites[var22_ref3.pickupCode].a((float)var24Lifetime2, (float)var25Lifetime2, var26Lifetime1, 20 * var22_ref3.remainingTicks);
                 }
                 var21Lifetime2++;
                 continue;
@@ -4072,7 +4072,7 @@ final class FlightSession {
                 var22_ref4Lifetime1 = this.bullets[var21Lifetime2];
                 var23Lifetime3Lifetime1 = (int)(var13 + (var22_ref4Lifetime1.position.x + this.cameraLookAheadX) * var3);
                 var24Lifetime2 = (int)(var3 * (var22_ref4Lifetime1.position.y + this.cameraLookAheadY) + var15);
-                dc.field_g.a((float)var23Lifetime3Lifetime1, (float)var24Lifetime2, (int)((double)(var22_ref4Lifetime1.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4Lifetime1.heading));
+                dc.bulletSprite.a((float)var23Lifetime3Lifetime1, (float)var24Lifetime2, (int)((double)(var22_ref4Lifetime1.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4Lifetime1.heading));
                 var21Lifetime2++;
                 if (var28 != 0) {
                   break scanLoop4;

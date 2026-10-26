@@ -3,11 +3,11 @@
  */
 final class dc extends aa {
     static int field_f;
-    static RenderSprite field_g;
+    static RenderSprite bulletSprite;
     el field_e;
 
     public static void c(int param0) {
-        field_g = null;
+        bulletSprite = null;
         if (param0 != -58) {
           dc.c(33);
         }

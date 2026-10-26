@@ -3,7 +3,7 @@
  */
 class sl extends qm {
     static AircraftDefinition field_p;
-    static wp[] field_o;
+    static IndexedSprite[] field_o;
     static String field_q;
     static String field_n;
 

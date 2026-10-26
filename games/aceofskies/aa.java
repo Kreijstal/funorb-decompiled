@@ -5,7 +5,7 @@ abstract class aa {
     static MenuScreen[] menuScreens;
     static int[] field_c;
     static String field_d;
-    static RenderSprite[] field_a;
+    static RenderSprite[] achievementSprites;
 
     protected aa() throws Throwable {
         throw new Error();
@@ -14,13 +14,13 @@ abstract class aa {
     public static void a(int param0) {
         menuScreens = null;
         if (param0 == 0) {
-          field_a = null;
+          achievementSprites = null;
           field_c = null;
           field_d = null;
           return;
         }
         aa.b(-69);
-        field_a = null;
+        achievementSprites = null;
         field_c = null;
         field_d = null;
     }

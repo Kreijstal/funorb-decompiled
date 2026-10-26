@@ -44,7 +44,7 @@ final class ScorchMark {
         }
     }
 
-    final static ll[] a(ResourceArchive param0, int param1, byte param2, int param3) {
+    final static Sprite[] a(ResourceArchive param0, int param1, byte param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

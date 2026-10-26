@@ -2329,7 +2329,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "no_highscores");
                 if (var2 != null) {
-                  df.field_g = ea.a(0, var2);
+                  IndexedSpriteState.field_g = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "hs_name");
                 if (null != var2) {

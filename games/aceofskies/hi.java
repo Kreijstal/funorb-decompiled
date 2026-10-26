@@ -3,7 +3,7 @@
  */
 final class hi extends to {
     int field_u;
-    static BitmapFontMetrics field_v;
+    static BitmapFontMetrics gameFontMetrics;
     static String field_x;
     static int field_w;
 
@@ -11,7 +11,7 @@ final class hi extends to {
         if (param0 > -40) {
           return;
         }
-        field_v = null;
+        gameFontMetrics = null;
         field_x = null;
     }
 
@@ -85,7 +85,7 @@ final class hi extends to {
           this.field_s.a((byte) 69, param1, this.field_h + param2, this.field_p + param3);
           return;
         }
-        ll var6 = new ll(this.field_s.field_q, this.field_s.field_n);
+        Sprite var6 = new Sprite(this.field_s.field_q, this.field_s.field_n);
         cm.a(var6, -14492);
         this.field_s.a((byte) 90, param1, 0, 0);
         sl.c(2765);
@@ -93,7 +93,7 @@ final class hi extends to {
         if (param0 >= 64) {
           return;
         }
-        field_v = (BitmapFontMetrics) null;
+        gameFontMetrics = (BitmapFontMetrics) null;
     }
 
     final static void j(int param0) {

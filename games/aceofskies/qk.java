@@ -3,11 +3,11 @@
  */
 final class qk {
     static wd field_e;
-    static RenderSprite field_i;
+    static RenderSprite woodenTileSprite;
     static String field_f;
     static int field_g;
     private DualLinkNode field_b;
-    static vd[] field_a;
+    static SpriteData[] brassSliderSpriteData;
     private er field_d;
     private int field_c;
     private IntrusiveNodeHashTable field_h;
@@ -24,7 +24,7 @@ final class qk {
         }
     }
 
-    final static ll[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -32,11 +32,11 @@ final class qk {
         int stackIn_35_0 = 0;
         int stackIn_46_0 = 0;
         int var9 = 0;
-        ll[] var10 = null;
-        ll[] var11_ref_ll__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_ll__ = null;
         int var11 = 0;
         int var12 = 0;
-        ll var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -46,7 +46,7 @@ final class qk {
         int var12Lifetime2Lifetime2;
         var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         var9 = param4 + (param1 + param5);
-        var10 = new ll[]{new ll(var9, var9), new ll(param0, var9), new ll(var9, var9), new ll(var9, param0), new ll(64, 64), new ll(var9, param0), new ll(var9, var9), new ll(param0, var9), new ll(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9), new Sprite(var9, param0), new Sprite(64, 64), new Sprite(var9, param0), new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9)};
         var11_ref_ll__ = var10;
         var12 = 0;
         scanLoop1: while (true) {
@@ -57,8 +57,8 @@ final class qk {
               break scanLoop1;
             }
             var14 = stackIn_11_0;
-            while (var14 < var13.field_x.length) {
-              var13.field_x[var14] = param8;
+            while (var14 < var13.pixels.length) {
+              var13.pixels[var14] = param8;
               var14++;
             }
             var12++;
@@ -76,10 +76,10 @@ final class qk {
             }
             var12Lifetime1 = stackIn_22_0;
             while (var12Lifetime1 < var9) {
-              var10[6].field_x[var9 * (-var11 + (var9 - 1)) + var12Lifetime1] = param2;
-              var10[8].field_x[(-var11 + (var9 - 1)) * var9 + var12Lifetime1] = param2;
-              var10[2].field_x[-var11 + var9 + (-1 + var12Lifetime1 * var9)] = param2;
-              var10[8].field_x[-var11 - (-var9 + 1) + var12Lifetime1 * var9] = param2;
+              var10[6].pixels[var9 * (-var11 + (var9 - 1)) + var12Lifetime1] = param2;
+              var10[8].pixels[(-var11 + (var9 - 1)) * var9 + var12Lifetime1] = param2;
+              var10[2].pixels[-var11 + var9 + (-1 + var12Lifetime1 * var9)] = param2;
+              var10[8].pixels[-var11 - (-var9 + 1) + var12Lifetime1 * var9] = param2;
               var12Lifetime1++;
             }
             var11++;
@@ -97,13 +97,13 @@ final class qk {
             if (var15 == 0) {
               var12Lifetime2 = stackIn_35_0;
               while (var9 > var12Lifetime2) {
-                var10[0].field_x[var11Lifetime1 * var9 + var12Lifetime2] = param3;
-                var10[0].field_x[var11Lifetime1 + var12Lifetime2 * var9] = param3;
+                var10[0].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
+                var10[0].pixels[var11Lifetime1 + var12Lifetime2 * var9] = param3;
                 stackIn_24_0 = ~(var9 - var11Lifetime1);
                 stackIn_24_1 = ~var12Lifetime2;
                 if (stackIn_24_0 < stackIn_24_1) {
-                  var10[2].field_x[var11Lifetime1 * var9 + var12Lifetime2] = param3;
-                  var10[6].field_x[var11Lifetime1 + var9 * var12Lifetime2] = param3;
+                  var10[2].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
+                  var10[6].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param3;
                 }
                 var12Lifetime2++;
               }
@@ -122,10 +122,10 @@ final class qk {
               }
               var12Lifetime2Lifetime1 = stackIn_46_0;
               while (param4 > var12Lifetime2Lifetime1) {
-                var10[7].field_x[(-1 - var12Lifetime2Lifetime1 + var9) * param0 + var11Lifetime1] = param2;
-                var10[5].field_x[-var12Lifetime2Lifetime1 - (-var9 + 1 - var11Lifetime1 * var9)] = param2;
-                var10[1].field_x[var12Lifetime2Lifetime1 * param0 + var11Lifetime1] = param3;
-                var10[3].field_x[var9 * var11Lifetime1 + var12Lifetime2Lifetime1] = param3;
+                var10[7].pixels[(-1 - var12Lifetime2Lifetime1 + var9) * param0 + var11Lifetime1] = param2;
+                var10[5].pixels[-var12Lifetime2Lifetime1 - (-var9 + 1 - var11Lifetime1 * var9)] = param2;
+                var10[1].pixels[var12Lifetime2Lifetime1 * param0 + var11Lifetime1] = param3;
+                var10[3].pixels[var9 * var11Lifetime1 + var12Lifetime2Lifetime1] = param3;
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
@@ -142,10 +142,10 @@ final class qk {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param5 > var12Lifetime2Lifetime2) {
-                var10[1].field_x[var11Lifetime1 + (-1 + (-var12Lifetime2Lifetime2 + var9)) * param0] = param6;
-                var10[3].field_x[var9 * var11Lifetime1 - 1 + (var9 - var12Lifetime2Lifetime2)] = param6;
-                var10[7].field_x[var12Lifetime2Lifetime2 * param0 + var11Lifetime1] = param6;
-                var10[5].field_x[var9 * var11Lifetime1 + var12Lifetime2Lifetime2] = param6;
+                var10[1].pixels[var11Lifetime1 + (-1 + (-var12Lifetime2Lifetime2 + var9)) * param0] = param6;
+                var10[3].pixels[var9 * var11Lifetime1 - 1 + (var9 - var12Lifetime2Lifetime2)] = param6;
+                var10[7].pixels[var12Lifetime2Lifetime2 * param0 + var11Lifetime1] = param6;
+                var10[5].pixels[var9 * var11Lifetime1 + var12Lifetime2Lifetime2] = param6;
                 var12Lifetime2Lifetime2++;
                 if (var15 == 0) {
                   continue;
@@ -165,13 +165,13 @@ final class qk {
     }
 
     public static void a(int param0) {
-        field_a = null;
+        brassSliderSpriteData = null;
         if (param0 != 0) {
           return;
         }
         field_e = null;
         field_f = null;
-        field_i = null;
+        woodenTileSprite = null;
     }
 
     final void a(DualLinkNode param0, int param1, long param2) {

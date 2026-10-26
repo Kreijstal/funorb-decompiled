@@ -15,7 +15,7 @@ abstract class ua implements kt {
     private int field_n;
     static bs field_d;
     static int[][] menuActions;
-    static RenderSprite[] field_g;
+    static RenderSprite[] counterPanelSprites;
 
     final jaclib.memory.Buffer a(jaggl.MapBuffer param0, boolean param1, int param2) {
         RuntimeException var4 = null;
@@ -99,7 +99,7 @@ abstract class ua implements kt {
         menuActions = (int[][]) null;
         field_d = null;
         field_h = null;
-        field_g = null;
+        counterPanelSprites = null;
         field_c = null;
         int var1 = -51 / ((param0 - 59) / 37);
     }

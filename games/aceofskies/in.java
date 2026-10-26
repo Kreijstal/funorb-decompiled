@@ -4,7 +4,7 @@
 final class in {
     static int[] field_b;
     long field_d;
-    static RenderSprite[] field_c;
+    static RenderSprite[] scoreDigitSprites;
     private wl field_a;
 
     public static void a(boolean param0) {
@@ -12,7 +12,7 @@ final class in {
           field_b = (int[]) null;
         }
         field_b = null;
-        field_c = null;
+        scoreDigitSprites = null;
     }
 
     protected final void finalize() throws Throwable {
@@ -73,7 +73,7 @@ final class in {
             return stackIn_12_0;
           }
           if (param0 < 124) {
-            field_c = (RenderSprite[]) null;
+            scoreDigitSprites = (RenderSprite[]) null;
           }
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {

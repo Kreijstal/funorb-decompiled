@@ -6,7 +6,7 @@ import java.util.*;
 final class qq {
     int field_f;
     static AircraftDefinition field_g;
-    static vd[] field_e;
+    static SpriteData[] upgradeSpriteData;
     String field_c;
     String field_a;
     String field_b;
@@ -14,7 +14,7 @@ final class qq {
 
     final static int a(int param0, int param1) {
         if (param0 != 20) {
-          field_e = (vd[]) null;
+          upgradeSpriteData = (SpriteData[]) null;
           return bs.a(-1, ci.gameRandom, param1);
         }
         return bs.a(-1, ci.gameRandom, param1);
@@ -24,10 +24,10 @@ final class qq {
         field_g = null;
         if (param0 < 35) {
           field_g = (AircraftDefinition) null;
-          field_e = null;
+          upgradeSpriteData = null;
           return;
         }
-        field_e = null;
+        upgradeSpriteData = null;
     }
 
     final static void a(byte param0) {
@@ -61,7 +61,7 @@ final class qq {
           du.menuActionLabels[9] = tq.field_e[1];
           return;
         }
-        field_e = (vd[]) null;
+        upgradeSpriteData = (SpriteData[]) null;
         du.menuActionLabels[18] = so.field_c;
         du.menuActionLabels[10] = tq.field_e[2];
         du.menuActionLabels[21] = ki.field_c;

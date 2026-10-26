@@ -6,7 +6,7 @@ final class po extends ka {
     private int field_g;
     private am field_b;
     private am field_k;
-    static RenderSprite[] field_e;
+    static RenderSprite[] powerIconSprites;
     private int field_d;
     private am field_c;
     static int activeMenuId;
@@ -196,7 +196,7 @@ final class po extends ka {
     }
 
     public static void c(int param0) {
-        field_e = null;
+        powerIconSprites = null;
         if (param0 != -30534) {
           activeMenuId = 87;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ko extends pm {
-    static RenderSprite[] field_g;
+    static RenderSprite[] brassFrameSprites;
     static int field_f;
 
     ko(long param0, String param1) {
@@ -66,7 +66,7 @@ final class ko extends pm {
     }
 
     public static void c(int param0) {
-        field_g = null;
+        brassFrameSprites = null;
         if (param0 != 0) {
           PacketBuffer var2 = (PacketBuffer) null;
           ko.a((PacketBuffer) null, 0, (byte) -22);

@@ -223,12 +223,12 @@ final class vi extends qm {
         }
     }
 
-    final void a(byte param0, ll param1) {
+    final void a(byte param0, Sprite param1) {
         int var4 = 0;
         sc[] var3 = null;
         sc var5 = null;
         int var6 = 0;
-        ll[] var7 = null;
+        Sprite[] var7 = null;
         sc[] var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -246,8 +246,8 @@ final class vi extends qm {
             }
           }
           if (param0 != -90) {
-            var7 = (ll[]) null;
-            this.a(65, (ll[]) null);
+            var7 = (Sprite[]) null;
+            this.a(65, (Sprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -264,7 +264,7 @@ final class vi extends qm {
         }
     }
 
-    final void a(int param0, int param1, ll[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           var4_int = param0;
@@ -289,12 +289,12 @@ final class vi extends qm {
         }
     }
 
-    final void a(int param0, ll[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         sc[] var3 = null;
         sc var5 = null;
         int var6 = 0;
-        ll var7 = null;
+        Sprite var7 = null;
         sc[] var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -312,8 +312,8 @@ final class vi extends qm {
             }
           }
           if (param0 > -32) {
-            var7 = (ll) null;
-            this.a((byte) -114, (ll) null);
+            var7 = (Sprite) null;
+            this.a((byte) -114, (Sprite) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

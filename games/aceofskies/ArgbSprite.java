@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd extends ll {
+final class ArgbSprite extends Sprite {
     final void b(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_p;
+        param0 = param0 + this.trimX;
+        param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
         int var5 = 0;
-        int var6 = this.field_n;
-        int var7 = this.field_r;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -43,19 +43,19 @@ final class rd extends ll {
           var6 <= 0) {
           return;
         }
-        rd.c(SoftwareRasterizer.framebuffer, this.field_x, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void d(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_p;
+        param0 = param0 + this.trimX;
+        param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
         int var5 = 0;
-        int var6 = this.field_n;
-        int var7 = this.field_r;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -87,19 +87,19 @@ final class rd extends ll {
           var6 <= 0) {
           return;
         }
-        rd.b(0, 0, 0, SoftwareRasterizer.framebuffer, this.field_x, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.b(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_p;
+        param0 = param0 + this.trimX;
+        param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
         int var4 = 0;
-        int var5 = this.field_n;
-        int var6 = this.field_r;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -131,15 +131,15 @@ final class rd extends ll {
           var5 <= 0) {
           return;
         }
-        rd.c(SoftwareRasterizer.framebuffer, this.field_x, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    rd(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
-        super(param0, param1, param2, param3, param4, param5, param6);
+    ArgbSprite(int fullWidth, int fullHeight, int trimX, int trimY, int width, int height, int[] pixels) {
+        super(fullWidth, fullHeight, trimX, trimY, width, height, pixels);
     }
 
-    rd(int param0, int param1) {
-        super(param0, param1);
+    ArgbSprite(int width, int height) {
+        super(width, height);
     }
 
     private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -198,10 +198,10 @@ final class rd extends ll {
         int var13Lifetime1;
         int var14Lifetime1;
         int var19Lifetime1;
-        var3 = this.field_r >> 1;
-        var4 = this.field_n >> 1;
-        param0 = param0 + this.field_u / 2;
-        param1 = param1 + this.field_p / 2;
+        var3 = this.width >> 1;
+        var4 = this.height >> 1;
+        param0 = param0 + this.trimX / 2;
+        param1 = param1 + this.trimY / 2;
         if (param0 >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
@@ -209,7 +209,7 @@ final class rd extends ll {
         }
         var5 = stackIn_3_0;
         if (param0 + var3 <= SoftwareRasterizer.clipRight) {
-          stackIn_6_0 = this.field_r - 2;
+          stackIn_6_0 = this.width - 2;
         } else {
           stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 1) - 2;
         }
@@ -221,13 +221,13 @@ final class rd extends ll {
         }
         var7 = stackIn_9_0;
         if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
-          stackIn_12_0 = this.field_n - 2;
+          stackIn_12_0 = this.height - 2;
         } else {
           stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
-          var10 = var9 * this.field_r + var5;
+          var10 = var9 * this.width + var5;
           var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.stride + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
@@ -238,12 +238,12 @@ final class rd extends ll {
             var17 = 0;
             var18 = 0;
             for (var19 = 0; var19 < 4; var19++) {
-              stackIn_20_0 = this.field_x;
+              stackIn_20_0 = this.pixels;
               stackIn_20_1 = var10 + (var19 & 1);
               if ((var19 & 2) != 0) {
                 stackIn_21_2 = 0;
               } else {
-                stackIn_21_2 = this.field_r;
+                stackIn_21_2 = this.width;
               }
               var13Lifetime1 = stackIn_20_0[stackIn_20_1 + stackIn_21_2];
               var14Lifetime1 = var13Lifetime1 >>> 24;
@@ -294,12 +294,12 @@ final class rd extends ll {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_p;
+        param0 = param0 + this.trimX;
+        param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
         int var5 = 0;
-        int var6 = this.field_n;
-        int var7 = this.field_r;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -331,7 +331,7 @@ final class rd extends ll {
           var6 <= 0) {
           return;
         }
-        rd.d(SoftwareRasterizer.framebuffer, this.field_x, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.d(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -420,12 +420,12 @@ final class rd extends ll {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_p;
+        param0 = param0 + this.trimX;
+        param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
         int var4 = 0;
-        int var5 = this.field_n;
-        int var6 = this.field_r;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -457,6 +457,6 @@ final class rd extends ll {
           var5 <= 0) {
           return;
         }
-        rd.c(SoftwareRasterizer.framebuffer, this.field_x, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 }

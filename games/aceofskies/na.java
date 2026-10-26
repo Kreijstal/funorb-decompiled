@@ -3,18 +3,18 @@
  */
 final class na {
     static volatile boolean field_a;
-    static ll field_b;
-    static vd[] field_c;
+    static Sprite field_b;
+    static SpriteData[] cloudSpriteData;
     private static String field_z;
 
     public static void a(int param0) {
         if (param0 != 6481) {
           na.a(36);
-          field_c = null;
+          cloudSpriteData = null;
           field_b = null;
           return;
         }
-        field_c = null;
+        cloudSpriteData = null;
         field_b = null;
     }
 

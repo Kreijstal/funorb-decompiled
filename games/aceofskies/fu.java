@@ -26,7 +26,7 @@ abstract class fu {
         return new int[8];
     }
 
-    final static ll b(int param0) {
+    final static Sprite b(int param0) {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var1 = ee.field_e[0] * ji.field_b[0];
         byte[] var2 = fk.field_a[0];
@@ -39,7 +39,7 @@ abstract class fu {
           var3[var4_int] = ud.field_e[pg.a((int) var2[var4_int], 255)];
           var4_int++;
         }
-        ll var4 = new ll(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
+        Sprite var4 = new Sprite(pu.field_a, cc.field_i, lh.field_a[0], lg.field_j[0], ji.field_b[0], ee.field_e[0], var3);
         kf.f(1);
         return var4;
     }

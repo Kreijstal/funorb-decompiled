@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class tf {
-    static int field_a;
+    static int rendererDefaultTextColor;
     static int field_b;
     private static String field_z;
 
@@ -24,6 +24,6 @@ abstract class tf {
 
     static {
         field_z = "tf.A(";
-        field_a = 0;
+        rendererDefaultTextColor = 0;
     }
 }

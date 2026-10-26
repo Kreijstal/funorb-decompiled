@@ -15,7 +15,7 @@ final class wd extends ab implements ue, dn, bh {
     private kk field_y;
     private mi field_A;
     private mi field_w;
-    static ll field_v;
+    static Sprite field_v;
 
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
         boolean discarded$0 = false;
@@ -519,6 +519,6 @@ final class wd extends ab implements ue, dn, bh {
     static {
         field_G = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
         hudMessages = new IntrusiveDeque();
-        field_v = new ll(540, 140);
+        field_v = new Sprite(540, 140);
     }
 }

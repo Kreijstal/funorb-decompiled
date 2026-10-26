@@ -4,14 +4,14 @@
 abstract class af {
     static String[] field_b;
     static String field_a;
-    static vd[] field_c;
+    static SpriteData[] medalSpriteData;
     private static String field_z;
 
     public static void a(int param0) {
         field_a = null;
         int var1 = -94 / ((param0 + 42) / 41);
         field_b = null;
-        field_c = null;
+        medalSpriteData = null;
     }
 
     abstract byte[] a(int param0, int param1, int param2);

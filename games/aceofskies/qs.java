@@ -50,7 +50,7 @@ final class qs {
               }
             }
             we.field_c = ik.field_k;
-            nl.field_o = rs.field_v;
+            SpriteState.field_o = rs.field_v;
             if (param1 != null) {
               ht.field_g = false;
             } else {
@@ -63,7 +63,7 @@ final class qs {
             ScreenParticle.field_o < jp.field_b &&
             uu.pointerMoved) {
             we.field_c = ik.field_k;
-            nl.field_o = rs.field_v;
+            SpriteState.field_o = rs.field_v;
             ScreenParticle.field_o = 0;
           }
           qj.field_s = param1;

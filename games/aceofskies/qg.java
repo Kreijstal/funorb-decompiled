@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class qg {
-    static int field_c;
+    static int rendererCurrentTextColor;
     static String field_b;
     static int[] field_e;
     static float[] field_a;
     static mg field_d;
 
-    final static ll[] a(byte param0, ResourceArchive param1, String param2, String param3) {
+    final static Sprite[] a(byte param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ll[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -76,7 +76,7 @@ abstract class qg {
     }
 
     static {
-        field_c = 0;
+        rendererCurrentTextColor = 0;
         field_b = "Click";
         field_a = new float[16];
         field_e = new int[12];
