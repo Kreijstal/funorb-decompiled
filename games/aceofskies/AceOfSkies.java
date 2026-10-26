@@ -15,7 +15,7 @@ public final class AceOfSkies extends NetworkGameClient {
         }
     }
 
-    private final boolean a(byte param0, boolean param1) {
+    private final boolean advanceResourceLoading(byte obfuscationGuard, boolean initializeAfterDownload) {
         Object stackIn_109_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
@@ -26,114 +26,114 @@ public final class AceOfSkies extends NetworkGameClient {
         var5 = obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var3_int = -35 / ((param0 - 1) / 48);
+          var3_int = -35 / ((obfuscationGuard - 1) / 48);
           qq.a((byte) -100);
-          if (jk.field_b != null) {
-            if (hg.field_x.b((byte) 95) &&
-              hg.field_x.c("basic", -14012)) {
-              if (!hg.field_x.c("arialbold14", -14012)) {
-                fh.a(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.field_x, 13525, ks.field_c));
+          if (jk.synthesizedSoundArchive != null) {
+            if (hg.sharedSpriteArchive.b((byte) 95) &&
+              hg.sharedSpriteArchive.c("basic", -14012)) {
+              if (!hg.sharedSpriteArchive.c("arialbold14", -14012)) {
+                fh.setLoadingProgress(-124, 4.0f, qo.a(bk.field_g, "arialbold14", hg.sharedSpriteArchive, 13525, ks.field_c));
                 return false;
               }
-              if (fg.field_t.b((byte) -119) &&
-                fg.field_t.c("arialbold14", -14012)) {
-                if (!hg.field_x.c("arial13", -14012)) {
-                  fh.a(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.field_x, 13525, ks.field_c));
+              if (fg.sharedFontMetricsArchive.b((byte) -119) &&
+                fg.sharedFontMetricsArchive.c("arialbold14", -14012)) {
+                if (!hg.sharedSpriteArchive.c("arial13", -14012)) {
+                  fh.setLoadingProgress(-65, 4.0f, qo.a(bk.field_g, "arial13", hg.sharedSpriteArchive, 13525, ks.field_c));
                   return false;
                 }
-                if (fg.field_t.b((byte) -127) &&
-                  fg.field_t.c("arial13", -14012)) {
-                  if (jk.field_b.b((byte) 100) &&
-                    jk.field_b.b(0)) {
-                    if (ub.field_f.b((byte) -73) &&
-                      ub.field_f.b(0)) {
-                      if (ot.field_b.b((byte) 87) &&
-                        ot.field_b.b(0)) {
-                        if (od.field_x.b((byte) -57) &&
-                          od.field_x.b(0)) {
-                          if (wi.field_a.b((byte) 92) &&
-                            wi.field_a.b(0)) {
-                            if (iq.field_e.b((byte) -111) &&
-                              iq.field_e.b(0)) {
-                              fh.a(-112, 65.0f, er.field_c);
+                if (fg.sharedFontMetricsArchive.b((byte) -127) &&
+                  fg.sharedFontMetricsArchive.c("arial13", -14012)) {
+                  if (jk.synthesizedSoundArchive.b((byte) 100) &&
+                    jk.synthesizedSoundArchive.b(0)) {
+                    if (ub.vorbisSoundArchive.b((byte) -73) &&
+                      ub.vorbisSoundArchive.b(0)) {
+                      if (ot.musicPatchArchive.b((byte) 87) &&
+                        ot.musicPatchArchive.b(0)) {
+                        if (od.musicTrackArchive.b((byte) -57) &&
+                          od.musicTrackArchive.b(0)) {
+                          if (wi.gameSpriteArchive.b((byte) 92) &&
+                            wi.gameSpriteArchive.b(0)) {
+                            if (iq.gameFontMetricsArchive.b((byte) -111) &&
+                              iq.gameFontMetricsArchive.b(0)) {
+                              fh.setLoadingProgress(-112, 65.0f, er.field_c);
                               this.renderGame(150);
-                              decompiledFrameRemainder0 = !(param1);
+                              decompiledFrameRemainder0 = !(initializeAfterDownload);
                               if (decompiledFrameRemainder0) {
                                 return false;
                               }
                             }
                             if (decompiledFrameRemainder0) {
-                              fh.a(-117, 55.0f, qo.a(bk.field_g, "", iq.field_e, 13525, ks.field_c));
+                              fh.setLoadingProgress(-117, 55.0f, qo.a(bk.field_g, "", iq.gameFontMetricsArchive, 13525, ks.field_c));
                               return false;
                             }
                           }
                           if (decompiledFrameRemainder0) {
-                            fh.a(-91, 45.0f, qo.a(co.field_j, "", wi.field_a, 13525, lm.field_b));
+                            fh.setLoadingProgress(-91, 45.0f, qo.a(co.field_j, "", wi.gameSpriteArchive, 13525, lm.field_b));
                             return false;
                           }
                         }
                         if (decompiledFrameRemainder0) {
-                          fh.a(-65, 40.0f, qo.a(rq.field_a, "", od.field_x, 13525, ei.field_c));
+                          fh.setLoadingProgress(-65, 40.0f, qo.a(rq.field_a, "", od.musicTrackArchive, 13525, ei.field_c));
                           return false;
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        fh.a(-117, 30.0f, SmokeParticle.a(ff.field_a, 0, fn.field_b, ot.field_b, 81));
+                        fh.setLoadingProgress(-117, 30.0f, SmokeParticle.a(ff.field_a, 0, fn.field_b, ot.musicPatchArchive, 81));
                         return false;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      fh.a(-99, 20.0f, qo.a(pr.field_a, "", ub.field_f, 13525, ResourceArchive.field_c));
+                      fh.setLoadingProgress(-99, 20.0f, qo.a(pr.field_a, "", ub.vorbisSoundArchive, 13525, ResourceArchive.field_c));
                       return false;
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    fh.a(-86, 10.0f, qo.a(pr.field_a, "", jk.field_b, 13525, ResourceArchive.field_c));
+                    fh.setLoadingProgress(-86, 10.0f, qo.a(pr.field_a, "", jk.synthesizedSoundArchive, 13525, ResourceArchive.field_c));
                     return false;
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  fh.a(-46, 5.0f, qo.a(bk.field_g, "arial13", fg.field_t, 13525, ks.field_c));
+                  fh.setLoadingProgress(-46, 5.0f, qo.a(bk.field_g, "arial13", fg.sharedFontMetricsArchive, 13525, ks.field_c));
                   return false;
                 }
               }
               if (decompiledFrameRemainder0) {
-                fh.a(-86, 5.0f, qo.a(bk.field_g, "arialbold14", fg.field_t, 13525, ks.field_c));
+                fh.setLoadingProgress(-86, 5.0f, qo.a(bk.field_g, "arialbold14", fg.sharedFontMetricsArchive, 13525, ks.field_c));
                 return false;
               }
             }
             if (decompiledFrameRemainder0) {
-              fh.a(-110, 3.0f, qo.a(co.field_j, "basic", hg.field_x, 13525, lm.field_b));
+              fh.setLoadingProgress(-110, 3.0f, qo.a(co.field_j, "basic", hg.sharedSpriteArchive, 13525, lm.field_b));
               return false;
             }
           }
-          if (jk.field_b != null) {
+          if (jk.synthesizedSoundArchive != null) {
             as.a(-110);
-            qn.field_c = new SoundCache(jk.field_b, ub.field_f);
-            jf.a(-4, ub.field_f, jk.field_b);
-            jk.field_b = null;
-            ub.field_f = null;
-            te.a(34);
+            qn.loadingSoundCache = new SoundCache(jk.synthesizedSoundArchive, ub.vorbisSoundArchive);
+            jf.a(-4, ub.vorbisSoundArchive, jk.synthesizedSoundArchive);
+            jk.synthesizedSoundArchive = null;
+            ub.vorbisSoundArchive = null;
+            te.resetFrameTiming(34);
             return false;
           }
-          if (od.field_x != null) {
-            tg.field_a = new MusicTrack[3];
-            tg.field_a[0] = MusicTrack.a(od.field_x, "", "aos_main_title");
-            tg.field_a[1] = MusicTrack.a(od.field_x, "", "aos level_channels_v2");
-            tg.field_a[2] = MusicTrack.a(od.field_x, "", "aos boss level");
-            od.field_x = null;
-            te.a(102);
+          if (od.musicTrackArchive != null) {
+            tg.musicTracks = new MusicTrack[3];
+            tg.musicTracks[0] = MusicTrack.a(od.musicTrackArchive, "", "aos_main_title");
+            tg.musicTracks[1] = MusicTrack.a(od.musicTrackArchive, "", "aos level_channels_v2");
+            tg.musicTracks[2] = MusicTrack.a(od.musicTrackArchive, "", "aos boss level");
+            od.musicTrackArchive = null;
+            te.resetFrameTiming(102);
             return false;
           }
-          if (null == ot.field_b) {
-            if (hg.field_x != null) {
-              pe.a(iq.field_e, (byte) 77, hg.field_x, wi.field_a);
-              MenuScreen.a((byte) -56, wi.field_a, iq.field_e);
-              iq.field_e = null;
-              hg.field_x = null;
-              wi.field_a = null;
-              ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.field_a, so.field_b, rg.field_F, wt.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, nl.field_t, 10, 20);
-              te.a(62);
+          if (null == ot.musicPatchArchive) {
+            if (hg.sharedSpriteArchive != null) {
+              pe.decodeGameImagesAndFonts(iq.gameFontMetricsArchive, (byte) 77, hg.sharedSpriteArchive, wi.gameSpriteArchive);
+              MenuScreen.decodeMenuResources((byte) -56, wi.gameSpriteArchive, iq.gameFontMetricsArchive);
+              iq.gameFontMetricsArchive = null;
+              hg.sharedSpriteArchive = null;
+              wi.gameSpriteArchive = null;
+              ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.field_a, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, nl.field_t, 10, 20);
+              te.resetFrameTiming(62);
               return false;
             }
             if (av.a(true)) {
@@ -157,9 +157,9 @@ public final class AceOfSkies extends NetworkGameClient {
               FlightSession.rendererManager.a(-23);
               return false;
             }
-            ScoreSubmission.a(118);
+            ScoreSubmission.createRendererResources(118);
             sg.flightSession = new FlightSession();
-            m.a(tg.field_a[0], 27966, true);
+            m.a(tg.musicTracks[0], 27966, true);
             return true;
           }
           var4Lifetime1 = 0;
@@ -169,9 +169,9 @@ public final class AceOfSkies extends NetworkGameClient {
               break;
             }
             if (var5 == 0) {
-              if (tg.field_a[var4Lifetime1] != null &&
-                !wt.field_e.field_n.a(-1, 176400, tg.field_a[var4Lifetime1], ot.field_b, qn.field_c)) {
-                te.a(74);
+              if (tg.musicTracks[var4Lifetime1] != null &&
+                !DualLinkNode.field_e.field_n.a(-1, 176400, tg.musicTracks[var4Lifetime1], ot.musicPatchArchive, qn.loadingSoundCache)) {
+                te.resetFrameTiming(74);
                 return false;
               }
               var4Lifetime1++;
@@ -183,9 +183,9 @@ public final class AceOfSkies extends NetworkGameClient {
           while (!(decompiledNaturalLoopExit0 = (var4Lifetime1 >= 3))) {
             stackIn_109_0 = null;
             if (var5 == 0) {
-              if (stackIn_109_0 != tg.field_a[var4Lifetime1] &&
-                !wt.field_e.field_p.a(-1, 176400, tg.field_a[var4Lifetime1], ot.field_b, qn.field_c)) {
-                te.a(120);
+              if (stackIn_109_0 != tg.musicTracks[var4Lifetime1] &&
+                !DualLinkNode.field_e.field_p.a(-1, 176400, tg.musicTracks[var4Lifetime1], ot.musicPatchArchive, qn.loadingSoundCache)) {
+                te.resetFrameTiming(120);
                 return false;
               }
               var4Lifetime1++;
@@ -194,18 +194,18 @@ public final class AceOfSkies extends NetworkGameClient {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            wt.field_e.field_n.g(0);
-            wt.field_e.field_p.g(0);
-            qn.field_c = null;
+            DualLinkNode.field_e.field_n.g(0);
+            DualLinkNode.field_e.field_p.g(0);
+            qn.loadingSoundCache = null;
             stackIn_109_0 = null;
           }
-          ot.field_b = (ResourceArchive) (stackIn_109_0);
-          te.a(77);
+          ot.musicPatchArchive = (ResourceArchive) (stackIn_109_0);
+          te.resetFrameTiming(77);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var3), "AceOfSkies.J(" + param0 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) var3), "AceOfSkies.J(" + obfuscationGuard + ',' + initializeAfterDownload + ')');
         }
     }
 
@@ -302,7 +302,7 @@ public final class AceOfSkies extends NetworkGameClient {
             hg.field_D = 16777215;
           }
           if (obfuscationGuard != 9046) {
-            this.g((byte) -122);
+            this.initializeGameResources((byte) -122);
           }
           if (MenuScreen.field_g.first(obfuscationGuard + 268426409) != null) {
             fieldTemp$0 = hp.field_h + 1;
@@ -394,7 +394,7 @@ public final class AceOfSkies extends NetworkGameClient {
         }
     }
 
-    final void a(int param0) {
+    final void initializeClient(int obfuscationGuard) {
         RuntimeException runtimeException = null;
         MidiPcmStream var2 = null;
         MidiPcmStream var3 = null;
@@ -406,7 +406,7 @@ public final class AceOfSkies extends NetworkGameClient {
           var2.a(128, false, 9);
           var3.a(128, false, 9);
           wu.a(22050, true, (java.awt.Component) ((Object) ci.field_f), pt.field_b, 32767, new jt(var2, var3));
-          if (param0 != 28060) {
+          if (obfuscationGuard != 28060) {
             AceOfSkies.a(-33, true, (fn) null, true, 99);
           }
           so.field_b = 16777215;
@@ -417,18 +417,18 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.I(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.I(" + obfuscationGuard + ')');
         }
     }
 
-    final void d(int param0) {
+    final void releaseClientStatics(int obfuscationGuard) {
         RuntimeException runtimeException = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         var3 = obfuscationControl ? 1 : 0;
         try {
           iq.a((byte) -126);
-          IntrusiveDeque.f(param0 - 39323);
+          IntrusiveDeque.f(obfuscationGuard - 39323);
           lp.a((byte) -70);
           bo.a(18598);
           GraphicsRenderer.a(true);
@@ -441,12 +441,12 @@ public final class AceOfSkies extends NetworkGameClient {
           hu.a((byte) -118);
           bs.a(127);
           tr.a(-79);
-          NetworkGameClient.o(param0 ^ -31983);
+          NetworkGameClient.o(obfuscationGuard ^ -31983);
           ClientException.a(false);
           GameAppletShell.b((byte) 104);
-          cc.a(param0 ^ -19469);
-          rq.a(param0 ^ 19471);
-          qg.a(param0 ^ 19558);
+          cc.a(obfuscationGuard ^ -19469);
+          rq.a(obfuscationGuard ^ 19471);
+          qg.a(obfuscationGuard ^ 19558);
           vp.c();
           ResourceArchive.c((byte) -73);
           nc.a(480);
@@ -461,7 +461,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ho.a((byte) -90);
           kg.a(18567);
           s.a((byte) 125);
-          fj.a(param0 - 31434);
+          fj.a(obfuscationGuard - 31434);
           at.a(-7978);
           pj.a((byte) 48);
           ca.b(0);
@@ -472,14 +472,14 @@ public final class AceOfSkies extends NetworkGameClient {
           ji.a(0);
           IntrusiveNode.b(-45);
           un.d(6);
-          dk.a(param0 - 19473);
-          wq.b(param0 - 34460);
+          dk.a(obfuscationGuard - 19473);
+          wq.b(obfuscationGuard - 34460);
           gh.b(0);
           vf.c((byte) -128);
           BitmapFont.a(5);
           vs.a(126);
           MidiPcmStream.e(-543142776);
-          ph.c(82);
+          IntrusiveNodeHashTable.c(82);
           ft.a((byte) 101);
           k.b();
           um.a((byte) 113);
@@ -522,7 +522,7 @@ public final class AceOfSkies extends NetworkGameClient {
           SmokeParticle.b(0);
           fb.a((byte) 52);
           CipherPacketBuffer.l((byte) 122);
-          we.b(param0 - 19469);
+          we.b(obfuscationGuard - 19469);
           pu.a(240);
           sg.a((byte) 110);
           tt.a(20525);
@@ -531,14 +531,14 @@ public final class AceOfSkies extends NetworkGameClient {
           fn.a((byte) -5);
           aa.a(0);
           hn.a(0);
-          pr.a(param0 - 19552);
+          pr.a(obfuscationGuard - 19552);
           mr.a(0);
           ve.a((byte) 64);
           hb.a(-12029);
           pn.a(9);
           th.a();
           ar.b();
-          wt.a(14349);
+          DualLinkNode.a(14349);
           df.a(-103);
           er.d(-61);
           gp.c((byte) 78);
@@ -556,7 +556,7 @@ public final class AceOfSkies extends NetworkGameClient {
           qs.a((byte) 118);
           wi.a(-80);
           b.a((byte) 28);
-          dd.a(param0 ^ -14224);
+          dd.a(obfuscationGuard ^ -14224);
           v.a(32342);
           td.a(-12546);
           di.a(false);
@@ -582,7 +582,7 @@ public final class AceOfSkies extends NetworkGameClient {
           jr.a(false);
           op.a(6337);
           gq.a(6408);
-          kq.a(param0 - 18291);
+          kq.a(obfuscationGuard - 18291);
           is.a(-92);
           tg.a((byte) 109);
           jm.a(105);
@@ -601,7 +601,7 @@ public final class AceOfSkies extends NetworkGameClient {
           dg.k(12);
           ek.d(false);
           pi.a(4096);
-          kb.h(param0 + 1927864887);
+          kb.h(obfuscationGuard + 1927864887);
           vo.d(14695);
           fk.a((byte) 28);
           rs.d((byte) 105);
@@ -609,28 +609,28 @@ public final class AceOfSkies extends NetworkGameClient {
           pf.b(true);
           ge.a();
           rj.a(true);
-          oe.a(param0 ^ 21630);
+          oe.a(obfuscationGuard ^ 21630);
           lb.b(24);
-          ao.a(param0 - 19411);
+          ao.a(obfuscationGuard - 19411);
           wl.y(32598);
           eb.b(64);
           vr.a(116);
           lu.a((byte) -3);
           hp.c((byte) -66);
-          jk.a(param0 ^ 14407);
+          jk.a(obfuscationGuard ^ 14407);
           cs.a(true);
           tm.a(-128);
           tj.b((byte) -95);
           rt.c((byte) -63);
           ee.a(false);
           q.d(-107);
-          rl.a(param0 - 32254);
+          rl.a(obfuscationGuard - 32254);
           la.a((byte) -86);
           em.a(true);
           ec.b(0);
           qo.c((byte) 23);
           st.b((byte) -112);
-          as.b(param0 - 19344);
+          as.b(obfuscationGuard - 19344);
           sb.a(126);
           sk.a((byte) 91);
           hr.a(true);
@@ -638,9 +638,9 @@ public final class AceOfSkies extends NetworkGameClient {
           fa.a(false);
           po.c(-30534);
           hd.a(30714);
-          jb.a(param0 - 46603);
+          jb.a(obfuscationGuard - 46603);
           ia.a(-6411);
-          jc.W(param0 ^ 19581);
+          jc.W(obfuscationGuard ^ 19581);
           cg.g(-33);
           vg.b(0);
           ku.c(85);
@@ -650,7 +650,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ej.a(-29373);
           lc.a(true);
           hs.a((byte) -127);
-          he.f(param0 ^ param0);
+          he.f(obfuscationGuard ^ obfuscationGuard);
           qj.d((byte) -122);
           mb.g(255);
           av.a((byte) -44);
@@ -660,13 +660,13 @@ public final class AceOfSkies extends NetworkGameClient {
           ac.a(-28819);
           ka.a((byte) -126);
           r.f(27354);
-          du.j(param0 - 19583);
+          du.j(obfuscationGuard - 19583);
           in.a(true);
           eq.d(-118);
           hh.a(30);
           qe.a(5575);
           nb.b(126);
-          gt.e(param0 ^ -19569);
+          gt.e(obfuscationGuard ^ -19569);
           si.a(true);
           or.a((byte) 63);
           lk.c(34962);
@@ -678,15 +678,15 @@ public final class AceOfSkies extends NetworkGameClient {
           uf.a((byte) -77);
           ij.b(1822);
           ju.d(122);
-          rc.b(param0 ^ -15995);
+          rc.b(obfuscationGuard ^ -15995);
           np.c(9216);
-          ne.b(param0 - 19447);
+          ne.b(obfuscationGuard - 19447);
           g.b(103);
           sd.b(0);
           ci.c((byte) -47);
           aq.a(32683);
           pg.a(true);
-          ke.a(param0 - 19345);
+          ke.a(obfuscationGuard - 19345);
           gi.a(-12085);
           ns.a(-24169);
           ol.b(127);
@@ -697,23 +697,23 @@ public final class AceOfSkies extends NetworkGameClient {
           ae.c((byte) 15);
           lg.c((byte) -75);
           gg.a(true);
-          qd.d(param0 - 12162);
+          qd.d(obfuscationGuard - 12162);
           ai.a(-28739);
-          na.a(param0 ^ 21852);
+          na.a(obfuscationGuard ^ 21852);
           ik.b(true);
           qp.b(true);
           mh.a(126);
-          kf.g(param0 + 5851);
+          kf.g(obfuscationGuard + 5851);
           mo.b(39);
           lo.c((byte) 125);
-          io.a(param0 - 52006);
+          io.a(obfuscationGuard - 52006);
           ua.d(107);
           ro.d((byte) 80);
           tq.b(400);
           pe.a(19592);
           js.a((byte) 116);
           nj.a((byte) -59);
-          dc.c(param0 ^ -19509);
+          dc.c(obfuscationGuard ^ -19509);
           qk.a(0);
           vj.a(1);
           mq.a(20370);
@@ -742,7 +742,7 @@ public final class AceOfSkies extends NetworkGameClient {
           pm.b(93);
           ko.c(0);
           ki.b(64);
-          lh.a(param0 ^ 18173);
+          lh.a(obfuscationGuard ^ 18173);
           wo.a(-125);
           uk.a(250);
           te.a(false);
@@ -753,7 +753,7 @@ public final class AceOfSkies extends NetworkGameClient {
           fh.c(true);
           ii.c((byte) -22);
           vn.c((byte) 101);
-          uu.e(param0 ^ 27864);
+          uu.e(obfuscationGuard ^ 27864);
           jo.a((byte) -125);
           pt.a(0);
           li.b((byte) -90);
@@ -766,30 +766,30 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + obfuscationGuard + ')');
         }
         if (GameAppletShell.field_a != 0) {
           obfuscationControl = (var3 == 0);
         }
     }
 
-    private final void g(byte param0) {
+    private final void initializeGameResources(byte obfuscationGuard) {
         RuntimeException runtimeException = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != fn.field_a) {
             wu.a(-113, fn.field_a);
             fn.field_a = null;
-            te.a(38);
+            te.resetFrameTiming(38);
           }
           ClientException.field_e = true;
-          wi.field_a = ot.a(-28, 4);
-          iq.field_e = ot.a(-65, 5);
-          jk.field_b = ot.a(-31, 6);
-          ub.field_f = ot.a(-76, 7);
-          ot.field_b = ot.a(-62, 8);
-          od.field_x = ot.a(-81, 9);
-          if (param0 <= 43) {
+          wi.gameSpriteArchive = ot.a(-28, 4);
+          iq.gameFontMetricsArchive = ot.a(-65, 5);
+          jk.synthesizedSoundArchive = ot.a(-31, 6);
+          ub.vorbisSoundArchive = ot.a(-76, 7);
+          ot.musicPatchArchive = ot.a(-62, 8);
+          od.musicTrackArchive = ot.a(-81, 9);
+          if (obfuscationGuard <= 43) {
             return;
           }
           ci.gameRandom = new Random(kh.a(-99));
@@ -798,7 +798,7 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.F(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.F(" + obfuscationGuard + ')');
         }
     }
 
@@ -924,12 +924,12 @@ public final class AceOfSkies extends NetworkGameClient {
               return;
             }
             if (!b.b((byte) -94)) {
-              fh.a(-42, 100.0f, bd.field_I);
+              fh.setLoadingProgress(-42, 100.0f, bd.field_I);
               hj.a(var2, -12);
               return;
             }
             if (FlightSession.rendererManager.a(122)) {
-              ScoreSubmission.a(39);
+              ScoreSubmission.createRendererResources(39);
             }
             var4 = FlightSession.rendererManager.a((byte) 127);
             sg.flightSession.renderSession(-16711936, false, var4);
@@ -1058,7 +1058,7 @@ public final class AceOfSkies extends NetworkGameClient {
         }
     }
 
-    final void c(int param0) {
+    final void updateClient(int obfuscationGuard) {
         boolean discarded$0 = false;
         boolean stackIn_15_1 = false;
         boolean stackIn_78_1 = false;
@@ -1070,7 +1070,7 @@ public final class AceOfSkies extends NetworkGameClient {
         var3 = obfuscationControl ? 1 : 0;
         try {
           we.a(200);
-          if (param0 != 5883) {
+          if (obfuscationGuard != 5883) {
             AceOfSkies.a((CharSequence) null, -79);
           }
           if (null != jf.field_a &&
@@ -1081,14 +1081,14 @@ public final class AceOfSkies extends NetworkGameClient {
           stackIn_15_1 = (jf.field_a != null);
           this.b(stackIn_15_1, (byte) 95);
           if (jn.field_t) {
-            this.g((byte) 124);
+            this.initializeGameResources((byte) 124);
             jn.field_t = false;
           }
           if (im.a(true)) {
             this.i(4);
             if (im.a(true)) {
               if (jr.a((byte) 32)) {
-                discarded$0 = this.a((byte) 59, false);
+                discarded$0 = this.advanceResourceLoading((byte) 59, false);
               }
               return;
             }
@@ -1096,7 +1096,7 @@ public final class AceOfSkies extends NetworkGameClient {
           boolean decompiledFrameRemainder0 = true;
           if (!gq.field_f) {
             ic.a(nh.field_e, false);
-            decompiledFrameRemainder0 = !(!this.a((byte) -62, true));
+            decompiledFrameRemainder0 = !(!this.advanceResourceLoading((byte) -62, true));
             if (decompiledFrameRemainder0) {
               gq.field_f = true;
               decompiledFrameRemainder0 = (var3 != 0);
@@ -1128,18 +1128,18 @@ public final class AceOfSkies extends NetworkGameClient {
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.advanceGame(param0 + 3163);
+                  this.advanceGame(obfuscationGuard + 3163);
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!jf.a(param0 + 9117)) {
-                  this.advanceGame(param0 ^ 13741);
+                if (!jf.a(obfuscationGuard + 9117)) {
+                  this.advanceGame(obfuscationGuard ^ 13741);
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder0) {
                   stackIn_78_1 = (null != jf.field_a);
-                  var2_int = this.a(stackIn_78_1, param0 - 5990);
+                  var2_int = this.a(stackIn_78_1, obfuscationGuard - 5990);
                   if (var2_int == 1 ||
                     2 == var2_int) {
                     if (jf.field_a != null) {
@@ -1189,7 +1189,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             this.f((byte) -106);
           } while (var3 == 0);
-          if (dg.j(param0 ^ 31428)) {
+          if (dg.j(obfuscationGuard ^ 31428)) {
             var2_int = this.p(16637);
             if (var2_int == 2) {
               rc.c((byte) 127);
@@ -1199,14 +1199,14 @@ public final class AceOfSkies extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.H(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.H(" + obfuscationGuard + ')');
         }
     }
 
     public AceOfSkies() {
     }
 
-    final void f(int param0) {
+    final void shutdownClient(int obfuscationGuard) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
@@ -1215,14 +1215,14 @@ public final class AceOfSkies extends NetworkGameClient {
             tt.b(-32546);
           }
           vl.a(-26317);
-          if (param0 > -95) {
+          if (obfuscationGuard > -95) {
             field_J = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.E(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.E(" + obfuscationGuard + ')');
         }
     }
 

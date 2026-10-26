@@ -109,7 +109,7 @@ final class pe implements Iterator {
         return false;
     }
 
-    final static void a(ResourceArchive param0, byte param1, ResourceArchive param2, ResourceArchive param3) {
+    final static void decodeGameImagesAndFonts(ResourceArchive fontMetricsArchive, byte obfuscationGuard, ResourceArchive sharedSpriteArchive, ResourceArchive gameSpriteArchive) {
         int var4_int = 0;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var4_intLifetime1;
@@ -117,58 +117,58 @@ final class pe implements Iterator {
         try {
           oo.field_ab = new vd[2];
           for (var4_int = 0; oo.field_ab.length > var4_int; var4_int++) {
-            oo.field_ab[var4_int] = vd.b(param3, "aceofskies", "background" + var4_int);
+            oo.field_ab[var4_int] = vd.b(gameSpriteArchive, "aceofskies", "background" + var4_int);
           }
           SteeringMode.field_d = new vd[8][];
           for (var4_intLifetime1 = 0; var4_intLifetime1 < 8; var4_intLifetime1++) {
-            SteeringMode.field_d[var4_intLifetime1] = vd.a(param3, "aceofskies", "plane" + var4_intLifetime1);
+            SteeringMode.field_d[var4_intLifetime1] = vd.a(gameSpriteArchive, "aceofskies", "plane" + var4_intLifetime1);
           }
-          if (param1 <= 22) {
+          if (obfuscationGuard <= 22) {
             field_c = (String) null;
           }
           na.field_c = new vd[1];
           for (var4_intLifetime2 = 0; var4_intLifetime2 < 1; var4_intLifetime2++) {
-            na.field_c[var4_intLifetime2] = vd.b(param3, "aceofskies", "cloud" + var4_intLifetime2);
+            na.field_c[var4_intLifetime2] = vd.b(gameSpriteArchive, "aceofskies", "cloud" + var4_intLifetime2);
           }
-          RendererManager.field_a = vd.b(param3, "aceofskies", "bullet");
-          tq.field_h = vd.a(param3, "aceofskies", "smoke");
-          ud.field_f = vd.a(param3, "aceofskies", "explosion");
-          gn.scorchSpriteData = vd.a(param3, "aceofskies", "scorch");
-          fs.field_e = vd.b(param3, "", "titleimage");
+          RendererManager.field_a = vd.b(gameSpriteArchive, "aceofskies", "bullet");
+          tq.field_h = vd.a(gameSpriteArchive, "aceofskies", "smoke");
+          ud.field_f = vd.a(gameSpriteArchive, "aceofskies", "explosion");
+          gn.scorchSpriteData = vd.a(gameSpriteArchive, "aceofskies", "scorch");
+          fs.field_e = vd.b(gameSpriteArchive, "", "titleimage");
           ArchiveIndex.field_f = new vd[3][];
-          ArchiveIndex.field_f[0] = vd.a(param3, "aceofskies", "oilgauge");
-          ArchiveIndex.field_f[1] = vd.a(param3, "aceofskies", "heatgauge");
-          ArchiveIndex.field_f[2] = vd.a(param3, "aceofskies", "supergauge");
-          qq.field_e = vd.a(param3, "aceofskies", "upgrades");
-          FlightBody.field_a = vd.a(param3, "aceofskies", "radar");
+          ArchiveIndex.field_f[0] = vd.a(gameSpriteArchive, "aceofskies", "oilgauge");
+          ArchiveIndex.field_f[1] = vd.a(gameSpriteArchive, "aceofskies", "heatgauge");
+          ArchiveIndex.field_f[2] = vd.a(gameSpriteArchive, "aceofskies", "supergauge");
+          qq.field_e = vd.a(gameSpriteArchive, "aceofskies", "upgrades");
+          FlightBody.field_a = vd.a(gameSpriteArchive, "aceofskies", "radar");
           eb.field_c = new vd[2];
-          eb.field_c[0] = vd.b(param3, "aceofskies", "scorecounter");
-          eb.field_c[1] = vd.b(param3, "aceofskies", "multiplier");
-          kb.field_D = vd.a(param3, "aceofskies", "scorenumbers");
-          hq.field_a = vd.a(param3, "aceofskies", "levelring");
-          qa.field_a = vd.a(param3, "", "keys");
-          CipherPacketBuffer.field_m = vd.a(param3, "", "fontalpha");
-          hi.field_v = tg.a(param0, 8191, "", "font");
-          q.field_o = vd.a(param3, "", "bigfontalpha");
-          kn.field_b = tg.a(param0, 8191, "", "bigfont");
-          nc.field_a = vd.a(param3, "", "titlefontalpha");
-          dp.field_h = tg.a(param0, 8191, "", "titlefont");
-          lt.field_v = vd.b(param3, "", "woodentile");
-          gu.field_a = vd.a(param3, "", "brassframe");
-          vl.field_b = vd.a(param3, "", "brassbutton");
-          qk.field_a = vd.a(param3, "", "brassslider");
-          ol.field_e = vd.a(param3, "aceofskies", "powerchutes");
-          nu.field_b = vd.a(param3, "aceofskies", "powericons");
+          eb.field_c[0] = vd.b(gameSpriteArchive, "aceofskies", "scorecounter");
+          eb.field_c[1] = vd.b(gameSpriteArchive, "aceofskies", "multiplier");
+          kb.field_D = vd.a(gameSpriteArchive, "aceofskies", "scorenumbers");
+          hq.field_a = vd.a(gameSpriteArchive, "aceofskies", "levelring");
+          qa.field_a = vd.a(gameSpriteArchive, "", "keys");
+          CipherPacketBuffer.field_m = vd.a(gameSpriteArchive, "", "fontalpha");
+          hi.field_v = tg.a(fontMetricsArchive, 8191, "", "font");
+          q.field_o = vd.a(gameSpriteArchive, "", "bigfontalpha");
+          kn.field_b = tg.a(fontMetricsArchive, 8191, "", "bigfont");
+          nc.field_a = vd.a(gameSpriteArchive, "", "titlefontalpha");
+          dp.field_h = tg.a(fontMetricsArchive, 8191, "", "titlefont");
+          lt.field_v = vd.b(gameSpriteArchive, "", "woodentile");
+          gu.field_a = vd.a(gameSpriteArchive, "", "brassframe");
+          vl.field_b = vd.a(gameSpriteArchive, "", "brassbutton");
+          qk.field_a = vd.a(gameSpriteArchive, "", "brassslider");
+          ol.field_e = vd.a(gameSpriteArchive, "aceofskies", "powerchutes");
+          nu.field_b = vd.a(gameSpriteArchive, "aceofskies", "powericons");
           tt.field_c = new vd[2];
-          tt.field_c[0] = vd.b(param3, "aceofskies", "glassbulb");
-          tt.field_c[1] = vd.b(param3, "aceofskies", "bulblight");
-          la.field_g = vd.a(param3, "", "achievements");
-          af.field_c = vd.a(param3, "", "medals");
-          vl.field_c = vd.b(param2, "basic", "orbcoin");
-          es.field_i = vd.b(param2, "basic", "locked");
-          HighscoreQuery.field_g = vd.b(param2, "basic", "unachieved");
+          tt.field_c[0] = vd.b(gameSpriteArchive, "aceofskies", "glassbulb");
+          tt.field_c[1] = vd.b(gameSpriteArchive, "aceofskies", "bulblight");
+          la.field_g = vd.a(gameSpriteArchive, "", "achievements");
+          af.field_c = vd.a(gameSpriteArchive, "", "medals");
+          vl.field_c = vd.b(sharedSpriteArchive, "basic", "orbcoin");
+          es.field_i = vd.b(sharedSpriteArchive, "basic", "locked");
+          HighscoreQuery.field_g = vd.b(sharedSpriteArchive, "basic", "unachieved");
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "pe.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "pe.D(" + (fontMetricsArchive != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (sharedSpriteArchive != null ? "{...}" : "null") + ',' + (gameSpriteArchive != null ? "{...}" : "null") + ')');
         }
     }
 

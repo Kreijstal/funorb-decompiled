@@ -4,18 +4,18 @@
 final class ns {
     static GraphicsRenderer field_a;
 
-    final static void a(wt param0, int param1, wt param2) {
-        if (null != param0.field_f) {
-          param0.d(param1 + 30453);
+    final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
+        if (null != param0.previousSecondaryNode) {
+          param0.unlinkSecondaryNode(param1 + 30453);
         }
-        param0.field_j = param2.field_j;
-        param0.field_f = param2;
-        param0.field_f.field_j = param0;
+        param0.nextSecondaryNode = param2.nextSecondaryNode;
+        param0.previousSecondaryNode = param2;
+        param0.previousSecondaryNode.nextSecondaryNode = param0;
         if (param1 != -30575) {
           return;
         }
         try {
-          param0.field_j.field_f = param0;
+          param0.nextSecondaryNode.previousSecondaryNode = param0;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ns.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class he extends wt {
+abstract class he extends DualLinkNode {
     int field_p;
     static eg field_o;
     static volatile int field_n;

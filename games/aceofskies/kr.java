@@ -1000,7 +1000,7 @@ public final class kr extends bf {
         if (param0 < 25) {
           field_Jc = (int[]) null;
         }
-        if (param1 == wt.field_m) {
+        if (param1 == DualLinkNode.field_m) {
           return 2;
         }
         if (bm.field_x == param1) {

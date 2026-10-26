@@ -16,7 +16,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     static ej field_H;
     static String field_C;
     static int[] field_v;
-    static float field_I;
+    static float loadingPercent;
     static int field_x;
     private boolean field_A;
     static int field_B;
@@ -566,9 +566,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           oi.field_a = sd.a(false, 1, true, false, uk.field_e);
           uj.field_b = sd.a(false, 1, true, false, ks.field_a);
           cf.field_f = sd.a(false, 1, true, false, mb.field_q);
-          fg.field_t = uj.field_b;
+          fg.sharedFontMetricsArchive = uj.field_b;
           bl.field_c = 2;
-          hg.field_x = oi.field_a;
+          hg.sharedSpriteArchive = oi.field_a;
         }
         if (bl.field_c == 2) {
           if (ij.field_h != null &&
@@ -579,7 +579,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               if (ij.field_h.c("", -14012)) {
                 ub.a((byte) -125, ij.field_h);
                 ij.field_h = null;
-                te.a(62);
+                te.resetFrameTiming(62);
               }
             }
           }
@@ -593,7 +593,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           ArchiveIndex.a(true);
           om.c(5665);
           nq.field_a = false;
-          dq.field_b = mp.field_e;
+          dq.loadingMessage = mp.field_e;
           cg.a(false, uj.field_b, oi.field_a, te.field_h, cf.field_f);
           if (qp.field_i ||
             fg.field_k != null) {
@@ -614,7 +614,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           uj.field_b = null;
           cf.field_f = null;
           wb.a((java.applet.Applet) (this), 17337);
-          te.a(67);
+          te.resetFrameTiming(67);
           bl.field_c = 10;
         }
         if (bl.field_c == 10) {
@@ -627,7 +627,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (bl.field_c == 11) {
           if (null != fn.field_a && (!fn.field_a.b((byte) -88) ||
             !fn.field_a.b(0))) {
-            fh.a(-82, 0.0f, Vector2.a(dt.field_b, gm.field_w, fn.field_a, 50));
+            fh.setLoadingProgress(-82, 0.0f, Vector2.a(dt.field_b, gm.field_w, fn.field_a, 50));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -644,7 +644,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (null != hg.field_y) {
             stackIn_134_0 = (!hg.field_y.a(-18738)) ? 0 : 1;
             var3Lifetime2 = stackIn_134_0;
-            fh.a(-59, hg.field_y.field_d, hg.field_y.field_j);
+            fh.setLoadingProgress(-59, hg.field_y.field_d, hg.field_y.field_j);
           }
           if (var3Lifetime2 != 0) {
             bl.field_c = 20;

@@ -6,7 +6,7 @@ final class ot {
     private int field_d;
     private boolean field_e;
     private int[] field_c;
-    static ResourceArchive field_b;
+    static ResourceArchive musicPatchArchive;
     static int field_a;
 
     private final void c(int param0, int param1) {
@@ -99,7 +99,7 @@ final class ot {
         if (param0 > -36) {
           return;
         }
-        field_b = null;
+        musicPatchArchive = null;
     }
 
     private ot() throws Throwable {

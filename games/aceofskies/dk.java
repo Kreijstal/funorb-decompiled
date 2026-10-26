@@ -26,7 +26,7 @@ final class dk implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new os();
-          var5.field_i = (long)param3;
+          var5.secondaryKey = (long)param3;
           var5.field_u = param0;
           var5.field_v = 2;
           var5.field_x = param1;
@@ -80,7 +80,7 @@ final class dk implements Runnable {
           synchronized (var5) {
             var6 = (os) (this.field_f.b((byte) 52));
             while (var6 != null) {
-              if (var6.field_i == (long)param2 &&
+              if (var6.secondaryKey == (long)param2 &&
                 param0 == var6.field_x &&
                 var6.field_v == 2) {
                 var4.field_p = false;
@@ -167,7 +167,7 @@ final class dk implements Runnable {
               boolean decompiledFrameRemainder0 = true;
               if (2 != var7.field_v) {
                 if (var7.field_v == 3) {
-                  var7.field_u = var7.field_x.a((int)var7.field_i, 255);
+                  var7.field_u = var7.field_x.a((int)var7.secondaryKey, 255);
                   decompiledRegionSelector1 = 1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -175,7 +175,7 @@ final class dk implements Runnable {
                   var7.field_p = false;
                 }
               } else {
-                var7.field_x.a(var7.field_u.length, 255, (int)var7.field_i, var7.field_u);
+                var7.field_x.a(var7.field_u.length, 255, (int)var7.secondaryKey, var7.field_u);
                 var7.field_p = false;
               }
               if (decompiledFrameRemainder0) {
@@ -246,7 +246,7 @@ final class dk implements Runnable {
           }
           var4.field_v = 3;
           var4.field_q = false;
-          var4.field_i = (long)param2;
+          var4.secondaryKey = (long)param2;
           var4.field_x = param1;
           this.a((byte) -76, var4);
           stackIn_3_0 = var4;

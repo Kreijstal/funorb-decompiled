@@ -106,7 +106,7 @@ final class dh {
 
     final static void a(int param0, int param1, boolean param2, int param3, MusicTrack param4) {
         try {
-          wt.field_e.a((byte) -50, param3, !param2 ? true : false, param1, param4, param0);
+          DualLinkNode.field_e.a((byte) -50, param3, !param2 ? true : false, param1, param4, param0);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "dh.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

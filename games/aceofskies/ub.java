@@ -3,7 +3,7 @@
  */
 final class ub extends IntrusiveNode {
     static int field_g;
-    static ResourceArchive field_f;
+    static ResourceArchive vorbisSoundArchive;
     static AircraftDefinition basePlayerDefinition;
     byte[] field_e;
 
@@ -3114,7 +3114,7 @@ final class ub extends IntrusiveNode {
 
     public static void a(boolean param0) {
         try {
-          field_f = null;
+          vorbisSoundArchive = null;
           basePlayerDefinition = null;
           if (param0) {
             ub.a(true);

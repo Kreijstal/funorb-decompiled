@@ -5,23 +5,23 @@ import java.io.*;
 
 final class es {
     static String[] field_a;
-    private wt field_d;
+    private DualLinkNode field_d;
     static int field_c;
     private int field_f;
     static RenderSprite[] smokeSprites;
     static String field_g;
-    private wt[] field_e;
+    private DualLinkNode[] field_e;
     private long field_h;
     static vd field_i;
 
-    final wt a(boolean param0) {
-        wt var2;
-        wt var3;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         if (null == this.field_d) {
           return null;
         }
         if (param0) {
-          return (wt) null;
+          return (DualLinkNode) null;
         }
         var2 = this.field_e[(int)((long)(this.field_f - 1) & this.field_h)];
         while (true) {
@@ -29,73 +29,73 @@ final class es {
             this.field_d = null;
             return null;
           }
-          if (~this.field_d.field_i != ~this.field_h) {
-            this.field_d = this.field_d.field_j;
+          if (~this.field_d.secondaryKey != ~this.field_h) {
+            this.field_d = this.field_d.nextSecondaryNode;
             continue;
           }
           break;
         }
         var3 = this.field_d;
-        this.field_d = this.field_d.field_j;
+        this.field_d = this.field_d.nextSecondaryNode;
         return var3;
     }
 
-    final wt a(int param0, long param1) {
-        wt var4;
-        wt var5;
-        wt var5Lifetime1;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
+        DualLinkNode var5Lifetime1;
         this.field_h = param1;
         var4 = this.field_e[(int)((long)(this.field_f - 1) & param1)];
         if (param0 >= 87) {
-          this.field_d = var4.field_j;
+          this.field_d = var4.nextSecondaryNode;
           while (true) {
             if (var4 == this.field_d) {
               this.field_d = null;
               return null;
             }
-            if (~this.field_d.field_i != ~param1) {
-              this.field_d = this.field_d.field_j;
+            if (~this.field_d.secondaryKey != ~param1) {
+              this.field_d = this.field_d.nextSecondaryNode;
               continue;
             }
             break;
           }
           var5 = this.field_d;
-          this.field_d = this.field_d.field_j;
+          this.field_d = this.field_d.nextSecondaryNode;
           return var5;
         }
         smokeSprites = (RenderSprite[]) null;
-        this.field_d = var4.field_j;
+        this.field_d = var4.nextSecondaryNode;
         while (true) {
           if (var4 == this.field_d) {
             this.field_d = null;
             return null;
           }
-          if (~this.field_d.field_i != ~param1) {
-            this.field_d = this.field_d.field_j;
+          if (~this.field_d.secondaryKey != ~param1) {
+            this.field_d = this.field_d.nextSecondaryNode;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_d;
-        this.field_d = this.field_d.field_j;
+        this.field_d = this.field_d.nextSecondaryNode;
         return var5Lifetime1;
     }
 
-    final void a(wt param0, long param1, byte param2) {
-        wt var5 = null;
+    final void a(DualLinkNode param0, long param1, byte param2) {
+        DualLinkNode var5 = null;
         try {
-          if (null != param0.field_f) {
-            param0.d(-122);
+          if (null != param0.previousSecondaryNode) {
+            param0.unlinkSecondaryNode(-122);
           }
           var5 = this.field_e[(int)(param1 & (long)(this.field_f - 1))];
-          param0.field_f = var5.field_f;
-          param0.field_j = var5;
-          param0.field_f.field_j = param0;
+          param0.previousSecondaryNode = var5.previousSecondaryNode;
+          param0.nextSecondaryNode = var5;
+          param0.previousSecondaryNode.nextSecondaryNode = param0;
           if (param2 != 56) {
             this.a(false);
           }
-          param0.field_i = param1;
-          param0.field_j.field_f = param0;
+          param0.secondaryKey = param1;
+          param0.nextSecondaryNode.previousSecondaryNode = param0;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "es.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -186,20 +186,20 @@ final class es {
     }
 
     es(int param0) {
-        wt dupTemp$1 = null;
+        DualLinkNode dupTemp$1 = null;
         int var2 = 0;
-        wt var3 = null;
+        DualLinkNode var3 = null;
         int var4 = 0;
         var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_f = param0;
-        this.field_e = new wt[param0];
+        this.field_e = new DualLinkNode[param0];
         var2 = 0;
         while (var2 < param0) {
-          dupTemp$1 = new wt();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          var3.field_f = var3;
-          var3.field_j = var3;
+          var3.previousSecondaryNode = var3;
+          var3.nextSecondaryNode = var3;
           var2++;
           if (var4 != 0) {
             return;

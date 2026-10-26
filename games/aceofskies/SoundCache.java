@@ -3,15 +3,15 @@
  */
 final class SoundCache {
     static String field_f;
-    private ph field_g;
+    private IntrusiveNodeHashTable vorbisSampleCache;
     static int field_d;
     static long[] field_c;
     static int field_e;
-    private ResourceArchive field_a;
-    private ResourceArchive field_h;
-    private ph field_b;
+    private ResourceArchive vorbisSoundArchive;
+    private ResourceArchive synthesizedSoundArchive;
+    private IntrusiveNodeHashTable pcmSampleCache;
 
-    final PcmSample a(int param0, int[] param1, byte param2) {
+    final PcmSample getVorbisSample(int sampleId, int[] remainingByteBudget, byte obfuscationGuard) {
         RuntimeException var4 = null;
         PcmSample stackIn_3_0 = null;
         PcmSample stackIn_6_0 = null;
@@ -21,15 +21,15 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1 == this.field_a.a((byte) 127)) {
-            stackIn_3_0 = this.a(0, param0, param1, 1452176260);
+          if (1 == this.vorbisSoundArchive.a((byte) 127)) {
+            stackIn_3_0 = this.getVorbisSampleByGroup(0, sampleId, remainingByteBudget, 1452176260);
             return stackIn_3_0;
           }
-          if (this.field_a.b(param0, param2 + 28004) == 1) {
-            stackIn_6_0 = this.a(param0, 0, param1, 1452176260);
+          if (this.vorbisSoundArchive.b(sampleId, obfuscationGuard + 28004) == 1) {
+            stackIn_6_0 = this.getVorbisSampleByGroup(sampleId, 0, remainingByteBudget, 1452176260);
             return stackIn_6_0;
           }
-          if (param2 == -92) {
+          if (obfuscationGuard == -92) {
             throw new RuntimeException();
           }
           stackIn_9_0 = (PcmSample) null;
@@ -38,13 +38,13 @@ final class SoundCache {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("ob.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_13_1 = new StringBuilder().append("ob.F(").append(sampleId).append(',');
+          if (remainingByteBudget == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -58,7 +58,7 @@ final class SoundCache {
         field_c = null;
     }
 
-    private final PcmSample a(int param0, int param1, int[] param2, int param3) {
+    private final PcmSample getVorbisSampleByGroup(int groupId, int fileId, int[] remainingByteBudget, int obfuscationGuard) {
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_6_0 = null;
         PcmSample stackIn_20_0 = null;
@@ -73,49 +73,49 @@ final class SoundCache {
         t var9 = null;
         PcmSample var8Lifetime1;
         try {
-          var5_int = param1 ^ ((param0 & -268431361) << 4 | param0 >>> 12);
-          var5_int = var5_int | param0 << 16;
-          if (param3 != 1452176260) {
+          var5_int = fileId ^ ((groupId & -268431361) << 4 | groupId >>> 12);
+          var5_int = var5_int | groupId << 16;
+          if (obfuscationGuard != 1452176260) {
             stackIn_2_0 = (PcmSample) null;
             return stackIn_2_0;
           }
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (PcmSample) (this.field_b.a((byte) 106, var6));
+          var8 = (PcmSample) (this.pcmSampleCache.findByKey((byte) 106, var6));
           if (var8 != null) {
             stackIn_6_0 = var8;
             return stackIn_6_0;
           }
-          if (param2 != null &&
-            param2[0] <= 0) {
+          if (remainingByteBudget != null &&
+            remainingByteBudget[0] <= 0) {
             return null;
           }
-          var9 = (t) (this.field_g.a((byte) 106, var6));
+          var9 = (t) (this.vorbisSampleCache.findByKey((byte) 106, var6));
           if (var9 == null) {
-            var9 = t.a(this.field_a, param0, param1);
+            var9 = t.a(this.vorbisSoundArchive, groupId, fileId);
             if (var9 == null) {
               return null;
             }
-            this.field_g.a(-105, var6, var9);
+            this.vorbisSampleCache.put(-105, var6, var9);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.a(remainingByteBudget);
           if (var8Lifetime1 == null) {
             return null;
           }
           var9.unlink(-125);
-          this.field_b.a(124, var6, var8Lifetime1);
+          this.pcmSampleCache.put(124, var6, var8Lifetime1);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_23_0 = var5;
-          stackIn_23_1 = new StringBuilder().append("ob.D(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_23_1 = new StringBuilder().append("ob.D(").append(groupId).append(',').append(fileId).append(',');
+          if (remainingByteBudget == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class SoundCache {
         }
     }
 
-    private final PcmSample a(int param0, int[] param1, int param2, int param3) {
+    private final PcmSample getSynthesizedSampleByGroup(int fileId, int[] remainingByteBudget, int groupId, int obfuscationGuard) {
         PcmSample discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -178,31 +178,31 @@ final class SoundCache {
         RuntimeException decompiledCaughtException = null;
         PcmSample var8Lifetime1;
         try {
-          var5_int = (param2 >>> 12 | (param2 & -805302273) << 4) ^ param0;
-          var5_int = var5_int | param2 << 16;
+          var5_int = (groupId >>> 12 | (groupId & -805302273) << 4) ^ fileId;
+          var5_int = var5_int | groupId << 16;
           var6 = (long)var5_int;
-          if (param3 > -37) {
+          if (obfuscationGuard > -37) {
             var10 = (int[]) null;
-            discarded$1 = this.a(-58, -101, (int[]) null, -98);
+            discarded$1 = this.getVorbisSampleByGroup(-58, -101, (int[]) null, -98);
           }
-          var8 = (PcmSample) (this.field_b.a((byte) 106, var6));
+          var8 = (PcmSample) (this.pcmSampleCache.findByKey((byte) 106, var6));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
           }
-          if (param1 != null &&
-            param1[0] <= 0) {
+          if (remainingByteBudget != null &&
+            remainingByteBudget[0] <= 0) {
             return null;
           }
-          var9 = bj.a(this.field_h, param2, param0);
+          var9 = bj.a(this.synthesizedSoundArchive, groupId, fileId);
           if (var9 == null) {
             return null;
           }
           var11 = var9.a();
           var8Lifetime1 = var11;
-          this.field_b.a(105, var6, var8Lifetime1);
-          if (param1 != null) {
-            param1[0] = param1[0] - var11.samples.length;
+          this.pcmSampleCache.put(105, var6, var8Lifetime1);
+          if (remainingByteBudget != null) {
+            remainingByteBudget[0] = remainingByteBudget[0] - var11.samples.length;
           }
           stackIn_16_0 = var8Lifetime1;
           return stackIn_16_0;
@@ -210,17 +210,17 @@ final class SoundCache {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
           stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("ob.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_19_1 = new StringBuilder().append("ob.A(").append(fileId).append(',');
+          if (remainingByteBudget == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(groupId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final PcmSample a(int[] param0, int param1, byte param2) {
+    final PcmSample getSynthesizedSample(int[] remainingByteBudget, int sampleId, byte obfuscationGuard) {
         RuntimeException var4 = null;
         PcmSample stackIn_2_0 = null;
         PcmSample stackIn_8_0 = null;
@@ -229,40 +229,40 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h.a((byte) 113) == 1) {
-            stackIn_2_0 = this.a(param1, param0, 0, -58);
+          if (this.synthesizedSoundArchive.a((byte) 113) == 1) {
+            stackIn_2_0 = this.getSynthesizedSampleByGroup(sampleId, remainingByteBudget, 0, -58);
             return stackIn_2_0;
           }
-          if (param2 <= 96) {
+          if (obfuscationGuard <= 96) {
             field_f = (String) null;
           }
-          if (this.field_h.b(param1, 27912) != 1) {
+          if (this.synthesizedSoundArchive.b(sampleId, 27912) != 1) {
             throw new RuntimeException();
           }
-          stackIn_8_0 = this.a(0, param0, param1, -58);
+          stackIn_8_0 = this.getSynthesizedSampleByGroup(0, remainingByteBudget, sampleId, -58);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
           stackIn_12_0 = var4;
           stackIn_12_1 = new StringBuilder().append("ob.B(");
-          if (param0 == null) {
+          if (remainingByteBudget == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw pn.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(sampleId).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    SoundCache(ResourceArchive param0, ResourceArchive param1) {
-        this.field_g = new ph(256);
-        this.field_b = new ph(256);
+    SoundCache(ResourceArchive synthesizedSoundArchive, ResourceArchive vorbisSoundArchive) {
+        this.vorbisSampleCache = new IntrusiveNodeHashTable(256);
+        this.pcmSampleCache = new IntrusiveNodeHashTable(256);
         try {
-          this.field_h = param0;
-          this.field_a = param1;
+          this.synthesizedSoundArchive = synthesizedSoundArchive;
+          this.vorbisSoundArchive = vorbisSoundArchive;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (synthesizedSoundArchive != null ? "{...}" : "null") + ',' + (vorbisSoundArchive != null ? "{...}" : "null") + ')');
         }
     }
 

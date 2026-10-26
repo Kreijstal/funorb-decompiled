@@ -16,13 +16,13 @@ final class ScoreSubmission extends IntrusiveNode {
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          ScoreSubmission.a(-70);
+          ScoreSubmission.createRendererResources(-70);
         }
         stackIn_6_0 = (0 != (param2 & 2048)) && ((param1 & 55) != 0);
         return stackIn_6_0;
     }
 
-    final static void a(int param0) {
+    final static void createRendererResources(int obfuscationGuard) {
         RenderSprite[] array$0 = null;
         RenderSprite[] array$1 = null;
         RenderSprite[] stackIn_78_0 = null;
@@ -119,8 +119,8 @@ final class ScoreSubmission extends IntrusiveNode {
             ec.field_e[var2Lifetime9] = var6.a(FlightBody.field_a[var2Lifetime9], false);
           }
           var2Lifetime10 = 0;
-          if (param0 <= 38) {
-            ScoreSubmission.a(65);
+          if (obfuscationGuard <= 38) {
+            ScoreSubmission.createRendererResources(65);
           }
           while (var2Lifetime10 < gu.field_a.length) {
             ko.field_g[var2Lifetime10] = var6.a(gu.field_a[var2Lifetime10], false);
@@ -178,7 +178,7 @@ final class ScoreSubmission extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var1), "ga.A(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var1), "ga.A(" + obfuscationGuard + ')');
         }
     }
 

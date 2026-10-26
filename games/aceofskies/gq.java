@@ -96,19 +96,19 @@ final class gq {
         var3 = (he) (this.field_h.a(-115));
         while (var3 != null) {
           if (!var3.e(0)) {
-            fieldTemp$0 = var3.field_i + 1L;
-            var3.field_i = var3.field_i + 1L;
+            fieldTemp$0 = var3.secondaryKey + 1L;
+            var3.secondaryKey = var3.secondaryKey + 1L;
             if (fieldTemp$0 > (long)param1) {
               var4 = new mb(var3.a((byte) 74), var3.field_p);
               this.field_b.a(-1, var4, var3.key);
               ns.a(var4, -30575, var3);
               var3.unlink(-125);
-              var3.d(-115);
+              var3.unlinkSecondaryNode(-115);
             }
           } else {
             if (var3.a((byte) 74) == null) {
               var3.unlink(-128);
-              var3.d(-126);
+              var3.unlinkSecondaryNode(-126);
               this.field_g = this.field_g + var3.field_p;
             }
           }
@@ -184,7 +184,7 @@ final class gq {
             return;
           }
           param1.unlink(-123);
-          param1.d(-117);
+          param1.unlinkSecondaryNode(-117);
           this.field_g = this.field_g + param1.field_p;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -213,40 +213,40 @@ final class gq {
           this.field_g = 32;
           if (var5 == null) {
             var7.unlink(-124);
-            var7.d(-114);
+            var7.unlinkSecondaryNode(-114);
             this.field_g = this.field_g + var7.field_p;
             return null;
           }
           if (!var7.e(0)) {
-            this.field_h.a((wt) (var7), (byte) 85);
-            var7.field_i = 0L;
+            this.field_h.a((DualLinkNode) (var7), (byte) 85);
+            var7.secondaryKey = 0L;
             return var5;
           }
           var6 = new qj(var5, var7.field_p);
           this.field_b.a(-1, var6, var7.key);
-          this.field_h.a((wt) (var6), (byte) -74);
-          ((he) ((Object) var6)).field_i = 0L;
+          this.field_h.a((DualLinkNode) (var6), (byte) -74);
+          ((he) ((Object) var6)).secondaryKey = 0L;
           var7.unlink(-128);
-          var7.d(-119);
+          var7.unlinkSecondaryNode(-119);
           return var5;
         }
         if (var5 == null) {
           var7.unlink(-124);
-          var7.d(-114);
+          var7.unlinkSecondaryNode(-114);
           this.field_g = this.field_g + var7.field_p;
           return null;
         }
         if (!var7.e(0)) {
-          this.field_h.a((wt) (var7), (byte) 85);
-          var7.field_i = 0L;
+          this.field_h.a((DualLinkNode) (var7), (byte) 85);
+          var7.secondaryKey = 0L;
           return var5;
         }
         var6Lifetime1 = new qj(var5, var7.field_p);
         this.field_b.a(-1, var6Lifetime1, var7.key);
-        this.field_h.a((wt) (var6Lifetime1), (byte) -74);
-        ((he) ((Object) var6Lifetime1)).field_i = 0L;
+        this.field_h.a((DualLinkNode) (var6Lifetime1), (byte) -74);
+        ((he) ((Object) var6Lifetime1)).secondaryKey = 0L;
         var7.unlink(-128);
-        var7.d(-119);
+        var7.unlinkSecondaryNode(-119);
         return var5;
     }
 
@@ -333,7 +333,7 @@ final class gq {
           var4 = var2;
           var2 = (he) (this.field_b.a(-64));
           var4.unlink(-125);
-          var4.d(-127);
+          var4.unlinkSecondaryNode(-127);
           this.field_g = this.field_g + var4.field_p;
         }
         if (param0 != 6408) {
@@ -368,7 +368,7 @@ final class gq {
           var4 = var2;
           var2 = (he) (this.field_b.a(-118));
           var4.unlink(-126);
-          var4.d(-116);
+          var4.unlinkSecondaryNode(-116);
           this.field_g = this.field_g + var4.field_p;
         }
         if (param0 != -16) {
@@ -410,8 +410,8 @@ final class gq {
           var6 = new qj(param3, param2);
           int var7 = -16 / ((-52 - param1) / 34);
           this.field_b.a(-1, var6, param0);
-          this.field_h.a((wt) (var6), (byte) 64);
-          ((he) ((Object) var6)).field_i = 0L;
+          this.field_h.a((DualLinkNode) (var6), (byte) 64);
+          ((he) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "gq.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

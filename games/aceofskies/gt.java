@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gt extends wt {
+final class gt extends DualLinkNode {
     static ll field_o;
     private long field_p;
     int field_n;

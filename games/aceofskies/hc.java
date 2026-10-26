@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hc extends wt {
+abstract class hc extends DualLinkNode {
     private int[] field_s;
     private int[] field_p;
     int field_D;

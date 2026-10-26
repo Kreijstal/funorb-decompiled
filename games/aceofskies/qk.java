@@ -6,11 +6,11 @@ final class qk {
     static RenderSprite field_i;
     static String field_f;
     static int field_g;
-    private wt field_b;
+    private DualLinkNode field_b;
     static vd[] field_a;
     private er field_d;
     private int field_c;
-    private ph field_h;
+    private IntrusiveNodeHashTable field_h;
 
     final static void a(String param0, boolean param1) {
         try {
@@ -174,9 +174,9 @@ final class qk {
         field_i = null;
     }
 
-    final void a(wt param0, int param1, long param2) {
+    final void a(DualLinkNode param0, int param1, long param2) {
         RuntimeException runtimeException = null;
-        wt var5 = null;
+        DualLinkNode var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -190,14 +190,14 @@ final class qk {
           if (decompiledSharedTail0) {
             var5 = this.field_d.b(param1 - 18522);
             var5.unlink(-126);
-            var5.d(-119);
+            var5.unlinkSecondaryNode(-119);
             if (this.field_b == var5) {
               var5 = this.field_d.b(param1 - 18522);
               var5.unlink(-128);
-              var5.d(param1 - 125);
+              var5.unlinkSecondaryNode(param1 - 125);
             }
           }
-          this.field_h.a(125, param2, param0);
+          this.field_h.put(125, param2, param0);
           this.field_d.a(param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,11 +226,11 @@ final class qk {
         }
     }
 
-    final wt a(byte param0, long param1) {
+    final DualLinkNode a(byte param0, long param1) {
         if (param0 != -27) {
           field_g = 50;
         }
-        wt var4 = (wt) (this.field_h.a((byte) 106, param1));
+        DualLinkNode var4 = (DualLinkNode) (this.field_h.findByKey((byte) 106, param1));
         if (var4 != null) {
           this.field_d.a(2, var4);
         }
@@ -239,12 +239,12 @@ final class qk {
 
     qk(int param0) {
         int var2 = 0;
-        this.field_b = new wt();
+        this.field_b = new DualLinkNode();
         this.field_d = new er();
         this.field_c = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }
-        this.field_h = new ph(var2);
+        this.field_h = new IntrusiveNodeHashTable(var2);
     }
 
     static {

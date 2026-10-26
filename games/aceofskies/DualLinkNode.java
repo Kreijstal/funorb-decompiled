@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wt extends IntrusiveNode {
+class DualLinkNode extends IntrusiveNode {
     static ia field_m;
-    wt field_f;
-    long field_i;
+    DualLinkNode previousSecondaryNode;
+    long secondaryKey;
     static String[] field_g;
-    wt field_j;
+    DualLinkNode nextSecondaryNode;
     static PacketBuffer field_l;
     static jt field_e;
     static String[] field_k;
@@ -20,24 +20,24 @@ class wt extends IntrusiveNode {
         field_m = null;
         field_k = null;
         if (param0 != 14349) {
-          wt.a(55);
+          DualLinkNode.a(55);
         }
     }
 
-    final void d(int param0) {
-        if (null == this.field_f) {
+    final void unlinkSecondaryNode(int obfuscationGuard) {
+        if (null == this.previousSecondaryNode) {
           return;
         }
-        if (param0 <= -113) {
-          this.field_f.field_j = this.field_j;
-          this.field_j.field_f = this.field_f;
-          this.field_f = null;
-          this.field_j = null;
+        if (obfuscationGuard <= -113) {
+          this.previousSecondaryNode.nextSecondaryNode = this.nextSecondaryNode;
+          this.nextSecondaryNode.previousSecondaryNode = this.previousSecondaryNode;
+          this.previousSecondaryNode = null;
+          this.nextSecondaryNode = null;
           return;
         }
     }
 
-    protected wt() {
+    protected DualLinkNode() {
     }
 
     static {

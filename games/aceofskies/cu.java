@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cu extends wt implements ws {
+final class cu extends DualLinkNode implements ws {
     private wl field_t;
     int field_u;
     int field_v;

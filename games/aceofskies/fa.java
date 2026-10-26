@@ -24,7 +24,7 @@ abstract class fa {
           if (!param1) {
             fa.a(72);
           }
-          var2 = (mq) (ca.field_i.a((byte) 106, (long)param0.field_c));
+          var2 = (mq) (ca.field_i.findByKey((byte) 106, (long)param0.field_c));
           if (var2 != null &&
             var2.field_f == param0) {
             var3 = var2.field_j;
@@ -33,7 +33,7 @@ abstract class fa {
               var2.unlink(-124);
             }
             var3 = new bo(param0);
-            ca.field_i.a(123, (long)param0.field_c, new mq(param0, var3));
+            ca.field_i.put(123, (long)param0.field_c, new mq(param0, var3));
           }
           un.field_f = var3;
           ns.field_a = param0;

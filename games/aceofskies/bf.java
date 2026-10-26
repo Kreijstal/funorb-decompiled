@@ -1986,7 +1986,7 @@ abstract class bf extends GraphicsRenderer {
     private final void D(int param0) {
         this.a(1, this.field_ac, 0);
         this.a(this.field_xb, (byte) 75);
-        this.a(true, wt.field_m, 1, param0);
+        this.a(true, DualLinkNode.field_m, 1, param0);
     }
 
     final void f(int param0) {

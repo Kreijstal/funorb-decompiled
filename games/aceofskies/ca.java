@@ -10,7 +10,7 @@ final class ca {
     float field_d;
     private int field_e;
     String field_j;
-    static ph field_i;
+    static IntrusiveNodeHashTable field_i;
     private int field_b;
 
     final boolean a(int param0) {
@@ -164,6 +164,6 @@ final class ca {
     }
 
     static {
-        field_i = new ph(8);
+        field_i = new IntrusiveNodeHashTable(8);
     }
 }

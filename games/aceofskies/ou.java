@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ou extends wt {
+class ou extends DualLinkNode {
     static char[] field_n;
 
     ou() {

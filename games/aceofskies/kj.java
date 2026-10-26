@@ -3,7 +3,7 @@
  */
 final class kj extends GraphicsRenderer {
     private boolean field_y;
-    private ph field_g;
+    private IntrusiveNodeHashTable field_g;
     private int field_q;
     private int field_B;
     private int field_n;
@@ -53,7 +53,7 @@ final class kj extends GraphicsRenderer {
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
         oe var4;
-        var4 = (oe) (this.field_g.a((byte) 106, (long)param0.hashCode()));
+        var4 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
         if (var4 != null) {
           if (var4.field_g == param1 &&
             var4.field_h == param2) {
@@ -62,7 +62,7 @@ final class kj extends GraphicsRenderer {
           this.a(param0, param1, param2);
         } else {
           var4 = oi.a(param0, -30, param1, param2);
-          this.field_g.a(123, (long)param0.hashCode(), var4);
+          this.field_g.put(123, (long)param0.hashCode(), var4);
         }
     }
 
@@ -338,7 +338,7 @@ final class kj extends GraphicsRenderer {
         iu discarded$0 = null;
         this.field_h = false;
         this.field_y = false;
-        this.field_g = new ph(4);
+        this.field_g = new IntrusiveNodeHashTable(4);
         this.field_d = 50;
         this.field_z = 0;
         this.field_w = 0;
@@ -697,11 +697,11 @@ final class kj extends GraphicsRenderer {
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
         java.awt.Dimension var5 = null;
-        oe var4 = (oe) (this.field_g.a((byte) 106, (long)param0.hashCode()));
+        oe var4 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
         if (var4 != null) {
           var4.unlink(-128);
           var4 = oi.a(param0, -43, param1, param2);
-          this.field_g.a(-32, (long)param0.hashCode(), var4);
+          this.field_g.put(-32, (long)param0.hashCode(), var4);
           if (this.field_l == param0 &&
             this.field_C == null) {
             var5 = param0.getSize();
@@ -753,7 +753,7 @@ final class kj extends GraphicsRenderer {
             this.g();
           }
         } else {
-          var2 = (oe) (this.field_g.a((byte) 106, (long)param0.hashCode()));
+          var2 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
           if (var2 != null) {
             this.field_l = param0;
             var3 = param0.getSize();

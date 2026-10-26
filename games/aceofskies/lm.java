@@ -95,7 +95,7 @@ final class lm {
     final static void a(int param0, MusicTrack param1, boolean param2, byte param3) {
         try {
           int var4_int = 65 / ((56 - param3) / 36);
-          wt.field_e.a((byte) -62, param0, !param2 ? true : false, 256, param1, 1000000);
+          DualLinkNode.field_e.a((byte) -62, param0, !param2 ? true : false, 256, param1, 1000000);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "lm.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

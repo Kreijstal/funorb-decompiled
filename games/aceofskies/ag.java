@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ag extends wt {
+abstract class ag extends DualLinkNode {
     static String field_o;
     boolean field_t;
     static sa field_n;

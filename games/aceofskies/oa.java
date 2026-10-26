@@ -10,7 +10,7 @@ final class oa extends GraphicsRenderer implements e {
     private int field_e;
     private ao field_f;
     private int field_l;
-    private ph field_h;
+    private IntrusiveNodeHashTable field_h;
     private a[] field_k;
     private int field_n;
     private boolean field_g;
@@ -31,7 +31,7 @@ final class oa extends GraphicsRenderer implements e {
         this.field_m = new IntrusiveDeque();
         this.field_l = 4096;
         this.field_e = 4096;
-        this.field_h = new ph(4);
+        this.field_h = new IntrusiveNodeHashTable(4);
         this.field_g = false;
         try {
           if (!ei.a("sw3d", (byte) -16)) {
@@ -86,7 +86,7 @@ final class oa extends GraphicsRenderer implements e {
         this.field_k = null;
         this.field_d = null;
         this.field_i = null;
-        this.field_h.b(0);
+        this.field_h.clearFromBucket(0);
         ya var1 = (ya) (this.field_m.first(268435455));
         while (var1 != null) {
           var1.ga();
@@ -151,7 +151,7 @@ final class oa extends GraphicsRenderer implements e {
         try {
           java.lang.reflect.Method var6 = null;
           Class var7 = null;
-          p var4 = (p) (this.field_h.a((byte) 106, (long)param0.hashCode()));
+          p var4 = (p) (this.field_h.findByKey((byte) 106, (long)param0.hashCode()));
           if (var4 == null) {
             try {
               var7 = Class.forName("java.awt.Canvas");
@@ -160,7 +160,7 @@ final class oa extends GraphicsRenderer implements e {
             } catch (Exception exception) {
             }
             var4 = new p(this, param0, param1, param2);
-            this.field_h.a(-125, (long)param0.hashCode(), var4);
+            this.field_h.put(-125, (long)param0.hashCode(), var4);
           } else {
             if (var4.field_h != param1 ||
               var4.field_g != param2) {
@@ -199,7 +199,7 @@ final class oa extends GraphicsRenderer implements e {
     private final void a(java.awt.Canvas param0) {
         p var2 = null;
         if (param0 != null) {
-          var2 = (p) (this.field_h.a((byte) 106, (long)param0.hashCode()));
+          var2 = (p) (this.field_h.findByKey((byte) 106, (long)param0.hashCode()));
           this.field_d = var2;
           this.t(var2);
         } else {

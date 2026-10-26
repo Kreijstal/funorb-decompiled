@@ -4,7 +4,7 @@
 final class dq {
     static int[] field_c;
     static fn field_a;
-    static String field_b;
+    static String loadingMessage;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -24,7 +24,7 @@ final class dq {
         int var1 = 0;
         int var1Lifetime1;
         if (param0 != -2) {
-          field_b = (String) null;
+          loadingMessage = (String) null;
           if (224 <= gn.field_a) {
             rt.b(256, (byte) -106);
             return;
@@ -73,7 +73,7 @@ final class dq {
     }
 
     public static void a(int param0) {
-        field_b = null;
+        loadingMessage = null;
         field_a = null;
         field_c = null;
         if (param0 < 119) {

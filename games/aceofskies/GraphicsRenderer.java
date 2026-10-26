@@ -212,7 +212,7 @@ abstract class GraphicsRenderer {
         RuntimeException var4 = null;
         try {
           var4_int = -3 / ((param1 - 13) / 46);
-          if (null != wt.field_e) {
+          if (null != DualLinkNode.field_e) {
             dh.a(1000000, param3, param2, 1048576, param0);
           }
           if (mg.field_d != null) {

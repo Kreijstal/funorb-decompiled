@@ -3,7 +3,7 @@
  */
 final class MusicTrack extends IntrusiveNode {
     byte[] field_e;
-    ph field_f;
+    IntrusiveNodeHashTable field_f;
 
     final static MusicTrack a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, (byte) -71, param2);
@@ -42,7 +42,7 @@ final class MusicTrack extends IntrusiveNode {
         if (this.field_f != null) {
           return;
         }
-        this.field_f = new ph(16);
+        this.field_f = new IntrusiveNodeHashTable(16);
         var21 = new int[16];
         var18 = var21;
         var1 = var18;
@@ -99,11 +99,11 @@ final class MusicTrack extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var19[var10Lifetime2];
-                var14 = (ub) (this.field_f.a((byte) 106, (long)var13));
+                var14 = (ub) (this.field_f.findByKey((byte) 106, (long)var13));
                 if (var14 == null) {
                   var15 = new ub(new byte[128]);
                   var14 = var15;
-                  this.field_f.a(109, (long)var13, var15);
+                  this.field_f.put(109, (long)var13, var15);
                 }
                 var14.field_e[var11Lifetime2] = (byte) 1;
               }

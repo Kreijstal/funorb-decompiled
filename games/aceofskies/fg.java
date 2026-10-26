@@ -4,13 +4,13 @@
 final class fg extends ArchiveProvider {
     private un field_g;
     private ArchiveIndex field_m;
-    private ph field_v;
+    private IntrusiveNodeHashTable field_v;
     private int field_p;
     private byte[] field_u;
     private bl field_l;
     private dk field_z;
     private bl field_e;
-    static ResourceArchive field_t;
+    static ResourceArchive sharedFontMetricsArchive;
     static IntrusiveDeque field_r;
     private int field_j;
     private ag field_y;
@@ -117,7 +117,7 @@ final class fg extends ArchiveProvider {
         if (param0 != 1) {
           field_k = (String) null;
         }
-        ag var3 = (ag) (this.field_v.a((byte) 106, (long)param1));
+        ag var3 = (ag) (this.field_v.findByKey((byte) 106, (long)param1));
         if (var3 == null) {
           return 0;
         }
@@ -302,7 +302,7 @@ final class fg extends ArchiveProvider {
                 decompiledFrameRemainder0 = (this.field_i);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
-                  var2 = (ag) (this.field_v.a(false));
+                  var2 = (ag) (this.field_v.firstForIteration(false));
                   while (var2 != null) {
                     if (!var2.field_p) {
                       if (var2.field_t) {
@@ -314,7 +314,7 @@ final class fg extends ArchiveProvider {
                         var2.field_t = true;
                       }
                     }
-                    var2 = (ag) (this.field_v.a(0));
+                    var2 = (ag) (this.field_v.nextForIteration(0));
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -335,7 +335,7 @@ final class fg extends ArchiveProvider {
           decompiledFrameRemainder0 = (this.field_i);
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
-            var2Lifetime1 = (ag) (this.field_v.a(false));
+            var2Lifetime1 = (ag) (this.field_v.firstForIteration(false));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_p) {
                 if (var2Lifetime1.field_t) {
@@ -347,7 +347,7 @@ final class fg extends ArchiveProvider {
                   var2Lifetime1.field_t = true;
                 }
               }
-              var2Lifetime1 = (ag) (this.field_v.a(0));
+              var2Lifetime1 = (ag) (this.field_v.nextForIteration(0));
             }
           }
         }
@@ -437,7 +437,7 @@ final class fg extends ArchiveProvider {
 
     public static void b(byte param0) {
         field_f = null;
-        field_t = null;
+        sharedFontMetricsArchive = null;
         field_r = null;
         field_k = null;
         if (param0 <= 72) {
@@ -466,7 +466,7 @@ final class fg extends ArchiveProvider {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var12 = (ag) (this.field_v.a((byte) 106, (long)param2));
+        var12 = (ag) (this.field_v.findByKey((byte) 106, (long)param2));
         var4 = var12;
         if (var12 != null &&
           param1 == 0 &&
@@ -508,7 +508,7 @@ final class fg extends ArchiveProvider {
               var4 = this.field_g.a(this.field_p, param2, param0 + 16, true, (byte) 2);
             }
           }
-          this.field_v.a(-41, (long)param2, (IntrusiveNode) (var4));
+          this.field_v.put(-41, (long)param2, (IntrusiveNode) (var4));
         }
         if (((ag) (var4)).field_p) {
           return null;
@@ -566,7 +566,7 @@ final class fg extends ArchiveProvider {
             if (((ag) (var4)).field_q &&
               !this.field_g.a(false)) {
               var4 = this.field_g.a(this.field_p, param2, -21, true, (byte) 2);
-              this.field_v.a(-87, (long)param2, (IntrusiveNode) (var4));
+              this.field_v.put(-87, (long)param2, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -603,7 +603,7 @@ final class fg extends ArchiveProvider {
           if (((ag) (var4)).field_q &&
             !this.field_g.a(false)) {
             var4 = this.field_g.a(this.field_p, param2, -21, true, (byte) 2);
-            this.field_v.a(-114, (long)param2, (IntrusiveNode) (var4));
+            this.field_v.put(-114, (long)param2, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -762,7 +762,7 @@ final class fg extends ArchiveProvider {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_v = new ph(16);
+        this.field_v = new IntrusiveNodeHashTable(16);
         this.field_d = 0;
         this.field_n = new IntrusiveDeque();
         this.field_x = 0L;

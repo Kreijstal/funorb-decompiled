@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bi extends wt {
+final class bi extends DualLinkNode {
     byte[] field_n;
     static String field_o;
 

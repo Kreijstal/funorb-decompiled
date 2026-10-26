@@ -135,7 +135,7 @@ final class ol extends ai {
           if (param1 > -123) {
             return true;
           }
-          var3 = ph.a(param0, 0);
+          var3 = IntrusiveNodeHashTable.a(param0, 0);
           if (param2.indexOf(param0) == -1 &&
             -1 == param2.indexOf(var3)) {
             stackIn_15_0 = (param2.startsWith(param0)) || (param2.startsWith(var3)) || (param2.endsWith(param0)) || (param2.endsWith(var3));

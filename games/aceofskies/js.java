@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class js implements Iterator {
-    private wt field_a;
-    private wt field_d;
+    private DualLinkNode field_a;
+    private DualLinkNode field_d;
     static int[] field_c;
     private hs field_b;
 
@@ -15,9 +15,9 @@ final class js implements Iterator {
           this.field_d = null;
           var1 = null;
         } else {
-          this.field_d = ((wt) (var1)).field_j;
+          this.field_d = ((DualLinkNode) (var1)).nextSecondaryNode;
         }
-        this.field_a = (wt) (var1);
+        this.field_a = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -25,7 +25,7 @@ final class js implements Iterator {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.d(-118);
+        this.field_a.unlinkSecondaryNode(-118);
         this.field_a = null;
     }
 
@@ -43,7 +43,7 @@ final class js implements Iterator {
         try {
           this.field_b = param0;
           this.field_a = null;
-          this.field_d = this.field_b.field_c.field_j;
+          this.field_d = this.field_b.field_c.nextSecondaryNode;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "js.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

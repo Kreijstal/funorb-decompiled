@@ -3,7 +3,7 @@
  */
 final class qn {
     static java.awt.Image field_d;
-    static SoundCache field_c;
+    static SoundCache loadingSoundCache;
     static st field_a;
     static PcmStreamMixer pcmMixer;
 
@@ -12,7 +12,7 @@ final class qn {
         pcmMixer = null;
         int var1 = -119 % ((param0 + 44) / 62);
         field_d = null;
-        field_c = null;
+        loadingSoundCache = null;
     }
 
     final static String b(int param0) {

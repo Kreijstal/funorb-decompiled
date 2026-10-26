@@ -909,8 +909,8 @@ final class FlightSession {
         var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.alternateMusicActive = false;
-          lm.a(40, tg.field_a[1], true, (byte) -58);
-          this.gameMusic = wt.field_e.field_s;
+          lm.a(40, tg.musicTracks[1], true, (byte) -58);
+          this.gameMusic = DualLinkNode.field_e.field_s;
           this.musicLayerPresetIndex = 0;
           this.setMusicLayersImmediately(11154);
           this.stopAircraftEngineSounds(true);
@@ -2332,10 +2332,10 @@ final class FlightSession {
                         if (var9 > 0 &&
                           !this.alternateMusicActive) {
                           this.alternateMusicActive = true;
-                          lm.a(20, tg.field_a[2], true, (byte) -106);
+                          lm.a(20, tg.musicTracks[2], true, (byte) -106);
                           var10_int = 0;
                           while (var10_int < 16) {
-                            wt.field_e.field_s.a((byte) -119, 256, var10_int);
+                            DualLinkNode.field_e.field_s.a((byte) -119, 256, var10_int);
                             var10_int++;
                             if (obfuscationControl != 0) {
                               decompiledFrameCompleted5 = false;
@@ -2347,7 +2347,7 @@ final class FlightSession {
                         if ((decompiledFrameRemainder0) && (decompiledFrameCompleted5) && (var9 == 0 &&
                           this.alternateMusicActive)) {
                           this.alternateMusicActive = false;
-                          lm.a(20, tg.field_a[1], true, (byte) 115);
+                          lm.a(20, tg.musicTracks[1], true, (byte) 115);
                           this.setMusicLayersImmediately(11154);
                         }
                         if (~var4 != ~var5Lifetime1) {
@@ -3240,10 +3240,10 @@ final class FlightSession {
           } else {
             Bullet.requestMenu((byte) -86, 0, screenFlag);
           }
-          lm.a(40, tg.field_a[0], true, (byte) -84);
+          lm.a(40, tg.musicTracks[0], true, (byte) -84);
           var4_int = 0;
           while (var4_int < 16) {
-            wt.field_e.field_s.a((byte) -126, 256, var4_int);
+            DualLinkNode.field_e.field_s.a((byte) -126, 256, var4_int);
             var4_int++;
             if (var5 != 0) {
               return;

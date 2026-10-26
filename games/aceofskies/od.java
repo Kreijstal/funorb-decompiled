@@ -3,7 +3,7 @@
  */
 final class od extends lg {
     private byte[] field_w;
-    static ResourceArchive field_x;
+    static ResourceArchive musicTrackArchive;
     static String field_v;
 
     final static id a(String param0, int param1) {
@@ -80,7 +80,7 @@ final class od extends lg {
 
     public static void d(byte param0) {
         field_v = null;
-        field_x = null;
+        musicTrackArchive = null;
         if (param0 != -96) {
           String var2 = (String) null;
           od.a((String) null, -124);

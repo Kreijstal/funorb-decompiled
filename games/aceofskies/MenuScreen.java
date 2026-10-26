@@ -936,17 +936,17 @@ final class MenuScreen {
         }
     }
 
-    final static void a(byte param0, ResourceArchive param1, ResourceArchive param2) {
+    final static void decodeMenuResources(byte obfuscationGuard, ResourceArchive spriteArchive, ResourceArchive fontMetricsArchive) {
         try {
-          ka.field_a = qg.a((byte) 3, param1, "", "frame");
-          rg.field_F = qg.a((byte) 3, param1, "", "button_raised");
-          wt.field_h = qg.a((byte) 3, param1, "", "button_frame");
-          bo.field_a = (hc) ((Object) HighscoreNameEntry.a(param1, "b12", "", param2, param0 ^ -48));
-          if (param0 != -56) {
+          ka.field_a = qg.a((byte) 3, spriteArchive, "", "frame");
+          rg.field_F = qg.a((byte) 3, spriteArchive, "", "button_raised");
+          DualLinkNode.field_h = qg.a((byte) 3, spriteArchive, "", "button_frame");
+          bo.field_a = (hc) ((Object) HighscoreNameEntry.a(spriteArchive, "b12", "", fontMetricsArchive, obfuscationGuard ^ -48));
+          if (obfuscationGuard != -56) {
             field_g = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "nk.S(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "nk.S(" + obfuscationGuard + ',' + (spriteArchive != null ? "{...}" : "null") + ',' + (fontMetricsArchive != null ? "{...}" : "null") + ')');
         }
     }
 

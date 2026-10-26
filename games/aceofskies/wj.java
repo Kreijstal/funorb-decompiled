@@ -291,9 +291,9 @@ final class wj implements up {
           int var8_int = -86 % ((param0 + 12) / 37);
           Vector2.field_c = param7;
           BitmapFont.field_a.a(qn.pcmMixer);
-          wt.field_e = param5;
-          wt.field_e.a((byte) 125, RendererManager.field_c);
-          um.field_m.a(wt.field_e);
+          DualLinkNode.field_e = param5;
+          DualLinkNode.field_e.a((byte) 125, RendererManager.field_c);
+          um.field_m.a(DualLinkNode.field_e);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

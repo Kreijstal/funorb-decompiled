@@ -50,9 +50,9 @@ final class ml extends IntrusiveNode {
                   var6 = var9;
                   var9--;
                   if ((1 & var9) == 0) {
-                    var7 = param2.a(param1, var9 >> 2, (byte) 110);
+                    var7 = param2.getSynthesizedSample(param1, var9 >> 2, (byte) 110);
                   } else {
-                    var7 = param2.a(var9 >> 2, param1, (byte) -92);
+                    var7 = param2.getVorbisSample(var9 >> 2, param1, (byte) -92);
                   }
                   if (var7 == null) {
                     var5_int = 0;

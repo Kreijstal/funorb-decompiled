@@ -1601,7 +1601,7 @@ final class jc extends bf {
           if (!param0) {
             return;
           }
-          if (param1 != wt.field_m) {
+          if (param1 != DualLinkNode.field_m) {
             if (param1 == bm.field_x) {
               var5_int = 3;
               var6 = 1 + param2;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nl extends wt {
+abstract class nl extends DualLinkNode {
     int field_v;
     static int field_t;
     int field_u;

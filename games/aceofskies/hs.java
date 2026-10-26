@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class hs implements Iterable {
-    wt field_c;
-    private wt field_b;
+    DualLinkNode field_c;
+    private DualLinkNode field_b;
     static int[] field_a;
 
     final static boolean a(boolean param0, int param1, int param2) {
@@ -16,16 +16,16 @@ final class hs implements Iterable {
         return to.b(-7493, param1, param2) & la.a(param2, param1, (byte) 70);
     }
 
-    final void a(wt param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
-          if (null != param0.field_f) {
-            param0.d(-114);
+          if (null != param0.previousSecondaryNode) {
+            param0.unlinkSecondaryNode(-114);
           }
-          param0.field_j = this.field_c;
-          param0.field_f = this.field_c.field_f;
-          param0.field_f.field_j = param0;
+          param0.nextSecondaryNode = this.field_c;
+          param0.previousSecondaryNode = this.field_c.previousSecondaryNode;
+          param0.previousSecondaryNode.nextSecondaryNode = param0;
           int var3_int = 43 % ((-3 - param1) / 51);
-          param0.field_j.field_f = param0;
+          param0.nextSecondaryNode.previousSecondaryNode = param0;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "hs.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -42,43 +42,43 @@ final class hs implements Iterable {
         return (Iterator) ((Object) new js(this));
     }
 
-    final wt a(boolean param0) {
-        wt var2 = this.field_b;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_b;
         if (var2 == this.field_c) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_j;
+        this.field_b = var2.nextSecondaryNode;
         if (param0) {
           return var2;
         }
-        return (wt) null;
+        return (DualLinkNode) null;
     }
 
-    private final wt a(wt param0, int param1) {
-        wt var3 = null;
+    private final DualLinkNode a(DualLinkNode param0, int param1) {
+        DualLinkNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        wt stackIn_10_0 = null;
+        DualLinkNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 128) {
-            this.field_c = (wt) null;
+            this.field_c = (DualLinkNode) null;
           }
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_c.field_j;
+            var3 = this.field_c.nextSecondaryNode;
           }
           if (this.field_c == var3) {
             this.field_b = null;
             stackIn_8_0 = null;
-            return (wt) (stackIn_8_0);
+            return (DualLinkNode) (stackIn_8_0);
           }
-          this.field_b = var3.field_j;
+          this.field_b = var3.nextSecondaryNode;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,27 +95,27 @@ final class hs implements Iterable {
         }
     }
 
-    final wt a(int param0) {
+    final DualLinkNode a(int param0) {
         int var2 = -23 / ((param0 + 5) / 45);
-        return this.a((wt) null, 128);
+        return this.a((DualLinkNode) null, 128);
     }
 
-    final wt b(boolean param0) {
-        wt var2 = this.field_c.field_j;
+    final DualLinkNode b(boolean param0) {
+        DualLinkNode var2 = this.field_c.nextSecondaryNode;
         if (var2 == this.field_c) {
           return null;
         }
-        var2.d(-119);
+        var2.unlinkSecondaryNode(-119);
         if (!param0) {
           return var2;
         }
-        return (wt) null;
+        return (DualLinkNode) null;
     }
 
     hs() {
-        this.field_c = new wt();
-        this.field_c.field_j = this.field_c;
-        this.field_c.field_f = this.field_c;
+        this.field_c = new DualLinkNode();
+        this.field_c.nextSecondaryNode = this.field_c;
+        this.field_c.previousSecondaryNode = this.field_c;
     }
 
     static {

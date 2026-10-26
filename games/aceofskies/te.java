@@ -49,7 +49,7 @@ final class te extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetFrameTiming(int obfuscationGuard) {
         int var1_int = 0;
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;
@@ -58,7 +58,7 @@ final class te extends IntrusiveNode {
           for (var1_int = 0; 32 > var1_int; var1_int++) {
             pn.field_b[var1_int] = 0L;
           }
-          if (param0 < 31) {
+          if (obfuscationGuard < 31) {
             field_e = (char[]) null;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
@@ -66,7 +66,7 @@ final class te extends IntrusiveNode {
           }
           Bullet.field_g = 0;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "te.D(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "te.D(" + obfuscationGuard + ')');
         }
     }
 

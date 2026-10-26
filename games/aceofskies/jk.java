@@ -3,11 +3,11 @@
  */
 final class jk {
     static String field_c;
-    static ResourceArchive field_b;
+    static ResourceArchive synthesizedSoundArchive;
     private fq field_a;
 
     public static void a(int param0) {
-        field_b = null;
+        synthesizedSoundArchive = null;
         field_c = null;
         if (param0 != 29770) {
           jk.a('>', 104);
@@ -44,7 +44,7 @@ final class jk {
           var6 = wb.field_b;
           var2Lifetime1 = var6;
           if (param1 != -26024) {
-            field_b = (ResourceArchive) null;
+            synthesizedSoundArchive = (ResourceArchive) null;
           }
           var7 = 0;
           var3Lifetime1 = var7;

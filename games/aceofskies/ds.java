@@ -88,7 +88,7 @@ final class ds extends IntrusiveNode {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (-1 == ph.field_f.indexOf(var5Lifetime1)) {
+              if (-1 == IntrusiveNodeHashTable.field_f.indexOf(var5Lifetime1)) {
                 stackIn_43_0 = td.field_d;
                 return stackIn_43_0;
               }

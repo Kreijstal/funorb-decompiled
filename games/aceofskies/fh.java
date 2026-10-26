@@ -8,15 +8,15 @@ final class fh extends vo {
     static String field_g;
     static boolean[] field_e;
 
-    final static void a(int param0, float param1, String param2) {
+    final static void setLoadingProgress(int obfuscationGuard, float percent, String message) {
         try {
-          dq.field_b = param2;
-          NetworkGameClient.field_I = param1;
-          if (param0 >= -23) {
+          dq.loadingMessage = message;
+          NetworkGameClient.loadingPercent = percent;
+          if (obfuscationGuard >= -23) {
             field_g = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "fh.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "fh.E(" + obfuscationGuard + ',' + percent + ',' + (message != null ? "{...}" : "null") + ')');
         }
     }
 

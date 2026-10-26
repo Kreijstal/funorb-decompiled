@@ -37,8 +37,8 @@ final class ve {
           mg.field_d.b(param1, false);
         }
         if (param0 == 43) {
-          if (null != wt.field_e) {
-            wt.field_e.a((byte) 125, param1);
+          if (null != DualLinkNode.field_e) {
+            DualLinkNode.field_e.a((byte) 125, param1);
           }
           return;
         }

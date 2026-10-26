@@ -244,7 +244,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
 
-    abstract void a(int param0);
+    abstract void initializeClient(int obfuscationGuard);
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
@@ -349,7 +349,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             hu.field_a.destroy();
           }
           try {
-            this.f(-123);
+            this.shutdownClient(-123);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -371,7 +371,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.d(19469);
+          this.releaseClientStatics(19469);
           if (si.field_d != null) {
             try {
               System.exit(0);
@@ -410,7 +410,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           synchronized (var7) {
             im.field_e = na.field_a;
           }
-          this.c(5883);
+          this.updateClient(5883);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -668,7 +668,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 qp.a(34069);
                 this.b(-14829);
                 cl.field_fb = qd.a((java.awt.Component) ((Object) ci.field_f), true, ArchiveIndex.field_h, td.field_b);
-                this.a(28060);
+                this.initializeClient(28060);
                 io.field_c = ij.c(8194);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -763,11 +763,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         }
     }
 
-    abstract void f(int param0);
+    abstract void shutdownClient(int obfuscationGuard);
 
-    abstract void d(int param0);
+    abstract void releaseClientStatics(int obfuscationGuard);
 
-    abstract void c(int param0);
+    abstract void updateClient(int obfuscationGuard);
 
     final boolean b(boolean param0) {
         return true;

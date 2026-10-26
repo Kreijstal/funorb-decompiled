@@ -64,7 +64,7 @@ abstract class un {
         stackIn_2_0 = var8;
         stackIn_3_1 = (!param3) ? false : true;
         stackIn_2_0.field_q = stackIn_3_1;
-        var8.field_i = var6;
+        var8.secondaryKey = var6;
         var8.field_z = param4;
         if (param2 != -21) {
           this.field_d = (er) null;

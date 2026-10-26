@@ -42,7 +42,7 @@ final class wl extends GraphicsRenderer {
     private up field_qb;
     private up[] field_ob;
     private up[] field_Jb;
-    private ph field_s;
+    private IntrusiveNodeHashTable field_s;
     private int field_rb;
     private IntrusiveDeque field_Gc;
     int field_lb;
@@ -357,7 +357,7 @@ final class wl extends GraphicsRenderer {
         this.field_ob = new up[4];
         this.field_Jb = new up[4];
         this.field_Ec = new er();
-        this.field_s = new ph(16);
+        this.field_s = new IntrusiveNodeHashTable(16);
         this.field_Gc = new IntrusiveDeque();
         this.field_nb = new IntrusiveDeque();
         this.field_Ac = new IntrusiveDeque();
@@ -2159,7 +2159,7 @@ final class wl extends GraphicsRenderer {
         cu var3 = null;
         gt var3_ref = null;
         RuntimeException var3_ref2 = null;
-        wt var4 = null;
+        DualLinkNode var4 = null;
         int var6 = 0;
         gt var7 = null;
         gt var8 = null;
@@ -2177,7 +2177,7 @@ final class wl extends GraphicsRenderer {
             }
             this.a(this.field_y, 32925);
             if (param1) {
-              var3 = (cu) (this.field_s.a((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
+              var3 = (cu) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
               if (var3 == null) {
                 var9 = new cu(this, 6402, this.field_j.a(), this.field_j.b());
                 var3 = var9;
@@ -2186,7 +2186,7 @@ final class wl extends GraphicsRenderer {
                   var4 = this.field_Ec.a(3);
                   if (var4 != null) {
                     var10 = (cu) (var4);
-                    var10.d(-128);
+                    var10.unlinkSecondaryNode(-128);
                     var10.unlink(-126);
                     var10.d((byte) -108);
                     this.field_rb = this.field_rb - var10.field_o;
@@ -2194,7 +2194,7 @@ final class wl extends GraphicsRenderer {
                   }
                   break;
                 }
-                this.field_s.a(106, (long)(this.field_j.a() << 16 | this.field_j.b()), var9);
+                this.field_s.put(106, (long)(this.field_j.a() << 16 | this.field_j.b()), var9);
               }
               this.field_Ec.a(var3, (byte) 123);
               this.field_y.a(var3, 8, (byte) 119);
@@ -2204,7 +2204,7 @@ final class wl extends GraphicsRenderer {
             if (!this.field_Mb) {
               throw new RuntimeException("");
             }
-            var3_ref = (gt) (this.field_s.a((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
+            var3_ref = (gt) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
             if (var3_ref == null) {
               var7 = new gt(this, this.field_j.a(), this.field_j.b());
               var3_ref = var7;
@@ -2213,7 +2213,7 @@ final class wl extends GraphicsRenderer {
                 var4 = this.field_Ec.a(3);
                 if (var4 != null) {
                   var8 = (gt) (var4);
-                  var8.d(-127);
+                  var8.unlinkSecondaryNode(-127);
                   var8.unlink(-126);
                   this.field_kc.releasePbuffer(var8.f(25766));
                   this.field_rb = this.field_rb - var8.field_n;
@@ -2221,7 +2221,7 @@ final class wl extends GraphicsRenderer {
                 }
                 break;
               }
-              this.field_s.a(115, (long)(this.field_j.a() << 16 | this.field_j.b()), var7);
+              this.field_s.put(115, (long)(this.field_j.a() << 16 | this.field_j.b()), var7);
             }
             this.field_Ec.a(var3_ref, (byte) 125);
             this.field_kc.setPbuffer(var3_ref.f(25766));

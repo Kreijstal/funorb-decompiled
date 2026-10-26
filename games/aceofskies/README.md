@@ -2,9 +2,11 @@
 
 This directory is the single published Java tree. The scripts and reviewed rules live in dekobloko-work/readable; the current reverse dictionary is ../../decompilation/aceofskies-naming.json.
 
-This pass names 41 reviewed classes in 545 source files. Unresolved roles keep their original names; renamed names have no opaque suffix.
+This pass names 43 reviewed classes in 545 source files. Unresolved roles keep their original names; renamed names have no opaque suffix.
 
 Start at `AceOfSkies.advanceGame` → `FlightSession.advanceSession`. `startGame` creates the player and pools; its flag selects the literal arcade mode. `renderSession` draws through `GraphicsRenderer`. `Aircraft` retains its definition, target, pursuing aircraft, firing request and temporary weapon. `FlightBody` and `Vector2` expose the flight arithmetic. `Bullet`, `Pickup`, `SmokeParticle` and `ScreenParticle` are distinct pools.
+
+`GameAppletShell` calls `initializeClient`, `updateClient`, `renderGame`, `shutdownClient` and `releaseClientStatics`. Ace opens its game archives in `initializeGameResources`; `advanceResourceLoading` first waits for archives, builds sound caches, decodes the three music tracks, prepares patches, decodes image/font data, creates renderer resources and finally allocates the session. `initializeAfterDownload` controls whether the archive-ready poll proceeds into initialization. The inter-stage `resetFrameTiming` calls reset the clock/history and pending tick count, rather than requesting garbage collection. `loadingPercent` and `loadingMessage` expose reported progress.
 
 `MenuScreen.open`, `advanceMenu`, `handleNavigationKey`, `handleAction`, `findItemAt` and `drawMenu` expose menu flow. `MenuInputState` distinguishes keyboard selection, pointer selection, press edges, held buttons and countdown state. The registered slots are 0 main menu, 1 pause, 2 highscores, 3 instructions, 4 achievements, 5 achievements this game, 6 logged-out result notice, and 7 settings. Menu action codes remain their original integers; action 0 starts classic play, 19 starts arcade play, 1 resumes, 3 opens instructions, 14 opens achievements, 2 opens highscores, 22 opens settings and 7 ends the game.
 
@@ -27,10 +29,13 @@ The shared engine roles match other games by reviewed behavior, not by short obf
 | Ace | Existing counterpart | Evidence |
 | --- | --- | --- |
 | IntrusiveNode / IntrusiveDeque | GeoBlox IntrusiveNode / IntrusiveDeque | Independent node ownership, circular sentinel and forward/reverse links. |
+| DualLinkNode / IntrusiveNodeHashTable | GeoBlox equivalents | Secondary links detach independently; hash buckets have circular sentinels, masked keys, duplicate-key lookup and bucket-order traversal. |
 | PacketBuffer / CipherPacketBuffer | Steel Sentinels PacketBuffer / CipherPacketBuffer | Byte payload/cursor, big-endian widths, ISAAC and bit cursor. |
 | ResourceArchive / ArchiveIndex / ArchiveProvider | Steel Sentinels equivalents | Packed/unpacked groups, versioned indexes, names/digests and provider progress. |
 | HighscoreQuery / ScoreSubmission / HighscoreNameEntry | GeoBlox equivalents | Query dimensions, three views, wrapping submission IDs, context words and unique-player name markers; Ace adds acknowledgement tokens. |
 | PcmSample / PcmSampleStream / MidiPcmStream | GeoBlox equivalents | Signed PCM storage, loop bounds, interpolation and MIDI channel/voice state. |
+
+`SoundCache` separates synthesized and Vorbis archives, pending Vorbis samples and decoded PCM samples. Cache hits precede the byte-budget check; a completed sample remains reusable when the caller budget is exhausted. The shared collection fixtures check collisions, duplicate keys, bucket-order traversal, transfers and independence of primary versus secondary links.
 
 Shared role names do not assert byte-for-byte implementation equality. Different guards, signatures, static helper placement and graphics generations remain. Core fixtures exercise actual raw and named flight/vector, packet, collection and menu implementations, compare their traces and check independent expected results. Complete source compilation and resolved declaration/reference/override comparison cover every file. Reversal recovers the reconstructed raw source bytes.
 

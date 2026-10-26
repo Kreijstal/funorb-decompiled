@@ -160,7 +160,7 @@ final class lb implements sm {
         RuntimeException var3_ref = null;
         try {
           param0 = lm.a('_', -128, param0, "");
-          var3 = ph.a(param0, 0);
+          var3 = IntrusiveNodeHashTable.a(param0, 0);
           var4 = -32 % ((param2 + 6) / 63);
           stackIn_5_0 = (param1.indexOf(param0) != -1) || (-1 != param1.indexOf(var3));
           return stackIn_5_0;

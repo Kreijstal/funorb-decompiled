@@ -17,7 +17,7 @@ final class MidiPcmStream extends PcmStream {
     int[] field_z;
     private int[] field_D;
     int[] field_G;
-    private ph field_n;
+    private IntrusiveNodeHashTable field_n;
     private ft[][] field_K;
     private int[] field_I;
     private int[] field_s;
@@ -268,10 +268,10 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != 0) {
           return;
         }
-        var4 = (ml) (this.field_n.a(false));
+        var4 = (ml) (this.field_n.firstForIteration(false));
         while (var4 != null) {
           var4.a(true);
-          var4 = (ml) (this.field_n.a(0));
+          var4 = (ml) (this.field_n.nextForIteration(0));
           if (var3 == 0) {
             continue;
           }
@@ -387,7 +387,7 @@ final class MidiPcmStream extends PcmStream {
               var5 = (ft) (this.field_L.field_k.previous(110));
             }
           }
-          stackIn_10_0 = this.field_n.a((byte) 106, (long)this.field_I[param3]);
+          stackIn_10_0 = this.field_n.findByKey((byte) 106, (long)this.field_I[param3]);
         }
         var11 = (ml) (stackIn_10_0);
         var12 = var11;
@@ -743,11 +743,11 @@ final class MidiPcmStream extends PcmStream {
           if (~param1 < param0) {
             var7 = new int[]{param1};
           }
-          var8 = (ub) (param2.field_f.a(false));
+          var8 = (ub) (param2.field_f.firstForIteration(false));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 == null))) {
             var9 = (int)var8.key;
-            var12 = (ml) (this.field_n.a((byte) 106, (long)var9));
+            var12 = (ml) (this.field_n.findByKey((byte) 106, (long)var9));
             if (var11 == 0) {
               boolean decompiledFrameRemainder0 = true;
               if (var12 == null) {
@@ -757,7 +757,7 @@ final class MidiPcmStream extends PcmStream {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.field_n.a(param0 ^ -98, (long)var9, var13);
+                  this.field_n.put(param0 ^ -98, (long)var9, var13);
                   decompiledFrameRemainder0 = !(var13.a(var8.field_e, (int[]) (var7), param4, 5193));
                 }
               } else {
@@ -766,7 +766,7 @@ final class MidiPcmStream extends PcmStream {
               if (decompiledFrameRemainder0) {
                 var6_int = 0;
               }
-              var8 = (ub) (param2.field_f.a(param0 + 1));
+              var8 = (ub) (param2.field_f.nextForIteration(param0 + 1));
               continue;
             }
             break;
@@ -1492,7 +1492,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_C = 1000000;
         this.field_M = new k();
         this.field_L = new um(this);
-        this.field_n = new ph(128);
+        this.field_n = new IntrusiveNodeHashTable(128);
         this.a((byte) -122, 256, -1);
         this.b(true, 12705);
     }

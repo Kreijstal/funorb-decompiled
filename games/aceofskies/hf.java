@@ -277,7 +277,7 @@ final class hf extends un {
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(-1336879960, 1);
-              this.field_l.a((byte) -106, var2.field_i);
+              this.field_l.a((byte) -106, var2.secondaryKey);
               this.field_s.a(this.field_l.payload.length, 0, -103, this.field_l.payload);
               this.field_g.a(param0 + 2, var2);
               var2 = (gp) (this.field_b.e(31542));
@@ -286,7 +286,7 @@ final class hf extends un {
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(-1336879960, 0);
-              this.field_l.a((byte) -59, var2Lifetime1.field_i);
+              this.field_l.a((byte) -59, var2Lifetime1.secondaryKey);
               this.field_s.a(this.field_l.payload.length, 0, 52, this.field_l.payload);
               this.field_n.a(param0 + 2, var2Lifetime1);
               var2Lifetime1 = (gp) (this.field_d.e(31542));
@@ -345,7 +345,7 @@ final class hf extends un {
                       if (var11 != 0) {
                         var14_ref = (gp) (this.field_n.b((byte) 86));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_i) {
+                          if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -357,7 +357,7 @@ final class hf extends un {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (gp) (this.field_g.b((byte) 81));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_i) {
+                          if (var12 == var14_ref.secondaryKey) {
                             break;
                           }
                           var14_ref = (gp) (this.field_g.e(31542));
@@ -394,7 +394,7 @@ final class hf extends un {
                   this.field_a.field_u.position = this.field_a.field_u.position + var6;
                   this.field_a.field_x = this.field_a.field_x + var6;
                   if (var5 == this.field_a.field_u.position) {
-                    this.field_a.d(-125);
+                    this.field_a.unlinkSecondaryNode(-125);
                     this.field_a.field_p = false;
                     this.field_a = null;
                   } else {

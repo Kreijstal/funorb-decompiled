@@ -12,7 +12,7 @@ final class hg extends to {
     private boolean field_E;
     private boolean field_w;
     private int field_B;
-    static ResourceArchive field_x;
+    static ResourceArchive sharedSpriteArchive;
     static int field_D;
     static int[] field_C;
 
@@ -243,7 +243,7 @@ final class hg extends to {
     public static void j(int param0) {
         field_y = null;
         field_C = null;
-        field_x = null;
+        sharedSpriteArchive = null;
         if (param0 != 65793) {
           field_D = 4;
         }

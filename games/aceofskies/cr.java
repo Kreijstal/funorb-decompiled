@@ -22,7 +22,7 @@ final class cr extends tf {
         RuntimeException var3_ref = null;
         try {
           param1 = lm.a('_', param2 - 172, param1, "");
-          var3 = ph.a(param0, 0);
+          var3 = IntrusiveNodeHashTable.a(param0, 0);
           if (param2 != 52) {
             var4 = (String) null;
             cr.a((String) null, (String) null, (byte) -22);
