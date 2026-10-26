@@ -11,7 +11,7 @@ final class fc {
 
     private final void a(int param0) {
         int var2 = 0;
-        int var11 = AceOfSkies.field_G ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2Lifetime1;
         int var2Lifetime2;
         if (param0 > -101) {
@@ -159,7 +159,7 @@ final class fc {
         int var3;
         int var4;
         int var5;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1) {
           this.field_e = (int[]) null;
         }

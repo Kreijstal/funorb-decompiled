@@ -56,7 +56,7 @@ final class tj extends ao {
         float var9 = 0.0f;
         float var10 = 0.0f;
         int var11 = 0;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 > -21) {
             this.field_i = 1.9943350553512573f;
@@ -123,12 +123,12 @@ final class tj extends ao {
         int var3;
         int var4;
         int var3Lifetime1;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         du.field_m = null;
         wu.field_l = null;
         bm.field_z = 0;
-        var2 = l.field_f;
-        l.field_f = ah.field_s;
+        var2 = RendererManager.field_f;
+        RendererManager.field_f = ah.field_s;
         ul.field_r.field_j = ul.field_r.field_j + 1;
         ah.field_s = var2;
         if (param1 == 51) {
@@ -209,7 +209,7 @@ final class tj extends ao {
         return ml.field_h;
     }
 
-    final static ll[] a(String param0, String param1, int param2, gk param3) {
+    final static ll[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -225,7 +225,7 @@ final class tj extends ao {
         try {
           var4_int = param3.b(param1, param2 ^ param2);
           var5 = param3.a(-39, var4_int, param0);
-          stackIn_1_0 = vc.a(param3, var4_int, (byte) -70, var5);
+          stackIn_1_0 = TimedSpriteEffect.a(param3, var4_int, (byte) -70, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

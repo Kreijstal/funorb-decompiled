@@ -49,7 +49,7 @@ final class ic {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length();
           if (var2_int == 0) {

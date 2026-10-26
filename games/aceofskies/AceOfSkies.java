@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-public final class AceOfSkies extends ct {
+public final class AceOfSkies extends NetworkGameClient {
     static volatile boolean field_J;
-    public static boolean field_G;
+    public static boolean obfuscationControl;
 
     public final void init() {
         try {
@@ -23,7 +23,7 @@ public final class AceOfSkies extends ct {
         int var4 = 0;
         int var5 = 0;
         int var4Lifetime1;
-        var5 = field_G ? 1 : 0;
+        var5 = obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           var3_int = -35 / ((param0 - 1) / 48);
@@ -56,7 +56,7 @@ public final class AceOfSkies extends ct {
                             if (iq.field_e.b((byte) -111) &&
                               iq.field_e.b(0)) {
                               fh.a(-112, 65.0f, er.field_c);
-                              this.e(150);
+                              this.renderGame(150);
                               decompiledFrameRemainder0 = !(param1);
                               if (decompiledFrameRemainder0) {
                                 return false;
@@ -78,17 +78,17 @@ public final class AceOfSkies extends ct {
                         }
                       }
                       if (decompiledFrameRemainder0) {
-                        fh.a(-117, 30.0f, qf.a(ff.field_a, 0, fn.field_b, ot.field_b, 81));
+                        fh.a(-117, 30.0f, SmokeParticle.a(ff.field_a, 0, fn.field_b, ot.field_b, 81));
                         return false;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      fh.a(-99, 20.0f, qo.a(pr.field_a, "", ub.field_f, 13525, gk.field_c));
+                      fh.a(-99, 20.0f, qo.a(pr.field_a, "", ub.field_f, 13525, ResourceArchive.field_c));
                       return false;
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    fh.a(-86, 10.0f, qo.a(pr.field_a, "", jk.field_b, 13525, gk.field_c));
+                    fh.a(-86, 10.0f, qo.a(pr.field_a, "", jk.field_b, 13525, ResourceArchive.field_c));
                     return false;
                   }
                 }
@@ -109,7 +109,7 @@ public final class AceOfSkies extends ct {
           }
           if (jk.field_b != null) {
             as.a(-110);
-            qn.field_c = new ob(jk.field_b, ub.field_f);
+            qn.field_c = new SoundCache(jk.field_b, ub.field_f);
             jf.a(-4, ub.field_f, jk.field_b);
             jk.field_b = null;
             ub.field_f = null;
@@ -117,10 +117,10 @@ public final class AceOfSkies extends ct {
             return false;
           }
           if (od.field_x != null) {
-            tg.field_a = new ap[3];
-            tg.field_a[0] = ap.a(od.field_x, "", "aos_main_title");
-            tg.field_a[1] = ap.a(od.field_x, "", "aos level_channels_v2");
-            tg.field_a[2] = ap.a(od.field_x, "", "aos boss level");
+            tg.field_a = new MusicTrack[3];
+            tg.field_a[0] = MusicTrack.a(od.field_x, "", "aos_main_title");
+            tg.field_a[1] = MusicTrack.a(od.field_x, "", "aos level_channels_v2");
+            tg.field_a[2] = MusicTrack.a(od.field_x, "", "aos boss level");
             od.field_x = null;
             te.a(102);
             return false;
@@ -128,7 +128,7 @@ public final class AceOfSkies extends ct {
           if (null == ot.field_b) {
             if (hg.field_x != null) {
               pe.a(iq.field_e, (byte) 77, hg.field_x, wi.field_a);
-              nk.a((byte) -56, wi.field_a, iq.field_e);
+              MenuScreen.a((byte) -56, wi.field_a, iq.field_e);
               iq.field_e = null;
               hg.field_x = null;
               wi.field_a = null;
@@ -140,7 +140,7 @@ public final class AceOfSkies extends ct {
               var4 = 0;
               while (true) {
                 if (var4 < 8) {
-                  aa.field_b[var4] = new nk(var4);
+                  aa.field_b[var4] = new MenuScreen(var4);
                   var4++;
                   if (var5 == 0) {
                     continue;
@@ -153,12 +153,12 @@ public final class AceOfSkies extends ct {
               }
               nb.a(10536, 50);
             }
-            if (pk.field_wb.a((byte) 113) == null) {
-              pk.field_wb.a(-23);
+            if (FlightSession.field_wb.a((byte) 113) == null) {
+              FlightSession.field_wb.a(-23);
               return false;
             }
             ga.a(118);
-            sg.field_c = new pk();
+            sg.flightSession = new FlightSession();
             m.a(tg.field_a[0], 27966, true);
             return true;
           }
@@ -199,7 +199,7 @@ public final class AceOfSkies extends ct {
             qn.field_c = null;
             stackIn_109_0 = null;
           }
-          ot.field_b = (gk) (stackIn_109_0);
+          ot.field_b = (ResourceArchive) (stackIn_109_0);
           te.a(77);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,28 +224,28 @@ public final class AceOfSkies extends ct {
           }
           bm.field_w[0] = vr.field_h.nextInt();
           bm.field_w[1] = vr.field_h.nextInt();
-          fa.field_c.field_g = 0;
+          fa.field_c.position = 0;
           bm.field_w[3] = (int)of.field_a;
           bm.field_w[2] = (int)(of.field_a >> 32);
-          fa.field_c.a((byte) 50, bm.field_w[0]);
-          fa.field_c.a((byte) 41, bm.field_w[1]);
-          fa.field_c.a((byte) 113, bm.field_w[2]);
-          fa.field_c.a((byte) 45, bm.field_w[3]);
+          fa.field_c.writeInt((byte) 50, bm.field_w[0]);
+          fa.field_c.writeInt((byte) 41, bm.field_w[1]);
+          fa.field_c.writeInt((byte) 113, bm.field_w[2]);
+          fa.field_c.writeInt((byte) 45, bm.field_w[3]);
           vi.a((byte) -1, fa.field_c);
-          fa.field_c.a(param0, 23385);
+          fa.field_c.writeShort(param0, 23385);
           param2.a(fa.field_c, true);
-          q.field_p.field_g = 0;
+          q.field_p.position = 0;
           if (param1) {
-            q.field_p.b(-1336879960, 18);
+            q.field_p.writeByte(-1336879960, 18);
           }
           if (!param1 ||
-            field_G) {
-            q.field_p.b(-1336879960, 16);
+            obfuscationControl) {
+            q.field_p.writeByte(-1336879960, 16);
           }
-          q.field_p.field_g = q.field_p.field_g + 2;
-          var5_int = q.field_p.field_g;
-          q.field_p.a((byte) 126, ub.field_g);
-          q.field_p.b((byte) -102, fs.field_a);
+          q.field_p.position = q.field_p.position + 2;
+          var5_int = q.field_p.position;
+          q.field_p.writeInt((byte) 126, ub.field_g);
+          q.field_p.writeLong((byte) -102, fs.field_a);
           var6 = 0;
           if (te.field_h) {
             var6 = var6 | 1;
@@ -259,7 +259,7 @@ public final class AceOfSkies extends ct {
           if (fb.field_b != null) {
             var6 = var6 | 16;
           }
-          q.field_p.b(-1336879960, var6);
+          q.field_p.writeByte(-1336879960, var6);
           var7 = ao.a(bm.m(114), false);
           if (null == var7) {
             var7 = "";
@@ -269,7 +269,7 @@ public final class AceOfSkies extends ct {
             q.field_p.a(false, fb.field_b);
           }
           gn.a(hp.field_j, pb.field_a, q.field_p, fa.field_c, param4 + 12313);
-          q.field_p.a(false, q.field_p.field_g - var5_int);
+          q.field_p.a(false, q.field_p.position - var5_int);
           fr.a(param4 + 12171, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,37 +286,37 @@ public final class AceOfSkies extends ct {
         }
     }
 
-    private final void q(int param0) {
+    private final void advanceGame(int obfuscationGuard) {
         int fieldTemp$0 = 0;
-        pk stackIn_23_0 = null;
+        FlightSession stackIn_23_0 = null;
         boolean stackIn_23_1 = false;
         boolean stackIn_24_2 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var3 = 0;
-        var3 = field_G ? 1 : 0;
+        var3 = obfuscationControl ? 1 : 0;
         try {
           if (ln.field_d >= 2 &&
             lp.field_a[41]) {
             tt.field_a = true;
             hg.field_D = 16777215;
           }
-          if (param0 != 9046) {
+          if (obfuscationGuard != 9046) {
             this.g((byte) -122);
           }
-          if (nk.field_g.d(param0 + 268426409) != null) {
+          if (MenuScreen.field_g.first(obfuscationGuard + 268426409) != null) {
             fieldTemp$0 = hp.field_h + 1;
             hp.field_h = hp.field_h + 1;
             if (fieldTemp$0 == 256) {
               hp.field_h = 0;
-              nk.field_g.e(param0 ^ 9001);
+              MenuScreen.field_g.removeFirst(obfuscationGuard ^ 9001);
             }
           }
           if (bg.field_b == 0) {
-            stackIn_23_0 = sg.field_c;
+            stackIn_23_0 = sg.flightSession;
             stackIn_23_1 = true;
             stackIn_24_2 = (po.field_h == -1);
-            ((pk) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_24_2);
+            ((FlightSession) (Object) stackIn_23_0).advanceSession(stackIn_23_1, stackIn_24_2);
             if (po.field_h != ci.field_d) {
               ec.field_t = ec.field_t + 1;
               if (ec.field_t != 40) {
@@ -369,8 +369,8 @@ public final class AceOfSkies extends ct {
           }
           if (!cn.b(true)) {
             fa.field_b = sc.a(false, 4);
-            if (sg.field_c != null) {
-              sg.field_c.g(-8);
+            if (sg.flightSession != null) {
+              sg.flightSession.g(-8);
             }
             po.field_h = qo.field_c;
             if (po.field_h == -2) {
@@ -390,19 +390,19 @@ public final class AceOfSkies extends ct {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.G(" + param0 + ')');
+          throw pn.a((Throwable) ((Object) var2), "AceOfSkies.G(" + obfuscationGuard + ')');
         }
     }
 
     final void a(int param0) {
         RuntimeException runtimeException = null;
-        hk var2 = null;
-        hk var3 = null;
+        MidiPcmStream var2 = null;
+        MidiPcmStream var3 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           this.a(-13, 2, 18, 10, 3, 0, 1);
-          var2 = new hk();
-          var3 = new hk();
+          var2 = new MidiPcmStream();
+          var3 = new MidiPcmStream();
           var2.a(128, false, 9);
           var3.a(128, false, 9);
           wu.a(22050, true, (java.awt.Component) ((Object) ci.field_f), pt.field_b, 32767, new jt(var2, var3));
@@ -425,15 +425,15 @@ public final class AceOfSkies extends ct {
         RuntimeException runtimeException = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
-        var3 = field_G ? 1 : 0;
+        var3 = obfuscationControl ? 1 : 0;
         try {
           iq.a((byte) -126);
-          kp.f(param0 - 39323);
+          IntrusiveDeque.f(param0 - 39323);
           lp.a((byte) -70);
           bo.a(18598);
-          ha.a(true);
+          GraphicsRenderer.a(true);
           pd.a(62);
-          l.a(true);
+          RendererManager.a(true);
           vl.b(8664);
           ru.a((byte) 76);
           jp.a(true);
@@ -441,17 +441,17 @@ public final class AceOfSkies extends ct {
           hu.a((byte) -118);
           bs.a(127);
           tr.a(-79);
-          ct.o(param0 ^ -31983);
-          ak.a(false);
-          vb.b((byte) 104);
+          NetworkGameClient.o(param0 ^ -31983);
+          ClientException.a(false);
+          GameAppletShell.b((byte) 104);
           cc.a(param0 ^ -19469);
           rq.a(param0 ^ 19471);
           qg.a(param0 ^ 19558);
           vp.c();
-          gk.c((byte) -73);
+          ResourceArchive.c((byte) -73);
           nc.a(480);
           so.a((byte) -108);
-          rb.a(true);
+          PacketBuffer.a(true);
           qh.a(-92);
           hq.a(2483);
           dt.c(13748);
@@ -466,19 +466,19 @@ public final class AceOfSkies extends ct {
           pj.a((byte) 48);
           ca.b(0);
           ef.a(0);
-          ob.a(false);
-          nk.c((byte) 85);
-          pk.i(32458);
+          SoundCache.a(false);
+          MenuScreen.c((byte) 85);
+          FlightSession.i(32458);
           ji.a(0);
-          wf.b(-45);
+          IntrusiveNode.b(-45);
           un.d(6);
           dk.a(param0 - 19473);
           wq.b(param0 - 34460);
           gh.b(0);
           vf.c((byte) -128);
-          da.a(5);
+          BitmapFont.a(5);
           vs.a(126);
-          hk.e(-543142776);
+          MidiPcmStream.e(-543142776);
           ph.c(82);
           ft.a((byte) 101);
           k.b();
@@ -492,9 +492,9 @@ public final class AceOfSkies extends ct {
           hc.a();
           fd.a((byte) 89);
           mm.a((byte) 104);
-          ps.a(0);
+          ArchiveIndex.a(0);
           ei.a(false);
-          ip.a(-61);
+          ArchiveProvider.a(-61);
           ln.a((byte) -109);
           vu.a(true);
           ur.a(8192);
@@ -514,14 +514,14 @@ public final class AceOfSkies extends ct {
           ld.a((byte) 62);
           t.c();
           qn.a(-122);
-          eu.c(24);
-          vc.a((byte) -44);
-          o.a(true);
-          md.b(20);
-          wm.b(256);
-          qf.b(0);
+          Bullet.c(24);
+          TimedSpriteEffect.a((byte) -44);
+          FlightBody.a(true);
+          Aircraft.b(20);
+          Pickup.b(256);
+          SmokeParticle.b(0);
           fb.a((byte) 52);
-          dl.l((byte) 122);
+          CipherPacketBuffer.l((byte) 122);
           we.b(param0 - 19469);
           pu.a(240);
           sg.a((byte) 110);
@@ -561,9 +561,9 @@ public final class AceOfSkies extends ct {
           td.a(-12546);
           di.a(false);
           es.a(1020);
-          gj.a(true);
+          GameCanvas.a(true);
           qa.a(-7);
-          nm.a(88);
+          IntKeyLookup.a(88);
           af.a(-124);
           on.a();
           bd.a(16);
@@ -720,7 +720,7 @@ public final class AceOfSkies extends ct {
           fo.a(25613);
           uc.a((byte) 35);
           gl.b(-11760);
-          rh.a(32081);
+          SoundPlayback.a(32081);
           qb.a(true);
           wg.a(true);
           sl.b(111);
@@ -737,7 +737,7 @@ public final class AceOfSkies extends ct {
           id.a((byte) 106);
           m.a(256);
           jn.h(-89);
-          jd.a(false);
+          SteeringMode.a(false);
           gu.a(false);
           pm.b(93);
           ko.c(0);
@@ -768,8 +768,8 @@ public final class AceOfSkies extends ct {
           runtimeException = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + param0 + ')');
         }
-        if (vb.field_a != 0) {
-          field_G = (var3 == 0);
+        if (GameAppletShell.field_a != 0) {
+          obfuscationControl = (var3 == 0);
         }
     }
 
@@ -782,7 +782,7 @@ public final class AceOfSkies extends ct {
             fn.field_a = null;
             te.a(38);
           }
-          ak.field_e = true;
+          ClientException.field_e = true;
           wi.field_a = ot.a(-28, 4);
           iq.field_e = ot.a(-65, 5);
           jk.field_b = ot.a(-31, 6);
@@ -793,7 +793,7 @@ public final class AceOfSkies extends ct {
             return;
           }
           ci.field_i = new Random(kh.a(-99));
-          pk.field_wb = new l(11, 12, (d) null);
+          FlightSession.field_wb = new RendererManager(11, 12, (d) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -816,7 +816,7 @@ public final class AceOfSkies extends ct {
         int var6 = 0;
         int var7 = 0;
         int stackIn_38_0Lifetime1;
-        var7 = field_G ? 1 : 0;
+        var7 = obfuscationControl ? 1 : 0;
         try {
           if (param1 > -12) {
             AceOfSkies.a((CharSequence) null, -113);
@@ -824,7 +824,7 @@ public final class AceOfSkies extends ct {
           var2_long = 0L;
           var4 = param0.length();
           var5 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var4 > var5) {
               var2_long = var2_long * 37L;
@@ -833,7 +833,7 @@ public final class AceOfSkies extends ct {
               if (var7 != 0) {
                 if (stackIn_38_0 == 0) {
                   stackIn_47_0 = var2_long;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -865,7 +865,7 @@ public final class AceOfSkies extends ct {
                 }
                 stackIn_47_0 = var2_long;
                 if (var7 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 if (stackIn_47_0 == 0L) {
                   break;
@@ -891,14 +891,14 @@ public final class AceOfSkies extends ct {
         }
     }
 
-    final void e(int param0) {
+    final void renderGame(int obfuscationGuard) {
         try {
           boolean stackIn_54_0 = false;
           Throwable decompiledCaughtException = null;
           java.awt.Canvas var2 = null;
           RuntimeException var2_ref = null;
           int var3 = 0;
-          ha var4 = null;
+          GraphicsRenderer var4 = null;
           int var5_int = 0;
           iq var5 = null;
           int var6_int = 0;
@@ -910,7 +910,7 @@ public final class AceOfSkies extends ct {
           int var10 = 0;
           int var5_intLifetime1;
           int var5_intLifetime2;
-          var10 = field_G ? 1 : 0;
+          var10 = obfuscationControl ? 1 : 0;
           try {
             var2 = fa.a(-8213);
             vp.a();
@@ -928,11 +928,11 @@ public final class AceOfSkies extends ct {
               hj.a(var2, -12);
               return;
             }
-            if (pk.field_wb.a(122)) {
+            if (FlightSession.field_wb.a(122)) {
               ga.a(39);
             }
-            var4 = pk.field_wb.a((byte) 127);
-            sg.field_c.a(-16711936, false, var4);
+            var4 = FlightSession.field_wb.a((byte) 127);
+            sg.flightSession.renderSession(-16711936, false, var4);
             if (~po.field_h != ~ci.field_d) {
               if (po.field_h != -1 &&
                 ec.field_t < 30) {
@@ -944,7 +944,7 @@ public final class AceOfSkies extends ct {
                 (!(ec.field_t <= 10))) {
                 var5_intLifetime2 = ec.field_t - 40;
                 var5_intLifetime2 = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_intLifetime2 / 2.0 / 30.0));
-                aa.field_b[ci.field_d].a(-var5_intLifetime2 + 480, var4, param0 - 154);
+                aa.field_b[ci.field_d].a(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
                 if ((var10 != 0) &&
                   (po.field_h != -1)) {
                   aa.field_b[po.field_h].a(0, var4, -4);
@@ -967,7 +967,7 @@ public final class AceOfSkies extends ct {
                 vp.b(0, 0, vp.field_i, vp.field_c, 0, var5_intLifetime1);
               }
             }
-            if (jf.a(param0 + 14850) &&
+            if (jf.a(obfuscationGuard + 14850) &&
               !gi.a(true)) {
               var3 = 1;
               if (jf.field_a != null) {
@@ -979,9 +979,9 @@ public final class AceOfSkies extends ct {
             }
             if (ln.field_d >= 2 &&
               lb.field_e) {
-              rb.field_j.a(16777215, 1, 20, Integer.toString(wk.field_f), param0 ^ 18877, 20);
+              PacketBuffer.field_j.a(16777215, 1, 20, Integer.toString(wk.field_f), obfuscationGuard ^ 18877, 20);
             }
-            var5 = (iq) (nk.field_g.d(268435455));
+            var5 = (iq) (MenuScreen.field_g.first(268435455));
             if (null != var5) {
               var7 = hp.field_h;
               if (var7 < 64) {
@@ -1015,32 +1015,32 @@ public final class AceOfSkies extends ct {
                 aa.field_a[var5.field_f].a(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                 var8 += 65;
               }
-              rb.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-              rb.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-              rb.field_j.a(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (pa[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.field_j.a(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.field_j.a(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
             }
             if (var3 != 0) {
               if (0 == bg.field_b && (!jf.a(15000) ||
                 gi.a(true))) {
-                mg.a(var4, param0 ^ 1150040055);
+                mg.a(var4, obfuscationGuard ^ 1150040055);
                 if (var10 != 0) {
-                  hh.a(param0 ^ 105, var4);
+                  hh.a(obfuscationGuard ^ 105, var4);
                 }
               } else {
-                hh.a(param0 ^ 105, var4);
+                hh.a(obfuscationGuard ^ 105, var4);
               }
             }
             if (mj.field_b &&
               ln.field_d >= 2) {
               var6 = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kb/" + Runtime.getRuntime().totalMemory() / 1024L + "kb";
-              rb.field_j.a(var6, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
-              rb.field_j.a(Integer.toString(wk.field_f), -1, -16777216, sh.field_u - 10, 60, (byte) 92);
+              PacketBuffer.field_j.a(var6, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
+              PacketBuffer.field_j.a(Integer.toString(wk.field_f), -1, -16777216, sh.field_u - 10, 60, (byte) 92);
             }
-            if (param0 != 150) {
+            if (obfuscationGuard != 150) {
               field_J = false;
             }
             try {
-              var4.e(param0 - 239);
+              var4.e(obfuscationGuard - 239);
             } catch (lp decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref = (lp) (Object) decompiledCaughtException;
@@ -1049,7 +1049,7 @@ public final class AceOfSkies extends ct {
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.A(" + param0 + ')');
+            throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.A(" + obfuscationGuard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1067,7 +1067,7 @@ public final class AceOfSkies extends ct {
         oc var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        var3 = field_G ? 1 : 0;
+        var3 = obfuscationControl ? 1 : 0;
         try {
           we.a(200);
           if (param0 != 5883) {
@@ -1128,13 +1128,13 @@ public final class AceOfSkies extends ct {
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  this.q(param0 + 3163);
+                  this.advanceGame(param0 + 3163);
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (!jf.a(param0 + 9117)) {
-                  this.q(param0 ^ 13741);
+                  this.advanceGame(param0 ^ 13741);
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -1162,7 +1162,7 @@ public final class AceOfSkies extends ct {
                 if (po.field_h == 5 &&
                   r.field_n == 0) {
                   po.field_h = 2;
-                  eu.a((byte) -92, 2, false);
+                  Bullet.a((byte) -92, 2, false);
                 }
                 if (gi.a(true)) {
                   ql.a((byte) -88, true);
@@ -1172,7 +1172,7 @@ public final class AceOfSkies extends ct {
           }
           if (!cn.b(true)) {
             do {
-              var2 = (oc) (sb.field_c.e(121));
+              var2 = (oc) (sb.field_c.removeFirst(121));
               if (null == var2) {
                 if (var3 == 0) {
                   break;

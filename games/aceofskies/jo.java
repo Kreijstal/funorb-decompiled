@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jo extends wf {
+final class jo extends IntrusiveNode {
     int field_k;
     static int[] field_j;
     jo field_f;
@@ -17,14 +17,14 @@ final class jo extends wf {
           field_l = null;
           return;
         }
-        al var2 = (al) null;
-        jo.a((al) null, -12, (byte) -87);
+        PcmSample var2 = (PcmSample) null;
+        jo.a((PcmSample) null, -12, (byte) -87);
         field_l = null;
     }
 
-    final static rh a(al param0, int param1, byte param2) {
+    final static SoundPlayback a(PcmSample param0, int param1, byte param2) {
         RuntimeException var3 = null;
-        rh stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -33,7 +33,7 @@ final class jo extends wf {
           if (param2 >= -18) {
             jo.a((byte) 24);
           }
-          stackIn_3_0 = w.a(-23159, su.a(param0, 100, param1));
+          stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -22,7 +22,7 @@ final class uu extends vo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          md.a(param20, param0, param15, param18, new mg(param14), param8, param7, param4, param2, param13, (byte) 106, new mg(param10), param12, param17, param9, param11, param19, new mg(param6), param1, param5, param16);
+          Aircraft.a(param20, param0, param15, param18, new mg(param14), param8, param7, param4, param2, param13, (byte) 106, new mg(param10), param12, param17, param9, param11, param19, new mg(param6), param1, param5, param16);
           if (param3 != -28265) {
             uu.e(99);
           }

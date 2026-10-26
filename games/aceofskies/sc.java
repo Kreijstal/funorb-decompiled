@@ -45,7 +45,7 @@ final class sc {
           return (eh) null;
         }
         eh var2 = new eh();
-        wu.field_w.a(117, var2);
+        wu.field_w.addLast(117, var2);
         lb.a(param1, 0);
         return var2;
     }

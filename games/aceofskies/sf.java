@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sf extends wf {
+abstract class sf extends IntrusiveNode {
     private float field_f;
     private int field_i;
     private int field_j;
@@ -61,7 +61,7 @@ abstract class sf extends wf {
 
     final static ej[] d(byte param0) {
         if (param0 >= 52) {
-          return new ej[]{gm.field_v, o.field_c, av.field_a, pg.field_d, qe.field_e, tb.field_g, ej.field_b, kb.field_C, op.field_b, qd.field_n, rc.field_e, ct.field_H, lc.field_b, ml.field_j};
+          return new ej[]{gm.field_v, FlightBody.field_c, av.field_a, pg.field_d, qe.field_e, tb.field_g, ej.field_b, kb.field_C, op.field_b, qd.field_n, rc.field_e, NetworkGameClient.field_H, lc.field_b, ml.field_j};
         }
         return (ej[]) null;
     }

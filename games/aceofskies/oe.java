@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oe extends wf {
+abstract class oe extends IntrusiveNode {
     int[] field_e;
     static String[] field_f;
     int field_h;

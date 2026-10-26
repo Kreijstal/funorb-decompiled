@@ -7,7 +7,7 @@ final class gp extends ag {
     byte field_z;
     static wu[] field_y;
     static int field_w;
-    rb field_u;
+    PacketBuffer field_u;
 
     final byte[] a(boolean param0) {
         if (!param0) {
@@ -16,8 +16,8 @@ final class gp extends ag {
         if (this.field_p) {
           throw new RuntimeException();
         }
-        if (this.field_u.field_g >= -this.field_z + this.field_u.field_f.length) {
-          return this.field_u.field_f;
+        if (this.field_u.position >= -this.field_z + this.field_u.payload.length) {
+          return this.field_u.payload;
         }
         throw new RuntimeException();
     }
@@ -35,7 +35,7 @@ final class gp extends ag {
           return 0;
         }
         if (param0 == 21513) {
-          return 100 * this.field_u.field_g / (this.field_u.field_f.length - this.field_z);
+          return 100 * this.field_u.position / (this.field_u.payload.length - this.field_z);
         }
         return 115;
     }

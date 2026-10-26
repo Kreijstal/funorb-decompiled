@@ -4,7 +4,7 @@
 final class cf extends sk {
     static int field_g;
     static String field_h;
-    static gk field_f;
+    static ResourceArchive field_f;
 
     public static void f(int param0) {
         field_f = null;
@@ -24,7 +24,7 @@ final class cf extends sk {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != null &&
             0 < param4) {

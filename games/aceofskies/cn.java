@@ -22,7 +22,7 @@ final class cn extends mi {
         int var9 = 0;
         double var10 = 0.0;
         int var12 = 0;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!super.a((int) (char)param0, param1, param2, param3, param4, param5, param6)) {
             return false;
@@ -30,7 +30,7 @@ final class cn extends mi {
           var8_int = param2 - this.field_C - (param1 + this.field_p);
           var9 = param6 - (this.field_x + this.field_h) - param4;
           if (this.field_A * this.field_A > var8_int * var8_int + var9 * var9) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - gj.field_c;
+            var10 = Math.atan2((double)var9, (double)var8_int) - GameCanvas.field_c;
             if (!(0.0 > var10)) {
               if (var10 > 0.0) {
                 var10 = var10 + 3.141592653589793 / (double)this.field_w;
@@ -91,7 +91,7 @@ final class cn extends mi {
               }
               var5 = new byte[param1];
               var3 = var5;
-              nm.a((byte) -106, param1, param0, var5);
+              IntKeyLookup.a((byte) -106, param1, param0, var5);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {

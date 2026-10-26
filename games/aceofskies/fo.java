@@ -3,7 +3,7 @@
  */
 final class fo {
     int field_e;
-    pa field_b;
+    RenderSprite field_b;
     int field_g;
     fo field_c;
     int field_a;
@@ -20,12 +20,12 @@ final class fo {
     final static void b(int param0) {
         nl.field_o = -1;
         ht.field_g = false;
-        ok.field_o = param0;
+        ScreenParticle.field_o = param0;
         we.field_c = -1;
         qj.field_s = null;
     }
 
-    final void a(byte param0, int param1, int param2, fo param3, int param4, pa param5, int param6) {
+    final void a(byte param0, int param1, int param2, fo param3, int param4, RenderSprite param5, int param6) {
         this.field_b = param5;
         this.field_d = param6;
         this.field_g = param4;

@@ -40,19 +40,19 @@ final class bt {
           fd.field_f = new ep();
           if (param0 != 10) {
             field_a = (pt) null;
-            ak.field_d.d(fd.field_f, -30244);
+            ClientException.field_d.d(fd.field_f, -30244);
             return;
           }
-          ak.field_d.d(fd.field_f, -30244);
+          ClientException.field_d.d(fd.field_f, -30244);
           return;
         }
         fd.field_f = new ep();
         if (param0 == 10) {
-          ak.field_d.d(fd.field_f, -30244);
+          ClientException.field_d.d(fd.field_f, -30244);
           return;
         }
         field_a = (pt) null;
-        ak.field_d.d(fd.field_f, -30244);
+        ClientException.field_d.d(fd.field_f, -30244);
     }
 
     static {

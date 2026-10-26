@@ -3,7 +3,7 @@
  */
 final class jk {
     static String field_c;
-    static gk field_b;
+    static ResourceArchive field_b;
     private fq field_a;
 
     public static void a(int param0) {
@@ -44,7 +44,7 @@ final class jk {
           var6 = wb.field_b;
           var2Lifetime1 = var6;
           if (param1 != -26024) {
-            field_b = (gk) null;
+            field_b = (ResourceArchive) null;
           }
           var7 = 0;
           var3Lifetime1 = var7;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qo {
-    static jd field_e;
+    static SteeringMode field_e;
     static int field_c;
     static int field_d;
     static eg field_a;
@@ -19,7 +19,7 @@ final class qo {
         throw new IllegalStateException();
     }
 
-    final static String a(String param0, String param1, gk param2, int param3, String param4) {
+    final static String a(String param0, String param1, ResourceArchive param2, int param3, String param4) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -89,24 +89,24 @@ final class qo {
         int var5_int = 0;
         int[] var6 = null;
         int var8 = 0;
-        dl var10 = null;
+        CipherPacketBuffer var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var10 = nm.field_c;
+          var10 = IntKeyLookup.field_c;
           if (param0 != -26) {
             return;
           }
-          var2 = var10.g(104);
-          var3 = var10.g(-75);
+          var2 = var10.readUnsignedByte(104);
+          var3 = var10.readUnsignedByte(-75);
           if (0 == var2) {
-            var4_ref_oh = (oh) (fg.field_r.d(268435455));
+            var4_ref_oh = (oh) (fg.field_r.first(268435455));
             if (var4_ref_oh == null) {
               te.b(true);
               return;
             }
-            var5_int = ag.field_s - var10.field_g;
+            var5_int = ag.field_s - var10.position;
             var12 = var4_ref_oh.field_f;
             var11 = var12;
             var6 = var11;
@@ -114,30 +114,30 @@ final class qo {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.g(-100) << pg.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-100) << pg.a(var7 << 8, 768));
             }
-            var4_ref_oh.c(-124);
+            var4_ref_oh.unlink(-124);
             return;
           }
           if (1 == var2) {
-            var4 = var10.f((byte) 127);
-            var5 = (uk) (v.field_b.d(268435455));
+            var4 = var10.readSignedSmart((byte) 127);
+            var5 = (uk) (v.field_b.first(268435455));
             while (var5 != null) {
               if (var3 != var5.field_i ||
                 var5.field_m != var4) {
-                var5 = (uk) (v.field_b.b((byte) 103));
+                var5 = (uk) (v.field_b.next((byte) 103));
                 continue;
               }
               break;
             }
             if (var5 != null) {
-              var5.c(-125);
+              var5.unlink(-125);
               return;
             }
             te.b(true);
             return;
           }
-          v.a("LR1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
+          v.a("LR1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
           te.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -155,7 +155,7 @@ final class qo {
     }
 
     static {
-        field_e = new jd();
+        field_e = new SteeringMode();
         field_a = new eg();
     }
 }

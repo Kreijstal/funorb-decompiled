@@ -3,7 +3,7 @@
  */
 final class rj {
     static boolean[] field_c;
-    static gk field_b;
+    static ResourceArchive field_b;
     static String field_a;
     private static String field_z;
 

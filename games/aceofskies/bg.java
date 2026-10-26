@@ -17,7 +17,7 @@ final class bg {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 120) {
             var6 = (CharSequence) null;
@@ -61,7 +61,7 @@ final class bg {
           Throwable decompiledCaughtException = null;
           Throwable var3_ref = null;
           RuntimeException var3_ref2 = null;
-          var7 = AceOfSkies.field_G ? 1 : 0;
+          var7 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             try {
               var3 = (String) (fe.a("getcookies", (byte) -108, param0));

@@ -76,7 +76,7 @@ abstract class to extends ea implements vm {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           discarded$11 = param0.append('\n');
           var5_int = 0;
@@ -153,7 +153,7 @@ abstract class to extends ea implements vm {
         if (param0 != 0) {
           field_t = -91;
         }
-        nm.field_c.g(param0 - 43);
+        IntKeyLookup.field_c.readUnsignedByte(param0 - 43);
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
@@ -329,7 +329,7 @@ abstract class to extends ea implements vm {
         }
     }
 
-    final static ha a(int param0, d param1, java.awt.Canvas param2, int param3, int param4) {
+    final static GraphicsRenderer a(int param0, d param1, java.awt.Canvas param2, int param3, int param4) {
         RuntimeException var5 = null;
         kj stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -343,7 +343,7 @@ abstract class to extends ea implements vm {
             to.b(-16, -37, 49);
           }
           stackIn_3_0 = new kj(param2, param1, param4, param3);
-          return (ha) ((Object) stackIn_3_0);
+          return (GraphicsRenderer) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

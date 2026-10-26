@@ -10,7 +10,7 @@ final class bl {
     static String field_g;
     private gh field_f;
     private gh field_d;
-    static pa[] field_b;
+    static RenderSprite[] field_b;
 
     public static void d(int param0) {
         if (param0 >= -121) {
@@ -32,7 +32,7 @@ final class bl {
           Throwable decompiledCaughtException = null;
           RuntimeException var1 = null;
           IOException var2 = null;
-          var3 = AceOfSkies.field_G ? 1 : 0;
+          var3 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (param0 != -18535) {
               field_g = (String) null;
@@ -103,7 +103,7 @@ final class bl {
           byte[] stackIn_51_0 = null;
           Object stackIn_54_0 = null;
           Throwable decompiledCaughtException = null;
-          var18 = AceOfSkies.field_G ? 1 : 0;
+          var18 = AceOfSkies.obfuscationControl ? 1 : 0;
           var3_ref = this.field_f;
           synchronized (var3_ref) {
             try {
@@ -280,7 +280,7 @@ final class bl {
         int[] var17;
         byte[] var21;
         int[] var22;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         var1 = new ll[to.field_t];
         for (var2 = 0; to.field_t > var2; var2++) {
           var3 = ji.field_b[var2] * ee.field_e[var2];
@@ -313,7 +313,7 @@ final class bl {
         return var1;
     }
 
-    final static wp a(byte param0, int param1, gk param2, int param3) {
+    final static wp a(byte param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -361,7 +361,7 @@ final class bl {
           int var13 = 0;
           EOFException var14 = null;
           int var16 = 0;
-          var16 = AceOfSkies.field_G ? 1 : 0;
+          var16 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             var6 = this.field_f;
             synchronized (var6) {
@@ -393,7 +393,7 @@ final class bl {
                 this.field_d.a(6, s.field_i, 0, 120);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param1 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -409,7 +409,7 @@ final class bl {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = ((s.field_i[6] & 255) << 16) + (((s.field_i[7] & 255) << 8) + (s.field_i[8] & 255));
                         var12 = (s.field_i[4] << 8 & 65280) + (255 & s.field_i[5]);
@@ -425,7 +425,7 @@ final class bl {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (65280 & s.field_i[2] << 8) + (255 & s.field_i[3]);
                         var13 = s.field_i[7] & 255;

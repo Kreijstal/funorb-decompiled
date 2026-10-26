@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class oh extends wf {
+final class oh extends IntrusiveNode {
     int[] field_f;
     int field_e;
 
-    final static kc a(double param0, byte param1) {
+    final static Vector2 a(double param0, byte param1) {
         double var5 = 0.0;
         double var3 = (double)bs.a(-1, ci.field_i, (int)(param0 * 20000.0)) - 10000.0 * param0;
         if (param1 == 28) {
           var5 = -(param0 * 10000.0) + (double)bs.a(-1, ci.field_i, (int)(param0 * 20000.0));
-          return new kc(var3 / 10000.0, var5 / 10000.0);
+          return new Vector2(var3 / 10000.0, var5 / 10000.0);
         }
-        return (kc) null;
+        return (Vector2) null;
     }
 
     final static int a(int param0, int param1, byte param2) {

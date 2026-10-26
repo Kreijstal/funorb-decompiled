@@ -19,7 +19,7 @@ final class lq {
           Throwable decompiledCaughtException = null;
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
-          var7 = AceOfSkies.field_G ? 1 : 0;
+          var7 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (jr.field_u) {
               return true;
@@ -63,10 +63,10 @@ final class lq {
         }
     }
 
-    final static rh a(al[] param0, int param1) {
+    final static SoundPlayback a(PcmSample[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        rh stackIn_1_0 = null;
+        SoundPlayback stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

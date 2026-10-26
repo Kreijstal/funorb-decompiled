@@ -23,7 +23,7 @@ class nr extends rt {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        var19 = AceOfSkies.field_G ? 1 : 0;
+        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param7 == 0) {
             param7 = param9;
@@ -99,7 +99,7 @@ class nr extends rt {
         int var14 = 0;
         int var15 = 0;
         int[] var16 = null;
-        var15 = AceOfSkies.field_G ? 1 : 0;
+        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param8 == 0) {
             param8 = param0;
@@ -199,7 +199,7 @@ class nr extends rt {
         int var15 = 0;
         int var16 = 0;
         int[] var17 = null;
-        var16 = AceOfSkies.field_G ? 1 : 0;
+        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_l = -1;
         this.field_n = -1;
         try {
@@ -299,7 +299,7 @@ class nr extends rt {
         int var14 = 0;
         int var15 = 0;
         byte[] var16 = null;
-        var15 = AceOfSkies.field_G ? 1 : 0;
+        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_l = -1;
         this.field_n = -1;
         try {
@@ -399,7 +399,7 @@ class nr extends rt {
           if (!decompiledSharedTail0) {
             rq.a(param6, param1, param2, param4, param7, param3, -1);
             this.a(true, false);
-            decompiledSharedTail0 = (AceOfSkies.field_G);
+            decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
           if (decompiledSharedTail0) {
             jaggl.OpenGL.glTexImage2Df(this.field_f, 0, this.field_b, this.field_m, this.field_k, 0, param7, 5126, param6, 0);
@@ -457,7 +457,7 @@ class nr extends rt {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
             return;

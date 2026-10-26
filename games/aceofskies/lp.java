@@ -6,7 +6,7 @@ final class lp extends Exception {
     static int[] field_d;
     static java.security.SecureRandom field_b;
     static int field_h;
-    static al[] field_g;
+    static PcmSample[] field_g;
     static int[] field_e;
     static int[] field_c;
     static boolean[] field_a;
@@ -30,7 +30,7 @@ final class lp extends Exception {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var1_intLifetime1;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           re.a();
           em.field_b = new int[260];
@@ -42,7 +42,7 @@ final class lp extends Exception {
           var5 = 256;
           var1_intLifetime1 = var5;
           if (param0) {
-            field_g = (al[]) null;
+            field_g = (PcmSample[]) null;
           }
           while (var5 < em.field_b.length) {
             em.field_b[var5] = 255;

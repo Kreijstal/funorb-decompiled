@@ -5,11 +5,11 @@ final class bo {
     static int field_h;
     static String field_g;
     private fo field_b;
-    private pa field_d;
-    static kp field_i;
+    private RenderSprite field_d;
+    static IntrusiveDeque field_i;
     static hc field_a;
     private int[] field_e;
-    private ha field_c;
+    private GraphicsRenderer field_c;
     private fo field_f;
 
     final static boolean a(byte param0) {
@@ -32,9 +32,9 @@ final class bo {
         return false;
     }
 
-    final static rh a(al[] param0, int param1, int param2) {
+    final static SoundPlayback a(PcmSample[] param0, int param1, int param2) {
         RuntimeException var3 = null;
-        rh stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -157,7 +157,7 @@ final class bo {
     public static void a(int param0) {
         field_i = null;
         if (param0 != 18598) {
-          field_i = (kp) null;
+          field_i = (IntrusiveDeque) null;
           field_g = null;
           field_a = null;
           return;
@@ -172,7 +172,7 @@ final class bo {
         this.field_c.T(param1, param3, param0, param2);
     }
 
-    bo(ha param0) {
+    bo(GraphicsRenderer param0) {
         this.field_d = null;
         this.field_e = new int[4];
         try {
@@ -184,6 +184,6 @@ final class bo {
 
     static {
         field_g = "Loading extra data";
-        field_i = new kp();
+        field_i = new IntrusiveDeque();
     }
 }

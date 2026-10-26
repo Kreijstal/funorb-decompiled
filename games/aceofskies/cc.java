@@ -5,7 +5,7 @@ import java.io.*;
 
 final class cc implements Runnable {
     static String[] field_b;
-    private rb field_a;
+    private PacketBuffer field_a;
     private java.net.URL field_j;
     private DataInputStream field_g;
     static int field_i;
@@ -44,9 +44,9 @@ final class cc implements Runnable {
         this.field_h = null;
     }
 
-    final rb a(boolean param0) {
+    final PacketBuffer a(boolean param0) {
         if (!param0) {
-          return (rb) null;
+          return (PacketBuffer) null;
         }
         if (3 != this.field_c) {
           return null;
@@ -118,7 +118,7 @@ final class cc implements Runnable {
             var4.write(fa.a(var6, 8482));
             this.field_g = new DataInputStream(var5.getInputStream());
           }
-          this.field_a.field_g = 0;
+          this.field_a.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (IOException) (Object) decompiledCaughtException;
@@ -166,18 +166,18 @@ final class cc implements Runnable {
           Throwable var3 = null;
           int var4 = 0;
           Throwable decompiledCaughtException = null;
-          var4 = AceOfSkies.field_G ? 1 : 0;
+          var4 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
-            while (this.field_a.field_g < this.field_a.field_f.length) {
-              var1_int = this.field_g.read(this.field_a.field_f, this.field_a.field_g, -this.field_a.field_g + this.field_a.field_f.length);
+            while (this.field_a.position < this.field_a.payload.length) {
+              var1_int = this.field_g.read(this.field_a.payload, this.field_a.position, -this.field_a.position + this.field_a.payload.length);
               if (0 <= var1_int) {
-                this.field_a.field_g = this.field_a.field_g + var1_int;
+                this.field_a.position = this.field_a.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_a.field_g == this.field_a.field_f.length) {
-              throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.field_f.length + " " + this.field_j));
+            if (this.field_a.position == this.field_a.payload.length) {
+              throw cc.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_a.payload.length + " " + this.field_j));
             }
             var1 = this;
             synchronized (var1) {
@@ -206,7 +206,7 @@ final class cc implements Runnable {
         try {
           this.field_d = param0;
           this.field_j = param1;
-          this.field_a = new rb(param2);
+          this.field_a = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "cc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

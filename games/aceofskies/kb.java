@@ -95,7 +95,7 @@ final class kb extends vq {
         Object var18 = null;
         Object var22 = null;
         Object var26 = null;
-        int var13 = AceOfSkies.field_G ? 1 : 0;
+        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         pt var6 = this.field_B.b(true);
         int var9Lifetime1;
         int var9Lifetime2;

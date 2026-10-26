@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mn {
-    final static ha a(byte param0, int param1, java.awt.Canvas param2, gk param3, d param4) {
+    final static GraphicsRenderer a(byte param0, int param1, java.awt.Canvas param2, ResourceArchive param3, d param4) {
         try {
           Class var5 = null;
           RuntimeException var5_ref = null;
           Throwable var5_ref2 = null;
           java.lang.reflect.Method var6 = null;
           d var7 = null;
-          ha stackIn_8_0 = null;
+          GraphicsRenderer stackIn_8_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (!tq.c(true)) {
@@ -21,10 +21,10 @@ final class mn {
             var5 = Class.forName("kr");
             if (param0 != 1) {
               var7 = (d) null;
-              mn.a((byte) 32, -121, (java.awt.Canvas) null, (gk) null, (d) null);
+              mn.a((byte) 32, -121, (java.awt.Canvas) null, (ResourceArchive) null, (d) null);
             }
-            var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("gk"), Class.forName("java.lang.Integer")});
-            stackIn_8_0 = (ha) (var6.invoke((Object) null, new Object[]{param2, param4, param3, new Integer(param1)}));
+            var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("ResourceArchive"), Class.forName("java.lang.Integer")});
+            stackIn_8_0 = (GraphicsRenderer) (var6.invoke((Object) null, new Object[]{param2, param4, param3, new Integer(param1)}));
             return stackIn_8_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

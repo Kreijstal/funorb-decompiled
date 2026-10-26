@@ -14,22 +14,22 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
-        dl var9 = null;
+        CipherPacketBuffer var9 = null;
         byte[] var13 = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var9 = nm.field_c;
+          var9 = IntKeyLookup.field_c;
           if (param0 <= 15) {
             field_a = (String) null;
           }
-          var2 = var9.g(-112);
+          var2 = var9.readUnsignedByte(-112);
           if (var2 != 0) {
             if (var2 == 1) {
-              var3 = var9.a((byte) 117);
-              var4 = (ds) (cl.field_eb.d(268435455));
+              var3 = var9.readInt((byte) 117);
+              var4 = (ds) (cl.field_eb.first(268435455));
               while (var4 != null) {
                 if (var4.field_g != var3) {
-                  var4 = (ds) (cl.field_eb.b((byte) 103));
+                  var4 = (ds) (cl.field_eb.next((byte) 103));
                   continue;
                 }
                 break;
@@ -38,30 +38,30 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 te.b(true);
                 return;
               }
-              var4.c(-127);
+              var4.unlink(-127);
               return;
             }
-            v.a("A1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
+            v.a("A1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
             te.b(true);
           } else {
-            var3_ref_te = (te) (ep.field_z.d(268435455));
+            var3_ref_te = (te) (ep.field_z.first(268435455));
             if (var3_ref_te == null) {
               te.b(true);
               return;
             }
-            var4_int = var9.g(-79);
+            var4_int = var9.readUnsignedByte(-79);
             if (var4_int != 0) {
               var13 = new byte[var4_int];
               var9.a(0, 7186, var4_int, var13);
             } else {
               var5 = null;
             }
-            var9.field_g = var9.field_g + 4;
+            var9.position = var9.position + 4;
             if (!var9.e(6103)) {
               te.b(true);
               return;
             }
-            var3_ref_te.c(-124);
+            var3_ref_te.unlink(-124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,7 +108,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         int var19 = 0;
         int var20 = 0;
         int var23 = 0;
-        var23 = AceOfSkies.field_G ? 1 : 0;
+        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 > 0 &&
             !mg.a(param5, (byte) 127)) {
@@ -234,7 +234,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (ho.field_b != null) {
             oj.field_g = 0;
             kg.field_a = param0.getX();
-            jd.field_e = param0.getY();
+            SteeringMode.field_e = param0.getY();
             kh.a(-125);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               me.field_b = 2;

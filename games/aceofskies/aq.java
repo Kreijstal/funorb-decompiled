@@ -13,7 +13,7 @@ final class aq {
         ll var1 = null;
         ll var2 = null;
         int var3 = 0;
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var1 = new ll(param0, 140);
           cm.a(var1, param0 - 15032);

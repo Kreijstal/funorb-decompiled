@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tu extends da {
+final class tu extends BitmapFont {
     private int[] field_e;
     private int[] field_j;
     private int[] field_g;

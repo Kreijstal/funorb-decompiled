@@ -34,14 +34,14 @@ final class fm extends sk {
 
     final void a(boolean param0) {
         if (param0) {
-          this.field_b.a((byte) 125, 0, dl.field_p);
+          this.field_b.a((byte) 125, 0, CipherPacketBuffer.field_p);
           jaggl.OpenGL.glBindProgramARB(34336, 0);
           jaggl.OpenGL.glDisable(34820);
           jaggl.OpenGL.glDisable(34336);
           return;
         }
         this.field_g = (em) null;
-        this.field_b.a((byte) 125, 0, dl.field_p);
+        this.field_b.a((byte) 125, 0, CipherPacketBuffer.field_p);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         jaggl.OpenGL.glDisable(34820);
         jaggl.OpenGL.glDisable(34336);
@@ -86,11 +86,11 @@ final class fm extends sk {
         }
         hg.field_D = hg.field_D | var3;
         r.field_n = r.field_n | var3;
-        nk.field_g.a(92, new iq(param2));
+        MenuScreen.field_g.addLast(92, new iq(param2));
         if (!tt.field_a) {
-          sb.field_c.a(param1 + 6, new oc(param2, param0, ct.field_x, bo.field_h, se.field_b, ei.field_a - or.field_a));
+          sb.field_c.addLast(param1 + 6, new oc(param2, param0, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a - or.field_a));
           if (param2 == 6) {
-            nk.field_g.a(116, new iq(-1));
+            MenuScreen.field_g.addLast(116, new iq(-1));
             si.c(true);
             return;
           }
@@ -99,11 +99,11 @@ final class fm extends sk {
         if (param2 != 6) {
           return;
         }
-        nk.field_g.a(116, new iq(-1));
+        MenuScreen.field_g.addLast(116, new iq(-1));
         si.c(true);
     }
 
-    fm(jc param0, gk param1, em param2) {
+    fm(jc param0, ResourceArchive param1, em param2) {
         super(param0);
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;

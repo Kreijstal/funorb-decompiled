@@ -47,7 +47,7 @@ final class ol extends ai {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var12 = null;
-        var41 = AceOfSkies.field_G ? 1 : 0;
+        var41 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var12_int = (int)((float)param2 * param6 - 1.0f);
           var12_int = var12_int & 255;

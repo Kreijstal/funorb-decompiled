@@ -63,7 +63,7 @@ final class op {
         field_b = null;
     }
 
-    final static void a(int param0, gk param1) {
+    final static void a(int param0, ResourceArchive param1) {
         t var2 = null;
         t.a(param1.a("headers.packvorbis", (byte) -71, ""));
         if (param0 != 20786) {

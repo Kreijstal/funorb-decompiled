@@ -10,7 +10,7 @@ final class sn {
     final static void a(hc param0, int param1, int param2, hc param3) {
         nh.field_c = param0;
         qk.field_g = param1;
-        pk.field_e = param3;
+        FlightSession.field_e = param3;
         mb.a(vp.field_c / 2, vp.field_i / 2, (byte) 74);
         if (param2 != 24097) {
           return;
@@ -73,7 +73,7 @@ final class sn {
         int var11 = 0;
         int var5Lifetime1;
         int var8Lifetime1;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var3_int = param0.length();
           var4 = var3_int;

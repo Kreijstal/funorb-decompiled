@@ -69,7 +69,7 @@ final class dk implements Runnable {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 <= 53) {
             this.field_j = false;
@@ -142,7 +142,7 @@ final class dk implements Runnable {
           Throwable decompiledCaughtException = null;
           Exception var2_ref = null;
           String var6 = null;
-          var5 = AceOfSkies.field_G ? 1 : 0;
+          var5 = AceOfSkies.obfuscationControl ? 1 : 0;
           while (!this.field_j) {
             var2 = this.field_f;
             synchronized (var2) {
@@ -273,7 +273,7 @@ final class dk implements Runnable {
         try {
           var2 = param0.a(5, 1048576, (Runnable) (this));
           while (var2.field_a == 0) {
-            wf.a(10L, false);
+            IntrusiveNode.a(10L, false);
           }
           if (var2.field_a == 2) {
             throw new RuntimeException();

@@ -96,7 +96,7 @@ final class wj implements up {
         double var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = AceOfSkies.field_G ? 1 : 0;
+        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           qg.field_e = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = gp.field_y.length;
@@ -113,9 +113,9 @@ final class wj implements up {
             var8 = qg.field_e[9] >> 2;
             var9 = qg.field_e[10] >> 2;
             var10_int = qg.field_e[11] >> 2;
-            var11 = var10_int * rb.field_k[5] + var8 * rb.field_k[3] + rb.field_k[4] * var9 >> 14;
-            var12 = var9 * rb.field_k[7] + var8 * rb.field_k[6] + var10_int * rb.field_k[8] >> 14;
-            var13 = var8 * rb.field_k[9] + rb.field_k[10] * var9 + var10_int * rb.field_k[11] >> 14;
+            var11 = var10_int * PacketBuffer.field_k[5] + var8 * PacketBuffer.field_k[3] + PacketBuffer.field_k[4] * var9 >> 14;
+            var12 = var9 * PacketBuffer.field_k[7] + var8 * PacketBuffer.field_k[6] + var10_int * PacketBuffer.field_k[8] >> 14;
+            var13 = var8 * PacketBuffer.field_k[9] + PacketBuffer.field_k[10] * var9 + var10_int * PacketBuffer.field_k[11] >> 14;
             var2[var3] = var11 * var5 - (-(var12 * var6) - var7 * var13) >> 16;
           }
           var3Lifetime1 = qg.field_e[9] >> 8;
@@ -157,9 +157,9 @@ final class wj implements up {
             var17 = gp.field_y[var16];
             kg.a(0, var16);
             for (var18 = 0; 3 > var18; var18++) {
-              rb.field_k[var18] = rb.field_k[var18] + ia.field_a[var15][var18];
+              PacketBuffer.field_k[var18] = PacketBuffer.field_k[var18] + ia.field_a[var15][var18];
             }
-            eg.a(var17, qg.field_e, 45, true, false, rb.field_k, false);
+            eg.a(var17, qg.field_e, 45, true, false, PacketBuffer.field_k, false);
             hg.a(var14, var8Lifetime1, var13Lifetime1, var12Lifetime1, var9Lifetime1, 255, var7Lifetime1, var17);
           }
           return;
@@ -286,13 +286,13 @@ final class wj implements up {
         try {
           tk.a(param3, param4, 10);
           um.field_m = tk.a(param1, param2, 0, param6);
-          da.field_a = tk.a(param1, param2, 1, param7);
+          BitmapFont.field_a = tk.a(param1, param2, 1, param7);
           qn.field_b = new tp();
           int var8_int = -86 % ((param0 + 12) / 37);
-          kc.field_c = param7;
-          da.field_a.a(qn.field_b);
+          Vector2.field_c = param7;
+          BitmapFont.field_a.a(qn.field_b);
           wt.field_e = param5;
-          wt.field_e.a((byte) 125, l.field_c);
+          wt.field_e.a((byte) 125, RendererManager.field_c);
           um.field_m.a(wt.field_e);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "wj.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');

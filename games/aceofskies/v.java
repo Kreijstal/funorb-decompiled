@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class v {
-    static kp field_b;
+    static IntrusiveDeque field_b;
     static boolean field_a;
 
     final static void a(String param0, byte param1, Throwable param2) {
@@ -28,7 +28,7 @@ final class v {
           String var8 = null;
           String var9 = null;
           String var10 = null;
-          var6 = AceOfSkies.field_G ? 1 : 0;
+          var6 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             var3 = "";
             if (param2 != null) {
@@ -60,7 +60,7 @@ final class v {
             if (co.field_g == null) {
               stackIn_17_2 = null;
               stackIn_17_3 = null;
-              stackIn_17_6 = "" + dl.field_o;
+              stackIn_17_6 = "" + CipherPacketBuffer.field_o;
             } else {
               stackIn_17_2 = null;
               stackIn_17_3 = null;
@@ -68,7 +68,7 @@ final class v {
             }
             var4 = ((rk) (Object) stackIn_16_0).a((byte) stackIn_16_1, new java.net.URL(stackIn_16_4, ((StringBuilder) (Object) stackIn_16_5).append(stackIn_17_6).append("&v1=").append(rk.field_o).append("&v2=").append(rk.field_l).append("&e=").append(var10).toString()));
             while (var4.field_a == 0) {
-              wf.a(1L, false);
+              IntrusiveNode.a(1L, false);
             }
             if (var4.field_a == 1) {
               var5 = (DataInputStream) (var4.field_f);
@@ -143,6 +143,6 @@ final class v {
     }
 
     static {
-        field_b = new kp();
+        field_b = new IntrusiveDeque();
     }
 }

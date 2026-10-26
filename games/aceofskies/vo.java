@@ -11,30 +11,30 @@ abstract class vo extends li implements dr {
         int var6;
         uc var5_refLifetime1;
         var5 = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 >= 120) {
-          var5_ref = (uc) (nh.field_g.d(268435455));
+          var5_ref = (uc) (nh.field_g.first(268435455));
           while (var5_ref != null) {
             if (~param4 == ~var5_ref.field_n) {
               return var5_ref;
             }
-            var5_ref = (uc) (nh.field_g.b((byte) 103));
+            var5_ref = (uc) (nh.field_g.next((byte) 103));
           }
         } else {
           field_d = (int[]) null;
-          var5_ref = (uc) (nh.field_g.d(268435455));
+          var5_ref = (uc) (nh.field_g.first(268435455));
           while (var5_ref != null) {
             if (~param4 == ~var5_ref.field_n) {
               return var5_ref;
             }
-            var5_ref = (uc) (nh.field_g.b((byte) 103));
+            var5_ref = (uc) (nh.field_g.next((byte) 103));
           }
         }
         var5_refLifetime1 = new uc();
         var5_refLifetime1.field_n = param4;
         var5_refLifetime1.field_j = param2;
         var5_refLifetime1.field_m = param3;
-        nh.field_g.a(81, var5_refLifetime1);
+        nh.field_g.addLast(81, var5_refLifetime1);
         ag.a(param1, 5, var5_refLifetime1);
         return var5_refLifetime1;
     }

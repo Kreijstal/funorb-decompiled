@@ -20,7 +20,7 @@ final class tr {
         int var5 = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
             aa.field_c[var2_int] = 0;
@@ -78,7 +78,7 @@ final class tr {
         field_a = null;
     }
 
-    final static void a(gk param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         ll var2 = new ll(param0.a("final_frame.jpg", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
         int var3 = var2.field_r;
         int var4 = var2.field_n;
@@ -100,16 +100,16 @@ final class tr {
         }
     }
 
-    final static void a(rb param0, int param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
-          param0.b(-1336879960, 12);
-          param0.a(17, 23385);
-          param0.a(param3, 23385);
-          param0.a(param2, 23385);
-          param0.b(-1336879960, param1);
+          param0.writeByte(-1336879960, 12);
+          param0.writeShort(17, 23385);
+          param0.writeShort(param3, 23385);
+          param0.writeShort(param2, 23385);
+          param0.writeByte(-1336879960, param1);
           if (param4 != 0) {
-            rb var6 = (rb) null;
-            tr.a((rb) null, 50, -109, 117, 45);
+            PacketBuffer var6 = (PacketBuffer) null;
+            tr.a((PacketBuffer) null, 50, -109, 117, 45);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "tr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

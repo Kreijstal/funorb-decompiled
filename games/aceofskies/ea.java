@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ea extends wf {
+class ea extends IntrusiveNode {
     int field_l;
     pp field_m;
     ir field_e;
@@ -211,7 +211,7 @@ class ea extends wf {
         int var5_int;
         String var5;
         int var6;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         var4 = this.f(param1 + param1);
         var5_int = 0;
         while (var5_int <= var4) {

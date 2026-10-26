@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ft extends wf {
+final class ft extends IntrusiveNode {
     int field_p;
     static vf field_l;
     int field_z;
@@ -16,7 +16,7 @@ final class ft extends wf {
     int field_f;
     int field_n;
     int field_u;
-    al field_x;
+    PcmSample field_x;
     int field_i;
     int field_v;
     int field_j;
@@ -24,7 +24,7 @@ final class ft extends wf {
     int field_h;
     static int field_o;
     int field_w;
-    su field_e;
+    PcmSampleStream field_e;
 
     final void a(int param0) {
         this.field_y = null;

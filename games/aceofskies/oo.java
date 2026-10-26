@@ -9,7 +9,7 @@ class oo extends dg implements dn {
     private boolean field_V;
     static int[] field_Y;
     private boolean field_X;
-    static kp field_T;
+    static IntrusiveDeque field_T;
     static vd[] field_ab;
     private boolean field_Z;
 
@@ -147,7 +147,7 @@ class oo extends dg implements dn {
         int var5 = 0;
         int var6 = 0;
         jn var7 = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_Z) {
             return;
@@ -167,7 +167,7 @@ class oo extends dg implements dn {
               if (this.field_cb) {
                 stackIn_14_3 = hg.field_z;
               } else {
-                stackIn_14_3 = eu.field_j;
+                stackIn_14_3 = Bullet.field_j;
               }
               ((jn) (Object) stackIn_13_0).a(stackIn_13_1, (byte) stackIn_13_2, stackIn_14_3);
             } else {

@@ -17,7 +17,7 @@ final class ca {
         qq var2;
         int var3;
         qq var4;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != -18738) {
           this.field_e = 91;
         }
@@ -97,7 +97,7 @@ final class ca {
         RuntimeException var4 = null;
         int var5 = 0;
         int var8 = 0;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != null &&
             param0.field_h != null &&

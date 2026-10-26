@@ -6,7 +6,7 @@ final class b {
     static hc field_c;
     static int field_a;
 
-    final static boolean a(boolean param0, rb param1) {
+    final static boolean a(boolean param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -17,7 +17,7 @@ final class b {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.g(119);
+          var2_int = param1.readUnsignedByte(119);
           if (!param0) {
             field_b = (nf) null;
           }

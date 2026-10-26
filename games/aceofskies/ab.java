@@ -4,7 +4,7 @@
 import java.util.*;
 
 class ab extends ea implements vm {
-    kp field_s;
+    IntrusiveDeque field_s;
     static String field_r;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
@@ -16,7 +16,7 @@ class ab extends ea implements vm {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var8 = new an(this.field_s);
           if (param0 != 34) {
@@ -24,7 +24,7 @@ class ab extends ea implements vm {
           }
           var9 = (ea) (var8.c(-1372));
           while (var9 != null) {
-            if (var9.b((byte) 106)) {
+            if (var9.isLinked((byte) 106)) {
               if (!var9.a(34, param1 + this.field_p, param2, param3, this.field_h + param4, param5, param6)) {
                 var9 = (ea) (var8.a(126));
                 continue;
@@ -50,7 +50,7 @@ class ab extends ea implements vm {
 
     final String c(byte param0) {
         String var4 = null;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
         ea var3 = (ea) (var2.c(-1372));
         while (var3 != null) {
@@ -94,12 +94,12 @@ class ab extends ea implements vm {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var12 = new an(this.field_s);
           var9 = (ea) (var12.c(-1372));
           while (var9 != null) {
-            if (var9.b((byte) 85)) {
+            if (var9.isLinked((byte) 85)) {
               if (var9.e(28660) &&
                 var9.a(param0, param1, param2, param3, param4, param5, false)) {
                 return true;
@@ -134,7 +134,7 @@ class ab extends ea implements vm {
           if (param1 != 1) {
             field_r = (String) null;
           }
-          this.field_s.a(87, param0);
+          this.field_s.addLast(87, param0);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ab.IB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -151,12 +151,12 @@ class ab extends ea implements vm {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 80) {
             field_r = (String) null;
           }
-          if (this.field_s.a(true)) {
+          if (this.field_s.isEmpty(true)) {
             return false;
           }
           var8 = new an(this.field_s);
@@ -192,7 +192,7 @@ class ab extends ea implements vm {
 
     final int f(int param0) {
         int var5 = 0;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = param0;
         an var3 = new an(this.field_s);
         ea var4 = (ea) (var3.c(param0 ^ -1372));
@@ -231,7 +231,7 @@ class ab extends ea implements vm {
             var6 = (ea) (var5.a(param0 - 232));
           }
           if (param0 != 115) {
-            this.field_s = (kp) null;
+            this.field_s = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -256,7 +256,7 @@ class ab extends ea implements vm {
 
     ab(int param0, int param1, int param2, int param3, ir param4) {
         super(param0, param1, param2, param3, param4, (no) null);
-        this.field_s = new kp();
+        this.field_s = new IntrusiveDeque();
     }
 
     final StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
@@ -299,7 +299,7 @@ class ab extends ea implements vm {
     }
 
     final void d(int param0) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
         if (param0 != 7398) {
           return;
@@ -342,7 +342,7 @@ class ab extends ea implements vm {
           var5 = new an(this.field_s);
           var6 = (ea) (var5.c(-1372));
           while (var6 != null) {
-            if (var6.b((byte) 119)) {
+            if (var6.isLinked((byte) 119)) {
               var6.a((byte) 108, param1, param2 + this.field_h, this.field_p + param3);
               var6 = (ea) (var5.a(-125));
               continue;
@@ -380,13 +380,13 @@ class ab extends ea implements vm {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var10 = new an(this.field_s);
           var6 = -95 / ((param0 + 53) / 33);
           var9 = (ea) (var10.c(-1372));
           while (var9 != null) {
-            if (var9.b((byte) 95)) {
+            if (var9.isLinked((byte) 95)) {
               if (var9.e(28660) &&
                 var9.a(-94, param1, param2, param3)) {
                 return true;
@@ -429,7 +429,7 @@ class ab extends ea implements vm {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var7 = new an(this.field_s);
           if (param5 != 91) {
@@ -437,7 +437,7 @@ class ab extends ea implements vm {
           }
           var8 = (ea) (var7.c(-1372));
           while (var8 != null) {
-            if (var8.b((byte) 115)) {
+            if (var8.isLinked((byte) 115)) {
               var8.a(param0 + this.field_p, param1 + this.field_h, param2, param3, param4, (byte) 91);
               var8 = (ea) (var7.a(3));
               continue;
@@ -467,7 +467,7 @@ class ab extends ea implements vm {
     }
 
     ea a(int param0) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
         ea var3 = (ea) (var2.c(-1372));
         while (var3 != null) {
@@ -479,7 +479,7 @@ class ab extends ea implements vm {
         if (param0 == 0) {
           return null;
         }
-        this.field_s = (kp) null;
+        this.field_s = (IntrusiveDeque) null;
         return null;
     }
 
@@ -495,9 +495,9 @@ class ab extends ea implements vm {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (this.field_s.a(true)) {
+          if (this.field_s.isEmpty(true)) {
             return false;
           }
           var9 = new an(this.field_s);

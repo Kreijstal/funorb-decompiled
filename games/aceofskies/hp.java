@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hp extends eq {
-    static al[] field_i;
+    static PcmSample[] field_i;
     static java.math.BigInteger field_j;
     static int field_h;
 

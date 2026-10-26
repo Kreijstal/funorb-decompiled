@@ -21,10 +21,10 @@ final class cd {
           if (param1 < 22) {
             field_c = (String) null;
           }
-          if (null == jd.field_c) {
+          if (null == SteeringMode.field_c) {
             return;
           }
-          jd.field_c.a((java.awt.Component) ((Object) param0), -104);
+          SteeringMode.field_c.a((java.awt.Component) ((Object) param0), -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class cd {
         return this.field_e;
     }
 
-    final static wp a(gk param0, String param1, String param2, int param3) {
+    final static wp a(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -72,7 +72,7 @@ final class cd {
           var5 = param0.a(-125, var4_int, param2);
           if (param3 >= -43) {
             var6 = (String) null;
-            cd.a((gk) null, (String) null, (String) null, -13);
+            cd.a((ResourceArchive) null, (String) null, (String) null, -13);
           }
           stackIn_3_0 = bl.a((byte) -123, var5, param0, var4_int);
           return stackIn_3_0;

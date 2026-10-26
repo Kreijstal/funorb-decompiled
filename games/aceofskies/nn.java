@@ -3,25 +3,25 @@
  */
 final class nn {
     final static void a(ds param0, int param1, byte param2) {
-        dl var5 = q.field_p;
+        CipherPacketBuffer var5 = q.field_p;
         var5.g(109, param1);
-        var5.field_g = var5.field_g + 1;
-        int var4 = var5.field_g;
-        var5.b(-1336879960, 1);
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
+        var5.writeByte(-1336879960, 1);
         if (param0.field_f == null) {
-          var5.b(-1336879960, 0);
+          var5.writeByte(-1336879960, 0);
         } else {
-          var5.b(-1336879960, param0.field_f.length);
+          var5.writeByte(-1336879960, param0.field_f.length);
           var5.a(true, param0.field_f.length, 0, param0.field_f);
         }
         var5.e(var4, 16);
-        var5.field_g = var5.field_g - 4;
-        param0.field_g = var5.a((byte) 121);
+        var5.position = var5.position - 4;
+        param0.field_g = var5.readInt((byte) 121);
         if (param2 < 27) {
           return;
         }
         try {
-          var5.b(-var4 + var5.field_g, (byte) 124);
+          var5.b(-var4 + var5.position, (byte) 124);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "nn.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -36,7 +36,7 @@ final class nn {
         int var10 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           vp.b(param2, param0, param3 + 1, 10000536);
           vp.b(param2, param4 + param0, param3 + 1, 12105912);

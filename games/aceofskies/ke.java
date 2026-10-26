@@ -4,13 +4,13 @@
 final class ke {
     static String[] field_c;
     static int field_b;
-    static rb field_a;
+    static PacketBuffer field_a;
 
     final static void a(int param0, String param1) {
         try {
           fb.field_b = param1;
           if (param0 != -1) {
-            field_a = (rb) null;
+            field_a = (PacketBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ke.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -28,15 +28,15 @@ final class ke {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         java.awt.Frame var5 = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           while (true) {
             var3 = param1.a(param2, param0 + 15850);
             while (var3.field_a == 0) {
-              wf.a(10L, false);
+              IntrusiveNode.a(10L, false);
             }
             if (var3.field_a != 1) {
-              wf.a(100L, false);
+              IntrusiveNode.a(100L, false);
               continue;
             }
             break;

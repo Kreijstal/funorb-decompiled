@@ -3,10 +3,10 @@
  */
 final class nh {
     static w field_f;
-    static kp field_g;
+    static IntrusiveDeque field_g;
     static hc field_c;
     static int field_e;
-    static kp field_d;
+    static IntrusiveDeque field_d;
     static int field_a;
     static String field_b;
     private static String field_z;
@@ -25,6 +25,6 @@ final class nh {
     static {
         field_z = "nh.A(";
         field_f = new w();
-        field_g = new kp();
+        field_g = new IntrusiveDeque();
     }
 }

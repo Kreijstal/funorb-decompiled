@@ -41,7 +41,7 @@ abstract class li implements sp {
 
     public final pt b(boolean param0) {
         if (this.a(26921)) {
-          return vb.field_o;
+          return GameAppletShell.field_o;
         }
         if (!param0) {
           this.a((byte) 120);
@@ -68,7 +68,7 @@ abstract class li implements sp {
         int var4 = 0;
         try {
           int var3_int = 101 % ((65 - param0) / 43);
-          nm.field_a = false;
+          IntKeyLookup.field_a = false;
           ss.field_t = false;
           if (ml.field_m != null &&
             ml.field_m.field_z) {
@@ -88,7 +88,7 @@ abstract class li implements sp {
               var4 = 0;
             }
             if (var4 != 0) {
-              if (nm.field_a) {
+              if (IntKeyLookup.field_a) {
                 param2 = sn.a(bc.field_v, 107, new String[]{param2});
               }
               if (ae.field_f) {

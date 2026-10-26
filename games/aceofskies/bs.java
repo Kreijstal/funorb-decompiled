@@ -5,7 +5,7 @@ import java.util.*;
 
 final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_c;
-    static pa[] field_b;
+    static RenderSprite[] field_b;
     static jb field_a;
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
@@ -32,7 +32,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (fb.field_a >= 0 &&
               var2_int >= 0) {
-              da.field_b[fb.field_a] = var2_int;
+              BitmapFont.field_b[fb.field_a] = var2_int;
               fb.field_a = 127 & fb.field_a + 1;
               if (fb.field_a == gr.field_h) {
                 fb.field_a = -1;
@@ -41,7 +41,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
             if (var2_int >= 0) {
               var3 = 127 & 1 + nl.field_w;
               if (var3 != ch.field_a) {
-                ps.field_e[nl.field_w] = var2_int;
+                ArchiveIndex.field_e[nl.field_w] = var2_int;
                 qb.field_o[nl.field_w] = (char)0;
                 nl.field_w = var3;
               }
@@ -76,7 +76,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
         if (!param1) {
           return var2;
         }
-        field_b = (pa[]) null;
+        field_b = (RenderSprite[]) null;
         return var2;
     }
 
@@ -99,7 +99,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (fb.field_a >= 0 &&
               var2_int >= 0) {
-              da.field_b[fb.field_a] = ~var2_int;
+              BitmapFont.field_b[fb.field_a] = ~var2_int;
               fb.field_a = fb.field_a + 1 & 127;
               if (fb.field_a == gr.field_h) {
                 fb.field_a = -1;
@@ -192,7 +192,7 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
               mr.a((char) var2_int, 2004352972)) {
               var3 = 1 + nl.field_w & 127;
               if (var3 != ch.field_a) {
-                ps.field_e[nl.field_w] = -1;
+                ArchiveIndex.field_e[nl.field_w] = -1;
                 qb.field_o[nl.field_w] = (char)var2_int;
                 nl.field_w = var3;
               }

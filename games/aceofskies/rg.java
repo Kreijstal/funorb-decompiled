@@ -40,7 +40,7 @@ abstract class rg extends gm {
         int var9Lifetime2;
         int var12Lifetime1;
         int var13Lifetime1;
-        var16 = AceOfSkies.field_G ? 1 : 0;
+        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         vp.c(param1 + 6, param2 + 35, -12 + this.field_q, this.field_n - 40, 2105376, 0);
         var4 = 35;
         var5 = 211;
@@ -110,7 +110,7 @@ abstract class rg extends gm {
           var7Lifetime1++;
         }
         eo.field_b.b(-90 + (param1 + this.field_q), param2 + 10);
-        cf.a(ip.field_c, param1 + 5, (byte) -121, 35 + param2, this.field_q - 10);
+        cf.a(ArchiveProvider.field_c, param1 + 5, (byte) -121, 35 + param2, this.field_q - 10);
         cf.a(uc.field_k, param1, (byte) -114, this.field_n + param2 - 22, this.field_q);
         var4Lifetime2 = this.field_n - 79;
         var6Lifetime2 = 127;
@@ -160,7 +160,7 @@ abstract class rg extends gm {
         return super.i(112);
     }
 
-    final static void a(int param0, boolean param1, rh param2, int param3) {
+    final static void a(int param0, boolean param1, SoundPlayback param2, int param3) {
         if (param2 == null) {
           return;
         }
@@ -168,8 +168,8 @@ abstract class rg extends gm {
           param2.b(-2580, param0);
           param2.a(-128, param3);
           if (param1) {
-            rh var5 = (rh) null;
-            rg.a(53, false, (rh) null, -102);
+            SoundPlayback var5 = (SoundPlayback) null;
+            rg.a(53, false, (SoundPlayback) null, -102);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "rg.MA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

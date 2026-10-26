@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uc extends wf {
+final class uc extends IntrusiveNode {
     boolean field_i;
     int[][] field_h;
     static qr field_l;
@@ -10,7 +10,7 @@ final class uc extends wf {
     static ll[] field_k;
     String[][] field_e;
     static vd field_g;
-    static pa[] field_o;
+    static RenderSprite[] field_o;
     int field_m;
     long[][] field_f;
 
@@ -24,7 +24,7 @@ final class uc extends wf {
         }
     }
 
-    final static cp a(int param0, gk param1, int param2, gk param3, int param4) {
+    final static cp a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;

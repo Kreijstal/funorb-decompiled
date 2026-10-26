@@ -39,7 +39,7 @@ final class ff {
         int var12 = 0;
         int var13 = 0;
         int var6Lifetime1;
-        var13 = AceOfSkies.field_G ? 1 : 0;
+        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = param4.a(param1);
           if (param0 >= var5_int &&

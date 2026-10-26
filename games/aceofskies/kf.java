@@ -18,9 +18,9 @@ final class kf extends sk {
         this.field_b.a(1, (byte) 116);
         this.field_b.a((jj) null, -9135);
         this.field_b.a(ru.field_a, param0, ru.field_a);
-        this.field_b.a((byte) 126, 0, dl.field_p);
+        this.field_b.a((byte) 126, 0, CipherPacketBuffer.field_p);
         this.field_b.a((byte) 119, 2, bs.field_a);
-        this.field_b.a(dl.field_p, 0, 0);
+        this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         if (!param0) {
           return;
         }
@@ -34,8 +34,8 @@ final class kf extends sk {
           }
           return;
         }
-        this.field_b.a((byte) 125, 0, dl.field_p);
-        this.field_b.a(dl.field_p, 0, 0);
+        this.field_b.a((byte) 125, 0, CipherPacketBuffer.field_p);
+        this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         this.field_i = false;
         if (this.field_h) {
           jaggl.OpenGL.glBindProgramARB(34336, 0);
@@ -81,7 +81,7 @@ final class kf extends sk {
         return this.field_k;
     }
 
-    kf(jc param0, gk param1) {
+    kf(jc param0, ResourceArchive param1) {
         super(param0);
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
@@ -179,8 +179,8 @@ final class kf extends sk {
           }
           if (param2 != null) {
             if (this.field_i) {
-              this.field_b.a((byte) 120, 0, dl.field_p);
-              this.field_b.a(dl.field_p, 0, 0);
+              this.field_b.a((byte) 120, 0, CipherPacketBuffer.field_p);
+              this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
               this.field_i = false;
             }
             this.field_b.a(param2, -9135);
@@ -252,7 +252,7 @@ final class kf extends sk {
           this.field_b.a(this.field_n, -9135);
           this.field_b.a(du.field_l, true, bd.field_C);
           this.field_b.a((byte) 127, 0, bs.field_a);
-          this.field_b.a(true, 2, true, dl.field_p, false);
+          this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
           this.field_b.a(un.field_i, 0, 0);
           this.field_b.a(0, (byte) 109);
           this.h(-23521);
@@ -264,7 +264,7 @@ final class kf extends sk {
         this.field_b.a(this.field_n, -9135);
         this.field_b.a(du.field_l, true, bd.field_C);
         this.field_b.a((byte) 127, 0, bs.field_a);
-        this.field_b.a(true, 2, true, dl.field_p, false);
+        this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
         this.field_b.a(un.field_i, 0, 0);
         this.field_b.a(0, (byte) 109);
         this.h(-23521);

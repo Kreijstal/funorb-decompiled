@@ -8,7 +8,7 @@ abstract class gg {
     static String field_i;
     private int field_b;
     private int field_c;
-    static al field_a;
+    static PcmSample field_a;
     private int field_g;
     private short[] field_h;
     private short[] field_d;
@@ -77,16 +77,16 @@ abstract class gg {
 
     abstract void c(int param0);
 
-    final static rh a(al param0, int param1, int param2) {
+    final static SoundPlayback a(PcmSample param0, int param1, int param2) {
         RuntimeException var3 = null;
-        rh stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -27227) {
-            field_a = (al) null;
+            field_a = (PcmSample) null;
           }
           stackIn_3_0 = jo.a(param0, param1, (byte) -33);
           return stackIn_3_0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class sl extends qm {
-    static gb field_p;
+    static AircraftDefinition field_p;
     static wp[] field_o;
     static String field_q;
     static String field_n;
@@ -23,14 +23,14 @@ class sl extends qm {
         if (param0 != 2765) {
           return;
         }
-        wo var1 = (wo) (bo.field_i.b(4095));
+        wo var1 = (wo) (bo.field_i.removeLast(4095));
         if (var1 == null) {
           throw new IllegalStateException();
         }
         vp.a(var1.field_g, var1.field_f, var1.field_p);
         vp.e(var1.field_m, var1.field_k, var1.field_i, var1.field_j);
         var1.field_g = null;
-        pu.field_b.a(99, var1);
+        pu.field_b.addLast(99, var1);
     }
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
@@ -49,7 +49,7 @@ class sl extends qm {
     }
 
     static {
-        field_p = new gb(1.0, 15, 1, 100, 2, 7.0, 10.0, 16, 0);
+        field_p = new AircraftDefinition(1.0, 15, 1, 100, 2, 7.0, 10.0, 16, 0);
         field_q = "Mouse over an icon for details";
         field_n = "Please try again in a few minutes.";
     }

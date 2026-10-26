@@ -3,7 +3,7 @@
  */
 final class k {
     private static byte[] field_d;
-    private rb field_a;
+    private PacketBuffer field_a;
     private int[] field_b;
     int[] field_f;
     private int field_i;
@@ -13,7 +13,7 @@ final class k {
     private int[] field_g;
 
     final void a(int param0) {
-        this.field_a.field_g = this.field_g[param0];
+        this.field_a.position = this.field_g[param0];
     }
 
     final void a(long param0) {
@@ -23,9 +23,9 @@ final class k {
         for (var4 = 0; var4 < var3; var4++) {
           this.field_f[var4] = 0;
           this.field_b[var4] = 0;
-          this.field_a.field_g = this.field_c[var4];
+          this.field_a.position = this.field_c[var4];
           this.c(var4);
-          this.field_g[var4] = this.field_a.field_g;
+          this.field_g[var4] = this.field_a.position;
         }
     }
 
@@ -37,31 +37,31 @@ final class k {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param1 == 255) {
-          var3 = this.field_a.g(70);
+          var3 = this.field_a.readUnsignedByte(70);
           var4 = this.field_a.a(116);
           if (var3 == 47) {
-            this.field_a.field_g = this.field_a.field_g + var4;
+            this.field_a.position = this.field_a.position + var4;
             return 1;
           }
           if (var3 == 81) {
-            var5 = this.field_a.g((byte) -87);
+            var5 = this.field_a.readUnsignedMedium((byte) -87);
             var4 -= 3;
             var6 = this.field_f[param0];
             this.field_h = this.field_h + (long)var6 * (long)(this.field_i - var5);
             this.field_i = var5;
-            this.field_a.field_g = this.field_a.field_g + var4;
+            this.field_a.position = this.field_a.position + var4;
             return 2;
           }
-          this.field_a.field_g = this.field_a.field_g + var4;
+          this.field_a.position = this.field_a.position + var4;
           return 3;
         }
         var3Lifetime1 = field_d[param1 - 128];
         var4Lifetime1 = param1;
         if (var3Lifetime1 >= 1) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.g(120) << 8;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte(120) << 8;
         }
         if (var3Lifetime1 >= 2) {
-          var4Lifetime1 = var4Lifetime1 | this.field_a.g(120) << 16;
+          var4Lifetime1 = var4Lifetime1 | this.field_a.readUnsignedByte(120) << 16;
         }
         return var4Lifetime1;
     }
@@ -74,21 +74,21 @@ final class k {
         int var4 = 0;
         int var5 = 0;
         int var3Lifetime1;
-        this.field_a.field_f = param0;
-        this.field_a.field_g = 10;
-        int var2 = this.field_a.i((byte) 0);
-        this.field_e = this.field_a.i((byte) 0);
+        this.field_a.payload = param0;
+        this.field_a.position = 10;
+        int var2 = this.field_a.readUnsignedShort((byte) 0);
+        this.field_e = this.field_a.readUnsignedShort((byte) 0);
         this.field_i = 500000;
         this.field_c = new int[var2];
         int var3 = 0;
         while (var3 < var2) {
-          var4 = this.field_a.a((byte) 119);
-          var5 = this.field_a.a((byte) 117);
+          var4 = this.field_a.readInt((byte) 119);
+          var5 = this.field_a.readInt((byte) 117);
           if (var4 == 1297379947) {
-            this.field_c[var3] = this.field_a.field_g;
+            this.field_c[var3] = this.field_a.position;
             var3++;
           }
-          this.field_a.field_g = this.field_a.field_g + var5;
+          this.field_a.position = this.field_a.position + var5;
         }
         this.field_h = 0L;
         this.field_g = new int[var2];
@@ -126,11 +126,11 @@ final class k {
     }
 
     final boolean c() {
-        return this.field_a.field_f != null;
+        return this.field_a.payload != null;
     }
 
     final void d() {
-        this.field_a.field_f = null;
+        this.field_a.payload = null;
         this.field_c = null;
         this.field_g = null;
         this.field_f = null;
@@ -138,20 +138,20 @@ final class k {
     }
 
     final void f(int param0) {
-        this.field_g[param0] = this.field_a.field_g;
+        this.field_g[param0] = this.field_a.position;
     }
 
     private final int b(int param0) {
         int var2;
         int var3;
         int var4;
-        var2 = this.field_a.field_f[this.field_a.field_g];
+        var2 = this.field_a.payload[this.field_a.position];
         if (var2 >= 0) {
           var2 = this.field_b[param0];
         } else {
           var2 = var2 & 255;
           this.field_b[param0] = var2;
-          this.field_a.field_g = this.field_a.field_g + 1;
+          this.field_a.position = this.field_a.position + 1;
         }
         if (var2 != 240 &&
           var2 != 247) {
@@ -160,22 +160,22 @@ final class k {
         var3 = this.field_a.a(121);
         if (var2 == 247 &&
           var3 > 0) {
-          var4 = this.field_a.field_f[this.field_a.field_g] & 255;
+          var4 = this.field_a.payload[this.field_a.position] & 255;
           if (!(var4 < 241) &&
             !(var4 > 243) || (var4 == 246 ||
             var4 == 248) || !(var4 < 250) &&
             !(var4 > 252) || var4 == 254) {
-            this.field_a.field_g = this.field_a.field_g + 1;
+            this.field_a.position = this.field_a.position + 1;
             this.field_b[param0] = var4;
             return this.a(param0, var4);
           }
         }
-        this.field_a.field_g = this.field_a.field_g + var3;
+        this.field_a.position = this.field_a.position + var3;
         return 0;
     }
 
     final void a() {
-        this.field_a.field_g = -1;
+        this.field_a.position = -1;
     }
 
     final int f() {
@@ -203,11 +203,11 @@ final class k {
     }
 
     k() {
-        this.field_a = new rb((byte[]) null);
+        this.field_a = new PacketBuffer((byte[]) null);
     }
 
     k(byte[] param0) {
-        this.field_a = new rb((byte[]) null);
+        this.field_a = new PacketBuffer((byte[]) null);
         this.a(param0);
     }
 

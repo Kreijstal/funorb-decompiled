@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iq extends wf {
+final class iq extends IntrusiveNode {
     int field_f;
-    static gk field_h;
+    static ResourceArchive field_h;
     static String[] field_g;
-    static gk field_e;
+    static ResourceArchive field_e;
 
     public static void a(byte param0) {
         field_e = null;

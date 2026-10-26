@@ -3,7 +3,7 @@
  */
 final class ju extends rt {
     private int field_l;
-    static gb field_k;
+    static AircraftDefinition field_k;
     static int field_m;
 
     final static cd e(int param0) {
@@ -13,10 +13,10 @@ final class ju extends rt {
           var1 = "";
         }
         if (param0 > 120) {
-          return new cd(la.a(4), pk.d(-98));
+          return new cd(la.a(4), FlightSession.d(-98));
         }
-        field_k = (gb) null;
-        return new cd(la.a(4), pk.d(-98));
+        field_k = (AircraftDefinition) null;
+        return new cd(la.a(4), FlightSession.d(-98));
     }
 
     final void b(boolean param0, boolean param1) {
@@ -25,15 +25,15 @@ final class ju extends rt {
           jaggl.OpenGL.glTexParameteri(this.field_f, 10242, param1 ? 10497 : 33071);
           return;
         }
-        rb var4 = (rb) null;
-        ju.a(2, (rb) null);
+        PacketBuffer var4 = (PacketBuffer) null;
+        ju.a(2, (PacketBuffer) null);
         jaggl.OpenGL.glTexParameteri(this.field_f, 10242, param1 ? 10497 : 33071);
     }
 
     final static String a(int param0, CharSequence param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
-        rb var3 = null;
+        PacketBuffer var3 = null;
         String stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -45,8 +45,8 @@ final class ju extends rt {
             var2 = "";
           }
           if (param0 != 0) {
-            var3 = (rb) null;
-            ju.a(25, (rb) null);
+            var3 = (PacketBuffer) null;
+            ju.a(25, (PacketBuffer) null);
           }
           stackIn_5_0 = var2;
           return stackIn_5_0;
@@ -66,13 +66,13 @@ final class ju extends rt {
 
     public final void a(byte param0) {
         if (param0 != 11) {
-          field_k = (gb) null;
+          field_k = (AircraftDefinition) null;
         }
     }
 
     public static void d(int param0) {
         if (param0 <= 121) {
-          field_k = (gb) null;
+          field_k = (AircraftDefinition) null;
           field_k = null;
           return;
         }
@@ -93,34 +93,34 @@ final class ju extends rt {
         }
     }
 
-    final static void a(int param0, rb param1) {
+    final static void a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ld.field_a = param1.i((byte) 0) << 5;
-          var2_int = param1.g(113);
+          ld.field_a = param1.readUnsignedShort((byte) 0) << 5;
+          var2_int = param1.readUnsignedByte(113);
           fs.field_c = 1835008 & var2_int << 18;
           if (param0 != 965924047) {
-            rb var3 = (rb) null;
-            ju.a(-45, (rb) null);
+            PacketBuffer var3 = (PacketBuffer) null;
+            ju.a(-45, (PacketBuffer) null);
           }
           ld.field_a = ld.field_a + (var2_int >> 3);
-          fs.field_c = fs.field_c + (param1.i((byte) 0) << 2);
-          var2_intLifetime1 = param1.g(57);
+          fs.field_c = fs.field_c + (param1.readUnsignedShort((byte) 0) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(57);
           tj.field_o = (63 & var2_intLifetime1) << 15;
           fs.field_c = fs.field_c + (var2_intLifetime1 >> 6);
-          tj.field_o = tj.field_o + (param1.g(-81) << 7);
-          var2_intLifetime2 = param1.g(-56);
+          tj.field_o = tj.field_o + (param1.readUnsignedByte(-81) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(-56);
           gl.field_b = 65536 & var2_intLifetime2 << 16;
           tj.field_o = tj.field_o + (var2_intLifetime2 >> 1);
-          gl.field_b = gl.field_b + param1.i((byte) 0);
+          gl.field_b = gl.field_b + param1.readUnsignedShort((byte) 0);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ju.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_k = new gb(1.5, 2, 3, 100, 3, 5.0, 10.0, 16, 1);
+        field_k = new AircraftDefinition(1.5, 2, 3, 100, 3, 5.0, 10.0, 16, 1);
     }
 }

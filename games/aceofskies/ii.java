@@ -3,7 +3,7 @@
  */
 final class ii extends vo {
     private String field_f;
-    static pa[][] field_k;
+    static RenderSprite[][] field_k;
     static String[] field_e;
     private uu field_h;
     static dk field_m;
@@ -26,7 +26,7 @@ final class ii extends vo {
     public static void c(byte param0) {
         field_m = null;
         field_l = null;
-        field_k = (pa[][]) null;
+        field_k = (RenderSprite[][]) null;
         field_j = null;
         if (param0 == -22) {
           field_e = null;
@@ -49,7 +49,7 @@ final class ii extends vo {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 == dl.field_p) {
+          if (param1 == CipherPacketBuffer.field_p) {
             stackIn_12_0 = 5890;
             return stackIn_12_0;
           }

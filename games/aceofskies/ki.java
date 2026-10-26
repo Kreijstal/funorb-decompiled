@@ -8,7 +8,7 @@ final class ki extends fn {
     static int field_e;
     private String field_f;
 
-    final void a(rb param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         try {
           if (!param1) {
             this.a(87);
@@ -24,7 +24,7 @@ final class ki extends fn {
         if (param0 > -51) {
           return (eo) null;
         }
-        return jd.field_a;
+        return SteeringMode.field_a;
     }
 
     public static void b(int param0) {

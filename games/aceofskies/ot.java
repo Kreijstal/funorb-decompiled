@@ -6,7 +6,7 @@ final class ot {
     private int field_d;
     private boolean field_e;
     private int[] field_c;
-    static gk field_b;
+    static ResourceArchive field_b;
     static int field_a;
 
     private final void c(int param0, int param1) {
@@ -59,9 +59,9 @@ final class ot {
         this.field_f = this.field_f - 1;
     }
 
-    final static gk a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 > -23) {
-          return (gk) null;
+          return (ResourceArchive) null;
         }
         return lc.a(true, false, false, (byte) -65, 1, param1);
     }
@@ -76,7 +76,7 @@ final class ot {
     private final int b(byte param0, int param1) {
         int var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         var3 = this.field_c.length;
         while (param1 >= var3) {
           if (!this.field_e) {

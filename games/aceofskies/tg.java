@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tg {
-    static ap[] field_a;
+    static MusicTrack[] field_a;
 
-    final static vs a(gk param0, int param1, String param2, String param3) {
+    final static vs a(ResourceArchive param0, int param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -85,7 +85,7 @@ final class tg {
     public static void a(byte param0) {
         field_a = null;
         if (param0 < 61) {
-          field_a = (ap[]) null;
+          field_a = (MusicTrack[]) null;
         }
     }
 

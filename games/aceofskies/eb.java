@@ -145,7 +145,7 @@ final class eb {
         float[] var9Lifetime1;
         float[] var10Lifetime1;
         float[] var11Lifetime1;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 != 14) {
           this.field_d = (d) null;
           var3 = this.field_a.a((long)param0, -105);

@@ -5,7 +5,7 @@ final class mb extends he {
     static String[] field_t;
     static String field_s;
     static int field_q;
-    static pa[] field_u;
+    static RenderSprite[] field_u;
     private java.lang.ref.SoftReference field_r;
 
     public static void g(int param0) {
@@ -15,7 +15,7 @@ final class mb extends he {
           field_u = null;
           return;
         }
-        field_u = (pa[]) null;
+        field_u = (RenderSprite[]) null;
         field_t = null;
         field_s = null;
         field_u = null;
@@ -25,10 +25,10 @@ final class mb extends he {
         ri.field_a = param1;
         if (param2 < 22) {
           mb.a(127, -101, (byte) 75);
-          md.field_o = param0;
+          Aircraft.field_o = param0;
           return;
         }
-        md.field_o = param0;
+        Aircraft.field_o = param0;
     }
 
     final Object a(byte param0) {
@@ -52,7 +52,7 @@ final class mb extends he {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var2 = AceOfSkies.field_G ? 1 : 0;
+        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!bo.a((byte) 102)) {
             if (null != jf.field_a &&

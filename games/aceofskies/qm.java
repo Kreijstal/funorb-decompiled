@@ -37,7 +37,7 @@ class qm implements ir, et {
         int var12 = 0;
         int var13 = 0;
         int var12Lifetime1;
-        var13 = AceOfSkies.field_G ? 1 : 0;
+        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           fp.a((byte) 39, param6.field_h + param0, param6.field_n + (param0 + param6.field_h), param6.field_q + param1 + param6.field_p, param6.field_p + param1);
           if (param2 != -28524415) {
@@ -349,7 +349,7 @@ class qm implements ir, et {
         int var8Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
-        var14 = AceOfSkies.field_G ? 1 : 0;
+        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 <= param6) {
             return;
@@ -423,7 +423,7 @@ class qm implements ir, et {
         int var7 = 0;
         ea var8 = null;
         int var6Lifetime1;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -1) {
             var8 = (ea) null;
@@ -596,7 +596,7 @@ class qm implements ir, et {
         RuntimeException var4_ref = null;
         wb var5 = null;
         byte[] var6 = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param3 > 0) {
             var8 = new byte[param1];
@@ -689,7 +689,7 @@ class qm implements ir, et {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        var17 = AceOfSkies.field_G ? 1 : 0;
+        var17 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var7_int = -96 % ((param5 + 83) / 34);
           if (param0 == param1) {

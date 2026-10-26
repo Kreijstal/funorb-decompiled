@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cl extends di {
-    static kp field_eb;
+    static IntrusiveDeque field_eb;
     int field_cb;
     String field_bb;
     String field_I;
@@ -28,7 +28,7 @@ final class cl extends di {
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var4_int = -1;
           for (var5 = param0; var5 < param2; var5++) {
@@ -60,6 +60,6 @@ final class cl extends di {
 
     static {
         field_db = "Create your own free Jagex account";
-        field_eb = new kp();
+        field_eb = new IntrusiveDeque();
     }
 }

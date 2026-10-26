@@ -53,7 +53,7 @@ final class lo extends sk {
         field_j = null;
     }
 
-    lo(jc param0, gk param1, em param2) {
+    lo(jc param0, ResourceArchive param1, em param2) {
         super(param0);
         vj var4 = null;
         RuntimeException var4_ref = null;
@@ -82,9 +82,9 @@ final class lo extends sk {
             this.field_g = false;
             return;
           }
-          var6 = l.a((byte) 29, 35633, param1.a("gl", (byte) -71, "environment_mapped_water_v"), param0);
+          var6 = RendererManager.a((byte) 29, 35633, param1.a("gl", (byte) -71, "environment_mapped_water_v"), param0);
           var4 = var6;
-          var5 = l.a((byte) 29, 35632, param1.a("gl", (byte) -71, "environment_mapped_water_f"), param0);
+          var5 = RendererManager.a((byte) 29, 35632, param1.a("gl", (byte) -71, "environment_mapped_water_f"), param0);
           this.field_h = mo.a(0, param0, new vj[]{var6, var5});
           stackIn_12_1 = (null != this.field_h) && (this.field_f.a(0));
           this.field_g = stackIn_12_1;

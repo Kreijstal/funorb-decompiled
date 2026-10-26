@@ -14,7 +14,7 @@ final class tn extends ab implements dn {
         field_t = null;
     }
 
-    final static boolean a(int param0, dl param1) {
+    final static boolean a(int param0, CipherPacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
@@ -87,10 +87,10 @@ final class tn extends ab implements dn {
         }
     }
 
-    final static boolean a(gk param0, byte param1, int param2, int param3) {
+    final static boolean a(ResourceArchive param0, byte param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        dl var5 = null;
+        CipherPacketBuffer var5 = null;
         byte[] var6 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -100,8 +100,8 @@ final class tn extends ab implements dn {
           var6 = param0.a(param3, -10470, param2);
           var4 = var6;
           if (param1 != -127) {
-            var5 = (dl) null;
-            tn.a(-9, (dl) null);
+            var5 = (CipherPacketBuffer) null;
+            tn.a(-9, (CipherPacketBuffer) null);
           }
           if (var6 == null) {
             return false;
@@ -124,7 +124,7 @@ final class tn extends ab implements dn {
 
     final static ll a(int param0, int param1, boolean param2) {
         int var4 = 0;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!param2) {
           return (ll) null;
         }
@@ -138,8 +138,8 @@ final class tn extends ab implements dn {
 
     public tn() {
         super(0, 0, 476, 225, (ir) null);
-        this.field_u = new mi(jd.field_b, (no) null);
-        this.field_v = new mi(md.field_s, (no) null);
+        this.field_u = new mi(SteeringMode.field_b, (no) null);
+        this.field_v = new mi(Aircraft.field_s, (no) null);
         this.field_x = new mi(nu.field_a, (no) null);
         qb var1 = new qb();
         this.field_u.field_e = (ir) ((Object) var1);
@@ -182,7 +182,7 @@ final class tn extends ab implements dn {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var6_int = 77 % ((param4 + 27) / 61);
           if (param1 != this.field_v) {

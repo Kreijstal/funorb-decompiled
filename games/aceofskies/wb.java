@@ -32,12 +32,12 @@ final class wb {
         int var3Lifetime1Lifetime2;
         int var3Lifetime1Lifetime3;
         int var4Lifetime1Lifetime1;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         var2 = 0;
         var3 = 0;
         var4 = 116 % ((param0 - 75) / 32);
         while (var2 < 8) {
-          this.field_e[var2] = un.a(ct.a(255L, (long)this.field_j[7 + var3]), un.a(ct.a((long)this.field_j[6 + var3] << 8, 65280L), un.a(ct.a(255L, (long)this.field_j[var3 + 5]) << 16, un.a(un.a(un.a(un.a((long)this.field_j[var3] << 56, ct.a((long)this.field_j[1 + var3], 255L) << 48), ct.a((long)this.field_j[2 + var3], 255L) << 40), ct.a((long)this.field_j[var3 + 3], 255L) << 32), ct.a((long)this.field_j[4 + var3] << 24, 4278190080L)))));
+          this.field_e[var2] = un.a(NetworkGameClient.a(255L, (long)this.field_j[7 + var3]), un.a(NetworkGameClient.a((long)this.field_j[6 + var3] << 8, 65280L), un.a(NetworkGameClient.a(255L, (long)this.field_j[var3 + 5]) << 16, un.a(un.a(un.a(un.a((long)this.field_j[var3] << 56, NetworkGameClient.a((long)this.field_j[1 + var3], 255L) << 48), NetworkGameClient.a((long)this.field_j[2 + var3], 255L) << 40), NetworkGameClient.a((long)this.field_j[var3 + 3], 255L) << 32), NetworkGameClient.a((long)this.field_j[4 + var3] << 24, 4278190080L)))));
           var3 += 8;
           var2++;
         }
@@ -127,7 +127,7 @@ final class wb {
         int var5 = 0;
         long var6 = 0L;
         int var8 = 0;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_j[this.field_g] = (byte)vo.a((int) this.field_j[this.field_g], 128 >>> pg.a(7, this.field_c));
           this.field_g = this.field_g + 1;
@@ -230,7 +230,7 @@ final class wb {
 
     final void b(byte param0) {
         int var2 = 0;
-        int var3 = AceOfSkies.field_G ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2Lifetime1;
         for (var2 = 0; 32 > var2; var2++) {
           this.field_h[var2] = (byte) 0;
@@ -268,7 +268,7 @@ final class wb {
         int var12 = 0;
         int var13 = 0;
         int var8Lifetime1;
-        var13 = AceOfSkies.field_G ? 1 : 0;
+        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = 0;
           var6 = param0 - ((int)param2 & 7) & 7;

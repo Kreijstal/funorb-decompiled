@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends ha implements e {
+final class oa extends GraphicsRenderer implements e {
     private ya field_i;
     private boolean field_j;
     long field_nativeid;
-    private kp field_m;
+    private IntrusiveDeque field_m;
     private p field_d;
     private int field_e;
     private ao field_f;
@@ -28,7 +28,7 @@ final class oa extends ha implements e {
         Throwable var5 = null;
         this.field_j = false;
         this.field_nativeid = 0L;
-        this.field_m = new kp();
+        this.field_m = new IntrusiveDeque();
         this.field_l = 4096;
         this.field_e = 4096;
         this.field_h = new ph(4);
@@ -58,7 +58,7 @@ final class oa extends ha implements e {
         }
     }
 
-    final void a(pa param0, boolean param1) {
+    final void a(RenderSprite param0, boolean param1) {
         this.n(((j) (param0)).field_nativeid, 0L);
     }
 
@@ -87,15 +87,15 @@ final class oa extends ha implements e {
         this.field_d = null;
         this.field_i = null;
         this.field_h.b(0);
-        ya var1 = (ya) (this.field_m.d(268435455));
+        ya var1 = (ya) (this.field_m.first(268435455));
         while (var1 != null) {
           var1.ga();
-          var1 = (ya) (this.field_m.b((byte) 103));
+          var1 = (ya) (this.field_m.next((byte) 103));
         }
-        this.field_m.c(268435455);
+        this.field_m.clear(268435455);
         this.FA();
         if (this.field_g) {
-          da.a(24, true, false);
+          BitmapFont.a(24, true, false);
           this.field_g = false;
         }
         this.g();
@@ -141,10 +141,10 @@ final class oa extends ha implements e {
         return true;
     }
 
-    final pa a(vd param0, boolean param1) {
+    final RenderSprite a(vd param0, boolean param1) {
         j var3 = new j(this, param0.field_f, param0.field_d, param0.field_e, 0, param0.field_h, param0.field_h, param0.field_c);
-        ((pa) ((Object) var3)).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
-        return (pa) ((Object) var3);
+        ((RenderSprite) ((Object) var3)).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
+        return (RenderSprite) ((Object) var3);
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
@@ -177,10 +177,10 @@ final class oa extends ha implements e {
     final void b(int param0) {
         vk.a((byte) 117);
         this.d(param0);
-        ya var2 = (ya) (this.field_m.d(268435455));
+        ya var2 = (ya) (this.field_m.first(268435455));
         while (var2 != null) {
           var2.r();
-          var2 = (ya) (this.field_m.b((byte) 103));
+          var2 = (ya) (this.field_m.next((byte) 103));
         }
     }
 
@@ -192,8 +192,8 @@ final class oa extends ha implements e {
 
     public final native void w(boolean param0);
 
-    final pa a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        return (pa) ((Object) new j(this, param0, param1, param2, param3, param4, false));
+    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+        return (RenderSprite) ((Object) new j(this, param0, param1, param2, param3, param4, false));
     }
 
     private final void a(java.awt.Canvas param0) {
@@ -227,7 +227,7 @@ final class oa extends ha implements e {
 
     final za c(int param0) {
         ya var2 = new ya(this, param0);
-        this.field_m.a(119, var2);
+        this.field_m.addLast(119, var2);
         return (za) ((Object) var2);
     }
 
@@ -268,7 +268,7 @@ final class oa extends ha implements e {
         return false;
     }
 
-    final da a(vs param0, vd[] param1, boolean param2) {
+    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -285,12 +285,12 @@ final class oa extends ha implements e {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (da) ((Object) new n(this, this.field_i, param0, param1, (pa[]) null));
+            return (BitmapFont) ((Object) new n(this, this.field_i, param0, param1, (RenderSprite[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
         if (var6 == 0) {
-          return (da) ((Object) new h(this, this.field_i, param0, param1, (pa[]) null));
+          return (BitmapFont) ((Object) new h(this, this.field_i, param0, param1, (RenderSprite[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }

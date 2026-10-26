@@ -11,7 +11,7 @@ final class rs extends ab implements ue, dn {
     static String field_x;
     static boolean field_C;
     private mi field_z;
-    static pa[] field_u;
+    static RenderSprite[] field_u;
 
     public final void a(byte param0, int param1, vq param2, int param3) {
         RuntimeException var5 = null;
@@ -20,7 +20,7 @@ final class rs extends ab implements ue, dn {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 0) {
             if (1 != param3) {

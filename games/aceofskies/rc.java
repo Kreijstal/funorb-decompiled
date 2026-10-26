@@ -5,7 +5,7 @@ final class rc extends hh {
     static ej field_e;
     private si field_f;
     private qe field_g;
-    static kc field_d;
+    static Vector2 field_d;
 
     final void b(byte param0) {
         if (param0 <= 5) {
@@ -76,10 +76,10 @@ final class rc extends hh {
 
     final static void c(byte param0) {
         int var1;
-        if (ob.field_d == 10 ||
+        if (SoundCache.field_d == 10 ||
           !ur.b(-125)) {
           rl.a((byte) 0);
-          ob.field_d = 11;
+          SoundCache.field_d = 11;
         }
         var1 = 8 % ((63 - param0) / 57);
         w.field_a = true;
@@ -99,7 +99,7 @@ final class rc extends hh {
         int var7;
         int var8;
         int var9;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         var4 = -0.0005000000237487257f * (float)(1 + (param1 & 3));
         var5 = (float)(1 + ((param1 & 27) >> 3)) * 0.0005000000237487257f;
         stackIn_3_0 = ((param1 & 64) == 0) ? 0.00048828125f : 0.0009765625f;
@@ -125,7 +125,7 @@ final class rc extends hh {
         rn.field_b[3] = (float)this.field_a.field_hb * var4 % 1.0f;
         jaggl.OpenGL.glTexGenfv(8193, 9474, rn.field_b, 0);
         if (param0 != -65) {
-          field_d = (kc) null;
+          field_d = (Vector2) null;
         }
         if (!this.field_g.field_d) {
           var8 = (int)(var5 * (float)this.field_a.field_hb * 16.0f);
@@ -151,17 +151,17 @@ final class rc extends hh {
         int stackIn_9_0 = 0;
         int stackIn_13_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -64) {
-            field_d = (kc) null;
+            field_d = (Vector2) null;
           }
           var3_int = 0;
           var4 = pt.field_a;
           while (var3_int < ne.field_g.length) {
             var5 = rn.field_a[var3_int];
             if (0 <= var5) {
-              var6 = kp.a(true, ne.field_g[var3_int], true);
+              var6 = IntrusiveDeque.a(true, ne.field_g[var3_int], true);
               var7 = -(var6 >> 1) + ri.field_a;
               var4 = var4 + pp.field_a;
               if (rl.a((byte) -21, param1, param2, var6 + (ud.field_g << 1), lp.field_h + (as.field_c << 1), -ud.field_g + var7, var4)) {
@@ -197,6 +197,6 @@ final class rc extends hh {
 
     static {
         field_e = new ej(12, 0, 1, 0);
-        field_d = new kc();
+        field_d = new Vector2();
     }
 }

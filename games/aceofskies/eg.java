@@ -10,7 +10,7 @@ final class eg {
           if (!param0) {
             this.a(true);
           }
-          stackIn_13_0 = (this == he.field_o) || (this == vc.field_a) || (wq.field_e == this);
+          stackIn_13_0 = (this == he.field_o) || (this == TimedSpriteEffect.field_a) || (wq.field_e == this);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class eg {
         int var25Lifetime1Lifetime1;
         int var26Lifetime1Lifetime1;
         int var27Lifetime1Lifetime1;
-        var31 = AceOfSkies.field_G ? 1 : 0;
+        var31 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var7_int = 2147483647;
           var8 = -2147483648;
@@ -118,7 +118,7 @@ final class eg {
           var23Lifetime2 = -97 % ((-16 - param2) / 59);
           var22Lifetime2 = re.field_e;
           var24Lifetime1 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var24Lifetime1 < param0.field_r) {
               var25Lifetime1 = param0.field_z[var24Lifetime1];
@@ -131,8 +131,8 @@ final class eg {
               stackIn_57_1 = var30;
               if (var31 != 0) {
                 if (stackIn_57_0 > stackIn_57_1) {
-                  stackIn_66_0 = ~ip.field_b.length;
-                  break L2;
+                  stackIn_66_0 = ~ArchiveProvider.field_b.length;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -188,7 +188,7 @@ final class eg {
                   var27Lifetime1Lifetime1 = param0.field_a[var24Lifetime1];
                   wc.field_a[var24Lifetime1] = (var18 * var27Lifetime1Lifetime1 + (var26Lifetime1Lifetime1 * var15 + var12 * var25Lifetime1Lifetime1) >> 16) + var9;
                   lp.field_e[var24Lifetime1] = var10 + (var26Lifetime1Lifetime1 * var16 + var13 * var25Lifetime1Lifetime1 + var27Lifetime1Lifetime1 * var19 >> 16);
-                  hk.field_i[var24Lifetime1] = (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16) + var11;
+                  MidiPcmStream.field_i[var24Lifetime1] = (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1++;
                   if (var31 != 0) {
                     return;
@@ -212,9 +212,9 @@ final class eg {
                   if (stackIn_57_0Lifetime1 <= stackIn_57_1Lifetime1) {
                     break;
                   }
-                  stackIn_66_0 = ~ip.field_b.length;
+                  stackIn_66_0 = ~ArchiveProvider.field_b.length;
                   if (var31 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_66_0 >= ~var18) {
                     break;
@@ -222,7 +222,7 @@ final class eg {
                   var19 = param0.field_H[var18];
                   var20 = param0.field_L[var18];
                   var21Lifetime2 = param0.field_n[var18];
-                  ip.field_b[var18] = var12 * var20 + var9 * var19 + var21Lifetime2 * var15 >> 16;
+                  ArchiveProvider.field_b[var18] = var12 * var20 + var9 * var19 + var21Lifetime2 * var15 >> 16;
                   ql.field_o[var18] = var21Lifetime2 * var16 + (var19 * var10 + var20 * var13) >> 16;
                   dq.field_c[var18] = var17 * var21Lifetime2 + (var11 * var19 + var20 * var14) >> 16;
                   var18++;

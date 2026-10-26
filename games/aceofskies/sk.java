@@ -64,7 +64,7 @@ abstract class sk {
         en var8 = null;
         int[] var9 = null;
         int[] var10 = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!param0.a((byte) 84)) {
             stackIn_3_0 = new rm[]{};
@@ -72,7 +72,7 @@ abstract class sk {
           }
           var8 = param0.a(param1 ^ 1175069693);
           while (var8.field_a == 0) {
-            wf.a(10L, false);
+            IntrusiveNode.a(10L, false);
           }
           if (param1 != 1175069442) {
             stackIn_9_0 = (rm[]) null;

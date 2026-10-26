@@ -38,7 +38,7 @@ final class ta extends sk {
         }
         this.field_b.a(1, (byte) 47);
         this.field_b.a(var3, -9135);
-        this.field_b.a(gk.field_g, false);
+        this.field_b.a(ResourceArchive.field_g, false);
         this.field_b.a(1, (byte) 120);
         this.field_b.a(du.field_l, true, bd.field_C);
         this.field_b.a(true, 2, true, un.field_i, false);
@@ -83,13 +83,13 @@ final class ta extends sk {
 
     final void a(boolean param0) {
         if (!this.field_g) {
-          this.field_b.a(dl.field_p, 0, 0);
+          this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         } else {
           this.field_b.a(1, (byte) 78);
           this.field_b.a(b.field_b, false);
           this.field_b.a(ru.field_a, true, ru.field_a);
           this.field_b.a((byte) 124, 2, bs.field_a);
-          this.field_b.a(dl.field_p, 0, 0);
+          this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
           this.field_b.f(-21041);
           this.field_b.a((jj) null, -9135);
           this.field_b.a(0, (byte) 83);

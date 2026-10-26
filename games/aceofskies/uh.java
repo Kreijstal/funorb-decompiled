@@ -12,7 +12,7 @@ final class uh {
     byte field_n;
     boolean field_l;
     byte field_b;
-    static al[] field_g;
+    static PcmSample[] field_g;
     boolean field_i;
     short field_t;
     int field_h;
@@ -26,11 +26,11 @@ final class uh {
     public static void a(int param0) {
         field_g = null;
         if (param0 > -72) {
-          field_g = (al[]) null;
+          field_g = (PcmSample[]) null;
         }
     }
 
-    final static boolean a(int param0, kc param1, double param2, kc param3) {
+    final static boolean a(int param0, Vector2 param1, double param2, Vector2 param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -41,7 +41,7 @@ final class uh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 59) {
-            field_g = (al[]) null;
+            field_g = (PcmSample[]) null;
           }
           stackIn_5_0 = !(!(param2 * param2 > lc.a(param3, false, param1)));
           return stackIn_5_0;

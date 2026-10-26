@@ -41,7 +41,7 @@ final class lm {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5 = -14 / ((param1 + 78) / 42);
           var4_int = param2.length();
@@ -92,7 +92,7 @@ final class lm {
         }
     }
 
-    final static void a(int param0, ap param1, boolean param2, byte param3) {
+    final static void a(int param0, MusicTrack param1, boolean param2, byte param3) {
         try {
           int var4_int = 65 / ((56 - param3) / 36);
           wt.field_e.a((byte) -62, param0, !param2 ? true : false, 256, param1, 1000000);
@@ -115,8 +115,8 @@ final class lm {
     final void a(int param0) {
         this.field_d.a(4665);
         if (param0 < 120) {
-          ap var3 = (ap) null;
-          lm.a(-96, (ap) null, true, (byte) 114);
+          MusicTrack var3 = (MusicTrack) null;
+          lm.a(-96, (MusicTrack) null, true, (byte) 114);
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uj {
-    static gk field_b;
+    static ResourceArchive field_b;
     static float[][] field_a;
 
     public static void a(byte param0) {

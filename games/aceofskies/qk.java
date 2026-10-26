@@ -3,7 +3,7 @@
  */
 final class qk {
     static wd field_e;
-    static pa field_i;
+    static RenderSprite field_i;
     static String field_f;
     static int field_g;
     private wt field_b;
@@ -44,17 +44,17 @@ final class qk {
         int var12Lifetime2;
         int var12Lifetime2Lifetime1;
         int var12Lifetime2Lifetime2;
-        var15 = AceOfSkies.field_G ? 1 : 0;
+        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         var9 = param4 + (param1 + param5);
         var10 = new ll[]{new ll(var9, var9), new ll(param0, var9), new ll(var9, var9), new ll(var9, param0), new ll(64, 64), new ll(var9, param0), new ll(var9, var9), new ll(param0, var9), new ll(var9, var9)};
         var11_ref_ll__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var12 < var11_ref_ll__.length) {
             var13 = var11_ref_ll__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_11_0;
             while (var14 < var13.field_x.length) {
@@ -62,17 +62,17 @@ final class qk {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_11_0 = 0;
           break;
         }
         var11 = stackIn_11_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (var11 < param4) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var12Lifetime1 < var9) {
@@ -83,7 +83,7 @@ final class qk {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_22_0 = 0;
           break;
@@ -114,11 +114,11 @@ final class qk {
             stackIn_35_0 = 0;
           }
           var11Lifetime1 = stackIn_35_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (param0 > var11Lifetime1) {
               stackIn_46_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_46_0;
               while (param4 > var12Lifetime2Lifetime1) {
@@ -129,7 +129,7 @@ final class qk {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             var11Lifetime1 = 0;
             stackIn_46_0 = param7;
@@ -138,7 +138,7 @@ final class qk {
           if (stackIn_46_0 > -89) {
             qk.a(-50, 101, 116, 1, 33, 12, 71, 24, -27);
           }
-          L26: while (param0 >> 1 > var11Lifetime1) {
+          scanLoop4: while (param0 >> 1 > var11Lifetime1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param5 > var12Lifetime2Lifetime2) {
@@ -156,7 +156,7 @@ final class qk {
               break;
             }
             if (var15 == 0) {
-              continue L26;
+              continue scanLoop4;
             }
             break;
           }
@@ -185,15 +185,15 @@ final class qk {
           boolean decompiledSharedTail0 = (this.field_c == 0);
           if (!decompiledSharedTail0) {
             this.field_c = this.field_c - 1;
-            decompiledSharedTail0 = (AceOfSkies.field_G);
+            decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
           if (decompiledSharedTail0) {
             var5 = this.field_d.b(param1 - 18522);
-            var5.c(-126);
+            var5.unlink(-126);
             var5.d(-119);
             if (this.field_b == var5) {
               var5 = this.field_d.b(param1 - 18522);
-              var5.c(-128);
+              var5.unlink(-128);
               var5.d(param1 - 125);
             }
           }
@@ -215,12 +215,12 @@ final class qk {
     }
 
     final static void a(byte param0) {
-        wo var1 = (wo) (pu.field_b.b(param0 + 4187));
+        wo var1 = (wo) (pu.field_b.removeLast(param0 + 4187));
         if (var1 == null) {
           var1 = new wo();
         }
         var1.a(vp.field_i, 251, vp.field_c, vp.field_f, vp.field_b, vp.field_d, vp.field_j, vp.field_k);
-        bo.field_i.a(104, var1);
+        bo.field_i.addLast(104, var1);
         if (param0 != -92) {
           field_e = (wd) null;
         }

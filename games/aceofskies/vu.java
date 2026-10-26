@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vu {
-    ha field_c;
+    GraphicsRenderer field_c;
     static int field_f;
     sn field_d;
     private mj field_e;
@@ -109,7 +109,7 @@ final class vu {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var4 = -83 / ((-59 - param1) / 54);
           var3_int = 0;
@@ -143,7 +143,7 @@ final class vu {
         field_g = (of) null;
     }
 
-    vu(ha param0, sn param1, java.awt.Canvas param2) {
+    vu(GraphicsRenderer param0, sn param1, java.awt.Canvas param2) {
         try {
           this.field_b = param2;
           this.field_d = param1;

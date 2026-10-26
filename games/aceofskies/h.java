@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends da implements e {
+final class h extends BitmapFont implements e {
     long field_nativeid;
 
     final native void fa(char param0, int param1, int param2, int param3, boolean param4);
 
-    h(oa param0, ya param1, vs param2, vd[] param3, pa[] param4) {
+    h(oa param0, ya param1, vs param2, vd[] param3, RenderSprite[] param4) {
         super(param0, param2);
         int var11 = 0;
         byte[][] var6 = new byte[param3.length][];

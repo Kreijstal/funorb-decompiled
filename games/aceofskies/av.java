@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class av {
-    static kp field_c;
+    static IntrusiveDeque field_c;
     private static int[] field_b;
     static ej field_a;
 
@@ -78,7 +78,7 @@ final class av {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime2Lifetime1;
-        field_c = new kp();
+        field_c = new IntrusiveDeque();
         field_b = new int[128];
         for (var0 = 0; var0 < 64; var0++) {
           var1 = var0 * (var0 * 192) / 4096;

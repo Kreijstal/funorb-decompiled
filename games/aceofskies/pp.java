@@ -9,7 +9,7 @@ abstract class pp {
         int var5 = 0;
         co var6 = null;
         int var7 = 0;
-        int var8 = AceOfSkies.field_G ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_b == null ||
           0 == this.field_b.length ||
           param2 < this.field_b[0].field_f) {
@@ -43,7 +43,7 @@ abstract class pp {
     final int a(int param0, int param1) {
         int var3 = 0;
         co var4 = null;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1) {
           return 124;
         }
@@ -59,7 +59,7 @@ abstract class pp {
 
     final int b(int param0, int param1) {
         co var5 = null;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         co[] var7 = this.field_b;
         co[] var3 = var7;
         int var4 = 0;
@@ -91,7 +91,7 @@ abstract class pp {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = 0;
           var6 = 0;
@@ -142,7 +142,7 @@ abstract class pp {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 26326) {
             return;
@@ -189,7 +189,7 @@ abstract class pp {
         int var7;
         String var8;
         int var6;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         var2 = -1;
         if (param0 != 24) {
           var8 = (String) null;

@@ -1,0 +1,119 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class AircraftDefinition {
+    int heatReduction;
+    int maximumHitPoints;
+    double turnRate;
+    static int field_k;
+    int fireInterval;
+    int aimSpread;
+    int collisionRadius;
+    double maximumSpeed;
+    int gunPattern;
+    double minimumSpeed;
+    static long field_j;
+
+    final PcmSample getEngineSample(byte obfuscationGuard) {
+        if (gh.field_j == this) {
+          return lj.field_c[0];
+        }
+        if (this == kk.field_N) {
+          return lj.field_c[1];
+        }
+        if (sl.field_p == this) {
+          return lj.field_c[2];
+        }
+        if (this == gm.field_y) {
+          return lj.field_c[3];
+        }
+        if (qq.field_g == this) {
+          return lj.field_c[4];
+        }
+        int var2 = -41 % ((obfuscationGuard + 5) / 58);
+        if (id.field_f == this) {
+          return lj.field_c[4];
+        }
+        if (ju.field_k == this) {
+          return lj.field_c[5];
+        }
+        if (this != ro.field_u) {
+          throw new RuntimeException();
+        }
+        return lj.field_c[6];
+    }
+
+    final static boolean a(int param0) {
+        if (param0 != 0) {
+          return false;
+        }
+        return lq.a(bm.m(116), 61);
+    }
+
+    final RenderSprite[] getSprites(int obfuscationGuard) {
+        if (gh.field_j == this) {
+          return hr.field_d[0];
+        }
+        if (this == kk.field_N) {
+          return hr.field_d[1];
+        }
+        if (this == sl.field_p) {
+          return hr.field_d[2];
+        }
+        if (obfuscationGuard != -32275) {
+          this.toString();
+          if (gm.field_y == this) {
+            return hr.field_d[3];
+          }
+          if (this == qq.field_g) {
+            return hr.field_d[4];
+          }
+          if (id.field_f == this) {
+            return hr.field_d[7];
+          }
+          if (ju.field_k == this) {
+            return hr.field_d[5];
+          }
+          if (this == ro.field_u) {
+            return hr.field_d[6];
+          }
+          throw new RuntimeException();
+        }
+        if (gm.field_y == this) {
+          return hr.field_d[3];
+        }
+        if (this == qq.field_g) {
+          return hr.field_d[4];
+        }
+        if (id.field_f == this) {
+          return hr.field_d[7];
+        }
+        if (ju.field_k == this) {
+          return hr.field_d[5];
+        }
+        if (this == ro.field_u) {
+          return hr.field_d[6];
+        }
+        throw new RuntimeException();
+    }
+
+    public final String toString() {
+        throw new IllegalStateException();
+    }
+
+    AircraftDefinition(double turnRate, int fireInterval, int heatReduction, int aimSpread, int maximumHitPoints, double nominalMinimumSpeed, double nominalMaximumSpeed, int collisionRadius, int gunPattern) {
+        this.collisionRadius = collisionRadius;
+        this.minimumSpeed = nominalMinimumSpeed / 2.0;
+        this.heatReduction = heatReduction;
+        this.maximumSpeed = nominalMaximumSpeed / 2.0;
+        this.aimSpread = aimSpread;
+        this.turnRate = turnRate;
+        this.gunPattern = gunPattern;
+        this.maximumHitPoints = maximumHitPoints;
+        this.fireInterval = fireInterval;
+    }
+
+    static {
+        field_k = 0;
+    }
+}

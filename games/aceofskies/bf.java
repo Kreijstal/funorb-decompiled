@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-abstract class bf extends ha {
+abstract class bf extends GraphicsRenderer {
     Object field_Fb;
     em field_Tb;
     jaclib.memory.heap.NativeHeapBuffer field_Q;
     private jagex3.graphics2.hw.NativeInterface field_i;
     int field_Z;
     private jaclib.memory.heap.NativeHeap field_Qb;
-    gk field_d;
+    ResourceArchive field_d;
     private Hashtable field_gb;
-    private kp field_nc;
+    private IntrusiveDeque field_nc;
     long field_peer;
     int field_jb;
     int field_jc;
@@ -154,7 +154,7 @@ abstract class bf extends ha {
 
     private final void n(int param0) {
         int var2 = 0;
-        int var3 = AceOfSkies.field_G ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.m(-109);
         this.t((byte) -69);
         this.T(0);
@@ -212,7 +212,7 @@ abstract class bf extends ha {
         ec var13;
         int var14;
         boolean decompiledFrameRemainder0 = true;
-        var14 = AceOfSkies.field_G ? 1 : 0;
+        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 == this.field_ab) {
           stackIn_4_0 = (this.field_dc) ? 0 : 1;
           if (this.field_Bb) {
@@ -300,7 +300,7 @@ abstract class bf extends ha {
         int var5 = 0;
         int var4 = 0;
         qr var3 = null;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!param0) {
           return;
         }
@@ -357,8 +357,8 @@ abstract class bf extends ha {
         this.b((byte) -120, false);
         this.a(bm.field_x, (byte) 127, 4);
         this.b((byte) -114, true);
-        this.a(dl.field_p, 0, 0);
-        this.a((byte) 125, 0, dl.field_p);
+        this.a(CipherPacketBuffer.field_p, 0, 0);
+        this.a((byte) 125, 0, CipherPacketBuffer.field_p);
     }
 
     private final void P(int param0) {
@@ -420,7 +420,7 @@ abstract class bf extends ha {
     }
 
     final void b(int param0, boolean param1) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 == 1) {
           this.a(bd.field_C, true, bd.field_C);
         } else {
@@ -508,7 +508,7 @@ abstract class bf extends ha {
         int stackIn_8_0 = 0;
         int var7;
         int var8;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         param3 = param3 & this.i(-7865);
         var7 = -100 / ((69 - param0) / 43);
         if (!param3 && (param4 == 4 ||
@@ -737,14 +737,14 @@ abstract class bf extends ha {
         float var8;
         float var9;
         int var10;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_K = this.a(false, (byte) 118);
         if (param0 != -32) {
           this.field_fb = 0.25540614128112793f;
         }
         this.field_K.a(12, -125, 3096);
         var2 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (4 > var2) {
             var3 = this.field_K.a(true, (byte) -59);
             if (var3 != null) {
@@ -768,7 +768,7 @@ abstract class bf extends ha {
               }
               var4.a();
               if (this.field_K.a((byte) -60)) {
-                break L2;
+                break scanLoop1;
               }
             }
             var2++;
@@ -789,7 +789,7 @@ abstract class bf extends ha {
         this.L(109);
     }
 
-    bf(java.awt.Canvas param0, Object param1, d param2, gk param3, int param4, int param5) {
+    bf(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
         uh var9 = null;
@@ -806,7 +806,7 @@ abstract class bf extends ha {
         Throwable decompiledCaughtException = null;
         Throwable var7 = null;
         RuntimeException var7_ref = null;
-        this.field_nc = new kp();
+        this.field_nc = new IntrusiveDeque();
         this.field_Lb = true;
         this.field_ec = new ec();
         ec discarded$3 = new ec();
@@ -850,7 +850,7 @@ abstract class bf extends ha {
         this.field_hb = false;
         this.field_ub = -1.0f;
         this.field_kc = 128;
-        this.field_bb = ps.field_d;
+        this.field_bb = ArchiveIndex.field_d;
         this.field_Mb = 50;
         this.field_eb = 0;
         this.field_Y = false;
@@ -972,7 +972,7 @@ abstract class bf extends ha {
     final void c(byte param0) {
         Enumeration var3 = null;
         java.awt.Canvas var4 = null;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         Hashtable var2 = new Hashtable();
         if (this.field_gb != null &&
           !this.field_gb.isEmpty()) {
@@ -1013,13 +1013,13 @@ abstract class bf extends ha {
 
     final za c(int param0) {
         gi var2 = new gi(param0);
-        this.field_nc.a(107, var2);
+        this.field_nc.addLast(107, var2);
         return (za) ((Object) var2);
     }
 
     final void f(byte param0) {
         int var2 = 0;
-        int var3 = AceOfSkies.field_G ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_u = new jj[this.field_h];
         this.field_f = new st[this.field_h];
         this.field_H = new as[this.field_h];
@@ -1127,8 +1127,8 @@ abstract class bf extends ha {
         this.b((byte) -126, false);
         this.s(2);
         this.b((byte) -116, true);
-        this.a(dl.field_p, 0, 0);
-        this.a((byte) 127, 0, dl.field_p);
+        this.a(CipherPacketBuffer.field_p, 0, 0);
+        this.a((byte) 127, 0, CipherPacketBuffer.field_p);
     }
 
     final int M(int param0) {
@@ -1275,19 +1275,19 @@ abstract class bf extends ha {
 
     abstract tl a(boolean param0, byte param1);
 
-    final pa a(vd param0, boolean param1) {
+    final RenderSprite a(vd param0, boolean param1) {
         int incrementValue$2 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int[] stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         int stackIn_17_2 = 0;
-        pa stackIn_22_0 = null;
+        RenderSprite stackIn_22_0 = null;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
-        pa var3 = null;
+        RenderSprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int var5 = 0;
@@ -1298,7 +1298,7 @@ abstract class bf extends ha {
         int var10 = 0;
         int[] var11 = null;
         int[] var12 = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0.field_h != 0 &&
             param0.field_c != 0) {
@@ -1374,7 +1374,7 @@ abstract class bf extends ha {
 
     abstract void a(int param0, java.awt.Canvas param1, Object param2);
 
-    final pa a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         rp stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1383,7 +1383,7 @@ abstract class bf extends ha {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new rp(this, param3, param4, param0, param1, param2);
-          return (pa) ((Object) stackIn_1_0);
+          return (RenderSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -1485,14 +1485,14 @@ abstract class bf extends ha {
         jaclib.memory.Buffer var3;
         int var5;
         jaclib.memory.Stream var4;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_s = this.a(false, (byte) 111);
         if (param0 != 26339) {
           this.field_Wb = 0.4179408848285675f;
         }
         this.field_s.a(28, param0 ^ -26259, 140);
         var2 = 0;
-        L2: while (true) {
+        scanLoop1: while (true) {
           if (var2 < 4) {
             var3 = this.field_s.a(true, (byte) -64);
             if (var3 != null) {
@@ -1572,7 +1572,7 @@ abstract class bf extends ha {
               }
               var4.a();
               if (this.field_s.a((byte) -60)) {
-                break L2;
+                break scanLoop1;
               }
             }
             var2++;
@@ -1593,9 +1593,9 @@ abstract class bf extends ha {
         if (param0 != -32) {
           return;
         }
-        if (this.field_bb != ps.field_d) {
+        if (this.field_bb != ArchiveIndex.field_d) {
           var2 = this.field_bb;
-          this.field_bb = ps.field_d;
+          this.field_bb = ArchiveIndex.field_d;
           if (var2.b((byte) -92)) {
             this.e(true);
           }
@@ -1616,7 +1616,7 @@ abstract class bf extends ha {
 
     private final void L(int param0) {
         float var2_float = 0.0f;
-        if (this.field_bb == rh.field_e) {
+        if (this.field_bb == SoundPlayback.field_e) {
           var2_float = this.o((byte) 42);
           this.field_ec.b(var2_float, (byte) -127, 0.0f, var2_float);
         }
@@ -1650,7 +1650,7 @@ abstract class bf extends ha {
         }
     }
 
-    final da a(vs param0, vd[] param1, boolean param2) {
+    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
         RuntimeException var4 = null;
         ig stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1661,7 +1661,7 @@ abstract class bf extends ha {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new ig(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          return (BitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -1792,22 +1792,22 @@ abstract class bf extends ha {
     abstract void a(fa param0, byte param1);
 
     void c() {
-        wf var1 = null;
+        IntrusiveNode var1 = null;
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
-        int var3 = AceOfSkies.field_G ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!this.field_qc) {
-          var1 = this.field_nc.d(268435455);
+          var1 = this.field_nc.first(268435455);
           while (var1 != null) {
             ((gi) (var1)).d(127);
-            var1 = this.field_nc.b((byte) 103);
+            var1 = this.field_nc.next((byte) 103);
           }
           var1_ref = this.field_gb.keys();
           while (var1_ref.hasMoreElements()) {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.a(0, var2, this.field_gb.get(var2));
           }
-          da.a(63, true, false);
+          BitmapFont.a(63, true, false);
           this.field_i.release();
           this.field_qc = true;
         }
@@ -1828,7 +1828,7 @@ abstract class bf extends ha {
 
     final void o(int param0) {
         java.awt.Canvas var3 = null;
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         Enumeration var2 = this.field_gb.keys();
         while (var2.hasMoreElements()) {
           var3 = (java.awt.Canvas) (var2.nextElement());
@@ -1878,9 +1878,9 @@ abstract class bf extends ha {
         if (!param0) {
           this.c();
         }
-        if (rh.field_e != this.field_bb) {
+        if (SoundPlayback.field_e != this.field_bb) {
           var2 = this.field_bb;
-          this.field_bb = rh.field_e;
+          this.field_bb = SoundPlayback.field_e;
           if (var2.b((byte) -92)) {
             this.e(true);
           }
@@ -1968,8 +1968,8 @@ abstract class bf extends ha {
         this.b((byte) -117, false);
         this.D(0);
         this.b((byte) -119, true);
-        this.a(dl.field_p, 0, 0);
-        this.a((byte) 123, 0, dl.field_p);
+        this.a(CipherPacketBuffer.field_p, 0, 0);
+        this.a((byte) 123, 0, CipherPacketBuffer.field_p);
     }
 
     abstract void u(byte param0);

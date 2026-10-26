@@ -73,7 +73,7 @@ abstract class cq implements jj {
         int var18 = 0;
         int var19 = 0;
         int var22 = 0;
-        var22 = AceOfSkies.field_G ? 1 : 0;
+        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2 > 0 &&
             !mg.a(param2, (byte) 0)) {
@@ -188,7 +188,7 @@ abstract class cq implements jj {
         int var18 = 0;
         int var19 = 0;
         int var22 = 0;
-        var22 = AceOfSkies.field_G ? 1 : 0;
+        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (0 < param3 &&
             !mg.a(param3, (byte) 114)) {
@@ -289,7 +289,7 @@ abstract class cq implements jj {
         int var22 = 0;
         int var23 = 0;
         int var26 = 0;
-        var26 = AceOfSkies.field_G ? 1 : 0;
+        var26 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2 > 0 &&
             !mg.a(param2, (byte) -12)) {
@@ -388,7 +388,7 @@ abstract class cq implements jj {
             if (this.field_h == ro.field_o) {
               return 34844;
             }
-            if (this.field_h == wf.field_d) {
+            if (this.field_h == IntrusiveNode.field_d) {
               return 34846;
             }
             if (hh.field_c == this.field_h) {
@@ -408,7 +408,7 @@ abstract class cq implements jj {
               if (ro.field_o == this.field_h) {
                 return 34838;
               }
-              if (wf.field_d == this.field_h) {
+              if (IntrusiveNode.field_d == this.field_h) {
                 return 34840;
               }
               if (hh.field_c == this.field_h) {
@@ -429,7 +429,7 @@ abstract class cq implements jj {
           if (this.field_h == ro.field_o) {
             return 6406;
           }
-          if (this.field_h == wf.field_d) {
+          if (this.field_h == IntrusiveNode.field_d) {
             return 6409;
           }
           if (this.field_h == hh.field_c) {

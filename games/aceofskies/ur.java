@@ -12,8 +12,8 @@ final class ur {
           field_c = null;
           return;
         }
-        gk var2 = (gk) null;
-        ur.a(-26, -63, -63, (gk) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        ur.a(-26, -63, -63, (ResourceArchive) null);
         field_c = null;
     }
 
@@ -25,7 +25,7 @@ final class ur {
         return true;
     }
 
-    final static wp[] a(int param0, int param1, int param2, gk param3) {
+    final static wp[] a(int param0, int param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;

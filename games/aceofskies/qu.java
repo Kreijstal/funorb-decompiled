@@ -54,7 +54,7 @@ final class qu extends sk {
         }
     }
 
-    qu(kr param0, gk param1, em param2) {
+    qu(kr param0, ResourceArchive param1, em param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         this.field_g = param2;

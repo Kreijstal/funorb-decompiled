@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wt extends wf {
+class wt extends IntrusiveNode {
     static ia field_m;
     wt field_f;
     long field_i;
     static String[] field_g;
     wt field_j;
-    static rb field_l;
+    static PacketBuffer field_l;
     static jt field_e;
     static String[] field_k;
     static ll[] field_h;

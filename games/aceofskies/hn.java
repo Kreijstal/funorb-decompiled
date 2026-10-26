@@ -5,28 +5,28 @@ final class hn {
     static int field_a;
     static String[] field_b;
 
-    final static void a(gk param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
         wu var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        dl var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        dl var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4Lifetime1;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var8 = new dl(param0.a("logo.fo3d", (byte) -71, ""));
+          var8 = new CipherPacketBuffer(param0.a("logo.fo3d", (byte) -71, ""));
           var10 = var8;
-          var3 = var10.g(-63);
+          var3 = var10.readUnsignedByte(-63);
           var10.j(91);
-          gj.field_a = st.a(param1, var10);
+          GameCanvas.field_a = st.a(param1, var10);
           ia.field_a = new int[var3][];
           gp.field_y = new wu[var3];
           for (var4 = 0; var3 > var4; var4++) {
@@ -60,10 +60,10 @@ final class hn {
     }
 
     final static void a(int param0, int param1) {
-        dl var2 = q.field_p;
+        CipherPacketBuffer var2 = q.field_p;
         var2.g(111, param1);
-        var2.b(-1336879960, 1);
-        var2.b(-1336879960, param0);
+        var2.writeByte(-1336879960, 1);
+        var2.writeByte(-1336879960, param0);
     }
 
     public static void a(int param0) {

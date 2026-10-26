@@ -22,7 +22,7 @@ final class fb {
           si.field_b = false;
           vj.field_d = me.field_b;
           ln.field_c = kg.field_a;
-          lq.field_a = jd.field_e;
+          lq.field_a = SteeringMode.field_e;
           me.field_b = 0;
           var2 = -26 / ((param0 - 11) / 61);
         }

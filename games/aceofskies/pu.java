@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pu {
-    static kp field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
 
     final static void a(byte param0, java.awt.Canvas param1, boolean param2) {
@@ -13,23 +13,23 @@ final class pu {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 21) {
             field_a = -115;
           }
           if (bl.field_c >= 10) {
             if (uk.a((byte) -5)) {
-              if (ob.field_d != 0) {
+              if (SoundCache.field_d != 0) {
                 hj.a(param1, -12);
               } else {
                 ul.a(param2, false, -7395);
-                ps.a(0, false, param1, 0);
+                ArchiveIndex.a(0, false, param1, 0);
               }
             } else {
               vp.a();
               qa.a(240, (byte) -4, 320);
-              ps.a(0, false, param1, 0);
+              ArchiveIndex.a(0, false, param1, 0);
             }
           } else {
             var3_int = 0;
@@ -37,7 +37,7 @@ final class pu {
               AceOfSkies.field_J = false;
               var3_int = 1;
             }
-            oj.a(qn.b(-115), g.field_h, param0 ^ 153, nk.a((byte) 68), var3_int != 0);
+            oj.a(qn.b(-115), g.field_h, param0 ^ 153, MenuScreen.a((byte) 68), var3_int != 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,7 +85,7 @@ final class pu {
         int var19 = 0;
         int var20 = 0;
         int var23 = 0;
-        var23 = AceOfSkies.field_G ? 1 : 0;
+        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param6 > 0 &&
             !mg.a(param6, (byte) 32)) {
@@ -158,6 +158,6 @@ final class pu {
     }
 
     static {
-        field_b = new kp();
+        field_b = new IntrusiveDeque();
     }
 }

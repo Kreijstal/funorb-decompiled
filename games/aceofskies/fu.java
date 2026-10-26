@@ -27,7 +27,7 @@ abstract class fu {
     }
 
     final static ll b(int param0) {
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var1 = ee.field_e[0] * ji.field_b[0];
         byte[] var2 = fk.field_a[0];
         int[] var3 = new int[var1];

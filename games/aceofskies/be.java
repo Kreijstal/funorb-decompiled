@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends da {
+final class be extends BitmapFont {
     private int[] field_g;
     private byte[][] field_k;
     private int[] field_f;

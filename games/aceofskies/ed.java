@@ -133,7 +133,7 @@ final class ed extends cq implements qi {
           }
           if (param4 &&
             param7 == 0 &&
-            param6 == 0 || AceOfSkies.field_G) {
+            param6 == 0 || AceOfSkies.obfuscationControl) {
             this.a(this.field_e, param3, param5, param2, (byte) 107);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -242,7 +242,7 @@ final class ed extends cq implements qi {
             jaggl.OpenGL.glPixelStorei(3314, param7);
             jaggl.OpenGL.glTexImage2Df(this.field_e, 0, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, param5, 4 * param6);
             jaggl.OpenGL.glPixelStorei(3314, 0);
-            if (!AceOfSkies.field_G) {
+            if (!AceOfSkies.obfuscationControl) {
               return;
             }
           }
@@ -421,7 +421,7 @@ final class ed extends cq implements qi {
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
-        var19 = AceOfSkies.field_G ? 1 : 0;
+        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = ek.a((byte) 103, (-param0 + param3) * 3);
           var6 = param0 * 3;
@@ -434,7 +434,7 @@ final class ed extends cq implements qi {
             param1.field_x != null) {
             dt.b(8);
           }
-          gb.field_k = 0;
+          AircraftDefinition.field_k = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param1.field_K > var8)))) {
@@ -493,7 +493,7 @@ final class ed extends cq implements qi {
                           dupTemp$0 = param1.field_x[var8];
                           hs.field_a[dupTemp$0] = hs.field_a[dupTemp$0] + 1;
                         }
-                        gb.field_k = gb.field_k + 1;
+                        AircraftDefinition.field_k = AircraftDefinition.field_k + 1;
                         break;
                       }
                     }
@@ -573,7 +573,7 @@ final class ed extends cq implements qi {
             jaggl.OpenGL.glPixelStorei(3314, param6);
             jaggl.OpenGL.glTexImage2Di(this.field_e, 0, 6408, this.field_j, this.field_k, 0, 32993, this.field_g.field_Bc, param4, 4 * param5);
             jaggl.OpenGL.glPixelStorei(3314, 0);
-            if (!AceOfSkies.field_G) {
+            if (!AceOfSkies.obfuscationControl) {
               return;
             }
           }

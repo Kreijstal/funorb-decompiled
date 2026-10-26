@@ -16,7 +16,7 @@ final class qs {
         int var2_int = 0;
         RuntimeException var2 = null;
         try {
-          ok.field_o = ok.field_o + 1;
+          ScreenParticle.field_o = ScreenParticle.field_o + 1;
           if (ik.field_k == -1 &&
             rs.field_v == -1) {
             ik.field_k = ic.field_b;
@@ -30,8 +30,8 @@ final class qs {
           }
           if (decompiledFrameRemainder0) {
             if (!ht.field_g) {
-              if (ok.field_o >= jp.field_b) {
-                stackIn_17_0 = (ok.field_o < jp.field_b + ct.field_B) ? 1 : 0;
+              if (ScreenParticle.field_o >= jp.field_b) {
+                stackIn_17_0 = (ScreenParticle.field_o < jp.field_b + NetworkGameClient.field_B) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -40,13 +40,13 @@ final class qs {
             }
             var2_int = stackIn_17_0;
             if (param1 == null) {
-              ok.field_o = 0;
+              ScreenParticle.field_o = 0;
             } else {
               if (!ht.field_g &&
                 var2_int == 0) {
-                ok.field_o = 0;
+                ScreenParticle.field_o = 0;
               } else {
-                ok.field_o = jp.field_b;
+                ScreenParticle.field_o = jp.field_b;
               }
             }
             we.field_c = ik.field_k;
@@ -60,19 +60,19 @@ final class qs {
             }
           }
           if (!ht.field_g &&
-            ok.field_o < jp.field_b &&
+            ScreenParticle.field_o < jp.field_b &&
             uu.field_e) {
             we.field_c = ik.field_k;
             nl.field_o = rs.field_v;
-            ok.field_o = 0;
+            ScreenParticle.field_o = 0;
           }
           qj.field_s = param1;
           if (param0 != -6939) {
             field_a = (Calendar) null;
           }
           if (ht.field_g &&
-            wm.field_j == ok.field_o) {
-            ok.field_o = 0;
+            Pickup.field_j == ScreenParticle.field_o) {
+            ScreenParticle.field_o = 0;
             ht.field_g = false;
           }
           ik.field_k = -1;
@@ -94,7 +94,7 @@ final class qs {
 
     final static void a(int param0) {
         int var1 = 42 / ((66 - param0) / 59);
-        av.field_c = new kp();
+        av.field_c = new IntrusiveDeque();
     }
 
     public static void a(byte param0) {

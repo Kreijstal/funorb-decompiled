@@ -112,7 +112,7 @@ final class oj extends sk {
         int var4;
         jj var5;
         ec var6;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 <= 2) {
           var5 = (jj) null;
           this.a(-6, -33, (jj) null);
@@ -130,7 +130,7 @@ final class oj extends sk {
             this.field_b.a(qn.field_a, (byte) -127);
             if (this.field_i) {
               this.field_b.a(lo.field_j, true, bd.field_C);
-              this.field_b.a(true, 0, true, dl.field_p, false);
+              this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
               this.field_b.a(ac.field_b, 0, 0);
             } else {
               this.field_b.a(bd.field_C, true, ru.field_a);
@@ -179,7 +179,7 @@ final class oj extends sk {
         long var4 = 0L;
         int var6 = 0;
         int var7 = 0;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var1_int = 0;
           var2 = 0;
@@ -217,10 +217,10 @@ final class oj extends sk {
           }
           if (var3 == 0 &&
             ol.field_c == 2) {
-            var4 = kh.a(param0 ^ -64) - rb.field_e;
+            var4 = kh.a(param0 ^ -64) - PacketBuffer.field_e;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
-              nk.a((byte) -119, 5, true);
+              MenuScreen.a((byte) -119, 5, true);
               var3 = 2;
             }
           }
@@ -262,7 +262,7 @@ final class oj extends sk {
             }
             if (param4) {
               var9.setColor(java.awt.Color.black);
-              var9.fillRect(0, 0, td.field_b, ps.field_h);
+              var9.fillRect(0, 0, td.field_b, ArchiveIndex.field_h);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -284,12 +284,12 @@ final class oj extends sk {
               var10.setFont(aq.field_b);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (304 - param0.length() * 6) / 2, 22);
-              var9.drawImage(qn.field_d, td.field_b / 2 - 152, -18 + ps.field_h / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(qn.field_d, td.field_b / 2 - 152, -18 + ArchiveIndex.field_h / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = td.field_b / 2 - 152;
-              var8 = ps.field_h / 2 - 18;
+              var8 = ArchiveIndex.field_h / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, param3 * 3, 30);
@@ -303,7 +303,7 @@ final class oj extends sk {
             if (qh.field_b != null) {
               var9.setFont(aq.field_b);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(qh.field_b, td.field_b / 2 - 6 * qh.field_b.length() / 2, ps.field_h / 2 - 26);
+              var9.drawString(qh.field_b, td.field_b / 2 - 6 * qh.field_b.length() / 2, ArchiveIndex.field_h / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -332,9 +332,9 @@ final class oj extends sk {
     }
 
     final void a(boolean param0) {
-        int var3 = AceOfSkies.field_G ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!this.field_f) {
-          this.field_b.a(dl.field_p, 0, 0);
+          this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         } else {
           this.field_b.a(1, (byte) 45);
           this.field_b.a((jj) null, -9135);
@@ -342,16 +342,16 @@ final class oj extends sk {
           this.field_b.f(-21041);
           if (this.field_i) {
             this.field_b.a(ru.field_a, true, ru.field_a);
-            this.field_b.a((byte) 118, 0, dl.field_p);
-            this.field_b.a(dl.field_p, 0, 0);
+            this.field_b.a((byte) 118, 0, CipherPacketBuffer.field_p);
+            this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
           } else {
             this.field_b.a(ru.field_a, param0, ru.field_a);
-            this.field_b.a((byte) 121, 0, dl.field_p);
+            this.field_b.a((byte) 121, 0, CipherPacketBuffer.field_p);
             this.field_b.a(2, (byte) 26);
             this.field_b.a(ru.field_a, true, ru.field_a);
-            this.field_b.a((byte) 122, 0, dl.field_p);
+            this.field_b.a((byte) 122, 0, CipherPacketBuffer.field_p);
             this.field_b.a((byte) 121, 1, un.field_i);
-            this.field_b.a(dl.field_p, 0, 0);
+            this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
             this.field_b.a((jj) null, -9135);
           }
           this.field_b.a(0, (byte) 103);

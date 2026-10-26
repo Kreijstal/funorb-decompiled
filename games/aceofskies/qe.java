@@ -60,13 +60,13 @@ final class qe {
             }
             return;
           }
-          var20 = rb.a(false, wl.field_Kb, 50);
+          var20 = PacketBuffer.a(false, wl.field_Kb, 50);
           this.field_j = new sr(param0, 6410, 128, 128, 16, var20, 6410);
-          var21 = rb.a(false, mq.field_e, -77);
+          var21 = PacketBuffer.a(false, mq.field_e, -77);
           this.field_g = new sr(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_cc;
           if (var10.b(true)) {
-            var22 = rb.a(false, ho.field_a, -88);
+            var22 = PacketBuffer.a(false, ho.field_a, -88);
             this.field_b = new sr(param0, 6408, 128, 128, 16);
             var4 = new sr(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a((byte) 97, this.field_b, var4, 2.0f)) {

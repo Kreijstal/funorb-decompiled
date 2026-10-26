@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bu {
-    final static boolean a(gk param0, gk param1, gk param2, boolean param3) {
+    final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -67,7 +67,7 @@ final class bu {
           if (ul.a(param1, (byte) -106)) {
             return false;
           }
-          if (kc.a(param1, 26035)) {
+          if (Vector2.a(param1, 26035)) {
             return false;
           }
           if (vr.a(param1, 2)) {

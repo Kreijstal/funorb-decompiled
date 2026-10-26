@@ -3,7 +3,7 @@
  */
 final class fd {
     static String field_e;
-    static al[][] field_b;
+    static PcmSample[][] field_b;
     static pt field_a;
     static ep field_f;
     static String field_c;
@@ -14,7 +14,7 @@ final class fd {
         field_c = null;
         field_e = null;
         field_a = null;
-        field_b = (al[][]) null;
+        field_b = (PcmSample[][]) null;
         field_f = null;
     }
 
@@ -82,7 +82,7 @@ final class fd {
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var3_int = 1;
           while (param2 > 1) {

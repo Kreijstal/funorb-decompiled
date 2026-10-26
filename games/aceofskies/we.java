@@ -7,32 +7,32 @@ final class we {
     static String field_b;
 
     final static void a(int param0) {
-        rh var1 = null;
+        SoundPlayback var1 = null;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        rh var1Lifetime1;
-        var2 = AceOfSkies.field_G ? 1 : 0;
+        SoundPlayback var1Lifetime1;
+        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           um.field_m.h();
-          da.field_a.h();
+          BitmapFont.field_a.h();
           ad.field_U = ad.field_U - 1;
           if (0 == ad.field_U) {
             ad.field_U = 200;
-            var1 = (rh) (di.field_M.d(268435455));
+            var1 = (SoundPlayback) (di.field_M.first(268435455));
             while (var1 != null) {
-              if (!var1.field_i.b((byte) 93)) {
-                var1.c(-128);
+              if (!var1.field_i.isLinked((byte) 93)) {
+                var1.unlink(-128);
               }
-              var1 = (rh) (di.field_M.b((byte) 103));
+              var1 = (SoundPlayback) (di.field_M.next((byte) 103));
             }
             if (null != ao.field_c) {
-              var1Lifetime1 = (rh) (ao.field_c.d(268435455));
+              var1Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_i.b((byte) 105)) {
-                  var1Lifetime1.c(-123);
+                if (!var1Lifetime1.field_i.isLinked((byte) 105)) {
+                  var1Lifetime1.unlink(-123);
                 }
-                var1Lifetime1 = (rh) (ao.field_c.b((byte) 103));
+                var1Lifetime1 = (SoundPlayback) (ao.field_c.next((byte) 103));
               }
             }
           }
@@ -74,7 +74,7 @@ final class we {
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length();
           var3 = 0;
@@ -144,7 +144,7 @@ final class we {
         int var20Lifetime2;
         int var20Lifetime3;
         int var20Lifetime4;
-        var22 = AceOfSkies.field_G ? 1 : 0;
+        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 == null) {
             return;

@@ -56,12 +56,12 @@ final class er {
         double var22 = 0.0;
         double var24 = 0.0;
         int var26 = 0;
-        var26 = AceOfSkies.field_G ? 1 : 0;
+        var26 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (null != vc.field_f) {
+          if (null != TimedSpriteEffect.field_f) {
             return;
           }
-          vc.field_f = new int[65536];
+          TimedSpriteEffect.field_f = new int[65536];
           var1_double = -0.015 + Math.random() * 0.03 + 0.7;
           if (param0 != -128) {
             er.d(65);
@@ -135,7 +135,7 @@ final class er {
               var17 = (int)(256.0 * var12);
               var18 = (int)(256.0 * var14);
               var19 = (var16 << 16) - (-(var17 << 8) - var18);
-              vc.field_f[var3] = var19;
+              TimedSpriteEffect.field_f[var3] = var19;
             } else {
               var10 = Math.pow(var10, var1_double);
               var12 = Math.pow(var12, var1_double);
@@ -144,7 +144,7 @@ final class er {
               var17 = (int)(256.0 * var12);
               var18 = (int)(256.0 * var14);
               var19 = (var16 << 16) - (-(var17 << 8) - var18);
-              vc.field_f[var3] = var19;
+              TimedSpriteEffect.field_f[var3] = var19;
             }
           }
           return;
@@ -156,7 +156,7 @@ final class er {
     }
 
     final int c(int param0) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = param0;
         wt var3 = this.field_a.field_j;
         while (var3 != this.field_a) {

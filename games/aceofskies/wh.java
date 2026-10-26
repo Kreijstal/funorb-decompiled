@@ -14,21 +14,21 @@ final class wh {
     int field_c;
     int field_a;
 
-    final void a(rb param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_k = param0.g(-121);
+        this.field_k = param0.readUnsignedByte(-121);
         this.field_d = new int[this.field_k];
         this.field_f = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-          this.field_d[var2] = param0.i((byte) 0);
-          this.field_f[var2] = param0.i((byte) 0);
+          this.field_d[var2] = param0.readUnsignedShort((byte) 0);
+          this.field_f[var2] = param0.readUnsignedShort((byte) 0);
         }
     }
 
-    final void b(rb param0) {
-        this.field_c = param0.g(-122);
-        this.field_a = param0.a((byte) 116);
-        this.field_b = param0.a((byte) 120);
+    final void b(PacketBuffer param0) {
+        this.field_c = param0.readUnsignedByte(-122);
+        this.field_a = param0.readInt((byte) 116);
+        this.field_b = param0.readInt((byte) 120);
         this.a(param0);
     }
 

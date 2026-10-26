@@ -39,7 +39,7 @@ final class vf implements Runnable {
         int var6 = 0;
         int var8 = 0;
         int var6Lifetime1;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_k) {
             return;
@@ -94,7 +94,7 @@ final class vf implements Runnable {
           InterruptedException var4 = null;
           int var6 = 0;
           String var7 = null;
-          var6 = AceOfSkies.field_G ? 1 : 0;
+          var6 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             while (true) {
               var3 = this;
@@ -184,7 +184,7 @@ final class vf implements Runnable {
         int var9 = 0;
         int var10 = 0;
         StringBuilder discarded$0 = null;
-        int var11 = AceOfSkies.field_G ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (0L >= param0) {
           return null;
         }
@@ -263,7 +263,7 @@ final class vf implements Runnable {
           int var4 = 0;
           Throwable decompiledCaughtException = null;
           Object var2_ref = null;
-          var4 = AceOfSkies.field_G ? 1 : 0;
+          var4 = AceOfSkies.obfuscationControl ? 1 : 0;
           if (this.field_k) {
             return;
           }
@@ -274,7 +274,7 @@ final class vf implements Runnable {
           }
           if (null != this.field_a) {
             while (this.field_a.field_a == 0) {
-              wf.a(1L, false);
+              IntrusiveNode.a(1L, false);
             }
             if (1 == this.field_a.field_a) {
               try {
@@ -312,7 +312,7 @@ final class vf implements Runnable {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!param3) {
             this.field_k = false;

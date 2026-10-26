@@ -8,7 +8,7 @@ final class co {
     int[] field_h;
     int field_f;
     static int field_c;
-    static pa[] field_i;
+    static RenderSprite[] field_i;
     static long field_e;
     static int field_b;
     static String field_a;
@@ -28,7 +28,7 @@ final class co {
     final int a(boolean param0, int param1) {
         int var3 = 0;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_h == null) {
           return 0;
         }
@@ -82,7 +82,7 @@ final class co {
         int var12Lifetime1;
         int var12Lifetime2;
         int var12Lifetime3;
-        var13 = AceOfSkies.field_G ? 1 : 0;
+        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 <= 109) {
             co.a(23, -77, 74, -119, -5);

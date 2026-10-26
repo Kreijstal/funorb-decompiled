@@ -76,7 +76,7 @@ abstract class ee extends or {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var10 = (CharSequence) ((Object) param2);
           var3_int = vu.a(var10, (byte) 103, param1);

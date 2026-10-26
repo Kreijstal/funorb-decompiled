@@ -27,7 +27,7 @@ final class kg {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 != null &&
             param4 > 0) {
@@ -62,7 +62,7 @@ final class kg {
         }
     }
 
-    final static void a(int param0, gk param1, gk param2, gk param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         ll var17 = null;
         wp[] var5 = null;
         wp[][] var6 = null;
@@ -77,11 +77,11 @@ final class kg {
         ll var12 = null;
         int var8 = 0;
         int var9 = 0;
-        int var13 = AceOfSkies.field_G ? 1 : 0;
+        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ip.field_c = qg.a((byte) 3, param1, "commonui", "frame_top");
+          ArchiveProvider.field_c = qg.a((byte) 3, param1, "commonui", "frame_top");
           uc.field_k = qg.a((byte) 3, param1, "commonui", "frame_bottom");
           eo.field_b = ij.a(param1, "jagex_logo_grey", "commonui", 1);
           u.field_i = qg.a((byte) 3, param1, "commonui", "button");
@@ -111,7 +111,7 @@ final class kg {
             var14 = var6[var9];
             wp[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
-              var14[var11_int] = ak.a(15810, var5[var9], var19[var11_int]);
+              var14[var11_int] = ClientException.a(15810, var5[var9], var19[var11_int]);
             }
           }
           var9Lifetime1 = var17.field_n;
@@ -141,7 +141,7 @@ final class kg {
         int var4;
         int var5;
         int var6;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         var2 = param0;
         var3 = it.field_c;
         if (var3 >= 5) {
@@ -200,7 +200,7 @@ final class kg {
           var5 = 1;
           var4 = 1;
         }
-        rb.field_k = of.a(var5 * var2, -19, var4 * var2);
+        PacketBuffer.field_k = of.a(var5 * var2, -19, var4 * var2);
     }
 
     final static aq a(String param0, int param1, boolean param2, wl param3) {
@@ -275,7 +275,7 @@ final class kg {
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null == pj.field_a) {
             return null;

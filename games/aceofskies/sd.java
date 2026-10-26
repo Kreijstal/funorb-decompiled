@@ -7,7 +7,7 @@ final class sd extends hh {
     static boolean[][] field_d;
     private boolean field_f;
     private in field_l;
-    static pa[] field_k;
+    static RenderSprite[] field_k;
     static int field_h;
     static String field_e;
     static String field_m;
@@ -59,7 +59,7 @@ final class sd extends hh {
         return false;
     }
 
-    final static gk a(boolean param0, int param1, boolean param2, boolean param3, int param4) {
+    final static ResourceArchive a(boolean param0, int param1, boolean param2, boolean param3, int param4) {
         if (!param3) {
           return lc.a(param2, param0, false, (byte) -65, param1, param4);
         }

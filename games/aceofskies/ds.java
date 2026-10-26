@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ds extends wf {
+final class ds extends IntrusiveNode {
     byte[] field_f;
     int field_g;
     static eo field_e;
@@ -38,7 +38,7 @@ final class ds extends wf {
         int var3Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.length();
           if (var2_int == 0) {

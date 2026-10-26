@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class m extends wf {
+final class m extends IntrusiveNode {
     static int field_f;
     long field_e;
     int field_i;
@@ -25,13 +25,13 @@ final class m extends wf {
         }
     }
 
-    final static void a(ap param0, int param1, boolean param2) {
+    final static void a(MusicTrack param0, int param1, boolean param2) {
         try {
           if (param1 != 27966) {
-            ap var4 = (ap) null;
-            m.a((ap) null, 18, false);
+            MusicTrack var4 = (MusicTrack) null;
+            m.a((MusicTrack) null, 18, false);
           }
-          ha.a(param0, (byte) -109, param2, 256);
+          GraphicsRenderer.a(param0, (byte) -109, param2, 256);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "m.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

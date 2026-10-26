@@ -13,7 +13,7 @@ final class mr {
         int var5 = 0;
         char[] var6 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 2004352972) {
             mr.a(23);

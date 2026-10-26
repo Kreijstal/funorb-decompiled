@@ -5,9 +5,9 @@ final class gn {
     static vd[] field_b;
     static int field_a;
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, rb param2, rb param3, int param4) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, PacketBuffer param2, PacketBuffer param3, int param4) {
         try {
-          qf.a(param3.field_f, param2, 25215, param0, param3.field_g, param1, 0);
+          SmokeParticle.a(param3.payload, param2, 25215, param0, param3.position, param1, 0);
           if (param4 < 34) {
             gn.a((byte) -87);
           }

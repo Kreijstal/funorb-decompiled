@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wq {
-    private rb field_b;
+    private PacketBuffer field_b;
     private gp field_h;
     static eg field_e;
     private java.math.BigInteger field_c;
@@ -70,7 +70,7 @@ final class wq {
         int var2;
         int var3;
         int var2Lifetime1;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_g) {
           return;
         }
@@ -119,9 +119,9 @@ final class wq {
               stackIn_8_0 = this.field_g[param4];
               return stackIn_8_0;
             }
-            this.field_b.field_g = 6 + param4 * 72;
-            var7 = this.field_b.a((byte) 122);
-            var8 = this.field_b.a((byte) 125);
+            this.field_b.position = 6 + param4 * 72;
+            var7 = this.field_b.readInt((byte) 122);
+            var8 = this.field_b.readInt((byte) 125);
             var14 = new byte[64];
             this.field_b.a(0, 7186, 64, var14);
             var10 = new fg(param4, param2, param1, this.field_a, this.field_d, var7, var14, var8, param3);
@@ -157,12 +157,12 @@ final class wq {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        rb var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
         byte[] var15;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null != this.field_b) {
           return true;
         }
@@ -175,14 +175,14 @@ final class wq {
         if (this.field_h.field_p) {
           return false;
         }
-        var10 = new rb(this.field_h.a(true));
-        var10.field_g = 5;
+        var10 = new PacketBuffer(this.field_h.a(true));
+        var10.position = 5;
         if (param0 <= 2) {
           this.a(115);
         }
-        var3 = var10.g(-52);
-        var10.field_g = var10.field_g + 72 * var3;
-        var13 = new byte[var10.field_f.length - var10.field_g];
+        var3 = var10.readUnsignedByte(-52);
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(0, 7186, var13.length, var13);
@@ -197,7 +197,7 @@ final class wq {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = qm.a(0, var10.field_g - var13.length - 5, var10.field_f, 5);
+        var15 = qm.a(0, var10.position - var13.length - 5, var10.payload, 5);
         for (var7 = 0; 64 > var7; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

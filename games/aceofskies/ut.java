@@ -3,12 +3,12 @@
  */
 final class ut {
     static int field_a;
-    static pa field_c;
+    static RenderSprite field_c;
     static String field_b;
 
     public static void a(byte param0) {
         if (param0 <= 104) {
-          field_c = (pa) null;
+          field_c = (RenderSprite) null;
           field_b = null;
           field_c = null;
           return;
@@ -28,7 +28,7 @@ final class ut {
         int var6 = 0;
         int var7 = 0;
         int[] var9 = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 != -96) {
           return;
         }

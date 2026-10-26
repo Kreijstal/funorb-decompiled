@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends wf {
+final class tb extends IntrusiveNode {
     static ej field_g;
     static String field_e;
     private int field_i;
@@ -40,11 +40,11 @@ final class tb extends wf {
         if (this.field_f > this.field_i) {
           var2 = (this.field_i << 8) / this.field_f;
           var3 = (-this.field_i + this.field_f) * 80 / this.field_f;
-          rb.field_j.a(122, var2 << 24 | this.field_j, -1, var3 + (-50 + gp.field_w), 320, this.field_k);
+          PacketBuffer.field_j.a(122, var2 << 24 | this.field_j, -1, var3 + (-50 + gp.field_w), 320, this.field_k);
           return;
         }
         if (this.field_i < this.field_f + this.field_h) {
-          rb.field_j.a(102, this.field_j | -16777216, -1, gp.field_w - 50, 320, this.field_k);
+          PacketBuffer.field_j.a(102, this.field_j | -16777216, -1, gp.field_w - 50, 320, this.field_k);
           return;
         }
         var2Lifetime1 = this.field_i - this.field_f - this.field_h;
@@ -53,7 +53,7 @@ final class tb extends wf {
           return;
         }
         int var4 = 80 * var2Lifetime1 / this.field_l;
-        rb.field_j.a(99, this.field_j | var3Lifetime1 << 24, -1, param0 + (gp.field_w - var4), sh.field_u >> 1, this.field_k);
+        PacketBuffer.field_j.a(99, this.field_j | var3Lifetime1 << 24, -1, param0 + (gp.field_w - var4), sh.field_u >> 1, this.field_k);
     }
 
     tb(String param0, int param1) {

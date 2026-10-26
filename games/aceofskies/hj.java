@@ -7,11 +7,11 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(java.awt.Canvas param0, int param1) {
         try {
-          if (param1 == ~ob.field_d) {
+          if (param1 == ~SoundCache.field_d) {
             st.a((byte) 87);
           }
-          hr.a(ct.field_I, 0, w.field_a, dq.field_b);
-          ps.a(0, false, param0, 0);
+          hr.a(NetworkGameClient.field_I, 0, w.field_a, dq.field_b);
+          ArchiveIndex.a(0, false, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "hj.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -46,7 +46,7 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
         }
     }
 
-    final static ll a(boolean param0, int param1, int param2, gk param3) {
+    final static ll a(boolean param0, int param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         ll stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

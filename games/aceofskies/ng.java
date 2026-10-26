@@ -73,7 +73,7 @@ final class ng extends rg {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 != 30) {
             field_J = (String[]) null;

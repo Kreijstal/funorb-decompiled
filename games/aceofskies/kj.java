@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends ha {
+final class kj extends GraphicsRenderer {
     private boolean field_y;
     private ph field_g;
     private int field_q;
@@ -139,7 +139,7 @@ final class kj extends ha {
         this.g();
     }
 
-    final pa a(vd param0, boolean param1) {
+    final RenderSprite a(vd param0, boolean param1) {
         int[] stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
@@ -220,8 +220,8 @@ final class kj extends ha {
             var7 = new vh(this, var23, var5, var6);
           }
         }
-        ((pa) (var7)).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
-        return (pa) (var7);
+        ((RenderSprite) (var7)).a(param0.field_a, param0.field_i, param0.field_g, param0.field_b);
+        return (RenderSprite) (var7);
     }
 
     final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -555,7 +555,7 @@ final class kj extends ha {
 
     }
 
-    final da a(vs param0, vd[] param1, boolean param2) {
+    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -572,14 +572,14 @@ final class kj extends ha {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (da) ((Object) new be(this, param0, param1, var4, var5));
+            return (BitmapFont) ((Object) new be(this, param0, param1, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (var6 == 0) {
-          return (da) ((Object) new tu(this, param0, param1, var4, var5));
+          return (BitmapFont) ((Object) new tu(this, param0, param1, var4, var5));
         }
-        return (da) ((Object) new ts(this, param0, param1, var4, var5));
+        return (BitmapFont) ((Object) new ts(this, param0, param1, var4, var5));
     }
 
     private final void f(int param0) {
@@ -699,7 +699,7 @@ final class kj extends ha {
         java.awt.Dimension var5 = null;
         oe var4 = (oe) (this.field_g.a((byte) 106, (long)param0.hashCode()));
         if (var4 != null) {
-          var4.c(-128);
+          var4.unlink(-128);
           var4 = oi.a(param0, -43, param1, param2);
           this.field_g.a(-32, (long)param0.hashCode(), var4);
           if (this.field_l == param0 &&
@@ -777,7 +777,7 @@ final class kj extends ha {
         }
     }
 
-    final pa a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         int var10 = 0;
         int incrementValue$4 = 0;
         int var7;
@@ -787,7 +787,7 @@ final class kj extends ha {
         var7 = 0;
         var8 = param1;
         var9 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           if (var9 < param4) {
             for (var10 = 0; var10 < param3; var10++) {
               incrementValue$4 = var8;
@@ -796,7 +796,7 @@ final class kj extends ha {
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = 1;
-                break L1;
+                break scanLoop1;
               }
             }
             var9++;
@@ -805,9 +805,9 @@ final class kj extends ha {
           break;
         }
         if (var7 == 0) {
-          return (pa) ((Object) new vh(this, param0, param1, param2, param3, param4, param5));
+          return (RenderSprite) ((Object) new vh(this, param0, param1, param2, param3, param4, param5));
         }
-        return (pa) ((Object) new jg(this, param0, param1, param2, param3, param4, param5));
+        return (RenderSprite) ((Object) new jg(this, param0, param1, param2, param3, param4, param5));
     }
 
     final void a() {
@@ -948,7 +948,7 @@ final class kj extends ha {
 
     final void c() {
         if (this.field_h) {
-          da.a(121, false, true);
+          BitmapFont.a(121, false, true);
           this.field_h = false;
         }
         this.field_p = null;
@@ -960,7 +960,7 @@ final class kj extends ha {
     }
 
     final sm a(ra param0, gd param1) {
-        return (sm) ((Object) new lb(this, (pa) (param0), (ac) (param1)));
+        return (sm) ((Object) new lb(this, (RenderSprite) (param0), (ac) (param1)));
     }
 
     static {

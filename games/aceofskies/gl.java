@@ -25,7 +25,7 @@ final class gl {
         }
     }
 
-    final static vt a(gk param0, String param1, String param2, gk param3, int param4) {
+    final static vt a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -121,7 +121,7 @@ final class gl {
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
-        int var7 = AceOfSkies.field_G ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         ll[] var1 = new ll[to.field_t];
         for (var2 = param0; var2 < to.field_t; var2++) {
           var3 = ee.field_e[var2] * ji.field_b[var2];

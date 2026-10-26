@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class t extends wf {
+final class t extends IntrusiveNode {
     private static int field_y;
     private static ar[] field_D;
     private boolean field_v;
@@ -39,7 +39,7 @@ final class t extends wf {
     private static int field_z;
     private int field_w;
 
-    private final static boolean a(gk param0) {
+    private final static boolean a(ResourceArchive param0) {
         byte[] var1 = null;
         if (!field_E) {
           var1 = param0.a(0, -10470, 0);
@@ -51,7 +51,7 @@ final class t extends wf {
         return true;
     }
 
-    final static t a(gk param0, int param1, int param2) {
+    final static t a(ResourceArchive param0, int param1, int param2) {
         try {
           t var4_ref = null;
           if (!t.a(param0)) {
@@ -81,16 +81,16 @@ final class t extends wf {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        rb var2 = new rb(param0);
-        this.field_J = var2.a((byte) 127);
-        this.field_w = var2.a((byte) 117);
-        this.field_j = var2.a((byte) 113);
-        this.field_H = var2.a((byte) 120);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_J = var2.readInt((byte) 127);
+        this.field_w = var2.readInt((byte) 117);
+        this.field_j = var2.readInt((byte) 113);
+        this.field_H = var2.readInt((byte) 120);
         if (this.field_H < 0) {
           this.field_H = ~this.field_H;
           this.field_k = true;
         }
-        int var3 = var2.a((byte) 117);
+        int var3 = var2.readInt((byte) 117);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -98,7 +98,7 @@ final class t extends wf {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.g(-111);
+            var6_int = var2.readUnsignedByte(-111);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -465,7 +465,7 @@ final class t extends wf {
         return (float[]) (var17);
     }
 
-    final static t a(gk param0, String param1, String param2) {
+    final static t a(ResourceArchive param0, String param1, String param2) {
         try {
           t var4_ref = null;
           if (!t.a(param0)) {
@@ -490,7 +490,7 @@ final class t extends wf {
         }
     }
 
-    final al a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -540,7 +540,7 @@ final class t extends wf {
         this.field_I = null;
         var12 = this.field_l;
         this.field_l = null;
-        return new al(this.field_J, var12, this.field_j, this.field_H, this.field_k);
+        return new PcmSample(this.field_J, var12, this.field_j, this.field_H, this.field_k);
     }
 
     final static void a(byte[] param0) {
@@ -719,7 +719,7 @@ final class t extends wf {
         return var1;
     }
 
-    final al a() {
+    final PcmSample a() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -751,7 +751,7 @@ final class t extends wf {
           }
         }
         this.field_I = null;
-        return new al(this.field_J, var1, this.field_j, this.field_H, this.field_k);
+        return new PcmSample(this.field_J, var1, this.field_j, this.field_H, this.field_k);
     }
 
     private t(byte[] param0) throws IOException {

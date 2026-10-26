@@ -41,36 +41,36 @@ final class gu {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        gk var13 = null;
+        ResourceArchive var13 = null;
         int var14 = 0;
-        dl var15 = null;
+        CipherPacketBuffer var15 = null;
         int[][] var19 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         var3 = null;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var15 = nm.field_c;
-          var2 = var15.g(param0 - 90);
-          var3_ref = (ht) (an.field_b.d(268435455));
+          var15 = IntKeyLookup.field_c;
+          var2 = var15.readUnsignedByte(param0 - 90);
+          var3_ref = (ht) (an.field_b.first(268435455));
           while (var3_ref != null) {
             if (~var2 != ~var3_ref.field_l) {
-              var3_ref = (ht) (an.field_b.b((byte) 103));
+              var3_ref = (ht) (an.field_b.next((byte) 103));
               continue;
             }
             break;
           }
           if (param0 != 4) {
-            var13 = (gk) null;
-            gu.a(-24, (gk) null, -121);
+            var13 = (ResourceArchive) null;
+            gu.a(-24, (ResourceArchive) null, -121);
           }
           if (var3_ref == null) {
             te.b(true);
             return;
           }
-          var4 = var15.g(param0 + 117);
+          var4 = var15.readUnsignedByte(param0 + 117);
           if (var4 != 0) {
             var5 = var3_ref.field_f;
             mb.field_t[0] = fj.field_a;
@@ -81,12 +81,12 @@ final class gu {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ju.a(965924047, var15);
               if (var6_intLifetime1 != 0) {
-                o.a(fs.field_c, var6_intLifetime1, 54, tj.field_o, ld.field_a, gl.field_b);
+                FlightBody.a(fs.field_c, var6_intLifetime1, 54, tj.field_o, ld.field_a, gl.field_b);
               } else {
-                o.a(fs.field_c, var6_intLifetime1, 56, tj.field_o, ld.field_a, gl.field_b);
+                FlightBody.a(fs.field_c, var6_intLifetime1, 56, tj.field_o, ld.field_a, gl.field_b);
               }
             }
-            eu.a(var5, true);
+            Bullet.a(var5, true);
             var6 = new String[2][var5];
             var19 = new int[2][var5 * 4];
             var8 = os.field_w;
@@ -126,7 +126,7 @@ final class gu {
               var14++;
             }
           }
-          var3_ref.c(param0 - 128);
+          var3_ref.unlink(param0 - 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -162,7 +162,7 @@ final class gu {
         }
     }
 
-    final static ml a(int param0, gk param1, int param2) {
+    final static ml a(int param0, ResourceArchive param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;

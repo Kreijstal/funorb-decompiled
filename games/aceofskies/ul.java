@@ -15,7 +15,7 @@ final class ul extends sl {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
             var3 = param0.charAt(var2_int);

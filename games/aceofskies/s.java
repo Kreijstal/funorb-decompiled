@@ -32,7 +32,7 @@ final class s {
         if (eo.field_a != 2) {
           return 0;
         }
-        if (vc.a(param0 - 8759, this.field_g)) {
+        if (TimedSpriteEffect.a(param0 - 8759, this.field_g)) {
           return 1;
         }
         return 0;
@@ -59,7 +59,7 @@ final class s {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10_ref = null;
-        var16 = AceOfSkies.field_G ? 1 : 0;
+        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 118) {
             field_d = (String[]) null;

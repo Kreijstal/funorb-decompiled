@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class is {
-    static pa[] field_a;
+    static RenderSprite[] field_a;
     private static String field_z;
 
     public static void a(int param0) {

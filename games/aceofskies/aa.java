@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class aa {
-    static nk[] field_b;
+    static MenuScreen[] field_b;
     static int[] field_c;
     static String field_d;
-    static pa[] field_a;
+    static RenderSprite[] field_a;
 
     protected aa() throws Throwable {
         throw new Error();
@@ -48,7 +48,7 @@ abstract class aa {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (2 <= param1 &&
             param1 <= 36) {
@@ -117,7 +117,7 @@ abstract class aa {
     }
 
     static {
-        field_b = new nk[8];
+        field_b = new MenuScreen[8];
         field_d = "Account created successfully!";
     }
 }

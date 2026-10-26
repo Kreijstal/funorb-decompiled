@@ -7,7 +7,7 @@ final class lj implements ir {
     private hc field_l;
     private int field_o;
     private int field_h;
-    static al[] field_c;
+    static PcmSample[] field_c;
     private int field_i;
     static String field_e;
     static String field_a;
@@ -115,12 +115,12 @@ final class lj implements ir {
 
     final static void a(int param0) {
         int var1 = 0;
-        if (l.field_c > 32) {
-          var1 = l.field_c % 32;
+        if (RendererManager.field_c > 32) {
+          var1 = RendererManager.field_c % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          ve.a((byte) 43, l.field_c - var1);
+          ve.a((byte) 43, RendererManager.field_c - var1);
           if (param0 <= 97) {
             lj.a(true);
             return;

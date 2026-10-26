@@ -5,7 +5,7 @@ abstract class gm extends ab {
     private lt field_u;
     private int field_t;
     boolean field_z;
-    static gb field_y;
+    static AircraftDefinition field_y;
     static ej field_v;
     static String field_w;
     static id field_x;
@@ -16,7 +16,7 @@ abstract class gm extends ab {
         field_y = null;
         field_w = null;
         if (param0 != -76) {
-          field_y = (gb) null;
+          field_y = (AircraftDefinition) null;
         }
     }
 
@@ -31,7 +31,7 @@ abstract class gm extends ab {
 
     private final int d(byte param0) {
         if (param0 != 76) {
-          field_y = (gb) null;
+          field_y = (AircraftDefinition) null;
         }
         return this.field_z ? this == this.field_u.d((byte) -112) ? 256 : 0 : 0;
     }
@@ -119,7 +119,7 @@ abstract class gm extends ab {
     }
 
     static {
-        field_y = new gb(1.6, 5, 10, 100, 5, 5.0, 7.0, 32, 1);
+        field_y = new AircraftDefinition(1.6, 5, 10, 100, 5, 5.0, 7.0, 32, 1);
         field_v = new ej(0, 2, 2, 1);
     }
 }

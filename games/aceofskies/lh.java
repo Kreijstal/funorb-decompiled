@@ -15,7 +15,7 @@ final class lh {
         return null != jf.field_a ? true : im.field_e;
     }
 
-    final static ha a(java.awt.Canvas param0, byte param1, int param2, d param3) {
+    final static GraphicsRenderer a(java.awt.Canvas param0, byte param1, int param2, d param3) {
         RuntimeException var4 = null;
         wl stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -29,7 +29,7 @@ final class lh {
             field_a = (int[]) null;
           }
           stackIn_3_0 = new wl(param0, param3, param2);
-          return (ha) ((Object) stackIn_3_0);
+          return (GraphicsRenderer) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

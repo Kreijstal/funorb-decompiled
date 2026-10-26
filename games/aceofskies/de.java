@@ -90,7 +90,7 @@ final class de implements ir {
         int stackIn_23_0 = 0;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var2 = AceOfSkies.field_G ? 1 : 0;
+        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 92) {
             stackIn_3_0 = -79;

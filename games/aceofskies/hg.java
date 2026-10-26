@@ -12,7 +12,7 @@ final class hg extends to {
     private boolean field_E;
     private boolean field_w;
     private int field_B;
-    static gk field_x;
+    static ResourceArchive field_x;
     static int field_D;
     static int[] field_C;
 
@@ -74,10 +74,10 @@ final class hg extends to {
           if (uk.field_j == nb.field_c &&
             param1.equals(ua.field_j)) {
             nb.field_c = dk.field_h;
-            stackIn_8_0 = vb.field_l;
+            stackIn_8_0 = GameAppletShell.field_l;
             return stackIn_8_0;
           }
-          vb.field_l = null;
+          GameAppletShell.field_l = null;
           ua.field_j = param1;
           nb.field_c = jq.field_fb;
           stackIn_10_0 = null;
@@ -309,7 +309,7 @@ final class hg extends to {
         int var15Lifetime1;
         int var14Lifetime2;
         int var15Lifetime2;
-        var40 = AceOfSkies.field_G ? 1 : 0;
+        var40 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var45 = param7;
           if (var45.field_x != null &&
@@ -324,7 +324,7 @@ final class hg extends to {
           var41 = var50;
           var8 = var41;
           var65 = new int[param7.field_q];
-          var63 = ip.field_b;
+          var63 = ArchiveProvider.field_b;
           var62 = ql.field_o;
           var64 = dq.field_c;
           for (var13 = 0; var13 < param7.field_q; var13++) {
@@ -359,35 +359,35 @@ final class hg extends to {
           }
           var44 = 0;
           var13Lifetime1 = var44;
-          while (gb.field_k > var44) {
+          while (AircraftDefinition.field_k > var44) {
             var14Lifetime1 = jr.field_n[var44];
             var15Lifetime1 = param7.field_I[var14Lifetime1];
             var16 = param7.field_t[var14Lifetime1];
             var17 = param7.field_m[var14Lifetime1];
-            if (ip.field_b.length > param7.field_B[var14Lifetime1]) {
+            if (ArchiveProvider.field_b.length > param7.field_B[var14Lifetime1]) {
               stackIn_25_0 = param7.field_B[var14Lifetime1];
             } else {
               stackIn_25_0 = -1;
             }
             var18 = stackIn_25_0;
-            if (param7.field_g[var14Lifetime1] >= ip.field_b.length) {
+            if (param7.field_g[var14Lifetime1] >= ArchiveProvider.field_b.length) {
               stackIn_28_0 = -1;
             } else {
               stackIn_28_0 = param7.field_g[var14Lifetime1];
             }
             var19 = stackIn_28_0;
-            if (ip.field_b.length <= param7.field_D[var14Lifetime1]) {
+            if (ArchiveProvider.field_b.length <= param7.field_D[var14Lifetime1]) {
               stackIn_31_0 = -1;
             } else {
               stackIn_31_0 = param7.field_D[var14Lifetime1];
             }
             var20 = stackIn_31_0;
-            if (null != gj.field_a &&
+            if (null != GameCanvas.field_a &&
               null != param7.field_u &&
               var14Lifetime1 < param7.field_u.length &&
               -1 != param7.field_u[var14Lifetime1] &&
-              param7.field_u[var14Lifetime1] < gj.field_a.length) {
-              stackIn_38_0 = gj.field_a[param7.field_u[var14Lifetime1]];
+              param7.field_u[var14Lifetime1] < GameCanvas.field_a.length) {
+              stackIn_38_0 = GameCanvas.field_a[param7.field_u[var14Lifetime1]];
             } else {
               stackIn_38_0 = null;
             }

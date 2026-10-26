@@ -16,12 +16,12 @@ final class nc {
         field_b = null;
     }
 
-    final static al[] a(gk param0, int param1, gk param2, String[] param3, boolean[] param4) {
+    final static PcmSample[] a(ResourceArchive param0, int param1, ResourceArchive param2, String[] param3, boolean[] param4) {
         int var6 = 0;
-        al[] var5 = null;
+        PcmSample[] var5 = null;
         RuntimeException var5_ref = null;
         int var7 = 0;
-        al[] stackIn_11_0 = null;
+        PcmSample[] stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -32,9 +32,9 @@ final class nc {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5 = new al[param3.length];
+          var5 = new PcmSample[param3.length];
           for (var6 = 0; var6 < var5.length; var6++) {
             if (param4 != null &&
               param4[var6]) {

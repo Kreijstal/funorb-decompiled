@@ -24,7 +24,7 @@ final class mo {
         int var7 = 0;
         byte[] var11 = null;
         int var5Lifetime1;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           for (var3_int = 0; var3_int < param2.length; var3_int++) {
             if (null == param2[var3_int]) {
@@ -90,7 +90,7 @@ final class mo {
         }
         nq.field_a = true;
         ep.a(false, param0 ^ param0);
-        ob.field_d = 0;
+        SoundCache.field_d = 0;
     }
 
     public static void b(int param0) {

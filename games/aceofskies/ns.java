@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ns {
-    static ha field_a;
+    static GraphicsRenderer field_a;
 
     final static void a(wt param0, int param1, wt param2) {
         if (null != param0.field_f) {
@@ -24,7 +24,7 @@ final class ns {
     public static void a(int param0) {
         field_a = null;
         if (param0 != -24169) {
-          field_a = (ha) null;
+          field_a = (GraphicsRenderer) null;
         }
     }
 

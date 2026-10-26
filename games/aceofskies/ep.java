@@ -3,7 +3,7 @@
  */
 final class ep extends ab implements bh, dn {
     private mi field_v;
-    static kp field_z;
+    static IntrusiveDeque field_z;
     ek field_t;
     private kk field_w;
     static int[] field_u;
@@ -60,7 +60,7 @@ final class ep extends ab implements bh, dn {
         this.field_w = new kk("", (no) null, 12);
         qm var1 = new qm(oi.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.field_I, -1, 2147483647, true);
         ea var2 = new ea(ta.field_f, var1, (no) null);
-        this.field_v = new mi(qf.field_k, (no) null);
+        this.field_v = new mi(SmokeParticle.field_k, (no) null);
         this.field_y = new mi(dd.field_d, (no) null);
         this.field_w.field_k = ht.field_e;
         this.field_w.a(new mp(this.field_w), 1472);
@@ -101,7 +101,7 @@ final class ep extends ab implements bh, dn {
           return;
         }
         int var2 = 9 % ((param0 + 69) / 49);
-        gj.a(true, this.field_w.field_f);
+        GameCanvas.a(true, this.field_w.field_f);
     }
 
     private final int a(String param0, int param1, int param2, ea param3, int param4, String param5, int param6) {
@@ -279,7 +279,7 @@ final class ep extends ab implements bh, dn {
 
     private final boolean h(int param0) {
         if (param0 != 25) {
-          field_z = (kp) null;
+          field_z = (IntrusiveDeque) null;
           if (this.a(0, (mc) (this.field_w))) {
             return true;
           }
@@ -308,6 +308,6 @@ final class ep extends ab implements bh, dn {
 
     static {
         field_u = new int[8192];
-        field_z = new kp();
+        field_z = new IntrusiveDeque();
     }
 }

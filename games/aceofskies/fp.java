@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fp extends wf {
+final class fp extends IntrusiveNode {
     int field_e;
     static int field_g;
     int field_f;
@@ -13,7 +13,7 @@ final class fp extends wf {
           long dupTemp$1 = 0L;
           int var2 = 0;
           IOException var3 = null;
-          dl var4 = null;
+          CipherPacketBuffer var4 = null;
           int stackIn_11_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == gr.field_b) {
@@ -31,9 +31,9 @@ final class fp extends wf {
           } else {
             try {
               ft.field_l = new vf((java.net.Socket) (gr.field_b.field_f), ii.field_j);
-              var4 = nm.field_c;
-              q.field_p.field_g = 0;
-              var4.field_g = 0;
+              var4 = IntKeyLookup.field_c;
+              q.field_p.position = 0;
+              var4.position = 0;
               stackIn_11_0 = (!param1) ? -1 : -2;
               ga.field_l = stackIn_11_0;
               kg.field_b = stackIn_11_0;

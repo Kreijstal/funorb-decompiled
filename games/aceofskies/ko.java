@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ko extends pm {
-    static pa[] field_g;
+    static RenderSprite[] field_g;
     static int field_f;
 
     ko(long param0, String param1) {
         super(param0, param1);
     }
 
-    final static String a(rb param0, int param1, byte param2) {
+    final static String a(PacketBuffer param0, int param1, byte param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -24,7 +24,7 @@ final class ko extends pm {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param0.f(-129);
+            var3_int = param0.readUnsignedSmart(-129);
             if (param1 < var3_int) {
               var3_int = param1;
             }
@@ -33,7 +33,7 @@ final class ko extends pm {
               return stackIn_5_0;
             }
             var4 = new byte[var3_int];
-            param0.field_g = param0.field_g + tq.field_i.a(0, var3_int, param0.field_f, true, param0.field_g, var4);
+            param0.position = param0.position + tq.field_i.a(0, var3_int, param0.payload, true, param0.position, var4);
             var5 = hf.a(26, var3_int, 0, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;
@@ -68,8 +68,8 @@ final class ko extends pm {
     public static void c(int param0) {
         field_g = null;
         if (param0 != 0) {
-          rb var2 = (rb) null;
-          ko.a((rb) null, 0, (byte) -22);
+          PacketBuffer var2 = (PacketBuffer) null;
+          ko.a((PacketBuffer) null, 0, (byte) -22);
         }
     }
 

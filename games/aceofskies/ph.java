@@ -3,32 +3,32 @@
  */
 final class ph {
     static String field_f;
-    private wf[] field_d;
-    private wf field_c;
+    private IntrusiveNode[] field_d;
+    private IntrusiveNode field_c;
     private int field_b;
-    private wf field_a;
+    private IntrusiveNode field_a;
     private int field_e;
 
-    final wf a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (param0) {
-          return (wf) null;
+          return (IntrusiveNode) null;
         }
         this.field_e = 0;
         return this.a(0);
     }
 
-    final wf a(byte param0, long param1) {
-        wf var5 = null;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
-        wf var4 = this.field_d[(int)((long)(this.field_b - 1) & param1)];
-        this.field_a = var4.field_a;
+    final IntrusiveNode a(byte param0, long param1) {
+        IntrusiveNode var5 = null;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        IntrusiveNode var4 = this.field_d[(int)((long)(this.field_b - 1) & param1)];
+        this.field_a = var4.next;
         while (var4 != this.field_a) {
-          if (~param1 == ~this.field_a.field_b) {
+          if (~param1 == ~this.field_a.key) {
             var5 = this.field_a;
-            this.field_a = this.field_a.field_a;
+            this.field_a = this.field_a.next;
             return var5;
           }
-          this.field_a = this.field_a.field_a;
+          this.field_a = this.field_a.next;
         }
         if (param0 != 106) {
           String var7 = (String) null;
@@ -49,7 +49,7 @@ final class ph {
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length();
           var3 = new char[var2_int];
@@ -74,50 +74,50 @@ final class ph {
 
     final void b(int param0) {
         int var2 = 0;
-        wf var3 = null;
-        wf var4 = null;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        IntrusiveNode var3 = null;
+        IntrusiveNode var4 = null;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         for (var2 = param0; var2 < this.field_b; var2++) {
           var3 = this.field_d[var2];
           while (true) {
-            var4 = var3.field_a;
+            var4 = var3.next;
             if (var3 == var4) {
               break;
             }
-            var4.c(-123);
+            var4.unlink(-123);
           }
         }
         this.field_c = null;
         this.field_a = null;
     }
 
-    final void a(int param0, long param1, wf param2) {
-        wf var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_c) {
-            param2.c(-123);
+          if (null != param2.previous) {
+            param2.unlink(-123);
           }
           var5 = this.field_d[(int)(param1 & (long)(-1 + this.field_b))];
-          param2.field_a = var5;
+          param2.next = var5;
           int var6 = -19 / ((param0 - 43) / 54);
-          param2.field_c = var5.field_c;
-          param2.field_c.field_a = param2;
-          param2.field_a.field_c = param2;
-          param2.field_b = param1;
+          param2.previous = var5.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
+          param2.key = param1;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ph.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final wf a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$0 = 0;
-        wf var2;
+        IntrusiveNode var2;
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_e > param0 &&
           this.field_c != this.field_d[this.field_e - 1]) {
           var2 = this.field_c;
-          this.field_c = var2.field_a;
+          this.field_c = var2.next;
           return var2;
         }
         do {
@@ -126,9 +126,9 @@ final class ph {
           }
           fieldTemp$0 = this.field_e;
           this.field_e = this.field_e + 1;
-          var2 = this.field_d[fieldTemp$0].field_a;
+          var2 = this.field_d[fieldTemp$0].next;
         } while (this.field_d[this.field_e - 1] == var2);
-        this.field_c = var2.field_a;
+        this.field_c = var2.next;
         return var2;
     }
 
@@ -141,17 +141,17 @@ final class ph {
 
     ph(int param0) {
         int var2 = 0;
-        wf dupTemp$0 = null;
-        wf var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_e = 0;
         this.field_b = param0;
-        this.field_d = new wf[param0];
+        this.field_d = new IntrusiveNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new wf();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_d[var2] = dupTemp$0;
-          var3.field_a = var3;
-          var3.field_c = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

@@ -98,34 +98,34 @@ abstract class rt implements ws {
     }
 
     final static void b(int param0, byte param1) {
-        rh var2 = null;
+        SoundPlayback var2 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        rh var2Lifetime1;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        SoundPlayback var2Lifetime1;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           gn.field_a = param0;
-          var2 = (rh) (di.field_M.d(268435455));
+          var2 = (SoundPlayback) (di.field_M.first(268435455));
           while (var2 != null) {
-            if (!var2.field_i.b((byte) 99)) {
-              var2.c(-128);
+            if (!var2.field_i.isLinked((byte) 99)) {
+              var2.unlink(-128);
             } else {
               var2.field_g.f(gn.field_a * var2.field_h + 128 >> 8);
             }
-            var2 = (rh) (di.field_M.b((byte) 103));
+            var2 = (SoundPlayback) (di.field_M.next((byte) 103));
           }
           var3 = -52 % ((-46 - param1) / 52);
           if (null != ao.field_c) {
-            var2Lifetime1 = (rh) (ao.field_c.d(268435455));
+            var2Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));
             while (var2Lifetime1 != null) {
-              if (var2Lifetime1.field_i.b((byte) 82)) {
+              if (var2Lifetime1.field_i.isLinked((byte) 82)) {
                 var2Lifetime1.field_g.f(128 + var2Lifetime1.field_h * gn.field_a >> 8);
               } else {
-                var2Lifetime1.c(-125);
+                var2Lifetime1.unlink(-125);
               }
-              var2Lifetime1 = (rh) (ao.field_c.b((byte) 103));
+              var2Lifetime1 = (SoundPlayback) (ao.field_c.next((byte) 103));
             }
             return;
           }

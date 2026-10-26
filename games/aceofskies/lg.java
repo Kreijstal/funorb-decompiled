@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class lg extends gg {
-    static pa field_k;
+    static RenderSprite field_k;
     private int field_o;
     private int field_r;
     private int field_t;
@@ -72,7 +72,7 @@ class lg extends gg {
         int stackIn_20_1 = 0;
         int stackIn_27_1 = 0;
         int var5;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 == 0) {
           if (param1 >= 0) {
             stackIn_27_1 = param1;

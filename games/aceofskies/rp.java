@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rp extends pa {
+final class rp extends RenderSprite {
     private boolean field_f;
     private int field_d;
     private int field_b;

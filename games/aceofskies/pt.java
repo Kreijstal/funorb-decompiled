@@ -14,7 +14,7 @@ final class pt {
 
     final static String a(byte param0, int param1, char param2) {
         int var4 = 0;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         char[] var6 = new char[param1];
         char[] var3 = var6;
         for (var4 = 0; param1 > var4; var4++) {

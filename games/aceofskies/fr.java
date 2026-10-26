@@ -69,24 +69,24 @@ final class fr {
             if (param0 >= -12) {
               fr.a(36, 96);
             }
-            if (q.field_p.field_g == 0 &&
+            if (q.field_p.position == 0 &&
               10000L + co.field_e < kh.a(-64)) {
               q.field_p.g(44, param1);
             }
-            if (0 < q.field_p.field_g) {
+            if (0 < q.field_p.position) {
               try {
-                ft.field_l.a(q.field_p.field_g, 0, 76, q.field_p.field_f);
+                ft.field_l.a(q.field_p.position, 0, 76, q.field_p.payload);
                 co.field_e = kh.a(-84);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 te.b(true);
               }
-              q.field_p.field_g = 0;
+              q.field_p.position = 0;
             }
             return;
           }
-          q.field_p.field_g = 0;
+          q.field_p.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tp extends rf {
-    private kp field_k;
-    private kp field_j;
+final class tp extends PcmStream {
+    private IntrusiveDeque field_k;
+    private IntrusiveDeque field_j;
     private int field_l;
     private int field_i;
 
     private final void a(va param0) {
-        param0.c(-126);
+        param0.unlink(-126);
         param0.a();
-        wf var2 = this.field_j.field_e.field_a;
-        if (var2 == this.field_j.field_e) {
+        IntrusiveNode var2 = this.field_j.sentinel.next;
+        if (var2 == this.field_j.sentinel) {
           this.field_i = -1;
         } else {
           this.field_i = ((va) (var2)).field_e;
         }
     }
 
-    private final void a(wf param0, va param1) {
+    private final void a(IntrusiveNode param0, va param1) {
         while (true) {
-          if (param0 == this.field_j.field_e) {
+          if (param0 == this.field_j.sentinel) {
             ml.$cfr$intArgs$a$9910ad98b3f5(-20, param0, param1);
-            this.field_i = ((va) (this.field_j.field_e.field_a)).field_e;
+            this.field_i = ((va) (this.field_j.sentinel.next)).field_e;
             return;
           }
           if (((va) (param0)).field_e <= param1.field_e) {
-            param0 = param0.field_a;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         ml.$cfr$intArgs$a$9910ad98b3f5(-20, param0, param1);
-        this.field_i = ((va) (this.field_j.field_e.field_a)).field_e;
+        this.field_i = ((va) (this.field_j.sentinel.next)).field_e;
         return;
     }
 
@@ -58,13 +58,13 @@ final class tp extends rf {
           param2 = param2 - var4;
           this.field_l = this.field_l + var4;
           this.e();
-          var5 = (va) (this.field_j.d(268435455));
+          var5 = (va) (this.field_j.first(268435455));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_e = var7;
-              this.a(var5.field_a, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_e = 0;
               this.a(var5);
@@ -77,37 +77,37 @@ final class tp extends rf {
     private final void e() {
         va var1 = null;
         if (this.field_l > 0) {
-          var1 = (va) (this.field_j.d(268435455));
+          var1 = (va) (this.field_j.first(268435455));
           while (var1 != null) {
             var1.field_e = var1.field_e - this.field_l;
-            var1 = (va) (this.field_j.b((byte) 103));
+            var1 = (va) (this.field_j.next((byte) 103));
           }
           this.field_i = this.field_i - this.field_l;
           this.field_l = 0;
         }
     }
 
-    final synchronized void b(rf param0) {
-        this.field_k.a(param0, 25611);
+    final synchronized void b(PcmStream param0) {
+        this.field_k.addFirst(param0, 25611);
     }
 
     private final void d(int param0) {
-        rf var2 = (rf) (this.field_k.d(268435455));
+        PcmStream var2 = (PcmStream) (this.field_k.first(268435455));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (rf) (this.field_k.b((byte) 103));
+          var2 = (PcmStream) (this.field_k.next((byte) 103));
         }
     }
 
-    final rf a() {
-        return (rf) (this.field_k.b((byte) 103));
+    final PcmStream a() {
+        return (PcmStream) (this.field_k.next((byte) 103));
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        rf var4 = (rf) (this.field_k.d(268435455));
+        PcmStream var4 = (PcmStream) (this.field_k.first(268435455));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (rf) (this.field_k.b((byte) 103));
+          var4 = (PcmStream) (this.field_k.next((byte) 103));
         }
     }
 
@@ -132,13 +132,13 @@ final class tp extends rf {
           param0 = param0 - var2;
           this.field_l = this.field_l + var2;
           this.e();
-          var3 = (va) (this.field_j.d(268435455));
+          var3 = (va) (this.field_j.first(268435455));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_e = var5;
-              this.a(var3.field_a, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_e = 0;
               this.a(var3);
@@ -148,12 +148,12 @@ final class tp extends rf {
         return;
     }
 
-    final synchronized void a(rf param0) {
-        param0.c(-126);
+    final synchronized void a(PcmStream param0) {
+        param0.unlink(-126);
     }
 
-    final rf b() {
-        return (rf) (this.field_k.d(268435455));
+    final PcmStream b() {
+        return (PcmStream) (this.field_k.first(268435455));
     }
 
     final int d() {
@@ -161,8 +161,8 @@ final class tp extends rf {
     }
 
     public tp() {
-        this.field_k = new kp();
-        this.field_j = new kp();
+        this.field_k = new IntrusiveDeque();
+        this.field_j = new IntrusiveDeque();
         this.field_i = -1;
         this.field_l = 0;
     }

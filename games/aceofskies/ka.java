@@ -50,7 +50,7 @@ abstract class ka {
         int var4 = 0;
         m var5 = null;
         int var7 = 0;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (ca.field_f != wq.field_e) {
             return false;
@@ -61,14 +61,14 @@ abstract class ka {
           var2_long = kh.a(-125);
           if (tj.field_m != 0 &&
             0 > ec.field_g) {
-            var4_ref_m = (m) (oo.field_T.d(268435455));
+            var4_ref_m = (m) (oo.field_T.first(268435455));
             if (var4_ref_m != null &&
               var2_long > var4_ref_m.field_e) {
-              var4_ref_m.c(-123);
+              var4_ref_m.unlink(-123);
               ag.field_s = var4_ref_m.field_h.length;
-              nm.field_c.field_g = 0;
+              IntKeyLookup.field_c.position = 0;
               for (var5_int = 0; ag.field_s > var5_int; var5_int++) {
-                nm.field_c.field_f[var5_int] = var4_ref_m.field_h[var5_int];
+                IntKeyLookup.field_c.payload[var5_int] = var4_ref_m.field_h[var5_int];
               }
               ga.field_l = kg.field_b;
               kg.field_b = hi.field_w;
@@ -93,12 +93,12 @@ abstract class ka {
         try {
           while (true) {
             if (stackIn_19_0 < 0) {
-              nm.field_c.field_g = 0;
+              IntKeyLookup.field_c.position = 0;
               if (!wo.a(1, true)) {
                 return false;
               }
-              ec.field_g = nm.field_c.j((byte) -53);
-              nm.field_c.field_g = 0;
+              ec.field_g = IntKeyLookup.field_c.j((byte) -53);
+              IntKeyLookup.field_c.position = 0;
               ag.field_s = param1[ec.field_g];
             }
             if (!rm.a(0)) {
@@ -121,9 +121,9 @@ abstract class ka {
             }
             var5 = new m((long)var4 + var2_long, ec.field_g, new byte[ag.field_s]);
             for (var6 = 0; ag.field_s > var6; var6++) {
-              var5.field_h[var6] = nm.field_c.field_f[var6];
+              var5.field_h[var6] = IntKeyLookup.field_c.payload[var6];
             }
-            oo.field_T.a(88, var5);
+            oo.field_T.addLast(88, var5);
             ec.field_g = -1;
             stackIn_19_0 = ec.field_g;
           }
@@ -152,11 +152,11 @@ abstract class ka {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            nm.field_c = new dl(param7);
+            IntKeyLookup.field_c = new CipherPacketBuffer(param7);
             if (param0 != -31808) {
               return;
             }
-            q.field_p = new dl(param3);
+            q.field_p = new CipherPacketBuffer(param3);
             ca.field_h = param4;
             ub.field_g = param11;
             gl.field_a = param5;

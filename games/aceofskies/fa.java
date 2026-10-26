@@ -3,10 +3,10 @@
  */
 abstract class fa {
     static int field_a;
-    static rb field_c;
+    static PacketBuffer field_c;
     static eh field_b;
 
-    final static bo a(ha param0, boolean param1) {
+    final static bo a(GraphicsRenderer param0, boolean param1) {
         mq var2 = null;
         bo var3 = null;
         bo stackIn_2_0 = null;
@@ -30,7 +30,7 @@ abstract class fa {
             var3 = var2.field_j;
           } else {
             if (var2 != null) {
-              var2.c(-124);
+              var2.unlink(-124);
             }
             var3 = new bo(param0);
             ca.field_i.a(123, (long)param0.field_c, new mq(param0, var3));
@@ -73,7 +73,7 @@ abstract class fa {
         byte[] var3 = null;
         int var5 = 0;
         int var6 = 0;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.length();
           if (param1 != 8482) {
@@ -202,6 +202,6 @@ abstract class fa {
 
     static {
         field_a = 0;
-        field_c = new rb(256);
+        field_c = new PacketBuffer(256);
     }
 }

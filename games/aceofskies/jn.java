@@ -82,7 +82,7 @@ final class jn extends ab implements dn {
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
         int var7 = 0;
         int var6_int = 0;
-        int var8 = AceOfSkies.field_G ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var6_intLifetime1;
         try {
           for (var6_int = 0; var6_int < this.field_v; var6_int++) {
@@ -122,7 +122,7 @@ final class jn extends ab implements dn {
 
     private final void a(int param0, int param1) {
         int var5 = 0;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_v >= param1) {
           return;
         }

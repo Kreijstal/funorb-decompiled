@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends pa {
+final class tm extends RenderSprite {
     private int field_k;
     private int field_a;
     private int field_b;
@@ -151,7 +151,7 @@ final class tm extends pa {
 
     private final void a(boolean param0, int param1) {
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_g.a(param0, 1);
         this.field_g.a(this.field_j, 1);
         this.field_g.a(this.field_g.b(true, param1), -26625, 7681);
@@ -184,7 +184,7 @@ final class tm extends pa {
         int[] var11 = null;
         int[] var15 = null;
         int var9 = 0;
-        int var10 = AceOfSkies.field_G ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!this.field_g.field_eb) {
           this.field_j.a(param3, param1, param2, param6, param4, param0, 83);
         } else {
@@ -218,7 +218,7 @@ final class tm extends pa {
         int var15;
         el stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
-        var15 = AceOfSkies.field_G ? 1 : 0;
+        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         stackIn_2_0 = this.field_j;
         stackIn_3_1 = ((param7 & 1) == 0) ? false : true;
         ((el) (Object) stackIn_2_0).a(stackIn_3_1, -128);
@@ -351,7 +351,7 @@ final class tm extends pa {
         int var16Lifetime2;
         int var16Lifetime3;
         int var17Lifetime2;
-        var19 = AceOfSkies.field_G ? 1 : 0;
+        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 >= 0 &&
             re.field_f > param6) {

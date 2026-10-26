@@ -64,7 +64,7 @@ public final class kr extends bf {
           if (jagdx.gf.a(-1, param5.a(param4, var14))) {
             return false;
           }
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (0 <= param0) {
               if (1 != param0) {
                 var8 = param0 + 0;
@@ -78,7 +78,7 @@ public final class kr extends bf {
                         param5.CheckDeviceMultiSampleType(param4, param3, field_uc[var11], true, var8) == 0)) {
                         var7 = field_Jc[var11];
                         var6 = field_uc[var12];
-                        break L1;
+                        break scanLoop1;
                       }
                     }
                   }
@@ -392,7 +392,7 @@ public final class kr extends bf {
         this.field_Rc.SetTextureStageState(this.field_F, var6, var7 | kr.a(param3, (byte) -68));
     }
 
-    final void a(pa param0, boolean param1) {
+    final void a(RenderSprite param0, boolean param1) {
     }
 
     final void u(byte param0) {
@@ -429,7 +429,7 @@ public final class kr extends bf {
         this.field_Rc.SetTextureStageState(this.field_F, 4, var2);
     }
 
-    final static ha createToolkit(java.awt.Canvas param0, d param1, gk param2, Integer param3) {
+    final static GraphicsRenderer createToolkit(java.awt.Canvas param0, d param1, ResourceArchive param2, Integer param3) {
         kr stackIn_43_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -514,7 +514,7 @@ public final class kr extends bf {
           var4 = var15;
           var15.f((byte) 101);
           stackIn_43_0 = var15;
-          return (ha) ((Object) stackIn_43_0);
+          return (GraphicsRenderer) ((Object) stackIn_43_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
@@ -633,7 +633,7 @@ public final class kr extends bf {
           if (param0 == ij.field_g) {
             var3 = 131072;
           } else {
-            if (param0 == gk.field_g) {
+            if (param0 == ResourceArchive.field_g) {
               var3 = 196608;
             }
           }
@@ -712,8 +712,8 @@ public final class kr extends bf {
     final void C(int param0) {
         this.field_Rc.SetTransform(3, this.field_N);
         if (param0 > -51) {
-          pa var3 = (pa) null;
-          this.a((pa) null, true);
+          RenderSprite var3 = (RenderSprite) null;
+          this.a((RenderSprite) null, true);
         }
     }
 
@@ -724,8 +724,8 @@ public final class kr extends bf {
         float var6 = 0.0f;
         int var2 = 0;
         if (param0 < 123) {
-          pa var7 = (pa) null;
-          this.a((pa) null, true);
+          RenderSprite var7 = (RenderSprite) null;
+          this.a((RenderSprite) null, true);
         }
         while (var2 < this.field_B) {
           var3 = this.field_D[var2];
@@ -792,7 +792,7 @@ public final class kr extends bf {
 
     private final static int a(jb param0, byte param1) {
         as var3;
-        if (param0 == dl.field_p) {
+        if (param0 == CipherPacketBuffer.field_p) {
           return 2;
         }
         if (param0 == ac.field_b) {
@@ -926,7 +926,7 @@ public final class kr extends bf {
         if (!param0) {
           field_Sc = (float[]) null;
         }
-        if (param1 == gj.field_b) {
+        if (param1 == GameCanvas.field_b) {
           return 1;
         }
         if (tr.field_a == param1) {
@@ -983,7 +983,7 @@ public final class kr extends bf {
           if (ro.field_o == param0) {
             return 28;
           }
-          if (param0 == wf.field_d) {
+          if (param0 == IntrusiveNode.field_d) {
             return 50;
           }
           if (param0 == hh.field_c) {
@@ -1065,7 +1065,7 @@ public final class kr extends bf {
         }
     }
 
-    private kr(int param0, int param1, java.awt.Canvas param2, jaclib.peer.qt param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, cb param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, gk param10, int param11) {
+    private kr(int param0, int param1, java.awt.Canvas param2, jaclib.peer.qt param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, cb param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ResourceArchive param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
         jagdx.GeometryBuffer discarded$0 = null;
         boolean stackIn_4_1 = false;

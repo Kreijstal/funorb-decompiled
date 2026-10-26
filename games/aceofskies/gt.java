@@ -19,8 +19,8 @@ final class gt extends wt {
           field_r = null;
           return;
         }
-        gk var2 = (gk) null;
-        gt.a(110, (d) null, (java.awt.Canvas) null, (gk) null, 56);
+        ResourceArchive var2 = (ResourceArchive) null;
+        gt.a(110, (d) null, (java.awt.Canvas) null, (ResourceArchive) null, 56);
         field_r = null;
     }
 
@@ -31,7 +31,7 @@ final class gt extends wt {
         return new cd(ve.a(true), oh.a((byte) 114));
     }
 
-    final static ha a(int param0, d param1, java.awt.Canvas param2, gk param3, int param4) {
+    final static GraphicsRenderer a(int param0, d param1, java.awt.Canvas param2, ResourceArchive param3, int param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         jc var8 = null;
@@ -63,7 +63,7 @@ final class gt extends wt {
           var8 = new jc(var9, param2, var6, param1, param3, param4);
           var8.f((byte) 101);
           stackIn_10_0 = var8;
-          return (ha) ((Object) stackIn_10_0);
+          return (GraphicsRenderer) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -103,7 +103,7 @@ final class gt extends wt {
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           nb.field_c = uk.field_j;
           if (param0 <= 119) {
@@ -111,23 +111,23 @@ final class gt extends wt {
           }
           if (param2 != 255) {
             if (param2 < 100) {
-              vb.field_l = dq.a(param2, 32, param1);
+              GameAppletShell.field_l = dq.a(param2, 32, param1);
               return;
             }
             if (param2 > 105) {
-              vb.field_l = dq.a(param2, 32, param1);
+              GameAppletShell.field_l = dq.a(param2, 32, param1);
               return;
             }
             var7 = param3;
-            ps.a(var7, (byte) -17);
-            vb.field_l = oq.a((byte) -93, param3);
+            ArchiveIndex.a(var7, (byte) -17);
+            GameAppletShell.field_l = oq.a((byte) -93, param3);
             return;
           }
           stackIn_6_0 = 111;
           stackIn_7_1 = !(sd.field_h >= 13);
-          vb.field_l = in.$cfr$intArgs$a$1ded6534de63(stackIn_6_0, stackIn_7_1);
+          GameAppletShell.field_l = in.$cfr$intArgs$a$1ded6534de63(stackIn_6_0, stackIn_7_1);
           var6 = (String[]) null;
-          ps.a((String[]) null, (byte) -120);
+          ArchiveIndex.a((String[]) null, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

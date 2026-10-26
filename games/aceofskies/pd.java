@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd {
-    static jd field_a;
+    static SteeringMode field_a;
     static int field_b;
     private static String field_z;
 
@@ -15,6 +15,6 @@ final class pd {
 
     static {
         field_z = "pd.A(";
-        field_a = new jd();
+        field_a = new SteeringMode();
     }
 }

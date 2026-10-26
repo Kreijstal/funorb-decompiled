@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class jm {
-    static pa[] field_a;
+    static RenderSprite[] field_a;
     int field_f;
     static String field_b;
     static String field_c;

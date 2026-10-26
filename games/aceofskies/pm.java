@@ -32,9 +32,9 @@ class pm extends fn {
         field_d = null;
     }
 
-    final void a(rb param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         try {
-          param0.b((byte) -102, this.field_e);
+          param0.writeLong((byte) -102, this.field_e);
           param0.b(0, this.field_c);
           if (!param1) {
             this.a(-32);

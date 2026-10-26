@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends wf {
+final class ub extends IntrusiveNode {
     static int field_g;
-    static gk field_f;
-    static gb field_h;
+    static ResourceArchive field_f;
+    static AircraftDefinition field_h;
     byte[] field_e;
 
     final static void a(String param0, String param1, int param2) {
@@ -21,9 +21,9 @@ final class ub extends wf {
           }
           vr.field_b = new ce(param0, param1, false, true, true);
           if (param2 >= -82) {
-            field_h = (gb) null;
+            field_h = (AircraftDefinition) null;
           }
-          ak.field_d.d(vr.field_b, -30244);
+          ClientException.field_d.d(vr.field_b, -30244);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,7 +45,7 @@ final class ub extends wf {
         }
     }
 
-    final static void a(byte param0, gk param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2597_0;
             StringBuilder stackIn_2597_1;
@@ -56,9 +56,9 @@ final class ub extends wf {
             int var3;
             int var4;
             byte param0;
-            gk param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(byte initialParam0, gk initialParam1) {
+            $CfrPartitionedBody(byte initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2597_0 = null;
@@ -98,7 +98,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "error_js5connect_full");
                 if (null != var2) {
-                  eu.field_k = ea.a(0, var2);
+                  Bullet.field_k = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "error_js5connect");
                 if (null != var2) {
@@ -958,7 +958,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "ra_intro_no_name");
                 if (param0 > -7) {
-                  field_h = (gb) null;
+                  field_h = (AircraftDefinition) null;
                 }
                 if (var2 != null) {
                   ea.a(0, var2);
@@ -1105,7 +1105,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "goback");
                 if (var2 != null) {
-                  md.field_s = ea.a(0, var2);
+                  Aircraft.field_s = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "otheroptions");
                 if (var2 != null) {
@@ -1167,7 +1167,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "back");
                 if (var2 != null) {
-                  eu.field_j = ea.a(0, var2);
+                  Bullet.field_j = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "exitfullscreenmode");
                 if (var2 != null) {
@@ -1427,7 +1427,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "create_createanaccount");
                 if (var2 != null) {
-                  jd.field_b = ea.a(0, var2);
+                  SteeringMode.field_b = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "create_username");
                 if (var2 != null) {
@@ -1851,7 +1851,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "loading_soundeffects");
                 if (null != var2) {
-                  gk.field_c = ea.a(0, var2);
+                  ResourceArchive.field_c = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "loading_music");
                 if (var2 != null) {
@@ -1931,7 +1931,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "music_colon");
                 if (null != var2) {
-                  ct.field_C = ea.a(0, var2);
+                  NetworkGameClient.field_C = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "fullscreen");
                 if (var2 != null) {
@@ -2059,7 +2059,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "ok");
                 if (null != var2) {
-                  qf.field_k = ea.a(0, var2);
+                  SmokeParticle.field_k = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "on");
                 if (null != var2) {
@@ -2557,7 +2557,7 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
-                  nm.a(var2[0], 29337);
+                  IntKeyLookup.a(var2[0], 29337);
                 }
                 var2 = lr.a(4688, "rating_noratings");
                 if (null != var2) {
@@ -2813,11 +2813,11 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  nk.field_f[0] = ea.a(0, var2);
+                  MenuScreen.field_f[0] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "rating_mode_long_name,1");
                 if (var2 != null) {
-                  nk.field_f[1] = ea.a(0, var2);
+                  MenuScreen.field_f[1] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "graphics_config_fixed_size");
                 if (var2 != null) {
@@ -2909,31 +2909,31 @@ final class ub extends wf {
                 }
                 var2 = lr.a(4688, "mustlogin3,1");
                 if (null != var2) {
-                  rb.field_i[1] = ea.a(0, var2);
+                  PacketBuffer.field_i[1] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin3,2");
                 if (null != var2) {
-                  rb.field_i[2] = ea.a(0, var2);
+                  PacketBuffer.field_i[2] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin3,3");
                 if (null != var2) {
-                  rb.field_i[3] = ea.a(0, var2);
+                  PacketBuffer.field_i[3] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin3,4");
                 if (var2 != null) {
-                  rb.field_i[4] = ea.a(0, var2);
+                  PacketBuffer.field_i[4] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin3,5");
                 if (var2 != null) {
-                  rb.field_i[5] = ea.a(0, var2);
+                  PacketBuffer.field_i[5] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin3,6");
                 if (var2 != null) {
-                  rb.field_i[6] = ea.a(0, var2);
+                  PacketBuffer.field_i[6] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "mustlogin3,7");
                 if (var2 != null) {
-                  rb.field_i[7] = ea.a(0, var2);
+                  PacketBuffer.field_i[7] = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "discard");
                 if (var2 != null) {
@@ -3058,7 +3058,7 @@ final class ub extends wf {
                 te.field_f = null;
             }
             void run() {
-                var3 = AceOfSkies.field_G ? 1 : 0;
+                var3 = AceOfSkies.obfuscationControl ? 1 : 0;
                 try {
                   runChunk0();
                   if (finished) return;
@@ -3079,9 +3079,9 @@ final class ub extends wf {
                   throw pn.a((Throwable) ((Object) stackIn_2597_0), ((StringBuilder) (Object) stackIn_2597_1).append(stackIn_2598_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = vb.field_a;
+                  var4 = GameAppletShell.field_a;
                   var4++;
-                  vb.field_a = var4;
+                  GameAppletShell.field_a = var4;
                 }
             }
         }
@@ -3125,6 +3125,6 @@ final class ub extends wf {
     }
 
     static {
-        field_h = new gb(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
+        field_h = new AircraftDefinition(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
     }
 }

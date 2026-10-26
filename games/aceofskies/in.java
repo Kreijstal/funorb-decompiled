@@ -4,7 +4,7 @@
 final class in {
     static int[] field_b;
     long field_d;
-    static pa[] field_c;
+    static RenderSprite[] field_c;
     private wl field_a;
 
     public static void a(boolean param0) {
@@ -56,7 +56,7 @@ final class in {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
@@ -73,7 +73,7 @@ final class in {
             return stackIn_12_0;
           }
           if (param0 < 124) {
-            field_c = (pa[]) null;
+            field_c = (RenderSprite[]) null;
           }
           var4 = var3;
           for (var5 = 0; var5 < var4.length; var5++) {

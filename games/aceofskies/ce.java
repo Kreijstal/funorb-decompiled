@@ -143,23 +143,23 @@ final class ce extends ab implements dr, dn {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        dl var28 = null;
+        CipherPacketBuffer var28 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
-        var26 = AceOfSkies.field_G ? 1 : 0;
+        var26 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 116) {
             field_A = -61;
           }
-          var28 = nm.field_c;
-          var2 = var28.g(-85);
+          var28 = IntKeyLookup.field_c;
+          var2 = var28.readUnsignedByte(-85);
           if (var2 == 0) {
-            var3 = var28.i((byte) 0);
-            var4 = (uc) (nh.field_g.d(268435455));
+            var3 = var28.readUnsignedShort((byte) 0);
+            var4 = (uc) (nh.field_g.first(268435455));
             while (var4 != null) {
               if (var3 != var4.field_n) {
-                var4 = (uc) (nh.field_g.b((byte) 103));
+                var4 = (uc) (nh.field_g.next((byte) 103));
                 continue;
               }
               break;
@@ -168,7 +168,7 @@ final class ce extends ab implements dr, dn {
               te.b(true);
               return;
             }
-            var5 = var28.g(param0 - 167);
+            var5 = var28.readUnsignedByte(param0 - 167);
             if (var5 != 0) {
               var6 = var4.field_j;
               pe.field_b[0].field_f = null;
@@ -178,7 +178,7 @@ final class ce extends ab implements dr, dn {
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 pe.field_b[var8_int].field_e = var28.h(-17883);
                 pe.field_b[var8_int].field_g = false;
-                if (var28.g(-47) != 1) {
+                if (var28.readUnsignedByte(-47) != 1) {
                   pe.field_b[var8_int].field_f = null;
                 } else {
                   pe.field_b[var8_int].field_f = var28.h(param0 ^ -17839);
@@ -200,13 +200,13 @@ final class ce extends ab implements dr, dn {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.g(-119);
+              var18 = var28.readUnsignedByte(-119);
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var28.g(param0 ^ 69);
+                  var20 = var28.readUnsignedByte(param0 ^ 69);
                   var21 = pe.field_b[var20].field_e;
-                  var22 = var28.h((byte) -32);
-                  var24 = var28.field_g;
+                  var22 = var28.readLong((byte) -32);
+                  var24 = var28.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = pe.field_b[var20].field_f;
@@ -215,7 +215,7 @@ final class ce extends ab implements dr, dn {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.a((byte) 124);
+                      var11[0][incrementValue$3] = var28.readInt((byte) 124);
                     }
                   }
                   if (var21 != null &&
@@ -224,11 +224,11 @@ final class ce extends ab implements dr, dn {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var28.field_g = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.a((byte) 114);
+                      var11[1][incrementValue$4] = var28.readInt((byte) 114);
                     }
                   }
                   if (var6 > var14 &&
@@ -238,27 +238,27 @@ final class ce extends ab implements dr, dn {
                     var9[2][var14] = pe.field_b[var20].field_f;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_g = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.a((byte) 113);
+                      var11[2][incrementValue$5] = var28.readInt((byte) 113);
                     }
                   }
                 }
               }
             }
             var4.field_i = true;
-            var4.c(param0 ^ -16);
+            var4.unlink(param0 ^ -16);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.i((byte) 0);
-            var4_long = var28.h((byte) 64);
-            var6_ref_ga = (ga) (tq.field_d.d(268435455));
+            var3Lifetime1 = var28.readUnsignedShort((byte) 0);
+            var4_long = var28.readLong((byte) 64);
+            var6_ref_ga = (ga) (tq.field_d.first(268435455));
             while (var6_ref_ga != null) {
               if (var6_ref_ga.field_m != var3Lifetime1) {
-                var6_ref_ga = (ga) (tq.field_d.b((byte) 103));
+                var6_ref_ga = (ga) (tq.field_d.next((byte) 103));
                 continue;
               }
               break;
@@ -268,10 +268,10 @@ final class ce extends ab implements dr, dn {
               return;
             }
             var6_ref_ga.field_j = var4_long;
-            var6_ref_ga.c(-127);
+            var6_ref_ga.unlink(-127);
             return;
           }
-          v.a("HS1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
+          v.a("HS1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
           te.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -339,7 +339,7 @@ final class ce extends ab implements dr, dn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var6_intLifetime1;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != this.field_D) {
             if (param1 != this.field_w) {
@@ -351,10 +351,10 @@ final class ce extends ab implements dr, dn {
                 if (this.field_E) {
                   pj.b((byte) -75);
                 } else {
-                  rb.i(-112);
+                  PacketBuffer.i(-112);
                 }
               } else {
-                ps.b(17);
+                ArchiveIndex.b(17);
               }
             } else {
               cu.c((byte) 104);
@@ -435,7 +435,7 @@ final class ce extends ab implements dr, dn {
             if (!this.field_E) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = eu.field_j;
+              stackIn_19_3 = Bullet.field_j;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -443,7 +443,7 @@ final class ce extends ab implements dr, dn {
             }
             this.field_z = new mi(stackIn_19_3, (no) null);
             if (this.field_B) {
-              this.field_w = new mi(jd.field_b, (no) (this));
+              this.field_w = new mi(SteeringMode.field_b, (no) (this));
             }
           } else {
             this.field_D = new mi(hg.field_z, (no) null);

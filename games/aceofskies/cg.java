@@ -82,7 +82,7 @@ final class cg extends ua implements tl {
         return this.field_o;
     }
 
-    final static void a(boolean param0, gk param1, gk param2, boolean param3, gk param4) {
+    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, boolean param3, ResourceArchive param4) {
         try {
           gm.field_x = od.a("", 66);
           gm.field_x.a(param0, false);

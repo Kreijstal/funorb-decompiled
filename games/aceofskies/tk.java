@@ -9,7 +9,7 @@ class tk {
     private static int field_d;
     static int field_f;
     static boolean field_r;
-    private rf field_n;
+    private PcmStream field_n;
     private static pn field_s;
     private long field_q;
     private int field_o;
@@ -17,12 +17,12 @@ class tk {
     private boolean field_c;
     private int field_h;
     private int field_k;
-    private rf[] field_u;
+    private PcmStream[] field_u;
     private int field_a;
     private int field_g;
     private long field_l;
     private int field_i;
-    private rf[] field_b;
+    private PcmStream[] field_b;
 
     int g() throws Exception {
         return this.field_h;
@@ -36,20 +36,20 @@ class tk {
         int var7_int;
         Object var7;
         int var8_int;
-        rf[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        rf var11;
+        PcmStream var11;
         gs var12;
         int var13;
-        rf var14;
+        PcmStream var14;
         int var15_int;
-        rf var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        rf var14Lifetime1;
-        rf var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_r) {
           var3 = var3 << 1;
@@ -64,7 +64,7 @@ class tk {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -97,7 +97,7 @@ class tk {
                       var12.field_e = var12.field_e + var13;
                     }
                     if (var4 >= this.field_j) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.b();
                     if (var14Lifetime2 != null) {
@@ -110,12 +110,12 @@ class tk {
                     var15 = var11.field_e;
                     var11.field_e = null;
                     if (var10 != null) {
-                      ((rf) (var10)).field_e = var15;
+                      ((PcmStream) (var10)).field_e = var15;
                     } else {
                       this.field_b[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_u[var7_int] = (rf) (var10);
+                      this.field_u[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -136,8 +136,8 @@ class tk {
             this.field_u[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((rf) (var7)).field_e;
-              ((rf) (var7)).field_e = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_e;
+              ((PcmStream) (var7)).field_e = null;
               var7 = var10Lifetime1;
             }
           }
@@ -266,21 +266,21 @@ class tk {
     void a(int param0) throws Exception {
     }
 
-    private final static void b(rf param0) {
+    private final static void b(PcmStream param0) {
         param0.field_g = false;
         if (param0.field_f != null) {
           param0.field_f.field_e = 0;
         }
-        rf var1 = param0.b();
+        PcmStream var1 = param0.b();
         while (var1 != null) {
           tk.b(var1);
           var1 = param0.a();
         }
     }
 
-    private final void a(rf param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        rf var4 = this.field_u[var3];
+        PcmStream var4 = this.field_u[var3];
         if (var4 == null) {
           this.field_b[var3] = param0;
         } else {
@@ -306,7 +306,7 @@ class tk {
           if (var1 != 0) {
             field_s.field_a = true;
             while (field_s.field_e) {
-              wf.a(50L, false);
+              IntrusiveNode.a(50L, false);
             }
             field_s = null;
           }
@@ -349,7 +349,7 @@ class tk {
         field_d = param2;
     }
 
-    final synchronized void a(rf param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_n = param0;
     }
 
@@ -426,12 +426,12 @@ class tk {
         this.field_p = kh.a(-86);
         this.field_t = 0;
         this.field_c = true;
-        this.field_u = new rf[8];
+        this.field_u = new PcmStream[8];
         this.field_g = 0;
         this.field_q = 0L;
         this.field_o = 0;
         this.field_l = 0L;
         this.field_a = 0;
-        this.field_b = new rf[8];
+        this.field_b = new PcmStream[8];
     }
 }

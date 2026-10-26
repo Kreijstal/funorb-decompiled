@@ -7,7 +7,7 @@ final class dh {
     int field_a;
     static String field_d;
     int field_f;
-    static pa field_k;
+    static RenderSprite field_k;
     int field_l;
     byte[] field_e;
     int field_h;
@@ -30,26 +30,26 @@ final class dh {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        dl var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var10 = null;
         int[] var11 = null;
         oc var12 = null;
-        dl var13 = null;
+        CipherPacketBuffer var13 = null;
         eh var14 = null;
         int[] var15 = null;
         Object var16 = null;
         eh var16_ref = null;
         int[] var17 = null;
         var16 = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 <= 39) {
-            field_k = (pa) null;
+            field_k = (RenderSprite) null;
           }
-          var13 = nm.field_c;
-          var2 = var13.g(121);
+          var13 = IntKeyLookup.field_c;
+          var2 = var13.readUnsignedByte(121);
           if (var2 == 0) {
             var11 = fu.a(true);
             var17 = var11;
@@ -58,11 +58,11 @@ final class dh {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((rb) ((Object) var5)).g(-97);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-97);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((rb) ((Object) var5)).a((byte) 124);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 124);
             }
-            var16_ref = (eh) (wu.field_w.d(268435455));
+            var16_ref = (eh) (wu.field_w.first(268435455));
             if (var16_ref == null) {
               te.b(true);
               return;
@@ -70,12 +70,12 @@ final class dh {
             var16_ref.field_g = true;
             var16_ref.field_e = var17[0];
             var16_ref.field_f = var3;
-            var16_ref.c(-124);
+            var16_ref.unlink(-124);
             return;
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var14 = (eh) (wu.field_w.d(268435455));
+              var14 = (eh) (wu.field_w.first(268435455));
               if (var14 == null) {
                 te.b(true);
                 return;
@@ -83,18 +83,18 @@ final class dh {
               var14.field_f = fu.a(true);
               var14.field_g = true;
               var14.field_e = var14.field_f[0];
-              var14.c(-125);
+              var14.unlink(-125);
             } else {
-              v.a("A1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
+              v.a("A1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
               te.b(true);
             }
           } else {
-            var12 = (oc) (ci.field_j.d(268435455));
+            var12 = (oc) (ci.field_j.first(268435455));
             if (var12 == null) {
               te.b(true);
               return;
             }
-            var12.c(-123);
+            var12.unlink(-123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class dh {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, ap param4) {
+    final static void a(int param0, int param1, boolean param2, int param3, MusicTrack param4) {
         try {
           wt.field_e.a((byte) -50, param3, !param2 ? true : false, param1, param4, param0);
         } catch (RuntimeException runtimeException) {

@@ -75,7 +75,7 @@ final class eo {
         throw new IllegalStateException();
     }
 
-    final static vt a(gk param0, int param1, int param2, int param3, gk param4) {
+    final static vt a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;

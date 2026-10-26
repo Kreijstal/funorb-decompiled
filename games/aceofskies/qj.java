@@ -55,7 +55,7 @@ final class qj extends he {
           int var1 = 71 % ((param0 + 64) / 57);
           nq.field_a = true;
           ep.a(true, 0);
-          ob.field_d = 0;
+          SoundCache.field_d = 0;
           return;
         }
         throw new IllegalStateException();

@@ -77,7 +77,7 @@ final class jh extends sk {
     }
 
     final void a(boolean param0, byte param1) {
-        this.field_b.a((byte) 127, 0, dl.field_p);
+        this.field_b.a((byte) 127, 0, CipherPacketBuffer.field_p);
         this.field_b.a((byte) 122, 1, bs.field_a);
         this.field_b.a(false, 2, true, ac.field_b, true);
         this.field_b.d(false, -113);
@@ -122,7 +122,7 @@ final class jh extends sk {
         }
     }
 
-    jh(kr param0, gk param1, em param2) {
+    jh(kr param0, ResourceArchive param1, em param2) {
         super(param0);
         this.field_g = param0;
         this.field_i = param2;
@@ -137,7 +137,7 @@ final class jh extends sk {
 
     final void a(boolean param0) {
         this.field_g.a((jagdx.IDirect3DVertexShader) null, 5243);
-        this.field_b.a((byte) 119, 0, dl.field_p);
+        this.field_b.a((byte) 119, 0, CipherPacketBuffer.field_p);
         this.field_b.a((byte) 123, 1, ac.field_b);
         this.field_b.a((byte) 119, 2, bs.field_a);
         this.field_b.d(param0, -121);

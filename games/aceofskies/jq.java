@@ -53,7 +53,7 @@ final class jq extends oo implements dn {
         RuntimeException var4_ref = null;
         jn var5 = null;
         int var6 = 0;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_gb = true;
           if (param2 != 11) {
@@ -91,7 +91,7 @@ final class jq extends oo implements dn {
                 var5.a(11, (byte) 105, ln.field_a);
                 var5.a(17, (byte) -126, mb.field_s);
               } else {
-                var5.a(-1, (byte) -51, eu.field_j);
+                var5.a(-1, (byte) -51, Bullet.field_j);
               }
             } else {
               var5.a((no) (this), param2 ^ 17536, mq.field_i);

@@ -14,20 +14,20 @@ final class ei {
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        dl var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var1_int = -36 % ((-50 - param0) / 48);
           var2 = q.field_p;
           while (sa.a(true)) {
             var2.g(65, 8);
-            fieldTemp$0 = var2.field_g + 1;
-            var2.field_g = var2.field_g + 1;
+            fieldTemp$0 = var2.position + 1;
+            var2.position = var2.position + 1;
             var3 = fieldTemp$0;
             hb.a(var2, 24732);
-            q.field_p.b(var2.field_g - var3, (byte) 118);
+            q.field_p.b(var2.position - var3, (byte) 118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,18 +77,18 @@ final class ei {
         }
     }
 
-    final void a(byte[] param0, int param1, rb param2) {
+    final void a(byte[] param0, int param1, PacketBuffer param2) {
         try {
           try {
-            if (31 != param2.field_f[param2.field_g] ||
-              param2.field_f[param2.field_g + 1] != -117) {
+            if (31 != param2.payload[param2.position] ||
+              param2.payload[param2.position + 1] != -117) {
               throw new RuntimeException("");
             }
             if (this.field_b == null) {
               this.field_b = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_b.setInput(param2.field_f, param1 + param2.field_g, param2.field_f.length - (8 + param2.field_g + 10));
+              this.field_b.setInput(param2.payload, param1 + param2.position, param2.payload.length - (8 + param2.position + 10));
               this.field_b.inflate(param0);
             } catch (Exception exception) {
               this.field_b.reset();

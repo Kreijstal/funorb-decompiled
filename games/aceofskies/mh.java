@@ -8,7 +8,7 @@ final class mh extends cq implements bp {
     private int field_m;
     private int field_i;
     private int field_k;
-    static al field_o;
+    static PcmSample field_o;
 
     public final void a(byte param0) {
         super.a(param0);

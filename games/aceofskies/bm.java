@@ -174,8 +174,8 @@ class bm extends mi {
 
     final static java.applet.Applet m(int param0) {
         if (param0 < 106) {
-          al var2 = (al) null;
-          bm.a((byte) -67, (al) null);
+          PcmSample var2 = (PcmSample) null;
+          bm.a((byte) -67, (PcmSample) null);
           if (hu.field_a != null) {
             return hu.field_a;
           }
@@ -191,7 +191,7 @@ class bm extends mi {
         int var2;
         int var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_B == 0) {
           return this.field_B;
         }
@@ -247,10 +247,10 @@ class bm extends mi {
         }
     }
 
-    final static rh a(byte param0, al param1) {
+    final static SoundPlayback a(byte param0, PcmSample param1) {
         RuntimeException var2 = null;
-        rh stackIn_2_0 = null;
-        rh stackIn_4_0 = null;
+        SoundPlayback stackIn_2_0 = null;
+        SoundPlayback stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -260,7 +260,7 @@ class bm extends mi {
             stackIn_4_0 = am.a(param1, false);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (rh) null;
+          stackIn_2_0 = (SoundPlayback) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -402,7 +402,7 @@ class bm extends mi {
         int var7;
         int var8;
         et var9;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!this.field_y) {
           this.field_j = 0;
           this.field_l = 0;
@@ -490,8 +490,8 @@ class bm extends mi {
           field_w = null;
           return;
         }
-        al var2 = (al) null;
-        bm.a((byte) -72, (al) null);
+        PcmSample var2 = (PcmSample) null;
+        bm.a((byte) -72, (PcmSample) null);
         field_x = null;
         field_I = null;
         field_C = null;
@@ -515,7 +515,7 @@ class bm extends mi {
         int var2;
         int var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         var2 = this.field_f.length();
         if (param0 != 0) {
           return -109;

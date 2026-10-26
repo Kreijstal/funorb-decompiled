@@ -12,11 +12,11 @@ abstract class un {
     static lh field_o;
     long field_m;
     int field_p;
-    rb field_l;
+    PacketBuffer field_l;
     byte field_k;
     volatile int field_j;
     static bo field_f;
-    rb field_h;
+    PacketBuffer field_h;
     volatile int field_e;
     gp field_a;
 
@@ -104,30 +104,30 @@ abstract class un {
           if (param0 != -21) {
             field_i = (jb) null;
             vr.field_b = new ce(var2, (String) null, true, false, false);
-            vn.field_f.a(ak.field_d, 0);
-            ak.field_d.d(vr.field_b, -30244);
-            ak.field_d.e((byte) 85);
+            vn.field_f.a(ClientException.field_d, 0);
+            ClientException.field_d.d(vr.field_b, -30244);
+            ClientException.field_d.e((byte) 85);
             return;
           }
           vr.field_b = new ce(var2, (String) null, true, false, false);
-          vn.field_f.a(ak.field_d, 0);
-          ak.field_d.d(vr.field_b, -30244);
-          ak.field_d.e((byte) 85);
+          vn.field_f.a(ClientException.field_d, 0);
+          ClientException.field_d.d(vr.field_b, -30244);
+          ClientException.field_d.e((byte) 85);
           return;
         }
         String var3 = ka.a(param0 ^ 118);
         if (param0 == -21) {
           vr.field_b = new ce(var3, (String) null, true, false, false);
-          vn.field_f.a(ak.field_d, 0);
-          ak.field_d.d(vr.field_b, -30244);
-          ak.field_d.e((byte) 85);
+          vn.field_f.a(ClientException.field_d, 0);
+          ClientException.field_d.d(vr.field_b, -30244);
+          ClientException.field_d.e((byte) 85);
           return;
         }
         field_i = (jb) null;
         vr.field_b = new ce(var3, (String) null, true, false, false);
-        vn.field_f.a(ak.field_d, 0);
-        ak.field_d.d(vr.field_b, -30244);
-        ak.field_d.e((byte) 85);
+        vn.field_f.a(ClientException.field_d, 0);
+        ClientException.field_d.d(vr.field_b, -30244);
+        ClientException.field_d.e((byte) 85);
     }
 
     abstract void b(byte param0);
@@ -152,11 +152,11 @@ abstract class un {
         this.field_g = new er();
         this.field_d = new er();
         this.field_n = new er();
-        this.field_l = new rb(6);
+        this.field_l = new PacketBuffer(6);
         this.field_j = 0;
         this.field_k = (byte) 0;
         this.field_e = 0;
-        this.field_h = new rb(10);
+        this.field_h = new PacketBuffer(10);
     }
 
     static {

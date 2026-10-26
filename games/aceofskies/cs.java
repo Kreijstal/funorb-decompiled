@@ -23,7 +23,7 @@ final class cs {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!this.b(true)) {
             return false;
@@ -134,7 +134,7 @@ final class cs {
           }
           if (param3 instanceof byte[]) {
             var4 = (byte[]) (param3);
-            stackIn_8_0 = eu.a(var4, param2, (byte) 20, param1);
+            stackIn_8_0 = Bullet.a(var4, param2, (byte) 20, param1);
             return stackIn_8_0;
           }
           if (!(param3 instanceof af)) {
@@ -167,7 +167,7 @@ final class cs {
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var3_int = param2.field_cb - param0.field_cb;
           if (ul.field_s != param2.field_bb) {

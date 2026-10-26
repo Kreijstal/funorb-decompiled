@@ -3,7 +3,7 @@
  */
 abstract class fn {
     static String field_b;
-    static gk field_a;
+    static ResourceArchive field_a;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -16,7 +16,7 @@ abstract class fn {
         field_b = null;
     }
 
-    abstract void a(rb param0, boolean param1);
+    abstract void a(PacketBuffer param0, boolean param1);
 
     abstract eo a(int param0);
 

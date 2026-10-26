@@ -22,7 +22,7 @@ final class pf extends mi {
         int var11 = 0;
         int var13 = 0;
         int var14 = 0;
-        var14 = AceOfSkies.field_G ? 1 : 0;
+        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!super.a((int) (char)param0, param1, param2, param3, param4, param5, param6)) {
             return false;

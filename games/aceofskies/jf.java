@@ -9,16 +9,16 @@ final class jf implements ir {
         if (param0 == 15000) {
           v.field_a = true;
           wg.field_b = kh.a(param0 - 15076) + 15000L;
-          return ob.field_d == 11 ? true : false;
+          return SoundCache.field_d == 11 ? true : false;
         }
-        gk var2 = (gk) null;
-        jf.a(83, (gk) null, (gk) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        jf.a(83, (ResourceArchive) null, (ResourceArchive) null);
         v.field_a = true;
         wg.field_b = kh.a(param0 - 15076) + 15000L;
-        return ob.field_d == 11 ? true : false;
+        return SoundCache.field_d == 11 ? true : false;
     }
 
-    final static void a(int param0, gk param1, gk param2) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         lj.field_c = nc.a(param1, param0 ^ 102, param2, jb.field_a, (boolean[]) null);
         boolean[] var5 = (boolean[]) null;
         kn.field_c = nc.a(param1, -107, param2, s.field_d, (boolean[]) null);

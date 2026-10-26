@@ -5,23 +5,23 @@ final class lu {
     private wj field_b;
     static String field_a;
     private wl field_d;
-    private kp field_c;
+    private IntrusiveDeque field_c;
 
     final void a(int param0) {
-        wf var2;
+        IntrusiveNode var2;
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_b = null;
         if (param0 != 1) {
           return;
         }
-        if (this.field_c.a(true)) {
+        if (this.field_c.isEmpty(true)) {
           return;
         }
-        var2 = this.field_c.d(268435455);
-        while (var2 != this.field_c.field_e) {
+        var2 = this.field_c.first(268435455);
+        while (var2 != this.field_c.sentinel) {
           ((eq) (var2)).a((byte) -93);
-          var2 = var2.field_a;
+          var2 = var2.next;
         }
     }
 
@@ -42,7 +42,7 @@ final class lu {
     }
 
     lu(wl param0) {
-        this.field_c = new kp();
+        this.field_c = new IntrusiveDeque();
         try {
           this.field_d = param0;
           if (this.field_d.field_A) {

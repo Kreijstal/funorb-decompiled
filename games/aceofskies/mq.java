@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mq extends wf {
+final class mq extends IntrusiveNode {
     static eg field_h;
     bo field_j;
-    ha field_f;
+    GraphicsRenderer field_f;
     static Object field_e;
     static st field_g;
     static String field_i;
@@ -23,7 +23,7 @@ final class mq extends wf {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4Lifetime1;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           stackIn_4_0 = (param1[-1 + param1.length] != 0) ? 0 : 1;
           var2_int = stackIn_4_0;
@@ -154,7 +154,7 @@ final class mq extends wf {
         return stackIn_27_0 + stackIn_30_1;
     }
 
-    mq(ha param0, bo param1) {
+    mq(GraphicsRenderer param0, bo param1) {
         try {
           this.field_f = param0;
           this.field_j = param1;

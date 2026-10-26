@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class du extends rb {
+final class du extends PacketBuffer {
     static as field_l;
     static String field_n;
     static String[] field_o;
     static vf field_m;
     static String[] field_p;
 
-    final static void a(int param0, int param1, tp param2, gk param3) {
+    final static void a(int param0, int param1, tp param2, ResourceArchive param3) {
         try {
           la.field_k = bl.a(113) * param0 / 1000;
           op.a(20786, param3);
@@ -52,34 +52,34 @@ final class du extends rb {
         int var3Lifetime1;
         if (param0 == -90) {
           var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-          fieldTemp$0 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$0] = (byte)var3;
-          fieldTemp$1 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$1] = (byte)(var3 >> 8);
-          fieldTemp$2 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$2] = (byte)(var3 >> 16);
-          fieldTemp$3 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$3] = (byte)(var3 >> 24);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte)var3;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(var3 >> 8);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 16);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
         du.k(67);
         var3Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        int fieldTemp$4 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$4] = (byte)var3Lifetime1;
-        int fieldTemp$5 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$5] = (byte)(var3Lifetime1 >> 8);
-        int fieldTemp$6 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$6] = (byte)(var3Lifetime1 >> 16);
-        int fieldTemp$7 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$7] = (byte)(var3Lifetime1 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)var3Lifetime1;
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(var3Lifetime1 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(var3Lifetime1 >> 16);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(var3Lifetime1 >> 24);
     }
 
     du(int param0) {
@@ -100,31 +100,31 @@ final class du extends rb {
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-        int fieldTemp$0 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$0] = (byte)(var3 >> 24);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(var3 >> 24);
         if (param0 >= 59) {
-          fieldTemp$1 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$1] = (byte)(var3 >> 16);
-          fieldTemp$2 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$2] = (byte)(var3 >> 8);
-          fieldTemp$3 = this.field_g;
-          this.field_g = this.field_g + 1;
-          this.field_f[fieldTemp$3] = (byte)var3;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(var3 >> 16);
+          fieldTemp$2 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$2] = (byte)(var3 >> 8);
+          fieldTemp$3 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$3] = (byte)var3;
           return;
         }
         du.k(97);
-        int fieldTemp$4 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$4] = (byte)(var3 >> 16);
-        int fieldTemp$5 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$5] = (byte)(var3 >> 8);
-        int fieldTemp$6 = this.field_g;
-        this.field_g = this.field_g + 1;
-        this.field_f[fieldTemp$6] = (byte)var3;
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(var3 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(var3 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)var3;
     }
 
     static {

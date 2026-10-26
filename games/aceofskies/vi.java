@@ -72,7 +72,7 @@ final class vi extends qm {
         sc var5 = null;
         sc var6 = null;
         int var7 = 0;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2) {
             return;
@@ -116,8 +116,8 @@ final class vi extends qm {
 
     final sc a(int param0, int param1) {
         if (param0 >= -40) {
-          rb var4 = (rb) null;
-          vi.a((byte) 62, (rb) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          vi.a((byte) 62, (PacketBuffer) null);
         }
         sc dupTemp$0 = new sc();
         this.field_o[param1] = dupTemp$0;
@@ -150,7 +150,7 @@ final class vi extends qm {
         RuntimeException var6 = null;
         sc var7 = null;
         sc var9 = null;
-        rb var10 = null;
+        PacketBuffer var10 = null;
         mi var11 = null;
         sc var12 = null;
         sc var13 = null;
@@ -158,8 +158,8 @@ final class vi extends qm {
         sc var15 = null;
         try {
           if (param1 != -7592) {
-            var10 = (rb) null;
-            vi.a((byte) -20, (rb) null);
+            var10 = (PacketBuffer) null;
+            vi.a((byte) -20, (PacketBuffer) null);
           }
           if (param3 instanceof mi) {
             stackIn_5_0 = (ea) (param3);
@@ -235,7 +235,7 @@ final class vi extends qm {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var8 = this.field_o;
           var3 = var8;
@@ -301,7 +301,7 @@ final class vi extends qm {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var8 = this.field_o;
           var3 = var8;
@@ -330,7 +330,7 @@ final class vi extends qm {
         }
     }
 
-    final static void a(byte param0, rb param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;
@@ -338,7 +338,7 @@ final class vi extends qm {
           int var3_int = 0;
           Exception var3 = null;
           int var5 = 0;
-          rb var6 = null;
+          PacketBuffer var6 = null;
           byte[] var7 = null;
           byte[] var8 = null;
           byte[] var9 = null;
@@ -348,7 +348,7 @@ final class vi extends qm {
           StringBuilder stackIn_21_1 = null;
           String stackIn_22_2 = null;
           Throwable decompiledCaughtException = null;
-          var5 = AceOfSkies.field_G ? 1 : 0;
+          var5 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             var10 = new byte[24];
             var8 = var10;
@@ -378,8 +378,8 @@ final class vi extends qm {
               }
             }
             if (param0 != -1) {
-              var6 = (rb) null;
-              vi.a((byte) -110, (rb) null);
+              var6 = (PacketBuffer) null;
+              vi.a((byte) -110, (PacketBuffer) null);
             }
             param1.a(true, 24, 0, var11);
             return;

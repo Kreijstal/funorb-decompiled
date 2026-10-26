@@ -33,7 +33,7 @@ abstract class pj {
     }
 
     final static void b(byte param0) {
-        ak.field_d.d(new tn(), -30244);
+        ClientException.field_d.d(new tn(), -30244);
         if (param0 >= -21) {
           s var2 = (s) null;
           pj.a(19, (s) null);
@@ -49,7 +49,7 @@ abstract class pj {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null == param1.field_j) {
             return;

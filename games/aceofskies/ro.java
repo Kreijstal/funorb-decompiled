@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ro extends ua implements ti {
-    static gb field_u;
+    static AircraftDefinition field_u;
     static hd field_o;
     private la field_s;
     static String field_p;
@@ -24,7 +24,7 @@ final class ro extends ua implements ti {
         byte[] var10;
         byte[] var11;
         int var5Lifetime1;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != -3992) {
           ro.c((byte) 102);
         }
@@ -178,7 +178,7 @@ final class ro extends ua implements ti {
     }
 
     static {
-        field_u = new gb(4.0, 20, 3, 100, 25, 2.0, 20.0, 32, 2);
+        field_u = new AircraftDefinition(4.0, 20, 3, 100, 25, 2.0, 20.0, 32, 2);
         field_p = "ACHIEVEMENTS";
         field_o = new hd(1);
         field_r = new lh();

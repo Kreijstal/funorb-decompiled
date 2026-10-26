@@ -77,7 +77,7 @@ final class ql extends ud {
         int var4_intLifetime3;
         int var6Lifetime3;
         int var10Lifetime3;
-        var19 = AceOfSkies.field_G ? 1 : 0;
+        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!param0) {
             return;
@@ -100,14 +100,14 @@ final class ql extends ud {
             var17 = this.field_i[var15 & 255] & 255;
             if (!this.field_n) {
               for (var10 = 0; ms.field_d > var10; var10++) {
-                var4_int = this.field_q * ct.field_v[var10];
+                var4_int = this.field_q * NetworkGameClient.field_v[var10];
                 var6 = this.a(false, var4_int * var8 >> 12, var17, var18, var11, var14, var12);
                 param1[var10] = var6 * var9 >> 12;
               }
               return;
             }
             for (var10Lifetime3 = 0; var10Lifetime3 < ms.field_d; var10Lifetime3++) {
-              var4_intLifetime3 = this.field_q * ct.field_v[var10Lifetime3];
+              var4_intLifetime3 = this.field_q * NetworkGameClient.field_v[var10Lifetime3];
               var6Lifetime3 = this.a(false, var4_intLifetime3 * var8 >> 12, var17, var18, var11, var14, var12);
               var6Lifetime3 = var6Lifetime3 * var9 >> 12;
               param1[var10Lifetime3] = 2048 + (var6Lifetime3 >> 1);
@@ -131,7 +131,7 @@ final class ql extends ud {
             var18Lifetime1 = 255 & this.field_i[255 & var16Lifetime1];
             var14Lifetime1 = ua.field_h[var11Lifetime1];
             for (var10Lifetime1 = 0; var10Lifetime1 < ms.field_d; var10Lifetime1++) {
-              var4_intLifetime1 = this.field_q * ct.field_v[var10Lifetime1];
+              var4_intLifetime1 = this.field_q * NetworkGameClient.field_v[var10Lifetime1];
               var6Lifetime1 = this.a(false, var4_intLifetime1 * var8Lifetime1 >> 12, var17Lifetime1, var18Lifetime1, var11Lifetime1, var14Lifetime1, var12Lifetime1);
               param1[var10Lifetime1] = var6Lifetime1 * var9Lifetime1 >> 12;
             }
@@ -156,7 +156,7 @@ final class ql extends ud {
               if (this.field_n &&
                 var7 == -1 + this.field_s) {
                 for (var10Lifetime2 = 0; var10Lifetime2 < ms.field_d; var10Lifetime2++) {
-                  var4_intLifetime2 = ct.field_v[var10Lifetime2] * this.field_q;
+                  var4_intLifetime2 = NetworkGameClient.field_v[var10Lifetime2] * this.field_q;
                   stackIn_27_1 = !(param0);
                   var6Lifetime2 = this.a(stackIn_27_1, var8Lifetime2 * var4_intLifetime2 >> 12, var17Lifetime2, var18Lifetime2, var11Lifetime2, var14Lifetime2, var12Lifetime2);
                   var6Lifetime2 = param1[var10Lifetime2] + (var6Lifetime2 * var9Lifetime2 >> 12);
@@ -164,7 +164,7 @@ final class ql extends ud {
                 }
               } else {
                 for (var10Lifetime2 = 0; ms.field_d > var10Lifetime2; var10Lifetime2++) {
-                  var4_intLifetime2 = this.field_q * ct.field_v[var10Lifetime2];
+                  var4_intLifetime2 = this.field_q * NetworkGameClient.field_v[var10Lifetime2];
                   stackIn_33_1 = !(param0);
                   var6Lifetime2 = this.a(stackIn_33_1, var4_intLifetime2 * var8Lifetime2 >> 12, var17Lifetime2, var18Lifetime2, var11Lifetime2, var14Lifetime2, var12Lifetime2);
                   param1[var10Lifetime2] = param1[var10Lifetime2] + (var9Lifetime2 * var6Lifetime2 >> 12);
@@ -191,7 +191,7 @@ final class ql extends ud {
         int var2 = 0;
         int var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_i = ro.b(-3992, this.field_m);
         this.a(98);
         if (param0 != 1) {
@@ -211,7 +211,7 @@ final class ql extends ud {
     final static void a(byte param0, boolean param1) {
         int var2;
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 > -72) {
           field_p = (byte[][]) null;
         }
@@ -233,7 +233,7 @@ final class ql extends ud {
         }
         if (null == aj.field_s &&
           ta.field_h) {
-          nk.a((byte) -119, var2, param1);
+          MenuScreen.a((byte) -119, var2, param1);
         }
     }
 
@@ -262,7 +262,7 @@ final class ql extends ud {
         int var14Lifetime1;
         int var14Lifetime2;
         int var14Lifetime3;
-        var18 = AceOfSkies.field_G ? 1 : 0;
+        var18 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0) {
           ql.a(40, -122, 38, 74);
         }
@@ -369,7 +369,7 @@ final class ql extends ud {
     private final void a(int param0) {
         int var2;
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 < 23) {
           ql.a((byte) 58);
         }

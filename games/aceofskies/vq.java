@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class vq extends mi {
-    private kp field_x;
+    private IntrusiveDeque field_x;
     private jo field_z;
     static int field_w;
     private String[] field_y;
@@ -17,7 +17,7 @@ class vq extends mi {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var4_int = -56 / ((param0 - 14) / 53);
           if (this.field_y == null ||
@@ -149,8 +149,8 @@ class vq extends mi {
         jo var15;
         int var16;
         int var7Lifetime1;
-        var16 = AceOfSkies.field_G ? 1 : 0;
-        this.field_x = new kp();
+        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
+        this.field_x = new IntrusiveDeque();
         var2 = 0;
         var3 = (et) ((Object) this.field_e);
         if (param0 != -67) {
@@ -192,7 +192,7 @@ class vq extends mi {
               ((jo) (var10)).field_f = var15;
             }
             var10 = var15;
-            this.field_x.a(66, var15);
+            this.field_x.addLast(66, var15);
           }
         }
     }
@@ -202,12 +202,12 @@ class vq extends mi {
         jo var5;
         int var6;
         String var7;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 != 0) {
           var7 = (String) null;
           this.a(-112, (String) null, -74);
         }
-        var4 = (jo) (this.field_x.d(268435455));
+        var4 = (jo) (this.field_x.first(268435455));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -219,7 +219,7 @@ class vq extends mi {
             }
             var5 = var5.field_f;
           }
-          var4 = (jo) (this.field_x.b((byte) 103));
+          var4 = (jo) (this.field_x.next((byte) 103));
         }
         return null;
     }

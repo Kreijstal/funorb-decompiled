@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ht extends wf {
+final class ht extends IntrusiveNode {
     static dq field_k;
     static String field_h;
     static boolean field_g;
@@ -9,7 +9,7 @@ final class ht extends wf {
     static boolean[] field_j;
     static String field_e;
     int field_f;
-    static jd field_i;
+    static SteeringMode field_i;
 
     public static void a(int param0) {
         field_k = null;
@@ -29,6 +29,6 @@ final class ht extends wf {
         field_e = "Enter the name you'd prefer. This is the name displayed to other players.";
         field_g = false;
         field_j = new boolean[]{false, false, false, true, false, false, false};
-        field_i = new jd();
+        field_i = new SteeringMode();
     }
 }

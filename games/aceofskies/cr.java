@@ -70,7 +70,7 @@ final class cr extends tf {
     final int a(long param0, int param1) {
         int var4;
         int var5;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 != 0) {
           return -42;
         }
@@ -94,7 +94,7 @@ final class cr extends tf {
 
     private final long b(int param0) {
         int var8 = 0;
-        int var9 = AceOfSkies.field_G ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         long var2 = System.nanoTime();
         long var4 = var2 - this.field_f;
         if (param0 >= -71) {

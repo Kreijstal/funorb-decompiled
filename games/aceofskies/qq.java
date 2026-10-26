@@ -5,12 +5,12 @@ import java.util.*;
 
 final class qq {
     int field_f;
-    static gb field_g;
+    static AircraftDefinition field_g;
     static vd[] field_e;
     String field_c;
     String field_a;
     String field_b;
-    gk field_d;
+    ResourceArchive field_d;
 
     final static int a(int param0, int param1) {
         if (param0 != 20) {
@@ -23,7 +23,7 @@ final class qq {
     public static void b(byte param0) {
         field_g = null;
         if (param0 < 35) {
-          field_g = (gb) null;
+          field_g = (AircraftDefinition) null;
           field_e = null;
           return;
         }
@@ -47,7 +47,7 @@ final class qq {
         du.field_p[15] = iu.field_e;
         du.field_p[7] = ic.field_a;
         du.field_p[3] = me.field_a;
-        du.field_p[13] = ct.field_C;
+        du.field_p[13] = NetworkGameClient.field_C;
         du.field_p[2] = od.field_v;
         du.field_p[17] = ve.field_a;
         du.field_p[19] = iu.field_f;
@@ -74,6 +74,6 @@ final class qq {
     }
 
     static {
-        field_g = new gb(1.2, 2, 2, 300, 3, 7.0, 10.0, 16, 1);
+        field_g = new AircraftDefinition(1.2, 2, 2, 300, 3, 7.0, 10.0, 16, 1);
     }
 }

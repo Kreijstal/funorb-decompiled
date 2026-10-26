@@ -33,7 +33,7 @@ class di extends ou {
     private boolean field_o;
     private boolean field_q;
     private int field_Y;
-    static kp field_M;
+    static IntrusiveDeque field_M;
     private ll field_G;
     private ll field_N;
     private int field_y;
@@ -182,7 +182,7 @@ class di extends ou {
     public static void a(boolean param0) {
         field_M = null;
         if (param0) {
-          field_M = (kp) null;
+          field_M = (IntrusiveDeque) null;
         }
     }
 
@@ -205,7 +205,7 @@ class di extends ou {
         this.field_v = -2147483648;
         this.field_Y = -2147483648;
         try {
-          this.field_b = param0;
+          this.key = param0;
           this.a(param1, -115);
           if (param6 != null) {
             this.field_x = param6;
@@ -216,6 +216,6 @@ class di extends ou {
     }
 
     static {
-        field_M = new kp();
+        field_M = new IntrusiveDeque();
     }
 }

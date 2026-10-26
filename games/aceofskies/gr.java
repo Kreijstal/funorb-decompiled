@@ -326,7 +326,7 @@ final class gr {
           this.field_f = true;
           return;
         }
-        this.field_j = wm.field_h;
+        this.field_j = Pickup.field_h;
         this.field_j = this.field_j - 1;
         if (0 != vj.field_d) {
           if (0 != this.field_d) {

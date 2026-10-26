@@ -15,7 +15,7 @@ abstract class ua implements kt {
     private int field_n;
     static bs field_d;
     static int[][] field_l;
-    static pa[] field_g;
+    static RenderSprite[] field_g;
 
     final jaclib.memory.Buffer a(jaggl.MapBuffer param0, boolean param1, int param2) {
         RuntimeException var4 = null;
@@ -104,7 +104,7 @@ abstract class ua implements kt {
         int var1 = -51 / ((param0 - 59) / 37);
     }
 
-    final static short[] a(dl param0, short[] param1, int param2, int param3) {
+    final static short[] a(CipherPacketBuffer param0, short[] param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -119,7 +119,7 @@ abstract class ua implements kt {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var4_int = param0.b((byte) 103, param3);
           if (var4_int == 0) {
@@ -270,7 +270,7 @@ abstract class ua implements kt {
         oj.a(param0 ^ 26099, bm.m(124));
         if (param0 != 0) {
           short[] var2 = (short[]) null;
-          ua.a((dl) null, (short[]) null, 101, 22);
+          ua.a((CipherPacketBuffer) null, (short[]) null, 101, 22);
         }
     }
 

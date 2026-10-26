@@ -19,7 +19,7 @@ class ou extends wt {
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 == null) {
             return false;

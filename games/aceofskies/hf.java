@@ -10,8 +10,8 @@ final class hf extends un {
     private final void a(boolean param0, boolean param1) {
         try {
           IOException iOException = null;
-          gk var5 = null;
-          rb stackIn_4_0 = null;
+          ResourceArchive var5 = null;
+          PacketBuffer stackIn_4_0 = null;
           int stackIn_4_1 = 0;
           int stackIn_5_2 = 0;
           Throwable decompiledCaughtException = null;
@@ -20,7 +20,7 @@ final class hf extends un {
             return;
           }
           try {
-            this.field_l.field_g = 0;
+            this.field_l.position = 0;
             stackIn_4_0 = this.field_l;
             stackIn_4_1 = -1336879960;
             if (param0) {
@@ -28,9 +28,9 @@ final class hf extends un {
             } else {
               stackIn_5_2 = 3;
             }
-            ((rb) (Object) stackIn_4_0).b(stackIn_4_1, stackIn_5_2);
+            ((PacketBuffer) (Object) stackIn_4_0).writeByte(stackIn_4_1, stackIn_5_2);
             this.field_l.a((byte) -64, 0L);
-            this.field_s.a(this.field_l.field_f.length, 0, -104, this.field_l.field_f);
+            this.field_s.a(this.field_l.payload.length, 0, -104, this.field_l.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -45,8 +45,8 @@ final class hf extends un {
             this.field_j = this.field_j + 1;
           }
           if (!param1) {
-            var5 = (gk) null;
-            hf.a(120, (gk) null, -58, -76);
+            var5 = (ResourceArchive) null;
+            hf.a(120, (ResourceArchive) null, -58, -76);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -68,7 +68,7 @@ final class hf extends un {
           Exception var5 = null;
           int var6 = 0;
           gp var4_refLifetime1;
-          var6 = AceOfSkies.field_G ? 1 : 0;
+          var6 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (null != this.field_s) {
               try {
@@ -86,7 +86,7 @@ final class hf extends un {
             }
             this.a(param1, true);
             this.field_a = null;
-            this.field_h.field_g = 0;
+            this.field_h.position = 0;
             while (true) {
               var4_ref = (gp) (this.field_g.b(param0 ^ -17386));
               if (var4_ref != null) {
@@ -105,11 +105,11 @@ final class hf extends un {
             }
             if (this.field_k != 0) {
               try {
-                this.field_l.field_g = 0;
-                this.field_l.b(-1336879960, 4);
-                this.field_l.b(param0 - 1336882966, (int) this.field_k);
-                this.field_l.a((byte) 87, 0);
-                this.field_s.a(this.field_l.field_f.length, 0, 35, this.field_l.field_f);
+                this.field_l.position = 0;
+                this.field_l.writeByte(-1336879960, 4);
+                this.field_l.writeByte(param0 - 1336882966, (int) this.field_k);
+                this.field_l.writeInt((byte) 87, 0);
+                this.field_s.a(this.field_l.payload.length, 0, 35, this.field_l.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -163,7 +163,7 @@ final class hf extends un {
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var12 = new char[param1];
           var11 = var12;
@@ -245,7 +245,7 @@ final class hf extends un {
           int var15 = 0;
           int var16 = 0;
           gp var2Lifetime1;
-          var16 = AceOfSkies.field_G ? 1 : 0;
+          var16 = AceOfSkies.obfuscationControl ? 1 : 0;
           if (this.field_s != null) {
             var2_long = kh.a(-97);
             var4 = (int)(-this.field_m + var2_long);
@@ -275,19 +275,19 @@ final class hf extends un {
             this.field_s.b((byte) 107);
             var2 = (gp) (this.field_b.b((byte) 123));
             while (var2 != null) {
-              this.field_l.field_g = 0;
-              this.field_l.b(-1336879960, 1);
+              this.field_l.position = 0;
+              this.field_l.writeByte(-1336879960, 1);
               this.field_l.a((byte) -106, var2.field_i);
-              this.field_s.a(this.field_l.field_f.length, 0, -103, this.field_l.field_f);
+              this.field_s.a(this.field_l.payload.length, 0, -103, this.field_l.payload);
               this.field_g.a(param0 + 2, var2);
               var2 = (gp) (this.field_b.e(31542));
             }
             var2Lifetime1 = (gp) (this.field_d.b((byte) 69));
             while (var2Lifetime1 != null) {
-              this.field_l.field_g = 0;
-              this.field_l.b(-1336879960, 0);
+              this.field_l.position = 0;
+              this.field_l.writeByte(-1336879960, 0);
               this.field_l.a((byte) -59, var2Lifetime1.field_i);
-              this.field_s.a(this.field_l.field_f.length, 0, 52, this.field_l.field_f);
+              this.field_s.a(this.field_l.payload.length, 0, 52, this.field_l.payload);
               this.field_n.a(param0 + 2, var2Lifetime1);
               var2Lifetime1 = (gp) (this.field_d.e(31542));
             }
@@ -307,34 +307,34 @@ final class hf extends un {
                   }
                 }
                 if (var4 > 0) {
-                  var5 = var4 - this.field_h.field_g;
+                  var5 = var4 - this.field_h.position;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_s.a(this.field_h.field_g, var5, this.field_h.field_f, true);
+                  this.field_s.a(this.field_h.position, var5, this.field_h.payload, true);
                   if (0 != this.field_k) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_h.field_f[var6 + this.field_h.field_g] = (byte)id.a((int) this.field_h.field_f[var6 + this.field_h.field_g], (int) this.field_k);
+                      this.field_h.payload[var6 + this.field_h.position] = (byte)id.a((int) this.field_h.payload[var6 + this.field_h.position], (int) this.field_k);
                     }
                   }
-                  this.field_h.field_g = this.field_h.field_g + var5;
-                  if (this.field_h.field_g >= var4) {
+                  this.field_h.position = this.field_h.position + var5;
+                  if (this.field_h.position >= var4) {
                     if (this.field_a != null) {
                       if (this.field_a.field_x != 0) {
                         throw new IOException();
                       }
-                      if (this.field_h.field_f[0] == -1) {
-                        this.field_h.field_g = 0;
+                      if (this.field_h.payload[0] == -1) {
+                        this.field_h.position = 0;
                         this.field_a.field_x = 1;
                       } else {
                         this.field_a = null;
                       }
                     } else {
-                      this.field_h.field_g = 0;
-                      var6 = this.field_h.g(-72);
-                      var7 = this.field_h.a((byte) 125);
-                      var8 = this.field_h.g(-104);
-                      var9 = this.field_h.a((byte) 127);
+                      this.field_h.position = 0;
+                      var6 = this.field_h.readUnsignedByte(-72);
+                      var7 = this.field_h.readInt((byte) 125);
+                      var8 = this.field_h.readUnsignedByte(-104);
+                      var9 = this.field_h.readInt((byte) 127);
                       var10 = var8 & 127;
                       stackIn_62_0 = ((128 & var8) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -369,31 +369,31 @@ final class hf extends un {
                       this.field_a = var14_ref;
                       stackIn_77_0 = (var10 == 0) ? 5 : 9;
                       var15 = stackIn_77_0;
-                      this.field_a.field_u = new rb(this.field_a.field_z + var9 + var15);
-                      this.field_a.field_u.b(-1336879960, var10);
-                      this.field_a.field_u.a((byte) 79, var9);
+                      this.field_a.field_u = new PacketBuffer(this.field_a.field_z + var9 + var15);
+                      this.field_a.field_u.writeByte(-1336879960, var10);
+                      this.field_a.field_u.writeInt((byte) 79, var9);
                       this.field_a.field_x = 10;
-                      this.field_h.field_g = 0;
+                      this.field_h.position = 0;
                     }
                   }
                 } else {
-                  var5 = this.field_a.field_u.field_f.length - this.field_a.field_z;
+                  var5 = this.field_a.field_u.payload.length - this.field_a.field_z;
                   var6 = 512 - this.field_a.field_x;
-                  if (var6 > var5 - this.field_a.field_u.field_g) {
-                    var6 = -this.field_a.field_u.field_g + var5;
+                  if (var6 > var5 - this.field_a.field_u.position) {
+                    var6 = -this.field_a.field_u.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_s.a(this.field_a.field_u.field_g, var6, this.field_a.field_u.field_f, true);
+                  this.field_s.a(this.field_a.field_u.position, var6, this.field_a.field_u.payload, true);
                   if (this.field_k != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_a.field_u.field_f[var7 + this.field_a.field_u.field_g] = (byte)id.a((int) this.field_a.field_u.field_f[var7 + this.field_a.field_u.field_g], (int) this.field_k);
+                      this.field_a.field_u.payload[var7 + this.field_a.field_u.position] = (byte)id.a((int) this.field_a.field_u.payload[var7 + this.field_a.field_u.position], (int) this.field_k);
                     }
                   }
-                  this.field_a.field_u.field_g = this.field_a.field_u.field_g + var6;
+                  this.field_a.field_u.position = this.field_a.field_u.position + var6;
                   this.field_a.field_x = this.field_a.field_x + var6;
-                  if (var5 == this.field_a.field_u.field_g) {
+                  if (var5 == this.field_a.field_u.position) {
                     this.field_a.d(-125);
                     this.field_a.field_p = false;
                     this.field_a = null;
@@ -442,14 +442,14 @@ final class hf extends un {
             return;
           }
           try {
-            this.field_l.field_g = 0;
+            this.field_l.position = 0;
             if (param0 > -19) {
               field_r = -17;
             }
-            this.field_l.b(-1336879960, 6);
-            this.field_l.c(0, 3);
-            this.field_l.a(0, 23385);
-            this.field_s.a(this.field_l.field_f.length, 0, 60, this.field_l.field_f);
+            this.field_l.writeByte(-1336879960, 6);
+            this.field_l.writeMedium(0, 3);
+            this.field_l.writeShort(0, 23385);
+            this.field_s.a(this.field_l.payload.length, 0, 60, this.field_l.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -479,7 +479,7 @@ final class hf extends un {
         }
     }
 
-    final static ll[] a(int param0, gk param1, int param2, int param3) {
+    final static ll[] a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         ll[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

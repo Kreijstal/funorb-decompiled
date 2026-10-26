@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class um extends rf {
-    kp field_k;
+final class um extends PcmStream {
+    IntrusiveDeque field_k;
     static tk field_m;
     static boolean field_j;
     static String field_n;
-    private hk field_l;
+    private MidiPcmStream field_l;
     tp field_i;
 
     final void b(int[] param0, int param1, int param2) {
@@ -20,10 +20,10 @@ final class um extends rf {
         int var5 = 0;
         ft var6 = null;
         int var7 = 0;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_i.b(param0, param1, param2);
-          var6 = (ft) (this.field_k.d(268435455));
+          var6 = (ft) (this.field_k.first(268435455));
           while (var6 != null) {
             stackIn_4_0 = this.field_l.a(0, var6);
             boolean decompiledFrameCompleted0 = true;
@@ -44,7 +44,7 @@ final class um extends rf {
                 var6.field_i = var6.field_i - var5;
               }
             }
-            var6 = (ft) (this.field_k.b((byte) 103));
+            var6 = (ft) (this.field_k.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class um extends rf {
     }
 
     private final void a(int param0, int param1, ft param2) {
-        hk stackIn_8_0 = null;
+        MidiPcmStream stackIn_8_0 = null;
         ft stackIn_8_1 = null;
         boolean stackIn_9_2 = false;
         RuntimeException stackIn_17_0 = null;
@@ -80,13 +80,13 @@ final class um extends rf {
             param2.field_t = var4_int * param1 + param2.field_t & 1048575;
             if (var5 <= param1) {
               if (this.field_l.field_z[param2.field_m] != 0) {
-                param2.field_e = su.a(param2.field_x, param2.field_e.l(), 0, param2.field_e.g());
+                param2.field_e = PcmSampleStream.a(param2.field_x, param2.field_e.l(), 0, param2.field_e.g());
                 stackIn_8_0 = this.field_l;
                 stackIn_8_1 = (ft) (param2);
                 stackIn_9_2 = !(param2.field_y.field_n[param2.field_n] >= 0);
-                ((hk) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2, true);
+                ((MidiPcmStream) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_9_2, true);
               } else {
-                param2.field_e = su.a(param2.field_x, param2.field_e.l(), param2.field_e.i(), param2.field_e.g());
+                param2.field_e = PcmSampleStream.a(param2.field_x, param2.field_e.l(), param2.field_e.i(), param2.field_e.g());
               }
               if (param2.field_y.field_n[param2.field_n] < 0) {
                 param2.field_e.d(-1);
@@ -119,31 +119,31 @@ final class um extends rf {
         int stackIn_9_0 = 0;
         int[] stackIn_23_0 = null;
         Throwable decompiledCaughtException = null;
-        dl var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        dl var8 = null;
+        CipherPacketBuffer var8 = null;
         jr var9 = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
-        var8 = nm.field_c;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        var8 = IntKeyLookup.field_c;
         var2 = var8;
-        var3 = var8.g(39);
+        var3 = var8.readUnsignedByte(39);
         m.field_f = 127 & var3;
         stackIn_3_0 = ((var3 & 128) != 0);
         sj.field_b = stackIn_3_0;
-        km.field_b = var8.g(-100);
-        pe.field_g = var8.h((byte) 118);
+        km.field_b = var8.readUnsignedByte(-100);
+        pe.field_g = var8.readLong((byte) 118);
         if (2 == m.field_f) {
-          jt.field_t = var8.i((byte) 0);
-          ot.field_a = var8.g((byte) -92);
+          jt.field_t = var8.readUnsignedShort((byte) 0);
+          ot.field_a = var8.readUnsignedMedium((byte) -92);
         } else {
           jt.field_t = 0;
           ot.field_a = 0;
         }
-        stackIn_9_0 = (param1 != var8.g(-89)) ? 0 : 1;
+        stackIn_9_0 = (param1 != var8.readUnsignedByte(-89)) ? 0 : 1;
         var4 = stackIn_9_0;
         ku.field_g = var8.h(param1 - 17884);
         if (var4 != 0) {
@@ -152,11 +152,11 @@ final class um extends rf {
           tn.field_t = ku.field_g;
         }
         if (1 == m.field_f) {
-          var8.i((byte) 0);
+          var8.readUnsignedShort((byte) 0);
           var8.h(-17883);
         } else {
           if (m.field_f == 4) {
-            var8.i((byte) 0);
+            var8.readUnsignedShort((byte) 0);
             var8.h(-17883);
           }
         }
@@ -165,7 +165,7 @@ final class um extends rf {
           ku.field_e = null;
           return new s(param0);
         }
-        var5 = var8.i((byte) 0);
+        var5 = var8.readUnsignedShort((byte) 0);
         try {
           var9 = uk.field_f.a(var5, -43);
           ep.field_x = var9.c((byte) 1);
@@ -186,13 +186,13 @@ final class um extends rf {
         return new s(param0);
     }
 
-    final rf b() {
-        ft var1 = (ft) (this.field_k.d(268435455));
+    final PcmStream b() {
+        ft var1 = (ft) (this.field_k.first(268435455));
         if (var1 == null) {
           return null;
         }
         if (var1.field_e != null) {
-          return (rf) ((Object) var1.field_e);
+          return (PcmStream) ((Object) var1.field_e);
         }
         return this.a();
     }
@@ -202,9 +202,9 @@ final class um extends rf {
         ft var3;
         int var4;
         boolean stackIn_4_0 = false;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_i.a(param0);
-        var3 = (ft) (this.field_k.d(268435455));
+        var3 = (ft) (this.field_k.first(268435455));
         while (var3 != null) {
           stackIn_4_0 = this.field_l.a(0, var3);
           boolean decompiledFrameCompleted0 = true;
@@ -223,20 +223,20 @@ final class um extends rf {
               var3.field_i = var3.field_i - var2;
             }
           }
-          var3 = (ft) (this.field_k.b((byte) 103));
+          var3 = (ft) (this.field_k.next((byte) 103));
         }
     }
 
-    final rf a() {
+    final PcmStream a() {
         ft var1_ref = null;
-        int var2 = AceOfSkies.field_G ? 1 : 0;
+        int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         do {
-          var1_ref = (ft) (this.field_k.b((byte) 103));
+          var1_ref = (ft) (this.field_k.next((byte) 103));
           if (var1_ref == null) {
             return null;
           }
         } while (null == var1_ref.field_e);
-        return (rf) ((Object) var1_ref.field_e);
+        return (PcmStream) ((Object) var1_ref.field_e);
     }
 
     public static void a(byte param0) {
@@ -250,7 +250,7 @@ final class um extends rf {
     final static void d(int param0) {
         int var1;
         int var2;
-        var2 = AceOfSkies.field_G ? 1 : 0;
+        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 == 1) {
           ss.field_t = false;
           uf.field_e = null;
@@ -292,7 +292,7 @@ final class um extends rf {
     }
 
     private final void a(ft param0, byte param1, int param2, int param3, int[] param4, int param5) {
-        hk stackIn_12_0 = null;
+        MidiPcmStream stackIn_12_0 = null;
         ft stackIn_12_1 = null;
         boolean stackIn_13_2 = false;
         RuntimeException stackIn_24_0 = null;
@@ -306,10 +306,10 @@ final class um extends rf {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        su var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         int var7_intLifetime1;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if ((4 & this.field_l.field_G[param0.field_m]) != 0 &&
             param0.field_p < 0) {
@@ -331,14 +331,14 @@ final class um extends rf {
               }
               var11 = param0.field_e;
               if (this.field_l.field_z[param0.field_m] != 0) {
-                param0.field_e = su.a(param0.field_x, var11.l(), 0, var11.g());
+                param0.field_e = PcmSampleStream.a(param0.field_x, var11.l(), 0, var11.g());
                 stackIn_12_0 = this.field_l;
                 stackIn_12_1 = (ft) (param0);
                 stackIn_13_2 = !(0 <= param0.field_y.field_n[param0.field_n]);
-                ((hk) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, true);
+                ((MidiPcmStream) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2, true);
                 param0.field_e.d(var9, var11.i());
               } else {
-                param0.field_e = su.a(param0.field_x, var11.l(), var11.i(), var11.g());
+                param0.field_e = PcmSampleStream.a(param0.field_x, var11.l(), var11.i(), var11.g());
               }
               if (0 > param0.field_y.field_n[param0.field_n]) {
                 param0.field_e.d(-1);
@@ -374,8 +374,8 @@ final class um extends rf {
         }
     }
 
-    um(hk param0) {
-        this.field_k = new kp();
+    um(MidiPcmStream param0) {
+        this.field_k = new IntrusiveDeque();
         this.field_i = new tp();
         try {
           this.field_l = param0;

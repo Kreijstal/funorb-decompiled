@@ -13,7 +13,7 @@ final class pl {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5 = gi.field_i;
           var1 = var5;
@@ -71,20 +71,20 @@ final class pl {
         uc var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var4 = (ga) (tq.field_d.d(268435455));
+          var4 = (ga) (tq.field_d.first(268435455));
           while (var4 != null) {
             ac.a(0, param0, var4);
-            var4 = (ga) (tq.field_d.b((byte) 103));
+            var4 = (ga) (tq.field_d.next((byte) 103));
           }
           if (param1 != 0) {
             return;
           }
-          var5 = (uc) (nh.field_g.d(268435455));
+          var5 = (uc) (nh.field_g.first(268435455));
           while (var5 != null) {
             ag.a(param0, 5, var5);
-            var5 = (uc) (nh.field_g.b((byte) 103));
+            var5 = (uc) (nh.field_g.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,25 +105,25 @@ final class pl {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, boolean param15) {
         int var17;
-        var17 = AceOfSkies.field_G ? 1 : 0;
+        var17 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 >= param8) {
           if (param4 > param1) {
-            md.a(param4, param9, param6, param10, param3, vp.field_j, param0, param11, param2, param12, param14, param5, param13, param7, param1, param8, (byte) -120);
+            Aircraft.a(param4, param9, param6, param10, param3, vp.field_j, param0, param11, param2, param12, param14, param5, param13, param7, param1, param8, (byte) -120);
           } else {
             if (param8 >= param4) {
-              md.a(param1, param0, param12, param13, param14, vp.field_j, param11, param9, param3, param5, param2, param6, param7, param10, param8, param4, (byte) -46);
+              Aircraft.a(param1, param0, param12, param13, param14, vp.field_j, param11, param9, param3, param5, param2, param6, param7, param10, param8, param4, (byte) -46);
             } else {
-              md.a(param1, param0, param6, param7, param3, vp.field_j, param9, param11, param14, param5, param2, param12, param13, param10, param4, param8, (byte) -24);
+              Aircraft.a(param1, param0, param6, param7, param3, vp.field_j, param9, param11, param14, param5, param2, param12, param13, param10, param4, param8, (byte) -24);
             }
           }
         } else {
           if (param4 > param8) {
-            md.a(param4, param9, param5, param13, param2, vp.field_j, param11, param0, param3, param12, param14, param6, param10, param7, param8, param1, (byte) -70);
+            Aircraft.a(param4, param9, param5, param13, param2, vp.field_j, param11, param0, param3, param12, param14, param6, param10, param7, param8, param1, (byte) -70);
           } else {
             if (param1 < param4) {
-              md.a(param8, param11, param5, param7, param2, vp.field_j, param9, param0, param14, param6, param3, param12, param10, param13, param4, param1, (byte) -65);
+              Aircraft.a(param8, param11, param5, param7, param2, vp.field_j, param9, param0, param14, param6, param3, param12, param10, param13, param4, param1, (byte) -65);
             } else {
-              md.a(param8, param11, param12, param10, param14, vp.field_j, param0, param9, param2, param6, param3, param5, param7, param13, param1, param4, (byte) -102);
+              Aircraft.a(param8, param11, param12, param10, param14, vp.field_j, param0, param9, param2, param6, param3, param5, param7, param13, param1, param4, (byte) -102);
             }
           }
         }
@@ -169,7 +169,7 @@ final class pl {
 
     final static String b(int param0) {
         int var1 = 123 % ((param0 + 43) / 56);
-        return nm.field_c.h(-17883);
+        return IntKeyLookup.field_c.h(-17883);
     }
 
     static {

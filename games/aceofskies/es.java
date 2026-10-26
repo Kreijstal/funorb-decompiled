@@ -8,7 +8,7 @@ final class es {
     private wt field_d;
     static int field_c;
     private int field_f;
-    static pa[] field_b;
+    static RenderSprite[] field_b;
     static String field_g;
     private wt[] field_e;
     private long field_h;
@@ -63,7 +63,7 @@ final class es {
           this.field_d = this.field_d.field_j;
           return var5;
         }
-        field_b = (pa[]) null;
+        field_b = (RenderSprite[]) null;
         this.field_d = var4.field_j;
         while (true) {
           if (var4 == this.field_d) {
@@ -190,7 +190,7 @@ final class es {
         int var2 = 0;
         wt var3 = null;
         int var4 = 0;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_f = param0;
         this.field_e = new wt[param0];
         var2 = 0;

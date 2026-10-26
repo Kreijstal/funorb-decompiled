@@ -11,8 +11,8 @@ final class mj {
     static rk field_a;
 
     final void a(boolean param0, vu param1) {
-        ha var4 = param1.field_c;
-        ha var3 = var4;
+        GraphicsRenderer var4 = param1.field_c;
+        GraphicsRenderer var3 = var4;
         var4.KA(this.field_c[0], this.field_c[1], this.field_c[2], this.field_c[3]);
         var4.DA(this.field_d[0], this.field_d[1], this.field_d[2], this.field_d[3]);
         var3.f(this.field_f, this.field_g);
@@ -27,7 +27,7 @@ final class mj {
     }
 
     final void a(vu param0, boolean param1) {
-        ha var3 = param0.field_c;
+        GraphicsRenderer var3 = param0.field_c;
         var3.K(this.field_c);
         this.field_d = var3.Y();
         if (param1) {
@@ -109,16 +109,16 @@ final class mj {
         ht var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5 = (ht) (an.field_b.d(268435455));
+          var5 = (ht) (an.field_b.first(268435455));
           if (param0 != 84) {
             var4 = (String) null;
             mj.a((String) null, 4, -49, (String) null, false, (String) null, 101);
           }
           while (var5 != null) {
             sg.a(param1, (byte) -92, var5);
-            var5 = (ht) (an.field_b.b((byte) 103));
+            var5 = (ht) (an.field_b.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

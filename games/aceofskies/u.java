@@ -10,12 +10,12 @@ final class u extends sk {
     final void a(boolean param0) {
         this.field_b.a(1, (byte) 106);
         this.field_b.a(ru.field_a, param0, ru.field_a);
-        this.field_b.a((byte) 122, 0, dl.field_p);
-        this.field_b.a(dl.field_p, 0, 0);
+        this.field_b.a((byte) 122, 0, CipherPacketBuffer.field_p);
+        this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         this.field_b.c(1, (byte) -99);
         this.field_b.a((jj) null, -9135);
         this.field_b.a(0, (byte) 57);
-        this.field_b.a(dl.field_p, 0, 0);
+        this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
     }
 
     u(bf param0, em param1) {
@@ -41,7 +41,7 @@ final class u extends sk {
         if (param1 < 2) {
           this.field_h = -0.11807350814342499f;
         }
-        this.field_b.a(true, 0, true, dl.field_p, false);
+        this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
         this.field_b.a(un.field_i, 0, 0);
         this.field_b.c(0, (byte) -86);
         this.field_b.a(0, (byte) 127);
@@ -54,7 +54,7 @@ final class u extends sk {
         int var4;
         int var5;
         jj var6;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1786747298) {
           var6 = (jj) null;
           this.a(-79, -84, (jj) null);
@@ -85,10 +85,10 @@ final class u extends sk {
     final static int a(cd param0, int param1, String param2, boolean param3, int param4, int param5, cd param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        rb stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
         String stackIn_12_2 = null;
-        rb stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         boolean stackIn_14_1 = false;
         String stackIn_15_2 = null;
         int stackIn_35_0 = 0;
@@ -119,7 +119,7 @@ final class u extends sk {
         int var9Lifetime2;
         int var9Lifetime3;
         int var9Lifetime4;
-        var13 = AceOfSkies.field_G ? 1 : 0;
+        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var14 = param6.b(-17233);
           var8 = param0.b(-17233);
@@ -129,37 +129,37 @@ final class u extends sk {
             return stackIn_5_0;
           }
           if (ca.field_f == qa.field_b) {
-            q.field_p.field_g = 0;
+            q.field_p.position = 0;
             qj.field_r = null;
             if (param2 != null) {
               var9 = 0;
-              fa.field_c.field_g = 0;
+              fa.field_c.position = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              fa.field_c.a((byte) 113, vr.field_h.nextInt());
-              fa.field_c.a((byte) 115, vr.field_h.nextInt());
+              fa.field_c.writeInt((byte) 113, vr.field_h.nextInt());
+              fa.field_c.writeInt((byte) 115, vr.field_h.nextInt());
               fa.field_c.a(false, var14);
               fa.field_c.a(false, var8);
               var15 = (CharSequence) ((Object) param2);
-              fa.field_c.a(false, ip.a((byte) -81, var15));
-              fa.field_c.a(param1, 23385);
-              fa.field_c.b(-1336879960, param5);
-              fa.field_c.b(-1336879960, var9);
-              q.field_p.b(-1336879960, 18);
-              q.field_p.field_g = q.field_p.field_g + 2;
-              var10 = q.field_p.field_g;
+              fa.field_c.a(false, ArchiveProvider.a((byte) -81, var15));
+              fa.field_c.writeShort(param1, 23385);
+              fa.field_c.writeByte(-1336879960, param5);
+              fa.field_c.writeByte(-1336879960, var9);
+              q.field_p.writeByte(-1336879960, 18);
+              q.field_p.position = q.field_p.position + 2;
+              var10 = q.field_p.position;
               var11_ref_String = ao.a(bm.m(108), false);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               q.field_p.a(-117, var11_ref_String);
               gn.a(hp.field_j, pb.field_a, q.field_p, fa.field_c, 92);
-              q.field_p.a(false, q.field_p.field_g - var10);
+              q.field_p.a(false, q.field_p.position - var10);
             } else {
-              fa.field_c.field_g = 0;
-              fa.field_c.a((byte) 88, vr.field_h.nextInt());
-              fa.field_c.a((byte) 23, vr.field_h.nextInt());
+              fa.field_c.position = 0;
+              fa.field_c.writeInt((byte) 88, vr.field_h.nextInt());
+              fa.field_c.writeInt((byte) 23, vr.field_h.nextInt());
               stackIn_11_0 = fa.field_c;
               stackIn_11_1 = false;
               if (param6.a(-109)) {
@@ -167,7 +167,7 @@ final class u extends sk {
               } else {
                 stackIn_12_2 = "";
               }
-              ((rb) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = fa.field_c;
               stackIn_14_1 = false;
               if (!param0.a(-103)) {
@@ -175,20 +175,20 @@ final class u extends sk {
               } else {
                 stackIn_15_2 = var8;
               }
-              ((rb) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
-              q.field_p.b(-1336879960, 16);
-              q.field_p.field_g = q.field_p.field_g + 1;
-              var9 = q.field_p.field_g;
+              ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
+              q.field_p.writeByte(-1336879960, 16);
+              q.field_p.position = q.field_p.position + 1;
+              var9 = q.field_p.position;
               gn.a(hp.field_j, pb.field_a, q.field_p, fa.field_c, 78);
-              q.field_p.b(q.field_p.field_g - var9, (byte) 85);
+              q.field_p.b(q.field_p.position - var9, (byte) 85);
             }
             fr.a(-37, -1);
             ca.field_f = mq.field_h;
           }
           if (mq.field_h == ca.field_f &&
             wo.a(1, true)) {
-            var9Lifetime1 = nm.field_c.g(78);
-            nm.field_c.field_g = 0;
+            var9Lifetime1 = IntKeyLookup.field_c.readUnsignedByte(78);
+            IntKeyLookup.field_c.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               ca.field_f = kf.field_m;
@@ -204,8 +204,8 @@ final class u extends sk {
               }
               if (var9Lifetime1 == 99) {
                 wo.a(km.a(1), true);
-                qj.field_r = new Boolean(b.a(true, nm.field_c));
-                nm.field_c.field_g = 0;
+                qj.field_r = new Boolean(b.a(true, IntKeyLookup.field_c));
+                IntKeyLookup.field_c.position = 0;
               } else {
                 ag.field_s = -1;
                 ca.field_f = cd.field_a;
@@ -216,12 +216,12 @@ final class u extends sk {
           if (ca.field_f == kf.field_m) {
             var9Lifetime2 = 2;
             if (wo.a(var9Lifetime2, true)) {
-              var10Lifetime1 = nm.field_c.i((byte) 0);
-              nm.field_c.field_g = 0;
+              var10Lifetime1 = IntKeyLookup.field_c.readUnsignedShort((byte) 0);
+              IntKeyLookup.field_c.position = 0;
               if (wo.a(var10Lifetime1, true)) {
                 var11 = sd.field_j.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  sd.field_j[var12] = nm.field_c.d((byte) 77);
+                  sd.field_j[var12] = IntKeyLookup.field_c.d((byte) 77);
                 }
                 te.b(true);
                 ld.field_d = false;
@@ -233,12 +233,12 @@ final class u extends sk {
           if (cd.field_a == ca.field_f &&
             rm.a(0)) {
             if (qs.field_b == 255) {
-              var9_ref_String = nm.field_c.e((byte) -109);
+              var9_ref_String = IntKeyLookup.field_c.e((byte) -109);
               if (var9_ref_String != null) {
                 sf.a((byte) -125, bm.m(118), var9_ref_String);
               }
             } else {
-              rp.field_m = nm.field_c.h(-17883);
+              rp.field_m = IntKeyLookup.field_c.h(-17883);
             }
             te.b(true);
             ld.field_d = false;

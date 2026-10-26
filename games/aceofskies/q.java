@@ -3,10 +3,10 @@
  */
 final class q extends rt {
     private int field_m;
-    static dl field_p;
+    static CipherPacketBuffer field_p;
     static String field_l;
     static boolean[] field_k;
-    static gk field_q;
+    static ResourceArchive field_q;
     static vd[] field_o;
     private int field_n;
 
@@ -15,7 +15,7 @@ final class q extends rt {
         this.field_n = -1;
         this.field_m = -1;
         if (param0 != 11) {
-          field_q = (gk) null;
+          field_q = (ResourceArchive) null;
         }
     }
 

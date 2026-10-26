@@ -50,7 +50,7 @@ final class pi extends mi {
         ll var13;
         ll var14;
         ll var15;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         super.a((byte) 125, param1, param2, param3);
         if (param1 != 0) {
           return;
@@ -146,7 +146,7 @@ final class pi extends mi {
           int var6_intLifetime1;
           int var6_intLifetime2;
           int var8Lifetime1;
-          var9 = AceOfSkies.field_G ? 1 : 0;
+          var9 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (ft.field_l == null &&
               !fp.a((byte) 82, param5)) {
@@ -160,15 +160,15 @@ final class pi extends mi {
                 var10 = (String) null;
                 dq.field_a = wb.a(false, (String) null, param4, as.field_b, true);
               }
-              q.field_p.field_g = 0;
-              q.field_p.b(param2 - 1336879960, 14);
-              q.field_p.b(-1336879960, dq.field_a.a(param2 ^ -69).field_c);
+              q.field_p.position = 0;
+              q.field_p.writeByte(param2 - 1336879960, 14);
+              q.field_p.writeByte(-1336879960, dq.field_a.a(param2 ^ -69).field_c);
               fr.a(param2 - 21, -1);
               ca.field_f = pg.field_a;
             }
             if (ca.field_f == pg.field_a &&
               wo.a(1, true)) {
-              var6_int = nm.field_c.g(117);
+              var6_int = IntKeyLookup.field_c.readUnsignedByte(117);
               if (0 == var6_int) {
                 ca.field_f = qo.field_a;
               } else {
@@ -176,22 +176,22 @@ final class pi extends mi {
                 qs.field_b = var6_int;
                 ag.field_s = -1;
               }
-              nm.field_c.field_g = 0;
+              IntKeyLookup.field_c.position = 0;
             }
             if (qo.field_a == ca.field_f &&
               wo.a(8, true)) {
-              of.field_a = nm.field_c.h((byte) 90);
-              nm.field_c.field_g = 0;
+              of.field_a = IntKeyLookup.field_c.readLong((byte) 90);
+              IntKeyLookup.field_c.position = 0;
               AceOfSkies.a(param0, param5, dq.field_a, param3, -12209);
               ca.field_f = he.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ca.field_f == he.field_o &&
               wo.a(1, true)) {
-              var6_intLifetime1 = nm.field_c.g(param2 ^ 63);
+              var6_intLifetime1 = IntKeyLookup.field_c.readUnsignedByte(param2 ^ 63);
               fb.field_b = null;
               qs.field_b = var6_intLifetime1;
-              nm.field_c.field_g = 0;
+              IntKeyLookup.field_c.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (8 != var6_intLifetime1) {
@@ -207,20 +207,20 @@ final class pi extends mi {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ca.field_f = vc.field_a;
+                ca.field_f = TimedSpriteEffect.field_a;
                 ag.field_s = -1;
               }
             }
-            if (vc.field_a == ca.field_f &&
+            if (TimedSpriteEffect.field_a == ca.field_f &&
               rm.a(0)) {
-              as.field_b = nm.field_c.h((byte) -87);
-              ln.field_d = nm.field_c.g(37);
-              nm.field_c.g(param2 ^ 103);
-              qr.field_a = nm.field_c.i((byte) 0);
-              var11 = nm.field_c.e((byte) -122);
-              var7 = nm.field_c.g(118);
+              as.field_b = IntKeyLookup.field_c.readLong((byte) -87);
+              ln.field_d = IntKeyLookup.field_c.readUnsignedByte(37);
+              IntKeyLookup.field_c.readUnsignedByte(param2 ^ 103);
+              qr.field_a = IntKeyLookup.field_c.readUnsignedShort((byte) 0);
+              var11 = IntKeyLookup.field_c.e((byte) -122);
+              var7 = IntKeyLookup.field_c.readUnsignedByte(118);
               if (0 != (1 & var7)) {
-                eu.b(param2 + 0);
+                Bullet.b(param2 + 0);
               }
               if (!param5) {
                 stackIn_41_0 = ((var7 & 8) != 0);
@@ -231,21 +231,21 @@ final class pi extends mi {
                 }
               }
               if (gl.field_a) {
-                nm.field_c.g(-83);
-                nm.field_c.g(105);
-                nm.field_c.a((byte) 123);
-                ag.field_r = nm.field_c.i((byte) 0);
+                IntKeyLookup.field_c.readUnsignedByte(-83);
+                IntKeyLookup.field_c.readUnsignedByte(105);
+                IntKeyLookup.field_c.readInt((byte) 123);
+                ag.field_r = IntKeyLookup.field_c.readUnsignedShort((byte) 0);
                 nc.field_c = new byte[ag.field_r];
                 for (var8 = 0; ag.field_r > var8; var8++) {
-                  nc.field_c[var8] = nm.field_c.d(0);
+                  nc.field_c[var8] = IntKeyLookup.field_c.readByte(0);
                 }
               }
-              fj.field_a = nm.field_c.h(-17883);
+              fj.field_a = IntKeyLookup.field_c.h(-17883);
               var12 = (CharSequence) ((Object) fj.field_a);
               cf.field_h = vu.a(param2 ^ 127, var12);
-              un.field_c = nm.field_c.g(param2 ^ -95);
+              un.field_c = IntKeyLookup.field_c.readUnsignedByte(param2 ^ -95);
               ca.field_f = wq.field_e;
-              if (dq.field_a.a(-78) == jd.field_a) {
+              if (dq.field_a.a(-78) == SteeringMode.field_a) {
                 ef.field_k.a(bm.m(param2 + 113), (byte) 125);
               } else {
                 if (dq.field_a.a(-87) == ds.field_e) {
@@ -279,7 +279,7 @@ final class pi extends mi {
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 bm.field_w[var8Lifetime1] = bm.field_w[var8Lifetime1] + 50;
               }
-              nm.field_c.a(true, bm.field_w);
+              IntKeyLookup.field_c.a(true, bm.field_w);
               stackIn_70_0 = qs.field_b;
               return stackIn_70_0;
             }
@@ -298,7 +298,7 @@ final class pi extends mi {
               if (7 == qs.field_b) {
                 qs.field_b = 3;
               }
-              rp.field_m = nm.field_c.h(-17883);
+              rp.field_m = IntKeyLookup.field_c.h(-17883);
               ld.field_d = false;
               stackIn_82_0 = qs.field_b;
               return stackIn_82_0;

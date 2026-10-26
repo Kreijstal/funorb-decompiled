@@ -60,7 +60,7 @@ final class wk extends hh {
           }
           var8 = new jq(vn.field_f, param4);
           vn.field_f.a(var8, 0);
-          if (gb.a(param5)) {
+          if (AircraftDefinition.a(param5)) {
             var8.n(126);
             return true;
           }
@@ -250,7 +250,7 @@ final class wk extends hh {
 
     private final void d(byte param0) {
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_i = new si(this.field_a, 2);
         this.field_i.a((byte) 125, 0);
         this.field_a.a(false, 1);
@@ -348,11 +348,11 @@ final class wk extends hh {
     final static void c(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (l.field_c >= 224) {
+        if (RendererManager.field_c >= 224) {
           ve.a((byte) 43, 256);
         } else {
-          var1 = l.field_c % 32;
-          ve.a((byte) 43, -var1 + l.field_c + 32);
+          var1 = RendererManager.field_c % 32;
+          ve.a((byte) 43, -var1 + RendererManager.field_c + 32);
         }
         var1Lifetime1 = -94 % ((param0 + 73) / 39);
     }

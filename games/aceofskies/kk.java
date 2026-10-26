@@ -4,7 +4,7 @@
 final class kk extends bm implements mc {
     static int field_K;
     private int field_M;
-    static gb field_N;
+    static AircraftDefinition field_N;
     private sp field_L;
     static String field_J;
 
@@ -20,7 +20,7 @@ final class kk extends bm implements mc {
         try {
           this.field_L = param0;
           if (param1 != 1472) {
-            field_N = (gb) null;
+            field_N = (AircraftDefinition) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "kk.DA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -133,7 +133,7 @@ final class kk extends bm implements mc {
 
     public static void c(boolean param0) {
         if (!param0) {
-          field_N = (gb) null;
+          field_N = (AircraftDefinition) null;
           field_J = null;
           field_N = null;
           return;
@@ -144,7 +144,7 @@ final class kk extends bm implements mc {
 
     static {
         field_K = 0;
-        field_N = new gb(0.5, 20, 0, 100, 1, 7.0, 9.0, 16, 0);
+        field_N = new AircraftDefinition(0.5, 20, 0, 100, 1, 7.0, 9.0, 16, 0);
         field_J = "Login: ";
     }
 }

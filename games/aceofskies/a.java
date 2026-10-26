@@ -37,7 +37,7 @@ final class a implements e {
         this.E(this.field_nativeid, param0);
     }
 
-    private final native void HA(long param0, ha param1, int param2, int param3);
+    private final native void HA(long param0, GraphicsRenderer param1, int param2, int param3);
 
     private final void b() {
         this.M(this.field_nativeid);

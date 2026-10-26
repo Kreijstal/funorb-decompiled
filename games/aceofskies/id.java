@@ -5,7 +5,7 @@ final class id {
     static int field_d;
     private boolean field_a;
     private String field_b;
-    static gb field_f;
+    static AircraftDefinition field_f;
     static String field_e;
     private boolean field_c;
 
@@ -16,7 +16,7 @@ final class id {
     public static void a(byte param0) {
         field_f = null;
         if (param0 != 106) {
-          field_f = (gb) null;
+          field_f = (AircraftDefinition) null;
           field_e = null;
           return;
         }
@@ -41,7 +41,7 @@ final class id {
 
     final String b(int param0) {
         if (param0 != 2) {
-          field_f = (gb) null;
+          field_f = (AircraftDefinition) null;
           return this.field_b;
         }
         return this.field_b;
@@ -66,7 +66,7 @@ final class id {
     }
 
     static {
-        field_f = new gb(1.2, 2, 2, 300, 3, 7.0, 10.0, 16, 0);
+        field_f = new AircraftDefinition(1.2, 2, 2, 300, 3, 7.0, 10.0, 16, 0);
         field_e = "Invalid Login or Password<br><br>For accounts created after the 24th of November 2010, please use your email address to log in.<br><br>Otherwise please log in with your username.";
     }
 }

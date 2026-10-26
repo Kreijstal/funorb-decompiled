@@ -15,9 +15,9 @@ final class gh {
     static ia field_i;
     private int field_c;
     private int field_a;
-    static vb field_f;
+    static GameAppletShell field_f;
     private long field_b;
-    static gb field_j;
+    static AircraftDefinition field_j;
     private fs field_m;
 
     private final void a(int param0) throws IOException {
@@ -26,7 +26,7 @@ final class gh {
         long var5;
         int var7;
         int var8;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         var2 = -57 / ((83 - param0) / 41);
         if (this.field_e != -1L) {
           if (~this.field_d != ~this.field_e) {
@@ -95,7 +95,7 @@ final class gh {
         int var9_intLifetime1;
         int var9_intLifetime2;
         int var9_intLifetime1Lifetime1;
-        var14 = AceOfSkies.field_G ? 1 : 0;
+        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
             if (param1 + param3 > param2.length) {
@@ -245,7 +245,7 @@ final class gh {
         long var8 = 0L;
         int var10 = 0;
         int var11 = 0;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
             var5_int = 16 / ((param3 - 21) / 45);
@@ -347,8 +347,8 @@ final class gh {
         }
         this.field_k = param1;
         if (!param0) {
-          gk var5 = (gk) null;
-          gh.a((byte) 37, (gk) null);
+          ResourceArchive var5 = (ResourceArchive) null;
+          gh.a((byte) 37, (ResourceArchive) null);
         }
     }
 
@@ -372,9 +372,9 @@ final class gh {
         }
     }
 
-    final static boolean a(byte param0, gk param1) {
+    final static boolean a(byte param0, ResourceArchive param1) {
         RuntimeException var2 = null;
-        gk var3 = null;
+        ResourceArchive var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -382,8 +382,8 @@ final class gh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 15) {
-            var3 = (gk) null;
-            gh.a((byte) 52, (gk) null);
+            var3 = (ResourceArchive) null;
+            gh.a((byte) 52, (ResourceArchive) null);
           }
           stackIn_3_0 = param1.b(0);
           return stackIn_3_0;
@@ -409,7 +409,7 @@ final class gh {
     private final void d(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_a = param0;
         if (this.field_k != this.field_d) {
           this.field_m.a(this.field_k, true);
@@ -452,6 +452,6 @@ final class gh {
         field_o = "Email is valid";
         field_i = new ia();
         field_f = null;
-        field_j = new gb(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
+        field_j = new AircraftDefinition(2.0, 15, 0, 100, 2, 6.0, 12.0, 16, 0);
     }
 }

@@ -86,7 +86,7 @@ final class np extends hh {
             stackIn_5_0 = 34065;
             return stackIn_5_0;
           }
-          if (param0 == gk.field_g) {
+          if (param0 == ResourceArchive.field_g) {
             stackIn_8_0 = 34066;
             return stackIn_8_0;
           }

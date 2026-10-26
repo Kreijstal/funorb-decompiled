@@ -113,7 +113,7 @@ final class fs {
         RuntimeException var6 = null;
         int var8 = 0;
         int var9 = 0;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
             stackIn_3_0 = 26;

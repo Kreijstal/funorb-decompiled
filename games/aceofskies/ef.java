@@ -38,7 +38,7 @@ final class ef {
         field_i = null;
     }
 
-    final static void a(byte param0, rk param1, gk param2) {
+    final static void a(byte param0, rk param1, ResourceArchive param2) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -47,7 +47,7 @@ final class ef {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           rj.field_b = param2;
           bl.field_g = "";
@@ -113,7 +113,7 @@ final class ef {
         int var3;
         int var4;
         int var5;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 > -115) {
           return;
         }
@@ -146,7 +146,7 @@ final class ef {
                   }
                   return;
                 }
-                if (var3 != ps.field_h) {
+                if (var3 != ArchiveIndex.field_h) {
                   this.field_l.a(var3, false, var2);
                 }
                 if (this.field_e <= 0) {
@@ -172,7 +172,7 @@ final class ef {
             if (td.field_b != var2) {
               this.field_l.a(var3, false, var2);
             } else {
-              if (var3 != ps.field_h) {
+              if (var3 != ArchiveIndex.field_h) {
                 this.field_l.a(var3, false, var2);
               }
             }
@@ -196,7 +196,7 @@ final class ef {
         if (td.field_b != var2) {
           this.field_l.a(var3, false, var2);
         } else {
-          if (var3 != ps.field_h) {
+          if (var3 != ArchiveIndex.field_h) {
             this.field_l.a(var3, false, var2);
           }
         }
@@ -210,7 +210,7 @@ final class ef {
     final hj b(byte param0) {
         hj var2 = null;
         hj var2Lifetime1;
-        this.field_n = ps.field_h;
+        this.field_n = ArchiveIndex.field_h;
         this.field_r = td.field_b;
         this.field_l.a(this.field_u, false, this.field_c);
         if (param0 == -111) {
@@ -350,7 +350,7 @@ final class ef {
             } else {
               if (0 >= this.field_e) {
                 if (this.field_t == td.field_b &&
-                  this.field_h == ps.field_h) {
+                  this.field_h == ArchiveIndex.field_h) {
                   return;
                 }
                 this.field_l.a(this.field_h, false, this.field_t);
@@ -384,7 +384,7 @@ final class ef {
               }
             }
             if (this.field_t == td.field_b &&
-              this.field_h == ps.field_h) {
+              this.field_h == ArchiveIndex.field_h) {
               return;
             }
             this.field_l.a(this.field_h, false, this.field_t);
@@ -416,7 +416,7 @@ final class ef {
         if (this.field_t != td.field_b) {
           this.field_l.a(this.field_h, false, this.field_t);
         } else {
-          if (this.field_h != ps.field_h) {
+          if (this.field_h != ArchiveIndex.field_h) {
             this.field_l.a(this.field_h, false, this.field_t);
           }
         }

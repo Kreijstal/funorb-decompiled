@@ -202,7 +202,7 @@ final class vg extends pp {
         String[] var16 = null;
         String[] var17 = null;
         int var12Lifetime1;
-        var15 = AceOfSkies.field_G ? 1 : 0;
+        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param7 == 0) {
             param7 = param1.field_w;

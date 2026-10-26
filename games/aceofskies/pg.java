@@ -18,10 +18,10 @@ final class pg {
           wl.a((java.awt.Component) ((Object) param0), (byte) -3);
           var2_int = 59 / ((9 - param1) / 59);
           g.a((java.awt.Component) ((Object) param0), 0);
-          if (null == jd.field_c) {
+          if (null == SteeringMode.field_c) {
             return;
           }
-          jd.field_c.a((java.awt.Component) ((Object) param0), false);
+          SteeringMode.field_c.a((java.awt.Component) ((Object) param0), false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

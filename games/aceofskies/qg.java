@@ -8,7 +8,7 @@ abstract class qg {
     static float[] field_a;
     static mg field_d;
 
-    final static ll[] a(byte param0, gk param1, String param2, String param3) {
+    final static ll[] a(byte param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

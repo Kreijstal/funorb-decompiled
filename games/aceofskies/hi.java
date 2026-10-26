@@ -101,11 +101,11 @@ final class hi extends to {
           return;
         }
         if (param0 == 8585) {
-          nk.a((byte) -119, 4, false);
+          MenuScreen.a((byte) -119, 4, false);
           return;
         }
         hi.k(37);
-        nk.a((byte) -119, 4, false);
+        MenuScreen.a((byte) -119, 4, false);
     }
 
     static {

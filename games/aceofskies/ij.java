@@ -4,7 +4,7 @@
 final class ij extends hh {
     static qm field_j;
     private qe field_f;
-    static gk field_h;
+    static ResourceArchive field_h;
     private ju field_d;
     static nf field_g;
     private si field_e;
@@ -29,7 +29,7 @@ final class ij extends hh {
         }
     }
 
-    final static ll a(gk param0, String param1, String param2, int param3) {
+    final static ll a(ResourceArchive param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -81,13 +81,13 @@ final class ij extends hh {
           return (tf) ((Object) new cr());
         }
         String var2 = (String) null;
-        ij.a((gk) null, (String) null, (String) null, 105);
+        ij.a((ResourceArchive) null, (String) null, (String) null, 105);
         return (tf) ((Object) new cr());
     }
 
     final void a(byte param0, int param1, int param2) {
         int var4 = 0;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if ((1 & param1) == 1) {
           if (!this.field_f.field_d) {
             var4 = this.field_a.field_hb % 4000 * 16 / 4000;
@@ -209,7 +209,7 @@ final class ij extends hh {
         field_g = null;
         field_h = null;
         if (param0 != 1822) {
-          field_h = (gk) null;
+          field_h = (ResourceArchive) null;
           field_j = null;
           return;
         }

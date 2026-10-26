@@ -17,7 +17,7 @@ final class iu extends ao {
         }
     }
 
-    final static wp[] a(gk param0, String param1, byte param2, String param3) {
+    final static wp[] a(ResourceArchive param0, String param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -34,7 +34,7 @@ final class iu extends ao {
         try {
           if (param2 != -86) {
             var6 = (String) null;
-            iu.a((gk) null, (String) null, (byte) 65, (String) null);
+            iu.a((ResourceArchive) null, (String) null, (byte) 65, (String) null);
           }
           var4_int = param0.b(param1, 0);
           var5 = param0.a(-67, var4_int, param3);

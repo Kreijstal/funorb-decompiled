@@ -41,7 +41,7 @@ final class em {
         byte[] var23;
         byte[] var24;
         byte[] var2Lifetime1;
-        var16 = AceOfSkies.field_G ? 1 : 0;
+        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_a) {
           if (bm.field_C == null) {
             var22 = gg.a(8, -117, 16.0f, new ol(419684), 128, 128, 4.0f, 4.0f, 0.5f, 16, 0.6000000238418579f);
@@ -50,7 +50,7 @@ final class em {
             var2 = var18;
             bm.field_C = sf.a(false, -137, var22);
           }
-          var23 = rb.a(false, bm.field_C, -76);
+          var23 = PacketBuffer.a(false, bm.field_C, -76);
           var20 = var23;
           var17 = var20;
           var2Lifetime1 = var17;
@@ -147,9 +147,9 @@ final class em {
             }
             return;
           }
-          var17 = rb.a(false, wl.field_r, 66);
+          var17 = PacketBuffer.a(false, wl.field_r, 66);
           this.field_f = this.field_g.a(128, -123, 128, hh.field_c, 16, var17);
-          var18 = rb.a(false, lg.field_l, 101);
+          var18 = PacketBuffer.a(false, lg.field_l, 101);
           this.field_g.a(128, -95, 128, hh.field_c, 16, var18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -101,7 +101,7 @@ final class sa {
         int var11Lifetime1;
         int var13Lifetime1;
         int var13Lifetime2;
-        var15 = AceOfSkies.field_G ? 1 : 0;
+        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = this.field_f + this.field_e;
           var6 = this.field_o + this.field_l;
@@ -183,7 +183,7 @@ final class sa {
         ll var13 = null;
         vi var14 = null;
         vi var19 = null;
-        int var15 = AceOfSkies.field_G ? 1 : 0;
+        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         vi var14Lifetime1;
         vi var14Lifetime2;
         try {
@@ -296,9 +296,9 @@ final class sa {
         int var3 = 0;
         bb var4 = null;
         RuntimeException decompiledCaughtException = null;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var4 = (bb) (av.field_c.d(268435455));
+          var4 = (bb) (av.field_c.first(268435455));
           var1 = var4;
           if (var1 == null) {
             return false;

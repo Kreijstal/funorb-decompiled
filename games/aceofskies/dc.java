@@ -3,7 +3,7 @@
  */
 final class dc extends aa {
     static int field_f;
-    static pa field_g;
+    static RenderSprite field_g;
     el field_e;
 
     public static void c(int param0) {

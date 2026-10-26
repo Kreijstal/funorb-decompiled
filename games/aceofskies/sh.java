@@ -61,7 +61,7 @@ final class sh extends to {
         }
     }
 
-    final static wu a(dl param0, byte param1) {
+    final static wu a(CipherPacketBuffer param0, byte param1) {
         int var7 = 0;
         wu stackIn_5_0 = null;
         wu stackIn_25_0 = null;
@@ -76,7 +76,7 @@ final class sh extends to {
         wu var5 = null;
         int var6 = 0;
         int var8 = 0;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param0.b((byte) 81, 8);
           if (var2_int > 0) {

@@ -26,7 +26,7 @@ final class wu {
     int[] field_e;
     short[] field_y;
     int field_N;
-    static kp field_w;
+    static IntrusiveDeque field_w;
     int field_J;
     short[] field_H;
     int[] field_j;
@@ -50,7 +50,7 @@ final class wu {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4) {
             this.a(-126, 92, 16, -17);
@@ -90,10 +90,10 @@ final class wu {
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 < 93) {
-            field_w = (kp) null;
+            field_w = (IntrusiveDeque) null;
           }
           var5_int = 0;
           while (var5_int < this.field_r) {
@@ -120,7 +120,7 @@ final class wu {
           field_w = null;
           field_c = null;
           if (!param0) {
-            field_w = (kp) null;
+            field_w = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "wu.D(" + param0 + ')');
@@ -183,7 +183,7 @@ final class wu {
         int var11 = 0;
         int var12 = 0;
         RuntimeException decompiledCaughtException = null;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_O) {
             return;
@@ -237,7 +237,7 @@ final class wu {
         }
     }
 
-    final static void a(int param0, gk param1) {
+    final static void a(int param0, ResourceArchive param1) {
         RuntimeException stackIn_312_0 = null;
         StringBuilder stackIn_312_1 = null;
         String stackIn_313_2 = null;
@@ -362,7 +362,7 @@ final class wu {
           }
           var2Lifetime7 = im.a(47, "nametitle");
           if (var2Lifetime7 != null) {
-            ob.field_f = ea.a(0, var2Lifetime7);
+            SoundCache.field_f = ea.a(0, var2Lifetime7);
           }
           var2Lifetime8 = im.a(49, "bsths");
           if (var2Lifetime8 != null) {
@@ -402,7 +402,7 @@ final class wu {
           }
           var2Lifetime17 = im.a(85, "thousandseperator");
           if (var2Lifetime17 != null) {
-            kp.field_b = ea.a(0, var2Lifetime17);
+            IntrusiveDeque.field_b = ea.a(0, var2Lifetime17);
           }
           var2Lifetime18 = im.a(38, "classicmodeonly");
           if (null != var2Lifetime18) {
@@ -706,6 +706,6 @@ final class wu {
 
     static {
         field_c = new int[8192];
-        field_w = new kp();
+        field_w = new IntrusiveDeque();
     }
 }

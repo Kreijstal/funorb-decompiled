@@ -17,7 +17,7 @@ final class ec extends ao {
     private float field_f;
     static int field_t;
     private float field_r;
-    static pa[] field_e;
+    static RenderSprite[] field_e;
     private float field_n;
 
     final static void a(int param0, int param1, ll[] param2, int param3, int param4, hc param5, int param6, ll[] param7, ll[] param8, int param9, int param10, int param11, int param12, int param13, int param14) {
@@ -575,7 +575,7 @@ final class ec extends ao {
         float var9 = 0.0f;
         float var10 = 0.0f;
         int var11 = 0;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 != 11) {
             field_m = (int[]) null;

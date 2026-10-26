@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mk extends pa {
+abstract class mk extends RenderSprite {
     static int field_s;
     static int field_C;
     private static int field_u;

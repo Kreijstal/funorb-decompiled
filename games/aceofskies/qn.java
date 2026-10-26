@@ -3,7 +3,7 @@
  */
 final class qn {
     static java.awt.Image field_d;
-    static ob field_c;
+    static SoundCache field_c;
     static st field_a;
     static tp field_b;
 

@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class wl extends ha {
+final class wl extends GraphicsRenderer {
     private int field_ec;
     jaggl.OpenGL field_kc;
     static float[] field_Ub;
@@ -29,7 +29,7 @@ final class wl extends ha {
     private boolean field_S;
     jaclib.memory.heap.NativeHeap field_mb;
     cs field_cc;
-    private kp field_jb;
+    private IntrusiveDeque field_jb;
     int field_hb;
     private wj field_y;
     private int field_fc;
@@ -44,16 +44,16 @@ final class wl extends ha {
     private up[] field_Jb;
     private ph field_s;
     private int field_rb;
-    private kp field_Gc;
+    private IntrusiveDeque field_Gc;
     int field_lb;
     int field_ib;
     private int field_yc;
-    private kp field_nb;
-    private kp field_Ac;
-    private kp field_zb;
-    private kp field_Gb;
-    private kp field_dc;
-    private kp field_f;
+    private IntrusiveDeque field_nb;
+    private IntrusiveDeque field_Ac;
+    private IntrusiveDeque field_zb;
+    private IntrusiveDeque field_Gb;
+    private IntrusiveDeque field_dc;
+    private IntrusiveDeque field_f;
     private boolean field_uc;
     private boolean field_hc;
     private boolean field_k;
@@ -140,14 +140,14 @@ final class wl extends ha {
     private int field_Ob;
     private String field_B;
 
-    final pa a(vd param0, boolean param1) {
+    final RenderSprite a(vd param0, boolean param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
-        pa stackIn_18_0 = null;
+        RenderSprite stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -157,14 +157,14 @@ final class wl extends ha {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
-        pa var6 = null;
+        RenderSprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int[] var10 = null;
         int[] var11 = null;
         int[] var12 = null;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var10 = new int[param0.field_h * param0.field_c];
           var12 = var10;
@@ -237,7 +237,7 @@ final class wl extends ha {
 
     final int[] a(int param0, int param1, byte param2, int param3, int param4) {
         int var7 = 0;
-        int var8 = AceOfSkies.field_G ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 != -78) {
           up var9 = (up) null;
           this.a((up) null, (byte) -74);
@@ -265,7 +265,7 @@ final class wl extends ha {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 1) {
             return;
@@ -349,7 +349,7 @@ final class wl extends ha {
         tj discarded$0 = new tj();
         tj discarded$1 = new tj();
         this.field_S = false;
-        this.field_jb = new kp();
+        this.field_jb = new IntrusiveDeque();
         this.field_Fc = new up[4];
         this.field_Y = -1;
         this.field_rc = -1;
@@ -358,13 +358,13 @@ final class wl extends ha {
         this.field_Jb = new up[4];
         this.field_Ec = new er();
         this.field_s = new ph(16);
-        this.field_Gc = new kp();
-        this.field_nb = new kp();
-        this.field_Ac = new kp();
-        this.field_zb = new kp();
-        this.field_Gb = new kp();
-        this.field_dc = new kp();
-        this.field_f = new kp();
+        this.field_Gc = new IntrusiveDeque();
+        this.field_nb = new IntrusiveDeque();
+        this.field_Ac = new IntrusiveDeque();
+        this.field_zb = new IntrusiveDeque();
+        this.field_Gb = new IntrusiveDeque();
+        this.field_dc = new IntrusiveDeque();
+        this.field_f = new IntrusiveDeque();
         tj discarded$2 = new tj();
         this.field_h = new tj();
         this.field_H = new tj();
@@ -559,7 +559,7 @@ final class wl extends ha {
 
     private final void b(boolean param0) {
         int incrementValue$0 = 0;
-        int var3 = AceOfSkies.field_G ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0) {
           this.d(56);
         }
@@ -570,7 +570,7 @@ final class wl extends ha {
           if (incrementValue$0 > 5) {
             throw new RuntimeException("");
           }
-          wf.a(1000L, false);
+          IntrusiveNode.a(1000L, false);
         }
     }
 
@@ -621,8 +621,8 @@ final class wl extends ha {
     final synchronized void b(int param0, int param1, int param2) {
         int var5 = 40 / ((69 - param2) / 47);
         iq var4 = new iq(param1);
-        var4.field_b = (long)param0;
-        this.field_Ac.a(80, var4);
+        var4.key = (long)param0;
+        this.field_Ac.addLast(80, var4);
     }
 
     final void KA(int param0, int param1, int param2, int param3) {
@@ -800,7 +800,7 @@ final class wl extends ha {
               var3.a((byte) 95, 0.0f);
               var3.a((byte) 60, 0.0f);
             }
-            this.field_gb = this.a((byte) -49, 20, var3.field_f, var3.field_g, false);
+            this.field_gb = this.a((byte) -49, 20, var3.payload, var3.position, false);
             discarded$2 = new hl(this.field_gb, 5126, 3, 0);
             discarded$3 = new hl(this.field_gb, 5126, 2, 12);
             this.field_q.a((byte) 102, this);
@@ -822,9 +822,9 @@ final class wl extends ha {
 
     final synchronized void d(int param0, int param1) {
         int var3 = 19 / ((param0 + 68) / 56);
-        wf var4 = new wf();
-        var4.field_b = (long)param1;
-        this.field_dc.a(110, var4);
+        IntrusiveNode var4 = new IntrusiveNode();
+        var4.key = (long)param1;
+        this.field_dc.addLast(110, var4);
     }
 
     private final void l(int param0) {
@@ -843,7 +843,7 @@ final class wl extends ha {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.g(-2, -88);
         for (var2 = this.field_Xb - 1; var2 >= 0; var2--) {
           this.a(false, var2);
@@ -911,7 +911,7 @@ final class wl extends ha {
         int var11;
         int var12;
         int var13;
-        var13 = AceOfSkies.field_G ? 1 : 0;
+        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 <= 124) {
           field_Ub = (float[]) null;
         }
@@ -988,7 +988,7 @@ final class wl extends ha {
         int var5;
         int var6;
         int var3Lifetime1;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_Cb != param1) {
           if (param1 != 1) {
             if (2 != param1) {
@@ -1076,9 +1076,9 @@ final class wl extends ha {
         if (param1 != 3) {
           return;
         }
-        wf var4 = new wf();
-        var4.field_b = param0;
-        this.field_f.a(param1 + 98, var4);
+        IntrusiveNode var4 = new IntrusiveNode();
+        var4.key = param0;
+        this.field_f.addLast(param1 + 98, var4);
     }
 
     private final void v(int param0) {
@@ -1129,7 +1129,7 @@ final class wl extends ha {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_i) {
@@ -1196,7 +1196,7 @@ final class wl extends ha {
     }
 
     final void a(int param0, byte param1) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (1 == param0) {
           this.a(7681, -26625, 7681);
         } else {
@@ -1335,7 +1335,7 @@ final class wl extends ha {
           this.field_O = this.field_O & -32;
         }
         if (param1 > -126) {
-          this.field_dc = (kp) null;
+          this.field_dc = (IntrusiveDeque) null;
         }
     }
 
@@ -1371,17 +1371,17 @@ final class wl extends ha {
         iq var7;
         iq var8;
         iq var9;
-        wf var10;
-        wf var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         iq var12;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         param0 = param0 & 2147483647;
         var2 = 0;
-        while (!this.field_nb.a(true)) {
-          var5 = (iq) (this.field_nb.e(123));
+        while (!this.field_nb.isEmpty(true)) {
+          var5 = (iq) (this.field_nb.removeFirst(123));
           incrementValue$3 = var2;
           var2++;
-          in.field_b[incrementValue$3] = (int)var5.field_b;
+          in.field_b[incrementValue$3] = (int)var5.key;
           this.field_ib = this.field_ib - var5.field_f;
           if (1000 != var2) {
             continue;
@@ -1393,11 +1393,11 @@ final class wl extends ha {
           jaggl.OpenGL.glDeleteBuffersARB(var2, in.field_b, 0);
           var2 = 0;
         }
-        while (!this.field_Ac.a(true)) {
-          var6 = (iq) (this.field_Ac.e(121));
+        while (!this.field_Ac.isEmpty(true)) {
+          var6 = (iq) (this.field_Ac.removeFirst(121));
           incrementValue$2 = var2;
           var2++;
-          in.field_b[incrementValue$2] = (int)var6.field_b;
+          in.field_b[incrementValue$2] = (int)var6.key;
           this.field_lb = this.field_lb - var6.field_f;
           if (var2 != 1000) {
             continue;
@@ -1409,8 +1409,8 @@ final class wl extends ha {
           jaggl.OpenGL.glDeleteTextures(var2, in.field_b, 0);
           var2 = 0;
         }
-        while (!this.field_zb.a(true)) {
-          var7 = (iq) (this.field_zb.e(124));
+        while (!this.field_zb.isEmpty(true)) {
+          var7 = (iq) (this.field_zb.removeFirst(124));
           incrementValue$1 = var2;
           var2++;
           in.field_b[incrementValue$1] = var7.field_f;
@@ -1424,11 +1424,11 @@ final class wl extends ha {
           jaggl.OpenGL.glDeleteFramebuffersEXT(var2, in.field_b, 0);
           var2 = 0;
         }
-        while (!this.field_Gb.a(true)) {
-          var8 = (iq) (this.field_Gb.e(127));
+        while (!this.field_Gb.isEmpty(true)) {
+          var8 = (iq) (this.field_Gb.removeFirst(127));
           incrementValue$0 = var2;
           var2++;
-          in.field_b[incrementValue$0] = (int)var8.field_b;
+          in.field_b[incrementValue$0] = (int)var8.key;
           this.field_yc = this.field_yc - var8.field_f;
           if (var2 != 1000) {
             continue;
@@ -1440,21 +1440,21 @@ final class wl extends ha {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, in.field_b, 0);
           var2 = 0;
         }
-        while (!this.field_Gc.a(true)) {
-          var9 = (iq) (this.field_Gc.e(121));
-          jaggl.OpenGL.glDeleteLists((int)var9.field_b, var9.field_f);
+        while (!this.field_Gc.isEmpty(true)) {
+          var9 = (iq) (this.field_Gc.removeFirst(121));
+          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_f);
         }
-        while (!this.field_dc.a(true)) {
-          var10 = this.field_dc.e(121);
-          jaggl.OpenGL.glDeleteProgramARB((int)var10.field_b);
+        while (!this.field_dc.isEmpty(true)) {
+          var10 = this.field_dc.removeFirst(121);
+          jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
         }
-        while (!this.field_f.a(true)) {
-          var11 = this.field_f.e(127);
-          jaggl.OpenGL.glDeleteObjectARB(var11.field_b);
+        while (!this.field_f.isEmpty(true)) {
+          var11 = this.field_f.removeFirst(127);
+          jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
-        while (!this.field_Gc.a(true)) {
-          var12 = (iq) (this.field_Gc.e(124));
-          jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_f);
+        while (!this.field_Gc.isEmpty(true)) {
+          var12 = (iq) (this.field_Gc.removeFirst(124));
+          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_f);
         }
         this.field_X.a(64);
         if (this.w(8705) > 100663296 &&
@@ -1550,11 +1550,11 @@ final class wl extends ha {
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
         Long var3 = null;
-        int var4 = AceOfSkies.field_G ? 1 : 0;
-        wf var1 = this.field_jb.d(268435455);
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        IntrusiveNode var1 = this.field_jb.first(268435455);
         while (var1 != null) {
           ((im) (var1)).a(-125);
-          var1 = this.field_jb.b((byte) 103);
+          var1 = this.field_jb.next((byte) 103);
         }
         if (this.field_pc != null) {
           this.field_pc.a(1);
@@ -1571,7 +1571,7 @@ final class wl extends ha {
           this.field_kc = null;
         }
         if (this.field_S) {
-          da.a(120, true, false);
+          BitmapFont.a(120, true, false);
           this.field_S = false;
         }
     }
@@ -1581,7 +1581,7 @@ final class wl extends ha {
           this.r(8);
         }
         iq var3 = new iq(param1);
-        this.field_zb.a(118, var3);
+        this.field_zb.addLast(118, var3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -1816,7 +1816,7 @@ final class wl extends ha {
         }
     }
 
-    final pa a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
         tm stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1825,7 +1825,7 @@ final class wl extends ha {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new tm(this, param3, param4, param0, param1, param2);
-          return (pa) ((Object) stackIn_1_0);
+          return (RenderSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -1952,9 +1952,9 @@ final class wl extends ha {
 
     final synchronized void c(int param0, int param1, int param2) {
         iq var4 = new iq(param1);
-        var4.field_b = (long)param0;
+        var4.key = (long)param0;
         int var5 = 112 % ((param2 + 54) / 58);
-        this.field_nb.a(96, var4);
+        this.field_nb.addLast(96, var4);
     }
 
     final static int t(int param0) {
@@ -1968,7 +1968,7 @@ final class wl extends ha {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          rb var2 = null;
+          PacketBuffer var2 = null;
           if (ul.field_r.field_j >= 4) {
             if (ul.field_r.field_e == -1) {
               return 3;
@@ -1980,7 +1980,7 @@ final class wl extends ha {
           }
           try {
             if (bm.field_z == 0) {
-              wu.field_l = cs.field_d.a(2, hi.field_x, l.field_f);
+              wu.field_l = cs.field_d.a(2, hi.field_x, RendererManager.field_f);
               bm.field_z = bm.field_z + 1;
             }
             if (bm.field_z == 1) {
@@ -1998,17 +1998,17 @@ final class wl extends ha {
             }
             if (2 == bm.field_z) {
               du.field_m = new vf((java.net.Socket) (wu.field_l.field_f), cs.field_d);
-              var2 = new rb(13);
-              tr.a(var2, uk.field_g, ob.field_e, nm.field_b, 0);
-              var2.b(-1336879960, 15);
-              var2.a((byte) 20, si.field_c);
-              du.field_m.a(13, 0, 41, var2.field_f);
+              var2 = new PacketBuffer(13);
+              tr.a(var2, uk.field_g, SoundCache.field_e, IntKeyLookup.field_b, 0);
+              var2.writeByte(-1336879960, 15);
+              var2.writeInt((byte) 20, si.field_c);
+              du.field_m.a(13, 0, 41, var2.payload);
               bm.field_z = bm.field_z + 1;
-              gb.field_j = 30000L + kh.a(-70);
+              AircraftDefinition.field_j = 30000L + kh.a(-70);
             }
             if (bm.field_z == 3) {
               if (du.field_m.b(-120) <= 0) {
-                if (kh.a(-116) > gb.field_j) {
+                if (kh.a(-116) > AircraftDefinition.field_j) {
                   stackIn_34_0 = tj.a(-126, -2);
                   return stackIn_34_0;
                 }
@@ -2050,8 +2050,8 @@ final class wl extends ha {
           this.field_O = this.field_O & -8;
         }
         if (param1 != -125) {
-          pa var4 = (pa) null;
-          this.a((pa) null, true);
+          RenderSprite var4 = (RenderSprite) null;
+          this.a((RenderSprite) null, true);
         }
     }
 
@@ -2083,8 +2083,8 @@ final class wl extends ha {
           this.c(27);
         }
         iq var4 = new iq(param1);
-        var4.field_b = (long)param2;
-        this.field_Gb.a(93, var4);
+        var4.key = (long)param2;
+        this.field_Gb.addLast(93, var4);
     }
 
     final static void a(java.awt.Component param0, byte param1) {
@@ -2151,7 +2151,7 @@ final class wl extends ha {
         }
     }
 
-    final void a(pa param0, boolean param1) {
+    final void a(RenderSprite param0, boolean param1) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -2165,7 +2165,7 @@ final class wl extends ha {
         gt var8 = null;
         cu var9 = null;
         cu var10 = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_j = (tm) (param0);
           if (this.field_A) {
@@ -2187,7 +2187,7 @@ final class wl extends ha {
                   if (var4 != null) {
                     var10 = (cu) (var4);
                     var10.d(-128);
-                    var10.c(-126);
+                    var10.unlink(-126);
                     var10.d((byte) -108);
                     this.field_rb = this.field_rb - var10.field_o;
                     continue;
@@ -2214,7 +2214,7 @@ final class wl extends ha {
                 if (var4 != null) {
                   var8 = (gt) (var4);
                   var8.d(-127);
-                  var8.c(-126);
+                  var8.unlink(-126);
                   this.field_kc.releasePbuffer(var8.f(25766));
                   this.field_rb = this.field_rb - var8.field_n;
                   continue;
@@ -2327,7 +2327,7 @@ final class wl extends ha {
     final void a(sm param0) {
     }
 
-    final da a(vs param0, vd[] param1, boolean param2) {
+    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
         RuntimeException var4 = null;
         mu stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -2338,7 +2338,7 @@ final class wl extends ha {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new mu(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          return (BitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -2506,7 +2506,7 @@ final class wl extends ha {
 
     final za c(int param0) {
         im var2 = new im(param0);
-        this.field_jb.a(87, var2);
+        this.field_jb.addLast(87, var2);
         return (za) ((Object) var2);
     }
 

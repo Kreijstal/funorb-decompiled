@@ -3,7 +3,7 @@
  */
 final class lt extends to {
     static int field_u;
-    private kp field_w;
+    private IntrusiveDeque field_w;
     static vd field_v;
 
     public static void k(int param0) {
@@ -13,14 +13,14 @@ final class lt extends to {
 
     public lt() {
         super(0, 0, fj.field_c, nc.field_d, (ir) null, (no) null);
-        this.field_w = new kp();
+        this.field_w = new IntrusiveDeque();
     }
 
     final gm d(byte param0) {
         an var2;
         gm var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != -112) {
           return (gm) null;
         }
@@ -36,7 +36,7 @@ final class lt extends to {
     }
 
     final void j(int param0) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 0) {
           this.i(92);
         }
@@ -44,14 +44,14 @@ final class lt extends to {
         gm var3 = (gm) (var2.c(-1372));
         while (var3 != null) {
           if (var3.i(param0 - 72)) {
-            var3.c(-125);
+            var3.unlink(-125);
           }
           var3 = (gm) (var2.a(param0 + 59));
         }
     }
 
     final void e(byte param0) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_w);
         gm var3 = (gm) (var2.c(-1372));
         while (var3 != null) {
@@ -68,13 +68,13 @@ final class lt extends to {
         gm var3 = null;
         try {
           if (param1 != 0) {
-            this.field_w = (kp) null;
+            this.field_w = (IntrusiveDeque) null;
           }
           if (!(param0 instanceof gm)) {
             throw new IllegalArgumentException();
           }
           var3 = (gm) (param0);
-          this.field_w.a(var3, 25611);
+          this.field_w.addFirst(var3, 25611);
           var3.field_z = true;
           var3.a((ea) (this), (byte) -42);
         } catch (RuntimeException runtimeException) {
@@ -83,7 +83,7 @@ final class lt extends to {
     }
 
     final ea i(int param0) {
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_w);
         gm var3 = (gm) (var2.c(-1372));
         while (var3 != null) {
@@ -100,13 +100,13 @@ final class lt extends to {
     }
 
     final void f(byte param0) {
-        int var5 = AceOfSkies.field_G ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var3 = 96 % ((-31 - param0) / 58);
         an var2 = new an(this.field_w);
         gm var4 = (gm) (var2.c(-1372));
         while (var4 != null) {
           if (var4.h(11)) {
-            var4.c(-127);
+            var4.unlink(-127);
           }
           var4 = (gm) (var2.a(-127));
         }
@@ -114,7 +114,7 @@ final class lt extends to {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var7 = AceOfSkies.field_G ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_e != null) {
           this.field_e.a(true, -7592, param3, (ea) (this), param2);
         }

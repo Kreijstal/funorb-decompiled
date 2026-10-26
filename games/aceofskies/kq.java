@@ -3,7 +3,7 @@
  */
 final class kq {
     private int[] field_a;
-    static al field_b;
+    static PcmSample field_b;
 
     final int a(int param0, int param1, byte[] param2, boolean param3, int param4, byte[] param5) {
         int dupTemp$0 = 0;
@@ -44,7 +44,7 @@ final class kq {
         int var10Lifetime5;
         int var10Lifetime6;
         int var10Lifetime7;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 == 0) {
             stackIn_4_0 = 0;
@@ -57,7 +57,7 @@ final class kq {
           param1 = param1 + param0;
           var7_int = 0;
           var8 = param4;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param2[var8];
             if (0 <= var9) {
               var7_int++;
@@ -71,7 +71,7 @@ final class kq {
               param0++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param0 >= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -87,7 +87,7 @@ final class kq {
               param0++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -103,7 +103,7 @@ final class kq {
               param0++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param1 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -119,7 +119,7 @@ final class kq {
               param0++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param0 >= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -135,7 +135,7 @@ final class kq {
               param0++;
               param5[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param1 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -167,7 +167,7 @@ final class kq {
               param0++;
               param5[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param1 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -183,7 +183,7 @@ final class kq {
               param0++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param1 <= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }

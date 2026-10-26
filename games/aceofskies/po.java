@@ -6,7 +6,7 @@ final class po extends ka {
     private int field_g;
     private am field_b;
     private am field_k;
-    static pa[] field_e;
+    static RenderSprite[] field_e;
     private int field_d;
     private am field_c;
     static int field_h;
@@ -14,32 +14,32 @@ final class po extends ka {
     private ms field_i;
 
     final static void a(fp param0, byte param1, int param2) {
-        dl var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = q.field_p;
           var3.g(127, param2);
           if (param1 < 19) {
             field_h = -122;
           }
-          var3.b(-1336879960, param0.field_f);
-          var3.a(param0.field_e, 23385);
+          var3.writeByte(-1336879960, param0.field_f);
+          var3.writeShort(param0.field_e, 23385);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "po.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static rh a(int param0, int param1, al param2) {
-        rh var3 = null;
+    final static SoundPlayback a(int param0, int param1, PcmSample param2) {
+        SoundPlayback var3 = null;
         RuntimeException var3_ref = null;
-        rh stackIn_2_0 = null;
-        rh stackIn_4_0 = null;
+        SoundPlayback stackIn_2_0 = null;
+        SoundPlayback stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            stackIn_2_0 = (rh) null;
+            stackIn_2_0 = (SoundPlayback) null;
             return stackIn_2_0;
           }
           var3 = jo.a(param2, param0, (byte) -44);
@@ -71,7 +71,7 @@ final class po extends ka {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -1) {
             po.c(126);

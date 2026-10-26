@@ -4,7 +4,7 @@
 final class mg {
     static volatile long field_b;
     static String field_a;
-    static hk field_d;
+    static MidiPcmStream field_d;
     private ll[] field_c;
 
     public static void a(int param0) {
@@ -29,7 +29,7 @@ final class mg {
         return param0 == (-param0 & param0) ? true : false;
     }
 
-    final static void a(ha param0, int param1) {
+    final static void a(GraphicsRenderer param0, int param1) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;

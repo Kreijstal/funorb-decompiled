@@ -43,12 +43,12 @@ final class qa {
         int var10 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var1_int = pt.field_a;
           var2 = 0;
           if (2 == ol.field_c) {
-            var3_long = kh.a(-71) - rb.field_e;
+            var3_long = kh.a(-71) - PacketBuffer.field_e;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -105,7 +105,7 @@ final class qa {
             stackIn_42_0 = true;
             stackIn_42_1 = var6;
             stackIn_43_2 = !(0 > var4);
-            var7Lifetime1 = kp.a(stackIn_42_0, stackIn_42_1, stackIn_43_2);
+            var7Lifetime1 = IntrusiveDeque.a(stackIn_42_0, stackIn_42_1, stackIn_43_2);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + ri.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + pp.field_a;
@@ -121,7 +121,7 @@ final class qa {
               var1_int = var1_int + as.field_c;
             }
             if (var4 >= 0) {
-              pk.field_e.b(var6, var8Lifetime1, ke.field_b + var1_int, var5, -1);
+              FlightSession.field_e.b(var6, var8Lifetime1, ke.field_b + var1_int, var5, -1);
               var1_int = var1_int + (pp.field_a + as.field_c + lp.field_h);
             } else {
               nh.field_c.b(var6, var8Lifetime1, tf.field_b + var1_int, var5, -1);
@@ -167,7 +167,7 @@ final class qa {
         int var7Lifetime5Lifetime1;
         int var7Lifetime10;
         int var7Lifetime2Lifetime2;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (0 > it.field_c) {
           return;
         }

@@ -43,7 +43,7 @@ final class bc extends to {
         byte[] var14 = null;
         byte[] var15 = null;
         byte[] var16 = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!bm.field_I.field_q) {
             stackIn_3_0 = -1;
@@ -53,7 +53,7 @@ final class bc extends to {
             stackIn_6_0 = 100;
             return stackIn_6_0;
           }
-          var11 = ob.a(param0, (byte) -18);
+          var11 = SoundCache.a(param0, (byte) -18);
           if (var11 == null) {
             stackIn_10_0 = -1;
             return stackIn_10_0;

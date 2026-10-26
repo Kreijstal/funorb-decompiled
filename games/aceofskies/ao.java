@@ -5,7 +5,7 @@ abstract class ao {
     static sa field_b;
     static String field_d;
     static String field_a;
-    static kp field_c;
+    static IntrusiveDeque field_c;
 
     public static void a(int param0) {
         field_c = null;
@@ -15,7 +15,7 @@ abstract class ao {
         field_b = null;
     }
 
-    final static byte[] a(dl param0, byte[] param1, boolean param2, int param3) {
+    final static byte[] a(CipherPacketBuffer param0, byte[] param1, boolean param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -31,7 +31,7 @@ abstract class ao {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var4_int = param0.b((byte) -53, param3);
           if (var4_int == 0) {
@@ -97,7 +97,7 @@ abstract class ao {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           RuntimeException var2_ref = null;
-          var8 = AceOfSkies.field_G ? 1 : 0;
+          var8 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             try {
               var9 = param0.getParameter("cookieprefix");

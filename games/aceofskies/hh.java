@@ -32,7 +32,7 @@ abstract class hh {
 
     abstract void a(int param0, int param1, rt param2);
 
-    final static void a(int param0, ha param1) {
+    final static void a(int param0, GraphicsRenderer param1) {
         bo var2 = null;
         int var3 = 0;
         int var4 = 0;
@@ -64,8 +64,8 @@ abstract class hh {
           lp.field_h = param0;
           return;
         }
-        ha var6 = (ha) null;
-        hh.a(-76, (ha) null);
+        GraphicsRenderer var6 = (GraphicsRenderer) null;
+        hh.a(-76, (GraphicsRenderer) null);
         ke.field_b = param3;
         tf.field_b = param4;
         lp.field_h = param0;
@@ -86,9 +86,9 @@ abstract class hh {
     }
 
     final static void a(int param0, String param1, int param2, int param3, byte param4, rk param5, int param6, int param7, int param8) {
-        l.field_f = param2;
-        nm.field_b = param3;
-        ob.field_e = param8;
+        RendererManager.field_f = param2;
+        IntKeyLookup.field_b = param3;
+        SoundCache.field_e = param8;
         si.field_c = param7;
         if (param4 != -36) {
           return;
@@ -116,7 +116,7 @@ abstract class hh {
 
     final static int[][] a(byte param0, int param1, int param2, boolean param3, int param4, float param5, int param6, int param7, int param8) {
         int var12 = 0;
-        int var13 = AceOfSkies.field_G ? 1 : 0;
+        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         int[][] var16 = new int[param4][param2];
         int[][] var15 = var16;
         int[][] var14 = var15;

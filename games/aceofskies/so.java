@@ -8,25 +8,25 @@ final class so {
     static int field_b;
 
     final static void a(int param0, byte param1) {
-        wf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         oc var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 > -29) {
             so.a(-27, (byte) -64);
           }
-          var4 = (oc) (ci.field_j.d(268435455));
+          var4 = (oc) (ci.field_j.first(268435455));
           while (var4 != null) {
             ac.a(param0, 0, var4);
-            var4 = (oc) (ci.field_j.b((byte) 103));
+            var4 = (oc) (ci.field_j.next((byte) 103));
           }
-          var2 = wu.field_w.d(268435455);
+          var2 = wu.field_w.first(268435455);
           while (var2 != null) {
             lb.a(param0, 0);
-            var2 = wu.field_w.b((byte) 103);
+            var2 = wu.field_w.next((byte) 103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

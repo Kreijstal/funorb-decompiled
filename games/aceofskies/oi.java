@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi {
-    static gk field_d;
+    static ResourceArchive field_d;
     static String field_b;
     static hc field_c;
-    static gk field_a;
+    static ResourceArchive field_a;
 
     public static void a(int param0) {
         field_a = null;
@@ -38,7 +38,7 @@ final class oi {
             try {
               var4 = Class.forName("c");
               if (param1 > -12) {
-                field_a = (gk) null;
+                field_a = (ResourceArchive) null;
               }
               var5 = (oe) (var4.newInstance());
               var5.a(-12189, param2, param0, param3);

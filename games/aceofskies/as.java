@@ -10,7 +10,7 @@ final class as {
         throw new IllegalStateException();
     }
 
-    final static cp a(gk param0, int param1, gk param2, String param3, String param4) {
+    final static cp a(ResourceArchive param0, int param1, ResourceArchive param2, String param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

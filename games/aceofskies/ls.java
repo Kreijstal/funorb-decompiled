@@ -34,7 +34,7 @@ final class ls extends IOException {
         int var7 = 0;
         int var8 = 0;
         CharSequence var9 = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 == null) {
             stackIn_4_0 = rn.field_c;

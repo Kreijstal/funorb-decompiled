@@ -103,7 +103,7 @@ final class jl extends sk {
         this.field_i = (jagdx.IDirect3DVertexShader) null;
     }
 
-    jl(kr param0, gk param1) {
+    jl(kr param0, ResourceArchive param1) {
         super(param0);
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
@@ -151,7 +151,7 @@ final class jl extends sk {
           this.field_b.a(this.field_k, -9135);
           this.field_b.a(du.field_l, true, bd.field_C);
           this.field_b.a((byte) 125, 0, bs.field_a);
-          this.field_b.a(true, 2, true, dl.field_p, false);
+          this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
           this.field_b.a(un.field_i, 0, 0);
           this.field_b.a(0, (byte) 45);
           this.c((byte) -111);
@@ -162,7 +162,7 @@ final class jl extends sk {
         this.field_b.a(this.field_k, -9135);
         this.field_b.a(du.field_l, true, bd.field_C);
         this.field_b.a((byte) 125, 0, bs.field_a);
-        this.field_b.a(true, 2, true, dl.field_p, false);
+        this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
         this.field_b.a(un.field_i, 0, 0);
         this.field_b.a(0, (byte) 45);
         this.c((byte) -111);
@@ -171,8 +171,8 @@ final class jl extends sk {
     final void a(int param0, int param1, jj param2) {
         if (param2 != null) {
           if (this.field_h) {
-            this.field_b.a((byte) 118, 0, dl.field_p);
-            this.field_b.a(dl.field_p, 0, 0);
+            this.field_b.a((byte) 118, 0, CipherPacketBuffer.field_p);
+            this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
             this.field_h = false;
           }
           this.field_b.a(param2, -9135);
@@ -205,9 +205,9 @@ final class jl extends sk {
         this.field_b.a(1, (byte) 114);
         this.field_b.a((jj) null, -9135);
         this.field_b.a(ru.field_a, param0, ru.field_a);
-        this.field_b.a((byte) 125, 0, dl.field_p);
+        this.field_b.a((byte) 125, 0, CipherPacketBuffer.field_p);
         this.field_b.a((byte) 122, 2, bs.field_a);
-        this.field_b.a(dl.field_p, 0, 0);
+        this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
         if (!param0) {
           field_m = (float[]) null;
           this.field_b.a(0, (byte) 56);
@@ -219,8 +219,8 @@ final class jl extends sk {
             this.field_f = null;
             return;
           }
-          this.field_b.a((byte) 118, 0, dl.field_p);
-          this.field_b.a(dl.field_p, 0, 0);
+          this.field_b.a((byte) 118, 0, CipherPacketBuffer.field_p);
+          this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
           this.field_h = false;
           if (this.field_f != null) {
             this.field_j.a((jagdx.IDirect3DVertexShader) null, 5243);
@@ -231,8 +231,8 @@ final class jl extends sk {
         }
         this.field_b.a(0, (byte) 56);
         if (this.field_h) {
-          this.field_b.a((byte) 118, 0, dl.field_p);
-          this.field_b.a(dl.field_p, 0, 0);
+          this.field_b.a((byte) 118, 0, CipherPacketBuffer.field_p);
+          this.field_b.a(CipherPacketBuffer.field_p, 0, 0);
           this.field_h = false;
           if (this.field_f == null) {
             return;

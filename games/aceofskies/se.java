@@ -3,7 +3,7 @@
  */
 final class se {
     static String field_a;
-    static da field_c;
+    static BitmapFont field_c;
     static int field_b;
 
     public static void a(byte param0) {
@@ -24,7 +24,7 @@ final class se {
         int stackIn_67_0 = 0;
         RuntimeException decompiledCaughtException = null;
         boolean stackOut_56_0;
-        dl var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -40,19 +40,19 @@ final class se {
         int var8 = 0;
         Object var3Lifetime1;
         String var4_ref_StringLifetime1;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -64) {
             se.a((byte) -70);
           }
-          var1 = nm.field_c;
-          var2 = var1.g(-58);
+          var1 = IntKeyLookup.field_c;
+          var2 = var1.readUnsignedByte(-58);
           if (var2 == 0) {
             if (gi.field_g == null) {
               gi.field_g = new es(128);
               hl.field_a = 0;
             }
-            stackIn_15_0 = (1 != var1.g(-60)) ? 0 : 1;
+            stackIn_15_0 = (1 != var1.readUnsignedByte(-60)) ? 0 : 1;
             var3_int = stackIn_15_0;
             var4_ref_String = var1.h(-17883);
             if (var3_int != 0) {
@@ -76,7 +76,7 @@ final class se {
               fieldTemp$0 = hl.field_a;
               hl.field_a = hl.field_a + 1;
               var5.field_cb = fieldTemp$0;
-              nh.field_d.a(75, var5);
+              nh.field_d.addLast(75, var5);
             }
             var5.field_I = var4_ref_String;
             return;
@@ -95,14 +95,14 @@ final class se {
               return;
             }
             if (var2 != 4) {
-              v.a("F1: " + dl.k((byte) 65), (byte) -52, (Throwable) null);
+              v.a("F1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
               te.b(true);
               return;
             }
             eo.field_a = 1;
             var3 = var1.h(-17883);
             ul.field_s = ((String) (var3)).intern();
-            var4 = var1.g(-46);
+            var4 = var1.readUnsignedByte(-46);
             lg.a(var4, 2);
             return;
           }
@@ -129,30 +129,30 @@ final class se {
             fieldTemp$1 = wo.field_o;
             wo.field_o = wo.field_o + 1;
             var6_ref.field_cb = fieldTemp$1;
-            rh.field_f.a(71, var6_ref);
+            SoundPlayback.field_f.addLast(71, var6_ref);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6_ref.field_bb = (String) (var3Lifetime1);
           var6_ref.field_I = var4_ref_StringLifetime1;
-          var6_ref.c(-123);
-          var7_ref = (cl) (rh.field_f.d(268435455));
-          L16: while (true) {
+          var6_ref.unlink(-123);
+          var7_ref = (cl) (SoundPlayback.field_f.first(268435455));
+          scanLoop1: while (true) {
             if (var7_ref != null) {
               stackOut_56_0 = cs.a(var7_ref, -115, var6_ref);
               stackIn_67_0 = stackOut_56_0 ? 1 : 0;
               stackIn_57_0 = stackOut_56_0;
               if (var8 != 0) {
-                break L16;
+                break scanLoop1;
               }
               if (stackIn_57_0) {
-                var7_ref = (cl) (rh.field_f.b((byte) 103));
+                var7_ref = (cl) (SoundPlayback.field_f.next((byte) 103));
                 continue;
               }
             }
             if (null == var7_ref) {
-              rh.field_f.a(120, var6_ref);
+              SoundPlayback.field_f.addLast(120, var6_ref);
               if (var8 == 0) {
                 return;
               }

@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fg extends ip {
+final class fg extends ArchiveProvider {
     private un field_g;
-    private ps field_m;
+    private ArchiveIndex field_m;
     private ph field_v;
     private int field_p;
     private byte[] field_u;
     private bl field_l;
     private dk field_z;
     private bl field_e;
-    static gk field_t;
-    static kp field_r;
+    static ResourceArchive field_t;
+    static IntrusiveDeque field_r;
     private int field_j;
     private ag field_y;
     private int field_w;
     private byte[] field_h;
-    private kp field_n;
-    private kp field_o;
+    private IntrusiveDeque field_n;
+    private IntrusiveDeque field_o;
     private boolean field_s;
     static String[] field_f;
     static ke field_A;
@@ -127,10 +127,10 @@ final class fg extends ip {
     final void b(int param0) {
         ag discarded$0 = null;
         ag discarded$1 = null;
-        wf var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_o) {
           return;
         }
@@ -140,13 +140,13 @@ final class fg extends ip {
         if (param0 != -20254) {
           return;
         }
-        var2 = this.field_n.d(param0 ^ -268415203);
+        var2 = this.field_n.first(param0 ^ -268415203);
         while (var2 != null) {
-          var3 = (int)var2.field_b;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (var3 < this.field_m.field_l) {
               if (this.field_m.field_k[var3] == 0) {
-                var2.c(-124);
+                var2.unlink(-124);
               } else {
                 if (this.field_h[var3] == 0) {
                   discarded$0 = this.a((byte) -37, 1, var3);
@@ -155,16 +155,16 @@ final class fg extends ip {
                   discarded$1 = this.a((byte) -37, 2, var3);
                 }
                 if (this.field_h[var3] == 1) {
-                  var2.c(param0 ^ 20327);
+                  var2.unlink(param0 ^ 20327);
                 }
               }
             } else {
-              var2.c(-124);
+              var2.unlink(-124);
             }
           } else {
-            var2.c(-124);
+            var2.unlink(-124);
           }
-          var2 = this.field_n.b((byte) 103);
+          var2 = this.field_n.next((byte) 103);
         }
     }
 
@@ -174,7 +174,7 @@ final class fg extends ip {
           return null;
         }
         byte[] var4 = var3.a(true);
-        var3.c(param1 ^ -128);
+        var3.unlink(param1 ^ -128);
         if (param1 != 2) {
           return (byte[]) null;
         }
@@ -193,37 +193,37 @@ final class fg extends ip {
         ag discarded$0 = null;
         int var2_int;
         ag var2;
-        wf var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        wf var6;
-        wf var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
         ag var2Lifetime1;
-        wf var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder2 = true;
-        var5 = AceOfSkies.field_G ? 1 : 0;
+        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_o != null) {
           if (this.a(true) == null) {
             return;
           }
           if (this.field_q) {
             var2_int = 1;
-            var3 = this.field_o.d(268435455);
+            var3 = this.field_o.first(268435455);
             while (var3 != null) {
-              var4 = (int)var3.field_b;
+              var4 = (int)var3.key;
               if (this.field_h[var4] == 0) {
                 discarded$3 = this.a((byte) -37, 1, var4);
               }
               if (this.field_h[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.c(-124);
+                var3.unlink(-124);
               }
-              var3 = this.field_o.b((byte) 103);
+              var3 = this.field_o.next((byte) 103);
             }
             while (this.field_m.field_k.length > this.field_d) {
               if (this.field_m.field_k[this.field_d] == 0) {
@@ -235,10 +235,10 @@ final class fg extends ip {
                   discarded$2 = this.a((byte) -37, 1, this.field_d);
                 }
                 if (this.field_h[this.field_d] == 0) {
-                  var6 = new wf();
-                  var6.field_b = (long)this.field_d;
+                  var6 = new IntrusiveNode();
+                  var6.key = (long)this.field_d;
                   var2_int = 0;
-                  this.field_o.a(81, var6);
+                  this.field_o.addLast(81, var6);
                 }
                 this.field_d = this.field_d + 1;
                 continue;
@@ -255,34 +255,34 @@ final class fg extends ip {
           else {
             if (this.field_s) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_o.d(268435455);
+              var3Lifetime1 = this.field_o.first(268435455);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_b;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_h[var4Lifetime1] != 1) {
                   discarded$1 = this.a((byte) -37, 2, var4Lifetime1);
                 }
                 if (this.field_h[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.c(-123);
+                  var3Lifetime1.unlink(-123);
                 }
-                var3Lifetime1 = this.field_o.b((byte) 103);
+                var3Lifetime1 = this.field_o.next((byte) 103);
               }
-              L5: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_d < this.field_m.field_k.length) {
                   if (0 != this.field_m.field_k[this.field_d]) {
                     if (this.field_g.a((byte) -106)) {
                       var2_intLifetime1 = 0;
-                      break L5;
+                      break scanLoop1;
                     }
                     if (this.field_h[this.field_d] != 1) {
                       discarded$0 = this.a((byte) -37, 2, this.field_d);
                     }
                     if (this.field_h[this.field_d] != 1) {
-                      var7 = new wf();
-                      var7.field_b = (long)this.field_d;
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_d;
                       var2_intLifetime1 = 0;
-                      this.field_o.a(115, var7);
+                      this.field_o.addLast(115, var7);
                     }
                   }
                   this.field_d = this.field_d + 1;
@@ -297,7 +297,7 @@ final class fg extends ip {
               }
               else {
                 if (param0 <= 84) {
-                  this.field_m = (ps) null;
+                  this.field_m = (ArchiveIndex) null;
                 }
                 decompiledFrameRemainder0 = (this.field_i);
                 if ((decompiledFrameRemainder0) &&
@@ -309,7 +309,7 @@ final class fg extends ip {
                         if (!var2.field_q) {
                           throw new RuntimeException();
                         }
-                        var2.c(-124);
+                        var2.unlink(-124);
                       } else {
                         var2.field_t = true;
                       }
@@ -330,7 +330,7 @@ final class fg extends ip {
         if ((decompiledFrameRemainder1) &&
           (decompiledFrameRemainder0)) {
           if (param0 <= 84) {
-            this.field_m = (ps) null;
+            this.field_m = (ArchiveIndex) null;
           }
           decompiledFrameRemainder0 = (this.field_i);
           if ((decompiledFrameRemainder0) &&
@@ -342,7 +342,7 @@ final class fg extends ip {
                   if (!var2Lifetime1.field_q) {
                     throw new RuntimeException();
                   }
-                  var2Lifetime1.c(-124);
+                  var2Lifetime1.unlink(-124);
                 } else {
                   var2Lifetime1.field_t = true;
                 }
@@ -357,7 +357,7 @@ final class fg extends ip {
 
     }
 
-    final ps a(boolean param0) {
+    final ArchiveIndex a(boolean param0) {
         un stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         RuntimeException decompiledCaughtException = null;
@@ -367,7 +367,7 @@ final class fg extends ip {
         byte[] var5 = null;
         byte[] var6 = null;
         byte[] var7 = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_m != null) {
           return this.field_m;
         }
@@ -389,7 +389,7 @@ final class fg extends ip {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_m = new ps(var7, this.field_j, this.field_u);
+            this.field_m = new ArchiveIndex(var7, this.field_j, this.field_u);
             if (this.field_m.field_m != this.field_w) {
               throw new RuntimeException();
             }
@@ -409,7 +409,7 @@ final class fg extends ip {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_m = new ps(var7, this.field_j, this.field_u);
+            this.field_m = new ArchiveIndex(var7, this.field_j, this.field_u);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
@@ -465,14 +465,14 @@ final class fg extends ip {
         byte[] var28 = null;
         byte[] var29 = null;
         byte[] var30 = null;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         var12 = (ag) (this.field_v.a((byte) 106, (long)param2));
         var4 = var12;
         if (var12 != null &&
           param1 == 0 &&
           !var12.field_q &&
           var12.field_p) {
-          var12.c(-125);
+          var12.unlink(-125);
           var4 = null;
         }
         if (var4 == null) {
@@ -508,7 +508,7 @@ final class fg extends ip {
               var4 = this.field_g.a(this.field_p, param2, param0 + 16, true, (byte) 2);
             }
           }
-          this.field_v.a(-41, (long)param2, (wf) (var4));
+          this.field_v.a(-41, (long)param2, (IntrusiveNode) (var4));
         }
         if (((ag) (var4)).field_p) {
           return null;
@@ -552,7 +552,7 @@ final class fg extends ip {
                 this.field_h[param2] = (byte) 1;
               }
               if (!((ag) (var4)).field_q) {
-                ((ag) (var4)).c(param0 - 87);
+                ((ag) (var4)).unlink(param0 - 87);
               }
               stackIn_90_0 = var4;
               return (ag) (stackIn_90_0);
@@ -562,11 +562,11 @@ final class fg extends ip {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_h[param2] = (byte)-1;
-            ((ag) (var4)).c(-125);
+            ((ag) (var4)).unlink(-125);
             if (((ag) (var4)).field_q &&
               !this.field_g.a(false)) {
               var4 = this.field_g.a(this.field_p, param2, -21, true, (byte) 2);
-              this.field_v.a(-87, (long)param2, (wf) (var4));
+              this.field_v.a(-87, (long)param2, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -599,11 +599,11 @@ final class fg extends ip {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_g.c((byte) -46);
-          ((ag) (var4)).c(param0 - 90);
+          ((ag) (var4)).unlink(param0 - 90);
           if (((ag) (var4)).field_q &&
             !this.field_g.a(false)) {
             var4 = this.field_g.a(this.field_p, param2, -21, true, (byte) 2);
-            this.field_v.a(-114, (long)param2, (wf) (var4));
+            this.field_v.a(-114, (long)param2, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -616,7 +616,7 @@ final class fg extends ip {
           }
         }
         if (!((ag) (var4)).field_q) {
-          ((ag) (var4)).c(-126);
+          ((ag) (var4)).unlink(-126);
         }
         return (ag) (var4);
     }
@@ -650,7 +650,7 @@ final class fg extends ip {
         int var24 = 0;
         int var25 = 0;
         int var28 = 0;
-        var28 = AceOfSkies.field_G ? 1 : 0;
+        var28 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 > 0 &&
             !mg.a(param0, (byte) 23)) {
@@ -743,7 +743,7 @@ final class fg extends ip {
         }
         this.field_s = true;
         if (null == this.field_o) {
-          this.field_o = new kp();
+          this.field_o = new IntrusiveDeque();
         }
     }
 
@@ -764,14 +764,14 @@ final class fg extends ip {
         RuntimeException var10 = null;
         this.field_v = new ph(16);
         this.field_d = 0;
-        this.field_n = new kp();
+        this.field_n = new IntrusiveDeque();
         this.field_x = 0L;
         try {
           this.field_p = param0;
           this.field_l = param1;
           if (this.field_l != null) {
             this.field_q = true;
-            this.field_o = new kp();
+            this.field_o = new IntrusiveDeque();
           } else {
             this.field_q = false;
           }
@@ -826,7 +826,7 @@ final class fg extends ip {
     }
 
     static {
-        field_r = new kp();
+        field_r = new IntrusiveDeque();
         field_f = new String[]{"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
         field_A = new ke();
     }

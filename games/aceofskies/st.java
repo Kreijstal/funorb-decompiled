@@ -5,7 +5,7 @@ final class st {
     static String[] field_b;
     static float[] field_a;
 
-    final static me[] a(boolean param0, dl param1) {
+    final static me[] a(boolean param0, CipherPacketBuffer param1) {
         int var5 = 0;
         me[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -19,7 +19,7 @@ final class st {
         int var6 = 0;
         me var6_ref_me = null;
         int var7 = 0;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2_int = param1.b((byte) -96, 8);
           if (var2_int > 0) {

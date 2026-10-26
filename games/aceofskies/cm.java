@@ -137,7 +137,7 @@ final class cm extends jm {
         ls var13_ref = null;
         IOException var13_ref2 = null;
         int var14 = 0;
-        var14 = AceOfSkies.field_G ? 1 : 0;
+        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
@@ -226,7 +226,7 @@ final class cm extends jm {
         int var12 = 0;
         java.net.Socket var13 = null;
         String var14 = null;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var13 = new java.net.Socket(param3, param2);
           var13.setSoTimeout(10000);
@@ -308,7 +308,7 @@ final class cm extends jm {
         this.field_g = java.net.ProxySelector.getDefault();
     }
 
-    final static gk a(int param0, byte param1) {
+    final static ResourceArchive a(int param0, byte param1) {
         int var2 = -125 % ((34 - param1) / 51);
         if (null != iq.field_h) {
           return iq.field_h;

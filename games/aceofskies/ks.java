@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ks {
-    static kp field_d;
+    static IntrusiveDeque field_d;
     static String field_c;
     static boolean field_b;
     static int field_a;
@@ -20,7 +20,7 @@ final class ks {
         ej[] var2;
         int var4;
         ej[] var5;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         var5 = sf.d((byte) 112);
         var2 = var5;
         for (var3 = 0; var5.length > var3; var3++) {
@@ -36,7 +36,7 @@ final class ks {
     }
 
     static {
-        field_d = new kp();
+        field_d = new IntrusiveDeque();
         field_c = "Loading fonts";
         field_b = true;
     }

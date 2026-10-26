@@ -17,25 +17,25 @@ final class tt {
     }
 
     final static void a(int param0, int param1) {
-        wf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ds var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 2048) {
             field_b = (String) null;
           }
-          var4 = (ds) (cl.field_eb.d(268435455));
+          var4 = (ds) (cl.field_eb.first(268435455));
           while (var4 != null) {
             nn.a(var4, param0, (byte) 62);
-            var4 = (ds) (cl.field_eb.b((byte) 103));
+            var4 = (ds) (cl.field_eb.next((byte) 103));
           }
-          var2 = ep.field_z.d(268435455);
+          var2 = ep.field_z.first(268435455);
           while (var2 != null) {
             hn.a(0, param0);
-            var2 = ep.field_z.b((byte) 103);
+            var2 = ep.field_z.next((byte) 103);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

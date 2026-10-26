@@ -11,7 +11,7 @@ final class ci extends hh {
     private qe field_h;
     static int field_d;
     static int field_g;
-    static kp field_j;
+    static IntrusiveDeque field_j;
     static java.awt.Canvas field_f;
     static int[] field_m;
 
@@ -51,7 +51,7 @@ final class ci extends hh {
 
     final static gu[] d(byte param0) {
         int var1 = -108 / ((param0 + 76) / 50);
-        return new gu[]{ef.field_k, lp.field_f, ct.field_t};
+        return new gu[]{ef.field_k, lp.field_f, NetworkGameClient.field_t};
     }
 
     final void b(byte param0) {
@@ -81,7 +81,7 @@ final class ci extends hh {
         if (param0 != 15) {
           return 114;
         }
-        return kc.field_c;
+        return Vector2.field_c;
     }
 
     final void a(int param0, int param1, rt param2) {
@@ -126,10 +126,10 @@ final class ci extends hh {
           var4 += 2;
         }
         if (!param3) {
-          return rb.field_i[var4];
+          return PacketBuffer.field_i[var4];
         }
         var4++;
-        return rb.field_i[var4];
+        return PacketBuffer.field_i[var4];
     }
 
     public static void c(byte param0) {
@@ -227,7 +227,7 @@ final class ci extends hh {
         field_i = new Random(2L);
         field_g = 0;
         field_m = new int[1];
-        field_j = new kp();
+        field_j = new IntrusiveDeque();
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
@@ -243,9 +243,9 @@ final class ci extends hh {
           var4 += 2;
         }
         if (!param3) {
-          return rb.field_i[var4];
+          return PacketBuffer.field_i[var4];
         }
         var4++;
-        return rb.field_i[var4];
+        return PacketBuffer.field_i[var4];
     }
 }

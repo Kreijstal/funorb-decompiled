@@ -3,7 +3,7 @@
  */
 final class od extends lg {
     private byte[] field_w;
-    static gk field_x;
+    static ResourceArchive field_x;
     static String field_v;
 
     final static id a(String param0, int param1) {
@@ -35,23 +35,23 @@ final class od extends lg {
 
     final static void a(int param0, byte param1, uk param2) {
         int var4 = 0;
-        dl var5 = q.field_p;
+        CipherPacketBuffer var5 = q.field_p;
         var5.g(71, param0);
-        var5.field_g = var5.field_g + 1;
+        var5.position = var5.position + 1;
         if (param1 >= -43) {
           return;
         }
         try {
-          var4 = var5.field_g;
-          var5.b(-1336879960, 1);
-          var5.b(-1336879960, param2.field_i);
+          var4 = var5.position;
+          var5.writeByte(-1336879960, 1);
+          var5.writeByte(-1336879960, param2.field_i);
           var5.b(true, param2.field_m);
-          var5.a((byte) 71, param2.field_l);
-          var5.a((byte) 59, param2.field_h);
-          var5.a((byte) 104, param2.field_k);
-          var5.a((byte) 24, param2.field_n);
+          var5.writeInt((byte) 71, param2.field_l);
+          var5.writeInt((byte) 59, param2.field_h);
+          var5.writeInt((byte) 104, param2.field_k);
+          var5.writeInt((byte) 24, param2.field_n);
           var5.e(var4, 89);
-          var5.b(-var4 + var5.field_g, (byte) 117);
+          var5.b(-var4 + var5.position, (byte) 117);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "od.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

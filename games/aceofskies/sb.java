@@ -4,7 +4,7 @@
 final class sb {
     private d field_d;
     private gq field_b;
-    static kp field_c;
+    static IntrusiveDeque field_c;
     private bf field_a;
 
     final qi a(byte param0, int param1) {
@@ -72,7 +72,7 @@ final class sb {
         int[] var7_arrayLifetime5;
         byte[] var9Lifetime5;
         byte[] var9Lifetime6;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         var3 = this.field_b.a((long)param1, -120);
         if (var3 != null) {
           return (qi) (var3);
@@ -246,7 +246,7 @@ final class sb {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        var21 = AceOfSkies.field_G ? 1 : 0;
+        var21 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var8_int = param4[param6];
           var9 = param3[param6] + var8_int;
@@ -324,7 +324,7 @@ final class sb {
         }
     }
 
-    final static double a(int param0, kc param1, kc param2) {
+    final static double a(int param0, Vector2 param1, Vector2 param2) {
         RuntimeException var3 = null;
         double stackIn_2_0 = 0.0;
         double stackIn_4_0 = 0.0;
@@ -366,8 +366,8 @@ final class sb {
         if (param0 > 117) {
           return;
         }
-        kc var2 = (kc) null;
-        sb.a(-47, (kc) null, (kc) null);
+        Vector2 var2 = (Vector2) null;
+        sb.a(-47, (Vector2) null, (Vector2) null);
     }
 
     sb(bf param0, d param1) {
@@ -381,6 +381,6 @@ final class sb {
     }
 
     static {
-        field_c = new kp();
+        field_c = new IntrusiveDeque();
     }
 }

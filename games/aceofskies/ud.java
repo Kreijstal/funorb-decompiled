@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ud extends wf {
+abstract class ud extends IntrusiveNode {
     static int field_g;
     static int[] field_e;
     static vd[] field_f;
@@ -17,7 +17,7 @@ abstract class ud extends wf {
         field_f = null;
     }
 
-    final static void a(rh param0, int param1) {
+    final static void a(SoundPlayback param0, int param1) {
         if (param1 >= -93) {
           return;
         }

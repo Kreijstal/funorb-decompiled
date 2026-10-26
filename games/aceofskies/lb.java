@@ -58,7 +58,7 @@ final class lb implements sm {
         }
     }
 
-    lb(kj param0, pa param1, ac param2) {
+    lb(kj param0, RenderSprite param1, ac param2) {
         RuntimeException runtimeException = null;
         jg var5 = null;
         vh var6 = null;
@@ -80,7 +80,7 @@ final class lb implements sm {
             this.field_b = var5.field_p;
             this.field_c = var5.field_o;
             this.field_d = var5.field_E;
-            decompiledSharedTail0 = (AceOfSkies.field_G);
+            decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
           if (decompiledSharedTail0) {
             var6 = (vh) (param1);
@@ -124,20 +124,20 @@ final class lb implements sm {
     }
 
     final static void a(int param0, int param1) {
-        dl var2 = null;
-        dl var2Lifetime1;
+        CipherPacketBuffer var2 = null;
+        CipherPacketBuffer var2Lifetime1;
         if (param1 == 0) {
           var2 = q.field_p;
           var2.g(109, param0);
-          var2.b(param1 - 1336879960, 1);
-          var2.b(-1336879960, 2);
+          var2.writeByte(param1 - 1336879960, 1);
+          var2.writeByte(-1336879960, 2);
           return;
         }
         field_e = true;
         var2Lifetime1 = q.field_p;
         var2Lifetime1.g(109, param0);
-        var2Lifetime1.b(param1 - 1336879960, 1);
-        var2Lifetime1.b(-1336879960, 2);
+        var2Lifetime1.writeByte(param1 - 1336879960, 1);
+        var2Lifetime1.writeByte(-1336879960, 2);
     }
 
     public static void b(int param0) {

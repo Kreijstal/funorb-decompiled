@@ -11,7 +11,7 @@ final class fh extends vo {
     final static void a(int param0, float param1, String param2) {
         try {
           dq.field_b = param2;
-          ct.field_I = param1;
+          NetworkGameClient.field_I = param1;
           if (param0 >= -23) {
             field_g = (String) null;
           }
@@ -33,10 +33,10 @@ final class fh extends vo {
         if (ht.field_g) {
           return null;
         }
-        if (jp.field_b > ok.field_o) {
+        if (jp.field_b > ScreenParticle.field_o) {
           return null;
         }
-        if (!(ok.field_o >= ct.field_B + jp.field_b)) {
+        if (!(ScreenParticle.field_o >= NetworkGameClient.field_B + jp.field_b)) {
           return qj.field_s;
         }
         return null;
@@ -142,7 +142,7 @@ final class fh extends vo {
             stackIn_12_0 = ii.field_g;
             return stackIn_12_0;
           }
-          if (kc.a(var5, 26035)) {
+          if (Vector2.a(var5, 26035)) {
             stackIn_16_0 = mh.field_j;
             return stackIn_16_0;
           }

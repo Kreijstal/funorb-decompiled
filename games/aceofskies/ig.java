@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends da {
+final class ig extends BitmapFont {
     private tl field_h;
     private boolean field_g;
     private bf field_f;
@@ -291,7 +291,7 @@ final class ig extends da {
         this.field_f.a(true, qp.field_j, 2, param0 * 4);
         if (this.field_g ||
           param4) {
-          this.field_f.a((byte) 118, 0, dl.field_p);
+          this.field_f.a((byte) 118, 0, CipherPacketBuffer.field_p);
         }
     }
 }

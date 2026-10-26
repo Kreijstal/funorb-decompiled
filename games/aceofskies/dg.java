@@ -17,7 +17,7 @@ abstract class dg extends rg {
         if (vu.field_g == this.field_R) {
           return;
         }
-        this.field_R = ha.field_b;
+        this.field_R = GraphicsRenderer.field_b;
         this.field_K = 0;
         if (param0 < -28) {
           this.c(this.field_P, -15291);
@@ -44,7 +44,7 @@ abstract class dg extends rg {
             super.e((byte) 101);
             return;
           }
-          if (ha.field_b != this.field_R) {
+          if (GraphicsRenderer.field_b != this.field_R) {
             this.a(12 + this.field_P.field_q, (byte) 29, this.field_P.field_n + this.field_N + 12);
             this.c(this.field_P, -15291);
           } else {
@@ -62,7 +62,7 @@ abstract class dg extends rg {
           super.e((byte) 101);
           return;
         }
-        if (ha.field_b != this.field_R) {
+        if (GraphicsRenderer.field_b != this.field_R) {
           this.a(12 + this.field_P.field_q, (byte) 29, this.field_P.field_n + this.field_N + 12);
           this.c(this.field_P, -15291);
         } else {
@@ -115,7 +115,7 @@ abstract class dg extends rg {
     boolean h(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
-        int var3 = AceOfSkies.field_G ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_R != null) {
           if (this.field_R == vu.field_g) {
             fieldTemp$0 = this.field_K + 1;
@@ -138,7 +138,7 @@ abstract class dg extends rg {
             }
             return super.h(11);
           }
-          if (ha.field_b != this.field_R) {
+          if (GraphicsRenderer.field_b != this.field_R) {
             if (param0 == 11) {
               return super.h(11);
             }
@@ -214,7 +214,7 @@ abstract class dg extends rg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_M != null) {
-            this.field_M.c(-127);
+            this.field_M.unlink(-127);
           }
           if (param0 == null) {
             this.field_M = new hi();
@@ -270,7 +270,7 @@ abstract class dg extends rg {
         if (param0 != 27711) {
           return false;
         }
-        if (10 > ob.field_d) {
+        if (10 > SoundCache.field_d) {
           return false;
         }
         if (!ks.field_b) {

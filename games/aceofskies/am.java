@@ -5,9 +5,9 @@ final class am {
     private tl field_b;
     static int field_a;
 
-    final static rh a(al param0, boolean param1) {
+    final static SoundPlayback a(PcmSample param0, boolean param1) {
         RuntimeException var2 = null;
-        rh stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -16,7 +16,7 @@ final class am {
           if (param1) {
             field_a = -84;
           }
-          stackIn_3_0 = w.a(-23159, su.a(param0, 100, 96));
+          stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

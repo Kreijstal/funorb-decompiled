@@ -8,23 +8,23 @@ final class lc implements Iterable {
     static hd field_g;
     private int field_d;
     int field_c;
-    private wf field_e;
-    private wf field_f;
-    wf[] field_a;
+    private IntrusiveNode field_e;
+    private IntrusiveNode field_f;
+    IntrusiveNode[] field_a;
     static ej field_b;
 
-    final wf a(long param0, byte param1) {
-        wf var5 = null;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
-        wf var4 = this.field_a[(int)((long)(this.field_c - 1) & param0)];
-        this.field_f = var4.field_a;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        IntrusiveNode var4 = this.field_a[(int)((long)(this.field_c - 1) & param0)];
+        this.field_f = var4.next;
         while (this.field_f != var4) {
-          if (this.field_f.field_b == param0) {
+          if (this.field_f.key == param0) {
             var5 = this.field_f;
-            this.field_f = this.field_f.field_a;
+            this.field_f = this.field_f.next;
             return var5;
           }
-          this.field_f = this.field_f.field_a;
+          this.field_f = this.field_f.next;
         }
         this.field_f = null;
         if (param1 > 87) {
@@ -34,7 +34,7 @@ final class lc implements Iterable {
         return null;
     }
 
-    final static double a(kc param0, boolean param1, kc param2) {
+    final static double a(Vector2 param0, boolean param1, Vector2 param2) {
         double var3_double = 0.0;
         RuntimeException var3 = null;
         double var5 = 0.0;
@@ -51,8 +51,8 @@ final class lc implements Iterable {
             stackIn_2_0 = 0.9309241594003604;
             return stackIn_2_0;
           }
-          var3_double = -param0.field_a + param2.field_a;
-          var5 = -param0.field_b + param2.field_b;
+          var3_double = -param0.x + param2.x;
+          var5 = -param0.y + param2.y;
           stackIn_4_0 = var3_double * var3_double + var5 * var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,11 +98,11 @@ final class lc implements Iterable {
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var2 = bg.a(param1, "jagex-last-login-method", (byte) -18);
           if (var2 == null) {
-            stackIn_3_0 = ct.field_t;
+            stackIn_3_0 = NetworkGameClient.field_t;
             return stackIn_3_0;
           }
           var3 = ci.d((byte) 106);
@@ -117,7 +117,7 @@ final class lc implements Iterable {
               return stackIn_12_0;
             }
           }
-          stackIn_15_0 = ct.field_t;
+          stackIn_15_0 = NetworkGameClient.field_t;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,18 +133,18 @@ final class lc implements Iterable {
         }
     }
 
-    final wf b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_d = param0;
         return this.a(-71);
     }
 
-    final static gk a(boolean param0, boolean param1, boolean param2, byte param3, int param4, int param5) {
+    final static ResourceArchive a(boolean param0, boolean param1, boolean param2, byte param3, int param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           fg var8 = null;
-          gk stackIn_4_0 = null;
-          gk stackIn_15_0 = null;
+          ResourceArchive stackIn_4_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -155,7 +155,7 @@ final class lc implements Iterable {
               var6 = new bl(255, eq.field_e, new gh(cs.field_d.field_a, 12000, 0), 2097152);
             }
             if (param3 != -65) {
-              stackIn_4_0 = (gk) null;
+              stackIn_4_0 = (ResourceArchive) null;
               return stackIn_4_0;
             }
             if (eq.field_e != null) {
@@ -172,7 +172,7 @@ final class lc implements Iterable {
             if (param1) {
               var8.c(param3 + 63);
             }
-            stackIn_15_0 = new gk(var8, param0, param4);
+            stackIn_15_0 = new ResourceArchive(var8, param0, param4);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,17 +190,17 @@ final class lc implements Iterable {
         return (Iterator) ((Object) new pe(this));
     }
 
-    final wf a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$0 = 0;
-        wf var2_ref_wf;
+        IntrusiveNode var2_ref_wf;
         int var2;
-        wf var3;
+        IntrusiveNode var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_d > 0 &&
           this.field_e != this.field_a[this.field_d - 1]) {
           var2_ref_wf = this.field_e;
-          this.field_e = var2_ref_wf.field_a;
+          this.field_e = var2_ref_wf.next;
           return var2_ref_wf;
         }
         var2 = 35 / ((param0 - 55) / 60);
@@ -210,24 +210,24 @@ final class lc implements Iterable {
           }
           fieldTemp$0 = this.field_d;
           this.field_d = this.field_d + 1;
-          var3 = this.field_a[fieldTemp$0].field_a;
+          var3 = this.field_a[fieldTemp$0].next;
         } while (var3 == this.field_a[-1 + this.field_d]);
-        this.field_e = var3.field_a;
+        this.field_e = var3.next;
         return var3;
     }
 
-    final void a(int param0, wf param1, long param2) {
-        wf var5 = null;
+    final void a(int param0, IntrusiveNode param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_c != null) {
-            param1.c(-125);
+          if (param1.previous != null) {
+            param1.unlink(-125);
           }
           var5 = this.field_a[(int)(param2 & (long)(param0 + this.field_c))];
-          param1.field_a = var5;
-          param1.field_c = var5.field_c;
-          param1.field_c.field_a = param1;
-          param1.field_a.field_c = param1;
-          param1.field_b = param2;
+          param1.next = var5;
+          param1.previous = var5.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
+          param1.key = param2;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "lc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -235,17 +235,17 @@ final class lc implements Iterable {
 
     lc(int param0) {
         int var2 = 0;
-        wf dupTemp$0 = null;
-        wf var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_d = 0;
-        this.field_a = new wf[param0];
+        this.field_a = new IntrusiveNode[param0];
         this.field_c = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new wf();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_a[var2] = dupTemp$0;
-          var3.field_a = var3;
-          var3.field_c = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

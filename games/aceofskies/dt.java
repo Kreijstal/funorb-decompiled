@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dt {
-    static ap field_c;
+    static MusicTrack field_c;
     static String field_b;
     static int[] field_a;
 
@@ -13,15 +13,15 @@ final class dt {
         if (param0 != 0) {
           field_b = (String) null;
         }
-        if (null != da.field_a) {
-          da.field_a.d();
+        if (null != BitmapFont.field_a) {
+          BitmapFont.field_a.d();
         }
     }
 
-    final static al[][] a(gk param0, int param1, boolean[] param2, gk param3, String[][] param4) {
-        al[] array$0 = null;
+    final static PcmSample[][] a(ResourceArchive param0, int param1, boolean[] param2, ResourceArchive param3, String[][] param4) {
+        PcmSample[] array$0 = null;
         int var7 = 0;
-        al[][] stackIn_14_0 = null;
+        PcmSample[][] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -32,21 +32,21 @@ final class dt {
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        al[][] var5 = null;
+        PcmSample[][] var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var8 = 0;
-        al[][] var9 = null;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        PcmSample[][] var9 = null;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var9 = new al[param4.length][];
+          var9 = new PcmSample[param4.length][];
           var5 = var9;
           var6 = 0;
           if (param1 != 19501) {
-            field_c = (ap) null;
+            field_c = (MusicTrack) null;
           }
           while (var6 < var9.length) {
-            array$0 = new al[param4[var6].length];
+            array$0 = new PcmSample[param4[var6].length];
             var5[var6] = array$0;
             for (var7 = 0; var9[var6].length > var7; var7++) {
               if (param2 != null &&
@@ -109,7 +109,7 @@ final class dt {
         int[] var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5 = hs.field_a;
           var1 = var5;

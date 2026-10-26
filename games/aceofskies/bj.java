@@ -46,40 +46,40 @@ final class bj {
         return var3;
     }
 
-    final static bj a(gk param0, int param1, int param2) {
+    final static bj a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = param0.a(param1, -10470, param2);
         if (var3 == null) {
           return null;
         }
-        return new bj(new rb(var3));
+        return new bj(new PacketBuffer(var3));
     }
 
-    final static bj a(gk param0, String param1, String param2) {
+    final static bj a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param1, (byte) -71, param2);
         if (var3 == null) {
           return null;
         }
-        return new bj(new rb(var3));
+        return new bj(new PacketBuffer(var3));
     }
 
-    final al a() {
+    final PcmSample a() {
         byte[] var1 = this.b();
-        return new al(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
+        return new PcmSample(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_c / 1000);
     }
 
-    private bj(rb param0) {
+    private bj(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new th[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.g(-92);
+          var3 = param0.readUnsignedByte(-92);
           if (var3 != 0) {
-            param0.field_g = param0.field_g - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new th();
             this.field_b[var2].a(param0);
           }
         }
-        this.field_a = param0.i((byte) 0);
-        this.field_c = param0.i((byte) 0);
+        this.field_a = param0.readUnsignedShort((byte) 0);
+        this.field_c = param0.readUnsignedShort((byte) 0);
     }
 }

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ml extends wf {
-    al[] field_f;
+final class ml extends IntrusiveNode {
+    PcmSample[] field_f;
     short[] field_n;
     private int[] field_g;
     byte[] field_q;
@@ -16,7 +16,7 @@ final class ml extends wf {
     static float[] field_h;
     static String field_l;
 
-    final boolean a(byte[] param0, int[] param1, ob param2, int param3) {
+    final boolean a(byte[] param0, int[] param1, SoundCache param2, int param3) {
         int var8 = 0;
         int stackIn_21_0 = 0;
         RuntimeException stackIn_24_0 = null;
@@ -33,11 +33,11 @@ final class ml extends wf {
         Object var7 = null;
         int var9 = 0;
         int var10 = 0;
-        var10 = AceOfSkies.field_G ? 1 : 0;
+        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = 1;
           if (param3 != 5193) {
-            this.field_f = (al[]) null;
+            this.field_f = (PcmSample[]) null;
           }
           var6 = 0;
           var7 = null;
@@ -59,7 +59,7 @@ final class ml extends wf {
                   }
                 }
                 if (var7 != null) {
-                  this.field_f[var8] = (al) (var7);
+                  this.field_f[var8] = (PcmSample) (var7);
                   this.field_g[var8] = 0;
                 }
               }
@@ -93,18 +93,18 @@ final class ml extends wf {
         }
     }
 
-    final static void a(byte param0, wf param1, wf param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param2.field_c != null) {
-            param2.c(-126);
+          if (param2.previous != null) {
+            param2.unlink(-126);
           }
-          param2.field_a = param1;
-          param2.field_c = param1.field_c;
-          param2.field_c.field_a = param2;
+          param2.next = param1;
+          param2.previous = param1.previous;
+          param2.previous.next = param2;
           if (param0 != -20) {
             field_m = (oo) null;
           }
-          param2.field_a.field_c = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -179,7 +179,7 @@ final class ml extends wf {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        rb var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         dh var40 = null;
         byte[] var41 = null;
@@ -257,45 +257,45 @@ final class ml extends wf {
           this.field_g = new int[128];
           this.field_e = new byte[128];
           this.field_k = new byte[128];
-          this.field_f = new al[128];
+          this.field_f = new PcmSample[128];
           this.field_q = new byte[128];
           this.field_o = new dh[128];
           this.field_n = new short[128];
-          var38 = new rb(param0);
-          for (var3 = 0; var38.field_f[var3 + var38.field_g] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var5 < var3; var5++) {
-            var4[var5] = var38.d(0);
+            var4[var5] = var38.readByte(0);
           }
-          var38.field_g = var38.field_g + 1;
+          var38.position = var38.position + 1;
           var3++;
-          var5Lifetime1 = var38.field_g;
-          var38.field_g = var38.field_g + var3;
-          for (var6 = 0; var38.field_f[var6 + var38.field_g] != 0; var6++) {
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var6 + var38.position] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var8 < var6; var8++) {
-            var7[var8] = var38.d(0);
+            var7[var8] = var38.readByte(0);
           }
-          var38.field_g = var38.field_g + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_g;
-          var38.field_g = var38.field_g + var6;
-          for (var9 = 0; var38.field_f[var38.field_g + var9] != 0; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var38.position + var9] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var9 > var11_int; var11_int++) {
-            var10[var11_int] = var38.d(0);
+            var10[var11_int] = var38.readByte(0);
           }
           var9++;
-          var38.field_g = var38.field_g + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -304,7 +304,7 @@ final class ml extends wf {
             var12 = 2;
             var13_int = 1;
             for (var14 = 2; var14 < var9; var14++) {
-              var15_int = var38.g(-117);
+              var15_int = var38.readUnsignedByte(-117);
               if (var15_int == 0) {
                 incrementValue$0 = var12;
                 var12++;
@@ -326,17 +326,17 @@ final class ml extends wf {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.g(-60);
+            var16_int = var38.readUnsignedByte(-60);
             if (var16_int > 0) {
               var15_ref.field_g = new byte[var16_int * 2];
             }
-            var16_intLifetime1 = var38.g(71);
+            var16_intLifetime1 = var38.readUnsignedByte(71);
             if (var16_intLifetime1 > 0) {
               var15_ref.field_e = new byte[2 * var16_intLifetime1 + 2];
               var40.field_e[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.g(90);
+          var14Lifetime2 = var38.readUnsignedByte(90);
           if (0 < var14Lifetime2) {
             stackIn_39_0 = new byte[2 * var14Lifetime2];
           } else {
@@ -345,7 +345,7 @@ final class ml extends wf {
           var58 = stackIn_39_0;
           var46 = var58;
           var15 = var46;
-          var14Lifetime3 = var38.g(82);
+          var14Lifetime3 = var38.readUnsignedByte(82);
           if (var14Lifetime3 > 0) {
             stackIn_42_0 = new byte[var14Lifetime3 * 2];
           } else {
@@ -354,24 +354,24 @@ final class ml extends wf {
           var59 = stackIn_42_0;
           var47 = var59;
           var16 = var47;
-          for (var17 = 0; var38.field_f[var17 + var38.field_g] != 0; var17++) {
+          for (var17 = 0; var38.payload[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.d(0);
+            var18[var19] = var38.readByte(0);
           }
-          var38.field_g = var38.field_g + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.g(-107);
+            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(-107);
             this.field_n[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; 128 > var20Lifetime1; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.g(-113);
+            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(-113);
             this.field_n[var20Lifetime1] = (short)(this.field_n[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -398,7 +398,7 @@ final class ml extends wf {
               if (0 == var20Lifetime3) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = var38.field_f[incrementValue$5] - 1;
+                var23Lifetime1 = var38.payload[incrementValue$5] - 1;
                 if (var55.length > var21Lifetime1) {
                   var20Lifetime3 = var4[var21Lifetime1++];
                 } else {
@@ -417,7 +417,7 @@ final class ml extends wf {
               if (0 == var20Lifetime4) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = var38.field_f[incrementValue$3] + 16 << 2;
+                var24Lifetime1 = var38.payload[incrementValue$3] + 16 << 2;
                 if (var56.length <= var21Lifetime2) {
                   var20Lifetime4 = -1;
                 } else {
@@ -456,34 +456,34 @@ final class ml extends wf {
                 var20Lifetime6 = -1;
               }
               if (0 < this.field_g[var27]) {
-                var26Lifetime1 = var38.g(-91) + 1;
+                var26Lifetime1 = var38.readUnsignedByte(-91) + 1;
               }
             }
             var20Lifetime6--;
             this.field_k[var27] = (byte)var26Lifetime1;
           }
-          this.field_i = 1 + var38.g(-94);
+          this.field_i = 1 + var38.readUnsignedByte(-94);
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (var45.field_g != null) {
               for (var29 = 1; var29 < var45.field_g.length; var29 += 2) {
-                var45.field_g[var29] = var38.d(0);
+                var45.field_g[var29] = var38.readByte(0);
               }
             }
             if (null != var45.field_e) {
               for (var29Lifetime4 = 3; var45.field_e.length - 2 > var29Lifetime4; var29Lifetime4 += 2) {
-                var45.field_e[var29Lifetime4] = var38.d(0);
+                var45.field_e[var29Lifetime4] = var38.readByte(0);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var27Lifetime2 < var58.length; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.d(0);
+              var15[var27Lifetime2] = var38.readByte(0);
             }
           }
           if (var16 != null) {
             for (var27Lifetime3 = 1; var27Lifetime3 < var59.length; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.d(0);
+              var16[var27Lifetime3] = var38.readByte(0);
             }
           }
           for (var27Lifetime4 = 0; var27Lifetime4 < var12; var27Lifetime4++) {
@@ -491,7 +491,7 @@ final class ml extends wf {
             if (var48.field_e != null) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var48.field_e.length > var29Lifetime1; var29Lifetime1 += 2) {
-                var19Lifetime3 = 1 + var19Lifetime3 + var38.g(123);
+                var19Lifetime3 = 1 + var19Lifetime3 + var38.readUnsignedByte(123);
                 var48.field_e[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -501,7 +501,7 @@ final class ml extends wf {
             if (var49.field_g != null) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_g.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = var19Lifetime4 - (-1 - var38.g(-90));
+                var19Lifetime4 = var19Lifetime4 - (-1 - var38.readUnsignedByte(-90));
                 var49.field_g[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
@@ -510,18 +510,18 @@ final class ml extends wf {
           if (var15 == null) {
             decompiledFrameRemainder0 = (var16 != null);
             if (decompiledFrameRemainder0) {
-              var19Lifetime5 = var38.g(38);
+              var19Lifetime5 = var38.readUnsignedByte(38);
               var16[0] = (byte)var19Lifetime5;
               for (var27Lifetime6 = 2; var59.length > var27Lifetime6; var27Lifetime6 += 2) {
-                var19Lifetime5 = var19Lifetime5 - (-1 - var38.g(-55));
+                var19Lifetime5 = var19Lifetime5 - (-1 - var38.readUnsignedByte(-55));
                 var16[var27Lifetime6] = (byte)var19Lifetime5;
               }
             }
           } else {
-            var19Lifetime5 = var38.g(123);
+            var19Lifetime5 = var38.readUnsignedByte(123);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var58.length > var27Lifetime6; var27Lifetime6 += 2) {
-              var19Lifetime5 = var38.g(-95) + 1 + var19Lifetime5;
+              var19Lifetime5 = var38.readUnsignedByte(-95) + 1 + var19Lifetime5;
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6 = var58[0];
@@ -549,10 +549,10 @@ final class ml extends wf {
             }
             decompiledFrameRemainder0 = (var16 != null);
             if (decompiledFrameRemainder0) {
-              var19Lifetime5 = var38.g(38);
+              var19Lifetime5 = var38.readUnsignedByte(38);
               var16[0] = (byte)var19Lifetime5;
               for (var27Lifetime6 = 2; var59.length > var27Lifetime6; var27Lifetime6 += 2) {
-                var19Lifetime5 = var19Lifetime5 - (-1 - var38.g(-55));
+                var19Lifetime5 = var19Lifetime5 - (-1 - var38.readUnsignedByte(-55));
                 var16[var27Lifetime6] = (byte)var19Lifetime5;
               }
             }
@@ -605,33 +605,33 @@ final class ml extends wf {
             var16 = null;
           }
           for (var27Lifetime7 = 0; var27Lifetime7 < var12; var27Lifetime7++) {
-            var13[var27Lifetime7].field_b = var38.g(-106);
+            var13[var27Lifetime7].field_b = var38.readUnsignedByte(-106);
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
             var50 = var13[var27Lifetime8];
             if (null != var50.field_g) {
-              var50.field_h = var38.g(-88);
+              var50.field_h = var38.readUnsignedByte(-88);
             }
             if (var50.field_e != null) {
-              var50.field_l = var38.g(108);
+              var50.field_l = var38.readUnsignedByte(108);
             }
             if (var50.field_b > 0) {
-              var50.field_f = var38.g(-107);
+              var50.field_f = var38.readUnsignedByte(-107);
             }
           }
           for (var27Lifetime9 = 0; var27Lifetime9 < var12; var27Lifetime9++) {
-            var13[var27Lifetime9].field_i = var38.g(-84);
+            var13[var27Lifetime9].field_i = var38.readUnsignedByte(-84);
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
             var51 = var13[var27Lifetime10];
             if (var51.field_i > 0) {
-              var51.field_j = var38.g(82);
+              var51.field_j = var38.readUnsignedByte(82);
             }
           }
           for (var27Lifetime11 = 0; var12 > var27Lifetime11; var27Lifetime11++) {
             var52 = var13[var27Lifetime11];
             if (var52.field_j > 0) {
-              var52.field_a = var38.g(59);
+              var52.field_a = var38.readUnsignedByte(59);
             }
           }
           return;
@@ -656,18 +656,18 @@ final class ml extends wf {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$9910ad98b3f5(int param0, wf param1, wf param2) {
+    final static void $cfr$intArgs$a$9910ad98b3f5(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (param2.field_c != null) {
-            param2.c(-126);
+          if (param2.previous != null) {
+            param2.unlink(-126);
           }
-          param2.field_a = param1;
-          param2.field_c = param1.field_c;
-          param2.field_c.field_a = param2;
+          param2.next = param1;
+          param2.previous = param1.previous;
+          param2.previous.next = param2;
           if (param0 != -20) {
             field_m = (oo) null;
           }
-          param2.field_a.field_c = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

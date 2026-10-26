@@ -23,7 +23,7 @@ final class rl {
         int var2;
         int var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         var2 = 49 / ((-9 - param1) / 45);
         var3 = param0;
         if (var3 == 0) {
@@ -148,7 +148,7 @@ final class rl {
 
     final static void a(byte param0) {
         gg.b((byte) -98);
-        nm.field_a = true;
+        IntKeyLookup.field_a = true;
         if (param0 == 0) {
           nf.field_a = true;
           vn.field_f.e((byte) 89);

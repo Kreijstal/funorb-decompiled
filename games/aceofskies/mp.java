@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mp extends vo {
-    static pa field_h;
+    static RenderSprite field_h;
     static String field_e;
     private boolean field_f;
     static volatile int field_g;
@@ -22,7 +22,7 @@ final class mp extends vo {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param0);
-          if (!qf.a(var5, 0)) {
+          if (!SmokeParticle.a(var5, 0)) {
             stackIn_3_0 = bt.field_a;
             return stackIn_3_0;
           }

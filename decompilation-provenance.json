@@ -406,6 +406,30 @@
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7",
         "trackedSourceTarSha256": "34c1e50357f69cafd0c4550a63beeb07a8b56c8c891bdb31e4fc49a652509613"
       }
+    },
+    "aceofskies": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
+        "subdirectory": "games/aceofskies"
+      },
+      "inputTreeSha256": "a52334680405315c555ca4db143723b8fbb0cda0101e89d5ab7fa743466537b7",
+      "sources": {
+        "files": 545,
+        "sha256": "4da9da9045374c4da7f209226412678320f1564f5fe64afce01c0f77a697fe13"
+      },
+      "dictionary": {
+        "path": "decompilation/aceofskies-naming.json",
+        "sha256": "62f01af1c690d7703a03d0220ec0ea189c57fbfe91f76de1db089282f7849575"
+      },
+      "readingGuide": {
+        "path": "games/aceofskies/README.md",
+        "sha256": "e6831e9df8dd2190c64886dd40e9ee0dbccd80e6ae4c47ce1270ed7f1a04bf30"
+      },
+      "rulesSha256": "48761db6beb58d7d1ea46133bc87e5b3a7687254780dcb4d6b6c4289cbc42aa0",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -555,6 +579,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 545,
+          "sha256": "4da9da9045374c4da7f209226412678320f1564f5fe64afce01c0f77a697fe13"
         }
       },
       "arcanistsmulti": {

@@ -19,7 +19,7 @@ final class vs {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 106) {
-            this.a((pa[]) null, -22, 118, (String) null);
+            this.a((RenderSprite[]) null, -22, 118, (String) null);
           }
           stackIn_4_0 = this.field_d[param1] & 255;
           return stackIn_4_0;
@@ -65,7 +65,7 @@ final class vs {
         }
     }
 
-    private final int a(String param0, byte param1, pa[] param2) {
+    private final int a(String param0, byte param1, RenderSprite[] param2) {
         int stackIn_3_0 = 0;
         int stackIn_73_0 = 0;
         RuntimeException stackIn_77_0 = null;
@@ -86,7 +86,7 @@ final class vs {
         int var11_int = 0;
         Exception var11 = null;
         int var12 = 0;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null == param0) {
             stackIn_3_0 = 0;
@@ -219,7 +219,7 @@ final class vs {
         }
     }
 
-    final String a(pa[] param0, int param1, int param2, String param3) {
+    final String a(RenderSprite[] param0, int param1, int param2, String param3) {
         String stackIn_5_0 = null;
         String stackIn_55_0 = null;
         String stackIn_75_0 = null;
@@ -244,13 +244,13 @@ final class vs {
         int var13_int = 0;
         Exception var13 = null;
         int var14 = 0;
-        var14 = AceOfSkies.field_G ? 1 : 0;
+        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.a(param3, (byte) -113, param0) <= param2) {
             stackIn_5_0 = (String) (param3);
             return stackIn_5_0;
           }
-          param2 = param2 - this.a("...", (byte) -113, (pa[]) null);
+          param2 = param2 - this.a("...", (byte) -113, (RenderSprite[]) null);
           var5_int = -1;
           var6 = -1;
           var7 = 0;
@@ -411,7 +411,7 @@ final class vs {
         }
     }
 
-    final int a(int param0, pa[] param1, int[] param2, String[] param3, String param4) {
+    final int a(int param0, RenderSprite[] param1, int[] param2, String[] param3, String param4) {
         int stackIn_3_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_130_0 = 0;
@@ -452,7 +452,7 @@ final class vs {
         int var21_int = 0;
         Exception var21 = null;
         int var22 = 0;
-        var22 = AceOfSkies.field_G ? 1 : 0;
+        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 == null) {
             stackIn_3_0 = 0;
@@ -500,7 +500,7 @@ final class vs {
                       decompiledFrameRemainder0 = false;
                     }
                     else {
-                      L8: {
+                      regionExit1: {
                         if (var20.equals("lt")) {
                           var18 = var18 + this.a((byte) 111, 60);
                           if (null != this.field_h &&
@@ -538,10 +538,10 @@ final class vs {
                                     } else {
                                       if (!var20.equals("reg")) {
                                         if (!var20.startsWith("img=")) {
-                                          break L8;
+                                          break regionExit1;
                                         }
                                         if (null == param1) {
-                                          break L8;
+                                          break regionExit1;
                                         }
                                         try {
                                           var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
@@ -554,7 +554,7 @@ final class vs {
                                           decompiledRegionSelector0 = 0;
                                         }
                                         if (decompiledRegionSelector0 == 0) {
-                                          break L8;
+                                          break regionExit1;
                                         }
                                       }
                                       var18 = var18 + this.a((byte) 126, 174);
@@ -582,7 +582,7 @@ final class vs {
                                 var12 = 173;
                               }
                             }
-                            break L8;
+                            break regionExit1;
                           }
                           var18 = var18 + this.a((byte) 118, 62);
                           if (null != this.field_h &&
@@ -710,7 +710,7 @@ final class vs {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 94) {
-            stackIn_4_0 = this.a(param1, (byte) -113, (pa[]) null);
+            stackIn_4_0 = this.a(param1, (byte) -113, (RenderSprite[]) null);
             return stackIn_4_0;
           }
           stackIn_2_0 = 39;
@@ -742,7 +742,7 @@ final class vs {
         StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
         RuntimeException decompiledCaughtException = null;
-        rb var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -760,14 +760,14 @@ final class vs {
         int var10Lifetime2;
         int var9Lifetime1;
         int var9Lifetime2;
-        var12 = AceOfSkies.field_G ? 1 : 0;
+        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2 = new rb(param0);
-          var3 = var2.g(-52);
+          var2 = new PacketBuffer(param0);
+          var3 = var2.readUnsignedByte(-52);
           if (0 != var3) {
             throw new RuntimeException("");
           }
-          stackIn_8_0 = (var2.g(43) != 1) ? 0 : 1;
+          stackIn_8_0 = (var2.readUnsignedByte(43) != 1) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
           var4 = stackIn_8_0;
           this.field_d = new byte[256];
@@ -781,11 +781,11 @@ final class vs {
                 var7_int = 0;
                 break;
               }
-              var5[var7_int] = var2.g(-87);
+              var5[var7_int] = var2.readUnsignedByte(-87);
               var7_int++;
             } while (var12 == 0);
             while (var7_int < 256) {
-              var6[var7_int] = var2.g(-51);
+              var6[var7_int] = var2.readUnsignedByte(-51);
               var7_int++;
               if (var12 != 0) {
                 return;
@@ -793,18 +793,18 @@ final class vs {
             }
             var7 = new byte[256][];
             var8_int = 0;
-            L11: while (true) {
+            scanLoop1: while (true) {
               if (256 > var8_int) {
                 array$0 = new byte[var5[var8_int]];
                 var7[var8_int] = array$0;
                 var9 = 0;
                 stackIn_35_0 = 0;
                 if (var12 != 0) {
-                  break L11;
+                  break scanLoop1;
                 }
                 var10 = stackIn_35_0;
                 while (var10 < var7[var8_int].length) {
-                  var9 = (byte)(var9 + var2.d(0));
+                  var9 = (byte)(var9 + var2.readByte(0));
                   var7[var8_int][var10] = (byte) var9;
                   var10++;
                 }
@@ -816,18 +816,18 @@ final class vs {
             }
             var8 = new byte[stackIn_35_0][];
             var9Lifetime1 = 0;
-            L17: while (true) {
+            scanLoop2: while (true) {
               if (var9Lifetime1 < 256) {
                 array$1 = new byte[var5[var9Lifetime1]];
                 var8[var9Lifetime1] = array$1;
                 var10Lifetime1 = 0;
                 stackIn_47_0 = 0;
                 if (var12 != 0) {
-                  break L17;
+                  break scanLoop2;
                 }
                 var11 = stackIn_47_0;
                 while (var8[var9Lifetime1].length > var11) {
-                  var10Lifetime1 = (byte)(var10Lifetime1 + var2.d(0));
+                  var10Lifetime1 = (byte)(var10Lifetime1 + var2.readByte(0));
                   var8[var9Lifetime1][var11] = (byte) var10Lifetime1;
                   var11++;
                 }
@@ -873,13 +873,13 @@ final class vs {
           if (decompiledFrameCompleted0) {
             if (var4 == 0 ||
               var12 != 0) {
-              this.field_e = var2.g(76);
+              this.field_e = var2.readUnsignedByte(76);
             }
-            this.field_a = var2.g(-110);
-            stackIn_75_0 = var2.g(96);
+            this.field_a = var2.readUnsignedByte(-110);
+            stackIn_75_0 = var2.readUnsignedByte(96);
           }
-          this.field_j = var2.g(-103);
-          this.field_i = var2.g(-48);
+          this.field_j = var2.readUnsignedByte(-103);
+          this.field_i = var2.readUnsignedByte(-48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

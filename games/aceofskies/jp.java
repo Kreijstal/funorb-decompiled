@@ -5,7 +5,7 @@ final class jp {
     static ke field_a;
     static int field_b;
 
-    final static void a(int param0, rh param1) {
+    final static void a(int param0, SoundPlayback param1) {
         if (param1 == null ||
           null == param1.field_g) {
           return;

@@ -1,9 +1,9 @@
 # funorb-decompiled
 
 Current Java source for the complete 44-game FunOrb / AlterOrb catalog lives
-only in `games/<game>/`. GeoBlox, Deko Bloko, Armies of Gielinor, Steel Sentinels
-and Brick-a-brac have named sources directly in those directories, with a
-reading guide beside the Java. There is no separate
+only in `games/<game>/`. GeoBlox, Deko Bloko, Armies of Gielinor, Steel Sentinels,
+Brick-a-brac and Ace of Skies have named sources directly in those directories,
+with a reading guide beside the Java. There is no separate
 readable mirror and no committed compilation binaries.
 
 The generic decompiler belongs to [java-tools](https://github.com/Kreijstal/java-tools).
@@ -12,6 +12,9 @@ The pipeline, game naming rules and reproduction scripts belong to
 current reverse dictionaries belong here.
 
 ## Read the games
+
+- [Ace of Skies](games/aceofskies/README.md): flight/session updates, aircraft,
+  bullets, pickups, motion arithmetic and shared client infrastructure.
 
 - [Brick-a-brac](games/brickabrac/README.md): player boards/match state, balls,
   bricks, paddles, collision bodies and intrusive queues.

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vk {
-    private static kp field_c;
+    private static IntrusiveDeque field_c;
     private static boolean field_b;
     private static int field_a;
 
@@ -10,13 +10,13 @@ final class vk {
         wn var1;
         int var1_int;
         while (true) {
-          var1 = (wn) (field_c.e(125));
+          var1 = (wn) (field_c.removeFirst(125));
           if (var1 == null) {
             var1_int = 47 % ((84 - param0) / 32);
             return;
           }
           var1.field_e.w(true);
-          var1.c(-123);
+          var1.unlink(-123);
         }
     }
 
@@ -29,7 +29,7 @@ final class vk {
         if (0 < field_a) {
           var3 = new wn();
           var3.field_e = param0;
-          field_c.a(79, var3);
+          field_c.addLast(79, var3);
         } else {
           param0.w(false);
         }
@@ -55,6 +55,6 @@ final class vk {
     static {
         field_b = false;
         field_a = 0;
-        field_c = new kp();
+        field_c = new IntrusiveDeque();
     }
 }

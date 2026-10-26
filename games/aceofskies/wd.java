@@ -8,7 +8,7 @@ final class wd extends ab implements ue, dn, bh {
     ek field_B;
     private kk field_x;
     private kk field_F;
-    static kp field_t;
+    static IntrusiveDeque field_t;
     private kk field_D;
     static String[] field_G;
     private sq field_z;
@@ -226,7 +226,7 @@ final class wd extends ab implements ue, dn, bh {
         try {
           var6 = new bc(20, param0, 120 + param4, 25, param2, false, 120, 3, qo.field_b, 16777215, param1);
           if (param3 != -1) {
-            field_t = (kp) null;
+            field_t = (IntrusiveDeque) null;
           }
           this.a(var6, 1);
           stackIn_3_0 = var6.field_n;
@@ -298,7 +298,7 @@ final class wd extends ab implements ue, dn, bh {
         int var1 = 1;
         this.field_z = new sq("", (no) null, var1 != 0);
         this.field_A = new mi(mg.field_a, (no) null);
-        this.field_w = new mi(md.field_s, (no) null);
+        this.field_w = new mi(Aircraft.field_s, (no) null);
         this.field_D.field_k = ht.field_e;
         this.field_E.field_k = vn.field_e;
         this.field_u.field_k = ol.field_f;
@@ -364,7 +364,7 @@ final class wd extends ab implements ue, dn, bh {
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var3_int = 0;
           while (param1 > 0) {
@@ -407,7 +407,7 @@ final class wd extends ab implements ue, dn, bh {
           if (jc.field_Pc == var4) {
             return false;
           }
-          if (vb.field_o != var4) {
+          if (GameAppletShell.field_o != var4) {
             return true;
           }
           return false;
@@ -432,7 +432,7 @@ final class wd extends ab implements ue, dn, bh {
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 >= -59) {
             return;
@@ -518,7 +518,7 @@ final class wd extends ab implements ue, dn, bh {
 
     static {
         field_G = new String[]{null, "To store your progress, you<nbsp>must", "To store your score, you<nbsp>must", "To store your score and progress, you<nbsp>must", "To store your achievements, you<nbsp>must", "To store your achievements and progress, you<nbsp>must", "To store your achievements and score, you<nbsp>must", "To store your achievements, score and progress, you<nbsp>must"};
-        field_t = new kp();
+        field_t = new IntrusiveDeque();
         field_v = new ll(540, 140);
     }
 }

@@ -24,7 +24,7 @@ final class pn implements Runnable {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        rb var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -34,9 +34,9 @@ final class pn implements Runnable {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var9 = new rb(param0);
-          var3 = var9.g(-123);
-          var4 = var9.a((byte) 113);
+          var9 = new PacketBuffer(param0);
+          var3 = var9.readUnsignedByte(-123);
+          var4 = var9.readInt((byte) 113);
           if (var4 >= 0 && (0 == kk.field_K ||
             !(var4 > kk.field_K))) {
             if (var3 == 0) {
@@ -47,7 +47,7 @@ final class pn implements Runnable {
               stackIn_24_0 = var5;
               return stackIn_24_0;
             }
-            var5_int = var9.a((byte) 110);
+            var5_int = var9.readInt((byte) 110);
             if (var5_int >= 0 && (kk.field_K == 0 ||
               !(var5_int > kk.field_K))) {
               var12 = new byte[var5_int];
@@ -91,7 +91,7 @@ final class pn implements Runnable {
     public final void run() {
         int var1_int = 0;
         tk var2 = null;
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_e = true;
         try {
           while (!this.field_a) {
@@ -101,8 +101,8 @@ final class pn implements Runnable {
                 var2.h();
               }
             }
-            wf.a(10L, false);
-            rb.a(5, (Object) null, this.field_f);
+            IntrusiveNode.a(10L, false);
+            PacketBuffer.a(5, (Object) null, this.field_f);
           }
         } catch (Exception exception) {
           String var5 = (String) null;
@@ -112,12 +112,12 @@ final class pn implements Runnable {
         }
     }
 
-    final static ak a(Throwable param0, String param1) {
-        ak var2 = null;
-        if (!(param0 instanceof ak)) {
-          var2 = new ak(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (ak) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;
@@ -125,7 +125,7 @@ final class pn implements Runnable {
 
     final static void a(oc param0, byte param1, int param2) {
         try {
-          ci.field_j.a(77, param0);
+          ci.field_j.addLast(77, param0);
           if (param1 > -70) {
             field_b = (long[]) null;
           }
@@ -142,7 +142,7 @@ final class pn implements Runnable {
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var1_int = gi.field_i[0];
           if (!param0) {

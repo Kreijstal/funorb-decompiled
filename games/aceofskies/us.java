@@ -23,7 +23,7 @@ final class us implements ir {
         int var9 = 0;
         int var11 = 0;
         pf var12 = null;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!(param3 instanceof pf)) {
             stackIn_4_0 = null;
@@ -88,7 +88,7 @@ final class us implements ir {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        var23 = AceOfSkies.field_G ? 1 : 0;
+        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null != sa.field_h) {
             return;

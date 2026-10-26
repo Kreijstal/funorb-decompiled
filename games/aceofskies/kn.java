@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kn {
-    static da field_a;
-    static al[] field_c;
+    static BitmapFont field_a;
+    static PcmSample[] field_c;
     static vs field_b;
 
     final static java.awt.Frame a(rk param0, int param1, int param2, int param3, int param4, int param5) {
@@ -24,7 +24,7 @@ final class kn {
         int var9 = 0;
         rm[] var10 = null;
         en var11 = null;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!param0.a((byte) 84)) {
             return null;
@@ -54,7 +54,7 @@ final class kn {
           }
           var11 = param0.a(param1, -83, param4, param2, param3);
           while (var11.field_a == 0) {
-            wf.a(10L, false);
+            IntrusiveNode.a(10L, false);
           }
           var7 = (java.awt.Frame) (var11.field_f);
           if (var7 == null) {
@@ -96,7 +96,7 @@ final class kn {
 
     final static wp[] a(int param0) {
         int var3 = 0;
-        int var4 = AceOfSkies.field_G ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var1 = -37 / ((19 - param0) / 57);
         wp[] var2 = new wp[to.field_t];
         for (var3 = 0; var3 < to.field_t; var3++) {

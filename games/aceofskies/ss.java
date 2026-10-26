@@ -166,7 +166,7 @@ final class ss extends ea {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        var9 = AceOfSkies.field_G ? 1 : 0;
+        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var5_int = this.field_q + param0;
           fp.a((byte) 44, param2, param2 + this.field_n, -this.field_D.field_r + var5_int, param0 + this.field_D.field_r);

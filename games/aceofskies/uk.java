@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uk extends wf {
+final class uk extends IntrusiveNode {
     int field_m;
     static int field_e;
     int field_h;

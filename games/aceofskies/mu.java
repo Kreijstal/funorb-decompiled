@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mu extends da {
+final class mu extends BitmapFont {
     private wl field_f;
     private si field_g;
     private boolean field_e;

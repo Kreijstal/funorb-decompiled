@@ -20,15 +20,15 @@ final class ji {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var3_intLifetime1;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2 != 37) {
             return;
           }
           if (ms.field_d != param1) {
-            ct.field_v = new int[param1];
+            NetworkGameClient.field_v = new int[param1];
             for (var3_int = 0; param1 > var3_int; var3_int++) {
-              ct.field_v[var3_int] = (var3_int << 12) / param1;
+              NetworkGameClient.field_v[var3_int] = (var3_int << 12) / param1;
             }
             ms.field_d = param1;
           }
@@ -42,7 +42,7 @@ final class ji {
                 var5++;
               }
             } else {
-              mo.field_c = ct.field_v;
+              mo.field_c = NetworkGameClient.field_v;
             }
             df.field_f = param0;
           }

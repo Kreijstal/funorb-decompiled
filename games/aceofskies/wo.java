@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wo extends wf {
+final class wo extends IntrusiveNode {
     static char[] field_l;
     int field_k;
     int field_f;
@@ -19,7 +19,7 @@ final class wo extends wf {
 
     final static boolean a(int param0, boolean param1) {
         try {
-          if (nm.field_c.field_g >= param0) {
+          if (IntKeyLookup.field_c.position >= param0) {
             return true;
           }
           if (null == ft.field_l) {
@@ -30,16 +30,16 @@ final class wo extends wf {
           }
           int var2_int = ft.field_l.b(-118);
           if (var2_int > 0) {
-            if (!(var2_int <= param0 - nm.field_c.field_g)) {
-              var2_int = param0 - nm.field_c.field_g;
+            if (!(var2_int <= param0 - IntKeyLookup.field_c.position)) {
+              var2_int = param0 - IntKeyLookup.field_c.position;
             }
-            ft.field_l.a(nm.field_c.field_g, var2_int, nm.field_c.field_f, true);
+            ft.field_l.a(IntKeyLookup.field_c.position, var2_int, IntKeyLookup.field_c.payload, true);
             ff.field_b = kh.a(-127);
-            nm.field_c.field_g = nm.field_c.field_g + var2_int;
-            if (!(nm.field_c.field_g >= param0)) {
+            IntKeyLookup.field_c.position = IntKeyLookup.field_c.position + var2_int;
+            if (!(IntKeyLookup.field_c.position >= param0)) {
               return false;
             }
-            nm.field_c.field_g = 0;
+            IntKeyLookup.field_c.position = 0;
             return true;
           }
           try {

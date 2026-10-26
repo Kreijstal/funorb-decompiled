@@ -13,15 +13,15 @@ final class ae extends sk {
     }
 
     final static void a(oh param0, int param1, byte param2) {
-        dl var3 = q.field_p;
+        CipherPacketBuffer var3 = q.field_p;
         var3.g(84, param1);
-        var3.b(param2 - 1336879945, 2);
-        var3.b(-1336879960, 0);
+        var3.writeByte(param2 - 1336879945, 2);
+        var3.writeByte(-1336879960, 0);
         if (param2 != -15) {
           return;
         }
         try {
-          var3.b(-1336879960, param0.field_e);
+          var3.writeByte(-1336879960, param0.field_e);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "ae.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -443,7 +443,7 @@ final class ae extends sk {
         return (byte) var2;
     }
 
-    final static void a(int param0, rb param1, boolean param2, rk param3) {
+    final static void a(int param0, PacketBuffer param1, boolean param2, rk param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -479,14 +479,14 @@ final class ae extends sk {
           String var21 = null;
           byte[][] var22 = null;
           int var13Lifetime1;
-          var14 = AceOfSkies.field_G ? 1 : 0;
+          var14 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (param2) {
               ae.a('￫', 105);
             }
             var18 = new bb();
-            var18.field_g = param1.g(99);
-            var18.field_j = param1.a((byte) 127);
+            var18.field_g = param1.readUnsignedByte(99);
+            var18.field_j = param1.readInt((byte) 127);
             var18.field_k = new byte[var18.field_g][][];
             var18.field_l = new int[var18.field_g];
             var18.field_e = new int[var18.field_g];
@@ -495,7 +495,7 @@ final class ae extends sk {
             var18.field_f = new en[var18.field_g];
             for (var5 = 0; var18.field_g > var5; var5++) {
               try {
-                var6_int = param1.g(-74);
+                var6_int = param1.readUnsignedByte(-74);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
@@ -503,7 +503,7 @@ final class ae extends sk {
                     var6_int == 4) {
                     var20 = param1.h(-17883);
                     var21 = param1.h(-17883);
-                    var9 = param1.g(-60);
+                    var9 = param1.readUnsignedByte(-60);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
                       var10[var11_int] = param1.h(-17883);
@@ -513,7 +513,7 @@ final class ae extends sk {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param1.a((byte) 117);
+                        var13 = param1.readInt((byte) 117);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param1.a(0, 7186, var13, var22[var12_int]);
@@ -537,7 +537,7 @@ final class ae extends sk {
                   var8 = var15;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.a((byte) 117);
+                    var9 = param1.readInt((byte) 117);
                   }
                   var18.field_l[var5] = var6_int;
                   var18.field_i[var5] = var9;
@@ -565,7 +565,7 @@ final class ae extends sk {
                 var18.field_e[var5] = -5;
               }
             }
-            av.field_c.a(66, var18);
+            av.field_c.addLast(66, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

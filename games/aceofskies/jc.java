@@ -5,15 +5,15 @@ final class jc extends bf {
     static pt field_Pc;
     private jaggl.OpenGL field_Ac;
     static String field_wc;
-    private kp field_uc;
+    private IntrusiveDeque field_uc;
     static String field_Mc;
-    private kp field_Ec;
-    private kp field_Lc;
-    private kp field_Wc;
+    private IntrusiveDeque field_Ec;
+    private IntrusiveDeque field_Lc;
+    private IntrusiveDeque field_Wc;
     static String[] field_Rc;
-    private kp field_vc;
-    private kp field_Sc;
-    private kp field_Uc;
+    private IntrusiveDeque field_vc;
+    private IntrusiveDeque field_Sc;
+    private IntrusiveDeque field_Uc;
     private boolean field_Xc;
     private boolean field_Dc;
     jaggl.MapBuffer field_Qc;
@@ -82,7 +82,7 @@ final class jc extends bf {
         if (param0 != 0) {
           this.field_Jc = true;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34161, kp.a(-84, this.field_H[this.field_F]));
+        jaggl.OpenGL.glTexEnvi(8960, 34161, IntrusiveDeque.a(-84, this.field_H[this.field_F]));
     }
 
     final void h(byte param0) {
@@ -227,8 +227,8 @@ final class jc extends bf {
         if (param0 != 3) {
           this.g(91);
         }
-        var4.field_b = (long)param2;
-        this.field_Lc.a(81, var4);
+        var4.key = (long)param2;
+        this.field_Lc.addLast(81, var4);
     }
 
     final void s(byte param0) {
@@ -283,7 +283,7 @@ final class jc extends bf {
 
     private final void X(int param0) {
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_Kc) {
           jaggl.OpenGL.glPopMatrix();
         }
@@ -334,7 +334,7 @@ final class jc extends bf {
           jaggl.OpenGL.glDisable(2929);
         }
         if (param0) {
-          this.field_Sc = (kp) null;
+          this.field_Sc = (IntrusiveDeque) null;
         }
     }
 
@@ -358,7 +358,7 @@ final class jc extends bf {
           }
           jaggl.OpenGL.glTexEnvi(stackIn_2_0, stackIn_2_1, stackIn_3_2);
           if (param3 < 90) {
-            this.field_Wc = (kp) null;
+            this.field_Wc = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -457,7 +457,7 @@ final class jc extends bf {
         }
     }
 
-    jc(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, gk param4, int param5) {
+    jc(jaggl.OpenGL param0, java.awt.Canvas param1, long param2, d param3, ResourceArchive param4, int param5) {
         super(param1, new Long(param2), param3, param4, param5, 1);
         int var15 = 0;
         int stackIn_21_1 = 0;
@@ -497,13 +497,13 @@ final class jc extends bf {
         var28 = null;
         var29 = null;
         var30 = null;
-        this.field_uc = new kp();
-        this.field_Ec = new kp();
-        this.field_Lc = new kp();
-        this.field_Wc = new kp();
-        this.field_vc = new kp();
-        this.field_Sc = new kp();
-        this.field_Uc = new kp();
+        this.field_uc = new IntrusiveDeque();
+        this.field_Ec = new IntrusiveDeque();
+        this.field_Lc = new IntrusiveDeque();
+        this.field_Wc = new IntrusiveDeque();
+        this.field_vc = new IntrusiveDeque();
+        this.field_Sc = new IntrusiveDeque();
+        this.field_Uc = new IntrusiveDeque();
         this.field_Gc = new cg[16];
         this.field_Qc = new jaggl.MapBuffer();
         this.field_Fc = new jaggl.MapBuffer();
@@ -698,7 +698,7 @@ final class jc extends bf {
     final void a() {
     }
 
-    final void a(pa param0, boolean param1) {
+    final void a(RenderSprite param0, boolean param1) {
     }
 
     final void a(fa param0, byte param1) {
@@ -734,7 +734,7 @@ final class jc extends bf {
         pl[] var18 = null;
         int var8Lifetime1;
         int var8Lifetime2;
-        var17 = AceOfSkies.field_G ? 1 : 0;
+        var17 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           var18 = ((tq) (param0)).field_g;
           var4 = 0;
@@ -871,7 +871,7 @@ final class jc extends bf {
     final void C(int param0) {
         jaggl.OpenGL.glMatrixMode(5889);
         if (param0 >= -51) {
-          this.field_Wc = (kp) null;
+          this.field_Wc = (IntrusiveDeque) null;
         }
         jaggl.OpenGL.glLoadMatrixf(this.field_N, 0);
         jaggl.OpenGL.glMatrixMode(5888);
@@ -887,7 +887,7 @@ final class jc extends bf {
     final sk b(int param0, byte param1) {
         int var3;
         int var4;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 < 31) {
           this.field_Ic = (String) null;
         }
@@ -982,17 +982,17 @@ final class jc extends bf {
         iq var7;
         iq var8;
         iq var9;
-        wf var10;
-        wf var11;
+        IntrusiveNode var10;
+        IntrusiveNode var11;
         iq var12;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         param0 = param0 & 2147483647;
         var2 = 0;
-        while (!this.field_Ec.a(true)) {
-          var5 = (iq) (this.field_Ec.e(126));
+        while (!this.field_Ec.isEmpty(true)) {
+          var5 = (iq) (this.field_Ec.removeFirst(126));
           incrementValue$3 = var2;
           var2++;
-          ac.field_e[incrementValue$3] = (int)var5.field_b;
+          ac.field_e[incrementValue$3] = (int)var5.key;
           this.field_j = this.field_j - var5.field_f;
           if (var2 != 1000) {
             continue;
@@ -1004,11 +1004,11 @@ final class jc extends bf {
           jaggl.OpenGL.glDeleteBuffersARB(var2, ac.field_e, 0);
           var2 = 0;
         }
-        while (!this.field_Lc.a(true)) {
-          var6 = (iq) (this.field_Lc.e(124));
+        while (!this.field_Lc.isEmpty(true)) {
+          var6 = (iq) (this.field_Lc.removeFirst(124));
           incrementValue$2 = var2;
           var2++;
-          ac.field_e[incrementValue$2] = (int)var6.field_b;
+          ac.field_e[incrementValue$2] = (int)var6.key;
           this.field_jc = this.field_jc - var6.field_f;
           if (1000 != var2) {
             continue;
@@ -1020,8 +1020,8 @@ final class jc extends bf {
           jaggl.OpenGL.glDeleteTextures(var2, ac.field_e, 0);
           var2 = 0;
         }
-        while (!this.field_Wc.a(true)) {
-          var7 = (iq) (this.field_Wc.e(121));
+        while (!this.field_Wc.isEmpty(true)) {
+          var7 = (iq) (this.field_Wc.removeFirst(121));
           incrementValue$1 = var2;
           var2++;
           ac.field_e[incrementValue$1] = var7.field_f;
@@ -1035,11 +1035,11 @@ final class jc extends bf {
           jaggl.OpenGL.glDeleteFramebuffersEXT(var2, ac.field_e, 0);
           var2 = 0;
         }
-        while (!this.field_vc.a(true)) {
-          var8 = (iq) (this.field_vc.e(124));
+        while (!this.field_vc.isEmpty(true)) {
+          var8 = (iq) (this.field_vc.removeFirst(124));
           incrementValue$0 = var2;
           var2++;
-          ac.field_e[incrementValue$0] = (int)var8.field_b;
+          ac.field_e[incrementValue$0] = (int)var8.key;
           this.field_qb = this.field_qb - var8.field_f;
           if (var2 != 1000) {
             continue;
@@ -1051,21 +1051,21 @@ final class jc extends bf {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, ac.field_e, 0);
           var2 = 0;
         }
-        while (!this.field_uc.a(true)) {
-          var9 = (iq) (this.field_uc.e(120));
-          jaggl.OpenGL.glDeleteLists((int)var9.field_b, var9.field_f);
+        while (!this.field_uc.isEmpty(true)) {
+          var9 = (iq) (this.field_uc.removeFirst(120));
+          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_f);
         }
-        while (!this.field_Sc.a(true)) {
-          var10 = this.field_Sc.e(125);
-          jaggl.OpenGL.glDeleteProgramARB((int)var10.field_b);
+        while (!this.field_Sc.isEmpty(true)) {
+          var10 = this.field_Sc.removeFirst(125);
+          jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
         }
-        while (!this.field_Uc.a(true)) {
-          var11 = this.field_Uc.e(121);
-          jaggl.OpenGL.glDeleteObjectARB(var11.field_b);
+        while (!this.field_Uc.isEmpty(true)) {
+          var11 = this.field_Uc.removeFirst(121);
+          jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
-        while (!this.field_uc.a(true)) {
-          var12 = (iq) (this.field_uc.e(124));
-          jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_f);
+        while (!this.field_uc.isEmpty(true)) {
+          var12 = (iq) (this.field_uc.removeFirst(124));
+          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_f);
         }
         if (this.i((byte) -91) > 100663296 &&
           kh.a(-72) > (60000L + this.field_xc)) {
@@ -1092,14 +1092,14 @@ final class jc extends bf {
         if (param0 <= 105) {
           return;
         }
-        wf var3 = new wf();
-        var3.field_b = (long)param1;
-        this.field_Sc.a(113, var3);
+        IntrusiveNode var3 = new IntrusiveNode();
+        var3.key = (long)param1;
+        this.field_Sc.addLast(113, var3);
     }
 
     final void l(byte param0) {
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (pi.field_x == this.field_zb) {
           jaggl.OpenGL.glBlendFunc(770, 771);
         } else {
@@ -1187,9 +1187,9 @@ final class jc extends bf {
 
     final void m(byte param0) {
         if (param0 >= -124) {
-          this.field_Uc = (kp) null;
+          this.field_Uc = (IntrusiveDeque) null;
         }
-        jaggl.OpenGL.glTexEnvi(8960, 34162, kp.a(61, this.field_w[this.field_F]));
+        jaggl.OpenGL.glTexEnvi(8960, 34162, IntrusiveDeque.a(61, this.field_w[this.field_F]));
     }
 
     final void t(byte param0) {
@@ -1290,7 +1290,7 @@ final class jc extends bf {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
-        int var6 = AceOfSkies.field_G ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = -58 % ((param0 + 65) / 51);
         for (var3_int = -1 + this.field_h; var3_int >= 0; var3_int--) {
           jaggl.OpenGL.glActiveTexture(33984 + var3_int);
@@ -1375,8 +1375,8 @@ final class jc extends bf {
         if (param1 != 9841) {
           this.field_zc = true;
         }
-        var4.field_b = (long)param2;
-        this.field_Ec.a(113, var4);
+        var4.key = (long)param2;
+        this.field_Ec.addLast(113, var4);
     }
 
     final void b(int param0, int param1) throws lp {
@@ -1396,9 +1396,9 @@ final class jc extends bf {
         if (param0 != -25160) {
           this.h((byte) 1);
         }
-        wf var4 = new wf();
-        var4.field_b = param1;
-        this.field_Uc.a(90, var4);
+        IntrusiveNode var4 = new IntrusiveNode();
+        var4.key = param1;
+        this.field_Uc.addLast(90, var4);
     }
 
     final qi a(int param0, boolean param1, boolean param2, int param3, int param4, int[] param5, int param6) {
@@ -1596,7 +1596,7 @@ final class jc extends bf {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!param0) {
             return;
@@ -1678,7 +1678,7 @@ final class jc extends bf {
         int var5 = 0;
         float var6 = 0.0f;
         int var2 = 0;
-        int var7 = AceOfSkies.field_G ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.a((byte) 82);
         if (param0 < 123) {
           this.V(93);

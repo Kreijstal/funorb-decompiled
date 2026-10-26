@@ -28,7 +28,7 @@ final class wg implements ir {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != -7592) {
             wg.a(false);

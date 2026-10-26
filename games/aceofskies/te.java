@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends wf {
+final class te extends IntrusiveNode {
     static long field_i;
     static char[] field_e;
     static int[] field_g;
     static boolean field_h;
-    static gk field_f;
+    static ResourceArchive field_f;
 
     private te() throws Throwable {
         throw new Error();
@@ -51,7 +51,7 @@ final class te extends wf {
 
     final static void a(int param0) {
         int var1_int = 0;
-        int var2 = AceOfSkies.field_G ? 1 : 0;
+        int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var1_intLifetime1;
         try {
           io.field_c.a(0);
@@ -62,9 +62,9 @@ final class te extends wf {
             field_e = (char[]) null;
           }
           for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
-            ob.field_c[var1_intLifetime1] = 0L;
+            SoundCache.field_c[var1_intLifetime1] = 0L;
           }
-          eu.field_g = 0;
+          Bullet.field_g = 0;
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "te.D(" + param0 + ')');
         }

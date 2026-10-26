@@ -3,7 +3,7 @@
  */
 final class wi {
     static String field_b;
-    static gk field_a;
+    static ResourceArchive field_a;
     private static String field_z;
 
     public static void a(int param0) {

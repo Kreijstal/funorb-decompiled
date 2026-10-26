@@ -198,7 +198,7 @@ final class br extends oe implements java.awt.image.ImageProducer {
         String var11;
         int var12;
         int var13;
-        ak var14;
+        ClientException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -225,9 +225,9 @@ final class br extends oe implements java.awt.image.ImageProducer {
         String var2Lifetime3Lifetime10;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        var13 = AceOfSkies.field_G ? 1 : 0;
-        if (param0 instanceof ak) {
-          var14 = (ak) ((Object) param0);
+        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
+        if (param0 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param0);
           var2 = var14.field_a + " | ";
           var11 = var2;
           var2 = var11;
@@ -298,7 +298,7 @@ final class br extends oe implements java.awt.image.ImageProducer {
     }
 
     final static void f(int param0) {
-        fp var1 = (fp) (ks.field_d.d(268435455));
+        fp var1 = (fp) (ks.field_d.first(268435455));
         if (var1 == null) {
           te.b(true);
           return;
@@ -306,12 +306,12 @@ final class br extends oe implements java.awt.image.ImageProducer {
         if (param0 <= 88) {
           return;
         }
-        dl var2 = nm.field_c;
-        var2.a((byte) 115);
-        var2.a((byte) 107);
-        var2.a((byte) 113);
-        var2.a((byte) 109);
-        var1.c(-125);
+        CipherPacketBuffer var2 = IntKeyLookup.field_c;
+        var2.readInt((byte) 115);
+        var2.readInt((byte) 107);
+        var2.readInt((byte) 113);
+        var2.readInt((byte) 109);
+        var1.unlink(-125);
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {

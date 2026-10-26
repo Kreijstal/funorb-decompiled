@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class km {
-    private gk field_c;
+    private ResourceArchive field_c;
     static int field_b;
     private gq field_a;
-    private gk field_d;
+    private ResourceArchive field_d;
 
     final static int a(int param0) {
         if (param0 != 1) {
@@ -25,7 +25,7 @@ final class km {
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         Throwable decompiledCaughtException = null;
-        var4 = AceOfSkies.field_G ? 1 : 0;
+        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
             if (!rk.field_f.startsWith("win")) {
@@ -89,7 +89,7 @@ final class km {
         }
         var3Lifetime1 = new jr();
         if (var5 != null) {
-          var3Lifetime1.a((byte) 111, new rb(var5));
+          var3Lifetime1.a((byte) 111, new PacketBuffer(var5));
         }
         if (param0 >= 32768) {
           var3Lifetime1.b(true);

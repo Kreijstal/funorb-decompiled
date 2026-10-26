@@ -4,7 +4,7 @@
 final class ek extends ab implements dn {
     private mi[] field_t;
     private String[] field_v;
-    static kc field_u;
+    static Vector2 field_u;
     private bh field_w;
     static String field_x;
 
@@ -41,7 +41,7 @@ final class ek extends ab implements dn {
           if (param0 >= -125) {
             ek.a((byte) 107);
           }
-          bk.field_f = ps.field_e[ch.field_a];
+          bk.field_f = ArchiveIndex.field_e[ch.field_a];
           fr.field_e = qb.field_o[ch.field_a];
           ch.field_a = ch.field_a + 1 & 127;
           stackIn_8_0 = true;
@@ -112,9 +112,9 @@ final class ek extends ab implements dn {
         RuntimeException var3 = null;
         wg var4 = null;
         int var6 = 0;
-        var6 = AceOfSkies.field_G ? 1 : 0;
+        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          this.field_s.c(268435455);
+          this.field_s.clear(268435455);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -165,7 +165,7 @@ final class ek extends ab implements dn {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         int var6_intLifetime1;
-        var7 = AceOfSkies.field_G ? 1 : 0;
+        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           for (var6_int = 0; this.field_v.length > var6_int; var6_int++) {
             if (this.field_t[var6_int] == param1) {
@@ -226,7 +226,7 @@ final class ek extends ab implements dn {
     }
 
     static {
-        field_u = new kc();
+        field_u = new Vector2();
         field_x = "Connection restored.";
     }
 }

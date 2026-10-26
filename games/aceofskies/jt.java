@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jt extends rf {
-    private ap field_k;
+final class jt extends PcmStream {
+    private MusicTrack field_k;
     private int field_l;
     private int field_q;
-    hk field_s;
-    private hk field_y;
-    hk field_p;
+    MidiPcmStream field_s;
+    private MidiPcmStream field_y;
+    MidiPcmStream field_p;
     private int[] field_o;
     private int field_u;
     private int[] field_i;
-    private ap field_r;
+    private MusicTrack field_r;
     static int field_x;
     private int field_j;
-    private ap field_v;
+    private MusicTrack field_v;
     static int field_t;
     private boolean field_m;
     private boolean field_w;
-    hk field_n;
+    MidiPcmStream field_n;
 
-    final rf a() {
+    final PcmStream a() {
         return null;
     }
 
     final synchronized void a(int param0) {
         int var3;
-        var3 = AceOfSkies.field_G ? 1 : 0;
+        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_l > 0 &&
           null != this.field_v) {
           this.field_n.a(param0);
@@ -84,21 +84,21 @@ final class jt extends rf {
         }
     }
 
-    private final void a(int param0, hk param1, int param2, int param3) {
+    private final void a(int param0, MidiPcmStream param1, int param2, int param3) {
         try {
           this.field_s = param1;
           param1.a((byte) -124, param2, -1);
           param1.a(param0, -107);
           if (param3 != 30121) {
-            hk var6 = (hk) null;
-            this.a((hk) null, 88, (hk) null);
+            MidiPcmStream var6 = (MidiPcmStream) null;
+            this.a((MidiPcmStream) null, 88, (MidiPcmStream) null);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "jt.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void a(hk param0, int param1, hk param2) {
+    private final void a(MidiPcmStream param0, int param1, MidiPcmStream param2) {
         try {
           if (param1 != 9649) {
             this.b();
@@ -133,7 +133,7 @@ final class jt extends rf {
         int var11 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
-        var11 = AceOfSkies.field_G ? 1 : 0;
+        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_q <= 0) {
             this.a(param2);
@@ -336,12 +336,12 @@ final class jt extends rf {
         return 2;
     }
 
-    final synchronized void a(byte param0, int param1, boolean param2, int param3, ap param4, int param5) {
+    final synchronized void a(byte param0, int param1, boolean param2, int param3, MusicTrack param4, int param5) {
         boolean stackIn_20_1 = false;
         int stackIn_33_0 = 0;
-        hk stackIn_42_0 = null;
+        MidiPcmStream stackIn_42_0 = null;
         boolean stackIn_43_1 = false;
-        hk stackIn_51_0 = null;
+        MidiPcmStream stackIn_51_0 = null;
         boolean stackIn_52_1 = false;
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
@@ -350,7 +350,7 @@ final class jt extends rf {
         int var7_int = 0;
         RuntimeException var7 = null;
         int var8 = 0;
-        var8 = AceOfSkies.field_G ? 1 : 0;
+        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_m &&
             param2) {
@@ -408,7 +408,7 @@ final class jt extends rf {
             if (param4 != null) {
               stackIn_51_0 = this.field_n;
               stackIn_52_1 = !(param2);
-              ((hk) (Object) stackIn_51_0).a(stackIn_52_1, -2029711608, param4);
+              ((MidiPcmStream) (Object) stackIn_51_0).a(stackIn_52_1, -2029711608, param4);
               this.a(param5, this.field_n, param3, 30121);
             }
             this.field_u = param1;
@@ -420,7 +420,7 @@ final class jt extends rf {
             if (param4 != null) {
               stackIn_42_0 = this.field_p;
               stackIn_43_1 = !(param2);
-              ((hk) (Object) stackIn_42_0).a(stackIn_43_1, -2029711608, param4);
+              ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_43_1, -2029711608, param4);
               this.a(param5, this.field_p, param3, 30121);
             }
             this.field_u = -param1;
@@ -447,11 +447,11 @@ final class jt extends rf {
         this.field_q = param1;
     }
 
-    final rf b() {
+    final PcmStream b() {
         return null;
     }
 
-    jt(hk param0, hk param1) {
+    jt(MidiPcmStream param0, MidiPcmStream param1) {
         this.field_q = 256;
         this.field_j = 0;
         this.field_w = false;
