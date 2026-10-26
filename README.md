@@ -327,6 +327,14 @@ The compiler SHA-256 identifies a **Git-generated tar archive of tracked
 decompiler source**, not a game JAR. Each compiler receipt includes its exact
 `git archive ... | sha256sum` reproduction command.
 
+Focused raw-class corrections are recorded under
+`publication.games.GAME.sourceRepairs.classes` in that same manifest. These
+receipts pin the original class, the replacement Java and its compiler-source
+archive, with whole-game compilation and any original-bytecode semantic probe.
+The catalog's base generator identity continues to describe the unchanged
+exports. Deko's `readable/refresh-raw-class.mjs --check` reproduces a correction
+from its pinned compiler source without retaining another source checkout.
+
 The latest raw catalog passed ASM verification and whole-game javac checks for
 all 44 games and 18,481 sources. Dispatcher-containing files fell from 470 to
 46. Deko Bloko has no dispatcher fallbacks. The named GeoBlox source retains

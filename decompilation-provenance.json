@@ -6728,7 +6728,7 @@
         },
         "sources": {
           "files": 348,
-          "sha256": "23257c3ae01c481534ab9bcddd463e6824acc0fd4b3c33c067fe1d2326bdd3c0"
+          "sha256": "1f5afba5613bbc84c14708f8ea3dce1262c88f1743fbaea857f7005de104585f"
         },
         "pipelineFingerprint": "c6bf1461d67f1feba0c27f958d57478b8f53f7ce3830ce91c9418e3662b8f871",
         "pipelineEnvironment": {
@@ -6761,6 +6761,54 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "sourceRepairs": {
+          "classes": {
+            "vc.java": {
+              "generator": {
+                "repository": "Kreijstal/java-tools",
+                "commit": "1162ba86b839d9dcd1028f3ee11b728f329fa2bb",
+                "execution": "committed-source-archive",
+                "sourceArchive": {
+                  "sha256": "a4282cf5d26b64507f5d6e233c4d13febb06b09d90eabf45cdbb5de43aed3406",
+                  "reproduce": "git archive --format=tar 1162ba86b839d9dcd1028f3ee11b728f329fa2bb | sha256sum",
+                  "format": "Git-generated tar archive of all tracked decompiler source; not a game JAR"
+                }
+              },
+              "input": {
+                "path": "vc.class",
+                "sha256": "2a3e6db8efdda09bfd524b9546bfd3c1107889fd65508110cccd3d2eee8fef76",
+                "gameJarSha256": "8daf42d4c7c434f6b52d49e25e2854b9970f41e51b8696856d9c6b5e9dd55e69"
+              },
+              "output": {
+                "path": "games/escapevector/vc.java",
+                "sha256": "d0f3434af70bdc25df5df8976b028a2b8834eb47a8e583ac8d96d096bda78b86"
+              },
+              "validation": {
+                "wholeGameJavac": "pass",
+                "sources": 348,
+                "originalBytecodeProbe": {
+                  "path": "apps/loading/escapevector-map-mask.mjs",
+                  "sha256": "3c14d528011383fe39fb0f1d0381fae6461b397558f49967e3668f6dc42bab47",
+                  "reference": "rows=16 bits=256 hash=-2084791551",
+                  "rebuilt": "rows=16 bits=256 hash=-2084791551"
+                }
+              },
+              "base": {
+                "commit": "20c017d029d0dfcc8bb9567237224435c1cff429",
+                "sourceSha256": "9a50aaa82d0b0b5aa560e121a6380910d915afbce1929782584d652ed367de0e",
+                "sources": {
+                  "files": 348,
+                  "sha256": "23257c3ae01c481534ab9bcddd463e6824acc0fd4b3c33c067fe1d2326bdd3c0"
+                }
+              },
+              "runner": {
+                "repository": "Kreijstal/dekobloko-work",
+                "commit": "89714d521dce9e328b84699b1f62108445d44731",
+                "script": "readable/refresh-raw-class.mjs"
+              }
+            }
+          }
         }
       },
       "fleacircus": {
