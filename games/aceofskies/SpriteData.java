@@ -22,76 +22,58 @@ final class SpriteData {
         PacketBuffer reader;
         int frameCount;
         SpriteData[] frames;
-        int allocationIndex;
         int fullHeight;
         int paletteSize;
-        int leftPaddingFrameIndex;
         int[] palette;
-        int paletteIndex;
         SpriteData frameForPadding;
         SpriteData frame;
         int pixelCount;
         int storageFlags;
-        int indexOnlyPixel;
-        int indexOnlyY;
         int rowAlphaValue;
         int columnAlphaValue;
         int fullWidth;
-        int topPaddingFrameIndex;
-        int widthFrameIndex;
-        int heightFrameIndex;
-        int paddingFrameIndex;
-        int paletteFrameIndex;
-        int frameIndex;
-        int indexOnlyX;
         int nonOpaqueAlphaMask;
-        int alphaFrameIndexPixel;
-        int alphaFrameIndexX;
-        int alphaFrameIndexY;
-        int rowAlphaPixel;
-        int columnAlphaX;
-        int columnAlphaY;
         reader = new PacketBuffer(encodedFrames);
         reader.position = encodedFrames.length - 2;
         frameCount = reader.readUnsignedShort((byte) 0);
         frames = new SpriteData[frameCount];
-        for (allocationIndex = 0; allocationIndex < frameCount; allocationIndex++) {
+        for (int allocationIndex = 0; allocationIndex < frameCount; allocationIndex++) {
           frames[allocationIndex] = new SpriteData();
         }
         reader.position = encodedFrames.length - 7 - frameCount * 8;
         fullWidth = reader.readUnsignedShort((byte) 0);
         fullHeight = reader.readUnsignedShort((byte) 0);
         paletteSize = (reader.readUnsignedByte(-52) & 255) + 1;
-        for (leftPaddingFrameIndex = 0; leftPaddingFrameIndex < frameCount; leftPaddingFrameIndex++) {
+        for (int leftPaddingFrameIndex = 0; leftPaddingFrameIndex < frameCount; leftPaddingFrameIndex++) {
           frames[leftPaddingFrameIndex].padLeft = reader.readUnsignedShort((byte) 0);
         }
-        for (topPaddingFrameIndex = 0; topPaddingFrameIndex < frameCount; topPaddingFrameIndex++) {
+        for (int topPaddingFrameIndex = 0; topPaddingFrameIndex < frameCount; topPaddingFrameIndex++) {
           frames[topPaddingFrameIndex].padTop = reader.readUnsignedShort((byte) 0);
         }
-        for (widthFrameIndex = 0; widthFrameIndex < frameCount; widthFrameIndex++) {
+        for (int widthFrameIndex = 0; widthFrameIndex < frameCount; widthFrameIndex++) {
           frames[widthFrameIndex].width = reader.readUnsignedShort((byte) 0);
         }
-        for (heightFrameIndex = 0; heightFrameIndex < frameCount; heightFrameIndex++) {
+        for (int heightFrameIndex = 0; heightFrameIndex < frameCount; heightFrameIndex++) {
           frames[heightFrameIndex].height = reader.readUnsignedShort((byte) 0);
         }
-        for (paddingFrameIndex = 0; paddingFrameIndex < frameCount; paddingFrameIndex++) {
+        for (int paddingFrameIndex = 0; paddingFrameIndex < frameCount; paddingFrameIndex++) {
           frameForPadding = frames[paddingFrameIndex];
           frameForPadding.padRight = fullWidth - frameForPadding.width - frameForPadding.padLeft;
           frameForPadding.padBottom = fullHeight - frameForPadding.height - frameForPadding.padTop;
         }
         reader.position = encodedFrames.length - 7 - frameCount * 8 - (paletteSize - 1) * 3;
         palette = new int[paletteSize];
-        for (paletteIndex = 1; paletteIndex < paletteSize; paletteIndex++) {
+        for (int paletteIndex = 1; paletteIndex < paletteSize; paletteIndex++) {
           palette[paletteIndex] = reader.readUnsignedMedium((byte) -84);
           if (palette[paletteIndex] == 0) {
             palette[paletteIndex] = 1;
           }
         }
-        for (paletteFrameIndex = 0; paletteFrameIndex < frameCount; paletteFrameIndex++) {
+        for (int paletteFrameIndex = 0; paletteFrameIndex < frameCount; paletteFrameIndex++) {
           frames[paletteFrameIndex].palette = palette;
         }
         reader.position = 0;
-        for (frameIndex = 0; frameIndex < frameCount; frameIndex++) {
+        for (int frameIndex = 0; frameIndex < frameCount; frameIndex++) {
           frame = frames[frameIndex];
           pixelCount = frame.width * frame.height;
           frame.indices = new byte[pixelCount];
@@ -100,10 +82,10 @@ final class SpriteData {
             nonOpaqueAlphaMask = 0;
             frame.alpha = new byte[pixelCount];
             if ((storageFlags & 1) == 0) {
-              for (alphaFrameIndexPixel = 0; alphaFrameIndexPixel < pixelCount; alphaFrameIndexPixel++) {
+              for (int alphaFrameIndexPixel = 0; alphaFrameIndexPixel < pixelCount; alphaFrameIndexPixel++) {
                 frame.indices[alphaFrameIndexPixel] = reader.readByte(0);
               }
-              for (rowAlphaPixel = 0; rowAlphaPixel < pixelCount; rowAlphaPixel++) {
+              for (int rowAlphaPixel = 0; rowAlphaPixel < pixelCount; rowAlphaPixel++) {
                 rowAlphaByte = reader.readByte(0);
                 frame.alpha[rowAlphaPixel] = rowAlphaByte;
                 rowAlphaValue = rowAlphaByte;
@@ -112,13 +94,13 @@ final class SpriteData {
                 nonOpaqueAlphaMask = previousRowAlphaMask | rowNonOpaqueBit;
               }
             } else {
-              for (alphaFrameIndexX = 0; alphaFrameIndexX < frame.width; alphaFrameIndexX++) {
-                for (alphaFrameIndexY = 0; alphaFrameIndexY < frame.height; alphaFrameIndexY++) {
+              for (int alphaFrameIndexX = 0; alphaFrameIndexX < frame.width; alphaFrameIndexX++) {
+                for (int alphaFrameIndexY = 0; alphaFrameIndexY < frame.height; alphaFrameIndexY++) {
                   frame.indices[alphaFrameIndexX + alphaFrameIndexY * frame.width] = reader.readByte(0);
                 }
               }
-              for (columnAlphaX = 0; columnAlphaX < frame.width; columnAlphaX++) {
-                for (columnAlphaY = 0; columnAlphaY < frame.height; columnAlphaY++) {
+              for (int columnAlphaX = 0; columnAlphaX < frame.width; columnAlphaX++) {
+                for (int columnAlphaY = 0; columnAlphaY < frame.height; columnAlphaY++) {
                   columnAlphaByte = reader.readByte(0);
                   frame.alpha[columnAlphaX + columnAlphaY * frame.width] = columnAlphaByte;
                   columnAlphaValue = columnAlphaByte;
@@ -132,12 +114,12 @@ final class SpriteData {
               frame.alpha = null;
             }
           } else if ((storageFlags & 1) == 0) {
-            for (indexOnlyPixel = 0; indexOnlyPixel < pixelCount; indexOnlyPixel++) {
+            for (int indexOnlyPixel = 0; indexOnlyPixel < pixelCount; indexOnlyPixel++) {
               frame.indices[indexOnlyPixel] = reader.readByte(0);
             }
           } else {
-            for (indexOnlyX = 0; indexOnlyX < frame.width; indexOnlyX++) {
-              for (indexOnlyY = 0; indexOnlyY < frame.height; indexOnlyY++) {
+            for (int indexOnlyX = 0; indexOnlyX < frame.width; indexOnlyX++) {
+              for (int indexOnlyY = 0; indexOnlyY < frame.height; indexOnlyY++) {
                 frame.indices[indexOnlyX + indexOnlyY * frame.width] = reader.readByte(0);
               }
             }
