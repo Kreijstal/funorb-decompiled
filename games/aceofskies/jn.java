@@ -13,13 +13,12 @@ final class jn extends ab implements dn {
 
     jn(oo param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (ir) null);
-        int var4_int = 0;
         this.field_v = 0;
         try {
           this.field_x = param0;
           this.field_z = param2;
           this.field_w = param1;
-          var4_int = null != this.field_z ? this.field_w.measureWrappedHeight(this.field_z, 260, this.field_w.maxAscent) : 0;
+          int var4_int = null != this.field_z ? this.field_w.measureWrappedHeight(this.field_z, 260, this.field_w.maxAscent) : 0;
           this.a(22 + var4_int, 0, 0, 288, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -35,41 +34,32 @@ final class jn extends ab implements dn {
     }
 
     final mi a(no param0, int param1, String param2) {
-        mi var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        String var6 = null;
-        mi stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new mi(param2, param0);
+          mi var4 = new mi(param2, param0);
           var4.field_e = (ir) ((Object) new qb());
           if (param1 != 17547) {
-            var6 = (String) null;
+            String var6 = (String) null;
             this.a((no) null, 91, (String) null);
           }
-          var5 = -2 + this.field_n;
+          int var5 = -2 + this.field_n;
           this.a(34 + this.field_n, 0, 0, this.field_q, (byte) 123);
           var4.a(30, 7, var5, -14 + this.field_q, (byte) 123);
           this.a(var4, param1 - 17546);
-          stackIn_3_0 = var4;
+          mi stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_6_0 = var4_ref;
-          stackIn_6_1 = new StringBuilder().append("jn.CA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var4_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("jn.CA(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -80,14 +70,11 @@ final class jn extends ab implements dn {
     }
 
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
-        int var7 = 0;
-        int var6_int = 0;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-        int var6_intLifetime1;
         try {
-          for (var6_int = 0; var6_int < this.field_v; var6_int++) {
+          for (int var6_int = 0; var6_int < this.field_v; var6_int++) {
             if (this.field_y[var6_int] == param1) {
-              var7 = this.field_A[var6_int];
+              int var7 = this.field_A[var6_int];
               if (var7 == -1) {
                 this.field_x.h((byte) -67);
                 break;
@@ -96,7 +83,7 @@ final class jn extends ab implements dn {
               break;
             }
           }
-          var6_intLifetime1 = 101 % ((param4 + 27) / 61);
+          int var6_intLifetime1 = 101 % ((param4 + 27) / 61);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "jn.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -121,7 +108,6 @@ final class jn extends ab implements dn {
     }
 
     private final void a(int param0, int param1) {
-        int var5 = 0;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_v >= param1) {
           return;
@@ -129,7 +115,7 @@ final class jn extends ab implements dn {
         mi[] var7 = new mi[param1];
         mi[] var3 = var7;
         int[] var4 = new int[param1];
-        for (var5 = 0; var5 < this.field_v; var5++) {
+        for (int var5 = 0; var5 < this.field_v; var5++) {
           var7[var5] = this.field_y[var5];
           var4[var5] = this.field_A[var5];
         }
@@ -143,40 +129,32 @@ final class jn extends ab implements dn {
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
-          String var2 = null;
-          int var3 = 0;
-          String var4 = null;
-          java.net.URL var5 = null;
-          RuntimeException stackIn_11_0 = null;
-          StringBuilder stackIn_11_1 = null;
           String stackIn_12_2 = null;
           Throwable decompiledCaughtException = null;
-          Exception var2_ref = null;
-          RuntimeException var2_ref2 = null;
           try {
             try {
               if (param0 < 118) {
                 field_t = true;
               }
-              var2 = param1.getDocumentBase().getFile();
-              var3 = var2.indexOf('?');
-              var4 = "reload.ws";
+              String var2 = param1.getDocumentBase().getFile();
+              int var3 = var2.indexOf('?');
+              String var4 = "reload.ws";
               if (var3 >= 0) {
                 var4 = var4 + var2.substring(var3);
               }
-              var5 = new java.net.URL(param1.getCodeBase(), var4);
+              java.net.URL var5 = new java.net.URL(param1.getCodeBase(), var4);
               param1.getAppletContext().showDocument(jf.a(param1, var5, 56), "_self");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
+              Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref.printStackTrace();
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_11_0 = var2_ref2;
-            stackIn_11_1 = new StringBuilder().append("jn.EA(").append(param0).append(',');
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_11_0 = var2_ref2;
+            StringBuilder stackIn_11_1 = new StringBuilder().append("jn.EA(").append(param0).append(',');
             if (param1 == null) {
               stackIn_12_2 = "null";
             } else {
@@ -200,9 +178,8 @@ final class jn extends ab implements dn {
     }
 
     final void a(int param0, byte param1, String param2) {
-        int var4_int = 0;
         try {
-          var4_int = this.field_v;
+          int var4_int = this.field_v;
           this.a(1, 1 + var4_int);
           this.field_y[var4_int] = this.a((no) (this), 17547, param2);
           this.field_A[var4_int] = param0;

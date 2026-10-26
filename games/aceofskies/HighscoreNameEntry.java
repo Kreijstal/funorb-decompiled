@@ -26,51 +26,41 @@ final class HighscoreNameEntry {
     }
 
     final static MonochromeBitmapFont a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        MonochromeBitmapFont stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != 24) {
             HighscoreNameEntry.a(-112);
           }
-          var5_int = param0.b(param2, 0);
-          var6 = param0.a(-79, var5_int, param1);
-          stackIn_3_0 = eo.a(param0, var6, -112, var5_int, param3);
+          int var5_int = param0.b(param2, 0);
+          int var6 = param0.a(-79, var5_int, param1);
+          MonochromeBitmapFont stackIn_3_0 = eo.a(param0, var6, -112, var5_int, param3);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("gl.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var5;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("gl.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -81,31 +71,24 @@ final class HighscoreNameEntry {
     }
 
     final static MonochromeBitmapFont a(byte[] param0, int param1) {
-        MonochromeBitmapFont var2 = null;
-        RuntimeException var2_ref = null;
-        Object stackIn_2_0 = null;
-        MonochromeBitmapFont stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            stackIn_2_0 = null;
+            Object stackIn_2_0 = null;
             return (MonochromeBitmapFont) (stackIn_2_0);
           }
-          var2 = new MonochromeBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
+          MonochromeBitmapFont var2 = new MonochromeBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
           kf.f(1);
           if (param1 != 544) {
             field_a = false;
           }
-          stackIn_6_0 = var2;
+          MonochromeBitmapFont stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_9_0 = var2_ref;
-          stackIn_9_1 = new StringBuilder().append("gl.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var2_ref;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("gl.E(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -116,18 +99,13 @@ final class HighscoreNameEntry {
     }
 
     final static Sprite[] a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        byte[] var4 = null;
-        int[] var5 = null;
-        int var6 = 0;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         Sprite[] var1 = new Sprite[to.field_t];
-        for (var2 = param0; var2 < to.field_t; var2++) {
-          var3 = ee.field_e[var2] * ji.field_b[var2];
-          var4 = fk.field_a[var2];
-          var5 = new int[var3];
-          for (var6 = 0; var3 > var6; var6++) {
+        for (int var2 = param0; var2 < to.field_t; var2++) {
+          int var3 = ee.field_e[var2] * ji.field_b[var2];
+          byte[] var4 = fk.field_a[var2];
+          int[] var5 = new int[var3];
+          for (int var6 = 0; var3 > var6; var6++) {
             var5[var6] = ud.field_e[pg.a(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(pu.field_a, cc.field_i, lh.field_a[var2], lg.field_j[var2], ji.field_b[var2], ee.field_e[var2], var5);

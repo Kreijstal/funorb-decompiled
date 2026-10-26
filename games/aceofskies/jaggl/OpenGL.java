@@ -100,28 +100,23 @@ public class OpenGL {
     public final native static void glTexCoord2f(float param0, float param1);
 
     public final boolean a(String param0) {
-        String var2;
-        int var3;
-        int var4_int;
-        String var5;
-        String var4;
         if (null != this.c) {
           return this.c.containsKey(param0);
         }
         this.c = new Hashtable();
-        var2 = jaggl.OpenGL.glGetString(7939);
-        var3 = 0;
+        String var2 = jaggl.OpenGL.glGetString(7939);
+        int var3 = 0;
         while (true) {
-          var4_int = var2.indexOf(' ', var3);
+          int var4_int = var2.indexOf(' ', var3);
           if (var4_int == -1) {
-            var4 = var2.substring(var3).trim();
+            String var4 = var2.substring(var3).trim();
             if (var4.length() == 0) {
               return this.c.containsKey(param0);
             }
             this.c.put(var4, var4);
             return this.c.containsKey(param0);
           }
-          var5 = var2.substring(var3, var4_int).trim();
+          String var5 = var2.substring(var3, var4_int).trim();
           var3 = 1 + var4_int;
           if (var5.length() == 0) {
             continue;
@@ -365,10 +360,9 @@ public class OpenGL {
     public final native static String glGetString(int param0);
 
     public final synchronized boolean b() {
-        jaggl.OpenGL var3 = null;
         Thread var1 = Thread.currentThread();
         if (this.attachPeer()) {
-          var3 = (jaggl.OpenGL) (b.put(var1, this));
+          jaggl.OpenGL var3 = (jaggl.OpenGL) (b.put(var1, this));
           if (var3 != null) {
             var3.a = null;
           }

@@ -49,10 +49,7 @@ final class mb extends he {
     }
 
     final static void c(byte param0) {
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!bo.a((byte) 102)) {
             if (null != jf.field_a &&
@@ -72,8 +69,8 @@ final class mb extends he {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "mb.F(" + param0 + ')');
         }
     }

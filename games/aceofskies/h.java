@@ -8,13 +8,12 @@ final class h extends RendererBitmapFont implements e {
 
     h(oa param0, ya param1, BitmapFontMetrics param2, SpriteData[] param3, RenderSprite[] param4) {
         super(param0, param2);
-        int var11 = 0;
         byte[][] var6 = new byte[param3.length][];
         int[] var7 = new int[param3.length];
         int[] var8 = new int[param3.length];
         int[] var9 = new int[param3.length];
         int[] var10 = new int[param3.length];
-        for (var11 = 0; var11 < param3.length; var11++) {
+        for (int var11 = 0; var11 < param3.length; var11++) {
           var6[var11] = param3[var11].indices;
           var7[var11] = param3[var11].width;
           var8[var11] = param3[var11].height;

@@ -25,20 +25,7 @@ final class qe {
     }
 
     qe(wl param0) {
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        sr var4 = null;
-        cs var10 = null;
-        byte[] var20 = null;
-        byte[] var21 = null;
-        byte[] var22 = null;
-        byte[] var23 = null;
-        byte[] var24 = null;
-        int var2_intLifetime1;
         this.field_c = null;
         this.field_b = null;
         this.field_j = null;
@@ -49,26 +36,26 @@ final class qe {
           nb.a(8, param0);
           if (!this.field_d) {
             this.field_h = new nr[16];
-            for (var2_int = 0; 16 > var2_int; var2_int++) {
-              var23 = cs.a(false, var2_int * 32768, 32768, wl.field_Kb);
+            for (int var2_int = 0; 16 > var2_int; var2_int++) {
+              byte[] var23 = cs.a(false, var2_int * 32768, 32768, wl.field_Kb);
               this.field_h[var2_int] = new nr(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
             this.field_c = new nr[16];
-            for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
-              var24 = cs.a(false, var2_intLifetime1 * 32768, 32768, mq.field_e);
+            for (int var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
+              byte[] var24 = cs.a(false, var2_intLifetime1 * 32768, 32768, mq.field_e);
               this.field_c[var2_intLifetime1] = new nr(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
-          var20 = PacketBuffer.a(false, wl.field_Kb, 50);
+          byte[] var20 = PacketBuffer.a(false, wl.field_Kb, 50);
           this.field_j = new sr(param0, 6410, 128, 128, 16, var20, 6410);
-          var21 = PacketBuffer.a(false, mq.field_e, -77);
+          byte[] var21 = PacketBuffer.a(false, mq.field_e, -77);
           this.field_g = new sr(param0, 6410, 128, 128, 16, var21, 6410);
-          var10 = param0.field_cc;
+          cs var10 = param0.field_cc;
           if (var10.b(true)) {
-            var22 = PacketBuffer.a(false, ho.field_a, -88);
+            byte[] var22 = PacketBuffer.a(false, ho.field_a, -88);
             this.field_b = new sr(param0, 6408, 128, 128, 16);
-            var4 = new sr(param0, 6409, 128, 128, 16, var22, 6409);
+            sr var4 = new sr(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a((byte) 97, this.field_b, var4, 2.0f)) {
               this.field_b.a(false);
             } else {
@@ -79,10 +66,10 @@ final class qe {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_17_0 = var2;
-          stackIn_17_1 = new StringBuilder().append("qe.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var2;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("qe.<init>(");
           if (param0 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -93,13 +80,12 @@ final class qe {
     }
 
     static {
-        int var2 = 0;
         field_f = new int[]{1, 2, 5, 2, 2, 10, 3, 10, 10};
         field_e = new ej(6, 0, 4, 2);
         field_a = new float[16384];
         field_i = new float[16384];
         double var0 = 0.0003834951969714103;
-        for (var2 = 0; var2 < 16384; var2++) {
+        for (int var2 = 0; var2 < 16384; var2++) {
           field_i[var2] = (float)Math.sin(var0 * (double)var2);
           field_a[var2] = (float)Math.cos(var0 * (double)var2);
         }

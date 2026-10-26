@@ -8,23 +8,18 @@ final class np extends hh {
     static float[] field_d;
 
     final static int a(CharSequence param0, int param1, int param2) {
-        RuntimeException var3 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 4) {
             np.b(49);
           }
-          stackIn_3_0 = ro.a(param2, true, -127, param0);
+          int stackIn_3_0 = ro.a(param2, true, -127, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("np.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("np.C(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -69,25 +64,18 @@ final class np extends hh {
     }
 
     final static int a(nf param0, boolean param1) {
-        RuntimeException var2 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_8_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == ij.field_g) {
-            stackIn_2_0 = 9216;
+            int stackIn_2_0 = 9216;
             return stackIn_2_0;
           }
           if (rg.field_A == param0) {
-            stackIn_5_0 = 34065;
+            int stackIn_5_0 = 34065;
             return stackIn_5_0;
           }
           if (param0 == ResourceArchive.field_g) {
-            stackIn_8_0 = 34066;
+            int stackIn_8_0 = 34066;
             return stackIn_8_0;
           }
           if (param1) {
@@ -95,10 +83,10 @@ final class np extends hh {
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_14_0 = var2;
-          stackIn_14_1 = new StringBuilder().append("np.I(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var2;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("np.I(");
           if (param0 == null) {
             stackIn_15_2 = "null";
           } else {

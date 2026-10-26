@@ -8,15 +8,10 @@ final class pg {
     static String field_b;
 
     final static void a(java.awt.Canvas param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           wl.a((java.awt.Component) ((Object) param0), (byte) -3);
-          var2_int = 59 / ((9 - param1) / 59);
+          int var2_int = 59 / ((9 - param1) / 59);
           g.a((java.awt.Component) ((Object) param0), 0);
           if (null == SteeringMode.field_c) {
             return;
@@ -24,10 +19,10 @@ final class pg {
           SteeringMode.field_c.a((java.awt.Component) ((Object) param0), false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_5_0 = var2;
-          stackIn_5_1 = new StringBuilder().append("pg.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var2;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("pg.C(");
           if (param0 == null) {
             stackIn_6_2 = "null";
           } else {

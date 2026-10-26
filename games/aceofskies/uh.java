@@ -31,31 +31,25 @@ final class uh {
     }
 
     final static boolean a(int param0, Vector2 param1, double param2, Vector2 param3) {
-        RuntimeException var5 = null;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 59) {
             upgradeSounds = (PcmSample[]) null;
           }
-          stackIn_5_0 = !(!(param2 * param2 > lc.a(param3, false, param1)));
+          boolean stackIn_5_0 = !(!(param2 * param2 > lc.a(param3, false, param1)));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("uh.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var5;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("uh.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',');
+          StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_12_2 = "null";
           } else {

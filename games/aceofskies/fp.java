@@ -10,20 +10,14 @@ final class fp extends IntrusiveNode {
 
     final static boolean a(byte param0, boolean param1) {
         try {
-          long dupTemp$1 = 0L;
-          int var2 = 0;
-          IOException var3 = null;
-          CipherPacketBuffer var4 = null;
-          int stackIn_11_0 = 0;
-          Throwable decompiledCaughtException = null;
           if (null == MenuInputState.field_b) {
             MenuInputState.field_b = ii.field_j.a(2, ca.field_g, sg.field_b);
           }
           if (MenuInputState.field_b.field_a == 0) {
             return false;
           }
-          var2 = 72 / ((-10 - param0) / 56);
-          dupTemp$1 = kh.a(-114);
+          int var2 = 72 / ((-10 - param0) / 56);
+          long dupTemp$1 = kh.a(-114);
           co.field_e = dupTemp$1;
           ff.field_b = dupTemp$1;
           if (MenuInputState.field_b.field_a != 1) {
@@ -31,10 +25,10 @@ final class fp extends IntrusiveNode {
           } else {
             try {
               ft.field_l = new vf((java.net.Socket) (MenuInputState.field_b.field_f), ii.field_j);
-              var4 = IntKeyLookup.incomingPacket;
+              CipherPacketBuffer var4 = IntKeyLookup.incomingPacket;
               q.outgoingPacket.position = 0;
               var4.position = 0;
-              stackIn_11_0 = (!param1) ? -1 : -2;
+              int stackIn_11_0 = (!param1) ? -1 : -2;
               ScoreSubmission.field_l = stackIn_11_0;
               kg.field_b = stackIn_11_0;
               hi.field_w = stackIn_11_0;
@@ -42,8 +36,8 @@ final class fp extends IntrusiveNode {
               tr.a(q.outgoingPacket, ut.field_a, id.field_d, ko.field_f, 0);
               fr.a(-34, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var3 = (IOException) (Object) decompiledCaughtException;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              IOException var3 = (IOException) (Object) decompiledCaughtException;
               ca.field_f = pj.field_f;
               MenuInputState.field_b = null;
               return true;

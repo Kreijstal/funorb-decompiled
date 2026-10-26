@@ -9,47 +9,30 @@ final class oj extends sk {
 
     oj(bf param0) {
         super(param0);
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        boolean stackIn_5_1 = false;
-        int stackIn_8_0 = 0;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
         float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        int[][] var27 = null;
-        int[][] var28 = null;
-        int[][] var29 = null;
         this.field_f = false;
         try {
           if (param0.field_Pb) {
-            stackIn_5_1 = !(3 <= param0.field_h);
+            boolean stackIn_5_1 = !(3 <= param0.field_h);
             this.field_i = stackIn_5_1;
-            stackIn_8_0 = (!this.field_i) ? 127 : 48;
-            var2_int = stackIn_8_0;
-            var29 = new int[6][4096];
-            var27 = new int[6][4096];
-            var28 = new int[6][4096];
-            var9 = 0;
-            for (var14 = 0; var14 < 64; var14++) {
-              for (var15 = 0; var15 < 64; var15++) {
-                var11 = 2.0f * (float)var15 / 64.0f - 1.0f;
-                var12 = -1.0f + (float)var14 * 2.0f / 64.0f;
-                var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + 1.0f))));
+            int stackIn_8_0 = (!this.field_i) ? 127 : 48;
+            int var2_int = stackIn_8_0;
+            int[][] var29 = new int[6][4096];
+            int[][] var27 = new int[6][4096];
+            int[][] var28 = new int[6][4096];
+            int var9 = 0;
+            for (int var14 = 0; var14 < 64; var14++) {
+              for (int var15 = 0; var15 < 64; var15++) {
+                float var11 = 2.0f * (float)var15 / 64.0f - 1.0f;
+                float var12 = -1.0f + (float)var14 * 2.0f / 64.0f;
+                float var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + 1.0f))));
                 var11 = var11 * var13;
                 var12 = var12 * var13;
-                for (var16 = 0; var16 < 6; var16++) {
+                for (int var16 = 0; var16 < 6; var16++) {
                   if (var16 != 0) {
                     if (var16 != 1) {
                       if (var16 != 2) {
@@ -95,10 +78,10 @@ final class oj extends sk {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_35_0 = var2;
-          stackIn_35_1 = new StringBuilder().append("oj.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_35_0 = var2;
+          StringBuilder stackIn_35_1 = new StringBuilder().append("oj.<init>(");
           if (param0 == null) {
             stackIn_36_2 = "null";
           } else {
@@ -109,12 +92,9 @@ final class oj extends sk {
     }
 
     final void a(boolean param0, byte param1) {
-        int var4;
-        jj var5;
-        ec var6;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 <= 2) {
-          var5 = (jj) null;
+          jj var5 = (jj) null;
           this.a(-6, -33, (jj) null);
         }
         if (null == this.field_h) {
@@ -125,7 +105,7 @@ final class oj extends sk {
           } else {
             this.field_b.a(1, (byte) 78);
             this.field_b.a(rg.field_A, false);
-            var6 = this.field_b.d(12343);
+            ec var6 = this.field_b.d(12343);
             var6.a(1024, 1);
             this.field_b.a(qn.field_a, (byte) -127);
             if (this.field_i) {
@@ -149,10 +129,8 @@ final class oj extends sk {
     }
 
     final static boolean a(char param0, byte param1) {
-        int var2;
-        boolean stackIn_4_0 = false;
-        var2 = 72 / ((param1 + 82) / 34);
-        stackIn_4_0 = (param0 >= 48) && (param0 <= 57);
+        int var2 = 72 / ((param1 + 82) / 34);
+        boolean stackIn_4_0 = (param0 >= 48) && (param0 <= 57);
         return stackIn_4_0;
     }
 
@@ -169,20 +147,10 @@ final class oj extends sk {
     }
 
     final static int f(int param0) {
-        int stackIn_9_0 = 0;
-        int stackIn_29_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        long var4 = 0L;
-        int var6 = 0;
-        int var7 = 0;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var1_int = 0;
-          var2 = 0;
+          int var1_int = 0;
+          int var2 = 0;
           while (ek.a((byte) -127)) {
             pr.field_b.handleVerticalKey(true);
             if (pr.field_b.isActivated((byte) 115)) {
@@ -194,14 +162,14 @@ final class oj extends sk {
             var2 = 1;
           }
           if (param0 != 5) {
-            stackIn_9_0 = 65;
+            int stackIn_9_0 = 65;
             return stackIn_9_0;
           }
           pr.field_b.updatePointer(rc.b((byte) -113, ln.field_c, lq.field_a), rc.b((byte) -105, ic.field_b, cf.field_g), -24702);
           if (pr.field_b.isActivated((byte) 83)) {
             var1_int = 1;
           }
-          var3 = 0;
+          int var3 = 0;
           if (var1_int != 0 &&
             pr.field_b.selectedIndex >= 0) {
             var3 = rm.field_g[pr.field_b.selectedIndex];
@@ -217,18 +185,18 @@ final class oj extends sk {
           }
           if (var3 == 0 &&
             ol.field_c == 2) {
-            var4 = kh.a(param0 ^ -64) - PacketBuffer.field_e;
-            var6 = (int)((-var4 + 10999L) / 1000L);
+            long var4 = kh.a(param0 ^ -64) - PacketBuffer.field_e;
+            int var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
               MenuScreen.a((byte) -119, 5, true);
               var3 = 2;
             }
           }
-          stackIn_29_0 = var3;
+          int stackIn_29_0 = var3;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "oj.B(" + param0 + ')');
         }
     }
@@ -241,22 +209,12 @@ final class oj extends sk {
     }
 
     final static void a(String param0, java.awt.Color param1, int param2, int param3, boolean param4) {
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
         Throwable decompiledCaughtException = null;
-        Exception var5 = null;
-        RuntimeException var5_ref = null;
-        Exception var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        java.awt.Graphics var9 = null;
-        java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = ci.field_f.getGraphics();
+            java.awt.Graphics var9 = ci.field_f.getGraphics();
             if (null == aq.field_b) {
               aq.field_b = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -274,7 +232,7 @@ final class oj extends sk {
               if (null == qn.field_d) {
                 qn.field_d = ci.field_f.createImage(304, 34);
               }
-              var10 = qn.field_d.getGraphics();
+              java.awt.Graphics var10 = qn.field_d.getGraphics();
               var10.setColor(param1);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param3, 30);
@@ -287,9 +245,9 @@ final class oj extends sk {
               var9.drawImage(qn.field_d, td.field_b / 2 - 152, -18 + ArchiveIndex.field_h / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = td.field_b / 2 - 152;
-              var8 = ArchiveIndex.field_h / 2 - 18;
+              Exception var6 = (Exception) (Object) decompiledCaughtException;
+              int var7 = td.field_b / 2 - 152;
+              int var8 = ArchiveIndex.field_h / 2 - 18;
               var9.setColor(param1);
               var9.drawRect(var7, var8, 303, 33);
               var9.fillRect(var7 + 2, 2 + var8, param3 * 3, 30);
@@ -307,21 +265,21 @@ final class oj extends sk {
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var5 = (Exception) (Object) decompiledCaughtException;
+            Exception var5 = (Exception) (Object) decompiledCaughtException;
             ci.field_f.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_24_0 = var5_ref;
-          stackIn_24_1 = new StringBuilder().append("oj.C(");
+          RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var5_ref;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("oj.C(");
           if (param0 == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
+          StringBuilder stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
           if (param1 == null) {
             stackIn_28_2 = "null";
           } else {
@@ -372,31 +330,23 @@ final class oj extends sk {
     }
 
     final static void a(int param0, java.applet.Applet param1) {
-        String var2 = null;
-        String var3 = null;
-        long var4 = 0L;
-        java.awt.Color var6 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
         try {
           jr.field_u = true;
-          var2 = "tuhstatbut";
-          var3 = "rvnadlm";
-          var4 = -1L;
+          String var2 = "tuhstatbut";
+          String var3 = "rvnadlm";
+          long var4 = -1L;
           jt.a(var2, var3, var4, param1, 0);
           if (param0 != 26099) {
-            var6 = (java.awt.Color) null;
+            java.awt.Color var6 = (java.awt.Color) null;
             oj.a((String) null, (java.awt.Color) null, -128, 49, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_5_0 = var2_ref;
-          stackIn_5_1 = new StringBuilder().append("oj.E(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var2_ref;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("oj.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_6_2 = "null";
           } else {

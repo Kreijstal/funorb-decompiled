@@ -7,23 +7,18 @@ final class od extends lg {
     static String field_v;
 
     final static id a(String param0, int param1) {
-        RuntimeException var2 = null;
-        id stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 < 55) {
             od.d((byte) 64);
           }
-          stackIn_3_0 = new id(param0);
+          id stackIn_3_0 = new id(param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("od.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("od.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -34,7 +29,6 @@ final class od extends lg {
     }
 
     final static void a(int param0, byte param1, uk param2) {
-        int var4 = 0;
         CipherPacketBuffer var5 = q.outgoingPacket;
         var5.writeCipheredOpcode(71, param0);
         var5.position = var5.position + 1;
@@ -42,7 +36,7 @@ final class od extends lg {
           return;
         }
         try {
-          var4 = var5.position;
+          int var4 = var5.position;
           var5.writeByte(-1336879960, 1);
           var5.writeByte(-1336879960, param2.field_i);
           var5.b(true, param2.field_m);
@@ -58,20 +52,17 @@ final class od extends lg {
     }
 
     final void b(int param0, int param1, byte param2) {
-        int incrementValue$0 = 0;
-        int var5 = 0;
         int var4 = 2 * param0;
-        int var5Lifetime1;
         if (param1 == -1) {
-          var5 = param2 & 255;
-          incrementValue$0 = var4;
+          int var5 = param2 & 255;
+          int incrementValue$0 = var4;
           var4++;
           this.field_w[incrementValue$0] = (byte)(var5 * 3 >> 5);
           this.field_w[var4] = (byte)(3 * var5 >> 5);
           return;
         }
         field_v = (String) null;
-        var5Lifetime1 = param2 & 255;
+        int var5Lifetime1 = param2 & 255;
         int incrementValue$1 = var4;
         var4++;
         this.field_w[incrementValue$1] = (byte)(var5Lifetime1 * 3 >> 5);
@@ -92,25 +83,19 @@ final class od extends lg {
     }
 
     final static String a(CharSequence[] param0, int param1) {
-        RuntimeException var2 = null;
-        String stackIn_2_0 = null;
-        String stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 3) {
-            stackIn_4_0 = gq.a(param0.length, param0, 21530, 0);
+            String stackIn_4_0 = gq.a(param0.length, param0, 21530, 0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (String) null;
+          String stackIn_2_0 = (String) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("od.O(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("od.O(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {

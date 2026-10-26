@@ -33,23 +33,18 @@ final class bo {
     }
 
     final static SoundPlayback a(PcmSample[] param0, int param1, int param2) {
-        RuntimeException var3 = null;
-        SoundPlayback stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 23187) {
             field_g = (String) null;
           }
-          stackIn_3_0 = gg.a(param0[qq.a(20, param0.length)], param1, -27227);
+          SoundPlayback stackIn_3_0 = gg.a(param0[qq.a(20, param0.length)], param1, -27227);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("bo.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("bo.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -62,14 +57,6 @@ final class bo {
     final void a(boolean param0) {
         fo var3 = null;
         fo var2 = null;
-        fo var3Lifetime1;
-        fo var3Lifetime2;
-        fo var2Lifetime1;
-        fo var2Lifetime2;
-        fo var3Lifetime3;
-        fo var3Lifetime4;
-        fo var2Lifetime3;
-        fo var2Lifetime4;
         if (this.field_b.field_b != this.field_d) {
           this.field_c.a();
           if (null != this.field_b.field_b) {
@@ -100,8 +87,8 @@ final class bo {
           if (!param0) {
             bo.a(65);
             this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-            var3Lifetime3 = this.field_b;
-            var2Lifetime3 = var3Lifetime3;
+            fo var3Lifetime3 = this.field_b;
+            fo var2Lifetime3 = var3Lifetime3;
             this.field_b = this.field_b.field_c;
             var3Lifetime3.field_c = this.field_f;
             var3Lifetime3.field_b = null;
@@ -109,8 +96,8 @@ final class bo {
             return;
           }
           this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-          var3Lifetime4 = this.field_b;
-          var2Lifetime4 = var3Lifetime4;
+          fo var3Lifetime4 = this.field_b;
+          fo var2Lifetime4 = var3Lifetime4;
           this.field_b = this.field_b.field_c;
           var3Lifetime4.field_c = this.field_f;
           var3Lifetime4.field_b = null;
@@ -119,8 +106,8 @@ final class bo {
         }
         if (param0) {
           this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-          var3Lifetime1 = this.field_b;
-          var2Lifetime1 = var3Lifetime1;
+          fo var3Lifetime1 = this.field_b;
+          fo var2Lifetime1 = var3Lifetime1;
           this.field_b = this.field_b.field_c;
           var3Lifetime1.field_c = this.field_f;
           var3Lifetime1.field_b = null;
@@ -129,8 +116,8 @@ final class bo {
         }
         bo.a(65);
         this.field_c.KA(this.field_b.field_d, this.field_b.field_g, this.field_b.field_a, this.field_b.field_e);
-        var3Lifetime2 = this.field_b;
-        var2Lifetime2 = var3Lifetime2;
+        fo var3Lifetime2 = this.field_b;
+        fo var2Lifetime2 = var3Lifetime2;
         this.field_b = this.field_b.field_c;
         var3Lifetime2.field_c = this.field_f;
         var3Lifetime2.field_b = null;

@@ -11,30 +11,24 @@ public final class Stream {
     private byte[] e;
 
     public final void a(float param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var2Lifetime1;
         if (3 + this.b < this.e.length) {
-          var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$0 = this.b;
+          int var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
+          int fieldTemp$0 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$0] = (byte)var2;
-          fieldTemp$1 = this.b;
+          int fieldTemp$1 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$1] = (byte)(var2 >> 8);
-          fieldTemp$2 = this.b;
+          int fieldTemp$2 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$2] = (byte)(var2 >> 16);
-          fieldTemp$3 = this.b;
+          int fieldTemp$3 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$3] = (byte)(var2 >> 24);
           return;
         }
         this.a();
-        var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
+        int var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
         int fieldTemp$4 = this.b;
         this.b = this.b + 1;
         this.e[fieldTemp$4] = (byte)var2Lifetime1;
@@ -69,30 +63,24 @@ public final class Stream {
     }
 
     public final void b(float param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int var2 = 0;
-        int var2Lifetime1;
         if (this.e.length > 3 + this.b) {
-          var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
-          fieldTemp$0 = this.b;
+          int var2 = jaclib.memory.Stream.floatToRawIntBits(param0);
+          int fieldTemp$0 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$0] = (byte)(var2 >> 24);
-          fieldTemp$1 = this.b;
+          int fieldTemp$1 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$1] = (byte)(var2 >> 16);
-          fieldTemp$2 = this.b;
+          int fieldTemp$2 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$2] = (byte)(var2 >> 8);
-          fieldTemp$3 = this.b;
+          int fieldTemp$3 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$3] = (byte)var2;
           return;
         }
         this.a();
-        var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
+        int var2Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param0);
         int fieldTemp$4 = this.b;
         this.b = this.b + 1;
         this.e[fieldTemp$4] = (byte)(var2Lifetime1 >> 24);
@@ -108,13 +96,11 @@ public final class Stream {
     }
 
     public final void a(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         if (1 + this.b < this.e.length) {
-          fieldTemp$0 = this.b;
+          int fieldTemp$0 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$0] = (byte)(param0 >> 8);
-          fieldTemp$1 = this.b;
+          int fieldTemp$1 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$1] = (byte)param0;
           return;
@@ -137,13 +123,11 @@ public final class Stream {
     }
 
     public final void b(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         if (this.e.length > this.b + 1) {
-          fieldTemp$0 = this.b;
+          int fieldTemp$0 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$0] = (byte)param0;
-          fieldTemp$1 = this.b;
+          int fieldTemp$1 = this.b;
           this.b = this.b + 1;
           this.e[fieldTemp$1] = (byte)(param0 >> 8);
           return;

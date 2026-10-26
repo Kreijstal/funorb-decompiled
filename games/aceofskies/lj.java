@@ -19,25 +19,19 @@ final class lj implements ir {
     private int field_n;
 
     final static int a(int param0, byte[] param1, int param2) {
-        RuntimeException var3 = null;
-        byte[] var4 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -117) {
-            var4 = (byte[]) null;
+            byte[] var4 = (byte[]) null;
             lj.a(-124, (byte[]) null, 84);
           }
-          stackIn_3_0 = cl.a(0, param1, param2, (byte) -105);
+          int stackIn_3_0 = cl.a(0, param1, param2, (byte) -105);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("lj.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("lj.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -49,16 +43,7 @@ final class lj implements ir {
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
         ea stackIn_5_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        sq var11 = null;
         try {
           if (param1 != -7592) {
             return;
@@ -68,17 +53,17 @@ final class lj implements ir {
           } else {
             stackIn_5_0 = null;
           }
-          var11 = (sq) (stackIn_5_0);
+          sq var11 = (sq) (stackIn_5_0);
           if (var11 != null) {
             param0 = param0 & var11.field_u;
           }
-          var7 = 5592405;
+          int var7 = 5592405;
           SoftwareRasterizer.b(param2 + param3.field_p, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_o);
           if (param0) {
             var7 = 16777215;
           }
-          var8 = param2 + param3.field_p + this.field_n;
-          var9 = this.field_h + param4 + param3.field_h;
+          int var8 = param2 + param3.field_p + this.field_n;
+          int var9 = this.field_h + param4 + param3.field_h;
           SoftwareRasterizer.d(var8, var9, this.field_m, this.field_j, 5592405);
           SoftwareRasterizer.b(var8, var9, this.field_m, this.field_j, var7);
           if (var11.field_s) {
@@ -86,15 +71,15 @@ final class lj implements ir {
             SoftwareRasterizer.f(var8 + this.field_m, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_l) {
-            var10 = this.field_m + (this.field_n + this.field_f);
+            int var10 = this.field_m + (this.field_n + this.field_f);
             this.field_l.drawParagraph(param3.field_f, param2 + param3.field_p + var10, param4 + (param3.field_h + this.field_i), param3.field_q - (this.field_f + var10), param3.field_n - (this.field_f << 1), this.field_g, this.field_k, this.field_b, this.field_d, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_16_0 = var6;
-          stackIn_16_1 = new StringBuilder().append("lj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var6;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("lj.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -114,9 +99,8 @@ final class lj implements ir {
     }
 
     final static void a(int param0) {
-        int var1 = 0;
         if (RendererManager.field_c > 32) {
-          var1 = RendererManager.field_c % 32;
+          int var1 = RendererManager.field_c % 32;
           if (var1 == 0) {
             var1 = 32;
           }

@@ -4,12 +4,6 @@
 final class mn {
     final static GraphicsRenderer a(byte param0, int param1, java.awt.Canvas param2, ResourceArchive param3, d param4) {
         try {
-          Class var5 = null;
-          RuntimeException var5_ref = null;
-          Throwable var5_ref2 = null;
-          java.lang.reflect.Method var6 = null;
-          d var7 = null;
-          GraphicsRenderer stackIn_8_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (!tq.c(true)) {
@@ -18,21 +12,21 @@ final class mn {
             if (!ei.a("jagdx", (byte) -16)) {
               throw new RuntimeException("");
             }
-            var5 = Class.forName("kr");
+            Class var5 = Class.forName("kr");
             if (param0 != 1) {
-              var7 = (d) null;
+              d var7 = (d) null;
               mn.a((byte) 32, -121, (java.awt.Canvas) null, (ResourceArchive) null, (d) null);
             }
-            var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("ResourceArchive"), Class.forName("java.lang.Integer")});
-            stackIn_8_0 = (GraphicsRenderer) (var6.invoke((Object) null, new Object[]{param2, param4, param3, new Integer(param1)}));
+            java.lang.reflect.Method var6 = var5.getDeclaredMethod("createToolkit", new Class[]{Class.forName("java.awt.Canvas"), Class.forName("d"), Class.forName("ResourceArchive"), Class.forName("java.lang.Integer")});
+            GraphicsRenderer stackIn_8_0 = (GraphicsRenderer) (var6.invoke((Object) null, new Object[]{param2, param4, param3, new Integer(param1)}));
             return stackIn_8_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
             throw var5_ref;
           } catch (java.lang.Throwable decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var5_ref2 = decompiledCaughtException;
+            Throwable var5_ref2 = decompiledCaughtException;
             throw new RuntimeException("");
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

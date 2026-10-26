@@ -8,13 +8,8 @@ final class oq extends rg implements dn {
     oq(lt param0, lh param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        Object stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        ea var4 = null;
         try {
           var3 = null;
           if (param1 == co.field_k) {
@@ -34,7 +29,7 @@ final class oq extends rg implements dn {
               }
             }
           }
-          var4 = new ea((String) (var3), (no) null);
+          ea var4 = new ea((String) (var3), (no) null);
           var4.field_q = this.field_q;
           var4.field_h = 50;
           var4.field_n = 80;
@@ -44,16 +39,16 @@ final class oq extends rg implements dn {
           this.field_J = this.a(ne.field_e, -83, (no) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("oq.<init>(");
+          Object stackIn_12_0 = var3;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("oq.<init>(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -85,39 +80,30 @@ final class oq extends rg implements dn {
     }
 
     private final mi a(String param0, int param1, no param2) {
-        mi var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        mi stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new mi(param0, param2);
+          mi var4 = new mi(param0, param2);
           var4.field_e = (ir) ((Object) new qb());
-          var5 = this.field_n - 6;
+          int var5 = this.field_n - 6;
           this.field_n = this.field_n + 38;
           var4.a(30, 15, var5, -16 + (-14 + this.field_q), (byte) 125);
           this.a(var4, 1);
-          var6 = -20 / ((param1 - 1) / 59);
+          int var6 = -20 / ((param1 - 1) / 59);
           this.a(false);
-          stackIn_1_0 = var4;
+          mi stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_4_0 = var4_ref;
-          stackIn_4_1 = new StringBuilder().append("oq.CA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var4_ref;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("oq.CA(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -128,28 +114,21 @@ final class oq extends rg implements dn {
     }
 
     final static fr a(byte param0, String[] param1) {
-        fr var2 = null;
-        RuntimeException var2_ref = null;
-        fr stackIn_2_0 = null;
-        fr stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -37) {
-            stackIn_2_0 = (fr) null;
+            fr stackIn_2_0 = (fr) null;
             return stackIn_2_0;
           }
-          var2 = new fr(false);
+          fr var2 = new fr(false);
           var2.field_c = param1;
-          stackIn_4_0 = var2;
+          fr stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_7_0 = var2_ref;
-          stackIn_7_1 = new StringBuilder().append("oq.AA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2_ref;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("oq.AA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {

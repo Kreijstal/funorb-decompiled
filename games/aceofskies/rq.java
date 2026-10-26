@@ -5,28 +5,17 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static String field_a;
 
     final static void a(byte param0) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        te var3_ref_te = null;
-        ds var4 = null;
-        int var4_int = 0;
-        Object var5 = null;
-        int var6 = 0;
-        CipherPacketBuffer var9 = null;
-        byte[] var13 = null;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var9 = IntKeyLookup.incomingPacket;
+          CipherPacketBuffer var9 = IntKeyLookup.incomingPacket;
           if (param0 <= 15) {
             field_a = (String) null;
           }
-          var2 = var9.readUnsignedByte(-112);
+          int var2 = var9.readUnsignedByte(-112);
           if (var2 != 0) {
             if (var2 == 1) {
-              var3 = var9.readInt((byte) 117);
-              var4 = (ds) (cl.field_eb.first(268435455));
+              int var3 = var9.readInt((byte) 117);
+              ds var4 = (ds) (cl.field_eb.first(268435455));
               while (var4 != null) {
                 if (var4.field_g != var3) {
                   var4 = (ds) (cl.field_eb.next((byte) 103));
@@ -44,17 +33,17 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             v.a("A1: " + CipherPacketBuffer.k((byte) 65), (byte) -52, (Throwable) null);
             te.b(true);
           } else {
-            var3_ref_te = (te) (ep.field_z.first(268435455));
+            te var3_ref_te = (te) (ep.field_z.first(268435455));
             if (var3_ref_te == null) {
               te.b(true);
               return;
             }
-            var4_int = var9.readUnsignedByte(-79);
+            int var4_int = var9.readUnsignedByte(-79);
             if (var4_int != 0) {
-              var13 = new byte[var4_int];
+              byte[] var13 = new byte[var4_int];
               var9.a(0, 7186, var4_int, var13);
             } else {
-              var5 = null;
+              Object var5 = null;
             }
             var9.position = var9.position + 4;
             if (!var9.e(6103)) {
@@ -65,8 +54,8 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "rq.A(" + param0 + ')');
         }
     }
@@ -85,30 +74,8 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static void a(float[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var17 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int stackIn_10_0 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        float[] var12 = null;
-        float[] var13 = null;
-        float[] var14 = null;
-        float var15 = 0.0f;
-        int var16 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var23 = 0;
-        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 > 0 &&
             !mg.a(param5, (byte) 127)) {
@@ -118,28 +85,28 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             !mg.a(param3, (byte) 21)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = rl.a(param6 + 5, param4);
-          var8 = 0;
-          stackIn_10_0 = (param5 >= param3) ? param3 : param5;
-          var9 = stackIn_10_0;
-          var10 = param5 >> 1;
-          var11 = param3 >> 1;
-          var12 = param0;
-          var13 = new float[var7_int * var11 * var10];
+          int var7_int = rl.a(param6 + 5, param4);
+          int var8 = 0;
+          int stackIn_10_0 = (param5 >= param3) ? param3 : param5;
+          int var9 = stackIn_10_0;
+          int var10 = param5 >> 1;
+          int var11 = param3 >> 1;
+          float[] var12 = param0;
+          float[] var13 = new float[var7_int * var11 * var10];
           while (true) {
             jaggl.OpenGL.glTexImage2Df(param1, var8, param2, param5, param3, 0, param4, 5126, var12, 0);
             if (var9 <= 1) {
               return;
             }
-            var16 = var7_int * param5;
-            var14 = var13;
-            for (var17 = 0; var17 < var7_int; var17++) {
-              var18 = var17;
-              var19 = var17;
-              var20 = var19 + var16;
-              for (var21 = 0; var11 > var21; var21++) {
-                for (var22 = 0; var10 > var22; var22++) {
-                  var15 = var12[var19];
+            int var16 = var7_int * param5;
+            float[] var14 = var13;
+            for (int var17 = 0; var17 < var7_int; var17++) {
+              int var18 = var17;
+              int var19 = var17;
+              int var20 = var19 + var16;
+              for (int var21 = 0; var11 > var21; var21++) {
+                for (int var22 = 0; var10 > var22; var22++) {
+                  float var15 = var12[var19];
                   var19 = var19 + var7_int;
                   var15 = var15 + var12[var19];
                   var15 = var15 + var12[var20];
@@ -164,10 +131,10 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             var8++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_26_0 = var7;
-          stackIn_26_1 = new StringBuilder().append("rq.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_26_0 = var7;
+          StringBuilder stackIn_26_1 = new StringBuilder().append("rq.C(");
           if (param0 == null) {
             stackIn_27_2 = "null";
           } else {
@@ -178,18 +145,13 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void mouseReleased(java.awt.event.MouseEvent param0) {
-        int var2_int = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           if (null != ho.field_b) {
             oj.field_g = 0;
             mp.field_g = 0;
             si.field_b = true;
-            var2_int = param0.getModifiers();
+            int var2_int = param0.getModifiers();
             if ((8 & var2_int) != 0) {
             }
             if (0 != (4 & var2_int)) {
@@ -202,10 +164,10 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_10_0 = var2;
-          stackIn_10_1 = new StringBuilder().append("rq.mouseReleased(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var2;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("rq.mouseReleased(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -224,12 +186,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void mousePressed(java.awt.event.MouseEvent param0) {
-        int var2_int = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           if (ho.field_b != null) {
             oj.field_g = 0;
@@ -243,7 +200,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               me.field_b = 1;
               mp.field_g = 1;
             }
-            var2_int = param0.getModifiers();
+            int var2_int = param0.getModifiers();
             if ((var2_int & 8) == 0) {
             }
             si.field_b = true;
@@ -257,10 +214,10 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("rq.mousePressed(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var2;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("rq.mousePressed(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -274,26 +231,20 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     final static id a(int param0, String param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        id stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (gm.field_x.a(false) &&
             !param1.equals(gm.field_x.b(2))) {
             gm.field_x = od.a(param1, 60);
           }
-          var2_int = 98 / ((param0 + 53) / 49);
-          stackIn_4_0 = gm.field_x;
+          int var2_int = 98 / ((param0 + 53) / 49);
+          id stackIn_4_0 = gm.field_x;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("rq.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("rq.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -304,21 +255,17 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           if (null != ho.field_b) {
             mp.field_g = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("rq.focusLost(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("rq.focusLost(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -329,11 +276,7 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           if (ho.field_b != null) {
             oj.field_g = 0;
@@ -343,10 +286,10 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("rq.mouseMoved(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("rq.mouseMoved(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -383,21 +326,17 @@ final class rq implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     }
 
     public final void mouseClicked(java.awt.event.MouseEvent param0) {
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           if (param0.isPopupTrigger()) {
             param0.consume();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("rq.mouseClicked(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("rq.mouseClicked(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {

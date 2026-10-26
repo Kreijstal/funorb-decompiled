@@ -11,21 +11,17 @@ final class cj implements tl {
     private boolean field_d;
 
     public final boolean a(int param0, int param1, int param2) {
-        boolean stackIn_6_0 = false;
-        boolean stackIn_14_0 = false;
-        boolean stackIn_18_0 = false;
         int var4;
-        int var5;
         if (param1 > -112) {
           return true;
         }
         this.field_c = param2;
         this.field_g = (byte)param0;
         if (this.field_b >= this.field_c) {
-          stackIn_6_0 = (this.field_f != null);
+          boolean stackIn_6_0 = (this.field_f != null);
           return stackIn_6_0;
         }
-        var5 = 8;
+        int var5 = 8;
         if (this.field_a) {
           var5 = var5 | 512;
           var4 = 0;
@@ -35,13 +31,13 @@ final class cj implements tl {
         if (this.field_f == null) {
           this.field_f = this.field_e.field_Rc.a(this.field_c, var5, 0, var4, this.field_f);
           this.field_b = this.field_c;
-          stackIn_14_0 = (this.field_f != null);
+          boolean stackIn_14_0 = (this.field_f != null);
           return stackIn_14_0;
         }
         this.field_f.a(1618);
         this.field_f = this.field_e.field_Rc.a(this.field_c, var5, 0, var4, this.field_f);
         this.field_b = this.field_c;
-        stackIn_18_0 = (this.field_f != null);
+        boolean stackIn_18_0 = (this.field_f != null);
         return stackIn_18_0;
     }
 

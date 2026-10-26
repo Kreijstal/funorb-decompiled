@@ -28,30 +28,22 @@ final class fg extends ArchiveProvider {
     private boolean field_i;
 
     final static byte[] a(byte[] param0, byte param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        byte[] var3 = null;
-        String var4 = null;
-        byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 105) {
-            var4 = (String) null;
+            String var4 = (String) null;
             fg.a((String) null, 109);
           }
-          var2_int = param0.length;
-          var3 = new byte[var2_int];
+          int var2_int = param0.length;
+          byte[] var3 = new byte[var2_int];
           au.a(param0, 0, var3, 0, var2_int);
-          stackIn_3_0 = var3;
+          byte[] stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("fg.F(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("fg.F(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -62,17 +54,7 @@ final class fg extends ArchiveProvider {
     }
 
     final static cl a(String param0, int param1) {
-        String var2 = null;
-        cl var3 = null;
-        String var4 = null;
-        CharSequence var5 = null;
-        CharSequence var6 = null;
-        cl stackIn_15_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
         try {
           if (gi.field_g == null) {
             return null;
@@ -80,30 +62,30 @@ final class fg extends ArchiveProvider {
           if (param1 != 17680) {
             fg.b((byte) -26);
           }
-          var5 = (CharSequence) ((Object) param0);
-          var2 = vu.normalizePlayerName(param1 ^ 17773, var5);
+          CharSequence var5 = (CharSequence) ((Object) param0);
+          String var2 = vu.normalizePlayerName(param1 ^ 17773, var5);
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (cl) (gi.field_g.a(param1 - 17556, (long)var2.hashCode()));
+          cl var3 = (cl) (gi.field_g.a(param1 - 17556, (long)var2.hashCode()));
           while (var3 != null) {
-            var6 = (CharSequence) ((Object) var3.field_I);
-            var4 = vu.normalizePlayerName(125, var6);
+            CharSequence var6 = (CharSequence) ((Object) var3.field_I);
+            String var4 = vu.normalizePlayerName(125, var6);
             if (var4 == null) {
               var4 = var3.field_I;
             }
             if (var4.equals(var2)) {
-              stackIn_15_0 = var3;
+              cl stackIn_15_0 = var3;
               return stackIn_15_0;
             }
             var3 = (cl) (gi.field_g.a(false));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_20_0 = var2_ref;
-          stackIn_20_1 = new StringBuilder().append("fg.K(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = var2_ref;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("fg.K(");
           if (param0 == null) {
             stackIn_21_2 = "null";
           } else {
@@ -125,12 +107,7 @@ final class fg extends ArchiveProvider {
     }
 
     final void b(int param0) {
-        ag discarded$0 = null;
-        ag discarded$1 = null;
-        IntrusiveNode var2;
-        int var3;
-        int var4;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_o) {
           return;
         }
@@ -140,19 +117,19 @@ final class fg extends ArchiveProvider {
         if (param0 != -20254) {
           return;
         }
-        var2 = this.field_n.first(param0 ^ -268415203);
+        IntrusiveNode var2 = this.field_n.first(param0 ^ -268415203);
         while (var2 != null) {
-          var3 = (int)var2.key;
+          int var3 = (int)var2.key;
           if (var3 >= 0) {
             if (var3 < this.field_m.field_l) {
               if (this.field_m.field_k[var3] == 0) {
                 var2.unlink(-124);
               } else {
                 if (this.field_h[var3] == 0) {
-                  discarded$0 = this.a((byte) -37, 1, var3);
+                  ag discarded$0 = this.a((byte) -37, 1, var3);
                 }
                 if (this.field_h[var3] == -1) {
-                  discarded$1 = this.a((byte) -37, 2, var3);
+                  ag discarded$1 = this.a((byte) -37, 2, var3);
                 }
                 if (this.field_h[var3] == 1) {
                   var2.unlink(param0 ^ 20327);
@@ -187,36 +164,21 @@ final class fg extends ArchiveProvider {
     }
 
     final void a(byte param0) {
-        ag discarded$3 = null;
-        ag discarded$2 = null;
-        ag discarded$1 = null;
-        ag discarded$0 = null;
-        int var2_int;
-        ag var2;
-        IntrusiveNode var3;
-        int var4;
-        int var5;
-        IntrusiveNode var6;
-        IntrusiveNode var7;
-        int var2_intLifetime1;
-        int var4Lifetime1;
-        ag var2Lifetime1;
-        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder2 = true;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_o != null) {
           if (this.a(true) == null) {
             return;
           }
           if (this.field_q) {
-            var2_int = 1;
-            var3 = this.field_o.first(268435455);
+            int var2_int = 1;
+            IntrusiveNode var3 = this.field_o.first(268435455);
             while (var3 != null) {
-              var4 = (int)var3.key;
+              int var4 = (int)var3.key;
               if (this.field_h[var4] == 0) {
-                discarded$3 = this.a((byte) -37, 1, var4);
+                ag discarded$3 = this.a((byte) -37, 1, var4);
               }
               if (this.field_h[var4] == 0) {
                 var2_int = 0;
@@ -232,10 +194,10 @@ final class fg extends ArchiveProvider {
               }
               if (this.field_z.field_d < 250) {
                 if (this.field_h[this.field_d] == 0) {
-                  discarded$2 = this.a((byte) -37, 1, this.field_d);
+                  ag discarded$2 = this.a((byte) -37, 1, this.field_d);
                 }
                 if (this.field_h[this.field_d] == 0) {
-                  var6 = new IntrusiveNode();
+                  IntrusiveNode var6 = new IntrusiveNode();
                   var6.key = (long)this.field_d;
                   var2_int = 0;
                   this.field_o.addLast(81, var6);
@@ -254,12 +216,12 @@ final class fg extends ArchiveProvider {
           }
           else {
             if (this.field_s) {
-              var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_o.first(268435455);
+              int var2_intLifetime1 = 1;
+              IntrusiveNode var3Lifetime1 = this.field_o.first(268435455);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.key;
+                int var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_h[var4Lifetime1] != 1) {
-                  discarded$1 = this.a((byte) -37, 2, var4Lifetime1);
+                  ag discarded$1 = this.a((byte) -37, 2, var4Lifetime1);
                 }
                 if (this.field_h[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
@@ -276,10 +238,10 @@ final class fg extends ArchiveProvider {
                       break scanLoop1;
                     }
                     if (this.field_h[this.field_d] != 1) {
-                      discarded$0 = this.a((byte) -37, 2, this.field_d);
+                      ag discarded$0 = this.a((byte) -37, 2, this.field_d);
                     }
                     if (this.field_h[this.field_d] != 1) {
-                      var7 = new IntrusiveNode();
+                      IntrusiveNode var7 = new IntrusiveNode();
                       var7.key = (long)this.field_d;
                       var2_intLifetime1 = 0;
                       this.field_o.addLast(115, var7);
@@ -302,7 +264,7 @@ final class fg extends ArchiveProvider {
                 decompiledFrameRemainder0 = (this.field_i);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
-                  var2 = (ag) (this.field_v.firstForIteration(false));
+                  ag var2 = (ag) (this.field_v.firstForIteration(false));
                   while (var2 != null) {
                     if (!var2.field_p) {
                       if (var2.field_t) {
@@ -335,7 +297,7 @@ final class fg extends ArchiveProvider {
           decompiledFrameRemainder0 = (this.field_i);
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameRemainder0 = !(this.field_x > kh.a(-106)))) {
-            var2Lifetime1 = (ag) (this.field_v.firstForIteration(false));
+            ag var2Lifetime1 = (ag) (this.field_v.firstForIteration(false));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_p) {
                 if (var2Lifetime1.field_t) {
@@ -358,16 +320,9 @@ final class fg extends ArchiveProvider {
     }
 
     final ArchiveIndex a(boolean param0) {
-        un stackIn_16_0 = null;
-        boolean stackIn_17_1 = false;
         RuntimeException decompiledCaughtException = null;
-        byte[] var2 = null;
         RuntimeException var3 = null;
-        int var4 = 0;
-        byte[] var5 = null;
-        byte[] var6 = null;
-        byte[] var7 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_m != null) {
           return this.field_m;
         }
@@ -380,10 +335,10 @@ final class fg extends ArchiveProvider {
         if (this.field_y.field_p) {
           return null;
         }
-        var7 = this.field_y.a(param0);
-        var6 = var7;
-        var5 = var6;
-        var2 = var5;
+        byte[] var7 = this.field_y.a(param0);
+        byte[] var6 = var7;
+        byte[] var5 = var6;
+        byte[] var2 = var5;
         if (this.field_y instanceof os) {
           try {
             if (var5 == null) {
@@ -415,8 +370,8 @@ final class fg extends ArchiveProvider {
             var3 = decompiledCaughtException;
             this.field_g.c((byte) -126);
             this.field_m = null;
-            stackIn_16_0 = this.field_g;
-            stackIn_17_1 = !(param0);
+            un stackIn_16_0 = this.field_g;
+            boolean stackIn_17_1 = !(param0);
             if (!((un) (Object) stackIn_16_0).a(stackIn_17_1)) {
               this.field_y = (ag) ((Object) this.field_g.a(255, this.field_p, -21, true, (byte) 0));
             } else {
@@ -447,27 +402,12 @@ final class fg extends ArchiveProvider {
     }
 
     private final ag a(byte param0, int param1, int param2) {
-        Object stackIn_90_0 = null;
         Throwable decompiledCaughtException = null;
-        Object var4 = null;
-        byte[] var5 = null;
         int var6_int = 0;
-        Exception var6 = null;
-        RuntimeException var6_ref = null;
-        int var7 = 0;
         int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        ag var12 = null;
-        byte[] var13 = null;
-        byte[] var18 = null;
-        byte[] var27 = null;
-        byte[] var28 = null;
-        byte[] var29 = null;
-        byte[] var30 = null;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var12 = (ag) (this.field_v.findByKey((byte) 106, (long)param2));
-        var4 = var12;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        ag var12 = (ag) (this.field_v.findByKey((byte) 106, (long)param2));
+        Object var4 = var12;
         if (var12 != null &&
           param1 == 0 &&
           !var12.field_q &&
@@ -513,9 +453,9 @@ final class fg extends ArchiveProvider {
         if (((ag) (var4)).field_p) {
           return null;
         }
-        var18 = ((ag) (var4)).a(true);
-        var13 = var18;
-        var5 = var13;
+        byte[] var18 = ((ag) (var4)).a(true);
+        byte[] var13 = var18;
+        byte[] var5 = var13;
         if (param0 != -37) {
           return (ag) null;
         }
@@ -531,9 +471,9 @@ final class fg extends ArchiveProvider {
               }
               if (this.field_m.field_i != null &&
                 this.field_m.field_i[param2] != null) {
-                var30 = this.field_m.field_i[param2];
-                var29 = qm.a(0, var18.length - 2, var18, 0);
-                var11 = 0;
+                byte[] var30 = this.field_m.field_i[param2];
+                byte[] var29 = qm.a(0, var18.length - 2, var18, 0);
+                int var11 = 0;
                 var9 = var11;
                 while (var11 < 64) {
                   if (var29[var11] != var30[var11]) {
@@ -542,7 +482,7 @@ final class fg extends ArchiveProvider {
                   var11++;
                 }
               }
-              var7 = (255 & var5[-1 + var18.length]) + ((255 & var5[-2 + var18.length]) << 8);
+              int var7 = (255 & var5[-1 + var18.length]) + ((255 & var5[-2 + var18.length]) << 8);
               if ((65535 & this.field_m.field_a[param2]) != var7) {
                 throw new RuntimeException();
               }
@@ -554,13 +494,13 @@ final class fg extends ArchiveProvider {
               if (!((ag) (var4)).field_q) {
                 ((ag) (var4)).unlink(param0 - 87);
               }
-              stackIn_90_0 = var4;
+              Object stackIn_90_0 = var4;
               return (ag) (stackIn_90_0);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var6 = (Exception) (Object) decompiledCaughtException;
+            Exception var6 = (Exception) (Object) decompiledCaughtException;
             this.field_h[param2] = (byte)-1;
             ((ag) (var4)).unlink(-125);
             if (((ag) (var4)).field_q &&
@@ -582,8 +522,8 @@ final class fg extends ArchiveProvider {
             }
             if (null != this.field_m.field_i &&
               null != this.field_m.field_i[param2]) {
-              var28 = this.field_m.field_i[param2];
-              var27 = qm.a(param0 ^ -37, -2 + var18.length, var18, 0);
+              byte[] var28 = this.field_m.field_i[param2];
+              byte[] var27 = qm.a(param0 ^ -37, -2 + var18.length, var18, 0);
               for (var9 = 0; 64 > var9; var9++) {
                 if (~var27[var9] != ~var28[var9]) {
                   throw new RuntimeException();
@@ -597,7 +537,7 @@ final class fg extends ArchiveProvider {
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_g.c((byte) -46);
           ((ag) (var4)).unlink(param0 - 90);
           if (((ag) (var4)).field_q &&
@@ -622,35 +562,8 @@ final class fg extends ArchiveProvider {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int[] param5, int param6, int param7) {
-        int var26 = 0;
-        int var27 = 0;
-        int incrementValue$4 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
-        int[] var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var24 = 0;
-        int var25 = 0;
-        int var28 = 0;
-        var28 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var28 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 > 0 &&
             !mg.a(param0, (byte) 23)) {
@@ -663,13 +576,13 @@ final class fg extends ArchiveProvider {
           if (param3 != 32993) {
             throw new IllegalArgumentException("");
           }
-          var8_int = 0;
-          stackIn_15_0 = (param1 > param0) ? param0 : param1;
-          var9 = stackIn_15_0;
-          var10 = param0 >> 1;
-          var11 = param1 >> 1;
-          var12 = param5;
-          var13 = new int[var11 * var10];
+          int var8_int = 0;
+          int stackIn_15_0 = (param1 > param0) ? param0 : param1;
+          int var9 = stackIn_15_0;
+          int var10 = param0 >> 1;
+          int var11 = param1 >> 1;
+          int[] var12 = param5;
+          int[] var13 = new int[var11 * var10];
           if (param4 < 35) {
             field_A = (ke) null;
           }
@@ -678,20 +591,20 @@ final class fg extends ArchiveProvider {
             if (var9 <= 1) {
               return;
             }
-            var15 = 0;
-            var24 = 0;
-            var25 = var24 + param0;
-            var14 = var13;
-            for (var26 = 0; var11 > var26; var26++) {
-              for (var27 = 0; var27 < var10; var27++) {
-                var16 = var12[var24++];
-                var18 = var12[var25++];
-                var17 = var12[var24++];
-                var22 = 255 & var16;
-                var19 = var12[var25++];
-                var23 = 255 & var16 >> 24;
-                var21 = (65501 & var16) >> 8;
-                var20 = 255 & var16 >> 16;
+            int var15 = 0;
+            int var24 = 0;
+            int var25 = var24 + param0;
+            int[] var14 = var13;
+            for (int var26 = 0; var11 > var26; var26++) {
+              for (int var27 = 0; var27 < var10; var27++) {
+                int var16 = var12[var24++];
+                int var18 = var12[var25++];
+                int var17 = var12[var24++];
+                int var22 = 255 & var16;
+                int var19 = var12[var25++];
+                int var23 = 255 & var16 >> 24;
+                int var21 = (65501 & var16) >> 8;
+                int var20 = 255 & var16 >> 16;
                 var22 = var22 + (var17 & 255);
                 var21 = var21 + ((65454 & var17) >> 8);
                 var20 = var20 + ((16771045 & var17) >> 16);
@@ -704,7 +617,7 @@ final class fg extends ArchiveProvider {
                 var21 = var21 + ((var19 & 65535) >> 8);
                 var20 = var20 + ((var19 & 16745210) >> 16);
                 var22 = var22 + (var19 & 255);
-                incrementValue$4 = var15;
+                int incrementValue$4 = var15;
                 var15++;
                 var13[incrementValue$4] = vo.a(vo.a(pg.a(var21, 1020) << 6, vo.a(pg.a(var20, 1020) << 14, pg.a(-16777216, var23 << 22))), pg.a(1020, var22) >> 2);
               }
@@ -721,10 +634,10 @@ final class fg extends ArchiveProvider {
             var8_int++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_28_0 = var8;
-          stackIn_28_1 = new StringBuilder().append("fg.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_28_0 = var8;
+          StringBuilder stackIn_28_1 = new StringBuilder().append("fg.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_29_2 = "null";
           } else {
@@ -748,20 +661,11 @@ final class fg extends ArchiveProvider {
     }
 
     fg(int param0, bl param1, bl param2, un param3, dk param4, int param5, byte[] param6, int param7, boolean param8) {
-        boolean stackIn_7_1 = false;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var10 = null;
         this.field_v = new IntrusiveNodeHashTable(16);
         this.field_d = 0;
         this.field_n = new IntrusiveDeque();
@@ -778,7 +682,7 @@ final class fg extends ArchiveProvider {
           this.field_g = param3;
           this.field_e = param2;
           this.field_u = param6;
-          stackIn_7_1 = (param8);
+          boolean stackIn_7_1 = (param8);
           this.field_i = stackIn_7_1;
           this.field_j = param5;
           this.field_z = param4;
@@ -788,34 +692,34 @@ final class fg extends ArchiveProvider {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var10 = decompiledCaughtException;
-          stackIn_12_0 = var10;
-          stackIn_12_1 = new StringBuilder().append("fg.<init>(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var10 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var10;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("fg.<init>(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param2 == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
           if (param3 == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
           if (param4 == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',');
+          StringBuilder stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_25_2 = "null";
           } else {

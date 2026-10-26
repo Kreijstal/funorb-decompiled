@@ -7,11 +7,7 @@ final class pi extends mi {
     private int field_y;
 
     final boolean a(ea param0, byte param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -42) {
             return false;
@@ -19,10 +15,10 @@ final class pi extends mi {
           this.c((byte) 100);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("pi.U(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("pi.U(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -40,45 +36,35 @@ final class pi extends mi {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        int var5;
-        int var6;
-        pt var8;
-        int var9;
-        int var10;
-        int var11;
-        ea var12;
-        Sprite var13;
-        Sprite var14;
-        Sprite var15;
-        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         super.a((byte) 125, param1, param2, param3);
         if (param1 != 0) {
           return;
         }
-        var5 = (this.field_q >> 1) + (param3 + this.field_p);
-        var6 = (this.field_n >> 1) + param2 + this.field_h;
-        var8 = this.field_w.b(true);
+        int var5 = (this.field_q >> 1) + (param3 + this.field_p);
+        int var6 = (this.field_n >> 1) + param2 + this.field_h;
+        pt var8 = this.field_w.b(true);
         if (param0 < 64) {
-          var12 = (ea) null;
+          ea var12 = (ea) null;
           this.a((ea) null, (byte) -125);
         }
         if (jc.field_Pc != var8 &&
           ce.field_t != var8) {
           if (var8 == bt.field_a) {
-            var13 = gu.field_c[2];
+            Sprite var13 = gu.field_c[2];
             var13.d(var5 - (var13.width >> 1), -(var13.height >> 1) + var6, 256);
             return;
           }
           if (fd.field_a != var8) {
             return;
           }
-          var14 = gu.field_c[1];
+          Sprite var14 = gu.field_c[1];
           var14.d(-(var14.width >> 1) + var5, var6 - (var14.height >> 1), 256);
           return;
         }
-        var15 = gu.field_c[0];
-        var9 = var15.fullWidth << 1;
-        var10 = var15.fullHeight << 1;
+        Sprite var15 = gu.field_c[0];
+        int var9 = var15.fullWidth << 1;
+        int var10 = var15.fullHeight << 1;
         if (ms.field_c != null &&
           ms.field_c.width >= var9 &&
           var10 <= ms.field_c.height) {
@@ -119,45 +105,22 @@ final class pi extends mi {
 
     final static int a(int param0, String param1, int param2, boolean param3, String param4, boolean param5) {
         try {
-          int stackIn_5_0 = 0;
-          int stackIn_29_0 = 0;
-          boolean stackIn_41_0 = false;
-          boolean stackIn_44_0 = false;
-          int stackIn_70_0 = 0;
-          int stackIn_82_0 = 0;
-          int stackIn_84_0 = 0;
-          int stackIn_93_0 = 0;
-          int stackIn_95_0 = 0;
-          RuntimeException stackIn_98_0 = null;
-          StringBuilder stackIn_98_1 = null;
           String stackIn_99_2 = null;
-          StringBuilder stackIn_101_1 = null;
           String stackIn_102_2 = null;
           Throwable decompiledCaughtException = null;
-          int var6_int = 0;
-          RuntimeException var6 = null;
-          int var7 = 0;
-          int var8 = 0;
           Throwable var8_ref_Throwable = null;
-          int var9 = 0;
-          String var10 = null;
-          String var11 = null;
-          CharSequence var12 = null;
-          int var6_intLifetime1;
-          int var6_intLifetime2;
-          int var8Lifetime1;
-          var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+          int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (ft.field_l == null &&
               !fp.a((byte) 82, param5)) {
-              stackIn_5_0 = -1;
+              int stackIn_5_0 = -1;
               return stackIn_5_0;
             }
             if (qa.field_b == ca.field_f) {
               if (!param5) {
                 dq.field_a = op.a(param4, false, param1, false);
               } else {
-                var10 = (String) null;
+                String var10 = (String) null;
                 dq.field_a = wb.a(false, (String) null, param4, as.field_b, true);
               }
               q.outgoingPacket.position = 0;
@@ -168,7 +131,7 @@ final class pi extends mi {
             }
             if (ca.field_f == pg.field_a &&
               wo.a(1, true)) {
-              var6_int = IntKeyLookup.incomingPacket.readUnsignedByte(117);
+              int var6_int = IntKeyLookup.incomingPacket.readUnsignedByte(117);
               if (0 == var6_int) {
                 ca.field_f = qo.field_a;
               } else {
@@ -188,7 +151,7 @@ final class pi extends mi {
             boolean decompiledFrameRemainder0 = true;
             if (ca.field_f == he.field_o &&
               wo.a(1, true)) {
-              var6_intLifetime1 = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ 63);
+              int var6_intLifetime1 = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ 63);
               fb.field_b = null;
               qs.field_b = var6_intLifetime1;
               IntKeyLookup.incomingPacket.position = 0;
@@ -202,7 +165,7 @@ final class pi extends mi {
                 else {
                   te.b(true);
                   ld.field_d = false;
-                  stackIn_29_0 = var6_intLifetime1;
+                  int stackIn_29_0 = var6_intLifetime1;
                   return stackIn_29_0;
                 }
               }
@@ -217,15 +180,15 @@ final class pi extends mi {
               ln.field_d = IntKeyLookup.incomingPacket.readUnsignedByte(37);
               IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ 103);
               qr.field_a = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
-              var11 = IntKeyLookup.incomingPacket.e((byte) -122);
-              var7 = IntKeyLookup.incomingPacket.readUnsignedByte(118);
+              String var11 = IntKeyLookup.incomingPacket.e((byte) -122);
+              int var7 = IntKeyLookup.incomingPacket.readUnsignedByte(118);
               if (0 != (1 & var7)) {
                 Bullet.b(param2 + 0);
               }
               if (!param5) {
-                stackIn_41_0 = ((var7 & 8) != 0);
+                boolean stackIn_41_0 = ((var7 & 8) != 0);
                 um.field_j = stackIn_41_0;
-                stackIn_44_0 = ((var7 & 4) != 0);
+                boolean stackIn_44_0 = ((var7 & 4) != 0);
                 g.field_k = stackIn_44_0;
                 if (!um.field_j) {
                 }
@@ -236,12 +199,12 @@ final class pi extends mi {
                 IntKeyLookup.incomingPacket.readInt((byte) 123);
                 ag.field_r = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
                 nc.field_c = new byte[ag.field_r];
-                for (var8 = 0; ag.field_r > var8; var8++) {
+                for (int var8 = 0; ag.field_r > var8; var8++) {
                   nc.field_c[var8] = IntKeyLookup.incomingPacket.readByte(0);
                 }
               }
               fj.playerDisplayName = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
-              var12 = (CharSequence) ((Object) fj.playerDisplayName);
+              CharSequence var12 = (CharSequence) ((Object) fj.playerDisplayName);
               cf.normalizedPlayerName = vu.normalizePlayerName(param2 ^ 127, var12);
               un.field_c = IntKeyLookup.incomingPacket.readUnsignedByte(param2 ^ -95);
               ca.field_f = wq.field_e;
@@ -276,11 +239,11 @@ final class pi extends mi {
                 te.field_h = true;
               }
               q.outgoingPacket.initializeOpcodeCipher(true, bm.field_w);
-              for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
+              for (int var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 bm.field_w[var8Lifetime1] = bm.field_w[var8Lifetime1] + 50;
               }
               IntKeyLookup.incomingPacket.initializeOpcodeCipher(true, bm.field_w);
-              stackIn_70_0 = qs.field_b;
+              int stackIn_70_0 = qs.field_b;
               return stackIn_70_0;
             }
             if (param2 != 0) {
@@ -292,7 +255,7 @@ final class pi extends mi {
               if (qs.field_b == 7 &&
                 !ld.field_d) {
                 ld.field_d = true;
-                stackIn_84_0 = -1;
+                int stackIn_84_0 = -1;
                 return stackIn_84_0;
               }
               if (7 == qs.field_b) {
@@ -300,7 +263,7 @@ final class pi extends mi {
               }
               rp.field_m = IntKeyLookup.incomingPacket.readNullTerminatedText(-17883);
               ld.field_d = false;
-              stackIn_82_0 = qs.field_b;
+              int stackIn_82_0 = qs.field_b;
               return stackIn_82_0;
             }
             if (null == ft.field_l) {
@@ -311,27 +274,27 @@ final class pi extends mi {
                   rp.field_m = jf.field_b;
                 }
                 ld.field_d = false;
-                stackIn_93_0 = 3;
+                int stackIn_93_0 = 3;
                 return stackIn_93_0;
               }
-              var6_intLifetime2 = sg.field_b;
+              int var6_intLifetime2 = sg.field_b;
               sg.field_b = ca.field_h;
               ca.field_h = var6_intLifetime2;
               ld.field_d = true;
             }
-            stackIn_95_0 = -1;
+            int stackIn_95_0 = -1;
             return stackIn_95_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
-            var6 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_98_0 = var6;
-            stackIn_98_1 = new StringBuilder().append("pi.V(").append(param0).append(',');
+            RuntimeException var6 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_98_0 = var6;
+            StringBuilder stackIn_98_1 = new StringBuilder().append("pi.V(").append(param0).append(',');
             if (param1 == null) {
               stackIn_99_2 = "null";
             } else {
               stackIn_99_2 = "{...}";
             }
-            stackIn_101_1 = ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param2).append(',').append(param3).append(',');
+            StringBuilder stackIn_101_1 = ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param2).append(',').append(param3).append(',');
             if (param4 == null) {
               stackIn_102_2 = "null";
             } else {

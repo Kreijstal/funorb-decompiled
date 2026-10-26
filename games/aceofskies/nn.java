@@ -28,39 +28,31 @@ final class nn {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        int var7 = 0;
-        int var5_int = 0;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           SoftwareRasterizer.drawHorizontalLine(param2, param0, param3 + 1, 10000536);
           SoftwareRasterizer.drawHorizontalLine(param2, param4 + param0, param3 + 1, 12105912);
-          var5_int = 1;
+          int var5_int = 1;
           if (param1 != 70) {
             return;
           }
-          var6 = param4;
+          int var6 = param4;
           if (var5_int + param0 < SoftwareRasterizer.clipTop) {
             var5_int = SoftwareRasterizer.clipTop - param0;
           }
           if (var6 + param0 > SoftwareRasterizer.clipBottom) {
             var6 = -param0 + SoftwareRasterizer.clipBottom;
           }
-          for (var7 = var5_int; var6 > var7; var7++) {
-            var8 = 152 + var7 * 48 / param4;
-            var9 = var8 << 8 | var8 << 16 | var8;
+          for (int var7 = var5_int; var6 > var7; var7++) {
+            int var8 = 152 + var7 * 48 / param4;
+            int var9 = var8 << 8 | var8 << 16 | var8;
             SoftwareRasterizer.framebuffer[param2 + SoftwareRasterizer.stride * (var7 + param0)] = var9;
             SoftwareRasterizer.framebuffer[param3 + param2 + (param0 + var7) * SoftwareRasterizer.stride] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var5), "nn.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }

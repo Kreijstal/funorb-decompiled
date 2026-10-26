@@ -9,18 +9,11 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
     static jb field_a;
 
     public final synchronized void keyPressed(java.awt.event.KeyEvent param0) {
-        int var2_int = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var3Lifetime1;
         try {
           if (ua.field_d != null) {
             he.field_n = 0;
-            var2_int = param0.getKeyCode();
+            int var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < so.field_d.length) {
               var2_int = so.field_d[var2_int];
@@ -39,14 +32,14 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
               }
             }
             if (var2_int >= 0) {
-              var3 = 127 & 1 + SpriteState.field_w;
+              int var3 = 127 & 1 + SpriteState.field_w;
               if (var3 != ch.field_a) {
                 ArchiveIndex.field_e[SpriteState.field_w] = var2_int;
                 qb.field_o[SpriteState.field_w] = (char)0;
                 SpriteState.field_w = var3;
               }
             }
-            var3Lifetime1 = param0.getModifiers();
+            int var3Lifetime1 = param0.getModifiers();
             if ((10 & var3Lifetime1) == 0 &&
               var2_int != 85 &&
               var2_int != 10) {
@@ -56,10 +49,10 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_23_0 = var2;
-          stackIn_23_1 = new StringBuilder().append("bs.keyPressed(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_23_0 = var2;
+          StringBuilder stackIn_23_1 = new StringBuilder().append("bs.keyPressed(");
           if (param0 == null) {
             stackIn_24_2 = "null";
           } else {
@@ -81,16 +74,11 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
-        RuntimeException runtimeException = null;
-        int var2_int = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (null != ua.field_d) {
             he.field_n = 0;
-            var2_int = param0.getKeyCode();
+            int var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < so.field_d.length) {
               var2_int = so.field_d[var2_int] & -129;
@@ -109,10 +97,10 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
           param0.consume();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_15_0 = runtimeException;
-          stackIn_15_1 = new StringBuilder().append("bs.keyReleased(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = runtimeException;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("bs.keyReleased(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -144,34 +132,27 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static int a(int param0, Random param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        int stackIn_4_0 = 0;
-        int stackIn_9_0 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (~param2 >= param0) {
             throw new IllegalArgumentException();
           }
           if (mg.a(param2, (byte) -20)) {
-            stackIn_4_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
+            int stackIn_4_0 = (int)((4294967295L & (long)param1.nextInt()) * (long)param2 >> 32);
             return stackIn_4_0;
           }
-          var3_int = -2147483648 - (int)(4294967296L % (long)param2);
+          int var3_int = -2147483648 - (int)(4294967296L % (long)param2);
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_9_0 = qg.a((byte) 119, param2, var4);
+          int stackIn_9_0 = qg.a((byte) 119, param2, var4);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("bs.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("bs.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -182,15 +163,13 @@ final class bs implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
-        int var2_int = 0;
-        int var3 = 0;
         try {
           if (ua.field_d != null) {
-            var2_int = param0.getKeyChar();
+            int var2_int = param0.getKeyChar();
             if (0 != var2_int &&
               var2_int != 65535 &&
               mr.a((char) var2_int, 2004352972)) {
-              var3 = 1 + SpriteState.field_w & 127;
+              int var3 = 1 + SpriteState.field_w & 127;
               if (var3 != ch.field_a) {
                 ArchiveIndex.field_e[SpriteState.field_w] = -1;
                 qb.field_o[SpriteState.field_w] = (char)var2_int;

@@ -21,22 +21,13 @@ final class ec extends ao {
     private float field_n;
 
     final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, BitmapFont param5, int param6, Sprite[] param7, Sprite[] param8, int param9, int param10, int param11, int param12, int param13, int param14) {
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var15_int = 0;
-        RuntimeException var15 = null;
-        int var16 = 0;
         try {
-          var15_int = param5.capitalXAscent + param5.maxDescent;
-          var16 = param5.capitalXAscent;
+          int var15_int = param5.capitalXAscent + param5.maxDescent;
+          int var16 = param5.capitalXAscent;
           uu.a(param4, var15_int, param10, -28265, 480, param3, param7, var15_int, var16, param6, param2, param9, param12, param5, param8, param5, var16, param1, param14, param13, param0);
           if (param11 > 17) {
             return;
@@ -44,28 +35,28 @@ final class ec extends ao {
           field_o = (String) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var15 = decompiledCaughtException;
-          stackIn_5_0 = var15;
-          stackIn_5_1 = new StringBuilder().append("ec.M(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var15 = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var15;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("ec.M(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_6_2 = "null";
           } else {
             stackIn_6_2 = "{...}";
           }
-          stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param3).append(',').append(param4).append(',');
+          StringBuilder stackIn_8_1 = ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param6).append(',');
+          StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param6).append(',');
           if (param7 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
           if (param8 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -110,13 +101,7 @@ final class ec extends ao {
     }
 
     final float[] c(float[] param0, int param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        float[] stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           param0[7] = this.field_q;
           param0[0] = this.field_l;
@@ -130,18 +115,18 @@ final class ec extends ao {
           param0[15] = 1.0f;
           param0[3] = this.field_k;
           param0[6] = this.field_p;
-          var3_int = -122 / ((param1 + 20) / 44);
+          int var3_int = -122 / ((param1 + 20) / 44);
           param0[5] = this.field_f;
           param0[9] = this.field_u;
           param0[8] = this.field_r;
           param0[2] = this.field_i;
-          stackIn_1_0 = (float[]) (param0);
+          float[] stackIn_1_0 = (float[]) (param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("ec.R(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var3;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("ec.R(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -152,12 +137,7 @@ final class ec extends ao {
     }
 
     final float[] a(float[] param0, int param1) {
-        RuntimeException var3 = null;
-        float[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           param0[11] = 0.0f;
           if (param1 < 19) {
@@ -178,13 +158,13 @@ final class ec extends ao {
           param0[1] = this.field_n;
           param0[12] = 0.0f;
           param0[14] = 0.0f;
-          stackIn_3_0 = (float[]) (param0);
+          float[] stackIn_3_0 = (float[]) (param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ec.L(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ec.L(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -205,13 +185,7 @@ final class ec extends ao {
     }
 
     final float[] b(float[] param0, int param1) {
-        RuntimeException var3 = null;
-        float[] var4 = null;
-        float[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           param0[5] = this.field_f;
           param0[10] = this.field_h;
@@ -219,7 +193,7 @@ final class ec extends ao {
           param0[2] = 0.0f;
           param0[9] = this.field_q;
           if (param1 != 3911) {
-            var4 = (float[]) null;
+            float[] var4 = (float[]) null;
             this.a(-0.6887861490249634f, 1.046116590499878f, (float[]) null, 3.051898241043091f, -1.188960313796997f, 89);
           }
           param0[7] = 0.0f;
@@ -233,13 +207,13 @@ final class ec extends ao {
           param0[11] = 0.0f;
           param0[8] = this.field_k;
           param0[3] = 0.0f;
-          stackIn_3_0 = (float[]) (param0);
+          float[] stackIn_3_0 = (float[]) (param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ec.P(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ec.P(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -250,14 +224,9 @@ final class ec extends ao {
     }
 
     final void a(ao param0, boolean param1) {
-        ec var3 = null;
-        RuntimeException var3_ref = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (ec) (param0);
+          ec var3 = (ec) (param0);
           this.field_q = var3.field_q;
           this.field_l = var3.field_l;
           this.field_s = var3.field_s;
@@ -276,10 +245,10 @@ final class ec extends ao {
           field_m = (int[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_5_0 = var3_ref;
-          stackIn_5_1 = new StringBuilder().append("ec.F(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var3_ref;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("ec.F(");
           if (param0 == null) {
             stackIn_6_2 = "null";
           } else {
@@ -290,12 +259,7 @@ final class ec extends ao {
     }
 
     final float[] a(boolean param0, float[] param1) {
-        RuntimeException var3 = null;
-        float[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           param1[3] = this.field_k;
           if (param0) {
@@ -308,13 +272,13 @@ final class ec extends ao {
           param1[7] = this.field_q;
           param1[2] = this.field_i;
           param1[6] = this.field_p;
-          stackIn_3_0 = (float[]) (param1);
+          float[] stackIn_3_0 = (float[]) (param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ec.V(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ec.V(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -348,9 +312,8 @@ final class ec extends ao {
     }
 
     final void a(ao param0, byte param1) {
-        ec var3 = null;
         try {
-          var3 = (ec) (param0);
+          ec var3 = (ec) (param0);
           this.field_i = var3.field_i;
           this.field_h = 0.0f;
           this.field_r = var3.field_r;
@@ -410,13 +373,7 @@ final class ec extends ao {
     }
 
     final float[] a(float[] param0, boolean param1) {
-        RuntimeException var3 = null;
-        float[] stackIn_2_0 = null;
-        float[] stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           param0[3] = 0.0f;
           param0[9] = this.field_p;
@@ -427,7 +384,7 @@ final class ec extends ao {
           param0[2] = this.field_r;
           param0[12] = this.field_k;
           if (!param1) {
-            stackIn_2_0 = (float[]) null;
+            float[] stackIn_2_0 = (float[]) null;
             return stackIn_2_0;
           }
           param0[11] = 0.0f;
@@ -438,13 +395,13 @@ final class ec extends ao {
           param0[6] = this.field_u;
           param0[5] = this.field_f;
           param0[13] = this.field_q;
-          stackIn_4_0 = (float[]) (param0);
+          float[] stackIn_4_0 = (float[]) (param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("ec.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var3;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ec.G(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -455,11 +412,9 @@ final class ec extends ao {
     }
 
     final void a(ao param0, byte param1, ao param2) {
-        ec var6 = null;
-        ec var5 = null;
         try {
-          var6 = (ec) (param0);
-          var5 = (ec) (param2);
+          ec var6 = (ec) (param0);
+          ec var5 = (ec) (param2);
           this.field_l = var6.field_n * var5.field_s + var6.field_l * var5.field_l + var6.field_i * var5.field_r;
           this.field_s = var5.field_s * var6.field_f + var6.field_s * var5.field_l + var6.field_p * var5.field_r;
           this.field_n = var5.field_n * var6.field_l + var6.field_n * var5.field_f + var6.field_i * var5.field_u;
@@ -565,17 +520,12 @@ final class ec extends ao {
     }
 
     final void a(float param0, float param1, float[] param2, float param3, float param4, int param5) {
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         float var7_float = 0.0f;
-        RuntimeException var7 = null;
         float var8 = 0.0f;
         float var9 = 0.0f;
         float var10 = 0.0f;
-        int var11 = 0;
-        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 != 11) {
             field_m = (int[]) null;
@@ -606,10 +556,10 @@ final class ec extends ao {
           param2[3] = -(param2[2] * var9 + (var8 * param2[1] + var7_float * param2[0]));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_15_0 = var7;
-          stackIn_15_1 = new StringBuilder().append("ec.A(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var7;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ec.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_16_2 = "null";
           } else {

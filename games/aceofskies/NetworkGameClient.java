@@ -23,37 +23,25 @@ abstract class NetworkGameClient extends GameAppletShell {
 
     private final int a(int param0, boolean param1, boolean param2) {
         try {
-          Throwable decompiledCaughtException = null;
-          int var4 = 0;
-          int var5_int = 0;
-          Exception var5 = null;
-          String var7 = null;
-          int var8 = 0;
-          String var9 = null;
-          String var10 = null;
-          Boolean var11 = null;
-          PacketBuffer var12 = null;
-          int var5_intLifetime1;
-          int var5_intLifetime2;
-          var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-          var4 = b.a(nh.field_e, (byte) 72, param1, fb.field_e);
+          int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+          int var4 = b.a(nh.field_e, (byte) 72, param1, fb.field_e);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5_int = bb.a(gt.a((byte) -46), (byte) 127, ju.e(123));
+            int var5_int = bb.a(gt.a((byte) -46), (byte) 127, ju.e(123));
             if (-1 != var5_int) {
               gt.a(param0 + 115, rp.field_m, var5_int, sd.field_j);
               rp.field_m = null;
               sd.field_j = null;
             }
-            var11 = NetworkGameClient.h(122);
+            Boolean var11 = NetworkGameClient.h(122);
             if (var11 != null) {
               SmokeParticle.a((byte) 77, var11.booleanValue());
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = mj.a(la.a(4), param0 ^ 11, this.field_E, ve.a(true), ce.g(-3), sa.b(-25752), of.a(false));
+            int var5_intLifetime1 = mj.a(la.a(4), param0 ^ 11, this.field_E, ve.a(true), ce.g(-3), sa.b(-25752), of.a(false));
             if (-1 != var5_intLifetime1) {
               pp.a(sd.field_j, var5_intLifetime1, rp.field_m, param0 + 26318);
               sd.field_j = null;
@@ -69,7 +57,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param2) {
               BitmapFontMetrics.field_f = false;
             } else {
-              var5_intLifetime2 = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), false);
+              int var5_intLifetime2 = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), false);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   li.a(param0 ^ 118, var5_intLifetime2, rp.field_m);
@@ -122,21 +110,21 @@ abstract class NetworkGameClient extends GameAppletShell {
                 hb.field_a = new cc(pt.field_b, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (hb.field_a.a((byte) 118)) {
-                var12 = hb.field_a.a(true);
+                PacketBuffer var12 = hb.field_a.a(true);
                 if (var12 != null) {
-                  var7 = hf.a(65, var12.position, 0, var12.payload);
+                  String var7 = hf.a(65, var12.position, 0, var12.payload);
                   hp.a((byte) -121, var7);
                 } else {
-                  var9 = (String) null;
+                  String var9 = (String) null;
                   hp.a((byte) -117, (String) null);
                 }
                 hb.field_a = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var5 = (Exception) (Object) decompiledCaughtException;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              Exception var5 = (Exception) (Object) decompiledCaughtException;
               v.a("S1", (byte) -52, (Throwable) ((Object) var5));
-              var10 = (String) null;
+              String var10 = (String) null;
               hp.a((byte) -112, (String) null);
               hb.field_a = null;
             }
@@ -176,12 +164,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     final void i(int param0) {
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        int stackIn_4_1 = 0;
-        boolean stackIn_5_2 = false;
-        int var3;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 4) {
           return;
         }
@@ -189,7 +172,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (bl.field_c >= 10) {
             if (uk.a((byte) -5)) {
               if (SoundCache.field_d == 0) {
-                discarded$0 = this.a(8, false, false);
+                int discarded$0 = this.a(8, false, false);
               } else {
                 ic.a(nh.field_e, false);
               }
@@ -198,51 +181,41 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
         } else {
-          stackIn_4_1 = 8;
-          stackIn_5_2 = (null != jf.field_a);
-          discarded$1 = this.a(stackIn_4_1, stackIn_5_2, false);
+          int stackIn_4_1 = 8;
+          boolean stackIn_5_2 = (null != jf.field_a);
+          int discarded$1 = this.a(stackIn_4_1, stackIn_5_2, false);
         }
     }
 
     private final void a(int param0, boolean param1, String param2, int param3, int param4) {
-        boolean stackIn_7_1 = false;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         Throwable decompiledCaughtException = null;
-        String var6 = null;
-        Exception var6_ref = null;
-        RuntimeException var6_ref2 = null;
-        String var7 = null;
-        String var8 = null;
-        String var9 = null;
-        String var10 = null;
         try {
           try {
             if (!this.b(param1)) {
               return;
             }
             this.field_w = this.getCodeBase().getHost();
-            var6 = this.field_w.toLowerCase();
-            stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
+            String var6 = this.field_w.toLowerCase();
+            boolean stackIn_7_1 = (var6.equals("jagex.com")) || (var6.endsWith(".jagex.com"));
             this.field_r = stackIn_7_1;
             this.field_y = Integer.parseInt(this.getParameter("gameport1"));
             this.field_F = Integer.parseInt(this.getParameter("gameport2"));
-            var7 = this.getParameter("servernum");
+            String var7 = this.getParameter("servernum");
             if (var7 != null) {
               this.field_s = Integer.parseInt(var7);
             }
             this.field_u = Integer.parseInt(this.getParameter("gamecrc"));
             this.field_z = Long.parseLong(this.getParameter("instanceid"));
             this.field_A = this.getParameter("member").equals("yes");
-            var8 = this.getParameter("lang");
+            String var8 = this.getParameter("lang");
             if (var8 != null) {
               this.field_D = Integer.parseInt(var8);
             }
             if (this.field_D >= 5) {
               this.field_D = 0;
             }
-            var9 = this.getParameter("affid");
+            String var9 = this.getParameter("affid");
             if (var9 != null) {
               this.field_E = Integer.parseInt(var9);
             }
@@ -250,17 +223,17 @@ abstract class NetworkGameClient extends GameAppletShell {
             this.a(param0, 0, param3, param2, this.field_u, param4, 32);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var6_ref = (Exception) (Object) decompiledCaughtException;
-            var10 = (String) null;
+            Exception var6_ref = (Exception) (Object) decompiledCaughtException;
+            String var10 = (String) null;
             v.a((String) null, (byte) -52, (Throwable) ((Object) var6_ref));
             this.a(-107, "crash");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_23_0 = var6_ref2;
-          stackIn_23_1 = new StringBuilder().append("ct.K(").append(param0).append(',').append(param1).append(',');
+          RuntimeException var6_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_23_0 = var6_ref2;
+          StringBuilder stackIn_23_1 = new StringBuilder().append("ct.K(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_24_2 = "null";
           } else {
@@ -297,8 +270,7 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     final int p(int param0) {
-        int var2;
-        var2 = this.j(-76);
+        int var2 = this.j(-76);
         if (param0 != 16637) {
           return -117;
         }
@@ -352,7 +324,6 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final int j(int param0) {
-        int var2;
         if (param0 >= -35) {
           this.e((byte) 71);
         }
@@ -365,7 +336,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (BitmapFontMetrics.field_f) {
           return -1;
         }
-        var2 = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), true);
+        int var2 = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), true);
         if (var2 == -1) {
           return -1;
         }
@@ -434,22 +405,11 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     final void b(boolean param0, byte param1) {
-        int stackIn_24_0 = 0;
-        boolean stackIn_100_0 = false;
-        String stackIn_102_1 = null;
-        boolean stackIn_103_2 = false;
-        int stackIn_134_0 = 0;
-        int var3;
-        java.awt.Dimension var4;
-        int var5;
-        java.awt.Container var6;
-        int var3Lifetime1;
-        int var3Lifetime2;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (aj.field_s != null) {
           if (jf.field_a == null) {
-            var6 = MenuScreen.b((byte) 127);
-            var4 = var6.getSize();
+            java.awt.Container var6 = MenuScreen.b((byte) 127);
+            java.awt.Dimension var4 = var6.getSize();
             aj.field_s.a(0, var4.width, var4.height);
           }
           aj.field_s.b(59);
@@ -464,7 +424,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           nh.field_e = SteeringMode.field_c.b(12);
         }
         if (tg.a(-128)) {
-          var3 = bl.a(101) * 1200;
+          int var3 = bl.a(101) * 1200;
           if (this.field_q ||
             !(var3 >= fb.b(0)) &&
             !(ro.c((byte) -37) <= var3)) {
@@ -479,8 +439,8 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (sk.field_a == -1 ||
           sk.field_a == 0) {
-          stackIn_24_0 = (sk.field_a != -1) ? 0 : 1;
-          var3Lifetime1 = stackIn_24_0;
+          int stackIn_24_0 = (sk.field_a != -1) ? 0 : 1;
+          int var3Lifetime1 = stackIn_24_0;
           sk.field_a = lb.a(0);
           if (var3Lifetime1 != 0 &&
             0 == sk.field_a &&
@@ -597,9 +557,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           cg.a(false, uj.field_b, oi.field_a, te.field_h, cf.field_f);
           if (qp.field_i ||
             fg.field_k != null) {
-            stackIn_100_0 = !(qp.field_i);
-            stackIn_102_1 = fg.field_k;
-            stackIn_103_2 = !(qp.field_i);
+            boolean stackIn_100_0 = !(qp.field_i);
+            String stackIn_102_1 = fg.field_k;
+            boolean stackIn_103_2 = !(qp.field_i);
             hr.a(stackIn_100_0, stackIn_102_1, stackIn_103_2, (byte) -61);
           }
           if (qr.field_b) {
@@ -623,12 +583,11 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           bl.field_c = 11;
         }
-        boolean decompiledFrameRemainder0 = true;
         if (bl.field_c == 11) {
           if (null != fn.field_a && (!fn.field_a.b((byte) -88) ||
             !fn.field_a.b(0))) {
             fh.setLoadingProgress(-82, 0.0f, Vector2.a(dt.field_b, gm.field_w, fn.field_a, 50));
-            decompiledFrameRemainder0 = false;
+            boolean decompiledFrameRemainder0 = false;
           }
           else {
             bl.field_c = 12;
@@ -640,9 +599,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           bl.field_c = 13;
         }
         if (bl.field_c == 13) {
-          var3Lifetime2 = 1;
+          int var3Lifetime2 = 1;
           if (null != hg.field_y) {
-            stackIn_134_0 = (!hg.field_y.a(-18738)) ? 0 : 1;
+            int stackIn_134_0 = (!hg.field_y.a(-18738)) ? 0 : 1;
             var3Lifetime2 = stackIn_134_0;
             fh.setLoadingProgress(-59, hg.field_y.field_d, hg.field_y.field_j);
           }
@@ -699,14 +658,9 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     final void f(byte param0) {
-        boolean stackIn_25_0 = false;
-        int var2;
-        int var3;
-        s var4;
-        int var5;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var2 = qs.field_b;
-        var3 = -90 / ((param0 + 27) / 61);
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var2 = qs.field_b;
+        int var3 = -90 / ((param0 + 27) / 61);
         if (var2 < 64 &&
           fh.field_e[var2]) {
           if (var2 == 0) {
@@ -747,8 +701,8 @@ abstract class NetworkGameClient extends GameAppletShell {
                               te.b(true);
                               return;
                             }
-                            stackIn_25_0 = (12 == var2);
-                            var4 = um.a(stackIn_25_0, 1);
+                            boolean stackIn_25_0 = (12 == var2);
+                            s var4 = um.a(stackIn_25_0, 1);
                             pj.a(0, var4);
                           }
                         }
@@ -786,9 +740,8 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void l(int param0) {
-        int discarded$0 = 0;
         if (param0 != -11) {
-          discarded$0 = this.j(-15);
+          int discarded$0 = this.j(-15);
         }
         fh.field_e[5] = true;
     }

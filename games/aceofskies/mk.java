@@ -34,8 +34,6 @@ abstract class mk extends RenderSprite {
     private static int field_t;
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        int var11;
-        int var12;
         if (this.field_D.h()) {
           throw new IllegalStateException();
         }
@@ -177,8 +175,8 @@ abstract class mk extends RenderSprite {
         if (param6 == 2) {
           field_B = param7 >>> 24;
           field_t = 256 - field_B;
-          var11 = (param7 & 16711935) * field_t & -16711936;
-          var12 = (param7 & 65280) * field_t & 16711680;
+          int var11 = (param7 & 16711935) * field_t & -16711936;
+          int var12 = (param7 & 65280) * field_t & 16711680;
           field_s = (var11 | var12) >>> 8;
         }
         if (param6 == 1) {
@@ -247,8 +245,6 @@ abstract class mk extends RenderSprite {
     }
 
     private final boolean a(float param0, float param1, float param2, float param3, float param4, float param5) {
-        int var7;
-        int var8;
         float var9;
         float var10;
         float var11;
@@ -261,16 +257,12 @@ abstract class mk extends RenderSprite {
         float var18;
         float var19;
         float var20;
-        float var9Lifetime1;
-        float var10Lifetime1;
         float var11Lifetime1;
         float var12Lifetime1;
         float var13Lifetime1;
         float var14Lifetime1;
-        float var15Lifetime1;
-        float var16Lifetime1;
-        var7 = this.field_g + this.field_o + this.field_m;
-        var8 = this.field_z + this.field_p + this.field_l;
+        int var7 = this.field_g + this.field_o + this.field_m;
+        int var8 = this.field_z + this.field_p + this.field_l;
         if (var7 != this.field_o) {
           var9 = (param2 - param0) / (float)var7;
           var10 = (param3 - param1) / (float)var7;
@@ -312,8 +304,8 @@ abstract class mk extends RenderSprite {
             param5 = param5 + (var16 + var20);
           }
         }
-        var9Lifetime1 = param4 + (param2 - param0);
-        var10Lifetime1 = param3 + (param5 - param1);
+        float var9Lifetime1 = param4 + (param2 - param0);
+        float var10Lifetime1 = param3 + (param5 - param1);
         if (!(param0 < param2)) {
           var11Lifetime1 = param2;
           var12Lifetime1 = param0;
@@ -374,8 +366,8 @@ abstract class mk extends RenderSprite {
         }
         field_r = this.field_D.field_f;
         field_w = (int)((float)((int)var13Lifetime1 * field_r) + var11Lifetime1);
-        var15Lifetime1 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
-        var16Lifetime1 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
+        float var15Lifetime1 = (param2 - param0) * (param5 - param1) - (param3 - param1) * (param4 - param0);
+        float var16Lifetime1 = (param4 - param0) * (param3 - param1) - (param5 - param1) * (param2 - param0);
         field_A = (int)((param5 - param1) * 4096.0f * (float)this.field_o / var15Lifetime1);
         field_f = (int)((param3 - param1) * 4096.0f * (float)this.field_p / var16Lifetime1);
         field_q = (int)((param4 - param0) * 4096.0f * (float)this.field_o / var16Lifetime1);

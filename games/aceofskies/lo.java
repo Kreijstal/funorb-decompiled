@@ -9,11 +9,7 @@ final class lo extends sk {
     private boolean field_g;
 
     final void a(int param0, int param1, jj param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_i) {
             this.field_b.a(param2, -9135);
@@ -25,10 +21,10 @@ final class lo extends sk {
           field_j = (as) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("lo.I(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var4;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("lo.I(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -55,19 +51,9 @@ final class lo extends sk {
 
     lo(jc param0, ResourceArchive param1, em param2) {
         super(param0);
-        vj var4 = null;
-        RuntimeException var4_ref = null;
-        vj var5 = null;
-        vj var6 = null;
-        boolean stackIn_12_1 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_f = param2;
           if (param1 == null) {
@@ -82,30 +68,30 @@ final class lo extends sk {
             this.field_g = false;
             return;
           }
-          var6 = RendererManager.a((byte) 29, 35633, param1.a("gl", (byte) -71, "environment_mapped_water_v"), param0);
-          var4 = var6;
-          var5 = RendererManager.a((byte) 29, 35632, param1.a("gl", (byte) -71, "environment_mapped_water_f"), param0);
+          vj var6 = RendererManager.a((byte) 29, 35633, param1.a("gl", (byte) -71, "environment_mapped_water_v"), param0);
+          vj var4 = var6;
+          vj var5 = RendererManager.a((byte) 29, 35632, param1.a("gl", (byte) -71, "environment_mapped_water_f"), param0);
           this.field_h = mo.a(0, param0, new vj[]{var6, var5});
-          stackIn_12_1 = (null != this.field_h) && (this.field_f.a(0));
+          boolean stackIn_12_1 = (null != this.field_h) && (this.field_f.a(0));
           this.field_g = stackIn_12_1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_16_0 = var4_ref;
-          stackIn_16_1 = new StringBuilder().append("lo.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var4_ref;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("lo.<init>(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
           if (param2 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -116,23 +102,13 @@ final class lo extends sk {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
-        float var5 = 0.0f;
-        int var6 = 0;
-        float var7 = 0.0f;
-        long var8 = 0L;
-        int var4Lifetime1;
-        float var5Lifetime1;
-        int var6Lifetime1;
-        float var7Lifetime1;
-        long var8Lifetime1;
         if (param0 == 1786747298) {
           if (this.field_i) {
-            var4 = 1 << (param1 & 3);
-            var5 = (float)(1 << ((param1 & 58) >> 3)) / 32.0f;
-            var6 = param2 & 65535;
-            var7 = (float)((param2 & 246595) >> 16) / 8.0f;
-            var8 = this.field_h.field_d;
+            int var4 = 1 << (param1 & 3);
+            float var5 = (float)(1 << ((param1 & 58) >> 3)) / 32.0f;
+            int var6 = param2 & 65535;
+            float var7 = (float)((param2 & 246595) >> 16) / 8.0f;
+            long var8 = this.field_h.field_d;
             jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "time"), (float)(this.field_b.field_r * var4 % 40000) / 40000.0f);
             jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "scale"), var5);
             jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8, "breakWaterDepth"), (float)var6);
@@ -142,11 +118,11 @@ final class lo extends sk {
         }
         this.field_h = (io) null;
         if (this.field_i) {
-          var4Lifetime1 = 1 << (param1 & 3);
-          var5Lifetime1 = (float)(1 << ((param1 & 58) >> 3)) / 32.0f;
-          var6Lifetime1 = param2 & 65535;
-          var7Lifetime1 = (float)((param2 & 246595) >> 16) / 8.0f;
-          var8Lifetime1 = this.field_h.field_d;
+          int var4Lifetime1 = 1 << (param1 & 3);
+          float var5Lifetime1 = (float)(1 << ((param1 & 58) >> 3)) / 32.0f;
+          int var6Lifetime1 = param2 & 65535;
+          float var7Lifetime1 = (float)((param2 & 246595) >> 16) / 8.0f;
+          long var8Lifetime1 = this.field_h.field_d;
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "time"), (float)(this.field_b.field_r * var4Lifetime1 % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "scale"), var5Lifetime1);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var8Lifetime1, "breakWaterDepth"), (float)var6Lifetime1);
@@ -163,20 +139,16 @@ final class lo extends sk {
     }
 
     final void a(boolean param0, byte param1) {
-        go var3 = null;
-        long var4 = 0L;
-        go var3Lifetime1;
-        long var4Lifetime1;
         if (param1 < 2) {
           field_j = (as) null;
-          var3 = this.field_b.O(29190);
+          go var3 = this.field_b.O(29190);
           if (this.field_g) {
             if (var3 != null) {
               this.field_b.a(1, (byte) 125);
               this.field_b.a(var3, -9135);
               this.field_b.a(0, (byte) 59);
               this.field_b.a(this.field_f.field_a, -9135);
-              var4 = this.field_h.field_d;
+              long var4 = this.field_h.field_d;
               jaggl.OpenGL.glUseProgramObjectARB(var4);
               jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);
               jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "envMapSampler"), 1);
@@ -189,7 +161,7 @@ final class lo extends sk {
           }
           return;
         }
-        var3Lifetime1 = this.field_b.O(29190);
+        go var3Lifetime1 = this.field_b.O(29190);
         if (!this.field_g) {
           return;
         }
@@ -198,7 +170,7 @@ final class lo extends sk {
           this.field_b.a(var3Lifetime1, -9135);
           this.field_b.a(0, (byte) 59);
           this.field_b.a(this.field_f.field_a, -9135);
-          var4Lifetime1 = this.field_h.field_d;
+          long var4Lifetime1 = this.field_h.field_d;
           jaggl.OpenGL.glUseProgramObjectARB(var4Lifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4Lifetime1, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4Lifetime1, "envMapSampler"), 1);
@@ -211,8 +183,6 @@ final class lo extends sk {
     }
 
     final void a(boolean param0) {
-        jj var3 = null;
-        jj var3Lifetime1;
         if (this.field_i) {
           this.field_b.a(1, (byte) 52);
           this.field_b.a((jj) null, -9135);
@@ -221,7 +191,7 @@ final class lo extends sk {
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_i = false;
           if (!param0) {
-            var3 = (jj) null;
+            jj var3 = (jj) null;
             this.a(87, -111, (jj) null);
             return;
           }
@@ -230,7 +200,7 @@ final class lo extends sk {
         if (param0) {
           return;
         }
-        var3Lifetime1 = (jj) null;
+        jj var3Lifetime1 = (jj) null;
         this.a(87, -111, (jj) null);
     }
 

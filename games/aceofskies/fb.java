@@ -9,10 +9,8 @@ final class fb {
     static String field_b;
 
     final static void a(int param0) {
-        int var2 = 0;
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
-        var1 = ho.field_b;
+        Object var1 = ho.field_b;
         synchronized (var1) {
           oj.field_g = oj.field_g + 1;
           vu.heldMouseButton = mp.field_g;
@@ -24,7 +22,7 @@ final class fb {
           ln.field_c = kg.field_a;
           lq.field_a = SteeringMode.field_e;
           me.field_b = 0;
-          var2 = -26 / ((param0 - 11) / 61);
+          int var2 = -26 / ((param0 - 11) / 61);
         }
     }
 

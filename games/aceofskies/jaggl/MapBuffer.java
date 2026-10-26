@@ -11,9 +11,8 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
     }
 
     public final boolean b() {
-        int var1_int;
         RuntimeException var1;
-        var1_int = 1;
+        int var1_int = 1;
         if (this.c != 0) {
           var1_int = jaggl.OpenGL.glUnmapBufferARB(this.c) ? 1 : 0;
           this.a(0L, 0);
@@ -33,12 +32,11 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
     }
 
     public final boolean a(int param0, int param1, int param2) {
-        long var4_long;
         RuntimeException var4;
         if (this.c != 0) {
           return false;
         }
-        var4_long = jaggl.OpenGL.glMapBufferARB(param0, param2);
+        long var4_long = jaggl.OpenGL.glMapBufferARB(param0, param2);
         if (var4_long == 0L) {
           return false;
         }

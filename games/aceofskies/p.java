@@ -32,9 +32,8 @@ final class p extends IntrusiveNode implements e {
     }
 
     final void a(int param0, int param1) {
-        java.awt.Dimension var4 = null;
         synchronized (this.field_i.getTreeLock()) {
-          var4 = this.field_i.getSize();
+          java.awt.Dimension var4 = this.field_i.getSize();
           this.H(param0, param1, var4.width, var4.height);
           field_e = false;
         }

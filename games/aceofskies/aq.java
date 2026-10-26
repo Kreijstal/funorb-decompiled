@@ -10,19 +10,16 @@ final class aq {
     private wl field_c;
 
     final static void b(int param0) {
-        Sprite var1 = null;
-        Sprite var2 = null;
-        int var3 = 0;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var1 = new Sprite(param0, 140);
+          Sprite var1 = new Sprite(param0, 140);
           cm.a(var1, param0 - 15032);
           re.a();
           SoftwareRasterizer.clearFramebuffer();
           it.field_c = 0;
           wj.e((byte) -128);
-          var2 = var1.copy();
-          for (var3 = 0; var3 < 15; var3++) {
+          Sprite var2 = var1.copy();
+          for (int var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
             SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
@@ -48,32 +45,24 @@ final class aq {
     }
 
     final static StringBuilder a(char param0, int param1, int param2, StringBuilder param3) {
-        int var5 = 0;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        StringBuilder var6 = null;
-        StringBuilder stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param3.length();
+          int var4_int = param3.length();
           param3.setLength(param2);
           if (param1 != -2) {
-            var6 = (StringBuilder) null;
+            StringBuilder var6 = (StringBuilder) null;
             aq.a('.', 9, -96, (StringBuilder) null);
           }
-          for (var5 = var4_int; var5 < param2; var5++) {
+          for (int var5 = var4_int; var5 < param2; var5++) {
             param3.setCharAt(var5, param0);
           }
-          stackIn_6_0 = (StringBuilder) (param3);
+          StringBuilder stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("aq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var4;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("aq.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_10_2 = "null";
           } else {

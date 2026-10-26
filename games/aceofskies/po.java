@@ -14,9 +14,8 @@ final class po extends ka {
     private ms field_i;
 
     final static void a(fp param0, byte param1, int param2) {
-        CipherPacketBuffer var3 = null;
         try {
-          var3 = q.outgoingPacket;
+          CipherPacketBuffer var3 = q.outgoingPacket;
           var3.writeCipheredOpcode(127, param2);
           if (param1 < 19) {
             activeMenuId = -122;
@@ -29,28 +28,21 @@ final class po extends ka {
     }
 
     final static SoundPlayback a(int param0, int param1, PcmSample param2) {
-        SoundPlayback var3 = null;
-        RuntimeException var3_ref = null;
-        SoundPlayback stackIn_2_0 = null;
-        SoundPlayback stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            stackIn_2_0 = (SoundPlayback) null;
+            SoundPlayback stackIn_2_0 = (SoundPlayback) null;
             return stackIn_2_0;
           }
-          var3 = jo.a(param2, param0, (byte) -44);
+          SoundPlayback var3 = jo.a(param2, param0, (byte) -44);
           var3.field_g.d(-1);
-          stackIn_4_0 = var3;
+          SoundPlayback stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_7_0 = var3_ref;
-          stackIn_7_1 = new StringBuilder().append("po.A(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var3_ref;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("po.A(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -61,27 +53,18 @@ final class po extends ka {
     }
 
     final static String a(int param0, CharSequence param1, boolean param2) {
-        String var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        String stackIn_5_0 = null;
-        String stackIn_11_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -1) {
             po.c(126);
           }
-          var3 = ls.a(param1, param2, (byte) 21);
+          String var3 = ls.a(param1, param2, (byte) 21);
           if (var3 != null) {
-            stackIn_5_0 = var3;
+            String stackIn_5_0 = var3;
             return stackIn_5_0;
           }
-          var4 = 0;
+          int var4 = 0;
           while (true) {
             if (param1.length() <= var4) {
               return null;
@@ -92,13 +75,13 @@ final class po extends ka {
             }
             break;
           }
-          stackIn_11_0 = wi.field_b;
+          String stackIn_11_0 = wi.field_b;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("po.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var3_ref;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("po.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -110,31 +93,25 @@ final class po extends ka {
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-          int var2_int = 0;
-          RuntimeException var2 = null;
-          java.net.URL var3 = null;
-          Exception var3_ref = null;
-          RuntimeException stackIn_7_0 = null;
-          StringBuilder stackIn_7_1 = null;
           String stackIn_8_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            var2_int = -51 % ((param1 + 49) / 53);
+            int var2_int = -51 % ((param1 + 49) / 53);
             try {
-              var3 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
+              java.net.URL var3 = new java.net.URL(param0.getCodeBase(), "toserverlist.ws");
               param0.getAppletContext().showDocument(jf.a(param0, var3, -53), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref = (Exception) (Object) decompiledCaughtException;
+              Exception var3_ref = (Exception) (Object) decompiledCaughtException;
               var3_ref.printStackTrace();
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_7_0 = var2;
-            stackIn_7_1 = new StringBuilder().append("po.C(");
+            RuntimeException var2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_7_0 = var2;
+            StringBuilder stackIn_7_1 = new StringBuilder().append("po.C(");
             if (param0 == null) {
               stackIn_8_2 = "null";
             } else {
@@ -150,8 +127,6 @@ final class po extends ka {
     }
 
     final void b(int param0) {
-        CharSequence var3;
-        CharSequence var3Lifetime1;
         if (null != this.field_c) {
           this.field_c.a(true);
           if (null != this.field_b) {
@@ -164,7 +139,7 @@ final class po extends ka {
             this.field_f.a(true);
           }
           if (param0 != 0) {
-            var3 = (CharSequence) null;
+            CharSequence var3 = (CharSequence) null;
             po.a(-108, (CharSequence) null, true);
           }
           if (null != this.field_i) {
@@ -187,7 +162,7 @@ final class po extends ka {
           }
           return;
         }
-        var3Lifetime1 = (CharSequence) null;
+        CharSequence var3Lifetime1 = (CharSequence) null;
         po.a(-108, (CharSequence) null, true);
         if (null != this.field_i) {
           this.field_i.b((byte) 29);
@@ -203,11 +178,7 @@ final class po extends ka {
     }
 
     po(bf param0, int param1, int param2, boolean param3, boolean param4) {
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
         try {
           this.field_d = param2;
           this.field_g = param1;
@@ -234,10 +205,10 @@ final class po extends ka {
           this.field_i = new ms(hs.a(true, this.field_g, this.field_d));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_19_0 = var6;
-          stackIn_19_1 = new StringBuilder().append("po.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var6;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("po.<init>(");
           if (param0 == null) {
             stackIn_20_2 = "null";
           } else {

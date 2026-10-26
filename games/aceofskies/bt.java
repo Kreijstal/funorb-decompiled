@@ -16,19 +16,15 @@ final class bt {
     }
 
     final static String a(boolean param0, long param1) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         qs.field_a.setTime(new Date(param1));
         int var3 = qs.field_a.get(7);
         int var4 = qs.field_a.get(5);
         int var5 = qs.field_a.get(2);
         if (!param0) {
-          var6 = qs.field_a.get(1);
-          var7 = qs.field_a.get(11);
-          var8 = qs.field_a.get(12);
-          var9 = qs.field_a.get(13);
+          int var6 = qs.field_a.get(1);
+          int var7 = qs.field_a.get(11);
+          int var8 = qs.field_a.get(12);
+          int var9 = qs.field_a.get(13);
           return jc.field_Rc[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + fk.field_b[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;

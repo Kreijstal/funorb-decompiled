@@ -57,13 +57,7 @@ final class hs implements Iterable {
 
     private final DualLinkNode a(DualLinkNode param0, int param1) {
         DualLinkNode var3 = null;
-        RuntimeException var3_ref = null;
-        Object stackIn_8_0 = null;
-        DualLinkNode stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 128) {
             this.field_c = (DualLinkNode) null;
@@ -75,17 +69,17 @@ final class hs implements Iterable {
           }
           if (this.field_c == var3) {
             this.field_b = null;
-            stackIn_8_0 = null;
+            Object stackIn_8_0 = null;
             return (DualLinkNode) (stackIn_8_0);
           }
           this.field_b = var3.nextSecondaryNode;
-          stackIn_10_0 = var3;
+          DualLinkNode stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_13_0 = var3_ref;
-          stackIn_13_1 = new StringBuilder().append("hs.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var3_ref;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("hs.B(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {

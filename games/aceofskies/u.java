@@ -51,12 +51,9 @@ final class u extends sk {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4;
-        int var5;
-        jj var6;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1786747298) {
-          var6 = (jj) null;
+          jj var6 = (jj) null;
           this.a(-79, -84, (jj) null);
         }
         this.field_b.a(1, (byte) 111);
@@ -74,7 +71,7 @@ final class u extends sk {
               this.field_h = (float)(this.field_b.field_r % 4000) / 4000.0f;
               this.field_b.a(this.field_f.field_f, -9135);
             } else {
-              var4 = this.field_b.field_r % 4000 * 16 / 4000;
+              int var4 = this.field_b.field_r % 4000 * 16 / 4000;
               this.field_b.a(this.field_f.field_i[var4], -9135);
             }
           }
@@ -83,49 +80,19 @@ final class u extends sk {
     }
 
     final static int a(cd param0, int param1, String param2, boolean param3, int param4, int param5, cd param6) {
-        int var12 = 0;
-        int stackIn_5_0 = 0;
-        PacketBuffer stackIn_11_0 = null;
-        boolean stackIn_11_1 = false;
         String stackIn_12_2 = null;
-        PacketBuffer stackIn_14_0 = null;
-        boolean stackIn_14_1 = false;
         String stackIn_15_2 = null;
-        int stackIn_35_0 = 0;
-        int stackIn_45_0 = 0;
-        int stackIn_55_0 = 0;
-        int stackIn_63_0 = 0;
-        int stackIn_66_0 = 0;
-        RuntimeException stackIn_69_0 = null;
-        StringBuilder stackIn_69_1 = null;
         String stackIn_70_2 = null;
-        StringBuilder stackIn_72_1 = null;
         String stackIn_73_2 = null;
-        StringBuilder stackIn_75_1 = null;
         String stackIn_76_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
-        String var8 = null;
         int var9 = 0;
-        String var9_ref_String = null;
-        int var10 = 0;
-        String var11_ref_String = null;
-        int var11 = 0;
-        int var13 = 0;
-        String var14 = null;
-        CharSequence var15 = null;
-        int var10Lifetime1;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        int var9Lifetime3;
-        int var9Lifetime4;
-        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var14 = param6.b(-17233);
-          var8 = param0.b(-17233);
+          String var14 = param6.b(-17233);
+          String var8 = param0.b(-17233);
           if (ft.field_l == null &&
             !fp.a((byte) -116, false)) {
-            stackIn_5_0 = -1;
+            int stackIn_5_0 = -1;
             return stackIn_5_0;
           }
           if (ca.field_f == qa.field_b) {
@@ -141,15 +108,15 @@ final class u extends sk {
               fa.field_c.writeInt((byte) 115, vr.field_h.nextInt());
               fa.field_c.a(false, var14);
               fa.field_c.a(false, var8);
-              var15 = (CharSequence) ((Object) param2);
+              CharSequence var15 = (CharSequence) ((Object) param2);
               fa.field_c.a(false, ArchiveProvider.a((byte) -81, var15));
               fa.field_c.writeShort(param1, 23385);
               fa.field_c.writeByte(-1336879960, param5);
               fa.field_c.writeByte(-1336879960, var9);
               q.outgoingPacket.writeByte(-1336879960, 18);
               q.outgoingPacket.position = q.outgoingPacket.position + 2;
-              var10 = q.outgoingPacket.position;
-              var11_ref_String = ao.a(bm.m(108), false);
+              int var10 = q.outgoingPacket.position;
+              String var11_ref_String = ao.a(bm.m(108), false);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -160,16 +127,16 @@ final class u extends sk {
               fa.field_c.position = 0;
               fa.field_c.writeInt((byte) 88, vr.field_h.nextInt());
               fa.field_c.writeInt((byte) 23, vr.field_h.nextInt());
-              stackIn_11_0 = fa.field_c;
-              stackIn_11_1 = false;
+              PacketBuffer stackIn_11_0 = fa.field_c;
+              boolean stackIn_11_1 = false;
               if (param6.a(-109)) {
                 stackIn_12_2 = var14;
               } else {
                 stackIn_12_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_12_2);
-              stackIn_14_0 = fa.field_c;
-              stackIn_14_1 = false;
+              PacketBuffer stackIn_14_0 = fa.field_c;
+              boolean stackIn_14_1 = false;
               if (!param0.a(-103)) {
                 stackIn_15_2 = "";
               } else {
@@ -187,7 +154,7 @@ final class u extends sk {
           }
           if (mq.field_h == ca.field_f &&
             wo.a(1, true)) {
-            var9Lifetime1 = IntKeyLookup.incomingPacket.readUnsignedByte(78);
+            int var9Lifetime1 = IntKeyLookup.incomingPacket.readUnsignedByte(78);
             IntKeyLookup.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
@@ -199,7 +166,7 @@ final class u extends sk {
                 rp.field_m = wo.field_h;
                 te.b(true);
                 ld.field_d = false;
-                stackIn_35_0 = var9Lifetime1;
+                int stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
               }
               if (var9Lifetime1 == 99) {
@@ -214,18 +181,18 @@ final class u extends sk {
             }
           }
           if (ca.field_f == kf.field_m) {
-            var9Lifetime2 = 2;
+            int var9Lifetime2 = 2;
             if (wo.a(var9Lifetime2, true)) {
-              var10Lifetime1 = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
+              int var10Lifetime1 = IntKeyLookup.incomingPacket.readUnsignedShort((byte) 0);
               IntKeyLookup.incomingPacket.position = 0;
               if (wo.a(var10Lifetime1, true)) {
-                var11 = sd.field_j.length;
-                for (var12 = 0; var11 > var12; var12++) {
+                int var11 = sd.field_j.length;
+                for (int var12 = 0; var11 > var12; var12++) {
                   sd.field_j[var12] = IntKeyLookup.incomingPacket.d((byte) 77);
                 }
                 te.b(true);
                 ld.field_d = false;
-                stackIn_45_0 = 100 + var11;
+                int stackIn_45_0 = 100 + var11;
                 return stackIn_45_0;
               }
             }
@@ -233,7 +200,7 @@ final class u extends sk {
           if (cd.field_a == ca.field_f &&
             rm.a(0)) {
             if (qs.field_b == 255) {
-              var9_ref_String = IntKeyLookup.incomingPacket.e((byte) -109);
+              String var9_ref_String = IntKeyLookup.incomingPacket.e((byte) -109);
               if (var9_ref_String != null) {
                 sf.a((byte) -125, bm.m(118), var9_ref_String);
               }
@@ -242,7 +209,7 @@ final class u extends sk {
             }
             te.b(true);
             ld.field_d = false;
-            stackIn_55_0 = qs.field_b;
+            int stackIn_55_0 = qs.field_b;
             return stackIn_55_0;
           }
           if (ft.field_l == null) {
@@ -253,34 +220,34 @@ final class u extends sk {
                 rp.field_m = rm.field_c;
               }
               ld.field_d = false;
-              stackIn_63_0 = 249;
+              int stackIn_63_0 = 249;
               return stackIn_63_0;
             }
-            var9Lifetime3 = sg.field_b;
+            int var9Lifetime3 = sg.field_b;
             sg.field_b = ca.field_h;
             ca.field_h = var9Lifetime3;
             ld.field_d = true;
           }
-          var9Lifetime4 = 74 % ((-57 - param4) / 47);
-          stackIn_66_0 = -1;
+          int var9Lifetime4 = 74 % ((-57 - param4) / 47);
+          int stackIn_66_0 = -1;
           return stackIn_66_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_69_0 = var7;
-          stackIn_69_1 = new StringBuilder().append("u.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_69_0 = var7;
+          StringBuilder stackIn_69_1 = new StringBuilder().append("u.E(");
           if (param0 == null) {
             stackIn_70_2 = "null";
           } else {
             stackIn_70_2 = "{...}";
           }
-          stackIn_72_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_72_1 = ((StringBuilder) (Object) stackIn_69_1).append(stackIn_70_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_73_2 = "null";
           } else {
             stackIn_73_2 = "{...}";
           }
-          stackIn_75_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          StringBuilder stackIn_75_1 = ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_76_2 = "null";
           } else {
@@ -328,15 +295,13 @@ final class u extends sk {
     }
 
     final void d(int param0) {
-        ec var2 = null;
-        ec var3 = null;
         if (param0 != 18580) {
           this.field_h = 1.6919490098953247f;
         }
         if (0 == this.field_b.M(7693)) {
-          var2 = this.field_b.J(100);
+          ec var2 = this.field_b.J(100);
           this.field_b.a(1, (byte) 89);
-          var3 = this.field_b.d(param0 ^ 30883);
+          ec var3 = this.field_b.d(param0 ^ 30883);
           var3.a(var2, true);
           var3.a(0.125f, 1.0f, 0.125f, 0);
           var3.b(0.0f, (byte) -125, this.field_h, 0.0f);

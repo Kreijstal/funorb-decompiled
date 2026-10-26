@@ -19,20 +19,15 @@ final class rr {
 
     final static void a(byte param0, java.applet.Applet param1) {
         try {
-          java.net.URL var2 = null;
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
-          Exception var2_ref = null;
-          RuntimeException var2_ref2 = null;
           try {
             try {
-              var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
+              java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
               param1.getAppletContext().showDocument(jf.a(param1, var2, -49), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
+              Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref.printStackTrace();
             }
             if (param0 > -39) {
@@ -41,9 +36,9 @@ final class rr {
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var2_ref2;
-            stackIn_8_1 = new StringBuilder().append("rr.C(").append(param0).append(',');
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_8_0 = var2_ref2;
+            StringBuilder stackIn_8_1 = new StringBuilder().append("rr.C(").append(param0).append(',');
             if (param1 == null) {
               stackIn_9_2 = "null";
             } else {
@@ -59,11 +54,8 @@ final class rr {
     }
 
     final static char a(char param0, byte param1) {
-        int var2;
-        java.applet.Applet var3;
-        int var2Lifetime1;
         if (param1 == -70) {
-          var2 = param0;
+          int var2 = param0;
           if (32 == var2) {
             return '_';
           }
@@ -163,9 +155,9 @@ final class rr {
           }
           return param0;
         }
-        var3 = (java.applet.Applet) null;
+        java.applet.Applet var3 = (java.applet.Applet) null;
         rr.a((byte) 58, (java.applet.Applet) null);
-        var2Lifetime1 = param0;
+        int var2Lifetime1 = param0;
         if (32 == var2Lifetime1) {
           return '_';
         }
@@ -289,18 +281,15 @@ final class rr {
 
     final static void a(String param0, byte param1, java.applet.Applet param2) {
         try {
-          String var3 = null;
-          String var4 = null;
-          String var5 = null;
           try {
             ac.field_d = param0;
             try {
-              var3 = param2.getParameter("cookieprefix");
+              String var3 = param2.getParameter("cookieprefix");
               if (param1 > -105) {
                 field_a = (String) null;
               }
-              var4 = param2.getParameter("cookiehost");
-              var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
+              String var4 = param2.getParameter("cookiehost");
+              String var5 = var3 + "session=" + param0 + "; version=1; path=/; domain=" + var4;
               if (0 == param0.length()) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

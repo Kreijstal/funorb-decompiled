@@ -14,31 +14,24 @@ class oo extends dg implements dn {
     private boolean field_Z;
 
     final void l(int param0) {
-        jn var2 = null;
-        jn var2Lifetime1;
         if (param0 >= 82) {
           this.field_bb.a(4210752, 2121792, (byte) 61);
-          var2 = new jn(this, this.field_U, ek.field_x);
+          jn var2 = new jn(this, this.field_U, ek.field_x);
           var2.a(15, (byte) -57, ag.field_o);
           this.d(var2, -30244);
           return;
         }
         this.field_bb = (ss) null;
         this.field_bb.a(4210752, 2121792, (byte) 61);
-        var2Lifetime1 = new jn(this, this.field_U, ek.field_x);
+        jn var2Lifetime1 = new jn(this, this.field_U, ek.field_x);
         var2Lifetime1.a(15, (byte) -57, ag.field_o);
         this.d(var2Lifetime1, -30244);
     }
 
     public void a(int param0, mi param1, int param2, int param3, byte param4) {
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = 80 % ((param4 + 27) / 61);
+          int var6_int = 80 % ((param4 + 27) / 61);
           if (!this.field_X) {
             vi.a((byte) 103, "tochangedisplayname.ws", bm.m(125));
             return;
@@ -47,10 +40,10 @@ class oo extends dg implements dn {
           this.h((byte) -64);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_6_0 = var6;
-          stackIn_6_1 = new StringBuilder().append("oo.DA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var6;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("oo.DA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -103,26 +96,20 @@ class oo extends dg implements dn {
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (13 == param1) {
             this.h((byte) 125);
             return true;
           }
-          var5_int = 48 % ((param0 + 53) / 33);
-          stackIn_5_0 = super.a(23, param1, param2, param3);
+          int var5_int = 48 % ((param0 + 53) / 33);
+          boolean stackIn_5_0 = super.a(23, param1, param2, param3);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("oo.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var5;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("oo.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -133,37 +120,25 @@ class oo extends dg implements dn {
     }
 
     final void a(byte param0, int param1, String param2) {
-        boolean stackIn_7_1 = false;
-        jn stackIn_13_0 = null;
-        int stackIn_13_1 = 0;
-        int stackIn_13_2 = 0;
         String stackIn_14_3;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        jn var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        int var6 = 0;
-        jn var7 = null;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_Z) {
             return;
           }
-          stackIn_7_1 = (256 == param1);
+          boolean stackIn_7_1 = (256 == param1);
           this.field_X = stackIn_7_1;
           this.field_Z = true;
           this.field_bb.a(4210752, 8405024, (byte) -81);
-          var5 = 85 / ((1 - param0) / 52);
-          var7 = new jn(this, this.field_U, param2);
-          var4 = var7;
+          int var5 = 85 / ((1 - param0) / 52);
+          jn var7 = new jn(this, this.field_U, param2);
+          jn var4 = var7;
           if (param1 != 5) {
             if (param1 != 256) {
-              stackIn_13_0 = var7;
-              stackIn_13_1 = -1;
-              stackIn_13_2 = 124;
+              jn stackIn_13_0 = var7;
+              int stackIn_13_1 = -1;
+              int stackIn_13_2 = 124;
               if (this.field_cb) {
                 stackIn_14_3 = hg.field_z;
               } else {
@@ -195,10 +170,10 @@ class oo extends dg implements dn {
           this.d(var7, -30244);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_27_0 = var4_ref;
-          stackIn_27_1 = new StringBuilder().append("oo.W(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_27_0 = var4_ref;
+          StringBuilder stackIn_27_1 = new StringBuilder().append("oo.W(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_28_2 = "null";
           } else {

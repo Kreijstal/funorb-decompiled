@@ -20,17 +20,11 @@ final class sh extends to {
     }
 
     final void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
-        hg var7 = null;
-        hg var8 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7_ref = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);
-          var8 = mm.field_a;
-          var7 = var8;
+          hg var8 = mm.field_a;
+          hg var7 = var8;
           if (var8 != null) {
             if (!this.a(param2, param1, param5 ^ -122, param0, param3)) {
               return;
@@ -48,10 +42,10 @@ final class sh extends to {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7_ref = decompiledCaughtException;
-          stackIn_10_0 = var7_ref;
-          stackIn_10_1 = new StringBuilder().append("sh.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7_ref = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var7_ref;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("sh.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -62,33 +56,20 @@ final class sh extends to {
     }
 
     final static wu a(CipherPacketBuffer param0, byte param1) {
-        int var7 = 0;
-        wu stackIn_5_0 = null;
-        wu stackIn_25_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        wu var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.b((byte) 81, 8);
+          int var2_int = param0.b((byte) 81, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
           if (param1 != -14) {
-            stackIn_5_0 = (wu) null;
+            wu stackIn_5_0 = (wu) null;
             return stackIn_5_0;
           }
-          var3 = tn.a(83, param0) ? 1 : 0;
-          var4 = tn.a(-64, param0) ? 1 : 0;
-          var5 = new wu();
+          int var3 = tn.a(83, param0) ? 1 : 0;
+          int var4 = tn.a(-64, param0) ? 1 : 0;
+          wu var5 = new wu();
           var5.field_r = (short)param0.b((byte) 87, 16);
           var5.field_z = ua.a(param0, var5.field_z, 0, 16);
           var5.field_P = ua.a(param0, var5.field_P, param1 + 14, 16);
@@ -119,8 +100,8 @@ final class sh extends to {
           }
           if (tn.a(83, param0)) {
             var5.field_x = ao.a(param0, var5.field_x, true, 16);
-            var6 = 0;
-            for (var7 = 0; var7 < var5.field_x.length; var7++) {
+            int var6 = 0;
+            for (int var7 = 0; var7 < var5.field_x.length; var7++) {
               if (var6 < (var5.field_x[var7] & 255)) {
                 var6 = 255 & var5.field_x[var7];
               }
@@ -131,13 +112,13 @@ final class sh extends to {
               var5.field_f = (byte)(var6 + 1);
             }
           }
-          stackIn_25_0 = var5;
+          wu stackIn_25_0 = var5;
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_28_0 = var2;
-          stackIn_28_1 = new StringBuilder().append("sh.W(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_28_0 = var2;
+          StringBuilder stackIn_28_1 = new StringBuilder().append("sh.W(");
           if (param0 == null) {
             stackIn_29_2 = "null";
           } else {

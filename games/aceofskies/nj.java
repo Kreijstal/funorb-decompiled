@@ -8,17 +8,15 @@ final class nj extends aa {
     static qo field_f;
 
     final static void c(int param0) {
-        int var1 = 0;
-        int var1Lifetime1;
         vn.field_f.e((byte) 116);
         if (fu.field_d != null) {
           vn.field_f.a(fu.field_d, 0);
-          var1 = -46 / ((11 - param0) / 46);
+          int var1 = -46 / ((11 - param0) / 46);
           return;
         }
         fu.field_d = new ng(vn.field_f, uf.field_e);
         vn.field_f.a(fu.field_d, 0);
-        var1Lifetime1 = -46 / ((11 - param0) / 46);
+        int var1Lifetime1 = -46 / ((11 - param0) / 46);
     }
 
     final static void d(int param0) {

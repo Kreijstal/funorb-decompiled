@@ -47,9 +47,8 @@ abstract class rt implements ws {
     }
 
     final boolean a(boolean param0) {
-        int var2 = 0;
         if (this.field_j.field_A) {
-          var2 = this.c(4);
+          int var2 = this.c(4);
           this.field_j.a(this, 1);
           jaggl.OpenGL.glGenerateMipmapEXT(this.field_f);
           this.field_c = true;
@@ -72,21 +71,18 @@ abstract class rt implements ws {
     }
 
     private final int c(int param0) {
-        int var2 = 0;
-        int var2Lifetime1;
         if (param0 == 4) {
-          var2 = this.field_j.e(param0 - 32338, this.field_b) * this.field_i;
+          int var2 = this.field_j.e(param0 - 32338, this.field_b) * this.field_i;
           return this.field_c ? var2 * 4 / 3 : var2;
         }
         field_e = (String) null;
-        var2Lifetime1 = this.field_j.e(param0 - 32338, this.field_b) * this.field_i;
+        int var2Lifetime1 = this.field_j.e(param0 - 32338, this.field_b) * this.field_i;
         return this.field_c ? var2Lifetime1 * 4 / 3 : var2Lifetime1;
     }
 
     final void a(boolean param0, boolean param1) {
-        int var3 = 0;
         if ((!param0 ? 1 : 0) != (!this.field_c ? 1 : 0)) {
-          var3 = this.c(4);
+          int var3 = this.c(4);
           this.field_c = true;
           this.b(9987);
           this.a(var3, (byte) 1);
@@ -98,16 +94,10 @@ abstract class rt implements ws {
     }
 
     final static void b(int param0, byte param1) {
-        SoundPlayback var2 = null;
-        int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        SoundPlayback var2Lifetime1;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           gn.field_a = param0;
-          var2 = (SoundPlayback) (di.activeSoundPlaybacks.first(268435455));
+          SoundPlayback var2 = (SoundPlayback) (di.activeSoundPlaybacks.first(268435455));
           while (var2 != null) {
             if (!var2.field_i.isLinked((byte) 99)) {
               var2.unlink(-128);
@@ -116,9 +106,9 @@ abstract class rt implements ws {
             }
             var2 = (SoundPlayback) (di.activeSoundPlaybacks.next((byte) 103));
           }
-          var3 = -52 % ((-46 - param1) / 52);
+          int var3 = -52 % ((-46 - param1) / 52);
           if (null != ao.field_c) {
-            var2Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));
+            SoundPlayback var2Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));
             while (var2Lifetime1 != null) {
               if (var2Lifetime1.field_i.isLinked((byte) 82)) {
                 var2Lifetime1.field_g.f(128 + var2Lifetime1.field_h * gn.field_a >> 8);
@@ -131,8 +121,8 @@ abstract class rt implements ws {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2_ref), "rt.N(" + param0 + ',' + param1 + ')');
         }
     }

@@ -23,10 +23,9 @@ final class io {
     }
 
     final static void a(byte param0, int param1) {
-        fp var5 = null;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5 = (fp) (ks.field_d.first(268435455));
+          fp var5 = (fp) (ks.field_d.first(268435455));
           while (var5 != null) {
             po.a(var5, (byte) 115, param1);
             var5 = (fp) (ks.field_d.next((byte) 103));

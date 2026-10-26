@@ -5,19 +5,12 @@ final class CoverageBitmapFont extends BitmapFont {
     private byte[][] glyphCoverage;
 
     final void drawGlyph(int glyphIndex, int x, int y, int width, int height, int color, boolean shadowPass) {
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var12Lifetime1;
-        int var12Lifetime2;
-        var8 = x + y * SoftwareRasterizer.stride;
-        var9 = SoftwareRasterizer.stride - width;
-        var10 = 0;
-        var11 = 0;
+        int var8 = x + y * SoftwareRasterizer.stride;
+        int var9 = SoftwareRasterizer.stride - width;
+        int var10 = 0;
+        int var11 = 0;
         if (y < SoftwareRasterizer.clipTop) {
-          var12 = SoftwareRasterizer.clipTop - y;
+          int var12 = SoftwareRasterizer.clipTop - y;
           height = height - var12;
           y = SoftwareRasterizer.clipTop;
           var11 = var11 + var12 * width;
@@ -27,7 +20,7 @@ final class CoverageBitmapFont extends BitmapFont {
           height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-          var12Lifetime1 = SoftwareRasterizer.clipLeft - x;
+          int var12Lifetime1 = SoftwareRasterizer.clipLeft - x;
           width = width - var12Lifetime1;
           x = SoftwareRasterizer.clipLeft;
           var11 = var11 + var12Lifetime1;
@@ -36,7 +29,7 @@ final class CoverageBitmapFont extends BitmapFont {
           var9 = var9 + var12Lifetime1;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-          var12Lifetime2 = x + width - SoftwareRasterizer.clipRight;
+          int var12Lifetime2 = x + width - SoftwareRasterizer.clipRight;
           width = width - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -53,25 +46,18 @@ final class CoverageBitmapFont extends BitmapFont {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var9 = 0;
-        int var10 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int var11;
-        int var12;
-        int var13;
-        for (var9 = -param6; var9 < 0; var9++) {
-          for (var10 = -param5; var10 < 0; var10++) {
-            incrementValue$11 = param3;
+        for (int var9 = -param6; var9 < 0; var9++) {
+          for (int var10 = -param5; var10 < 0; var10++) {
+            int incrementValue$11 = param3;
             param3++;
-            var11 = 255 & param1[incrementValue$11];
+            int var11 = 255 & param1[incrementValue$11];
             if (var11 == 0) {
               param4++;
             } else {
-              var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
+              int var12 = ((param2 & 16711935) * var11 & -16711936) + ((param2 & 65280) * var11 & 16711680) >> 8;
               var11 = 256 - var11;
-              var13 = param0[param4];
-              incrementValue$12 = param4;
+              int var13 = param0[param4];
+              int incrementValue$12 = param4;
               param4++;
               param0[incrementValue$12] = (((var13 & 16711935) * var11 & -16711936) + ((var13 & 65280) * var11 & 16711680) >> 8) + var12;
             }
@@ -88,25 +74,18 @@ final class CoverageBitmapFont extends BitmapFont {
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
-        int incrementValue$11 = 0;
-        int incrementValue$12 = 0;
-        int var12;
-        int var13;
-        int var14;
-        for (var10 = -param6; var10 < 0; var10++) {
-          for (var11 = -param5; var11 < 0; var11++) {
-            incrementValue$11 = param3;
+        for (int var10 = -param6; var10 < 0; var10++) {
+          for (int var11 = -param5; var11 < 0; var11++) {
+            int incrementValue$11 = param3;
             param3++;
-            var12 = (255 & param1[incrementValue$11]) * param9 >> 8;
+            int var12 = (255 & param1[incrementValue$11]) * param9 >> 8;
             if (var12 == 0) {
               param4++;
             } else {
-              var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
+              int var13 = ((param2 & 16711935) * var12 & -16711936) + ((param2 & 65280) * var12 & 16711680) >> 8;
               var12 = 256 - var12;
-              var14 = param0[param4];
-              incrementValue$12 = param4;
+              int var14 = param0[param4];
+              int incrementValue$12 = param4;
               param4++;
               param0[incrementValue$12] = (((var14 & 16711935) * var12 & -16711936) + ((var14 & 65280) * var12 & 16711680) >> 8) + var13;
             }
@@ -117,19 +96,12 @@ final class CoverageBitmapFont extends BitmapFont {
     }
 
     final void drawGlyphAlpha(int glyphIndex, int x, int y, int width, int height, int color, int alpha256, boolean shadowPass) {
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var13Lifetime1;
-        int var13Lifetime2;
-        var9 = x + y * SoftwareRasterizer.stride;
-        var10 = SoftwareRasterizer.stride - width;
-        var11 = 0;
-        var12 = 0;
+        int var9 = x + y * SoftwareRasterizer.stride;
+        int var10 = SoftwareRasterizer.stride - width;
+        int var11 = 0;
+        int var12 = 0;
         if (y < SoftwareRasterizer.clipTop) {
-          var13 = SoftwareRasterizer.clipTop - y;
+          int var13 = SoftwareRasterizer.clipTop - y;
           height = height - var13;
           y = SoftwareRasterizer.clipTop;
           var12 = var12 + var13 * width;
@@ -139,7 +111,7 @@ final class CoverageBitmapFont extends BitmapFont {
           height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
         if (x < SoftwareRasterizer.clipLeft) {
-          var13Lifetime1 = SoftwareRasterizer.clipLeft - x;
+          int var13Lifetime1 = SoftwareRasterizer.clipLeft - x;
           width = width - var13Lifetime1;
           x = SoftwareRasterizer.clipLeft;
           var12 = var12 + var13Lifetime1;
@@ -148,7 +120,7 @@ final class CoverageBitmapFont extends BitmapFont {
           var10 = var10 + var13Lifetime1;
         }
         if (x + width > SoftwareRasterizer.clipRight) {
-          var13Lifetime2 = x + width - SoftwareRasterizer.clipRight;
+          int var13Lifetime2 = x + width - SoftwareRasterizer.clipRight;
           width = width - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -165,24 +137,16 @@ final class CoverageBitmapFont extends BitmapFont {
     }
 
     private final static byte[][] convertPaletteToCoverage(int[] palette, byte[][] glyphPaletteIndices) {
-        int var2_int = 0;
-        int var5 = 0;
-        byte[][] var2;
-        int var3;
-        int var4_int;
-        byte[] var4;
-        int var6;
-        int var3Lifetime1;
-        for (var2_int = 0; var2_int < palette.length; var2_int++) {
-          var3 = palette[var2_int];
-          var4_int = (var3 >> 15 & 510) + (var3 & 255);
+        for (int var2_int = 0; var2_int < palette.length; var2_int++) {
+          int var3 = palette[var2_int];
+          int var4_int = (var3 >> 15 & 510) + (var3 & 255);
           palette[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
         }
-        var2 = glyphPaletteIndices;
-        for (var3Lifetime1 = 0; var3Lifetime1 < var2.length; var3Lifetime1++) {
-          var4 = var2[var3Lifetime1];
-          for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = var4[var5];
+        byte[][] var2 = glyphPaletteIndices;
+        for (int var3Lifetime1 = 0; var3Lifetime1 < var2.length; var3Lifetime1++) {
+          byte[] var4 = var2[var3Lifetime1];
+          for (int var5 = 0; var5 < var4.length; var5++) {
+            int var6 = var4[var5];
             if (var6 != 0) {
               var4[var5] = (byte)palette[var6];
             }

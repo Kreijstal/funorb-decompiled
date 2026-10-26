@@ -5,63 +5,49 @@ final class tr {
     static st field_a;
 
     final static void a(s param0, int param1) {
-        int dupTemp$3 = 0;
-        int dupTemp$0 = 0;
-        int var3 = 0;
-        int incrementValue$2 = 0;
-        int fieldTemp$1 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var2_intLifetime1;
-        int var2_intLifetime2;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          for (var2_int = 0; var2_int < 3; var2_int++) {
+          for (int var2_int = 0; var2_int < 3; var2_int++) {
             aa.field_c[var2_int] = 0;
           }
           if (param1 > -85) {
             field_a = (st) null;
           }
-          for (var2_intLifetime1 = 0; var2_intLifetime1 < dd.field_a; var2_intLifetime1++) {
+          for (int var2_intLifetime1 = 0; var2_intLifetime1 < dd.field_a; var2_intLifetime1++) {
             if (param0.field_f == ve.field_b[var2_intLifetime1].field_f) {
-              dupTemp$3 = ve.field_b[var2_intLifetime1].a(0);
+              int dupTemp$3 = ve.field_b[var2_intLifetime1].a(0);
               aa.field_c[dupTemp$3] = aa.field_c[dupTemp$3] + 1;
             }
           }
-          dupTemp$0 = param0.a(0);
+          int dupTemp$0 = param0.a(0);
           aa.field_c[dupTemp$0] = aa.field_c[dupTemp$0] + 1;
-          var2_intLifetime2 = 0;
-          for (var3 = 0; dd.field_a > var3; var3++) {
+          int var2_intLifetime2 = 0;
+          for (int var3 = 0; dd.field_a > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (ve.field_b[var3].field_f == param0.field_f) {
-              var4 = ve.field_b[var3].a(0);
+              int var4 = ve.field_b[var3].a(0);
               if (gq.field_a < aa.field_c[var4]) {
                 aa.field_c[var4] = aa.field_c[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0) {
-              incrementValue$2 = var2_intLifetime2;
+              int incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
               ve.field_b[incrementValue$2] = ve.field_b[var3];
             }
           }
           dd.field_a = var2_intLifetime2;
-          fieldTemp$1 = dd.field_a;
+          int fieldTemp$1 = dd.field_a;
           dd.field_a = dd.field_a + 1;
           ve.field_b[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_24_0 = var2;
-          stackIn_24_1 = new StringBuilder().append("tr.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var2;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("tr.B(");
           if (param0 == null) {
             stackIn_25_2 = "null";
           } else {

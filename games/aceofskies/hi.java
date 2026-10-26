@@ -32,42 +32,32 @@ final class hi extends to {
     }
 
     final static boolean c(int param0, int param1, int param2) {
-        boolean stackIn_5_0 = false;
-        boolean stackIn_6_1 = false;
-        boolean stackIn_10_0 = false;
-        boolean stackIn_12_0 = false;
-        boolean stackIn_13_1 = false;
-        boolean stackIn_20_0 = false;
-        boolean stackIn_21_1 = false;
-        boolean stackIn_25_0 = false;
-        boolean stackIn_27_0 = false;
-        boolean stackIn_28_1 = false;
         if (param0 == 14834) {
           if (!si.a(param2, 2, param1)) {
             return false;
           }
-          stackIn_20_0 = qr.a(param1, param0 - 22084, param2);
-          stackIn_21_1 = ((param1 & 36864) == 0) ? false : true;
+          boolean stackIn_20_0 = qr.a(param1, param0 - 22084, param2);
+          boolean stackIn_21_1 = ((param1 & 36864) == 0) ? false : true;
           if (stackIn_20_0 | stackIn_21_1 | hh.a(0, param1, param2)) {
             return true;
           }
-          stackIn_25_0 = (0 != (param1 & 8192));
-          stackIn_27_0 = stackIn_25_0 | HighscoreNameEntry.a(param1, 544, param2) | gh.a(param2, false, param1);
-          stackIn_28_1 = ((55 & param2) != 0) ? false : true;
+          boolean stackIn_25_0 = (0 != (param1 & 8192));
+          boolean stackIn_27_0 = stackIn_25_0 | HighscoreNameEntry.a(param1, 544, param2) | gh.a(param2, false, param1);
+          boolean stackIn_28_1 = ((55 & param2) != 0) ? false : true;
           return stackIn_27_0 & stackIn_28_1;
         }
         hi.k(13);
         if (!si.a(param2, 2, param1)) {
           return false;
         }
-        stackIn_5_0 = qr.a(param1, param0 - 22084, param2);
-        stackIn_6_1 = ((param1 & 36864) == 0) ? false : true;
+        boolean stackIn_5_0 = qr.a(param1, param0 - 22084, param2);
+        boolean stackIn_6_1 = ((param1 & 36864) == 0) ? false : true;
         if (stackIn_5_0 | stackIn_6_1 | hh.a(0, param1, param2)) {
           return true;
         }
-        stackIn_10_0 = (0 != (param1 & 8192));
-        stackIn_12_0 = stackIn_10_0 | HighscoreNameEntry.a(param1, 544, param2) | gh.a(param2, false, param1);
-        stackIn_13_1 = ((55 & param2) != 0) ? false : true;
+        boolean stackIn_10_0 = (0 != (param1 & 8192));
+        boolean stackIn_12_0 = stackIn_10_0 | HighscoreNameEntry.a(param1, 544, param2) | gh.a(param2, false, param1);
+        boolean stackIn_13_1 = ((55 & param2) != 0) ? false : true;
         return stackIn_12_0 & stackIn_13_1;
     }
 

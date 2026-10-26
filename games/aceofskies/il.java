@@ -6,11 +6,6 @@ final class il {
     private java.awt.GraphicsDevice field_a;
 
     public final void enter(java.awt.Frame param0, int param1, int param2, int param3, int param4) {
-        int var9 = 0;
-        int var6;
-        java.awt.DisplayMode[] var7;
-        int var8;
-        int var10;
         this.field_b = this.field_a.getDisplayMode();
         if (null == this.field_b) {
           throw new NullPointerException();
@@ -19,14 +14,14 @@ final class il {
         param0.enableInputMethods(false);
         this.a((byte) -105, param0);
         if (param4 == 0) {
-          var6 = this.field_b.getRefreshRate();
-          var7 = this.field_a.getDisplayModes();
-          var8 = 0;
-          for (var9 = 0; var7.length > var9; var9++) {
+          int var6 = this.field_b.getRefreshRate();
+          java.awt.DisplayMode[] var7 = this.field_a.getDisplayModes();
+          int var8 = 0;
+          for (int var9 = 0; var7.length > var9; var9++) {
             if (param1 == var7[var9].getWidth() &&
               param2 == var7[var9].getHeight() &&
               var7[var9].getBitDepth() == param3) {
-              var10 = var7[var9].getRefreshRate();
+              int var10 = var7[var9].getRefreshRate();
               if (var8 == 0 ||
                 !(Math.abs(-var6 + var10) >= Math.abs(param4 - var6))) {
                 param4 = var10;
@@ -42,11 +37,10 @@ final class il {
     }
 
     public final int[] listmodes() {
-        int var3 = 0;
         java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
         int[] var2 = new int[var4.length << 2];
-        for (var3 = 0; var4.length > var3; var3++) {
+        for (int var3 = 0; var4.length > var3; var3++) {
           var2[var3 << 2] = var4[var3].getWidth();
           var2[1 + (var3 << 2)] = var4[var3].getHeight();
           var2[(var3 << 2) + 2] = var4[var3].getBitDepth();
@@ -70,13 +64,10 @@ final class il {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
-          int var3 = 0;
           java.lang.reflect.Field var4 = null;
           Throwable var4_ref = null;
           Throwable var6 = null;
-          java.lang.reflect.Field var7 = null;
-          Throwable var7_ref = null;
-          var3 = 0;
+          int var3 = 0;
           if (param0 >= -91) {
             this.listmodes();
           }
@@ -117,11 +108,11 @@ final class il {
           }
           if (decompiledRegionSelector0 == 1) {
             try {
-              var7 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
+              java.lang.reflect.Field var7 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
               var7.set(this.field_a, Boolean.TRUE);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
-              var7_ref = decompiledCaughtException;
+              Throwable var7_ref = decompiledCaughtException;
             }
           }
           throw il.<RuntimeException>$cfr$sneakyThrow(var6);
@@ -133,20 +124,15 @@ final class il {
     }
 
     public il() throws Exception {
-        int var4 = 0;
-        java.awt.GraphicsEnvironment var1;
-        java.awt.GraphicsDevice[] var2;
-        java.awt.GraphicsDevice[] var3;
-        java.awt.GraphicsDevice var5;
-        var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
+        java.awt.GraphicsEnvironment var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
         this.field_a = var1.getDefaultScreenDevice();
         if (this.field_a.isFullScreenSupported()) {
           return;
         }
-        var2 = var1.getScreenDevices();
-        var3 = var2;
-        for (var4 = 0; var4 < var3.length; var4++) {
-          var5 = var3[var4];
+        java.awt.GraphicsDevice[] var2 = var1.getScreenDevices();
+        java.awt.GraphicsDevice[] var3 = var2;
+        for (int var4 = 0; var4 < var3.length; var4++) {
+          java.awt.GraphicsDevice var5 = var3[var4];
           if (var5 != null &&
             var5.isFullScreenSupported()) {
             this.field_a = var5;

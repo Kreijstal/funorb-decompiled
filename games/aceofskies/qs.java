@@ -9,12 +9,7 @@ final class qs {
 
     final static void a(int param0, String param1) {
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
         try {
           ScreenParticle.field_o = ScreenParticle.field_o + 1;
           if (ik.field_k == -1 &&
@@ -38,7 +33,7 @@ final class qs {
             } else {
               stackIn_17_0 = 0;
             }
-            var2_int = stackIn_17_0;
+            int var2_int = stackIn_17_0;
             if (param1 == null) {
               ScreenParticle.field_o = 0;
             } else {
@@ -79,10 +74,10 @@ final class qs {
           rs.field_v = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_43_0 = var2;
-          stackIn_43_1 = new StringBuilder().append("qs.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_43_0 = var2;
+          StringBuilder stackIn_43_1 = new StringBuilder().append("qs.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_44_2 = "null";
           } else {

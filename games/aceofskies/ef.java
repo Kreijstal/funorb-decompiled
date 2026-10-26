@@ -39,15 +39,9 @@ final class ef {
     }
 
     final static void a(byte param0, rk param1, ResourceArchive param2) {
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           rj.field_b = param2;
           bl.field_g = "";
@@ -89,16 +83,16 @@ final class ef {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_26_0 = var3;
-          stackIn_26_1 = new StringBuilder().append("ef.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_26_0 = var3;
+          StringBuilder stackIn_26_1 = new StringBuilder().append("ef.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_27_2 = "null";
           } else {
             stackIn_27_2 = "{...}";
           }
-          stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
+          StringBuilder stackIn_29_1 = ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',');
           if (param2 == null) {
             stackIn_30_2 = "null";
           } else {
@@ -109,16 +103,13 @@ final class ef {
     }
 
     private final void a(byte param0) {
-        int var2;
-        int var3;
         int var4;
-        int var5;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 > -115) {
           return;
         }
-        var2 = this.field_e;
-        var3 = this.field_p;
+        int var2 = this.field_e;
+        int var3 = this.field_p;
         if (!this.a(false)) {
           this.field_b = false;
           return;
@@ -208,14 +199,12 @@ final class ef {
     }
 
     final hj b(byte param0) {
-        hj var2 = null;
-        hj var2Lifetime1;
         this.field_n = ArchiveIndex.field_h;
         this.field_r = td.field_b;
         this.field_l.a(this.field_u, false, this.field_c);
         if (param0 == -111) {
           or.field_c = false;
-          var2 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
+          hj var2 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
           if (var2 == null) {
             this.c(1);
           }
@@ -223,7 +212,7 @@ final class ef {
         }
         this.field_p = -7;
         or.field_c = false;
-        var2Lifetime1 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
+        hj var2Lifetime1 = uj.a(pt.field_b, 0, this.field_c, 0, 0, this.field_u);
         if (var2Lifetime1 == null) {
           this.c(1);
         }
@@ -231,18 +220,14 @@ final class ef {
     }
 
     final static float a(float param0, float param1, int param2, float param3, int param4) {
-        float[] var6 = null;
-        float[] var5 = null;
-        float[] var6Lifetime1;
-        float[] var5Lifetime1;
         if (param2 < -30) {
-          var6 = uj.field_a[param4];
-          var5 = var6;
+          float[] var6 = uj.field_a[param4];
+          float[] var5 = var6;
           return var6[1] * param3 + var6[0] * param0 + var6[2] * param1;
         }
         field_k = (gu) null;
-        var6Lifetime1 = uj.field_a[param4];
-        var5Lifetime1 = var6Lifetime1;
+        float[] var6Lifetime1 = uj.field_a[param4];
+        float[] var5Lifetime1 = var6Lifetime1;
         return var6Lifetime1[1] * param3 + var6Lifetime1[0] * param0 + var6Lifetime1[2] * param1;
     }
 
@@ -299,10 +284,6 @@ final class ef {
     }
 
     final void b(int param0) {
-        int fieldTemp$3 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         if (jf.field_a != null) {
           return;
         }
@@ -310,7 +291,7 @@ final class ef {
           if (qr.field_a <= 0) {
             this.field_b = false;
             if (this.field_b) {
-              fieldTemp$3 = this.field_j - 1;
+              int fieldTemp$3 = this.field_j - 1;
               this.field_j = this.field_j - 1;
               if (0 < fieldTemp$3) {
                 return;
@@ -332,7 +313,7 @@ final class ef {
             }
           } else {
             if (this.field_b) {
-              fieldTemp$2 = this.field_j - 1;
+              int fieldTemp$2 = this.field_j - 1;
               this.field_j = this.field_j - 1;
               if (0 < fieldTemp$2) {
                 return;
@@ -363,7 +344,7 @@ final class ef {
           ef.a(0.5743587017059326f, 1.6069247722625732f, 74, -0.5514667630195618f, -105);
           if (qr.field_a > 0) {
             if (this.field_b) {
-              fieldTemp$0 = this.field_j - 1;
+              int fieldTemp$0 = this.field_j - 1;
               this.field_j = this.field_j - 1;
               if (0 < fieldTemp$0) {
                 return;
@@ -392,7 +373,7 @@ final class ef {
           }
           this.field_b = false;
           if (this.field_b) {
-            fieldTemp$1 = this.field_j - 1;
+            int fieldTemp$1 = this.field_j - 1;
             this.field_j = this.field_j - 1;
             if (0 < fieldTemp$1) {
               return;

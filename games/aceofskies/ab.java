@@ -8,21 +8,14 @@ class ab extends ea implements vm {
     static String field_r;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
-        an var8 = null;
-        RuntimeException var8_ref = null;
-        ea var9 = null;
-        int var10 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var8 = new an(this.field_s);
+          an var8 = new an(this.field_s);
           if (param0 != 34) {
             field_r = (String) null;
           }
-          var9 = (ea) (var8.c(-1372));
+          ea var9 = (ea) (var8.c(-1372));
           while (var9 != null) {
             if (var9.isLinked((byte) 106)) {
               if (!var9.a(34, param1 + this.field_p, param2, param3, this.field_h + param4, param5, param6)) {
@@ -35,10 +28,10 @@ class ab extends ea implements vm {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8_ref = decompiledCaughtException;
-          stackIn_14_0 = var8_ref;
-          stackIn_14_1 = new StringBuilder().append("ab.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8_ref = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var8_ref;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("ab.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -49,12 +42,11 @@ class ab extends ea implements vm {
     }
 
     final String c(byte param0) {
-        String var4 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         an var2 = new an(this.field_s);
         ea var3 = (ea) (var2.c(-1372));
         while (var3 != null) {
-          var4 = var3.c((byte) -112);
+          String var4 = var3.c((byte) -112);
           if (var4 != null) {
             return var4;
           }
@@ -85,19 +77,11 @@ class ab extends ea implements vm {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, boolean param6) {
-        RuntimeException var8 = null;
-        ea var9 = null;
-        int var10 = 0;
-        Hashtable var11 = null;
-        an var12 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var12 = new an(this.field_s);
-          var9 = (ea) (var12.c(-1372));
+          an var12 = new an(this.field_s);
+          ea var9 = (ea) (var12.c(-1372));
           while (var9 != null) {
             if (var9.isLinked((byte) 85)) {
               if (var9.e(28660) &&
@@ -112,14 +96,14 @@ class ab extends ea implements vm {
           if (!param6) {
             return false;
           }
-          var11 = (Hashtable) null;
+          Hashtable var11 = (Hashtable) null;
           this.a((StringBuilder) null, -90, 100, (Hashtable) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_15_0 = var8;
-          stackIn_15_1 = new StringBuilder().append("ab.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var8;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ab.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -141,17 +125,8 @@ class ab extends ea implements vm {
     }
 
     final boolean a(int param0, ea param1) {
-        RuntimeException var3 = null;
-        ea var4 = null;
-        an var5 = null;
-        ea var6 = null;
-        int var7 = 0;
-        an var8 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 80) {
             field_r = (String) null;
@@ -159,13 +134,13 @@ class ab extends ea implements vm {
           if (this.field_s.isEmpty(true)) {
             return false;
           }
-          var8 = new an(this.field_s);
-          var4 = (ea) (var8.c(-1372));
+          an var8 = new an(this.field_s);
+          ea var4 = (ea) (var8.c(-1372));
           while (var4 != null) {
             if (var4.e(28660)) {
-              var5 = new an(this.field_s);
+              an var5 = new an(this.field_s);
               var5.a(46, var4);
-              var6 = (ea) (var5.a(23));
+              ea var6 = (ea) (var5.a(23));
               while (var6 != null) {
                 if (var6.a(param1, (byte) -42)) {
                   return true;
@@ -177,10 +152,10 @@ class ab extends ea implements vm {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_22_0 = var3;
-          stackIn_22_1 = new StringBuilder().append("ab.FB(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var3;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("ab.FB(").append(param0).append(',');
           if (param1 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -191,13 +166,12 @@ class ab extends ea implements vm {
     }
 
     final int f(int param0) {
-        int var5 = 0;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = param0;
         an var3 = new an(this.field_s);
         ea var4 = (ea) (var3.c(param0 ^ -1372));
         while (var4 != null) {
-          var5 = var4.f(param0 + 0);
+          int var5 = var4.f(param0 + 0);
           if (var2 < var5) {
             var2 = var5;
           }
@@ -207,25 +181,15 @@ class ab extends ea implements vm {
     }
 
     private final void a(byte param0, int param1, Hashtable param2, StringBuilder param3) {
-        StringBuilder discarded$2 = null;
-        int var7 = 0;
-        StringBuilder discarded$3 = null;
-        an var5 = null;
-        ea var6 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         try {
-          var5 = new an(this.field_s);
-          var6 = (ea) (var5.c(-1372));
+          an var5 = new an(this.field_s);
+          ea var6 = (ea) (var5.c(-1372));
           while (var6 != null) {
-            discarded$2 = param3.append('\n');
-            for (var7 = 0; var7 <= param1; var7++) {
-              discarded$3 = param3.append(' ');
+            StringBuilder discarded$2 = param3.append('\n');
+            for (int var7 = 0; var7 <= param1; var7++) {
+              StringBuilder discarded$3 = param3.append(' ');
             }
             var6.a(param3, 32462, 1 + param1, param2);
             var6 = (ea) (var5.a(param0 - 232));
@@ -235,16 +199,16 @@ class ab extends ea implements vm {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_11_0 = var5_ref;
-          stackIn_11_1 = new StringBuilder().append("ab.HB(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var5_ref;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("ab.HB(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
           if (param3 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -260,14 +224,8 @@ class ab extends ea implements vm {
     }
 
     final StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
-        RuntimeException var5 = null;
-        StringBuilder stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param0, param2, false, param3)) {
             this.a(param0, param1 ^ 32462, param3, param2);
@@ -276,19 +234,19 @@ class ab extends ea implements vm {
           if (param1 != 32462) {
             this.a((byte) 77, -41, -88, 96);
           }
-          stackIn_5_0 = (StringBuilder) (param0);
+          StringBuilder stackIn_5_0 = (StringBuilder) (param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("ab.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var5;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ab.A(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_12_2 = "null";
           } else {
@@ -329,18 +287,11 @@ class ab extends ea implements vm {
     }
 
     void a(byte param0, ea param1, int param2, int param3) {
-        an var5 = null;
-        ea var6 = null;
-        Hashtable var7 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5_ref = null;
         try {
           super.a((byte) 94, param1, param2, param3);
-          var5 = new an(this.field_s);
-          var6 = (ea) (var5.c(-1372));
+          an var5 = new an(this.field_s);
+          ea var6 = (ea) (var5.c(-1372));
           while (var6 != null) {
             if (var6.isLinked((byte) 119)) {
               var6.a((byte) 108, param1, param2 + this.field_h, this.field_p + param3);
@@ -350,15 +301,15 @@ class ab extends ea implements vm {
             break;
           }
           if (param0 <= 13) {
-            var7 = (Hashtable) null;
+            Hashtable var7 = (Hashtable) null;
             this.a((StringBuilder) null, -85, 34, (Hashtable) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_9_0 = var5_ref;
-          stackIn_9_1 = new StringBuilder().append("ab.S(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var5_ref;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("ab.S(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -369,22 +320,13 @@ class ab extends ea implements vm {
     }
 
     boolean a(int param0, int param1, char param2, ea param3) {
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        ea var9 = null;
-        an var10 = null;
         boolean stackIn_15_0 = false;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var10 = new an(this.field_s);
-          var6 = -95 / ((param0 + 53) / 33);
-          var9 = (ea) (var10.c(-1372));
+          an var10 = new an(this.field_s);
+          int var6 = -95 / ((param0 + 53) / 33);
+          ea var9 = (ea) (var10.c(-1372));
           while (var9 != null) {
             if (var9.isLinked((byte) 95)) {
               if (var9.e(28660) &&
@@ -396,7 +338,7 @@ class ab extends ea implements vm {
             }
             break;
           }
-          var7 = param1;
+          int var7 = param1;
           if (80 != var7) {
             return false;
           }
@@ -407,10 +349,10 @@ class ab extends ea implements vm {
           }
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_18_0 = var5;
-          stackIn_18_1 = new StringBuilder().append("ab.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var5;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("ab.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -421,21 +363,14 @@ class ab extends ea implements vm {
     }
 
     final void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
-        RuntimeException runtimeException = null;
-        an var7 = null;
-        ea var8 = null;
-        int var9 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var7 = new an(this.field_s);
+          an var7 = new an(this.field_s);
           if (param5 != 91) {
             return;
           }
-          var8 = (ea) (var7.c(-1372));
+          ea var8 = (ea) (var7.c(-1372));
           while (var8 != null) {
             if (var8.isLinked((byte) 115)) {
               var8.a(param0 + this.field_p, param1 + this.field_h, param2, param3, param4, (byte) 91);
@@ -446,10 +381,10 @@ class ab extends ea implements vm {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_10_0 = runtimeException;
-          stackIn_10_1 = new StringBuilder().append("ab.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = runtimeException;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ab.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -484,33 +419,23 @@ class ab extends ea implements vm {
     }
 
     final boolean b(ea param0, int param1) {
-        RuntimeException var3 = null;
-        ea var4 = null;
-        an var5 = null;
-        ea var6 = null;
-        int var7 = 0;
-        ea var8 = null;
-        an var9 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_s.isEmpty(true)) {
             return false;
           }
-          var9 = new an(this.field_s);
+          an var9 = new an(this.field_s);
           if (param1 >= -20) {
-            var8 = (ea) null;
+            ea var8 = (ea) null;
             this.a((ea) null, -61);
           }
-          var4 = (ea) (var9.b(true));
+          ea var4 = (ea) (var9.b(true));
           while (var4 != null) {
             if (var4.e(28660)) {
-              var5 = new an(this.field_s);
+              an var5 = new an(this.field_s);
               var5.a(var4, 0);
-              var6 = (ea) (var5.a((byte) 120));
+              ea var6 = (ea) (var5.a((byte) 120));
               while (var6 != null) {
                 if (var6.a(param0, (byte) -42)) {
                   return true;
@@ -522,10 +447,10 @@ class ab extends ea implements vm {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_22_0 = var3;
-          stackIn_22_1 = new StringBuilder().append("ab.EB(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var3;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("ab.EB(");
           if (param0 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -536,19 +461,13 @@ class ab extends ea implements vm {
     }
 
     final boolean a(ea param0, byte param1) {
-        an var3 = null;
-        RuntimeException var3_ref = null;
-        ea var4 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new an(this.field_s);
+          an var3 = new an(this.field_s);
           if (param1 != -42) {
             this.a((byte) 13, -25, 110, -87);
           }
-          var4 = (ea) (var3.c(-1372));
+          ea var4 = (ea) (var3.c(-1372));
           while (true) {
             if (var4 == null) {
               return false;
@@ -561,10 +480,10 @@ class ab extends ea implements vm {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_12_0 = var3_ref;
-          stackIn_12_1 = new StringBuilder().append("ab.U(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3_ref;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("ab.U(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -587,44 +506,35 @@ class ab extends ea implements vm {
     }
 
     final static el a(wl param0, int param1, boolean param2, int[] param3, int param4, int param5, int param6, int param7) {
-        RuntimeException var8 = null;
-        el stackIn_2_0 = null;
-        el stackIn_8_0 = null;
-        el stackIn_11_0 = null;
-        el stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -119) {
-            stackIn_2_0 = (el) null;
+            el stackIn_2_0 = (el) null;
             return stackIn_2_0;
           }
           if (!param0.field_Cc && (!mg.a(param6, (byte) -72) ||
             !mg.a(param7, (byte) -39))) {
             if (param0.field_u) {
-              stackIn_13_0 = new el(param0, 34037, param6, param7, param2, param3, param5, param4);
+              el stackIn_13_0 = new el(param0, 34037, param6, param7, param2, param3, param5, param4);
               return stackIn_13_0;
             }
-            stackIn_11_0 = new el(param0, param6, param7, fk.a(param6, 61), fk.a(param7, 115), param3);
+            el stackIn_11_0 = new el(param0, param6, param7, fk.a(param6, 61), fk.a(param7, 115), param3);
             return stackIn_11_0;
           }
-          stackIn_8_0 = new el(param0, 3553, param6, param7, param2, param3, param5, param4);
+          el stackIn_8_0 = new el(param0, 3553, param6, param7, param2, param3, param5, param4);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_16_0 = var8;
-          stackIn_16_1 = new StringBuilder().append("ab.JB(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var8;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("ab.JB(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
           } else {

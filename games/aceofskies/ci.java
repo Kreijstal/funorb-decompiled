@@ -22,8 +22,6 @@ final class ci extends hh {
     }
 
     final void a(boolean param0, boolean param1) {
-        float var4 = 0.0f;
-        long var5 = 0L;
         if (param0) {
           return;
         }
@@ -32,12 +30,12 @@ final class ci extends hh {
           return;
         }
         if (var3 != null) {
-          var4 = 2.0f * (1.0f - Math.abs(this.field_a.field_n[1])) + 1.0f;
+          float var4 = 2.0f * (1.0f - Math.abs(this.field_a.field_n[1])) + 1.0f;
           this.field_a.a(false, 1);
           this.field_a.a(var3, 1);
           this.field_a.a(false, 0);
           this.field_a.a(this.field_h.field_b, 1);
-          var5 = this.field_k.field_d;
+          long var5 = this.field_k.field_d;
           jaggl.OpenGL.glUseProgramObjectARB(var5);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "envMapSampler"), 1);
@@ -85,11 +83,7 @@ final class ci extends hh {
     }
 
     final void a(int param0, int param1, rt param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_l) {
             this.field_a.a(param2, param1 + 1486691001);
@@ -101,10 +95,10 @@ final class ci extends hh {
           this.a((byte) -2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("ci.J(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var4;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ci.J(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -151,23 +145,15 @@ final class ci extends hh {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = 0;
-        float var5 = 0.0f;
-        int var6 = 0;
-        float var7 = 0.0f;
-        float var8 = 0.0f;
-        float var9 = 0.0f;
-        int var10 = 0;
-        long var11 = 0L;
         if (this.field_l) {
-          var4 = 1 << (3 & param1);
-          var5 = (float)(1 << (param1 >> 3 & 7)) / 32.0f;
-          var6 = param2 & 65535;
-          var7 = (float)(3 & param2 >> 16) / 8.0f;
-          var8 = (float)((8062032 & param2) >> 19) / 16.0f;
-          var9 = (float)((param2 & 127296979) >> 23) / 16.0f;
-          var10 = param2 >> 27 & 15;
-          var11 = this.field_k.field_d;
+          int var4 = 1 << (3 & param1);
+          float var5 = (float)(1 << (param1 >> 3 & 7)) / 32.0f;
+          int var6 = param2 & 65535;
+          float var7 = (float)(3 & param2 >> 16) / 8.0f;
+          float var8 = (float)((8062032 & param2) >> 19) / 16.0f;
+          float var9 = (float)((param2 & 127296979) >> 23) / 16.0f;
+          int var10 = param2 >> 27 & 15;
+          long var11 = this.field_k.field_d;
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "time"), (float)(var4 * this.field_a.field_hb % 40000) / 40000.0f);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "scale"), var5);
           jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(var11, "breakWaterDepth"), (float)var6);
@@ -183,16 +169,14 @@ final class ci extends hh {
 
     final static void a(long param0, byte param1) {
         try {
-          Throwable decompiledCaughtException = null;
-          InterruptedException var3 = null;
           if (param1 < 73) {
             field_g = 121;
           }
           try {
             Thread.sleep(param0);
           } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (InterruptedException) (Object) decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            InterruptedException var3 = (InterruptedException) (Object) decompiledCaughtException;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -203,8 +187,6 @@ final class ci extends hh {
 
     ci(wl param0, qe param1) {
         super(param0);
-        aq var5 = null;
-        aq var4 = null;
         this.field_l = false;
         this.field_e = false;
         try {
@@ -212,9 +194,9 @@ final class ci extends hh {
           if (null != this.field_h.field_b &&
             this.field_a.field_v &&
             this.field_a.field_lc) {
-            var5 = kg.a("uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n", 35633, true, this.field_a);
+            aq var5 = kg.a("uniform float time;\nuniform float scale;\nvarying vec3 wvVertex;\nvarying float waterDepth;\nvoid main() {\nwaterDepth = gl_MultiTexCoord0.z;\nvec4 ecVertex = gl_ModelViewMatrix*gl_Vertex;\nwvVertex.x = dot(gl_NormalMatrix[0], ecVertex.xyz);\nwvVertex.y = dot(gl_NormalMatrix[1], ecVertex.xyz);\nwvVertex.z = dot(gl_NormalMatrix[2], ecVertex.xyz);\ngl_TexCoord[0].x = dot(gl_TextureMatrix[0][0], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].y = dot(gl_TextureMatrix[0][1], gl_MultiTexCoord0)*scale;\ngl_TexCoord[0].z = time;\ngl_TexCoord[0].w = 1.0;\ngl_FogFragCoord = 1.0-clamp((gl_Fog.end+ecVertex.z)*gl_Fog.scale, 0.0, 1.0);\ngl_Position = ftransform();\n}\n", 35633, true, this.field_a);
             aq var3 = var5;
-            var4 = kg.a("varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform vec2 waveIntensity;\nuniform float waveExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat waveFactor = pow(1.0-shoreFactor, waveExponent)-0.5;\nwaveFactor = -4.0*waveFactor*waveFactor+1.0;\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 1.0);\nvec4 surfaceColour = mix(vec4(envColour, fresnel*shoreFactor), (waveIntensity.x*wnNormal.wwww)+waveIntensity.y, waveFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n", 35632, true, this.field_a);
+            aq var4 = kg.a("varying vec3 wvVertex;\nvarying float waterDepth;\nuniform vec3 sunDir;\nuniform vec4 sunColour;\nuniform float sunExponent;\nuniform vec2 waveIntensity;\nuniform float waveExponent;\nuniform float breakWaterDepth;\nuniform float breakWaterOffset;\nuniform sampler3D normalSampler;\nuniform samplerCube envMapSampler;\nvoid main() {\nvec4 wnNormal = texture3D(normalSampler, gl_TexCoord[0].xyz).rbga;\nwnNormal.xyz = 2.0*wnNormal.xyz-1.0;\nvec3 wnVector = normalize(wvVertex);\nvec3 wnReflection = reflect(wnVector, wnNormal.xyz);\nvec3 envColour = textureCube(envMapSampler, wnReflection).rgb;\nvec4 specularColour = sunColour*pow(clamp(-dot(sunDir, wnReflection), 0.0, 1.0), sunExponent);\nfloat shoreFactor = clamp(waterDepth/breakWaterDepth-breakWaterOffset*wnNormal.w, 0.0, 1.0);\nfloat waveFactor = pow(1.0-shoreFactor, waveExponent)-0.5;\nwaveFactor = -4.0*waveFactor*waveFactor+1.0;\nfloat ndote = dot(wnVector, wnNormal.xyz);\nfloat fresnel = pow(1.0-abs(ndote), 1.0);\nvec4 surfaceColour = mix(vec4(envColour, fresnel*shoreFactor), (waveIntensity.x*wnNormal.wwww)+waveIntensity.y, waveFactor)+specularColour*shoreFactor;\ngl_FragColor = vec4(mix(surfaceColour.rgb, gl_Fog.color.rgb, gl_FogFragCoord), surfaceColour.a);\n}\n", 35632, true, this.field_a);
             this.field_k = br.a(this.field_a, new aq[]{var5, var4}, (byte) 9);
             this.field_e = null != this.field_k ? true : false;
           }

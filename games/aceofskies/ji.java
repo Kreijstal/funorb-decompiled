@@ -14,20 +14,14 @@ final class ji {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        int var3_int = 0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        int var3_intLifetime1;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2 != 37) {
             return;
           }
           if (ms.field_d != param1) {
             NetworkGameClient.field_v = new int[param1];
-            for (var3_int = 0; param1 > var3_int; var3_int++) {
+            for (int var3_int = 0; param1 > var3_int; var3_int++) {
               NetworkGameClient.field_v[var3_int] = (var3_int << 12) / param1;
             }
             ms.field_d = param1;
@@ -35,8 +29,8 @@ final class ji {
           if (IndexedSpriteState.field_f != param0) {
             if (ms.field_d != param0) {
               mo.field_c = new int[param0];
-              var5 = 0;
-              var3_intLifetime1 = var5;
+              int var5 = 0;
+              int var3_intLifetime1 = var5;
               while (param0 > var5) {
                 mo.field_c[var5] = (var5 << 12) / param0;
                 var5++;
@@ -48,8 +42,8 @@ final class ji {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var3), "ji.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }

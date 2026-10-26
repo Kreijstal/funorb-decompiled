@@ -23,40 +23,31 @@ final class oi {
 
     final static oe a(java.awt.Canvas param0, int param1, int param2, int param3) {
         try {
-          Class var4 = null;
-          Throwable var4_ref = null;
-          RuntimeException var4_ref2 = null;
-          oe var5 = null;
-          br var5_ref = null;
-          oe stackIn_3_0 = null;
-          br stackIn_5_0 = null;
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("c");
+              Class var4 = Class.forName("c");
               if (param1 > -12) {
                 field_a = (ResourceArchive) null;
               }
-              var5 = (oe) (var4.newInstance());
+              oe var5 = (oe) (var4.newInstance());
               var5.a(-12189, param2, param0, param3);
-              stackIn_3_0 = var5;
+              oe stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var4_ref = decompiledCaughtException;
-              var5_ref = new br();
+              Throwable var4_ref = decompiledCaughtException;
+              br var5_ref = new br();
               ((oe) ((Object) var5_ref)).a(-12189, param2, param0, param3);
-              stackIn_5_0 = var5_ref;
+              br stackIn_5_0 = var5_ref;
               return (oe) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var4_ref2;
-            stackIn_8_1 = new StringBuilder().append("oi.A(");
+            RuntimeException var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_8_0 = var4_ref2;
+            StringBuilder stackIn_8_1 = new StringBuilder().append("oi.A(");
             if (param0 == null) {
               stackIn_9_2 = "null";
             } else {

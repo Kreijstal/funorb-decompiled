@@ -7,20 +7,17 @@ final class ah extends qd {
     private byte[] field_q;
 
     final void b(int param0, int param1, byte param2) {
-        int incrementValue$0 = 0;
-        int var4 = 0;
-        int var4Lifetime1;
         param2 = (byte)(127 + (127 & param2 >> 1));
         if (param0 == 255) {
-          var4 = param1 * 2;
-          incrementValue$0 = var4;
+          int var4 = param1 * 2;
+          int incrementValue$0 = var4;
           var4++;
           this.field_q[incrementValue$0] = (byte)param2;
           this.field_q[var4] = (byte)param2;
           return;
         }
         field_r = (String) null;
-        var4Lifetime1 = param1 * 2;
+        int var4Lifetime1 = param1 * 2;
         int incrementValue$1 = var4Lifetime1;
         var4Lifetime1++;
         this.field_q[incrementValue$1] = (byte)param2;

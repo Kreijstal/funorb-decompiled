@@ -11,11 +11,9 @@ final class qu extends sk {
     private boolean field_j;
 
     final void d(int param0) {
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
         if (this.field_j) {
-          var2 = this.field_f.field_Rc;
-          var3 = this.field_b.J(-108);
+          jagdx.IDirect3DDevice var2 = this.field_f.field_Rc;
+          ec var3 = this.field_b.J(-108);
           var2.SetVertexShaderConstantF(12, var3.a(false, field_k), 2);
         }
         if (param0 == 18580) {
@@ -42,12 +40,10 @@ final class qu extends sk {
     }
 
     final void b(byte param0) {
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
         if (param0 == -25) {
           if (this.field_j) {
-            var2 = this.field_f.field_Rc;
-            var3 = this.field_f.v((byte) -49);
+            jagdx.IDirect3DDevice var2 = this.field_f.field_Rc;
+            ec var3 = this.field_f.v((byte) -49);
             var2.a(0, var3.c(field_k, 77));
           }
           return;
@@ -56,7 +52,6 @@ final class qu extends sk {
 
     qu(kr param0, ResourceArchive param1, em param2) {
         super(param0);
-        boolean stackIn_9_1 = false;
         this.field_g = param2;
         this.field_f = param0;
         if (param1 == null) {
@@ -85,24 +80,19 @@ final class qu extends sk {
         }
         this.field_i = this.field_f.field_Rc.b(param1.a("dx", (byte) -71, "environment_mapped_water_v"));
         this.field_h = this.field_f.field_Rc.a(param1.a("dx", (byte) -71, "environment_mapped_water_f"));
-        stackIn_9_1 = (null != this.field_i) && (null != this.field_h) && (this.field_g.a(0));
+        boolean stackIn_9_1 = (null != this.field_i) && (null != this.field_h) && (this.field_g.a(0));
         this.field_l = stackIn_9_1;
     }
 
     final void a(int param0, int param1, int param2) {
-        jagdx.IDirect3DDevice var4 = null;
-        int var5 = 0;
-        float var6 = 0.0f;
-        int var7 = 0;
-        float var8 = 0.0f;
         if (param0 == 1786747298) {
           if (this.field_j) {
-            var4 = this.field_f.field_Rc;
-            var5 = 1 << (3 & param1);
-            var6 = (float)(1 << ((param1 & 56) >> 3)) / 32.0f;
-            var7 = 65535 & param2;
+            jagdx.IDirect3DDevice var4 = this.field_f.field_Rc;
+            int var5 = 1 << (3 & param1);
+            float var6 = (float)(1 << ((param1 & 56) >> 3)) / 32.0f;
+            int var7 = 65535 & param2;
             var4.b(14, (float)(this.field_b.field_r * var5 % 40000) / 40000.0f, 0.0f, 0.0f, 0.0f);
-            var8 = (float)((param2 & 257550) >> 16) / 8.0f;
+            float var8 = (float)((param2 & 257550) >> 16) / 8.0f;
             var4.b(15, var6, 0.0f, 0.0f, 0.0f);
             var4.a(4, (float)var7, 0.0f, 0.0f, 0.0f);
             var4.a(5, var8, 0.0f, 0.0f, 0.0f);
@@ -112,11 +102,10 @@ final class qu extends sk {
     }
 
     final void a(boolean param0, byte param1) {
-        jagdx.IDirect3DDevice var4 = null;
         go var3 = this.field_b.O(29190);
         if (this.field_l &&
           var3 != null) {
-          var4 = this.field_f.field_Rc;
+          jagdx.IDirect3DDevice var4 = this.field_f.field_Rc;
           this.field_f.a(this.field_i, 5243);
           this.field_f.a(124, this.field_h);
           this.field_b.a(1, (byte) 34);
@@ -147,13 +136,10 @@ final class qu extends sk {
     }
 
     final void b(int param0) {
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
-        ec var4 = null;
         if (this.field_j) {
-          var2 = this.field_f.field_Rc;
-          var3 = this.field_f.t(-11198);
-          var4 = this.field_f.v((byte) -69);
+          jagdx.IDirect3DDevice var2 = this.field_f.field_Rc;
+          ec var3 = this.field_f.t(-11198);
+          ec var4 = this.field_f.v((byte) -69);
           var2.a(0, var4.c(field_k, 107));
           var2.a(4, var3.a(field_k, 35));
         }
@@ -170,18 +156,12 @@ final class qu extends sk {
     }
 
     final void a(int param0) {
-        jagdx.IDirect3DDevice var7 = null;
-        jagdx.IDirect3DDevice var6 = null;
-        float var3 = 0.0f;
-        float var4 = 0.0f;
-        float var3Lifetime1;
-        float var4Lifetime1;
         if (param0 == 10) {
           if (this.field_j) {
-            var7 = this.field_f.field_Rc;
+            jagdx.IDirect3DDevice var7 = this.field_f.field_Rc;
             if (this.field_b.field_p > 0) {
-              var3 = this.field_b.field_y;
-              var4 = this.field_b.field_Xb;
+              float var3 = this.field_b.field_y;
+              float var4 = this.field_b.field_Xb;
               var7.b(16, var3, 1.0f / (-var4 + var3), 0.0f, 0.0f);
             } else {
               var7.b(16, 0.0f, 0.0f, 0.0f, 0.0f);
@@ -193,10 +173,10 @@ final class qu extends sk {
         jj var5 = (jj) null;
         this.a(-38, 45, (jj) null);
         if (this.field_j) {
-          var6 = this.field_f.field_Rc;
+          jagdx.IDirect3DDevice var6 = this.field_f.field_Rc;
           if (this.field_b.field_p > 0) {
-            var3Lifetime1 = this.field_b.field_y;
-            var4Lifetime1 = this.field_b.field_Xb;
+            float var3Lifetime1 = this.field_b.field_y;
+            float var4Lifetime1 = this.field_b.field_Xb;
             var6.b(16, var3Lifetime1, 1.0f / (-var4Lifetime1 + var3Lifetime1), 0.0f, 0.0f);
           } else {
             var6.b(16, 0.0f, 0.0f, 0.0f, 0.0f);
@@ -212,9 +192,8 @@ final class qu extends sk {
     }
 
     final void c(int param0) {
-        jagdx.IDirect3DDevice var2 = null;
         if (this.field_j) {
-          var2 = this.field_f.field_Rc;
+          jagdx.IDirect3DDevice var2 = this.field_f.field_Rc;
           var2.a(8, this.field_b.a(12, field_k));
         }
         if (param0 == 404277666) {

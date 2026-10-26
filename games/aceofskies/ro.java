@@ -13,34 +13,23 @@ final class ro extends ua implements ti {
     static int[] field_t;
 
     final static byte[] b(int param0, int param1) {
-        bi var2;
-        byte[] var3;
-        Random var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        byte[] var10;
-        byte[] var11;
-        int var5Lifetime1;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != -3992) {
           ro.c((byte) 102);
         }
-        var2 = (bi) (hh.field_b.a((byte) -27, (long)param1));
+        bi var2 = (bi) (hh.field_b.a((byte) -27, (long)param1));
         if (var2 == null) {
-          var11 = new byte[512];
-          var10 = var11;
-          var3 = var10;
-          var4 = new Random((long)param1);
-          for (var5 = 0; var5 < 255; var5++) {
+          byte[] var11 = new byte[512];
+          byte[] var10 = var11;
+          byte[] var3 = var10;
+          Random var4 = new Random((long)param1);
+          for (int var5 = 0; var5 < 255; var5++) {
             var3[var5] = (byte)var5;
           }
-          for (var5Lifetime1 = 0; var5Lifetime1 < 255; var5Lifetime1++) {
-            var6 = -var5Lifetime1 + 255;
-            var7 = bs.a(-1, var4, var6);
-            var8 = var11[var7];
+          for (int var5Lifetime1 = 0; var5Lifetime1 < 255; var5Lifetime1++) {
+            int var6 = -var5Lifetime1 + 255;
+            int var7 = bs.a(-1, var4, var6);
+            int var8 = var11[var7];
             var3[var7] = var11[var6];
             var3[511 - var5Lifetime1] = (byte) var8;
             var3[var6] = (byte) var8;
@@ -83,32 +72,20 @@ final class ro extends ua implements ti {
     }
 
     final static int a(int param0, boolean param1, int param2, CharSequence param3) {
-        int var8 = 0;
-        int stackIn_45_0 = 0;
-        RuntimeException stackIn_48_0 = null;
-        StringBuilder stackIn_48_1 = null;
         String stackIn_49_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
         try {
           if (param0 >= 2 &&
             param0 <= 36) {
-            var4_int = 0;
-            var5 = 0;
-            var6 = 0;
+            int var4_int = 0;
+            int var5 = 0;
+            int var6 = 0;
             if (param2 > -77) {
               field_p = (String) null;
             }
-            var7 = param3.length();
-            for (var8 = 0; var8 < var7; var8++) {
+            int var7 = param3.length();
+            for (int var8 = 0; var8 < var7; var8++) {
               boolean decompiledFrameRemainder0 = true;
-              var9 = param3.charAt(var8);
+              int var9 = param3.charAt(var8);
               if ((0 == var8) &&
                 (var9 == 45)) {
                 var4_int = 1;
@@ -134,7 +111,7 @@ final class ro extends ua implements ti {
                 if (var4_int != 0) {
                   var9 = -var9;
                 }
-                var10 = var6 * param0 + var9;
+                int var10 = var6 * param0 + var9;
                 if (var10 / param0 != var6) {
                   throw new NumberFormatException();
                 }
@@ -145,15 +122,15 @@ final class ro extends ua implements ti {
             if (var5 == 0) {
               throw new NumberFormatException();
             }
-            stackIn_45_0 = var6;
+            int stackIn_45_0 = var6;
             return stackIn_45_0;
           }
           throw new IllegalArgumentException("" + param0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_48_0 = var4;
-          stackIn_48_1 = new StringBuilder().append("ro.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_48_0 = var4;
+          StringBuilder stackIn_48_1 = new StringBuilder().append("ro.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_49_2 = "null";
           } else {

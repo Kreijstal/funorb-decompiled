@@ -6,12 +6,9 @@ abstract class vo extends li implements dr {
     private bm field_c;
 
     final static HighscoreQuery requestHighscores(byte obfuscationGuard, int opcode, int entryLimit, int valuesPerEntry, int queryId) {
-        Object var5;
         HighscoreQuery existingQuery;
-        int obfuscationControl;
-        HighscoreQuery newQuery;
-        var5 = null;
-        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        Object var5 = null;
+        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         if (obfuscationGuard >= 120) {
           existingQuery = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
           while (existingQuery != null) {
@@ -30,7 +27,7 @@ abstract class vo extends li implements dr {
             existingQuery = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
           }
         }
-        newQuery = new HighscoreQuery();
+        HighscoreQuery newQuery = new HighscoreQuery();
         newQuery.queryId = queryId;
         newQuery.entryLimit = entryLimit;
         newQuery.valuesPerEntry = valuesPerEntry;

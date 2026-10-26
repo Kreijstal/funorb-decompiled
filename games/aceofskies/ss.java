@@ -25,31 +25,21 @@ final class ss extends ea {
     }
 
     private final Sprite b(int param0, int param1, int param2) {
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
         Sprite var13 = new Sprite(this.field_y * 2, this.field_n);
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var12Lifetime1;
         cm.a(var13, -14492);
         int var5 = this.field_n >> 1;
-        for (var6 = 0; var6 < this.field_n; var6++) {
-          var7 = (var6 >> 1) * (2 * this.field_y - 1) % (this.field_y * 2);
-          var8 = 16711935 & param0;
-          var9 = param0 & 65280;
-          var10 = -var5 + var6;
-          var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
-          var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var11 * var8 | var9 * var11 & 16711680) >>> 8;
+        for (int var6 = 0; var6 < this.field_n; var6++) {
+          int var7 = (var6 >> 1) * (2 * this.field_y - 1) % (this.field_y * 2);
+          int var8 = 16711935 & param0;
+          int var9 = param0 & 65280;
+          int var10 = -var5 + var6;
+          int var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
+          int var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var11 * var8 | var9 * var11 & 16711680) >>> 8;
           SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_y, var12);
-          var9Lifetime1 = param2 & 65280;
-          var8Lifetime1 = 16711935 & param2;
+          int var9Lifetime1 = param2 & 65280;
+          int var8Lifetime1 = 16711935 & param2;
           SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_y) + var7, var6, this.field_y, var12);
-          var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
+          int var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
           SoftwareRasterizer.drawHorizontalLine(this.field_y + var7, var6, this.field_y, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_y + var7, var6, this.field_y, var12Lifetime1);
         }
@@ -99,20 +89,16 @@ final class ss extends ea {
     }
 
     private final Sprite b(boolean param0) {
-        int var4 = 0;
-        int var5 = 0;
-        double var6 = 0.0;
-        int var8 = 0;
         if (!param0) {
           this.field_v = -80;
         }
         int var2 = this.field_n >> 1;
         Sprite var3 = new Sprite(var2, this.field_n);
         cm.a(var3, -14492);
-        for (var4 = 0; var4 < this.field_n; var4++) {
-          for (var5 = 0; var5 < var2; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)((-var4 + this.field_n) * var4);
-            var8 = 1;
+        for (int var4 = 0; var4 < this.field_n; var4++) {
+          for (int var5 = 0; var5 < var2; var5++) {
+            double var6 = (double)var5 * (double)var5 / (double)((-var4 + this.field_n) * var4);
+            int var8 = 1;
             if (var6 < 1.0) {
               var6 = Math.sqrt(1.0 - var6);
               var8 = 1.0 <= var6 ? 255 : (int)(255.0 * var6);
@@ -125,11 +111,7 @@ final class ss extends ea {
     }
 
     final void a(byte param0, ea param1, int param2, int param3) {
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         try {
           if (this.field_u) {
             this.field_r = this.field_r + 1;
@@ -142,10 +124,10 @@ final class ss extends ea {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("ss.S(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var5;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ss.S(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -156,22 +138,14 @@ final class ss extends ea {
     }
 
     private final void a(int param0, int param1, int param2, Sprite param3) {
-        int var7 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
         int var8 = 0;
-        int var9 = 0;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5_int = this.field_q + param0;
+          int var5_int = this.field_q + param0;
           fp.a((byte) 44, param2, param2 + this.field_n, -this.field_D.width + var5_int, param0 + this.field_D.width);
-          var6 = -13 / ((-39 - param1) / 58);
-          for (var7 = -this.field_r + param0; var5_int > var7; var7 = var7 + param3.width) {
+          int var6 = -13 / ((-39 - param1) / 58);
+          for (int var7 = -this.field_r + param0; var5_int > var7; var7 = var7 + param3.width) {
             param3.b(var7, param2);
           }
           sl.c(2765);
@@ -196,10 +170,10 @@ final class ss extends ea {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("ss.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var5;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("ss.AA(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {

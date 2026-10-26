@@ -12,15 +12,6 @@ class qd extends gg {
 
     final static pj a(java.awt.Component param0, boolean param1, int param2, int param3) {
         try {
-          Class var4 = null;
-          Throwable var4_ref = null;
-          RuntimeException var4_ref2 = null;
-          pj var5 = null;
-          dp var5_ref = null;
-          pj stackIn_3_0 = null;
-          dp stackIn_5_0 = null;
-          RuntimeException stackIn_8_0 = null;
-          StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
@@ -28,24 +19,24 @@ class qd extends gg {
               field_p = (int[]) null;
             }
             try {
-              var4 = Class.forName("lf");
-              var5 = (pj) (var4.newInstance());
+              Class var4 = Class.forName("lf");
+              pj var5 = (pj) (var4.newInstance());
               var5.a((byte) -61, param2, param3, param0);
-              stackIn_3_0 = var5;
+              pj stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var4_ref = decompiledCaughtException;
-              var5_ref = new dp();
+              Throwable var4_ref = decompiledCaughtException;
+              dp var5_ref = new dp();
               ((pj) ((Object) var5_ref)).a((byte) -58, param2, param3, param0);
-              stackIn_5_0 = var5_ref;
+              dp stackIn_5_0 = var5_ref;
               return (pj) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_8_0 = var4_ref2;
-            stackIn_8_1 = new StringBuilder().append("qd.O(");
+            RuntimeException var4_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_8_0 = var4_ref2;
+            StringBuilder stackIn_8_1 = new StringBuilder().append("qd.O(");
             if (param0 == null) {
               stackIn_9_2 = "null";
             } else {
@@ -78,9 +69,8 @@ class qd extends gg {
 
     qd(int param0, int param1, int param2, int param3, int param4, float param5) {
         super(param0, param1, param2, param3, param4);
-        int var7 = 0;
         this.field_k = new int[this.field_f];
-        for (var7 = 0; var7 < this.field_f; var7++) {
+        for (int var7 = 0; var7 < this.field_f; var7++) {
           this.field_k[var7] = (short)(int)(Math.pow((double)param5, (double)var7) * 4096.0);
         }
     }

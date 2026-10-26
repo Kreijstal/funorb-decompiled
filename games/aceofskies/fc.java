@@ -10,10 +10,7 @@ final class fc {
     private int field_f;
 
     private final void a(int param0) {
-        int var2 = 0;
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
-        int var2Lifetime1;
-        int var2Lifetime2;
         if (param0 > -101) {
           return;
         }
@@ -25,7 +22,7 @@ final class fc {
         int var7 = -1640531527;
         int var5 = -1640531527;
         int var8 = -1640531527;
-        for (var2 = 0; var2 < 4; var2++) {
+        for (int var2 = 0; var2 < 4; var2++) {
           var3 = var3 ^ var4 << 11;
           var4 = var4 + var5;
           var6 = var6 + var3;
@@ -51,7 +48,7 @@ final class fc {
           var5 = var5 + var10;
           var3 = var3 + var4;
         }
-        for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
+        for (int var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
           var7 = var7 + this.field_b[var2Lifetime1 + 4];
           var10 = var10 + this.field_b[7 + var2Lifetime1];
           var3 = var3 + this.field_b[var2Lifetime1];
@@ -93,7 +90,7 @@ final class fc {
           this.field_e[var2Lifetime1 + 6] = var9;
           this.field_e[var2Lifetime1 + 7] = var10;
         }
-        for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
+        for (int var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
           var10 = var10 + this.field_e[var2Lifetime2 + 7];
           var7 = var7 + this.field_e[var2Lifetime2 + 4];
           var4 = var4 + this.field_e[var2Lifetime2 + 1];
@@ -153,21 +150,15 @@ final class fc {
     }
 
     private final void c(int param0) {
-        int var2 = 0;
-        int dupTemp$1 = 0;
-        int dupTemp$2 = 0;
-        int var3;
-        int var4;
-        int var5;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != 1) {
           this.field_e = (int[]) null;
         }
         int fieldTemp$0 = this.field_f + 1;
         this.field_f = this.field_f + 1;
         this.field_d = this.field_d + fieldTemp$0;
-        for (var2 = 0; 256 > var2; var2++) {
-          var3 = this.field_e[var2];
+        for (int var2 = 0; 256 > var2; var2++) {
+          int var3 = this.field_e[var2];
           if (0 == (2 & var2)) {
             if ((1 & var2) != 0) {
               this.field_c = this.field_c ^ this.field_c >>> 6;
@@ -182,21 +173,20 @@ final class fc {
             }
           }
           this.field_c = this.field_c + this.field_e[255 & var2 + 128];
-          dupTemp$1 = this.field_c + (this.field_e[pg.a(1020, var3) >> 2] + this.field_d);
-          var4 = dupTemp$1;
+          int dupTemp$1 = this.field_c + (this.field_e[pg.a(1020, var3) >> 2] + this.field_d);
+          int var4 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_e[pg.a(261124, var4) >> 8 >> 2];
+          int dupTemp$2 = var3 + this.field_e[pg.a(261124, var4) >> 8 >> 2];
           this.field_d = dupTemp$2;
           this.field_b[var2] = dupTemp$2;
         }
     }
 
     fc(int[] param0) {
-        int var2_int = 0;
         try {
           this.field_b = new int[256];
           this.field_e = new int[256];
-          for (var2_int = 0; param0.length > var2_int; var2_int++) {
+          for (int var2_int = 0; param0.length > var2_int; var2_int++) {
             this.field_b[var2_int] = param0[var2_int];
           }
           this.a(-104);

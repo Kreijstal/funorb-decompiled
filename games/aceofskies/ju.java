@@ -31,30 +31,23 @@ final class ju extends rt {
     }
 
     final static String a(int param0, CharSequence param1) {
-        String var2 = null;
-        RuntimeException var2_ref = null;
-        PacketBuffer var3 = null;
-        String stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2 = vf.a(AceOfSkies.a(param1, -44), 28304);
+          String var2 = vf.a(AceOfSkies.a(param1, -44), 28304);
           if (var2 == null) {
             var2 = "";
           }
           if (param0 != 0) {
-            var3 = (PacketBuffer) null;
+            PacketBuffer var3 = (PacketBuffer) null;
             ju.a(25, (PacketBuffer) null);
           }
-          stackIn_5_0 = var2;
+          String stackIn_5_0 = var2;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_8_0 = var2_ref;
-          stackIn_8_1 = new StringBuilder().append("ju.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var2_ref;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("ju.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -94,12 +87,9 @@ final class ju extends rt {
     }
 
     final static void a(int param0, PacketBuffer param1) {
-        int var2_int = 0;
-        int var2_intLifetime1;
-        int var2_intLifetime2;
         try {
           ld.field_a = param1.readUnsignedShort((byte) 0) << 5;
-          var2_int = param1.readUnsignedByte(113);
+          int var2_int = param1.readUnsignedByte(113);
           fs.field_c = 1835008 & var2_int << 18;
           if (param0 != 965924047) {
             PacketBuffer var3 = (PacketBuffer) null;
@@ -107,11 +97,11 @@ final class ju extends rt {
           }
           ld.field_a = ld.field_a + (var2_int >> 3);
           fs.field_c = fs.field_c + (param1.readUnsignedShort((byte) 0) << 2);
-          var2_intLifetime1 = param1.readUnsignedByte(57);
+          int var2_intLifetime1 = param1.readUnsignedByte(57);
           tj.field_o = (63 & var2_intLifetime1) << 15;
           fs.field_c = fs.field_c + (var2_intLifetime1 >> 6);
           tj.field_o = tj.field_o + (param1.readUnsignedByte(-81) << 7);
-          var2_intLifetime2 = param1.readUnsignedByte(-56);
+          int var2_intLifetime2 = param1.readUnsignedByte(-56);
           HighscoreNameEntry.field_b = 65536 & var2_intLifetime2 << 16;
           tj.field_o = tj.field_o + (var2_intLifetime2 >> 1);
           HighscoreNameEntry.field_b = HighscoreNameEntry.field_b + param1.readUnsignedShort((byte) 0);

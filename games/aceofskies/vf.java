@@ -30,16 +30,8 @@ final class vf implements Runnable {
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        Throwable decompiledCaughtException = null;
-        Object var5 = null;
-        RuntimeException var5_ref = null;
-        int var6 = 0;
-        int var8 = 0;
-        int var6Lifetime1;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_k) {
             return;
@@ -51,9 +43,9 @@ final class vf implements Runnable {
           if (null == this.field_b) {
             this.field_b = new byte[this.field_c];
           }
-          var5 = this;
+          Object var5 = this;
           synchronized (var5) {
-            for (var6 = 0; param0 > var6; var6++) {
+            for (int var6 = 0; param0 > var6; var6++) {
               this.field_b[this.field_h] = param3[var6 + param1];
               this.field_h = (this.field_h + 1) % this.field_c;
               if (~this.field_h == ~((this.field_f + this.field_c - 100) % this.field_c)) {
@@ -64,14 +56,14 @@ final class vf implements Runnable {
               this.field_a = this.field_e.a(3, 1048576, (Runnable) (this));
             }
             this.notifyAll();
-            var6Lifetime1 = 44 / ((param2 + 35) / 56);
+            int var6Lifetime1 = 44 / ((param2 + 35) / 56);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_25_0 = var5_ref;
-          stackIn_25_1 = new StringBuilder().append("vf.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_25_0 = var5_ref;
+          StringBuilder stackIn_25_1 = new StringBuilder().append("vf.H(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_26_2 = "null";
           } else {
@@ -86,18 +78,12 @@ final class vf implements Runnable {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
-          IOException var1 = null;
-          Exception var1_ref = null;
           int var2 = 0;
-          Object var3 = null;
           IOException var3_ref = null;
-          InterruptedException var4 = null;
-          int var6 = 0;
-          String var7 = null;
-          var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+          int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             while (true) {
-              var3 = this;
+              Object var3 = this;
               synchronized (var3) {
                 boolean decompiledFrameRemainder0 = true;
                 if (this.field_f == this.field_h) {
@@ -110,7 +96,7 @@ final class vf implements Runnable {
                       this.wait();
                     } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
-                      var4 = (InterruptedException) (Object) decompiledCaughtException;
+                      InterruptedException var4 = (InterruptedException) (Object) decompiledCaughtException;
                     }
                   }
                 }
@@ -137,7 +123,7 @@ final class vf implements Runnable {
                   }
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
-                  var1 = (IOException) (Object) decompiledCaughtException;
+                  IOException var1 = (IOException) (Object) decompiledCaughtException;
                 }
                 this.field_b = null;
                 break;
@@ -165,8 +151,8 @@ final class vf implements Runnable {
             }
           } catch (java.lang.Exception decompiledCaughtParameter4) {
             decompiledCaughtException = decompiledCaughtParameter4;
-            var1_ref = (Exception) (Object) decompiledCaughtException;
-            var7 = (String) null;
+            Exception var1_ref = (Exception) (Object) decompiledCaughtException;
+            String var7 = (String) null;
             v.a((String) null, (byte) -52, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -177,13 +163,6 @@ final class vf implements Runnable {
     }
 
     final static String a(long param0, int param1) {
-        int var3 = 0;
-        long var4 = 0L;
-        StringBuilder var6 = null;
-        long var7 = 0L;
-        int var9 = 0;
-        int var10 = 0;
-        StringBuilder discarded$0 = null;
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (0L >= param0) {
           return null;
@@ -195,23 +174,23 @@ final class vf implements Runnable {
           return null;
         }
         if (param1 == 28304) {
-          var3 = 0;
-          var4 = param0;
+          int var3 = 0;
+          long var4 = param0;
           while (0L != var4) {
             var4 = var4 / 37L;
             var3++;
           }
-          var6 = new StringBuilder(var3);
+          StringBuilder var6 = new StringBuilder(var3);
           while (param0 != 0L) {
-            var7 = param0;
+            long var7 = param0;
             param0 = param0 / 37L;
-            var9 = ou.field_n[(int)(var7 - param0 * 37L)];
+            int var9 = ou.field_n[(int)(var7 - param0 * 37L)];
             if (var9 == 95) {
-              var10 = -1 + var6.length();
+              int var10 = -1 + var6.length();
               var9 = 160;
               var6.setCharAt(var10, Character.toUpperCase(var6.charAt(var10)));
             }
-            discarded$0 = var6.append((char) var9);
+            StringBuilder discarded$0 = var6.append((char) var9);
           }
           var6.reverse();
           var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
@@ -259,15 +238,11 @@ final class vf implements Runnable {
 
     final void a(int param0) {
         try {
-          InterruptedException var2 = null;
-          int var4 = 0;
-          Throwable decompiledCaughtException = null;
-          Object var2_ref = null;
-          var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+          int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
           if (this.field_k) {
             return;
           }
-          var2_ref = this;
+          Object var2_ref = this;
           synchronized (var2_ref) {
             this.field_k = true;
             this.notifyAll();
@@ -280,8 +255,8 @@ final class vf implements Runnable {
               try {
                 ((Thread) (this.field_a.field_f)).join();
               } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-                decompiledCaughtException = decompiledCaughtParameter0;
-                var2 = (InterruptedException) (Object) decompiledCaughtException;
+                Throwable decompiledCaughtException = decompiledCaughtParameter0;
+                InterruptedException var2 = (InterruptedException) (Object) decompiledCaughtException;
                 this.field_a = null;
                 if (param0 == 1) {
                   return;
@@ -305,14 +280,8 @@ final class vf implements Runnable {
     }
 
     final void a(int param0, int param1, byte[] param2, boolean param3) throws IOException {
-        int var5_int = 0;
-        int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!param3) {
             this.field_k = false;
@@ -321,7 +290,7 @@ final class vf implements Runnable {
             return;
           }
           while (0 < param1) {
-            var5_int = this.field_g.read(param2, param0, param1);
+            int var5_int = this.field_g.read(param2, param0, param1);
             if (var5_int <= 0) {
               throw new EOFException();
             }
@@ -330,10 +299,10 @@ final class vf implements Runnable {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("vf.C(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("vf.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {

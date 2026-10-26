@@ -8,25 +8,11 @@ final class mo {
     static w field_a;
 
     final static io a(int param0, jc param1, vj[] param2) {
-        int var3_int = 0;
-        Object stackIn_24_0 = null;
-        io stackIn_26_0 = null;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
-        StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        long var3_long = 0L;
-        RuntimeException var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var11 = null;
-        int var5Lifetime1;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          for (var3_int = 0; var3_int < param2.length; var3_int++) {
+          for (int var3_int = 0; var3_int < param2.length; var3_int++) {
             if (null == param2[var3_int]) {
               return null;
             }
@@ -34,8 +20,8 @@ final class mo {
               return null;
             }
           }
-          var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
-          for (var5 = 0; param2.length > var5; var5++) {
+          long var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
+          for (int var5 = 0; param2.length > var5; var5++) {
             jaggl.OpenGL.glAttachObjectARB(var3_long, param2[var5].field_c);
           }
           jaggl.OpenGL.glLinkProgramARB(var3_long);
@@ -46,35 +32,35 @@ final class mo {
             }
             jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, ee.field_d, 1);
             if (1 < ee.field_d[1]) {
-              var11 = new byte[ee.field_d[1]];
+              byte[] var11 = new byte[ee.field_d[1]];
               jaggl.OpenGL.glGetInfoLogARB(var3_long, ee.field_d[1], ee.field_d, 0, var11, 0);
               System.out.println(new String(var11));
             }
             if (ee.field_d[0] == 0) {
-              var7 = 0;
-              var5Lifetime1 = var7;
+              int var7 = 0;
+              int var5Lifetime1 = var7;
               while (var7 < param2.length) {
                 jaggl.OpenGL.glDetachObjectARB(var3_long, param2[var7].field_c);
                 var7++;
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);
-              stackIn_24_0 = null;
+              Object stackIn_24_0 = null;
               return (io) (stackIn_24_0);
             }
           }
-          stackIn_26_0 = new io(param1, var3_long, param2);
+          io stackIn_26_0 = new io(param1, var3_long, param2);
           return stackIn_26_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_29_0 = var3;
-          stackIn_29_1 = new StringBuilder().append("mo.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_29_0 = var3;
+          StringBuilder stackIn_29_1 = new StringBuilder().append("mo.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_30_2 = "null";
           } else {
             stackIn_30_2 = "{...}";
           }
-          stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
+          StringBuilder stackIn_32_1 = ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',');
           if (param2 == null) {
             stackIn_33_2 = "null";
           } else {

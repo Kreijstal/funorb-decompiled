@@ -8,13 +8,8 @@ final class ub extends IntrusiveNode {
     byte[] field_e;
 
     final static void a(String param0, String param1, int param2) {
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (null != ml.field_m) {
             ml.field_m.h((byte) -31);
@@ -26,16 +21,16 @@ final class ub extends IntrusiveNode {
           ClientException.field_d.d(vr.field_b, -30244);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("ub.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var3;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("ub.A(");
           if (param0 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -3090,19 +3085,15 @@ final class ub extends IntrusiveNode {
     }
 
     ub(byte[] param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_e = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("ub.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = runtimeException;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ub.<init>(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {

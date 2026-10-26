@@ -5,9 +5,6 @@ class Sprite extends SpriteState {
     int[] pixels;
 
     void b(int param0, int param1, int param2) {
-        int var10 = 0;
-        int var10Lifetime1;
-        int var10Lifetime2;
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -17,7 +14,7 @@ class Sprite extends SpriteState {
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
-          var10 = SoftwareRasterizer.clipTop - param1;
+          int var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
           param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
@@ -27,7 +24,7 @@ class Sprite extends SpriteState {
           var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
         if (param0 < SoftwareRasterizer.clipLeft) {
-          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
           param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
@@ -36,7 +33,7 @@ class Sprite extends SpriteState {
           var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -51,74 +48,55 @@ class Sprite extends SpriteState {
     }
 
     final void rotateClockwise() {
-        int var4 = 0;
-        int incrementValue$0 = 0;
-        int var3 = 0;
         int[] var1 = new int[this.width * this.height];
         int var2 = 0;
-        int var3Lifetime1;
-        int var3Lifetime2;
-        int var3Lifetime3;
-        for (var3 = 0; var3 < this.width; var3++) {
-          for (var4 = this.height - 1; var4 >= 0; var4--) {
-            incrementValue$0 = var2;
+        for (int var3 = 0; var3 < this.width; var3++) {
+          for (int var4 = this.height - 1; var4 >= 0; var4--) {
+            int incrementValue$0 = var2;
             var2++;
             var1[incrementValue$0] = this.pixels[var3 + var4 * this.width];
           }
         }
         this.pixels = var1;
-        var3Lifetime1 = this.trimY;
+        int var3Lifetime1 = this.trimY;
         this.trimY = this.trimX;
         this.trimX = this.fullHeight - this.height - var3Lifetime1;
-        var3Lifetime2 = this.height;
+        int var3Lifetime2 = this.height;
         this.height = this.width;
         this.width = var3Lifetime2;
-        var3Lifetime3 = this.fullHeight;
+        int var3Lifetime3 = this.fullHeight;
         this.fullHeight = this.fullWidth;
         this.fullWidth = var3Lifetime3;
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var15 = 0;
-        int var16 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var17;
-        int var18;
-        int var19;
-        var10 = param9 >> 16 & 255;
-        var11 = param9 >> 8 & 255;
-        var12 = param9 & 255;
-        var13 = -(param5 >> 2);
+        int var10 = param9 >> 16 & 255;
+        int var11 = param9 >> 8 & 255;
+        int var12 = param9 & 255;
+        int var13 = -(param5 >> 2);
         param5 = -(param5 & 3);
-        var14 = var13 + var13 + var13 + var13 + param5;
-        for (var15 = -param6; var15 < 0; var15++) {
-          for (var16 = var14; var16 < 0; var16++) {
-            boolean decompiledFrameRemainder0 = true;
+        int var14 = var13 + var13 + var13 + var13 + param5;
+        for (int var15 = -param6; var15 < 0; var15++) {
+          for (int var16 = var14; var16 < 0; var16++) {
             param2 = param1[param3++];
             if (param2 == 0) {
               param4++;
             } else {
-              var17 = param2 >> 16 & 255;
-              var18 = param2 >> 8 & 255;
-              var19 = param2 & 255;
+              int var17 = param2 >> 16 & 255;
+              int var18 = param2 >> 8 & 255;
+              int var19 = param2 & 255;
               if (var17 == var18 &&
                 var18 == var19) {
                 if (var17 > 128) {
-                  incrementValue$1 = param4;
+                  int incrementValue$1 = param4;
                   param4++;
                   param0[incrementValue$1] = (var10 * (256 - var17) + 255 * (var17 - 128) >> 7 << 16) + (var11 * (256 - var18) + 255 * (var18 - 128) >> 7 << 8) + (var12 * (256 - var19) + 255 * (var19 - 128) >> 7);
                 } else {
-                  incrementValue$2 = param4;
+                  int incrementValue$2 = param4;
                   param4++;
                   param0[incrementValue$2] = (var17 * var10 >> 7 << 16) + (var18 * var11 >> 7 << 8) + (var19 * var12 >> 7);
                 }
-                decompiledFrameRemainder0 = false;
+                boolean decompiledFrameRemainder0 = false;
               }
               else {
                 param0[param4++] = param2;
@@ -135,7 +113,6 @@ class Sprite extends SpriteState {
         int stackIn_11_0 = 0;
         int stackIn_19_0 = 0;
         int stackIn_25_0 = 0;
-        int var6;
         int var7;
         int var8;
         int var9;
@@ -144,11 +121,10 @@ class Sprite extends SpriteState {
         int var12;
         int var13;
         int var14;
-        int var15;
         int var16;
         int var17;
         int var18;
-        var6 = param2 * this.width + param1;
+        int var6 = param2 * this.width + param1;
         param3 = param3 & 4095;
         param4 = param4 & 4095;
         if (param2 < 0) {
@@ -217,7 +193,7 @@ class Sprite extends SpriteState {
         var12 = var12 >> 16;
         var13 = var13 >> 16;
         var14 = var14 >> 16;
-        var15 = var11 + var12 + var13 + var14;
+        int var15 = var11 + var12 + var13 + var14;
         if (var15 < 256) {
           if (var15 < 128) {
             return;
@@ -255,20 +231,15 @@ class Sprite extends SpriteState {
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var11 = 0;
-        int var12 = 0;
-        int incrementValue$12 = 0;
-        int var10;
-        int var13;
-        var10 = 256 - param9;
-        for (var11 = -param6; var11 < 0; var11++) {
-          for (var12 = -param5; var12 < 0; var12++) {
+        int var10 = 256 - param9;
+        for (int var11 = -param6; var11 < 0; var11++) {
+          for (int var12 = -param5; var12 < 0; var12++) {
             param2 = param1[param3++];
             if (param2 == 0) {
               param4++;
             } else {
-              var13 = param0[param4];
-              incrementValue$12 = param4;
+              int var13 = param0[param4];
+              int incrementValue$12 = param4;
               param4++;
               param0[incrementValue$12] = ((param2 & 16711935) * param9 + (var13 & 16711935) * var10 & -16711936) + ((param2 & 65280) * param9 + (var13 & 65280) * var10 & 16711680) >> 8;
             }
@@ -279,21 +250,19 @@ class Sprite extends SpriteState {
     }
 
     final Sprite copy() {
-        int var3 = 0;
         Sprite var1 = new Sprite(this.width, this.height);
         var1.fullWidth = this.fullWidth;
         var1.fullHeight = this.fullHeight;
         var1.trimX = this.trimX;
         var1.trimY = this.trimY;
         int var2 = this.pixels.length;
-        for (var3 = 0; var3 < var2; var3++) {
+        for (int var3 = 0; var3 < var2; var3++) {
           var1.pixels[var3] = this.pixels[var3];
         }
         return var1;
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
             param0 = param4[param5++];
@@ -306,7 +275,7 @@ class Sprite extends SpriteState {
               param2 = param0 + param1;
               param0 = (param0 & 16711935) + (param1 & 16711935);
               param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-              incrementValue$12 = param7;
+              int incrementValue$12 = param7;
               param7++;
               param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
             }
@@ -317,7 +286,6 @@ class Sprite extends SpriteState {
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
             param0 = param4[param5++];
@@ -328,7 +296,7 @@ class Sprite extends SpriteState {
               param2 = param0 + param1;
               param0 = (param0 & 16711935) + (param1 & 16711935);
               param1 = (param0 & 16777472) + (param2 - param0 & 65536);
-              incrementValue$12 = param7;
+              int incrementValue$12 = param7;
               param7++;
               param3[incrementValue$12] = param2 - param1 | param1 - (param1 >>> 8);
             }
@@ -339,9 +307,6 @@ class Sprite extends SpriteState {
     }
 
     void b(int param0, int param1) {
-        int var9 = 0;
-        int var9Lifetime1;
-        int var9Lifetime2;
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
@@ -351,7 +316,7 @@ class Sprite extends SpriteState {
         int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
-          var9 = SoftwareRasterizer.clipTop - param1;
+          int var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
           param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
@@ -361,7 +326,7 @@ class Sprite extends SpriteState {
           var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
         if (param0 < SoftwareRasterizer.clipLeft) {
-          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
           param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
@@ -370,7 +335,7 @@ class Sprite extends SpriteState {
           var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -385,15 +350,13 @@ class Sprite extends SpriteState {
     }
 
     final Sprite copyMirroredHorizontally() {
-        int var2 = 0;
-        int var3 = 0;
         Sprite var1 = new Sprite(this.width, this.height);
         var1.fullWidth = this.fullWidth;
         var1.fullHeight = this.fullHeight;
         var1.trimX = this.fullWidth - this.width - this.trimX;
         var1.trimY = this.trimY;
-        for (var2 = 0; var2 < this.height; var2++) {
-          for (var3 = 0; var3 < this.width; var3++) {
+        for (int var2 = 0; var2 < this.height; var2++) {
+          for (int var3 = 0; var3 < this.width; var3++) {
             var1.pixels[var2 * this.width + var3] = this.pixels[var2 * this.width + this.width - 1 - var3];
           }
         }
@@ -411,22 +374,16 @@ class Sprite extends SpriteState {
     }
 
     private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int var10 = 0;
-        int var11 = 0;
-        int incrementValue$5 = 0;
-        int var12;
-        int var13;
-        int var14;
-        for (var10 = -param7; var10 < 0; var10++) {
-          for (var11 = -param6; var11 < 0; var11++) {
+        for (int var10 = -param7; var10 < 0; var10++) {
+          for (int var11 = -param6; var11 < 0; var11++) {
             param3 = param2[param4++];
             if (param3 != 0) {
               param0 = param1[param5];
               if (param0 != 0) {
-                var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
-                var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
-                var14 = (param3 & 255) * (param0 & 255) >>> 8;
-                incrementValue$5 = param5;
+                int var12 = ((param3 & 16711680) >>> 16) * ((param0 & 16711680) >>> 16) >>> 8;
+                int var13 = (param3 & 65280) * (param0 & 65280) >>> 24;
+                int var14 = (param3 & 255) * (param0 & 255) >>> 8;
+                int incrementValue$5 = param5;
                 param5++;
                 param1[incrementValue$5] = (var12 << 16) + (var13 << 8) + var14;
               } else {
@@ -442,14 +399,9 @@ class Sprite extends SpriteState {
     }
 
     Sprite(byte[] param0, java.awt.Component param1) {
-        Throwable decompiledCaughtException = null;
-        java.awt.Image var3 = null;
-        InterruptedException var3_ref = null;
-        java.awt.MediaTracker var4 = null;
-        java.awt.image.PixelGrabber var5 = null;
         try {
-          var3 = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
-          var4 = new java.awt.MediaTracker(param1);
+          java.awt.Image var3 = java.awt.Toolkit.getDefaultToolkit().createImage(param0);
+          java.awt.MediaTracker var4 = new java.awt.MediaTracker(param1);
           var4.addImage(var3, 0);
           var4.waitForAll();
           this.width = var3.getWidth((java.awt.image.ImageObserver) ((Object) param1));
@@ -459,23 +411,19 @@ class Sprite extends SpriteState {
           this.trimX = 0;
           this.trimY = 0;
           this.pixels = new int[this.width * this.height];
-          var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.width, this.height, this.pixels, 0, this.width);
+          java.awt.image.PixelGrabber var5 = new java.awt.image.PixelGrabber(var3, 0, 0, this.width, this.height, this.pixels, 0, this.width);
           var5.grabPixels();
         } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = (InterruptedException) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          InterruptedException var3_ref = (InterruptedException) (Object) decompiledCaughtException;
         }
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var10 = 0;
-        int var9;
-        int var11;
-        int var11Lifetime1;
-        var9 = -(param5 >> 2);
+        int var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
-        for (var10 = -param6; var10 < 0; var10++) {
-          for (var11 = var9; var11 < 0; var11++) {
+        for (int var10 = -param6; var10 < 0; var10++) {
+          for (int var11 = var9; var11 < 0; var11++) {
             param2 = param1[param3++];
             if (param2 == 0) {
               param4++;
@@ -501,7 +449,7 @@ class Sprite extends SpriteState {
               param0[param4++] = param2;
             }
           }
-          for (var11Lifetime1 = param5; var11Lifetime1 < 0; var11Lifetime1++) {
+          for (int var11Lifetime1 = param5; var11Lifetime1 < 0; var11Lifetime1++) {
             param2 = param1[param3++];
             if (param2 == 0) {
               param4++;
@@ -515,31 +463,16 @@ class Sprite extends SpriteState {
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int dupTemp$0 = 0;
-        int dupTemp$1 = 0;
-        int dupTemp$2 = 0;
-        int dupTemp$3 = 0;
-        int incrementValue$4 = 0;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var10Lifetime1;
-        int var10Lifetime2;
-        int var10Lifetime3;
-        var8 = 0;
+        int var8 = 0;
         while (var8 < param7) {
-          var9 = 0;
+          int var9 = 0;
           while (var9 < param6) {
-            var11 = SoftwareRasterizer.framebuffer[param2] & 16711935;
-            var12 = SoftwareRasterizer.framebuffer[param2] & 65280;
-            var13 = 0;
-            var14 = 0;
-            dupTemp$0 = param0[param1];
-            var10 = dupTemp$0;
+            int var11 = SoftwareRasterizer.framebuffer[param2] & 16711935;
+            int var12 = SoftwareRasterizer.framebuffer[param2] & 65280;
+            int var13 = 0;
+            int var14 = 0;
+            int dupTemp$0 = param0[param1];
+            int var10 = dupTemp$0;
             if (dupTemp$0 != 0) {
               var13 = var13 + (var10 & 16711935);
               var14 = var14 + (var10 & 65280);
@@ -547,8 +480,8 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            dupTemp$1 = param0[param1 + 1];
-            var10Lifetime1 = dupTemp$1;
+            int dupTemp$1 = param0[param1 + 1];
+            int var10Lifetime1 = dupTemp$1;
             if (dupTemp$1 != 0) {
               var13 = var13 + (var10Lifetime1 & 16711935);
               var14 = var14 + (var10Lifetime1 & 65280);
@@ -556,8 +489,8 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            dupTemp$2 = param0[param1 + param5];
-            var10Lifetime2 = dupTemp$2;
+            int dupTemp$2 = param0[param1 + param5];
+            int var10Lifetime2 = dupTemp$2;
             if (dupTemp$2 != 0) {
               var13 = var13 + (var10Lifetime2 & 16711935);
               var14 = var14 + (var10Lifetime2 & 65280);
@@ -565,8 +498,8 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            dupTemp$3 = param0[param1 + param5 + 1];
-            var10Lifetime3 = dupTemp$3;
+            int dupTemp$3 = param0[param1 + param5 + 1];
+            int var10Lifetime3 = dupTemp$3;
             if (dupTemp$3 != 0) {
               var13 = var13 + (var10Lifetime3 & 16711935);
               var14 = var14 + (var10Lifetime3 & 65280);
@@ -574,7 +507,7 @@ class Sprite extends SpriteState {
               var13 = var13 + var11;
               var14 = var14 + var12;
             }
-            incrementValue$4 = param2;
+            int incrementValue$4 = param2;
             param2++;
             SoftwareRasterizer.framebuffer[incrementValue$4] = (var13 & 66847740 | var14 & 261120) >> 2;
             var9++;
@@ -587,9 +520,6 @@ class Sprite extends SpriteState {
     }
 
     void c(int param0, int param1) {
-        int var9 = 0;
-        int var9Lifetime1;
-        int var9Lifetime2;
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
@@ -599,7 +529,7 @@ class Sprite extends SpriteState {
         int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
-          var9 = SoftwareRasterizer.clipTop - param1;
+          int var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
           param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
@@ -609,7 +539,7 @@ class Sprite extends SpriteState {
           var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
         if (param0 < SoftwareRasterizer.clipLeft) {
-          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
           param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
@@ -618,7 +548,7 @@ class Sprite extends SpriteState {
           var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -633,9 +563,6 @@ class Sprite extends SpriteState {
     }
 
     void a(int param0, int param1, int param2) {
-        int var10 = 0;
-        int var10Lifetime1;
-        int var10Lifetime2;
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -645,7 +572,7 @@ class Sprite extends SpriteState {
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
-          var10 = SoftwareRasterizer.clipTop - param1;
+          int var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
           param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
@@ -655,7 +582,7 @@ class Sprite extends SpriteState {
           var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
         if (param0 < SoftwareRasterizer.clipLeft) {
-          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
           param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
@@ -664,7 +591,7 @@ class Sprite extends SpriteState {
           var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -679,82 +606,26 @@ class Sprite extends SpriteState {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        double var7;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
         int var19;
         int var20;
         int var21;
         int var22;
-        int var23;
-        int var24;
-        double var25;
-        int var27;
-        int var28;
-        int var29;
-        int var30;
-        int var31;
-        int var32;
-        int var33;
-        int var34;
-        int var35;
-        int var36;
-        int var37;
-        int var38;
-        int var39;
-        int var40;
-        int var33Lifetime1;
-        int var33Lifetime2;
-        int var34Lifetime1;
-        int var34Lifetime2;
-        int var35Lifetime1;
-        int var35Lifetime2;
-        int var36Lifetime1;
-        int var36Lifetime2;
-        int var37Lifetime1;
-        int var37Lifetime2;
-        int var38Lifetime1;
-        int var38Lifetime2;
-        int var39Lifetime1;
-        int var39Lifetime2;
-        int var40Lifetime1;
-        int var40Lifetime2;
-        int var33Lifetime3;
-        int var34Lifetime3;
-        int var35Lifetime3;
-        int var36Lifetime3;
-        int var37Lifetime3;
-        int var38Lifetime3;
-        int var39Lifetime3;
-        int var40Lifetime3;
-        int var35Lifetime1Lifetime1;
-        int var35Lifetime2Lifetime1;
-        int var35Lifetime4;
-        int var35Lifetime3Lifetime1;
         if (param5 == 0) {
           return;
         }
         param0 = param0 - (this.trimX << 4);
         param1 = param1 - (this.trimY << 4);
-        var7 = (double)(param4 & 65535) * 0.00009587379924285257;
-        var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
-        var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
-        var11 = -param0 * var10 + -param1 * var9;
-        var12 = -(-param0) * var9 + -param1 * var10;
-        var13 = ((this.width << 4) - param0) * var10 + -param1 * var9;
-        var14 = -((this.width << 4) - param0) * var9 + -param1 * var10;
-        var15 = -param0 * var10 + ((this.height << 4) - param1) * var9;
-        var16 = -(-param0) * var9 + ((this.height << 4) - param1) * var10;
-        var17 = ((this.width << 4) - param0) * var10 + ((this.height << 4) - param1) * var9;
-        var18 = -((this.width << 4) - param0) * var9 + ((this.height << 4) - param1) * var10;
+        double var7 = (double)(param4 & 65535) * 0.00009587379924285257;
+        int var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
+        int var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
+        int var11 = -param0 * var10 + -param1 * var9;
+        int var12 = -(-param0) * var9 + -param1 * var10;
+        int var13 = ((this.width << 4) - param0) * var10 + -param1 * var9;
+        int var14 = -((this.width << 4) - param0) * var9 + -param1 * var10;
+        int var15 = -param0 * var10 + ((this.height << 4) - param1) * var9;
+        int var16 = -(-param0) * var9 + ((this.height << 4) - param1) * var10;
+        int var17 = ((this.width << 4) - param0) * var10 + ((this.height << 4) - param1) * var9;
+        int var18 = -((this.width << 4) - param0) * var9 + ((this.height << 4) - param1) * var10;
         if (var11 >= var13) {
           var19 = var13;
           var20 = var11;
@@ -825,24 +696,24 @@ class Sprite extends SpriteState {
         if (var22 >= 0) {
           return;
         }
-        var23 = var21 * SoftwareRasterizer.stride + var19;
-        var24 = SoftwareRasterizer.stride + var20;
-        var25 = 16777216.0 / (double)param5;
-        var27 = (int)Math.floor(Math.sin(var7) * var25 + 0.5);
-        var28 = (int)Math.floor(Math.cos(var7) * var25 + 0.5);
-        var29 = (var19 << 4) + 8 - param2;
-        var30 = (var21 << 4) + 8 - param3;
-        var31 = (param0 << 8) - 2048 - (var30 * var27 >> 4);
-        var32 = (param1 << 8) - 2048 + (var30 * var28 >> 4);
+        int var23 = var21 * SoftwareRasterizer.stride + var19;
+        int var24 = SoftwareRasterizer.stride + var20;
+        double var25 = 16777216.0 / (double)param5;
+        int var27 = (int)Math.floor(Math.sin(var7) * var25 + 0.5);
+        int var28 = (int)Math.floor(Math.cos(var7) * var25 + 0.5);
+        int var29 = (var19 << 4) + 8 - param2;
+        int var30 = (var21 << 4) + 8 - param3;
+        int var31 = (param0 << 8) - 2048 - (var30 * var27 >> 4);
+        int var32 = (param1 << 8) - 2048 + (var30 * var28 >> 4);
         if (var28 >= 0) {
           if (var27 >= 0) {
-            var36 = var22;
+            int var36 = var22;
             while (var36 < 0) {
-              var37 = var31 + (var29 * var28 >> 4);
-              var38 = var32 + (var29 * var27 >> 4);
-              var39 = var20;
-              var40 = 0;
-              var35 = var37 + 4096;
+              int var37 = var31 + (var29 * var28 >> 4);
+              int var38 = var32 + (var29 * var27 >> 4);
+              int var39 = var20;
+              int var40 = 0;
+              int var35 = var37 + 4096;
               if (var35 < 0) {
                 if (var28 != 0) {
                   var35 = (var28 - 1 - var35) / var28;
@@ -859,7 +730,7 @@ class Sprite extends SpriteState {
               }
               if (var40 != 0) {
                 var40 = 0;
-                var35Lifetime4 = var38 + 4096;
+                int var35Lifetime4 = var38 + 4096;
                 if (var35Lifetime4 < 0) {
                   if (var27 != 0) {
                     var35Lifetime4 = (var27 - 1 - var35Lifetime4) / var27;
@@ -876,9 +747,9 @@ class Sprite extends SpriteState {
                 }
                 if (var40 != 0) {
                   while (var39 < 0) {
-                    var33 = var37 >> 12;
+                    int var33 = var37 >> 12;
                     if (var37 >> 12 < this.width) {
-                      var34 = var38 >> 12;
+                      int var34 = var38 >> 12;
                       if (var38 >> 12 < this.height) {
                         this.a(var23, var33, var34, var37, var38);
                         var39++;
@@ -900,13 +771,13 @@ class Sprite extends SpriteState {
             }
             return;
           }
-          var36Lifetime3 = var22;
+          int var36Lifetime3 = var22;
           while (var36Lifetime3 < 0) {
-            var37Lifetime3 = var31 + (var29 * var28 >> 4);
-            var38Lifetime3 = var32 + (var29 * var27 >> 4);
-            var39Lifetime3 = var20;
-            var40Lifetime3 = 0;
-            var35Lifetime3 = var37Lifetime3 + 4096;
+            int var37Lifetime3 = var31 + (var29 * var28 >> 4);
+            int var38Lifetime3 = var32 + (var29 * var27 >> 4);
+            int var39Lifetime3 = var20;
+            int var40Lifetime3 = 0;
+            int var35Lifetime3 = var37Lifetime3 + 4096;
             if (var35Lifetime3 < 0) {
               if (var28 != 0) {
                 var35Lifetime3 = (var28 - 1 - var35Lifetime3) / var28;
@@ -923,7 +794,7 @@ class Sprite extends SpriteState {
             }
             if (var40Lifetime3 != 0) {
               var40Lifetime3 = 0;
-              var35Lifetime3Lifetime1 = var38Lifetime3 - (this.height << 12);
+              int var35Lifetime3Lifetime1 = var38Lifetime3 - (this.height << 12);
               if (var35Lifetime3Lifetime1 >= 0) {
                 if (var27 != 0) {
                   var35Lifetime3Lifetime1 = (var27 - var35Lifetime3Lifetime1) / var27;
@@ -941,9 +812,9 @@ class Sprite extends SpriteState {
               if (var40Lifetime3 != 0) {
                 while (var39Lifetime3 < 0) {
                   if (var38Lifetime3 >= -4096) {
-                    var33Lifetime3 = var37Lifetime3 >> 12;
+                    int var33Lifetime3 = var37Lifetime3 >> 12;
                     if (var37Lifetime3 >> 12 < this.width) {
-                      var34Lifetime3 = var38Lifetime3 >> 12;
+                      int var34Lifetime3 = var38Lifetime3 >> 12;
                       this.a(var23, var33Lifetime3, var34Lifetime3, var37Lifetime3, var38Lifetime3);
                       var39Lifetime3++;
                       var37Lifetime3 = var37Lifetime3 + var28;
@@ -965,13 +836,13 @@ class Sprite extends SpriteState {
           return;
         }
         if (var27 >= 0) {
-          var36Lifetime1 = var22;
+          int var36Lifetime1 = var22;
           while (var36Lifetime1 < 0) {
-            var37Lifetime1 = var31 + (var29 * var28 >> 4);
-            var38Lifetime1 = var32 + (var29 * var27 >> 4);
-            var39Lifetime1 = var20;
-            var40Lifetime1 = 0;
-            var35Lifetime1 = var37Lifetime1 - (this.width << 12);
+            int var37Lifetime1 = var31 + (var29 * var28 >> 4);
+            int var38Lifetime1 = var32 + (var29 * var27 >> 4);
+            int var39Lifetime1 = var20;
+            int var40Lifetime1 = 0;
+            int var35Lifetime1 = var37Lifetime1 - (this.width << 12);
             if (var35Lifetime1 >= 0) {
               if (var28 != 0) {
                 var35Lifetime1 = (var28 - var35Lifetime1) / var28;
@@ -988,7 +859,7 @@ class Sprite extends SpriteState {
             }
             if (var40Lifetime1 != 0) {
               var40Lifetime1 = 0;
-              var35Lifetime1Lifetime1 = var38Lifetime1 + 4096;
+              int var35Lifetime1Lifetime1 = var38Lifetime1 + 4096;
               if (var35Lifetime1Lifetime1 < 0) {
                 if (var27 != 0) {
                   var35Lifetime1Lifetime1 = (var27 - 1 - var35Lifetime1Lifetime1) / var27;
@@ -1006,9 +877,9 @@ class Sprite extends SpriteState {
               if (var40Lifetime1 != 0) {
                 while (var39Lifetime1 < 0) {
                   if (var37Lifetime1 >= -4096) {
-                    var34Lifetime1 = var38Lifetime1 >> 12;
+                    int var34Lifetime1 = var38Lifetime1 >> 12;
                     if (var38Lifetime1 >> 12 < this.height) {
-                      var33Lifetime1 = var37Lifetime1 >> 12;
+                      int var33Lifetime1 = var37Lifetime1 >> 12;
                       this.a(var23, var33Lifetime1, var34Lifetime1, var37Lifetime1, var38Lifetime1);
                       var39Lifetime1++;
                       var37Lifetime1 = var37Lifetime1 + var28;
@@ -1029,13 +900,13 @@ class Sprite extends SpriteState {
           }
           return;
         }
-        var36Lifetime2 = var22;
+        int var36Lifetime2 = var22;
         while (var36Lifetime2 < 0) {
-          var37Lifetime2 = var31 + (var29 * var28 >> 4);
-          var38Lifetime2 = var32 + (var29 * var27 >> 4);
-          var39Lifetime2 = var20;
-          var40Lifetime2 = 0;
-          var35Lifetime2 = var37Lifetime2 - (this.width << 12);
+          int var37Lifetime2 = var31 + (var29 * var28 >> 4);
+          int var38Lifetime2 = var32 + (var29 * var27 >> 4);
+          int var39Lifetime2 = var20;
+          int var40Lifetime2 = 0;
+          int var35Lifetime2 = var37Lifetime2 - (this.width << 12);
           if (var35Lifetime2 >= 0) {
             if (var28 != 0) {
               var35Lifetime2 = (var28 - var35Lifetime2) / var28;
@@ -1052,7 +923,7 @@ class Sprite extends SpriteState {
           }
           if (var40Lifetime2 != 0) {
             var40Lifetime2 = 0;
-            var35Lifetime2Lifetime1 = var38Lifetime2 - (this.height << 12);
+            int var35Lifetime2Lifetime1 = var38Lifetime2 - (this.height << 12);
             if (var35Lifetime2Lifetime1 >= 0) {
               if (var27 != 0) {
                 var35Lifetime2Lifetime1 = (var27 - var35Lifetime2Lifetime1) / var27;
@@ -1071,8 +942,8 @@ class Sprite extends SpriteState {
               while (var39Lifetime2 < 0) {
                 if (var37Lifetime2 >= -4096 &&
                   var38Lifetime2 >= -4096) {
-                  var33Lifetime2 = var37Lifetime2 >> 12;
-                  var34Lifetime2 = var38Lifetime2 >> 12;
+                  int var33Lifetime2 = var37Lifetime2 >> 12;
+                  int var34Lifetime2 = var38Lifetime2 >> 12;
                   this.a(var23, var33Lifetime2, var34Lifetime2, var37Lifetime2, var38Lifetime2);
                   var39Lifetime2++;
                   var37Lifetime2 = var37Lifetime2 + var28;
@@ -1098,9 +969,6 @@ class Sprite extends SpriteState {
     }
 
     void d(int param0, int param1, int param2) {
-        int var10 = 0;
-        int var10Lifetime1;
-        int var10Lifetime2;
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -1110,7 +978,7 @@ class Sprite extends SpriteState {
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
-          var10 = SoftwareRasterizer.clipTop - param1;
+          int var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
           param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
@@ -1120,7 +988,7 @@ class Sprite extends SpriteState {
           var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
         if (param0 < SoftwareRasterizer.clipLeft) {
-          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
           param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
@@ -1129,7 +997,7 @@ class Sprite extends SpriteState {
           var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1148,9 +1016,6 @@ class Sprite extends SpriteState {
     }
 
     final void c(int param0, int param1, int param2) {
-        int var10 = 0;
-        int var10Lifetime1;
-        int var10Lifetime2;
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var4 = param0 + param1 * SoftwareRasterizer.stride;
@@ -1160,7 +1025,7 @@ class Sprite extends SpriteState {
         int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
-          var10 = SoftwareRasterizer.clipTop - param1;
+          int var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
           param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
@@ -1170,7 +1035,7 @@ class Sprite extends SpriteState {
           var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
         if (param0 < SoftwareRasterizer.clipLeft) {
-          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+          int var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
           param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
@@ -1179,7 +1044,7 @@ class Sprite extends SpriteState {
           var8 = var8 + var10Lifetime1;
         }
         if (param0 + var7 > SoftwareRasterizer.clipRight) {
-          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
+          int var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1194,10 +1059,8 @@ class Sprite extends SpriteState {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        int var8 = 0;
-        int var9 = 0;
-        for (var8 = -param5; var8 < 0; var8++) {
-          var9 = param3 + param4 - 3;
+        for (int var8 = -param5; var8 < 0; var8++) {
+          int var9 = param3 + param4 - 3;
           while (param3 < var9) {
             param0[param3++] = param1[param2++];
             param0[param3++] = param1[param2++];
@@ -1214,9 +1077,6 @@ class Sprite extends SpriteState {
     }
 
     final void a(int param0, int param1) {
-        int var9 = 0;
-        int var9Lifetime1;
-        int var9Lifetime2;
         param0 = param0 + this.trimX;
         param1 = param1 + this.trimY;
         int var3 = param0 + param1 * SoftwareRasterizer.stride;
@@ -1226,7 +1086,7 @@ class Sprite extends SpriteState {
         int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
-          var9 = SoftwareRasterizer.clipTop - param1;
+          int var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
           param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
@@ -1236,7 +1096,7 @@ class Sprite extends SpriteState {
           var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
         if (param0 < SoftwareRasterizer.clipLeft) {
-          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
+          int var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
           param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
@@ -1245,7 +1105,7 @@ class Sprite extends SpriteState {
           var7 = var7 + var9Lifetime1;
         }
         if (param0 + var6 > SoftwareRasterizer.clipRight) {
-          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
+          int var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -1270,14 +1130,10 @@ class Sprite extends SpriteState {
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var10 = 0;
-        int var9;
-        int var11;
-        int var11Lifetime1;
-        var9 = -(param5 >> 2);
+        int var9 = -(param5 >> 2);
         param5 = -(param5 & 3);
-        for (var10 = -param6; var10 < 0; var10++) {
-          for (var11 = var9; var11 < 0; var11++) {
+        for (int var10 = -param6; var10 < 0; var10++) {
+          for (int var11 = var9; var11 < 0; var11++) {
             if (param1[param3++] == 0) {
               param4++;
             } else {
@@ -1299,7 +1155,7 @@ class Sprite extends SpriteState {
               param0[param4++] = param2;
             }
           }
-          for (var11Lifetime1 = param5; var11Lifetime1 < 0; var11Lifetime1++) {
+          for (int var11Lifetime1 = param5; var11Lifetime1 < 0; var11Lifetime1++) {
             if (param1[param3++] == 0) {
               param4++;
             } else {

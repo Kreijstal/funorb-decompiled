@@ -7,24 +7,17 @@ abstract class fa {
     static eh field_b;
 
     final static bo a(GraphicsRenderer param0, boolean param1) {
-        mq var2 = null;
         bo var3 = null;
-        bo stackIn_2_0 = null;
-        bo stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2_ref = null;
         try {
           if (ns.field_a == param0) {
-            stackIn_2_0 = un.field_f;
+            bo stackIn_2_0 = un.field_f;
             return stackIn_2_0;
           }
           if (!param1) {
             fa.a(72);
           }
-          var2 = (mq) (ca.field_i.findByKey((byte) 106, (long)param0.field_c));
+          mq var2 = (mq) (ca.field_i.findByKey((byte) 106, (long)param0.field_c));
           if (var2 != null &&
             var2.field_f == param0) {
             var3 = var2.field_j;
@@ -37,13 +30,13 @@ abstract class fa {
           }
           un.field_f = var3;
           ns.field_a = param0;
-          stackIn_13_0 = var3;
+          bo stackIn_13_0 = var3;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_16_0 = var2_ref;
-          stackIn_16_1 = new StringBuilder().append("fa.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var2_ref;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("fa.B(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -62,27 +55,17 @@ abstract class fa {
     }
 
     final static byte[] a(CharSequence param0, int param1) {
-        int var4 = 0;
-        byte[] stackIn_69_0 = null;
-        RuntimeException stackIn_72_0 = null;
-        StringBuilder stackIn_72_1 = null;
         String stackIn_73_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        byte[] var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.length();
+          int var2_int = param0.length();
           if (param1 != 8482) {
             field_a = -8;
           }
-          var3 = new byte[var2_int];
-          for (var4 = 0; var4 < var2_int; var4++) {
+          byte[] var3 = new byte[var2_int];
+          for (int var4 = 0; var4 < var2_int; var4++) {
             {
-              var5 = param0.charAt(var4);
+              int var5 = param0.charAt(var4);
               if ((var5 <= 0 ||
                 128 <= var5) && (var5 < 160 ||
                 var5 > 255)) {
@@ -177,13 +160,13 @@ abstract class fa {
               }
             }
           }
-          stackIn_69_0 = var3;
+          byte[] stackIn_69_0 = var3;
           return stackIn_69_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_72_0 = var2;
-          stackIn_72_1 = new StringBuilder().append("fa.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_72_0 = var2;
+          StringBuilder stackIn_72_1 = new StringBuilder().append("fa.C(");
           if (param0 == null) {
             stackIn_73_2 = "null";
           } else {

@@ -38,23 +38,18 @@ final class vl {
     }
 
     final static boolean a(int param0, CharSequence param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_4_0 = false;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 10) {
-            stackIn_4_0 = aa.a(true, 10, param1, (byte) -43);
+            boolean stackIn_4_0 = aa.a(true, 10, param1, (byte) -43);
             return stackIn_4_0;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("vl.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("vl.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {

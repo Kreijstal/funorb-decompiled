@@ -25,13 +25,11 @@ class lg extends gg {
     }
 
     final void a(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         this.field_p = this.field_r;
         this.field_t = this.field_t >> 4;
         if (this.field_t < 0) {
           this.field_t = 0;
-          fieldTemp$0 = this.field_u;
+          int fieldTemp$0 = this.field_u;
           this.field_u = this.field_u + 1;
           this.b(fieldTemp$0, param0 - 1, (byte)this.field_t);
           this.field_t = param0;
@@ -39,7 +37,7 @@ class lg extends gg {
         }
         if (this.field_t > 255) {
           this.field_t = 255;
-          fieldTemp$1 = this.field_u;
+          int fieldTemp$1 = this.field_u;
           this.field_u = this.field_u + 1;
           this.b(fieldTemp$1, param0 - 1, (byte)this.field_t);
           this.field_t = param0;
@@ -71,8 +69,7 @@ class lg extends gg {
         int stackIn_13_1 = 0;
         int stackIn_20_1 = 0;
         int stackIn_27_1 = 0;
-        int var5;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 == 0) {
           if (param1 >= 0) {
             stackIn_27_1 = param1;

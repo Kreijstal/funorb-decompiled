@@ -9,19 +9,13 @@ final class fi extends com.ms.dll.Callback {
     private boolean field_c;
 
     final void a(boolean param0, java.awt.Component param1, int param2) {
-        boolean stackIn_3_0 = false;
-        int stackIn_4_1 = 0;
-        boolean stackIn_13_1 = false;
-        boolean stackIn_29_1 = false;
         Throwable decompiledCaughtException = null;
-        int var5 = 0;
         Object var6 = null;
-        com.ms.awt.WComponentPeer var9 = null;
-        var9 = (com.ms.awt.WComponentPeer) null;
-        var5 = var9.getTopHwnd();
+        com.ms.awt.WComponentPeer var9 = (com.ms.awt.WComponentPeer) null;
+        int var5 = var9.getTopHwnd();
         if (this.field_a == var5) {
-          stackIn_3_0 = param0;
-          stackIn_4_1 = (this.field_d) ? 0 : 1;
+          boolean stackIn_3_0 = param0;
+          int stackIn_4_1 = (this.field_d) ? 0 : 1;
           if ((stackIn_3_0 ? 1 : 0) != stackIn_4_1) {
             return;
           }
@@ -32,7 +26,7 @@ final class fi extends com.ms.dll.Callback {
           this.field_c = true;
         }
         if (var5 == this.field_a) {
-          stackIn_13_1 = (param0);
+          boolean stackIn_13_1 = (param0);
           this.field_d = stackIn_13_1;
         } else {
           if (this.field_a != 0) {
@@ -48,7 +42,7 @@ final class fi extends com.ms.dll.Callback {
             this.field_a = var5;
             this.field_e = com.ms.win32.User32.SetWindowLong(this.field_a, -4, this);
           }
-          stackIn_29_1 = (param0);
+          boolean stackIn_29_1 = (param0);
           this.field_d = stackIn_29_1;
         }
         if (param2 != -4) {
@@ -61,10 +55,8 @@ final class fi extends com.ms.dll.Callback {
         int stackIn_11_0 = 0;
         int stackIn_17_0 = 0;
         int stackIn_26_0 = 0;
-        int var5;
-        int var5Lifetime1;
         if (this.field_a != param0) {
-          var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
+          int var5 = com.ms.win32.User32.GetWindowLong(param0, -4);
           return com.ms.win32.User32.CallWindowProc(var5, param0, param1, param2, param3);
         }
         if (param1 != 32) {
@@ -83,7 +75,7 @@ final class fi extends com.ms.dll.Callback {
           com.ms.win32.User32.SetCursor(stackIn_11_0);
           return 0;
         }
-        var5Lifetime1 = param3 & 65535;
+        int var5Lifetime1 = param3 & 65535;
         if (var5Lifetime1 == 1) {
           if (this.field_d) {
             stackIn_17_0 = this.field_b;

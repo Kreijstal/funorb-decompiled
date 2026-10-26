@@ -10,38 +10,29 @@ abstract class sf extends IntrusiveNode {
     private int field_e;
 
     final static Object a(boolean param0, int param1, byte[] param2) {
-        ku var3 = null;
-        RuntimeException var3_ref = null;
-        Object stackIn_2_0 = null;
-        ku stackIn_5_0 = null;
-        byte[] stackIn_8_0 = null;
-        byte[] stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == null) {
-            stackIn_2_0 = null;
+            Object stackIn_2_0 = null;
             return stackIn_2_0;
           }
           if (~param2.length < param1) {
-            var3 = new ku();
+            ku var3 = new ku();
             ((af) ((Object) var3)).a((byte) 56, param2);
-            stackIn_5_0 = var3;
+            ku stackIn_5_0 = var3;
             return stackIn_5_0;
           }
           if (param0) {
-            stackIn_10_0 = fg.a(param2, (byte) 121);
+            byte[] stackIn_10_0 = fg.a(param2, (byte) 121);
             return stackIn_10_0;
           }
-          stackIn_8_0 = (byte[]) (param2);
+          byte[] stackIn_8_0 = (byte[]) (param2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_13_0 = var3_ref;
-          stackIn_13_1 = new StringBuilder().append("sf.G(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var3_ref;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("sf.G(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -75,27 +66,18 @@ abstract class sf extends IntrusiveNode {
 
     final static void a(byte param0, java.applet.Applet param1, String param2) {
         try {
-          String var6 = null;
-          String var5 = null;
-          String var4 = null;
-          String var7 = null;
-          String var5Lifetime1;
-          String var5Lifetime2;
-          String var5Lifetime3;
-          String var5Lifetime4;
-          String var5Lifetime5;
           String var5Lifetime6;
           gt.field_r = param2;
           try {
-            var6 = param1.getParameter("cookieprefix");
-            var5 = var6;
-            var5Lifetime1 = var6;
-            var4 = param1.getParameter("cookiehost");
-            var5Lifetime2 = var4;
-            var5Lifetime3 = var4;
-            var7 = var6 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
-            var5Lifetime4 = var7;
-            var5Lifetime5 = var7;
+            String var6 = param1.getParameter("cookieprefix");
+            String var5 = var6;
+            String var5Lifetime1 = var6;
+            String var4 = param1.getParameter("cookiehost");
+            String var5Lifetime2 = var4;
+            String var5Lifetime3 = var4;
+            String var7 = var6 + "settings=" + param2 + "; version=1; path=/; domain=" + var4;
+            String var5Lifetime4 = var7;
+            String var5Lifetime5 = var7;
             if (param2.length() == 0) {
               var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             } else {

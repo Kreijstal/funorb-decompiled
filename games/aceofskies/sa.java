@@ -35,23 +35,15 @@ final class sa {
     }
 
     private final void a(String param0, int param1, int param2, int param3) {
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
         try {
-          var5_int = this.field_b.measureTextWidth(param0);
-          var6 = this.field_b.capitalXAscent + this.field_b.maxDescent;
-          var7 = param3;
+          int var5_int = this.field_b.measureTextWidth(param0);
+          int var6 = this.field_b.capitalXAscent + this.field_b.maxDescent;
+          int var7 = param3;
           if (SoftwareRasterizer.stride < 6 + (var7 + var5_int)) {
             var7 = SoftwareRasterizer.stride - var5_int - 6;
           }
-          var8 = param2 - (this.field_b.capitalXAscent - 32);
+          int var8 = param2 - (this.field_b.capitalXAscent - 32);
           if (SoftwareRasterizer.framebufferHeight < 6 + var6 + var8) {
             var8 = -6 + (-var6 + SoftwareRasterizer.framebufferHeight);
           }
@@ -63,10 +55,10 @@ final class sa {
           this.field_b.drawText(param0, 3 + var7, 3 + var8 + this.field_b.capitalXAscent, this.field_a, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("sa.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var5;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("sa.C(");
           if (param0 == null) {
             stackIn_12_2 = "null";
           } else {
@@ -82,56 +74,39 @@ final class sa {
     }
 
     private final void b(int param0, String param1, int param2, int param3) {
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var11Lifetime1;
-        int var13Lifetime1;
-        int var13Lifetime2;
-        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5_int = this.field_f + this.field_e;
-          var6 = this.field_o + this.field_l;
-          var7 = this.field_i;
+          int var5_int = this.field_f + this.field_e;
+          int var6 = this.field_o + this.field_l;
+          int var7 = this.field_i;
           if (var7 == -1) {
             var7 = this.field_b.maxDescent + this.field_b.maxAscent;
           }
-          var8 = SoftwareRasterizer.stride >> 2;
-          var9 = this.field_b.measureTextWidth(param1);
+          int var8 = SoftwareRasterizer.stride >> 2;
+          int var9 = this.field_b.measureTextWidth(param1);
           if (param3 != 27201) {
             sa.a(51);
           }
-          var10 = this.field_b.maxDescent + this.field_b.maxAscent;
-          var11 = 1;
+          int var10 = this.field_b.maxDescent + this.field_b.maxAscent;
+          int var11 = 1;
           if (var8 < var9 ||
             param1.indexOf("<br>") != -1) {
             if (var9 <= var8) {
               var12 = var8;
             } else {
-              var13 = var9 / var8;
+              int var13 = var9 / var8;
               var12 = 2 * ((-1 + var13 + var9 % var8) / var13) + var8;
             }
             if (or.field_b == null) {
               or.field_b = new String[16];
             }
-            var11Lifetime1 = this.field_b.wrapText(param1, new int[]{var12}, or.field_b);
+            int var11Lifetime1 = this.field_b.wrapText(param1, new int[]{var12}, or.field_b);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
-            for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_b.measureTextWidth(or.field_b[var13Lifetime2]);
+            for (int var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
+              int var14 = this.field_b.measureTextWidth(or.field_b[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
@@ -141,7 +116,7 @@ final class sa {
           if (var9 + var12 + var5_int > SoftwareRasterizer.stride) {
             var12 = SoftwareRasterizer.stride - (var9 + var5_int);
           }
-          var13Lifetime1 = 32 + (param2 - this.field_b.capitalXAscent);
+          int var13Lifetime1 = 32 + (param2 - this.field_b.capitalXAscent);
           if (var13Lifetime1 + (var10 + var6) > SoftwareRasterizer.framebufferHeight) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
@@ -150,10 +125,10 @@ final class sa {
           this.field_b.drawParagraph(param1, var12 + this.field_f, var13Lifetime1 + this.field_o, var9, var10, this.field_a, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_30_0 = var5;
-          stackIn_30_1 = new StringBuilder().append("sa.E(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_30_0 = var5;
+          StringBuilder stackIn_30_1 = new StringBuilder().append("sa.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_31_2 = "null";
           } else {
@@ -164,33 +139,12 @@ final class sa {
     }
 
     final void a(BitmapFont param0, int param1) {
-        qm var17 = null;
-        vi var4 = null;
-        Sprite[] var5 = null;
-        ArgbSprite var16 = null;
-        ArgbSprite var18 = null;
-        int var7_int = 0;
-        vi var6 = null;
-        vi var7 = null;
-        de discarded$0 = null;
-        us discarded$1 = null;
-        vi var8 = null;
-        Sprite[] var9 = null;
-        Sprite[] var10 = null;
-        Sprite dupTemp$2 = null;
-        vi var11 = null;
-        vi var12 = null;
-        Sprite var13 = null;
-        vi var14 = null;
-        vi var19 = null;
         int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
-        vi var14Lifetime1;
-        vi var14Lifetime2;
         try {
-          var17 = new qm(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.maxDescent + param0.maxAscent));
+          qm var17 = new qm(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.maxDescent + param0.maxAscent));
           var17.field_m = 16777215;
           this.field_k = (ir) ((Object) var17);
-          var4 = new vi();
+          vi var4 = new vi();
           var17.a(var4, 27529);
           this.field_a = 15658734;
           this.field_e = 3;
@@ -206,53 +160,53 @@ final class sa {
           var4.a(-115, 0).a(15658734, param1 ^ -3).a(SpriteState.a(-125, 7829367, 10066329, 8947848), false);
           var4.a(-78, 1).a(SpriteState.a(param1 ^ 1, 13421772, 10066329, 11184810), false);
           var4.a(-42, 3).a(SpriteState.a(-106, 10066329, 7829367, 8947848), false).a(1, (byte) 81).b(1, (byte) -125);
-          var5 = new Sprite[9];
-          var16 = new ArgbSprite(32, 32);
-          var18 = var16;
-          for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
+          Sprite[] var5 = new Sprite[9];
+          ArgbSprite var16 = new ArgbSprite(32, 32);
+          ArgbSprite var18 = var16;
+          for (int var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
             var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a(param1 ^ -63, 4).a((byte) -50, true).a(var5, false);
           var4.a(-99, 5).a(ce.b(0, 65793, -29003, 0, 0), false).a((byte) -50, true).a(-1, param1 - 5);
           this.field_c = (ir) ((Object) var4);
-          var6 = new vi(var4, true);
+          vi var6 = new vi(var4, true);
           var6.field_e = 0;
-          var7 = new vi(var4, true);
+          vi var7 = new vi(var4, true);
           var7.field_e = 0;
           var7.a(-117, bs.a(8947848, false));
           var7.a(-105, 1).a(bs.a(11184810, false), false).a(2236962, -2);
           this.field_g = (ir) ((Object) new lj(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
-          discarded$0 = new de(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
-          discarded$1 = new us(param0, 16777215, -1, 125269879, 4473924, param1, 268435455);
-          var8 = new vi();
+          de discarded$0 = new de(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
+          us discarded$1 = new us(param0, 16777215, -1, 125269879, 4473924, param1, 268435455);
+          vi var8 = new vi();
           var17.a(var8, 27529);
           var8.a(param1 - 58, 0).a(SpriteState.a(-80, 10066329, 7829367, 15658734), false).a(1118481, -2).c(-1, (byte) -79);
           var8.a(-63, 4).a((byte) -50, true).a(var5, false);
           this.field_n = (ir) ((Object) var8);
-          var9 = new Sprite[9];
+          Sprite[] var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
-          var10 = new Sprite[9];
+          Sprite[] var10 = new Sprite[9];
           var10[4] = new Sprite(1, 2);
-          dupTemp$2 = var9[4];
+          Sprite dupTemp$2 = var9[4];
           dupTemp$2.pixels = new int[]{6710886, 7829367};
           var10[4].pixels = new int[]{6710886, 7829367};
-          var11 = new vi();
-          var12 = new vi();
+          vi var11 = new vi();
+          vi var12 = new vi();
           var11.a(0, 0, var9);
           var12.a(0, 0, var10);
-          var13 = new Sprite(7, 4);
+          Sprite var13 = new Sprite(7, 4);
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
-          var14 = new vi(var4, true);
+          vi var14 = new vi(var4, true);
           var14.a((byte) -90, var13.copy());
           var13.rotateClockwise();
-          var14Lifetime1 = new vi(var4, true);
+          vi var14Lifetime1 = new vi(var4, true);
           var14Lifetime1.a((byte) -90, var13.copy());
           var13.rotateClockwise();
-          var14Lifetime2 = new vi(var4, true);
+          vi var14Lifetime2 = new vi(var4, true);
           var14Lifetime2.a((byte) -90, var13.copy());
           var13.rotateClockwise();
-          var19 = new vi(var4, true);
+          vi var19 = new vi(var4, true);
           var19.a((byte) -90, var13);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "sa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -260,11 +214,7 @@ final class sa {
     }
 
     final void a(int param0, String param1, int param2, int param3) {
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         try {
           if (!this.field_m) {
             this.a(param1, param0 ^ -10076557, param2, param3);
@@ -276,10 +226,10 @@ final class sa {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("sa.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var5;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("sa.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -290,23 +240,17 @@ final class sa {
     }
 
     final static boolean a(boolean param0) {
-        int var2 = 0;
-        bb var1 = null;
-        RuntimeException var1_ref = null;
-        int var3 = 0;
-        bb var4 = null;
-        RuntimeException decompiledCaughtException = null;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var4 = (bb) (av.field_c.first(268435455));
-          var1 = var4;
+          bb var4 = (bb) (av.field_c.first(268435455));
+          bb var1 = var4;
           if (var1 == null) {
             return false;
           }
           if (!param0) {
             field_h = (int[]) null;
           }
-          for (var2 = 0; var1.field_g > var2; var2++) {
+          for (int var2 = 0; var1.field_g > var2; var2++) {
             if (null != var4.field_f[var2] &&
               var4.field_f[var2].field_a == 0) {
               return false;
@@ -318,8 +262,8 @@ final class sa {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1_ref), "sa.I(" + param0 + ')');
         }
     }

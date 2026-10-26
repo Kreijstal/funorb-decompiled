@@ -20,36 +20,17 @@ final class lm {
     }
 
     final static String a(char param0, int param1, String param2, String param3) {
-        StringBuilder discarded$3 = null;
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        StringBuilder var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        String stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5 = -14 / ((param1 + 78) / 42);
-          var4_int = param2.length();
-          var6 = param3.length();
-          var7 = var4_int;
-          var8 = var6 - 1;
+          int var5 = -14 / ((param1 + 78) / 42);
+          int var4_int = param2.length();
+          int var6 = param3.length();
+          int var7 = var4_int;
+          int var8 = var6 - 1;
           if (var8 != 0) {
-            var9_int = 0;
+            int var9_int = 0;
             while (true) {
               var9_int = param2.indexOf((int) param0, var9_int);
               if (0 > var9_int) {
@@ -59,30 +40,30 @@ final class lm {
               var7 = var7 + var8;
             }
           }
-          var9 = new StringBuilder(var7);
-          var10 = 0;
+          StringBuilder var9 = new StringBuilder(var7);
+          int var10 = 0;
           while (true) {
-            var11 = param2.indexOf((int) param0, var10);
+            int var11 = param2.indexOf((int) param0, var10);
             if (var11 < 0) {
-              discarded$3 = var9.append(param2.substring(var10));
-              stackIn_10_0 = var9.toString();
+              StringBuilder discarded$3 = var9.append(param2.substring(var10));
+              String stackIn_10_0 = var9.toString();
               return stackIn_10_0;
             }
-            discarded$4 = var9.append(param2.substring(var10, var11));
+            StringBuilder discarded$4 = var9.append(param2.substring(var10, var11));
             var10 = var11 + 1;
-            discarded$5 = var9.append(param3);
+            StringBuilder discarded$5 = var9.append(param3);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("lm.E(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var4;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("lm.E(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -123,15 +104,7 @@ final class lm {
     lm(bf param0) {
         int var4_int = 0;
         int var5 = 0;
-        jaclib.memory.Buffer var7 = null;
-        jaclib.memory.Stream var8 = null;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        jaclib.memory.Stream var4 = null;
-        jaclib.memory.Buffer var9 = null;
         int var5Lifetime1;
         try {
           param0.a(new pl[]{new pl(new rl[]{rl.field_b, rl.field_c, rl.field_j}), new pl(rl.field_m)}, -127);
@@ -140,9 +113,9 @@ final class lm {
           this.field_a.a(12, -126, 393168);
           this.field_e = param0.c(false, 8762);
           this.field_e.a(-12880, 49146);
-          var7 = this.field_e.a(true, 32570);
+          jaclib.memory.Buffer var7 = this.field_e.a(true, 32570);
           if (var7 != null) {
-            var8 = param0.a(86, var7);
+            jaclib.memory.Stream var8 = param0.a(86, var7);
             if (!jaclib.memory.Stream.b()) {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = 4 * var4_int;
@@ -167,11 +140,11 @@ final class lm {
             var8.a();
             this.field_e.a((byte) 33);
           }
-          var9 = this.field_a.a(true, (byte) -87);
+          jaclib.memory.Buffer var9 = this.field_a.a(true, (byte) -87);
           if (var9 == null) {
             return;
           }
-          var4 = param0.a(-115, var9);
+          jaclib.memory.Stream var4 = param0.a(-115, var9);
           if (jaclib.memory.Stream.b()) {
             for (var5Lifetime1 = 0; 8191 > var5Lifetime1; var5Lifetime1++) {
               var4.b(0.0f);
@@ -207,10 +180,10 @@ final class lm {
           this.field_a.a((byte) -60);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_23_0 = var2;
-          stackIn_23_1 = new StringBuilder().append("lm.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_23_0 = var2;
+          StringBuilder stackIn_23_1 = new StringBuilder().append("lm.<init>(");
           if (param0 == null) {
             stackIn_24_2 = "null";
           } else {

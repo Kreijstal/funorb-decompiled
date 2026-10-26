@@ -32,28 +32,22 @@ final class fs {
     }
 
     final int a(int param0, byte param1, int param2, byte[] param3) throws IOException {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = this.field_h.read(param3, param2, param0);
+          int var5_int = this.field_h.read(param3, param2, param0);
           if (0 < var5_int) {
             this.field_b = this.field_b + (long)var5_int;
           }
           if (param1 != 53) {
             this.field_h = (RandomAccessFile) null;
           }
-          stackIn_6_0 = var5_int;
+          int stackIn_6_0 = var5_int;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("fs.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var5;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("fs.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -100,29 +94,18 @@ final class fs {
     }
 
     final static int a(boolean param0, int param1, CharSequence param2, byte[] param3, int param4, int param5) {
-        int var7 = 0;
-        int stackIn_3_0 = 0;
-        int stackIn_70_0 = 0;
-        RuntimeException stackIn_73_0 = null;
-        StringBuilder stackIn_73_1 = null;
         String stackIn_74_2 = null;
-        StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var8 = 0;
-        int var9 = 0;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
-            stackIn_3_0 = 26;
+            int stackIn_3_0 = 26;
             return stackIn_3_0;
           }
-          var6_int = param1 - param5;
-          for (var7 = 0; var6_int > var7; var7++) {
+          int var6_int = param1 - param5;
+          for (int var7 = 0; var6_int > var7; var7++) {
             {
-              var8 = param2.charAt(var7 + param5);
+              int var8 = param2.charAt(var7 + param5);
               if ((var8 <= 0 ||
                 var8 >= 128) && (160 > var8 ||
                 var8 > 255)) {
@@ -217,19 +200,19 @@ final class fs {
               }
             }
           }
-          stackIn_70_0 = var6_int;
+          int stackIn_70_0 = var6_int;
           return stackIn_70_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_73_0 = var6;
-          stackIn_73_1 = new StringBuilder().append("fs.E(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_73_0 = var6;
+          StringBuilder stackIn_73_1 = new StringBuilder().append("fs.E(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_74_2 = "null";
           } else {
             stackIn_74_2 = "{...}";
           }
-          stackIn_76_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',');
+          StringBuilder stackIn_76_1 = ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',');
           if (param3 == null) {
             stackIn_77_2 = "null";
           } else {
@@ -240,7 +223,6 @@ final class fs {
     }
 
     fs(File param0, String param1, long param2) throws IOException {
-        int var5_int = 0;
         try {
           if (param2 == -1L) {
             param2 = 9223372036854775807L;
@@ -251,7 +233,7 @@ final class fs {
           this.field_h = new RandomAccessFile(param0, param1);
           this.field_b = 0L;
           this.field_i = param2;
-          var5_int = this.field_h.read();
+          int var5_int = this.field_h.read();
           if (var5_int != -1 &&
             !param1.equals("r")) {
             this.field_h.seek(0L);

@@ -77,11 +77,7 @@ abstract class dg extends rg {
     }
 
     void d(ea param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -30244) {
             this.field_N = -48;
@@ -99,10 +95,10 @@ abstract class dg extends rg {
           this.field_R = vu.field_g;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("dg.CA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("dg.CA(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -113,12 +109,10 @@ abstract class dg extends rg {
     }
 
     boolean h(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_R != null) {
           if (this.field_R == vu.field_g) {
-            fieldTemp$0 = this.field_K + 1;
+            int fieldTemp$0 = this.field_K + 1;
             this.field_K = this.field_K + 1;
             if (fieldTemp$0 != this.field_O) {
               this.field_M.field_u = 256 - (this.field_K << 8) / this.field_O;
@@ -145,7 +139,7 @@ abstract class dg extends rg {
             this.f((byte) 126);
             return super.h(11);
           }
-          fieldTemp$1 = this.field_K + 1;
+          int fieldTemp$1 = this.field_K + 1;
           this.field_K = this.field_K + 1;
           if (fieldTemp$1 == this.field_J) {
             this.field_R = null;
@@ -171,14 +165,9 @@ abstract class dg extends rg {
     }
 
     boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = 71 % ((-53 - param0) / 33);
+          int var5_int = 71 % ((-53 - param0) / 33);
           if (super.a(82, param1, param2, param3)) {
             return true;
           }
@@ -193,10 +182,10 @@ abstract class dg extends rg {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("dg.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var5;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("dg.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -207,11 +196,7 @@ abstract class dg extends rg {
     }
 
     private final void c(ea param0, int param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_M != null) {
             this.field_M.unlink(-127);
@@ -230,10 +215,10 @@ abstract class dg extends rg {
           this.field_O = -42;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("dg.KB(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("dg.KB(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {

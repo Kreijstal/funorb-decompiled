@@ -10,11 +10,7 @@ final class IntKeyLookup {
     private int[] field_d;
 
     final static char a(byte param0, int param1) {
-        int var2;
-        int var3;
-        int var2Lifetime1;
-        int var3Lifetime1;
-        var2 = param0 & 255;
+        int var2 = param0 & 255;
         if (param1 != 29337) {
           field_b = 43;
           if (var2 == 0) {
@@ -24,7 +20,7 @@ final class IntKeyLookup {
             return (char)var2;
           }
           if (var2 < 160) {
-            var3 = te.field_e[-128 + var2];
+            int var3 = te.field_e[-128 + var2];
             if (var3 == 0) {
               var3 = 63;
             }
@@ -41,18 +37,17 @@ final class IntKeyLookup {
         if (var2 >= 160) {
           return (char)var2;
         }
-        var3Lifetime1 = te.field_e[-128 + var2];
+        int var3Lifetime1 = te.field_e[-128 + var2];
         if (var3Lifetime1 == 0) {
           var3Lifetime1 = 63;
         }
-        var2Lifetime1 = var3Lifetime1;
+        int var2Lifetime1 = var3Lifetime1;
         return (char)var2Lifetime1;
     }
 
     final static void a(byte param0, int param1, File param2, byte[] param3) throws IOException {
-        DataInputStream var4 = null;
         try {
-          var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param2)))));
+          DataInputStream var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param2)))));
           if (param0 > -64) {
             IntKeyLookup.a(115);
           }
@@ -75,17 +70,11 @@ final class IntKeyLookup {
     }
 
     final int a(boolean param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var3Lifetime1;
-        int var4Lifetime1;
-        int var5Lifetime1;
         if (!param0) {
-          var3 = -1 + (this.field_d.length >> 1);
-          var4 = param1 & var3;
+          int var3 = -1 + (this.field_d.length >> 1);
+          int var4 = param1 & var3;
           while (true) {
-            var5 = this.field_d[var4 + (var4 + 1)];
+            int var5 = this.field_d[var4 + (var4 + 1)];
             if (var5 == -1) {
               return -1;
             }
@@ -96,10 +85,10 @@ final class IntKeyLookup {
           }
         }
         incomingPacket = (CipherPacketBuffer) null;
-        var3Lifetime1 = -1 + (this.field_d.length >> 1);
-        var4Lifetime1 = param1 & var3Lifetime1;
+        int var3Lifetime1 = -1 + (this.field_d.length >> 1);
+        int var4Lifetime1 = param1 & var3Lifetime1;
         while (true) {
-          var5Lifetime1 = this.field_d[var4Lifetime1 + (var4Lifetime1 + 1)];
+          int var5Lifetime1 = this.field_d[var4Lifetime1 + (var4Lifetime1 + 1)];
           if (var5Lifetime1 == -1) {
             return -1;
           }
@@ -111,26 +100,18 @@ final class IntKeyLookup {
     }
 
     IntKeyLookup(int[] param0) {
-        int var2_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3Lifetime1;
         try {
-          var2_int = 1;
+          int var2_int = 1;
           while (var2_int <= (param0.length >> 1) + param0.length) {
             var2_int = var2_int << 1;
           }
           this.field_d = new int[var2_int + var2_int];
-          for (var3 = 0; var2_int + var2_int > var3; var3++) {
+          for (int var3 = 0; var2_int + var2_int > var3; var3++) {
             this.field_d[var3] = -1;
           }
-          for (var3Lifetime1 = 0; param0.length > var3Lifetime1; var3Lifetime1++) {
-            var4 = -1 + var2_int & param0[var3Lifetime1];
+          for (int var3Lifetime1 = 0; param0.length > var3Lifetime1; var3Lifetime1++) {
+            int var4 = -1 + var2_int & param0[var3Lifetime1];
             while (this.field_d[1 + var4 + var4] != -1) {
               var4 = -1 + var2_int & var4 + 1;
             }
@@ -139,10 +120,10 @@ final class IntKeyLookup {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_16_0 = var2;
-          stackIn_16_1 = new StringBuilder().append("nm.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var2;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("nm.<init>(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {

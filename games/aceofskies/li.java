@@ -65,7 +65,6 @@ abstract class li implements sp {
     }
 
     final static void a(int param0, int param1, String param2) {
-        int var4 = 0;
         try {
           int var3_int = 101 % ((65 - param0) / 43);
           IntKeyLookup.field_a = false;
@@ -82,7 +81,7 @@ abstract class li implements sp {
               param1 = 2;
               vr.field_b.a(se.field_a, 122);
             }
-            var4 = 1;
+            int var4 = 1;
             if (10 == param1) {
               bt.a(10);
               var4 = 0;

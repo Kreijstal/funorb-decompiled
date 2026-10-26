@@ -14,23 +14,18 @@ final class im extends za {
     }
 
     final static byte[] a(int param0, String param1) {
-        RuntimeException var2 = null;
-        byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 33) {
             field_e = false;
           }
-          stackIn_3_0 = q.field_q.a("", (byte) -71, param1);
+          byte[] stackIn_3_0 = q.field_q.a("", (byte) -71, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("im.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("im.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {

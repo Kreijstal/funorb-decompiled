@@ -37,14 +37,11 @@ final class Pickup extends FlightBody {
     }
 
     static {
-        int var2 = 0;
-        int var3 = 0;
-        long var0;
         menuRepeatDelay = 4;
         field_l = new long[256];
-        for (var2 = 0; var2 < 256; var2++) {
-          var0 = (long)var2;
-          for (var3 = 0; var3 < 8; var3++) {
+        for (int var2 = 0; var2 < 256; var2++) {
+          long var0 = (long)var2;
+          for (int var3 = 0; var3 < 8; var3++) {
             if ((var0 & 1L) == 1L) {
               var0 = var0 >>> 1 ^ -3932672073523589310L;
             } else {

@@ -45,15 +45,9 @@ final class jq extends oo implements dn {
     }
 
     private final void a(boolean param0, fr param1, int param2) {
-        RuntimeException stackIn_32_0 = null;
-        StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
-        RuntimeException decompiledCaughtException = null;
         String var4 = null;
-        RuntimeException var4_ref = null;
-        jn var5 = null;
-        int var6 = 0;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_gb = true;
           if (param2 != 11) {
@@ -78,7 +72,7 @@ final class jq extends oo implements dn {
               }
             }
           }
-          var5 = new jn((oo) (this), b.field_c, var4);
+          jn var5 = new jn((oo) (this), b.field_c, var4);
           if (param1.field_b) {
             if (param1.field_d) {
               this.d(new rs(this), -30244);
@@ -107,10 +101,10 @@ final class jq extends oo implements dn {
           this.d(var5, -30244);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_32_0 = var4_ref;
-          stackIn_32_1 = new StringBuilder().append("jq.KA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_32_0 = var4_ref;
+          StringBuilder stackIn_32_1 = new StringBuilder().append("jq.KA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_33_2 = "null";
           } else {
@@ -121,8 +115,6 @@ final class jq extends oo implements dn {
     }
 
     final boolean h(int param0) {
-        fr var2 = null;
-        fr var2Lifetime1;
         if (param0 != 11) {
           mi var3 = (mi) null;
           this.a(95, (mi) null, -21, 40, (byte) -17);
@@ -132,7 +124,7 @@ final class jq extends oo implements dn {
           if (this.field_gb) {
             return super.h(11);
           }
-          var2 = oe.d(86);
+          fr var2 = oe.d(86);
           if (var2 == null) {
             return super.h(11);
           }
@@ -145,7 +137,7 @@ final class jq extends oo implements dn {
         if (this.field_gb) {
           return super.h(11);
         }
-        var2Lifetime1 = oe.d(86);
+        fr var2Lifetime1 = oe.d(86);
         if (var2Lifetime1 == null) {
           return super.h(11);
         }

@@ -7,12 +7,10 @@ final class vk {
     private static int field_a;
 
     final synchronized static void a(byte param0) {
-        wn var1;
-        int var1_int;
         while (true) {
-          var1 = (wn) (field_c.removeFirst(125));
+          wn var1 = (wn) (field_c.removeFirst(125));
           if (var1 == null) {
-            var1_int = 47 % ((84 - param0) / 32);
+            int var1_int = 47 % ((84 - param0) / 32);
             return;
           }
           var1.field_e.w(true);
@@ -21,13 +19,12 @@ final class vk {
     }
 
     final synchronized static void a(e param0, int param1) {
-        wn var3 = null;
         int var2 = -29 % ((-59 - param1) / 51);
         if (field_b) {
           return;
         }
         if (0 < field_a) {
-          var3 = new wn();
+          wn var3 = new wn();
           var3.field_e = param0;
           field_c.addLast(79, var3);
         } else {

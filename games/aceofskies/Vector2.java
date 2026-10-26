@@ -7,46 +7,37 @@ final class Vector2 {
     double y;
 
     final static String a(String param0, String param1, ResourceArchive param2, int param3) {
-        RuntimeException var4 = null;
-        String stackIn_2_0 = null;
-        String stackIn_5_0 = null;
-        String stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param3 < 31) {
-            stackIn_2_0 = (String) null;
+            String stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
           if (param2.b((byte) -127)) {
-            stackIn_7_0 = param0 + " - " + param2.a(-85) + "%";
+            String stackIn_7_0 = param0 + " - " + param2.a(-85) + "%";
             return stackIn_7_0;
           }
-          stackIn_5_0 = (String) (param1);
+          String stackIn_5_0 = (String) (param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("kc.I(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var4;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("kc.I(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -73,25 +64,19 @@ final class Vector2 {
     }
 
     final double dot(Vector2 other, byte obfuscationGuard) {
-        RuntimeException var3 = null;
-        Vector2 var4 = null;
-        double stackIn_3_0 = 0.0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -3) {
-            var4 = (Vector2) null;
+            Vector2 var4 = (Vector2) null;
             this.subtract((Vector2) null, -117);
           }
-          stackIn_3_0 = this.y * other.y + other.x * this.x;
+          double stackIn_3_0 = this.y * other.y + other.x * this.x;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("kc.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("kc.B(");
           if (other == null) {
             stackIn_7_2 = "null";
           } else {
@@ -102,21 +87,14 @@ final class Vector2 {
     }
 
     final static boolean a(String param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.charAt(0);
+          int var2_int = param0.charAt(0);
           if (param1 != 26035) {
             field_c = 0;
           }
-          var3 = 1;
+          int var3 = 1;
           while (true) {
             if (var3 >= param0.length()) {
               return true;
@@ -129,10 +107,10 @@ final class Vector2 {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_13_0 = var2;
-          stackIn_13_1 = new StringBuilder().append("kc.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var2;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("kc.A(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -217,14 +195,10 @@ final class Vector2 {
     }
 
     final static void a(int param0) {
-        Object var1 = null;
         int var2 = 0;
-        int var4 = 0;
-        Throwable decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var1 = ua.field_d;
+          Object var1 = ua.field_d;
           synchronized (var1) {
             he.field_n = he.field_n + 1;
             ch.field_a = lt.field_u;
@@ -248,8 +222,8 @@ final class Vector2 {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = (RuntimeException) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1_ref = (RuntimeException) (Object) decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1_ref), "kc.E(" + param0 + ')');
         }
     }

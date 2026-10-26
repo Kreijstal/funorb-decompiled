@@ -43,45 +43,35 @@ final class mj {
     }
 
     final static int a(String param0, int param1, int param2, String param3, boolean param4, String param5, int param6) {
-        cd var7 = null;
-        RuntimeException var7_ref = null;
-        cd var8 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new cd(param0);
+          cd var7 = new cd(param0);
           if (param1 != 3) {
-            stackIn_2_0 = 39;
+            int stackIn_2_0 = 39;
             return stackIn_2_0;
           }
-          var8 = new cd(param3);
-          stackIn_4_0 = u.a(var8, param2, param5, param4, param1 ^ -120, param6, var7);
+          cd var8 = new cd(param3);
+          int stackIn_4_0 = u.a(var8, param2, param5, param4, param1 ^ -120, param6, var7);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7_ref = decompiledCaughtException;
-          stackIn_7_0 = var7_ref;
-          stackIn_7_1 = new StringBuilder().append("mj.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7_ref = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var7_ref;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("mj.C(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -104,16 +94,11 @@ final class mj {
     }
 
     final static void a(byte param0, int param1) {
-        int var3 = 0;
-        String var4 = null;
-        ht var5 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5 = (ht) (an.field_b.first(268435455));
+          ht var5 = (ht) (an.field_b.first(268435455));
           if (param0 != 84) {
-            var4 = (String) null;
+            String var4 = (String) null;
             mj.a((String) null, 4, -49, (String) null, false, (String) null, 101);
           }
           while (var5 != null) {
@@ -122,8 +107,8 @@ final class mj {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2), "mj.A(" + param0 + ',' + param1 + ')');
         }
     }

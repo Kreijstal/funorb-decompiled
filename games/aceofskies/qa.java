@@ -20,42 +20,25 @@ final class qa {
     }
 
     final static void b(int param0) {
-        int var3 = 0;
         int stackIn_21_0 = 0;
         int stackIn_24_0 = 0;
         String stackIn_30_0 = null;
         String stackIn_37_0 = null;
-        boolean stackIn_42_0 = false;
-        String stackIn_42_1 = null;
-        boolean stackIn_43_2 = false;
         mg stackIn_47_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        long var3_long = 0L;
-        int var4 = 0;
         int var5 = 0;
-        String var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        mg var9 = null;
-        int var10 = 0;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var1_int = pt.field_a;
-          var2 = 0;
+          int var1_int = pt.field_a;
+          int var2 = 0;
           if (2 == ol.field_c) {
-            var3_long = kh.a(-71) - PacketBuffer.field_e;
+            long var3_long = kh.a(-71) - PacketBuffer.field_e;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
             }
           }
-          for (var3 = 0; ne.field_g.length > var3; var3++) {
-            var4 = rn.field_a[var3];
+          for (int var3 = 0; ne.field_g.length > var3; var3++) {
+            int var4 = rn.field_a[var3];
             if (var4 < 0) {
               var5 = SpriteState.field_t;
             } else {
@@ -65,7 +48,7 @@ final class qa {
                 var5 = hn.field_a;
               }
             }
-            var6 = ne.field_g[var3];
+            String var6 = ne.field_g[var3];
             if (ol.field_c == 2 &&
               var2 == 1) {
               if (es.field_a.length >= cn.field_z.length) {
@@ -73,13 +56,13 @@ final class qa {
               } else {
                 stackIn_21_0 = cn.field_z.length;
               }
-              var7 = stackIn_21_0;
+              int var7 = stackIn_21_0;
               if (cc.field_b.length < gp.field_v.length) {
                 stackIn_24_0 = gp.field_v.length;
               } else {
                 stackIn_24_0 = cc.field_b.length;
               }
-              var8 = stackIn_24_0;
+              int var8 = stackIn_24_0;
               if (var3 >= 6 &&
                 6 + var7 > var3) {
                 if (var3 - (6 - es.field_a.length) - var7 >= 0) {
@@ -102,11 +85,11 @@ final class qa {
             if (-2 == var4) {
               var6 = Integer.toString(var2);
             }
-            stackIn_42_0 = true;
-            stackIn_42_1 = var6;
-            stackIn_43_2 = !(0 > var4);
-            var7Lifetime1 = IntrusiveDeque.a(stackIn_42_0, stackIn_42_1, stackIn_43_2);
-            var8Lifetime1 = -(var7Lifetime1 >> 1) + ri.field_a;
+            boolean stackIn_42_0 = true;
+            String stackIn_42_1 = var6;
+            boolean stackIn_43_2 = !(0 > var4);
+            int var7Lifetime1 = IntrusiveDeque.a(stackIn_42_0, stackIn_42_1, stackIn_43_2);
+            int var8Lifetime1 = -(var7Lifetime1 >> 1) + ri.field_a;
             if (var4 >= 0) {
               var1_int = var1_int + pp.field_a;
               if (pr.field_b.selectedIndex != var4) {
@@ -114,7 +97,7 @@ final class qa {
               } else {
                 stackIn_47_0 = u.field_g;
               }
-              var9 = stackIn_47_0;
+              mg var9 = stackIn_47_0;
               if (var9 != null) {
                 var9.a(-652, (ud.field_g << 1) + var7Lifetime1, lp.field_h + (as.field_c << 1), var1_int, -ud.field_g + var8Lifetime1);
               }
@@ -133,47 +116,23 @@ final class qa {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "qa.C(" + param0 + ')');
         }
     }
 
     final static void a(int param0, byte param1, int param2) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var6Lifetime1;
-        int var6Lifetime2;
-        int var6Lifetime3;
-        int var6Lifetime4;
         int var7Lifetime1;
-        int var7Lifetime2;
-        int var7Lifetime3;
-        int var7Lifetime4;
-        int var7Lifetime5;
-        int var7Lifetime6;
-        int var7Lifetime7;
-        int var7Lifetime8;
-        int var6Lifetime5;
-        int var7Lifetime9;
-        int var6Lifetime1Lifetime1;
-        int var6Lifetime2Lifetime1;
-        int var7Lifetime1Lifetime1;
-        int var7Lifetime2Lifetime1;
-        int var7Lifetime5Lifetime1;
         int var7Lifetime10;
         int var7Lifetime2Lifetime2;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (0 > it.field_c) {
           return;
         }
-        var3 = -135 + param2;
-        var4 = -35 + param0;
-        var5 = 256;
+        int var3 = -135 + param2;
+        int var4 = -35 + param0;
+        int var5 = 256;
         if (it.field_c < 75) {
           var5 = (it.field_c << 8) / 75;
         }
@@ -195,12 +154,12 @@ final class qa {
           if (param1 != -4) {
             qa.b(109);
           }
-          var6 = it.field_c - 125;
+          int var6 = it.field_c - 125;
           if (0 < var6) {
             if (var6 >= 50) {
               var6 = -140 + it.field_c;
               if (var6 > 0) {
-                var7 = 256;
+                int var7 = 256;
                 if (var6 < 20) {
                   var7 = 256 * var6 / 20;
                 }
@@ -220,9 +179,9 @@ final class qa {
               }
             }
           }
-          var6Lifetime5 = -140 + it.field_c;
+          int var6Lifetime5 = -140 + it.field_c;
           if (var6Lifetime5 > 0) {
-            var7Lifetime9 = 256;
+            int var7Lifetime9 = 256;
             if (var6Lifetime5 < 20) {
               var7Lifetime9 = 256 * var6Lifetime5 / 20;
             }
@@ -236,7 +195,7 @@ final class qa {
           if (param1 != -4) {
             qa.b(109);
           }
-          var6Lifetime1 = it.field_c - 125;
+          int var6Lifetime1 = it.field_c - 125;
           if (0 < var6Lifetime1 &&
             var6Lifetime1 < 50) {
             if (20 > var6Lifetime1) {
@@ -251,9 +210,9 @@ final class qa {
               }
             }
           }
-          var6Lifetime1Lifetime1 = -140 + it.field_c;
+          int var6Lifetime1Lifetime1 = -140 + it.field_c;
           if (var6Lifetime1Lifetime1 > 0) {
-            var7Lifetime1Lifetime1 = 256;
+            int var7Lifetime1Lifetime1 = 256;
             if (var6Lifetime1Lifetime1 < 20) {
               var7Lifetime1Lifetime1 = 256 * var6Lifetime1Lifetime1 / 20;
             }
@@ -263,12 +222,12 @@ final class qa {
         }
         wd.field_v.d(var3, var4);
         if (param1 == -4) {
-          var6Lifetime2 = it.field_c - 125;
+          int var6Lifetime2 = it.field_c - 125;
           if (0 < var6Lifetime2) {
             if (var6Lifetime2 >= 50) {
               var6Lifetime2 = -140 + it.field_c;
               if (var6Lifetime2 > 0) {
-                var7Lifetime2 = 256;
+                int var7Lifetime2 = 256;
                 if (var6Lifetime2 < 20) {
                   var7Lifetime2 = 256 * var6Lifetime2 / 20;
                 }
@@ -288,9 +247,9 @@ final class qa {
               }
             }
           }
-          var6Lifetime2Lifetime1 = -140 + it.field_c;
+          int var6Lifetime2Lifetime1 = -140 + it.field_c;
           if (var6Lifetime2Lifetime1 > 0) {
-            var7Lifetime2Lifetime1 = 256;
+            int var7Lifetime2Lifetime1 = 256;
             if (var6Lifetime2Lifetime1 < 20) {
               var7Lifetime2Lifetime1 = 256 * var6Lifetime2Lifetime1 / 20;
             }
@@ -299,11 +258,11 @@ final class qa {
           return;
         }
         qa.b(109);
-        var6Lifetime3 = it.field_c - 125;
+        int var6Lifetime3 = it.field_c - 125;
         if (0 >= var6Lifetime3) {
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
-            var7Lifetime3 = 256;
+            int var7Lifetime3 = 256;
             if (var6Lifetime3 < 20) {
               var7Lifetime3 = 256 * var6Lifetime3 / 20;
             }
@@ -314,7 +273,7 @@ final class qa {
         if (var6Lifetime3 >= 50) {
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
-            var7Lifetime4 = 256;
+            int var7Lifetime4 = 256;
             if (var6Lifetime3 < 20) {
               var7Lifetime4 = 256 * var6Lifetime3 / 20;
             }
@@ -323,11 +282,11 @@ final class qa {
           return;
         }
         if (20 > var6Lifetime3) {
-          var7Lifetime5 = var6Lifetime3 * 256 / 20;
+          int var7Lifetime5 = var6Lifetime3 * 256 / 20;
           oo.field_W.d(var3, var4, var7Lifetime5);
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
-            var7Lifetime5Lifetime1 = 256;
+            int var7Lifetime5Lifetime1 = 256;
             if (var6Lifetime3 < 20) {
               var7Lifetime5Lifetime1 = 256 * var6Lifetime3 / 20;
             }
@@ -339,7 +298,7 @@ final class qa {
           oo.field_W.d(var3, var4, 256);
           var6Lifetime3 = -140 + it.field_c;
           if (var6Lifetime3 > 0) {
-            var7Lifetime6 = 256;
+            int var7Lifetime6 = 256;
             if (var6Lifetime3 < 20) {
               var7Lifetime6 = 256 * var6Lifetime3 / 20;
             }
@@ -347,11 +306,11 @@ final class qa {
           }
           return;
         }
-        var7Lifetime7 = (12800 - var6Lifetime3 * 256) / 20;
+        int var7Lifetime7 = (12800 - var6Lifetime3 * 256) / 20;
         oo.field_W.d(var3, var4, var7Lifetime7);
-        var6Lifetime4 = -140 + it.field_c;
+        int var6Lifetime4 = -140 + it.field_c;
         if (var6Lifetime4 > 0) {
-          var7Lifetime8 = 256;
+          int var7Lifetime8 = 256;
           if (var6Lifetime4 < 20) {
             var7Lifetime8 = 256 * var6Lifetime4 / 20;
           }

@@ -29,28 +29,9 @@ class tk {
     }
 
     private final void a(int[] param0, int param1) {
-        int var3;
-        int var4;
-        int var5;
-        int var6;
         int var7_int;
-        Object var7;
         int var8_int;
-        PcmStream[] var8;
-        int var9;
-        Object var10;
-        PcmStream var11;
-        gs var12;
-        int var13;
-        PcmStream var14;
-        int var15_int;
-        PcmStream var15;
-        int var6Lifetime1;
-        int var9Lifetime1;
-        Object var10Lifetime1;
-        PcmStream var14Lifetime1;
-        PcmStream var14Lifetime2;
-        var3 = param1;
+        int var3 = param1;
         if (field_r) {
           var3 = var3 << 1;
         }
@@ -61,9 +42,9 @@ class tk {
           this.field_o = this.field_o + (field_f >> 4);
           tk.b(this.field_n);
           this.a(this.field_n, this.field_n.c());
-          var4 = 0;
-          var5 = 255;
-          var6 = 7;
+          int var4 = 0;
+          int var5 = 255;
+          int var6 = 7;
           scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
@@ -73,16 +54,16 @@ class tk {
                 var7_int = var6 & 3;
                 var8_int = -(var6 >> 2);
               }
-              var9 = var5 >>> var7_int & 286331153;
+              int var9 = var5 >>> var7_int & 286331153;
               while (var9 != 0) {
                 if ((var9 & 1) != 0) {
                   var5 = var5 & ~(1 << var7_int);
-                  var10 = null;
-                  var11 = this.field_b[var7_int];
-                  var14 = var11;
-                  var14Lifetime1 = var11;
+                  Object var10 = null;
+                  PcmStream var11 = this.field_b[var7_int];
+                  PcmStream var14 = var11;
+                  PcmStream var14Lifetime1 = var11;
                   while (var11 != null) {
-                    var12 = var11.field_f;
+                    gs var12 = var11.field_f;
                     if (var12 != null &&
                       var12.field_e > var8_int) {
                       var5 = var5 | 1 << var7_int;
@@ -91,7 +72,7 @@ class tk {
                       continue;
                     }
                     var11.field_g = true;
-                    var13 = var11.d();
+                    int var13 = var11.d();
                     var4 = var4 + var13;
                     if (var12 != null) {
                       var12.field_e = var12.field_e + var13;
@@ -99,15 +80,15 @@ class tk {
                     if (var4 >= this.field_j) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.b();
+                    PcmStream var14Lifetime2 = var11.b();
                     if (var14Lifetime2 != null) {
-                      var15_int = var11.field_h;
+                      int var15_int = var11.field_h;
                       while (var14Lifetime2 != null) {
                         this.a(var14Lifetime2, var15_int * var14Lifetime2.c() >> 8);
                         var14Lifetime2 = var11.a();
                       }
                     }
-                    var15 = var11.field_e;
+                    PcmStream var15 = var11.field_e;
                     var11.field_e = null;
                     if (var10 != null) {
                       ((PcmStream) (var10)).field_e = var15;
@@ -129,14 +110,14 @@ class tk {
             }
             break;
           }
-          for (var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
-            var7 = this.field_b[var6Lifetime1];
-            var8 = this.field_b;
-            var9Lifetime1 = var6Lifetime1;
+          for (int var6Lifetime1 = 0; var6Lifetime1 < 8; var6Lifetime1++) {
+            Object var7 = this.field_b[var6Lifetime1];
+            PcmStream[] var8 = this.field_b;
+            int var9Lifetime1 = var6Lifetime1;
             this.field_u[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((PcmStream) (var7)).field_e;
+              Object var10Lifetime1 = ((PcmStream) (var7)).field_e;
               ((PcmStream) (var7)).field_e = null;
               var7 = var10Lifetime1;
             }
@@ -157,14 +138,11 @@ class tk {
     final synchronized void h() {
         try {
           Throwable decompiledCaughtException = null;
-          long var1 = 0L;
           Exception var3 = null;
-          int var3_int = 0;
-          int var4 = 0;
           if (this.field_m) {
             return;
           }
-          var1 = kh.a(-128);
+          long var1 = kh.a(-128);
           try {
             if (var1 > this.field_p + 6000L) {
               this.field_p = var1 - 6000L;
@@ -191,11 +169,11 @@ class tk {
               this.field_q = 0L;
               this.field_c = true;
             }
-            var3_int = this.g();
+            int var3_int = this.g();
             if (this.field_a - var3_int > this.field_t) {
               this.field_t = this.field_a - var3_int;
             }
-            var4 = this.field_i + this.field_k;
+            int var4 = this.field_i + this.field_k;
             if (var4 + 256 > 16384) {
               var4 = 16128;
             }
@@ -291,11 +269,9 @@ class tk {
     }
 
     final synchronized void d() {
-        int var2 = 0;
-        int var1;
         if (field_s != null) {
-          var1 = 1;
-          for (var2 = 0; var2 < 2; var2++) {
+          int var1 = 1;
+          for (int var2 = 0; var2 < 2; var2++) {
             if (field_s.field_c[var2] == this) {
               field_s.field_c[var2] = null;
             }
@@ -355,14 +331,7 @@ class tk {
 
     final static tk a(rk param0, java.awt.Component param1, int param2, int param3) {
         try {
-          ug var4 = null;
-          Throwable var4_ref = null;
-          ug var5 = null;
-          ug stackIn_10_0 = null;
-          int stackIn_10_1 = 0;
           int stackIn_11_2 = 0;
-          ug stackIn_21_0 = null;
-          Throwable decompiledCaughtException = null;
           if (field_f == 0) {
             throw new IllegalStateException();
           }
@@ -372,10 +341,10 @@ class tk {
               param3 = 256;
             }
             try {
-              var5 = new ug();
-              var4 = var5;
-              stackIn_10_0 = var4;
-              stackIn_10_1 = 256;
+              ug var5 = new ug();
+              ug var4 = var5;
+              ug stackIn_10_0 = var4;
+              int stackIn_10_1 = 256;
               if (!field_r) {
                 stackIn_11_2 = 1;
               } else {
@@ -401,11 +370,11 @@ class tk {
                 }
                 field_s.field_c[param2] = (tk) ((Object) var5);
               }
-              stackIn_21_0 = var4;
+              ug stackIn_21_0 = var4;
               return (tk) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var4_ref = decompiledCaughtException;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              Throwable var4_ref = decompiledCaughtException;
               return new tk();
             }
           }

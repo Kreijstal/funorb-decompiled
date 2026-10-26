@@ -22,9 +22,8 @@ final class ic {
 
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
         if (ua.field_d != null) {
-          var1 = ua.field_d;
+          Object var1 = ua.field_d;
           synchronized (var1) {
             ua.field_d = null;
           }
@@ -35,42 +34,29 @@ final class ic {
     }
 
     final static w a(String param0, boolean param1) {
-        int var3 = 0;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var4 = 0;
-        int var5 = 0;
-        w stackIn_4_0 = null;
-        w stackIn_7_0 = null;
-        w stackIn_15_0 = null;
-        w stackIn_18_0 = null;
-        Object stackIn_23_0 = null;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.length();
+          int var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = nh.field_f;
+            w stackIn_4_0 = nh.field_f;
             return stackIn_4_0;
           }
           if (63 < var2_int) {
-            stackIn_7_0 = ei.field_d;
+            w stackIn_7_0 = ei.field_d;
             return stackIn_7_0;
           }
-          for (var3 = 0; var3 < var2_int; var3++) {
-            var4 = param0.charAt(var3);
+          for (int var3 = 0; var3 < var2_int; var3++) {
+            int var4 = param0.charAt(var3);
             if (var4 == 45) {
               if (0 == var3 ||
                 var3 == -1 + var2_int) {
-                stackIn_15_0 = td.field_d;
+                w stackIn_15_0 = td.field_d;
                 return stackIn_15_0;
               }
             } else {
               if (ml.field_l.indexOf(var4) == -1) {
-                stackIn_18_0 = td.field_d;
+                w stackIn_18_0 = td.field_d;
                 return stackIn_18_0;
               }
             }
@@ -79,13 +65,13 @@ final class ic {
             return null;
           }
           field_a = (String) null;
-          stackIn_23_0 = null;
+          Object stackIn_23_0 = null;
           return (w) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_26_0 = var2;
-          stackIn_26_1 = new StringBuilder().append("ic.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_26_0 = var2;
+          StringBuilder stackIn_26_1 = new StringBuilder().append("ic.D(");
           if (param0 == null) {
             stackIn_27_2 = "null";
           } else {

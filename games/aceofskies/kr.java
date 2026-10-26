@@ -44,23 +44,13 @@ public final class kr extends bf {
     }
 
     private final static boolean a(int param0, jagdx.D3DPRESENT_PARAMETERS param1, byte param2, int param3, int param4, jagdx.IDirect3D param5) {
-        int var11 = 0;
-        int var12 = 0;
-        Throwable decompiledCaughtException = null;
         int var6 = 0;
         int var7 = 0;
+        int var9 = -92 % ((67 - param2) / 45);
         int var8 = 0;
-        int var9 = 0;
-        Throwable var10 = null;
-        jagdx.D3DDISPLAYMODE var13 = null;
-        jagdx.D3DDISPLAYMODE var14 = null;
-        var6 = 0;
-        var7 = 0;
-        var9 = -92 % ((67 - param2) / 45);
-        var8 = 0;
         try {
-          var13 = new jagdx.D3DDISPLAYMODE();
-          var14 = var13;
+          jagdx.D3DDISPLAYMODE var13 = new jagdx.D3DDISPLAYMODE();
+          jagdx.D3DDISPLAYMODE var14 = var13;
           if (jagdx.gf.a(-1, param5.a(param4, var14))) {
             return false;
           }
@@ -68,11 +58,11 @@ public final class kr extends bf {
             if (0 <= param0) {
               if (1 != param0) {
                 var8 = param0 + 0;
-                for (var11 = 0; var11 < field_Jc.length; var11++) {
+                for (int var11 = 0; var11 < field_Jc.length; var11++) {
                   if (0 == param5.CheckDeviceType(param4, param3, var13.Format, field_Jc[var11], true) &&
                     param5.CheckDeviceFormat(param4, param3, var13.Format, 1, 1, field_Jc[var11]) == 0 && (param0 == 0 ||
                     0 == param5.CheckDeviceMultiSampleType(param4, param3, field_Jc[var11], true, var8))) {
-                    for (var12 = 0; field_uc.length > var12; var12++) {
+                    for (int var12 = 0; field_uc.length > var12; var12++) {
                       if (param5.CheckDeviceFormat(param4, param3, var13.Format, 2, 1, field_uc[var12]) == 0 &&
                         param5.CheckDepthStencilMatch(param4, param3, var13.Format, field_Jc[var11], field_uc[var12]) == 0 && (param0 == 0 ||
                         param5.CheckDeviceMultiSampleType(param4, param3, field_uc[var11], true, var8) == 0)) {
@@ -100,8 +90,8 @@ public final class kr extends bf {
           }
           return false;
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var10 = decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          Throwable var10 = decompiledCaughtException;
           return false;
         }
     }
@@ -117,22 +107,18 @@ public final class kr extends bf {
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        int var11 = 0;
-        jagdx.IDirect3DSurface var9;
-        int var10;
-        jagdx.IDirect3DSurface var12;
-        var12 = this.field_Rc.c(0);
-        var9 = this.field_Rc.a(param2, param3, 21, 0, 0, true);
+        jagdx.IDirect3DSurface var12 = this.field_Rc.c(0);
+        jagdx.IDirect3DSurface var9 = this.field_Rc.a(param2, param3, 21, 0, 0, true);
         if (jagdx.gf.a((byte) 93, var9.LockRect(0, 0, param2, param3, 0, this.field_Ec))) {
           if (param6 == 0) {
             param6 = param2;
           }
-          var10 = this.field_Ec.getRowPitch();
+          int var10 = this.field_Ec.getRowPitch();
           if (param6 == param2 &&
             var10 == 4 * param2) {
             this.field_Ec.a(param4, param5, 0, param2 * param3);
           } else {
-            for (var11 = 0; var11 < param3; var11++) {
+            for (int var11 = 0; var11 < param3; var11++) {
               this.field_Ec.a(param4, param6 * var11 + param5, var10 * var11, param2);
             }
           }
@@ -167,12 +153,9 @@ public final class kr extends bf {
     }
 
     final void b(boolean param0) {
-        jagdx.IDirect3DDevice stackIn_4_0 = null;
-        int stackIn_4_1 = 0;
-        boolean stackIn_5_2 = false;
-        stackIn_4_0 = this.field_Rc;
-        stackIn_4_1 = 28;
-        stackIn_5_2 = (this.field_I) && (this.field_o) && (this.field_p >= 0);
+        jagdx.IDirect3DDevice stackIn_4_0 = this.field_Rc;
+        int stackIn_4_1 = 28;
+        boolean stackIn_5_2 = (this.field_I) && (this.field_o) && (this.field_p >= 0);
         ((jagdx.IDirect3DDevice) (Object) stackIn_4_0).a(stackIn_4_1, stackIn_5_2);
         if (param0) {
           this.field_Fc = (jagdx.D3DLIGHT) null;
@@ -180,40 +163,33 @@ public final class kr extends bf {
     }
 
     final void b(int param0, int param1) throws lp {
-        int fieldTemp$1 = 0;
-        boolean discarded$2 = false;
-        boolean discarded$3 = false;
         this.field_Rc.EndScene();
         if (!this.field_xc.a(false)) {
-          fieldTemp$1 = this.field_Hc + 1;
+          int fieldTemp$1 = this.field_Hc + 1;
           this.field_Hc = this.field_Hc + 1;
           if (fieldTemp$1 > 50) {
             throw new lp();
           }
-          discarded$2 = this.h(true);
+          boolean discarded$2 = this.h(true);
         } else {
           this.field_Hc = 0;
           if (jagdx.gf.a(-1, this.field_xc.a(0, -96))) {
-            discarded$3 = this.h(true);
+            boolean discarded$3 = this.h(true);
           }
         }
         this.field_Rc.BeginScene();
     }
 
     final void G(int param0) {
-        boolean[] var3 = null;
-        int var4 = 0;
-        int var2 = 0;
-        int var2Lifetime1;
-        for (var2 = 0; var2 < this.field_h; var2++) {
+        for (int var2 = 0; var2 < this.field_h; var2++) {
           this.field_Rc.SetSamplerState(var2, 7, 0);
           this.field_Rc.SetSamplerState(var2, 6, 2);
           this.field_Rc.SetSamplerState(var2, 5, 2);
           this.field_Rc.SetSamplerState(var2, 1, 1);
           this.field_Rc.SetSamplerState(var2, 2, 1);
           this.field_Oc[var2] = fg.field_A;
-          var3 = this.field_Qc;
-          var4 = var2;
+          boolean[] var3 = this.field_Qc;
+          int var4 = var2;
           this.field_sc[var2] = true;
           var3[var4] = true;
           this.field_Ac[var2] = false;
@@ -223,7 +199,7 @@ public final class kr extends bf {
         this.field_Rc.SetRenderState(9, 2);
         this.field_Rc.SetRenderState(23, 4);
         this.field_Rc.SetRenderState(25, 5);
-        var2Lifetime1 = 39 / ((param0 + 65) / 51);
+        int var2Lifetime1 = 39 / ((param0 + 65) / 51);
         this.field_Rc.SetRenderState(24, 0);
         this.field_Rc.SetRenderState(22, 2);
         this.field_Rc.SetRenderState(147, 1);
@@ -238,32 +214,21 @@ public final class kr extends bf {
     }
 
     final void a(ib param0, byte param1) {
-        int stackIn_4_0 = 0;
-        jagdx.IDirect3DDevice stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
-        int stackIn_8_2 = 0;
         int stackIn_9_3;
-        int stackIn_13_0 = 0;
-        int stackIn_16_1 = 0;
-        jagdx.IDirect3DDevice stackIn_19_0 = null;
-        int stackIn_19_1 = 0;
-        int stackIn_19_2 = 0;
         int stackIn_20_3;
-        int var3;
-        int var4;
         this.field_Rc.SetTexture(this.field_F, param0.b(110));
-        var3 = -65 % ((param1 - 26) / 32);
+        int var3 = -65 % ((param1 - 26) / 32);
         if (this.field_Oc[this.field_F] != param0.field_a) {
-          var4 = kr.a(param0.field_a, 2);
+          int var4 = kr.a(param0.field_a, 2);
           this.field_Rc.SetSamplerState(this.field_F, 6, var4);
           this.field_Rc.SetSamplerState(this.field_F, 5, var4);
           this.field_Oc[this.field_F] = param0.field_a;
-          stackIn_13_0 = (param0.field_b) ? 0 : 1;
-          stackIn_16_1 = (this.field_Ac[this.field_F]) ? 0 : 1;
+          int stackIn_13_0 = (param0.field_b) ? 0 : 1;
+          int stackIn_16_1 = (this.field_Ac[this.field_F]) ? 0 : 1;
           if (stackIn_13_0 != stackIn_16_1) {
-            stackIn_19_0 = this.field_Rc;
-            stackIn_19_1 = this.field_F;
-            stackIn_19_2 = 7;
+            jagdx.IDirect3DDevice stackIn_19_0 = this.field_Rc;
+            int stackIn_19_1 = this.field_F;
+            int stackIn_19_2 = 7;
             if (!param0.field_b) {
               stackIn_20_3 = 0;
             } else {
@@ -273,11 +238,11 @@ public final class kr extends bf {
             this.field_Ac[this.field_F] = param0.field_b;
           }
         } else {
-          stackIn_4_0 = (this.field_Ac[this.field_F]) ? 0 : 1;
+          int stackIn_4_0 = (this.field_Ac[this.field_F]) ? 0 : 1;
           if (stackIn_4_0 == (param0.field_b ? 1 : 0)) {
-            stackIn_8_0 = this.field_Rc;
-            stackIn_8_1 = this.field_F;
-            stackIn_8_2 = 7;
+            jagdx.IDirect3DDevice stackIn_8_0 = this.field_Rc;
+            int stackIn_8_1 = this.field_F;
+            int stackIn_8_2 = 7;
             if (!param0.field_b) {
               stackIn_9_3 = 0;
             } else {
@@ -315,12 +280,9 @@ public final class kr extends bf {
     }
 
     final void w(int param0) {
-        jagdx.IDirect3DDevice stackIn_3_0 = null;
-        int stackIn_3_1 = 0;
-        boolean stackIn_4_2 = false;
-        stackIn_3_0 = this.field_Rc;
-        stackIn_3_1 = 14;
-        stackIn_4_2 = (this.field_mb) && (this.field_Y);
+        jagdx.IDirect3DDevice stackIn_3_0 = this.field_Rc;
+        int stackIn_3_1 = 14;
+        boolean stackIn_4_2 = (this.field_mb) && (this.field_Y);
         ((jagdx.IDirect3DDevice) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
         if (param0 != 0) {
           this.field_yc = (jagdx.D3DLIGHT) null;
@@ -347,7 +309,6 @@ public final class kr extends bf {
     }
 
     final void p(int param0) {
-        int var2;
         if (this.field_zc == null &&
           mq.field_g != this.field_f[this.field_F]) {
           if (this.field_f[this.field_F] == tr.field_a) {
@@ -355,7 +316,7 @@ public final class kr extends bf {
           } else {
             this.field_Rc.SetTransform(this.field_F + 16, this.field_L[this.field_F].a(field_Sc, true));
           }
-          var2 = kr.a(true, this.field_f[this.field_F]);
+          int var2 = kr.a(true, this.field_f[this.field_F]);
           if (var2 != this.field_Cc[this.field_F]) {
             this.field_Rc.SetTextureStageState(this.field_F, 24, var2);
             this.field_Cc[this.field_F] = var2;
@@ -371,10 +332,8 @@ public final class kr extends bf {
 
     final void a(boolean param0, int param1, boolean param2, jb param3, boolean param4) {
         int var6;
-        int var7;
-        int var8;
-        var7 = 0;
-        var8 = param1;
+        int var7 = 0;
+        int var8 = param1;
         if (var8 == 1) {
           var6 = 3;
         } else {
@@ -430,29 +389,15 @@ public final class kr extends bf {
     }
 
     final static GraphicsRenderer createToolkit(java.awt.Canvas param0, d param1, ResourceArchive param2, Integer param3) {
-        kr stackIn_43_0 = null;
         Throwable decompiledCaughtException = null;
-        Object var4 = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        jaclib.peer.qt var7 = null;
-        jagdx.IDirect3D var8 = null;
-        jagdx.D3DCAPS var9 = null;
-        jagdx.D3DPRESENT_PARAMETERS var10 = null;
-        int var11 = 0;
-        Object var12 = null;
         jagdx.IDirect3DDevice var12_ref = null;
-        cb var13 = null;
-        jagdx.ie var14 = null;
-        kr var15 = null;
-        var4 = null;
+        Object var4 = null;
         try {
-          var5_int = 0;
-          var6 = 1;
-          var7 = new jaclib.peer.qt();
-          var8 = jagdx.IDirect3D.a(-2147483616, var7);
-          var9 = var8.a(var5_int, var6);
+          int var5_int = 0;
+          int var6 = 1;
+          jaclib.peer.qt var7 = new jaclib.peer.qt();
+          jagdx.IDirect3D var8 = jagdx.IDirect3D.a(-2147483616, var7);
+          jagdx.D3DCAPS var9 = var8.a(var5_int, var6);
           if ((16777216 & var9.RasterCaps) == 0) {
             throw new RuntimeException("");
           }
@@ -490,34 +435,34 @@ public final class kr extends bf {
           if (var9.MaxStreams < 5) {
             throw new RuntimeException("");
           }
-          var10 = new jagdx.D3DPRESENT_PARAMETERS(param0);
+          jagdx.D3DPRESENT_PARAMETERS var10 = new jagdx.D3DPRESENT_PARAMETERS(param0);
           if (!kr.a(param3.intValue(), var10, (byte) 124, var6, var5_int, var8)) {
             throw new RuntimeException("");
           }
           var10.PresentationInterval = -2147483648;
           var10.EnableAutoDepthStencil = true;
           var10.Windowed = true;
-          var11 = 2;
+          int var11 = 2;
           if ((var9.DevCaps & 1048576) != 0) {
             var11 = var11 | 16;
           }
-          var12 = null;
+          Object var12 = null;
           try {
             var12_ref = var8.a(var5_int, var6, param0, var11 | 64, var10);
           } catch (jagdx.ie decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var14 = (jagdx.ie) (Object) decompiledCaughtException;
+            jagdx.ie var14 = (jagdx.ie) (Object) decompiledCaughtException;
             var12_ref = var8.a(var5_int, var6, param0, var11 | 32, var10);
           }
-          var13 = new cb(var12_ref.b(0), var12_ref.b());
-          var15 = new kr(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
+          cb var13 = new cb(var12_ref.b(0), var12_ref.b());
+          kr var15 = new kr(var5_int, var6, param0, var7, var8, var12_ref, var13, var10, var9, param1, param2, param3.intValue());
           var4 = var15;
           var15.f((byte) 101);
-          stackIn_43_0 = var15;
+          kr stackIn_43_0 = var15;
           return (GraphicsRenderer) ((Object) stackIn_43_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var5 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException var5 = (RuntimeException) (Object) decompiledCaughtException;
           if (var4 != null) {
             ((kr) (var4)).c();
           }
@@ -605,13 +550,11 @@ public final class kr extends bf {
     }
 
     final boolean a(la param0, int param1, hd param2) {
-        jagdx.D3DDISPLAYMODE var4;
-        boolean stackIn_6_0 = false;
-        var4 = new jagdx.D3DDISPLAYMODE();
+        jagdx.D3DDISPLAYMODE var4 = new jagdx.D3DDISPLAYMODE();
         if (param1 != 0) {
           this.field_Pc = (jagdx.D3DPRESENT_PARAMETERS) null;
         }
-        stackIn_6_0 = (jagdx.gf.a((byte) 96, this.field_wc.a(this.field_Kc, var4))) && (jagdx.gf.a((byte) 78, this.field_wc.CheckDeviceFormat(this.field_Kc, this.field_tc, var4.Format, 0, 3, kr.a(param2, param0, false))));
+        boolean stackIn_6_0 = (jagdx.gf.a((byte) 96, this.field_wc.a(this.field_Kc, var4))) && (jagdx.gf.a((byte) 78, this.field_wc.CheckDeviceFormat(this.field_Kc, this.field_tc, var4.Format, 0, 3, kr.a(param2, param0, false))));
         return stackIn_6_0;
     }
 
@@ -624,11 +567,10 @@ public final class kr extends bf {
     }
 
     final void a(nf param0, boolean param1) {
-        int var3;
         if (param1) {
           return;
         }
-        var3 = 0;
+        int var3 = 0;
         if (param0 != rg.field_A) {
           if (param0 == ij.field_g) {
             var3 = 131072;
@@ -679,26 +621,21 @@ public final class kr extends bf {
     }
 
     final void T(int param0) {
-        jagdx.IDirect3DDevice stackIn_5_0 = null;
-        int stackIn_5_1 = 0;
-        boolean stackIn_6_2 = false;
         if (param0 != 0) {
           return;
         }
-        stackIn_5_0 = this.field_Rc;
-        stackIn_5_1 = 137;
-        stackIn_6_2 = (this.field_ob) && (!this.field_pc);
+        jagdx.IDirect3DDevice stackIn_5_0 = this.field_Rc;
+        int stackIn_5_1 = 137;
+        boolean stackIn_6_2 = (this.field_ob) && (!this.field_pc);
         ((jagdx.IDirect3DDevice) (Object) stackIn_5_0).a(stackIn_5_1, stackIn_6_2);
     }
 
     final boolean a(byte param0, la param1, hd param2) {
-        jagdx.D3DDISPLAYMODE var4;
-        boolean stackIn_6_0 = false;
         if (param0 != -13) {
           return false;
         }
-        var4 = new jagdx.D3DDISPLAYMODE();
-        stackIn_6_0 = (jagdx.gf.a((byte) 122, this.field_wc.a(this.field_Kc, var4))) && (jagdx.gf.a((byte) 112, this.field_wc.CheckDeviceFormat(this.field_Kc, this.field_tc, var4.Format, 0, 4, kr.a(param2, param1, false))));
+        jagdx.D3DDISPLAYMODE var4 = new jagdx.D3DDISPLAYMODE();
+        boolean stackIn_6_0 = (jagdx.gf.a((byte) 122, this.field_wc.a(this.field_Kc, var4))) && (jagdx.gf.a((byte) 112, this.field_wc.CheckDeviceFormat(this.field_Kc, this.field_tc, var4.Format, 0, 4, kr.a(param2, param1, false))));
         return stackIn_6_0;
     }
 
@@ -718,20 +655,16 @@ public final class kr extends bf {
     }
 
     final void k(byte param0) {
-        sf var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        float var6 = 0.0f;
         int var2 = 0;
         if (param0 < 123) {
           RenderSprite var7 = (RenderSprite) null;
           this.a((RenderSprite) null, true);
         }
         while (var2 < this.field_B) {
-          var3 = this.field_D[var2];
-          var4 = 2 + var2;
-          var5 = var3.a(87);
-          var6 = var3.a(false) / 255.0f;
+          sf var3 = this.field_D[var2];
+          int var4 = 2 + var2;
+          int var5 = var3.a(87);
+          float var6 = var3.a(false) / 255.0f;
           this.field_Fc.SetPosition((float)var3.c((byte) -98), (float)var3.a((byte) -102), (float)var3.e(0));
           this.field_Fc.SetDiffuse(var6 * (float)((16721490 & var5) >> 16), (float)((65478 & var5) >> 8) * var6, (float)(255 & var5) * var6, 0.0f);
           this.field_Fc.SetAttenuation(0.0f, 0.0f, 1.0f / (float)(var3.d(0) * var3.d(0)));
@@ -791,7 +724,6 @@ public final class kr extends bf {
     }
 
     private final static int a(jb param0, byte param1) {
-        as var3;
         if (param0 == CipherPacketBuffer.field_p) {
           return 2;
         }
@@ -805,7 +737,7 @@ public final class kr extends bf {
           return 3;
         }
         if (param1 != -68) {
-          var3 = (as) null;
+          as var3 = (as) null;
           kr.a((as) null, true);
         }
         throw new IllegalArgumentException();
@@ -823,7 +755,6 @@ public final class kr extends bf {
     }
 
     private final boolean h(boolean param0) {
-        int var4 = 0;
         if (!param0) {
           return false;
         }
@@ -838,7 +769,7 @@ public final class kr extends bf {
         this.field_Pc.BackBufferWidth = 0;
         this.field_Pc.BackBufferHeight = 0;
         if (kr.a(this.field_lc, this.field_Pc, (byte) 114, this.field_tc, this.field_Kc, this.field_wc)) {
-          var4 = this.field_Rc.Reset(this.field_Pc);
+          int var4 = this.field_Rc.Reset(this.field_Pc);
           if (jagdx.gf.a((byte) 78, var4)) {
             var3.a(this.field_Rc.b(), this.field_Rc.b(0), 0);
             this.c((byte) 61);
@@ -862,13 +793,11 @@ public final class kr extends bf {
     }
 
     final sk b(int param0, byte param1) {
-        int var3;
-        tl var4;
         if (param1 < 31) {
-          var4 = (tl) null;
+          tl var4 = (tl) null;
           this.a(55, (tl) null, -60);
         }
-        var3 = param0;
+        int var3 = param0;
         if (3 == var3) {
           return (sk) ((Object) new jl(this, this.field_d));
         }
@@ -916,9 +845,8 @@ public final class kr extends bf {
     }
 
     final void a(int param0, java.awt.Canvas param1, Object param2) {
-        boolean discarded$0 = false;
         if (param0 != 0) {
-          discarded$0 = this.h(true);
+          boolean discarded$0 = this.h(true);
         }
     }
 
@@ -968,9 +896,8 @@ public final class kr extends bf {
     }
 
     final static int a(hd param0, la param1, boolean param2) {
-        ia var4;
         if (param2) {
-          var4 = (ia) null;
+          ia var4 = (ia) null;
           kr.a(-125, (ia) null);
         }
         if (la.field_h == param1) {
@@ -1044,9 +971,8 @@ public final class kr extends bf {
     }
 
     final void l(byte param0) {
-        hd var3;
         if (param0 <= 39) {
-          var3 = (hd) null;
+          hd var3 = (hd) null;
           this.a((la) null, 12, 69, 77, (hd) null);
         }
         if (this.field_zb == pi.field_x) {
@@ -1067,15 +993,7 @@ public final class kr extends bf {
 
     private kr(int param0, int param1, java.awt.Canvas param2, jaclib.peer.qt param3, jagdx.IDirect3D param4, jagdx.IDirect3DDevice param5, cb param6, jagdx.D3DPRESENT_PARAMETERS param7, jagdx.D3DCAPS param8, d param9, ResourceArchive param10, int param11) {
         super(param2, param6, param9, param10, param11, 0);
-        jagdx.GeometryBuffer discarded$0 = null;
-        boolean stackIn_4_1 = false;
-        boolean stackIn_7_1 = false;
-        boolean stackIn_10_1 = false;
-        boolean stackIn_13_1 = false;
         int stackIn_16_1 = 0;
-        boolean stackIn_19_1 = false;
-        Throwable decompiledCaughtException = null;
-        Throwable var13 = null;
         this.field_Mc = false;
         this.field_Hc = 0;
         try {
@@ -1092,15 +1010,15 @@ public final class kr extends bf {
           this.field_Fc = new jagdx.D3DLIGHT(this.field_Ic);
           this.field_Ec = new jagdx.PixelBuffer(this.field_Ic);
           this.field_vc = new jagdx.GeometryBuffer(this.field_Ic);
-          discarded$0 = new jagdx.GeometryBuffer(this.field_Ic);
-          stackIn_4_1 = ((this.field_Bc.TextureCaps & 2) == 0);
+          jagdx.GeometryBuffer discarded$0 = new jagdx.GeometryBuffer(this.field_Ic);
+          boolean stackIn_4_1 = ((this.field_Bc.TextureCaps & 2) == 0);
           this.field_Dc = stackIn_4_1;
-          stackIn_7_1 = (0 != (this.field_Bc.TextureCaps & 65536));
+          boolean stackIn_7_1 = (0 != (this.field_Bc.TextureCaps & 65536));
           this.field_rc = stackIn_7_1;
-          stackIn_10_1 = (0 != (16384 & this.field_Bc.TextureCaps));
+          boolean stackIn_10_1 = (0 != (16384 & this.field_Bc.TextureCaps));
           this.field_Gc = stackIn_10_1;
           this.field_h = this.field_Bc.MaxSimultaneousTextures;
-          stackIn_13_1 = ((this.field_Bc.TextureCaps & 8192) != 0);
+          boolean stackIn_13_1 = ((this.field_Bc.TextureCaps & 8192) != 0);
           this.field_J = stackIn_13_1;
           if (this.field_Bc.MaxActiveLights > 0) {
             stackIn_16_1 = this.field_Bc.MaxActiveLights;
@@ -1108,7 +1026,7 @@ public final class kr extends bf {
             stackIn_16_1 = 8;
           }
           this.field_fc = stackIn_16_1;
-          stackIn_19_1 = ((2048 & this.field_Bc.TextureCaps) != 0);
+          boolean stackIn_19_1 = ((2048 & this.field_Bc.TextureCaps) != 0);
           this.field_Pb = stackIn_19_1;
           if (this.field_lc <= 0) {
             this.field_wc.CheckDeviceMultiSampleType(this.field_Kc, this.field_tc, this.field_Pc.BackBufferFormat, true, 2);
@@ -1122,8 +1040,8 @@ public final class kr extends bf {
           this.field_Rc.BeginScene();
           return;
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var13 = decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          Throwable var13 = decompiledCaughtException;
           var13.printStackTrace();
           this.a(-9);
           throw new RuntimeException("");
@@ -1140,13 +1058,11 @@ public final class kr extends bf {
 
     final void a(jb param0, int param1, boolean param2, byte param3) {
         int var5;
-        int var6;
-        int var7;
         if (param3 < 90) {
           this.w((byte) -7);
         }
-        var6 = 0;
-        var7 = param1;
+        int var6 = 0;
+        int var7 = param1;
         if (1 == var7) {
           var5 = 6;
         } else {

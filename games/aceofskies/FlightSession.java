@@ -1537,16 +1537,14 @@ final class FlightSession {
     }
 
     private final void emitBurstScreenParticle(int radiusQ8, int xQ8, int durationTicks, int yAccelerationQ8, int yQ8, int spreadQ8, byte obfuscationGuard) {
-        ScreenParticle var8 = null;
-        ScreenParticle dupTemp$0 = null;
         if (this.screenParticles.length <= this.screenParticleCount) {
           return;
         }
         try {
           int var9 = 23 % ((24 - obfuscationGuard) / 62);
-          var8 = this.screenParticles[this.screenParticleCount];
+          ScreenParticle var8 = this.screenParticles[this.screenParticleCount];
           if (null == var8) {
-            dupTemp$0 = new ScreenParticle();
+            ScreenParticle dupTemp$0 = new ScreenParticle();
             this.screenParticles[this.screenParticleCount] = dupTemp$0;
             var8 = dupTemp$0;
           }
@@ -1876,13 +1874,12 @@ final class FlightSession {
     }
 
     private final void removeBullet(int obfuscationGuard, int index) {
-        Bullet var3 = null;
         this.bulletCount = this.bulletCount - 1;
         if (~this.bulletCount == ~index) {
           return;
         }
         try {
-          var3 = this.bullets[index];
+          Bullet var3 = this.bullets[index];
           this.bullets[index] = this.bullets[this.bulletCount];
           this.bullets[this.bulletCount] = var3;
           int var4 = -12 / ((-3 - obfuscationGuard) / 40);
@@ -4198,15 +4195,7 @@ final class FlightSession {
     }
 
     FlightSession() {
-        RuntimeException runtimeException = null;
-        Vector2 var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        FlightBody var4 = null;
-        int var5 = 0;
-        boolean stackIn_4_1 = false;
-        RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.targetBackgroundTint = 0;
         this.temporaryWeaponOpacity = 0;
         this.attractMode = true;
@@ -4254,15 +4243,15 @@ final class FlightSession {
         this.hudHidePhase = 200;
         this.scoreMultiplier = 1;
         try {
-          stackIn_4_1 = !(2 > ln.field_d);
+          boolean stackIn_4_1 = !(2 > ln.field_d);
           this.debugControlsEnabled = stackIn_4_1;
-          var1 = new Vector2();
-          var2 = qq.a(20, 128);
+          Vector2 var1 = new Vector2();
+          int var2 = qq.a(20, 128);
           this.backgroundBodies = new FlightBody[30];
-          var3 = 0;
+          int var3 = 0;
           while (30 > var3) {
             var1.set((double)qq.a(20, 3200), (double)qq.a(20, 2400), true);
-            var4 = new FlightBody(var1);
+            FlightBody var4 = new FlightBody(var1);
             var4.speed = 0.5;
             var4.heading = (double)(qq.a(20, 128) + var2);
             this.backgroundBodies[var3] = var4;
@@ -4274,8 +4263,8 @@ final class FlightSession {
           this.startAttractMode((byte) 56);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) runtimeException), "pk.<init>()");
         }
     }

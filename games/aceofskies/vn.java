@@ -9,42 +9,31 @@ final class vn extends vo {
     static String field_e;
 
     final pt a(String param0, int param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        CharSequence var5 = null;
-        CharSequence var6 = null;
-        pt stackIn_3_0 = null;
-        pt stackIn_10_0 = null;
-        pt stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5 = (CharSequence) ((Object) param0);
+          CharSequence var5 = (CharSequence) ((Object) param0);
           if (!vl.a(param1 ^ 8202, var5)) {
-            stackIn_3_0 = bt.field_a;
+            pt stackIn_3_0 = bt.field_a;
             return stackIn_3_0;
           }
           if (param1 != 8192) {
-            var4 = (String) null;
+            String var4 = (String) null;
             vn.a(63, (File) null, (String) null);
           }
-          var6 = (CharSequence) ((Object) param0);
-          var3_int = td.a(var6, (byte) 38);
+          CharSequence var6 = (CharSequence) ((Object) param0);
+          int var3_int = td.a(var6, (byte) 38);
           if (var3_int > 0 &&
             var3_int <= 130) {
-            stackIn_12_0 = fd.field_a;
+            pt stackIn_12_0 = fd.field_a;
             return stackIn_12_0;
           }
-          stackIn_10_0 = bt.field_a;
+          pt stackIn_10_0 = bt.field_a;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("vn.DA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var3;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("vn.DA(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -80,28 +69,22 @@ final class vn extends vo {
     }
 
     final String a(String param0, byte param1) {
-        RuntimeException var3 = null;
-        String var4 = null;
-        String stackIn_5_0 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 72) {
-            var4 = (String) null;
+            String var4 = (String) null;
             vn.a(53, (File) null, (String) null);
           }
           if (this.a(param0, 8192) != bt.field_a) {
             return null;
           }
-          stackIn_5_0 = dg.field_L;
+          String stackIn_5_0 = dg.field_L;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("vn.EA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var3;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("vn.EA(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {

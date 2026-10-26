@@ -51,13 +51,7 @@ final class bk extends hh {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var5;
-        int var4;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime3;
-        int var4Lifetime4;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_l) {
           return;
         }
@@ -65,7 +59,7 @@ final class bk extends hh {
         if ((param1 & 128) == 0) {
           if ((param2 & 1) == 1) {
             if (!this.field_h.field_d) {
-              var4 = 16 * (this.field_a.field_hb % 4000) / 4000;
+              int var4 = 16 * (this.field_a.field_hb % 4000) / 4000;
               this.field_a.a(this.field_h.field_h[var4], param0 + 66);
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 65, 0.0f, 0.0f, 0.0f, 1.0f);
               if (param0 != -65) {
@@ -80,7 +74,7 @@ final class bk extends hh {
                 st.field_a[0] = this.field_a.field_ic * this.field_a.field_Fb;
                 jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, st.field_a, 0);
               }
-              var4Lifetime4 = param1 & 3;
+              int var4Lifetime4 = param1 & 3;
               if (2 == var4Lifetime4) {
                 jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
               } else {
@@ -98,7 +92,7 @@ final class bk extends hh {
               this.field_a.a(false, 0);
               if (0 != (64 & param1)) {
                 jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 66, 1.0f, 1.0f, 1.0f, 1.0f);
-                var4Lifetime2 = param1 & 3;
+                int var4Lifetime2 = param1 & 3;
                 if (2 == var4Lifetime2) {
                   jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
                 } else {
@@ -126,7 +120,7 @@ final class bk extends hh {
                 jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, st.field_a, 0);
               }
             }
-            var4Lifetime3 = param1 & 3;
+            int var4Lifetime3 = param1 & 3;
             if (2 == var4Lifetime3) {
               jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
             } else {
@@ -159,7 +153,7 @@ final class bk extends hh {
           st.field_a[0] = this.field_a.field_ic * this.field_a.field_Fb;
           jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, 66, st.field_a, 0);
         }
-        var4Lifetime1 = param1 & 3;
+        int var4Lifetime1 = param1 & 3;
         if (2 == var4Lifetime1) {
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 64, 0.05000000074505806f, 1.0f, 1.0f, 1.0f);
         } else {
@@ -173,25 +167,8 @@ final class bk extends hh {
 
     bk(wl param0, qe param1) {
         super(param0);
-        int var6 = 0;
-        int var9 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[][] var3 = null;
-        RuntimeException var3_ref = null;
-        int var5 = 0;
-        int[][] var11 = null;
-        int[][] var12 = null;
-        int[][] var16 = null;
-        int[][] var23 = null;
-        int[] var24 = null;
-        int[] var25 = null;
         try {
           this.field_h = param1;
           if (this.field_a.field_x &&
@@ -200,21 +177,21 @@ final class bk extends hh {
             if (this.field_i == null) {
               return;
             }
-            var16 = hh.a((byte) -88, 3, 64, false, 256, 0.4000000059604645f, 4, 0, 4);
-            var12 = var16;
-            var11 = var12;
-            var3 = var11;
-            var23 = hh.a((byte) -119, 3, 64, false, 256, 0.4000000059604645f, 4, 8, 4);
+            int[][] var16 = hh.a((byte) -88, 3, 64, false, 256, 0.4000000059604645f, 4, 0, 4);
+            int[][] var12 = var16;
+            int[][] var11 = var12;
+            int[][] var3 = var11;
+            int[][] var23 = hh.a((byte) -119, 3, 64, false, 256, 0.4000000059604645f, 4, 8, 4);
             this.field_k = new float[32768];
-            var5 = 0;
-            for (var6 = 0; var6 < 256; var6++) {
-              var24 = var16[var6];
-              var25 = var23[var6];
-              for (var9 = 0; var9 < 64; var9++) {
-                incrementValue$0 = var5;
+            int var5 = 0;
+            for (int var6 = 0; var6 < 256; var6++) {
+              int[] var24 = var16[var6];
+              int[] var25 = var23[var6];
+              for (int var9 = 0; var9 < 64; var9++) {
+                int incrementValue$0 = var5;
                 var5++;
                 this.field_k[incrementValue$0] = (float)var24[var9] / 4096.0f;
-                incrementValue$1 = var5;
+                int incrementValue$1 = var5;
                 var5++;
                 this.field_k[incrementValue$1] = (float)var25[var9] / 4096.0f;
               }
@@ -224,16 +201,16 @@ final class bk extends hh {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("bk.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var3_ref;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("bk.<init>(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -250,8 +227,6 @@ final class bk extends hh {
     }
 
     final void a(boolean param0, boolean param1) {
-        int var3 = 0;
-        int var4 = 0;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_l) {
           return;
@@ -264,8 +239,8 @@ final class bk extends hh {
         this.field_a.a(false, 0);
         if (this.field_a.field_hb == this.field_j) {
         } else {
-          var3 = this.field_a.field_hb % 5000 * 128 / 5000;
-          for (var4 = 0; 64 > var4; var4++) {
+          int var3 = this.field_a.field_hb % 5000 * 128 / 5000;
+          for (int var4 = 0; 64 > var4; var4++) {
             jaggl.OpenGL.glProgramLocalParameter4fvARB(34336, var4, this.field_k, var3);
             var3 += 2;
           }
@@ -284,7 +259,6 @@ final class bk extends hh {
     }
 
     private final void a(boolean param0) {
-        rt var3 = null;
         this.field_l = new si(this.field_a, 2);
         this.field_l.a((byte) 111, 0);
         this.field_a.a(!param0 ? true : false, 1);
@@ -305,7 +279,7 @@ final class bk extends hh {
         this.field_a.a(false, 0);
         jaggl.OpenGL.glBindProgramARB(34336, 0);
         if (!param0) {
-          var3 = (rt) null;
+          rt var3 = (rt) null;
           this.a(114, 52, (rt) null);
         } else {
           jaggl.OpenGL.glDisable(34336);

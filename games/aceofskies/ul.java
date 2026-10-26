@@ -7,18 +7,11 @@ final class ul extends sl {
     static String field_t;
 
     final static boolean a(String param0, byte param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          for (var2_int = 0; var2_int < param0.length(); var2_int++) {
-            var3 = param0.charAt(var2_int);
+          for (int var2_int = 0; var2_int < param0.length(); var2_int++) {
+            int var3 = param0.charAt(var2_int);
             if (!IndexedSpriteState.a((char) var3, 63) &&
               !oj.a((char) var3, (byte) -15)) {
               return true;
@@ -29,10 +22,10 @@ final class ul extends sl {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_15_0 = var2;
-          stackIn_15_1 = new StringBuilder().append("ul.O(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var2;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ul.O(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -43,22 +36,16 @@ final class ul extends sl {
     }
 
     final String d(ea param0, int param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = -91 / ((3 - param1) / 35);
-          stackIn_1_0 = pt.a((byte) -126, param0.field_f.length(), '*');
+          int var3_int = -91 / ((3 - param1) / 35);
+          String stackIn_1_0 = pt.a((byte) -126, param0.field_f.length(), '*');
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("ul.AA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var3;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("ul.AA(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {

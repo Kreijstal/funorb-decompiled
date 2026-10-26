@@ -15,17 +15,10 @@ final class dk implements Runnable {
     private Thread field_c;
 
     final os a(byte[] param0, bl param1, boolean param2, int param3) {
-        os var5 = null;
-        RuntimeException var5_ref = null;
-        os stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new os();
+          os var5 = new os();
           var5.secondaryKey = (long)param3;
           var5.field_u = param0;
           var5.field_v = 2;
@@ -35,19 +28,19 @@ final class dk implements Runnable {
             dk.a(-85);
           }
           this.a((byte) -88, var5);
-          stackIn_3_0 = var5;
+          os stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_6_0 = var5_ref;
-          stackIn_6_1 = new StringBuilder().append("dk.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var5_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("dk.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -58,34 +51,24 @@ final class dk implements Runnable {
     }
 
     final os a(bl param0, byte param1, int param2) {
-        os var4 = null;
-        RuntimeException var4_ref = null;
-        Object var5 = null;
-        os var6 = null;
-        int var8 = 0;
-        os stackIn_11_0 = null;
-        os stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        Throwable decompiledCaughtException = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 <= 53) {
             this.field_j = false;
           }
-          var4 = new os();
+          os var4 = new os();
           var4.field_v = 1;
-          var5 = this.field_f;
+          Object var5 = this.field_f;
           synchronized (var5) {
-            var6 = (os) (this.field_f.b((byte) 52));
+            os var6 = (os) (this.field_f.b((byte) 52));
             while (var6 != null) {
               if (var6.secondaryKey == (long)param2 &&
                 param0 == var6.field_x &&
                 var6.field_v == 2) {
                 var4.field_p = false;
                 var4.field_u = var6.field_u;
-                stackIn_11_0 = var4;
+                os stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
               var6 = (os) (this.field_f.e(31542));
@@ -94,13 +77,13 @@ final class dk implements Runnable {
           var4.field_u = param0.a(param2, 255);
           var4.field_q = true;
           var4.field_p = false;
-          stackIn_18_0 = var4;
+          os stackIn_18_0 = var4;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_21_0 = var4_ref;
-          stackIn_21_1 = new StringBuilder().append("dk.C(");
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var4_ref;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("dk.C(");
           if (param0 == null) {
             stackIn_22_2 = "null";
           } else {
@@ -133,18 +116,13 @@ final class dk implements Runnable {
 
     public final void run() {
         try {
-          InterruptedException interruptedException = null;
-          Object var2 = null;
-          int var5 = 0;
           os var7 = null;
           int decompiledRegionSelector0 = 0;
           int decompiledRegionSelector1 = 0;
           Throwable decompiledCaughtException = null;
-          Exception var2_ref = null;
-          String var6 = null;
-          var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+          int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
           while (!this.field_j) {
-            var2 = this.field_f;
+            Object var2 = this.field_f;
             synchronized (var2) {
               var7 = (os) (this.field_f.b(-18520));
               if (var7 == null) {
@@ -152,7 +130,7 @@ final class dk implements Runnable {
                   this.field_f.wait();
                 } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                  InterruptedException interruptedException = (InterruptedException) (Object) decompiledCaughtException;
                 }
                 decompiledRegionSelector0 = 0;
               } else {
@@ -183,8 +161,8 @@ final class dk implements Runnable {
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
-              var6 = (String) null;
+              Exception var2_ref = (Exception) (Object) decompiledCaughtException;
+              String var6 = (String) null;
               v.a((String) null, (byte) -52, (Throwable) ((Object) var2_ref));
               decompiledRegionSelector1 = 1;
             }
@@ -230,18 +208,11 @@ final class dk implements Runnable {
     }
 
     final os a(byte param0, bl param1, int param2) {
-        os var4 = null;
-        RuntimeException var4_ref = null;
-        bl var5 = null;
-        os stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new os();
+          os var4 = new os();
           if (param0 != 95) {
-            var5 = (bl) null;
+            bl var5 = (bl) null;
             this.a((byte) -41, (bl) null, 82);
           }
           var4.field_v = 3;
@@ -249,13 +220,13 @@ final class dk implements Runnable {
           var4.secondaryKey = (long)param2;
           var4.field_x = param1;
           this.a((byte) -76, var4);
-          stackIn_3_0 = var4;
+          os stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_6_0 = var4_ref;
-          stackIn_6_1 = new StringBuilder().append("dk.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var4_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("dk.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -266,12 +237,11 @@ final class dk implements Runnable {
     }
 
     dk(rk param0) {
-        en var2 = null;
         this.field_f = new er();
         this.field_j = false;
         this.field_d = 0;
         try {
-          var2 = param0.a(5, 1048576, (Runnable) (this));
+          en var2 = param0.a(5, 1048576, (Runnable) (this));
           while (var2.field_a == 0) {
             IntrusiveNode.a(10L, false);
           }
@@ -287,10 +257,7 @@ final class dk implements Runnable {
     private final void a(byte param0, os param1) {
         Object var3 = null;
         Throwable var4 = null;
-        Object stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        Throwable decompiledCaughtException = null;
         try {
           var3 = this.field_f;
           synchronized (var3) {
@@ -303,10 +270,10 @@ final class dk implements Runnable {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
           var3 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("dk.E(").append(param0).append(',');
+          Object stackIn_11_0 = var3;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("dk.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
           } else {

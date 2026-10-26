@@ -16,30 +16,23 @@ abstract class GraphicsRenderer {
     abstract void e();
 
     private final static GraphicsRenderer a(java.awt.Canvas param0, int param1, d param2, int param3, byte param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        oa stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = -65 % ((4 - param4) / 50);
-          stackIn_1_0 = new oa(param0, param2, param3, param1);
+          int var5_int = -65 % ((4 - param4) / 50);
+          oa stackIn_1_0 = new oa(param0, param2, param3, param1);
           return (GraphicsRenderer) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_4_0 = var5;
-          stackIn_4_1 = new StringBuilder().append("ha.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var5;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("ha.D(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -63,59 +56,48 @@ abstract class GraphicsRenderer {
     abstract void f(int param0, int param1);
 
     final synchronized static GraphicsRenderer a(int param0, ResourceArchive param1, int param2, java.awt.Canvas param3, int param4, int param5, int param6, d param7) {
-        RuntimeException var8 = null;
-        GraphicsRenderer stackIn_2_0 = null;
-        GraphicsRenderer stackIn_6_0 = null;
-        GraphicsRenderer stackIn_9_0 = null;
-        GraphicsRenderer stackIn_12_0 = null;
-        GraphicsRenderer stackIn_15_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 0) {
-            stackIn_2_0 = to.a(16, param7, param3, param6, param0);
+            GraphicsRenderer stackIn_2_0 = to.a(16, param7, param3, param6, param0);
             return stackIn_2_0;
           }
           if (2 == param2) {
-            stackIn_6_0 = GraphicsRenderer.a(param3, param6, param7, param0, (byte) -64);
+            GraphicsRenderer stackIn_6_0 = GraphicsRenderer.a(param3, param6, param7, param0, (byte) -64);
             return stackIn_6_0;
           }
           if (param2 == 1) {
-            stackIn_9_0 = lh.a(param3, (byte) 66, param4, param7);
+            GraphicsRenderer stackIn_9_0 = lh.a(param3, (byte) 66, param4, param7);
             return stackIn_9_0;
           }
           if (param2 == param5) {
-            stackIn_12_0 = gt.a(-70, param7, param3, param1, param4);
+            GraphicsRenderer stackIn_12_0 = gt.a(-70, param7, param3, param1, param4);
             return stackIn_12_0;
           }
           if (param2 != 3) {
             throw new IllegalArgumentException("UM");
           }
-          stackIn_15_0 = mn.a((byte) 1, param4, param3, param1, param7);
+          GraphicsRenderer stackIn_15_0 = mn.a((byte) 1, param4, param3, param1, param7);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_19_0 = var8;
-          stackIn_19_1 = new StringBuilder().append("ha.N(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var8;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("ha.N(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',');
+          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+          StringBuilder stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
           if (param7 == null) {
             stackIn_26_2 = "null";
           } else {
@@ -162,22 +144,16 @@ abstract class GraphicsRenderer {
     }
 
     final RenderSprite a(int param0, int param1, int[] param2, int param3, int param4, int param5) {
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        RenderSprite stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var7_int = -44 % ((param0 - 43) / 53);
-          stackIn_1_0 = this.a(param2, param3, param5, param4, param1, true);
+          int var7_int = -44 % ((param0 - 43) / 53);
+          RenderSprite stackIn_1_0 = this.a(param2, param3, param5, param4, param1, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_4_0 = var7;
-          stackIn_4_1 = new StringBuilder().append("ha.M(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var7;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("ha.M(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -203,20 +179,14 @@ abstract class GraphicsRenderer {
     abstract void T(int param0, int param1, int param2, int param3);
 
     final static void a(MusicTrack param0, byte param1, boolean param2, int param3) {
-        int var4_int = 0;
-        Object var5 = null;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        Throwable decompiledCaughtException = null;
-        RuntimeException var4 = null;
         try {
-          var4_int = -3 / ((param1 - 13) / 46);
+          int var4_int = -3 / ((param1 - 13) / 46);
           if (null != DualLinkNode.field_e) {
             dh.a(1000000, param3, param2, 1048576, param0);
           }
           if (mg.field_d != null) {
-            var5 = um.field_m;
+            Object var5 = um.field_m;
             synchronized (var5) {
               mg.field_d.a((byte) -116, param3, -1);
               if (param0 == dt.field_c) {
@@ -232,10 +202,10 @@ abstract class GraphicsRenderer {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("ha.PA(");
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var4;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("ha.PA(");
           if (param0 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -288,12 +258,10 @@ abstract class GraphicsRenderer {
     }
 
     GraphicsRenderer(d param0) {
-        int var2_int = 0;
-        int var3 = 0;
         try {
           this.field_a = param0;
-          var2_int = -1;
-          for (var3 = 0; var3 < 8; var3++) {
+          int var2_int = -1;
+          for (int var3 = 0; var3 < 8; var3++) {
             if (!vj.field_f[var3]) {
               var2_int = var3;
               vj.field_f[var3] = true;

@@ -54,13 +54,8 @@ final class el extends nr {
 
     el(wl param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
-        RuntimeException var9 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_o = param3;
           this.field_q = param2;
@@ -73,16 +68,16 @@ final class el extends nr {
           this.field_p = (float)param3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var9 = decompiledCaughtException;
-          stackIn_7_0 = var9;
-          stackIn_7_1 = new StringBuilder().append("el.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var9 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var9;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("el.<init>(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_11_2 = "null";
           } else {

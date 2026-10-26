@@ -34,34 +34,21 @@ abstract class aa {
     }
 
     final static boolean a(boolean param0, int param1, CharSequence param2, byte param3) {
-        int var8 = 0;
-        int stackIn_40_0 = 0;
-        RuntimeException stackIn_43_0 = null;
-        StringBuilder stackIn_43_1 = null;
         String stackIn_44_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (2 <= param1 &&
             param1 <= 36) {
-            var4_int = 0;
-            var5 = 0;
+            int var4_int = 0;
+            int var5 = 0;
             if (param3 != -43) {
               field_c = (int[]) null;
             }
-            var6 = 0;
-            var7 = param2.length();
-            for (var8 = 0; var7 > var8; var8++) {
+            int var6 = 0;
+            int var7 = param2.length();
+            for (int var8 = 0; var7 > var8; var8++) {
               boolean decompiledFrameRemainder0 = true;
-              var9 = param2.charAt(var8);
+              int var9 = param2.charAt(var8);
               if ((var8 == 0) &&
                 (var9 == 45)) {
                 var4_int = 1;
@@ -90,7 +77,7 @@ abstract class aa {
                 if (var4_int != 0) {
                   var9 = -var9;
                 }
-                var10 = param1 * var6 + var9;
+                int var10 = param1 * var6 + var9;
                 if (var6 != var10 / param1) {
                   return false;
                 }
@@ -98,15 +85,15 @@ abstract class aa {
                 var6 = var10;
               }
             }
-            stackIn_40_0 = var5;
+            int stackIn_40_0 = var5;
             return stackIn_40_0 != 0;
           }
           throw new IllegalArgumentException("" + param1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_43_0 = var4;
-          stackIn_43_1 = new StringBuilder().append("aa.E(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_43_0 = var4;
+          StringBuilder stackIn_43_1 = new StringBuilder().append("aa.E(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_44_2 = "null";
           } else {

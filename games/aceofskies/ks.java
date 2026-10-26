@@ -16,14 +16,10 @@ final class ks {
     }
 
     final static ej a(int param0, int param1) {
-        int var3 = 0;
-        ej[] var2;
-        int var4;
-        ej[] var5;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var5 = sf.d((byte) 112);
-        var2 = var5;
-        for (var3 = 0; var5.length > var3; var3++) {
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        ej[] var5 = sf.d((byte) 112);
+        ej[] var2 = var5;
+        for (int var3 = 0; var5.length > var3; var3++) {
           if (~var5[var3].field_d == ~param0) {
             return var5[var3];
           }

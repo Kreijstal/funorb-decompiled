@@ -8,47 +8,39 @@ abstract class RendererBitmapFont {
     static tk field_a;
 
     final int drawParagraph(int maskY, int left, int textColor, boolean obfuscationGuard, int shadowColor, int horizontalAlignment, int top, int lineSpacing, int maskX, RenderSprite[] inlineImages, aa mask, int verticalAlignment, int[] inlineImageBaselineOffsets, int width, int height, String text) {
-        RuntimeException var17 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!obfuscationGuard) {
             this.renderer = (GraphicsRenderer) null;
           }
-          stackIn_3_0 = this.drawParagraphInternal(height, shadowColor, 0, mask, verticalAlignment, textColor, text, width, horizontalAlignment, top, maskY, lineSpacing, inlineImages, -2, inlineImageBaselineOffsets, left, maskX);
+          int stackIn_3_0 = this.drawParagraphInternal(height, shadowColor, 0, mask, verticalAlignment, textColor, text, width, horizontalAlignment, top, maskY, lineSpacing, inlineImages, -2, inlineImageBaselineOffsets, left, maskX);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var17 = decompiledCaughtException;
-          stackIn_6_0 = var17;
-          stackIn_6_1 = new StringBuilder().append("da.I(").append(maskY).append(',').append(left).append(',').append(textColor).append(',').append(obfuscationGuard).append(',').append(shadowColor).append(',').append(horizontalAlignment).append(',').append(top).append(',').append(lineSpacing).append(',').append(maskX).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var17 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var17;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("da.I(").append(maskY).append(',').append(left).append(',').append(textColor).append(',').append(obfuscationGuard).append(',').append(shadowColor).append(',').append(horizontalAlignment).append(',').append(top).append(',').append(lineSpacing).append(',').append(maskX).append(',');
           if (inlineImages == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (mask == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(verticalAlignment).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(verticalAlignment).append(',');
           if (inlineImageBaselineOffsets == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(width).append(',').append(height).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(width).append(',').append(height).append(',');
           if (text == null) {
             stackIn_16_2 = "null";
           } else {
@@ -73,20 +65,9 @@ abstract class RendererBitmapFont {
     }
 
     private final void applyStyleTag(String tag, int obfuscationGuard) {
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
         Throwable decompiledCaughtException = null;
-        Exception var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        int[] var5 = null;
-        CharSequence var6 = null;
-        CharSequence var7 = null;
-        CharSequence var8 = null;
-        CharSequence var9 = null;
-        CharSequence var10 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
             if (!tag.startsWith("col=")) {
@@ -94,22 +75,22 @@ abstract class RendererBitmapFont {
                 qg.rendererCurrentTextColor = tf.rendererDefaultTextColor & 16777215 | qg.rendererCurrentTextColor & -16777216;
               }
             } else {
-              var6 = (CharSequence) ((Object) tag.substring(4));
+              CharSequence var6 = (CharSequence) ((Object) tag.substring(4));
               qg.rendererCurrentTextColor = -16777216 & qg.rendererCurrentTextColor | 16777215 & np.a(var6, 4, 16);
             }
             if (obfuscationGuard != -16777216) {
-              var5 = (int[]) null;
+              int[] var5 = (int[]) null;
               this.drawTextWithImages(119, 96, (RenderSprite[]) null, 57, -108, (String) null, -122, (int[]) null);
             }
             if (tag.startsWith("argb=")) {
-              var10 = (CharSequence) ((Object) tag.substring(5));
+              CharSequence var10 = (CharSequence) ((Object) tag.substring(5));
               qg.rendererCurrentTextColor = np.a(var10, 4, 16);
             } else {
               if (tag.equals("/argb")) {
                 qg.rendererCurrentTextColor = tf.rendererDefaultTextColor;
               } else {
                 if (tag.startsWith("str=")) {
-                  var9 = (CharSequence) ((Object) tag.substring(4));
+                  CharSequence var9 = (CharSequence) ((Object) tag.substring(4));
                   rs.rendererStrikethroughColor = qg.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
                 } else {
                   if (tag.equals("str")) {
@@ -119,7 +100,7 @@ abstract class RendererBitmapFont {
                       rs.rendererStrikethroughColor = -1;
                     } else {
                       if (tag.startsWith("u=")) {
-                        var8 = (CharSequence) ((Object) tag.substring(2));
+                        CharSequence var8 = (CharSequence) ((Object) tag.substring(2));
                         PacketBuffer.rendererUnderlineColor = qg.rendererCurrentTextColor & -16777216 | np.a(var8, obfuscationGuard ^ -16777212, 16);
                       } else {
                         if (tag.equals("u")) {
@@ -130,7 +111,7 @@ abstract class RendererBitmapFont {
                           } else {
                             if (!tag.equalsIgnoreCase("shad=-1")) {
                               if (tag.startsWith("shad=")) {
-                                var7 = (CharSequence) ((Object) tag.substring(5));
+                                CharSequence var7 = (CharSequence) ((Object) tag.substring(5));
                                 es.rendererCurrentShadowColor = qg.rendererCurrentTextColor & -16777216 | np.a(var7, 4, 16);
                               } else {
                                 if (!tag.equals("shad")) {
@@ -158,14 +139,14 @@ abstract class RendererBitmapFont {
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (Exception) (Object) decompiledCaughtException;
+            Exception var3 = (Exception) (Object) decompiledCaughtException;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_38_0 = var3_ref;
-          stackIn_38_1 = new StringBuilder().append("da.P(");
+          RuntimeException var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_38_0 = var3_ref;
+          StringBuilder stackIn_38_1 = new StringBuilder().append("da.P(");
           if (tag == null) {
             stackIn_39_2 = "null";
           } else {
@@ -206,29 +187,16 @@ abstract class RendererBitmapFont {
     }
 
     private final int drawParagraphInternal(int height, int shadowColor, int maximumLines, aa mask, int verticalAlignment, int textColor, String text, int width, int horizontalAlignment, int top, int maskY, int lineSpacing, RenderSprite[] inlineImages, int obfuscationGuard, int[] inlineImageBaselineOffsets, int left, int maskX) {
-        int stackIn_4_0 = 0;
-        int stackIn_46_0 = 0;
-        Object stackIn_49_0 = null;
-        StringBuilder stackIn_49_1 = null;
         String stackIn_50_2 = null;
-        StringBuilder stackIn_52_1 = null;
         String stackIn_53_2 = null;
-        StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
-        StringBuilder stackIn_58_1 = null;
         String stackIn_59_2 = null;
-        RuntimeException decompiledCaughtException = null;
         Object var18 = null;
-        int var19 = 0;
-        int var20 = 0;
         int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var22Lifetime1;
-        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (text == null) {
-            stackIn_4_0 = 0;
+            int stackIn_4_0 = 0;
             return stackIn_4_0;
           }
           this.resetTextStyle(shadowColor, -1, textColor);
@@ -241,14 +209,14 @@ abstract class RendererBitmapFont {
           } else {
             var18 = new int[]{width};
           }
-          var20 = 109 / ((obfuscationGuard - 48) / 39);
+          int var20 = 109 / ((obfuscationGuard - 48) / 39);
           if (-1 == maximumLines) {
             maximumLines = height / lineSpacing;
             if (0 >= maximumLines) {
               maximumLines = 1;
             }
           }
-          var19 = this.metrics.wrapText(-121, inlineImages, (int[]) (var18), vi.field_p, text);
+          int var19 = this.metrics.wrapText(-121, inlineImages, (int[]) (var18), vi.field_p, text);
           if (0 < maximumLines &&
             var19 >= maximumLines) {
             var19 = maximumLines;
@@ -267,7 +235,7 @@ abstract class RendererBitmapFont {
               if (verticalAlignment == 2) {
                 var21 = -((-1 + var19) * lineSpacing) - this.metrics.maxDescent + (height + top);
               } else {
-                var22 = (-this.metrics.maxDescent - this.metrics.maxAscent + height - (var19 - 1) * lineSpacing) / (var19 + 1);
+                int var22 = (-this.metrics.maxDescent - this.metrics.maxAscent + height - (var19 - 1) * lineSpacing) / (var19 + 1);
                 if (0 > var22) {
                   var22 = 0;
                 }
@@ -276,7 +244,7 @@ abstract class RendererBitmapFont {
               }
             }
           }
-          for (var22Lifetime1 = 0; var22Lifetime1 < var19; var22Lifetime1++) {
+          for (int var22Lifetime1 = 0; var22Lifetime1 < var19; var22Lifetime1++) {
             if (horizontalAlignment == 0) {
               this.drawStyledText(maskX, inlineImages, left, vi.field_p[var22Lifetime1], (byte) 5, inlineImageBaselineOffsets, var21, mask, maskY);
             } else {
@@ -298,31 +266,31 @@ abstract class RendererBitmapFont {
             }
             var21 = var21 + lineSpacing;
           }
-          stackIn_46_0 = var19;
+          int stackIn_46_0 = var19;
           return stackIn_46_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           var18 = decompiledCaughtException;
-          stackIn_49_0 = var18;
-          stackIn_49_1 = new StringBuilder().append("da.T(").append(height).append(',').append(shadowColor).append(',').append(maximumLines).append(',');
+          Object stackIn_49_0 = var18;
+          StringBuilder stackIn_49_1 = new StringBuilder().append("da.T(").append(height).append(',').append(shadowColor).append(',').append(maximumLines).append(',');
           if (mask == null) {
             stackIn_50_2 = "null";
           } else {
             stackIn_50_2 = "{...}";
           }
-          stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(verticalAlignment).append(',').append(textColor).append(',');
+          StringBuilder stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(verticalAlignment).append(',').append(textColor).append(',');
           if (text == null) {
             stackIn_53_2 = "null";
           } else {
             stackIn_53_2 = "{...}";
           }
-          stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(width).append(',').append(horizontalAlignment).append(',').append(top).append(',').append(maskY).append(',').append(lineSpacing).append(',');
+          StringBuilder stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(width).append(',').append(horizontalAlignment).append(',').append(top).append(',').append(maskY).append(',').append(lineSpacing).append(',');
           if (inlineImages == null) {
             stackIn_56_2 = "null";
           } else {
             stackIn_56_2 = "{...}";
           }
-          stackIn_58_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(obfuscationGuard).append(',');
+          StringBuilder stackIn_58_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(obfuscationGuard).append(',');
           if (inlineImageBaselineOffsets == null) {
             stackIn_59_2 = "null";
           } else {
@@ -366,49 +334,29 @@ abstract class RendererBitmapFont {
     }
 
     private final void drawStyledText(int maskX, RenderSprite[] inlineImages, int penX, String text, byte obfuscationGuard, int[] inlineImageBaselineOffsets, int baselineY, aa mask, int maskY) {
-        int var13 = 0;
         int stackIn_26_0 = 0;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
         String stackIn_65_2 = null;
-        StringBuilder stackIn_67_1 = null;
         String stackIn_68_2 = null;
-        StringBuilder stackIn_70_1 = null;
         String stackIn_71_2 = null;
-        StringBuilder stackIn_73_1 = null;
         String stackIn_74_2 = null;
         Throwable decompiledCaughtException = null;
-        int var10_int = 0;
-        RuntimeException var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var14 = 0;
-        String var15_ref_String = null;
-        int var15 = 0;
-        int var16_int = 0;
-        Exception var16 = null;
-        RenderSprite var17 = null;
-        int var18 = 0;
-        int var19 = 0;
         Object var20 = null;
-        CharSequence var21 = null;
-        var20 = null;
-        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           baselineY = baselineY - this.metrics.lineAdvance;
           if (obfuscationGuard != 5) {
             this.renderer = (GraphicsRenderer) null;
           }
-          var10_int = -1;
-          var11 = -1;
-          var12 = text.length();
-          for (var13 = 0; var13 < var12; var13++) {
+          int var10_int = -1;
+          int var11 = -1;
+          int var12 = text.length();
+          for (int var13 = 0; var13 < var12; var13++) {
             boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(255 & ae.a(text.charAt(var13), 56));
+            int var14 = (char)(255 & ae.a(text.charAt(var13), 56));
             if (var14 != 60) {
               if (var14 == 62 &&
                 -1 != var10_int) {
-                var15_ref_String = text.substring(var10_int + 1, var13);
+                String var15_ref_String = text.substring(var10_int + 1, var13);
                 var10_int = -1;
                 if (var15_ref_String.equals("lt")) {
                   var14 = 60;
@@ -430,15 +378,15 @@ abstract class RendererBitmapFont {
                                   this.applyStyleTag(var15_ref_String, -16777216);
                                 } else {
                                   try {
-                                    var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
-                                    var16_int = td.a(var21, (byte) 38);
-                                    var17 = inlineImages[var16_int];
+                                    CharSequence var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
+                                    int var16_int = td.a(var21, (byte) 38);
+                                    RenderSprite var17 = inlineImages[var16_int];
                                     if (inlineImageBaselineOffsets != null) {
                                       stackIn_26_0 = inlineImageBaselineOffsets[var16_int];
                                     } else {
                                       stackIn_26_0 = var17.c();
                                     }
-                                    var18 = stackIn_26_0;
+                                    int var18 = stackIn_26_0;
                                     if ((qg.rendererCurrentTextColor & -16777216) != -16777216) {
                                       var17.a(penX, baselineY + this.metrics.lineAdvance - var18, 0, qg.rendererCurrentTextColor & -16777216 | 16777215, 1);
                                     } else {
@@ -448,7 +396,7 @@ abstract class RendererBitmapFont {
                                     var11 = -1;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
-                                    var16 = (Exception) (Object) decompiledCaughtException;
+                                    Exception var16 = (Exception) (Object) decompiledCaughtException;
                                   }
                                 }
                                 decompiledFrameRemainder0 = false;
@@ -494,7 +442,7 @@ abstract class RendererBitmapFont {
                     this.drawGlyphWithMask((char) var14, penX, baselineY, qg.rendererCurrentTextColor, false, mask, maskX, maskY);
                   }
                 }
-                var15 = this.metrics.measureCharacterAdvance((byte) 109, var14);
+                int var15 = this.metrics.measureCharacterAdvance((byte) 109, var14);
                 if (rs.rendererStrikethroughColor != -1) {
                   this.renderer.a(baselineY + (int)(0.7 * (double)this.metrics.lineAdvance), rs.rendererStrikethroughColor, 28321, penX, var15);
                 }
@@ -511,27 +459,27 @@ abstract class RendererBitmapFont {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var10 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_64_0 = var10;
-          stackIn_64_1 = new StringBuilder().append("da.G(").append(maskX).append(',');
+          RuntimeException var10 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_64_0 = var10;
+          StringBuilder stackIn_64_1 = new StringBuilder().append("da.G(").append(maskX).append(',');
           if (inlineImages == null) {
             stackIn_65_2 = "null";
           } else {
             stackIn_65_2 = "{...}";
           }
-          stackIn_67_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(penX).append(',');
+          StringBuilder stackIn_67_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(penX).append(',');
           if (text == null) {
             stackIn_68_2 = "null";
           } else {
             stackIn_68_2 = "{...}";
           }
-          stackIn_70_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(obfuscationGuard).append(',');
+          StringBuilder stackIn_70_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(obfuscationGuard).append(',');
           if (inlineImageBaselineOffsets == null) {
             stackIn_71_2 = "null";
           } else {
             stackIn_71_2 = "{...}";
           }
-          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(baselineY).append(',');
+          StringBuilder stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(baselineY).append(',');
           if (mask == null) {
             stackIn_74_2 = "null";
           } else {
@@ -542,25 +490,16 @@ abstract class RendererBitmapFont {
     }
 
     private final void prepareJustification(int targetWidth, byte obfuscationGuard, String text) {
-        int var6 = 0;
-        int var4_int = 0;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var4_int = 0;
-          var5 = 0;
+          int var4_int = 0;
+          int var5 = 0;
           if (obfuscationGuard <= 98) {
             return;
           }
-          for (var6 = 0; text.length() > var6; var6++) {
-            var7 = text.charAt(var6);
+          for (int var6 = 0; text.length() > var6; var6++) {
+            int var7 = text.charAt(var6);
             if (var7 != 60) {
               if (var7 != 62) {
                 if (var5 == 0 &&
@@ -579,10 +518,10 @@ abstract class RendererBitmapFont {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("da.N(").append(targetWidth).append(',').append(obfuscationGuard).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var4;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("da.N(").append(targetWidth).append(',').append(obfuscationGuard).append(',');
           if (text == null) {
             stackIn_19_2 = "null";
           } else {

@@ -10,14 +10,10 @@ final class tu extends RendererBitmapFont {
     private byte[][] field_h;
 
     private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var11 = 0;
-        int var10;
-        int var12;
-        int var12Lifetime1;
-        var10 = -(param5 >> 2);
+        int var10 = -(param5 >> 2);
         param5 = -(param5 & 3);
-        for (var11 = -param6; var11 < 0; var11++) {
-          for (var12 = var10; var12 < 0; var12++) {
+        for (int var11 = -param6; var11 < 0; var11++) {
+          for (int var12 = var10; var12 < 0; var12++) {
             if (param0[param3++] == 0) {
               param4++;
             } else {
@@ -39,7 +35,7 @@ final class tu extends RendererBitmapFont {
               param1[param4++] = param2;
             }
           }
-          for (var12Lifetime1 = param5; var12Lifetime1 < 0; var12Lifetime1++) {
+          for (int var12Lifetime1 = param5; var12Lifetime1 < 0; var12Lifetime1++) {
             if (param0[param3++] == 0) {
               param4++;
             } else {
@@ -52,9 +48,6 @@ final class tu extends RendererBitmapFont {
     }
 
     final void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass) {
-        int var13 = 0;
-        int var13Lifetime1;
-        int var13Lifetime2;
         x = x + this.field_g[glyph];
         y = y + this.field_j[glyph];
         int var6 = this.field_i[glyph];
@@ -65,7 +58,7 @@ final class tu extends RendererBitmapFont {
         int var11 = 0;
         int var12 = 0;
         if (y < this.field_f.field_w) {
-          var13 = this.field_f.field_w - y;
+          int var13 = this.field_f.field_w - y;
           var7 = var7 - var13;
           y = this.field_f.field_w;
           var12 = var12 + var13 * var6;
@@ -75,7 +68,7 @@ final class tu extends RendererBitmapFont {
           var7 = var7 - (y + var7 - this.field_f.field_D);
         }
         if (x < this.field_f.field_z) {
-          var13Lifetime1 = this.field_f.field_z - x;
+          int var13Lifetime1 = this.field_f.field_z - x;
           var6 = var6 - var13Lifetime1;
           x = this.field_f.field_z;
           var12 = var12 + var13Lifetime1;
@@ -84,7 +77,7 @@ final class tu extends RendererBitmapFont {
           var10 = var10 + var13Lifetime1;
         }
         if (x + var6 > this.field_f.field_k) {
-          var13Lifetime2 = x + var6 - this.field_f.field_k;
+          int var13Lifetime2 = x + var6 - this.field_f.field_k;
           var6 = var6 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -103,9 +96,6 @@ final class tu extends RendererBitmapFont {
     }
 
     final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
-        int var16 = 0;
-        int var16Lifetime1;
-        int var16Lifetime2;
         if (mask == null) {
           this.drawGlyph(glyph, x, y, color, shadowPass);
           return;
@@ -120,7 +110,7 @@ final class tu extends RendererBitmapFont {
         int var14 = 0;
         int var15 = 0;
         if (y < this.field_f.field_w) {
-          var16 = this.field_f.field_w - y;
+          int var16 = this.field_f.field_w - y;
           var10 = var10 - var16;
           y = this.field_f.field_w;
           var15 = var15 + var16 * var9;
@@ -130,7 +120,7 @@ final class tu extends RendererBitmapFont {
           var10 = var10 - (y + var10 - this.field_f.field_D);
         }
         if (x < this.field_f.field_z) {
-          var16Lifetime1 = this.field_f.field_z - x;
+          int var16Lifetime1 = this.field_f.field_z - x;
           var9 = var9 - var16Lifetime1;
           x = this.field_f.field_z;
           var15 = var15 + var16Lifetime1;
@@ -139,7 +129,7 @@ final class tu extends RendererBitmapFont {
           var13 = var13 + var16Lifetime1;
         }
         if (x + var9 > this.field_f.field_k) {
-          var16Lifetime2 = x + var9 - this.field_f.field_k;
+          int var16Lifetime2 = x + var9 - this.field_f.field_k;
           var9 = var9 - var16Lifetime2;
           var14 = var14 + var16Lifetime2;
           var13 = var13 + var16Lifetime2;
@@ -156,36 +146,16 @@ final class tu extends RendererBitmapFont {
     }
 
     private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
-        int var24 = 0;
-        int var29 = 0;
-        int incrementValue$1 = 0;
         int stackIn_5_0 = 0;
-        Object var16;
-        nj var16_ref;
-        int[] var17;
-        int[] var18;
-        int var19;
-        int var20;
-        int var21;
-        int var22;
-        int var23;
-        int var25;
-        int var26;
-        int var27;
         int var28;
-        int var30;
-        int var31;
-        int[] var32;
-        int[] var33;
-        int var28Lifetime1;
-        var16 = null;
-        var16_ref = (nj) (param12);
-        var33 = var16_ref.field_h;
-        var32 = var33;
-        var17 = var32;
-        var18 = var16_ref.field_g;
-        var19 = param9 - this.field_f.field_z;
-        var20 = param10;
+        Object var16 = null;
+        nj var16_ref = (nj) (param12);
+        int[] var33 = var16_ref.field_h;
+        int[] var32 = var33;
+        int[] var17 = var32;
+        int[] var18 = var16_ref.field_g;
+        int var19 = param9 - this.field_f.field_z;
+        int var20 = param10;
         if (param14 > var20) {
           var20 = param14;
           param4 = param4 + (param14 - param10) * this.field_f.field_f;
@@ -196,14 +166,14 @@ final class tu extends RendererBitmapFont {
         } else {
           stackIn_5_0 = param14 + var33.length;
         }
-        var21 = stackIn_5_0;
-        var22 = param2 >>> 24;
-        var23 = 255 - var22;
-        for (var24 = var20; var24 < var21; var24++) {
+        int var21 = stackIn_5_0;
+        int var22 = param2 >>> 24;
+        int var23 = 255 - var22;
+        for (int var24 = var20; var24 < var21; var24++) {
           boolean decompiledFrameRemainder0 = true;
-          var25 = var17[var24 - param14] + param13;
-          var26 = var18[var24 - param14];
-          var27 = param5;
+          int var25 = var17[var24 - param14] + param13;
+          int var26 = var18[var24 - param14];
+          int var27 = param5;
           if (var19 <= var25) {
             var28 = var25 - var19;
             if (var28 >= param5) {
@@ -228,19 +198,19 @@ final class tu extends RendererBitmapFont {
             }
           }
           if (decompiledFrameRemainder0) {
-            var28Lifetime1 = 0;
+            int var28Lifetime1 = 0;
             if (var27 >= var26) {
               var28Lifetime1 = var27 - var26;
             } else {
               var26 = var27;
             }
-            for (var29 = -var26; var29 < 0; var29++) {
+            for (int var29 = -var26; var29 < 0; var29++) {
               if (param0[param3++] == 0) {
                 param4++;
               } else {
-                var30 = ((param2 & 16711935) * var22 & -16711936) + ((param2 & 65280) * var22 & 16711680) >> 8;
-                var31 = param1[param4];
-                incrementValue$1 = param4;
+                int var30 = ((param2 & 16711935) * var22 & -16711936) + ((param2 & 65280) * var22 & 16711680) >> 8;
+                int var31 = param1[param4];
+                int incrementValue$1 = param4;
                 param4++;
                 param1[incrementValue$1] = (((var31 & 16711935) * var23 & -16711936) + ((var31 & 65280) * var23 & 16711680) >> 8) + var30;
               }
@@ -252,29 +222,15 @@ final class tu extends RendererBitmapFont {
     }
 
     private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
-        int var21 = 0;
-        int var26 = 0;
         int stackIn_5_0 = 0;
-        Object var16;
-        nj var16_ref;
-        int[] var17;
-        int[] var18;
-        int var19;
-        int var20;
-        int var22;
-        int var23;
-        int var24;
         int var25;
-        int[] var27;
-        int[] var28;
-        int var25Lifetime1;
-        var16 = null;
-        var16_ref = (nj) (param12);
-        var28 = var16_ref.field_h;
-        var27 = var28;
-        var17 = var27;
-        var18 = var16_ref.field_g;
-        var19 = param10;
+        Object var16 = null;
+        nj var16_ref = (nj) (param12);
+        int[] var28 = var16_ref.field_h;
+        int[] var27 = var28;
+        int[] var17 = var27;
+        int[] var18 = var16_ref.field_g;
+        int var19 = param10;
         if (param14 > var19) {
           var19 = param14;
           param4 = param4 + (param14 - param10) * this.field_f.field_f;
@@ -285,12 +241,12 @@ final class tu extends RendererBitmapFont {
         } else {
           stackIn_5_0 = param14 + var28.length;
         }
-        var20 = stackIn_5_0;
-        for (var21 = var19; var21 < var20; var21++) {
+        int var20 = stackIn_5_0;
+        for (int var21 = var19; var21 < var20; var21++) {
           boolean decompiledFrameRemainder0 = true;
-          var22 = param13 + var17[var21 - param14];
-          var23 = var18[var21 - param14];
-          var24 = param5;
+          int var22 = param13 + var17[var21 - param14];
+          int var23 = var18[var21 - param14];
+          int var24 = param5;
           if (param9 <= var22) {
             var25 = var22 - param9;
             if (var25 >= param5) {
@@ -315,13 +271,13 @@ final class tu extends RendererBitmapFont {
             }
           }
           if (decompiledFrameRemainder0) {
-            var25Lifetime1 = 0;
+            int var25Lifetime1 = 0;
             if (var24 >= var23) {
               var25Lifetime1 = var24 - var23;
             } else {
               var23 = var24;
             }
-            for (var26 = 0; var26 < var23; var26++) {
+            for (int var26 = 0; var26 < var23; var26++) {
               if (param0[param3++] == 0) {
                 param4++;
               } else {
@@ -335,23 +291,16 @@ final class tu extends RendererBitmapFont {
     }
 
     private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
-        int var12 = 0;
-        int var13 = 0;
-        int incrementValue$12 = 0;
-        int var10;
-        int var11;
-        int var14;
-        int var15;
-        var10 = param2 >>> 24;
-        var11 = 255 - var10;
-        for (var12 = -param6; var12 < 0; var12++) {
-          for (var13 = -param5; var13 < 0; var13++) {
+        int var10 = param2 >>> 24;
+        int var11 = 255 - var10;
+        for (int var12 = -param6; var12 < 0; var12++) {
+          for (int var13 = -param5; var13 < 0; var13++) {
             if (param0[param3++] == 0) {
               param4++;
             } else {
-              var14 = ((param2 & 16711935) * var10 & -16711936) + ((param2 & 65280) * var10 & 16711680) >> 8;
-              var15 = param1[param4];
-              incrementValue$12 = param4;
+              int var14 = ((param2 & 16711935) * var10 & -16711936) + ((param2 & 65280) * var10 & 16711680) >> 8;
+              int var15 = param1[param4];
+              int incrementValue$12 = param4;
               param4++;
               param1[incrementValue$12] = (((var15 & 16711935) * var11 & -16711936) + ((var15 & 65280) * var11 & 16711680) >> 8) + var14;
             }
@@ -363,14 +312,13 @@ final class tu extends RendererBitmapFont {
 
     tu(kj param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
-        int var6 = 0;
         this.field_f = param0;
         this.field_i = param3;
         this.field_e = param4;
         this.field_h = new byte[param2.length][];
         this.field_j = new int[param2.length];
         this.field_g = new int[param2.length];
-        for (var6 = 0; var6 < param2.length; var6++) {
+        for (int var6 = 0; var6 < param2.length; var6++) {
           this.field_h[var6] = param2[var6].indices;
           this.field_j[var6] = param2[var6].padTop;
           this.field_g[var6] = param2[var6].padLeft;

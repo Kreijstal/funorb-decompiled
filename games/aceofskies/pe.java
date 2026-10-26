@@ -13,63 +13,50 @@ final class pe implements Iterator {
     static long field_g;
 
     final static Class a(String param0, int param1) throws ClassNotFoundException {
-        RuntimeException var2 = null;
-        Class stackIn_2_0 = null;
-        Class stackIn_6_0 = null;
-        Class stackIn_9_0 = null;
-        Class stackIn_13_0 = null;
-        Class stackIn_16_0 = null;
-        Class stackIn_20_0 = null;
-        Class stackIn_24_0 = null;
-        Class stackIn_27_0 = null;
-        Class stackIn_31_0 = null;
-        RuntimeException stackIn_34_0 = null;
-        StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 1) {
-            stackIn_2_0 = (Class) null;
+            Class stackIn_2_0 = (Class) null;
             return stackIn_2_0;
           }
           if (param0.equals("B")) {
-            stackIn_6_0 = Byte.TYPE;
+            Class stackIn_6_0 = Byte.TYPE;
             return stackIn_6_0;
           }
           if (param0.equals("I")) {
-            stackIn_9_0 = Integer.TYPE;
+            Class stackIn_9_0 = Integer.TYPE;
             return stackIn_9_0;
           }
           if (param0.equals("S")) {
-            stackIn_13_0 = Short.TYPE;
+            Class stackIn_13_0 = Short.TYPE;
             return stackIn_13_0;
           }
           if (param0.equals("J")) {
-            stackIn_16_0 = Long.TYPE;
+            Class stackIn_16_0 = Long.TYPE;
             return stackIn_16_0;
           }
           if (param0.equals("Z")) {
-            stackIn_20_0 = Boolean.TYPE;
+            Class stackIn_20_0 = Boolean.TYPE;
             return stackIn_20_0;
           }
           if (param0.equals("F")) {
-            stackIn_24_0 = Float.TYPE;
+            Class stackIn_24_0 = Float.TYPE;
             return stackIn_24_0;
           }
           if (param0.equals("D")) {
-            stackIn_27_0 = Double.TYPE;
+            Class stackIn_27_0 = Double.TYPE;
             return stackIn_27_0;
           }
           if (!param0.equals("C")) {
             return Class.forName(param0);
           }
-          stackIn_31_0 = Character.TYPE;
+          Class stackIn_31_0 = Character.TYPE;
           return stackIn_31_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_34_0 = var2;
-          stackIn_34_1 = new StringBuilder().append("pe.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_34_0 = var2;
+          StringBuilder stackIn_34_1 = new StringBuilder().append("pe.A(");
           if (param0 == null) {
             stackIn_35_2 = "null";
           } else {
@@ -89,16 +76,13 @@ final class pe implements Iterator {
     }
 
     public final boolean hasNext() {
-        IntrusiveNode[] fieldTemp$0 = null;
-        int fieldTemp$1 = 0;
-        int var2;
-        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_d != this.field_e.field_a[-1 + this.field_a]) {
           return true;
         }
         while (this.field_a < this.field_e.field_c) {
-          fieldTemp$0 = this.field_e.field_a;
-          fieldTemp$1 = this.field_a;
+          IntrusiveNode[] fieldTemp$0 = this.field_e.field_a;
+          int fieldTemp$1 = this.field_a;
           this.field_a = this.field_a + 1;
           if (fieldTemp$0[fieldTemp$1].next != this.field_e.field_a[this.field_a - 1]) {
             this.field_d = this.field_e.field_a[this.field_a - 1].next;
@@ -110,24 +94,21 @@ final class pe implements Iterator {
     }
 
     final static void decodeGameImagesAndFonts(ResourceArchive fontMetricsArchive, byte obfuscationGuard, ResourceArchive sharedSpriteArchive, ResourceArchive gameSpriteArchive) {
-        int var4_int = 0;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        int var4_intLifetime1;
-        int var4_intLifetime2;
         try {
           oo.backgroundSpriteData = new SpriteData[2];
-          for (var4_int = 0; oo.backgroundSpriteData.length > var4_int; var4_int++) {
+          for (int var4_int = 0; oo.backgroundSpriteData.length > var4_int; var4_int++) {
             oo.backgroundSpriteData[var4_int] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "background" + var4_int);
           }
           SteeringMode.aircraftSpriteData = new SpriteData[8][];
-          for (var4_intLifetime1 = 0; var4_intLifetime1 < 8; var4_intLifetime1++) {
+          for (int var4_intLifetime1 = 0; var4_intLifetime1 < 8; var4_intLifetime1++) {
             SteeringMode.aircraftSpriteData[var4_intLifetime1] = SpriteData.loadFrames(gameSpriteArchive, "aceofskies", "plane" + var4_intLifetime1);
           }
           if (obfuscationGuard <= 22) {
             field_c = (String) null;
           }
           na.cloudSpriteData = new SpriteData[1];
-          for (var4_intLifetime2 = 0; var4_intLifetime2 < 1; var4_intLifetime2++) {
+          for (int var4_intLifetime2 = 0; var4_intLifetime2 < 1; var4_intLifetime2++) {
             na.cloudSpriteData[var4_intLifetime2] = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "cloud" + var4_intLifetime2);
           }
           RendererManager.bulletSpriteData = SpriteData.loadFirstFrame(gameSpriteArchive, "aceofskies", "bullet");
@@ -181,11 +162,8 @@ final class pe implements Iterator {
     }
 
     public final Object next() {
-        IntrusiveNode[] fieldTemp$0 = null;
-        int fieldTemp$1 = 0;
         IntrusiveNode var1;
-        int var2;
-        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_d != this.field_e.field_a[-1 + this.field_a]) {
           var1 = this.field_d;
           this.field_f = var1;
@@ -196,8 +174,8 @@ final class pe implements Iterator {
           if (this.field_a >= this.field_e.field_c) {
             return null;
           }
-          fieldTemp$0 = this.field_e.field_a;
-          fieldTemp$1 = this.field_a;
+          IntrusiveNode[] fieldTemp$0 = this.field_e.field_a;
+          int fieldTemp$1 = this.field_a;
           this.field_a = this.field_a + 1;
           var1 = fieldTemp$0[fieldTemp$1].next;
         } while (this.field_e.field_a[-1 + this.field_a] == var1);
@@ -233,9 +211,8 @@ final class pe implements Iterator {
     }
 
     static {
-        int var0 = 0;
         highscoreNameEntries = new HighscoreNameEntry[255];
-        for (var0 = 0; highscoreNameEntries.length > var0; var0++) {
+        for (int var0 = 0; highscoreNameEntries.length > var0; var0++) {
           highscoreNameEntries[var0] = new HighscoreNameEntry();
         }
         field_c = "This is a hidden Achievement";

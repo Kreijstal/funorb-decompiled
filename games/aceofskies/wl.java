@@ -141,41 +141,22 @@ final class wl extends GraphicsRenderer {
     private String field_B;
 
     final RenderSprite createSprite(SpriteData data, boolean preferIndexed) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$2 = 0;
-        int[] stackIn_8_0 = null;
-        int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
-        RenderSprite stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        int var5 = 0;
         int var6_int = 0;
-        RenderSprite var6 = null;
         int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var10 = new int[data.width * data.height];
-          var12 = var10;
-          var11 = var12;
-          var3 = var11;
-          var4 = 0;
-          var5 = 0;
+          int[] var10 = new int[data.width * data.height];
+          int[] var12 = var10;
+          int[] var11 = var12;
+          int[] var3 = var11;
+          int var4 = 0;
+          int var5 = 0;
           if (data.alpha != null) {
             for (var6_int = 0; var6_int < data.height; var6_int++) {
               for (var7 = 0; data.width > var7; var7++) {
-                incrementValue$0 = var5;
+                int incrementValue$0 = var5;
                 var5++;
                 var3[incrementValue$0] = vo.a(data.palette[pg.a(255, (int) data.indices[var4])], data.alpha[var4] << 24);
                 var4++;
@@ -184,13 +165,13 @@ final class wl extends GraphicsRenderer {
           } else {
             for (var6_int = 0; var6_int < data.height; var6_int++) {
               for (var7 = 0; data.width > var7; var7++) {
-                incrementValue$1 = var4;
+                int incrementValue$1 = var4;
                 var4++;
-                var8 = data.palette[data.indices[incrementValue$1] & 255];
-                incrementValue$2 = var5;
+                int var8 = data.palette[data.indices[incrementValue$1] & 255];
+                int incrementValue$2 = var5;
                 var5++;
-                stackIn_8_0 = var10;
-                stackIn_8_1 = incrementValue$2;
+                int[] stackIn_8_0 = var10;
+                int stackIn_8_1 = incrementValue$2;
                 if (var8 == 0) {
                   stackIn_9_2 = 0;
                 } else {
@@ -200,15 +181,15 @@ final class wl extends GraphicsRenderer {
               }
             }
           }
-          var6 = this.a(97, data.height, var12, 0, data.width, data.width);
+          RenderSprite var6 = this.a(97, data.height, var12, 0, data.width, data.width);
           var6.a(data.padLeft, data.padTop, data.padRight, data.padBottom);
-          stackIn_18_0 = var6;
+          RenderSprite stackIn_18_0 = var6;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_21_0 = var3_ref;
-          stackIn_21_1 = new StringBuilder().append("wl.HA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var3_ref;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("wl.HA(");
           if (data == null) {
             stackIn_22_2 = "null";
           } else {
@@ -236,7 +217,6 @@ final class wl extends GraphicsRenderer {
     }
 
     final int[] a(int param0, int param1, byte param2, int param3, int param4) {
-        int var7 = 0;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 != -78) {
           up var9 = (up) null;
@@ -244,7 +224,7 @@ final class wl extends GraphicsRenderer {
         }
         int[] var10 = new int[param3 * param1];
         int[] var6 = var10;
-        for (var7 = 0; param1 > var7; var7++) {
+        for (int var7 = 0; param1 > var7; var7++) {
           jaggl.OpenGL.glReadPixelsi(param0, -param4 + (this.field_bb - var7), param3, 1, 32993, this.field_tb, var10, var7 * param3);
         }
         return var10;
@@ -258,19 +238,13 @@ final class wl extends GraphicsRenderer {
     }
 
     final void a(rt param0, int param1) {
-        rt var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 1) {
             return;
           }
-          var3 = this.field_bc[this.field_Pb];
+          rt var3 = this.field_bc[this.field_Pb];
           if (param0 != var3) {
             if (param0 == null) {
               jaggl.OpenGL.glDisable(var3.field_f);
@@ -290,10 +264,10 @@ final class wl extends GraphicsRenderer {
           this.field_O = this.field_O & -2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_18_0 = var3_ref;
-          stackIn_18_1 = new StringBuilder().append("wl.TA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var3_ref;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("wl.TA(");
           if (param0 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -311,38 +285,14 @@ final class wl extends GraphicsRenderer {
 
     wl(java.awt.Canvas param0, d param1, int param2) {
         super(param1);
-        long dupTemp$4 = 0L;
-        int var9 = 0;
         int stackIn_12_1 = 0;
-        boolean stackIn_51_1 = false;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
         String stackIn_64_2 = null;
-        StringBuilder stackIn_66_1 = null;
         String stackIn_67_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int var4_int = 0;
-        Throwable var4 = null;
-        RuntimeException var4_ref = null;
-        int var5_int = 0;
-        Throwable var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        String[] var8 = null;
-        String var10 = null;
-        Exception var11 = null;
-        String var13 = null;
-        int[] var17 = null;
         Object var18 = null;
         Object var19 = null;
         Object var20 = null;
-        CharSequence var21 = null;
-        CharSequence var22 = null;
-        CharSequence var23 = null;
-        var18 = null;
-        var19 = null;
-        var20 = null;
         this.field_R = new Hashtable();
         this.field_Ab = 128;
         this.field_q = new jk();
@@ -410,14 +360,14 @@ final class wl extends GraphicsRenderer {
           }
           try {
             this.field_kc = new jaggl.OpenGL();
-            dupTemp$4 = this.field_kc.init(param0, 8, 8, 8, 24, 0, this.field_Hb);
+            long dupTemp$4 = this.field_kc.init(param0, 8, 8, 8, 24, 0, this.field_Hb);
             this.field_Db = dupTemp$4;
             this.field_gc = dupTemp$4;
             if (0L == this.field_Db) {
               throw new RuntimeException("");
             }
             this.b(false);
-            var4_int = this.e((byte) -94);
+            int var4_int = this.e((byte) -94);
             if (var4_int != 0) {
               throw new RuntimeException("");
             }
@@ -428,13 +378,13 @@ final class wl extends GraphicsRenderer {
             }
             this.field_tb = stackIn_12_1;
             if (this.field_sb.indexOf("radeon") != -1) {
-              var5_int = 0;
-              var6 = 0;
-              var7 = 0;
-              var8 = ee.a((byte) 10, ' ', this.field_sb.replace('/', ' '));
-              for (var9 = 0; var8.length > var9; var9++) {
-                var13 = var8[var9];
-                var10 = var13;
+              int var5_int = 0;
+              int var6 = 0;
+              int var7 = 0;
+              String[] var8 = ee.a((byte) 10, ' ', this.field_sb.replace('/', ' '));
+              for (int var9 = 0; var8.length > var9; var9++) {
+                String var13 = var8[var9];
+                String var10 = var13;
                 var10 = var13;
                 var10 = var13;
                 try {
@@ -442,7 +392,7 @@ final class wl extends GraphicsRenderer {
                   if (var13.length() > 0) {
                     if (120 == var13.charAt(0) &&
                       var13.length() >= 3) {
-                      var21 = (CharSequence) ((Object) var13.substring(1, 3));
+                      CharSequence var21 = (CharSequence) ((Object) var13.substring(1, 3));
                       if (vl.a(10, var21)) {
                         var7 = 1;
                         var10 = var13.substring(1);
@@ -456,9 +406,9 @@ final class wl extends GraphicsRenderer {
                         var10 = var10.substring(2);
                       }
                       if (var10.length() >= 4) {
-                        var22 = (CharSequence) ((Object) var10.substring(0, 4));
+                        CharSequence var22 = (CharSequence) ((Object) var10.substring(0, 4));
                         if (vl.a(10, var22)) {
-                          var23 = (CharSequence) ((Object) var10.substring(0, 4));
+                          CharSequence var23 = (CharSequence) ((Object) var10.substring(0, 4));
                           var5_int = td.a(var23, (byte) 38);
                           decompiledRegionSelector0 = 1;
                           decompiledFrameRemainder0 = false;
@@ -471,7 +421,7 @@ final class wl extends GraphicsRenderer {
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
-                  var11 = (Exception) (Object) decompiledCaughtException;
+                  Exception var11 = (Exception) (Object) decompiledCaughtException;
                   decompiledRegionSelector0 = 0;
                 }
                 if (decompiledRegionSelector0 == 0) {
@@ -500,15 +450,15 @@ final class wl extends GraphicsRenderer {
             if (this.field_B.indexOf("intel") != -1) {
               this.field_A = false;
             }
-            stackIn_51_1 = !(this.field_B.equals("s3 graphics"));
+            boolean stackIn_51_1 = !(this.field_B.equals("s3 graphics"));
             this.field_Eb = stackIn_51_1;
             if (this.field_M) {
               try {
-                var17 = new int[1];
+                int[] var17 = new int[1];
                 jaggl.OpenGL.glGenBuffersARB(1, var17, 0);
               } catch (java.lang.Throwable decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
-                var5 = decompiledCaughtException;
+                Throwable var5 = decompiledCaughtException;
                 throw new RuntimeException("");
               }
             }
@@ -532,22 +482,22 @@ final class wl extends GraphicsRenderer {
             return;
           } catch (java.lang.Throwable decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
-            var4 = decompiledCaughtException;
+            Throwable var4 = decompiledCaughtException;
             var4.printStackTrace();
             this.c();
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
           decompiledCaughtException = decompiledCaughtParameter3;
-          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_63_0 = var4_ref;
-          stackIn_63_1 = new StringBuilder().append("wl.<init>(");
+          RuntimeException var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_63_0 = var4_ref;
+          StringBuilder stackIn_63_1 = new StringBuilder().append("wl.<init>(");
           if (param0 == null) {
             stackIn_64_2 = "null";
           } else {
             stackIn_64_2 = "{...}";
           }
-          stackIn_66_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',');
+          StringBuilder stackIn_66_1 = ((StringBuilder) (Object) stackIn_63_1).append(stackIn_64_2).append(',');
           if (param1 == null) {
             stackIn_67_2 = "null";
           } else {
@@ -558,14 +508,13 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void b(boolean param0) {
-        int incrementValue$0 = 0;
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0) {
           this.d(56);
         }
         int var2 = 0;
         while (!this.field_kc.b()) {
-          incrementValue$0 = var2;
+          int incrementValue$0 = var2;
           var2++;
           if (incrementValue$0 > 5) {
             throw new RuntimeException("");
@@ -596,18 +545,15 @@ final class wl extends GraphicsRenderer {
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7;
-        float var8;
-        float var9;
         this.j(1);
         this.b((byte) -122, param5);
-        var7 = (float)param2 - (float)param0;
-        var8 = (float)param3 - (float)param1;
+        float var7 = (float)param2 - (float)param0;
+        float var8 = (float)param3 - (float)param1;
         if (0.0f == var7 &&
           0.0f == var8) {
           var7 = 1.0f;
         } else {
-          var9 = (float)(1.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
+          float var9 = (float)(1.0 / Math.sqrt((double)(var7 * var7 + var8 * var8)));
           var8 = var8 * var9;
           var7 = var7 * var9;
         }
@@ -712,12 +658,11 @@ final class wl extends GraphicsRenderer {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4 = 0;
         if (this.field_Pb != 0) {
           jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
           jaggl.OpenGL.glTexEnvi(8960, 34162, param2);
         } else {
-          var4 = 0;
+          int var4 = 0;
           if (this.field_Bb != param0) {
             jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
             this.field_Bb = param0;
@@ -745,18 +690,11 @@ final class wl extends GraphicsRenderer {
     }
 
     final void a(za param0) {
-        hl discarded$2 = null;
-        hl discarded$3 = null;
-        du var3 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           this.field_mb = ((im) (param0)).field_g;
           if (null == this.field_gb) {
-            var3 = new du(80);
+            du var3 = new du(80);
             if (!this.field_V) {
               var3.b((byte) -90, -1.0f);
               var3.b((byte) -90, -1.0f);
@@ -801,16 +739,16 @@ final class wl extends GraphicsRenderer {
               var3.a((byte) 60, 0.0f);
             }
             this.field_gb = this.a((byte) -49, 20, var3.payload, var3.position, false);
-            discarded$2 = new hl(this.field_gb, 5126, 3, 0);
-            discarded$3 = new hl(this.field_gb, 5126, 2, 12);
+            hl discarded$2 = new hl(this.field_gb, 5126, 3, 0);
+            hl discarded$3 = new hl(this.field_gb, 5126, 2, 12);
             this.field_q.a((byte) 102, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("wl.NA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var2;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("wl.NA(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -840,12 +778,9 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void f(byte param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.g(-2, -88);
-        for (var2 = this.field_Xb - 1; var2 >= 0; var2--) {
+        for (int var2 = this.field_Xb - 1; var2 >= 0; var2--) {
           this.a(false, var2);
           this.a((rt) null, 1);
           jaggl.OpenGL.glTexEnvi(8960, 8704, 34160);
@@ -882,8 +817,8 @@ final class wl extends GraphicsRenderer {
         jaggl.OpenGL.glColorMaterial(1028, 5634);
         jaggl.OpenGL.glEnable(2903);
         float[] var6 = new float[]{0.0f, 0.0f, 0.0f, 1.0f};
-        for (var3 = 0; var3 < 8; var3++) {
-          var4 = var3 + 16384;
+        for (int var3 = 0; var3 < 8; var3++) {
+          int var4 = var3 + 16384;
           jaggl.OpenGL.glLightfv(var4, 4608, var6, 0);
           jaggl.OpenGL.glLightf(var4, 4615, 0.0f);
           jaggl.OpenGL.glLightf(var4, 4616, 0.0f);
@@ -898,26 +833,14 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void a(boolean param0, int param1, byte param2, boolean param3) {
-        int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_22_0 = 0;
-        Object var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        uh var10;
-        int var11;
-        int var12;
-        int var13;
-        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 <= 124) {
           field_Ub = (float[]) null;
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 == this.field_kb) {
-          stackIn_6_0 = (this.field_qc) ? 0 : 1;
+          int stackIn_6_0 = (this.field_qc) ? 0 : 1;
           if (this.field_vc) {
             stackIn_9_1 = 0;
           } else {
@@ -926,22 +849,22 @@ final class wl extends GraphicsRenderer {
           decompiledFrameRemainder0 = (stackIn_6_0 != stackIn_9_1);
         }
         if (decompiledFrameRemainder0) {
-          var5 = null;
-          var6 = 0;
-          var7 = 0;
-          var8 = 0;
-          stackIn_14_0 = (this.field_qc) ? 3 : 0;
-          var9 = stackIn_14_0;
+          Object var5 = null;
+          int var6 = 0;
+          int var7 = 0;
+          int var8 = 0;
+          int stackIn_14_0 = (this.field_qc) ? 3 : 0;
+          int var9 = stackIn_14_0;
           if (param1 >= 0) {
             var5 = this.field_X.a(param1, (byte) 14);
-            var10 = this.field_a.a(false, param1);
+            uh var10 = this.field_a.a(false, param1);
             if (0 == var10.field_n &&
               0 == var10.field_j) {
               this.q(67);
             } else {
-              stackIn_22_0 = (!var10.field_o) ? 128 : 64;
-              var11 = stackIn_22_0;
-              var12 = 50 * var11;
+              int stackIn_22_0 = (!var10.field_o) ? 128 : 64;
+              int var11 = stackIn_22_0;
+              int var12 = 50 * var11;
               this.a(0.0f, (float)(this.field_hb % var12 * var10.field_n) / (float)var12, (float)(var10.field_j * (this.field_hb % var12)) / (float)var12, 5888);
             }
             var6 = var10.field_e;
@@ -977,18 +900,10 @@ final class wl extends GraphicsRenderer {
     }
 
     final void b(byte param0, int param1) {
-        int stackIn_10_0 = 0;
-        int stackIn_11_1 = 0;
-        boolean stackIn_15_1 = false;
-        boolean stackIn_18_0 = false;
-        int stackIn_19_1 = 0;
-        boolean stackIn_27_1 = false;
         int var3;
         int var4;
         int var5;
-        int var6;
-        int var3Lifetime1;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_Cb != param1) {
           if (param1 != 1) {
             if (2 != param1) {
@@ -1011,22 +926,22 @@ final class wl extends GraphicsRenderer {
             var4 = 1;
             var3 = 1;
           }
-          stackIn_10_0 = var3;
-          stackIn_11_1 = (this.field_hc) ? 0 : 1;
+          int stackIn_10_0 = var3;
+          int stackIn_11_1 = (this.field_hc) ? 0 : 1;
           if (stackIn_10_0 == stackIn_11_1) {
             jaggl.OpenGL.glColorMask(var3 != 0, var3 != 0, var3 != 0, true);
-            stackIn_15_1 = (var3 != 0);
+            boolean stackIn_15_1 = (var3 != 0);
             this.field_hc = stackIn_15_1;
           }
-          stackIn_18_0 = this.field_k;
-          stackIn_19_1 = (var4 != 0) ? 0 : 1;
+          boolean stackIn_18_0 = this.field_k;
+          int stackIn_19_1 = (var4 != 0) ? 0 : 1;
           if ((stackIn_18_0 ? 1 : 0) == stackIn_19_1) {
             if (var4 != 0) {
               jaggl.OpenGL.glEnable(3008);
             } else {
               jaggl.OpenGL.glDisable(3008);
             }
-            stackIn_27_1 = (var4 != 0);
+            boolean stackIn_27_1 = (var4 != 0);
             this.field_k = stackIn_27_1;
           }
           if (this.field_z != var5) {
@@ -1051,7 +966,7 @@ final class wl extends GraphicsRenderer {
           this.field_Cb = param1;
           this.field_O = this.field_O & -29;
         }
-        var3Lifetime1 = 78 / ((param0 + 41) / 36);
+        int var3Lifetime1 = 78 / ((param0 + 41) / 36);
     }
 
     final void T(int param0, int param1, int param2, int param3) {
@@ -1121,21 +1036,14 @@ final class wl extends GraphicsRenderer {
     }
 
     final void b(byte param0, up param1) {
-        int fieldTemp$18 = 0;
-        up dupTemp$19 = null;
-        int var4 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
           if (!this.field_i) {
             if (this.field_rc >= 0 &&
               this.field_Jb[this.field_rc] == param1) {
-              fieldTemp$18 = this.field_rc;
+              int fieldTemp$18 = this.field_rc;
               this.field_rc = this.field_rc - 1;
               this.field_Jb[fieldTemp$18] = null;
               param1.b(10383);
@@ -1143,7 +1051,7 @@ final class wl extends GraphicsRenderer {
                 this.field_Rb = null;
                 this.field_qb = null;
               } else {
-                dupTemp$19 = this.field_Jb[this.field_rc];
+                up dupTemp$19 = this.field_Jb[this.field_rc];
                 this.field_qb = dupTemp$19;
                 this.field_Rb = dupTemp$19;
                 this.field_Rb.a(param0 ^ 18952);
@@ -1163,10 +1071,10 @@ final class wl extends GraphicsRenderer {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("wl.HB(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var3;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("wl.HB(").append(param0).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -1177,7 +1085,6 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void a(int param0, up param1) {
-        int fieldTemp$0 = 0;
         try {
           if (~this.field_Y <= param0) {
             throw new RuntimeException();
@@ -1185,7 +1092,7 @@ final class wl extends GraphicsRenderer {
           if (this.field_Y >= 0) {
             this.field_ob[this.field_Y].b((byte) -40);
           }
-          fieldTemp$0 = this.field_Y + 1;
+          int fieldTemp$0 = this.field_Y + 1;
           this.field_Y = this.field_Y + 1;
           this.field_ob[fieldTemp$0] = param1;
           this.field_qb = param1;
@@ -1233,11 +1140,7 @@ final class wl extends GraphicsRenderer {
     }
 
     final void a(byte param0, fq param1) {
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (param0 != -120) {
             this.field_ob = (up[]) null;
@@ -1250,10 +1153,10 @@ final class wl extends GraphicsRenderer {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("wl.MC(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("wl.MC(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -1282,12 +1185,7 @@ final class wl extends GraphicsRenderer {
     }
 
     final void a(up param0, int param1) {
-        int fieldTemp$1 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (this.field_i) {
             this.b(param0, param1 ^ 32993);
@@ -1299,7 +1197,7 @@ final class wl extends GraphicsRenderer {
             if (this.field_rc >= 0) {
               this.field_Jb[this.field_rc].b(param1 ^ 43026);
             }
-            fieldTemp$1 = this.field_rc + 1;
+            int fieldTemp$1 = this.field_rc + 1;
             this.field_rc = this.field_rc + 1;
             this.field_Jb[fieldTemp$1] = param0;
             this.field_qb = param0;
@@ -1311,10 +1209,10 @@ final class wl extends GraphicsRenderer {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_13_0 = var3;
-          stackIn_13_1 = new StringBuilder().append("wl.PC(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var3;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("wl.PC(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -1360,26 +1258,12 @@ final class wl extends GraphicsRenderer {
     }
 
     final synchronized void b(int param0) {
-        int incrementValue$3 = 0;
-        int incrementValue$2 = 0;
-        int incrementValue$1 = 0;
-        int incrementValue$0 = 0;
-        int var2;
-        int var4;
-        iq var5;
-        iq var6;
-        iq var7;
-        iq var8;
-        iq var9;
-        IntrusiveNode var10;
-        IntrusiveNode var11;
-        iq var12;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         param0 = param0 & 2147483647;
-        var2 = 0;
+        int var2 = 0;
         while (!this.field_nb.isEmpty(true)) {
-          var5 = (iq) (this.field_nb.removeFirst(123));
-          incrementValue$3 = var2;
+          iq var5 = (iq) (this.field_nb.removeFirst(123));
+          int incrementValue$3 = var2;
           var2++;
           in.field_b[incrementValue$3] = (int)var5.key;
           this.field_ib = this.field_ib - var5.field_f;
@@ -1394,8 +1278,8 @@ final class wl extends GraphicsRenderer {
           var2 = 0;
         }
         while (!this.field_Ac.isEmpty(true)) {
-          var6 = (iq) (this.field_Ac.removeFirst(121));
-          incrementValue$2 = var2;
+          iq var6 = (iq) (this.field_Ac.removeFirst(121));
+          int incrementValue$2 = var2;
           var2++;
           in.field_b[incrementValue$2] = (int)var6.key;
           this.field_lb = this.field_lb - var6.field_f;
@@ -1410,8 +1294,8 @@ final class wl extends GraphicsRenderer {
           var2 = 0;
         }
         while (!this.field_zb.isEmpty(true)) {
-          var7 = (iq) (this.field_zb.removeFirst(124));
-          incrementValue$1 = var2;
+          iq var7 = (iq) (this.field_zb.removeFirst(124));
+          int incrementValue$1 = var2;
           var2++;
           in.field_b[incrementValue$1] = var7.field_f;
           if (1000 != var2) {
@@ -1425,8 +1309,8 @@ final class wl extends GraphicsRenderer {
           var2 = 0;
         }
         while (!this.field_Gb.isEmpty(true)) {
-          var8 = (iq) (this.field_Gb.removeFirst(127));
-          incrementValue$0 = var2;
+          iq var8 = (iq) (this.field_Gb.removeFirst(127));
+          int incrementValue$0 = var2;
           var2++;
           in.field_b[incrementValue$0] = (int)var8.key;
           this.field_yc = this.field_yc - var8.field_f;
@@ -1441,19 +1325,19 @@ final class wl extends GraphicsRenderer {
           var2 = 0;
         }
         while (!this.field_Gc.isEmpty(true)) {
-          var9 = (iq) (this.field_Gc.removeFirst(121));
+          iq var9 = (iq) (this.field_Gc.removeFirst(121));
           jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_f);
         }
         while (!this.field_dc.isEmpty(true)) {
-          var10 = this.field_dc.removeFirst(121);
+          IntrusiveNode var10 = this.field_dc.removeFirst(121);
           jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
         }
         while (!this.field_f.isEmpty(true)) {
-          var11 = this.field_f.removeFirst(127);
+          IntrusiveNode var11 = this.field_f.removeFirst(127);
           jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
         while (!this.field_Gc.isEmpty(true)) {
-          var12 = (iq) (this.field_Gc.removeFirst(124));
+          iq var12 = (iq) (this.field_Gc.removeFirst(124));
           jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_f);
         }
         this.field_X.a(64);
@@ -1496,16 +1380,11 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void a(up param0, byte param1) {
-        int fieldTemp$1 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (this.field_Y >= 0 &&
             param0 == this.field_ob[this.field_Y]) {
-            fieldTemp$1 = this.field_Y;
+            int fieldTemp$1 = this.field_Y;
             this.field_Y = this.field_Y - 1;
             this.field_ob[fieldTemp$1] = null;
             param0.b((byte) -128);
@@ -1522,10 +1401,10 @@ final class wl extends GraphicsRenderer {
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("wl.LB(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("wl.LB(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -1547,9 +1426,6 @@ final class wl extends GraphicsRenderer {
     }
 
     final void c() {
-        Enumeration var1_ref = null;
-        java.awt.Canvas var2 = null;
-        Long var3 = null;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         IntrusiveNode var1 = this.field_jb.first(268435455);
         while (var1 != null) {
@@ -1561,10 +1437,10 @@ final class wl extends GraphicsRenderer {
         }
         if (this.field_kc != null) {
           this.f(8960);
-          var1_ref = this.field_R.keys();
+          Enumeration var1_ref = this.field_R.keys();
           while (var1_ref.hasMoreElements()) {
-            var2 = (java.awt.Canvas) (var1_ref.nextElement());
-            var3 = (Long) (this.field_R.get(var2));
+            java.awt.Canvas var2 = (java.awt.Canvas) (var1_ref.nextElement());
+            Long var3 = (Long) (this.field_R.get(var2));
             this.field_kc.releaseSurface(var2, var3.longValue());
           }
           this.field_kc.release();
@@ -1616,16 +1492,11 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void a(byte param0, up param1) {
-        int fieldTemp$1 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (this.field_fc >= 0 &&
             this.field_Fc[this.field_fc] == param1) {
-            fieldTemp$1 = this.field_fc;
+            int fieldTemp$1 = this.field_fc;
             this.field_fc = this.field_fc - 1;
             this.field_Fc[fieldTemp$1] = null;
             param1.a((byte) 97);
@@ -1642,10 +1513,10 @@ final class wl extends GraphicsRenderer {
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("wl.BD(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("wl.BD(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -1656,10 +1527,8 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void r(int param0) {
-        int var2;
-        boolean stackIn_4_0 = false;
-        var2 = 70 % ((param0 + 17) / 58);
-        stackIn_4_0 = (this.field_uc) && (this.field_p);
+        int var2 = 70 % ((param0 + 17) / 58);
+        boolean stackIn_4_0 = (this.field_uc) && (this.field_p);
         jaggl.OpenGL.glDepthMask(stackIn_4_0);
     }
 
@@ -1723,25 +1592,18 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void u(int param0) {
-        float[] var2;
-        float var3;
-        float var4;
-        float var5;
-        float var6;
-        float var7;
-        float[] var8;
-        var8 = this.field_pb;
-        var2 = var8;
-        var3 = (float)(this.field_db * -this.field_Ib) / (float)this.field_ub;
-        var4 = (float)((-this.field_Ib + this.field_ec) * this.field_db) / (float)this.field_ub;
-        var5 = (float)(this.field_db * this.field_jc) / (float)this.field_mc;
-        var6 = (float)(this.field_db * (-this.field_bb + this.field_jc)) / (float)this.field_mc;
+        float[] var8 = this.field_pb;
+        float[] var2 = var8;
+        float var3 = (float)(this.field_db * -this.field_Ib) / (float)this.field_ub;
+        float var4 = (float)((-this.field_Ib + this.field_ec) * this.field_db) / (float)this.field_ub;
+        float var5 = (float)(this.field_db * this.field_jc) / (float)this.field_mc;
+        float var6 = (float)(this.field_db * (-this.field_bb + this.field_jc)) / (float)this.field_mc;
         if (param0 != 3) {
           this.field_Eb = true;
         }
         if (var4 != var3 &&
           var5 != var6) {
-          var7 = 2.0f * (float)this.field_db;
+          float var7 = 2.0f * (float)this.field_db;
           var8[5] = var7 / (-var6 + var5);
           var8[7] = 0.0f;
           var8[2] = 0.0f;
@@ -1782,31 +1644,24 @@ final class wl extends GraphicsRenderer {
     }
 
     final fq a(byte param0, int param1, byte[] param2, int param3, boolean param4) {
-        RuntimeException var6 = null;
-        lk stackIn_5_0 = null;
-        fq stackIn_8_0 = null;
-        om stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_M && (!param4 ||
             this.field_xb)) {
-            stackIn_5_0 = new lk(this, param1, param2, param3, param4);
+            lk stackIn_5_0 = new lk(this, param1, param2, param3, param4);
             return (fq) ((Object) stackIn_5_0);
           }
           if (param0 == -49) {
-            stackIn_10_0 = new om(this, param1, param2, param3);
+            om stackIn_10_0 = new om(this, param1, param2, param3);
             return (fq) ((Object) stackIn_10_0);
           }
-          stackIn_8_0 = (fq) null;
+          fq stackIn_8_0 = (fq) null;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_13_0 = var6;
-          stackIn_13_1 = new StringBuilder().append("wl.CA(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var6;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("wl.CA(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -1817,20 +1672,15 @@ final class wl extends GraphicsRenderer {
     }
 
     final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        RuntimeException var7 = null;
-        tm stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new tm(this, param3, param4, param0, param1, param2);
+          tm stackIn_1_0 = new tm(this, param3, param4, param0, param1, param2);
           return (RenderSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_4_0 = var7;
-          stackIn_4_1 = new StringBuilder().append("wl.O(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var7;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("wl.O(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -1908,39 +1758,31 @@ final class wl extends GraphicsRenderer {
     }
 
     final void b(int param0, int param1) throws lp {
-        Throwable decompiledCaughtException = null;
-        Exception var3 = null;
         try {
           this.field_kc.swapBuffers();
         } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          Exception var3 = (Exception) (Object) decompiledCaughtException;
         }
     }
 
     final sm a(ra param0, gd param1) {
-        RuntimeException var3 = null;
-        Object stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = null;
+          Object stackIn_1_0 = null;
           return (sm) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("wl.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var3;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("wl.G(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -1959,16 +1801,6 @@ final class wl extends GraphicsRenderer {
 
     final static int t(int param0) {
         try {
-          int stackIn_15_0 = 0;
-          int stackIn_20_0 = 0;
-          int stackIn_29_0 = 0;
-          int stackIn_34_0 = 0;
-          int stackIn_37_0 = 0;
-          int stackIn_39_0 = 0;
-          Throwable decompiledCaughtException = null;
-          int var1_int = 0;
-          IOException var1 = null;
-          PacketBuffer var2 = null;
           if (ul.field_r.field_j >= 4) {
             if (ul.field_r.field_e == -1) {
               return 3;
@@ -1985,7 +1817,7 @@ final class wl extends GraphicsRenderer {
             }
             if (bm.field_z == 1) {
               if (wu.field_l.field_a == 2) {
-                stackIn_15_0 = tj.a(-112, -1);
+                int stackIn_15_0 = tj.a(-112, -1);
                 return stackIn_15_0;
               }
               if (wu.field_l.field_a == 1) {
@@ -1993,12 +1825,12 @@ final class wl extends GraphicsRenderer {
               }
             }
             if (param0 != 19078) {
-              stackIn_20_0 = -63;
+              int stackIn_20_0 = -63;
               return stackIn_20_0;
             }
             if (2 == bm.field_z) {
               du.field_m = new vf((java.net.Socket) (wu.field_l.field_f), cs.field_d);
-              var2 = new PacketBuffer(13);
+              PacketBuffer var2 = new PacketBuffer(13);
               tr.a(var2, uk.field_g, SoundCache.field_e, IntKeyLookup.field_b, 0);
               var2.writeByte(-1336879960, 15);
               var2.writeInt((byte) 20, si.field_c);
@@ -2009,31 +1841,31 @@ final class wl extends GraphicsRenderer {
             if (bm.field_z == 3) {
               if (du.field_m.b(-120) <= 0) {
                 if (kh.a(-116) > AircraftDefinition.field_j) {
-                  stackIn_34_0 = tj.a(-126, -2);
+                  int stackIn_34_0 = tj.a(-126, -2);
                   return stackIn_34_0;
                 }
               } else {
-                var1_int = du.field_m.a((byte) -116);
+                int var1_int = du.field_m.a((byte) -116);
                 if (var1_int != 0) {
-                  stackIn_29_0 = tj.a(92, var1_int);
+                  int stackIn_29_0 = tj.a(92, var1_int);
                   return stackIn_29_0;
                 }
                 bm.field_z = bm.field_z + 1;
               }
             }
             if (4 != bm.field_z) {
-              stackIn_39_0 = -1;
+              int stackIn_39_0 = -1;
               return stackIn_39_0;
             }
             ul.field_r.a(param0 ^ 16696, rs.field_C, du.field_m);
             wu.field_l = null;
             bm.field_z = 0;
             du.field_m = null;
-            stackIn_37_0 = 0;
+            int stackIn_37_0 = 0;
             return stackIn_37_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var1 = (IOException) (Object) decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            IOException var1 = (IOException) (Object) decompiledCaughtException;
             return tj.a(107, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -2111,19 +1943,15 @@ final class wl extends GraphicsRenderer {
     }
 
     final void e() {
-        int var1;
-        int var2;
-        int var3;
-        int var4;
         if (!this.field_Eb) {
           return;
         }
         if (this.field_ec > 0 &&
           0 < this.field_bb) {
-          var1 = this.field_L;
-          var2 = this.field_d;
-          var3 = this.field_e;
-          var4 = this.field_Q;
+          int var1 = this.field_L;
+          int var2 = this.field_d;
+          int var3 = this.field_e;
+          int var4 = this.field_Q;
           this.l(24643);
           jaggl.OpenGL.glReadBuffer(1028);
           jaggl.OpenGL.glDrawBuffer(1029);
@@ -2152,20 +1980,9 @@ final class wl extends GraphicsRenderer {
     }
 
     final void a(RenderSprite param0, boolean param1) {
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        cu var3 = null;
-        gt var3_ref = null;
-        RuntimeException var3_ref2 = null;
         DualLinkNode var4 = null;
-        int var6 = 0;
-        gt var7 = null;
-        gt var8 = null;
-        cu var9 = null;
-        cu var10 = null;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_j = (tm) (param0);
           if (this.field_A) {
@@ -2177,15 +1994,15 @@ final class wl extends GraphicsRenderer {
             }
             this.a(this.field_y, 32925);
             if (param1) {
-              var3 = (cu) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
+              cu var3 = (cu) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
               if (var3 == null) {
-                var9 = new cu(this, 6402, this.field_j.a(), this.field_j.b());
+                cu var9 = new cu(this, 6402, this.field_j.a(), this.field_j.b());
                 var3 = var9;
                 this.field_rb = this.field_rb + var9.field_o;
                 while (this.field_rb > 2097152) {
                   var4 = this.field_Ec.a(3);
                   if (var4 != null) {
-                    var10 = (cu) (var4);
+                    cu var10 = (cu) (var4);
                     var10.unlinkSecondaryNode(-128);
                     var10.unlink(-126);
                     var10.d((byte) -108);
@@ -2204,15 +2021,15 @@ final class wl extends GraphicsRenderer {
             if (!this.field_Mb) {
               throw new RuntimeException("");
             }
-            var3_ref = (gt) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
+            gt var3_ref = (gt) (this.field_s.findByKey((byte) 106, (long)(this.field_j.a() << 16 | this.field_j.b())));
             if (var3_ref == null) {
-              var7 = new gt(this, this.field_j.a(), this.field_j.b());
+              gt var7 = new gt(this, this.field_j.a(), this.field_j.b());
               var3_ref = var7;
               this.field_rb = this.field_rb + var7.field_n * 4;
               while (this.field_rb > 2097152) {
                 var4 = this.field_Ec.a(3);
                 if (var4 != null) {
-                  var8 = (gt) (var4);
+                  gt var8 = (gt) (var4);
                   var8.unlinkSecondaryNode(-127);
                   var8.unlink(-126);
                   this.field_kc.releasePbuffer(var8.f(25766));
@@ -2233,10 +2050,10 @@ final class wl extends GraphicsRenderer {
           this.l(24643);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref2 = decompiledCaughtException;
-          stackIn_31_0 = var3_ref2;
-          stackIn_31_1 = new StringBuilder().append("wl.R(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref2 = decompiledCaughtException;
+          RuntimeException stackIn_31_0 = var3_ref2;
+          StringBuilder stackIn_31_1 = new StringBuilder().append("wl.R(");
           if (param0 == null) {
             stackIn_32_2 = "null";
           } else {
@@ -2303,12 +2120,11 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void s(int param0) {
-        java.awt.Dimension var2 = null;
         if (null == this.field_Wb) {
           this.field_Yb = 0;
           this.field_g = 0;
         } else {
-          var2 = this.field_Wb.getSize();
+          java.awt.Dimension var2 = this.field_Wb.getSize();
           this.field_Yb = var2.height;
           this.field_g = var2.width;
         }
@@ -2328,28 +2144,22 @@ final class wl extends GraphicsRenderer {
     }
 
     final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
-        RuntimeException var4 = null;
-        mu stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new mu(this, param0, param1, param2);
+          mu stackIn_1_0 = new mu(this, param0, param1, param2);
           return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("wl.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var4;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("wl.E(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -2360,19 +2170,7 @@ final class wl extends GraphicsRenderer {
     }
 
     private final int e(byte param0) {
-        int stackIn_29_0 = 0;
-        Throwable decompiledCaughtException = null;
         int var2 = 0;
-        String var3 = null;
-        String[] var4 = null;
-        int var5_int = 0;
-        NumberFormatException var5 = null;
-        int var6 = 0;
-        int[] var7 = null;
-        int[] var9 = null;
-        int[] var11 = null;
-        int[] var13 = null;
-        var2 = 0;
         this.field_B = jaggl.OpenGL.glGetString(7936).toLowerCase();
         this.field_sb = jaggl.OpenGL.glGetString(7937).toLowerCase();
         if (this.field_B.indexOf("microsoft") != -1) {
@@ -2382,18 +2180,18 @@ final class wl extends GraphicsRenderer {
           this.field_B.indexOf("mesa") != -1) {
           var2 = var2 | 1;
         }
-        var3 = jaggl.OpenGL.glGetString(7938);
-        var4 = ee.a((byte) 10, ' ', var3.replace('.', ' '));
+        String var3 = jaggl.OpenGL.glGetString(7938);
+        String[] var4 = ee.a((byte) 10, ' ', var3.replace('.', ' '));
         if (var4.length < 2) {
           var2 = var2 | 4;
         } else {
           try {
-            var5_int = td.a((CharSequence) ((Object) var4[0]), (byte) 38);
-            var6 = td.a((CharSequence) ((Object) var4[1]), (byte) 38);
+            int var5_int = td.a((CharSequence) ((Object) var4[0]), (byte) 38);
+            int var6 = td.a((CharSequence) ((Object) var4[1]), (byte) 38);
             this.field_Z = var6 + 10 * var5_int;
           } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var5 = (NumberFormatException) (Object) decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            NumberFormatException var5 = (NumberFormatException) (Object) decompiledCaughtException;
             var2 = var2 | 4;
           }
         }
@@ -2406,10 +2204,10 @@ final class wl extends GraphicsRenderer {
         if (!this.field_kc.a("GL_ARB_texture_env_combine")) {
           var2 = var2 | 32;
         }
-        var11 = new int[1];
-        var9 = var11;
-        var7 = var9;
-        var13 = var7;
+        int[] var11 = new int[1];
+        int[] var9 = var11;
+        int[] var7 = var9;
+        int[] var13 = var7;
         jaggl.OpenGL.glGetIntegerv(34018, var13, 0);
         if (param0 != -94) {
           this.field_pc = (lu) null;
@@ -2442,7 +2240,7 @@ final class wl extends GraphicsRenderer {
         this.field_Nb = this.field_kc.a("GL_EXT_framebuffer_multisample");
         this.field_eb = rr.field_b.startsWith("mac");
         jaggl.OpenGL.glGetFloatv(2834, bg.field_a, 0);
-        stackIn_29_0 = (var2 == 0) ? 0 : var2;
+        int stackIn_29_0 = (var2 == 0) ? 0 : var2;
         return stackIn_29_0;
     }
 
@@ -2467,7 +2265,6 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void b(up param0, int param1) {
-        int fieldTemp$0 = 0;
         try {
           if (this.field_fc >= 3) {
             throw new RuntimeException();
@@ -2478,7 +2275,7 @@ final class wl extends GraphicsRenderer {
           if (param1 < 95) {
             this.c((byte) -104);
           }
-          fieldTemp$0 = this.field_fc + 1;
+          int fieldTemp$0 = this.field_fc + 1;
           this.field_fc = this.field_fc + 1;
           this.field_Fc[fieldTemp$0] = param0;
           this.field_Rb = param0;
@@ -2511,7 +2308,6 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void x(int param0) {
-        wj discarded$17 = null;
         this.field_bc = new rt[this.field_Xb];
         this.field_Vb = new nr(this, 3553, 6408, 1, 1);
         nr discarded$0 = new nr(this, 3553, 6408, 1, 1);
@@ -2531,7 +2327,7 @@ final class wl extends GraphicsRenderer {
         nb discarded$16 = new nb(this);
         if (this.field_A) {
           this.field_o = new wj(this);
-          discarded$17 = new wj(this);
+          wj discarded$17 = new wj(this);
         }
     }
 

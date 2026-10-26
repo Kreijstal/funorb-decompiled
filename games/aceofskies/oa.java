@@ -23,9 +23,6 @@ final class oa extends GraphicsRenderer implements e {
 
     public oa(java.awt.Canvas param0, d param1, int param2, int param3) {
         super(param1);
-        ja discarded$1 = null;
-        Throwable decompiledCaughtException = null;
-        Throwable var5 = null;
         this.field_j = false;
         this.field_nativeid = 0L;
         this.field_m = new IntrusiveDeque();
@@ -41,7 +38,7 @@ final class oa extends GraphicsRenderer implements e {
           this.MA(this.field_a, 0, 0);
           fr.a(false, 0, true);
           this.field_g = true;
-          discarded$1 = new ja();
+          ja discarded$1 = new ja();
           this.a(new ja());
           this.g(1);
           this.f(0);
@@ -51,8 +48,8 @@ final class oa extends GraphicsRenderer implements e {
           }
           return;
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          Throwable var5 = decompiledCaughtException;
           this.a(-9);
           throw new RuntimeException();
         }
@@ -126,13 +123,11 @@ final class oa extends GraphicsRenderer implements e {
 
     private final boolean c(short param0) {
         Object var2 = null;
-        Object var2_ref = null;
-        uh var3 = null;
         Throwable var4 = null;
         Throwable decompiledCaughtException = null;
-        var2_ref = this;
+        Object var2_ref = this;
         synchronized (var2_ref) {
-          var3 = this.field_a.a(false, (int) param0);
+          uh var3 = this.field_a.a(false, (int) param0);
           if (var3 == null) {
             return false;
           }
@@ -149,13 +144,11 @@ final class oa extends GraphicsRenderer implements e {
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
         try {
-          java.lang.reflect.Method var6 = null;
-          Class var7 = null;
           p var4 = (p) (this.field_h.findByKey((byte) 106, (long)param0.hashCode()));
           if (var4 == null) {
             try {
-              var7 = Class.forName("java.awt.Canvas");
-              var6 = var7.getMethod("setIgnoreRepaint", new Class[]{Boolean.TYPE});
+              Class var7 = Class.forName("java.awt.Canvas");
+              java.lang.reflect.Method var6 = var7.getMethod("setIgnoreRepaint", new Class[]{Boolean.TYPE});
               var6.invoke((Object) (param0), new Object[]{Boolean.TRUE});
             } catch (Exception exception) {
             }
@@ -197,9 +190,8 @@ final class oa extends GraphicsRenderer implements e {
     }
 
     private final void a(java.awt.Canvas param0) {
-        p var2 = null;
         if (param0 != null) {
-          var2 = (p) (this.field_h.findByKey((byte) 106, (long)param0.hashCode()));
+          p var2 = (p) (this.field_h.findByKey((byte) 106, (long)param0.hashCode()));
           this.field_d = var2;
           this.t(var2);
         } else {
@@ -213,10 +205,9 @@ final class oa extends GraphicsRenderer implements e {
     final native void KA(int param0, int param1, int param2, int param3);
 
     private final void g(int param0) {
-        int var2 = 0;
         this.field_n = param0;
         this.field_k = new a[this.field_n];
-        for (var2 = 0; var2 < this.field_n; var2++) {
+        for (int var2 = 0; var2 < this.field_n; var2++) {
           this.field_k[var2] = new a(this, this.field_e, this.field_l);
         }
     }
@@ -233,17 +224,15 @@ final class oa extends GraphicsRenderer implements e {
 
     private final boolean WA(short param0) {
         Object var2 = null;
-        Object var2_ref = null;
-        uh var3 = null;
         int[] var4 = null;
         Throwable var5 = null;
         Throwable decompiledCaughtException = null;
-        var2_ref = this.field_a;
+        Object var2_ref = this.field_a;
         synchronized (var2_ref) {
           if (!this.field_a.a((int) param0, -3804)) {
             return false;
           }
-          var3 = this.field_a.a(false, (int) param0);
+          uh var3 = this.field_a.a(false, (int) param0);
           if (var3 == null) {
             return false;
           }
@@ -269,14 +258,10 @@ final class oa extends GraphicsRenderer implements e {
     }
 
     final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
-        int var7 = 0;
-        int[] var4;
-        int[] var5;
-        int var6;
-        var4 = new int[param1.length];
-        var5 = new int[param1.length];
-        var6 = 0;
-        for (var7 = 0; var7 < param1.length; var7++) {
+        int[] var4 = new int[param1.length];
+        int[] var5 = new int[param1.length];
+        int var6 = 0;
+        for (int var7 = 0; var7 < param1.length; var7++) {
           var4[var7] = param1[var7].width;
           var5[var7] = param1[var7].height;
           if (param1[var7].alpha != null) {

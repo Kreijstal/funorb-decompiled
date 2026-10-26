@@ -29,11 +29,10 @@ final class ek extends ab implements dn {
     }
 
     final static boolean a(byte param0) {
-        Object var1 = null;
         Throwable var2 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = ua.field_d;
+        Object var1 = ua.field_d;
         synchronized (var1) {
           if (ch.field_a == lt.field_u) {
             return false;
@@ -50,33 +49,26 @@ final class ek extends ab implements dn {
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        boolean stackIn_7_0 = false;
-        boolean stackIn_11_0 = false;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(-1, param1, param2, param3)) {
             return true;
           }
-          var5_int = 114 / ((-53 - param0) / 33);
+          int var5_int = 114 / ((-53 - param0) / 33);
           if (param1 == 98) {
-            stackIn_7_0 = this.b(param3, -24);
+            boolean stackIn_7_0 = this.b(param3, -24);
             return stackIn_7_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_11_0 = this.a(80, param3);
+          boolean stackIn_11_0 = this.a(80, param3);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("ek.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var5;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("ek.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -102,32 +94,23 @@ final class ek extends ab implements dn {
     }
 
     final void a(String[] param0, boolean param1) {
-        int var4_int = 0;
-        int var5 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        wg var4 = null;
-        int var6 = 0;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           this.field_s.clear(268435455);
           if (param0 != null &&
             param0.length != 0) {
-            var3_int = param0.length;
+            int var3_int = param0.length;
             this.field_v = new String[var3_int];
-            for (var4_int = 0; var3_int > var4_int; var4_int++) {
+            for (int var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_v[var4_int] = ju.a(0, (CharSequence) ((Object) param0[var4_int])).replace(' ', ' ');
             }
-            var4 = new wg(qo.field_b, 0, 1);
+            wg var4 = new wg(qo.field_b, 0, 1);
             this.field_t = new mi[var3_int + 1];
             if (!param1) {
               return;
             }
-            for (var5 = 0; var3_int > var5; var5++) {
+            for (int var5 = 0; var3_int > var5; var5++) {
               this.field_t[var5] = new mi(this.field_v[var5], (no) (this));
               this.field_t[var5].field_e = (ir) ((Object) var4);
               this.field_t[var5].field_k = jc.field_wc;
@@ -143,10 +126,10 @@ final class ek extends ab implements dn {
           this.field_v = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_18_0 = var3;
-          stackIn_18_1 = new StringBuilder().append("ek.W(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var3;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("ek.W(");
           if (param0 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -157,17 +140,10 @@ final class ek extends ab implements dn {
     }
 
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
-        int var6_int = 0;
-        int var7 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var6_intLifetime1;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          for (var6_int = 0; this.field_v.length > var6_int; var6_int++) {
+          for (int var6_int = 0; this.field_v.length > var6_int; var6_int++) {
             if (this.field_t[var6_int] == param1) {
               this.field_w.a(this.field_v[var6_int], 10000536);
             }
@@ -175,13 +151,13 @@ final class ek extends ab implements dn {
           if (param1 == this.field_t[this.field_v.length]) {
             this.field_w.a((byte) -77);
           }
-          var6_intLifetime1 = -47 / ((param4 + 27) / 61);
+          int var6_intLifetime1 = -47 / ((param4 + 27) / 61);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("ek.DA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var6;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ek.DA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -192,8 +168,7 @@ final class ek extends ab implements dn {
     }
 
     final static int a(byte param0, int param1) {
-        int var2;
-        var2 = 0;
+        int var2 = 0;
         if (param1 < 0) {
           var2 += 16;
           param1 = param1 >>> 16;

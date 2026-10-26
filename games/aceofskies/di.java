@@ -42,11 +42,7 @@ class di extends ou {
     private int field_V;
 
     private final void a(di param0, int param1) {
-        RuntimeException stackIn_99_0 = null;
-        StringBuilder stackIn_99_1 = null;
         String stackIn_100_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (param1 >= -109) {
             this.field_s = 60;
@@ -166,10 +162,10 @@ class di extends ou {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_99_0 = var3;
-          stackIn_99_1 = new StringBuilder().append("di.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_99_0 = var3;
+          StringBuilder stackIn_99_1 = new StringBuilder().append("di.E(");
           if (param0 == null) {
             stackIn_100_2 = "null";
           } else {

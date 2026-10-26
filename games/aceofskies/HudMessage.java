@@ -33,13 +33,9 @@ final class HudMessage extends IntrusiveNode {
     }
 
     final void draw(int exitBottomOffset) {
-        int var2 = 0;
-        int var3 = 0;
-        int var2Lifetime1;
-        int var3Lifetime1;
         if (this.fadeInTicks > this.ageTicks) {
-          var2 = (this.ageTicks << 8) / this.fadeInTicks;
-          var3 = (-this.ageTicks + this.fadeInTicks) * 80 / this.fadeInTicks;
+          int var2 = (this.ageTicks << 8) / this.fadeInTicks;
+          int var3 = (-this.ageTicks + this.fadeInTicks) * 80 / this.fadeInTicks;
           PacketBuffer.gameFont.drawCenteredText(122, var2 << 24 | this.colour, -1, var3 + (-50 + gp.field_w), 320, this.text);
           return;
         }
@@ -47,8 +43,8 @@ final class HudMessage extends IntrusiveNode {
           PacketBuffer.gameFont.drawCenteredText(102, this.colour | -16777216, -1, gp.field_w - 50, 320, this.text);
           return;
         }
-        var2Lifetime1 = this.ageTicks - this.fadeInTicks - this.holdTicks;
-        var3Lifetime1 = (this.fadeOutTicks - var2Lifetime1 << 8) / this.fadeOutTicks;
+        int var2Lifetime1 = this.ageTicks - this.fadeInTicks - this.holdTicks;
+        int var3Lifetime1 = (this.fadeOutTicks - var2Lifetime1 << 8) / this.fadeOutTicks;
         if (var3Lifetime1 <= 0) {
           return;
         }

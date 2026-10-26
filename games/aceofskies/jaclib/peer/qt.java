@@ -49,12 +49,10 @@ public final class qt {
     }
 
     private final void a(int param0) {
-        java.lang.ref.Reference var2;
-        jaclib.peer.PeerReference var3;
         while (true) {
-          var2 = this.a.poll();
+          java.lang.ref.Reference var2 = this.a.poll();
           if (var2 != null) {
-            var3 = (jaclib.peer.PeerReference) ((Object) var2);
+            jaclib.peer.PeerReference var3 = (jaclib.peer.PeerReference) ((Object) var2);
             this.a(var3, -26315);
             continue;
           }

@@ -12,47 +12,27 @@ final class gq {
     private int field_c;
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
-        int var6_int = 0;
-        int var7 = 0;
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        String stackIn_3_0 = null;
-        String stackIn_8_0 = null;
-        String stackIn_10_0 = null;
-        String stackIn_28_0 = null;
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        CharSequence var4 = null;
-        int var4_int = 0;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        StringBuilder var6 = null;
-        CharSequence var7_ref_CharSequence = null;
-        CharSequence var8 = null;
-        int var9 = 0;
-        CharSequence var10 = null;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (0 == param0) {
-            stackIn_3_0 = "";
+            String stackIn_3_0 = "";
             return stackIn_3_0;
           }
           if (param0 == 1) {
-            var10 = param1[param3];
-            var4 = var10;
+            CharSequence var10 = param1[param3];
+            CharSequence var4 = var10;
             if (var4 != null) {
-              stackIn_10_0 = var10.toString();
+              String stackIn_10_0 = var10.toString();
               return stackIn_10_0;
             }
-            stackIn_8_0 = "null";
+            String stackIn_8_0 = "null";
             return stackIn_8_0;
           }
-          var4_int = param3 + param0;
-          var5 = 0;
-          for (var6_int = param3; var4_int > var6_int; var6_int++) {
-            var7_ref_CharSequence = param1[var6_int];
+          int var4_int = param3 + param0;
+          int var5 = 0;
+          for (int var6_int = param3; var4_int > var6_int; var6_int++) {
+            CharSequence var7_ref_CharSequence = param1[var6_int];
             if (var7_ref_CharSequence == null) {
               var5 += 4;
             } else {
@@ -62,22 +42,22 @@ final class gq {
           if (param2 != 21530) {
             gq.a(true, 117, 74);
           }
-          var6 = new StringBuilder(var5);
-          for (var7 = param3; var4_int > var7; var7++) {
-            var8 = param1[var7];
+          StringBuilder var6 = new StringBuilder(var5);
+          for (int var7 = param3; var4_int > var7; var7++) {
+            CharSequence var8 = param1[var7];
             if (var8 == null) {
-              discarded$0 = var6.append("null");
+              StringBuilder discarded$0 = var6.append("null");
             } else {
-              discarded$1 = var6.append(var8);
+              StringBuilder discarded$1 = var6.append(var8);
             }
           }
-          stackIn_28_0 = var6.toString();
+          String stackIn_28_0 = var6.toString();
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_31_0 = var4_ref;
-          stackIn_31_1 = new StringBuilder().append("gq.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_31_0 = var4_ref;
+          StringBuilder stackIn_31_1 = new StringBuilder().append("gq.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_32_2 = "null";
           } else {
@@ -88,18 +68,14 @@ final class gq {
     }
 
     final void a(byte param0, int param1) {
-        long fieldTemp$0 = 0L;
-        he var3;
-        mb var4;
-        int var5;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var3 = (he) (this.field_h.a(-115));
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        he var3 = (he) (this.field_h.a(-115));
         while (var3 != null) {
           if (!var3.e(0)) {
-            fieldTemp$0 = var3.secondaryKey + 1L;
+            long fieldTemp$0 = var3.secondaryKey + 1L;
             var3.secondaryKey = var3.secondaryKey + 1L;
             if (fieldTemp$0 > (long)param1) {
-              var4 = new mb(var3.a((byte) 74), var3.field_p);
+              mb var4 = new mb(var3.a((byte) 74), var3.field_p);
               this.field_b.a(-1, var4, var3.key);
               ns.a(var4, -30575, var3);
               var3.unlink(-125);
@@ -171,11 +147,7 @@ final class gq {
     }
 
     private final void a(int param0, he param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 6646) {
             this.a(125L, 122);
@@ -188,10 +160,10 @@ final class gq {
           this.field_g = this.field_g + param1.field_p;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("gq.F(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var3;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("gq.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -202,9 +174,7 @@ final class gq {
     }
 
     final Object a(long param0, int param1) {
-        qj var6 = null;
         he var7 = (he) (this.field_b.a(param0, (byte) 106));
-        qj var6Lifetime1;
         if (var7 == null) {
           return null;
         }
@@ -222,7 +192,7 @@ final class gq {
             var7.secondaryKey = 0L;
             return var5;
           }
-          var6 = new qj(var5, var7.field_p);
+          qj var6 = new qj(var5, var7.field_p);
           this.field_b.a(-1, var6, var7.key);
           this.field_h.a((DualLinkNode) (var6), (byte) -74);
           ((he) ((Object) var6)).secondaryKey = 0L;
@@ -241,7 +211,7 @@ final class gq {
           var7.secondaryKey = 0L;
           return var5;
         }
-        var6Lifetime1 = new qj(var5, var7.field_p);
+        qj var6Lifetime1 = new qj(var5, var7.field_p);
         this.field_b.a(-1, var6Lifetime1, var7.key);
         this.field_h.a((DualLinkNode) (var6Lifetime1), (byte) -74);
         ((he) ((Object) var6Lifetime1)).secondaryKey = 0L;
@@ -266,40 +236,30 @@ final class gq {
     }
 
     final static int a(hd param0, int param1) {
-        RuntimeException var2 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_14_0 = 0;
-        int stackIn_16_0 = 0;
-        int stackIn_18_0 = 0;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == wo.field_n) {
-            stackIn_18_0 = 6407;
+            int stackIn_18_0 = 6407;
             return stackIn_18_0;
           }
           if (param0 == lc.field_g) {
-            stackIn_3_0 = 6408;
+            int stackIn_3_0 = 6408;
             return stackIn_3_0;
           }
           if (ro.field_o == param0) {
-            stackIn_6_0 = 6406;
+            int stackIn_6_0 = 6406;
             return stackIn_6_0;
           }
           if (IntrusiveNode.field_d == param0) {
-            stackIn_16_0 = 6409;
+            int stackIn_16_0 = 6409;
             return stackIn_16_0;
           }
           if (param0 == hh.field_c) {
-            stackIn_10_0 = 6410;
+            int stackIn_10_0 = 6410;
             return stackIn_10_0;
           }
           if (aj.field_r == param0) {
-            stackIn_14_0 = 6145;
+            int stackIn_14_0 = 6145;
             return stackIn_14_0;
           }
           if (param1 != -29824) {
@@ -307,10 +267,10 @@ final class gq {
           }
           throw new IllegalStateException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_24_0 = var2;
-          stackIn_24_1 = new StringBuilder().append("gq.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var2;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("gq.G(");
           if (param0 == null) {
             stackIn_25_2 = "null";
           } else {
@@ -321,16 +281,14 @@ final class gq {
     }
 
     final Object b(int param0) {
-        Object var3 = null;
-        he var4 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         he var2 = (he) (this.field_b.a(param0 - 6533));
         while (var2 != null) {
-          var3 = var2.a((byte) 74);
+          Object var3 = var2.a((byte) 74);
           if (var3 != null) {
             return var3;
           }
-          var4 = var2;
+          he var4 = var2;
           var2 = (he) (this.field_b.a(-64));
           var4.unlink(-125);
           var4.unlinkSecondaryNode(-127);
@@ -356,16 +314,14 @@ final class gq {
     }
 
     final Object a(byte param0) {
-        Object var3 = null;
-        he var4 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         he var2 = (he) (this.field_b.b(param0 ^ -16));
         while (var2 != null) {
-          var3 = var2.a((byte) 74);
+          Object var3 = var2.a((byte) 74);
           if (var3 != null) {
             return var3;
           }
-          var4 = var2;
+          he var4 = var2;
           var2 = (he) (this.field_b.a(-118));
           var4.unlink(-126);
           var4.unlinkSecondaryNode(-116);
@@ -394,8 +350,6 @@ final class gq {
     }
 
     private final void a(long param0, byte param1, int param2, Object param3) {
-        he var9 = null;
-        qj var6 = null;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2 > this.field_c) {
@@ -404,10 +358,10 @@ final class gq {
           this.a(-111, param0);
           this.field_g = this.field_g - param2;
           while (this.field_g < 0) {
-            var9 = (he) (this.field_h.b(false));
+            he var9 = (he) (this.field_h.b(false));
             this.a(6646, var9);
           }
-          var6 = new qj(param3, param2);
+          qj var6 = new qj(param3, param2);
           int var7 = -16 / ((-52 - param1) / 34);
           this.field_b.a(-1, var6, param0);
           this.field_h.a((DualLinkNode) (var6), (byte) 64);
@@ -418,11 +372,10 @@ final class gq {
     }
 
     private gq(int param0, int param1) {
-        int var3;
         this.field_h = new hs();
         this.field_g = param0;
         this.field_c = param0;
-        var3 = 1;
+        int var3 = 1;
         while (true) {
           if (param0 <= var3 + var3) {
             this.field_b = new lc(var3);

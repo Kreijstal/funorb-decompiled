@@ -13,57 +13,30 @@ abstract class rg extends gm {
     static Sprite[] field_F;
 
     void a(boolean param0, int param1, int param2) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var14;
-        int var15;
-        int var16;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        int var6Lifetime1;
-        int var6Lifetime2;
-        int var7Lifetime1;
-        int var7Lifetime2;
-        int var8Lifetime1;
-        int var8Lifetime2;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        int var12Lifetime1;
-        int var13Lifetime1;
-        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         SoftwareRasterizer.c(param1 + 6, param2 + 35, -12 + this.field_q, this.field_n - 40, 2105376, 0);
-        var4 = 35;
-        var5 = 211;
-        var6 = 194;
+        int var4 = 35;
+        int var5 = 211;
+        int var6 = 194;
         if (param0) {
           return;
         }
-        var7 = 0;
-        var8 = param2;
+        int var7 = 0;
+        int var8 = param2;
         while (var4 > var7) {
           if (SoftwareRasterizer.clipTop <= var8 &&
             var8 < SoftwareRasterizer.clipBottom) {
-            var9 = var5 + (var6 - var5) * var7 / var4;
-            var10 = 0;
-            var11 = this.field_q;
+            int var9 = var5 + (var6 - var5) * var7 / var4;
+            int var10 = 0;
+            int var11 = this.field_q;
             if (var7 <= 20) {
               while (var10 <= 20) {
-                var12 = (-var10 + 20) * (20 - var10) + (20 - var7) * (20 - var7);
+                int var12 = (-var10 + 20) * (20 - var10) + (20 - var7) * (20 - var7);
                 if (var12 <= 462) {
                   if (var12 < 420) {
                     break;
                   }
-                  var13 = (462 - var12) * var9 / 42;
+                  int var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 8 | var13 << 16);
                   SoftwareRasterizer.framebuffer[var10 + param1 + var8 * SoftwareRasterizer.stride] = var13;
                 }
@@ -71,15 +44,15 @@ abstract class rg extends gm {
               }
             }
             if (var7 <= 20) {
-              var12Lifetime1 = var11;
+              int var12Lifetime1 = var11;
               var11 -= 21;
-              for (var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
-                var14 = var13Lifetime1 * var13Lifetime1 + (20 - var7) * (20 - var7);
+              for (int var13Lifetime1 = 0; var13Lifetime1 <= 20; var13Lifetime1++) {
+                int var14 = var13Lifetime1 * var13Lifetime1 + (20 - var7) * (20 - var7);
                 if (var14 <= 462) {
                   if (var14 < 420) {
                     var12Lifetime1 = 1 + var11;
                   } else {
-                    var15 = (462 - var14) * var9 / 42;
+                    int var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
                     SoftwareRasterizer.framebuffer[var8 * SoftwareRasterizer.stride + param1 + var11] = var15;
                   }
@@ -96,13 +69,13 @@ abstract class rg extends gm {
           var8++;
           var7++;
         }
-        var5Lifetime1 = 194;
-        var6Lifetime1 = 169;
-        var4Lifetime1 = 22;
-        var7Lifetime1 = 0;
-        var8Lifetime1 = 35 + param2;
+        int var5Lifetime1 = 194;
+        int var6Lifetime1 = 169;
+        int var4Lifetime1 = 22;
+        int var7Lifetime1 = 0;
+        int var8Lifetime1 = 35 + param2;
         while (var7Lifetime1 < var4Lifetime1) {
-          var9Lifetime1 = (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
+          int var9Lifetime1 = (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
           SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime1, 6, var9Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(this.field_q + param1 - 6, var8Lifetime1, 6, var9Lifetime1);
@@ -112,13 +85,13 @@ abstract class rg extends gm {
         eo.field_b.b(-90 + (param1 + this.field_q), param2 + 10);
         cf.a(ArchiveProvider.field_c, param1 + 5, (byte) -121, 35 + param2, this.field_q - 10);
         cf.a(HighscoreQuery.field_k, param1, (byte) -114, this.field_n + param2 - 22, this.field_q);
-        var4Lifetime2 = this.field_n - 79;
-        var6Lifetime2 = 127;
-        var5Lifetime2 = 169;
-        var7Lifetime2 = 0;
-        var8Lifetime2 = param2 + 57;
+        int var4Lifetime2 = this.field_n - 79;
+        int var6Lifetime2 = 127;
+        int var5Lifetime2 = 169;
+        int var7Lifetime2 = 0;
+        int var8Lifetime2 = param2 + 57;
         while (var4Lifetime2 > var7Lifetime2) {
-          var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
+          int var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 8 | var9Lifetime2 << 16);
           SoftwareRasterizer.drawHorizontalLine(param1, var8Lifetime2, 6, var9Lifetime2);
           SoftwareRasterizer.drawHorizontalLine(-6 + this.field_q + param1, var8Lifetime2, 6, var9Lifetime2);
@@ -192,26 +165,21 @@ abstract class rg extends gm {
     }
 
     boolean h(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        int fieldTemp$0 = 0;
-        int var4 = 0;
-        int var5 = 0;
         if (param0 != 11) {
           this.a(1, 39, 77, -45);
         }
         if (this.field_I <= 0) {
         } else {
-          var2 = this.field_B;
-          var3 = this.field_H;
-          fieldTemp$0 = this.field_D + 1;
+          int var2 = this.field_B;
+          int var3 = this.field_H;
+          int fieldTemp$0 = this.field_D + 1;
           this.field_D = this.field_D + 1;
           if (fieldTemp$0 >= this.field_I) {
             this.field_I = 0;
             this.f((byte) -85);
           } else {
-            var4 = (2 * this.field_I - this.field_D) * this.field_D;
-            var5 = this.field_I * this.field_I;
+            int var4 = (2 * this.field_I - this.field_D) * this.field_D;
+            int var5 = this.field_I * this.field_I;
             var2 = var4 * (-this.field_E + this.field_B) / var5 + this.field_E;
             var3 = (-this.field_G + this.field_H) * var4 / var5 + this.field_G;
           }

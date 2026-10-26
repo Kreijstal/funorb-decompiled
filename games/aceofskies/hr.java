@@ -36,48 +36,37 @@ abstract class hr extends or {
     }
 
     final static GraphicsRenderer a(ResourceArchive param0, d param1, int param2, int param3, java.awt.Canvas param4, int param5) {
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        java.awt.Dimension var9 = null;
-        GraphicsRenderer stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = 123 % ((param2 - 23) / 53);
-          var7 = 0;
-          var8 = 0;
+          int var6_int = 123 % ((param2 - 23) / 53);
+          int var7 = 0;
+          int var8 = 0;
           if (param4 != null) {
-            var9 = param4.getSize();
+            java.awt.Dimension var9 = param4.getSize();
             var8 = var9.height;
             var7 = var9.width;
           }
-          stackIn_3_0 = GraphicsRenderer.a(var7, param0, param5, param4, param3, 5, var8, param1);
+          GraphicsRenderer stackIn_3_0 = GraphicsRenderer.a(var7, param0, param5, param4, param3, 5, var8, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_6_0 = var6;
-          stackIn_6_1 = new StringBuilder().append("hr.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var6;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("hr.E(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_13_2 = "null";
           } else {

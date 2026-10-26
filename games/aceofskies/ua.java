@@ -18,34 +18,22 @@ abstract class ua implements kt {
     static RenderSprite[] counterPanelSprites;
 
     final jaclib.memory.Buffer a(jaggl.MapBuffer param0, boolean param1, int param2) {
-        RuntimeException var4 = null;
-        jaclib.memory.heap.NativeHeapBuffer stackIn_4_0 = null;
-        int stackIn_8_0;
-        int stackIn_8_1;
-        Object stackIn_8_2;
-        int stackIn_8_3;
         int stackIn_9_4 = 0;
-        jaclib.memory.heap.NativeHeapBuffer stackIn_11_0 = null;
-        jaggl.MapBuffer stackIn_16_0 = null;
-        jaclib.memory.Buffer stackIn_20_0 = null;
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_m == 0) {
             this.f(-1);
             if (this.field_k <= 0) {
               this.field_m = 2;
-              stackIn_4_0 = this.field_f;
+              jaclib.memory.heap.NativeHeapBuffer stackIn_4_0 = this.field_f;
               return (jaclib.memory.Buffer) ((Object) stackIn_4_0);
             }
             jaggl.OpenGL.glBindBufferARB(this.field_b, this.field_k);
             if (param1) {
-              stackIn_8_0 = this.field_b;
-              stackIn_8_1 = this.field_i;
-              stackIn_8_2 = null;
-              stackIn_8_3 = 0;
+              int stackIn_8_0 = this.field_b;
+              int stackIn_8_1 = this.field_i;
+              Object stackIn_8_2 = null;
+              int stackIn_8_3 = 0;
               if (this.field_e) {
                 stackIn_9_4 = 35040;
               } else {
@@ -54,27 +42,27 @@ abstract class ua implements kt {
               jaggl.OpenGL.glBufferDataARBub(stackIn_8_0, stackIn_8_1, (byte[]) (stackIn_8_2), stackIn_8_3, stackIn_9_4);
               if (this.field_n <= this.field_a.field_Q.c) {
                 this.field_m = 1;
-                stackIn_11_0 = this.field_a.field_Q;
+                jaclib.memory.heap.NativeHeapBuffer stackIn_11_0 = this.field_a.field_Q;
                 return (jaclib.memory.Buffer) ((Object) stackIn_11_0);
               }
             }
             if (!param0.a() &&
               param0.a(this.field_b, this.field_n, 35001)) {
               this.field_m = 2;
-              stackIn_16_0 = (jaggl.MapBuffer) (param0);
+              jaggl.MapBuffer stackIn_16_0 = (jaggl.MapBuffer) (param0);
               return (jaclib.memory.Buffer) ((Object) stackIn_16_0);
             }
           }
           if (param2 == -10386) {
             return null;
           }
-          stackIn_20_0 = (jaclib.memory.Buffer) null;
+          jaclib.memory.Buffer stackIn_20_0 = (jaclib.memory.Buffer) null;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_24_0 = var4;
-          stackIn_24_1 = new StringBuilder().append("ua.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var4;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("ua.D(");
           if (param0 == null) {
             stackIn_25_2 = "null";
           } else {
@@ -105,33 +93,22 @@ abstract class ua implements kt {
     }
 
     final static short[] a(CipherPacketBuffer param0, short[] param1, int param2, int param3) {
-        int var4_int = 0;
-        int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
-        int var8 = 0;
-        Object stackIn_3_0 = null;
-        short[] stackIn_16_0 = null;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var4_int = param0.b((byte) 103, param3);
+          int var4_int = param0.b((byte) 103, param3);
           if (var4_int == 0) {
-            stackIn_3_0 = null;
+            Object stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
           }
           if (param1 == null ||
             param1.length != var4_int) {
             param1 = new short[var4_int];
           }
-          var5 = param0.b((byte) -95, 4);
-          var6 = (short)param0.b((byte) 89, 16);
+          int var5 = param0.b((byte) -95, 4);
+          int var6 = (short)param0.b((byte) 89, 16);
           if (param2 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
               param1[var7] = (short)(param0.b((byte) 96, var5) + var6);
@@ -141,19 +118,19 @@ abstract class ua implements kt {
               param1[var7] = (short)var6;
             }
           }
-          stackIn_16_0 = (short[]) (param1);
+          short[] stackIn_16_0 = (short[]) (param1);
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_19_0 = var4;
-          stackIn_19_1 = new StringBuilder().append("ua.L(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var4;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("ua.L(");
           if (param0 == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
           if (param1 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -164,38 +141,31 @@ abstract class ua implements kt {
     }
 
     final boolean a(jaggl.MapBuffer param0, byte param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int stackIn_8_0 = 0;
-        int stackIn_12_0 = 0;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -115) {
             this.f(53);
           }
-          var3_int = 1;
+          int var3_int = 1;
           if (this.field_m != 0) {
             if (0 < this.field_k) {
               jaggl.OpenGL.glBindBufferARB(this.field_b, this.field_k);
               if (this.field_m == 1) {
                 jaggl.OpenGL.glBufferSubDataARBa(this.field_b, 0, this.field_i, this.field_a.field_Q.a());
               } else {
-                stackIn_8_0 = (!param0.b()) ? 0 : 1;
+                int stackIn_8_0 = (!param0.b()) ? 0 : 1;
                 var3_int = stackIn_8_0;
               }
             }
             this.field_m = 0;
           }
-          stackIn_12_0 = var3_int;
+          int stackIn_12_0 = var3_int;
           return stackIn_12_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("ua.F(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var3;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ua.F(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -299,10 +269,9 @@ abstract class ua implements kt {
     }
 
     static {
-        int var0 = 0;
         field_c = new float[]{0.0f, -1.0f, 0.0f, 0.0f};
         field_h = new int[4096];
-        for (var0 = 0; var0 < 4096; var0++) {
+        for (int var0 = 0; var0 < 4096; var0++) {
           field_h[var0] = it.a(var0, -1);
         }
         field_d = new bs();

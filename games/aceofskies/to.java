@@ -64,46 +64,36 @@ abstract class to extends ea implements vm {
     }
 
     final void a(StringBuilder param0, Hashtable param1, byte param2, int param3) {
-        StringBuilder discarded$11 = null;
-        StringBuilder discarded$13 = null;
-        StringBuilder discarded$12 = null;
-        int var5_int = 0;
-        int var6 = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          discarded$11 = param0.append('\n');
-          var5_int = 0;
+          StringBuilder discarded$11 = param0.append('\n');
+          int var5_int = 0;
           if (param2 != -24) {
             this.a((byte) -47, 125, 23, 0);
           }
           while (var5_int <= param3) {
-            discarded$13 = param0.append(' ');
+            StringBuilder discarded$13 = param0.append(' ');
             var5_int++;
           }
           if (null != this.field_s) {
             this.field_s.a(param0, 32462, 1 + param3, param1);
           } else {
-            discarded$12 = param0.append("null");
+            StringBuilder discarded$12 = param0.append("null");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("to.BA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var5;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("to.BA(");
           if (param0 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
           if (param1 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -121,11 +111,7 @@ abstract class to extends ea implements vm {
     }
 
     void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         try {
           if (param5 != 91) {
             this.a((byte) -52);
@@ -135,10 +121,10 @@ abstract class to extends ea implements vm {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_7_0 = var7;
-          stackIn_7_1 = new StringBuilder().append("to.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var7;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("to.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -157,22 +143,16 @@ abstract class to extends ea implements vm {
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
         boolean stackIn_11_0 = false;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_s != null &&
             this.field_s.e(28660) &&
             this.field_s.a(-93, param1, param2, param3)) {
             return true;
           }
-          var5_int = 61 % ((-53 - param0) / 33);
-          var6 = param1;
+          int var5_int = 61 % ((-53 - param0) / 33);
+          int var6 = param1;
           if (var6 != 80) {
             return false;
           }
@@ -183,10 +163,10 @@ abstract class to extends ea implements vm {
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("to.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var5;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("to.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -197,11 +177,7 @@ abstract class to extends ea implements vm {
     }
 
     void a(byte param0, ea param1, int param2, int param3) {
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         try {
           super.a((byte) 117, param1, param2, param3);
           if (param0 <= 13) {
@@ -212,10 +188,10 @@ abstract class to extends ea implements vm {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_8_0 = var5;
-          stackIn_8_1 = new StringBuilder().append("to.S(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var5;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("to.S(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -226,23 +202,18 @@ abstract class to extends ea implements vm {
     }
 
     private final boolean a(byte param0, ea param1) {
-        RuntimeException var3 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -67) {
             field_t = 88;
           }
-          stackIn_7_0 = (null != this.field_s) && (!this.field_s.e(28660)) && (this.field_s.a(param1, (byte) -42));
+          boolean stackIn_7_0 = (null != this.field_s) && (!this.field_s.e(28660)) && (this.field_s.a(param1, (byte) -42));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("to.EA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("to.EA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -253,14 +224,13 @@ abstract class to extends ea implements vm {
     }
 
     String c(byte param0) {
-        String var3 = null;
         if (param0 > -41) {
           Hashtable var4 = (Hashtable) null;
           this.a((StringBuilder) null, -79, 77, (Hashtable) null);
         }
         String var2 = super.c((byte) -65);
         if (null != this.field_s) {
-          var3 = this.field_s.c((byte) -117);
+          String var3 = this.field_s.c((byte) -117);
           if (var3 != null) {
             return var3;
           }
@@ -269,23 +239,18 @@ abstract class to extends ea implements vm {
     }
 
     boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
-        RuntimeException var8 = null;
-        boolean stackIn_6_0 = false;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 34) {
             this.a(-36, 37, 20, -53, (byte) -115);
           }
-          stackIn_6_0 = (this.field_s != null) && (this.field_s.a(34, this.field_p + param1, param2, param3, this.field_h + param4, param5, param6));
+          boolean stackIn_6_0 = (this.field_s != null) && (this.field_s.a(34, this.field_p + param1, param2, param3, this.field_h + param4, param5, param6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_9_0 = var8;
-          stackIn_9_1 = new StringBuilder().append("to.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var8;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("to.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -303,23 +268,18 @@ abstract class to extends ea implements vm {
     }
 
     private final boolean a(int param0, ea param1) {
-        RuntimeException var3 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -37) {
             lastScoreSubmission = (ScoreSubmission) null;
           }
-          stackIn_7_0 = (null != this.field_s) && (!this.field_s.e(28660)) && (this.field_s.a(param1, (byte) -42));
+          boolean stackIn_7_0 = (null != this.field_s) && (!this.field_s.e(28660)) && (this.field_s.a(param1, (byte) -42));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("to.KA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("to.KA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -330,31 +290,25 @@ abstract class to extends ea implements vm {
     }
 
     final static GraphicsRenderer a(int param0, d param1, java.awt.Canvas param2, int param3, int param4) {
-        RuntimeException var5 = null;
-        kj stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 16) {
             to.b(-16, -37, 49);
           }
-          stackIn_3_0 = new kj(param2, param1, param4, param3);
+          kj stackIn_3_0 = new kj(param2, param1, param4, param3);
           return (GraphicsRenderer) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_6_0 = var5;
-          stackIn_6_1 = new StringBuilder().append("to.DA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var5;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("to.DA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -381,9 +335,8 @@ abstract class to extends ea implements vm {
 
     final static void h(int param0) {
         Throwable decompiledCaughtException = null;
-        Object var1 = null;
         if (null != ho.field_b) {
-          var1 = ho.field_b;
+          Object var1 = ho.field_b;
           synchronized (var1) {
             ho.field_b = null;
           }
@@ -394,25 +347,19 @@ abstract class to extends ea implements vm {
     }
 
     final boolean a(ea param0, byte param1) {
-        RuntimeException var3 = null;
-        ea var4 = null;
-        boolean stackIn_6_0 = false;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -42) {
-            var4 = (ea) null;
+            ea var4 = (ea) null;
             this.a((byte) -27, (ea) null, 12, -44);
           }
-          stackIn_6_0 = (null != this.field_s) && (this.field_s.a(param0, (byte) -42));
+          boolean stackIn_6_0 = (null != this.field_s) && (this.field_s.a(param0, (byte) -42));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_9_0 = var3;
-          stackIn_9_1 = new StringBuilder().append("to.U(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var3;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("to.U(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -423,25 +370,19 @@ abstract class to extends ea implements vm {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, boolean param6) {
-        RuntimeException var8 = null;
-        ea var9 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param6) {
-            var9 = (ea) null;
+            ea var9 = (ea) null;
             this.a(-108, -17, '\022', (ea) null);
           }
-          stackIn_7_0 = (null != this.field_s) && (this.field_s.e(28660)) && (this.field_s.a(param0, param1, param2, param3, param4, param5, false));
+          boolean stackIn_7_0 = (null != this.field_s) && (this.field_s.e(28660)) && (this.field_s.a(param0, param1, param2, param3, param4, param5, false));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_10_0 = var8;
-          stackIn_10_1 = new StringBuilder().append("to.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var8;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("to.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -452,37 +393,30 @@ abstract class to extends ea implements vm {
     }
 
     StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
-        RuntimeException var5 = null;
-        StringBuilder stackIn_2_0 = null;
-        StringBuilder stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 32462) {
-            stackIn_2_0 = (StringBuilder) null;
+            StringBuilder stackIn_2_0 = (StringBuilder) null;
             return stackIn_2_0;
           }
           if (this.a(param0, param2, false, param3)) {
             this.a(param0, 0, param3, param2);
             this.a(param0, param3, (byte) -24, param2);
           }
-          stackIn_7_0 = (StringBuilder) (param0);
+          StringBuilder stackIn_7_0 = (StringBuilder) (param0);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("to.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var5;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("to.A(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_14_2 = "null";
           } else {

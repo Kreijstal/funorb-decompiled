@@ -10,68 +10,50 @@ final class pn implements Runnable {
     volatile tk[] field_c;
 
     final static byte[] a(byte[] param0, int param1) {
-        byte[] stackIn_2_0 = null;
-        byte[] stackIn_22_0 = null;
-        byte[] stackIn_24_0 = null;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        Throwable decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        byte[] var5 = null;
-        int var5_int = 0;
-        byte[] var6 = null;
-        Object var7 = null;
-        PacketBuffer var9 = null;
-        byte[] var10 = null;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
         try {
           if (param1 != 0) {
-            stackIn_2_0 = (byte[]) null;
+            byte[] stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var9 = new PacketBuffer(param0);
-          var3 = var9.readUnsignedByte(-123);
-          var4 = var9.readInt((byte) 113);
+          PacketBuffer var9 = new PacketBuffer(param0);
+          int var3 = var9.readUnsignedByte(-123);
+          int var4 = var9.readInt((byte) 113);
           if (var4 >= 0 && (0 == kk.field_K ||
             !(var4 > kk.field_K))) {
             if (var3 == 0) {
-              var13 = new byte[var4];
-              var11 = var13;
-              var5 = var11;
+              byte[] var13 = new byte[var4];
+              byte[] var11 = var13;
+              byte[] var5 = var11;
               var9.a(0, param1 + 7186, var4, var13);
-              stackIn_24_0 = var5;
+              byte[] stackIn_24_0 = var5;
               return stackIn_24_0;
             }
-            var5_int = var9.readInt((byte) 110);
+            int var5_int = var9.readInt((byte) 110);
             if (var5_int >= 0 && (kk.field_K == 0 ||
               !(var5_int > kk.field_K))) {
-              var12 = new byte[var5_int];
-              var10 = var12;
-              var6 = var10;
+              byte[] var12 = new byte[var5_int];
+              byte[] var10 = var12;
+              byte[] var6 = var10;
               if (var3 == 1) {
                 on.a(var12, var5_int, param0, var4, 9);
               } else {
-                var7 = vg.field_h;
+                Object var7 = vg.field_h;
                 synchronized (var7) {
                   vg.field_h.a(var12, 10, var9);
                 }
               }
-              stackIn_22_0 = var6;
+              byte[] stackIn_22_0 = var6;
               return stackIn_22_0;
             }
             throw new RuntimeException();
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_27_0 = var2;
-          stackIn_27_1 = new StringBuilder().append("pn.D(");
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_27_0 = var2;
+          StringBuilder stackIn_27_1 = new StringBuilder().append("pn.D(");
           if (param0 == null) {
             stackIn_28_2 = "null";
           } else {
@@ -89,14 +71,12 @@ final class pn implements Runnable {
     }
 
     public final void run() {
-        int var1_int = 0;
-        tk var2 = null;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_e = true;
         try {
           while (!this.field_a) {
-            for (var1_int = 0; var1_int < 2; var1_int++) {
-              var2 = this.field_c[var1_int];
+            for (int var1_int = 0; var1_int < 2; var1_int++) {
+              tk var2 = this.field_c[var1_int];
               if (var2 != null) {
                 var2.h();
               }
@@ -136,27 +116,21 @@ final class pn implements Runnable {
     }
 
     final static void a(boolean param0) {
-        int var2 = 0;
-        int var1_int = 0;
-        int var3 = 0;
-        int var4 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var1_int = gi.field_i[0];
+          int var1_int = gi.field_i[0];
           if (!param0) {
             return;
           }
-          for (var2 = 1; var2 < gi.field_i.length; var2++) {
-            var3 = gi.field_i[var2];
+          for (int var2 = 1; var2 < gi.field_i.length; var2++) {
+            int var3 = gi.field_i[var2];
             au.a(jr.field_n, var2 << 4, jr.field_n, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "pn.C(" + param0 + ')');
         }
     }

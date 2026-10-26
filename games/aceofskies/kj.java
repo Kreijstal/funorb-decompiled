@@ -35,8 +35,7 @@ final class kj extends GraphicsRenderer {
     private static String field_H;
 
     private final it a(Runnable param0) {
-        int var2 = 0;
-        for (var2 = 0; var2 < this.field_A; var2++) {
+        for (int var2 = 0; var2 < this.field_A; var2++) {
           if (this.field_e[var2].field_a == param0) {
             return this.field_e[var2];
           }
@@ -52,8 +51,7 @@ final class kj extends GraphicsRenderer {
     }
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
-        oe var4;
-        var4 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
+        oe var4 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
         if (var4 != null) {
           if (var4.field_g == param1 &&
             var4.field_h == param2) {
@@ -67,15 +65,11 @@ final class kj extends GraphicsRenderer {
     }
 
     final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int incrementValue$0 = 0;
         param6 = param6 - param2;
-        for (var8 = 0; var8 < param3; var8++) {
-          var9 = (param1 + var8) * this.field_f + param0;
-          for (var10 = 0; var10 < param2; var10++) {
-            incrementValue$0 = param5;
+        for (int var8 = 0; var8 < param3; var8++) {
+          int var9 = (param1 + var8) * this.field_f + param0;
+          for (int var10 = 0; var10 < param2; var10++) {
+            int incrementValue$0 = param5;
             param5++;
             this.field_E[var9 + var10] = param4[incrementValue$0];
           }
@@ -88,15 +82,11 @@ final class kj extends GraphicsRenderer {
     }
 
     private final void f() {
-        int var2 = 0;
-        int var3 = 0;
-        int var1 = 0;
-        int var1Lifetime1;
-        for (var1 = 0; var1 < this.field_A; var1++) {
+        for (int var1 = 0; var1 < this.field_A; var1++) {
         }
-        var1Lifetime1 = this.field_w * this.field_f + this.field_z;
-        for (var2 = this.field_w; var2 < this.field_D; var2++) {
-          for (var3 = 0; var3 < this.field_A; var3++) {
+        int var1Lifetime1 = this.field_w * this.field_f + this.field_z;
+        for (int var2 = this.field_w; var2 < this.field_D; var2++) {
+          for (int var3 = 0; var3 < this.field_A; var3++) {
             this.field_e[var3].field_d.field_a[var2 - this.field_w] = var1Lifetime1;
           }
           var1Lifetime1 = var1Lifetime1 + this.field_f;
@@ -104,18 +94,15 @@ final class kj extends GraphicsRenderer {
     }
 
     final void b(int param0) {
-        ui var4 = null;
-        int var5 = 0;
-        uh var6 = null;
         int var2 = param0 - this.field_B;
         Object var3 = this.field_F.a((byte) -16);
         while (var3 != null) {
-          var4 = (ui) (var3);
+          ui var4 = (ui) (var3);
           if (var4.field_e) {
             var4.field_i = var4.field_i + var2;
-            var5 = var4.field_i / 20;
+            int var5 = var4.field_i / 20;
             if (var5 > 0) {
-              var6 = this.field_a.a(false, var4.field_h);
+              uh var6 = this.field_a.a(false, var4.field_h);
               var4.a(var6.field_n * var2 * 50 / 1000, var6.field_j * var2 * 50 / 1000);
               var4.field_i = var4.field_i - var5 * 20;
             }
@@ -140,44 +127,26 @@ final class kj extends GraphicsRenderer {
     }
 
     final RenderSprite createSprite(SpriteData data, boolean preferIndexed) {
-        int[] stackIn_26_0 = null;
-        int stackIn_26_1 = 0;
         int stackIn_27_2 = 0;
-        int[] var3;
-        byte[] var4;
-        int var5;
-        int var6;
         Object var7;
-        int[] var8;
         byte[] var9;
         int var10;
         int var11;
         int var12;
-        int var13;
-        byte[] var14;
-        int[] var15;
-        int[] var16;
-        byte[] var17;
-        int[] var18;
-        int[] var19;
-        int[] var20;
-        byte[] var21;
-        int[] var22;
-        int[] var23;
-        var20 = data.palette;
-        var16 = var20;
-        var3 = var16;
-        var4 = data.indices;
-        var5 = data.width;
-        var6 = data.height;
+        int[] var20 = data.palette;
+        int[] var16 = var20;
+        int[] var3 = var16;
+        byte[] var4 = data.indices;
+        int var5 = data.width;
+        int var6 = data.height;
         if (preferIndexed &&
           data.alpha == null) {
-          var22 = new int[var20.length];
-          var18 = var22;
-          var8 = var18;
-          var21 = new byte[var5 * var6];
-          var17 = var21;
-          var14 = var17;
+          int[] var22 = new int[var20.length];
+          int[] var18 = var22;
+          int[] var8 = var18;
+          byte[] var21 = new byte[var5 * var6];
+          byte[] var17 = var21;
+          byte[] var14 = var17;
           var9 = var14;
           for (var10 = 0; var10 < var6; var10++) {
             var11 = var10 * var5;
@@ -190,9 +159,9 @@ final class kj extends GraphicsRenderer {
           }
           var7 = new mt(this, var21, var22, var5, var6);
         } else {
-          var23 = new int[var5 * var6];
-          var19 = var23;
-          var15 = var19;
+          int[] var23 = new int[var5 * var6];
+          int[] var19 = var23;
+          int[] var15 = var19;
           var9 = data.alpha;
           if (var9 != null) {
             for (var10 = 0; var10 < var6; var10++) {
@@ -206,9 +175,9 @@ final class kj extends GraphicsRenderer {
             for (var10 = 0; var10 < var6; var10++) {
               var11 = var10 * var5;
               for (var12 = 0; var12 < var5; var12++) {
-                var13 = var3[var4[var11 + var12] & 255];
-                stackIn_26_0 = var15;
-                stackIn_26_1 = var11 + var12;
+                int var13 = var3[var4[var11 + var12] & 255];
+                int[] stackIn_26_0 = var15;
+                int stackIn_26_1 = var11 + var12;
                 if (var13 == 0) {
                   stackIn_27_2 = 0;
                 } else {
@@ -225,17 +194,9 @@ final class kj extends GraphicsRenderer {
     }
 
     final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int incrementValue$1 = 0;
-        int incrementValue$0 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var13Lifetime1;
         if (param0 < this.field_z) {
           param2 = param2 - (this.field_z - param0);
           param0 = this.field_z;
@@ -254,9 +215,9 @@ final class kj extends GraphicsRenderer {
           if (param3 > 0 &&
             param0 <= this.field_k &&
             param1 <= this.field_D) {
-            var7 = this.field_f - param2;
-            var8 = param0 + param1 * this.field_f;
-            var9 = param4 >>> 24;
+            int var7 = this.field_f - param2;
+            int var8 = param0 + param1 * this.field_f;
+            int var9 = param4 >>> 24;
             if (param5 != 0 && (param5 != 1 ||
               var9 != 255)) {
               if (param5 == 1) {
@@ -264,9 +225,9 @@ final class kj extends GraphicsRenderer {
                 var10 = 256 - var9;
                 for (var11 = 0; var11 < param3; var11++) {
                   for (var12 = -param2; var12 < 0; var12++) {
-                    var13 = this.field_E[var8];
+                    int var13 = this.field_E[var8];
                     var13 = ((var13 & 16711935) * var10 >> 8 & 16711935) + (((var13 & -16711936) >>> 8) * var10 & -16711936);
-                    incrementValue$1 = var8;
+                    int incrementValue$1 = var8;
                     var8++;
                     this.field_E[incrementValue$1] = param4 + var13;
                   }
@@ -280,10 +241,10 @@ final class kj extends GraphicsRenderer {
               for (var10 = 0; var10 < param3; var10++) {
                 for (var11 = -param2; var11 < 0; var11++) {
                   var12 = this.field_E[var8];
-                  var13Lifetime1 = param4 + var12;
-                  var14 = (param4 & 16711935) + (var12 & 16711935);
+                  int var13Lifetime1 = param4 + var12;
+                  int var14 = (param4 & 16711935) + (var12 & 16711935);
                   var12 = (var14 & 16777472) + (var13Lifetime1 - var14 & 65536);
-                  incrementValue$0 = var8;
+                  int incrementValue$0 = var8;
                   var8++;
                   this.field_E[incrementValue$0] = var13Lifetime1 - var12 | var12 - (var12 >>> 8);
                 }
@@ -335,7 +296,6 @@ final class kj extends GraphicsRenderer {
 
     private kj(d param0) {
         super(param0);
-        iu discarded$0 = null;
         this.field_h = false;
         this.field_y = false;
         this.field_g = new IntrusiveNodeHashTable(4);
@@ -350,7 +310,7 @@ final class kj extends GraphicsRenderer {
         this.field_u = new gq(16);
         try {
           this.field_F = new gq(256);
-          discarded$0 = new iu();
+          iu discarded$0 = new iu();
           this.f(1);
           this.d(0);
           fr.a(true, 0, true);
@@ -379,27 +339,10 @@ final class kj extends GraphicsRenderer {
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var13;
-        int var7Lifetime1;
-        int var8Lifetime1;
         int var9Lifetime1;
-        int var9Lifetime2;
         int var10Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        int var13Lifetime1;
-        int var9Lifetime3;
-        int var10Lifetime2;
-        int var11Lifetime2;
-        int var12Lifetime2;
-        int var9Lifetime4;
-        int var11Lifetime2Lifetime1;
         param2 = param2 - param0;
         param3 = param3 - param1;
         if (param3 == 0) {
@@ -424,12 +367,11 @@ final class kj extends GraphicsRenderer {
           param1 = param1 + param3;
           param3 = -param3;
         }
-        boolean decompiledFrameRemainder0 = true;
         if (param2 <= param3) {
           param0 = param0 << 16;
           param0 = param0 + 32768;
           param2 = param2 << 16;
-          var7 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
+          int var7 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
           param3 = param3 + param1;
           if (param1 < this.field_w) {
             param0 = param0 + var7 * (this.field_w - param1);
@@ -438,18 +380,18 @@ final class kj extends GraphicsRenderer {
           if (param3 >= this.field_D) {
             param3 = this.field_D - 1;
           }
-          var8 = param4 >>> 24;
+          int var8 = param4 >>> 24;
           if (param5 != 0 && (param5 != 1 ||
             var8 != 255)) {
             if (param5 == 1) {
               param4 = ((param4 & 16711935) * var8 >> 8 & 16711935) + ((param4 & 65280) * var8 >> 8 & 65280) + (var8 << 24);
-              var9 = 256 - var8;
+              int var9 = 256 - var8;
               while (param1 <= param3) {
-                var10 = param0 >> 16;
+                int var10 = param0 >> 16;
                 if (var10 >= this.field_z &&
                   var10 < this.field_k) {
-                  var11 = var10 + param1 * this.field_f;
-                  var12 = this.field_E[var11];
+                  int var11 = var10 + param1 * this.field_f;
+                  int var12 = this.field_E[var11];
                   var12 = ((var12 & 16711935) * var9 >> 8 & 16711935) + ((var12 & 65280) * var9 >> 8 & 65280);
                   this.field_E[var10 + param1 * this.field_f] = param4 + var12;
                 }
@@ -461,14 +403,14 @@ final class kj extends GraphicsRenderer {
                 throw new IllegalArgumentException();
               }
               while (param1 <= param3) {
-                var9Lifetime4 = param0 >> 16;
+                int var9Lifetime4 = param0 >> 16;
                 if (var9Lifetime4 >= this.field_z &&
                   var9Lifetime4 < this.field_k) {
-                  var10Lifetime2 = var9Lifetime4 + param1 * this.field_f;
-                  var11Lifetime2 = this.field_E[var10Lifetime2];
-                  var12Lifetime2 = param4 + var11Lifetime2;
-                  var13 = (param4 & 16711935) + (var11Lifetime2 & 16711935);
-                  var11Lifetime2Lifetime1 = (var13 & 16777472) + (var12Lifetime2 - var13 & 65536);
+                  int var10Lifetime2 = var9Lifetime4 + param1 * this.field_f;
+                  int var11Lifetime2 = this.field_E[var10Lifetime2];
+                  int var12Lifetime2 = param4 + var11Lifetime2;
+                  int var13 = (param4 & 16711935) + (var11Lifetime2 & 16711935);
+                  int var11Lifetime2Lifetime1 = (var13 & 16777472) + (var12Lifetime2 - var13 & 65536);
                   this.field_E[var10Lifetime2] = var12Lifetime2 - var11Lifetime2Lifetime1 | var11Lifetime2Lifetime1 - (var11Lifetime2Lifetime1 >>> 8);
                 }
                 param0 = param0 + var7;
@@ -477,7 +419,7 @@ final class kj extends GraphicsRenderer {
             }
           } else {
             while (param1 <= param3) {
-              var9Lifetime3 = param0 >> 16;
+              int var9Lifetime3 = param0 >> 16;
               if (var9Lifetime3 >= this.field_z &&
                 var9Lifetime3 < this.field_k) {
                 this.field_E[var9Lifetime3 + param1 * this.field_f] = param4;
@@ -486,13 +428,12 @@ final class kj extends GraphicsRenderer {
               param1++;
             }
           }
-          decompiledFrameRemainder0 = false;
         }
         else {
           param1 = param1 << 16;
           param1 = param1 + 32768;
           param3 = param3 << 16;
-          var7Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
+          int var7Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
           param2 = param2 + param0;
           if (param0 < this.field_z) {
             param1 = param1 + var7Lifetime1 * (this.field_z - param0);
@@ -501,7 +442,7 @@ final class kj extends GraphicsRenderer {
           if (param2 >= this.field_k) {
             param2 = this.field_k - 1;
           }
-          var8Lifetime1 = param4 >>> 24;
+          int var8Lifetime1 = param4 >>> 24;
           if (param5 != 0 && (param5 != 1 ||
             var8Lifetime1 != 255)) {
             if (param5 == 1) {
@@ -530,7 +471,7 @@ final class kj extends GraphicsRenderer {
                   var10Lifetime1 = param0 + var9Lifetime1 * this.field_f;
                   var11Lifetime1 = this.field_E[var10Lifetime1];
                   var12Lifetime1 = param4 + var11Lifetime1;
-                  var13Lifetime1 = (param4 & 16711935) + (var11Lifetime1 & 16711935);
+                  int var13Lifetime1 = (param4 & 16711935) + (var11Lifetime1 & 16711935);
                   var11Lifetime1 = (var13Lifetime1 & 16777472) + (var12Lifetime1 - var13Lifetime1 & 65536);
                   this.field_E[var10Lifetime1] = var12Lifetime1 - var11Lifetime1 | var11Lifetime1 - (var11Lifetime1 >>> 8);
                 }
@@ -538,11 +479,11 @@ final class kj extends GraphicsRenderer {
                 param0++;
               }
             }
-            decompiledFrameRemainder0 = false;
+            boolean decompiledFrameRemainder0 = false;
           }
           else {
             while (param0 <= param2) {
-              var9Lifetime2 = param1 >> 16;
+              int var9Lifetime2 = param1 >> 16;
               if (var9Lifetime2 >= this.field_w &&
                 var9Lifetime2 < this.field_D) {
                 this.field_E[param0 + var9Lifetime2 * this.field_f] = param4;
@@ -556,14 +497,10 @@ final class kj extends GraphicsRenderer {
     }
 
     final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
-        int var7 = 0;
-        int[] var4;
-        int[] var5;
-        int var6;
-        var4 = new int[param1.length];
-        var5 = new int[param1.length];
-        var6 = 0;
-        for (var7 = 0; var7 < param1.length; var7++) {
+        int[] var4 = new int[param1.length];
+        int[] var5 = new int[param1.length];
+        int var6 = 0;
+        for (int var7 = 0; var7 < param1.length; var7++) {
           var4[var7] = param1[var7].width;
           var5[var7] = param1[var7].height;
           if (param1[var7].alpha != null) {
@@ -583,22 +520,20 @@ final class kj extends GraphicsRenderer {
     }
 
     private final void f(int param0) {
-        int var2 = 0;
         this.field_A = param0;
         this.field_e = new it[this.field_A];
-        for (var2 = 0; var2 < this.field_A; var2++) {
+        for (int var2 = 0; var2 < this.field_A; var2++) {
           this.field_e[var2] = new it(this);
         }
     }
 
     final void b(int param0, int param1) throws lp {
-        java.awt.Graphics var3 = null;
         if (this.field_l == null ||
           this.field_p == null) {
           throw new IllegalStateException(field_H);
         }
         try {
-          var3 = this.field_l.getGraphics();
+          java.awt.Graphics var3 = this.field_l.getGraphics();
           this.field_p.a(this.field_q, param1, 0, this.field_n, -57, var3, param0, 0);
         } catch (Exception exception) {
           this.field_l.repaint();
@@ -630,17 +565,6 @@ final class kj extends GraphicsRenderer {
     }
 
     final void U(int param0, int param1, int param2, int param3, int param4) {
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        int var8Lifetime2;
-        int var9Lifetime1Lifetime1;
         if (param1 >= this.field_w) {
           if (param1 >= this.field_D) {
             return;
@@ -652,15 +576,15 @@ final class kj extends GraphicsRenderer {
           if (param0 + param2 > this.field_k) {
             param2 = this.field_k - param0;
           }
-          var6 = param0 + param1 * this.field_f;
-          var7 = param3 >>> 24;
+          int var6 = param0 + param1 * this.field_f;
+          int var7 = param3 >>> 24;
           if (param4 != 0 && (param4 != 1 ||
             var7 != 255)) {
             if (param4 == 1) {
               param3 = ((param3 & 16711935) * var7 >> 8 & 16711935) + ((param3 & 65280) * var7 >> 8 & 65280) + (var7 << 24);
-              var8 = 256 - var7;
-              for (var9 = 0; var9 < param2; var9++) {
-                var10 = this.field_E[var6 + var9];
+              int var8 = 256 - var7;
+              for (int var9 = 0; var9 < param2; var9++) {
+                int var10 = this.field_E[var6 + var9];
                 var10 = ((var10 & 16711935) * var8 >> 8 & 16711935) + ((var10 & 65280) * var8 >> 8 & 65280);
                 this.field_E[var6 + var9] = param3 + var10;
               }
@@ -669,16 +593,16 @@ final class kj extends GraphicsRenderer {
             if (param4 != 2) {
               throw new IllegalArgumentException();
             }
-            for (var8Lifetime2 = 0; var8Lifetime2 < param2; var8Lifetime2++) {
-              var9Lifetime1 = this.field_E[var6 + var8Lifetime2];
-              var10Lifetime1 = param3 + var9Lifetime1;
-              var11 = (param3 & 16711935) + (var9Lifetime1 & 16711935);
-              var9Lifetime1Lifetime1 = (var11 & 16777472) + (var10Lifetime1 - var11 & 65536);
+            for (int var8Lifetime2 = 0; var8Lifetime2 < param2; var8Lifetime2++) {
+              int var9Lifetime1 = this.field_E[var6 + var8Lifetime2];
+              int var10Lifetime1 = param3 + var9Lifetime1;
+              int var11 = (param3 & 16711935) + (var9Lifetime1 & 16711935);
+              int var9Lifetime1Lifetime1 = (var11 & 16777472) + (var10Lifetime1 - var11 & 65536);
               this.field_E[var6 + var8Lifetime2] = var10Lifetime1 - var9Lifetime1Lifetime1 | var9Lifetime1Lifetime1 - (var9Lifetime1Lifetime1 >>> 8);
             }
             return;
           }
-          for (var8Lifetime1 = 0; var8Lifetime1 < param2; var8Lifetime1++) {
+          for (int var8Lifetime1 = 0; var8Lifetime1 < param2; var8Lifetime1++) {
             this.field_E[var6 + var8Lifetime1] = param3;
           }
         }
@@ -696,7 +620,6 @@ final class kj extends GraphicsRenderer {
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
-        java.awt.Dimension var5 = null;
         oe var4 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
         if (var4 != null) {
           var4.unlink(-128);
@@ -704,7 +627,7 @@ final class kj extends GraphicsRenderer {
           this.field_g.put(-32, (long)param0.hashCode(), var4);
           if (this.field_l == param0 &&
             this.field_C == null) {
-            var5 = param0.getSize();
+            java.awt.Dimension var5 = param0.getSize();
             this.field_q = var5.width;
             this.field_n = var5.height;
             this.field_p = var4;
@@ -739,8 +662,6 @@ final class kj extends GraphicsRenderer {
     }
 
     private final void a(java.awt.Canvas param0) {
-        oe var2;
-        java.awt.Dimension var3;
         if (param0 == null) {
           this.field_l = null;
           this.field_p = null;
@@ -753,10 +674,10 @@ final class kj extends GraphicsRenderer {
             this.g();
           }
         } else {
-          var2 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
+          oe var2 = (oe) (this.field_g.findByKey((byte) 106, (long)param0.hashCode()));
           if (var2 != null) {
             this.field_l = param0;
-            var3 = param0.getSize();
+            java.awt.Dimension var3 = param0.getSize();
             this.field_q = var3.width;
             this.field_n = var3.height;
             this.field_p = var2;
@@ -778,21 +699,15 @@ final class kj extends GraphicsRenderer {
     }
 
     final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int var10 = 0;
-        int incrementValue$4 = 0;
-        int var7;
-        int var8;
-        int var9;
-        int var11;
-        var7 = 0;
-        var8 = param1;
-        var9 = 0;
+        int var7 = 0;
+        int var8 = param1;
+        int var9 = 0;
         scanLoop1: while (true) {
           if (var9 < param4) {
-            for (var10 = 0; var10 < param3; var10++) {
-              incrementValue$4 = var8;
+            for (int var10 = 0; var10 < param3; var10++) {
+              int incrementValue$4 = var8;
               var8++;
-              var11 = param0[incrementValue$4] >>> 24;
+              int var11 = param0[incrementValue$4] >>> 24;
               if (var11 != 0 &&
                 var11 != 255) {
                 var7 = 1;
@@ -829,8 +744,7 @@ final class kj extends GraphicsRenderer {
     }
 
     private final void g() {
-        int var1 = 0;
-        for (var1 = 0; var1 < this.field_A; var1++) {
+        for (int var1 = 0; var1 < this.field_A; var1++) {
           this.field_e[var1].a(false);
         }
         this.j();
@@ -857,19 +771,6 @@ final class kj extends GraphicsRenderer {
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        int var11;
-        int var12;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        int var10Lifetime1;
-        int var11Lifetime1;
-        int var8Lifetime2;
-        int var10Lifetime1Lifetime1;
         if (param0 >= this.field_z) {
           if (param0 >= this.field_k) {
             return;
@@ -881,16 +782,16 @@ final class kj extends GraphicsRenderer {
           if (param1 + param2 > this.field_D) {
             param2 = this.field_D - param1;
           }
-          var6 = param0 + param1 * this.field_f;
-          var7 = param3 >>> 24;
+          int var6 = param0 + param1 * this.field_f;
+          int var7 = param3 >>> 24;
           if (param4 != 0 && (param4 != 1 ||
             var7 != 255)) {
             if (param4 == 1) {
               param3 = ((param3 & 16711935) * var7 >> 8 & 16711935) + ((param3 & 65280) * var7 >> 8 & 65280) + (var7 << 24);
-              var8 = 256 - var7;
-              for (var9 = 0; var9 < param2; var9++) {
-                var10 = var6 + var9 * this.field_f;
-                var11 = this.field_E[var10];
+              int var8 = 256 - var7;
+              for (int var9 = 0; var9 < param2; var9++) {
+                int var10 = var6 + var9 * this.field_f;
+                int var11 = this.field_E[var10];
                 var11 = ((var11 & 16711935) * var8 >> 8 & 16711935) + ((var11 & 65280) * var8 >> 8 & 65280);
                 this.field_E[var10] = param3 + var11;
               }
@@ -899,17 +800,17 @@ final class kj extends GraphicsRenderer {
             if (param4 != 2) {
               throw new IllegalArgumentException();
             }
-            for (var8Lifetime2 = 0; var8Lifetime2 < param2; var8Lifetime2++) {
-              var9Lifetime1 = var6 + var8Lifetime2 * this.field_f;
-              var10Lifetime1 = this.field_E[var9Lifetime1];
-              var11Lifetime1 = param3 + var10Lifetime1;
-              var12 = (param3 & 16711935) + (var10Lifetime1 & 16711935);
-              var10Lifetime1Lifetime1 = (var12 & 16777472) + (var11Lifetime1 - var12 & 65536);
+            for (int var8Lifetime2 = 0; var8Lifetime2 < param2; var8Lifetime2++) {
+              int var9Lifetime1 = var6 + var8Lifetime2 * this.field_f;
+              int var10Lifetime1 = this.field_E[var9Lifetime1];
+              int var11Lifetime1 = param3 + var10Lifetime1;
+              int var12 = (param3 & 16711935) + (var10Lifetime1 & 16711935);
+              int var10Lifetime1Lifetime1 = (var12 & 16777472) + (var11Lifetime1 - var12 & 65536);
               this.field_E[var9Lifetime1] = var11Lifetime1 - var10Lifetime1Lifetime1 | var10Lifetime1Lifetime1 - (var10Lifetime1Lifetime1 >>> 8);
             }
             return;
           }
-          for (var8Lifetime1 = 0; var8Lifetime1 < param2; var8Lifetime1++) {
+          for (int var8Lifetime1 = 0; var8Lifetime1 < param2; var8Lifetime1++) {
             this.field_E[var6 + var8Lifetime1 * this.field_f] = param3;
           }
         }

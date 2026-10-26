@@ -7,29 +7,21 @@ final class b {
     static int field_a;
 
     final static boolean a(boolean param0, PacketBuffer param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_6_0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.readUnsignedByte(119);
+          int var2_int = param1.readUnsignedByte(119);
           if (!param0) {
             field_b = (nf) null;
           }
-          stackIn_5_0 = (var2_int != 1) ? 0 : 1;
-          var3 = stackIn_5_0;
-          stackIn_6_0 = var3;
+          int stackIn_5_0 = (var2_int != 1) ? 0 : 1;
+          int var3 = stackIn_5_0;
+          int stackIn_6_0 = var3;
           return stackIn_6_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_9_0 = var2;
-          stackIn_9_1 = new StringBuilder().append("b.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var2;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("b.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {

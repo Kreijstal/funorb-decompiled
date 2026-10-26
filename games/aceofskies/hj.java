@@ -47,15 +47,10 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static Sprite a(boolean param0, int param1, int param2, ResourceArchive param3) {
-        RuntimeException var4 = null;
-        Sprite stackIn_2_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (Sprite) null;
+            Sprite stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           if (tn.a(param3, (byte) -127, param1, param2)) {
@@ -63,10 +58,10 @@ final class hj extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("hj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var4;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("hj.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_10_2 = "null";
           } else {

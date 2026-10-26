@@ -24,45 +24,27 @@ final class dh {
     }
 
     final static void a(int param0) {
-        int var7 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int[] var3 = null;
-        int[] var4 = null;
-        CipherPacketBuffer var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int[] var10 = null;
-        int[] var11 = null;
-        oc var12 = null;
-        CipherPacketBuffer var13 = null;
-        eh var14 = null;
-        int[] var15 = null;
         Object var16 = null;
-        eh var16_ref = null;
-        int[] var17 = null;
-        var16 = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 <= 39) {
             unachievedSprite = (RenderSprite) null;
           }
-          var13 = IntKeyLookup.incomingPacket;
-          var2 = var13.readUnsignedByte(121);
+          CipherPacketBuffer var13 = IntKeyLookup.incomingPacket;
+          int var2 = var13.readUnsignedByte(121);
           if (var2 == 0) {
-            var11 = fu.a(true);
-            var17 = var11;
-            var15 = var17;
-            var3 = var15;
-            var10 = var11;
-            var4 = var10;
-            var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-97);
-            for (var7 = 0; var7 < var6; var7++) {
+            int[] var11 = fu.a(true);
+            int[] var17 = var11;
+            int[] var15 = var17;
+            int[] var3 = var15;
+            int[] var10 = var11;
+            int[] var4 = var10;
+            CipherPacketBuffer var5 = var13;
+            int var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-97);
+            for (int var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 124);
             }
-            var16_ref = (eh) (wu.field_w.first(268435455));
+            eh var16_ref = (eh) (wu.field_w.first(268435455));
             if (var16_ref == null) {
               te.b(true);
               return;
@@ -75,7 +57,7 @@ final class dh {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              var14 = (eh) (wu.field_w.first(268435455));
+              eh var14 = (eh) (wu.field_w.first(268435455));
               if (var14 == null) {
                 te.b(true);
                 return;
@@ -89,7 +71,7 @@ final class dh {
               te.b(true);
             }
           } else {
-            var12 = (oc) (ci.field_j.first(268435455));
+            oc var12 = (oc) (ci.field_j.first(268435455));
             if (var12 == null) {
               te.b(true);
               return;
@@ -98,8 +80,8 @@ final class dh {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "dh.A(" + param0 + ')');
         }
     }

@@ -44,48 +44,39 @@ final class ac implements gd {
     }
 
     final static mo a(boolean param0, int param1, byte[] param2, jc param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        Object stackIn_2_0 = null;
-        Object stackIn_5_0 = null;
-        mo stackIn_9_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == null) {
-            stackIn_2_0 = null;
+            Object stackIn_2_0 = null;
             return (mo) (stackIn_2_0);
           }
-          var4_int = jaggl.OpenGL.glGenProgramARB();
+          int var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param1, var4_int);
           jaggl.OpenGL.glProgramRawARB(param1, 34933, param2);
           jaggl.OpenGL.glGetIntegerv(34379, ClientException.field_b, 0);
           if (-1 != ClientException.field_b[0]) {
             jaggl.OpenGL.glBindProgramARB(param1, 0);
-            stackIn_5_0 = null;
+            Object stackIn_5_0 = null;
             return (mo) (stackIn_5_0);
           }
           jaggl.OpenGL.glBindProgramARB(param1, 0);
           if (!param0) {
             field_b = (jb) null;
           }
-          stackIn_9_0 = new mo(param3, param1, var4_int);
+          mo stackIn_9_0 = new mo(param3, param1, var4_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_12_0 = var4;
-          stackIn_12_1 = new StringBuilder().append("ac.D(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var4;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("ac.D(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -101,17 +92,13 @@ final class ac implements gd {
     }
 
     final static void writeScoreSubmission(int firstScoreIndex, int opcode, ScoreSubmission submission) {
-        CipherPacketBuffer packet = null;
-        CipherPacketBuffer packetAlias = null;
-        int payloadStartPosition = 0;
-        int scoreIndex = 0;
         int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          packet = q.outgoingPacket;
-          packetAlias = packet;
+          CipherPacketBuffer packet = q.outgoingPacket;
+          CipherPacketBuffer packetAlias = packet;
           packetAlias.writeCipheredOpcode(52, opcode);
           packetAlias.position = packetAlias.position + 1;
-          payloadStartPosition = packetAlias.position;
+          int payloadStartPosition = packetAlias.position;
           packetAlias.writeByte(-1336879960, 1);
           packetAlias.writeShort(submission.submissionId, 23385);
           packetAlias.writeShort(submission.firstShortValue, 23385);
@@ -121,7 +108,7 @@ final class ac implements gd {
           packetAlias.writeInt((byte) 93, submission.thirdContextValue);
           packetAlias.writeInt((byte) 113, submission.fourthContextValue);
           packetAlias.writeByte(-1336879960, submission.scores.length);
-          for (scoreIndex = firstScoreIndex; submission.scores.length > scoreIndex; scoreIndex++) {
+          for (int scoreIndex = firstScoreIndex; submission.scores.length > scoreIndex; scoreIndex++) {
             packet.writeInt((byte) 92, submission.scores[scoreIndex]);
           }
           packetAlias.appendCrc32(payloadStartPosition, firstScoreIndex + 108);

@@ -7,18 +7,8 @@ final class bj {
     private th[] field_b;
 
     private final byte[] b() {
-        int var4 = 0;
-        int var8 = 0;
-        int var1;
-        int var2;
-        byte[] var3;
-        int var5;
-        int var6;
-        int var9;
-        int[] var13;
-        int var2Lifetime1;
-        var1 = 0;
-        for (var2 = 0; var2 < 10; var2++) {
+        int var1 = 0;
+        for (int var2 = 0; var2 < 10; var2++) {
           if (this.field_b[var2] != null &&
             this.field_b[var2].field_r + this.field_b[var2].field_a > var1) {
             var1 = this.field_b[var2].field_r + this.field_b[var2].field_a;
@@ -27,15 +17,15 @@ final class bj {
         if (var1 == 0) {
           return new byte[]{};
         }
-        var2Lifetime1 = 22050 * var1 / 1000;
-        var3 = new byte[var2Lifetime1];
-        for (var4 = 0; var4 < 10; var4++) {
+        int var2Lifetime1 = 22050 * var1 / 1000;
+        byte[] var3 = new byte[var2Lifetime1];
+        for (int var4 = 0; var4 < 10; var4++) {
           if (this.field_b[var4] != null) {
-            var5 = this.field_b[var4].field_r * 22050 / 1000;
-            var6 = this.field_b[var4].field_a * 22050 / 1000;
-            var13 = this.field_b[var4].a(var5, this.field_b[var4].field_r);
-            for (var8 = 0; var8 < var5; var8++) {
-              var9 = var3[var8 + var6] + (var13[var8] >> 8);
+            int var5 = this.field_b[var4].field_r * 22050 / 1000;
+            int var6 = this.field_b[var4].field_a * 22050 / 1000;
+            int[] var13 = this.field_b[var4].a(var5, this.field_b[var4].field_r);
+            for (int var8 = 0; var8 < var5; var8++) {
+              int var9 = var3[var8 + var6] + (var13[var8] >> 8);
               if ((var9 + 128 & -256) != 0) {
                 var9 = var9 >> 31 ^ 127;
               }
@@ -68,11 +58,9 @@ final class bj {
     }
 
     private bj(PacketBuffer param0) {
-        int var2 = 0;
-        int var3;
         this.field_b = new th[10];
-        for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.readUnsignedByte(-92);
+        for (int var2 = 0; var2 < 10; var2++) {
+          int var3 = param0.readUnsignedByte(-92);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_b[var2] = new th();

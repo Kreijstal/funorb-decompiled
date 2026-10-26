@@ -7,19 +7,14 @@ final class we {
     static String field_b;
 
     final static void a(int param0) {
-        SoundPlayback var1 = null;
-        int var2 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        SoundPlayback var1Lifetime1;
-        var2 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           um.field_m.h();
           RendererBitmapFont.field_a.h();
           ad.field_U = ad.field_U - 1;
           if (0 == ad.field_U) {
             ad.field_U = 200;
-            var1 = (SoundPlayback) (di.activeSoundPlaybacks.first(268435455));
+            SoundPlayback var1 = (SoundPlayback) (di.activeSoundPlaybacks.first(268435455));
             while (var1 != null) {
               if (!var1.field_i.isLinked((byte) 93)) {
                 var1.unlink(-128);
@@ -27,7 +22,7 @@ final class we {
               var1 = (SoundPlayback) (di.activeSoundPlaybacks.next((byte) 103));
             }
             if (null != ao.field_c) {
-              var1Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));
+              SoundPlayback var1Lifetime1 = (SoundPlayback) (ao.field_c.first(268435455));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_i.isLinked((byte) 105)) {
                   var1Lifetime1.unlink(-123);
@@ -47,8 +42,8 @@ final class we {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1_ref), "we.C(" + param0 + ')');
         }
     }
@@ -62,32 +57,21 @@ final class we {
     }
 
     final static w a(String param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        Object stackIn_7_0 = null;
-        w stackIn_11_0 = null;
-        w stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param0.length();
-          var3 = 0;
+          int var2_int = param0.length();
+          int var3 = 0;
           while (true) {
             if (var3 >= var2_int) {
               if (param1 < -108) {
-                stackIn_13_0 = td.field_d;
+                w stackIn_13_0 = td.field_d;
                 return stackIn_13_0;
               }
-              stackIn_11_0 = (w) null;
+              w stackIn_11_0 = (w) null;
               return stackIn_11_0;
             }
-            var4 = param0.charAt(var3);
+            int var4 = param0.charAt(var3);
             if (var4 < 48) {
               return null;
             }
@@ -97,13 +81,13 @@ final class we {
             }
             break;
           }
-          stackIn_7_0 = null;
+          Object stackIn_7_0 = null;
           return (w) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_16_0 = var2;
-          stackIn_16_1 = new StringBuilder().append("we.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var2;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("we.B(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -114,37 +98,12 @@ final class we {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, Sprite[] param5) {
-        int var21 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
-        RuntimeException stackIn_76_0 = null;
-        StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var22 = 0;
-        int var20Lifetime1;
-        int var20Lifetime2;
-        int var20Lifetime3;
-        int var20Lifetime4;
-        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 == null) {
             return;
@@ -156,39 +115,39 @@ final class we {
             } else {
               stackIn_10_0 = 0;
             }
-            var6_int = stackIn_10_0;
+            int var6_int = stackIn_10_0;
             if (null == param5[5]) {
               stackIn_13_0 = 0;
             } else {
               stackIn_13_0 = param5[5].fullWidth;
             }
-            var7 = stackIn_13_0;
+            int var7 = stackIn_13_0;
             if (param5[1] != null) {
               stackIn_16_0 = param5[1].fullHeight;
             } else {
               stackIn_16_0 = 0;
             }
-            var8 = stackIn_16_0;
+            int var8 = stackIn_16_0;
             if (null != param5[7]) {
               stackIn_19_0 = param5[7].fullHeight;
             } else {
               stackIn_19_0 = 0;
             }
-            var9 = stackIn_19_0;
-            var10 = param2 + param1;
-            var11 = param0 + param4;
-            var12 = var6_int + param2;
-            var13 = var10 - var7;
-            var14 = param4 + var8;
-            var15 = -var9 + var11;
-            var16 = var12;
-            var17 = var13;
+            int var9 = stackIn_19_0;
+            int var10 = param2 + param1;
+            int var11 = param0 + param4;
+            int var12 = var6_int + param2;
+            int var13 = var10 - var7;
+            int var14 = param4 + var8;
+            int var15 = -var9 + var11;
+            int var16 = var12;
+            int var17 = var13;
             if (var16 > var17) {
               var17 = param1 * var6_int / (var6_int + var7) + param2;
               var16 = param1 * var6_int / (var6_int + var7) + param2;
             }
-            var18 = var14;
-            var19 = var15;
+            int var18 = var14;
+            int var19 = var15;
             SoftwareRasterizer.saveClip(jo.field_j);
             if (var18 > var19) {
               var19 = var8 * param0 / (var9 + var8) + param4;
@@ -217,7 +176,7 @@ final class we {
             if (param5[1] != null &&
               0 != param5[1].fullWidth) {
               SoftwareRasterizer.intersectClip(var16, param4, var17, var18);
-              for (var20 = var12; var20 < var13; var20 = var20 + param5[1].fullWidth) {
+              for (int var20 = var12; var20 < var13; var20 = var20 + param5[1].fullWidth) {
                 param5[1].b(var20, param4);
               }
               SoftwareRasterizer.restoreClip(jo.field_j);
@@ -225,7 +184,7 @@ final class we {
             if (param5[7] != null &&
               param5[7].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].fullWidth) {
+              for (int var20Lifetime1 = var12; var20Lifetime1 < var13; var20Lifetime1 = var20Lifetime1 + param5[7].fullWidth) {
                 param5[7].b(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(jo.field_j);
@@ -233,7 +192,7 @@ final class we {
             if (null != param5[3] &&
               param5[3].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(param2, var18, var16, var19);
-              for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].fullHeight) {
+              for (int var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param5[3].fullHeight) {
                 param5[3].b(param2, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(jo.field_j);
@@ -241,7 +200,7 @@ final class we {
             if (null != param5[5] &&
               param5[5].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
-              for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param5[5].fullHeight) {
+              for (int var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param5[5].fullHeight) {
                 param5[5].b(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(jo.field_j);
@@ -250,8 +209,8 @@ final class we {
               param5[4].fullWidth != 0 &&
               param5[4].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
-              for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].fullHeight) {
-                for (var21 = var12; var21 < var13; var21 = var21 + param5[4].fullWidth) {
+              for (int var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param5[4].fullHeight) {
+                for (int var21 = var12; var21 < var13; var21 = var21 + param5[4].fullWidth) {
                   param5[4].b(var21, var20Lifetime4);
                 }
               }
@@ -264,10 +223,10 @@ final class we {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_76_0 = var6;
-          stackIn_76_1 = new StringBuilder().append("we.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_76_0 = var6;
+          StringBuilder stackIn_76_1 = new StringBuilder().append("we.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_77_2 = "null";
           } else {

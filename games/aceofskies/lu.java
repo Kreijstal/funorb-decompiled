@@ -8,9 +8,7 @@ final class lu {
     private IntrusiveDeque field_c;
 
     final void a(int param0) {
-        IntrusiveNode var2;
-        int var3;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_b = null;
         if (param0 != 1) {
           return;
@@ -18,7 +16,7 @@ final class lu {
         if (this.field_c.isEmpty(true)) {
           return;
         }
-        var2 = this.field_c.first(268435455);
+        IntrusiveNode var2 = this.field_c.first(268435455);
         while (var2 != this.field_c.sentinel) {
           ((eq) (var2)).a((byte) -93);
           var2 = var2.next;

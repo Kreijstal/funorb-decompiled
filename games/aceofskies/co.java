@@ -26,16 +26,14 @@ final class co {
     }
 
     final int a(boolean param0, int param1) {
-        int var3 = 0;
-        int var4;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_h == null) {
           return 0;
         }
         if (this.field_h.length == 0) {
           return 0;
         }
-        for (var3 = 1; var3 < this.field_h.length; var3++) {
+        for (int var3 = 1; var3 < this.field_h.length; var3++) {
           if (param1 < this.field_h[var3] + this.field_h[var3 - 1] >> 1) {
             return -1 + var3;
           }
@@ -65,58 +63,41 @@ final class co {
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var11Lifetime1;
-        int var11Lifetime2;
-        int var11Lifetime3;
-        int var12Lifetime1;
-        int var12Lifetime2;
-        int var12Lifetime3;
-        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 <= 109) {
             co.a(23, -77, 74, -119, -5);
           }
-          var5_int = param3 + param2;
-          var6 = param0 + param1;
+          int var5_int = param3 + param2;
+          int var6 = param0 + param1;
           if (param3 > SoftwareRasterizer.clipLeft) {
             stackIn_6_0 = param3;
           } else {
             stackIn_6_0 = SoftwareRasterizer.clipLeft;
           }
-          var7 = stackIn_6_0;
+          int var7 = stackIn_6_0;
           if (param0 <= SoftwareRasterizer.clipTop) {
             stackIn_9_0 = SoftwareRasterizer.clipTop;
           } else {
             stackIn_9_0 = param0;
           }
-          var8 = stackIn_9_0;
+          int var8 = stackIn_9_0;
           if (var5_int >= SoftwareRasterizer.clipRight) {
             stackIn_12_0 = SoftwareRasterizer.clipRight;
           } else {
             stackIn_12_0 = var5_int;
           }
-          var9 = stackIn_12_0;
+          int var9 = stackIn_12_0;
           if (var6 < SoftwareRasterizer.clipBottom) {
             stackIn_15_0 = var6;
           } else {
             stackIn_15_0 = SoftwareRasterizer.clipBottom;
           }
-          var10 = stackIn_15_0;
+          int var10 = stackIn_15_0;
           if (SoftwareRasterizer.clipLeft <= param3 &&
             SoftwareRasterizer.clipRight > param3) {
-            var11 = param3 + SoftwareRasterizer.stride * var8;
-            var12 = -var8 + var10 + 1 >> 1;
+            int var11 = param3 + SoftwareRasterizer.stride * var8;
+            int var12 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12--;
               if (0 > var12) {
@@ -128,8 +109,8 @@ final class co {
           }
           if (param0 >= SoftwareRasterizer.clipTop &&
             var6 < SoftwareRasterizer.clipBottom) {
-            var11Lifetime1 = SoftwareRasterizer.stride * param0 + var7;
-            var12Lifetime1 = -var7 + (var9 + 1) >> 1;
+            int var11Lifetime1 = SoftwareRasterizer.stride * param0 + var7;
+            int var12Lifetime1 = -var7 + (var9 + 1) >> 1;
             while (true) {
               var12Lifetime1--;
               if (0 > var12Lifetime1) {
@@ -141,8 +122,8 @@ final class co {
           }
           if (var5_int >= SoftwareRasterizer.clipLeft &&
             SoftwareRasterizer.clipRight > var5_int) {
-            var11Lifetime2 = ((1 & -param3 + var5_int) + var8) * SoftwareRasterizer.stride + var5_int;
-            var12Lifetime2 = -var8 + (var10 + 1) >> 1;
+            int var11Lifetime2 = ((1 & -param3 + var5_int) + var8) * SoftwareRasterizer.stride + var5_int;
+            int var12Lifetime2 = -var8 + (var10 + 1) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
@@ -156,8 +137,8 @@ final class co {
             if (SoftwareRasterizer.clipBottom <= var6) {
               return;
             }
-            var11Lifetime3 = var7 + (var6 * SoftwareRasterizer.stride + (-param0 + var6 & 1));
-            var12Lifetime3 = -var7 + 1 + var9 >> 1;
+            int var11Lifetime3 = var7 + (var6 * SoftwareRasterizer.stride + (-param0 + var6 & 1));
+            int var12Lifetime3 = -var7 + 1 + var9 >> 1;
             while (true) {
               var12Lifetime3--;
               if (0 > var12Lifetime3) {
@@ -169,8 +150,8 @@ final class co {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var5), "co.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }

@@ -21,18 +21,14 @@ final class dp extends pj implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_4_0 = var7;
-          stackIn_4_1 = new StringBuilder().append("dp.imageUpdate(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var7;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("dp.imageUpdate(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {

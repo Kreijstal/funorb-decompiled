@@ -5,29 +5,22 @@ final class w {
     static boolean field_a;
 
     final static SoundPlayback a(int param0, PcmSampleStream param1) {
-        SoundPlayback var2 = null;
-        RuntimeException var2_ref = null;
-        PcmSampleStream var3 = null;
-        SoundPlayback stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new SoundPlayback(param1, param1);
+          SoundPlayback var2 = new SoundPlayback(param1, param1);
           di.activeSoundPlaybacks.addLast(param0 ^ -23077, var2);
           if (param0 != -23159) {
-            var3 = (PcmSampleStream) null;
+            PcmSampleStream var3 = (PcmSampleStream) null;
             w.a(117, (PcmSampleStream) null);
           }
           qn.pcmMixer.addSubstream(param1);
-          stackIn_3_0 = var2;
+          SoundPlayback stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_6_0 = var2_ref;
-          stackIn_6_1 = new StringBuilder().append("w.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("w.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {

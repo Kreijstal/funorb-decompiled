@@ -13,19 +13,14 @@ final class MenuScreen {
     static String[] field_f;
 
     private final String formatGroupedInteger(int value, boolean obfuscationGuard) {
-        boolean discarded$1 = false;
-        String var3;
-        int var4;
-        int var5;
-        String var6;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!obfuscationGuard) {
-          discarded$1 = this.isItemEnabled(-107, (byte) -6);
+          boolean discarded$1 = this.isItemEnabled(-107, (byte) -6);
         }
-        var3 = "";
+        String var3 = "";
         while (value >= 1000) {
-          var4 = value % 1000;
-          var6 = var4 + var3;
+          int var4 = value % 1000;
+          String var6 = var4 + var3;
           value = value / 1000;
           if (var4 < 10) {
             var3 = IntrusiveDeque.thousandsSeparator + "00" + var6;
@@ -49,21 +44,18 @@ final class MenuScreen {
     }
 
     private final void a(int param0, int param1, int param2, GraphicsRenderer param3, int param4, byte param5) {
-        int var7_int = 0;
-        bo var8 = null;
-        int var9 = 0;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           param1 = param1 * param4 >> 8;
-          var7_int = 15;
+          int var7_int = 15;
           param3.d(10, param1 + 1, 8 + param2, -5782, -861274112, param0 - 2);
           param0 = param0 - var7_int;
           param4 = param4 + (var7_int << 1);
           CipherPacketBuffer.brassSliderSprites[0].a(param0, param2);
           CipherPacketBuffer.brassSliderSprites[2].a(-CipherPacketBuffer.brassSliderSprites[2].d() + (param0 + param4), param2);
-          var8 = fa.a(param3, true);
+          bo var8 = fa.a(param3, true);
           param4 = param4 + param0 - CipherPacketBuffer.brassSliderSprites[2].d();
-          var9 = param0;
+          int var9 = param0;
           param0 = param0 + CipherPacketBuffer.brassSliderSprites[0].d();
           var8.a(param4, param0, CipherPacketBuffer.brassSliderSprites[2].c() + param2, param2, 126);
           while (param4 > param0) {
@@ -109,65 +101,42 @@ final class MenuScreen {
     }
 
     private final void drawItem(int verticalOffset, int itemIndex, int obfuscationGuard, boolean selected, GraphicsRenderer renderer) {
-        int discarded$0 = 0;
-        int discarded$1 = 0;
-        int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        Object stackIn_18_0;
-        int stackIn_18_1;
-        int stackIn_18_2;
-        GraphicsRenderer stackIn_18_3;
         int stackIn_19_4 = 0;
-        Object stackIn_21_0;
         Object stackIn_22_0;
         int stackIn_22_5;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var6_int = verticalOffset + this.getItemTop(itemIndex, true);
-          var7 = this.getItemLeft(itemIndex, 200);
-          discarded$0 = this.getItemRight(obfuscationGuard + 116, itemIndex);
-          var8 = ua.menuActions[this.screenId][itemIndex];
-          var9 = du.menuActionLabels[var8];
+          int var6_int = verticalOffset + this.getItemTop(itemIndex, true);
+          int var7 = this.getItemLeft(itemIndex, 200);
+          int discarded$0 = this.getItemRight(obfuscationGuard + 116, itemIndex);
+          int var8 = ua.menuActions[this.screenId][itemIndex];
+          String var9 = du.menuActionLabels[var8];
           if (var9 == null) {
             var9 = "ERROR: missing text";
           }
-          var10 = this.getItemRight(118, itemIndex) - var7;
-          discarded$1 = this.getItemHeight(true, itemIndex);
-          stackIn_6_0 = (!selected) ? -12046068 : -7247318;
-          var11 = stackIn_6_0;
-          var12 = -16;
+          int var10 = this.getItemRight(118, itemIndex) - var7;
+          int discarded$1 = this.getItemHeight(true, itemIndex);
+          int stackIn_6_0 = (!selected) ? -12046068 : -7247318;
+          int var11 = stackIn_6_0;
+          int var12 = -16;
           if (var8 != 12 &&
             var8 != 13) {
             if (20 != var8 &&
               var8 != 21) {
               this.a(var6_int, renderer, obfuscationGuard ^ -103, var10, var7);
             } else {
-              stackIn_18_0 = this;
-              stackIn_18_1 = var10;
-              stackIn_18_2 = var7;
-              stackIn_18_3 = (GraphicsRenderer) (renderer);
+              Object stackIn_18_0 = this;
+              int stackIn_18_1 = var10;
+              int stackIn_18_2 = var7;
+              GraphicsRenderer stackIn_18_3 = (GraphicsRenderer) (renderer);
               if (var8 != 20) {
                 stackIn_19_4 = 0;
               } else {
                 stackIn_19_4 = 1;
               }
-              stackIn_21_0 = this;
+              Object stackIn_21_0 = this;
               if (cs.highscoreMode != 0) {
                 stackIn_22_0 = this;
                 stackIn_22_5 = 0;
@@ -180,9 +149,9 @@ final class MenuScreen {
             se.bigGameFont.drawCenteredText(obfuscationGuard + 95, var11, -1, (var12 >> 1) + (var6_int + kn.bigFontMetrics.maxAscent + 11), (var10 >> 1) + var7, var9.toLowerCase());
           } else {
             this.a(var6_int, renderer, -86, var10, var7);
-            var13 = oq.field_K + 137;
+            int var13 = oq.field_K + 137;
             var7 -= 8;
-            var14 = var7 + (-var13 + var10 >> 1);
+            int var14 = var7 + (-var13 + var10 >> 1);
             se.bigGameFont.drawRightAlignedText(var9.toLowerCase(), var11, -1, (var10 >> 1) + (var7 - 15), 11 + ((var12 >> 1) + (kn.bigFontMetrics.maxAscent + var6_int)), (byte) 92);
             var14 = var14 + (16 + oq.field_K);
             if (var8 != 12) {
@@ -190,7 +159,7 @@ final class MenuScreen {
             } else {
               stackIn_12_0 = gn.field_a;
             }
-            var15 = stackIn_12_0;
+            int var15 = stackIn_12_0;
             this.a(var14, var15, 3 + var6_int, renderer, 130, (byte) -55);
           }
           if (obfuscationGuard != 4) {
@@ -198,10 +167,10 @@ final class MenuScreen {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_30_0 = var6;
-          stackIn_30_1 = new StringBuilder().append("nk.K(").append(verticalOffset).append(',').append(itemIndex).append(',').append(obfuscationGuard).append(',').append(selected).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_30_0 = var6;
+          StringBuilder stackIn_30_1 = new StringBuilder().append("nk.K(").append(verticalOffset).append(',').append(itemIndex).append(',').append(obfuscationGuard).append(',').append(selected).append(',');
           if (renderer == null) {
             stackIn_31_2 = "null";
           } else {
@@ -212,15 +181,12 @@ final class MenuScreen {
     }
 
     private final int findItemAt(int obfuscationGuard, int pointerX, int pointerY) {
-        int var4 = 0;
-        int var5;
-        int var6;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (obfuscationGuard > -56) {
           return 82;
         }
-        for (var4 = 0; ua.menuActions[this.screenId].length > var4; var4++) {
-          var5 = this.getItemTop(var4, true);
+        for (int var4 = 0; ua.menuActions[this.screenId].length > var4; var4++) {
+          int var5 = this.getItemTop(var4, true);
           if (this.isItemEnabled(var4, (byte) -17) &&
             pointerX >= this.getItemLeft(var4, 200) &&
             this.getItemRight(123, var4) > pointerX &&
@@ -233,61 +199,20 @@ final class MenuScreen {
     }
 
     private final void drawHighscores(int obfuscationGuard, int verticalOffset) {
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        String var11;
-        String var12;
-        HighscoreQuery var13_ref_uc;
-        String[] var14;
-        int var16;
-        int var17;
-        int var18;
-        int var19;
-        int var20;
-        int var21;
-        int var28;
-        int var29;
-        GraphicsRenderer var30;
-        int[] var35;
         String stackIn_39_0 = null;
-        int var13;
-        String var22;
-        int var22_int;
-        String var23;
-        int var23_int;
-        String var24;
-        String var25;
-        String var26;
-        String var27;
-        String var32;
-        int var4Lifetime1;
-        int var19Lifetime1;
-        int var19Lifetime2;
-        int var20Lifetime1;
-        int var20Lifetime2;
-        int var21Lifetime1;
-        int var21Lifetime2;
         String var12Lifetime1;
-        String var12Lifetime2;
-        String var12Lifetime3;
-        int var21Lifetime1Lifetime1;
-        var28 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var30 = FlightSession.rendererManager.a((byte) 90);
-        var4 = 0;
+        int var28 = AceOfSkies.obfuscationControl ? 1 : 0;
+        GraphicsRenderer var30 = FlightSession.rendererManager.a((byte) 90);
+        int var4 = 0;
         if (obfuscationGuard != -9621) {
           field_f = (String[]) null;
         }
-        var5 = -1;
-        var6 = -16777216;
-        var7 = 120;
-        var8 = 108 + verticalOffset;
-        var9 = 400;
-        var10 = 280;
+        int var5 = -1;
+        int var6 = -16777216;
+        int var7 = 120;
+        int var8 = 108 + verticalOffset;
+        int var9 = 400;
+        int var10 = 280;
         if (2 == fb.field_e) {
           var7 -= 10;
           var9 += 20;
@@ -297,14 +222,14 @@ final class MenuScreen {
           var7 -= 10;
         }
         this.a(40 + var10, (byte) 86, var7 - 20, 40 + var9, var30, -20 + var8);
-        var11 = mf.field_a;
+        String var11 = mf.field_a;
         if (oc.highscoreView == 1) {
           var11 = wl.field_zc;
         }
         if (2 == oc.highscoreView) {
           var11 = jo.field_l;
-          var12 = var11;
-          var12Lifetime3 = var11;
+          String var12 = var11;
+          String var12Lifetime3 = var11;
         }
         regionExit1: {
           this.a(verticalOffset, (byte) -122, var11);
@@ -312,51 +237,51 @@ final class MenuScreen {
             if (null == ql.activeHighscoreQuery) {
               ql.activeHighscoreQuery = vo.requestHighscores((byte) 127, 3, 10, 1, cs.highscoreMode);
             }
-            var13_ref_uc = ql.activeHighscoreQuery;
+            HighscoreQuery var13_ref_uc = ql.activeHighscoreQuery;
             if (var13_ref_uc.completed) {
               if (null != var13_ref_uc.namesByView) {
                 var12Lifetime1 = IndexedSpriteState.field_g;
-                var14 = var13_ref_uc.namesByView[oc.highscoreView];
-                var35 = var13_ref_uc.valuesByView[oc.highscoreView];
-                var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, oc.highscoreView, to.lastScoreSubmission);
+                String[] var14 = var13_ref_uc.namesByView[oc.highscoreView];
+                int[] var35 = var13_ref_uc.valuesByView[oc.highscoreView];
+                int var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, oc.highscoreView, to.lastScoreSubmission);
                 kn.bigFontMetrics.measureTextWidth((byte) 94, "10. ");
-                var17 = verticalOffset + (hi.gameFontMetrics.maxAscent + 140);
-                var18 = 310;
+                int var17 = verticalOffset + (hi.gameFontMetrics.maxAscent + 140);
+                int var18 = 310;
                 var17 -= 20;
-                var19 = 128;
-                var20 = 512;
-                var21 = var5;
+                int var19 = 128;
+                int var20 = 512;
+                int var21 = var5;
                 PacketBuffer.gameFont.drawText(var21, -1, 20 + var19, SoundCache.field_f, 18731, var17);
                 PacketBuffer.gameFont.drawCenteredText(101, var21, -1, var17, var18 + (var20 - 320) / 4, ao.field_a);
                 PacketBuffer.gameFont.drawRightAlignedText(fd.field_c, var21, -1, var20, var17, (byte) 92);
                 var17 += 20;
-                var29 = 0;
-                var4Lifetime1 = var29;
+                int var29 = 0;
+                int var4Lifetime1 = var29;
                 while (var29 < 10) {
-                  var19Lifetime1 = 128;
-                  var20Lifetime1 = 512;
+                  int var19Lifetime1 = 128;
+                  int var20Lifetime1 = 512;
                   if (var14[var29] != null) {
-                    var21Lifetime1 = -12046068;
-                    var22_int = var35[var29] / 100;
-                    var21Lifetime1Lifetime1 = -2250240;
-                    var23_int = var35[var29] % 100;
-                    var24 = var14[var29];
+                    int var21Lifetime1 = -12046068;
+                    int var22_int = var35[var29] / 100;
+                    int var21Lifetime1Lifetime1 = -2250240;
+                    int var23_int = var35[var29] % 100;
+                    String var24 = var14[var29];
                     if (var16 == var29) {
                       var30.d(16, var20Lifetime1 + (20 - var19Lifetime1), -12 + var17, obfuscationGuard ^ 13057, -7247318, var19Lifetime1 - 10);
                       var21Lifetime1Lifetime1 = -256;
                     }
                     PacketBuffer.gameFont.drawText(var5, var5, -1 + (20 + var19Lifetime1), var24, 18731, var17);
-                    var25 = var29 + 1 + ". ";
+                    String var25 = var29 + 1 + ". ";
                     PacketBuffer.gameFont.drawText(var6, var6, 20 + var19Lifetime1, var24, obfuscationGuard ^ -27840, -1 + var17);
                     PacketBuffer.gameFont.drawText(var21Lifetime1Lifetime1, -1, var19Lifetime1 + 20, var24, obfuscationGuard + 28352, var17);
                     PacketBuffer.gameFont.drawRightAlignedText(var25, var5, var5, 20 + (var19Lifetime1 - 1), var17, (byte) 92);
                     PacketBuffer.gameFont.drawRightAlignedText(var25, var6, var6, var19Lifetime1 + 20, -1 + var17, (byte) 92);
                     PacketBuffer.gameFont.drawRightAlignedText(var25, var21Lifetime1Lifetime1, -1, 20 + var19Lifetime1, var17, (byte) 92);
-                    var26 = this.formatGroupedInteger(var22_int, true);
+                    String var26 = this.formatGroupedInteger(var22_int, true);
                     PacketBuffer.gameFont.drawRightAlignedText(var26, var5, var5, var20Lifetime1 - 1, var17, (byte) 92);
                     PacketBuffer.gameFont.drawRightAlignedText(var26, var6, var6, var20Lifetime1, var17 - 1, (byte) 92);
                     PacketBuffer.gameFont.drawRightAlignedText(var26, var21Lifetime1Lifetime1, -1, var20Lifetime1, var17, (byte) 92);
-                    var27 = Integer.toString(var23_int) + "%";
+                    String var27 = Integer.toString(var23_int) + "%";
                     PacketBuffer.gameFont.drawCenteredText(121, var5, var5, var17, -1 + ((var19Lifetime1 + var20Lifetime1 >> 1) + 35), var27);
                     PacketBuffer.gameFont.drawCenteredText(obfuscationGuard ^ -9704, var6, var6, -1 + var17, (var19Lifetime1 + var20Lifetime1 >> 1) + 35, var27);
                     var12Lifetime1 = "";
@@ -368,18 +293,18 @@ final class MenuScreen {
                 if (((sg.flightSession != null)) &&
                   (!(sg.flightSession.finalScore <= 0)) &&
                   ((var16 == -1))) {
-                  var19Lifetime2 = 128;
-                  var20Lifetime2 = 512;
+                  int var19Lifetime2 = 128;
+                  int var20Lifetime2 = 512;
                   var30.d(16, 20 + var20Lifetime2 - var19Lifetime2, var17 - 12, -5782, -7247318, var19Lifetime2 - 10);
-                  var21Lifetime2 = -256;
+                  int var21Lifetime2 = -256;
                   PacketBuffer.gameFont.drawText(var5, var5, 19 + var19Lifetime2, fj.playerDisplayName, 18731, var17);
                   PacketBuffer.gameFont.drawText(var6, var6, 20 + var19Lifetime2, fj.playerDisplayName, 18731, -1 + var17);
                   PacketBuffer.gameFont.drawText(var21Lifetime2, -1, 20 + var19Lifetime2, fj.playerDisplayName, 18731, var17);
-                  var22 = this.formatGroupedInteger(sg.flightSession.finalScore, true);
+                  String var22 = this.formatGroupedInteger(sg.flightSession.finalScore, true);
                   PacketBuffer.gameFont.drawRightAlignedText(var22, var5, var5, -1 + var20Lifetime2, var17, (byte) 92);
                   PacketBuffer.gameFont.drawRightAlignedText(var22, var6, var6, var20Lifetime2, -1 + var17, (byte) 92);
                   PacketBuffer.gameFont.drawRightAlignedText(var22, var21Lifetime2, -1, var20Lifetime2, var17, (byte) 92);
-                  var23 = Integer.toString(sg.flightSession.finalAccuracyPercent) + "%";
+                  String var23 = Integer.toString(sg.flightSession.finalAccuracyPercent) + "%";
                   PacketBuffer.gameFont.drawCenteredText(121, var5, var5, var17, -1 + (var20Lifetime2 + var19Lifetime2 >> 1) + 35, var23);
                   PacketBuffer.gameFont.drawCenteredText(obfuscationGuard + 9746, var6, var6, var17 - 1, 35 + (var19Lifetime2 + var20Lifetime2 >> 1), var23);
                   PacketBuffer.gameFont.drawCenteredText(111, var21Lifetime2, -1, var17, (var20Lifetime2 + var19Lifetime2 >> 1) + 35, var23);
@@ -394,15 +319,15 @@ final class MenuScreen {
             var12Lifetime1 = IndexedSpriteState.field_g;
           }
         }
-        var13 = kn.bigFontMetrics.maxAscent + (verticalOffset + 140 + 100);
+        int var13 = kn.bigFontMetrics.maxAscent + (verticalOffset + 140 + 100);
         PacketBuffer.gameFont.drawCenteredText(117, var5, -1, var13, 320, var12Lifetime1);
         if (!cn.b(true)) {
           stackIn_39_0 = fs.field_f;
         } else {
           stackIn_39_0 = bt.field_c;
         }
-        var32 = stackIn_39_0;
-        var12Lifetime2 = var32;
+        String var32 = stackIn_39_0;
+        String var12Lifetime2 = var32;
         PacketBuffer.gameFont.drawCenteredText(113, var5, -1, 220 + verticalOffset - (-140 - hi.gameFontMetrics.maxAscent), 320, var32);
     }
 
@@ -465,31 +390,23 @@ final class MenuScreen {
     }
 
     private final void a(int param0, byte param1, int param2, int param3, GraphicsRenderer param4, int param5) {
-        bo var16 = null;
-        int var8 = 0;
-        GraphicsRenderer var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        RenderSprite[] var14 = null;
         int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var16 = fa.a(param4, true);
+          bo var16 = fa.a(param4, true);
           var16.a(param3 + (param2 - 5), 5 + param2, -5 + (param5 + param0), param5 + 5, -71);
-          for (var8 = 0; var8 < param0 - 10; var8 = var8 + qk.woodenTileSprite.c()) {
+          for (int var8 = 0; var8 < param0 - 10; var8 = var8 + qk.woodenTileSprite.c()) {
             qk.woodenTileSprite.b(param2 + 5, var8 + (param5 + 5), -10 + param3, qk.woodenTileSprite.c());
           }
           var16.a(true);
-          var9 = param4;
-          var10 = param2;
-          var11 = param5;
-          var12 = param3;
+          GraphicsRenderer var9 = param4;
+          int var10 = param2;
+          int var11 = param5;
+          int var12 = param3;
           if (param1 != 86) {
             this.handleNavigationKey(-92);
           }
-          var13 = param0;
-          var14 = ko.brassFrameSprites;
+          int var13 = param0;
+          RenderSprite[] var14 = ko.brassFrameSprites;
           hb.a(var11, 0, var10, 1, 1, var12, var13, var9, (byte) 104, var14);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "nk.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
@@ -497,16 +414,11 @@ final class MenuScreen {
     }
 
     private final void handleAction(boolean pointerSelection, int obfuscationGuard, int itemIndex) {
-        int stackIn_127_0 = 0;
-        int stackIn_127_1 = 0;
         int stackIn_128_2 = 0;
-        int var4;
-        int var5;
         int var6;
         int var7;
-        int var8;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var4 = ua.menuActions[this.screenId][itemIndex];
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = ua.menuActions[this.screenId][itemIndex];
         if (this.input.isActivated((byte) 125)) {
           bm.a((byte) -70, gg.field_a);
         } else {
@@ -519,7 +431,7 @@ final class MenuScreen {
           return;
         }
         regionExit1: {
-          var5 = var4;
+          int var5 = var4;
           if (var5 != 0) {
             if (var5 != 19) {
               if (var5 != 22) {
@@ -663,8 +575,8 @@ final class MenuScreen {
                                 if (this.screenId != 6) {
                                   break;
                                 }
-                                stackIn_127_0 = obfuscationGuard + 25365;
-                                stackIn_127_1 = 6;
+                                int stackIn_127_0 = obfuscationGuard + 25365;
+                                int stackIn_127_1 = 6;
                                 if (0 == r.field_n) {
                                   stackIn_128_2 = 2;
                                 } else {
@@ -763,9 +675,8 @@ final class MenuScreen {
     }
 
     private final int getItemLeft(int itemIndex, int obfuscationGuard) {
-        int discarded$1 = 0;
         if (obfuscationGuard != 200) {
-          discarded$1 = this.getItemHeight(false, -104);
+          int discarded$1 = this.getItemHeight(false, -104);
         }
         if (this.screenId == 2 &&
           !cn.b(true)) {
@@ -786,25 +697,17 @@ final class MenuScreen {
     }
 
     private final void a(int param0, int param1, GraphicsRenderer param2, boolean param3, int param4, int param5) {
-        int var8 = 0;
-        int var9 = 0;
-        bo var11 = null;
-        bo var12 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param5 != 24063) {
             return;
           }
           mb.brassButtonSprites[0].a(param1, param4);
           mb.brassButtonSprites[2].a(-mb.brassButtonSprites[2].d() + (param0 + param1), param4);
-          var11 = fa.a(param2, true);
-          var12 = var11;
-          var8 = param0 + param1 - mb.brassButtonSprites[2].d();
+          bo var11 = fa.a(param2, true);
+          bo var12 = var11;
+          int var8 = param0 + param1 - mb.brassButtonSprites[2].d();
           param1 = param1 + mb.brassButtonSprites[0].d();
           var12.a(var8, param1, param4 + mb.brassButtonSprites[2].c(), param4, 102);
           while (var8 > param1) {
@@ -822,10 +725,10 @@ final class MenuScreen {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_12_0 = var7;
-          stackIn_12_1 = new StringBuilder().append("nk.AA(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var7;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("nk.AA(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -836,8 +739,7 @@ final class MenuScreen {
     }
 
     final void advanceMenu(int obfuscationGuard) {
-        int var3;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (cd.field_f < 100) {
           cd.field_f = cd.field_f + 1;
         }
@@ -890,18 +792,10 @@ final class MenuScreen {
     }
 
     final static uf a(byte param0, int param1, wl param2, String param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        Object stackIn_4_0 = null;
-        uf stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = jaggl.OpenGL.glGenProgramARB();
+          int var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param1, var4_int);
           jaggl.OpenGL.glProgramStringARB(param1, 34933, param3);
           jaggl.OpenGL.glGetIntegerv(34379, ik.field_m, 0);
@@ -910,23 +804,23 @@ final class MenuScreen {
           }
           if (ik.field_m[0] == -1) {
             jaggl.OpenGL.glBindProgramARB(param1, 0);
-            stackIn_6_0 = new uf(param2, param1, var4_int);
+            uf stackIn_6_0 = new uf(param2, param1, var4_int);
             return stackIn_6_0;
           }
           jaggl.OpenGL.glBindProgramARB(param1, 0);
-          stackIn_4_0 = null;
+          Object stackIn_4_0 = null;
           return (uf) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("nk.R(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var4;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("nk.R(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param3 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -951,29 +845,21 @@ final class MenuScreen {
     }
 
     private final void a(int param0, GraphicsRenderer param1, int param2, int param3, int param4, int param5, int param6) {
-        bo var18 = null;
-        int var9 = 0;
-        GraphicsRenderer var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        RenderSprite[] var15 = null;
         int var17 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var18 = fa.a(param1, true);
+          bo var18 = fa.a(param1, true);
           var18.a(-5 + (param3 + param2), 5 + param2, param5 + param4 - 5, param4 + 5, -21);
-          for (var9 = 0; param5 - 10 > var9; var9 = var9 + qk.woodenTileSprite.c()) {
+          for (int var9 = 0; param5 - 10 > var9; var9 = var9 + qk.woodenTileSprite.c()) {
             qk.woodenTileSprite.a(5 + param2, param4 + var9 + 5, -10 + param3, qk.woodenTileSprite.c(), 2, param6, 0);
           }
           var18.a(true);
-          var10 = param1;
-          var11 = param2;
-          var12 = param4;
-          var13 = param3;
-          var14 = param5;
+          GraphicsRenderer var10 = param1;
+          int var11 = param2;
+          int var12 = param4;
+          int var13 = param3;
+          int var14 = param5;
           int var16 = -25 % ((-20 - param0) / 40);
-          var15 = ko.brassFrameSprites;
+          RenderSprite[] var15 = ko.brassFrameSprites;
           hb.a(var12, 0, var11, 1, 1, var13, var14, var10, (byte) 98, var15);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "nk.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
@@ -981,64 +867,20 @@ final class MenuScreen {
     }
 
     final void drawMenu(int verticalOffset, GraphicsRenderer renderer, int obfuscationGuard) {
-        int stackIn_9_0 = 0;
-        RendererBitmapFont stackIn_23_0;
-        int stackIn_23_1;
-        int stackIn_23_2;
-        int stackIn_23_3;
-        int stackIn_23_4;
-        int stackIn_23_5;
-        boolean stackIn_24_6 = false;
-        boolean stackIn_26_7;
-        boolean stackIn_27_8 = false;
-        RendererBitmapFont stackIn_29_0;
-        int stackIn_29_1;
-        int stackIn_29_2;
-        int stackIn_29_3;
-        int stackIn_29_4;
-        int stackIn_29_5;
-        boolean stackIn_30_6 = false;
-        int stackIn_32_7;
-        boolean stackIn_33_8 = false;
-        RendererBitmapFont stackIn_35_0;
-        int stackIn_35_1;
-        int stackIn_35_2;
-        int stackIn_35_3;
-        int stackIn_35_4;
-        int stackIn_35_5;
-        int stackIn_35_6;
-        boolean stackIn_36_7 = false;
-        boolean stackIn_39_8;
-        Object stackIn_54_0;
-        int stackIn_54_1;
-        int stackIn_54_2;
-        int stackIn_54_3;
         Object stackIn_55_0;
         boolean stackIn_55_4;
-        RuntimeException stackIn_62_0 = null;
-        StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var7Lifetime1;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var4_int = 25;
-          var5 = 12;
+          int var4_int = 25;
+          int var5 = 12;
           if (this.screenId == 0 ||
             1 == this.screenId ||
             this.screenId == 7) {
             this.a(oo.menuRowSpacing[this.screenId] * ua.menuActions[this.screenId].length + 2 * var5, (byte) 86, -var4_int + dt.menuLeft[this.screenId], ClientException.menuRight[this.screenId] - (dt.menuLeft[this.screenId] - var4_int * 2), renderer, bk.menuTop[this.screenId] + (-var5 + verticalOffset));
           }
-          stackIn_9_0 = (ln.field_d < 2) ? 0 : 1;
-          var6 = stackIn_9_0;
+          int stackIn_9_0 = (ln.field_d < 2) ? 0 : 1;
+          int var6 = stackIn_9_0;
           if (obfuscationGuard != -4) {
             this.pendingClickY = -36;
           }
@@ -1058,39 +900,39 @@ final class MenuScreen {
                     if (this.screenId != 5) {
                       if (this.screenId == 6) {
                         bk.menuTop[this.screenId] = 230;
-                        var7 = verticalOffset - 40 + (kn.bigFontMetrics.maxAscent + 200);
-                        var8 = 255;
-                        var9 = kn.bigFontMetrics.maxDescent + kn.bigFontMetrics.field_a + 4;
+                        int var7 = verticalOffset - 40 + (kn.bigFontMetrics.maxAscent + 200);
+                        int var8 = 255;
+                        int var9 = kn.bigFontMetrics.maxDescent + kn.bigFontMetrics.field_a + 4;
                         PacketBuffer.gameFont.drawCenteredText(112, var8 << 24 | 16777215, -1, var7, 320, gg.field_i);
-                        stackIn_23_0 = PacketBuffer.gameFont;
-                        stackIn_23_1 = 126;
-                        stackIn_23_2 = var8 << 24 | 16777215;
-                        stackIn_23_3 = -1;
-                        stackIn_23_4 = var7 + var9;
-                        stackIn_23_5 = 320;
-                        stackIn_24_6 = (r.field_n != 0);
-                        stackIn_26_7 = true;
-                        stackIn_27_8 = (0 != or.score);
+                        RendererBitmapFont stackIn_23_0 = PacketBuffer.gameFont;
+                        int stackIn_23_1 = 126;
+                        int stackIn_23_2 = var8 << 24 | 16777215;
+                        int stackIn_23_3 = -1;
+                        int stackIn_23_4 = var7 + var9;
+                        int stackIn_23_5 = 320;
+                        boolean stackIn_24_6 = (r.field_n != 0);
+                        boolean stackIn_26_7 = true;
+                        boolean stackIn_27_8 = (0 != or.score);
                         ((RendererBitmapFont) (Object) stackIn_23_0).drawCenteredText(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, st.a(stackIn_24_6, stackIn_26_7, stackIn_27_8, false));
-                        stackIn_29_0 = PacketBuffer.gameFont;
-                        stackIn_29_1 = obfuscationGuard + 121;
-                        stackIn_29_2 = 16777215 | var8 << 24;
-                        stackIn_29_3 = -1;
-                        stackIn_29_4 = 30 + var7 + var9 * 5;
-                        stackIn_29_5 = 320;
-                        stackIn_30_6 = (r.field_n != 0);
-                        stackIn_32_7 = 121;
-                        stackIn_33_8 = (or.score != 0);
+                        RendererBitmapFont stackIn_29_0 = PacketBuffer.gameFont;
+                        int stackIn_29_1 = obfuscationGuard + 121;
+                        int stackIn_29_2 = 16777215 | var8 << 24;
+                        int stackIn_29_3 = -1;
+                        int stackIn_29_4 = 30 + var7 + var9 * 5;
+                        int stackIn_29_5 = 320;
+                        boolean stackIn_30_6 = (r.field_n != 0);
+                        int stackIn_32_7 = 121;
+                        boolean stackIn_33_8 = (or.score != 0);
                         ((RendererBitmapFont) (Object) stackIn_29_0).drawCenteredText(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, ci.$cfr$intArgs$a$feb7e63b59d8(stackIn_30_6, stackIn_32_7, stackIn_33_8, false));
-                        stackIn_35_0 = PacketBuffer.gameFont;
-                        stackIn_35_1 = 119;
-                        stackIn_35_2 = 16777215 | var8 << 24;
-                        stackIn_35_3 = -1;
-                        stackIn_35_4 = 60 + (var9 * 8 + var7);
-                        stackIn_35_5 = 320;
-                        stackIn_35_6 = -93;
-                        stackIn_36_7 = (r.field_n != 0);
-                        stackIn_39_8 = (or.score != 0);
+                        RendererBitmapFont stackIn_35_0 = PacketBuffer.gameFont;
+                        int stackIn_35_1 = 119;
+                        int stackIn_35_2 = 16777215 | var8 << 24;
+                        int stackIn_35_3 = -1;
+                        int stackIn_35_4 = 60 + (var9 * 8 + var7);
+                        int stackIn_35_5 = 320;
+                        int stackIn_35_6 = -93;
+                        boolean stackIn_36_7 = (r.field_n != 0);
+                        boolean stackIn_39_8 = (or.score != 0);
                         ((RendererBitmapFont) (Object) stackIn_35_0).drawCenteredText(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, av.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_6, stackIn_36_7, stackIn_39_8, false));
                       }
                     } else {
@@ -1106,12 +948,12 @@ final class MenuScreen {
           if (var6 == 0 ||
             !lp.heldKeys[70] &&
             !lp.heldKeys[69]) {
-            for (var7Lifetime1 = 0; this.input.itemCount > var7Lifetime1; var7Lifetime1++) {
+            for (int var7Lifetime1 = 0; this.input.itemCount > var7Lifetime1; var7Lifetime1++) {
               if (this.isItemEnabled(var7Lifetime1, (byte) -17)) {
-                stackIn_54_0 = this;
-                stackIn_54_1 = verticalOffset;
-                stackIn_54_2 = var7Lifetime1;
-                stackIn_54_3 = 4;
+                Object stackIn_54_0 = this;
+                int stackIn_54_1 = verticalOffset;
+                int stackIn_54_2 = var7Lifetime1;
+                int stackIn_54_3 = 4;
                 if (var7Lifetime1 != this.input.selectedIndex) {
                   stackIn_55_0 = this;
                   stackIn_55_4 = false;
@@ -1128,10 +970,10 @@ final class MenuScreen {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_62_0 = var4;
-          stackIn_62_1 = new StringBuilder().append("nk.D(").append(verticalOffset).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_62_0 = var4;
+          StringBuilder stackIn_62_1 = new StringBuilder().append("nk.D(").append(verticalOffset).append(',');
           if (renderer == null) {
             stackIn_63_2 = "null";
           } else {
@@ -1143,78 +985,40 @@ final class MenuScreen {
 
     private final void drawAchievements(boolean alternateView, int verticalOffset, int obfuscationGuard) {
         int stackIn_7_0 = 0;
-        int stackIn_65_0 = 0;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        int var10;
-        String var11;
-        boolean[] var12;
-        boolean[] var13;
-        boolean[] var14;
-        int var15;
-        int var16;
-        int var17;
-        int var18;
-        String var18_ref_String;
-        int var19;
-        Object var19_ref;
         RenderSprite var19_ref_pa;
-        int var20;
-        int var21;
-        int var22;
-        int var23;
-        GraphicsRenderer var24;
-        GraphicsRenderer var25;
-        int var7Lifetime1;
-        int var7Lifetime2;
-        int var15Lifetime1;
-        int var18Lifetime1;
-        int var20Lifetime1;
-        int var21Lifetime1;
-        int var19Lifetime1;
-        int var7Lifetime2Lifetime1;
-        int var7Lifetime2Lifetime2;
-        int var7Lifetime2Lifetime3;
-        int var15Lifetime1Lifetime1;
-        int var15Lifetime1Lifetime2;
-        int var15Lifetime1Lifetime3;
-        String var18_ref_StringLifetime1;
-        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (obfuscationGuard >= -121) {
-          var24 = (GraphicsRenderer) null;
+          GraphicsRenderer var24 = (GraphicsRenderer) null;
           this.drawItem(-106, 49, 71, false, (GraphicsRenderer) null);
         }
-        var25 = FlightSession.rendererManager.a((byte) 84);
-        var5 = -1;
-        var6 = 0;
-        var7 = 50;
-        var8 = verticalOffset + 108;
-        var9 = 540;
-        var10 = 312;
+        GraphicsRenderer var25 = FlightSession.rendererManager.a((byte) 84);
+        int var5 = -1;
+        int var6 = 0;
+        int var7 = 50;
+        int var8 = verticalOffset + 108;
+        int var9 = 540;
+        int var10 = 312;
         this.a(var10, (byte) 86, var7, var9, var25, var8);
-        var11 = ro.field_p;
+        String var11 = ro.field_p;
         if (alternateView) {
           var11 = pm.field_d;
         }
         this.a(verticalOffset, (byte) 75, var11);
-        var12 = new boolean[]{false, false, false, false, false, false, false, false, false};
-        var13 = new boolean[]{false, false, false, false, false, false, true, true, true};
-        var14 = new boolean[]{false, false, false, false, false, false, true, true, true};
-        var7Lifetime1 = 75;
-        var15 = verticalOffset + 127;
+        boolean[] var12 = new boolean[]{false, false, false, false, false, false, false, false, false};
+        boolean[] var13 = new boolean[]{false, false, false, false, false, false, true, true, true};
+        boolean[] var14 = new boolean[]{false, false, false, false, false, false, true, true, true};
+        int var7Lifetime1 = 75;
+        int var15 = verticalOffset + 127;
         if (!alternateView) {
           stackIn_7_0 = hg.field_D;
         } else {
           stackIn_7_0 = r.field_n;
         }
-        var16 = stackIn_7_0;
-        var17 = -1;
-        for (var18 = 0; -1 + lb.field_a.length > var18; var18++) {
+        int var16 = stackIn_7_0;
+        int var17 = -1;
+        for (int var18 = 0; -1 + lb.field_a.length > var18; var18++) {
           regionExit1: {
-            var19_ref = null;
+            Object var19_ref = null;
             if ((var16 & 1 << var18) != 0) {
               var19_ref_pa = aa.achievementSprites[var18];
             } else {
@@ -1231,8 +1035,8 @@ final class MenuScreen {
                 var19_ref_pa = dh.unachievedSprite;
               }
             }
-            var20 = var7Lifetime1;
-            var21 = var15;
+            int var20 = var7Lifetime1;
+            int var21 = var15;
             if (var20 <= ic.field_b &&
               var20 + 48 >= ic.field_b &&
               cf.field_g >= var21 &&
@@ -1271,25 +1075,25 @@ final class MenuScreen {
           var17 = this.selectedAchievementId;
         }
         if (-1 == var17) {
-          var18Lifetime1 = verticalOffset + 264;
+          int var18Lifetime1 = verticalOffset + 264;
           PacketBuffer.gameFont.drawCenteredText(96, var5, -1, var18Lifetime1, 320, sl.field_q);
           PacketBuffer.gameFont.drawCenteredText(126, var5, -1, var18Lifetime1 + (kn.bigFontMetrics.maxAscent * 3 >> 1), 320, ef.field_g);
           if (cn.b(true)) {
             PacketBuffer.gameFont.drawCenteredText(112, var5, -1, var18Lifetime1 + 6 * kn.bigFontMetrics.maxAscent, 320, bt.field_c);
           }
         } else {
-          var7Lifetime2 = 470;
-          var15Lifetime1 = verticalOffset + 220;
+          int var7Lifetime2 = 470;
+          int var15Lifetime1 = verticalOffset + 220;
           PacketBuffer.gameFont.drawCenteredText(101, -5622785, -16777216, var15Lifetime1, var7Lifetime2, jk.field_c);
           var15Lifetime1 += 24;
-          var18_ref_String = Integer.toString(100 * qe.field_f[var17]);
+          String var18_ref_String = Integer.toString(100 * qe.field_f[var17]);
           if (var13[var17] &&
             (1 << var17 & var16) == 0) {
             var18_ref_String = fh.field_g;
           }
           PacketBuffer.gameFont.drawCenteredText(124, var5, var6, var15Lifetime1, var7Lifetime2, var18_ref_String);
-          var15Lifetime1Lifetime1 = 280 + verticalOffset;
-          var7Lifetime2Lifetime1 = 470;
+          int var15Lifetime1Lifetime1 = 280 + verticalOffset;
+          int var7Lifetime2Lifetime1 = 470;
           PacketBuffer.gameFont.drawCenteredText(127, -5622785, -16777216, var15Lifetime1Lifetime1, var7Lifetime2Lifetime1, sd.field_e);
           if (var13[var17] &&
             0 == (1 << var17 & var16)) {
@@ -1297,32 +1101,32 @@ final class MenuScreen {
             PacketBuffer.gameFont.drawCenteredText(111, -1, -16777216, var15Lifetime1Lifetime1, var7Lifetime2Lifetime1, var18_ref_String);
           } else {
             var7Lifetime2Lifetime1 = var7Lifetime2Lifetime1 - ((qe.field_f[var17] - 1) * lg.coinSprite.d() / 6 + lg.coinSprite.d() / 2 >> 2);
-            for (var19 = 0; qe.field_f[var17] > var19; var19++) {
+            for (int var19 = 0; qe.field_f[var17] > var19; var19++) {
               lg.coinSprite.b(var7Lifetime2Lifetime1, 12 + var15Lifetime1Lifetime1, 32, 32);
               var7Lifetime2Lifetime1 = var7Lifetime2Lifetime1 + (lg.coinSprite.d() / 3 >> 2);
             }
           }
-          stackIn_65_0 = (0 == (var16 & 1 << var17)) ? 0 : 1;
-          var19Lifetime1 = stackIn_65_0;
-          var7Lifetime2Lifetime2 = 170;
-          var15Lifetime1Lifetime2 = 220 + verticalOffset;
+          int stackIn_65_0 = (0 == (var16 & 1 << var17)) ? 0 : 1;
+          int var19Lifetime1 = stackIn_65_0;
+          int var7Lifetime2Lifetime2 = 170;
+          int var15Lifetime1Lifetime2 = 220 + verticalOffset;
           if (var19Lifetime1 != 0) {
             PacketBuffer.gameFont.drawCenteredText(111, -14483644, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, sk.field_d);
           } else {
             PacketBuffer.gameFont.drawCenteredText(114, -56764, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, jm.field_b);
           }
-          var20Lifetime1 = 160;
-          var18_ref_StringLifetime1 = hn.field_b[var17];
+          int var20Lifetime1 = 160;
+          String var18_ref_StringLifetime1 = hn.field_b[var17];
           var15Lifetime1Lifetime2 += 10;
           if (var13[var17] &&
             (var16 & 1 << var17) == 0) {
             var18_ref_StringLifetime1 = pe.field_c;
           }
           PacketBuffer.gameFont.drawParagraph(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.gameFontMetrics.maxAscent, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
-          var7Lifetime2Lifetime3 = 320;
-          var15Lifetime1Lifetime3 = 350 + verticalOffset;
+          int var7Lifetime2Lifetime3 = 320;
+          int var15Lifetime1Lifetime3 = 350 + verticalOffset;
           PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, lb.field_a[var17]);
-          var21Lifetime1 = verticalOffset + 200;
+          int var21Lifetime1 = verticalOffset + 200;
           if (var19Lifetime1 == 0) {
             if (qr.field_a <= 0 &&
               var12[var17]) {
@@ -1333,7 +1137,7 @@ final class MenuScreen {
           } else {
             aa.achievementSprites[var17].a(256, var21Lifetime1, 0, var5, 1);
           }
-          var22 = 360 + verticalOffset;
+          int var22 = 360 + verticalOffset;
           if (cn.b(true) ||
             alternateView) {
             var22 -= 20;
@@ -1403,62 +1207,41 @@ final class MenuScreen {
     }
 
     private final void drawInstructions(int obfuscationGuard, int verticalOffset) {
-        int var12_int = 0;
-        int var14 = 0;
-        RendererBitmapFont stackIn_19_0;
-        int stackIn_19_1;
-        int stackIn_19_2;
-        RenderSprite[] stackIn_19_3;
         int stackIn_20_4;
-        int var4;
-        int var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        String[] var10;
-        int[] var11;
-        int[] var12;
-        int var13;
-        int var15;
-        GraphicsRenderer var16;
-        int[] var17;
-        int[] var18;
-        int var13Lifetime1;
-        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var16 = FlightSession.rendererManager.a((byte) 77);
-        var4 = -1;
-        var5 = 50;
-        var6 = 90 + verticalOffset;
-        var7 = 540;
+        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        GraphicsRenderer var16 = FlightSession.rendererManager.a((byte) 77);
+        int var4 = -1;
+        int var5 = 50;
+        int var6 = 90 + verticalOffset;
+        int var7 = 540;
         if (obfuscationGuard != 197427713) {
           this.previousActionId = 4;
         }
-        var8 = 284;
+        int var8 = 284;
         this.a(40 + var8, (byte) 86, -20 + var5, var7 + 40, var16, var6 - 20);
         this.a(verticalOffset, (byte) 76, bt.field_b);
-        var9 = 20;
-        var10 = new String[50];
-        var18 = new int[ac.keySprites.length];
-        var17 = var18;
-        var11 = var17;
-        for (var12_int = 0; var12_int < ac.keySprites.length; var12_int++) {
+        int var9 = 20;
+        String[] var10 = new String[50];
+        int[] var18 = new int[ac.keySprites.length];
+        int[] var17 = var18;
+        int[] var11 = var17;
+        for (int var12_int = 0; var12_int < ac.keySprites.length; var12_int++) {
           var18[var12_int] = 10;
         }
-        var12 = new int[50];
-        for (var13 = 0; var13 < 50; var13++) {
+        int[] var12 = new int[50];
+        for (int var13 = 0; var13 < 50; var13++) {
           var12[var13] = -24 + var7;
           if (vq.instructionPage == 5) {
             var12[var13] = var12[var13] - 64;
           }
         }
-        var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, ac.keySprites, var12, var10, sn.a(io.field_a[vq.instructionPage], 120, new String[]{"          "}));
-        for (var14 = 0; var14 < var13Lifetime1; var14++) {
+        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, ac.keySprites, var12, var10, sn.a(io.field_a[vq.instructionPage], 120, new String[]{"          "}));
+        for (int var14 = 0; var14 < var13Lifetime1; var14++) {
           if (!var10[var14].startsWith("<b>")) {
-            stackIn_19_0 = PacketBuffer.gameFont;
-            stackIn_19_1 = var4;
-            stackIn_19_2 = 0;
-            stackIn_19_3 = ac.keySprites;
+            RendererBitmapFont stackIn_19_0 = PacketBuffer.gameFont;
+            int stackIn_19_1 = var4;
+            int stackIn_19_2 = 0;
+            RenderSprite[] stackIn_19_3 = ac.keySprites;
             if (vq.instructionPage != 5) {
               stackIn_20_4 = 0;
             } else {
@@ -1475,49 +1258,13 @@ final class MenuScreen {
     final static void a(byte param0, int param1, boolean param2) {
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;
-        String[] stackIn_75_0 = null;
-        int stackIn_75_1 = 0;
         String stackIn_76_2 = null;
-        String[] stackIn_80_0 = null;
-        int stackIn_80_1 = 0;
-        int stackIn_80_2 = 0;
-        int stackIn_80_3 = 0;
         String stackIn_83_2 = null;
-        boolean stackIn_91_0 = false;
-        String stackIn_91_1 = null;
-        boolean stackIn_92_2 = false;
-        int stackIn_115_0 = 0;
         int stackIn_116_1 = 0;
-        RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
-        RuntimeException var3 = null;
         int var4 = 0;
-        String[] var4_ref_String__ = null;
         int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        String[] var10 = null;
-        String var11 = null;
-        String var12 = null;
-        String[] var4_ref_String__Lifetime1;
-        int var5Lifetime1;
-        int var5Lifetime2;
-        int var5Lifetime3;
-        int var6Lifetime1;
-        int var8Lifetime1;
-        int var3_intLifetime1;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime3;
-        int var7Lifetime1;
-        int var7Lifetime2;
-        int var8Lifetime2;
-        int var8Lifetime3;
-        int var5Lifetime2Lifetime1;
-        int var7Lifetime1Lifetime1;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           cu.field_r = true;
           ol.field_c = param1;
@@ -1660,11 +1407,11 @@ final class MenuScreen {
             } else {
               stackIn_68_0 = gp.field_v.length;
             }
-            var6 = stackIn_68_0;
-            var7 = 7 + var5 + var6;
+            int var6 = stackIn_68_0;
+            int var7 = 7 + var5 + var6;
             ne.field_g = new String[var7];
             rn.field_a = new int[var7];
-            for (var8 = 0; var7 > var8; var8++) {
+            for (int var8 = 0; var7 > var8; var8++) {
               rn.field_a[var8] = -1;
             }
             ne.field_g[1] = du.field_n;
@@ -1678,9 +1425,9 @@ final class MenuScreen {
             ne.field_g[2] = dk.field_a;
             ne.field_g[4] = li.field_b;
             ne.field_g[3] = vl.field_a;
-            for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
-              stackIn_75_0 = ne.field_g;
-              stackIn_75_1 = 6 + var8Lifetime2;
+            for (int var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
+              String[] stackIn_75_0 = ne.field_g;
+              int stackIn_75_1 = 6 + var8Lifetime2;
               if (-var5 + (cn.field_z.length + var8Lifetime2) < 0) {
                 stackIn_76_2 = "";
               } else {
@@ -1690,11 +1437,11 @@ final class MenuScreen {
             }
             ne.field_g[6 + var5] = null;
             rn.field_a[var5 + 6] = -2;
-            for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
-              stackIn_80_0 = ne.field_g;
-              stackIn_80_1 = var5 + (7 + var8Lifetime3);
-              stackIn_80_2 = ~gp.field_v.length;
-              stackIn_80_3 = ~var8Lifetime3;
+            for (int var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
+              String[] stackIn_80_0 = ne.field_g;
+              int stackIn_80_1 = var5 + (7 + var8Lifetime3);
+              int stackIn_80_2 = ~gp.field_v.length;
+              int stackIn_80_3 = ~var8Lifetime3;
               if (stackIn_80_2 >= stackIn_80_3) {
                 stackIn_83_2 = "";
               } else {
@@ -1708,30 +1455,30 @@ final class MenuScreen {
           if (param0 != -119) {
             return;
           }
-          var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < ne.field_g.length; var4Lifetime1++) {
-            stackIn_91_0 = true;
-            stackIn_91_1 = ne.field_g[var4Lifetime1];
-            stackIn_92_2 = !(rn.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = IntrusiveDeque.a(stackIn_91_0, stackIn_91_1, stackIn_92_2);
+          int var3_intLifetime1 = 0;
+          for (int var4Lifetime1 = 0; var4Lifetime1 < ne.field_g.length; var4Lifetime1++) {
+            boolean stackIn_91_0 = true;
+            String stackIn_91_1 = ne.field_g[var4Lifetime1];
+            boolean stackIn_92_2 = !(rn.field_a[var4Lifetime1] < 0);
+            int var5Lifetime1 = IntrusiveDeque.a(stackIn_91_0, stackIn_91_1, stackIn_92_2);
             if (var3_intLifetime1 < var5Lifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
           if (ol.field_c == 2) {
-            var10 = es.field_a;
-            var4_ref_String__ = var10;
-            for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
-              var11 = var10[var5Lifetime2];
-              var7Lifetime1 = IntrusiveDeque.a(true, var11, false);
+            String[] var10 = es.field_a;
+            String[] var4_ref_String__ = var10;
+            for (int var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
+              String var11 = var10[var5Lifetime2];
+              int var7Lifetime1 = IntrusiveDeque.a(true, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = cc.field_b;
-            for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
-              var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = IntrusiveDeque.a(true, var12, false);
+            String[] var4_ref_String__Lifetime1 = cc.field_b;
+            for (int var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
+              String var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
+              int var7Lifetime1Lifetime1 = IntrusiveDeque.a(true, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -1740,8 +1487,8 @@ final class MenuScreen {
           ac.field_c = ri.field_a - (var3_intLifetime1 >> 1);
           ro.field_q = (pp.field_a + as.field_c << 1) * pr.field_b.itemCount;
           je.field_a = -(var3_intLifetime1 >> 1) + (ri.field_a + var3_intLifetime1);
-          for (var4Lifetime2 = 0; var4Lifetime2 < ne.field_g.length; var4Lifetime2++) {
-            stackIn_115_0 = ro.field_q;
+          for (int var4Lifetime2 = 0; var4Lifetime2 < ne.field_g.length; var4Lifetime2++) {
+            int stackIn_115_0 = ro.field_q;
             if (0 > rn.field_a[var4Lifetime2]) {
               stackIn_116_1 = ce.field_u;
             } else {
@@ -1751,13 +1498,13 @@ final class MenuScreen {
           }
           pt.field_a = -(ro.field_q >> 1) + Aircraft.field_o;
           nb.field_b = new int[ne.field_g.length][];
-          var4Lifetime3 = 0;
-          var5Lifetime3 = pt.field_a;
+          int var4Lifetime3 = 0;
+          int var5Lifetime3 = pt.field_a;
           while (ne.field_g.length > var4Lifetime3) {
-            var6Lifetime1 = rn.field_a[var4Lifetime3];
+            int var6Lifetime1 = rn.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = IntrusiveDeque.a(true, ne.field_g[var4Lifetime3], true);
-              var8Lifetime1 = -(var7Lifetime2 >> 1) + ri.field_a;
+              int var7Lifetime2 = IntrusiveDeque.a(true, ne.field_g[var4Lifetime3], true);
+              int var8Lifetime1 = -(var7Lifetime2 >> 1) + ri.field_a;
               var5Lifetime3 = var5Lifetime3 + pp.field_a;
               nb.field_b[var4Lifetime3] = new int[4];
               nb.field_b[var4Lifetime3][0] = var8Lifetime1 - ud.field_g;
@@ -1777,17 +1524,16 @@ final class MenuScreen {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var3), "nk.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     private final void a(int param0, byte param1, String param2) {
-        int var5 = 0;
         try {
           int var4_int = 104 % ((param1 - 5) / 54);
-          var5 = 90 + dp.titleFontMetrics.measureTextWidth((byte) 94, param2);
+          int var5 = 90 + dp.titleFontMetrics.measureTextWidth((byte) 94, param2);
           this.a(82, FlightSession.rendererManager.a((byte) 75), -(var5 >> 1) + 320, var5, param0 + 26, 60, 1442840524);
           kn.titleFont.drawCenteredText(111, -12046068, -1, 67 + param0, 320, param2);
         } catch (RuntimeException runtimeException) {
@@ -1796,14 +1542,12 @@ final class MenuScreen {
     }
 
     private final void a(int param0, GraphicsRenderer param1, int param2, int param3, int param4) {
-        bo var10 = null;
-        bo var11 = null;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           mb.brassButtonSprites[0].a(param4, param0);
           mb.brassButtonSprites[2].a(-mb.brassButtonSprites[2].d() + (param4 + param3), param0);
-          var10 = fa.a(param1, true);
-          var11 = var10;
+          bo var10 = fa.a(param1, true);
+          bo var11 = var10;
           param3 = param4 + param3 - mb.brassButtonSprites[2].d();
           param4 = param4 + mb.brassButtonSprites[0].d();
           var11.a(param3, param4, param0 + mb.brassButtonSprites[2].c(), param0, 120);
@@ -1826,14 +1570,11 @@ final class MenuScreen {
     }
 
     private final void handleNavigationKey(int obfuscationGuard) {
-        int discarded$0 = 0;
-        int var3;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.screenId == 2 &&
           !cn.b(true)) {
           if (!kh.field_a &&
             ln.field_d < 2) {
-            boolean decompiledFrameRemainder1 = true;
             if (bk.lastKeyCode == 96) {
               if (this.input.selectedIndex >= 0 &&
                 this.input.selectedIndex != 4) {
@@ -1844,13 +1585,12 @@ final class MenuScreen {
                     this.input.setSelectedIndex((byte) -125, this.input.selectedIndex - 1);
                   }
                 }
-                decompiledFrameRemainder1 = false;
+                boolean decompiledFrameRemainder1 = false;
               }
               else {
                 this.input.setSelectedIndex((byte) -101, 0);
               }
             }
-            boolean decompiledFrameRemainder0 = true;
             if (bk.lastKeyCode == 97) {
               if (this.input.selectedIndex >= 0 &&
                 this.input.selectedIndex != 4) {
@@ -1861,7 +1601,7 @@ final class MenuScreen {
                     this.input.setSelectedIndex((byte) -102, 0);
                   }
                 }
-                decompiledFrameRemainder0 = false;
+                boolean decompiledFrameRemainder0 = false;
               }
               else {
                 this.input.setSelectedIndex((byte) -128, 2);
@@ -1935,7 +1675,7 @@ final class MenuScreen {
         }
         this.input.handleVerticalKey(true);
         if (obfuscationGuard != 4146) {
-          discarded$0 = this.getItemLeft(-33, 41);
+          int discarded$0 = this.getItemLeft(-33, 41);
         }
         if (bk.lastKeyCode == 98 ||
           bk.lastKeyCode == 99) {

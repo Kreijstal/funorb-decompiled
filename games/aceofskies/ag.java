@@ -13,9 +13,8 @@ abstract class ag extends DualLinkNode {
     abstract byte[] a(boolean param0);
 
     final static void writeHighscoreQuery(int opcode, int payloadLength, HighscoreQuery query) {
-        CipherPacketBuffer packet = null;
         try {
-          packet = q.outgoingPacket;
+          CipherPacketBuffer packet = q.outgoingPacket;
           packet.writeCipheredOpcode(64, opcode);
           packet.writeByte(-1336879960, payloadLength);
           packet.writeByte(-1336879960, 0);

@@ -17,23 +17,18 @@ final class td {
     }
 
     final static int a(CharSequence param0, byte param1) {
-        RuntimeException var2 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 38) {
             field_d = (w) null;
           }
-          stackIn_3_0 = ro.a(10, true, -98, param0);
+          int stackIn_3_0 = ro.a(10, true, -98, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("td.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("td.A(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {

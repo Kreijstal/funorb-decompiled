@@ -8,11 +8,9 @@ final class jh extends sk {
     private em field_i;
 
     final void b(byte param0) {
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
         if (null != this.field_f) {
-          var2 = this.field_g.field_Rc;
-          var3 = this.field_g.v((byte) 56);
+          jagdx.IDirect3DDevice var2 = this.field_g.field_Rc;
+          ec var3 = this.field_g.v((byte) 56);
           var2.a(0, var3.c(field_h, param0 ^ 74));
         }
         if (param0 == -25) {
@@ -22,11 +20,9 @@ final class jh extends sk {
     }
 
     final void b(int param0) {
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
         if (null != this.field_f) {
-          var2 = this.field_g.field_Rc;
-          var3 = this.field_g.v((byte) -80);
+          jagdx.IDirect3DDevice var2 = this.field_g.field_Rc;
+          ec var3 = this.field_g.v((byte) -80);
           var2.a(0, var3.c(field_h, -72));
         }
         if (param0 <= -117) {
@@ -36,15 +32,13 @@ final class jh extends sk {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var5 = 0;
-        float var5_float = 0.0f;
         jagdx.IDirect3DDevice var4 = this.field_g.field_Rc;
         if (this.field_i.field_e) {
-          var5_float = (float)(this.field_b.field_r % 4000) / 4000.0f;
+          float var5_float = (float)(this.field_b.field_r % 4000) / 4000.0f;
           this.field_b.a(this.field_i.field_f, -9135);
           var4.b(11, var5_float, 0.0f, 0.0f, 0.0f);
         } else {
-          var5 = 16 * (this.field_b.field_r % 4000) / 4000;
+          int var5 = 16 * (this.field_b.field_r % 4000) / 4000;
           this.field_b.a(this.field_i.field_i[var5], -9135);
           var4.b(11, 0.0f, 0.0f, 0.0f, 0.0f);
         }
@@ -55,12 +49,10 @@ final class jh extends sk {
     }
 
     final void d(int param0) {
-        jagdx.IDirect3DDevice var2 = null;
-        ec var3 = null;
         if (param0 == 18580) {
           if (this.field_f != null) {
-            var2 = this.field_g.field_Rc;
-            var3 = this.field_b.J(param0 - 18494);
+            jagdx.IDirect3DDevice var2 = this.field_g.field_Rc;
+            ec var3 = this.field_b.J(param0 - 18494);
             var3.a(false, field_h);
             field_h[7] = field_h[7] * 0.25f;
             field_h[3] = field_h[3] * 0.25f;
@@ -100,18 +92,14 @@ final class jh extends sk {
     }
 
     final void a(int param0) {
-        jagdx.IDirect3DDevice var2 = null;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
-        float var3 = 0.0f;
         if (param0 == 10) {
           if (null == this.field_f) {
           } else {
-            var2 = this.field_g.field_Rc;
+            jagdx.IDirect3DDevice var2 = this.field_g.field_Rc;
             if (0 < this.field_b.field_p) {
-              var3 = this.field_b.field_y;
-              var4 = this.field_b.field_Xb;
-              var5 = var4 - 512.0f;
+              float var3 = this.field_b.field_y;
+              float var4 = this.field_b.field_Xb;
+              float var5 = var4 - 512.0f;
               var2.b(10, var5, 1.0f / (-var5 + var4), var4, 1.0f / (-var4 + var3));
             } else {
               var2.b(10, 0.0f, 0.0f, 0.0f, 0.0f);
@@ -144,9 +132,8 @@ final class jh extends sk {
     }
 
     final void c(int param0) {
-        jagdx.IDirect3DDevice var2 = null;
         if (this.field_f != null) {
-          var2 = this.field_g.field_Rc;
+          jagdx.IDirect3DDevice var2 = this.field_g.field_Rc;
           var2.a(4, this.field_b.a(12, field_h));
         }
         if (param0 == 404277666) {

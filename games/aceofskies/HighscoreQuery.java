@@ -25,35 +25,27 @@ final class HighscoreQuery extends IntrusiveNode {
     }
 
     final static CoverageBitmapFont a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        Object stackIn_2_0 = null;
-        CoverageBitmapFont stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!tn.a(param3, (byte) -127, param2, param4)) {
-            stackIn_2_0 = null;
+            Object stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var5_int = -15 / ((param0 - 65) / 51);
-          stackIn_4_0 = te.a(param1.a(param4, -10470, param2), -80);
+          int var5_int = -15 / ((param0 - 65) / 51);
+          CoverageBitmapFont stackIn_4_0 = te.a(param1.a(param4, -10470, param2), -80);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_7_0 = var5;
-          stackIn_7_1 = new StringBuilder().append("uc.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var5;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("uc.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_11_2 = "null";
           } else {

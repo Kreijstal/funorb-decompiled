@@ -41,23 +41,16 @@ abstract class pj {
     }
 
     final static void a(int param0, s param1) {
-        int var2_int = 0;
-        s var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null == param1.field_j) {
             return;
           }
           if (param0 != param1.field_a ||
             0 != param1.field_b) {
-            for (var2_int = 0; dd.field_a > var2_int; var2_int++) {
-              var3 = ve.field_b[var2_int];
+            for (int var2_int = 0; dd.field_a > var2_int; var2_int++) {
+              s var3 = ve.field_b[var2_int];
               if (2 == var3.field_f &&
                 param1.field_a == var3.field_a &&
                 var3.field_b == param1.field_b) {
@@ -70,10 +63,10 @@ abstract class pj {
           tr.a(param1, param0 - 96);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_19_0 = var2;
-          stackIn_19_1 = new StringBuilder().append("pj.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var2;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("pj.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {

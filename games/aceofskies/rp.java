@@ -57,26 +57,9 @@ final class rp extends RenderSprite {
     }
 
     final void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
-        ec var12;
-        float var13;
-        float var14;
-        float var15;
-        float var16;
-        float var17;
-        float var18;
-        float var19;
-        float var20;
-        float var21;
-        float var22;
-        float var23;
-        float var24;
-        float var25;
-        float var26;
-        ec var27;
-        qi stackIn_4_0 = null;
-        var27 = this.field_e.y(-125);
-        var12 = this.field_e.d(12343);
-        stackIn_4_0 = this.field_g;
+        ec var27 = this.field_e.y(-125);
+        ec var12 = this.field_e.d(12343);
+        qi stackIn_4_0 = this.field_g;
         if (this.field_f) {
           ((qi) (Object) stackIn_4_0).a(jp.field_a, -31662);
         } else {
@@ -98,24 +81,24 @@ final class rp extends RenderSprite {
         this.field_e.a(bs.field_a, 1, 0);
         this.field_e.a((byte) -74, param7);
         if (this.field_j) {
-          var13 = (float)this.d();
-          var14 = (float)this.c();
-          var15 = (param2 - param0) / var13;
-          var16 = (-param1 + param3) / var13;
-          var17 = (-param0 + param4) / var14;
-          var18 = (param5 - param1) / var14;
-          var19 = var17 * (float)this.field_h;
-          var20 = (float)this.field_h * var18;
-          var21 = var15 * (float)this.field_a;
-          var22 = (float)this.field_a * var16;
-          var23 = -var15 * (float)this.field_d;
-          var24 = -var16 * (float)this.field_d;
-          var25 = (float)this.field_b * -var17;
+          float var13 = (float)this.d();
+          float var14 = (float)this.c();
+          float var15 = (param2 - param0) / var13;
+          float var16 = (-param1 + param3) / var13;
+          float var17 = (-param0 + param4) / var14;
+          float var18 = (param5 - param1) / var14;
+          float var19 = var17 * (float)this.field_h;
+          float var20 = (float)this.field_h * var18;
+          float var21 = var15 * (float)this.field_a;
+          float var22 = (float)this.field_a * var16;
+          float var23 = -var15 * (float)this.field_d;
+          float var24 = -var16 * (float)this.field_d;
+          float var25 = (float)this.field_b * -var17;
           param1 = var20 + (var22 + param1);
           param4 = var25 + (param4 + var21);
           param0 = var21 + param0 + var19;
           param2 = var23 + param2 + var19;
-          var26 = -var18 * (float)this.field_b;
+          float var26 = -var18 * (float)this.field_b;
           param3 = param3 + var24 + var20;
           param5 = var22 + param5 + var26;
         }
@@ -135,13 +118,10 @@ final class rp extends RenderSprite {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ec var10;
-        ec var11;
-        qi stackIn_4_0 = null;
         ke stackIn_5_1 = null;
-        var11 = this.field_e.y(-118);
-        var10 = this.field_e.d(12343);
-        stackIn_4_0 = this.field_g;
+        ec var11 = this.field_e.y(-118);
+        ec var10 = this.field_e.d(12343);
+        qi stackIn_4_0 = this.field_g;
         if (!this.field_f &&
           !this.field_i &&
           (param7 & 1) != 0) {
@@ -227,15 +207,8 @@ final class rp extends RenderSprite {
     }
 
     rp(bf param0, int param1, int param2, int[] param3, int param4, int param5) {
-        RuntimeException var7 = null;
-        boolean stackIn_4_1 = false;
-        boolean stackIn_7_1 = false;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_h = 0;
         this.field_d = 0;
         this.field_b = 0;
@@ -247,9 +220,9 @@ final class rp extends RenderSprite {
           this.field_e = param0;
           this.field_g = param0.a(param4, true, false, param2, param5, param3, param1);
           this.field_g.a(true, true, (byte) -127);
-          stackIn_4_1 = (this.field_g.a(72) != param1);
+          boolean stackIn_4_1 = (this.field_g.a(72) != param1);
           this.field_f = stackIn_4_1;
-          stackIn_7_1 = (param2 != this.field_g.b((byte) 87));
+          boolean stackIn_7_1 = (param2 != this.field_g.b((byte) 87));
           this.field_i = stackIn_7_1;
           if (!this.field_f) {
             this.field_g.c((byte) -113);
@@ -260,16 +233,16 @@ final class rp extends RenderSprite {
           this.field_g.c((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_14_0 = var7;
-          stackIn_14_1 = new StringBuilder().append("rp.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var7;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("rp.<init>(");
           if (param0 == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_18_2 = "null";
           } else {

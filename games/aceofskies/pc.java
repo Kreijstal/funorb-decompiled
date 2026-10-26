@@ -7,21 +7,17 @@ final class pc implements com.ms.directX.IEnumModesCallback {
     private com.ms.directX.DirectDraw field_c;
 
     public final void callbackEnumModes(com.ms.directX.DDSurfaceDesc param0, com.ms.com.IUnknown param1) {
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int fieldTemp$4 = 0;
         if (field_a != null) {
-          fieldTemp$1 = field_b;
+          int fieldTemp$1 = field_b;
           field_b = field_b + 1;
           field_a[fieldTemp$1] = param0.width;
-          fieldTemp$2 = field_b;
+          int fieldTemp$2 = field_b;
           field_b = field_b + 1;
           field_a[fieldTemp$2] = param0.height;
-          fieldTemp$3 = field_b;
+          int fieldTemp$3 = field_b;
           field_b = field_b + 1;
           field_a[fieldTemp$3] = param0.rgbBitCount;
-          fieldTemp$4 = field_b;
+          int fieldTemp$4 = field_b;
           field_b = field_b + 1;
           field_a[fieldTemp$4] = param0.refreshRate;
         } else {

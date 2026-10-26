@@ -8,30 +8,20 @@ class ou extends DualLinkNode {
     }
 
     final static boolean a(int param0, CharSequence param1, boolean param2) {
-        int var6 = 0;
-        RuntimeException stackIn_39_0 = null;
-        StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        String var4 = null;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 == null) {
             return false;
           }
-          var3_int = param1.length();
+          int var3_int = param1.length();
           if (var3_int < 1) {
             return false;
           }
           if (var3_int > 12) {
             return false;
           }
-          var4 = vu.normalizePlayerName(127, param1);
+          String var4 = vu.normalizePlayerName(127, param1);
           if (var4 != null &&
             1 <= var4.length()) {
             if (!za.a((byte) 117, var4.charAt(0)) &&
@@ -39,9 +29,9 @@ class ou extends DualLinkNode {
               if (param0 != 19069) {
                 return true;
               }
-              var5 = 0;
-              for (var6 = 0; var6 < param1.length(); var6++) {
-                var7 = param1.charAt(var6);
+              int var5 = 0;
+              for (int var6 = 0; var6 < param1.length(); var6++) {
+                int var7 = param1.charAt(var6);
                 if (za.a((byte) 117, (char) var7)) {
                   var5++;
                 } else {
@@ -61,10 +51,10 @@ class ou extends DualLinkNode {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_39_0 = var3;
-          stackIn_39_1 = new StringBuilder().append("ou.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_39_0 = var3;
+          StringBuilder stackIn_39_1 = new StringBuilder().append("ou.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_40_2 = "null";
           } else {

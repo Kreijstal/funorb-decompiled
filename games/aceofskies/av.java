@@ -62,48 +62,32 @@ final class av {
     }
 
     static {
-        int var0 = 0;
-        int var1 = 0;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var0Lifetime1;
-        int var0Lifetime2;
-        int var1Lifetime1;
-        int var1Lifetime2;
-        int var2Lifetime1;
-        int var2Lifetime2;
-        int var3Lifetime1;
-        int var3Lifetime2;
-        int var3Lifetime2Lifetime1;
         field_c = new IntrusiveDeque();
         field_b = new int[128];
-        for (var0 = 0; var0 < 64; var0++) {
-          var1 = var0 * (var0 * 192) / 4096;
-          var2 = 128 * var0 * (var0 * (var0 * var0)) / 16777216;
-          var3 = 255 * (var0 * (var0 * var0)) / 262144;
+        for (int var0 = 0; var0 < 64; var0++) {
+          int var1 = var0 * (var0 * 192) / 4096;
+          int var2 = 128 * var0 * (var0 * (var0 * var0)) / 16777216;
+          int var3 = 255 * (var0 * (var0 * var0)) / 262144;
           field_b[var0] = (var2 << 8) + (var1 << 16) + var3;
         }
-        for (var0Lifetime1 = 0; var0Lifetime1 < 64; var0Lifetime1++) {
-          var1Lifetime1 = 96 * (var0Lifetime1 * var0Lifetime1) / 4096;
-          var2Lifetime1 = 32 * (var0Lifetime1 * (var0Lifetime1 * var0Lifetime1)) / 262144;
-          var3Lifetime1 = var0Lifetime1 * var0Lifetime1 * 128 / 4096;
+        for (int var0Lifetime1 = 0; var0Lifetime1 < 64; var0Lifetime1++) {
+          int var1Lifetime1 = 96 * (var0Lifetime1 * var0Lifetime1) / 4096;
+          int var2Lifetime1 = 32 * (var0Lifetime1 * (var0Lifetime1 * var0Lifetime1)) / 262144;
+          int var3Lifetime1 = var0Lifetime1 * var0Lifetime1 * 128 / 4096;
           field_b[-var0Lifetime1 + 127] = (var1Lifetime1 << 16) - (-(var2Lifetime1 << 8) - var3Lifetime1);
         }
-        var0Lifetime2 = 16711935 & field_b[63];
-        var1Lifetime2 = 65280 & field_b[63];
-        for (var2Lifetime2 = 0; var2Lifetime2 < 2; var2Lifetime2++) {
-          var3Lifetime2 = field_b[64 + var2Lifetime2];
-          var4 = 256 - 256 * var2Lifetime2 / 2;
-          var5 = 16711935 & var3Lifetime2;
-          var6 = var3Lifetime2 & 65280;
+        int var0Lifetime2 = 16711935 & field_b[63];
+        int var1Lifetime2 = 65280 & field_b[63];
+        for (int var2Lifetime2 = 0; var2Lifetime2 < 2; var2Lifetime2++) {
+          int var3Lifetime2 = field_b[64 + var2Lifetime2];
+          int var4 = 256 - 256 * var2Lifetime2 / 2;
+          int var5 = 16711935 & var3Lifetime2;
+          int var6 = var3Lifetime2 & 65280;
           var5 = var5 * (-var4 + 256);
           var6 = var6 * (-var4 + 256);
           var5 = var5 + var0Lifetime2 * var4;
           var6 = var6 + var1Lifetime2 * var4;
-          var3Lifetime2Lifetime1 = (var6 & 16711680 | -16711936 & var5) >>> 8;
+          int var3Lifetime2Lifetime1 = (var6 & 16711680 | -16711936 & var5) >>> 8;
           field_b[64 + var2Lifetime2] = var3Lifetime2Lifetime1;
         }
         field_a = new ej(2, 4, 4, 0);

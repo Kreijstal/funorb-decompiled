@@ -21,16 +21,8 @@ final class wq {
     }
 
     final static el a(wl param0, int param1, int param2, boolean param3, int param4, int param5, int param6, byte[] param7) {
-        RuntimeException var8 = null;
-        el stackIn_8_0 = null;
-        el stackIn_10_0 = null;
-        el stackIn_12_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param6 != 9980) {
             field_i = (String) null;
@@ -38,25 +30,25 @@ final class wq {
           if (!param0.field_Cc && (!mg.a(param1, (byte) -26) ||
             !mg.a(param2, (byte) 124))) {
             if (param0.field_u) {
-              stackIn_10_0 = new el(param0, 34037, param4, param1, param2, param3, param7, param5);
+              el stackIn_10_0 = new el(param0, 34037, param4, param1, param2, param3, param7, param5);
               return stackIn_10_0;
             }
-            stackIn_8_0 = new el(param0, param4, param1, param2, fk.a(param1, 87), fk.a(param2, 61), param7, param5);
+            el stackIn_8_0 = new el(param0, param4, param1, param2, fk.a(param1, 87), fk.a(param2, 61), param7, param5);
             return stackIn_8_0;
           }
-          stackIn_12_0 = new el(param0, 3553, param4, param1, param2, param3, param7, param5);
+          el stackIn_12_0 = new el(param0, 3553, param4, param1, param2, param3, param7, param5);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_15_0 = var8;
-          stackIn_15_1 = new StringBuilder().append("wq.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var8;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("wq.B(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
+          StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',');
           if (param7 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -67,14 +59,11 @@ final class wq {
     }
 
     final void a(byte param0) {
-        int var2;
-        int var3;
-        int var2Lifetime1;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null == this.field_g) {
           return;
         }
-        for (var2 = 0; this.field_g.length > var2; var2++) {
+        for (int var2 = 0; this.field_g.length > var2; var2++) {
           if (null != this.field_g[var2]) {
             this.field_g[var2].b(-20254);
           }
@@ -82,7 +71,7 @@ final class wq {
         if (param0 < 65) {
           this.field_g = (fg[]) null;
         }
-        for (var2Lifetime1 = 0; var2Lifetime1 < this.field_g.length; var2Lifetime1++) {
+        for (int var2Lifetime1 = 0; var2Lifetime1 < this.field_g.length; var2Lifetime1++) {
           if (null != this.field_g[var2Lifetime1]) {
             this.field_g[var2Lifetime1].a((byte) 89);
           }
@@ -94,53 +83,41 @@ final class wq {
     }
 
     final fg a(byte param0, bl param1, bl param2, boolean param3, int param4) {
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        fg var10 = null;
-        byte[] var14 = null;
-        fg stackIn_8_0 = null;
-        fg stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_b == null) {
             throw new RuntimeException();
           }
-          var6_int = -115 % ((param0 - 8) / 42);
+          int var6_int = -115 % ((param0 - 8) / 42);
           if (param4 >= 0 &&
             this.field_g.length > param4) {
             if (this.field_g[param4] != null) {
-              stackIn_8_0 = this.field_g[param4];
+              fg stackIn_8_0 = this.field_g[param4];
               return stackIn_8_0;
             }
             this.field_b.position = 6 + param4 * 72;
-            var7 = this.field_b.readInt((byte) 122);
-            var8 = this.field_b.readInt((byte) 125);
-            var14 = new byte[64];
+            int var7 = this.field_b.readInt((byte) 122);
+            int var8 = this.field_b.readInt((byte) 125);
+            byte[] var14 = new byte[64];
             this.field_b.a(0, 7186, 64, var14);
-            var10 = new fg(param4, param2, param1, this.field_a, this.field_d, var7, var14, var8, param3);
+            fg var10 = new fg(param4, param2, param1, this.field_a, this.field_d, var7, var14, var8, param3);
             this.field_g[param4] = var10;
-            stackIn_10_0 = var10;
+            fg stackIn_10_0 = var10;
             return stackIn_10_0;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_13_0 = var6;
-          stackIn_13_1 = new StringBuilder().append("wq.E(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var6;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("wq.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -151,18 +128,8 @@ final class wq {
     }
 
     final boolean a(int param0) {
-        int var7 = 0;
-        int var3;
-        byte[] var4;
         byte[] var5;
-        java.math.BigInteger var7_ref_java_math_BigInteger;
-        int var8;
-        PacketBuffer var10;
-        byte[] var11;
-        java.math.BigInteger var12;
-        byte[] var13;
-        byte[] var15;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (null != this.field_b) {
           return true;
         }
@@ -175,21 +142,21 @@ final class wq {
         if (this.field_h.field_p) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_h.a(true));
+        PacketBuffer var10 = new PacketBuffer(this.field_h.a(true));
         var10.position = 5;
         if (param0 <= 2) {
           this.a(115);
         }
-        var3 = var10.readUnsignedByte(-52);
+        int var3 = var10.readUnsignedByte(-52);
         var10.position = var10.position + 72 * var3;
-        var13 = new byte[var10.payload.length - var10.position];
-        var11 = var13;
-        var4 = var11;
+        byte[] var13 = new byte[var10.payload.length - var10.position];
+        byte[] var11 = var13;
+        byte[] var4 = var11;
         var10.a(0, 7186, var13.length, var13);
         if (null != this.field_f &&
           null != this.field_c) {
-          var12 = new java.math.BigInteger(var13);
-          var7_ref_java_math_BigInteger = var12.modPow(this.field_f, this.field_c);
+          java.math.BigInteger var12 = new java.math.BigInteger(var13);
+          java.math.BigInteger var7_ref_java_math_BigInteger = var12.modPow(this.field_f, this.field_c);
           var5 = var7_ref_java_math_BigInteger.toByteArray();
         } else {
           var5 = var4;
@@ -197,8 +164,8 @@ final class wq {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = qm.a(0, var10.position - var13.length - 5, var10.payload, 5);
-        for (var7 = 0; 64 > var7; var7++) {
+        byte[] var15 = qm.a(0, var10.position - var13.length - 5, var10.payload, 5);
+        for (int var7 = 0; 64 > var7; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();
           }

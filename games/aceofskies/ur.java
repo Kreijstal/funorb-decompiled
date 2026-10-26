@@ -26,27 +26,20 @@ final class ur {
     }
 
     final static IndexedSprite[] a(int param0, int param1, int param2, ResourceArchive param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        Object stackIn_2_0 = null;
-        IndexedSprite[] stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!tn.a(param3, (byte) -127, param2, param1)) {
-            stackIn_2_0 = null;
+            Object stackIn_2_0 = null;
             return (IndexedSprite[]) (stackIn_2_0);
           }
-          var4_int = -91 / ((34 - param0) / 38);
-          stackIn_4_0 = kn.a(-125);
+          int var4_int = -91 / ((34 - param0) / 38);
+          IndexedSprite[] stackIn_4_0 = kn.a(-125);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_7_0 = var4;
-          stackIn_7_1 = new StringBuilder().append("ur.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var4;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ur.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_8_2 = "null";
           } else {

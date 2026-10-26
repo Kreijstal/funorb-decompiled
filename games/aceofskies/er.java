@@ -36,56 +36,41 @@ final class er {
     }
 
     final static void a(byte param0) {
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        double var1_double = 0.0;
-        RuntimeException var1 = null;
-        double var4 = 0.0;
-        double var6 = 0.0;
-        double var8 = 0.0;
-        double var10 = 0.0;
-        double var12 = 0.0;
-        double var14 = 0.0;
         double var16_double = 0.0;
         int var16 = 0;
         int var17 = 0;
-        double var18_double = 0.0;
         int var18 = 0;
         int var19 = 0;
-        double var20 = 0.0;
-        double var22 = 0.0;
-        double var24 = 0.0;
-        int var26 = 0;
-        var26 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var26 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null != ScorchMark.field_f) {
             return;
           }
           ScorchMark.field_f = new int[65536];
-          var1_double = -0.015 + Math.random() * 0.03 + 0.7;
+          double var1_double = -0.015 + Math.random() * 0.03 + 0.7;
           if (param0 != -128) {
             er.d(65);
           }
-          for (var3 = 0; 65536 > var3; var3++) {
-            var4 = 0.0078125 + (double)((var3 & 64725) >> 10) / 64.0;
-            var6 = 0.0625 + (double)((1017 & var3) >> 7) / 8.0;
-            var8 = (double)(127 & var3) / 128.0;
-            var10 = var8;
-            var12 = var8;
-            var14 = var8;
+          for (int var3 = 0; 65536 > var3; var3++) {
+            double var4 = 0.0078125 + (double)((var3 & 64725) >> 10) / 64.0;
+            double var6 = 0.0625 + (double)((1017 & var3) >> 7) / 8.0;
+            double var8 = (double)(127 & var3) / 128.0;
+            double var10 = var8;
+            double var12 = var8;
+            double var14 = var8;
             if (0.0 != var6) {
               if (var8 < 0.5) {
                 var16_double = var8 * (1.0 + var6);
               } else {
                 var16_double = -(var6 * var8) + (var8 + var6);
               }
-              var18_double = 2.0 * var8 - var16_double;
-              var20 = var4 + 0.3333333333333333;
+              double var18_double = 2.0 * var8 - var16_double;
+              double var20 = var4 + 0.3333333333333333;
               if (var20 > 1.0) {
                 var20 = var20 - 1.0;
               }
-              var22 = var4;
-              var24 = -0.3333333333333333 + var4;
+              double var22 = var4;
+              double var24 = -0.3333333333333333 + var4;
               if (!(var22 * 6.0 < 1.0)) {
                 if (!(var22 * 2.0 < 1.0)) {
                   if (3.0 * var22 < 2.0) {
@@ -149,8 +134,8 @@ final class er {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "er.C(" + param0 + ')');
         }
     }
@@ -202,18 +187,16 @@ final class er {
     }
 
     final DualLinkNode a(int param0) {
-        DualLinkNode var2 = null;
-        DualLinkNode var2Lifetime1;
         if (param0 != 3) {
           this.field_b = (DualLinkNode) null;
-          var2 = this.field_a.previousSecondaryNode;
+          DualLinkNode var2 = this.field_a.previousSecondaryNode;
           if (var2 != this.field_a) {
             var2.unlinkSecondaryNode(-114);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_a.previousSecondaryNode;
+        DualLinkNode var2Lifetime1 = this.field_a.previousSecondaryNode;
         if (var2Lifetime1 != this.field_a) {
           var2Lifetime1.unlinkSecondaryNode(-114);
           return var2Lifetime1;

@@ -11,16 +11,8 @@ class mi extends ea {
     boolean field_s;
 
     final StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        RuntimeException var5 = null;
-        StringBuilder stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 32462) {
             this.e(3);
@@ -28,25 +20,25 @@ class mi extends ea {
           if (this.a(param0, param2, false, param3)) {
             this.a(param0, 0, param3, param2);
             if (this.field_s) {
-              discarded$2 = param0.append(" active");
+              StringBuilder discarded$2 = param0.append(" active");
             }
             if (!this.field_u) {
-              discarded$3 = param0.append(" disabled");
+              StringBuilder discarded$3 = param0.append(" disabled");
             }
           }
-          stackIn_10_0 = (StringBuilder) (param0);
+          StringBuilder stackIn_10_0 = (StringBuilder) (param0);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("mi.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("mi.A(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -57,14 +49,9 @@ class mi extends ea {
     }
 
     boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = 63 / ((param0 + 53) / 33);
+          int var5_int = 63 / ((param0 + 53) / 33);
           if (!this.e(28660)) {
             return false;
           }
@@ -75,10 +62,10 @@ class mi extends ea {
           this.a(0, -1, 1, -1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("mi.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var5;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("mi.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -89,19 +76,13 @@ class mi extends ea {
     }
 
     final static boolean a(int param0, CharSequence param1, boolean param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!ou.a(19069, param1, param2)) {
             return false;
           }
-          var3_int = 0;
+          int var3_int = 0;
           while (true) {
             if (var3_int >= param1.length()) {
               if (param0 <= -31) {
@@ -118,10 +99,10 @@ class mi extends ea {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_16_0 = var3;
-          stackIn_16_1 = new StringBuilder().append("mi.CA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var3;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("mi.CA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -164,11 +145,7 @@ class mi extends ea {
     }
 
     final void a(int param0, int param1, int param2, int param3, ea param4, byte param5) {
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var7 = null;
         try {
           if (this.field_o != null &&
             this.field_o instanceof uq) {
@@ -180,10 +157,10 @@ class mi extends ea {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_8_0 = var7;
-          stackIn_8_1 = new StringBuilder().append("mi.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var7;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("mi.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -194,11 +171,7 @@ class mi extends ea {
     }
 
     boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
-        RuntimeException var8 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_u &&
             this.a(param6, param4, param0 ^ -83, param1, param2)) {
@@ -215,10 +188,10 @@ class mi extends ea {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_15_0 = var8;
-          stackIn_15_1 = new StringBuilder().append("mi.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var8;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("mi.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -266,11 +239,7 @@ class mi extends ea {
     }
 
     boolean a(ea param0, byte param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -42) {
             return false;
@@ -289,10 +258,10 @@ class mi extends ea {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_15_0 = var3;
-          stackIn_15_1 = new StringBuilder().append("mi.U(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var3;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("mi.U(");
           if (param0 == null) {
             stackIn_16_2 = "null";
           } else {

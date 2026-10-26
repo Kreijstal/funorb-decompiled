@@ -17,15 +17,12 @@ final class lt extends to {
     }
 
     final gm d(byte param0) {
-        an var2;
-        gm var3;
-        int var4;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 != -112) {
           return (gm) null;
         }
-        var2 = new an(this.field_w);
-        var3 = (gm) (var2.c(-1372));
+        an var2 = new an(this.field_w);
+        gm var3 = (gm) (var2.c(-1372));
         while (var3 != null) {
           if (var3.field_z) {
             return var3;
@@ -65,7 +62,6 @@ final class lt extends to {
     }
 
     final void a(ea param0, int param1) {
-        gm var3 = null;
         try {
           if (param1 != 0) {
             this.field_w = (IntrusiveDeque) null;
@@ -73,7 +69,7 @@ final class lt extends to {
           if (!(param0 instanceof gm)) {
             throw new IllegalArgumentException();
           }
-          var3 = (gm) (param0);
+          gm var3 = (gm) (param0);
           this.field_w.addFirst(var3, 25611);
           var3.field_z = true;
           var3.a((ea) (this), (byte) -42);

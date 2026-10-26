@@ -20,12 +20,9 @@ final class rl {
     static st field_o;
 
     final static rl a(int param0, byte param1) {
-        int var2;
-        int var3;
-        int var4;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var2 = 49 / ((-9 - param1) / 45);
-        var3 = param0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var2 = 49 / ((-9 - param1) / 45);
+        int var3 = param0;
         if (var3 == 0) {
           return field_b;
         }
@@ -162,11 +159,7 @@ final class rl {
     }
 
     private rl(int param0, int param1, la param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_h = param2;
           this.field_f = param0;
@@ -177,10 +170,10 @@ final class rl {
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_5_0 = var4;
-          stackIn_5_1 = new StringBuilder().append("rl.<init>(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var4;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("rl.<init>(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_6_2 = "null";
           } else {

@@ -17,25 +17,14 @@ final class nc {
     }
 
     final static PcmSample[] a(ResourceArchive param0, int param1, ResourceArchive param2, String[] param3, boolean[] param4) {
-        int var6 = 0;
-        PcmSample[] var5 = null;
-        RuntimeException var5_ref = null;
-        int var7 = 0;
-        PcmSample[] stackIn_11_0 = null;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5 = new PcmSample[param3.length];
-          for (var6 = 0; var6 < var5.length; var6++) {
+          PcmSample[] var5 = new PcmSample[param3.length];
+          for (int var6 = 0; var6 < var5.length; var6++) {
             if (param4 != null &&
               param4[var6]) {
               var5[var6] = t.a(param0, "", param3[var6]).a();
@@ -46,31 +35,31 @@ final class nc {
           if (param1 >= -72) {
             titleFontSpriteData = (SpriteData[]) null;
           }
-          stackIn_11_0 = var5;
+          PcmSample[] stackIn_11_0 = var5;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5_ref = decompiledCaughtException;
-          stackIn_14_0 = var5_ref;
-          stackIn_14_1 = new StringBuilder().append("nc.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5_ref = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var5_ref;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("nc.B(");
           if (param0 == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
+          StringBuilder stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',');
           if (param3 == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
+          StringBuilder stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
           if (param4 == null) {
             stackIn_24_2 = "null";
           } else {

@@ -25,8 +25,7 @@ final class jt extends PcmStream {
     }
 
     final synchronized void a(int param0) {
-        int var3;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_l > 0 &&
           null != this.field_v) {
           this.field_n.a(param0);
@@ -113,27 +112,11 @@ final class jt extends PcmStream {
     }
 
     final void b(int[] param0, int param1, int param2) {
-        int localTemp$0 = 0;
-        int localTemp$1 = 0;
-        int var10 = 0;
         int stackIn_34_0 = 0;
         int stackIn_49_0 = 0;
         int stackIn_64_0 = 0;
-        RuntimeException stackIn_70_0 = null;
-        StringBuilder stackIn_70_1 = null;
         String stackIn_71_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var11 = 0;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_q <= 0) {
             this.a(param2);
@@ -154,8 +137,8 @@ final class jt extends PcmStream {
               }
             }
           }
-          var4_int = this.field_q * (this.field_l >> 12) / 256;
-          var5 = this.field_q - var4_int;
+          int var4_int = this.field_q * (this.field_l >> 12) / 256;
+          int var5 = this.field_q - var4_int;
           if (this.field_u != 0) {
             this.field_l = this.field_l + this.field_u * param2;
             if (this.field_l < 1048576) {
@@ -189,7 +172,7 @@ final class jt extends PcmStream {
           } else {
             stackIn_34_0 = param2;
           }
-          var6 = stackIn_34_0;
+          int var6 = stackIn_34_0;
           if (this.field_j < 256 && (this.field_v != null ||
             null != this.field_r)) {
             if (var4_int == 256) {
@@ -207,14 +190,14 @@ final class jt extends PcmStream {
                 this.field_n.b(this.field_i, 0, param2);
                 this.field_p.b(this.field_o, 0, param2);
                 if (tk.field_r) {
-                  localTemp$0 = param1 << 1;
+                  int localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
                   stackIn_49_0 = localTemp$0;
                 } else {
                   stackIn_49_0 = param1;
                 }
-                var7 = stackIn_49_0;
-                for (var8 = 0; var8 < var6; var8++) {
+                int var7 = stackIn_49_0;
+                for (int var8 = 0; var8 < var6; var8++) {
                   param0[var8 + var7] = param0[var8 + var7] + (var4_int * this.field_i[var8] + var5 * this.field_o[var8] >> 8);
                 }
               } else {
@@ -235,25 +218,25 @@ final class jt extends PcmStream {
             }
             this.field_y.b(this.field_i, 0, param2);
             if (tk.field_r) {
-              localTemp$1 = param1 << 1;
+              int localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_64_0 = localTemp$1;
             } else {
               stackIn_64_0 = param1;
             }
-            var7Lifetime1 = stackIn_64_0;
-            var8Lifetime1 = this.field_j * this.field_q / 256;
-            var9 = this.field_q - var8Lifetime1;
-            for (var10 = 0; var10 < var6; var10++) {
+            int var7Lifetime1 = stackIn_64_0;
+            int var8Lifetime1 = this.field_j * this.field_q / 256;
+            int var9 = this.field_q - var8Lifetime1;
+            for (int var10 = 0; var10 < var6; var10++) {
               param0[var7Lifetime1 + var10] = this.field_i[var10] * var8Lifetime1 + param0[var7Lifetime1 + var10] * var9 >> 8;
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_70_0 = var4;
-          stackIn_70_1 = new StringBuilder().append("jt.M(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_70_0 = var4;
+          StringBuilder stackIn_70_1 = new StringBuilder().append("jt.M(");
           if (param0 == null) {
             stackIn_71_2 = "null";
           } else {
@@ -265,31 +248,19 @@ final class jt extends PcmStream {
 
     final static void a(String param0, String param1, long param2, java.applet.Applet param3, int param4) {
         try {
-          RuntimeException stackIn_9_0 = null;
-          StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
-          StringBuilder stackIn_12_1 = null;
           String stackIn_13_2 = null;
-          StringBuilder stackIn_15_1 = null;
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
-          Throwable var6 = null;
-          RuntimeException var6_ref = null;
-          String var7 = null;
-          String var8 = null;
-          String var9 = null;
-          String var7Lifetime1;
-          String var7Lifetime2;
-          String var7Lifetime3;
           String var7Lifetime4;
           try {
             try {
-              var8 = param3.getParameter("cookiehost");
-              var7 = var8;
-              var7Lifetime1 = var8;
-              var9 = param0 + "=" + param1 + "; version=1; path=/; domain=" + var8;
-              var7Lifetime2 = var9;
-              var7Lifetime3 = var9;
+              String var8 = param3.getParameter("cookiehost");
+              String var7 = var8;
+              String var7Lifetime1 = var8;
+              String var9 = param0 + "=" + param1 + "; version=1; path=/; domain=" + var8;
+              String var7Lifetime2 = var9;
+              String var7Lifetime3 = var9;
               if (param2 < (long)param4) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
@@ -298,26 +269,26 @@ final class jt extends PcmStream {
               fe.a(param3, -7012, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6 = decompiledCaughtException;
+              Throwable var6 = decompiledCaughtException;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_9_0 = var6_ref;
-            stackIn_9_1 = new StringBuilder().append("jt.D(");
+            RuntimeException var6_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_9_0 = var6_ref;
+            StringBuilder stackIn_9_1 = new StringBuilder().append("jt.D(");
             if (param0 == null) {
               stackIn_10_2 = "null";
             } else {
               stackIn_10_2 = "{...}";
             }
-            stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+            StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
             if (param1 == null) {
               stackIn_13_2 = "null";
             } else {
               stackIn_13_2 = "{...}";
             }
-            stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',');
+            StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(',');
             if (param3 == null) {
               stackIn_16_2 = "null";
             } else {
@@ -337,20 +308,9 @@ final class jt extends PcmStream {
     }
 
     final synchronized void a(byte param0, int param1, boolean param2, int param3, MusicTrack param4, int param5) {
-        boolean stackIn_20_1 = false;
-        int stackIn_33_0 = 0;
-        MidiPcmStream stackIn_42_0 = null;
-        boolean stackIn_43_1 = false;
-        MidiPcmStream stackIn_51_0 = null;
-        boolean stackIn_52_1 = false;
-        RuntimeException stackIn_57_0 = null;
-        StringBuilder stackIn_57_1 = null;
         String stackIn_58_2 = null;
-        RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
-        RuntimeException var7 = null;
-        int var8 = 0;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_m &&
             param2) {
@@ -378,7 +338,7 @@ final class jt extends PcmStream {
           if (param0 >= -22) {
             return;
           }
-          stackIn_20_1 = (param2);
+          boolean stackIn_20_1 = (param2);
           this.field_m = stackIn_20_1;
           if (param4 == this.field_v) {
             this.field_u = param1;
@@ -394,7 +354,7 @@ final class jt extends PcmStream {
             if (this.field_r == null) {
               var7_int = 0;
             } else {
-              stackIn_33_0 = (this.field_l >= 524288) ? 0 : 1;
+              int stackIn_33_0 = (this.field_l >= 524288) ? 0 : 1;
               var7_int = stackIn_33_0;
             }
           } else {
@@ -406,8 +366,8 @@ final class jt extends PcmStream {
             }
             this.field_v = param4;
             if (param4 != null) {
-              stackIn_51_0 = this.field_n;
-              stackIn_52_1 = !(param2);
+              MidiPcmStream stackIn_51_0 = this.field_n;
+              boolean stackIn_52_1 = !(param2);
               ((MidiPcmStream) (Object) stackIn_51_0).a(stackIn_52_1, -2029711608, param4);
               this.a(param5, this.field_n, param3, 30121);
             }
@@ -418,8 +378,8 @@ final class jt extends PcmStream {
             }
             this.field_r = param4;
             if (param4 != null) {
-              stackIn_42_0 = this.field_p;
-              stackIn_43_1 = !(param2);
+              MidiPcmStream stackIn_42_0 = this.field_p;
+              boolean stackIn_43_1 = !(param2);
               ((MidiPcmStream) (Object) stackIn_42_0).a(stackIn_43_1, -2029711608, param4);
               this.a(param5, this.field_p, param3, 30121);
             }
@@ -427,10 +387,10 @@ final class jt extends PcmStream {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_57_0 = var7;
-          stackIn_57_1 = new StringBuilder().append("jt.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_57_0 = var7;
+          StringBuilder stackIn_57_1 = new StringBuilder().append("jt.C(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_58_2 = "null";
           } else {

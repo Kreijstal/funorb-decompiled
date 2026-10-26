@@ -11,37 +11,27 @@ final class us implements ir {
     private int field_c;
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        int var10 = 0;
         ea stackIn_4_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var11 = 0;
-        pf var12 = null;
-        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!(param3 instanceof pf)) {
             stackIn_4_0 = null;
           } else {
             stackIn_4_0 = (ea) (param3);
           }
-          var12 = (pf) (stackIn_4_0);
+          pf var12 = (pf) (stackIn_4_0);
           SoftwareRasterizer.b(param2 + param3.field_p, param3.field_h + param4, param3.field_q, param3.field_n, this.field_f);
           if (var12 == null) {
           }
-          var7 = -(var12.field_B * 2) + param3.field_q;
+          int var7 = -(var12.field_B * 2) + param3.field_q;
           if (param1 != -7592) {
             return;
           }
-          var8 = var12.field_B + param2 + param3.field_p;
-          var9 = var12.field_x + param3.field_h + param4;
+          int var8 = var12.field_B + param2 + param3.field_p;
+          int var9 = var12.field_x + param3.field_h + param4;
           SoftwareRasterizer.f(var8, var9, var8 + var7, var9, this.field_b);
-          for (var10 = -1 + var12.c(true); var10 >= 0; var10--) {
+          for (int var10 = -1 + var12.c(true); var10 >= 0; var10--) {
             SoftwareRasterizer.g(var7 * var12.a(false, var10) / var12.a(param1 ^ 7589) + var8, var9, this.field_c, this.field_d);
           }
           if (null != this.field_g) {
@@ -49,10 +39,10 @@ final class us implements ir {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_15_0 = var6;
-          stackIn_15_1 = new StringBuilder().append("us.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var6;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("us.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -63,57 +53,32 @@ final class us implements ir {
     }
 
     final static void a(int param0) {
-        int var4 = 0;
-        int var7 = 0;
-        int incrementValue$0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        double var1_double = 0.0;
-        RuntimeException var1 = null;
-        int var3 = 0;
-        float var5 = 0.0f;
-        float var6 = 0.0f;
-        float var8 = 0.0f;
-        float var9 = 0.0f;
-        float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        int var13 = 0;
-        int var14 = 0;
-        float var15 = 0.0f;
-        float var16 = 0.0f;
-        float var17 = 0.0f;
-        float var18 = 0.0f;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var23 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null != sa.field_h) {
             return;
           }
           sa.field_h = new int[65536];
-          var1_double = -0.015 + 0.03 * Math.random() + 0.7;
+          double var1_double = -0.015 + 0.03 * Math.random() + 0.7;
           if (param0 != 2069944240) {
             us.a(-104);
           }
-          var3 = 0;
-          for (var4 = 0; var4 < 512; var4++) {
-            var5 = 360.0f * ((float)(var4 >> 3) / 64.0f + 0.0078125f);
-            var6 = (float)(7 & var4) / 8.0f + 0.0625f;
-            for (var7 = 0; var7 < 128; var7++) {
-              var8 = (float)var7 / 128.0f;
-              var9 = 0.0f;
-              var10 = 0.0f;
-              var11 = 0.0f;
-              var12 = var5 / 60.0f;
-              var13 = (int)var12;
-              var14 = var13 % 6;
-              var15 = var12 - (float)var13;
-              var16 = (1.0f - var6) * var8;
-              var17 = (-(var6 * var15) + 1.0f) * var8;
-              var18 = (-(var6 * (1.0f - var15)) + 1.0f) * var8;
+          int var3 = 0;
+          for (int var4 = 0; var4 < 512; var4++) {
+            float var5 = 360.0f * ((float)(var4 >> 3) / 64.0f + 0.0078125f);
+            float var6 = (float)(7 & var4) / 8.0f + 0.0625f;
+            for (int var7 = 0; var7 < 128; var7++) {
+              float var8 = (float)var7 / 128.0f;
+              float var9 = 0.0f;
+              float var10 = 0.0f;
+              float var11 = 0.0f;
+              float var12 = var5 / 60.0f;
+              int var13 = (int)var12;
+              int var14 = var13 % 6;
+              float var15 = var12 - (float)var13;
+              float var16 = (1.0f - var6) * var8;
+              float var17 = (-(var6 * var15) + 1.0f) * var8;
+              float var18 = (-(var6 * (1.0f - var15)) + 1.0f) * var8;
               if (0 == var14) {
                 var10 = var18;
                 var11 = var16;
@@ -152,19 +117,19 @@ final class us implements ir {
               var9 = (float)Math.pow((double)var9, var1_double);
               var10 = (float)Math.pow((double)var10, var1_double);
               var11 = (float)Math.pow((double)var11, var1_double);
-              var19 = (int)(var9 * 256.0f);
-              var20 = (int)(var10 * 256.0f);
-              var21 = (int)(var11 * 256.0f);
-              var22 = var21 + (var19 << 16) + (-16777216 + (var20 << 8));
-              incrementValue$0 = var3;
+              int var19 = (int)(var9 * 256.0f);
+              int var20 = (int)(var10 * 256.0f);
+              int var21 = (int)(var11 * 256.0f);
+              int var22 = var21 + (var19 << 16) + (-16777216 + (var20 << 8));
+              int incrementValue$0 = var3;
               var3++;
               sa.field_h[incrementValue$0] = var22;
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "us.A(" + param0 + ')');
         }
     }

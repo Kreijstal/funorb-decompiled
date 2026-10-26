@@ -10,11 +10,7 @@ final class cd {
     static int field_b;
 
     final static void a(java.awt.Canvas param0, int param1) {
-        RuntimeException var2 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           ei.a(107, (java.awt.Component) ((Object) param0));
           de.a((java.awt.Component) ((Object) param0), false);
@@ -27,10 +23,10 @@ final class cd {
           SteeringMode.field_c.a((java.awt.Component) ((Object) param0), -104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("cd.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var2;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("cd.A(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -54,45 +50,35 @@ final class cd {
     }
 
     final static IndexedSprite a(ResourceArchive param0, String param1, String param2, int param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        String var6 = null;
-        IndexedSprite stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param1, 0);
-          var5 = param0.a(-125, var4_int, param2);
+          int var4_int = param0.b(param1, 0);
+          int var5 = param0.a(-125, var4_int, param2);
           if (param3 >= -43) {
-            var6 = (String) null;
+            String var6 = (String) null;
             cd.a((ResourceArchive) null, (String) null, (String) null, -13);
           }
-          stackIn_3_0 = bl.a((byte) -123, var5, param0, var4_int);
+          IndexedSprite stackIn_3_0 = bl.a((byte) -123, var5, param0, var4_int);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("cd.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var4;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("cd.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -107,18 +93,13 @@ final class cd {
     }
 
     cd(String param0, boolean param1) {
-        RuntimeException var3 = null;
-        boolean stackIn_6_1 = false;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_e = param0;
           if (null == this.field_e) {
             this.field_e = "";
           }
-          stackIn_6_1 = (param1);
+          boolean stackIn_6_1 = (param1);
           this.field_d = stackIn_6_1;
           if (this.field_e.length() != 0) {
             return;
@@ -126,10 +107,10 @@ final class cd {
           this.field_d = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("cd.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("cd.<init>(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {

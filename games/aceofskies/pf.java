@@ -10,25 +10,14 @@ final class pf extends mi {
     private ot field_w;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
-        int var12 = 0;
-        RuntimeException stackIn_26_0 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var8_int = 0;
-        RuntimeException var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!super.a((int) (char)param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          var8_int = -this.field_B + (param2 - param1);
-          var9 = this.field_q - 2 * this.field_B;
+          int var8_int = -this.field_B + (param2 - param1);
+          int var9 = this.field_q - 2 * this.field_B;
           if (var9 < var8_int) {
             var8_int = var9;
           }
@@ -40,10 +29,10 @@ final class pf extends mi {
             if (param3 != 2) {
               return true;
             }
-            var10 = 2147483647;
-            var11 = -1;
-            for (var12 = 0; this.field_w.a((byte) 123) > var12; var12++) {
-              var13 = -var8_int + this.field_w.b(var12, 1);
+            int var10 = 2147483647;
+            int var11 = -1;
+            for (int var12 = 0; this.field_w.a((byte) 123) > var12; var12++) {
+              int var13 = -var8_int + this.field_w.b(var12, 1);
               var13 = var13 * var13;
               if (var13 < var10) {
                 var11 = var12;
@@ -58,10 +47,10 @@ final class pf extends mi {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_26_0 = var8;
-          stackIn_26_1 = new StringBuilder().append("pf.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_26_0 = var8;
+          StringBuilder stackIn_26_1 = new StringBuilder().append("pf.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_27_2 = "null";
           } else {

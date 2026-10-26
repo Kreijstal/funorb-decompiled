@@ -10,23 +10,18 @@ final class SmokeParticle extends FlightBody {
     int spriteIndex;
 
     final static boolean a(CharSequence param0, int param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
             field_k = (String) null;
           }
-          stackIn_3_0 = mi.a(-120, param0, false);
+          boolean stackIn_3_0 = mi.a(-120, param0, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("qf.N(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("qf.N(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -72,44 +67,36 @@ final class SmokeParticle extends FlightBody {
     }
 
     final static String a(String param0, int param1, String param2, ResourceArchive param3, int param4) {
-        RuntimeException var5 = null;
-        String stackIn_5_0 = null;
-        String stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param4 <= 65) {
             SmokeParticle.b(-73);
           }
           if (!param3.b((byte) -77)) {
-            stackIn_5_0 = (String) (param2);
+            String stackIn_5_0 = (String) (param2);
             return stackIn_5_0;
           }
-          stackIn_7_0 = param0 + " - " + param3.a(param1, 100) + "%";
+          String stackIn_7_0 = param0 + " - " + param3.a(param1, 100) + "%";
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("qf.I(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var5;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("qf.I(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param3 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -120,38 +107,23 @@ final class SmokeParticle extends FlightBody {
     }
 
     final static void a(byte[] param0, PacketBuffer param1, int param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, int param6) {
-        RuntimeException stackIn_24_0 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
-        StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        int[] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int[] var12 = null;
-        int[] var13 = null;
-        int var9Lifetime1;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var7_int = dq.a(param4, -70);
+          int var7_int = dq.a(param4, -70);
           if (null == lp.field_b) {
             lp.field_b = new java.security.SecureRandom();
           }
-          var13 = new int[4];
-          var12 = var13;
-          var8 = var12;
+          int[] var13 = new int[4];
+          int[] var12 = var13;
+          int[] var8 = var12;
           if (param2 != 25215) {
             SmokeParticle.a((byte) 115, false);
           }
-          for (var9 = 0; var9 < 4; var9++) {
+          for (int var9 = 0; var9 < 4; var9++) {
             var8[var9] = lp.field_b.nextInt();
           }
           if (DualLinkNode.field_l == null ||
@@ -168,8 +140,8 @@ final class SmokeParticle extends FlightBody {
           }
           ke.field_a.position = 0;
           ke.field_a.writeByte(-1336879960, 10);
-          var11 = 0;
-          var9Lifetime1 = var11;
+          int var11 = 0;
+          int var9Lifetime1 = var11;
           while (var11 < 4) {
             ke.field_a.writeInt((byte) 87, var13[var11]);
             var11++;
@@ -180,28 +152,28 @@ final class SmokeParticle extends FlightBody {
           param1.a(true, DualLinkNode.field_l.position, 0, DualLinkNode.field_l.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_24_0 = var7;
-          stackIn_24_1 = new StringBuilder().append("qf.M(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_24_0 = var7;
+          StringBuilder stackIn_24_1 = new StringBuilder().append("qf.M(");
           if (param0 == null) {
             stackIn_25_2 = "null";
           } else {
             stackIn_25_2 = "{...}";
           }
-          stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
+          StringBuilder stackIn_27_1 = ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',');
           if (param1 == null) {
             stackIn_28_2 = "null";
           } else {
             stackIn_28_2 = "{...}";
           }
-          stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',');
+          StringBuilder stackIn_30_1 = ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(',');
+          StringBuilder stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_34_2 = "null";
           } else {

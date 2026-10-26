@@ -153,7 +153,6 @@ abstract class bf extends GraphicsRenderer {
     }
 
     private final void n(int param0) {
-        int var2 = 0;
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.m(-109);
         this.t((byte) -69);
@@ -169,7 +168,7 @@ abstract class bf extends GraphicsRenderer {
         this.p((byte) -128);
         this.l((byte) 127);
         this.u((byte) -66);
-        for (var2 = -1 + this.field_h; var2 >= 0; var2--) {
+        for (int var2 = -1 + this.field_h; var2 >= 0; var2--) {
           this.a(var2, (byte) 98);
           this.N(0);
           this.m((byte) -127);
@@ -197,24 +196,11 @@ abstract class bf extends GraphicsRenderer {
     abstract void N(int param0);
 
     final void a(boolean param0, boolean param1, int param2, int param3) {
-        int stackIn_4_0 = 0;
         int stackIn_7_1 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_20_0 = 0;
-        Object var5;
-        int var6;
-        int var7;
-        int var8;
-        int var9;
-        uh var10;
-        int var11;
-        int var12;
-        ec var13;
-        int var14;
         boolean decompiledFrameRemainder0 = true;
-        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 == this.field_ab) {
-          stackIn_4_0 = (this.field_dc) ? 0 : 1;
+          int stackIn_4_0 = (this.field_dc) ? 0 : 1;
           if (this.field_Bb) {
             stackIn_7_1 = 0;
           } else {
@@ -223,23 +209,23 @@ abstract class bf extends GraphicsRenderer {
           decompiledFrameRemainder0 = (stackIn_4_0 != stackIn_7_1);
         }
         if (decompiledFrameRemainder0) {
-          var5 = null;
-          var6 = 0;
-          var7 = 0;
-          var8 = 0;
-          stackIn_12_0 = (!this.field_Bb) ? 0 : 3;
-          var9 = stackIn_12_0;
+          Object var5 = null;
+          int var6 = 0;
+          int var7 = 0;
+          int var8 = 0;
+          int stackIn_12_0 = (!this.field_Bb) ? 0 : 3;
+          int var9 = stackIn_12_0;
           if (0 <= param2) {
             var5 = this.field_z.a((byte) -69, param2);
-            var10 = this.field_a.a(false, param2);
+            uh var10 = this.field_a.a(false, param2);
             if (var10.field_n == 0 &&
               var10.field_j == 0) {
               this.f(param3 - 21044);
             } else {
-              stackIn_20_0 = (!var10.field_o) ? 128 : 64;
-              var11 = stackIn_20_0;
-              var12 = 50 * var11;
-              var13 = this.d(12343);
+              int stackIn_20_0 = (!var10.field_o) ? 128 : 64;
+              int var11 = stackIn_20_0;
+              int var12 = 50 * var11;
+              ec var13 = this.d(12343);
               var13.a((float)(this.field_r % var12 * var10.field_n) / (float)var12, (byte) 107, (float)(this.field_r % var12 * var10.field_j) / (float)var12, 0.0f);
               this.a(tr.field_a, (byte) -87);
             }
@@ -458,33 +444,26 @@ abstract class bf extends GraphicsRenderer {
     abstract qi a(int param0, boolean param1, hd param2, int param3, byte param4, int param5, int param6, byte[] param7);
 
     final qi a(byte[] param0, int param1, boolean param2, int param3, hd param4, boolean param5) {
-        RuntimeException var7 = null;
-        qi stackIn_2_0 = null;
-        qi stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            stackIn_4_0 = this.a(param3, param5, param4, param1, (byte) 108, 0, 0, param0);
+            qi stackIn_4_0 = this.a(param3, param5, param4, param1, (byte) 108, 0, 0, param0);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (qi) null;
+          qi stackIn_2_0 = (qi) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_7_0 = var7;
-          stackIn_7_1 = new StringBuilder().append("bf.VE(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var7;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("bf.VE(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -506,11 +485,9 @@ abstract class bf extends GraphicsRenderer {
 
     private final void a(byte param0, boolean param1, int param2, boolean param3, int param4, int param5) {
         int stackIn_8_0 = 0;
-        int var7;
-        int var8;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         param3 = param3 & this.i(-7865);
-        var7 = -100 / ((69 - param0) / 43);
+        int var7 = -100 / ((69 - param0) / 43);
         if (!param3 && (param4 == 4 ||
           8 == param4 ||
           param4 == 9)) {
@@ -569,14 +546,12 @@ abstract class bf extends GraphicsRenderer {
     abstract void V(int param0);
 
     private final void g(byte param0) {
-        float[] var2;
-        float[] var3;
         if (param0 >= -99) {
           this.field_C = (ti) null;
         }
         if (!this.field_Zb) {
-          var3 = this.field_yb;
-          var2 = var3;
+          float[] var3 = this.field_yb;
+          float[] var2 = var3;
           if (this.field_Z != 0 &&
             0 != this.field_jb) {
             var3[12] = -1.0f;
@@ -633,11 +608,10 @@ abstract class bf extends GraphicsRenderer {
     abstract boolean a(byte param0, la param1, hd param2);
 
     sk b(int param0, byte param1) {
-        int var3;
         if (param1 <= 31) {
           this.E(-25);
         }
-        var3 = param0;
+        int var3 = param0;
         if (var3 == 6) {
           return (sk) ((Object) new cf(this));
         }
@@ -665,23 +639,16 @@ abstract class bf extends GraphicsRenderer {
     }
 
     private final void u(int param0) {
-        float[] var2;
-        float var3;
-        float var4;
-        float var5;
-        float var6;
-        float var7;
-        float[] var8;
         if (!this.field_e) {
-          var8 = this.field_n;
-          var2 = var8;
-          var3 = (float)(this.field_Mb * -this.field_Ub) / (float)this.field_oc;
-          var4 = (float)((this.field_Z - this.field_Ub) * this.field_Mb) / (float)this.field_oc;
-          var5 = (float)(this.field_Mb * this.field_lb) / (float)this.field_M;
-          var6 = (float)(this.field_Mb * (this.field_lb - this.field_jb)) / (float)this.field_M;
+          float[] var8 = this.field_n;
+          float[] var2 = var8;
+          float var3 = (float)(this.field_Mb * -this.field_Ub) / (float)this.field_oc;
+          float var4 = (float)((this.field_Z - this.field_Ub) * this.field_Mb) / (float)this.field_oc;
+          float var5 = (float)(this.field_Mb * this.field_lb) / (float)this.field_M;
+          float var6 = (float)(this.field_Mb * (this.field_lb - this.field_jb)) / (float)this.field_M;
           if (var4 != var3 &&
             var5 != var6) {
-            var7 = 2.0f * (float)this.field_Mb;
+            float var7 = 2.0f * (float)this.field_Mb;
             var8[1] = 0.0f;
             var8[8] = (var3 + var4) / (-var3 + var4);
             var8[4] = 0.0f;
@@ -729,33 +696,25 @@ abstract class bf extends GraphicsRenderer {
     abstract void j(int param0);
 
     private final void A(int param0) {
-        int var5 = 0;
-        int var2;
-        jaclib.memory.Buffer var3;
-        jaclib.memory.Stream var4;
-        double var6;
-        float var8;
-        float var9;
-        int var10;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_K = this.a(false, (byte) 118);
         if (param0 != -32) {
           this.field_fb = 0.25540614128112793f;
         }
         this.field_K.a(12, -125, 3096);
-        var2 = 0;
+        int var2 = 0;
         scanLoop1: while (true) {
           if (4 > var2) {
-            var3 = this.field_K.a(true, (byte) -59);
+            jaclib.memory.Buffer var3 = this.field_K.a(true, (byte) -59);
             if (var3 != null) {
-              var4 = this.a(-105, var3);
+              jaclib.memory.Stream var4 = this.a(-105, var3);
               var4.b(0.0f);
               var4.b(0.0f);
               var4.b(0.0f);
-              for (var5 = 0; 256 >= var5; var5++) {
-                var6 = 3.141592653589793 * (double)(2 * var5) / 256.0;
-                var8 = (float)Math.cos(var6);
-                var9 = (float)Math.sin(var6);
+              for (int var5 = 0; 256 >= var5; var5++) {
+                double var6 = 3.141592653589793 * (double)(2 * var5) / 256.0;
+                float var8 = (float)Math.cos(var6);
+                float var9 = (float)Math.sin(var6);
                 if (jaclib.memory.Stream.b()) {
                   var4.b(var9);
                   var4.b(var8);
@@ -791,21 +750,11 @@ abstract class bf extends GraphicsRenderer {
 
     bf(java.awt.Canvas param0, Object param1, d param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
-        int var8 = 0;
-        uh var9 = null;
-        java.awt.Dimension var11 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
         Throwable decompiledCaughtException = null;
-        Throwable var7 = null;
-        RuntimeException var7_ref = null;
         this.field_nc = new IntrusiveDeque();
         this.field_Lb = true;
         this.field_ec = new ec();
@@ -878,7 +827,7 @@ abstract class bf extends GraphicsRenderer {
             this.field_lc = param4;
             this.field_d = param3;
             this.field_Fb = param1;
-            var11 = param0.getSize();
+            java.awt.Dimension var11 = param0.getSize();
             this.field_Z = var11.width;
             this.field_jb = var11.height;
             this.field_m = param5;
@@ -886,8 +835,8 @@ abstract class bf extends GraphicsRenderer {
             if (null != this.field_a) {
               this.field_z = new sb(this, this.field_a);
               this.field_i = new jagex3.graphics2.hw.NativeInterface(this.field_a.a(28060), this.field_m);
-              for (var8 = 0; var8 < this.field_a.a(28060); var8++) {
-                var9 = this.field_a.a(false, var8);
+              for (int var8 = 0; var8 < this.field_a.a(28060); var8++) {
+                uh var9 = this.field_a.a(false, var8);
                 if (var9 != null) {
                   this.field_i.initTextureMetrics(var8, var9.field_r, var9.field_b);
                 }
@@ -899,34 +848,34 @@ abstract class bf extends GraphicsRenderer {
             return;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var7 = decompiledCaughtException;
+            Throwable var7 = decompiledCaughtException;
             var7.printStackTrace();
             this.a(-9);
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var7_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_12_0 = var7_ref;
-          stackIn_12_1 = new StringBuilder().append("bf.<init>(");
+          RuntimeException var7_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var7_ref;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("bf.<init>(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param1 == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
           }
-          stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
+          StringBuilder stackIn_18_1 = ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',');
           if (param2 == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
+          StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',');
           if (param3 == null) {
             stackIn_22_2 = "null";
           } else {
@@ -943,23 +892,18 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final qi a(int[] param0, int param1, int param2, boolean param3, int param4) {
-        RuntimeException var6 = null;
-        qi stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
             this.field_Zb = false;
           }
-          stackIn_3_0 = this.a(0, true, param3, param4, 0, param0, param1);
+          qi stackIn_3_0 = this.a(0, true, param3, param4, 0, param0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_6_0 = var6;
-          stackIn_6_1 = new StringBuilder().append("bf.ID(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var6;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("bf.ID(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -970,15 +914,13 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final void c(byte param0) {
-        Enumeration var3 = null;
-        java.awt.Canvas var4 = null;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         Hashtable var2 = new Hashtable();
         if (this.field_gb != null &&
           !this.field_gb.isEmpty()) {
-          var3 = this.field_gb.keys();
+          Enumeration var3 = this.field_gb.keys();
           while (var3.hasMoreElements()) {
-            var4 = (java.awt.Canvas) (var3.nextElement());
+            java.awt.Canvas var4 = (java.awt.Canvas) (var3.nextElement());
             var2.put(var4, this.a(-15083, var4));
           }
         }
@@ -1018,14 +960,13 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final void f(byte param0) {
-        int var2 = 0;
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_u = new jj[this.field_h];
         this.field_f = new st[this.field_h];
         this.field_H = new as[this.field_h];
         this.field_w = new as[this.field_h];
         this.field_L = new ec[this.field_h];
-        for (var2 = 0; this.field_h > var2; var2++) {
+        for (int var2 = 0; this.field_h > var2; var2++) {
           this.field_w[var2] = ru.field_a;
           this.field_H[var2] = ru.field_a;
           this.field_f[var2] = mq.field_g;
@@ -1139,12 +1080,7 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final float[] a(int param0, float[] param1) {
-        RuntimeException var3 = null;
-        float[] stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           param1[param0] = this.field_N[3];
           param1[4] = this.field_N[1];
@@ -1162,13 +1098,13 @@ abstract class bf extends GraphicsRenderer {
           param1[7] = this.field_N[13];
           param1[11] = this.field_N[14];
           param1[15] = this.field_N[15];
-          stackIn_1_0 = (float[]) (param1);
+          float[] stackIn_1_0 = (float[]) (param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("bf.QE(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var3;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("bf.QE(").append(param0).append(',');
           if (param1 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -1191,11 +1127,7 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final void a(jj param0, int param1) {
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (param0 != this.field_u[this.field_F]) {
             this.field_u[this.field_F] = param0;
@@ -1211,10 +1143,10 @@ abstract class bf extends GraphicsRenderer {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("bf.DG(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("bf.DG(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -1276,41 +1208,24 @@ abstract class bf extends GraphicsRenderer {
     abstract tl a(boolean param0, byte param1);
 
     final RenderSprite createSprite(SpriteData data, boolean preferIndexed) {
-        int incrementValue$2 = 0;
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        int[] stackIn_16_0 = null;
-        int stackIn_16_1 = 0;
         int stackIn_17_2 = 0;
-        RenderSprite stackIn_22_0 = null;
-        RuntimeException stackIn_25_0 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
         RenderSprite var3 = null;
-        RuntimeException var3_ref = null;
-        int[] var4 = null;
-        int var5 = 0;
-        int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int[] var11 = null;
-        int[] var12 = null;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (data.width != 0 &&
             data.height != 0) {
-            var12 = new int[data.height * data.width];
-            var11 = var12;
-            var4 = var11;
-            var5 = 0;
-            var6 = 0;
+            int[] var12 = new int[data.height * data.width];
+            int[] var11 = var12;
+            int[] var4 = var11;
+            int var5 = 0;
+            int var6 = 0;
             if (null != data.alpha) {
               for (var7 = 0; var7 < data.height; var7++) {
                 for (var8 = 0; data.width > var8; var8++) {
-                  incrementValue$2 = var6;
+                  int incrementValue$2 = var6;
                   var6++;
                   var4[incrementValue$2] = vo.a(data.alpha[var5] << 24, data.palette[pg.a((int) data.indices[var5], 255)]);
                   var5++;
@@ -1319,13 +1234,13 @@ abstract class bf extends GraphicsRenderer {
             } else {
               for (var7 = 0; var7 < data.height; var7++) {
                 for (var8 = 0; var8 < data.width; var8++) {
-                  incrementValue$0 = var5;
+                  int incrementValue$0 = var5;
                   var5++;
-                  var9 = data.palette[255 & data.indices[incrementValue$0]];
-                  incrementValue$1 = var6;
+                  int var9 = data.palette[255 & data.indices[incrementValue$0]];
+                  int incrementValue$1 = var6;
                   var6++;
-                  stackIn_16_0 = var4;
-                  stackIn_16_1 = incrementValue$1;
+                  int[] stackIn_16_0 = var4;
+                  int stackIn_16_1 = incrementValue$1;
                   if (var9 == 0) {
                     stackIn_17_2 = 0;
                   } else {
@@ -1340,13 +1255,13 @@ abstract class bf extends GraphicsRenderer {
             var3 = this.a(105, 1, new int[]{0}, 0, 1, 1);
           }
           var3.a(data.padLeft, data.padTop, data.padRight, data.padBottom);
-          stackIn_22_0 = var3;
+          RenderSprite stackIn_22_0 = var3;
           return stackIn_22_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_25_0 = var3_ref;
-          stackIn_25_1 = new StringBuilder().append("bf.HA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_25_0 = var3_ref;
+          StringBuilder stackIn_25_1 = new StringBuilder().append("bf.HA(");
           if (data == null) {
             stackIn_26_2 = "null";
           } else {
@@ -1375,20 +1290,15 @@ abstract class bf extends GraphicsRenderer {
     abstract void a(int param0, java.awt.Canvas param1, Object param2);
 
     final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        RuntimeException var7 = null;
-        rp stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new rp(this, param3, param4, param0, param1, param2);
+          rp stackIn_1_0 = new rp(this, param3, param4, param0, param1, param2);
           return (RenderSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_4_0 = var7;
-          stackIn_4_1 = new StringBuilder().append("bf.O(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var7;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("bf.O(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -1418,16 +1328,10 @@ abstract class bf extends GraphicsRenderer {
     abstract fa a(pl[] param0, int param1);
 
     final void a(as param0, boolean param1, as param2) {
-        int var4_int = 0;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
         try {
-          var4_int = 0;
+          int var4_int = 0;
           if (this.field_H[this.field_F] != param0) {
             this.field_H[this.field_F] = param0;
             this.N(0);
@@ -1446,16 +1350,16 @@ abstract class bf extends GraphicsRenderer {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_11_0 = var4;
-          stackIn_11_1 = new StringBuilder().append("bf.GF(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var4;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("bf.GF(");
           if (param0 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -1481,22 +1385,18 @@ abstract class bf extends GraphicsRenderer {
     }
 
     private final void h(int param0) {
-        int var2;
-        jaclib.memory.Buffer var3;
-        int var5;
-        jaclib.memory.Stream var4;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_s = this.a(false, (byte) 111);
         if (param0 != 26339) {
           this.field_Wb = 0.4179408848285675f;
         }
         this.field_s.a(28, param0 ^ -26259, 140);
-        var2 = 0;
+        int var2 = 0;
         scanLoop1: while (true) {
           if (var2 < 4) {
-            var3 = this.field_s.a(true, (byte) -64);
+            jaclib.memory.Buffer var3 = this.field_s.a(true, (byte) -64);
             if (var3 != null) {
-              var4 = this.a(84, var3);
+              jaclib.memory.Stream var4 = this.a(84, var3);
               if (jaclib.memory.Stream.b()) {
                 var4.b(0.0f);
                 var4.b(0.0f);
@@ -1589,12 +1489,11 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final void S(int param0) {
-        qo var2 = null;
         if (param0 != -32) {
           return;
         }
         if (this.field_bb != ArchiveIndex.field_d) {
-          var2 = this.field_bb;
+          qo var2 = this.field_bb;
           this.field_bb = ArchiveIndex.field_d;
           if (var2.b((byte) -92)) {
             this.e(true);
@@ -1615,9 +1514,8 @@ abstract class bf extends GraphicsRenderer {
     }
 
     private final void L(int param0) {
-        float var2_float = 0.0f;
         if (this.field_bb == SoundPlayback.field_e) {
-          var2_float = this.o((byte) 42);
+          float var2_float = this.o((byte) 42);
           this.field_ec.b(var2_float, (byte) -127, 0.0f, var2_float);
         }
         this.field_S = false;
@@ -1651,28 +1549,22 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
-        RuntimeException var4 = null;
-        ig stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new ig(this, param0, param1, param2);
+          ig stackIn_1_0 = new ig(this, param0, param1, param2);
           return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_4_0 = var4;
-          stackIn_4_1 = new StringBuilder().append("bf.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var4;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("bf.E(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -1732,30 +1624,23 @@ abstract class bf extends GraphicsRenderer {
     abstract void v(int param0);
 
     final qi a(boolean param0, int param1, float[] param2, hd param3, byte param4, int param5) {
-        int var7_int = 0;
-        RuntimeException var7 = null;
-        qi stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var7_int = -99 / ((-30 - param4) / 62);
-          stackIn_1_0 = this.a(param2, param5, param3, false, 0, param1, 0, param0);
+          int var7_int = -99 / ((-30 - param4) / 62);
+          qi stackIn_1_0 = this.a(param2, param5, param3, false, 0, param1, 0, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_4_0 = var7;
-          stackIn_4_1 = new StringBuilder().append("bf.ND(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var7;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("bf.ND(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
           if (param3 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -1792,19 +1677,16 @@ abstract class bf extends GraphicsRenderer {
     abstract void a(fa param0, byte param1);
 
     void c() {
-        IntrusiveNode var1 = null;
-        Enumeration var1_ref = null;
-        java.awt.Canvas var2 = null;
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!this.field_qc) {
-          var1 = this.field_nc.first(268435455);
+          IntrusiveNode var1 = this.field_nc.first(268435455);
           while (var1 != null) {
             ((gi) (var1)).d(127);
             var1 = this.field_nc.next((byte) 103);
           }
-          var1_ref = this.field_gb.keys();
+          Enumeration var1_ref = this.field_gb.keys();
           while (var1_ref.hasMoreElements()) {
-            var2 = (java.awt.Canvas) (var1_ref.nextElement());
+            java.awt.Canvas var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.a(0, var2, this.field_gb.get(var2));
           }
           RendererBitmapFont.a(63, true, false);
@@ -1827,11 +1709,10 @@ abstract class bf extends GraphicsRenderer {
     abstract void g(int param0);
 
     final void o(int param0) {
-        java.awt.Canvas var3 = null;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         Enumeration var2 = this.field_gb.keys();
         while (var2.hasMoreElements()) {
-          var3 = (java.awt.Canvas) (var2.nextElement());
+          java.awt.Canvas var3 = (java.awt.Canvas) (var2.nextElement());
           this.a(0, var3, this.field_gb.get(var3));
         }
         this.field_s.a(4665);
@@ -1874,12 +1755,11 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final void c(boolean param0) {
-        qo var2 = null;
         if (!param0) {
           this.c();
         }
         if (SoundPlayback.field_e != this.field_bb) {
-          var2 = this.field_bb;
+          qo var2 = this.field_bb;
           this.field_bb = SoundPlayback.field_e;
           if (var2.b((byte) -92)) {
             this.e(true);
@@ -1916,23 +1796,17 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final jaclib.memory.Stream a(int param0, jaclib.memory.Buffer param1) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        jaclib.memory.Stream stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.field_l.a(param1);
-          var3_int = 107 / ((param0 + 48) / 50);
-          stackIn_1_0 = this.field_l;
+          int var3_int = 107 / ((param0 + 48) / 50);
+          jaclib.memory.Stream stackIn_1_0 = this.field_l;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("bf.RF(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var3;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("bf.RF(").append(param0).append(',');
           if (param1 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -1943,16 +1817,13 @@ abstract class bf extends GraphicsRenderer {
     }
 
     final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        float var7;
-        float var8;
-        float var9;
-        var7 = (float)(-param0) + (float)param2;
-        var8 = (float)param3 - (float)param1;
+        float var7 = (float)(-param0) + (float)param2;
+        float var8 = (float)param3 - (float)param1;
         if (var7 == 0.0f &&
           0.0f == var8) {
           var7 = 1.0f;
         } else {
-          var9 = (float)(1.0 / Math.sqrt((double)(var8 * var8 + var7 * var7)));
+          float var9 = (float)(1.0 / Math.sqrt((double)(var8 * var8 + var7 * var7)));
           var7 = var7 * var9;
           var8 = var8 * var9;
         }
@@ -2001,26 +1872,18 @@ abstract class bf extends GraphicsRenderer {
     }
 
     private final void d(byte param0) {
-        float[] var2;
-        float var3;
-        float var4;
-        float var5;
-        float var6;
-        float var7;
-        float var8;
-        float[] var9;
         if (param0 < 25) {
           this.KA(-57, 60, -65, 127);
         }
         if (!this.field_hb) {
-          var9 = this.field_U;
-          var2 = var9;
-          var3 = (float)this.field_Mb;
-          var4 = (float)this.field_x;
-          var5 = (float)(-this.field_lb) * this.field_db / (float)this.field_M;
-          var6 = (float)(-this.field_Ub) * this.field_db / (float)this.field_oc;
-          var7 = (float)(this.field_Z - this.field_Ub) * this.field_db / (float)this.field_oc;
-          var8 = (float)(-this.field_lb + this.field_jb) * this.field_db / (float)this.field_M;
+          float[] var9 = this.field_U;
+          float[] var2 = var9;
+          float var3 = (float)this.field_Mb;
+          float var4 = (float)this.field_x;
+          float var5 = (float)(-this.field_lb) * this.field_db / (float)this.field_M;
+          float var6 = (float)(-this.field_Ub) * this.field_db / (float)this.field_oc;
+          float var7 = (float)(this.field_Z - this.field_Ub) * this.field_db / (float)this.field_oc;
+          float var8 = (float)(-this.field_lb + this.field_jb) * this.field_db / (float)this.field_M;
           if (var7 != var6 &&
             var8 != var5) {
             var9[2] = 0.0f;

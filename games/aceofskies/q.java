@@ -30,12 +30,11 @@ final class q extends rt {
 
     q(wl param0, int param1, int param2, boolean param3, byte[][] param4, int param5) {
         super(param0, 34067, param1, 6 * param2 * param2, param3);
-        int var7_int = 0;
         this.field_m = -1;
         this.field_n = -1;
         try {
           this.field_j.a((rt) (this), 1);
-          for (var7_int = 0; var7_int < 6; var7_int++) {
+          for (int var7_int = 0; var7_int < 6; var7_int++) {
             jaggl.OpenGL.glTexImage2Dub(var7_int + 34069, 0, this.field_b, param2, param2, 0, param5, 5121, param4[var7_int], 0);
           }
           this.a(true, -128);

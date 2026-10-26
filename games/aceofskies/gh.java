@@ -21,13 +21,8 @@ final class gh {
     private fs field_m;
 
     private final void a(int param0) throws IOException {
-        int var2;
-        long var3;
-        long var5;
-        int var7;
-        int var8;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var2 = -57 / ((83 - param0) / 41);
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var2 = -57 / ((83 - param0) / 41);
         if (this.field_e != -1L) {
           if (~this.field_d != ~this.field_e) {
             this.field_m.a(this.field_e, true);
@@ -38,8 +33,8 @@ final class gh {
           if (this.field_d > this.field_h) {
             this.field_h = this.field_d;
           }
-          var3 = -1L;
-          var5 = -1L;
+          long var3 = -1L;
+          long var5 = -1L;
           if (this.field_e >= this.field_l &&
             ((long)this.field_a + this.field_l) > this.field_e) {
             var3 = this.field_e;
@@ -60,7 +55,7 @@ final class gh {
           }
           if (var3 > -1L &&
             var3 < var5) {
-            var7 = (int)(-var3 + var5);
+            int var7 = (int)(-var3 + var5);
             au.a(this.field_g, (int)(-this.field_e + var3), this.field_n, (int)(var3 - this.field_l), var7);
           }
           this.field_e = -1L;
@@ -77,25 +72,9 @@ final class gh {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
-        int incrementValue$0 = 0;
-        RuntimeException stackIn_63_0 = null;
-        StringBuilder stackIn_63_1 = null;
         String stackIn_64_2 = null;
         Throwable decompiledCaughtException = null;
-        long var5_long = 0L;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9_int = 0;
-        long var9 = 0L;
-        long var11 = 0L;
-        int var13 = 0;
-        int var14 = 0;
-        int var9_intLifetime1;
-        int var9_intLifetime2;
-        int var9_intLifetime1Lifetime1;
-        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
             if (param1 + param3 > param2.length) {
@@ -108,15 +87,15 @@ final class gh {
               this.field_k = this.field_k + (long)param1;
               return;
             }
-            var5_long = this.field_k;
+            long var5_long = this.field_k;
             if (param0 != 0) {
               this.field_n = (byte[]) null;
             }
-            var7 = param3;
-            var8 = param1;
+            int var7 = param3;
+            int var8 = param1;
             if (this.field_k >= this.field_l &&
               (long)this.field_a + this.field_l > this.field_k) {
-              var9_int = (int)(-this.field_k + (this.field_l + (long)this.field_a));
+              int var9_int = (int)(-this.field_k + (this.field_l + (long)this.field_a));
               if (var9_int > param1) {
                 var9_int = param1;
               }
@@ -131,7 +110,7 @@ final class gh {
               this.field_m.a(this.field_k, true);
               this.field_d = this.field_k;
               while (param1 > 0) {
-                var9_intLifetime1 = this.field_m.a(param1, (byte) 53, param3, param2);
+                int var9_intLifetime1 = this.field_m.a(param1, (byte) 53, param3, param2);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -147,7 +126,7 @@ final class gh {
               (decompiledFrameCompleted0) &&
               (0 < param1)) {
               this.d(0);
-              var9_intLifetime1Lifetime1 = param1;
+              int var9_intLifetime1Lifetime1 = param1;
               if (var9_intLifetime1Lifetime1 > this.field_a) {
                 var9_intLifetime1Lifetime1 = this.field_a;
               }
@@ -159,20 +138,20 @@ final class gh {
             if (this.field_e != -1L) {
               if (this.field_e > this.field_k &&
                 param1 > 0) {
-                var9_intLifetime2 = (int)(-this.field_k + this.field_e) + param3;
+                int var9_intLifetime2 = (int)(-this.field_k + this.field_e) + param3;
                 if (var9_intLifetime2 > param3 + param1) {
                   var9_intLifetime2 = param3 + param1;
                 }
                 while (param3 < var9_intLifetime2) {
                   param1--;
-                  incrementValue$0 = param3;
+                  int incrementValue$0 = param3;
                   param3++;
                   param2[incrementValue$0] = (byte) 0;
                   this.field_k = this.field_k + 1L;
                 }
               }
-              var9 = -1L;
-              var11 = -1L;
+              long var9 = -1L;
+              long var11 = -1L;
               if (this.field_e >= var5_long &&
                 this.field_e < ((long)var8 + var5_long)) {
                 var9 = this.field_e;
@@ -193,7 +172,7 @@ final class gh {
               }
               if (var9 > -1L &&
                 var11 > var9) {
-                var13 = (int)(-var9 + var11);
+                int var13 = (int)(-var9 + var11);
                 au.a(this.field_g, (int)(var9 - this.field_e), param2, (int)(-var5_long + var9) + var7, var13);
                 if (this.field_k < var11) {
                   param1 = (int)((long)param1 - (var11 - this.field_k));
@@ -203,7 +182,7 @@ final class gh {
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var5 = (IOException) (Object) decompiledCaughtException;
+            IOException var5 = (IOException) (Object) decompiledCaughtException;
             this.field_d = -1L;
             throw var5;
           }
@@ -213,9 +192,9 @@ final class gh {
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_63_0 = var5_ref;
-          stackIn_63_1 = new StringBuilder().append("gh.H(").append(param0).append(',').append(param1).append(',');
+          RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_63_0 = var5_ref;
+          StringBuilder stackIn_63_1 = new StringBuilder().append("gh.H(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_64_2 = "null";
           } else {
@@ -233,22 +212,12 @@ final class gh {
     }
 
     final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
         Throwable decompiledCaughtException = null;
-        int var5_int = 0;
-        IOException var5 = null;
-        RuntimeException var5_ref = null;
-        int var6_int = 0;
-        long var6 = 0L;
-        long var8 = 0L;
-        int var10 = 0;
-        int var11 = 0;
-        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           try {
-            var5_int = 16 / ((param3 - 21) / 45);
+            int var5_int = 16 / ((param3 - 21) / 45);
             if (this.field_b < this.field_k + (long)param0) {
               this.field_b = (long)param0 + this.field_k;
             }
@@ -263,7 +232,7 @@ final class gh {
             }
             if (this.field_e != -1L &&
               ((long)param0 + this.field_k) > (this.field_e + (long)this.field_g.length)) {
-              var6_int = (int)(this.field_e - (this.field_k - (long)this.field_g.length));
+              int var6_int = (int)(this.field_e - (this.field_k - (long)this.field_g.length));
               au.a(param1, param2, this.field_g, (int)(this.field_k - this.field_e), var6_int);
               this.field_k = this.field_k + (long)var6_int;
               param2 = param2 + var6_int;
@@ -294,8 +263,8 @@ final class gh {
             if (this.field_d > this.field_h) {
               this.field_h = this.field_d;
             }
-            var6 = -1L;
-            var8 = -1L;
+            long var6 = -1L;
+            long var8 = -1L;
             if (this.field_k >= this.field_l &&
               (this.field_l + (long)this.field_a) > this.field_k) {
               var6 = this.field_k;
@@ -316,22 +285,22 @@ final class gh {
             }
             if (-1L < var6 &&
               var8 > var6) {
-              var10 = (int)(var8 - var6);
+              int var10 = (int)(var8 - var6);
               au.a(param1, (int)(-this.field_k + var6 + (long)param2), this.field_n, (int)(-this.field_l + var6), var10);
             }
             this.field_k = this.field_k + (long)param0;
             return;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
-            var5 = (IOException) (Object) decompiledCaughtException;
+            IOException var5 = (IOException) (Object) decompiledCaughtException;
             this.field_d = -1L;
             throw var5;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_51_0 = var5_ref;
-          stackIn_51_1 = new StringBuilder().append("gh.I(").append(param0).append(',');
+          RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_51_0 = var5_ref;
+          StringBuilder stackIn_51_1 = new StringBuilder().append("gh.I(").append(param0).append(',');
           if (param1 == null) {
             stackIn_52_2 = "null";
           } else {
@@ -373,25 +342,19 @@ final class gh {
     }
 
     final static boolean a(byte param0, ResourceArchive param1) {
-        RuntimeException var2 = null;
-        ResourceArchive var3 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 15) {
-            var3 = (ResourceArchive) null;
+            ResourceArchive var3 = (ResourceArchive) null;
             gh.a((byte) 52, (ResourceArchive) null);
           }
-          stackIn_3_0 = param1.b(0);
+          boolean stackIn_3_0 = param1.b(0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("gh.K(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("gh.K(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -407,8 +370,6 @@ final class gh {
     }
 
     private final void d(int param0) throws IOException {
-        int var2 = 0;
-        int var3 = 0;
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_a = param0;
         if (this.field_k != this.field_d) {
@@ -417,11 +378,11 @@ final class gh {
         }
         this.field_l = this.field_k;
         while (this.field_n.length > this.field_a) {
-          var2 = -this.field_a + this.field_n.length;
+          int var2 = -this.field_a + this.field_n.length;
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_m.a(var2, (byte) 53, this.field_a, this.field_n);
+          int var3 = this.field_m.a(var2, (byte) 53, this.field_a, this.field_n);
           if (var3 == -1) {
             break;
           }
@@ -431,13 +392,12 @@ final class gh {
     }
 
     gh(fs param0, int param1, int param2) throws IOException {
-        long dupTemp$0 = 0L;
         this.field_l = -1L;
         this.field_c = 0;
         this.field_e = -1L;
         try {
           this.field_m = param0;
-          dupTemp$0 = param0.a(false);
+          long dupTemp$0 = param0.a(false);
           this.field_h = dupTemp$0;
           this.field_b = dupTemp$0;
           this.field_n = new byte[param1];

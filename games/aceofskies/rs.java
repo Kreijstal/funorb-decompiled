@@ -14,13 +14,8 @@ final class rs extends ab implements ue, dn {
     static RenderSprite[] medalSprites;
 
     public final void a(byte param0, int param1, vq param2, int param3) {
-        RuntimeException var5 = null;
-        int var6 = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param3 != 0) {
             if (1 != param3) {
@@ -39,10 +34,10 @@ final class rs extends ab implements ue, dn {
           rs.d((byte) -100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("rs.KA(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("rs.KA(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -53,33 +48,26 @@ final class rs extends ab implements ue, dn {
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        boolean stackIn_7_0 = false;
-        boolean stackIn_10_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(-117, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
-            stackIn_7_0 = this.b(param3, -87);
+            boolean stackIn_7_0 = this.b(param3, -87);
             return stackIn_7_0;
           }
-          var5_int = 11 / ((param0 + 53) / 33);
+          int var5_int = 11 / ((param0 + 53) / 33);
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(80, param3);
+          boolean stackIn_10_0 = this.a(80, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("rs.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var5;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("rs.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -100,14 +88,9 @@ final class rs extends ab implements ue, dn {
     }
 
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6_int = 36 / ((-27 - param4) / 61);
+          int var6_int = 36 / ((-27 - param4) / 61);
           if (this.field_z != param1) {
             return;
           }
@@ -115,10 +98,10 @@ final class rs extends ab implements ue, dn {
           this.field_y.h((byte) 119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_6_0 = var6;
-          stackIn_6_1 = new StringBuilder().append("rs.DA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var6;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("rs.DA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -130,18 +113,13 @@ final class rs extends ab implements ue, dn {
 
     rs(jq param0) {
         super(0, 0, 288, 0, (ir) null);
-        String var7 = null;
-        int var3 = 0;
-        qm var4 = null;
-        int var5 = 0;
-        int var6 = 0;
         try {
           this.field_y = param0;
           this.field_z = new mi(mq.field_i, (no) null);
           this.field_z.field_e = (ir) ((Object) new qb());
-          var7 = sn.a(cd.field_c, 122, new String[]{this.a((byte) 127), this.e((byte) 101)});
-          var3 = 20;
-          var4 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
+          String var7 = sn.a(cd.field_c, 122, new String[]{this.a((byte) 127), this.e((byte) 101)});
+          int var3 = 20;
+          qm var4 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
           this.field_A = new vq(var7, var4);
           this.field_A.field_k = "";
           this.field_A.a(-57, m.field_g, 0);
@@ -151,8 +129,8 @@ final class rs extends ab implements ue, dn {
           this.field_A.a(26, var3, -40 + this.field_q, (byte) 110);
           var3 = var3 + (15 + this.field_A.field_n);
           this.a(this.field_A, 1);
-          var5 = 4;
-          var6 = 200;
+          int var5 = 4;
+          int var6 = 200;
           this.field_z.a(40, -var6 + 300 >> 1, var3, var6, (byte) 127);
           this.field_z.field_o = (no) (this);
           this.a(this.field_z, 1);

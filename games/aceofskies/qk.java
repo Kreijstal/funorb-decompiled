@@ -27,36 +27,21 @@ final class qk {
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
-        int stackIn_24_0 = 0;
-        int stackIn_24_1 = 0;
         int stackIn_35_0 = 0;
         int stackIn_46_0 = 0;
-        int var9 = 0;
-        Sprite[] var10 = null;
-        Sprite[] var11_ref_ll__ = null;
-        int var11 = 0;
+        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = param4 + (param1 + param5);
+        Sprite[] var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9), new Sprite(var9, param0), new Sprite(64, 64), new Sprite(var9, param0), new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9)};
+        Sprite[] var11_ref_ll__ = var10;
         int var12 = 0;
-        Sprite var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var11Lifetime1;
-        int var12Lifetime1;
-        int var12Lifetime2;
-        int var12Lifetime2Lifetime1;
-        int var12Lifetime2Lifetime2;
-        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var9 = param4 + (param1 + param5);
-        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9), new Sprite(var9, param0), new Sprite(64, 64), new Sprite(var9, param0), new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9)};
-        var11_ref_ll__ = var10;
-        var12 = 0;
         scanLoop1: while (true) {
           if (var12 < var11_ref_ll__.length) {
-            var13 = var11_ref_ll__[var12];
+            Sprite var13 = var11_ref_ll__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
               break scanLoop1;
             }
-            var14 = stackIn_11_0;
+            int var14 = stackIn_11_0;
             while (var14 < var13.pixels.length) {
               var13.pixels[var14] = param8;
               var14++;
@@ -67,14 +52,14 @@ final class qk {
           stackIn_11_0 = 0;
           break;
         }
-        var11 = stackIn_11_0;
+        int var11 = stackIn_11_0;
         scanLoop2: while (true) {
           if (var11 < param4) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
               break scanLoop2;
             }
-            var12Lifetime1 = stackIn_22_0;
+            int var12Lifetime1 = stackIn_22_0;
             while (var12Lifetime1 < var9) {
               var10[6].pixels[var9 * (-var11 + (var9 - 1)) + var12Lifetime1] = param2;
               var10[8].pixels[(-var11 + (var9 - 1)) * var9 + var12Lifetime1] = param2;
@@ -88,14 +73,14 @@ final class qk {
           stackIn_22_0 = 0;
           break;
         }
-        var11Lifetime1 = stackIn_22_0;
+        int var11Lifetime1 = stackIn_22_0;
         while (true) {
-          stackIn_24_0 = var11Lifetime1;
-          stackIn_24_1 = param4;
+          int stackIn_24_0 = var11Lifetime1;
+          int stackIn_24_1 = param4;
           if (stackIn_24_0 < stackIn_24_1) {
             stackIn_35_0 = 0;
             if (var15 == 0) {
-              var12Lifetime2 = stackIn_35_0;
+              int var12Lifetime2 = stackIn_35_0;
               while (var9 > var12Lifetime2) {
                 var10[0].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
                 var10[0].pixels[var11Lifetime1 + var12Lifetime2 * var9] = param3;
@@ -120,7 +105,7 @@ final class qk {
               if (var15 != 0) {
                 break scanLoop3;
               }
-              var12Lifetime2Lifetime1 = stackIn_46_0;
+              int var12Lifetime2Lifetime1 = stackIn_46_0;
               while (param4 > var12Lifetime2Lifetime1) {
                 var10[7].pixels[(-1 - var12Lifetime2Lifetime1 + var9) * param0 + var11Lifetime1] = param2;
                 var10[5].pixels[-var12Lifetime2Lifetime1 - (-var9 + 1 - var11Lifetime1 * var9)] = param2;
@@ -139,7 +124,7 @@ final class qk {
             qk.a(-50, 101, 116, 1, 33, 12, 71, 24, -27);
           }
           scanLoop4: while (param0 >> 1 > var11Lifetime1) {
-            var12Lifetime2Lifetime2 = 0;
+            int var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param5 > var12Lifetime2Lifetime2) {
                 var10[1].pixels[var11Lifetime1 + (-1 + (-var12Lifetime2Lifetime2 + var9)) * param0] = param6;
@@ -175,12 +160,7 @@ final class qk {
     }
 
     final void a(DualLinkNode param0, int param1, long param2) {
-        RuntimeException runtimeException = null;
-        DualLinkNode var5 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledSharedTail0 = (this.field_c == 0);
           if (!decompiledSharedTail0) {
@@ -188,7 +168,7 @@ final class qk {
             decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
           if (decompiledSharedTail0) {
-            var5 = this.field_d.b(param1 - 18522);
+            DualLinkNode var5 = this.field_d.b(param1 - 18522);
             var5.unlink(-126);
             var5.unlinkSecondaryNode(-119);
             if (this.field_b == var5) {
@@ -201,10 +181,10 @@ final class qk {
           this.field_d.a(param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_9_0 = runtimeException;
-          stackIn_9_1 = new StringBuilder().append("qk.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = runtimeException;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("qk.A(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {

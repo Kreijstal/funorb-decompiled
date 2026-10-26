@@ -29,8 +29,6 @@ public class qc {
     }
 
     public static void a(String param0, int param1, int param2) {
-        Exception var3 = null;
-        Throwable decompiledCaughtException = null;
         field_a = param1;
         if (param2 < 19) {
           field_e = true;
@@ -48,8 +46,8 @@ public class qc {
           }
           field_c = field_c + "/";
         } catch (java.lang.Exception decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (Exception) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          Exception var3 = (Exception) (Object) decompiledCaughtException;
           field_e = true;
           if (null != field_c) {
             return;

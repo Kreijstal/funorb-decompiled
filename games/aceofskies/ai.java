@@ -14,49 +14,36 @@ abstract class ai {
     }
 
     final static w a(String param0, byte param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        String var3 = null;
-        String var4 = null;
-        w var5 = null;
-        w stackIn_4_0 = null;
-        w stackIn_8_0 = null;
-        w stackIn_12_0 = null;
-        w stackIn_15_0 = null;
-        w stackIn_17_0 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
             param0.length() != 0) {
-            var2_int = param0.indexOf('@');
+            int var2_int = param0.indexOf('@');
             if (var2_int == -1) {
-              stackIn_8_0 = nh.field_f;
+              w stackIn_8_0 = nh.field_f;
               return stackIn_8_0;
             }
-            var3 = param0.substring(0, var2_int);
-            var4 = param0.substring(var2_int + 1);
-            var5 = ds.a(false, var3);
+            String var3 = param0.substring(0, var2_int);
+            String var4 = param0.substring(var2_int + 1);
+            w var5 = ds.a(false, var3);
             if (var5 != null) {
-              stackIn_12_0 = var5;
+              w stackIn_12_0 = var5;
               return stackIn_12_0;
             }
             if (param1 == 12) {
-              stackIn_17_0 = in.a(126, var4);
+              w stackIn_17_0 = in.a(126, var4);
               return stackIn_17_0;
             }
-            stackIn_15_0 = (w) null;
+            w stackIn_15_0 = (w) null;
             return stackIn_15_0;
           }
-          stackIn_4_0 = mo.field_a;
+          w stackIn_4_0 = mo.field_a;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_20_0 = var2;
-          stackIn_20_1 = new StringBuilder().append("ai.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = var2;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("ai.C(");
           if (param0 == null) {
             stackIn_21_2 = "null";
           } else {

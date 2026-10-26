@@ -21,17 +21,12 @@ final class wj implements up {
     }
 
     private final void a(int param0, int param1, int param2, nr param3) {
-        RuntimeException runtimeException = null;
-        int var5_int = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (-1 == this.field_c) {
             throw new RuntimeException();
           }
-          var5_int = 1 << param2;
+          int var5_int = 1 << param2;
           if (param0 != (~var5_int & this.field_b)) {
             if (this.field_h != param3.field_m ||
               param3.field_k != this.field_f) {
@@ -46,10 +41,10 @@ final class wj implements up {
           this.field_b = this.field_b | var5_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_12_0 = runtimeException;
-          stackIn_12_1 = new StringBuilder().append("wj.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = runtimeException;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("wj.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -60,103 +55,67 @@ final class wj implements up {
     }
 
     final static void e(byte param0) {
-        int var15 = 0;
-        int var17_int = 0;
-        int var18 = 0;
-        int var1_int = 0;
-        int[] var2 = null;
-        int var3 = 0;
-        wu var4_ref_wu = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10_int = 0;
-        double var10 = 0.0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var16 = 0;
-        wu var17 = null;
-        int var19 = 0;
-        jt var20 = null;
-        int[] var21 = null;
-        int[] var22 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var3Lifetime1;
-        int var5Lifetime1;
-        int var6Lifetime1;
-        int var7Lifetime1;
-        int var8Lifetime1;
-        int var9Lifetime1;
-        double var10Lifetime1;
-        int var12Lifetime1;
-        int var13Lifetime1;
-        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           qg.field_e = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = gp.field_y.length;
-          var22 = new int[var1_int];
-          var21 = var22;
-          var2 = var21;
-          for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_wu = gp.field_y[var3];
+          int var1_int = gp.field_y.length;
+          int[] var22 = new int[var1_int];
+          int[] var21 = var22;
+          int[] var2 = var21;
+          for (int var3 = 0; var3 < var1_int; var3++) {
+            wu var4_ref_wu = gp.field_y[var3];
             var4_ref_wu.b(32767);
             kg.a(0, var3);
-            var5 = var4_ref_wu.field_b + var4_ref_wu.field_N >> 1;
-            var6 = var4_ref_wu.field_h + var4_ref_wu.field_J >> 1;
-            var7 = var4_ref_wu.field_A + var4_ref_wu.field_s >> 1;
-            var8 = qg.field_e[9] >> 2;
-            var9 = qg.field_e[10] >> 2;
-            var10_int = qg.field_e[11] >> 2;
-            var11 = var10_int * PacketBuffer.field_k[5] + var8 * PacketBuffer.field_k[3] + PacketBuffer.field_k[4] * var9 >> 14;
-            var12 = var9 * PacketBuffer.field_k[7] + var8 * PacketBuffer.field_k[6] + var10_int * PacketBuffer.field_k[8] >> 14;
-            var13 = var8 * PacketBuffer.field_k[9] + PacketBuffer.field_k[10] * var9 + var10_int * PacketBuffer.field_k[11] >> 14;
+            int var5 = var4_ref_wu.field_b + var4_ref_wu.field_N >> 1;
+            int var6 = var4_ref_wu.field_h + var4_ref_wu.field_J >> 1;
+            int var7 = var4_ref_wu.field_A + var4_ref_wu.field_s >> 1;
+            int var8 = qg.field_e[9] >> 2;
+            int var9 = qg.field_e[10] >> 2;
+            int var10_int = qg.field_e[11] >> 2;
+            int var11 = var10_int * PacketBuffer.field_k[5] + var8 * PacketBuffer.field_k[3] + PacketBuffer.field_k[4] * var9 >> 14;
+            int var12 = var9 * PacketBuffer.field_k[7] + var8 * PacketBuffer.field_k[6] + var10_int * PacketBuffer.field_k[8] >> 14;
+            int var13 = var8 * PacketBuffer.field_k[9] + PacketBuffer.field_k[10] * var9 + var10_int * PacketBuffer.field_k[11] >> 14;
             var2[var3] = var11 * var5 - (-(var12 * var6) - var7 * var13) >> 16;
           }
-          var3Lifetime1 = qg.field_e[9] >> 8;
-          var4 = qg.field_e[10] >> 8;
-          var5Lifetime1 = qg.field_e[11] >> 8;
-          var6Lifetime1 = it.field_c << 4;
-          var7Lifetime1 = 0;
-          var8Lifetime1 = tg.a(var6Lifetime1, -4097) >> 8;
-          var9Lifetime1 = u.a(-108, var6Lifetime1) >> 8;
+          int var3Lifetime1 = qg.field_e[9] >> 8;
+          int var4 = qg.field_e[10] >> 8;
+          int var5Lifetime1 = qg.field_e[11] >> 8;
+          int var6Lifetime1 = it.field_c << 4;
+          int var7Lifetime1 = 0;
+          int var8Lifetime1 = tg.a(var6Lifetime1, -4097) >> 8;
+          int var9Lifetime1 = u.a(-108, var6Lifetime1) >> 8;
           if (ic.field_b != -1 &&
             -1 != cf.field_g) {
             var7Lifetime1 = -320 + ic.field_b;
             var9Lifetime1 = -128;
             var8Lifetime1 = 240 - cf.field_g;
           }
-          var10 = 256.0 / Math.sqrt((double)(var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1 + var9Lifetime1 * var9Lifetime1));
+          double var10 = 256.0 / Math.sqrt((double)(var7Lifetime1 * var7Lifetime1 + var8Lifetime1 * var8Lifetime1 + var9Lifetime1 * var9Lifetime1));
           var8Lifetime1 = (int)((double)var8Lifetime1 * var10);
           var7Lifetime1 = (int)((double)var7Lifetime1 * var10);
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);
           if (param0 > -106) {
-            var20 = (jt) null;
+            jt var20 = (jt) null;
             wj.a(-122, (rk) null, (java.awt.Component) null, 3, true, (jt) null, -104, 35);
           }
-          var12Lifetime1 = var7Lifetime1 - var3Lifetime1;
-          var13Lifetime1 = -var4 + var8Lifetime1;
-          var14 = var9Lifetime1 - var5Lifetime1;
-          var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + (var12Lifetime1 * var12Lifetime1 + var13Lifetime1 * var13Lifetime1)));
+          int var12Lifetime1 = var7Lifetime1 - var3Lifetime1;
+          int var13Lifetime1 = -var4 + var8Lifetime1;
+          int var14 = var9Lifetime1 - var5Lifetime1;
+          double var10Lifetime1 = 256.0 / Math.sqrt((double)(var14 * var14 + (var12Lifetime1 * var12Lifetime1 + var13Lifetime1 * var13Lifetime1)));
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; gp.field_y.length > var15; var15++) {
-            var16 = 0;
-            for (var17_int = 1; gp.field_y.length > var17_int; var17_int++) {
+          for (int var15 = 0; gp.field_y.length > var15; var15++) {
+            int var16 = 0;
+            for (int var17_int = 1; gp.field_y.length > var17_int; var17_int++) {
               if (var22[var16] < var22[var17_int]) {
                 var16 = var17_int;
               }
             }
             var22[var16] = -2147483648;
-            var17 = gp.field_y[var16];
+            wu var17 = gp.field_y[var16];
             kg.a(0, var16);
-            for (var18 = 0; 3 > var18; var18++) {
+            for (int var18 = 0; 3 > var18; var18++) {
               PacketBuffer.field_k[var18] = PacketBuffer.field_k[var18] + ia.field_a[var15][var18];
             }
             eg.a(var17, qg.field_e, 45, true, false, PacketBuffer.field_k, false);
@@ -164,8 +123,8 @@ final class wj implements up {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "wj.N(" + param0 + ')');
         }
     }
@@ -227,17 +186,12 @@ final class wj implements up {
     }
 
     final void a(cu param0, int param1, byte param2) {
-        int var4_int = 0;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
         try {
           if (this.field_c == -1) {
             throw new RuntimeException();
           }
-          var4_int = 1 << param1;
+          int var4_int = 1 << param1;
           if ((this.field_b & ~var4_int) != 0) {
             if (this.field_h != param0.field_u ||
               this.field_f != param0.field_v) {
@@ -255,10 +209,10 @@ final class wj implements up {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("wj.K(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var4;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("wj.K(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {

@@ -21,15 +21,13 @@ final class dq {
     }
 
     final static void a(byte param0) {
-        int var1 = 0;
-        int var1Lifetime1;
         if (param0 != -2) {
           loadingMessage = (String) null;
           if (224 <= gn.field_a) {
             rt.b(256, (byte) -106);
             return;
           }
-          var1 = gn.field_a % 32;
+          int var1 = gn.field_a % 32;
           rt.b(-var1 + (32 + gn.field_a), (byte) -116);
           return;
         }
@@ -37,32 +35,26 @@ final class dq {
           rt.b(256, (byte) -106);
           return;
         }
-        var1Lifetime1 = gn.field_a % 32;
+        int var1Lifetime1 = gn.field_a % 32;
         rt.b(-var1Lifetime1 + (32 + gn.field_a), (byte) -116);
     }
 
     final static fr a(int param0, int param1, String param2) {
-        fr var3 = null;
-        RuntimeException var3_ref = null;
-        fr stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 32) {
             dq.a((byte) 54);
           }
-          var3 = new fr(false);
+          fr var3 = new fr(false);
           var3.field_a = param0;
           var3.field_f = param2;
-          stackIn_3_0 = var3;
+          fr stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_6_0 = var3_ref;
-          stackIn_6_1 = new StringBuilder().append("dq.C(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3_ref;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("dq.C(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_7_2 = "null";
           } else {

@@ -7,10 +7,8 @@ abstract class ka {
     static Sprite[] field_a;
 
     final static String a(int param0) {
-        String var1 = null;
-        String var1Lifetime1;
         if (param0 <= -94) {
-          var1 = "";
+          String var1 = "";
           if (vr.field_b != null) {
             var1 = vr.field_b.d(false);
           }
@@ -23,7 +21,7 @@ abstract class ka {
           return var1;
         }
         field_a = (Sprite[]) null;
-        var1Lifetime1 = "";
+        String var1Lifetime1 = "";
         if (vr.field_b != null) {
           var1Lifetime1 = vr.field_b.d(false);
         }
@@ -37,20 +35,13 @@ abstract class ka {
     }
 
     final static boolean a(byte param0, int[] param1) {
-        int var5_int = 0;
-        int var6 = 0;
-        int stackIn_19_0 = 0;
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
         RuntimeException decompiledCaughtException = null;
         long var2_long = 0L;
         RuntimeException var2 = null;
-        m var4_ref_m = null;
-        int var4 = 0;
-        m var5 = null;
-        int var7 = 0;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (ca.field_f != wq.field_e) {
             return false;
@@ -61,13 +52,13 @@ abstract class ka {
           var2_long = kh.a(-125);
           if (tj.field_m != 0 &&
             0 > ec.field_g) {
-            var4_ref_m = (m) (oo.field_T.first(268435455));
+            m var4_ref_m = (m) (oo.field_T.first(268435455));
             if (var4_ref_m != null &&
               var2_long > var4_ref_m.field_e) {
               var4_ref_m.unlink(-123);
               ag.field_s = var4_ref_m.field_h.length;
               IntKeyLookup.incomingPacket.position = 0;
-              for (var5_int = 0; ag.field_s > var5_int; var5_int++) {
+              for (int var5_int = 0; ag.field_s > var5_int; var5_int++) {
                 IntKeyLookup.incomingPacket.payload[var5_int] = var4_ref_m.field_h[var5_int];
               }
               ScoreSubmission.field_l = kg.field_b;
@@ -89,7 +80,7 @@ abstract class ka {
           }
           throw pn.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
-        stackIn_19_0 = ec.field_g;
+        int stackIn_19_0 = ec.field_g;
         try {
           while (true) {
             if (stackIn_19_0 < 0) {
@@ -112,15 +103,15 @@ abstract class ka {
               ec.field_g = -1;
               return true;
             }
-            var4 = tj.field_m;
+            int var4 = tj.field_m;
             if (0.0 != wk.field_g) {
               var4 = (int)((double)var4 + vr.field_h.nextGaussian() * wk.field_g);
               if (0 > var4) {
                 var4 = 0;
               }
             }
-            var5 = new m((long)var4 + var2_long, ec.field_g, new byte[ag.field_s]);
-            for (var6 = 0; ag.field_s > var6; var6++) {
+            m var5 = new m((long)var4 + var2_long, ec.field_g, new byte[ag.field_s]);
+            for (int var6 = 0; ag.field_s > var6; var6++) {
               var5.field_h[var6] = IntKeyLookup.incomingPacket.payload[var6];
             }
             oo.field_T.addLast(88, var5);
@@ -143,14 +134,9 @@ abstract class ka {
 
     final static void a(int param0, long param1, String param2, int param3, int param4, boolean param5, boolean param6, int param7, int param8, int param9, int param10, int param11, rk param12, int param13) {
         try {
-          RuntimeException stackIn_16_0 = null;
-          StringBuilder stackIn_16_1 = null;
           String stackIn_17_2 = null;
-          StringBuilder stackIn_19_1 = null;
           String stackIn_20_2 = null;
           Throwable decompiledCaughtException = null;
-          IOException var15 = null;
-          RuntimeException var15_ref = null;
           try {
             IntKeyLookup.incomingPacket = new CipherPacketBuffer(param7);
             if (param0 != -31808) {
@@ -176,20 +162,20 @@ abstract class ka {
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var15 = (IOException) (Object) decompiledCaughtException;
+              IOException var15 = (IOException) (Object) decompiledCaughtException;
               throw new RuntimeException(var15.toString());
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var15_ref = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_16_0 = var15_ref;
-            stackIn_16_1 = new StringBuilder().append("ka.I(").append(param0).append(',').append(param1).append(',');
+            RuntimeException var15_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_16_0 = var15_ref;
+            StringBuilder stackIn_16_1 = new StringBuilder().append("ka.I(").append(param0).append(',').append(param1).append(',');
             if (param2 == null) {
               stackIn_17_2 = "null";
             } else {
               stackIn_17_2 = "{...}";
             }
-            stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
+            StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
             if (param12 == null) {
               stackIn_20_2 = "null";
             } else {

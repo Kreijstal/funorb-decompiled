@@ -14,34 +14,26 @@ final class uj {
     }
 
     final static hj a(rk param0, int param1, int param2, int param3, int param4, int param5) {
-        java.awt.Frame var6 = null;
-        RuntimeException var6_ref = null;
-        hj var7 = null;
-        java.awt.Frame var8 = null;
-        hj stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var8 = kn.a(param0, param2, param5, param4, param3, 29742);
-          var6 = var8;
+          java.awt.Frame var8 = kn.a(param0, param2, param5, param4, param3, 29742);
+          java.awt.Frame var6 = var8;
           if (var8 == null) {
             return null;
           }
-          var7 = new hj();
+          hj var7 = new hj();
           var7.field_a = var8;
           var7.field_a.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, param1, param2, param5);
           var7.addFocusListener(var7);
           var7.requestFocus();
-          stackIn_4_0 = var7;
+          hj stackIn_4_0 = var7;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_7_0 = var6_ref;
-          stackIn_7_1 = new StringBuilder().append("uj.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6_ref = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var6_ref;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("uj.B(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {

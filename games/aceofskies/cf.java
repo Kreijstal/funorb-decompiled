@@ -13,30 +13,20 @@ final class cf extends sk {
     }
 
     final static void a(Sprite[] param0, int param1, byte param2, int param3, int param4) {
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != null &&
             0 < param4) {
-            var5_int = param0[0].fullWidth;
-            var6 = param0[2].fullWidth;
-            var7 = param0[1].fullWidth;
+            int var5_int = param0[0].fullWidth;
+            int var6 = param0[2].fullWidth;
+            int var7 = param0[1].fullWidth;
             param0[0].b(param1, param3);
             param0[2].b(param1 + param4 - var6, param3);
             SoftwareRasterizer.saveClip(rl.field_a);
             SoftwareRasterizer.intersectClip(param1 + var5_int, param3, param4 + (param1 - var6), param0[1].fullHeight + param3);
-            var8 = param1 + var5_int;
-            var9 = -var6 + param1 + param4;
+            int var8 = param1 + var5_int;
+            int var9 = -var6 + param1 + param4;
             param1 = var8;
             if (param2 > -108) {
               cf.f(78);
@@ -50,10 +40,10 @@ final class cf extends sk {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_12_0 = var5;
-          stackIn_12_1 = new StringBuilder().append("cf.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var5;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("cf.B(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {

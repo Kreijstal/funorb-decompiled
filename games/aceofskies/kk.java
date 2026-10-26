@@ -47,63 +47,50 @@ final class kk extends bm implements mc {
     }
 
     final static int a(la param0, byte param1) {
-        RuntimeException var2 = null;
-        la var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_12_0 = 0;
-        int stackIn_15_0 = 0;
-        int stackIn_20_0 = 0;
-        int stackIn_22_0 = 0;
-        int stackIn_24_0 = 0;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == la.field_a) {
-            stackIn_2_0 = 5120;
+            int stackIn_2_0 = 5120;
             return stackIn_2_0;
           }
           if (param0 == la.field_j) {
-            stackIn_24_0 = 5122;
+            int stackIn_24_0 = 5122;
             return stackIn_24_0;
           }
           if (param0 == la.field_e) {
-            stackIn_6_0 = 5124;
+            int stackIn_6_0 = 5124;
             return stackIn_6_0;
           }
           if (la.field_h == param0) {
-            stackIn_9_0 = 5121;
+            int stackIn_9_0 = 5121;
             return stackIn_9_0;
           }
           if (param0 == la.field_b) {
-            stackIn_12_0 = 5123;
+            int stackIn_12_0 = 5123;
             return stackIn_12_0;
           }
           if (la.field_f == param0) {
-            stackIn_15_0 = 5125;
+            int stackIn_15_0 = 5125;
             return stackIn_15_0;
           }
           if (param0 == la.field_d) {
-            stackIn_22_0 = 5131;
+            int stackIn_22_0 = 5131;
             return stackIn_22_0;
           }
           if (param0 == la.field_i) {
-            stackIn_20_0 = 5126;
+            int stackIn_20_0 = 5126;
             return stackIn_20_0;
           }
           if (param1 >= -91) {
-            var3 = (la) null;
+            la var3 = (la) null;
             kk.a((la) null, (byte) -56);
           }
           throw new IllegalArgumentException("");
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_30_0 = var2;
-          stackIn_30_1 = new StringBuilder().append("kk.EA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_30_0 = var2;
+          StringBuilder stackIn_30_1 = new StringBuilder().append("kk.EA(");
           if (param0 == null) {
             stackIn_31_2 = "null";
           } else {

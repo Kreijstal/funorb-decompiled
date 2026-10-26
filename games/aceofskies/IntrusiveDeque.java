@@ -10,18 +10,16 @@ final class IntrusiveDeque {
     static int[] field_f;
 
     final IntrusiveNode removeLast(int obfuscationGuard) {
-        IntrusiveNode var2 = null;
-        IntrusiveNode var2Lifetime1;
         if (obfuscationGuard != 4095) {
           this.traversalCursor = (IntrusiveNode) null;
-          var2 = this.sentinel.previous;
+          IntrusiveNode var2 = this.sentinel.previous;
           if (this.sentinel != var2) {
             var2.unlink(-124);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.sentinel.previous;
+        IntrusiveNode var2Lifetime1 = this.sentinel.previous;
         if (this.sentinel != var2Lifetime1) {
           var2Lifetime1.unlink(-124);
           return var2Lifetime1;
@@ -51,45 +49,35 @@ final class IntrusiveDeque {
     }
 
     final static int a(int param0, as param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int stackIn_4_0 = 0;
-        int stackIn_7_0 = 0;
-        int stackIn_11_0 = 0;
-        int stackIn_13_0 = 0;
-        int stackIn_15_0 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 80 / ((-18 - param0) / 45);
+          int var2_int = 80 / ((-18 - param0) / 45);
           if (param1 == bd.field_C) {
-            stackIn_15_0 = 7681;
+            int stackIn_15_0 = 7681;
             return stackIn_15_0;
           }
           if (ru.field_a == param1) {
-            stackIn_13_0 = 8448;
+            int stackIn_13_0 = 8448;
             return stackIn_13_0;
           }
           if (param1 == du.field_l) {
-            stackIn_4_0 = 34165;
+            int stackIn_4_0 = 34165;
             return stackIn_4_0;
           }
           if (param1 == lo.field_j) {
-            stackIn_7_0 = 260;
+            int stackIn_7_0 = 260;
             return stackIn_7_0;
           }
           if (fs.field_d != param1) {
             throw new IllegalArgumentException();
           }
-          stackIn_11_0 = 34023;
+          int stackIn_11_0 = 34023;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_19_0 = var2;
-          stackIn_19_1 = new StringBuilder().append("kp.F(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var2;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("kp.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -100,30 +88,23 @@ final class IntrusiveDeque {
     }
 
     final static int a(boolean param0, String param1, boolean param2) {
-        RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_5_0 = 0;
-        int stackIn_7_0 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            stackIn_2_0 = -40;
+            int stackIn_2_0 = -40;
             return stackIn_2_0;
           }
           if (param2) {
-            stackIn_7_0 = FlightSession.field_e.measureTextWidth(param1);
+            int stackIn_7_0 = FlightSession.field_e.measureTextWidth(param1);
             return stackIn_7_0;
           }
-          stackIn_5_0 = nh.field_c.measureTextWidth(param1);
+          int stackIn_5_0 = nh.field_c.measureTextWidth(param1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("kp.E(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("kp.E(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -191,11 +172,7 @@ final class IntrusiveDeque {
     }
 
     final void addFirst(IntrusiveNode node, int obfuscationGuard) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (node.previous != null) {
             node.unlink(obfuscationGuard - 25736);
@@ -210,10 +187,10 @@ final class IntrusiveDeque {
           this.sentinel = (IntrusiveNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("kp.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var3;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("kp.G(");
           if (node == null) {
             stackIn_9_2 = "null";
           } else {
@@ -224,12 +201,10 @@ final class IntrusiveDeque {
     }
 
     final IntrusiveNode next(byte obfuscationGuard) {
-        IntrusiveNode var2 = null;
-        IntrusiveNode var2Lifetime1;
         if (obfuscationGuard != 103) {
           String var3 = (String) null;
           IntrusiveDeque.a(false, (String) null, true);
-          var2 = this.traversalCursor;
+          IntrusiveNode var2 = this.traversalCursor;
           if (var2 != this.sentinel) {
             this.traversalCursor = var2.next;
             return var2;
@@ -237,7 +212,7 @@ final class IntrusiveDeque {
           this.traversalCursor = null;
           return null;
         }
-        var2Lifetime1 = this.traversalCursor;
+        IntrusiveNode var2Lifetime1 = this.traversalCursor;
         if (var2Lifetime1 != this.sentinel) {
           this.traversalCursor = var2Lifetime1.next;
           return var2Lifetime1;
@@ -262,10 +237,9 @@ final class IntrusiveDeque {
     }
 
     final void clear(int obfuscationGuard) {
-        IntrusiveNode var2 = null;
         int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         while (true) {
-          var2 = this.sentinel.next;
+          IntrusiveNode var2 = this.sentinel.next;
           if (var2 == this.sentinel) {
             break;
           }

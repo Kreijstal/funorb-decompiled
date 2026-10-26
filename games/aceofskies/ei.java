@@ -10,29 +10,22 @@ final class ei {
     static String field_c;
 
     final static void a(int param0) {
-        int fieldTemp$0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        int var1_int = 0;
-        RuntimeException var1 = null;
-        CipherPacketBuffer var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var1_int = -36 % ((-50 - param0) / 48);
-          var2 = q.outgoingPacket;
+          int var1_int = -36 % ((-50 - param0) / 48);
+          CipherPacketBuffer var2 = q.outgoingPacket;
           while (sa.a(true)) {
             var2.writeCipheredOpcode(65, 8);
-            fieldTemp$0 = var2.position + 1;
+            int fieldTemp$0 = var2.position + 1;
             var2.position = var2.position + 1;
-            var3 = fieldTemp$0;
+            int var3 = fieldTemp$0;
             hb.a(var2, 24732);
             q.outgoingPacket.patchByteLength(var2.position - var3, (byte) 118);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "ei.C(" + param0 + ')');
         }
     }
@@ -51,23 +44,18 @@ final class ei {
     }
 
     final static boolean a(String param0, byte param1) {
-        RuntimeException var2 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -16) {
             field_c = (String) null;
           }
-          stackIn_3_0 = es.a(ln.class, -106, param0);
+          boolean stackIn_3_0 = es.a(ln.class, -106, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("ei.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ei.E(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {

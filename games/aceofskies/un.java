@@ -55,14 +55,10 @@ abstract class un {
     }
 
     final gp a(int param0, int param1, int param2, boolean param3, byte param4) {
-        gp stackIn_2_0 = null;
-        boolean stackIn_3_1 = false;
-        long var6;
-        gp var8;
-        var6 = (long)param1 + ((long)param0 << 32);
-        var8 = new gp();
-        stackIn_2_0 = var8;
-        stackIn_3_1 = (!param3) ? false : true;
+        long var6 = (long)param1 + ((long)param0 << 32);
+        gp var8 = new gp();
+        gp stackIn_2_0 = var8;
+        boolean stackIn_3_1 = (!param3) ? false : true;
         stackIn_2_0.field_q = stackIn_3_1;
         var8.secondaryKey = var6;
         var8.field_z = param4;
@@ -94,13 +90,12 @@ abstract class un {
     abstract void c(byte param0);
 
     final static void a(int param0) {
-        String var2 = null;
         if (!nf.field_a) {
           throw new IllegalStateException();
         }
         if (ml.field_m != null) {
           ml.field_m.h((byte) 9);
-          var2 = ka.a(param0 ^ 118);
+          String var2 = ka.a(param0 ^ 118);
           if (param0 != -21) {
             field_i = (jb) null;
             vr.field_b = new ce(var2, (String) null, true, false, false);

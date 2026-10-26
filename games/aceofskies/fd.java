@@ -19,53 +19,41 @@ final class fd {
     }
 
     final static void a(int param0) {
-        lr var1 = null;
-        byte[] var3 = null;
-        ah var1_ref = null;
-        byte[] var4 = null;
-        ah var1_refLifetime1;
-        byte[] var4Lifetime1;
         if (wl.field_r == null) {
-          var1 = new lr();
-          var3 = var1.a(128, 128, (byte) -120, 16);
+          lr var1 = new lr();
+          byte[] var3 = var1.a(128, 128, (byte) -120, 16);
           wl.field_r = sf.a(false, -137, var3);
         }
         if (param0 <= -50) {
           if (null == lg.field_l) {
-            var1_ref = new ah();
-            var4 = var1_ref.a(128, 16, 128, (byte) 118);
+            ah var1_ref = new ah();
+            byte[] var4 = var1_ref.a(128, 16, 128, (byte) 118);
             lg.field_l = sf.a(false, -137, var4);
           }
           return;
         }
         field_e = (String) null;
         if (null == lg.field_l) {
-          var1_refLifetime1 = new ah();
-          var4Lifetime1 = var1_refLifetime1.a(128, 16, 128, (byte) 118);
+          ah var1_refLifetime1 = new ah();
+          byte[] var4Lifetime1 = var1_refLifetime1.a(128, 16, 128, (byte) 118);
           lg.field_l = sf.a(false, -137, var4Lifetime1);
         }
     }
 
     final static boolean isCurrentPlayerName(String displayName, byte obfuscationGuard) {
-        RuntimeException var2 = null;
-        CharSequence var3 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != -6) {
             field_c = (String) null;
           }
-          var3 = (CharSequence) ((Object) displayName);
-          stackIn_3_0 = cf.normalizedPlayerName.equals(vu.normalizePlayerName(127, var3));
+          CharSequence var3 = (CharSequence) ((Object) displayName);
+          boolean stackIn_3_0 = cf.normalizedPlayerName.equals(vu.normalizePlayerName(127, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("fd.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("fd.A(");
           if (displayName == null) {
             stackIn_7_2 = "null";
           } else {
@@ -76,15 +64,9 @@ final class fd {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3_int = 0;
-        int var4 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_12_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var3_int = 1;
+          int var3_int = 1;
           while (param2 > 1) {
             if ((param2 & 1) != 0) {
               var3_int = var3_int * param1;
@@ -93,14 +75,14 @@ final class fd {
             param2 = param2 >> 1;
           }
           if (param2 != param0) {
-            stackIn_12_0 = var3_int;
+            int stackIn_12_0 = var3_int;
             return stackIn_12_0;
           }
-          stackIn_10_0 = var3_int * param1;
+          int stackIn_10_0 = var3_int * param1;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var3), "fd.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }

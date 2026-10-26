@@ -8,30 +8,17 @@ final class cs {
     private in field_b;
 
     final boolean a(byte param0, sr param1, sr param2, float param3) {
-        int var9 = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        cu var7 = null;
-        int var8 = 0;
-        float var10 = 0.0f;
-        int var11 = 0;
-        wj var12 = null;
-        int stackIn_11_0 = 0;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!this.b(true)) {
             return false;
           }
-          var6 = 114 % ((param0 - 32) / 42);
-          var12 = this.field_c.field_o;
-          var7 = new cu(this.field_c, 6408, param1.field_l, param1.field_m);
-          var8 = 0;
+          int var6 = 114 % ((param0 - 32) / 42);
+          wj var12 = this.field_c.field_o;
+          cu var7 = new cu(this.field_c, 6408, param1.field_l, param1.field_m);
+          int var8 = 0;
           this.field_c.a(var12, 32925);
           var12.a(var7, 0, (byte) 119);
           if (var12.d((byte) -64)) {
@@ -47,8 +34,8 @@ final class cs {
             jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_b.field_d, "heightMap"), 0);
             jaggl.OpenGL.glUniform1fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_b.field_d, "rcpRelief"), 1.0f / param3);
             jaggl.OpenGL.glUniform2fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_b.field_d, "sampleSize"), 1.0f / (float)param2.field_l, 1.0f / (float)param2.field_m);
-            for (var9 = 0; param1.field_n > var9; var9++) {
-              var10 = (float)var9 / (float)param1.field_n;
+            for (int var9 = 0; param1.field_n > var9; var9++) {
+              float var10 = (float)var9 / (float)param1.field_n;
               this.field_c.a(param2, 1);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord3f(0.0f, 0.0f, var10);
@@ -71,19 +58,19 @@ final class cs {
           }
           var12.a(0, (byte) -107);
           this.field_c.b((byte) -113, var12);
-          stackIn_11_0 = var8;
+          int stackIn_11_0 = var8;
           return stackIn_11_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("cs.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var5;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("cs.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
           if (param2 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -116,15 +103,7 @@ final class cs {
     }
 
     final static byte[] a(boolean param0, int param1, int param2, Object param3) {
-        byte[] var4 = null;
-        RuntimeException var4_ref = null;
-        af var5 = null;
-        byte[] stackIn_8_0 = null;
-        byte[] stackIn_11_0 = null;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param3 == null) {
             return null;
@@ -133,21 +112,21 @@ final class cs {
             cs.a(true);
           }
           if (param3 instanceof byte[]) {
-            var4 = (byte[]) (param3);
-            stackIn_8_0 = Bullet.a(var4, param2, (byte) 20, param1);
+            byte[] var4 = (byte[]) (param3);
+            byte[] stackIn_8_0 = Bullet.a(var4, param2, (byte) 20, param1);
             return stackIn_8_0;
           }
           if (!(param3 instanceof af)) {
             throw new IllegalArgumentException();
           }
-          var5 = (af) (param3);
-          stackIn_11_0 = var5.a(-19920, param1, param2);
+          af var5 = (af) (param3);
+          byte[] stackIn_11_0 = var5.a(-19920, param1, param2);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_15_0 = var4_ref;
-          stackIn_15_1 = new StringBuilder().append("cs.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var4_ref;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("cs.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -158,18 +137,11 @@ final class cs {
     }
 
     final static boolean a(cl param0, int param1, cl param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var3_int = param2.field_cb - param0.field_cb;
+          int var3_int = param2.field_cb - param0.field_cb;
           if (ul.field_s != param2.field_bb) {
             if (null == param2.field_bb) {
               var3_int += 200;
@@ -189,16 +161,16 @@ final class cs {
           }
           return !(var3_int <= 0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_18_0 = var3;
-          stackIn_18_1 = new StringBuilder().append("cs.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var3;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("cs.E(");
           if (param0 == null) {
             stackIn_19_2 = "null";
           } else {
             stackIn_19_2 = "{...}";
           }
-          stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_21_1 = ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_22_2 = "null";
           } else {

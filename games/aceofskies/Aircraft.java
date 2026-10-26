@@ -40,33 +40,9 @@ final class Aircraft extends FlightBody {
         int var31 = 0;
         int var32 = 0;
         int var33 = 0;
-        int var34 = 0;
         int var35 = 0;
-        int var42 = 0;
-        RuntimeException stackIn_81_0 = null;
-        StringBuilder stackIn_81_1 = null;
         String stackIn_82_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var17 = null;
-        int var36 = 0;
-        int var37 = 0;
-        int var38 = 0;
-        int var39 = 0;
-        int var40 = 0;
-        int var41 = 0;
-        int var35Lifetime1;
-        int var36Lifetime1;
-        int var37Lifetime1;
-        int var38Lifetime1;
-        int var39Lifetime1;
-        int var40Lifetime1;
-        int var36Lifetime2;
-        int var36Lifetime3;
-        int var37Lifetime2;
-        int var38Lifetime2;
-        int var39Lifetime2;
-        int var40Lifetime2;
-        var42 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var42 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 >= 0 &&
             re.field_f > param15) {
@@ -80,7 +56,7 @@ final class Aircraft extends FlightBody {
               re.field_b <= param10) {
               return;
             }
-            var34 = -param15 + param0;
+            int var34 = -param15 + param0;
             if (param15 != param14) {
               var18 = param4 << 16;
               var17_int = param4 << 16;
@@ -94,7 +70,7 @@ final class Aircraft extends FlightBody {
               var19 = (-param4 + param8 << 16) / var35;
               var20 = (-param4 + param10 << 16) / var34;
               if (var19 >= var20) {
-                var36 = var19;
+                int var36 = var19;
                 var19 = var20;
                 var20 = var36;
                 var32 = (param6 - param7 << 16) / var35;
@@ -142,20 +118,20 @@ final class Aircraft extends FlightBody {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = re.field_i[param15];
+                int var36Lifetime2 = re.field_i[param15];
                 while (param14 > param15) {
-                  var37 = var17_int >> 16;
+                  int var37 = var17_int >> 16;
                   if (var37 < re.field_b) {
-                    var38 = -(var17_int >> 16) + (var18 >> 16);
+                    int var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         re.field_b > var37) {
                         s.a((byte) 118, var21, var29, param5, 0, 0, var38, var37 + var36Lifetime2, 0, var25);
                       }
                     } else {
-                      var39 = (var22 - var21) / var38;
-                      var40 = (-var25 + var26) / var38;
-                      var41 = (-var29 + var30) / var38;
+                      int var39 = (var22 - var21) / var38;
+                      int var40 = (-var25 + var26) / var38;
+                      int var41 = (-var29 + var30) / var38;
                       if (re.field_b <= var38 + var37) {
                         var38 = -var37 + re.field_b - 1;
                       }
@@ -181,7 +157,7 @@ final class Aircraft extends FlightBody {
                   var29 = var29 + var31;
                 }
               }
-              var36Lifetime3 = param0 - param14;
+              int var36Lifetime3 = param0 - param14;
               if (0 == var36Lifetime3) {
                 var27 = 0;
                 var23 = 0;
@@ -192,9 +168,9 @@ final class Aircraft extends FlightBody {
                 var19 = 0;
                 var24 = 0;
               } else {
-                var37Lifetime2 = param10 << 16;
-                var38Lifetime2 = param13 << 16;
-                var39Lifetime2 = param9 << 16;
+                int var37Lifetime2 = param10 << 16;
+                int var38Lifetime2 = param13 << 16;
+                int var39Lifetime2 = param9 << 16;
                 if (var33 == 0) {
                   var25 = param11 << 16;
                   var29 = param6 << 16;
@@ -206,7 +182,7 @@ final class Aircraft extends FlightBody {
                   var18 = param8 << 16;
                   var22 = param3 << 16;
                 }
-                var40Lifetime2 = param1 << 16;
+                int var40Lifetime2 = param1 << 16;
                 var24 = (-var22 + var38Lifetime2) / var36Lifetime3;
                 var31 = (var40Lifetime2 - var29) / var36Lifetime3;
                 var28 = (var39Lifetime2 - var26) / var36Lifetime3;
@@ -301,15 +277,15 @@ final class Aircraft extends FlightBody {
               var17_int = var17_int + param15 * var19;
               param15 = 0;
             }
-            var35Lifetime1 = re.field_i[param15];
+            int var35Lifetime1 = re.field_i[param15];
             while (param15 < param0) {
-              var36Lifetime1 = var17_int >> 16;
+              int var36Lifetime1 = var17_int >> 16;
               if (re.field_b > var36Lifetime1) {
-                var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
+                int var37Lifetime1 = -(var17_int >> 16) + (var18 >> 16);
                 if (0 != var37Lifetime1) {
-                  var38Lifetime1 = (var22 - var21) / var37Lifetime1;
-                  var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
-                  var40Lifetime1 = (var30 - var29) / var37Lifetime1;
+                  int var38Lifetime1 = (var22 - var21) / var37Lifetime1;
+                  int var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
+                  int var40Lifetime1 = (var30 - var29) / var37Lifetime1;
                   if (re.field_b <= var36Lifetime1 + var37Lifetime1) {
                     var37Lifetime1 = -1 - var36Lifetime1 + re.field_b;
                   }
@@ -343,10 +319,10 @@ final class Aircraft extends FlightBody {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var17 = decompiledCaughtException;
-          stackIn_81_0 = var17;
-          stackIn_81_1 = new StringBuilder().append("md.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var17 = decompiledCaughtException;
+          RuntimeException stackIn_81_0 = var17;
+          StringBuilder stackIn_81_1 = new StringBuilder().append("md.J(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_82_2 = "null";
           } else {
@@ -396,58 +372,49 @@ final class Aircraft extends FlightBody {
     }
 
     final static void a(int param0, int param1, BitmapFont param2, int param3, mg param4, int param5, int param6, int param7, int param8, BitmapFont param9, byte param10, mg param11, int param12, int param13, int param14, int param15, int param16, mg param17, int param18, int param19, int param20) {
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var21_int = 0;
-        RuntimeException var21 = null;
         try {
           sn.a(param9, param7, 24097, param2);
           hh.a(param6, param18, -92, param20, param5);
           mb.a(param8, param15, (byte) 121);
-          var21_int = -4 / ((46 - param10) / 53);
+          int var21_int = -4 / ((46 - param10) / 53);
           ef.a(119, param17, param4, param16, param13, param0);
           HighscoreQuery.a(param11, 25345, param3, param19);
           ql.a(param12, 2048, param14, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var21 = decompiledCaughtException;
-          stackIn_4_0 = var21;
-          stackIn_4_1 = new StringBuilder().append("md.L(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var21 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var21;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("md.L(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
           if (param9 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param10).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param10).append(',');
           if (param11 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',');
           if (param17 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -458,29 +425,10 @@ final class Aircraft extends FlightBody {
     }
 
     final void steerTowardsTarget(int aimLead, byte obfuscationGuard, Aircraft target) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
         SteeringMode stackIn_16_1 = null;
-        int stackIn_25_0 = 0;
-        int stackIn_29_0 = 0;
-        int stackIn_34_0 = 0;
-        int stackIn_38_0 = 0;
-        RuntimeException stackIn_67_0 = null;
-        StringBuilder stackIn_67_1 = null;
         String stackIn_68_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int targetLeadDistance = 0;
-        RuntimeException failure = null;
-        double forwardDistanceSquared = 0.0;
-        double leftDistanceSquared = 0.0;
-        double rightDistanceSquared = 0.0;
-        double turnRate = 0.0;
-        int var13 = 0;
-        int var14_int = 0;
-        double targetAlignment = 0.0;
-        int obfuscationControl = 0;
         int turnDirection;
-        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (qo.field_e != this.steeringMode &&
             target != null) {
@@ -498,46 +446,46 @@ final class Aircraft extends FlightBody {
               if (pd.field_a != this.steeringMode) {
                 this.steeringMode = ht.field_i;
               } else {
-                fieldTemp$0 = this.aimStallTicks + 1;
+                int fieldTemp$0 = this.aimStallTicks + 1;
                 this.aimStallTicks = this.aimStallTicks + 1;
                 if (0 <= fieldTemp$0) {
                   this.steeringMode = ht.field_i;
                 }
               }
             }
-            targetLeadDistance = 15 * aimLead - 128;
+            int targetLeadDistance = 15 * aimLead - 128;
             if (this.definition == ro.field_u) {
               targetLeadDistance = 0;
             }
             target.moveForward((double)targetLeadDistance, 128);
             this.moveForward(20.0, obfuscationGuard ^ 203);
-            forwardDistanceSquared = lc.a(this.position, false, target.position);
+            double forwardDistanceSquared = lc.a(this.position, false, target.position);
             this.moveForward(-20.0, 128);
             this.turn(-10.0, (byte) 25);
             this.moveForward(20.0, 128);
-            leftDistanceSquared = lc.a(this.position, false, target.position);
+            double leftDistanceSquared = lc.a(this.position, false, target.position);
             this.moveForward(-20.0, obfuscationGuard ^ 203);
             this.turn(20.0, (byte) 25);
             this.moveForward(20.0, obfuscationGuard + 53);
-            rightDistanceSquared = lc.a(this.position, false, target.position);
+            double rightDistanceSquared = lc.a(this.position, false, target.position);
             this.moveForward(-20.0, obfuscationGuard + 53);
             this.turn(-10.0, (byte) 25);
-            turnRate = this.definition.turnRate;
-            var13 = 0;
+            double turnRate = this.definition.turnRate;
+            int var13 = 0;
             if (pd.field_a == this.steeringMode) {
               if (leftDistanceSquared > rightDistanceSquared) {
-                stackIn_38_0 = (!(leftDistanceSquared > forwardDistanceSquared)) ? 0 : -1;
+                int stackIn_38_0 = (!(leftDistanceSquared > forwardDistanceSquared)) ? 0 : -1;
                 turnDirection = stackIn_38_0;
               } else {
-                stackIn_34_0 = (!(forwardDistanceSquared < rightDistanceSquared)) ? 0 : 1;
+                int stackIn_34_0 = (!(forwardDistanceSquared < rightDistanceSquared)) ? 0 : 1;
                 turnDirection = stackIn_34_0;
               }
             } else {
               if (rightDistanceSquared > leftDistanceSquared) {
-                stackIn_29_0 = (!(leftDistanceSquared < forwardDistanceSquared)) ? 0 : -1;
+                int stackIn_29_0 = (!(leftDistanceSquared < forwardDistanceSquared)) ? 0 : -1;
                 turnDirection = stackIn_29_0;
               } else {
-                stackIn_25_0 = (!(rightDistanceSquared < forwardDistanceSquared)) ? 0 : 1;
+                int stackIn_25_0 = (!(rightDistanceSquared < forwardDistanceSquared)) ? 0 : 1;
                 turnDirection = stackIn_25_0;
               }
             }
@@ -546,7 +494,7 @@ final class Aircraft extends FlightBody {
               return;
             }
             if (this.definition != ro.field_u) {
-              var14_int = turnDirection;
+              int var14_int = turnDirection;
               if (var14_int != 1) {
                 if (var14_int == -1) {
                   this.bankOffset = this.bankOffset - 2;
@@ -570,7 +518,7 @@ final class Aircraft extends FlightBody {
                 IntrusiveDeque.field_a.setPolar256(10.0, (double)this.headingOffset + this.heading, 121);
                 rc.field_d.setFrom(this.position, true);
                 rc.field_d.subtract(target.position, obfuscationGuard ^ -30562);
-                targetAlignment = IntrusiveDeque.field_a.dot(rc.field_d, (byte) -118) / rc.field_d.length((byte) -74);
+                double targetAlignment = IntrusiveDeque.field_a.dot(rc.field_d, (byte) -118) / rc.field_d.length((byte) -74);
                 if (9.5 < targetAlignment) {
                   this.fireRequested = true;
                   this.aimStallTicks = 0;
@@ -580,7 +528,7 @@ final class Aircraft extends FlightBody {
                   this.steeringMode = ht.field_i;
                   return;
                 }
-                fieldTemp$1 = this.aimStallTicks + 1;
+                int fieldTemp$1 = this.aimStallTicks + 1;
                 this.aimStallTicks = this.aimStallTicks + 1;
                 if (fieldTemp$1 < 150) {
                   return;
@@ -598,10 +546,10 @@ final class Aircraft extends FlightBody {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          failure = decompiledCaughtException;
-          stackIn_67_0 = failure;
-          stackIn_67_1 = new StringBuilder().append("md.K(").append(aimLead).append(',').append(obfuscationGuard).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException failure = decompiledCaughtException;
+          RuntimeException stackIn_67_0 = failure;
+          StringBuilder stackIn_67_1 = new StringBuilder().append("md.K(").append(aimLead).append(',').append(obfuscationGuard).append(',');
           if (target == null) {
             stackIn_68_2 = "null";
           } else {

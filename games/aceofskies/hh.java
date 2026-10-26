@@ -33,20 +33,15 @@ abstract class hh {
     abstract void a(int param0, int param1, rt param2);
 
     final static void a(int param0, GraphicsRenderer param1) {
-        bo var2 = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
         try {
-          var2 = fa.a(param1, true);
+          bo var2 = fa.a(param1, true);
           if (param0 != 255) {
             field_b = (qk) null;
           }
-          var3 = sh.field_u;
-          var4 = gp.field_w;
-          var5 = 0;
-          var6 = 0;
+          int var3 = sh.field_u;
+          int var4 = gp.field_w;
+          int var5 = 0;
+          int var6 = 0;
           param1.d(var4, var3, var6, -5782, -65281, var5);
           var2.a(var3 + var5, var5, var4 + var6, var6, 70);
           param1.SA(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, var6 * SoftwareRasterizer.stride, SoftwareRasterizer.stride);
@@ -115,7 +110,6 @@ abstract class hh {
     }
 
     final static int[][] a(byte param0, int param1, int param2, boolean param3, int param4, float param5, int param6, int param7, int param8) {
-        int var12 = 0;
         int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         int[][] var16 = new int[param4][param2];
         int[][] var15 = var16;
@@ -130,7 +124,7 @@ abstract class hh {
         var10.field_n = param3 ? true : false;
         var10.d(1);
         ji.a(param4, param2, (byte) 37);
-        for (var12 = 0; param4 > var12; var12++) {
+        for (int var12 = 0; param4 > var12; var12++) {
           var10.a(true, var16[var12], var12);
         }
         return var9;

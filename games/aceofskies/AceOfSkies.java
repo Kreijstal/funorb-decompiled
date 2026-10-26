@@ -17,16 +17,10 @@ public final class AceOfSkies extends NetworkGameClient {
 
     private final boolean advanceResourceLoading(byte obfuscationGuard, boolean initializeAfterDownload) {
         Object stackIn_109_0 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var4Lifetime1;
-        var5 = obfuscationControl ? 1 : 0;
+        int var5 = obfuscationControl ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var3_int = -35 / ((obfuscationGuard - 1) / 48);
+          int var3_int = -35 / ((obfuscationGuard - 1) / 48);
           qq.a((byte) -100);
           if (jk.synthesizedSoundArchive != null) {
             if (hg.sharedSpriteArchive.b((byte) 95) &&
@@ -137,7 +131,7 @@ public final class AceOfSkies extends NetworkGameClient {
               return false;
             }
             if (av.a(true)) {
-              var4 = 0;
+              int var4 = 0;
               while (true) {
                 if (var4 < 8) {
                   aa.menuScreens[var4] = new MenuScreen(var4);
@@ -162,7 +156,7 @@ public final class AceOfSkies extends NetworkGameClient {
             m.a(tg.musicTracks[0], 27966, true);
             return true;
           }
-          var4Lifetime1 = 0;
+          int var4Lifetime1 = 0;
           while (true) {
             if (var4Lifetime1 >= 3) {
               var4Lifetime1 = 0;
@@ -203,21 +197,14 @@ public final class AceOfSkies extends NetworkGameClient {
           te.resetFrameTiming(77);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var3), "AceOfSkies.J(" + obfuscationGuard + ',' + initializeAfterDownload + ')');
         }
     }
 
     final static void a(int param0, boolean param1, fn param2, boolean param3, int param4) {
-        RuntimeException stackIn_31_0 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        String var7 = null;
         try {
           if (param4 != -12209) {
             return;
@@ -243,10 +230,10 @@ public final class AceOfSkies extends NetworkGameClient {
             q.outgoingPacket.writeByte(-1336879960, 16);
           }
           q.outgoingPacket.position = q.outgoingPacket.position + 2;
-          var5_int = q.outgoingPacket.position;
+          int var5_int = q.outgoingPacket.position;
           q.outgoingPacket.writeInt((byte) 126, ub.field_g);
           q.outgoingPacket.writeLong((byte) -102, fs.field_a);
-          var6 = 0;
+          int var6 = 0;
           if (te.field_h) {
             var6 = var6 | 1;
           }
@@ -260,7 +247,7 @@ public final class AceOfSkies extends NetworkGameClient {
             var6 = var6 | 16;
           }
           q.outgoingPacket.writeByte(-1336879960, var6);
-          var7 = ao.a(bm.m(114), false);
+          String var7 = ao.a(bm.m(114), false);
           if (null == var7) {
             var7 = "";
           }
@@ -273,10 +260,10 @@ public final class AceOfSkies extends NetworkGameClient {
           fr.a(param4 + 12171, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_31_0 = var5;
-          stackIn_31_1 = new StringBuilder().append("AceOfSkies.B(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_31_0 = var5;
+          StringBuilder stackIn_31_1 = new StringBuilder().append("AceOfSkies.B(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_32_2 = "null";
           } else {
@@ -287,14 +274,7 @@ public final class AceOfSkies extends NetworkGameClient {
     }
 
     private final void advanceGame(int obfuscationGuard) {
-        int fieldTemp$0 = 0;
-        FlightSession stackIn_23_0 = null;
-        boolean stackIn_23_1 = false;
-        boolean stackIn_24_2 = false;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        var3 = obfuscationControl ? 1 : 0;
+        int var3 = obfuscationControl ? 1 : 0;
         try {
           if (ln.field_d >= 2 &&
             lp.heldKeys[41]) {
@@ -305,7 +285,7 @@ public final class AceOfSkies extends NetworkGameClient {
             this.initializeGameResources((byte) -122);
           }
           if (MenuScreen.field_g.first(obfuscationGuard + 268426409) != null) {
-            fieldTemp$0 = hp.field_h + 1;
+            int fieldTemp$0 = hp.field_h + 1;
             hp.field_h = hp.field_h + 1;
             if (fieldTemp$0 == 256) {
               hp.field_h = 0;
@@ -313,9 +293,9 @@ public final class AceOfSkies extends NetworkGameClient {
             }
           }
           if (bg.field_b == 0) {
-            stackIn_23_0 = sg.flightSession;
-            stackIn_23_1 = true;
-            stackIn_24_2 = (po.activeMenuId == -1);
+            FlightSession stackIn_23_0 = sg.flightSession;
+            boolean stackIn_23_1 = true;
+            boolean stackIn_24_2 = (po.activeMenuId == -1);
             ((FlightSession) (Object) stackIn_23_0).advanceSession(stackIn_23_1, stackIn_24_2);
             if (po.activeMenuId != ci.nextMenuId) {
               ec.menuTransitionTicks = ec.menuTransitionTicks + 1;
@@ -388,21 +368,17 @@ public final class AceOfSkies extends NetworkGameClient {
           bg.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2), "AceOfSkies.G(" + obfuscationGuard + ')');
         }
     }
 
     final void initializeClient(int obfuscationGuard) {
-        RuntimeException runtimeException = null;
-        MidiPcmStream var2 = null;
-        MidiPcmStream var3 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           this.a(-13, 2, 18, 10, 3, 0, 1);
-          var2 = new MidiPcmStream();
-          var3 = new MidiPcmStream();
+          MidiPcmStream var2 = new MidiPcmStream();
+          MidiPcmStream var3 = new MidiPcmStream();
           var2.a(128, false, 9);
           var3.a(128, false, 9);
           wu.a(22050, true, (java.awt.Component) ((Object) ci.field_f), pt.field_b, 32767, new jt(var2, var3));
@@ -415,17 +391,14 @@ public final class AceOfSkies extends NetworkGameClient {
           this.a((byte) 62, false, true, true, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.I(" + obfuscationGuard + ')');
         }
     }
 
     final void releaseClientStatics(int obfuscationGuard) {
-        RuntimeException runtimeException = null;
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = obfuscationControl ? 1 : 0;
+        int var3 = obfuscationControl ? 1 : 0;
         try {
           iq.a((byte) -126);
           IntrusiveDeque.f(obfuscationGuard - 39323);
@@ -764,8 +737,8 @@ public final class AceOfSkies extends NetworkGameClient {
           bi.a(false);
           this.field_w = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + obfuscationGuard + ')');
         }
         if (GameAppletShell.field_a != 0) {
@@ -774,8 +747,6 @@ public final class AceOfSkies extends NetworkGameClient {
     }
 
     private final void initializeGameResources(byte obfuscationGuard) {
-        RuntimeException runtimeException = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (null != fn.field_a) {
             wu.a(-113, fn.field_a);
@@ -796,40 +767,29 @@ public final class AceOfSkies extends NetworkGameClient {
           FlightSession.rendererManager = new RendererManager(11, 12, (d) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.F(" + obfuscationGuard + ')');
         }
     }
 
     final static long a(CharSequence param0, int param1) {
-        int stackIn_38_0 = 0;
         long stackIn_47_0 = 0L;
-        RuntimeException stackIn_51_0 = null;
-        StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        long var2_long = 0L;
-        RuntimeException var2 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int stackIn_38_0Lifetime1;
-        var7 = obfuscationControl ? 1 : 0;
+        int var7 = obfuscationControl ? 1 : 0;
         try {
           if (param1 > -12) {
             AceOfSkies.a((CharSequence) null, -113);
           }
-          var2_long = 0L;
-          var4 = param0.length();
-          var5 = 0;
+          long var2_long = 0L;
+          int var4 = param0.length();
+          int var5 = 0;
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var4 > var5) {
               var2_long = var2_long * 37L;
-              var6 = param0.charAt(var5);
-              stackIn_38_0 = var6;
+              int var6 = param0.charAt(var5);
+              int stackIn_38_0 = var6;
               if (var7 != 0) {
                 if (stackIn_38_0 == 0) {
                   stackIn_47_0 = var2_long;
@@ -859,7 +819,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (decompiledFrameRemainder0) {
               while (true) {
-                stackIn_38_0Lifetime1 = $cfr$lcmp(0L, var2_long % 37L);
+                int stackIn_38_0Lifetime1 = $cfr$lcmp(0L, var2_long % 37L);
                 if (stackIn_38_0Lifetime1 != 0) {
                   break;
                 }
@@ -878,10 +838,10 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           return stackIn_47_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_51_0 = var2;
-          stackIn_51_1 = new StringBuilder().append("AceOfSkies.D(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_51_0 = var2;
+          StringBuilder stackIn_51_1 = new StringBuilder().append("AceOfSkies.D(");
           if (param0 == null) {
             stackIn_52_2 = "null";
           } else {
@@ -895,26 +855,13 @@ public final class AceOfSkies extends NetworkGameClient {
         try {
           boolean stackIn_54_0 = false;
           Throwable decompiledCaughtException = null;
-          java.awt.Canvas var2 = null;
-          RuntimeException var2_ref = null;
-          int var3 = 0;
-          GraphicsRenderer var4 = null;
-          int var5_int = 0;
-          iq var5 = null;
           int var6_int = 0;
-          String var6 = null;
-          lp var6_ref = null;
-          int var7 = 0;
-          int var8 = 0;
           String var9 = null;
-          int var10 = 0;
-          int var5_intLifetime1;
-          int var5_intLifetime2;
-          var10 = obfuscationControl ? 1 : 0;
+          int var10 = obfuscationControl ? 1 : 0;
           try {
-            var2 = fa.a(-8213);
+            java.awt.Canvas var2 = fa.a(-8213);
             SoftwareRasterizer.clearFramebuffer();
-            var3 = 0;
+            int var3 = 0;
             if (im.a(true)) {
               pu.a((byte) 21, var2, lh.a((byte) -94));
               return;
@@ -931,18 +878,18 @@ public final class AceOfSkies extends NetworkGameClient {
             if (FlightSession.rendererManager.a(122)) {
               ScoreSubmission.createRendererResources(39);
             }
-            var4 = FlightSession.rendererManager.a((byte) 127);
+            GraphicsRenderer var4 = FlightSession.rendererManager.a((byte) 127);
             sg.flightSession.renderSession(-16711936, false, var4);
             if (~po.activeMenuId != ~ci.nextMenuId) {
               if (po.activeMenuId != -1 &&
                 ec.menuTransitionTicks < 30) {
-                var5_int = ec.menuTransitionTicks;
+                int var5_int = ec.menuTransitionTicks;
                 var5_int = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_int / 2.0 / 30.0));
                 aa.menuScreens[po.activeMenuId].drawMenu(-var5_int + 480, var4, -4);
               }
               if ((ci.nextMenuId != -1) &&
                 (!(ec.menuTransitionTicks <= 10))) {
-                var5_intLifetime2 = ec.menuTransitionTicks - 40;
+                int var5_intLifetime2 = ec.menuTransitionTicks - 40;
                 var5_intLifetime2 = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_intLifetime2 / 2.0 / 30.0));
                 aa.menuScreens[ci.nextMenuId].drawMenu(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
                 if ((var10 != 0) &&
@@ -962,7 +909,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (0 != bg.field_b) {
               var3 = 1;
-              var5_intLifetime1 = 256 * ec.menuTransitionTicks / 40;
+              int var5_intLifetime1 = 256 * ec.menuTransitionTicks / 40;
               if (var5_intLifetime1 > 0) {
                 SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, var5_intLifetime1);
               }
@@ -981,9 +928,9 @@ public final class AceOfSkies extends NetworkGameClient {
               lb.field_e) {
               PacketBuffer.gameFont.drawText(16777215, 1, 20, Integer.toString(wk.field_f), obfuscationGuard ^ 18877, 20);
             }
-            var5 = (iq) (MenuScreen.field_g.first(268435455));
+            iq var5 = (iq) (MenuScreen.field_g.first(268435455));
             if (null != var5) {
-              var7 = hp.field_h;
+              int var7 = hp.field_h;
               if (var7 < 64) {
                 var6_int = var7 * 255 / 64;
                 if (var10 != 0) {
@@ -1004,7 +951,7 @@ public final class AceOfSkies extends NetworkGameClient {
                   var6_int = (192 - var7) * 255 / 64;
                 }
               }
-              var8 = 45;
+              int var8 = 45;
               boolean decompiledSharedTail0 = !(var5.field_f < 0);
               if (!decompiledSharedTail0) {
                 var9 = ab.field_r;
@@ -1032,7 +979,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (mj.field_b &&
               ln.field_d >= 2) {
-              var6 = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kb/" + Runtime.getRuntime().totalMemory() / 1024L + "kb";
+              String var6 = (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1024L + "kb/" + Runtime.getRuntime().totalMemory() / 1024L + "kb";
               PacketBuffer.gameFont.drawRightAlignedText(var6, -1, -16777216, sh.field_u - 10, 45, (byte) 92);
               PacketBuffer.gameFont.drawRightAlignedText(Integer.toString(wk.field_f), -1, -16777216, sh.field_u - 10, 60, (byte) 92);
             }
@@ -1043,12 +990,12 @@ public final class AceOfSkies extends NetworkGameClient {
               var4.e(obfuscationGuard - 239);
             } catch (lp decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var6_ref = (lp) (Object) decompiledCaughtException;
+              lp var6_ref = (lp) (Object) decompiledCaughtException;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException var2_ref = (RuntimeException) (Object) decompiledCaughtException;
             throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.A(" + obfuscationGuard + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -1059,15 +1006,8 @@ public final class AceOfSkies extends NetworkGameClient {
     }
 
     final void updateClient(int obfuscationGuard) {
-        boolean discarded$0 = false;
-        boolean stackIn_15_1 = false;
-        boolean stackIn_78_1 = false;
-        RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        oc var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        var3 = obfuscationControl ? 1 : 0;
+        int var3 = obfuscationControl ? 1 : 0;
         try {
           we.a(200);
           if (obfuscationGuard != 5883) {
@@ -1078,7 +1018,7 @@ public final class AceOfSkies extends NetworkGameClient {
             tt.b(-32546);
             hi.j(8585);
           }
-          stackIn_15_1 = (jf.field_a != null);
+          boolean stackIn_15_1 = (jf.field_a != null);
           this.b(stackIn_15_1, (byte) 95);
           if (jn.field_t) {
             this.initializeGameResources((byte) 124);
@@ -1088,7 +1028,7 @@ public final class AceOfSkies extends NetworkGameClient {
             this.i(4);
             if (im.a(true)) {
               if (jr.a((byte) 32)) {
-                discarded$0 = this.advanceResourceLoading((byte) 59, false);
+                boolean discarded$0 = this.advanceResourceLoading((byte) 59, false);
               }
               return;
             }
@@ -1138,7 +1078,7 @@ public final class AceOfSkies extends NetworkGameClient {
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  stackIn_78_1 = (null != jf.field_a);
+                  boolean stackIn_78_1 = (null != jf.field_a);
                   var2_int = this.a(stackIn_78_1, obfuscationGuard - 5990);
                   if (var2_int == 1 ||
                     2 == var2_int) {
@@ -1172,7 +1112,7 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           if (!cn.b(true)) {
             do {
-              var2 = (oc) (sb.field_c.removeFirst(121));
+              oc var2 = (oc) (sb.field_c.removeFirst(121));
               if (null == var2) {
                 if (var3 == 0) {
                   break;
@@ -1197,8 +1137,8 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2_ref), "AceOfSkies.H(" + obfuscationGuard + ')');
         }
     }
@@ -1207,8 +1147,6 @@ public final class AceOfSkies extends NetworkGameClient {
     }
 
     final void shutdownClient(int obfuscationGuard) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           dt.a(0);
           if (jf.field_a != null) {
@@ -1220,8 +1158,8 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2), "AceOfSkies.E(" + obfuscationGuard + ')');
         }
     }

@@ -6,25 +6,19 @@ final class lr extends lg {
     static long field_v;
 
     final static byte[] a(int param0, String param1) {
-        RuntimeException var2 = null;
-        String var3 = null;
-        byte[] stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4688) {
-            var3 = (String) null;
+            String var3 = (String) null;
             lr.a(-91, (String) null);
           }
-          stackIn_3_0 = te.field_f.a("", (byte) -71, param1);
+          byte[] stackIn_3_0 = te.field_f.a("", (byte) -71, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("lr.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("lr.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {

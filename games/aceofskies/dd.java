@@ -8,26 +8,19 @@ final class dd {
     static int field_a;
 
     final static jm a(String param0, int param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        cm var4 = null;
-        cm stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = -17 % ((param2 + 32) / 35);
-          var4 = new cm();
+          int var3_int = -17 % ((param2 + 32) / 35);
+          cm var4 = new cm();
           ((jm) ((Object) var4)).field_f = param1;
           ((jm) ((Object) var4)).field_e = param0;
-          stackIn_1_0 = var4;
+          cm stackIn_1_0 = var4;
           return (jm) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_4_0 = var3;
-          stackIn_4_1 = new StringBuilder().append("dd.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var3;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("dd.A(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {

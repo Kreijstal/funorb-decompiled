@@ -9,41 +9,28 @@ class nr extends rt {
 
     final void a(int param0, byte[] param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int stackIn_17_0 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var11_int = 0;
-        RuntimeException var11 = null;
-        int var12 = 0;
-        int var13 = 0;
-        byte[] var14 = null;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param7 == 0) {
             param7 = param9;
           }
           boolean decompiledFrameCompleted0 = true;
           if (param3) {
-            var11_int = rl.a(4, param8);
-            var12 = var11_int * param9;
-            var13 = var11_int * param7;
-            var14 = new byte[var12 * param6];
-            var15 = 0;
+            int var11_int = rl.a(4, param8);
+            int var12 = var11_int * param9;
+            int var13 = var11_int * param7;
+            byte[] var14 = new byte[var12 * param6];
+            int var15 = 0;
             while (var15 < param6) {
-              var16 = var15 * var12;
-              var17 = param2 + (-1 + param6 - var15) * var13;
+              int var16 = var15 * var12;
+              int var17 = param2 + (-1 + param6 - var15) * var13;
               stackIn_17_0 = 0;
               if (var19 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var18 = stackIn_17_0;
+              int var18 = stackIn_17_0;
               while (var12 > var18) {
                 var14[var16++] = param1[var17++];
                 var18++;
@@ -72,10 +59,10 @@ class nr extends rt {
           jaggl.OpenGL.glPixelStorei(3317, 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var11 = decompiledCaughtException;
-          stackIn_28_0 = var11;
-          stackIn_28_1 = new StringBuilder().append("nr.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var11 = decompiledCaughtException;
+          RuntimeException stackIn_28_0 = var11;
+          StringBuilder stackIn_28_1 = new StringBuilder().append("nr.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_29_2 = "null";
           } else {
@@ -87,37 +74,26 @@ class nr extends rt {
 
     final void a(int param0, int param1, int param2, boolean param3, int param4, int[] param5, int param6, byte param7, int param8) {
         int stackIn_16_0 = 0;
-        RuntimeException stackIn_27_0 = null;
-        StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] var10 = null;
-        RuntimeException var10_ref = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int[] var16 = null;
-        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param8 == 0) {
             param8 = param0;
           }
           boolean decompiledFrameCompleted0 = true;
           if (param3) {
-            var16 = new int[param2 * param0];
-            var10 = var16;
-            var11 = 0;
+            int[] var16 = new int[param2 * param0];
+            int[] var10 = var16;
+            int var11 = 0;
             while (param2 > var11) {
-              var12 = var11 * param0;
-              var13 = param6 + (param2 + (-var11 - 1)) * param8;
+              int var12 = var11 * param0;
+              int var13 = param6 + (param2 + (-var11 - 1)) * param8;
               stackIn_16_0 = 0;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var14 = stackIn_16_0;
+              int var14 = stackIn_16_0;
               while (param0 > var14) {
                 var16[var12++] = param5[var13++];
                 var14++;
@@ -145,10 +121,10 @@ class nr extends rt {
           this.field_n = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var10_ref = decompiledCaughtException;
-          stackIn_27_0 = var10_ref;
-          stackIn_27_1 = new StringBuilder().append("nr.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var10_ref = decompiledCaughtException;
+          RuntimeException stackIn_27_0 = var10_ref;
+          StringBuilder stackIn_27_1 = new StringBuilder().append("nr.D(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_28_2 = "null";
           } else {
@@ -185,21 +161,9 @@ class nr extends rt {
     nr(wl param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_23_0 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int[] var11 = null;
-        RuntimeException var11_ref = null;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_l = -1;
         this.field_n = -1;
         try {
@@ -207,18 +171,18 @@ class nr extends rt {
           this.field_k = param4;
           this.field_m = param3;
           if (param9) {
-            var17 = new int[param6.length];
-            var11 = var17;
-            var12 = 0;
+            int[] var17 = new int[param6.length];
+            int[] var11 = var17;
+            int var12 = 0;
             while (var12 < param4) {
-              var13 = var12 * param3;
-              var14 = (-1 + param4 - var12) * param3;
+              int var13 = var12 * param3;
+              int var14 = (-1 + param4 - var12) * param3;
               stackIn_13_0 = 0;
               if (var16 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var15 = stackIn_13_0;
+              int var15 = stackIn_13_0;
               while (var15 < param3) {
                 var17[var13++] = param6[var14++];
                 var15++;
@@ -251,16 +215,16 @@ class nr extends rt {
           this.a(true, -128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var11_ref = decompiledCaughtException;
-          stackIn_23_0 = var11_ref;
-          stackIn_23_1 = new StringBuilder().append("nr.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var11_ref = decompiledCaughtException;
+          RuntimeException stackIn_23_0 = var11_ref;
+          StringBuilder stackIn_23_1 = new StringBuilder().append("nr.<init>(");
           if (param0 == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          StringBuilder stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_27_2 = "null";
           } else {
@@ -285,21 +249,9 @@ class nr extends rt {
     nr(wl param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
         super(param0, param1, param2, param4 * param3, param5);
         int stackIn_13_0 = 0;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        byte[] var10 = null;
-        RuntimeException var10_ref = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        byte[] var16 = null;
-        var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_l = -1;
         this.field_n = -1;
         try {
@@ -307,18 +259,18 @@ class nr extends rt {
           this.field_m = param3;
           this.field_k = param4;
           if (param8) {
-            var16 = new byte[param6.length];
-            var10 = var16;
-            var11 = 0;
+            byte[] var16 = new byte[param6.length];
+            byte[] var10 = var16;
+            int var11 = 0;
             while (var11 < param4) {
-              var12 = var11 * param3;
-              var13 = param3 * (-var11 + (param4 - 1));
+              int var12 = var11 * param3;
+              int var13 = param3 * (-var11 + (param4 - 1));
               stackIn_13_0 = 0;
               if (var15 != 0) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var14 = stackIn_13_0;
+              int var14 = stackIn_13_0;
               while (var14 < param3) {
                 var16[var12++] = param6[var13++];
                 var14++;
@@ -349,16 +301,16 @@ class nr extends rt {
           this.a(true, -128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var10_ref = decompiledCaughtException;
-          stackIn_21_0 = var10_ref;
-          stackIn_21_1 = new StringBuilder().append("nr.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var10_ref = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var10_ref;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("nr.<init>(");
           if (param0 == null) {
             stackIn_22_2 = "null";
           } else {
             stackIn_22_2 = "{...}";
           }
-          stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          StringBuilder stackIn_24_1 = ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_25_2 = "null";
           } else {
@@ -369,9 +321,8 @@ class nr extends rt {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = 0;
         if (param6 > 79) {
-          var8 = -param3 - param0 + this.field_j.field_bb;
+          int var8 = -param3 - param0 + this.field_j.field_bb;
           this.field_j.a((rt) (this), 1);
           jaggl.OpenGL.glCopyTexSubImage2D(this.field_f, 0, param4, this.field_k + (-param2 - param3), param1, var8, param5, param3);
           jaggl.OpenGL.glFlush();
@@ -381,13 +332,8 @@ class nr extends rt {
 
     nr(wl param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
         super(param0, param1, param2, param3 * param4, param5);
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_l = -1;
         this.field_n = -1;
         try {
@@ -408,16 +354,16 @@ class nr extends rt {
           this.a(true, -128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_9_0 = runtimeException;
-          stackIn_9_1 = new StringBuilder().append("nr.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = runtimeException;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("nr.<init>(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',');
           if (param6 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -443,41 +389,29 @@ class nr extends rt {
     }
 
     final static void a(int[] param0, boolean param1, byte[] param2, int param3, int param4) {
-        int incrementValue$0 = 0;
-        int incrementValue$1 = 0;
-        byte dupTemp$2 = 0;
-        int dupTemp$3 = 0;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1) {
             return;
           }
-          var5_int = 0;
+          int var5_int = 0;
           while (var5_int < gi.field_i.length) {
             param3 = gi.field_i[var5_int];
             if (var7 != 0) {
               return;
             }
-            var6 = var5_int << 4;
+            int var6 = var5_int << 4;
             while (true) {
-              incrementValue$0 = param3;
+              int incrementValue$0 = param3;
               param3--;
               if (0 != incrementValue$0) {
-                incrementValue$1 = var6;
+                int incrementValue$1 = var6;
                 var6++;
                 param4 = jr.field_n[incrementValue$1];
-                dupTemp$2 = param2[param4];
-                dupTemp$3 = param0[dupTemp$2];
+                byte dupTemp$2 = param2[param4];
+                int dupTemp$3 = param0[dupTemp$2];
                 param0[dupTemp$2] = dupTemp$3 + 1;
                 jr.field_n[dupTemp$3] = param4;
                 continue;
@@ -488,16 +422,16 @@ class nr extends rt {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_17_0 = var5;
-          stackIn_17_1 = new StringBuilder().append("nr.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var5;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("nr.G(");
           if (param0 == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_21_2 = "null";
           } else {

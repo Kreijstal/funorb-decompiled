@@ -6,44 +6,34 @@ final class op {
     static int field_a;
 
     final static fn a(String param0, boolean param1, String param2, boolean param3) {
-        long var4_long = 0L;
-        RuntimeException var4 = null;
-        Object var6 = null;
-        String var7 = null;
-        CharSequence var8 = null;
-        fn stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            var7 = (String) null;
+            String var7 = (String) null;
             op.a((String) null, true, (String) null, false);
           }
-          var4_long = 0L;
-          var6 = null;
+          long var4_long = 0L;
+          Object var6 = null;
           if (param2.indexOf('@') != -1) {
             var6 = param2;
           } else {
-            var8 = (CharSequence) ((Object) param2);
+            CharSequence var8 = (CharSequence) ((Object) param2);
             var4_long = AceOfSkies.a(var8, -47);
           }
-          stackIn_6_0 = wb.a(param3, (String) (var6), param0, var4_long, true);
+          fn stackIn_6_0 = wb.a(param3, (String) (var6), param0, var4_long, true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_9_0 = var4;
-          stackIn_9_1 = new StringBuilder().append("op.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var4;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("op.B(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -64,13 +54,12 @@ final class op {
     }
 
     final static void a(int param0, ResourceArchive param1) {
-        t var2 = null;
         t.a(param1.a("headers.packvorbis", (byte) -71, ""));
         if (param0 != 20786) {
           return;
         }
         try {
-          var2 = t.a(param1, "jagex logo2.packvorbis", "");
+          t var2 = t.a(param1, "jagex logo2.packvorbis", "");
           var2.a();
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "op.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

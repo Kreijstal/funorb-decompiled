@@ -41,11 +41,10 @@ final class ng extends rg {
 
     ng(lt param0, String param1) {
         super(param0, 300, 120);
-        int var3_int = 0;
         try {
           this.field_M = param1;
           if (this.field_M != null) {
-            var3_int = b.field_c.measureWrappedHeight(this.field_M, 260, b.field_c.maxAscent);
+            int var3_int = b.field_c.measureWrappedHeight(this.field_M, 260, b.field_c.maxAscent);
             this.a(300, (byte) 29, var3_int + 150);
           }
           this.field_L = new ss(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -59,29 +58,18 @@ final class ng extends rg {
     }
 
     final static void a(BitmapFont param0, String param1, co param2, int param3, byte param4) {
-        int var7 = 0;
-        RuntimeException stackIn_19_0 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param4 != 30) {
             field_J = (String[]) null;
           }
-          var5_int = 0;
-          var6 = -1;
-          for (var7 = 1; var7 < param1.length(); var7++) {
-            var8 = param1.charAt(var7);
+          int var5_int = 0;
+          int var6 = -1;
+          for (int var7 = 1; var7 < param1.length(); var7++) {
+            int var8 = param1.charAt(var7);
             if (60 == var8) {
               var6 = (var5_int >> 8) + param2.field_h[0] + param0.measureTextWidth(param1.substring(0, var7));
             }
@@ -99,22 +87,22 @@ final class ng extends rg {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_19_0 = var5;
-          stackIn_19_1 = new StringBuilder().append("ng.V(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_19_0 = var5;
+          StringBuilder stackIn_19_1 = new StringBuilder().append("ng.V(");
           if (param0 == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
           if (param1 == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          StringBuilder stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
           if (param2 == null) {
             stackIn_26_2 = "null";
           } else {

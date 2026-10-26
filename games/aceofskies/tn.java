@@ -15,22 +15,16 @@ final class tn extends ab implements dn {
     }
 
     final static boolean a(int param0, CipherPacketBuffer param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        boolean stackIn_3_0 = false;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = 110 / ((param0 - 9) / 54);
-          stackIn_3_0 = (param1.b((byte) 88, 1) == 1);
+          int var2_int = 110 / ((param0 - 9) / 54);
+          boolean stackIn_3_0 = (param1.b((byte) 88, 1) == 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("tn.W(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("tn.W(").append(param0).append(',');
           if (param1 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -51,33 +45,26 @@ final class tn extends ab implements dn {
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        boolean stackIn_6_0 = false;
-        boolean stackIn_9_0 = false;
-        RuntimeException stackIn_14_0 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(33, param1, param2, param3)) {
             return true;
           }
-          var5_int = 103 % ((-53 - param0) / 33);
+          int var5_int = 103 % ((-53 - param0) / 33);
           if (98 == param1) {
-            stackIn_6_0 = this.b(param3, -108);
+            boolean stackIn_6_0 = this.b(param3, -108);
             return stackIn_6_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_9_0 = this.a(80, param3);
+          boolean stackIn_9_0 = this.a(80, param3);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_14_0 = var5;
-          stackIn_14_1 = new StringBuilder().append("tn.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_14_0 = var5;
+          StringBuilder stackIn_14_1 = new StringBuilder().append("tn.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_15_2 = "null";
           } else {
@@ -88,19 +75,12 @@ final class tn extends ab implements dn {
     }
 
     final static boolean a(ResourceArchive param0, byte param1, int param2, int param3) {
-        byte[] var4 = null;
-        RuntimeException var4_ref = null;
-        CipherPacketBuffer var5 = null;
-        byte[] var6 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6 = param0.a(param3, -10470, param2);
-          var4 = var6;
+          byte[] var6 = param0.a(param3, -10470, param2);
+          byte[] var4 = var6;
           if (param1 != -127) {
-            var5 = (CipherPacketBuffer) null;
+            CipherPacketBuffer var5 = (CipherPacketBuffer) null;
             tn.a(-9, (CipherPacketBuffer) null);
           }
           if (var6 == null) {
@@ -109,10 +89,10 @@ final class tn extends ab implements dn {
           jr.a(var6, param1 + 7275);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_10_0 = var4_ref;
-          stackIn_10_1 = new StringBuilder().append("tn.BA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var4_ref;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("tn.BA(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -123,14 +103,13 @@ final class tn extends ab implements dn {
     }
 
     final static Sprite a(int param0, int param1, boolean param2) {
-        int var4 = 0;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (!param2) {
           return (Sprite) null;
         }
         Sprite var6 = new Sprite(param1, param1);
         Sprite var3 = var6;
-        for (var4 = 0; var4 < var3.pixels.length; var4++) {
+        for (int var4 = 0; var4 < var3.pixels.length; var4++) {
           var6.pixels[var4] = param0;
         }
         return var3;
@@ -175,16 +154,10 @@ final class tn extends ab implements dn {
     }
 
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
-        int var6_int = 0;
-        int var7 = 0;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var6_int = 77 % ((param4 + 27) / 61);
+          int var6_int = 77 % ((param4 + 27) / 61);
           if (param1 != this.field_v) {
             if (this.field_u != param1) {
               if (param1 == this.field_x) {
@@ -198,10 +171,10 @@ final class tn extends ab implements dn {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_10_0 = var6;
-          stackIn_10_1 = new StringBuilder().append("tn.DA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var6;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("tn.DA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {

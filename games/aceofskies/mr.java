@@ -6,14 +6,7 @@ final class mr {
     static int[] field_b;
 
     final static boolean a(char param0, int param1) {
-        char[] var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        int var4 = 0;
-        int var5 = 0;
-        char[] var6 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != 2004352972) {
             mr.a(23);
@@ -25,14 +18,14 @@ final class mr {
             if (param0 == 0) {
               return false;
             }
-            var6 = te.field_e;
-            var2 = var6;
-            var3 = 0;
+            char[] var6 = te.field_e;
+            char[] var2 = var6;
+            int var3 = 0;
             while (true) {
               if (var3 >= var6.length) {
                 return false;
               }
-              var4 = var6[var3];
+              int var4 = var6[var3];
               if (param0 != var4) {
                 var3++;
                 continue;
@@ -43,8 +36,8 @@ final class mr {
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2_ref), "mr.B(" + param0 + ',' + param1 + ')');
         }
     }

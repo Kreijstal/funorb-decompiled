@@ -11,41 +11,33 @@ final class ep extends ab implements bh, dn {
     static String field_x;
 
     private final int a(ea param0, int param1, int param2, byte param3, String param4, String param5) {
-        RuntimeException var7 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param3 > 63) {
-            stackIn_4_0 = this.a(param4, 126, param2, param0, 35, param5, param1);
+            int stackIn_4_0 = this.a(param4, 126, param2, param0, 35, param5, param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = -73;
+          int stackIn_2_0 = -73;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_7_0 = var7;
-          stackIn_7_1 = new StringBuilder().append("ep.CA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var7;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ep.CA(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param5 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -105,43 +97,34 @@ final class ep extends ab implements bh, dn {
     }
 
     private final int a(String param0, int param1, int param2, ea param3, int param4, String param5, int param6) {
-        RuntimeException var8 = null;
-        kb var9 = null;
-        bc var10 = null;
-        int stackIn_1_0 = 0;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new bc(20, param2, 120 + param6, 25, param3, false, 120, 3, qo.field_b, 16777215, param0);
+          bc var10 = new bc(20, param2, 120 + param6, 25, param3, false, 120, 3, qo.field_b, 16777215, param0);
           this.a(var10, param1 - 125);
-          var9 = new kb(((mc) ((Object) param3)).a(0), param5, param1, param2 + var10.field_n, 25 + param6, param4);
+          kb var9 = new kb(((mc) ((Object) param3)).a(0), param5, param1, param2 + var10.field_n, 25 + param6, param4);
           var9.field_o = (no) (this);
           this.a(var9, 1);
-          stackIn_1_0 = var9.field_n + var10.field_n;
+          int stackIn_1_0 = var9.field_n + var10.field_n;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_4_0 = var8;
-          stackIn_4_1 = new StringBuilder().append("ep.AA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var8;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("ep.AA(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
             stackIn_5_2 = "{...}";
           }
-          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_8_2 = "null";
           } else {
             stackIn_8_2 = "{...}";
           }
-          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',');
+          StringBuilder stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -152,27 +135,20 @@ final class ep extends ab implements bh, dn {
     }
 
     private final boolean a(int param0, mc param1) {
-        sp var3 = null;
-        RuntimeException var3_ref = null;
-        pt var4 = null;
-        boolean stackIn_7_0 = false;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param1.a(param0);
+          sp var3 = param1.a(param0);
           if (var3 == null) {
             return true;
           }
-          var4 = var3.b(true);
-          stackIn_7_0 = (var4 == fd.field_a);
+          pt var4 = var3.b(true);
+          boolean stackIn_7_0 = (var4 == fd.field_a);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_10_0 = var3_ref;
-          stackIn_10_1 = new StringBuilder().append("ep.HA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3_ref;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ep.HA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -190,33 +166,26 @@ final class ep extends ab implements bh, dn {
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        boolean stackIn_7_0 = false;
-        boolean stackIn_10_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(108, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_7_0 = this.b(param3, -72);
+            boolean stackIn_7_0 = this.b(param3, -72);
             return stackIn_7_0;
           }
-          var5_int = 42 / ((param0 + 53) / 33);
+          int var5_int = 42 / ((param0 + 53) / 33);
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(80, param3);
+          boolean stackIn_10_0 = this.a(80, param3);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("ep.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var5;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ep.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -246,28 +215,21 @@ final class ep extends ab implements bh, dn {
     }
 
     public final void a(String param0, int param1) {
-        boolean discarded$1 = false;
-        kk var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        RuntimeException stackIn_5_0 = null;
-        StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_w;
-          var4 = param0;
+          kk var3 = this.field_w;
+          String var4 = param0;
           ((bm) ((Object) var3)).a(-20975, var4, false);
           if (param1 == 10000536) {
             return;
           }
-          discarded$1 = this.h(50);
+          boolean discarded$1 = this.h(50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_5_0 = var3_ref;
-          stackIn_5_1 = new StringBuilder().append("ep.W(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_5_0 = var3_ref;
+          StringBuilder stackIn_5_1 = new StringBuilder().append("ep.W(");
           if (param0 == null) {
             stackIn_6_2 = "null";
           } else {

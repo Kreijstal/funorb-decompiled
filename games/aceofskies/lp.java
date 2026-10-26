@@ -23,24 +23,17 @@ final class lp extends Exception {
     }
 
     final static void a(boolean param0) {
-        int var1_int = 0;
-        double var2 = 0.0;
-        int var4 = 0;
-        int var5 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var1_intLifetime1;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           re.a();
           em.field_b = new int[260];
           im.field_f = 11;
-          for (var1_int = 0; 256 > var1_int; var1_int++) {
-            var2 = 15.0;
+          for (int var1_int = 0; 256 > var1_int; var1_int++) {
+            double var2 = 15.0;
             em.field_b[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
-          var5 = 256;
-          var1_intLifetime1 = var5;
+          int var5 = 256;
+          int var1_intLifetime1 = var5;
           if (param0) {
             field_g = (PcmSample[]) null;
           }
@@ -50,8 +43,8 @@ final class lp extends Exception {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "lp.A(" + param0 + ')');
         }
     }

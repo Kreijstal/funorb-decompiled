@@ -15,11 +15,10 @@ final class wh {
     int field_a;
 
     final void a(PacketBuffer param0) {
-        int var2 = 0;
         this.field_k = param0.readUnsignedByte(-121);
         this.field_d = new int[this.field_k];
         this.field_f = new int[this.field_k];
-        for (var2 = 0; var2 < this.field_k; var2++) {
+        for (int var2 = 0; var2 < this.field_k; var2++) {
           this.field_d[var2] = param0.readUnsignedShort((byte) 0);
           this.field_f[var2] = param0.readUnsignedShort((byte) 0);
         }
@@ -33,9 +32,8 @@ final class wh {
     }
 
     final int a(int param0) {
-        int fieldTemp$0 = 0;
         if (this.field_g >= this.field_j) {
-          fieldTemp$0 = this.field_e;
+          int fieldTemp$0 = this.field_e;
           this.field_e = this.field_e + 1;
           this.field_i = this.field_f[fieldTemp$0] << 15;
           if (this.field_e >= this.field_k) {

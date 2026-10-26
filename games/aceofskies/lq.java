@@ -6,33 +6,22 @@ final class lq {
 
     final static boolean a(java.applet.Applet param0, int param1) {
         try {
-          int var5 = 0;
-          String var2 = null;
-          String var3 = null;
-          String[] var4 = null;
-          int var6 = 0;
-          int var7 = 0;
-          boolean stackIn_21_0 = false;
-          RuntimeException stackIn_24_0 = null;
-          StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
-          Throwable var2_ref = null;
-          RuntimeException var2_ref2 = null;
-          var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+          int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             if (jr.field_u) {
               return true;
             }
             try {
-              var2 = "tuhstatbut";
+              String var2 = "tuhstatbut";
               if (param1 != 61) {
                 return true;
               }
-              var3 = (String) (fe.a("getcookies", (byte) -108, param0));
-              var4 = ee.a((byte) 10, ';', var3);
-              for (var5 = 0; var5 < var4.length; var5++) {
-                var6 = var4[var5].indexOf('=');
+              String var3 = (String) (fe.a("getcookies", (byte) -108, param0));
+              String[] var4 = ee.a((byte) 10, ';', var3);
+              for (int var5 = 0; var5 < var4.length; var5++) {
+                int var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
                   var4[var5].substring(0, var6).trim().equals(var2)) {
                   return true;
@@ -40,15 +29,15 @@ final class lq {
               }
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = decompiledCaughtException;
+              Throwable var2_ref = decompiledCaughtException;
             }
-            stackIn_21_0 = (param0.getParameter("tuhstatbut") != null);
+            boolean stackIn_21_0 = (param0.getParameter("tuhstatbut") != null);
             return stackIn_21_0;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_24_0 = var2_ref2;
-            stackIn_24_1 = new StringBuilder().append("lq.B(");
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_24_0 = var2_ref2;
+            StringBuilder stackIn_24_1 = new StringBuilder().append("lq.B(");
             if (param0 == null) {
               stackIn_25_2 = "null";
             } else {
@@ -64,22 +53,16 @@ final class lq {
     }
 
     final static SoundPlayback a(PcmSample[] param0, int param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        SoundPlayback stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = -14 / ((35 - param1) / 33);
-          stackIn_1_0 = bm.a((byte) -70, param0[qq.a(20, param0.length)]);
+          int var2_int = -14 / ((35 - param1) / 33);
+          SoundPlayback stackIn_1_0 = bm.a((byte) -70, param0[qq.a(20, param0.length)]);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_4_0 = var2;
-          stackIn_4_1 = new StringBuilder().append("lq.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var2;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("lq.A(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {

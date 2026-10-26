@@ -30,14 +30,8 @@ class ea extends IntrusiveNode {
     }
 
     StringBuilder a(StringBuilder param0, int param1, int param2, Hashtable param3) {
-        RuntimeException var5 = null;
-        StringBuilder stackIn_6_0 = null;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 32462) {
             this.a(-29, -8, 103, 5, 81);
@@ -45,19 +39,19 @@ class ea extends IntrusiveNode {
           if (this.a(param0, param2, false, param3)) {
             this.a(param0, 0, param3, param2);
           }
-          stackIn_6_0 = (StringBuilder) (param0);
+          StringBuilder stackIn_6_0 = (StringBuilder) (param0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("ea.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var5;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("ea.A(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -68,35 +62,29 @@ class ea extends IntrusiveNode {
     }
 
     final boolean a(StringBuilder param0, int param1, boolean param2, Hashtable param3) {
-        StringBuilder discarded$1 = null;
-        RuntimeException var5 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
             return true;
           }
           if (param3.containsKey(this)) {
-            discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
+            StringBuilder discarded$1 = param0.append("<circular [0x").append(Integer.toHexString(this.hashCode())).append("]>");
             return false;
           }
           param3.put(this, this);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_10_0 = var5;
-          stackIn_10_1 = new StringBuilder().append("ea.L(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var5;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ea.L(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -113,7 +101,6 @@ class ea extends IntrusiveNode {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4) {
-        boolean stackIn_18_0 = false;
         if (param2 >= -17) {
           this.field_p = -80;
           if (param4 < this.field_p + param3) {
@@ -136,7 +123,7 @@ class ea extends IntrusiveNode {
         if (param0 < this.field_h + param1) {
           return false;
         }
-        stackIn_18_0 = (this.field_p + (param3 + this.field_q) > param4) && (param0 < this.field_h + param1 + this.field_n);
+        boolean stackIn_18_0 = (this.field_p + (param3 + this.field_q) > param4) && (param0 < this.field_h + param1 + this.field_n);
         return stackIn_18_0;
     }
 
@@ -153,11 +140,7 @@ class ea extends IntrusiveNode {
     }
 
     boolean a(ea param0, byte param1) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == -42) {
             return false;
@@ -165,10 +148,10 @@ class ea extends IntrusiveNode {
           this.field_e = (ir) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("ea.U(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ea.U(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -179,11 +162,7 @@ class ea extends IntrusiveNode {
     }
 
     boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
-        RuntimeException var8 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param6, param4, -68, param1, param2)) {
             this.field_i = param3;
@@ -193,10 +172,10 @@ class ea extends IntrusiveNode {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_10_0 = var8;
-          stackIn_10_1 = new StringBuilder().append("ea.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var8;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ea.O(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -207,13 +186,9 @@ class ea extends IntrusiveNode {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var4;
-        int var5_int;
-        String var5;
-        int var6;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var4 = this.f(param1 + param1);
-        var5_int = 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = this.f(param1 + param1);
+        int var5_int = 0;
         while (var5_int <= var4) {
           this.a((byte) 81, var5_int, param2, param0);
           var5_int++;
@@ -222,32 +197,26 @@ class ea extends IntrusiveNode {
           }
           break;
         }
-        var5 = fh.c((byte) -125);
+        String var5 = fh.c((byte) -125);
         if (var5 != null) {
           ag.field_n.a(10066329, var5, SpriteState.field_o, we.field_c);
         }
     }
 
     final static String a(int param0, byte[] param1) {
-        RuntimeException var2 = null;
-        String stackIn_2_0 = null;
-        String stackIn_4_0 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = hf.a(51, param1.length, 0, param1);
+            String stackIn_4_0 = hf.a(51, param1.length, 0, param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = (String) null;
+          String stackIn_2_0 = (String) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("ea.P(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("ea.P(").append(param0).append(',');
           if (param1 == null) {
             stackIn_8_2 = "null";
           } else {
@@ -258,28 +227,21 @@ class ea extends IntrusiveNode {
     }
 
     void a(byte param0, ea param1, int param2, int param3) {
-        int var5_int = 0;
-        boolean stackIn_4_0 = false;
         int stackIn_5_1 = 0;
-        boolean stackIn_10_1 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         try {
-          var5_int = this.a(cf.field_g, param2, -98, param3, ic.field_b) ? 1 : 0;
+          int var5_int = this.a(cf.field_g, param2, -98, param3, ic.field_b) ? 1 : 0;
           if (param0 <= 13) {
             this.a(117, true, 91, true);
           }
-          stackIn_4_0 = this.field_g;
+          boolean stackIn_4_0 = this.field_g;
           if (var5_int != 0) {
             stackIn_5_1 = 0;
           } else {
             stackIn_5_1 = 1;
           }
           if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {
-            stackIn_10_1 = (var5_int != 0);
+            boolean stackIn_10_1 = (var5_int != 0);
             this.field_g = stackIn_10_1;
             if (this.field_o != null &&
               this.field_o instanceof kl) {
@@ -289,10 +251,10 @@ class ea extends IntrusiveNode {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_16_0 = var5;
-          stackIn_16_1 = new StringBuilder().append("ea.S(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var5;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("ea.S(").append(param0).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -346,63 +308,50 @@ class ea extends IntrusiveNode {
     }
 
     final void a(StringBuilder param0, int param1, Hashtable param2, int param3) {
-        StringBuilder discarded$0 = null;
-        StringBuilder discarded$1 = null;
-        StringBuilder discarded$2 = null;
-        StringBuilder discarded$3 = null;
-        StringBuilder discarded$4 = null;
-        StringBuilder discarded$5 = null;
-        StringBuilder discarded$6 = null;
-        StringBuilder discarded$7 = null;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
         try {
-          discarded$0 = param0.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_p).append(",").append(this.field_h).append(" ").append(this.field_q).append("x").append(this.field_n);
+          StringBuilder discarded$0 = param0.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_p).append(",").append(this.field_h).append(" ").append(this.field_q).append("x").append(this.field_n);
           if (this.field_f != null) {
-            discarded$1 = param0.append(" text=\"").append(this.field_f).append('"');
+            StringBuilder discarded$1 = param0.append(" text=\"").append(this.field_f).append('"');
           }
           if (this.field_g) {
-            discarded$2 = param0.append(" mouseover");
+            StringBuilder discarded$2 = param0.append(" mouseover");
           }
           if (this.e(28660)) {
-            discarded$3 = param0.append(" focused");
+            StringBuilder discarded$3 = param0.append(" focused");
           }
           if (param1 != 0) {
             this.field_m = (pp) null;
           }
           if (this.field_e != null) {
-            discarded$4 = param0.append(" renderer=");
+            StringBuilder discarded$4 = param0.append(" renderer=");
             if (!(this.field_e instanceof ea)) {
-              discarded$5 = param0.append(this.field_e);
+              StringBuilder discarded$5 = param0.append(this.field_e);
             } else {
               param0 = this.a(param0, param1 + 32462, 1 + param3, param2);
             }
           }
           if (null != this.field_o) {
-            discarded$6 = param0.append(" listener=");
+            StringBuilder discarded$6 = param0.append(" listener=");
             if (!(this.field_o instanceof ea)) {
-              discarded$7 = param0.append(this.field_o);
+              StringBuilder discarded$7 = param0.append(this.field_o);
             } else {
               param0 = this.a(param0, 32462, 1 + param3, param2);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_22_0 = var5;
-          stackIn_22_1 = new StringBuilder().append("ea.K(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var5;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("ea.K(");
           if (param0 == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_26_2 = "null";
           } else {
@@ -428,30 +377,14 @@ class ea extends IntrusiveNode {
     }
 
     final boolean a(int param0, boolean param1, int param2, boolean param3) {
-        Object stackIn_49_0;
-        int stackIn_49_1;
-        int stackIn_49_2;
-        int stackIn_49_3;
-        int stackIn_49_4;
-        int stackIn_49_5;
-        Object stackIn_49_6;
         Object stackIn_50_0;
         Object stackIn_50_6;
         boolean stackIn_50_7;
-        int var5;
-        hg var6;
-        hg var7;
-        hg var8;
-        hg var9;
-        hg var10;
-        hg var12;
-        hg var13;
-        hg var6Lifetime1;
         this.a((byte) 68, this, param0, param2);
         if (!param1) {
           return true;
         }
-        var5 = this.e(28660) ? 1 : 0;
+        int var5 = this.e(28660) ? 1 : 0;
         if (!param3) {
           if (var5 != 0 &&
             vj.pressedMouseButton != 0) {
@@ -474,7 +407,7 @@ class ea extends IntrusiveNode {
               return param3;
             }
             this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-            var7 = mm.field_a;
+            hg var7 = mm.field_a;
             if (var7 != null) {
               if (var7.field_o instanceof ma) {
                 ((ma) (var7.field_o)).a(var7, -16073, (sh) null);
@@ -501,7 +434,7 @@ class ea extends IntrusiveNode {
                 return param3;
               }
               this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-              var8 = mm.field_a;
+              hg var8 = mm.field_a;
               if (var8 != null) {
                 if (var8.field_o instanceof ma) {
                   ((ma) (var8.field_o)).a(var8, -16073, (sh) null);
@@ -524,8 +457,8 @@ class ea extends IntrusiveNode {
             return param3;
           }
           this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-          var9 = mm.field_a;
-          var6 = var9;
+          hg var9 = mm.field_a;
+          hg var6 = var9;
           if (var9 != null) {
             if (var9.field_o instanceof ma) {
               ((ma) (var9.field_o)).a(var9, -16073, (sh) null);
@@ -537,13 +470,13 @@ class ea extends IntrusiveNode {
           return param3;
         }
         if (var5 != 0) {
-          stackIn_49_0 = this;
-          stackIn_49_1 = cf.field_g;
-          stackIn_49_2 = ic.field_b;
-          stackIn_49_3 = nh.field_e;
-          stackIn_49_4 = param2;
-          stackIn_49_5 = param0;
-          stackIn_49_6 = this;
+          Object stackIn_49_0 = this;
+          int stackIn_49_1 = cf.field_g;
+          int stackIn_49_2 = ic.field_b;
+          int stackIn_49_3 = nh.field_e;
+          int stackIn_49_4 = param2;
+          int stackIn_49_5 = param0;
+          Object stackIn_49_6 = this;
           if (param1) {
             stackIn_50_0 = this;
             stackIn_50_6 = this;
@@ -567,8 +500,8 @@ class ea extends IntrusiveNode {
             return param3;
           }
           this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-          var10 = mm.field_a;
-          var6Lifetime1 = var10;
+          hg var10 = mm.field_a;
+          hg var6Lifetime1 = var10;
           if (var10 != null) {
             if (var10.field_o instanceof ma) {
               ((ma) (var10.field_o)).a(var10, -16073, (sh) null);
@@ -595,7 +528,7 @@ class ea extends IntrusiveNode {
               return param3;
             }
             this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-            var12 = mm.field_a;
+            hg var12 = mm.field_a;
             if (var12 != null) {
               if (var12.field_o instanceof ma) {
                 ((ma) (var12.field_o)).a(var12, -16073, (sh) null);
@@ -618,7 +551,7 @@ class ea extends IntrusiveNode {
           return param3;
         }
         this.a(param2, param0, cf.field_g, ic.field_b, this, (byte) 91);
-        var13 = mm.field_a;
+        hg var13 = mm.field_a;
         if (var13 != null) {
           if (var13.field_o instanceof ma) {
             ((ma) (var13.field_o)).a(var13, -16073, (sh) null);
@@ -631,23 +564,19 @@ class ea extends IntrusiveNode {
     }
 
     final boolean a(int param0, char param1, int param2) {
-        int var4 = 0;
-        int var4Lifetime1;
-        int var4Lifetime2;
-        int var4Lifetime3;
         if (this.e(28660)) {
           if (this.a(-115, param2, param1, this)) {
             return true;
           }
           if (param0 > 40) {
-            var4 = param2;
+            int var4 = param2;
             if (var4 == 80) {
               return this.a(this, (byte) -42);
             }
             return false;
           }
           this.field_l = 17;
-          var4Lifetime3 = param2;
+          int var4Lifetime3 = param2;
           if (var4Lifetime3 == 80) {
             return this.a(this, (byte) -42);
           }
@@ -655,13 +584,13 @@ class ea extends IntrusiveNode {
         }
         if (param0 <= 40) {
           this.field_l = 17;
-          var4Lifetime1 = param2;
+          int var4Lifetime1 = param2;
           if (var4Lifetime1 == 80) {
             return this.a(this, (byte) -42);
           }
           return false;
         }
-        var4Lifetime2 = param2;
+        int var4Lifetime2 = param2;
         if (var4Lifetime2 == 80) {
           return this.a(this, (byte) -42);
         }
@@ -669,11 +598,7 @@ class ea extends IntrusiveNode {
     }
 
     boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, boolean param6) {
-        RuntimeException var8 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!param6) {
             return false;
@@ -681,10 +606,10 @@ class ea extends IntrusiveNode {
           this.c((byte) 58);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var8 = decompiledCaughtException;
-          stackIn_6_0 = var8;
-          stackIn_6_1 = new StringBuilder().append("ea.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var8 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var8;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ea.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
           if (param5 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -695,20 +620,15 @@ class ea extends IntrusiveNode {
     }
 
     boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = 43 / ((-53 - param0) / 33);
+          int var5_int = 43 / ((-53 - param0) / 33);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_4_0 = var5;
-          stackIn_4_1 = new StringBuilder().append("ea.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var5;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("ea.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -724,16 +644,9 @@ class ea extends IntrusiveNode {
     }
 
     ea(String param0, ir param1, no param2) {
-        RuntimeException runtimeException = null;
-        et var4 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_l = 0;
         this.field_j = 0;
         try {
@@ -741,28 +654,28 @@ class ea extends IntrusiveNode {
           this.field_o = param2;
           this.field_f = param0;
           if (this.field_e instanceof et) {
-            var4 = (et) ((Object) this.field_e);
+            et var4 = (et) ((Object) this.field_e);
             this.field_q = var4.a(this, 124);
             this.field_n = var4.a(2147483647, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_6_0 = runtimeException;
-          stackIn_6_1 = new StringBuilder().append("ea.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = runtimeException;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ea.<init>(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {

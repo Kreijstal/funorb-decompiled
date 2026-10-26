@@ -75,13 +75,12 @@ final class rc extends hh {
     }
 
     final static void c(byte param0) {
-        int var1;
         if (SoundCache.field_d == 10 ||
           !ur.b(-125)) {
           rl.a((byte) 0);
           SoundCache.field_d = 11;
         }
-        var1 = 8 % ((63 - param0) / 57);
+        int var1 = 8 % ((63 - param0) / 57);
         w.field_a = true;
     }
 
@@ -91,21 +90,13 @@ final class rc extends hh {
     }
 
     final void a(byte param0, int param1, int param2) {
-        float stackIn_3_0 = 0.0f;
-        int stackIn_6_0 = 0;
-        float var4;
-        float var5;
-        float var6;
-        int var7;
-        int var8;
-        int var9;
-        var9 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var4 = -0.0005000000237487257f * (float)(1 + (param1 & 3));
-        var5 = (float)(1 + ((param1 & 27) >> 3)) * 0.0005000000237487257f;
-        stackIn_3_0 = ((param1 & 64) == 0) ? 0.00048828125f : 0.0009765625f;
-        var6 = stackIn_3_0;
-        stackIn_6_0 = ((param1 & 128) == 0) ? 0 : 1;
-        var7 = stackIn_6_0;
+        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        float var4 = -0.0005000000237487257f * (float)(1 + (param1 & 3));
+        float var5 = (float)(1 + ((param1 & 27) >> 3)) * 0.0005000000237487257f;
+        float stackIn_3_0 = ((param1 & 64) == 0) ? 0.00048828125f : 0.0009765625f;
+        float var6 = stackIn_3_0;
+        int stackIn_6_0 = ((param1 & 128) == 0) ? 0 : 1;
+        int var7 = stackIn_6_0;
         this.field_a.a(false, 1);
         if (var7 == 0) {
           rn.field_b[2] = var6;
@@ -128,7 +119,7 @@ final class rc extends hh {
           field_d = (Vector2) null;
         }
         if (!this.field_g.field_d) {
-          var8 = (int)(var5 * (float)this.field_a.field_hb * 16.0f);
+          int var8 = (int)(var5 * (float)this.field_a.field_hb * 16.0f);
           this.field_a.a(this.field_g.field_c[var8 % 16], param0 ^ -66);
         } else {
           rn.field_b[2] = 0.0f;
@@ -141,31 +132,21 @@ final class rc extends hh {
     }
 
     final static int b(byte param0, int param1, int param2) {
-        int var3_int = 0;
-        RuntimeException var3 = null;
-        int var4 = 0;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int stackIn_9_0 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -64) {
             field_d = (Vector2) null;
           }
-          var3_int = 0;
-          var4 = pt.field_a;
+          int var3_int = 0;
+          int var4 = pt.field_a;
           while (var3_int < ne.field_g.length) {
-            var5 = rn.field_a[var3_int];
+            int var5 = rn.field_a[var3_int];
             if (0 <= var5) {
-              var6 = IntrusiveDeque.a(true, ne.field_g[var3_int], true);
-              var7 = -(var6 >> 1) + ri.field_a;
+              int var6 = IntrusiveDeque.a(true, ne.field_g[var3_int], true);
+              int var7 = -(var6 >> 1) + ri.field_a;
               var4 = var4 + pp.field_a;
               if (rl.a((byte) -21, param1, param2, var6 + (ud.field_g << 1), lp.field_h + (as.field_c << 1), -ud.field_g + var7, var4)) {
-                stackIn_9_0 = var5;
+                int stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
               var4 = var4 + (pp.field_a + (as.field_c << 1) + lp.field_h);
@@ -174,11 +155,11 @@ final class rc extends hh {
             }
             var3_int++;
           }
-          stackIn_13_0 = -1;
+          int stackIn_13_0 = -1;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var3), "rc.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }

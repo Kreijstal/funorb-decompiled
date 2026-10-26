@@ -21,18 +21,15 @@ final class qj extends he {
 
     final static qg g(int param0) {
         try {
-          Throwable var1 = null;
-          qg stackIn_3_0 = null;
-          Throwable decompiledCaughtException = null;
           if (param0 != 8192) {
             return (qg) null;
           }
           try {
-            stackIn_3_0 = (qg) (Class.forName("bq").newInstance());
+            qg stackIn_3_0 = (qg) (Class.forName("bq").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var1 = decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            Throwable var1 = decompiledCaughtException;
             return null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

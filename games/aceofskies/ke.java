@@ -18,20 +18,12 @@ final class ke {
     }
 
     final static void a(int param0, rk param1, java.awt.Frame param2) {
-        en var3 = null;
-        int var4 = 0;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
-        java.awt.Frame var5 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           while (true) {
-            var3 = param1.a(param2, param0 + 15850);
+            en var3 = param1.a(param2, param0 + 15850);
             while (var3.field_a == 0) {
               IntrusiveNode.a(10L, false);
             }
@@ -46,20 +38,20 @@ final class ke {
           if (param0 == 973) {
             return;
           }
-          var5 = (java.awt.Frame) null;
+          java.awt.Frame var5 = (java.awt.Frame) null;
           ke.a(32, (rk) null, (java.awt.Frame) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_12_0 = var3_ref;
-          stackIn_12_1 = new StringBuilder().append("ke.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3_ref;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("ke.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_13_2 = "null";
           } else {
             stackIn_13_2 = "{...}";
           }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
+          StringBuilder stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',');
           if (param2 == null) {
             stackIn_16_2 = "null";
           } else {

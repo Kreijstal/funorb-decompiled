@@ -20,54 +20,44 @@ final class qo {
     }
 
     final static String a(String param0, String param1, ResourceArchive param2, int param3, String param4) {
-        RuntimeException var5 = null;
-        String stackIn_3_0 = null;
-        String stackIn_6_0 = null;
-        String stackIn_8_0 = null;
-        RuntimeException stackIn_11_0 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!param2.b((byte) -105)) {
-            stackIn_3_0 = (String) (param0);
+            String stackIn_3_0 = (String) (param0);
             return stackIn_3_0;
           }
           if (param3 == 13525) {
-            stackIn_8_0 = param4 + " - " + param2.a(param1, (byte) -79) + "%";
+            String stackIn_8_0 = param4 + " - " + param2.a(param1, (byte) -79) + "%";
             return stackIn_8_0;
           }
-          stackIn_6_0 = (String) null;
+          String stackIn_6_0 = (String) null;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_11_0 = var5;
-          stackIn_11_1 = new StringBuilder().append("qo.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_11_0 = var5;
+          StringBuilder stackIn_11_1 = new StringBuilder().append("qo.B(");
           if (param0 == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
+          StringBuilder stackIn_14_1 = ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',');
           if (param1 == null) {
             stackIn_15_2 = "null";
           } else {
             stackIn_15_2 = "{...}";
           }
-          stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
+          StringBuilder stackIn_17_1 = ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',');
           if (param2 == null) {
             stackIn_18_2 = "null";
           } else {
             stackIn_18_2 = "{...}";
           }
-          stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',');
+          StringBuilder stackIn_20_1 = ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(',');
           if (param4 == null) {
             stackIn_21_2 = "null";
           } else {
@@ -78,50 +68,36 @@ final class qo {
     }
 
     final static void a(byte param0) {
-        int var7 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        oh var4_ref_oh = null;
-        uk var5 = null;
-        int var5_int = 0;
-        int[] var6 = null;
-        int var8 = 0;
-        CipherPacketBuffer var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var10 = IntKeyLookup.incomingPacket;
+          CipherPacketBuffer var10 = IntKeyLookup.incomingPacket;
           if (param0 != -26) {
             return;
           }
-          var2 = var10.readUnsignedByte(104);
-          var3 = var10.readUnsignedByte(-75);
+          int var2 = var10.readUnsignedByte(104);
+          int var3 = var10.readUnsignedByte(-75);
           if (0 == var2) {
-            var4_ref_oh = (oh) (fg.field_r.first(268435455));
+            oh var4_ref_oh = (oh) (fg.field_r.first(268435455));
             if (var4_ref_oh == null) {
               te.b(true);
               return;
             }
-            var5_int = ag.field_s - var10.position;
-            var12 = var4_ref_oh.field_f;
-            var11 = var12;
-            var6 = var11;
+            int var5_int = ag.field_s - var10.position;
+            int[] var12 = var4_ref_oh.field_f;
+            int[] var11 = var12;
+            int[] var6 = var11;
             if (var5_int > var12.length << 2) {
               var5_int = var12.length << 2;
             }
-            for (var7 = 0; var7 < var5_int; var7++) {
+            for (int var7 = 0; var7 < var5_int; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-100) << pg.a(var7 << 8, 768));
             }
             var4_ref_oh.unlink(-124);
             return;
           }
           if (1 == var2) {
-            var4 = var10.readSignedSmart((byte) 127);
-            var5 = (uk) (v.field_b.first(268435455));
+            int var4 = var10.readSignedSmart((byte) 127);
+            uk var5 = (uk) (v.field_b.first(268435455));
             while (var5 != null) {
               if (var3 != var5.field_i ||
                 var5.field_m != var4) {
@@ -141,8 +117,8 @@ final class qo {
           te.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "qo.D(" + param0 + ')');
         }
     }

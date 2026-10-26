@@ -13,33 +13,25 @@ final class te extends IntrusiveNode {
     }
 
     final static CoverageBitmapFont a(byte[] param0, int param1) {
-        CoverageBitmapFont var2 = null;
-        RuntimeException var2_ref = null;
-        Object stackIn_2_0 = null;
-        CoverageBitmapFont stackIn_5_0 = null;
-        CoverageBitmapFont stackIn_7_0 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            stackIn_2_0 = null;
+            Object stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
+          CoverageBitmapFont var2 = new CoverageBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
           if (param1 > -75) {
-            stackIn_5_0 = (CoverageBitmapFont) null;
+            CoverageBitmapFont stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
           kf.f(1);
-          stackIn_7_0 = var2;
+          CoverageBitmapFont stackIn_7_0 = var2;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_10_0 = var2_ref;
-          stackIn_10_1 = new StringBuilder().append("te.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var2_ref;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("te.C(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -50,18 +42,16 @@ final class te extends IntrusiveNode {
     }
 
     final static void resetFrameTiming(int obfuscationGuard) {
-        int var1_int = 0;
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
-        int var1_intLifetime1;
         try {
           io.field_c.a(0);
-          for (var1_int = 0; 32 > var1_int; var1_int++) {
+          for (int var1_int = 0; 32 > var1_int; var1_int++) {
             pn.field_b[var1_int] = 0L;
           }
           if (obfuscationGuard < 31) {
             field_e = (char[]) null;
           }
-          for (var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
+          for (int var1_intLifetime1 = 0; 32 > var1_intLifetime1; var1_intLifetime1++) {
             SoundCache.field_c[var1_intLifetime1] = 0L;
           }
           Bullet.field_g = 0;
@@ -81,15 +71,12 @@ final class te extends IntrusiveNode {
 
     final static void a(int param0, int param1) {
         try {
-          Throwable decompiledCaughtException = null;
-          int var2 = 0;
-          Throwable var3 = null;
-          var2 = 112 % ((param1 - 8) / 34);
+          int var2 = 112 % ((param1 - 8) / 34);
           try {
             fe.a("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = decompiledCaughtException;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
+            Throwable var3 = decompiledCaughtException;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

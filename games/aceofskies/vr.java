@@ -29,12 +29,7 @@ final class vr {
     }
 
     final static boolean a(String param0, int param1) {
-        RuntimeException var2 = null;
-        String var3 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null &&
             param0.length() >= jm.field_d &&
@@ -42,16 +37,16 @@ final class vr {
             if (param1 == 2) {
               return false;
             }
-            var3 = (String) null;
+            String var3 = (String) null;
             vr.a((String) null, 81);
             return false;
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_12_0 = var2;
-          stackIn_12_1 = new StringBuilder().append("vr.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var2;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("vr.E(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -294,11 +289,7 @@ final class vr {
     }
 
     final boolean a(int param0, int param1, rt param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (0 == this.field_i) {
             return false;
@@ -309,10 +300,10 @@ final class vr {
           this.field_d[this.field_i & 2147483647].a(param0, -1486691000, param2);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_10_0 = var4;
-          stackIn_10_1 = new StringBuilder().append("vr.D(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var4;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("vr.D(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -323,11 +314,7 @@ final class vr {
     }
 
     vr(wl param0) {
-        RuntimeException runtimeException = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         this.field_f = 0;
         this.field_a = 0;
         this.field_i = 0;
@@ -352,10 +339,10 @@ final class vr {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_8_0 = runtimeException;
-          stackIn_8_1 = new StringBuilder().append("vr.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = runtimeException;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("vr.<init>(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {

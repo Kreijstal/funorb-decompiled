@@ -16,25 +16,19 @@ final class ScorchMark {
     }
 
     final static boolean a(int param0, String param1) {
-        RuntimeException var2 = null;
-        ResourceArchive var3 = null;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -8759) {
-            var3 = (ResourceArchive) null;
+            ResourceArchive var3 = (ResourceArchive) null;
             ScorchMark.a((ResourceArchive) null, -26, (byte) 6, 3);
           }
-          stackIn_5_0 = (kg.a(param1, (byte) 61) != null);
+          boolean stackIn_5_0 = (kg.a(param1, (byte) 61) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_8_0 = var2;
-          stackIn_8_1 = new StringBuilder().append("vc.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var2;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("vc.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_9_2 = "null";
           } else {
@@ -45,11 +39,7 @@ final class ScorchMark {
     }
 
     final static Sprite[] a(ResourceArchive param0, int param1, byte param2, int param3) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -7) {
             ScorchMark.a((byte) -14);
@@ -59,10 +49,10 @@ final class ScorchMark {
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_8_0 = var4;
-          stackIn_8_1 = new StringBuilder().append("vc.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var4;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("vc.A(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {

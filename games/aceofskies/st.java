@@ -6,33 +6,21 @@ final class st {
     static float[] field_a;
 
     final static me[] a(boolean param0, CipherPacketBuffer param1) {
-        int var5 = 0;
-        me[] stackIn_14_0 = null;
-        RuntimeException stackIn_17_0 = null;
-        StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        me[] var4 = null;
-        int var6 = 0;
-        me var6_ref_me = null;
-        int var7 = 0;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2_int = param1.b((byte) -96, 8);
+          int var2_int = param1.b((byte) -96, 8);
           if (var2_int > 0) {
             return null;
           }
-          var3 = param1.b((byte) -77, 12);
-          var4 = new me[var3];
-          for (var5 = 0; var3 > var5; var5++) {
+          int var3 = param1.b((byte) -77, 12);
+          me[] var4 = new me[var3];
+          for (int var5 = 0; var3 > var5; var5++) {
             if (!tn.a(101, param1)) {
-              var6 = param1.b((byte) 83, eo.a(112, var5 - 1));
+              int var6 = param1.b((byte) 83, eo.a(112, var5 - 1));
               var4[var5] = var4[var6];
             } else {
-              var6_ref_me = new me();
+              me var6_ref_me = new me();
               param1.b((byte) 110, 24);
               param1.b((byte) 80, 24);
               var6_ref_me.field_c = param1.b((byte) 114, 24);
@@ -46,13 +34,13 @@ final class st {
           if (!param0) {
             st.a((byte) -3);
           }
-          stackIn_14_0 = var4;
+          me[] stackIn_14_0 = var4;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_17_0 = var2;
-          stackIn_17_1 = new StringBuilder().append("st.C(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_17_0 = var2;
+          StringBuilder stackIn_17_1 = new StringBuilder().append("st.C(").append(param0).append(',');
           if (param1 == null) {
             stackIn_18_2 = "null";
           } else {
@@ -75,8 +63,7 @@ final class st {
     }
 
     final static String a(boolean param0, boolean param1, boolean param2, boolean param3) {
-        int var4;
-        var4 = 0;
+        int var4 = 0;
         if (param0) {
           var4 += 4;
         }

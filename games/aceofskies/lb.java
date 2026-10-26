@@ -20,30 +20,24 @@ final class lb implements sm {
 
     final static void a(int param0, java.applet.Applet param1) {
         try {
-          java.net.URL var2 = null;
-          int var2_int = 0;
-          RuntimeException stackIn_7_0 = null;
-          StringBuilder stackIn_7_1 = null;
           String stackIn_8_2 = null;
           Throwable decompiledCaughtException = null;
-          Exception var2_ref = null;
-          RuntimeException var2_ref2 = null;
           try {
             try {
-              var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
+              java.net.URL var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
               param1.getAppletContext().showDocument(jf.a(param1, var2, -69), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var2_ref = (Exception) (Object) decompiledCaughtException;
+              Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               var2_ref.printStackTrace();
             }
-            var2_int = -36 / ((-4 - param0) / 53);
+            int var2_int = -36 / ((-4 - param0) / 53);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            stackIn_7_0 = var2_ref2;
-            stackIn_7_1 = new StringBuilder().append("lb.C(").append(param0).append(',');
+            RuntimeException var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            RuntimeException stackIn_7_0 = var2_ref2;
+            StringBuilder stackIn_7_1 = new StringBuilder().append("lb.C(").append(param0).append(',');
             if (param1 == null) {
               stackIn_8_2 = "null";
             } else {
@@ -59,31 +53,23 @@ final class lb implements sm {
     }
 
     lb(kj param0, RenderSprite param1, ac param2) {
-        RuntimeException runtimeException = null;
-        jg var5 = null;
-        vh var6 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           boolean decompiledSharedTail0 = !(!(param1 instanceof vh));
           if (!decompiledSharedTail0) {
             if (!(param1 instanceof jg)) {
               throw new RuntimeException();
             }
-            var5 = (jg) (param1);
+            jg var5 = (jg) (param1);
             this.field_b = var5.field_p;
             this.field_c = var5.field_o;
             this.field_d = var5.field_E;
             decompiledSharedTail0 = (AceOfSkies.obfuscationControl);
           }
           if (decompiledSharedTail0) {
-            var6 = (vh) (param1);
+            vh var6 = (vh) (param1);
             this.field_b = var6.field_p;
             this.field_c = var6.field_o;
             this.field_d = var6.field_E;
@@ -98,22 +84,22 @@ final class lb implements sm {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          runtimeException = decompiledCaughtException;
-          stackIn_13_0 = runtimeException;
-          stackIn_13_1 = new StringBuilder().append("lb.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException runtimeException = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = runtimeException;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("lb.<init>(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
           if (param2 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -124,17 +110,15 @@ final class lb implements sm {
     }
 
     final static void a(int param0, int param1) {
-        CipherPacketBuffer var2 = null;
-        CipherPacketBuffer var2Lifetime1;
         if (param1 == 0) {
-          var2 = q.outgoingPacket;
+          CipherPacketBuffer var2 = q.outgoingPacket;
           var2.writeCipheredOpcode(109, param0);
           var2.writeByte(param1 - 1336879960, 1);
           var2.writeByte(-1336879960, 2);
           return;
         }
         field_e = true;
-        var2Lifetime1 = q.outgoingPacket;
+        CipherPacketBuffer var2Lifetime1 = q.outgoingPacket;
         var2Lifetime1.writeCipheredOpcode(109, param0);
         var2Lifetime1.writeByte(param1 - 1336879960, 1);
         var2Lifetime1.writeByte(-1336879960, 2);
@@ -148,33 +132,25 @@ final class lb implements sm {
     }
 
     final static boolean a(String param0, String param1, int param2) {
-        String var3 = null;
-        int var4 = 0;
-        boolean stackIn_5_0 = false;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3_ref = null;
         try {
           param0 = lm.a('_', -128, param0, "");
-          var3 = IntrusiveNodeHashTable.a(param0, 0);
-          var4 = -32 % ((param2 + 6) / 63);
-          stackIn_5_0 = (param1.indexOf(param0) != -1) || (-1 != param1.indexOf(var3));
+          String var3 = IntrusiveNodeHashTable.a(param0, 0);
+          int var4 = -32 % ((param2 + 6) / 63);
+          boolean stackIn_5_0 = (param1.indexOf(param0) != -1) || (-1 != param1.indexOf(var3));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_8_0 = var3_ref;
-          stackIn_8_1 = new StringBuilder().append("lb.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var3_ref;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("lb.B(");
           if (param0 == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
           }
-          stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
+          StringBuilder stackIn_11_1 = ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',');
           if (param1 == null) {
             stackIn_12_2 = "null";
           } else {

@@ -6,19 +6,12 @@ final class pl {
     private int field_b;
 
     final static void a(int param0) {
-        int[] var1 = null;
-        int var2 = 0;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1_ref = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5 = gi.field_i;
-          var1 = var5;
-          var2 = param0;
-          var3 = var5.length;
+          int[] var5 = gi.field_i;
+          int[] var1 = var5;
+          int var2 = param0;
+          int var3 = var5.length;
           while (var3 > var2) {
             var5[var2++] = 0;
             var5[var2++] = 0;
@@ -31,8 +24,8 @@ final class pl {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1_ref), "pl.C(" + param0 + ')');
         }
     }
@@ -51,14 +44,12 @@ final class pl {
     }
 
     private final void a(rl param0, int param1) {
-        int fieldTemp$0 = 0;
-        int discarded$1 = 0;
         try {
-          fieldTemp$0 = this.field_b;
+          int fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
           this.field_a = this.field_a | (long)(param0.field_f << rl.field_e * fieldTemp$0);
           if (param1 != 15258) {
-            discarded$1 = this.a(45, 78);
+            int discarded$1 = this.a(45, 78);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "pl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -66,14 +57,9 @@ final class pl {
     }
 
     final static void resendPendingHighscores(int opcode, int obfuscationGuard) {
-        int obfuscationControl = 0;
-        ScoreSubmission submission = null;
-        HighscoreQuery query = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          submission = (ScoreSubmission) (tq.pendingScoreSubmissions.first(268435455));
+          ScoreSubmission submission = (ScoreSubmission) (tq.pendingScoreSubmissions.first(268435455));
           while (submission != null) {
             ac.writeScoreSubmission(0, opcode, submission);
             submission = (ScoreSubmission) (tq.pendingScoreSubmissions.next((byte) 103));
@@ -81,15 +67,15 @@ final class pl {
           if (obfuscationGuard != 0) {
             return;
           }
-          query = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
+          HighscoreQuery query = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
           while (query != null) {
             ag.writeHighscoreQuery(opcode, 5, query);
             query = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2), "pl.F(" + opcode + ',' + obfuscationGuard + ')');
         }
     }
@@ -104,8 +90,7 @@ final class pl {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, boolean param15) {
-        int var17;
-        var17 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var17 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param1 >= param8) {
           if (param4 > param1) {
             Aircraft.a(param4, param9, param6, param10, param3, SoftwareRasterizer.framebuffer, param0, param11, param2, param12, param14, param5, param13, param7, param1, param8, (byte) -120);
@@ -134,22 +119,17 @@ final class pl {
     }
 
     pl(rl[] param0) {
-        int var2_int = 0;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
-          for (var2_int = 0; param0.length > var2_int; var2_int++) {
+          for (int var2_int = 0; param0.length > var2_int; var2_int++) {
             this.a(param0[var2_int], 15258);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_7_0 = var2;
-          stackIn_7_1 = new StringBuilder().append("pl.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var2;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("pl.<init>(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {

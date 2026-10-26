@@ -46,20 +46,8 @@ final class s {
     }
 
     final static void a(byte param0, int param1, int param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        int[] var10 = null;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int[] var17 = null;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var10_ref = null;
-        var16 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != 118) {
             field_d = (String[]) null;
@@ -69,13 +57,13 @@ final class s {
             if (0 > param6) {
               return;
             }
-            var17 = param3;
-            var10 = var17;
-            var11 = param7;
-            var12 = param1;
-            var13 = param9;
-            var14 = param2;
-            var15 = (var17[var11] & 16711422) >> 1;
+            int[] var17 = param3;
+            int[] var10 = var17;
+            int var11 = param7;
+            int var12 = param1;
+            int var13 = param9;
+            int var14 = param2;
+            int var15 = (var17[var11] & 16711422) >> 1;
             var10[var11] = var15 + (pg.a(33423360, var12) >> 1) + ((pg.a(33423495, var13) >> 9) + pg.a(var14 >> 17, 255));
             param1 = param1 + param8;
             param9 = param9 + param5;
@@ -83,10 +71,10 @@ final class s {
             param7++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var10_ref = decompiledCaughtException;
-          stackIn_8_0 = var10_ref;
-          stackIn_8_1 = new StringBuilder().append("s.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var10_ref = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var10_ref;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("s.A(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_9_2 = "null";
           } else {

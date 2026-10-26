@@ -6,23 +6,18 @@ final class am {
     static int nextScoreSubmissionId;
 
     final static SoundPlayback a(PcmSample param0, boolean param1) {
-        RuntimeException var2 = null;
-        SoundPlayback stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
             nextScoreSubmissionId = -84;
           }
-          stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, 96));
+          SoundPlayback stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("am.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("am.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {

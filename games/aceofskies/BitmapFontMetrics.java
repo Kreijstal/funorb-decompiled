@@ -14,42 +14,34 @@ final class BitmapFontMetrics {
     static gh field_g;
 
     final int measureCharacterAdvance(byte obfuscationGuard, int glyphIndex) {
-        RuntimeException var3 = null;
-        int stackIn_4_0 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < 106) {
             this.a((RenderSprite[]) null, -22, 118, (String) null);
           }
-          stackIn_4_0 = this.glyphAdvances[glyphIndex] & 255;
+          int stackIn_4_0 = this.glyphAdvances[glyphIndex] & 255;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var3), "vs.H(" + obfuscationGuard + ',' + glyphIndex + ')');
         }
     }
 
     final static int b(int param0) {
-        RuntimeException var1 = null;
-        int stackIn_4_0 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -76) {
             field_b = (int[]) null;
           }
-          stackIn_4_0 = -ac.field_c + je.field_a;
+          int stackIn_4_0 = -ac.field_c + je.field_a;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "vs.B(" + param0 + ')');
         }
     }
 
     public static void a(int param0) {
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
         try {
           field_c = null;
           field_g = null;
@@ -59,50 +51,35 @@ final class BitmapFontMetrics {
           field_b = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "vs.E(" + param0 + ')');
         }
     }
 
     private final int measureTextWidthWithImages(String text, byte obfuscationGuard, RenderSprite[] inlineImages) {
-        int stackIn_3_0 = 0;
         int stackIn_73_0 = 0;
-        RuntimeException stackIn_77_0 = null;
-        StringBuilder stackIn_77_1 = null;
         String stackIn_78_2 = null;
-        StringBuilder stackIn_81_1 = null;
         String stackIn_82_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        String var10 = null;
-        int var11_int = 0;
-        Exception var11 = null;
-        int var12 = 0;
-        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (null == text) {
-            stackIn_3_0 = 0;
+            int stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          var4_int = -1;
-          var5 = -1;
-          var6 = 0;
-          var7 = text.length();
+          int var4_int = -1;
+          int var5 = -1;
+          int var6 = 0;
+          int var7 = text.length();
           if (obfuscationGuard != -113) {
             this.maxAscent = -25;
           }
-          var8 = 0;
+          int var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 >= var7))) {
-            var9 = text.charAt(var8);
+            int var9 = text.charAt(var8);
             stackIn_73_0 = -61;
             if (var12 == 0) {
               boolean decompiledFrameRemainder0 = true;
@@ -112,7 +89,7 @@ final class BitmapFontMetrics {
                 boolean decompiledFrameRemainder1 = true;
                 if (var9 == 62 &&
                   var4_int != -1) {
-                  var10 = text.substring(var4_int + 1, var8);
+                  String var10 = text.substring(var4_int + 1, var8);
                   var4_int = -1;
                   if (!var10.equals("lt")) {
                     if (!var10.equals("gt")) {
@@ -133,13 +110,13 @@ final class BitmapFontMetrics {
                                   (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
                                   (decompiledFrameRemainder0 = (inlineImages != null))) {
                                   try {
-                                    var11_int = td.a((CharSequence) ((Object) var10.substring(4)), (byte) 38);
+                                    int var11_int = td.a((CharSequence) ((Object) var10.substring(4)), (byte) 38);
                                     var5 = -1;
                                     var6 = var6 + inlineImages[var11_int].d();
                                     decompiledRegionSelector0 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
-                                    var11 = (Exception) (Object) decompiledCaughtException;
+                                    Exception var11 = (Exception) (Object) decompiledCaughtException;
                                     decompiledRegionSelector0 = 0;
                                   }
                                   decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
@@ -201,15 +178,15 @@ final class BitmapFontMetrics {
           return stackIn_73_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var4 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_77_0 = var4;
-          stackIn_77_1 = new StringBuilder().append("vs.C(");
+          RuntimeException var4 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_77_0 = var4;
+          StringBuilder stackIn_77_1 = new StringBuilder().append("vs.C(");
           if (text == null) {
             stackIn_78_2 = "null";
           } else {
             stackIn_78_2 = "{...}";
           }
-          stackIn_81_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(obfuscationGuard).append(',');
+          StringBuilder stackIn_81_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(obfuscationGuard).append(',');
           if (inlineImages == null) {
             stackIn_82_2 = "null";
           } else {
@@ -220,56 +197,37 @@ final class BitmapFontMetrics {
     }
 
     final String a(RenderSprite[] param0, int param1, int param2, String param3) {
-        String stackIn_5_0 = null;
-        String stackIn_55_0 = null;
-        String stackIn_75_0 = null;
         String stackIn_79_0 = null;
-        RuntimeException stackIn_83_0 = null;
-        StringBuilder stackIn_83_1 = null;
         String stackIn_84_2 = null;
-        StringBuilder stackIn_87_1 = null;
         String stackIn_88_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        String var9 = null;
-        int var10 = 0;
-        int var11 = 0;
-        String var12_ref_String = null;
-        int var12 = 0;
-        int var13_int = 0;
-        Exception var13 = null;
-        int var14 = 0;
-        var14 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.measureTextWidthWithImages(param3, (byte) -113, param0) <= param2) {
-            stackIn_5_0 = (String) (param3);
+            String stackIn_5_0 = (String) (param3);
             return stackIn_5_0;
           }
           param2 = param2 - this.measureTextWidthWithImages("...", (byte) -113, (RenderSprite[]) null);
-          var5_int = -1;
-          var6 = -1;
-          var7 = 0;
-          var8 = param3.length();
-          var9 = "";
-          var10 = param1;
+          int var5_int = -1;
+          int var6 = -1;
+          int var7 = 0;
+          int var8 = param3.length();
+          String var9 = "";
+          int var10 = param1;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 <= var10))) {
             stackIn_79_0 = (String) (param3);
             if (var14 == 0) {
               boolean decompiledFrameRemainder0 = true;
-              var11 = ((String) (Object) stackIn_79_0).charAt(var10);
+              int var11 = ((String) (Object) stackIn_79_0).charAt(var10);
               if (var11 == 60) {
                 var5_int = var10;
               } else {
                 boolean decompiledFrameRemainder1 = true;
                 if (var11 == 62 &&
                   var5_int != -1) {
-                  var12_ref_String = param3.substring(var5_int + 1, var10);
+                  String var12_ref_String = param3.substring(var5_int + 1, var10);
                   var5_int = -1;
                   if (!var12_ref_String.equals("lt")) {
                     if (var12_ref_String.equals("gt")) {
@@ -307,18 +265,18 @@ final class BitmapFontMetrics {
                                   if ((decompiledFrameRemainder0) &&
                                     (decompiledFrameRemainder0 = (null != param0))) {
                                     try {
-                                      var13_int = td.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 38);
+                                      int var13_int = td.a((CharSequence) ((Object) var12_ref_String.substring(4)), (byte) 38);
                                       var7 = var7 + param0[var13_int].d();
                                       var6 = -1;
                                       if (param2 < var7) {
-                                        stackIn_55_0 = var9 + "...";
+                                        String stackIn_55_0 = var9 + "...";
                                         return stackIn_55_0;
                                       }
                                       var9 = param3.substring(0, 1 + var10);
                                       decompiledRegionSelector0 = 0;
                                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                                       decompiledCaughtException = decompiledCaughtParameter0;
-                                      var13 = (Exception) (Object) decompiledCaughtException;
+                                      Exception var13 = (Exception) (Object) decompiledCaughtException;
                                       decompiledRegionSelector0 = 0;
                                     }
                                     decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
@@ -349,12 +307,12 @@ final class BitmapFontMetrics {
                     var7 = var7 + this.pairKerning[var6][var11];
                   }
                   var6 = var11;
-                  var12 = var7;
+                  int var12 = var7;
                   if (this.pairKerning != null) {
                     var12 = var12 + this.pairKerning[var11][46];
                   }
                   if (var12 > param2) {
-                    stackIn_75_0 = var9 + "...";
+                    String stackIn_75_0 = var9 + "...";
                     return stackIn_75_0;
                   }
                   var9 = param3.substring(0, var10 + 1);
@@ -371,15 +329,15 @@ final class BitmapFontMetrics {
           return stackIn_79_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var5 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_83_0 = var5;
-          stackIn_83_1 = new StringBuilder().append("vs.D(");
+          RuntimeException var5 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_83_0 = var5;
+          StringBuilder stackIn_83_1 = new StringBuilder().append("vs.D(");
           if (param0 == null) {
             stackIn_84_2 = "null";
           } else {
             stackIn_84_2 = "{...}";
           }
-          stackIn_87_1 = ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param1).append(',').append(param2).append(',');
+          StringBuilder stackIn_87_1 = ((StringBuilder) (Object) stackIn_83_1).append(stackIn_84_2).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_88_2 = "null";
           } else {
@@ -390,89 +348,55 @@ final class BitmapFontMetrics {
     }
 
     final int getPairKerning(int obfuscationGuard, char secondGlyph, int firstGlyph) {
-        RuntimeException var4 = null;
-        int stackIn_5_0 = 0;
-        byte stackIn_7_0 = 0;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard != 0) {
             this.measureCharacterAdvance((byte) -7, 58);
           }
           if (null != this.pairKerning) {
-            stackIn_7_0 = this.pairKerning[firstGlyph][secondGlyph];
+            byte stackIn_7_0 = this.pairKerning[firstGlyph][secondGlyph];
             return stackIn_7_0;
           }
-          stackIn_5_0 = 0;
+          int stackIn_5_0 = 0;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var4), "vs.G(" + obfuscationGuard + ',' + secondGlyph + ',' + firstGlyph + ')');
         }
     }
 
     final int wrapText(int obfuscationGuard, RenderSprite[] inlineImages, int[] lineWidthLimits, String[] outputLines, String text) {
-        int stackIn_3_0 = 0;
-        int stackIn_23_0 = 0;
-        int stackIn_130_0 = 0;
-        int[] stackIn_130_1 = null;
         int stackIn_131_2 = 0;
-        int stackIn_141_0 = 0;
-        int stackIn_147_0 = 0;
         int stackIn_153_0 = 0;
         int stackIn_153_1 = 0;
-        int stackIn_157_0 = 0;
-        RuntimeException stackIn_161_0 = null;
-        StringBuilder stackIn_161_1 = null;
         String stackIn_162_2 = null;
-        StringBuilder stackIn_165_1 = null;
         String stackIn_166_2 = null;
-        StringBuilder stackIn_169_1 = null;
         String stackIn_170_2 = null;
-        StringBuilder stackIn_173_1 = null;
         String stackIn_174_2 = null;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
         int var19 = 0;
-        String var20 = null;
-        int var21_int = 0;
-        Exception var21 = null;
-        int var22 = 0;
-        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (text == null) {
-            stackIn_3_0 = 0;
+            int stackIn_3_0 = 0;
             return stackIn_3_0;
           }
-          var6_int = 0;
-          var7 = 0;
-          var8 = -1;
-          var9 = 0;
-          var10 = 0;
-          var11 = -1;
-          var13 = -22 / ((-48 - obfuscationGuard) / 48);
-          var12 = -1;
-          var14 = 0;
-          var15 = text.length();
-          var16 = 0;
+          int var6_int = 0;
+          int var7 = 0;
+          int var8 = -1;
+          int var9 = 0;
+          int var10 = 0;
+          int var11 = -1;
+          int var13 = -22 / ((-48 - obfuscationGuard) / 48);
+          int var12 = -1;
+          int var14 = 0;
+          int var15 = text.length();
+          int var16 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 <= var16))) {
-            var17 = ae.a(text.charAt(var16), 102) & 255;
-            var18 = 0;
+            int var17 = ae.a(text.charAt(var16), 102) & 255;
+            int var18 = 0;
             stackIn_153_0 = -61;
             stackIn_153_1 = ~var17;
             if (var22 == 0) {
@@ -484,13 +408,13 @@ final class BitmapFontMetrics {
                   decompiledFrameRemainder0 = (var17 == 62);
                   if (decompiledFrameRemainder0) {
                     var19 = var11;
-                    var20 = text.substring(1 + var11, var16);
+                    String var20 = text.substring(1 + var11, var16);
                     var11 = -1;
                     if (var20.equals("br")) {
                       outputLines[var14] = text.substring(var7, var16 + 1);
                       var14++;
                       if (outputLines.length <= var14) {
-                        stackIn_23_0 = 0;
+                        int stackIn_23_0 = 0;
                         return stackIn_23_0;
                       }
                       var6_int = 0;
@@ -544,13 +468,13 @@ final class BitmapFontMetrics {
                                           break regionExit1;
                                         }
                                         try {
-                                          var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
+                                          int var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
                                           var12 = -1;
                                           var18 = var18 + inlineImages[var21_int].d();
                                           decompiledRegionSelector0 = 0;
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
                                           decompiledCaughtException = decompiledCaughtParameter0;
-                                          var21 = (Exception) (Object) decompiledCaughtException;
+                                          Exception var21 = (Exception) (Object) decompiledCaughtException;
                                           decompiledRegionSelector0 = 0;
                                         }
                                         if (decompiledRegionSelector0 == 0) {
@@ -613,8 +537,8 @@ final class BitmapFontMetrics {
                       var8 = var16;
                       var9 = var6_int;
                     }
-                    stackIn_130_0 = ~var6_int;
-                    stackIn_130_1 = (int[]) (lineWidthLimits);
+                    int stackIn_130_0 = ~var6_int;
+                    int[] stackIn_130_1 = (int[]) (lineWidthLimits);
                     if (var14 < lineWidthLimits.length) {
                       stackIn_131_2 = var14;
                     } else {
@@ -625,7 +549,7 @@ final class BitmapFontMetrics {
                         outputLines[var14] = text.substring(var7, var8 + 1 - var10);
                         var14++;
                         if (var14 >= outputLines.length) {
-                          stackIn_141_0 = 0;
+                          int stackIn_141_0 = 0;
                           return stackIn_141_0;
                         }
                         var7 = var8 + 1;
@@ -636,7 +560,7 @@ final class BitmapFontMetrics {
                         outputLines[var14] = text.substring(var7, var19);
                         var14++;
                         if (outputLines.length <= var14) {
-                          stackIn_147_0 = 0;
+                          int stackIn_147_0 = 0;
                           return stackIn_147_0;
                         }
                         var7 = var19;
@@ -666,31 +590,31 @@ final class BitmapFontMetrics {
             outputLines[var14] = text.substring(var7, text.length());
             var14++;
           }
-          stackIn_157_0 = var14;
+          int stackIn_157_0 = var14;
           return stackIn_157_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
-          var6 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_161_0 = var6;
-          stackIn_161_1 = new StringBuilder().append("vs.A(").append(obfuscationGuard).append(',');
+          RuntimeException var6 = (RuntimeException) (Object) decompiledCaughtException;
+          RuntimeException stackIn_161_0 = var6;
+          StringBuilder stackIn_161_1 = new StringBuilder().append("vs.A(").append(obfuscationGuard).append(',');
           if (inlineImages == null) {
             stackIn_162_2 = "null";
           } else {
             stackIn_162_2 = "{...}";
           }
-          stackIn_165_1 = ((StringBuilder) (Object) stackIn_161_1).append(stackIn_162_2).append(',');
+          StringBuilder stackIn_165_1 = ((StringBuilder) (Object) stackIn_161_1).append(stackIn_162_2).append(',');
           if (lineWidthLimits == null) {
             stackIn_166_2 = "null";
           } else {
             stackIn_166_2 = "{...}";
           }
-          stackIn_169_1 = ((StringBuilder) (Object) stackIn_165_1).append(stackIn_166_2).append(',');
+          StringBuilder stackIn_169_1 = ((StringBuilder) (Object) stackIn_165_1).append(stackIn_166_2).append(',');
           if (outputLines == null) {
             stackIn_170_2 = "null";
           } else {
             stackIn_170_2 = "{...}";
           }
-          stackIn_173_1 = ((StringBuilder) (Object) stackIn_169_1).append(stackIn_170_2).append(',');
+          StringBuilder stackIn_173_1 = ((StringBuilder) (Object) stackIn_169_1).append(stackIn_170_2).append(',');
           if (text == null) {
             stackIn_174_2 = "null";
           } else {
@@ -701,25 +625,19 @@ final class BitmapFontMetrics {
     }
 
     final int measureTextWidth(byte obfuscationGuard, String text) {
-        RuntimeException var3 = null;
-        int stackIn_2_0 = 0;
-        int stackIn_4_0 = 0;
-        RuntimeException stackIn_8_0 = null;
-        StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard == 94) {
-            stackIn_4_0 = this.measureTextWidthWithImages(text, (byte) -113, (RenderSprite[]) null);
+            int stackIn_4_0 = this.measureTextWidthWithImages(text, (byte) -113, (RenderSprite[]) null);
             return stackIn_4_0;
           }
-          stackIn_2_0 = 39;
+          int stackIn_2_0 = 39;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("vs.F(").append(obfuscationGuard).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_8_0 = var3;
+          StringBuilder stackIn_8_1 = new StringBuilder().append("vs.F(").append(obfuscationGuard).append(',');
           if (text == null) {
             stackIn_9_2 = "null";
           } else {
@@ -730,52 +648,26 @@ final class BitmapFontMetrics {
     }
 
     BitmapFontMetrics(byte[] encodedMetrics) {
-        byte[] array$0 = null;
-        byte[] array$1 = null;
-        int stackIn_8_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_47_0 = 0;
-        int stackIn_49_0 = 0;
-        int stackIn_49_1 = 0;
         int stackIn_75_0 = 0;
-        RuntimeException stackIn_80_0 = null;
-        StringBuilder stackIn_80_1 = null;
         String stackIn_81_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        PacketBuffer var2 = null;
-        RuntimeException var2_ref = null;
-        int var3 = 0;
-        int var4 = 0;
-        int[] var5 = null;
-        int[] var6 = null;
-        int var7_int = 0;
-        byte[][] var7 = null;
-        int var8_int = 0;
-        byte[][] var8 = null;
-        int var9 = 0;
-        int var10 = 0;
-        int var11 = 0;
-        int var12 = 0;
-        int var10Lifetime1;
-        int var10Lifetime2;
-        int var9Lifetime1;
-        int var9Lifetime2;
-        var12 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2 = new PacketBuffer(encodedMetrics);
-          var3 = var2.readUnsignedByte(-52);
+          PacketBuffer var2 = new PacketBuffer(encodedMetrics);
+          int var3 = var2.readUnsignedByte(-52);
           if (0 != var3) {
             throw new RuntimeException("");
           }
-          stackIn_8_0 = (var2.readUnsignedByte(43) != 1) ? 0 : 1;
+          int stackIn_8_0 = (var2.readUnsignedByte(43) != 1) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
-          var4 = stackIn_8_0;
+          int var4 = stackIn_8_0;
           this.glyphAdvances = new byte[256];
           var2.a(0, 7186, 256, this.glyphAdvances);
           if (var4 != 0) {
-            var5 = new int[256];
-            var6 = new int[256];
-            var7_int = 0;
+            int[] var5 = new int[256];
+            int[] var6 = new int[256];
+            int var7_int = 0;
             do {
               if (var7_int >= 256) {
                 var7_int = 0;
@@ -791,18 +683,18 @@ final class BitmapFontMetrics {
                 return;
               }
             }
-            var7 = new byte[256][];
-            var8_int = 0;
+            byte[][] var7 = new byte[256][];
+            int var8_int = 0;
             scanLoop1: while (true) {
               if (256 > var8_int) {
-                array$0 = new byte[var5[var8_int]];
+                byte[] array$0 = new byte[var5[var8_int]];
                 var7[var8_int] = array$0;
-                var9 = 0;
+                int var9 = 0;
                 stackIn_35_0 = 0;
                 if (var12 != 0) {
                   break scanLoop1;
                 }
-                var10 = stackIn_35_0;
+                int var10 = stackIn_35_0;
                 while (var10 < var7[var8_int].length) {
                   var9 = (byte)(var9 + var2.readByte(0));
                   var7[var8_int][var10] = (byte) var9;
@@ -814,18 +706,18 @@ final class BitmapFontMetrics {
               stackIn_35_0 = 256;
               break;
             }
-            var8 = new byte[stackIn_35_0][];
-            var9Lifetime1 = 0;
+            byte[][] var8 = new byte[stackIn_35_0][];
+            int var9Lifetime1 = 0;
             scanLoop2: while (true) {
               if (var9Lifetime1 < 256) {
-                array$1 = new byte[var5[var9Lifetime1]];
+                byte[] array$1 = new byte[var5[var9Lifetime1]];
                 var8[var9Lifetime1] = array$1;
-                var10Lifetime1 = 0;
+                int var10Lifetime1 = 0;
                 stackIn_47_0 = 0;
                 if (var12 != 0) {
                   break scanLoop2;
                 }
-                var11 = stackIn_47_0;
+                int var11 = stackIn_47_0;
                 while (var8[var9Lifetime1].length > var11) {
                   var10Lifetime1 = (byte)(var10Lifetime1 + var2.readByte(0));
                   var8[var9Lifetime1][var11] = (byte) var10Lifetime1;
@@ -838,10 +730,10 @@ final class BitmapFontMetrics {
               stackIn_47_0 = 0;
               break;
             }
-            var9Lifetime2 = stackIn_47_0;
+            int var9Lifetime2 = stackIn_47_0;
             while (true) {
-              stackIn_49_0 = ~var9Lifetime2;
-              stackIn_49_1 = -257;
+              int stackIn_49_0 = ~var9Lifetime2;
+              int stackIn_49_1 = -257;
               if (stackIn_49_0 > stackIn_49_1) {
                 stackIn_75_0 = var9Lifetime2;
                 if (var12 != 0) {
@@ -850,7 +742,7 @@ final class BitmapFontMetrics {
                 }
                 if (stackIn_75_0 != 32 &&
                   160 != var9Lifetime2) {
-                  var10Lifetime2 = 0;
+                  int var10Lifetime2 = 0;
                   while (var10Lifetime2 < 256) {
                     stackIn_49_0 = ~var10Lifetime2;
                     stackIn_49_1 = -33;
@@ -882,10 +774,10 @@ final class BitmapFontMetrics {
           this.maxDescent = var2.readUnsignedByte(-48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2_ref = decompiledCaughtException;
-          stackIn_80_0 = var2_ref;
-          stackIn_80_1 = new StringBuilder().append("vs.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2_ref = decompiledCaughtException;
+          RuntimeException stackIn_80_0 = var2_ref;
+          StringBuilder stackIn_80_1 = new StringBuilder().append("vs.<init>(");
           if (encodedMetrics == null) {
             stackIn_81_2 = "null";
           } else {

@@ -44,30 +44,24 @@ final class du extends PacketBuffer {
     }
 
     final void b(byte param0, float param1) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
-        int var3 = 0;
-        int var3Lifetime1;
         if (param0 == -90) {
-          var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
-          fieldTemp$0 = this.position;
+          int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
+          int fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)var3;
-          fieldTemp$1 = this.position;
+          int fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte)(var3 >> 8);
-          fieldTemp$2 = this.position;
+          int fieldTemp$2 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$2] = (byte)(var3 >> 16);
-          fieldTemp$3 = this.position;
+          int fieldTemp$3 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$3] = (byte)(var3 >> 24);
           return;
         }
         du.k(67);
-        var3Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param1);
+        int var3Lifetime1 = jaclib.memory.Stream.floatToRawIntBits(param1);
         int fieldTemp$4 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$4] = (byte)var3Lifetime1;
@@ -96,21 +90,18 @@ final class du extends PacketBuffer {
     }
 
     final void a(byte param0, float param1) {
-        int fieldTemp$1 = 0;
-        int fieldTemp$2 = 0;
-        int fieldTemp$3 = 0;
         int var3 = jaclib.memory.Stream.floatToRawIntBits(param1);
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
         this.payload[fieldTemp$0] = (byte)(var3 >> 24);
         if (param0 >= 59) {
-          fieldTemp$1 = this.position;
+          int fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte)(var3 >> 16);
-          fieldTemp$2 = this.position;
+          int fieldTemp$2 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$2] = (byte)(var3 >> 8);
-          fieldTemp$3 = this.position;
+          int fieldTemp$3 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$3] = (byte)var3;
           return;

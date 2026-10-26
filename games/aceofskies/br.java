@@ -30,21 +30,17 @@ final class br extends oe implements java.awt.image.ImageProducer {
     }
 
     public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
         try {
           if (param0 == this.field_k) {
             this.field_k = null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_6_0 = var2;
-          stackIn_6_1 = new StringBuilder().append("br.removeConsumer(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var2;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("br.removeConsumer(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
@@ -89,24 +85,10 @@ final class br extends oe implements java.awt.image.ImageProducer {
     }
 
     final static in a(wl param0, aq[] param1, byte param2) {
-        int var3_int = 0;
-        Object stackIn_23_0 = null;
-        in stackIn_25_0 = null;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        long var3_long = 0L;
-        RuntimeException var3 = null;
-        int var5 = 0;
-        int var6 = 0;
-        int var7 = 0;
-        byte[] var11 = null;
-        int var5Lifetime1;
         try {
-          for (var3_int = 0; var3_int < param1.length; var3_int++) {
+          for (int var3_int = 0; var3_int < param1.length; var3_int++) {
             if (param1[var3_int] == null) {
               return null;
             }
@@ -114,11 +96,11 @@ final class br extends oe implements java.awt.image.ImageProducer {
               return null;
             }
           }
-          var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
-          for (var5 = 0; param1.length > var5; var5++) {
+          long var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
+          for (int var5 = 0; param1.length > var5; var5++) {
             jaggl.OpenGL.glAttachObjectARB(var3_long, param1[var5].field_a);
           }
-          var6 = 70 % ((param2 + 51) / 47);
+          int var6 = 70 % ((param2 + 51) / 47);
           jaggl.OpenGL.glLinkProgramARB(var3_long);
           jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, mh.field_l, 0);
           if (0 == mh.field_l[0]) {
@@ -127,35 +109,35 @@ final class br extends oe implements java.awt.image.ImageProducer {
             }
             jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, mh.field_l, 1);
             if (mh.field_l[1] > 1) {
-              var11 = new byte[mh.field_l[1]];
+              byte[] var11 = new byte[mh.field_l[1]];
               jaggl.OpenGL.glGetInfoLogARB(var3_long, mh.field_l[1], mh.field_l, 0, var11, 0);
               System.out.println(new String(var11));
             }
             if (mh.field_l[0] == 0) {
-              var7 = 0;
-              var5Lifetime1 = var7;
+              int var7 = 0;
+              int var5Lifetime1 = var7;
               while (param1.length > var7) {
                 jaggl.OpenGL.glDetachObjectARB(var3_long, param1[var7].field_a);
                 var7++;
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);
-              stackIn_23_0 = null;
+              Object stackIn_23_0 = null;
               return (in) (stackIn_23_0);
             }
           }
-          stackIn_25_0 = new in(param0, var3_long, param1);
+          in stackIn_25_0 = new in(param0, var3_long, param1);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_28_0 = var3;
-          stackIn_28_1 = new StringBuilder().append("br.G(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_28_0 = var3;
+          StringBuilder stackIn_28_1 = new StringBuilder().append("br.G(");
           if (param0 == null) {
             stackIn_29_2 = "null";
           } else {
             stackIn_29_2 = "{...}";
           }
-          stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
+          StringBuilder stackIn_31_1 = ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',');
           if (param1 == null) {
             stackIn_32_2 = "null";
           } else {
@@ -169,11 +151,10 @@ final class br extends oe implements java.awt.image.ImageProducer {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, java.awt.Graphics param5, int param6, int param7) {
-        java.awt.Shape var9 = null;
         try {
           int var10 = -117 / ((param4 - 65) / 59);
           this.a(param3, param6, param0, param1, false);
-          var9 = param5.getClip();
+          java.awt.Shape var9 = param5.getClip();
           param5.clipRect(param2, param7, param0, param3);
           param5.drawImage(this.field_j, param2 - param6, -param1 + param7, (java.awt.image.ImageObserver) ((Object) this.field_i));
           param5.setClip(var9);
@@ -188,72 +169,36 @@ final class br extends oe implements java.awt.image.ImageProducer {
 
     final static String a(Throwable param0, byte param1) throws IOException {
         String var2;
-        PrintWriter var4;
-        String var5;
-        BufferedReader var6;
-        String var7;
-        String var8;
-        int var9;
-        int var10;
-        String var11;
-        int var12;
-        int var13;
-        ClientException var14;
-        StringWriter var15;
-        String var16;
-        String var17;
-        String var18;
-        String var19;
-        String var2Lifetime1;
-        String var2Lifetime2;
-        String var2Lifetime3;
-        String var11Lifetime1;
-        String var11Lifetime2;
-        String var11Lifetime3;
-        String var11Lifetime4;
-        String var11Lifetime5;
-        String var11Lifetime6;
-        String var2Lifetime3Lifetime1;
-        String var2Lifetime3Lifetime2;
-        String var2Lifetime3Lifetime3;
-        String var2Lifetime3Lifetime4;
-        String var2Lifetime3Lifetime5;
-        String var2Lifetime3Lifetime6;
-        String var2Lifetime3Lifetime7;
-        String var2Lifetime3Lifetime8;
-        String var2Lifetime3Lifetime9;
-        String var2Lifetime3Lifetime10;
-        String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        var13 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 instanceof ClientException) {
-          var14 = (ClientException) ((Object) param0);
+          ClientException var14 = (ClientException) ((Object) param0);
           var2 = var14.field_a + " | ";
-          var11 = var2;
+          String var11 = var2;
           var2 = var11;
-          var11Lifetime6 = var2;
+          String var11Lifetime6 = var2;
           param0 = var14.field_c;
         } else {
           var2 = "";
         }
-        var15 = new StringWriter();
-        var4 = new PrintWriter((Writer) ((Object) var15));
+        StringWriter var15 = new StringWriter();
+        PrintWriter var4 = new PrintWriter((Writer) ((Object) var15));
         param0.printStackTrace(var4);
         var4.close();
-        var5 = var15.toString();
-        var11Lifetime1 = var5;
-        var2Lifetime1 = var11Lifetime1;
-        var11Lifetime2 = var5;
-        var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
-        var7 = var6.readLine();
-        var11Lifetime3 = var7;
-        var2Lifetime2 = var11Lifetime3;
-        var11Lifetime4 = var7;
+        String var5 = var15.toString();
+        String var11Lifetime1 = var5;
+        String var2Lifetime1 = var11Lifetime1;
+        String var11Lifetime2 = var5;
+        BufferedReader var6 = new BufferedReader((Reader) ((Object) new StringReader(var5)));
+        String var7 = var6.readLine();
+        String var11Lifetime3 = var7;
+        String var2Lifetime2 = var11Lifetime3;
+        String var11Lifetime4 = var7;
         while (true) {
-          var8 = var6.readLine();
-          var11Lifetime5 = var8;
-          var2Lifetime3 = var11Lifetime5;
-          var11Lifetime5Lifetime1 = var8;
+          String var8 = var6.readLine();
+          String var11Lifetime5 = var8;
+          String var2Lifetime3 = var11Lifetime5;
+          String var11Lifetime5Lifetime1 = var8;
           if (var8 == null) {
             if (param1 != -29) {
               return (String) null;
@@ -261,34 +206,34 @@ final class br extends oe implements java.awt.image.ImageProducer {
             var2Lifetime3 = var2Lifetime3 + "| " + var7;
             return var2Lifetime3;
           }
-          var9 = var8.indexOf('(');
-          var10 = var8.indexOf(')', var9 + 1);
+          int var9 = var8.indexOf('(');
+          int var10 = var8.indexOf(')', var9 + 1);
           if (-1 != var9) {
             var11Lifetime5Lifetime2 = var8.substring(0, var9);
-            var2Lifetime3Lifetime1 = var11Lifetime5Lifetime2;
+            String var2Lifetime3Lifetime1 = var11Lifetime5Lifetime2;
             var2Lifetime3Lifetime1 = var11Lifetime5Lifetime2;
           } else {
             var11Lifetime5Lifetime2 = var8;
           }
-          var16 = var11Lifetime5Lifetime2.trim();
-          var2Lifetime3Lifetime2 = var16;
-          var2Lifetime3Lifetime3 = var16;
-          var17 = var16.substring(var16.lastIndexOf(' ') + 1);
-          var2Lifetime3Lifetime4 = var17;
-          var2Lifetime3Lifetime5 = var17;
-          var18 = var17.substring(var17.lastIndexOf('\t') + 1);
-          var2Lifetime3Lifetime6 = var18;
-          var2Lifetime3Lifetime7 = var18;
-          var19 = var2Lifetime3Lifetime7 + var18;
-          var2Lifetime3Lifetime8 = var19;
-          var2Lifetime3Lifetime9 = var19;
-          var2Lifetime3Lifetime10 = var19;
+          String var16 = var11Lifetime5Lifetime2.trim();
+          String var2Lifetime3Lifetime2 = var16;
+          String var2Lifetime3Lifetime3 = var16;
+          String var17 = var16.substring(var16.lastIndexOf(' ') + 1);
+          String var2Lifetime3Lifetime4 = var17;
+          String var2Lifetime3Lifetime5 = var17;
+          String var18 = var17.substring(var17.lastIndexOf('\t') + 1);
+          String var2Lifetime3Lifetime6 = var18;
+          String var2Lifetime3Lifetime7 = var18;
+          String var19 = var2Lifetime3Lifetime7 + var18;
+          String var2Lifetime3Lifetime8 = var19;
+          String var2Lifetime3Lifetime9 = var19;
+          String var2Lifetime3Lifetime10 = var19;
           if (-1 != var9) {
             if (-1 == var10) {
               var2Lifetime3Lifetime10 = var2Lifetime3Lifetime10 + ' ';
               continue;
             }
-            var12 = var8.indexOf(".java:", var9);
+            int var12 = var8.indexOf(".java:", var9);
             if (var12 >= 0) {
               var2Lifetime3Lifetime10 = var19 + var8.substring(var12 + 5, var10);
             }

@@ -23,23 +23,18 @@ final class jo extends IntrusiveNode {
     }
 
     final static SoundPlayback a(PcmSample param0, int param1, byte param2) {
-        RuntimeException var3 = null;
-        SoundPlayback stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -18) {
             jo.a((byte) 24);
           }
-          stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, param1));
+          SoundPlayback stackIn_3_0 = w.a(-23159, PcmSampleStream.a(param0, 100, param1));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_6_0 = var3;
-          stackIn_6_1 = new StringBuilder().append("jo.B(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var3;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("jo.B(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {

@@ -83,18 +83,11 @@ final class kf extends sk {
 
     kf(jc param0, ResourceArchive param1) {
         super(param0);
-        int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
         int stackIn_13_2 = 0;
-        int stackIn_15_0 = 0;
         int stackIn_16_1 = 0;
-        RuntimeException stackIn_22_0 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         this.field_l = new float[4];
         this.field_i = false;
         try {
@@ -104,7 +97,7 @@ final class kf extends sk {
             this.field_g = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_ground_lit"), param0);
             this.field_p = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_unlit"), param0);
             this.field_j = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_lit"), param0);
-            stackIn_7_0 = (null == this.field_p) ? 0 : 1;
+            int stackIn_7_0 = (null == this.field_p) ? 0 : 1;
             if (this.field_o == null) {
               stackIn_10_1 = 0;
             } else {
@@ -115,7 +108,7 @@ final class kf extends sk {
             } else {
               stackIn_13_2 = 1;
             }
-            stackIn_15_0 = stackIn_7_0 & (stackIn_10_1 & stackIn_13_2);
+            int stackIn_15_0 = stackIn_7_0 & (stackIn_10_1 & stackIn_13_2);
             if (this.field_j == null) {
               stackIn_16_1 = 0;
             } else {
@@ -133,16 +126,16 @@ final class kf extends sk {
           this.field_k = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_22_0 = var3;
-          stackIn_22_1 = new StringBuilder().append("kf.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_22_0 = var3;
+          StringBuilder stackIn_22_1 = new StringBuilder().append("kf.<init>(");
           if (param0 == null) {
             stackIn_23_2 = "null";
           } else {
             stackIn_23_2 = "{...}";
           }
-          stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
+          StringBuilder stackIn_25_1 = ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',');
           if (param1 == null) {
             stackIn_26_2 = "null";
           } else {
@@ -168,11 +161,7 @@ final class kf extends sk {
     }
 
     final void a(int param0, int param1, jj param2) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 66) {
             kf.g(59);
@@ -197,10 +186,10 @@ final class kf extends sk {
           this.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_13_0 = var4;
-          stackIn_13_1 = new StringBuilder().append("kf.I(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var4;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("kf.I(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -225,15 +214,11 @@ final class kf extends sk {
     }
 
     final void a(int param0) {
-        int var2 = 0;
-        int var3 = 0;
-        float var4 = 0.0f;
-        float var5 = 0.0f;
         if (this.field_h) {
-          var2 = this.field_b.XA();
-          var3 = this.field_b.i();
-          var4 = (float)var2 - 0.125f * (float)(-var3 + var2);
-          var5 = (float)var2 - (float)(-var3 + var2) * 0.25f;
+          int var2 = this.field_b.XA();
+          int var3 = this.field_b.i();
+          float var4 = (float)var2 - 0.125f * (float)(-var3 + var2);
+          float var5 = (float)var2 - (float)(-var3 + var2) * 0.25f;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_b.j((byte) 5), (float)this.field_b.H(param0 ^ 111) / 255.0f);
           this.field_b.a(1, (byte) 52);
           this.field_b.a((byte) -74, this.field_b.q(0));

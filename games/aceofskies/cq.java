@@ -50,30 +50,8 @@ abstract class cq implements jj {
     }
 
     final void a(float[] param0, boolean param1, int param2, int param3, int param4) {
-        int var16 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        float[] var11 = null;
-        float[] var12 = null;
-        float[] var13 = null;
-        float var14 = 0.0f;
-        int var15 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var22 = 0;
-        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2 > 0 &&
             !mg.a(param2, (byte) 0)) {
@@ -86,28 +64,28 @@ abstract class cq implements jj {
           if (!param1) {
             return;
           }
-          var6_int = this.field_h.field_b;
-          var7 = 0;
-          stackIn_13_0 = (param3 <= param2) ? param3 : param2;
-          var8 = stackIn_13_0;
-          var9 = param2 >> 1;
-          var10 = param3 >> 1;
-          var11 = param0;
-          var12 = new float[var6_int * var9 * var10];
+          int var6_int = this.field_h.field_b;
+          int var7 = 0;
+          int stackIn_13_0 = (param3 <= param2) ? param3 : param2;
+          int var8 = stackIn_13_0;
+          int var9 = param2 >> 1;
+          int var10 = param3 >> 1;
+          float[] var11 = param0;
+          float[] var12 = new float[var6_int * var9 * var10];
           while (true) {
             jaggl.OpenGL.glTexImage2Df(param4, var7, this.a(false), param2, param3, 0, gq.a(this.field_h, -29824), 5126, var11, 0);
             if (1 >= var8) {
               return;
             }
-            var15 = var6_int * param2;
-            var13 = var12;
-            for (var16 = 0; var16 < var6_int; var16++) {
-              var17 = var16;
-              var18 = var16;
-              var19 = var18 + var15;
-              for (var20 = 0; var20 < var10; var20++) {
-                for (var21 = 0; var21 < var9; var21++) {
-                  var14 = var11[var18];
+            int var15 = var6_int * param2;
+            float[] var13 = var12;
+            for (int var16 = 0; var16 < var6_int; var16++) {
+              int var17 = var16;
+              int var18 = var16;
+              int var19 = var18 + var15;
+              for (int var20 = 0; var20 < var10; var20++) {
+                for (int var21 = 0; var21 < var9; var21++) {
+                  float var14 = var11[var18];
                   var18 = var18 + var6_int;
                   var14 = var14 + var11[var18];
                   var14 = var14 + var11[var19];
@@ -132,10 +110,10 @@ abstract class cq implements jj {
             var9 = var9 >> 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_28_0 = var6;
-          stackIn_28_1 = new StringBuilder().append("cq.H(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_28_0 = var6;
+          StringBuilder stackIn_28_1 = new StringBuilder().append("cq.H(");
           if (param0 == null) {
             stackIn_29_2 = "null";
           } else {
@@ -165,30 +143,8 @@ abstract class cq implements jj {
     }
 
     final void a(int param0, int param1, byte[] param2, int param3, byte param4) {
-        int var16 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int stackIn_13_0 = 0;
-        RuntimeException stackIn_29_0 = null;
-        StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int var10 = 0;
-        byte[] var11 = null;
-        byte[] var12 = null;
-        byte[] var13 = null;
-        int var14 = 0;
-        int var15 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var22 = 0;
-        var22 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (0 < param3 &&
             !mg.a(param3, (byte) 114)) {
@@ -198,30 +154,30 @@ abstract class cq implements jj {
             !mg.a(param1, (byte) -117)) {
             throw new IllegalArgumentException("");
           }
-          var6_int = this.field_h.field_b;
-          var7 = 0;
+          int var6_int = this.field_h.field_b;
+          int var7 = 0;
           if (param4 != 107) {
             return;
           }
-          stackIn_13_0 = (param3 < param1) ? param3 : param1;
-          var8 = stackIn_13_0;
-          var9 = param3 >> 1;
-          var10 = param1 >> 1;
-          var11 = param2;
-          var12 = new byte[var10 * (var9 * var6_int)];
+          int stackIn_13_0 = (param3 < param1) ? param3 : param1;
+          int var8 = stackIn_13_0;
+          int var9 = param3 >> 1;
+          int var10 = param1 >> 1;
+          byte[] var11 = param2;
+          byte[] var12 = new byte[var10 * (var9 * var6_int)];
           while (true) {
             jaggl.OpenGL.glTexImage2Dub(param0, var7, this.a(false), param3, param1, 0, gq.a(this.field_h, -29824), 5121, var11, 0);
             if (var8 <= 1) {
               return;
             }
-            var15 = param3 * var6_int;
-            for (var16 = 0; var6_int > var16; var16++) {
-              var17 = var16;
-              var18 = var16;
-              var19 = var15 + var18;
-              for (var20 = 0; var10 > var20; var20++) {
-                for (var21 = 0; var21 < var9; var21++) {
-                  var14 = var11[var18];
+            int var15 = param3 * var6_int;
+            for (int var16 = 0; var6_int > var16; var16++) {
+              int var17 = var16;
+              int var18 = var16;
+              int var19 = var15 + var18;
+              for (int var20 = 0; var10 > var20; var20++) {
+                for (int var21 = 0; var21 < var9; var21++) {
+                  int var14 = var11[var18];
                   var18 = var18 + var6_int;
                   var14 = var14 + var11[var18];
                   var18 = var18 + var6_int;
@@ -236,7 +192,7 @@ abstract class cq implements jj {
                 var19 = var19 + var15;
               }
             }
-            var13 = var12;
+            byte[] var13 = var12;
             var12 = var11;
             param3 = var9;
             param1 = var10;
@@ -247,10 +203,10 @@ abstract class cq implements jj {
             var7++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_29_0 = var6;
-          stackIn_29_1 = new StringBuilder().append("cq.D(").append(param0).append(',').append(param1).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_29_0 = var6;
+          StringBuilder stackIn_29_1 = new StringBuilder().append("cq.D(").append(param0).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_30_2 = "null";
           } else {
@@ -261,35 +217,8 @@ abstract class cq implements jj {
     }
 
     final void a(byte param0, int param1, int param2, int[] param3, int param4) {
-        int var24 = 0;
-        int var25 = 0;
-        int incrementValue$4 = 0;
-        int stackIn_14_0 = 0;
-        RuntimeException stackIn_28_0 = null;
-        StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        int var8 = 0;
-        int var9 = 0;
-        int[] var10 = null;
-        int[] var11 = null;
-        int[] var12 = null;
-        int var13 = 0;
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        int var17 = 0;
-        int var18 = 0;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var26 = 0;
-        var26 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var26 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param2 > 0 &&
             !mg.a(param2, (byte) -12)) {
@@ -302,13 +231,13 @@ abstract class cq implements jj {
           if (lc.field_g != this.field_h) {
             throw new IllegalArgumentException("");
           }
-          var6_int = 0;
-          stackIn_14_0 = (param1 > param2) ? param2 : param1;
-          var7 = stackIn_14_0;
-          var8 = param2 >> 1;
-          var9 = param1 >> 1;
-          var10 = param3;
-          var11 = new int[var8 * var9];
+          int var6_int = 0;
+          int stackIn_14_0 = (param1 > param2) ? param2 : param1;
+          int var7 = stackIn_14_0;
+          int var8 = param2 >> 1;
+          int var9 = param1 >> 1;
+          int[] var10 = param3;
+          int[] var11 = new int[var8 * var9];
           if (param0 != -110) {
             return;
           }
@@ -317,19 +246,19 @@ abstract class cq implements jj {
             if (var7 <= 1) {
               return;
             }
-            var13 = 0;
-            var22 = 0;
-            var23 = param2 + var22;
-            for (var24 = 0; var24 < var9; var24++) {
-              for (var25 = 0; var8 > var25; var25++) {
-                var14 = var10[var22++];
-                var16 = var10[var23++];
-                var15 = var10[var22++];
-                var20 = var14 & 255;
-                var19 = 255 & var14 >> 8;
-                var21 = var14 >> 24 & 255;
-                var18 = 255 & var14 >> 16;
-                var17 = var10[var23++];
+            int var13 = 0;
+            int var22 = 0;
+            int var23 = param2 + var22;
+            for (int var24 = 0; var24 < var9; var24++) {
+              for (int var25 = 0; var8 > var25; var25++) {
+                int var14 = var10[var22++];
+                int var16 = var10[var23++];
+                int var15 = var10[var22++];
+                int var20 = var14 & 255;
+                int var19 = 255 & var14 >> 8;
+                int var21 = var14 >> 24 & 255;
+                int var18 = 255 & var14 >> 16;
+                int var17 = var10[var23++];
                 var18 = var18 + (var15 >> 16 & 255);
                 var19 = var19 + (255 & var15 >> 8);
                 var21 = var21 + (var15 >> 24 & 255);
@@ -342,14 +271,14 @@ abstract class cq implements jj {
                 var20 = var20 + (255 & var17);
                 var19 = var19 + (var17 >> 8 & 255);
                 var18 = var18 + (255 & var17 >> 16);
-                incrementValue$4 = var13;
+                int incrementValue$4 = var13;
                 var13++;
                 var11[incrementValue$4] = vo.a(pg.a(255, var20 >> 2), vo.a(vo.a(pg.a(1020, var18) << 14, pg.a(var21, 1020) << 22), pg.a(var19 << 6, 65280)));
               }
               var23 = var23 + param2;
               var22 = var22 + param2;
             }
-            var12 = var11;
+            int[] var12 = var11;
             var11 = var10;
             var10 = var12;
             param1 = var9;
@@ -360,10 +289,10 @@ abstract class cq implements jj {
             var7 = var7 >> 1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_28_0 = var6;
-          stackIn_28_1 = new StringBuilder().append("cq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_28_0 = var6;
+          StringBuilder stackIn_28_1 = new StringBuilder().append("cq.F(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_29_2 = "null";
           } else {
@@ -461,27 +390,22 @@ abstract class cq implements jj {
     }
 
     public void a(ke param0, int param1) {
-        ke var4 = null;
-        RuntimeException stackIn_7_0 = null;
-        StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (this.field_a != param0) {
             this.field_a = param0;
             this.d((byte) 127);
           }
           if (param1 != -31662) {
-            var4 = (ke) null;
+            ke var4 = (ke) null;
             this.a((ke) null, 89);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_7_0 = var3;
-          stackIn_7_1 = new StringBuilder().append("cq.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_7_0 = var3;
+          StringBuilder stackIn_7_1 = new StringBuilder().append("cq.A(");
           if (param0 == null) {
             stackIn_8_2 = "null";
           } else {

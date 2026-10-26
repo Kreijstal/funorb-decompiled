@@ -55,12 +55,6 @@ final class cc implements Runnable {
     }
 
     final synchronized boolean a(byte param0) {
-        Throwable decompiledCaughtException = null;
-        int var2 = 0;
-        IOException var3 = null;
-        OutputStream var4 = null;
-        java.net.Socket var5 = null;
-        CharSequence var6 = null;
         if (this.field_c >= 2) {
           return true;
         }
@@ -77,7 +71,7 @@ final class cc implements Runnable {
             return false;
           }
         }
-        var2 = -109 % ((11 - param0) / 36);
+        int var2 = -109 % ((11 - param0) / 36);
         if (this.field_c == 1) {
           if (this.field_e == null) {
             this.field_e = this.field_d.a(2, this.field_j.getHost(), 443);
@@ -110,18 +104,18 @@ final class cc implements Runnable {
             this.field_g = (DataInputStream) (this.field_f.field_f);
           }
           if (this.field_c == 1) {
-            var5 = (java.net.Socket) (this.field_e.field_f);
+            java.net.Socket var5 = (java.net.Socket) (this.field_e.field_f);
             var5.setSoTimeout(10000);
-            var4 = var5.getOutputStream();
+            OutputStream var4 = var5.getOutputStream();
             var4.write(17);
-            var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_j.getFile() + "\n\n"));
+            CharSequence var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_j.getFile() + "\n\n"));
             var4.write(fa.a(var6, 8482));
             this.field_g = new DataInputStream(var5.getInputStream());
           }
           this.field_a.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = (IOException) (Object) decompiledCaughtException;
+          Throwable decompiledCaughtException = decompiledCaughtParameter0;
+          IOException var3 = (IOException) (Object) decompiledCaughtException;
           this.finalize();
           this.field_c = this.field_c + 1;
           if (null == this.field_h) {
@@ -160,16 +154,12 @@ final class cc implements Runnable {
 
     public final void run() {
         try {
-          int var1_int = 0;
           Object var1 = null;
-          Object var2 = null;
           Throwable var3 = null;
-          int var4 = 0;
-          Throwable decompiledCaughtException = null;
-          var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+          int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
           try {
             while (this.field_a.position < this.field_a.payload.length) {
-              var1_int = this.field_g.read(this.field_a.payload, this.field_a.position, -this.field_a.position + this.field_a.payload.length);
+              int var1_int = this.field_g.read(this.field_a.payload, this.field_a.position, -this.field_a.position + this.field_a.payload.length);
               if (0 <= var1_int) {
                 this.field_a.position = this.field_a.position + var1_int;
                 continue;
@@ -186,9 +176,9 @@ final class cc implements Runnable {
             }
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
+            Throwable decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
-            var2 = this;
+            Object var2 = this;
             synchronized (var2) {
               this.finalize();
               this.field_c = this.field_c + 1;

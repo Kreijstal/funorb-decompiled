@@ -32,19 +32,9 @@ final class gt extends DualLinkNode {
     }
 
     final static GraphicsRenderer a(int param0, d param1, java.awt.Canvas param2, ResourceArchive param3, int param4) {
-        RuntimeException var5 = null;
-        long var6 = 0L;
-        jc var8 = null;
-        jaggl.OpenGL var9 = null;
-        jc stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (!tq.c(true)) {
             throw new RuntimeException("");
@@ -55,32 +45,32 @@ final class gt extends DualLinkNode {
           if (param0 > -25) {
             gt.e(19);
           }
-          var9 = new jaggl.OpenGL();
-          var6 = var9.init(param2, 8, 8, 8, 24, 0, param4);
+          jaggl.OpenGL var9 = new jaggl.OpenGL();
+          long var6 = var9.init(param2, 8, 8, 8, 24, 0, param4);
           if (0L == var6) {
             throw new RuntimeException("");
           }
-          var8 = new jc(var9, param2, var6, param1, param3, param4);
+          jc var8 = new jc(var9, param2, var6, param1, param3, param4);
           var8.f((byte) 101);
-          stackIn_10_0 = var8;
+          jc stackIn_10_0 = var8;
           return (GraphicsRenderer) ((Object) stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_13_0 = var5;
-          stackIn_13_1 = new StringBuilder().append("gt.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var5;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("gt.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
           } else {
@@ -91,19 +81,9 @@ final class gt extends DualLinkNode {
     }
 
     final static void a(int param0, String param1, int param2, String[] param3) {
-        RuntimeException var4 = null;
-        int var5 = 0;
-        String[] var6 = null;
-        String[] var7 = null;
-        int stackIn_6_0 = 0;
-        boolean stackIn_7_1 = false;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           nb.field_c = uk.field_j;
           if (param0 <= 119) {
@@ -118,28 +98,28 @@ final class gt extends DualLinkNode {
               GameAppletShell.field_l = dq.a(param2, 32, param1);
               return;
             }
-            var7 = param3;
+            String[] var7 = param3;
             ArchiveIndex.a(var7, (byte) -17);
             GameAppletShell.field_l = oq.a((byte) -93, param3);
             return;
           }
-          stackIn_6_0 = 111;
-          stackIn_7_1 = !(sd.field_h >= 13);
+          int stackIn_6_0 = 111;
+          boolean stackIn_7_1 = !(sd.field_h >= 13);
           GameAppletShell.field_l = in.$cfr$intArgs$a$1ded6534de63(stackIn_6_0, stackIn_7_1);
-          var6 = (String[]) null;
+          String[] var6 = (String[]) null;
           ArchiveIndex.a((String[]) null, (byte) -120);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_16_0 = var4;
-          stackIn_16_1 = new StringBuilder().append("gt.F(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var4;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("gt.F(").append(param0).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
           } else {

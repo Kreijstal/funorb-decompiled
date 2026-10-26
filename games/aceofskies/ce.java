@@ -36,33 +36,26 @@ final class ce extends ab implements dr, dn {
     }
 
     final boolean a(int param0, int param1, char param2, ea param3) {
-        int var5_int = 0;
-        RuntimeException var5 = null;
-        boolean stackIn_6_0 = false;
-        boolean stackIn_10_0 = false;
-        RuntimeException stackIn_15_0 = null;
-        StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (super.a(-20, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.b(param3, -101);
+            boolean stackIn_6_0 = this.b(param3, -101);
             return stackIn_6_0;
           }
           if (param1 == 99) {
-            stackIn_10_0 = this.a(80, param3);
+            boolean stackIn_10_0 = this.a(80, param3);
             return stackIn_10_0;
           }
-          var5_int = -87 % ((param0 + 53) / 33);
+          int var5_int = -87 % ((param0 + 53) / 33);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_15_0 = var5;
-          stackIn_15_1 = new StringBuilder().append("ce.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_15_0 = var5;
+          StringBuilder stackIn_15_1 = new StringBuilder().append("ce.G(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_16_2 = "null";
           } else {
@@ -73,11 +66,9 @@ final class ce extends ab implements dr, dn {
     }
 
     final void a(String param0, int param1) {
-        bm var3 = null;
-        String var4 = null;
         try {
-          var3 = this.field_v;
-          var4 = param0;
+          bm var3 = this.field_v;
+          String var4 = param0;
           var3.a(-20975, var4, false);
           if (param1 < 43) {
             bm var5 = (bm) null;
@@ -108,55 +99,16 @@ final class ce extends ab implements dr, dn {
     }
 
     final static void decodeHighscoreResponse(byte obfuscationGuard) {
-        int nameEntryIndex = 0;
-        String[][] dupTemp$0 = null;
-        long[][] dupTemp$1 = null;
-        int[][] dupTemp$2 = null;
-        int rowIndex = 0;
-        int incrementValue$3 = 0;
-        int incrementValue$4 = 0;
-        int incrementValue$5 = 0;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var1 = null;
-        int responseKind = 0;
-        int queryId = 0;
-        HighscoreQuery query = null;
-        long acknowledgementToken = 0L;
-        int nameEntryCount = 0;
-        int entryLimit = 0;
-        ScoreSubmission submission = null;
-        int valuesPerEntry = 0;
-        String[][] namesByView = null;
-        String[][] alternateNamesByView = null;
-        long[][] submissionTokensByView = null;
-        int[][] valuesByView = null;
-        int allRowCount = 0;
-        int ownRowCount = 0;
-        int uniqueRowCount = 0;
-        int allValueOffset = 0;
-        int ownValueOffset = 0;
-        int uniqueValueOffset = 0;
-        int rowCount = 0;
-        int nameIndex = 0;
-        String displayName = null;
-        long submissionToken = 0L;
-        int valuesStartPosition = 0;
-        int allValueIndex = 0;
-        int obfuscationControl = 0;
-        CipherPacketBuffer packet = null;
-        int submissionId;
-        int ownValueIndex;
-        int uniqueValueIndex;
-        obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (obfuscationGuard != 116) {
             field_A = -61;
           }
-          packet = IntKeyLookup.incomingPacket;
-          responseKind = packet.readUnsignedByte(-85);
+          CipherPacketBuffer packet = IntKeyLookup.incomingPacket;
+          int responseKind = packet.readUnsignedByte(-85);
           if (responseKind == 0) {
-            queryId = packet.readUnsignedShort((byte) 0);
-            query = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
+            int queryId = packet.readUnsignedShort((byte) 0);
+            HighscoreQuery query = (HighscoreQuery) (nh.pendingHighscoreQueries.first(268435455));
             while (query != null) {
               if (queryId != query.queryId) {
                 query = (HighscoreQuery) (nh.pendingHighscoreQueries.next((byte) 103));
@@ -168,14 +120,14 @@ final class ce extends ab implements dr, dn {
               te.b(true);
               return;
             }
-            nameEntryCount = packet.readUnsignedByte(obfuscationGuard - 167);
+            int nameEntryCount = packet.readUnsignedByte(obfuscationGuard - 167);
             if (nameEntryCount != 0) {
-              entryLimit = query.entryLimit;
+              int entryLimit = query.entryLimit;
               pe.highscoreNameEntries[0].alternateName = null;
-              valuesPerEntry = query.valuesPerEntry;
+              int valuesPerEntry = query.valuesPerEntry;
               pe.highscoreNameEntries[0].primaryName = fj.playerDisplayName;
               pe.highscoreNameEntries[0].usedInUniqueView = false;
-              for (nameEntryIndex = 1; nameEntryIndex < nameEntryCount; nameEntryIndex++) {
+              for (int nameEntryIndex = 1; nameEntryIndex < nameEntryCount; nameEntryIndex++) {
                 pe.highscoreNameEntries[nameEntryIndex].primaryName = packet.readNullTerminatedText(-17883);
                 pe.highscoreNameEntries[nameEntryIndex].usedInUniqueView = false;
                 if (packet.readUnsignedByte(-47) != 1) {
@@ -184,36 +136,36 @@ final class ce extends ab implements dr, dn {
                   pe.highscoreNameEntries[nameEntryIndex].alternateName = packet.readNullTerminatedText(obfuscationGuard ^ -17839);
                 }
               }
-              dupTemp$0 = new String[3][entryLimit];
+              String[][] dupTemp$0 = new String[3][entryLimit];
               query.namesByView = dupTemp$0;
-              namesByView = dupTemp$0;
-              alternateNamesByView = new String[3][entryLimit];
-              dupTemp$1 = new long[3][entryLimit];
+              String[][] namesByView = dupTemp$0;
+              String[][] alternateNamesByView = new String[3][entryLimit];
+              long[][] dupTemp$1 = new long[3][entryLimit];
               query.submissionTokensByView = dupTemp$1;
-              submissionTokensByView = dupTemp$1;
-              dupTemp$2 = new int[3][entryLimit * valuesPerEntry];
+              long[][] submissionTokensByView = dupTemp$1;
+              int[][] dupTemp$2 = new int[3][entryLimit * valuesPerEntry];
               query.valuesByView = dupTemp$2;
-              valuesByView = dupTemp$2;
-              allRowCount = 0;
-              ownRowCount = 0;
-              uniqueRowCount = 0;
-              allValueOffset = 0;
-              ownValueOffset = 0;
-              uniqueValueOffset = 0;
-              rowCount = packet.readUnsignedByte(-119);
+              int[][] valuesByView = dupTemp$2;
+              int allRowCount = 0;
+              int ownRowCount = 0;
+              int uniqueRowCount = 0;
+              int allValueOffset = 0;
+              int ownValueOffset = 0;
+              int uniqueValueOffset = 0;
+              int rowCount = packet.readUnsignedByte(-119);
               if (rowCount > 0) {
-                for (rowIndex = 0; rowIndex < rowCount; rowIndex++) {
-                  nameIndex = packet.readUnsignedByte(obfuscationGuard ^ 69);
-                  displayName = pe.highscoreNameEntries[nameIndex].primaryName;
-                  submissionToken = packet.readLong((byte) -32);
-                  valuesStartPosition = packet.position;
+                for (int rowIndex = 0; rowIndex < rowCount; rowIndex++) {
+                  int nameIndex = packet.readUnsignedByte(obfuscationGuard ^ 69);
+                  String displayName = pe.highscoreNameEntries[nameIndex].primaryName;
+                  long submissionToken = packet.readLong((byte) -32);
+                  int valuesStartPosition = packet.position;
                   if (entryLimit > rowIndex) {
                     namesByView[0][allRowCount] = displayName;
                     alternateNamesByView[0][allRowCount] = pe.highscoreNameEntries[nameIndex].alternateName;
                     submissionTokensByView[0][allRowCount] = submissionToken;
                     allRowCount++;
-                    for (allValueIndex = 0; valuesPerEntry > allValueIndex; allValueIndex++) {
-                      incrementValue$3 = allValueOffset;
+                    for (int allValueIndex = 0; valuesPerEntry > allValueIndex; allValueIndex++) {
+                      int incrementValue$3 = allValueOffset;
                       allValueOffset++;
                       valuesByView[0][incrementValue$3] = packet.readInt((byte) 124);
                     }
@@ -225,8 +177,8 @@ final class ce extends ab implements dr, dn {
                     submissionTokensByView[1][ownRowCount] = submissionToken;
                     ownRowCount++;
                     packet.position = valuesStartPosition;
-                    for (ownValueIndex = 0; valuesPerEntry > ownValueIndex; ownValueIndex++) {
-                      incrementValue$4 = ownValueOffset;
+                    for (int ownValueIndex = 0; valuesPerEntry > ownValueIndex; ownValueIndex++) {
+                      int incrementValue$4 = ownValueOffset;
                       ownValueOffset++;
                       valuesByView[1][incrementValue$4] = packet.readInt((byte) 114);
                     }
@@ -239,8 +191,8 @@ final class ce extends ab implements dr, dn {
                     submissionTokensByView[2][uniqueRowCount] = submissionToken;
                     uniqueRowCount++;
                     packet.position = valuesStartPosition;
-                    for (uniqueValueIndex = 0; valuesPerEntry > uniqueValueIndex; uniqueValueIndex++) {
-                      incrementValue$5 = uniqueValueOffset;
+                    for (int uniqueValueIndex = 0; valuesPerEntry > uniqueValueIndex; uniqueValueIndex++) {
+                      int incrementValue$5 = uniqueValueOffset;
                       uniqueValueOffset++;
                       valuesByView[2][incrementValue$5] = packet.readInt((byte) 113);
                     }
@@ -253,9 +205,9 @@ final class ce extends ab implements dr, dn {
             return;
           }
           if (responseKind == 1) {
-            submissionId = packet.readUnsignedShort((byte) 0);
-            acknowledgementToken = packet.readLong((byte) 64);
-            submission = (ScoreSubmission) (tq.pendingScoreSubmissions.first(268435455));
+            int submissionId = packet.readUnsignedShort((byte) 0);
+            long acknowledgementToken = packet.readLong((byte) 64);
+            ScoreSubmission submission = (ScoreSubmission) (tq.pendingScoreSubmissions.first(268435455));
             while (submission != null) {
               if (submission.submissionId != submissionId) {
                 submission = (ScoreSubmission) (tq.pendingScoreSubmissions.next((byte) 103));
@@ -275,18 +227,14 @@ final class ce extends ab implements dr, dn {
           te.b(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1), "ce.JA(" + obfuscationGuard + ')');
         }
     }
 
     public final void b(bm param0, int param1) {
-        RuntimeException stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var3 = null;
         try {
           if (param0 == this.field_v) {
             this.field_x.a((ea) (this), (byte) -42);
@@ -299,10 +247,10 @@ final class ce extends ab implements dr, dn {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("ce.V(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("ce.V(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
@@ -331,20 +279,13 @@ final class ce extends ab implements dr, dn {
     }
 
     public final void a(int param0, mi param1, int param2, int param3, byte param4) {
-        int var6_int = 0;
-        int var7 = 0;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var6 = null;
-        int var6_intLifetime1;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param1 != this.field_D) {
             if (param1 != this.field_w) {
               if (this.field_z != param1) {
-                var6_int = 122 % ((param4 + 27) / 61);
+                int var6_int = 122 % ((param4 + 27) / 61);
                 return;
               }
               if (!this.field_C) {
@@ -362,13 +303,13 @@ final class ce extends ab implements dr, dn {
           } else {
             this.d((byte) -84);
           }
-          var6_intLifetime1 = 122 % ((param4 + 27) / 61);
+          int var6_intLifetime1 = 122 % ((param4 + 27) / 61);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_16_0 = var6;
-          stackIn_16_1 = new StringBuilder().append("ce.DA(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var6;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("ce.DA(").append(param0).append(',');
           if (param1 == null) {
             stackIn_17_2 = "null";
           } else {
@@ -391,36 +332,16 @@ final class ce extends ab implements dr, dn {
 
     ce(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (ir) null);
-        bc dupTemp$0 = null;
-        bc dupTemp$1 = null;
-        boolean stackIn_4_1 = false;
-        boolean stackIn_7_1 = false;
-        boolean stackIn_10_1 = false;
-        mi stackIn_18_1 = null;
-        mi stackIn_18_2 = null;
-        mi stackIn_19_1 = null;
-        mi stackIn_19_2 = null;
         String stackIn_19_3 = null;
-        RuntimeException stackIn_59_0 = null;
-        StringBuilder stackIn_59_1 = null;
         String stackIn_60_2 = null;
-        StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        qb var6 = null;
-        RuntimeException var6_ref = null;
-        BitmapFont var7 = null;
-        String var8 = null;
-        gu var9 = null;
-        bc var12 = null;
-        bc var13 = null;
         try {
-          stackIn_4_1 = (param4);
+          boolean stackIn_4_1 = (param4);
           this.field_E = stackIn_4_1;
           this.field_y = param1;
-          stackIn_7_1 = (param3);
+          boolean stackIn_7_1 = (param3);
           this.field_B = stackIn_7_1;
-          stackIn_10_1 = (param2);
+          boolean stackIn_10_1 = (param2);
           this.field_C = stackIn_10_1;
           if (this.field_C && (this.field_B ||
             this.field_E)) {
@@ -430,15 +351,13 @@ final class ce extends ab implements dr, dn {
           this.field_x = (bm) ((Object) new kk("", (no) (this), 20));
           if (!this.field_C) {
             this.field_D = new mi(ms.field_a, (no) null);
-            stackIn_18_1 = null;
-            stackIn_18_2 = null;
+            mi stackIn_18_1 = null;
+            mi stackIn_18_2 = null;
             if (!this.field_E) {
-              stackIn_19_1 = null;
-              stackIn_19_2 = null;
               stackIn_19_3 = Bullet.field_j;
             } else {
-              stackIn_19_1 = null;
-              stackIn_19_2 = null;
+              mi stackIn_19_1 = null;
+              mi stackIn_19_2 = null;
               stackIn_19_3 = nu.field_a;
             }
             this.field_z = new mi(stackIn_19_3, (no) null);
@@ -452,7 +371,7 @@ final class ce extends ab implements dr, dn {
           }
           this.field_v.field_e = (ir) ((Object) new sl(10000536));
           this.field_x.field_e = (ir) ((Object) new ul(10000536));
-          var6 = new qb();
+          qb var6 = new qb();
           this.field_D.field_e = (ir) ((Object) var6);
           if (null != this.field_z) {
             this.field_z.field_e = (ir) ((Object) var6);
@@ -475,12 +394,12 @@ final class ce extends ab implements dr, dn {
             }
           }
           this.field_h = 15;
-          var7 = qo.field_b;
+          BitmapFont var7 = qo.field_b;
           if (null != this.field_y) {
             this.field_h = this.field_h + (5 + var7.measureWrappedHeight(this.field_y, this.field_q - 40, var7.maxAscent));
           }
-          var8 = kk.field_J;
-          var9 = lc.a(17123, bm.m(125));
+          String var8 = kk.field_J;
+          gu var9 = lc.a(17123, bm.m(125));
           if (ef.field_k != var9) {
             if (lp.field_f == var9) {
               var8 = io.field_e;
@@ -488,12 +407,12 @@ final class ce extends ab implements dr, dn {
           } else {
             var8 = hu.field_b;
           }
-          dupTemp$0 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_v, false, 80, 3, var7, 16777215, var8);
-          var12 = dupTemp$0;
+          bc dupTemp$0 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_v, false, 80, 3, var7, 16777215, var8);
+          bc var12 = dupTemp$0;
           this.a(dupTemp$0, 1);
           this.field_h = this.field_h + (((ea) ((Object) var12)).field_n + 5);
-          dupTemp$1 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_x, false, 80, 3, var7, 16777215, vj.field_b);
-          var13 = dupTemp$1;
+          bc dupTemp$1 = new bc(10, this.field_h, -20 + this.field_q, 25, this.field_x, false, 80, 3, var7, 16777215, vj.field_b);
+          bc var13 = dupTemp$1;
           this.a(dupTemp$1, 1);
           this.field_D.field_o = (no) (this);
           this.field_h = this.field_h + (5 + ((ea) ((Object) var13)).field_n);
@@ -534,16 +453,16 @@ final class ce extends ab implements dr, dn {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6_ref = decompiledCaughtException;
-          stackIn_59_0 = var6_ref;
-          stackIn_59_1 = new StringBuilder().append("ce.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6_ref = decompiledCaughtException;
+          RuntimeException stackIn_59_0 = var6_ref;
+          StringBuilder stackIn_59_1 = new StringBuilder().append("ce.<init>(");
           if (param0 == null) {
             stackIn_60_2 = "null";
           } else {
             stackIn_60_2 = "{...}";
           }
-          stackIn_62_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',');
+          StringBuilder stackIn_62_1 = ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',');
           if (param1 == null) {
             stackIn_63_2 = "null";
           } else {

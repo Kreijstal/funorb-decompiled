@@ -47,60 +47,44 @@ abstract class sk {
     abstract void a(boolean param0, byte param1);
 
     final static rm[] a(rk param0, int param1) {
-        int var5 = 0;
-        rm[] stackIn_3_0 = null;
-        rm[] stackIn_9_0 = null;
-        rm[] stackIn_13_0 = null;
-        rm[] stackIn_18_0 = null;
-        RuntimeException stackIn_21_0 = null;
-        StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var2 = null;
-        int[] var3 = null;
-        rm[] var4 = null;
-        rm var6 = null;
-        int var7 = 0;
-        en var8 = null;
-        int[] var9 = null;
-        int[] var10 = null;
-        var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (!param0.a((byte) 84)) {
-            stackIn_3_0 = new rm[]{};
+            rm[] stackIn_3_0 = new rm[]{};
             return stackIn_3_0;
           }
-          var8 = param0.a(param1 ^ 1175069693);
+          en var8 = param0.a(param1 ^ 1175069693);
           while (var8.field_a == 0) {
             IntrusiveNode.a(10L, false);
           }
           if (param1 != 1175069442) {
-            stackIn_9_0 = (rm[]) null;
+            rm[] stackIn_9_0 = (rm[]) null;
             return stackIn_9_0;
           }
           if (var8.field_a == 2) {
-            stackIn_13_0 = new rm[]{};
+            rm[] stackIn_13_0 = new rm[]{};
             return stackIn_13_0;
           }
-          var10 = (int[]) (var8.field_f);
-          var9 = var10;
-          var3 = var9;
-          var4 = new rm[var10.length >> 2];
-          for (var5 = 0; var5 < var4.length; var5++) {
-            var6 = new rm();
+          int[] var10 = (int[]) (var8.field_f);
+          int[] var9 = var10;
+          int[] var3 = var9;
+          rm[] var4 = new rm[var10.length >> 2];
+          for (int var5 = 0; var5 < var4.length; var5++) {
+            rm var6 = new rm();
             var4[var5] = var6;
             var6.field_f = var3[var5 << 2];
             var6.field_b = var3[1 + (var5 << 2)];
             var6.field_d = var3[(var5 << 2) + 2];
             var6.field_a = var3[3 + (var5 << 2)];
           }
-          stackIn_18_0 = var4;
+          rm[] stackIn_18_0 = var4;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_21_0 = var2;
-          stackIn_21_1 = new StringBuilder().append("sk.M(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_21_0 = var2;
+          StringBuilder stackIn_21_1 = new StringBuilder().append("sk.M(");
           if (param0 == null) {
             stackIn_22_2 = "null";
           } else {

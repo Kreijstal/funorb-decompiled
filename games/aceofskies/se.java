@@ -17,50 +17,28 @@ final class se {
     }
 
     final static void a(int param0) {
-        int fieldTemp$0 = 0;
-        int fieldTemp$1 = 0;
-        int stackIn_15_0 = 0;
-        boolean stackIn_57_0 = false;
         int stackIn_67_0 = 0;
-        RuntimeException decompiledCaughtException = null;
-        boolean stackOut_56_0;
-        CipherPacketBuffer var1 = null;
-        RuntimeException var1_ref = null;
-        int var2 = 0;
-        int var3_int = 0;
-        Object var3 = null;
-        String var4_ref_String = null;
-        int var4 = 0;
-        cl var5 = null;
-        String var5_ref = null;
-        String var6 = null;
-        cl var6_ref = null;
-        String var7 = null;
-        cl var7_ref = null;
-        int var8 = 0;
-        Object var3Lifetime1;
-        String var4_ref_StringLifetime1;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 > -64) {
             se.a((byte) -70);
           }
-          var1 = IntKeyLookup.incomingPacket;
-          var2 = var1.readUnsignedByte(-58);
+          CipherPacketBuffer var1 = IntKeyLookup.incomingPacket;
+          int var2 = var1.readUnsignedByte(-58);
           if (var2 == 0) {
             if (gi.field_g == null) {
               gi.field_g = new es(128);
               hl.field_a = 0;
             }
-            stackIn_15_0 = (1 != var1.readUnsignedByte(-60)) ? 0 : 1;
-            var3_int = stackIn_15_0;
-            var4_ref_String = var1.readNullTerminatedText(-17883);
+            int stackIn_15_0 = (1 != var1.readUnsignedByte(-60)) ? 0 : 1;
+            int var3_int = stackIn_15_0;
+            String var4_ref_String = var1.readNullTerminatedText(-17883);
             if (var3_int != 0) {
               var1.readNullTerminatedText(-17883);
             }
-            var5 = fg.a(var4_ref_String, 17680);
-            var6 = var1.readNullTerminatedText(-17883);
-            var7 = vu.normalizePlayerName(125, (CharSequence) ((Object) var4_ref_String));
+            cl var5 = fg.a(var4_ref_String, 17680);
+            String var6 = var1.readNullTerminatedText(-17883);
+            String var7 = vu.normalizePlayerName(125, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
             }
@@ -73,7 +51,7 @@ final class se {
             if (var5 == null) {
               var5 = new cl();
               gi.field_g.a(var5, (long)var7.hashCode(), (byte) 56);
-              fieldTemp$0 = hl.field_a;
+              int fieldTemp$0 = hl.field_a;
               hl.field_a = hl.field_a + 1;
               var5.field_cb = fieldTemp$0;
               nh.field_d.addLast(75, var5);
@@ -100,9 +78,9 @@ final class se {
               return;
             }
             eo.field_a = 1;
-            var3 = var1.readNullTerminatedText(-17883);
+            Object var3 = var1.readNullTerminatedText(-17883);
             ul.field_s = ((String) (var3)).intern();
-            var4 = var1.readUnsignedByte(-46);
+            int var4 = var1.readUnsignedByte(-46);
             lg.a(var4, 2);
             return;
           }
@@ -110,13 +88,13 @@ final class se {
             pj.field_a = new es(128);
             wo.field_o = 0;
           }
-          var3Lifetime1 = var1.readNullTerminatedText(-17883);
+          Object var3Lifetime1 = var1.readNullTerminatedText(-17883);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.readNullTerminatedText(-17883);
-          var5_ref = var1.readNullTerminatedText(-17883);
-          var6_ref = kg.a(var4_ref_StringLifetime1, (byte) 61);
+          String var4_ref_StringLifetime1 = var1.readNullTerminatedText(-17883);
+          String var5_ref = var1.readNullTerminatedText(-17883);
+          cl var6_ref = kg.a(var4_ref_StringLifetime1, (byte) 61);
           if (null == var6_ref) {
             var6_ref = kg.a(var5_ref, (byte) 61);
             if (var6_ref != null) {
@@ -126,7 +104,7 @@ final class se {
           if (var6_ref == null) {
             var6_ref = new cl();
             pj.field_a.a(var6_ref, (long)vu.normalizePlayerName(126, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), (byte) 56);
-            fieldTemp$1 = wo.field_o;
+            int fieldTemp$1 = wo.field_o;
             wo.field_o = wo.field_o + 1;
             var6_ref.field_cb = fieldTemp$1;
             SoundPlayback.field_f.addLast(71, var6_ref);
@@ -137,12 +115,12 @@ final class se {
           var6_ref.field_bb = (String) (var3Lifetime1);
           var6_ref.field_I = var4_ref_StringLifetime1;
           var6_ref.unlink(-123);
-          var7_ref = (cl) (SoundPlayback.field_f.first(268435455));
+          cl var7_ref = (cl) (SoundPlayback.field_f.first(268435455));
           scanLoop1: while (true) {
             if (var7_ref != null) {
-              stackOut_56_0 = cs.a(var7_ref, -115, var6_ref);
+              boolean stackOut_56_0 = cs.a(var7_ref, -115, var6_ref);
               stackIn_67_0 = stackOut_56_0 ? 1 : 0;
-              stackIn_57_0 = stackOut_56_0;
+              boolean stackIn_57_0 = stackOut_56_0;
               if (var8 != 0) {
                 break scanLoop1;
               }
@@ -163,8 +141,8 @@ final class se {
           ml.$cfr$intArgs$a$9910ad98b3f5(stackIn_67_0, var7_ref, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var1_ref = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var1_ref = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var1_ref), "se.B(" + param0 + ')');
         }
     }

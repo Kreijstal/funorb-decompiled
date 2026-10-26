@@ -179,9 +179,8 @@ class FlightBody {
     }
 
     final void moveSideways(byte obfuscationGuard, double distance) {
-        double var4 = 0.0;
         if (obfuscationGuard > 104) {
-          var4 = 3.141592653589793 * this.heading / 128.0;
+          double var4 = 3.141592653589793 * this.heading / 128.0;
           this.position.x = this.position.x - Math.cos(var4) * distance;
           this.position.y = this.position.y + Math.sin(var4) * distance;
           return;
@@ -191,10 +190,6 @@ class FlightBody {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_10_0 = 0;
         int stackIn_25_0 = 0;
-        int var6;
-        int var7;
-        int var6Lifetime1;
-        int var7Lifetime1;
         BitmapFontMetrics.field_b[os.field_w] = param1;
         uf.field_d[os.field_w] = os.field_w;
         js.field_c[os.field_w] = param5;
@@ -208,13 +203,13 @@ class FlightBody {
           hg.field_C[os.field_w] = param4;
           qd.field_p[os.field_w] = param0;
           dd.field_c[os.field_w] = param3;
-          var6 = param0 + param4 + param3;
+          int var6 = param0 + param4 + param3;
           if (0 == var6) {
             stackIn_25_0 = 0;
           } else {
             stackIn_25_0 = param4 * 1000 / var6;
           }
-          var7 = stackIn_25_0;
+          int var7 = stackIn_25_0;
           ai.field_a[os.field_w] = var7;
           if (nh.field_a > var7) {
             nh.field_a = var7;
@@ -233,13 +228,13 @@ class FlightBody {
         hg.field_C[os.field_w] = param4;
         qd.field_p[os.field_w] = param0;
         dd.field_c[os.field_w] = param3;
-        var6Lifetime1 = param0 + param4 + param3;
+        int var6Lifetime1 = param0 + param4 + param3;
         if (0 == var6Lifetime1) {
           stackIn_10_0 = 0;
         } else {
           stackIn_10_0 = param4 * 1000 / var6Lifetime1;
         }
-        var7Lifetime1 = stackIn_10_0;
+        int var7Lifetime1 = stackIn_10_0;
         ai.field_a[os.field_w] = var7Lifetime1;
         if (nh.field_a > var7Lifetime1) {
           nh.field_a = var7Lifetime1;

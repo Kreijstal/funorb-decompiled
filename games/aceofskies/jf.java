@@ -41,22 +41,15 @@ final class jf implements ir {
     }
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var6_int = 0;
-        RuntimeException var6 = null;
-        int var7 = 0;
-        Sprite var8 = null;
         try {
           if (param1 != -7592) {
             field_b = (String) null;
           }
-          var6_int = param2 + param3.field_p;
-          var7 = param4 + param3.field_h;
+          int var6_int = param2 + param3.field_p;
+          int var7 = param4 + param3.field_h;
           nn.a(var7, (byte) 70, var6_int, param3.field_q, param3.field_n);
-          var8 = gu.field_c[1];
+          Sprite var8 = gu.field_c[1];
           if (param3 instanceof mi &&
             ((mi) (param3)).field_s) {
             var8.d(var6_int + (1 + (param3.field_q - var8.fullWidth >> 1)), (param3.field_n - var8.fullHeight >> 1) + var7 + 1, 256);
@@ -67,10 +60,10 @@ final class jf implements ir {
           co.a(var7 + 2, param3.field_n - 4, param3.field_q - 4, 2 + var6_int, 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var6 = decompiledCaughtException;
-          stackIn_12_0 = var6;
-          stackIn_12_1 = new StringBuilder().append("jf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var6 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var6;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("jf.B(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
           if (param3 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -82,19 +75,12 @@ final class jf implements ir {
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
         Object var3 = null;
-        int var4 = 0;
-        Object var5 = null;
-        java.net.URL stackIn_7_0 = null;
-        Object stackIn_10_0 = null;
-        StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var4 = -106 % ((param2 - 0) / 46);
+          int var4 = -106 % ((param2 - 0) / 46);
           var3 = null;
-          var5 = null;
+          Object var5 = null;
           if (gt.field_r != null &&
             !gt.field_r.equals(param0.getParameter("settings"))) {
             var3 = gt.field_r;
@@ -105,19 +91,19 @@ final class jf implements ir {
             !ac.field_d.equals(param0.getParameter("session"))) {
             var5 = ac.field_d;
           }
-          stackIn_7_0 = vj.a(param1, (String) (var3), (String) (var5), 122, -1);
+          java.net.URL stackIn_7_0 = vj.a(param1, (String) (var3), (String) (var5), 122, -1);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("jf.F(");
+          Object stackIn_10_0 = var3;
+          StringBuilder stackIn_10_1 = new StringBuilder().append("jf.F(");
           if (param0 == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
           }
-          stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
+          StringBuilder stackIn_13_1 = ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -136,11 +122,6 @@ final class jf implements ir {
     }
 
     final static boolean a(int param0, boolean param1, byte param2, int param3) {
-        int var4;
-        int var5;
-        int var4Lifetime1;
-        int var5Lifetime1;
-        int var5Lifetime2;
         if (param1) {
           if (js.field_c[param0] > js.field_c[param3]) {
             return true;
@@ -154,11 +135,11 @@ final class jf implements ir {
           if (ai.field_a[param3] > ai.field_a[param0]) {
             return false;
           }
-          var4 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
+          int var4 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
           if (param2 != 67) {
             jf.a(121, false, (byte) -23, -25);
           }
-          var5 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
+          int var5 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
           if (var5 > var4) {
             return true;
           }
@@ -179,9 +160,9 @@ final class jf implements ir {
         if (js.field_c[param3] > js.field_c[param0]) {
           return false;
         }
-        var4Lifetime1 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
+        int var4Lifetime1 = dd.field_c[param3] + qd.field_p[param3] + hg.field_C[param3];
         if (param2 == 67) {
-          var5Lifetime1 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
+          int var5Lifetime1 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -191,7 +172,7 @@ final class jf implements ir {
           return !(param3 >= param0);
         }
         jf.a(121, false, (byte) -23, -25);
-        var5Lifetime2 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
+        int var5Lifetime2 = qd.field_p[param0] + hg.field_C[param0] + dd.field_c[param0];
         if (var5Lifetime2 > var4Lifetime1) {
           return true;
         }

@@ -39,30 +39,22 @@ final class ii extends vo {
     }
 
     final static int a(byte param0, jb param1) {
-        RuntimeException var2 = null;
-        int stackIn_3_0 = 0;
-        int stackIn_6_0 = 0;
-        int stackIn_10_0 = 0;
-        int stackIn_12_0 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == CipherPacketBuffer.field_p) {
-            stackIn_12_0 = 5890;
+            int stackIn_12_0 = 5890;
             return stackIn_12_0;
           }
           if (ac.field_b == param1) {
-            stackIn_3_0 = 34167;
+            int stackIn_3_0 = 34167;
             return stackIn_3_0;
           }
           if (un.field_i == param1) {
-            stackIn_6_0 = 34168;
+            int stackIn_6_0 = 34168;
             return stackIn_6_0;
           }
           if (param1 == bs.field_a) {
-            stackIn_10_0 = 34166;
+            int stackIn_10_0 = 34166;
             return stackIn_10_0;
           }
           if (param0 < 63) {
@@ -70,10 +62,10 @@ final class ii extends vo {
           }
           throw new IllegalArgumentException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_18_0 = var2;
-          stackIn_18_1 = new StringBuilder().append("ii.D(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_18_0 = var2;
+          StringBuilder stackIn_18_1 = new StringBuilder().append("ii.D(").append(param0).append(',');
           if (param1 == null) {
             stackIn_19_2 = "null";
           } else {
@@ -84,33 +76,26 @@ final class ii extends vo {
     }
 
     final String a(String param0, byte param1) {
-        RuntimeException var3 = null;
-        String stackIn_2_0 = null;
-        String stackIn_7_0 = null;
-        String stackIn_9_0 = null;
-        RuntimeException stackIn_12_0 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_h.a(param0, 8192) == bt.field_a) {
-            stackIn_2_0 = this.field_h.a(param0, (byte) 72);
+            String stackIn_2_0 = this.field_h.a(param0, (byte) 72);
             return stackIn_2_0;
           }
           if (param1 != 72) {
             this.field_i = true;
           }
           if (this.a(param0, 8192) != bt.field_a) {
-            stackIn_9_0 = gh.field_o;
+            String stackIn_9_0 = gh.field_o;
             return stackIn_9_0;
           }
-          stackIn_7_0 = dk.field_i;
+          String stackIn_7_0 = dk.field_i;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_12_0 = var3;
-          stackIn_12_1 = new StringBuilder().append("ii.EA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_12_0 = var3;
+          StringBuilder stackIn_12_1 = new StringBuilder().append("ii.EA(");
           if (param0 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -121,32 +106,24 @@ final class ii extends vo {
     }
 
     final pt a(String param0, int param1) {
-        id var3 = null;
-        RuntimeException var3_ref = null;
-        String var4 = null;
-        pt stackIn_2_0 = null;
-        pt stackIn_6_0 = null;
         pt stackIn_13_0 = null;
-        RuntimeException stackIn_16_0 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_h.a(param0, param1 ^ 0) == bt.field_a) {
-            stackIn_2_0 = bt.field_a;
+            pt stackIn_2_0 = bt.field_a;
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_f)) {
-            var3 = rq.a(-111, param0);
+            id var3 = rq.a(-111, param0);
             if (!var3.a(false)) {
-              stackIn_6_0 = ce.field_t;
+              pt stackIn_6_0 = ce.field_t;
               return stackIn_6_0;
             }
             this.field_f = param0;
             this.field_i = var3.a(param1 - 10107);
           }
           if (param1 != 8192) {
-            var4 = (String) null;
+            String var4 = (String) null;
             this.a((String) null, (byte) 79);
           }
           if (this.field_i) {
@@ -156,10 +133,10 @@ final class ii extends vo {
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_16_0 = var3_ref;
-          stackIn_16_1 = new StringBuilder().append("ii.DA(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_16_0 = var3_ref;
+          StringBuilder stackIn_16_1 = new StringBuilder().append("ii.DA(");
           if (param0 == null) {
             stackIn_17_2 = "null";
           } else {

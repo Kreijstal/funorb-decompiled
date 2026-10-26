@@ -30,43 +30,34 @@ final class ij extends hh {
     }
 
     final static Sprite a(ResourceArchive param0, String param1, String param2, int param3) {
-        int var4_int = 0;
-        RuntimeException var4 = null;
-        int var5 = 0;
-        Sprite stackIn_3_0 = null;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 1) {
             field_g = (nf) null;
           }
-          var4_int = param0.b(param2, 0);
-          var5 = param0.a(-122, var4_int, param1);
-          stackIn_3_0 = hj.a(false, var5, var4_int, param0);
+          int var4_int = param0.b(param2, 0);
+          int var5 = param0.a(-122, var4_int, param1);
+          Sprite stackIn_3_0 = hj.a(false, var5, var4_int, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_6_0 = var4;
-          stackIn_6_1 = new StringBuilder().append("ij.H(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_6_0 = var4;
+          StringBuilder stackIn_6_1 = new StringBuilder().append("ij.H(");
           if (param0 == null) {
             stackIn_7_2 = "null";
           } else {
             stackIn_7_2 = "{...}";
           }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+          StringBuilder stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
           if (param1 == null) {
             stackIn_10_2 = "null";
           } else {
             stackIn_10_2 = "{...}";
           }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
+          StringBuilder stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',');
           if (param2 == null) {
             stackIn_13_2 = "null";
           } else {
@@ -86,11 +77,10 @@ final class ij extends hh {
     }
 
     final void a(byte param0, int param1, int param2) {
-        int var4 = 0;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         if ((1 & param1) == 1) {
           if (!this.field_f.field_d) {
-            var4 = this.field_a.field_hb % 4000 * 16 / 4000;
+            int var4 = this.field_a.field_hb % 4000 * 16 / 4000;
             this.field_a.a(this.field_f.field_h[var4], 1);
             if (param0 != -65) {
               this.b((byte) -110);
@@ -131,9 +121,8 @@ final class ij extends hh {
     }
 
     final void a(boolean param0, boolean param1) {
-        float var3 = 0.0f;
         if (!(this.field_a.field_C <= 0)) {
-          var3 = -0.5f / (float)this.field_a.field_C;
+          float var3 = -0.5f / (float)this.field_a.field_C;
           this.field_a.a(false, 1);
           wl.field_Ub[0] = 0.0f;
           wl.field_Ub[3] = this.field_a.field_Tb * var3 + 0.25f;

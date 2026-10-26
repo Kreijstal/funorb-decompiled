@@ -3,15 +3,9 @@
  */
 final class bu {
     final static boolean a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3) {
-        RuntimeException var4 = null;
-        RuntimeException stackIn_20_0 = null;
-        StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
-        StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
-        StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param2.b((byte) 102) &&
             param2.c("commonui", -14012)) {
@@ -30,22 +24,22 @@ final class bu {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_20_0 = var4;
-          stackIn_20_1 = new StringBuilder().append("bu.A(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4 = decompiledCaughtException;
+          RuntimeException stackIn_20_0 = var4;
+          StringBuilder stackIn_20_1 = new StringBuilder().append("bu.A(");
           if (param0 == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
           }
-          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
+          StringBuilder stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',');
           if (param1 == null) {
             stackIn_24_2 = "null";
           } else {
             stackIn_24_2 = "{...}";
           }
-          stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
+          StringBuilder stackIn_26_1 = ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',');
           if (param2 == null) {
             stackIn_27_2 = "null";
           } else {
@@ -56,13 +50,8 @@ final class bu {
     }
 
     final static boolean a(int param0, String param1, String param2) {
-        RuntimeException var3 = null;
-        RuntimeException stackIn_30_0 = null;
-        StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
-        StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (ul.a(param1, (byte) -106)) {
             return false;
@@ -90,16 +79,16 @@ final class bu {
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3 = decompiledCaughtException;
-          stackIn_30_0 = var3;
-          stackIn_30_1 = new StringBuilder().append("bu.B(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3 = decompiledCaughtException;
+          RuntimeException stackIn_30_0 = var3;
+          StringBuilder stackIn_30_1 = new StringBuilder().append("bu.B(").append(param0).append(',');
           if (param1 == null) {
             stackIn_31_2 = "null";
           } else {
             stackIn_31_2 = "{...}";
           }
-          stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
+          StringBuilder stackIn_33_1 = ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',');
           if (param2 == null) {
             stackIn_34_2 = "null";
           } else {

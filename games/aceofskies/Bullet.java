@@ -30,8 +30,6 @@ final class Bullet extends FlightBody {
 
     final static void b(int param0) {
         try {
-          Exception var1 = null;
-          Throwable decompiledCaughtException = null;
           if (param0 != 0) {
             field_g = -18;
           }
@@ -40,8 +38,8 @@ final class Bullet extends FlightBody {
               BitmapFontMetrics.field_g.a(true, 0L);
               BitmapFontMetrics.field_g.a(24, IntKeyLookup.incomingPacket.payload, IntKeyLookup.incomingPacket.position, -105);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
-              decompiledCaughtException = decompiledCaughtParameter0;
-              var1 = (Exception) (Object) decompiledCaughtException;
+              Throwable decompiledCaughtException = decompiledCaughtParameter0;
+              Exception var1 = (Exception) (Object) decompiledCaughtException;
             }
           }
           IntKeyLookup.incomingPacket.position = IntKeyLookup.incomingPacket.position + 24;
@@ -73,27 +71,19 @@ final class Bullet extends FlightBody {
     }
 
     final static byte[] a(byte[] param0, int param1, byte param2, int param3) {
-        byte[] var4 = null;
-        RuntimeException var4_ref = null;
-        int var5 = 0;
-        byte[] var6 = null;
-        byte[] stackIn_1_0 = null;
-        RuntimeException stackIn_4_0 = null;
-        StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new byte[param1];
-          var4 = var6;
-          var5 = -115 / ((param2 + 94) / 32);
+          byte[] var6 = new byte[param1];
+          byte[] var4 = var6;
+          int var5 = -115 / ((param2 + 94) / 32);
           au.a(param0, param3, var6, 0, param1);
-          stackIn_1_0 = var6;
+          byte[] stackIn_1_0 = var6;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4_ref = decompiledCaughtException;
-          stackIn_4_0 = var4_ref;
-          stackIn_4_1 = new StringBuilder().append("eu.I(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var4_ref = decompiledCaughtException;
+          RuntimeException stackIn_4_0 = var4_ref;
+          StringBuilder stackIn_4_1 = new StringBuilder().append("eu.I(");
           if (param0 == null) {
             stackIn_5_2 = "null";
           } else {
@@ -104,14 +94,10 @@ final class Bullet extends FlightBody {
     }
 
     final static void a(int param0, boolean param1) {
-        int var2_int = 0;
-        RuntimeException var2 = null;
-        int var3 = 0;
-        RuntimeException decompiledCaughtException = null;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           qm.a(ft.field_o, (byte) -31, op.field_a, param1, param0, os.field_w, 0);
-          for (var2_int = 0; os.field_w > var2_int; var2_int++) {
+          for (int var2_int = 0; os.field_w > var2_int; var2_int++) {
             uf.field_d[param0 + var2_int] = var2_int;
           }
           qm.a(fj.field_d, (byte) -52, nh.field_a, false, param0 + param0, os.field_w + param0, param0);
@@ -121,8 +107,8 @@ final class Bullet extends FlightBody {
           os.field_w = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
           throw pn.a((Throwable) ((Object) var2), "eu.J(" + param0 + ',' + param1 + ')');
         }
     }

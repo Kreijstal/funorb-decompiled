@@ -42,23 +42,15 @@ final class wk extends hh {
     }
 
     final static boolean a(String param0, int param1, String param2, String param3, wd param4, int param5, boolean param6) {
-        RuntimeException var7 = null;
-        jq var8 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
-        StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
-        StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (ht.field_k != dk.field_h) {
             return false;
           }
-          var8 = new jq(vn.field_f, param4);
+          jq var8 = new jq(vn.field_f, param4);
           vn.field_f.a(var8, 0);
           if (AircraftDefinition.a(param5)) {
             var8.n(126);
@@ -73,28 +65,28 @@ final class wk extends hh {
           nh.field_b = param2;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var7 = decompiledCaughtException;
-          stackIn_13_0 = var7;
-          stackIn_13_1 = new StringBuilder().append("wk.C(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var7 = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var7;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("wk.C(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
             stackIn_14_2 = "{...}";
           }
-          stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',');
+          StringBuilder stackIn_16_1 = ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',');
           if (param2 == null) {
             stackIn_17_2 = "null";
           } else {
             stackIn_17_2 = "{...}";
           }
-          stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
+          StringBuilder stackIn_19_1 = ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',');
           if (param3 == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
+          StringBuilder stackIn_22_1 = ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',');
           if (param4 == null) {
             stackIn_23_2 = "null";
           } else {
@@ -106,47 +98,30 @@ final class wk extends hh {
 
     wk(wl param0) {
         super(param0);
-        int var14 = 0;
-        int var15 = 0;
-        int var16 = 0;
-        boolean stackIn_5_1 = false;
-        int stackIn_8_0 = 0;
-        RuntimeException stackIn_35_0 = null;
-        StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        int var2_int = 0;
-        RuntimeException var2 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        int var9 = 0;
         float var10 = 0.0f;
-        float var11 = 0.0f;
-        float var12 = 0.0f;
-        float var13 = 0.0f;
-        byte[][] var27 = null;
-        byte[][] var28 = null;
-        byte[][] var29 = null;
         this.field_h = false;
         try {
           if (param0.field_nc) {
-            stackIn_5_1 = !(param0.field_Xb >= 3);
+            boolean stackIn_5_1 = !(param0.field_Xb >= 3);
             this.field_e = stackIn_5_1;
-            stackIn_8_0 = (!this.field_e) ? 127 : 48;
-            var2_int = stackIn_8_0;
-            var29 = new byte[6][4096];
-            var27 = new byte[6][4096];
-            var28 = new byte[6][4096];
-            var9 = 0;
-            for (var14 = 0; 64 > var14; var14++) {
-              for (var15 = 0; var15 < 64; var15++) {
-                var12 = (float)var14 * 2.0f / 64.0f - 1.0f;
-                var11 = -1.0f + (float)var15 * 2.0f / 64.0f;
-                var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + 1.0f))));
+            int stackIn_8_0 = (!this.field_e) ? 127 : 48;
+            int var2_int = stackIn_8_0;
+            byte[][] var29 = new byte[6][4096];
+            byte[][] var27 = new byte[6][4096];
+            byte[][] var28 = new byte[6][4096];
+            int var9 = 0;
+            for (int var14 = 0; 64 > var14; var14++) {
+              for (int var15 = 0; var15 < 64; var15++) {
+                float var12 = (float)var14 * 2.0f / 64.0f - 1.0f;
+                float var11 = -1.0f + (float)var15 * 2.0f / 64.0f;
+                float var13 = (float)(1.0 / Math.sqrt((double)(var12 * var12 + (var11 * var11 + 1.0f))));
                 var11 = var11 * var13;
                 var12 = var12 * var13;
-                for (var16 = 0; var16 < 6; var16++) {
+                for (int var16 = 0; var16 < 6; var16++) {
                   if (var16 != 0) {
                     if (var16 != 1) {
                       if (var16 != 2) {
@@ -193,10 +168,10 @@ final class wk extends hh {
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var2 = decompiledCaughtException;
-          stackIn_35_0 = var2;
-          stackIn_35_1 = new StringBuilder().append("wk.<init>(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var2 = decompiledCaughtException;
+          RuntimeException stackIn_35_0 = var2;
+          StringBuilder stackIn_35_1 = new StringBuilder().append("wk.<init>(");
           if (param0 == null) {
             stackIn_36_2 = "null";
           } else {
@@ -249,8 +224,7 @@ final class wk extends hh {
     }
 
     private final void d(byte param0) {
-        int var3;
-        var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_i = new si(this.field_a, 2);
         this.field_i.a((byte) 125, 0);
         this.field_a.a(false, 1);
@@ -346,15 +320,13 @@ final class wk extends hh {
     }
 
     final static void c(byte param0) {
-        int var1 = 0;
-        int var1Lifetime1;
         if (RendererManager.field_c >= 224) {
           ve.a((byte) 43, 256);
         } else {
-          var1 = RendererManager.field_c % 32;
+          int var1 = RendererManager.field_c % 32;
           ve.a((byte) 43, -var1 + RendererManager.field_c + 32);
         }
-        var1Lifetime1 = -94 % ((param0 + 73) / 39);
+        int var1Lifetime1 = -94 % ((param0 + 73) / 39);
     }
 
     static {

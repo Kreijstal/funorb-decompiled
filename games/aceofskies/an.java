@@ -47,14 +47,7 @@ final class an {
 
     final IntrusiveNode a(IntrusiveNode param0, int param1) {
         IntrusiveNode var3 = null;
-        RuntimeException var3_ref = null;
-        Object stackIn_5_0 = null;
-        IntrusiveNode stackIn_8_0 = null;
-        IntrusiveNode stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
             var3 = param0;
@@ -63,21 +56,21 @@ final class an {
           }
           if (this.field_c.sentinel == var3) {
             this.field_a = null;
-            stackIn_5_0 = null;
+            Object stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
           }
           if (param1 != 0) {
-            stackIn_8_0 = (IntrusiveNode) null;
+            IntrusiveNode stackIn_8_0 = (IntrusiveNode) null;
             return stackIn_8_0;
           }
           this.field_a = var3.previous;
-          stackIn_10_0 = var3;
+          IntrusiveNode stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_13_0 = var3_ref;
-          stackIn_13_1 = new StringBuilder().append("an.F(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var3_ref;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("an.F(");
           if (param0 == null) {
             stackIn_14_2 = "null";
           } else {
@@ -110,13 +103,7 @@ final class an {
 
     final IntrusiveNode a(int param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
-        RuntimeException var3_ref = null;
-        Object stackIn_8_0 = null;
-        IntrusiveNode stackIn_10_0 = null;
-        RuntimeException stackIn_13_0 = null;
-        StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
-        RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 40) {
             field_b = (IntrusiveDeque) null;
@@ -128,17 +115,17 @@ final class an {
           }
           if (var3 == this.field_c.sentinel) {
             this.field_a = null;
-            stackIn_8_0 = null;
+            Object stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
           }
           this.field_a = var3.next;
-          stackIn_10_0 = var3;
+          IntrusiveNode stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var3_ref = decompiledCaughtException;
-          stackIn_13_0 = var3_ref;
-          stackIn_13_1 = new StringBuilder().append("an.A(").append(param0).append(',');
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var3_ref = decompiledCaughtException;
+          RuntimeException stackIn_13_0 = var3_ref;
+          StringBuilder stackIn_13_1 = new StringBuilder().append("an.A(").append(param0).append(',');
           if (param1 == null) {
             stackIn_14_2 = "null";
           } else {

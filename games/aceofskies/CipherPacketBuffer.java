@@ -19,9 +19,8 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final void writeCipheredOpcode(int obfuscationGuard, int opcode) {
-        int fieldTemp$0 = 0;
         if (obfuscationGuard >= 35) {
-          fieldTemp$0 = this.position;
+          int fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)(this.field_l.b(256) + opcode);
           return;
@@ -29,30 +28,23 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final void a(byte[] param0, int param1, int param2, boolean param3) {
-        int var5_int = 0;
-        int fieldTemp$0 = 0;
-        RuntimeException stackIn_9_0 = null;
-        StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var5 = null;
-        int var6 = 0;
-        var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param3) {
             field_o = 102L;
           }
-          for (var5_int = 0; param1 > var5_int; var5_int++) {
-            fieldTemp$0 = this.position;
+          for (int var5_int = 0; param1 > var5_int; var5_int++) {
+            int fieldTemp$0 = this.position;
             this.position = this.position + 1;
             param0[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_l.b(256));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var5 = decompiledCaughtException;
-          stackIn_9_0 = var5;
-          stackIn_9_1 = new StringBuilder().append("dl.E(");
+          RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
+          RuntimeException var5 = decompiledCaughtException;
+          RuntimeException stackIn_9_0 = var5;
+          StringBuilder stackIn_9_1 = new StringBuilder().append("dl.E(");
           if (param0 == null) {
             stackIn_10_2 = "null";
           } else {
@@ -79,18 +71,9 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final static String k(byte param0) {
-        int var2 = 0;
-        String var1;
-        int var3;
-        int var4;
-        int var5;
-        String var6;
-        String var7;
-        String var8;
-        String var1Lifetime1;
-        var5 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var6 = "(" + ScoreSubmission.field_l + " " + kg.field_b + " " + hi.field_w + ") " + qs.field_b;
-        var1 = var6;
+        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        String var6 = "(" + ScoreSubmission.field_l + " " + kg.field_b + " " + hi.field_w + ") " + qs.field_b;
+        String var1 = var6;
         if (ag.field_s <= 0) {
           if (param0 == 65) {
             return var1;
@@ -98,12 +81,12 @@ final class CipherPacketBuffer extends PacketBuffer {
           CipherPacketBuffer.k((byte) -78);
           return var1;
         }
-        var1Lifetime1 = var6 + ":";
-        for (var2 = 0; ag.field_s > var2; var2++) {
-          var7 = var1Lifetime1 + ' ';
+        String var1Lifetime1 = var6 + ":";
+        for (int var2 = 0; ag.field_s > var2; var2++) {
+          String var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
-          var3 = IntKeyLookup.incomingPacket.payload[var2] & 255;
-          var4 = var3 >> 4;
+          int var3 = IntKeyLookup.incomingPacket.payload[var2] & 255;
+          int var4 = var3 >> 4;
           if (var4 >= 10) {
             var4 += 55;
           } else {
@@ -115,7 +98,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             var3 += 48;
           }
-          var8 = var7 + (char)var4;
+          String var8 = var7 + (char)var4;
           var1Lifetime1 = var8 + (char)var3;
         }
         if (param0 == 65) {
@@ -142,9 +125,8 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final int j(byte param0) {
-        int fieldTemp$0 = 0;
         if (param0 <= -1) {
-          fieldTemp$0 = this.position;
+          int fieldTemp$0 = this.position;
           this.position = this.position + 1;
           return 255 & this.payload[fieldTemp$0] - this.field_l.b(256);
         }
@@ -155,7 +137,6 @@ final class CipherPacketBuffer extends PacketBuffer {
     }
 
     final int b(byte param0, int param1) {
-        int incrementValue$0 = 0;
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var3 = this.field_q >> 3;
         int var4 = 8 - (this.field_q & 7);
@@ -163,7 +144,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_q = this.field_q + param1;
         int var5 = 0;
         while (param1 > var4) {
-          incrementValue$0 = var3;
+          int incrementValue$0 = var3;
           var3++;
           var5 = var5 + ((IntrusiveDeque.field_f[var4] & this.payload[incrementValue$0]) << param1 - var4);
           param1 = param1 - var4;

@@ -53,12 +53,11 @@ final class dm implements ti {
     }
 
     public final void a(int param0, int param1) {
-        int var4 = 0;
         int var3 = 0;
         this.field_a = this.field_e.field_c * param1;
         if (this.field_a <= this.field_b) {
         } else {
-          var4 = 8;
+          int var4 = 8;
           if (this.field_c) {
             var4 = var4 | 512;
             var3 = 0;
