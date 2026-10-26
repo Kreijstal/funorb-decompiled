@@ -430,231 +430,230 @@ final class MenuScreen {
         }
         {
           int var5 = var4;
-          if (var5 != 0) {
-            switch (var5) {
-              case 1:
-                if (this.input.isActivated((byte) 114)) {
-                  Bullet.requestMenu((byte) 33, -1, pointerSelection);
-                  sg.flightSession.resumeGame(-112);
-                  co.returnMenuId = 0;
-                }
-                break;
-              case 16:
-                if (this.input.isActivated((byte) 120)) {
-                  Bullet.requestMenu((byte) -117, 0, pointerSelection);
-                  r.field_n = 0;
-                  hg.field_D = 0;
-                  sb.field_c.clear(268435455);
-                }
-                break;
-              case 14:
-                if (this.input.isActivated((byte) 127)) {
-                  Bullet.requestMenu((byte) 98, 4, pointerSelection);
+          switch (var5) {
+            case 0: {
+                if (this.input.isActivated((byte) 84)) {
+                  sg.flightSession.startGame(101, false);
+                  Bullet.requestMenu((byte) -96, -1, pointerSelection);
                   co.returnMenuId = this.screenId;
                 }
-                break;
-              case 3:
-                if (this.input.isActivated((byte) 82)) {
-                  vq.instructionPage = 0;
-                  Bullet.requestMenu((byte) -94, 3, pointerSelection);
-                  co.returnMenuId = this.screenId;
+              }
+              break;
+
+            case 1:
+              if (this.input.isActivated((byte) 114)) {
+                Bullet.requestMenu((byte) 33, -1, pointerSelection);
+                sg.flightSession.resumeGame(-112);
+                co.returnMenuId = 0;
+              }
+              break;
+            case 16:
+              if (this.input.isActivated((byte) 120)) {
+                Bullet.requestMenu((byte) -117, 0, pointerSelection);
+                r.field_n = 0;
+                hg.field_D = 0;
+                sb.field_c.clear(268435455);
+              }
+              break;
+            case 14:
+              if (this.input.isActivated((byte) 127)) {
+                Bullet.requestMenu((byte) 98, 4, pointerSelection);
+                co.returnMenuId = this.screenId;
+              }
+              break;
+            case 3:
+              if (this.input.isActivated((byte) 82)) {
+                vq.instructionPage = 0;
+                Bullet.requestMenu((byte) -94, 3, pointerSelection);
+                co.returnMenuId = this.screenId;
+              }
+              break;
+            case 6:
+              if (this.input.isActivated((byte) 104)) {
+                Bullet.requestMenu((byte) -80, co.returnMenuId, pointerSelection);
+              }
+              break;
+            case 12:
+              if (this.input.isHomePressed(55)) {
+                rt.b(0, (byte) -117);
+                lq.a(fd.field_b[3], 110);
+              }
+              if (this.input.isEndPressed(-99)) {
+                rt.b(256, (byte) 59);
+                lq.a(fd.field_b[3], obfuscationGuard ^ -10);
+              }
+              if (this.input.isLeftPressed(-78)) {
+                r.e(obfuscationGuard - 14601);
+                lq.a(fd.field_b[3], 70);
+              }
+              if (this.input.isRightPressed((byte) -102)) {
+                dq.a((byte) -2);
+                lq.a(fd.field_b[3], -126);
+              }
+              if (this.input.isPointerHeld((byte) 98)) {
+                var5 = 137 + oq.field_K;
+                var6 = (this.getItemLeft(itemIndex, obfuscationGuard + 197) + this.getItemRight(obfuscationGuard + 121, itemIndex) - var5 >> 1) + oq.field_K + 8;
+                var7 = ic.field_b - var6 << 1;
+                if (var7 <= 0) {
+                  rt.b(0, (byte) 70);
+                } else if (256 <= var7) {
+                  rt.b(256, (byte) -114);
+                } else {
+                  rt.b(var7, (byte) -123);
                 }
-                break;
-              case 6:
-                if (this.input.isActivated((byte) 104)) {
-                  Bullet.requestMenu((byte) -80, co.returnMenuId, pointerSelection);
+                if (!(this.soundPreviewCooldown > 0)) {
+                  lq.a(fd.field_b[3], 81);
+                  this.soundPreviewCooldown = 10;
                 }
-                break;
-              case 12:
-                if (this.input.isHomePressed(55)) {
-                  rt.b(0, (byte) -117);
-                  lq.a(fd.field_b[3], 110);
-                }
-                if (this.input.isEndPressed(-99)) {
-                  rt.b(256, (byte) 59);
-                  lq.a(fd.field_b[3], obfuscationGuard ^ -10);
-                }
-                if (this.input.isLeftPressed(-78)) {
-                  r.e(obfuscationGuard - 14601);
-                  lq.a(fd.field_b[3], 70);
-                }
-                if (this.input.isRightPressed((byte) -102)) {
-                  dq.a((byte) -2);
-                  lq.a(fd.field_b[3], -126);
-                }
-                if (this.input.isPointerHeld((byte) 98)) {
-                  var5 = 137 + oq.field_K;
-                  var6 = (this.getItemLeft(itemIndex, obfuscationGuard + 197) + this.getItemRight(obfuscationGuard + 121, itemIndex) - var5 >> 1) + oq.field_K + 8;
-                  var7 = ic.field_b - var6 << 1;
-                  if (var7 <= 0) {
-                    rt.b(0, (byte) 70);
-                  } else if (256 <= var7) {
-                    rt.b(256, (byte) -114);
-                  } else {
-                    rt.b(var7, (byte) -123);
-                  }
-                  if (!(this.soundPreviewCooldown > 0)) {
-                    lq.a(fd.field_b[3], 81);
-                    this.soundPreviewCooldown = 10;
-                  }
-                }
-                break;
-              case 13:
-                if (this.input.isHomePressed(obfuscationGuard + 50)) {
+              }
+              break;
+            case 13:
+              if (this.input.isHomePressed(obfuscationGuard + 50)) {
+                ve.a((byte) 43, 0);
+              }
+              if (this.input.isEndPressed(-39)) {
+                ve.a((byte) 43, 256);
+              }
+              if (this.input.isLeftPressed(obfuscationGuard - 11)) {
+                lj.a(100);
+              }
+              if (this.input.isRightPressed((byte) -102)) {
+                wk.c((byte) -118);
+              }
+              if (this.input.isPointerHeld((byte) 119)) {
+                var5 = 128 + oq.field_K + 9;
+                var6 = (-var5 + this.getItemLeft(itemIndex, 200) + this.getItemRight(obfuscationGuard ^ 124, itemIndex) >> 1) - (-oq.field_K - 8);
+                var7 = ic.field_b - var6 << 1;
+                if (var7 <= 0) {
                   ve.a((byte) 43, 0);
-                }
-                if (this.input.isEndPressed(-39)) {
+                } else if (var7 < 256) {
+                  ve.a((byte) 43, var7);
+                } else {
                   ve.a((byte) 43, 256);
                 }
-                if (this.input.isLeftPressed(obfuscationGuard - 11)) {
-                  lj.a(100);
-                }
-                if (this.input.isRightPressed((byte) -102)) {
-                  wk.c((byte) -118);
-                }
-                if (this.input.isPointerHeld((byte) 119)) {
-                  var5 = 128 + oq.field_K + 9;
-                  var6 = (-var5 + this.getItemLeft(itemIndex, 200) + this.getItemRight(obfuscationGuard ^ 124, itemIndex) >> 1) - (-oq.field_K - 8);
-                  var7 = ic.field_b - var6 << 1;
-                  if (var7 <= 0) {
-                    ve.a((byte) 43, 0);
-                  } else if (var7 < 256) {
-                    ve.a((byte) 43, var7);
-                  } else {
-                    ve.a((byte) 43, 256);
+              }
+              break;
+            case 4:
+              if (!this.input.isActivated((byte) 126)) {
+                break;
+              }
+              if (jf.field_a != null) {
+                tt.b(-32546);
+                break;
+              }
+              ql.a((byte) -103, pointerSelection);
+              break;
+            case 8:
+              if (!this.input.isActivated((byte) 124)) {
+                break;
+              }
+              oc.highscoreView = 0;
+              break;
+            case 9:
+              if (!this.input.isActivated((byte) 88)) {
+                break;
+              }
+              oc.highscoreView = 1;
+              break;
+            case 10:
+              if (!this.input.isActivated((byte) 87)) {
+                break;
+              }
+              oc.highscoreView = 2;
+              break;
+            case 15:
+              if (this.input.isActivated((byte) 97)) {
+                if (this.screenId != 4 &&
+                  this.screenId != 2) {
+                  if (this.screenId != 6) {
+                    break;
                   }
+                  int stackIn_127_0 = obfuscationGuard + 25365;
+                  int stackIn_127_1 = 6;
+                  if (0 == r.field_n) {
+                    stackIn_128_2 = 2;
+                  } else {
+                    stackIn_128_2 = 5;
+                  }
+                  nf.a(stackIn_127_0, stackIn_127_1, stackIn_128_2);
+                  break;
                 }
+                nf.a(25368, this.screenId, this.screenId);
+              }
+              break;
+            case 11:
+              if (!this.input.isActivated((byte) 113)) {
                 break;
-              default:
-                switch (var5) {
-                  case 4:
-                    if (!this.input.isActivated((byte) 126)) {
-                      break;
-                    }
-                    if (jf.field_a != null) {
-                      tt.b(-32546);
-                      break;
-                    }
-                    ql.a((byte) -103, pointerSelection);
-                    break;
-                  case 8:
-                    if (!this.input.isActivated((byte) 124)) {
-                      break;
-                    }
-                    oc.highscoreView = 0;
-                    break;
-                  case 9:
-                    if (!this.input.isActivated((byte) 88)) {
-                      break;
-                    }
-                    oc.highscoreView = 1;
-                    break;
-                  case 10:
-                    if (!this.input.isActivated((byte) 87)) {
-                      break;
-                    }
-                    oc.highscoreView = 2;
-                    break;
-                  case 15:
-                    if (this.input.isActivated((byte) 97)) {
-                      if (this.screenId != 4 &&
-                        this.screenId != 2) {
-                        if (this.screenId != 6) {
-                          break;
-                        }
-                        int stackIn_127_0 = obfuscationGuard + 25365;
-                        int stackIn_127_1 = 6;
-                        if (0 == r.field_n) {
-                          stackIn_128_2 = 2;
-                        } else {
-                          stackIn_128_2 = 5;
-                        }
-                        nf.a(stackIn_127_0, stackIn_127_1, stackIn_128_2);
-                        break;
-                      }
-                      nf.a(25368, this.screenId, this.screenId);
-                    }
-                    break;
-                  case 11:
-                    if (!this.input.isActivated((byte) 113)) {
-                      break;
-                    }
-                    if (jf.field_a != null) {
-                      tt.b(-32546);
-                    }
-                    rr.a((byte) -56, bm.m(obfuscationGuard + 106));
-                    break;
-                  case 20:
-                    if (!this.input.isActivated((byte) 106)) {
-                      break;
-                    }
-                    ql.activeHighscoreQuery = null;
-                    cs.highscoreMode = 1;
-                    break;
-                  default:
-                    break;
-                  case 21:
-                    if (this.input.isActivated((byte) 110)) {
-                      cs.highscoreMode = 0;
-                      ql.activeHighscoreQuery = null;
-                    }
-                    break;
-                  case 17:
-                    if (this.input.isActivated((byte) 112) &&
-                      this.isItemEnabled(itemIndex, (byte) -17)) {
-                      vq.instructionPage = vq.instructionPage + 1;
-                      if (this.isItemEnabled(itemIndex, (byte) -17)) {
-                        break;
-                      }
-                      this.input.selectedIndex = 0;
-                    }
-                    break;
-                  case 18:
-                    if (this.input.isActivated((byte) 101)) {
-                      if (!this.isItemEnabled(itemIndex, (byte) -17)) {
-                        break;
-                      }
-                      vq.instructionPage = vq.instructionPage - 1;
-                      if (!this.isItemEnabled(itemIndex, (byte) -17)) {
-                        this.input.selectedIndex = 2;
-                      }
-                    }
-                    break;
-                  case 7:
-                    if (this.input.isActivated((byte) 82)) {
-                      sg.flightSession.finishGame(pointerSelection, false, 100);
-                    }
-                    break;
+              }
+              if (jf.field_a != null) {
+                tt.b(-32546);
+              }
+              rr.a((byte) -56, bm.m(obfuscationGuard + 106));
+              break;
+            case 20:
+              if (!this.input.isActivated((byte) 106)) {
+                break;
+              }
+              ql.activeHighscoreQuery = null;
+              cs.highscoreMode = 1;
+              break;
+            default:
+              break;
+            case 21:
+              if (this.input.isActivated((byte) 110)) {
+                cs.highscoreMode = 0;
+                ql.activeHighscoreQuery = null;
+              }
+              break;
+            case 17:
+              if (this.input.isActivated((byte) 112) &&
+                this.isItemEnabled(itemIndex, (byte) -17)) {
+                vq.instructionPage = vq.instructionPage + 1;
+                if (this.isItemEnabled(itemIndex, (byte) -17)) {
+                  break;
                 }
-                break;
-              case 2:
-                if (this.input.isActivated((byte) 98)) {
-                  Bullet.requestMenu((byte) 90, 2, pointerSelection);
+                this.input.selectedIndex = 0;
+              }
+              break;
+            case 18:
+              if (this.input.isActivated((byte) 101)) {
+                if (!this.isItemEnabled(itemIndex, (byte) -17)) {
+                  break;
                 }
-                break;
-              case 5:
-                if (this.input.isActivated((byte) 86)) {
-                  Bullet.requestMenu((byte) 115, 0, pointerSelection);
+                vq.instructionPage = vq.instructionPage - 1;
+                if (!this.isItemEnabled(itemIndex, (byte) -17)) {
+                  this.input.selectedIndex = 2;
                 }
-                break;
-              case 22:
-                if (this.input.isActivated((byte) 81)) {
-                  Bullet.requestMenu((byte) 122, 7, pointerSelection);
-                  co.returnMenuId = 0;
-                }
-                break;
-              case 19:
-                if (this.input.isActivated((byte) 104)) {
-                  sg.flightSession.startGame(61, true);
-                  Bullet.requestMenu((byte) 78, -1, pointerSelection);
-                  co.returnMenuId = this.screenId;
-                }
-                break;
-            }
-          } else if (this.input.isActivated((byte) 84)) {
-            sg.flightSession.startGame(101, false);
-            Bullet.requestMenu((byte) -96, -1, pointerSelection);
-            co.returnMenuId = this.screenId;
+              }
+              break;
+            case 7:
+              if (this.input.isActivated((byte) 82)) {
+                sg.flightSession.finishGame(pointerSelection, false, 100);
+              }
+              break;
+            case 2:
+              if (this.input.isActivated((byte) 98)) {
+                Bullet.requestMenu((byte) 90, 2, pointerSelection);
+              }
+              break;
+            case 5:
+              if (this.input.isActivated((byte) 86)) {
+                Bullet.requestMenu((byte) 115, 0, pointerSelection);
+              }
+              break;
+            case 22:
+              if (this.input.isActivated((byte) 81)) {
+                Bullet.requestMenu((byte) 122, 7, pointerSelection);
+                co.returnMenuId = 0;
+              }
+              break;
+            case 19:
+              if (this.input.isActivated((byte) 104)) {
+                sg.flightSession.startGame(61, true);
+                Bullet.requestMenu((byte) 78, -1, pointerSelection);
+                co.returnMenuId = this.screenId;
+              }
+              break;
           }
         }
     }

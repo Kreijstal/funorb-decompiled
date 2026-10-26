@@ -413,20 +413,20 @@
         "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
         "subdirectory": "games/aceofskies"
       },
-      "inputTreeSha256": "ff8029336a9003b26b4599bd93761a29087ebd4684be3e53bff62e5afb497c50",
+      "inputTreeSha256": "60df64cb8777cedd624f2a19538f56e985220335834fde606240a7f310f9d19f",
       "sources": {
         "files": 545,
-        "sha256": "3b3798b9c23bc7678f193ce71aaa0a47a49506a3dda3709a92a039c9cf12b884"
+        "sha256": "07f6468c1f03bb94a783a3c95271680456bbeabc8f202d3da82dbe0e21bdac17"
       },
       "dictionary": {
         "path": "decompilation/aceofskies-naming.json",
-        "sha256": "1ab0660d5412b4e745abf0eba202809aa13b781161bd4631083dd7e6266d4d5f"
+        "sha256": "9a2f334e85246c25538da5c02c02357c27eb80182b4b4dd2edead53578d501ed"
       },
       "readingGuide": {
         "path": "games/aceofskies/README.md",
-        "sha256": "f9603c69edc246090b89a4e1d3ca68809d7546a22474f83a896d5a5f952efeb2"
+        "sha256": "6ac2b89c51a37d504f076abb3c93aebf0399e98582c74f1bcf94759ef292eb20"
       },
-      "rulesSha256": "51a7c4176824237030002ab65e63aab516581b0748f86d506f7a7fdbd99d9277",
+      "rulesSha256": "f6e33941d58f2dfef803ba72b50a48d4d86dca7b939f758bd2563fd1338d7cfb",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       },
@@ -4008,14 +4008,14 @@
         },
         "decisionSimplification": {
           "inputTreeSha256": "3af47f30dc0e5eb8c27a0fff807947ac9c909542288e9e20d4195713e1f6d4c1",
-          "outputTreeSha256": "ff8029336a9003b26b4599bd93761a29087ebd4684be3e53bff62e5afb497c50",
+          "outputTreeSha256": "60df64cb8777cedd624f2a19538f56e985220335834fde606240a7f310f9d19f",
           "filesChecked": 545,
           "filesChanged": 96,
           "bodiesSimplified": 159,
-          "dispatchesRecovered": 1,
+          "dispatchesRecovered": 3,
           "predicatesSimplified": 405,
-          "predicateGroupsRemoved": 1117,
-          "elseIfBlocksRemoved": 701,
+          "predicateGroupsRemoved": 1115,
+          "elseIfBlocksRemoved": 700,
           "frameCleanups": 6,
           "deterministic": true,
           "idempotent": true,
@@ -4607,12 +4607,12 @@
             {
               "file": "nk.java",
               "inputSha256": "f30411aa3ccb6a71d82538de446a0a774ea4bd3b94e3328d2f7697f02ee038ec",
-              "outputSha256": "a69ed30e936a29bf2c1a0157212fb06a574d1d6e4923b135dd7663960d2f14b9",
+              "outputSha256": "0a6282d3efdcb01359870603f8b55379caf21d164a668e33f113ef6a040c416a",
               "bodiesSimplified": 5,
-              "dispatchesRecovered": 1,
+              "dispatchesRecovered": 3,
               "predicatesSimplified": 8,
-              "predicateGroupsRemoved": 35,
-              "elseIfBlocksRemoved": 14,
+              "predicateGroupsRemoved": 33,
+              "elseIfBlocksRemoved": 13,
               "frameCleanups": 6
             },
             {
@@ -5080,8 +5080,8 @@
           ]
         },
         "compiler": {
-          "commit": "db84e4b7fc6a827bcc33d5088b97eba62309fcca",
-          "sourceArchiveSha256": "904a8599bc6aceec30adf238e452b48db13230e4652c81a1ed6f410c680570eb"
+          "commit": "d8d22dc8e36ea98547680dabd88cfee3eb58f410",
+          "sourceArchiveSha256": "d147463398f051849a8d707017f786f963f0b4d3d1904862a02f9d2252504308"
         },
         "bytecode": {
           "sourceUrl": "https://static.alterorb.net/launcher/v3/jars/aceofskies.jar",
@@ -5249,7 +5249,7 @@
         },
         "publishedSources": {
           "files": 545,
-          "sha256": "3b3798b9c23bc7678f193ce71aaa0a47a49506a3dda3709a92a039c9cf12b884"
+          "sha256": "07f6468c1f03bb94a783a3c95271680456bbeabc8f202d3da82dbe0e21bdac17"
         }
       },
       "arcanistsmulti": {
