@@ -61,12 +61,12 @@ final class fp extends IntrusiveNode {
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         if (param0 >= 21) {
           qk.a((byte) -92);
-          vp.a(param4, param1, param3, param2);
+          SoftwareRasterizer.intersectClip(param4, param1, param3, param2);
           return;
         }
         field_g = -99;
         qk.a((byte) -92);
-        vp.a(param4, param1, param3, param2);
+        SoftwareRasterizer.intersectClip(param4, param1, param3, param2);
     }
 
     private fp() throws Throwable {

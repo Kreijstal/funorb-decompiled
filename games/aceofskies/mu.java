@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mu extends BitmapFont {
+final class mu extends RendererBitmapFont {
     private wl field_f;
     private si field_g;
     private boolean field_e;
@@ -71,7 +71,7 @@ final class mu extends BitmapFont {
         }
     }
 
-    mu(wl param0, vs param1, vd[] param2, boolean param3) {
+    mu(wl param0, BitmapFontMetrics param1, vd[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

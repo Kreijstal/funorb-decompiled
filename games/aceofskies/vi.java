@@ -356,10 +356,10 @@ final class vi extends qm {
             var11 = var7;
             var9 = var11;
             var2 = var9;
-            if (vs.field_g != null) {
+            if (BitmapFontMetrics.field_g != null) {
               try {
-                vs.field_g.a(true, 0L);
-                vs.field_g.a(var10, param0 ^ -13542);
+                BitmapFontMetrics.field_g.a(true, 0L);
+                BitmapFontMetrics.field_g.a(var10, param0 ^ -13542);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var11[var3_int]) {
                     continue;

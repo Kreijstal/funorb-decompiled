@@ -91,7 +91,7 @@ final class sc {
         int stackIn_2_1 = 0;
         int stackIn_2_2 = 0;
         boolean stackIn_3_3 = false;
-        hc stackIn_24_0;
+        BitmapFont stackIn_24_0;
         String stackIn_24_1;
         int stackIn_24_2;
         int stackIn_24_3;
@@ -171,7 +171,7 @@ final class sc {
             } else {
               stackIn_31_8 = this.field_h;
             }
-            ((hc) (Object) stackIn_24_0).a(stackIn_24_1, stackIn_27_2, stackIn_30_3, stackIn_30_4, stackIn_30_5, stackIn_30_6, stackIn_30_7, stackIn_31_8, param3.field_e, param3.field_f, param3.field_k);
+            ((BitmapFont) (Object) stackIn_24_0).drawParagraphAlpha(stackIn_24_1, stackIn_27_2, stackIn_30_3, stackIn_30_4, stackIn_30_5, stackIn_30_6, stackIn_30_7, stackIn_31_8, param3.field_e, param3.field_f, param3.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

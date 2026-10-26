@@ -20,7 +20,7 @@ abstract class pj {
     abstract void a(int param0, java.awt.Graphics param1, int param2, int param3);
 
     final void a(int param0) {
-        vp.a(this.field_e, this.field_c, this.field_b);
+        SoftwareRasterizer.setRasterTarget(this.field_e, this.field_c, this.field_b);
         if (param0 != -12595) {
           field_f = (eg) null;
         }

@@ -34,7 +34,7 @@ final class mg {
         int var5 = 0;
         int var6 = 0;
         bo var2 = fa.a(param0, true);
-        int var3 = 40 + (vs.b(-112) + 40);
+        int var3 = 40 + (BitmapFontMetrics.b(-112) + 40);
         if (param1 != 1150039905) {
           return;
         }
@@ -44,7 +44,7 @@ final class mg {
           var6 = gp.field_w - var4 >> 1;
           param0.d(var4, var3, var6, param1 ^ -1150034421, -65281, var5);
           var2.a(var3 + var5, var5, var4 + var6, var6, param1 ^ 1150039868);
-          param0.SA(0, var6, vp.field_i, var4, vp.field_j, vp.field_i * var6, vp.field_i);
+          param0.SA(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, SoftwareRasterizer.stride * var6, SoftwareRasterizer.stride);
           var2.a(true);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

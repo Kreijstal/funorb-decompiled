@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends BitmapFont {
+final class ig extends RendererBitmapFont {
     private tl field_h;
     private boolean field_g;
     private bf field_f;
@@ -10,7 +10,7 @@ final class ig extends BitmapFont {
     final void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7) {
     }
 
-    ig(bf param0, vs param1, vd[] param2, boolean param3) {
+    ig(bf param0, BitmapFontMetrics param1, vd[] param2, boolean param3) {
         super(param0, param1);
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;

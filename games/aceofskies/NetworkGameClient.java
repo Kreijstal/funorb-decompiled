@@ -67,7 +67,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               wj.e(104);
             }
             if (param2) {
-              vs.field_f = false;
+              BitmapFontMetrics.field_f = false;
             } else {
               var5_intLifetime2 = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), false);
               if (var5_intLifetime2 != -1) {
@@ -362,7 +362,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (!dg.j(27711)) {
           return -1;
         }
-        if (vs.field_f) {
+        if (BitmapFontMetrics.field_f) {
           return -1;
         }
         var2 = pi.a(this.field_E, la.a(4), 0, this.field_r, sa.b(-25752), true);
@@ -376,7 +376,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           rc.c((byte) 124);
           li.a(-2, var2, rp.field_m);
-          vs.field_f = true;
+          BitmapFontMetrics.field_f = true;
           wg.field_b = kh.a(-76) + 15000L;
           return var2;
         }
@@ -473,7 +473,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             rc.c((byte) -110);
             li.a(11, 2, oi.field_b);
             np.b(34066);
-            vs.field_f = true;
+            BitmapFontMetrics.field_f = true;
             wg.field_b = 15000L + kh.a(-105);
           }
         }
@@ -515,7 +515,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               } else {
                 li.a(122, 256, fh.field_f);
               }
-              vs.field_f = true;
+              BitmapFontMetrics.field_f = true;
             }
           } else {
             if (sk.field_a != 3) {
@@ -541,7 +541,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           0 != sk.field_a ||
           dg.j(27711)) &&
           wg.field_b <= kh.a(-119)) {
-          vs.field_f = false;
+          BitmapFontMetrics.field_f = false;
           if (sk.field_a != -1 &&
             0 != sk.field_a) {
             sk.field_a = -1;

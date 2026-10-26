@@ -91,9 +91,9 @@ final class ek extends ab implements dn {
         if (0 != param1) {
           return;
         }
-        hc var5 = qo.field_b;
+        BitmapFont var5 = qo.field_b;
         if (null != this.field_v) {
-          var5.a(r.field_o, param3 + this.field_p, this.field_h + param2, this.field_q, 20, 16777215, -1, 0, 0, var5.field_D + var5.field_I);
+          var5.drawParagraph(r.field_o, param3 + this.field_p, this.field_h + param2, this.field_q, 20, 16777215, -1, 0, 0, var5.maxDescent + var5.maxAscent);
         }
         if (param0 >= 64) {
           return;

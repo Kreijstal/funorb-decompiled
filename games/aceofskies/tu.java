@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tu extends BitmapFont {
+final class tu extends RendererBitmapFont {
     private int[] field_e;
     private int[] field_j;
     private int[] field_g;
@@ -361,7 +361,7 @@ final class tu extends BitmapFont {
         }
     }
 
-    tu(kj param0, vs param1, vd[] param2, int[] param3, int[] param4) {
+    tu(kj param0, BitmapFontMetrics param1, vd[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_f = param0;

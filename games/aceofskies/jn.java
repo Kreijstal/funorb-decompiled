@@ -8,10 +8,10 @@ final class jn extends ab implements dn {
     private oo field_x;
     private String field_z;
     private int field_v;
-    private hc field_w;
+    private BitmapFont field_w;
     private int[] field_A;
 
-    jn(oo param0, hc param1, String param2) {
+    jn(oo param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (ir) null);
         int var4_int = 0;
         this.field_v = 0;
@@ -19,7 +19,7 @@ final class jn extends ab implements dn {
           this.field_x = param0;
           this.field_z = param2;
           this.field_w = param1;
-          var4_int = null != this.field_z ? this.field_w.a(this.field_z, 260, this.field_w.field_I) : 0;
+          var4_int = null != this.field_z ? this.field_w.measureWrappedHeight(this.field_z, 260, this.field_w.maxAscent) : 0;
           this.a(22 + var4_int, 0, 0, 288, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -196,7 +196,7 @@ final class jn extends ab implements dn {
           this.field_y = (mi[]) null;
         }
         super.a((byte) 119, param1, param2, param3);
-        this.field_w.a(this.field_z, this.field_p + param3 + 14, 10 + this.field_h + param2, this.field_q - 28, this.field_n, 16777215, -1, 0, 0, this.field_w.field_I);
+        this.field_w.drawParagraph(this.field_z, this.field_p + param3 + 14, 10 + this.field_h + param2, this.field_q - 28, this.field_n, 16777215, -1, 0, 0, this.field_w.maxAscent);
     }
 
     final void a(int param0, byte param1, String param2) {

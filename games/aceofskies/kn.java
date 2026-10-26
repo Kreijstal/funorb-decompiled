@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kn {
-    static BitmapFont field_a;
+    static RendererBitmapFont field_a;
     static PcmSample[] field_c;
-    static vs field_b;
+    static BitmapFontMetrics field_b;
 
     final static java.awt.Frame a(rk param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
@@ -87,7 +87,7 @@ final class kn {
 
     public static void b(int param0) {
         if (param0 != -1) {
-          field_b = (vs) null;
+          field_b = (BitmapFontMetrics) null;
         }
         field_a = null;
         field_c = null;

@@ -20,7 +20,7 @@ final class ec extends ao {
     static RenderSprite[] field_e;
     private float field_n;
 
-    final static void a(int param0, int param1, ll[] param2, int param3, int param4, hc param5, int param6, ll[] param7, ll[] param8, int param9, int param10, int param11, int param12, int param13, int param14) {
+    final static void a(int param0, int param1, ll[] param2, int param3, int param4, BitmapFont param5, int param6, ll[] param7, ll[] param8, int param9, int param10, int param11, int param12, int param13, int param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -35,8 +35,8 @@ final class ec extends ao {
         RuntimeException var15 = null;
         int var16 = 0;
         try {
-          var15_int = param5.field_C + param5.field_D;
-          var16 = param5.field_C;
+          var15_int = param5.capitalXAscent + param5.maxDescent;
+          var16 = param5.capitalXAscent;
           uu.a(param4, var15_int, param10, -28265, 480, param3, param7, var15_int, var16, param6, param2, param9, param12, param5, param8, param5, var16, param1, param14, param13, param0);
           if (param11 > 17) {
             return;

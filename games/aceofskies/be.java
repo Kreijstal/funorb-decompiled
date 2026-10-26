@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class be extends BitmapFont {
+final class be extends RendererBitmapFont {
     private int[] field_g;
     private byte[][] field_k;
     private int[] field_f;
@@ -199,7 +199,7 @@ final class be extends BitmapFont {
         }
     }
 
-    be(kj param0, vs param1, vd[] param2, int[] param3, int[] param4) {
+    be(kj param0, BitmapFontMetrics param1, vd[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int var6 = 0;
         this.field_h = param0;

@@ -25,7 +25,7 @@ class di extends ou {
     private ll[] field_p;
     private int field_B;
     private ll[] field_L;
-    private hc field_R;
+    private BitmapFont field_R;
     private int field_ab;
     private boolean field_t;
     private int field_r;

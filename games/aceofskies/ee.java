@@ -23,7 +23,7 @@ abstract class ee extends or {
         int var1 = 0;
         int var2 = 0;
         if (param0 == 14) {
-          var1 = vs.b(-99);
+          var1 = BitmapFontMetrics.b(-99);
           var2 = un.e(-121);
           qg.field_d.a(-652, var1 + (ku.field_h << 1), (po.field_j << 1) + var2, pt.field_a - po.field_j, -ku.field_h + ac.field_c);
           qa.b(-37);

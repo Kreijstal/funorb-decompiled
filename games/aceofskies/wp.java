@@ -11,33 +11,33 @@ final class wp extends df {
         int var9Lifetime2;
         param0 = param0 + this.field_e;
         param1 = param1 + this.field_c;
-        int var3 = param0 + param1 * vp.field_i;
+        int var3 = param0 + param1 * SoftwareRasterizer.stride;
         int var4 = 0;
         int var5 = this.field_d;
         int var6 = this.field_b;
-        int var7 = vp.field_i - var6;
+        int var7 = SoftwareRasterizer.stride - var6;
         int var8 = 0;
-        if (param1 < vp.field_f) {
-          var9 = vp.field_f - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var9 = SoftwareRasterizer.clipTop - param1;
           var5 = var5 - var9;
-          param1 = vp.field_f;
+          param1 = SoftwareRasterizer.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * vp.field_i;
+          var3 = var3 + var9 * SoftwareRasterizer.stride;
         }
-        if (param1 + var5 > vp.field_d) {
-          var5 = var5 - (param1 + var5 - vp.field_d);
+        if (param1 + var5 > SoftwareRasterizer.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < vp.field_b) {
-          var9Lifetime1 = vp.field_b - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = vp.field_b;
+          param0 = SoftwareRasterizer.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > vp.field_k) {
-          var9Lifetime2 = param0 + var6 - vp.field_k;
+        if (param0 + var6 > SoftwareRasterizer.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -46,7 +46,7 @@ final class wp extends df {
           var5 <= 0) {
           return;
         }
-        wp.a(vp.field_j, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
+        wp.a(SoftwareRasterizer.framebuffer, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -143,33 +143,33 @@ final class wp extends df {
         int var10Lifetime2;
         param0 = param0 + this.field_e;
         param1 = param1 + this.field_c;
-        int var4 = param0 + param1 * vp.field_i;
+        int var4 = param0 + param1 * SoftwareRasterizer.stride;
         int var5 = 0;
         int var6 = this.field_d;
         int var7 = this.field_b;
-        int var8 = vp.field_i - var7;
+        int var8 = SoftwareRasterizer.stride - var7;
         int var9 = 0;
-        if (param1 < vp.field_f) {
-          var10 = vp.field_f - param1;
+        if (param1 < SoftwareRasterizer.clipTop) {
+          var10 = SoftwareRasterizer.clipTop - param1;
           var6 = var6 - var10;
-          param1 = vp.field_f;
+          param1 = SoftwareRasterizer.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * vp.field_i;
+          var4 = var4 + var10 * SoftwareRasterizer.stride;
         }
-        if (param1 + var6 > vp.field_d) {
-          var6 = var6 - (param1 + var6 - vp.field_d);
+        if (param1 + var6 > SoftwareRasterizer.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer.clipBottom);
         }
-        if (param0 < vp.field_b) {
-          var10Lifetime1 = vp.field_b - param0;
+        if (param0 < SoftwareRasterizer.clipLeft) {
+          var10Lifetime1 = SoftwareRasterizer.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = vp.field_b;
+          param0 = SoftwareRasterizer.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > vp.field_k) {
-          var10Lifetime2 = param0 + var7 - vp.field_k;
+        if (param0 + var7 > SoftwareRasterizer.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -178,7 +178,7 @@ final class wp extends df {
           var6 <= 0) {
           return;
         }
-        wp.b(vp.field_j, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
+        wp.b(SoftwareRasterizer.framebuffer, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
     }
 
     wp(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {

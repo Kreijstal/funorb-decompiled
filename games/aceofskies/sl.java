@@ -15,8 +15,8 @@ class sl extends qm {
         field_o = null;
     }
 
-    sl(hc param0, int param1) {
-        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_I, -1, 2147483647, false);
+    sl(BitmapFont param0, int param1) {
+        super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.maxAscent, -1, 2147483647, false);
     }
 
     final static void c(int param0) {
@@ -27,8 +27,8 @@ class sl extends qm {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        vp.a(var1.field_g, var1.field_f, var1.field_p);
-        vp.e(var1.field_m, var1.field_k, var1.field_i, var1.field_j);
+        SoftwareRasterizer.setRasterTarget(var1.field_g, var1.field_f, var1.field_p);
+        SoftwareRasterizer.setClip(var1.field_m, var1.field_k, var1.field_i, var1.field_j);
         var1.field_g = null;
         pu.field_b.addLast(99, var1);
     }

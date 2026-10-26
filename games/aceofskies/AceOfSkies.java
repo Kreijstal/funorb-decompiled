@@ -132,7 +132,7 @@ public final class AceOfSkies extends NetworkGameClient {
               iq.gameFontMetricsArchive = null;
               hg.sharedSpriteArchive = null;
               wi.gameSpriteArchive = null;
-              ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.field_a, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, nl.field_t, 10, 20);
+              ec.a(10, 10, ka.field_a, 40, hn.field_a, bo.menuBitmapFont, so.field_b, rg.field_F, DualLinkNode.field_h, sh.field_u >> 1, gp.field_w >> 1, 92, nl.field_t, 10, 20);
               te.resetFrameTiming(62);
               return false;
             }
@@ -447,7 +447,7 @@ public final class AceOfSkies extends NetworkGameClient {
           cc.a(obfuscationGuard ^ -19469);
           rq.a(obfuscationGuard ^ 19471);
           qg.a(obfuscationGuard ^ 19558);
-          vp.c();
+          SoftwareRasterizer.c();
           ResourceArchive.c((byte) -73);
           nc.a(480);
           so.a((byte) -108);
@@ -476,8 +476,8 @@ public final class AceOfSkies extends NetworkGameClient {
           wq.b(obfuscationGuard - 34460);
           gh.b(0);
           vf.c((byte) -128);
-          BitmapFont.a(5);
-          vs.a(126);
+          RendererBitmapFont.a(5);
+          BitmapFontMetrics.a(126);
           MidiPcmStream.e(-543142776);
           IntrusiveNodeHashTable.c(82);
           ft.a((byte) 101);
@@ -489,7 +489,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ou.e(108);
           mg.a(0);
           mf.a((byte) -56);
-          hc.a();
+          BitmapFont.releaseTextScratchStorage();
           fd.a((byte) 89);
           mm.a((byte) 104);
           ArchiveIndex.a(0);
@@ -913,7 +913,7 @@ public final class AceOfSkies extends NetworkGameClient {
           var10 = obfuscationControl ? 1 : 0;
           try {
             var2 = fa.a(-8213);
-            vp.a();
+            SoftwareRasterizer.clearFramebuffer();
             var3 = 0;
             if (im.a(true)) {
               pu.a((byte) 21, var2, lh.a((byte) -94));
@@ -957,14 +957,14 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (gi.a(true)) {
               var3 = 1;
-              vp.f(0, 0, vp.field_i, vp.field_c);
+              SoftwareRasterizer.f(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
               ee.c((byte) 14);
             }
             if (0 != bg.field_b) {
               var3 = 1;
               var5_intLifetime1 = 256 * ec.menuTransitionTicks / 40;
               if (var5_intLifetime1 > 0) {
-                vp.b(0, 0, vp.field_i, vp.field_c, 0, var5_intLifetime1);
+                SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, var5_intLifetime1);
               }
             }
             if (jf.a(obfuscationGuard + 14850) &&

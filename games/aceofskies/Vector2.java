@@ -235,7 +235,7 @@ final class Vector2 {
               fb.field_a = MenuInputState.field_h;
             } else {
               while (fb.field_a != MenuInputState.field_h) {
-                var2 = BitmapFont.field_b[MenuInputState.field_h];
+                var2 = RendererBitmapFont.field_b[MenuInputState.field_h];
                 MenuInputState.field_h = 127 & MenuInputState.field_h + 1;
                 if (var2 < 0) {
                   lp.heldKeys[~var2] = false;

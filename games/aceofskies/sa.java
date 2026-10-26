@@ -12,7 +12,7 @@ final class sa {
     int field_e;
     int field_j;
     ir field_n;
-    hc field_b;
+    BitmapFont field_b;
     ir field_c;
     ir field_k;
     int field_i;
@@ -24,11 +24,11 @@ final class sa {
           String var9 = (String) null;
           this.a((String) null, 110, -89, 29);
         }
-        vp.b(param3, param1, param0, param6, param2, param4);
+        SoftwareRasterizer.b(param3, param1, param0, param6, param2, param4);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        vp.f(param3, param1, param2, param5, param0);
+        SoftwareRasterizer.f(param3, param1, param2, param5, param0);
         if (param4 != 13053) {
           this.field_m = true;
         }
@@ -45,22 +45,22 @@ final class sa {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_b.a(param0);
-          var6 = this.field_b.field_C + this.field_b.field_D;
+          var5_int = this.field_b.measureTextWidth(param0);
+          var6 = this.field_b.capitalXAscent + this.field_b.maxDescent;
           var7 = param3;
-          if (vp.field_i < 6 + (var7 + var5_int)) {
-            var7 = vp.field_i - var5_int - 6;
+          if (SoftwareRasterizer.stride < 6 + (var7 + var5_int)) {
+            var7 = SoftwareRasterizer.stride - var5_int - 6;
           }
-          var8 = param2 - (this.field_b.field_C - 32);
-          if (vp.field_c < 6 + var6 + var8) {
-            var8 = -6 + (-var6 + vp.field_c);
+          var8 = param2 - (this.field_b.capitalXAscent - 32);
+          if (SoftwareRasterizer.framebufferHeight < 6 + var6 + var8) {
+            var8 = -6 + (-var6 + SoftwareRasterizer.framebufferHeight);
           }
           if (param1 != -22550) {
             this.field_f = -47;
           }
-          vp.e(var7, var8, 6 + var5_int, 6 + var6, this.field_a);
-          vp.b(1 + var7, 1 + var8, 4 + var5_int, 4 + var6, this.field_j);
-          this.field_b.b(param0, 3 + var7, 3 + var8 + this.field_b.field_C, this.field_a, -1);
+          SoftwareRasterizer.drawRectangle(var7, var8, 6 + var5_int, 6 + var6, this.field_a);
+          SoftwareRasterizer.b(1 + var7, 1 + var8, 4 + var5_int, 4 + var6, this.field_j);
+          this.field_b.drawText(param0, 3 + var7, 3 + var8 + this.field_b.capitalXAscent, this.field_a, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,14 +107,14 @@ final class sa {
           var6 = this.field_o + this.field_l;
           var7 = this.field_i;
           if (var7 == -1) {
-            var7 = this.field_b.field_D + this.field_b.field_I;
+            var7 = this.field_b.maxDescent + this.field_b.maxAscent;
           }
-          var8 = vp.field_i >> 2;
-          var9 = this.field_b.a(param1);
+          var8 = SoftwareRasterizer.stride >> 2;
+          var9 = this.field_b.measureTextWidth(param1);
           if (param3 != 27201) {
             sa.a(51);
           }
-          var10 = this.field_b.field_D + this.field_b.field_I;
+          var10 = this.field_b.maxDescent + this.field_b.maxAscent;
           var11 = 1;
           if (var8 < var9 ||
             param1.indexOf("<br>") != -1) {
@@ -127,27 +127,27 @@ final class sa {
             if (or.field_b == null) {
               or.field_b = new String[16];
             }
-            var11Lifetime1 = this.field_b.a(param1, new int[]{var12}, or.field_b);
+            var11Lifetime1 = this.field_b.wrapText(param1, new int[]{var12}, or.field_b);
             var9 = 0;
             var10 = var10 + var7 * (var11Lifetime1 - 1);
             for (var13Lifetime2 = 0; var11Lifetime1 > var13Lifetime2; var13Lifetime2++) {
-              var14 = this.field_b.a(or.field_b[var13Lifetime2]);
+              var14 = this.field_b.measureTextWidth(or.field_b[var13Lifetime2]);
               if (var14 > var9) {
                 var9 = var14;
               }
             }
           }
           var12 = param0;
-          if (var9 + var12 + var5_int > vp.field_i) {
-            var12 = vp.field_i - (var9 + var5_int);
+          if (var9 + var12 + var5_int > SoftwareRasterizer.stride) {
+            var12 = SoftwareRasterizer.stride - (var9 + var5_int);
           }
-          var13Lifetime1 = 32 + (param2 - this.field_b.field_C);
-          if (var13Lifetime1 + (var10 + var6) > vp.field_c) {
+          var13Lifetime1 = 32 + (param2 - this.field_b.capitalXAscent);
+          if (var13Lifetime1 + (var10 + var6) > SoftwareRasterizer.framebufferHeight) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
-          vp.e(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_d);
-          vp.b(1 + var12, 1 + var13Lifetime1, var9 + var5_int - 2, var6 + var10 - 2, this.field_j);
-          this.field_b.a(param1, var12 + this.field_f, var13Lifetime1 + this.field_o, var9, var10, this.field_a, -1, 0, 0, var7);
+          SoftwareRasterizer.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_d);
+          SoftwareRasterizer.b(1 + var12, 1 + var13Lifetime1, var9 + var5_int - 2, var6 + var10 - 2, this.field_j);
+          this.field_b.drawParagraph(param1, var12 + this.field_f, var13Lifetime1 + this.field_o, var9, var10, this.field_a, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ final class sa {
         }
     }
 
-    final void a(hc param0, int param1) {
+    final void a(BitmapFont param0, int param1) {
         qm var17 = null;
         vi var4 = null;
         ll[] var5 = null;
@@ -187,7 +187,7 @@ final class sa {
         vi var14Lifetime1;
         vi var14Lifetime2;
         try {
-          var17 = new qm(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_D + param0.field_I));
+          var17 = new qm(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.maxDescent + param0.maxAscent));
           var17.field_m = 16777215;
           this.field_k = (ir) ((Object) var17);
           var4 = new vi();

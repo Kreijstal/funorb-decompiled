@@ -8,12 +8,12 @@ final class ff {
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 8) {
-          hc var2 = (hc) null;
-          ff.a(-89, (String) null, (String[]) null, -11, (hc) null);
+          BitmapFont var2 = (BitmapFont) null;
+          ff.a(-89, (String) null, (String[]) null, -11, (BitmapFont) null);
         }
     }
 
-    final static int a(int param0, String param1, String[] param2, int param3, hc param4) {
+    final static int a(int param0, String param1, String[] param2, int param3, BitmapFont param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -41,7 +41,7 @@ final class ff {
         int var6Lifetime1;
         var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var5_int = param4.a(param1);
+          var5_int = param4.measureTextWidth(param1);
           if (param0 >= var5_int &&
             -1 == param1.indexOf("<br>")) {
             param2[0] = param1;
@@ -62,7 +62,7 @@ final class ff {
             if (var10 == 32 ||
               var10 == 45) {
               var11 = param1.substring(var7, 1 + var9).trim();
-              var12 = param4.a(var11);
+              var12 = param4.measureTextWidth(var11);
               if (param0 <= var12) {
                 var7 = 1 + var9;
                 incrementValue$1 = var6Lifetime1;

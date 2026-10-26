@@ -98,7 +98,7 @@ abstract class hr extends or {
             vn.field_f.a(fu.field_d, 0);
           }
           fu.field_d.a(param2, -111, param3, param0);
-          vp.a();
+          SoftwareRasterizer.clearFramebuffer();
           si.a(true, -32106);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "hr.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

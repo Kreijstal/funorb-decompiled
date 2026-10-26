@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vt extends hc {
-    private byte[][] field_K;
+final class MonochromeBitmapFont extends BitmapFont {
+    private byte[][] glyphMasks;
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
@@ -38,8 +38,8 @@ final class vt extends hc {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - vp.field_b;
-        var14 = param3 - vp.field_f;
+        var13 = param2 - SoftwareRasterizer.clipLeft;
+        var14 = param3 - SoftwareRasterizer.clipTop;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -81,7 +81,7 @@ final class vt extends hc {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                vp.field_j[incrementValue$1] = param6;
+                SoftwareRasterizer.framebuffer[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -90,44 +90,44 @@ final class vt extends hc {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int glyphIndex, int x, int y, int width, int height, int color, int alpha256, boolean shadowPass) {
         int var13 = 0;
-        int var9 = param1 + param2 * vp.field_i;
-        int var10 = vp.field_i - param3;
+        int var9 = x + y * SoftwareRasterizer.stride;
+        int var10 = SoftwareRasterizer.stride - width;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < vp.field_f) {
-          var13 = vp.field_f - param2;
-          param4 = param4 - var13;
-          param2 = vp.field_f;
-          var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * vp.field_i;
+        if (y < SoftwareRasterizer.clipTop) {
+          var13 = SoftwareRasterizer.clipTop - y;
+          height = height - var13;
+          y = SoftwareRasterizer.clipTop;
+          var12 = var12 + var13 * width;
+          var9 = var9 + var13 * SoftwareRasterizer.stride;
         }
-        if (param2 + param4 > vp.field_d) {
-          param4 = param4 - (param2 + param4 - vp.field_d);
+        if (y + height > SoftwareRasterizer.clipBottom) {
+          height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < vp.field_b) {
-          var13Lifetime1 = vp.field_b - param1;
-          param3 = param3 - var13Lifetime1;
-          param1 = vp.field_b;
+        if (x < SoftwareRasterizer.clipLeft) {
+          var13Lifetime1 = SoftwareRasterizer.clipLeft - x;
+          width = width - var13Lifetime1;
+          x = SoftwareRasterizer.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > vp.field_k) {
-          var13Lifetime2 = param1 + param3 - vp.field_k;
-          param3 = param3 - var13Lifetime2;
+        if (x + width > SoftwareRasterizer.clipRight) {
+          var13Lifetime2 = x + width - SoftwareRasterizer.clipRight;
+          width = width - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
         }
-        if (param3 <= 0 ||
-          param4 <= 0) {
+        if (width <= 0 ||
+          height <= 0) {
           return;
         }
-        vt.a(vp.field_j, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
     }
 
     final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -172,13 +172,13 @@ final class vt extends hc {
         }
     }
 
-    vt(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
-        super(param0, param1, param2, param3, param4);
-        this.field_K = new byte[256][];
-        this.field_K = param5;
+    MonochromeBitmapFont(byte[] encodedMetrics, int[] glyphXOffsets, int[] glyphYOffsets, int[] glyphWidths, int[] glyphHeights, byte[][] glyphMasks) {
+        super(encodedMetrics, glyphXOffsets, glyphYOffsets, glyphWidths, glyphHeights);
+        this.glyphMasks = new byte[256][];
+        this.glyphMasks = glyphMasks;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int glyphIndex, int x, int y, int width, int height, int color, boolean shadowPass) {
         int var8;
         int var9;
         int var10;
@@ -186,41 +186,41 @@ final class vt extends hc {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * vp.field_i;
-        var9 = vp.field_i - param3;
+        var8 = x + y * SoftwareRasterizer.stride;
+        var9 = SoftwareRasterizer.stride - width;
         var10 = 0;
         var11 = 0;
-        if (param2 < vp.field_f) {
-          var12 = vp.field_f - param2;
-          param4 = param4 - var12;
-          param2 = vp.field_f;
-          var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * vp.field_i;
+        if (y < SoftwareRasterizer.clipTop) {
+          var12 = SoftwareRasterizer.clipTop - y;
+          height = height - var12;
+          y = SoftwareRasterizer.clipTop;
+          var11 = var11 + var12 * width;
+          var8 = var8 + var12 * SoftwareRasterizer.stride;
         }
-        if (param2 + param4 > vp.field_d) {
-          param4 = param4 - (param2 + param4 - vp.field_d);
+        if (y + height > SoftwareRasterizer.clipBottom) {
+          height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < vp.field_b) {
-          var12Lifetime1 = vp.field_b - param1;
-          param3 = param3 - var12Lifetime1;
-          param1 = vp.field_b;
+        if (x < SoftwareRasterizer.clipLeft) {
+          var12Lifetime1 = SoftwareRasterizer.clipLeft - x;
+          width = width - var12Lifetime1;
+          x = SoftwareRasterizer.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > vp.field_k) {
-          var12Lifetime2 = param1 + param3 - vp.field_k;
-          param3 = param3 - var12Lifetime2;
+        if (x + width > SoftwareRasterizer.clipRight) {
+          var12Lifetime2 = x + width - SoftwareRasterizer.clipRight;
+          width = width - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
-        if (param3 > 0 &&
-          param4 > 0) {
-          if (vp.field_h == null) {
-            vt.a(vp.field_j, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
+        if (width > 0 &&
+          height > 0) {
+          if (SoftwareRasterizer.scanlineMaskStarts == null) {
+            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], color, var11, var8, width, height, var9, var10);
           } else {
-            vt.a(vp.field_j, this.field_K[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, vp.field_h, vp.field_a);
+            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphMasks[glyphIndex], x, y, width, height, color, var11, var8, var9, var10, SoftwareRasterizer.scanlineMaskStarts, SoftwareRasterizer.scanlineMaskWidths);
           }
           return;
         }

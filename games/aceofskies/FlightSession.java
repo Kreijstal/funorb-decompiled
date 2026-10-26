@@ -37,7 +37,7 @@ final class FlightSession {
     private int lightningRandomBound;
     private ScreenParticle[] screenParticles;
     private int bulletCount;
-    static hc field_e;
+    static BitmapFont field_e;
     private int displayedTemporaryWeaponTicks;
     private int[] upgradeFlashTicks;
     private ScorchMark[] scorchMarks;
@@ -1765,7 +1765,7 @@ final class FlightSession {
         RuntimeException var1 = null;
         try {
           if (obfuscationGuard != 32458) {
-            field_e = (hc) null;
+            field_e = (BitmapFont) null;
           }
           rendererManager = null;
           field_e = null;

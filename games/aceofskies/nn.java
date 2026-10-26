@@ -38,24 +38,24 @@ final class nn {
         RuntimeException var5 = null;
         var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          vp.b(param2, param0, param3 + 1, 10000536);
-          vp.b(param2, param4 + param0, param3 + 1, 12105912);
+          SoftwareRasterizer.drawHorizontalLine(param2, param0, param3 + 1, 10000536);
+          SoftwareRasterizer.drawHorizontalLine(param2, param4 + param0, param3 + 1, 12105912);
           var5_int = 1;
           if (param1 != 70) {
             return;
           }
           var6 = param4;
-          if (var5_int + param0 < vp.field_f) {
-            var5_int = vp.field_f - param0;
+          if (var5_int + param0 < SoftwareRasterizer.clipTop) {
+            var5_int = SoftwareRasterizer.clipTop - param0;
           }
-          if (var6 + param0 > vp.field_d) {
-            var6 = -param0 + vp.field_d;
+          if (var6 + param0 > SoftwareRasterizer.clipBottom) {
+            var6 = -param0 + SoftwareRasterizer.clipBottom;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + var7 * 48 / param4;
             var9 = var8 << 8 | var8 << 16 | var8;
-            vp.field_j[param2 + vp.field_i * (var7 + param0)] = var9;
-            vp.field_j[param3 + param2 + (param0 + var7) * vp.field_i] = var9;
+            SoftwareRasterizer.framebuffer[param2 + SoftwareRasterizer.stride * (var7 + param0)] = var9;
+            SoftwareRasterizer.framebuffer[param3 + param2 + (param0 + var7) * SoftwareRasterizer.stride] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

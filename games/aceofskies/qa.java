@@ -121,10 +121,10 @@ final class qa {
               var1_int = var1_int + as.field_c;
             }
             if (var4 >= 0) {
-              FlightSession.field_e.b(var6, var8Lifetime1, ke.field_b + var1_int, var5, -1);
+              FlightSession.field_e.drawText(var6, var8Lifetime1, ke.field_b + var1_int, var5, -1);
               var1_int = var1_int + (pp.field_a + as.field_c + lp.field_h);
             } else {
-              nh.field_c.b(var6, var8Lifetime1, tf.field_b + var1_int, var5, -1);
+              nh.field_c.drawText(var6, var8Lifetime1, tf.field_b + var1_int, var5, -1);
               var1_int = var1_int + ce.field_u;
             }
           }
@@ -182,10 +182,10 @@ final class qa {
         }
         cm.a(wd.field_v, -14492);
         re.a();
-        vp.a();
+        SoftwareRasterizer.clearFramebuffer();
         wj.e((byte) -124);
         if (var5 < 256) {
-          vp.b(0, 0, vp.field_i, vp.field_c, 0, -var5 + 256);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, -var5 + 256);
           sl.c(2765);
           if (it.field_c < 150) {
             wd.field_v.d(var3, var4);

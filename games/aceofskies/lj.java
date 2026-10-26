@@ -4,7 +4,7 @@
 final class lj implements ir {
     private int field_k;
     private int field_g;
-    private hc field_l;
+    private BitmapFont field_l;
     private int field_o;
     private int field_h;
     static PcmSample[] aircraftEngineSamples;
@@ -73,21 +73,21 @@ final class lj implements ir {
             param0 = param0 & var11.field_u;
           }
           var7 = 5592405;
-          vp.b(param2 + param3.field_p, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_o);
+          SoftwareRasterizer.b(param2 + param3.field_p, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_o);
           if (param0) {
             var7 = 16777215;
           }
           var8 = param2 + param3.field_p + this.field_n;
           var9 = this.field_h + param4 + param3.field_h;
-          vp.d(var8, var9, this.field_m, this.field_j, 5592405);
-          vp.b(var8, var9, this.field_m, this.field_j, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_m, this.field_j, 5592405);
+          SoftwareRasterizer.b(var8, var9, this.field_m, this.field_j, var7);
           if (var11.field_s) {
-            vp.f(var8, var9, var8 + this.field_m, var9 + this.field_j, 1);
-            vp.f(var8 + this.field_m, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.f(var8, var9, var8 + this.field_m, var9 + this.field_j, 1);
+            SoftwareRasterizer.f(var8 + this.field_m, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_l) {
             var10 = this.field_m + (this.field_n + this.field_f);
-            this.field_l.a(param3.field_f, param2 + param3.field_p + var10, param4 + (param3.field_h + this.field_i), param3.field_q - (this.field_f + var10), param3.field_n - (this.field_f << 1), this.field_g, this.field_k, this.field_b, this.field_d, 0);
+            this.field_l.drawParagraph(param3.field_f, param2 + param3.field_p + var10, param4 + (param3.field_h + this.field_i), param3.field_q - (this.field_f + var10), param3.field_n - (this.field_f << 1), this.field_g, this.field_k, this.field_b, this.field_d, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -134,7 +134,7 @@ final class lj implements ir {
         }
     }
 
-    lj(hc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    lj(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_b = 1;
         this.field_d = 1;
         try {

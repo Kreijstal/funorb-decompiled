@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class de implements ir {
-    private hc field_c;
+    private BitmapFont field_c;
     private int field_d;
     private int field_e;
     private int field_a;
@@ -24,29 +24,29 @@ final class de implements ir {
         int var12Lifetime1;
         try {
           var14 = !(param3 instanceof cn) ? null : (cn) (param3);
-          vp.b(param3.field_p + param2, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_b);
+          SoftwareRasterizer.b(param3.field_p + param2, param4 + param3.field_h, param3.field_q, param3.field_n, this.field_b);
           if (var14 != null) {
           }
           var7 = param2 + (param3.field_p + var14.field_C);
           var8 = param4 + param3.field_h + var14.field_x;
-          vp.g(var7, var8, var14.field_A, this.field_g);
+          SoftwareRasterizer.g(var7, var8, var14.field_A, this.field_g);
           if (var14.field_B != -1) {
             var9 = 3.141592653589793 * (double)var14.field_B * 2.0 / (double)var14.field_w;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_A);
             var12 = (int)(Math.cos(var9) * (double)var14.field_A);
-            vp.g(var7 + var11, var8 + var12, 1, this.field_f);
+            SoftwareRasterizer.g(var7 + var11, var8 + var12, 1, this.field_f);
           }
-          vp.g(var7, var8, 2, 1);
+          SoftwareRasterizer.g(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * ((double)var14.field_y * 3.141592653589793) / (double)var14.field_w;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_A);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_A);
-          vp.f(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.f(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (param1 != -7592) {
             this.field_e = 72;
           }
           if (this.field_c != null) {
             var13 = var14.field_C + var14.field_A + this.field_d;
-            this.field_c.a(param3.field_f, param2 + param3.field_p + var13, param3.field_h + param4 + this.field_h, param3.field_q - var13 - this.field_d, -(this.field_d << 1) + param3.field_n, this.field_a, this.field_e, 1, 1, 0);
+            this.field_c.drawParagraph(param3.field_f, param2 + param3.field_p + var13, param3.field_h + param4 + this.field_h, param3.field_q - var13 - this.field_d, -(this.field_d << 1) + param3.field_n, this.field_a, this.field_e, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
@@ -132,7 +132,7 @@ final class de implements ir {
         }
     }
 
-    de(hc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    de(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_h = param2;
           this.field_b = param7;

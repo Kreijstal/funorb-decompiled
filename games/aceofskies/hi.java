@@ -3,7 +3,7 @@
  */
 final class hi extends to {
     int field_u;
-    static vs field_v;
+    static BitmapFontMetrics field_v;
     static String field_x;
     static int field_w;
 
@@ -93,7 +93,7 @@ final class hi extends to {
         if (param0 >= 64) {
           return;
         }
-        field_v = (vs) null;
+        field_v = (BitmapFontMetrics) null;
     }
 
     final static void j(int param0) {

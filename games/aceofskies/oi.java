@@ -4,7 +4,7 @@
 final class oi {
     static ResourceArchive field_d;
     static String field_b;
-    static hc field_c;
+    static BitmapFont field_c;
     static ResourceArchive field_a;
 
     public static void a(int param0) {

@@ -49,7 +49,7 @@ abstract class hh {
           var6 = 0;
           param1.d(var4, var3, var6, -5782, -65281, var5);
           var2.a(var3 + var5, var5, var4 + var6, var6, 70);
-          param1.SA(0, var6, vp.field_i, var4, vp.field_j, var6 * vp.field_i, vp.field_i);
+          param1.SA(0, var6, SoftwareRasterizer.stride, var4, SoftwareRasterizer.framebuffer, var6 * SoftwareRasterizer.stride, SoftwareRasterizer.stride);
           var2.a(true);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "hh.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

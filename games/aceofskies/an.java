@@ -7,15 +7,15 @@ final class an {
     private IntrusiveNode field_a;
 
     final static sn[] a(boolean param0) {
-        if (vs.field_c == null) {
-          vs.field_c = mq.a((byte) 122, new int[]{1, 0});
+        if (BitmapFontMetrics.field_c == null) {
+          BitmapFontMetrics.field_c = mq.a((byte) 122, new int[]{1, 0});
           if (!param0) {
-            return vs.field_c;
+            return BitmapFontMetrics.field_c;
           }
           return (sn[]) null;
         }
         if (!param0) {
-          return vs.field_c;
+          return BitmapFontMetrics.field_c;
         }
         return (sn[]) null;
     }

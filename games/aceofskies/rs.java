@@ -141,7 +141,7 @@ final class rs extends ab implements ue, dn {
           this.field_z.field_e = (ir) ((Object) new qb());
           var7 = sn.a(cd.field_c, 122, new String[]{this.a((byte) 127), this.e((byte) 101)});
           var3 = 20;
-          var4 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.field_I, -1, 2147483647, true);
+          var4 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
           this.field_A = new vq(var7, var4);
           this.field_A.field_k = "";
           this.field_A.a(-57, m.field_g, 0);

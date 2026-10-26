@@ -1650,7 +1650,7 @@ abstract class bf extends GraphicsRenderer {
         }
     }
 
-    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
+    final RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2) {
         RuntimeException var4 = null;
         ig stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1661,7 +1661,7 @@ abstract class bf extends GraphicsRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new ig(this, param0, param1, param2);
-          return (BitmapFont) ((Object) stackIn_1_0);
+          return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -1807,7 +1807,7 @@ abstract class bf extends GraphicsRenderer {
             var2 = (java.awt.Canvas) (var1_ref.nextElement());
             this.a(0, var2, this.field_gb.get(var2));
           }
-          BitmapFont.a(63, true, false);
+          RendererBitmapFont.a(63, true, false);
           this.field_i.release();
           this.field_qc = true;
         }

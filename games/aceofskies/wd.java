@@ -335,7 +335,7 @@ final class wd extends ab implements ue, dn, bh {
         bc var4 = new bc(46, var3, -90 + this.field_q, 25, this.field_z, true, this.field_q - 120, 5, oi.field_c, 11579568, as.field_a);
         this.a(var4, 1);
         var3 = var3 + var4.field_n;
-        qm var5 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, qo.field_b.field_I, -1, 2147483647, true);
+        qm var5 = new qm(qo.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, qo.field_b.maxAscent, -1, 2147483647, true);
         this.field_C = new vq(var2, var5);
         this.field_C.field_k = "";
         this.field_C.a(-126, m.field_g, 0);

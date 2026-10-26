@@ -10,7 +10,7 @@ class qm implements ir, et {
     private int field_h;
     int field_j;
     int field_g;
-    hc field_i;
+    BitmapFont field_i;
     int field_m;
     int field_k;
     int field_f;
@@ -47,7 +47,7 @@ class qm implements ir, et {
           var9_int = this.b(param6, -90);
           var10 = this.a(param6, false);
           if (this.field_c) {
-            this.field_i.a(this.d(param6, param2 + 28524453), this.a(param6, 123, param1, param5), this.a((byte) -24, param3, param0, param6), var9_int, var10, param7, param4, this.field_e, this.field_f, this.field_k);
+            this.field_i.drawParagraph(this.d(param6, param2 + 28524453), this.a(param6, 123, param1, param5), this.a((byte) -24, param3, param0, param6), var9_int, var10, param7, param4, this.field_e, this.field_f, this.field_k);
           } else {
             var12 = this.field_f;
             if (0 != var12) {
@@ -55,27 +55,27 @@ class qm implements ir, et {
                 if (var12 != 3 &&
                   var12 == 1) {
                 }
-                var11 = this.field_i.field_I + (var10 + (-this.field_i.field_I - this.field_i.field_D) >> 1);
+                var11 = this.field_i.maxAscent + (var10 + (-this.field_i.maxAscent - this.field_i.maxDescent) >> 1);
               } else {
-                var11 = -this.field_i.field_D + var10;
+                var11 = -this.field_i.maxDescent + var10;
               }
             } else {
-              var11 = this.field_i.field_I;
+              var11 = this.field_i.maxAscent;
             }
             var12Lifetime1 = this.field_e;
             if (0 != var12Lifetime1 &&
               3 != var12Lifetime1) {
               if (var12Lifetime1 == 1) {
-                this.field_i.c(this.d(param6, 57), (var9_int >> 1) + this.a(param6, 113, param1, param5), this.a((byte) -24, param3, param0, param6) + var11, param7, param4);
+                this.field_i.drawCenteredText(this.d(param6, 57), (var9_int >> 1) + this.a(param6, 113, param1, param5), this.a((byte) -24, param3, param0, param6) + var11, param7, param4);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_i.a(this.d(param6, -115), this.a(param6, 108, param1, param5) + var9_int, var11 + this.a((byte) -24, param3, param0, param6), param7, param4);
+                  this.field_i.drawRightAlignedText(this.d(param6, -115), this.a(param6, 108, param1, param5) + var9_int, var11 + this.a((byte) -24, param3, param0, param6), param7, param4);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_i.b(this.d(param6, -99), this.a(param6, 103, param1, param5), var11 + this.a((byte) -24, param3, param0, param6), param7, param4);
+              this.field_i.drawText(this.d(param6, -99), this.a(param6, 103, param1, param5), var11 + this.a((byte) -24, param3, param0, param6), param7, param4);
             }
           }
           sl.c(2765);
@@ -98,7 +98,7 @@ class qm implements ir, et {
         if (param0 != -4) {
           return 104;
         }
-        return this.field_i.field_D + this.field_i.field_I;
+        return this.field_i.maxDescent + this.field_i.maxAscent;
     }
 
     public final int a(int param0, ea param1, byte param2) {
@@ -440,12 +440,12 @@ class qm implements ir, et {
               if (var6 != 3 &&
                 var6 != 1) {
               }
-              var5 = this.field_i.field_I + (-this.field_i.field_D + (-this.field_i.field_I + var4) >> 1);
+              var5 = this.field_i.maxAscent + (-this.field_i.maxDescent + (-this.field_i.maxAscent + var4) >> 1);
             } else {
-              var5 = -this.field_i.field_D + var4;
+              var5 = -this.field_i.maxDescent + var4;
             }
           } else {
-            var5 = this.field_i.field_I;
+            var5 = this.field_i.maxAscent;
           }
           var6Lifetime1 = this.field_e;
           if (var6Lifetime1 != 0 &&
@@ -550,7 +550,7 @@ class qm implements ir, et {
         }
     }
 
-    qm(hc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    qm(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -800,7 +800,7 @@ class qm implements ir, et {
         }
     }
 
-    qm(hc param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    qm(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_f = param8;
           this.field_i = param0;

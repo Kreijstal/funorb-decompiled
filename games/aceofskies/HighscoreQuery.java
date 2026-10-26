@@ -24,11 +24,11 @@ final class HighscoreQuery extends IntrusiveNode {
         }
     }
 
-    final static cp a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
+    final static CoverageBitmapFont a(int param0, ResourceArchive param1, int param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        cp stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -38,7 +38,7 @@ final class HighscoreQuery extends IntrusiveNode {
         try {
           if (!tn.a(param3, (byte) -127, param2, param4)) {
             stackIn_2_0 = null;
-            return (cp) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
           var5_int = -15 / ((param0 - 65) / 51);
           stackIn_4_0 = te.a(param1.a(param4, -10470, param2), -80);

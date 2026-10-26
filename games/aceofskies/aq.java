@@ -18,13 +18,13 @@ final class aq {
           var1 = new ll(param0, 140);
           cm.a(var1, param0 - 15032);
           re.a();
-          vp.a();
+          SoftwareRasterizer.clearFramebuffer();
           it.field_c = 0;
           wj.e((byte) -128);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
-            vp.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
           oo.field_W.b();
           var1.d(0, 0);

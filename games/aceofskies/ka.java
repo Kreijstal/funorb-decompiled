@@ -172,7 +172,7 @@ abstract class ka {
               return;
             }
             try {
-              vs.field_g = new gh(ii.field_j.field_g, 64, 0);
+              BitmapFontMetrics.field_g = new gh(ii.field_j.field_g, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

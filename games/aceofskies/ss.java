@@ -45,13 +45,13 @@ final class ss extends ea {
           var10 = -var5 + var6;
           var11 = 128 + (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5));
           var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var11 * var8 | var9 * var11 & 16711680) >>> 8;
-          vp.b(var7, var6, this.field_y, var12);
+          SoftwareRasterizer.drawHorizontalLine(var7, var6, this.field_y, var12);
           var9Lifetime1 = param2 & 65280;
           var8Lifetime1 = 16711935 & param2;
-          vp.b(-(2 * this.field_y) + var7, var6, this.field_y, var12);
+          SoftwareRasterizer.drawHorizontalLine(-(2 * this.field_y) + var7, var6, this.field_y, var12);
           var12Lifetime1 = var11 >= 256 ? var9Lifetime1 | var8Lifetime1 : (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8;
-          vp.b(this.field_y + var7, var6, this.field_y, var12Lifetime1);
-          vp.b(-this.field_y + var7, var6, this.field_y, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_y + var7, var6, this.field_y, var12Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(-this.field_y + var7, var6, this.field_y, var12Lifetime1);
         }
         if (param1 != 128) {
           this.a(90, 49, (byte) 110);
@@ -117,7 +117,7 @@ final class ss extends ea {
               var6 = Math.sqrt(1.0 - var6);
               var8 = 1.0 <= var6 ? 255 : (int)(255.0 * var6);
             }
-            vp.a(var5, var4, var8 | var8 << 8 | var8 << 16);
+            SoftwareRasterizer.setPixel(var5, var4, var8 | var8 << 8 | var8 << 16);
           }
         }
         sl.c(2765);
@@ -175,7 +175,7 @@ final class ss extends ea {
             param3.b(var7, param2);
           }
           sl.c(2765);
-          if (this.field_D.field_r + param0 >= vp.field_b) {
+          if (this.field_D.field_r + param0 >= SoftwareRasterizer.clipLeft) {
             cm.a(this.field_A, -14492);
             param3.b(-this.field_r, 0);
             param3.b(2 * this.field_y - this.field_r, 0);
@@ -183,7 +183,7 @@ final class ss extends ea {
             sl.c(2765);
             this.field_A.b(param0, param2);
           }
-          if (vp.field_k >= var5_int - this.field_D.field_r) {
+          if (SoftwareRasterizer.clipRight >= var5_int - this.field_D.field_r) {
             cm.a(this.field_A, -14492);
             for (var8 = this.field_r + this.field_q - this.field_D.field_r; 2 * this.field_y < var8; var8 = var8 - 2 * this.field_y) {
             }

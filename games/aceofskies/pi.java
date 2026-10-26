@@ -83,7 +83,7 @@ final class pi extends mi {
           ms.field_c.field_r >= var9 &&
           var10 <= ms.field_c.field_n) {
           cm.a(ms.field_c, -14492);
-          vp.a();
+          SoftwareRasterizer.clearFramebuffer();
         } else {
           ms.field_c = new ll(var9, var10);
           cm.a(ms.field_c, -14492);

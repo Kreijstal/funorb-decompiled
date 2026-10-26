@@ -142,7 +142,7 @@ final class kb extends vq {
             }
             if (this.field_F.field_n >= var12) {
               cm.a(this.field_F, -14492);
-              vp.a();
+              SoftwareRasterizer.clearFramebuffer();
               var19.a(112, 144, var19.field_v << 4, var19.field_q << 4, -this.field_E << 10, 4096);
               sl.c(2765);
               this.field_F.d(var9 - (var19.field_v >> 1), -var19.field_q + var10, 256);
@@ -207,7 +207,7 @@ final class kb extends vq {
             }
             if (this.field_F.field_n >= var12Lifetime1) {
               cm.a(this.field_F, -14492);
-              vp.a();
+              SoftwareRasterizer.clearFramebuffer();
               var23.a(112, 144, var23.field_v << 4, var23.field_q << 4, -this.field_E << 10, 4096);
               sl.c(2765);
               this.field_F.d(var9Lifetime1 - (var23.field_v >> 1), -var23.field_q + var10Lifetime1, 256);
@@ -272,7 +272,7 @@ final class kb extends vq {
             return;
           }
           cm.a(this.field_F, -14492);
-          vp.a();
+          SoftwareRasterizer.clearFramebuffer();
           var27.a(112, 144, var27.field_v << 4, var27.field_q << 4, -this.field_E << 10, 4096);
           sl.c(2765);
           this.field_F.d(var9Lifetime2 - (var27.field_v >> 1), -var27.field_q + var10Lifetime2, 256);

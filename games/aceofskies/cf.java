@@ -33,8 +33,8 @@ final class cf extends sk {
             var7 = param0[1].field_v;
             param0[0].b(param1, param3);
             param0[2].b(param1 + param4 - var6, param3);
-            vp.b(rl.field_a);
-            vp.a(param1 + var5_int, param3, param4 + (param1 - var6), param0[1].field_q + param3);
+            SoftwareRasterizer.saveClip(rl.field_a);
+            SoftwareRasterizer.intersectClip(param1 + var5_int, param3, param4 + (param1 - var6), param0[1].field_q + param3);
             var8 = param1 + var5_int;
             var9 = -var6 + param1 + param4;
             param1 = var8;
@@ -45,7 +45,7 @@ final class cf extends sk {
               param0[1].b(param1, param3);
               param1 = param1 + var7;
             }
-            vp.a(rl.field_a);
+            SoftwareRasterizer.restoreClip(rl.field_a);
             return;
           }
           return;

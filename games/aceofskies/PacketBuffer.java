@@ -7,7 +7,7 @@ class PacketBuffer extends IntrusiveNode {
     static int field_h;
     static int[] field_k;
     static String[] field_i;
-    static BitmapFont field_j;
+    static RendererBitmapFont field_j;
     int position;
 
     final void f(int param0, int param1) {
@@ -23,7 +23,7 @@ class PacketBuffer extends IntrusiveNode {
     final void patchByteLength(int payloadLength, byte obfuscationGuard) {
         this.payload[-payloadLength + this.position - 1] = (byte)payloadLength;
         if (obfuscationGuard <= 57) {
-          field_j = (BitmapFont) null;
+          field_j = (RendererBitmapFont) null;
         }
     }
 

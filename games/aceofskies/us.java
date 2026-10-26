@@ -3,7 +3,7 @@
  */
 final class us implements ir {
     private int field_d;
-    private hc field_g;
+    private BitmapFont field_g;
     private int field_b;
     private int field_f;
     private int field_a;
@@ -31,7 +31,7 @@ final class us implements ir {
             stackIn_4_0 = (ea) (param3);
           }
           var12 = (pf) (stackIn_4_0);
-          vp.b(param2 + param3.field_p, param3.field_h + param4, param3.field_q, param3.field_n, this.field_f);
+          SoftwareRasterizer.b(param2 + param3.field_p, param3.field_h + param4, param3.field_q, param3.field_n, this.field_f);
           if (var12 == null) {
           }
           var7 = -(var12.field_B * 2) + param3.field_q;
@@ -40,12 +40,12 @@ final class us implements ir {
           }
           var8 = var12.field_B + param2 + param3.field_p;
           var9 = var12.field_x + param3.field_h + param4;
-          vp.f(var8, var9, var8 + var7, var9, this.field_b);
+          SoftwareRasterizer.f(var8, var9, var8 + var7, var9, this.field_b);
           for (var10 = -1 + var12.c(true); var10 >= 0; var10--) {
-            vp.g(var7 * var12.a(false, var10) / var12.a(param1 ^ 7589) + var8, var9, this.field_c, this.field_d);
+            SoftwareRasterizer.g(var7 * var12.a(false, var10) / var12.a(param1 ^ 7589) + var8, var9, this.field_c, this.field_d);
           }
           if (null != this.field_g) {
-            this.field_g.c(var12.field_f, var7 / 2 + var8, var12.field_x + var9 + this.field_g.field_w, this.field_e, this.field_a);
+            this.field_g.drawCenteredText(var12.field_f, var7 / 2 + var8, var12.field_x + var9 + this.field_g.lineAdvance, this.field_e, this.field_a);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -169,7 +169,7 @@ final class us implements ir {
         }
     }
 
-    us(hc param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    us(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_d = param6;
           this.field_c = param5;

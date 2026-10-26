@@ -43,7 +43,7 @@ final class tn extends ab implements dn {
     final void a(byte param0, int param1, int param2, int param3) {
         int var5 = this.field_p + param3;
         int var6 = this.field_h + param2;
-        qo.field_b.a(jc.field_Mc, 20 + var5, var6 + 20, -40 + this.field_q, -50 + this.field_n, 16777215, -1, 1, 0, qo.field_b.field_I);
+        qo.field_b.drawParagraph(jc.field_Mc, 20 + var5, var6 + 20, -40 + this.field_q, -50 + this.field_n, 16777215, -1, 1, 0, qo.field_b.maxAscent);
         if (param0 <= 64) {
           this.a((byte) 126, -69, -35, 122);
         }

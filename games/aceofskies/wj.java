@@ -286,11 +286,11 @@ final class wj implements up {
         try {
           tk.a(param3, param4, 10);
           um.field_m = tk.a(param1, param2, 0, param6);
-          BitmapFont.field_a = tk.a(param1, param2, 1, param7);
+          RendererBitmapFont.field_a = tk.a(param1, param2, 1, param7);
           qn.pcmMixer = new PcmStreamMixer();
           int var8_int = -86 % ((param0 + 12) / 37);
           Vector2.field_c = param7;
-          BitmapFont.field_a.a(qn.pcmMixer);
+          RendererBitmapFont.field_a.a(qn.pcmMixer);
           DualLinkNode.field_e = param5;
           DualLinkNode.field_e.a((byte) 125, RendererManager.field_c);
           um.field_m.a(DualLinkNode.field_e);

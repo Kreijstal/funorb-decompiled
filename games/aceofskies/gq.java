@@ -125,49 +125,49 @@ final class gq {
         if (param0 > 95) {
           if (param7 <= param3) {
             if (param3 < param5) {
-              tm.a(param2, param5, param1, 14250, param4, vp.field_j, param7, param3, param6);
+              tm.a(param2, param5, param1, 14250, param4, SoftwareRasterizer.framebuffer, param7, param3, param6);
               return;
             }
             if (param7 < param5) {
-              tm.a(param1, param3, param2, 14250, param4, vp.field_j, param7, param5, param6);
+              tm.a(param1, param3, param2, 14250, param4, SoftwareRasterizer.framebuffer, param7, param5, param6);
               return;
             }
-            tm.a(param4, param3, param2, 14250, param1, vp.field_j, param5, param7, param6);
+            tm.a(param4, param3, param2, 14250, param1, SoftwareRasterizer.framebuffer, param5, param7, param6);
             return;
           }
           if (param7 < param5) {
-            tm.a(param4, param5, param1, 14250, param2, vp.field_j, param3, param7, param6);
+            tm.a(param4, param5, param1, 14250, param2, SoftwareRasterizer.framebuffer, param3, param7, param6);
             return;
           }
           if (param3 < param5) {
-            tm.a(param1, param7, param4, 14250, param2, vp.field_j, param3, param5, param6);
+            tm.a(param1, param7, param4, 14250, param2, SoftwareRasterizer.framebuffer, param3, param5, param6);
             return;
           }
-          tm.a(param2, param7, param4, 14250, param1, vp.field_j, param5, param3, param6);
+          tm.a(param2, param7, param4, 14250, param1, SoftwareRasterizer.framebuffer, param5, param3, param6);
           return;
         }
         gq.a(-5);
         if (param7 <= param3) {
           if (param3 < param5) {
-            tm.a(param2, param5, param1, 14250, param4, vp.field_j, param7, param3, param6);
+            tm.a(param2, param5, param1, 14250, param4, SoftwareRasterizer.framebuffer, param7, param3, param6);
             return;
           }
           if (param7 < param5) {
-            tm.a(param1, param3, param2, 14250, param4, vp.field_j, param7, param5, param6);
+            tm.a(param1, param3, param2, 14250, param4, SoftwareRasterizer.framebuffer, param7, param5, param6);
             return;
           }
-          tm.a(param4, param3, param2, 14250, param1, vp.field_j, param5, param7, param6);
+          tm.a(param4, param3, param2, 14250, param1, SoftwareRasterizer.framebuffer, param5, param7, param6);
           return;
         }
         if (param7 < param5) {
-          tm.a(param4, param5, param1, 14250, param2, vp.field_j, param3, param7, param6);
+          tm.a(param4, param5, param1, 14250, param2, SoftwareRasterizer.framebuffer, param3, param7, param6);
           return;
         }
         if (param3 < param5) {
-          tm.a(param1, param7, param4, 14250, param2, vp.field_j, param3, param5, param6);
+          tm.a(param1, param7, param4, 14250, param2, SoftwareRasterizer.framebuffer, param3, param5, param6);
           return;
         }
-        tm.a(param2, param7, param4, 14250, param1, vp.field_j, param5, param3, param6);
+        tm.a(param2, param7, param4, 14250, param1, SoftwareRasterizer.framebuffer, param5, param3, param6);
     }
 
     private final void a(int param0, he param1) {

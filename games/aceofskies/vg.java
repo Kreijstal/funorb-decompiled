@@ -12,11 +12,11 @@ final class vg extends pp {
     private String field_l;
     private int field_d;
     private int field_c;
-    private hc field_f;
+    private BitmapFont field_f;
     static Hashtable field_j;
     static int[] field_e;
 
-    final void a(int param0, hc param1, int param2, String param3, int param4) {
+    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -42,12 +42,12 @@ final class vg extends pp {
           this.field_d = 1;
           if (param0 < 1) {
             var8 = (String) null;
-            this.a(-95, (hc) null, -118, (String) null, -117);
+            this.a(-95, (BitmapFont) null, -118, (String) null, -117);
           }
           this.field_f = param1;
           this.field_m = true;
           var9 = this.a(param4, 77, param1, param3);
-          var7 = param1.a(param3);
+          var7 = param1.measureTextWidth(param3);
           var9.field_h[0] = param2 - (var7 >> 1);
           var9.field_h[param3.length()] = (var7 >> 1) + param2;
           ng.a(param1, param3, var9, 0, (byte) 30);
@@ -72,7 +72,7 @@ final class vg extends pp {
         }
     }
 
-    final void a(int param0, String param1, int param2, int param3, hc param4) {
+    final void a(int param0, String param1, int param2, int param3, BitmapFont param4) {
         co var8 = null;
         co var9 = null;
         if (param1 == null) {
@@ -96,7 +96,7 @@ final class vg extends pp {
           this.field_f = param4;
           var8 = this.a(param3, 43, param4, param1);
           var9 = var8;
-          var9.field_h[0] = -param4.a(param1) + param2;
+          var9.field_h[0] = -param4.measureTextWidth(param1) + param2;
           var9.field_h[param1.length()] = param2;
           ng.a(param4, param1, var9, 0, (byte) 30);
         } catch (RuntimeException runtimeException) {
@@ -104,7 +104,7 @@ final class vg extends pp {
         }
     }
 
-    final void a(String param0, int param1, int param2, hc param3, byte param4) {
+    final void a(String param0, int param1, int param2, BitmapFont param3, byte param4) {
         co var8 = null;
         co var9 = null;
         if (param0 == null) {
@@ -126,10 +126,10 @@ final class vg extends pp {
           var8 = this.a(param2, -128, param3, param0);
           var9 = var8;
           var8.field_h[0] = param1;
-          var9.field_h[param0.length()] = param3.a(param0) + param1;
+          var9.field_h[param0.length()] = param3.measureTextWidth(param0) + param1;
           if (param4 >= -45) {
-            hc var7 = (hc) null;
-            this.a(-111, (String) null, -109, -118, (hc) null);
+            BitmapFont var7 = (BitmapFont) null;
+            this.a(-111, (String) null, -109, -118, (BitmapFont) null);
           }
           ng.a(param3, param0, var9, 0, (byte) 30);
         } catch (RuntimeException runtimeException) {
@@ -137,7 +137,7 @@ final class vg extends pp {
         }
     }
 
-    private final co a(int param0, int param1, hc param2, String param3) {
+    private final co a(int param0, int param1, BitmapFont param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         co var6 = null;
@@ -150,7 +150,7 @@ final class vg extends pp {
         RuntimeException decompiledCaughtException = null;
         try {
           var5_int = -90 / ((-38 - param1) / 52);
-          var6 = new co(param0 - param2.field_I, param2.field_D + param0, param3.length());
+          var6 = new co(param0 - param2.maxAscent, param2.maxDescent + param0, param3.length());
           this.field_b = new co[]{var6};
           stackIn_1_0 = var6;
           return stackIn_1_0;
@@ -174,7 +174,7 @@ final class vg extends pp {
         }
     }
 
-    final void a(String param0, hc param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void a(String param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         co stackIn_38_0;
         co stackIn_38_1;
         int stackIn_38_2;
@@ -182,7 +182,7 @@ final class vg extends pp {
         co stackIn_39_0 = null;
         co stackIn_39_1 = null;
         int stackIn_39_4 = 0;
-        hc stackIn_43_0 = null;
+        BitmapFont stackIn_43_0 = null;
         String stackIn_43_1 = null;
         co stackIn_43_2 = null;
         int stackIn_44_3;
@@ -205,7 +205,7 @@ final class vg extends pp {
         var15 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param7 == 0) {
-            param7 = param1.field_w;
+            param7 = param1.lineAdvance;
           }
           if (param0 == null) {
             this.field_b = null;
@@ -233,9 +233,9 @@ final class vg extends pp {
           this.field_m = false;
           this.field_l = param0;
           this.field_i = param4;
-          var16 = new String[1 + param1.a(param0, param4)];
+          var16 = new String[1 + param1.countWrappedLines(param0, param4)];
           var17 = var16;
-          var10 = Math.max(1, param1.a(param0, new int[]{param4}, var17));
+          var10 = Math.max(1, param1.wrapText(param0, new int[]{param4}, var17));
           if (this.field_g == 3 &&
             var10 == 1) {
             this.field_g = 1;
@@ -243,28 +243,28 @@ final class vg extends pp {
           this.field_b = new co[var10];
           if (0 != this.field_g) {
             if (this.field_g == 1) {
-              var11 = param1.field_I + (this.field_k - this.field_c * var10 >> 1);
+              var11 = param1.maxAscent + (this.field_k - this.field_c * var10 >> 1);
             } else {
               if (this.field_g == 2) {
-                var11 = -(this.field_c * var10) + (-param1.field_D + this.field_k);
+                var11 = -(this.field_c * var10) + (-param1.maxDescent + this.field_k);
               } else {
                 var12 = (this.field_k - this.field_c * var10) / (var10 + 1);
                 if (var12 < 0) {
                   var12 = 0;
                 }
                 this.field_c = this.field_c + var12;
-                var11 = param1.field_I + var12;
+                var11 = param1.maxAscent + var12;
               }
             }
           } else {
-            var11 = param1.field_I;
+            var11 = param1.maxAscent;
           }
           for (var12Lifetime1 = 0; var12Lifetime1 < var10; var12Lifetime1++) {
             var13 = var16[var12Lifetime1];
             stackIn_38_0 = null;
             stackIn_38_1 = null;
-            stackIn_38_2 = -param1.field_I + var11;
-            stackIn_38_3 = param1.field_D + var11;
+            stackIn_38_2 = -param1.maxAscent + var11;
+            stackIn_38_3 = param1.maxDescent + var11;
             if (var13 == null) {
               stackIn_39_0 = null;
               stackIn_39_1 = null;
@@ -277,14 +277,14 @@ final class vg extends pp {
             var14 = new co(stackIn_38_2, stackIn_38_3, stackIn_39_4);
             var14.field_h[0] = 0;
             if (var13 != null) {
-              var14.field_h[var13.length()] = param1.a(var13);
-              stackIn_43_0 = (hc) (param1);
+              var14.field_h[var13.length()] = param1.measureTextWidth(var13);
+              stackIn_43_0 = (BitmapFont) (param1);
               stackIn_43_1 = var13;
               stackIn_43_2 = var14;
               if (param6 != 3) {
                 stackIn_44_3 = 0;
               } else {
-                stackIn_44_3 = this.a(param4, -1, var13, param1.a(var13));
+                stackIn_44_3 = this.a(param4, -1, var13, param1.measureTextWidth(var13));
               }
               ng.a(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_44_3, (byte) 30);
             }

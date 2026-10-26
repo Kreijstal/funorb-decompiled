@@ -68,15 +68,15 @@ final class ul extends sl {
         }
     }
 
-    private ul(hc param0, int param1) {
+    private ul(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (!param1) {
-          vp.a();
+          SoftwareRasterizer.clearFramebuffer();
         } else {
-          vp.b(0, 0, vp.field_i, vp.field_c, 0, 192);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, 192);
         }
         if (param2 != -7395) {
           field_t = (String) null;

@@ -6,7 +6,7 @@ import java.util.*;
 final class dp extends pj implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ImageConsumer field_j;
     private java.awt.image.ColorModel field_g;
-    static vs field_h;
+    static BitmapFontMetrics field_h;
     static String field_i;
 
     private final synchronized void b(int param0) {

@@ -18,13 +18,13 @@ final class av {
         za.registerMenuLayout(32, new int[]{2, 5}, 400, 260, 5, 498, (byte) -64);
         za.registerMenuLayout(32, new int[]{15, 16}, 200, 110, 6, 530, (byte) -65);
         za.registerMenuLayout(32, new int[]{12, 13, 5}, 240, 170, 7, 470, (byte) 119);
-        oq.field_K = kn.field_b.a((byte) 94, du.menuActionLabels[12]);
-        int var1 = kn.field_b.a((byte) 94, du.menuActionLabels[13]);
+        oq.field_K = kn.field_b.measureTextWidth((byte) 94, du.menuActionLabels[12]);
+        int var1 = kn.field_b.measureTextWidth((byte) 94, du.menuActionLabels[13]);
         if (oq.field_K < var1) {
           oq.field_K = var1;
         }
-        int var2 = 4 + dp.field_h.field_a + dp.field_h.field_i;
-        bk.menuTop[6] = var2 + 200 + (dp.field_h.field_j + dp.field_h.field_i);
+        int var2 = 4 + dp.field_h.field_a + dp.field_h.maxDescent;
+        bk.menuTop[6] = var2 + 200 + (dp.field_h.maxAscent + dp.field_h.maxDescent);
         if (!param0) {
           av.a((byte) -119);
         }

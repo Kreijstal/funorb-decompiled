@@ -6,7 +6,7 @@ final class qo {
     static int field_c;
     static int field_d;
     static eg field_a;
-    static hc field_b;
+    static BitmapFont field_b;
 
     public static void c(byte param0) {
         field_e = null;

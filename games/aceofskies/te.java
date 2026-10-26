@@ -12,12 +12,12 @@ final class te extends IntrusiveNode {
         throw new Error();
     }
 
-    final static cp a(byte[] param0, int param1) {
-        cp var2 = null;
+    final static CoverageBitmapFont a(byte[] param0, int param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        cp stackIn_5_0 = null;
-        cp stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -25,11 +25,11 @@ final class te extends IntrusiveNode {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (cp) (stackIn_2_0);
+            return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new cp(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
+          var2 = new CoverageBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, ud.field_e, fk.field_a);
           if (param1 > -75) {
-            stackIn_5_0 = (cp) null;
+            stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;
           }
           kf.f(1);

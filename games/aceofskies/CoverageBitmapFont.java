@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cp extends hc {
-    private byte[][] field_K;
+final class CoverageBitmapFont extends BitmapFont {
+    private byte[][] glyphCoverage;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int glyphIndex, int x, int y, int width, int height, int color, boolean shadowPass) {
         int var8;
         int var9;
         int var10;
@@ -12,41 +12,41 @@ final class cp extends hc {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * vp.field_i;
-        var9 = vp.field_i - param3;
+        var8 = x + y * SoftwareRasterizer.stride;
+        var9 = SoftwareRasterizer.stride - width;
         var10 = 0;
         var11 = 0;
-        if (param2 < vp.field_f) {
-          var12 = vp.field_f - param2;
-          param4 = param4 - var12;
-          param2 = vp.field_f;
-          var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * vp.field_i;
+        if (y < SoftwareRasterizer.clipTop) {
+          var12 = SoftwareRasterizer.clipTop - y;
+          height = height - var12;
+          y = SoftwareRasterizer.clipTop;
+          var11 = var11 + var12 * width;
+          var8 = var8 + var12 * SoftwareRasterizer.stride;
         }
-        if (param2 + param4 > vp.field_d) {
-          param4 = param4 - (param2 + param4 - vp.field_d);
+        if (y + height > SoftwareRasterizer.clipBottom) {
+          height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < vp.field_b) {
-          var12Lifetime1 = vp.field_b - param1;
-          param3 = param3 - var12Lifetime1;
-          param1 = vp.field_b;
+        if (x < SoftwareRasterizer.clipLeft) {
+          var12Lifetime1 = SoftwareRasterizer.clipLeft - x;
+          width = width - var12Lifetime1;
+          x = SoftwareRasterizer.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > vp.field_k) {
-          var12Lifetime2 = param1 + param3 - vp.field_k;
-          param3 = param3 - var12Lifetime2;
+        if (x + width > SoftwareRasterizer.clipRight) {
+          var12Lifetime2 = x + width - SoftwareRasterizer.clipRight;
+          width = width - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
-        if (param3 > 0 &&
-          param4 > 0) {
-          if (!param6) {
-            cp.a(vp.field_j, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
+        if (width > 0 &&
+          height > 0) {
+          if (!shadowPass) {
+            CoverageBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var11, var8, width, height, var9, var10);
           } else {
-            vt.a(vp.field_j, this.field_K[param0], param5, var11, var8, param3, param4, var9, var10);
+            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var11, var8, width, height, var9, var10);
           }
           return;
         }
@@ -81,10 +81,10 @@ final class cp extends hc {
         }
     }
 
-    cp(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
-        super(param0, param1, param2, param3, param4);
-        this.field_K = new byte[256][];
-        this.field_K = cp.a(param5, param6);
+    CoverageBitmapFont(byte[] encodedMetrics, int[] glyphXOffsets, int[] glyphYOffsets, int[] glyphWidths, int[] glyphHeights, int[] palette, byte[][] glyphPaletteIndices) {
+        super(encodedMetrics, glyphXOffsets, glyphYOffsets, glyphWidths, glyphHeights);
+        this.glyphCoverage = new byte[256][];
+        this.glyphCoverage = CoverageBitmapFont.convertPaletteToCoverage(palette, glyphPaletteIndices);
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -116,7 +116,7 @@ final class cp extends hc {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int glyphIndex, int x, int y, int width, int height, int color, int alpha256, boolean shadowPass) {
         int var9;
         int var10;
         int var11;
@@ -124,47 +124,47 @@ final class cp extends hc {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * vp.field_i;
-        var10 = vp.field_i - param3;
+        var9 = x + y * SoftwareRasterizer.stride;
+        var10 = SoftwareRasterizer.stride - width;
         var11 = 0;
         var12 = 0;
-        if (param2 < vp.field_f) {
-          var13 = vp.field_f - param2;
-          param4 = param4 - var13;
-          param2 = vp.field_f;
-          var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * vp.field_i;
+        if (y < SoftwareRasterizer.clipTop) {
+          var13 = SoftwareRasterizer.clipTop - y;
+          height = height - var13;
+          y = SoftwareRasterizer.clipTop;
+          var12 = var12 + var13 * width;
+          var9 = var9 + var13 * SoftwareRasterizer.stride;
         }
-        if (param2 + param4 > vp.field_d) {
-          param4 = param4 - (param2 + param4 - vp.field_d);
+        if (y + height > SoftwareRasterizer.clipBottom) {
+          height = height - (y + height - SoftwareRasterizer.clipBottom);
         }
-        if (param1 < vp.field_b) {
-          var13Lifetime1 = vp.field_b - param1;
-          param3 = param3 - var13Lifetime1;
-          param1 = vp.field_b;
+        if (x < SoftwareRasterizer.clipLeft) {
+          var13Lifetime1 = SoftwareRasterizer.clipLeft - x;
+          width = width - var13Lifetime1;
+          x = SoftwareRasterizer.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > vp.field_k) {
-          var13Lifetime2 = param1 + param3 - vp.field_k;
-          param3 = param3 - var13Lifetime2;
+        if (x + width > SoftwareRasterizer.clipRight) {
+          var13Lifetime2 = x + width - SoftwareRasterizer.clipRight;
+          width = width - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
         }
-        if (param3 > 0 &&
-          param4 > 0) {
-          if (!param7) {
-            cp.a(vp.field_j, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        if (width > 0 &&
+          height > 0) {
+          if (!shadowPass) {
+            CoverageBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
           } else {
-            vt.a(vp.field_j, this.field_K[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            MonochromeBitmapFont.a(SoftwareRasterizer.framebuffer, this.glyphCoverage[glyphIndex], color, var12, var9, width, height, var10, var11, alpha256);
           }
           return;
         }
     }
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertPaletteToCoverage(int[] palette, byte[][] glyphPaletteIndices) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -173,21 +173,21 @@ final class cp extends hc {
         byte[] var4;
         int var6;
         int var3Lifetime1;
-        for (var2_int = 0; var2_int < param0.length; var2_int++) {
-          var3 = param0[var2_int];
+        for (var2_int = 0; var2_int < palette.length; var2_int++) {
+          var3 = palette[var2_int];
           var4_int = (var3 >> 15 & 510) + (var3 & 255);
-          param0[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
+          palette[var2_int] = var4_int / 3 + (var3 >> 8 & 255) >> 1;
         }
-        var2 = param1;
+        var2 = glyphPaletteIndices;
         for (var3Lifetime1 = 0; var3Lifetime1 < var2.length; var3Lifetime1++) {
           var4 = var2[var3Lifetime1];
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
             if (var6 != 0) {
-              var4[var5] = (byte)param0[var6];
+              var4[var5] = (byte)palette[var6];
             }
           }
         }
-        return param1;
+        return glyphPaletteIndices;
     }
 }

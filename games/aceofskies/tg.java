@@ -4,11 +4,11 @@
 final class tg {
     static MusicTrack[] musicTracks;
 
-    final static vs a(ResourceArchive param0, int param1, String param2, String param3) {
+    final static BitmapFontMetrics a(ResourceArchive param0, int param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
-        vs stackIn_6_0 = null;
+        BitmapFontMetrics stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -26,7 +26,7 @@ final class tg {
           if (var5 == null) {
             return null;
           }
-          stackIn_6_0 = new vs(var5);
+          stackIn_6_0 = new BitmapFontMetrics(var5);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

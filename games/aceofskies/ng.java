@@ -45,7 +45,7 @@ final class ng extends rg {
         try {
           this.field_M = param1;
           if (this.field_M != null) {
-            var3_int = b.field_c.a(this.field_M, 260, b.field_c.field_I);
+            var3_int = b.field_c.measureWrappedHeight(this.field_M, 260, b.field_c.maxAscent);
             this.a(300, (byte) 29, var3_int + 150);
           }
           this.field_L = new ss(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -58,7 +58,7 @@ final class ng extends rg {
         }
     }
 
-    final static void a(hc param0, String param1, co param2, int param3, byte param4) {
+    final static void a(BitmapFont param0, String param1, co param2, int param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -83,7 +83,7 @@ final class ng extends rg {
           for (var7 = 1; var7 < param1.length(); var7++) {
             var8 = param1.charAt(var7);
             if (60 == var8) {
-              var6 = (var5_int >> 8) + param2.field_h[0] + param0.a(param1.substring(0, var7));
+              var6 = (var5_int >> 8) + param2.field_h[0] + param0.measureTextWidth(param1.substring(0, var7));
             }
             if (var6 != -1) {
               param2.field_h[var7] = var6;
@@ -91,7 +91,7 @@ final class ng extends rg {
               if (var8 == 32) {
                 var5_int = var5_int + param3;
               }
-              param2.field_h[var7] = param2.field_h[0] + (var5_int >> 8) + (param0.a(param1.substring(0, 1 + var7)) - param0.a((char) var8));
+              param2.field_h[var7] = param2.field_h[0] + (var5_int >> 8) + (param0.measureTextWidth(param1.substring(0, 1 + var7)) - param0.measureCharacterAdvance((char) var8));
             }
             if (var8 == 62) {
               var6 = -1;
@@ -128,16 +128,16 @@ final class ng extends rg {
         field_J = null;
         if (param0 != 11617) {
           co var2 = (co) null;
-          ng.a((hc) null, (String) null, (co) null, 27, (byte) -23);
+          ng.a((BitmapFont) null, (String) null, (co) null, 27, (byte) -23);
         }
     }
 
     final void a(boolean param0, int param1, int param2) {
         super.a(param0, param1, param2);
-        b.field_c.c(this.field_K, (this.field_q >> 1) + param1, 103 + param2, 16777215, -1);
+        b.field_c.drawCenteredText(this.field_K, (this.field_q >> 1) + param1, 103 + param2, 16777215, -1);
         if (null != this.field_M) {
-          vp.b(20 + param1, 120 + param2 - 7, 260, 8421504);
-          b.field_c.a(this.field_M, 20 + param1, 128 + param2, 260, 100, 16777215, -1, 1, 0, b.field_c.field_I);
+          SoftwareRasterizer.drawHorizontalLine(20 + param1, 120 + param2 - 7, 260, 8421504);
+          b.field_c.drawParagraph(this.field_M, 20 + param1, 128 + param2, 260, 100, 16777215, -1, 1, 0, b.field_c.maxAscent);
         }
     }
 

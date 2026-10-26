@@ -25,11 +25,11 @@ final class HighscoreNameEntry {
         }
     }
 
-    final static vt a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
+    final static MonochromeBitmapFont a(ResourceArchive param0, String param1, String param2, ResourceArchive param3, int param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        vt stackIn_3_0 = null;
+        MonochromeBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -80,11 +80,11 @@ final class HighscoreNameEntry {
         }
     }
 
-    final static vt a(byte[] param0, int param1) {
-        vt var2 = null;
+    final static MonochromeBitmapFont a(byte[] param0, int param1) {
+        MonochromeBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         Object stackIn_2_0 = null;
-        vt stackIn_6_0 = null;
+        MonochromeBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -92,9 +92,9 @@ final class HighscoreNameEntry {
         try {
           if (param0 == null) {
             stackIn_2_0 = null;
-            return (vt) (stackIn_2_0);
+            return (MonochromeBitmapFont) (stackIn_2_0);
           }
-          var2 = new vt(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
+          var2 = new MonochromeBitmapFont(param0, lh.field_a, lg.field_j, ji.field_b, ee.field_e, fk.field_a);
           kf.f(1);
           if (param1 != 544) {
             field_a = false;

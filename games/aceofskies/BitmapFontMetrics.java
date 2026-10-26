@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vs {
-    private byte[] field_d;
-    int field_j;
-    int field_e;
-    private byte[][] field_h;
+final class BitmapFontMetrics {
+    private byte[] glyphAdvances;
+    int maxAscent;
+    int lineAdvance;
+    private byte[][] pairKerning;
     static int[] field_b;
     int field_a;
     static boolean field_f;
     static sn[] field_c;
-    int field_i;
+    int maxDescent;
     static gh field_g;
 
-    final int a(byte param0, int param1) {
+    final int measureCharacterAdvance(byte obfuscationGuard, int glyphIndex) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 < 106) {
+          if (obfuscationGuard < 106) {
             this.a((RenderSprite[]) null, -22, 118, (String) null);
           }
-          stackIn_4_0 = this.field_d[param1] & 255;
+          stackIn_4_0 = this.glyphAdvances[glyphIndex] & 255;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var3), "vs.H(" + param0 + ',' + param1 + ')');
+          throw pn.a((Throwable) ((Object) var3), "vs.H(" + obfuscationGuard + ',' + glyphIndex + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class vs {
           field_c = null;
           field_g = null;
           if (param0 <= 108) {
-            vs.a(77);
+            BitmapFontMetrics.a(77);
           }
           field_b = null;
           return;
@@ -65,7 +65,7 @@ final class vs {
         }
     }
 
-    private final int a(String param0, byte param1, RenderSprite[] param2) {
+    private final int measureTextWidthWithImages(String text, byte obfuscationGuard, RenderSprite[] inlineImages) {
         int stackIn_3_0 = 0;
         int stackIn_73_0 = 0;
         RuntimeException stackIn_77_0 = null;
@@ -88,21 +88,21 @@ final class vs {
         int var12 = 0;
         var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (null == param0) {
+          if (null == text) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
           var4_int = -1;
           var5 = -1;
           var6 = 0;
-          var7 = param0.length();
-          if (param1 != -113) {
-            this.field_j = -25;
+          var7 = text.length();
+          if (obfuscationGuard != -113) {
+            this.maxAscent = -25;
           }
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 >= var7))) {
-            var9 = param0.charAt(var8);
+            var9 = text.charAt(var8);
             stackIn_73_0 = -61;
             if (var12 == 0) {
               boolean decompiledFrameRemainder0 = true;
@@ -112,7 +112,7 @@ final class vs {
                 boolean decompiledFrameRemainder1 = true;
                 if (var9 == 62 &&
                   var4_int != -1) {
-                  var10 = param0.substring(var4_int + 1, var8);
+                  var10 = text.substring(var4_int + 1, var8);
                   var4_int = -1;
                   if (!var10.equals("lt")) {
                     if (!var10.equals("gt")) {
@@ -131,11 +131,11 @@ final class vs {
                               if (!var10.equals("copy")) {
                                 if ((!var10.equals("reg")) &&
                                   (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
-                                  (decompiledFrameRemainder0 = (param2 != null))) {
+                                  (decompiledFrameRemainder0 = (inlineImages != null))) {
                                   try {
                                     var11_int = td.a((CharSequence) ((Object) var10.substring(4)), (byte) 38);
                                     var5 = -1;
-                                    var6 = var6 + param2[var11_int].d();
+                                    var6 = var6 + inlineImages[var11_int].d();
                                     decompiledRegionSelector0 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,10 +182,10 @@ final class vs {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var4_int == -1)) {
-                  var6 = var6 + (this.field_d[255 & ae.a((char) var9, param1 ^ 1)] & 255);
-                  if (this.field_h != null &&
+                  var6 = var6 + (this.glyphAdvances[255 & ae.a((char) var9, obfuscationGuard ^ 1)] & 255);
+                  if (this.pairKerning != null &&
                     var5 != -1) {
-                    var6 = var6 + this.field_h[var5][var9];
+                    var6 = var6 + this.pairKerning[var5][var9];
                   }
                   var5 = var9;
                 }
@@ -204,13 +204,13 @@ final class vs {
           var4 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_77_0 = var4;
           stackIn_77_1 = new StringBuilder().append("vs.C(");
-          if (param0 == null) {
+          if (text == null) {
             stackIn_78_2 = "null";
           } else {
             stackIn_78_2 = "{...}";
           }
-          stackIn_81_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param1).append(',');
-          if (param2 == null) {
+          stackIn_81_1 = ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(obfuscationGuard).append(',');
+          if (inlineImages == null) {
             stackIn_82_2 = "null";
           } else {
             stackIn_82_2 = "{...}";
@@ -246,11 +246,11 @@ final class vs {
         int var14 = 0;
         var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (this.a(param3, (byte) -113, param0) <= param2) {
+          if (this.measureTextWidthWithImages(param3, (byte) -113, param0) <= param2) {
             stackIn_5_0 = (String) (param3);
             return stackIn_5_0;
           }
-          param2 = param2 - this.a("...", (byte) -113, (RenderSprite[]) null);
+          param2 = param2 - this.measureTextWidthWithImages("...", (byte) -113, (RenderSprite[]) null);
           var5_int = -1;
           var6 = -1;
           var7 = 0;
@@ -343,15 +343,15 @@ final class vs {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var5_int == -1)) {
-                  var7 = var7 + (255 & this.field_d[ae.a((char) var11, -128) & 255]);
-                  if (null != this.field_h &&
+                  var7 = var7 + (255 & this.glyphAdvances[ae.a((char) var11, -128) & 255]);
+                  if (null != this.pairKerning &&
                     var6 != -1) {
-                    var7 = var7 + this.field_h[var6][var11];
+                    var7 = var7 + this.pairKerning[var6][var11];
                   }
                   var6 = var11;
                   var12 = var7;
-                  if (this.field_h != null) {
-                    var12 = var12 + this.field_h[var11][46];
+                  if (this.pairKerning != null) {
+                    var12 = var12 + this.pairKerning[var11][46];
                   }
                   if (var12 > param2) {
                     stackIn_75_0 = var9 + "...";
@@ -389,17 +389,17 @@ final class vs {
         }
     }
 
-    final int a(int param0, char param1, int param2) {
+    final int getPairKerning(int obfuscationGuard, char secondGlyph, int firstGlyph) {
         RuntimeException var4 = null;
         int stackIn_5_0 = 0;
         byte stackIn_7_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != 0) {
-            this.a((byte) -7, 58);
+          if (obfuscationGuard != 0) {
+            this.measureCharacterAdvance((byte) -7, 58);
           }
-          if (null != this.field_h) {
-            stackIn_7_0 = this.field_h[param2][param1];
+          if (null != this.pairKerning) {
+            stackIn_7_0 = this.pairKerning[firstGlyph][secondGlyph];
             return stackIn_7_0;
           }
           stackIn_5_0 = 0;
@@ -407,11 +407,11 @@ final class vs {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw pn.a((Throwable) ((Object) var4), "vs.G(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw pn.a((Throwable) ((Object) var4), "vs.G(" + obfuscationGuard + ',' + secondGlyph + ',' + firstGlyph + ')');
         }
     }
 
-    final int a(int param0, RenderSprite[] param1, int[] param2, String[] param3, String param4) {
+    final int wrapText(int obfuscationGuard, RenderSprite[] inlineImages, int[] lineWidthLimits, String[] outputLines, String text) {
         int stackIn_3_0 = 0;
         int stackIn_23_0 = 0;
         int stackIn_130_0 = 0;
@@ -454,7 +454,7 @@ final class vs {
         int var22 = 0;
         var22 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (param4 == null) {
+          if (text == null) {
             stackIn_3_0 = 0;
             return stackIn_3_0;
           }
@@ -464,14 +464,14 @@ final class vs {
           var9 = 0;
           var10 = 0;
           var11 = -1;
-          var13 = -22 / ((-48 - param0) / 48);
+          var13 = -22 / ((-48 - obfuscationGuard) / 48);
           var12 = -1;
           var14 = 0;
-          var15 = param4.length();
+          var15 = text.length();
           var16 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var15 <= var16))) {
-            var17 = ae.a(param4.charAt(var16), 102) & 255;
+            var17 = ae.a(text.charAt(var16), 102) & 255;
             var18 = 0;
             stackIn_153_0 = -61;
             stackIn_153_1 = ~var17;
@@ -484,12 +484,12 @@ final class vs {
                   decompiledFrameRemainder0 = (var17 == 62);
                   if (decompiledFrameRemainder0) {
                     var19 = var11;
-                    var20 = param4.substring(1 + var11, var16);
+                    var20 = text.substring(1 + var11, var16);
                     var11 = -1;
                     if (var20.equals("br")) {
-                      param3[var14] = param4.substring(var7, var16 + 1);
+                      outputLines[var14] = text.substring(var7, var16 + 1);
                       var14++;
-                      if (param3.length <= var14) {
+                      if (outputLines.length <= var14) {
                         stackIn_23_0 = 0;
                         return stackIn_23_0;
                       }
@@ -502,37 +502,37 @@ final class vs {
                     else {
                       regionExit1: {
                         if (var20.equals("lt")) {
-                          var18 = var18 + this.a((byte) 111, 60);
-                          if (null != this.field_h &&
+                          var18 = var18 + this.measureCharacterAdvance((byte) 111, 60);
+                          if (null != this.pairKerning &&
                             var12 != -1) {
-                            var18 = var18 + this.field_h[var12][60];
+                            var18 = var18 + this.pairKerning[var12][60];
                           }
                           var12 = 60;
                         } else {
                           if (!var20.equals("gt")) {
                             if (var20.equals("nbsp")) {
-                              var18 = var18 + this.a((byte) 107, 160);
-                              if (this.field_h != null &&
+                              var18 = var18 + this.measureCharacterAdvance((byte) 107, 160);
+                              if (this.pairKerning != null &&
                                 var12 != -1) {
-                                var18 = var18 + this.field_h[var12][160];
+                                var18 = var18 + this.pairKerning[var12][160];
                               }
                               var12 = 160;
                             } else {
                               if (!var20.equals("shy")) {
                                 if (var20.equals("times")) {
-                                  var18 = var18 + this.a((byte) 108, 215);
-                                  if (null != this.field_h &&
+                                  var18 = var18 + this.measureCharacterAdvance((byte) 108, 215);
+                                  if (null != this.pairKerning &&
                                     -1 != var12) {
-                                    var18 = var18 + this.field_h[var12][215];
+                                    var18 = var18 + this.pairKerning[var12][215];
                                   }
                                   var12 = 215;
                                 } else {
                                   if (!var20.equals("euro")) {
                                     if (var20.equals("copy")) {
-                                      var18 = var18 + this.a((byte) 108, 169);
-                                      if (this.field_h != null &&
+                                      var18 = var18 + this.measureCharacterAdvance((byte) 108, 169);
+                                      if (this.pairKerning != null &&
                                         var12 != -1) {
-                                        var18 = var18 + this.field_h[var12][169];
+                                        var18 = var18 + this.pairKerning[var12][169];
                                       }
                                       var12 = 169;
                                     } else {
@@ -540,13 +540,13 @@ final class vs {
                                         if (!var20.startsWith("img=")) {
                                           break regionExit1;
                                         }
-                                        if (null == param1) {
+                                        if (null == inlineImages) {
                                           break regionExit1;
                                         }
                                         try {
                                           var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
                                           var12 = -1;
-                                          var18 = var18 + param1[var21_int].d();
+                                          var18 = var18 + inlineImages[var21_int].d();
                                           decompiledRegionSelector0 = 0;
                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
                                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -557,37 +557,37 @@ final class vs {
                                           break regionExit1;
                                         }
                                       }
-                                      var18 = var18 + this.a((byte) 126, 174);
-                                      if (this.field_h != null &&
+                                      var18 = var18 + this.measureCharacterAdvance((byte) 126, 174);
+                                      if (this.pairKerning != null &&
                                         -1 != var12) {
-                                        var18 = var18 + this.field_h[var12][174];
+                                        var18 = var18 + this.pairKerning[var12][174];
                                       }
                                       var12 = 174;
                                     }
                                   } else {
-                                    var18 = var18 + this.a((byte) 111, 8364);
-                                    if (this.field_h != null &&
+                                    var18 = var18 + this.measureCharacterAdvance((byte) 111, 8364);
+                                    if (this.pairKerning != null &&
                                       -1 != var12) {
-                                      var18 = var18 + this.field_h[var12][8364];
+                                      var18 = var18 + this.pairKerning[var12][8364];
                                     }
                                     var12 = 8364;
                                   }
                                 }
                               } else {
-                                var18 = var18 + this.a((byte) 110, 173);
-                                if (this.field_h != null &&
+                                var18 = var18 + this.measureCharacterAdvance((byte) 110, 173);
+                                if (this.pairKerning != null &&
                                   var12 != -1) {
-                                  var18 = var18 + this.field_h[var12][173];
+                                  var18 = var18 + this.pairKerning[var12][173];
                                 }
                                 var12 = 173;
                               }
                             }
                             break regionExit1;
                           }
-                          var18 = var18 + this.a((byte) 118, 62);
-                          if (null != this.field_h &&
+                          var18 = var18 + this.measureCharacterAdvance((byte) 118, 62);
+                          if (null != this.pairKerning &&
                             var12 != -1) {
-                            var18 = var18 + this.field_h[var12][62];
+                            var18 = var18 + this.pairKerning[var12][62];
                           }
                           var12 = 62;
                         }
@@ -597,34 +597,34 @@ final class vs {
                   }
                 } else {
                   var19 = var16;
-                  var18 = var18 + this.a((byte) 113, var17);
-                  if (this.field_h != null &&
+                  var18 = var18 + this.measureCharacterAdvance((byte) 113, var17);
+                  if (this.pairKerning != null &&
                     var12 != -1) {
-                    var18 = var18 + this.field_h[var12][var17];
+                    var18 = var18 + this.pairKerning[var12][var17];
                   }
                   var12 = var17;
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var18 > 0)) {
                   var6_int = var6_int + var18;
-                  if (param2 != null) {
+                  if (lineWidthLimits != null) {
                     if (var17 == 32) {
                       var10 = 1;
                       var8 = var16;
                       var9 = var6_int;
                     }
                     stackIn_130_0 = ~var6_int;
-                    stackIn_130_1 = (int[]) (param2);
-                    if (var14 < param2.length) {
+                    stackIn_130_1 = (int[]) (lineWidthLimits);
+                    if (var14 < lineWidthLimits.length) {
                       stackIn_131_2 = var14;
                     } else {
-                      stackIn_131_2 = param2.length - 1;
+                      stackIn_131_2 = lineWidthLimits.length - 1;
                     }
                     if (stackIn_130_0 < ~stackIn_130_1[stackIn_131_2]) {
                       if (0 <= var8) {
-                        param3[var14] = param4.substring(var7, var8 + 1 - var10);
+                        outputLines[var14] = text.substring(var7, var8 + 1 - var10);
                         var14++;
-                        if (var14 >= param3.length) {
+                        if (var14 >= outputLines.length) {
                           stackIn_141_0 = 0;
                           return stackIn_141_0;
                         }
@@ -633,9 +633,9 @@ final class vs {
                         var12 = -1;
                         var6_int = var6_int - var9;
                       } else {
-                        param3[var14] = param4.substring(var7, var19);
+                        outputLines[var14] = text.substring(var7, var19);
                         var14++;
-                        if (param3.length <= var14) {
+                        if (outputLines.length <= var14) {
                           stackIn_147_0 = 0;
                           return stackIn_147_0;
                         }
@@ -659,11 +659,11 @@ final class vs {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            stackIn_153_0 = param4.length();
+            stackIn_153_0 = text.length();
             stackIn_153_1 = var7;
           }
           if (stackIn_153_0 > stackIn_153_1) {
-            param3[var14] = param4.substring(var7, param4.length());
+            outputLines[var14] = text.substring(var7, text.length());
             var14++;
           }
           stackIn_157_0 = var14;
@@ -672,26 +672,26 @@ final class vs {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           stackIn_161_0 = var6;
-          stackIn_161_1 = new StringBuilder().append("vs.A(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_161_1 = new StringBuilder().append("vs.A(").append(obfuscationGuard).append(',');
+          if (inlineImages == null) {
             stackIn_162_2 = "null";
           } else {
             stackIn_162_2 = "{...}";
           }
           stackIn_165_1 = ((StringBuilder) (Object) stackIn_161_1).append(stackIn_162_2).append(',');
-          if (param2 == null) {
+          if (lineWidthLimits == null) {
             stackIn_166_2 = "null";
           } else {
             stackIn_166_2 = "{...}";
           }
           stackIn_169_1 = ((StringBuilder) (Object) stackIn_165_1).append(stackIn_166_2).append(',');
-          if (param3 == null) {
+          if (outputLines == null) {
             stackIn_170_2 = "null";
           } else {
             stackIn_170_2 = "{...}";
           }
           stackIn_173_1 = ((StringBuilder) (Object) stackIn_169_1).append(stackIn_170_2).append(',');
-          if (param4 == null) {
+          if (text == null) {
             stackIn_174_2 = "null";
           } else {
             stackIn_174_2 = "{...}";
@@ -700,7 +700,7 @@ final class vs {
         }
     }
 
-    final int a(byte param0, String param1) {
+    final int measureTextWidth(byte obfuscationGuard, String text) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -709,8 +709,8 @@ final class vs {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 == 94) {
-            stackIn_4_0 = this.a(param1, (byte) -113, (RenderSprite[]) null);
+          if (obfuscationGuard == 94) {
+            stackIn_4_0 = this.measureTextWidthWithImages(text, (byte) -113, (RenderSprite[]) null);
             return stackIn_4_0;
           }
           stackIn_2_0 = 39;
@@ -719,8 +719,8 @@ final class vs {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_8_0 = var3;
-          stackIn_8_1 = new StringBuilder().append("vs.F(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_8_1 = new StringBuilder().append("vs.F(").append(obfuscationGuard).append(',');
+          if (text == null) {
             stackIn_9_2 = "null";
           } else {
             stackIn_9_2 = "{...}";
@@ -729,7 +729,7 @@ final class vs {
         }
     }
 
-    vs(byte[] param0) {
+    BitmapFontMetrics(byte[] encodedMetrics) {
         byte[] array$0 = null;
         byte[] array$1 = null;
         int stackIn_8_0 = 0;
@@ -762,7 +762,7 @@ final class vs {
         int var9Lifetime2;
         var12 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var2 = new PacketBuffer(param0);
+          var2 = new PacketBuffer(encodedMetrics);
           var3 = var2.readUnsignedByte(-52);
           if (0 != var3) {
             throw new RuntimeException("");
@@ -770,8 +770,8 @@ final class vs {
           stackIn_8_0 = (var2.readUnsignedByte(43) != 1) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
           var4 = stackIn_8_0;
-          this.field_d = new byte[256];
-          var2.a(0, 7186, 256, this.field_d);
+          this.glyphAdvances = new byte[256];
+          var2.a(0, 7186, 256, this.glyphAdvances);
           if (var4 != 0) {
             var5 = new int[256];
             var6 = new int[256];
@@ -834,7 +834,7 @@ final class vs {
                 var9Lifetime1++;
                 continue;
               }
-              this.field_h = new byte[256][256];
+              this.pairKerning = new byte[256][256];
               stackIn_47_0 = 0;
               break;
             }
@@ -856,7 +856,7 @@ final class vs {
                     stackIn_49_1 = -33;
                     if (stackIn_49_0 != stackIn_49_1 && (var10Lifetime2 != 160 ||
                       var12 != 0)) {
-                      this.field_h[var9Lifetime2][var10Lifetime2] = (byte)sb.a(var8, var10Lifetime2, -1, var5, var6, var7, var9Lifetime2, this.field_d);
+                      this.pairKerning[var9Lifetime2][var10Lifetime2] = (byte)sb.a(var8, var10Lifetime2, -1, var5, var6, var7, var9Lifetime2, this.glyphAdvances);
                     }
                     var10Lifetime2++;
                   }
@@ -867,26 +867,26 @@ final class vs {
               break;
             }
             if (decompiledFrameCompleted0) {
-              this.field_e = var6[32] + var5[32];
+              this.lineAdvance = var6[32] + var5[32];
             }
           }
           if (decompiledFrameCompleted0) {
             if (var4 == 0 ||
               var12 != 0) {
-              this.field_e = var2.readUnsignedByte(76);
+              this.lineAdvance = var2.readUnsignedByte(76);
             }
             this.field_a = var2.readUnsignedByte(-110);
             stackIn_75_0 = var2.readUnsignedByte(96);
           }
-          this.field_j = var2.readUnsignedByte(-103);
-          this.field_i = var2.readUnsignedByte(-48);
+          this.maxAscent = var2.readUnsignedByte(-103);
+          this.maxDescent = var2.readUnsignedByte(-48);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
           stackIn_80_0 = var2_ref;
           stackIn_80_1 = new StringBuilder().append("vs.<init>(");
-          if (param0 == null) {
+          if (encodedMetrics == null) {
             stackIn_81_2 = "null";
           } else {
             stackIn_81_2 = "{...}";

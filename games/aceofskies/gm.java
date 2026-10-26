@@ -63,7 +63,7 @@ abstract class gm extends ab {
           na.field_b = new ll(this.field_q, this.field_n);
         }
         cm.a(na.field_b, -14492);
-        vp.a();
+        SoftwareRasterizer.clearFramebuffer();
         this.a(false, 0, 0);
         super.a((byte) 87, param1, -this.field_h - param2, -this.field_p - param3);
         sl.c(2765);

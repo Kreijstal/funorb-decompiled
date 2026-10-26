@@ -7,16 +7,16 @@ final class sn {
     int field_d;
     static long field_c;
 
-    final static void a(hc param0, int param1, int param2, hc param3) {
+    final static void a(BitmapFont param0, int param1, int param2, BitmapFont param3) {
         nh.field_c = param0;
         qk.field_g = param1;
         FlightSession.field_e = param3;
-        mb.a(vp.field_c / 2, vp.field_i / 2, (byte) 74);
+        mb.a(SoftwareRasterizer.framebufferHeight / 2, SoftwareRasterizer.stride / 2, (byte) 74);
         if (param2 != 24097) {
           return;
         }
         try {
-          hh.a(param3.field_C + param3.field_D, param0.field_D + param0.field_C, -79, param3.field_C, param0.field_C);
+          hh.a(param3.capitalXAscent + param3.maxDescent, param0.maxDescent + param0.capitalXAscent, -79, param3.capitalXAscent, param0.capitalXAscent);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "sn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

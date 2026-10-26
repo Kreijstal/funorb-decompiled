@@ -27,7 +27,7 @@ final class pu {
                 ArchiveIndex.a(0, false, param1, 0);
               }
             } else {
-              vp.a();
+              SoftwareRasterizer.clearFramebuffer();
               qa.a(240, (byte) -4, 320);
               ArchiveIndex.a(0, false, param1, 0);
             }

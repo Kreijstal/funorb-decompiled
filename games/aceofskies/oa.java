@@ -95,7 +95,7 @@ final class oa extends GraphicsRenderer implements e {
         this.field_m.clear(268435455);
         this.FA();
         if (this.field_g) {
-          BitmapFont.a(24, true, false);
+          RendererBitmapFont.a(24, true, false);
           this.field_g = false;
         }
         this.g();
@@ -268,7 +268,7 @@ final class oa extends GraphicsRenderer implements e {
         return false;
     }
 
-    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
+    final RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -285,12 +285,12 @@ final class oa extends GraphicsRenderer implements e {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (BitmapFont) ((Object) new n(this, this.field_i, param0, param1, (RenderSprite[]) null));
+            return (RendererBitmapFont) ((Object) new n(this, this.field_i, param0, param1, (RenderSprite[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
         if (var6 == 0) {
-          return (BitmapFont) ((Object) new h(this, this.field_i, param0, param1, (RenderSprite[]) null));
+          return (RendererBitmapFont) ((Object) new h(this, this.field_i, param0, param1, (RenderSprite[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }

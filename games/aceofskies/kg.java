@@ -36,15 +36,15 @@ final class kg {
             var8 = param5[1].field_v;
             param5[0].b(param1, param3, param2);
             param5[2].b(param4 + (param1 - var7), param3, param2);
-            vp.b(rl.field_a);
-            vp.a(var6_int + param1, param3, param4 + (param1 - var7), param5[1].field_q + param3);
+            SoftwareRasterizer.saveClip(rl.field_a);
+            SoftwareRasterizer.intersectClip(var6_int + param1, param3, param4 + (param1 - var7), param5[1].field_q + param3);
             var9 = param1 + var6_int;
             var10 = -var7 + (param1 + param4);
             for (param1 = var9; param1 < var10; param1 = param1 + var8) {
               param5[1].b(param1, param3, param2);
             }
             var11 = -92 / ((param0 + 40) / 54);
-            vp.a(rl.field_a);
+            SoftwareRasterizer.restoreClip(rl.field_a);
             return;
           }
           return;
@@ -86,9 +86,9 @@ final class kg {
           eo.field_b = ij.a(param1, "jagex_logo_grey", "commonui", 1);
           u.field_i = qg.a((byte) 3, param1, "commonui", "button");
           gu.field_c = tj.a("validation", "commonui", 1, param1);
-          oi.field_c = (hc) ((Object) as.a(param3, -119, param1, "arezzo12", "commonui"));
-          qo.field_b = (hc) ((Object) as.a(param3, -104, param1, "arezzo14", "commonui"));
-          b.field_c = (hc) ((Object) as.a(param3, param0 ^ -112, param1, "arezzo14bold", "commonui"));
+          oi.field_c = (BitmapFont) ((Object) as.a(param3, -119, param1, "arezzo12", "commonui"));
+          qo.field_b = (BitmapFont) ((Object) as.a(param3, -104, param1, "arezzo14", "commonui"));
+          b.field_c = (BitmapFont) ((Object) as.a(param3, param0 ^ -112, param1, "arezzo14bold", "commonui"));
           var17 = new ll(param2.a("button.gif", (byte) -71, ""), (java.awt.Component) ((Object) ci.field_f));
           cd.a(param1, "commonui", "dropdown", param0 - 116);
           var5 = iu.a(param1, "commonui", (byte) -86, "screen_options");
@@ -117,7 +117,7 @@ final class kg {
           var9Lifetime1 = var17.field_n;
           qk.a((byte) -92);
           var17.b();
-          vp.c(0, 0, vp.field_i, vp.field_c);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
           var15 = new ll(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.b();

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class bc extends to {
-    private hc field_w;
+    private BitmapFont field_w;
     private int field_u;
     private String field_A;
     private boolean field_y;
@@ -164,7 +164,7 @@ final class bc extends to {
         return var3Lifetime1;
     }
 
-    bc(int param0, int param1, int param2, int param3, ea param4, boolean param5, int param6, int param7, hc param8, int param9, String param10) {
+    bc(int param0, int param1, int param2, int param3, ea param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (ir) null, (no) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -190,7 +190,7 @@ final class bc extends to {
           this.field_w = param8;
           this.field_s = param4;
           var12_int = -this.field_z + this.field_x;
-          var13 = this.field_w.a(param10, var12_int, this.field_w.field_I) + 2 * this.field_z;
+          var13 = this.field_w.measureWrappedHeight(param10, var12_int, this.field_w.maxAscent) + 2 * this.field_z;
           if (var13 <= param3) {
             var13 = param3;
           } else {
@@ -240,7 +240,7 @@ final class bc extends to {
         super.a((byte) 108, param1, param2, param3);
         if (0 == param1) {
           var7 = this.field_y ? -this.field_x + this.field_q - 2 * this.field_z : 0;
-          this.field_w.a(this.field_A, this.field_z + var7 + var5, var6 + this.field_z, -this.field_z + this.field_x, -(2 * this.field_z) + this.field_n, this.field_u, -1, this.field_y ? 0 : 2, 1, this.field_w.field_I);
+          this.field_w.drawParagraph(this.field_A, this.field_z + var7 + var5, var6 + this.field_z, -this.field_z + this.field_x, -(2 * this.field_z) + this.field_n, this.field_u, -1, this.field_y ? 0 : 2, 1, this.field_w.maxAscent);
           return;
         }
     }

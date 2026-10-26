@@ -5,7 +5,7 @@ final class wg implements ir {
     private int field_e;
     static String field_c;
     private int field_d;
-    private hc field_a;
+    private BitmapFont field_a;
     static long field_b;
 
     public static void a(boolean param0) {
@@ -40,12 +40,12 @@ final class wg implements ir {
             stackIn_7_0 = 3249872;
           }
           var6_int = stackIn_7_0;
-          this.field_a.a("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_f + "</u>", param3.field_p + param2, param3.field_h + param4, param3.field_q, param3.field_n, var6_int, -1, this.field_e, this.field_d, this.field_a.field_I + this.field_a.field_D);
+          this.field_a.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param3.field_f + "</u>", param3.field_p + param2, param3.field_h + param4, param3.field_q, param3.field_n, var6_int, -1, this.field_e, this.field_d, this.field_a.maxAscent + this.field_a.maxDescent);
           if (!param3.e(param1 + 36252)) {
             return;
           }
-          var7 = this.field_a.a(param3.field_f);
-          var8 = this.field_a.field_D + this.field_a.field_I;
+          var7 = this.field_a.measureTextWidth(param3.field_f);
+          var8 = this.field_a.maxDescent + this.field_a.maxAscent;
           var9 = param3.field_p + param2;
           var10 = param3.field_h + param4;
           if (this.field_e != 2) {
@@ -84,7 +84,7 @@ final class wg implements ir {
         this.field_e = 1;
     }
 
-    wg(hc param0, int param1, int param2) {
+    wg(BitmapFont param0, int param1, int param2) {
         try {
           this.field_d = param2;
           this.field_e = param1;

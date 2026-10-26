@@ -195,7 +195,7 @@ class FlightBody {
         int var7;
         int var6Lifetime1;
         int var7Lifetime1;
-        vs.field_b[os.field_w] = param1;
+        BitmapFontMetrics.field_b[os.field_w] = param1;
         uf.field_d[os.field_w] = os.field_w;
         js.field_c[os.field_w] = param5;
         if (ft.field_o < param5) {

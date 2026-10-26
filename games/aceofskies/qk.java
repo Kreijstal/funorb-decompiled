@@ -219,7 +219,7 @@ final class qk {
         if (var1 == null) {
           var1 = new wo();
         }
-        var1.a(vp.field_i, 251, vp.field_c, vp.field_f, vp.field_b, vp.field_d, vp.field_j, vp.field_k);
+        var1.a(SoftwareRasterizer.stride, 251, SoftwareRasterizer.framebufferHeight, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, SoftwareRasterizer.framebuffer, SoftwareRasterizer.clipRight);
         bo.field_i.addLast(104, var1);
         if (param0 != -92) {
           field_e = (wd) null;

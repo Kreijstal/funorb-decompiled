@@ -129,7 +129,7 @@ final class RendererManager {
     }
 
     RendererManager(int param0, int param1, d param2) {
-        this(BitmapFont.a(param0, 1), cm.a(param1, (byte) 118), param2, pt.field_b, an.a(false));
+        this(RendererBitmapFont.a(param0, 1), cm.a(param1, (byte) 118), param2, pt.field_b, an.a(false));
     }
 
     private final void a(java.awt.Canvas param0, int param1) {

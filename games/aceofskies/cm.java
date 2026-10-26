@@ -98,7 +98,7 @@ final class cm extends jm {
           return;
         }
         try {
-          vp.a(param0.field_x, param0.field_v, param0.field_q);
+          SoftwareRasterizer.setRasterTarget(param0.field_x, param0.field_v, param0.field_q);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "cm.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

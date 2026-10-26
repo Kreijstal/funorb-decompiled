@@ -32,11 +32,11 @@ abstract class ud extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (null == vs.field_b) {
-          vs.field_b = new int[param0 * 2];
+        if (null == BitmapFontMetrics.field_b) {
+          BitmapFontMetrics.field_b = new int[param0 * 2];
         } else {
-          if (param0 > vs.field_b.length) {
-            vs.field_b = new int[param0 * 2];
+          if (param0 > BitmapFontMetrics.field_b.length) {
+            BitmapFontMetrics.field_b = new int[param0 * 2];
             if (null == js.field_c ||
               !(param0 <= js.field_c.length)) {
               js.field_c = new int[2 * param0];

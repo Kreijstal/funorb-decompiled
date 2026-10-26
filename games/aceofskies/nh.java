@@ -4,7 +4,7 @@
 final class nh {
     static w field_f;
     static IntrusiveDeque pendingHighscoreQueries;
-    static hc field_c;
+    static BitmapFont field_c;
     static int field_e;
     static IntrusiveDeque field_d;
     static int field_a;

@@ -454,7 +454,7 @@ final class tm extends RenderSprite {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + vp.field_i;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.stride;
                 }
               }
               var16Lifetime3 = param1 - param7;
@@ -504,7 +504,7 @@ final class tm extends RenderSprite {
                 return;
               }
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + vp.field_i;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.stride;
               var9_int = var9_int + var11;
             }
             return;

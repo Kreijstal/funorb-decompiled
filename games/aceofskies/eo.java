@@ -75,11 +75,11 @@ final class eo {
         throw new IllegalStateException();
     }
 
-    final static vt a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
+    final static MonochromeBitmapFont a(ResourceArchive param0, int param1, int param2, int param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
-        vt stackIn_4_0 = null;
+        MonochromeBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -89,7 +89,7 @@ final class eo {
         try {
           if (!tn.a(param0, (byte) -127, param1, param3)) {
             stackIn_2_0 = null;
-            return (vt) (stackIn_2_0);
+            return (MonochromeBitmapFont) (stackIn_2_0);
           }
           var5_int = 53 / ((param2 + 57) / 33);
           stackIn_4_0 = HighscoreNameEntry.a(param4.a(param3, -10470, param1), 544);

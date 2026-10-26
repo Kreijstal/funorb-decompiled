@@ -3,7 +3,7 @@
  */
 final class b {
     static nf field_b;
-    static hc field_c;
+    static BitmapFont field_c;
     static int field_a;
 
     final static boolean a(boolean param0, PacketBuffer param1) {

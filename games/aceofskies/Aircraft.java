@@ -174,7 +174,7 @@ final class Aircraft extends FlightBody {
                   var26 = var26 + var28;
                   var22 = var22 + var24;
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + vp.field_i;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.stride;
                   var30 = var30 + var32;
                   var18 = var18 + var20;
                   var17_int = var17_int + var19;
@@ -335,7 +335,7 @@ final class Aircraft extends FlightBody {
               var17_int = var17_int + var19;
               var25 = var25 + var27;
               var30 = var30 + var32;
-              var35Lifetime1 = var35Lifetime1 + vp.field_i;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.stride;
               var29 = var29 + var31;
               var26 = var26 + var28;
             }
@@ -395,7 +395,7 @@ final class Aircraft extends FlightBody {
         }
     }
 
-    final static void a(int param0, int param1, hc param2, int param3, mg param4, int param5, int param6, int param7, int param8, hc param9, byte param10, mg param11, int param12, int param13, int param14, int param15, int param16, mg param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, mg param4, int param5, int param6, int param7, int param8, BitmapFont param9, byte param10, mg param11, int param12, int param13, int param14, int param15, int param16, mg param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

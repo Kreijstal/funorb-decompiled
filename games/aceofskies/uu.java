@@ -7,7 +7,7 @@ final class uu extends vo {
     static String field_g;
     static String field_h;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ll[] param6, int param7, int param8, int param9, ll[] param10, int param11, int param12, hc param13, ll[] param14, hc param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ll[] param6, int param7, int param8, int param9, ll[] param10, int param11, int param12, BitmapFont param13, ll[] param14, BitmapFont param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -119,8 +119,8 @@ final class uu extends vo {
         field_h = null;
         field_g = null;
         if (param0 != 8405) {
-          hc var2 = (hc) null;
-          uu.a(43, -66, -29, -19, -97, -21, (ll[]) null, -106, -7, 118, (ll[]) null, 107, 7, (hc) null, (ll[]) null, (hc) null, -45, -26, 109, -56, -123);
+          BitmapFont var2 = (BitmapFont) null;
+          uu.a(43, -66, -29, -19, -97, -21, (ll[]) null, -106, -7, 118, (ll[]) null, 107, 7, (BitmapFont) null, (ll[]) null, (BitmapFont) null, -45, -26, 109, -56, -123);
         }
     }
 

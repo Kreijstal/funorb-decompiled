@@ -555,7 +555,7 @@ final class kj extends GraphicsRenderer {
 
     }
 
-    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
+    final RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2) {
         int var7 = 0;
         int[] var4;
         int[] var5;
@@ -572,14 +572,14 @@ final class kj extends GraphicsRenderer {
         }
         if (!param2) {
           if (var6 == 0) {
-            return (BitmapFont) ((Object) new be(this, param0, param1, var4, var5));
+            return (RendererBitmapFont) ((Object) new be(this, param0, param1, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (var6 == 0) {
-          return (BitmapFont) ((Object) new tu(this, param0, param1, var4, var5));
+          return (RendererBitmapFont) ((Object) new tu(this, param0, param1, var4, var5));
         }
-        return (BitmapFont) ((Object) new ts(this, param0, param1, var4, var5));
+        return (RendererBitmapFont) ((Object) new ts(this, param0, param1, var4, var5));
     }
 
     private final void f(int param0) {
@@ -948,7 +948,7 @@ final class kj extends GraphicsRenderer {
 
     final void c() {
         if (this.field_h) {
-          BitmapFont.a(121, false, true);
+          RendererBitmapFont.a(121, false, true);
           this.field_h = false;
         }
         this.field_p = null;

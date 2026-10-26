@@ -19,10 +19,10 @@ final class HudMessage extends IntrusiveNode {
 
     final boolean c(byte param0) {
         if (param0 == 47) {
-          return this.ageTicks < this.holdTicks + (kn.field_b.field_e - this.fadeInTicks) ? true : false;
+          return this.ageTicks < this.holdTicks + (kn.field_b.lineAdvance - this.fadeInTicks) ? true : false;
         }
         this.colour = -72;
-        return this.ageTicks < this.holdTicks + (kn.field_b.field_e - this.fadeInTicks) ? true : false;
+        return this.ageTicks < this.holdTicks + (kn.field_b.lineAdvance - this.fadeInTicks) ? true : false;
     }
 
     final boolean advanceAndIsExpired(int obfuscationGuard) {

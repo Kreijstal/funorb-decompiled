@@ -17,10 +17,10 @@ final class ce extends ab implements dr, dn {
 
     final void a(byte param0, int param1, int param2, int param3) {
         if (this.field_y != null) {
-          qo.field_b.a(this.field_y, 20 + param3 + this.field_p, 15 + param2 + this.field_h, this.field_q - 40, this.field_n, 16777215, -1, 1, 0, qo.field_b.field_I);
+          qo.field_b.drawParagraph(this.field_y, 20 + param3 + this.field_p, 15 + param2 + this.field_h, this.field_q - 40, this.field_n, 16777215, -1, 1, 0, qo.field_b.maxAscent);
         }
         if (null != this.field_w) {
-          vp.b(param3 + 10, param2 + 134, -20 + this.field_q, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(param3 + 10, param2 + 134, -20 + this.field_q, 4210752);
         }
         if (param0 <= 64) {
           return;
@@ -409,7 +409,7 @@ final class ce extends ab implements dr, dn {
         RuntimeException decompiledCaughtException = null;
         qb var6 = null;
         RuntimeException var6_ref = null;
-        hc var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         gu var9 = null;
         bc var12 = null;
@@ -477,7 +477,7 @@ final class ce extends ab implements dr, dn {
           this.field_h = 15;
           var7 = qo.field_b;
           if (null != this.field_y) {
-            this.field_h = this.field_h + (5 + var7.a(this.field_y, this.field_q - 40, var7.field_I));
+            this.field_h = this.field_h + (5 + var7.measureWrappedHeight(this.field_y, this.field_q - 40, var7.maxAscent));
           }
           var8 = kk.field_J;
           var9 = lc.a(17123, bm.m(125));

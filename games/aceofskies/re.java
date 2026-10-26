@@ -25,10 +25,10 @@ final class re {
         if (field_i.length < field_f) {
           field_i = new int[fk.a(field_f, 40)];
         }
-        int var4 = param1 * vp.field_i + param0;
+        int var4 = param1 * SoftwareRasterizer.stride + param0;
         for (var5 = 0; var5 < field_f; var5++) {
           field_i[var5] = var4;
-          var4 = var4 + vp.field_i;
+          var4 = var4 + SoftwareRasterizer.stride;
         }
     }
 
@@ -41,7 +41,7 @@ final class re {
     }
 
     final static void a() {
-        re.a(vp.field_b, vp.field_f, vp.field_k, vp.field_d);
+        re.a(SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipTop, SoftwareRasterizer.clipRight, SoftwareRasterizer.clipBottom);
     }
 
     static {

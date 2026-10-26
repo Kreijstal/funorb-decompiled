@@ -5,7 +5,7 @@ class oo extends dg implements dn {
     static ll field_W;
     private ss field_bb;
     private boolean field_cb;
-    private hc field_U;
+    private BitmapFont field_U;
     private boolean field_V;
     static int[] menuRowSpacing;
     private boolean field_X;
@@ -86,7 +86,7 @@ class oo extends dg implements dn {
         field_ab = null;
     }
 
-    oo(lt param0, hc param1, String param2, boolean param3, boolean param4) {
+    oo(lt param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new jn((oo) null, param1, param2), 77, 10, 10);
         try {
           this.field_U = param1;

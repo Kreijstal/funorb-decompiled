@@ -7,7 +7,7 @@ final class bo {
     private fo field_b;
     private RenderSprite field_d;
     static IntrusiveDeque field_i;
-    static hc field_a;
+    static BitmapFont menuBitmapFont;
     private int[] field_e;
     private GraphicsRenderer field_c;
     private fo field_f;
@@ -159,11 +159,11 @@ final class bo {
         if (param0 != 18598) {
           field_i = (IntrusiveDeque) null;
           field_g = null;
-          field_a = null;
+          menuBitmapFont = null;
           return;
         }
         field_g = null;
-        field_a = null;
+        menuBitmapFont = null;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {

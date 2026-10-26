@@ -3,7 +3,7 @@
  */
 final class se {
     static String field_a;
-    static BitmapFont field_c;
+    static RendererBitmapFont field_c;
     static int field_b;
 
     public static void a(byte param0) {

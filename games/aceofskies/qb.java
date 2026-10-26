@@ -46,7 +46,7 @@ final class qb extends qm {
           kg.a(107, param2 + param3.field_p, var7, (-this.field_r[0].field_q + param3.field_n >> 1) + param3.field_h + param4, param3.field_q, this.field_r);
           stackIn_19_0 = (param0) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
-          this.field_i.a(param3.field_f, param2 + param3.field_p, -2 + (param3.field_h + param4), param3.field_q, param3.field_n, var8, -1, 1, 1, this.field_i.field_I);
+          this.field_i.drawParagraph(param3.field_f, param2 + param3.field_p, -2 + (param3.field_h + param4), param3.field_q, param3.field_n, var8, -1, 1, 1, this.field_i.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

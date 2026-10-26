@@ -13,8 +13,8 @@ final class dt {
         if (param0 != 0) {
           field_b = (String) null;
         }
-        if (null != BitmapFont.field_a) {
-          BitmapFont.field_a.d();
+        if (null != RendererBitmapFont.field_a) {
+          RendererBitmapFont.field_a.d();
         }
     }
 

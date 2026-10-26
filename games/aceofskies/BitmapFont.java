@@ -1,662 +1,893 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class BitmapFont {
-    private GraphicsRenderer field_d;
-    static int[] field_b;
-    private vs field_c;
-    static tk field_a;
+abstract class BitmapFont extends DualLinkNode {
+    private int[] inlineImageBaselineOffsets;
+    private int[] glyphAdvances;
+    int maxDescent;
+    int capitalXAscent;
+    int lineAdvance;
+    private int[] glyphHeights;
+    private int[] glyphXOffsets;
+    int maxAscent;
+    private int[] glyphYOffsets;
+    private int[] glyphWidths;
+    private byte[] pairKerning;
+    private df[] inlineImages;
+    private static StringBuilder wrappingBuffer;
+    private static int strikethroughColor;
+    private static int spaceExpansionQ8;
+    private static int defaultTextColor;
+    private static int currentTextColor;
+    private static String[] wrappedLines;
+    private static int currentAlpha256;
+    private static int currentShadowColor;
+    private static int defaultAlpha256;
+    private static int justificationRemainderQ8;
+    private static int defaultShadowColor;
+    private static int underlineColor;
 
-    final int a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, RenderSprite[] param9, aa param10, int param11, int[] param12, int param13, int param14, String param15) {
-        RuntimeException var17 = null;
-        int stackIn_3_0 = 0;
-        RuntimeException stackIn_6_0 = null;
-        StringBuilder stackIn_6_1 = null;
-        String stackIn_7_2 = null;
-        StringBuilder stackIn_9_1 = null;
-        String stackIn_10_2 = null;
-        StringBuilder stackIn_12_1 = null;
-        String stackIn_13_2 = null;
-        StringBuilder stackIn_15_1 = null;
-        String stackIn_16_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        try {
-          if (!param3) {
-            this.field_d = (GraphicsRenderer) null;
-          }
-          stackIn_3_0 = this.a(param14, param4, 0, param10, param11, param2, param15, param13, param5, param6, param0, param7, param9, -2, param12, param1, param8);
-          return stackIn_3_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var17 = decompiledCaughtException;
-          stackIn_6_0 = var17;
-          stackIn_6_1 = new StringBuilder().append("da.I(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',');
-          if (param9 == null) {
-            stackIn_7_2 = "null";
-          } else {
-            stackIn_7_2 = "{...}";
-          }
-          stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
-          if (param10 == null) {
-            stackIn_10_2 = "null";
-          } else {
-            stackIn_10_2 = "{...}";
-          }
-          stackIn_12_1 = ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param11).append(',');
-          if (param12 == null) {
-            stackIn_13_2 = "null";
-          } else {
-            stackIn_13_2 = "{...}";
-          }
-          stackIn_15_1 = ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param13).append(',').append(param14).append(',');
-          if (param15 == null) {
-            stackIn_16_2 = "null";
-          } else {
-            stackIn_16_2 = "{...}";
-          }
-          throw pn.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
-        }
+    abstract void drawGlyph(int glyphIndex, int x, int y, int width, int height, int color, boolean shadowPass);
+
+    final int drawParagraph(String text, int left, int top, int width, int height, int textColor, int shadowColor, int horizontalAlignment, int verticalAlignment, int lineSpacing) {
+        return this.drawParagraphAlpha(text, left, top, width, height, textColor, shadowColor, 256, horizontalAlignment, verticalAlignment, lineSpacing);
     }
 
-    final static ResourceArchive a(int param0, int param1) {
-        ResourceArchive stackIn_6_0 = null;
-        if (param1 != 1) {
-          field_b = (int[]) null;
-        }
-        if (null == oi.field_d &&
-          param0 != -1) {
-          stackIn_6_0 = lc.a(true, false, true, (byte) -65, 1, param0);
-        } else {
-          stackIn_6_0 = oi.field_d;
-        }
-        return stackIn_6_0;
+    final int measureCharacterAdvance(char character) {
+        return this.glyphAdvances[ae.a(character, -113) & 255];
     }
 
-    private final void a(String param0, int param1) {
-        RuntimeException stackIn_38_0 = null;
-        StringBuilder stackIn_38_1 = null;
-        String stackIn_39_2 = null;
+    public static void releaseTextScratchStorage() {
+        wrappingBuffer = null;
+        wrappedLines = null;
+    }
+
+    private final void applyStyleTag(String tag) {
         Throwable decompiledCaughtException = null;
-        Exception var3 = null;
-        RuntimeException var3_ref = null;
-        int var4 = 0;
-        int[] var5 = null;
+        Exception var2 = null;
+        CharSequence var3 = null;
+        CharSequence var4 = null;
+        CharSequence var5 = null;
         CharSequence var6 = null;
         CharSequence var7 = null;
-        CharSequence var8 = null;
-        CharSequence var9 = null;
-        CharSequence var10 = null;
-        var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          try {
-            if (!param0.startsWith("col=")) {
-              if (param0.equals("/col")) {
-                qg.field_c = tf.field_a & 16777215 | qg.field_c & -16777216;
-              }
-            } else {
-              var6 = (CharSequence) ((Object) param0.substring(4));
-              qg.field_c = -16777216 & qg.field_c | 16777215 & np.a(var6, 4, 16);
-            }
-            if (param1 != -16777216) {
-              var5 = (int[]) null;
-              this.a(119, 96, (RenderSprite[]) null, 57, -108, (String) null, -122, (int[]) null);
-            }
-            if (param0.startsWith("argb=")) {
-              var10 = (CharSequence) ((Object) param0.substring(5));
-              qg.field_c = np.a(var10, 4, 16);
-            } else {
-              if (param0.equals("/argb")) {
-                qg.field_c = tf.field_a;
-              } else {
-                if (param0.startsWith("str=")) {
-                  var9 = (CharSequence) ((Object) param0.substring(4));
-                  rs.field_t = qg.field_c & -16777216 | np.a(var9, 4, 16);
-                } else {
-                  if (param0.equals("str")) {
-                    rs.field_t = -16777216 & qg.field_c | 8388608;
-                  } else {
-                    if (param0.equals("/str")) {
-                      rs.field_t = -1;
-                    } else {
-                      if (param0.startsWith("u=")) {
-                        var8 = (CharSequence) ((Object) param0.substring(2));
-                        PacketBuffer.field_h = qg.field_c & -16777216 | np.a(var8, param1 ^ -16777212, 16);
-                      } else {
-                        if (param0.equals("u")) {
-                          PacketBuffer.field_h = -16777216 & qg.field_c;
-                        } else {
-                          if (param0.equals("/u")) {
-                            PacketBuffer.field_h = -1;
-                          } else {
-                            if (!param0.equalsIgnoreCase("shad=-1")) {
-                              if (param0.startsWith("shad=")) {
-                                var7 = (CharSequence) ((Object) param0.substring(5));
-                                es.field_c = qg.field_c & -16777216 | np.a(var7, 4, 16);
-                              } else {
-                                if (!param0.equals("shad")) {
-                                  if (param0.equals("/shad")) {
-                                    es.field_c = em.field_d;
-                                  } else {
-                                    if (param0.equals("br")) {
-                                      this.a(em.field_d, -1, tf.field_a);
+          if (!tag.startsWith("col=")) {
+            if (!tag.equals("/col")) {
+              if (!tag.startsWith("trans=")) {
+                if (!tag.equals("/trans")) {
+                  if (!tag.startsWith("str=")) {
+                    if (!tag.equals("str")) {
+                      if (!tag.equals("/str")) {
+                        if (!tag.startsWith("u=")) {
+                          if (!tag.equals("u")) {
+                            if (!tag.equals("/u")) {
+                              if (!tag.startsWith("shad=")) {
+                                if (!tag.equals("shad")) {
+                                  if (!tag.equals("/shad")) {
+                                    if (tag.equals("br")) {
+                                      this.resetTextStyle(defaultTextColor, defaultShadowColor, defaultAlpha256);
                                     }
+                                  } else {
+                                    currentShadowColor = defaultShadowColor;
                                   }
                                 } else {
-                                  es.field_c = qg.field_c & -16777216;
+                                  currentShadowColor = 0;
                                 }
+                              } else {
+                                var7 = (CharSequence) ((Object) tag.substring(5));
+                                currentShadowColor = np.a(var7, 4, 16);
                               }
                             } else {
-                              es.field_c = 0;
+                              underlineColor = -1;
                             }
+                          } else {
+                            underlineColor = 0;
                           }
+                        } else {
+                          var6 = (CharSequence) ((Object) tag.substring(2));
+                          underlineColor = np.a(var6, 4, 16);
                         }
+                      } else {
+                        strikethroughColor = -1;
                       }
+                    } else {
+                      strikethroughColor = 8388608;
                     }
-                  }
-                }
-              }
-            }
-          } catch (java.lang.Exception decompiledCaughtParameter0) {
-            decompiledCaughtException = decompiledCaughtParameter0;
-            var3 = (Exception) (Object) decompiledCaughtException;
-          }
-          return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_38_0 = var3_ref;
-          stackIn_38_1 = new StringBuilder().append("da.P(");
-          if (param0 == null) {
-            stackIn_39_2 = "null";
-          } else {
-            stackIn_39_2 = "{...}";
-          }
-          throw pn.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
-        }
-    }
-
-    final static void a(int param0, boolean param1, boolean param2) {
-        if (param0 < 8) {
-          field_b = (int[]) null;
-        }
-        if (param1) {
-          ef.field_m = ef.field_m - 1;
-          if (ef.field_m == 0) {
-            ScorchMark.field_f = null;
-          }
-        }
-        if (param2) {
-          gq.field_e = gq.field_e - 1;
-          if (gq.field_e == 0) {
-            sa.field_h = null;
-          }
-        }
-    }
-
-    final void a(int param0, int param1, RenderSprite[] param2, int param3, int param4, String param5, int param6, int[] param7) {
-        if (param5 == null) {
-          return;
-        }
-        try {
-          this.a(param1, -1, param0);
-          this.a(0, param2, param3, param5, (byte) 5, param7, param6, (aa) null, param4);
-        } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    private final int a(int param0, int param1, int param2, aa param3, int param4, int param5, String param6, int param7, int param8, int param9, int param10, int param11, RenderSprite[] param12, int param13, int[] param14, int param15, int param16) {
-        int stackIn_4_0 = 0;
-        int stackIn_46_0 = 0;
-        Object stackIn_49_0 = null;
-        StringBuilder stackIn_49_1 = null;
-        String stackIn_50_2 = null;
-        StringBuilder stackIn_52_1 = null;
-        String stackIn_53_2 = null;
-        StringBuilder stackIn_55_1 = null;
-        String stackIn_56_2 = null;
-        StringBuilder stackIn_58_1 = null;
-        String stackIn_59_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        Object var18 = null;
-        int var19 = 0;
-        int var20 = 0;
-        int var21 = 0;
-        int var22 = 0;
-        int var23 = 0;
-        int var22Lifetime1;
-        var23 = AceOfSkies.obfuscationControl ? 1 : 0;
-        try {
-          if (param6 == null) {
-            stackIn_4_0 = 0;
-            return stackIn_4_0;
-          }
-          this.a(param1, -1, param5);
-          if (param11 == 0) {
-            param11 = this.field_c.field_e;
-          }
-          if (param11 + this.field_c.field_i + this.field_c.field_j > param0 &&
-            param0 < param11 + param11) {
-            var18 = null;
-          } else {
-            var18 = new int[]{param7};
-          }
-          var20 = 109 / ((param13 - 48) / 39);
-          if (-1 == param2) {
-            param2 = param0 / param11;
-            if (0 >= param2) {
-              param2 = 1;
-            }
-          }
-          var19 = this.field_c.a(-121, param12, (int[]) (var18), vi.field_p, param6);
-          if (0 < param2 &&
-            var19 >= param2) {
-            var19 = param2;
-            vi.field_p[param2 - 1] = this.field_c.a(param12, 0, param7, vi.field_p[-1 + param2]);
-          }
-          if (3 == param4 &&
-            var19 == 1) {
-            param4 = 1;
-          }
-          if (param4 == 0) {
-            var21 = this.field_c.field_j + param9;
-          } else {
-            if (param4 == 1) {
-              var21 = (-this.field_c.field_i + (-this.field_c.field_j + (param0 - (-1 + var19) * param11))) / 2 + this.field_c.field_j + param9;
-            } else {
-              if (param4 == 2) {
-                var21 = -((-1 + var19) * param11) - this.field_c.field_i + (param0 + param9);
-              } else {
-                var22 = (-this.field_c.field_i - this.field_c.field_j + param0 - (var19 - 1) * param11) / (var19 + 1);
-                if (0 > var22) {
-                  var22 = 0;
-                }
-                var21 = this.field_c.field_j + (param9 + var22);
-                param11 = param11 + var22;
-              }
-            }
-          }
-          for (var22Lifetime1 = 0; var22Lifetime1 < var19; var22Lifetime1++) {
-            if (param8 == 0) {
-              this.a(param16, param12, param15, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
-            } else {
-              if (param8 == 1) {
-                this.a(param16, param12, param15 + (-this.field_c.a((byte) 94, vi.field_p[var22Lifetime1]) + param7) / 2, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
-              } else {
-                if (param8 != 2) {
-                  if (var22Lifetime1 != var19 - 1) {
-                    this.a(param7, (byte) 104, vi.field_p[var22Lifetime1]);
-                    this.a(param16, param12, param15, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
-                    tm.field_i = 0;
                   } else {
-                    this.a(param16, param12, param15, vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
+                    var5 = (CharSequence) ((Object) tag.substring(4));
+                    strikethroughColor = np.a(var5, 4, 16);
                   }
                 } else {
-                  this.a(param16, param12, -this.field_c.a((byte) 94, vi.field_p[var22Lifetime1]) + (param15 + param7), vi.field_p[var22Lifetime1], (byte) 5, param14, var21, param3, param10);
+                  currentAlpha256 = defaultAlpha256;
+                }
+              } else {
+                var4 = (CharSequence) ((Object) tag.substring(6));
+                currentAlpha256 = td.a(var4, (byte) 38);
+              }
+            } else {
+              currentTextColor = defaultTextColor;
+            }
+          } else {
+            var3 = (CharSequence) ((Object) tag.substring(4));
+            currentTextColor = np.a(var3, 4, 16);
+          }
+        } catch (java.lang.Exception decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = (Exception) (Object) decompiledCaughtException;
+        }
+    }
+
+    abstract void drawGlyphAlpha(int glyphIndex, int x, int y, int width, int height, int color, int alpha256, boolean shadowPass);
+
+    private final void resetOpaqueTextStyle(int textColor, int shadowColor) {
+        strikethroughColor = -1;
+        underlineColor = -1;
+        defaultShadowColor = shadowColor;
+        currentShadowColor = shadowColor;
+        defaultTextColor = textColor;
+        currentTextColor = textColor;
+        defaultAlpha256 = 256;
+        currentAlpha256 = 256;
+        spaceExpansionQ8 = 0;
+        justificationRemainderQ8 = 0;
+    }
+
+    final int drawParagraphAlpha(String text, int left, int top, int width, int height, int textColor, int shadowColor, int alpha256, int horizontalAlignment, int verticalAlignment, int lineSpacing) {
+        int[] var12;
+        int var13;
+        int var14;
+        int var15;
+        int var15Lifetime1;
+        if (text == null) {
+          return 0;
+        }
+        this.resetTextStyle(textColor, shadowColor, alpha256);
+        if (lineSpacing == 0) {
+          lineSpacing = this.lineAdvance;
+        }
+        var12 = new int[]{width};
+        if (height < this.maxAscent + this.maxDescent + lineSpacing &&
+          height < lineSpacing + lineSpacing) {
+          var12 = null;
+        }
+        var13 = this.wrapText(text, var12, wrappedLines);
+        if (verticalAlignment == 3 &&
+          var13 == 1) {
+          verticalAlignment = 1;
+        }
+        if (verticalAlignment != 0) {
+          if (verticalAlignment != 1) {
+            if (verticalAlignment != 2) {
+              var15 = (height - this.maxAscent - this.maxDescent - (var13 - 1) * lineSpacing) / (var13 + 1);
+              if (var15 < 0) {
+                var15 = 0;
+              }
+              var14 = top + this.maxAscent + var15;
+              lineSpacing = lineSpacing + var15;
+            } else {
+              var14 = top + height - this.maxDescent - (var13 - 1) * lineSpacing;
+            }
+          } else {
+            var14 = top + this.maxAscent + (height - this.maxAscent - this.maxDescent - (var13 - 1) * lineSpacing) / 2;
+          }
+        } else {
+          var14 = top + this.maxAscent;
+        }
+        for (var15Lifetime1 = 0; var15Lifetime1 < var13; var15Lifetime1++) {
+          if (horizontalAlignment != 0) {
+            if (horizontalAlignment != 1) {
+              if (horizontalAlignment != 2) {
+                if (var15Lifetime1 != var13 - 1) {
+                  this.prepareJustification(wrappedLines[var15Lifetime1], width);
+                  this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
+                  spaceExpansionQ8 = 0;
+                } else {
+                  this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
+                }
+                var14 = var14 + lineSpacing;
+              } else {
+                this.drawStyledText(wrappedLines[var15Lifetime1], left + width - this.measureTextWidth(wrappedLines[var15Lifetime1]), var14);
+                var14 = var14 + lineSpacing;
+              }
+            } else {
+              this.drawStyledText(wrappedLines[var15Lifetime1], left + (width - this.measureTextWidth(wrappedLines[var15Lifetime1])) / 2, var14);
+              var14 = var14 + lineSpacing;
+            }
+          } else {
+            this.drawStyledText(wrappedLines[var15Lifetime1], left, var14);
+            var14 = var14 + lineSpacing;
+          }
+        }
+        return var13;
+    }
+
+    private final void decodeFontMetrics(byte[] encodedMetrics) {
+        int var3_int = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$5 = 0;
+        int incrementValue$4 = 0;
+        int var6_int = 0;
+        byte[] array$2 = null;
+        int incrementValue$3 = 0;
+        byte[] array$0 = null;
+        int var9 = 0;
+        int incrementValue$1 = 0;
+        int var2;
+        int[] var3;
+        int[] var4;
+        int var5_int;
+        byte[][] var5;
+        byte[][] var6;
+        int var7;
+        int var8;
+        int[] var10;
+        byte[][] var11;
+        byte[][] var12;
+        int[] var13;
+        int[] var14;
+        byte[][] var15;
+        byte[][] var16;
+        int[] var17;
+        int var5_intLifetime1;
+        int var8Lifetime1;
+        int var8Lifetime2;
+        int var7Lifetime1;
+        int var7Lifetime2;
+        this.glyphAdvances = new int[256];
+        if (encodedMetrics.length == 257) {
+          for (var2 = 0; var2 < this.glyphAdvances.length; var2++) {
+            this.glyphAdvances[var2] = encodedMetrics[var2] & 255;
+          }
+          this.lineAdvance = encodedMetrics[256] & 255;
+        } else {
+          var2 = 0;
+          for (var3_int = 0; var3_int < 256; var3_int++) {
+            incrementValue$6 = var2;
+            var2++;
+            this.glyphAdvances[var3_int] = encodedMetrics[incrementValue$6] & 255;
+          }
+          var14 = new int[256];
+          var10 = var14;
+          var3 = var10;
+          var17 = new int[256];
+          var13 = var17;
+          var4 = var13;
+          for (var5_int = 0; var5_int < 256; var5_int++) {
+            incrementValue$5 = var2;
+            var2++;
+            var3[var5_int] = encodedMetrics[incrementValue$5] & 255;
+          }
+          for (var5_intLifetime1 = 0; var5_intLifetime1 < 256; var5_intLifetime1++) {
+            incrementValue$4 = var2;
+            var2++;
+            var4[var5_intLifetime1] = encodedMetrics[incrementValue$4] & 255;
+          }
+          var15 = new byte[256][];
+          var11 = var15;
+          var5 = var11;
+          for (var6_int = 0; var6_int < 256; var6_int++) {
+            array$2 = new byte[var14[var6_int]];
+            var5[var6_int] = array$2;
+            var7 = 0;
+            for (var8 = 0; var8 < var15[var6_int].length; var8++) {
+              incrementValue$3 = var2;
+              var2++;
+              var7 = (byte)(var7 + encodedMetrics[incrementValue$3]);
+              var15[var6_int][var8] = (byte)var7;
+            }
+          }
+          var16 = new byte[256][];
+          var12 = var16;
+          var6 = var12;
+          for (var7Lifetime1 = 0; var7Lifetime1 < 256; var7Lifetime1++) {
+            array$0 = new byte[var14[var7Lifetime1]];
+            var6[var7Lifetime1] = array$0;
+            var8Lifetime1 = 0;
+            for (var9 = 0; var9 < var16[var7Lifetime1].length; var9++) {
+              incrementValue$1 = var2;
+              var2++;
+              var8Lifetime1 = (byte)(var8Lifetime1 + encodedMetrics[incrementValue$1]);
+              var16[var7Lifetime1][var9] = (byte)var8Lifetime1;
+            }
+          }
+          this.pairKerning = new byte[65536];
+          for (var7Lifetime2 = 0; var7Lifetime2 < 256; var7Lifetime2++) {
+            if (var7Lifetime2 != 32 &&
+              var7Lifetime2 != 160) {
+              for (var8Lifetime2 = 0; var8Lifetime2 < 256; var8Lifetime2++) {
+                if (var8Lifetime2 != 32 &&
+                  var8Lifetime2 != 160) {
+                  this.pairKerning[(var7Lifetime2 << 8) + var8Lifetime2] = (byte)BitmapFont.computePairKerning(var15, var16, var17, this.glyphAdvances, var14, var7Lifetime2, var8Lifetime2);
                 }
               }
             }
-            var21 = var21 + param11;
           }
-          stackIn_46_0 = var19;
-          return stackIn_46_0;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var18 = decompiledCaughtException;
-          stackIn_49_0 = var18;
-          stackIn_49_1 = new StringBuilder().append("da.T(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_50_2 = "null";
-          } else {
-            stackIn_50_2 = "{...}";
-          }
-          stackIn_52_1 = ((StringBuilder) (Object) stackIn_49_1).append(stackIn_50_2).append(',').append(param4).append(',').append(param5).append(',');
-          if (param6 == null) {
-            stackIn_53_2 = "null";
-          } else {
-            stackIn_53_2 = "{...}";
-          }
-          stackIn_55_1 = ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',');
-          if (param12 == null) {
-            stackIn_56_2 = "null";
-          } else {
-            stackIn_56_2 = "{...}";
-          }
-          stackIn_58_1 = ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param13).append(',');
-          if (param14 == null) {
-            stackIn_59_2 = "null";
-          } else {
-            stackIn_59_2 = "{...}";
-          }
-          throw pn.a((Throwable) (stackIn_49_0), ((StringBuilder) (Object) stackIn_58_1).append(stackIn_59_2).append(',').append(param15).append(',').append(param16).append(')').toString());
+          this.lineAdvance = var17[32] + var14[32];
         }
     }
 
-    public static void a(int param0) {
-        if (param0 != 5) {
+    final void drawText(String text, int leftX, int baselineY, int textColor, int shadowColor) {
+        if (text == null) {
           return;
         }
-        field_a = null;
-        field_b = null;
+        this.resetOpaqueTextStyle(textColor, shadowColor);
+        this.drawStyledText(text, leftX, baselineY);
     }
 
-    BitmapFont(GraphicsRenderer param0, vs param1) {
-        try {
-          this.field_c = param1;
-          this.field_d = param0;
-        } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    final void a(int param0, int param1, int param2, String param3, int param4, int param5) {
-        if (param3 == null) {
-          return;
-        }
-        try {
-          if (param4 != 18731) {
-            String var8 = (String) null;
-            this.a((String) null, -14, 82, 83, -17, (byte) 19);
-          }
-          this.a(param1, param4 - 18732, param0);
-          this.a(0, (RenderSprite[]) null, param2, param3, (byte) 5, (int[]) null, param5, (aa) null, 0);
-        } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
-        }
-    }
-
-    private final void a(int param0, RenderSprite[] param1, int param2, String param3, byte param4, int[] param5, int param6, aa param7, int param8) {
+    final int wrapText(String text, int[] lineWidthLimits, String[] outputLines) {
         int var13 = 0;
-        int stackIn_26_0 = 0;
-        RuntimeException stackIn_64_0 = null;
-        StringBuilder stackIn_64_1 = null;
-        String stackIn_65_2 = null;
-        StringBuilder stackIn_67_1 = null;
-        String stackIn_68_2 = null;
-        StringBuilder stackIn_70_1 = null;
-        String stackIn_71_2 = null;
-        StringBuilder stackIn_73_1 = null;
-        String stackIn_74_2 = null;
+        StringBuilder discarded$0 = null;
+        StringBuilder discarded$1 = null;
+        StringBuilder discarded$2 = null;
+        StringBuilder discarded$3 = null;
+        int stackIn_69_0 = 0;
+        int[] stackIn_69_1 = null;
+        int stackIn_70_2 = 0;
         Throwable decompiledCaughtException = null;
-        int var10_int = 0;
-        RuntimeException var10 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var14 = 0;
-        String var15_ref_String = null;
-        int var15 = 0;
+        String var15 = null;
         int var16_int = 0;
         Exception var16 = null;
-        RenderSprite var17 = null;
-        int var18 = 0;
-        int var19 = 0;
-        Object var20 = null;
-        CharSequence var21 = null;
-        var20 = null;
-        var19 = AceOfSkies.obfuscationControl ? 1 : 0;
-        try {
-          param6 = param6 - this.field_c.field_e;
-          if (param4 != 5) {
-            this.field_d = (GraphicsRenderer) null;
-          }
-          var10_int = -1;
-          var11 = -1;
-          var12 = param3.length();
-          for (var13 = 0; var13 < var12; var13++) {
-            boolean decompiledFrameRemainder0 = true;
-            var14 = (char)(255 & ae.a(param3.charAt(var13), 56));
-            if (var14 != 60) {
-              if (var14 == 62 &&
-                -1 != var10_int) {
-                var15_ref_String = param3.substring(var10_int + 1, var13);
-                var10_int = -1;
-                if (var15_ref_String.equals("lt")) {
-                  var14 = 60;
-                } else {
-                  if (!var15_ref_String.equals("gt")) {
-                    if (!var15_ref_String.equals("nbsp")) {
-                      if (var15_ref_String.equals("shy")) {
-                        var14 = 173;
-                      } else {
-                        if (!var15_ref_String.equals("times")) {
-                          if (var15_ref_String.equals("euro")) {
-                            var14 = 8364;
-                          } else {
-                            if (var15_ref_String.equals("copy")) {
-                              var14 = 169;
-                            } else {
-                              if (!var15_ref_String.equals("reg")) {
-                                if (!var15_ref_String.startsWith("img=")) {
-                                  this.a(var15_ref_String, -16777216);
-                                } else {
+        Object var17 = null;
+        CharSequence var18 = null;
+        var17 = null;
+        if (text == null) {
+          return 0;
+        }
+        aq.a(' ', -2, 0, wrappingBuffer);
+        var4 = 0;
+        var5 = 0;
+        var6 = -1;
+        var7 = 0;
+        var8 = 0;
+        var9 = -1;
+        var10 = 0;
+        var11 = 0;
+        var12 = text.length();
+        for (var13 = 0; var13 < var12; var13++) {
+          var14 = text.charAt(var13);
+          if (var14 != 60) {
+            if (var14 == 62 &&
+              var9 != -1) {
+              var15 = text.substring(var9 + 1, var13).toLowerCase();
+              var9 = -1;
+              discarded$0 = wrappingBuffer.append('<');
+              discarded$1 = wrappingBuffer.append(var15);
+              discarded$2 = wrappingBuffer.append('>');
+              if (!var15.equals("br")) {
+                if (!var15.equals("lt")) {
+                  if (!var15.equals("gt")) {
+                    if (!var15.equals("nbsp")) {
+                      if (!var15.equals("shy")) {
+                        if (!var15.equals("times")) {
+                          if (!var15.equals("euro")) {
+                            if (!var15.equals("copy")) {
+                              if (!var15.equals("reg")) {
+                                if (var15.startsWith("img=")) {
                                   try {
-                                    var21 = (CharSequence) ((Object) var15_ref_String.substring(4));
-                                    var16_int = td.a(var21, (byte) 38);
-                                    var17 = param1[var16_int];
-                                    if (param5 != null) {
-                                      stackIn_26_0 = param5[var16_int];
-                                    } else {
-                                      stackIn_26_0 = var17.c();
-                                    }
-                                    var18 = stackIn_26_0;
-                                    if ((qg.field_c & -16777216) != -16777216) {
-                                      var17.a(param2, param6 + this.field_c.field_e - var18, 0, qg.field_c & -16777216 | 16777215, 1);
-                                    } else {
-                                      var17.a(param2, -var18 + this.field_c.field_e + param6, 1, 0, 1);
-                                    }
-                                    param2 = param2 + param1[var16_int].d();
-                                    var11 = -1;
+                                    var18 = (CharSequence) ((Object) var15.substring(4));
+                                    var16_int = td.a(var18, (byte) 38);
+                                    var4 = var4 + this.inlineImages[var16_int].field_h;
+                                    var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
                                     var16 = (Exception) (Object) decompiledCaughtException;
                                   }
                                 }
-                                decompiledFrameRemainder0 = false;
+                              } else {
+                                var4 = var4 + this.measureCharacterAdvance('®');
+                                if (this.pairKerning != null &&
+                                  var10 != 0) {
+                                  var4 = var4 + this.pairKerning[(var10 << 8) + 174];
+                                }
+                                var10 = 174;
                               }
-                              else {
-                                var14 = 174;
+                            } else {
+                              var4 = var4 + this.measureCharacterAdvance('©');
+                              if (this.pairKerning != null &&
+                                var10 != 0) {
+                                var4 = var4 + this.pairKerning[(var10 << 8) + 169];
                               }
+                              var10 = 169;
                             }
+                          } else {
+                            var4 = var4 + this.measureCharacterAdvance('€');
+                            if (this.pairKerning != null &&
+                              var10 != 0) {
+                              var4 = var4 + this.pairKerning[(var10 << 8) + 128];
+                            }
+                            var10 = 8364;
                           }
                         } else {
-                          var14 = 215;
+                          var4 = var4 + this.measureCharacterAdvance('×');
+                          if (this.pairKerning != null &&
+                            var10 != 0) {
+                            var4 = var4 + this.pairKerning[(var10 << 8) + 215];
+                          }
+                          var10 = 215;
                         }
+                      } else {
+                        var4 = var4 + this.measureCharacterAdvance('­');
+                        if (this.pairKerning != null &&
+                          var10 != 0) {
+                          var4 = var4 + this.pairKerning[(var10 << 8) + 173];
+                        }
+                        var10 = 173;
                       }
                     } else {
-                      var14 = 160;
+                      var4 = var4 + this.measureCharacterAdvance(' ');
+                      if (this.pairKerning != null &&
+                        var10 != 0) {
+                        var4 = var4 + this.pairKerning[(var10 << 8) + 160];
+                      }
+                      var10 = 160;
                     }
                   } else {
-                    var14 = 62;
-                  }
-                }
-              }
-              if ((decompiledFrameRemainder0) &&
-                (var10_int == -1)) {
-                if (var11 != -1) {
-                  param2 = param2 + this.field_c.a(0, (char) var14, var11);
-                }
-                if (var14 == 32) {
-                  if (tm.field_i > 0) {
-                    ed.field_i = ed.field_i + tm.field_i;
-                    param2 = param2 + (ed.field_i >> 8);
-                    ed.field_i = ed.field_i & 255;
+                    var4 = var4 + this.measureCharacterAdvance('>');
+                    if (this.pairKerning != null &&
+                      var10 != 0) {
+                      var4 = var4 + this.pairKerning[(var10 << 8) + 62];
+                    }
+                    var10 = 62;
                   }
                 } else {
-                  if (param7 == null) {
-                    if (0 != (-16777216 & es.field_c)) {
-                      this.fa((char) var14, 1 + param2, param6 + 1, es.field_c, true);
-                    }
-                    this.fa((char) var14, param2, param6, qg.field_c, false);
-                  } else {
-                    if (0 != (es.field_c & -16777216)) {
-                      this.a((char) var14, 1 + param2, param6 + 1, es.field_c, true, param7, param0, param8);
-                    }
-                    this.a((char) var14, param2, param6, qg.field_c, false, param7, param0, param8);
+                  var4 = var4 + this.measureCharacterAdvance('<');
+                  if (this.pairKerning != null &&
+                    var10 != 0) {
+                    var4 = var4 + this.pairKerning[(var10 << 8) + 60];
                   }
-                }
-                var15 = this.field_c.a((byte) 109, var14);
-                if (rs.field_t != -1) {
-                  this.field_d.a(param6 + (int)(0.7 * (double)this.field_c.field_e), rs.field_t, 28321, param2, var15);
-                }
-                if (PacketBuffer.field_h != -1) {
-                  this.field_d.a(1 + (param6 + this.field_c.field_e), PacketBuffer.field_h, 28321, param2, var15);
-                }
-                param2 = param2 + var15;
-                var11 = var14;
-              }
-            } else {
-              var10_int = var13;
-            }
-          }
-          return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
-          decompiledCaughtException = decompiledCaughtParameter1;
-          var10 = (RuntimeException) (Object) decompiledCaughtException;
-          stackIn_64_0 = var10;
-          stackIn_64_1 = new StringBuilder().append("da.G(").append(param0).append(',');
-          if (param1 == null) {
-            stackIn_65_2 = "null";
-          } else {
-            stackIn_65_2 = "{...}";
-          }
-          stackIn_67_1 = ((StringBuilder) (Object) stackIn_64_1).append(stackIn_65_2).append(',').append(param2).append(',');
-          if (param3 == null) {
-            stackIn_68_2 = "null";
-          } else {
-            stackIn_68_2 = "{...}";
-          }
-          stackIn_70_1 = ((StringBuilder) (Object) stackIn_67_1).append(stackIn_68_2).append(',').append(param4).append(',');
-          if (param5 == null) {
-            stackIn_71_2 = "null";
-          } else {
-            stackIn_71_2 = "{...}";
-          }
-          stackIn_73_1 = ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(',').append(param6).append(',');
-          if (param7 == null) {
-            stackIn_74_2 = "null";
-          } else {
-            stackIn_74_2 = "{...}";
-          }
-          throw pn.a((Throwable) ((Object) stackIn_64_0), ((StringBuilder) (Object) stackIn_73_1).append(stackIn_74_2).append(',').append(param8).append(')').toString());
-        }
-    }
-
-    private final void a(int param0, byte param1, String param2) {
-        int var6 = 0;
-        int var4_int = 0;
-        int var5 = 0;
-        int var7 = 0;
-        int var8 = 0;
-        RuntimeException stackIn_18_0 = null;
-        StringBuilder stackIn_18_1 = null;
-        String stackIn_19_2 = null;
-        RuntimeException decompiledCaughtException = null;
-        RuntimeException var4 = null;
-        var8 = AceOfSkies.obfuscationControl ? 1 : 0;
-        try {
-          var4_int = 0;
-          var5 = 0;
-          if (param1 <= 98) {
-            return;
-          }
-          for (var6 = 0; param2.length() > var6; var6++) {
-            var7 = param2.charAt(var6);
-            if (var7 != 60) {
-              if (var7 != 62) {
-                if (var5 == 0 &&
-                  32 == var7) {
-                  var4_int++;
+                  var10 = 60;
                 }
               } else {
-                var5 = 0;
+                outputLines[var11] = wrappingBuffer.toString().substring(var5, wrappingBuffer.length());
+                var11++;
+                var5 = wrappingBuffer.length();
+                var4 = 0;
+                var6 = -1;
+                var10 = 0;
+              }
+              var14 = 0;
+            }
+            if (var9 == -1) {
+              if (var14 != 0) {
+                discarded$3 = wrappingBuffer.append((char) var14);
+                var14 = (char)(ae.a((char) var14, 68) & 255);
+                var4 = var4 + this.glyphAdvances[var14];
+                if (this.pairKerning != null &&
+                  var10 != 0) {
+                  var4 = var4 + this.pairKerning[(var10 << 8) + var14];
+                }
+                var10 = var14;
+              }
+              if (var14 == 32) {
+                var6 = wrappingBuffer.length();
+                var7 = var4;
+                var8 = 1;
+              }
+              if (lineWidthLimits != null) {
+                stackIn_69_0 = var4;
+                stackIn_69_1 = (int[]) (lineWidthLimits);
+                if (var11 >= lineWidthLimits.length) {
+                  stackIn_70_2 = lineWidthLimits.length - 1;
+                } else {
+                  stackIn_70_2 = var11;
+                }
+                if (stackIn_69_0 > stackIn_69_1[stackIn_70_2] &&
+                  var6 >= 0) {
+                  outputLines[var11] = wrappingBuffer.toString().substring(var5, var6 - var8);
+                  var11++;
+                  var5 = var6;
+                  var6 = -1;
+                  var4 = var4 - var7;
+                  var10 = 0;
+                }
+              }
+              if (var14 == 45) {
+                var6 = wrappingBuffer.length();
+                var7 = var4;
+                var8 = 0;
+              }
+            }
+          } else {
+            var9 = var13;
+          }
+        }
+        if (wrappingBuffer.length() > var5) {
+          outputLines[var11] = wrappingBuffer.toString().substring(var5, wrappingBuffer.length());
+          var11++;
+        }
+        return var11;
+    }
+
+    final int measureWrappedHeight(String text, int wrapWidth, int lineSpacing) {
+        if (lineSpacing == 0) {
+          lineSpacing = this.lineAdvance;
+        }
+        int var4 = this.wrapText(text, new int[]{wrapWidth}, wrappedLines);
+        int var5 = (var4 - 1) * lineSpacing;
+        return this.maxAscent + var5 + this.maxDescent;
+    }
+
+    final int countWrappedLines(String text, int wrapWidth) {
+        return this.wrapText(text, new int[]{wrapWidth}, wrappedLines);
+    }
+
+    private final static int computePairKerning(byte[][] leadingProfiles, byte[][] trailingProfiles, int[] profileOffsets, int[] advances, int[] profileLengths, int firstGlyph, int secondGlyph) {
+        int var18 = 0;
+        int incrementValue$6 = 0;
+        int incrementValue$7 = 0;
+        int var7;
+        int var8;
+        int var9;
+        int var10;
+        int var11;
+        int var12;
+        int var13;
+        byte[] var14;
+        byte[] var15;
+        int var16;
+        int var17;
+        int var19;
+        var7 = profileOffsets[firstGlyph];
+        var8 = var7 + profileLengths[firstGlyph];
+        var9 = profileOffsets[secondGlyph];
+        var10 = var9 + profileLengths[secondGlyph];
+        var11 = var7;
+        if (var9 > var7) {
+          var11 = var9;
+        }
+        var12 = var8;
+        if (var10 < var8) {
+          var12 = var10;
+        }
+        var13 = advances[firstGlyph];
+        if (advances[secondGlyph] < var13) {
+          var13 = advances[secondGlyph];
+        }
+        var14 = trailingProfiles[firstGlyph];
+        var15 = leadingProfiles[secondGlyph];
+        var16 = var11 - var7;
+        var17 = var11 - var9;
+        for (var18 = var11; var18 < var12; var18++) {
+          incrementValue$6 = var16;
+          var16++;
+          incrementValue$7 = var17;
+          var17++;
+          var19 = var14[incrementValue$6] + var15[incrementValue$7];
+          if (var19 < var13) {
+            var13 = var19;
+          }
+        }
+        return -var13;
+    }
+
+    private final void prepareJustification(String text, int targetWidth) {
+        int var6 = 0;
+        int var3;
+        int var4;
+        int var5;
+        int var7;
+        var3 = 0;
+        var4 = 0;
+        var5 = text.length();
+        for (var6 = 0; var6 < var5; var6++) {
+          var7 = text.charAt(var6);
+          if (var7 != 60) {
+            if (var7 != 62) {
+              if (var4 == 0 &&
+                var7 == 32) {
+                var3++;
               }
             } else {
-              var5 = 1;
+              var4 = 0;
             }
-          }
-          if (var4_int > 0) {
-            tm.field_i = (param0 - this.field_c.a((byte) 94, param2) << 8) / var4_int;
-          }
-          return;
-        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
-          decompiledCaughtException = decompiledCaughtParameter0;
-          var4 = decompiledCaughtException;
-          stackIn_18_0 = var4;
-          stackIn_18_1 = new StringBuilder().append("da.N(").append(param0).append(',').append(param1).append(',');
-          if (param2 == null) {
-            stackIn_19_2 = "null";
           } else {
-            stackIn_19_2 = "{...}";
+            var4 = 1;
           }
-          throw pn.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+        }
+        if (var3 > 0) {
+          spaceExpansionQ8 = (targetWidth - this.measureTextWidth(text) << 8) / var3;
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4, byte param5) {
-        if (param0 == null) {
+    final int measureTextWidth(String text) {
+        int var6 = 0;
+        Throwable decompiledCaughtException = null;
+        int var2 = 0;
+        int var3 = 0;
+        int var4 = 0;
+        int var5 = 0;
+        int var7 = 0;
+        String var8 = null;
+        int var9_int = 0;
+        Exception var9 = null;
+        CharSequence var10 = null;
+        if (text == null) {
+          return 0;
+        }
+        var2 = -1;
+        var3 = 0;
+        var4 = 0;
+        var5 = text.length();
+        for (var6 = 0; var6 < var5; var6++) {
+          boolean decompiledFrameRemainder0 = true;
+          var7 = text.charAt(var6);
+          if (var7 != 60) {
+            if (var7 == 62 &&
+              var2 != -1) {
+              var8 = text.substring(var2 + 1, var6).toLowerCase();
+              var2 = -1;
+              if (!var8.equals("lt")) {
+                if (!var8.equals("gt")) {
+                  if (!var8.equals("nbsp")) {
+                    if (!var8.equals("shy")) {
+                      if (!var8.equals("times")) {
+                        if (!var8.equals("euro")) {
+                          if (!var8.equals("copy")) {
+                            if (!var8.equals("reg")) {
+                              if (!(!var8.startsWith("img="))) {
+                                try {
+                                  var10 = (CharSequence) ((Object) var8.substring(4));
+                                  var9_int = td.a(var10, (byte) 38);
+                                  var4 = var4 + this.inlineImages[var9_int].field_h;
+                                  var3 = 0;
+                                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  var9 = (Exception) (Object) decompiledCaughtException;
+                                }
+                              }
+                              decompiledFrameRemainder0 = false;
+                            }
+                            else {
+                              var7 = 174;
+                            }
+                          } else {
+                            var7 = 169;
+                          }
+                        } else {
+                          var7 = 8364;
+                        }
+                      } else {
+                        var7 = 215;
+                      }
+                    } else {
+                      var7 = 173;
+                    }
+                  } else {
+                    var7 = 160;
+                  }
+                } else {
+                  var7 = 62;
+                }
+              } else {
+                var7 = 60;
+              }
+            }
+            if ((decompiledFrameRemainder0) &&
+              (var2 == -1)) {
+              var7 = (char)(ae.a((char) var7, -110) & 255);
+              var4 = var4 + this.glyphAdvances[var7];
+              if (this.pairKerning != null &&
+                var3 != 0) {
+                var4 = var4 + this.pairKerning[(var3 << 8) + var7];
+              }
+              var3 = var7;
+            }
+          } else {
+            var2 = var6;
+          }
+        }
+        return var4;
+    }
+
+    final void drawRightAlignedText(String text, int rightX, int baselineY, int textColor, int shadowColor) {
+        if (text == null) {
           return;
         }
-        try {
-          this.a(param2, -1, param1);
-          if (param5 != 92) {
-            this.field_d = (GraphicsRenderer) null;
+        this.resetOpaqueTextStyle(textColor, shadowColor);
+        this.drawStyledText(text, rightX - this.measureTextWidth(text), baselineY);
+    }
+
+    private final void drawStyledText(String text, int penX, int baselineY) {
+        int var7 = 0;
+        int stackIn_27_0 = 0;
+        Throwable decompiledCaughtException = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var8 = 0;
+        String var9_ref_String = null;
+        int var9 = 0;
+        int var10 = 0;
+        Exception var10_ref_Exception = null;
+        df var11_ref_df = null;
+        int var11 = 0;
+        int var12 = 0;
+        CharSequence var13 = null;
+        baselineY = baselineY - this.lineAdvance;
+        var4 = -1;
+        var5 = 0;
+        var6 = text.length();
+        for (var7 = 0; var7 < var6; var7++) {
+          boolean decompiledFrameRemainder0 = true;
+          var8 = text.charAt(var7);
+          if (var8 != 60) {
+            if (var8 == 62 &&
+              var4 != -1) {
+              var9_ref_String = text.substring(var4 + 1, var7).toLowerCase();
+              var4 = -1;
+              if (!var9_ref_String.equals("lt")) {
+                if (!var9_ref_String.equals("gt")) {
+                  if (!var9_ref_String.equals("nbsp")) {
+                    if (!var9_ref_String.equals("shy")) {
+                      if (!var9_ref_String.equals("times")) {
+                        if (!var9_ref_String.equals("euro")) {
+                          if (!var9_ref_String.equals("copy")) {
+                            if (!var9_ref_String.equals("reg")) {
+                              if (!var9_ref_String.startsWith("img=")) {
+                                this.applyStyleTag(var9_ref_String);
+                              } else {
+                                try {
+                                  var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
+                                  var10 = td.a(var13, (byte) 38);
+                                  var11_ref_df = this.inlineImages[var10];
+                                  if (this.inlineImageBaselineOffsets == null) {
+                                    stackIn_27_0 = var11_ref_df.field_a;
+                                  } else {
+                                    stackIn_27_0 = this.inlineImageBaselineOffsets[var10];
+                                  }
+                                  var12 = stackIn_27_0;
+                                  if (currentAlpha256 != 256) {
+                                    var11_ref_df.a(penX, baselineY + this.lineAdvance - var12, currentAlpha256);
+                                  } else {
+                                    var11_ref_df.a(penX, baselineY + this.lineAdvance - var12);
+                                  }
+                                  penX = penX + var11_ref_df.field_h;
+                                  var5 = 0;
+                                } catch (java.lang.Exception decompiledCaughtParameter0) {
+                                  decompiledCaughtException = decompiledCaughtParameter0;
+                                  var10_ref_Exception = (Exception) (Object) decompiledCaughtException;
+                                }
+                              }
+                              decompiledFrameRemainder0 = false;
+                            }
+                            else {
+                              var8 = 174;
+                            }
+                          } else {
+                            var8 = 169;
+                          }
+                        } else {
+                          var8 = 8364;
+                        }
+                      } else {
+                        var8 = 215;
+                      }
+                    } else {
+                      var8 = 173;
+                    }
+                  } else {
+                    var8 = 160;
+                  }
+                } else {
+                  var8 = 62;
+                }
+              } else {
+                var8 = 60;
+              }
+            }
+            if ((decompiledFrameRemainder0) &&
+              (var4 == -1)) {
+              var8 = (char)(ae.a((char) var8, -107) & 255);
+              if (this.pairKerning != null &&
+                var5 != 0) {
+                penX = penX + this.pairKerning[(var5 << 8) + var8];
+              }
+              var9 = this.glyphWidths[var8];
+              var10 = this.glyphHeights[var8];
+              var11 = penX;
+              if (var8 == 32) {
+                if (spaceExpansionQ8 > 0) {
+                  justificationRemainderQ8 = justificationRemainderQ8 + spaceExpansionQ8;
+                  penX = penX + (justificationRemainderQ8 >> 8);
+                  justificationRemainderQ8 = justificationRemainderQ8 & 255;
+                }
+              } else {
+                if (currentAlpha256 != 256) {
+                  if (currentShadowColor != -1) {
+                    this.drawGlyphAlpha(var8, penX + this.glyphXOffsets[var8] + 1, baselineY + this.glyphYOffsets[var8] + 1, var9, var10, currentShadowColor, currentAlpha256, true);
+                  }
+                  this.drawGlyphAlpha(var8, penX + this.glyphXOffsets[var8], baselineY + this.glyphYOffsets[var8], var9, var10, currentTextColor, currentAlpha256, false);
+                } else {
+                  if (currentShadowColor != -1) {
+                    this.drawGlyph(var8, penX + this.glyphXOffsets[var8] + 1, baselineY + this.glyphYOffsets[var8] + 1, var9, var10, currentShadowColor, true);
+                  }
+                  this.drawGlyph(var8, penX + this.glyphXOffsets[var8], baselineY + this.glyphYOffsets[var8], var9, var10, currentTextColor, false);
+                }
+              }
+              penX = penX + this.glyphAdvances[var8];
+              if (strikethroughColor != -1) {
+                SoftwareRasterizer.drawHorizontalLine(var11, baselineY + (int)((double)this.lineAdvance * 0.7), penX - var11, strikethroughColor);
+              }
+              if (underlineColor != -1) {
+                SoftwareRasterizer.drawHorizontalLine(var11, baselineY + this.lineAdvance + 1, penX - var11, underlineColor);
+              }
+              var5 = var8;
+            }
+          } else {
+            var4 = var7;
           }
-          this.a(0, (RenderSprite[]) null, param3 - this.field_c.a((byte) 94, param0), param0, (byte) 5, (int[]) null, param4, (aa) null, 0);
-        } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    abstract void fa(char param0, int param1, int param2, int param3, boolean param4);
-
-    private final void a(int param0, int param1, int param2) {
-        rs.field_t = -1;
-        tf.field_a = param2;
-        qg.field_c = param2;
-        tm.field_i = 0;
-        PacketBuffer.field_h = param1;
-        ed.field_i = 0;
-        if (param0 == -1) {
-          param0 = 0;
+    BitmapFont(byte[] encodedMetrics, int[] glyphXOffsets, int[] glyphYOffsets, int[] glyphWidths, int[] glyphHeights) {
+        int var8 = 0;
+        int var6;
+        int var7;
+        this.lineAdvance = 0;
+        this.glyphXOffsets = glyphXOffsets;
+        this.glyphYOffsets = glyphYOffsets;
+        this.glyphWidths = glyphWidths;
+        this.glyphHeights = glyphHeights;
+        this.decodeFontMetrics(encodedMetrics);
+        var6 = 2147483647;
+        var7 = -2147483648;
+        for (var8 = 0; var8 < 256; var8++) {
+          if (this.glyphYOffsets[var8] < var6 &&
+            this.glyphHeights[var8] != 0) {
+            var6 = this.glyphYOffsets[var8];
+          }
+          if (this.glyphYOffsets[var8] + this.glyphHeights[var8] > var7) {
+            var7 = this.glyphYOffsets[var8] + this.glyphHeights[var8];
+          }
         }
-        em.field_d = param0;
-        es.field_c = param0;
+        this.maxAscent = this.lineAdvance - var6;
+        this.maxDescent = var7 - this.lineAdvance;
+        this.capitalXAscent = this.lineAdvance - this.glyphYOffsets[88];
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, String param5) {
-        if (param5 == null) {
+    private final void resetTextStyle(int textColor, int shadowColor, int alpha256) {
+        strikethroughColor = -1;
+        underlineColor = -1;
+        defaultShadowColor = shadowColor;
+        currentShadowColor = shadowColor;
+        defaultTextColor = textColor;
+        currentTextColor = textColor;
+        defaultAlpha256 = alpha256;
+        currentAlpha256 = alpha256;
+        spaceExpansionQ8 = 0;
+        justificationRemainderQ8 = 0;
+    }
+
+    final void drawCenteredText(String text, int centerX, int baselineY, int textColor, int shadowColor) {
+        if (text == null) {
           return;
         }
-        try {
-          this.a(param2, -1, param1);
-          this.a(0, (RenderSprite[]) null, -(this.field_c.a((byte) 94, param5) / 2) + param4, param5, (byte) 5, (int[]) null, param3, (aa) null, 0);
-          if (param0 < 95) {
-            String var8 = (String) null;
-            this.a((String) null, 1, -72, -15, 80, (byte) -125);
-          }
-        } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
-        }
+        this.resetOpaqueTextStyle(textColor, shadowColor);
+        this.drawStyledText(text, centerX - this.measureTextWidth(text) / 2, baselineY);
     }
-
-    final void a(int param0, int param1, int[] param2, byte param3, int param4, String param5, int param6, RenderSprite[] param7) {
-        if (param5 == null) {
-          return;
-        }
-        try {
-          this.a(param0, -1, param1);
-          if (param3 > -93) {
-            BitmapFont.a(126, -64);
-          }
-          this.a(0, param7, -this.field_c.a((byte) 94, param5) + param6, param5, (byte) 5, param2, param4, (aa) null, 0);
-        } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "da.M(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ')');
-        }
-    }
-
-    abstract void a(char param0, int param1, int param2, int param3, boolean param4, aa param5, int param6, int param7);
 
     static {
-        field_b = new int[128];
+        wrappingBuffer = new StringBuilder(100);
+        defaultTextColor = 0;
+        spaceExpansionQ8 = 0;
+        currentTextColor = 0;
+        wrappedLines = new String[100];
+        currentAlpha256 = 256;
+        currentShadowColor = -1;
+        defaultShadowColor = -1;
+        strikethroughColor = -1;
+        underlineColor = -1;
+        defaultAlpha256 = 256;
+        justificationRemainderQ8 = 0;
     }
 }

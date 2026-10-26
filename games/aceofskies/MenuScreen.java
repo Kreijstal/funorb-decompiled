@@ -177,13 +177,13 @@ final class MenuScreen {
               }
               this.a(stackIn_18_1, stackIn_18_2, stackIn_18_3, (stackIn_19_4 ^ stackIn_22_5) != 0, var6_int, 24063);
             }
-            se.field_c.a(obfuscationGuard + 95, var11, -1, (var12 >> 1) + (var6_int + kn.field_b.field_j + 11), (var10 >> 1) + var7, var9.toLowerCase());
+            se.field_c.a(obfuscationGuard + 95, var11, -1, (var12 >> 1) + (var6_int + kn.field_b.maxAscent + 11), (var10 >> 1) + var7, var9.toLowerCase());
           } else {
             this.a(var6_int, renderer, -86, var10, var7);
             var13 = oq.field_K + 137;
             var7 -= 8;
             var14 = var7 + (-var13 + var10 >> 1);
-            se.field_c.a(var9.toLowerCase(), var11, -1, (var10 >> 1) + (var7 - 15), 11 + ((var12 >> 1) + (kn.field_b.field_j + var6_int)), (byte) 92);
+            se.field_c.a(var9.toLowerCase(), var11, -1, (var10 >> 1) + (var7 - 15), 11 + ((var12 >> 1) + (kn.field_b.maxAscent + var6_int)), (byte) 92);
             var14 = var14 + (16 + oq.field_K);
             if (var8 != 12) {
               stackIn_12_0 = RendererManager.field_c;
@@ -319,8 +319,8 @@ final class MenuScreen {
                 var14 = var13_ref_uc.namesByView[oc.highscoreView];
                 var35 = var13_ref_uc.valuesByView[oc.highscoreView];
                 var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, oc.highscoreView, to.lastScoreSubmission);
-                kn.field_b.a((byte) 94, "10. ");
-                var17 = verticalOffset + (hi.field_v.field_j + 140);
+                kn.field_b.measureTextWidth((byte) 94, "10. ");
+                var17 = verticalOffset + (hi.field_v.maxAscent + 140);
                 var18 = 310;
                 var17 -= 20;
                 var19 = 128;
@@ -394,7 +394,7 @@ final class MenuScreen {
             var12Lifetime1 = df.field_g;
           }
         }
-        var13 = kn.field_b.field_j + (verticalOffset + 140 + 100);
+        var13 = kn.field_b.maxAscent + (verticalOffset + 140 + 100);
         PacketBuffer.field_j.a(117, var5, -1, var13, 320, var12Lifetime1);
         if (!cn.b(true)) {
           stackIn_39_0 = fs.field_f;
@@ -403,7 +403,7 @@ final class MenuScreen {
         }
         var32 = stackIn_39_0;
         var12Lifetime2 = var32;
-        PacketBuffer.field_j.a(113, var5, -1, 220 + verticalOffset - (-140 - hi.field_v.field_j), 320, var32);
+        PacketBuffer.field_j.a(113, var5, -1, 220 + verticalOffset - (-140 - hi.field_v.maxAscent), 320, var32);
     }
 
     private final boolean isItemEnabled(int itemIndex, byte obfuscationGuard) {
@@ -941,7 +941,7 @@ final class MenuScreen {
           ka.field_a = qg.a((byte) 3, spriteArchive, "", "frame");
           rg.field_F = qg.a((byte) 3, spriteArchive, "", "button_raised");
           DualLinkNode.field_h = qg.a((byte) 3, spriteArchive, "", "button_frame");
-          bo.field_a = (hc) ((Object) HighscoreNameEntry.a(spriteArchive, "b12", "", fontMetricsArchive, obfuscationGuard ^ -48));
+          bo.menuBitmapFont = (BitmapFont) ((Object) HighscoreNameEntry.a(spriteArchive, "b12", "", fontMetricsArchive, obfuscationGuard ^ -48));
           if (obfuscationGuard != -56) {
             field_g = (IntrusiveDeque) null;
           }
@@ -982,7 +982,7 @@ final class MenuScreen {
 
     final void drawMenu(int verticalOffset, GraphicsRenderer renderer, int obfuscationGuard) {
         int stackIn_9_0 = 0;
-        BitmapFont stackIn_23_0;
+        RendererBitmapFont stackIn_23_0;
         int stackIn_23_1;
         int stackIn_23_2;
         int stackIn_23_3;
@@ -991,7 +991,7 @@ final class MenuScreen {
         boolean stackIn_24_6 = false;
         boolean stackIn_26_7;
         boolean stackIn_27_8 = false;
-        BitmapFont stackIn_29_0;
+        RendererBitmapFont stackIn_29_0;
         int stackIn_29_1;
         int stackIn_29_2;
         int stackIn_29_3;
@@ -1000,7 +1000,7 @@ final class MenuScreen {
         boolean stackIn_30_6 = false;
         int stackIn_32_7;
         boolean stackIn_33_8 = false;
-        BitmapFont stackIn_35_0;
+        RendererBitmapFont stackIn_35_0;
         int stackIn_35_1;
         int stackIn_35_2;
         int stackIn_35_3;
@@ -1058,9 +1058,9 @@ final class MenuScreen {
                     if (this.screenId != 5) {
                       if (this.screenId == 6) {
                         bk.menuTop[this.screenId] = 230;
-                        var7 = verticalOffset - 40 + (kn.field_b.field_j + 200);
+                        var7 = verticalOffset - 40 + (kn.field_b.maxAscent + 200);
                         var8 = 255;
-                        var9 = kn.field_b.field_i + kn.field_b.field_a + 4;
+                        var9 = kn.field_b.maxDescent + kn.field_b.field_a + 4;
                         PacketBuffer.field_j.a(112, var8 << 24 | 16777215, -1, var7, 320, gg.field_i);
                         stackIn_23_0 = PacketBuffer.field_j;
                         stackIn_23_1 = 126;
@@ -1071,7 +1071,7 @@ final class MenuScreen {
                         stackIn_24_6 = (r.field_n != 0);
                         stackIn_26_7 = true;
                         stackIn_27_8 = (0 != or.score);
-                        ((BitmapFont) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, st.a(stackIn_24_6, stackIn_26_7, stackIn_27_8, false));
+                        ((RendererBitmapFont) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, st.a(stackIn_24_6, stackIn_26_7, stackIn_27_8, false));
                         stackIn_29_0 = PacketBuffer.field_j;
                         stackIn_29_1 = obfuscationGuard + 121;
                         stackIn_29_2 = 16777215 | var8 << 24;
@@ -1081,7 +1081,7 @@ final class MenuScreen {
                         stackIn_30_6 = (r.field_n != 0);
                         stackIn_32_7 = 121;
                         stackIn_33_8 = (or.score != 0);
-                        ((BitmapFont) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, ci.$cfr$intArgs$a$feb7e63b59d8(stackIn_30_6, stackIn_32_7, stackIn_33_8, false));
+                        ((RendererBitmapFont) (Object) stackIn_29_0).a(stackIn_29_1, stackIn_29_2, stackIn_29_3, stackIn_29_4, stackIn_29_5, ci.$cfr$intArgs$a$feb7e63b59d8(stackIn_30_6, stackIn_32_7, stackIn_33_8, false));
                         stackIn_35_0 = PacketBuffer.field_j;
                         stackIn_35_1 = 119;
                         stackIn_35_2 = 16777215 | var8 << 24;
@@ -1091,7 +1091,7 @@ final class MenuScreen {
                         stackIn_35_6 = -93;
                         stackIn_36_7 = (r.field_n != 0);
                         stackIn_39_8 = (or.score != 0);
-                        ((BitmapFont) (Object) stackIn_35_0).a(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, av.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_6, stackIn_36_7, stackIn_39_8, false));
+                        ((RendererBitmapFont) (Object) stackIn_35_0).a(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, av.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_6, stackIn_36_7, stackIn_39_8, false));
                       }
                     } else {
                       this.drawAchievements(true, verticalOffset, obfuscationGuard - 120);
@@ -1273,9 +1273,9 @@ final class MenuScreen {
         if (-1 == var17) {
           var18Lifetime1 = verticalOffset + 264;
           PacketBuffer.field_j.a(96, var5, -1, var18Lifetime1, 320, sl.field_q);
-          PacketBuffer.field_j.a(126, var5, -1, var18Lifetime1 + (kn.field_b.field_j * 3 >> 1), 320, ef.field_g);
+          PacketBuffer.field_j.a(126, var5, -1, var18Lifetime1 + (kn.field_b.maxAscent * 3 >> 1), 320, ef.field_g);
           if (cn.b(true)) {
-            PacketBuffer.field_j.a(112, var5, -1, var18Lifetime1 + 6 * kn.field_b.field_j, 320, bt.field_c);
+            PacketBuffer.field_j.a(112, var5, -1, var18Lifetime1 + 6 * kn.field_b.maxAscent, 320, bt.field_c);
           }
         } else {
           var7Lifetime2 = 470;
@@ -1318,7 +1318,7 @@ final class MenuScreen {
             (var16 & 1 << var17) == 0) {
             var18_ref_StringLifetime1 = pe.field_c;
           }
-          PacketBuffer.field_j.a(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.field_v.field_j, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
+          PacketBuffer.field_j.a(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.field_v.maxAscent, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
           var7Lifetime2Lifetime3 = 320;
           var15Lifetime1Lifetime3 = 350 + verticalOffset;
           PacketBuffer.field_j.a(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, lb.field_a[var17]);
@@ -1338,7 +1338,7 @@ final class MenuScreen {
             alternateView) {
             var22 -= 20;
           }
-          PacketBuffer.field_j.a(123, var5, -1, var22 + (kn.field_b.field_j * 3 >> 1), 320, ef.field_g);
+          PacketBuffer.field_j.a(123, var5, -1, var22 + (kn.field_b.maxAscent * 3 >> 1), 320, ef.field_g);
         }
     }
 
@@ -1405,7 +1405,7 @@ final class MenuScreen {
     private final void drawInstructions(int obfuscationGuard, int verticalOffset) {
         int var12_int = 0;
         int var14 = 0;
-        BitmapFont stackIn_19_0;
+        RendererBitmapFont stackIn_19_0;
         int stackIn_19_1;
         int stackIn_19_2;
         RenderSprite[] stackIn_19_3;
@@ -1452,7 +1452,7 @@ final class MenuScreen {
             var12[var13] = var12[var13] - 64;
           }
         }
-        var13Lifetime1 = hi.field_v.a(-102, ac.field_f, var12, var10, sn.a(io.field_a[vq.instructionPage], 120, new String[]{"          "}));
+        var13Lifetime1 = hi.field_v.wrapText(-102, ac.field_f, var12, var10, sn.a(io.field_a[vq.instructionPage], 120, new String[]{"          "}));
         for (var14 = 0; var14 < var13Lifetime1; var14++) {
           if (!var10[var14].startsWith("<b>")) {
             stackIn_19_0 = PacketBuffer.field_j;
@@ -1464,7 +1464,7 @@ final class MenuScreen {
             } else {
               stackIn_20_4 = 64;
             }
-            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_20_4 + (12 + var5), 0, var10[var14], var6 + var8 / 2 + var9 * (var14 - var13Lifetime1 / 2), var18);
+            ((RendererBitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_20_4 + (12 + var5), 0, var10[var14], var6 + var8 / 2 + var9 * (var14 - var13Lifetime1 / 2), var18);
           } else {
             se.field_c.a(var4, 0, ac.field_f, var5 + 12, 0, var10[var14], var9 * (var14 - var13Lifetime1 / 2) + (10 - (-var6 - var8 / 2)), var18);
           }
@@ -1787,7 +1787,7 @@ final class MenuScreen {
         int var5 = 0;
         try {
           int var4_int = 104 % ((param1 - 5) / 54);
-          var5 = 90 + dp.field_h.a((byte) 94, param2);
+          var5 = 90 + dp.field_h.measureTextWidth((byte) 94, param2);
           this.a(82, FlightSession.rendererManager.a((byte) 75), -(var5 >> 1) + 320, var5, param0 + 26, 60, 1442840524);
           kn.field_a.a(111, -12046068, -1, 67 + param0, 320, param2);
         } catch (RuntimeException runtimeException) {

@@ -58,7 +58,7 @@ final class ep extends ab implements bh, dn {
     public ep() {
         super(0, 0, 496, 0, (ir) null);
         this.field_w = new kk("", (no) null, 12);
-        qm var1 = new qm(oi.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.field_I, -1, 2147483647, true);
+        qm var1 = new qm(oi.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, qo.field_b.maxAscent, -1, 2147483647, true);
         ea var2 = new ea(ta.field_f, var1, (no) null);
         this.field_v = new mi(SmokeParticle.field_k, (no) null);
         this.field_y = new mi(dd.field_d, (no) null);

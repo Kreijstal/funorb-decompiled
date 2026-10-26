@@ -1571,7 +1571,7 @@ final class wl extends GraphicsRenderer {
           this.field_kc = null;
         }
         if (this.field_S) {
-          BitmapFont.a(120, true, false);
+          RendererBitmapFont.a(120, true, false);
           this.field_S = false;
         }
     }
@@ -2327,7 +2327,7 @@ final class wl extends GraphicsRenderer {
     final void a(sm param0) {
     }
 
-    final BitmapFont a(vs param0, vd[] param1, boolean param2) {
+    final RendererBitmapFont a(BitmapFontMetrics param0, vd[] param1, boolean param2) {
         RuntimeException var4 = null;
         mu stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -2338,7 +2338,7 @@ final class wl extends GraphicsRenderer {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = new mu(this, param0, param1, param2);
-          return (BitmapFont) ((Object) stackIn_1_0);
+          return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
