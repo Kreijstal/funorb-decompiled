@@ -413,28 +413,43 @@
         "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
         "subdirectory": "games/aceofskies"
       },
-      "inputTreeSha256": "3feb47118078691ab11c03f0cd4a8914b574480aee7df4d375bbd4e273ded155",
+      "inputTreeSha256": "78fd96d3afe487b73c1534fdcaa0daf6acec6c935da57e809bcad19b2e6c3414",
       "sources": {
         "files": 545,
-        "sha256": "72c11207a02a03843d0d416a33e5613d2f1ceb92530f6c16696220ae8fd9cc56"
+        "sha256": "b0c4b214a7ecfb8d3194089e44a088a7b6f799720fadd1ff2cefde341e29b43f"
       },
       "dictionary": {
         "path": "decompilation/aceofskies-naming.json",
-        "sha256": "edb207c18b8fe74a546633e482ad171930d323e088903d233dd5db83a25e8a1b"
+        "sha256": "62a1796927e75e7c5274dc0ffe705bb7b6853877dbbd37fe29060d57b6054a1e"
       },
       "readingGuide": {
         "path": "games/aceofskies/README.md",
-        "sha256": "a72cc7d93711c4b880d5c1565a4d8c6d0fd539010939b9e0a616c99c1cf4bb7a"
+        "sha256": "90efd1f11a8d0e448ea4d32b7fe573006c748cd89cab58f97b22fb647eb4ba70"
       },
-      "rulesSha256": "3ad5a3f14020568e850de838a2cf0e7b2fe851c9ac9aa30a6824e48c62e08186",
+      "rulesSha256": "2d6da9555677c25a6fbdd8aeae6d5a75d294b5e1bd8187388b4b009f307b3f59",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       },
       "inputPreparation": {
-        "method": "pk.a(IIIZIIIZI)V",
+        "methods": [
+          {
+            "method": "pk.a(IIIZIIIZI)V",
+            "oldBodySha256": "e40a521669b90ef6ee2e58bed02d71a476f2d45e73c7c62ffaf0cfac050a1f95",
+            "newBodySha256": "c7a113907afe5f5d9b0c12acfb51f58e49459bdfd0f32bac37f7ddef5d10644f",
+            "oldBodyLines": 398,
+            "newBodyLines": 89
+          },
+          {
+            "method": "pk.g(I)V",
+            "oldBodySha256": "8534210169c4e5fa8342188161b49fa14845b0b45f3f2251e07b3d12d6c6e6bf",
+            "newBodySha256": "17954a2a16db6d8fc1fe906d1c8193157a3ed47e41a9c0caee6096173fceaccb",
+            "oldBodyLines": 52,
+            "newBodyLines": 36
+          }
+        ],
         "compiler": {
-          "commit": "c6f6a1e61b0088e882236d732145a84775fd9cb8",
-          "sourceArchiveSha256": "2e63dcc7a33667d65beb99316a9937c1946b16357d343e69c46bd3968d1d2ddd"
+          "commit": "d0b505b9fe153c1a1c0adb2c4a7833b1f55f4c54",
+          "sourceArchiveSha256": "855804a0546dffe6e247af8e8b3f7d0efbac0ca1e30793a9b29edd6a4d5f4263"
         },
         "bytecode": {
           "sourceUrl": "https://static.alterorb.net/launcher/v3/jars/aceofskies.jar",
@@ -442,10 +457,6 @@
           "files": 545,
           "originalClassesSha256": "9f0daf3471d01ae2de9a8a71504d0bf94fb751c66e0b5c3553477eb22b9c7f15"
         },
-        "oldBodySha256": "e40a521669b90ef6ee2e58bed02d71a476f2d45e73c7c62ffaf0cfac050a1f95",
-        "newBodySha256": "c7a113907afe5f5d9b0c12acfb51f58e49459bdfd0f32bac37f7ddef5d10644f",
-        "oldBodyLines": 398,
-        "newBodyLines": 89,
         "defaultCompilerRecovery": true,
         "regionExitsVerified": true,
         "regionSourceFlowVerified": true,
@@ -605,7 +616,7 @@
         },
         "publishedSources": {
           "files": 545,
-          "sha256": "72c11207a02a03843d0d416a33e5613d2f1ceb92530f6c16696220ae8fd9cc56"
+          "sha256": "b0c4b214a7ecfb8d3194089e44a088a7b6f799720fadd1ff2cefde341e29b43f"
         }
       },
       "arcanistsmulti": {

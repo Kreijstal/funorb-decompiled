@@ -1570,40 +1570,24 @@ final class FlightSession {
     }
 
     final void submitFinalScore(int obfuscationGuard) {
-        ScoreSubmission stackIn_12_0 = null;
-        ScoreSubmission stackIn_12_1 = null;
-        ScoreSubmission stackIn_13_0 = null;
-        ScoreSubmission stackIn_13_1 = null;
         int stackIn_13_2 = 0;
         int stackIn_15_3;
         int stackIn_16_4 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ScoreSubmission stackIn_13_0Lifetime1;
-        ScoreSubmission stackIn_13_1Lifetime1;
         try {
           if (to.lastScoreSubmission == null &&
             this.finalScore > 0 &&
             !tt.field_a) {
-            stackIn_12_0 = null;
-            stackIn_12_1 = null;
             if (this.arcadeMode) {
-              stackIn_13_0 = null;
-              stackIn_13_1 = null;
               stackIn_13_2 = 1;
             } else {
-              stackIn_13_0 = null;
-              stackIn_13_1 = null;
               stackIn_13_2 = 0;
             }
             stackIn_15_3 = 65535;
             if (!this.arcadeMode) {
-              stackIn_13_0Lifetime1 = null;
-              stackIn_13_1Lifetime1 = null;
               stackIn_16_4 = 0;
             } else {
-              stackIn_13_0Lifetime1 = null;
-              stackIn_13_1Lifetime1 = null;
               stackIn_16_4 = 1;
             }
             to.lastScoreSubmission = new ScoreSubmission(stackIn_13_2, stackIn_15_3 ^ stackIn_16_4, NetworkGameClient.field_x, bo.field_h, se.field_b, ei.field_a, new int[]{100 * this.finalScore + this.finalAccuracyPercent});
