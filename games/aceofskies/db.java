@@ -32,9 +32,9 @@ final class db {
         this.field_b = t.d(16);
         this.field_c = t.d(24);
         this.field_a = new int[this.field_c];
-        int stackIn_3_0 = (t.b() == 0) ? 0 : 1;
-        int var1 = stackIn_3_0;
-        if (var1 != 0) {
+        boolean stackIn_3_0 = !(t.b() == 0);
+        boolean var1 = stackIn_3_0;
+        if (var1) {
           var2 = 0;
           var3_int = t.d(5) + 1;
           while (var2 < this.field_c) {
@@ -67,8 +67,8 @@ final class db {
           float var3 = t.e(t.d(32));
           float var4 = t.e(t.d(32));
           int var5Lifetime1 = t.d(4) + 1;
-          int stackIn_25_0 = (t.b() == 0) ? 0 : 1;
-          int var6 = stackIn_25_0;
+          boolean stackIn_25_0 = !(t.b() == 0);
+          boolean var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
             var7 = this.field_c * this.field_b;
           } else {
@@ -86,7 +86,7 @@ final class db {
               for (var11 = 0; var11 < this.field_b; var11++) {
                 float var12 = (float)this.field_d[var10] * var4 + var3 + var9;
                 this.field_e[var8Lifetime1][var11] = var12;
-                if (var6 != 0) {
+                if (var6) {
                   var9 = var12;
                 }
                 var10++;
@@ -100,7 +100,7 @@ final class db {
                 int var12_int = var8Lifetime1 / var10 % var7;
                 float var13 = (float)this.field_d[var12_int] * var4 + var3 + var9;
                 this.field_e[var8Lifetime1][var11] = var13;
-                if (var6 != 0) {
+                if (var6) {
                   var9 = var13;
                 }
                 var10 = var10 * var7;

@@ -76,15 +76,15 @@ abstract class pp {
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var5_int = 0;
-          int var6 = 0;
+          boolean var6 = false;
           int var7 = param2.length();
           for (int var8 = 0; var7 > var8; var8++) {
             int var9 = param2.charAt(var8);
             if (var9 == 60) {
-              var6 = 1;
+              var6 = true;
             } else if (var9 == 62) {
-              var6 = 0;
-            } else if (var6 == 0 &&
+              var6 = false;
+            } else if (!var6 &&
               var9 == 32) {
               var5_int++;
             }

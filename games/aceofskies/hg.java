@@ -19,14 +19,14 @@ final class hg extends to {
     final boolean a(int param0, int param1, int param2, int param3, int param4, ea param5, int param6) {
         String stackIn_14_2 = null;
         try {
-          int var8_int = super.a((int) (char)param0, param1, param2, param3, param4, param5, param6) ? 1 : 0;
-          if (var8_int != 0 &&
+          boolean var8_int = (super.a((int) (char)param0, param1, param2, param3, param4, param5, param6));
+          if (var8_int &&
             this.field_E) {
             return true;
           }
           if (!this.a(param6, param4, -73, param1, param2)) {
-            int stackIn_6_0 = var8_int;
-            return stackIn_6_0 != 0;
+            boolean stackIn_6_0 = var8_int;
+            return (stackIn_6_0);
           }
           this.field_i = param3;
           if (param3 != 1) {

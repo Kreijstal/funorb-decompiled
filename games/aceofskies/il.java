@@ -16,20 +16,20 @@ final class il {
         if (param4 == 0) {
           int var6 = this.field_b.getRefreshRate();
           java.awt.DisplayMode[] var7 = this.field_a.getDisplayModes();
-          int var8 = 0;
+          boolean var8 = false;
           for (int var9 = 0; var7.length > var9; var9++) {
             if (param1 == var7[var9].getWidth() &&
               param2 == var7[var9].getHeight() &&
               var7[var9].getBitDepth() == param3) {
               int var10 = var7[var9].getRefreshRate();
-              if (var8 == 0 ||
+              if (!var8 ||
                 !(Math.abs(-var6 + var10) >= Math.abs(param4 - var6))) {
                 param4 = var10;
-                var8 = 1;
+                var8 = true;
               }
             }
           }
-          if (var8 == 0) {
+          if (!var8) {
             param4 = var6;
           }
         }
@@ -67,7 +67,7 @@ final class il {
           java.lang.reflect.Field var4 = null;
           Throwable var4_ref = null;
           Throwable var6 = null;
-          int var3 = 0;
+          boolean var3 = false;
           if (param0 >= -91) {
             this.listmodes();
           }
@@ -76,7 +76,7 @@ final class il {
             var4.setAccessible(true);
             if (((Boolean) (var4.get(this.field_a))).booleanValue()) {
               var4.set(this.field_a, Boolean.FALSE);
-              var3 = 1;
+              var3 = true;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -88,10 +88,10 @@ final class il {
           } catch (java.lang.Throwable decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6 = decompiledCaughtException;
-            decompiledRegionSelector0 = (var3 != 0) ? (1) : (2);
+            decompiledRegionSelector0 = ((var3)) ? (1) : (2);
           }
           if (decompiledRegionSelector0 == 0) {
-            if (var3 != 0) {
+            if (var3) {
               try {
                 var4 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
                 var4.set(this.field_a, Boolean.TRUE);

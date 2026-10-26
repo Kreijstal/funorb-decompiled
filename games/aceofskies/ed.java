@@ -328,7 +328,7 @@ final class ed extends cq implements qi {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        int var19 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var19 = (AceOfSkies.obfuscationControl);
         try {
           int var5_int = ek.a((byte) 103, (-param0 + param3) * 3);
           int var6 = param0 * 3;
@@ -351,7 +351,7 @@ final class ed extends cq implements qi {
             boolean stackOut_12_0 = param4;
             stackIn_53_0 = stackOut_12_0 ? 1 : 0;
             boolean stackIn_13_0 = stackOut_12_0;
-            if (var19 == 0) {
+            if (!var19) {
               if (stackIn_13_0) {
                 int var12 = qj.field_t[var9];
                 int var13 = ro.field_t[var9];
@@ -420,7 +420,7 @@ final class ed extends cq implements qi {
               hs.field_a[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
-              if (var19 != 0) {
+              if (var19) {
                 return;
               }
             }

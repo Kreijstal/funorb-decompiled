@@ -117,8 +117,8 @@ final class dk implements Runnable {
     public final void run() {
         try {
           os var7 = null;
-          int decompiledRegionSelector0 = 0;
-          int decompiledRegionSelector1 = 0;
+          boolean decompiledRegionSelector0 = false;
+          boolean decompiledRegionSelector1 = false;
           Throwable decompiledCaughtException = null;
           int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
           while (!this.field_j) {
@@ -132,13 +132,13 @@ final class dk implements Runnable {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   InterruptedException interruptedException = (InterruptedException) (Object) decompiledCaughtException;
                 }
-                decompiledRegionSelector0 = 0;
+                decompiledRegionSelector0 = false;
               } else {
                 this.field_d = this.field_d - 1;
-                decompiledRegionSelector0 = 1;
+                decompiledRegionSelector0 = true;
               }
             }
-            if (decompiledRegionSelector0 == 0) {
+            if (!decompiledRegionSelector0) {
               continue;
             }
             try {
@@ -148,22 +148,22 @@ final class dk implements Runnable {
                 var7.field_p = false;
               } else if (var7.field_v == 3) {
                 var7.field_u = var7.field_x.a((int)var7.secondaryKey, 255);
-                decompiledRegionSelector1 = 1;
+                decompiledRegionSelector1 = true;
                 decompiledFrameRemainder0 = false;
               } else {
                 var7.field_p = false;
               }
               if (decompiledFrameRemainder0) {
-                decompiledRegionSelector1 = 0;
+                decompiledRegionSelector1 = false;
               }
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               Exception var2_ref = (Exception) (Object) decompiledCaughtException;
               String var6 = (String) null;
               v.a((String) null, (byte) -52, (Throwable) ((Object) var2_ref));
-              decompiledRegionSelector1 = 1;
+              decompiledRegionSelector1 = true;
             }
-            if (decompiledRegionSelector1 == 0) {
+            if (!decompiledRegionSelector1) {
               continue;
             }
             var7.field_p = false;

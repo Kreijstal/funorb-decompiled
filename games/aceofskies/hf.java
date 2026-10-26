@@ -282,13 +282,13 @@ final class hf extends un {
                       int var8 = this.field_h.readUnsignedByte(-104);
                       int var9 = this.field_h.readInt((byte) 127);
                       int var10 = var8 & 127;
-                      int stackIn_62_0 = ((128 & var8) == 0) ? 0 : 1;
+                      boolean stackIn_62_0 = !((128 & var8) == 0);
                       boolean decompiledFrameRemainder0 = true;
                       boolean decompiledFrameCompleted0 = true;
-                      int var11 = stackIn_62_0;
+                      boolean var11 = stackIn_62_0;
                       long var12 = (long)var7 + ((long)var6 << 32);
                       Object var14 = null;
-                      if (var11 != 0) {
+                      if (var11) {
                         var14_ref = (gp) (this.field_n.b((byte) 86));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {

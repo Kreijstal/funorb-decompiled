@@ -29,8 +29,8 @@ final class jr extends DualLinkNode {
     }
 
     final static void a(byte[] param0, int param1) {
-        int stackIn_38_1 = 0;
-        int stackIn_49_1 = 0;
+        boolean stackIn_38_1 = false;
+        boolean stackIn_49_1 = false;
         String stackIn_55_2 = null;
         int var12 = 0;
         int var13 = 0;
@@ -88,7 +88,7 @@ final class jr extends DualLinkNode {
             byte[] var20 = var22;
             byte[] var9 = var20;
             ql.field_p[var4Lifetime5] = var22;
-            int var10 = 0;
+            boolean var10 = false;
             int var11 = var18.readUnsignedByte(param1 ^ 7088);
             if (0 == (var11 & 1)) {
               for (var12 = 0; var12 < var7; var12++) {
@@ -99,8 +99,8 @@ final class jr extends DualLinkNode {
                   byte dupTemp$0 = var18.readByte(id.a(param1, 7148));
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
-                  int stackIn_48_0 = var10;
-                  stackIn_49_1 = (var13 == -1) ? (0) : (1);
+                  boolean stackIn_48_0 = var10;
+                  stackIn_49_1 = !(var13 == -1);
                   var10 = stackIn_48_0 | stackIn_49_1;
                 }
               }
@@ -116,14 +116,14 @@ final class jr extends DualLinkNode {
                     byte dupTemp$1 = var18.readByte(0);
                     var9[var5 * var13 + var12] = dupTemp$1;
                     int var14 = dupTemp$1;
-                    int stackIn_37_0 = var10;
-                    stackIn_38_1 = (var14 == -1) ? (0) : (1);
+                    boolean stackIn_37_0 = var10;
+                    stackIn_38_1 = !(var14 == -1);
                     var10 = stackIn_37_0 | stackIn_38_1;
                   }
                 }
               }
             }
-            q.field_k[var4Lifetime5] = var10 != 0;
+            q.field_k[var4Lifetime5] = (var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

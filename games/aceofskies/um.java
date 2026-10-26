@@ -114,10 +114,10 @@ final class um extends PcmStream {
           jt.field_t = 0;
           ot.field_a = 0;
         }
-        int stackIn_9_0 = (param1 != var8.readUnsignedByte(-89)) ? 0 : 1;
-        int var4 = stackIn_9_0;
+        boolean stackIn_9_0 = !(param1 != var8.readUnsignedByte(-89));
+        boolean var4 = stackIn_9_0;
         ku.field_g = var8.readNullTerminatedText(param1 - 17884);
-        if (var4 != 0) {
+        if (var4) {
           tn.field_t = var8.readNullTerminatedText(-17883);
         } else {
           tn.field_t = ku.field_g;

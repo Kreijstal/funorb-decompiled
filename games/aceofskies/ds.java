@@ -35,32 +35,32 @@ final class ds extends IntrusiveNode {
               w stackIn_12_0 = td.field_d;
               return stackIn_12_0;
             }
-            int var3 = 0;
+            boolean var3 = false;
             for (int var4 = 1; var4 < var2_int - 1; var4++) {
               int var5 = param1.charAt(var4);
               if (var5 == 92) {
-                int stackIn_21_0 = (var3 != 0) ? 0 : 1;
+                boolean stackIn_21_0 = !((var3));
                 var3 = stackIn_21_0;
               } else {
                 if (var5 == 34 &&
-                  var3 == 0) {
+                  !var3) {
                   w stackIn_25_0 = td.field_d;
                   return stackIn_25_0;
                 }
-                var3 = 0;
+                var3 = false;
               }
             }
             return null;
           }
-          int var3Lifetime1 = param0 ? 1 : 0;
+          boolean var3Lifetime1 = (param0);
           for (int var4Lifetime1 = 0; var4Lifetime1 < var2_int; var4Lifetime1++) {
             boolean decompiledFrameRemainder0 = true;
             int var5Lifetime1 = param1.charAt(var4Lifetime1);
             if (var5Lifetime1 == 46) {
               if (var4Lifetime1 != 0 &&
                 var4Lifetime1 != var2_int - 1 &&
-                var3Lifetime1 == 0) {
-                var3Lifetime1 = 1;
+                !var3Lifetime1) {
+                var3Lifetime1 = true;
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -73,7 +73,7 @@ final class ds extends IntrusiveNode {
                 w stackIn_43_0 = td.field_d;
                 return stackIn_43_0;
               }
-              var3Lifetime1 = 0;
+              var3Lifetime1 = false;
             }
           }
           return null;

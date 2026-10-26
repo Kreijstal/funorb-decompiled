@@ -270,16 +270,16 @@ class tk {
 
     final synchronized void d() {
         if (field_s != null) {
-          int var1 = 1;
+          boolean var1 = true;
           for (int var2 = 0; var2 < 2; var2++) {
             if (field_s.field_c[var2] == this) {
               field_s.field_c[var2] = null;
             }
             if (field_s.field_c[var2] != null) {
-              var1 = 0;
+              var1 = false;
             }
           }
-          if (var1 != 0) {
+          if (var1) {
             field_s.field_a = true;
             while (field_s.field_e) {
               IntrusiveNode.a(50L, false);

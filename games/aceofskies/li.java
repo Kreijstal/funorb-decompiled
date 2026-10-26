@@ -81,12 +81,12 @@ abstract class li implements sp {
               param1 = 2;
               vr.field_b.a(se.field_a, 122);
             }
-            int var4 = 1;
+            boolean var4 = true;
             if (10 == param1) {
               bt.a(10);
-              var4 = 0;
+              var4 = false;
             }
-            if (var4 != 0) {
+            if (var4) {
               if (IntKeyLookup.field_a) {
                 param2 = sn.a(bc.field_v, 107, new String[]{param2});
               }

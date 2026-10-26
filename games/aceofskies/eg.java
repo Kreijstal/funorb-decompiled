@@ -31,7 +31,7 @@ final class eg {
         String stackIn_72_2 = null;
         String stackIn_76_2 = null;
         String stackIn_80_2 = null;
-        int var31 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var31 = (AceOfSkies.obfuscationControl);
         try {
           int var7_int = 2147483647;
           int var8 = -2147483648;
@@ -74,7 +74,7 @@ final class eg {
               int var30 = (var25Lifetime1 * var14 + var17 * var26Lifetime1 + var20 * var27Lifetime1 >> 16) + var11;
               int stackIn_57_0 = 50;
               int stackIn_57_1 = var30;
-              if (var31 != 0) {
+              if (var31) {
                 if (stackIn_57_0 > stackIn_57_1) {
                   stackIn_66_0 = ~ArchiveProvider.field_b.length;
                   break scanLoop1;
@@ -135,7 +135,7 @@ final class eg {
                   lp.field_e[var24Lifetime1] = var10 + (var26Lifetime1Lifetime1 * var16 + var13 * var25Lifetime1Lifetime1 + var27Lifetime1Lifetime1 * var19 >> 16);
                   MidiPcmStream.field_i[var24Lifetime1] = (var27Lifetime1Lifetime1 * var20 + var25Lifetime1Lifetime1 * var14 + var26Lifetime1Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1++;
-                  if (var31 != 0) {
+                  if (var31) {
                     return;
                   }
                 }
@@ -158,7 +158,7 @@ final class eg {
                     break;
                   }
                   stackIn_66_0 = ~ArchiveProvider.field_b.length;
-                  if (var31 != 0) {
+                  if (var31) {
                     break scanLoop1;
                   }
                   if (stackIn_66_0 >= ~var18) {

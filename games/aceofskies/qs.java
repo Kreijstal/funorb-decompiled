@@ -8,7 +8,7 @@ final class qs {
     static int field_b;
 
     final static void a(int param0, String param1) {
-        int stackIn_17_0 = 0;
+        boolean stackIn_17_0 = false;
         String stackIn_44_2 = null;
         try {
           ScreenParticle.field_o = ScreenParticle.field_o + 1;
@@ -25,17 +25,17 @@ final class qs {
           }
           if (decompiledFrameRemainder0) {
             if (ht.field_g) {
-              stackIn_17_0 = 0;
+              stackIn_17_0 = false;
             } else if (ScreenParticle.field_o >= jp.field_b) {
-              stackIn_17_0 = (ScreenParticle.field_o < jp.field_b + NetworkGameClient.field_B) ? 1 : 0;
+              stackIn_17_0 = (ScreenParticle.field_o < jp.field_b + NetworkGameClient.field_B);
             } else {
-              stackIn_17_0 = 0;
+              stackIn_17_0 = false;
             }
-            int var2_int = stackIn_17_0;
+            boolean var2_int = stackIn_17_0;
             if (param1 == null) {
               ScreenParticle.field_o = 0;
             } else if (!ht.field_g &&
-              var2_int == 0) {
+              !var2_int) {
               ScreenParticle.field_o = 0;
             } else {
               ScreenParticle.field_o = jp.field_b;
@@ -44,7 +44,7 @@ final class qs {
             SpriteState.field_o = rs.field_v;
             if (param1 != null) {
               ht.field_g = false;
-            } else if (var2_int != 0) {
+            } else if (var2_int) {
               ht.field_g = true;
             }
           }

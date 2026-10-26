@@ -13,10 +13,10 @@ final class b {
           if (!param0) {
             field_b = (nf) null;
           }
-          int stackIn_5_0 = (var2_int != 1) ? 0 : 1;
-          int var3 = stackIn_5_0;
-          int stackIn_6_0 = var3;
-          return stackIn_6_0 != 0;
+          boolean stackIn_5_0 = !(var2_int != 1);
+          boolean var3 = stackIn_5_0;
+          boolean stackIn_6_0 = var3;
+          return (stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var2 = decompiledCaughtException;

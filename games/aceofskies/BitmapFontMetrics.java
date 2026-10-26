@@ -61,9 +61,9 @@ final class BitmapFontMetrics {
         int stackIn_73_0 = 0;
         String stackIn_78_2 = null;
         String stackIn_82_2 = null;
-        int decompiledRegionSelector0 = 0;
+        boolean decompiledRegionSelector0 = false;
         Throwable decompiledCaughtException = null;
-        int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var12 = (AceOfSkies.obfuscationControl);
         try {
           if (null == text) {
             int stackIn_3_0 = 0;
@@ -81,7 +81,7 @@ final class BitmapFontMetrics {
           while (!(decompiledNaturalLoopExit0 = (var8 >= var7))) {
             int var9 = text.charAt(var8);
             stackIn_73_0 = -61;
-            if (var12 == 0) {
+            if (!var12) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_73_0 == ~var9) {
                 var4_int = var8;
@@ -110,13 +110,13 @@ final class BitmapFontMetrics {
                                   int var11_int = td.a((CharSequence) ((Object) var10.substring(4)), (byte) 38);
                                   var5 = -1;
                                   var6 = var6 + inlineImages[var11_int].d();
-                                  decompiledRegionSelector0 = 0;
+                                  decompiledRegionSelector0 = false;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
                                   Exception var11 = (Exception) (Object) decompiledCaughtException;
-                                  decompiledRegionSelector0 = 0;
+                                  decompiledRegionSelector0 = false;
                                 }
-                                decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
+                                decompiledFrameRemainder0 = ((decompiledRegionSelector0));
                               }
                               if (decompiledFrameRemainder0) {
                                 var9 = 174;
@@ -196,9 +196,9 @@ final class BitmapFontMetrics {
         String stackIn_79_0 = null;
         String stackIn_84_2 = null;
         String stackIn_88_2 = null;
-        int decompiledRegionSelector0 = 0;
+        boolean decompiledRegionSelector0 = false;
         Throwable decompiledCaughtException = null;
-        int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var14 = (AceOfSkies.obfuscationControl);
         try {
           if (this.measureTextWidthWithImages(param3, (byte) -113, param0) <= param2) {
             String stackIn_5_0 = (String) (param3);
@@ -214,7 +214,7 @@ final class BitmapFontMetrics {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 <= var10))) {
             stackIn_79_0 = (String) (param3);
-            if (var14 == 0) {
+            if (!var14) {
               boolean decompiledFrameRemainder0 = true;
               int var11 = ((String) (Object) stackIn_79_0).charAt(var10);
               if (var11 == 60) {
@@ -259,13 +259,13 @@ final class BitmapFontMetrics {
                                 return stackIn_55_0;
                               }
                               var9 = param3.substring(0, 1 + var10);
-                              decompiledRegionSelector0 = 0;
+                              decompiledRegionSelector0 = false;
                             } catch (java.lang.Exception decompiledCaughtParameter0) {
                               decompiledCaughtException = decompiledCaughtParameter0;
                               Exception var13 = (Exception) (Object) decompiledCaughtException;
-                              decompiledRegionSelector0 = 0;
+                              decompiledRegionSelector0 = false;
                             }
-                            decompiledFrameRemainder0 = (decompiledRegionSelector0 != 0);
+                            decompiledFrameRemainder0 = ((decompiledRegionSelector0));
                           }
                         }
                       }
@@ -355,10 +355,10 @@ final class BitmapFontMetrics {
         String stackIn_166_2 = null;
         String stackIn_170_2 = null;
         String stackIn_174_2 = null;
-        int decompiledRegionSelector0 = 0;
+        boolean decompiledRegionSelector0 = false;
         Throwable decompiledCaughtException = null;
         int var19 = 0;
-        int var22 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var22 = (AceOfSkies.obfuscationControl);
         try {
           if (text == null) {
             int stackIn_3_0 = 0;
@@ -381,7 +381,7 @@ final class BitmapFontMetrics {
             int var18 = 0;
             stackIn_153_0 = -61;
             stackIn_153_1 = ~var17;
-            if (var22 == 0) {
+            if (!var22) {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_153_0 == stackIn_153_1) {
                 var11 = var16;
@@ -463,13 +463,13 @@ final class BitmapFontMetrics {
                                   int var21_int = td.a((CharSequence) ((Object) var20.substring(4)), (byte) 38);
                                   var12 = -1;
                                   var18 = var18 + inlineImages[var21_int].d();
-                                  decompiledRegionSelector0 = 0;
+                                  decompiledRegionSelector0 = false;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
                                   Exception var21 = (Exception) (Object) decompiledCaughtException;
-                                  decompiledRegionSelector0 = 0;
+                                  decompiledRegionSelector0 = false;
                                 }
-                                if (decompiledRegionSelector0 == 0) {
+                                if (!decompiledRegionSelector0) {
                                   break regionExit1;
                                 }
                               }
@@ -626,19 +626,19 @@ final class BitmapFontMetrics {
         int stackIn_47_0 = 0;
         int stackIn_75_0 = 0;
         String stackIn_81_2 = null;
-        int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var12 = (AceOfSkies.obfuscationControl);
         try {
           PacketBuffer var2 = new PacketBuffer(encodedMetrics);
           int var3 = var2.readUnsignedByte(-52);
           if (0 != var3) {
             throw new RuntimeException("");
           }
-          int stackIn_8_0 = (var2.readUnsignedByte(43) != 1) ? 0 : 1;
+          boolean stackIn_8_0 = !(var2.readUnsignedByte(43) != 1);
           boolean decompiledFrameCompleted0 = true;
-          int var4 = stackIn_8_0;
+          boolean var4 = stackIn_8_0;
           this.glyphAdvances = new byte[256];
           var2.a(0, 7186, 256, this.glyphAdvances);
-          if (var4 != 0) {
+          if (var4) {
             int[] var5 = new int[256];
             int[] var6 = new int[256];
             int var7_int = 0;
@@ -649,11 +649,11 @@ final class BitmapFontMetrics {
               }
               var5[var7_int] = var2.readUnsignedByte(-87);
               var7_int++;
-            } while (var12 == 0);
+            } while (!var12);
             while (var7_int < 256) {
               var6[var7_int] = var2.readUnsignedByte(-51);
               var7_int++;
-              if (var12 != 0) {
+              if (var12) {
                 return;
               }
             }
@@ -665,7 +665,7 @@ final class BitmapFontMetrics {
                 var7[var8_int] = array$0;
                 int var9 = 0;
                 stackIn_35_0 = 0;
-                if (var12 != 0) {
+                if (var12) {
                   break scanLoop1;
                 }
                 int var10 = stackIn_35_0;
@@ -688,7 +688,7 @@ final class BitmapFontMetrics {
                 var8[var9Lifetime1] = array$1;
                 int var10Lifetime1 = 0;
                 stackIn_47_0 = 0;
-                if (var12 != 0) {
+                if (var12) {
                   break scanLoop2;
                 }
                 int var11 = stackIn_47_0;
@@ -710,7 +710,7 @@ final class BitmapFontMetrics {
               int stackIn_49_1 = -257;
               if (stackIn_49_0 > stackIn_49_1) {
                 stackIn_75_0 = var9Lifetime2;
-                if (var12 != 0) {
+                if (var12) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -721,7 +721,7 @@ final class BitmapFontMetrics {
                     stackIn_49_0 = ~var10Lifetime2;
                     stackIn_49_1 = -33;
                     if (stackIn_49_0 != stackIn_49_1 && (var10Lifetime2 != 160 ||
-                      var12 != 0)) {
+                      var12)) {
                       this.pairKerning[var9Lifetime2][var10Lifetime2] = (byte)sb.a(var8, var10Lifetime2, -1, var5, var6, var7, var9Lifetime2, this.glyphAdvances);
                     }
                     var10Lifetime2++;
@@ -737,8 +737,8 @@ final class BitmapFontMetrics {
             }
           }
           if (decompiledFrameCompleted0) {
-            if (var4 == 0 ||
-              var12 != 0) {
+            if (!var4 ||
+              var12) {
               this.lineAdvance = var2.readUnsignedByte(76);
             }
             this.field_a = var2.readUnsignedByte(-110);

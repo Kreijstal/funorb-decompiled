@@ -312,11 +312,11 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 > -75) {
           this.m(-11);
         }
-        int var3 = (var2 & 1) != 0 ? 1 : 0;
+        boolean var3 = ((var2 & 1) != 0);
         int var4 = -1 + ag.field_s;
         byte[] var5 = new byte[var4];
         IntKeyLookup.incomingPacket.a(var5, var4, 0, false);
-        wc.a(ea.a(0, var5), bm.m(125), 14301, var3 != 0);
+        wc.a(ea.a(0, var5), bm.m(125), 14301, (var3));
     }
 
     private final int j(int param0) {
@@ -435,10 +435,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (sk.field_a == -1 ||
           sk.field_a == 0) {
-          int stackIn_24_0 = (sk.field_a != -1) ? 0 : 1;
-          int var3Lifetime1 = stackIn_24_0;
+          boolean stackIn_24_0 = !(sk.field_a != -1);
+          boolean var3Lifetime1 = stackIn_24_0;
           sk.field_a = lb.a(0);
-          if (var3Lifetime1 != 0 &&
+          if (var3Lifetime1 &&
             0 == sk.field_a &&
             SoundCache.field_d == 11 &&
             !dg.j(27711)) {
@@ -579,13 +579,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           bl.field_c = 13;
         }
         if (bl.field_c == 13) {
-          int var3Lifetime2 = 1;
+          boolean var3Lifetime2 = true;
           if (null != hg.field_y) {
-            int stackIn_134_0 = (!hg.field_y.a(-18738)) ? 0 : 1;
+            boolean stackIn_134_0 = !(!hg.field_y.a(-18738));
             var3Lifetime2 = stackIn_134_0;
             fh.setLoadingProgress(-59, hg.field_y.field_d, hg.field_y.field_j);
           }
-          if (var3Lifetime2 != 0) {
+          if (var3Lifetime2) {
             bl.field_c = 20;
           }
         }

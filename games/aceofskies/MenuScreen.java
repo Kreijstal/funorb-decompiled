@@ -102,9 +102,9 @@ final class MenuScreen {
 
     private final void drawItem(int verticalOffset, int itemIndex, int obfuscationGuard, boolean selected, GraphicsRenderer renderer) {
         int stackIn_12_0 = 0;
-        int stackIn_19_4 = 0;
+        boolean stackIn_19_4 = false;
         Object stackIn_22_0;
-        int stackIn_22_5;
+        boolean stackIn_22_5;
         String stackIn_31_2 = null;
         int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -131,16 +131,16 @@ final class MenuScreen {
               int stackIn_18_1 = var10;
               int stackIn_18_2 = var7;
               GraphicsRenderer stackIn_18_3 = (GraphicsRenderer) (renderer);
-              stackIn_19_4 = (var8 != 20) ? (0) : (1);
+              stackIn_19_4 = !(var8 != 20);
               Object stackIn_21_0 = this;
               if (cs.highscoreMode != 0) {
                 stackIn_22_0 = this;
-                stackIn_22_5 = 0;
+                stackIn_22_5 = false;
               } else {
                 stackIn_22_0 = this;
-                stackIn_22_5 = 1;
+                stackIn_22_5 = true;
               }
-              this.a(stackIn_18_1, stackIn_18_2, stackIn_18_3, (stackIn_19_4 ^ stackIn_22_5) != 0, var6_int, 24063);
+              this.a(stackIn_18_1, stackIn_18_2, stackIn_18_3, ((stackIn_19_4 ^ stackIn_22_5)), var6_int, 24063);
             }
             se.bigGameFont.drawCenteredText(obfuscationGuard + 95, var11, -1, (var12 >> 1) + (var6_int + kn.bigFontMetrics.maxAscent + 11), (var10 >> 1) + var7, var9.toLowerCase());
           } else {
@@ -855,8 +855,8 @@ final class MenuScreen {
             this.screenId == 7) {
             this.a(oo.menuRowSpacing[this.screenId] * ua.menuActions[this.screenId].length + 2 * var5, (byte) 86, -var4_int + dt.menuLeft[this.screenId], ClientException.menuRight[this.screenId] - (dt.menuLeft[this.screenId] - var4_int * 2), renderer, bk.menuTop[this.screenId] + (-var5 + verticalOffset));
           }
-          int stackIn_9_0 = (ln.field_d < 2) ? 0 : 1;
-          int var6 = stackIn_9_0;
+          boolean stackIn_9_0 = !(ln.field_d < 2);
+          boolean var6 = stackIn_9_0;
           if (obfuscationGuard != -4) {
             this.pendingClickY = -36;
           }
@@ -909,7 +909,7 @@ final class MenuScreen {
             boolean stackIn_39_8 = (or.score != 0);
             ((RendererBitmapFont) (Object) stackIn_35_0).drawCenteredText(stackIn_35_1, stackIn_35_2, stackIn_35_3, stackIn_35_4, stackIn_35_5, av.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_6, stackIn_36_7, stackIn_39_8, false));
           }
-          if (var6 == 0 ||
+          if (!var6 ||
             !lp.heldKeys[70] &&
             !lp.heldKeys[69]) {
             for (int var7Lifetime1 = 0; this.input.itemCount > var7Lifetime1; var7Lifetime1++) {
@@ -1068,11 +1068,11 @@ final class MenuScreen {
               var7Lifetime2Lifetime1 = var7Lifetime2Lifetime1 + (lg.coinSprite.d() / 3 >> 2);
             }
           }
-          int stackIn_65_0 = (0 == (var16 & 1 << var17)) ? 0 : 1;
-          int var19Lifetime1 = stackIn_65_0;
+          boolean stackIn_65_0 = !(0 == (var16 & 1 << var17));
+          boolean var19Lifetime1 = stackIn_65_0;
           int var7Lifetime2Lifetime2 = 170;
           int var15Lifetime1Lifetime2 = 220 + verticalOffset;
-          if (var19Lifetime1 != 0) {
+          if (var19Lifetime1) {
             PacketBuffer.gameFont.drawCenteredText(111, -14483644, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, sk.field_d);
           } else {
             PacketBuffer.gameFont.drawCenteredText(114, -56764, var6, var15Lifetime1Lifetime2, var7Lifetime2Lifetime2, jm.field_b);
@@ -1089,7 +1089,7 @@ final class MenuScreen {
           int var15Lifetime1Lifetime3 = 350 + verticalOffset;
           PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, lb.field_a[var17]);
           int var21Lifetime1 = verticalOffset + 200;
-          if (var19Lifetime1 != 0) {
+          if (var19Lifetime1) {
             aa.achievementSprites[var17].a(256, var21Lifetime1, 0, var5, 1);
           } else if (qr.field_a <= 0 &&
             var12[var17]) {

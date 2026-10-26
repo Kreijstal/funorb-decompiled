@@ -46,7 +46,7 @@ final class wu {
     byte[] field_x;
 
     final void a(int param0, int param1, int param2, int param3, boolean param4) {
-        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var7 = (AceOfSkies.obfuscationControl);
         try {
           if (param4) {
             this.a(-126, 92, 16, -17);
@@ -57,7 +57,7 @@ final class wu {
             this.field_P[var6_int] = (short)(this.field_P[var6_int] * param2 / param1);
             this.field_F[var6_int] = (short)(this.field_F[var6_int] * param3 / param1);
             var6_int++;
-            if (var7 != 0) {
+            if (var7) {
               return;
             }
           }
@@ -82,7 +82,7 @@ final class wu {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var6 = (AceOfSkies.obfuscationControl);
         try {
           if (param1 < 93) {
             field_w = (IntrusiveDeque) null;
@@ -93,7 +93,7 @@ final class wu {
             this.field_P[var5_int] = (short)(this.field_P[var5_int] + param2);
             this.field_F[var5_int] = (short)(this.field_F[var5_int] + param3);
             var5_int++;
-            if (var6 != 0) {
+            if (var6) {
               return;
             }
           }
@@ -156,7 +156,7 @@ final class wu {
     }
 
     final void b(int param0) {
-        int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var12 = (AceOfSkies.obfuscationControl);
         try {
           if (this.field_O) {
             return;
@@ -173,7 +173,7 @@ final class wu {
             int var9 = this.field_z[var8];
             int var10 = this.field_P[var8];
             int var11 = this.field_F[var8];
-            if (var12 != 0) {
+            if (var12) {
               return;
             }
             if (var2_int > var9) {

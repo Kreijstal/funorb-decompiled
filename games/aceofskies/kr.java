@@ -223,8 +223,8 @@ public final class kr extends bf {
           this.field_Rc.SetSamplerState(this.field_F, 6, var4);
           this.field_Rc.SetSamplerState(this.field_F, 5, var4);
           this.field_Oc[this.field_F] = param0.field_a;
-          int stackIn_13_0 = (param0.field_b) ? 0 : 1;
-          int stackIn_16_1 = (this.field_Ac[this.field_F]) ? 0 : 1;
+          boolean stackIn_13_0 = !(param0.field_b);
+          boolean stackIn_16_1 = !(this.field_Ac[this.field_F]);
           if (stackIn_13_0 != stackIn_16_1) {
             jagdx.IDirect3DDevice stackIn_19_0 = this.field_Rc;
             int stackIn_19_1 = this.field_F;

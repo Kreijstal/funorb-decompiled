@@ -35,7 +35,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     final synchronized void b(int param0) {
         Object var2 = null;
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         try {
           if (null != ci.field_f) {
             ci.field_f.removeFocusListener((java.awt.event.FocusListener) (this));
@@ -45,12 +45,12 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           boolean decompiledFrameRemainder0 = true;
           if (ku.field_f != null) {
             var2 = ku.field_f;
-            decompiledFrameRemainder0 = (var4 != 0);
+            decompiledFrameRemainder0 = ((var4));
           }
           if (decompiledFrameRemainder0) {
             if (null != si.field_d) {
               var2 = si.field_d;
-              if (var4 != 0) {
+              if (var4) {
                 if (hu.field_a == null) {
                   var2 = gh.field_f;
                   var2 = hu.field_a;
@@ -60,7 +60,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
             } else if (hu.field_a == null) {
               var2 = gh.field_f;
-              if (var4 != 0) {
+              if (var4) {
                 var2 = hu.field_a;
               }
             } else {
@@ -75,7 +75,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           boolean decompiledSharedTail0 = (si.field_d == var2);
           if (!decompiledSharedTail0) {
             ci.field_f.setLocation(ci.field_g, jt.field_x);
-            decompiledSharedTail0 = (var4 != 0);
+            decompiledSharedTail0 = ((var4));
           }
           if (decompiledSharedTail0) {
             java.awt.Insets var3 = si.field_d.getInsets();
@@ -499,7 +499,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           Throwable decompiledCaughtException = null;
           Object var1 = null;
           int var3 = 0;
-          int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+          boolean var5 = (AceOfSkies.obfuscationControl);
           try {
             try {
               boolean decompiledFrameRemainder3 = true;
@@ -522,14 +522,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var2.startsWith("1.5.") ||
                     var2.equals("1.6.0")) {
                     this.a(-119, "wrongjava");
-                    decompiledFrameRemainder3 = (var5 != 0);
+                    decompiledFrameRemainder3 = ((var5));
                   }
                   if (decompiledFrameRemainder3 &&
                     var2.startsWith("1.6.0_")) {
                     var3 = 6;
                     while (var3 < var2.length()) {
                       stackIn_68_0 = oj.a(var2.charAt(var3), (byte) -2);
-                      if (var5 != 0) {
+                      if (var5) {
                         decompiledFrameCompleted0 = false;
                         break;
                       }
@@ -544,7 +544,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                       if (vl.a(10, (CharSequence) ((Object) var4)) &&
                         !(td.a((CharSequence) ((Object) var4), (byte) 38) >= 10)) {
                         this.a(-111, "wrongjava");
-                        decompiledFrameRemainder3 = (var5 != 0);
+                        decompiledFrameRemainder3 = ((var5));
                       }
                     }
                   }
@@ -565,7 +565,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     var3 = rk.field_l.charAt(var1_int);
                     stackIn_81_0 = -49;
                     stackIn_81_1 = ~var3;
-                    decompiledFrameRemainder1 = (var5 == 0);
+                    decompiledFrameRemainder1 = ((!(var5)));
                     if (decompiledFrameRemainder1 && (stackIn_81_0 >= stackIn_81_1 &&
                       57 >= var3)) {
                       var2_int = -48 - (-var3 - var2_int * 10);
@@ -607,7 +607,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   boolean decompiledFrameRemainder0 = true;
                   if (lb.field_g != 0L) {
                     stackIn_100_0 = $cfr$lcmp(kh.a(-125), lb.field_g);
-                    decompiledFrameRemainder0 = (var5 == 0);
+                    decompiledFrameRemainder0 = ((!(var5)));
                     if (decompiledFrameRemainder0 &&
                       stackIn_100_0 >= 0) {
                       break;
@@ -626,8 +626,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     this.c((byte) 111);
                     var3++;
-                  } while (var5 == 0);
-                } while (var5 == 0);
+                  } while (!var5);
+                } while (!var5);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -702,7 +702,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           String stackIn_24_2 = null;
           Throwable decompiledCaughtException = null;
-          int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+          boolean var9 = (AceOfSkies.obfuscationControl);
           try {
             try {
               if (null != gh.field_f) {
@@ -730,7 +730,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               while (true) {
                 if (var8.field_a == 0) {
                   IntrusiveNode.a(10L, false);
-                  if (var9 == 0) {
+                  if (!var9) {
                     continue;
                   }
                 }

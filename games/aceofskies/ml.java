@@ -22,7 +22,7 @@ final class ml extends IntrusiveNode {
         String stackIn_31_2 = null;
         int var10 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          int var5_int = 1;
+          boolean var5_int = true;
           if (param3 != 5193) {
             this.field_f = (PcmSample[]) null;
           }
@@ -42,7 +42,7 @@ final class ml extends IntrusiveNode {
                     var7 = param2.getVorbisSample(var9 >> 2, param1, (byte) -92);
                   }
                   if (var7 == null) {
-                    var5_int = 0;
+                    var5_int = false;
                   }
                 }
                 if (var7 != null) {
@@ -52,8 +52,8 @@ final class ml extends IntrusiveNode {
               }
             }
           }
-          int stackIn_21_0 = var5_int;
-          return stackIn_21_0 != 0;
+          boolean stackIn_21_0 = var5_int;
+          return (stackIn_21_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;

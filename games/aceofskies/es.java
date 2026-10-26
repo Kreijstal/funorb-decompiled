@@ -167,7 +167,7 @@ final class es {
     }
 
     es(int param0) {
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         this.field_f = param0;
         this.field_e = new DualLinkNode[param0];
         int var2 = 0;
@@ -178,7 +178,7 @@ final class es {
           var3.previousSecondaryNode = var3;
           var3.nextSecondaryNode = var3;
           var2++;
-          if (var4 != 0) {
+          if (var4) {
             return;
           }
         }

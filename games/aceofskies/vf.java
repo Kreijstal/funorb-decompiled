@@ -75,7 +75,7 @@ final class vf implements Runnable {
 
     public final void run() {
         try {
-          int decompiledRegionSelector0 = 0;
+          boolean decompiledRegionSelector0 = false;
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           int var2 = 0;
@@ -88,7 +88,7 @@ final class vf implements Runnable {
                 boolean decompiledFrameRemainder0 = true;
                 if (this.field_f == this.field_h) {
                   if (this.field_k) {
-                    decompiledRegionSelector0 = 0;
+                    decompiledRegionSelector0 = false;
                     decompiledFrameRemainder0 = false;
                   }
                   else {
@@ -107,10 +107,10 @@ final class vf implements Runnable {
                     var1_int = this.field_c - this.field_f;
                   }
                   var2 = this.field_f;
-                  decompiledRegionSelector0 = 1;
+                  decompiledRegionSelector0 = true;
                 }
               }
-              if (decompiledRegionSelector0 == 0) {
+              if (!decompiledRegionSelector0) {
                 try {
                   if (null != this.field_g) {
                     this.field_g.close();

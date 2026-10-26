@@ -712,36 +712,36 @@ class Sprite extends SpriteState {
               int var37 = var31 + (var29 * var28 >> 4);
               int var38 = var32 + (var29 * var27 >> 4);
               int var39 = var20;
-              int var40 = 0;
+              boolean var40 = false;
               int var35 = var37 + 4096;
               if (!(var35 < 0)) {
-                var40 = 1;
+                var40 = true;
               } else if (var28 != 0) {
                 var35 = (var28 - 1 - var35) / var28;
                 var39 = var39 + var35;
                 var37 = var37 + var28 * var35;
                 var38 = var38 + var27 * var35;
                 var23 = var23 + var35;
-                var40 = 1;
+                var40 = true;
               } else {
                 var23 = var23 - var39;
               }
-              if (var40 != 0) {
-                var40 = 0;
+              if (var40) {
+                var40 = false;
                 int var35Lifetime4 = var38 + 4096;
                 if (!(var35Lifetime4 < 0)) {
-                  var40 = 1;
+                  var40 = true;
                 } else if (var27 != 0) {
                   var35Lifetime4 = (var27 - 1 - var35Lifetime4) / var27;
                   var39 = var39 + var35Lifetime4;
                   var37 = var37 + var28 * var35Lifetime4;
                   var38 = var38 + var27 * var35Lifetime4;
                   var23 = var23 + var35Lifetime4;
-                  var40 = 1;
+                  var40 = true;
                 } else {
                   var23 = var23 - var39;
                 }
-                if (var40 != 0) {
+                if (var40) {
                   while (var39 < 0) {
                     int var33 = var37 >> 12;
                     if (var37 >> 12 < this.width) {
@@ -772,36 +772,36 @@ class Sprite extends SpriteState {
             int var37Lifetime3 = var31 + (var29 * var28 >> 4);
             int var38Lifetime3 = var32 + (var29 * var27 >> 4);
             int var39Lifetime3 = var20;
-            int var40Lifetime3 = 0;
+            boolean var40Lifetime3 = false;
             int var35Lifetime3 = var37Lifetime3 + 4096;
             if (!(var35Lifetime3 < 0)) {
-              var40Lifetime3 = 1;
+              var40Lifetime3 = true;
             } else if (var28 != 0) {
               var35Lifetime3 = (var28 - 1 - var35Lifetime3) / var28;
               var39Lifetime3 = var39Lifetime3 + var35Lifetime3;
               var37Lifetime3 = var37Lifetime3 + var28 * var35Lifetime3;
               var38Lifetime3 = var38Lifetime3 + var27 * var35Lifetime3;
               var23 = var23 + var35Lifetime3;
-              var40Lifetime3 = 1;
+              var40Lifetime3 = true;
             } else {
               var23 = var23 - var39Lifetime3;
             }
-            if (var40Lifetime3 != 0) {
-              var40Lifetime3 = 0;
+            if (var40Lifetime3) {
+              var40Lifetime3 = false;
               int var35Lifetime3Lifetime1 = var38Lifetime3 - (this.height << 12);
               if (!(var35Lifetime3Lifetime1 >= 0)) {
-                var40Lifetime3 = 1;
+                var40Lifetime3 = true;
               } else if (var27 != 0) {
                 var35Lifetime3Lifetime1 = (var27 - var35Lifetime3Lifetime1) / var27;
                 var39Lifetime3 = var39Lifetime3 + var35Lifetime3Lifetime1;
                 var37Lifetime3 = var37Lifetime3 + var28 * var35Lifetime3Lifetime1;
                 var38Lifetime3 = var38Lifetime3 + var27 * var35Lifetime3Lifetime1;
                 var23 = var23 + var35Lifetime3Lifetime1;
-                var40Lifetime3 = 1;
+                var40Lifetime3 = true;
               } else {
                 var23 = var23 - var39Lifetime3;
               }
-              if (var40Lifetime3 != 0) {
+              if (var40Lifetime3) {
                 while (var39Lifetime3 < 0) {
                   if (var38Lifetime3 >= -4096) {
                     int var33Lifetime3 = var37Lifetime3 >> 12;
@@ -833,36 +833,36 @@ class Sprite extends SpriteState {
             int var37Lifetime1 = var31 + (var29 * var28 >> 4);
             int var38Lifetime1 = var32 + (var29 * var27 >> 4);
             int var39Lifetime1 = var20;
-            int var40Lifetime1 = 0;
+            boolean var40Lifetime1 = false;
             int var35Lifetime1 = var37Lifetime1 - (this.width << 12);
             if (!(var35Lifetime1 >= 0)) {
-              var40Lifetime1 = 1;
+              var40Lifetime1 = true;
             } else if (var28 != 0) {
               var35Lifetime1 = (var28 - var35Lifetime1) / var28;
               var39Lifetime1 = var39Lifetime1 + var35Lifetime1;
               var37Lifetime1 = var37Lifetime1 + var28 * var35Lifetime1;
               var38Lifetime1 = var38Lifetime1 + var27 * var35Lifetime1;
               var23 = var23 + var35Lifetime1;
-              var40Lifetime1 = 1;
+              var40Lifetime1 = true;
             } else {
               var23 = var23 - var39Lifetime1;
             }
-            if (var40Lifetime1 != 0) {
-              var40Lifetime1 = 0;
+            if (var40Lifetime1) {
+              var40Lifetime1 = false;
               int var35Lifetime1Lifetime1 = var38Lifetime1 + 4096;
               if (!(var35Lifetime1Lifetime1 < 0)) {
-                var40Lifetime1 = 1;
+                var40Lifetime1 = true;
               } else if (var27 != 0) {
                 var35Lifetime1Lifetime1 = (var27 - 1 - var35Lifetime1Lifetime1) / var27;
                 var39Lifetime1 = var39Lifetime1 + var35Lifetime1Lifetime1;
                 var37Lifetime1 = var37Lifetime1 + var28 * var35Lifetime1Lifetime1;
                 var38Lifetime1 = var38Lifetime1 + var27 * var35Lifetime1Lifetime1;
                 var23 = var23 + var35Lifetime1Lifetime1;
-                var40Lifetime1 = 1;
+                var40Lifetime1 = true;
               } else {
                 var23 = var23 - var39Lifetime1;
               }
-              if (var40Lifetime1 != 0) {
+              if (var40Lifetime1) {
                 while (var39Lifetime1 < 0) {
                   if (var37Lifetime1 >= -4096) {
                     int var34Lifetime1 = var38Lifetime1 >> 12;
@@ -893,36 +893,36 @@ class Sprite extends SpriteState {
           int var37Lifetime2 = var31 + (var29 * var28 >> 4);
           int var38Lifetime2 = var32 + (var29 * var27 >> 4);
           int var39Lifetime2 = var20;
-          int var40Lifetime2 = 0;
+          boolean var40Lifetime2 = false;
           int var35Lifetime2 = var37Lifetime2 - (this.width << 12);
           if (!(var35Lifetime2 >= 0)) {
-            var40Lifetime2 = 1;
+            var40Lifetime2 = true;
           } else if (var28 != 0) {
             var35Lifetime2 = (var28 - var35Lifetime2) / var28;
             var39Lifetime2 = var39Lifetime2 + var35Lifetime2;
             var37Lifetime2 = var37Lifetime2 + var28 * var35Lifetime2;
             var38Lifetime2 = var38Lifetime2 + var27 * var35Lifetime2;
             var23 = var23 + var35Lifetime2;
-            var40Lifetime2 = 1;
+            var40Lifetime2 = true;
           } else {
             var23 = var23 - var39Lifetime2;
           }
-          if (var40Lifetime2 != 0) {
-            var40Lifetime2 = 0;
+          if (var40Lifetime2) {
+            var40Lifetime2 = false;
             int var35Lifetime2Lifetime1 = var38Lifetime2 - (this.height << 12);
             if (!(var35Lifetime2Lifetime1 >= 0)) {
-              var40Lifetime2 = 1;
+              var40Lifetime2 = true;
             } else if (var27 != 0) {
               var35Lifetime2Lifetime1 = (var27 - var35Lifetime2Lifetime1) / var27;
               var39Lifetime2 = var39Lifetime2 + var35Lifetime2Lifetime1;
               var37Lifetime2 = var37Lifetime2 + var28 * var35Lifetime2Lifetime1;
               var38Lifetime2 = var38Lifetime2 + var27 * var35Lifetime2Lifetime1;
               var23 = var23 + var35Lifetime2Lifetime1;
-              var40Lifetime2 = 1;
+              var40Lifetime2 = true;
             } else {
               var23 = var23 - var39Lifetime2;
             }
-            if (var40Lifetime2 != 0) {
+            if (var40Lifetime2) {
               while (var39Lifetime2 < 0) {
                 if (var37Lifetime2 >= -4096 &&
                   var38Lifetime2 >= -4096) {

@@ -18,7 +18,7 @@ final class cs {
           int var6 = 114 % ((param0 - 32) / 42);
           wj var12 = this.field_c.field_o;
           cu var7 = new cu(this.field_c, 6408, param1.field_l, param1.field_m);
-          int var8 = 0;
+          boolean var8 = false;
           this.field_c.a(var12, 32925);
           var12.a(var7, 0, (byte) 119);
           if (var12.d((byte) -64)) {
@@ -53,13 +53,13 @@ final class cs {
             jaggl.OpenGL.glPopAttrib();
             jaggl.OpenGL.glPopMatrix();
             jaggl.OpenGL.glMatrixMode(5888);
-            var8 = 1;
+            var8 = true;
             jaggl.OpenGL.glPopMatrix();
           }
           var12.a(0, (byte) -107);
           this.field_c.b((byte) -113, var12);
-          int stackIn_11_0 = var8;
-          return stackIn_11_0 != 0;
+          boolean stackIn_11_0 = var8;
+          return (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5 = decompiledCaughtException;

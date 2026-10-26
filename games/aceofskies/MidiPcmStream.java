@@ -41,7 +41,7 @@ final class MidiPcmStream extends PcmStream {
 
     final synchronized void b(int[] param0, int param1, int param2) {
         String stackIn_17_2 = null;
-        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var8 = (AceOfSkies.obfuscationControl);
         try {
           if (this.field_M.c()) {
             int var4_int = this.field_M.field_e * this.field_C / tk.field_f;
@@ -49,7 +49,7 @@ final class MidiPcmStream extends PcmStream {
               long var5 = (long)param2 * (long)var4_int + this.field_j;
               if (0L <= this.field_u - var5) {
                 this.field_j = var5;
-                if (var8 != 0) {
+                if (var8) {
                   return;
                 }
                 break;
@@ -61,10 +61,10 @@ final class MidiPcmStream extends PcmStream {
               this.a((byte) 53);
               param2 = param2 - var7;
               if (!this.field_M.c() &&
-                var8 == 0) {
+                !var8) {
                 break;
               }
-              if (var8 == 0) {
+              if (!var8) {
                 continue;
               }
               this.field_L.b(param0, param1, param2);
@@ -140,12 +140,12 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void b(boolean param0, int param1) {
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         if (param0) {
           this.b(-1, (byte) 67);
         }
         if (!param0 ||
-          var4 != 0) {
+          var4) {
           this.a(true, -1);
         }
         if (param1 != 12705) {
@@ -160,11 +160,11 @@ final class MidiPcmStream extends PcmStream {
           }
           this.field_I[var3] = this.field_F[var3];
           var3++;
-        } while (var4 == 0);
+        } while (!var4);
         while (var3 < 16) {
           this.field_s[var3] = pg.a(-128, this.field_F[var3]);
           var3++;
-          if (var4 == 0) {
+          if (!var4) {
             continue;
           }
           break;
@@ -178,12 +178,12 @@ final class MidiPcmStream extends PcmStream {
 
     private final void a(boolean param0, int param1) {
         int stackIn_10_0 = 0;
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         ft var3 = (ft) (this.field_L.field_k.first(268435455));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_10_0 = param1;
-          if (var4 == 0) {
+          if (!var4) {
             if ((stackIn_10_0 < 0 ||
               ~var3.field_m == ~param1) &&
               var3.field_p < 0) {
@@ -209,7 +209,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void a(int param0, int param1, int param2, int param3) {
-        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var7 = (AceOfSkies.obfuscationControl);
         ft var8 = this.field_E[param3][param1];
         if (var8 == null) {
           return;
@@ -218,12 +218,12 @@ final class MidiPcmStream extends PcmStream {
         this.field_E[param3][param1] = null;
         if (param2 == (this.field_G[param3] & 2)) {
           var8.field_p = 0;
-          decompiledFrameRemainder0 = (var7 != 0);
+          decompiledFrameRemainder0 = ((var7));
         }
         if (decompiledFrameRemainder0) {
           ft var6 = (ft) (this.field_L.field_k.first(268435455));
           while (var6 != null) {
-            if (var7 != 0) {
+            if (var7) {
               break;
             }
             if (~var6.field_m == ~var8.field_m &&
@@ -241,7 +241,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final synchronized void g(int param0) {
-        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var3 = (AceOfSkies.obfuscationControl);
         if (param0 != 0) {
           return;
         }
@@ -249,7 +249,7 @@ final class MidiPcmStream extends PcmStream {
         while (var4 != null) {
           var4.a(true);
           var4 = (ml) (this.field_n.nextForIteration(0));
-          if (var3 == 0) {
+          if (!var3) {
             continue;
           }
           break;
@@ -259,14 +259,14 @@ final class MidiPcmStream extends PcmStream {
     final synchronized void a(int param0) {
         boolean decompiledFrameCompleted1 = true;
         boolean decompiledFrameCompleted0 = true;
-        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var6 = (AceOfSkies.obfuscationControl);
         if (this.field_M.c()) {
           int var2 = this.field_C * this.field_M.field_e / tk.field_f;
           while (true) {
             long var3 = this.field_j + (long)param0 * (long)var2;
             if (this.field_u - var3 >= 0L) {
               this.field_j = var3;
-              if (var6 != 0) {
+              if (var6) {
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -278,10 +278,10 @@ final class MidiPcmStream extends PcmStream {
             param0 = param0 - var5;
             this.a((byte) 54);
             if (!this.field_M.c() &&
-              var6 == 0) {
+              !var6) {
               break;
             }
-            if (var6 == 0) {
+            if (!var6) {
               continue;
             }
             this.field_L.a(param0);
@@ -297,14 +297,14 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void a(byte param0, int param1) {
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         if (param0 >= -111) {
           return;
         }
         if ((2 & this.field_G[param1]) != 0) {
           ft var3 = (ft) (this.field_L.field_k.first(268435455));
           while (var3 != null) {
-            if (var4 != 0) {
+            if (var4) {
               break;
             }
             if (~var3.field_m == ~param1 &&
@@ -321,9 +321,9 @@ final class MidiPcmStream extends PcmStream {
         Object stackIn_10_0 = null;
         ft stackIn_20_1 = null;
         boolean stackIn_21_2 = false;
-        int var10;
+        boolean var10;
         regionExit1: {
-          var10 = AceOfSkies.obfuscationControl ? 1 : 0;
+          var10 = (AceOfSkies.obfuscationControl);
           this.a(64, param2, 0, param3);
           if (0 != (2 & this.field_G[param3])) {
             ft var5 = (ft) (this.field_L.field_k.last((byte) -70));
@@ -331,7 +331,7 @@ final class MidiPcmStream extends PcmStream {
               ft stackOut_4_0 = var5;
               stackIn_10_0 = stackOut_4_0;
               ft stackIn_5_0 = stackOut_4_0;
-              if (var10 != 0) {
+              if (var10) {
                 break regionExit1;
               }
               if (~stackIn_5_0.field_m == ~param3 &&
@@ -377,7 +377,7 @@ final class MidiPcmStream extends PcmStream {
         var7.field_k = 0;
         if (this.field_z[param3] == 0) {
           var7.field_e = PcmSampleStream.a(var6, this.b((byte) -113, var7), this.a((byte) -67, var7), this.b(77, var7));
-          if (var10 != 0) {
+          if (var10) {
             var7.field_e = PcmSampleStream.a(var6, this.b((byte) -126, var7), 0, this.b(85, var7));
             stackIn_20_1 = var7;
             stackIn_21_2 = !(var11.field_n[param2] >= 0);
@@ -421,7 +421,7 @@ final class MidiPcmStream extends PcmStream {
     private final void a(byte param0) {
         int stackIn_29_0 = 0;
         int stackIn_29_1 = 0;
-        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var7 = (AceOfSkies.obfuscationControl);
         int var2 = this.field_H;
         int var3 = this.field_q;
         long var4 = this.field_u;
@@ -439,7 +439,7 @@ final class MidiPcmStream extends PcmStream {
             while (true) {
               stackIn_29_0 = var3;
               stackIn_29_1 = this.field_M.field_f[var2];
-              if (var7 != 0) {
+              if (var7) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -505,7 +505,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void c(int param0, boolean param1) {
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         if (0 > param0) {
           param0 = 0;
           do {
@@ -514,7 +514,7 @@ final class MidiPcmStream extends PcmStream {
             }
             this.c(param0, false);
             param0++;
-          } while (var4 == 0);
+          } while (!var4);
           return;
         }
         if (param1) {
@@ -562,7 +562,7 @@ final class MidiPcmStream extends PcmStream {
 
     private final synchronized void a(int param0, boolean param1, boolean param2, MusicTrack param3) {
         String stackIn_17_2 = null;
-        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var7 = (AceOfSkies.obfuscationControl);
         try {
           this.a(2097152, param1);
           this.field_M.a(param3.field_e);
@@ -580,7 +580,7 @@ final class MidiPcmStream extends PcmStream {
             this.field_M.c(var6);
             this.field_M.f(var6);
             var6++;
-          } while (var7 == 0);
+          } while (!var7);
           if (param0 <= 110) {
             this.a(-102, (byte) -90);
           }
@@ -603,14 +603,14 @@ final class MidiPcmStream extends PcmStream {
 
     private final void a(int param0, byte param1, int param2) {
         boolean decompiledFrameCompleted0 = true;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         if (param2 != this.field_I[param0]) {
           this.field_I[param0] = param2;
           int var4 = 0;
           while (128 > var4) {
             this.field_K[param0][var4] = null;
             var4++;
-            if (var5 != 0) {
+            if (var5) {
               decompiledFrameCompleted0 = false;
               break;
             }
@@ -659,10 +659,10 @@ final class MidiPcmStream extends PcmStream {
         String stackIn_23_2 = null;
         String stackIn_26_2 = null;
         String stackIn_29_2 = null;
-        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var11 = (AceOfSkies.obfuscationControl);
         try {
           param2.b();
-          int var6_int = 1;
+          boolean var6_int = true;
           Object var7 = null;
           if (~param1 < param0) {
             var7 = new int[]{param1};
@@ -672,12 +672,12 @@ final class MidiPcmStream extends PcmStream {
           while (!(decompiledNaturalLoopExit0 = (var8 == null))) {
             int var9 = (int)var8.key;
             ml var12 = (ml) (this.field_n.findByKey((byte) 106, (long)var9));
-            if (var11 == 0) {
+            if (!var11) {
               boolean decompiledFrameRemainder0 = true;
               if (var12 == null) {
                 ml var13 = gu.a(var9, param3, 16652);
                 if (var13 == null) {
-                  var6_int = 0;
+                  var6_int = false;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -688,7 +688,7 @@ final class MidiPcmStream extends PcmStream {
                 decompiledFrameRemainder0 = !(var12.a(var8.field_e, (int[]) (var7), param4, 5193));
               }
               if (decompiledFrameRemainder0) {
-                var6_int = 0;
+                var6_int = false;
               }
               var8 = (ub) (param2.field_f.nextForIteration(param0 + 1));
               continue;
@@ -696,11 +696,11 @@ final class MidiPcmStream extends PcmStream {
             break;
           }
           if (decompiledNaturalLoopExit0 &&
-            var6_int != 0) {
+            var6_int) {
             param2.a();
           }
-          int stackIn_19_0 = var6_int;
-          return stackIn_19_0 != 0;
+          boolean stackIn_19_0 = var6_int;
+          return (stackIn_19_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var6 = decompiledCaughtException;
@@ -735,7 +735,7 @@ final class MidiPcmStream extends PcmStream {
     }
 
     final synchronized void a(byte param0, int param1, int param2) {
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         if (param0 >= -115) {
           this.field_o = (int[]) null;
         }
@@ -743,12 +743,12 @@ final class MidiPcmStream extends PcmStream {
           this.field_l[param2] = param1;
         }
         if (param2 < 0 ||
-          var5 != 0) {
+          var5) {
           int var4 = 0;
           while (var4 < 16) {
             this.field_l[var4] = param1;
             var4++;
-            if (var5 != 0) {
+            if (var5) {
               break;
             }
           }
@@ -852,7 +852,7 @@ final class MidiPcmStream extends PcmStream {
     private final void b(int param0, int param1) {
         int var7;
         int var7Lifetime1;
-        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var8 = (AceOfSkies.obfuscationControl);
         int var3 = param1 & 240;
         if (var3 == 128) {
           int var4 = 15 & param1;
@@ -868,7 +868,7 @@ final class MidiPcmStream extends PcmStream {
             int var6Lifetime1 = 127 & param1 >> 16;
             if (var6Lifetime1 > 0) {
               this.b(35, var6Lifetime1, var5Lifetime1, var4Lifetime1);
-              if (var8 == 0) {
+              if (!var8) {
                 break regionExit1;
               }
             }
@@ -954,7 +954,7 @@ final class MidiPcmStream extends PcmStream {
             case 64:
               if (var6Lifetime1Lifetime2 >= 64) {
                 this.field_G[var4Lifetime1Lifetime3] = vo.a(this.field_G[var4Lifetime1Lifetime3], 1);
-                if (var8 != 0) {
+                if (var8) {
                   this.field_G[var4Lifetime1Lifetime3] = pg.a(this.field_G[var4Lifetime1Lifetime3], -2);
                 }
               } else {
@@ -965,7 +965,7 @@ final class MidiPcmStream extends PcmStream {
               if (var6Lifetime1Lifetime2 < 64) {
                 this.a((byte) -126, var4Lifetime1Lifetime3);
                 this.field_G[var4Lifetime1Lifetime3] = pg.a(this.field_G[var4Lifetime1Lifetime3], -3);
-                if (var8 != 0) {
+                if (var8) {
                   this.field_G[var4Lifetime1Lifetime3] = vo.a(this.field_G[var4Lifetime1Lifetime3], 2);
                 }
               } else {
@@ -1014,7 +1014,7 @@ final class MidiPcmStream extends PcmStream {
             case 81:
               if (64 <= var6Lifetime1Lifetime2) {
                 this.field_G[var4Lifetime1Lifetime3] = vo.a(this.field_G[var4Lifetime1Lifetime3], 4);
-                if (var8 != 0) {
+                if (var8) {
                   this.a(var4Lifetime1Lifetime3, (byte) 4);
                   this.field_G[var4Lifetime1Lifetime3] = pg.a(this.field_G[var4Lifetime1Lifetime3], -5);
                 }
@@ -1079,7 +1079,7 @@ final class MidiPcmStream extends PcmStream {
         int stackIn_54_1 = 0;
         String stackIn_77_2 = null;
         String stackIn_80_2 = null;
-        int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var11 = (AceOfSkies.obfuscationControl);
         try {
           param3.field_i = tk.field_f / 100;
           if (0 <= param3.field_p && (null == param3.field_e ||
@@ -1105,27 +1105,27 @@ final class MidiPcmStream extends PcmStream {
           param3.field_e.g(this.b((byte) -76, param3));
           dh var7 = param3.field_r;
           param3.field_j = param3.field_j + 1;
-          int var8 = param2 ? 1 : 0;
+          boolean var8 = (param2);
           param3.field_z = param3.field_z + var7.field_i;
           double var9 = 0.000005086263020833333 * (double)((param3.field_n - 60 << 8) + (param3.field_q * param3.field_u >> 12));
           if (var7.field_b > 0) {
             if (var7.field_f > 0) {
               param3.field_A = param3.field_A + (int)(0.5 + 128.0 * Math.pow(2.0, (double)var7.field_f * var9));
-              if (var11 != 0) {
+              if (var11) {
                 param3.field_A = param3.field_A + 128;
               }
             } else {
               param3.field_A = param3.field_A + 128;
             }
             if (819200 <= var7.field_b * param3.field_A) {
-              var8 = 1;
+              var8 = true;
             }
           }
           if (var7.field_g != null) {
             boolean decompiledSharedTail1 = !(0 >= var7.field_h);
             if (!decompiledSharedTail1) {
               param3.field_s = param3.field_s + 128;
-              decompiledSharedTail1 = (var11 != 0);
+              decompiledSharedTail1 = ((var11));
             }
             if (decompiledSharedTail1) {
               param3.field_s = param3.field_s + (int)(0.5 + 128.0 * Math.pow(2.0, (double)var7.field_h * var9));
@@ -1135,7 +1135,7 @@ final class MidiPcmStream extends PcmStream {
               if (param3.field_g < (-2 + var7.field_g.length)) {
                 stackIn_34_0 = ~((255 & var7.field_g[2 + param3.field_g]) << 8);
                 stackIn_34_1 = ~param3.field_s;
-                decompiledFrameRemainder1 = (var11 == 0);
+                decompiledFrameRemainder1 = ((!(var11)));
                 if (decompiledFrameRemainder1 &&
                   stackIn_34_0 > stackIn_34_1) {
                   param3.field_g = param3.field_g + 2;
@@ -1152,7 +1152,7 @@ final class MidiPcmStream extends PcmStream {
               if (var7.field_g[param3.field_g + 1] != 0) {
                 break;
               }
-              var8 = 1;
+              var8 = true;
               break;
             }
           }
@@ -1163,7 +1163,7 @@ final class MidiPcmStream extends PcmStream {
             boolean decompiledSharedTail0 = !(var7.field_l <= 0);
             if (!decompiledSharedTail0) {
               param3.field_p = param3.field_p + 128;
-              decompiledSharedTail0 = (var11 != 0);
+              decompiledSharedTail0 = ((var11));
             }
             if (decompiledSharedTail0) {
               param3.field_p = param3.field_p + (int)(Math.pow(2.0, (double)var7.field_l * var9) * 128.0 + 0.5);
@@ -1173,7 +1173,7 @@ final class MidiPcmStream extends PcmStream {
               if ((-2 + var7.field_e.length) > param3.field_k) {
                 stackIn_54_0 = ~param3.field_p;
                 stackIn_54_1 = ~(65280 & var7.field_e[param3.field_k + 2] << 8);
-                decompiledFrameRemainder0 = (var11 == 0);
+                decompiledFrameRemainder0 = ((!(var11)));
                 if (decompiledFrameRemainder0 &&
                   stackIn_54_0 < stackIn_54_1) {
                   param3.field_k = param3.field_k + 2;
@@ -1187,18 +1187,18 @@ final class MidiPcmStream extends PcmStream {
               if (stackIn_54_0 != stackIn_54_1) {
                 break;
               }
-              var8 = 1;
+              var8 = true;
               break;
             }
           }
-          if (var8 == 0) {
+          if (!var8) {
             param3.field_e.a(param3.field_i, this.a((byte) -67, param3), this.b(67, param3));
             return false;
           }
           param3.field_e.h(param3.field_i);
           if (param4 == null) {
             param3.field_e.a(param0);
-            if (var11 != 0) {
+            if (var11) {
               param3.field_e.b(param4, param1, param0);
             }
           } else {
@@ -1268,12 +1268,12 @@ final class MidiPcmStream extends PcmStream {
 
     private final void b(int param0, byte param1) {
         int stackIn_16_0 = 0;
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         ft var3 = (ft) (this.field_L.field_k.first(268435455));
         boolean decompiledNaturalLoopExit0 = false;
         while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
           stackIn_16_0 = param0;
-          if (var4 == 0) {
+          if (!var4) {
             if (stackIn_16_0 < 0 ||
               var3.field_m == param0) {
               if (var3.field_e != null) {
@@ -1303,14 +1303,14 @@ final class MidiPcmStream extends PcmStream {
     }
 
     private final void a(int param0, byte param1) {
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         if (param1 != 4) {
           this.a(6, 126, (MusicTrack) null, (ResourceArchive) null, (SoundCache) null);
         }
         if (0 != (4 & this.field_G[param0])) {
           ft var3 = (ft) (this.field_L.field_k.first(268435455));
           while (var3 != null) {
-            if (var4 != 0) {
+            if (var4) {
               break;
             }
             if (~var3.field_m == ~param0) {

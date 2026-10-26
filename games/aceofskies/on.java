@@ -229,9 +229,9 @@ final class on {
         if (oc.field_g == null) {
           oc.field_g = new int[param0.field_G * 100000];
         }
-        int var26 = 1;
+        boolean var26 = true;
         while (true) {
-          if (var26 == 0) {
+          if (!var26) {
             return;
           }
           int var1 = on.e(param0);
@@ -413,10 +413,10 @@ final class on {
               on.d(param0);
               if (param0.field_h == param0.field_A + 1 &&
                 param0.field_k == 0) {
-                var26 = 1;
+                var26 = true;
                 break;
               }
-              var26 = 0;
+              var26 = false;
               break;
             }
             if (var13 != 0 &&

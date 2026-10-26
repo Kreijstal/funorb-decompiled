@@ -17,7 +17,7 @@ public final class AceOfSkies extends NetworkGameClient {
 
     private final boolean advanceResourceLoading(byte obfuscationGuard, boolean initializeAfterDownload) {
         Object stackIn_109_0 = null;
-        int var5 = obfuscationControl ? 1 : 0;
+        boolean var5 = (obfuscationControl);
         try {
           boolean decompiledFrameRemainder0 = true;
           int var3_int = -35 / ((obfuscationGuard - 1) / 48);
@@ -136,7 +136,7 @@ public final class AceOfSkies extends NetworkGameClient {
                 if (var4 < 8) {
                   aa.menuScreens[var4] = new MenuScreen(var4);
                   var4++;
-                  if (var5 == 0) {
+                  if (!var5) {
                     continue;
                   }
                 } else {
@@ -162,7 +162,7 @@ public final class AceOfSkies extends NetworkGameClient {
               var4Lifetime1 = 0;
               break;
             }
-            if (var5 == 0) {
+            if (!var5) {
               if (tg.musicTracks[var4Lifetime1] != null &&
                 !DualLinkNode.field_e.field_n.a(-1, 176400, tg.musicTracks[var4Lifetime1], ot.musicPatchArchive, qn.loadingSoundCache)) {
                 te.resetFrameTiming(74);
@@ -176,7 +176,7 @@ public final class AceOfSkies extends NetworkGameClient {
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4Lifetime1 >= 3))) {
             stackIn_109_0 = null;
-            if (var5 == 0) {
+            if (!var5) {
               if (stackIn_109_0 != tg.musicTracks[var4Lifetime1] &&
                 !DualLinkNode.field_e.field_p.a(-1, 176400, tg.musicTracks[var4Lifetime1], ot.musicPatchArchive, qn.loadingSoundCache)) {
                 te.resetFrameTiming(120);
@@ -274,7 +274,7 @@ public final class AceOfSkies extends NetworkGameClient {
     }
 
     private final void advanceGame(int obfuscationGuard) {
-        int var3 = obfuscationControl ? 1 : 0;
+        boolean var3 = (obfuscationControl);
         try {
           if (ln.field_d >= 2 &&
             lp.heldKeys[41]) {
@@ -307,7 +307,7 @@ public final class AceOfSkies extends NetworkGameClient {
               }
               po.activeMenuId = ci.nextMenuId;
               ec.menuTransitionTicks = 0;
-              if (var3 == 0) {
+              if (!var3) {
                 return;
               }
             }
@@ -315,7 +315,7 @@ public final class AceOfSkies extends NetworkGameClient {
               return;
             }
             aa.menuScreens[po.activeMenuId].advanceMenu(-25039);
-            if (var3 == 0) {
+            if (!var3) {
               return;
             }
           }
@@ -326,14 +326,14 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (gi.a(true)) {
               mo.a(-1316);
-              if (var3 != 0) {
+              if (var3) {
                 qj.c((byte) 9);
               }
             } else {
               qj.c((byte) 9);
             }
             bg.field_b = 2;
-            if (var3 == 0) {
+            if (!var3) {
               return;
             }
           }
@@ -343,7 +343,7 @@ public final class AceOfSkies extends NetworkGameClient {
               return;
             }
             bg.field_b = 0;
-            if (var3 == 0) {
+            if (!var3) {
               return;
             }
           }
@@ -356,7 +356,7 @@ public final class AceOfSkies extends NetworkGameClient {
             if (po.activeMenuId == -2) {
               po.activeMenuId = 0;
               ql.a((byte) -103, false);
-              if (var3 != 0) {
+              if (var3) {
                 po.activeMenuId = ru.field_b;
               }
             }
@@ -398,7 +398,7 @@ public final class AceOfSkies extends NetworkGameClient {
     }
 
     final void releaseClientStatics(int obfuscationGuard) {
-        int var3 = obfuscationControl ? 1 : 0;
+        boolean var3 = (obfuscationControl);
         try {
           iq.a((byte) -126);
           IntrusiveDeque.f(obfuscationGuard - 39323);
@@ -742,7 +742,7 @@ public final class AceOfSkies extends NetworkGameClient {
           throw pn.a((Throwable) ((Object) runtimeException), "AceOfSkies.C(" + obfuscationGuard + ')');
         }
         if (GameAppletShell.field_a != 0) {
-          obfuscationControl = (var3 == 0);
+          obfuscationControl = ((!(var3)));
         }
     }
 
@@ -776,7 +776,7 @@ public final class AceOfSkies extends NetworkGameClient {
     final static long a(CharSequence param0, int param1) {
         long stackIn_47_0 = 0L;
         String stackIn_52_2 = null;
-        int var7 = obfuscationControl ? 1 : 0;
+        boolean var7 = (obfuscationControl);
         try {
           if (param1 > -12) {
             AceOfSkies.a((CharSequence) null, -113);
@@ -790,7 +790,7 @@ public final class AceOfSkies extends NetworkGameClient {
               var2_long = var2_long * 37L;
               int var6 = param0.charAt(var5);
               int stackIn_38_0 = var6;
-              if (var7 != 0) {
+              if (var7) {
                 if (stackIn_38_0 == 0) {
                   stackIn_47_0 = var2_long;
                   break scanLoop1;
@@ -811,7 +811,7 @@ public final class AceOfSkies extends NetworkGameClient {
                   }
                 }
                 if (var2_long < 177917621779460413L ||
-                  var7 != 0) {
+                  var7) {
                   var5++;
                   continue;
                 }
@@ -824,7 +824,7 @@ public final class AceOfSkies extends NetworkGameClient {
                   break;
                 }
                 stackIn_47_0 = var2_long;
-                if (var7 != 0) {
+                if (var7) {
                   break scanLoop1;
                 }
                 if (stackIn_47_0 == 0L) {
@@ -857,11 +857,11 @@ public final class AceOfSkies extends NetworkGameClient {
           Throwable decompiledCaughtException = null;
           int var6_int = 0;
           String var9 = null;
-          int var10 = obfuscationControl ? 1 : 0;
+          boolean var10 = (obfuscationControl);
           try {
             java.awt.Canvas var2 = fa.a(-8213);
             SoftwareRasterizer.clearFramebuffer();
-            int var3 = 0;
+            boolean var3 = false;
             if (im.a(true)) {
               pu.a((byte) 21, var2, lh.a((byte) -94));
               return;
@@ -892,7 +892,7 @@ public final class AceOfSkies extends NetworkGameClient {
                 int var5_intLifetime2 = ec.menuTransitionTicks - 40;
                 var5_intLifetime2 = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_intLifetime2 / 2.0 / 30.0));
                 aa.menuScreens[ci.nextMenuId].drawMenu(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
-                if (var10 != 0 &&
+                if (var10 &&
                   po.activeMenuId != -1) {
                   aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
                 }
@@ -901,12 +901,12 @@ public final class AceOfSkies extends NetworkGameClient {
               aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
             }
             if (gi.a(true)) {
-              var3 = 1;
+              var3 = true;
               SoftwareRasterizer.f(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight);
               ee.c((byte) 14);
             }
             if (0 != bg.field_b) {
-              var3 = 1;
+              var3 = true;
               int var5_intLifetime1 = 256 * ec.menuTransitionTicks / 40;
               if (var5_intLifetime1 > 0) {
                 SoftwareRasterizer.b(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.framebufferHeight, 0, var5_intLifetime1);
@@ -914,7 +914,7 @@ public final class AceOfSkies extends NetworkGameClient {
             }
             if (jf.a(obfuscationGuard + 14850) &&
               !gi.a(true)) {
-              var3 = 1;
+              var3 = true;
               if (jf.field_a != null) {
                 stackIn_54_0 = true;
               } else {
@@ -931,7 +931,7 @@ public final class AceOfSkies extends NetworkGameClient {
               int var7 = hp.field_h;
               if (var7 < 64) {
                 var6_int = var7 * 255 / 64;
-                if (var10 != 0) {
+                if (var10) {
                   if (var7 <= 192) {
                     var6_int = 255;
                     var6_int = (192 - var7) * 255 / 64;
@@ -941,7 +941,7 @@ public final class AceOfSkies extends NetworkGameClient {
                 }
               } else if (var7 <= 192) {
                 var6_int = 255;
-                if (var10 != 0) {
+                if (var10) {
                   var6_int = (192 - var7) * 255 / 64;
                 }
               } else {
@@ -951,7 +951,7 @@ public final class AceOfSkies extends NetworkGameClient {
               boolean decompiledSharedTail0 = !(var5.field_f < 0);
               if (!decompiledSharedTail0) {
                 var9 = ab.field_r;
-                decompiledSharedTail0 = (var10 != 0);
+                decompiledSharedTail0 = ((var10));
               }
               if (decompiledSharedTail0) {
                 var9 = lb.field_a[var5.field_f];
@@ -962,11 +962,11 @@ public final class AceOfSkies extends NetworkGameClient {
               PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
               PacketBuffer.gameFont.drawParagraph(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
             }
-            if (var3 != 0) {
+            if (var3) {
               if (0 == bg.field_b && (!jf.a(15000) ||
                 gi.a(true))) {
                 mg.a(var4, obfuscationGuard ^ 1150040055);
-                if (var10 != 0) {
+                if (var10) {
                   hh.a(obfuscationGuard ^ 105, var4);
                 }
               } else {
@@ -1003,7 +1003,7 @@ public final class AceOfSkies extends NetworkGameClient {
 
     final void updateClient(int obfuscationGuard) {
         int var2_int = 0;
-        int var3 = obfuscationControl ? 1 : 0;
+        boolean var3 = (obfuscationControl);
         try {
           we.a(200);
           if (obfuscationGuard != 5883) {
@@ -1035,7 +1035,7 @@ public final class AceOfSkies extends NetworkGameClient {
             decompiledFrameRemainder0 = !(!this.advanceResourceLoading((byte) -62, true));
             if (decompiledFrameRemainder0) {
               gq.field_f = true;
-              decompiledFrameRemainder0 = (var3 != 0);
+              decompiledFrameRemainder0 = ((var3));
             }
           }
           if (decompiledFrameRemainder0) {
@@ -1051,7 +1051,7 @@ public final class AceOfSkies extends NetworkGameClient {
                       break;
                     case 4:
                       mo.a(-1316);
-                      if (var3 == 0) {
+                      if (!var3) {
                         break;
                       }
                     case 2:
@@ -1061,17 +1061,17 @@ public final class AceOfSkies extends NetworkGameClient {
                   if (!gi.a(true)) {
                     aa.menuScreens[po.activeMenuId].open(true, 1);
                   }
-                  decompiledFrameRemainder0 = (var3 != 0);
+                  decompiledFrameRemainder0 = ((var3));
                 }
                 if (decompiledFrameRemainder0) {
                   this.advanceGame(obfuscationGuard + 3163);
-                  decompiledFrameRemainder0 = (var3 != 0);
+                  decompiledFrameRemainder0 = ((var3));
                 }
               }
               if (decompiledFrameRemainder0) {
                 if (!jf.a(obfuscationGuard + 9117)) {
                   this.advanceGame(obfuscationGuard ^ 13741);
-                  decompiledFrameRemainder0 = (var3 != 0);
+                  decompiledFrameRemainder0 = ((var3));
                 }
                 if (decompiledFrameRemainder0) {
                   boolean stackIn_78_1 = (null != jf.field_a);
@@ -1085,7 +1085,7 @@ public final class AceOfSkies extends NetworkGameClient {
                       rr.a((byte) -77, bm.m(114));
                     }
                   }
-                  decompiledSharedTail0 = (var3 != 0);
+                  decompiledSharedTail0 = ((var3));
                 }
               }
             }
@@ -1111,10 +1111,10 @@ public final class AceOfSkies extends NetworkGameClient {
               oc var2 = (oc) (sb.field_c.removeFirst(121));
               if (null != var2) {
                 pn.a(var2, (byte) -117, 4);
-              } else if (var3 == 0) {
+              } else if (!var3) {
                 break;
               }
-            } while (var3 == 0);
+            } while (!var3);
           }
           do {
             if (!ka.a((byte) 93, ho.field_d)) {
@@ -1122,7 +1122,7 @@ public final class AceOfSkies extends NetworkGameClient {
               break;
             }
             this.f((byte) -106);
-          } while (var3 == 0);
+          } while (!var3);
           if (dg.j(obfuscationGuard ^ 31428)) {
             var2_int = this.p(16637);
             if (var2_int == 2) {

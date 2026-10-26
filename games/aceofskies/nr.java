@@ -10,7 +10,7 @@ class nr extends rt {
     final void a(int param0, byte[] param1, int param2, boolean param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int stackIn_17_0 = 0;
         String stackIn_29_2 = null;
-        int var19 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var19 = (AceOfSkies.obfuscationControl);
         try {
           if (param7 == 0) {
             param7 = param9;
@@ -26,7 +26,7 @@ class nr extends rt {
               int var16 = var15 * var12;
               int var17 = param2 + (-1 + param6 - var15) * var13;
               stackIn_17_0 = 0;
-              if (var19 != 0) {
+              if (var19) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -75,7 +75,7 @@ class nr extends rt {
     final void a(int param0, int param1, int param2, boolean param3, int param4, int[] param5, int param6, byte param7, int param8) {
         int stackIn_16_0 = 0;
         String stackIn_28_2 = null;
-        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var15 = (AceOfSkies.obfuscationControl);
         try {
           if (param8 == 0) {
             param8 = param0;
@@ -89,7 +89,7 @@ class nr extends rt {
               int var12 = var11 * param0;
               int var13 = param6 + (param2 + (-var11 - 1)) * param8;
               stackIn_16_0 = 0;
-              if (var15 != 0) {
+              if (var15) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -163,7 +163,7 @@ class nr extends rt {
         int stackIn_13_0 = 0;
         String stackIn_24_2 = null;
         String stackIn_27_2 = null;
-        int var16 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var16 = (AceOfSkies.obfuscationControl);
         this.field_l = -1;
         this.field_n = -1;
         try {
@@ -178,7 +178,7 @@ class nr extends rt {
               int var13 = var12 * param3;
               int var14 = (-1 + param4 - var12) * param3;
               stackIn_13_0 = 0;
-              if (var16 != 0) {
+              if (var16) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -206,7 +206,7 @@ class nr extends rt {
             jaggl.OpenGL.glTexImage2Di(this.field_f, 0, this.field_b, this.field_m, this.field_k, 0, 32993, this.field_j.field_tb, param6, 4 * param8);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             this.a(false, false);
-            decompiledSharedTail0 = (var16 != 0);
+            decompiledSharedTail0 = ((var16));
           }
           if (decompiledSharedTail0) {
             fg.a(this.field_m, this.field_k, this.field_f, 32993, 72, param6, this.field_j.field_tb, this.field_b);
@@ -251,7 +251,7 @@ class nr extends rt {
         int stackIn_13_0 = 0;
         String stackIn_22_2 = null;
         String stackIn_25_2 = null;
-        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var15 = (AceOfSkies.obfuscationControl);
         this.field_l = -1;
         this.field_n = -1;
         try {
@@ -266,7 +266,7 @@ class nr extends rt {
               int var12 = var11 * param3;
               int var13 = param3 * (-var11 + (param4 - 1));
               stackIn_13_0 = 0;
-              if (var15 != 0) {
+              if (var15) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -291,7 +291,7 @@ class nr extends rt {
           if (!decompiledSharedTail0) {
             jaggl.OpenGL.glTexImage2Dub(this.field_f, 0, this.field_b, this.field_m, this.field_k, 0, param7, 5121, param6, 0);
             this.a(false, false);
-            decompiledSharedTail0 = (var15 != 0);
+            decompiledSharedTail0 = ((var15));
           }
           if (decompiledSharedTail0) {
             pu.a((byte) -55, param7, param2, param6, param1, param4, param3);
@@ -391,7 +391,7 @@ class nr extends rt {
     final static void a(int[] param0, boolean param1, byte[] param2, int param3, int param4) {
         String stackIn_18_2 = null;
         String stackIn_21_2 = null;
-        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var7 = (AceOfSkies.obfuscationControl);
         try {
           if (param1) {
             return;
@@ -399,7 +399,7 @@ class nr extends rt {
           int var5_int = 0;
           while (var5_int < gi.field_i.length) {
             param3 = gi.field_i[var5_int];
-            if (var7 != 0) {
+            if (var7) {
               return;
             }
             int var6 = var5_int << 4;

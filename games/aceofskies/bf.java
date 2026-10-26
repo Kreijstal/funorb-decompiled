@@ -125,24 +125,24 @@ abstract class bf extends GraphicsRenderer {
     boolean field_Cb;
 
     final void T(int param0, int param1, int param2, int param3) {
-        int var5 = 0;
+        boolean var5 = false;
         if (param0 > this.field_R) {
           this.field_R = param0;
-          var5 = 1;
+          var5 = true;
         }
         if (this.field_gc > param2) {
-          var5 = 1;
+          var5 = true;
           this.field_gc = param2;
         }
         if (param1 > this.field_Nb) {
           this.field_Nb = param1;
-          var5 = 1;
+          var5 = true;
         }
         if (this.field_V > param3) {
           this.field_V = param3;
-          var5 = 1;
+          var5 = true;
         }
-        if (var5 != 0) {
+        if (var5) {
           if (!this.field_Cb) {
             this.field_Cb = true;
             this.r(0);
@@ -196,13 +196,13 @@ abstract class bf extends GraphicsRenderer {
     abstract void N(int param0);
 
     final void a(boolean param0, boolean param1, int param2, int param3) {
-        int stackIn_7_1 = 0;
+        boolean stackIn_7_1 = false;
         boolean decompiledFrameRemainder0 = true;
         int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 == this.field_ab) {
-          int stackIn_4_0 = (this.field_dc) ? 0 : 1;
-          stackIn_7_1 = (this.field_Bb) ? (0) : (1);
-          decompiledFrameRemainder0 = (stackIn_4_0 != stackIn_7_1);
+          boolean stackIn_4_0 = !(this.field_dc);
+          stackIn_7_1 = !(this.field_Bb);
+          decompiledFrameRemainder0 = ((stackIn_4_0 != stackIn_7_1));
         }
         if (decompiledFrameRemainder0) {
           Object var5 = null;
@@ -1313,11 +1313,11 @@ abstract class bf extends GraphicsRenderer {
         String stackIn_12_2 = null;
         String stackIn_15_2 = null;
         try {
-          int var4_int = 0;
+          boolean var4_int = false;
           if (this.field_H[this.field_F] != param0) {
             this.field_H[this.field_F] = param0;
             this.N(0);
-            var4_int = 1;
+            var4_int = true;
           }
           if (!param1) {
             this.field_m = -92;
@@ -1325,9 +1325,9 @@ abstract class bf extends GraphicsRenderer {
           if (this.field_w[this.field_F] != param2) {
             this.field_w[this.field_F] = param2;
             this.m((byte) -125);
-            var4_int = 1;
+            var4_int = true;
           }
-          if (var4_int != 0) {
+          if (var4_int) {
             this.field_Yb = this.field_Yb & -30;
           }
           return;

@@ -39,8 +39,8 @@ abstract class aa {
         try {
           if (2 <= param1 &&
             param1 <= 36) {
-            int var4_int = 0;
-            int var5 = 0;
+            boolean var4_int = false;
+            boolean var5 = false;
             if (param3 != -43) {
               field_c = (int[]) null;
             }
@@ -51,7 +51,7 @@ abstract class aa {
               int var9 = param2.charAt(var8);
               if (var8 == 0 &&
                 var9 == 45) {
-                var4_int = 1;
+                var4_int = true;
                 decompiledFrameRemainder0 = false;
               }
               if (decompiledFrameRemainder0 && (var8 != 0 || (43 != var9 ||
@@ -74,19 +74,19 @@ abstract class aa {
                 if (param1 <= var9) {
                   return false;
                 }
-                if (var4_int != 0) {
+                if (var4_int) {
                   var9 = -var9;
                 }
                 int var10 = param1 * var6 + var9;
                 if (var6 != var10 / param1) {
                   return false;
                 }
-                var5 = 1;
+                var5 = true;
                 var6 = var10;
               }
             }
-            int stackIn_40_0 = var5;
-            return stackIn_40_0 != 0;
+            boolean stackIn_40_0 = var5;
+            return (stackIn_40_0);
           }
           throw new IllegalArgumentException("" + param1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

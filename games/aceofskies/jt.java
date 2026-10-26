@@ -299,7 +299,7 @@ final class jt extends PcmStream {
 
     final synchronized void a(byte param0, int param1, boolean param2, int param3, MusicTrack param4, int param5) {
         String stackIn_58_2 = null;
-        int var7_int = 0;
+        boolean var7_int = false;
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (this.field_m &&
@@ -341,14 +341,14 @@ final class jt extends PcmStream {
             return;
           }
           if (this.field_v == null) {
-            var7_int = 1;
+            var7_int = true;
           } else if (this.field_r == null) {
-            var7_int = 0;
+            var7_int = false;
           } else {
-            int stackIn_33_0 = (this.field_l >= 524288) ? 0 : 1;
+            boolean stackIn_33_0 = !(this.field_l >= 524288);
             var7_int = stackIn_33_0;
           }
-          if (var7_int != 0) {
+          if (var7_int) {
             if (this.field_v != null) {
               this.field_n.d(-128);
             }

@@ -258,21 +258,21 @@ final class oa extends GraphicsRenderer implements e {
     final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
         int[] var4 = new int[param1.length];
         int[] var5 = new int[param1.length];
-        int var6 = 0;
+        boolean var6 = false;
         for (int var7 = 0; var7 < param1.length; var7++) {
           var4[var7] = param1[var7].width;
           var5[var7] = param1[var7].height;
           if (param1[var7].alpha != null) {
-            var6 = 1;
+            var6 = true;
           }
         }
         if (!param2) {
-          if (var6 == 0) {
+          if (!var6) {
             return (RendererBitmapFont) ((Object) new n(this, this.field_i, param0, param1, (RenderSprite[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
-        if (var6 == 0) {
+        if (!var6) {
           return (RendererBitmapFont) ((Object) new h(this, this.field_i, param0, param1, (RenderSprite[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");

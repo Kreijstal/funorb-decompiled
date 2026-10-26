@@ -142,21 +142,21 @@ abstract class ua implements kt {
           if (param1 != -115) {
             this.f(53);
           }
-          int var3_int = 1;
+          boolean var3_int = true;
           if (this.field_m != 0) {
             if (0 < this.field_k) {
               jaggl.OpenGL.glBindBufferARB(this.field_b, this.field_k);
               if (this.field_m == 1) {
                 jaggl.OpenGL.glBufferSubDataARBa(this.field_b, 0, this.field_i, this.field_a.field_Q.a());
               } else {
-                int stackIn_8_0 = (!param0.b()) ? 0 : 1;
+                boolean stackIn_8_0 = !(!param0.b());
                 var3_int = stackIn_8_0;
               }
             }
             this.field_m = 0;
           }
-          int stackIn_12_0 = var3_int;
-          return stackIn_12_0 != 0;
+          boolean stackIn_12_0 = var3_int;
+          return (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;

@@ -199,7 +199,7 @@ final class bl {
 
     final boolean a(int param0, int param1, int param2, byte[] param3) {
         Throwable var7 = null;
-        int stackIn_10_0 = 0;
+        boolean stackIn_10_0 = false;
         String stackIn_16_2 = null;
         try {
           if (param1 != 255) {
@@ -210,16 +210,16 @@ final class bl {
           synchronized (var5) {
             if (param0 >= 0 &&
               param0 <= this.field_e) {
-              int var6 = this.a(param2, param0, true, param3, 2) ? 1 : 0;
-              if (var6 == 0) {
-                var6 = this.a(param2, param0, false, param3, 2) ? 1 : 0;
+              boolean var6 = (this.a(param2, param0, true, param3, 2));
+              if (!var6) {
+                var6 = (this.a(param2, param0, false, param3, 2));
               }
               stackIn_10_0 = var6;
             } else {
               throw new IllegalArgumentException();
             }
           }
-          return stackIn_10_0 != 0;
+          return (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           Throwable decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var5_ref = (RuntimeException) (Object) decompiledCaughtException;
@@ -295,8 +295,8 @@ final class bl {
     private final boolean a(int param0, int param1, boolean param2, byte[] param3, int param4) {
         try {
           String stackIn_72_2 = null;
-          int decompiledRegionSelector0 = 0;
-          int decompiledRegionSelector1 = 0;
+          boolean decompiledRegionSelector0 = false;
+          boolean decompiledRegionSelector1 = false;
           Throwable decompiledCaughtException = null;
           int var7_int = 0;
           int var11 = 0;
@@ -344,13 +344,13 @@ final class bl {
                       if (param0 > 65535) {
                         try {
                           this.field_f.a(0, 10, s.field_i, 0);
-                          decompiledRegionSelector0 = 0;
+                          decompiledRegionSelector0 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
                           var14 = (EOFException) (Object) decompiledCaughtException;
-                          decompiledRegionSelector0 = 1;
+                          decompiledRegionSelector0 = true;
                         }
-                        if (decompiledRegionSelector0 != 0) {
+                        if (decompiledRegionSelector0) {
                           break scanLoop1;
                         }
                         var10 = ((s.field_i[6] & 255) << 16) + (((s.field_i[7] & 255) << 8) + (s.field_i[8] & 255));
@@ -360,13 +360,13 @@ final class bl {
                       } else {
                         try {
                           this.field_f.a(0, 8, s.field_i, 0);
-                          decompiledRegionSelector1 = 0;
+                          decompiledRegionSelector1 = false;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
                           var14 = (EOFException) (Object) decompiledCaughtException;
-                          decompiledRegionSelector1 = 1;
+                          decompiledRegionSelector1 = true;
                         }
-                        if (decompiledRegionSelector1 != 0) {
+                        if (decompiledRegionSelector1) {
                           break scanLoop1;
                         }
                         var12 = (65280 & s.field_i[2] << 8) + (255 & s.field_i[3]);

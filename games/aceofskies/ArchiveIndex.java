@@ -82,15 +82,15 @@ final class ArchiveIndex {
               this.field_m = 0;
             }
             int var5 = var17.readUnsignedByte(73);
-            int stackIn_13_0 = ((var5 & 1) == 0) ? 0 : 1;
-            int var6 = stackIn_13_0;
+            boolean stackIn_13_0 = !((var5 & 1) == 0);
+            boolean var6 = stackIn_13_0;
             if (var4 >= 7) {
               this.field_s = var17.c((byte) 127);
             } else {
               this.field_s = var17.readUnsignedShort((byte) 0);
             }
-            int stackIn_19_0 = ((var5 & 2) == 0) ? 0 : 1;
-            int var7 = stackIn_19_0;
+            boolean stackIn_19_0 = !((var5 & 2) == 0);
+            boolean var7 = stackIn_19_0;
             int var8 = 0;
             int var9 = -1;
             this.field_o = new int[this.field_s];
@@ -115,14 +115,14 @@ final class ArchiveIndex {
             }
             this.field_l = 1 + var9;
             this.field_g = new int[this.field_l];
-            if (var7 != 0) {
+            if (var7) {
               this.field_i = new byte[this.field_l][];
             }
             this.field_q = new int[this.field_l][];
             this.field_k = new int[this.field_l];
             this.field_a = new int[this.field_l];
             this.field_j = new int[this.field_l];
-            if (var6 != 0) {
+            if (var6) {
               this.field_n = new int[this.field_l];
               for (int var10Lifetime1 = 0; var10Lifetime1 < this.field_l; var10Lifetime1++) {
                 this.field_n[var10Lifetime1] = -1;
@@ -135,7 +135,7 @@ final class ArchiveIndex {
             for (int var10Lifetime2 = 0; this.field_s > var10Lifetime2; var10Lifetime2++) {
               this.field_g[this.field_o[var10Lifetime2]] = var17.readInt((byte) 125);
             }
-            if (var7 != 0) {
+            if (var7) {
               for (int var10Lifetime3 = 0; var10Lifetime3 < this.field_s; var10Lifetime3++) {
                 byte[] var21 = new byte[64];
                 var17.a(0, 7186, 64, var21);
@@ -198,7 +198,7 @@ final class ArchiveIndex {
                 }
               }
             }
-            if (var6 != 0) {
+            if (var6) {
               this.field_p = new int[var9 + 1][];
               this.field_r = new IntKeyLookup[1 + var9];
               for (int var10Lifetime6 = 0; this.field_s > var10Lifetime6; var10Lifetime6++) {

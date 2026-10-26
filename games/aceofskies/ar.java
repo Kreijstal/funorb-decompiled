@@ -141,9 +141,9 @@ final class ar {
 
     final boolean a() {
         int stackIn_14_2 = 0;
-        int stackIn_3_0 = (t.b() == 0) ? 0 : 1;
-        int var1 = stackIn_3_0;
-        if (var1 == 0) {
+        boolean stackIn_3_0 = !(t.b() == 0);
+        boolean var1 = stackIn_3_0;
+        if (!var1) {
           return false;
         }
         int var2 = this.field_d.length;
@@ -187,7 +187,7 @@ final class ar {
         int var3 = param0;
         int var4 = field_k[var3];
         int var5 = field_c[var3];
-        int var6 = field_f[var3] ? 1 : 0;
+        boolean var6 = (field_f[var3]);
         for (int var7 = param0 + 1; var7 <= param1; var7++) {
           int var8 = field_k[var7];
           if (var8 < var4) {
@@ -202,7 +202,7 @@ final class ar {
         }
         field_k[var3] = var4;
         field_c[var3] = var5;
-        field_f[var3] = var6 != 0;
+        field_f[var3] = (var6);
         this.a(param0, var3 - 1);
         this.a(var3 + 1, param1);
     }

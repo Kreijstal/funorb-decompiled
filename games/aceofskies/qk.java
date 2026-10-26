@@ -29,7 +29,7 @@ final class qk {
         int stackIn_22_0 = 0;
         int stackIn_35_0 = 0;
         int stackIn_46_0 = 0;
-        int var15 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var15 = (AceOfSkies.obfuscationControl);
         int var9 = param4 + (param1 + param5);
         Sprite[] var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9), new Sprite(var9, param0), new Sprite(64, 64), new Sprite(var9, param0), new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9)};
         Sprite[] var11_ref_ll__ = var10;
@@ -38,7 +38,7 @@ final class qk {
           if (var12 < var11_ref_ll__.length) {
             Sprite var13 = var11_ref_ll__[var12];
             stackIn_11_0 = 0;
-            if (var15 != 0) {
+            if (var15) {
               break scanLoop1;
             }
             int var14 = stackIn_11_0;
@@ -56,7 +56,7 @@ final class qk {
         scanLoop2: while (true) {
           if (var11 < param4) {
             stackIn_22_0 = 0;
-            if (var15 != 0) {
+            if (var15) {
               break scanLoop2;
             }
             int var12Lifetime1 = stackIn_22_0;
@@ -79,7 +79,7 @@ final class qk {
           int stackIn_24_1 = param4;
           if (stackIn_24_0 < stackIn_24_1) {
             stackIn_35_0 = 0;
-            if (var15 == 0) {
+            if (!var15) {
               int var12Lifetime2 = stackIn_35_0;
               while (var9 > var12Lifetime2) {
                 var10[0].pixels[var11Lifetime1 * var9 + var12Lifetime2] = param3;
@@ -102,7 +102,7 @@ final class qk {
           scanLoop3: while (true) {
             if (param0 > var11Lifetime1) {
               stackIn_46_0 = 0;
-              if (var15 != 0) {
+              if (var15) {
                 break scanLoop3;
               }
               int var12Lifetime2Lifetime1 = stackIn_46_0;
@@ -132,7 +132,7 @@ final class qk {
                 var10[7].pixels[var12Lifetime2Lifetime2 * param0 + var11Lifetime1] = param6;
                 var10[5].pixels[var9 * var11Lifetime1 + var12Lifetime2Lifetime2] = param6;
                 var12Lifetime2Lifetime2++;
-                if (var15 == 0) {
+                if (!var15) {
                   continue;
                 }
               } else {
@@ -140,7 +140,7 @@ final class qk {
               }
               break;
             }
-            if (var15 == 0) {
+            if (!var15) {
               continue scanLoop4;
             }
             break;

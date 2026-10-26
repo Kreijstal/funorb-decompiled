@@ -493,21 +493,21 @@ final class kj extends GraphicsRenderer {
     final RendererBitmapFont a(BitmapFontMetrics param0, SpriteData[] param1, boolean param2) {
         int[] var4 = new int[param1.length];
         int[] var5 = new int[param1.length];
-        int var6 = 0;
+        boolean var6 = false;
         for (int var7 = 0; var7 < param1.length; var7++) {
           var4[var7] = param1[var7].width;
           var5[var7] = param1[var7].height;
           if (param1[var7].alpha != null) {
-            var6 = 1;
+            var6 = true;
           }
         }
         if (!param2) {
-          if (var6 == 0) {
+          if (!var6) {
             return (RendererBitmapFont) ((Object) new be(this, param0, param1, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
-        if (var6 == 0) {
+        if (!var6) {
           return (RendererBitmapFont) ((Object) new tu(this, param0, param1, var4, var5));
         }
         return (RendererBitmapFont) ((Object) new ts(this, param0, param1, var4, var5));
@@ -693,7 +693,7 @@ final class kj extends GraphicsRenderer {
     }
 
     final RenderSprite a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
-        int var7 = 0;
+        boolean var7 = false;
         int var8 = param1;
         int var9 = 0;
         scanLoop1: while (true) {
@@ -704,7 +704,7 @@ final class kj extends GraphicsRenderer {
               int var11 = param0[incrementValue$4] >>> 24;
               if (var11 != 0 &&
                 var11 != 255) {
-                var7 = 1;
+                var7 = true;
                 break scanLoop1;
               }
             }
@@ -713,7 +713,7 @@ final class kj extends GraphicsRenderer {
           }
           break;
         }
-        if (var7 == 0) {
+        if (!var7) {
           return (RenderSprite) ((Object) new vh(this, param0, param1, param2, param3, param4, param5));
         }
         return (RenderSprite) ((Object) new jg(this, param0, param1, param2, param3, param4, param5));

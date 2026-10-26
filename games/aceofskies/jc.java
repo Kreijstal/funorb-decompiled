@@ -415,7 +415,7 @@ final class jc extends bf {
         String stackIn_64_2 = null;
         String stackIn_67_2 = null;
         String stackIn_70_2 = null;
-        int decompiledRegionSelector0 = 0;
+        boolean decompiledRegionSelector0 = false;
         Throwable decompiledCaughtException = null;
         int var11_int = 0;
         Object var28 = null;
@@ -485,8 +485,8 @@ final class jc extends bf {
               this.field_Bc = stackIn_21_1;
               if (this.field_sc.indexOf("radeon") != -1) {
                 var11_int = 0;
-                int var12 = 0;
-                int var13 = 0;
+                boolean var12 = false;
+                boolean var13 = false;
                 String[] var14 = ee.a((byte) 10, ' ', this.field_sc.replace('/', ' '));
                 for (int var15 = 0; var14.length > var15; var15++) {
                   String var21 = var14[var15];
@@ -501,42 +501,42 @@ final class jc extends bf {
                         CharSequence var31 = (CharSequence) ((Object) var21.substring(1, 3));
                         if (vl.a(10, var31)) {
                           var16 = var21.substring(1);
-                          var13 = 1;
+                          var13 = true;
                         }
                       }
                       if (!var16.equals("hd")) {
                         if (var16.startsWith("hd")) {
                           var16 = var16.substring(2);
-                          var12 = 1;
+                          var12 = true;
                         }
                         if (var16.length() >= 4) {
                           CharSequence var32 = (CharSequence) ((Object) var16.substring(0, 4));
                           if (vl.a(10, var32)) {
                             CharSequence var33 = (CharSequence) ((Object) var16.substring(0, 4));
                             var11_int = td.a(var33, (byte) 38);
-                            decompiledRegionSelector0 = 1;
+                            decompiledRegionSelector0 = true;
                             decompiledFrameRemainder0 = false;
                           }
                         }
                       } else {
-                        var12 = 1;
+                        var12 = true;
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      decompiledRegionSelector0 = 0;
+                      decompiledRegionSelector0 = false;
                     }
                   } catch (java.lang.Exception decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     Exception var17 = (Exception) (Object) decompiledCaughtException;
-                    decompiledRegionSelector0 = 0;
+                    decompiledRegionSelector0 = false;
                   }
-                  if (decompiledRegionSelector0 == 0) {
+                  if (!decompiledRegionSelector0) {
                     continue;
                   }
                   break;
                 }
-                if (var13 == 0 &&
-                  var12 == 0) {
+                if (!var13 &&
+                  !var12) {
                   if (var11_int >= 7000 &&
                     var11_int <= 7999) {
                     this.field_Cc = false;
@@ -622,18 +622,18 @@ final class jc extends bf {
     }
 
     final void a(fa param0, byte param1) {
-        int stackIn_50_1 = 0;
+        boolean stackIn_50_1 = false;
         String stackIn_73_2 = null;
         int var17 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           pl[] var18 = ((tq) (param0)).field_g;
           int var4 = 0;
-          int var5 = 0;
+          boolean var5 = false;
           if (param1 != 75) {
             return;
           }
-          int var6 = 0;
-          int var7 = 0;
+          boolean var6 = false;
+          boolean var7 = false;
           for (int var8 = 0; var8 < var18.length; var8++) {
             pl var9 = var18[var8];
             cg var10 = this.field_Gc[var8];
@@ -645,12 +645,12 @@ final class jc extends bf {
               rl var16 = var9.b(var15, 121);
               if (rl.field_b == var16) {
                 jaggl.OpenGL.glVertexPointer(3, 5126, var12, var13 + (long)var11);
-                var7 = 1;
+                var7 = true;
               } else if (var16 == rl.field_m) {
-                var6 = 1;
+                var6 = true;
                 jaggl.OpenGL.glNormalPointer(5126, var12, (long)var11 + var13);
               } else if (var16 == rl.field_c) {
-                var5 = 1;
+                var5 = true;
                 jaggl.OpenGL.glColorPointer(4, 5121, var12, var13 + (long)var11);
               } else if (rl.field_k == var16) {
                 int incrementValue$0 = var4;
@@ -676,35 +676,35 @@ final class jc extends bf {
               var11 = var11 + var16.field_l;
             }
           }
-          int stackIn_27_0 = (this.field_Jc) ? 0 : 1;
+          boolean stackIn_27_0 = !(this.field_Jc);
           if (stackIn_27_0 == var7) {
-            if (var7 != 0) {
+            if (var7) {
               jaggl.OpenGL.glEnableClientState(32884);
             } else {
               jaggl.OpenGL.glDisableClientState(32884);
             }
-            boolean stackIn_34_1 = (var7 != 0);
+            boolean stackIn_34_1 = ((var7));
             this.field_Jc = stackIn_34_1;
           }
-          int stackIn_38_0 = (var6 != 0) ? 0 : 1;
+          int stackIn_38_0 = ((var6)) ? 0 : 1;
           if (stackIn_38_0 == (this.field_Oc ? 1 : 0)) {
-            if (var6 == 0) {
+            if (!var6) {
               jaggl.OpenGL.glDisableClientState(32885);
             } else {
               jaggl.OpenGL.glEnableClientState(32885);
             }
-            boolean stackIn_46_1 = (var6 != 0);
+            boolean stackIn_46_1 = ((var6));
             this.field_Oc = stackIn_46_1;
           }
-          int stackIn_49_0 = var5;
-          stackIn_50_1 = (this.field_Xc) ? (0) : (1);
+          boolean stackIn_49_0 = var5;
+          stackIn_50_1 = !(this.field_Xc);
           if (stackIn_49_0 == stackIn_50_1) {
-            if (var5 == 0) {
+            if (!var5) {
               jaggl.OpenGL.glDisableClientState(32886);
             } else {
               jaggl.OpenGL.glEnableClientState(32886);
             }
-            boolean stackIn_57_1 = (var5 != 0);
+            boolean stackIn_57_1 = ((var5));
             this.field_Xc = stackIn_57_1;
           }
           if (this.field_yc < var4) {

@@ -173,11 +173,11 @@ final class th {
           this.field_j.a();
           int var11Lifetime2 = 0;
           int var12Lifetime1 = 0;
-          int var13Lifetime1 = 1;
+          boolean var13Lifetime1 = true;
           for (int var14Lifetime1 = 0; var14Lifetime1 < param0; var14Lifetime1++) {
             int var15Lifetime1 = this.field_b.a(param0);
             int var16 = this.field_j.a(param0);
-            if (var13Lifetime1 == 0) {
+            if (!var13Lifetime1) {
               var12Lifetime1Lifetime1 = this.field_b.field_a + ((this.field_b.field_b - this.field_b.field_a) * var16 >> 8);
             } else {
               var12Lifetime1Lifetime1 = this.field_b.field_a + ((this.field_b.field_b - this.field_b.field_a) * var15Lifetime1 >> 8);
@@ -185,10 +185,10 @@ final class th {
             var11Lifetime2 += 256;
             if (var11Lifetime2 >= var12Lifetime1Lifetime1) {
               var11Lifetime2 = 0;
-              int stackIn_41_0 = (var13Lifetime1 != 0) ? 0 : 1;
+              boolean stackIn_41_0 = !((var13Lifetime1));
               var13Lifetime1 = stackIn_41_0;
             }
-            if (var13Lifetime1 != 0) {
+            if (var13Lifetime1) {
               field_f[var14Lifetime1] = 0;
             }
           }

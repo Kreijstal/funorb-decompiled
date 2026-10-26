@@ -125,24 +125,24 @@ final class t extends IntrusiveNode {
         t.a(this.field_x[param0], 0);
         t.b();
         int var2 = t.d(ek.a((byte) 120, field_u.length - 1));
-        int var3 = field_K[var2] ? 1 : 0;
-        if (var3 == 0) {
+        boolean var3 = (field_K[var2]);
+        if (!var3) {
           stackIn_3_0 = field_C;
         } else {
           stackIn_3_0 = field_z;
         }
         int var4 = stackIn_3_0;
-        int var5 = 0;
-        int var6 = 0;
-        if (var3 != 0) {
-          int stackIn_7_0 = (t.b() == 0) ? 0 : 1;
+        boolean var5 = false;
+        boolean var6 = false;
+        if (var3) {
+          boolean stackIn_7_0 = !(t.b() == 0);
           var5 = stackIn_7_0;
-          int stackIn_10_0 = (t.b() == 0) ? 0 : 1;
+          boolean stackIn_10_0 = !(t.b() == 0);
           var6 = stackIn_10_0;
         }
         int var7 = var4 >> 1;
-        if (var3 != 0 &&
-          var5 == 0) {
+        if (var3 &&
+          !var5) {
           var8 = (var4 >> 2) - (field_C >> 2);
           var9 = (var4 >> 2) + (field_C >> 2);
           var10 = field_C >> 1;
@@ -151,8 +151,8 @@ final class t extends IntrusiveNode {
           var9 = var7;
           var10 = var4 >> 1;
         }
-        if (var3 != 0 &&
-          var6 == 0) {
+        if (var3 &&
+          !var6) {
           var11 = var4 - (var4 >> 2) - (field_C >> 2);
           var12 = var4 - (var4 >> 2) + (field_C >> 2);
           var13 = field_C >> 1;
@@ -164,20 +164,20 @@ final class t extends IntrusiveNode {
         uo var14 = field_p[field_u[var2]];
         int var16 = var14.field_d;
         int var17_int = var14.field_c[var16];
-        int stackIn_22_0 = (field_D[var17_int].a()) ? 0 : 1;
-        int var15 = stackIn_22_0;
-        int var16Lifetime1 = var15;
+        boolean stackIn_22_0 = !(field_D[var17_int].a());
+        boolean var15 = stackIn_22_0;
+        boolean var16Lifetime1 = var15;
         for (int var17_intLifetime1 = 0; var17_intLifetime1 < var14.field_a; var17_intLifetime1++) {
           fl var42 = field_A[var14.field_b[var17_intLifetime1]];
           float[] var52 = field_n;
-          var42.a(var52, var4 >> 1, var16Lifetime1 != 0);
+          var42.a(var52, var4 >> 1, (var16Lifetime1));
         }
-        if (var15 == 0) {
+        if (!var15) {
           int var17_intLifetime2 = var14.field_d;
           int var18_int = var14.field_c[var17_intLifetime2];
           field_D[var18_int].a(field_n, var4 >> 1);
         }
-        if (var15 != 0) {
+        if (var15) {
           for (var17_intLifetime3 = var4 >> 1; var17_intLifetime3 < var4; var17_intLifetime3++) {
             field_n[var17_intLifetime3] = 0.0f;
           }
@@ -197,25 +197,25 @@ final class t extends IntrusiveNode {
             var20_ref_float__[var41] = -var20_ref_float__[var4 - var41 - 1];
             var41++;
           }
-          if (var3 == 0) {
+          if (!var3) {
             stackIn_40_0 = (float[]) (field_r);
           } else {
             stackIn_40_0 = (float[]) (field_t);
           }
           float[] var21 = stackIn_40_0;
-          if (var3 == 0) {
+          if (!var3) {
             stackIn_43_0 = (float[]) (field_s);
           } else {
             stackIn_43_0 = (float[]) (field_g);
           }
           float[] var22 = stackIn_43_0;
-          if (var3 == 0) {
+          if (!var3) {
             stackIn_46_0 = (float[]) (field_f);
           } else {
             stackIn_46_0 = (float[]) (field_m);
           }
           float[] var23 = stackIn_46_0;
-          if (var3 == 0) {
+          if (!var3) {
             stackIn_49_0 = (int[]) (field_L);
           } else {
             stackIn_49_0 = (int[]) (field_G);
@@ -345,7 +345,7 @@ final class t extends IntrusiveNode {
               var40[var19Lifetime1] = var40[var19Lifetime1] + this.field_I[var20];
             }
           }
-          if (var15 == 0) {
+          if (!var15) {
             for (int var19Lifetime1Lifetime1 = var8; var19Lifetime1Lifetime1 < var4 >> 1; var19Lifetime1Lifetime1++) {
               int var20Lifetime1 = var50.length - (var4 >> 1) + var19Lifetime1Lifetime1;
               var40[var20Lifetime1] = var40[var20Lifetime1] + field_n[var19Lifetime1Lifetime1];
@@ -357,7 +357,7 @@ final class t extends IntrusiveNode {
         field_n = var18;
         this.field_o = var4;
         this.field_B = var12 - (var4 >> 1);
-        boolean stackIn_113_1 = (var15 != 0);
+        boolean stackIn_113_1 = ((var15));
         this.field_v = stackIn_113_1;
         return (float[]) (var17);
     }

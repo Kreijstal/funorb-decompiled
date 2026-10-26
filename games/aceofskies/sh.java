@@ -67,8 +67,8 @@ final class sh extends to {
             wu stackIn_5_0 = (wu) null;
             return stackIn_5_0;
           }
-          int var3 = tn.a(83, param0) ? 1 : 0;
-          int var4 = tn.a(-64, param0) ? 1 : 0;
+          boolean var3 = (tn.a(83, param0));
+          boolean var4 = (tn.a(-64, param0));
           wu var5 = new wu();
           var5.field_r = (short)param0.b((byte) 87, 16);
           var5.field_z = ua.a(param0, var5.field_z, 0, 16);
@@ -78,7 +78,7 @@ final class sh extends to {
           var5.field_I = ua.a(param0, var5.field_I, param1 + 14, 16);
           var5.field_t = ua.a(param0, var5.field_t, 0, 16);
           var5.field_m = ua.a(param0, var5.field_m, 0, 16);
-          if (var3 != 0) {
+          if (var3) {
             var5.field_q = (short)param0.b((byte) 83, 16);
             var5.field_H = ua.a(param0, var5.field_H, 0, 16);
             var5.field_L = ua.a(param0, var5.field_L, 0, 16);
@@ -87,7 +87,7 @@ final class sh extends to {
             var5.field_g = ua.a(param0, var5.field_g, param1 + 14, 16);
             var5.field_D = ua.a(param0, var5.field_D, 0, 16);
           }
-          if (var4 != 0) {
+          if (var4) {
             param0.b((byte) 84, 16);
             var5.field_G = ua.a(param0, var5.field_G, param1 ^ -14, 16);
             var5.field_d = ua.a(param0, var5.field_d, 0, 16);

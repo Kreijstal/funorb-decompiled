@@ -441,17 +441,17 @@ abstract class RendererBitmapFont {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           int var4_int = 0;
-          int var5 = 0;
+          boolean var5 = false;
           if (obfuscationGuard <= 98) {
             return;
           }
           for (int var6 = 0; text.length() > var6; var6++) {
             int var7 = text.charAt(var6);
             if (var7 == 60) {
-              var5 = 1;
+              var5 = true;
             } else if (var7 == 62) {
-              var5 = 0;
-            } else if (var5 == 0 &&
+              var5 = false;
+            } else if (!var5 &&
               32 == var7) {
               var4_int++;
             }

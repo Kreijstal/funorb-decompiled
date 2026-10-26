@@ -12,13 +12,13 @@ public class MapBuffer extends jaclib.memory.NativeBuffer {
 
     public final boolean b() {
         RuntimeException var1;
-        int var1_int = 1;
+        boolean var1_int = true;
         if (this.c != 0) {
-          var1_int = jaggl.OpenGL.glUnmapBufferARB(this.c) ? 1 : 0;
+          var1_int = (jaggl.OpenGL.glUnmapBufferARB(this.c));
           this.a(0L, 0);
           this.c = 0;
         }
-        return var1_int != 0;
+        return (var1_int);
     }
 
     public MapBuffer() {

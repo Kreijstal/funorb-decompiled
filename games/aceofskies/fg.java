@@ -169,7 +169,7 @@ final class fg extends ArchiveProvider {
             return;
           }
           if (this.field_q) {
-            int var2_int = 1;
+            boolean var2_int = true;
             IntrusiveNode var3 = this.field_o.first(268435455);
             while (var3 != null) {
               int var4 = (int)var3.key;
@@ -177,7 +177,7 @@ final class fg extends ArchiveProvider {
                 ag discarded$3 = this.a((byte) -37, 1, var4);
               }
               if (this.field_h[var4] == 0) {
-                var2_int = 0;
+                var2_int = false;
               } else {
                 var3.unlink(-124);
               }
@@ -195,16 +195,16 @@ final class fg extends ArchiveProvider {
                 if (this.field_h[this.field_d] == 0) {
                   IntrusiveNode var6 = new IntrusiveNode();
                   var6.key = (long)this.field_d;
-                  var2_int = 0;
+                  var2_int = false;
                   this.field_o.addLast(81, var6);
                 }
                 this.field_d = this.field_d + 1;
                 continue;
               }
-              var2_int = 0;
+              var2_int = false;
               break;
             }
-            if (var2_int != 0) {
+            if (var2_int) {
               this.field_q = false;
               this.field_d = 0;
             }
@@ -212,7 +212,7 @@ final class fg extends ArchiveProvider {
           }
           else {
             if (this.field_s) {
-              int var2_intLifetime1 = 1;
+              boolean var2_intLifetime1 = true;
               IntrusiveNode var3Lifetime1 = this.field_o.first(268435455);
               while (var3Lifetime1 != null) {
                 int var4Lifetime1 = (int)var3Lifetime1.key;
@@ -220,7 +220,7 @@ final class fg extends ArchiveProvider {
                   ag discarded$1 = this.a((byte) -37, 2, var4Lifetime1);
                 }
                 if (this.field_h[var4Lifetime1] != 1) {
-                  var2_intLifetime1 = 0;
+                  var2_intLifetime1 = false;
                 } else {
                   var3Lifetime1.unlink(-123);
                 }
@@ -230,7 +230,7 @@ final class fg extends ArchiveProvider {
                 if (this.field_d < this.field_m.field_k.length) {
                   if (0 != this.field_m.field_k[this.field_d]) {
                     if (this.field_g.a((byte) -106)) {
-                      var2_intLifetime1 = 0;
+                      var2_intLifetime1 = false;
                       break scanLoop1;
                     }
                     if (this.field_h[this.field_d] != 1) {
@@ -239,7 +239,7 @@ final class fg extends ArchiveProvider {
                     if (this.field_h[this.field_d] != 1) {
                       IntrusiveNode var7 = new IntrusiveNode();
                       var7.key = (long)this.field_d;
-                      var2_intLifetime1 = 0;
+                      var2_intLifetime1 = false;
                       this.field_o.addLast(115, var7);
                     }
                   }
@@ -248,7 +248,7 @@ final class fg extends ArchiveProvider {
                 }
                 break;
               }
-              if (var2_intLifetime1 != 0) {
+              if (var2_intLifetime1) {
                 this.field_d = 0;
                 this.field_s = false;
                 decompiledFrameRemainder2 = false;

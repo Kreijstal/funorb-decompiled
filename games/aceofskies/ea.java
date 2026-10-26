@@ -186,13 +186,13 @@ class ea extends IntrusiveNode {
     }
 
     final void a(int param0, int param1, int param2) {
-        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var6 = (AceOfSkies.obfuscationControl);
         int var4 = this.f(param1 + param1);
         int var5_int = 0;
         while (var5_int <= var4) {
           this.a((byte) 81, var5_int, param2, param0);
           var5_int++;
-          if (var6 == 0) {
+          if (!var6) {
             continue;
           }
           break;
@@ -230,18 +230,18 @@ class ea extends IntrusiveNode {
         int stackIn_5_1 = 0;
         String stackIn_17_2 = null;
         try {
-          int var5_int = this.a(cf.field_g, param2, -98, param3, ic.field_b) ? 1 : 0;
+          boolean var5_int = (this.a(cf.field_g, param2, -98, param3, ic.field_b));
           if (param0 <= 13) {
             this.a(117, true, 91, true);
           }
           boolean stackIn_4_0 = this.field_g;
-          stackIn_5_1 = (var5_int != 0) ? (0) : (1);
+          stackIn_5_1 = ((var5_int)) ? (0) : (1);
           if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {
-            boolean stackIn_10_1 = (var5_int != 0);
+            boolean stackIn_10_1 = ((var5_int));
             this.field_g = stackIn_10_1;
             if (this.field_o != null &&
               this.field_o instanceof kl) {
-              ((kl) (this.field_o)).a(this, (byte) -58, var5_int != 0);
+              ((kl) (this.field_o)).a(this, (byte) -58, (var5_int));
               return;
             }
           }
@@ -380,9 +380,9 @@ class ea extends IntrusiveNode {
         if (!param1) {
           return true;
         }
-        int var5 = this.e(28660) ? 1 : 0;
+        boolean var5 = (this.e(28660));
         if (!param3) {
-          if (var5 != 0 &&
+          if (var5 &&
             vj.pressedMouseButton != 0) {
             this.d(7398);
           }
@@ -416,7 +416,7 @@ class ea extends IntrusiveNode {
           }
           if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
             param3 = false;
-          } else if (var5 != 0) {
+          } else if (var5) {
             this.d(7398);
             if (vu.heldMouseButton != 0) {
               fp.field_g = vu.heldMouseButton;
@@ -463,7 +463,7 @@ class ea extends IntrusiveNode {
           qs.a(-6939, this.c((byte) -123));
           return param3;
         }
-        if (var5 != 0) {
+        if (var5) {
           Object stackIn_49_0 = this;
           int stackIn_49_1 = cf.field_g;
           int stackIn_49_2 = ic.field_b;
@@ -508,7 +508,7 @@ class ea extends IntrusiveNode {
         }
         if (this.a(34, param2, ln.field_c, vj.pressedMouseButton, param0, this, lq.field_a)) {
           param3 = false;
-        } else if (var5 != 0) {
+        } else if (var5) {
           this.d(7398);
           if (vu.heldMouseButton != 0) {
             fp.field_g = vu.heldMouseButton;

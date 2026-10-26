@@ -20,18 +20,18 @@ final class kn {
               Object stackIn_8_0 = null;
               return (java.awt.Frame) (stackIn_8_0);
             }
-            int var7_int = 0;
+            boolean var7_int = false;
             for (int var8 = 0; var8 < var10.length; var8++) {
               if (param1 == var10[var8].field_f &&
                 var10[var8].field_b == param2 && ((param4 == 0 ||
                 var10[var8].field_a == param4) &&
-                (var7_int == 0 ||
+                (!var7_int ||
                 !(param3 >= var10[var8].field_d)))) {
                 param3 = var10[var8].field_d;
-                var7_int = 1;
+                var7_int = true;
               }
             }
-            if (var7_int == 0) {
+            if (!var7_int) {
               Object stackIn_29_0 = null;
               return (java.awt.Frame) (stackIn_29_0);
             }

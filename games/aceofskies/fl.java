@@ -85,8 +85,8 @@ final class fl {
         for (int var2 = 0; var2 < this.field_f; var2++) {
           int var3 = 0;
           int var4 = t.d(3);
-          int var5 = t.b() != 0 ? 1 : 0;
-          if (var5 != 0) {
+          boolean var5 = (t.b() != 0);
+          if (var5) {
             var3 = t.d(5);
           }
           var1[var2] = var3 << 3 | var4;

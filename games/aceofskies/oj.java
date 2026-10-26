@@ -139,17 +139,17 @@ final class oj extends sk {
     final static int f(int param0) {
         int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          int var1_int = 0;
-          int var2 = 0;
+          boolean var1_int = false;
+          boolean var2 = false;
           while (ek.a((byte) -127)) {
             pr.field_b.handleVerticalKey(true);
             if (pr.field_b.isActivated((byte) 115)) {
-              var1_int = 1;
+              var1_int = true;
             }
             if (bk.lastKeyCode != 13) {
               continue;
             }
-            var2 = 1;
+            var2 = true;
           }
           if (param0 != 5) {
             int stackIn_9_0 = 65;
@@ -157,17 +157,17 @@ final class oj extends sk {
           }
           pr.field_b.updatePointer(rc.b((byte) -113, ln.field_c, lq.field_a), rc.b((byte) -105, ic.field_b, cf.field_g), -24702);
           if (pr.field_b.isActivated((byte) 83)) {
-            var1_int = 1;
+            var1_int = true;
           }
           int var3 = 0;
-          if (var1_int != 0 &&
+          if (var1_int &&
             pr.field_b.selectedIndex >= 0) {
             var3 = rm.field_g[pr.field_b.selectedIndex];
             if (var3 == 2 ||
               5 == var3) {
               ld.a(param0 + 14178);
             }
-          } else if (var2 != 0 &&
+          } else if (var2 &&
             2 != ol.field_c) {
             ld.a(14183);
           }

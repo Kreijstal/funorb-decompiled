@@ -260,8 +260,8 @@ final class wd extends ab implements ue, dn, bh {
         this.field_y = new kk("", (no) null, 20);
         this.field_F = new kk("", (no) null, 20);
         this.field_x = new kk("", (no) null, 3);
-        int var1 = 1;
-        this.field_z = new sq("", (no) null, var1 != 0);
+        boolean var1 = true;
+        this.field_z = new sq("", (no) null, (var1));
         this.field_A = new mi(mg.field_a, (no) null);
         this.field_w = new mi(Aircraft.field_s, (no) null);
         this.field_D.field_k = ht.field_e;

@@ -83,9 +83,9 @@ final class kf extends sk {
 
     kf(jc param0, ResourceArchive param1) {
         super(param0);
-        int stackIn_10_1 = 0;
-        int stackIn_13_2 = 0;
-        int stackIn_16_1 = 0;
+        boolean stackIn_10_1 = false;
+        boolean stackIn_13_2 = false;
+        boolean stackIn_16_1 = false;
         String stackIn_23_2 = null;
         String stackIn_26_2 = null;
         this.field_l = new float[4];
@@ -97,12 +97,12 @@ final class kf extends sk {
             this.field_g = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_ground_lit"), param0);
             this.field_p = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_unlit"), param0);
             this.field_j = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_lit"), param0);
-            int stackIn_7_0 = (null == this.field_p) ? 0 : 1;
-            stackIn_10_1 = (this.field_o == null) ? (0) : (1);
-            stackIn_13_2 = (this.field_g == null) ? (0) : (1);
-            int stackIn_15_0 = stackIn_7_0 & (stackIn_10_1 & stackIn_13_2);
-            stackIn_16_1 = (this.field_j == null) ? (0) : (1);
-            if ((stackIn_15_0 & stackIn_16_1) == 0) {
+            boolean stackIn_7_0 = !(null == this.field_p);
+            stackIn_10_1 = !(this.field_o == null);
+            stackIn_13_2 = !(this.field_g == null);
+            boolean stackIn_15_0 = stackIn_7_0 & (stackIn_10_1 & stackIn_13_2);
+            stackIn_16_1 = !(this.field_j == null);
+            if (!(stackIn_15_0 & stackIn_16_1)) {
               this.field_k = false;
               return;
             }

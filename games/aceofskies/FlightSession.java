@@ -100,7 +100,7 @@ final class FlightSession {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var13 = (AceOfSkies.obfuscationControl);
         try {
           boolean decompiledFrameCompleted0 = true;
           if (this.hudHidePhase < 200) {
@@ -114,7 +114,7 @@ final class FlightSession {
                 var8 = 0;
                 stackIn_141_0 = -1;
                 stackIn_141_1 = ~var7;
-                if (var13 != 0) {
+                if (var13) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -141,7 +141,7 @@ final class FlightSession {
                     Aircraft var12 = var10_ref_md__[var11];
                     if (var12 != null &&
                       var12.hitPoints > 0 && (this.playerAircraft != var12 ||
-                      var13 != 0) && gh.playerDefinition == var12.definition) {
+                      var13) && gh.playerDefinition == var12.definition) {
                       var9++;
                     }
                     var11++;
@@ -253,7 +253,7 @@ final class FlightSession {
                 this.playerAircraft.definition.getSprites(-32275)[4].b(var7, var8, 20, 20);
                 var7 -= 20;
                 var9++;
-              } while (var13 == 0);
+              } while (!var13);
               var9 = 0;
               do {
                 if (!(var9 < gh.playerDefinition.maximumHitPoints)) {
@@ -271,7 +271,7 @@ final class FlightSession {
                 renderer.b(var10, var7 + 5, var7 + 10, 1879048192, var10, 1);
                 renderer.b(var10 + 1, var7 + 5, var7 + 10, 1073741824, var10 + 1, 1);
                 var9++;
-              } while (var13 == 0);
+              } while (!var13);
               bo stackIn_135_0 = var5_ref_bo;
               int stackIn_135_1 = 30 + var7;
               int stackIn_135_2 = var7;
@@ -298,7 +298,7 @@ final class FlightSession {
           while (!(decompiledNaturalLoopExit0 = (var3_int >= this.screenParticleCount))) {
             ScreenParticle var4 = this.screenParticles[var3_int];
             stackIn_173_0 = -1;
-            if (var13 == 0) {
+            if (!var13) {
               if (stackIn_173_0 > ~var4.durationTicks) {
                 var5 = var4.xQ8 >> 8;
                 var6 = var4.yQ8 >> 8;
@@ -351,7 +351,7 @@ final class FlightSession {
 
     private final void advanceBackground(byte obfuscationGuard, Vector2 cameraMovement) {
         String stackIn_38_2 = null;
-        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var8 = (AceOfSkies.obfuscationControl);
         try {
           if (this.backgroundTintBlendTicks > 0) {
             this.backgroundTintBlendTicks = this.backgroundTintBlendTicks - 1;
@@ -366,7 +366,7 @@ final class FlightSession {
           if (this.lightningCountdown == 0) {
             if (this.lightningRandomBound <= 0) {
               this.lightningCountdown = -1;
-              if (var8 != 0) {
+              if (var8) {
                 if (qq.a(20, this.lightningRandomBound) >= 10) {
                   this.lightningCountdown = 10 + qq.a(20, this.lightningRandomBound) + (this.lightningRandomBound >> 1);
                   this.lightningCountdown = qq.a(20, 20) + 10;
@@ -376,7 +376,7 @@ final class FlightSession {
               }
             } else if (qq.a(20, this.lightningRandomBound) >= 10) {
               this.lightningCountdown = 10 + qq.a(20, this.lightningRandomBound) + (this.lightningRandomBound >> 1);
-              if (var8 != 0) {
+              if (var8) {
                 this.lightningCountdown = qq.a(20, 20) + 10;
               }
             } else {
@@ -394,7 +394,7 @@ final class FlightSession {
             var7.advance(2);
             var7.wrapSquare(1300000.0 / this.cameraScale, -87);
             var6++;
-            if (var8 != 0) {
+            if (var8) {
               return;
             }
           }
@@ -415,14 +415,14 @@ final class FlightSession {
     private final int computeSpatialVolume(Vector2 listenerPosition, int maximumVolumeAndGuard, Vector2 sourcePosition) {
         String stackIn_22_2 = null;
         String stackIn_26_2 = null;
-        int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var6 = (AceOfSkies.obfuscationControl);
         try {
           int var4_int = maximumVolumeAndGuard;
           if (600.0 >= this.cameraScale) {
             var4_int = 0;
           } else if (this.cameraScale < 1000.0) {
             var4_int = (int)((double)var4_int * (400.0 - (1000.0 - this.cameraScale)) / 400.0);
-            if (var6 != 0) {
+            if (var6) {
               var4_int = 0;
             }
           }
@@ -435,7 +435,7 @@ final class FlightSession {
             var4_int = 0;
           }
           if ((var5 <= 1000 ||
-            var6 != 0) &&
+            var6) &&
             var5 > 10) {
             var4_int = var4_int * (-var5 + 10 + 990) / 990;
           }
@@ -493,7 +493,7 @@ final class FlightSession {
     }
 
     private final void setMusicLayersImmediately(int obfuscationGuard) {
-        int var3 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var3 = (AceOfSkies.obfuscationControl);
         try {
           if (this.gameMusic != null &&
             !this.alternateMusicActive) {
@@ -502,7 +502,7 @@ final class FlightSession {
             }
             int var2_int = 0;
             while (16 > var2_int) {
-              if (var3 != 0) {
+              if (var3) {
                 return;
               }
               int[] stackIn_19_0 = this.musicChannelVolumes;
@@ -531,14 +531,14 @@ final class FlightSession {
         Aircraft[] aircraftCandidates = null;
         int var4 = 0;
         Aircraft candidateAircraft = null;
-        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean obfuscationControl = (AceOfSkies.obfuscationControl);
         try {
           if (this.attractMode) {
             boolean decompiledFrameRemainder0 = true;
             if (null != aircraft.targetAircraft) {
               if (aircraft.targetAircraft.lifecyclePhase <= 2) {
                 aircraft.targetAircraft = null;
-                decompiledFrameRemainder0 = (obfuscationControl != 0);
+                decompiledFrameRemainder0 = ((obfuscationControl));
               }
               if (decompiledFrameRemainder0) {
                 return;
@@ -546,9 +546,9 @@ final class FlightSession {
             }
             int var3_int = qq.a(20, this.aircraft.length);
             if (null != this.aircraft[var3_int]) {
-              int stackIn_19_0 = (gh.playerDefinition != aircraft.definition) ? 0 : 1;
-              int stackIn_23_1 = (this.aircraft[var3_int].definition != gh.playerDefinition) ? 0 : 1;
-              if ((stackIn_19_0 ^ stackIn_23_1) != 0) {
+              boolean stackIn_19_0 = !(gh.playerDefinition != aircraft.definition);
+              boolean stackIn_23_1 = !(this.aircraft[var3_int].definition != gh.playerDefinition);
+              if (stackIn_19_0 ^ stackIn_23_1) {
                 aircraft.targetAircraft = this.aircraft[var3_int];
               }
             }
@@ -574,17 +574,17 @@ final class FlightSession {
                   candidateAircraft = aircraftCandidates[var4];
                   stackIn_153_0 = null;
                   stackIn_153_1 = candidateAircraft;
-                  if (obfuscationControl != 0) {
+                  if (obfuscationControl) {
                     while (true) {
                       if (stackIn_153_0 != stackIn_153_1 && (!(2 >= candidateAircraft.lifecyclePhase) ||
-                        obfuscationControl != 0) && (candidateAircraft.definition == gh.playerDefinition &&
+                        obfuscationControl) && (candidateAircraft.definition == gh.playerDefinition &&
                         candidateAircraft.targetAircraft != aircraft &&
                         candidateAircraft.pursuingAircraft == null)) {
                         break regionExit2;
                       }
                       do {
                         var4++;
-                        if (obfuscationControl != 0) {
+                        if (obfuscationControl) {
                           break regionExit1;
                         }
                         if (aircraftCandidates.length <= var4) {
@@ -610,7 +610,7 @@ final class FlightSession {
                     return;
                   }
                   var4++;
-                  if (obfuscationControl == 0) {
+                  if (!obfuscationControl) {
                     continue;
                   }
                   break;
@@ -621,7 +621,7 @@ final class FlightSession {
                   if (aircraftCandidates.length > var4) {
                     candidateAircraft = aircraftCandidates[var4];
                     stackIn_88_0 = candidateAircraft;
-                    if (obfuscationControl == 0) {
+                    if (!obfuscationControl) {
                       if (stackIn_88_0 != null &&
                         2 < candidateAircraft.lifecyclePhase &&
                         this.playerAircraft != candidateAircraft &&
@@ -651,12 +651,12 @@ final class FlightSession {
                 var4 = 0;
                 while (var4 < aircraftCandidates.length) {
                   candidateAircraft = aircraftCandidates[var4];
-                  if (obfuscationControl != 0) {
+                  if (obfuscationControl) {
                     return;
                   }
                   if (candidateAircraft != null &&
                     candidateAircraft.lifecyclePhase > 2 && (gh.playerDefinition != candidateAircraft.definition ||
-                    obfuscationControl != 0) && (aircraft != candidateAircraft.targetAircraft &&
+                    obfuscationControl) && (aircraft != candidateAircraft.targetAircraft &&
                     candidateAircraft.pursuingAircraft == null)) {
                     if (aircraft.targetAircraft != null) {
                       aircraft.targetAircraft.pursuingAircraft = null;
@@ -667,7 +667,7 @@ final class FlightSession {
                   }
                   var4++;
                 }
-                if (obfuscationControl == 0) {
+                if (!obfuscationControl) {
                   return;
                 }
               }
@@ -693,7 +693,7 @@ final class FlightSession {
                 candidateAircraft = aircraftCandidates[var4];
                 stackIn_178_0 = this.playerAircraft;
                 stackIn_178_1 = candidateAircraft;
-                if (obfuscationControl != 0) {
+                if (obfuscationControl) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -701,7 +701,7 @@ final class FlightSession {
                   stackIn_153_0 = null;
                   stackIn_153_1 = candidateAircraft;
                   if (stackIn_153_0 != stackIn_153_1 && (!(2 >= candidateAircraft.lifecyclePhase) ||
-                    obfuscationControl != 0) && (candidateAircraft.definition == gh.playerDefinition &&
+                    obfuscationControl) && (candidateAircraft.definition == gh.playerDefinition &&
                     candidateAircraft.targetAircraft != aircraft &&
                     candidateAircraft.pursuingAircraft == null)) {
                     break;
@@ -743,7 +743,7 @@ final class FlightSession {
     }
 
     private final void startArcadeWave(byte obfuscationGuard, int waveNumber) {
-        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean obfuscationControl = (AceOfSkies.obfuscationControl);
         try {
           this.backgroundTintBlendTicks = 255;
           this.previousBackgroundTint = this.backgroundTint;
@@ -762,7 +762,7 @@ final class FlightSession {
             this.lightningRandomBound = qq.a(obfuscationGuard ^ 8, 255) + 100;
             if (this.lightningCountdown == -1) {
               this.lightningCountdown = this.lightningRandomBound;
-              if (obfuscationControl != 0) {
+              if (obfuscationControl) {
                 this.lightningRandomBound = -1;
               }
             }
@@ -773,7 +773,7 @@ final class FlightSession {
           waveNumber = waveNumber << 1;
           int remainingPickupCarriers = 2;
           while (waveNumber > 0) {
-            if (obfuscationControl != 0) {
+            if (obfuscationControl) {
               return;
             }
             int typeIndex = 0;
@@ -805,7 +805,7 @@ final class FlightSession {
     }
 
     final void startGame(int obfuscationGuard, boolean arcadeMode) {
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           this.alternateMusicActive = false;
           lm.a(40, tg.musicTracks[1], true, (byte) -58);
@@ -875,10 +875,10 @@ final class FlightSession {
             }
             this.upgradeFlashTicks[var4] = -1;
             var4++;
-          } while (var5 == 0);
+          } while (!var5);
           if (!this.arcadeMode) {
             this.startClassicWave(-20416);
-            if (var5 != 0) {
+            if (var5) {
               this.startArcadeWave((byte) 28, 1);
             }
           } else {
@@ -895,13 +895,13 @@ final class FlightSession {
 
     private final void advanceBullets(Vector2 cameraMovement, byte obfuscationGuard) {
         String stackIn_173_2 = null;
-        int var5 = 0;
+        boolean var5 = false;
         Aircraft[] var6_ref_md__ = null;
         int var7 = 0;
         Aircraft var8 = null;
         Object stackIn_11_0Lifetime1;
         Aircraft stackIn_11_1Lifetime1;
-        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var9 = (AceOfSkies.obfuscationControl);
         try {
           if (obfuscationGuard != -93) {
             return;
@@ -909,7 +909,7 @@ final class FlightSession {
           int var3_int = 0;
           while (var3_int < this.bulletCount) {
             Bullet var4 = this.bullets[var3_int];
-            if (var9 != 0) {
+            if (var9) {
               return;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -928,7 +928,7 @@ final class FlightSession {
               else {
                 var4.position.subtract(cameraMovement, -30507);
                 var4.advance(obfuscationGuard + 95);
-                var5 = 0;
+                var5 = false;
                 if (null != var4.sourceAircraft) {
                   if (ro.field_u == var4.sourceAircraft.definition) {
                     Aircraft[] var6_ref_md__Lifetime2 = this.aircraft;
@@ -940,12 +940,12 @@ final class FlightSession {
                         Aircraft stackIn_11_1Lifetime1Lifetime1 = var8Lifetime2;
                         if (stackIn_11_0Lifetime1Lifetime1 != stackIn_11_1Lifetime1Lifetime1 &&
                           0 < var8Lifetime2.hitPoints && ((ro.field_u != var8Lifetime2.definition ||
-                          var9 != 0) &&
+                          var9) &&
                           (this.playerAircraft != var8Lifetime2 ||
                           this.respawnInvulnerabilityTicks <= 0 ||
-                          var9 != 0)) && uh.a(obfuscationGuard + 199, var8Lifetime2.position, (double)(2 * var8Lifetime2.definition.collisionRadius), var4.position)) {
+                          var9)) && uh.a(obfuscationGuard + 199, var8Lifetime2.position, (double)(2 * var8Lifetime2.definition.collisionRadius), var4.position)) {
                           var8Lifetime2.hitPoints = var8Lifetime2.hitPoints - 1;
-                          var5 = 1;
+                          var5 = true;
                           var8Lifetime2.damageSmokeTicks = 256;
                           if (var8Lifetime2.hitPoints != 0) {
                             break scanLoop1;
@@ -972,14 +972,14 @@ final class FlightSession {
                         stackIn_11_1Lifetime1 = var8;
                         if (stackIn_11_0Lifetime1 != stackIn_11_1Lifetime1 &&
                           var8.hitPoints > 0 && ((var8.definition == gh.playerDefinition ||
-                          var9 != 0) &&
+                          var9) &&
                           (this.playerAircraft != var8 ||
                           this.respawnInvulnerabilityTicks <= 0) &&
                           (uh.a(obfuscationGuard + 217, var8.position, (double)(2 * var8.definition.collisionRadius), var4.position) ||
-                          var9 != 0))) {
+                          var9))) {
                           var8.damageSmokeTicks = 256;
                           var8.hitPoints = var8.hitPoints - 1;
-                          var5 = 1;
+                          var5 = true;
                           break scanLoop2;
                         }
                         var7++;
@@ -996,13 +996,13 @@ final class FlightSession {
                         stackIn_11_0Lifetime1 = null;
                         stackIn_11_1Lifetime1 = var8;
                         if (stackIn_11_0Lifetime1 != stackIn_11_1Lifetime1 && (!(var8.hitPoints <= 0) ||
-                          var9 != 0) && var8.definition != gh.playerDefinition && (uh.a(obfuscationGuard + 185, var8.position, (double)(var8.definition.collisionRadius * 2), var4.position) ||
-                          var9 != 0)) {
+                          var9) && var8.definition != gh.playerDefinition && (uh.a(obfuscationGuard + 185, var8.position, (double)(var8.definition.collisionRadius * 2), var4.position) ||
+                          var9)) {
                           if (var4.sourceAircraft == this.playerAircraft) {
                             this.shotsHit = this.shotsHit + 1;
                           }
                           var8.hitPoints = var8.hitPoints - 1;
-                          var5 = 1;
+                          var5 = true;
                           var8.damageSmokeTicks = 256;
                           int stackIn_82_1 = (this.playerAircraft == var4.sourceAircraft) ? 50 : 25;
                           this.addScore(stackIn_82_1 * this.scoreMultiplier, -54);
@@ -1032,13 +1032,13 @@ final class FlightSession {
                     Object stackIn_11_0Lifetime2 = null;
                     Aircraft stackIn_11_1Lifetime2 = var8Lifetime1;
                     if (stackIn_11_0Lifetime2 != stackIn_11_1Lifetime2 && (!(0 >= var8Lifetime1.hitPoints) ||
-                      var9 != 0) && gh.playerDefinition != var8Lifetime1.definition && (this.playerAircraft != var8Lifetime1 ||
+                      var9) && gh.playerDefinition != var8Lifetime1.definition && (this.playerAircraft != var8Lifetime1 ||
                       0 >= this.respawnInvulnerabilityTicks ||
-                      var9 != 0) && (uh.a(122, var8Lifetime1.position, (double)(var8Lifetime1.definition.collisionRadius * 2), var4.position) ||
-                      var9 != 0)) {
+                      var9) && (uh.a(122, var8Lifetime1.position, (double)(var8Lifetime1.definition.collisionRadius * 2), var4.position) ||
+                      var9)) {
                       var8Lifetime1.hitPoints = var8Lifetime1.hitPoints - 1;
                       var8Lifetime1.damageSmokeTicks = 256;
-                      var5 = 1;
+                      var5 = true;
                       decompiledFrameCompleted1 = false;
                       break;
                     }
@@ -1060,7 +1060,7 @@ final class FlightSession {
             }
             if (decompiledFrameRemainder0 &&
               decompiledFrameCompleted0 &&
-              var5 != 0) {
+              var5) {
               var4.advance(2);
               this.emitSmoke(80, var4.position, (byte) -74, -20);
               int var6 = this.computeSpatialVolume(this.playerAircraft.position, obfuscationGuard + 293, var4.position);
@@ -1109,7 +1109,7 @@ final class FlightSession {
 
     private final void fireBullets(byte obfuscationGuard, Aircraft aircraft) {
         String stackIn_75_2 = null;
-        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var9 = (AceOfSkies.obfuscationControl);
         try {
           int var3_int = aircraft.definition.gunPattern;
           if (1 == aircraft.temporaryWeapon) {
@@ -1177,24 +1177,24 @@ final class FlightSession {
           if (ro.field_u != aircraft.definition) {
             if (aircraft.temporaryWeapon == 3) {
               bo.a(fd.field_b[3], var8, 23187);
-              if (var9 == 0) {
+              if (!var9) {
                 return;
               }
             }
             if (var3_int == 2) {
               bo.a(fd.field_b[2], var8, 23187);
-              if (var9 == 0) {
+              if (!var9) {
                 return;
               }
             }
             if (1 != var3_int) {
               bo.a(fd.field_b[0], var8, 23187);
-              if (var9 == 0) {
+              if (!var9) {
                 return;
               }
             }
             bo.a(fd.field_b[1], var8, 23187);
-            if (var9 == 0) {
+            if (!var9) {
               return;
             }
           }
@@ -1240,42 +1240,42 @@ final class FlightSession {
     }
 
     private final void drawRollingDigits(int settledValue, int digitCount, int top, boolean suppressLeadingZeros, int remainingAnimationTicks, int targetValue, int right, boolean alternateGlyphBank, int obfuscationGuard) {
-        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean obfuscationControl = (AceOfSkies.obfuscationControl);
         try {
           int foldHeight = (int)(Math.cos(3.141592653589793 * (double)remainingAnimationTicks / 20.0) * 10.0);
           int shadeAlpha = (int)(100.0 * Math.sin(3.141592653589793 * (double)remainingAnimationTicks / 20.0));
           GraphicsRenderer renderer = rendererManager.a((byte) 95);
-          int settledBankPending = alternateGlyphBank ? 1 : 0;
-          int targetBankPending = alternateGlyphBank ? 1 : 0;
+          boolean settledBankPending = (alternateGlyphBank);
+          boolean targetBankPending = (alternateGlyphBank);
           if (obfuscationGuard != 10) {
             this.startClassicWave(94);
           }
-          int stackIn_8_0 = (alternateGlyphBank) ? 0 : 1;
-          int skipZeroSuppression = stackIn_8_0;
+          boolean stackIn_8_0 = !(alternateGlyphBank);
+          boolean skipZeroSuppression = stackIn_8_0;
           scanLoop1: while (true) {
             int settledGlyphIndex = settledValue % 10;
             int targetGlyphIndex = targetValue % 10;
             if (suppressLeadingZeros &&
-              skipZeroSuppression == 0) {
+              !skipZeroSuppression) {
               if (0 == targetValue) {
                 targetGlyphIndex = 10;
-                if (targetBankPending != 0) {
+                if (targetBankPending) {
                   targetGlyphIndex += 22;
                 }
-                targetBankPending = 0;
+                targetBankPending = false;
               }
               if ((0 != targetValue ||
-                obfuscationControl != 0) &&
+                obfuscationControl) &&
                 alternateGlyphBank) {
                 targetGlyphIndex += 22;
               }
               if (0 == settledValue) {
                 settledGlyphIndex = 10;
-                if (settledBankPending != 0) {
+                if (settledBankPending) {
                   settledGlyphIndex += 22;
                 }
-                settledBankPending = 0;
-                if (obfuscationControl != 0 &&
+                settledBankPending = false;
+                if (obfuscationControl &&
                   alternateGlyphBank) {
                   settledGlyphIndex += 22;
                 }
@@ -1283,7 +1283,7 @@ final class FlightSession {
                 settledGlyphIndex += 22;
               }
             }
-            skipZeroSuppression = 0;
+            skipZeroSuppression = false;
             in.scoreDigitSprites[targetGlyphIndex].a(right, top);
             in.scoreDigitSprites[settledGlyphIndex + 11].a(right, 10 + top);
             do {
@@ -1292,7 +1292,7 @@ final class FlightSession {
                 if (!drawSettledFold) {
                   in.scoreDigitSprites[11 + targetGlyphIndex].b(right, 10 + top, 16, foldHeight);
                   renderer.d(foldHeight, 16, top + 10, -5782, shadeAlpha << 24 | 16777215, right);
-                  drawSettledFold = (obfuscationControl != 0);
+                  drawSettledFold = ((obfuscationControl));
                 }
                 if (drawSettledFold) {
                   in.scoreDigitSprites[settledGlyphIndex].b(right, foldHeight + 10 + top, 16, -foldHeight);
@@ -1306,7 +1306,7 @@ final class FlightSession {
               if (digitCount > 0) {
                 continue scanLoop1;
               }
-            } while (obfuscationControl != 0);
+            } while (obfuscationControl);
             break;
           }
           return;
@@ -1379,7 +1379,7 @@ final class FlightSession {
     }
 
     private final void handleKeyEvent(byte obfuscationGuard) {
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           se.field_b = se.field_b + 8;
           ei.field_a = ei.field_a - 3;
@@ -1457,7 +1457,7 @@ final class FlightSession {
                 while (var2_int < 8) {
                   MenuScreen.field_g.addLast(95, new iq(var2_int));
                   var2_int++;
-                  if (var5 != 0) {
+                  if (var5) {
                     decompiledFrameCompleted1 = false;
                     break;
                   }
@@ -1494,12 +1494,12 @@ final class FlightSession {
                 int var3 = 0;
                 while (var3 < var2.length) {
                   Aircraft var4 = var2[var3];
-                  if (var5 != 0) {
+                  if (var5) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
                   if ((var4 != null ||
-                    var5 != 0) &&
+                    var5) &&
                     var4.definition != gh.playerDefinition) {
                     var4.hitPoints = 0;
                   }
@@ -1603,7 +1603,7 @@ final class FlightSession {
 
     private final void advancePickups(Vector2 cameraMovement, boolean obfuscationGuard) {
         String stackIn_33_2 = null;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           if (obfuscationGuard) {
             this.backgroundPanY = -0.6422101977961518;
@@ -1613,7 +1613,7 @@ final class FlightSession {
             Pickup var4 = this.pickups[var3_int];
             var4.position.subtract(cameraMovement, -30507);
             var4.remainingTicks = var4.remainingTicks - 1;
-            if (var5 != 0) {
+            if (var5) {
               return;
             }
             if (var4.remainingTicks <= 0) {
@@ -1703,12 +1703,12 @@ final class FlightSession {
 
     private final void installAircraft(byte obfuscationGuard, Aircraft aircraft) {
         String stackIn_28_2 = null;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           int var3_int = 0;
           while (this.aircraft.length > var3_int) {
             Aircraft var4 = this.aircraft[var3_int];
-            if (var5 != 0) {
+            if (var5) {
               return;
             }
             if (null == var4 ||
@@ -1742,7 +1742,7 @@ final class FlightSession {
     }
 
     private final void addScore(int points, int obfuscationGuard) {
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           boolean decompiledFrameRemainder0 = true;
           int var3_int = or.score;
@@ -1750,11 +1750,11 @@ final class FlightSession {
           if (qq.a(20, 10) < 5) {
             if (5 > qq.a(20, 10)) {
               se.field_b = se.field_b + points;
-              decompiledFrameRemainder0 = (var5 != 0);
+              decompiledFrameRemainder0 = ((var5));
             }
             if (decompiledFrameRemainder0) {
               ei.field_a = ei.field_a + points;
-              if (var5 != 0) {
+              if (var5) {
                 if (qq.a(20, 10) >= 5) {
                   NetworkGameClient.field_x = NetworkGameClient.field_x - points;
                   bo.field_h = bo.field_h - points;
@@ -1765,7 +1765,7 @@ final class FlightSession {
             }
           } else if (qq.a(20, 10) >= 5) {
             NetworkGameClient.field_x = NetworkGameClient.field_x - points;
-            if (var5 != 0) {
+            if (var5) {
               bo.field_h = bo.field_h - points;
             }
           } else {
@@ -1899,7 +1899,7 @@ final class FlightSession {
         int stackIn_371_1 = 0;
         double stackIn_381_0 = 0.0;
         int var5Lifetime2;
-        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean obfuscationControl = (AceOfSkies.obfuscationControl);
         try {
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameCompleted6 = true;
@@ -1907,7 +1907,7 @@ final class FlightSession {
           if (processInput) {
             while (ek.a((byte) -126)) {
               this.handleKeyEvent((byte) 73);
-              if (obfuscationControl != 0) {
+              if (obfuscationControl) {
                 decompiledFrameCompleted6 = false;
                 break;
               }
@@ -1917,7 +1917,7 @@ final class FlightSession {
             !this.attractMode) &&
             (decompiledFrameRemainder2 = !(this.hudHidePhase <= 0))) {
             this.hudHidePhase = this.hudHidePhase - 5;
-            decompiledFrameRemainder2 = (obfuscationControl != 0);
+            decompiledFrameRemainder2 = ((obfuscationControl));
           }
           if (decompiledFrameRemainder2 &&
             this.hudHidePhase < 200) {
@@ -1937,7 +1937,7 @@ final class FlightSession {
           boolean decompiledNaturalLoopExit1 = false;
           while (!(decompiledNaturalLoopExit1 = (var5 >= aircraftToAdvance.length))) {
             Aircraft advancingAircraft = aircraftToAdvance[var5];
-            if (obfuscationControl == 0) {
+            if (!obfuscationControl) {
               if (null != advancingAircraft) {
                 this.advanceAircraft(-106, advancingAircraft, cameraMovement);
               }
@@ -1958,7 +1958,7 @@ final class FlightSession {
             if (var4 < 7) {
               stackIn_261_0 = -1;
               stackIn_261_1 = ~this.upgradeFlashTicks[var4];
-              if (obfuscationControl == 0) {
+              if (!obfuscationControl) {
                 if (!(stackIn_261_0 >= stackIn_261_1) &&
                   !(this.upgradeCredits <= var4)) {
                   this.upgradeFlashTicks[var4] = 512;
@@ -1984,7 +1984,7 @@ final class FlightSession {
                     if (aircraftForWaveCount.length > var11) {
                       Aircraft waveAircraft = aircraftForWaveCount[var11];
                       stackIn_169_0 = waveAircraft;
-                      if (obfuscationControl == 0) {
+                      if (!obfuscationControl) {
                         if (stackIn_169_0 != null &&
                           gh.playerDefinition != waveAircraft.definition &&
                           waveAircraft.lifecyclePhase > 2) {
@@ -2021,7 +2021,7 @@ final class FlightSession {
                           while (var10_int < 16) {
                             DualLinkNode.field_e.field_s.a((byte) -119, 256, var10_int);
                             var10_int++;
-                            if (obfuscationControl != 0) {
+                            if (obfuscationControl) {
                               decompiledFrameCompleted5 = false;
                               break;
                             }
@@ -2040,23 +2040,23 @@ final class FlightSession {
                             this.musicLayerPresetIndex = 3;
                           }
                           if (!(var5Lifetime1 > 0) &&
-                            !(var7 > 0) || obfuscationControl != 0) {
+                            !(var7 > 0) || obfuscationControl) {
                             if (!(var6_int <= 0) ||
                               !(var8_int <= 4)) {
                               this.musicLayerPresetIndex = 2;
-                              if (obfuscationControl != 0) {
+                              if (obfuscationControl) {
                                 this.musicLayerPresetIndex = 4;
                               }
                             } else if (var8_int > 0) {
                               this.musicLayerPresetIndex = 1;
-                              if (obfuscationControl != 0) {
+                              if (obfuscationControl) {
                                 this.musicLayerPresetIndex = 0;
                                 this.musicLayerPresetIndex = 2;
                                 this.musicLayerPresetIndex = 4;
                               }
                             } else {
                               this.musicLayerPresetIndex = 0;
-                              if (obfuscationControl != 0) {
+                              if (obfuscationControl) {
                                 this.musicLayerPresetIndex = 2;
                                 this.musicLayerPresetIndex = 4;
                               }
@@ -2071,7 +2071,7 @@ final class FlightSession {
                         }
                         this.completedWaveCount = this.completedWaveCount + 1;
                         this.startArcadeWave((byte) 28, this.completedWaveCount + 1);
-                        if (obfuscationControl == 0) {
+                        if (!obfuscationControl) {
                           break scanLoop2;
                         }
                       }
@@ -2084,7 +2084,7 @@ final class FlightSession {
                         }
                         this.queueHudMessage(-16711936, (byte) -32, "Congratulations!");
                         this.victoryCountdown = 100;
-                        if (obfuscationControl == 0) {
+                        if (!obfuscationControl) {
                           break scanLoop2;
                         }
                       }
@@ -2101,7 +2101,7 @@ final class FlightSession {
                     this.startClassicWave(-20416);
                     break;
                   }
-                  decompiledFrameRemainder1 = (obfuscationControl != 0);
+                  decompiledFrameRemainder1 = ((obfuscationControl));
                 }
                 if (decompiledFrameRemainder1) {
                   int fieldTemp$0 = this.victoryCountdown - 1;
@@ -2113,7 +2113,7 @@ final class FlightSession {
                       fm.a(250, (byte) 111, 5);
                     }
                     this.finishGame(false, true, 100);
-                    decompiledFrameRemainder1 = (obfuscationControl != 0);
+                    decompiledFrameRemainder1 = ((obfuscationControl));
                   }
                 }
               }
@@ -2125,12 +2125,12 @@ final class FlightSession {
                 while (var6_ref_md__.length > var7Lifetime2) {
                   Aircraft populationAircraft = var6_ref_md__[var7Lifetime2];
                   stackIn_265_0 = populationAircraft;
-                  if (obfuscationControl != 0) {
+                  if (obfuscationControl) {
                     break scanLoop1;
                   }
                   if ((stackIn_265_0 != null ||
-                    obfuscationControl != 0) && (!(populationAircraft.lifecyclePhase <= 2) ||
-                    obfuscationControl != 0)) {
+                    obfuscationControl) && (!(populationAircraft.lifecyclePhase <= 2) ||
+                    obfuscationControl)) {
                     if (gh.playerDefinition != populationAircraft.definition) {
                       var4++;
                     } else {
@@ -2147,13 +2147,13 @@ final class FlightSession {
                   if (var4 == 0 &&
                     (hg.field_D & 64) != 0) {
                     int discarded$2 = this.spawnAircraft((byte) 54, ro.field_u, 1, 0);
-                    decompiledFrameRemainder1 = (obfuscationControl != 0);
+                    decompiledFrameRemainder1 = ((obfuscationControl));
                   }
                   if (decompiledFrameRemainder1) {
                     if (5 > var4 &&
                       (2 & hg.field_D) != 0) {
                       int discarded$3 = this.spawnAircraft((byte) 116, ju.field_k, 1, 0);
-                      decompiledFrameRemainder1 = (obfuscationControl != 0);
+                      decompiledFrameRemainder1 = ((obfuscationControl));
                     }
                     if (decompiledFrameRemainder1) {
                       if (15 <= var4 ||
@@ -2162,16 +2162,16 @@ final class FlightSession {
                           int discarded$4 = this.spawnAircraft((byte) 38, gm.field_y, 1, 0);
                         }
                         if (!(var4 < 25) ||
-                          obfuscationControl != 0) {
+                          obfuscationControl) {
                           if (40 > var4) {
                             int discarded$5 = this.spawnAircraft((byte) 56, sl.field_p, 1, 0);
-                            if (obfuscationControl != 0) {
+                            if (obfuscationControl) {
                               discarded$6 = this.spawnAircraft((byte) 85, kk.field_N, 1, 0);
                               discarded$7 = this.spawnAircraft((byte) 13, qq.field_g, 1, 0);
                             }
                           } else {
                             discarded$6 = this.spawnAircraft((byte) 85, kk.field_N, 1, 0);
-                            if (obfuscationControl != 0) {
+                            if (obfuscationControl) {
                               discarded$7 = this.spawnAircraft((byte) 13, qq.field_g, 1, 0);
                             }
                           }
@@ -2204,7 +2204,7 @@ final class FlightSession {
                 var5Lifetime2 = 0;
                 while (var5Lifetime2 < aircraftForAttractPlayer.length) {
                   Aircraft attractPlayerCandidate = aircraftForAttractPlayer[var5Lifetime2];
-                  if (obfuscationControl != 0) {
+                  if (obfuscationControl) {
                     decompiledFrameCompleted4 = false;
                     break;
                   }
@@ -2219,13 +2219,13 @@ final class FlightSession {
                 this.noLivesLost = false;
                 if (this.respawnDelayTicks <= 0) {
                   this.respawnDelayTicks = 80;
-                  int var4Lifetime1 = 0;
+                  boolean var4Lifetime1 = false;
                   var5Lifetime2 = 0;
-                  scanLoop4: while (var4Lifetime1 == 0) {
+                  scanLoop4: while (!var4Lifetime1) {
                     var5Lifetime2++;
                     stackIn_371_0 = -51;
                     stackIn_371_1 = ~var5Lifetime2;
-                    if (obfuscationControl != 0) {
+                    if (obfuscationControl) {
                       break regionExit3;
                     }
                     if (stackIn_371_0 < stackIn_371_1) {
@@ -2236,7 +2236,7 @@ final class FlightSession {
                       Aircraft stackIn_297_0 = this.playerAircraft;
                       while (true) {
                         stackIn_297_0.engineSound = po.a(256, 0, this.playerAircraft.definition.getEngineSample((byte) 104));
-                        var4Lifetime1 = 1;
+                        var4Lifetime1 = true;
                         Aircraft[] aircraftForSpawnCheck = this.aircraft;
                         int var9Lifetime1 = 0;
                         while (var9Lifetime1 < aircraftForSpawnCheck.length) {
@@ -2246,7 +2246,7 @@ final class FlightSession {
                             spawnObstacle != this.playerAircraft &&
                             spawnObstacle.lifecyclePhase > 2 &&
                             uh.a(97, spawnObstacle.position, 500.0, this.playerAircraft.position)) {
-                            var4Lifetime1 = 0;
+                            var4Lifetime1 = false;
                           } else {
                             var9Lifetime1++;
                             continue;
@@ -2265,7 +2265,7 @@ final class FlightSession {
                   int var7Lifetime1Lifetime1 = 0;
                   while (var7Lifetime1Lifetime1 < backgroundToRecenter.length) {
                     FlightBody backgroundBody = backgroundToRecenter[var7Lifetime1Lifetime1];
-                    if (obfuscationControl != 0) {
+                    if (obfuscationControl) {
                       decompiledFrameCompleted3 = false;
                       break;
                     }
@@ -2279,7 +2279,7 @@ final class FlightSession {
                     int var7Lifetime1Lifetime2 = 0;
                     while (aircraftToRecenter.length > var7Lifetime1Lifetime2) {
                       Aircraft aircraftToShift = aircraftToRecenter[var7Lifetime1Lifetime2];
-                      if (obfuscationControl != 0) {
+                      if (obfuscationControl) {
                         decompiledFrameCompleted2 = false;
                         break;
                       }
@@ -2293,7 +2293,7 @@ final class FlightSession {
                       var7Lifetime1Lifetime2 = 0;
                       while (pickupsToRecenter.length > var7Lifetime1Lifetime2) {
                         Pickup pickupToRecenter = pickupsToRecenter[var7Lifetime1Lifetime2];
-                        if (obfuscationControl != 0) {
+                        if (obfuscationControl) {
                           decompiledFrameCompleted1 = false;
                           break;
                         }
@@ -2307,7 +2307,7 @@ final class FlightSession {
                         var7Lifetime1Lifetime2 = 0;
                         while (var7Lifetime1Lifetime2 < bulletsToRecenter.length) {
                           Bullet bulletToRecenter = bulletsToRecenter[var7Lifetime1Lifetime2];
-                          if (obfuscationControl != 0) {
+                          if (obfuscationControl) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -2322,7 +2322,7 @@ final class FlightSession {
                           boolean decompiledNaturalLoopExit0 = false;
                           while (!(decompiledNaturalLoopExit0 = (smokeParticlesToRecenter.length <= var7Lifetime1Lifetime2))) {
                             SmokeParticle smokeToRecenter = smokeParticlesToRecenter[var7Lifetime1Lifetime2];
-                            if (obfuscationControl == 0) {
+                            if (!obfuscationControl) {
                               if (null != smokeToRecenter) {
                                 smokeToRecenter.position.subtract(cameraMovement, -30507);
                               }
@@ -2337,7 +2337,7 @@ final class FlightSession {
                             this.playerAircraft.hitPoints = this.playerAircraft.definition.maximumHitPoints;
                             this.lives = this.lives - 1;
                           }
-                          if (obfuscationControl != 0) {
+                          if (obfuscationControl) {
                             this.respawnDelayTicks = this.respawnDelayTicks - 1;
                           }
                         }
@@ -2362,11 +2362,11 @@ final class FlightSession {
           if (stackIn_371_0 > stackIn_371_1) {
             this.finishGame(false, false, 100);
           }
-          int var4Lifetime2 = 0;
+          boolean var4Lifetime2 = false;
           if (!obfuscationGuard) {
             this.startClassicWave(-8);
           }
-          int var5Lifetime3 = 0;
+          boolean var5Lifetime3 = false;
           if (sh.field_u < gp.field_w) {
             stackIn_381_0 = (double)sh.field_u;
           } else {
@@ -2384,7 +2384,7 @@ final class FlightSession {
               return;
             }
             this.cameraScale = attractCameraScale;
-            if (obfuscationControl == 0) {
+            if (!obfuscationControl) {
               return;
             }
           }
@@ -2393,26 +2393,26 @@ final class FlightSession {
           double scaledPlayerOffsetY = Math.abs(playerPosition.y * this.cameraScale / 1000.0);
           if (1.01 * scaledPlayerOffsetX < (double)(gp.field_w / 4) &&
             (double)(sh.field_u / 4) > scaledPlayerOffsetY * 1.01) {
-            var5Lifetime3 = 1;
+            var5Lifetime3 = true;
           }
           if (0.99 * scaledPlayerOffsetX > (double)(sh.field_u / 4) ||
             scaledPlayerOffsetY * 0.99 > (double)(gp.field_w / 4)) {
-            var4Lifetime2 = 1;
+            var4Lifetime2 = true;
           }
           if (this.cameraScale > maximumCameraScale) {
-            var4Lifetime2 = 1;
+            var4Lifetime2 = true;
           }
-          if (var4Lifetime2 != 0) {
+          if (var4Lifetime2) {
             this.cameraScale = this.cameraScale * 0.99;
             if (!(this.cameraScale < minimumCameraScale)) {
               return;
             }
             this.cameraScale = minimumCameraScale;
-            if (obfuscationControl == 0) {
+            if (!obfuscationControl) {
               return;
             }
           }
-          if (var5Lifetime3 != 0) {
+          if (var5Lifetime3) {
             this.cameraScale = this.cameraScale * 1.01;
             if (maximumCameraScale < this.cameraScale) {
               this.cameraScale = maximumCameraScale;
@@ -2450,7 +2450,7 @@ final class FlightSession {
     }
 
     private final void stopAircraftEngineSounds(boolean obfuscationGuard) {
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           if (!obfuscationGuard) {
             return;
@@ -2462,7 +2462,7 @@ final class FlightSession {
           int var3 = 0;
           while (var2.length > var3) {
             Aircraft var4 = var2[var3];
-            if (var5 != 0) {
+            if (var5) {
               return;
             }
             if (var4 != null &&
@@ -2482,7 +2482,7 @@ final class FlightSession {
     private final void advanceAircraft(int obfuscationGuard, Aircraft aircraft, Vector2 cameraMovement) {
         String stackIn_147_2 = null;
         String stackIn_151_2 = null;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           aircraft.position.subtract(cameraMovement, -30507);
           if (aircraft.pursuingAircraft != null && (!(aircraft.pursuingAircraft.hitPoints > 0) ||
@@ -2511,7 +2511,7 @@ final class FlightSession {
             }
             if (aircraft.definition.maximumSpeed < aircraft.speed) {
               aircraft.speed = aircraft.definition.maximumSpeed;
-              if (var5 != 0) {
+              if (var5) {
                 if (aircraft.speed > aircraft.definition.minimumSpeed) {
                   aircraft.speed = aircraft.speed - 0.2;
                 }
@@ -2547,7 +2547,7 @@ final class FlightSession {
                 aircraft.temporaryWeaponTicks = aircraft.temporaryWeaponTicks - 2;
                 aircraft.fireCooldown = aircraft.fireCooldown + aircraft.definition.fireInterval;
                 aircraft.weaponHeat = aircraft.weaponHeat + aircraft.definition.fireInterval;
-                decompiledFrameRemainder0 = (var5 != 0);
+                decompiledFrameRemainder0 = ((var5));
               }
               if (decompiledFrameRemainder0 &&
                 !(aircraft.weaponHeat >= 100)) {
@@ -2562,7 +2562,7 @@ final class FlightSession {
                   if (this.playerAircraft == aircraft &&
                     !this.attractMode) {
                     bm.a((byte) -70, mh.field_o);
-                    if (var5 != 0) {
+                    if (var5) {
                       this.fireBullets((byte) 60, aircraft);
                       aircraft.fireCooldown = aircraft.fireCooldown + 2;
                       aircraft.temporaryWeaponTicks = aircraft.temporaryWeaponTicks - 2;
@@ -2604,7 +2604,7 @@ final class FlightSession {
             }
             if (!(aircraft.bankOffset >= 0)) {
               aircraft.bankOffset = aircraft.bankOffset + 1;
-              if (var5 != 0) {
+              if (var5) {
                 aircraft.bankOffset = aircraft.bankOffset + 1;
               }
             }
@@ -2731,12 +2731,12 @@ final class FlightSession {
         int stackIn_23_0 = 0;
         String stackIn_74_2 = null;
         int stackIn_23_0Lifetime1;
-        int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var4 = (AceOfSkies.obfuscationControl);
         try {
           boolean decompiledFrameRemainder0 = true;
           if (2 >= aircraft.lifecyclePhase) {
             aircraft.speed = 0.0;
-            decompiledFrameRemainder0 = (var4 != 0);
+            decompiledFrameRemainder0 = ((var4));
           }
           if (decompiledFrameRemainder0) {
             if (aircraft.definition == ro.field_u) {
@@ -2756,7 +2756,7 @@ final class FlightSession {
             } else if (ro.field_u == aircraft.definition) {
               jp.a(50, aircraft.engineSound);
               aircraft.engineSound = po.a(this.computeSpatialVolume(this.playerAircraft.position, 200, aircraft.position), 0, kn.field_c[4]);
-              if (var4 != 0) {
+              if (var4) {
                 if (aircraft.definition != ro.field_u) {
                   stackIn_23_0 = aircraft.lifecyclePhase + 164;
                 } else {
@@ -2787,7 +2787,7 @@ final class FlightSession {
               if (var3_int > 0) {
                 if (ro.field_u == aircraft.definition) {
                   gg.a(kn.field_c[5], var3_int, -27227);
-                  if (var4 != 0) {
+                  if (var4) {
                     if (gm.field_y == aircraft.definition) {
                       gg.a(kn.field_c[3], var3_int, -27227);
                       gg.a(kn.field_c[qq.a(20, 3)], var3_int, -27227);
@@ -2799,7 +2799,7 @@ final class FlightSession {
                   boolean decompiledSharedTail0 = (gm.field_y != aircraft.definition);
                   if (!decompiledSharedTail0) {
                     gg.a(kn.field_c[3], var3_int, -27227);
-                    decompiledSharedTail0 = (var4 != 0);
+                    decompiledSharedTail0 = ((var4));
                   }
                   if (decompiledSharedTail0) {
                     gg.a(kn.field_c[qq.a(20, 3)], var3_int, -27227);
@@ -2837,7 +2837,7 @@ final class FlightSession {
 
     final void finishGame(boolean screenFlag, boolean awardFlag, int accuracyTarget) {
         int stackIn_5_1 = 0;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           this.finalScore = or.score;
           if (this.shotsFired > 0) {
@@ -2858,11 +2858,11 @@ final class FlightSession {
             cs.highscoreMode = stackIn_19_0;
             if (0 == r.field_n) {
               Bullet.requestMenu((byte) -105, 2, screenFlag);
-              decompiledFrameRemainder0 = (var5 != 0);
+              decompiledFrameRemainder0 = ((var5));
             }
             if (decompiledFrameRemainder0) {
               Bullet.requestMenu((byte) -102, 5, screenFlag);
-              if (var5 != 0) {
+              if (var5) {
                 if (0 < or.score) {
                   Bullet.requestMenu((byte) -81, 6, screenFlag);
                   Bullet.requestMenu((byte) -86, 0, screenFlag);
@@ -2873,7 +2873,7 @@ final class FlightSession {
             }
           } else if (0 < or.score) {
             Bullet.requestMenu((byte) -81, 6, screenFlag);
-            if (var5 != 0) {
+            if (var5) {
               Bullet.requestMenu((byte) -86, 0, screenFlag);
             }
           } else {
@@ -2884,7 +2884,7 @@ final class FlightSession {
           while (var4_int < 16) {
             DualLinkNode.field_e.field_s.a((byte) -126, 256, var4_int);
             var4_int++;
-            if (var5 != 0) {
+            if (var5) {
               return;
             }
           }
@@ -2901,7 +2901,7 @@ final class FlightSession {
         int stackIn_13_0 = 0;
         String stackIn_91_2 = null;
         int var15 = 0;
-        int var18 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var18 = (AceOfSkies.obfuscationControl);
         try {
           int var4_int = -insetOffset + 64;
           int var5 = -64 + gp.field_w + insetOffset;
@@ -2945,12 +2945,12 @@ final class FlightSession {
               if (var9_ref_md != this.playerAircraft) {
                 if (gh.playerDefinition == var9_ref_md.definition) {
                   var15 = 65280 | var12 << 24;
-                  decompiledFrameRemainder0 = (var18 != 0);
+                  decompiledFrameRemainder0 = ((var18));
                 }
                 if (decompiledFrameRemainder0) {
                   if (kk.field_N == var9_ref_md.definition) {
                     var15 = 16711680 | var12 << 24;
-                    if (var18 != 0) {
+                    if (var18) {
                       var15 = -16711936;
                       var14 = 3;
                     }
@@ -2958,19 +2958,19 @@ final class FlightSession {
                     if (var9_ref_md.definition != gm.field_y) {
                       if (var9_ref_md.definition == id.field_f) {
                         var15 = var12 << 24 | 16777088;
-                        decompiledFrameRemainder0 = (var18 != 0);
+                        decompiledFrameRemainder0 = ((var18));
                       }
                       if (decompiledFrameRemainder0) {
                         if (qq.field_g == var9_ref_md.definition) {
                           var15 = var12 << 24 | 224694;
-                          decompiledFrameRemainder0 = (var18 != 0);
+                          decompiledFrameRemainder0 = ((var18));
                         }
                         if (decompiledFrameRemainder0) {
                           if (var9_ref_md.definition != ju.field_k) {
                             if (var9_ref_md.definition == ro.field_u) {
                               var14 = 5;
                               var15 = var12 << 24 | 65535;
-                              decompiledFrameRemainder0 = (var18 != 0);
+                              decompiledFrameRemainder0 = ((var18));
                             }
                             if (decompiledFrameRemainder0) {
                               throw new IllegalStateException();
@@ -2986,10 +2986,10 @@ final class FlightSession {
                                 var15 = var15 | var17 * var12 >> 8 << 24;
                               }
                               if (var16 <= 500 ||
-                                var18 != 0) {
+                                var18) {
                                 var15 = var15 | -16777216;
                               }
-                              decompiledFrameRemainder0 = (var18 != 0);
+                              decompiledFrameRemainder0 = ((var18));
                             }
                           }
                         }
@@ -2998,7 +2998,7 @@ final class FlightSession {
                     if (decompiledFrameRemainder1 &&
                       decompiledFrameRemainder0) {
                       var15 = 16777215 | var12 << 24;
-                      if (var18 != 0) {
+                      if (var18) {
                         var15 = var12 << 24 | 16711935;
                         var15 = 16711680 | var12 << 24;
                         var15 = -16711936;
@@ -3007,7 +3007,7 @@ final class FlightSession {
                     }
                   } else {
                     var15 = var12 << 24 | 16711935;
-                    if (var18 != 0) {
+                    if (var18) {
                       var15 = 16711680 | var12 << 24;
                       var15 = -16711936;
                       var14 = 3;
@@ -3023,7 +3023,7 @@ final class FlightSession {
               }
             }
             var8_int++;
-            if (var18 == 0) {
+            if (!var18) {
               continue;
             }
             break;
@@ -3031,13 +3031,13 @@ final class FlightSession {
           int var7 = 0;
           while (this.pickupCount > var7) {
             Pickup var8 = this.pickups[var7];
-            if (var18 != 0) {
+            if (var18) {
               return;
             }
             if ((null != var8 ||
-              var18 != 0) &&
+              var18) &&
               (!(var8.remainingTicks < 0) ||
-              var18 != 0)) {
+              var18)) {
               int var9 = (int)(var8.position.x * 60.0 / 2400.0);
               int var10Lifetime1 = (int)(60.0 * var8.position.y / 2400.0);
               int var11Lifetime1 = var9 * var9 + var10Lifetime1 * var10Lifetime1;
@@ -3076,7 +3076,7 @@ final class FlightSession {
         int stackIn_18_0 = 0;
         int stackIn_18_1 = 0;
         String stackIn_26_2 = null;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           int var3_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -3087,7 +3087,7 @@ final class FlightSession {
             var4.ageTicks = var4.ageTicks + 5;
             stackIn_18_0 = ~fieldTemp$0;
             stackIn_18_1 = ~var4.lifetimeTicks;
-            if (var5 == 0) {
+            if (!var5) {
               if (stackIn_18_0 <= stackIn_18_1) {
                 this.removeSmokeParticle(var3_int, -690800984);
                 var3_int--;
@@ -3125,7 +3125,7 @@ final class FlightSession {
     }
 
     private final boolean applyUpgrade(byte obfuscationGuard, int upgradeCode) {
-        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean obfuscationControl = (AceOfSkies.obfuscationControl);
         try {
           if (upgradeCode == 0) {
             if (this.speedUpgradeLevel == 12) {
@@ -3176,7 +3176,7 @@ final class FlightSession {
             while (true) {
               if (aircraftToCount.length > aircraftIndex) {
                 Aircraft candidate = aircraftToCount[aircraftIndex];
-                if (obfuscationControl == 0) {
+                if (!obfuscationControl) {
                   if (null != candidate &&
                     this.playerAircraft != candidate &&
                     candidate.definition == gh.playerDefinition) {
@@ -3215,7 +3215,7 @@ final class FlightSession {
             while (particleIndex < 80) {
               this.emitBurstScreenParticle(2560, 5888, np.a(25, 80, (byte) -65) >> 1, 80, 23 + upgradeCode * 38 << 8, 800, (byte) -108);
               particleIndex++;
-              if (obfuscationControl != 0) {
+              if (obfuscationControl) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
@@ -3233,7 +3233,7 @@ final class FlightSession {
 
     private final void updatePlayerControls(byte obfuscationGuard) {
         Aircraft stackIn_71_0 = null;
-        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean obfuscationControl = (AceOfSkies.obfuscationControl);
         try {
           if (obfuscationGuard != -13) {
             return;
@@ -3254,7 +3254,7 @@ final class FlightSession {
                 this.lastLeftPressTick = this.controlTick;
               }
               this.leftHeldLastTick = true;
-              if (obfuscationControl != 0) {
+              if (obfuscationControl) {
                 if (this.doubleTapTurnDirection == -1) {
                   this.doubleTapTurnDirection = 0;
                 }
@@ -3280,7 +3280,7 @@ final class FlightSession {
                 this.lastRightPressTick = this.controlTick;
               }
               this.rightHeldLastTick = true;
-              if (obfuscationControl != 0) {
+              if (obfuscationControl) {
                 if (this.doubleTapTurnDirection == 1) {
                   this.doubleTapTurnDirection = 0;
                 }
@@ -3295,7 +3295,7 @@ final class FlightSession {
             if (!lp.heldKeys[83] &&
               !lp.heldKeys[82]) {
               this.overheatFireLatch = false;
-              if (obfuscationControl != 0) {
+              if (obfuscationControl) {
                 boolean stackIn_67_1 = this.overheatFireLatch;
                 boolean stackIn_68_2 = (this.playerAircraft.weaponHeat <= 100) ? false : true;
                 this.overheatFireLatch = stackIn_67_1 | stackIn_68_2;
@@ -3335,16 +3335,16 @@ final class FlightSession {
         int var25Lifetime1;
         int var25Lifetime3Lifetime1;
         int var26Lifetime2Lifetime1;
-        int var28 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var28 = (AceOfSkies.obfuscationControl);
         try {
           rendererManager.a((byte) 121);
-          int var2_int = 1;
+          boolean var2_int = true;
           scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (-1720.0 > this.backgroundPanX + this.cameraLookAheadX) {
               this.backgroundTileX = this.backgroundTileX + 1;
               this.backgroundPanX = this.backgroundPanX + 1720.0;
-              if (var28 == 0) {
+              if (!var28) {
                 continue;
               }
             } else {
@@ -3354,7 +3354,7 @@ final class FlightSession {
                 }
                 this.backgroundPanY = this.backgroundPanY + 1280.0;
                 this.backgroundTileY = this.backgroundTileY + 1;
-                if (var28 != 0) {
+                if (var28) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -3367,7 +3367,7 @@ final class FlightSession {
                 }
                 this.backgroundTileX = this.backgroundTileX - 1;
                 this.backgroundPanX = this.backgroundPanX - 1720.0;
-                if (var28 != 0) {
+                if (var28) {
                   break scanLoop1;
                 }
               }
@@ -3380,7 +3380,7 @@ final class FlightSession {
           while (true) {
             if (this.backgroundPanY + this.cameraLookAheadY > 0.0) {
               this.backgroundPanY = this.backgroundPanY - 1280.0;
-              if (var28 == 0) {
+              if (!var28) {
                 this.backgroundTileY = this.backgroundTileY - 1;
                 continue;
               }
@@ -3402,7 +3402,7 @@ final class FlightSession {
             boolean decompiledSharedTail0 = !(this.lightningCountdown <= 5);
             if (!decompiledSharedTail0) {
               var17 = this.blendArgb(this.lightningCountdown * 51, -1, obfuscationGuard - 437819992, this.backgroundTint);
-              decompiledSharedTail0 = (var28 != 0);
+              decompiledSharedTail0 = ((var28));
             }
             if (decompiledSharedTail0) {
               var17 = this.blendArgb((10 - this.lightningCountdown) * 51, -1, obfuscationGuard - 437819992, this.backgroundTint);
@@ -3416,7 +3416,7 @@ final class FlightSession {
             if (var21 <= gp.field_w) {
               int var22_int = this.backgroundTileX;
               stackIn_48_0 = var11 - 1720;
-              if (var28 != 0) {
+              if (var28) {
                 break scanLoop2;
               }
               int var23 = stackIn_48_0;
@@ -3441,7 +3441,7 @@ final class FlightSession {
             int var25 = var22.diameter;
             stackIn_70_0 = var23Lifetime1;
             stackIn_70_1 = -500 - var25;
-            if (var28 == 0) {
+            if (!var28) {
               if (stackIn_70_0 >= stackIn_70_1 &&
                 -var25 - 500 <= var24 &&
                 (500 + var25 + sh.field_u) >= var23Lifetime1 &&
@@ -3468,7 +3468,7 @@ final class FlightSession {
               SmokeParticle var22_ref = this.smokeParticles[var21Lifetime2];
               int stackIn_91_0 = var22_ref.depthPhase;
               int stackIn_91_1 = 30;
-              if (var28 != 0) {
+              if (var28) {
                 if (stackIn_91_0 > stackIn_91_1) {
                   FlightBody var22_ref2 = this.backgroundBodies[var21Lifetime2];
                   var23Lifetime2 = (int)((var22_ref2.position.x + this.cameraLookAheadX) * var3 * 0.9 + var13);
@@ -3483,7 +3483,7 @@ final class FlightSession {
               }
               else {
                 if (stackIn_91_0 <= stackIn_91_1 ||
-                  var28 != 0) {
+                  var28) {
                   var23Lifetime2 = (int)(var13 + (var22_ref.position.x + this.cameraLookAheadX) * this.computePhaseScale((byte) -125, var22_ref.depthPhase, var3));
                   var24Lifetime1 = (int)(var15 + (var22_ref.position.y + this.cameraLookAheadY) * this.computePhaseScale((byte) -123, var22_ref.depthPhase, var3));
                   if (var22_ref.lifetimeTicks < 512) {
@@ -3504,7 +3504,7 @@ final class FlightSession {
               }
             }
             if (decompiledFrameRemainder1 &&
-              var2_int != 0) {
+              var2_int) {
               var21Lifetime2 = 0;
               while (true) {
                 int stackIn_91_0Lifetime1 = ~var21Lifetime2;
@@ -3519,7 +3519,7 @@ final class FlightSession {
                 int var26Lifetime4 = (int)(0.9 * ((double)sd.cloudSprites[var21Lifetime2 % sd.cloudSprites.length].b() * var3));
                 sd.cloudSprites[var21Lifetime2 % sd.cloudSprites.length].a(-(var25Lifetime1Lifetime1 >> 1) + var23Lifetime2Lifetime1, -(var26Lifetime4 >> 1) + var24Lifetime1Lifetime1, var25Lifetime1Lifetime1, var26Lifetime4, 0, var17, 1);
                 var21Lifetime2 += 2;
-                if (var28 != 0) {
+                if (var28) {
                   break scanLoop3;
                 }
               }
@@ -3533,7 +3533,7 @@ final class FlightSession {
               Pickup var22_ref3 = this.pickups[var21Lifetime2];
               int stackIn_118_0 = -1;
               int stackIn_118_1 = ~var22_ref3.remainingTicks;
-              if (var28 != 0) {
+              if (var28) {
                 if (stackIn_118_0 > stackIn_118_1) {
                   Bullet var22_ref4 = this.bullets[var21Lifetime2];
                   var23Lifetime3 = (int)(var13 + (var22_ref4.position.x + this.cameraLookAheadX) * var3);
@@ -3579,7 +3579,7 @@ final class FlightSession {
                 var24Lifetime2 = (int)(var3 * (var22_ref4Lifetime1.position.y + this.cameraLookAheadY) + var15);
                 dc.bulletSprite.a((float)var23Lifetime3Lifetime1, (float)var24Lifetime2, (int)((double)(var22_ref4Lifetime1.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4Lifetime1.heading));
                 var21Lifetime2++;
-                if (var28 != 0) {
+                if (var28) {
                   break scanLoop4;
                 }
               }
@@ -3590,7 +3590,7 @@ final class FlightSession {
               boolean decompiledFrameRemainder2 = true;
               Aircraft var23_ref_md = var21_ref_md__[var22_intLifetime1];
               if ((var23_ref_md != null ||
-                var28 != 0) && var23_ref_md.lifecyclePhase > 2) {
+                var28) && var23_ref_md.lifecyclePhase > 2) {
                 int var24Lifetime2Lifetime1 = (int)((var23_ref_md.position.x + this.cameraLookAheadX) * this.computePhaseScale((byte) -126, var23_ref_md.lifecyclePhase, var3) + var13);
                 int var25Lifetime2Lifetime1 = (int)((var23_ref_md.position.y + this.cameraLookAheadY) * this.computePhaseScale((byte) -126, var23_ref_md.lifecyclePhase, var3) + var15);
                 int var26Lifetime1Lifetime1 = 4 * var23_ref_md.bankOffset / 16 + 4;
@@ -3599,7 +3599,7 @@ final class FlightSession {
                   int var27Lifetime1 = -16777216;
                   var27Lifetime1 = var27Lifetime1 | 65793 * (int)(-Math.cos((double)this.respawnInvulnerabilityTicks * 3.141592653589793 / 5.0) * (double)this.respawnInvulnerabilityTicks + (double)this.respawnInvulnerabilityTicks);
                   var23_ref_md.definition.getSprites(-32275)[var26Lifetime1Lifetime1].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)(var3 * (double)(32 * var23_ref_md.lifecyclePhase)), (int)(256.0 * var23_ref_md.heading), 3, var27Lifetime1, 1);
-                  decompiledFrameRemainder2 = (var28 != 0);
+                  decompiledFrameRemainder2 = ((var28));
                 }
                 if (decompiledFrameRemainder2) {
                   if (ro.field_u == var23_ref_md.definition) {
@@ -3610,7 +3610,7 @@ final class FlightSession {
                     var27Lifetime1Lifetime1 = stackIn_144_0;
                     var23_ref_md.definition.getSprites(-32275)[2].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(var23_ref_md.lifecyclePhase * 32) * var3), var23_ref_md.bankOffset << 10, 0, var27Lifetime1Lifetime1 * -16711423, 2);
                     var23_ref_md.definition.getSprites(obfuscationGuard ^ 132651706)[2].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)((double)(32 * var23_ref_md.lifecyclePhase) * var3), var23_ref_md.bankOffset << 10, 0, var27Lifetime1Lifetime1 * -16711423, 2);
-                    if (var28 != 0) {
+                    if (var28) {
                       var23_ref_md.definition.getSprites(-32275)[var26Lifetime1Lifetime1].a((float)var24Lifetime2Lifetime1, (float)var25Lifetime2Lifetime1, (int)(var3 * (double)(32 * var23_ref_md.lifecyclePhase)), (int)(256.0 * var23_ref_md.heading));
                     }
                   } else {
@@ -3619,7 +3619,7 @@ final class FlightSession {
                 }
               }
               var22_intLifetime1++;
-              if (var28 == 0) {
+              if (!var28) {
                 continue;
               }
               break;
@@ -3631,7 +3631,7 @@ final class FlightSession {
             SmokeParticle var22_refLifetime1 = this.smokeParticles[var21Lifetime2];
             int stackIn_169_0 = ~var22_refLifetime1.depthPhase;
             int stackIn_169_1 = -31;
-            if (var28 != 0) {
+            if (var28) {
               if (stackIn_169_0 < stackIn_169_1) {
                 FlightBody var22_ref2Lifetime1 = this.backgroundBodies[var21Lifetime2];
                 int var23Lifetime4 = (int)(var3 * (this.cameraLookAheadX + var22_ref2Lifetime1.position.x) + var13);
@@ -3645,7 +3645,7 @@ final class FlightSession {
               return;
             }
             if (stackIn_169_0 < stackIn_169_1 ||
-              var28 != 0) {
+              var28) {
               int var23Lifetime4Lifetime1 = (int)(var13 + (this.cameraLookAheadX + var22_refLifetime1.position.x) * this.computePhaseScale((byte) -124, var22_refLifetime1.depthPhase, var3));
               int var24Lifetime3Lifetime1 = (int)(var15 + (var22_refLifetime1.position.y + this.cameraLookAheadY) * this.computePhaseScale((byte) -119, var22_refLifetime1.depthPhase, var3));
               if (512 > var22_refLifetime1.lifetimeTicks) {
@@ -3663,7 +3663,7 @@ final class FlightSession {
             }
             var21Lifetime2--;
           }
-          if (var2_int == 0) {
+          if (!var2_int) {
             return;
           }
           int var21Lifetime3 = 1;
@@ -3680,7 +3680,7 @@ final class FlightSession {
             int var26Lifetime3 = (int)((double)sd.cloudSprites[var21Lifetime3 % sd.cloudSprites.length].b() * var3);
             sd.cloudSprites[var21Lifetime3 % sd.cloudSprites.length].a(-(var25Lifetime4 >> 1) + var23Lifetime5, var24Lifetime4 - (var26Lifetime3 >> 1), var25Lifetime4, var26Lifetime3, 0, var17, 1);
             var21Lifetime3 += 2;
-            if (var28 != 0) {
+            if (var28) {
               return;
             }
           }
@@ -3714,14 +3714,14 @@ final class FlightSession {
     }
 
     private final AircraftDefinition getArcadeAircraftDefinition(byte obfuscationGuard, int typeIndex) {
-        int obfuscationControl = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean obfuscationControl = (AceOfSkies.obfuscationControl);
         try {
           if (obfuscationGuard <= 99) {
             this.backgroundPanX = -1.7731094820794981;
           }
           int selectedType = typeIndex;
           if (selectedType == 0 &&
-            obfuscationControl == 0) {
+            !obfuscationControl) {
             AircraftDefinition stackIn_32_0 = kk.field_N;
             return stackIn_32_0;
           }
@@ -3734,12 +3734,12 @@ final class FlightSession {
             return stackIn_36_0;
           }
           if (selectedType == 2 &&
-            obfuscationControl == 0) {
+            !obfuscationControl) {
             AircraftDefinition stackIn_38_0 = qq.field_g;
             return stackIn_38_0;
           }
           if (selectedType == 4 &&
-            obfuscationControl == 0) {
+            !obfuscationControl) {
             AircraftDefinition stackIn_40_0 = ju.field_k;
             return stackIn_40_0;
           }
@@ -3757,14 +3757,14 @@ final class FlightSession {
 
     final void renderSession(int obfuscationGuard, boolean unusedFlag, GraphicsRenderer renderer) {
         String stackIn_19_2 = null;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           this.drawWorld(-132670633);
           this.drawHud(renderer, -20240);
           if (!this.attractMode) {
             HudMessage var4 = (HudMessage) (wd.hudMessages.first(obfuscationGuard ^ -251723521));
             while (var4 != null) {
-              if (var5 != 0) {
+              if (var5) {
                 return;
               }
               if (var4 != null) {
@@ -3793,7 +3793,7 @@ final class FlightSession {
 
     private final void fadeMusicLayers(int obfuscationGuard, int volumeStep) {
         int stackIn_33_0 = 0;
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         try {
           if (this.gameMusic != null &&
             !this.alternateMusicActive) {
@@ -3803,7 +3803,7 @@ final class FlightSession {
               boolean stackOut_10_0 = sd.musicLayerPresets[this.musicLayerPresetIndex][var3_int];
               stackIn_33_0 = stackOut_10_0 ? 1 : 0;
               boolean stackIn_11_0 = stackOut_10_0;
-              if (var5 == 0) {
+              if (!var5) {
                 int stackIn_17_0 = (!stackIn_11_0) ? 0 : 255;
                 int var4 = stackIn_17_0;
                 if (var4 > this.musicChannelVolumes[var3_int]) {
@@ -3969,7 +3969,7 @@ final class FlightSession {
     private final int spawnAircraft(byte obfuscationGuard, AircraftDefinition definition, int count, int pickupCount) {
         int stackIn_16_0 = 0;
         String stackIn_21_2 = null;
-        int var9 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var9 = (AceOfSkies.obfuscationControl);
         try {
           int var5_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
@@ -3980,7 +3980,7 @@ final class FlightSession {
             int incrementValue$1 = pickupCount;
             pickupCount--;
             stackIn_16_0 = incrementValue$1;
-            if (var9 == 0) {
+            if (!var9) {
               if (stackIn_16_0 > 0) {
                 Aircraft stackIn_12_0 = var8;
                 int stackIn_12_1 = 20;
@@ -4013,7 +4013,7 @@ final class FlightSession {
 
     private final void advanceScreenParticles(int obfuscationGuard) {
         int stackIn_41_0 = 0;
-        int var7 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var7 = (AceOfSkies.obfuscationControl);
         try {
           int var2_int = 0;
           if (obfuscationGuard > -79) {
@@ -4022,7 +4022,7 @@ final class FlightSession {
           scanLoop1: while (true) {
             if (var2_int < this.screenParticleCount) {
               ScreenParticle var3_ref_ok = this.screenParticles[var2_int];
-              if (var7 == 0) {
+              if (!var7) {
                 if (var3_ref_ok != null) {
                   int fieldTemp$0 = var3_ref_ok.ageTicks + 1;
                   var3_ref_ok.ageTicks = var3_ref_ok.ageTicks + 1;
@@ -4068,7 +4068,7 @@ final class FlightSession {
               boolean stackOut_27_0 = var2.advanceAndIsExpired(-122);
               stackIn_41_0 = stackOut_27_0 ? 1 : 0;
               boolean stackIn_28_0 = stackOut_27_0;
-              if (var7 != 0) {
+              if (var7) {
                 break scanLoop2;
               }
               if (!stackIn_28_0) {
@@ -4092,7 +4092,7 @@ final class FlightSession {
           } else if (~this.displayedScore != ~or.score) {
             this.scoreAnimationTicks = 20;
             this.targetScore = or.score;
-            if (var7 != 0) {
+            if (var7) {
               this.scoreAnimationTicks = this.scoreAnimationTicks - 1;
               if (this.scoreAnimationTicks == 0) {
                 this.displayedScore = this.targetScore;
@@ -4107,7 +4107,7 @@ final class FlightSession {
           } else if (~this.upgradeCredits != ~this.displayedUpgradeCredits) {
             this.targetUpgradeCredits = this.upgradeCredits;
             this.creditAnimationTicks = 20;
-            if (var7 != 0) {
+            if (var7) {
               this.creditAnimationTicks = this.creditAnimationTicks - 1;
               if (this.creditAnimationTicks == 0) {
                 this.displayedUpgradeCredits = this.targetUpgradeCredits;
@@ -4122,7 +4122,7 @@ final class FlightSession {
             this.multiplierAnimationTicks = this.multiplierAnimationTicks - 1;
             if (this.multiplierAnimationTicks == 0) {
               this.displayedMultiplier = this.targetMultiplier;
-              if (var7 != 0 &&
+              if (var7 &&
                 this.scoreMultiplier != this.displayedMultiplier) {
                 this.targetMultiplier = this.scoreMultiplier;
                 this.multiplierAnimationTicks = 20;
@@ -4138,13 +4138,13 @@ final class FlightSession {
             this.displayedHealthPercent = this.displayedHealthPercent - (1 + (var3Lifetime1 >> 4));
           }
           if ((var3Lifetime1 <= 0 ||
-            var7 != 0) &&
+            var7) &&
             var3Lifetime1 < 0) {
             this.displayedHealthPercent = this.displayedHealthPercent - ((var3Lifetime1 >> 4) - 1);
           }
           if (this.playerAircraft.weaponHeat >= 100) {
             this.displayedWeaponHeat = this.playerAircraft.weaponHeat + this.displayedWeaponHeat - 100 >> 1;
-            if (var7 != 0) {
+            if (var7) {
               this.displayedWeaponHeat = this.displayedWeaponHeat + this.playerAircraft.weaponHeat >> 1;
             }
           } else {
@@ -4172,7 +4172,7 @@ final class FlightSession {
             int var5 = -22 + lq.field_a;
             int var6 = 0;
             while (var6 < 7) {
-              if (var7 != 0) {
+              if (var7) {
                 return;
               }
               if (var4Lifetime1 * var4Lifetime1 + var5 * var5 < 289) {
@@ -4190,7 +4190,7 @@ final class FlightSession {
     }
 
     FlightSession() {
-        int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var5 = (AceOfSkies.obfuscationControl);
         this.targetBackgroundTint = 0;
         this.temporaryWeaponOpacity = 0;
         this.attractMode = true;
@@ -4251,7 +4251,7 @@ final class FlightSession {
             var4.heading = (double)(qq.a(20, 128) + var2);
             this.backgroundBodies[var3] = var4;
             var3++;
-            if (var5 != 0) {
+            if (var5) {
               return;
             }
           }

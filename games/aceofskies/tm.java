@@ -294,7 +294,7 @@ final class tm extends RenderSprite {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        int var13 = 0;
+        boolean var13 = false;
         int var15 = 0;
         int var19 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
@@ -340,7 +340,7 @@ final class tm extends RenderSprite {
                 var9_int = var9_int + param6 * var11;
                 param6 = 0;
               }
-              var13 = 0;
+              var13 = false;
             } else {
               var10 = param4 << 16;
               var9_int = param4 << 16;
@@ -348,9 +348,9 @@ final class tm extends RenderSprite {
               var12 = (-param4 + param2 << 16) / var14;
               var11 = (param0 - param4 << 16) / var15;
               if (var11 < var12) {
-                var13 = 0;
+                var13 = false;
               } else {
-                var13 = 1;
+                var13 = true;
                 int var16 = var11;
                 var11 = var12;
                 var12 = var16;
@@ -406,7 +406,7 @@ final class tm extends RenderSprite {
                 var11 = 0;
               } else {
                 int var17Lifetime2 = param2 << 16;
-                if (var13 == 0) {
+                if (!var13) {
                   var9_int = param0 << 16;
                 } else {
                   var10 = param0 << 16;

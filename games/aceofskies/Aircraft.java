@@ -39,7 +39,7 @@ final class Aircraft extends FlightBody {
         int var30 = 0;
         int var31 = 0;
         int var32 = 0;
-        int var33 = 0;
+        boolean var33 = false;
         int var35 = 0;
         String stackIn_82_2 = null;
         int var42 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -76,7 +76,7 @@ final class Aircraft extends FlightBody {
                 var32 = (param6 - param7 << 16) / var35;
                 var24 = (param3 - param12 << 16) / var35;
                 var31 = (param1 - param7 << 16) / var34;
-                var33 = 1;
+                var33 = true;
                 var27 = (-param2 + param9 << 16) / var34;
                 var28 = (param11 - param2 << 16) / var35;
                 var23 = (param13 - param12 << 16) / var34;
@@ -86,7 +86,7 @@ final class Aircraft extends FlightBody {
                 var28 = (param9 - param2 << 16) / var34;
                 var31 = (-param7 + param6 << 16) / var35;
                 var32 = (-param7 + param1 << 16) / var34;
-                var33 = 0;
+                var33 = false;
                 var24 = (param13 - param12 << 16) / var34;
               }
               boolean decompiledFrameRemainder0 = true;
@@ -169,7 +169,7 @@ final class Aircraft extends FlightBody {
                 int var37Lifetime2 = param10 << 16;
                 int var38Lifetime2 = param13 << 16;
                 int var39Lifetime2 = param9 << 16;
-                if (var33 == 0) {
+                if (!var33) {
                   var25 = param11 << 16;
                   var29 = param6 << 16;
                   var21 = param3 << 16;
@@ -246,7 +246,7 @@ final class Aircraft extends FlightBody {
                 var27 = 0;
                 var30 = param6;
               }
-              var33 = 0;
+              var33 = false;
               if (param15 < 0) {
                 param15 = Math.min(-param15, param14 - param15);
                 var26 = var26 + var28 * param15;

@@ -441,15 +441,15 @@ abstract class BitmapFont extends DualLinkNode {
 
     private final void prepareJustification(String text, int targetWidth) {
         int var3 = 0;
-        int var4 = 0;
+        boolean var4 = false;
         int var5 = text.length();
         for (int var6 = 0; var6 < var5; var6++) {
           int var7 = text.charAt(var6);
           if (var7 == 60) {
-            var4 = 1;
+            var4 = true;
           } else if (var7 == 62) {
-            var4 = 0;
-          } else if (var4 == 0 &&
+            var4 = false;
+          } else if (!var4 &&
             var7 == 32) {
             var3++;
           }

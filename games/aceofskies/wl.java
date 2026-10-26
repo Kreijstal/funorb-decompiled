@@ -284,7 +284,7 @@ final class wl extends GraphicsRenderer {
         int stackIn_12_1 = 0;
         String stackIn_64_2 = null;
         String stackIn_67_2 = null;
-        int decompiledRegionSelector0 = 0;
+        boolean decompiledRegionSelector0 = false;
         Throwable decompiledCaughtException = null;
         Object var18 = null;
         Object var19 = null;
@@ -371,8 +371,8 @@ final class wl extends GraphicsRenderer {
             this.field_tb = stackIn_12_1;
             if (this.field_sb.indexOf("radeon") != -1) {
               int var5_int = 0;
-              int var6 = 0;
-              int var7 = 0;
+              boolean var6 = false;
+              boolean var7 = false;
               String[] var8 = ee.a((byte) 10, ' ', this.field_sb.replace('/', ' '));
               for (int var9 = 0; var8.length > var9; var9++) {
                 String var13 = var8[var9];
@@ -386,15 +386,15 @@ final class wl extends GraphicsRenderer {
                       var13.length() >= 3) {
                       CharSequence var21 = (CharSequence) ((Object) var13.substring(1, 3));
                       if (vl.a(10, var21)) {
-                        var7 = 1;
+                        var7 = true;
                         var10 = var13.substring(1);
                       }
                     }
                     if (var10.equals("hd")) {
-                      var6 = 1;
+                      var6 = true;
                     } else {
                       if (var10.startsWith("hd")) {
-                        var6 = 1;
+                        var6 = true;
                         var10 = var10.substring(2);
                       }
                       if (var10.length() >= 4) {
@@ -402,31 +402,31 @@ final class wl extends GraphicsRenderer {
                         if (vl.a(10, var22)) {
                           CharSequence var23 = (CharSequence) ((Object) var10.substring(0, 4));
                           var5_int = td.a(var23, (byte) 38);
-                          decompiledRegionSelector0 = 1;
+                          decompiledRegionSelector0 = true;
                           decompiledFrameRemainder0 = false;
                         }
                       }
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    decompiledRegionSelector0 = 0;
+                    decompiledRegionSelector0 = false;
                   }
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   Exception var11 = (Exception) (Object) decompiledCaughtException;
-                  decompiledRegionSelector0 = 0;
+                  decompiledRegionSelector0 = false;
                 }
-                if (decompiledRegionSelector0 == 0) {
+                if (!decompiledRegionSelector0) {
                   continue;
                 }
                 break;
               }
-              if (var6 == 0 ||
+              if (!var6 ||
                 var5_int < 4000) {
                 this.field_J = false;
               }
-              if (var7 == 0 &&
-                var6 == 0) {
+              if (!var7 &&
+                !var6) {
                 if (var5_int >= 7000 &&
                   7999 >= var5_int) {
                   this.field_M = false;
@@ -654,18 +654,18 @@ final class wl extends GraphicsRenderer {
           jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
           jaggl.OpenGL.glTexEnvi(8960, 34162, param2);
         } else {
-          int var4 = 0;
+          boolean var4 = false;
           if (this.field_Bb != param0) {
             jaggl.OpenGL.glTexEnvi(8960, 34161, param0);
             this.field_Bb = param0;
-            var4 = 1;
+            var4 = true;
           }
           if (param2 != this.field_W) {
             jaggl.OpenGL.glTexEnvi(8960, 34162, param2);
             this.field_W = param2;
-            var4 = 1;
+            var4 = true;
           }
-          if (var4 != 0) {
+          if (var4) {
             this.field_O = this.field_O & -30;
           }
         }
@@ -825,16 +825,16 @@ final class wl extends GraphicsRenderer {
     }
 
     private final void a(boolean param0, int param1, byte param2, boolean param3) {
-        int stackIn_9_1 = 0;
+        boolean stackIn_9_1 = false;
         int var13 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param2 <= 124) {
           field_Ub = (float[]) null;
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 == this.field_kb) {
-          int stackIn_6_0 = (this.field_qc) ? 0 : 1;
-          stackIn_9_1 = (this.field_vc) ? (0) : (1);
-          decompiledFrameRemainder0 = (stackIn_6_0 != stackIn_9_1);
+          boolean stackIn_6_0 = !(this.field_qc);
+          stackIn_9_1 = !(this.field_vc);
+          decompiledFrameRemainder0 = ((stackIn_6_0 != stackIn_9_1));
         }
         if (decompiledFrameRemainder0) {
           Object var5 = null;
@@ -888,44 +888,44 @@ final class wl extends GraphicsRenderer {
     }
 
     final void b(byte param0, int param1) {
-        int var3;
-        int var4;
+        boolean var3;
+        boolean var4;
         int var5;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (this.field_Cb != param1) {
           if (param1 == 1) {
             var5 = 1;
-            var4 = 1;
-            var3 = 1;
+            var4 = true;
+            var3 = true;
           } else if (2 == param1) {
-            var3 = 1;
-            var4 = 0;
+            var3 = true;
+            var4 = false;
             var5 = 2;
           } else if (param1 == 128) {
-            var4 = 1;
-            var3 = 1;
+            var4 = true;
+            var3 = true;
             var5 = 3;
           } else {
-            var3 = 1;
-            var4 = 0;
+            var3 = true;
+            var4 = false;
             var5 = 0;
           }
-          int stackIn_10_0 = var3;
-          int stackIn_11_1 = (this.field_hc) ? 0 : 1;
+          boolean stackIn_10_0 = var3;
+          boolean stackIn_11_1 = !(this.field_hc);
           if (stackIn_10_0 == stackIn_11_1) {
-            jaggl.OpenGL.glColorMask(var3 != 0, var3 != 0, var3 != 0, true);
-            boolean stackIn_15_1 = (var3 != 0);
+            jaggl.OpenGL.glColorMask((var3), (var3), (var3), true);
+            boolean stackIn_15_1 = ((var3));
             this.field_hc = stackIn_15_1;
           }
           boolean stackIn_18_0 = this.field_k;
-          int stackIn_19_1 = (var4 != 0) ? 0 : 1;
+          int stackIn_19_1 = ((var4)) ? 0 : 1;
           if ((stackIn_18_0 ? 1 : 0) == stackIn_19_1) {
-            if (var4 != 0) {
+            if (var4) {
               jaggl.OpenGL.glEnable(3008);
             } else {
               jaggl.OpenGL.glDisable(3008);
             }
-            boolean stackIn_27_1 = (var4 != 0);
+            boolean stackIn_27_1 = ((var4));
             this.field_k = stackIn_27_1;
           }
           if (this.field_z != var5) {

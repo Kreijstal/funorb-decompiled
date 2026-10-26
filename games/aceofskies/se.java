@@ -18,7 +18,7 @@ final class se {
 
     final static void a(int param0) {
         int stackIn_67_0 = 0;
-        int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var8 = (AceOfSkies.obfuscationControl);
         try {
           if (param0 > -64) {
             se.a((byte) -70);
@@ -30,10 +30,10 @@ final class se {
               gi.field_g = new es(128);
               hl.field_a = 0;
             }
-            int stackIn_15_0 = (1 != var1.readUnsignedByte(-60)) ? 0 : 1;
-            int var3_int = stackIn_15_0;
+            boolean stackIn_15_0 = !(1 != var1.readUnsignedByte(-60));
+            boolean var3_int = stackIn_15_0;
             String var4_ref_String = var1.readNullTerminatedText(-17883);
-            if (var3_int != 0) {
+            if (var3_int) {
               var1.readNullTerminatedText(-17883);
             }
             cl var5 = fg.a(var4_ref_String, 17680);
@@ -121,7 +121,7 @@ final class se {
               boolean stackOut_56_0 = cs.a(var7_ref, -115, var6_ref);
               stackIn_67_0 = stackOut_56_0 ? 1 : 0;
               boolean stackIn_57_0 = stackOut_56_0;
-              if (var8 != 0) {
+              if (var8) {
                 break scanLoop1;
               }
               if (stackIn_57_0) {
@@ -131,7 +131,7 @@ final class se {
             }
             if (null == var7_ref) {
               SoundPlayback.field_f.addLast(120, var6_ref);
-              if (var8 == 0) {
+              if (!var8) {
                 return;
               }
             }

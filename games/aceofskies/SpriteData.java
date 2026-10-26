@@ -59,7 +59,7 @@ final class SpriteData {
           frame.indices = new byte[pixelCount];
           int storageFlags = reader.readUnsignedByte(29);
           if ((storageFlags & 2) != 0) {
-            int nonOpaqueAlphaMask = 0;
+            boolean nonOpaqueAlphaMask = false;
             frame.alpha = new byte[pixelCount];
             if ((storageFlags & 1) == 0) {
               for (int alphaFrameIndexPixel = 0; alphaFrameIndexPixel < pixelCount; alphaFrameIndexPixel++) {
@@ -69,8 +69,8 @@ final class SpriteData {
                 byte rowAlphaByte = reader.readByte(0);
                 frame.alpha[rowAlphaPixel] = rowAlphaByte;
                 int rowAlphaValue = rowAlphaByte;
-                int previousRowAlphaMask = nonOpaqueAlphaMask;
-                int rowNonOpaqueBit = (rowAlphaValue == -1) ? 0 : 1;
+                boolean previousRowAlphaMask = nonOpaqueAlphaMask;
+                boolean rowNonOpaqueBit = !(rowAlphaValue == -1);
                 nonOpaqueAlphaMask = previousRowAlphaMask | rowNonOpaqueBit;
               }
             } else {
@@ -84,13 +84,13 @@ final class SpriteData {
                   byte columnAlphaByte = reader.readByte(0);
                   frame.alpha[columnAlphaX + columnAlphaY * frame.width] = columnAlphaByte;
                   int columnAlphaValue = columnAlphaByte;
-                  int previousColumnAlphaMask = nonOpaqueAlphaMask;
-                  int columnNonOpaqueBit = (columnAlphaValue == -1) ? 0 : 1;
+                  boolean previousColumnAlphaMask = nonOpaqueAlphaMask;
+                  boolean columnNonOpaqueBit = !(columnAlphaValue == -1);
                   nonOpaqueAlphaMask = previousColumnAlphaMask | columnNonOpaqueBit;
                 }
               }
             }
-            if (nonOpaqueAlphaMask == 0) {
+            if (!nonOpaqueAlphaMask) {
               frame.alpha = null;
             }
           } else if ((storageFlags & 1) == 0) {

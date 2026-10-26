@@ -15,9 +15,9 @@ final class mq extends IntrusiveNode {
         int var4Lifetime1;
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          int stackIn_4_0 = (param1[-1 + param1.length] != 0) ? 0 : 1;
-          int var2_int = stackIn_4_0;
-          if (var2_int == 0) {
+          boolean stackIn_4_0 = !(param1[-1 + param1.length] != 0);
+          boolean var2_int = stackIn_4_0;
+          if (!var2_int) {
             stackIn_7_0 = 1 + param1.length;
           } else {
             stackIn_7_0 = param1.length;

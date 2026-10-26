@@ -94,14 +94,14 @@ final class cm extends jm {
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
-        int stackIn_5_0 = (this.field_f != 443) ? 0 : 1;
-        int var5 = stackIn_5_0;
+        boolean stackIn_5_0 = !(this.field_f != 443);
+        boolean var5 = stackIn_5_0;
         try {
           java.net.ProxySelector stackIn_8_0 = this.field_g;
           java.net.URI stackIn_8_1 = null;
           java.net.URI stackIn_8_2 = null;
           StringBuilder stackIn_8_3 = new StringBuilder();
-          if (var5 != 0) {
+          if (var5) {
             stackIn_9_4 = "https";
           } else {
             java.net.URI stackIn_9_1 = null;
@@ -113,7 +113,7 @@ final class cm extends jm {
           java.net.URI stackIn_11_1 = null;
           java.net.URI stackIn_11_2 = null;
           StringBuilder stackIn_11_3 = new StringBuilder();
-          if (var5 != 0) {
+          if (var5) {
             stackIn_12_4 = "http";
           } else {
             java.net.URI stackIn_12_1 = null;

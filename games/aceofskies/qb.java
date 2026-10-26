@@ -9,7 +9,7 @@ final class qb extends qm {
     private int field_n;
 
     public final void a(boolean param0, int param1, int param2, ea param3, int param4) {
-        int stackIn_8_0 = 0;
+        boolean stackIn_8_0 = false;
         int stackIn_16_0 = 0;
         String stackIn_24_2 = null;
         try {
@@ -17,17 +17,17 @@ final class qb extends qm {
             field_o = (char[]) null;
           }
           if (!param3.field_g) {
-            stackIn_8_0 = (param3.e(28660)) ? 1 : 0;
+            stackIn_8_0 = (param3.e(28660));
           } else {
-            stackIn_8_0 = 1;
+            stackIn_8_0 = true;
           }
-          int var6_int = stackIn_8_0;
+          boolean var6_int = stackIn_8_0;
           if (param3 instanceof mi) {
             param0 = param0 & ((mi) (param3)).field_u;
           }
           if (!param0) {
             stackIn_16_0 = this.field_n;
-          } else if (var6_int != 0) {
+          } else if (var6_int) {
             stackIn_16_0 = this.field_p;
           } else {
             stackIn_16_0 = this.field_q;

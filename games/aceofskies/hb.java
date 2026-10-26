@@ -16,24 +16,24 @@ final class hb {
           java.lang.reflect.Field var7 = null;
           java.lang.reflect.Method var7_ref = null;
           int var8_int = 0;
-          int var12 = AceOfSkies.obfuscationControl ? 1 : 0;
+          boolean var12 = (AceOfSkies.obfuscationControl);
           try {
             bb var2 = (bb) (av.field_c.first(param1 + 268410723));
             if (var2 == null) {
               return;
             }
-            int var3 = 0;
+            boolean var3 = false;
             int var4 = 0;
             scanLoop1: while (true) {
               if (var4 < var2.field_g) {
                 stackIn_35_0 = null;
-                if (var12 == 0) {
+                if (!var12) {
                   if (stackIn_35_0 != var2.field_f[var4]) {
                     if (var2.field_f[var4].field_a == 2) {
                       var2.field_e[var4] = -5;
                     }
                     if (var2.field_f[var4].field_a == 0) {
-                      var3 = 1;
+                      var3 = true;
                     }
                   }
                   if (null != var2.field_h[var4]) {
@@ -41,14 +41,14 @@ final class hb {
                       var2.field_e[var4] = -6;
                     }
                     if (var2.field_h[var4].field_a == 0) {
-                      var3 = 1;
+                      var3 = true;
                     }
                   }
                   var4++;
                   continue;
                 }
               } else {
-                if (var3 != 0) {
+                if (var3) {
                   return;
                 }
                 var4 = param0.position;
@@ -65,7 +65,7 @@ final class hb {
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (!(var5 < var2.field_g)))) {
               stackIn_101_0 = 0;
-              if (var12 == 0) {
+              if (!var12) {
                 if (stackIn_101_0 != var2.field_e[var5]) {
                   param0.writeByte(param1 ^ -1336888268, var2.field_e[var5]);
                 } else {
@@ -103,7 +103,7 @@ final class hb {
                     }
                     if (decompiledFrameRemainder0 &&
                       (3 == var6_int ||
-                      var12 != 0)) {
+                      var12)) {
                       var7_ref = (java.lang.reflect.Method) (var2.field_h[var5].field_f);
                       byte[][] var8 = var2.field_k[var5];
                       Object[] var9 = new Object[var8.length];
@@ -112,11 +112,11 @@ final class hb {
                         ObjectInputStream var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var8[var10_int])));
                         var9[var10_int] = var11.readObject();
                         var10_int++;
-                        if (var12 != 0) {
+                        if (var12) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        if (var12 == 0) {
+                        if (!var12) {
                           continue;
                         }
                         break;
@@ -125,19 +125,19 @@ final class hb {
                         Object var10 = var7_ref.invoke((Object) null, var9);
                         if (var10 == null) {
                           param0.writeByte(-1336879960, 0);
-                          decompiledFrameRemainder0 = (var12 != 0);
+                          decompiledFrameRemainder0 = ((var12));
                         }
                         if (decompiledFrameRemainder0) {
                           if (!(var10 instanceof Number)) {
                             boolean decompiledSharedTail0 = !(!(var10 instanceof String));
                             if (!decompiledSharedTail0) {
                               param0.writeByte(-1336879960, 4);
-                              decompiledSharedTail0 = (var12 != 0);
+                              decompiledSharedTail0 = ((var12));
                             }
                             if (decompiledSharedTail0) {
                               param0.writeByte(-1336879960, 2);
                               param0.a(-47, (String) (var10));
-                              if (var12 != 0) {
+                              if (var12) {
                                 param0.writeByte(-1336879960, 1);
                                 param0.writeLong((byte) -102, ((Number) (var10)).longValue());
                               }
@@ -235,7 +235,7 @@ final class hb {
         int stackIn_28_0 = 0;
         String stackIn_122_2 = null;
         String stackIn_126_2 = null;
-        int var28 = AceOfSkies.obfuscationControl ? 1 : 0;
+        boolean var28 = (AceOfSkies.obfuscationControl);
         try {
           bo var10 = fa.a(param7, true);
           if (param9 == null) {
@@ -314,7 +314,7 @@ final class hb {
               while (var18 > var26) {
                 param9[1].a(var26, param0, param3, param1, param4);
                 var26 = var26 + param9[1].d();
-                if (var28 != 0) {
+                if (var28) {
                   decompiledFrameCompleted3 = false;
                   break;
                 }
@@ -331,7 +331,7 @@ final class hb {
               while (var18 > var26Lifetime1) {
                 param9[7].a(var26Lifetime1, var20, param3, param1, param4);
                 var26Lifetime1 = var26Lifetime1 + param9[7].d();
-                if (var28 != 0) {
+                if (var28) {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
@@ -348,7 +348,7 @@ final class hb {
               while (var26Lifetime2 < var20) {
                 param9[3].a(param2, var26Lifetime2, param3, param1, param4);
                 var26Lifetime2 = var26Lifetime2 + param9[3].c();
-                if (var28 != 0) {
+                if (var28) {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
@@ -365,7 +365,7 @@ final class hb {
               while (var20 > var26Lifetime3) {
                 param9[5].a(var18, var26Lifetime3, param3, param1, param4);
                 var26Lifetime3 = var26Lifetime3 + param9[5].c();
-                if (var28 != 0) {
+                if (var28) {
                   decompiledFrameCompleted0 = false;
                   break;
                 }
@@ -380,7 +380,7 @@ final class hb {
               var10.a(var23, var22, var25, var24, 93);
               int var26Lifetime4 = var19;
               while (var26Lifetime4 < var20) {
-                if (var28 != 0) {
+                if (var28) {
                   return;
                 }
                 int var27 = var17;

@@ -95,10 +95,10 @@ final class rc extends hh {
         float var5 = (float)(1 + ((param1 & 27) >> 3)) * 0.0005000000237487257f;
         float stackIn_3_0 = ((param1 & 64) == 0) ? 0.00048828125f : 0.0009765625f;
         float var6 = stackIn_3_0;
-        int stackIn_6_0 = ((param1 & 128) == 0) ? 0 : 1;
-        int var7 = stackIn_6_0;
+        boolean stackIn_6_0 = !((param1 & 128) == 0);
+        boolean var7 = stackIn_6_0;
         this.field_a.a(false, 1);
-        if (var7 == 0) {
+        if (!var7) {
           rn.field_b[2] = var6;
           rn.field_b[0] = 0.0f;
           rn.field_b[1] = 0.0f;

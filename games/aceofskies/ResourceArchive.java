@@ -113,17 +113,17 @@ final class ResourceArchive {
         if (!this.b((byte) -71)) {
           return false;
         }
-        int var2 = 1;
+        boolean var2 = true;
         for (int var3 = param0; this.index.field_o.length > var3; var3++) {
           int var4 = this.index.field_o[var3];
           if (null == this.packedGroups[var4]) {
             this.a(var4, true);
             if (this.packedGroups[var4] == null) {
-              var2 = 0;
+              var2 = false;
             }
           }
         }
-        return var2 != 0;
+        return (var2);
     }
 
     final int a(String param0, byte param1) {
@@ -454,7 +454,7 @@ final class ResourceArchive {
             this.unpackedFiles[param2] = array$0;
           }
           Object[] var7 = this.unpackedFiles[param2];
-          int var8 = 1;
+          boolean var8 = true;
           for (int var9_int = 0; var5_int > var9_int; var9_int++) {
             if (var6 != null) {
               var10 = var34[var9_int];
@@ -464,10 +464,10 @@ final class ResourceArchive {
             if (null != var7[var10]) {
               continue;
             }
-            var8 = 0;
+            var8 = false;
             break;
           }
-          if (var8 != 0) {
+          if (var8) {
             return true;
           }
           if (param1 != null && (param1[0] != 0 ||

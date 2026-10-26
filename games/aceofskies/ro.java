@@ -76,8 +76,8 @@ final class ro extends ua implements ti {
         try {
           if (param0 >= 2 &&
             param0 <= 36) {
-            int var4_int = 0;
-            int var5 = 0;
+            boolean var4_int = false;
+            boolean var5 = false;
             int var6 = 0;
             if (param2 > -77) {
               field_p = (String) null;
@@ -88,7 +88,7 @@ final class ro extends ua implements ti {
               int var9 = param3.charAt(var8);
               if (0 == var8 &&
                 var9 == 45) {
-                var4_int = 1;
+                var4_int = true;
                 decompiledFrameRemainder0 = false;
               }
               if (decompiledFrameRemainder0 && (0 != var8 || (var9 != 43 ||
@@ -108,7 +108,7 @@ final class ro extends ua implements ti {
                 if (var9 >= param0) {
                   throw new NumberFormatException();
                 }
-                if (var4_int != 0) {
+                if (var4_int) {
                   var9 = -var9;
                 }
                 int var10 = var6 * param0 + var9;
@@ -116,10 +116,10 @@ final class ro extends ua implements ti {
                   throw new NumberFormatException();
                 }
                 var6 = var10;
-                var5 = 1;
+                var5 = true;
               }
             }
-            if (var5 == 0) {
+            if (!var5) {
               throw new NumberFormatException();
             }
             int stackIn_45_0 = var6;

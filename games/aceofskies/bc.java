@@ -57,7 +57,7 @@ final class bc extends to {
             var12 != null) {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
-            int var7 = 1;
+            boolean var7 = true;
             byte[] var16 = ee.a(true, var12);
             byte[] var14 = var16;
             byte[] var8 = var14;
@@ -76,16 +76,16 @@ final class bc extends to {
                 decompiledFrameCompleted0 = false;
               }
               if (decompiledFrameCompleted0) {
-                var7 = 0;
+                var7 = false;
                 decompiledFrameRemainder0 = false;
               }
             }
             if (decompiledFrameRemainder0 &&
               decompiledFrameCompleted0) {
-              var7 = 0;
+              var7 = false;
             }
             try {
-              if (var7 == 0) {
+              if (!var7) {
                 bm.field_I.a(var12, var15, true);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
@@ -122,16 +122,16 @@ final class bc extends to {
     }
 
     final String c(byte param0) {
-        int var2 = this.field_s.field_g ? 1 : 0;
+        boolean var2 = (this.field_s.field_g);
         this.field_s.field_g = this.field_g;
         if (param0 < -41) {
           String var3 = this.field_s.c((byte) -75);
-          this.field_s.field_g = var2 != 0 ? true : false;
+          this.field_s.field_g = (var2) ? true : false;
           return var3;
         }
         field_v = (String) null;
         String var3Lifetime1 = this.field_s.c((byte) -75);
-        this.field_s.field_g = var2 != 0 ? true : false;
+        this.field_s.field_g = (var2) ? true : false;
         return var3Lifetime1;
     }
 
