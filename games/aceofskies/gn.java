@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gn {
-    static vd[] field_b;
+    static vd[] scorchSpriteData;
     static int field_a;
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, PacketBuffer param2, PacketBuffer param3, int param4) {
@@ -19,10 +19,10 @@ final class gn {
     public static void a(byte param0) {
         if (param0 != -72) {
           gn.a((byte) 7);
-          field_b = null;
+          scorchSpriteData = null;
           return;
         }
-        field_b = null;
+        scorchSpriteData = null;
     }
 
     static {

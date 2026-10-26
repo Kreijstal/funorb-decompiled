@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TimedSpriteEffect {
-    int field_d;
-    int field_e;
+final class ScorchMark {
+    int worldY;
+    int diameter;
     static eg field_a;
-    int field_c;
-    int field_b;
+    int spriteIndex;
+    int worldX;
     static int[] field_f;
 
     public static void a(byte param0) {
@@ -26,7 +26,7 @@ final class TimedSpriteEffect {
         try {
           if (param0 != -8759) {
             var3 = (ResourceArchive) null;
-            TimedSpriteEffect.a((ResourceArchive) null, -26, (byte) 6, 3);
+            ScorchMark.a((ResourceArchive) null, -26, (byte) 6, 3);
           }
           stackIn_5_0 = (kg.a(param1, (byte) 61) != null);
           return stackIn_5_0;
@@ -52,7 +52,7 @@ final class TimedSpriteEffect {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -7) {
-            TimedSpriteEffect.a((byte) -14);
+            ScorchMark.a((byte) -14);
           }
           if (tn.a(param0, (byte) -127, param3, param1)) {
             return bl.b(-95);
@@ -72,14 +72,14 @@ final class TimedSpriteEffect {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
-        this.field_e = param0;
-        this.field_d = param2;
-        this.field_b = param1;
-        this.field_c = qq.a(20, co.field_i.length);
-        if (param3 <= 103) {
+    final void spawn(int diameter, int worldX, int worldY, byte obfuscationGuard) {
+        this.diameter = diameter;
+        this.worldY = worldY;
+        this.worldX = worldX;
+        this.spriteIndex = qq.a(20, co.scorchSprites.length);
+        if (obfuscationGuard <= 103) {
           String var6 = (String) null;
-          TimedSpriteEffect.a(24, (String) null);
+          ScorchMark.a(24, (String) null);
         }
     }
 

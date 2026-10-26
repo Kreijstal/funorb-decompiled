@@ -10,7 +10,7 @@ final class eg {
           if (!param0) {
             this.a(true);
           }
-          stackIn_13_0 = (this == he.field_o) || (this == TimedSpriteEffect.field_a) || (wq.field_e == this);
+          stackIn_13_0 = (this == he.field_o) || (this == ScorchMark.field_a) || (wq.field_e == this);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

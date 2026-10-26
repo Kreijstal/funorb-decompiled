@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SmokeParticle extends FlightBody {
-    int remainingTicks;
-    int field_j;
-    int field_g;
+    int ageTicks;
+    int depthPhase;
+    int lifetimeTicks;
     static String field_k;
-    int field_l;
+    int colourOrBlastRadius;
     int spriteIndex;
 
     final static boolean a(CharSequence param0, int param1) {
@@ -36,19 +36,19 @@ final class SmokeParticle extends FlightBody {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, Vector2 param4) {
+    final void spawnAtDepth(int lifetimeTicks, int obfuscationGuard, int colourOrBlastRadius, int depthPhase, Vector2 position) {
         try {
-          this.position.setFrom(param4, true);
-          this.field_l = param2;
-          if (param1 < 99) {
+          this.position.setFrom(position, true);
+          this.colourOrBlastRadius = colourOrBlastRadius;
+          if (obfuscationGuard < 99) {
             SmokeParticle.a((byte) -97, true);
           }
-          this.field_g = param0;
-          this.remainingTicks = 10;
-          this.spriteIndex = qq.a(20, es.field_b.length);
-          this.field_j = param3;
+          this.lifetimeTicks = lifetimeTicks;
+          this.ageTicks = 10;
+          this.spriteIndex = qq.a(20, es.smokeSprites.length);
+          this.depthPhase = depthPhase;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "qf.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "qf.O(" + lifetimeTicks + ',' + obfuscationGuard + ',' + colourOrBlastRadius + ',' + depthPhase + ',' + (position != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -57,17 +57,17 @@ final class SmokeParticle extends FlightBody {
         this.spriteIndex = 0;
     }
 
-    final void a(int param0, Vector2 param1, int param2, int param3) {
+    final void spawn(int obfuscationGuard, Vector2 position, int colourOrBlastRadius, int lifetimeTicks) {
         try {
-          this.position.setFrom(param1, true);
-          this.field_l = param2;
-          this.field_g = param3;
-          int var5_int = 68 / ((43 - param0) / 61);
-          this.remainingTicks = 10;
-          this.spriteIndex = qq.a(20, es.field_b.length);
-          this.field_j = 92;
+          this.position.setFrom(position, true);
+          this.colourOrBlastRadius = colourOrBlastRadius;
+          this.lifetimeTicks = lifetimeTicks;
+          int var5_int = 68 / ((43 - obfuscationGuard) / 61);
+          this.ageTicks = 10;
+          this.spriteIndex = qq.a(20, es.smokeSprites.length);
+          this.depthPhase = 92;
         } catch (RuntimeException runtimeException) {
-          throw pn.a((Throwable) ((Object) runtimeException), "qf.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw pn.a((Throwable) ((Object) runtimeException), "qf.L(" + obfuscationGuard + ',' + (position != null ? "{...}" : "null") + ',' + colourOrBlastRadius + ',' + lifetimeTicks + ')');
         }
     }
 

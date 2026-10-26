@@ -225,7 +225,7 @@ final class tj extends ao {
         try {
           var4_int = param3.b(param1, param2 ^ param2);
           var5 = param3.a(-39, var4_int, param0);
-          stackIn_1_0 = TimedSpriteEffect.a(param3, var4_int, (byte) -70, var5);
+          stackIn_1_0 = ScorchMark.a(param3, var4_int, (byte) -70, var5);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

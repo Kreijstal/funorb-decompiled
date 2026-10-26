@@ -10,13 +10,13 @@ final class bl {
     static String field_g;
     private gh field_f;
     private gh field_d;
-    static RenderSprite[] field_b;
+    static RenderSprite[] explosionSprites;
 
     public static void d(int param0) {
         if (param0 >= -121) {
           field_g = (String) null;
         }
-        field_b = null;
+        explosionSprites = null;
         field_g = null;
     }
 

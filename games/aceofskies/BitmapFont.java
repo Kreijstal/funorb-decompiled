@@ -182,7 +182,7 @@ abstract class BitmapFont {
         if (param1) {
           ef.field_m = ef.field_m - 1;
           if (ef.field_m == 0) {
-            TimedSpriteEffect.field_f = null;
+            ScorchMark.field_f = null;
           }
         }
         if (param2) {

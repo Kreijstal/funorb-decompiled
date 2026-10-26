@@ -133,7 +133,7 @@ final class pe implements Iterator {
           RendererManager.field_a = vd.b(param3, "aceofskies", "bullet");
           tq.field_h = vd.a(param3, "aceofskies", "smoke");
           ud.field_f = vd.a(param3, "aceofskies", "explosion");
-          gn.field_b = vd.a(param3, "aceofskies", "scorch");
+          gn.scorchSpriteData = vd.a(param3, "aceofskies", "scorch");
           fs.field_e = vd.b(param3, "", "titleimage");
           ArchiveIndex.field_f = new vd[3][];
           ArchiveIndex.field_f[0] = vd.a(param3, "aceofskies", "oilgauge");

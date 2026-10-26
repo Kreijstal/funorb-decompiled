@@ -57,13 +57,13 @@ final class ScoreSubmission extends IntrusiveNode {
         int var2Lifetime21;
         var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          var6 = FlightSession.field_wb.a((byte) 100);
+          var6 = FlightSession.rendererManager.a((byte) 100);
           if (hr.field_d == null) {
             hr.field_d = new RenderSprite[SteeringMode.field_d.length][];
-            is.field_a = new RenderSprite[oo.field_ab.length];
-            sd.field_k = new RenderSprite[na.field_c.length];
-            es.field_b = new RenderSprite[tq.field_h.length];
-            bl.field_b = new RenderSprite[ud.field_f.length];
+            is.backgroundSprites = new RenderSprite[oo.field_ab.length];
+            sd.cloudSprites = new RenderSprite[na.field_c.length];
+            es.smokeSprites = new RenderSprite[tq.field_h.length];
+            bl.explosionSprites = new RenderSprite[ud.field_f.length];
             ac.field_f = new RenderSprite[qa.field_a.length];
             jm.field_a = new RenderSprite[hq.field_a.length];
             aa.field_a = new RenderSprite[la.field_g.length];
@@ -75,7 +75,7 @@ final class ScoreSubmission extends IntrusiveNode {
             ii.field_k = new RenderSprite[ArchiveIndex.field_f.length][];
             Pickup.field_i = new RenderSprite[ol.field_e.length];
             po.field_e = new RenderSprite[nu.field_b.length];
-            co.field_i = new RenderSprite[gn.field_b.length];
+            co.scorchSprites = new RenderSprite[gn.scorchSpriteData.length];
             ec.field_e = new RenderSprite[FlightBody.field_a.length];
             mb.field_u = new RenderSprite[vl.field_b.length];
             CipherPacketBuffer.field_n = new RenderSprite[qk.field_a.length];
@@ -95,16 +95,16 @@ final class ScoreSubmission extends IntrusiveNode {
             }
           }
           for (var2Lifetime2 = 0; var2Lifetime2 < oo.field_ab.length; var2Lifetime2++) {
-            is.field_a[var2Lifetime2] = var6.a(oo.field_ab[var2Lifetime2], false);
+            is.backgroundSprites[var2Lifetime2] = var6.a(oo.field_ab[var2Lifetime2], false);
           }
           for (var2Lifetime3 = 0; na.field_c.length > var2Lifetime3; var2Lifetime3++) {
-            sd.field_k[var2Lifetime3] = var6.a(na.field_c[var2Lifetime3], false);
+            sd.cloudSprites[var2Lifetime3] = var6.a(na.field_c[var2Lifetime3], false);
           }
           for (var2Lifetime4 = 0; tq.field_h.length > var2Lifetime4; var2Lifetime4++) {
-            es.field_b[var2Lifetime4] = var6.a(tq.field_h[var2Lifetime4], false);
+            es.smokeSprites[var2Lifetime4] = var6.a(tq.field_h[var2Lifetime4], false);
           }
           for (var2Lifetime5 = 0; ud.field_f.length > var2Lifetime5; var2Lifetime5++) {
-            bl.field_b[var2Lifetime5] = var6.a(ud.field_f[var2Lifetime5], false);
+            bl.explosionSprites[var2Lifetime5] = var6.a(ud.field_f[var2Lifetime5], false);
           }
           for (var2Lifetime6 = 0; ol.field_e.length > var2Lifetime6; var2Lifetime6++) {
             Pickup.field_i[var2Lifetime6] = var6.a(ol.field_e[var2Lifetime6], false);
@@ -112,8 +112,8 @@ final class ScoreSubmission extends IntrusiveNode {
           for (var2Lifetime7 = 0; nu.field_b.length > var2Lifetime7; var2Lifetime7++) {
             po.field_e[var2Lifetime7] = var6.a(nu.field_b[var2Lifetime7], false);
           }
-          for (var2Lifetime8 = 0; gn.field_b.length > var2Lifetime8; var2Lifetime8++) {
-            co.field_i[var2Lifetime8] = var6.a(gn.field_b[var2Lifetime8], false);
+          for (var2Lifetime8 = 0; gn.scorchSpriteData.length > var2Lifetime8; var2Lifetime8++) {
+            co.scorchSprites[var2Lifetime8] = var6.a(gn.scorchSpriteData[var2Lifetime8], false);
           }
           for (var2Lifetime9 = 0; FlightBody.field_a.length > var2Lifetime9; var2Lifetime9++) {
             ec.field_e[var2Lifetime9] = var6.a(FlightBody.field_a[var2Lifetime9], false);

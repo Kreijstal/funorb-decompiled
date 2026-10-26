@@ -7,7 +7,7 @@ final class sd extends hh {
     static boolean[][] musicLayerPresets;
     private boolean field_f;
     private in field_l;
-    static RenderSprite[] field_k;
+    static RenderSprite[] cloudSprites;
     static int field_h;
     static String field_e;
     static String field_m;
@@ -45,13 +45,13 @@ final class sd extends hh {
         if (param0 == 0) {
           field_j = null;
           field_m = null;
-          field_k = null;
+          cloudSprites = null;
           return;
         }
         sd.a(false, -71, true, true, -75);
         field_j = null;
         field_m = null;
-        field_k = null;
+        cloudSprites = null;
     }
 
     final boolean a(byte param0) {

@@ -58,10 +58,10 @@ final class er {
         int var26 = 0;
         var26 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          if (null != TimedSpriteEffect.field_f) {
+          if (null != ScorchMark.field_f) {
             return;
           }
-          TimedSpriteEffect.field_f = new int[65536];
+          ScorchMark.field_f = new int[65536];
           var1_double = -0.015 + Math.random() * 0.03 + 0.7;
           if (param0 != -128) {
             er.d(65);
@@ -135,7 +135,7 @@ final class er {
               var17 = (int)(256.0 * var12);
               var18 = (int)(256.0 * var14);
               var19 = (var16 << 16) - (-(var17 << 8) - var18);
-              TimedSpriteEffect.field_f[var3] = var19;
+              ScorchMark.field_f[var3] = var19;
             } else {
               var10 = Math.pow(var10, var1_double);
               var12 = Math.pow(var12, var1_double);
@@ -144,7 +144,7 @@ final class er {
               var17 = (int)(256.0 * var12);
               var18 = (int)(256.0 * var14);
               var19 = (var16 << 16) - (-(var17 << 8) - var18);
-              TimedSpriteEffect.field_f[var3] = var19;
+              ScorchMark.field_f[var3] = var19;
             }
           }
           return;

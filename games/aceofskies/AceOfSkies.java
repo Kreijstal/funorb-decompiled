@@ -153,8 +153,8 @@ public final class AceOfSkies extends NetworkGameClient {
               }
               nb.a(10536, 50);
             }
-            if (FlightSession.field_wb.a((byte) 113) == null) {
-              FlightSession.field_wb.a(-23);
+            if (FlightSession.rendererManager.a((byte) 113) == null) {
+              FlightSession.rendererManager.a(-23);
               return false;
             }
             ScoreSubmission.a(118);
@@ -468,7 +468,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ef.a(0);
           SoundCache.a(false);
           MenuScreen.c((byte) 85);
-          FlightSession.i(32458);
+          FlightSession.releaseStaticReferences(32458);
           ji.a(0);
           IntrusiveNode.b(-45);
           un.d(6);
@@ -515,7 +515,7 @@ public final class AceOfSkies extends NetworkGameClient {
           t.c();
           qn.a(-122);
           Bullet.c(24);
-          TimedSpriteEffect.a((byte) -44);
+          ScorchMark.a((byte) -44);
           FlightBody.a(true);
           Aircraft.b(20);
           Pickup.b(256);
@@ -793,7 +793,7 @@ public final class AceOfSkies extends NetworkGameClient {
             return;
           }
           ci.gameRandom = new Random(kh.a(-99));
-          FlightSession.field_wb = new RendererManager(11, 12, (d) null);
+          FlightSession.rendererManager = new RendererManager(11, 12, (d) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -928,10 +928,10 @@ public final class AceOfSkies extends NetworkGameClient {
               hj.a(var2, -12);
               return;
             }
-            if (FlightSession.field_wb.a(122)) {
+            if (FlightSession.rendererManager.a(122)) {
               ScoreSubmission.a(39);
             }
-            var4 = FlightSession.field_wb.a((byte) 127);
+            var4 = FlightSession.rendererManager.a((byte) 127);
             sg.flightSession.renderSession(-16711936, false, var4);
             if (~po.activeMenuId != ~ci.nextMenuId) {
               if (po.activeMenuId != -1 &&

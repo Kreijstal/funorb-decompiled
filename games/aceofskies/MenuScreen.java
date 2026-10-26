@@ -277,7 +277,7 @@ final class MenuScreen {
         String var12Lifetime3;
         int var21Lifetime1Lifetime1;
         var28 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var30 = FlightSession.field_wb.a((byte) 90);
+        var30 = FlightSession.rendererManager.a((byte) 90);
         var4 = 0;
         if (obfuscationGuard != -9621) {
           field_f = (String[]) null;
@@ -1187,7 +1187,7 @@ final class MenuScreen {
           var24 = (GraphicsRenderer) null;
           this.drawItem(-106, 49, 71, false, (GraphicsRenderer) null);
         }
-        var25 = FlightSession.field_wb.a((byte) 84);
+        var25 = FlightSession.rendererManager.a((byte) 84);
         var5 = -1;
         var6 = 0;
         var7 = 50;
@@ -1426,7 +1426,7 @@ final class MenuScreen {
         int[] var18;
         int var13Lifetime1;
         var15 = AceOfSkies.obfuscationControl ? 1 : 0;
-        var16 = FlightSession.field_wb.a((byte) 77);
+        var16 = FlightSession.rendererManager.a((byte) 77);
         var4 = -1;
         var5 = 50;
         var6 = 90 + verticalOffset;
@@ -1788,7 +1788,7 @@ final class MenuScreen {
         try {
           int var4_int = 104 % ((param1 - 5) / 54);
           var5 = 90 + dp.field_h.a((byte) 94, param2);
-          this.a(82, FlightSession.field_wb.a((byte) 75), -(var5 >> 1) + 320, var5, param0 + 26, 60, 1442840524);
+          this.a(82, FlightSession.rendererManager.a((byte) 75), -(var5 >> 1) + 320, var5, param0 + 26, 60, 1442840524);
           kn.field_a.a(111, -12046068, -1, 67 + param0, 320, param2);
         } catch (RuntimeException runtimeException) {
           throw pn.a((Throwable) ((Object) runtimeException), "nk.V(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

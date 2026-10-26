@@ -32,7 +32,7 @@ final class s {
         if (eo.field_a != 2) {
           return 0;
         }
-        if (TimedSpriteEffect.a(param0 - 8759, this.field_g)) {
+        if (ScorchMark.a(param0 - 8759, this.field_g)) {
           return 1;
         }
         return 0;

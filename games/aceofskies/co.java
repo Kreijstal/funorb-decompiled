@@ -8,7 +8,7 @@ final class co {
     int[] field_h;
     int field_f;
     static int field_c;
-    static RenderSprite[] field_i;
+    static RenderSprite[] scorchSprites;
     static long field_e;
     static int returnMenuId;
     static String field_a;
@@ -21,7 +21,7 @@ final class co {
         }
         field_j = null;
         field_g = null;
-        field_i = null;
+        scorchSprites = null;
         field_k = null;
     }
 

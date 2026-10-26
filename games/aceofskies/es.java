@@ -8,7 +8,7 @@ final class es {
     private wt field_d;
     static int field_c;
     private int field_f;
-    static RenderSprite[] field_b;
+    static RenderSprite[] smokeSprites;
     static String field_g;
     private wt[] field_e;
     private long field_h;
@@ -63,7 +63,7 @@ final class es {
           this.field_d = this.field_d.field_j;
           return var5;
         }
-        field_b = (RenderSprite[]) null;
+        smokeSprites = (RenderSprite[]) null;
         this.field_d = var4.field_j;
         while (true) {
           if (var4 == this.field_d) {
@@ -209,14 +209,14 @@ final class es {
 
     public static void a(int param0) {
         if (param0 == 1020) {
-          field_b = null;
+          smokeSprites = null;
           field_g = null;
           field_i = null;
           field_a = null;
           return;
         }
         field_g = (String) null;
-        field_b = null;
+        smokeSprites = null;
         field_g = null;
         field_i = null;
         field_a = null;

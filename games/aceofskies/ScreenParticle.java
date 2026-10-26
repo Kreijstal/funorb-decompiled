@@ -2,57 +2,57 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ScreenParticle {
-    int field_k;
-    int field_j;
-    int field_a;
-    int field_m;
-    int field_i;
-    int field_f;
-    int field_l;
-    int field_e;
-    int field_g;
+    int xQ8;
+    int radiusAccelerationQ8;
+    int xAccelerationQ8;
+    int radiusQ8;
+    int yVelocityQ8;
+    int yAccelerationQ8;
+    int radiusVelocityQ8;
+    int renderMode;
+    int previousYQ8;
     static int field_o;
-    int field_c;
-    int field_d;
-    int field_h;
-    int field_b;
-    int field_p;
-    int field_n;
+    int previousXQ8;
+    int durationTicks;
+    int ageTicks;
+    int xVelocityQ8;
+    int alphaScale;
+    int yQ8;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param0, 0, np.a(-param2 << 1, param2 >> 1, (byte) -50), param5, 0, np.a(-param2, param2, (byte) -56), param1, 0, param4, param3, 0, 0, 255);
-        if (param6 != -1588713311) {
-          this.field_a = -84;
+    final void spawnBurst(int yAccelerationQ8, int xQ8, int spreadQ8, int durationTicks, int yQ8, int radiusQ8, int obfuscationGuard) {
+        this.initializeMotion(yAccelerationQ8, 0, np.a(-spreadQ8 << 1, spreadQ8 >> 1, (byte) -50), radiusQ8, 0, np.a(-spreadQ8, spreadQ8, (byte) -56), xQ8, 0, yQ8, durationTicks, 0, 0, 255);
+        if (obfuscationGuard != -1588713311) {
+          this.xAccelerationQ8 = -84;
         } else {
-          this.field_c = this.field_k;
-          this.field_g = this.field_n;
+          this.previousXQ8 = this.xQ8;
+          this.previousYQ8 = this.yQ8;
           return;
         }
-        this.field_c = this.field_k;
-        this.field_g = this.field_n;
+        this.previousXQ8 = this.xQ8;
+        this.previousYQ8 = this.yQ8;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        this.field_e = param7;
-        this.field_k = param6;
-        this.field_a = param11;
-        this.field_i = param2;
-        this.field_h = param10;
-        this.field_f = param0;
-        this.field_p = param12;
-        this.field_n = param8;
-        this.field_j = param1;
-        this.field_m = param3;
-        this.field_l = param4;
-        this.field_b = param5;
-        this.field_d = param9;
+    private final void initializeMotion(int yAccelerationQ8, int radiusAccelerationQ8, int yVelocityQ8, int radiusQ8, int radiusVelocityQ8, int xVelocityQ8, int xQ8, int renderMode, int yQ8, int durationTicks, int ageTicks, int xAccelerationQ8, int alphaScale) {
+        this.renderMode = renderMode;
+        this.xQ8 = xQ8;
+        this.xAccelerationQ8 = xAccelerationQ8;
+        this.yVelocityQ8 = yVelocityQ8;
+        this.ageTicks = ageTicks;
+        this.yAccelerationQ8 = yAccelerationQ8;
+        this.alphaScale = alphaScale;
+        this.yQ8 = yQ8;
+        this.radiusAccelerationQ8 = radiusAccelerationQ8;
+        this.radiusQ8 = radiusQ8;
+        this.radiusVelocityQ8 = radiusVelocityQ8;
+        this.xVelocityQ8 = xVelocityQ8;
+        this.durationTicks = durationTicks;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(0, 0, -param3 << 3, param4, param3, 0, param0, 1, param6, param2, 0, 0, param5);
-        this.field_h = -this.field_d;
-        if (param1) {
-          this.a(-38, -34, 83, 10, 51, 37, 91);
+    final void spawnGrowingSprite(int xQ8, boolean obfuscationGuard, int durationTicks, int growthStepQ8, int radiusQ8, int alphaScale, int yQ8) {
+        this.initializeMotion(0, 0, -growthStepQ8 << 3, radiusQ8, growthStepQ8, 0, xQ8, 1, yQ8, durationTicks, 0, 0, alphaScale);
+        this.ageTicks = -this.durationTicks;
+        if (obfuscationGuard) {
+          this.spawnBurst(-38, -34, 83, 10, 51, 37, 91);
         }
     }
 

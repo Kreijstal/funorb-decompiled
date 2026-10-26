@@ -207,11 +207,11 @@ final class pi extends mi {
                 }
               }
               if (decompiledFrameRemainder0) {
-                ca.field_f = TimedSpriteEffect.field_a;
+                ca.field_f = ScorchMark.field_a;
                 ag.field_s = -1;
               }
             }
-            if (TimedSpriteEffect.field_a == ca.field_f &&
+            if (ScorchMark.field_a == ca.field_f &&
               rm.a(0)) {
               as.field_b = IntKeyLookup.incomingPacket.readLong((byte) -87);
               ln.field_d = IntKeyLookup.incomingPacket.readUnsignedByte(37);
