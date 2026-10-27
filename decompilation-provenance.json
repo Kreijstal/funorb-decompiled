@@ -6728,7 +6728,7 @@
         },
         "sources": {
           "files": 348,
-          "sha256": "1f5afba5613bbc84c14708f8ea3dce1262c88f1743fbaea857f7005de104585f"
+          "sha256": "9df7c70009ec5fed07c20badfdc070377de6b3b5f117d8c2f6e1a4e1f04f5e02"
         },
         "pipelineFingerprint": "c6bf1461d67f1feba0c27f958d57478b8f53f7ce3830ce91c9418e3662b8f871",
         "pipelineEnvironment": {
@@ -6805,6 +6805,50 @@
               "runner": {
                 "repository": "Kreijstal/dekobloko-work",
                 "commit": "89714d521dce9e328b84699b1f62108445d44731",
+                "script": "readable/refresh-raw-class.mjs"
+              }
+            },
+            "sa.java": {
+              "generator": {
+                "repository": "Kreijstal/java-tools",
+                "commit": "1162ba86b839d9dcd1028f3ee11b728f329fa2bb",
+                "execution": "committed-source-archive",
+                "sourceArchive": {
+                  "sha256": "a4282cf5d26b64507f5d6e233c4d13febb06b09d90eabf45cdbb5de43aed3406",
+                  "reproduce": "git archive --format=tar 1162ba86b839d9dcd1028f3ee11b728f329fa2bb | sha256sum",
+                  "format": "Git-generated tar archive of all tracked decompiler source; not a game JAR"
+                }
+              },
+              "input": {
+                "path": "sa.class",
+                "sha256": "74d7f42f591da88cb084e0eb0d894e928044ad6aa2bf9c3330dcd41891431c6c",
+                "gameJarSha256": "8daf42d4c7c434f6b52d49e25e2854b9970f41e51b8696856d9c6b5e9dd55e69"
+              },
+              "output": {
+                "path": "games/escapevector/sa.java",
+                "sha256": "5d989ae66597053352b1e3f2c22a79e2c8401d46c1c1fd207c9703481071587a"
+              },
+              "validation": {
+                "wholeGameJavac": "pass",
+                "sources": 348,
+                "originalBytecodeProbe": {
+                  "path": "readable/tests/test-escapevector-core.mjs",
+                  "sha256": "3d3b652ff68535e5c23cf8806ca547300f12d65deb0ad3401c0d55c2886fb619",
+                  "reference": "checks=903",
+                  "rebuilt": "checks=903"
+                }
+              },
+              "base": {
+                "commit": "68ee48736fe78d5d4137fee88d1e1fb3c0c155f6",
+                "sourceSha256": "f47af16ea469287cecb860404ad2548579e844f8f9cb3f3f2cb314fd1a340e77",
+                "sources": {
+                  "files": 348,
+                  "sha256": "1f5afba5613bbc84c14708f8ea3dce1262c88f1743fbaea857f7005de104585f"
+                }
+              },
+              "runner": {
+                "repository": "Kreijstal/dekobloko-work",
+                "commit": "876be13df5c24cbf980c354b1f51355c6f618c72",
                 "script": "readable/refresh-raw-class.mjs"
               }
             }
